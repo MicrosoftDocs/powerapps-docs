@@ -44,8 +44,8 @@ landingContent:
             url: ./webapi/web-api-types-operations.md
           - text: Entity operations (SDK for .NET)
             url: ./org-service/entity-operations.md
-          - text: Use FetchXML to query data
-            url: ./use-fetchxml-construct-query.md
+          - text: Query data using FetchXml
+            url: ./fetchxml/overview.md
           - text: Use SQL to query data
             url: ./dataverse-sql-query.md
 

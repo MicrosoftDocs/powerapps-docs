@@ -2,11 +2,12 @@
 title: Column definitions | Microsoft Docs
 description: Learn about column definitions use in Microsoft Dataverse.
 suite: powerapps
-author: NHelgren # GitHub ID
+author: mkannapiran
+ms.author: kamanick
+ms.reviewer: jdaly
 ms.topic: article
-ms.date: 07/19/2023
+ms.date: 12/12/2023
 ms.subservice: dataverse-developer
-ms.author: nhelgren
 search.audienceType:
   - developer
 contributors:
@@ -65,10 +66,10 @@ In the following table:
 |Collection| `CalendarRulesType`| No| Contains a collection of `CalendarRules` table records.<br />There are no columns that use this type. When generating a proxy, the code generation tool creates two simulated columns that aren't present in the definition. These columns represent a view of the calendar rules records associated in a one-to-many relationship to the table record. |
 |Collection| `PartyListType`| No| Contains a collection of `ActivityParty` table records.<br />More information: [ActivityParty table](reference/entities/activityparty.md)|
 |Date and Time| `DateTimeType`<br /><xref:Microsoft.Xrm.Sdk.Metadata.DateTimeAttributeMetadata>| Yes<br />**Date and Time**| Contains a date and time value.<br />All date and time columns support values as early as 1/1/1753 12:00 AM.|
-|File| `FileType`<br /><xref:Microsoft.Xrm.Sdk.Metadata.FileAttributeMetadata>| Yes<br />**File**| Contains data to support retrieving binary data for a table record.<br />More information: [File columns](file-attributes.md)|
+|File| `FileType`<br /><xref:Microsoft.Xrm.Sdk.Metadata.FileAttributeMetadata>| Yes<br />**File**| Contains data to support retrieving binary data for a table record.<br />More information: [Work with file column definitions using code](file-attributes.md)|
 |Image| `ImageType`<br /><xref:Microsoft.Xrm.Sdk.Metadata.ImageAttributeMetadata>| Yes<br />**Image**| Contains data to support retrieving image data for a table record.<br />More information: [Entity Images](entity-metadata.md#entity-images)|
 |Managed Property| `ManagedPropertyType`<br /><xref:Microsoft.Xrm.Sdk.Metadata.ManagedPropertyAttributeMetadata>| No| Contains data that describe whether the solution component stored in the table record can be customized when included in a managed solution.<br />More information: [Managed Properties](/power-platform/alm/managed-properties-alm)|
-|Quantity| `BigIntType`<br /><xref:Microsoft.Xrm.Sdk.Metadata.BigIntAttributeMetadata>| No | Contains a `BigInt` value. For internal use only.|
+|Quantity| `BigIntType`<br /><xref:Microsoft.Xrm.Sdk.Metadata.BigIntAttributeMetadata>| Yes | Contains a `BigInt` value.|
 |Quantity| `DecimalType`<br /><xref:Microsoft.Xrm.Sdk.Metadata.DecimalAttributeMetadata>| Yes<br />**Decimal Number**| Contains a `Decimal` value. The `Precision` property sets the level of precision. |
 |Quantity| `DoubleType`<br /><xref:Microsoft.Xrm.Sdk.Metadata.DoubleAttributeMetadata> | Yes<br />**Floating Point Number**  | Contains a `Double` value. The `Precision` property sets the level of precision.|
 |Quantity| `IntegerType`<br /><xref:Microsoft.Xrm.Sdk.Metadata.IntegerAttributeMetadata>| Yes<br />**Whole Number**  | Contains an `Int` value|
@@ -117,15 +118,18 @@ Because `RequiredLevel` is a managed property, as a publisher of a managed solut
 
 More information: [Managed Properties](/power-platform/alm/managed-properties-alm)
 
-## Formula, rollup, and calculated columns
+## Specialized columns
 
 Formula, rollup, and calculated columns free the user from having to manually perform calculations and focus on their work. System administrators can define a column to contain the value of many common calculations without having to work with a developer. Developers can also use the platform capabilities to perform these calculations rather than within their own code.
+
+A prompt column is an AI-powered data type in Microsoft Dataverse that enables you to define natural language prompts tied to other columns in your table. 
 
 More information:
 
 - [Define rollup columns that aggregate values](../../maker/data-platform/define-rollup-fields.md)
 - [Define calculated columns to automate calculations](../../maker/data-platform/define-calculated-fields.md)
-- [Formula, rollup, and calculated columns](calculated-rollup-attributes.md)
+- [Prompt columns (preview)](../../maker/data-platform/prompt-column.md)
+- [Specialized columns using code](specialized-columns.md)
 
 ## Column format
 

@@ -1,56 +1,52 @@
 ---
-title: "msdyn_odatav4ds table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the msdyn_odatav4ds table/entity."
-ms.date: 09/01/2023
-ms.service: "powerapps"
-ms.topic: "reference"
-ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "phecke"
-ms.author: "pehecke"
+title: "OData v4 Data Source (msdyn_odatav4ds) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the OData v4 Data Source (msdyn_odatav4ds) table/entity with Microsoft Dataverse."
+ms.topic: generated-reference
+author: phecke
+ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# msdyn_odatav4ds table/entity reference
-
-> [!NOTE]
-> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
+# OData v4 Data Source (msdyn_odatav4ds) table/entity reference (Microsoft Dataverse)
 
 Data sources used by the OData v4 data provider to access data from an external web service.
 
-**Added by**: OData v4 Data Provider Solution
-
-
 ## Messages
 
-|Message|Web API Operation|SDK class or method|
-|-|-|-|
-|Create|POST /msdyn_odatav4ds<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|CreateMultiple|<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
-|Delete|DELETE /msdyn_odatav4ds(*msdyn_odatav4dsid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET /msdyn_odatav4ds(*msdyn_odatav4dsid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
-|RetrieveMultiple|GET /msdyn_odatav4ds<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|Update|PATCH /msdyn_odatav4ds(*msdyn_odatav4dsid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
-|UpdateMultiple|<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+The following table lists the messages for the OData v4 Data Source (msdyn_odatav4ds) table.
+Messages represent operations that can be performed on the table. They may also be events.
+
+| Name <br />Is Event? |Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `Create`<br />Event: True |`POST` /msdyn_odatav4ds<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+| `Delete`<br />Event: True |`DELETE` /msdyn_odatav4ds(*msdyn_odatav4dsid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Retrieve`<br />Event: True |`GET` /msdyn_odatav4ds(*msdyn_odatav4dsid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveEntityChanges`<br />Event: True | |<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
+| `RetrieveMultiple`<br />Event: True |`GET` /msdyn_odatav4ds<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
+| `Update`<br />Event: True |`PATCH` /msdyn_odatav4ds(*msdyn_odatav4dsid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
+| `UpdateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+| `Upsert`<br />Event: False |`PATCH` /msdyn_odatav4ds(*msdyn_odatav4dsid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
+| `UpsertMultiple`<br />Event: False |<xref:Microsoft.Dynamics.CRM.UpsertMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpsertMultipleRequest>|
 
 ## Properties
 
-|Property|Value|
-|--------|-----|
-|CollectionSchemaName|msdyn_odatav4dses|
-|DisplayCollectionName|OData v4 Data Sources|
-|DisplayName|OData v4 Data Source|
-|EntitySetName|msdyn_odatav4ds|
-|IsBPFEntity|False|
-|LogicalCollectionName|msdyn_odatav4dses|
-|LogicalName|msdyn_odatav4ds|
-|OwnershipType|OrganizationOwned|
-|PrimaryIdAttribute|msdyn_odatav4dsid|
-|PrimaryNameAttribute|msdyn_name|
-|SchemaName|msdyn_odatav4ds|
+The following table lists selected properties for the OData v4 Data Source (msdyn_odatav4ds) table.
 
-<a name="writable-attributes"></a>
+|Property|Value|
+| --- | --- |
+| **DisplayName** | **OData v4 Data Source** |
+| **DisplayCollectionName** | **OData v4 Data Sources** |
+| **SchemaName** | `msdyn_odatav4ds` |
+| **CollectionSchemaName** | `msdyn_odatav4dses` |
+| **EntitySetName** | `msdyn_odatav4ds`|
+| **LogicalName** | `msdyn_odatav4ds` |
+| **LogicalCollectionName** | `msdyn_odatav4dses` |
+| **PrimaryIdAttribute** | `msdyn_odatav4dsid` |
+| **PrimaryNameAttribute** |`msdyn_name` |
+| **TableType** | `Virtual` |
+| **OwnershipType** | `OrganizationOwned` |
 
 ## Writable columns/attributes
 
@@ -95,705 +91,641 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [msdyn_timeout](#BKMK_msdyn_timeout)
 - [msdyn_uri](#BKMK_msdyn_uri)
 
-
 ### <a name="BKMK_msdyn_description"></a> msdyn_description
 
 |Property|Value|
-|--------|-----|
-|Description|Type additional information to describe this OData v4 data source. What environment does this data source target and what is the purpose of this system ?|
-|DisplayName|Description|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Type additional information to describe this OData v4 data source. What environment does this data source target and what is the purpose of this system ?**|
+|DisplayName|**Description**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_description|
-|MaxLength|1024|
+|LogicalName|`msdyn_description`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1024|
 
 ### <a name="BKMK_msdyn_isparameter10header"></a> msdyn_isparameter10header
 
 |Property|Value|
-|--------|-----|
-|Description|Parameter10 Type|
-|DisplayName|Parameter10 Type|
+|---|---|
+|Description|**Parameter10 Type**|
+|DisplayName|**Parameter10 Type**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_isparameter10header|
+|LogicalName|`msdyn_isparameter10header`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### msdyn_isparameter10header Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Header||
-|0|Query String||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`msdyn_isparameter10header`|
+|DefaultValue|False|
+|True Label|Header|
+|False Label|Query String|
 
 ### <a name="BKMK_msdyn_isparameter1header"></a> msdyn_isparameter1header
 
 |Property|Value|
-|--------|-----|
-|Description|Parameter1 Type|
-|DisplayName|Parameter1 Type|
+|---|---|
+|Description|**Parameter1 Type**|
+|DisplayName|**Parameter1 Type**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_isparameter1header|
+|LogicalName|`msdyn_isparameter1header`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### msdyn_isparameter1header Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Header||
-|0|Query String||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`msdyn_isparameter1header`|
+|DefaultValue|False|
+|True Label|Header|
+|False Label|Query String|
 
 ### <a name="BKMK_msdyn_isparameter2header"></a> msdyn_isparameter2header
 
 |Property|Value|
-|--------|-----|
-|Description|Parameter2 Type|
-|DisplayName|Parameter2 Type|
+|---|---|
+|Description|**Parameter2 Type**|
+|DisplayName|**Parameter2 Type**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_isparameter2header|
+|LogicalName|`msdyn_isparameter2header`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### msdyn_isparameter2header Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Header||
-|0|Query String||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`msdyn_isparameter2header`|
+|DefaultValue|False|
+|True Label|Header|
+|False Label|Query String|
 
 ### <a name="BKMK_msdyn_isparameter3header"></a> msdyn_isparameter3header
 
 |Property|Value|
-|--------|-----|
-|Description|Parameter3 Type|
-|DisplayName|Parameter3 Type|
+|---|---|
+|Description|**Parameter3 Type**|
+|DisplayName|**Parameter3 Type**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_isparameter3header|
+|LogicalName|`msdyn_isparameter3header`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### msdyn_isparameter3header Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Header||
-|0|Query String||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`msdyn_isparameter3header`|
+|DefaultValue|False|
+|True Label|Header|
+|False Label|Query String|
 
 ### <a name="BKMK_msdyn_isparameter4header"></a> msdyn_isparameter4header
 
 |Property|Value|
-|--------|-----|
-|Description|Parameter4 Type|
-|DisplayName|Parameter4 Type|
+|---|---|
+|Description|**Parameter4 Type**|
+|DisplayName|**Parameter4 Type**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_isparameter4header|
+|LogicalName|`msdyn_isparameter4header`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### msdyn_isparameter4header Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Header||
-|0|Query String||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`msdyn_isparameter4header`|
+|DefaultValue|False|
+|True Label|Header|
+|False Label|Query String|
 
 ### <a name="BKMK_msdyn_isparameter5header"></a> msdyn_isparameter5header
 
 |Property|Value|
-|--------|-----|
-|Description|Parameter5 Type|
-|DisplayName|Parameter5 Type|
+|---|---|
+|Description|**Parameter5 Type**|
+|DisplayName|**Parameter5 Type**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_isparameter5header|
+|LogicalName|`msdyn_isparameter5header`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### msdyn_isparameter5header Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Header||
-|0|Query String||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`msdyn_isparameter5header`|
+|DefaultValue|False|
+|True Label|Header|
+|False Label|Query String|
 
 ### <a name="BKMK_msdyn_isparameter6header"></a> msdyn_isparameter6header
 
 |Property|Value|
-|--------|-----|
-|Description|Parameter6 Type|
-|DisplayName|Parameter6 Type|
+|---|---|
+|Description|**Parameter6 Type**|
+|DisplayName|**Parameter6 Type**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_isparameter6header|
+|LogicalName|`msdyn_isparameter6header`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### msdyn_isparameter6header Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Header||
-|0|Query String||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`msdyn_isparameter6header`|
+|DefaultValue|False|
+|True Label|Header|
+|False Label|Query String|
 
 ### <a name="BKMK_msdyn_isparameter7header"></a> msdyn_isparameter7header
 
 |Property|Value|
-|--------|-----|
-|Description|Parameter7 Type|
-|DisplayName|Parameter7 Type|
+|---|---|
+|Description|**Parameter7 Type**|
+|DisplayName|**Parameter7 Type**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_isparameter7header|
+|LogicalName|`msdyn_isparameter7header`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### msdyn_isparameter7header Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Header||
-|0|Query String||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`msdyn_isparameter7header`|
+|DefaultValue|False|
+|True Label|Header|
+|False Label|Query String|
 
 ### <a name="BKMK_msdyn_isparameter8header"></a> msdyn_isparameter8header
 
 |Property|Value|
-|--------|-----|
-|Description|Parameter8 Type|
-|DisplayName|Parameter8 Type|
+|---|---|
+|Description|**Parameter8 Type**|
+|DisplayName|**Parameter8 Type**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_isparameter8header|
+|LogicalName|`msdyn_isparameter8header`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### msdyn_isparameter8header Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Header||
-|0|Query String||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`msdyn_isparameter8header`|
+|DefaultValue|False|
+|True Label|Header|
+|False Label|Query String|
 
 ### <a name="BKMK_msdyn_isparameter9header"></a> msdyn_isparameter9header
 
 |Property|Value|
-|--------|-----|
-|Description|Parameter9 Type|
-|DisplayName|Parameter9 Type|
+|---|---|
+|Description|**Parameter9 Type**|
+|DisplayName|**Parameter9 Type**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_isparameter9header|
+|LogicalName|`msdyn_isparameter9header`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### msdyn_isparameter9header Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Header||
-|0|Query String||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`msdyn_isparameter9header`|
+|DefaultValue|False|
+|True Label|Header|
+|False Label|Query String|
 
 ### <a name="BKMK_msdyn_name"></a> msdyn_name
 
 |Property|Value|
-|--------|-----|
-|Description|Name of the OData v4 data source. This name appears in the data source drop-down list when creating a new entity.|
-|DisplayName|Name|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Name of the OData v4 data source. This name appears in the data source drop-down list when creating a new entity.**|
+|DisplayName|**Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_name|
-|MaxLength|100|
+|LogicalName|`msdyn_name`|
 |RequiredLevel|ApplicationRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_msdyn_odatav4dsId"></a> msdyn_odatav4dsId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for entity instances|
-|DisplayName|OData v4 Data Source|
+|---|---|
+|Description|**Unique identifier for entity instances**|
+|DisplayName|**OData v4 Data Source**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|msdyn_odatav4dsid|
+|LogicalName|`msdyn_odatav4dsid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_msdyn_paginationmode"></a> msdyn_paginationmode
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|Pagination Mode|
+|DisplayName|**Pagination Mode**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_paginationmode|
+|LogicalName|`msdyn_paginationmode`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### msdyn_paginationmode Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Server-side Paging||
-|0|Client-side Paging||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`new_odatadatasource_paginationmode`|
+|DefaultValue|False|
+|True Label|Server-side Paging|
+|False Label|Client-side Paging|
 
 ### <a name="BKMK_msdyn_paginationtype"></a> msdyn_paginationtype
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|Pagination Mode|
+|DisplayName|**Pagination Mode**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_paginationtype|
+|LogicalName|`msdyn_paginationtype`|
 |RequiredLevel|ApplicationRequired|
 |Type|Picklist|
+|DefaultFormValue|0|
+|GlobalChoiceName|`new_odatadatasource_paginationtype`|
 
 #### msdyn_paginationtype Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|0|Client-side Paging||
-|1|Server-side Paging||
-
-
+|Value|Label|
+|---|---|
+|0|**Client-side Paging**|
+|1|**Server-side Paging**|
 
 ### <a name="BKMK_msdyn_parameter10name"></a> msdyn_parameter10name
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|parameter10name|
-|FormatName|Text|
-|IsLocalizable|False|
+|DisplayName|**parameter10name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_parameter10name|
-|MaxLength|1024|
+|LogicalName|`msdyn_parameter10name`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1024|
 
 ### <a name="BKMK_msdyn_parameter10value"></a> msdyn_parameter10value
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|parameter10value|
-|FormatName|Text|
-|IsLocalizable|False|
+|DisplayName|**parameter10value**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_parameter10value|
-|MaxLength|1024|
+|LogicalName|`msdyn_parameter10value`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1024|
 
 ### <a name="BKMK_msdyn_parameter1name"></a> msdyn_parameter1name
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|parameter1name|
-|FormatName|Text|
-|IsLocalizable|False|
+|DisplayName|**parameter1name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_parameter1name|
-|MaxLength|1024|
+|LogicalName|`msdyn_parameter1name`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1024|
 
 ### <a name="BKMK_msdyn_parameter1value"></a> msdyn_parameter1value
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|parameter1value|
-|FormatName|Text|
-|IsLocalizable|False|
+|DisplayName|**parameter1value**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_parameter1value|
-|MaxLength|1024|
+|LogicalName|`msdyn_parameter1value`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1024|
 
 ### <a name="BKMK_msdyn_parameter2name"></a> msdyn_parameter2name
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|parameter2name|
-|FormatName|Text|
-|IsLocalizable|False|
+|DisplayName|**parameter2name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_parameter2name|
-|MaxLength|1024|
+|LogicalName|`msdyn_parameter2name`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1024|
 
 ### <a name="BKMK_msdyn_parameter2value"></a> msdyn_parameter2value
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|parameter2value|
-|FormatName|Text|
-|IsLocalizable|False|
+|DisplayName|**parameter2value**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_parameter2value|
-|MaxLength|1024|
+|LogicalName|`msdyn_parameter2value`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1024|
 
 ### <a name="BKMK_msdyn_parameter3name"></a> msdyn_parameter3name
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|parameter3name|
-|FormatName|Text|
-|IsLocalizable|False|
+|DisplayName|**parameter3name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_parameter3name|
-|MaxLength|1024|
+|LogicalName|`msdyn_parameter3name`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1024|
 
 ### <a name="BKMK_msdyn_parameter3value"></a> msdyn_parameter3value
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|parameter3value|
-|FormatName|Text|
-|IsLocalizable|False|
+|DisplayName|**parameter3value**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_parameter3value|
-|MaxLength|1024|
+|LogicalName|`msdyn_parameter3value`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1024|
 
 ### <a name="BKMK_msdyn_parameter4name"></a> msdyn_parameter4name
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|parameter4name|
-|FormatName|Text|
-|IsLocalizable|False|
+|DisplayName|**parameter4name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_parameter4name|
-|MaxLength|1024|
+|LogicalName|`msdyn_parameter4name`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1024|
 
 ### <a name="BKMK_msdyn_parameter4value"></a> msdyn_parameter4value
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|parameter4value|
-|FormatName|Text|
-|IsLocalizable|False|
+|DisplayName|**parameter4value**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_parameter4value|
-|MaxLength|1024|
+|LogicalName|`msdyn_parameter4value`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1024|
 
 ### <a name="BKMK_msdyn_parameter5name"></a> msdyn_parameter5name
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|parameter5name|
-|FormatName|Text|
-|IsLocalizable|False|
+|DisplayName|**parameter5name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_parameter5name|
-|MaxLength|1024|
+|LogicalName|`msdyn_parameter5name`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1024|
 
 ### <a name="BKMK_msdyn_parameter5value"></a> msdyn_parameter5value
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|parameter5value|
-|FormatName|Text|
-|IsLocalizable|False|
+|DisplayName|**parameter5value**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_parameter5value|
-|MaxLength|1024|
+|LogicalName|`msdyn_parameter5value`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1024|
 
 ### <a name="BKMK_msdyn_parameter6name"></a> msdyn_parameter6name
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|parameter6name|
-|FormatName|Text|
-|IsLocalizable|False|
+|DisplayName|**parameter6name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_parameter6name|
-|MaxLength|1024|
+|LogicalName|`msdyn_parameter6name`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1024|
 
 ### <a name="BKMK_msdyn_parameter6value"></a> msdyn_parameter6value
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|parameter6value|
-|FormatName|Text|
-|IsLocalizable|False|
+|DisplayName|**parameter6value**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_parameter6value|
-|MaxLength|1024|
+|LogicalName|`msdyn_parameter6value`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1024|
 
 ### <a name="BKMK_msdyn_parameter7name"></a> msdyn_parameter7name
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|parameter7name|
-|FormatName|Text|
-|IsLocalizable|False|
+|DisplayName|**parameter7name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_parameter7name|
-|MaxLength|1024|
+|LogicalName|`msdyn_parameter7name`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1024|
 
 ### <a name="BKMK_msdyn_parameter7value"></a> msdyn_parameter7value
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|parameter7value|
-|FormatName|Text|
-|IsLocalizable|False|
+|DisplayName|**parameter7value**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_parameter7value|
-|MaxLength|1024|
+|LogicalName|`msdyn_parameter7value`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1024|
 
 ### <a name="BKMK_msdyn_parameter8name"></a> msdyn_parameter8name
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|parameter8name|
-|FormatName|Text|
-|IsLocalizable|False|
+|DisplayName|**parameter8name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_parameter8name|
-|MaxLength|1024|
+|LogicalName|`msdyn_parameter8name`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1024|
 
 ### <a name="BKMK_msdyn_parameter8value"></a> msdyn_parameter8value
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|parameter8value|
-|FormatName|Text|
-|IsLocalizable|False|
+|DisplayName|**parameter8value**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_parameter8value|
-|MaxLength|1024|
+|LogicalName|`msdyn_parameter8value`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1024|
 
 ### <a name="BKMK_msdyn_parameter9name"></a> msdyn_parameter9name
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|parameter9name|
-|FormatName|Text|
-|IsLocalizable|False|
+|DisplayName|**parameter9name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_parameter9name|
-|MaxLength|1024|
+|LogicalName|`msdyn_parameter9name`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1024|
 
 ### <a name="BKMK_msdyn_parameter9value"></a> msdyn_parameter9value
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|parameter9value|
-|FormatName|Text|
-|IsLocalizable|False|
+|DisplayName|**parameter9value**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_parameter9value|
-|MaxLength|1024|
+|LogicalName|`msdyn_parameter9value`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1024|
 
 ### <a name="BKMK_msdyn_returninlinecount"></a> msdyn_returninlinecount
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|Return Inline Count|
+|DisplayName|**Return Inline Count**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_returninlinecount|
+|LogicalName|`msdyn_returninlinecount`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### msdyn_returninlinecount Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|True||
-|0|False||
-
-**DefaultValue**: 1
-
-
+|GlobalChoiceName|`new_odatadatasource_returninlinecount`|
+|DefaultValue|True|
+|True Label|True|
+|False Label|False|
 
 ### <a name="BKMK_msdyn_timeout"></a> msdyn_timeout
 
 |Property|Value|
-|--------|-----|
-|Description|Amount of time to wait, in seconds, before timing out an OData v4 request.|
-|DisplayName|Timeout|
-|Format|None|
+|---|---|
+|Description|**Amount of time to wait, in seconds, before timing out an OData v4 request.**|
+|DisplayName|**Timeout**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_timeout|
-|MaxValue|120|
-|MinValue|0|
+|LogicalName|`msdyn_timeout`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|120|
+|MinValue|0|
 
 ### <a name="BKMK_msdyn_uri"></a> msdyn_uri
 
 |Property|Value|
-|--------|-----|
-|Description|URL of the OData v4 web service endpoint this data source will target.|
-|DisplayName|URL|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**URL of the OData v4 web service endpoint this data source will target.**|
+|DisplayName|**URL**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_uri|
-|MaxLength|1024|
+|LogicalName|`msdyn_uri`|
 |RequiredLevel|ApplicationRequired|
 |Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1024|
+
 
 
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
-<xref href="Microsoft.Dynamics.CRM.msdyn_odatav4ds?text=msdyn_odatav4ds EntityType" />
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
+[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
+<xref:Microsoft.Dynamics.CRM.msdyn_odatav4ds?displayProperty=fullName>

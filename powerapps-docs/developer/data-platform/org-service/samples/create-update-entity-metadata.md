@@ -2,8 +2,8 @@
 title: "Sample: Create and update table definitions  (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to create and update table definitions." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/03/2022
-author: NHelgren
-ms.author: nhelgren
+author: mkannapiran
+ms.author: kamanick
 ms.reviewer: jdaly
 ms.topic: sample
 search.audienceType:
@@ -20,7 +20,7 @@ This topic shows how to programmatically create a custom user-owned table called
 You can also create organization-owned custom tables. More information: [Table ownership](/dynamics365/customerengagement/on-premises/developer/introduction-entities#entity-ownership).
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Create and update table definitions sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/CreateUpdateEntityMetadata)
+> [SDK for .NET: Create and update table definitions sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/CreateUpdateEntityMetadata)
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 

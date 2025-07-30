@@ -2,8 +2,8 @@
 title: "Sample: Work with columns (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to work with columns" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/06/2022
-author: NHelgren
-ms.author: nhelgren
+author: mkannapiran
+ms.author: kamanick
 ms.reviewer: pehecke
 ms.topic: sample
 search.audienceType:
@@ -18,7 +18,7 @@ contributors:
 This sample shows how to perform various actions on columns.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Work with columns definitions sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/WorkWithAttributes)
+> [SDK for .NET: Work with columns definitions sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/WorkWithAttributes)
 
 ## How to run this sample
 

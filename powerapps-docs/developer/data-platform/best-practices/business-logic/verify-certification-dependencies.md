@@ -1,9 +1,9 @@
 ---
 title: "Verify certification dependencies for plug-ins making outbound calls | MicrosoftDocs"
 description: "Ensure that any certificates that your code depends on for outbound calls has a valid chain of certificates."
-ms.date: 04/03/2022
-author: divkamath
-ms.author: dikamath
+ms.date: 06/20/2025
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: pehecke
 suite: powerapps
 ms.topic: article
@@ -26,7 +26,7 @@ contributors:
 
 ## Symptoms
 
-You may get this error when your plug-in makes an https call to an external resource:
+You might get this error when your plug-in makes an https call to an external resource:
 
 `WebException: The underlying connection was closed: Could not establish trust relationship for the SSL/TLS secure channel.`
 
@@ -42,9 +42,9 @@ You should verify that the site you want to connect with has a valid chain of ce
 
 ## Additional information
 
-You may encounter this when connecting to a new endpoint for the first time or when something about the certificate has changed.
+You might encounter this error when connecting to a new endpoint for the first time or when something about the certificate changed.
 
-When the code in your plug-in running in the sandbox attempts to connect to an external endpoint using https, the Dataverse Sandbox will start SSL/TLS negotiation. The endpoint presents a certificate to use for encryption. If the certificate has one or more intermediate certificates it must present the entire chain to successfully complete SSL/TLS negotiation. If the complete chain is not presented SSL/TLS communication cannot be established. 
+When the code in your plug-in running in the sandbox attempts to connect to an external endpoint using https, the Dataverse Sandbox starts SSL/TLS negotiation. The endpoint presents a certificate to use for encryption. If the certificate has one or more intermediate certificates it must present the entire chain to successfully complete SSL/TLS negotiation. If the complete chain isn't presented SSL/TLS communication can't be established. 
 
 For more information about requirements, see [Server cipher suites and TLS requirements](/power-platform/admin/server-cipher-tls-requirements).
 

@@ -1,8 +1,8 @@
 ---
-title: "formContext.ui.navigation item (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "formContext.ui.navigation item (Client API reference) in model-driven apps"
 description: "Each item represents one of the available navigation options available in the navigation bar for tables that have been updated to the new user experience or on the left side of the form for tables that have not been updated."
-author: HemantGaur
-ms.author: hemantg
+author: MitiJ
+ms.author: mijosh
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference

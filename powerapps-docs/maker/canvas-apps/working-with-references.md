@@ -3,7 +3,7 @@ title: Understand record references and polymorphic lookups in canvas apps
 description: Learn about how to work with record references and polymorphic lookups in canvas apps.
 author: gregli-msft
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 05/11/2021
@@ -75,7 +75,7 @@ You need a formula that can adapt to this variance. You also need to add the dat
 
 With these data sources in place, use this formula to display the name of either a user or a team:
 
-```powerapps-dot
+```power-fx
 If( IsType( ThisItem.Owner, Teams ),
     "Team: " & AsType( ThisItem.Owner, Teams ).'Team Name',
     "User: " & AsType( ThisItem.Owner, Users ).'Full Name' )
@@ -94,7 +94,7 @@ The **AsType** function returns an error if the **Owner** field doesn't match th
 
 Then replace the previous formula with this one:
 
-```powerapps-dot
+```power-fx
 IfError(
     "Team: " & AsType( ThisItem.Owner, Teams ).'Team Name',
     "User: " & AsType( ThisItem.Owner, Users ).'Full Name' )
@@ -114,7 +114,7 @@ Add a **Combo box** control above the gallery, and set these properties of the n
 
 To filter the gallery by a specific user selected from this combo box, set the gallery's **Items** property to this formula:
 
-```powerapps-dot
+```power-fx
 Filter( Accounts, Owner = ComboBox1.Selected )
 ```
 
@@ -146,7 +146,7 @@ You can get a little fancier by supporting filtering by either a user or a team.
 
 1. Finally, set the **Items** property of the **Gallery** control to this formula:
 
-    ```powerapps-dot
+    ```power-fx
     Filter( Accounts,
         Radio1.Selected.Value = "All"
         Or (Radio1.Selected.Value = "Users" And Owner = ComboBox1.Selected)
@@ -173,7 +173,7 @@ If you want to filter on the type of the owner, you can use the **IsType** funct
 
 You can update the **Owner** field in the same manner as any other lookup. To set the currently selected account's owner to the first team:
 
-```powerapps-dot
+```power-fx
 Patch( Accounts, Gallery1.Selected, { Owner: First( Teams ) } )
 ```
 
@@ -210,7 +210,7 @@ To add this capability to the app:
 
 1. Select the visible **Combo box** control, and then set the **DefaultSelectedItems** property to this formula:
 
-    ```powerapps-dot
+    ```power-fx
     If( IsType( Gallery1.Selected.Owner, Users ),
         AsType( Gallery1.Selected.Owner, Users ),
         Blank()
@@ -226,7 +226,7 @@ To add this capability to the app:
 
 1. Select the visible **Combo box** control for teams, and then set its **DefaultSelectedItems** property to this formula:
 
-    ```powerapps-dot
+    ```power-fx
     If( IsType( Gallery1.Selected.Owner, Teams ),
         AsType( Gallery1.Selected.Owner, Teams ),
         Blank()
@@ -240,7 +240,7 @@ To add this capability to the app:
 
 1. Set the **OnSelect** property of the button to this formula:
 
-    ```powerapps-dot
+    ```power-fx
     Patch( Accounts, Gallery1.Selected,
         { Owner: If( Radio1_1.Selected.Value = "Users",
                      ComboBox1_2.Selected,
@@ -287,7 +287,7 @@ You can show an **Owner** field inside a form by adding a custom card. As of thi
 
 1. Insert a **Label** control into the custom card, and then set the label's **Text** property to the formula that you used in the gallery:
 
-    ```powerapps-dot
+    ```power-fx
     If( IsType( ThisItem.Owner, Teams ),
         "Team: " & AsType( ThisItem.Owner, Teams ).'Team Name',
         "User: " & AsType( ThisItem.Owner, Users ).'Full Name' )
@@ -333,7 +333,7 @@ The treatment of the **Customer** and **Owner** fields is so similar that you ca
 
 For example, the new gallery should have this **Items** property:
 
-```powerapps-dot
+```power-fx
 Filter( Contacts,
     Radio1.Selected.Value = "All"
     Or (Radio1.Selected.Value = "Accounts" And 'Company Name' = ComboBox1.Selected)
@@ -352,7 +352,7 @@ Two important differences between **Customer** and **Owner** require an update t
 
 Both of these changes are in the same formula, which appears in the custom card in the form, as well as in the **Text** property of the gallery's label control:
 
-```powerapps-dot
+```power-fx
 If( IsBlank( ThisItem.'Company Name' ), "",
     IsType( ThisItem.'Company Name', Accounts ),
         "Account: " & AsType( ThisItem.'Company Name', Accounts ).'Account Name',
@@ -387,7 +387,7 @@ Again, you'll need to add a data source: this time for **Faxes**. On the **View*
 
 An important difference for **Regarding** is that it isn't limited to **Accounts** and **Contacts**. In fact, the list of tables is extensible with custom tables. Most of the app can accommodate this point without modification, but you must update the formula for the label in the gallery and the form:
 
-```powerapps-dot
+```power-fx
 If( IsBlank( ThisItem.Regarding ), "",
     IsType( ThisItem.Regarding, Accounts ),
         "Account: " & AsType( ThisItem.Regarding, Accounts ).'Account Name',
@@ -489,7 +489,7 @@ Records are coming from the **Activity** table, but you can nevertheless use the
 
 By using this formula, you can show the record type in a label control within the gallery:
 
-```powerapps-dot
+```power-fx
 If( IsType( ThisItem, Faxes] ), "Fax",
     IsType( ThisItem, 'Phone Calls' ), "Phone Call",
     IsType( ThisItem, 'Email Messages' ), "Email Message",
@@ -503,7 +503,7 @@ If( IsType( ThisItem, Faxes] ), "Fax",
 
 You can also use **AsType** to access the fields of the specific type. For example, this formula determines the type of each activity and, for phone calls, shows the phone number and call direction from the **Phone Numbers** table:
 
-```powerapps-dot
+```power-fx
 If( IsType( ThisItem, Faxes ), "Fax",
     IsType( ThisItem, 'Phone Calls' ),
        "Phone Call: " &

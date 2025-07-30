@@ -1,13 +1,13 @@
 ---
-title: Work with canvas apps offline (preview)
+title: Work with canvas apps offline
 description: Learn how to work with canvas apps in offline mode on your mobile device.
-ms.date: 10/11/2023
+ms.date: 05/31/2024
 ms.topic: how-to
 ms.component: pa-user
 ms.subservice: mobile
 author: trdehove
 ms.author: trdehove
-ms.reviewer: sericks
+ms.reviewer: smurkute
 search.audienceType: 
   - enduser
 searchScope:
@@ -15,16 +15,10 @@ searchScope:
 ms.custom: bap-template
 ---
 
-# Work with canvas apps offline (preview)
+# Work with canvas apps offline
 
-[This article is prerelease documentation and is subject to change.]
 
-[Canvas apps](../maker/index.md) are a type of app that nondevelopers can make with Microsoft Power Apps. If a canvas app is designed for [offline use](canvas-mobile-offline-overview.md), you can work with it on your mobile device even when you don't have Internet access. All the data the app needs is stored locally on your device. Any changes you make are synchronized with the app server the next time your device connects to the network. If you're in the middle of changing some data and you lose your network connection, the app saves your changes and uploads them to the server when you're back online.
-
-> [!IMPORTANT]
-> [!INCLUDE [preview](../includes/cc-preview-features-definition.md)]
->
-> This feature is in the process of rolling out and may not be available in your region yet.
+If a [canvas app](../maker/index.md) is designed for [offline use](canvas-mobile-offline-overview.md), you can work with it on your mobile device even when you don't have Internet access. All the data the app needs is stored locally on your device. Any changes you make are synchronized with the app server the next time your device connects to the network. If you're in the middle of changing some data and you lose your network connection, the app saves your changes and uploads them to the server when you're back online.
 
 ## Initial offline sync
 
@@ -34,16 +28,16 @@ The initial offline sync happens automatically when you open the app. A message 
 
 ## Offline delta sync
 
-After the initial offline sync, the data that's stored locally is kept in sync with data on the app server whenever your device has a network connection. These periodic updates are known as "delta" syncs. "Delta" is shorthand for data that's changed. Power Apps syncs every five minutes when you're online.
+After the initial offline sync, the data that's stored locally is kept in sync with data on the app server whenever your device has a network connection. These periodic updates are known as "delta" syncs. "Delta" means the minimum data that's changed between two syncs on the device. Power Apps syncs every five minutes when you're online. 
 
 ## Sync status icons
 
-Depending on how the app was designed, it includes information about its synchronization status in the form of a globe with various icons. At a glance, you can tell:
+Depending on how the [app was designed](canvas-mobile-offline-setup.md#using-the-offline-template-and-offline-status-icon), it includes information about its synchronization status in the form of a globe with various icons. At a glance, you can tell whether:
 
-- Whether the app is connected to the network
-- Whether a data update is in progress
-- Whether updated data is waiting to sync
-- Whether an error or warning occurred while data was syncing
+- The app is connected to the network
+- A data update is in progress
+- Updated data is waiting to sync
+- An error or warning occurred while data was syncing
 
 The following table describes the icons and their meanings.
 

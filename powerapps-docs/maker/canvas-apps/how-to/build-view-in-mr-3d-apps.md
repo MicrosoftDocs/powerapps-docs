@@ -3,7 +3,7 @@ title: Create an app with 3D and mixed reality controls
 description: Learn about how to use 3D and mixed reality controls.
 author: Joel-lindstrom
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 12/09/2021
@@ -23,7 +23,7 @@ You can use the [3D object](../mixed-reality-component-view-3d.md) and [View in 
 In this article, you'll learn how to use the 3D and mixed reality controls in Power Apps.
 
 Watch this video to learn how to build mobile apps with View in MR control:
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLAk9]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=7651a5f3-4886-4910-97b0-290116a9fa89]
 
 ## Prerequisites
 
@@ -42,7 +42,7 @@ In this section, we will build a screen in an app that will allow a user to view
 
 1. Select the **OnStart** property of the app, copy and paste the following:
 
-    ```powerapps-dot
+    ```power-fx
     ClearCollect(
         col3dObjects,
         {

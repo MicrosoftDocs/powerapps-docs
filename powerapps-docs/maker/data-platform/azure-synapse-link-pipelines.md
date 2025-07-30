@@ -29,7 +29,7 @@ Use the Azure Synapse Link to connect your Microsoft Dataverse data to Azure Syn
 ## Prerequisites
 
 1. Azure Synapse Link for Dataverse. This guide assumes that you've already met the prerequisites to create an Azure Synapse Link with Azure Data Lake. More information: [Prerequisites for an Azure Synapse Link for Dataverse with your Azure Data Lake](azure-synapse-link-data-lake.md#prerequisites)
-2. Create an Azure Synapse Workspace or Azure Data Factory under the same Azure Active Directory (Azure AD) tenant as your Power Apps tenant.
+2. Create an Azure Synapse Workspace or Azure Data Factory under the same Microsoft Entra tenant as your Power Apps tenant.
 3. Create an Azure Synapse Link for Dataverse with the **incremental folder update enabled** to set the time interval. More information: [Query and analyze the incremental updates](azure-synapse-incremental-updates.md)
 4. Microsoft.EventGrid provider needs to be registered for trigger. More information: [Azure portal](/azure/azure-resource-manager/management/resource-providers-and-types#azure-portal). Note: If you are using this feature in Azure Synapse Analytics, ensure that your subscription is also registered with Data Factory resource provider, otherwise you'll get an error stating that the creation of an "Event Subscription" failed.
 5. Create an Azure SQL database with the **Allow Azure services and resources to access this server** property enabled. More information: [What should I know when setting up my Azure SQL Database (PaaS)?](/archive/blogs/azureedu/what-should-i-know-when-setting-up-my-azure-sql-database-paas#firewall)

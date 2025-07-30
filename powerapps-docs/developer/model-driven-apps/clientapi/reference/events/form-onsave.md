@@ -1,9 +1,9 @@
 ---
-title: "Form OnSave event (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "Form OnSave event (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the form OnSave event.
-author: HemantGaur
-ms.author: hemantg
-ms.date: 07/26/2023
+author: MitiJ
+ms.author: mijosh
+ms.date: 08/20/2024
 ms.reviewer: jdaly
 ms.topic: reference
 applies_to: "Dynamics 365 (online)"
@@ -44,7 +44,7 @@ The `OnSave` event waits for one promise returned per handler. If multiple promi
 
 ### Example scenario on when to use async OnSave handlers
 
-Consider creating a Work Order Service Task, you need to validate that the Customer Asset selected has the same account listed in the Work Order. Fetching the account on the Work Order and Customer Asset are both asynchronous processes and need to be completed before the validation can occur. 
+Consider creating a Work Order Service Task, you need to validate that the Customer Asset selected has the same account listed in the Work Order. Fetching the account on the Work Order and Customer Asset are both asynchronous processes and need to be completed before the validation can occur.
 
 In this scenario, since there are multiple async processes and both calls return a single promise by wrapping both in the `Promise.all()` method.
 
@@ -54,11 +54,15 @@ In this scenario, since there are multiple async processes and both calls return
 For example:
 
 ```JavaScript
- function myHandler(context) {
-    return new Promise((resolve) => {
-       setTimeout( () => {
-          context.getEventArgs().preventDefault();
-       }, 1000);
+ function myHandler() {
+    return Promise.all([getWorkOrderPromise, getCustomerAssetPromise]).then((values) => {
+        var workOrder = values[0];
+        var customerAsset = values[1];
+        // Perform validation
+        if (isValid(workOrder, customerAsset)) {
+            return Promise.resolve();
+        }
+        return Promise.reject(new Error("Validation failed for the work order and customer asset"));
    });
  }
 ```
@@ -82,7 +86,7 @@ To use async onSave handlers, you need to enable it through an app setting:
 
 When you use an async `OnSave` handler, the form waits for the promise returned by the handler to be fulfilled. To ensure that the form save completes in a timely manner, the handler will throw a timeout exception after 10 seconds to let you know to tune the async `OnSave` handler for better performance.
 
-There are scenarios where pausing the `OnSave` handler for longer than 10 seconds is needed. An example is opening a dialog and waiting for the user's input before continuing to save. To make sure the async operation waits for the promise to resolve, use the **disableAsyncTimeout** method.
+There are scenarios where pausing the `OnSave` handler for longer than 10 seconds is needed. An example is opening a dialog and waiting for the user's input before continuing to save. To make sure the async operation waits for the promise to resolve, use the [disableAsyncTimeout](../save-event-arguments/disableasynctimeout.md) method.
 
 > [!NOTE]
 > You must call `disableAsyncTimeout` before any await statements or async calls.
@@ -97,13 +101,15 @@ async function myHandler(context) {
  }
 ```
 
-When **disableAsyncTimeout** is called, the timeout for that handler isn't applied. It continues to wait for that handler's promise to be fulfilled.
+When [disableAsyncTimeout](../save-event-arguments/disableasynctimeout.md) is called, the timeout for that handler isn't applied. It continues to wait for that handler's promise to be fulfilled.
 
 This pattern should be used with caution as it might affect the performance of the form save.
 
-### Related article
 
-[Grid OnSave Event](grid-onsave.md)  
+### Related articles
 
+[Grid OnSave Event](grid-onsave.md)   
+[Events (Client API reference)](../events.md)   
+[Events in forms and grids in model-driven apps](../../events-forms-grids.md)
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

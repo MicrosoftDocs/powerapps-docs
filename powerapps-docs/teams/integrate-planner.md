@@ -1,9 +1,9 @@
 ---
-title: Integrate your Teams Power Apps with Planner (contains video)
+title: Integrate your Teams Power Apps with Planner
 description: Learn how to make your Power Apps in Teams work with Planner.
 author: joel-lindstrom
-ms.topic: conceptual
-ms.custom: 
+ms.topic: how-to
+ms.subservice: teams
 ms.date: 08/25/2021
 ms.author: saperlmu
 ms.reviewer: mkaur
@@ -20,7 +20,7 @@ In this article, we'll learn how to integrate Power Apps with Planner to create 
 Power Apps in Microsoft Teams enables collaboration between people and groups. Employees already use Teams to work, communicate, and collaborate. Apps in Teams have deep integration with other Teams capabilities. For example, in Teams, you can assign tasks to team members using Planner in your Teams channel. Apps that require follow-up by others in your team, such as to address issues reported in the Issue Reporting app, can leverage Planner in the Teams channel and create Tasks where users already manage their tasks.
 
 Watch this video to learn how to integrate Power Apps with Planner:
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWL2Ut]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=37312c36-393d-44fd-ba8a-9b3dbdf8d60e]
 
 ## Prerequisites
 
@@ -196,7 +196,7 @@ We'll create an app with five fields capturing details that will be used to crea
 
 1. Copy the following formula in the **OnSelect** property of **Button_CreateTask**.
 
-    ```powerapps-dot
+    ```power-fx
     Planner.CreateTaskV3(
         Param("groupId"),
         PlannerID.Selected.id,

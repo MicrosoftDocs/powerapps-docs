@@ -23,7 +23,7 @@ This sample shows how to create, retrieve, update, and delete a recurring appoin
 - [IOrganizationService.Delete](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.delete)
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Create, retrieve, update, and delete a recurring appointment sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/CRUDRecurringAppointment)
+> [SDK for .NET: Create, retrieve, update, and delete a recurring appointment sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/CRUDRecurringAppointment)
 
 ## How to run this sample
 

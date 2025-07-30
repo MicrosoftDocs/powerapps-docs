@@ -1,8 +1,8 @@
 ---
-title: "setSearchQuery (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "setSearchQuery (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the setSearchQuery method.
-author: chmoncay
-ms.author: chmoncay
+author: MitiJ
+ms.author: mijosh
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -13,8 +13,6 @@ contributors:
   - JimDaly
 ---
 # setSearchQuery (Client API reference)
-
-
 
 Sets the text used as the search criteria for the knowledge base search control.
 
@@ -32,14 +30,11 @@ kbSearchControl.setSearchQuery(searchString);
 ## Parameters
 
 |Name | Type | Required | Description|
-|--|--|--|--|
+|----|----|----|----|
 |`searchString` |String |Yes|The text for the search query.| 
 
 ### Related articles
 
 [getSearchQuery](getSearchQuery.md)
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

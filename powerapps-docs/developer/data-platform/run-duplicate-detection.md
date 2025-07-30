@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: 03/26/2021
 ms.reviewer: "pehecke"
 
-ms.topic: "article"
+ms.topic: how-to
 author: "mayadumesh" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -68,7 +68,7 @@ OData-Version: 4.0
 
 Submit an asynchronous duplicate detection job that runs in the background. The duplicates are detected according to the published duplicate rules for the table type. The detected duplicates are stored as `DuplicateRecord` records in Dynamics 365. 
 
-A maximum of 5000 duplicates are returned by the duplicate detection job.
+A maximum of 5,000 duplicates are returned by the duplicate detection job.
 
 ### Options
 
@@ -180,7 +180,7 @@ OData-Version: 4.0
 The GUID of the base record is stored as `baserecordid` in the `DuplicateRecord` records. `duplicateid`, in the above response is the unique identifier of the duplicate record. `asyncoperationid` is the unique idenitifier of the system job that created that record. And, `ownerid` is the unique identifier of the user or team that owns the duplicate record. See [DuplicateRecord Table](reference/entities/duplicaterecord.md) for more information.
 
 > [!NOTE]
->  Before creating and executing duplicate detection jobs, make sure that there are appropriate duplicate detection rules in place. Dynamics 365 includes default duplicate detection rules for accounts, contacts, and leads, but not for other types of records. If you want the system to detect duplicates for other record types, you’ll need to create a new rule. For information on how to create a duplicate detection rule, see [Duplicate detection rules](/dynamics365/customer-engagement/admin/set-up-duplicate-detection-rules-keep-data-clean).
+>  Before creating and executing duplicate detection jobs, make sure that there are appropriate duplicate detection rules in place. Dynamics 365 includes default duplicate detection rules for accounts, contacts, and leads, but not for other types of records. If you want the system to detect duplicates for other record types, you'll need to create a new rule. For information on how to create a duplicate detection rule, see [Duplicate detection rules](/power-platform/admin/set-up-duplicate-detection-rules-keep-data-clean).
 
 <a name="BKMK_CRwebapi"></a>
 

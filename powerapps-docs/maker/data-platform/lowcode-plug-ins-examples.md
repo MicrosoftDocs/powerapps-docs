@@ -4,8 +4,9 @@ description: Examples of Microsoft Dataverse low-code plug-ins
 author: Mattp123
 ms.author: matp
 ms.service: powerapps
+ms.subservice: dataverse-maker
 ms.topic: how-to
-ms.date: 10/04/2023
+ms.date: 11/10/2023
 ms.custom: template-how-to
 ---
 # Example Dataverse low-code plug-ins (preview)
@@ -15,6 +16,8 @@ ms.custom: template-how-to
 The goal of these example plug-ins is to help you get started by integrating them into your apps. You'll understand the authoring experience includes authoring Microsoft Dataverse custom APIs backed by Power Fx expressions, which can trigger actions internal or external to Dataverse.
 
 > [!IMPORTANT]
+>
+> - Instant low-code plug-ins are deprioritized and aren't being delivered as a feature. Instant low-code plug-ins are replaced with functions. More information: [Functions in Microsoft Dataverse (preview)](functions-overview.md)
 > - This is a preview feature.
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
@@ -27,22 +30,22 @@ To use one of the example plug-ins for the data event the Dataverse accelerator 
 
 ## Return a non-negative value
 
-This example uses the [Abs() function](/power-platform/power-fx/reference/function-numericals) to return the non-negative value of its argument. If a number is negative, Abs returns the positive equivalent.
+This example uses the [Abs() function](/power-platform/power-fx/reference/function-numericals) to return the non-negative value of its argument. If a number is negative, `Abs` returns the positive equivalent.
 
 1. Play the Dataverse Accelerator app, on the command bar select **New action** > **Instant plugin**. 
 1. Provide a display name, such as the formula name, and description.
 1. Create an `Out` parameter to validate expected behavior that makes sense, such as a string Optionally use input parameters to make testing easier, that makes sense with the formula. 
 1. In the formula editor, wrap the `Out` parameter in curly brackets: 
 
-   ```powerapps-dot
+   ```power-fx
    {Out: "" }
    ```
 
 1. Enter an expression that tests the formula: 
-   - Validate that intellisense accepts the formula (text will turn light blue).
+   - Validate that intellisense accepts the formula (text turns light blue).
    - Implement an expression that provides an output to help validate the result, for example.
 
-   ```powerapps-dot
+   ```power-fx
    {Out: "Abs(-5) = 5: " & Text( Abs(-5) = 5 )  }
    ```
 
@@ -53,14 +56,14 @@ This example uses the [Abs() function](/power-platform/power-fx/reference/functi
 
 ### Duplicate detection
 
-Implement server-side input validation, such as duplicate error detection, that throws a custom error message.
+Implement server-side input validation, such as duplicate error detection that throws a custom error message.
 
 1. Play the Dataverse Accelerator app, on the command bar select **New action** > **Automated plugin**.
-1. In the **Name** box enter *Duplicate check*.
+1. In the Name box, enter *Duplicate check*.
 1. For **Table**, select **Contact**.
 1. For **Run this plugin when the row is**, select **Created**.
 1. In the **Formula** box, enter this formula:
-  ```powerapps-dot
+  ```power-fx
    If( !IsBlank(LookUp([@Contacts],'Last Name'=ThisRecord.'Last Name' && 'First Name'=ThisRecord.'First Name')),
   	  Error("You have existing contacts with the same first name and last name")
   )
@@ -69,7 +72,7 @@ Implement server-side input validation, such as duplicate error detection, that 
 
 ### Test the plug-in
 
-1. To test the plug-in, create a canvas app using the contacts table by following the steps here: [Specify a table](../canvas-apps/data-platform-create-app-scratch.md#specify-a-table)
+1. To test the plug-in, create a canvas app using the contacts table by following the steps here: [Specify a table](../canvas-apps/data-platform-create-app-scratch.md#add-a-dataverse-table-in-a-blank-app).
 1. Create a contact row.
 1. Create another contact with the same name as in the previous step.
 1. A message is displayed indicating duplicate records found. Select **Ignore and save** on the error message prompt.
@@ -88,7 +91,7 @@ Display specific types of errors using the _ErrorKind_ enumeration.
    - **Run this plugin when the row is**: **Updated**
 1. Enter the formula below:
 
-   ```powerapps-dot
+   ```power-fx
    If(ThisRecord.'Due Date' < Now(), 
    	Error({ Kind: ErrorKind.Validation , Message: "The due date cannot be in the past" })
    );
@@ -134,9 +137,9 @@ Here's an email template example that you can create for the SenMail based data 
    - **Name**: *SendEmailUponCreate*
    - **Table**: Select the logical table name of the sales orders, which is **SalesOrder**. This event is based off of Sales Orders table.
    - **Run this plugin with the row is**: **Created**
-   - **Formula**: Paste the code below into the **Formula** box. For more information abut the SendEmailFromTemplate function, to to [SendEmailFromTemplate Action](/power-apps/developer/data-platform/webapi/reference/sendemailfromtemplate?view=dataverse-latest&preserve-view=true ).
+   - **Formula**: Paste the code below into the **Formula** box. For more information abut the SendEmailFromTemplate function, to [SendEmailFromTemplate Action](/power-apps/developer/data-platform/webapi/reference/sendemailfromtemplate?view=dataverse-latest&preserve-view=true ).
    
-     ```powerapps-dot
+     ```power-fx
      XSendEmailFromTemplate(
          LookUp('Email Templates',StartsWith(title,"Order Thank You")).'Email Template',
 	 ThisRecord,
@@ -154,7 +157,7 @@ In-app notifications enable makers to configure contextual, actionable notificat
 
 ### Create the low-code plugin that sends an in-app notification
 
-1. Play the Dataverse accelerator app, and then select  **+New plugin** under under **Instant plugins**.
+1. Play the Dataverse accelerator app, and then select  **+New plugin** under **Instant plugins**.
 1. Enter the following information, select **Next**: 
    - **Name**: *NotifyTechnican1*
    - **Description**: *This instant plug-in notifies the app user.*
@@ -162,7 +165,7 @@ In-app notifications enable makers to configure contextual, actionable notificat
    - **OrderID**: **String**
    - **TechnicianEmail**: **String**
 1. **Formula**. Paste the following code in the **Formula** box. For more information about this function, go to [SendAppNotification Action](/power-apps/developer/data-platform/webapi/reference/sendappnotification?view=dataverse-latest&preserve-view=true ).
-   ```powerapps-dot
+   ```power-fx
     XSendAppNotification(
     	"New service",
     	LookUp(Users,'Primary Email'=TechnicianEmail),
@@ -187,7 +190,7 @@ In-app notifications enable makers to configure contextual, actionable notificat
 1. Select screen on the left navigation pane, or create a new one.
 1. On the **Insert** menu, add a **Button** to the page using the **Text** *Notify technician*.
 1. Select the button, and enter the following in the **fx** formula bar, where *DataCardValue17* is the column that contains the Order ID, and *DataCardValue15* is the column that contains the technician’s email address. In this example, a canvas app named **Service Order App** is used.
-	```powerapps-dot
+	```power-fx
 	Environment.cr8b8_Notifytechnician1({
            OrderID: DataCardValue17.Text,
 	   TechnicianEmail: DataCardValue15.Text 
@@ -227,13 +230,25 @@ Prerequisites:
 > Use the [With()](/power-platform/power-fx/reference/function-with) function to capture the entire response from one action if you want to access different properties the response might have. In the example below, there's an input parameter `Location` (string) and an output parameter `Out` (string).
 >
 
-```powerapps-dot
+```power-fx
 With({ /* Capture current weather response from connector */
 c: new_MsnWeather.CurrentWeather( Location, "Imperial" ).responses.weather.current
 },{	/* Return concatenated weather details */
 Out: "Current temp: " & c.temp & " degrees. Feels like " & c.feels & " degrees. Wind speed is " & c.windSpd & " mph."
 })
 ```
+
+## Best practices
+
+### Handling infinite loop errors in automated low-code plugins
+
+Don't write a patch statement on an automated plugin upon 'Update' event, where the patch is happening on the same table as the plugin. This leads to infinite loops and plugin execution failures.
+
+Problematic pattern: Using `Patch()` formula triggers another update.
+!["Problematic formula in automated plugins"](media/automated-plugin-infinite-incorrect.svg)
+
+Recommended pattern: Use the `Set()` formula instead to avoid this issue.
+!["Recommended formula in automated plugins"](media/automated-plugin-infinite-correct.svg)
 
 ## See also
 

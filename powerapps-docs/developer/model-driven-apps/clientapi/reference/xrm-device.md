@@ -1,8 +1,8 @@
 ---
-title: "Xrm.Device| MicrosoftDocs"
+title: "Xrm.Device (Client API reference) in model-driven apps"
 description: Provides methods to use native device capabilities via Xrm.Device.
-author: adrianorth
-ms.author: aorth
+author: sriharibs-msft
+ms.author: srihas
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference

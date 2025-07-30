@@ -3,8 +3,8 @@ title: Retrieve a table row using the Web API
 description: Learn how to compose a GET request using the Microsoft Dataverse Web API to retrieve table data specified as the resource with a unique identifier.
 ms.topic: how-to
 ms.date: 05/30/2023
-author: divkamath
-ms.author: dikamath
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
@@ -30,7 +30,7 @@ The following example returns data for an account entity record with the primary
 GET [Organization URI]/api/data/v9.2/accounts(00000000-0000-0000-0000-000000000001)
 ```
 
-This example returns all the properties for account record, which isn't a performance best practice. You should always use the `$select` system query option to limit the properties returned while retrieving data. This is especially important when retrieving multiple rows of data. More information: [Query Data using the Web API](query-data-web-api.md).
+This example returns all the properties for account record, which isn't a performance best practice. You should always use the `$select` system query option to limit the properties returned while retrieving data. This is especially important when retrieving multiple rows of data. More information: [Query Data using the Web API](query/overview.md).
 
 <a name="bkmk_requestProperties"></a>
 
@@ -68,7 +68,7 @@ OData-Version: 4.0
 
 When you request certain types of properties, you can expect more read-only properties to be returned automatically.
 
-If you request a money value, the `_transactioncurrencyid_value` [lookup property](query-data-web-api.md#lookup-property-data) is returned. This property contains only the GUID value of the transaction currency, so you could use it to retrieve information about the currency using the [transactioncurrency EntityType](xref:Microsoft.Dynamics.CRM.transactioncurrency). Alternatively, you can get more data in the same request by requesting annotations.
+If you request a money value, the `_transactioncurrencyid_value` [lookup property](query/select-columns.md#lookup-property-data) is returned. This property contains only the GUID value of the transaction currency, so you could use it to retrieve information about the currency using the [transactioncurrency EntityType](xref:Microsoft.Dynamics.CRM.transactioncurrency). Alternatively, you can get more data in the same request by requesting annotations.
 
 If you request a property that's part of a composite attribute for an address, you get the composite property, too. For example, if your query requests the `address1_line1` property for a contact, the `address1_composite` property is also returned.
 
@@ -235,7 +235,7 @@ OData-Version: 4.0
 
 ## Retrieve related records by expanding navigation properties
 
-Use the `$expand` system query option to control what data from related entities is returned. More information: [Join Tables](query-data-web-api.md#join-tables)
+Use the `$expand` system query option to control what data from related entities is returned. More information: [Join Tables](query/join-tables.md)
 
 <a name="bkmk_DetectIfChanged"></a>
 
@@ -247,12 +247,12 @@ As a performance best practice you should only request data that you need. If yo
 
 ## Retrieve formatted values
 
-Request [formatted values](query-data-web-api.md#formatted-values) for individual record retrievals the same way you query entity sets.
+Request [formatted values](query/select-columns.md#formatted-values) for individual record retrievals the same way you query entity sets.
 
 ### See also
 
 [Perform operations using the Web API](perform-operations-web-api.md)   
 [Compose HTTP requests and handle errors](compose-http-requests-handle-errors.md)   
-[Query data using the Web API](query-data-web-api.md)   
+[Query data using the Web API](query/overview.md)   
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

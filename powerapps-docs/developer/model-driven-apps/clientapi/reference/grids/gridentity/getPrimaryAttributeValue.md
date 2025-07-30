@@ -1,8 +1,8 @@
 ---
-title: "gridEntity.getPrimaryAttributeValue (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "gridEntity.getPrimaryAttributeValue (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the gridEntity.getPrimaryAttributeValue method.
-author: jasongre
-ms.author: jasongre
+author: clromano
+ms.author: clromano
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference

@@ -1,7 +1,7 @@
 ---
-title: " Associate security role to a user (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample showcases how to assign a security role to a user " # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 04/03/2022
+title: "Sample: Associate security role to a user"
+description: "This sample showcases how to assign a security role to a user "
+ms.date: 04/01/2025
 author: paulliew
 ms.author: paulliew
 ms.reviewer: jdaly
@@ -15,42 +15,52 @@ contributors:
 
 # Sample: Associate security role to a user
 
-This sample shows how to assign a security role to a user by using the [IOrganizationService.Associate](/dotnet/api/microsoft.xrm.sdk.iorganizationservice) message.
+Learn how to associate a system user with a security role by using the `Associate` message or method.
 
-This sample requires an additional user that isn't available in your system. Create the required user manually in **Microsoft 365** in order to run the sample without any errors. For this sample create a user profile **as is** shown below.
+Related articles:
 
-**First Name**: Dan<br/>
-**Last Name**: Park<br/>
-**Security Role**: User without any roles assigned<br/>
-**UserName**: dpark@yourorg.onmicrosoft.com<br/>
+- [Query data using QueryExpression](../queryexpression/overview.md)
+- [Role-based security roles](/power-platform/admin/database-security)
+- [IOrganizationService.Associate Method](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.associate)
+
+## About the sample code
+
+|Sample|Description|Build target|
+|---|---|---|
+|AssociateSecurityRoleToUser|Demonstrates associating a user with a role.|.NET 9|
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Associate security role to a user sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/AssociateSecurityRoleToUser)
+> [SDK for .NET: Associate security role to a user sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp-NETCore/Security/AssociateSecurityRoleToUser)
 
-## How to run this sample
+The code sample demonstrates how to associate a system user with a security role. Specifically, the samples demonstrate how to:
 
-[!include[cc-how-to-run-samples](../../includes/cc-how-to-run-samples.md)]
+1. Connect to Dataverse using a [connection string](../../xrm-tooling/use-connection-strings-xrm-tooling-connect.md) that defines required connection information
+1. Query for a security role using its name attribute.
+1. Associate the logged on user with that security role.
 
-## What this sample does
+Additional information can be found in [README-code-design](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp-NETCore/README-code-design.md) file.
 
-The [IOrganizationService.Associate](/dotnet/api/microsoft.xrm.sdk.iorganizationservice) message is intended to be used in a scenario where it provides programmatic access to the metadata and data for an organization.
+## How to build and run the code sample
 
-## How this sample works
+1. Clone the [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples) repository.
+1. Locate the sample folder.
+1. Open the solution file (*.sln) in Visual Studio.
+1. Edit the project's appsettings.json file and set the `Url`value as appropriate for your Dataverse test environment.
+1. Build and run the project [F5].
+1. You'll be prompted in a browser window for account sign-in credentials to the target environment.
 
-In order to simulate the scenario described in [What this sample does](#what-this-sample-does), the sample will do the following:
+## Expected program output
 
-### Setup
+For a successful run, the program's console output should look similar to the following example.
+Otherwise, any errors or exceptions are displayed.
 
-1. Checks for the current version of the org.
-2. The `CreateRequiredRecords` method creates the records required by the sample.
+```console
+Discovering who you are...done.
+Associating your system user record with role 'Basic User'..done.
 
-### Demonstrate
-
-1. The `QueryExpression` method retrieves a role from Microsoft Dataverse.
-2. The `Associate` message assigns the role to a user.
-
-### Clean up
-
-Display an option to delete the sample data in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
+Use the Power Platform admin center to see that you now have
+the 'Basic User' role. Afterwards, remove the role if desired.
+Press any key to undo environment data changes.
+```
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

@@ -1,8 +1,8 @@
 ---
-title: "getOption (Client API reference)| MicrosoftDocs"
+title: "getOption (Client API reference)"
 description: Includes description and supported parameters for the getOption method.
-author: HemantGaur
-ms.author: hemantg
+author: clromano
+ms.author: clromano
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -14,8 +14,6 @@ contributors:
   - JimDaly
 ---
 # getOption (Client API reference)
-
-
 
 Returns an option object with the value matching the argument (label or enumeration value) passed to the method. 
 
@@ -36,7 +34,5 @@ Choice, Choices
 **Type**: Option object. 
 
 **Description**: The logical name of the column.
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

@@ -1,17 +1,19 @@
 ---
 title: Create a report using the Report Wizard| Microsoft Docs
 description: Create a report using the Report Wizard in Power Apps
-author: sericks007
+author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
-ms.date: 06/27/2019
+ms.topic: how-to
+ms.date: 11/17/2023
 ms.subservice: end-user
-ms.author: sericks
-ms.reviewer: sericks
+ms.author: smurkute
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser
+contributors:
+- markha52 
 ---
 # Create a report using the Report Wizard
 
@@ -87,6 +89,8 @@ All reports that are created using the Report Wizard are Fetch-based reports. Al
 > The reports that are querying notes, may display in HTML-formatted text instead of plain text. This is because the rich-text editor is enabled by default. To workaround this issue, do one of the following:
 > - Disable the rich-text editor. For more information, see [Rich text editor control in Power Apps](../maker/canvas-apps/controls/control-richtexteditor.md). When you disable the rich-text editor, new notes that are created will not then have the HTML tags. The existing notes that were created when the rich-text editor was enabled will still show in HTML-formatted text.
 > - Update the report definition to support formatted text. For more information, see [Importing HTML into a Report](/sql/reporting-services/report-design/importing-html-into-a-report-report-builder-and-ssrs).
+>
+> Note that [multi-select picklist fields](../developer/data-platform/multi-select-picklist.md) are not fully supported in the Report Wizard. Multi-select picklist fields can't be added as a grouping or a column to the report.
     
 
 ### See Also

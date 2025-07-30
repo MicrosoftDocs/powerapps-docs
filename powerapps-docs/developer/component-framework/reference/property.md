@@ -1,8 +1,8 @@
 ---
 title: Property (Power Apps component framework API reference) | Microsoft Docs
 description: Interface for context.parameters.<property_key>
-ms.author: hemantg
-author: HemantGaur
+ms.author: anuitz
+author: anuitz
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference

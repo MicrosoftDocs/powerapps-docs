@@ -3,7 +3,7 @@ title: Customize sample app templates  | Microsoft Docs
 description: Learn how to customize sample app templates.
 author: msftsamperl
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: 
 ms.date: 12/14/2020
 ms.subservice: teams
@@ -105,7 +105,7 @@ variables to correctly display the desired terminology for inspections and items
 
     The formula for the greeting text is in this format:
 
-    ```powerapps-dot
+    ```power-fx
     "Glad to have you here, we are ready for you to " & If(Lower(gblWorkType)="inspection", "inspect", Lower(gblWorkType)) & Switch(
     Left(
         Lower(areaLabel),
@@ -131,7 +131,7 @@ variables to correctly display the desired terminology for inspections and items
 
 1. Update the greeting text, such as **We are happy that you are here**.
 
-    ```powerapps-dot
+    ```power-fx
     "We are happy that you are here, we are ready for you to " & If(Lower(gblWorkType)="inspection", "inspect", Lower(gblWorkType)) & Switch(
     Left(
         Lower(areaLabel),
@@ -283,13 +283,13 @@ Consider a scenario where you have multiple stores, and you want to associate lo
 
 1. At the end of the 17th line, add a comma and this formula:
 
-    ```powerapps-dot
+    ```power-fx
     'Store Name':Microsoft_CoreControls_TextBox1.Value
     ```
 
     This section of the formula should now look like the following:
 
-    ```powerapps-dot
+    ```power-fx
     {
     	msft_name: txtArea_EditTitle.Text,
     	'Location Type': cmbAreaDetails_AreaType.Selected,
@@ -308,7 +308,7 @@ Consider a scenario where you have multiple stores, and you want to associate lo
 
 1. Change the formula to: 
 
-    ```powerapps-dot
+    ```power-fx
     If(gblEditLocation,250,200)
     ```    
 
@@ -320,7 +320,7 @@ Consider a scenario where you have multiple stores, and you want to associate lo
 
 1. Change the formula to: 
 
-    ```powerapps-dot
+    ```power-fx
     If(gblEditLocation,282,232)
     ```    
 
@@ -332,7 +332,7 @@ Consider a scenario where you have multiple stores, and you want to associate lo
 
 1. Change the formula to: 
 
-    ```powerapps-dot
+    ```power-fx
     If(gblViewInspection, false, true)
     ```
 

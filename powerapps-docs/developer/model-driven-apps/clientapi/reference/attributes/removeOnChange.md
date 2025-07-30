@@ -1,8 +1,8 @@
 ---
-title: "removeOnChange (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "removeOnChange (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the removeOnChange method.
-author: HemantGaur
-ms.author: hemantg
+author: clromano
+ms.author: clromano
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -14,8 +14,6 @@ contributors:
   - JimDaly
 ---
 # removeOnChange (Client API reference)
-
-
 
 Removes a function from the **OnChange** event handler for a column.
 

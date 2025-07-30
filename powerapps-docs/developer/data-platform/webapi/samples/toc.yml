@@ -41,12 +41,22 @@ items:
       href: attachment-annotation-file-operations.md
     - name: Query schema definitions and detect changes
       href: retrievemetadatachanges.md
-    - name: Use CreateMultiple and UpdateMultiple (preview)
+    - name: Use bulk operations
       href: create-update-multiple.md
+- name: PowerShell samples
+  items:
+  - name: About the PowerShell samples
+    href: ../web-api-samples-powershell.md
+  - name: Basic Operations
+    href: basic-operations-powershell.md
+  - name: Metadata Operations
+    href: metadata-operations-powershell.md
 - name: (JavaScript) samples
   items:
   - name: About the client-side samples
     href: ../web-api-samples-client-side-javascript.md
+  - name: DataverseWebAPI sample library
+    href: ../dataversewebapi-sample-library.md
   - name: Basic Operations
     href: basic-operations-client-side-javascript.md
   - name: Conditional Operations

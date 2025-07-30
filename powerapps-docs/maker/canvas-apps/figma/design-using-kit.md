@@ -2,7 +2,7 @@
 title: Design your app using the UI kit
 description: Learn about the various components that the "Create Apps from Figma UI Kit" supports.
 author: mduelae
-ms.topic: article
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 05/24/2022

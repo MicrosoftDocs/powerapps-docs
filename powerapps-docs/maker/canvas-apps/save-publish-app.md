@@ -2,11 +2,11 @@
 title: Save and publish canvas apps
 description: Step-by-step instructions for saving and publishing canvas apps.
 author: amchern
-
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 02/09/2022
+ms.date: 5/27/2025
+ms.update-cycle: 180-days
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
@@ -15,92 +15,114 @@ contributors:
   - mduelae
   - emcoope-msft
   - amchern
+ms.collection: 
+    - bap-ai-copilot
 ---
+
 # Save and publish canvas apps
 
-Whenever you save changes to a canvas app, you automatically publish them only for yourself and anyone else who has permissions to edit the app. When you finish making changes, you must explicitly publish them to make them available to everyone with whom the app is shared.
+When you save changes to a canvas app, those changes are saved for you and anyone else who can edit the app. To make your changes available to everyone the app is shared with, publish the app. To learn how to share an app, see [Share an app](share-app.md).
 
-For information about how to share an app, see [Share an app](share-app.md).
+## Save your app
 
- With your app open for editing in [Power Apps Studio](https://create.powerapps.com), in the app actions menu, select **Save** and perform the following actions:
+With your app open for editing in [Power Apps](https://make.powerapps.com), you can save your work in several ways:
 
-- **Save**: Saves recent and unsaved changes you made to the app in Power Apps Studio. Each time you save changes, a new version is created.
-- **Save with version notes**: Save and add notes about the updates you've made.
-- **Save as**: Duplicate the app by saving the app with a different name.
-- **Save and publish**: Allows you to save the app and publish it at the same time.
-- **Download a copy**: Downland a local copy of the app.
+- Select **Save** :::image type="icon" source="media/save-publish-app/save-icon.png"::: to save any unsaved changes to your app. Each time you save, a new version appears in app version history.
+
+- In the dropdown menu, choose one of the following options:
+
+  - **Save with version notes**: Save and add notes about your update.
+  - **Save as**: Duplicate the app with a different name.
+  - **Download a copy**: Download a local copy of the app.
+
+## Turn AutoSave on or off
+
+Power Apps saves your work automatically every two minutes.
+
+1. On the command bar, select **Settings**, and then go to the **General** tab.
+
+1. In the **Auto save** section, set the **Auto save** toggle to **On** or **Off**.
+
+   :::image type="content" source="media/save-publish-app/autosave2.png" alt-text="Screenshot of the AutoSave toggle location in Power Apps settings.":::
+
+> [!NOTE]
+>
+> - When you publish a canvas app, your app updates and runs on the latest version of Power Apps. Your app gets all the latest features and performance upgrades added since you last published. If you haven't published an update in several months, you can see an immediate performance benefit when you republish the app.
+> - To retrieve app details faster during startup, some data stores locally on user devices in the browser cache. Information stored includes app environment and connection details. This data stays in the browser based on browser storage limits. Users can clear stored data based on these [instructions for each browser](/troubleshoot/power-platform/power-apps/troubleshooting-startup-issues#clear-your-browser-cache).
 
 
-> [!div class="mx-imgBorder"] 
-> ![Studio save options.](media/studio/pa-studio-save-options.png)
+## Publish your app
 
 
-Power Apps can also periodically save the app every 2 minutes. If you've saved the app once, Power Apps will continue to save a version of the app periodically without requiring the user to press or tap the Save action. Authors can enable or disable the **Auto save** by going to **Setting** > **General**.
+1. On the command bar, select **Publish**. 
+    If the app isn't saved, you're prompted to save it. After you save it, select **Publish** again.
 
-![Auto save setting.](./media/save-publish-app/autosave.png)
+1. Enter your app's description, and then select **Publish this version**.
 
+### Create an app description with Copilot (preview)
 
-   > [!NOTE]
-   > - Whenever you publish a canvas app, your app will be upgraded to run on the latest version of Power Apps – which means it will get the benefit of all the latest features and performance upgrades we’ve added since you last published. If you haven’t published an update in several months, you’ll likely see an immediate performance benefit from republishing now.
-   > - To allow users to retrieve app details faster on app startup, certain data will be locally stored on users' devices in the browser cache. Information that will be stored includes app, environment, and connection details. This data will stay stored in the browser based on each browsers’ storage limits. Users can clear stored data based on [instructions for each browser](/troubleshoot/power-platform/power-apps/troubleshooting-startup-issues)
+If your app is in a [managed environment](/power-platform/admin/managed-environment-overview), you can use AI to help create a description for your app.
 
+When you save and publish your app, in the **Publishing** dialog box, select **Create descriptions using AI**.
 
-## Create an app description with Copilot (preview)
+You can also generate an app description by going to **Settings** > **General**. Under **Description**, select **Create descriptions using AI**.
 
-[This section is prerelease documentation and is subject to change.]
+Admins can disable this feature for managed environments in Power Platform admin. For more information, see [Managed Environments panel](/power-platform/admin/managed-environment-enable).
 
-If your app is in a [managed  environment](/power-platform/admin/managed-environment-overview), you can use AI to help you create a description for your app.
-
-When you save and publish your app, on the **Getting ready to publishing** dialog box select, **Create descriptions using AI**.
-
-You can also generate an app description by going to, **Settings** > **General**. Under **Description** select, **Create descriptions using AI**.
-
+> [!NOTE]
+> If you don't add a description before publishing the app, Copilot generates one after the app is published. Makers can edit this description if Copilot doesn't generate it correctly.
 
 > [!IMPORTANT]
-> - To use this capability your app must be in a [managed  environment](/power-platform/admin/managed-environment-overview).
-> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+>
+> - To use this capability, your app must be in a [managed environment](/power-platform/admin/managed-environment-overview).
+> - Preview features aren't meant for production use and can have restricted functionality. These features are available before an official release so customers get early access and provide feedback.
 > - For more information, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
-> - This capability is powered by [ Azure OpenAI Service](/azure/cognitive-services/openai/overview).
-> - This capability is in process of rolling out, and may not be available in your region yet.
-> - This capability  may be subject to usage limits or capacity throttling.
-> - To understand capabilities and limitations of AI-powered and Copilot features in Power Apps, see [Responsible AI FAQs for Power Apps](../common/responsible-ai-overview.md)
-
-
+> - This capability is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview).
+> - This capability isn't available in all regions yet or can be subject to usage limits or capacity throttling.
+> - To learn about capabilities and limitations of AI-powered and Copilot features in Power Apps, see [Responsible AI FAQs for Power Apps](../common/responsible-ai-overview.md)
 
 ## Identify the live version
 
-To see all versions of an app, go to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) > **Apps** > select your app > **Details** > **Versions**.
+To see all versions of an app:
 
-The **Live** version is published for everyone with whom the app is shared. The most recent version of any app is available only to those users who have edit permissions for it.
+1. Go to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and in the navigation pane, select **Apps**.
+1. Select the **Commands** icon :::image type="icon" source="media/save-publish-app/vertical-ellipses.png"::: next to the app name.
+1. Select **Details** > **Details**.
+1. Go to the **Versions** tab.
 
-![Publish from portal.](./media/save-publish-app/publish-portal.png)
+The **Live** version is published for everyone the app is shared with. Only users with edit permissions can use the most recent version of the app.
 
-To publish the most recent version, highlight the version and select ellipsis (...). Then select **Publish this version** from the drop-down menu.
+:::image type="content" source="media/save-publish-app/publish-portal.png" alt-text="Screenshot of where different versions of the app are located and how to publish a specific version." lightbox="media/save-publish-app/publish-portal.png":::
+
+To publish the most recent version, select the publish icon :::image type="icon" source="media/save-publish-app/publish-icon.png"::: while editing your app.
 
 > [!NOTE]
-> - Changes from a newly published version of an app may take a few seconds to reflect when launching the app. Publish time depends on the complexity of apps, so expect more complex apps to take a few more minutes to publish.
-> - If you already have an app open while a new version is published, you must reload the app to get the latest changes.
-> - To reduce the time users wait to access your app, the app preload capability is turned on. You can chose to turn it off. Learn more [here](performance-tips.md#enable-preload-app-for-enhanced-performance).
+>
+> - New published changes to an app can take a few seconds to show when you launch the app. Publish time depends on the app's complexity, and it can take a few more minutes to finish publishing.
+> - If you already have an app open when a new version is published, reload the app to get the latest changes.
+> - To reduce wait time when using your app, the app preload capability is on. You can turn it off. For more information, see [Overview of creating performant apps](create-performant-apps-overview.md).
 
 ## In-app notifications for an updated version of the app
 
-Depending on the complexity of an app, changes that are recently published may not be available when a user launches the app. If this happens, users will get a toast notification stating **A new version of this app is coming. We'll let you know when it's available.** When the published changes are ready, users will see a notification stating **You're using an old version of this app. Refresh to use the latest version**. Users can select the **Refresh** button to see the latest version of the app.
+When users wait for an app to update, they see a notification that says **A new version of this app is coming. We'll let you know when it's available.**
 
-The following table shows the scenarios where this notification is available.
+When the published changes are ready, users see a notification that says **You're using an old version of this app. Refresh to use the latest version.** Users select the **Refresh** button to get the latest version of the app.
+
+### Notification availability
 
 | Scenario | Availability |
 | - | - |
 | Canvas app on web | Generally available |
-| Customized SharePoint Forms | Not available |
-| Canvas app embedded in Teams | Not available | 
-| Canvas app embedded in PowerBI | Not available |
+| Customized SharePoint forms | Not available |
+| Canvas app embedded in Teams | Not available |
+| Canvas app embedded in Power BI | Not available |
 | Power Apps web part | Not available |
-| Canvas app embedded in iframe | Generally available |
+| Canvas app embedded in an iframe | Generally available |
 
 ## Next steps
 
-* Find and run the app in a [browser](../../user/run-app-browser.md) or on a [phone](../../mobile/run-powerapps-on-mobile.md).
-* [Rename an app](set-name-tile.md) from [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-* [Restore an app](restore-an-app.md) if you have multiple versions of an app.
+- Run the app in a [browser](../../user/run-app-browser.md) or on a [phone](../../mobile/run-powerapps-on-mobile.md).
+- [Rename an app](set-name-tile.md) from [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+- [Restore an app](restore-an-app.md) if you have more than one version of the app.
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

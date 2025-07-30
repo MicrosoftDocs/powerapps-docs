@@ -1,9 +1,8 @@
 ---
-title: "Stylesheet (XSL) web resources  (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about using Stylesheet (XSL) Web resources to transform XML data." # 115-145 characters including spaces. This abstract displays in the search result.
-author: sriharibs-msft
-ms.author: srihas
-
+title: "Stylesheet (XSL) web resources  (model-driven apps)"
+description: "Learn about using Stylesheet (XSL) Web resources to transform XML data."
+author: anushikhas96
+ms.author: anushisharma
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: "article"
@@ -25,7 +24,7 @@ Use Stylesheet (XSL) Web resources to transform XML data.
 
 Use XSL Web resources to transform XML data used by your solution.
 
-The following Web resources work together to render a page that displays a table using the data in the XML Web resource. The source files for these Web resources are part of the Import Web Resources sample under the **filestoimport** folder. Download the sample of [Import files as web resources](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/ImportWebResources).
+The following Web resources work together to render a page that displays a table using the data in the XML Web resource. The source files for these Web resources are part of the Import Web Resources sample under the **filestoimport** folder. Download the sample of [Import files as web resources](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/ImportWebResources).
 
 **HTML Web resource:** sample\_/ImportWebResources/Content/ShowData.htm
 

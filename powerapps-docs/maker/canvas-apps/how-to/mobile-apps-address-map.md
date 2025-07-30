@@ -1,9 +1,9 @@
 ---
-title: Create an app with address input and map controls (contains video)
+title: Create an app with address input and map controls
 description: Learn about how to create apps using address input and map controls in canvas apps.
 author: joel-lindstrom
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mduelae
 ms.date: 03/3/2022
@@ -27,11 +27,11 @@ The control returns the address as structured data, allowing the application to 
 To use the control, you need to enable the [Geospatial Services](../geospatial-overview.md#enable-geospatial-features-for-the-environment) for the environment.
 
 - Watch this video to learn how to use the address input control:
-    > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLPQg]
+    > [!VIDEO https://learn-video.azurefd.net/vod/player?id=ff56e551-756f-4796-8af9-419b40b1dbfd]
 
 
 - Watch this video to learn how to use the map control:
-    > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLAkd]
+    > [!VIDEO https://learn-video.azurefd.net/vod/player?id=c62bc98b-cf1f-4289-af11-82618c5e6d02]
 
 In this article, we'll learn how to use the address input control in canvas apps.
 
@@ -218,7 +218,7 @@ In this section, we'll see how to add the **Map** control on the app to show the
 
     On the **OnAddressSelect** property of the **Address Input** control, enter the following formula to create a collection that captures the address data.
 
-    ```powerapps-dot   
+    ```power-fx   
     ClearCollect(
         colSelectedAddress,
         {
@@ -334,7 +334,7 @@ Some of the properties of the pin can be customized per location pin are explain
     > [!TIP]
     > For the complete list of icons, go to [List of image templates](/azure/azure-maps/how-to-use-image-templates-web-sdk#list-of-image-templates).
 
-    ```powerapps-dot
+    ```power-fx
     ClearCollect(
         colSelectedAddress,
         {

@@ -1,0 +1,1 @@
+Returns all records in referenced record's hierarchical ancestry line.

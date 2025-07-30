@@ -1,37 +1,34 @@
 ---
-title: Import or export data from Microsoft Dataverse
+title: Import data from Excel and export data to CSV
 description: Bulk import and export data from Excel or CSV files into tables in Microsoft Dataverse by using the Get Data from Excel and Export Data functionality
 author: sabinn-msft
 ms.topic: how-to
 ms.component: cds
-ms.date: 07/25/2023
+ms.date: 06/17/2025
 ms.subservice: dataverse-maker
 ms.author: sabinn
+ms.reviewer: matp
+contributor: dingbx
 search.audienceType: 
   - maker
 ---
-# Import or export data from Dataverse
+# Import data from Excel and export data to CSV
 
-To get (import) data into Microsoft Dataverse tables, use an Excel worksheet file, a comma-separated values (CSV) file, or one of the many connectors available.
+To get (import) data into Microsoft Dataverse tables, use an Excel worksheet file or a comma-separated values (CSV) file. 
 
 When you export Dataverse table data, it's exported as a CSV file.
-
-## Import using a connector
-
-Use a connector to import data from a selection of many different sources, such as Microsoft Excel, Azure, SQL Server database, SharePoint, Access, OData, and more.
-
-1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. On the left navigation pane select **Tables**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
-1. Select **Data** > **Get data** > **Get data**.
-1. From the **Data sources** list, select the connector that you want to import data from.
-
-For information about the connector you want to use as your data source, see [List of all Power Apps connectors](/connectors/connector-reference/connector-reference-powerapps-connectors) and [List of all connectors published by Microsoft](/connectors/connector-reference/connector-reference-microsoft-connectors).
 
 ## Import from an Excel or CSV file
 
 There are two ways to import data from Excel.
+
 - [Option 1: Import by creating and modifying a file template](#option-1-import-by-creating-and-modifying-a-file-template)
 - [Option 2: Import by bringing your own source file](#option-2-import-by-bringing-your-own-source-file)
+
+> [!IMPORTANT]
+>
+> - To import or export data, you must have the **Environment Maker** security role.
+> - Import from Excel or CSV file using the **Import** &gt; **Import data from Excel** command isn’t available in GCC, GCC High, and DoD environments. To work around this limitation, from the **Tables** area in Power Apps select **Import** &gt; **Import data**, and then choose a data source, such as **Excel workbook** or **Text/CSV**.
 
 ### Option 1: Import by creating and modifying a file template
 
@@ -49,12 +46,45 @@ Copy data from your Excel or CSV file into the template that you created in the 
 #### Import the file
 
 1. On [powerapps.com](https://make.powerapps.com/) select **Tables** in the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
-1. Select **Data**, to the right of **Get Data** select **>**, and then select **Get data from Excel**.
+1. Select **Import** > **Import data from Excel**.
 1. Select the tables where you want to import data, and then select **Next**.
 1. On the **Import data** page, select **Upload**, and choose your file. Follow the prompts to upload your file.
 1. After the file is uploaded and **Mapping status** indicates **Mapping was successful**, select **Import** from the top-right corner. Go to [Troubleshoot mapping errors with Excel](#troubleshoot-mapping-errors-with-excel) to navigate and fix any mapping errors.
    :::image type="content" source="media/data-platform-import-export/import-mapping-successful.png" alt-text="Import mapping successful":::
   After the import finishes successfully, you'll see the total number of inserts and updates.  
+
+#### New import from Excel (preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
+The new import experience lets users import data directly from an Excel file into existing Dataverse tables using a unified UI. This experience improves upon the original import method by offering:
+
+- **Assisted mapping**: Uses vector-based search to provide more contextually relevant column mapping suggestions.
+- **Sheet selection**: Users can choose which sheet to import from within a multi-sheet Excel file.
+- **Notifications**: Real-time feedback on import status, including success, in-progress, and error states.
+- **Error logs**: Downloadable logs to help users self-diagnose and resolve issues.
+- **Performance improvements**: Asynchronous ingestion offers better reliability and speed for large files.
+
+[!INCLUDE [preview-note-pp.md](../../../shared/preview-includes/preview-note-pp.md)]
+
+##### Prerequisites
+
+To use the feature a Power Platform admin must enable the **"Import Excel to existing table with assisted mapping"** environment setting in the Power Platform admin center. Select the environment, and then select **Settings** > **Product** > **Features** and enable the **"Import Excel to existing table with assisted mapping"** setting.
+
+##### Import from Excel (preview) steps
+
+1. Go to the table you want to import data to, and then on the command bar select **Import** > **Import from Excel (Preview)**.
+1. Upload your Excel file and select the sheet to import.  
+   :::image type="content" source="./media/data-platform-import-export/import-v2-select-sheet.png" alt-text="Select the Excel sheet to import.":::
+1. Map columns. A primary key is required if you want to update existing records in the table. If no primary key is selected ("None" option), then all records from the Excel sheet or CSV file are added as new records.
+   :::image type="content" source="./media/data-platform-import-export/import-v2-mapping.png" alt-text="Map source columns to target attributes.":::
+1. Review the summary and select **Import**.
+
+Monitor the import status from notifications:
+
+- In progress: Ongoing import activity with the message **Your data is importing** displayed.  
+- Success: Data was processed or indexed with the message **Upload completed** displayed.  
+- Error: **Upload completed with some errors** displayed that includes a link to download logs for troubleshooting.
 
 ### Option 2: Import by bringing your own source file
 
@@ -91,32 +121,31 @@ Sometimes, a primary key might not work when you integrate data from an external
 Example:  
 For an **Account** table, you might set **transactioncurrencyid** as an alternate key by using a natural key-based identification. For example, use **US Dollar** instead of the GUID value **88c6c893-5b45-e811-a953-000d3a33bcb9** shown previously. You can also choose **currency symbol** or **currency name** as keys.  More information: [Define alternate keys using Power Apps portal](define-alternate-keys-portal.md)
 
-> [!div class="mx-imgBorder"] 
+> [!div class="mx-imgBorder"]
 > ![Example of creating an alternate key on a **Currency** table.](./media/data-platform-import-export/create-ak.png)
 
-> [!div class="mx-imgBorder"] 
+> [!div class="mx-imgBorder"]
 > ![Sample export file from an **Account** table showing **currency name** as a natural key.](./media/data-platform-import-export/export-nk.png)
 
 You can still use primary keys as identifiers after you specify alternate keys. In the preceding sample, the first file is still valid if GUIDs are valid data.
 
 ## Export data
 
-Export data from one or more tables. Exported data is in comma-separated value (CSV) format. When you export data from more than one table, each table is exported into its own CSV file.
+Export data from a single table in a comma-separated value (CSV) format.
 
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), on the left navigation pane select **Tables**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Select **Export** > **Export data**.
-1. Select the tables that you want to export data from, and then select **Export data**.
+1. Select the table from which you want to export data, and then select **Export data**.
 
-   > [!div class="mx-imgBorder"] 
+   > [!div class="mx-imgBorder"]
    > ![Example of exporting data from an **Account** table.](./media/data-platform-import-export/export-account.png)
 
 1. After the export finishes successfully, select **Download exported data** to download the CSV file to the download folder specified in your web browser.
 
-   > [!div class="mx-imgBorder"] 
-   > ![Sample export that shows successful export with link downloadable file.](./media/data-platform-import-export/export-success.png)
+   :::image type="content" source="media/data-platform-import-export/export-success.png" alt-text="Sample export that shows successful export with a link to the downloadable file.":::
 
 > [!NOTE]
-> Exports have a 12 minute time limit. If the volumne of data exported exceeds 12 minutes the export will fail. If this occurs, export data in smaller segments.
+> Exports have a 12 minute time limit. If the volume of data exported exceeds 12 minutes the export will fail. If this occurs, export data in smaller segments.
 
 ## Unsupported data types and fields
 
@@ -127,30 +156,26 @@ The following data types aren't currently supported for import or export.
 - Image
 - File
 
-The following fields are system fields and are not supported for import and export.
+The following fields are system fields and aren't supported for import and export.
 
-- Ownerid
-- Createdby
-- Createdonbehalfby
-- Createdon
-- Modifiedby
-- Modifiedonbehalfby
-- Modifiedon
-- Overriddencreatedon
+- `Ownerid`
+- `Createdby`
+- `Createdonbehalfby`
+- `Createdon`
+- `Modifiedby`
+- `Modifiedonbehalfby`
+- `Modifiedon`
+- `Overriddencreatedon`
 
  > [!NOTE]
  > Get Data from Excel and Export Data features are currently not included in the Power Apps Developer Plan.
 
-## Troubleshoot connection issues
+## Import using a connector
 
-Users might receive an error message if the connection they are using for export requires a fix. In this case, the user receives an error message that states **Connection to Dataverse failed. Please check the link below on how to fix this issue**.
+Use a connector to import data from a selection of many different sources, such as Azure, SQL Server database, SharePoint, Access, OData, and more. More information: [Create and use dataflows in Power Apps](create-and-use-dataflows.md)
 
-To fix this issue:
+## See also
 
-1. In Power Apps (make.powerapps.com), select **Connections** from the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
-2. Locate the **Microsoft Dataverse (legacy)** connection.
-3. Select the **Fix connection** link in the **Status** column, and follow the instructions on your screen.
-
-After the fix completes, retry the export.
+[Tables in Dataverse](entity-overview.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

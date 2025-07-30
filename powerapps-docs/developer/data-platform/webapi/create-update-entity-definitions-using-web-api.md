@@ -2,8 +2,8 @@
 title: "Create and update table definitions using the Web API"
 description: "Learn about creating and updating Dataverse table definitions using the Web API."
 ms.date: 06/07/2023
-author: NHelgren
-ms.author: nhelgren
+author: mkannapiran
+ms.author: kamanick
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
@@ -149,7 +149,7 @@ OData-Version: 4.0
 ```http 
 HTTP/1.1 204 No Content  
 OData-Version: 4.0  
-OData-EntityId: [Organization URI]/api/data/v9.2/EntityDefinitions(417129e1-207c-e511-80d2-00155d2a68d2)  
+OData-EntityId: [Organization URI]/api/data/v9.2/EntityDefinitions(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)  
 ```  
   
 <a name="bkmk_updateEntities"></a>
@@ -178,7 +178,7 @@ Typically, you'll retrieve the JSON definition of the entity attribute and modif
  **Request:**
 
 ```http 
-PUT [Organization URI]/api/data/v9.2/EntityDefinitions(417129e1-207c-e511-80d2-00155d2a68d2) HTTP/1.1
+PUT [Organization URI]/api/data/v9.2/EntityDefinitions(00aa00aa-bb11-cc22-dd33-44ee44ee44ee) HTTP/1.1
 MSCRM.SolutionUniqueName: examplesolution
 Accept: application/json  
 Content-Type: application/json; charset=utf-8  
@@ -470,7 +470,7 @@ MSCRM.MergeLabels: true
  "EntitySetName": "new_bankaccounts",  
  "IsEnabledForExternalChannels": false,  
  "IsPrivate": false,  
- "MetadataId": "417129e1-207c-e511-80d2-00155d2a68d2",  
+ "MetadataId": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee",  
  "HasChanged": null  
 }  
 ```  
@@ -491,8 +491,8 @@ OData-Version: 4.0
 [Model table relationships using the Web API](create-update-entity-relationships-using-web-api.md)  
 [Work with table definitions using the SDK for .NET](../org-service/work-with-metadata.md)  
 [Column (attribute) definitions](../entity-attribute-metadata.md)  
-[Web API Metadata Operations Sample](web-api-metadata-operations-sample.md)  
-[Web API Metadata Operations Sample (C#)](samples/webapiservice-metadata-operations.md)
+[Web API table schema operations sample](web-api-metadata-operations-sample.md)  
+[Web API table schema operations sample (C#)](samples/webapiservice-metadata-operations.md)
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -18,7 +18,7 @@ contributors:
 This sample shows how to disable and enable a system user account in an online or on-premise/IFD environment.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Disable or enable a user sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/DisableOrEnableUser)
+> [SDK for .NET: Disable or enable a user sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/DisableOrEnableUser)
 
 ## How to run this sample
 
@@ -26,7 +26,7 @@ The user account under which you run this program must have the System Administr
 
 Before building this sample, open the solution in Visual Studio and select **View** > **Task List**. There are two TODO comments that you must follow to provide the required information about an existing system user in your organization.
 
-See [How to run samples]https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/README.md) for information about how to run this sample.
+See [How to run samples](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/README.md) for information about how to run this sample.
 
 ## What this sample does
 

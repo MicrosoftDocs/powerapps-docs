@@ -1,0 +1,1 @@
+Specify conditions for [entity](../entity.md) and [link-entity](../link-entity.md) row values which must be true to return the row. The condition [operator](../operators.md) attribute specifies how to evaluate the values.

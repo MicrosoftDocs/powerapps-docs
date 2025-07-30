@@ -2,8 +2,8 @@
 title: "Retrieve table definitions by name or MetadataId (Microsoft Dataverse) | Microsoft Docs"
 description: "Microsoft Dataverse uses a metadata-driven architecture to provide the flexibility to create custom tables and more system table columns."
 ms.date: 08/15/2022
-author: NHelgren
-ms.author: nhelgren
+author: mkannapiran
+ms.author: kamanick
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
@@ -293,7 +293,7 @@ OData-Version: 4.0
 [Query table definitions using the Web API](query-metadata-web-api.md)  
 [Create and update table definitions using the Web API](create-update-entity-definitions-using-web-api.md)  
 [Create and update table relationships using the Web API](create-update-entity-relationships-using-web-api.md)  
-[Web API Metadata Operations Sample](web-api-metadata-operations-sample.md)  
-[Web API Metadata Operations Sample (C#)](samples/webapiservice-metadata-operations.md)
+[Web API table schema operations sample](web-api-metadata-operations-sample.md)  
+[Web API table schema operations sample (C#)](samples/webapiservice-metadata-operations.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

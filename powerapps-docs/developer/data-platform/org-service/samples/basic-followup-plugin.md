@@ -2,8 +2,8 @@
 title: "Sample: Create a basic plug-in (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn how to write a simple plug-in that creates a follow-up activity."
 ms.date: 04/03/2022
-author: divkamath
-ms.author: dikamath
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: pehecke
 ms.topic: sample
 search.audienceType:
@@ -20,7 +20,7 @@ contributors:
 This sample shows how to write a simple plug-in that creates a follow-up activity.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Create a basic plug-in sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/FollowupPlugin)
+> [SDK for .NET: Create a basic plug-in sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/FollowupPlugin)
 
 ## How to run this sample
 

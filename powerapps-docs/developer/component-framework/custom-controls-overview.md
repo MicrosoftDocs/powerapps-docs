@@ -1,11 +1,11 @@
 ---
 title: "Code components | MicrosoftDocs"
 description: "What are code components? Use the Power Apps component framework to create code components to provide enhanced user experiences for users to view and work with data in model-driven apps, canvas apps, and Power Pages."
-ms.author: hemantg
-author: HemantGaur
+author: anuitz
+ms.author: anuitz
 ms.date: 02/10/2023
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: how-to
 ms.subservice: pcf
 contributors:
  - JimDaly
@@ -13,7 +13,7 @@ contributors:
 
 # Code components
 
-Code components are a type of solution component, which means they can be included in a solution file and imported into different environments. More information: [Package and distribute extensions using solutions](/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions).
+Code components are a type of solution component, which means they can be included in a solution file and imported into different environments. [Learn how to package and distribute extensions using solutions](/power-platform/alm/solution-concepts-alm).
 
 [!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
@@ -108,7 +108,7 @@ You can define additional resource files in the manifest to include:
 
  More information: [resources element](manifest-schema-reference/resources.md)
 
-### Related topics
+### Related articles
 
 [Create and build a code component](create-custom-controls-using-pcf.md)
 

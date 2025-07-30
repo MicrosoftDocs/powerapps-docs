@@ -1,23 +1,26 @@
 ---
 title: PDF viewer control (experimental) in Power Apps
-description: Learn about the details, properties and examples of the PDF viewer control in Power Apps.
-author: chmoncay
+description: Learn about the details, properties, and examples of the PDF viewer control in Power Apps.
+author: yogeshgupta698
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 03/17/2022
+ms.date: 8/22/2022
 ms.subservice: canvas-maker
-ms.author: chmoncay
+ms.author: yogupt
 search.audienceType: 
   - maker
 contributors:
   - mduelae
-  - chmoncay
+  - yogeshgupta698
 ---
+
 # PDF viewer control (experimental) in Power Apps
+
 An experimental control that shows the content of a PDF file.
 
 ## Description
+
 Show text, graphics, and other content in a PDF file by adding this type of control and setting its **Document** property to the URL, enclosed in double quotation marks, of the file that you want to show.
 
 ## Limitations
@@ -28,17 +31,23 @@ Show text, graphics, and other content in a PDF file by adding this type of cont
 
 1. The **Document** property must link directly to the PDF file. Server redirects or HTML views of the document aren't supported.
 
-1. The server that hosts the document must not require authentication.
+1. The file must be accessible anonymously without any authentication.
 
-1. You may not be able to view a PDF document in your app if the document resides on a server that has restrictive cross-origin resource sharing (CORS) settings. To resolve this issue, the server that hosts PDF documents must permit cross-origin requests from powerapps.com.
+1. You can't view a PDF document in your app if the document resides on a server that has restrictive cross-origin resource sharing (CORS) settings. To resolve this issue, the server that hosts PDF documents must permit cross-origin requests from powerapps.com.
+
+1. Embedded objects like scripts and buttons don't run.
+
+1. Printing the document isn't supported.
 
 App users can work around these limitations by opening PDF documents in an external browser, as prompted if the control can't open a document. This option is also available in the control menu for all external documents.
 
 ## Key properties
+
 **Document** – The URL, enclosed in double-quotation marks, of a PDF file.
 
 ## Additional properties
-**ActualZoom** – The actual zoom of the control, which may differ from the zoom requested with the **Zoom** property.
+
+**ActualZoom** – The actual zoom of the control, which might differ from the zoom requested with the **Zoom** property.
 
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
 
@@ -66,7 +75,7 @@ App users can work around these limitations by opening PDF documents in an exter
 
 **[HoverBorderColor](properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.
 
-**[OnSelect](properties-core.md)** – Actions to perform when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – Actions to perform when the user taps or selects a control.
 
 **OnStateChange** – Actions to perform when the state of the control changes.
 
@@ -82,7 +91,7 @@ App users can work around these limitations by opening PDF documents in an exter
 
 **PageCount** – The number of pages in a document.
 
-**[PressedBorderColor](properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.
+**[PressedBorderColor](properties-color-border.md)** – The color of a control's border when the user taps or selects that control.
 
 **ShowControls** – Whether an audio or video player shows, for example, a play button and a volume slider, and a pen control shows, for example, icons for drawing, erasing, and clearing.
 
@@ -119,10 +128,10 @@ Don't know how to [add and configure a control](../add-configure-controls.md)?
 
 Not all accessibility features of PDF documents are supported because the **PDF viewer** is still in the experimental stage. Therefore, **ShowControls** should be set to **true** to allow users to open the document in an external application.
 
-Learn how to create accessible PDF documents with the [WCAG 2.0](https://www.w3.org/TR/WCAG-TECHS/pdf.html) and [PDF/UA](https://www.pdfa.org/pdfua-the-iso-standard-for-universal-accessibility/) standards.
+Learn how to create accessible PDF documents with the  Web Content Accessibility Guidelines [(WCAG) 2.0](https://www.w3.org/TR/WCAG-TECHS/pdf.html) and [PDF/UA](https://www.pdfa.org/pdfua-the-iso-standard-for-universal-accessibility/) standards.
 
 ### Screen reader support
-* Consider adding a heading using a **[Label](control-text-box.md)**, if the PDF document does not have a title. The heading can be positioned immediately before the **PDF viewer**.
 
+Consider adding a heading using a **[Label](control-text-box.md)**, if the PDF document doesn't have a title. The heading can be positioned immediately before the **PDF viewer**.
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

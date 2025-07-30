@@ -1,11 +1,11 @@
 ---
 title: "Create your first component using Power Apps Component Framework in Microsoft Dataverse| MicrosoftDocs"
 description: "Learn how to implement code components using Power Apps component framework"
-ms.author: hemantg
-author: HemantGaur
+author: anuitz
+ms.author: anuitz
 ms.date: 02/06/2023
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: how-to
 ms.subservice: pcf
 contributors:
  - JimDaly
@@ -902,7 +902,7 @@ Follow these steps to create and import a [solution](../../maker/data-platform/s
    >
    > `[Environment URI]/api/data/v9.2/publishers?$select=uniquename,customizationprefix`
    >
-   > More information: [Query data using the Web API](../data-platform/webapi/query-data-web-api.md)
+   > More information: [Query data using the Web API](../data-platform/webapi/query/overview.md)
 
 
 
@@ -955,7 +955,7 @@ Follow these steps to create and import a [solution](../../maker/data-platform/s
    > Re build the solution file using the command `msbuild/property:configuration=Release` and reimport the solution into Dataverse and run the solution checker. More information:  [Debug code components](debugging-custom-controls.md).
 
 1. The generated solution zip file is located in the `Solution\bin\debug` folder.
-1. Manually [import the solution into Dataverse](../../maker/data-platform/import-update-export-solutions.md) using [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) once the zip file is ready or automatically using the [Microsoft Power Platform Build Tools](https://marketplace.visualstudio.com/items?itemName=microsoft-IsvExpTools.PowerPlatform-BuildTools).
+1. Manually [import the solution into Dataverse](../../maker/data-platform/import-update-export-solutions.md) using [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) once the zip file is ready or automatically using the [Microsoft Power Platform Build Tools](https://marketplace.visualstudio.com/items?itemName=microsoft-IsvExpTools.PowerPlatform-BuildTools).
 
 > [!NOTE]
 > Manually publish the customizations if you are importing unmanaged solution.

@@ -69,6 +69,6 @@ You can take advantage of new query condition operators to query tables with exp
   
 ### See Also
 
-[Work with Quick Find’s search item limit](quick-find-limit.md)
+[About quick find queries](quick-find.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

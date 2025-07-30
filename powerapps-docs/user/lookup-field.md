@@ -1,13 +1,13 @@
 ---
 title: "Use the lookup column on a row | MicrosoftDocs"
 description: How to use the lookup column in Power Apps
-author: sericks007
+author: shwetamurkute
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 08/01/2021
 ms.subservice: end-user
-ms.author: sericks
-ms.reviewer: sericks
+ms.author: smurkute
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser

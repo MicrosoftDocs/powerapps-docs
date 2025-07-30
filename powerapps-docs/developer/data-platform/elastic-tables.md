@@ -1,27 +1,21 @@
 ---
-title: Elastic tables for developers (preview)
+title: Elastic tables for developers
 description: This article provides information to developers about Dataverse elastic tables and how to use elastic tables using code.
 ms.topic: article
-ms.date: 08/11/2023
-author: pnghub
-ms.author: gned
+ms.date: 12/04/2023
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 contributors:
  - sumantb-msft
  - JimDaly
 ---
 
-# Elastic tables for developers (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Elastic tables for developers
 
 Dataverse elastic tables are powered by Azure Cosmos DB. They automatically scale horizontally to handle large amounts of data and high levels of throughput with low latency. Elastic tables are suitable for applications that have unpredictable, spiky, or rapidly growing workloads.
 
-This article focuses on information that developers need to know about using elastic tables. For more information about the capabilities of elastic tables and what is supported, go to [Create and edit elastic tables (preview)](../../maker/data-platform/create-edit-elastic-tables.md).
-
-> [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+This article focuses on information that developers need to know about using elastic tables. For more information about the capabilities of elastic tables and what is supported, go to [Create and edit elastic tables](../../maker/data-platform/create-edit-elastic-tables.md).
 
 ## When to use elastic tables
 
@@ -97,12 +91,16 @@ For example, you have a synchronous plug-in step that is registered on the `Post
 
 However, you should always apply validation rules in a plug-in that is registered for the `PreValidation` synchronous stage. Validation is the purpose of this stage. Even when you use elastic tables, the request returns an error, and the data operation won't begin. [Learn more about the event execution pipeline](event-framework.md#event-execution-pipeline).
 
-Elastic tables also don't support grouping requests in a single database transaction that uses the SDK [ExecuteTransactionRequest class](xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest) or in a Web API `$batch` operation changeset. Currently, these operations succeed but aren't atomic. In the future, an error will be thrown.
+Elastic tables also don't support grouping requests in a single database transaction that uses the SDK [ExecuteTransactionRequest class](xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest) or in a Web API `$batch` operation changeset. Currently, these operations succeed but aren't atomic. In the future, an error will be thrown. 
+
+Elastic tables don't support *deep insert* as standard tables do. You will get this error: `Cannot create related entities. Create has to be called individually for each entity.`
 
 To learn more about multi-record transactions, go to:
 
 - [Execute messages in a single database transaction](org-service/use-executetransaction.md)
 - [Change sets](webapi/execute-batch-operations-using-web-api.md#change-sets)
+- [Web API deep insert](webapi/create-entity-web-api.md#create-related-table-rows-in-one-operation)
+- [SDK for .NET deep insert](org-service/entity-operations-create.md#create-related-entities-in-one-operation)
 - [Known issue: No error is returned when elastic table data operations are grouped in a transaction](#no-error-is-returned-when-elastic-table-data-operations-are-grouped-in-a-transaction)
 
 ## Expire data by using Time to live
@@ -121,10 +119,10 @@ To store and query the large volume of IoT data, Contoso creates an elastic tabl
 
 Related articles:
 
-- [Create elastic tables using code (preview)](create-elastic-tables.md)
-- [Use elastic tables using code (preview)](use-elastic-tables.md)
-- [Query JSON columns in elastic tables (preview)](query-json-columns-elastic-tables.md)
-- [Elastic table sample code (preview)](elastic-table-samples.md)
+- [Create elastic tables using code](create-elastic-tables.md)
+- [Use elastic tables using code](use-elastic-tables.md)
+- [Query JSON columns in elastic tables](query-json-columns-elastic-tables.md)
+- [Elastic table sample code](elastic-table-samples.md)
 
 ## Known issues
 
@@ -164,8 +162,8 @@ They should ALWAYS include a link to the section of the docs where the informati
 
 ### See also
 
-[Use elastic tables using code (preview)](use-elastic-tables.md)   
-[Query JSON columns in elastic tables (preview)](query-json-columns-elastic-tables.md)   
-[Bulk operation messages (preview)](bulk-operations.md)   
-[Elastic table sample code (preview)](elastic-table-samples.md)   
+[Use elastic tables using code](use-elastic-tables.md)   
+[Query JSON columns in elastic tables](query-json-columns-elastic-tables.md)   
+[Bulk operation messages](bulk-operations.md)   
+[Elastic table sample code](elastic-table-samples.md)   
 [Partitioning and horizontal scaling in Azure Cosmos DB](/azure/cosmos-db/partitioning-overview)

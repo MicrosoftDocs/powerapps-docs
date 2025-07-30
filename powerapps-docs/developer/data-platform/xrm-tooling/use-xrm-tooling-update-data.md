@@ -1,11 +1,11 @@
 ---
 title: "Use XRM tooling to update data (Microsoft Dataverse)| Microsoft Docs"
 description: "Use CrmServiceClient class to update data on Microsoft Dataverse"
-ms.date: 04/01/2022
+ms.date: 12/04/2024
 author: MattB-msft
 ms.author: mbarbour
 ms.reviewer: pehecke
-ms.topic: article
+ms.topic: how-to
 applies_to: 
   - "Dynamics 365 (online)"
 search.audienceType: 
@@ -20,6 +20,9 @@ There are two methods available in the <xref:Microsoft.Xrm.Tooling.Connector.Crm
 Similarly for the <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> class there are <xref:Microsoft.PowerPlatform.Dataverse.Client.Extensions.CRUDExtentions.UpdateEntity%2A> and <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.UpdateStateAndStatusForEntity%2A> methods.
   
 An update action using XRM Tooling API requires a data payload. The data payload takes the form of a Dictionary\<string, CrmDataTypeWrapper> object. <xref:Microsoft.Xrm.Tooling.Connector.CrmDataTypeWrapper> is used to inform the interface what sort of handling needs to be applied to the data point you are referencing.  
+
+Read the following important information about using a connection string in application code.
+[!INCLUDE [cc-connection-string](../includes/cc-connection-string.md)]
   
 ## UpdateEntity  
 
@@ -67,7 +70,7 @@ else
 ```  
   
 ## UpdateStateAndStatusForEntity
- 
+
 This method is used to set the state of a record in Dataverse. For example, all records generally start in an “open” state. The name of the state changes based on the kind of record, or even the developers choices. A quote, for example, has several possible status and states, **Draft**, **Active**, **Close**, **Lost**, **Won**.  
   
 Updating the state of a table requires that you know what the target state and status are, either by the names or IDs. Both the names and the IDs can be found by querying the definition for the table and looking at the status and state fields. In this example, we will demonstrate how to set the status of an account record to **Inactive**.  
@@ -106,7 +109,5 @@ else
 
 [Use XRM Tooling to connect to Dataverse](use-crmserviceclient-constructors-connect.md)<br />
 [Use XRM Tooling API to execute actions in Dataverse](use-xrm-tooling-execute-actions.md)<br />
-
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

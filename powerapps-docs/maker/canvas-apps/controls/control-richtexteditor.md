@@ -1,18 +1,18 @@
 ---
 title: Rich text editor control in Power Apps
 description: Learn about the details, properties, and examples of the Rich text editor control in Power Apps.
-author: chmoncay
+author: yogeshgupta698
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 07/19/2022
+ms.date: 04/17/2024
 ms.subservice: canvas-maker
-ms.author: chmoncay
-search.audienceType: 
+ms.author: yogupt
+search.audienceType:
   - maker
 contributors:
   - mduelae
-  - chmoncay
+  - yogeshgupta698
   - tahoon-ms
 ---
 # Rich text editor control in Power Apps
@@ -21,7 +21,7 @@ Allows end users to format text inside a WYSIWYG editing area.  Output format is
 ## Description
 The **Rich text editor** control provides the app user a WYSIWYG editing area for formatting text.  Control's input and output format is HTML.
 
-Control allows copied rich text (i.e from web browser or Word) to be pasted into the control.  
+Control allows copied rich text (i.e from web browser or Word) to be pasted into the control.
 
 Control's intended use is to format text and doesn't guarantee to preserve the integrity of the input HTML.  All script, style, object, and other potentially compromising tags will be removed by the editor.  This means that if rich text was created outside of Power Apps, it may not look the same as in the product where it was created.
 
@@ -79,11 +79,11 @@ To use the control inside a form, select the **Edit multi-line tex** card, and c
 You can only interact with the rich text editor control in Power Apps Studio when using the preview mode.
 
 Pasting images in the rich text editor has the following limitations:
-- Cross-Origin Resource Sharing (CORS) 
+- Cross-Origin Resource Sharing (CORS)
 - Authentication
 - Image format support in browser
 - Type of image (inline vs URL)
-- How programs represent images differently when they are copied.
+- When inserting an image, don't expect it to be automatically stored with the bound data source. A possible solution is to implement additional logic that uploads images from the rich text editor to the data source, processes the response, and then pastes it back into the original field. It's also important to understand that different programs may represent copied images in various ways.
 
 > [!NOTE]
 > Browsers represent image data differently, some browsers will capture the image as raw image data while others may get a reference to a URL which may not be accessible after pasting.

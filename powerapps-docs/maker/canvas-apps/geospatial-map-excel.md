@@ -2,7 +2,7 @@
 title: Insert pins from data source
 description: Add customized pins to your map control in Power Apps by using a dataset.
 author: anuitz
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas, ce06122020
 ms.reviewer: mduelae
 ms.date: 3/2/2021
@@ -107,7 +107,7 @@ To avoid geocoding the same set of addresses every time the map control is launc
 
 To do so, add a button to save the geocoded address back to the original data source with the following formula:
 
-```powerapps-dot
+```power-fx
  ForAll(Map1.GeocodedItems, Patch(Accounts1, LookUp(Accounts1, ThisRecord.Address = Address && ThisRecord.Name = Label), {Latitude: Latitude, Longitude: Longitude }))
 ```
 

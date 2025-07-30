@@ -1,8 +1,8 @@
 ---
-title: "OnStageChange Event (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "OnStageChange Event (Client API reference) in model-driven apps"
 description: This event occurs when the stage of a business process flow control changes.
-author: HemantGaur
-ms.author: hemantg
+author: MitiJ
+ms.author: mijosh
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -30,8 +30,9 @@ An execution context object is passed to event handlers for this event. You can 
 - **formContext.data.process**.[addOnStageChange](../formcontext-data-process/eventhandlers/addOnStageChange.md) method to add event handlers for this event.
 - **formContext.data.process**.[removeOnStageChange](../formcontext-data-process/eventhandlers/removeOnStageChange.md) method to remove event handlers for this event.
 
+### Related articles
 
-
-
+[Events (Client API reference)](../events.md)   
+[Events in forms and grids in model-driven apps](../../events-forms-grids.md)
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

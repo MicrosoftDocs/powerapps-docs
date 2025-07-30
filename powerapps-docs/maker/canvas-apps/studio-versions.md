@@ -3,10 +3,10 @@ title: Change authoring version for Power Apps Studio
 description: Learn about how to change the authoring version for Power Apps Studio.
 author: emcoope-msft
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 11/15/2021
+ms.date: 3/26/2025
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
@@ -39,17 +39,9 @@ How you check and change the authoring version of your current Power Apps Studio
 
     :::image type="content" source="media/studio-versions/authoring-version-edit.png" alt-text="Check authoring version, and choose Edit to change.":::
 
-## Check Power Apps Studio version when an app isn't open
-
-1. Go to create.powerapps.com.
-
-1. Select **Account** from the left pane, and review your existing Power Apps Studio version for the current session.
-
-    :::image type="content" source="media/studio-versions/create-power-apps.png" alt-text="Check version using create.powerapps.com.":::
-
 ## Change Power Apps Studio version
 
-1. If you're instructed to change the version of your current Power Apps Studio session, select [Edit](#check-power-apps-studio-version-when-an-app-is-open) or [Change authoring version](#check-power-apps-studio-version-when-an-app-isnt-open), depending on whether you already have an app open in Power Apps Studio, or not.
+1. If you're instructed to change the version of your current Power Apps Studio session, follow the steps to [see the current version](#check-power-apps-studio-version-when-an-app-is-open).
 
 1. From the list of available authoring versions, choose the version you want, and then select **Reload + apply version**.
 
@@ -63,6 +55,9 @@ How you check and change the authoring version of your current Power Apps Studio
 1. Select **Open** or **New** to work with the app inside Power Apps Studio using the version you selected.
 
 You're now editing the app in the Power Apps Studio version you've selected. Since the authoring version change only persists for the current Power Apps Studio session, repeat the above steps when you want to work with the same app again.
+
+> [!NOTE]
+>  You can't change the authoring version of Power Apps Studio when a you [author custom page content](../model-driven-apps/add-page-to-model-app.md#author-custom-page-content) or [edit an existing custom page](../model-driven-apps/add-page-to-model-app.md#edit-an-existing-custom-page).
 
 ## Known limitations and workarounds
 
@@ -78,6 +73,8 @@ You're now editing the app in the Power Apps Studio version you've selected. Sin
 
         > [!NOTE]
         > If you choose to restore the app to a previous version, you'll lose any changes made between your latest and previous app versions.
+
+- You cannot change authoring versions if coauthoring is enabled.
 
 ### See also
 

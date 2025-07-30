@@ -1,15 +1,15 @@
 ---
 title: "View your user profile in model-driven apps| MicrosoftDocs"
 description: View your user profile in Power Apps
-author: sericks007
+author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
-ms.date: 3/4/2021
+ms.topic: how-to
+ms.date: 10/22/2024
 ms.subservice: end-user
-ms.author: sericks
+ms.author: smurkute
 ms.custom: ""
-ms.reviewer: sericks
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser
@@ -29,7 +29,7 @@ The user information page displays useful information about you and your organiz
    > [!div class="mx-imgBorder"] 
    > ![Select the user information link.](media/user-info.png "Select the user information link")
   
-3. On the user information page select the different tabs, such as **Summary**, **Details**, or **Administration** to see details about your profile. 
+3. On the user information page, select the different tabs, such as **Summary**, **Details**, or **Administration** to see details about your profile. 
 
    > [!div class="mx-imgBorder"] 
    > ![User profile page.](media/user-profile-info.png "User profile page")

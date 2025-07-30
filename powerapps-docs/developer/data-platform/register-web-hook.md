@@ -3,7 +3,7 @@ title: Register a WebHook
 description: Learn how to register a WebHook using the Plug-in Registration tool.
 ms.date: 03/22/2022
 ms.reviewer: pehecke
-ms.topic: article
+ms.topic: how-to
 author: swylezol
 ms.subservice: dataverse-developer
 ms.author: swylezol
@@ -61,7 +61,7 @@ You can find details about the registered Webhooks by querying the **ServiceEndp
 
 `GET [organization URI]/api/data/v9.0/serviceendpoints?$filter=contract eq 8&$select= serviceendpointid,name,authtype,url`
 
-More information: [Query data using the Web API](webapi/query-data-web-api.md)
+More information: [Query data using the Web API](webapi/query/overview.md)
 
 **FetchXml:**
 
@@ -79,7 +79,7 @@ More information: [Query data using the Web API](webapi/query-data-web-api.md)
 </fetch> 
 ```
 
-More information: [Use FetchXML with FetchExpression](org-service/entity-operations-query-data.md#use-fetchxml-with-fetchexpression)
+More information: [Use FetchXml to retrieve data](fetchxml/retrieve-data.md)
 
 Details about the authentication values set are in the [AuthValue](reference/entities/serviceendpoint.md#BKMK_AuthValue) property and can't be retrieved.
 
@@ -116,7 +116,7 @@ When you know the **sdkmessageprocessingstepid** of a given step, you can query 
 
 `GET [organization URI]/api/data/v9.0/asyncoperations?$orderby=completedon desc&$filter=statuscode eq 31 and _owningextensionid_value eq @stepid&$select=name,friendlymessage,errorcode,message,completedon?@stepid=<stepid>`
 
-More information: [Query data using the Web API](webapi/query-data-web-api.md)
+More information: [Query data using the Web API](webapi/query/overview.md)
 
 **FetchXML:**
 
@@ -136,7 +136,7 @@ More information: [Query data using the Web API](webapi/query-data-web-api.md)
 </fetch>
 ```
 
-More information: [Use FetchXML with FetchExpression](org-service/entity-operations-query-data.md#use-fetchxml-with-fetchexpression)
+More information: [Use FetchXml to retrieve data](fetchxml/retrieve-data.md)
 
 #### Synchronous mode
 

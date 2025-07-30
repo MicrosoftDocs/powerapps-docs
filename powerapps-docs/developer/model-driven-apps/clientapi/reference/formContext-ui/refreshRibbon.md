@@ -1,8 +1,8 @@
 ---
-title: "ui.refreshRibbon (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "ui.refreshRibbon (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the ui.refreshRibbon method.
-author: HemantGaur
-ms.author: hemantg
+author: clromano
+ms.author: clromano
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -13,8 +13,6 @@ contributors:
   - JimDaly
 ---
 # ui.refreshRibbon (Client API reference)
-
-
 
 [!INCLUDE[./includes/refreshRibbon-description.md](./includes/refreshRibbon-description.md)]
 

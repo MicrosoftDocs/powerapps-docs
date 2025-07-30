@@ -1,18 +1,18 @@
 ---
 title: Accessibility properties for Power Apps
 description: Reference information about properties related to accessibility in Power Apps.
-author: chmoncay
+author: yogeshgupta698
 
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 09/06/2022
 ms.subservice: canvas-maker
-ms.author: chmoncay
+ms.author: yogupt
 search.audienceType: 
   - maker
 contributors:
-  - chmoncay
+  - yogeshgupta698
   - tahoon-ms
   - mduelae
 ---
@@ -43,36 +43,23 @@ This lets screen reader users know whether a **Label** is a heading and allows t
 
 Use **Default** for normal text.
 
-### TabIndex
+### AcceptsFocus and TabIndex
 Determines if the control participates in keyboard navigation.
 
-Keyboard navigation is an important aspect of any app. For many, the keyboard is more efficient than using touch or a mouse. The navigation order should:
-- Mirror what is seen visually.
-- Only have a tab stop at controls that are interactive.
-- Follow either an intuitive across and then down "Z" order or a down and then across "reverse-N" order.
+You can use **AcceptsFocus** to configure keyboard navigation for [modern controls](./modern-controls/overview-modern-controls.md). [Classic controls](../reference-properties.md) use **TabIndex**.
 
-The **TabIndex** property has two recommended values:
+| AcceptsFocus | TabIndex | Behavior | Default for |
+|--------------|----------|----------|-------------|
+| true | 0 or greater | Control participates in keyboard navigation, unless it's hidden or disabled. | [**Button**](control-button.md), [**Text input**](control-text-input.md), [**Combo box**](control-combo-box.md), and other typically interactive controls. |
+| false | &minus;1 or less than 0 | Control does not participate in keyboard navigation. | [**Label**](control-text-box.md), [**Image**](control-image.md), [**Icon**](control-shapes-icons.md), and other typically non-interactive controls. |
 
-| TabIndex value | Behavior | Default for |
-|----------------|----------|-------------|
-| 0 | Control participates in keyboard navigation. | [**Button**](control-button.md), [**Text input**](control-text-input.md), [**Combo box**](control-combo-box.md), and other typically interactive controls. |
-| &minus;1 | Control does not participate in keyboard navigation. | [**Label**](control-text-box.md), [**Image**](control-image.md), [**Icon**](control-shapes-icons.md), and other typically non-interactive controls. |
-
-Any keyboard navigation sequence can be achieved with just these values, along with the use of the [**Container**](control-container.md) control. We recommend that you do not set **TabIndex** to other values.
-
-When **TabIndex** of all controls are set to either -1 or 0, navigation order goes from left-to-right, then top-to-bottom, in a "Z" pattern. The order is based on the **X** and **Y** property values of the controls. If controls are dynamically moved on the screen, for example, by having its **X** or **Y** value change according to a timer or other control, the navigation order will change dynamically too.
-
-Use the [**Container**](control-container.md) control to bundle controls that should be navigated together or to create columns in a "reverse-N" pattern. Controls in **[Form Cards](control-card.md)** and [**Galleries**](control-gallery.md) are automatically grouped. Tabbing through these containers will navigate through all elements inside the container before proceeding to the next control outside of the container.  
+Any keyboard navigation sequence can be achieved with just these properties, along with the use of the [**Container**](control-container.md) control. For **TabIndex**, we recommend using either 0 or -1 for simplicity.
 
 Controls that have a **Visible** property value of *false* or a **DisplayMode** property value of **Disabled** are not included in keyboard navigation.
 
 > [!IMPORTANT]
-> **TabIndex** only affects keyboard navigation. A [logical control order](../accessible-apps-structure.md) is still necessary for screen reader users to understand app structure.
+> **TabIndex** only affects keyboard navigation. A [logical control order](../accessible-apps-structure.md) is still necessary for screen reader users to understand app structure. Some screen reader users don't even use keyboards.
 
-> [!WARNING]
-> - **TabIndex** values greater than zero will not be supported soon. They will be treated as if they were zero. Enable the **Simplified tab index** app setting to preview this behavior.
-> - In the meantime, setting **TabIndex** to be greater than zero is one of the ways to customize keyboard navigation. This is for rare scenarios where you may not want to follow visual order or logical structure. Use caution since it can be difficult to get the order correct and accurate. It also results in a confusing screen reader experience.
-> - When there are controls with **TabIndex** greater than 0, users will first navigate to controls with increasing positive **TabIndex** values (such as, 1, then 2). When users have navigated all controls with positive **TabIndex** values, they will finally navigate to controls with **TabIndex** of 0. When there are multiple controls with the same **TabIndex**, their **X** and **Y** value and the **Containers** they are in will determine their relative order. Inside a **Gallery** or **Form**, **TabIndex** is scoped so that the contained controls will be navigated first before the ones outside.
 
 ### See also
 

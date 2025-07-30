@@ -6,7 +6,7 @@ ms.date: 10/13/2022
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "conceptual"
+ms.topic: article
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -25,7 +25,7 @@ search.audienceType:
 This article explains what's needed to share an embedded canvas app that you have already created.
 
 After you have created and added an embedded canvas app to a model-driven form you will need to take steps to ensure that all users that have access to the model-driven form also have access to the canvas app and the data that it uses. Please refer to the following guidelines:
--	Sharing an embedded canvas app with Everyone in your organization is not supported with Microsoft Dataverse. Doing so might cause issues when rendering the app. Instead, share your embedded canvas app with a security group or specific users.  More information: [Share an app](../canvas-apps/share-app.md#share-an-app)
+-	Sharing an embedded canvas app with Everyone in your organization is not supported with Microsoft Dataverse. Doing so might cause issues when rendering the app. Instead, share your embedded canvas app with a security group or specific users.  More information: [Share an app](../canvas-apps/share-app.md)
 -	Ensure that users have appropriate permissions for any Microsoft Dataverse tables that your embedded canvas app uses. Specifically add read privilege for the **Canvas App** table located on the **Customization** tab of the security role editor.  More information: [Manage table permissions](../canvas-apps/share-app.md#manage-table-permissions)
 -	Ensure that users have appropriate permission for data on any cloud services that your embedded canvas app uses, such as SharePoint or OneDrive. The steps to share are specific to each cloud service and beyond the scope of Power Apps.
 

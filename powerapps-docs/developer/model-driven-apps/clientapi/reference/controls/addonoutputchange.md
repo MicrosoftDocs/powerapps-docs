@@ -1,9 +1,8 @@
 ---
-title: "addOnOutputChange (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "addOnOutputChange (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the control.addOnOutputChange method.
-ms.author: noazarur
-author: noazarur-microsoft
-
+author: MitiJ
+ms.author: mijosh
 ms.date: 08/17/2022
 ms.reviewer: jdaly
 ms.topic: reference

@@ -1,11 +1,10 @@
 ---
-title: "Sample: Attachment and Annotation file operations using Dataverse Web API (Microsoft Dataverse) | Microsoft Learn" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample demonstrates how to perform operations with file data using the Attachment (ActivityMimeAttachment) and Note (Annotation) tables using the Dataverse Web API." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Sample: Attachment and Annotation file operations using Dataverse Web API (Microsoft Dataverse) | Microsoft Learn"
+description: "This sample demonstrates how to perform operations with file data using the Attachment (ActivityMimeAttachment) and Note (Annotation) tables using the Dataverse Web API." 
 ms.date: 02/04/2023
 author: JimDaly
 ms.author: jdaly
 ms.reviewer: jdaly
-ms.topic: sample
 search.audienceType:
   - developer
 contributors:
@@ -55,8 +54,8 @@ This sample uses the common helper code in the [WebAPIService class library (C#)
 
 This sample is a solution  with two projects. See the respective README files for details on each project.
 
-- [Web API Attachment (ActivityMimeAttachment) Operations sample README](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/AttachmentAndAnnotationOperations/ActivityMimeAttachmentOperations/README.md)
-- [Web API Annotation (Note) Operations sample README](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/AttachmentAndAnnotationOperations/AnnotationOperations/README.md)
+- [Web API Attachment (ActivityMimeAttachment) Operations sample README](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/CSharp-NETx/AttachmentAndAnnotationOperations/ActivityMimeAttachmentOperations/README.md)
+- [Web API Annotation (Note) Operations sample README](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/CSharp-NETx/AttachmentAndAnnotationOperations/AnnotationOperations/README.md)
 
 ## Utility class
 

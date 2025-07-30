@@ -1,11 +1,11 @@
 ---
-title: "Edit the customizations XML file with schema validation (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
-description: "The customizations.xml file is included within the compressed .zip file exported as a solution. Certain portions of the customizations.xml file can be edited manually. Information about the schema helps you confirm that any modifications you make are valid." # 115-145 characters including spaces. This abstract displays in the search result."
+title: "Edit the customizations XML file with schema validation (model-driven apps)"
+description: "The customizations.xml file is included within the compressed .zip file exported as a solution. Certain portions of the customizations.xml file can be edited manually. Information about the schema helps you confirm that any modifications you make are valid."
 author: caburk
 ms.author: caburk
 ms.date: 04/01/2022
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: how-to
 ms.subservice: mda-developer
 search.audienceType: 
   - developer

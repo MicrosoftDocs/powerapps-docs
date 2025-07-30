@@ -2,8 +2,8 @@
 title: "Sample: Use duplicate detection when creating and updating records (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to invoke duplicate detection for creating and updating table records" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/03/2022
-author: divkamath
-ms.author: dikamath
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: pehecke
 ms.topic: sample
 search.audienceType:
@@ -18,7 +18,7 @@ contributors:
 This sample shows how to invoke duplicate detection for creating and updating table records.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Use duplicate detection when creating and updating records sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/UseDuplicatedetectionforCRUD)
+> [SDK for .NET: Use duplicate detection when creating and updating records sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/UseDuplicatedetectionforCRUD)
 
 ## How to run this sample
 

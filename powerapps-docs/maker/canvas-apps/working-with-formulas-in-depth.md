@@ -3,7 +3,7 @@ title: Understand behavior formulas for canvas apps
 description: Reference information about working with behavior formulas, which change the state of a canvas app.
 author: gregli-msft
 
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 11/10/2015
@@ -19,7 +19,7 @@ contributors:
 
 Most formulas calculate a value.  Like an Excel spreadsheet, recalculation happens automatically as values change.  For example, you might want to show the value in a **[Label](controls/control-text-box.md)** control in red if the value is less than zero or in black otherwise. So you can set the **[Color](controls/properties-color-border.md)** property of that control to this formula:
 
-```powerapps-dot
+```power-fx
 If( Value(TextBox1.Text) >= 0, Color.Black, Color.Red )
 ```
 
@@ -38,7 +38,7 @@ Because these functions change the state of the app, they can't be automatically
 ### More than one action
 Use semicolons to create a list of actions to perform. For example, you might want to update a context variable and then return to the previous screen:
 
-```powerapps-dot
+```power-fx
 UpdateContext( { x: 1 } ); Back()
 ```
 

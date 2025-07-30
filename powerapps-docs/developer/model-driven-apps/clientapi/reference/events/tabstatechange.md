@@ -1,8 +1,8 @@
 ---
-title: "TabStateChange event (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "TabStateChange event (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the TabStateChange event.
-author: HemantGaur
-ms.author: hemantg
+author: MitiJ
+ms.author: mijosh
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -23,7 +23,9 @@ Use this event when you want to change the **src** property of an IFRAME within 
 Use the [addTabStateChange](../formContext-ui-tabs/addTabStateChange.md) method to add event handlers for this event and the [removeTabStateChange](../formContext-ui-tabs/removeTabStateChange.md) method to remove them.
 
 
+## Related articles
 
-
+[Events (Client API reference)](../events.md)   
+[Events in forms and grids in model-driven apps](../../events-forms-grids.md)
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

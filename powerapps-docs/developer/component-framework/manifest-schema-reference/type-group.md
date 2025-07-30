@@ -1,8 +1,8 @@
 ---
 title: Type Group Element | Microsoft Docs
 description: The type-group node defines a set of types identified by a single name. This information can be used to identify the data types supported by a specific property.
-ms.author: hemantg
-author: HemantGaur
+author: anuitz
+ms.author: anuitz
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -85,7 +85,7 @@ While the following would again receive "Decimal":
     </type-group>
 ```
 
-### Related topics
+### Related articles
 
 [Power Apps component framework manifest schema reference](index.md)<br/>
 [Power Apps component framework API reference](../reference/index.md)<br/>

@@ -3,7 +3,7 @@ title: Create an order gallery in a canvas app
 description: Learn about how to create an order gallery in a canvas app to manage data for Northwind Traders.
 author: gregli-msft
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 01/27/2021
@@ -60,7 +60,7 @@ Create a [blank canvas app](create-blank-app.md), and give it a name such as "My
 
 1. We could connect it directly to **Orders** here, but instead we'd like to control the sort order of the gallery.  Ignore the fly out dialog and in the formula bar set the gallery's **Items** property to this formula:
 
-    ```powerapps-dot
+    ```power-fx
     Sort( Orders, 'Order Number', Descending )
     ```
 
@@ -95,7 +95,7 @@ Create a [blank canvas app](create-blank-app.md), and give it a name such as "My
 
 1. In the formula bar, set the label's **Text** property to this expression:
 
-    ```powerapps-dot
+    ```power-fx
     "Order " & ThisItem.'Order Number'
     ```
 
@@ -111,7 +111,7 @@ Create a [blank canvas app](create-blank-app.md), and give it a name such as "My
 
 1. In the formula bar, set the label's **Text** property to this expression:
 
-    ```powerapps-dot
+    ```power-fx
     ThisItem.Customer.Company
     ```
 
@@ -154,7 +154,7 @@ In this procedure, you'll add space in the gallery for a label and configure it 
 
 1. Set the **Text** property of the new label to this expression:
 
-    ```powerapps-dot
+    ```power-fx
     ThisItem.'Order Status'
     ```
 
@@ -176,7 +176,7 @@ In this procedure, you'll add space in the gallery for a label and configure it 
 
 1. In the formula bar, set the **Color** property of the status label to this formula:
 
-    ```powerapps-dot
+    ```power-fx
     Switch( ThisItem.'Order Status',
         'Orders Status'.Closed, Green,
         'Orders Status'.New, Black,
@@ -211,7 +211,7 @@ In this procedure, you'll add space in the gallery for a label and configure it 
 
 1. In the formula bar, set the new label's **Text** property to this formula:
 
-    ```powerapps-dot
+    ```power-fx
     Text( Sum( ThisItem.'Order Details', Quantity * 'Unit Price' ), "[$-en-US]$ #,###.00" )
     ```
 

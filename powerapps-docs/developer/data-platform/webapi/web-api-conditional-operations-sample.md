@@ -1,9 +1,10 @@
 ---
 title: "Web API Conditional Operations Sample (Microsoft Dataverse)| Microsoft Docs"
 description: "This collection of samples demonstrate how to perform operations that are conditionally based upon the version of the table row contained on the Microsoft Dataverse server and/or currently maintained by the client."
-ms.date: 09/02/2022
-author: divkamath
-ms.author: dikamath
+ms.topic: sample
+ms.date: 03/22/2025
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
@@ -22,20 +23,20 @@ This collection of samples demonstrate how to perform operations that are condit
  
 The Dataverse Web API follows the conventions of the [OData v4.0](https://www.odata.org/documentation/) protocol, which uses [ETags](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752236) to implement resource version control. Web API conditional operations depend upon this versioning  mechanism.  
   
-This topic explains the structure and content of the samples at a higher, language-neutral level. It details the HTTP requests and responses, and the associated program output, where applicable. Review the linked sample topics above to obtain language-specific implementations and related details about how to perform the operations described in this topic.  
+This article explains the structure and content of the samples at a higher, language-neutral level. It details the HTTP requests and responses, and the associated program output, where applicable. Review the linked sample articles  to obtain language-specific implementations and related details about how to perform the operations described in this article.  
   
 ## Demonstrates
 
-This sample is divided into three principal sections, listed in the following table.   Each section contains a set of related Web API operations which are discussed in greater detail in the associated conceptual section of the topic [Perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md) .  
+This sample is divided into three principal sections, listed in the following table.   Each section contains a set of related Web API operations which are discussed in greater detail in the associated conceptual section of the article [Perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md) .  
   
-|Code section|Associated conceptual topics|  
+|Code section|Associated conceptual articles|  
 |------------------|----------------------------------|  
 |[Section 0: Create sample records](#section-0-create-sample-records)|[Create a table row using the Web API](create-entity-web-api.md)|
 |[Section 1: Conditional GET](#section-1-conditional-get)|[Conditional retrievals](perform-conditional-operations-using-web-api.md#conditional-retrievals)|
 |[Section 2: Optimistic concurrency on delete and update](#section-2-optimistic-concurrency-on-delete-and-update)|[Apply optimistic concurrency](perform-conditional-operations-using-web-api.md#bkmk_Applyoptimisticconcurrency)<br />[Limit upsert operations](perform-conditional-operations-using-web-api.md#bkmk_limitUpsertOperations)|
 |[Section 3: Delete sample records](#section-3-delete-sample-records)|[Basic delete](update-delete-entities-using-web-api.md#basic-delete)<br />[Execute batch operations using the Web API](execute-batch-operations-using-web-api.md)|
   
-The following sections contain a brief discussion of the Dataverse Web API operations performed, along with the corresponding HTTP messages and associated console output which is the same for each language implementation. For brevity, less pertinent HTTP headers have been omitted. The URIs of the table rows will vary with the base organization address and the ID of the row assigned by your Dataverse server.  
+The following sections contain a brief discussion of the Dataverse Web API operations performed, the corresponding HTTP messages, and associated console output which is the same for each language implementation. For brevity, less pertinent HTTP headers are omitted. The URIs of the table rows vary with the base organization address and the ID of the row assigned by your Dataverse server.  
   
 <a name="bkmk_sampleData"></a>
    
@@ -75,7 +76,7 @@ OData-Version: 4.0
   "revenue": 5000000.0,
   "telephone1": "555-0000",
   "description": "Parent company of Contoso Pharmaceuticals, etc.",
-  "accountid": "59d88f5e-6629-ed11-9db1-0022482746b6",
+  "accountid": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee",
   "_transactioncurrencyid_value": "228f42f8-e646-e111-8eb7-78e7d162ced1"
 }
 ```
@@ -91,7 +92,7 @@ Created and retrieved the initial account, shown below:
   "revenue": 5000000.0,
   "telephone1": "555-0000",
   "description": "Parent company of Contoso Pharmaceuticals, etc.",
-  "accountid": "59d88f5e-6629-ed11-9db1-0022482746b6",
+  "accountid": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee",
   "_transactioncurrencyid_value": "228f42f8-e646-e111-8eb7-78e7d162ced1"
 }
 ```
@@ -102,12 +103,12 @@ Created and retrieved the initial account, shown below:
 
 This section of the program demonstrates how to perform conditional retrievals in order to optimize network bandwidth and server processing while still maintaining the most current row state on the client. More information: [Conditional retrievals](perform-conditional-operations-using-web-api.md#bkmk_DetectIfChanged)  
   
-1. Attempt to retrieve the account `Contoso Ltd.` only if it does *not* match the current version, identified by the initial ETag value that was returned when the account row was created. This condition is represented by the `If-None-Match` header.  
+1. Attempt to retrieve the account `Contoso Ltd.` only if it *doesn't* match the current version, identified by the initial ETag value that was returned when the account row was created. This condition is represented by the `If-None-Match` header.  
   
    **Request:**
 
    ```http
-   GET [Organization Uri]/api/data/v9.2/accounts(59d88f5e-6629-ed11-9db1-0022482746b6)?$select=name,revenue,telephone1,description HTTP/1.1
+   GET [Organization Uri]/api/data/v9.2/accounts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)?$select=name,revenue,telephone1,description HTTP/1.1
    If-None-Match: W/"72965013"
    OData-MaxVersion: 4.0
    OData-Version: 4.0
@@ -127,14 +128,14 @@ This section of the program demonstrates how to perform conditional retrievals i
    Expected outcome: Entity was not modified so nothing was returned.
    ```  
 
-   The response value, `304 NotModified`, indicates that the current table row is the most current, so the server does *not* return the requested row in the response body.  
+   The response value, `304 NotModified`, indicates that the current table row is the most current, so the server *doesn't* return the requested row in the response body.  
   
 1. Update the account by modifying its primary telephone number property.  
   
    **Request:**
 
    ```http
-   PUT [Organization Uri]/api/data/v9.2/accounts(59d88f5e-6629-ed11-9db1-0022482746b6)/telephone1 HTTP/1.1
+   PUT [Organization Uri]/api/data/v9.2/accounts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)/telephone1 HTTP/1.1
    OData-MaxVersion: 4.0
    OData-Version: 4.0
    If-None-Match: null
@@ -156,12 +157,12 @@ This section of the program demonstrates how to perform conditional retrievals i
    Modified account record retrieved using ETag: W/"72965013" 
    ```  
   
-1. Re-attempt the same conditional GET operation, again using the original ETag value. This time the operation returns the requested data because the version on the server is different (and newer) than the version identified in the request. As in all table row retrievals, the response includes an ETag header that identifies the current version.  
+1. Reattempt the same conditional GET operation, again using the original ETag value. This time the operation returns the requested data because the version on the server is different (and newer) than the version identified in the request. As in all table row retrievals, the response includes an ETag header that identifies the current version.  
   
    **Request:**
 
    ```http
-   GET [Organization Uri]/api/data/v9.2/accounts(59d88f5e-6629-ed11-9db1-0022482746b6)?$select=name,revenue,telephone1,description HTTP/1.1
+   GET [Organization Uri]/api/data/v9.2/accounts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)?$select=name,revenue,telephone1,description HTTP/1.1
    If-None-Match: W/"72965013"
    OData-MaxVersion: 4.0
    OData-Version: 4.0
@@ -182,7 +183,7 @@ This section of the program demonstrates how to perform conditional retrievals i
    "revenue": 5000000.0,
    "telephone1": "555-0001",
    "description": "Parent company of Contoso Pharmaceuticals, etc.",
-   "accountid": "59d88f5e-6629-ed11-9db1-0022482746b6",
+   "accountid": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee",
    "_transactioncurrencyid_value": "228f42f8-e646-e111-8eb7-78e7d162ced1"
    }
    ```
@@ -199,7 +200,7 @@ This section of the program demonstrates how to perform conditional retrievals i
    "revenue": 5000000.0,
    "telephone1": "555-0001",
    "description": "Parent company of Contoso Pharmaceuticals, etc.",
-   "accountid": "59d88f5e-6629-ed11-9db1-0022482746b6",
+   "accountid": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee",
    "_transactioncurrencyid_value": "228f42f8-e646-e111-8eb7-78e7d162ced1"
    }
    ```  
@@ -208,14 +209,14 @@ This section of the program demonstrates how to perform conditional retrievals i
   
 ## Section 2: Optimistic concurrency on delete and update
  
-This section of the program demonstrates how to perform conditional delete and update operations.  The most common use for such operations is in implementing an optimistic concurrency approach to row processing in a multi-user environment. More information: [Apply optimistic concurrency](perform-conditional-operations-using-web-api.md#bkmk_Applyoptimisticconcurrency)  
+This section of the program demonstrates how to perform conditional delete and update operations. The most common use for such operations is in implementing an optimistic concurrency approach to row processing in a multi-user environment. More information: [Apply optimistic concurrency](perform-conditional-operations-using-web-api.md#bkmk_Applyoptimisticconcurrency)  
   
-1. Attempt to delete original account if and only if it matches the original version (ETag value).  This condition is represented by the `If-Match` header.  This operation fails because the account row was updated in the previous section, so as a result, its version was updated on the server.  
+1. Attempt to delete original account if and only if it matches the original version (ETag value). The `If-Match` header represents this condition. This operation fails because the account row was updated in the previous section, so as a result, its version was updated on the server.  
   
    **Request:**
 
    ```http
-   DELETE [Organization Uri]/api/data/v9.2/accounts(59d88f5e-6629-ed11-9db1-0022482746b6) HTTP/1.1
+   DELETE [Organization Uri]/api/data/v9.2/accounts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee) HTTP/1.1
    If-Match: W/"72965013"
    OData-MaxVersion: 4.0
    OData-Version: 4.0
@@ -245,12 +246,12 @@ This section of the program demonstrates how to perform conditional delete and u
          Account not deleted using ETag 'W/"72965013"', status code: 'PreconditionFailed'.
    ```  
   
-1. Attempt to update the account if and only if it matches the original ETag value.  Again, this condition is represented by the `If-Match` header and the operation fails for the same reason.  
+1. Attempt to update the account if and only if it matches the original ETag value. Again, this condition is represented by the `If-Match` header and the operation fails for the same reason.  
   
    **Request:**
 
    ```http
-   PATCH [Organization Uri]/api/data/v9.2/accounts(59d88f5e-6629-ed11-9db1-0022482746b6) HTTP/1.1
+   PATCH [Organization Uri]/api/data/v9.2/accounts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee) HTTP/1.1
    If-Match: W/"72965013"
    OData-MaxVersion: 4.0
    OData-Version: 4.0
@@ -285,12 +286,12 @@ This section of the program demonstrates how to perform conditional delete and u
          Account not updated using ETag 'W/"72965013"', status code: 'PreconditionFailed'.
    ```  
   
-1. Re-attempt an update, but instead use the current ETag value obtained from the last row retrieval in the previous section.  
+1. Reattempt an update, but instead use the current ETag value obtained from the last row retrieval in the previous section.  
   
    **Request:**
 
    ```http
-   PATCH [Organization Uri]/api/data/v9.2/accounts(59d88f5e-6629-ed11-9db1-0022482746b6) HTTP/1.1
+   PATCH [Organization Uri]/api/data/v9.2/accounts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee) HTTP/1.1
    If-Match: W/"72965025"
    OData-MaxVersion: 4.0
    OData-Version: 4.0
@@ -308,7 +309,7 @@ This section of the program demonstrates how to perform conditional delete and u
    ```http
    HTTP/1.1 204 NoContent
    OData-Version: 4.0
-   OData-EntityId: [Organization Uri]/api/data/v9.2/accounts(59d88f5e-6629-ed11-9db1-0022482746b6)
+   OData-EntityId: [Organization Uri]/api/data/v9.2/accounts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)
    ```
    
    **Console output:**  
@@ -319,12 +320,12 @@ This section of the program demonstrates how to perform conditional delete and u
    Account successfully updated using ETag: W/"72965025". 
    ```  
   
-1. Confirm the update succeeded by retrieving and outputting the current account state.  This uses a basic `GET` request.  
+1. Confirm the update succeeded by retrieving and outputting the current account state using a `GET` request.  
   
    **Request:**
 
    ```http
-   GET [Organization Uri]/api/data/v9.2/accounts(59d88f5e-6629-ed11-9db1-0022482746b6)?$select=name,revenue,telephone1,description HTTP/1.1
+   GET [Organization Uri]/api/data/v9.2/accounts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)?$select=name,revenue,telephone1,description HTTP/1.1
    OData-MaxVersion: 4.0
    OData-Version: 4.0
    If-None-Match: null
@@ -345,7 +346,7 @@ This section of the program demonstrates how to perform conditional delete and u
    "revenue": 6000000.0,
    "telephone1": "555-0003",
    "description": "Parent company of Contoso Pharmaceuticals, etc.",
-   "accountid": "59d88f5e-6629-ed11-9db1-0022482746b6",
+   "accountid": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee",
    "_transactioncurrencyid_value": "228f42f8-e646-e111-8eb7-78e7d162ced1"
    }
    ```
@@ -361,7 +362,7 @@ This section of the program demonstrates how to perform conditional delete and u
    "revenue": 6000000.0,
    "telephone1": "555-0003",
    "description": "Parent company of Contoso Pharmaceuticals, etc.",
-   "accountid": "59d88f5e-6629-ed11-9db1-0022482746b6",
+   "accountid": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee",
    "_transactioncurrencyid_value": "228f42f8-e646-e111-8eb7-78e7d162ced1"
    }
    ```
@@ -384,7 +385,7 @@ Content-Type: application/http
 Content-Transfer-Encoding: binary
 Content-Length: 115
 
-DELETE /api/data/v9.2/accounts(59d88f5e-6629-ed11-9db1-0022482746b6) HTTP/1.1
+DELETE /api/data/v9.2/accounts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee) HTTP/1.1
 
 
 --batch_98e0fdc2-a298-4f42-85a8-da0536140b78--

@@ -3,7 +3,7 @@ title: "Transform natural language to Power Fx formulas"
 description: Learn how to use Power Apps Ideas to transform natural language into Power Fx formulas.
 author: norliu
 
-ms.topic: article
+ms.topic: how-to
 ms.custom: canvas
 ms.date: 10/04/2022
 ms.subservice: canvas-maker
@@ -33,7 +33,7 @@ Power Apps Ideas also supports Microsoft Dataverse, Microsoft Lists, SharePoint 
 
 For example, instead of figuring out how to write the following formula ...
 
-```powerapps-dot
+```power-fx
 Filter('Table1', StartsWith('fullname', "Yvonne"))
 ```
 
@@ -298,9 +298,7 @@ Ideas, look in the same feedback card for a [Report it now](https://msrc.microso
 
 :::image type="content" source="media/power-apps-ideas/ideas-feedback-channel.png" alt-text="Give us feedback.":::
 
-## Next steps
 
-[Transform examples to Power Fx formulas](power-apps-ideas-train-examples.md)
 
 ### See also
 

@@ -1,49 +1,46 @@
 ---
-title: "UserSettings table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the UserSettings table/entity."
-ms.date: 09/01/2023
-ms.service: "powerapps"
-ms.topic: "reference"
-ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "phecke"
-ms.author: "pehecke"
+title: "User Settings (UserSettings) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the User Settings (UserSettings) table/entity with Microsoft Dataverse."
+ms.topic: generated-reference
+author: phecke
+ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# UserSettings table/entity reference
-
-> [!NOTE]
-> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
+# User Settings (UserSettings) table/entity reference (Microsoft Dataverse)
 
 User's preferred settings.
 
-
 ## Messages
 
-|Message|Web API Operation|SDK class or method|
-|-|-|-|
-|Retrieve|GET /usersettingscollection(*systemuserid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET /usersettingscollection<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|Update|PATCH /usersettingscollection(*systemuserid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+The following table lists the messages for the User Settings (UserSettings) table.
+Messages represent operations that can be performed on the table. They may also be events.
+
+| Name <br />Is Event? |Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `Retrieve`<br />Event: False |`GET` /usersettingscollection(*systemuserid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveMultiple`<br />Event: True |`GET` /usersettingscollection<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
+| `Update`<br />Event: True |`PATCH` /usersettingscollection(*systemuserid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
 
 ## Properties
 
-|Property|Value|
-|--------|-----|
-|CollectionSchemaName|UserSettingses|
-|DisplayCollectionName|User Settings|
-|DisplayName|User Settings|
-|EntitySetName|usersettingscollection|
-|IsBPFEntity|False|
-|LogicalCollectionName|usersettingses|
-|LogicalName|usersettings|
-|OwnershipType|BusinessOwned|
-|PrimaryIdAttribute|systemuserid|
-|PrimaryNameAttribute||
-|SchemaName|UserSettings|
+The following table lists selected properties for the User Settings (UserSettings) table.
 
-<a name="writable-attributes"></a>
+|Property|Value|
+| --- | --- |
+| **DisplayName** | **User Settings** |
+| **DisplayCollectionName** | **User Settings** |
+| **SchemaName** | `UserSettings` |
+| **CollectionSchemaName** | `UserSettingses` |
+| **EntitySetName** | `usersettingscollection`|
+| **LogicalName** | `usersettings` |
+| **LogicalCollectionName** | `usersettingses` |
+| **PrimaryIdAttribute** | `systemuserid` |
+| **TableType** | `Standard` |
+| **OwnershipType** | `BusinessOwned` |
 
 ## Writable columns/attributes
 
@@ -100,6 +97,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [PagingLimit](#BKMK_PagingLimit)
 - [PersonalizationSettings](#BKMK_PersonalizationSettings)
 - [PMDesignator](#BKMK_PMDesignator)
+- [PreferredSolution](#BKMK_PreferredSolution)
 - [PricingDecimalPrecision](#BKMK_PricingDecimalPrecision)
 - [ReleaseChannel](#BKMK_ReleaseChannel)
 - [ReportScriptErrors](#BKMK_ReportScriptErrors)
@@ -147,2137 +145,1845 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [WorkdayStartTime](#BKMK_WorkdayStartTime)
 - [WorkdayStopTime](#BKMK_WorkdayStopTime)
 
-
 ### <a name="BKMK_AddressBookSyncInterval"></a> AddressBookSyncInterval
 
 |Property|Value|
-|--------|-----|
-|Description|Normal polling frequency used for address book synchronization in Microsoft Office Outlook.|
+|---|---|
+|Description|**Normal polling frequency used for address book synchronization in Microsoft Office Outlook.**|
 |DisplayName||
-|Format|None|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|addressbooksyncinterval|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`addressbooksyncinterval`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_AdvancedFindStartupMode"></a> AdvancedFindStartupMode
 
 |Property|Value|
-|--------|-----|
-|Description|Default mode, such as simple or detailed, for advanced find.|
+|---|---|
+|Description|**Default mode, such as simple or detailed, for advanced find.**|
 |DisplayName||
-|Format|None|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|advancedfindstartupmode|
-|MaxValue||
-|MinValue||
+|LogicalName|`advancedfindstartupmode`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
-
+|MaxValue||
+|MinValue||
 
 ### <a name="BKMK_AMDesignator"></a> AMDesignator
 
 |Property|Value|
-|--------|-----|
-|Description|AM designator to use in Microsoft Dynamics 365.|
+|---|---|
+|Description|**AM designator to use in Microsoft Dynamics 365.**|
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|amdesignator|
-|MaxLength|25|
+|LogicalName|`amdesignator`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|25|
 
 ### <a name="BKMK_AutoCaptureUserStatus"></a> AutoCaptureUserStatus
 
 |Property|Value|
-|--------|-----|
-|Description|Set user status for ADC Suggestions|
+|---|---|
+|Description|**Set user status for ADC Suggestions**|
 |DisplayName||
-|Format|None|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|autocaptureuserstatus|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`autocaptureuserstatus`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_AutoCreateContactOnPromote"></a> AutoCreateContactOnPromote
 
 |Property|Value|
-|--------|-----|
-|Description|Auto-create contact on client promote|
+|---|---|
+|Description|**Auto-create contact on client promote**|
 |DisplayName||
-|Format|None|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|autocreatecontactonpromote|
-|MaxValue||
-|MinValue||
+|LogicalName|`autocreatecontactonpromote`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
-
+|MaxValue||
+|MinValue||
 
 ### <a name="BKMK_BusinessUnitId"></a> BusinessUnitId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the business unit with which the user is associated.|
+|---|---|
+|Description|**Unique identifier of the business unit with which the user is associated.**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|businessunitid|
+|LogicalName|`businessunitid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_CalendarType"></a> CalendarType
 
 |Property|Value|
-|--------|-----|
-|Description|Calendar type for the system. Set to Gregorian US by default.|
+|---|---|
+|Description|**Calendar type for the system. Set to Gregorian US by default.**|
 |DisplayName||
-|Format|None|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|calendartype|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`calendartype`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_CurrencyDecimalPrecision"></a> CurrencyDecimalPrecision
 
 |Property|Value|
-|--------|-----|
-|Description|Number of decimal places that can be used for currency.|
+|---|---|
+|Description|**Number of decimal places that can be used for currency.**|
 |DisplayName||
-|Format|None|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|currencydecimalprecision|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`currencydecimalprecision`|
 |RequiredLevel|ApplicationRequired|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_CurrencyFormatCode"></a> CurrencyFormatCode
 
 |Property|Value|
-|--------|-----|
-|Description|Information about how currency symbols are placed in Microsoft Dynamics 365.|
+|---|---|
+|Description|**Information about how currency symbols are placed in Microsoft Dynamics 365.**|
 |DisplayName||
-|Format|None|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|currencyformatcode|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`currencyformatcode`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_CurrencySymbol"></a> CurrencySymbol
 
 |Property|Value|
-|--------|-----|
-|Description|Symbol used for currency in Microsoft Dynamics 365.|
+|---|---|
+|Description|**Symbol used for currency in Microsoft Dynamics 365.**|
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|currencysymbol|
-|MaxLength|13|
+|LogicalName|`currencysymbol`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|13|
 
 ### <a name="BKMK_D365AutoInstallAttemptStatus"></a> D365AutoInstallAttemptStatus
 
-**Added by**: Microsoft D365 Auto Install Plugin Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Determines the status of auto install of Dynamics 365 to Teams attempt has been completed|
-|DisplayName|d365autoinstallattemptstatus|
-|IsValidForCreate|False|
+|---|---|
+|Description|**Determines the status of auto install of Dynamics 365 to Teams attempt has been completed**|
+|DisplayName|**d365autoinstallattemptstatus**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|d365autoinstallattemptstatus|
+|LogicalName|`d365autoinstallattemptstatus`|
 |RequiredLevel|None|
 |Type|Picklist|
+|DefaultFormValue|0|
+|GlobalChoiceName|`usersettings_d365autoinstallattemptstatus`|
 
 #### D365AutoInstallAttemptStatus Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|0|Not attempted||
-|1|Auto installed|Dynamics 365 App installed successfully|
-|2|Already installed|Dynamics 365 app is already installed in Teams|
-|3|Teams admin blocked|Teams admin blocked installing Dynamics 365 app|
-|4|Unauthorized|Not authorized to execute auto install|
-|5|No Solution|D365 auto install solution is no available|
-|6|No Graph API|Graph API is not available for auto install|
-|7|Resource Disabled|Resource to call graph api is disabled by tenant|
-
-
+|Value|Label|
+|---|---|
+|0|**Not attempted**|
+|1|**Auto installed**|
+|2|**Already installed**|
+|3|**Teams admin blocked**|
+|4|**Unauthorized**|
+|5|**No Solution**|
+|6|**No Graph API**|
+|7|**Resource Disabled**|
 
 ### <a name="BKMK_DataValidationModeForExportToExcel"></a> DataValidationModeForExportToExcel
 
 |Property|Value|
-|--------|-----|
-|Description|Information that specifies the level of data validation in excel worksheets exported in a format suitable for import.|
-|DisplayName|Data Validation Mode For Export To Excel|
+|---|---|
+|Description|**Information that specifies the level of data validation in excel worksheets exported in a format suitable for import.**|
+|DisplayName|**Data Validation Mode For Export To Excel**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|datavalidationmodeforexporttoexcel|
+|LogicalName|`datavalidationmodeforexporttoexcel`|
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
+|DefaultFormValue|0|
+|GlobalChoiceName|`usersettings_datavalidationmodeforexporttoexcel`|
 
 #### DataValidationModeForExportToExcel Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|0|Full||
-|1|None||
-
-
+|Value|Label|
+|---|---|
+|0|**Full**|
+|1|**None**|
 
 ### <a name="BKMK_DateFormatCode"></a> DateFormatCode
 
 |Property|Value|
-|--------|-----|
-|Description|Information about how the date is displayed in Microsoft Dynamics 365.|
+|---|---|
+|Description|**Information about how the date is displayed in Microsoft Dynamics 365.**|
 |DisplayName||
-|Format|None|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|dateformatcode|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`dateformatcode`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_DateFormatString"></a> DateFormatString
 
 |Property|Value|
-|--------|-----|
-|Description|String showing how the date is displayed throughout Microsoft 365.|
+|---|---|
+|Description|**String showing how the date is displayed throughout Microsoft 365.**|
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|dateformatstring|
-|MaxLength|255|
+|LogicalName|`dateformatstring`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|255|
 
 ### <a name="BKMK_DateSeparator"></a> DateSeparator
 
 |Property|Value|
-|--------|-----|
-|Description|Character used to separate the month, the day, and the year in dates in Microsoft Dynamics 365.|
+|---|---|
+|Description|**Character used to separate the month, the day, and the year in dates in Microsoft Dynamics 365.**|
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|dateseparator|
-|MaxLength|5|
+|LogicalName|`dateseparator`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|5|
 
 ### <a name="BKMK_DecimalSymbol"></a> DecimalSymbol
 
 |Property|Value|
-|--------|-----|
-|Description|Symbol used for decimal in Microsoft Dynamics 365.|
+|---|---|
+|Description|**Symbol used for decimal in Microsoft Dynamics 365.**|
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|decimalsymbol|
-|MaxLength|5|
+|LogicalName|`decimalsymbol`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|5|
 
 ### <a name="BKMK_DefaultCalendarView"></a> DefaultCalendarView
 
 |Property|Value|
-|--------|-----|
-|Description|Default calendar view for the user.|
+|---|---|
+|Description|**Default calendar view for the user.**|
 |DisplayName||
-|Format|None|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|defaultcalendarview|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`defaultcalendarview`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_DefaultCountryCode"></a> DefaultCountryCode
 
 |Property|Value|
-|--------|-----|
-|Description|Text area to enter default country code.|
-|DisplayName|Default Country Code|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Text area to enter default country code.**|
+|DisplayName|**Default Country Code**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|defaultcountrycode|
-|MaxLength|30|
+|LogicalName|`defaultcountrycode`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|30|
 
 ### <a name="BKMK_DefaultDashboardId"></a> DefaultDashboardId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the default dashboard.|
+|---|---|
+|Description|**Unique identifier of the default dashboard.**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|defaultdashboardid|
+|LogicalName|`defaultdashboardid`|
 |RequiredLevel|None|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_DefaultSearchExperience"></a> DefaultSearchExperience
 
 |Property|Value|
-|--------|-----|
-|Description|Default search experience for the user.|
-|DisplayName|Default Search Experience|
+|---|---|
+|Description|**Default search experience for the user.**|
+|DisplayName|**Default Search Experience**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|defaultsearchexperience|
+|LogicalName|`defaultsearchexperience`|
 |RequiredLevel|None|
 |Type|Picklist|
+|DefaultFormValue|2|
+|GlobalChoiceName|`usersettings_defaultsearchexperience`|
 
 #### DefaultSearchExperience Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|0|Relevance search||
-|1|Categorized search||
-|2|Use last search||
-|3|Custom search||
-
-
+|Value|Label|
+|---|---|
+|0|**Relevance search**|
+|1|**Categorized search**|
+|2|**Use last search**|
+|3|**Custom search**|
 
 ### <a name="BKMK_EntityFormMode"></a> EntityFormMode
 
 |Property|Value|
-|--------|-----|
-|Description|Indicates the form mode to be used.|
-|DisplayName|Form Mode|
+|---|---|
+|Description|**Indicates the form mode to be used.**|
+|DisplayName|**Form Mode**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|entityformmode|
+|LogicalName|`entityformmode`|
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
+|DefaultFormValue|0|
+|GlobalChoiceName|`usersettings_entityformmode`|
 
 #### EntityFormMode Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|0|Organization default||
-|1|Read-optimized||
-|2|Edit||
-
-
+|Value|Label|
+|---|---|
+|0|**Organization default**|
+|1|**Read-optimized**|
+|2|**Edit**|
 
 ### <a name="BKMK_FullNameConventionCode"></a> FullNameConventionCode
 
 |Property|Value|
-|--------|-----|
-|Description|Order in which names are to be displayed in Microsoft Dynamics 365.|
+|---|---|
+|Description|**Order in which names are to be displayed in Microsoft Dynamics 365.**|
 |DisplayName||
-|Format|None|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|fullnameconventioncode|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`fullnameconventioncode`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_GetStartedPaneContentEnabled"></a> GetStartedPaneContentEnabled
 
 |Property|Value|
-|--------|-----|
-|Description|Information that specifies whether the Get Started pane in lists is enabled.|
+|---|---|
+|Description|**Information that specifies whether the Get Started pane in lists is enabled.**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|getstartedpanecontentenabled|
+|LogicalName|`getstartedpanecontentenabled`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
-
-#### GetStartedPaneContentEnabled Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 1
-
-
+|GlobalChoiceName|`usersettings_getstartedpanecontentenabled`|
+|DefaultValue|True|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_HelpLanguageId"></a> HelpLanguageId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the Help language.|
+|---|---|
+|Description|**Unique identifier of the Help language.**|
 |DisplayName||
-|Format|Language|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|helplanguageid|
-|MaxValue|2147483647|
-|MinValue|0|
+|LogicalName|`helplanguageid`|
 |RequiredLevel|ApplicationRequired|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|0|
 
 ### <a name="BKMK_HomepageArea"></a> HomepageArea
 
 |Property|Value|
-|--------|-----|
-|Description|Web site home page for the user.|
+|---|---|
+|Description|**Web site home page for the user.**|
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|homepagearea|
-|MaxLength|200|
+|LogicalName|`homepagearea`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|200|
 
 ### <a name="BKMK_HomepageLayout"></a> HomepageLayout
 
 |Property|Value|
-|--------|-----|
-|Description|Configuration of the home page layout.|
+|---|---|
+|Description|**Configuration of the home page layout.**|
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|homepagelayout|
-|MaxLength|2000|
+|LogicalName|`homepagelayout`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|2000|
 
 ### <a name="BKMK_HomepageSubarea"></a> HomepageSubarea
 
 |Property|Value|
-|--------|-----|
-|Description|Web site page for the user.|
+|---|---|
+|Description|**Web site page for the user.**|
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|homepagesubarea|
-|MaxLength|200|
+|LogicalName|`homepagesubarea`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|200|
 
 ### <a name="BKMK_IgnoreUnsolicitedEmail"></a> IgnoreUnsolicitedEmail
 
 |Property|Value|
-|--------|-----|
-|Description|Information that specifies whether a user account is to ignore unsolicited email (deprecated).|
+|---|---|
+|Description|**Information that specifies whether a user account is to ignore unsolicited email (deprecated).**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|ignoreunsolicitedemail|
+|LogicalName|`ignoreunsolicitedemail`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
-
-#### IgnoreUnsolicitedEmail Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 1
-
-
+|GlobalChoiceName|`usersettings_ignoreunsolicitedemail`|
+|DefaultValue|True|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_IncomingEmailFilteringMethod"></a> IncomingEmailFilteringMethod
 
 |Property|Value|
-|--------|-----|
-|Description|Incoming email filtering method.|
-|DisplayName|Incoming Email Filtering Method|
+|---|---|
+|Description|**Incoming email filtering method.**|
+|DisplayName|**Incoming Email Filtering Method**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|incomingemailfilteringmethod|
+|LogicalName|`incomingemailfilteringmethod`|
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
+|DefaultFormValue|2|
+|GlobalChoiceName|`usersettings_incomingemailfilteringmethod`|
 
 #### IncomingEmailFilteringMethod Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|0|All email messages||
-|1|Email messages in response to Dynamics 365 email||
-|2|Email messages from Dynamics 365 Leads, Contacts and Accounts||
-|3|Email messages from Dynamics 365 records that are email enabled||
-|4|No email messages||
-
-
+|Value|Label|
+|---|---|
+|0|**All email messages**|
+|1|**Email messages in response to Dynamics 365 email**|
+|2|**Email messages from Dynamics 365 Leads, Contacts and Accounts**|
+|3|**Email messages from Dynamics 365 records that are email enabled**|
+|4|**No email messages**|
 
 ### <a name="BKMK_IsAppsForCrmAlertDismissed"></a> IsAppsForCrmAlertDismissed
 
 |Property|Value|
-|--------|-----|
-|Description|Show or dismiss alert for Apps for 365.|
-|DisplayName|Show alert for Apps for 365.|
+|---|---|
+|Description|**Show or dismiss alert for Apps for 365.**|
+|DisplayName|**Show alert for Apps for 365.**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|isappsforcrmalertdismissed|
+|LogicalName|`isappsforcrmalertdismissed`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### IsAppsForCrmAlertDismissed Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`usersettings_isappsforcrmalertdismissed`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_IsAutoDataCaptureEnabled"></a> IsAutoDataCaptureEnabled
 
 |Property|Value|
-|--------|-----|
-|Description|Indicates whether to use the Auto Capture feature enabled or not.|
+|---|---|
+|Description|**Indicates whether to use the Auto Capture feature enabled or not.**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|isautodatacaptureenabled|
+|LogicalName|`isautodatacaptureenabled`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
-
-#### IsAutoDataCaptureEnabled Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`usersettings_featureenabled`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_IsDefaultCountryCodeCheckEnabled"></a> IsDefaultCountryCodeCheckEnabled
 
 |Property|Value|
-|--------|-----|
-|Description|Enable or disable country code selection .|
-|DisplayName|Enable Default Country Code|
+|---|---|
+|Description|**Enable or disable country code selection .**|
+|DisplayName|**Enable Default Country Code**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|isdefaultcountrycodecheckenabled|
+|LogicalName|`isdefaultcountrycodecheckenabled`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
-
-#### IsDefaultCountryCodeCheckEnabled Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 1
-
-
+|GlobalChoiceName|`user_iscountrycodeselectionenabled`|
+|DefaultValue|True|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_IsDuplicateDetectionEnabledWhenGoingOnline"></a> IsDuplicateDetectionEnabledWhenGoingOnline
 
 |Property|Value|
-|--------|-----|
-|Description|Indicates if duplicate detection is enabled when going online.|
+|---|---|
+|Description|**Indicates if duplicate detection is enabled when going online.**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|isduplicatedetectionenabledwhengoingonline|
+|LogicalName|`isduplicatedetectionenabledwhengoingonline`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
-
-#### IsDuplicateDetectionEnabledWhenGoingOnline Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`usersettings_isduplicatedetectionenabledwhengoingonline`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_IsEmailConversationViewEnabled"></a> IsEmailConversationViewEnabled
 
 |Property|Value|
-|--------|-----|
-|Description|Enable or disable email conversation view on timeline wall selection.|
+|---|---|
+|Description|**Enable or disable email conversation view on timeline wall selection.**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|isemailconversationviewenabled|
+|LogicalName|`isemailconversationviewenabled`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
-
-#### IsEmailConversationViewEnabled Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`usersettings_isemailconversationviewenabled`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_IsGuidedHelpEnabled"></a> IsGuidedHelpEnabled
 
 |Property|Value|
-|--------|-----|
-|Description|Enable or disable guided help.|
-|DisplayName|Enable Default Guided Help|
+|---|---|
+|Description|**Enable or disable guided help.**|
+|DisplayName|**Enable Default Guided Help**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|isguidedhelpenabled|
+|LogicalName|`isguidedhelpenabled`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### IsGuidedHelpEnabled Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 1
-
-
+|GlobalChoiceName|`usersettings_isguidedhelpenabled`|
+|DefaultValue|True|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_IsResourceBookingExchangeSyncEnabled"></a> IsResourceBookingExchangeSyncEnabled
 
 |Property|Value|
-|--------|-----|
-|Description|Indicates if the synchronization of user resource booking with Exchange is enabled at user level.|
-|DisplayName|Resource booking synchronization enabled|
-|IsValidForCreate|False|
+|---|---|
+|Description|**Indicates if the synchronization of user resource booking with Exchange is enabled at user level.**|
+|DisplayName|**Resource booking synchronization enabled**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|isresourcebookingexchangesyncenabled|
+|LogicalName|`isresourcebookingexchangesyncenabled`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
-
-#### IsResourceBookingExchangeSyncEnabled Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Enabled||
-|0|Disabled||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`usersettings_isresourcebookingexchangesyncenabled`|
+|DefaultValue|False|
+|True Label|Enabled|
+|False Label|Disabled|
 
 ### <a name="BKMK_IsSendAsAllowed"></a> IsSendAsAllowed
 
 |Property|Value|
-|--------|-----|
-|Description|Indicates if send as other user privilege is enabled or not.|
+|---|---|
+|Description|**Indicates if send as other user privilege is enabled or not.**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|issendasallowed|
+|LogicalName|`issendasallowed`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
-
-#### IsSendAsAllowed Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`usersettings_issendasallowed`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_LastAlertsViewedTime"></a> LastAlertsViewedTime
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Shows the last time when the traces were read from the database.|
+|---|---|
+|Description|**Shows the last time when the traces were read from the database.**|
 |DisplayName||
-|Format|DateAndTime|
-|IsValidForCreate|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|lastalertsviewedtime|
+|LogicalName|`lastalertsviewedtime`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_LastModifiedTimeForViewPersonalizationSettings"></a> LastModifiedTimeForViewPersonalizationSettings
 
-**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
-
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Stores the timestamp for when the ViewPersonalizationSettings attribute was updated for this user in the UserEntityUISettings table.|
-|DisplayName|Last modified timestamp for the view personalization settings in UserEntityUISettings table|
-|Format|DateAndTime|
+|---|---|
+|Description|**Stores the timestamp for when the ViewPersonalizationSettings attribute was updated for this user in the UserEntityUISettings table.**|
+|DisplayName|**Last modified timestamp for the view personalization settings in UserEntityUISettings table**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|lastmodifiedtimeforviewpersonalizationsettings|
+|LogicalName|`lastmodifiedtimeforviewpersonalizationsettings`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|True|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Auto|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_LocaleId"></a> LocaleId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user locale.|
+|---|---|
+|Description|**Unique identifier of the user locale.**|
 |DisplayName||
-|Format|Locale|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|localeid|
-|MaxValue|2147483647|
-|MinValue|0|
+|LogicalName|`localeid`|
 |RequiredLevel|ApplicationRequired|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|0|
 
 ### <a name="BKMK_LongDateFormatCode"></a> LongDateFormatCode
 
 |Property|Value|
-|--------|-----|
-|Description|Information that specifies how Long Date is displayed throughout Microsoft 365.|
+|---|---|
+|Description|**Information that specifies how Long Date is displayed throughout Microsoft 365.**|
 |DisplayName||
-|Format|None|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|longdateformatcode|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`longdateformatcode`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_NegativeCurrencyFormatCode"></a> NegativeCurrencyFormatCode
 
 |Property|Value|
-|--------|-----|
-|Description|Information that specifies how negative currency numbers are displayed in Microsoft Dynamics 365.|
+|---|---|
+|Description|**Information that specifies how negative currency numbers are displayed in Microsoft Dynamics 365.**|
 |DisplayName||
-|Format|None|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|negativecurrencyformatcode|
-|MaxValue|15|
-|MinValue|0|
+|LogicalName|`negativecurrencyformatcode`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
-
+|MaxValue|15|
+|MinValue|0|
 
 ### <a name="BKMK_NegativeFormatCode"></a> NegativeFormatCode
 
 |Property|Value|
-|--------|-----|
-|Description|Information that specifies how negative numbers are displayed in Microsoft Dynamics 365.|
+|---|---|
+|Description|**Information that specifies how negative numbers are displayed in Microsoft Dynamics 365.**|
 |DisplayName||
-|Format|None|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|negativeformatcode|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`negativeformatcode`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_NextTrackingNumber"></a> NextTrackingNumber
 
 |Property|Value|
-|--------|-----|
-|Description|Next tracking number.|
+|---|---|
+|Description|**Next tracking number.**|
 |DisplayName||
-|Format|None|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|nexttrackingnumber|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`nexttrackingnumber`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_NumberGroupFormat"></a> NumberGroupFormat
 
 |Property|Value|
-|--------|-----|
-|Description|Information that specifies how numbers are grouped in Microsoft Dynamics 365.|
+|---|---|
+|Description|**Information that specifies how numbers are grouped in Microsoft Dynamics 365.**|
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|numbergroupformat|
-|MaxLength|25|
+|LogicalName|`numbergroupformat`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|25|
 
 ### <a name="BKMK_NumberSeparator"></a> NumberSeparator
 
 |Property|Value|
-|--------|-----|
-|Description|Symbol used for number separation in Microsoft Dynamics 365.|
+|---|---|
+|Description|**Symbol used for number separation in Microsoft Dynamics 365.**|
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|numberseparator|
-|MaxLength|5|
+|LogicalName|`numberseparator`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|5|
 
 ### <a name="BKMK_OfflineSyncInterval"></a> OfflineSyncInterval
 
 |Property|Value|
-|--------|-----|
-|Description|Normal polling frequency used for background offline synchronization in Microsoft Office Outlook.|
+|---|---|
+|Description|**Normal polling frequency used for background offline synchronization in Microsoft Office Outlook.**|
 |DisplayName||
-|Format|None|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|offlinesyncinterval|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`offlinesyncinterval`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_OutlookSyncInterval"></a> OutlookSyncInterval
 
 |Property|Value|
-|--------|-----|
-|Description|Normal polling frequency used for record synchronization in Microsoft Office Outlook.|
+|---|---|
+|Description|**Normal polling frequency used for record synchronization in Microsoft Office Outlook.**|
 |DisplayName||
-|Format|None|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|outlooksyncinterval|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`outlooksyncinterval`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_PagingLimit"></a> PagingLimit
 
 |Property|Value|
-|--------|-----|
-|Description|Information that specifies how many items to list on a page in list views.|
+|---|---|
+|Description|**Information that specifies how many items to list on a page in list views.**|
 |DisplayName||
-|Format|None|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|paginglimit|
-|MaxValue|2147483647|
-|MinValue|0|
+|LogicalName|`paginglimit`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|0|
 
 ### <a name="BKMK_PersonalizationSettings"></a> PersonalizationSettings
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
+|---|---|
+|Description|**For internal use only.**|
 |DisplayName||
-|Format|TextArea|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|personalizationsettings|
-|MaxLength|1073741823|
+|LogicalName|`personalizationsettings`|
 |RequiredLevel|None|
 |Type|Memo|
-
+|Format|TextArea|
+|FormatName|TextArea|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1073741823|
 
 ### <a name="BKMK_PMDesignator"></a> PMDesignator
 
 |Property|Value|
-|--------|-----|
-|Description|PM designator to use in Microsoft Dynamics 365.|
+|---|---|
+|Description|**PM designator to use in Microsoft Dynamics 365.**|
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|pmdesignator|
-|MaxLength|25|
+|LogicalName|`pmdesignator`|
 |RequiredLevel|SystemRequired|
 |Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|25|
 
+### <a name="BKMK_PreferredSolution"></a> PreferredSolution
+
+|Property|Value|
+|---|---|
+|Description|**Preferred Solution when create a component without under a solution in this organization**|
+|DisplayName|**Preferred Solution**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`preferredsolution`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|solution|
 
 ### <a name="BKMK_PricingDecimalPrecision"></a> PricingDecimalPrecision
 
 |Property|Value|
-|--------|-----|
-|Description|Number of decimal places that can be used for prices.|
+|---|---|
+|Description|**Number of decimal places that can be used for prices.**|
 |DisplayName||
-|Format|None|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|pricingdecimalprecision|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`pricingdecimalprecision`|
 |RequiredLevel|ApplicationRequired|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_ReleaseChannel"></a> ReleaseChannel
 
-**Added by**: App Framework Infra Extensions Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Model app channel override|
-|DisplayName|Model app channel override|
+|---|---|
+|Description|**Model app channel override**|
+|DisplayName|**Model app channel override**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|releasechannel|
+|LogicalName|`releasechannel`|
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
+|DefaultFormValue|0|
+|GlobalChoiceName|`usersettings_releasechannel`|
 
 #### ReleaseChannel Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|0|None||
-|1|Semi-annual channel override||
-|2|Monthly channel override||
-|3|Inner channel override||
-
-
+|Value|Label|
+|---|---|
+|0|**None**|
+|1|**Semi-annual channel override**|
+|2|**Monthly channel override**|
+|3|**Inner channel override**|
 
 ### <a name="BKMK_ReportScriptErrors"></a> ReportScriptErrors
 
 |Property|Value|
-|--------|-----|
-|Description|Picklist for selecting the user preference for reporting scripting errors.|
-|DisplayName|Report Script Errors|
+|---|---|
+|Description|**Picklist for selecting the user preference for reporting scripting errors.**|
+|DisplayName|**Report Script Errors**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|reportscripterrors|
+|LogicalName|`reportscripterrors`|
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
+|DefaultFormValue|-1|
+|GlobalChoiceName|`usersettings_reportscripterrors`|
 
 #### ReportScriptErrors Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Ask me for permission to send an error report to Microsoft||
-|2|Automatically send an error report to Microsoft without asking me for permission||
-|3|Never send an error report to Microsoft about Microsoft Dynamics 365||
-
-
+|Value|Label|
+|---|---|
+|1|**Ask me for permission to send an error report to Microsoft**|
+|2|**Automatically send an error report to Microsoft without asking me for permission**|
+|3|**Never send an error report to Microsoft about Microsoft Dynamics 365**|
 
 ### <a name="BKMK_ResourceBookingExchangeSyncVersion"></a> ResourceBookingExchangeSyncVersion
 
 |Property|Value|
-|--------|-----|
-|Description|The version number for resource booking synchronization with Exchange.|
-|DisplayName|User resource booking synchronization version|
-|IsValidForCreate|False|
+|---|---|
+|Description|**The version number for resource booking synchronization with Exchange.**|
+|DisplayName|**User resource booking synchronization version**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|resourcebookingexchangesyncversion|
-|MaxValue|9223372036854775807|
-|MinValue|-9223372036854775808|
+|LogicalName|`resourcebookingexchangesyncversion`|
 |RequiredLevel|SystemRequired|
 |Type|BigInt|
-
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
 
 ### <a name="BKMK_SelectedGlobalFilterId"></a> SelectedGlobalFilterId
 
 |Property|Value|
-|--------|-----|
-|Description|Store selected customer service hub dashboard saved filter id.|
+|---|---|
+|Description|**Store selected customer service hub dashboard saved filter id.**|
 |DisplayName||
-|IsValidForCreate|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|selectedglobalfilterid|
+|LogicalName|`selectedglobalfilterid`|
 |RequiredLevel|None|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_ShowWeekNumber"></a> ShowWeekNumber
 
 |Property|Value|
-|--------|-----|
-|Description|Information that specifies whether to display the week number in calendar displays in Microsoft Dynamics 365.|
+|---|---|
+|Description|**Information that specifies whether to display the week number in calendar displays in Microsoft Dynamics 365.**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|showweeknumber|
+|LogicalName|`showweeknumber`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
-
-#### ShowWeekNumber Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`usersettings_showweeknumber`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_SplitViewState"></a> SplitViewState
 
 |Property|Value|
-|--------|-----|
-|Description|For Internal use only|
+|---|---|
+|Description|**For Internal use only**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|splitviewstate|
+|LogicalName|`splitviewstate`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
-
-#### SplitViewState Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Expanded||
-|0|Collapsed||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`usersettings_splitviewstate`|
+|DefaultValue|False|
+|True Label|Expanded|
+|False Label|Collapsed|
 
 ### <a name="BKMK_SyncContactCompany"></a> SyncContactCompany
 
 |Property|Value|
-|--------|-----|
-|Description|Indicates if the company field in Microsoft Office Outlook items are set during Outlook synchronization.|
+|---|---|
+|Description|**Indicates if the company field in Microsoft Office Outlook items are set during Outlook synchronization.**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|synccontactcompany|
+|LogicalName|`synccontactcompany`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
-
-#### SyncContactCompany Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`usersettings_synccontactcompany`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_SystemUserId"></a> SystemUserId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user.|
+|---|---|
+|Description|**Unique identifier of the user.**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|systemuserid|
+|LogicalName|`systemuserid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
 
-
 ### <a name="BKMK_TableScopedDVSearchFeatureTeachingBubbleViews"></a> TableScopedDVSearchFeatureTeachingBubbleViews
 
-**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
-
 |Property|Value|
-|--------|-----|
-|Description|The number of times a user has interacted with the Tabled Scoped Dataverse Search feature teaching bubble.|
-|DisplayName|Table Scoped Dataverse Search Feature Teaching Bubble Views|
-|Format|None|
+|---|---|
+|Description|**The number of times a user has interacted with the Tabled Scoped Dataverse Search feature teaching bubble.**|
+|DisplayName|**Table Scoped Dataverse Search Feature Teaching Bubble Views**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|tablescopeddvsearchfeatureteachingbubbleviews|
-|MaxValue|100|
-|MinValue|0|
+|LogicalName|`tablescopeddvsearchfeatureteachingbubbleviews`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
-
+|MaxValue|100|
+|MinValue|0|
 
 ### <a name="BKMK_TableScopedDVSearchQuickFindTeachingBubbleViews"></a> TableScopedDVSearchQuickFindTeachingBubbleViews
 
-**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
-
 |Property|Value|
-|--------|-----|
-|Description|The number of times a user has interacted with the Tabled Scoped Dataverse Search Quick Find teaching bubble.|
-|DisplayName|Table Scoped Dataverse Search Quick Find Teaching Bubble Views|
-|Format|None|
+|---|---|
+|Description|**The number of times a user has interacted with the Tabled Scoped Dataverse Search Quick Find teaching bubble.**|
+|DisplayName|**Table Scoped Dataverse Search Quick Find Teaching Bubble Views**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|tablescopeddvsearchquickfindteachingbubbleviews|
-|MaxValue|100|
-|MinValue|0|
+|LogicalName|`tablescopeddvsearchquickfindteachingbubbleviews`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
-
+|MaxValue|100|
+|MinValue|0|
 
 ### <a name="BKMK_TimeFormatCode"></a> TimeFormatCode
 
 |Property|Value|
-|--------|-----|
-|Description|Information that specifies how the time is displayed in Microsoft Dynamics 365.|
+|---|---|
+|Description|**Information that specifies how the time is displayed in Microsoft Dynamics 365.**|
 |DisplayName||
-|Format|None|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|timeformatcode|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`timeformatcode`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_TimeFormatString"></a> TimeFormatString
 
 |Property|Value|
-|--------|-----|
-|Description|Text for how time is displayed in Microsoft Dynamics 365.|
+|---|---|
+|Description|**Text for how time is displayed in Microsoft Dynamics 365.**|
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|timeformatstring|
-|MaxLength|255|
+|LogicalName|`timeformatstring`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|255|
 
 ### <a name="BKMK_TimeSeparator"></a> TimeSeparator
 
 |Property|Value|
-|--------|-----|
-|Description|Text for how time is displayed in Microsoft Dynamics 365.|
+|---|---|
+|Description|**Text for how time is displayed in Microsoft Dynamics 365.**|
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|timeseparator|
-|MaxLength|5|
+|LogicalName|`timeseparator`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|5|
 
 ### <a name="BKMK_TimeZoneBias"></a> TimeZoneBias
 
 |Property|Value|
-|--------|-----|
-|Description|Local time zone adjustment for the user. System calculated based on the time zone selected.|
+|---|---|
+|Description|**Local time zone adjustment for the user. System calculated based on the time zone selected.**|
 |DisplayName||
-|Format|None|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|timezonebias|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`timezonebias`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_TimeZoneCode"></a> TimeZoneCode
 
 |Property|Value|
-|--------|-----|
-|Description|Local time zone for the user.|
+|---|---|
+|Description|**Local time zone for the user.**|
 |DisplayName||
-|Format|None|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|timezonecode|
-|MaxValue||
-|MinValue||
+|LogicalName|`timezonecode`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
-
+|MaxValue||
+|MinValue||
 
 ### <a name="BKMK_TimeZoneDaylightBias"></a> TimeZoneDaylightBias
 
 |Property|Value|
-|--------|-----|
-|Description|Local time zone daylight adjustment for the user. System calculated based on the time zone selected.|
+|---|---|
+|Description|**Local time zone daylight adjustment for the user. System calculated based on the time zone selected.**|
 |DisplayName||
-|Format|None|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|timezonedaylightbias|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`timezonedaylightbias`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_TimeZoneDaylightDay"></a> TimeZoneDaylightDay
 
 |Property|Value|
-|--------|-----|
-|Description|Local time zone daylight day for the user. System calculated based on the time zone selected.|
+|---|---|
+|Description|**Local time zone daylight day for the user. System calculated based on the time zone selected.**|
 |DisplayName||
-|Format|None|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|timezonedaylightday|
-|MaxValue||
-|MinValue||
+|LogicalName|`timezonedaylightday`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
-
+|MaxValue||
+|MinValue||
 
 ### <a name="BKMK_TimeZoneDaylightDayOfWeek"></a> TimeZoneDaylightDayOfWeek
 
 |Property|Value|
-|--------|-----|
-|Description|Local time zone daylight day of week for the user. System calculated based on the time zone selected in Options.|
+|---|---|
+|Description|**Local time zone daylight day of week for the user. System calculated based on the time zone selected in Options.**|
 |DisplayName||
-|Format|None|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|timezonedaylightdayofweek|
-|MaxValue||
-|MinValue||
+|LogicalName|`timezonedaylightdayofweek`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
-
+|MaxValue||
+|MinValue||
 
 ### <a name="BKMK_TimeZoneDaylightHour"></a> TimeZoneDaylightHour
 
 |Property|Value|
-|--------|-----|
-|Description|Local time zone daylight hour for the user. System calculated based on the time zone selected.|
+|---|---|
+|Description|**Local time zone daylight hour for the user. System calculated based on the time zone selected.**|
 |DisplayName||
-|Format|None|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|timezonedaylighthour|
-|MaxValue||
-|MinValue||
+|LogicalName|`timezonedaylighthour`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
-
+|MaxValue||
+|MinValue||
 
 ### <a name="BKMK_TimeZoneDaylightMinute"></a> TimeZoneDaylightMinute
 
 |Property|Value|
-|--------|-----|
-|Description|Local time zone daylight minute for the user. System calculated based on the time zone selected.|
+|---|---|
+|Description|**Local time zone daylight minute for the user. System calculated based on the time zone selected.**|
 |DisplayName||
-|Format|None|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|timezonedaylightminute|
-|MaxValue||
-|MinValue||
+|LogicalName|`timezonedaylightminute`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
-
+|MaxValue||
+|MinValue||
 
 ### <a name="BKMK_TimeZoneDaylightMonth"></a> TimeZoneDaylightMonth
 
 |Property|Value|
-|--------|-----|
-|Description|Local time zone daylight month for the user. System calculated based on the time zone selected.|
+|---|---|
+|Description|**Local time zone daylight month for the user. System calculated based on the time zone selected.**|
 |DisplayName||
-|Format|None|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|timezonedaylightmonth|
-|MaxValue||
-|MinValue||
+|LogicalName|`timezonedaylightmonth`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
-
+|MaxValue||
+|MinValue||
 
 ### <a name="BKMK_TimeZoneDaylightSecond"></a> TimeZoneDaylightSecond
 
 |Property|Value|
-|--------|-----|
-|Description|Local time zone daylight second for the user. System calculated based on the time zone selected.|
+|---|---|
+|Description|**Local time zone daylight second for the user. System calculated based on the time zone selected.**|
 |DisplayName||
-|Format|None|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|timezonedaylightsecond|
-|MaxValue||
-|MinValue||
+|LogicalName|`timezonedaylightsecond`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
-
+|MaxValue||
+|MinValue||
 
 ### <a name="BKMK_TimeZoneDaylightYear"></a> TimeZoneDaylightYear
 
 |Property|Value|
-|--------|-----|
-|Description|Local time zone daylight year for the user. System calculated based on the time zone selected.|
+|---|---|
+|Description|**Local time zone daylight year for the user. System calculated based on the time zone selected.**|
 |DisplayName||
-|Format|None|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|timezonedaylightyear|
-|MaxValue||
-|MinValue||
+|LogicalName|`timezonedaylightyear`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
-
+|MaxValue||
+|MinValue||
 
 ### <a name="BKMK_TimeZoneStandardBias"></a> TimeZoneStandardBias
 
 |Property|Value|
-|--------|-----|
-|Description|Local time zone standard time bias for the user. System calculated based on the time zone selected.|
+|---|---|
+|Description|**Local time zone standard time bias for the user. System calculated based on the time zone selected.**|
 |DisplayName||
-|Format|None|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|timezonestandardbias|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`timezonestandardbias`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_TimeZoneStandardDay"></a> TimeZoneStandardDay
 
 |Property|Value|
-|--------|-----|
-|Description|Local time zone standard day for the user. System calculated based on the time zone selected.|
+|---|---|
+|Description|**Local time zone standard day for the user. System calculated based on the time zone selected.**|
 |DisplayName||
-|Format|None|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|timezonestandardday|
-|MaxValue||
-|MinValue||
+|LogicalName|`timezonestandardday`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
-
+|MaxValue||
+|MinValue||
 
 ### <a name="BKMK_TimeZoneStandardDayOfWeek"></a> TimeZoneStandardDayOfWeek
 
 |Property|Value|
-|--------|-----|
-|Description|Local time zone standard day of week for the user. System calculated based on the time zone selected.|
+|---|---|
+|Description|**Local time zone standard day of week for the user. System calculated based on the time zone selected.**|
 |DisplayName||
-|Format|None|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|timezonestandarddayofweek|
-|MaxValue||
-|MinValue||
+|LogicalName|`timezonestandarddayofweek`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
-
+|MaxValue||
+|MinValue||
 
 ### <a name="BKMK_TimeZoneStandardHour"></a> TimeZoneStandardHour
 
 |Property|Value|
-|--------|-----|
-|Description|Local time zone standard hour for the user. System calculated based on the time zone selected.|
+|---|---|
+|Description|**Local time zone standard hour for the user. System calculated based on the time zone selected.**|
 |DisplayName||
-|Format|None|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|timezonestandardhour|
-|MaxValue||
-|MinValue||
+|LogicalName|`timezonestandardhour`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
-
+|MaxValue||
+|MinValue||
 
 ### <a name="BKMK_TimeZoneStandardMinute"></a> TimeZoneStandardMinute
 
 |Property|Value|
-|--------|-----|
-|Description|Local time zone standard minute for the user. System calculated based on the time zone selected.|
+|---|---|
+|Description|**Local time zone standard minute for the user. System calculated based on the time zone selected.**|
 |DisplayName||
-|Format|None|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|timezonestandardminute|
-|MaxValue||
-|MinValue||
+|LogicalName|`timezonestandardminute`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
-
+|MaxValue||
+|MinValue||
 
 ### <a name="BKMK_TimeZoneStandardMonth"></a> TimeZoneStandardMonth
 
 |Property|Value|
-|--------|-----|
-|Description|Local time zone standard month for the user. System calculated based on the time zone selected.|
+|---|---|
+|Description|**Local time zone standard month for the user. System calculated based on the time zone selected.**|
 |DisplayName||
-|Format|None|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|timezonestandardmonth|
-|MaxValue||
-|MinValue||
+|LogicalName|`timezonestandardmonth`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
-
+|MaxValue||
+|MinValue||
 
 ### <a name="BKMK_TimeZoneStandardSecond"></a> TimeZoneStandardSecond
 
 |Property|Value|
-|--------|-----|
-|Description|Local time zone standard second for the user. System calculated based on the time zone selected.|
+|---|---|
+|Description|**Local time zone standard second for the user. System calculated based on the time zone selected.**|
 |DisplayName||
-|Format|None|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|timezonestandardsecond|
-|MaxValue||
-|MinValue||
+|LogicalName|`timezonestandardsecond`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
-
+|MaxValue||
+|MinValue||
 
 ### <a name="BKMK_TimeZoneStandardYear"></a> TimeZoneStandardYear
 
 |Property|Value|
-|--------|-----|
-|Description|Local time zone standard year for the user. System calculated based on the time zone selected.|
+|---|---|
+|Description|**Local time zone standard year for the user. System calculated based on the time zone selected.**|
 |DisplayName||
-|Format|None|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|timezonestandardyear|
-|MaxValue||
-|MinValue||
+|LogicalName|`timezonestandardyear`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
-
+|MaxValue||
+|MinValue||
 
 ### <a name="BKMK_TrackingTokenId"></a> TrackingTokenId
 
 |Property|Value|
-|--------|-----|
-|Description|Tracking token ID.|
+|---|---|
+|Description|**Tracking token ID.**|
 |DisplayName||
-|Format|None|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|trackingtokenid|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`trackingtokenid`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_TransactionCurrencyId"></a> TransactionCurrencyId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the default currency of the user.|
-|DisplayName|Currency|
+|---|---|
+|Description|**Unique identifier of the default currency of the user.**|
+|DisplayName|**Currency**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|transactioncurrencyid|
+|LogicalName|`transactioncurrencyid`|
 |RequiredLevel|None|
-|Targets|transactioncurrency|
 |Type|Lookup|
-
+|Targets|transactioncurrency|
 
 ### <a name="BKMK_TryToggleSets"></a> TryToggleSets
 
-**Added by**: App Framework Infra Extensions Solution
-
 |Property|Value|
-|--------|-----|
-|Description|The list of app modules with try toggle sets|
-|DisplayName|TryToggleSets|
-|Format|TextArea|
-|IsLocalizable|False|
+|---|---|
+|Description|**The list of app modules with try toggle sets**|
+|DisplayName|**TryToggleSets**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|trytogglesets|
-|MaxLength|1073741823|
+|LogicalName|`trytogglesets`|
 |RequiredLevel|None|
 |Type|Memo|
-
+|Format|TextArea|
+|FormatName|TextArea|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1073741823|
 
 ### <a name="BKMK_TryToggleStatus"></a> TryToggleStatus
 
-**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Enable or disable try toggle status.|
+|---|---|
+|Description|**Enable or disable try toggle status.**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|trytogglestatus|
+|LogicalName|`trytogglestatus`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
-
-#### TryToggleStatus Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`usersettings_trytogglestatus`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_UILanguageId"></a> UILanguageId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the language in which to view the user interface (UI).|
+|---|---|
+|Description|**Unique identifier of the language in which to view the user interface (UI).**|
 |DisplayName||
-|Format|Language|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|uilanguageid|
-|MaxValue|2147483647|
-|MinValue|0|
+|LogicalName|`uilanguageid`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|0|
 
 ### <a name="BKMK_UseCrmFormForAppointment"></a> UseCrmFormForAppointment
 
 |Property|Value|
-|--------|-----|
-|Description|Indicates whether to use the Microsoft Dynamics 365 appointment form within Microsoft Office Outlook for creating new appointments.|
+|---|---|
+|Description|**Indicates whether to use the Microsoft Dynamics 365 appointment form within Microsoft Office Outlook for creating new appointments.**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|usecrmformforappointment|
+|LogicalName|`usecrmformforappointment`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
-
-#### UseCrmFormForAppointment Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`usersettings_usecrmformforappointment`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_UseCrmFormForContact"></a> UseCrmFormForContact
 
 |Property|Value|
-|--------|-----|
-|Description|Indicates whether to use the Microsoft Dynamics 365 contact form within Microsoft Office Outlook for creating new contacts.|
+|---|---|
+|Description|**Indicates whether to use the Microsoft Dynamics 365 contact form within Microsoft Office Outlook for creating new contacts.**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|usecrmformforcontact|
+|LogicalName|`usecrmformforcontact`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
-
-#### UseCrmFormForContact Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`usersettings_usecrmformforcontact`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_UseCrmFormForEmail"></a> UseCrmFormForEmail
 
 |Property|Value|
-|--------|-----|
-|Description|Indicates whether to use the Microsoft Dynamics 365 email form within Microsoft Office Outlook for creating new emails.|
+|---|---|
+|Description|**Indicates whether to use the Microsoft Dynamics 365 email form within Microsoft Office Outlook for creating new emails.**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|usecrmformforemail|
+|LogicalName|`usecrmformforemail`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
-
-#### UseCrmFormForEmail Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`usersettings_usecrmformforemail`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_UseCrmFormForTask"></a> UseCrmFormForTask
 
 |Property|Value|
-|--------|-----|
-|Description|Indicates whether to use the Microsoft Dynamics 365 task form within Microsoft Office Outlook for creating new tasks.|
+|---|---|
+|Description|**Indicates whether to use the Microsoft Dynamics 365 task form within Microsoft Office Outlook for creating new tasks.**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|usecrmformfortask|
+|LogicalName|`usecrmformfortask`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
-
-#### UseCrmFormForTask Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`usersettings_usecrmformfortask`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_UseImageStrips"></a> UseImageStrips
 
 |Property|Value|
-|--------|-----|
-|Description|Indicates whether image strips are used to render images.|
+|---|---|
+|Description|**Indicates whether image strips are used to render images.**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|useimagestrips|
+|LogicalName|`useimagestrips`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
-
-#### UseImageStrips Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 1
-
-
+|GlobalChoiceName|`usersettings_useimagestrips`|
+|DefaultValue|True|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_UserProfile"></a> UserProfile
 
 |Property|Value|
-|--------|-----|
-|Description|Specifies user profile ids in comma separated list.|
+|---|---|
+|Description|**Specifies user profile ids in comma separated list.**|
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|userprofile|
-|MaxLength|1024|
+|LogicalName|`userprofile`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1024|
 
 ### <a name="BKMK_VisualizationPaneLayout"></a> VisualizationPaneLayout
 
 |Property|Value|
-|--------|-----|
-|Description|The layout of the visualization pane.|
-|DisplayName|Visualization Pane Layout.|
+|---|---|
+|Description|**The layout of the visualization pane.**|
+|DisplayName|**Visualization Pane Layout.**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|visualizationpanelayout|
+|LogicalName|`visualizationpanelayout`|
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
+|DefaultFormValue|1|
+|GlobalChoiceName|`usersettings_visualizationpanelayout`|
 
 #### VisualizationPaneLayout Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|0|Top-bottom||
-|1|Side-by-side||
-
-
+|Value|Label|
+|---|---|
+|0|**Top-bottom**|
+|1|**Side-by-side**|
 
 ### <a name="BKMK_WorkdayStartTime"></a> WorkdayStartTime
 
 |Property|Value|
-|--------|-----|
-|Description|Workday start time for the user.|
+|---|---|
+|Description|**Workday start time for the user.**|
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|workdaystarttime|
-|MaxLength|5|
+|LogicalName|`workdaystarttime`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|5|
 
 ### <a name="BKMK_WorkdayStopTime"></a> WorkdayStopTime
 
 |Property|Value|
-|--------|-----|
-|Description|Workday stop time for the user.|
+|---|---|
+|Description|**Workday stop time for the user.**|
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|workdaystoptime|
-|MaxLength|5|
+|LogicalName|`workdaystoptime`|
 |RequiredLevel|None|
 |Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|5|
 
-<a name="read-only-attributes"></a>
 
 ## Read-only columns/attributes
 
-These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** and **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [AllowEmailCredentials](#BKMK_AllowEmailCredentials)
 - [BusinessUnitIdName](#BKMK_BusinessUnitIdName)
 - [CreatedBy](#BKMK_CreatedBy)
-- [CreatedByName](#BKMK_CreatedByName)
-- [CreatedByYomiName](#BKMK_CreatedByYomiName)
 - [CreatedOn](#BKMK_CreatedOn)
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
-- [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
-- [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
 - [EmailPassword](#BKMK_EmailPassword)
 - [EmailUsername](#BKMK_EmailUsername)
 - [ModifiedBy](#BKMK_ModifiedBy)
-- [ModifiedByName](#BKMK_ModifiedByName)
-- [ModifiedByYomiName](#BKMK_ModifiedByYomiName)
 - [ModifiedOn](#BKMK_ModifiedOn)
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
-- [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
-- [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
-- [TransactionCurrencyIdName](#BKMK_TransactionCurrencyIdName)
 - [VersionNumber](#BKMK_VersionNumber)
-
 
 ### <a name="BKMK_AllowEmailCredentials"></a> AllowEmailCredentials
 
 |Property|Value|
-|--------|-----|
-|Description|This attribute is no longer used. The data is now in the Mailbox.AllowEmailConnectorToUseCredentials attribute.|
+|---|---|
+|Description|**This attribute is no longer used. The data is now in the Mailbox.AllowEmailConnectorToUseCredentials attribute.**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|allowemailcredentials|
+|LogicalName|`allowemailcredentials`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
-
-#### AllowEmailCredentials Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`usersettings_allowemailcredentials`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_BusinessUnitIdName"></a> BusinessUnitIdName
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|businessunitidname|
-|MaxLength|100|
+|LogicalName|`businessunitidname`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user who created the user settings.|
+|---|---|
+|Description|**Unique identifier of the user who created the user settings.**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|createdby|
+|LogicalName|`createdby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedByName"></a> CreatedByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedByYomiName"></a> CreatedByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_CreatedOn"></a> CreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when the user settings object was created.|
+|---|---|
+|Description|**Date and time when the user settings object was created.**|
 |DisplayName||
-|Format|DateAndTime|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|createdon|
+|LogicalName|`createdon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_CreatedOnBehalfBy"></a> CreatedOnBehalfBy
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the delegate user who created the usersettings.|
-|DisplayName|Created By (Delegate)|
+|---|---|
+|Description|**Unique identifier of the delegate user who created the usersettings.**|
+|DisplayName|**Created By (Delegate)**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|createdonbehalfby|
+|LogicalName|`createdonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedOnBehalfByName"></a> CreatedOnBehalfByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedOnBehalfByYomiName"></a> CreatedOnBehalfByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_EmailPassword"></a> EmailPassword
 
 |Property|Value|
-|--------|-----|
-|Description|This attribute is no longer used. The data is now in the Mailbox.Password attribute.|
+|---|---|
+|Description|**This attribute is no longer used. The data is now in the Mailbox.Password attribute.**|
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|emailpassword|
-|MaxLength|200|
+|LogicalName|`emailpassword`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|200|
 
 ### <a name="BKMK_EmailUsername"></a> EmailUsername
 
 |Property|Value|
-|--------|-----|
-|Description|This attribute is no longer used. The data is now in the Mailbox.UserName attribute.|
+|---|---|
+|Description|**This attribute is no longer used. The data is now in the Mailbox.UserName attribute.**|
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|emailusername|
-|MaxLength|200|
+|LogicalName|`emailusername`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|200|
 
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user who last modified the user settings.|
+|---|---|
+|Description|**Unique identifier of the user who last modified the user settings.**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|modifiedby|
+|LogicalName|`modifiedby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedByName"></a> ModifiedByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedByYomiName"></a> ModifiedByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_ModifiedOn"></a> ModifiedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when the user settings object was last modified.|
+|---|---|
+|Description|**Date and time when the user settings object was last modified.**|
 |DisplayName||
-|Format|DateAndTime|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|modifiedon|
+|LogicalName|`modifiedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_ModifiedOnBehalfBy"></a> ModifiedOnBehalfBy
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the delegate user who last modified the usersettings.|
-|DisplayName|Modified By (Delegate)|
+|---|---|
+|Description|**Unique identifier of the delegate user who last modified the usersettings.**|
+|DisplayName|**Modified By (Delegate)**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|modifiedonbehalfby|
+|LogicalName|`modifiedonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedOnBehalfByName"></a> ModifiedOnBehalfByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedOnBehalfByYomiName"></a> ModifiedOnBehalfByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_TransactionCurrencyIdName"></a> TransactionCurrencyIdName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|transactioncurrencyidname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|versionnumber|
-|MaxValue|9223372036854775807|
-|MinValue|-9223372036854775808|
+|LogicalName|`versionnumber`|
 |RequiredLevel|None|
 |Type|BigInt|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
 
-<a name="manytoone"></a>
+## Many-to-One relationships
 
-## Many-To-One Relationships
+These relationships are many-to-one. Listed by **SchemaName**.
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
-
-- [transactioncurrency_usersettings](#BKMK_transactioncurrency_usersettings)
-- [lk_usersettingsbase_createdby](#BKMK_lk_usersettingsbase_createdby)
-- [lk_usersettings_createdonbehalfby](#BKMK_lk_usersettings_createdonbehalfby)
-- [lk_usersettingsbase_modifiedby](#BKMK_lk_usersettingsbase_modifiedby)
-- [lk_usersettings_modifiedonbehalfby](#BKMK_lk_usersettings_modifiedonbehalfby)
 - [business_unit_user_settings](#BKMK_business_unit_user_settings)
+- [lk_usersettings_createdonbehalfby](#BKMK_lk_usersettings_createdonbehalfby)
+- [lk_usersettings_modifiedonbehalfby](#BKMK_lk_usersettings_modifiedonbehalfby)
+- [lk_usersettingsbase_createdby](#BKMK_lk_usersettingsbase_createdby)
+- [lk_usersettingsbase_modifiedby](#BKMK_lk_usersettingsbase_modifiedby)
+- [transactioncurrency_usersettings](#BKMK_transactioncurrency_usersettings)
 - [user_settings](#BKMK_user_settings)
-
-
-### <a name="BKMK_transactioncurrency_usersettings"></a> transactioncurrency_usersettings
-
-See the [transactioncurrency_usersettings](transactioncurrency.md#BKMK_transactioncurrency_usersettings) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
-
-### <a name="BKMK_lk_usersettingsbase_createdby"></a> lk_usersettingsbase_createdby
-
-See the [lk_usersettingsbase_createdby](systemuser.md#BKMK_lk_usersettingsbase_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_usersettings_createdonbehalfby"></a> lk_usersettings_createdonbehalfby
-
-See the [lk_usersettings_createdonbehalfby](systemuser.md#BKMK_lk_usersettings_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_usersettingsbase_modifiedby"></a> lk_usersettingsbase_modifiedby
-
-See the [lk_usersettingsbase_modifiedby](systemuser.md#BKMK_lk_usersettingsbase_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_usersettings_modifiedonbehalfby"></a> lk_usersettings_modifiedonbehalfby
-
-See the [lk_usersettings_modifiedonbehalfby](systemuser.md#BKMK_lk_usersettings_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+- [user_settings_preferred_solution](#BKMK_user_settings_preferred_solution)
 
 ### <a name="BKMK_business_unit_user_settings"></a> business_unit_user_settings
 
-See the [business_unit_user_settings](businessunit.md#BKMK_business_unit_user_settings) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
+One-To-Many Relationship: [businessunit business_unit_user_settings](businessunit.md#BKMK_business_unit_user_settings)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`businessunit`|
+|ReferencedAttribute|`businessunitid`|
+|ReferencingAttribute|`businessunitid`|
+|ReferencingEntityNavigationPropertyName|`businessunitid_businessunit`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Restrict`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_usersettings_createdonbehalfby"></a> lk_usersettings_createdonbehalfby
+
+One-To-Many Relationship: [systemuser lk_usersettings_createdonbehalfby](systemuser.md#BKMK_lk_usersettings_createdonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`createdonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_usersettings_modifiedonbehalfby"></a> lk_usersettings_modifiedonbehalfby
+
+One-To-Many Relationship: [systemuser lk_usersettings_modifiedonbehalfby](systemuser.md#BKMK_lk_usersettings_modifiedonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`modifiedonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_usersettingsbase_createdby"></a> lk_usersettingsbase_createdby
+
+One-To-Many Relationship: [systemuser lk_usersettingsbase_createdby](systemuser.md#BKMK_lk_usersettingsbase_createdby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdby`|
+|ReferencingEntityNavigationPropertyName|`createdby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_usersettingsbase_modifiedby"></a> lk_usersettingsbase_modifiedby
+
+One-To-Many Relationship: [systemuser lk_usersettingsbase_modifiedby](systemuser.md#BKMK_lk_usersettingsbase_modifiedby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedby`|
+|ReferencingEntityNavigationPropertyName|`modifiedby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_transactioncurrency_usersettings"></a> transactioncurrency_usersettings
+
+One-To-Many Relationship: [transactioncurrency transactioncurrency_usersettings](transactioncurrency.md#BKMK_transactioncurrency_usersettings)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`transactioncurrency`|
+|ReferencedAttribute|`transactioncurrencyid`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencingEntityNavigationPropertyName|`transactioncurrencyid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Restrict`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_user_settings"></a> user_settings
 
-See the [user_settings](systemuser.md#BKMK_user_settings) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+One-To-Many Relationship: [systemuser user_settings](systemuser.md#BKMK_user_settings)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`systemuserid`|
+|ReferencingEntityNavigationPropertyName|`systemuserid_systemuser`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_user_settings_preferred_solution"></a> user_settings_preferred_solution
+
+One-To-Many Relationship: [solution user_settings_preferred_solution](solution.md#BKMK_user_settings_preferred_solution)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`solution`|
+|ReferencedAttribute|`solutionid`|
+|ReferencingAttribute|`preferredsolution`|
+|ReferencingEntityNavigationPropertyName|`preferredsolution`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
-<xref href="Microsoft.Dynamics.CRM.usersettings?text=usersettings EntityType" />
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
+[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
+<xref:Microsoft.Dynamics.CRM.usersettings?displayProperty=fullName>

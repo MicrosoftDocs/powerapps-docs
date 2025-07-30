@@ -16,6 +16,8 @@ contributors:
 
 # Media control in cards
 
+[!INCLUDE[cards-deprecation-banner](~/includes/cards-deprecation-notice.md)]
+
 Displays a media player for audio or video content. A video or audio file is specified by its Url and MimeType in the Sources tab. The media control supports publicly accessible and CORS-compliant URLs. On Web and Desktop versions of Teams, share links to any OneDrive or SharePoint backed video or audio link are also supported.
 
 Use the [image control](image.md) for pictures.

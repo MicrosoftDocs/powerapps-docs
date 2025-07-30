@@ -3,7 +3,7 @@ title: Remove your apps | Microsoft Docs
 description: Learn how to remove your apps using Power Apps app from Teams.
 author: si-matthews
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: 
 ms.date: 09/22/2020
 ms.subservice: teams

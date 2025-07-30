@@ -2,8 +2,8 @@
 title: "Use the Web API with table definitions (Microsoft Dataverse) | Microsoft Docs"
 description: "The section provides guidance about how to use the Web API with the entity types included in Web API Metadata EntityType Reference, enabling you to read, create, and update table and column definitions."
 ms.date: 09/02/2022
-author: NHelgren
-ms.author: nhelgren
+author: mkannapiran
+ms.author: kamanick
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
@@ -62,7 +62,7 @@ Explains how to work with global and local choice columns. How to retrieve optio
 
 [Browse the table definitions for your environment](../browse-your-metadata.md)<br />
 [Use the Microsoft Dataverse Web API](overview.md)
-[Web API Metadata Operations Sample](web-api-metadata-operations-sample.md)  
-[Web API Metadata Operations Sample (C#)](samples/webapiservice-metadata-operations.md)
+[Web API table schema operations sample](web-api-metadata-operations-sample.md)  
+[Web API table schema operations sample (C#)](samples/webapiservice-metadata-operations.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

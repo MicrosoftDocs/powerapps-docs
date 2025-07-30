@@ -3,8 +3,8 @@ title: Card designer overview
 description: Learn about the card designer.
 ms.date: 11/17/2022
 ms.topic: overview
-author: sericks007
-ms.author: sericks
+author: mduelae
+ms.author: mkaur
 ms.reviewer: 
 ms.custom: 
 ms.collection: 
@@ -12,6 +12,8 @@ ms.collection:
 ---
 
 # Card designer overview
+
+[!INCLUDE[cards-deprecation-banner](~/includes/cards-deprecation-notice.md)]
 
 The Power Apps card designer is the drag-and-drop interface in which you build cards.
 

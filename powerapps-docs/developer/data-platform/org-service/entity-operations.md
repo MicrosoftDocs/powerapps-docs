@@ -1,11 +1,11 @@
 ---
-title: "Entity class operations using the SDK for .NET (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about the Entity class used for data operations using the Microsoft Dataverse SDK for .NET" # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 09/16/2022
+title: "Entity class operations using the SDK for .NET (Microsoft Dataverse) | Microsoft Docs"
+description: "Learn about the Entity class used for data operations using the Microsoft Dataverse SDK for .NET"
+ms.date: 06/20/2025
 ms.reviewer: pehecke
 ms.topic: article
-author: divkamath # GitHub ID
-ms.author: dikamath # MSFT alias of Microsoft employees only
+author: MsSQLGirl
+ms.author: jukoesma
 search.audienceType: 
   - developer
 contributors:
@@ -17,29 +17,29 @@ contributors:
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-When you work with Microsoft Dataverse data using the SDK for .NET you will use the <xref:Microsoft.Xrm.Sdk.Entity> class with the late-bound style or with generated entity classes using the early-bound style. The generated entity classes inherit from the <xref:Microsoft.Xrm.Sdk.Entity> class, so understanding the <xref:Microsoft.Xrm.Sdk.Entity> class is important for either style.
+When you work with Microsoft Dataverse data using the SDK for .NET, use the <xref:Microsoft.Xrm.Sdk.Entity> class with the late-bound style or with generated entity classes using the early-bound style. The generated entity classes inherit from the <xref:Microsoft.Xrm.Sdk.Entity> class, so understanding the <xref:Microsoft.Xrm.Sdk.Entity> class is important for either style.
 
-This topic will describe some of the most frequently used properties and methods of the <xref:Microsoft.Xrm.Sdk.Entity> class.
+This article describes some of the most frequently used properties and methods of the <xref:Microsoft.Xrm.Sdk.Entity> class.
 
 ## Entity.LogicalName
 
-When you instantiate a new <xref:Microsoft.Xrm.Sdk.Entity> class instance using the late-bound style you must provide a valid string value to specify what entity type it is. The `LogicalName` is defined in the entity metadata (table definition).
+When you instantiate a new <xref:Microsoft.Xrm.Sdk.Entity> class instance using the late-bound style, you must provide a valid string value to specify what entity type it is. The `LogicalName` is defined in the entity metadata (table definition).
 
-When using the early-bound style, this value is set by the constructor of the generated class. For example: `var account = new Entity("account");`
+When you use the early-bound style, the constructor of the generated class sets this value. For example: `var account = new Entity("account");`
 
-In your code, if you later want to retrieve the string value that describes the entity type, you can use the <xref:Microsoft.Xrm.Sdk.Entity.LogicalName> property. This is useful for the many APIs that require an entity logical name as a parameter.
+In your code, if you later want to retrieve the string value that describes the entity type, you can use the <xref:Microsoft.Xrm.Sdk.Entity.LogicalName> property. This property is useful for the many APIs that require an entity logical name as a parameter.
 
 ## Entity.Id
 
-When you instantiate the `Entity` class, whether using the late-bound or early-bound style, it doesn't have a unique id set. If you are creating an entity, you shouldn't set it, but allow it to be set by the system when you create (save) it.
+When you instantiate the `Entity` class, whether using the late-bound or early-bound style, it doesn't have a unique ID set. If you're creating an entity, you shouldn't set it, but let the system set it when you create (save) the record.
 
-If you are retrieving an entity, it will include the primary key attribute value whether you request it or not. The primary key attribute name is different for each type of entity. Generally, the name of the primary key attribute is the entity `logicalname` + `id`. For an account it is `accountid` and for contact it is `contactid`.
+If you're retrieving an entity, it includes the primary key attribute value whether you request it or not. The primary key attribute name is different for each type of entity. Generally, the name of the primary key attribute is the entity `logicalname` + `id`. For an account, it's `accountid` and for contact it's `contactid`.
 
 While you can get or set the primary key value using the primary key attribute, you can also use the <xref:Microsoft.Xrm.Sdk.Entity.Id>  property to access the value without having to remember the name of the primary key attribute.
 
 ## Early bound access to table columns
 
-If you are using the early-bound style with generated classes, you will find typed properties for each attribute in the class. The properties for the attributes use the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.SchemaName> and they can be accessed directly on the `Entity` class instance.
+If you're using the early-bound style with generated classes, you'll find typed properties for each attribute in the class. The properties for the attributes use the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.SchemaName> and they can be accessed directly on the `Entity` class instance.
 
 For example: 
 
@@ -171,7 +171,7 @@ var formattedRevenueString1 = account.FormattedValues["revenue"];
 var formattedRevenueString2 = account.GetFormattedAttributeValue("revenue");
 ```
 
-More information: [Access formatted values](entity-operations-query-data.md#access-formatted-values)
+More information: [Access formatted values](entity-operations-query-data.md#formatted-values-are-returned-for-some-columns)
 
 ## Entity.RelatedEntities
 

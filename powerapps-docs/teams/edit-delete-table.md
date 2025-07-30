@@ -2,8 +2,7 @@
 title: Delete or edit a table in Dataverse for Teams| Microsoft Docs
 description: Explains how to delete or edit a table in Dataverse for Teams.
 author: NHelgren
-
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: 
 ms.date: 09/22/2020
 ms.subservice: teams
@@ -54,7 +53,7 @@ More information: [Create your first table](create-first-app.md#create-your-firs
 
 ## Delete a table
 
-Anyone who's a member of the team can delete tables that aren't part of a managed solution.
+Anyone who's a member of the team can delete tables that aren't part of a [managed solution](/power-platform/alm/solution-concepts-alm#managed-and-unmanaged-solutions).
 
 In the **Tables** list, select **…** next to the table you want to delete, and then select **Delete table**. Alternatively, while viewing a table, select **Delete table** on the command bar.
 <!-- >> [!div class="mx-imgBorder"] 

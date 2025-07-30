@@ -1,56 +1,52 @@
 ---
-title: "msdyn_nonrelationalds table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the msdyn_nonrelationalds table/entity."
-ms.date: 09/01/2023
-ms.service: "powerapps"
-ms.topic: "reference"
-ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "phecke"
-ms.author: "pehecke"
+title: "NonRelational Data Source (msdyn_nonrelationalds) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the NonRelational Data Source (msdyn_nonrelationalds) table/entity with Microsoft Dataverse."
+ms.topic: generated-reference
+author: phecke
+ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# msdyn_nonrelationalds table/entity reference
+# NonRelational Data Source (msdyn_nonrelationalds) table/entity reference (Microsoft Dataverse)
 
-> [!NOTE]
-> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
-
-
-
-**Added by**: NonRelational DataProvider Solution
 
 
 ## Messages
 
-|Message|Web API Operation|SDK class or method|
-|-|-|-|
-|Create|POST /msdyn_nonrelationaldses<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|CreateMultiple|<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
-|Delete|DELETE /msdyn_nonrelationaldses(*msdyn_nonrelationaldsid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET /msdyn_nonrelationaldses(*msdyn_nonrelationaldsid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
-|RetrieveMultiple|GET /msdyn_nonrelationaldses<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|Update|PATCH /msdyn_nonrelationaldses(*msdyn_nonrelationaldsid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
-|UpdateMultiple|<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+The following table lists the messages for the NonRelational Data Source (msdyn_nonrelationalds) table.
+Messages represent operations that can be performed on the table. They may also be events.
+
+| Name <br />Is Event? |Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `Create`<br />Event: True |`POST` /msdyn_nonrelationaldses<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+| `Delete`<br />Event: True |`DELETE` /msdyn_nonrelationaldses(*msdyn_nonrelationaldsid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Retrieve`<br />Event: True |`GET` /msdyn_nonrelationaldses(*msdyn_nonrelationaldsid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveEntityChanges`<br />Event: True | |<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
+| `RetrieveMultiple`<br />Event: True |`GET` /msdyn_nonrelationaldses<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
+| `Update`<br />Event: True |`PATCH` /msdyn_nonrelationaldses(*msdyn_nonrelationaldsid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
+| `UpdateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+| `Upsert`<br />Event: False |`PATCH` /msdyn_nonrelationaldses(*msdyn_nonrelationaldsid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
+| `UpsertMultiple`<br />Event: False |<xref:Microsoft.Dynamics.CRM.UpsertMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpsertMultipleRequest>|
 
 ## Properties
 
-|Property|Value|
-|--------|-----|
-|CollectionSchemaName|msdyn_nonrelationaldses|
-|DisplayCollectionName|NonRelational Data Source|
-|DisplayName|NonRelational Data Source|
-|EntitySetName|msdyn_nonrelationaldses|
-|IsBPFEntity|False|
-|LogicalCollectionName|msdyn_nonrelationaldses|
-|LogicalName|msdyn_nonrelationalds|
-|OwnershipType|OrganizationOwned|
-|PrimaryIdAttribute|msdyn_nonrelationaldsid|
-|PrimaryNameAttribute|msdyn_name|
-|SchemaName|msdyn_nonrelationalds|
+The following table lists selected properties for the NonRelational Data Source (msdyn_nonrelationalds) table.
 
-<a name="writable-attributes"></a>
+|Property|Value|
+| --- | --- |
+| **DisplayName** | **NonRelational Data Source** |
+| **DisplayCollectionName** | **NonRelational Data Source** |
+| **SchemaName** | `msdyn_nonrelationalds` |
+| **CollectionSchemaName** | `msdyn_nonrelationaldses` |
+| **EntitySetName** | `msdyn_nonrelationaldses`|
+| **LogicalName** | `msdyn_nonrelationalds` |
+| **LogicalCollectionName** | `msdyn_nonrelationaldses` |
+| **PrimaryIdAttribute** | `msdyn_nonrelationaldsid` |
+| **PrimaryNameAttribute** |`msdyn_name` |
+| **TableType** | `Virtual` |
+| **OwnershipType** | `OrganizationOwned` |
 
 ## Writable columns/attributes
 
@@ -59,40 +55,40 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [msdyn_name](#BKMK_msdyn_name)
 - [msdyn_nonrelationaldsId](#BKMK_msdyn_nonrelationaldsId)
 
-
 ### <a name="BKMK_msdyn_name"></a> msdyn_name
 
 |Property|Value|
-|--------|-----|
-|Description|The name of the custom entity.|
-|DisplayName|Name|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**The name of the custom entity.**|
+|DisplayName|**Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_name|
-|MaxLength|100|
+|LogicalName|`msdyn_name`|
 |RequiredLevel|ApplicationRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_msdyn_nonrelationaldsId"></a> msdyn_nonrelationaldsId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for entity instances|
-|DisplayName|NonRelational Data Source|
+|---|---|
+|Description|**Unique identifier for entity instances**|
+|DisplayName|**NonRelational Data Source**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|msdyn_nonrelationaldsid|
+|LogicalName|`msdyn_nonrelationaldsid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
 
 
 
+
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
-<xref href="Microsoft.Dynamics.CRM.msdyn_nonrelationalds?text=msdyn_nonrelationalds EntityType" />
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
+[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
+<xref:Microsoft.Dynamics.CRM.msdyn_nonrelationalds?displayProperty=fullName>

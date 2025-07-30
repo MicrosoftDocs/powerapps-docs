@@ -3,11 +3,11 @@ title: Personalize emails with dynamic text
 description: Personalize your customer engagement emails with dynamic text in Power Apps.
 ms.custom: ""
 author: gandhamm
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 06/16/2022
 ms.subservice: end-user
 ms.author: mgandham
-ms.reviewer: sericks
+ms.reviewer: smurkute
 search.audienceType: 
   - enduser
 ---
@@ -16,11 +16,14 @@ search.audienceType:
 
 Generic greetings like "Dear customer" make customers less likely to engage with your emails. Personalize your outreach instead with dynamic text in your email templates.
 
-Dynamic text replaces a placeholder entity with the value of the entity when you send the email. For example, your email template might contain "Dear {!User:First Name;}" but your customer sees “Dear Sal.”
+Dynamic text replaces a placeholder entity with the value of the entity when you send the email. For example, your email template might contain "Dear `{!User:First Name;}`" but your customer sees "Dear Sal".
 
 ## Insert dynamic text
 
 You can insert dynamic text in existing email templates or templates that you create.
+
+> [!NOTE]
+> Dynamic text in a hyperlink or an anchor tag isn't supported.
 
 1. Select **Email Template** to edit an existing template or create a new email template. 
 
@@ -45,14 +48,14 @@ Use the following syntax:
 
 | Field Type | Syntax |
 | --- | --- |
-| <ul><li>Single line of text</li> <li>Currency</li><li> Multiple lines of text </li><li> Decimal number </li><li> Floating number</li></ul> | {!EntityLogicalName:FieldLogicalName;} |
-| <ul><li>Lookup</li> <li> Multi-select option set</li><li>Option set</li>| {!EntityLogicalName:FieldLogicalName/@name;} |
-| Date  | {!EntityLogicalName:FieldLogicalName/@date;} |
-| Time | {!EntityLogicalName:FieldLogicalName/@time;} |
+| <ul><li>Single line of text</li> <li>Currency</li><li> Multiple lines of text </li><li> Decimal number </li><li> Floating number</li></ul> | `{!EntityLogicalName:FieldLogicalName;}` |
+| <ul><li>Lookup</li> <li> Multi-select option set</li><li>Option set</li>| `{!EntityLogicalName:FieldLogicalName/@name;}` |
+| Date  | `{!EntityLogicalName:FieldLogicalName/@date;}` |
+| Time | `{!EntityLogicalName:FieldLogicalName/@time;}` |
 
-For example, let's say you want to insert a custom field, *Customer ID*, that's linked to the record type *User*. Type the following placeholder in your template: ``{{!User:CustomerId;}}``.
+For example, let's say you want to insert a custom field, *Customer ID*, linked to the record type *User*. Type the following placeholder in your template: ``{{!User:CustomerId;}}``.
 
-If you want to insert a custom field, *ModifiedOn*, that's linked to the record type *User*. Type the following placeholder in your template: ``{{!User:ModifiedOn/@date;}}``.
+If you want to insert a custom field, *ModifiedOn*, linked to the record type *User*. Type the following placeholder in your template: ``{{!User:ModifiedOn/@date;}}``.
 
 ### See also
 

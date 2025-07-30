@@ -1,9 +1,9 @@
 ---
-title: "getEventSource (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getEventSource (Client API reference) in model-driven apps"
 description: "Learn about the getEventSource method that returns a reference to the object that the event occurred on." 
-author: adrianorth
-ms.author: aorth
-ms.date: 03/12/2022
+author: sriharibs-msft
+ms.author: srihas
+ms.date: 05/15/2024
 ms.reviewer: jdaly
 ms.topic: reference
 applies_to: "Dynamics 365 (online)"
@@ -24,7 +24,7 @@ Returns a reference to the object that the event occurred on.
 
 **Type**: Object
 
-**Description**: Returns the object from the **Xrm** object model that is the source of the event, not an HTML DOM object. For example, in an [OnChange](../events/attribute-onchange.md) event, this method returns the **formContext.data.entity**  object that represents the changed column.
+**Description**: Returns the object from the **Xrm** object model that is the source of the event, not an HTML DOM object. For example, in an [OnChange](../events/attribute-onchange.md) event, this method returns an item from the **formContext.data.entity.attributes**  collection that represents the changed column.
 
 [!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
 

@@ -3,10 +3,10 @@ title: Use file data with Attachment and Note records
 description: Learn how to work with file data in the Attachments and Notes tables in Microsoft Dataverse
 ms.date: 02/02/2023
 ms.reviewer: jdaly
-ms.topic: conceptual
-author: NHelgren
+ms.topic: how-to
+author: mkannapiran
+ms.author: kamanick
 ms.subservice: dataverse-developer
-ms.author: jdaly
 search.audienceType: 
   - developer
 contributors:
@@ -17,7 +17,7 @@ ms.custom: bap-template
 
 [Attachment (ActivityMimeAttachment)](reference/entities/activitymimeattachment.md) and [Note (Annotation)](reference/entities/annotation.md) tables contain special string columns that store file data. These tables existed before file or image columns, so they work differently from those tables.
 
-- The binary file data is stored as Base64-encoded string values in string columns. Attachments are stored in the column[`ActivityMimeAttachment.Body`](reference/entities/activitymimeattachment.md#BKMK_Body) and notes are stored in the column [`Annotation.DocumentBody`](reference/entities/annotation.md#BKMK_DocumentBody).
+- The binary file data is stored as Base64-encoded string values in string columns. Attachments are stored in the column [`ActivityMimeAttachment.Body`](reference/entities/activitymimeattachment.md#BKMK_Body) and notes are stored in the column [`Annotation.DocumentBody`](reference/entities/annotation.md#BKMK_DocumentBody).
 - File name data is stored in the `FileName` column.
 - MIME type data is stored in the `MimeType` column.
 
@@ -1005,7 +1005,7 @@ More information:
 
 - [Use the SDK for .NET](org-service/overview.md)
 - [IOrganizationService.RetrieveMultiple Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple%2A)
-- [Build queries with QueryExpression](org-service/build-queries-with-queryexpression.md)
+- [Build queries with QueryExpression](org-service/queryexpression/overview.md)
 
 
 # [Web API](#tab/webapi)
@@ -1040,7 +1040,7 @@ OData-Version: 4.0
 }
 ```
 
-More information: [Query data using the Web API](webapi/query-data-web-api.md)
+More information: [Query data using the Web API](webapi/query/overview.md)
 
 ---
 
@@ -1081,7 +1081,7 @@ More information:
 
 - [Use the SDK for .NET](org-service/overview.md)
 - [IOrganizationService.RetrieveMultiple Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple%2A)
-- [Build queries with QueryExpression](org-service/build-queries-with-queryexpression.md)
+- [Build queries with QueryExpression](org-service/queryexpression/overview.md)
 - [IOrganizationService.Update Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Update%2A)
 
 # [Web API](#tab/webapi)

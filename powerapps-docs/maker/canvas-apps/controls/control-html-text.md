@@ -1,18 +1,18 @@
 ---
 title: HTML text control in Power Apps
 description: Learn about the details, properties, and examples of the HTML text control in Power Apps.
-author: chmoncay
+author: yogeshgupta698
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.subservice: canvas-maker
 ms.date: 07/19/2022
-ms.author: chmoncay
+ms.author: yogupt
 search.audienceType:
   - maker
 contributors:
   - mduelae
-  - chmoncay
+  - yogeshgupta698
 ---
 # HTML text control in Power Apps
 A box that shows text and converts HTML tags to formatting.
@@ -45,6 +45,11 @@ An **HTML text** control not only shows plain text and numbers but also converts
 **HtmlText** – Text that appears in an HTML text control and that may contain HTML tags.
 
 ## Additional properties
+**[AutoHeight](properties-core.md)** – Set to true to allow the control to auto-grow its height to show all text. Set to false to truncate the text to the height assigned.
+
+> [!NOTE]
+> Enabling the **AutoHeight** property will grow the **Height** property of the control to a maximum value of 7680.
+
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
 
 **[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.

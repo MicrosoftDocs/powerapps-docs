@@ -18,7 +18,7 @@ contributors:
 This sample shows how to link a custom column that is created for a recurring appointment series (`RecurringAppointmentMaster`) with a custom column that is created for the appointment instances (`Appointment`).
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Link custom columns between series and instances sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/LinkAttributes)
+> [SDK for .NET: Link custom columns between series and instances sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/LinkAttributes)
 
 ## What this sample does
 

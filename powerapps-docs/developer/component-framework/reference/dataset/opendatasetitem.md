@@ -1,8 +1,8 @@
 ---
 title: openDatasetItem (Power Apps component framework API reference) | Microsoft Docs
-description: Open dataset item for a given EntityReference. It checks if there is a command with command button id Mscrm.OpenRecordItem.
-ms.author: hemantg
-author: HemantGaur
+description: Open dataset item for a given EntityReference. It checks if there's a command with command button ID `Mscrm.OpenRecordItem`. If exists, it executes the command, otherwise it just navigates to the associated form of the EntityReference.
+author: clromano
+ms.author: clromano
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -27,7 +27,7 @@ Model-driven and canvas apps
 
 | Parameter Name  | Type                                       | Required | description                    |
 | --------------- | ------------------------------------------ | -------- | ------------------------------ |
-| entityReference | [Entityreference](../entityreference.md) | Yes      | Reference that will be opened. |
+| entityReference | [Entityreference](../entityreference.md) | Yes      | Reference that is opened. |
 
 ### Related articles
 

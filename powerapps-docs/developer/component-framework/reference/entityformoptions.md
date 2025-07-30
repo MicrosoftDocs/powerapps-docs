@@ -1,9 +1,9 @@
 ---
 title: EntityFormOptions (Power Apps component framework API reference)| Microsoft Docs
 description: Learn how to use different methods and properties available for EntityFormOptions in Power Apps component framework.
-ms.author: hemantg
-author: HemantGaur
-ms.date: 05/27/2022
+author: anuitz
+ms.author: anuitz
+ms.date: 04/17/2024
 ms.reviewer: jdaly
 ms.topic: reference
 ms.subservice: pcf
@@ -22,19 +22,19 @@ Model-driven apps
 
 ### createFromEntity
 
-Designates a record that will provide default values based on mapped column value. The lookup object has following properties: table type, id and name.
+Designates a record that provides default values based on mapped column value. The lookup object has following properties: `id`, `name`, and `entityType`.
 
-**Type**: [Entityreference](entityreference.md)
+**Type**: [LookupValue](lookupvalue.md)
 
 ### entityId
 
-Unique Id of the table record to display the form for. 
+Unique ID of the table record to display the form for.
 
 **Type**: `string`
 
 ### entityName
 
-Logical name of the table to display the form for. 
+Logical name of the table to display the form for.
 
 **Type**: `string`
 
@@ -58,7 +58,7 @@ Whether to display the form in new window.
 
 ### useQuickCreateForm
 
-Whether to open a quick create form. If you don't specify this, by default false is passed. 
+Whether to open a quick create form. The default value is `false`. 
 
 **Type**: `boolean`
 
@@ -74,7 +74,7 @@ Specifies the window position on the screen.
 
 **Type**: `number`
 
-The windowPosition value is a number with the following possible values
+The `windowPosition` value is a number with the following possible values:
 
 |Value|Position|
 |---|---|

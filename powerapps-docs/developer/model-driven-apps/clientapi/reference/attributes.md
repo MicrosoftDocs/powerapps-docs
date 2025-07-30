@@ -1,8 +1,8 @@
 ---
-title: "Columns in model-driven apps| MicrosoftDocs"
+title: "Columns in model-driven apps"
 description: "Learn about working with columns in model-driven apps using client API."
-author: HemantGaur
-ms.author: hemantg
+author: sriharibs-msft
+ms.author: srihas
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -26,42 +26,76 @@ This topic provides information about the methods available per column type.
 
 ## All column types
 
-<table>
-<tr>
-<td>
-<ul>
-<li><a href="attributes/controls-collection.md" data-raw-source="[controls](attributes/controls-collection.md)">controls</a></li>
-<li><a href="attributes/addOnChange.md" data-raw-source="[addOnChange](attributes/addOnChange.md)">addOnChange</a></li>
-<li><a href="attributes/fireOnChange.md" data-raw-source="[fireOnChange](attributes/fireOnChange.md)">fireOnChange</a></a></li>
-<li><a href="attributes/getAttributeType.md" data-raw-source="[getAttributeType](attributes/getAttributeType.md)">getAttributeType</a></li>
-<li><a href="attributes/getFormat.md" data-raw-source="[getFormat](attributes/getFormat.md)">getFormat</a></li>
-<li><a href="attributes/getIsDirty.md" data-raw-source="[getIsDirty](attributes/getIsDirty.md)">getIsDirty</a></li>
-</ul>
-</td>
-<td>
-<ul>
-<li><a href="attributes/getName.md" data-raw-source="[getName](attributes/getName.md)">getName</a></li>
-<li><a href="attributes/getParent.md" data-raw-source="[getParent](attributes/getParent.md)">getParent</a></li>
-<li><a href="attributes/getRequiredLevel.md" data-raw-source="[getRequiredLevel](attributes/getRequiredLevel.md)">getRequiredLevel</a></li>
-<li><a href="attributes/getSubmitMode.md" data-raw-source="[getSubmitMode](attributes/getSubmitMode.md)">getSubmitMode</a></li>
-<li><a href="attributes/getUserPrivilege.md" data-raw-source="[getUserPrivilege](attributes/getUserPrivilege.md)">getUserPrivilege</a></li>
-<li><a href="attributes/getValue.md" data-raw-source="[getValue](attributes/getValue.md)">getValue</a></li>
-</ul>
-</td>
-<td>
-<ul>
-
-<li><a href="attributes/isValid.md" data-raw-source="[isValid](attributes/isValid.md)">isValid</a></li>
-<li><a href="attributes/removeOnChange.md" data-raw-source="[removeOnChange](attributes/removeOnChange.md)">removeOnChange</a></li>
-<li><a href="attributes/setRequiredLevel.md" data-raw-source="[setRequiredLevel](attributes/setRequiredLevel.md)">setRequiredLevel</a></li>
-<li><a href="attributes/setSubmitMode.md" data-raw-source="[setSubmitMode](attributes/setSubmitMode.md)">setSubmitMode</a></li>
-<li><a href="attributes/setValue.md" data-raw-source="[setValue](attributes/setValue.md)">setValue</a></li>
-<li><a href="attributes/setIsValid.md" data-raw-source="[setIsValid](attributes/setIsValid.md)">setIsValid</a></li>
-</ul>
-</td>
-</tr>
-</table>
-
+:::row:::
+   :::column:::
+   [controls](attributes/controls-collection.md)
+   :::column-end:::
+   :::column:::
+   [addOnChange](attributes/addOnChange.md)
+   :::column-end:::
+   :::column:::
+   [fireOnChange](attributes/fireOnChange.md)
+   :::column-end:::
+   :::column:::
+   [getAttributeType](attributes/getAttributeType.md)
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column:::
+   [getFormat](attributes/getFormat.md)
+   :::column-end:::
+   :::column:::
+   [getIsDirty](attributes/getIsDirty.md)
+   :::column-end:::
+   :::column:::
+   [getName](attributes/getName.md)
+   :::column-end:::
+   :::column:::
+   [getParent](attributes/getParent.md)
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column:::
+   [getRequiredLevel](attributes/getRequiredLevel.md)
+   :::column-end:::
+   :::column:::
+   [getSubmitMode](attributes/getSubmitMode.md)
+   :::column-end:::
+   :::column:::
+   [getUserPrivilege](attributes/getUserPrivilege.md)
+   :::column-end:::
+   :::column:::
+   [getValue](attributes/getValue.md)
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column:::
+   [isValid](attributes/isValid.md)
+   :::column-end:::
+   :::column:::
+   [removeOnChange](attributes/removeOnChange.md)
+   :::column-end:::
+   :::column:::
+   [setRequiredLevel](attributes/setRequiredLevel.md)
+   :::column-end:::
+   :::column:::
+   [setSubmitMode](attributes/setSubmitMode.md)
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column:::
+   [setValue](attributes/setValue.md)
+   :::column-end:::
+   :::column:::
+   [setIsValid](attributes/setIsValid.md)
+   :::column-end:::
+   :::column:::
+   &nbsp;
+   :::column-end:::
+   :::column:::
+   &nbsp;
+   :::column-end:::
+:::row-end:::
 
 ## Boolean column type
 
@@ -70,6 +104,7 @@ In addition to the methods available for all column types as explained earlier, 
 - [getInitialValue](attributes/getInitialValue.md)
 
 ## Lookup column type
+
 In addition to the methods available for all column types as explained earlier, the following method is available only for the **lookup** column:
 
 - [getIsPartyList](attributes/getIsPartyList.md)
@@ -78,38 +113,45 @@ In addition to the methods available for all column types as explained earlier, 
 
 In addition to the methods available for all column types as explained earlier, the following methods are available only for the **choices** and **choice** columns:
 
-<table>
-<tr>
-<td>
-<ul>
-<li><a href="attributes/getInitialValue.md" data-raw-source="[getInitialValue](attributes/getInitialValue.md)">getInitialValue</a></li>
-<li><a href="attributes/getOption.md" data-raw-source="[getOption](attributes/getOption.md)">getOption</a></li>
-<li><a href="attributes/getOptions.md" data-raw-source="[getOptions](attributes/getOptions.md)">getOptions</a></a></li>
-<li><a href="attributes/getSelectedOption.md" data-raw-source="[getSelectedOption](attributes/getSelectedOption.md)">getSelectedOption</a></li>
-<li><a href="attributes/getText.md" data-raw-source="[getText](attributes/getText.md)">getText</a></li>
-</ul>
-</td>
-</tr>
-</table>
+:::row:::
+   :::column:::
+   [getInitialValue](attributes/getInitialValue.md)
+   :::column-end:::
+   :::column:::
+   [getOption](attributes/getOption.md)
+   :::column-end:::
+   :::column:::
+   [getOptions](attributes/getOptions.md)
+   :::column-end:::
+   :::column:::
+   [getSelectedOption](attributes/getSelectedOption.md)
+   :::column-end:::
+   :::column:::
+   [getText](attributes/getText.md)
+   :::column-end:::
+:::row-end:::
 
 ## Number column type (decimal, double, integer, money)
 
 The following methods are available only for the **decimal**,  **double**, and **integer** columns:
 
-<table>
-<tr>
-<td>
-<ul>
-<li><a href="attributes/getMax.md" data-raw-source="[getMax](attributes/getMax.md)">getMax</a></li>
-<li><a href="attributes/getMin.md" data-raw-source="[getMin](attributes/getMin.md)">getMin</a></li>
-<li><a href="attributes/getPrecision.md" data-raw-source="[getPrecision](attributes/getPrecision.md)">getPrecision</a></a></li>
-<li><a href="attributes/setPrecision.md" data-raw-source="[setPrecision](attributes/setPrecision.md)">setPrecision</a></li>
-</ul>
-</td>
-</tr>
-</table>
+:::row:::
+   :::column:::
+   [getMax](attributes/getMax.md)
+   :::column-end:::
+   :::column:::
+   [getMin](attributes/getMin.md)
+   :::column-end:::
+   :::column:::
+   [getPrecision](attributes/getPrecision.md)
+   :::column-end:::
+   :::column:::
+   [setPrecision](attributes/setPrecision.md)
+   :::column-end:::
+:::row-end:::
 
 ## String column type
+
 In addition to the methods available for all column types as explained earlier, the following method is available only for the **string** column:
 
 - [getMaxLength](attributes/getMaxLength.md)
@@ -119,10 +161,5 @@ In addition to the methods available for all column types as explained earlier, 
 
 [Understand Xrm object model](../understand-clientapi-object-model.md)<br/>
 [Controls (Client API reference)](controls.md)
-
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

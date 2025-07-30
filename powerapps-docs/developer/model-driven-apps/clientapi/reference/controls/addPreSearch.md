@@ -1,8 +1,8 @@
 ---
-title: "addPreSearch (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "addPreSearch (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the addOnPreSearch method.
-author: chmoncay
-ms.author: chmoncay
+author: MitiJ
+ms.author: mijosh
 ms.date: 08/12/2023
 ms.reviewer: jdaly
 ms.topic: reference
@@ -42,12 +42,12 @@ It adds the `myPreSearchCallBack` function using the `addPreSearch` method. This
 
 ```javascript
 function onLoad(executionContext) {
-   var fromContext = executionContext.getFormContext()
-   var attribute = fromContext.getAttribute("primarycontactid") 
+   var formContext = executionContext.getFormContext()
+   var attribute = formContext.getAttribute("primarycontactid") 
    attribute.controls.forEach(control => control.addPreSearch(myPreSearchCallBack))
 }
 
-function myPreSearchCallBack (executionContext){
+function myPreSearchCallBack(executionContext) {
    var control = executionContext.getEventSource();
    var filter = "<filter><condition attribute='firstname' operator='eq' value='Eric' /></filter>";
    control.addCustomFilter(filter);

@@ -1,7 +1,7 @@
 ---
 title: "Sample: Simplified connection quick start (Developer Guide for Microsoft Dataverse) | MicrosoftDocs"
 description: "This sample shows you how to connect to the Microsoft Dataverse web services using the CrmServiceClient and perform basic create, update, retrieve, and delete operations on a table. "
-ms.date: 01/31/2023
+ms.date: 12/04/2024
 author: MattB-msft
 ms.topic: sample
 ms.author: mbarbour
@@ -68,7 +68,10 @@ The following shows a sample `app.config file`. To use this, remove the comment 
 </configuration>
 ```
 
-### See also
+Read the following important information about using a connection string in application code.
+[!INCLUDE [cc-connection-string](../includes/cc-connection-string.md)]
+
+### See als
 
 [Use connection strings in XRM tooling to connect to Dataverse](use-connection-strings-xrm-tooling-connect.md)
 

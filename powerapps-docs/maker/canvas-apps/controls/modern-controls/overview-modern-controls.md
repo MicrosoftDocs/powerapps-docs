@@ -6,7 +6,7 @@ author: yogeshgupta698
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: mkaur-msft
-ms.date: 03/22/2023
+ms.date: 06/14/2024
 ms.subservice: canvas-maker
 ms.author: yogupt
 
@@ -18,24 +18,21 @@ contributors:
   - yogeshgupta698
 ---
 
-# Overview of modern controls and themes in canvas apps (preview)
+# Overview of modern controls and themes in canvas apps
 
-[This article is pre-release document and is subject to change.]
-
-Modern controls in canvas apps are a new set of controls that are based on the Microsoft Fluent 2 design system. These controls are quicker and simpler for makers to configure, and they also provide a more cohesive experience for end-users. Modern controls are designed with a focus on accessibility, usability, and performance that makes them visually appealing, highly functional, and intuitive to use. Bundled with the modern controls is a new modern theming system, based on the Fluent 2 design system, that allows an app's look and feel to be modified from a central place.  
+Modern controls in canvas apps are a new set of controls that are based on the [Microsoft Fluent 2 design system](https://fluent2.microsoft.design). These controls are quicker and simpler for makers to configure, and they also provide a more cohesive experience for end-users. Modern controls are designed with a focus on accessibility, usability, and performance that makes them visually appealing, highly functional, and intuitive to use. Bundled with the modern controls is a new modern theming system, based on the Fluent 2 design system, that allows an app's look and feel to be modified from a central place.  
 
 
 > [!IMPORTANT]
-> - This is a preview feature.
-> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+>  A subset of modern controls are now generally available for production use.
 
 
 ## Enable modern controls and themes for your app
 With your [canvas app open for editing](../../edit-app.md):
-1. On the command bar, select **Settings** > **Upcoming features**.
+1. On the command bar, select **Settings** > **General**.
 2. From the Preview tab, set the toggle for **Modern controls and themes** to **On**.
 
-- To see list of all the modern controls, on the app authoring menu, select **Insert**. From the list of controls, select **Modern controls**.
+- The app will refresh with the new app authoring menu with modern controls part of existing categories. There will be two additional categories for legacy controls - Classic and Classic icons.
 
    > [!div class="mx-imgBorder"]
    > ![List of modern controls](media/modern-controls-list.png)
@@ -46,7 +43,7 @@ With your [canvas app open for editing](../../edit-app.md):
    > ![Themes pane](media/modern-themes-pane.png)
 
 ## What's next for these controls and themes?
-We're consistently improving and adding new capabilities for modern controls and themes. See our blog for [what's new](https://go.microsoft.com/fwlink/?linkid=2229189).
+We're consistently improving and adding new capabilities for modern controls and themes. We publish updates to [Power Apps blog](https://powerapps.microsoft.com/en-us/blog/) every month on the progress made for modern controls.
   
 ## Provide feedback to Microsoft
 

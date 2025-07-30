@@ -1,31 +1,32 @@
 ---
-title: "Write a plug-in (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how to write custom code to be executed in response to data processing events." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 05/31/2023
-ms.reviewer: "pehecke"
-ms.topic: "article"
-author: "divkamath" # GitHub ID
+title: "Write a plug-in (Microsoft Dataverse) | Microsoft Docs"
+description: "Learn how to write custom code to be executed in response to data processing events."
+ms.date: 03/26/2024
+ms.reviewer: pehecke
+ms.topic: how-to
+author: MsSQLGirl
 ms.subservice: dataverse-developer
-ms.author: "dikamath" # MSFT alias of Microsoft employees only
+ms.author: jukoesma
 search.audienceType: 
   - developer
 contributors:
   - phecke
+  - JimDaly
 ---
 
 # Write a plug-in
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
-You can create plug-ins by using one of the following two methods:
+You can create [plug-ins](plug-ins.md) by using one of the following methods:
 
 - Power Platform development tools provide a modern way to create plug-ins. The tools being referred to here are *Power Platform Tools for Visual Studio* and *Power Platform CLI*. Both these Power Platform tools generate similar plug-in code so moving from one tooling method to the other is fairly easy and understandable.
 
-  - Use [Power Platform Tools for Visual Studio](tools/devtools-install.md) to quickly create and register (deploy) plug-ins. A [quickstart](tools/devtools-create-plugin.md) article is available to show you how. Use this tool if you like to work in Visual Studio.
+  - Use [Power Platform Tools for Visual Studio](tools/devtools-install.md) to quickly create template plug-in code and register (deploy) a plug-in. A [quickstart](tools/devtools-create-plugin.md) article is available to show you how. Use this tool if you like to work in Visual Studio.
 
   - Use [Power Platform CLI](/power-platform/developer/cli/introduction) to create a basic (Visual Studio compatible) plug-in project with template plug-in code using a single [pac plugin](/power-platform/developer/cli/reference/plugin) command. Afterwards, using the [pac tool prt](/power-platform/developer/cli/reference/tool#pac-tool-prt) command, you interactively use the Plug-in Registration tool to register your creation with Microsoft Dataverse. Use this CLI tool set if you like working in a terminal window or Visual Studio Code.
 
-- Manually write code using your favorite editor or IDE. The rest of the plug-in documentation in this article and the other related articles is written with the developer writing code in mind, however the concepts introduced apply to all methods of plug-in development.
+- Manually write code using Visual Studio or your favorite editor. This article focuses on writing code using Dataverse APIs, however the concepts introduced also apply to plug-in development using our tools mentioned previously.
 
 ## IPlugin interface
 
@@ -48,11 +49,11 @@ More information: [Services you can use in your code](#services-you-can-use-in-y
 > [!IMPORTANT]
 > When deriving from `IPlugin`, the class should be written *stateless*. This is because the platform caches a class instance and re-uses it for performance reasons. A simple way of thinking about this is that you shouldn't add any properties or methods to the class and everything should be included within the `Execute` method.
 >
-> When using Power Platform tools for plug-in creation, the generated `PluginBase` class is derived from `IPlugin`.
+> When using the Power Platform Tools extension or the Power Platform CLI for plug-in creation, the generated `PluginBase` class implements the `IPlugin` interface.
 
 There are some exceptions to the statement about adding properties or methods in the note above. For example, you can have a property that represents a constant and you can have methods that are called from the `Execute` method. The important thing is that you never store any service instance or context data as a property in your class. These values change with every invocation and you don't want that data to be cached and applied to subsequent invocations.
 
-More information: [Develop IPlugin implementations as stateless](/dynamics365/customer-engagement/guidance/server/develop-iplugin-implementations-stateless)
+More information: [Develop IPlugin implementations as stateless](best-practices/business-logic/develop-iplugin-implementations-stateless.md)
 
 ### Pass configuration data to your plug-in
 
@@ -70,6 +71,23 @@ The secure configuration data is stored in a separate table that only system adm
 
 More information: [Register plug-in step > Set configuration data](register-plug-in.md#set-configuration-data)
 
+## PluginBase abstract class
+
+The `PluginBase` class implements the `IPlugin` interface. We offer this class as it implements a robust programming pattern that has proven itself in commercial solutions. However, use of this class in your plug-in code is optional but recommended.
+
+The class is not available in any SDK assembly, rather you must generate the class using one of our tools. To generate the class, create a plug-in project in the Power Platform Tools extension for Visual Studio or execute the Power Platform CLI command `pac plugin init`. You will find a PluginBase.cs file in the generated project.
+
+More information: [pac plugin](/power-platform/developer/cli/reference/plugin), [Quickstart: Create a plug-in using Power Platform Tools](/power-apps/developer/data-platform/tools/devtools-create-plugin)
+
+> [!IMPORTANT]
+> The `PluginBase` class generated by the Power Platform Tools extension and the Power Platform CLI have slightly different class member signatures. It is best to choose one or the other and stick with it in all your plug-in code development. Both versions of the class have the same functionality and perform similarly.
+
+This class diagram provides a visual on the key interfaces and classes related to `PluginBase`.
+
+:::image type="content" source="media/plugin-base-class-diagram.png" alt-text="PluginBase class and other related types." lightbox="media/plugin-base-class-diagram.png":::
+
+The example `Plugin1` class (in the diagram) derives from `PluginBase`. You would rename this `Plugin1` class to your own custom name and add code to implement the `ExecuteDataversePlugin` method and class constructor. The `LocalPluginContext` class is automatically initialized with the indicated service references and endpoints available to your plug-in. If you were implementing the `IPlugin` interface, you would have to write code to initialize all these services and endpoints prior to using them.
+
 ## Services you can use in your code
 
 Typically, within your plug-in you will:
@@ -78,7 +96,10 @@ Typically, within your plug-in you will:
 - Access the Organization web service using SDK for .NET calls to perform message request operations like query, create, update, delete, and more.
 - Write messages to the Tracing service so you can evaluate how your plug-in code is executing.
 
-The <xref:System.IServiceProvider>.<xref:System.IServiceProvider.GetService%2A> method provides you with a way to access service references passed in the execution context when needed. To get an instance of a service, you invoke the `GetService` method passing the type of service. Read more about this in the next sections.
+> [!NOTE]
+> All Dataverse services your plug-in would typically use and the plug-in execution context are pre-configured and available to your plug-in code when you derive your plug-in from the `PluginBase` class.
+
+The <xref:System.IServiceProvider>.<xref:System.IServiceProvider.GetService%2A> method provides you with a way to access service references passed in the execution context when needed. To get an instance of a service, you invoke the `GetService` method passing the type of service. Read more about this method in the next sections.
 
 ### Execution context
 
@@ -109,8 +130,10 @@ IOrganizationService orgService = serviceFactory.CreateOrganizationService(conte
 
 Use the tracing service to write messages to the [PluginTraceLog Table](reference/entities/plugintracelog.md) so that you can review the logs to understand what occurred when the plug-in ran.
 
-To write to the tracelog, you need to get an instance of the Tracing service. The following code shows how to get an instance of the Tracing service using the <xref:System.IServiceProvider>.<xref:System.IServiceProvider.GetService*> method.
+> [!IMPORTANT]
+> You must first enable trace logging in your environment before you are able to write to or view the logs. More information: [Tracing and logging](logging-tracing.md#enable-trace-logging)
 
+To write to the Tracelog, you need to get an instance of the Tracing service. The following code shows how to get an instance of the Tracing service using the <xref:System.IServiceProvider>.<xref:System.IServiceProvider.GetService*> method.
 
 ```csharp
 ITracingService tracingService =
@@ -127,13 +150,54 @@ More information: [Use Tracing](debug-plug-in.md#use-tracing), [Tracing and logg
 
 ### Other services
 
-When you write a plug-in that uses Azure Service Bus integration, use the notification service that implements the <xref:Microsoft.Xrm.Sdk.IServiceEndpointNotificationService> interface, but this won't be described here.
+When you write a plug-in that uses Azure Service Bus integration, use the notification service that implements the <xref:Microsoft.Xrm.Sdk.IServiceEndpointNotificationService> interface, but this interface won't be described here.
 
 More information: [Azure Integration](azure-integration.md)
 
 ## Putting it all together
 
 Applying the plug-in concepts detailed previously results in plug-in code that looks like the following.
+
+# [PluginBase example](#tab/pluginbase)
+
+```csharp
+public class MyPlugin : PluginBase
+{
+  // Constructor
+  public MyPlugin(string unsecureConfiguration, string secureConfiguration)
+       : base(typeof(MyPlugin))
+  { }
+
+  protected override void ExecuteDataversePlugin(ILocalPluginContext localPluginContext)
+  {
+    if (localPluginContext == null)
+    {
+      throw new ArgumentNullException(nameof(localPluginContext));
+    }
+
+    var context        = localPluginContext.PluginExecutionContext;
+    var serviceFactory = localPluginContext.OrgSvcFactory;
+    var tracingService = localPluginContext.TracingService;
+
+    try
+    {
+      // TODO Plug-in business logic goes here. You can access data in the context,
+      // and make calls to the Organization web service using the Dataverse SDK.
+    }
+    catch (FaultException<OrganizationServiceFault> ex)
+    {
+      throw new InvalidPluginExecutionException("The following error occurred in MyPlugin.", ex);
+    }
+    catch (Exception ex)
+    {
+        tracingService.Trace("MyPlugin: error: {0}", ex.ToString());
+        throw;
+    }
+  }
+}
+```
+
+# [IPlugin example](#tab/iplugin)
 
 ```csharp
 public class MyPlugin : IPlugin
@@ -172,19 +236,21 @@ public class MyPlugin : IPlugin
 }
 ```
 
-More information about handling exceptions: [Handle exceptions in plug-ins](handle-exceptions.md)
+---
+
+You can review these two methods of plug-in implementations in our [FollowupPlugin](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/FollowupPlugin) code sample. For more information about handling exceptions in plug-ins see [Handle exceptions in plug-ins](handle-exceptions.md).
 
 ## Plug-in design impacts performance
 
-When writing your plug-in, it's critical that it must execute efficiently and quickly. However long your plug-in takes to execute causes the end user that invoked the message operation (which triggered your plug-in) to wait. In addition to processing the message operation, Dataverse executes all registered synchronous plug-ins in the pipeline including your plug-in. When plug-ins take too long to execute, or if too many plug-ins are registered in a pipeline, this can result in a nonresponsive application UI or worst case a timeout error with pipeline rollback.
+When writing your plug-in, it's critical that it must execute efficiently and quickly. However long your plug-in takes to execute causes the end user that invoked the message operation (which triggered your plug-in) to wait. In addition to processing the message operation, Dataverse executes all registered synchronous plug-ins in the pipeline including your plug-in. When plug-ins take too long to execute, or if too many plug-ins are registered in a pipeline, this performance impact can result in a nonresponsive application UI or worst case a timeout error with pipeline rollback.
 
 > [!IMPORTANT]
 > Plug-ins must adhere to an execution time limit and resource constraints.
-> More information: [Anaylyze plug-in performance](analyze-performance.md)
+> More information: [Analyze plug-in performance](analyze-performance.md)
 
 ## Using early-bound types in plug-in code
 
-You can optionally use [early-bound](org-service/early-bound-programming.md) types within plug-in code. Include the generated types file in your plug-in project. All table types provided in the execution context's [InputParameters](xref:Microsoft.Xrm.Sdk.IExecutionContext.InputParameters) collection are late-bound types. You would need to convert those late-bound types to early-bound types.
+You can optionally use [early-bound](org-service/early-bound-programming.md) types within plug-in code. Include the generated types file in your plug-in project. All table types provided in the execution context's <xref:Microsoft.Xrm.Sdk.IExecutionContext.InputParameters> collection are late-bound types. You would need to convert those late-bound types to early-bound types.
 
 For example, you can do the following when you know the `Target` parameter represents an account table. In this example, "Account" is an early-bound type.
 
@@ -198,54 +264,12 @@ But you should never try to set the value using an early-bound type. Doing so ca
 context.InputParameters["Target"] = new Account() { Name = "MyAccount" }; // WRONG: Do not do this. 
 ```
 
-## Building the plug-in assembly
-
-When building a plug-in project, keep the following output assembly constraints in mind.
-
-### Use .NET Framework 4.6.2
-
-Plug-in and custom workflow activity assembly projects must target .NET Framework 4.6.2. While assemblies built using later versions of the Framework should generally work, if the plug-in code uses any features introduced after 4.6.2, an error will occur.
-
-### Optimize assembly development
-
-The assembly may include multiple plug-in classes (or types), but can be no larger than 16 MB in size. It's recommended to consolidate plug-ins and workflow assemblies into a single assembly as long as the size remains below 16 MB.
-
-Best practice information: [Optimize assembly development](/dynamics365/customer-engagement/guidance/server/optimize-assembly-development)
-
-### Assemblies must be signed
-
-All assemblies must be signed before they can be registered. You can use the Visual Studio **Signing** tab on the project or by using [Sn.exe (Strong Name Tool)](/dotnet/framework/tools/sn-exe-strong-name-tool).
-
-### Don't depend on .NET assemblies that interact with low-level Windows APIs
-
-Plug-in assemblies must contain all the necessary logic within the respective DLL. Plug-ins may reference some core .NET assemblies. However, we don't support dependencies on .NET assemblies that interact with low-level Windows APIs, such as the graphics design interface.
-
-### Dependency on any other (non-Dataverse) assemblies
-
-Adding the `Microsoft.CrmSdk.CoreAssemblies` NuGet package to your project includes the necessary Dataverse assembly references in your project, but it doesn't upload these assemblies along with your plug-in assembly as these Dataverse assemblies already exist in the server's sandbox run-time.
-
-#### Don't depend on System.Text.Json
-
-Because the [Microsoft.CrmSdk.CoreAssemblies NuGet package has a dependency on System.Text.Json](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreAssemblies#dependencies-body-tab), you're able to refer to [System.Text.Json](xref:System.Text.Json) types at design time. However, the System.Text.Json.dll file in the sandbox run-time can't be guaranteed to be the same version that you reference in your project. If you need to use `System.Text.Json`, you should use the dependent assembly feature and explicitly include it in your NuGet package.
-
-The dependent assembly capability, currently in a Preview release, can be used to include other .NET compiled assemblies with your plug-in assembly in a single package to upload.
-
-More information: [Dependent Assembly plug-ins](dependent-assembly-plugins.md).
-
-> [!IMPORTANT]
-> The dependent assembly capability is so important to plug-in development that you should consider using it from the start even if you do not have an immediate need to do so. Adding support for dependent assemblies to your plug-in project is much more difficult later on in the development cycle.
->
-> Since this feature is a Preview release, do not use this feature for production work.
-
-## Next steps
-
-[Register a plug-in](register-plug-in.md)<br />
-[Debug Plug-ins](debug-plug-in.md)
-
 ### See also
 
-[Tutorial: Write and register a plug-in](tutorial-write-plug-in.md)  
 [Handle exceptions](handle-exceptions.md)  
+[Register a plug-in](register-plug-in.md)  
+[Debug Plug-ins](debug-plug-in.md)  
+[Tutorial: Write and register a plug-in](tutorial-write-plug-in.md)  
 [Best practices and guidance regarding plug-in and workflow development](best-practices/business-logic/index.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

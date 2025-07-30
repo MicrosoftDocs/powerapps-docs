@@ -1,19 +1,20 @@
 ---
 title: Use managed identities for Azure with your Azure data lake storage
-description: This article explains how to use Azure Managed identity to restrict public network access for your Microsoft Dataverse data in Azure with connected Synapse Link.
+description: This article explains how to use Azure Managed identity to restrict public network access for your Microsoft Dataverse data in Azure with connected Azure Synapse Link.
 author: "JasonHQX"
 ms.author: jasonhuang
 ms.reviewer: matp
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 06/13/2023
+ms.date: 09/24/2024
 ms.custom: template-how-to 
+ms.subservice: dataverse-maker
 ---
 # Use managed identities for Azure with your Azure data lake storage
 
 Azure Data Lake Storage provides a layered security model. This model enables you to secure and control the level of access to your storage accounts that your applications and enterprise environments demand, based on the type and subset of networks or resources used. When network rules are configured, only applications requesting data over the specified set of networks or through the specified set of Azure resources can access a storage account. You can limit access to your storage account to requests originating from specified IP addresses, IP ranges, subnets in an Azure Virtual Network (VNet), or resource instances of some Azure services.
 
-Managed identities for Azure, formerly know as Managed Service Identity (MSI), help with the management of secrets. Microsoft Dataverse customers using Azure capabilities create a managed identity (part of enterprise policy creation) that can be used for one or more Dataverse environments. This managed identity that will be provisioned in your tenant is then used by Dataverse to access your Azure data lake.
+Managed identities for Azure, formerly known as Managed Service Identity (MSI), help with the management of secrets. Microsoft Dataverse customers using Azure capabilities create a managed identity (part of enterprise policy creation) that can be used for one or more Dataverse environments. This managed identity that will be provisioned in your tenant is then used by Dataverse to access your Azure data lake.
 
 With managed identities, access to your storage account is restricted to requests originating from the Dataverse environment associated with your tenant. When Dataverse connects to storage on behalf of you, it includes additional context information to prove that the request originates from a secure, trusted environment. This allows storage to grant Dataverse access to your storage account. Managed identities are used to sign the context information in order to establish trust. This adds application-level security in addition to the network and infrastructure security provided by Azure for connections between Azure services.
 
@@ -22,8 +23,10 @@ With managed identities, access to your storage account is restricted to request
 - Azure CLI is required on your local machine. [Download and install](https://aka.ms/InstallAzureCliWindows)
 - You need these two PowerShell modules. If you don't have them, open PowerShell and run these commands:
   - Azure Az PowerShell module: `Install-Module -Name Az`
+  - Azure Az.Resources PowerShell module: `Install-Module -Name Az.Resources`
   - Power Platform admin PowerShell module: `Install-Module -Name Microsoft.PowerApps.Administration.PowerShell`
-- Go to this [compressed folder file on GitHub]((https://github.com/microsoft/PowerApps-Samples/blob/master/powershell/managed-identities/Common.zip). Then select **Download** to download it. Extract the compressed folder file to a computer in a location where you can run PowerShell commands. **All files and folders extracted from a compressed folder should be preserved in their original location.**
+  - 
+- Go to this [compressed folder file on GitHub](https://github.com/microsoft/PowerApps-Samples/blob/master/powershell/managed-identities/Common.zip). Then select **Download** to download it. Extract the compressed folder file to a computer in a location where you can run PowerShell commands. **All files and folders extracted from a compressed folder should be preserved in their original location.**
 - We recommend that you create a new storage container under the same Azure resource group to onboard this feature.
 
 ## Enable enterprise policy for the selected Azure subscription
@@ -121,7 +124,7 @@ With managed identities, access to your storage account is restricted to request
 
 ## Grant reader access to the enterprise policy via Azure
 
-Azure global admins, Dynamics 365 admins, and Power Platform admins can access the Power Platform admin center to assign environments to the enterprise policy. To access the enterprise policies, the global or Azure Key vault admin is required to grant the **Reader role** to the Dynamics 365 or Power Platform admin. Once the reader role is granted, the Dynamics 365 or Power Platform admins will see the enterprise policies on the Power Platform admin center.
+Dynamics 365 admins, and Power Platform admins can access the Power Platform admin center to assign environments to the enterprise policy. To access the enterprise policies, Azure Key vault admin membership is required to grant the **Reader role** to the Dynamics 365 or Power Platform admin. Once the reader role is granted, the Dynamics 365 or Power Platform admins will see the enterprise policies on the Power Platform admin center.
 
 Only the Dynamics 365 and Power Platform admins who were granted the reader role to the enterprise policy can ‘add environment’ to the policy. Other Dynamics 365 and PowerPlatform admins might be able to view the enterprise policy, but they'll get an error when they try to add environment.
 
@@ -150,14 +153,14 @@ Only the Dynamics 365 and Power Platform admins who were granted the reader role
 
 1. Obtain the Dataverse environment ID.
    1. Sign into the [Power Platform admin center](https://admin.powerplatform.microsoft.com).
-   1. Select **Environments**, and then open your environment.
+   1. Select **Manage** > **Environments**, and then open your environment.
    1. In the **Details** section, copy the **Environment ID**.
    1. To link to the Dataverse environment, run this PowerShell script: `./NewIdentity.ps1`
    1. Provide the Dataverse environment ID. 
    1. Provide the **ResourceId**. <br />
    **StatusCode = 202** indicates the link was successfully created.
 1. Sign into the [Power Platform admin center](https://admin.powerplatform.microsoft.com).
-1. Select **Environments**, and then open the environment you specified earlier.
+1. Select **Manage** > **Environments**, and then open the environment you specified earlier.
 1. In the **Recent operations** area, select **Full history** to validate the connection of the new identity.
 
 ## Configure network access to the Azure Data Lake Storage Gen2
@@ -187,20 +190,32 @@ Only the Dynamics 365 and Power Platform admins who were granted the reader role
 1. Add a new **IP firewall rule** based on the client IP address.
 1. Select **Save** when done. More information: [Azure Synapse Analytics IP firewall rules](/azure/synapse-analytics/security/synapse-workspace-ip-firewall#ip-firewall-rules)
 
-## Create Azure Synapse Link for Dataverse with managed identity
+## Create a new Azure Synapse Link for Dataverse with managed identity
 
 > [!IMPORTANT]
 >
-> Dataverse: You must have the Dataverse **system administrator** security role. Additionally, tables you want to export via Synapse Link must have the **Track changes** property enabled. More information: [Advanced options](create-edit-entities-portal.md#advanced-options)
-> Azure Data Lake Storage Gen2: You must have an Azure Data Lake Storage Gen2 account and **Owner** and **Storage Blob Data Contributor** role access. Your storage account must enable **Hierarchical namespace** and **public network access** for both initial setup and delta sync. **Allow storage account key access** is required only for the initial setup.  
-> Synapse workspace: You must have a Synapse workspace and the **Synapse Administrator** role access within the Synapse Studio. The Synapse workspace must be in the same region as your Azure Data Lake Storage Gen2 account with **allowAll** IP addresses access rule. The storage account must be added as a linked service within the Synapse Studio. To create a Synapse workspace, go to [Creating a Synapse workspace](/azure/synapse-analytics/get-started-create-workspace).
+> Dataverse: You must have the Dataverse **system administrator** security role. Additionally, tables you want to export via Azure Synapse Link must have the **Track changes** property enabled. More information: [Advanced options](create-edit-entities-portal.md#advanced-options)
+>
+> Azure Data Lake Storage Gen2: You must have an Azure Data Lake Storage Gen2 account and **Owner** and **Storage Blob Data Contributor** role access. Your storage account must enable **Hierarchical namespace** for both initial setup and delta sync. **Allow storage account key access** is required only for the initial setup.  
+>
+> Synapse workspace: You must have a Synapse workspace and the **Synapse Administrator** role access within the Synapse Studio. The Synapse workspace must be in the same region as your Azure Data Lake Storage Gen2 account. The storage account must be added as a linked service within the Synapse Studio. To create a Synapse workspace, go to [Creating a Synapse workspace](/azure/synapse-analytics/get-started-create-workspace).
 
 When you create the link, Azure Synapse Link for Dataverse gets details about the currently linked enterprise policy under the Dataverse environment then caches the identity client secret URL to connect to Azure.
 
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select your environment.
 1. On the left navigation pane, select **Azure Synapse Link**, and then select **+ New link**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Fill in the appropriate fields, according to the intended setup. Select the **Subscription**, **Resource group**, and **Storage account**. To connect Dataverse to Synapse workspace, select the **Connect to your Azure Synapse workspace** option. For Delta Lake data conversion select a Spark pool.
 1. Select **Select Enterprise Policy with Managed Service Identity**, and then select **Next**.
 1. Add the tables you want to export, and then select **Save**.
+
+## Enable managed identity for an existing Azure Synapse Link profile
+
+> [!NOTE]
+> To make the **Use managed identity** command available in Power Apps, you need to finish the above setup to connect the enterprise policy to your Dataverse environment. More information: [Connect enterprise policy to Dataverse environment](#connect-enterprise-policy-to-dataverse-environment)
+
+1. Go to an existing Synapse Link profile from Power Apps (make.powerapps.com).
+2. Select **Use managed identity**, and then confirm.
+   :::image type="content" source="media/use-managed-identity-cmd.png" alt-text="Use managed identity command in Power Apps":::
 
 ## Troubleshooting
 
@@ -211,6 +226,10 @@ If you receive 403 errors during the link creation:
 - You can identify the linked enterprise policy and `policyArmId` by running the PowerShell script `./GetIdentityEnterprisePolicyforEnvironment.ps1` with the Azure **Subscription ID** and **Resource group** name.
 - You can unlink the enterprise policy by running the PowerShell script `./RevertIdentity.ps1` with the Dataverse environment ID and `policyArmId`.
 - You can remove the enterprise policy by running the PowerShell script **.\RemoveIdentityEnterprisePolicy.ps1 with policyArmId**.
+
+## Known limitation
+
+Only one enterprise policy can connect to the Dataverse environment simultaneously. If you need to create multiple Azure Synapse Link links with managed identity enabled, make sure all linked Azure resources are under the same resource group.
 
 ## See also
 

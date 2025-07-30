@@ -1,9 +1,10 @@
 ---
-title: "Sample: Query schema definitions and detect changes (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample shows how to query schema definitions and detect definitions changes over time so you can maintain a persistent cache." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Sample: Query schema definitions and detect changes (Microsoft Dataverse) | Microsoft Docs"
+description: "This sample shows how to query schema definitions and detect definitions changes over time so you can maintain a persistent cache."
 ms.date: 10/24/2022
-author: NHelgren
-ms.author: nhelgren
+author: mkannapiran
+ms.author: kamanick
+ms.reviewer: jdaly
 ms.topic: sample
 search.audienceType:
   - developer
@@ -14,7 +15,7 @@ contributors:
 
 # Query schema definitions and detect changes
 
-This sample shows how to retrieve and detect changes in table definitions using [RetrieveMetadataChangeRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrievemetadatachangesrequest) method. You can view the sample at [PowerApps-Samples/dataverse/orgsvc/C#-NETCore/Schema/RetrieveMetadataChanges/](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23-NETCore/Schema/RetrieveMetadataChanges)
+This sample shows how to retrieve and detect changes in table definitions using [RetrieveMetadataChangeRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrievemetadatachangesrequest) method. You can view the sample at [PowerApps-Samples/dataverse/orgsvc/C#-NETCore/Schema/RetrieveMetadataChanges/](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp-NETCore/Schema/RetrieveMetadataChanges)
 
 See these topics for explaination of functionality:
 
@@ -25,7 +26,7 @@ See these topics for explaination of functionality:
 
 ## How to run this sample
 
-See the instructions here: [Schema samples instructions](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/C%23-NETCore/Schema/README.md#instructions)
+See the instructions here: [Schema samples instructions](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/CSharp-NETCore/Schema/README.md#instructions)
 
 ## Demonstrates
 

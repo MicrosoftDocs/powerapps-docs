@@ -3,7 +3,7 @@ title: Planning - Optimizing your business process | Microsoft Docs
 description: Now that you've documented the business process you want to automate with Power Apps, optimize it. Learn some helpful approaches and key questions for optimization.
 author: TGrounds
 
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: guidance
 ms.date: 10/12/2021
 ms.subservice: guidance

@@ -1,63 +1,65 @@
 ---
-title: "Mailbox table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the Mailbox table/entity."
-ms.date: 09/01/2023
-ms.service: "powerapps"
-ms.topic: "reference"
-ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "phecke"
-ms.author: "pehecke"
+title: "Mailbox table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the Mailbox table/entity with Microsoft Dataverse."
+ms.topic: generated-reference
+author: phecke
+ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# Mailbox table/entity reference
-
-> [!NOTE]
-> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
-
+# Mailbox table/entity reference (Microsoft Dataverse)
 
 
 
 ## Messages
 
-|Message|Web API Operation|SDK class or method|
-|-|-|-|
-|Assign|PATCH /mailboxes(*mailboxid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|Create|POST /mailboxes<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE /mailboxes(*mailboxid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|GrantAccess|<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
-|ModifyAccess|<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-|Retrieve|GET /mailboxes(*mailboxid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET /mailboxes<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|RetrievePrincipalAccess|<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
-|RetrieveSharedPrincipalsAndAccess|<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
-|RevokeAccess|<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|SetState|PATCH /mailboxes(*mailboxid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH /mailboxes(*mailboxid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+The following table lists the messages for the Mailbox table.
+Messages represent operations that can be performed on the table. They may also be events.
+
+| Name <br />Is Event? |Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `Assign`<br />Event: False |`PATCH` /mailboxes(*mailboxid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Create`<br />Event: True |`POST` /mailboxes<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `Delete`<br />Event: False |`DELETE` /mailboxes(*mailboxid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `GrantAccess`<br />Event: False |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
+| `ModifyAccess`<br />Event: False |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
+| `Retrieve`<br />Event: False |`GET` /mailboxes(*mailboxid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveMultiple`<br />Event: False |`GET` /mailboxes<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
+| `RetrievePrincipalAccess`<br />Event: False |<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
+| `RetrieveSharedPrincipalsAndAccess`<br />Event: False |<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
+| `RevokeAccess`<br />Event: False |<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
+| `SetState`<br />Event: False |`PATCH` /mailboxes(*mailboxid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `statecode` and `statuscode` properties. |<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+| `Update`<br />Event: True |`PATCH` /mailboxes(*mailboxid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
+| `Upsert`<br />Event: False |`PATCH` /mailboxes(*mailboxid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
 
 ## Properties
 
-|Property|Value|
-|--------|-----|
-|CollectionSchemaName|Mailboxes|
-|DisplayCollectionName|Mailboxes|
-|DisplayName|Mailbox|
-|EntitySetName|mailboxes|
-|IsBPFEntity|False|
-|LogicalCollectionName|mailboxes|
-|LogicalName|mailbox|
-|OwnershipType|UserOwned|
-|PrimaryIdAttribute|mailboxid|
-|PrimaryNameAttribute|name|
-|SchemaName|Mailbox|
+The following table lists selected properties for the Mailbox table.
 
-<a name="writable-attributes"></a>
+|Property|Value|
+| --- | --- |
+| **DisplayName** | **Mailbox** |
+| **DisplayCollectionName** | **Mailboxes** |
+| **SchemaName** | `Mailbox` |
+| **CollectionSchemaName** | `Mailboxes` |
+| **EntitySetName** | `mailboxes`|
+| **LogicalName** | `mailbox` |
+| **LogicalCollectionName** | `mailboxes` |
+| **PrimaryIdAttribute** | `mailboxid` |
+| **PrimaryNameAttribute** |`name` |
+| **TableType** | `Standard` |
+| **OwnershipType** | `UserOwned` |
 
 ## Writable columns/attributes
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
+- [ACSEnabledForOutgoingEmail](#BKMK_ACSEnabledForOutgoingEmail)
+- [ACSMailFromCreated](#BKMK_ACSMailFromCreated)
+- [ACSOutgoingEmailStatus](#BKMK_ACSOutgoingEmailStatus)
 - [ACTDeliveryMethod](#BKMK_ACTDeliveryMethod)
 - [ACTStatus](#BKMK_ACTStatus)
 - [AllowEmailConnectorToUseCredentials](#BKMK_AllowEmailConnectorToUseCredentials)
@@ -79,6 +81,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [ItemsFailedForLastSync](#BKMK_ItemsFailedForLastSync)
 - [ItemsProcessedForLastSync](#BKMK_ItemsProcessedForLastSync)
 - [LastAutoDiscoveredOn](#BKMK_LastAutoDiscoveredOn)
+- [LastIncomingEmailsRequestedFromEmailServerOn](#BKMK_LastIncomingEmailsRequestedFromEmailServerOn)
 - [LastMessageId](#BKMK_LastMessageId)
 - [LastSuccessfulSyncCompletedOn](#BKMK_LastSuccessfulSyncCompletedOn)
 - [LastSyncError](#BKMK_LastSyncError)
@@ -86,7 +89,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [LastSyncErrorCount](#BKMK_LastSyncErrorCount)
 - [LastSyncErrorMachineName](#BKMK_LastSyncErrorMachineName)
 - [LastSyncErrorOccurredOn](#BKMK_LastSyncErrorOccurredOn)
+- [LastTagCompletedOn](#BKMK_LastTagCompletedOn)
 - [LastTaggedMessageId](#BKMK_LastTaggedMessageId)
+- [LastTagProcessedMaxItems](#BKMK_LastTagProcessedMaxItems)
 - [MailboxId](#BKMK_MailboxId)
 - [MailboxProcessingContext](#BKMK_MailboxProcessingContext)
 - [Name](#BKMK_Name)
@@ -107,6 +112,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [PostponeTestEmailConfigurationUntil](#BKMK_PostponeTestEmailConfigurationUntil)
 - [ProcessAndDeleteEmails](#BKMK_ProcessAndDeleteEmails)
 - [ProcessEmailReceivedAfter](#BKMK_ProcessEmailReceivedAfter)
+- [ProcessingLastAttemptedOn](#BKMK_ProcessingLastAttemptedOn)
 - [StateCode](#BKMK_StateCode)
 - [StatusCode](#BKMK_StatusCode)
 - [TagEmailsAfter](#BKMK_TagEmailsAfter)
@@ -119,1118 +125,1160 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 - [VerboseLoggingEnabled](#BKMK_VerboseLoggingEnabled)
 
+### <a name="BKMK_ACSEnabledForOutgoingEmail"></a> ACSEnabledForOutgoingEmail
+
+|Property|Value|
+|---|---|
+|Description|**Determines if ACS integration should be enabled for outgoing email synchronization.**|
+|DisplayName|**ACS Enabled for Outgoing Email**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`acsenabledforoutgoingemail`|
+|RequiredLevel|None|
+|Type|Boolean|
+|GlobalChoiceName|`mailbox_acsenabledforoutgoingemail`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
+
+### <a name="BKMK_ACSMailFromCreated"></a> ACSMailFromCreated
+
+|Property|Value|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**ACS MailFrom Created**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`acsmailfromcreated`|
+|RequiredLevel|None|
+|Type|Boolean|
+|GlobalChoiceName|`mailbox_acsmailfromcreated`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
+
+### <a name="BKMK_ACSOutgoingEmailStatus"></a> ACSOutgoingEmailStatus
+
+|Property|Value|
+|---|---|
+|Description|**The status of ACS outgoing email synchronization.**|
+|DisplayName|**ACS Outgoing Email Status**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`acsoutgoingemailstatus`|
+|RequiredLevel|None|
+|Type|Picklist|
+|DefaultFormValue|0|
+|GlobalChoiceName|`mailbox_acsoutgoingemailstatus`|
+
+#### ACSOutgoingEmailStatus Choices/Options
+
+|Value|Label|
+|---|---|
+|0|**Not Run**|
+|1|**Success**|
+|2|**Failure**|
 
 ### <a name="BKMK_ACTDeliveryMethod"></a> ACTDeliveryMethod
 
 |Property|Value|
-|--------|-----|
-|Description|Choose the delivery method for the mailbox for appointments, contacts, and tasks.|
-|DisplayName|Appointments, Contacts, and Tasks|
+|---|---|
+|Description|**Choose the delivery method for the mailbox for appointments, contacts, and tasks.**|
+|DisplayName|**Appointments, Contacts, and Tasks**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|actdeliverymethod|
+|LogicalName|`actdeliverymethod`|
 |RequiredLevel|None|
 |Type|Picklist|
+|DefaultFormValue|0|
+|GlobalChoiceName|`mailbox_actdeliverymethod`|
 
 #### ACTDeliveryMethod Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|0|Microsoft Dynamics 365 for Outlook||
-|1|Server-Side Synchronization||
-|2|None||
-
-
+|Value|Label|
+|---|---|
+|0|**Microsoft Dynamics 365 for Outlook**|
+|1|**Server-Side Synchronization**|
+|2|**None**|
 
 ### <a name="BKMK_ACTStatus"></a> ACTStatus
 
 |Property|Value|
-|--------|-----|
-|Description|Status of the Appointments, Contacts, and Tasks.|
-|DisplayName|Appointments, Contacts, and Tasks Status|
-|IsValidForCreate|False|
+|---|---|
+|Description|**Status of the Appointments, Contacts, and Tasks.**|
+|DisplayName|**Appointments, Contacts, and Tasks Status**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|actstatus|
+|LogicalName|`actstatus`|
 |RequiredLevel|None|
 |Type|Picklist|
+|DefaultFormValue|0|
+|GlobalChoiceName|`mailbox_actstatus`|
 
 #### ACTStatus Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|0|Not Run||
-|1|Success||
-|2|Failure||
-
-
+|Value|Label|
+|---|---|
+|0|**Not Run**|
+|1|**Success**|
+|2|**Failure**|
 
 ### <a name="BKMK_AllowEmailConnectorToUseCredentials"></a> AllowEmailConnectorToUseCredentials
 
 |Property|Value|
-|--------|-----|
-|Description|Choose whether to allow the email connector to use credentials.|
-|DisplayName|Allow to Use Credentials for Email Processing|
+|---|---|
+|Description|**Choose whether to allow the email connector to use credentials.**|
+|DisplayName|**Allow to Use Credentials for Email Processing**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|allowemailconnectortousecredentials|
+|LogicalName|`allowemailconnectortousecredentials`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### AllowEmailConnectorToUseCredentials Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`mailbox_allowemailconnectortousecredentials`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_EmailAddress"></a> EmailAddress
 
 |Property|Value|
-|--------|-----|
-|Description|Type the email address of the mailbox.|
-|DisplayName|Email Address|
-|FormatName|Email|
-|IsLocalizable|False|
+|---|---|
+|Description|**Type the email address of the mailbox.**|
+|DisplayName|**Email Address**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|emailaddress|
-|MaxLength|100|
+|LogicalName|`emailaddress`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Email|
+|FormatName|Email|
+|ImeMode|Inactive|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_EmailRouterAccessApproval"></a> EmailRouterAccessApproval
 
 |Property|Value|
-|--------|-----|
-|Description|Shows the status of the email address.|
-|DisplayName|Email Address Status|
+|---|---|
+|Description|**Shows the status of the email address.**|
+|DisplayName|**Email Address Status**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|emailrouteraccessapproval|
+|LogicalName|`emailrouteraccessapproval`|
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
+|DefaultFormValue|0|
+|GlobalChoiceName|`mailbox_emailrouteraccessapproval`|
 
 #### EmailRouterAccessApproval Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|0|Empty||
-|1|Approved||
-|2|Pending Approval||
-|3|Rejected||
-
-
+|Value|Label|
+|---|---|
+|0|**Empty**|
+|1|**Approved**|
+|2|**Pending Approval**|
+|3|**Rejected**|
 
 ### <a name="BKMK_EmailServerProfile"></a> EmailServerProfile
 
 |Property|Value|
-|--------|-----|
-|Description|Select the email server profile of the mailbox.|
-|DisplayName|Server Profile|
+|---|---|
+|Description|**Select the email server profile of the mailbox.**|
+|DisplayName|**Server Profile**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|emailserverprofile|
+|LogicalName|`emailserverprofile`|
 |RequiredLevel|None|
-|Targets|emailserverprofile|
 |Type|Lookup|
-
+|Targets|emailserverprofile|
 
 ### <a name="BKMK_EnabledForACT"></a> EnabledForACT
 
 |Property|Value|
-|--------|-----|
-|Description|Indicates whether the mailbox is enabled for Appointments, Contacts, and Tasks.|
-|DisplayName|Enabled For Appointments, Contacts, And Tasks|
-|IsValidForCreate|False|
+|---|---|
+|Description|**Indicates whether the mailbox is enabled for Appointments, Contacts, and Tasks.**|
+|DisplayName|**Enabled For Appointments, Contacts, And Tasks**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|enabledforact|
+|LogicalName|`enabledforact`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
-
-#### EnabledForACT Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 1
-
-
+|GlobalChoiceName|`mailbox_enabledforact`|
+|DefaultValue|True|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_EnabledForIncomingEmail"></a> EnabledForIncomingEmail
 
 |Property|Value|
-|--------|-----|
-|Description|Choose whether the mailbox is enabled for receiving email.|
-|DisplayName|Enabled For Incoming Email|
-|IsValidForCreate|False|
+|---|---|
+|Description|**Choose whether the mailbox is enabled for receiving email.**|
+|DisplayName|**Enabled For Incoming Email**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|enabledforincomingemail|
+|LogicalName|`enabledforincomingemail`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
-
-#### EnabledForIncomingEmail Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 1
-
-
+|GlobalChoiceName|`mailbox_enabledforincomingemail`|
+|DefaultValue|True|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_EnabledForOutgoingEmail"></a> EnabledForOutgoingEmail
 
 |Property|Value|
-|--------|-----|
-|Description|Choose whether the mailbox is enabled for sending email.|
-|DisplayName|Enabled For Outgoing Email|
-|IsValidForCreate|False|
+|---|---|
+|Description|**Choose whether the mailbox is enabled for sending email.**|
+|DisplayName|**Enabled For Outgoing Email**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|enabledforoutgoingemail|
+|LogicalName|`enabledforoutgoingemail`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
-
-#### EnabledForOutgoingEmail Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 1
-
-
+|GlobalChoiceName|`mailbox_enabledforoutgoingemail`|
+|DefaultValue|True|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_EntityImage"></a> EntityImage
 
 |Property|Value|
-|--------|-----|
-|Description|The default image for the entity.|
-|DisplayName|Entity Image|
-|IsPrimaryImage|True|
+|---|---|
+|Description|**The default image for the entity.**|
+|DisplayName|**Entity Image**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|entityimage|
-|MaxHeight|144|
-|MaxWidth|144|
+|LogicalName|`entityimage`|
 |RequiredLevel|None|
 |Type|Image|
-
+|CanStoreFullImage|False|
+|IsPrimaryImage|True|
+|MaxHeight|144|
+|MaxSizeInKB|10240|
+|MaxWidth|144|
 
 ### <a name="BKMK_EWSURL"></a> EWSURL
 
 |Property|Value|
-|--------|-----|
-|Description|Exchange web services endpoint URL for the mailbox.|
-|DisplayName|Exchange Web Services URL|
-|FormatName|Url|
-|IsLocalizable|False|
+|---|---|
+|Description|**Exchange web services endpoint URL for the mailbox.**|
+|DisplayName|**Exchange Web Services URL**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|ewsurl|
-|MaxLength|2084|
+|LogicalName|`ewsurl`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Url|
+|FormatName|Url|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|2084|
 
 ### <a name="BKMK_ExchangeContactsImportStatus"></a> ExchangeContactsImportStatus
 
 |Property|Value|
-|--------|-----|
-|Description|Indicates the exchange contacts import status for a mailbox record.|
-|DisplayName|Exchange Contacts Import Status|
+|---|---|
+|Description|**Indicates the exchange contacts import status for a mailbox record.**|
+|DisplayName|**Exchange Contacts Import Status**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|exchangecontactsimportstatus|
+|LogicalName|`exchangecontactsimportstatus`|
 |RequiredLevel|None|
 |Type|Picklist|
+|DefaultFormValue|0|
+|GlobalChoiceName|`mailbox_exchangecontactsimportstatus`|
 
 #### ExchangeContactsImportStatus Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|0|NotImported||
-|1|Imported||
-|2|ImportFailed||
-
-
+|Value|Label|
+|---|---|
+|0|**NotImported**|
+|1|**Imported**|
+|2|**ImportFailed**|
 
 ### <a name="BKMK_ExchangeSyncStateXml"></a> ExchangeSyncStateXml
 
 |Property|Value|
-|--------|-----|
-|Description|Contains the exchange synchronization state in XML format.|
-|DisplayName|Exchange Sync State|
-|Format|TextArea|
-|IsLocalizable|False|
+|---|---|
+|Description|**Contains the exchange synchronization state in XML format.**|
+|DisplayName|**Exchange Sync State**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|exchangesyncstatexml|
-|MaxLength|1073741823|
+|LogicalName|`exchangesyncstatexml`|
 |RequiredLevel|None|
 |Type|Memo|
-
+|Format|TextArea|
+|FormatName|TextArea|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1073741823|
 
 ### <a name="BKMK_FolderHierarchy"></a> FolderHierarchy
 
 |Property|Value|
-|--------|-----|
-|Description|Holds the hierarchy of folders under inbox in XML format.|
-|DisplayName|Folder Hierarchy|
-|Format|TextArea|
-|IsLocalizable|False|
+|---|---|
+|Description|**Holds the hierarchy of folders under inbox in XML format.**|
+|DisplayName|**Folder Hierarchy**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|folderhierarchy|
-|MaxLength|1073741823|
+|LogicalName|`folderhierarchy`|
 |RequiredLevel|None|
 |Type|Memo|
-
+|Format|TextArea|
+|FormatName|TextArea|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1073741823|
 
 ### <a name="BKMK_IncomingEmailDeliveryMethod"></a> IncomingEmailDeliveryMethod
 
 |Property|Value|
-|--------|-----|
-|Description|Select how incoming email will be delivered to the mailbox.|
-|DisplayName|Incoming Email|
+|---|---|
+|Description|**Select how incoming email will be delivered to the mailbox.**|
+|DisplayName|**Incoming Email**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|incomingemaildeliverymethod|
+|LogicalName|`incomingemaildeliverymethod`|
 |RequiredLevel|None|
 |Type|Picklist|
+|DefaultFormValue|-1|
+|GlobalChoiceName|`mailbox_incomingemaildeliverymethod`|
 
 #### IncomingEmailDeliveryMethod Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|0|None||
-|1|Microsoft Dynamics 365 for Outlook||
-|2|Server-Side Synchronization or Email Router||
-|3|Forward Mailbox||
-
-
+|Value|Label|
+|---|---|
+|0|**None**|
+|1|**Microsoft Dynamics 365 for Outlook**|
+|2|**Server-Side Synchronization**|
+|3|**Forward Mailbox**|
 
 ### <a name="BKMK_IncomingEmailStatus"></a> IncomingEmailStatus
 
 |Property|Value|
-|--------|-----|
-|Description|Select the status that will be assigned to incoming email messages.|
-|DisplayName|Incoming Email Status|
-|IsValidForCreate|False|
+|---|---|
+|Description|**Select the status that will be assigned to incoming email messages.**|
+|DisplayName|**Incoming Email Status**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|incomingemailstatus|
+|LogicalName|`incomingemailstatus`|
 |RequiredLevel|None|
 |Type|Picklist|
+|DefaultFormValue|0|
+|GlobalChoiceName|`mailbox_incomingemailstatus`|
 
 #### IncomingEmailStatus Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|0|Not Run||
-|1|Success||
-|2|Failure||
-
-
+|Value|Label|
+|---|---|
+|0|**Not Run**|
+|1|**Success**|
+|2|**Failure**|
 
 ### <a name="BKMK_IsACTSyncOrgFlagSet"></a> IsACTSyncOrgFlagSet
 
 |Property|Value|
-|--------|-----|
-|Description|Set the current organization as the synchronization organization.|
-|DisplayName|Set Current Organization as Synchronization Organization|
+|---|---|
+|Description|**Set the current organization as the synchronization organization.**|
+|DisplayName|**Set Current Organization as Synchronization Organization**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|isactsyncorgflagset|
+|LogicalName|`isactsyncorgflagset`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### IsACTSyncOrgFlagSet Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`mailbox_isactsyncorgflagset`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_IsEmailAddressApprovedByO365Admin"></a> IsEmailAddressApprovedByO365Admin
 
 |Property|Value|
-|--------|-----|
-|Description|Shows the status of approval of the email address by O365 Admin.|
-|DisplayName|Email Address O365 Admin Approval Status|
-|IsValidForCreate|False|
+|---|---|
+|Description|**Shows the status of approval of the email address by O365 Admin.**|
+|DisplayName|**Email Address O365 Admin Approval Status**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|isemailaddressapprovedbyo365admin|
+|LogicalName|`isemailaddressapprovedbyo365admin`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
-
-#### IsEmailAddressApprovedByO365Admin Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`mailbox_isemailaddressapprovedbyo365admin`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_ItemsFailedForLastSync"></a> ItemsFailedForLastSync
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Items Failed For Last Sync|
-|Format|None|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Items Failed For Last Sync**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|itemsfailedforlastsync|
-|MaxValue|2147483647|
-|MinValue|0|
+|LogicalName|`itemsfailedforlastsync`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|0|
 
 ### <a name="BKMK_ItemsProcessedForLastSync"></a> ItemsProcessedForLastSync
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Items Processed For Last Sync|
-|Format|None|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Items Processed For Last Sync**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|itemsprocessedforlastsync|
-|MaxValue|2147483647|
-|MinValue|0|
+|LogicalName|`itemsprocessedforlastsync`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|0|
 
 ### <a name="BKMK_LastAutoDiscoveredOn"></a> LastAutoDiscoveredOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Shows the date and time when the Exchange web services URL was last discovered using the AutoDiscover service.|
-|DisplayName|Last Auto Discovered On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Shows the date and time when the Exchange web services URL was last discovered using the AutoDiscover service.**|
+|DisplayName|**Last Auto Discovered On**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|lastautodiscoveredon|
+|LogicalName|`lastautodiscoveredon`|
 |RequiredLevel|None|
 |Type|DateTime|
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Auto|
+|SourceTypeMask|0|
 
+### <a name="BKMK_LastIncomingEmailsRequestedFromEmailServerOn"></a> LastIncomingEmailsRequestedFromEmailServerOn
+
+|Property|Value|
+|---|---|
+|Description|**The timestamp when last set of incoming emails were requested from external email server. For internal use only.**|
+|DisplayName|**Last Incoming Emails Requested From Email Server On**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`lastincomingemailsrequestedfromemailserveron`|
+|RequiredLevel|None|
+|Type|DateTime|
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_LastMessageId"></a> LastMessageId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the last message.|
-|DisplayName|Last Message ID|
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForCreate|False|
+|---|---|
+|Description|**Unique identifier of the last message.**|
+|DisplayName|**Last Message ID**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|lastmessageid|
-|MaxLength|320|
+|LogicalName|`lastmessageid`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|320|
 
 ### <a name="BKMK_LastSuccessfulSyncCompletedOn"></a> LastSuccessfulSyncCompletedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Last Successful Sync Time|
-|DisplayName|Last Successful Sync Time|
-|Format|DateAndTime|
-|IsValidForCreate|False|
+|---|---|
+|Description|**Last Successful Sync Time**|
+|DisplayName|**Last Successful Sync Time**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|lastsuccessfulsynccompletedon|
+|LogicalName|`lastsuccessfulsynccompletedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Auto|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_LastSyncError"></a> LastSyncError
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Last Sync Error Stack|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Last Sync Error Stack**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|lastsyncerror|
-|MaxLength|2048|
+|LogicalName|`lastsyncerror`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|2048|
 
 ### <a name="BKMK_LastSyncErrorCode"></a> LastSyncErrorCode
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Last Sync Error Code|
-|Format|None|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Last Sync Error Code**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|lastsyncerrorcode|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`lastsyncerrorcode`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_LastSyncErrorCount"></a> LastSyncErrorCount
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only|
-|DisplayName|Last Sync Error Continuous Count|
-|Format|None|
+|---|---|
+|Description|**For internal use only**|
+|DisplayName|**Last Sync Error Continuous Count**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|lastsyncerrorcount|
-|MaxValue|2147483647|
-|MinValue|0|
+|LogicalName|`lastsyncerrorcount`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|0|
 
 ### <a name="BKMK_LastSyncErrorMachineName"></a> LastSyncErrorMachineName
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Last Sync Error Machine Name|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Last Sync Error Machine Name**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|lastsyncerrormachinename|
-|MaxLength|320|
+|LogicalName|`lastsyncerrormachinename`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|320|
 
 ### <a name="BKMK_LastSyncErrorOccurredOn"></a> LastSyncErrorOccurredOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|For internal use only.|
-|DisplayName|Last Sync Error Time|
-|Format|DateAndTime|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Last Sync Error Time**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|lastsyncerroroccurredon|
+|LogicalName|`lastsyncerroroccurredon`|
 |RequiredLevel|None|
 |Type|DateTime|
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Auto|
+|SourceTypeMask|0|
 
+### <a name="BKMK_LastTagCompletedOn"></a> LastTagCompletedOn
+
+|Property|Value|
+|---|---|
+|Description|**Identifies the timestamp when tagging last completed. For internal use only.**|
+|DisplayName|**Last Tag Completed On**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`lasttagcompletedon`|
+|RequiredLevel|None|
+|Type|DateTime|
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_LastTaggedMessageId"></a> LastTaggedMessageId
 
-**Added by**: msft_ServerSideSync_Extensions Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Identifies the last MessageId that has been processed for tagging in the remote system.|
-|DisplayName|Last Tagged MessageId|
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForCreate|False|
+|---|---|
+|Description|**Identifies the last MessageId that has been processed for tagging in the remote system.**|
+|DisplayName|**Last Tagged MessageId**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|lasttaggedmessageid|
-|MaxLength|320|
+|LogicalName|`lasttaggedmessageid`|
 |RequiredLevel|None|
 |Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|320|
 
+### <a name="BKMK_LastTagProcessedMaxItems"></a> LastTagProcessedMaxItems
+
+|Property|Value|
+|---|---|
+|Description|**Indicates if the last tagging cycle processed the maximum number of items. For internal use only.**|
+|DisplayName|**Last Tag Processed Max Items**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`lasttagprocessedmaxitems`|
+|RequiredLevel|None|
+|Type|Boolean|
+|GlobalChoiceName|`mailbox_lasttagprocessedmaxitems`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_MailboxId"></a> MailboxId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the mailbox.|
-|DisplayName|Mailbox|
+|---|---|
+|Description|**Unique identifier of the mailbox.**|
+|DisplayName|**Mailbox**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|mailboxid|
+|LogicalName|`mailboxid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_MailboxProcessingContext"></a> MailboxProcessingContext
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Processing Context of the Mailbox|
-|Format|None|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Processing Context of the Mailbox**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|mailboxprocessingcontext|
-|MaxValue|2147483647|
-|MinValue|0|
+|LogicalName|`mailboxprocessingcontext`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|0|
 
 ### <a name="BKMK_Name"></a> Name
 
 |Property|Value|
-|--------|-----|
-|Description|Type the name of the mailbox.|
-|DisplayName|Name|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Type the name of the mailbox.**|
+|DisplayName|**Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|name|
-|MaxLength|200|
+|LogicalName|`name`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|200|
 
 ### <a name="BKMK_OauthAccessToken"></a> OauthAccessToken
 
 |Property|Value|
-|--------|-----|
-|Description|Type the Oauth access token for the mailbox.|
-|DisplayName|Oauth access token|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Type the Oauth access token for the mailbox.**|
+|DisplayName|**Oauth access token**|
 |IsValidForForm|False|
 |IsValidForRead|False|
-|LogicalName|oauthaccesstoken|
-|MaxLength|1024|
+|LogicalName|`oauthaccesstoken`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1024|
 
 ### <a name="BKMK_OauthRefreshToken"></a> OauthRefreshToken
 
 |Property|Value|
-|--------|-----|
-|Description|Type the Oauth refresh token for the mailbox.|
-|DisplayName|Oauth refresh token|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Type the Oauth refresh token for the mailbox.**|
+|DisplayName|**Oauth refresh token**|
 |IsValidForForm|False|
 |IsValidForRead|False|
-|LogicalName|oauthrefreshtoken|
-|MaxLength|256|
+|LogicalName|`oauthrefreshtoken`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|256|
 
 ### <a name="BKMK_OauthTokenExpiresOn"></a> OauthTokenExpiresOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when the Oauth token will expire|
-|DisplayName|Oauth token expiration datetime|
-|Format|DateAndTime|
+|---|---|
+|Description|**Date and time when the Oauth token will expire**|
+|DisplayName|**Oauth token expiration datetime**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|oauthtokenexpireson|
+|LogicalName|`oauthtokenexpireson`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_OfficeAppsDeploymentScheduled"></a> OfficeAppsDeploymentScheduled
 
 |Property|Value|
-|--------|-----|
-|Description|Indicates if the office apps deployment has been scheduled for a mailbox record.|
-|DisplayName|Office Apps Deployment Scheduled|
+|---|---|
+|Description|**Indicates if the office apps deployment has been scheduled for a mailbox record.**|
+|DisplayName|**Office Apps Deployment Scheduled**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|officeappsdeploymentscheduled|
+|LogicalName|`officeappsdeploymentscheduled`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### OfficeAppsDeploymentScheduled Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`mailbox_officeappsdeploymentscheduled`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_OfficeAppsDeploymentStatus"></a> OfficeAppsDeploymentStatus
 
 |Property|Value|
-|--------|-----|
-|Description|Indicates the office apps deployment type for a mailbox record.|
-|DisplayName|Office Apps Deployment Type|
+|---|---|
+|Description|**Indicates the office apps deployment type for a mailbox record.**|
+|DisplayName|**Office Apps Deployment Type**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|officeappsdeploymentstatus|
+|LogicalName|`officeappsdeploymentstatus`|
 |RequiredLevel|None|
 |Type|Picklist|
+|DefaultFormValue|0|
+|GlobalChoiceName|`mailbox_officeappsdeploymentstatus`|
 
 #### OfficeAppsDeploymentStatus Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|0|NotInstalled||
-|1|Installed||
-|2|InstallFailed||
-|3|UninstallFailed||
-|4|UpgradeRequired||
-
-
+|Value|Label|
+|---|---|
+|0|**NotInstalled**|
+|1|**Installed**|
+|2|**InstallFailed**|
+|3|**UninstallFailed**|
+|4|**UpgradeRequired**|
 
 ### <a name="BKMK_OrgMarkedAsPrimaryForExchangeSync"></a> OrgMarkedAsPrimaryForExchangeSync
 
 |Property|Value|
-|--------|-----|
-|Description|Indicates if the crm org is to be marked as primary syncing org for the mailbox record.|
-|DisplayName|Crm Org Marked as Primary Org for Exchange Mailbox|
+|---|---|
+|Description|**Indicates if the crm org is to be marked as primary syncing org for the mailbox record.**|
+|DisplayName|**Crm Org Marked as Primary Org for Exchange Mailbox**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|orgmarkedasprimaryforexchangesync|
+|LogicalName|`orgmarkedasprimaryforexchangesync`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### OrgMarkedAsPrimaryForExchangeSync Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`mailbox_orgmarkedasprimaryforexchangesync`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_OutgoingEmailDeliveryMethod"></a> OutgoingEmailDeliveryMethod
 
 |Property|Value|
-|--------|-----|
-|Description|Select how outgoing email will be sent from the mailbox.|
-|DisplayName|Outgoing Email|
+|---|---|
+|Description|**Select how outgoing email will be sent from the mailbox.**|
+|DisplayName|**Outgoing Email**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|outgoingemaildeliverymethod|
+|LogicalName|`outgoingemaildeliverymethod`|
 |RequiredLevel|None|
 |Type|Picklist|
+|DefaultFormValue|-1|
+|GlobalChoiceName|`mailbox_outgoingemaildeliverymethod`|
 
 #### OutgoingEmailDeliveryMethod Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|0|None||
-|1|Microsoft Dynamics 365 for Outlook||
-|2|Server-Side Synchronization or Email Router||
-
-
+|Value|Label|
+|---|---|
+|0|**None**|
+|1|**Microsoft Dynamics 365 for Outlook**|
+|2|**Server-Side Synchronization**|
 
 ### <a name="BKMK_OutgoingEmailStatus"></a> OutgoingEmailStatus
 
 |Property|Value|
-|--------|-----|
-|Description|Select the status of outgoing email messages.|
-|DisplayName|Outgoing Email Status|
-|IsValidForCreate|False|
+|---|---|
+|Description|**Select the status of outgoing email messages.**|
+|DisplayName|**Outgoing Email Status**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|outgoingemailstatus|
+|LogicalName|`outgoingemailstatus`|
 |RequiredLevel|None|
 |Type|Picklist|
+|DefaultFormValue|0|
+|GlobalChoiceName|`mailbox_outgoingemailstatus`|
 
 #### OutgoingEmailStatus Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|0|Not Run||
-|1|Success||
-|2|Failure||
-
-
+|Value|Label|
+|---|---|
+|0|**Not Run**|
+|1|**Success**|
+|2|**Failure**|
 
 ### <a name="BKMK_OwnerId"></a> OwnerId
 
 |Property|Value|
-|--------|-----|
-|Description|Enter the user or team who is assigned to manage the record. This field is updated every time the record is assigned to a different user.|
-|DisplayName|Owner|
+|---|---|
+|Description|**Enter the user or team who is assigned to manage the record. This field is updated every time the record is assigned to a different user.**|
+|DisplayName|**Owner**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|ownerid|
+|LogicalName|`ownerid`|
 |RequiredLevel|SystemRequired|
-|Targets|systemuser,team|
 |Type|Owner|
-
+|Targets|systemuser, team|
 
 ### <a name="BKMK_OwnerIdType"></a> OwnerIdType
 
 |Property|Value|
-|--------|-----|
-|Description|Owner Id Type|
+|---|---|
+|Description|**Owner Id Type**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owneridtype|
+|LogicalName|`owneridtype`|
 |RequiredLevel|SystemRequired|
 |Type|EntityName|
-
 
 ### <a name="BKMK_Password"></a> Password
 
 |Property|Value|
-|--------|-----|
-|Description|Type the password for the mailbox.|
-|DisplayName|Password|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Type the password for the mailbox.**|
+|DisplayName|**Password**|
 |IsValidForForm|True|
 |IsValidForRead|False|
-|LogicalName|password|
-|MaxLength|200|
+|LogicalName|`password`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|200|
 
 ### <a name="BKMK_PostponeMailboxProcessingUntil"></a> PostponeMailboxProcessingUntil
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Shows the date and time when processing will begin on this mailbox.|
-|DisplayName|Postpone Mailbox Processing Until|
-|Format|DateOnly|
-|IsValidForCreate|False|
+|---|---|
+|Description|**Shows the date and time when processing will begin on this mailbox.**|
+|DisplayName|**Postpone Mailbox Processing Until**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|postponemailboxprocessinguntil|
+|LogicalName|`postponemailboxprocessinguntil`|
 |RequiredLevel|SystemRequired|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateOnly|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_PostponeOfficeAppsDeploymentUntil"></a> PostponeOfficeAppsDeploymentUntil
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Shows the date and time when the next outlook mail app install will be run for a mailbox record.|
-|DisplayName|Postpone Outlook Mail App Install Until|
-|Format|DateAndTime|
+|---|---|
+|Description|**Shows the date and time when the next outlook mail app install will be run for a mailbox record.**|
+|DisplayName|**Postpone Outlook Mail App Install Until**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|postponeofficeappsdeploymentuntil|
+|LogicalName|`postponeofficeappsdeploymentuntil`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_PostponeSendingUntil"></a> PostponeSendingUntil
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Shows the date and time when the mailbox can start sending emails.|
-|DisplayName|Postpone Sending Until|
-|Format|DateOnly|
+|---|---|
+|Description|**Shows the date and time when the mailbox can start sending emails.**|
+|DisplayName|**Postpone Sending Until**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|postponesendinguntil|
+|LogicalName|`postponesendinguntil`|
 |RequiredLevel|SystemRequired|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateOnly|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_PostponeTestEmailConfigurationUntil"></a> PostponeTestEmailConfigurationUntil
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Shows the date and time when the next email configuration test will be run for a mailbox record.|
-|DisplayName|Postpone Test Email Configuration Until|
-|Format|DateAndTime|
+|---|---|
+|Description|**Shows the date and time when the next email configuration test will be run for a mailbox record.**|
+|DisplayName|**Postpone Test Email Configuration Until**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|postponetestemailconfigurationuntil|
+|LogicalName|`postponetestemailconfigurationuntil`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_ProcessAndDeleteEmails"></a> ProcessAndDeleteEmails
 
 |Property|Value|
-|--------|-----|
-|Description|Select whether to delete emails from the mailbox after processing.|
-|DisplayName|Delete Emails after Processing|
+|---|---|
+|Description|**Select whether to delete emails from the mailbox after processing.**|
+|DisplayName|**Delete Emails after Processing**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|processanddeleteemails|
+|LogicalName|`processanddeleteemails`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### ProcessAndDeleteEmails Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`mailbox_processanddeleteemails`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_ProcessEmailReceivedAfter"></a> ProcessEmailReceivedAfter
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Shows the date and time to start processing email received by the mailbox.|
-|DisplayName|Process Email Received After|
-|Format|DateOnly|
+|---|---|
+|Description|**Shows the date and time to start processing email received by the mailbox.**|
+|DisplayName|**Process Email Received After**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|processemailreceivedafter|
+|LogicalName|`processemailreceivedafter`|
 |RequiredLevel|None|
 |Type|DateTime|
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateOnly|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
+### <a name="BKMK_ProcessingLastAttemptedOn"></a> ProcessingLastAttemptedOn
+
+|Property|Value|
+|---|---|
+|Description|**Date and time when the processing of the mailbox was last attempted.**|
+|DisplayName|**Date Processing Last Attempted**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`processinglastattemptedon`|
+|RequiredLevel|None|
+|Type|DateTime|
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_StateCode"></a> StateCode
 
 |Property|Value|
-|--------|-----|
-|Description|Shows whether the mailbox is active or inactive.|
-|DisplayName|Status|
-|IsValidForCreate|False|
+|---|---|
+|Description|**Shows whether the mailbox is active or inactive.**|
+|DisplayName|**Status**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|statecode|
+|LogicalName|`statecode`|
 |RequiredLevel|SystemRequired|
 |Type|State|
+|DefaultFormValue|0|
+|GlobalChoiceName|`mailbox_statecode`|
 
 #### StateCode Choices/Options
 
-|Value|Label|DefaultStatus|InvariantName|
-|-----|-----|-------------|-------------|
-|0|Active|1|Active|
-|1|Inactive|2|Inactive|
-
-
+|Value|Details|
+|---|---|
+|0|Label: **Active**<br />DefaultStatus: 1<br />InvariantName: `Active`|
+|1|Label: **Inactive**<br />DefaultStatus: 2<br />InvariantName: `Inactive`|
 
 ### <a name="BKMK_StatusCode"></a> StatusCode
 
 |Property|Value|
-|--------|-----|
-|Description|Select the mailbox's status.|
-|DisplayName|Status Reason|
+|---|---|
+|Description|**Select the mailbox's status.**|
+|DisplayName|**Status Reason**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|statuscode|
+|LogicalName|`statuscode`|
 |RequiredLevel|SystemRequired|
 |Type|Status|
+|DefaultFormValue|-1|
+|GlobalChoiceName|`mailbox_statuscode`|
 
 #### StatusCode Choices/Options
 
-|Value|Label|State|
-|-----|-----|-----|
-|1|Active|0|
-|2|Inactive|1|
-
-
+|Value|Details|
+|---|---|
+|1|Label: **Active**<br />State:0<br />TransitionData: None|
+|2|Label: **Inactive**<br />State:1<br />TransitionData: None|
 
 ### <a name="BKMK_TagEmailsAfter"></a> TagEmailsAfter
 
-**Added by**: msft_ServerSideSync_Extensions Solution
-
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Identifies the timestamp after for which emails should be tagged in the remote system.|
-|DisplayName|Tag Emails After|
-|Format|DateOnly|
+|---|---|
+|Description|**Identifies the timestamp after for which emails should be tagged in the remote system.**|
+|DisplayName|**Tag Emails After**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|tagemailsafter|
+|LogicalName|`tagemailsafter`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateOnly|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_TestEmailConfigurationRetryCount"></a> TestEmailConfigurationRetryCount
 
 |Property|Value|
-|--------|-----|
-|Description|Shows the number of times an email configuration test has been performed.|
-|DisplayName|Test Email Configuration Retry Count|
-|Format|None|
+|---|---|
+|Description|**Shows the number of times an email configuration test has been performed.**|
+|DisplayName|**Test Email Configuration Retry Count**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|testemailconfigurationretrycount|
-|MaxValue|2147483647|
-|MinValue|0|
+|LogicalName|`testemailconfigurationretrycount`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|0|
 
 ### <a name="BKMK_TestEmailConfigurationScheduled"></a> TestEmailConfigurationScheduled
 
 |Property|Value|
-|--------|-----|
-|Description|Indicates if the email configuration test has been scheduled for a mailbox record.|
-|DisplayName|Test Email Configuration Scheduled|
+|---|---|
+|Description|**Indicates if the email configuration test has been scheduled for a mailbox record.**|
+|DisplayName|**Test Email Configuration Scheduled**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|testemailconfigurationscheduled|
+|LogicalName|`testemailconfigurationscheduled`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### TestEmailConfigurationScheduled Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`mailbox_testemailconfigurationscheduled`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_TestMailboxAccessCompletedOn"></a> TestMailboxAccessCompletedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when the last email configuration test was completed for a mailbox record.|
-|DisplayName|Mailbox Test Completed On|
-|Format|DateAndTime|
-|IsValidForCreate|False|
+|---|---|
+|Description|**Date and time when the last email configuration test was completed for a mailbox record.**|
+|DisplayName|**Mailbox Test Completed On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|testmailboxaccesscompletedon|
+|LogicalName|`testmailboxaccesscompletedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_TimeZoneRuleVersionNumber"></a> TimeZoneRuleVersionNumber
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Time Zone Rule Version Number|
-|Format|None|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Time Zone Rule Version Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|timezoneruleversionnumber|
-|MaxValue|2147483647|
-|MinValue|-1|
+|LogicalName|`timezoneruleversionnumber`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-1|
 
 ### <a name="BKMK_UndeliverableFolder"></a> UndeliverableFolder
 
 |Property|Value|
-|--------|-----|
-|Description|Shows the ID of the Undeliverable folder in the mailbox managed by Microsoft Exchange.|
-|DisplayName|Undeliverable Folder|
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForCreate|False|
+|---|---|
+|Description|**Shows the ID of the Undeliverable folder in the mailbox managed by Microsoft Exchange.**|
+|DisplayName|**Undeliverable Folder**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|undeliverablefolder|
-|MaxLength|256|
+|LogicalName|`undeliverablefolder`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|256|
 
 ### <a name="BKMK_Username"></a> Username
 
 |Property|Value|
-|--------|-----|
-|Description|Type a user name used for mailbox authentication.|
-|DisplayName|User Name|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Type a user name used for mailbox authentication.**|
+|DisplayName|**User Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|username|
-|MaxLength|200|
+|LogicalName|`username`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|200|
 
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
 
 |Property|Value|
-|--------|-----|
-|Description|Time zone code that was in use when the record was created.|
-|DisplayName|UTC Conversion Time Zone Code|
-|Format|None|
+|---|---|
+|Description|**Time zone code that was in use when the record was created.**|
+|DisplayName|**UTC Conversion Time Zone Code**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|utcconversiontimezonecode|
-|MaxValue|2147483647|
-|MinValue|-1|
+|LogicalName|`utcconversiontimezonecode`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-1|
 
 ### <a name="BKMK_VerboseLoggingEnabled"></a> VerboseLoggingEnabled
 
 |Property|Value|
-|--------|-----|
-|Description|Indicates if verbose tracing needs to be enabled for this mailbox.|
-|DisplayName|Verbose Logging|
-|Format|None|
-|IsValidForCreate|False|
+|---|---|
+|Description|**Indicates if verbose tracing needs to be enabled for this mailbox.**|
+|DisplayName|**Verbose Logging**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|verboseloggingenabled|
-|MaxValue|100|
-|MinValue|0|
+|LogicalName|`verboseloggingenabled`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
+|MaxValue|100|
+|MinValue|0|
 
-<a name="read-only-attributes"></a>
 
 ## Read-only columns/attributes
 
-These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** and **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [AverageTotalDuration](#BKMK_AverageTotalDuration)
 - [CreatedBy](#BKMK_CreatedBy)
-- [CreatedByName](#BKMK_CreatedByName)
-- [CreatedByYomiName](#BKMK_CreatedByYomiName)
 - [CreatedOn](#BKMK_CreatedOn)
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
-- [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
-- [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
-- [EmailServerProfileName](#BKMK_EmailServerProfileName)
+- [EmailAddressApprovedBy](#BKMK_EmailAddressApprovedBy)
+- [EmailAddressApprovedOn](#BKMK_EmailAddressApprovedOn)
 - [EntityImage_Timestamp](#BKMK_EntityImage_Timestamp)
 - [EntityImage_URL](#BKMK_EntityImage_URL)
 - [EntityImageId](#BKMK_EntityImageId)
@@ -1251,1247 +1299,1191 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [LastSyncStartedOn](#BKMK_LastSyncStartedOn)
 - [MailboxStatus](#BKMK_MailboxStatus)
 - [ModifiedBy](#BKMK_ModifiedBy)
-- [ModifiedByName](#BKMK_ModifiedByName)
-- [ModifiedByYomiName](#BKMK_ModifiedByYomiName)
 - [ModifiedOn](#BKMK_ModifiedOn)
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
-- [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
-- [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
 - [NextScheduledACTSyncInSeconds](#BKMK_NextScheduledACTSyncInSeconds)
 - [NoACTCount](#BKMK_NoACTCount)
 - [NoEmailCount](#BKMK_NoEmailCount)
 - [OfficeAppsDeploymentCompleteOn](#BKMK_OfficeAppsDeploymentCompleteOn)
 - [OfficeAppsDeploymentError](#BKMK_OfficeAppsDeploymentError)
 - [OrganizationId](#BKMK_OrganizationId)
-- [OrganizationIdName](#BKMK_OrganizationIdName)
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
-- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [ProcessedTimes](#BKMK_ProcessedTimes)
-- [ProcessingLastAttemptedOn](#BKMK_ProcessingLastAttemptedOn)
 - [ProcessingStateCode](#BKMK_ProcessingStateCode)
 - [ReceivingPostponedUntil](#BKMK_ReceivingPostponedUntil)
 - [ReceivingPostponedUntilForACT](#BKMK_ReceivingPostponedUntilForACT)
 - [RegardingObjectId](#BKMK_RegardingObjectId)
-- [RegardingObjectIdName](#BKMK_RegardingObjectIdName)
 - [RegardingObjectTypeCode](#BKMK_RegardingObjectTypeCode)
+- [TestAndEnableLastAttemptedBy](#BKMK_TestAndEnableLastAttemptedBy)
+- [TestAndEnableLastAttemptedOn](#BKMK_TestAndEnableLastAttemptedOn)
 - [TransientFailureCount](#BKMK_TransientFailureCount)
 - [VersionNumber](#BKMK_VersionNumber)
-
 
 ### <a name="BKMK_AverageTotalDuration"></a> AverageTotalDuration
 
 |Property|Value|
-|--------|-----|
-|Description|Mailbox Total Duration in Average|
-|DisplayName|Monitor Total Performance|
-|Format|None|
+|---|---|
+|Description|**Mailbox Total Duration in Average**|
+|DisplayName|**Monitor Total Performance**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|averagetotalduration|
-|MaxValue|2147483647|
-|MinValue|-1|
+|LogicalName|`averagetotalduration`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-1|
 
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
 |Property|Value|
-|--------|-----|
-|Description|Shows who created the record.|
-|DisplayName|Created By|
+|---|---|
+|Description|**Shows who created the record.**|
+|DisplayName|**Created By**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdby|
+|LogicalName|`createdby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedByName"></a> CreatedByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyname|
-|MaxLength|160|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedByYomiName"></a> CreatedByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyyominame|
-|MaxLength|160|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_CreatedOn"></a> CreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Shows the date and time when the record was created. The date and time are displayed in the time zone selected in Microsoft Dynamics 365 options.|
-|DisplayName|Created On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Shows the date and time when the record was created. The date and time are displayed in the time zone selected in Microsoft Dynamics 365 options.**|
+|DisplayName|**Created On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdon|
+|LogicalName|`createdon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_CreatedOnBehalfBy"></a> CreatedOnBehalfBy
 
 |Property|Value|
-|--------|-----|
-|Description|Shows who created the record on behalf of another user.|
-|DisplayName|Created By (Delegate)|
+|---|---|
+|Description|**Shows who created the record on behalf of another user.**|
+|DisplayName|**Created By (Delegate)**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdonbehalfby|
+|LogicalName|`createdonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
+|Targets|systemuser|
 
-
-### <a name="BKMK_CreatedOnBehalfByName"></a> CreatedOnBehalfByName
+### <a name="BKMK_EmailAddressApprovedBy"></a> EmailAddressApprovedBy
 
 |Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
+|---|---|
+|Description|**The user who approved the email address for synchronization.**|
+|DisplayName|**Email Address Approved By**|
+|IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdonbehalfbyname|
-|MaxLength|160|
+|LogicalName|`emailaddressapprovedby`|
 |RequiredLevel|None|
-|Type|String|
+|Type|Lookup|
+|Targets|systemuser|
 
-
-### <a name="BKMK_CreatedOnBehalfByYomiName"></a> CreatedOnBehalfByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyyominame|
-|MaxLength|160|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
-
-### <a name="BKMK_EmailServerProfileName"></a> EmailServerProfileName
+### <a name="BKMK_EmailAddressApprovedOn"></a> EmailAddressApprovedOn
 
 |Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
+|---|---|
+|Description|**Date and time the mailbox's email address was approved.**|
+|DisplayName|**Email Address Approved On**|
+|IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|emailserverprofilename|
-|MaxLength|100|
+|LogicalName|`emailaddressapprovedon`|
 |RequiredLevel|None|
-|Type|String|
-
+|Type|DateTime|
+|CanChangeDateTimeBehavior|True|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_EntityImage_Timestamp"></a> EntityImage_Timestamp
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|entityimage_timestamp|
-|MaxValue|9223372036854775807|
-|MinValue|-9223372036854775808|
+|LogicalName|`entityimage_timestamp`|
 |RequiredLevel|None|
 |Type|BigInt|
-
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
 
 ### <a name="BKMK_EntityImage_URL"></a> EntityImage_URL
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
-|FormatName|Url|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|entityimage_url|
-|MaxLength|200|
+|LogicalName|`entityimage_url`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Url|
+|FormatName|Url|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|200|
 
 ### <a name="BKMK_EntityImageId"></a> EntityImageId
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Entity Image Id|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Entity Image Id**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|entityimageid|
+|LogicalName|`entityimageid`|
 |RequiredLevel|None|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_ExchangeContactsImportCompletedOn"></a> ExchangeContactsImportCompletedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when the exchange contacts import was last completed for a mailbox record.|
-|DisplayName|Exchange Contacts Import Completed On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Date and time when the exchange contacts import was last completed for a mailbox record.**|
+|DisplayName|**Exchange Contacts Import Completed On**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|exchangecontactsimportcompletedon|
+|LogicalName|`exchangecontactsimportcompletedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Auto|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_ExchangeSyncStateXmlFileRef"></a> ExchangeSyncStateXmlFileRef
 
-**Added by**: msft_ServerSideSync_Extensions Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Reference to the ExchangeSyncStateXml file on Azure.|
-|DisplayName|ExchangeSyncStateXml File Ref|
+|---|---|
+|Description|**Reference to the ExchangeSyncStateXml file on Azure.**|
+|DisplayName|**ExchangeSyncStateXml File Ref**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|exchangesyncstatexmlfileref|
+|LogicalName|`exchangesyncstatexmlfileref`|
 |RequiredLevel|None|
 |Type|File|
-
+|MaxSizeInKB|131072|
 
 ### <a name="BKMK_ExchangeSyncStateXmlFileRef_Name"></a> ExchangeSyncStateXmlFileRef_Name
 
-**Added by**: msft_ServerSideSync_Extensions Solution
-
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|exchangesyncstatexmlfileref_name|
-|MaxLength|200|
+|LogicalName|`exchangesyncstatexmlfileref_name`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Disabled|
+|IsLocalizable|False|
+|MaxLength|200|
 
 ### <a name="BKMK_ForcedUnlockCount"></a> ForcedUnlockCount
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only|
-|DisplayName|Count of the number of times a mailbox gets forced unlocked|
-|Format|None|
+|---|---|
+|Description|**For internal use only**|
+|DisplayName|**Count of the number of times a mailbox gets forced unlocked**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|forcedunlockcount|
-|MaxValue|2147483647|
-|MinValue|0|
+|LogicalName|`forcedunlockcount`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|0|
 
 ### <a name="BKMK_HostId"></a> HostId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the async host that is processing this mailbox.|
-|DisplayName|Host|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Unique identifier of the async host that is processing this mailbox.**|
+|DisplayName|**Host**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|hostid|
-|MaxLength|256|
+|LogicalName|`hostid`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|256|
 
 ### <a name="BKMK_IsExchangeContactsImportScheduled"></a> IsExchangeContactsImportScheduled
 
 |Property|Value|
-|--------|-----|
-|Description|Is Exchange Contacts Import Scheduled.|
-|DisplayName|Is Exchange Contacts Import Scheduled.|
+|---|---|
+|Description|**Is Exchange Contacts Import Scheduled.**|
+|DisplayName|**Is Exchange Contacts Import Scheduled.**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|isexchangecontactsimportscheduled|
+|LogicalName|`isexchangecontactsimportscheduled`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
-
-#### IsExchangeContactsImportScheduled Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`mailbox_isexchangecontactsimportscheduled`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_IsForwardMailbox"></a> IsForwardMailbox
 
 |Property|Value|
-|--------|-----|
-|Description|Select whether the mailbox is a forward mailbox.|
-|DisplayName|Is Forward Mailbox|
+|---|---|
+|Description|**Select whether the mailbox is a forward mailbox.**|
+|DisplayName|**Is Forward Mailbox**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|isforwardmailbox|
+|LogicalName|`isforwardmailbox`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
-
-#### IsForwardMailbox Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 1
-
-
+|GlobalChoiceName|`mailbox_isforwardmailbox`|
+|DefaultValue|True|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_IsOauthAccessTokenSet"></a> IsOauthAccessTokenSet
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|isoauthaccesstokenset|
+|LogicalName|`isoauthaccesstokenset`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### IsOauthAccessTokenSet Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`isencryptedattributevalueset`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_IsOauthRefreshTokenSet"></a> IsOauthRefreshTokenSet
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|isoauthrefreshtokenset|
+|LogicalName|`isoauthrefreshtokenset`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### IsOauthRefreshTokenSet Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`isencryptedattributevalueset`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_IsPasswordSet"></a> IsPasswordSet
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|ispasswordset|
+|LogicalName|`ispasswordset`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### IsPasswordSet Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`isencryptedattributevalueset`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_IsServiceAccount"></a> IsServiceAccount
 
 |Property|Value|
-|--------|-----|
-|Description|Select whether the mailbox corresponds to one for the service account.|
-|DisplayName|Is Service Account|
+|---|---|
+|Description|**Select whether the mailbox corresponds to one for the service account.**|
+|DisplayName|**Is Service Account**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|isserviceaccount|
+|LogicalName|`isserviceaccount`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
-
-#### IsServiceAccount Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`mailbox_isserviceaccount`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_LastActiveOn"></a> LastActiveOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|For internal use only.|
-|DisplayName|Last Active On|
-|Format|DateAndTime|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Last Active On**|
 |IsValidForForm|False|
 |IsValidForRead|False|
-|LogicalName|lastactiveon|
+|LogicalName|`lastactiveon`|
 |RequiredLevel|SystemRequired|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_LastDuration"></a> LastDuration
 
 |Property|Value|
-|--------|-----|
-|Description|Last Duration for the mailbox|
-|DisplayName|Monitor last duration Performance|
-|Format|None|
+|---|---|
+|Description|**Last Duration for the mailbox**|
+|DisplayName|**Monitor last duration Performance**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|lastduration|
-|MaxValue|2147483647|
-|MinValue|-1|
+|LogicalName|`lastduration`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-1|
 
 ### <a name="BKMK_LastMailboxForcedUnlockOccurredOn"></a> LastMailboxForcedUnlockOccurredOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|For internal use only.|
-|DisplayName|Last Date Time when a mailbox got forced unlocked|
-|Format|DateAndTime|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Last Date Time when a mailbox got forced unlocked**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|lastmailboxforcedunlockoccurredon|
+|LogicalName|`lastmailboxforcedunlockoccurredon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Auto|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_LastSyncStartedOn"></a> LastSyncStartedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Last Sync Start Time|
-|DisplayName|Last Sync Start Time|
-|Format|DateAndTime|
+|---|---|
+|Description|**Last Sync Start Time**|
+|DisplayName|**Last Sync Start Time**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|lastsyncstartedon|
+|LogicalName|`lastsyncstartedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Auto|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_MailboxStatus"></a> MailboxStatus
 
 |Property|Value|
-|--------|-----|
-|Description|Last Sync Status for Outgoing, Incoming and ACT as a whole.|
-|DisplayName|Mailbox Status|
+|---|---|
+|Description|**Last Sync Status for Outgoing, Incoming and ACT as a whole.**|
+|DisplayName|**Mailbox Status**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|mailboxstatus|
+|LogicalName|`mailboxstatus`|
 |RequiredLevel|None|
 |Type|Picklist|
+|DefaultFormValue|0|
+|GlobalChoiceName|`mailbox_status`|
 
 #### MailboxStatus Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|0|Not Run||
-|1|Success||
-|2|Failure||
-
-
+|Value|Label|
+|---|---|
+|0|**Not Run**|
+|1|**Success**|
+|2|**Failure**|
 
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
 |Property|Value|
-|--------|-----|
-|Description|Shows who last updated the record.|
-|DisplayName|Modified By|
+|---|---|
+|Description|**Shows who last updated the record.**|
+|DisplayName|**Modified By**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedby|
+|LogicalName|`modifiedby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedByName"></a> ModifiedByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyname|
-|MaxLength|160|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedByYomiName"></a> ModifiedByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyyominame|
-|MaxLength|160|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_ModifiedOn"></a> ModifiedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Shows the date and time when the record was last updated. The date and time are displayed in the time zone selected in Microsoft Dynamics 365 options.|
-|DisplayName|Modified On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Shows the date and time when the record was last updated. The date and time are displayed in the time zone selected in Microsoft Dynamics 365 options.**|
+|DisplayName|**Modified On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedon|
+|LogicalName|`modifiedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_ModifiedOnBehalfBy"></a> ModifiedOnBehalfBy
 
 |Property|Value|
-|--------|-----|
-|Description|Shows who last updated the record on behalf of another user.|
-|DisplayName|Modified By (Delegate)|
+|---|---|
+|Description|**Shows who last updated the record on behalf of another user.**|
+|DisplayName|**Modified By (Delegate)**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedonbehalfby|
+|LogicalName|`modifiedonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedOnBehalfByName"></a> ModifiedOnBehalfByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyname|
-|MaxLength|160|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedOnBehalfByYomiName"></a> ModifiedOnBehalfByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyyominame|
-|MaxLength|160|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_NextScheduledACTSyncInSeconds"></a> NextScheduledACTSyncInSeconds
 
-**Added by**: msft_ServerSideSync_Extensions Solution
-
 |Property|Value|
-|--------|-----|
-|Description|The next scheduled ACT sync delay, in seconds, to apply to the mailbox.|
-|DisplayName|Next Scheduled ACT Sync Delay In Seconds|
-|Format|None|
+|---|---|
+|Description|**The next scheduled ACT sync delay, in seconds, to apply to the mailbox.**|
+|DisplayName|**Next Scheduled ACT Sync Delay In Seconds**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|nextscheduledactsyncinseconds|
-|MaxValue|2147483647|
-|MinValue|0|
+|LogicalName|`nextscheduledactsyncinseconds`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|0|
 
 ### <a name="BKMK_NoACTCount"></a> NoACTCount
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Zero appointment, contact, task count for mailbox|
-|Format|None|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Zero appointment, contact, task count for mailbox**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|noactcount|
-|MaxValue|2147483647|
-|MinValue|0|
+|LogicalName|`noactcount`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|0|
 
 ### <a name="BKMK_NoEmailCount"></a> NoEmailCount
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Zero email count for mailbox|
-|Format|None|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Zero email count for mailbox**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|noemailcount|
-|MaxValue|2147483647|
-|MinValue|0|
+|LogicalName|`noemailcount`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|0|
 
 ### <a name="BKMK_OfficeAppsDeploymentCompleteOn"></a> OfficeAppsDeploymentCompleteOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when the last office apps deployment was completed for a mailbox record.|
-|DisplayName|Office Apps Deployment Completed On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Date and time when the last office apps deployment was completed for a mailbox record.**|
+|DisplayName|**Office Apps Deployment Completed On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|officeappsdeploymentcompleteon|
+|LogicalName|`officeappsdeploymentcompleteon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_OfficeAppsDeploymentError"></a> OfficeAppsDeploymentError
 
 |Property|Value|
-|--------|-----|
-|Description|The Office Apps deployment error.|
-|DisplayName|Office Apps Deployment Error|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**The Office Apps deployment error.**|
+|DisplayName|**Office Apps Deployment Error**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|officeappsdeploymenterror|
-|MaxLength|2048|
+|LogicalName|`officeappsdeploymenterror`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|2048|
 
 ### <a name="BKMK_OrganizationId"></a> OrganizationId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the organization associated with the record.|
-|DisplayName|Organization|
+|---|---|
+|Description|**Unique identifier of the organization associated with the record.**|
+|DisplayName|**Organization**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|organizationid|
+|LogicalName|`organizationid`|
 |RequiredLevel|SystemRequired|
-|Targets|organization|
 |Type|Lookup|
-
-
-### <a name="BKMK_OrganizationIdName"></a> OrganizationIdName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|organizationidname|
-|MaxLength|160|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|organization|
 
 ### <a name="BKMK_OwnerIdName"></a> OwnerIdName
 
 |Property|Value|
-|--------|-----|
-|Description|Name of the owner|
+|---|---|
+|Description|**Name of the owner**|
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owneridname|
-|MaxLength|160|
+|LogicalName|`owneridname`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|160|
 
 ### <a name="BKMK_OwnerIdYomiName"></a> OwnerIdYomiName
 
 |Property|Value|
-|--------|-----|
-|Description|Yomi name of the owner|
+|---|---|
+|Description|**Yomi name of the owner**|
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owneridyominame|
-|MaxLength|160|
+|LogicalName|`owneridyominame`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|160|
 
 ### <a name="BKMK_OwningBusinessUnit"></a> OwningBusinessUnit
 
 |Property|Value|
-|--------|-----|
-|Description|Select the business unit that owns the record.|
-|DisplayName|Owning Business Unit|
+|---|---|
+|Description|**Select the business unit that owns the record.**|
+|DisplayName|**Owning Business Unit**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|owningbusinessunit|
+|LogicalName|`owningbusinessunit`|
 |RequiredLevel|None|
-|Targets|businessunit|
 |Type|Lookup|
-
-
-### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|owningbusinessunitname|
-|MaxLength|160|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|businessunit|
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for the team that owns the record.|
-|DisplayName|Owning Team|
+|---|---|
+|Description|**Unique identifier for the team that owns the record.**|
+|DisplayName|**Owning Team**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owningteam|
+|LogicalName|`owningteam`|
 |RequiredLevel|None|
-|Targets|team|
 |Type|Lookup|
-
+|Targets|team|
 
 ### <a name="BKMK_OwningUser"></a> OwningUser
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for the user that owns the record.|
-|DisplayName|Owning User|
+|---|---|
+|Description|**Unique identifier for the user that owns the record.**|
+|DisplayName|**Owning User**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owninguser|
+|LogicalName|`owninguser`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_ProcessedTimes"></a> ProcessedTimes
 
 |Property|Value|
-|--------|-----|
-|Description|The number of times mailbox has processed|
-|DisplayName|Monitor Performance|
-|Format|None|
+|---|---|
+|Description|**The number of times mailbox has processed**|
+|DisplayName|**Monitor Performance**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|processedtimes|
-|MaxValue|2147483647|
-|MinValue|-1|
+|LogicalName|`processedtimes`|
 |RequiredLevel|None|
 |Type|Integer|
-
-
-### <a name="BKMK_ProcessingLastAttemptedOn"></a> ProcessingLastAttemptedOn
-
-|Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when the processing of the mailbox was last attempted.|
-|DisplayName|Date Processing Last Attempted|
-|Format|DateAndTime|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|processinglastattemptedon|
-|RequiredLevel|None|
-|Type|DateTime|
-
+|MaxValue|2147483647|
+|MinValue|-1|
 
 ### <a name="BKMK_ProcessingStateCode"></a> ProcessingStateCode
 
 |Property|Value|
-|--------|-----|
-|Description|Information that indicates whether email will be processed for this mailbox|
-|DisplayName|Mailbox Processing State|
-|Format|None|
+|---|---|
+|Description|**Information that indicates whether email will be processed for this mailbox**|
+|DisplayName|**Mailbox Processing State**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|processingstatecode|
-|MaxValue|2147483647|
-|MinValue|0|
+|LogicalName|`processingstatecode`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|0|
 
 ### <a name="BKMK_ReceivingPostponedUntil"></a> ReceivingPostponedUntil
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|For internal use only.|
-|DisplayName|Postpone receiving emails for the mailbox until the specified data and time.|
-|Format|DateOnly|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Postpone receiving emails for the mailbox until the specified data and time.**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|receivingpostponeduntil|
+|LogicalName|`receivingpostponeduntil`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateOnly|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_ReceivingPostponedUntilForACT"></a> ReceivingPostponedUntilForACT
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|For internal use only.|
-|DisplayName|Postpone processing Appointments, Contacts, and Tasks for the mailbox until the specified data and time.|
-|Format|DateOnly|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Postpone processing Appointments, Contacts, and Tasks for the mailbox until the specified data and time.**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|receivingpostponeduntilforact|
+|LogicalName|`receivingpostponeduntilforact`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateOnly|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_RegardingObjectId"></a> RegardingObjectId
 
 |Property|Value|
-|--------|-----|
-|Description|Choose the user associated to the mailbox.|
-|DisplayName|Regarding|
+|---|---|
+|Description|**Choose the user associated to the mailbox.**|
+|DisplayName|**Regarding**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|regardingobjectid|
+|LogicalName|`regardingobjectid`|
 |RequiredLevel|None|
-|Targets|queue,systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_RegardingObjectIdName"></a> RegardingObjectIdName
-
-|Property|Value|
-|--------|-----|
-|Description|Name for User associated with Mailbox.|
-|DisplayName|Regarding Name|
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|regardingobjectidname|
-|MaxLength|200|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|queue, systemuser|
 
 ### <a name="BKMK_RegardingObjectTypeCode"></a> RegardingObjectTypeCode
 
 |Property|Value|
-|--------|-----|
-|Description|Object Type of the entity associated with the mailbox.|
-|DisplayName|Regarding Object Type Code|
+|---|---|
+|Description|**Object Type of the entity associated with the mailbox.**|
+|DisplayName|**Regarding Object Type Code**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|regardingobjecttypecode|
+|LogicalName|`regardingobjecttypecode`|
 |RequiredLevel|None|
 |Type|EntityName|
 
+### <a name="BKMK_TestAndEnableLastAttemptedBy"></a> TestAndEnableLastAttemptedBy
+
+|Property|Value|
+|---|---|
+|Description|**The user who last attempted to Test and Enable the mailbox.**|
+|DisplayName|**Test and Enable Last Attempted By**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`testandenablelastattemptedby`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|systemuser|
+
+### <a name="BKMK_TestAndEnableLastAttemptedOn"></a> TestAndEnableLastAttemptedOn
+
+|Property|Value|
+|---|---|
+|Description|**The date and time of the last test and enable attempt.**|
+|DisplayName|**Test and Enable Last Attempted On**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`testandenablelastattemptedon`|
+|RequiredLevel|None|
+|Type|DateTime|
+|CanChangeDateTimeBehavior|True|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_TransientFailureCount"></a> TransientFailureCount
 
 |Property|Value|
-|--------|-----|
-|Description|Concatenation of transient failure counts of all mailbox operations.|
-|DisplayName|Transient Failure Count|
-|Format|None|
+|---|---|
+|Description|**Concatenation of transient failure counts of all mailbox operations.**|
+|DisplayName|**Transient Failure Count**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|transientfailurecount|
-|MaxValue|2147483647|
-|MinValue|0|
+|LogicalName|`transientfailurecount`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|0|
 
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
 |Property|Value|
-|--------|-----|
-|Description|Version number of the mailbox.|
-|DisplayName|Version Number|
+|---|---|
+|Description|**Version number of the mailbox.**|
+|DisplayName|**Version Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|versionnumber|
-|MaxValue|9223372036854775807|
-|MinValue|-9223372036854775808|
+|LogicalName|`versionnumber`|
 |RequiredLevel|None|
 |Type|BigInt|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
 
-<a name="onetomany"></a>
+## Many-to-One relationships
 
-## One-To-Many Relationships
+These relationships are many-to-one. Listed by **SchemaName**.
 
-Listed by **SchemaName**.
-
-- [systemuser_defaultmailbox_mailbox](#BKMK_systemuser_defaultmailbox_mailbox)
-- [queue_defaultmailbox_mailbox](#BKMK_queue_defaultmailbox_mailbox)
-- [activitypointer_sendermailboxid_mailbox](#BKMK_activitypointer_sendermailboxid_mailbox)
-- [Mailbox_MailboxTrackingFolder](#BKMK_Mailbox_MailboxTrackingFolder)
-- [Mailbox_Annotation](#BKMK_Mailbox_Annotation)
-- [Mailbox_SyncErrors](#BKMK_Mailbox_SyncErrors)
-- [mailbox_processsessions](#BKMK_mailbox_processsessions)
-- [mailbox_asyncoperations](#BKMK_mailbox_asyncoperations)
-- [tracelog_Mailbox](#BKMK_tracelog_Mailbox)
-- [email_sendermailboxid_mailbox](#BKMK_email_sendermailboxid_mailbox)
-- [mailbox_email_ReceivingMailboxId](#BKMK_mailbox_email_ReceivingMailboxId)
-- [chat_mailbox_sendermailboxid](#BKMK_chat_mailbox_sendermailboxid)
-
-
-### <a name="BKMK_systemuser_defaultmailbox_mailbox"></a> systemuser_defaultmailbox_mailbox
-
-Same as the [systemuser_defaultmailbox_mailbox](systemuser.md#BKMK_systemuser_defaultmailbox_mailbox) many-to-one relationship for the [systemuser](systemuser.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|systemuser|
-|ReferencingAttribute|defaultmailbox|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|systemuser_defaultmailbox_mailbox|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_queue_defaultmailbox_mailbox"></a> queue_defaultmailbox_mailbox
-
-Same as the [queue_defaultmailbox_mailbox](queue.md#BKMK_queue_defaultmailbox_mailbox) many-to-one relationship for the [queue](queue.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|queue|
-|ReferencingAttribute|defaultmailbox|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|queue_defaultmailbox_mailbox|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_activitypointer_sendermailboxid_mailbox"></a> activitypointer_sendermailboxid_mailbox
-
-Same as the [activitypointer_sendermailboxid_mailbox](activitypointer.md#BKMK_activitypointer_sendermailboxid_mailbox) many-to-one relationship for the [activitypointer](activitypointer.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|activitypointer|
-|ReferencingAttribute|sendermailboxid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|activitypointer_sendermailboxid_mailbox|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_Mailbox_MailboxTrackingFolder"></a> Mailbox_MailboxTrackingFolder
-
-Same as the [Mailbox_MailboxTrackingFolder](mailboxtrackingfolder.md#BKMK_Mailbox_MailboxTrackingFolder) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|mailboxtrackingfolder|
-|ReferencingAttribute|mailboxid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|Mailbox_MailboxTrackingFolder|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_Mailbox_Annotation"></a> Mailbox_Annotation
-
-Same as the [Mailbox_Annotation](annotation.md#BKMK_Mailbox_Annotation) many-to-one relationship for the [annotation](annotation.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|annotation|
-|ReferencingAttribute|objectid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|Mailbox_Annotation|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: Cascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
-
-
-### <a name="BKMK_Mailbox_SyncErrors"></a> Mailbox_SyncErrors
-
-Same as the [Mailbox_SyncErrors](syncerror.md#BKMK_Mailbox_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|syncerror|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|Mailbox_SyncErrors|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: Cascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
-
-
-### <a name="BKMK_mailbox_processsessions"></a> mailbox_processsessions
-
-Same as the [mailbox_processsessions](processsession.md#BKMK_mailbox_processsessions) many-to-one relationship for the [processsession](processsession.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|processsession|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|mailbox_processsessions|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 110|
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_mailbox_asyncoperations"></a> mailbox_asyncoperations
-
-Same as the [mailbox_asyncoperations](asyncoperation.md#BKMK_mailbox_asyncoperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|asyncoperation|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|mailbox_asyncoperations|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_tracelog_Mailbox"></a> tracelog_Mailbox
-
-Same as the [tracelog_Mailbox](tracelog.md#BKMK_tracelog_Mailbox) many-to-one relationship for the [tracelog](tracelog.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|tracelog|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|tracelog_Mailbox|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_email_sendermailboxid_mailbox"></a> email_sendermailboxid_mailbox
-
-Same as the [email_sendermailboxid_mailbox](email.md#BKMK_email_sendermailboxid_mailbox) many-to-one relationship for the [email](email.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|email|
-|ReferencingAttribute|sendermailboxid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|email_sendermailboxid_mailbox|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_mailbox_email_ReceivingMailboxId"></a> mailbox_email_ReceivingMailboxId
-
-**Added by**: msft_ActivitiesInfra_Extensions Solution
-
-Same as the [mailbox_email_ReceivingMailboxId](email.md#BKMK_mailbox_email_ReceivingMailboxId) many-to-one relationship for the [email](email.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|email|
-|ReferencingAttribute|receivingmailboxid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|mailbox_email_ReceivingMailboxId|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_chat_mailbox_sendermailboxid"></a> chat_mailbox_sendermailboxid
-
-**Added by**: Activities Patch Solution
-
-Same as the [chat_mailbox_sendermailboxid](chat.md#BKMK_chat_mailbox_sendermailboxid) many-to-one relationship for the [chat](chat.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|chat|
-|ReferencingAttribute|sendermailboxid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|chat_mailbox_sendermailboxid|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-<a name="manytoone"></a>
-
-## Many-To-One Relationships
-
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
-
+- [business_unit_mailbox](#BKMK_business_unit_mailbox)
+- [emailserverprofile_mailbox](#BKMK_emailserverprofile_mailbox)
+- [FileAttachment_Mailbox_ExchangeSyncStateXmlFileRef](#BKMK_FileAttachment_Mailbox_ExchangeSyncStateXmlFileRef)
 - [lk_mailbox_createdby](#BKMK_lk_mailbox_createdby)
 - [lk_mailbox_createdonbehalfby](#BKMK_lk_mailbox_createdonbehalfby)
 - [lk_mailbox_modifiedby](#BKMK_lk_mailbox_modifiedby)
 - [lk_mailbox_modifiedonbehalfby](#BKMK_lk_mailbox_modifiedonbehalfby)
-- [user_mailbox](#BKMK_user_mailbox)
-- [team_mailbox](#BKMK_team_mailbox)
-- [business_unit_mailbox](#BKMK_business_unit_mailbox)
-- [emailserverprofile_mailbox](#BKMK_emailserverprofile_mailbox)
-- [organization_mailbox](#BKMK_organization_mailbox)
+- [mailbox_emailaddressapprovedby_systemuser](#BKMK_mailbox_emailaddressapprovedby_systemuser)
 - [mailbox_regarding_queue](#BKMK_mailbox_regarding_queue)
 - [mailbox_regarding_systemuser](#BKMK_mailbox_regarding_systemuser)
-
-
-### <a name="BKMK_lk_mailbox_createdby"></a> lk_mailbox_createdby
-
-See the [lk_mailbox_createdby](systemuser.md#BKMK_lk_mailbox_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_mailbox_createdonbehalfby"></a> lk_mailbox_createdonbehalfby
-
-See the [lk_mailbox_createdonbehalfby](systemuser.md#BKMK_lk_mailbox_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_mailbox_modifiedby"></a> lk_mailbox_modifiedby
-
-See the [lk_mailbox_modifiedby](systemuser.md#BKMK_lk_mailbox_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_mailbox_modifiedonbehalfby"></a> lk_mailbox_modifiedonbehalfby
-
-See the [lk_mailbox_modifiedonbehalfby](systemuser.md#BKMK_lk_mailbox_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_user_mailbox"></a> user_mailbox
-
-See the [user_mailbox](systemuser.md#BKMK_user_mailbox) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_team_mailbox"></a> team_mailbox
-
-See the [team_mailbox](team.md#BKMK_team_mailbox) one-to-many relationship for the [team](team.md) table/entity.
+- [mailbox_testandenablelastattemptedby_systemuser](#BKMK_mailbox_testandenablelastattemptedby_systemuser)
+- [organization_mailbox](#BKMK_organization_mailbox)
+- [owner_mailbox](#BKMK_owner_mailbox)
+- [team_mailbox](#BKMK_team_mailbox)
+- [user_mailbox](#BKMK_user_mailbox)
 
 ### <a name="BKMK_business_unit_mailbox"></a> business_unit_mailbox
 
-See the [business_unit_mailbox](businessunit.md#BKMK_business_unit_mailbox) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
+One-To-Many Relationship: [businessunit business_unit_mailbox](businessunit.md#BKMK_business_unit_mailbox)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`businessunit`|
+|ReferencedAttribute|`businessunitid`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencingEntityNavigationPropertyName|`owningbusinessunit`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_emailserverprofile_mailbox"></a> emailserverprofile_mailbox
 
-See the [emailserverprofile_mailbox](emailserverprofile.md#BKMK_emailserverprofile_mailbox) one-to-many relationship for the [emailserverprofile](emailserverprofile.md) table/entity.
+One-To-Many Relationship: [emailserverprofile emailserverprofile_mailbox](emailserverprofile.md#BKMK_emailserverprofile_mailbox)
 
-### <a name="BKMK_organization_mailbox"></a> organization_mailbox
+|Property|Value|
+|---|---|
+|ReferencedEntity|`emailserverprofile`|
+|ReferencedAttribute|`emailserverprofileid`|
+|ReferencingAttribute|`emailserverprofile`|
+|ReferencingEntityNavigationPropertyName|`emailserverprofile`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-See the [organization_mailbox](organization.md#BKMK_organization_mailbox) one-to-many relationship for the [organization](organization.md) table/entity.
+### <a name="BKMK_FileAttachment_Mailbox_ExchangeSyncStateXmlFileRef"></a> FileAttachment_Mailbox_ExchangeSyncStateXmlFileRef
+
+One-To-Many Relationship: [fileattachment FileAttachment_Mailbox_ExchangeSyncStateXmlFileRef](fileattachment.md#BKMK_FileAttachment_Mailbox_ExchangeSyncStateXmlFileRef)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`fileattachment`|
+|ReferencedAttribute|`fileattachmentid`|
+|ReferencingAttribute|`exchangesyncstatexmlfileref`|
+|ReferencingEntityNavigationPropertyName|`exchangesyncstatexmlfileref`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_mailbox_createdby"></a> lk_mailbox_createdby
+
+One-To-Many Relationship: [systemuser lk_mailbox_createdby](systemuser.md#BKMK_lk_mailbox_createdby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdby`|
+|ReferencingEntityNavigationPropertyName|`createdby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_mailbox_createdonbehalfby"></a> lk_mailbox_createdonbehalfby
+
+One-To-Many Relationship: [systemuser lk_mailbox_createdonbehalfby](systemuser.md#BKMK_lk_mailbox_createdonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`createdonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_mailbox_modifiedby"></a> lk_mailbox_modifiedby
+
+One-To-Many Relationship: [systemuser lk_mailbox_modifiedby](systemuser.md#BKMK_lk_mailbox_modifiedby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedby`|
+|ReferencingEntityNavigationPropertyName|`modifiedby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_mailbox_modifiedonbehalfby"></a> lk_mailbox_modifiedonbehalfby
+
+One-To-Many Relationship: [systemuser lk_mailbox_modifiedonbehalfby](systemuser.md#BKMK_lk_mailbox_modifiedonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`modifiedonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_mailbox_emailaddressapprovedby_systemuser"></a> mailbox_emailaddressapprovedby_systemuser
+
+One-To-Many Relationship: [systemuser mailbox_emailaddressapprovedby_systemuser](systemuser.md#BKMK_mailbox_emailaddressapprovedby_systemuser)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`emailaddressapprovedby`|
+|ReferencingEntityNavigationPropertyName|`emailaddressapprovedby_mailbox`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_mailbox_regarding_queue"></a> mailbox_regarding_queue
 
-See the [mailbox_regarding_queue](queue.md#BKMK_mailbox_regarding_queue) one-to-many relationship for the [queue](queue.md) table/entity.
+One-To-Many Relationship: [queue mailbox_regarding_queue](queue.md#BKMK_mailbox_regarding_queue)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`queue`|
+|ReferencedAttribute|`queueid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_queue`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `Cascade`<br />Reparent: `Cascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_mailbox_regarding_systemuser"></a> mailbox_regarding_systemuser
 
-See the [mailbox_regarding_systemuser](systemuser.md#BKMK_mailbox_regarding_systemuser) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+One-To-Many Relationship: [systemuser mailbox_regarding_systemuser](systemuser.md#BKMK_mailbox_regarding_systemuser)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `Cascade`<br />Reparent: `Cascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_mailbox_testandenablelastattemptedby_systemuser"></a> mailbox_testandenablelastattemptedby_systemuser
+
+One-To-Many Relationship: [systemuser mailbox_testandenablelastattemptedby_systemuser](systemuser.md#BKMK_mailbox_testandenablelastattemptedby_systemuser)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`testandenablelastattemptedby`|
+|ReferencingEntityNavigationPropertyName|`testandenablelastattemptedby_mailbox`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_organization_mailbox"></a> organization_mailbox
+
+One-To-Many Relationship: [organization organization_mailbox](organization.md#BKMK_organization_mailbox)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`organization`|
+|ReferencedAttribute|`organizationid`|
+|ReferencingAttribute|`organizationid`|
+|ReferencingEntityNavigationPropertyName|`organizationid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_owner_mailbox"></a> owner_mailbox
+
+One-To-Many Relationship: [owner owner_mailbox](owner.md#BKMK_owner_mailbox)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`owner`|
+|ReferencedAttribute|`ownerid`|
+|ReferencingAttribute|`ownerid`|
+|ReferencingEntityNavigationPropertyName|`ownerid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_team_mailbox"></a> team_mailbox
+
+One-To-Many Relationship: [team team_mailbox](team.md#BKMK_team_mailbox)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`team`|
+|ReferencedAttribute|`teamid`|
+|ReferencingAttribute|`owningteam`|
+|ReferencingEntityNavigationPropertyName|`owningteam`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_user_mailbox"></a> user_mailbox
+
+One-To-Many Relationship: [systemuser user_mailbox](systemuser.md#BKMK_user_mailbox)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`owninguser`|
+|ReferencingEntityNavigationPropertyName|`owninguser`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+
+## One-to-Many relationships
+
+These relationships are one-to-many. Listed by **SchemaName**.
+
+- [activitypointer_sendermailboxid_mailbox](#BKMK_activitypointer_sendermailboxid_mailbox)
+- [adx_inviteredemption_mailbox_sendermailboxid](#BKMK_adx_inviteredemption_mailbox_sendermailboxid)
+- [adx_portalcomment_mailbox_sendermailboxid](#BKMK_adx_portalcomment_mailbox_sendermailboxid)
+- [chat_mailbox_sendermailboxid](#BKMK_chat_mailbox_sendermailboxid)
+- [email_sendermailboxid_mailbox](#BKMK_email_sendermailboxid_mailbox)
+- [Mailbox_Annotation](#BKMK_Mailbox_Annotation)
+- [mailbox_asyncoperations](#BKMK_mailbox_asyncoperations)
+- [mailbox_email_ReceivingMailboxId](#BKMK_mailbox_email_ReceivingMailboxId)
+- [mailbox_FileAttachments](#BKMK_mailbox_FileAttachments)
+- [Mailbox_MailboxTrackingFolder](#BKMK_Mailbox_MailboxTrackingFolder)
+- [mailbox_processsessions](#BKMK_mailbox_processsessions)
+- [Mailbox_SyncErrors](#BKMK_Mailbox_SyncErrors)
+- [queue_defaultmailbox_mailbox](#BKMK_queue_defaultmailbox_mailbox)
+- [systemuser_defaultmailbox_mailbox](#BKMK_systemuser_defaultmailbox_mailbox)
+- [tracelog_Mailbox](#BKMK_tracelog_Mailbox)
+
+### <a name="BKMK_activitypointer_sendermailboxid_mailbox"></a> activitypointer_sendermailboxid_mailbox
+
+Many-To-One Relationship: [activitypointer activitypointer_sendermailboxid_mailbox](activitypointer.md#BKMK_activitypointer_sendermailboxid_mailbox)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`activitypointer`|
+|ReferencingAttribute|`sendermailboxid`|
+|ReferencedEntityNavigationPropertyName|`activitypointer_sendermailboxid_mailbox`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_adx_inviteredemption_mailbox_sendermailboxid"></a> adx_inviteredemption_mailbox_sendermailboxid
+
+Many-To-One Relationship: [adx_inviteredemption adx_inviteredemption_mailbox_sendermailboxid](adx_inviteredemption.md#BKMK_adx_inviteredemption_mailbox_sendermailboxid)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`adx_inviteredemption`|
+|ReferencingAttribute|`sendermailboxid`|
+|ReferencedEntityNavigationPropertyName|`adx_inviteredemption_mailbox_sendermailboxid`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_adx_portalcomment_mailbox_sendermailboxid"></a> adx_portalcomment_mailbox_sendermailboxid
+
+Many-To-One Relationship: [adx_portalcomment adx_portalcomment_mailbox_sendermailboxid](adx_portalcomment.md#BKMK_adx_portalcomment_mailbox_sendermailboxid)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`adx_portalcomment`|
+|ReferencingAttribute|`sendermailboxid`|
+|ReferencedEntityNavigationPropertyName|`adx_portalcomment_mailbox_sendermailboxid`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_chat_mailbox_sendermailboxid"></a> chat_mailbox_sendermailboxid
+
+Many-To-One Relationship: [chat chat_mailbox_sendermailboxid](chat.md#BKMK_chat_mailbox_sendermailboxid)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`chat`|
+|ReferencingAttribute|`sendermailboxid`|
+|ReferencedEntityNavigationPropertyName|`chat_mailbox_sendermailboxid`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_email_sendermailboxid_mailbox"></a> email_sendermailboxid_mailbox
+
+Many-To-One Relationship: [email email_sendermailboxid_mailbox](email.md#BKMK_email_sendermailboxid_mailbox)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`email`|
+|ReferencingAttribute|`sendermailboxid`|
+|ReferencedEntityNavigationPropertyName|`email_sendermailboxid_mailbox`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_Mailbox_Annotation"></a> Mailbox_Annotation
+
+Many-To-One Relationship: [annotation Mailbox_Annotation](annotation.md#BKMK_Mailbox_Annotation)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`annotation`|
+|ReferencingAttribute|`objectid`|
+|ReferencedEntityNavigationPropertyName|`Mailbox_Annotation`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_mailbox_asyncoperations"></a> mailbox_asyncoperations
+
+Many-To-One Relationship: [asyncoperation mailbox_asyncoperations](asyncoperation.md#BKMK_mailbox_asyncoperations)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`asyncoperation`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`mailbox_asyncoperations`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_mailbox_email_ReceivingMailboxId"></a> mailbox_email_ReceivingMailboxId
+
+Many-To-One Relationship: [email mailbox_email_ReceivingMailboxId](email.md#BKMK_mailbox_email_ReceivingMailboxId)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`email`|
+|ReferencingAttribute|`receivingmailboxid`|
+|ReferencedEntityNavigationPropertyName|`mailbox_email_ReceivingMailboxId`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_mailbox_FileAttachments"></a> mailbox_FileAttachments
+
+Many-To-One Relationship: [fileattachment mailbox_FileAttachments](fileattachment.md#BKMK_mailbox_FileAttachments)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`fileattachment`|
+|ReferencingAttribute|`objectid`|
+|ReferencedEntityNavigationPropertyName|`mailbox_FileAttachments`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_Mailbox_MailboxTrackingFolder"></a> Mailbox_MailboxTrackingFolder
+
+Many-To-One Relationship: [mailboxtrackingfolder Mailbox_MailboxTrackingFolder](mailboxtrackingfolder.md#BKMK_Mailbox_MailboxTrackingFolder)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`mailboxtrackingfolder`|
+|ReferencingAttribute|`mailboxid`|
+|ReferencedEntityNavigationPropertyName|`Mailbox_MailboxTrackingFolder`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_mailbox_processsessions"></a> mailbox_processsessions
+
+Many-To-One Relationship: [processsession mailbox_processsessions](processsession.md#BKMK_mailbox_processsessions)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`processsession`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`mailbox_processsessions`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 110<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_Mailbox_SyncErrors"></a> Mailbox_SyncErrors
+
+Many-To-One Relationship: [syncerror Mailbox_SyncErrors](syncerror.md#BKMK_Mailbox_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`syncerror`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`Mailbox_SyncErrors`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_queue_defaultmailbox_mailbox"></a> queue_defaultmailbox_mailbox
+
+Many-To-One Relationship: [queue queue_defaultmailbox_mailbox](queue.md#BKMK_queue_defaultmailbox_mailbox)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`queue`|
+|ReferencingAttribute|`defaultmailbox`|
+|ReferencedEntityNavigationPropertyName|`queue_defaultmailbox_mailbox`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_systemuser_defaultmailbox_mailbox"></a> systemuser_defaultmailbox_mailbox
+
+Many-To-One Relationship: [systemuser systemuser_defaultmailbox_mailbox](systemuser.md#BKMK_systemuser_defaultmailbox_mailbox)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`systemuser`|
+|ReferencingAttribute|`defaultmailbox`|
+|ReferencedEntityNavigationPropertyName|`systemuser_defaultmailbox_mailbox`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_tracelog_Mailbox"></a> tracelog_Mailbox
+
+Many-To-One Relationship: [tracelog tracelog_Mailbox](tracelog.md#BKMK_tracelog_Mailbox)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`tracelog`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`tracelog_Mailbox`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
-<xref href="Microsoft.Dynamics.CRM.mailbox?text=mailbox EntityType" />
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
+[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
+<xref:Microsoft.Dynamics.CRM.mailbox?displayProperty=fullName>

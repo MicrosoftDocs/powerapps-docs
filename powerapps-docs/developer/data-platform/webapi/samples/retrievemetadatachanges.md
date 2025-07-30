@@ -1,9 +1,9 @@
 ---
-title: "Web API Query schema definitions and detect changes sample (C#) (Microsoft Dataverse)| Microsoft Docs"
-description: "This sample demonstrates the use of the RetrieveMetadataChanges Function using the Dataverse Web API to schema definitions and detect changes so that you can create a persistent cache."
+title: "Web API Query schema definitions and detect changes sample (C#)"
+description: "This sample demonstrates the use of the RetrieveMetadataChanges Function using the Dataverse Web API to query schema definitions and detect changes so that you can create a persistent cache."
 ms.date: 10/12/2022
-author: NHelgren
-ms.author: nhelgren
+author: mkannapiran
+ms.author: kamanick
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
@@ -17,9 +17,9 @@ contributors:
 
 This sample shows how to retrieve and detect changes in table definitions using the [RetrieveMetadataChanges Action](xref:Microsoft.Dynamics.CRM.RetrieveMetadataChanges). 
 
-You can view the sample at [PowerApps-Samples/dataverse/webapi/C#-NETCore/Schema/RetrieveMetadataChanges/](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23-NETx/RetrieveMetadataChanges)
+You can view the sample at [PowerApps-Samples/dataverse/webapi/C#-NETCore/Schema/RetrieveMetadataChanges/](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/CSharp-NETx/RetrieveMetadataChanges)
 
-See these topics for explaination of functionality:
+See these articles for explanation of functionality:
 
 - [Query schema definitions](../../query-schema-definitions.md)
 - [Cache Schema data](../../cache-schema-data.md)
@@ -28,7 +28,7 @@ This sample uses the common helper code in the [WebAPIService class library (C#)
 
 ## Prerequisites
 
-The following is required to build and run this sample:
+The following prerequisites are required to build and run this sample:
 
 - Microsoft Visual Studio 2022.
 - Access to Dataverse with privileges to perform data operations.
@@ -38,22 +38,22 @@ The following is required to build and run this sample:
 ## How to run this sample
 
 1. Clone or download the [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples) repository.
-1. Locate the [/dataverse/webapi/C#-NETx/RetrieveMetadataChanges/](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23-NETx/RetrieveMetadataChanges) folder.
+1. Locate the [/dataverse/webapi/C#-NETx/RetrieveMetadataChanges/](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/CSharp-NETx/RetrieveMetadataChanges) folder.
 1. Open the `RetrieveMetadataChanges.sln` file using Visual Studio 2022
 1. Edit the `appsettings.json` file to set the following property values:
 
    |Property|Instructions  |
    |---------|---------|
-   |`Url`|The Url for your environment. Replace the placeholder `https://yourorg.api.crm.dynamics.com` value with the value for your environment. See [View developer resources](../../view-download-developer-resources.md) to find this. |
+   |`Url`|The Url for your environment. Replace the placeholder `https://yourorg.api.crm.dynamics.com` value with the value for your environment. See [View developer resources](../../view-download-developer-resources.md) to find the Url for your environment. |
    |`UserPrincipalName`|Replace the placeholder `you@yourorg.onmicrosoft.com` value with the UPN value you use to access the environment.|
    |`Password`|Replace the placeholder `yourPassword` value with the password you use.|
 
 1. Save the `appsettings.json` file
-1. Press F5 to run the sample.
+1. Press <kbd>F5</kbd> to run the sample.
 
 ## Code
 
-The code for this sample is here: [PowerApps-Samples/dataverse/webapi/C#-NETx/RetrieveMetadataChanges/Program.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/RetrieveMetadataChanges/Program.cs)
+The code for this sample is here: [PowerApps-Samples/dataverse/webapi/C#-NETx/RetrieveMetadataChanges/Program.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/CSharp-NETx/RetrieveMetadataChanges/Program.cs)
 
 ## Demonstrates
 
@@ -63,11 +63,11 @@ Then it creates a new column, retrieves the data for only that new column, which
 
 Then it deletes the column, retrieves data about deleted items and uses it to remove the deleted column definition from the cache.
 
-This sample has 6 sections:
+This sample has six sections:
 
 ### Define query
 
-Define a query using [EntityQueryExpression](xref:Microsoft.Dynamics.CRM.EntityQueryExpression) that will return all the Picklist choice columns from the contact table.
+Define a query using [EntityQueryExpression](xref:Microsoft.Dynamics.CRM.EntityQueryExpression) that returns all the Picklist choice columns from the contact table.
 
 ### Initialize cache
 
@@ -99,15 +99,15 @@ Delete the choice column created earlier.
 
 1. Create a new instance of [RetrieveMetadataChanges](xref:Microsoft.Dynamics.CRM.RetrieveMetadataChanges) with the `Query` parameter set to the original query.
 1. Set the `RetrieveMetadataChangesRequest.ClientVersionStamp` with the value previously returned from the second request.
-1. Set the `RetrieveMetadataChangesRequest.DeletedMetadataFilters` to `DeletedMetadataFilters.Attribute` because we are looking for deleted column definitions.
+1. Set the `RetrieveMetadataChangesRequest.DeletedMetadataFilters` to `DeletedMetadataFilters.Attribute` because we're looking for deleted column definitions.
 1. Send the request and get a [RetrieveMetadataChangesResponse](xref:Microsoft.Dynamics.CRM.RetrieveMetadataChangesResponse).
-1. Find the Id of the deleted choice column in the `RetrieveMetadataChangesResponse.DeletedMetadata`, using `DeletedMetadataFilters.Attribute` as an index value for the collection.
+1. Find the ID of the deleted choice column in the `RetrieveMetadataChangesResponse.DeletedMetadata`, using `DeletedMetadataFilters.Attribute` as an index value for the collection.
 1. Remove the column definition from the cache.
 1. Write a list of all the current columns in the cache.
 
 ## Clean up
 
-No clean up is required because all data created by this sample was deleted.
+No clean-up is required because all data created by this sample was deleted.
 
 ### See also
 
@@ -115,6 +115,6 @@ No clean up is required because all data created by this sample was deleted.
 [Cache Schema data](../../cache-schema-data.md)<br />
 [Use the Dataverse Web API](../overview.md)<br />
 [WebAPIService class library (C#)](webapiservice.md)<br />
-[Web API Metadata Operations Sample (C#)](webapiservice-metadata-operations.md)<br />
+[Web API table schema operations sample (C#)](webapiservice-metadata-operations.md)<br />
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

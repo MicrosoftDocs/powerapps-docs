@@ -1,8 +1,8 @@
 ---
-title: "setActiveProcessInstance (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "setActiveProcessInstance (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the setActiveProcessInstance method.
-author: HemantGaur
-ms.author: hemantg
+author: matthidinger
+ms.author: mahiding
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -13,8 +13,6 @@ contributors:
   - JimDaly
 ---
 # setActiveProcessInstance (Client API reference)
-
-
 
 [!INCLUDE[./includes/setActiveProcessInstance-description.md](./includes/setActiveProcessInstance-description.md)]
 
@@ -34,8 +32,4 @@ contributors:
 [getProcessInstances](getProcessInstances.md)   
 [formContext.data.process](../formContext-data-process.md)
  
-
-
-
-
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

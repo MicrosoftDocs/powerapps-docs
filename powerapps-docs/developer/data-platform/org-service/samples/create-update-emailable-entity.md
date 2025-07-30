@@ -2,8 +2,8 @@
 title: " Create and update an emailable table (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample showcases how to create and update emailable table." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/03/2022
-author: NHelgren
-ms.author: nhelgren
+author: mkannapiran
+ms.author: kamanick
 ms.reviewer: jdaly
 ms.topic: sample
 search.audienceType:
@@ -15,7 +15,7 @@ search.audienceType:
 This sample shows how to create and update a table using the [CreateEntityRequest](/dotnet/api/microsoft.xrm.sdk.messages.createentityrequest) message.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Create and update an emailable table sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/CreateUpdateEmailableEntity)
+> [SDK for .NET: Create and update an emailable table sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/CreateUpdateEmailableEntity)
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 

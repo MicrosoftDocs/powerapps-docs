@@ -1,16 +1,16 @@
 ---
 title: "Use keyboard shortcuts in Power Apps| MicrosoftDocs"
 description: How to use keyboard shortcuts
-author: sericks007
+author: shwetamurkute
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 04/12/2023
 ms.contributors:
 - yingchin
 ms.subservice: end-user
-ms.author: sericks
+ms.author: smurkute
 ms.custom: ""
-ms.reviewer: sericks
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser
@@ -27,7 +27,7 @@ Keyboard shortcuts give you an alternate way to do common tasks instead of using
 
 |Type | Shortcut key | Description |
 |----------------------|-------------------------|-----------------------------|
-| General | F2 | Activates the flyouts inlcuding toast notifcations. |
+| General | F2 | Activates the flyouts including toast notifcations. |
 | Landmark | Ctrl+F6 | Navigates you through the landmarks of a page in clockwise order. Remembers the last selected item in each landmark and will navigate to that last item. |
 | Landmark | Ctrl+F6+Shift | Navigates you through the landmarks of a page in counter clockwise order. Remembers the last selected item in each landmark and will navigate to that last item. |
 | General | Ctrl+[  or Ctrl+Shift+[ | Set the focus on first focusable element of the main page| 

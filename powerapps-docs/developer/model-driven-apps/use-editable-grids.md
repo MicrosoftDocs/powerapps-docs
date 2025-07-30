@@ -1,12 +1,11 @@
 ---
-title: "Use editable grids in model-driven apps | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Editable grid is a custom control that provides rich inline editing capabilities on web and mobile clients (Dynamics 365 for phones and Dynamics 365 for tablets) including the ability to group, sort, and filter data within the same grid so that you do not have to switch records or views." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.author: jasongre
-author: jasongre
-
+title: "Use editable grids in model-driven apps"
+description: "Editable grid is a custom control that provides rich inline editing capabilities on web and mobile clients (Dynamics 365 for phones and Dynamics 365 for tablets) including the ability to group, sort, and filter data within the same grid so that you do not have to switch records or views."
+author: clromano
+ms.author: clromano
 ms.date: 04/01/2022
 ms.reviewer: jdaly
-ms.topic: "article"
+ms.topic: how-to
 ms.subservice: mda-developer
 search.audienceType: 
   - developer
@@ -28,13 +27,13 @@ You can enable editable grids at the table level to use in the main grid, or at 
   
 1. Open [solution explorer](../../maker/model-driven-apps/advanced-navigation.md#solution-explorer).  
   
-2. In the **Tables** list, open the appropriate table, select the **Controls** tab, and then select **Add Control**.  
+1. In the **Tables** list, open the appropriate table, select the **Controls** tab, and then select **Add Control**.  
   
      ![Add Editable Grids custom control.](../../maker/model-driven-apps/media/add-editable-grids-custom-control.png "Add Editable Grids custom control")  
   
-3. In the **Add Control** dialog box, select **Editable Grid**, and then select **Add**.  
+1. In the **Add Control** dialog box, select **Editable Grid**, and then select **Add**.  
   
-4. In the **Editable Grid** row that's added, select the form factor(s) you want to apply the grid to. This makes the editable grid control the default control for the selected form factor(s).  
+1. In the **Editable Grid** row that's added, select the form factor(s) you want to apply the grid to. This makes the editable grid control the default control for the selected form factor(s).  
   
      ![Editable Grid row with form factor selection.](../../maker/model-driven-apps/media/editable-grid-row-wit-factor-selection.png "Editable Grid row with form factor selection")    
 
@@ -61,26 +60,21 @@ Not all tables and views support the use of editable grid.
   
 On the web client, a table will support editable grid if all of the following conditions are true:  
   
-- The table is customizable (IsCustomizable = true)  
-  
-- The table is either refreshed (IsAIRUpdated = true) or a custom table (IsCustomEntity = true)  
-  
-- The table is not a child table (IsChildEntity = false)  
+- The table is customizable (`IsCustomizable` = true)  
+- The table is either refreshed (`IsAIRUpdated` = true) or a custom table (`IsCustomEntity` = true)  
+- The table is not a child table (`IsChildEntity` = false)  
   
  On the mobile client, a table will support editable grid if the table can be displayed in the mobile client's site map.  
   
 For information about the tables that support editable grids, see **Supported out-of-the-box tables** section in [Make model-driven apps grids (lists) editable using the Editable Grid custom control](../../maker/model-driven-apps/make-grids-lists-editable-custom-control.md) 
-   
+
 Editable grids do not support roll up associated views (**Rollup type** = `Related`).  
   
 Use the following sample code to generate an XML file that you can open in Excel as an XML table to view the table-support information for editable controls. Excel will figure out the schema automatically, and display the information under the following columns:  
   
 - `LogicalName`: Logical name of table.  
-  
 - `DisplayName`: Display name of table.  
-  
 - `CanEnableEditableGridWeb`: Displays status  (True or False) whether editable grid is supported for the table  on the web client.  
-  
 - `CanEnableEditableGridMobile`: Displays status (True or False) whether editable grid is supported for the table on mobile clients. (Dynamics 365 for phones and Dynamics 365 for tablets).  
   
 ```csharp  
@@ -295,9 +289,10 @@ namespace Microsoft.Crm.Sdk.Samples
 }  
 ```  
   
-### See also  
- [Grids and subgrids in model-driven apps (Client API reference)](clientapi/reference/grids.md)   
- [Make model-driven apps grids (lists) editable using the editable grid custom control](../../maker/model-driven-apps/make-grids-lists-editable-custom-control.md)
+### See also
+
+[Grids and subgrids in model-driven apps (Client API reference)](clientapi/reference/grids.md)   
+[Make model-driven apps grids (lists) editable using the editable grid custom control](../../maker/model-driven-apps/make-grids-lists-editable-custom-control.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

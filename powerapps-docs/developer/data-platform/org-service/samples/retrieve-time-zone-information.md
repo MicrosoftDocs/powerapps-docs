@@ -18,7 +18,7 @@ contributors:
 This sample shows how to retrieve time zone information.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Retrieve time zone information sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/RetrieveTimeZone)
+> [SDK for .NET: Retrieve time zone information sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/RetrieveTimeZone)
 
 ## How to run this sample
 

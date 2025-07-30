@@ -1,11 +1,10 @@
 ---
-title: "Client API Reference for model-driven apps | MicrosoftDocs"
+title: "Client API Reference for model-driven apps "
 description: "The topic provides client API reference for model-driven apps."
-ms.date: 04/06/2022
-author: JimDaly
-ms.author: jdaly
+ms.date: 06/16/2025
+author: sriharibs-msft
+ms.author: srihas
 ms.reviewer: jdaly
-
 ms.topic: reference
 search.audienceType: 
   - developer
@@ -24,10 +23,39 @@ This section contains reference documentation for client API object model that c
 > - Most of the client scripting APIs available in this documentation also apply to Dynamics 365 Customer Engagement (on-premises). For a list of client scripting APIs not available for Customer Engagement (on-premises), see [Client scripting reference for Dynamics 365 Customer Engagement (on-premises)](/dynamics365/customerengagement/on-premises/developer/clientapi/reference).
 
 The topics under this section are organized as follows:
-- Starts with reference for all the events, collections, and the execution context object.
-- Continues on to provide information about methods for **attributes** and **controls** in Customer Engagement that are actually collections that appear under different objects in the Client API object model.
+
+- Starts with reference for all the events, collections, context objects and save event.
+   - [Events](reference/events.md)
+   - [Collections](reference/collections.md)
+   - [GetGlobalContext function and ClientGlobalContext.js.aspx](reference/GetGlobalContext-ClientGlobalContext.js.aspx.md)
+   - [Execution context](reference/execution-context.md)
+   - [Save event arguments](reference/save-event-arguments.md)
+
+- Continues on to provide information about methods for **attributes** and **controls** in model-driven apps that are actually collections that appear under different objects in the Client API object model.
+
+   - [Attributes](reference/attributes.md)
+   - [Controls](reference/controls.md)
+
 - Provides reference for properties and methods for the **formContext** and **gridContext** objects.
-- Finally provides reference for namespaces in the **Xrm** object model. 
+
+   - [formContext.data ](reference/formContext-data.md)
+   - [formContext.data.entity ](reference/formContext-data-entity.md)
+   - [formContext.data.process ](reference/formContext-data-process.md)
+   - [formContext.ui ](reference/formContext-ui.md)
+   - [Grids and subgrids in model-driven apps ](reference/grids.md)
+
+- Finally provides reference for namespaces in the **Xrm** object model.
+
+   - [Xrm.App](reference/xrm-app.md)
+   - [Xrm.Copilot](reference/xrm-copilot.md)
+   - [Xrm.Device](reference/xrm-device.md)
+   - [Xrm.Encoding](reference/xrm-encoding.md)
+   - [Xrm.Navigation](reference/xrm-navigation.md)
+   - [Xrm.Panel](reference/xrm-panel.md)
+   - [Xrm.Utility](reference/xrm-utility.md)
+   - [Xrm.WebApi](reference/xrm-webapi.md)
+
+
 
 ### Related articles
 

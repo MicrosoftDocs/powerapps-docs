@@ -1,47 +1,42 @@
 ---
-title: "RibbonMetadataToProcess table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the RibbonMetadataToProcess table/entity."
-ms.date: 09/01/2023
-ms.service: "powerapps"
-ms.topic: "reference"
-ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "phecke"
-ms.author: "pehecke"
+title: "Ribbon Metadata To Process (RibbonMetadataToProcess) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the Ribbon Metadata To Process (RibbonMetadataToProcess) table/entity with Microsoft Dataverse."
+ms.topic: generated-reference
+author: phecke
+ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# RibbonMetadataToProcess table/entity reference
-
-> [!NOTE]
-> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
+# Ribbon Metadata To Process (RibbonMetadataToProcess) table/entity reference (Microsoft Dataverse)
 
 Container for Ribbon Metadata To Process
 
-
 ## Messages
 
-|Message|Web API Operation|SDK class or method|
-|-|-|-|
-|RetrieveMultiple|GET /RibbonMetadataSetToProcess<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+The following table lists the messages for the Ribbon Metadata To Process (RibbonMetadataToProcess) table.
+Messages represent operations that can be performed on the table. They may also be events.
+
+| Name <br />Is Event? |Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `RetrieveMultiple`<br />Event: False |`GET` /RibbonMetadataSetToProcess<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 
 ## Properties
 
-|Property|Value|
-|--------|-----|
-|CollectionSchemaName|RibbonMetadataToProcesses|
-|DisplayCollectionName|Ribbon Metadata Set To Process|
-|DisplayName|Ribbon Metadata To Process|
-|EntitySetName|RibbonMetadataSetToProcess|
-|IsBPFEntity|False|
-|LogicalCollectionName|ribbonmetadatatoprocesses|
-|LogicalName|ribbonmetadatatoprocess|
-|OwnershipType|None|
-|PrimaryIdAttribute|ribbonmetadatarowid|
-|PrimaryNameAttribute||
-|SchemaName|RibbonMetadataToProcess|
+The following table lists selected properties for the Ribbon Metadata To Process (RibbonMetadataToProcess) table.
 
-<a name="writable-attributes"></a>
+|Property|Value|
+| --- | --- |
+| **DisplayName** | **Ribbon Metadata To Process** |
+| **DisplayCollectionName** | **Ribbon Metadata Set To Process** |
+| **SchemaName** | `RibbonMetadataToProcess` |
+| **CollectionSchemaName** | `RibbonMetadataToProcesses` |
+| **EntitySetName** | `RibbonMetadataSetToProcess`|
+| **LogicalName** | `ribbonmetadatatoprocess` |
+| **LogicalCollectionName** | `ribbonmetadatatoprocesses` |
+| **PrimaryIdAttribute** | `ribbonmetadatarowid` |
+| **TableType** | `Standard` |
+| **OwnershipType** | `None` |
 
 ## Writable columns/attributes
 
@@ -56,195 +51,187 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [SolutionName](#BKMK_SolutionName)
 - [Status](#BKMK_Status)
 
-
 ### <a name="BKMK_EntityName"></a> EntityName
 
 |Property|Value|
-|--------|-----|
-|Description|Entity Logical Name|
-|DisplayName|Entity Logical Name|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Entity Logical Name**|
+|DisplayName|**Entity Logical Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|entityname|
-|MaxLength|256|
+|LogicalName|`entityname`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|256|
 
 ### <a name="BKMK_ExceptionMessage"></a> ExceptionMessage
 
 |Property|Value|
-|--------|-----|
-|Description|Exception message|
-|DisplayName|Exception message which occurred during ribbon entity processing.|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Exception message**|
+|DisplayName|**Exception message which occurred during ribbon entity processing.**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|exceptionmessage|
-|MaxLength|1024|
+|LogicalName|`exceptionmessage`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1024|
 
 ### <a name="BKMK_IsDbUpdate"></a> IsDbUpdate
 
 |Property|Value|
-|--------|-----|
-|Description|Is entity created via Db Update|
-|DisplayName|Is entity created via Db Update|
-|Format|None|
+|---|---|
+|Description|**Is entity created via Db Update**|
+|DisplayName|**Is entity created via Db Update**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|isdbupdate|
-|MaxValue|10|
-|MinValue|0|
+|LogicalName|`isdbupdate`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|10|
+|MinValue|0|
 
 ### <a name="BKMK_RetryCount"></a> RetryCount
 
 |Property|Value|
-|--------|-----|
-|Description|Retry Count|
-|DisplayName|Retry Count|
-|Format|None|
+|---|---|
+|Description|**Retry Count**|
+|DisplayName|**Retry Count**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|retrycount|
-|MaxValue|100|
-|MinValue|0|
+|LogicalName|`retrycount`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
-
+|MaxValue|100|
+|MinValue|0|
 
 ### <a name="BKMK_RibbonMetadataRowId"></a> RibbonMetadataRowId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for Ribbon Metadata Instance To Process|
-|DisplayName|Ribbon Metadata To Process|
+|---|---|
+|Description|**Unique identifier for Ribbon Metadata Instance To Process**|
+|DisplayName|**Ribbon Metadata To Process**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|ribbonmetadatarowid|
+|LogicalName|`ribbonmetadatarowid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_SolutionId"></a> SolutionId
 
 |Property|Value|
-|--------|-----|
-|Description|Solution Id|
-|DisplayName|Solution Id|
+|---|---|
+|Description|**Solution Id**|
+|DisplayName|**Solution Id**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|solutionid|
+|LogicalName|`solutionid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_SolutionName"></a> SolutionName
 
 |Property|Value|
-|--------|-----|
-|Description|Solution Name of the ribbon entity|
-|DisplayName|Solution Name of the ribbon entity.|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Solution Name of the ribbon entity**|
+|DisplayName|**Solution Name of the ribbon entity.**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|solutionname|
-|MaxLength|256|
+|LogicalName|`solutionname`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|256|
 
 ### <a name="BKMK_Status"></a> Status
 
 |Property|Value|
-|--------|-----|
-|Description|Status|
-|DisplayName|Status|
-|Format|None|
+|---|---|
+|Description|**Status**|
+|DisplayName|**Status**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|status|
-|MaxValue|100|
-|MinValue|0|
+|LogicalName|`status`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
+|MaxValue|100|
+|MinValue|0|
 
-<a name="read-only-attributes"></a>
 
 ## Read-only columns/attributes
 
-These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** and **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [CompletedOn](#BKMK_CompletedOn)
 - [CreatedOn](#BKMK_CreatedOn)
 - [ProcessedOn](#BKMK_ProcessedOn)
 
-
 ### <a name="BKMK_CompletedOn"></a> CompletedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Shows the date and time when the ribbon entity record has finished processing. The date and time are displayed in the time zone selected in Microsoft Dynamics 365 options.|
-|DisplayName|Completed On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Shows the date and time when the ribbon entity record has finished processing. The date and time are displayed in the time zone selected in Microsoft Dynamics 365 options.**|
+|DisplayName|**Completed On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|completedon|
+|LogicalName|`completedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_CreatedOn"></a> CreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Shows the date and time when the record was created. The date and time are displayed in the time zone selected in Microsoft Dynamics 365 options.|
-|DisplayName|Created On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Shows the date and time when the record was created. The date and time are displayed in the time zone selected in Microsoft Dynamics 365 options.**|
+|DisplayName|**Created On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdon|
+|LogicalName|`createdon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_ProcessedOn"></a> ProcessedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Shows the date and time when the record was processed. The date and time are displayed in the time zone selected in Microsoft Dynamics 365 options.|
-|DisplayName|Processed On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Shows the date and time when the record was processed. The date and time are displayed in the time zone selected in Microsoft Dynamics 365 options.**|
+|DisplayName|**Processed On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|processedon|
+|LogicalName|`processedon`|
 |RequiredLevel|None|
 |Type|DateTime|
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
-<xref href="Microsoft.Dynamics.CRM.ribbonmetadatatoprocess?text=ribbonmetadatatoprocess EntityType" />
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
+[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
+<xref:Microsoft.Dynamics.CRM.ribbonmetadatatoprocess?displayProperty=fullName>

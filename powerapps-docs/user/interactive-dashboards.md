@@ -1,15 +1,15 @@
 ---
 title: "Use interactive dashboards to filter data in model-driven apps| MicrosoftDocs"
 description: Learn how to use interactive dashboards to filter data in Power Apps.
-author: sericks007
+author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 9/14/2020
 ms.subservice: end-user
-ms.author: sericks
+ms.author: smurkute
 ms.custom: ""
-ms.reviewer: sericks
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser

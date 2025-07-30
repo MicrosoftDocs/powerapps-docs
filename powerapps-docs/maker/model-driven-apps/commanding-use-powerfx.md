@@ -5,8 +5,9 @@ Keywords: command bar, command designer, commanding, modern, dialog, flow
 author: caburk
 ms.author: caburk
 ms.reviewer: matp
-ms.date: 12/04/2022
-ms.topic: conceptual
+ms.date: 07/17/2024
+ms.topic: how-to
+ms.subservice: mda-maker
 search.audienceType: 
   - maker
 ---
@@ -20,17 +21,17 @@ This article covers aspects of Power Fx that are specific to commanding. Many ot
 - For a list of functions not supported, go to [Functions not supported](#functions-not-supported).
 
 > [!NOTE]
-> Publishing Power Fx commands may take a few minutes. It might not be obvious that background operations are still running even after the publish operation appears to have completed. You may need to wait a few minutes after publishing, then refresh the app to see your changes reflected. This typically takes longer the first time a Power Fx based command is published for an app.
+> Publishing Power Fx commands might take a few minutes. It might not be obvious that background operations are still running even after the publish operation appears to complete. You might need to wait a few minutes after publishing, then refresh the app to see your changes reflected. This operation typically takes longer the first time a Power Fx based command is published for an app.
 
 ## OnSelect
 
-Defines the logic that will be executed when the button is selected within the app.
+Defines the logic that is executed when the button is selected within the app.
 
 ## Visible
 
 Defines logic for hiding or showing the button when running the app. 
 
-To define visibility logic select the command. Then select **Visibility** on the right command properties pane and choose **Show on condition from formula**. You may now select **Visible** on the left of the formula bar then write a Power Fx expression using the formula bar.
+To define visibility logic, select the command. Then select **Visibility** on the right command properties pane and choose **Show on condition from formula**. You can select **Visible** on the left of the formula bar then write a Power Fx expression using the formula bar.
 
 ## Selected property
 
@@ -43,9 +44,9 @@ To define visibility logic select the command. Then select **Visibility** on the
 
 - The **Selected** property is provided by the host of the command.
 - **Item** and **AllItems** names are somewhat consistent with the ComboBox control and Gallery control, but this is a new pattern.
-- If there is no record selected, **Item** returns Blank (IsBlank returns true) and **AllItems** returns an empty table (IsEmpty returns true).
+- If there's no record selected, **Item** returns Blank (IsBlank returns true) and **AllItems** returns an empty table (IsEmpty returns true).
 - Null DataSource for record references (polymorphic record types). Generic functions can be called, such as Save or IsType/AsType can be used.
-- **Item** is always blank if **SelectionMax** <> 1.  This prevents writing formulas to just one item and not scaling to more than one.  
+- **Item** is always blank if **SelectionMax** <> 1. This prevents writing formulas to just one item and not scaling to more than one.  
 
 ## AutoSave
 
@@ -58,34 +59,34 @@ To define visibility logic select the command. Then select **Visibility** on the
 
 ### Patch (update) the current selected record
 
-```powerapps-dot
+```power-fx
 Patch(Accounts, Self.Selected.Item, {'Account Name': "Changed Account name"})
 ```
 
 ### Create a related record
 
 > [!NOTE]
-> If the related table is not already in the command component library you'll need to open it in canvas studio and add the data source there.
+> If the related table is not already in the command component library, you need to open it in canvas studio and add the data source there.
 
-```powerapps-dot
+```power-fx
 Patch(Tasks,Defaults(Tasks),{Regarding:Self.Selected.Item},{Subject:"Subject of the Task"})
 ```
 
 ### Check and edit a date property
 
-```powerapps-dot
+```power-fx
 If(Self.Selected.Item.'Last Date Included in Campaign'>DateAdd(Now(),-3), Patch(Accounts,Self.Selected.Item,{'Last Date Included in Campaign':Date(2021,10,19)}))
 ```
 
 ### Visible property: Only show the command if one or more records is selected in a grid view
 
-```powerapps-dot
+```power-fx
 CountRows(Self.Selected.AllItems) > 0
 ```
 
 ### Control visibility based on record data
 
-```powerapps-dot
+```power-fx
 //Button will be visible for accounts with Account Rating > 20
 Self.Selected.Item.'Account Rating'>20
 ```
@@ -99,7 +100,7 @@ Self.Selected.Item.'Account Rating'>20
 
 To navigate to a custom canvas page within a model-driven app, pass the page name as the first argument.
 
-```powerapps-dot
+```power-fx
 Navigate( myCustomPage )
 ```
 
@@ -107,7 +108,7 @@ Navigate( myCustomPage )
 
 To navigate to the default view of the table, pass the table name as the first argument.
 
-```powerapps-dot
+```power-fx
 Navigate( Accounts )
 ```
 
@@ -115,7 +116,7 @@ Navigate( Accounts )
 
 To navigate to a specific system view of the table, pass the table's `Views` enum.
 
-```powerapps-dot
+```power-fx
 Navigate( 'Accounts (Views)'.'My Active Accounts' )
 ```
 
@@ -123,15 +124,15 @@ Navigate( 'Accounts (Views)'.'My Active Accounts' )
 
 To navigate to the default form of the table, pass the record as the first argument.
 
-```powerapps-dot
+```power-fx
 Navigate( Gallery1.Selected )
 ```
 
 ### Navigate to the default form of the table in create mode
 
-To navigate to the default form of the table, pass a Dataverse record created from the [Defaults](../canvas-apps/functions/function-defaults.md) function. This will open the default form with the record as a new record. The **Defaults** function takes the table name to create the record.
+To navigate to the default form of the table, pass a Dataverse record created from the [Defaults](../canvas-apps/functions/function-defaults.md) function. This opens the default form with the record as a new record. The **Defaults** function takes the table name to create the record.
 
-```powerapps-dot
+```power-fx
 Navigate( Defaults( Accounts ) )
 ```
 
@@ -141,14 +142,14 @@ Use the [**DataSourceInfo** function](/power-platform/power-fx/reference/functio
 
 For example, use **RecordInfo** to determine if the current user has permission to modify a record and appropriately show or hide an "Edit" button using its **Visible** property:
 
-```powerapps-dot
+```power-fx
 EditButton.Visible = 
    RecordInfo( Gallery1.Selected, RecordInfo.EditPermission )
 ```
 
-For example, use **DataSourceInfo** to determine if the current user has permission to create a record and appropriately show or hide an "Create" button using its **Visible** property:
+For example, use **DataSourceInfo** to determine if the current user has permission to create a record and appropriately show or hide a "Create" button using its **Visible** property:
 
-```powerapps-dot
+```power-fx
 CreateButton.Visible = 
    DataSourceInfo( Accounts, DataSourceInfo.CreatePermission )
 ```
@@ -157,14 +158,14 @@ CreateButton.Visible =
 
 Use the [**Confirm** function](/power-platform/power-fx/reference/function-confirm) to display a dialog box on top of the current screen.
 
-```powerapps-dot
+```power-fx
 Notify( Confirm( "Are you sure?", 
                  { ConfirmButton: "Yes", CancelButton: "No" } 
         ) 
 )
 ```
 
-Will display a notification **true** if the **Yes** button is pressed, and a notification **false** if the **No** button is pressed.
+Displays a notification **true** if the **Yes** button is pressed, and a notification **false** if the **No** button is pressed.
 
 
 ## Notify the user
@@ -172,9 +173,9 @@ Will display a notification **true** if the **Yes** button is pressed, and a not
 A notification can be shown to app users by calling the [Notify function](../canvas-apps/functions/function-showerror.md).
 
 > [!NOTE]
-> `NotificationType.Success` is not currently supported and will result in an informational notification type.
+> `NotificationType.Success` isn't currently supported and results in an informational notification type.
 
-```powerapps-dot
+```power-fx
 Notify( "Model-driven app notification message" )
 ```
 
@@ -198,13 +199,18 @@ Self.Selected.Item.'Recurring Appointments'
 Self.Selected.Item.'Parent Account'.'Account Name'="parent"
 ```
 
-## Functions not supported
+## Functions available with commanding
 
-The following Power Fx functions are currently not supported with commanding in model-driven apps.
+For information about the formulas supported with commanding in model-driven apps, go to [Formula reference - model-driven apps](/power-platform/power-fx/formula-reference-model-driven-apps).
+
+### Functions not supported
+
+The following Power Fx functions are *currently not supported* with commanding in model-driven apps.
 
 - Back()
 - Clear()
 - Collect()
+- Copy()
 - Disable()
 - Enable()
 - Exit()
@@ -212,6 +218,7 @@ The following Power Fx functions are currently not supported with commanding in 
 - Language()
 - LoadData()
 - Param()
+- Print()
 - ReadNFC()
 - RequestHide()
 - ResetForm()
@@ -269,6 +276,7 @@ The following Power Fx functions are currently not supported with commanding in 
 - App
 - Compass
 - Connection
+- Dataverse file type columns
 - Environment
 - Host
 - Layout

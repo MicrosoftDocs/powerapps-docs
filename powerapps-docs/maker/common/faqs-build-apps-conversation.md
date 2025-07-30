@@ -1,13 +1,16 @@
 ---
 title: FAQ for building apps and tables through conversation
 description: FAQ that discusses building apps through conversation and the key considerations for making use of this technology responsibly.
-ms.date: 6/16/2023
+ms.date: 5/28/2025
+ms.update-cycle: 180-days
 ms.custom: 
   - responsible-ai-faqs
-ms.topic: article
+ms.topic: faq
 author: franklanmsft
 ms.author: franklan
 ms.reviewer: mduelae
+ms.collection: 
+    - bap-ai-copilot
 ---
 
 # FAQ for building apps and tables through conversation
@@ -43,9 +46,7 @@ This capability may be subject to usage limits or capacity throttling.
 
 The following are requirements to access this feature:
 
-- Your environment must be in the United States region. 
-
-- Your account must have English (United States) as the browser language. 
+- Your account must have English (United States), French, German, Spanish, Dutch, Danish, Italian, Japanese, or Portuguese (Brazil) as the browser language.
 
 - Have a [Microsoft Dataverse database](/power-platform/admin/create-database) in your environment. 
 
@@ -57,7 +58,7 @@ The following are requirements to access this feature:
 
     3. On the **Features** settings page, under **AI Builder**, enable or disable **AI Builder preview models**. 
 
-For more information, see [AI Copilot overview](../canvas-apps/ai-overview.md) 
+For more information, see [Copilot in Power Apps overview](../canvas-apps/ai-overview.md) 
 
 ## What operational factors and settings allow for effective and responsible use of the system? 
 

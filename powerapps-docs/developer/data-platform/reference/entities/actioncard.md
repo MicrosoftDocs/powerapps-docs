@@ -1,51 +1,50 @@
 ---
-title: "ActionCard table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the ActionCard table/entity."
-ms.date: 09/01/2023
-ms.service: "powerapps"
-ms.topic: "reference"
-ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "phecke"
-ms.author: "pehecke"
+title: "Action Card (ActionCard) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the Action Card (ActionCard) table/entity with Microsoft Dataverse."
+ms.topic: generated-reference
+author: phecke
+ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# ActionCard table/entity reference
-
-> [!NOTE]
-> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
+# Action Card (ActionCard) table/entity reference (Microsoft Dataverse)
 
 Action card entity to show action cards.
 
-
 ## Messages
 
-|Message|Web API Operation|SDK class or method|
-|-|-|-|
-|Create|POST /actioncards<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE /actioncards(*actioncardid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET /actioncards(*actioncardid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET /actioncards<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|Update|PATCH /actioncards(*actioncardid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+The following table lists the messages for the Action Card (ActionCard) table.
+Messages represent operations that can be performed on the table. They may also be events.
+
+| Name <br />Is Event? |Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Create`<br />Event: True |`POST` /actioncards<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `Delete`<br />Event: True |`DELETE` /actioncards(*actioncardid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `Retrieve`<br />Event: True |`GET` /actioncards(*actioncardid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveMultiple`<br />Event: True |`GET` /actioncards<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
+| `Update`<br />Event: True |`PATCH` /actioncards(*actioncardid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
+| `Upsert`<br />Event: False |`PATCH` /actioncards(*actioncardid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
 
 ## Properties
 
-|Property|Value|
-|--------|-----|
-|CollectionSchemaName|ActionCards|
-|DisplayCollectionName|Action Cards|
-|DisplayName|Action Card|
-|EntitySetName|actioncards|
-|IsBPFEntity|False|
-|LogicalCollectionName|actioncard|
-|LogicalName|actioncard|
-|OwnershipType|UserOwned|
-|PrimaryIdAttribute|actioncardid|
-|PrimaryNameAttribute|title|
-|SchemaName|ActionCard|
+The following table lists selected properties for the Action Card (ActionCard) table.
 
-<a name="writable-attributes"></a>
+|Property|Value|
+| --- | --- |
+| **DisplayName** | **Action Card** |
+| **DisplayCollectionName** | **Action Cards** |
+| **SchemaName** | `ActionCard` |
+| **CollectionSchemaName** | `ActionCards` |
+| **EntitySetName** | `actioncards`|
+| **LogicalName** | `actioncard` |
+| **LogicalCollectionName** | `actioncard` |
+| **PrimaryIdAttribute** | `actioncardid` |
+| **PrimaryNameAttribute** |`title` |
+| **TableType** | `Standard` |
+| **OwnershipType** | `UserOwned` |
 
 ## Writable columns/attributes
 
@@ -70,7 +69,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [RecordIdObjectTypeCode2](#BKMK_RecordIdObjectTypeCode2)
 - [ReferenceTokens](#BKMK_ReferenceTokens)
 - [RegardingObjectId](#BKMK_RegardingObjectId)
-- [RegardingObjectIdName](#BKMK_RegardingObjectIdName)
 - [RegardingObjectTypeCode](#BKMK_RegardingObjectTypeCode)
 - [Source](#BKMK_Source)
 - [StartDate](#BKMK_StartDate)
@@ -79,958 +77,896 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [TransactionCurrencyId](#BKMK_TransactionCurrencyId)
 - [Visibility](#BKMK_Visibility)
 
-
 ### <a name="BKMK_ActionCardId"></a> ActionCardId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the action card.|
-|DisplayName|Action Card|
+|---|---|
+|Description|**Unique identifier of the action card.**|
+|DisplayName|**Action Card**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|actioncardid|
+|LogicalName|`actioncardid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_CardType"></a> CardType
 
 |Property|Value|
-|--------|-----|
-|Description|The CardType ENUM value.|
-|DisplayName|CardType ENUM|
-|Format|None|
+|---|---|
+|Description|**The CardType ENUM value.**|
+|DisplayName|**CardType ENUM**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|cardtype|
-|MaxValue|2147483647|
-|MinValue|0|
+|LogicalName|`cardtype`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|0|
 
 ### <a name="BKMK_CardTypeId"></a> CardTypeId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the card type.|
-|DisplayName|Card Type|
+|---|---|
+|Description|**Unique identifier of the card type.**|
+|DisplayName|**Card Type**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|cardtypeid|
+|LogicalName|`cardtypeid`|
 |RequiredLevel|SystemRequired|
-|Targets|cardtype|
 |Type|Lookup|
-
+|Targets|cardtype|
 
 ### <a name="BKMK_Data"></a> Data
 
 |Property|Value|
-|--------|-----|
-|Description|Json formatted string for generic purpose.|
-|DisplayName|Data Associated with Card Commandbar Actions|
-|Format|TextArea|
-|IsLocalizable|False|
+|---|---|
+|Description|**Json formatted string for generic purpose.**|
+|DisplayName|**Data Associated with Card Commandbar Actions**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|data|
-|MaxLength|8192|
+|LogicalName|`data`|
 |RequiredLevel|None|
 |Type|Memo|
-
+|Format|TextArea|
+|FormatName|TextArea|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|8192|
 
 ### <a name="BKMK_Description"></a> Description
 
 |Property|Value|
-|--------|-----|
-|Description|Card Description|
-|DisplayName|Card Description|
-|Format|TextArea|
-|IsLocalizable|False|
+|---|---|
+|Description|**Card Description**|
+|DisplayName|**Card Description**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|description|
-|MaxLength|8192|
+|LogicalName|`description`|
 |RequiredLevel|None|
 |Type|Memo|
-
+|Format|TextArea|
+|FormatName|TextArea|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|8192|
 
 ### <a name="BKMK_ExpiryDate"></a> ExpiryDate
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Shows the Expiry Date|
-|DisplayName|Expiry Date|
-|Format|DateAndTime|
+|---|---|
+|Description|**Shows the Expiry Date**|
+|DisplayName|**Expiry Date**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|expirydate|
+|LogicalName|`expirydate`|
 |RequiredLevel|SystemRequired|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
 |Property|Value|
-|--------|-----|
-|Description|Sequence number of the import that created this record.|
-|DisplayName|Import Sequence Number|
-|Format|None|
+|---|---|
+|Description|**Sequence number of the import that created this record.**|
+|DisplayName|**Import Sequence Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|importsequencenumber|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`importsequencenumber`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time that the record was migrated.|
-|DisplayName|Record Created On|
-|Format|DateOnly|
+|---|---|
+|Description|**Date and time that the record was migrated.**|
+|DisplayName|**Record Created On**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|overriddencreatedon|
+|LogicalName|`overriddencreatedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateOnly|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_OwnerId"></a> OwnerId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user or team who owns the action card.|
-|DisplayName|Owner|
+|---|---|
+|Description|**Unique identifier of the user or team who owns the action card.**|
+|DisplayName|**Owner**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|ownerid|
+|LogicalName|`ownerid`|
 |RequiredLevel|SystemRequired|
-|Targets|systemuser,team|
 |Type|Owner|
-
+|Targets|systemuser, team|
 
 ### <a name="BKMK_OwnerIdType"></a> OwnerIdType
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owneridtype|
+|LogicalName|`owneridtype`|
 |RequiredLevel|SystemRequired|
 |Type|EntityName|
-
 
 ### <a name="BKMK_ParentRegardingObjectId"></a> ParentRegardingObjectId
 
 |Property|Value|
-|--------|-----|
-|Description|ParentRegardingObjectId of the ActionCard|
-|DisplayName|ParentRegardingObjectId|
+|---|---|
+|Description|**ParentRegardingObjectId of the ActionCard**|
+|DisplayName|**ParentRegardingObjectId**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|parentregardingobjectid|
+|LogicalName|`parentregardingobjectid`|
 |RequiredLevel|None|
-|Targets||
 |Type|Lookup|
-
+|Targets||
 
 ### <a name="BKMK_ParentRegardingObjectIdData"></a> ParentRegardingObjectIdData
 
 |Property|Value|
-|--------|-----|
-|Description|Json formatted string for parent regarding object.|
-|DisplayName|ParentRegardingObjectIdData|
-|Format|TextArea|
-|IsLocalizable|False|
+|---|---|
+|Description|**Json formatted string for parent regarding object.**|
+|DisplayName|**ParentRegardingObjectIdData**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|parentregardingobjectiddata|
-|MaxLength|8192|
+|LogicalName|`parentregardingobjectiddata`|
 |RequiredLevel|None|
 |Type|Memo|
-
+|Format|TextArea|
+|FormatName|TextArea|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|8192|
 
 ### <a name="BKMK_ParentRegardingObjectTypeCode"></a> ParentRegardingObjectTypeCode
 
 |Property|Value|
-|--------|-----|
-|Description|ParentRegardingObjectTypeCode of the ActionCard|
-|DisplayName|ParentRegardingObjectTypeCode|
+|---|---|
+|Description|**ParentRegardingObjectTypeCode of the ActionCard**|
+|DisplayName|**ParentRegardingObjectTypeCode**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|parentregardingobjecttypecode|
+|LogicalName|`parentregardingobjecttypecode`|
 |RequiredLevel|None|
 |Type|EntityName|
-
 
 ### <a name="BKMK_Priority"></a> Priority
 
 |Property|Value|
-|--------|-----|
-|Description|Priority of the ActionCard|
-|DisplayName|Priority|
-|Format|None|
+|---|---|
+|Description|**Priority of the ActionCard**|
+|DisplayName|**Priority**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|priority|
-|MaxValue|2147483647|
-|MinValue|0|
+|LogicalName|`priority`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|0|
 
 ### <a name="BKMK_RecordId"></a> RecordId
 
 |Property|Value|
-|--------|-----|
-|Description|Shows the record ID.|
-|DisplayName|RecordId|
+|---|---|
+|Description|**Shows the record ID.**|
+|DisplayName|**RecordId**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|recordid|
+|LogicalName|`recordid`|
 |RequiredLevel|None|
-|Targets||
 |Type|Lookup|
-
+|Targets||
 
 ### <a name="BKMK_RecordIdObjectTypeCode"></a> RecordIdObjectTypeCode
 
 |Property|Value|
-|--------|-----|
-|Description|Shows the Object Type Code.|
-|DisplayName|RecordIdObjectTypeCode|
+|---|---|
+|Description|**Shows the Object Type Code.**|
+|DisplayName|**RecordIdObjectTypeCode**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|recordidobjecttypecode|
+|LogicalName|`recordidobjecttypecode`|
 |RequiredLevel|None|
 |Type|EntityName|
-
 
 ### <a name="BKMK_RecordIdObjectTypeCode2"></a> RecordIdObjectTypeCode2
 
 |Property|Value|
-|--------|-----|
-|Description|RecordIdObjectTypeCode2 of the ActionCard|
-|DisplayName|RecordIdObjectTypeCode2|
-|Format|None|
+|---|---|
+|Description|**RecordIdObjectTypeCode2 of the ActionCard**|
+|DisplayName|**RecordIdObjectTypeCode2**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|recordidobjecttypecode2|
-|MaxValue|2147483647|
-|MinValue|0|
+|LogicalName|`recordidobjecttypecode2`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|0|
 
 ### <a name="BKMK_ReferenceTokens"></a> ReferenceTokens
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Data Associated constructing title and body|
-|Format|TextArea|
-|IsLocalizable|False|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Data Associated constructing title and body**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|referencetokens|
-|MaxLength|8192|
+|LogicalName|`referencetokens`|
 |RequiredLevel|None|
 |Type|Memo|
-
+|Format|TextArea|
+|FormatName|TextArea|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|8192|
 
 ### <a name="BKMK_RegardingObjectId"></a> RegardingObjectId
 
 |Property|Value|
-|--------|-----|
-|Description|Choose the record that the card relates to.|
-|DisplayName|Regarding|
+|---|---|
+|Description|**Choose the record that the card relates to.**|
+|DisplayName|**Regarding**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|regardingobjectid|
+|LogicalName|`regardingobjectid`|
 |RequiredLevel|None|
-|Targets|account,appointment,chat,contact,email,fax,letter,phonecall,recurringappointmentmaster,task|
 |Type|Lookup|
-
-
-### <a name="BKMK_RegardingObjectIdName"></a> RegardingObjectIdName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|regardingobjectidname|
-|MaxLength|4000|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|account, adx_inviteredemption, adx_portalcomment, appointment, chat, contact, email, fax, letter, phonecall, recurringappointmentmaster, task|
 
 ### <a name="BKMK_RegardingObjectTypeCode"></a> RegardingObjectTypeCode
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|regardingobjecttypecode|
+|LogicalName|`regardingobjecttypecode`|
 |RequiredLevel|None|
 |Type|EntityName|
-
 
 ### <a name="BKMK_Source"></a> Source
 
 |Property|Value|
-|--------|-----|
-|Description|Source for the Action Card|
-|DisplayName|Action Card Source|
+|---|---|
+|Description|**Source for the Action Card**|
+|DisplayName|**Action Card Source**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|source|
+|LogicalName|`source`|
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
+|DefaultFormValue|0|
+|GlobalChoiceName|`actioncard_source`|
 
 #### Source Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|1|CRM||
-|2|Exchange||
-
-
+|Value|Label|
+|---|---|
+|1|**CRM**|
+|2|**Exchange**|
 
 ### <a name="BKMK_StartDate"></a> StartDate
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Shows the Start Date|
-|DisplayName|Start Date|
-|Format|DateAndTime|
+|---|---|
+|Description|**Shows the Start Date**|
+|DisplayName|**Start Date**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|startdate|
+|LogicalName|`startdate`|
 |RequiredLevel|SystemRequired|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_State"></a> State
 
 |Property|Value|
-|--------|-----|
-|Description|State of the Action Card|
-|DisplayName|Action Card State|
+|---|---|
+|Description|**State of the Action Card**|
+|DisplayName|**Action Card State**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|state|
+|LogicalName|`state`|
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
+|DefaultFormValue|0|
+|GlobalChoiceName|`actioncard_state`|
 
 #### State Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|0|Active||
-|1|Dismissed||
-|2|Completed||
-
-
+|Value|Label|
+|---|---|
+|0|**Active**|
+|1|**Dismissed**|
+|2|**Completed**|
 
 ### <a name="BKMK_Title"></a> Title
 
 |Property|Value|
-|--------|-----|
-|Description|Title of the ActionCard|
-|DisplayName|Title|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Title of the ActionCard**|
+|DisplayName|**Title**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|title|
-|MaxLength|200|
+|LogicalName|`title`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|200|
 
 ### <a name="BKMK_TransactionCurrencyId"></a> TransactionCurrencyId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the currency associated with the action card.|
-|DisplayName|Currency|
+|---|---|
+|Description|**Unique identifier of the currency associated with the action card.**|
+|DisplayName|**Currency**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|transactioncurrencyid|
+|LogicalName|`transactioncurrencyid`|
 |RequiredLevel|None|
-|Targets|transactioncurrency|
 |Type|Lookup|
-
+|Targets|transactioncurrency|
 
 ### <a name="BKMK_Visibility"></a> Visibility
 
 |Property|Value|
-|--------|-----|
-|Description|Select whether the visibility should be set to public/private.|
-|DisplayName|Visibiliy Status of ActionCard|
+|---|---|
+|Description|**Select whether the visibility should be set to public/private.**|
+|DisplayName|**Visibiliy Status of ActionCard**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|visibility|
+|LogicalName|`visibility`|
 |RequiredLevel|None|
 |Type|Boolean|
+|GlobalChoiceName|`actioncard_visibility`|
+|DefaultValue|False|
+|True Label|Private|
+|False Label|Public|
 
-#### Visibility Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Private||
-|0|Public||
-
-**DefaultValue**: 0
-
-
-<a name="read-only-attributes"></a>
 
 ## Read-only columns/attributes
 
-These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** and **IsValidForUpdate**. Listed by **SchemaName**.
 
-- [CardTypeIdName](#BKMK_CardTypeIdName)
 - [CreatedBy](#BKMK_CreatedBy)
-- [CreatedByName](#BKMK_CreatedByName)
-- [CreatedByYomiName](#BKMK_CreatedByYomiName)
 - [CreatedOn](#BKMK_CreatedOn)
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
-- [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
-- [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
 - [ExchangeRate](#BKMK_ExchangeRate)
 - [ModifiedBy](#BKMK_ModifiedBy)
-- [ModifiedByName](#BKMK_ModifiedByName)
-- [ModifiedByYomiName](#BKMK_ModifiedByYomiName)
 - [ModifiedOn](#BKMK_ModifiedOn)
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
-- [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
-- [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
-- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
-- [RecordIdName](#BKMK_RecordIdName)
-- [TransactionCurrencyIdName](#BKMK_TransactionCurrencyIdName)
 - [VersionNumber](#BKMK_VersionNumber)
-
-
-### <a name="BKMK_CardTypeIdName"></a> CardTypeIdName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|cardtypeidname|
-|MaxLength|256|
-|RequiredLevel|None|
-|Type|String|
-
 
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user who created the action card.|
-|DisplayName|Created By|
+|---|---|
+|Description|**Unique identifier of the user who created the action card.**|
+|DisplayName|**Created By**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|createdby|
+|LogicalName|`createdby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedByName"></a> CreatedByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedByYomiName"></a> CreatedByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_CreatedOn"></a> CreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when action card was created.|
-|DisplayName|Created On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Date and time when action card was created.**|
+|DisplayName|**Created On**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|createdon|
+|LogicalName|`createdon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_CreatedOnBehalfBy"></a> CreatedOnBehalfBy
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the delegate user who created the action card.|
-|DisplayName|Created By (Delegate)|
+|---|---|
+|Description|**Unique identifier of the delegate user who created the action card.**|
+|DisplayName|**Created By (Delegate)**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|createdonbehalfby|
+|LogicalName|`createdonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedOnBehalfByName"></a> CreatedOnBehalfByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedOnBehalfByYomiName"></a> CreatedOnBehalfByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_ExchangeRate"></a> ExchangeRate
 
 |Property|Value|
-|--------|-----|
-|Description|Exchange rate for the currency associated with the action card with respect to the base currency.|
-|DisplayName|Exchange Rate|
+|---|---|
+|Description|**Exchange rate for the currency associated with the action card with respect to the base currency.**|
+|DisplayName|**Exchange Rate**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|exchangerate|
-|MaxValue|100000000000|
-|MinValue|0.000000000001|
-|Precision|12|
+|LogicalName|`exchangerate`|
 |RequiredLevel|None|
 |Type|Decimal|
-
+|ImeMode|Disabled|
+|MaxValue|100000000000|
+|MinValue|1E-12|
+|Precision|12|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user who last modified the action card.|
-|DisplayName|Modified By|
+|---|---|
+|Description|**Unique identifier of the user who last modified the action card.**|
+|DisplayName|**Modified By**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|modifiedby|
+|LogicalName|`modifiedby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedByName"></a> ModifiedByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedByYomiName"></a> ModifiedByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_ModifiedOn"></a> ModifiedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when action card was last modified.|
-|DisplayName|Modified On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Date and time when action card was last modified.**|
+|DisplayName|**Modified On**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|modifiedon|
+|LogicalName|`modifiedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_ModifiedOnBehalfBy"></a> ModifiedOnBehalfBy
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the delegate user who last modified action card.|
-|DisplayName|Modified By (Delegate)|
+|---|---|
+|Description|**Unique identifier of the delegate user who last modified action card.**|
+|DisplayName|**Modified By (Delegate)**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|modifiedonbehalfby|
+|LogicalName|`modifiedonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedOnBehalfByName"></a> ModifiedOnBehalfByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedOnBehalfByYomiName"></a> ModifiedOnBehalfByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_OwnerIdName"></a> OwnerIdName
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owneridname|
-|MaxLength|100|
+|LogicalName|`owneridname`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_OwnerIdYomiName"></a> OwnerIdYomiName
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owneridyominame|
-|MaxLength|100|
+|LogicalName|`owneridyominame`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_OwningBusinessUnit"></a> OwningBusinessUnit
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the business unit that owns the action card.|
-|DisplayName|Owning Business Unit|
+|---|---|
+|Description|**Unique identifier of the business unit that owns the action card.**|
+|DisplayName|**Owning Business Unit**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|owningbusinessunit|
+|LogicalName|`owningbusinessunit`|
 |RequiredLevel|None|
-|Targets|businessunit|
 |Type|Lookup|
-
-
-### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|owningbusinessunitname|
-|MaxLength|160|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|businessunit|
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the team who owns the action card.|
-|DisplayName|Owning Team|
+|---|---|
+|Description|**Unique identifier of the team who owns the action card.**|
+|DisplayName|**Owning Team**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owningteam|
+|LogicalName|`owningteam`|
 |RequiredLevel|None|
-|Targets|team|
 |Type|Lookup|
-
+|Targets|team|
 
 ### <a name="BKMK_OwningUser"></a> OwningUser
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user who owns the action card.|
-|DisplayName|Owning User|
+|---|---|
+|Description|**Unique identifier of the user who owns the action card.**|
+|DisplayName|**Owning User**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owninguser|
+|LogicalName|`owninguser`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_RecordIdName"></a> RecordIdName
-
-|Property|Value|
-|--------|-----|
-|Description|Shows the record ID Name.|
-|DisplayName|RecordIdName|
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|recordidname|
-|MaxLength|400|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_TransactionCurrencyIdName"></a> TransactionCurrencyIdName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|transactioncurrencyidname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
 |Property|Value|
-|--------|-----|
-|Description|Version number of the action card.|
-|DisplayName|Version Number|
+|---|---|
+|Description|**Version number of the action card.**|
+|DisplayName|**Version Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|versionnumber|
-|MaxValue|9223372036854775807|
-|MinValue|-9223372036854775808|
+|LogicalName|`versionnumber`|
 |RequiredLevel|None|
 |Type|BigInt|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
 
-<a name="onetomany"></a>
+## Many-to-One relationships
 
-## One-To-Many Relationships
+These relationships are many-to-one. Listed by **SchemaName**.
 
-Listed by **SchemaName**.
-
-
-### <a name="BKMK_ActionCardUserState_ActionCard"></a> ActionCardUserState_ActionCard
-
-Same as the [ActionCardUserState_ActionCard](actioncarduserstate.md#BKMK_ActionCardUserState_ActionCard) many-to-one relationship for the [actioncarduserstate](actioncarduserstate.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|actioncarduserstate|
-|ReferencingAttribute|actioncardid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|ActionCardUserState_ActionCard|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-<a name="manytoone"></a>
-
-## Many-To-One Relationships
-
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
-
-- [contact_actioncard](#BKMK_contact_actioncard)
-- [lk_actioncardbase_modifiedby](#BKMK_lk_actioncardbase_modifiedby)
-- [letter_actioncard](#BKMK_letter_actioncard)
-- [phonecall_actioncard](#BKMK_phonecall_actioncard)
-- [task_actioncard](#BKMK_task_actioncard)
-- [email_actioncard](#BKMK_email_actioncard)
-- [lk_actioncardbase_createdonbehalfby](#BKMK_lk_actioncardbase_createdonbehalfby)
-- [business_unit_actioncards](#BKMK_business_unit_actioncards)
-- [recurringappointmentmaster_actioncard](#BKMK_recurringappointmentmaster_actioncard)
-- [lk_actioncardbase_createdby](#BKMK_lk_actioncardbase_createdby)
-- [transactioncurrency_actioncard](#BKMK_transactioncurrency_actioncard)
 - [account_actioncard](#BKMK_account_actioncard)
+- [adx_inviteredemption_ActionCards](#BKMK_adx_inviteredemption_ActionCards)
+- [adx_portalcomment_ActionCards](#BKMK_adx_portalcomment_ActionCards)
 - [appointment_actioncard](#BKMK_appointment_actioncard)
-- [fax_actioncard](#BKMK_fax_actioncard)
-- [lk_actioncardbase_modifiedonbehalfby](#BKMK_lk_actioncardbase_modifiedonbehalfby)
+- [business_unit_actioncards](#BKMK_business_unit_actioncards)
 - [chat_ActionCards](#BKMK_chat_ActionCards)
-
-
-### <a name="BKMK_contact_actioncard"></a> contact_actioncard
-
-See the [contact_actioncard](contact.md#BKMK_contact_actioncard) one-to-many relationship for the [contact](contact.md) table/entity.
-
-### <a name="BKMK_lk_actioncardbase_modifiedby"></a> lk_actioncardbase_modifiedby
-
-See the [lk_actioncardbase_modifiedby](systemuser.md#BKMK_lk_actioncardbase_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_letter_actioncard"></a> letter_actioncard
-
-See the [letter_actioncard](letter.md#BKMK_letter_actioncard) one-to-many relationship for the [letter](letter.md) table/entity.
-
-### <a name="BKMK_phonecall_actioncard"></a> phonecall_actioncard
-
-See the [phonecall_actioncard](phonecall.md#BKMK_phonecall_actioncard) one-to-many relationship for the [phonecall](phonecall.md) table/entity.
-
-### <a name="BKMK_task_actioncard"></a> task_actioncard
-
-See the [task_actioncard](task.md#BKMK_task_actioncard) one-to-many relationship for the [task](task.md) table/entity.
-
-### <a name="BKMK_email_actioncard"></a> email_actioncard
-
-See the [email_actioncard](email.md#BKMK_email_actioncard) one-to-many relationship for the [email](email.md) table/entity.
-
-### <a name="BKMK_lk_actioncardbase_createdonbehalfby"></a> lk_actioncardbase_createdonbehalfby
-
-See the [lk_actioncardbase_createdonbehalfby](systemuser.md#BKMK_lk_actioncardbase_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_business_unit_actioncards"></a> business_unit_actioncards
-
-See the [business_unit_actioncards](businessunit.md#BKMK_business_unit_actioncards) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
-
-### <a name="BKMK_recurringappointmentmaster_actioncard"></a> recurringappointmentmaster_actioncard
-
-See the [recurringappointmentmaster_actioncard](recurringappointmentmaster.md#BKMK_recurringappointmentmaster_actioncard) one-to-many relationship for the [recurringappointmentmaster](recurringappointmentmaster.md) table/entity.
-
-### <a name="BKMK_lk_actioncardbase_createdby"></a> lk_actioncardbase_createdby
-
-See the [lk_actioncardbase_createdby](systemuser.md#BKMK_lk_actioncardbase_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_transactioncurrency_actioncard"></a> transactioncurrency_actioncard
-
-See the [transactioncurrency_actioncard](transactioncurrency.md#BKMK_transactioncurrency_actioncard) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
+- [contact_actioncard](#BKMK_contact_actioncard)
+- [email_actioncard](#BKMK_email_actioncard)
+- [fax_actioncard](#BKMK_fax_actioncard)
+- [letter_actioncard](#BKMK_letter_actioncard)
+- [lk_actioncardbase_createdby](#BKMK_lk_actioncardbase_createdby)
+- [lk_actioncardbase_createdonbehalfby](#BKMK_lk_actioncardbase_createdonbehalfby)
+- [lk_actioncardbase_modifiedby](#BKMK_lk_actioncardbase_modifiedby)
+- [lk_actioncardbase_modifiedonbehalfby](#BKMK_lk_actioncardbase_modifiedonbehalfby)
+- [owner_actioncards](#BKMK_owner_actioncards)
+- [phonecall_actioncard](#BKMK_phonecall_actioncard)
+- [recurringappointmentmaster_actioncard](#BKMK_recurringappointmentmaster_actioncard)
+- [task_actioncard](#BKMK_task_actioncard)
+- [transactioncurrency_actioncard](#BKMK_transactioncurrency_actioncard)
 
 ### <a name="BKMK_account_actioncard"></a> account_actioncard
 
-See the [account_actioncard](account.md#BKMK_account_actioncard) one-to-many relationship for the [account](account.md) table/entity.
+One-To-Many Relationship: [account account_actioncard](account.md#BKMK_account_actioncard)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`account`|
+|ReferencedAttribute|`accountid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_account_actioncard`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_adx_inviteredemption_ActionCards"></a> adx_inviteredemption_ActionCards
+
+One-To-Many Relationship: [adx_inviteredemption adx_inviteredemption_ActionCards](adx_inviteredemption.md#BKMK_adx_inviteredemption_ActionCards)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`adx_inviteredemption`|
+|ReferencedAttribute|`activityid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_adx_inviteredemption`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_adx_portalcomment_ActionCards"></a> adx_portalcomment_ActionCards
+
+One-To-Many Relationship: [adx_portalcomment adx_portalcomment_ActionCards](adx_portalcomment.md#BKMK_adx_portalcomment_ActionCards)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`adx_portalcomment`|
+|ReferencedAttribute|`activityid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_adx_portalcomment`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_appointment_actioncard"></a> appointment_actioncard
 
-See the [appointment_actioncard](appointment.md#BKMK_appointment_actioncard) one-to-many relationship for the [appointment](appointment.md) table/entity.
+One-To-Many Relationship: [appointment appointment_actioncard](appointment.md#BKMK_appointment_actioncard)
 
-### <a name="BKMK_fax_actioncard"></a> fax_actioncard
+|Property|Value|
+|---|---|
+|ReferencedEntity|`appointment`|
+|ReferencedAttribute|`regardingobjectid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_appointment_actioncard`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-See the [fax_actioncard](fax.md#BKMK_fax_actioncard) one-to-many relationship for the [fax](fax.md) table/entity.
+### <a name="BKMK_business_unit_actioncards"></a> business_unit_actioncards
 
-### <a name="BKMK_lk_actioncardbase_modifiedonbehalfby"></a> lk_actioncardbase_modifiedonbehalfby
+One-To-Many Relationship: [businessunit business_unit_actioncards](businessunit.md#BKMK_business_unit_actioncards)
 
-See the [lk_actioncardbase_modifiedonbehalfby](systemuser.md#BKMK_lk_actioncardbase_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+|Property|Value|
+|---|---|
+|ReferencedEntity|`businessunit`|
+|ReferencedAttribute|`businessunitid`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencingEntityNavigationPropertyName|`owningbusinessunit`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_chat_ActionCards"></a> chat_ActionCards
 
-**Added by**: Activities Patch Solution
+One-To-Many Relationship: [chat chat_ActionCards](chat.md#BKMK_chat_ActionCards)
 
-See the [chat_ActionCards](chat.md#BKMK_chat_ActionCards) one-to-many relationship for the [chat](chat.md) table/entity.
+|Property|Value|
+|---|---|
+|ReferencedEntity|`chat`|
+|ReferencedAttribute|`activityid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_chat`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_contact_actioncard"></a> contact_actioncard
+
+One-To-Many Relationship: [contact contact_actioncard](contact.md#BKMK_contact_actioncard)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`contact`|
+|ReferencedAttribute|`contactid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_contact_actioncard`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_email_actioncard"></a> email_actioncard
+
+One-To-Many Relationship: [email email_actioncard](email.md#BKMK_email_actioncard)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`email`|
+|ReferencedAttribute|`regardingobjectid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_email_actioncard`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_fax_actioncard"></a> fax_actioncard
+
+One-To-Many Relationship: [fax fax_actioncard](fax.md#BKMK_fax_actioncard)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`fax`|
+|ReferencedAttribute|`regardingobjectid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_fax_actioncard`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_letter_actioncard"></a> letter_actioncard
+
+One-To-Many Relationship: [letter letter_actioncard](letter.md#BKMK_letter_actioncard)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`letter`|
+|ReferencedAttribute|`regardingobjectid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_letter_actioncard`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_actioncardbase_createdby"></a> lk_actioncardbase_createdby
+
+One-To-Many Relationship: [systemuser lk_actioncardbase_createdby](systemuser.md#BKMK_lk_actioncardbase_createdby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdby`|
+|ReferencingEntityNavigationPropertyName|`createdby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_actioncardbase_createdonbehalfby"></a> lk_actioncardbase_createdonbehalfby
+
+One-To-Many Relationship: [systemuser lk_actioncardbase_createdonbehalfby](systemuser.md#BKMK_lk_actioncardbase_createdonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`createdonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_actioncardbase_modifiedby"></a> lk_actioncardbase_modifiedby
+
+One-To-Many Relationship: [systemuser lk_actioncardbase_modifiedby](systemuser.md#BKMK_lk_actioncardbase_modifiedby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedby`|
+|ReferencingEntityNavigationPropertyName|`modifiedby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_actioncardbase_modifiedonbehalfby"></a> lk_actioncardbase_modifiedonbehalfby
+
+One-To-Many Relationship: [systemuser lk_actioncardbase_modifiedonbehalfby](systemuser.md#BKMK_lk_actioncardbase_modifiedonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`modifiedonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_owner_actioncards"></a> owner_actioncards
+
+One-To-Many Relationship: [owner owner_actioncards](owner.md#BKMK_owner_actioncards)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`owner`|
+|ReferencedAttribute|`ownerid`|
+|ReferencingAttribute|`ownerid`|
+|ReferencingEntityNavigationPropertyName|`ownerid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_phonecall_actioncard"></a> phonecall_actioncard
+
+One-To-Many Relationship: [phonecall phonecall_actioncard](phonecall.md#BKMK_phonecall_actioncard)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`phonecall`|
+|ReferencedAttribute|`regardingobjectid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_phonecall_actioncard`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_recurringappointmentmaster_actioncard"></a> recurringappointmentmaster_actioncard
+
+One-To-Many Relationship: [recurringappointmentmaster recurringappointmentmaster_actioncard](recurringappointmentmaster.md#BKMK_recurringappointmentmaster_actioncard)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`recurringappointmentmaster`|
+|ReferencedAttribute|`regardingobjectid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_recurringappointmentmaster_actioncard`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_task_actioncard"></a> task_actioncard
+
+One-To-Many Relationship: [task task_actioncard](task.md#BKMK_task_actioncard)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`task`|
+|ReferencedAttribute|`regardingobjectid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_task_actioncard`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_transactioncurrency_actioncard"></a> transactioncurrency_actioncard
+
+One-To-Many Relationship: [transactioncurrency transactioncurrency_actioncard](transactioncurrency.md#BKMK_transactioncurrency_actioncard)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`transactioncurrency`|
+|ReferencedAttribute|`transactioncurrencyid`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencingEntityNavigationPropertyName|`transactioncurrencyid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Restrict`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+
+## One-to-Many relationships
+
+These relationships are one-to-many. Listed by **SchemaName**.
+
+### <a name="BKMK_ActionCardUserState_ActionCard"></a> ActionCardUserState_ActionCard
+
+Many-To-One Relationship: [actioncarduserstate ActionCardUserState_ActionCard](actioncarduserstate.md#BKMK_ActionCardUserState_ActionCard)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`actioncarduserstate`|
+|ReferencingAttribute|`actioncardid`|
+|ReferencedEntityNavigationPropertyName|`ActionCardUserState_ActionCard`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
-<xref href="Microsoft.Dynamics.CRM.actioncard?text=actioncard EntityType" />
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
+[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
+<xref:Microsoft.Dynamics.CRM.actioncard?displayProperty=fullName>

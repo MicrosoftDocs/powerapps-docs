@@ -1,11 +1,10 @@
 ---
-title: "Sample: File Operations using Dataverse Web API (Microsoft Dataverse) | Microsoft Learn" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample demonstrates how to perform operations with file columns using the Dataverse Web API." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Sample: File Operations using Dataverse Web API (Microsoft Dataverse) | Microsoft Learn" 
+description: "This sample demonstrates how to perform operations with file columns using the Dataverse Web API." 
 ms.date: 10/28/2022
-author: divkamath
-ms.author: dikamath
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
-ms.topic: sample
 search.audienceType:
   - developer
 contributors:
@@ -61,17 +60,17 @@ Deleted the file column named 'sample_filecolumn' in the account table.
 
 This sample is a solution  with three projects. Each project performs the same operations in a different manner. See the respective README files for details on each project.
 
-- [Web API File Operations with actions sample README](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/FileOperations/FileOperationsWithActions/README.md)
-- [Web API File Operations with chunks sample README](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/FileOperations/FileOperationsWithChunks/README.md)
-- [Web API File Operations with stream sample README](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/FileOperations/FileOperationsWithStream/README.md)
+- [Web API File Operations with actions sample README](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/CSharp-NETx/FileOperations/FileOperationsWithActions/README.md)
+- [Web API File Operations with chunks sample README](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/CSharp-NETx/FileOperations/FileOperationsWithChunks/README.md)
+- [Web API File Operations with stream sample README](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/CSharp-NETx/FileOperations/FileOperationsWithStream/README.md)
 
 The code for each project is in the respective `Program.cs` file.
 
-- [Web API File Operations with actions sample Program.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/FileOperations/FileOperationsWithActions/Program.cs)
-- [Web API File Operations with chunks sample Program.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/FileOperations/FileOperationsWithChunks/Program.cs)
-- [Web API File Operations with stream sample Program.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/FileOperations/FileOperationsWithStream/Program.cs)
+- [Web API File Operations with actions sample Program.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/CSharp-NETx/FileOperations/FileOperationsWithActions/Program.cs)
+- [Web API File Operations with chunks sample Program.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/CSharp-NETx/FileOperations/FileOperationsWithChunks/Program.cs)
+- [Web API File Operations with stream sample Program.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/CSharp-NETx/FileOperations/FileOperationsWithStream/Program.cs)
 
-Each project uses a shared `Utility` class to perform common operations. This class is in the [Utility.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/FileOperations/Utility.cs) file.
+Each project uses a shared `Utility` class to perform common operations. This class is in the [Utility.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/CSharp-NETx/FileOperations/Utility.cs) file.
 
 At a high level, each project performs these operations:
 

@@ -2,8 +2,8 @@
 title: "Web API Basic Operations Sample (C#) (Microsoft Dataverse)| Microsoft Docs"
 description: "This sample demonstrates how to perform basic CRUD (Create, Retrieve, Update, and Delete) and association and dissociation operations on Microsoft Dataverse table rows, using the Dataverse Web API with the WebAPIService class library."
 ms.date: 08/29/2022
-author: divkamath
-ms.author: dikamath
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
@@ -24,7 +24,7 @@ This sample uses the common helper code in the [WebAPIService class library (C#)
 
 ## Prerequisites
 
-The following is required to build and run this sample:
+These are required to build and run this sample:
 
 - Microsoft Visual Studio 2022.
 - Access to Dataverse with privileges to perform data operations.
@@ -34,13 +34,13 @@ The following is required to build and run this sample:
 ## How to run this sample
 
 1. Clone or download the [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples) repository.
-1. Locate the [/dataverse/webapi/C#-NETx/BasicOperations/](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23-NETx/BasicOperations) folder.
+1. Locate the [/dataverse/webapi/C#-NETx/BasicOperations/](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/CSharp-NETx/BasicOperations) folder.
 1. Open the `BasicOperations.sln` file using Visual Studio 2022
 1. Edit the `appsettings.json` file to set the following property values:
 
    |Property|Instructions  |
    |---------|---------|
-   |`Url`|The Url for your environment. Replace the placeholder `https://yourorg.api.crm.dynamics.com` value with the value for your environment. See [View developer resources](../../view-download-developer-resources.md) to find this. |
+   |`Url`|The Url for your environment. Replace the placeholder `https://yourorg.api.crm.dynamics.com` value with the value for your environment. See [View developer resources](../../view-download-developer-resources.md) to find the Url for your environment. |
    |`UserPrincipalName`|Replace the placeholder `you@yourorg.onmicrosoft.com` value with the UPN value you use to access the environment.|
    |`Password`|Replace the placeholder `yourPassword` value with the password you use.|
 
@@ -49,11 +49,11 @@ The following is required to build and run this sample:
 
 ## Code
 
-The code for this sample is here: [PowerApps-Samples/dataverse/webapi/C#-NETx/BasicOperations/Program.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/BasicOperations/Program.cs)
+The code for this sample is here: [PowerApps-Samples/dataverse/webapi/C#-NETx/BasicOperations/Program.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/CSharp-NETx/BasicOperations/Program.cs)
 
 ## Demonstrates
 
-This sample has 5 regions:
+This sample has five regions:
 
 ### Section 1: Basic Create and Update operations
 
@@ -94,7 +94,7 @@ Operations: A reference to each record created in this sample was added to a lis
 
 ## Clean up
 
-By default this sample will delete all the records created in it. If you want to view created records after the sample is completed, change the `deleteCreatedRecords` variable to `false` and you will be prompted to decide if you want to delete the records.
+By default this sample deletes all the records created in it. If you want to view created records after the sample is completed, change the `deleteCreatedRecords` variable to `false` and you'll be prompted to decide if you want to delete the records.
 
 ### See also
 
@@ -108,7 +108,7 @@ By default this sample will delete all the records created in it. If you want to
 [Web API Query Data sample (C#)](webapiservice-query-data.md)<br />
 [Web API Conditional Operations sample (C#)](webapiservice-conditional-operations.md)<br />
 [Web API Functions and Actions Sample (C#)](webapiservice-functions-and-actions.md)<br />
-[Web API Metadata Operations Sample (C#)](webapiservice-metadata-operations.md)<br />
+[Web API table schema operations sample (C#)](webapiservice-metadata-operations.md)<br />
 [Web API WebApiService Parallel Operations Sample (C#)](webapiservice-parallel-operations.md)<br />
 [Web API Parallel Operations with TPL Dataflow components Sample (C#)](webapiservice-tpl-dataflow-parallel-operations.md)<br />
 

@@ -2,10 +2,10 @@
 title: "Use LINQ to construct a query (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Describes how to use the .NET Language-Integrated Query (LINQ) query provider to construct a Microsoft Dataverse query." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/03/2022
-author: kkanakas
-ms.author: kartikka
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: pehecke
-ms.topic: "article"
+ms.topic: how-to
 search.audienceType: 
   - developer
 contributors:
@@ -109,22 +109,21 @@ select new Contact
 
 The LINQ query provider supports a subset of the LINQ operators. Not all conditions that can be expressed in LINQ are supported. The following table shows some of the limitations of the basic LINQ operators.  
 
-
 |   LINQ Operator   |Limitations|
 |-------------------|-----------|
 |`join`|Represents an inner or outer join. Only left outer joins are supported.|
 |`from`|Supports one `from` clause per query.|
 |`where`|The left side of the clause must be a column name and the right side of the clause must be a value. You cannot set the left side to a constant. Both the sides of the clause cannot be constants.<br /><br /> Supports the `String` functions `Contains`, `StartsWith`, `EndsWith`, and `Equals`. |
-|`groupBy`|Not supported. FetchXML supports grouping options that are not available with the LINQ query provider. More information: [Use FetchXML aggregation](../use-fetchxml-aggregation.md)|
+|`groupBy`|Not supported. FetchXML supports grouping options that are not available with the LINQ query provider. More information: [Aggregate data using FetchXml](../fetchxml/aggregate-data.md)[Aggregate data using FetchXml](../fetchxml/aggregate-data.md)|
 |`orderBy`|Supports ordering by table columns, such as `Contact.FullName`.      |
 |`select`|Supports anonymous types, constructors, and initializers.  |
 |`last`|The `last` operator is not supported.   |
 |`skip` and `take`|Supports `skip` and `take` using server-side paging. The `skip` value must be greater than or equal to the `take` value.       |
-|`aggregate`|  Not supported. FetchXML supports aggregation options that are not available with the LINQ query provider. More information: [Use FetchXML aggregation](../use-fetchxml-aggregation.md)|
+|`aggregate`|  Not supported. FetchXML supports aggregation options that are not available with the LINQ query provider. More information: [Aggregate data using FetchXml](../fetchxml/aggregate-data.md)|
 
-<a name="filter"></a>   
+<a name="filter"></a>
 
-## Filter multiple tables 
+## Filter multiple tables
 
  You can create complex .NET Language Integrated Query(LINQ) queries in Dataverse. You use multiple `Join` clauses with filter clauses to create a result that is filtered on columns from several tables.  
 

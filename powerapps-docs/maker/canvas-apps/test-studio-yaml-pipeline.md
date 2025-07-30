@@ -3,7 +3,7 @@ title: Automate tests with Azure Pipelines using YAML
 description: Describes how to automate test suites and cases using an Azure Pipelines YAML.
 author: maustinjones
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 01/31/2022
@@ -166,11 +166,11 @@ You can find a sample file, Samples/azure-pipelines.yml, in the repo you created
 
 1. Select **Variables**.
 
-1. Add a variable named **OnlineUsername**, and set the value to the Azure Active Directory (Azure AD) email address of the user context who will sign in to the application. Tests will run under the context of this user account.
+1. Add a variable named **OnlineUsername**, and set the value to the Microsoft Entra email address of the user context who will sign in to the application. Tests will run under the context of this user account.
 
 1. Select **OK**.
 
-1. Add another variable named **OnlinePassword**. Set the value to the password of the Azure AD account created earlier.
+1. Add another variable named **OnlinePassword**. Set the value to the password of the Microsoft Entra account created earlier.
 
 1. Select **Keep this value secret** and **Let users override this value when running this pipeline**.
  
@@ -209,7 +209,7 @@ Select **RunTestAutomation** to drill into the details about the failed test cas
 
 - The test summary will report a single test result per browser. The test result will contain one or more test cases or test suite results.
 
-- For any authentication process other than Azure AD sign-in, you'll need to customize the sign-in process in the **PowerAppsTestAutomation** solution.
+- For any authentication process other tha Microsoft Entra sign-in, you'll need to customize the sign-in process in the **PowerAppsTestAutomation** solution.
 
 ### See also
 

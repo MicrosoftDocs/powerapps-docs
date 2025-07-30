@@ -43,6 +43,9 @@ There are four main steps for using a gateway.
 3. [Add gateway admins](/data-integration/gateway/service-gateway-manage) who can also manage and administer other network requirements.
 4. [Troubleshoot](/data-integration/gateway/service-gateway-tshoot) the gateway in case of errors.
 
+## End user accessing via a gateway
+An end user will use the credentials for the gateway that the Power Apps author used to create the gateway. End users will see a connection in the consent dialog but it will be with the credentials provided by the Power Apps author. 
+
 ## Next steps
 
 - [Install the on-premises data gateway](/data-integration/gateway/service-gateway-install)

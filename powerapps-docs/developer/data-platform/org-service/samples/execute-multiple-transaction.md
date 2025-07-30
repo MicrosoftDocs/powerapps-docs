@@ -2,8 +2,8 @@
 title: "Sample: Execute multiple requests in transaction (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to execute multiple request in transaction." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/03/2022
-author: divkamath
-ms.author: dikamath
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: pehecke
 ms.topic: sample
 search.audienceType:
@@ -20,7 +20,7 @@ This sample shows how to use a single web method call to execute all message req
 You can execute two or more requests in a single database transaction using the [ExecuteTransactionRequest](/dotnet/api/microsoft.xrm.sdk.messages.executetransactionrequest) message request.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Execute multiple requests in transaction sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/ExecuteMultipleInTransaction)
+> [SDK for .NET: Execute multiple requests in transaction sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/ExecuteMultipleInTransaction)
 
 ## How to run this sample
 

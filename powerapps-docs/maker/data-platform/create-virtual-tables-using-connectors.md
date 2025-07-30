@@ -1,33 +1,36 @@
 ---
-title: "Create virtual tables using virtual connectors (Microsoft Dataverse) | Microsoft Docs"
+title: "Create virtual tables using virtual connectors in Microsoft Dataverse"
 description: "Learn how to create virtual tables using virtual connectors in Microsoft Dataverse."
-ms.date: 06/08/2023
+ms.date: 06/09/2025
 ms.reviewer: matp
-ms.topic: article
-author: NHelgren # GitHub ID
-ms.author: nhelgren
+ms.topic: how-to
+author: mkannapiran
+ms.author: kamanick
+ms.subservice: dataverse-maker
 search.audienceType: 
   - maker
 contributors: 
   - JimDaly
-  - phecke 
+  - phecke
+  - psimolin
 ---
 # Create virtual tables using the virtual connector provider
-
 
 Virtual tables enable integrating data from external data sources by seamlessly representing that data as tables in Microsoft Dataverse, without data replication. Solutions, apps, flows, and more can use virtual tables as if they were native Dataverse tables. Virtual tables allow for full create, read, update, and delete privileges unless the data source they're connecting to specifically forbids it. More information about virtual tables: [Create and edit virtual tables that contain data from an external data source](create-edit-virtual-entities.md).
 
 This document covers the new  experience using Power Apps (make.powerapps.com) to create virtual tables using the following virtual connector providers:
+
 - SQL Server
 - Microsoft SharePoint
+- Microsoft Fabric (preview)
+- Salesforce (preview)
+- Oracle (preview)
+- Snowflake (preview)
+- PostgreSQL
 
-You can create a virtual table for Excel using the virtual connector provider by following the legacy process. More information: [Create the virtual table for Microsoft Excel](#create-the-virtual-table-for-microsoft-excel)
+These virtual connector providers use a Power Platform connector. More information: [Connector reference for virtual connector providers used with virtual tables](#connector-reference-for-virtual-connector-providers-used-with-virtual-tables)
 
-To learn more about supported actions and limitations with the connector, go to:
-
-- [Connector reference for the SQL Server connector](/connectors/sql/)
-- [Connector reference for the Microsoft Excel Online Business connector](/connectors/excelonlinebusiness/)
-- [Connector reference for the SharePoint Online connector](/connectors/sharepointonline/)
+You can create a virtual table for Excel using a legacy process with a virtual connector provider. More information: [Create virtual tables using Excel in Microsoft Dataverse](create-virtual-tables-using-excel.md)
 
 ## Overview
 
@@ -37,10 +40,10 @@ Virtual tables include the following components:
 
 - Data Source – the location where the external data is stored.
 - Data Provider – defines the behavior of the virtual table.
-- Connection – this sets up the ability to connect to the data source and authentication.
-- Connection reference – this provides a way for Dataverse to use the connection to the data source.
+- Connection – sets up the ability to connect to the data source and authentication.
+- Connection reference – provides a way for Dataverse to use the connection to the data source.
 
-If you were to create a virtual table using a custom data provider, you'll need to write plugins that define how every Dataverse API would interact with the API on the system where the data is stored. This is a long process that requires knowledge of coding. Virtual connector providers streamline the creation experience by automating some of the creation for you and removing the need to use code to create the virtual tables.
+If you were to create a virtual table using a custom data provider, you need to write plugins that define how every Dataverse API would interact with the API on the system where the data is stored. This is a long process that requires knowledge of coding. Virtual connector providers streamline the creation experience by automating some of the creation for you and removing the need to use code to create the virtual tables.
 
 When you establish a remote connection to an external source using a connector data source, the virtual connector provider automatically retrieves a list of all the available tables and lists by retrieving table definitions (metadata) from the external data source. You then select these tables and lists to generate the virtual table.
 
@@ -48,11 +51,7 @@ The underlying data source is key for allowing the provider to establish an auth
 
 :::image type="content" source="media/ve-connector-provider-overview.png" alt-text="Virtual connectors provider overview":::
 
-When setting up the connection and connection reference for your data sources, specific information is needed. For example, the SQL Server connector needs server name, database name, the authentication method, username, password, and (optionally) gateway connection details. Each external data source will need a connection reference defined to create the virtual table. When using the Power Apps (make.powerapps.com) experience, the connection reference can be generated automatically for you unless you wish to provide custom naming.
-
-> [!NOTE]
-> - When you use the Excel virtual connector provider, an **Entity Catalog** table is generated by the system which provides a list of all the available tables using the table definitions (metadata) from the external data source. The entity catalog doesn't persist any information and always represents the external data source's current state. You can select tables from the entity catalog to create virtual tables. If you're working with multiple external data sources, an entity catalog is generated for each external source.
-> - Currently, you must create your own connection reference when you use the Excel virtual connector provider. More information: [Create the virtual table for Microsoft Excel](#create-the-virtual-table-for-microsoft-excel)
+When setting up the connection and connection reference for your data sources, specific information is needed. For example, the SQL Server connector needs server name, database name, the authentication method, username, password, and (optionally) gateway connection details. Each external data source needs a connection reference defined to create the virtual table. When using the Power Apps (make.powerapps.com) experience, the connection reference can be generated automatically for you unless you wish to provide custom naming.
 
 The connector permissions enforce the ability for organizational users to access and operate on the virtual table. The connection can be shared with one user or can be shared with the entire organization. This allows users to access and operate virtual tables using a shared connection. By using security roles, virtual table access can be restricted to a specific set of users within your organization. You can even specify which roles have create, read, update, or delete privileges in this way.
 
@@ -67,7 +66,7 @@ More information about application lifecycle management (ALM) and solutions:
 
 To create a virtual table, you must have a Microsoft Dataverse license through Power Apps or Microsoft Dynamics 365. Microsoft 365 or Teams licenses can't be used to create virtual tables.
 
-## Steps to create a virtual table in Power Apps for SQL or SharePoint
+## Create a virtual table in Power Apps
 
 Creating a virtual table in Power Apps (make.powerapps.com) using the virtual connector provider includes the following steps:
 
@@ -76,8 +75,8 @@ Creating a virtual table in Power Apps (make.powerapps.com) using the virtual co
 1. [Create and select the connection reference (optional)](#create-and-select-a-connection-reference-optional)
 1. Choose your connection details and select your data <a href="#SQL-or-SharePoint">SQL or SharePoint</a>.
 1. [Configure your data](#configure-your-data)
-2. [Configure column and table names (optional)](#configure-table-and-column-names-optional)
-3. [Complete the setup](#complete-the-setup)
+1. [Configure column and table names (optional)](#configure-table-and-column-names-optional)
+1. [Complete the setup](#complete-the-setup)
 
 ### Choose to create a table using an external data source
 
@@ -85,21 +84,24 @@ These steps describe how to create a virtual table from a solution. Use similar 
 
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Solutions** in the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Create a new solution or open an existing unmanaged solution.
-1. On the command bar, select **New** > **Table** > **Table from external data**.
+1. On the command bar, select **New** > **Table** > **Virtual table**.
 
 ### Create the virtual table
 
 Watch a short video showing how to create a virtual table with the virtual connector provider.
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE5e1m9]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=130f38be-01d0-4321-8681-a7780231b94e]
 
-1. In the **New table from external data** wizard you can either select an existing connection if you've one or choose to create a new connection.  
+1. In the **New table from external data** wizard you can either select an existing connection if you have one or choose to **Add connection**.  
 
    - If you want to use an existing connection, select the connection you want, and then select **Next**.
    - If you have an existing connection but wish to create a new one, select **New connection** on the command bar.
-   - If you have no connections and wish to create a new connection, select **+Add Connection**.
-   :::image type="content" source="media/ve-select-datasource.png" alt-text="Select an existing datasource or create one":::
-1. You're directed to a new tab in your browser. Select your authentication method. Depending on the authentication method selected, you'll be asked to provide credential information required to create the connection.
+   - If you have no connections and wish to create a new connection, select **+Add Connection** next to the connection type you want.
+
+   > [!IMPORTANT]
+   > Connections that are shared with you aren't available for use with this feature. Only connections created by the current user appear in the virtual table wizard.
+
+2. You're directed to a new tab in your browser. Select your authentication method. Depending on the authentication method selected, you might be asked to provide credential information required to create the connection.
 
 <a name="SQL-or-SharePoint"></a>
 
@@ -108,7 +110,7 @@ Watch a short video showing how to create a virtual table with the virtual conne
 > [!IMPORTANT]
 > These will be the credentials used for all authentication for the virtual table so use credentials with the correct level of permissions with SQL Server.
 
-- **Azure AD**: Select and sign in with your credentials.
+- **Microsoft Entra**: Select and sign in with your credentials.
 - **SQL Server**: Server name, database name, user name, password, gateway (on-premises deployments only).
 
 # [Microsoft SharePoint](#tab/sharepoint)
@@ -123,13 +125,92 @@ Watch a short video showing how to create a virtual table with the virtual conne
 
    :::image type="content" source="media/ve-sharepoint-connect.png" alt-text="Connect to Sharepoint":::
 
+# [Microsoft Fabric (preview)](#tab/fabric)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
+> [!IMPORTANT]
+>
+> - This is a preview feature.
+> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+
+- Select a Microsoft Fabric workspace from the available list of workspaces. All workspace where you have access are available in the list.
+- Choose a Microsoft Fabric Lakehouse from the drop-down list. All lakehouses and data warehouses within the workspace selected previously are available to choose. 
+- Follow the instructions on your screen. More information: [Build apps and automations drive action with insights from Microsoft Fabric (preview)](azure-synapse-link-build-apps-with-fabric.md)
+
+More information: [Build apps and automations drive action with insights from Microsoft Fabric](azure-synapse-link-build-apps-with-fabric.md)
+
+# [Salesforce (preview)](#tab/salesforce)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
+> [!IMPORTANT]
+>
+> - This is a preview feature.
+> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+
+Select **Add connection**:
+
+- **Login URI**: Select either **Production** (default) or **Sandbox**.
+- **Salesforce API version**: Select **v41.0** (default) or a later version.
+
+# [Oracle (preview)](#tab/oracle)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
+> [!IMPORTANT]
+>
+> - This is a preview feature.
+> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+
+For Oracle connections, you must provide a server, authentication type, username, password, and a gateway.
+
+Server should be provided in **Server:Port/SID**-format. Notice that the server name or IP-address needs to be accessible from the [on-premises data gateway](/data-integration/gateway/service-gateway-onprem).
+
+# [Snowflake (preview)](#tab/snowflake)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
+> [!IMPORTANT]
+>
+> - This is a preview feature.
+> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+
+- **Authentication type**. Ensures Snowflake is accessed only by those with approved permission. Select **Service principal (Microsoft Entra ID application)** for this option.
+- **Snowflake SaaS URL**. The URL associated with the Snowflake account for which virtual tables are to be created. For example, `organization.account.snowflakecomputing.com`. Don't add *https* to the URL.
+- **Snowflake database**. Database where Snowflake data tables are virtualized in Dataverse.
+- **Warehouse name**. Snowflake warehouse which the role has USAGE privileges.
+- **Role**. Snowflake role assigned to the **Service Account** role.
+- **Schema**. Schema which has the tables that Dataverse needs access to virtualize the data.
+- **Tenant**. Microsoft Entra ID tenant.
+- **Client ID**. Microsoft Entra client ID for the Power Platform tenant.
+- **Client Secret**. Microsoft Entra ID client secret for the Power Platform client.
+- **Resource URL**. Microsoft Entra ID resource application ID. Don't add `api://` for the URL.
+
+# [PostgreSQL](#tab/PostgreSQL)
+
+PostgreSQL is a relational database management system developed by PostgreSQL Global Development Group. For PostgreSQL connections, you must provide a server, database name, authentication type, username, and password.
+
+- Enter **Server** location and TCP port, such as *postgres-vcp-test.postgres.database.azure.com:5432*.
+- Enter **Database Name**, such as *Adventureworks*.
+- Select **Authentication Type** as **Basic**.
+- Enter **Username** and **Password**.
+- **Encrypt Connection**. Select if you want to encrypt client and server communications for increased security.
 
 ---
 
-3. Select **Create**.
-4. After the connection is created, go back to your browser tab with the wizard and select **Refresh**.
-5. Select your connection.
+3. Optionally, select **Advanced options** to use a connection reference and/or environment variable.
 
+   When you create a virtual table, a connection reference is automatically created for you with the virtual table. A connection reference is a solution component that contains information about the connector. However, you might want to create you own. To do this, select **Manually configure connection reference.** More information: [Create and select a connection reference (optional)](#create-and-select-a-connection-reference-optional)
+
+   You can associate a virtual table with its own environment variable. Select **Use environment variables**  to link the environment variable directly to the virtual table provider, offering flexibility to modify data sources when importing the virtual table into a new environment. More information: [Environment variable](#environment-variable)
+
+     :::image type="content" source="media/vt-env-variable.png" alt-text="Environment variable for virtual tables":::
+
+4. Select **Create**.
+5. After the connection is created, go back to your browser tab with the wizard and select **Refresh**, and then select your connection.
+
+## Connection references and environment variables
 
 ### Create and select a connection reference (optional)
 
@@ -138,21 +219,35 @@ When you create a virtual table, a connection reference is automatically created
 However, you might want to create your own connection reference for the virtual table.
 
 > [!NOTE]
+>
 > - The benefit of optionally naming your connection reference is because it can be easier to find later if you need details about it.
-> - If you are using an existing connection you can select an existing connection reference or create a new one. Creating a new connection reference is only used if you want to segment your virtual tables into completely unrelated solutions for use later.
+> - If you're using an existing connection you can select an existing connection reference or create a new one. Creating a new connection reference is only used if you want to segment your virtual tables into completely unrelated solutions for use later.
 
 To create a connection reference, when you're creating the connection for the virtual table, follow these steps:
 
-1. Expand **Advanced Options** and then select the **Manually configure connection reference** to create a connection reference for the virtual table.
-
-   :::image type="content" source="media/ve-create-connection-reference.png" alt-text="Create a connection reference for the virtual table":::
+1. Expand **Advanced options** and then select the **Manually configure connection reference** to create a connection reference for the virtual table.
 
 1. On the **Connection Reference** page, select or name your connection reference, and then select **Next**.
 
-   - If you chose SQL and Azure AD as your authentication method, you'll be asked for your SQL server name and database name. Provide these and select **Next**.
-   
-### Configure your Data
-   - If you're creating a SharePoint virtual table, you're asked to enter the URL of your SharePoint site or select from your most recently used SharePoint sites. The most recently used list is populated by gathering information about your recently used sites using Microsoft Graph and your Azure AD credentials. If you're pasting the SharePoint URL, only include the information up to the site name, such as :::no-loc text="https://microsoft.sharepoint.com/teams/Contoso":::.
+   - If you chose SQL and Microsoft Entra ID as your authentication method, you're asked for your SQL server name and database name. Provide these and select **Next**.
+
+### Environment variable
+
+Environment variables play a key role in the application lifecycle management (ALM) process, allowing for seamless movement of applications across different Power Platform environments. When creating a virtual table, you can associate it with its own environment variable. To take advantage of this functionality, expand **Advanced options**, and then select **Use environment variables** when choosing a connection for your data source during a virtual table create.
+
+#### Environment variables with virtual tables recommendations
+
+- Create or update a virtual table in the context of a solution.
+- If an existing virtual table with environment variable needs to be added to a solution, then the environment variable related to this virtual table needs to be explicitly added to the solution. From the **Solutions** area in Power Apps, select **Add existing** > **Environment variable**, and then select the environment variable related to the virtual table. After this step, select the environment variable and then select **Advanced** and add the required objects.
+- If a virtual table is created without an environment variable specified, you must re-create the virtual table and select the environment variable option.
+
+#### Environment variables with virtual tables limitation
+
+- Environment variable support with virtual tables currently only work with SharePoint and SQL virtual connectors.
+
+### Configure your data
+
+If you're creating a SharePoint virtual table, you're asked to enter the URL of your SharePoint site or select from your most recently used SharePoint sites. The most recently used list is populated by gathering information about your recently used sites using Microsoft Graph and your Microsoft Entra credentials. If you're pasting the SharePoint URL, only include the information up to the site name, such as :::no-loc text="https://microsoft.sharepoint.com/teams/Contoso":::.
 
 1. A page is displayed where you can either search your data source for a specific table or list, or select a table or list from the provided list. 
 1. Select the check box if you want to configure the table name, column names, and primary field.
@@ -163,17 +258,17 @@ To create a connection reference, when you're creating the connection for the vi
 
 When you create a virtual table, by default you can choose to change the suggested table and column names. To do this, follow these steps:
 
-1. Select **Configure table and column names that will be used in Dataverse**, accept or change the following Dataverse table properties:
-   - **Display name**: The name that will be used to identify your virtual table.
+1. Select **Configure table and column names that will be used in Dataverse**, accept, or change the following Dataverse table properties:
+   - **Display name**: The name that is used to identify your virtual table.
    - **Plural name**: The plural of the virtual table name, used in appropriate situations where you refer to one or more record from the table, such as *Customer* is the table for multiple records refereed to as *Customers*.
    - **Schema name**: The logical name Dataverse uses for the virtual table, which includes the solution publisher prefix.
-   - **Primary field**: This is the text value to be used when looking up records on your virtual table. Only string fields may be selected. A primary key is a required field but will be chosen by Dataverse.
+   - **Primary field**: This is the text value to be used when looking up records on your virtual table. Only string fields can be selected. A primary key is a required field but will be chosen by Dataverse.
  
 1. In the **External column** area, choose if you would like to rename any of your external columns from the data source. The following fields are provided:
    - **Schema name** (read-only). This is the schema name of the column in the data source. This property is read only.
    - **Display name**. The name that's used to identify your column. 
    - **Schema name**. The logical name Dataverse will use for the column that will include your solution publisher prefix.
-   There's a **Quick Format Names** option on the page, this will provide suggested name changes and can be useful if you have a large number of fields that include prefixed values from your SQL server such as &lt;tablename&gt;.&lt;column name&gt;. For example, *Database12.Products* would change to **Products**.
+   There's a **Quick Format Names** option on the page, this provides suggested name changes and can be useful if you have a large number of fields that include prefixed values from your SQL server such as &lt;tablename&gt;.&lt;column name&gt;. For example, *Database12.Products* would change to **Products**.
 
    > [!TIP]
    > Instead of entering the information, the **Quick format names** command provides suggested name changes and can be useful if you have a large number of fields that include prefixed values from your SQL server, such as *tablename*.*column name*. For example, *Database12.Products* would change to *Products*.
@@ -194,147 +289,17 @@ Once the table is created, you're taken directly to your new virtual table where
 > [!NOTE]
 > When you attempt to create a virtual table that already exists, you receive a message that the table already exists and that you will be re-creating it. You will not be able to change the primary field or schema name if this is the case. Re-creating the table will update any column changes that were made in the data source on the table.
 
-## Create the virtual table for Microsoft Excel
+## Connector reference for virtual connector providers used with virtual tables
 
-1. Download and install the virtual connector. Go to [the Microsoft commercial marketplace](https://appsource.microsoft.com/) and search for `Virtual Connector` or select the link to download the provider: [Virtual connectors in Dataverse](https://appsource.microsoft.com/product/dynamics-365/mscrm.connector_provider?tab=Overview)
+To learn more about supported actions and limitations with each connector, go to:
 
-   :::image type="content" source="media/ve-virtual-connectors-provider.png" alt-text="Virtual connectors in Dataverse":::
-
-1. Select **Get it now**. In the sign-in dialog, enter work or school account email. If you agree to the terms and conditions, select **Continue**. The Power Platform admin center will open automatically.
-
-1. Select the environment where you want to install the solution. If you agree to the terms and conditions, select **Install**. Once the installation is complete, you'll see the **Virtual connectors in Dataverse** app installed under **Environments -> [your environment name] -> Dynamics 365 apps**.
-
-   :::image type="content" source="media/ve-select-the-environment.png" alt-text="Select environment to install connector":::
-
-1. You should also see the **Virtual Connector Provider** solution and other solutions enabled in the Power Platform environment.
-
-   :::image type="content" source="media/ve-select-virtual-connectors-solution.png" alt-text="Virtual connector provider solution":::
-
-### Create the connection for the Excel virtual connector provider
-
-Watch a short video showing how to create a virtual table with the Excel virtual connector provider.
-
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4YcGf]
-
-1.	Go to Power Apps (make.powerapps.com), and select the environment in which you would like to set up the virtual table.
-1.	In the left navigation pane, select **Connections**, and then select **New connection**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
-1. Select the **Microsoft Excel Online (Business) Virtual Connector** from the list of connections.
-1. You'll be asked to provide additional details to connect to the data source.
-1. Select **Create**, your current signed-in credentials will be used.
-   :::image type="content" source="media/ve-excel-connection.png" alt-text="Connect to Excel":::
-
-### Create the connection reference
-
-1. Go to **Solutions**.
-1. Select the **Default Solution** or any other existing solution you have in your environment to create the virtual table.
-1. Select **New** and then select **Connection Reference.**
-1. Enter **Display name**, select the connection you created for the **Connectors** option and then select the data connection that you've created.
-
-   :::image type="content" source="media/ve-new-connection-reference.png" alt-text="New connection reference":::
-
-### Create the data source
-
-Now create the virtual table data source in Dataverse.
-
-1. Select the **Gear icon -> Advanced Settings**.
-
-   :::image type="content" source="media/ve-power-apps-advanced-settings.png" alt-text="Advanced Settings command":::
-
-1. In the top navigation bar, select **Settings** and then **Administration**.
-
-   :::image type="content" source="media/ve-advanced-settings-system-administration.png" alt-text="Navigate to system administration":::
-
-1. Select **Virtual Entity Data Sources**.
-
-   :::image type="content" source="media/ve-virtual-entity-data-sources-settings.png" alt-text="Virtual entity data sources settings":::
-
-1. Select **New**. In the pop-up dialog, select the **Virtual Connector Data Provider**.
-
-   :::image type="content" source="media/ve-create-new-data-source.png" alt-text="New Data source":::
-
-   :::image type="content" source="media/ve-select-data-provider.png" alt-text="Select Virtual Connector Data Provider":::
-
-1. Name your **Data Source** and select the **Connection Reference** you created in the drop-down list.
-
-   :::image type="content" source="media/ve-name-data-source.png" alt-text="Name data source and select connection reference":::
-
-   Add your Dataset Value
-1. Paste in the file name including extension into the Dataset Value. Remember the file must be in the OneDrive that was used for the Connection setup. (for example: SampleData.xlsx)
-
-
-1. Select **Save**.
-
-### Entity catalog
-
-With the connection reference and the virtual table data source setup, an **Entity Catalog** is automatically generated. The **Entity Catalog** is specific to the data source and will list all the tables that are in the respective data source.
-
-:::image type="content" source="media/ve-entity-catalog.png" alt-text="Entity Catalog":::
-
-> [!NOTE]
-> - The creation of the entity catalog is an asynchronous process. Depending on your environment, this may take a few minutes.
-> - The tables displayed in the entity catalog are not virtual tables in themselves. You need to select from this list of tables representing the external data to create virtual table in Dataverse.
-
-> [!TIP]
-> - If the entity catalog creation takes a long time, you can check the job completion status by navigating to **Settings -> System Jobs** view.
-
-#### View the entity catalog
-  
-- Select **Data** > **Tables**, and then select the entity catalog that was created. 
-- Select **Advanced Find** and use the **Look for:** column. The catalog will include a prefix **Entity Catalog for** followed by the connection reference (example: Entity Catalog for Adventure Works DB). Find the entity catalog for your respective data connection and select **Results** to display all the external data source tables.
-
-   :::image type="content" source="media/ve-advance-find-table-catalog.png" alt-text="Advanced find table catalog":::
-
-  >[!Note]
-  > Bulk creation of virtual tables is not supported currently. Even though the entity catalog allows you to select multiple tables, you will have to select one table at a time to create virtual tables.
-
-1. To create a virtual table, a model driven app must be built for the entity catalog. Select the entity catalog table.
-
-1. Select **Create an app** in the top navigation.
-
-   :::image type="content" source="media/entity-catalog-table-selected-table-view.jpg" alt-text="Entity catalog with a table selected, table view":::
-
-1. Name the app, and then select **Create**.
-
-   :::image type="content" source="media/Create-an-app-screen.jpg" alt-text="Create a Model Driven app screen":::
-
-   The app is automatically generated using the entity catalog table.
-
-1. Once the app is completed, you can select **Publish** to complete the app and use it later, or you can select **Play** to create your virtual table now without publishing the app.
-
-   :::image type="content" source="media/completed-model-driven-app.jpg" alt-text="Completed model driven app":::
-
-   All tables from your Excel file will be provided in the app view.
-
-1. Select the data set you wish to use from the entity catalog, and then select **Edit** in the navigation bar.
-
-   :::image type="content" source="media/model-driven-app-entity-catalog-view.jpg" alt-text="Model Driven app Entity Catalog view with a data set selected":::
-
-   Wait for the form to fully load before editing. When loaded the form will appear like this:
-
-   :::image type="content" source="media/edit-form-for-entity-catalog-model-driven-app.jpg" alt-text="Entity Catalog edit form all fields blank":::
-
-1. In the provided form set the **Create** or **Refresh Entity** column to Yes.
-
-1. Select the **Primary Key** and **Primary Field** of the virtual entity by using the dropdown lists to find the columns you want to use.
-
-   :::image type="content" source="media/edit-form-entity-catalog-fields-completed.jpg" alt-text="Entity Catalog edit form all fields completed":::
-
-1. Save the record to create the virtual table.
-
-   > [!Note] 
-   > After the save completes, the form will "reset" with all fields shown as blank, this is normal.
-
-1. Return to the Power Apps home page and select **Data**. Your virtual table is now created with a "Custom Entity" prefix. It may take a few moments for the creation to complete.
-
-   :::image type="content" source="media/maker-table-view-virtual-table.png" alt-text="Maker portal with virtual table selected":::
-
-> [!IMPORTANT]
->
-> - The provider automatically maps the primary key associated with the external data source when creating the virtual table. All CRUD operations can be performed on the generated virtual table.
-> - All columns in the external data are automatically mapped to Dataverse types that are supported by the connector. You can review the virtual table details and make changes by navigating to **Settings -> Customization – Entities** view.
-> - Virtual tables require there to be at least one string field to use as the **Primary Name** column.
-
-Once you've created a virtual table, you can work with it much the same way as any other table. You can start defining the relationships with other tables, in the environment and use them in your Power Apps and Power Automate flows.
+- [Connector reference for the SQL Server connector](/connectors/sql/)
+- [Connector reference for the Microsoft Excel Online Business connector](/connectors/excelonlinebusiness/)
+- [Connector reference for the SharePoint Online connector](/connectors/sharepointonline/)
+- [Connector reference for the Salesforce connector](/connectors/salesforce/)
+- [Connector reference for the Oracle connector](/connectors/oracle/)
+- [Connector reference for the Snowflake connector](/connectors/snowflakev2/)
+- [Connection reference for PostgreSQL connector](/connectors/postgresql/)
 
 ### See also
 

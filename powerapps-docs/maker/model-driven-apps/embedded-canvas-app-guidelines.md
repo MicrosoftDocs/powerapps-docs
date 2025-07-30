@@ -2,12 +2,12 @@
 title: "Guidelines and troubleshooting when working with embedded canvas apps | MicrosoftDocs"
 description: Understand the recommended ways to work with embedded canvas apps in Power Apps
 ms.custom: ""
-ms.date: 07/21/2022
+ms.date: 01/10/2024
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "troubleshooting"
-author: "RichdiMSFT"
+ms.topic: troubleshooting-general
+author: "Mattp123"
 ms.subservice: mda-maker
 ms.author: "matp"
 tags: 
@@ -24,14 +24,14 @@ This article provides guidance on working with embedded canvas apps as well as h
 -	Embedded canvas apps are only supported with Unified Interface model-driven apps.
 -	Only three embedded canvas apps can be enabled for each form with Web, and one for Tablet and Phone client types.
 -	Multiple embedded canvas apps can be added to the form, but can only enable three at a time for Web and one at a time for Tablet and Phone client types. 
--	If more than three embedded canvas apps are enabled with the Web client type on a model-driven app form the error message will show as follows "You have more than three canvas apps with Web form factor, the maximum is three for this form factor. The number of canvas apps are limited to three for Web and one for Tablet and Phone form factors."
+-	If more than three embedded canvas apps are enabled with the Web client type on a model-driven app form the error message shows as follows "You have more than three canvas apps with Web form factor, the maximum is three for this form factor. The number of canvas apps are limited to three for Web and one for Tablet and Phone form factors."
    - To enable or disable an embedded canvas app see [Enable an embedded canvas app](#enable-an-embedded-canvas-app) and [Disable an embedded canvas app](#disable-an-embedded-canvas-app).
 -	We recommend that you have a single embedded canvas app for each form tab.
--	When adding an embedded canvas app to a model-driven form always use a required column that is guaranteed to have a value. If your column does not have a value your embedded canvas app will not refresh in response to any change in data on the host model-driven form.
--	Publishing a model-driven form does not also publish the embedded canvas app.
+-	When adding an embedded canvas app to a model-driven form always use a required column that is guaranteed to have a value. If your column doesn't have a value your embedded canvas app won't refresh in response to any change in data on the host model-driven form.
+-	Publishing a model-driven form doesn't also publish the embedded canvas app.
      - Embedded canvas apps must be published independent of the host model-driven form. More information: [Publish an app](../canvas-apps/save-publish-app.md).
 -	If opening Power Apps Studio to create or edit an embedded canvas app via the **Customize** button in the canvas app control properties is blocked due to a web browser pop-up blocker, you must enable the make.powerapps.com site or temporarily disable the pop-up blocker and then select **Customize** again.
--	Embedded canvas apps are not displayed when creating a new row since they need a row context to be passed to them.
+-	Embedded canvas apps aren't displayed when creating a new row since they need a row context to be passed to them.
 -	The ModelDrivenFormIntegration.Item object is read-only.
      - To write back data, you must use the Dataverse connector. More information: [Microsoft Dataverse](/connectors/commondataservice/)
 -	Embedded canvas apps can only be created via the host model-driven form.
@@ -53,7 +53,7 @@ This article provides guidance on working with embedded canvas apps as well as h
 ## Disable an embedded canvas app
 1. Select the Column that is customized to display as an embedded canvas app.
 2. In the **Column Properties** dialog, select the **Controls** tab.
-3. In the list of controls select the default control and then select the **Web** option.
+3. In the list of controls, select the default control and then select the **Web** option.
 4. Select **OK**.
 
 ## Saving data in an embedded canvas app
@@ -67,11 +67,12 @@ This article provides guidance on working with embedded canvas apps as well as h
 
 - The canvas app custom control is only supported for use with the **Web** client type. Currently, the **Phone** and **Tablet** client types aren't supported.
 - The **Canvas App** privilege in a security role can't be used to grant app users access to either an embedded or standalone canvas app. For more information on sharing an embedded canvas app, go to: [Share an embedded canvas app](share-embedded-canvas-app.md).
-- If you write back the same data that is being displayed in the host model-driven form, the form will continue to display old data until it is refreshed. An easy way to do that is to use the [RefreshForm](embedded-canvas-app-actions.md#refreshformshowprompt) method.
+- If you write back the same data that is being displayed in the host model-driven form, the form will continue to display old data until it's refreshed. An easy way to do that is to use the [RefreshForm](embedded-canvas-app-actions.md#refreshformshowprompt) method.
+- Offline and device capability controls like barcode scanning, capturing photos from device, or attaching files aren't supported in embedded canvas apps.
 
 ### The ModelDrivenFormIntegration control doesn't provide a value for columns of a related table
 
-For example, when the ModelDrivenFormIntegration control is connected to the Accounts table, using *ModelDrivenFormIntegration.Item.’Primary Contact’.’Full Name’* will not return a value.
+For example, when the ModelDrivenFormIntegration control is connected to the Accounts table, using *ModelDrivenFormIntegration.Item.’Primary Contact’.’Full Name’* won't return a value.
 
 To access columns of a related table, makers can use either of the expressions listed here:
     - *LookUp(Accounts, Account = GUID(First(ModelDrivenFormIntegration.Data).ItemId)).'Primary Contact'.'Full Name'*  
@@ -80,20 +81,20 @@ To access columns of a related table, makers can use either of the expressions l
 
 ### Embedded canvas app doesn’t render correctly
 
-You can build your canvas app to be [responsive](../../maker/canvas-apps/build-responsive-apps.md), which refers to the ability of an app to automatically align to different screen sizes and form factors to use the available screen space sensibly. Depending on whether your app is built to be responsive or not, we recommend different settings to ensure that your canvas app may render correctly within the field on the model-driven app form. If you are experiencing additional whitespace or scroll bars around your canvas app, we recommend checking the following in your app.
+You can build your canvas app to be [responsive](../../maker/canvas-apps/build-responsive-apps.md), which refers to the ability of an app to automatically align to different screen sizes and form factors to use the available screen space sensibly. Depending on whether your app is built to be responsive or not, we recommend different settings to ensure that your canvas app might render correctly within the field on the model-driven app form. If you're experiencing additional whitespace or scroll bars around your canvas app, we recommend checking the following in your app.
 
 For responsive apps:
-- Disable the **Scale to fit** option. This will allow your app to scale according to the dimensions and properties you have set for your app.
-An embedded canvas app may not render correctly within the field on the model-driven app form, such as additional whitespace or scroll bars around the canvas app.
+- Disable the **Scale to fit** option. This allows your app to scale according to the dimensions and properties you have set for your app.
+An embedded canvas app might not render correctly within the field on the model-driven app form, such as additional whitespace or scroll bars around the canvas app.
 
-For non-responsive apps:
-- We recommend that you enable the **Scale to fit** option. This will help the app to resize to fit the available space.
+For nonresponsive apps:
+- We recommend that you enable the **Scale to fit** option. This helps the app to resize to fit the available space.
 
 In both scenarios, ensure that the **App Name** property value is set and correctly defined in the embedded canvas app control.
 
 ### Embedded canvas app doesn't respect height
 
-The **Form field height** property is not respected by the canvas app component. When embedded, the dimensions of the canvas app component respect the aspect ratio set on the canvas app. Because the aspect ratio is fixed, the height of the canvas app component is calculated relative to the width of the app. The width of the app is determined based on the horizontal space available in the model-driven app. If you would like to make adjustments to the height of the canvas app component, we recommend [customizing the aspect ratio](../../maker/canvas-apps/set-aspect-ratio-portrait-landscape.md) on your canvas app. Note that to customize the aspect ratio, the app must be in tablet layout.
+The **Form field height** property isn't respected by the canvas app component. When embedded, the dimensions of the canvas app component respect the aspect ratio set on the canvas app. Because the aspect ratio is fixed, the height of the canvas app component is calculated relative to the width of the app. The width of the app is determined based on the horizontal space available in the model-driven app. If you would like to make adjustments to the height of the canvas app component, we recommend [customizing the aspect ratio](../../maker/canvas-apps/set-aspect-ratio-portrait-landscape.md) on your canvas app. Note that to customize the aspect ratio, the app must be in tablet layout.
 
 #### Enable scale to fit
 
@@ -114,7 +115,7 @@ To resolve this issue, choose the correct option:
    1. In the same solution, edit the model-driven app that has the embedded canvas app control, and then set the canvas **App Name** to the embedded canvas app control using the value from the previous step. More information: [Add an embedded canvas app on a model-driven form](embedded-canvas-app-add-classic-designer.md)
    1. Export the solution from the development environment and then import the solution into your target environment.
 
-- Unmanaged solutions: If the solution was imported into an environment as an unmanaged solution, edit the model-driven app, that has the embedded canvas app control, and then follow similar steps as described for a managed solution to set the canvas **App Name** property.
+- Unmanaged solutions: If the solution was imported into an environment as an unmanaged solution, edit the model-driven app that has the embedded canvas app control, and then follow similar steps as described for a managed solution to set the canvas **App Name** property.
 
 #### Embedded canvas app control loads the canvas app from a different environment
 

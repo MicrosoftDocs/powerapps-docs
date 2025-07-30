@@ -1,8 +1,8 @@
 ---
 title: property-dependency Element | Microsoft Docs
 description: A property dependency in the property-dependencies node. Defines dependency between two properties.
-ms.author: hemantg
-author: HemantGaur
+author: anuitz
+ms.author: anuitz
 ms.date: 11/30/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -41,7 +41,7 @@ Canvas apps
 </property-dependencies>
 ```
 
-### Related topics
+### Related articles
 
 [Power Apps component framework manifest schema reference](index.md)<br/>
 [Power Apps component framework API reference](../reference/index.md)<br/>

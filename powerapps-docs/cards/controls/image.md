@@ -16,6 +16,8 @@ contributors:
 
 # Image control in cards
 
+[!INCLUDE[cards-deprecation-banner](~/includes/cards-deprecation-notice.md)]
+
 An image with properties to control what the image looks like. Supports publicly accessible and CORS-compliant URLs as well as base64 encoded images.
 
 Use the [media control](media.md) for video and audio files.

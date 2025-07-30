@@ -2,16 +2,16 @@
 title: "Access external web services (Microsoft Dataverse) | MicrosoftDocs"
 description: "Learn how to access a web service from a custom plug-in or workflow activity."
 ms.custom: ""
-ms.date: 06/23/2022
-ms.reviewer: "pehecke"
-ms.topic: "article"
-author: "divkamath"
+ms.date: 06/10/2025
+ms.reviewer: pehecke
+ms.topic: article
+author: MsSQLGirl
 ms.subservice: dataverse-developer
-ms.author: "pehecke"
+ms.author: jukoesma
 search.audienceType: 
   - developer
 contributors:
-  - PHecke
+  - phecke
 ---
 # Access external web services
 
@@ -19,32 +19,80 @@ Plug-ins and custom workflow activities can access the network through the HTTP 
   
 - Your server must have the current [TLS and cipher suites](/power-platform/admin/onpremises-server-cipher-tls-requirements).
 - Only the HTTP and HTTPS protocols are allowed.
-- Access to localhost (loopback) is not permitted.
-- IP addresses cannot be used. You must use a named web address that requires DNS name resolution.
-- Anonymous authentication is supported and recommended. There is no provision for prompting the logged on user for credentials or saving those credentials.
-- Your server must allow connections from [Power Platform and Dynamics 365 services IP address values specified under the AzureCloud service tag](/power-platform/admin/online-requirements#ip-addresses-required).
+- Access to localhost (loopback) isn't permitted.
+- IP addresses can't be used. You must use a named web address that requires DNS name resolution.
+- Anonymous authentication is supported and recommended. There's no provision for prompting the logged on user for credentials, or saving those credentials.
+- Your server must allow connections from Power Platform and Dynamics 365 services [IP address values](/power-platform/admin/online-requirements#ip-addresses-required) specified under the `PowerPlatformPlex` service tag.
 
-Other methods of accessing web services include the use of Webhooks and the [!INCLUDE [pn_azure_service_bus](../../includes/pn_azure_service_bus.md)]. Refer to the links provided below for more information on those topics.
+Other methods of accessing web services include the use of Webhooks and the [!INCLUDE [pn_azure_service_bus](../../includes/pn_azure_service_bus.md)]. Refer to the links provided in the next sections for more information on those topics.
 
 ## How to access external web services
 
-Today most people are familiar with  the [System.Net.Http.HttpClient Class](/dotnet/api/system.net.http.httpclient). `HttpClient` was introduced with .NET 4.5 and provides significant capabilities over the [System.Net.WebClient Class](/dotnet/api/system.net.webclient) which is still available.
+Today most people are familiar with  the [System.Net.Http.HttpClient Class](/dotnet/api/system.net.http.httpclient). `HttpClient` was introduced with .NET Framework 4.5 and provides significant capabilities over the [System.Net.WebClient Class](/dotnet/api/system.net.webclient), which is now obsolete.
 
-For new plug-ins you should use `HttpClient` because [the .NET team doesn't recommend WebClient for new development](/dotnet/api/system.net.webclient?#remarks). However, this doesn't mean you must replace any legacy code uses of `WebClient` that you find. Most of the advantages provided in `HttpClient` do not necessarily provide advantages within a plug-in. `HttpClient` is intended to be re-used and is asynchronous by default. Unless you are making multiple HTTP requests within your plug-in, `WebClient` is designed for a single request. Because `HttpClient` is asynchronous by default, you need to break away from typical use patterns and add code to force the operations to be performed synchronously, typically by removing the `await` keyword and appending `.GetAwaiter().GetResult()` to any asynchronous calls.
+`HttpClient` is intended to be reused and is asynchronous by default. Because `HttpClient` is asynchronous by default, you need to break away from typical use patterns and add code to force the operations to be performed synchronously, typically by removing the `await` keyword and appending `.GetAwaiter().GetResult()` to any asynchronous calls.
 
-`WebClient` provides simple synchronous methods such as [UploadData](/dotnet/api/system.net.webclient.uploaddata), [DownloadFile](/dotnet/api/system.net.webclient.downloadfile) which don't clearly expose the underlying HTTP method used, but they can be set using specific overrides such as [UploadString(String, String, String)](/dotnet/api/system.net.webclient.uploadstring?#system-net-webclient-uploadstring(system-string-system-string-system-string)) in case you want to use `PATCH` instead of `POST`.
+```csharp
+public void Execute(IServiceProvider serviceProvider)
+{
+  //Extract the tracing service for use in plug-in debugging.
+  ITracingService tracingService =
+      (ITracingService)serviceProvider.GetService(typeof(ITracingService));
 
-In most cases outside of plug-ins, you will want to use `HttpClient`. Within plug-ins, you can also use `WebClient` if you prefer.
+  try
+  {
+    tracingService.Trace("Downloading the target URI: " + webAddress);
+
+    try
+    {
+      // Download the target URI using a Web client. Any .NET class that uses the
+      // HTTP or HTTPS protocols and a DNS lookup should work.
+      using (HttpClient client = new HttpClient())
+      {
+        client.Timeout = TimeSpan.FromMilliseconds(15000); //15 seconds
+        client.DefaultRequestHeaders.ConnectionClose = true; //Set KeepAlive to false
+        
+
+        HttpResponseMessage response =  client.GetAsync(webAddress).Result; //Make sure it is synchonrous
+        response.EnsureSuccessStatusCode();
+
+        string responseText = response.Content.ReadAsStringAsync().Result; //Make sure it is synchonrous
+        tracingService.Trace(responseText);
+        //Log success in the Plugin Trace Log:
+        tracingService.Trace("HttpClientPlugin completed successfully.");
+      }
+    }
+
+    catch (AggregateException aex)
+    {
+      tracingService.Trace("Inner Exceptions:");
+
+      foreach (Exception ex  in aex.InnerExceptions) {
+        tracingService.Trace("  Exception: {0}", ex.ToString());
+      }
+
+      throw new InvalidPluginExecutionException(string.Format(CultureInfo.InvariantCulture,
+          "An exception occurred while attempting to issue the request.", aex));
+    }
+  }
+  catch (Exception e)
+  {
+    tracingService.Trace("Exception: {0}", e.ToString());
+    throw;
+  }
+}
+```
+
+More information: [Sample: Web access from a plug-in](org-service/samples/web-access-plugin.md)
 
 ## Best practices
 
-As called out in the following best practices topics:
+As called out in the following best practices articles:
 
 - [Set KeepAlive to false when interacting with external hosts in a plug-in](best-practices/business-logic/set-keepalive-false-interacting-external-hosts-plugin.md)
-- [Set Timeout when making external calls in a plug-in](best-practices/business-logic/set-timeout-for-external-calls-from-plug-ins.md)
+- [Set time-out when making external calls in a plug-in](best-practices/business-logic/set-timeout-for-external-calls-from-plug-ins.md)
 
-You should make sure to set an appropriate `Timeout` period for your external calls and disable `KeepAlive`. See the above links for more information.
-
+You should make sure to set an appropriate `Timeout` period for your external calls and disable `KeepAlive`. See the previous links for more information.
 
 ## See also
 
@@ -52,7 +100,5 @@ You should make sure to set an appropriate `Timeout` period for your external ca
 [Workflow extensions](workflow/workflow-extensions.md)<br />
 [Azure integration](azure-integration.md)<br />
 [Use Webhooks](use-webhooks.md)<br />
-[Sample: Web access from a sandboxed plug-in](org-service/samples/web-access-plugin.md)
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

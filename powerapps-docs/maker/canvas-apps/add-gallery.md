@@ -3,10 +3,10 @@ title: Show a list of items in canvas apps
 description: Use a gallery to show a list of items in your canvas app, and filter the list by specifying a criterion.
 author: emcoope-msft
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 01/27/2022
+ms.date: 05/30/2025
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
@@ -87,15 +87,11 @@ The **[Items](controls/properties-core.md)** property of a **Gallery** control d
 
 1. Set the **[Items](controls/properties-core.md)** property of the **Gallery** control to this formula:
 
-    ```powerapps-dot
-    Sort
-        (If
-            (IsBlank(TextSearchBox1.Text),
-            FlooringEstimates,
-            Filter(
-                FlooringEstimates,
-                TextSearchBox1.Text in Text(Name)
-            )
+   ```power-fx
+    Sort(
+        Filter(
+			FlooringEstimates,
+			IsBlank(TextSearchBox1.Text) or TextSearchBox1.Text in Text(Name)
         ),
         Name,
         If(
@@ -124,11 +120,11 @@ Set the **Gallery** control's **TemplateFill** property to a formula that's simi
 ## Change the default selection
 Set the **Gallery** control's **Default** property to the record that you want to select by default. For example, you can specify the fifth item in the **FlooringEstimates** data source:
 
-**Last(FirstN(FlooringEstimates, 5))**
+**Index(FlooringEstimates, 5)**
 
 In this example, you specify the first item in the **Hardwood** category of the **FlooringEstimates** data source:
 
-**First(Filter(FlooringEstimates, Category = "Hardwood"))**
+**LookUp(FlooringEstimates, Category = "Hardwood")**
 
 ## Next steps
 Learn how to work with [forms](working-with-forms.md) and [formulas](working-with-formulas.md).

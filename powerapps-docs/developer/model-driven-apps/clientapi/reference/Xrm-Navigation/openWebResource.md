@@ -1,5 +1,5 @@
 ---
-title: "openWebResource (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "openWebResource (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the openWebResource method.
 author: sriharibs-msft
 ms.author: srihas

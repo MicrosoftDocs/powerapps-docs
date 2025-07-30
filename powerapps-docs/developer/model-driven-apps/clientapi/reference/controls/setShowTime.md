@@ -1,8 +1,8 @@
 ---
-title: "setShowTime (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "setShowTime (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the setShowTime method.
-author: chmoncay
-ms.author: chmoncay
+author: MitiJ
+ms.author: mijosh
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -13,8 +13,6 @@ contributors:
   - JimDaly
 ---
 # setShowTime (Client API reference)
-
-
 
 Specify whether a date control should show the time portion of the date. 
 
@@ -29,7 +27,7 @@ standard control for **datetime** attributes.
 ## Parameter
 
 |Name|Type|Required|Description|
-|--|--|--|--|
+|----|----|----|----|
 |`bool`|Boolean|Yes|Specify true to show the time portion of the date; false otherwise.|
 
 ## Remarks
@@ -39,7 +37,5 @@ This method will show or hide the time component of a date control where the att
 ### Related articles
 
 [getShowTime](getShowTime.md)
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

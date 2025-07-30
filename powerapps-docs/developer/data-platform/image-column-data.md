@@ -3,10 +3,10 @@ title: "Use image column data (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn about uploading, downloading, and deleting data in image columns." 
 ms.date: 02/04/2023
 ms.reviewer: jdaly
-ms.topic: article
-author: NHelgren # GitHub ID
+ms.topic: how-to
+author: mkannapiran
+ms.author: kamanick
 ms.subservice: dataverse-developer
-ms.author: nhelgren # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 contributors:
@@ -136,7 +136,6 @@ Image columns store the following binary image types:
 |---------|---------|---------|
 |Graphics Interchange Format|`image/gif`|`.gif`|
 |Joint Photographic Expert Group image|`image/jpeg`|`.jpg`, `.jpeg`|
-|Tagged Image File Format|`image/tiff`|`.tif`, `.tiff`|
 |Bitmap file|`image/bmp`|`.bmp`|
 |Portable Network Graphics|`image/png`|`.png`|
 
@@ -283,7 +282,7 @@ static void PrintPrimaryImageColumns(IOrganizationService service)
 account.sample_sampleimage
 ```
 
-More information: [Build queries with QueryExpression](org-service/build-queries-with-queryexpression.md)
+More information: [Build queries with QueryExpression](org-service/queryexpression/overview.md)
 
 # [Web API](#tab/webapi)
 
@@ -321,7 +320,7 @@ OData-Version: 4.0
 }
 ```
 
-More information: [Query data using the Web API](webapi/query-data-web-api.md)
+More information: [Query data using the Web API](webapi/query/overview.md)
 
 ---
 
@@ -610,7 +609,7 @@ More information: [Delete a single property value](webapi/update-delete-entities
 ### See also
 
 [Files and images overview](files-images-overview.md)<br />
-[Image columns](image-attributes.md)<br />
+[Work with image column definitions using code](image-attributes.md)<br />
 [Sample: Image Operations using Dataverse SDK for .NET](org-service/samples/set-retrieve-entity-images.md)<br />
 [Sample: Image Operations using Dataverse Web API](webapi/samples/image-operations.md)<br />
 [Use file column data](file-column-data.md)

@@ -23,7 +23,7 @@ This sample shows how to create, retrieve, update, and delete an user-owned dash
 - [IOrganizationService.Delete](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.delete)
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Create, retrieve, update, and delete a dashboard sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/CRUDOperationsDashboard)
+> [SDK for .NET: Create, retrieve, update, and delete a dashboard sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/CRUDOperationsDashboard)
 
 ## How to run this sample
 

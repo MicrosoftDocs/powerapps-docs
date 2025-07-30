@@ -1,7 +1,8 @@
 ---
 title: FAQ about using Copilot in the rich text editor
 description: Learn how to effectively and responsibly use Copilot in the rich text editor to generate tailored responses to your customers with AI assistance.
-ms.date: 08/11/2023
+ms.date: 05/28/2025
+ms.update-cycle: 180-days
 ms.custom:
   - responsible-ai-faqs
   - ai-gen-docs-bap
@@ -12,6 +13,7 @@ ms.topic: faq
 author: udaykirang
 ms.author: udag
 ms.reviewer: shujoshi
+ms.collection: bap-ai-copilot
 ---
 
 # FAQ about using Copilot in the rich text editor
@@ -70,4 +72,4 @@ Copilot is a powerful and helpful feature, but it isn't perfect. It has some lim
 
 ## See also
 
-[Use Copilot in the rich text editor for email (preview)](../model-driven-apps/use-copilot-email-assist.md)  
+[Use Copilot in the rich text editor for email](../model-driven-apps/use-copilot-email-assist.md)  

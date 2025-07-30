@@ -1,8 +1,8 @@
 ---
 title: domain element | Microsoft Docs
 description: Indicates the domain that the external-usage-element applies to.
-ms.author: hemantg
-author: HemantGaur
+author: anuitz
+ms.author: anuitz
 ms.date: 02/22/2023
 ms.reviewer: jdaly
 ms.topic: reference
@@ -32,7 +32,7 @@ Canvas apps
 </external-service-usage>
 ```
 
-### Related topics
+### Related articles
 
 [Power Apps component framework manifest schema reference](index.md)<br/>
 [Power Apps component framework API reference](../reference/index.md)<br/>

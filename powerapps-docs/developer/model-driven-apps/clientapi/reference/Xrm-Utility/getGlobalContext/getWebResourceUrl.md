@@ -1,5 +1,5 @@
 ---
-title: "getWebResourceUrl (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getWebResourceUrl (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the getWebResourceUrl method.
 author: sriharibs-msft
 ms.author: srihas

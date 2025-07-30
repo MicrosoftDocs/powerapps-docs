@@ -1,9 +1,9 @@
 ---
-title: "Retrieve, update and delete tables (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how to retrieve, update, and delete tables." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Retrieve, update, and delete tables (Microsoft Dataverse) | Microsoft Docs"
+description: "Learn how to retrieve, update, and delete tables."
 ms.date: 04/03/2022
-author: NHelgren
-ms.author: nhelgren
+author: mkannapiran
+ms.author: kamanick
 ms.reviewer: jdaly
 ms.topic: "article"
 search.audienceType: 
@@ -14,7 +14,7 @@ search.audienceType:
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-Learn how to retrieve, update, and delete a table definition.  This topic uses the custom `Bank Account` table that was created in [Create a custom table](create-custom-entity.md).  
+Learn how to retrieve, update, and delete a table definition. This article uses the custom `Bank Account` table that was created in [Create a custom table](create-custom-entity.md).  
   
 <a name="BKMK_RetrieveAndUpdateEntity"></a>  
 

@@ -1,8 +1,8 @@
 ---
 title: stage.getId (Client API reference)
 description: Includes description and supported parameters for the stage.getId method.
-author: HemantGaur
-ms.author: hemantg
+author: matthidinger
+ms.author: mahiding
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -13,8 +13,6 @@ contributors:
   - JimDaly
 ---
 # stage.getId (Client API reference)
-
-
 
 [!INCLUDE[./includes/getId-description.md](./includes/getId-description.md)]
 

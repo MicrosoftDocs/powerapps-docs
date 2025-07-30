@@ -1,9 +1,9 @@
 ---
-title: "createRecord (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "createRecord (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the createRecord method.
-ms.author: aorth
-author: adrianorth
-ms.date: 08/22/2022
+author: sriharibs-msft
+ms.author: srihas
+ms.date: 04/29/2025
 ms.reviewer: jdaly
 ms.topic: reference
 applies_to: "Dynamics 365 (online)"
@@ -28,7 +28,7 @@ contributors:
 |`entityLogicalName`|String|Yes|Logical name of the table you want to create. For example: `account`.|
 |`data`|Object|Yes|A JSON object defining the columns and values for the new table record. See [Examples](#examples)|
 |`successCallback`|Function|No|A function to call when a record is created. See [Return Value](#return-value)|
-|`errorCallback`|Function|No|A function to call when the operation fails. An object with the following properties will be passed:<br /> - `errorCode`: Number. The error code.<br /> - `message`: String. An error message describing the issue.|
+|`errorCallback`|Function|No|[!INCLUDE [errorcallback-description](includes/errorcallback-description.md)]|
 
 
 ## Return Value
@@ -57,7 +57,8 @@ var data =
         "address1_latitude": 47.639583,
         "description": "This is the description of the sample account",
         "revenue": 5000000,
-        "accountcategorycode": 1
+        "accountcategorycode": 1,
+        "opendeals_date": new Date("2024-02-03T00:00:00Z")
     }
 
 // create account record
@@ -73,9 +74,12 @@ Xrm.WebApi.createRecord("account", data).then(
 );
 ```
 
+> [!NOTE]
+> Creating records with a primary image is not supported for offline mode. Primary images can only be set with create in online mode. Other image columns cannot be set with create. [Learn more about Primary images](../../../../data-platform/image-column-data.md#primary-images)
+
 ### Create related table records along with the primary record
 
- You can create tables related to each other by defining them as navigation properties values. This is known as *deep insert*. In this example, we will create a sample account record along with the primary contact record and an associated opportunity record.
+ You can create tables related to each other by defining them as navigation properties values. This pattern is known as *deep insert*. In this example, we create a sample account record along with the primary contact record and an associated opportunity record.
 
 > [!NOTE]
 > Creating related table records in a single create operation is not supported for offline mode.
@@ -122,7 +126,7 @@ To associate new table records to existing table records, set the value of singl
 > [!NOTE]
 > The names of single-valued navigation properties are not always the same as the `LogicalName` for the lookup attribute. You should make sure you are using the `Name` attribute value of the `NavigationProperty` element in the Web API $metadata service document. More information: [Web API Navigation Properties](../../../../data-platform/webapi/web-api-navigation-properties.md)
 
-Here is code example:
+Here's code example:
 
 The following example creates an account record, and associates it to an existing contact record to set the latter as the primary contact for the new account record:
 
@@ -149,7 +153,7 @@ Xrm.WebApi.createRecord("account", data).then(
 **Deprecated method for mobile offline scenario**
 
 > [!NOTE]
-> Instead of using `@odata.bind` annotation example above, the deprecated **lookup** object with case-sensitive properties (`logicalname` and `id`) is still supported for existing customizations. However, it is recommended to use `@odata.bind` annotation for both online and offline scenario instead of using this deprecated object.
+> Instead of using `@odata.bind` annotation example shown previously, the deprecated **lookup** object with case-sensitive properties (`logicalname` and `id`) is still supported for existing customizations. However, it is recommended to use `@odata.bind` annotation for both online and offline scenario instead of using this deprecated object.
 
 The following example uses the deprecated method to create an account record, and associate it to an existing contact record to set the latter as the primary contact for the new account record from mobile clients when working in the offline mode:
 

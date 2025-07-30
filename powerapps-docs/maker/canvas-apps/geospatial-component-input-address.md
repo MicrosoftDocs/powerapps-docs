@@ -2,7 +2,7 @@
 title: Enter and resolve addresses in maps
 description: Use the address input control in Power Apps to quickly and easily enter accurate addresses.
 author: anuitz
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas, ce06122020
 ms.reviewer: mduelae
 ms.date: 3/3/2022
@@ -56,7 +56,7 @@ You can add a button to your app to save entered addresses as a data collection.
     The control will start searching at the latitude and longitude, out to the distance specified in the radius field.
 
 
-    ```powerapps-dot
+    ```power-fx
     If(IsBlank(AddressInput1.SearchResultJson), "", Collect(locations, {Latitude: AddressInput1.SelectedLatitude, Longitude: AddressInput1.SelectedLongitude}))
     ```
 

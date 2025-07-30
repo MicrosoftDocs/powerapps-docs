@@ -16,6 +16,8 @@ contributors:
 
 # Check box control in cards
 
+[!INCLUDE[cards-deprecation-banner](~/includes/cards-deprecation-notice.md)]
+
 A checkbox that lets users choose between two options by selecting or clearing.
 
 ## Properties

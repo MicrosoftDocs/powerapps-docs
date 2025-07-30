@@ -2,8 +2,8 @@
 title: " Assign a record to a team (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample showcases how to assign records to a team." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/03/2022
-author: divkamath
-ms.author: dikamath
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: pehecke
 ms.topic: sample
 search.audienceType:
@@ -18,7 +18,7 @@ contributors:
 This sample shows how to assign a record to a team by using the [AssignRequest](/dotnet/api/microsoft.crm.sdk.messages.assignrequest) message.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Assign a record to a team sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/AssignRecordToTeam)
+> [SDK for .NET: Assign a record to a team sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/AssignRecordToTeam)
 
 ## How to run this sample
 

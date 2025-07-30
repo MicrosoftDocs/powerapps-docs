@@ -1,9 +1,9 @@
 ---
-title: "updateRecord (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "updateRecord (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the updateRecord method.
-ms.author: aorth
-author: adrianorth
-ms.date: 08/22/2022
+author: sriharibs-msft
+ms.author: srihas
+ms.date: 04/29/2025
 ms.reviewer: jdaly
 ms.topic: reference
 applies_to: "Dynamics 365 (online)"
@@ -28,7 +28,7 @@ contributors:
 |`id`|String|Yes|GUID of the table record you want to update.|
 |`data`|Object|Yes|A JSON object containing `key: value` pairs, where `key` is the property of the table and `value` is the value of the property you want to update.<br />See [Examples](#examples) to see how you can define the `data` object for various update scenarios.|
 |`successCallback`|Function|No|A function to call when a record is updated. See [Return Value](#return-value)|
-|`errorCallback`|Function|No|A function to call when the operation fails. An object with the following properties will be passed:<br />- `errorCode` : Number. The error code.<br />- `message` : String. An error message describing the issue.|
+|`errorCallback`|Function|No|[!INCLUDE [errorcallback-description](includes/errorcallback-description.md)]|
 
 
 ## Return Value

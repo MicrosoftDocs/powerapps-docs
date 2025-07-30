@@ -1,48 +1,46 @@
 ---
-title: "Privilege table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the Privilege table/entity."
-ms.date: 09/01/2023
-ms.service: "powerapps"
-ms.topic: "reference"
-ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "phecke"
-ms.author: "pehecke"
+title: "Privilege table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the Privilege table/entity with Microsoft Dataverse."
+ms.topic: generated-reference
+author: phecke
+ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# Privilege table/entity reference
-
-> [!NOTE]
-> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
+# Privilege table/entity reference (Microsoft Dataverse)
 
 Permission to perform an action in Microsoft CRM. The platform checks for the privilege and rejects the attempt if the user does not hold the privilege.
 
-
 ## Messages
 
-|Message|Web API Operation|SDK class or method|
-|-|-|-|
-|Retrieve|GET /privileges(*privilegeid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET /privileges<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+The following table lists the messages for the Privilege table.
+Messages represent operations that can be performed on the table. They may also be events.
+
+| Name <br />Is Event? |Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `Retrieve`<br />Event: False |`GET` /privileges(*privilegeid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveMultiple`<br />Event: False |`GET` /privileges<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 
 ## Properties
 
-|Property|Value|
-|--------|-----|
-|CollectionSchemaName|Privileges|
-|DisplayCollectionName|Privileges|
-|DisplayName|Privilege|
-|EntitySetName|privileges|
-|IsBPFEntity|False|
-|LogicalCollectionName|privileges|
-|LogicalName|privilege|
-|OwnershipType|None|
-|PrimaryIdAttribute|privilegeid|
-|PrimaryNameAttribute|name|
-|SchemaName|Privilege|
+The following table lists selected properties for the Privilege table.
 
-<a name="writable-attributes"></a>
+|Property|Value|
+| --- | --- |
+| **DisplayName** | **Privilege** |
+| **DisplayCollectionName** | **Privileges** |
+| **SchemaName** | `Privilege` |
+| **CollectionSchemaName** | `Privileges` |
+| **EntitySetName** | `privileges`|
+| **LogicalName** | `privilege` |
+| **LogicalCollectionName** | `privileges` |
+| **PrimaryIdAttribute** | `privilegeid` |
+| **PrimaryNameAttribute** |`name` |
+| **TableType** | `Standard` |
+| **OwnershipType** | `None` |
 
 ## Writable columns/attributes
 
@@ -62,266 +60,206 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [PrivilegeId](#BKMK_PrivilegeId)
 - [PrivilegeRowId](#BKMK_PrivilegeRowId)
 
-
 ### <a name="BKMK_AccessRight"></a> AccessRight
 
 |Property|Value|
-|--------|-----|
-|Description|Rights a user has to an instance of an entity.|
+|---|---|
+|Description|**Rights a user has to an instance of an entity.**|
 |DisplayName||
-|Format|None|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|accessright|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`accessright`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_CanBeBasic"></a> CanBeBasic
 
 |Property|Value|
-|--------|-----|
-|Description|Information that specifies whether the privilege applies to the user, the user's team, or objects shared by the user.|
+|---|---|
+|Description|**Information that specifies whether the privilege applies to the user, the user's team, or objects shared by the user.**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|canbebasic|
+|LogicalName|`canbebasic`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### CanBeBasic Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`privilege_canbebasic`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_CanBeDeep"></a> CanBeDeep
 
 |Property|Value|
-|--------|-----|
-|Description|Information that specifies whether the privilege applies to child business units of the business unit associated with the user.|
+|---|---|
+|Description|**Information that specifies whether the privilege applies to child business units of the business unit associated with the user.**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|canbedeep|
+|LogicalName|`canbedeep`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### CanBeDeep Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`privilege_canbedeep`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_CanBeEntityReference"></a> CanBeEntityReference
 
 |Property|Value|
-|--------|-----|
-|Description|Information that specifies whether the privilege applies to the local reference of an external party.|
+|---|---|
+|Description|**Information that specifies whether the privilege applies to the local reference of an external party.**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|canbeentityreference|
+|LogicalName|`canbeentityreference`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### CanBeEntityReference Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`privilege_canbeentityreference`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_CanBeGlobal"></a> CanBeGlobal
 
 |Property|Value|
-|--------|-----|
-|Description|Information that specifies whether the privilege applies to the entire organization.|
+|---|---|
+|Description|**Information that specifies whether the privilege applies to the entire organization.**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|canbeglobal|
+|LogicalName|`canbeglobal`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### CanBeGlobal Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`privilege_canbeglobal`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_CanBeLocal"></a> CanBeLocal
 
 |Property|Value|
-|--------|-----|
-|Description|Information that specifies whether the privilege applies to the user's business unit.|
+|---|---|
+|Description|**Information that specifies whether the privilege applies to the user's business unit.**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|canbelocal|
+|LogicalName|`canbelocal`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### CanBeLocal Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`privilege_canbelocal`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_CanBeParentEntityReference"></a> CanBeParentEntityReference
 
 |Property|Value|
-|--------|-----|
-|Description|Information that specifies whether the privilege applies to parent reference of the external party.|
+|---|---|
+|Description|**Information that specifies whether the privilege applies to parent reference of the external party.**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|canbeparententityreference|
+|LogicalName|`canbeparententityreference`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### CanBeParentEntityReference Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`privilege_canbeparententityreference`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_CanBeRecordFilter"></a> CanBeRecordFilter
 
-**Added by**: AuthorizationCore Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Information that specifies whether the privilege applies to the record filters.|
-|DisplayName|Can Be Record Filter|
+|---|---|
+|Description|**Information that specifies whether the privilege applies to the record filters.**|
+|DisplayName|**Can Be Record Filter**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|canberecordfilter|
+|LogicalName|`canberecordfilter`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### CanBeRecordFilter Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`privilege_canberecordfilter`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_IntroducedVersion"></a> IntroducedVersion
 
 |Property|Value|
-|--------|-----|
-|Description|Version in which the component is introduced.|
-|DisplayName|Introduced Version|
-|FormatName|VersionNumber|
-|IsLocalizable|False|
+|---|---|
+|Description|**Version in which the component is introduced.**|
+|DisplayName|**Introduced Version**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|introducedversion|
-|MaxLength|48|
+|LogicalName|`introducedversion`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|VersionNumber|
+|FormatName|VersionNumber|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|48|
 
 ### <a name="BKMK_IsCustomizable"></a> IsCustomizable
 
-**Added by**: AuthorizationCore Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Information that specifies whether this component can be customized.|
-|DisplayName|Customizable|
+|---|---|
+|Description|**Information that specifies whether this component can be customized.**|
+|DisplayName|**Customizable**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|iscustomizable|
+|LogicalName|`iscustomizable`|
 |RequiredLevel|SystemRequired|
 |Type|ManagedProperty|
-
 
 ### <a name="BKMK_Name"></a> Name
 
 |Property|Value|
-|--------|-----|
-|Description|Name of the privilege.|
+|---|---|
+|Description|**Name of the privilege.**|
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|name|
-|MaxLength|256|
+|LogicalName|`name`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|256|
 
 ### <a name="BKMK_PrivilegeId"></a> PrivilegeId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the privilege.|
+|---|---|
+|Description|**Unique identifier of the privilege.**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|privilegeid|
+|LogicalName|`privilegeid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_PrivilegeRowId"></a> PrivilegeRowId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the Privilege used when synchronizing customizations for the Microsoft Dynamics CRM client for Outlook|
-|DisplayName|App Module Unique Id|
+|---|---|
+|Description|**Unique identifier of the Privilege used when synchronizing customizations for the Microsoft Dynamics CRM client for Outlook**|
+|DisplayName|**App Module Unique Id**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|privilegerowid|
+|LogicalName|`privilegerowid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
 
-<a name="read-only-attributes"></a>
 
 ## Read-only columns/attributes
 
-These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** and **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [ComponentState](#BKMK_ComponentState)
 - [IsDisabledWhenIntegrated](#BKMK_IsDisabledWhenIntegrated)
@@ -331,212 +269,216 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [SupportingSolutionId](#BKMK_SupportingSolutionId)
 - [VersionNumber](#BKMK_VersionNumber)
 
-
 ### <a name="BKMK_ComponentState"></a> ComponentState
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Component State|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Component State**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|componentstate|
+|LogicalName|`componentstate`|
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
+|DefaultFormValue|-1|
+|GlobalChoiceName|`componentstate`|
 
 #### ComponentState Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|0|Published||
-|1|Unpublished||
-|2|Deleted||
-|3|Deleted Unpublished||
-
-
+|Value|Label|
+|---|---|
+|0|**Published**|
+|1|**Unpublished**|
+|2|**Deleted**|
+|3|**Deleted Unpublished**|
 
 ### <a name="BKMK_IsDisabledWhenIntegrated"></a> IsDisabledWhenIntegrated
 
 |Property|Value|
-|--------|-----|
-|Description|Specifies whether the privilege is disabled.|
+|---|---|
+|Description|**Specifies whether the privilege is disabled.**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|False|
-|LogicalName|isdisabledwhenintegrated|
+|LogicalName|`isdisabledwhenintegrated`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
-
-#### IsDisabledWhenIntegrated Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`privilege_isdisabledwhenintegrated`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_IsManaged"></a> IsManaged
 
 |Property|Value|
-|--------|-----|
-|Description|Information that specifies whether this component is managed.|
-|DisplayName|State|
+|---|---|
+|Description|**Information that specifies whether this component is managed.**|
+|DisplayName|**State**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|ismanaged|
+|LogicalName|`ismanaged`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
-
-#### IsManaged Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Managed||
-|0|Unmanaged||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`ismanaged`|
+|DefaultValue|False|
+|True Label|Managed|
+|False Label|Unmanaged|
 
 ### <a name="BKMK_OverwriteTime"></a> OverwriteTime
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|For internal use only.|
-|DisplayName|Record Overwrite Time|
-|Format|DateOnly|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Record Overwrite Time**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|overwritetime|
+|LogicalName|`overwritetime`|
 |RequiredLevel|SystemRequired|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateOnly|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_SolutionId"></a> SolutionId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the associated solution.|
-|DisplayName|Solution|
+|---|---|
+|Description|**Unique identifier of the associated solution.**|
+|DisplayName|**Solution**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|solutionid|
+|LogicalName|`solutionid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_SupportingSolutionId"></a> SupportingSolutionId
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Solution|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Solution**|
 |IsValidForForm|False|
 |IsValidForRead|False|
-|LogicalName|supportingsolutionid|
+|LogicalName|`supportingsolutionid`|
 |RequiredLevel|None|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|versionnumber|
-|MaxValue|9223372036854775807|
-|MinValue|-9223372036854775808|
+|LogicalName|`versionnumber`|
 |RequiredLevel|None|
 |Type|BigInt|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
 
-<a name="onetomany"></a>
+## Many-to-One relationships
 
-## One-To-Many Relationships
-
-Listed by **SchemaName**.
-
-- [Privilege_AsyncOperations](#BKMK_Privilege_AsyncOperations)
-- [Privilege_BulkDeleteFailures](#BKMK_Privilege_BulkDeleteFailures)
-
-
-### <a name="BKMK_Privilege_AsyncOperations"></a> Privilege_AsyncOperations
-
-Same as the [Privilege_AsyncOperations](asyncoperation.md#BKMK_Privilege_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|asyncoperation|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|Privilege_AsyncOperations|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_Privilege_BulkDeleteFailures"></a> Privilege_BulkDeleteFailures
-
-Same as the [Privilege_BulkDeleteFailures](bulkdeletefailure.md#BKMK_Privilege_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|bulkdeletefailure|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|Privilege_BulkDeleteFailures|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-<a name="manytoone"></a>
-
-## Many-To-One Relationships
-
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
-
+These relationships are many-to-one. Listed by **SchemaName**.
 
 ### <a name="BKMK_solution_privilege"></a> solution_privilege
 
-See the [solution_privilege](solution.md#BKMK_solution_privilege) one-to-many relationship for the [solution](solution.md) table/entity.
-<a name="manytomany"></a>
+One-To-Many Relationship: [solution solution_privilege](solution.md#BKMK_solution_privilege)
 
-## Many-To-Many Relationships
+|Property|Value|
+|---|---|
+|ReferencedEntity|`solution`|
+|ReferencedAttribute|`solutionid`|
+|ReferencingAttribute|`solutionid`|
+|ReferencingEntityNavigationPropertyName|`solution_privilege`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-Relationship details provided where the Privilege table is the first table in the relationship. Listed by **SchemaName**.
 
+## One-to-Many relationships
+
+These relationships are one-to-many. Listed by **SchemaName**.
+
+- [Privilege_AsyncOperations](#BKMK_Privilege_AsyncOperations)
+- [Privilege_BulkDeleteFailures](#BKMK_Privilege_BulkDeleteFailures)
+- [privilegecheckerlog_CheckedPrivilege](#BKMK_privilegecheckerlog_CheckedPrivilege)
+
+### <a name="BKMK_Privilege_AsyncOperations"></a> Privilege_AsyncOperations
+
+Many-To-One Relationship: [asyncoperation Privilege_AsyncOperations](asyncoperation.md#BKMK_Privilege_AsyncOperations)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`asyncoperation`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`Privilege_AsyncOperations`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_Privilege_BulkDeleteFailures"></a> Privilege_BulkDeleteFailures
+
+Many-To-One Relationship: [bulkdeletefailure Privilege_BulkDeleteFailures](bulkdeletefailure.md#BKMK_Privilege_BulkDeleteFailures)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`bulkdeletefailure`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`Privilege_BulkDeleteFailures`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_privilegecheckerlog_CheckedPrivilege"></a> privilegecheckerlog_CheckedPrivilege
+
+Many-To-One Relationship: [privilegecheckerlog privilegecheckerlog_CheckedPrivilege](privilegecheckerlog.md#BKMK_privilegecheckerlog_CheckedPrivilege)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`privilegecheckerlog`|
+|ReferencingAttribute|`checkedprivilege`|
+|ReferencedEntityNavigationPropertyName|`privilegecheckerlog_CheckedPrivilege`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+
+## Many-to-Many relationships
+
+These relationships are many-to-many. Listed by **SchemaName**.
+
+- [roleprivileges_association](#BKMK_roleprivileges_association)
+- [roletemplateprivileges_association](#BKMK_roletemplateprivileges_association)
 
 ### <a name="BKMK_roleprivileges_association"></a> roleprivileges_association
 
-IntersectEntityName: roleprivileges<br />
-#### Table 1
+See [role roleprivileges_association Many-To-Many Relationship](role.md#BKMK_roleprivileges_association)
 
 |Property|Value|
-|--------|-----|
-|IntersectAttribute|privilegeid|
+|---|---|
+|IntersectEntityName|`roleprivileges`|
 |IsCustomizable|False|
-|LogicalName|privilege|
-|NavigationPropertyName|roleprivileges_association|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|SchemaName|`roleprivileges_association`|
+|IntersectAttribute|`privilegeid`|
+|NavigationPropertyName|`roleprivileges_association`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-#### Table 2
+### <a name="BKMK_roletemplateprivileges_association"></a> roletemplateprivileges_association
+
+See [roletemplate roletemplateprivileges_association Many-To-Many Relationship](roletemplate.md#BKMK_roletemplateprivileges_association)
 
 |Property|Value|
-|--------|-----|
-|LogicalName|role|
-|IntersectAttribute|roleid|
-|NavigationPropertyName|roleprivileges_association|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|---|---|
+|IntersectEntityName|`roletemplateprivileges`|
+|IsCustomizable|False|
+|SchemaName|`roletemplateprivileges_association`|
+|IntersectAttribute|`privilegeid`|
+|NavigationPropertyName|`roletemplateprivileges_association`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
-<xref href="Microsoft.Dynamics.CRM.privilege?text=privilege EntityType" />
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
+[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
+<xref:Microsoft.Dynamics.CRM.privilege?displayProperty=fullName>

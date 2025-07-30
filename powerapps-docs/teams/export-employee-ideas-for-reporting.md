@@ -1,9 +1,9 @@
 ---
-title: How to export Ideas data for reporting (contains video)
+title: How to export Ideas data for reporting
 description: Learn about how the Ideas data can be exported for reporting purposes
 author: sbahl10
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: 
 ms.date: 08/25/2021
 ms.subservice: teams
@@ -21,7 +21,7 @@ contributors:
 This article covers how to export your ideas data from your Microsoft Teams database to another location so you can archive and report on it.
 
 Watch this video to learn how to export ideas for reporting:
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLkvT]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=cff4e3a1-ad8d-4a4c-b050-0430ff9420d6]
 
 ## Prerequisites
 
@@ -29,7 +29,7 @@ To complete this lesson, you must first perform the following prerequisites:
 
 1. Install the Employee Ideas template app from [https://aka.ms/teamsemployeeideas](https://aka.ms/teamsemployeeideas).
    
-2. Delete the sample idea data. The reason is because our data extract captures the user who created the idea, and sample data is created by a system account, which may cause an error in the flow (since the user won’t exist in your Active Directory). To delete ideas, see [Employee ideas sample app](/teams/employee-ideas.md).
+2. Delete the sample idea data. The reason is because our data extract captures the user who created the idea, and sample data is created by a system account, which may cause an error in the flow (since the user won't exist in your Active Directory). To delete ideas, see [Employee ideas sample app](/teams/employee-ideas.md).
    
 3. Create some ideas, and have colleagues vote for them. Adding ideas will ensure that the data extract returns data.
 
@@ -192,7 +192,7 @@ Next, we'll add a step to get the idea records and for each idea, get the campai
     - Add the following filter to the Fetch XML Query field.
 
 ```xml  
-<fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="true">
+<fetch distinct="true">
    <entity name="systemuser">  
       <attribute name="fullname" />
       <attribute name="systemuserid" />

@@ -1,19 +1,19 @@
 ---
 title: Power BI tile control in Power Apps
 description: Learn about the details, properties, and examples of the Power BI tile control in Power Apps.
-author: chmoncay
+author: yogeshgupta698
 
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 09/07/2022
 ms.subservice: canvas-maker
-ms.author: chmoncay
+ms.author: yogupt
 search.audienceType: 
   - maker
 contributors:
   - mduelae
-  - chmoncay
+  - yogeshgupta698
   - miglisic
 ---
 # Power BI tile control in Power Apps

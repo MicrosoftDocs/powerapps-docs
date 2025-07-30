@@ -2,8 +2,8 @@
 title: "Sample: Calculate a credit score with a custom workflow activity (Microsoft Dataverse) | Microsoft Docs"
 description: "The sample demonstrates workflow activity calculates the credit score based on the Social Security Number (SSN) and name."
 ms.date: 04/06/2022
-author: divkamath
-ms.author: dikamath
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType:
   - developer
@@ -13,7 +13,7 @@ contributors:
 
 # Sample: Calculate a credit score with a custom workflow activity
 
-This sample code is for Microsoft Dataverse. Download the complete sample here: [WorkflowActivities](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/WorkflowActivities).
+This sample code is for Microsoft Dataverse. Download the complete sample here: [WorkflowActivities](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/WorkflowActivities).
 
 ## Prerequisites
 
@@ -44,7 +44,7 @@ The following sample workflow activity calculates the credit score based on the 
 
 ## Example
 
-[RetrieveCreditScore.cs](https://github.com/Microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/C%23/WorkflowActivities/WorkflowActivities/RetrieveCreditScore.cs)
+[RetrieveCreditScore.cs](https://github.com/Microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/CSharp/WorkflowActivities/WorkflowActivities/RetrieveCreditScore.cs)
 
 ### See also
 

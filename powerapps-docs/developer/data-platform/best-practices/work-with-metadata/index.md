@@ -1,20 +1,13 @@
 ---
 title: "Developers: Best practices and guidance while working with table definitions in Microsoft Dataverse | Microsoft Docs"
 description: Best practices and guidance while working with table definitions for developers of the Microsoft Dataverse in Power Apps.
-services: ''
 suite: powerapps
-documentationcenter: na
-author: jowells
-editor: ''
-tags: ''
-
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+author: mkannapiran
+ms.author: kamanick
+ms.reviewer: jdaly
+ms.topic: best-practice
 ms.date: 03/24/2021
 ms.subservice: dataverse-developer
-ms.author: jowells
 search.audienceType: 
   - developer
 ---

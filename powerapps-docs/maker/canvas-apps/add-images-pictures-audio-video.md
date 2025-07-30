@@ -1,9 +1,9 @@
 ---
-title: Using multimedia files in canvas apps (contains video)
+title: Using multimedia files in canvas apps
 description: Show multimedia files in a canvas app, and upload them to a data source.
 author: emcoope-msft
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 11/11/2021
@@ -27,13 +27,18 @@ This article walks you through working with multimedia, streaming, and input con
 [Sign up](../signup-for-powerapps.md) for Power Apps, and then [sign in](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) using the same credentials that you used to sign up.
 
 Watch this video to learn how to use multimedia files in canvas apps:
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLAk7]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=d8fdba22-a9cf-4ce4-a77d-7c7be89666bc]
 
 ## Add media from a file or the cloud
 
 You can choose the kind of media file to add (for example, images, video, or audio). You can add images using the media pane, or using the images control.
 
 ![Media pane.](./media/add-images-pictures-audio-video/media-pane.gif "Media pane")
+
+> [!NOTE]
+> When adding media files by URL,
+> - Use HTTPS to ensure compatibility with modern browsers.
+> - Ensure the URL is accessible anonymously without any authentication. Try to enter the URL in private browsing mode to verify that it's accessible without signing in.
 
 ### Add images, audio, or video using the media pane
 

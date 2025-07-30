@@ -3,12 +3,12 @@ title: "2: Introduction to the sample scenario | Microsoft Docs"
 description: "Learn more about the sample scenario used in the ebook."
 author: spboyer
 
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: ebook
 ms.date: 04/26/2021
 ms.subservice: guidance
 ms.author: shboyer
-ms.reviewer: kvivek
+ms.reviewer: tapanm
 
 ---
 

@@ -2,8 +2,8 @@
 title: Do not use the OData v2.0 endpoint
 description: Learn about the requirement to upgrade your code to use the Web API OData v4.0 endpoint rather than the deprecated OData v2.0 endpoint.
 suite: powerapps
-author: divkamath
-ms.author: dikamath
+author: MsSQLGirl
+ms.author: jukoesma
 ms.date: 04/12/2023
 ms.reviewer: jdaly
 ms.topic: how-to
@@ -74,7 +74,7 @@ The Organization Data Service supports both JSON and ATOM, an XML-based format u
 
 The Organization Data Service will only return 50 records at a time and doesn't provide a way to specify max page size.
 
-The Web API allows you to set a max page size and will return up to 5000 records. More information: [Page results](../../../data-platform/webapi/query-data-web-api.md#page-results)
+The Web API allows you to set a max page size and will return up to 5,000 records. More information: [Page results](../../../data-platform/webapi/query/page-results.md)
 
 ### Legacy documentation
 
@@ -85,7 +85,7 @@ The following table connects related areas for the Organization Data Service and
 
 |Organization Data Service|Web API|
 |---------|---------|
-|[Query Microsoft Dynamics CRM 2015 data using the OData endpoint](/previous-versions/dynamicscrm-2015/developers-guide/gg334767(v=crm.7))<br />[OData system query options using the OData endpoint](/previous-versions/dynamicscrm-2015/developers-guide/gg309461(v=crm.7))|[Query data ](../../../data-platform/webapi/query-data-web-api.md)<br />[Web API properties](../../../data-platform/webapi/web-api-properties.md)|
+|[Query Microsoft Dynamics CRM 2015 data using the OData endpoint](/previous-versions/dynamicscrm-2015/developers-guide/gg334767(v=crm.7))<br />[OData system query options using the OData endpoint](/previous-versions/dynamicscrm-2015/developers-guide/gg309461(v=crm.7))|[Query data ](../../../data-platform/webapi/query/overview.md)<br />[Web API properties](../../../data-platform/webapi/web-api-properties.md)|
 |[Creating records](/previous-versions/dynamicscrm-2015/developers-guide/gg328090(v=crm.7)#creating-records)|[Create a table row](../../../data-platform/webapi/create-entity-web-api.md)|
 |[Retrieving records](/previous-versions/dynamicscrm-2015/developers-guide/gg328090(v=crm.7)#retrieving-records)|[Retrieve a table row](../../../data-platform/webapi/retrieve-entity-using-web-api.md)|
 |[Updating records](/previous-versions/dynamicscrm-2015/developers-guide/gg328090(v=crm.7)#updating-records)|[Basic update](../../../data-platform/webapi/update-delete-entities-using-web-api.md#basic-update)|
@@ -406,7 +406,7 @@ Preference-Applied: odata.include-annotations="*"
   "donotphone": true,
   "industrycode@OData.Community.Display.V1.FormattedValue": "Consulting",
   "industrycode": 7,
-  "accountid": "b68d56a6-4739-ed11-9db0-002248296d7e"
+  "accountid": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee"
 }
 
 ```
@@ -419,7 +419,7 @@ Without the `Prefer: return=representation` request header, the response is like
 HTTP/1.1 204 No Content
 Content-Type: application/json; odata.metadata=minimal
 OData-Version: 4.0
-OData-EntityId: https://[Organization URI]/api/data/v9.2/accounts(b68d56a6-4739-ed11-9db0-002248296d7e)
+OData-EntityId: https://[Organization URI]/api/data/v9.2/accounts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)
 ```
 
 --- 
@@ -433,7 +433,7 @@ These examples show the differences between the Organization Data Service and th
 **Request:**
 
 ```http
-GET https://[Organization URI]/XRMServices/2011/OrganizationData.svc/AccountSet(guid'b68d56a6-4739-ed11-9db0-002248296d7e')?$select=OwnershipCode,PrimaryContactId,OpenDeals_Date,Telephone1,NumberOfEmployees,Name,AccountNumber,DoNotPhone,IndustryCode HTTP/1.1
+GET https://[Organization URI]/XRMServices/2011/OrganizationData.svc/AccountSet(guid'00aa00aa-bb11-cc22-dd33-44ee44ee44ee')?$select=OwnershipCode,PrimaryContactId,OpenDeals_Date,Telephone1,NumberOfEmployees,Name,AccountNumber,DoNotPhone,IndustryCode HTTP/1.1
 Accept: application/json
 ```
 
@@ -445,7 +445,7 @@ HTTP/1.1 200 OK
 {
   "d": {
     "__metadata": {
-      "uri": "https://[Organization URI]/xrmservices/2011/OrganizationData.svc/AccountSet(guid'b68d56a6-4739-ed11-9db0-002248296d7e')",
+      "uri": "https://[Organization URI]/xrmservices/2011/OrganizationData.svc/AccountSet(guid'00aa00aa-bb11-cc22-dd33-44ee44ee44ee')",
       "type": "Microsoft.Crm.Sdk.Data.Services.Account"
     },
     "OwnershipCode": {
@@ -485,7 +485,7 @@ HTTP/1.1 200 OK
 **Request:**
 
 ```http
-GET https://[Organization URI]/api/data/v9.2/accounts(b68d56a6-4739-ed11-9db0-002248296d7e)?$select=ownershipcode,_primarycontactid_value,opendeals_date,customersizecode,telephone1,numberofemployees,name,accountnumber,donotphone,industrycode HTTP/1.1
+GET https://[Organization URI]/api/data/v9.2/accounts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)?$select=ownershipcode,_primarycontactid_value,opendeals_date,customersizecode,telephone1,numberofemployees,name,accountnumber,donotphone,industrycode HTTP/1.1
 Prefer: odata.include-annotations="*"
 OData-MaxVersion: 4.0
 OData-Version: 4.0
@@ -524,7 +524,7 @@ Preference-Applied: odata.include-annotations="*"
   "donotphone": true,
   "industrycode@OData.Community.Display.V1.FormattedValue": "Consulting",
   "industrycode": 7,
-  "accountid": "b68d56a6-4739-ed11-9db0-002248296d7e"
+  "accountid": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee"
 }
 
 ```
@@ -542,7 +542,7 @@ The Organization Data Service requires the `X-HTTP-Method: MERGE` request header
 **Request:**
 
 ```http
-POST https://[Organization URI]/XRMServices/2011/OrganizationData.svc/AccountSet(guid'b68d56a6-4739-ed11-9db0-002248296d7e') HTTP/1.1
+POST https://[Organization URI]/XRMServices/2011/OrganizationData.svc/AccountSet(guid'00aa00aa-bb11-cc22-dd33-44ee44ee44ee') HTTP/1.1
 Accept: application/json
 X-HTTP-Method: MERGE
 Content-Type: application/json
@@ -578,7 +578,7 @@ HTTP/1.1 204 No Content
 **Request:**
 
 ```http
-PATCH https://[Organization URI]/api/data/v9.2/accounts(b68d56a6-4739-ed11-9db0-002248296d7e) HTTP/1.1
+PATCH https://[Organization URI]/api/data/v9.2/accounts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee) HTTP/1.1
 OData-MaxVersion: 4.0
 OData-Version: 4.0
 If-None-Match: null
@@ -604,7 +604,7 @@ Content-Type: application/json
 ```http
 HTTP/1.1 204 No Content
 OData-Version: 4.0
-OData-EntityId: https://[Organization URI]/api/data/v9.2/accounts(b68d56a6-4739-ed11-9db0-002248296d7e)
+OData-EntityId: https://[Organization URI]/api/data/v9.2/accounts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)
 ```
 
 --- 
@@ -618,7 +618,7 @@ These examples show the differences between the Organization Data Service and th
 **Request:**
 
 ```http
-DELETE https://[Organization URI]/XRMServices/2011/OrganizationData.svc/AccountSet(guid'b68d56a6-4739-ed11-9db0-002248296d7e') HTTP/1.1
+DELETE https://[Organization URI]/XRMServices/2011/OrganizationData.svc/AccountSet(guid'00aa00aa-bb11-cc22-dd33-44ee44ee44ee') HTTP/1.1
 Accept: application/json
 ```
 
@@ -633,7 +633,7 @@ HTTP/1.1 204 No Content
 **Request:**
 
 ```http
-DELETE https://[Organization URI]/api/data/v9.2/accounts(b68d56a6-4739-ed11-9db0-002248296d7e) HTTP/1.1
+DELETE https://[Organization URI]/api/data/v9.2/accounts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee) HTTP/1.1
 OData-MaxVersion: 4.0
 OData-Version: 4.0
 If-None-Match: null

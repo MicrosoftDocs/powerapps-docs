@@ -2,10 +2,9 @@
 title: "View the history of a solution | MicrosoftDocs"
 description: "Learn how to view the history of a solution"
 keywords: 
-ms.date: 04/20/2020
-
+ms.date: 07/16/2024
 ms.custom: 
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 
 author: Mattp123
 ms.subservice: dataverse-maker
@@ -22,6 +21,10 @@ search.audienceType:
 # View the history of a solution
 
 View details about solution operations from the **Solutions** area of Power Apps. An operation can be a solution import, export, or uninstall. The solution history displays information such as solution version, solution publisher, type of operation, operation start and end time, and operation status.
+
+> [!NOTE]
+> The system automatically deletes solution history records that are older than 180 days.
+> 
 
 ## View solution history
 
@@ -48,6 +51,9 @@ Select a solution operation to display the **Information page**. Each solution h
  > [!div class="mx-imgBorder"] 
  > ![Solution history details.](media/solution-history-details.png "Solution history details")
 
+> [!NOTE]
+> Recent changes have optimized the single step upgrade process to no longer use a temporary _Upgrade solution. As a result, you no longer experience an uninstall operation for single stage upgrades in the solution history.
+> 
 ### View solution operation error details
 
 Below the **Details** area is the **More details** area that has additional information about the solution and, when a solution operation has a failure, the information includes:

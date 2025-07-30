@@ -3,10 +3,10 @@ title: "Create a custom API with solution files"
 description: "You can write create custom APIs by editing solution files." 
 ms.date: 07/14/2023
 ms.reviewer: jdaly
-ms.topic: article
-author: divkamath
+ms.topic: how-to
+author: MsSQLGirl
 ms.subservice: dataverse-developer
-ms.author: dikamath
+ms.author: jukoesma
 search.audienceType: 
   - developer
 contributors:
@@ -213,7 +213,7 @@ See the information in [CustomAPIResponseProperty Table Columns](customapirespon
 1. Wait a few minutes while the solution import completes. 
 
   > [!NOTE]
-  > It is possible you will see an error if another solution is being installed at the same time. More information: [The solution installation or removal failed due to the installation or removal of another solution at the same time](https://support.microsoft.com/help/4343228/the-solution-installation-or-removal-failed-due-to-the-installation-or)
+  > It is possible you will see an error if another solution is being installed at the same time. More information: [Concurrent solution operation failures](/troubleshoot/power-platform/dataverse/working-with-solutions/concurrent-solution-operation-failures)
 
 ## Step 8: Verify that the custom API was added to your solution
 

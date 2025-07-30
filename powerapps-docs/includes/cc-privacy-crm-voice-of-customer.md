@@ -12,7 +12,7 @@ By enabling Voice of the Customer for Dynamics 365, when you publish a survey fr
   
  **Designer Service (Web Role)**  
   
- This provides multiple Web Services for communication between a Dynamics 365 organization and the multi-tenanted Voice of the Customer for Dynamics 365 Azure components.  For example, surveys are published and stored to Azure Blob Storage.  Survey responses are retrieved from an Azure Service Bus queue and returned to be persisted in the Dynamics 365 organization.  All requests are authenticated against Azure Active Directory.  
+ This provides multiple Web Services for communication between a Dynamics 365 organization and the multi-tenanted Voice of the Customer for Dynamics 365 Azure components.  For example, surveys are published and stored to Azure Blob Storage.  Survey responses are retrieved from an Azure Service Bus queue and returned to be persisted in the Dynamics 365 organization.  All requests are authenticated against Microsoft Entra ID.  
   
  **Survey Runtime (Web Role)**  
   
@@ -47,9 +47,9 @@ By enabling Voice of the Customer for Dynamics 365, when you publish a survey fr
   
  The Voice of the Customer for Dynamics 365 solution uses Azure Content Delivery Network to serve static content to the survey runtime such as images (including uploaded images such as customer logos), JavaScript and CSS.  
   
- **Azure Active Directory** ([https://azure.microsoft.com/services/active-directory/](https://azure.microsoft.com/services/active-directory/))  
+ **Microsoft Entra ID** ([https://azure.microsoft.com/services/active-directory/](https://azure.microsoft.com/services/active-directory/))  
   
- The Voice of the Customer for Dynamics 365 solution uses Azure Active Directory Service to authenticate web services.  
+ The Voice of the Customer for Dynamics 365 solution uses Microsoft Entra Service to authenticate web services.  
   
  **Azure Service Bus** ([https://azure.microsoft.com/services/service-bus/](https://azure.microsoft.com/services/service-bus/))  
   

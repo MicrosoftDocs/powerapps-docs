@@ -1,57 +1,55 @@
 ---
-title: "synapselinkexternaltablestate table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the synapselinkexternaltablestate table/entity."
-ms.date: 09/01/2023
-ms.service: "powerapps"
-ms.topic: "reference"
-ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "phecke"
-ms.author: "pehecke"
+title: "Synapse Link External Table State (synapselinkexternaltablestate) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the Synapse Link External Table State (synapselinkexternaltablestate) table/entity with Microsoft Dataverse."
+ms.topic: generated-reference
+author: phecke
+ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# synapselinkexternaltablestate table/entity reference
-
-> [!NOTE]
-> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
+# Synapse Link External Table State (synapselinkexternaltablestate) table/entity reference (Microsoft Dataverse)
 
 Synapse Link external table states
 
-**Added by**: Synapse Link Solution
-
-
 ## Messages
 
-|Message|Web API Operation|SDK class or method|
-|-|-|-|
-|Create|POST /synapselinkexternaltablestates<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|CreateMultiple|<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
-|Delete|DELETE /synapselinkexternaltablestates(*synapselinkexternaltablestateid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
-|Retrieve|GET /synapselinkexternaltablestates(*synapselinkexternaltablestateid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET /synapselinkexternaltablestates<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|SetState|PATCH /synapselinkexternaltablestates(*synapselinkexternaltablestateid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH /synapselinkexternaltablestates(*synapselinkexternaltablestateid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
-|UpdateMultiple|<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+The following table lists the messages for the Synapse Link External Table State (synapselinkexternaltablestate) table.
+Messages represent operations that can be performed on the table. They may also be events.
+
+| Name <br />Is Event? |Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Create`<br />Event: True |`POST` /synapselinkexternaltablestates<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+| `Delete`<br />Event: True |`DELETE` /synapselinkexternaltablestates(*synapselinkexternaltablestateid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
+| `Retrieve`<br />Event: True |`GET` /synapselinkexternaltablestates(*synapselinkexternaltablestateid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveMultiple`<br />Event: True |`GET` /synapselinkexternaltablestates<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
+| `SetState`<br />Event: True |`PATCH` /synapselinkexternaltablestates(*synapselinkexternaltablestateid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `statecode` and `statuscode` properties. |<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+| `Update`<br />Event: True |`PATCH` /synapselinkexternaltablestates(*synapselinkexternaltablestateid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
+| `UpdateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+| `Upsert`<br />Event: False |`PATCH` /synapselinkexternaltablestates(*synapselinkexternaltablestateid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
+| `UpsertMultiple`<br />Event: False |<xref:Microsoft.Dynamics.CRM.UpsertMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpsertMultipleRequest>|
 
 ## Properties
 
-|Property|Value|
-|--------|-----|
-|CollectionSchemaName|synapselinkexternaltablestates|
-|DisplayCollectionName|Synapse Link External Table States|
-|DisplayName|Synapse Link External Table State|
-|EntitySetName|synapselinkexternaltablestates|
-|IsBPFEntity|False|
-|LogicalCollectionName|synapselinkexternaltablestates|
-|LogicalName|synapselinkexternaltablestate|
-|OwnershipType|OrganizationOwned|
-|PrimaryIdAttribute|synapselinkexternaltablestateid|
-|PrimaryNameAttribute|name|
-|SchemaName|synapselinkexternaltablestate|
+The following table lists selected properties for the Synapse Link External Table State (synapselinkexternaltablestate) table.
 
-<a name="writable-attributes"></a>
+|Property|Value|
+| --- | --- |
+| **DisplayName** | **Synapse Link External Table State** |
+| **DisplayCollectionName** | **Synapse Link External Table States** |
+| **SchemaName** | `synapselinkexternaltablestate` |
+| **CollectionSchemaName** | `synapselinkexternaltablestates` |
+| **EntitySetName** | `synapselinkexternaltablestates`|
+| **LogicalName** | `synapselinkexternaltablestate` |
+| **LogicalCollectionName** | `synapselinkexternaltablestates` |
+| **PrimaryIdAttribute** | `synapselinkexternaltablestateid` |
+| **PrimaryNameAttribute** |`name` |
+| **TableType** | `Standard` |
+| **OwnershipType** | `OrganizationOwned` |
 
 ## Writable columns/attributes
 
@@ -65,6 +63,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [LastSyncState](#BKMK_LastSyncState)
 - [MaxRecordVersion](#BKMK_MaxRecordVersion)
 - [MetadataVersion](#BKMK_MetadataVersion)
+- [MinSyncedDataVersion](#BKMK_MinSyncedDataVersion)
 - [name](#BKMK_name)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [RecordCount](#BKMK_RecordCount)
@@ -76,842 +75,522 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [SynapseWorkspaceName](#BKMK_SynapseWorkspaceName)
 - [TableState](#BKMK_TableState)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
+- [TrinoState](#BKMK_TrinoState)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
-
 
 ### <a name="BKMK_datalakefolder"></a> datalakefolder
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for Data Lake Folder associated with Synapse Link External Table State.|
-|DisplayName|Data Lake Folder|
+|---|---|
+|Description|**Unique identifier for Data Lake Folder associated with Synapse Link External Table State.**|
+|DisplayName|**Data Lake Folder**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|datalakefolder|
+|LogicalName|`datalakefolder`|
 |RequiredLevel|ApplicationRequired|
-|Targets|datalakefolder|
 |Type|Lookup|
-
+|Targets|datalakefolder|
 
 ### <a name="BKMK_EntityName"></a> EntityName
 
 |Property|Value|
-|--------|-----|
-|Description|Name of the entity|
-|DisplayName|Entity Name|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Name of the entity**|
+|DisplayName|**Entity Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|entityname|
-|MaxLength|64|
+|LogicalName|`entityname`|
 |RequiredLevel|ApplicationRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|64|
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
 |Property|Value|
-|--------|-----|
-|Description|Sequence number of the import that created this record.|
-|DisplayName|Import Sequence Number|
-|Format|None|
+|---|---|
+|Description|**Sequence number of the import that created this record.**|
+|DisplayName|**Import Sequence Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|importsequencenumber|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`importsequencenumber`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_LakehouseShortcutState"></a> LakehouseShortcutState
 
 |Property|Value|
-|--------|-----|
-|Description|State of lakehouse shortcut creation for an entity|
-|DisplayName|Lakehouse Shortcut State|
+|---|---|
+|Description|**State of lakehouse shortcut creation for an entity**|
+|DisplayName|**Lakehouse Shortcut State**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|lakehouseshortcutstate|
+|LogicalName|`lakehouseshortcutstate`|
 |RequiredLevel|None|
 |Type|Picklist|
+|DefaultFormValue|0|
+|GlobalChoiceName|`synapselinkexternaltablestate`|
 
 #### LakehouseShortcutState Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|0|Not Created|Not created|
-|1|Created|Created|
-|2|Failed|Failed|
-|3|Deleted|Deleted|
-|4|In Progress|In Progress|
-
-
+|Value|Label|
+|---|---|
+|0|**Not Created**|
+|1|**Created**|
+|2|**Failed**|
+|3|**Deleted**|
+|4|**In Progress**|
 
 ### <a name="BKMK_LastSynchronizedOn"></a> LastSynchronizedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Last SynchronizedOn Date time|
-|DisplayName|Last Synchronized On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Last SynchronizedOn Date time**|
+|DisplayName|**Last Synchronized On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|lastsynchronizedon|
+|LogicalName|`lastsynchronizedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|True|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Auto|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_LastSyncState"></a> LastSyncState
 
 |Property|Value|
-|--------|-----|
-|Description|Last data synchronization state|
-|DisplayName|Last Synchronization State|
+|---|---|
+|Description|**Last data synchronization state**|
+|DisplayName|**Last Synchronization State**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|lastsyncstate|
+|LogicalName|`lastsyncstate`|
 |RequiredLevel|None|
 |Type|Picklist|
+|DefaultFormValue|0|
+|GlobalChoiceName|`synapselinkexternaltablestate`|
 
 #### LastSyncState Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|0|Not Created|Not created|
-|1|Created|Created|
-|2|Failed|Failed|
-|3|Deleted|Deleted|
-|4|In Progress|In Progress|
-
-
+|Value|Label|
+|---|---|
+|0|**Not Created**|
+|1|**Created**|
+|2|**Failed**|
+|3|**Deleted**|
+|4|**In Progress**|
 
 ### <a name="BKMK_MaxRecordVersion"></a> MaxRecordVersion
 
 |Property|Value|
-|--------|-----|
-|Description|Maximum record version synchronized to the lake|
-|DisplayName|Maximum Record Version|
+|---|---|
+|Description|**Maximum record version synchronized to the lake**|
+|DisplayName|**Maximum Record Version**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|maxrecordversion|
-|MaxValue|9223372036854775807|
-|MinValue|-9223372036854775808|
+|LogicalName|`maxrecordversion`|
 |RequiredLevel|None|
 |Type|BigInt|
-
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
 
 ### <a name="BKMK_MetadataVersion"></a> MetadataVersion
 
 |Property|Value|
-|--------|-----|
-|Description|Metadata version|
-|DisplayName|Metadata Version|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Metadata version**|
+|DisplayName|**Metadata Version**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|metadataversion|
-|MaxLength|32|
+|LogicalName|`metadataversion`|
 |RequiredLevel|ApplicationRequired|
 |Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|32|
 
+### <a name="BKMK_MinSyncedDataVersion"></a> MinSyncedDataVersion
+
+|Property|Value|
+|---|---|
+|Description|**Last Synced Minimum Data Version**|
+|DisplayName|**MinSyncVersion**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`minsynceddataversion`|
+|RequiredLevel|None|
+|Type|BigInt|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
 
 ### <a name="BKMK_name"></a> name
 
 |Property|Value|
-|--------|-----|
-|Description|The name of the custom entity.|
-|DisplayName|Name|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**The name of the custom entity.**|
+|DisplayName|**Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|name|
-|MaxLength|100|
+|LogicalName|`name`|
 |RequiredLevel|ApplicationRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time that the record was migrated.|
-|DisplayName|Record Created On|
-|Format|DateOnly|
+|---|---|
+|Description|**Date and time that the record was migrated.**|
+|DisplayName|**Record Created On**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|overriddencreatedon|
+|LogicalName|`overriddencreatedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateOnly|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_RecordCount"></a> RecordCount
 
 |Property|Value|
-|--------|-----|
-|Description|Record count synchronized to lake|
-|DisplayName|Record Count|
+|---|---|
+|Description|**Record count synchronized to lake**|
+|DisplayName|**Record Count**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|recordcount|
-|MaxValue|9223372036854775807|
-|MinValue|-9223372036854775808|
+|LogicalName|`recordcount`|
 |RequiredLevel|None|
 |Type|BigInt|
-
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
 
 ### <a name="BKMK_SchemaModifiedOn"></a> SchemaModifiedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Schema modified on date-time|
-|DisplayName|Schema Modified On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Schema modified on date-time**|
+|DisplayName|**Schema Modified On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|schemamodifiedon|
+|LogicalName|`schemamodifiedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|True|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Auto|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_statecode"></a> statecode
 
 |Property|Value|
-|--------|-----|
-|Description|Status of the Synapse Link External Table State|
-|DisplayName|Status|
-|IsValidForCreate|False|
+|---|---|
+|Description|**Status of the Synapse Link External Table State**|
+|DisplayName|**Status**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|statecode|
+|LogicalName|`statecode`|
 |RequiredLevel|SystemRequired|
 |Type|State|
+|DefaultFormValue||
+|GlobalChoiceName|`synapselinkexternaltablestate_statecode`|
 
 #### statecode Choices/Options
 
-|Value|Label|DefaultStatus|InvariantName|
-|-----|-----|-------------|-------------|
-|0|Active|1|Active|
-|1|Inactive|2|Inactive|
-
-
+|Value|Details|
+|---|---|
+|0|Label: **Active**<br />DefaultStatus: 1<br />InvariantName: `Active`|
+|1|Label: **Inactive**<br />DefaultStatus: 2<br />InvariantName: `Inactive`|
 
 ### <a name="BKMK_statuscode"></a> statuscode
 
 |Property|Value|
-|--------|-----|
-|Description|Reason for the status of the Synapse Link External Table State|
-|DisplayName|Status Reason|
+|---|---|
+|Description|**Reason for the status of the Synapse Link External Table State**|
+|DisplayName|**Status Reason**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|statuscode|
+|LogicalName|`statuscode`|
 |RequiredLevel|None|
 |Type|Status|
+|DefaultFormValue||
+|GlobalChoiceName|`synapselinkexternaltablestate_statuscode`|
 
 #### statuscode Choices/Options
 
-|Value|Label|State|
-|-----|-----|-----|
-|1|Active|0|
-|2|Inactive|1|
-
-
+|Value|Details|
+|---|---|
+|1|Label: **Active**<br />State:0<br />TransitionData: None|
+|2|Label: **Inactive**<br />State:1<br />TransitionData: None|
 
 ### <a name="BKMK_SynapseDatabaseName"></a> SynapseDatabaseName
 
 |Property|Value|
-|--------|-----|
-|Description|Synapse database name|
-|DisplayName|Synapse Database Name|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Synapse database name**|
+|DisplayName|**Synapse Database Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|synapsedatabasename|
-|MaxLength|100|
+|LogicalName|`synapsedatabasename`|
 |RequiredLevel|ApplicationRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_synapselinkexternaltablestateId"></a> synapselinkexternaltablestateId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for entity instances|
-|DisplayName|Synapse Link External Table State|
+|---|---|
+|Description|**Unique identifier for entity instances**|
+|DisplayName|**Synapse Link External Table State**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|synapselinkexternaltablestateid|
+|LogicalName|`synapselinkexternaltablestateid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_SynapseWorkspaceName"></a> SynapseWorkspaceName
 
 |Property|Value|
-|--------|-----|
-|Description|Synapse workspace name|
-|DisplayName|Synapse Workspace Name|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Synapse workspace name**|
+|DisplayName|**Synapse Workspace Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|synapseworkspacename|
-|MaxLength|100|
+|LogicalName|`synapseworkspacename`|
 |RequiredLevel|ApplicationRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_TableState"></a> TableState
 
 |Property|Value|
-|--------|-----|
-|Description|External table state|
-|DisplayName|Table State|
+|---|---|
+|Description|**External table state**|
+|DisplayName|**Table State**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|tablestate|
+|LogicalName|`tablestate`|
 |RequiredLevel|ApplicationRequired|
 |Type|Picklist|
+|DefaultFormValue|0|
+|GlobalChoiceName|`synapselinkexternaltablestate`|
 
 #### TableState Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|0|Not Created|Not created|
-|1|Created|Created|
-|2|Failed|Failed|
-|3|Deleted|Deleted|
-|4|In Progress|In Progress|
-
-
+|Value|Label|
+|---|---|
+|0|**Not Created**|
+|1|**Created**|
+|2|**Failed**|
+|3|**Deleted**|
+|4|**In Progress**|
 
 ### <a name="BKMK_TimeZoneRuleVersionNumber"></a> TimeZoneRuleVersionNumber
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Time Zone Rule Version Number|
-|Format|None|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Time Zone Rule Version Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|timezoneruleversionnumber|
-|MaxValue|2147483647|
-|MinValue|-1|
+|LogicalName|`timezoneruleversionnumber`|
 |RequiredLevel|None|
 |Type|Integer|
+|MaxValue|2147483647|
+|MinValue|-1|
 
+### <a name="BKMK_TrinoState"></a> TrinoState
+
+|Property|Value|
+|---|---|
+|Description|**State of Trino registration for an entity**|
+|DisplayName|**Trino State**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`trinostate`|
+|RequiredLevel|None|
+|Type|Picklist|
+|DefaultFormValue|0|
+|GlobalChoiceName|`synapselinkexternaltablestate`|
+
+#### TrinoState Choices/Options
+
+|Value|Label|
+|---|---|
+|0|**Not Created**|
+|1|**Created**|
+|2|**Failed**|
+|3|**Deleted**|
+|4|**In Progress**|
 
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
 
 |Property|Value|
-|--------|-----|
-|Description|Time zone code that was in use when the record was created.|
-|DisplayName|UTC Conversion Time Zone Code|
-|Format|None|
+|---|---|
+|Description|**Time zone code that was in use when the record was created.**|
+|DisplayName|**UTC Conversion Time Zone Code**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|utcconversiontimezonecode|
-|MaxValue|2147483647|
-|MinValue|-1|
+|LogicalName|`utcconversiontimezonecode`|
 |RequiredLevel|None|
 |Type|Integer|
+|MaxValue|2147483647|
+|MinValue|-1|
 
-<a name="read-only-attributes"></a>
 
 ## Read-only columns/attributes
 
-These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** and **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [CreatedBy](#BKMK_CreatedBy)
-- [CreatedByName](#BKMK_CreatedByName)
-- [CreatedByYomiName](#BKMK_CreatedByYomiName)
 - [CreatedOn](#BKMK_CreatedOn)
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
-- [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
-- [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
-- [datalakefolderName](#BKMK_datalakefolderName)
 - [ModifiedBy](#BKMK_ModifiedBy)
-- [ModifiedByName](#BKMK_ModifiedByName)
-- [ModifiedByYomiName](#BKMK_ModifiedByYomiName)
 - [ModifiedOn](#BKMK_ModifiedOn)
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
-- [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
-- [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
 - [OrganizationId](#BKMK_OrganizationId)
-- [OrganizationIdName](#BKMK_OrganizationIdName)
 - [VersionNumber](#BKMK_VersionNumber)
-
 
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user who created the record.|
-|DisplayName|Created By|
+|---|---|
+|Description|**Unique identifier of the user who created the record.**|
+|DisplayName|**Created By**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdby|
+|LogicalName|`createdby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedByName"></a> CreatedByName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedByYomiName"></a> CreatedByYomiName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_CreatedOn"></a> CreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when the record was created.|
-|DisplayName|Created On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Date and time when the record was created.**|
+|DisplayName|**Created On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdon|
+|LogicalName|`createdon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_CreatedOnBehalfBy"></a> CreatedOnBehalfBy
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the delegate user who created the record.|
-|DisplayName|Created By (Delegate)|
+|---|---|
+|Description|**Unique identifier of the delegate user who created the record.**|
+|DisplayName|**Created By (Delegate)**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdonbehalfby|
+|LogicalName|`createdonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedOnBehalfByName"></a> CreatedOnBehalfByName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedOnBehalfByYomiName"></a> CreatedOnBehalfByYomiName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
-
-### <a name="BKMK_datalakefolderName"></a> datalakefolderName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|datalakefoldername|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user who modified the record.|
-|DisplayName|Modified By|
+|---|---|
+|Description|**Unique identifier of the user who modified the record.**|
+|DisplayName|**Modified By**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedby|
+|LogicalName|`modifiedby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedByName"></a> ModifiedByName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedByYomiName"></a> ModifiedByYomiName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_ModifiedOn"></a> ModifiedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when the record was modified.|
-|DisplayName|Modified On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Date and time when the record was modified.**|
+|DisplayName|**Modified On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedon|
+|LogicalName|`modifiedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_ModifiedOnBehalfBy"></a> ModifiedOnBehalfBy
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the delegate user who modified the record.|
-|DisplayName|Modified By (Delegate)|
+|---|---|
+|Description|**Unique identifier of the delegate user who modified the record.**|
+|DisplayName|**Modified By (Delegate)**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedonbehalfby|
+|LogicalName|`modifiedonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedOnBehalfByName"></a> ModifiedOnBehalfByName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedOnBehalfByYomiName"></a> ModifiedOnBehalfByYomiName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_OrganizationId"></a> OrganizationId
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for the organization|
-|DisplayName|Organization Id|
+|---|---|
+|Description|**Unique identifier for the organization**|
+|DisplayName|**Organization Id**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|organizationid|
+|LogicalName|`organizationid`|
 |RequiredLevel|None|
-|Targets|organization|
 |Type|Lookup|
-
-
-### <a name="BKMK_OrganizationIdName"></a> OrganizationIdName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|organizationidname|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|organization|
 
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Version Number|
-|DisplayName|Version Number|
+|---|---|
+|Description|**Version Number**|
+|DisplayName|**Version Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|versionnumber|
-|MaxValue|9223372036854775807|
-|MinValue|-9223372036854775808|
+|LogicalName|`versionnumber`|
 |RequiredLevel|None|
 |Type|BigInt|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
 
-<a name="onetomany"></a>
+## Many-to-One relationships
 
-## One-To-Many Relationships
-
-Listed by **SchemaName**.
-
-- [synapselinkexternaltablestate_SyncErrors](#BKMK_synapselinkexternaltablestate_SyncErrors)
-- [synapselinkexternaltablestate_DuplicateMatchingRecord](#BKMK_synapselinkexternaltablestate_DuplicateMatchingRecord)
-- [synapselinkexternaltablestate_DuplicateBaseRecord](#BKMK_synapselinkexternaltablestate_DuplicateBaseRecord)
-- [synapselinkexternaltablestate_AsyncOperations](#BKMK_synapselinkexternaltablestate_AsyncOperations)
-- [synapselinkexternaltablestate_MailboxTrackingFolders](#BKMK_synapselinkexternaltablestate_MailboxTrackingFolders)
-- [synapselinkexternaltablestate_ProcessSession](#BKMK_synapselinkexternaltablestate_ProcessSession)
-- [synapselinkexternaltablestate_BulkDeleteFailures](#BKMK_synapselinkexternaltablestate_BulkDeleteFailures)
-- [synapselinkexternaltablestate_PrincipalObjectAttributeAccesses](#BKMK_synapselinkexternaltablestate_PrincipalObjectAttributeAccesses)
-
-
-### <a name="BKMK_synapselinkexternaltablestate_SyncErrors"></a> synapselinkexternaltablestate_SyncErrors
-
-**Added by**: System Solution Solution
-
-Same as the [synapselinkexternaltablestate_SyncErrors](syncerror.md#BKMK_synapselinkexternaltablestate_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|syncerror|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|synapselinkexternaltablestate_SyncErrors|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_synapselinkexternaltablestate_DuplicateMatchingRecord"></a> synapselinkexternaltablestate_DuplicateMatchingRecord
-
-**Added by**: System Solution Solution
-
-Same as the [synapselinkexternaltablestate_DuplicateMatchingRecord](duplicaterecord.md#BKMK_synapselinkexternaltablestate_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|duplicaterecord|
-|ReferencingAttribute|duplicaterecordid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|synapselinkexternaltablestate_DuplicateMatchingRecord|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_synapselinkexternaltablestate_DuplicateBaseRecord"></a> synapselinkexternaltablestate_DuplicateBaseRecord
-
-**Added by**: System Solution Solution
-
-Same as the [synapselinkexternaltablestate_DuplicateBaseRecord](duplicaterecord.md#BKMK_synapselinkexternaltablestate_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|duplicaterecord|
-|ReferencingAttribute|baserecordid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|synapselinkexternaltablestate_DuplicateBaseRecord|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_synapselinkexternaltablestate_AsyncOperations"></a> synapselinkexternaltablestate_AsyncOperations
-
-**Added by**: System Solution Solution
-
-Same as the [synapselinkexternaltablestate_AsyncOperations](asyncoperation.md#BKMK_synapselinkexternaltablestate_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|asyncoperation|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|synapselinkexternaltablestate_AsyncOperations|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_synapselinkexternaltablestate_MailboxTrackingFolders"></a> synapselinkexternaltablestate_MailboxTrackingFolders
-
-**Added by**: System Solution Solution
-
-Same as the [synapselinkexternaltablestate_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_synapselinkexternaltablestate_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|mailboxtrackingfolder|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|synapselinkexternaltablestate_MailboxTrackingFolders|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_synapselinkexternaltablestate_ProcessSession"></a> synapselinkexternaltablestate_ProcessSession
-
-**Added by**: System Solution Solution
-
-Same as the [synapselinkexternaltablestate_ProcessSession](processsession.md#BKMK_synapselinkexternaltablestate_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|processsession|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|synapselinkexternaltablestate_ProcessSession|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_synapselinkexternaltablestate_BulkDeleteFailures"></a> synapselinkexternaltablestate_BulkDeleteFailures
-
-**Added by**: System Solution Solution
-
-Same as the [synapselinkexternaltablestate_BulkDeleteFailures](bulkdeletefailure.md#BKMK_synapselinkexternaltablestate_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|bulkdeletefailure|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|synapselinkexternaltablestate_BulkDeleteFailures|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_synapselinkexternaltablestate_PrincipalObjectAttributeAccesses"></a> synapselinkexternaltablestate_PrincipalObjectAttributeAccesses
-
-**Added by**: System Solution Solution
-
-Same as the [synapselinkexternaltablestate_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_synapselinkexternaltablestate_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|principalobjectattributeaccess|
-|ReferencingAttribute|objectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|synapselinkexternaltablestate_PrincipalObjectAttributeAccesses|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-<a name="manytoone"></a>
-
-## Many-To-One Relationships
-
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
+These relationships are many-to-one. Listed by **SchemaName**.
 
 - [lk_synapselinkexternaltablestate_createdby](#BKMK_lk_synapselinkexternaltablestate_createdby)
 - [lk_synapselinkexternaltablestate_createdonbehalfby](#BKMK_lk_synapselinkexternaltablestate_createdonbehalfby)
@@ -920,45 +599,198 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [organization_synapselinkexternaltablestate](#BKMK_organization_synapselinkexternaltablestate)
 - [synapselinkexternaltablestates](#BKMK_synapselinkexternaltablestates)
 
-
 ### <a name="BKMK_lk_synapselinkexternaltablestate_createdby"></a> lk_synapselinkexternaltablestate_createdby
 
-**Added by**: System Solution Solution
+One-To-Many Relationship: [systemuser lk_synapselinkexternaltablestate_createdby](systemuser.md#BKMK_lk_synapselinkexternaltablestate_createdby)
 
-See the [lk_synapselinkexternaltablestate_createdby](systemuser.md#BKMK_lk_synapselinkexternaltablestate_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdby`|
+|ReferencingEntityNavigationPropertyName|`createdby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_lk_synapselinkexternaltablestate_createdonbehalfby"></a> lk_synapselinkexternaltablestate_createdonbehalfby
 
-**Added by**: System Solution Solution
+One-To-Many Relationship: [systemuser lk_synapselinkexternaltablestate_createdonbehalfby](systemuser.md#BKMK_lk_synapselinkexternaltablestate_createdonbehalfby)
 
-See the [lk_synapselinkexternaltablestate_createdonbehalfby](systemuser.md#BKMK_lk_synapselinkexternaltablestate_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`createdonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_lk_synapselinkexternaltablestate_modifiedby"></a> lk_synapselinkexternaltablestate_modifiedby
 
-**Added by**: System Solution Solution
+One-To-Many Relationship: [systemuser lk_synapselinkexternaltablestate_modifiedby](systemuser.md#BKMK_lk_synapselinkexternaltablestate_modifiedby)
 
-See the [lk_synapselinkexternaltablestate_modifiedby](systemuser.md#BKMK_lk_synapselinkexternaltablestate_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedby`|
+|ReferencingEntityNavigationPropertyName|`modifiedby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_lk_synapselinkexternaltablestate_modifiedonbehalfby"></a> lk_synapselinkexternaltablestate_modifiedonbehalfby
 
-**Added by**: System Solution Solution
+One-To-Many Relationship: [systemuser lk_synapselinkexternaltablestate_modifiedonbehalfby](systemuser.md#BKMK_lk_synapselinkexternaltablestate_modifiedonbehalfby)
 
-See the [lk_synapselinkexternaltablestate_modifiedonbehalfby](systemuser.md#BKMK_lk_synapselinkexternaltablestate_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`modifiedonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_organization_synapselinkexternaltablestate"></a> organization_synapselinkexternaltablestate
 
-**Added by**: System Solution Solution
+One-To-Many Relationship: [organization organization_synapselinkexternaltablestate](organization.md#BKMK_organization_synapselinkexternaltablestate)
 
-See the [organization_synapselinkexternaltablestate](organization.md#BKMK_organization_synapselinkexternaltablestate) one-to-many relationship for the [organization](organization.md) table/entity.
+|Property|Value|
+|---|---|
+|ReferencedEntity|`organization`|
+|ReferencedAttribute|`organizationid`|
+|ReferencingAttribute|`organizationid`|
+|ReferencingEntityNavigationPropertyName|`organizationid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_synapselinkexternaltablestates"></a> synapselinkexternaltablestates
 
-**Added by**: Data lake workspaces Solution
+One-To-Many Relationship: [datalakefolder synapselinkexternaltablestates](datalakefolder.md#BKMK_synapselinkexternaltablestates)
 
-See the [synapselinkexternaltablestates](datalakefolder.md#BKMK_synapselinkexternaltablestates) one-to-many relationship for the [datalakefolder](datalakefolder.md) table/entity.
+|Property|Value|
+|---|---|
+|ReferencedEntity|`datalakefolder`|
+|ReferencedAttribute|`datalakefolderid`|
+|ReferencingAttribute|`datalakefolder`|
+|ReferencingEntityNavigationPropertyName|`datalakefolder`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+
+## One-to-Many relationships
+
+These relationships are one-to-many. Listed by **SchemaName**.
+
+- [synapselinkexternaltablestate_AsyncOperations](#BKMK_synapselinkexternaltablestate_AsyncOperations)
+- [synapselinkexternaltablestate_BulkDeleteFailures](#BKMK_synapselinkexternaltablestate_BulkDeleteFailures)
+- [synapselinkexternaltablestate_DuplicateBaseRecord](#BKMK_synapselinkexternaltablestate_DuplicateBaseRecord)
+- [synapselinkexternaltablestate_DuplicateMatchingRecord](#BKMK_synapselinkexternaltablestate_DuplicateMatchingRecord)
+- [synapselinkexternaltablestate_MailboxTrackingFolders](#BKMK_synapselinkexternaltablestate_MailboxTrackingFolders)
+- [synapselinkexternaltablestate_PrincipalObjectAttributeAccesses](#BKMK_synapselinkexternaltablestate_PrincipalObjectAttributeAccesses)
+- [synapselinkexternaltablestate_ProcessSession](#BKMK_synapselinkexternaltablestate_ProcessSession)
+- [synapselinkexternaltablestate_SyncErrors](#BKMK_synapselinkexternaltablestate_SyncErrors)
+
+### <a name="BKMK_synapselinkexternaltablestate_AsyncOperations"></a> synapselinkexternaltablestate_AsyncOperations
+
+Many-To-One Relationship: [asyncoperation synapselinkexternaltablestate_AsyncOperations](asyncoperation.md#BKMK_synapselinkexternaltablestate_AsyncOperations)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`asyncoperation`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`synapselinkexternaltablestate_AsyncOperations`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_synapselinkexternaltablestate_BulkDeleteFailures"></a> synapselinkexternaltablestate_BulkDeleteFailures
+
+Many-To-One Relationship: [bulkdeletefailure synapselinkexternaltablestate_BulkDeleteFailures](bulkdeletefailure.md#BKMK_synapselinkexternaltablestate_BulkDeleteFailures)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`bulkdeletefailure`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`synapselinkexternaltablestate_BulkDeleteFailures`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_synapselinkexternaltablestate_DuplicateBaseRecord"></a> synapselinkexternaltablestate_DuplicateBaseRecord
+
+Many-To-One Relationship: [duplicaterecord synapselinkexternaltablestate_DuplicateBaseRecord](duplicaterecord.md#BKMK_synapselinkexternaltablestate_DuplicateBaseRecord)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`duplicaterecord`|
+|ReferencingAttribute|`baserecordid`|
+|ReferencedEntityNavigationPropertyName|`synapselinkexternaltablestate_DuplicateBaseRecord`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_synapselinkexternaltablestate_DuplicateMatchingRecord"></a> synapselinkexternaltablestate_DuplicateMatchingRecord
+
+Many-To-One Relationship: [duplicaterecord synapselinkexternaltablestate_DuplicateMatchingRecord](duplicaterecord.md#BKMK_synapselinkexternaltablestate_DuplicateMatchingRecord)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`duplicaterecord`|
+|ReferencingAttribute|`duplicaterecordid`|
+|ReferencedEntityNavigationPropertyName|`synapselinkexternaltablestate_DuplicateMatchingRecord`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_synapselinkexternaltablestate_MailboxTrackingFolders"></a> synapselinkexternaltablestate_MailboxTrackingFolders
+
+Many-To-One Relationship: [mailboxtrackingfolder synapselinkexternaltablestate_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_synapselinkexternaltablestate_MailboxTrackingFolders)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`mailboxtrackingfolder`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`synapselinkexternaltablestate_MailboxTrackingFolders`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_synapselinkexternaltablestate_PrincipalObjectAttributeAccesses"></a> synapselinkexternaltablestate_PrincipalObjectAttributeAccesses
+
+Many-To-One Relationship: [principalobjectattributeaccess synapselinkexternaltablestate_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_synapselinkexternaltablestate_PrincipalObjectAttributeAccesses)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`principalobjectattributeaccess`|
+|ReferencingAttribute|`objectid`|
+|ReferencedEntityNavigationPropertyName|`synapselinkexternaltablestate_PrincipalObjectAttributeAccesses`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_synapselinkexternaltablestate_ProcessSession"></a> synapselinkexternaltablestate_ProcessSession
+
+Many-To-One Relationship: [processsession synapselinkexternaltablestate_ProcessSession](processsession.md#BKMK_synapselinkexternaltablestate_ProcessSession)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`processsession`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`synapselinkexternaltablestate_ProcessSession`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_synapselinkexternaltablestate_SyncErrors"></a> synapselinkexternaltablestate_SyncErrors
+
+Many-To-One Relationship: [syncerror synapselinkexternaltablestate_SyncErrors](syncerror.md#BKMK_synapselinkexternaltablestate_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`syncerror`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`synapselinkexternaltablestate_SyncErrors`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
-<xref href="Microsoft.Dynamics.CRM.synapselinkexternaltablestate?text=synapselinkexternaltablestate EntityType" />
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
+[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
+<xref:Microsoft.Dynamics.CRM.synapselinkexternaltablestate?displayProperty=fullName>

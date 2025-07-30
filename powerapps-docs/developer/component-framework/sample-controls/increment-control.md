@@ -1,8 +1,8 @@
 ---
-title: " Increment component| Microsoft Docs" 
+title: "Increment component| Microsoft Docs" 
 description: "This sample component shows how to bind data with Power Apps component framework and error handling." 
-author: HemantGaur
-ms.author: hemantg
+author: anuitz
+ms.author: anuitz
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: sample
@@ -39,7 +39,7 @@ When you click on the button, the value in the text box is increased by 1. The u
 
 Edit the value in the text box, and if it is a valid integer, then it updates the value to Power Apps component framework. You can continuously click the `Increment` button and update it. If it's an invalid integer, an error message pops out.
 
-### Related topics
+### Related articles
 
 [Download sample components](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework)<br/>
 [How to use the sample components](../use-sample-components.md)<br/>

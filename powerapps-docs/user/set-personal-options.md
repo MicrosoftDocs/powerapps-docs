@@ -1,25 +1,30 @@
 ---
 title: "Set personal options| MicrosoftDocs"
 description: How to set personal options in Power Apps
-author: sericks007
+author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
-ms.date: 10/30/2020
+ms.topic: how-to
+ms.date: 11/27/2023
 ms.subservice: end-user
-ms.author: sericks
+ms.author: smurkute
 ms.custom: ""
-ms.reviewer: sericks
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser
+contributors:
+- adrianorth
 ---
 # Set personal options
 
 
 
 
-Change your display settings in an app to suit your preferences. For example, you can choose the page that you want to see as soon as you sign in to the app. You can also personalize many other options such as language, currency, and time zone.  
+Change your display settings in an app to suit your preferences. For example, you can choose the page that you want to see as soon as you sign in to the app. You can also personalize many other options such as language, currency, and time zone. 
+
+> [!NOTE]
+> You may need to refresh your app twice for some changed settings to take effect.
     
 ## To set personal options  
   

@@ -1,11 +1,10 @@
 ---
-title: "closeProgressIndicator (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "closeProgressIndicator (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the closeProgressIndicator method.
-author: adrianorth
-ms.author: aorth
+author: sriharibs-msft
+ms.author: srihas
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-
 ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
@@ -14,8 +13,6 @@ contributors:
   - JimDaly
 ---
 # closeProgressIndicator (Client API reference)
-
-
 
 [!INCLUDE[./includes/closeProgressIndicator-description.md](./includes/closeProgressIndicator-description.md)]
 

@@ -35,11 +35,13 @@ Consider the following:
 
 ## Tabbed interfaces
 
-Tabbed interfaces are not supported. A tabbed interface is made up of a list of tabs and a panel that shows content associated with the selected tab. The list of tabs should be navigable with arrow keys. Appropriate control roles and states are required.
+A tabbed interface is made up of a list of tabs and a panel that shows content associated with the selected tab.
+
+The only built-in control that supports tabbed interfaces is the **[Tab list](controls/modern-controls/modern-control-tabs-or-tabs-list.md)**. Avoid using **[Galleries](controls/control-gallery.md)** to create tabs. The list of tabs should be navigable with arrow keys. Appropriate control roles and states are required.
 
 Consider the following:
 
-- Put each tab panel on a separate screen. Append the role and state of a tab to its **[AccessibleLabel](controls/properties-accessibility.md)**. For example, if an **[Icon](controls/control-shapes-icons.md)** is used as a tab, its label could be “Documents. Tab. 3 of 5. Selected.”.
+- Use the built-in **[Tab list](controls/control-data-table.md)**.
 - [Create a code component](../../developer/component-framework/overview.md) that implements an accessible tabbed interface.
 
 ## Custom tables

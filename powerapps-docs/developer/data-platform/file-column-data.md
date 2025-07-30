@@ -1,12 +1,12 @@
 ---
-title: "Use file column data (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about uploading, downloading, and deleting data in file columns." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 05/24/2023
+title: "Use file column data (Microsoft Dataverse) | Microsoft Docs"
+description: "Learn about uploading, downloading, and deleting data in file columns."
+ms.date: 03/29/2024
 ms.reviewer: jdaly
-ms.topic: article
-author: NHelgren # GitHub ID
+ms.topic: how-to
+author: mkannapiran
+ms.author: kamanick
 ms.subservice: dataverse-developer
-ms.author: nhelgren # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 contributors:
@@ -66,9 +66,6 @@ name: Contoso Ltd.
 sample_filecolumn: <file id>
 sample_filecolumn_name: 25mb.pdf
 ```
-
-> [!NOTE]
-> You must explicitly request the column to return the file id. If you use [ColumnSet.AllColumns](xref:Microsoft.Xrm.Sdk.Query.ColumnSet.AllColumns) to true in your query the file column will not be returned. If you used `new ColumnSet(true)` in the function above, the result would be a <xref:System.Collections.Generic.KeyNotFoundException?displayProperty=fullName>.
 
 More information:
 
@@ -518,6 +515,83 @@ HTTP/1.1 204 NoContent
 OData-Version: 4.0
 ```
 
+#### PowerShell example to upload file in a single request
+
+The following PowerShell `Set-FileColumn` function demonstrates how to upload a file in a single request using Web API.
+
+Learn more about using PowerShell and Visual Studio Code with the Dataverse Web API:
+
+- [Quick Start Web API with PowerShell and Visual Studio Code](webapi/quick-start-ps.md)
+- [Use PowerShell and Visual Studio Code with the Dataverse Web API](webapi/use-ps-and-vscode-web-api.md)
+
+This function requires a connection using that sets the global `$baseURI` and `$baseHeaders` that are set using the `Connect` function described in [Create a Connect function](webapi/use-ps-and-vscode-web-api.md#create-a-connect-function).
+
+```powershell
+<#
+.SYNOPSIS
+Sets a column value for a file in a specified table.
+
+.DESCRIPTION
+The Set-FileColumn function sets a column value for a file in a specified table. 
+It uses a single request and can work with files less than 128 MB.
+
+.PARAMETER setName
+The entity set name of the table where the file is stored.
+
+.PARAMETER id
+The unique identifier of record.
+
+.PARAMETER columnName
+The logical name of the file column to set the value for.
+
+.PARAMETER file
+The path to the file to upload.
+
+.EXAMPLE
+Set-FileColumn `
+   -setName 'accounts' `
+   -id [System.Guid]::New('12345678-1234-1234-1234-1234567890AB') `
+   -columnName 'new_filecolumn' `
+   -file 'C:\Path\To\File.txt'
+   
+Sets the value of the 'new_filecolumn' column for the file with the specified ID 
+in the account table to the contents of the File.txt file.
+
+#>
+function Set-FileColumn {
+   param (
+      [Parameter(Mandatory)]
+      [string]
+      $setName,
+      [Parameter(Mandatory)]
+      [System.Guid]
+      $id,
+      [Parameter(Mandatory)]
+      [string]
+      $columnName,
+      [Parameter(Mandatory, ValueFromPipeline, ValueFromPipelineByPropertyName)]
+      [System.IO.FileInfo]$file
+   )
+
+   $uri = '{0}{1}({2})/{3}' -f $baseURI, $setName, $id, $columnName
+
+   $patchHeaders = $baseHeaders.Clone()
+   $patchHeaders.Add('Content-Type', 'application/octet-stream')
+   $patchHeaders.Add('x-ms-file-name', $file.Name)
+
+   $body = [System.IO.File]::ReadAllBytes($file.FullName)
+
+   $FileUploadRequest = @{
+      Uri     = $uri
+      Method  = 'Patch'
+      Headers = $patchHeaders
+      Body    = $body
+   }
+
+   Invoke-RestMethod @FileUploadRequest
+}
+```
+
 ### Upload the file in chunks using Web API
 
 To upload your file in chunks using the Web API, use the following set of requests.
@@ -608,6 +682,104 @@ For the final request that includes the last chunk of the file, the response wil
 HTTP/1.1 204 NoContent
 OData-Version: 4.0
 ```
+
+#### PowerShell example to upload file in chunks
+
+The following PowerShell `Set-FileColumnInChunks` function demonstrates how to upload a file in chunks. This function requires a connection using that sets the global `$baseURI` and `$baseHeaders` that are set using the `Connect` function described in [Create a Connect function](webapi/use-ps-and-vscode-web-api.md#create-a-connect-function).
+
+```powershell
+<#
+.SYNOPSIS
+Sets a column value for a file in a specified table.
+
+.DESCRIPTION
+The Set-FileColumnInChunks function sets a column value for a file in a specified table. 
+It uses chunked file upload to efficiently upload large files.
+
+.PARAMETER setName
+The name of the table where the file is stored.
+
+.PARAMETER id
+The unique identifier of record.
+
+.PARAMETER columnName
+The logical name of the file column to set the value for.
+
+.PARAMETER file
+The path to the file to upload.
+
+.EXAMPLE
+Set-FileColumnInChunks `
+   -setName 'accounts' `
+   -id [System.Guid]::New('12345678-1234-1234-1234-1234567890AB') `
+   -columnName 'new_filecolumn' `
+   -file 'C:\Path\To\File.txt'
+   
+Sets the value of the 'new_filecolumn' column for the file with the specified ID in the account table to the contents of the File.txt file.
+
+#>
+function Set-FileColumnInChunks {
+   param (
+      [Parameter(Mandatory)]
+      [string]
+      $setName,
+      [Parameter(Mandatory)]
+      [System.Guid]
+      $id,
+      [Parameter(Mandatory)]
+      [string]
+      $columnName,
+      [Parameter(Mandatory, ValueFromPipeline, ValueFromPipelineByPropertyName)]
+      [System.IO.FileInfo]$file
+   )
+
+   $uri = '{0}{1}({2})' -f $baseURI, $setName, $id
+   $uri += '/{0}?x-ms-file-name={1}' -f $columnName, $file.Name
+
+   $chunkHeaders = $baseHeaders.Clone()
+   $chunkHeaders.Add('x-ms-transfer-mode', 'chunked')
+
+   $InitializeChunkedFileUploadRequest = @{
+      Uri     = $uri
+      Method  = 'Patch'
+      Headers = $chunkHeaders
+   }
+
+   Invoke-RestMethod @InitializeChunkedFileUploadRequest `
+      -ResponseHeadersVariable rhv
+
+   $locationUri = $rhv['Location'][0]
+   $chunkSize = [int]$rhv['x-ms-chunk-size'][0]
+
+   $bytes = [System.IO.File]::ReadAllBytes($file.FullName)
+
+   for ($offset = 0; $offset -lt $bytes.Length; $offset += $chunkSize) {
+         
+      $count = if (($offSet + $chunkSize) -gt $bytes.Length) 
+                  { $bytes.Length % $chunkSize } 
+               else { $chunkSize }
+      
+      $lastByte = $offset + ($count - 1)
+
+      $range = 'bytes {0}-{1}/{2}' -f $offset, $lastByte, $bytes.Length
+
+      $contentHeaders = $baseHeaders.Clone()
+      $contentHeaders.Add('Content-Range', $range)
+      $contentHeaders.Add('Content-Type', 'application/octet-stream')
+      $contentHeaders.Add('x-ms-file-name', $file.Name)
+
+      $UploadFileChunkRequest = @{
+         Uri     = $locationUri
+         Method  = 'Patch'
+         Headers = $contentHeaders
+         Body    = [byte[]]$bytes[$offSet..$lastByte]
+      }
+
+      Invoke-RestMethod @UploadFileChunkRequest
+   }
+}
+```
+
 
 ### Check maximum file size
 
@@ -1075,7 +1247,7 @@ More information: [Delete a single property value](webapi/update-delete-entities
 
 [Files and images overview](files-images-overview.md)<br />
 [Column data types > File columns](../../maker/data-platform/types-of-fields.md#file-columns)<br />
-[File columns](file-attributes.md)<br />
+[Work with file column definitions using code](file-attributes.md)<br />
 [Sample: File Operations using Dataverse SDK for .NET](org-service/samples/file-operations.md)<br />
 [Sample: File Operations using Dataverse Web API](webapi/samples/file-operations.md)
 

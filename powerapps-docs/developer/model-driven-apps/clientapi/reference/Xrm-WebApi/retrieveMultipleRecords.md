@@ -1,9 +1,9 @@
 ---
-title: "retrieveMultipleRecords (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "retrieveMultipleRecords (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the retrieveMultipleRecords method.
-author: adrianorth
-ms.author: aorth
-ms.date: 01/11/2023
+author: sriharibs-msft
+ms.author: srihas
+ms.date: 04/29/2025
 ms.reviewer: jdaly
 ms.topic: reference
 search.audienceType: 
@@ -27,9 +27,9 @@ contributors:
 |---|---|---|---|
 |`entityLogicalName`|String|Yes|The table logical name of the records you want to retrieve. For example: `account`.|
 |`options`|String|No|OData system query options or FetchXML query to retrieve your data. See [Options](#options)|
-|`maxPageSize`|Number|No|Specify a positive number that indicates the number of table records to be returned per page. If you don't specify this parameter, the value is defaulted to the maximum limit of 5000 records.<br /><br />If the number of records being retrieved is more than the specified `maxPageSize` value or 5000 records, `nextLink` column in the returned promise object will contain a link to retrieve records.|
+|`maxPageSize`|Number|No|Specify a positive number that indicates the number of table records to be returned per page. If you don't specify this parameter, the value is defaulted to the maximum limit of 5,000 records for standard tables, 500 for elastic tables.<br /><br />If the number of records being retrieved is more than the specified `maxPageSize` value or the maximum limit for the table type, the `nextLink` column in the returned promise object will contain a link to retrieve records.|
 |`successCallback`|Function|No|A function to call when table records are retrieved. See [Return Value](#return-value)|
-|`errorCallback`|Function|No|A function to call when the operation fails.|
+|`errorCallback`|Function|No|[!INCLUDE [errorcallback-description](includes/errorcallback-description.md)]|
 
 ### Options
 
@@ -102,7 +102,7 @@ The following table lists more operations supported for each attribute type:
 
 ## Examples
 
-Most of the scenarios/examples mentioned in [Query Data using the Web API](../../../../data-platform/webapi/query-data-web-api.md) can be achieved using the **retrieveMultipleRecords** method. Some of the examples are listed below.
+Most of the scenarios/examples mentioned in [Query Data using the Web API](../../../../data-platform/webapi/query/overview.md) can be achieved using the **retrieveMultipleRecords** method. Some of the examples are listed below.
 
 ### Basic retrieve multiple
 
@@ -436,7 +436,7 @@ function retrievePage(entityName, fetchXml, pageNumber, count, pagingCookie) {
 
 var count = 3;
 var fetchXml =
-  '<fetch mapping="logical"><entity name="account"><attribute name="accountid"/><attribute name="name"/></entity></fetch>';
+  '<fetch><entity name="account"><attribute name="accountid"/><attribute name="name"/></entity></fetch>';
 
 retrieveAllRecords("account", fetchXml, null, count, null).then(
   function success(result) {
@@ -548,12 +548,12 @@ Xrm.WebApi.offline.retrieveMultipleRecords("account", "?$select=name&$top=3&$exp
 });
 ```
 
-For more examples of retrieving multiple records using Web API, see [Query Data using the Web API](../../../../data-platform/webapi/query-data-web-api.md).
+For more examples of retrieving multiple records using Web API, see [Query Data using the Web API](../../../../data-platform/webapi/query/overview.md).
 
  
 ### Related articles
 
-[Query Data using the Web API](../../../../data-platform/webapi/query-data-web-api.md)<br />
+[Query Data using the Web API](../../../../data-platform/webapi/query/overview.md)<br />
 [Xrm.WebApi.retrieveRecord](retrieveRecord.md)<br />
 [Xrm.WebApi](../xrm-webapi.md)
 

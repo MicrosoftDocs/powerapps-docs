@@ -2,11 +2,11 @@
 title: "Create and update choices (option sets) using the Web API"
 description: "Learn about creating and updating choices in Microsoft Dataverse using the Web API."
 ms.date: 06/07/2023
-ms.topic: article
+ms.topic: how-to
 applies_to: 
   - "Dynamics 365 (online)"
-author: NHelgren # GitHub ID
-ms.author: nhelgren
+author: mkannapiran
+ms.author: kamanick
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
@@ -199,7 +199,7 @@ Content-Length: 2769
 ```http
 HTTP/1.1 204 NoContent
 OData-Version: 4.0
-OData-EntityId: [Organization Uri]/api/data/v9.2/GlobalOptionSetDefinitions(1d733907-4d05-ee11-8f6e-000d3a993550)
+OData-EntityId: [Organization Uri]/api/data/v9.2/GlobalOptionSetDefinitions(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)
 ```
 
 ### Create a choice column using a global option set
@@ -237,7 +237,7 @@ Content-Length: 1465
     "Value": "PicklistType"
   },
   "SourceTypeMask": 0,
-  "GlobalOptionSet@odata.bind": "/GlobalOptionSetDefinitions(1d733907-4d05-ee11-8f6e-000d3a993550)",
+  "GlobalOptionSet@odata.bind": "/GlobalOptionSetDefinitions(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)",
   "Description": {
     "@odata.type": "Microsoft.Dynamics.CRM.Label",
     "LocalizedLabels": [
@@ -286,7 +286,7 @@ Content-Length: 1465
 ```http
 HTTP/1.1 204 NoContent
 OData-Version: 4.0
-OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(25733907-4d05-ee11-8f6e-000d3a993550)
+OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(11bb11bb-cc22-dd33-ee44-55ff55ff55ff)
 ```
 
 ### Insert options

@@ -1,14 +1,14 @@
 ---
-title: App navigation in model-driven apps | Microsoft Docs
+title: App navigation in model-driven apps
 description: Learn about app navigation in model-driven apps in Power Apps.
-documentationcenter: ''
 author: Mattp123
 editor: ''
 tags: ''
-ms.topic: conceptual
+ms.topic: article
 ms.component: model
-ms.date: 04/13/2023
+ms.date: 01/27/2025
 ms.author: matp
+ms.subservice: mda-maker
 search.audienceType: 
   - maker
 ---
@@ -74,8 +74,10 @@ Pages were formerly called *subareas* in the app designer. To create a new page,
 1. Select the content type you want.
    - **Dataverse table**. Select an existing table or create a new one. More information: [Create a custom table](../data-platform/data-platform-create-entity.md)
    - **Dashboard**. Select a dashboard. More information: [Create or edit model-driven app dashboards](create-edit-dashboards.md)
-   - **URL**. Add a URL, such as a website address. More information: [Add a URL to an app](#add-a-url-to-an-app)
-   - **Custom page**. Add a custom page, such as a canvas app page. More information: [Overview of custom pages for model-driven apps](model-app-page-overview.md)
+   - **Custom page**. Add a custom page, such as a canvas app page. More information: [Overview of custom pages for model-driven apps]
+   - **Web resource**. Web resources represent files that can be used to extend an application such as HTML files, JavaScript, and CSS, and several image formats.
+   - **Navigation link**. Add a URL, such as a website address. More information: [Add a URL to an app](#add-a-url-to-an-app)
+ (model-app-page-overview.md)
 1. Complete the choices that are on you screen to create the page, and then select **Add**.
 1. To save your app navigation changes select **Save**.
 1. To publish the changes and make them available to other users, select **Publish**.

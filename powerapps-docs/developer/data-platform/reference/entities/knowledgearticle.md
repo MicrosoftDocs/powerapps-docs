@@ -1,61 +1,60 @@
 ---
-title: "KnowledgeArticle table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the KnowledgeArticle table/entity."
-ms.date: 09/01/2023
-ms.service: "powerapps"
-ms.topic: "reference"
-ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "phecke"
-ms.author: "pehecke"
+title: "Knowledge Article (KnowledgeArticle) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the Knowledge Article (KnowledgeArticle) table/entity with Microsoft Dataverse."
+ms.topic: generated-reference
+author: phecke
+ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# KnowledgeArticle table/entity reference
-
-> [!NOTE]
-> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
+# Knowledge Article (KnowledgeArticle) table/entity reference (Microsoft Dataverse)
 
 Organizational knowledge for internal and external use.
 
-
 ## Messages
 
-|Message|Web API Operation|SDK class or method|
-|-|-|-|
-|Assign|PATCH /knowledgearticles(*knowledgearticleid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|Create|POST /knowledgearticles<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|CreateKnowledgeArticleTranslation|<xref:Microsoft.Dynamics.CRM.CreateKnowledgeArticleTranslation?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.CreateKnowledgeArticleTranslationRequest>|
-|CreateKnowledgeArticleVersion|<xref:Microsoft.Dynamics.CRM.CreateKnowledgeArticleVersion?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.CreateKnowledgeArticleVersionRequest>|
-|Delete|DELETE /knowledgearticles(*knowledgearticleid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|FullTextSearchKnowledgeArticle|<xref:Microsoft.Dynamics.CRM.FullTextSearchKnowledgeArticle?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.FullTextSearchKnowledgeArticleRequest>|
-|GrantAccess|<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
-|ModifyAccess|<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-|Retrieve|GET /knowledgearticles(*knowledgearticleid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET /knowledgearticles<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|RetrievePrincipalAccess|<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
-|RetrieveSharedPrincipalsAndAccess|<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
-|RevokeAccess|<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|SetState|PATCH /knowledgearticles(*knowledgearticleid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH /knowledgearticles(*knowledgearticleid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+The following table lists the messages for the Knowledge Article (KnowledgeArticle) table.
+Messages represent operations that can be performed on the table. They may also be events.
+
+| Name <br />Is Event? |Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `Assign`<br />Event: True |`PATCH` /knowledgearticles(*knowledgearticleid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Create`<br />Event: True |`POST` /knowledgearticles<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `CreateKnowledgeArticleTranslation`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateKnowledgeArticleTranslation?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.CreateKnowledgeArticleTranslationRequest>|
+| `CreateKnowledgeArticleVersion`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateKnowledgeArticleVersion?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.CreateKnowledgeArticleVersionRequest>|
+| `Delete`<br />Event: True |`DELETE` /knowledgearticles(*knowledgearticleid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `FullTextSearchKnowledgeArticle`<br />Event: False |<xref:Microsoft.Dynamics.CRM.FullTextSearchKnowledgeArticle?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.FullTextSearchKnowledgeArticleRequest>|
+| `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
+| `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
+| `Retrieve`<br />Event: True |`GET` /knowledgearticles(*knowledgearticleid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveMultiple`<br />Event: True |`GET` /knowledgearticles<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
+| `RetrievePrincipalAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
+| `RetrieveSharedPrincipalsAndAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
+| `RevokeAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
+| `SetState`<br />Event: True |`PATCH` /knowledgearticles(*knowledgearticleid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `statecode` and `statuscode` properties. |<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+| `Update`<br />Event: True |`PATCH` /knowledgearticles(*knowledgearticleid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
+| `Upsert`<br />Event: False |`PATCH` /knowledgearticles(*knowledgearticleid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
 
 ## Properties
 
-|Property|Value|
-|--------|-----|
-|CollectionSchemaName|KnowledgeArticles|
-|DisplayCollectionName|Knowledge Articles|
-|DisplayName|Knowledge Article|
-|EntitySetName|knowledgearticles|
-|IsBPFEntity|False|
-|LogicalCollectionName|knowledgearticles|
-|LogicalName|knowledgearticle|
-|OwnershipType|UserOwned|
-|PrimaryIdAttribute|knowledgearticleid|
-|PrimaryNameAttribute|title|
-|SchemaName|KnowledgeArticle|
+The following table lists selected properties for the Knowledge Article (KnowledgeArticle) table.
 
-<a name="writable-attributes"></a>
+|Property|Value|
+| --- | --- |
+| **DisplayName** | **Knowledge Article** |
+| **DisplayCollectionName** | **Knowledge Articles** |
+| **SchemaName** | `KnowledgeArticle` |
+| **CollectionSchemaName** | `KnowledgeArticles` |
+| **EntitySetName** | `knowledgearticles`|
+| **LogicalName** | `knowledgearticle` |
+| **LogicalCollectionName** | `knowledgearticles` |
+| **PrimaryIdAttribute** | `knowledgearticleid` |
+| **PrimaryNameAttribute** |`title` |
+| **TableType** | `Standard` |
+| **OwnershipType** | `UserOwned` |
 
 ## Writable columns/attributes
 
@@ -78,6 +77,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [LanguageLocaleId](#BKMK_LanguageLocaleId)
 - [MajorVersionNumber](#BKMK_MajorVersionNumber)
 - [MinorVersionNumber](#BKMK_MinorVersionNumber)
+- [msdyn_agentreviewstatus](#BKMK_msdyn_agentreviewstatus)
+- [msdyn_compliancestatecode](#BKMK_msdyn_compliancestatecode)
 - [msdyn_externalreferenceid](#BKMK_msdyn_externalreferenceid)
 - [msdyn_ingestedarticleurl](#BKMK_msdyn_ingestedarticleurl)
 - [msdyn_integratedsearchproviderid](#BKMK_msdyn_integratedsearchproviderid)
@@ -86,6 +87,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [msdyn_keywordsdescsuggestioncontrol](#BKMK_msdyn_keywordsdescsuggestioncontrol)
 - [msdyn_languagecode](#BKMK_msdyn_languagecode)
 - [msdyn_retrycountformigrationtocontentstore](#BKMK_msdyn_retrycountformigrationtocontentstore)
+- [msdyn_totalcasesimpacted](#BKMK_msdyn_totalcasesimpacted)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
@@ -111,2312 +113,2058 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [UpdateContent](#BKMK_UpdateContent)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 
-
 ### <a name="BKMK_ArticlePublicNumber"></a> ArticlePublicNumber
 
 |Property|Value|
-|--------|-----|
-|Description|Shows the automatically generated ID exposed to customers, partners, and other external users to reference and look up articles.|
-|DisplayName|Article Public Number|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Shows the automatically generated ID exposed to customers, partners, and other external users to reference and look up articles.**|
+|DisplayName|**Article Public Number**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|articlepublicnumber|
-|MaxLength|4000|
+|LogicalName|`articlepublicnumber`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|4000|
 
 ### <a name="BKMK_Content"></a> Content
 
 |Property|Value|
-|--------|-----|
-|Description|Shows the body of the article stored in HTML format.|
-|DisplayName|Content|
-|Format|TextArea|
-|IsLocalizable|False|
+|---|---|
+|Description|**Shows the body of the article stored in HTML format.**|
+|DisplayName|**Content**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|content|
-|MaxLength|1073741823|
+|LogicalName|`content`|
 |RequiredLevel|None|
 |Type|Memo|
-
+|Format|TextArea|
+|FormatName|TextArea|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1073741823|
 
 ### <a name="BKMK_Description"></a> Description
 
 |Property|Value|
-|--------|-----|
-|Description|A short overview of the article, primarily used in search results and for search engine optimization.|
-|DisplayName|Description|
-|FormatName|TextArea|
-|IsLocalizable|False|
+|---|---|
+|Description|**A short overview of the article, primarily used in search results and for search engine optimization.**|
+|DisplayName|**Description**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|description|
-|MaxLength|155|
+|LogicalName|`description`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|TextArea|
+|FormatName|TextArea|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|155|
 
 ### <a name="BKMK_ExpirationDate"></a> ExpirationDate
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Enter an expiration date for the article. Leave this field blank for no expiration date.|
-|DisplayName|Expiration Date|
-|Format|DateAndTime|
+|---|---|
+|Description|**Enter an expiration date for the article. Leave this field blank for no expiration date.**|
+|DisplayName|**Expiration Date**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|expirationdate|
+|LogicalName|`expirationdate`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Auto|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_ExpirationStateId"></a> ExpirationStateId
 
 |Property|Value|
-|--------|-----|
-|Description|Contains the id of the expiration state of the entity.|
-|DisplayName|Expiration State Id|
-|Format|None|
+|---|---|
+|Description|**Contains the id of the expiration state of the entity.**|
+|DisplayName|**Expiration State Id**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|expirationstateid|
-|MaxValue|2147483647|
-|MinValue|0|
+|LogicalName|`expirationstateid`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|0|
 
 ### <a name="BKMK_ExpirationStatusId"></a> ExpirationStatusId
 
 |Property|Value|
-|--------|-----|
-|Description|Contains the id of the expiration status of the entity.|
-|DisplayName|Expired Status|
-|Format|None|
+|---|---|
+|Description|**Contains the id of the expiration status of the entity.**|
+|DisplayName|**Expired Status**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|expirationstatusid|
-|MaxValue|2147483647|
-|MinValue|0|
+|LogicalName|`expirationstatusid`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|0|
 
 ### <a name="BKMK_ExpiredReviewOptions"></a> ExpiredReviewOptions
 
 |Property|Value|
-|--------|-----|
-|Description|Expired Review Options|
-|DisplayName|Expired Review Options|
+|---|---|
+|Description|**Expired Review Options**|
+|DisplayName|**Expired Review Options**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|expiredreviewoptions|
+|LogicalName|`expiredreviewoptions`|
 |RequiredLevel|None|
 |Type|Picklist|
+|DefaultFormValue|-1|
+|GlobalChoiceName|`knowledgearticle_expiredreviewoptions`|
 
 #### ExpiredReviewOptions Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|0|Needs Updating||
-|1|Republish||
-|2|Archive||
-
-
+|Value|Label|
+|---|---|
+|0|**Needs Updating**|
+|1|**Republish**|
+|2|**Archive**|
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
 |Property|Value|
-|--------|-----|
-|Description|Sequence number of the import that created this record.|
-|DisplayName|Import Sequence Number|
-|Format|None|
+|---|---|
+|Description|**Sequence number of the import that created this record.**|
+|DisplayName|**Import Sequence Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|importsequencenumber|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`importsequencenumber`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_IsInternal"></a> IsInternal
 
 |Property|Value|
-|--------|-----|
-|Description|Shows whether this article is only visible internally.|
-|DisplayName|Internal|
+|---|---|
+|Description|**Shows whether this article is only visible internally.**|
+|DisplayName|**Internal**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|isinternal|
+|LogicalName|`isinternal`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### IsInternal Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`knowledgearticle_isinternal`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_IsLatestVersion"></a> IsLatestVersion
 
 |Property|Value|
-|--------|-----|
-|Description|Shows which version of the knowledge article is the latest version.|
-|DisplayName|Is Latest Version|
+|---|---|
+|Description|**Shows which version of the knowledge article is the latest version.**|
+|DisplayName|**Is Latest Version**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|islatestversion|
+|LogicalName|`islatestversion`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
-
-#### IsLatestVersion Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`knowledgearticle_islatestversion`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_IsPrimary"></a> IsPrimary
 
 |Property|Value|
-|--------|-----|
-|Description|Select whether the article is the primary article.|
-|DisplayName|Primary Article|
+|---|---|
+|Description|**Select whether the article is the primary article.**|
+|DisplayName|**Primary Article**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|isprimary|
+|LogicalName|`isprimary`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### IsPrimary Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`knowledgearticle_isprimary`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_IsRootArticle"></a> IsRootArticle
 
 |Property|Value|
-|--------|-----|
-|Description|Select whether the article is the root article.|
-|DisplayName|Root Article|
+|---|---|
+|Description|**Select whether the article is the root article.**|
+|DisplayName|**Root Article**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|isrootarticle|
+|LogicalName|`isrootarticle`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
-
-#### IsRootArticle Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`knowledgearticle_isrootarticle`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_Keywords"></a> Keywords
 
 |Property|Value|
-|--------|-----|
-|Description|Type keywords to be used for searches in knowledge base articles. Separate keywords by using commas.|
-|DisplayName|Keywords|
-|Format|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Type keywords to be used for searches in knowledge base articles. Separate keywords by using commas.**|
+|DisplayName|**Keywords**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|keywords|
-|MaxLength|4000|
+|LogicalName|`keywords`|
 |RequiredLevel|Recommended|
 |Type|Memo|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|4000|
 
 ### <a name="BKMK_knowledgearticleId"></a> knowledgearticleId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for entity instances|
-|DisplayName|Knowledge Article|
+|---|---|
+|Description|**Unique identifier for entity instances**|
+|DisplayName|**Knowledge Article**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|knowledgearticleid|
+|LogicalName|`knowledgearticleid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_LanguageLocaleId"></a> LanguageLocaleId
 
 |Property|Value|
-|--------|-----|
-|Description|Select the language that the article's content is in.|
-|DisplayName|Language|
+|---|---|
+|Description|**Select the language that the article's content is in.**|
+|DisplayName|**Language**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|languagelocaleid|
+|LogicalName|`languagelocaleid`|
 |RequiredLevel|SystemRequired|
-|Targets|languagelocale|
 |Type|Lookup|
-
+|Targets|languagelocale|
 
 ### <a name="BKMK_MajorVersionNumber"></a> MajorVersionNumber
 
 |Property|Value|
-|--------|-----|
-|Description|Shows the major version number of this article's content.|
-|DisplayName|Major Version Number|
-|Format|None|
+|---|---|
+|Description|**Shows the major version number of this article's content.**|
+|DisplayName|**Major Version Number**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|majorversionnumber|
-|MaxValue|2147483647|
-|MinValue|0|
+|LogicalName|`majorversionnumber`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|0|
 
 ### <a name="BKMK_MinorVersionNumber"></a> MinorVersionNumber
 
 |Property|Value|
-|--------|-----|
-|Description|Shows the minor version number of this article's content.|
-|DisplayName|Minor Version Number|
-|Format|None|
+|---|---|
+|Description|**Shows the minor version number of this article's content.**|
+|DisplayName|**Minor Version Number**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|minorversionnumber|
-|MaxValue|2147483647|
-|MinValue|0|
+|LogicalName|`minorversionnumber`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
+|MaxValue|2147483647|
+|MinValue|0|
 
+### <a name="BKMK_msdyn_agentreviewstatus"></a> msdyn_agentreviewstatus
+
+|Property|Value|
+|---|---|
+|Description|**field to indicate the review status of the article**|
+|DisplayName|**Representative Review**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_agentreviewstatus`|
+|RequiredLevel|None|
+|Type|Picklist|
+|DefaultFormValue|100000000|
+|GlobalChoiceName|`msdyn_knowledgearticle_msdyn_agentreviewstatus`|
+
+#### msdyn_agentreviewstatus Choices/Options
+
+|Value|Label|
+|---|---|
+|100000000|**Not Reviewed**|
+|100000001|**Reviewed**|
+
+### <a name="BKMK_msdyn_compliancestatecode"></a> msdyn_compliancestatecode
+
+|Property|Value|
+|---|---|
+|Description|**field to indicate the compliance state of an article**|
+|DisplayName|**Compliance State**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_compliancestatecode`|
+|RequiredLevel|None|
+|Type|Picklist|
+|DefaultFormValue|-1|
+|GlobalChoiceName|`msdyn_knowledgearticle_msdyn_compliancestatecode`|
+
+#### msdyn_compliancestatecode Choices/Options
+
+|Value|Label|
+|---|---|
+|100000000|**Compliant**|
+|100000001|**Non Compliant**|
+|100000002|**Pending**|
 
 ### <a name="BKMK_msdyn_externalreferenceid"></a> msdyn_externalreferenceid
 
-**Added by**: Knowledge Management Online Features Solution
-
 |Property|Value|
-|--------|-----|
-|Description|External Reference Id|
-|DisplayName|External Reference Id|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**External Reference Id**|
+|DisplayName|**External Reference Id**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_externalreferenceid|
-|MaxLength|450|
+|LogicalName|`msdyn_externalreferenceid`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|450|
 
 ### <a name="BKMK_msdyn_ingestedarticleurl"></a> msdyn_ingestedarticleurl
 
-**Added by**: Knowledge Management Patch Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Ingested article URL|
-|DisplayName|Ingested Article URL|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Ingested article URL**|
+|DisplayName|**Ingested Article URL**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_ingestedarticleurl|
-|MaxLength|2048|
+|LogicalName|`msdyn_ingestedarticleurl`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|2048|
 
 ### <a name="BKMK_msdyn_integratedsearchproviderid"></a> msdyn_integratedsearchproviderid
 
-**Added by**: Knowledge Management Online Features Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Integrated Search Dataprovider Id |
-|DisplayName|Integrated Search Dataprovider Id |
+|---|---|
+|Description|**Integrated Search Dataprovider Id**|
+|DisplayName|**Integrated Search Dataprovider Id**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_integratedsearchproviderid|
+|LogicalName|`msdyn_integratedsearchproviderid`|
 |RequiredLevel|None|
-|Targets|msdyn_integratedsearchprovider|
 |Type|Lookup|
-
+|Targets|msdyn_integratedsearchprovider|
 
 ### <a name="BKMK_msdyn_iscontentsyncedtostore"></a> msdyn_iscontentsyncedtostore
 
-**Added by**: Knowledge Management Patch Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Sets whether the article content is synced to file storage|
-|DisplayName|Is content synced to file storage|
+|---|---|
+|Description|**Sets whether the article content is synced to file storage**|
+|DisplayName|**Is content synced to file storage**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_iscontentsyncedtostore|
+|LogicalName|`msdyn_iscontentsyncedtostore`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### msdyn_iscontentsyncedtostore Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`msdyn_knowledgearticle_msdyn_iscontentsyncedtostore`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_msdyn_isingestedarticle"></a> msdyn_isingestedarticle
 
-**Added by**: Knowledge Management Patch Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Value is true for all Ingested articles|
-|DisplayName|Is Ingested Article|
+|---|---|
+|Description|**Value is true for all Ingested articles**|
+|DisplayName|**Is Ingested Article**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_isingestedarticle|
+|LogicalName|`msdyn_isingestedarticle`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### msdyn_isingestedarticle Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`msdyn_knowledgearticle_msdyn_isingestedarticle`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_msdyn_keywordsdescsuggestioncontrol"></a> msdyn_keywordsdescsuggestioncontrol
 
-**Added by**: Knowledge Management Patch Solution
-
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|Keywords and Description Suggestion control|
+|DisplayName|**Keywords and Description Suggestion control**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_keywordsdescsuggestioncontrol|
+|LogicalName|`msdyn_keywordsdescsuggestioncontrol`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### msdyn_keywordsdescsuggestioncontrol Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`msdyn_knowledgearticle_msdyn_keywordsdescsuggestioncontrol`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_msdyn_languagecode"></a> msdyn_languagecode
 
-**Added by**: Knowledge Management Patch Solution
-
 |Property|Value|
-|--------|-----|
-|Description|The Language Code that the article's content is in.|
-|DisplayName|Language Code|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**The Language Code that the article's content is in.**|
+|DisplayName|**Language Code**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_languagecode|
-|MaxLength|100|
+|LogicalName|`msdyn_languagecode`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_msdyn_retrycountformigrationtocontentstore"></a> msdyn_retrycountformigrationtocontentstore
 
-**Added by**: Knowledge Management Patch Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Displays the number of times migration to file storage retry is attempted for an article|
-|DisplayName|File storage migration retry count|
-|Format|None|
+|---|---|
+|Description|**Displays the number of times migration to file storage retry is attempted for an article**|
+|DisplayName|**File storage migration retry count**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_retrycountformigrationtocontentstore|
-|MaxValue|2147483647|
-|MinValue|0|
+|LogicalName|`msdyn_retrycountformigrationtocontentstore`|
 |RequiredLevel|None|
 |Type|Integer|
+|MaxValue|2147483647|
+|MinValue|0|
 
+### <a name="BKMK_msdyn_totalcasesimpacted"></a> msdyn_totalcasesimpacted
+
+|Property|Value|
+|---|---|
+|Description||
+|DisplayName|**Total Cases Impacted**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_totalcasesimpacted`|
+|RequiredLevel|None|
+|Type|Integer|
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time that the record was migrated.|
-|DisplayName|Record Created On|
-|Format|DateOnly|
+|---|---|
+|Description|**Date and time that the record was migrated.**|
+|DisplayName|**Record Created On**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|overriddencreatedon|
+|LogicalName|`overriddencreatedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateOnly|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_OwnerId"></a> OwnerId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user or team who owns the record.|
-|DisplayName|Owner|
+|---|---|
+|Description|**Unique identifier of the user or team who owns the record.**|
+|DisplayName|**Owner**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|ownerid|
+|LogicalName|`ownerid`|
 |RequiredLevel|SystemRequired|
-|Targets|systemuser,team|
 |Type|Owner|
-
+|Targets|systemuser, team|
 
 ### <a name="BKMK_OwnerIdType"></a> OwnerIdType
 
 |Property|Value|
-|--------|-----|
-|Description|Owner Id Type|
+|---|---|
+|Description|**Owner Id Type**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owneridtype|
+|LogicalName|`owneridtype`|
 |RequiredLevel|SystemRequired|
 |Type|EntityName|
-
 
 ### <a name="BKMK_ParentArticleContentId"></a> ParentArticleContentId
 
 |Property|Value|
-|--------|-----|
-|Description|Contains the id of the parent article content associated with the entity.|
-|DisplayName|Parent Article Content Id|
+|---|---|
+|Description|**Contains the id of the parent article content associated with the entity.**|
+|DisplayName|**Parent Article Content Id**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|parentarticlecontentid|
+|LogicalName|`parentarticlecontentid`|
 |RequiredLevel|None|
-|Targets|knowledgearticle|
 |Type|Lookup|
-
+|Targets|knowledgearticle|
 
 ### <a name="BKMK_PreviousArticleContentId"></a> PreviousArticleContentId
 
 |Property|Value|
-|--------|-----|
-|Description|Shows the version that the current article was restored from.|
-|DisplayName|Previous Article Content ID|
+|---|---|
+|Description|**Shows the version that the current article was restored from.**|
+|DisplayName|**Previous Article Content ID**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|previousarticlecontentid|
+|LogicalName|`previousarticlecontentid`|
 |RequiredLevel|None|
-|Targets|knowledgearticle|
 |Type|Lookup|
-
+|Targets|knowledgearticle|
 
 ### <a name="BKMK_primaryauthorid"></a> primaryauthorid
 
 |Property|Value|
-|--------|-----|
-|Description|Contains the id of the primary author associated with the article.|
-|DisplayName|Primary Author Id|
+|---|---|
+|Description|**Contains the id of the primary author associated with the article.**|
+|DisplayName|**Primary Author Id**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|primaryauthorid|
+|LogicalName|`primaryauthorid`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_processid"></a> processid
 
 |Property|Value|
-|--------|-----|
-|Description|Contains the id of the process associated with the entity.|
-|DisplayName|Process Id|
+|---|---|
+|Description|**Contains the id of the process associated with the entity.**|
+|DisplayName|**Process Id**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|processid|
+|LogicalName|`processid`|
 |RequiredLevel|None|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_PublishOn"></a> PublishOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when the record was published.|
-|DisplayName|Publish On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Date and time when the record was published.**|
+|DisplayName|**Publish On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|publishon|
+|LogicalName|`publishon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Auto|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_PublishStatusId"></a> PublishStatusId
 
 |Property|Value|
-|--------|-----|
-|Description|Publish Status of the Article.|
-|DisplayName|Published Status|
-|Format|None|
+|---|---|
+|Description|**Publish Status of the Article.**|
+|DisplayName|**Published Status**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|publishstatusid|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`publishstatusid`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_ReadyForReview"></a> ReadyForReview
 
 |Property|Value|
-|--------|-----|
-|Description|Ready For Review|
-|DisplayName|Ready For Review|
+|---|---|
+|Description|**Ready For Review**|
+|DisplayName|**Ready For Review**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|readyforreview|
+|LogicalName|`readyforreview`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### ReadyForReview Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Completed||
-|0|Mark Complete||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`knowledgearticle_readyforreview`|
+|DefaultValue|False|
+|True Label|Completed|
+|False Label|Mark Complete|
 
 ### <a name="BKMK_Review"></a> Review
 
 |Property|Value|
-|--------|-----|
-|Description|Review|
-|DisplayName|Review|
+|---|---|
+|Description|**Review**|
+|DisplayName|**Review**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|review|
+|LogicalName|`review`|
 |RequiredLevel|None|
 |Type|Picklist|
+|DefaultFormValue|-1|
+|GlobalChoiceName|`knowledgearticle_review`|
 
 #### Review Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|0|Approved||
-|1|Rejected||
-
-
+|Value|Label|
+|---|---|
+|0|**Approved**|
+|1|**Rejected**|
 
 ### <a name="BKMK_RootArticleId"></a> RootArticleId
 
 |Property|Value|
-|--------|-----|
-|Description|Contains the id of the root article.|
-|DisplayName|Root Article Id|
+|---|---|
+|Description|**Contains the id of the root article.**|
+|DisplayName|**Root Article Id**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|rootarticleid|
+|LogicalName|`rootarticleid`|
 |RequiredLevel|None|
-|Targets|knowledgearticle|
 |Type|Lookup|
-
+|Targets|knowledgearticle|
 
 ### <a name="BKMK_ScheduledStatusId"></a> ScheduledStatusId
 
 |Property|Value|
-|--------|-----|
-|Description|Contains the id of the scheduled status of the entity.|
-|DisplayName|Scheduled Status|
-|Format|None|
+|---|---|
+|Description|**Contains the id of the scheduled status of the entity.**|
+|DisplayName|**Scheduled Status**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|scheduledstatusid|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`scheduledstatusid`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_SetCategoryAssociations"></a> SetCategoryAssociations
 
 |Property|Value|
-|--------|-----|
-|Description|Shows whether category associations have been set|
-|DisplayName|Set Category Associations|
+|---|---|
+|Description|**Shows whether category associations have been set**|
+|DisplayName|**Set Category Associations**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|setcategoryassociations|
+|LogicalName|`setcategoryassociations`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### SetCategoryAssociations Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Completed||
-|0|Mark as Complete||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`knowledgearticle_setcategoryassociations`|
+|DefaultValue|False|
+|True Label|Completed|
+|False Label|Mark as Complete|
 
 ### <a name="BKMK_stageid"></a> stageid
 
 |Property|Value|
-|--------|-----|
-|Description|Contains the id of the stage where the entity is located.|
-|DisplayName|Stage Id|
+|---|---|
+|Description|**Contains the id of the stage where the entity is located.**|
+|DisplayName|**Stage Id**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|stageid|
+|LogicalName|`stageid`|
 |RequiredLevel|None|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_StateCode"></a> StateCode
 
 |Property|Value|
-|--------|-----|
-|Description|Shows whether the article is a draft or is published, archived, or discarded. Draft articles aren't available externally and can be edited. Published articles are available externally, based on applicable permissions, but can't be edited. All metadata changes are reflected in the published version. Archived and discarded articles aren't available externally and can't be edited.|
-|DisplayName|Status|
-|IsValidForCreate|False|
+|---|---|
+|Description|**Shows whether the article is a draft or is published, archived, or discarded. Draft articles aren't available externally and can be edited. Published articles are available externally, based on applicable permissions, but can't be edited. All metadata changes are reflected in the published version. Archived and discarded articles aren't available externally and can't be edited.**|
+|DisplayName|**Status**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|statecode|
+|LogicalName|`statecode`|
 |RequiredLevel|SystemRequired|
 |Type|State|
+|DefaultFormValue|0|
+|GlobalChoiceName|`knowledgearticle_statecode`|
 
 #### StateCode Choices/Options
 
-|Value|Label|DefaultStatus|InvariantName|
-|-----|-----|-------------|-------------|
-|0|Draft|1|Draft|
-|1|Approved|5|Approved|
-|2|Scheduled|6|Scheduled|
-|3|Published|7|Published|
-|4|Expired|10|Expired|
-|5|Archived|12|Archived|
-|6|Discarded|13|Discarded|
-
-
+|Value|Details|
+|---|---|
+|0|Label: **Draft**<br />DefaultStatus: 1<br />InvariantName: `Draft`|
+|1|Label: **Approved**<br />DefaultStatus: 5<br />InvariantName: `Approved`|
+|2|Label: **Scheduled**<br />DefaultStatus: 6<br />InvariantName: `Scheduled`|
+|3|Label: **Published**<br />DefaultStatus: 7<br />InvariantName: `Published`|
+|4|Label: **Expired**<br />DefaultStatus: 10<br />InvariantName: `Expired`|
+|5|Label: **Archived**<br />DefaultStatus: 12<br />InvariantName: `Archived`|
+|6|Label: **Discarded**<br />DefaultStatus: 13<br />InvariantName: `Discarded`|
 
 ### <a name="BKMK_StatusCode"></a> StatusCode
 
 |Property|Value|
-|--------|-----|
-|Description|Select the article's status.|
-|DisplayName|Status Reason|
+|---|---|
+|Description|**Select the article's status.**|
+|DisplayName|**Status Reason**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|statuscode|
+|LogicalName|`statuscode`|
 |RequiredLevel|None|
 |Type|Status|
+|DefaultFormValue|-1|
+|GlobalChoiceName|`knowledgearticle_statuscode`|
 
 #### StatusCode Choices/Options
 
-|Value|Label|State|
-|-----|-----|-----|
-|1|Proposed|0|
-|2|Draft|0|
-|3|Needs review|0|
-|4|In review|0|
-|5|Approved|1|
-|6|Scheduled|2|
-|7|Published|3|
-|8|Needs review|3|
-|9|Updating|3|
-|10|Expired|4|
-|11|Rejected|4|
-|12|Archived|5|
-|13|Discarded|6|
-|14|Rejected|6|
-
-
+|Value|Details|
+|---|---|
+|1|Label: **Proposed**<br />State:0<br />TransitionData: None|
+|2|Label: **Draft**<br />State:0<br />TransitionData: None|
+|3|Label: **Needs review**<br />State:0<br />TransitionData: None|
+|4|Label: **In review**<br />State:0<br />TransitionData: None|
+|5|Label: **Approved**<br />State:1<br />TransitionData: None|
+|6|Label: **Scheduled**<br />State:2<br />TransitionData: None|
+|7|Label: **Published**<br />State:3<br />TransitionData: None|
+|8|Label: **Needs review**<br />State:3<br />TransitionData: None|
+|9|Label: **Updating**<br />State:3<br />TransitionData: None|
+|10|Label: **Expired**<br />State:4<br />TransitionData: None|
+|11|Label: **Rejected**<br />State:4<br />TransitionData: None|
+|12|Label: **Archived**<br />State:5<br />TransitionData: None|
+|13|Label: **Discarded**<br />State:6<br />TransitionData: None|
+|14|Label: **Rejected**<br />State:6<br />TransitionData: None|
 
 ### <a name="BKMK_SubjectId"></a> SubjectId
 
 |Property|Value|
-|--------|-----|
-|Description|Choose the subject of the article to assist with article searches. You can configure subjects under Business Management in the Settings area.|
-|DisplayName|Subject|
+|---|---|
+|Description|**Choose the subject of the article to assist with article searches. You can configure subjects under Business Management in the Settings area.**|
+|DisplayName|**Subject**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|subjectid|
+|LogicalName|`subjectid`|
 |RequiredLevel|None|
-|Targets|subject|
 |Type|Lookup|
-
+|Targets|subject|
 
 ### <a name="BKMK_TimeZoneRuleVersionNumber"></a> TimeZoneRuleVersionNumber
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Time Zone Rule Version Number|
-|Format|None|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Time Zone Rule Version Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|timezoneruleversionnumber|
-|MaxValue|2147483647|
-|MinValue|-1|
+|LogicalName|`timezoneruleversionnumber`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-1|
 
 ### <a name="BKMK_Title"></a> Title
 
 |Property|Value|
-|--------|-----|
-|Description|Type a title for the article.|
-|DisplayName|Title|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Type a title for the article.**|
+|DisplayName|**Title**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|title|
-|MaxLength|4000|
+|LogicalName|`title`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|4000|
 
 ### <a name="BKMK_TransactionCurrencyId"></a> TransactionCurrencyId
 
 |Property|Value|
-|--------|-----|
-|Description|Exchange rate for the currency associated with the KnowledgeArticle with respect to the base currency.|
-|DisplayName|Currency|
+|---|---|
+|Description|**Exchange rate for the currency associated with the KnowledgeArticle with respect to the base currency.**|
+|DisplayName|**Currency**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|transactioncurrencyid|
+|LogicalName|`transactioncurrencyid`|
 |RequiredLevel|None|
-|Targets|transactioncurrency|
 |Type|Lookup|
-
+|Targets|transactioncurrency|
 
 ### <a name="BKMK_traversedpath"></a> traversedpath
 
 |Property|Value|
-|--------|-----|
-|Description|A comma separated list of string values representing the unique identifiers of stages in a Business Process Flow Instance in the order that they occur.|
-|DisplayName|(Deprecated) Traversed Path|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**A comma separated list of string values representing the unique identifiers of stages in a Business Process Flow Instance in the order that they occur.**|
+|DisplayName|**(Deprecated) Traversed Path**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|traversedpath|
-|MaxLength|1250|
+|LogicalName|`traversedpath`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1250|
 
 ### <a name="BKMK_UpdateContent"></a> UpdateContent
 
 |Property|Value|
-|--------|-----|
-|Description|Update Content|
-|DisplayName|Update Content|
+|---|---|
+|Description|**Update Content**|
+|DisplayName|**Update Content**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|updatecontent|
+|LogicalName|`updatecontent`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### UpdateContent Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Content Updated||
-|0|Mark When Completed||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`knowledgearticle_updatecontent`|
+|DefaultValue|False|
+|True Label|Content Updated|
+|False Label|Mark When Completed|
 
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
 
 |Property|Value|
-|--------|-----|
-|Description|Time zone code that was in use when the record was created.|
-|DisplayName|UTC Conversion Time Zone Code|
-|Format|None|
+|---|---|
+|Description|**Time zone code that was in use when the record was created.**|
+|DisplayName|**UTC Conversion Time Zone Code**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|utcconversiontimezonecode|
-|MaxValue|2147483647|
-|MinValue|-1|
+|LogicalName|`utcconversiontimezonecode`|
 |RequiredLevel|None|
 |Type|Integer|
+|MaxValue|2147483647|
+|MinValue|-1|
 
-<a name="read-only-attributes"></a>
 
 ## Read-only columns/attributes
 
-These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** and **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [CreatedBy](#BKMK_CreatedBy)
-- [CreatedByName](#BKMK_CreatedByName)
-- [CreatedByYomiName](#BKMK_CreatedByYomiName)
 - [CreatedOn](#BKMK_CreatedOn)
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
-- [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
-- [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
 - [ExchangeRate](#BKMK_ExchangeRate)
 - [KnowledgeArticleViews](#BKMK_KnowledgeArticleViews)
 - [KnowledgeArticleViews_Date](#BKMK_KnowledgeArticleViews_Date)
 - [KnowledgeArticleViews_State](#BKMK_KnowledgeArticleViews_State)
 - [LanguageLocaleIdLocaleId](#BKMK_LanguageLocaleIdLocaleId)
-- [LanguageLocaleIdName](#BKMK_LanguageLocaleIdName)
 - [ModifiedBy](#BKMK_ModifiedBy)
-- [ModifiedByName](#BKMK_ModifiedByName)
-- [ModifiedByYomiName](#BKMK_ModifiedByYomiName)
 - [ModifiedOn](#BKMK_ModifiedOn)
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
-- [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
-- [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
 - [msdyn_contentstore](#BKMK_msdyn_contentstore)
 - [msdyn_contentstore_Name](#BKMK_msdyn_contentstore_Name)
-- [msdyn_integratedsearchprovideridName](#BKMK_msdyn_integratedsearchprovideridName)
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
-- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
-- [ParentArticleContentIdName](#BKMK_ParentArticleContentIdName)
-- [PreviousArticleContentIdName](#BKMK_PreviousArticleContentIdName)
-- [primaryauthoridName](#BKMK_primaryauthoridName)
 - [Rating](#BKMK_Rating)
 - [Rating_Count](#BKMK_Rating_Count)
 - [Rating_Date](#BKMK_Rating_Date)
 - [Rating_State](#BKMK_Rating_State)
 - [Rating_Sum](#BKMK_Rating_Sum)
-- [RootArticleIdName](#BKMK_RootArticleIdName)
 - [SubjectIdDsc](#BKMK_SubjectIdDsc)
-- [SubjectIdName](#BKMK_SubjectIdName)
-- [TransactionCurrencyIdName](#BKMK_TransactionCurrencyIdName)
 - [VersionNumber](#BKMK_VersionNumber)
-
 
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user who created the record.|
-|DisplayName|Created By|
+|---|---|
+|Description|**Unique identifier of the user who created the record.**|
+|DisplayName|**Created By**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdby|
+|LogicalName|`createdby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedByName"></a> CreatedByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedByYomiName"></a> CreatedByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_CreatedOn"></a> CreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when the record was created.|
-|DisplayName|Created On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Date and time when the record was created.**|
+|DisplayName|**Created On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdon|
+|LogicalName|`createdon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_CreatedOnBehalfBy"></a> CreatedOnBehalfBy
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the delegate user who created the record.|
-|DisplayName|Created By (Delegate)|
+|---|---|
+|Description|**Unique identifier of the delegate user who created the record.**|
+|DisplayName|**Created By (Delegate)**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdonbehalfby|
+|LogicalName|`createdonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedOnBehalfByName"></a> CreatedOnBehalfByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedOnBehalfByYomiName"></a> CreatedOnBehalfByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_ExchangeRate"></a> ExchangeRate
 
 |Property|Value|
-|--------|-----|
-|Description|Exchange rate for the currency associated with the KnowledgeArticle with respect to the base currency.|
-|DisplayName|ExchangeRate|
+|---|---|
+|Description|**Exchange rate for the currency associated with the KnowledgeArticle with respect to the base currency.**|
+|DisplayName|**ExchangeRate**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|exchangerate|
-|MaxValue|100000000000|
-|MinValue|0.000000000001|
-|Precision|12|
+|LogicalName|`exchangerate`|
 |RequiredLevel|None|
 |Type|Decimal|
-
+|ImeMode|Disabled|
+|MaxValue|100000000000|
+|MinValue|1E-12|
+|Precision|12|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_KnowledgeArticleViews"></a> KnowledgeArticleViews
 
 |Property|Value|
-|--------|-----|
-|Description|Shows the total number of article views.|
-|DisplayName|Knowledge Article Views|
-|Format|None|
+|---|---|
+|Description|**Shows the total number of article views.**|
+|DisplayName|**Knowledge Article Views**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|knowledgearticleviews|
-|MaxValue|2147483647|
-|MinValue|0|
+|LogicalName|`knowledgearticleviews`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|0|
 
 ### <a name="BKMK_KnowledgeArticleViews_Date"></a> KnowledgeArticleViews_Date
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|The date time for Knowledge Article View.|
-|DisplayName|Knowledge Article View(Last Updated Time)|
-|Format|DateAndTime|
+|---|---|
+|Description|**The date time for Knowledge Article View.**|
+|DisplayName|**Knowledge Article View(Last Updated Time)**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|knowledgearticleviews_date|
+|LogicalName|`knowledgearticleviews_date`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_KnowledgeArticleViews_State"></a> KnowledgeArticleViews_State
 
 |Property|Value|
-|--------|-----|
-|Description|State of Knowledge Article View.|
-|DisplayName|Knowledge Article View(State)|
-|Format|None|
+|---|---|
+|Description|**State of Knowledge Article View.**|
+|DisplayName|**Knowledge Article View(State)**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|knowledgearticleviews_state|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`knowledgearticleviews_state`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_LanguageLocaleIdLocaleId"></a> LanguageLocaleIdLocaleId
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
-|Format|None|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|languagelocaleidlocaleid|
-|MaxValue|2147483647|
-|MinValue|1|
+|LogicalName|`languagelocaleidlocaleid`|
 |RequiredLevel|None|
 |Type|Integer|
-
-
-### <a name="BKMK_LanguageLocaleIdName"></a> LanguageLocaleIdName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|languagelocaleidname|
-|MaxLength|500|
-|RequiredLevel|None|
-|Type|String|
-
+|MaxValue|2147483647|
+|MinValue|1|
 
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user who modified the record.|
-|DisplayName|Modified By|
+|---|---|
+|Description|**Unique identifier of the user who modified the record.**|
+|DisplayName|**Modified By**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedby|
+|LogicalName|`modifiedby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedByName"></a> ModifiedByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedByYomiName"></a> ModifiedByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_ModifiedOn"></a> ModifiedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when the record was modified.|
-|DisplayName|Modified On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Date and time when the record was modified.**|
+|DisplayName|**Modified On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedon|
+|LogicalName|`modifiedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_ModifiedOnBehalfBy"></a> ModifiedOnBehalfBy
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the delegate user who modified the record.|
-|DisplayName|Modified By (Delegate)|
+|---|---|
+|Description|**Unique identifier of the delegate user who modified the record.**|
+|DisplayName|**Modified By (Delegate)**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedonbehalfby|
+|LogicalName|`modifiedonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedOnBehalfByName"></a> ModifiedOnBehalfByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedOnBehalfByYomiName"></a> ModifiedOnBehalfByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_msdyn_contentstore"></a> msdyn_contentstore
 
-**Added by**: Knowledge Management Patch Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Stores the reference to content in file store|
-|DisplayName|File storage content reference|
+|---|---|
+|Description|**Stores the reference to content in file store**|
+|DisplayName|**File storage content reference**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_contentstore|
+|LogicalName|`msdyn_contentstore`|
 |RequiredLevel|None|
 |Type|File|
-
+|MaxSizeInKB|32768|
 
 ### <a name="BKMK_msdyn_contentstore_Name"></a> msdyn_contentstore_Name
 
-**Added by**: Knowledge Management Patch Solution
-
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|msdyn_contentstore_name|
+|LogicalName|`msdyn_contentstore_name`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Disabled|
+|IsLocalizable|False|
 |MaxLength|200|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_msdyn_integratedsearchprovideridName"></a> msdyn_integratedsearchprovideridName
-
-**Added by**: Knowledge Management Online Features Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|msdyn_integratedsearchprovideridname|
-|MaxLength|255|
-|RequiredLevel|None|
-|Type|String|
-
 
 ### <a name="BKMK_OwnerIdName"></a> OwnerIdName
 
 |Property|Value|
-|--------|-----|
-|Description|Name of the owner|
+|---|---|
+|Description|**Name of the owner**|
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owneridname|
-|MaxLength|100|
+|LogicalName|`owneridname`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_OwnerIdYomiName"></a> OwnerIdYomiName
 
 |Property|Value|
-|--------|-----|
-|Description|Yomi name of the owner|
+|---|---|
+|Description|**Yomi name of the owner**|
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owneridyominame|
-|MaxLength|100|
+|LogicalName|`owneridyominame`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_OwningBusinessUnit"></a> OwningBusinessUnit
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for the business unit that owns the record|
-|DisplayName|Owning Business Unit|
+|---|---|
+|Description|**Unique identifier for the business unit that owns the record**|
+|DisplayName|**Owning Business Unit**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|owningbusinessunit|
+|LogicalName|`owningbusinessunit`|
 |RequiredLevel|None|
-|Targets|businessunit|
 |Type|Lookup|
-
-
-### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|owningbusinessunitname|
-|MaxLength|160|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|businessunit|
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for the team that owns the record.|
-|DisplayName|Owning Team|
+|---|---|
+|Description|**Unique identifier for the team that owns the record.**|
+|DisplayName|**Owning Team**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owningteam|
+|LogicalName|`owningteam`|
 |RequiredLevel|None|
-|Targets|team|
 |Type|Lookup|
-
+|Targets|team|
 
 ### <a name="BKMK_OwningUser"></a> OwningUser
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for the user that owns the record.|
-|DisplayName|Owning User|
+|---|---|
+|Description|**Unique identifier for the user that owns the record.**|
+|DisplayName|**Owning User**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owninguser|
+|LogicalName|`owninguser`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ParentArticleContentIdName"></a> ParentArticleContentIdName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|parentarticlecontentidname|
-|MaxLength|500|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_PreviousArticleContentIdName"></a> PreviousArticleContentIdName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|previousarticlecontentidname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_primaryauthoridName"></a> primaryauthoridName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|primaryauthoridname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_Rating"></a> Rating
 
 |Property|Value|
-|--------|-----|
-|Description|Information which specifies how helpful the related record was.|
-|DisplayName|Rating|
+|---|---|
+|Description|**Information which specifies how helpful the related record was.**|
+|DisplayName|**Rating**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|rating|
+|LogicalName|`rating`|
+|RequiredLevel|None|
+|Type|Decimal|
+|ImeMode|Auto|
 |MaxValue|100000000000|
 |MinValue|-100000000000|
 |Precision|2|
-|RequiredLevel|None|
-|Type|Decimal|
-
+|SourceTypeMask|0|
 
 ### <a name="BKMK_Rating_Count"></a> Rating_Count
 
 |Property|Value|
-|--------|-----|
-|Description|Rating Count|
-|DisplayName|Rating(Count)|
-|Format|None|
+|---|---|
+|Description|**Rating Count**|
+|DisplayName|**Rating(Count)**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|rating_count|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`rating_count`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_Rating_Date"></a> Rating_Date
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|The date time for Rating.|
-|DisplayName|Rating(Last Updated Time)|
-|Format|DateAndTime|
+|---|---|
+|Description|**The date time for Rating.**|
+|DisplayName|**Rating(Last Updated Time)**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|rating_date|
+|LogicalName|`rating_date`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_Rating_State"></a> Rating_State
 
 |Property|Value|
-|--------|-----|
-|Description|State of Rating|
-|DisplayName|Rating(State)|
-|Format|None|
+|---|---|
+|Description|**State of Rating**|
+|DisplayName|**Rating(State)**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|rating_state|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`rating_state`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_Rating_Sum"></a> Rating_Sum
 
 |Property|Value|
-|--------|-----|
-|Description|Total sum of Rating|
-|DisplayName|Rating(sum)|
+|---|---|
+|Description|**Total sum of Rating**|
+|DisplayName|**Rating(sum)**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|rating_sum|
+|LogicalName|`rating_sum`|
+|RequiredLevel|None|
+|Type|Decimal|
+|ImeMode|Disabled|
 |MaxValue|1000000000|
 |MinValue|0|
 |Precision|2|
-|RequiredLevel|None|
-|Type|Decimal|
-
-
-### <a name="BKMK_RootArticleIdName"></a> RootArticleIdName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|rootarticleidname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|SourceTypeMask|0|
 
 ### <a name="BKMK_SubjectIdDsc"></a> SubjectIdDsc
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
-|Format|None|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|subjectiddsc|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`subjectiddsc`|
 |RequiredLevel|None|
 |Type|Integer|
-
-
-### <a name="BKMK_SubjectIdName"></a> SubjectIdName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|subjectidname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_TransactionCurrencyIdName"></a> TransactionCurrencyIdName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|transactioncurrencyidname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|versionnumber|
-|MaxValue|9223372036854775807|
-|MinValue|-9223372036854775808|
+|LogicalName|`versionnumber`|
 |RequiredLevel|None|
 |Type|BigInt|
-
-<a name="onetomany"></a>
-
-## One-To-Many Relationships
-
-Listed by **SchemaName**.
-
-- [knowledgearticle_connections1](#BKMK_knowledgearticle_connections1)
-- [knowledgearticle_connections2](#BKMK_knowledgearticle_connections2)
-- [knowledgearticle_DuplicateMatchingRecord](#BKMK_knowledgearticle_DuplicateMatchingRecord)
-- [knowledgearticle_DuplicateBaseRecord](#BKMK_knowledgearticle_DuplicateBaseRecord)
-- [knowledgearticle_SharePointDocumentLocations](#BKMK_knowledgearticle_SharePointDocumentLocations)
-- [knowledgearticle_QueueItems](#BKMK_knowledgearticle_QueueItems)
-- [knowledgearticle_Annotations](#BKMK_knowledgearticle_Annotations)
-- [knowledgearticle_Teams](#BKMK_knowledgearticle_Teams)
-- [knowledgearticle_AsyncOperations](#BKMK_knowledgearticle_AsyncOperations)
-- [knowledgearticle_ProcessSession](#BKMK_knowledgearticle_ProcessSession)
-- [knowledgearticle_BulkDeleteFailures](#BKMK_knowledgearticle_BulkDeleteFailures)
-- [knowledgearticle_PrincipalObjectAttributeAccess](#BKMK_knowledgearticle_PrincipalObjectAttributeAccess)
-- [KnowledgeArticle_SocialActivities](#BKMK_KnowledgeArticle_SocialActivities)
-- [KnowledgeArticle_Letters](#BKMK_KnowledgeArticle_Letters)
-- [KnowledgeArticle_Tasks](#BKMK_KnowledgeArticle_Tasks)
-- [knowledgearticle_views](#BKMK_knowledgearticle_views)
-- [KnowledgeArticle_Faxes](#BKMK_KnowledgeArticle_Faxes)
-- [lk_expiredprocess_knowledgearticleid](#BKMK_lk_expiredprocess_knowledgearticleid)
-- [KnowledgeArticle_Appointments](#BKMK_KnowledgeArticle_Appointments)
-- [lk_newprocess_knowledgearticleid](#BKMK_lk_newprocess_knowledgearticleid)
-- [knowledgearticle_rootarticle_id](#BKMK_knowledgearticle_rootarticle_id)
-- [lk_translationprocess_knowledgearticleid](#BKMK_lk_translationprocess_knowledgearticleid)
-- [KnowledgeArticle_RecurringAppointmentMasters](#BKMK_KnowledgeArticle_RecurringAppointmentMasters)
-- [KnowledgeArticle_ActivityPointers](#BKMK_KnowledgeArticle_ActivityPointers)
-- [KnowledgeArticle_SyncErrors](#BKMK_KnowledgeArticle_SyncErrors)
-- [KnowledgeArticle_Feedback](#BKMK_KnowledgeArticle_Feedback)
-- [knowledgearticle_previousarticle_contentid](#BKMK_knowledgearticle_previousarticle_contentid)
-- [knowledgearticle_PostFollows](#BKMK_knowledgearticle_PostFollows)
-- [knowledgearticle_activity_parties](#BKMK_knowledgearticle_activity_parties)
-- [knowledgearticle_parentarticle_contentid](#BKMK_knowledgearticle_parentarticle_contentid)
-- [KnowledgeArticle_Phonecalls](#BKMK_KnowledgeArticle_Phonecalls)
-- [KnowledgeArticle_Emails](#BKMK_KnowledgeArticle_Emails)
-- [knowledgearticle_chats](#BKMK_knowledgearticle_chats)
-- [msdyn_knowledgearticle_feedback_context](#BKMK_msdyn_knowledgearticle_feedback_context)
-- [msdyn_knowledgearticleimage_parentknowledgearticleid](#BKMK_msdyn_knowledgearticleimage_parentknowledgearticleid)
-- [msdyn_knowledgearticle_favoriteknowledgearticle](#BKMK_msdyn_knowledgearticle_favoriteknowledgearticle)
-
-
-### <a name="BKMK_knowledgearticle_connections1"></a> knowledgearticle_connections1
-
-Same as the [knowledgearticle_connections1](connection.md#BKMK_knowledgearticle_connections1) many-to-one relationship for the [connection](connection.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|connection|
-|ReferencingAttribute|record1id|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|knowledgearticle_connections1|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 100|
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_knowledgearticle_connections2"></a> knowledgearticle_connections2
-
-Same as the [knowledgearticle_connections2](connection.md#BKMK_knowledgearticle_connections2) many-to-one relationship for the [connection](connection.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|connection|
-|ReferencingAttribute|record2id|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|knowledgearticle_connections2|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_knowledgearticle_DuplicateMatchingRecord"></a> knowledgearticle_DuplicateMatchingRecord
-
-Same as the [knowledgearticle_DuplicateMatchingRecord](duplicaterecord.md#BKMK_knowledgearticle_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|duplicaterecord|
-|ReferencingAttribute|duplicaterecordid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|knowledgearticle_DuplicateMatchingRecord|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_knowledgearticle_DuplicateBaseRecord"></a> knowledgearticle_DuplicateBaseRecord
-
-Same as the [knowledgearticle_DuplicateBaseRecord](duplicaterecord.md#BKMK_knowledgearticle_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|duplicaterecord|
-|ReferencingAttribute|baserecordid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|knowledgearticle_DuplicateBaseRecord|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_knowledgearticle_SharePointDocumentLocations"></a> knowledgearticle_SharePointDocumentLocations
-
-Same as the [knowledgearticle_SharePointDocumentLocations](sharepointdocumentlocation.md#BKMK_knowledgearticle_SharePointDocumentLocations) many-to-one relationship for the [sharepointdocumentlocation](sharepointdocumentlocation.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|sharepointdocumentlocation|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|knowledgearticle_SharePointDocumentLocations|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: Cascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
-
-
-### <a name="BKMK_knowledgearticle_QueueItems"></a> knowledgearticle_QueueItems
-
-Same as the [knowledgearticle_QueueItems](queueitem.md#BKMK_knowledgearticle_QueueItems) many-to-one relationship for the [queueitem](queueitem.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|queueitem|
-|ReferencingAttribute|objectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|knowledgearticle_QueueItems|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_knowledgearticle_Annotations"></a> knowledgearticle_Annotations
-
-Same as the [knowledgearticle_Annotations](annotation.md#BKMK_knowledgearticle_Annotations) many-to-one relationship for the [annotation](annotation.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|annotation|
-|ReferencingAttribute|objectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|knowledgearticle_Annotations|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
-
-
-### <a name="BKMK_knowledgearticle_Teams"></a> knowledgearticle_Teams
-
-Same as the [knowledgearticle_Teams](team.md#BKMK_knowledgearticle_Teams) many-to-one relationship for the [team](team.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|team|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|knowledgearticle_Teams|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
-
-
-### <a name="BKMK_knowledgearticle_AsyncOperations"></a> knowledgearticle_AsyncOperations
-
-Same as the [knowledgearticle_AsyncOperations](asyncoperation.md#BKMK_knowledgearticle_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|asyncoperation|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|knowledgearticle_AsyncOperations|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_knowledgearticle_ProcessSession"></a> knowledgearticle_ProcessSession
-
-Same as the [knowledgearticle_ProcessSession](processsession.md#BKMK_knowledgearticle_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|processsession|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|knowledgearticle_ProcessSession|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_knowledgearticle_BulkDeleteFailures"></a> knowledgearticle_BulkDeleteFailures
-
-Same as the [knowledgearticle_BulkDeleteFailures](bulkdeletefailure.md#BKMK_knowledgearticle_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|bulkdeletefailure|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|knowledgearticle_BulkDeleteFailures|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_knowledgearticle_PrincipalObjectAttributeAccess"></a> knowledgearticle_PrincipalObjectAttributeAccess
-
-Same as the [knowledgearticle_PrincipalObjectAttributeAccess](principalobjectattributeaccess.md#BKMK_knowledgearticle_PrincipalObjectAttributeAccess) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|principalobjectattributeaccess|
-|ReferencingAttribute|objectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|knowledgearticle_PrincipalObjectAttributeAccess|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_KnowledgeArticle_SocialActivities"></a> KnowledgeArticle_SocialActivities
-
-Same as the [KnowledgeArticle_SocialActivities](socialactivity.md#BKMK_KnowledgeArticle_SocialActivities) many-to-one relationship for the [socialactivity](socialactivity.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|socialactivity|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|KnowledgeArticle_SocialActivities|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
-
-
-### <a name="BKMK_KnowledgeArticle_Letters"></a> KnowledgeArticle_Letters
-
-Same as the [KnowledgeArticle_Letters](letter.md#BKMK_KnowledgeArticle_Letters) many-to-one relationship for the [letter](letter.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|letter|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|KnowledgeArticle_Letters|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: Cascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
-
-
-### <a name="BKMK_KnowledgeArticle_Tasks"></a> KnowledgeArticle_Tasks
-
-Same as the [KnowledgeArticle_Tasks](task.md#BKMK_KnowledgeArticle_Tasks) many-to-one relationship for the [task](task.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|task|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|KnowledgeArticle_Tasks|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: Cascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
-
-
-### <a name="BKMK_knowledgearticle_views"></a> knowledgearticle_views
-
-Same as the [knowledgearticle_views](knowledgearticleviews.md#BKMK_knowledgearticle_views) many-to-one relationship for the [knowledgearticleviews](knowledgearticleviews.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|knowledgearticleviews|
-|ReferencingAttribute|knowledgearticleid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|knowledgearticle_views|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: 10|
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_KnowledgeArticle_Faxes"></a> KnowledgeArticle_Faxes
-
-Same as the [KnowledgeArticle_Faxes](fax.md#BKMK_KnowledgeArticle_Faxes) many-to-one relationship for the [fax](fax.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|fax|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|KnowledgeArticle_Faxes|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: Cascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
-
-
-### <a name="BKMK_lk_expiredprocess_knowledgearticleid"></a> lk_expiredprocess_knowledgearticleid
-
-Same as the [lk_expiredprocess_knowledgearticleid](expiredprocess.md#BKMK_lk_expiredprocess_knowledgearticleid) many-to-one relationship for the [expiredprocess](expiredprocess.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|expiredprocess|
-|ReferencingAttribute|knowledgearticleid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|knowledgearticle_expiredprocess|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_KnowledgeArticle_Appointments"></a> KnowledgeArticle_Appointments
-
-Same as the [KnowledgeArticle_Appointments](appointment.md#BKMK_KnowledgeArticle_Appointments) many-to-one relationship for the [appointment](appointment.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|appointment|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|KnowledgeArticle_Appointments|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: Cascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
-
-
-### <a name="BKMK_lk_newprocess_knowledgearticleid"></a> lk_newprocess_knowledgearticleid
-
-Same as the [lk_newprocess_knowledgearticleid](newprocess.md#BKMK_lk_newprocess_knowledgearticleid) many-to-one relationship for the [newprocess](newprocess.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|newprocess|
-|ReferencingAttribute|knowledgearticleid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|knowledgearticle_newprocess|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_knowledgearticle_rootarticle_id"></a> knowledgearticle_rootarticle_id
-
-Same as the [knowledgearticle_rootarticle_id](knowledgearticle.md#BKMK_knowledgearticle_rootarticle_id) many-to-one relationship for the [knowledgearticle](knowledgearticle.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|knowledgearticle|
-|ReferencingAttribute|rootarticleid|
-|IsHierarchical|True|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|knowledgearticle_rootarticle_id|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_lk_translationprocess_knowledgearticleid"></a> lk_translationprocess_knowledgearticleid
-
-Same as the [lk_translationprocess_knowledgearticleid](translationprocess.md#BKMK_lk_translationprocess_knowledgearticleid) many-to-one relationship for the [translationprocess](translationprocess.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|translationprocess|
-|ReferencingAttribute|knowledgearticleid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|knowledgearticle_translationprocess|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_KnowledgeArticle_RecurringAppointmentMasters"></a> KnowledgeArticle_RecurringAppointmentMasters
-
-Same as the [KnowledgeArticle_RecurringAppointmentMasters](recurringappointmentmaster.md#BKMK_KnowledgeArticle_RecurringAppointmentMasters) many-to-one relationship for the [recurringappointmentmaster](recurringappointmentmaster.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|recurringappointmentmaster|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|KnowledgeArticle_RecurringAppointmentMasters|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: Cascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
-
-
-### <a name="BKMK_KnowledgeArticle_ActivityPointers"></a> KnowledgeArticle_ActivityPointers
-
-Same as the [KnowledgeArticle_ActivityPointers](activitypointer.md#BKMK_KnowledgeArticle_ActivityPointers) many-to-one relationship for the [activitypointer](activitypointer.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|activitypointer|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|KnowledgeArticle_ActivityPointers|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10|
-|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_KnowledgeArticle_SyncErrors"></a> KnowledgeArticle_SyncErrors
-
-Same as the [KnowledgeArticle_SyncErrors](syncerror.md#BKMK_KnowledgeArticle_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|syncerror|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|KnowledgeArticle_SyncErrors|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: Cascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
-
-
-### <a name="BKMK_KnowledgeArticle_Feedback"></a> KnowledgeArticle_Feedback
-
-Same as the [KnowledgeArticle_Feedback](feedback.md#BKMK_KnowledgeArticle_Feedback) many-to-one relationship for the [feedback](feedback.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|feedback|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|KnowledgeArticle_Feedback|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 150|
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_knowledgearticle_previousarticle_contentid"></a> knowledgearticle_previousarticle_contentid
-
-Same as the [knowledgearticle_previousarticle_contentid](knowledgearticle.md#BKMK_knowledgearticle_previousarticle_contentid) many-to-one relationship for the [knowledgearticle](knowledgearticle.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|knowledgearticle|
-|ReferencingAttribute|previousarticlecontentid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|knowledgearticle_previousarticle_contentid|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_knowledgearticle_PostFollows"></a> knowledgearticle_PostFollows
-
-Same as the [knowledgearticle_PostFollows](postfollow.md#BKMK_knowledgearticle_PostFollows) many-to-one relationship for the [postfollow](postfollow.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|postfollow|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|knowledgearticle_PostFollows|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_knowledgearticle_activity_parties"></a> knowledgearticle_activity_parties
-
-Same as the [knowledgearticle_activity_parties](activityparty.md#BKMK_knowledgearticle_activity_parties) many-to-one relationship for the [activityparty](activityparty.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|activityparty|
-|ReferencingAttribute|partyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|knowledgearticle_activity_parties|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_knowledgearticle_parentarticle_contentid"></a> knowledgearticle_parentarticle_contentid
-
-Same as the [knowledgearticle_parentarticle_contentid](knowledgearticle.md#BKMK_knowledgearticle_parentarticle_contentid) many-to-one relationship for the [knowledgearticle](knowledgearticle.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|knowledgearticle|
-|ReferencingAttribute|parentarticlecontentid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|knowledgearticle_parentarticle_contentid|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_KnowledgeArticle_Phonecalls"></a> KnowledgeArticle_Phonecalls
-
-Same as the [KnowledgeArticle_Phonecalls](phonecall.md#BKMK_KnowledgeArticle_Phonecalls) many-to-one relationship for the [phonecall](phonecall.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|phonecall|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|KnowledgeArticle_Phonecalls|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: Cascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
-
-
-### <a name="BKMK_KnowledgeArticle_Emails"></a> KnowledgeArticle_Emails
-
-Same as the [KnowledgeArticle_Emails](email.md#BKMK_KnowledgeArticle_Emails) many-to-one relationship for the [email](email.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|email|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|KnowledgeArticle_Emails|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
-
-
-### <a name="BKMK_knowledgearticle_chats"></a> knowledgearticle_chats
-
-**Added by**: Activities Patch Solution
-
-Same as the [knowledgearticle_chats](chat.md#BKMK_knowledgearticle_chats) many-to-one relationship for the [chat](chat.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|chat|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|knowledgearticle_chats|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
-
-
-### <a name="BKMK_msdyn_knowledgearticle_feedback_context"></a> msdyn_knowledgearticle_feedback_context
-
-**Added by**: Knowledge Management Patch Solution
-
-Same as the [msdyn_knowledgearticle_feedback_context](feedback.md#BKMK_msdyn_knowledgearticle_feedback_context) many-to-one relationship for the [feedback](feedback.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|feedback|
-|ReferencingAttribute|msdyn_contextobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|msdyn_knowledgearticle_feedback_context|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
-|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_msdyn_knowledgearticleimage_parentknowledgearticleid"></a> msdyn_knowledgearticleimage_parentknowledgearticleid
-
-**Added by**: Knowledge Management Online Features Solution
-
-Same as the [msdyn_knowledgearticleimage_parentknowledgearticleid](msdyn_knowledgearticleimage.md#BKMK_msdyn_knowledgearticleimage_parentknowledgearticleid) many-to-one relationship for the [msdyn_knowledgearticleimage](msdyn_knowledgearticleimage.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|msdyn_knowledgearticleimage|
-|ReferencingAttribute|msdyn_parentknowledgearticleid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|msdyn_knowledgearticleimage_parentknowledgearticleid|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
-|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_msdyn_knowledgearticle_favoriteknowledgearticle"></a> msdyn_knowledgearticle_favoriteknowledgearticle
-
-**Added by**: Knowledge Management Features Solution
-
-Same as the [msdyn_knowledgearticle_favoriteknowledgearticle](msdyn_favoriteknowledgearticle.md#BKMK_msdyn_knowledgearticle_favoriteknowledgearticle) many-to-one relationship for the [msdyn_favoriteknowledgearticle](msdyn_favoriteknowledgearticle.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|msdyn_favoriteknowledgearticle|
-|ReferencingAttribute|msdyn_knowledgearticleid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|msdyn_knowledgearticle_favoriteknowledgearticle|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: Id of Knowledge Article<br />Order: 10000|
-|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-<a name="manytoone"></a>
-
-## Many-To-One Relationships
-
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
-
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
+
+## Many-to-One relationships
+
+These relationships are many-to-one. Listed by **SchemaName**.
+
+- [business_unit_knowledgearticle](#BKMK_business_unit_knowledgearticle)
+- [FileAttachment_KnowledgeArticle_msdyn_contentstore](#BKMK_FileAttachment_KnowledgeArticle_msdyn_contentstore)
+- [knowledgearticle_languagelocaleid](#BKMK_knowledgearticle_languagelocaleid)
+- [knowledgearticle_parentarticle_contentid](#BKMK_knowledgearticle_parentarticle_contentid-many-to-one)
+- [knowledgearticle_previousarticle_contentid](#BKMK_knowledgearticle_previousarticle_contentid-many-to-one)
+- [knowledgearticle_primaryauthorid](#BKMK_knowledgearticle_primaryauthorid)
+- [knowledgearticle_rootarticle_id](#BKMK_knowledgearticle_rootarticle_id-many-to-one)
 - [lk_knowledgearticle_createdby](#BKMK_lk_knowledgearticle_createdby)
 - [lk_knowledgearticle_createdonbehalfby](#BKMK_lk_knowledgearticle_createdonbehalfby)
 - [lk_knowledgearticle_modifiedby](#BKMK_lk_knowledgearticle_modifiedby)
 - [lk_knowledgearticle_modifiedonbehalfby](#BKMK_lk_knowledgearticle_modifiedonbehalfby)
-- [user_knowledgearticle](#BKMK_user_knowledgearticle)
-- [team_knowledgearticle](#BKMK_team_knowledgearticle)
-- [business_unit_knowledgearticle](#BKMK_business_unit_knowledgearticle)
-- [processstage_knowledgearticle](#BKMK_processstage_knowledgearticle)
-- [knowledgearticle_languagelocaleid](#BKMK_knowledgearticle_languagelocaleid)
-- [knowledgearticle_primaryauthorid](#BKMK_knowledgearticle_primaryauthorid)
-- [knowledgearticle_parentarticle_contentid](#BKMK_knowledgearticle_parentarticle_contentid)
-- [knowledgearticle_previousarticle_contentid](#BKMK_knowledgearticle_previousarticle_contentid)
-- [subject_knowledgearticles](#BKMK_subject_knowledgearticles)
-- [knowledgearticle_rootarticle_id](#BKMK_knowledgearticle_rootarticle_id)
-- [TransactionCurrency_knowledgearticle](#BKMK_TransactionCurrency_knowledgearticle)
 - [msdyn_knowledgearticle_integratedsearchprovider](#BKMK_msdyn_knowledgearticle_integratedsearchprovider)
-
-
-### <a name="BKMK_lk_knowledgearticle_createdby"></a> lk_knowledgearticle_createdby
-
-See the [lk_knowledgearticle_createdby](systemuser.md#BKMK_lk_knowledgearticle_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_knowledgearticle_createdonbehalfby"></a> lk_knowledgearticle_createdonbehalfby
-
-See the [lk_knowledgearticle_createdonbehalfby](systemuser.md#BKMK_lk_knowledgearticle_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_knowledgearticle_modifiedby"></a> lk_knowledgearticle_modifiedby
-
-See the [lk_knowledgearticle_modifiedby](systemuser.md#BKMK_lk_knowledgearticle_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_knowledgearticle_modifiedonbehalfby"></a> lk_knowledgearticle_modifiedonbehalfby
-
-See the [lk_knowledgearticle_modifiedonbehalfby](systemuser.md#BKMK_lk_knowledgearticle_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_user_knowledgearticle"></a> user_knowledgearticle
-
-See the [user_knowledgearticle](systemuser.md#BKMK_user_knowledgearticle) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_team_knowledgearticle"></a> team_knowledgearticle
-
-See the [team_knowledgearticle](team.md#BKMK_team_knowledgearticle) one-to-many relationship for the [team](team.md) table/entity.
+- [owner_knowledgearticle](#BKMK_owner_knowledgearticle)
+- [processstage_knowledgearticle](#BKMK_processstage_knowledgearticle)
+- [subject_knowledgearticles](#BKMK_subject_knowledgearticles)
+- [team_knowledgearticle](#BKMK_team_knowledgearticle)
+- [TransactionCurrency_knowledgearticle](#BKMK_TransactionCurrency_knowledgearticle)
+- [user_knowledgearticle](#BKMK_user_knowledgearticle)
 
 ### <a name="BKMK_business_unit_knowledgearticle"></a> business_unit_knowledgearticle
 
-See the [business_unit_knowledgearticle](businessunit.md#BKMK_business_unit_knowledgearticle) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
+One-To-Many Relationship: [businessunit business_unit_knowledgearticle](businessunit.md#BKMK_business_unit_knowledgearticle)
 
-### <a name="BKMK_processstage_knowledgearticle"></a> processstage_knowledgearticle
+|Property|Value|
+|---|---|
+|ReferencedEntity|`businessunit`|
+|ReferencedAttribute|`businessunitid`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencingEntityNavigationPropertyName|`owningbusinessunit`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-See the [processstage_knowledgearticle](processstage.md#BKMK_processstage_knowledgearticle) one-to-many relationship for the [processstage](processstage.md) table/entity.
+### <a name="BKMK_FileAttachment_KnowledgeArticle_msdyn_contentstore"></a> FileAttachment_KnowledgeArticle_msdyn_contentstore
+
+One-To-Many Relationship: [fileattachment FileAttachment_KnowledgeArticle_msdyn_contentstore](fileattachment.md#BKMK_FileAttachment_KnowledgeArticle_msdyn_contentstore)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`fileattachment`|
+|ReferencedAttribute|`fileattachmentid`|
+|ReferencingAttribute|`msdyn_contentstore`|
+|ReferencingEntityNavigationPropertyName|`msdyn_contentstore`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_knowledgearticle_languagelocaleid"></a> knowledgearticle_languagelocaleid
 
-See the [knowledgearticle_languagelocaleid](languagelocale.md#BKMK_knowledgearticle_languagelocaleid) one-to-many relationship for the [languagelocale](languagelocale.md) table/entity.
+One-To-Many Relationship: [languagelocale knowledgearticle_languagelocaleid](languagelocale.md#BKMK_knowledgearticle_languagelocaleid)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`languagelocale`|
+|ReferencedAttribute|`languagelocaleid`|
+|ReferencingAttribute|`languagelocaleid`|
+|ReferencingEntityNavigationPropertyName|`languagelocaleid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Restrict`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_knowledgearticle_parentarticle_contentid-many-to-one"></a> knowledgearticle_parentarticle_contentid
+
+One-To-Many Relationship: [knowledgearticle knowledgearticle_parentarticle_contentid](#BKMK_knowledgearticle_parentarticle_contentid-one-to-many)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`knowledgearticle`|
+|ReferencedAttribute|`knowledgearticleid`|
+|ReferencingAttribute|`parentarticlecontentid`|
+|ReferencingEntityNavigationPropertyName|`ParentArticleContentId`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_knowledgearticle_previousarticle_contentid-many-to-one"></a> knowledgearticle_previousarticle_contentid
+
+One-To-Many Relationship: [knowledgearticle knowledgearticle_previousarticle_contentid](#BKMK_knowledgearticle_previousarticle_contentid-one-to-many)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`knowledgearticle`|
+|ReferencedAttribute|`knowledgearticleid`|
+|ReferencingAttribute|`previousarticlecontentid`|
+|ReferencingEntityNavigationPropertyName|`PreviousArticleContentId`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_knowledgearticle_primaryauthorid"></a> knowledgearticle_primaryauthorid
 
-See the [knowledgearticle_primaryauthorid](systemuser.md#BKMK_knowledgearticle_primaryauthorid) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+One-To-Many Relationship: [systemuser knowledgearticle_primaryauthorid](systemuser.md#BKMK_knowledgearticle_primaryauthorid)
 
-### <a name="BKMK_knowledgearticle_parentarticle_contentid"></a> knowledgearticle_parentarticle_contentid
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`primaryauthorid`|
+|ReferencingEntityNavigationPropertyName|`primaryauthorid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-See the [knowledgearticle_parentarticle_contentid](knowledgearticle.md#BKMK_knowledgearticle_parentarticle_contentid) one-to-many relationship for the [knowledgearticle](knowledgearticle.md) table/entity.
+### <a name="BKMK_knowledgearticle_rootarticle_id-many-to-one"></a> knowledgearticle_rootarticle_id
 
-### <a name="BKMK_knowledgearticle_previousarticle_contentid"></a> knowledgearticle_previousarticle_contentid
+One-To-Many Relationship: [knowledgearticle knowledgearticle_rootarticle_id](#BKMK_knowledgearticle_rootarticle_id-one-to-many)
 
-See the [knowledgearticle_previousarticle_contentid](knowledgearticle.md#BKMK_knowledgearticle_previousarticle_contentid) one-to-many relationship for the [knowledgearticle](knowledgearticle.md) table/entity.
+|Property|Value|
+|---|---|
+|ReferencedEntity|`knowledgearticle`|
+|ReferencedAttribute|`knowledgearticleid`|
+|ReferencingAttribute|`rootarticleid`|
+|ReferencingEntityNavigationPropertyName|`RootArticleId`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_subject_knowledgearticles"></a> subject_knowledgearticles
+### <a name="BKMK_lk_knowledgearticle_createdby"></a> lk_knowledgearticle_createdby
 
-See the [subject_knowledgearticles](subject.md#BKMK_subject_knowledgearticles) one-to-many relationship for the [subject](subject.md) table/entity.
+One-To-Many Relationship: [systemuser lk_knowledgearticle_createdby](systemuser.md#BKMK_lk_knowledgearticle_createdby)
 
-### <a name="BKMK_knowledgearticle_rootarticle_id"></a> knowledgearticle_rootarticle_id
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdby`|
+|ReferencingEntityNavigationPropertyName|`createdby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-See the [knowledgearticle_rootarticle_id](knowledgearticle.md#BKMK_knowledgearticle_rootarticle_id) one-to-many relationship for the [knowledgearticle](knowledgearticle.md) table/entity.
+### <a name="BKMK_lk_knowledgearticle_createdonbehalfby"></a> lk_knowledgearticle_createdonbehalfby
 
-### <a name="BKMK_TransactionCurrency_knowledgearticle"></a> TransactionCurrency_knowledgearticle
+One-To-Many Relationship: [systemuser lk_knowledgearticle_createdonbehalfby](systemuser.md#BKMK_lk_knowledgearticle_createdonbehalfby)
 
-See the [TransactionCurrency_knowledgearticle](transactioncurrency.md#BKMK_TransactionCurrency_knowledgearticle) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`createdonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_knowledgearticle_modifiedby"></a> lk_knowledgearticle_modifiedby
+
+One-To-Many Relationship: [systemuser lk_knowledgearticle_modifiedby](systemuser.md#BKMK_lk_knowledgearticle_modifiedby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedby`|
+|ReferencingEntityNavigationPropertyName|`modifiedby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_knowledgearticle_modifiedonbehalfby"></a> lk_knowledgearticle_modifiedonbehalfby
+
+One-To-Many Relationship: [systemuser lk_knowledgearticle_modifiedonbehalfby](systemuser.md#BKMK_lk_knowledgearticle_modifiedonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`modifiedonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_msdyn_knowledgearticle_integratedsearchprovider"></a> msdyn_knowledgearticle_integratedsearchprovider
 
-**Added by**: Knowledge Management Online Features Solution
+One-To-Many Relationship: [msdyn_integratedsearchprovider msdyn_knowledgearticle_integratedsearchprovider](msdyn_integratedsearchprovider.md#BKMK_msdyn_knowledgearticle_integratedsearchprovider)
 
-See the [msdyn_knowledgearticle_integratedsearchprovider](msdyn_integratedsearchprovider.md#BKMK_msdyn_knowledgearticle_integratedsearchprovider) one-to-many relationship for the [msdyn_integratedsearchprovider](msdyn_integratedsearchprovider.md) table/entity.
-<a name="manytomany"></a>
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msdyn_integratedsearchprovider`|
+|ReferencedAttribute|`msdyn_integratedsearchproviderid`|
+|ReferencingAttribute|`msdyn_integratedsearchproviderid`|
+|ReferencingEntityNavigationPropertyName|`msdyn_integratedsearchproviderid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-## Many-To-Many Relationships
+### <a name="BKMK_owner_knowledgearticle"></a> owner_knowledgearticle
 
-Relationship details provided where the KnowledgeArticle table is the first table in the relationship. Listed by **SchemaName**.
+One-To-Many Relationship: [owner owner_knowledgearticle](owner.md#BKMK_owner_knowledgearticle)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`owner`|
+|ReferencedAttribute|`ownerid`|
+|ReferencingAttribute|`ownerid`|
+|ReferencingEntityNavigationPropertyName|`ownerid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_processstage_knowledgearticle"></a> processstage_knowledgearticle
+
+One-To-Many Relationship: [processstage processstage_knowledgearticle](processstage.md#BKMK_processstage_knowledgearticle)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`processstage`|
+|ReferencedAttribute|`processstageid`|
+|ReferencingAttribute|`stageid`|
+|ReferencingEntityNavigationPropertyName|`stageid_processstage`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_subject_knowledgearticles"></a> subject_knowledgearticles
+
+One-To-Many Relationship: [subject subject_knowledgearticles](subject.md#BKMK_subject_knowledgearticles)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`subject`|
+|ReferencedAttribute|`subjectid`|
+|ReferencingAttribute|`subjectid`|
+|ReferencingEntityNavigationPropertyName|`subjectid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Restrict`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_team_knowledgearticle"></a> team_knowledgearticle
+
+One-To-Many Relationship: [team team_knowledgearticle](team.md#BKMK_team_knowledgearticle)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`team`|
+|ReferencedAttribute|`teamid`|
+|ReferencingAttribute|`owningteam`|
+|ReferencingEntityNavigationPropertyName|`owningteam`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_TransactionCurrency_knowledgearticle"></a> TransactionCurrency_knowledgearticle
+
+One-To-Many Relationship: [transactioncurrency TransactionCurrency_knowledgearticle](transactioncurrency.md#BKMK_TransactionCurrency_knowledgearticle)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`transactioncurrency`|
+|ReferencedAttribute|`transactioncurrencyid`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencingEntityNavigationPropertyName|`transactioncurrencyid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Restrict`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_user_knowledgearticle"></a> user_knowledgearticle
+
+One-To-Many Relationship: [systemuser user_knowledgearticle](systemuser.md#BKMK_user_knowledgearticle)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`owninguser`|
+|ReferencingEntityNavigationPropertyName|`owninguser`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+
+## One-to-Many relationships
+
+These relationships are one-to-many. Listed by **SchemaName**.
+
+- [knowledgearticle_activity_parties](#BKMK_knowledgearticle_activity_parties)
+- [KnowledgeArticle_ActivityPointers](#BKMK_KnowledgeArticle_ActivityPointers)
+- [knowledgearticle_adx_inviteredemptions](#BKMK_knowledgearticle_adx_inviteredemptions)
+- [knowledgearticle_adx_portalcomments](#BKMK_knowledgearticle_adx_portalcomments)
+- [knowledgearticle_Annotations](#BKMK_knowledgearticle_Annotations)
+- [KnowledgeArticle_Appointments](#BKMK_KnowledgeArticle_Appointments)
+- [knowledgearticle_AsyncOperations](#BKMK_knowledgearticle_AsyncOperations)
+- [knowledgearticle_BulkDeleteFailures](#BKMK_knowledgearticle_BulkDeleteFailures)
+- [knowledgearticle_chats](#BKMK_knowledgearticle_chats)
+- [knowledgearticle_connections1](#BKMK_knowledgearticle_connections1)
+- [knowledgearticle_connections2](#BKMK_knowledgearticle_connections2)
+- [knowledgearticle_DuplicateBaseRecord](#BKMK_knowledgearticle_DuplicateBaseRecord)
+- [knowledgearticle_DuplicateMatchingRecord](#BKMK_knowledgearticle_DuplicateMatchingRecord)
+- [KnowledgeArticle_Emails](#BKMK_KnowledgeArticle_Emails)
+- [KnowledgeArticle_Faxes](#BKMK_KnowledgeArticle_Faxes)
+- [KnowledgeArticle_Feedback](#BKMK_KnowledgeArticle_Feedback)
+- [knowledgearticle_FileAttachments](#BKMK_knowledgearticle_FileAttachments)
+- [KnowledgeArticle_Letters](#BKMK_KnowledgeArticle_Letters)
+- [knowledgearticle_parentarticle_contentid](#BKMK_knowledgearticle_parentarticle_contentid-one-to-many)
+- [KnowledgeArticle_Phonecalls](#BKMK_KnowledgeArticle_Phonecalls)
+- [knowledgearticle_PostFollows](#BKMK_knowledgearticle_PostFollows)
+- [knowledgearticle_PostRegardings](#BKMK_knowledgearticle_PostRegardings)
+- [knowledgearticle_previousarticle_contentid](#BKMK_knowledgearticle_previousarticle_contentid-one-to-many)
+- [knowledgearticle_PrincipalObjectAttributeAccess](#BKMK_knowledgearticle_PrincipalObjectAttributeAccess)
+- [knowledgearticle_ProcessSession](#BKMK_knowledgearticle_ProcessSession)
+- [knowledgearticle_QueueItems](#BKMK_knowledgearticle_QueueItems)
+- [KnowledgeArticle_RecurringAppointmentMasters](#BKMK_KnowledgeArticle_RecurringAppointmentMasters)
+- [knowledgearticle_rootarticle_id](#BKMK_knowledgearticle_rootarticle_id-one-to-many)
+- [knowledgearticle_SharePointDocumentLocations](#BKMK_knowledgearticle_SharePointDocumentLocations)
+- [KnowledgeArticle_SocialActivities](#BKMK_KnowledgeArticle_SocialActivities)
+- [KnowledgeArticle_SyncErrors](#BKMK_KnowledgeArticle_SyncErrors)
+- [KnowledgeArticle_Tasks](#BKMK_KnowledgeArticle_Tasks)
+- [knowledgearticle_Teams](#BKMK_knowledgearticle_Teams)
+- [knowledgearticle_views](#BKMK_knowledgearticle_views)
+- [lk_expiredprocess_knowledgearticleid](#BKMK_lk_expiredprocess_knowledgearticleid)
+- [lk_newprocess_knowledgearticleid](#BKMK_lk_newprocess_knowledgearticleid)
+- [lk_translationprocess_knowledgearticleid](#BKMK_lk_translationprocess_knowledgearticleid)
+- [msdyn_knowledgearticle_favoriteknowledgearticle](#BKMK_msdyn_knowledgearticle_favoriteknowledgearticle)
+- [msdyn_knowledgearticle_feedback_context](#BKMK_msdyn_knowledgearticle_feedback_context)
+- [msdyn_knowledgearticleimage_parentknowledgearticleid](#BKMK_msdyn_knowledgearticleimage_parentknowledgearticleid)
+
+### <a name="BKMK_knowledgearticle_activity_parties"></a> knowledgearticle_activity_parties
+
+Many-To-One Relationship: [activityparty knowledgearticle_activity_parties](activityparty.md#BKMK_knowledgearticle_activity_parties)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`activityparty`|
+|ReferencingAttribute|`partyid`|
+|ReferencedEntityNavigationPropertyName|`knowledgearticle_activity_parties`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_KnowledgeArticle_ActivityPointers"></a> KnowledgeArticle_ActivityPointers
+
+Many-To-One Relationship: [activitypointer KnowledgeArticle_ActivityPointers](activitypointer.md#BKMK_KnowledgeArticle_ActivityPointers)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`activitypointer`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`KnowledgeArticle_ActivityPointers`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10<br />QueryApi: `CRMActivity.RetrieveByObject`<br />ViewId: `00000000-0000-0000-00aa-000010001903`|
+
+### <a name="BKMK_knowledgearticle_adx_inviteredemptions"></a> knowledgearticle_adx_inviteredemptions
+
+Many-To-One Relationship: [adx_inviteredemption knowledgearticle_adx_inviteredemptions](adx_inviteredemption.md#BKMK_knowledgearticle_adx_inviteredemptions)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`adx_inviteredemption`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`knowledgearticle_adx_inviteredemptions`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: `CRMActivity.RetrieveByObject`<br />ViewId: `00000000-0000-0000-00aa-000010001903`|
+
+### <a name="BKMK_knowledgearticle_adx_portalcomments"></a> knowledgearticle_adx_portalcomments
+
+Many-To-One Relationship: [adx_portalcomment knowledgearticle_adx_portalcomments](adx_portalcomment.md#BKMK_knowledgearticle_adx_portalcomments)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`adx_portalcomment`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`knowledgearticle_adx_portalcomments`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: `CRMActivity.RetrieveByObject`<br />ViewId: `00000000-0000-0000-00aa-000010001903`|
+
+### <a name="BKMK_knowledgearticle_Annotations"></a> knowledgearticle_Annotations
+
+Many-To-One Relationship: [annotation knowledgearticle_Annotations](annotation.md#BKMK_knowledgearticle_Annotations)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`annotation`|
+|ReferencingAttribute|`objectid`|
+|ReferencedEntityNavigationPropertyName|`knowledgearticle_Annotations`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_KnowledgeArticle_Appointments"></a> KnowledgeArticle_Appointments
+
+Many-To-One Relationship: [appointment KnowledgeArticle_Appointments](appointment.md#BKMK_KnowledgeArticle_Appointments)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`appointment`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`KnowledgeArticle_Appointments`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_knowledgearticle_AsyncOperations"></a> knowledgearticle_AsyncOperations
+
+Many-To-One Relationship: [asyncoperation knowledgearticle_AsyncOperations](asyncoperation.md#BKMK_knowledgearticle_AsyncOperations)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`asyncoperation`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`knowledgearticle_AsyncOperations`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_knowledgearticle_BulkDeleteFailures"></a> knowledgearticle_BulkDeleteFailures
+
+Many-To-One Relationship: [bulkdeletefailure knowledgearticle_BulkDeleteFailures](bulkdeletefailure.md#BKMK_knowledgearticle_BulkDeleteFailures)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`bulkdeletefailure`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`knowledgearticle_BulkDeleteFailures`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_knowledgearticle_chats"></a> knowledgearticle_chats
+
+Many-To-One Relationship: [chat knowledgearticle_chats](chat.md#BKMK_knowledgearticle_chats)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`chat`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`knowledgearticle_chats`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: `CRMActivity.RetrieveByObject`<br />ViewId: `00000000-0000-0000-00aa-000010001903`|
+
+### <a name="BKMK_knowledgearticle_connections1"></a> knowledgearticle_connections1
+
+Many-To-One Relationship: [connection knowledgearticle_connections1](connection.md#BKMK_knowledgearticle_connections1)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`connection`|
+|ReferencingAttribute|`record1id`|
+|ReferencedEntityNavigationPropertyName|`knowledgearticle_connections1`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 100<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_knowledgearticle_connections2"></a> knowledgearticle_connections2
+
+Many-To-One Relationship: [connection knowledgearticle_connections2](connection.md#BKMK_knowledgearticle_connections2)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`connection`|
+|ReferencingAttribute|`record2id`|
+|ReferencedEntityNavigationPropertyName|`knowledgearticle_connections2`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_knowledgearticle_DuplicateBaseRecord"></a> knowledgearticle_DuplicateBaseRecord
+
+Many-To-One Relationship: [duplicaterecord knowledgearticle_DuplicateBaseRecord](duplicaterecord.md#BKMK_knowledgearticle_DuplicateBaseRecord)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`duplicaterecord`|
+|ReferencingAttribute|`baserecordid`|
+|ReferencedEntityNavigationPropertyName|`knowledgearticle_DuplicateBaseRecord`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_knowledgearticle_DuplicateMatchingRecord"></a> knowledgearticle_DuplicateMatchingRecord
+
+Many-To-One Relationship: [duplicaterecord knowledgearticle_DuplicateMatchingRecord](duplicaterecord.md#BKMK_knowledgearticle_DuplicateMatchingRecord)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`duplicaterecord`|
+|ReferencingAttribute|`duplicaterecordid`|
+|ReferencedEntityNavigationPropertyName|`knowledgearticle_DuplicateMatchingRecord`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_KnowledgeArticle_Emails"></a> KnowledgeArticle_Emails
+
+Many-To-One Relationship: [email KnowledgeArticle_Emails](email.md#BKMK_KnowledgeArticle_Emails)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`email`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`KnowledgeArticle_Emails`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_KnowledgeArticle_Faxes"></a> KnowledgeArticle_Faxes
+
+Many-To-One Relationship: [fax KnowledgeArticle_Faxes](fax.md#BKMK_KnowledgeArticle_Faxes)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`fax`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`KnowledgeArticle_Faxes`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_KnowledgeArticle_Feedback"></a> KnowledgeArticle_Feedback
+
+Many-To-One Relationship: [feedback KnowledgeArticle_Feedback](feedback.md#BKMK_KnowledgeArticle_Feedback)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`feedback`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`KnowledgeArticle_Feedback`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 150<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_knowledgearticle_FileAttachments"></a> knowledgearticle_FileAttachments
+
+Many-To-One Relationship: [fileattachment knowledgearticle_FileAttachments](fileattachment.md#BKMK_knowledgearticle_FileAttachments)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`fileattachment`|
+|ReferencingAttribute|`objectid`|
+|ReferencedEntityNavigationPropertyName|`knowledgearticle_FileAttachments`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_KnowledgeArticle_Letters"></a> KnowledgeArticle_Letters
+
+Many-To-One Relationship: [letter KnowledgeArticle_Letters](letter.md#BKMK_KnowledgeArticle_Letters)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`letter`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`KnowledgeArticle_Letters`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_knowledgearticle_parentarticle_contentid-one-to-many"></a> knowledgearticle_parentarticle_contentid
+
+Many-To-One Relationship: [knowledgearticle knowledgearticle_parentarticle_contentid](#BKMK_knowledgearticle_parentarticle_contentid-many-to-one)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`knowledgearticle`|
+|ReferencingAttribute|`parentarticlecontentid`|
+|ReferencedEntityNavigationPropertyName|`knowledgearticle_parentarticle_contentid`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_KnowledgeArticle_Phonecalls"></a> KnowledgeArticle_Phonecalls
+
+Many-To-One Relationship: [phonecall KnowledgeArticle_Phonecalls](phonecall.md#BKMK_KnowledgeArticle_Phonecalls)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`phonecall`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`KnowledgeArticle_Phonecalls`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_knowledgearticle_PostFollows"></a> knowledgearticle_PostFollows
+
+Many-To-One Relationship: [postfollow knowledgearticle_PostFollows](postfollow.md#BKMK_knowledgearticle_PostFollows)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`postfollow`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`knowledgearticle_PostFollows`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_knowledgearticle_PostRegardings"></a> knowledgearticle_PostRegardings
+
+Many-To-One Relationship: [postregarding knowledgearticle_PostRegardings](postregarding.md#BKMK_knowledgearticle_PostRegardings)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`postregarding`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`knowledgearticle_PostRegardings`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_knowledgearticle_previousarticle_contentid-one-to-many"></a> knowledgearticle_previousarticle_contentid
+
+Many-To-One Relationship: [knowledgearticle knowledgearticle_previousarticle_contentid](#BKMK_knowledgearticle_previousarticle_contentid-many-to-one)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`knowledgearticle`|
+|ReferencingAttribute|`previousarticlecontentid`|
+|ReferencedEntityNavigationPropertyName|`knowledgearticle_previousarticle_contentid`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_knowledgearticle_PrincipalObjectAttributeAccess"></a> knowledgearticle_PrincipalObjectAttributeAccess
+
+Many-To-One Relationship: [principalobjectattributeaccess knowledgearticle_PrincipalObjectAttributeAccess](principalobjectattributeaccess.md#BKMK_knowledgearticle_PrincipalObjectAttributeAccess)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`principalobjectattributeaccess`|
+|ReferencingAttribute|`objectid`|
+|ReferencedEntityNavigationPropertyName|`knowledgearticle_PrincipalObjectAttributeAccess`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_knowledgearticle_ProcessSession"></a> knowledgearticle_ProcessSession
+
+Many-To-One Relationship: [processsession knowledgearticle_ProcessSession](processsession.md#BKMK_knowledgearticle_ProcessSession)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`processsession`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`knowledgearticle_ProcessSession`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_knowledgearticle_QueueItems"></a> knowledgearticle_QueueItems
+
+Many-To-One Relationship: [queueitem knowledgearticle_QueueItems](queueitem.md#BKMK_knowledgearticle_QueueItems)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`queueitem`|
+|ReferencingAttribute|`objectid`|
+|ReferencedEntityNavigationPropertyName|`knowledgearticle_QueueItems`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_KnowledgeArticle_RecurringAppointmentMasters"></a> KnowledgeArticle_RecurringAppointmentMasters
+
+Many-To-One Relationship: [recurringappointmentmaster KnowledgeArticle_RecurringAppointmentMasters](recurringappointmentmaster.md#BKMK_KnowledgeArticle_RecurringAppointmentMasters)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`recurringappointmentmaster`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`KnowledgeArticle_RecurringAppointmentMasters`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_knowledgearticle_rootarticle_id-one-to-many"></a> knowledgearticle_rootarticle_id
+
+Many-To-One Relationship: [knowledgearticle knowledgearticle_rootarticle_id](#BKMK_knowledgearticle_rootarticle_id-many-to-one)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`knowledgearticle`|
+|ReferencingAttribute|`rootarticleid`|
+|ReferencedEntityNavigationPropertyName|`knowledgearticle_rootarticle_id`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_knowledgearticle_SharePointDocumentLocations"></a> knowledgearticle_SharePointDocumentLocations
+
+Many-To-One Relationship: [sharepointdocumentlocation knowledgearticle_SharePointDocumentLocations](sharepointdocumentlocation.md#BKMK_knowledgearticle_SharePointDocumentLocations)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`sharepointdocumentlocation`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`knowledgearticle_SharePointDocumentLocations`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_KnowledgeArticle_SocialActivities"></a> KnowledgeArticle_SocialActivities
+
+Many-To-One Relationship: [socialactivity KnowledgeArticle_SocialActivities](socialactivity.md#BKMK_KnowledgeArticle_SocialActivities)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`socialactivity`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`KnowledgeArticle_SocialActivities`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_KnowledgeArticle_SyncErrors"></a> KnowledgeArticle_SyncErrors
+
+Many-To-One Relationship: [syncerror KnowledgeArticle_SyncErrors](syncerror.md#BKMK_KnowledgeArticle_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`syncerror`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`KnowledgeArticle_SyncErrors`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_KnowledgeArticle_Tasks"></a> KnowledgeArticle_Tasks
+
+Many-To-One Relationship: [task KnowledgeArticle_Tasks](task.md#BKMK_KnowledgeArticle_Tasks)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`task`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`KnowledgeArticle_Tasks`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_knowledgearticle_Teams"></a> knowledgearticle_Teams
+
+Many-To-One Relationship: [team knowledgearticle_Teams](team.md#BKMK_knowledgearticle_Teams)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`team`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`knowledgearticle_Teams`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_knowledgearticle_views"></a> knowledgearticle_views
+
+Many-To-One Relationship: [knowledgearticleviews knowledgearticle_views](knowledgearticleviews.md#BKMK_knowledgearticle_views)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`knowledgearticleviews`|
+|ReferencingAttribute|`knowledgearticleid`|
+|ReferencedEntityNavigationPropertyName|`knowledgearticle_views`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10<br />QueryApi: null<br />ViewId: `23173e88-b4cf-4cfa-93e4-9fc1320a7b01`|
+
+### <a name="BKMK_lk_expiredprocess_knowledgearticleid"></a> lk_expiredprocess_knowledgearticleid
+
+Many-To-One Relationship: [expiredprocess lk_expiredprocess_knowledgearticleid](expiredprocess.md#BKMK_lk_expiredprocess_knowledgearticleid)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`expiredprocess`|
+|ReferencingAttribute|`knowledgearticleid`|
+|ReferencedEntityNavigationPropertyName|`knowledgearticle_expiredprocess`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_newprocess_knowledgearticleid"></a> lk_newprocess_knowledgearticleid
+
+Many-To-One Relationship: [newprocess lk_newprocess_knowledgearticleid](newprocess.md#BKMK_lk_newprocess_knowledgearticleid)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`newprocess`|
+|ReferencingAttribute|`knowledgearticleid`|
+|ReferencedEntityNavigationPropertyName|`knowledgearticle_newprocess`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_translationprocess_knowledgearticleid"></a> lk_translationprocess_knowledgearticleid
+
+Many-To-One Relationship: [translationprocess lk_translationprocess_knowledgearticleid](translationprocess.md#BKMK_lk_translationprocess_knowledgearticleid)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`translationprocess`|
+|ReferencingAttribute|`knowledgearticleid`|
+|ReferencedEntityNavigationPropertyName|`knowledgearticle_translationprocess`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_msdyn_knowledgearticle_favoriteknowledgearticle"></a> msdyn_knowledgearticle_favoriteknowledgearticle
+
+Many-To-One Relationship: [msdyn_favoriteknowledgearticle msdyn_knowledgearticle_favoriteknowledgearticle](msdyn_favoriteknowledgearticle.md#BKMK_msdyn_knowledgearticle_favoriteknowledgearticle)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_favoriteknowledgearticle`|
+|ReferencingAttribute|`msdyn_knowledgearticleid`|
+|ReferencedEntityNavigationPropertyName|`msdyn_knowledgearticle_favoriteknowledgearticle`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: Id of Knowledge Article<br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_msdyn_knowledgearticle_feedback_context"></a> msdyn_knowledgearticle_feedback_context
+
+Many-To-One Relationship: [feedback msdyn_knowledgearticle_feedback_context](feedback.md#BKMK_msdyn_knowledgearticle_feedback_context)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`feedback`|
+|ReferencingAttribute|`msdyn_contextobjectid`|
+|ReferencedEntityNavigationPropertyName|`msdyn_knowledgearticle_feedback_context`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_msdyn_knowledgearticleimage_parentknowledgearticleid"></a> msdyn_knowledgearticleimage_parentknowledgearticleid
+
+Many-To-One Relationship: [msdyn_knowledgearticleimage msdyn_knowledgearticleimage_parentknowledgearticleid](msdyn_knowledgearticleimage.md#BKMK_msdyn_knowledgearticleimage_parentknowledgearticleid)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_knowledgearticleimage`|
+|ReferencingAttribute|`msdyn_parentknowledgearticleid`|
+|ReferencedEntityNavigationPropertyName|`msdyn_knowledgearticleimage_parentknowledgearticleid`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+
+## Many-to-Many relationships
+
+These relationships are many-to-many. Listed by **SchemaName**.
 
 - [knowledgearticle_category](#BKMK_knowledgearticle_category)
 - [msdyn_msdyn_kbattachment_knowledgearticle](#BKMK_msdyn_msdyn_kbattachment_knowledgearticle)
 
-
 ### <a name="BKMK_knowledgearticle_category"></a> knowledgearticle_category
 
-IntersectEntityName: knowledgearticlescategories<br />
-#### Table 1
+See [category knowledgearticle_category Many-To-Many Relationship](category.md#BKMK_knowledgearticle_category)
 
 |Property|Value|
-|--------|-----|
-|IntersectAttribute|knowledgearticleid|
+|---|---|
+|IntersectEntityName|`knowledgearticlescategories`|
 |IsCustomizable|False|
-|LogicalName|knowledgearticle|
-|NavigationPropertyName|knowledgearticle_category|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: 10000|
-
-#### Table 2
-
-|Property|Value|
-|--------|-----|
-|LogicalName|category|
-|IntersectAttribute|categoryid|
-|NavigationPropertyName|knowledgearticle_category|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-
+|SchemaName|`knowledgearticle_category`|
+|IntersectAttribute|`knowledgearticleid`|
+|NavigationPropertyName|`knowledgearticle_category`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_msdyn_msdyn_kbattachment_knowledgearticle"></a> msdyn_msdyn_kbattachment_knowledgearticle
 
-See the [msdyn_msdyn_kbattachment_knowledgearticle](msdyn_kbattachment.md#BKMK_msdyn_msdyn_kbattachment_knowledgearticle) many-to-many relationship for the [msdyn_kbattachment](msdyn_kbattachment.md) table/entity.
+See [msdyn_kbattachment msdyn_msdyn_kbattachment_knowledgearticle Many-To-Many Relationship](msdyn_kbattachment.md#BKMK_msdyn_msdyn_kbattachment_knowledgearticle)
+
+|Property|Value|
+|---|---|
+|IntersectEntityName|`msdyn_msdyn_kbattachment_knowledgearticle`|
+|IsCustomizable|True|
+|SchemaName|`msdyn_msdyn_kbattachment_knowledgearticle`|
+|IntersectAttribute|`knowledgearticleid`|
+|NavigationPropertyName|`msdyn_msdyn_kbattachment_knowledgearticle`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
-<xref href="Microsoft.Dynamics.CRM.knowledgearticle?text=knowledgearticle EntityType" />
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
+[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
+<xref:Microsoft.Dynamics.CRM.knowledgearticle?displayProperty=fullName>

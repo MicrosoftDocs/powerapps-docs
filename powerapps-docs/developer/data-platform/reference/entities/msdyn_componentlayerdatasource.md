@@ -1,54 +1,49 @@
 ---
-title: "msdyn_componentlayerdatasource table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the msdyn_componentlayerdatasource table/entity."
-ms.date: 09/01/2023
-ms.service: "powerapps"
-ms.topic: "reference"
-ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "phecke"
-ms.author: "pehecke"
+title: "Component Layer Data Source (msdyn_componentlayerdatasource) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the Component Layer Data Source (msdyn_componentlayerdatasource) table/entity with Microsoft Dataverse."
+ms.topic: generated-reference
+author: phecke
+ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# msdyn_componentlayerdatasource table/entity reference
+# Component Layer Data Source (msdyn_componentlayerdatasource) table/entity reference (Microsoft Dataverse)
 
-> [!NOTE]
-> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
-
-
-
-**Added by**: Microsoft Dynamics 365 Component History APIs Solution
 
 
 ## Messages
 
-|Message|Web API Operation|SDK class or method|
-|-|-|-|
-|Create|POST /msdyn_componentlayerdatasources<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE /msdyn_componentlayerdatasources(*msdyn_componentlayerdatasourceid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET /msdyn_componentlayerdatasources(*msdyn_componentlayerdatasourceid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
-|RetrieveMultiple|GET /msdyn_componentlayerdatasources<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|Update|PATCH /msdyn_componentlayerdatasources(*msdyn_componentlayerdatasourceid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+The following table lists the messages for the Component Layer Data Source (msdyn_componentlayerdatasource) table.
+Messages represent operations that can be performed on the table. They may also be events.
+
+| Name <br />Is Event? |Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `Create`<br />Event: True |`POST` /msdyn_componentlayerdatasources<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `Delete`<br />Event: True |`DELETE` /msdyn_componentlayerdatasources(*msdyn_componentlayerdatasourceid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Retrieve`<br />Event: True |`GET` /msdyn_componentlayerdatasources(*msdyn_componentlayerdatasourceid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveEntityChanges`<br />Event: True | |<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
+| `RetrieveMultiple`<br />Event: True |`GET` /msdyn_componentlayerdatasources<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
+| `Update`<br />Event: True |`PATCH` /msdyn_componentlayerdatasources(*msdyn_componentlayerdatasourceid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
+| `Upsert`<br />Event: False |`PATCH` /msdyn_componentlayerdatasources(*msdyn_componentlayerdatasourceid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
 
 ## Properties
 
-|Property|Value|
-|--------|-----|
-|CollectionSchemaName|msdyn_componentlayerdatasources|
-|DisplayCollectionName|Component Layer Data Sources|
-|DisplayName|Component Layer Data Source|
-|EntitySetName|msdyn_componentlayerdatasources|
-|IsBPFEntity|False|
-|LogicalCollectionName|msdyn_componentlayerdatasources|
-|LogicalName|msdyn_componentlayerdatasource|
-|OwnershipType|OrganizationOwned|
-|PrimaryIdAttribute|msdyn_componentlayerdatasourceid|
-|PrimaryNameAttribute|msdyn_name|
-|SchemaName|msdyn_componentlayerdatasource|
+The following table lists selected properties for the Component Layer Data Source (msdyn_componentlayerdatasource) table.
 
-<a name="writable-attributes"></a>
+|Property|Value|
+| --- | --- |
+| **DisplayName** | **Component Layer Data Source** |
+| **DisplayCollectionName** | **Component Layer Data Sources** |
+| **SchemaName** | `msdyn_componentlayerdatasource` |
+| **CollectionSchemaName** | `msdyn_componentlayerdatasources` |
+| **EntitySetName** | `msdyn_componentlayerdatasources`|
+| **LogicalName** | `msdyn_componentlayerdatasource` |
+| **LogicalCollectionName** | `msdyn_componentlayerdatasources` |
+| **PrimaryIdAttribute** | `msdyn_componentlayerdatasourceid` |
+| **PrimaryNameAttribute** |`msdyn_name` |
+| **TableType** | `Virtual` |
+| **OwnershipType** | `OrganizationOwned` |
 
 ## Writable columns/attributes
 
@@ -57,40 +52,40 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [msdyn_componentlayerdatasourceId](#BKMK_msdyn_componentlayerdatasourceId)
 - [msdyn_name](#BKMK_msdyn_name)
 
-
 ### <a name="BKMK_msdyn_componentlayerdatasourceId"></a> msdyn_componentlayerdatasourceId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for entity instances|
-|DisplayName|Component Layer Data Source|
+|---|---|
+|Description|**Unique identifier for entity instances**|
+|DisplayName|**Component Layer Data Source**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|msdyn_componentlayerdatasourceid|
+|LogicalName|`msdyn_componentlayerdatasourceid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_msdyn_name"></a> msdyn_name
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|Name|
-|FormatName|Text|
-|IsLocalizable|False|
+|DisplayName|**Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_name|
-|MaxLength|100|
+|LogicalName|`msdyn_name`|
 |RequiredLevel|None|
 |Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
+
 
 
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
-<xref href="Microsoft.Dynamics.CRM.msdyn_componentlayerdatasource?text=msdyn_componentlayerdatasource EntityType" />
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
+[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
+<xref:Microsoft.Dynamics.CRM.msdyn_componentlayerdatasource?displayProperty=fullName>

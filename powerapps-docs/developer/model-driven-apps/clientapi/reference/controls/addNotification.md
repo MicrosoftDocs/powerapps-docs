@@ -1,8 +1,8 @@
 ---
-title: "addNotification (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "addNotification (Client API reference) in model-driven apps"
 description: Displays an error or recommendation notification for a control, and lets you specify to execute based on the notification.
-author: chmoncay
-ms.author: chmoncay
+author: MitiJ
+ms.author: mijosh
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference

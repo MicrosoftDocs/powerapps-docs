@@ -1,10 +1,10 @@
 ---
-title: "Create a custom API with code (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "You can write code create custom APis." # 115-145 characters including spaces. This abstract displays in the search result.
-author: divkamath
-ms.author: dikamath
-ms.date: 09/27/2022
-ms.topic: article
+title: "Create a custom API with code (Microsoft Dataverse) | Microsoft Docs"
+description: "You can write code create custom APIs."
+author: MsSQLGirl
+ms.author: jukoesma
+ms.date: 06/20/2025
+ms.topic: how-to
 ms.subservice: dataverse-developer
 ms.reviewer: jdaly
 search.audienceType: 
@@ -15,11 +15,11 @@ contributors:
 # Create a custom API with code
 
 > [!NOTE]
-> This is an advanced topic that assumes you have already read and understood these topics:
+> Creating an API with code is an advanced subject that assumes you read and understood these articles:
 > - [Create and use custom APIs](custom-api.md)
 > - [Create a custom API using the plug-in registration tool](create-custom-api-prt.md)
 >
-> You should also understand how to create Microsoft Dataverse records, using either the Web API or SDK for .NET. For more information see:
+> You should also understand how to create Microsoft Dataverse records, using either the Web API or SDK for .NET. For more information, see:
 > - [Create an entity record using the Web API](webapi/create-entity-web-api.md)
 > - [Create entities using the SDK for .NET](org-service/entity-operations-create.md)
 
@@ -29,7 +29,7 @@ The tables in [Custom API tables](custom-api-tables.md) describe all the propert
 
 #### [SDK for .NET](#tab/sdk)
 
-This code uses the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> with a early-bound programming style. You can also use <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient>. More information:
+This code uses the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> with an early-bound programming style. You can also use <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient>. More information:
 
 - [Use CrmServiceClient constructors to connect to Dataverse](xrm-tooling/use-crmserviceclient-constructors-connect.md)
 - [Late-bound and Early-bound programming using the SDK for .NET](org-service/early-bound-programming.md)
@@ -37,7 +37,7 @@ This code uses the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> with 
 
 This example shows the creation of a custom API action with one request parameter and one response property in a single operation. More information: [Create related entities in one operation](org-service/entity-operations-create.md#create-related-entities-in-one-operation)
 
-This custom api is created as part of a solution with the uniquename `CustomAPIExample` and is associated with a plug-in type with id = `00000000-0000-0000-0000-000000000001`.
+This custom API is created as part of a solution with the uniquename `CustomAPIExample` and is associated with a plug-in type with ID = `00000000-0000-0000-0000-000000000001`.
 
 ```csharp
 string conn = $@"
@@ -111,7 +111,7 @@ Guid customAPIId = ((CreateResponse)service.Execute(createReq)).id;
 
 This example shows the creation of a custom API action with one request parameter and one response property in a single operation. More information: [Create related table rows in one operation](webapi/create-entity-web-api.md#create-related-table-rows-in-one-operation)
 
-This custom api is created as part of a solution with the uniquename `CustomAPIExample` and is associated with a plug-in type with id = `00000000-0000-0000-0000-000000000001`.
+This custom API is created as part of a solution with the uniquename `CustomAPIExample` and is associated with a plug-in type with ID = `00000000-0000-0000-0000-000000000001`.
 
 **Request:**
 
@@ -170,7 +170,7 @@ Content-Type: application/json
 ```http
 HTTP/1.1 204 No Content
 OData-Version: 4.0
-OData-EntityId: [Organization URI]/api/data/v9.1/customapis(b532b299-4684-eb11-a812-0022481d298f)
+OData-EntityId: [Organization URI]/api/data/v9.1/customapis(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)
 ```
 
 ---

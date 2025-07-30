@@ -1,24 +1,26 @@
 ---
-title: "Image columns (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about how to create image columns using the Dataverse APIS" # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 01/11/2023
+title: "Work with image column definitions using code"
+description: "Learn about how to create, retrieve, update and delete image column definitions using code." 
+ms.date: 01/17/2024
 ms.reviewer: jdaly
-ms.topic: article
-author: NHelgren # GitHub ID
+ms.topic: how-to
+author: mkannapiran
+ms.author: kamanick
 ms.subservice: dataverse-developer
-ms.author: nhelgren # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 contributors:
  - JimDaly
 ---
-# Image columns
+# Work with image column definitions using code
 
-Use image columns to store image data. A custom or customizable table can have zero or more image columns. This article is about working with column definitions in code. To use data stored in these columns, see [Use image column data](image-column-data.md).
+Use image columns to store image data. Image columns are optimized for storing binary data. Dataverse doesn't save this data in the relational data store, which improves performance and reduces the capacity usage. [Learn more about storage capacity](/power-platform/admin/whats-new-storage)
+
+A custom or customizable table can have zero or more image columns. This article is about working with column definitions in code. To use data stored in these columns, see [Use image column data](image-column-data.md).
 
 ## Create image columns
 
-The recommended way to create image columns is to use [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and define your columns using the designer. More information: [Image columns](../../maker/data-platform/types-of-fields.md#image-columns).
+The recommended way to create image columns is to use [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and define your columns using the designer. More information: [Image Columns](../../maker/data-platform/types-of-fields.md#image-columns).
 
 You can also create image columns using the Dataverse SDK for .NET or using the Web API. The following examples show how:
 
@@ -110,13 +112,13 @@ Content-Length: 1393
 ```http
 HTTP/1.1 204 NoContent
 OData-Version: 4.0
-OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='account')/Attributes(9554c5f9-8c51-ed11-bba1-000d3a9933c9)
+OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='account')/Attributes(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)
 ```
 
 More information:
 
 - [Create and update table definitions using the Web API](webapi/create-update-entity-definitions-using-web-api.md)
-- [Web API Metadata Operations Sample (C#)](webapi/samples/webapiservice-metadata-operations.md)
+- [Web API table schema operations sample (C#)](webapi/samples/webapiservice-metadata-operations.md)
 
 ---
 
@@ -128,8 +130,8 @@ In addition to the properties inherited from the [AttributeMetadata class](xref:
 |Property|Label |Description  |
 |---------|---------|---------|
 |`MaxSizeInKB`|**Maximum image size**|Set this value to the smallest useable data size appropriate for your particular application. The default setting is `10240`, or 10 MB. The maximum value is `30720` KB (30 MB). This value can't be changed in [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) using the designer after you create the image column, but you can change it using the API.|
-|`CanStoreFullImage`|**Can store full images**|When this is false, only thumbnail-sized images will be available. Full images are stored in file storage on the Azure blob to reduce data storage consumption.<br /><br />You can query the [Image Attribute Configuration (AttributeImageConfig)  table](reference/entities/attributeimageconfig.md) to find which image columns support full-sized images. More information: [Detect which image columns support full-sized images](image-column-data.md#detect-which-image-columns-support-full-sized-images)|
-|`IsPrimaryImage`|**Primary image column**|Whether the column will be the one image column used to represent a table row in applications.<br /><br />If there's only one image column for a table, this will be set by default. When another image column already exists for a table, this value will be ignored if set to true when creating a new image column. However, you can update the column after you create it to make the new column the primary image column.<br /><br />`IsPrimaryImage` can't be set to false, an exception will be thrown if you try. You must choose another image column and set that `IsPrimaryImage` value to true.<br /><br />If you delete a column that is the current primary image column, another image column for the table will be selected automatically to be the current primary image column.<br /><br />You can query the [Entity Image Configuration (EntityImageConfig)  table](reference/entities/entityimageconfig.md) to know which image columns are the primary images for any table. More information: [Primary Images](image-column-data.md#primary-images)|
+|`CanStoreFullImage`|**Can store full images**|When this value is false, only thumbnail-sized images are available. Full images are stored in file storage on the Azure blob to reduce data storage consumption.<br /><br />You can query the [Image Attribute Configuration (AttributeImageConfig)  table](reference/entities/attributeimageconfig.md) to find which image columns support full-sized images. More information: [Detect which image columns support full-sized images](image-column-data.md#detect-which-image-columns-support-full-sized-images)|
+|`IsPrimaryImage`|**Primary image column**|Whether the column is used to represent a table row in applications.<br /><br />If there's only one image column for a table, this value is set by default. When another image column already exists for a table, this value is ignored if set to true when creating a new image column. However, you can update the column after you create it to make the new column the primary image column.<br /><br />`IsPrimaryImage` can't be set to false, an exception is thrown if you try. You must choose another image column and set that `IsPrimaryImage` value to true.<br /><br />If you delete a column that is the current primary image column, another image column for the table is selected automatically to be the current primary image column.<br /><br />You can query the [Entity Image Configuration (EntityImageConfig)  table](reference/entities/entityimageconfig.md) to know which image columns are the primary images for any table. More information: [Primary Images](image-column-data.md#primary-images)|
 
 > [!NOTE]
 > The `MaxHeight` and `MaxWidth` values are always 144 and cannot be changed. These define the size of the thumbnail-sized images that are created for every image column value.
@@ -225,7 +227,7 @@ More information: [Query schema definitions](query-schema-definitions.md)
 
 # [Web API](#tab/webapi)
 
-This request will return all the image column definitions for the account table. The filtering is provided by specifying `/Microsoft.Dynamics.CRM.ImageAttributeMetadata` in the URL. More information: [Retrieving attributes](webapi/query-metadata-web-api.md#retrieving-attributes)
+This request returns all the image column definitions for the account table. The filtering is provided by specifying `/Microsoft.Dynamics.CRM.ImageAttributeMetadata` in the URL. More information: [Retrieving attributes](webapi/query-metadata-web-api.md#retrieving-attributes)
 
 **Request:**
 
@@ -252,7 +254,7 @@ OData-Version: 4.0
       "CanStoreFullImage": true,
       "MaxSizeInKB": 30720,
       "IsPrimaryImage": true,
-      "MetadataId": "53ba4b29-6a8c-ed11-81ad-000d3a9933c9"
+      "MetadataId": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee"
     }
   ]
 }
@@ -267,7 +269,7 @@ The same restrictions that apply to file columns also apply to image columns con
 ### See also
 
 [Use image column data](image-column-data.md)<br />
-[File columns](file-attributes.md)<br />
+[Work with file column definitions using code](file-attributes.md)<br />
 [Sample: Image Operations using Dataverse SDK for .NET](org-service/samples/set-retrieve-entity-images.md)<br />
 [Sample: Image Operations using Dataverse Web API](webapi/samples/image-operations.md)
 

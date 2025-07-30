@@ -2,8 +2,8 @@
 title: "Sample: Retrieve valid status transitions (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to retrieve valid state transitions." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/03/2022
-author: NHelgren
-ms.author: nhelgren
+author: mkannapiran
+ms.author: kamanick
 ms.reviewer: jdaly
 ms.topic: sample
 search.audienceType:
@@ -18,7 +18,7 @@ contributors:
 This sample shows how to retrieve valid state transitions regardless of whether custom state transitions have been defined for the table.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Retrieve valid status transitions sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/RetrieveValidTransitions)
+> [SDK for .NET: Retrieve valid status transitions sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/RetrieveValidTransitions)
 
 ## How to run this sample
 

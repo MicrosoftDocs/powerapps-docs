@@ -1,51 +1,50 @@
 ---
-title: "PublisherAddress table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the PublisherAddress table/entity."
-ms.date: 09/01/2023
-ms.service: "powerapps"
-ms.topic: "reference"
-ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "phecke"
-ms.author: "pehecke"
+title: "Publisher Address (PublisherAddress) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the Publisher Address (PublisherAddress) table/entity with Microsoft Dataverse."
+ms.topic: generated-reference
+author: phecke
+ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# PublisherAddress table/entity reference
-
-> [!NOTE]
-> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
+# Publisher Address (PublisherAddress) table/entity reference (Microsoft Dataverse)
 
 Address and shipping information. Used to store additional addresses for a publisher.
 
-
 ## Messages
 
-|Message|Web API Operation|SDK class or method|
-|-|-|-|
-|Create|POST /publisheraddresses<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE /publisheraddresses(*publisheraddressid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET /publisheraddresses(*publisheraddressid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET /publisheraddresses<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|Update|PATCH /publisheraddresses(*publisheraddressid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+The following table lists the messages for the Publisher Address (PublisherAddress) table.
+Messages represent operations that can be performed on the table. They may also be events.
+
+| Name <br />Is Event? |Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Create`<br />Event: False |`POST` /publisheraddresses<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `Delete`<br />Event: True |`DELETE` /publisheraddresses(*publisheraddressid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `Retrieve`<br />Event: True |`GET` /publisheraddresses(*publisheraddressid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveMultiple`<br />Event: True |`GET` /publisheraddresses<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
+| `Update`<br />Event: False |`PATCH` /publisheraddresses(*publisheraddressid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
+| `Upsert`<br />Event: False |`PATCH` /publisheraddresses(*publisheraddressid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
 
 ## Properties
 
-|Property|Value|
-|--------|-----|
-|CollectionSchemaName|PublisherAddresses|
-|DisplayCollectionName|Publisher Addresses|
-|DisplayName|Publisher Address|
-|EntitySetName|publisheraddresses|
-|IsBPFEntity|False|
-|LogicalCollectionName|publisheraddresses|
-|LogicalName|publisheraddress|
-|OwnershipType|None|
-|PrimaryIdAttribute|publisheraddressid|
-|PrimaryNameAttribute|name|
-|SchemaName|PublisherAddress|
+The following table lists selected properties for the Publisher Address (PublisherAddress) table.
 
-<a name="writable-attributes"></a>
+|Property|Value|
+| --- | --- |
+| **DisplayName** | **Publisher Address** |
+| **DisplayCollectionName** | **Publisher Addresses** |
+| **SchemaName** | `PublisherAddress` |
+| **CollectionSchemaName** | `PublisherAddresses` |
+| **EntitySetName** | `publisheraddresses`|
+| **LogicalName** | `publisheraddress` |
+| **LogicalCollectionName** | `publisheraddresses` |
+| **PrimaryIdAttribute** | `publisheraddressid` |
+| **PrimaryNameAttribute** |`name` |
+| **TableType** | `Standard` |
+| **OwnershipType** | `None` |
 
 ## Writable columns/attributes
 
@@ -81,766 +80,673 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 - [UTCOffset](#BKMK_UTCOffset)
 
-
 ### <a name="BKMK_AddressNumber"></a> AddressNumber
 
 |Property|Value|
-|--------|-----|
-|Description|Specifies which publisher address is applicable.|
-|DisplayName|Address Number|
-|Format|None|
+|---|---|
+|Description|**Specifies which publisher address is applicable.**|
+|DisplayName|**Address Number**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|addressnumber|
-|MaxValue|1000000000|
-|MinValue|0|
+|LogicalName|`addressnumber`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|1000000000|
+|MinValue|0|
 
 ### <a name="BKMK_AddressTypeCode"></a> AddressTypeCode
 
 |Property|Value|
-|--------|-----|
-|Description|Type of address for the publisher, such as billing, shipping, or primary address.|
-|DisplayName|Address Type|
+|---|---|
+|Description|**Type of address for the publisher, such as billing, shipping, or primary address.**|
+|DisplayName|**Address Type**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|addresstypecode|
+|LogicalName|`addresstypecode`|
 |RequiredLevel|None|
 |Type|Picklist|
+|DefaultFormValue|-1|
+|GlobalChoiceName|`publisheraddress_addresstypecode`|
 
 #### AddressTypeCode Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Bill To||
-|2|Ship To||
-|3|Primary||
-|4|Other||
-
-
+|Value|Label|
+|---|---|
+|1|**Bill To**|
+|2|**Ship To**|
+|3|**Primary**|
+|4|**Other**|
 
 ### <a name="BKMK_City"></a> City
 
 |Property|Value|
-|--------|-----|
-|Description|City name in the publisher address.|
-|DisplayName|City|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**City name in the publisher address.**|
+|DisplayName|**City**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|city|
-|MaxLength|80|
+|LogicalName|`city`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Active|
+|IsLocalizable|False|
+|MaxLength|80|
 
 ### <a name="BKMK_Country"></a> Country
 
 |Property|Value|
-|--------|-----|
-|Description|Country/region name in the publisher address.|
-|DisplayName|Country|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Country/region name in the publisher address.**|
+|DisplayName|**Country**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|country|
-|MaxLength|80|
+|LogicalName|`country`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|80|
 
 ### <a name="BKMK_County"></a> County
 
 |Property|Value|
-|--------|-----|
-|Description|County name in the publisher address.|
-|DisplayName|County|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**County name in the publisher address.**|
+|DisplayName|**County**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|county|
-|MaxLength|50|
+|LogicalName|`county`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Active|
+|IsLocalizable|False|
+|MaxLength|50|
 
 ### <a name="BKMK_Fax"></a> Fax
 
 |Property|Value|
-|--------|-----|
-|Description|Fax number for the publisher address.|
-|DisplayName|Fax|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Fax number for the publisher address.**|
+|DisplayName|**Fax**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|fax|
-|MaxLength|50|
+|LogicalName|`fax`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Inactive|
+|IsLocalizable|False|
+|MaxLength|50|
 
 ### <a name="BKMK_FreightTermsCode"></a> FreightTermsCode
 
 |Property|Value|
-|--------|-----|
-|Description|Freight terms for the publisher address.|
-|DisplayName|Freight Terms|
+|---|---|
+|Description|**Freight terms for the publisher address.**|
+|DisplayName|**Freight Terms**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|freighttermscode|
+|LogicalName|`freighttermscode`|
 |RequiredLevel|None|
 |Type|Picklist|
+|DefaultFormValue|-1|
+|GlobalChoiceName|`publisheraddress_freighttermscode`|
 
 #### FreightTermsCode Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|1|FOB||
-|2|No Charge||
-
-
+|Value|Label|
+|---|---|
+|1|**FOB**|
+|2|**No Charge**|
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the data import or data migration that created this record.|
-|DisplayName|Import Sequence Number|
-|Format|None|
+|---|---|
+|Description|**Unique identifier of the data import or data migration that created this record.**|
+|DisplayName|**Import Sequence Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|importsequencenumber|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`importsequencenumber`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_Latitude"></a> Latitude
 
 |Property|Value|
-|--------|-----|
-|Description|Latitude for the publisher address.|
-|DisplayName|Latitude|
+|---|---|
+|Description|**Latitude for the publisher address.**|
+|DisplayName|**Latitude**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|latitude|
+|LogicalName|`latitude`|
+|RequiredLevel|None|
+|Type|Double|
+|ImeMode|Disabled|
 |MaxValue|90|
 |MinValue|-90|
 |Precision|5|
-|RequiredLevel|None|
-|Type|Double|
-
 
 ### <a name="BKMK_Line1"></a> Line1
 
 |Property|Value|
-|--------|-----|
-|Description|First line for entering address information.|
-|DisplayName|Street 1|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**First line for entering address information.**|
+|DisplayName|**Street 1**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|line1|
-|MaxLength|50|
+|LogicalName|`line1`|
 |RequiredLevel|ApplicationRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Active|
+|IsLocalizable|False|
+|MaxLength|50|
 
 ### <a name="BKMK_Line2"></a> Line2
 
 |Property|Value|
-|--------|-----|
-|Description|Second line for entering address information.|
-|DisplayName|Street 2|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Second line for entering address information.**|
+|DisplayName|**Street 2**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|line2|
-|MaxLength|50|
+|LogicalName|`line2`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Active|
+|IsLocalizable|False|
+|MaxLength|50|
 
 ### <a name="BKMK_Line3"></a> Line3
 
 |Property|Value|
-|--------|-----|
-|Description|Third line for entering address information.|
-|DisplayName|Street 3|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Third line for entering address information.**|
+|DisplayName|**Street 3**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|line3|
-|MaxLength|50|
+|LogicalName|`line3`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Active|
+|IsLocalizable|False|
+|MaxLength|50|
 
 ### <a name="BKMK_Longitude"></a> Longitude
 
 |Property|Value|
-|--------|-----|
-|Description|Longitude for the publisher address.|
-|DisplayName|Longitude|
+|---|---|
+|Description|**Longitude for the publisher address.**|
+|DisplayName|**Longitude**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|longitude|
+|LogicalName|`longitude`|
+|RequiredLevel|None|
+|Type|Double|
+|ImeMode|Disabled|
 |MaxValue|180|
 |MinValue|-180|
 |Precision|5|
-|RequiredLevel|None|
-|Type|Double|
-
 
 ### <a name="BKMK_Name"></a> Name
 
 |Property|Value|
-|--------|-----|
-|Description|Name used to identify the publisher address.|
-|DisplayName|Address Name|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Name used to identify the publisher address.**|
+|DisplayName|**Address Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|name|
-|MaxLength|200|
+|LogicalName|`name`|
 |RequiredLevel|ApplicationRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|200|
 
 ### <a name="BKMK_ParentId"></a> ParentId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the parent object with which the publisher address is associated.|
-|DisplayName|Parent|
+|---|---|
+|Description|**Unique identifier of the parent object with which the publisher address is associated.**|
+|DisplayName|**Parent**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|parentid|
+|LogicalName|`parentid`|
 |RequiredLevel|SystemRequired|
-|Targets|publisher|
 |Type|Lookup|
-
+|Targets|publisher|
 
 ### <a name="BKMK_ParentIdTypeCode"></a> ParentIdTypeCode
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|Parent Object Type|
+|DisplayName|**Parent Object Type**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|parentidtypecode|
+|LogicalName|`parentidtypecode`|
 |RequiredLevel|None|
 |Type|EntityName|
-
 
 ### <a name="BKMK_PostalCode"></a> PostalCode
 
 |Property|Value|
-|--------|-----|
-|Description|ZIP Code or postal code in the publisher address.|
-|DisplayName|ZIP/Postal Code|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**ZIP Code or postal code in the publisher address.**|
+|DisplayName|**ZIP/Postal Code**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|postalcode|
-|MaxLength|20|
+|LogicalName|`postalcode`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Inactive|
+|IsLocalizable|False|
+|MaxLength|20|
 
 ### <a name="BKMK_PostOfficeBox"></a> PostOfficeBox
 
 |Property|Value|
-|--------|-----|
-|Description|Post office box number in the publisher address.|
-|DisplayName|Post Office Box|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Post office box number in the publisher address.**|
+|DisplayName|**Post Office Box**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|postofficebox|
-|MaxLength|20|
+|LogicalName|`postofficebox`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|20|
 
 ### <a name="BKMK_PrimaryContactName"></a> PrimaryContactName
 
 |Property|Value|
-|--------|-----|
-|Description|Name of the primary contact at the publisher address.|
-|DisplayName|Address Contact|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Name of the primary contact at the publisher address.**|
+|DisplayName|**Address Contact**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|primarycontactname|
-|MaxLength|150|
+|LogicalName|`primarycontactname`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|150|
 
 ### <a name="BKMK_PublisherAddressId"></a> PublisherAddressId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the publisher address.|
-|DisplayName|Address|
+|---|---|
+|Description|**Unique identifier of the publisher address.**|
+|DisplayName|**Address**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|publisheraddressid|
+|LogicalName|`publisheraddressid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_ShippingMethodCode"></a> ShippingMethodCode
 
 |Property|Value|
-|--------|-----|
-|Description|Method of shipment for the publisher address.|
-|DisplayName|Shipping Method|
+|---|---|
+|Description|**Method of shipment for the publisher address.**|
+|DisplayName|**Shipping Method**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|shippingmethodcode|
+|LogicalName|`shippingmethodcode`|
 |RequiredLevel|None|
 |Type|Picklist|
+|DefaultFormValue|-1|
+|GlobalChoiceName|`publisheraddress_shippingmethodcode`|
 
 #### ShippingMethodCode Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Default||
-
-
+|Value|Label|
+|---|---|
+|1|**Default**|
 
 ### <a name="BKMK_StateOrProvince"></a> StateOrProvince
 
 |Property|Value|
-|--------|-----|
-|Description|State or province in the publisher address.|
-|DisplayName|State/Province|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**State or province in the publisher address.**|
+|DisplayName|**State/Province**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|stateorprovince|
-|MaxLength|50|
+|LogicalName|`stateorprovince`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Active|
+|IsLocalizable|False|
+|MaxLength|50|
 
 ### <a name="BKMK_Telephone1"></a> Telephone1
 
 |Property|Value|
-|--------|-----|
-|Description|First telephone number for the publisher address.|
-|DisplayName|Main Phone|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**First telephone number for the publisher address.**|
+|DisplayName|**Main Phone**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|telephone1|
-|MaxLength|50|
+|LogicalName|`telephone1`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Inactive|
+|IsLocalizable|False|
+|MaxLength|50|
 
 ### <a name="BKMK_Telephone2"></a> Telephone2
 
 |Property|Value|
-|--------|-----|
-|Description|Second telephone number for the publisher address.|
-|DisplayName|Phone 2|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Second telephone number for the publisher address.**|
+|DisplayName|**Phone 2**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|telephone2|
-|MaxLength|50|
+|LogicalName|`telephone2`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Inactive|
+|IsLocalizable|False|
+|MaxLength|50|
 
 ### <a name="BKMK_Telephone3"></a> Telephone3
 
 |Property|Value|
-|--------|-----|
-|Description|Third telephone number for the publisher address.|
-|DisplayName|Telephone 3|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Third telephone number for the publisher address.**|
+|DisplayName|**Telephone 3**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|telephone3|
-|MaxLength|50|
+|LogicalName|`telephone3`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Inactive|
+|IsLocalizable|False|
+|MaxLength|50|
 
 ### <a name="BKMK_TimeZoneRuleVersionNumber"></a> TimeZoneRuleVersionNumber
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Time Zone Rule Version Number|
-|Format|None|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Time Zone Rule Version Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|timezoneruleversionnumber|
-|MaxValue|2147483647|
-|MinValue|-1|
+|LogicalName|`timezoneruleversionnumber`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-1|
 
 ### <a name="BKMK_UPSZone"></a> UPSZone
 
 |Property|Value|
-|--------|-----|
-|Description|United Parcel Service (UPS) zone for the address of the publisher.|
-|DisplayName|UPS Zone|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**United Parcel Service (UPS) zone for the address of the publisher.**|
+|DisplayName|**UPS Zone**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|upszone|
-|MaxLength|4|
+|LogicalName|`upszone`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|4|
 
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
 
 |Property|Value|
-|--------|-----|
-|Description|Time zone code that was in use when the record was created.|
-|DisplayName|UTC Conversion Time Zone Code|
-|Format|None|
+|---|---|
+|Description|**Time zone code that was in use when the record was created.**|
+|DisplayName|**UTC Conversion Time Zone Code**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|utcconversiontimezonecode|
-|MaxValue|2147483647|
-|MinValue|-1|
+|LogicalName|`utcconversiontimezonecode`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-1|
 
 ### <a name="BKMK_UTCOffset"></a> UTCOffset
 
 |Property|Value|
-|--------|-----|
-|Description|UTC offset for the address. This is the difference between local time and standard Coordinated Universal Time.|
-|DisplayName|UTC Offset|
-|Format|TimeZone|
+|---|---|
+|Description|**UTC offset for the address. This is the difference between local time and standard Coordinated Universal Time.**|
+|DisplayName|**UTC Offset**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|utcoffset|
-|MaxValue|1500|
-|MinValue|-1500|
+|LogicalName|`utcoffset`|
 |RequiredLevel|None|
 |Type|Integer|
+|MaxValue|1500|
+|MinValue|-1500|
 
-<a name="read-only-attributes"></a>
 
 ## Read-only columns/attributes
 
-These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** and **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [CreatedBy](#BKMK_CreatedBy)
-- [CreatedByName](#BKMK_CreatedByName)
-- [CreatedByYomiName](#BKMK_CreatedByYomiName)
 - [CreatedOn](#BKMK_CreatedOn)
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
-- [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
-- [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
 - [ModifiedBy](#BKMK_ModifiedBy)
-- [ModifiedByName](#BKMK_ModifiedByName)
-- [ModifiedByYomiName](#BKMK_ModifiedByYomiName)
 - [ModifiedOn](#BKMK_ModifiedOn)
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
-- [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
-- [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
 - [VersionNumber](#BKMK_VersionNumber)
-
 
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user who created the publisher address.|
-|DisplayName|Created By|
+|---|---|
+|Description|**Unique identifier of the user who created the publisher address.**|
+|DisplayName|**Created By**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdby|
+|LogicalName|`createdby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedByName"></a> CreatedByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedByYomiName"></a> CreatedByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_CreatedOn"></a> CreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when the publisher address was created.|
-|DisplayName|Created On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Date and time when the publisher address was created.**|
+|DisplayName|**Created On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdon|
+|LogicalName|`createdon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_CreatedOnBehalfBy"></a> CreatedOnBehalfBy
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the delegate user who created the publisher address.|
-|DisplayName|Created By (Delegate)|
+|---|---|
+|Description|**Unique identifier of the delegate user who created the publisher address.**|
+|DisplayName|**Created By (Delegate)**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdonbehalfby|
+|LogicalName|`createdonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedOnBehalfByName"></a> CreatedOnBehalfByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedOnBehalfByYomiName"></a> CreatedOnBehalfByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user who last modified the publisher address.|
-|DisplayName|Modified By|
+|---|---|
+|Description|**Unique identifier of the user who last modified the publisher address.**|
+|DisplayName|**Modified By**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedby|
+|LogicalName|`modifiedby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedByName"></a> ModifiedByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedByYomiName"></a> ModifiedByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_ModifiedOn"></a> ModifiedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when the publisher address was last modified.|
-|DisplayName|Modified On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Date and time when the publisher address was last modified.**|
+|DisplayName|**Modified On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedon|
+|LogicalName|`modifiedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_ModifiedOnBehalfBy"></a> ModifiedOnBehalfBy
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the delegate user who modified the publisher address.|
-|DisplayName|Modified By (Delegate)|
+|---|---|
+|Description|**Unique identifier of the delegate user who modified the publisher address.**|
+|DisplayName|**Modified By (Delegate)**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedonbehalfby|
+|LogicalName|`modifiedonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedOnBehalfByName"></a> ModifiedOnBehalfByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedOnBehalfByYomiName"></a> ModifiedOnBehalfByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|versionnumber|
-|MaxValue|9223372036854775807|
-|MinValue|-9223372036854775808|
+|LogicalName|`versionnumber`|
 |RequiredLevel|None|
 |Type|BigInt|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
 
-<a name="manytoone"></a>
+## Many-to-One relationships
 
-## Many-To-One Relationships
+These relationships are many-to-one. Listed by **SchemaName**.
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
-
-- [lk_publisheraddressbase_modifiedonbehalfby](#BKMK_lk_publisheraddressbase_modifiedonbehalfby)
-- [lk_publisheraddressbase_createdonbehalfby](#BKMK_lk_publisheraddressbase_createdonbehalfby)
-- [Publisher_PublisherAddress](#BKMK_Publisher_PublisherAddress)
 - [lk_publisheraddressbase_createdby](#BKMK_lk_publisheraddressbase_createdby)
+- [lk_publisheraddressbase_createdonbehalfby](#BKMK_lk_publisheraddressbase_createdonbehalfby)
 - [lk_publisheraddressbase_modifiedby](#BKMK_lk_publisheraddressbase_modifiedby)
-
-
-### <a name="BKMK_lk_publisheraddressbase_modifiedonbehalfby"></a> lk_publisheraddressbase_modifiedonbehalfby
-
-See the [lk_publisheraddressbase_modifiedonbehalfby](systemuser.md#BKMK_lk_publisheraddressbase_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_publisheraddressbase_createdonbehalfby"></a> lk_publisheraddressbase_createdonbehalfby
-
-See the [lk_publisheraddressbase_createdonbehalfby](systemuser.md#BKMK_lk_publisheraddressbase_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_Publisher_PublisherAddress"></a> Publisher_PublisherAddress
-
-See the [Publisher_PublisherAddress](publisher.md#BKMK_Publisher_PublisherAddress) one-to-many relationship for the [publisher](publisher.md) table/entity.
+- [lk_publisheraddressbase_modifiedonbehalfby](#BKMK_lk_publisheraddressbase_modifiedonbehalfby)
+- [Publisher_PublisherAddress](#BKMK_Publisher_PublisherAddress)
 
 ### <a name="BKMK_lk_publisheraddressbase_createdby"></a> lk_publisheraddressbase_createdby
 
-See the [lk_publisheraddressbase_createdby](systemuser.md#BKMK_lk_publisheraddressbase_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+One-To-Many Relationship: [systemuser lk_publisheraddressbase_createdby](systemuser.md#BKMK_lk_publisheraddressbase_createdby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdby`|
+|ReferencingEntityNavigationPropertyName|`createdby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_publisheraddressbase_createdonbehalfby"></a> lk_publisheraddressbase_createdonbehalfby
+
+One-To-Many Relationship: [systemuser lk_publisheraddressbase_createdonbehalfby](systemuser.md#BKMK_lk_publisheraddressbase_createdonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`createdonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_lk_publisheraddressbase_modifiedby"></a> lk_publisheraddressbase_modifiedby
 
-See the [lk_publisheraddressbase_modifiedby](systemuser.md#BKMK_lk_publisheraddressbase_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+One-To-Many Relationship: [systemuser lk_publisheraddressbase_modifiedby](systemuser.md#BKMK_lk_publisheraddressbase_modifiedby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedby`|
+|ReferencingEntityNavigationPropertyName|`modifiedby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_publisheraddressbase_modifiedonbehalfby"></a> lk_publisheraddressbase_modifiedonbehalfby
+
+One-To-Many Relationship: [systemuser lk_publisheraddressbase_modifiedonbehalfby](systemuser.md#BKMK_lk_publisheraddressbase_modifiedonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`modifiedonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_Publisher_PublisherAddress"></a> Publisher_PublisherAddress
+
+One-To-Many Relationship: [publisher Publisher_PublisherAddress](publisher.md#BKMK_Publisher_PublisherAddress)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`publisher`|
+|ReferencedAttribute|`publisherid`|
+|ReferencingAttribute|`parentid`|
+|ReferencingEntityNavigationPropertyName|`parentid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `Cascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
-<xref href="Microsoft.Dynamics.CRM.publisheraddress?text=publisheraddress EntityType" />
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
+[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
+<xref:Microsoft.Dynamics.CRM.publisheraddress?displayProperty=fullName>

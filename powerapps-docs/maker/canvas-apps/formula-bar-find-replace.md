@@ -3,10 +3,10 @@ title: Use Find and Replace in the formula bar
 description: Learn how to use the find and Replace to search for strings and make changes to one or more matches.
 author: TashasEv
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 12/13/2021
+ms.date: 12/11/2023
 ms.subservice: canvas-maker
 ms.author: tashas
 search.audienceType: 

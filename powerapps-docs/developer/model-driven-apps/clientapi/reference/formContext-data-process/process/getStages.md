@@ -1,8 +1,8 @@
 ---
-title: "getStages (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getStages (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the getStages method.
-author: HemantGaur
-ms.author: hemantg
+author: matthidinger
+ms.author: mahiding
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -13,8 +13,6 @@ contributors:
   - JimDaly
 ---
 # getStages (Client API reference)
-
-
 
 [!INCLUDE[./includes/getStages-description.md](./includes/getStages-description.md)]
 

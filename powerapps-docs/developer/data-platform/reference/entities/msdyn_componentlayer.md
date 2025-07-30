@@ -1,54 +1,49 @@
 ---
-title: "msdyn_componentlayer table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the msdyn_componentlayer table/entity."
-ms.date: 09/01/2023
-ms.service: "powerapps"
-ms.topic: "reference"
-ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "phecke"
-ms.author: "pehecke"
+title: "Component Layer (msdyn_componentlayer) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the Component Layer (msdyn_componentlayer) table/entity with Microsoft Dataverse."
+ms.topic: generated-reference
+author: phecke
+ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# msdyn_componentlayer table/entity reference
+# Component Layer (msdyn_componentlayer) table/entity reference (Microsoft Dataverse)
 
-> [!NOTE]
-> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
-
-
-
-**Added by**: Microsoft Dynamics 365 Component History APIs Solution
 
 
 ## Messages
 
-|Message|Web API Operation|SDK class or method|
-|-|-|-|
-|Create|POST /msdyn_componentlayers<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE /msdyn_componentlayers(*msdyn_componentlayerid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET /msdyn_componentlayers(*msdyn_componentlayerid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
-|RetrieveMultiple|GET /msdyn_componentlayers<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|Update|PATCH /msdyn_componentlayers(*msdyn_componentlayerid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+The following table lists the messages for the Component Layer (msdyn_componentlayer) table.
+Messages represent operations that can be performed on the table. They may also be events.
+
+| Name <br />Is Event? |Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `Create`<br />Event: True |`POST` /msdyn_componentlayers<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `Delete`<br />Event: True |`DELETE` /msdyn_componentlayers(*msdyn_componentlayerid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Retrieve`<br />Event: True |`GET` /msdyn_componentlayers(*msdyn_componentlayerid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveEntityChanges`<br />Event: True | |<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
+| `RetrieveMultiple`<br />Event: True |`GET` /msdyn_componentlayers<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
+| `Update`<br />Event: True |`PATCH` /msdyn_componentlayers(*msdyn_componentlayerid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
+| `Upsert`<br />Event: False |`PATCH` /msdyn_componentlayers(*msdyn_componentlayerid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
 
 ## Properties
 
-|Property|Value|
-|--------|-----|
-|CollectionSchemaName|msdyn_componentlayers|
-|DisplayCollectionName|Component Layers|
-|DisplayName|Component Layer|
-|EntitySetName|msdyn_componentlayers|
-|IsBPFEntity|False|
-|LogicalCollectionName|msdyn_componentlayers|
-|LogicalName|msdyn_componentlayer|
-|OwnershipType|OrganizationOwned|
-|PrimaryIdAttribute|msdyn_componentlayerid|
-|PrimaryNameAttribute|msdyn_name|
-|SchemaName|msdyn_componentlayer|
+The following table lists selected properties for the Component Layer (msdyn_componentlayer) table.
 
-<a name="writable-attributes"></a>
+|Property|Value|
+| --- | --- |
+| **DisplayName** | **Component Layer** |
+| **DisplayCollectionName** | **Component Layers** |
+| **SchemaName** | `msdyn_componentlayer` |
+| **CollectionSchemaName** | `msdyn_componentlayers` |
+| **EntitySetName** | `msdyn_componentlayers`|
+| **LogicalName** | `msdyn_componentlayer` |
+| **LogicalCollectionName** | `msdyn_componentlayers` |
+| **PrimaryIdAttribute** | `msdyn_componentlayerid` |
+| **PrimaryNameAttribute** |`msdyn_name` |
+| **TableType** | `Virtual` |
+| **OwnershipType** | `OrganizationOwned` |
 
 ## Writable columns/attributes
 
@@ -66,183 +61,190 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [msdyn_solutioncomponentname](#BKMK_msdyn_solutioncomponentname)
 - [msdyn_solutionname](#BKMK_msdyn_solutionname)
 
-
 ### <a name="BKMK_msdyn_changes"></a> msdyn_changes
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|Changes|
-|FormatName|Text|
-|IsLocalizable|False|
+|DisplayName|**Changes**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_changes|
-|MaxLength|1073741823|
+|LogicalName|`msdyn_changes`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1073741823|
 
 ### <a name="BKMK_msdyn_children"></a> msdyn_children
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|Children|
-|FormatName|Text|
-|IsLocalizable|False|
+|DisplayName|**Children**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_children|
-|MaxLength|100|
+|LogicalName|`msdyn_children`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_msdyn_componentid"></a> msdyn_componentid
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|Component Id|
-|FormatName|Text|
-|IsLocalizable|False|
+|DisplayName|**Component Id**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_componentid|
-|MaxLength|100|
+|LogicalName|`msdyn_componentid`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_msdyn_componentjson"></a> msdyn_componentjson
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|Component Json|
-|FormatName|Text|
-|IsLocalizable|False|
+|DisplayName|**Component Json**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_componentjson|
-|MaxLength|1073741823|
+|LogicalName|`msdyn_componentjson`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1073741823|
 
 ### <a name="BKMK_msdyn_componentlayerId"></a> msdyn_componentlayerId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for entity instances|
-|DisplayName|Component Layer|
+|---|---|
+|Description|**Unique identifier for entity instances**|
+|DisplayName|**Component Layer**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|msdyn_componentlayerid|
+|LogicalName|`msdyn_componentlayerid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_msdyn_endtime"></a> msdyn_endtime
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
+|---|---|
 |Description||
-|DisplayName|Overwrite Time|
-|Format|DateAndTime|
+|DisplayName|**Overwrite Time**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_overwritetime|
+|LogicalName|`msdyn_overwritetime`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|True|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Auto|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_msdyn_name"></a> msdyn_name
 
 |Property|Value|
-|--------|-----|
-|Description|The name of the component.|
-|DisplayName|Name|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**The name of the component.**|
+|DisplayName|**Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_name|
-|MaxLength|100|
+|LogicalName|`msdyn_name`|
 |RequiredLevel|ApplicationRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_msdyn_order"></a> msdyn_order
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|Order|
-|Format|None|
+|DisplayName|**Order**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_order|
-|MaxValue|500|
-|MinValue|0|
+|LogicalName|`msdyn_order`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|500|
+|MinValue|0|
 
 ### <a name="BKMK_msdyn_publishername"></a> msdyn_publishername
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|Publisher Name|
-|FormatName|Text|
-|IsLocalizable|False|
+|DisplayName|**Publisher Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_publishername|
-|MaxLength|100|
+|LogicalName|`msdyn_publishername`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_msdyn_solutioncomponentname"></a> msdyn_solutioncomponentname
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|Solution Component Name|
-|FormatName|Text|
-|IsLocalizable|False|
+|DisplayName|**Solution Component Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_solutioncomponentname|
-|MaxLength|100|
+|LogicalName|`msdyn_solutioncomponentname`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_msdyn_solutionname"></a> msdyn_solutionname
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|Solution Name|
-|FormatName|Text|
-|IsLocalizable|False|
+|DisplayName|**Solution Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_solutionname|
-|MaxLength|100|
+|LogicalName|`msdyn_solutionname`|
 |RequiredLevel|None|
 |Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
+
 
 
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
-<xref href="Microsoft.Dynamics.CRM.msdyn_componentlayer?text=msdyn_componentlayer EntityType" />
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
+[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
+<xref:Microsoft.Dynamics.CRM.msdyn_componentlayer?displayProperty=fullName>

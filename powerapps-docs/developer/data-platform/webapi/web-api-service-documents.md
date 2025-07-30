@@ -1,9 +1,9 @@
 ---
 title: Web API Service Documents
 description: Describes OData service documents you can use to understand the Dataverse Web API capabilities available in your environment.
-ms.date: 04/06/2022
-author: divkamath
-ms.author: dikamath
+ms.date: 01/10/2024
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 ms.service: powerapps
 applies_to: 
@@ -19,14 +19,59 @@ OData endpoints provide service documents that describe the capabilities of the 
 
 ## Service document
 
-Perform a `GET` request on Web API endpoint to see the service document for your environment. If you haven't set up a Postman environment, you can just paste the Web API endpoint into your browser.
+Perform a `GET` request on Web API endpoint to see the service document for your environment. 
 
-Your Web API endpoint looks something like this: `https://yourorg.api.crm.dynamics.com/api/data/v9.2/`.
+Your Web API endpoint looks something like this: `https://yourorg.api.crm.dynamics.com/api/data/v9.2/`. This part: `yourorg.api.crm`, depends on your environment. See [View developer resources](../view-download-developer-resources.md) to learn how to find it.
 
-> [!NOTE]
-> If you are using the recommended Postman environment, simply use the `{{webapiurl}}` environment variable. More information: [Set up a Postman environment](setup-postman-environment.md).
->
-> If you are not using Postman, you can install a browser extension to format the JSON returned and make it easier to read. If you are using Microsoft Edge, search for extensions using [JSON formatter](https://microsoftedge.microsoft.com/addons/search/JSON%20formatter).
+### [Using Insomnia](#tab/insomnia)
+
+If you are using [Insomnia with the recommended environment settings](insomnia.md), just use the `_.webapiurl` environment variable.
+
+### [Using PowerShell with Visual Studio Code](#tab/ps)
+
+If you have installed the [Prerequisites](quick-start-ps.md#prerequisites) for [Quick Start Web API with PowerShell and Visual Studio Code](quick-start-ps.md), you can view the service document in Visual Studio Code using this PowerShell script after editing the `$environmentUrl` variable.
+
+```powershell
+$environmentUrl = 'https://yourorg.crm.dynamics.com/' # change this
+## Login if not already logged in
+if ($null -eq (Get-AzTenant -ErrorAction SilentlyContinue)) {
+   Connect-AzAccount | Out-Null
+}
+
+# Get an access token
+$secureToken = (Get-AzAccessToken `
+   -ResourceUrl $environmentUrl `
+   -AsSecureString).Token
+
+# Convert the secure token to a string
+$token = ConvertFrom-SecureString `
+   -SecureString $secureToken `
+   -AsPlainText
+
+
+# Common headers
+$baseHeaders = @{
+   'Authorization'    = 'Bearer ' + $token
+   'Accept'           = 'application/json'
+   'OData-MaxVersion' = '4.0'
+   'OData-Version'    = '4.0'
+}
+# View service document
+Invoke-RestMethod -Uri ($environmentUrl + 'api/data/v9.2/') -Method 'Get' -Headers $baseHeaders
+| ConvertTo-Json | Out-File -FilePath "service-document.json"
+code "service-document.json"
+```
+
+If this doesn't work, see the [Troubleshooting](quick-start-ps.md#troubleshooting) steps in [Quick Start Web API with PowerShell and Visual Studio Code](quick-start-ps.md)
+
+### [Using your browser](#tab/browser)
+
+You can sent `GET` requests using your browser. Type the Web API endpoint URL in your browser address bar.
+
+> [!TIP]
+> Install a browser extension to format the JSON returned and make it easier to read, then  If you are using Microsoft Edge, search for extensions using [JSON formatter](https://microsoftedge.microsoft.com/addons/search/JSON%20formatter).
+
+---
 
 You should see results like this:
 
@@ -50,16 +95,19 @@ You should see results like this:
 The service document provides a list of all the *EntitySets* available in your environment. An EntitySet is the name of a resource that refers to a table in Dataverse. You'll use the entity set name in the URL to perform operations on the data in a specific table.
 
 > [!TIP]
-> Use `Ctrl+F` on the results of this to find the correct entity set name.
+> Use <kbd>Ctrl+F</kbd> on the results of this document to find the correct entity set name.
 
 ## Entity set name
 
-Always use the entity set name rather than the logical collection name.
+Always use the entity set name rather than the logical collection name. By default, the entity set name matches the table [EntityMetadata.LogicalCollectionName](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.LogicalCollectionName) property value, but you shouldn't depend on this.
 
-> [!NOTE]
-> By default, the entity set name matches the table <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.LogicalCollectionName> property value, but you shouldn't depend on this.
 
-If you have a custom table that you want to address using a different entity set name, you can update the table <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.EntitySetName> property value to use a different name. You should only change the `EntitySetName` of a table when you create it and before any code is written using the table.
+## Changing the entity set name
+
+If you have a custom table that you want to address using a different entity set name, you can update the table [EntityMetadata.EntitySetName](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.EntitySetName) property value to use a different name. [Learn about table properties you can change](../customize-entity-metadata.md#editable-table-properties)
+
+> [!IMPORTANT]
+> You should only change the `EntitySetName` of a table when you create it and before any code is written using the table. It will break any code that used the old name.
 
 <a name="bkmk_csdl"></a>
 
@@ -70,6 +118,8 @@ Append `$metadata` to the Web API endpoint to retrieve the Common Schema Definit
 For example: `https://yourorg.api.crm.dynamics.com/api/data/v9.2/$metadata`
 
 This XML document describes all the tables and operations that you can use in your environment.
+
+You can download the CSDL $metadata document using Visual Studio Code and Powershell using [these instructions](use-ps-and-vscode-web-api.md#download-the-dataverse-web-api-csdl-metadata-document).
 
 > [!IMPORTANT]
 > This document is the source of truth for everything related to Web API. You will want to reference it frequently. Use `Ctrl+F` on this document to locate the specific `EntityType`, `Action`, `Function`, `ComplexType`, or `EnumType` that you will use. The names are case sensitive.

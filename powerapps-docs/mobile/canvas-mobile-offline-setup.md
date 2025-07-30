@@ -1,13 +1,13 @@
 ---
-title: Set up mobile offline for canvas apps (preview)
+title: Set up mobile offline for canvas apps 
 description: Learn how to set up canvas apps for use offline on mobile devices in Microsoft Power Apps.
-ms.date: 10/11/2023
+ms.date: 03/19/2025
 ms.topic: how-to
 ms.subservice: mobile
 ms.component: pa-user
 author: trdehove
 ms.author: trdehove
-ms.reviewer: sericks
+ms.reviewer: smurkute
 search.audienceType: 
   - enduser
 searchScope:
@@ -15,30 +15,22 @@ searchScope:
 ms.custom: bap-template
 ---
 
-# Set up mobile offline for canvas apps (preview)
 
-[This article is prerelease documentation and is subject to change.]
+# Set up mobile offline for canvas apps
+
 
 Turn on offline mode in your canvas app if users need to work without worrying about their Internet connection.
 
-> [!IMPORTANT]
-> [!INCLUDE [preview](../includes/cc-preview-features-definition.md)]
->
-> This feature is in the process of rolling out and may not be available in your region yet.
-
 ## Prerequisites
 
-- You must have version 3.23052 or later of Power Apps Studio and version 3.23053 or later of the Power Apps mobile app.
+- You must have the Environment Maker, System Administrator, or System Customizer role to set up offline mode for canvas apps. These roles have create, read, write, delete, and share privileges on **Canvas App**, **Mobile offline profile**, and **Sync Error** tables. [Learn about predefined security roles](../maker/model-driven-apps/share-model-driven-app.md#about-predefined-security-roles).
 
-- [The canvas app must be in a solution](../maker/canvas-apps/add-app-solution.md).
+- Users with the Basic User role can't open an offline application. You must create a custom security role with read privileges on **Canvas App**, **Mobile offline profile**, and **Sync Error** tables.
 
-- The canvas app must use Dataverse data only.
+- If you already have a custom security role, make sure it grants read privileges on **Canvas App**, **Mobile offline profile**, and **Sync Error** tables. Learn about [Create or edit a security role to manage access](/power-platform/admin/create-edit-security-role).
 
-- You must have the Environment Maker, System Administrator, or System Customizer role to set up offline mode for canvas apps. These roles have create, read, write, delete, and share privileges on `Canvas App` and `Mobile offline profile` tables. [Learn about predefined security roles](../maker/model-driven-apps/share-model-driven-app.md#about-predefined-security-roles).
-
-- Users with Basic User role can't open an offline application. You must create a custom security role with read privileges on `Canvas App` and `Mobile offline profile` tables.
-
-- If you already have a custom security role, make sure it grants read privileges on `Canvas App` and `Mobile offline profile` tables. [Learn about miscellaneous privileges](/power-platform/admin/miscellaneous-privileges).
+> [!NOTE]
+> It's recommended that the [canvas app is in a solution](../maker/canvas-apps/add-app-solution.md). The offline profile **App usage** field in the [Power Platform admin center](https://admin.powerplatform.microsoft.com/) (**Environements** > _select an environment_ > **Settings** > **User + permissions** > **Mobile configuration**) only applies to apps within a solution.  
 
 ## Optimize your app for mobile offline
 
@@ -46,6 +38,8 @@ Mobile apps run on small screens with limited connectivity. Before you set up of
 
 Follow these best practices when you build an app for mobile offline use:
 
+- Performance is critical when you run an app on mobile. For more information about creating performant canvas apps, see [Overview of creating performant apps](../maker/canvas-apps/create-performant-apps-overview.md).
+    
 - Identify the on-the-go scenarios that are functionally related, such as tasks that are performed by users who work in the field.
 
 - Reduce the complexity of your app by limiting the number of tables that need to be downloaded. Sometimes it's better to have two apps instead of one.
@@ -54,7 +48,7 @@ Follow these best practices when you build an app for mobile offline use:
 
 ## Turn on offline capability for tables
 
-Tables that your offline-first app uses must have offline capability turned on. Some built-in tables have it by default. Some tables can't be used offline. However, you can turn on offline capability for any new, custom table.
+Tables included in an offline app must be configured for offline use. Some built-in tables have it by default. Some tables can't be used offline. However, you can turn on offline capability for any new, custom table.
 
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. In the left side panel, select **Tables**.
@@ -68,36 +62,35 @@ Tables that your offline-first app uses must have offline capability turned on. 
 
 ## Turn on offline capability for your app
 
-1. In [Power Apps studio](../maker/canvas-apps/power-apps-studio.md), in the left side panel, select **Apps**.
+1. In [Power Apps Studio](../maker/canvas-apps/power-apps-studio.md), in the left side panel, select **Apps**.
 1. Select your canvas app, and then select **Edit**.
 1. Select **Settings**.
-1. Select **Upcoming features**, and then select the **Preview** tab.
-1. Turn on the **Dataverse offline** option.
 1. Select **General**.
-1. Turn on the **Can be used offline (Preview)** option.
+1. Turn on the **Can be used offline** option.
+
+    If you don't see the **Can be used offline** option, make sure the app is [in a solution](../maker/canvas-apps/add-app-solution.md).
+
 1. Select an offline profile. You have two options:
 
-    - Use an autogenerated profile. This setting downloads the tables that are used in your app and is the recommended option.
-    - [Create a custom profile](#create-a-mobile-offline-profile), select the **Refresh** icon to see your new profile in the list, and then select it.
+    - **Autogenerated profile**: This setting downloads all the tables used in your app automatically. Autogenerated profiles are a starting point to create an offline profile and help makers validate their offline data. These profiles can be resource-intensive as they don't compute optimal filters for each table or assess the amount of data the app must download offline. App makers need to review and refine these profiles based on their use case. 
 
-        :::image type="content" source="media/can-be-used-offline.png" alt-text="Screenshot of app settings, with the Can be used offline option and offline profile list highlighted.":::
-
-        If you don't see the **Can be used offline** option, make sure the app is [in a solution](../maker/canvas-apps/add-app-solution.md).
-
+    - **Custom mobile profile**: Custom offline profiles let makers add only relevant tables, limit data usage and include filters based on their needs and best practices. These profiles offer flexibility and control, enhancing the user experience by downloading relevant data, improving sync times, and boosting query performance. After [Creating a custom mobile offline profile](#create-a-custom-mobile-offline-profile-with-admin-rights), select the Refresh icon to see your new profile in the list, and then select it.
+       
 1. Close the **Settings** window, and then save and publish your app.
 
-A [page that's based on the **Offline** template](#create-an-offline-canvas-app) is automatically inserted in the app. The page contains an icon that uses the [Connection](/power-platform/power-fx/reference/signals#connection) Power Fx function to reflect the app's [offline sync status](canvas-mobile-offline-working.md#sync-status-icons). You can use it as-is or customize it, as appropriate.
+A page that's based on the [Offline template](canvas-mobile-offline-setup.md#using-the-offline-template-and-offline-status-icon) is automatically inserted in the app. The page contains an icon that uses the [Connection](/power-platform/power-fx/reference/signals#connection) Power Fx function to reflect the app's [offline sync status](canvas-mobile-offline-working.md#sync-status-icons). You can use it as-is or customize it, as appropriate.
 
 > [!NOTE]
-> If you're turning on offline capability for a brand-new canvas app, make sure the default first screen is based on the **Offline** template.
+> - You can use the same, offline profile in different canvas apps. The users can use the apps and share the same, offline profile in disconnected mode. The updates done in one app are reflected in the other apps since the apps share the same, local storage with this set up. 
+> - ALM isn't currently supported for autogenerated profiles.
+> - If your organization uses ALM and you're moving your app between environments, ensure that your offline profile is tested for all use cases in the target environment.
 
-## Create a mobile offline profile
+
+## Create a custom mobile offline profile (with admin rights)
 
 If the automatically generated offline profile doesn't meet your needs, create your own. [Learn about guidelines for offline profiles](mobile-offline-guidelines.md).
 
 You need to publish your new offline profile before you can select it in your canvas app's settings. If you edit and publish an offline profile, you must also publish any canvas apps that use it.
-
-### Create an offline profile (with admin rights)
 
 1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/) using an admin account.
 
@@ -112,55 +105,56 @@ You need to publish your new offline profile before you can select it in your ca
 1. Enter a name and description, and then select **Create**.
 
 1. After the profile is created, select it to continue editing it.
+  
+### Add a table to an offline profile and apply filters
+
+Applying an appropriate filter for each of the tables configured in the offline profile is critical to limiting the amount of data that downloads on users' devices.
+
+Be sure that you configure at least one of the profile rules for each table to download its data. 
+
+|Customization |Recommendation|  
+|-------------|---------|  
+|Organization rows - if selected, then select at least one of these options:<br><br>- **User's rows**<br>- **Team rows**<br>- **Business unit rows**  |	If you want to define this filter, then you have to pick at least one of the given options. It's highly recommended to not have a business unit-level filter for a table, unless there's a strong justification. It's recommended for a master data scenario with a small data set, like country codes. |
+|All rows|	If you select this filter, you can't define any other filter rules.|
+|Related rows only | Be sure that the related table has been added to the offline profile.|
+|Custom | You can define a custom filter up to three levels deep. |
+
+Keep in mind that you can have 15 related tables in a custom filter. You can also have 15 relationships. The 15-relationships limit is transitive, meaning if table B has N relationships, and you add a reference to table B in table A, then it increases the relationship count of A by N+1; one plus the N already in table B. This limit is per profile item for a table in the profile.
 
 1. In the **Data available offline** section, select **Add table**.
 
-1. Select a table from the list. Only tables that can be set for offline use appear in the list.
+1. Select a table, and then define the filters.
 
 1. Select **Next**.
+   
+1. Set the following filters:
+   
+    1. Choose the row that you want to make available offline. For the **Custom** option, use the [expression builder](../maker/model-driven-apps/create-edit-view-filters.md) to set up advanced conditions.
 
-1. Select a filter based on the [table's ownership type](../maker/common-data-service/types-of-entities.md).
-
-    | Table ownership type | Available filter options for data download |
-    |----------------------|-------------------------|
-    | User or team | <ul><li>**Download related rows only**: Make the table's related data available offline. If you don't set any relationships, no rows in this table are available.</br></li></br><li>**All rows**: Make all rows in this table available offline.</br></li></br><li>**Other data filter**: Make only the specified rows in this table available offline. Select from the following options:</br></br><ul><li>**Download user rows**: Make only your rows available offline.</br></li></br><li>**Download team rows**: Make your team's rows available offline.</br></li></br><li>**Download my business unit's rows**: Make your business unit's rows available offline.</br></li></br></ul></li></ul> |
-    | Organization | <ul><li>**Download related rows only**: Make the table's related data available offline. If you don't set any relationships, no rows for this table are available.</br></li></br><li>**All rows**: Make all rows in this table available offline.</br></li></ul> |
-    | Business | <ul><li>**Download related data only**: Make the table's related data available offline. If you don't set any relationships, no rows for this table are available.</br></li></br><li>**All rows**: Make all rows in this table available offline.</br></li><br><li>**Other rows**: Make only the specified rows in this table available offline. Select the following option:</br></blockquote></br><ul><li>**Download my business unit's rows**: Make your business unit's rows available offline.</br></li></ul></li></ul> |
-    | None | <ul><li>**Download related rows only**: Make the table's related data available offline. If you don't set any relationships, no rows for this table are available.</br></li></ul> |
-
-    If you select **Custom**, you can define a custom filter up to three levels deep with the following rules.
-
-    |Rules                      |  &nbsp;                      |  &nbsp;                 |
-    |-------------------------------|----------------------------|--------------------------------|
-    | equal                         | not equal                  | gt – greater than              |
-    | ge – greater than or equal to | le – less than or equal to | lt – less than                 |
-    | like                          | not-like                   | in                             |
-    | not-in                        | null                       | not-null                       |
-    | eq-userid                     | ne-userid                  | eq-userteams                   |
-    | eq-useroruserteams            | eq-useroruserhierarchy     | eq-useroruserhierarchyandteams |
-    | eq-businessid                 | ne-businessid              | eq-userlanguage                |
-    | begins-with                   | not-begin-with             | ends-with                      |
-    | not-end-with                  |                            |                                |
-
-1. In the **Include \[table name\] records related to these tables** section, select the related table relationships. You must have added the table that you want to create the relationship with. For example, if you want to add a relationship between the `Account` and `Contact` tables, then you need to add both tables to the mobile offline profile.
-
-    For example, if you select **Contact \| Field name: Primary Contact**, then for every contact, the system also downloads the account that's related to it.
-
-    :::image type="content" source="media/include-account-records.png" alt-text="Screenshot of edit options for the Account table, with Include Account records related to these tables highlighted.":::
+    1. **Relationships** lists the different relationships available between the current table and other tables added in the offline profile. Selecting a relationship ensures that related rows following that relationship are downloaded and made available offline. You can only have up to 15 related tables in a profile. If you exceed the limit, you get an error and won't be able to publish the offline profile.
+      
+    1. **Sync interval** defines the sync frequency to be applied on the device that syncs with the data with the server. If a table's data doesn't change frequently, like a catalog or a product table, you might want to focus on only syncing data when necessary, such as refreshing only once a day.
 
 1. Select **Save**.
 
-### Create an offline profile (without admin rights)
+> [!IMPORTANT]
+> Don't add users in the offline profile in the **Users with offline access** area. This capability is only applicable to model-driven apps and is restricted to selected users. 
+
+## Create a custom mobile offline profile (without admin rights)
 
 If your Power Apps account doesn't have admin rights, you can still create a mobile offline profile. Coming soon, you'll be able to create an offline profile directly in Power Apps Studio. Until then, use this workaround.
 
 1. Create a model-driven app in your test environment that uses the same tables as your canvas app.
+
 2. [Set up the model-driven app for offline use](setup-mobile-offline.md).
+
 3. [Generate a default profile](setup-mobile-offline.md#generate-a-default-profile) and [add tables with filters](setup-mobile-offline.md#add-a-table-to-an-offline-profile-and-apply-filters).
+
 4. Publish the model-driven app.
+
 5. Select the offline profile in your canvas app.
 
-## Create an offline canvas app
+## Using the Offline template and offline status icon
 
 To make it easier to create or convert a canvas app for offline use, we created the **Offline** template. The template includes a globe icon in the navigation bar that shows the connectivity and sync state, putting offline at the center of the experience. Users always know whether their device and data are ready to go.
 
@@ -195,23 +189,32 @@ Switch(Connection.Sync,
 
    ConnectionSync.NotConnectedSyncError, Icon.GlobeError) 
 ```
+You can set the **OnSelect** property using the Power Fx function `ShowHostInfo` to show the [Device status page](/power-apps/mobile/offline-sync-icon#device-status-page) when selecting the globe icon. 
 
-## Limitations and known issues
+```powerappsfl
+ShowHostInfo(HostInfo.OfflineSync)
+```
+You can set the **Visible** property using the Power Fx function `Host` to only show the globe icon when the app is used on a player that is supporting the offline mode. 
 
-- Canvas apps that are in offline mode don't support files or images. If your app uses a Dataverse table that has an image in it, users may experience unanticipated errors. If you use a gallery, make sure the template and the layout don't include images.
+```powerappsfl
+Host.OfflineEnabled
+```
+    
+## Export a solution that contains a canvas app enabled for offline
 
-- The autogenerated offline profile doesn't handle filters. As a result, for each table used in the app, it downloads *all* rows to which the user has permissions.
+When you export a solution with an offline canvas app, you also need to export the offline profile for the app, as it is a dependency of the app.
 
-- Non-Dataverse connectors like Sharepoint aren't supported in offline mode.
+1. Sign in to [Power Apps](https://make.powerapps.com) and in the left navigation pane, select **Solutions**.
 
-- Some Dataverse tables aren't supported in offline mode.
+2. Select the solution that you want to export and then select **Edit**.
 
-- Items in a gallery may appear in a different order in an offline-capable app if no [sort order](/power-platform/power-fx/reference/function-sort) is selected. Choose a sort order in the gallery control to make sure the app behaves consistently in mobile apps and web browsers.
+3. Select the canvas app that is enabled for offline and then select **Advanced** > **Add required objects**.
 
-- [Wrapped apps](../maker/common/wrap/overview.md) aren't supported in offline mode.
+Make sure that the associated offline profile is in the solution and then you can export it.  
 
-- Many-to-many relationships aren't supported in offline mode.
+## See also
 
-- [Learn about Power Fx language capabilities and limitations](canvas-mobile-offline-overview.md).
+- [Mobile offline limitations for canvas apps](limitations-canvas-apps.md)
+- [Best practices for developing an app for offline use](best-practices-offline.md)
+- [Optimize the offline profile](mobile-offline-guidelines.md)
 
-- [Learn about other mobile offline capabilities and limitations](offline-capabilities.md).

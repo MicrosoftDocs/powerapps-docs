@@ -1,19 +1,19 @@
 ---
 title: Add picture control in canvas apps
 description: Information, including properties and examples, about the Add picture control.
-author: chmoncay
+author: yogeshgupta698
 
 ms.topic: reference
 ms.custom: canvas
-ms.date: 04/17/2020
+ms.date: 03/25/2024
 ms.subservice: canvas-maker
-ms.author: chmoncay
+ms.author: yogupt
 ms.reviewer: mkaur
 search.audienceType: 
   - maker
 contributors:
   - mduelae
-  - chmoncay
+  - yogeshgupta698
 ---
 # Add picture control in canvas apps
 
@@ -25,6 +25,12 @@ With this control users can take photos or upload image files from their device 
 This control is a grouped control containing two controls: an **Image** and an **Add picture button**. The **Image** control shows the uploaded image or a placeholder if no image has been uploaded. The **Add picture button** prompts for an image to be uploaded.
 
 See the [Image control reference](control-image.md) for **Image** properties.
+
+## Limitations
+
+The picture control has these limitations:
+
+- When using the **Add Picture** control on iOS, images imported by using the camera or gallery don't contain meta-data like orientation, location information, or camera settings.
 
 ## Add picture button properties
 **[AccessibleLabel](properties-accessibility.md)** – Label for screen readers. Should describe the purpose of adding a picture.
@@ -99,7 +105,7 @@ See the [Image control reference](control-image.md) for **Image** properties.
 
 **[Underline](properties-text.md)** – Whether a line appears under the text that appears on a control.
 
-**UseMobileCamera** – Whether to use a mobile camera directly, when available. For Android devices, this property requires the experimental setting **Improved Media Capture** turned on.
+**UseMobileCamera** – Whether to use a mobile camera directly, when available. Setting this to **TRUE** forces users to take a picture using the camera and disables uploading existing images from the device gallery.
 
 **[VerticalAlign](properties-text.md)** – The location of text on a control in relation to the vertical center of that control.
 

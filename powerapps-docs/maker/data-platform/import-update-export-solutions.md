@@ -2,9 +2,9 @@
 title: "Import solutions | MicrosoftDocs"
 description: "Learn how to import a solution in Power Apps"
 ms.custom: ""
-ms.date: 07/21/2023
+ms.date: 12/14/2023
 ms.reviewer: ""
-ms.topic: "article"
+ms.topic: how-to
 author: "Mattp123"
 ms.assetid: 56363ea3-ea76-4311-9b7a-b71675e446fb
 caps.latest.revision: 57
@@ -21,6 +21,7 @@ You can manually import solutions using the steps in this article. You must impo
 > - The create privilege is required to import a component. Although, the System Customizer security role has create privilege on most components that are commonly imported, by default it doesn't have create privilege on the **Plug-In Assembly** table. The System Administrator security role has this privilege.
 > - When you import a managed solution, all component changes will be brought into the environment in a published state. However, when you import an unmanaged solution, the changes are imported in a draft state so you must publish them to make them active. 
 > - To implement healthy application lifecycle management (ALM) in your organization, consider using a source control system to store and collaborate on your solutions, and automate the solution import process. More information: [ALM basics](/power-platform/alm/basics-alm) in the Power Platform ALM guide.
+> - The maximum size of a solution file is 95 MB.
 
 When you import an **unmanaged** solution:
 - You add all the components of that solution into your environment and can't delete the components by deleting the solution. Deleting the unmanaged solution deletes only the solution container.
@@ -64,12 +65,20 @@ When you download the log file, you'll find an XML file that you can open using 
 
 For known issues and information about how to troubleshoot working with solutions, go to [Manage apps and solutions](/troubleshoot/power-platform/power-apps/manage-apps-and-solutions/unmanaged-active-layer-created-after-solution-import) in the Power Apps Troubleshooting documentation.
 
+## Importing apps that use an on-premises data gateway ID
+
+When you import a Power Apps app that uses an on-premises data gateway ID, note the following requirements:
+
+- The connection to the gateway must be a shared connection.
+- The connections must be removed and then added back with the correct gateway ID after solution import into the target environment.
+
 ### See also
 
-[Update solutions](update-solutions.md) <br />
-[Export solutions](export-solutions.md) <br />
-[Publish changes](create-solution.md#publish-changes) <br />
-[For developers: Create, export, or import an unmanaged solution](/power-platform/alm/solution-api#create-export-or-import-an-unmanaged-solution)
+- [Update solutions](update-solutions.md)
+- [Export solutions](export-solutions.md)
+- [Publish changes](create-solution.md#publish-changes)
+- [For developers: Create, export, or import an unmanaged solution](/power-platform/alm/solution-api#create-export-or-import-an-unmanaged-solution)
+- [Import a solution (Power Automate)](/power-automate/import-flow-solution)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

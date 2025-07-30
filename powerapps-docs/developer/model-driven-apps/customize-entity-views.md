@@ -1,12 +1,12 @@
 ---
-title: "Customize views (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
-description: "Learn about customizing the views." # 115-145 characters including spaces. This abstract displays in the search result."
-author: sriharibs-msft
-ms.author: srihas
+title: "Customize views (model-driven apps)"
+description: "Learn about customizing the views."
+author: clromano
+ms.author: clromano
+ms.reviewer: jdaly
 ms.date: 04/01/2022
-ms.topic: article
+ms.topic: how-to
 ms.subservice: mda-developer
-ms.reviewer: 
 search.audienceType: 
   - developer
 contributors: 
@@ -47,7 +47,7 @@ A `SavedQuery` view is different from a `UserQuery`. A user query, called a Save
   
 - `SavedQuery.ReturnedTypeCode`: Matches the logical name of the table. 
   
-- `SavedQuery.FetchXml`: See [Use FetchXML to construct a query](../data-platform/use-fetchxml-construct-query.md).  
+- `SavedQuery.FetchXml`: See [Query data using FetchXml](../data-platform/fetchxml/overview.md).  
   
 - `SavedQuery.LayoutXml`: See the `layoutxml` element in the [Customization solutions file schema](../data-platform/customization-solutions-file-schema.md)  for the valid elements.
   
@@ -223,7 +223,7 @@ service.Execute(ssreq);
 <a name="BKMK_EditFilterOrSorting"></a>   
 
 ## Edit filter criteria or configure sorting  
- To edit the filter or edit how the data is sorted, you must set the `SavedQuery.FetchXml` parameter. More information: [Use FetchXML to query data](../data-platform/use-fetchxml-construct-query.md).  
+ To edit the filter or edit how the data is sorted, you must set the `SavedQuery.FetchXml` parameter. More information: [Query data using FetchXml](../data-platform/fetchxml/overview.md).  
   
 > [!TIP]
 >  If you are not familiar with FetchXML the following messages can be used to convert between QueryExpression and FetchXML:<xref:Microsoft.Crm.Sdk.Messages.QueryExpressionToFetchXmlRequest> and <xref:Microsoft.Crm.Sdk.Messages.FetchXmlToQueryExpressionRequest>.  
@@ -281,7 +281,7 @@ function displayIconTooltip(rowData, userLCID) {
     var coldata = str.opportunityratingcode_Value;  
     var imgName = "";  
     var tooltip = "";  
-    switch (coldata) {  
+    switch (parseInt(coldata,10)) {
         case 1:  
             imgName = "new_Hot";  
             switch (userLCID) {  

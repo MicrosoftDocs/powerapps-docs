@@ -3,12 +3,12 @@ title: "Foreword: Fusion development approach to building apps with Power Apps |
 description: "A foreword to Fusion development approach to building apps with Power Apps."
 author: spboyer
 
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: ebook
 ms.date: 04/26/2021
 ms.subservice: guidance
 ms.author: shboyer
-ms.reviewer: kvivek
+ms.reviewer: tapanm
 
 ---
 

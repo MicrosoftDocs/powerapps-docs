@@ -1,18 +1,18 @@
 ---
 title: Power Apps and Microsoft Teams integration - Overview | Microsoft Docs
 description: Provides an overview of using Power Apps with Microsoft Teams.
-author: KumarVivek
+author: mduelae
 
 ms.topic: overview
 
 ms.date: 11/16/2020
 ms.subservice: teams
-ms.author: kvivek
+ms.author: mkaur
 ms.reviewer:
 searchScope:
   - "Power Apps"
 contributors:
-  - kumarvivek
+  - mduelae
   - mduelae
 ---
 # Power Apps and Microsoft Teams integration
@@ -30,7 +30,7 @@ Scenario|Description
 [Create apps in Teams backed by Microsoft Dataverse for Teams](create-apps-overview.md)|Use the new Power Apps app in Teams to create canvas apps within Teams backed by Dataverse for Teams, the new built-in, low-code data platform for Teams. Dataverse for Teams empowers users to build custom apps, bots, and workflows&mdash;by using Power Apps, Power Virtual Agents, and Power Automate, respectively&mdash;without ever leaving the Teams interface.
 
 
-### Related topics
+### Related articles
 
 [What is Dataverse for Teams?](overview-data-platform.md)<br/>
 [Create your first app in Teams](create-first-app.md)<br/>

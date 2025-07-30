@@ -3,7 +3,7 @@ title: Create a detail gallery in a canvas app
 description: Learn about how to create a detail gallery in a canvas app to manage data for Northwind Traders.
 author: gregli-msft
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 05/13/2021
@@ -63,7 +63,7 @@ Before you start this topic, you must install the database as described earlier 
 
 1. Set the **Items** property of the detail gallery to this formula:
 
-    ```powerapps-dot
+    ```power-fx
     Gallery1.Selected.'Order Details'
     ```
 
@@ -94,7 +94,7 @@ Before you start this topic, you must install the database as described earlier 
 
 1. Set the new label's **Text** property to this formula:
 
-    ```powerapps-dot
+    ```power-fx
     ThisItem.Product.'Product Name'
     ```
 
@@ -130,7 +130,7 @@ Before you start this topic, you must install the database as described earlier 
 
 1. Set the image's **Image** property to this formula:
 
-    ```powerapps-dot
+    ```power-fx
     ThisItem.Product.Picture
     ```
 
@@ -150,7 +150,7 @@ Before you start this topic, you must install the database as described earlier 
 
 1. Set the new label's **Text** property to this expression:
 
-    ```powerapps-dot
+    ```power-fx
     ThisItem.Quantity
     ```
 
@@ -168,7 +168,7 @@ Before you start this topic, you must install the database as described earlier 
 
 1. Set the new label's **Text** property to this formula:
 
-    ```powerapps-dot
+    ```power-fx
     Text( ThisItem.'Unit Price', "[$-en-US]$ #,###.00" )
     ```
 
@@ -186,7 +186,7 @@ Before you start this topic, you must install the database as described earlier 
 
 1. Set the new label's **Text** property to this formula:
 
-    ```powerapps-dot
+    ```power-fx
     Text( ThisItem.Quantity * ThisItem.'Unit Price', "[$-en-US]$ #,###.00" )
     ```
 
@@ -262,7 +262,7 @@ Before you start this topic, you must install the database as described earlier 
 
 1. Set the new label's **Text** property to this formula:
 
-    ```powerapps-dot
+    ```power-fx
     Sum( Gallery1.Selected.'Order Details', Quantity )
     ```
 
@@ -277,7 +277,7 @@ Before you start this topic, you must install the database as described earlier 
 
 1. Set the copy's **Text** property to this formula:
 
-    ```powerapps-dot
+    ```power-fx
     Text( Sum( Gallery1.Selected.'Order Details', Quantity * 'Unit Price' ), "[$-en-US]$ #,###.00" )
     ```
 
@@ -367,7 +367,7 @@ In any gallery, you can show data but you can't update it or add records. Under 
 
 1. Set the **Image** property of the image to:
 
-    ```powerapps-dot
+    ```power-fx
     ComboBox1.Selected.Picture
     ```
 
@@ -416,7 +416,7 @@ In any gallery, you can show data but you can't update it or add records. Under 
 
 1. Resize and move the label to the right of the text-input control, and set the label's **Text** property to this formula:
 
-    ```powerapps-dot
+    ```power-fx
     Text( ComboBox1.Selected.'List Price', "[$-en-US]$ #,###.00" )
     ```
 
@@ -437,7 +437,7 @@ In any gallery, you can show data but you can't update it or add records. Under 
 
 1. Set the new label's **Text** property to this formula:
 
-    ```powerapps-dot
+    ```power-fx
     Text( Value(TextInput1.Text) * ComboBox1.Selected.'List Price', "[$-en-US]$ #,###.00" )
     ```
 
@@ -467,7 +467,7 @@ In any gallery, you can show data but you can't update it or add records. Under 
 
 1. Resize and move this icon to the right edge of the light-blue area, and then set the icon's **OnSelect** property to this formula:
 
-    ```powerapps-dot
+    ```power-fx
     Patch( 'Order Details',
         Defaults('Order Details'),
         {
@@ -531,7 +531,7 @@ In any gallery, you can show data but you can't update it or add records. Under 
 
 1. Resize and move the Trash icon to the right side of the detail gallery's template, and set the icon's **OnSelect** property to this formula:
 
-    ```powerapps-dot
+    ```power-fx
     Remove( 'Order Details', ThisItem ); Refresh( Orders )
     ```
 

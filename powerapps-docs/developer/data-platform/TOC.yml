@@ -33,8 +33,115 @@
       href: ./webapi/overview.md
     - name: Use the SDK for .NET
       href: ./org-service/overview.md
-    - name: Use bulk operation messages
+    - name: Search for records
+      href: ./search/overview.md
+      items:
+        - name: Query
+          href: ./search/query.md
+        - name: Suggest
+          href: ./search/suggest.md
+        - name: Autocomplete
+          href: ./search/autocomplete.md
+        - name: Statistics and Status
+          href: ./search/statistics-status.md
+        - name: Legacy search
+          href: ./search/legacy.md
+        - name: Configure Azure AI built-in analyzers
+          href: ./search/custom-search-analyzer.md
+    - name: Query data using FetchXml
+      items:
+        - name: Overview
+          displayName: FetchXml
+          href: fetchxml/overview.md
+        - name: Retrieve data
+          displayName: FetchXml, retrieve
+          href: fetchxml/retrieve-data.md
+        - name: Select columns
+          displayName: FetchXml, Select columns
+          href: fetchxml/select-columns.md
+        - name: Join tables
+          displayName: FetchXml, Join tables
+          href: fetchxml/join-tables.md
+        - name: Order rows
+          displayName: FetchXml, Order rows
+          href: fetchxml/order-rows.md
+        - name: Filter rows
+          displayName: FetchXml, Filter rows
+          href: fetchxml/filter-rows.md
+        - name: Page results
+          displayName: FetchXml, Page results
+          href: fetchxml/page-results.md
+        - name: Aggregate data
+          displayName: FetchXml, Aggregate data
+          href: fetchxml/aggregate-data.md
+        - name: Count rows
+          displayName: FetchXml, Count rows
+          href: fetchxml/count-rows.md
+        - name: Optimize performance
+          displayName: FetchXml, Optimize performance
+          href: fetchxml/optimize-performance.md
+        - name: FetchXml reference
+          items:
+            - name: Overview
+              displayName: FetchXml reference
+              href: fetchxml/reference/index.md
+            - name: all-attributes
+              displayName: FetchXml, all-attributes element
+              href: fetchxml/reference/all-attributes.md
+            - name: attribute
+              displayName: FetchXml, attribute element
+              href: fetchxml/reference/attribute.md
+            - name: condition
+              items:
+                - name: element
+                  displayName: FetchXml, condition element
+                  href: fetchxml/reference/condition.md
+                - name: operators
+                  displayName: FetchXml, condition operators
+                  href: fetchxml/reference/operators.md
+            - name: entity
+              displayName: FetchXml, entity element
+              href: fetchxml/reference/entity.md
+            - name: fetch
+              displayName: FetchXml, fetch element
+              href: fetchxml/reference/fetch.md
+            - name: filter
+              displayName: FetchXml, filter element
+              href: fetchxml/reference/filter.md
+            - name: link-entity
+              displayName: FetchXml, link-entity element
+              href: fetchxml/reference/link-entity.md
+            - name: order
+              displayName: FetchXml, order element
+              href: fetchxml/reference/order.md
+            - name: value
+              displayName: FetchXml, value element
+              href: fetchxml/reference/value.md
+        - name: Sample code
+          displayName: FetchXml, Sample code
+          href: fetchxml/sample.md
+    - name: Query using wildcard characters
+      href: wildcard-characters.md
+    - name: Query anti-patterns
+      href: query-antipatterns.md
+    - name: Query throttling
+      href: query-throttling.md
+    - name: Query Hierarchical data
+      href: query-hierarchical-data.md
+    - name: Quick find
+      href: quick-find.md
+    - name: Saved Queries
+      href: saved-queries.md
+    - name: "Use SQL to query data"
+      href: dataverse-sql-query.md
+    - name: "Dataverse SQL"
+      href: how-dataverse-sql-differs-from-transact-sql.md
+    - name: Bulk Operation messages
+      displayName: CreateMultiple, UpdateMultiple, UpsertMultiple, DeleteMultiple
       href: bulk-operations.md
+    - name: Restore deleted records (preview)
+      displayName: RecycleBin, Restore
+      href: restore-deleted-records.md
     - name: Create your own messages
       href: custom-actions.md
       items:
@@ -51,49 +158,18 @@
               href: create-custom-api-solution.md
             - name: CustomAPI Tables
               href: custom-api-tables.md
+            - name: Use open types with custom APIs
+              href: use-open-types.md
             - name: "Sample: IsSystemAdmin custom API plug-in"
               href: org-service/samples/issystemadmin-customapi-sample-plugin.md
             - Name: "Sample: ExportDataUsingFetchXmlToAnnotation custom API plug-in"
               href: org-service/samples/export-data-fetchxml-annotation-custom-api-sample.md
         - name: Use Custom Process Actions with code
           href: workflow-custom-actions.md
-    - name: Use open types with custom APIs 
-      href: use-open-types.md
     - name: Background operations (preview)
       href: background-operations.md
     - name: Use optional parameters
       href: optional-parameters.md
-    - name: Use FetchXML to query data
-      href: use-fetchxml-construct-query.md
-      items:
-        - name: Use FetchXML aggregation
-          href: use-fetchxml-aggregation.md
-        - name: Fiscal date and older than datetime query operators in FetchXML
-          href: use-fetchxml-fiscal-date-older-datetime-query-operators.md
-        - name: Use a left outer join in FetchXML to query for records "not in"
-          href: use-fetchxml-left-outer-join-query-records-not-in.md
-        - name: Page large result sets with FetchXML
-          href: org-service/page-large-result-sets-with-fetchxml.md
-        - name: Paging behaviors and ordering
-          href: org-service/paging-behaviors-and-ordering.md
-        - name: Use column comparison in queries
-          href: column-comparison.md
-        - name: FetchXML search item limit
-          href: quick-find-limit.md
-        - name: Improve FetchXML request performance
-          href: fetchxml-performance.md
-    - name: "Use SQL to query data"
-      href: dataverse-sql-query.md
-    - name: "Dataverse SQL"
-      href: how-dataverse-sql-differs-from-transact-sql.md
-    - name: Saved Queries
-      href: saved-queries.md
-    - name: Query using wildcard characters
-      href: wildcard-characters.md
-    - name: Query throttling
-      href: query-throttling.md
-    - name: Query Hierarchical data
-      href: query-hierarchical-data.md
     - name: Files and images overview
       href: files-images-overview.md
       items:
@@ -103,6 +179,9 @@
           href: image-column-data.md
         - name: Use Attachments and Annotations
           href: attachment-annotation-files.md
+        - name: Create link to download file
+          displayName: getFileSasUrl
+          href: getfilesasurl.md
     - name: Audit data changes
       items:
         - name: Overview
@@ -133,7 +212,11 @@
     - name: Service protection API limits
       href: api-limits.md
     - name: Bypass Custom Business logic
-      href: bypass-custom-business-logic.md
+      items:
+        - name: Bypass Custom Dataverse logic
+          href: bypass-custom-business-logic.md
+        - name: Bypass Power Automate flows
+          href: bypass-power-automate-flows.md
     - name: Best Practices
       href: best-practices/work-with-data/index.md
     - name: Add and remove sample data
@@ -157,8 +240,8 @@
           href: write-plug-in.md
         - name: Handle exceptions
           href: handle-exceptions.md
-        - name: Impersonate a user
-          href: impersonate-a-user.md
+        - name: Build and package
+          href: build-and-package.md
         - name: Register a plug-in
           href: register-plug-in.md
         - name: Debug a plug-in
@@ -167,21 +250,17 @@
           href: logging-tracing.md
         - name: Application Insights with ILogger
           href: application-insights-ilogger.md
+        - name: Impersonate a user
+          href: impersonate-a-user.md
         - name: Analyze performance
           href: analyze-performance.md
         - name: Troubleshoot plug-ins
           href: /troubleshoot/power-platform/power-apps/dataverse/dataverse-plug-ins-errors
         - name: Access external web resources
           href: access-web-services.md
-        - name: Dependent Assemblies (preview)
-          href: dependent-assembly-plugins.md
-        - name: Write plug-ins for CreateMultiple and UpdateMultiple (Preview)
+        - name: Write plug-ins for CreateMultiple and UpdateMultiple
           href: write-plugin-multiple-operation.md
-        - name: Quickstarts
-          items:
-            - name: Create a plug-in using Power Platform Tools
-              href: tools/devtools-create-plugin.md
-        - name: Tutorials
+        - name: How-to
           items:
             - name: Write and register a plug-in
               href: tutorial-write-plug-in.md
@@ -253,12 +332,14 @@
           href: write-custom-azure-aware-plugin.md
         - name: Write a listener application for a Azure solution
           href: write-listener-application-azure-solution.md
-        - name: "Tutorial: Configure Azure (SAS) for integration with Dataverse"
-          href: walkthrough-configure-azure-sas-integration.md
-        - name: "Tutorial: Register an Azure-aware plug-in using the Plug-in Registration Tool"
-          href: walkthrough-register-azure-aware-plug-in-using-plug-in-registration-tool.md
-        - name: "Tutorial: Update a service endpoint imported from a solution"
-          href: walkthrough-update-service-endpoint-imported-solution.md
+        - name: Tutorials
+          items:
+            - name: "Configure Azure (SAS) for integration with Dataverse"
+              href: walkthrough-configure-azure-sas-integration.md
+            - name: "Register an Azure-aware plug-in using the Plug-in Registration Tool"
+              href: walkthrough-register-azure-aware-plug-in-using-plug-in-registration-tool.md
+            - name: "Update a service endpoint imported from a solution"
+              href: walkthrough-update-service-endpoint-imported-solution.md
     - name: Use Web Hooks
       href: use-webhooks.md
       items:
@@ -271,6 +352,9 @@
   items:
     - name: Customer tables
       href: customer-entities-account-contact.md
+    - name: Environment settings
+      displayName: Organization table
+      href: organization-table.md
     - name: Activity tables
       href: activity-entities.md
       items:
@@ -280,7 +364,7 @@
           href: custom-activities.md
         - name: Email activity tables
           href: email-activity-entities.md
-        - name: Task, fax, phone call, and letter activity tables
+        - name: Activity tables for tasks, faxes, phone calls, and letters
           href: task-fax-phone-call-letter-activity-entities.md
         - name: ActivityParty table
           href: activityparty-entity.md
@@ -309,7 +393,7 @@
       href: apply-slas-entities.md
     - name: Transaction Currency (currency) table
       href: transaction-currency-currency-entity.md
-    - name: Category table
+    - name: Structure Dataverse data with nested categories
       href: use-category-entity.md
     - name: Catalog & CatalogAssignment
       href: catalog-catalogassignment.md
@@ -332,7 +416,7 @@
           href: aaduser-entity.md
     - name: Template tables
       href: upload-manage-document-templates.md
-    - name: Long-term data retention (preview)
+    - name: Long-term data retention
       href: long-term-retention.md
 - name: Work with table definitions using code
   href: metadata-services.md
@@ -355,15 +439,15 @@
           href: entity-attribute-metadata-messages.md
         - name: Behavior and format of the date and time column
           href: behavior-format-date-time-attribute.md
-        - name: Formula, calculated, and rollup columns
-          href: calculated-rollup-attributes.md
+        - name: Specialized columns
+          href: specialized-columns.md
         - name: Create auto-number columns
           href: create-auto-number-attributes.md
         - name: Choices
           href: multi-select-picklist.md
-        - name: File columns
+        - name: File column definitions
           href: file-attributes.md
-        - name: Image columns
+        - name: Image column definitions
           href: image-attributes.md
         - name: Define custom state model transitions
           href: define-custom-state-model-transitions.md
@@ -397,7 +481,7 @@
       href: customize-labels-support-multiple-languages.md
     - name: Best Practices
       href: best-practices/work-with-metadata/index.md
-- name: Work with elastic tables using code (preview)  
+- name: Work with elastic tables using code
   items:
     - name: Overview of elastic tables
       href: elastic-tables.md
@@ -450,8 +534,8 @@
           href: walkthrough-register-app-azure-active-directory.md
         - name: "Tutorial: Create an ASP.NET Core Blazor WebAssembly App"
           href: walkthrough-blazor-webassembly-single-tenant.md
-        - name: "Quick Start: Register and configure a SPA application with msal.js"
-          href: quick-start-register-configure-simplespa-application-msal-js.md
+        - name: "Quick Start: Register and configure a SPA application with MSAL.js"
+          href: webapi/quick-start-js-spa.md
 - name: Transition apps to Dataverse ServiceClient
   href: sdk-client-transition.md
 - name: Best practices
@@ -480,6 +564,8 @@
       href: /dynamics365/customer-engagement/web-api/about
     - name: SDK for .NET
       href: /dotnet/api/microsoft.crm.sdk
+    - name: FetchXml reference
+      href: fetchxml/reference/index.md
     - name: XRM Tooling
       href: /dotnet/api/microsoft.xrm.tooling.connector
     - name: Workflow
@@ -488,7 +574,7 @@
       href: /dotnet/api/microsoft.xrm.tooling.packagedeployment.crmpackageextentionbase
     - name: Customization solutions file schema
       href: customization-solutions-file-schema.md
-    - name: FetchXML schema
-      href: fetchxml-schema.md
+    - name: FetchXML reference
+      href: fetchxml/reference/index.md
     - name: Web service error codes
       href: reference/web-service-error-codes.md

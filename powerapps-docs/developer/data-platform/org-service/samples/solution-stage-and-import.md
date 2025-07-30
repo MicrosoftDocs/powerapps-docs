@@ -1,12 +1,11 @@
 ---
-title: "Sample: Solution staging with asynchronous import (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Demonstrates how to stage and asynchronously import a solution." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
+title: "Sample: Solution staging with asynchronous import (Microsoft Dataverse) | Microsoft Docs"
+description: "Demonstrates how to stage and asynchronously import a solution."
 ms.date: 04/05/2022
-ms.reviewer:
+author: phecke
+ms.author: pehecke
+ms.reviewer: pehecke
 ms.topic: sample
-author: "phecke" # GitHub ID
-ms.author: "pehecke" # MSFT alias of Microsoft employees only
 search.audienceType:
   - developer
 ---
@@ -21,7 +20,7 @@ This sample shows how to perform the following actions with solutions:
 - Import the staged solution using an asynchronous job and check for job completion
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Solution staging with asynchronous import sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/SolutionStagingAndImport)
+> [SDK for .NET: Solution staging with asynchronous import sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/SolutionStagingAndImport)
 
 ## How to run this sample
 

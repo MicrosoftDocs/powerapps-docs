@@ -2,8 +2,8 @@
 title: "Web API Functions and Actions Sample (C#) (Microsoft Dataverse)| Microsoft Docs"
 description: "This sample demonstrates how to call bound and unbound functions and actions, including custom actions, using the Microsoft Dataverse Web API and C#."
 ms.date: 09/02/2022
-author: divkamath
-ms.author: dikamath
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
@@ -24,8 +24,6 @@ This sample uses the common helper code in the [WebAPIService class library (C#)
 
 ## Prerequisites
 
-The following is required to build and run this sample:
-
 - Microsoft Visual Studio 2022.
 - Access to Dataverse with privileges to perform data operations.
   
@@ -34,13 +32,13 @@ The following is required to build and run this sample:
 ## How to run this sample
 
 1. Clone or download the [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples) repository.
-1. Locate the [/dataverse/webapi/C#-NETx/FunctionsAndActions/](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23-NETx/FunctionsAndActions) folder.
+1. Locate the [/dataverse/webapi/C#-NETx/FunctionsAndActions/](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/CSharp-NETx/FunctionsAndActions) folder.
 1. Open the `FunctionsAndActions.sln` file using Visual Studio 2022
 1. Edit the `appsettings.json` file to set the following property values:
 
    |Property|Instructions  |
    |---------|---------|
-   |`Url`|The Url for your environment. Replace the placeholder `https://yourorg.api.crm.dynamics.com` value with the value for your environment. See [View developer resources](../../view-download-developer-resources.md) to find this. |
+   |`Url`|The Url for your environment. Replace the placeholder `https://yourorg.api.crm.dynamics.com` value with the value for your environment. See [View developer resources](../../view-download-developer-resources.md) to find the Url for your environment. |
    |`UserPrincipalName`|Replace the placeholder `you@yourorg.onmicrosoft.com` value with the UPN value you use to access the environment.|
    |`Password`|Replace the placeholder `yourPassword` value with the password you use.|
 
@@ -49,21 +47,21 @@ The following is required to build and run this sample:
 
 ## Code
 
-The code for this sample is here: [PowerApps-Samples/dataverse/webapi/C#-NETx/FunctionsAndActions/Program.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/FunctionsAndActions/Program.cs)
+The code for this sample is here: [PowerApps-Samples/dataverse/webapi/C#-NETx/FunctionsAndActions/Program.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/CSharp-NETx/FunctionsAndActions/Program.cs)
 
 ## Demonstrates
 
-This sample has 9 regions:
+This sample has nine regions:
 
 ### Section 1: Unbound Functions: WhoAmI
 
-Operation: Send <xref:Microsoft.Dynamics.CRM.WhoAmI?text=WhoAmI Function> and recieve <xref:Microsoft.Dynamics.CRM.WhoAmIResponse?text=WhoAmIResponse ComplexType>.
+Operation: Send <xref:Microsoft.Dynamics.CRM.WhoAmI?text=WhoAmI Function> and receive <xref:Microsoft.Dynamics.CRM.WhoAmIResponse?text=WhoAmIResponse ComplexType>.
 
 ### Section 2: Unbound Functions: FormatAddress
 
 Operations:
 
-1. Send <xref:Microsoft.Dynamics.CRM.FormatAddress?text=FormatAddress Function> with parameters for an address in the United States. Recieve <xref:Microsoft.Dynamics.CRM.FormatAddressResponse?text=FormatAddressResponse ComplexType> with the formatted address.
+1. Send <xref:Microsoft.Dynamics.CRM.FormatAddress?text=FormatAddress Function> with parameters for an address in the United States. Receive <xref:Microsoft.Dynamics.CRM.FormatAddressResponse?text=FormatAddressResponse ComplexType> with the formatted address.
 1. Do the same with parameters for an address in Japan.
 
 ### Section 3: Unbound Functions: InitializeFrom
@@ -71,16 +69,16 @@ Operations:
 Operations:
 
 1. Create an account record to be the original record.
-1. Send <xref:Microsoft.Dynamics.CRM.InitializeFrom?text=InitializeFrom Function> with parameters referencing the account record created. Recieve a response with data to create a new account record with values from the original record.
+1. Send <xref:Microsoft.Dynamics.CRM.InitializeFrom?text=InitializeFrom Function> with parameters referencing the account record created. Receive a response with data to create a new account record with values from the original record.
 1. Create a new account record using the data from `InitializeFromResponse` so that the new record is associated with the original record and potentially containing data copied from the original record, depending on how the column mappings are configured for the organization.
 
 ### Section 4: Unbound Functions: RetrieveCurrentOrganization
 
-Operation: Send <xref:Microsoft.Dynamics.CRM.RetrieveCurrentOrganization?text=RetrieveCurrentOrganization Function> and recieve <xref:Microsoft.Dynamics.CRM.RetrieveCurrentOrganization?text=RetrieveCurrentOrganization ComplexType>.
+Operation: Send <xref:Microsoft.Dynamics.CRM.RetrieveCurrentOrganization?text=RetrieveCurrentOrganization Function> and receive <xref:Microsoft.Dynamics.CRM.RetrieveCurrentOrganization?text=RetrieveCurrentOrganization ComplexType>.
 
 ### Section 5: Unbound Functions: RetrieveTotalRecordCount
 
-Operations: Send <xref:Microsoft.Dynamics.CRM.RetrieveTotalRecordCount?text=RetrieveTotalRecordCount Function> with parameters for `account` and `contact` tables and recieve <xref:Microsoft.Dynamics.CRM.RetrieveTotalRecordCountResponse?text=RetrieveTotalRecordCountResponse ComplexType> containing the number of records in each table.
+Operations: Send <xref:Microsoft.Dynamics.CRM.RetrieveTotalRecordCount?text=RetrieveTotalRecordCount Function> with parameters for `account` and `contact` tables and receive <xref:Microsoft.Dynamics.CRM.RetrieveTotalRecordCountResponse?text=RetrieveTotalRecordCountResponse ComplexType> containing the number of records in each table.
 
 ### Section 6: Bound Functions: IsSystemAdmin
 
@@ -98,7 +96,7 @@ Operations:
 1. Create an account record to share.
 1. Retrieve an enabled user other than the current user.
 1. Use the <xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function> to determine if the other user has <xref:Microsoft.Dynamics.CRM.AccessRights>`'DeleteAccess'` on the account record created.
-1. If they do not have `DeleteAccess`, use <xref:Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action> to share this access to the other user.
+1. If they don't have `DeleteAccess`, use <xref:Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action> to share this access to the other user.
 1. Test the user's access again using `RetrievePrincipalAccess` to verify that they now have `DeleteAccess`.
 
 ### Section 8: Bound Actions: AddPrivilegesRole
@@ -118,7 +116,7 @@ Operations: A reference to each record created in this sample was added to a lis
 
 ## Clean up
 
-By default this sample will delete all the records created in it. If you want to view created records after the sample is completed, change the `deleteCreatedRecords` variable to `false` and you will be prompted to decide if you want to delete the records.
+By default this sample deletes all the records created in it. If you want to view created records after the sample is completed, change the `deleteCreatedRecords` variable to `false` and you'll be prompted to decide if you want to delete the records.
 
 ### See also
 
@@ -129,7 +127,7 @@ By default this sample will delete all the records created in it. If you want to
 [Web API Basic Operations Sample (C#)](webapiservice-basic-operations.md)<br />
 [Web API Query Data sample (C#)](webapiservice-query-data.md)<br />
 [Web API Conditional Operations sample (C#)](webapiservice-conditional-operations.md)<br />
-[Web API Metadata Operations Sample (C#)](webapiservice-metadata-operations.md)<br />
+[Web API table schema operations sample (C#)](webapiservice-metadata-operations.md)<br />
 [Web API WebApiService Parallel Operations Sample (C#)](webapiservice-parallel-operations.md)<br />
 [Web API Parallel Operations with TPL Dataflow components Sample (C#)](webapiservice-tpl-dataflow-parallel-operations.md)<br />
 

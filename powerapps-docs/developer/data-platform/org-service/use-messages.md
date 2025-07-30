@@ -2,11 +2,11 @@
 title: "Use messages with the SDK for .NET (Microsoft Dataverse) | Microsoft Docs"
 description: "Understand how messages are used to invoke operations using the SDK for .NET."
 ms.collection: get-started
-ms.date: 10/18/2023
-author: divkamath
-ms.author: dikamath
+ms.date: 03/26/2024
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: pehecke
-ms.topic: article
+ms.topic: how-to
 search.audienceType: 
   - developer
 contributors:
@@ -41,7 +41,7 @@ You can use a message without SDK Request and Response classes.
 1. Use the <xref:Microsoft.Xrm.Sdk.OrganizationRequest> class.
 
    - Set the [OrganizationRequest.RequestName](xref:Microsoft.Xrm.Sdk.OrganizationRequest.RequestName)
-   - Set the items in the [OrganizationRequest.Parameters](xref:Microsoft.Xrm.Sdk.OrganizationRequest.Parameters) collection.
+   - Set the items in the [OrganizationRequest.Parameters](xref:Microsoft.Xrm.Sdk.OrganizationRequest.Parameters) collection
 
 1. Send the request using the [IOrganizationService.Execute](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A) method, which returns an <xref:Microsoft.Xrm.Sdk.OrganizationResponse> instance.
 
@@ -91,14 +91,14 @@ Dataverse manages information about the input and output parameters in private t
 
 ## SDK Request and Response classes
 
-SDK Request and Response classes reduce the complexity of using the <xref:Microsoft.Xrm.Sdk.OrganizationRequest> and <xref:Microsoft.Xrm.Sdk.OrganizationResponse> classes. You don't need to know the name of the message and the input and output parameters because the classes have them included.
+SDK Request and Response classes reduce the complexity of using the <xref:Microsoft.Xrm.Sdk.OrganizationRequest> and <xref:Microsoft.Xrm.Sdk.OrganizationResponse> classes. You don't need to know the name of the message and the input and output parameters because the classes include them.
 
 The SDK for .NET contains definitions for common Dataverse messages in these namespaces:
 
 |Namespace|Description|
 |---------|---------|
 |<xref:Microsoft.Xrm.Sdk.Messages?displayProperty=fullName>|Messages for common data operations and messages used to create and modify schema data, also known as metadata.|
-|<xref:Microsoft.Crm.Sdk.Messages?displayProperty=fullName>|Messages for business logic and operations to support special capabilities to support ALM and apps. Some messages in this namespace support capabilities only found in Microsoft Dynamics 365 business applications. |
+|<xref:Microsoft.Crm.Sdk.Messages?displayProperty=fullName>|Messages for business logic and operations to support special capabilities to support Application Lifecycle Management (ALM) and apps. Some messages in this namespace support capabilities only found in Microsoft Dynamics 365 business applications. |
 
 These classes contain properties for all the input and output parameters.
 
@@ -110,7 +110,7 @@ These classes contain properties for all the input and output parameters.
 
    These classes inherit from the <xref:Microsoft.Xrm.Sdk.OrganizationResponse> class.
 
-For example, to create a record, you can use the [Microsoft.Xrm.Sdk.Messages.CreateRequest](xref:Microsoft.Xrm.Sdk.Messages.CreateRequest) class to prepare the request. Use [IOrganizationService.Execute](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A) to send the request and the results will be in form of an [Microsoft.Xrm.Sdk.Messages.CreateResponse](xref:Microsoft.Xrm.Sdk.Messages.CreateResponse) class instance.
+For example, to create a record, you can use the [Microsoft.Xrm.Sdk.Messages.CreateRequest](xref:Microsoft.Xrm.Sdk.Messages.CreateRequest) class to prepare the request. Use [IOrganizationService.Execute](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A) to send the request and the results are in form of an [Microsoft.Xrm.Sdk.Messages.CreateResponse](xref:Microsoft.Xrm.Sdk.Messages.CreateResponse) class instance.
 
 The following example uses the [Microsoft.Xrm.Sdk.Messages.CreateRequest](xref:Microsoft.Xrm.Sdk.Messages.CreateRequest) class with a generated early-bound class for the account entity:
 
@@ -141,16 +141,9 @@ public static Guid CreateRequestExample(IOrganizationService service)
 
 ### Generate classes for custom actions
 
-There are other messages that don't have classes in the SDK. For example, solutions installed frequently include new message definitions defined as custom actions (custom API or custom process actions). More information: [Create your own messages](../custom-actions.md)
+There are other messages that don't have classes in the SDK. For example, solutions installed frequently include new message definitions defined as custom actions (custom API or custom process actions). [Learn to create your own messages](../custom-actions.md)
 
-Developers can generate Request and Response classes for the messages found in their environment using the following tools:
-
-|Tool|Description|
-|---------|---------|
-|Power Platform CLI<br />[pac modelbuilder build](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build)<br />command|Generates cross-platform .NET (Core) classes for applications that use the <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient?displayProperty=fullName>.<br />Use the [--generateActions](/power-platform/developer/cli/reference/modelbuilder#--generateactions--a) parameter to generate Request and Response classes.|
-|[Power Platform CLI pac modelbuilder build command](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build)|Generates .NET Framework classes to support applications that use .NET Framework, such as Dataverse plug-ins.|
-
-More information: [Generate early-bound classes for the SDK for .NET](generate-early-bound-classes.md)
+Developers can generate `*Request` and `*Response` classes for the messages found in their environment using the [Power Platform CLI pac modelbuilder build command](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build). Use the [--generateActions](/power-platform/developer/cli/reference/modelbuilder#--generateactions--a) parameter to generate `*Request` and `*Response` classes. [Learn more about generating early-bound classes for the SDK for .NET](generate-early-bound-classes.md)
 
 ### Passing optional parameters with a request
 
@@ -190,7 +183,7 @@ public static Guid CreateMethodExample(IOrganizationService service)
 }
 ```
 
-As you can see, common data operations have been streamlined using the <xref:Microsoft.Xrm.Sdk.IOrganizationService> methods and other messages are made easier to use with the Request and Response classes in the SDK assemblies or generated with tooling. Most of the time you don't need to use the underlying <xref:Microsoft.Xrm.Sdk.OrganizationRequest> and <xref:Microsoft.Xrm.Sdk.OrganizationResponse> classes, but it's important to understand the different options available to use messages, especially when working with custom API and plug-ins.
+As you can see, common data operations are streamlined using the <xref:Microsoft.Xrm.Sdk.IOrganizationService> methods and other messages are made easier to use with the Request and Response classes in the SDK assemblies or generated with tooling. Most of the time you don't need to use the underlying <xref:Microsoft.Xrm.Sdk.OrganizationRequest> and <xref:Microsoft.Xrm.Sdk.OrganizationResponse> classes, but it's important to understand the different options available to use messages, especially when working with custom API and plug-ins.
 
 ## Working with messages in plug-ins
 
@@ -198,7 +191,7 @@ The data describing an operation in a plug-in are in the form of [IExecutionCont
 
 In the `PreValidation` and `PreOperation` stages before the `main` operation of the event pipeline, the [IExecutionContext.InputParameters](xref:Microsoft.Xrm.Sdk.IExecutionContext.InputParameters) contain the [OrganizationRequest.Parameters](xref:Microsoft.Xrm.Sdk.OrganizationRequest.Parameters).
 
-With a custom API, your plug-in will read the [IExecutionContext.InputParameters](xref:Microsoft.Xrm.Sdk.IExecutionContext.InputParameters) and contain logic to set the [IExecutionContext.OutputParameters](xref:Microsoft.Xrm.Sdk.IExecutionContext.OutputParameters) as part of the `main` operation stage.
+With a custom API, your plug-in reads the [IExecutionContext.InputParameters](xref:Microsoft.Xrm.Sdk.IExecutionContext.InputParameters) and contains logic to set the [IExecutionContext.OutputParameters](xref:Microsoft.Xrm.Sdk.IExecutionContext.OutputParameters) as part of the `main` operation stage.
 
 After the `main` operation stage, in the `PostOperation` stage, the [IExecutionContext.OutputParameters](xref:Microsoft.Xrm.Sdk.IExecutionContext.OutputParameters) contain the [OrganizationResponse.Results](xref:Microsoft.Xrm.Sdk.OrganizationResponse.Results).
 
@@ -212,7 +205,7 @@ More information:
 
 ## Private Messages
 
-Microsoft Dataverse contains some messages that aren't intended for third party developers to use. Microsoft added these messages enable feature functionality, but third party solutions can also add them with the custom API feature. The [SdkMessage.IsPrivate](../reference/entities/sdkmessage.md#BKMK_IsPrivate) property tells you which messages are private.
+Microsoft Dataverse contains some messages that aren't intended for non-Microsoft developers to use. Microsoft added these messages enable feature functionality, but non-Microsoft solutions can also add them with the custom API feature. The [SdkMessage.IsPrivate](../reference/entities/sdkmessage.md#BKMK_IsPrivate) property tells you which messages are private.
 
 > [!CAUTION]
 > You should not use private messages unless you created them as a custom API. By marking a message as private, the solution publisher is explicitly calling out that they do not support other apps to use the message. They may remove the message or introduce breaking changes at any time. Use of these messages by anyone other than the solution publisher are not supported.
@@ -283,7 +276,7 @@ static void OutputTableMessageNames(IOrganizationService service, string tableNa
 }
 ```
 
-If you use this method setting the `tableName` parameter to `account`, you will get results that include these message names:
+If you use this method setting the `tableName` parameter to `account`, you get results that include these message names:
 
 **Output:**
 
@@ -308,7 +301,7 @@ Update
 
 #### [Web API](#tab/webapi)
 
-Use the following `GET` request to retrieve the messages supported by a table. The request below retrieves messages for the `account` table.  Replace the `@table` alias parameter value for the table you want to retrieve message names for.
+Use the following `GET` request to retrieve the messages supported by a table. The following request retrieves messages for the `account` table. Replace the `@table` alias parameter value for the table you want to retrieve message names for.
 
 **Request:**
 
@@ -455,7 +448,7 @@ OData-Version: 4.0
 
 ## Message support for tables
 
-Some messages can only be used with specific tables. For example, you can only use the `RetrieveUnpublishedMultiple` message with a specific set of tables that contain data that can be published
+Some messages can only be used with specific tables. For example, you can only use the `RetrieveUnpublishedMultiple` message with a specific set of tables that contain data that can be published.
 
 This information is stored in the [SdkMessageFilter table](../reference/entities/sdkmessagefilter.md). You can query this table to determine which tables can be used for a specific message.
 
@@ -508,7 +501,7 @@ static void OutputTablesForMessage(IOrganizationService service, string messageN
 }
 ```
 
-If you use this method setting the `messageName` parameter to `RetrieveUnpublishedMultiple`, you will get results that include these table names:
+If you use this method setting the `messageName` parameter to `RetrieveUnpublishedMultiple`, you get results that include these table names:
 
 **Output:**
 
@@ -535,7 +528,7 @@ usermobileofflineprofilemembership
 
 #### [Web API](#tab/webapi)
 
-Use the following `GET` request to retrieve the tables supported by a message. The request below retrieves messages for the `RetrieveUnpublishedMultiple` message.  Replace the `@message` alias parameter value for the message you want to retrieve table names for.
+Use the following `GET` request to retrieve the tables supported by a message. The following request retrieves messages for the `RetrieveUnpublishedMultiple` message. Replace the `@message` alias parameter value for the message you want to retrieve table names for.
 
 **Request:**
 
@@ -682,7 +675,7 @@ OData-Version: 4.0
 > [!NOTE]
 > - For certain messages, you may find that placeholder values are returned, such as `DeletedEntity for objectTypeCode=11478` or `new_system_donotuseentity_rp53fd1p1ekxpa_t12_b71d6344c5`. These aren't valid table names. Disregard these values.
 > 
-> - This query will also return [Private tables](../entities.md#private-tables). In the example above: `organizationui`,`hierarchyrule`, `appelement`, and `appsetting` are private tables and not supported for use.
+> - This query will also return [Private tables](../entities.md#private-tables). In the previous example: `organizationui`,`hierarchyrule`, `appelement`, and `appsetting` are private tables and not supported for use.
 
 
 ### See also

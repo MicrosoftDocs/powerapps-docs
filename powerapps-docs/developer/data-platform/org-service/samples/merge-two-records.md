@@ -2,8 +2,8 @@
 title: "Sample: Merge two records (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample showcases how to merge two records." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/03/2022
-author: divkamath
-ms.author: dikamath
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: pehecke
 ms.topic: sample
 search.audienceType:
@@ -18,7 +18,7 @@ contributors:
 This sample shows how to merge two record.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Merge two records sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/MergeTwoRecords)
+> [SDK for .NET: Merge two records sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/MergeTwoRecords)
 
 ## How to run this sample
 

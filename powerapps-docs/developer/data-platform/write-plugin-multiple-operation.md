@@ -1,10 +1,10 @@
 ---
-title: Write plug-ins for CreateMultiple and UpdateMultiple (preview)
+title: Write plug-ins for CreateMultiple and UpdateMultiple
 description: Learn how to write plug-ins that use the bulk operation messages CreateMultiple and UpdateMultiple to operate on multiple rows of data in a Microsoft Dataverse table.
 ms.date: 08/02/2023
 ms.topic: how-to
-author: divkamath
-ms.author: dikamath
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 ms.subservice: dataverse-developer
 search.audienceType: 
@@ -18,7 +18,7 @@ contributors:
 ms.custom: tap-template
 ---
 
-# Write plug-ins for CreateMultiple and UpdateMultiple (preview)
+# Write plug-ins for CreateMultiple and UpdateMultiple
 
 > [!NOTE]
 > The `CreateMultiple` and `UpdateMultiple` messages are being deployed. All tables that support `Create` and `Update` will eventually support `CreateMultiple` and `UpdateMultiple`, but some tables may not support them yet. [Learn more about bulk operation messages](bulk-operations.md)
@@ -280,8 +280,8 @@ To minimize the duration of either of these conditions, we recommend you include
 ### See also
 
 [Sample: CreateMultiple and UpdateMultiple plug-ins](org-service/samples/createmultiple-updatemultiple-plugin.md)   
-[Bulk operation messages (preview)](bulk-operations.md)   
-[Sample: Use CreateMultiple and UpdateMultiple](org-service/samples/create-update-multiple.md)   
+[Bulk operation messages](bulk-operations.md)   
+[Sample: SDK for .NET Use bulk operations](org-service/samples/create-update-multiple.md)   
 [Optimize performance for bulk operations](optimize-performance-create-update.md)
 
 [!INCLUDE [footer-include](../../includes/footer-banner.md)]

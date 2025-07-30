@@ -19,7 +19,7 @@ search.audienceType:
 Duplicate detection lets organizations set duplicate detection policies and create duplicate detection rules for business and custom tables. These rules can be applied across different record types in Microsoft Dataverse. For example, an organization may define that a lead is a duplicate of a contact, if they have the same name and phone number. Based on the duplicate detection rules set by the administrator, the system alerts the user about potential duplicates when the user tries to create new records or update existing records. To maintain data quality, you can schedule a duplicate detection job to check for duplicates for all records that match a certain criteria. You can clean the data by deleting, deactivating, or merging the duplicates reported by a duplicate detection job.
 
 > [!NOTE]
-> For information on how to create rules and run system jobs for detecting duplicate data using the user interface (UI), see [Detect duplicate data so you can fix or remove it](/dynamics365/customer-engagement/admin/detect-duplicate-data).
+> For information on how to create rules and run system jobs for detecting duplicate data using the user interface (UI), see [Set up duplicate detection rules to keep your data clean](/power-platform/admin/set-up-duplicate-detection-rules-keep-data-clean).
 
 You can use the Web API or SDK for .NET to detect duplicate data. Topics in this section provide information on how you can detect duplicate data using both web services. 
 

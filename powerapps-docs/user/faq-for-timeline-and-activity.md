@@ -1,15 +1,15 @@
 ---
 title: "Frequently Asked Questions about activities and the timeline wall| MicrosoftDocs"
 description: Frequently Asked Questions about Activities and the Timeline Wall  
-author: sericks007
+author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: faq
 ms.date: 06/22/2021
 ms.subservice: end-user
-ms.author: sericks
+ms.author: smurkute
 ms.custom: ""
-ms.reviewer: sericks
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser

@@ -1,0 +1,1 @@
+Returns the referenced record and all child records below it in the hierarchy.

@@ -18,7 +18,7 @@ contributors:
 This sample shows how to create a connection role that can be used for accounts and contacts.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Create a connection role sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/ConnectionRole)
+> [SDK for .NET: Create a connection role sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/ConnectionRole)
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 

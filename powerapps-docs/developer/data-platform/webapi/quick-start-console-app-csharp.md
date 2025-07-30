@@ -1,9 +1,10 @@
 ---
 title: "Quick Start: Web API sample (C#) (Microsoft Dataverse)| Microsoft Docs"
 description: "Walks you through creating a program to authenticate with the Microsoft Dataverse Server and then call a Web API function."
+ms.topic: quickstart
 ms.date: 06/22/2023
-author: divkamath
-ms.author: dikamath
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType:
   - developer
@@ -13,14 +14,14 @@ contributors:
 
 # Quick Start: Web API sample (C#)
 
-In this quick start you will create a simple console application to connect to your Microsoft Dataverse environment and invoke the Web API [WhoAmI Function](xref:Microsoft.Dynamics.CRM.WhoAmI). This function retrieves information about the logged on Dataverse user. Once you understand the basic functionality described here, you can move onto other Web API operations such as create, retrieve, update, and deletion of Dataverse table rows.
+In this quick start, you create a console application to connect to your Microsoft Dataverse environment and invoke the Web API [WhoAmI Function](xref:Microsoft.Dynamics.CRM.WhoAmI). This function retrieves information about the logged on Dataverse user. Once you understand the basic functionality described here, you can move onto other Web API operations such as create, retrieve, update, and deletion of Dataverse table rows.
 
-This program will authenticate and use an <xref:System.Net.Http.HttpClient> to send a `GET` request to the [WhoAmI Function](xref:Microsoft.Dynamics.CRM.WhoAmI). The response will be a [WhoAmIResponse ComplexType](xref:Microsoft.Dynamics.CRM.WhoAmIResponse). The program will then display the `UserId` property value obtained from the response.
+This program authenticates and uses an <xref:System.Net.Http.HttpClient> to send a `GET` request to the [WhoAmI Function](xref:Microsoft.Dynamics.CRM.WhoAmI). The response is a [WhoAmIResponse ComplexType](xref:Microsoft.Dynamics.CRM.WhoAmIResponse). The program display the `UserId` property value obtained from the response.
 
 > [!NOTE]
 > This is a very simple example to show how to get connected with a minimum of code. 
 
-You can find the complete Visual Studio solution for this .NET 6 project in the [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples) repo under `dataverse/webapi/`[C#-NETx/QuickStart](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23-NETx/QuickStart). There is also a .NET Framework version of the sample under `dataverse/webapi/`[C#/QuickStart](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23/QuickStart).
+You can find the complete Visual Studio solution for this .NET 6 project in the [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples) repo under `dataverse/webapi/`[C#-NETx/QuickStart](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/CSharp-NETx/QuickStart). There's also a .NET Framework version of the sample under `dataverse/webapi/`[C#/QuickStart](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/CSharp/QuickStart).
 
 ## Prerequisites
 
@@ -31,7 +32,7 @@ You can find the complete Visual Studio solution for this .NET 6 project in the 
 - Basic understanding of the C# language
 
 > [!NOTE]
-> To authenticate you must have an app registered in Microsoft Entra ID. This quick start example provides an app registration `clientid` value you can use for the purpose of running sample code published by Microsoft. However, for your own custom applications you must register your apps with AD. More information: [Walkthrough: Register an app with Microsoft Entra ID](../walkthrough-register-app-azure-active-directory.md)
+> To authenticate, you must have an app registered in Microsoft Entra ID. This quick start example provides an app registration `clientid` value you can use for running sample code published by Microsoft. However, for your own custom applications you must register your apps with AD. More information: [Walkthrough: Register an app with Microsoft Entra ID](../walkthrough-register-app-azure-active-directory.md)
 
 ## Create Visual Studio project
 
@@ -47,7 +48,7 @@ You can find the complete Visual Studio solution for this .NET 6 project in the 
 
    :::image type="content" source="media/quickstart-configure-.net-6-project.png" alt-text="Configure the project":::
 
-1. Configure the project by selecting **.NET 6.0 (Long Term Support)** and **Do not use top-level statements**. Then click **Create**.
+1. Configure the project by selecting **.NET 6.0 (Long Term Support)** and **Do not use top-level statements**. Then select **Create**.
 
    :::image type="content" source="media/quickstart-configure-.net-6-project-additional-information.png" alt-text="Additional Information dialog.":::
 
@@ -58,7 +59,7 @@ You can find the complete Visual Studio solution for this .NET 6 project in the 
    :::image type="content" source="media/quickstart-nuget-package-install-light-theme.png" alt-text="Install the (MSAL) authentication package" lightbox="media/quickstart-nuget-package-install-light-theme.png":::
 
    > [!NOTE]
-   > You will be prompted to accept the license terms before installing. Click **I Accept** in the **License Acceptance** dialog.
+   > You are prompted to accept the license terms before installing. Select **I Accept** in the **License Acceptance** dialog.
 
 ## Edit Program.cs
 
@@ -191,14 +192,14 @@ Follow these next steps to add code for the main program.
 
 1. Press F5 to build and run the program.
 
-   A browser window will open and prompt you to pick an account. Choose the account that you use to access your Dataverse environment. If that account doesn't appear in the list, click **Use another account**.
+   A browser window opens and prompts you to pick an account. Choose the account that you use to access your Dataverse environment. If that account doesn't appear in the list, select **Use another account**.
 
-   Once the account is selected, enter your password and click **Sign in**.
+   Once the account is selected, enter your password and select **Sign in**.
 
 1. Look at the console application window. The output should look something like this:
 
    ```
-   Your user ID is 4026be43-6b69-e111-8f65-78e7d1620f5e
+   Your user ID is 22cc22cc-dd33-ee44-ff55-66aa66aa66aa
    
    C:\Projects\webapi-quickstart\bin\Debug\net6.0\webapi-quickstart.exe (process 21524) exited with code 0.
    To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.

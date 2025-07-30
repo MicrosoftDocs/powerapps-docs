@@ -5,10 +5,10 @@ author: trdehove
 
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 03/16/2023
+ms.date: 11/01/2023
 ms.subservice: mobile
 ms.author: trdehove
-ms.reviewer: sericks
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser
@@ -17,6 +17,8 @@ searchScope:
 ms.collection: get-started
 contributors:
 - makolomi
+ms.contributors:
+- devangpandya
 ---
 
 #  Install the Power Apps mobile app
@@ -86,7 +88,7 @@ If you don't have any apps, then when you sign in, you will land on the **All ap
   
 ## Add to favorites
 
-You can only add canvas apps to your list of favorite apps.
+You can add canvas and model-driven apps to your list of favorite apps.
 
 - Swipe left and then select **Favorite**. A yellow star will appear next to app name when it's added to favorites. You can also select **Details** ![Details button.](media/detailsbutton.png) and then add the app to favorites.
 

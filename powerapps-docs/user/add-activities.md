@@ -4,12 +4,12 @@ description: Timeline Overview for Users
 author: dsierman
 ms.component: pa-user
 ms.topic: overview
-ms.date: 10/04/2023
+ms.date: 05/29/2025
 ms.subservice: end-user
 ms.author: dsierman
 ms.custom: ""
-ms.reviewer: sericks
-ms.assetid: sericks
+ms.reviewer: smurkute
+ms.assetid: smurkute
 search.audienceType: 
   - enduser
 ---
@@ -39,7 +39,7 @@ When enabled by your system administrator, you can use the icons that are displa
 - [Search row](#search-rows-on-timeline)
 - [Add attachments](#add-an-attachment-to-a-note-in-timeline)
 
-The timeline dashboard displays only the entities that are configured for the signed-in user. So, what you see on the timeline may differ from what another user sees. The signed-in user sees any rows they've followed if those rows are configured to display on the dashboard. For example, if only email and appointments are configured to display, then the signed-in user only sees email that relates to them, which can be email they've sent, email sent to them, and email they follow. The same would be true for appointments in this scenario. For more information on setting up timeline, see [Set up the timeline control](/power-apps/maker/model-driven-apps/set-up-timeline-control).
+The timeline dashboard displays only the entities that are configured for the signed-in user. So, what you see on the timeline may differ from what another user sees. The signed-in user sees any rows they followed if those rows are configured to display on the dashboard. For example, if only email and appointments are configured to display, then the signed-in user only sees email that relates to them, which can be email they sent, email sent to them, and email they follow. The same would be true for appointments in this scenario. For more information on setting up timeline, see [Set up the timeline control](/power-apps/maker/model-driven-apps/set-up-timeline-control).
 
 > [!Note]
 > The Notes feature isn't available from the timeline. 
@@ -132,7 +132,7 @@ Legend
 1. The **Show email as** command is used to enable or disable threaded email views.
 1. The **Display layout** command allows you to choose from two different views: **Roomy** or **Cozy**. **Roomy** (set by default) shows you more information, such as profile details, and adds space between the rows. **Cozy** hides some of the details, such as icons, and compacts the space between rows.
 1. The **Remember my filters** command allows your filters to persist when you close the record so that they continue to be applied across sessions.
-1. The **Reset to default** command reverts all of the command settings you've changed back to the default settings.
+1. The **Reset to default** command reverts all of the command settings you changed back to the default settings.
 
 ## View email inline in timeline
 
@@ -217,7 +217,7 @@ When you type the **#** symbol, the results you see are matches with the account
 
 When enabled by your system administrator, you can either add a note or a post to a row on timeline. Each note and post has a maximum size limit of 100,000 characters.
 
-You can also enter a note and add it to a row, but you can only add one attachment per note. If your administrator hasn't enabled note, you can't add an attachment. 
+You can also enter a note and add it to a row, but you can only add one attachment per note. You can only add an attachment if notes are enabled. 
 
 **Note display view**
 
@@ -244,7 +244,7 @@ To add an attachment to a post:
 
 ### Preview an attachment in the timeline
 
-You can view previews of attachments in the timeline if they are in the supported file format (.JPG, .PNG., or .PDF). Any attachment that is viewable inline on the timeline can be downloaded, whether or not a preview is available.
+You can view previews of attachments in the timeline if they're in the supported file format (.JPG, .PNG., or .PDF). Any attachment that's viewable inline on the timeline can be downloaded, whether or not a preview is available.
 
 ![Attachment preview dialog.](media\attachment-preview-timeline.png "Attachment preview dialog")
 
@@ -367,6 +367,14 @@ When you attach a file to your note, the **Edit note** screen displays, and atta
 
 ![Edit note screen.](media\edit-note-timeline.png "Edit note screen")
 
+### Quickly save notes
+
+The Quick save feature allows you to save your notes faster by selecting **Ctrl**+**S** on your keyboard at any point when you're typing a note. When you use Quick save, you don't have to navigate to **Save** or **Save and Close** on the command bar. 
+
+When you use **Ctrl**+**S**, a **Save successful** confirmation message is displayed in the note to let you know your note saved on the timeline.
+
+![Save successful message.](media\save-successful-timeline-note.png "Save successful message")
+
 ## Work with posts
 
 When enabled by your system administrator, you can either add a post to a row or mention to another user or timeline.
@@ -455,18 +463,31 @@ The following table describes the different formatting features and functionalit
 
 The rich text editor is enabled by default. Your system administrator can enable or disable the editor for you.
 
+## Use timeline highlights powered by generative AI
+
+If timeline highlights are enabled on your app, Copilot creates an AI-generated, bulleted list that populates at the top of the timeline. You can use timeline highlights to quickly get caught up on a record's status. 
+
+The highlights include a record's main activities, such as details about who you or the previous user interacted with, the reported issue, and actions taken to try to resolve the issue. 
+
+You can copy the timeline highlights by selecting **Copy**.
+
+![Timeline highlights view.](media\view-timeline-highlights.png "Timeline highlights view")
+
+> [!IMPORTANT]
+> This feature is only available with Power Platform environments with Dataverse that have the **Enable Dynamics 365 apps** setting enabled.
+
 ## View a conversation transcript
 
-In the timeline, you can view the transcripts of completed chats you've had in conversation channels. To view these transcripts, you must have prvReadmsdyn_transcript permission. More information: [Roles and permissions](/dynamics365/app-profile-manager/security-roles)
+In the timeline, you can view the transcripts of completed chats you had in conversation channels. To view these transcripts, you must have prvReadmsdyn_transcript permission. More information: [Roles and permissions](/dynamics365/app-profile-manager/security-roles)
 
 To view a conversation transcript, select the **View more** link in the row for which you want to view the transcript. The row expands and the entire transcript is displayed inline.
 
 ![Conversation transcript view.](media\timeline-transcript-view.png "Conversation transcript view")
 
 
-## View what you've missed in timeline
+## View what you missed in timeline
 
-When you access the timeline after being away, activities that you've missed display at the top of the timeline, denoted with a blue vertical line next to them. You can quickly open the activities or scroll past them.
+When you access the timeline after being away, activities that you missed display at the top of the timeline, denoted with a blue vertical line next to them. You can quickly open the activities or scroll past them.
 
 ![What you've missed view.](media\timeline-what-you-missed.png "What you've missed view")
 

@@ -1,51 +1,50 @@
 ---
-title: "Address (CustomerAddress)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the Address (CustomerAddress)  table/entity."
-ms.date: 09/01/2023
-ms.service: "powerapps"
-ms.topic: "reference"
-ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "phecke"
-ms.author: "pehecke"
+title: "Address (CustomerAddress) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the Address (CustomerAddress) table/entity with Microsoft Dataverse."
+ms.topic: generated-reference
+author: phecke
+ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# Address (CustomerAddress)  table/entity reference
-
-> [!NOTE]
-> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
+# Address (CustomerAddress) table/entity reference (Microsoft Dataverse)
 
 Address and shipping information. Used to store additional addresses for an account or contact.
 
-
 ## Messages
 
-|Message|Web API Operation|SDK class or method|
-|-|-|-|
-|Create|POST /customeraddresses<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE /customeraddresses(*customeraddressid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET /customeraddresses(*customeraddressid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET /customeraddresses<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|Update|PATCH /customeraddresses(*customeraddressid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+The following table lists the messages for the Address (CustomerAddress) table.
+Messages represent operations that can be performed on the table. They may also be events.
+
+| Name <br />Is Event? |Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Create`<br />Event: True |`POST` /customeraddresses<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `Delete`<br />Event: True |`DELETE` /customeraddresses(*customeraddressid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `Retrieve`<br />Event: True |`GET` /customeraddresses(*customeraddressid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveMultiple`<br />Event: True |`GET` /customeraddresses<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
+| `Update`<br />Event: True |`PATCH` /customeraddresses(*customeraddressid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
+| `Upsert`<br />Event: False |`PATCH` /customeraddresses(*customeraddressid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
 
 ## Properties
 
-|Property|Value|
-|--------|-----|
-|CollectionSchemaName|CustomerAddresses|
-|DisplayCollectionName|Addresses|
-|DisplayName|Address|
-|EntitySetName|customeraddresses|
-|IsBPFEntity|False|
-|LogicalCollectionName|customeraddresses|
-|LogicalName|customeraddress|
-|OwnershipType|None|
-|PrimaryIdAttribute|customeraddressid|
-|PrimaryNameAttribute|name|
-|SchemaName|CustomerAddress|
+The following table lists selected properties for the Address (CustomerAddress) table.
 
-<a name="writable-attributes"></a>
+|Property|Value|
+| --- | --- |
+| **DisplayName** | **Address** |
+| **DisplayCollectionName** | **Addresses** |
+| **SchemaName** | `CustomerAddress` |
+| **CollectionSchemaName** | `CustomerAddresses` |
+| **EntitySetName** | `customeraddresses`|
+| **LogicalName** | `customeraddress` |
+| **LogicalCollectionName** | `customeraddresses` |
+| **PrimaryIdAttribute** | `customeraddressid` |
+| **PrimaryNameAttribute** |`name` |
+| **TableType** | `Standard` |
+| **OwnershipType** | `None` |
 
 ## Writable columns/attributes
 
@@ -84,1022 +83,911 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 - [UTCOffset](#BKMK_UTCOffset)
 
-
 ### <a name="BKMK_AddressNumber"></a> AddressNumber
 
 |Property|Value|
-|--------|-----|
-|Description|Shows the number of the address, to indicate whether the address is the primary, secondary, or other address for the customer.|
-|DisplayName|Address Number|
-|Format|None|
+|---|---|
+|Description|**Shows the number of the address, to indicate whether the address is the primary, secondary, or other address for the customer.**|
+|DisplayName|**Address Number**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|addressnumber|
-|MaxValue|1000000000|
-|MinValue|0|
+|LogicalName|`addressnumber`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|1000000000|
+|MinValue|0|
 
 ### <a name="BKMK_AddressTypeCode"></a> AddressTypeCode
 
 |Property|Value|
-|--------|-----|
-|Description|Select the address type, such as primary or billing.|
-|DisplayName|Address Type|
+|---|---|
+|Description|**Select the address type, such as primary or billing.**|
+|DisplayName|**Address Type**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|addresstypecode|
+|LogicalName|`addresstypecode`|
 |RequiredLevel|None|
 |Type|Picklist|
+|DefaultFormValue|-1|
+|GlobalChoiceName|`customeraddress_addresstypecode`|
 
 #### AddressTypeCode Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Bill To||
-|2|Ship To||
-|3|Primary||
-|4|Other||
-
-
+|Value|Label|
+|---|---|
+|1|**Bill To**|
+|2|**Ship To**|
+|3|**Primary**|
+|4|**Other**|
 
 ### <a name="BKMK_City"></a> City
 
 |Property|Value|
-|--------|-----|
-|Description|Type the city for the customer's address to help identify the location.|
-|DisplayName|City|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Type the city for the customer's address to help identify the location.**|
+|DisplayName|**City**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|city|
-|MaxLength|80|
+|LogicalName|`city`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Active|
+|IsLocalizable|False|
+|MaxLength|80|
 
 ### <a name="BKMK_Country"></a> Country
 
 |Property|Value|
-|--------|-----|
-|Description|Type the country or region for the customer's address.|
-|DisplayName|Country/Region|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Type the country or region for the customer's address.**|
+|DisplayName|**Country/Region**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|country|
-|MaxLength|80|
+|LogicalName|`country`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Active|
+|IsLocalizable|False|
+|MaxLength|80|
 
 ### <a name="BKMK_County"></a> County
 
 |Property|Value|
-|--------|-----|
-|Description|Type the county for the customer's address.|
-|DisplayName|County|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Type the county for the customer's address.**|
+|DisplayName|**County**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|county|
-|MaxLength|50|
+|LogicalName|`county`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Active|
+|IsLocalizable|False|
+|MaxLength|50|
 
 ### <a name="BKMK_CustomerAddressId"></a> CustomerAddressId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the customer address.|
-|DisplayName|Address|
+|---|---|
+|Description|**Unique identifier of the customer address.**|
+|DisplayName|**Address**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|customeraddressid|
+|LogicalName|`customeraddressid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_Fax"></a> Fax
 
 |Property|Value|
-|--------|-----|
-|Description|Type the fax number associated with the customer's address.|
-|DisplayName|Fax|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Type the fax number associated with the customer's address.**|
+|DisplayName|**Fax**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|fax|
-|MaxLength|50|
+|LogicalName|`fax`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Inactive|
+|IsLocalizable|False|
+|MaxLength|50|
 
 ### <a name="BKMK_FreightTermsCode"></a> FreightTermsCode
 
 |Property|Value|
-|--------|-----|
-|Description|Select the freight terms to make sure shipping charges are processed correctly.|
-|DisplayName|Freight Terms|
+|---|---|
+|Description|**Select the freight terms to make sure shipping charges are processed correctly.**|
+|DisplayName|**Freight Terms**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|freighttermscode|
+|LogicalName|`freighttermscode`|
 |RequiredLevel|None|
 |Type|Picklist|
+|DefaultFormValue|-1|
+|GlobalChoiceName|`customeraddress_freighttermscode`|
 
 #### FreightTermsCode Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|1|FOB||
-|2|No Charge||
-
-
+|Value|Label|
+|---|---|
+|1|**FOB**|
+|2|**No Charge**|
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the data import or data migration that created this record.|
-|DisplayName|Import Sequence Number|
-|Format|None|
+|---|---|
+|Description|**Unique identifier of the data import or data migration that created this record.**|
+|DisplayName|**Import Sequence Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|importsequencenumber|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`importsequencenumber`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_Latitude"></a> Latitude
 
 |Property|Value|
-|--------|-----|
-|Description|Type the latitude value for the customer's address, for use in mapping and other applications.|
-|DisplayName|Latitude|
+|---|---|
+|Description|**Type the latitude value for the customer's address, for use in mapping and other applications.**|
+|DisplayName|**Latitude**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|latitude|
+|LogicalName|`latitude`|
+|RequiredLevel|None|
+|Type|Double|
+|ImeMode|Disabled|
 |MaxValue|90|
 |MinValue|-90|
 |Precision|5|
-|RequiredLevel|None|
-|Type|Double|
-
 
 ### <a name="BKMK_Line1"></a> Line1
 
 |Property|Value|
-|--------|-----|
-|Description|Type the first line of the customer's address to help identify the location.|
-|DisplayName|Street 1|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Type the first line of the customer's address to help identify the location.**|
+|DisplayName|**Street 1**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|line1|
-|MaxLength|250|
+|LogicalName|`line1`|
 |RequiredLevel|ApplicationRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Active|
+|IsLocalizable|False|
+|MaxLength|250|
 
 ### <a name="BKMK_Line2"></a> Line2
 
 |Property|Value|
-|--------|-----|
-|Description|Type the second line of the customer's address.|
-|DisplayName|Street 2|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Type the second line of the customer's address.**|
+|DisplayName|**Street 2**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|line2|
-|MaxLength|250|
+|LogicalName|`line2`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Active|
+|IsLocalizable|False|
+|MaxLength|250|
 
 ### <a name="BKMK_Line3"></a> Line3
 
 |Property|Value|
-|--------|-----|
-|Description|Type the third line of the customer's address.|
-|DisplayName|Street 3|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Type the third line of the customer's address.**|
+|DisplayName|**Street 3**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|line3|
-|MaxLength|250|
+|LogicalName|`line3`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Active|
+|IsLocalizable|False|
+|MaxLength|250|
 
 ### <a name="BKMK_Longitude"></a> Longitude
 
 |Property|Value|
-|--------|-----|
-|Description|Type the longitude value for the customer's address, for use in mapping and other applications.|
-|DisplayName|Longitude|
+|---|---|
+|Description|**Type the longitude value for the customer's address, for use in mapping and other applications.**|
+|DisplayName|**Longitude**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|longitude|
+|LogicalName|`longitude`|
+|RequiredLevel|None|
+|Type|Double|
+|ImeMode|Disabled|
 |MaxValue|180|
 |MinValue|-180|
 |Precision|5|
-|RequiredLevel|None|
-|Type|Double|
-
 
 ### <a name="BKMK_Name"></a> Name
 
 |Property|Value|
-|--------|-----|
-|Description|Type a descriptive name for the customer's address, such as Corporate Headquarters.|
-|DisplayName|Address Name|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Type a descriptive name for the customer's address, such as Corporate Headquarters.**|
+|DisplayName|**Address Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|name|
-|MaxLength|200|
+|LogicalName|`name`|
 |RequiredLevel|ApplicationRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|200|
 
 ### <a name="BKMK_ObjectTypeCode"></a> ObjectTypeCode
 
 |Property|Value|
-|--------|-----|
-|Description|Shows the type code of the customer record to indicate whether the address belongs to a customer account or contact.|
-|DisplayName|Object Type |
+|---|---|
+|Description|**Shows the type code of the customer record to indicate whether the address belongs to a customer account or contact.**|
+|DisplayName|**Object Type**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|objecttypecode|
+|LogicalName|`objecttypecode`|
 |RequiredLevel|SystemRequired|
 |Type|EntityName|
-
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time that the record was migrated.|
-|DisplayName|Record Created On|
-|Format|DateOnly|
+|---|---|
+|Description|**Date and time that the record was migrated.**|
+|DisplayName|**Record Created On**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|overriddencreatedon|
+|LogicalName|`overriddencreatedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateOnly|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_ParentId"></a> ParentId
 
 |Property|Value|
-|--------|-----|
-|Description|Choose the customer's address.|
-|DisplayName|Parent|
+|---|---|
+|Description|**Choose the customer's address.**|
+|DisplayName|**Parent**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|parentid|
+|LogicalName|`parentid`|
 |RequiredLevel|SystemRequired|
-|Targets|account,contact|
 |Type|Lookup|
-
+|Targets|account, contact|
 
 ### <a name="BKMK_ParentIdTypeCode"></a> ParentIdTypeCode
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|Parent Object Type|
+|DisplayName|**Parent Object Type**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|parentidtypecode|
+|LogicalName|`parentidtypecode`|
 |RequiredLevel|None|
 |Type|EntityName|
-
 
 ### <a name="BKMK_PostalCode"></a> PostalCode
 
 |Property|Value|
-|--------|-----|
-|Description|Type the ZIP Code or postal code for the address.|
-|DisplayName|ZIP/Postal Code|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Type the ZIP Code or postal code for the address.**|
+|DisplayName|**ZIP/Postal Code**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|postalcode|
-|MaxLength|20|
+|LogicalName|`postalcode`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Inactive|
+|IsLocalizable|False|
+|MaxLength|20|
 
 ### <a name="BKMK_PostOfficeBox"></a> PostOfficeBox
 
 |Property|Value|
-|--------|-----|
-|Description|Type the post office box number of the customer's address.|
-|DisplayName|Post Office Box|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Type the post office box number of the customer's address.**|
+|DisplayName|**Post Office Box**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|postofficebox|
-|MaxLength|20|
+|LogicalName|`postofficebox`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|20|
 
 ### <a name="BKMK_PrimaryContactName"></a> PrimaryContactName
 
 |Property|Value|
-|--------|-----|
-|Description|Type the name of the primary contact person for the customer's address.|
-|DisplayName|Address Contact|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Type the name of the primary contact person for the customer's address.**|
+|DisplayName|**Address Contact**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|primarycontactname|
-|MaxLength|150|
+|LogicalName|`primarycontactname`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|150|
 
 ### <a name="BKMK_ShippingMethodCode"></a> ShippingMethodCode
 
 |Property|Value|
-|--------|-----|
-|Description|Select a shipping method for deliveries sent to this address.|
-|DisplayName|Shipping Method|
+|---|---|
+|Description|**Select a shipping method for deliveries sent to this address.**|
+|DisplayName|**Shipping Method**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|shippingmethodcode|
+|LogicalName|`shippingmethodcode`|
 |RequiredLevel|None|
 |Type|Picklist|
+|DefaultFormValue|-1|
+|GlobalChoiceName|`customeraddress_shippingmethodcode`|
 
 #### ShippingMethodCode Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Airborne||
-|2|DHL||
-|3|FedEx||
-|4|UPS||
-|5|Postal Mail||
-|6|Full Load||
-|7|Will Call||
-
-
+|Value|Label|
+|---|---|
+|1|**Airborne**|
+|2|**DHL**|
+|3|**FedEx**|
+|4|**UPS**|
+|5|**Postal Mail**|
+|6|**Full Load**|
+|7|**Will Call**|
 
 ### <a name="BKMK_StateOrProvince"></a> StateOrProvince
 
 |Property|Value|
-|--------|-----|
-|Description|Type the state or province of the customer's address.|
-|DisplayName|State/Province|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Type the state or province of the customer's address.**|
+|DisplayName|**State/Province**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|stateorprovince|
-|MaxLength|50|
+|LogicalName|`stateorprovince`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Active|
+|IsLocalizable|False|
+|MaxLength|50|
 
 ### <a name="BKMK_Telephone1"></a> Telephone1
 
 |Property|Value|
-|--------|-----|
-|Description|Type the primary phone number for the customer's address.|
-|DisplayName|Main Phone|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Type the primary phone number for the customer's address.**|
+|DisplayName|**Main Phone**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|telephone1|
-|MaxLength|50|
+|LogicalName|`telephone1`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Inactive|
+|IsLocalizable|False|
+|MaxLength|50|
 
 ### <a name="BKMK_Telephone2"></a> Telephone2
 
 |Property|Value|
-|--------|-----|
-|Description|Type a second phone number for the customer's address.|
-|DisplayName|Phone 2|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Type a second phone number for the customer's address.**|
+|DisplayName|**Phone 2**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|telephone2|
-|MaxLength|50|
+|LogicalName|`telephone2`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Inactive|
+|IsLocalizable|False|
+|MaxLength|50|
 
 ### <a name="BKMK_Telephone3"></a> Telephone3
 
 |Property|Value|
-|--------|-----|
-|Description|Type a third phone number for the customer's address.|
-|DisplayName|Telephone 3|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Type a third phone number for the customer's address.**|
+|DisplayName|**Telephone 3**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|telephone3|
-|MaxLength|50|
+|LogicalName|`telephone3`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Inactive|
+|IsLocalizable|False|
+|MaxLength|50|
 
 ### <a name="BKMK_TimeZoneRuleVersionNumber"></a> TimeZoneRuleVersionNumber
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Time Zone Rule Version Number|
-|Format|None|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Time Zone Rule Version Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|timezoneruleversionnumber|
-|MaxValue|2147483647|
-|MinValue|-1|
+|LogicalName|`timezoneruleversionnumber`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-1|
 
 ### <a name="BKMK_TransactionCurrencyId"></a> TransactionCurrencyId
 
 |Property|Value|
-|--------|-----|
-|Description|Choose the local currency for the record to make sure budgets are reported in the correct currency.|
-|DisplayName|Currency|
+|---|---|
+|Description|**Choose the local currency for the record to make sure budgets are reported in the correct currency.**|
+|DisplayName|**Currency**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|transactioncurrencyid|
+|LogicalName|`transactioncurrencyid`|
 |RequiredLevel|None|
-|Targets|transactioncurrency|
 |Type|Lookup|
-
+|Targets|transactioncurrency|
 
 ### <a name="BKMK_UPSZone"></a> UPSZone
 
 |Property|Value|
-|--------|-----|
-|Description|Type the UPS zone of the customer's address to make sure shipping charges are calculated correctly and deliveries are made promptly, if shipped by UPS.|
-|DisplayName|UPS Zone|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Type the UPS zone of the customer's address to make sure shipping charges are calculated correctly and deliveries are made promptly, if shipped by UPS.**|
+|DisplayName|**UPS Zone**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|upszone|
-|MaxLength|4|
+|LogicalName|`upszone`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|4|
 
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
 
 |Property|Value|
-|--------|-----|
-|Description|Time zone code that was in use when the record was created.|
-|DisplayName|UTC Conversion Time Zone Code|
-|Format|None|
+|---|---|
+|Description|**Time zone code that was in use when the record was created.**|
+|DisplayName|**UTC Conversion Time Zone Code**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|utcconversiontimezonecode|
-|MaxValue|2147483647|
-|MinValue|-1|
+|LogicalName|`utcconversiontimezonecode`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-1|
 
 ### <a name="BKMK_UTCOffset"></a> UTCOffset
 
 |Property|Value|
-|--------|-----|
-|Description|Select the time zone for the address.|
-|DisplayName|UTC Offset|
-|Format|TimeZone|
+|---|---|
+|Description|**Select the time zone for the address.**|
+|DisplayName|**UTC Offset**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|utcoffset|
-|MaxValue|1500|
-|MinValue|-1500|
+|LogicalName|`utcoffset`|
 |RequiredLevel|None|
 |Type|Integer|
+|MaxValue|1500|
+|MinValue|-1500|
 
-<a name="read-only-attributes"></a>
 
 ## Read-only columns/attributes
 
-These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** and **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [Composite](#BKMK_Composite)
 - [CreatedBy](#BKMK_CreatedBy)
-- [CreatedByName](#BKMK_CreatedByName)
-- [CreatedByYomiName](#BKMK_CreatedByYomiName)
 - [CreatedOn](#BKMK_CreatedOn)
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
-- [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
-- [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
 - [ExchangeRate](#BKMK_ExchangeRate)
 - [ModifiedBy](#BKMK_ModifiedBy)
-- [ModifiedByName](#BKMK_ModifiedByName)
-- [ModifiedByYomiName](#BKMK_ModifiedByYomiName)
 - [ModifiedOn](#BKMK_ModifiedOn)
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
-- [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
-- [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
 - [OwningUser](#BKMK_OwningUser)
-- [TransactionCurrencyIdName](#BKMK_TransactionCurrencyIdName)
 - [VersionNumber](#BKMK_VersionNumber)
-
 
 ### <a name="BKMK_Composite"></a> Composite
 
 |Property|Value|
-|--------|-----|
-|Description|Shows the complete address.|
-|DisplayName|Address|
-|Format|TextArea|
-|IsLocalizable|False|
+|---|---|
+|Description|**Shows the complete address.**|
+|DisplayName|**Address**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|composite|
-|MaxLength|1000|
+|LogicalName|`composite`|
 |RequiredLevel|None|
 |Type|Memo|
-
+|Format|TextArea|
+|FormatName|TextArea|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1000|
 
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
 |Property|Value|
-|--------|-----|
-|Description|Shows who created the record.|
-|DisplayName|Created By|
+|---|---|
+|Description|**Shows who created the record.**|
+|DisplayName|**Created By**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdby|
+|LogicalName|`createdby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedByName"></a> CreatedByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedByYomiName"></a> CreatedByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_CreatedOn"></a> CreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Shows the date and time when the record was created. The date and time are displayed in the time zone selected in Microsoft Dynamics 365 options.|
-|DisplayName|Created On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Shows the date and time when the record was created. The date and time are displayed in the time zone selected in Microsoft Dynamics 365 options.**|
+|DisplayName|**Created On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdon|
+|LogicalName|`createdon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_CreatedOnBehalfBy"></a> CreatedOnBehalfBy
 
 |Property|Value|
-|--------|-----|
-|Description|Shows who created the record on behalf of another user.|
-|DisplayName|Created By (Delegate)|
+|---|---|
+|Description|**Shows who created the record on behalf of another user.**|
+|DisplayName|**Created By (Delegate)**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdonbehalfby|
+|LogicalName|`createdonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedOnBehalfByName"></a> CreatedOnBehalfByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedOnBehalfByYomiName"></a> CreatedOnBehalfByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_ExchangeRate"></a> ExchangeRate
 
 |Property|Value|
-|--------|-----|
-|Description|Shows the conversion rate of the record's currency. The exchange rate is used to convert all money fields in the record from the local currency to the system's default currency.|
-|DisplayName|Exchange Rate|
+|---|---|
+|Description|**Shows the conversion rate of the record's currency. The exchange rate is used to convert all money fields in the record from the local currency to the system's default currency.**|
+|DisplayName|**Exchange Rate**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|exchangerate|
-|MaxValue|100000000000|
-|MinValue|0.000000000001|
-|Precision|12|
+|LogicalName|`exchangerate`|
 |RequiredLevel|None|
 |Type|Decimal|
-
+|ImeMode|Disabled|
+|MaxValue|100000000000|
+|MinValue|1E-12|
+|Precision|12|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
 |Property|Value|
-|--------|-----|
-|Description|Shows who last updated the record.|
-|DisplayName|Modified By|
+|---|---|
+|Description|**Shows who last updated the record.**|
+|DisplayName|**Modified By**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedby|
+|LogicalName|`modifiedby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedByName"></a> ModifiedByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedByYomiName"></a> ModifiedByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_ModifiedOn"></a> ModifiedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Shows the date and time when the record was last updated. The date and time are displayed in the time zone selected in Microsoft Dynamics 365 options.|
-|DisplayName|Modified On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Shows the date and time when the record was last updated. The date and time are displayed in the time zone selected in Microsoft Dynamics 365 options.**|
+|DisplayName|**Modified On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedon|
+|LogicalName|`modifiedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_ModifiedOnBehalfBy"></a> ModifiedOnBehalfBy
 
 |Property|Value|
-|--------|-----|
-|Description|Shows who last updated the record on behalf of another user.|
-|DisplayName|Modified By (Delegate)|
+|---|---|
+|Description|**Shows who last updated the record on behalf of another user.**|
+|DisplayName|**Modified By (Delegate)**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedonbehalfby|
+|LogicalName|`modifiedonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedOnBehalfByName"></a> ModifiedOnBehalfByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedOnBehalfByYomiName"></a> ModifiedOnBehalfByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_OwnerId"></a> OwnerId
 
 |Property|Value|
-|--------|-----|
-|Description|Enter the user or team who is assigned to manage the record. This field is updated every time the record is assigned to a different user.|
-|DisplayName|Owner|
+|---|---|
+|Description|**Enter the user or team who is assigned to manage the record. This field is updated every time the record is assigned to a different user.**|
+|DisplayName|**Owner**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|ownerid|
+|LogicalName|`ownerid`|
 |RequiredLevel|ApplicationRequired|
-|Targets|systemuser,team|
 |Type|Owner|
-
+|Targets|systemuser, team|
 
 ### <a name="BKMK_OwnerIdType"></a> OwnerIdType
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owneridtype|
+|LogicalName|`owneridtype`|
 |RequiredLevel|SystemRequired|
 |Type|EntityName|
-
 
 ### <a name="BKMK_OwningBusinessUnit"></a> OwningBusinessUnit
 
 |Property|Value|
-|--------|-----|
-|Description|Shows the business unit that the record owner belongs to.|
-|DisplayName|Owning Business Unit|
+|---|---|
+|Description|**Shows the business unit that the record owner belongs to.**|
+|DisplayName|**Owning Business Unit**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owningbusinessunit|
+|LogicalName|`owningbusinessunit`|
 |RequiredLevel|None|
-|Targets|businessunit|
 |Type|Lookup|
-
+|Targets|businessunit|
 
 ### <a name="BKMK_OwningUser"></a> OwningUser
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user who owns the customer address.|
-|DisplayName|Owner|
+|---|---|
+|Description|**Unique identifier of the user who owns the customer address.**|
+|DisplayName|**Owner**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owninguser|
+|LogicalName|`owninguser`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_TransactionCurrencyIdName"></a> TransactionCurrencyIdName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|transactioncurrencyidname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
 |Property|Value|
-|--------|-----|
-|Description|Version number of the customer address.|
-|DisplayName|Version Number|
+|---|---|
+|Description|**Version number of the customer address.**|
+|DisplayName|**Version Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|versionnumber|
-|MaxValue|9223372036854775807|
-|MinValue|-9223372036854775808|
+|LogicalName|`versionnumber`|
 |RequiredLevel|None|
 |Type|BigInt|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
 
-<a name="onetomany"></a>
+## Many-to-One relationships
 
-## One-To-Many Relationships
+These relationships are many-to-one. Listed by **SchemaName**.
 
-Listed by **SchemaName**.
-
-- [CustomerAddress_BulkDeleteFailures](#BKMK_CustomerAddress_BulkDeleteFailures)
-- [CustomerAddress_SyncErrors](#BKMK_CustomerAddress_SyncErrors)
-- [CustomerAddress_AsyncOperations](#BKMK_CustomerAddress_AsyncOperations)
-- [CustomerAddress_ProcessSessions](#BKMK_CustomerAddress_ProcessSessions)
-- [customeraddress_principalobjectattributeaccess](#BKMK_customeraddress_principalobjectattributeaccess)
-
-
-### <a name="BKMK_CustomerAddress_BulkDeleteFailures"></a> CustomerAddress_BulkDeleteFailures
-
-Same as the [CustomerAddress_BulkDeleteFailures](bulkdeletefailure.md#BKMK_CustomerAddress_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|bulkdeletefailure|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|CustomerAddress_BulkDeleteFailures|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_CustomerAddress_SyncErrors"></a> CustomerAddress_SyncErrors
-
-Same as the [CustomerAddress_SyncErrors](syncerror.md#BKMK_CustomerAddress_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|syncerror|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|CustomerAddress_SyncErrors|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: Cascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
-
-
-### <a name="BKMK_CustomerAddress_AsyncOperations"></a> CustomerAddress_AsyncOperations
-
-Same as the [CustomerAddress_AsyncOperations](asyncoperation.md#BKMK_CustomerAddress_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|asyncoperation|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|CustomerAddress_AsyncOperations|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_CustomerAddress_ProcessSessions"></a> CustomerAddress_ProcessSessions
-
-Same as the [CustomerAddress_ProcessSessions](processsession.md#BKMK_CustomerAddress_ProcessSessions) many-to-one relationship for the [processsession](processsession.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|processsession|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|CustomerAddress_ProcessSessions|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 110|
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_customeraddress_principalobjectattributeaccess"></a> customeraddress_principalobjectattributeaccess
-
-Same as the [customeraddress_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_customeraddress_principalobjectattributeaccess) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|principalobjectattributeaccess|
-|ReferencingAttribute|objectid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|customeraddress_principalobjectattributeaccess|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-<a name="manytoone"></a>
-
-## Many-To-One Relationships
-
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
-
-- [lk_customeraddress_modifiedonbehalfby](#BKMK_lk_customeraddress_modifiedonbehalfby)
-- [TransactionCurrency_CustomerAddress](#BKMK_TransactionCurrency_CustomerAddress)
-- [Contact_CustomerAddress](#BKMK_Contact_CustomerAddress)
 - [Account_CustomerAddress](#BKMK_Account_CustomerAddress)
+- [Contact_CustomerAddress](#BKMK_Contact_CustomerAddress)
 - [lk_customeraddress_createdonbehalfby](#BKMK_lk_customeraddress_createdonbehalfby)
-- [lk_customeraddressbase_modifiedby](#BKMK_lk_customeraddressbase_modifiedby)
+- [lk_customeraddress_modifiedonbehalfby](#BKMK_lk_customeraddress_modifiedonbehalfby)
 - [lk_customeraddressbase_createdby](#BKMK_lk_customeraddressbase_createdby)
-
-
-### <a name="BKMK_lk_customeraddress_modifiedonbehalfby"></a> lk_customeraddress_modifiedonbehalfby
-
-See the [lk_customeraddress_modifiedonbehalfby](systemuser.md#BKMK_lk_customeraddress_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_TransactionCurrency_CustomerAddress"></a> TransactionCurrency_CustomerAddress
-
-See the [TransactionCurrency_CustomerAddress](transactioncurrency.md#BKMK_TransactionCurrency_CustomerAddress) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
-
-### <a name="BKMK_Contact_CustomerAddress"></a> Contact_CustomerAddress
-
-See the [Contact_CustomerAddress](contact.md#BKMK_Contact_CustomerAddress) one-to-many relationship for the [contact](contact.md) table/entity.
+- [lk_customeraddressbase_modifiedby](#BKMK_lk_customeraddressbase_modifiedby)
+- [TransactionCurrency_CustomerAddress](#BKMK_TransactionCurrency_CustomerAddress)
 
 ### <a name="BKMK_Account_CustomerAddress"></a> Account_CustomerAddress
 
-See the [Account_CustomerAddress](account.md#BKMK_Account_CustomerAddress) one-to-many relationship for the [account](account.md) table/entity.
+One-To-Many Relationship: [account Account_CustomerAddress](account.md#BKMK_Account_CustomerAddress)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`account`|
+|ReferencedAttribute|`accountid`|
+|ReferencingAttribute|`parentid`|
+|ReferencingEntityNavigationPropertyName|`parentid_account`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `Cascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_Contact_CustomerAddress"></a> Contact_CustomerAddress
+
+One-To-Many Relationship: [contact Contact_CustomerAddress](contact.md#BKMK_Contact_CustomerAddress)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`contact`|
+|ReferencedAttribute|`contactid`|
+|ReferencingAttribute|`parentid`|
+|ReferencingEntityNavigationPropertyName|`parentid_contact`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `Cascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_lk_customeraddress_createdonbehalfby"></a> lk_customeraddress_createdonbehalfby
 
-See the [lk_customeraddress_createdonbehalfby](systemuser.md#BKMK_lk_customeraddress_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+One-To-Many Relationship: [systemuser lk_customeraddress_createdonbehalfby](systemuser.md#BKMK_lk_customeraddress_createdonbehalfby)
 
-### <a name="BKMK_lk_customeraddressbase_modifiedby"></a> lk_customeraddressbase_modifiedby
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`createdonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-See the [lk_customeraddressbase_modifiedby](systemuser.md#BKMK_lk_customeraddressbase_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+### <a name="BKMK_lk_customeraddress_modifiedonbehalfby"></a> lk_customeraddress_modifiedonbehalfby
+
+One-To-Many Relationship: [systemuser lk_customeraddress_modifiedonbehalfby](systemuser.md#BKMK_lk_customeraddress_modifiedonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`modifiedonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_lk_customeraddressbase_createdby"></a> lk_customeraddressbase_createdby
 
-See the [lk_customeraddressbase_createdby](systemuser.md#BKMK_lk_customeraddressbase_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+One-To-Many Relationship: [systemuser lk_customeraddressbase_createdby](systemuser.md#BKMK_lk_customeraddressbase_createdby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdby`|
+|ReferencingEntityNavigationPropertyName|`createdby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_customeraddressbase_modifiedby"></a> lk_customeraddressbase_modifiedby
+
+One-To-Many Relationship: [systemuser lk_customeraddressbase_modifiedby](systemuser.md#BKMK_lk_customeraddressbase_modifiedby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedby`|
+|ReferencingEntityNavigationPropertyName|`modifiedby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_TransactionCurrency_CustomerAddress"></a> TransactionCurrency_CustomerAddress
+
+One-To-Many Relationship: [transactioncurrency TransactionCurrency_CustomerAddress](transactioncurrency.md#BKMK_TransactionCurrency_CustomerAddress)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`transactioncurrency`|
+|ReferencedAttribute|`transactioncurrencyid`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencingEntityNavigationPropertyName|`transactioncurrencyid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Restrict`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+
+## One-to-Many relationships
+
+These relationships are one-to-many. Listed by **SchemaName**.
+
+- [CustomerAddress_AsyncOperations](#BKMK_CustomerAddress_AsyncOperations)
+- [CustomerAddress_BulkDeleteFailures](#BKMK_CustomerAddress_BulkDeleteFailures)
+- [customeraddress_principalobjectattributeaccess](#BKMK_customeraddress_principalobjectattributeaccess)
+- [CustomerAddress_ProcessSessions](#BKMK_CustomerAddress_ProcessSessions)
+- [CustomerAddress_SyncErrors](#BKMK_CustomerAddress_SyncErrors)
+
+### <a name="BKMK_CustomerAddress_AsyncOperations"></a> CustomerAddress_AsyncOperations
+
+Many-To-One Relationship: [asyncoperation CustomerAddress_AsyncOperations](asyncoperation.md#BKMK_CustomerAddress_AsyncOperations)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`asyncoperation`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`CustomerAddress_AsyncOperations`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_CustomerAddress_BulkDeleteFailures"></a> CustomerAddress_BulkDeleteFailures
+
+Many-To-One Relationship: [bulkdeletefailure CustomerAddress_BulkDeleteFailures](bulkdeletefailure.md#BKMK_CustomerAddress_BulkDeleteFailures)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`bulkdeletefailure`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`CustomerAddress_BulkDeleteFailures`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_customeraddress_principalobjectattributeaccess"></a> customeraddress_principalobjectattributeaccess
+
+Many-To-One Relationship: [principalobjectattributeaccess customeraddress_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_customeraddress_principalobjectattributeaccess)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`principalobjectattributeaccess`|
+|ReferencingAttribute|`objectid`|
+|ReferencedEntityNavigationPropertyName|`customeraddress_principalobjectattributeaccess`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_CustomerAddress_ProcessSessions"></a> CustomerAddress_ProcessSessions
+
+Many-To-One Relationship: [processsession CustomerAddress_ProcessSessions](processsession.md#BKMK_CustomerAddress_ProcessSessions)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`processsession`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`CustomerAddress_ProcessSessions`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 110<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_CustomerAddress_SyncErrors"></a> CustomerAddress_SyncErrors
+
+Many-To-One Relationship: [syncerror CustomerAddress_SyncErrors](syncerror.md#BKMK_CustomerAddress_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`syncerror`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`CustomerAddress_SyncErrors`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
-<xref href="Microsoft.Dynamics.CRM.customeraddress?text=customeraddress EntityType" />
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
+[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
+<xref:Microsoft.Dynamics.CRM.customeraddress?displayProperty=fullName>

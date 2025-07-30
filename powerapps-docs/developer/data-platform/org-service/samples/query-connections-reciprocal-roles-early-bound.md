@@ -18,7 +18,7 @@ contributors:
 This sample shows how to create matching roles and then find a matching role for a particular role.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Query connections by reciprocal roles (early bound) sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/QueryByReciprocalRole)
+> [SDK for .NET: Query connections by reciprocal roles (early bound) sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/QueryByReciprocalRole)
 
 ## How to run this sample
 

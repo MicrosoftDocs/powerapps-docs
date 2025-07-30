@@ -1,8 +1,8 @@
 ---
-title: "attribute.getOptions (Client API reference)| MicrosoftDocs"
+title: "attribute.getOptions (Client API reference)"
 description: Includes description and supported parameters for the attribute.getOptions method.
-author: HemantGaur
-ms.author: hemantg
+author: clromano
+ms.author: clromano
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -14,8 +14,6 @@ contributors:
   - JimDaly
 ---
 # attribute.getOptions (Client API reference)
-
-
 
 Returns an array of option objects representing valid options for a column. 
 
@@ -39,7 +37,5 @@ Options have two properties:
 |--------|----|-----------|
 |`text`|string|The localized label for the option.|
 |`value`|number|The integer value of the option.|
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

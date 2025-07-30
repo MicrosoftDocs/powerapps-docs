@@ -1,9 +1,9 @@
 ---
 title: "Discover user organizations (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Your client application may connect to multiple Dataverse environments. Use the Global Discovery Service to find which environments the user of your application can access."
-ms.date: 07/18/2022
+ms.date: 03/14/2024
 ms.reviewer: pehecke
-ms.topic: article
+ms.topic: how-to
 author: ImadYanni # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: iyanni # MSFT alias of Microsoft employees only
@@ -63,41 +63,39 @@ If the calling user has access to no instances, the response simply returns an e
 
 ## Authentication
 
-The calling user must aquire an OAuth 2.0 token from Microsoft Entra ID, and then add that token in the Authorization header of the API calls. More information: [Use OAuth authentication with Microsoft Dataverse](authenticate-oauth.md).
+The calling user must acquire an OAuth 2.0 token from Microsoft Entra ID, and then add that token in the Authorization header of the API calls. More information: [Use OAuth authentication with Microsoft Dataverse](authenticate-oauth.md).
 
 ### CORS support
 
 The Discovery Service supports the CORS standard for cross-origin access. For more information about CORS support see [Use OAuth with Cross-Origin Resource Sharing to connect a Single-Page Application](oauth-cross-origin-resource-sharing-connect-single-page-application.md).
 
-### Use Postman to connect to the Global Discovery Service
+### Use Insomnia to connect to the Global Discovery Service
 
-You can use the same approach described for the Dataverse Web API here: [Set up a Postman environment](webapi/setup-postman-environment.md), but instead of the environment variables described in that topic, use the following to access the commercial cloud.
+You can use the same approach described for the Dataverse Web API here: [Use Insomnia with Dataverse Web API](webapi/insomnia.md), but instead of the environment variables described in that topic, use the following to access the commercial cloud.
 
-|Variable  |Initial Value  |
-|---------|---------|
-|`cloudUrl`|`https://globaldisco.crm.dynamics.com`|
-|`globalDiscoUrl`|`{{cloudUrl}}/api/discovery/v2.0/`|
-|`clientid`|`51f81489-12ee-4a9e-aaae-a2591f45987d`|
-|`authurl`|`https://login.microsoftonline.com/common/oauth2/authorize?resource={{cloudUrl}}`|
+```json
+{
+   "cloudUrl": "https://globaldisco.crm.dynamics.com",
+   "globalDiscoUrl": "{{cloudUrl}}/api/discovery/v2.0/",
+   "redirecturl": "https://localhost",
+   "authurl": "https://login.microsoftonline.com/common/oauth2/authorize?resource={{cloudUrl}}",
+   "clientid": "51f81489-12ee-4a9e-aaae-a2591f45987d"
+}
+```
 
-Then, in the Postman **Authorization** tab, set or verify the following values:
+
+Then, in the **Authorization** tab, choose **OAuth 2** and set or verify the following values:
 
 |Field  |Value  |
 |---------|---------|
-|**Type**|OAuth 2.0|
-|**Add authorization data to** |Request Headers|
-|**Header Prefix**|Bearer|
-|**Grant Type**|Implicit|
-|**Callback URL**|`http://localhost`|
-|**Auth URL**|`{{authurl}}`|
-|**Client ID**|`{{clientid}}`|
-|**Client Authentication**|Send as Basic Auth header|
+|**GRANT TYPE**|Implicit|
+|**AUTHORIZATION url**|`_.authurl`|
+|**CLIENTID**|`_.clientid`|
+|**REDIRECT URL**|`_.redirecturl`|
 
-Use `{{globalDiscoUrl}}` as the **Request URL** and in the **Authorization** tab, click **Get New Access Token**.
+Use `GET _.globalDiscoUrl` as the **Request URL** and select **Send**.
 
-You should now be able to query the Global Discovery Service using Postman.
-
-More information: [YouTube: Get started using Postman with Microsoft Dataverse Web API](https://youtu.be/HpUj11yU0fY)
+You should now be able to query the Global Discovery Service using Insomnia.
 
 ## Service Documents
 

@@ -5,7 +5,7 @@ ms.date: 04/03/2022
 author: jaredha
 ms.author: jaredha
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: how-to
 search.audienceType:
   - developer
 ---
@@ -15,7 +15,7 @@ search.audienceType:
 This sample obtains the data context from the current operation and posts it to the Azure Service Bus.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Azure aware custom workflow activity sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/Azurecustomworkflowactivity)
+> [SDK for .NET: Azure aware custom workflow activity sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/Azurecustomworkflowactivity)
 
 ## Requirements
 

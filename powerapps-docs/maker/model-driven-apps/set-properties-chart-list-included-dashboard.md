@@ -2,12 +2,11 @@
 title: "Set properties for a model-driven app chart or list included in a dashboard in Power Apps | MicrosoftDocs"
 description: "Learn how to set properties for  chart or list included in a dashboard"
 ms.custom: ""
-ms.date: 06/06/2018
+ms.date: 02/27/2024
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "conceptual"
+ms.topic: how-to
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -48,11 +47,11 @@ search.audienceType:
       
     - **Default View**. Select the view used to retrieve the data for the chart.  
       
-    - **Default Chart**. Select the default chart that you want to display when the dashboard is first opened. The available values are determined by the value set for the Table property. This property works together with the Display Chart Selection property. A user can change the type of chart if the **Display Chart Selection** option is turned on, but the chart will revert to Default Chart the next time the dashboard is opened.  
+    - **Default Chart**. Select the default chart that you want to display when the dashboard is first opened. The available values are determined by the value set for the Table property. This property works together with the Display Chart Selection property. A user can change the chart displayed in the component if the **Display Chart Selection** option is turned on, but the chart will revert to Default Chart the next time the dashboard is opened.  
       
     - **Show Chart Only**. Select this check box if you want to display just the chart. Clear this check box if you want to display the chart and its associated data.  
       
-    - **Display Chart Selection**. Select this check box to enable users to change the type of chart (column, bar, pie, etc.) when they use the dashboard. If the user changes the type of chart, the settings aren’t saved. The chart type reverts to the Default Chart setting when the dashboard is closed.  
+    - **Display Chart Selection**. Select this check box to enable users to change the chart displayed in the component at runtime. The component reverts to displaying the Default Chart next time the dashboard is opened.
   
 1. You can set the following **list** properties from the **Set Properties** dialog box:  
       

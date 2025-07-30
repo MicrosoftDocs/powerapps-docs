@@ -6,14 +6,14 @@ author: emcoope-msft
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 09/14/2019
+ms.date: 11/14/2024
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
 contributors:
   - mduelae
-  - chmoncay
+  - yogeshgupta698
   - emcoope-msft
 ---
 # Screen control in Power Apps
@@ -42,9 +42,9 @@ Most apps have multiple **Screen** controls that contain **[Label](control-text-
 
 **Name** - The name of the screen.
 
-**OnHidden** – The behavior of an app when the user navigates away from a screen.
+**OnHidden** – The behavior of an app when the user navigates away from a screen. If the **Disable non-blocking App.OnStart** rule is enabled in app settings, this property may need to wait until **App.OnStart** is finished executing. By default, this setting is turned on. 
 
-**OnVisible** – The behavior of an app when the user navigates to a screen.  Use this property to set up variables and preload data used by the screen.  Use the [**App.OnStart**](../functions/object-app.md#onstart-property) property for set up once when the app is started.
+**OnVisible** – The behavior of an app when the user navigates to a screen.  Use this property to set up variables and preload data used by the screen.  Use the [**App.OnStart**](../functions/object-app.md#onstart-property) property for set up once when the app is started. If the **non-blocking App.OnStart** is enabled, the **Screen.OnVisible** event can run parallel with it. As a result, it's recommended to refrain from relying on variables or collections that are initialized by **App.OnStart**, as they might not be fully initialized.
 
 **Orientation** - The orientation of the screen. If its **Width** is greater than its **Height**, the orientation will be **Layout.Horizontal**; otherwise, it will be **Layout.Vertical**.
 

@@ -1,11 +1,11 @@
 ---
-title: "Use metadata to generate entity diagrams (Developer Guide for Dynamics 365 Customer Engagement (on-premises)) | MicrosoftDocs"
+title: "Use metadata to generate entity diagrams"
 description: "Learn about using the Metadata Diagram tool to visually show entity relationships for one entity or multiple related entities, including custom and system entities."
 ms.date: 01/04/2023
 ms.reviewer: jdaly
 ms.topic: article
-author: phecke # GitHub ID
-ms.author: pehecke # MSFT alias of Microsoft employees only
+author: MsSQLGirl # GitHub ID
+ms.author: jukoesma # MSFT alias of Microsoft employees only
 ms.subservice: dataverse-developer
 search.audienceType: 
   - developer
@@ -60,7 +60,7 @@ You can run the program at the command prompt. List the entities you wish to inc
 GenerateEntityDiagram.exe account new_safedepositbox
 ```
 
-The custom entity new_safedepositbox must exist in your environment for this to work. Otherwise, try any combination of entities that do exist - perhaps "account contact". 
+The custom entity new_safedepositbox must exist in your environment for this to work. Otherwise, try any combination of entities that do exist - perhaps "account contact".
 The name of the generated Visio file is account.vsd.
 
 > [!NOTE]
@@ -82,7 +82,7 @@ The name of the generated Visio file is account.vsd.
 
 **[ERD Visio Builder](https://www.xrmtoolbox.com/plugins/LinkeD365.ERDVisioBuilder/)** for XrmToolBox is a tool that generates Visio diagrams from the metadata in Microsoft Dynamics 365 and the Power Platform Dataverse.
 
-See the [Developer tools](developer-tools.md) article for community developed tools, [jonasr.app/uml](https://jonasr.app/uml?utm_source=msdocs) for more information about UML Diagram Generator, [journeyintocrm.com](https://www.journeyintocrm.com/archives/1806.html) for more information about Entity Relation Diagram Creator and [LinkeD365.blog](https://linked365.blog/2020/07/06/erd-visio-builder-xrmtoolbox-addon/) for more information on the ERD Visio Builder.
+See the [Developer tools](developer-tools.md) article for community developed tools, [jonasr.app/uml](https://jonasr.app/uml?utm_source=msdocs) for more information about UML Diagram Generator, and [LinkeD365.blog](https://linked365.blog/2020/07/06/erd-visio-builder-xrmtoolbox-addon/) for more information on the ERD Visio Builder.
 
 > [!NOTE]
 > The community tools are not a product of Microsoft and we do not extend support to the community tools.

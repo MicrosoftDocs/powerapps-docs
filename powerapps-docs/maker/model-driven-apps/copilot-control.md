@@ -3,11 +3,13 @@ title: Add the Copilot control to the rich text editor
 description: Learn how to make the Copilot control available in the rich text editor by modifying the editor configuration file.
 author: udaykirang
 ms.author: udag
-ms.reviewer: shujoshi
+ms.reviewer: udag
 ms.topic: how-to
-ms.date: 08/25/2023
+ms.date: 04/30/2025
+ms.update-cycle: 180-days
 ms.subservice: mda-maker
 tags:
+ms.collection: bap-ai-copilot
 search.audienceType:
   - maker
 ms.custom:
@@ -17,14 +19,9 @@ ms.custom:
   - ai-seo-date:09/28/2023
 ---
 
-# Add the Copilot control to the rich text editor (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Add the Copilot control to the rich text editor
 
 The Copilot control is available in the email form's rich text editor toolbar by default. You can add the Copilot control to the rich text editor in other forms by changing the editor's properties in its advanced configuration file.
-
-> [!IMPORTANT]
-> This is a preview feature. [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
 ## Prerequisites
 
@@ -55,4 +52,4 @@ To add the Copilot control to the rich text editor toolbar in a form, you need t
 
 ### See also
 
-[Use Copilot in the email rich text editor (preview)](../model-driven-apps/use-copilot-email-assist.md)
+[Use Copilot in the email rich text editor](../model-driven-apps/use-copilot-email-assist.md)

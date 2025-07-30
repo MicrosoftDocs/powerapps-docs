@@ -1,0 +1,1 @@
+Deprecated. Use [ne](../operators.md#ne) instead. Remains for backward compatability only.

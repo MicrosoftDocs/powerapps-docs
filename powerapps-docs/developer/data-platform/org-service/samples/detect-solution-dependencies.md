@@ -25,7 +25,7 @@ This sample shows how to detect dependencies before you delete a solution compon
 The `RetrieveDependentComponentsRequest`, `RetrieveDependenciesForDeleteRequest` messages are intended to be used in a scenario where it contains data to detect solution dependencies.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Detect solution dependencies sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/SolutionDependencies)
+> [SDK for .NET: Detect solution dependencies sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/SolutionDependencies)
 
 ## How this sample works
 

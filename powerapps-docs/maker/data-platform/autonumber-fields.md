@@ -4,7 +4,7 @@ description: "Understand how to create, manage, and use autonumber columns"
 keywords: ""
 ms.date: 02/26/2019
 ms.custom: 
-ms.topic: conceptual
+ms.topic: article
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -12,7 +12,7 @@ applies_to:
 author: "daemelia"
 ms.assetid:
 ms.subservice: dataverse-maker
-ms.author: kvivek
+ms.author: matp
 ms.reviewer: Mattp123
 ms.suite: 
 ms.tgt_pltfrm: 

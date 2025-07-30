@@ -1,10 +1,9 @@
 ---
 title: "Navigating to and from a custom page in your model-driven app using client API" 
 description: "This article provides examples of navigating from a model-driven app page using the client API to a custom page."
-author: adrianorth
-ms.author: aorth
-
-ms.date: 04/01/2022
+author: sriharibs-msft
+ms.author: srihas
+ms.date: 04/17/2024
 ms.reviewer: jdaly
 ms.subservice: mda-developer
 ms.topic: "how-to"
@@ -94,6 +93,9 @@ App.OnStart=Set(RecordItem,
         LookUp(<entity>, <entityIdField> = GUID(Param("recordId"))))
     )
 ```
+
+> [!IMPORTANT]
+> The `recordId` parameter must be a GUID because it updates the URL and an app start from the URL will validate the `recordId` is a GUID. 
 
 ### Open as a centered dialog
 

@@ -1,7 +1,7 @@
 ---
 title: Create an app to edit tables in canvas apps | Microsoft Docs
 description: Learn how to configure an app interface with editable tables that allow you to edit data from the data source directly through the app.
-author: denisem-msft
+author: denise-msft
 
 ms.topic: tutorial
 ms.custom: canvas
@@ -12,7 +12,7 @@ ms.author: denisem
 search.audienceType: 
   - maker
 contributors:
-  - denisem-msft
+  - denise-msft
   - mduelae
 ---
 
@@ -93,7 +93,7 @@ This step adds a form control to add new items.
 
 1. In the formula bar, enter the following formula.
 
-    ```powerapps-dot
+    ```power-fx
     SubmitForm(Form1);
     NewForm(Form1);
     ```
@@ -131,7 +131,7 @@ This step adds a blank vertical gallery to edit the items as an editable table.
 
 1. Update the **Default** property formula for the first text input row within the gallery:
 
-    ```powerapps-dot
+    ```power-fx
     ThisItem.Product
     ```
 
@@ -148,7 +148,7 @@ This step adds a blank vertical gallery to edit the items as an editable table.
 
 1. Select the first row from the first column inside the gallery, and add the following formula to the **OnChange** property with changes to column and control names as appropriate:
 
-    ```powerapps-dot
+    ```power-fx
     Patch('Editable tables',ThisItem,{Product:TextInput8.Text})
     ```
 
@@ -175,7 +175,7 @@ This step adds the options to edit and cancel the edit progress. Gallery having 
 
 1. Select the app **OnStart** property, and add the following formula with changes to gallery name as appropriate:
 
-    ```powerapps-dot
+    ```power-fx
     Gallery2.DisplayMode = "galleryDisplayMode";
     Set(galleryDisplayMode, DisplayMode.Disabled);
     ```
@@ -216,7 +216,7 @@ As the data in the connected data source grows, it becomes difficult to find a s
 
 1. Update the **Items** property for the gallery with the following formula instead of the table name, replacing table, and control names as appropriate.
 
-    ```powerapps-dot
+    ```power-fx
     If(IsBlank(TextInput15.Text),'Editable tables',Filter('Editable tables',(TextInput15.Text in Product) || TextInput15.Text in Segment))
     ```
 

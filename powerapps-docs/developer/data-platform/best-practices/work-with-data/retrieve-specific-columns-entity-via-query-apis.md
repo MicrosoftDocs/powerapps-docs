@@ -1,17 +1,9 @@
 ---
 title: "Retrieve specific columns for an entity via query APIs | MicrosoftDocs"
 description: "Queries submitted to retrieve data should include specific columns in the ColumnSet instance associated to the query rather than All Columns."
-services: ''
 suite: powerapps
-documentationcenter: na
 author: jowells
-editor: ''
-tags: ''
-
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: how-to
 ms.date: 12/12/2018
 ms.subservice: dataverse-developer
 ms.author: jowells
@@ -152,8 +144,8 @@ Queries submitted to retrieve data from Dynamics 365 should not select all colum
 ### See also
 
 <xref href="Microsoft.Xrm.Sdk.Query.ColumnSet?text=ColumnSet Class" /><br />
-[Use of the ColumnSet Class](../../org-service/use-the-columnset-class.md)<br />
-[Build queries with QueryExpression](../../org-service/build-queries-with-queryexpression.md)<br />
+[Select columns using QueryExpression](../../org-service/queryexpression/select-columns.md)<br />
+[Query data using QueryExpression](../../org-service/queryexpression/overview.md)<br />
 
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

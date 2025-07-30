@@ -2,13 +2,14 @@
 title: "Detect duplicate data using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Read how to detect duplicates using MSCRM.SuppressDuplicateDetection header and Microsoft Dataverse Web API"
 ms.date: 12/31/2022
-ms.topic: article
-applies_to: 
-  - "Dynamics 365 (online)"
-author: divkamath
-ms.author: dikamath
+ms.topic: how-to
+author: MsSQLGirl
+ms.author: jukoesma
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
+applies_to: 
+  - "Dynamics 365 (online)"
 contributors: 
   - JimDaly
 ---
@@ -39,7 +40,7 @@ The following example shows how to detect duplicates during `Create` and `Update
 **Request:**
 
 ```http
-POST [Organization URI]/org1/api/data/v9.0/leads HTTP/1.1
+POST [Organization URI]/org1/api/data/v9.2/leads HTTP/1.1
 If-None-Match: null
 OData-Version: 4.0
 OData-MaxVersion: 4.0
@@ -86,7 +87,7 @@ The example shown below attempts to update an existing lead entity record which 
 **Request:**
 
 ```http
-PATCH [Organization URI]/api/data/v9.0/leads(c4567bb6-47a3-e711-811b-e0071b6ac1b1) HTTP/1.1
+PATCH [Organization URI]/api/data/v9.2/leads(c4567bb6-47a3-e711-811b-e0071b6ac1b1) HTTP/1.1
 If-None-Match: null
 OData-Version: 4.0
 OData-MaxVersion: 4.0

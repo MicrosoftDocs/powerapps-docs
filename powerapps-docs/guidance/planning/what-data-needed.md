@@ -3,7 +3,7 @@ title: Data needs for each step of a business process | Microsoft Docs
 description: As part of the planning phase of a Power Apps project, document the data required for each step of the business process you want to automate.
 author: TGrounds
 
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: guidance
 ms.date: 06/16/2020
 ms.subservice: guidance
@@ -66,7 +66,7 @@ infrequently? How often should the app be updated with new data?
 
 > Example:
 >
-> The data coming from Azure Active Directory doesn't change very often;
+> The data coming from Microsoft Entra ID doesn't change very often;
 however, it does change on occasion as people move from role to role within the
 organization and in the reporting structure. So, for this app, it's
 appropriate to look up the information at the time the user creates the expense

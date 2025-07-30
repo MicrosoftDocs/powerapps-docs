@@ -1,15 +1,15 @@
 ---
 title: "Edit multiple rows (Bulk edit)| MicrosoftDocs"
 description: Edit multiple rows in model-driven Power Apps.
-author: sericks007
+author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 08/1/2021
 ms.subservice: end-user
-ms.author: sericks
+ms.author: smurkute
 ms.custom: ""
-ms.reviewer: sericks
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser

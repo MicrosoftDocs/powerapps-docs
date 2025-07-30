@@ -3,12 +3,12 @@ title: "6: Using the Web API in the app  | Microsoft Docs"
 description: "Learn about how to use the Web API that you created in Azure in your app"
 author: spboyer
 
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: ebook
 ms.date: 04/26/2021
 ms.subservice: guidance
 ms.author: shboyer
-ms.reviewer: kvivek
+ms.reviewer: tapanm
 
 ---
 
@@ -20,7 +20,7 @@ Maria and Kiana are ready to combine the app with the Web API. However, before p
 
 Preeti is concerned that the app and the Web API must be secure because they provide access to sensitive data stored in the various databases. Preeti wants assurances that the authentication and authorization will be included to prevent unwarranted access to information. Preeti is also aware that the company is rapidly expanding, and the volume of data involved in managing customers, appointments, parts, and the knowledge base is likely to increase exponentially in the near term. Consequently, the solution needs to be scalable.
 
-Kiana explains to Preeti that the Web API is currently implemented with Azure App Service. This service supports a number of authentication providers, which Preeti can configure using the Azure portal. Preeti is especially interested in Azure Active Directory because VanArsdel are looking to roll out this form of authentication to many of their other corporate systems in the near future.
+Kiana explains to Preeti that the Web API is currently implemented with Azure App Service. This service supports a number of authentication providers, which Preeti can configure using the Azure portal. Preeti is especially interested in Microsoft Entra ID because VanArsdel are looking to roll out this form of authentication to many of their other corporate systems in the near future.
 
 ![App Service authentication configuration.](media/image100.png)
 

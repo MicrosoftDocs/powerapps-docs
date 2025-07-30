@@ -4,9 +4,9 @@ description: "This article discusses the exceptions that are returned from a Mic
 ms.collection: get-started
 ms.date: 03/22/2022
 ms.reviewer: "pehecke"
-ms.topic: "article"
-author: "divkamath" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
+ms.topic: how-to
+author: MsSQLGirl
+ms.author: jukoesma
 search.audienceType: 
   - developer
 contributors:
@@ -70,7 +70,7 @@ catch (System.Exception ex)
 ```
   
 > [!NOTE]
-> If you’re accessing the Discovery web service, your code should catch <xref:Microsoft.Xrm.Sdk.DiscoveryServiceFault> instead of the <xref:Microsoft.Xrm.Sdk.OrganizationServiceFault> fault shown previously.  
+> If you're accessing the Discovery web service, your code should catch <xref:Microsoft.Xrm.Sdk.DiscoveryServiceFault> instead of the <xref:Microsoft.Xrm.Sdk.OrganizationServiceFault> fault shown previously.  
   
 In addition to these exceptions and faults, your code must handle the following exceptions:  
   
@@ -80,7 +80,7 @@ In addition to these exceptions and faults, your code must handle the following 
 - [MessageSecurityException](/dotnet/api/system.servicemodel.security.messagesecurityexception)  
 - [SecurityNegotiationException](/dotnet/api/system.servicemodel.security.securitynegotiationexception)  
   
-When connecting to Dataverse, a `SecurityAccessDeniedException` exception can be thrown if you use a valid Microsoft account and your account is not associated with any Dataverse organization. A `MessageSecurityException` can be thrown if your Microsoft account isn’t valid or there was an authentication failure.  
+When connecting to Dataverse, a `SecurityAccessDeniedException` exception can be thrown if you use a valid Microsoft account and your account is not associated with any Dataverse organization. A `MessageSecurityException` can be thrown if your Microsoft account isn't valid or there was an authentication failure.  
   
 <a name="BKMK_BusinessRuleErrors"></a>
 
@@ -126,7 +126,7 @@ More information: [Create a business rule for a table](../../../maker/data-platf
 
 ## Additional information about exceptions
 
-When an uncaught exception is thrown that contains sensitive information that the user doesn’t have permission to see, the sensitive information in the exception is hidden from the user and a reference number is provided. This reference number refers to the related server event log entry and server trace entry. A system administrator can look up those entries and find more information about the exception.  
+When an uncaught exception is thrown that contains sensitive information that the user doesn't have permission to see, the sensitive information in the exception is hidden from the user and a reference number is provided. This reference number refers to the related server event log entry and server trace entry. A system administrator can look up those entries and find more information about the exception.  
   
 ### See also  
 

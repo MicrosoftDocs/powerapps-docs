@@ -2,7 +2,7 @@
 title: "View table data in Power BI Desktop | MicrosoftDocs"
 description: "Learn how to access and view table data in Power BI Desktop"
 ms.custom: ""
-ms.date: 01/10/2023
+ms.date: 08/08/2024
 ms.topic: how-to
 ms.reviewer: "matp"
 author: "Mattp123"
@@ -14,24 +14,24 @@ search.audienceType:
 ---
 # View table data in Power BI Desktop
 
-You can use Power BI Desktop to view tables in Microsoft Dataverse. The table
-row data that you can access from your environment is read-only. Data access
-uses the Dataverse security model that is the same used to access
-table row data using a Power Apps app.
+Use Power BI Desktop to view tables in Microsoft Dataverse. The table row data that you can access from your environment is read-only. Data access uses the Dataverse security model that is the same used to access table row data using a Power Apps app.
 
 ## Prerequisites
 
 * Enable the Tabular Data Stream (TDS) endpoint (on by default). More information: [Manage feature settings](/power-platform/admin/settings-features).
 * Power BI Desktop. [Get it now](https://powerbi.microsoft.com/downloads/)
-          
+
 ## View table data
 
 1. Sign into [Power Apps](https://make.powerapps.com/), and then select the
     appropriate environment from the top-right corner.
 1. On the left navigation pane select **Tables**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
-1. Select **Analyze in Power BI** on the command bar.
+1. Select **Analyze** > **Analyze in Power BI** on the command bar.
 
     The pbids file for your environment is downloaded to your browser’s default download folder.
+
+   > [!NOTE]
+   > To be able to download the file, you must have read access to the analysis component (msdyn_analysiscomponent) custom table privilege in Dataverse. Users with the environment maker security role have full access to this privilege.
 
 1. Open the .pbids file to access it in Power BI Desktop.
 

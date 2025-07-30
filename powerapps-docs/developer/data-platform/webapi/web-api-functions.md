@@ -2,8 +2,8 @@
 title: "Web API Functions (Microsoft Dataverse)| Microsoft Docs"
 description: "Describes OData Function elements defined for the Dataverse Web API."
 ms.date: 04/06/2022
-author: divkamath
-ms.author: dikamath
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 ms.service: powerapps
 applies_to: 

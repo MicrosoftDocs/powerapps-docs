@@ -1,8 +1,8 @@
 ---
-title: "Define ribbon tab display rules (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
-description: "Learn about defining ribbon tab displays rules." # 115-145 characters including spaces. This abstract displays in the search result."
-author: HemantGaur
-ms.author: hemantg
+title: "Define ribbon tab display rules (model-driven apps)"
+description: "Learn about defining ribbon tab displays rules."
+author: clromano
+ms.author: clromano
 ms.date: 05/24/2022
 ms.reviewer: jdaly
 ms.topic: article
@@ -30,9 +30,10 @@ In the `RibbonDiffXml`, tabs can be defined for specific tables or defined globa
 
 When you define a tab display rule globally in the `RibbonDiffXml` for the application ribbons, you can apply both `EntityRule` elements and `<PageRule>` elements.  
   
-### See also  
- [Customize commands and the ribbon](customize-commands-ribbon.md)   
- [Define scaling for ribbon elements](define-scaling-ribbon-elements.md)   
- [Pass parameters to a URL by using the ribbon](pass-parameters-url-by-using-ribbon.md)
+### See also
+
+[Customize commands and the ribbon](customize-commands-ribbon.md)   
+[Define scaling for ribbon elements](define-scaling-ribbon-elements.md)   
+[Pass parameters to a URL by using the ribbon](pass-parameters-url-by-using-ribbon.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

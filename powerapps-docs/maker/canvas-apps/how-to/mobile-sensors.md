@@ -1,5 +1,5 @@
 ---
-title: Create an app that uses mobile sensors (contains video)
+title: Create an app that uses mobile sensors
 description: Learn how to use mobile sensors in Power Apps - including NFC, accelerometer, and location.
 author: joel-lindstrom
 
@@ -27,7 +27,7 @@ To set up the scenario behind the first screen, imagine that you are building an
 For the second screen, imagine needing a tool to roughly measure angles. When on the second screen, the participant will be able to place or hold their device on a surface, and get the angles on the X and Y axis of the device as well as view a visual representation of those angles.
 
 Watch this video to learn how to build an app that uses mobile sensors:
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLTiu]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=01899fa6-7a02-4ed6-9ab1-4bc8b5bf17b9]
 
 ## Prerequisites
 
@@ -70,7 +70,7 @@ This will provide a header for the screen.
 
 Next, add an **HTML text** control. This will be used to display all the device sensor outputs in one place. Use this code in the **HtmlText** property:
 
-```powerapps-dot
+```power-fx
 "<b><u>Current Location</u></b><br>  
 <br>
 <b>Compass Heading: </b>" & Round(Compass.Heading, 2) & Char(0176) &
@@ -103,13 +103,13 @@ Second is the **Location** sensor, which provides the **Latitude**, **Longitude*
 
 Use meters:
 
-```powerapps-dot
+```power-fx
 Round(Location.Altitude, 2) & " m"
 ```
 
 Use feet:
 
-```powerapps-dot
+```power-fx
 Round(Location.Altitude \* 3.2808, 2) & " ft"
 ```
 
@@ -135,7 +135,7 @@ The code in the **OnSelect** property is utilizing the [ReadNFC()](../functions/
 
 Add a second **HTML text** control and use the following formula in the **HTMLText** property:
 
-```powerapps-dot
+```power-fx
 "<b><u>Next Destination</u></b><br>
 <br>" &
 First(colNFCScan).Text
@@ -218,7 +218,7 @@ If you've renamed the first screen that was just added, substitute that name for
 
 Finally, add an **HTML text** control. This will be used to display all the device sensor outputs in one place. Use the following formula in the HTML Text property:
 
-```powerapps-dot
+```power-fx
 "<b><u>Angles:</u></b><br>
 <br>
 <table width='100%'>
@@ -255,7 +255,7 @@ The accelerometer will measure forces acting on the device both in motion, such 
 
 Looking at the code in the **HTML text** control you just added, notice the following section:
 
-```powerapps-dot
+```power-fx
 Abs(Round(Acceleration.X * (90 / 9.81), 0))
 ```
 

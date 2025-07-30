@@ -1,8 +1,8 @@
 ---
-title: "Form XML schema (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about schema definition for form customizations." # 115-145 characters including spaces. This abstract displays in the search result.
-author: HemantGaur
-ms.author: hemantg
+title: "Form XML schema (model-driven apps)"
+description: "Learn about schema definition for form customizations."
+author: MitiJ
+ms.author: mijosh
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -1872,11 +1872,12 @@ The following is the schema definition for form customizations for model-driven 
   
 ```  
   
-### See also  
- [Customize forms](customize-entity-forms.md)   
- [Create, install, and update a managed solution](/power-platform/alm/solution-api)<br/>
- [Create, export, or import an Unmanaged solution](/power-platform/alm/solution-api)<br/>
- [Form XML schema](form-xml-schema.md)
+### See also
+
+[Customize forms](customize-entity-forms.md)   
+[Create, install, and update a managed solution](/power-platform/alm/solution-api)<br/>
+[Create, export, or import an Unmanaged solution](/power-platform/alm/solution-api)<br/>
+[Form XML schema](form-xml-schema.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

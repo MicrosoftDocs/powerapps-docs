@@ -1,27 +1,29 @@
 ---
-title: "File columns (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about how to create, retrieve, update and delete file columns using code." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 09/12/2023
+title: "Work with file column definitions using code | Microsoft Docs"
+description: "Learn about how to create, retrieve, update and delete file column definitions using code."
+ms.date: 01/17/2024
 ms.reviewer: jdaly
-ms.topic: article
-author: NHelgren # GitHub ID
+ms.topic: how-to
+author: mkannapiran
+ms.author: kamanick
 ms.subservice: dataverse-developer
-ms.author: nhelgren # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 contributors:
  - JimDaly
 ---
-# File columns
+# Work with file column definitions using code
 
-Use file columns to store file data up to a specified maximum size. A custom or customizable table can have zero or more file columns. This article is about working with column definitions in code. To use data stored in these columns, see [Use file column data](file-column-data.md).
+Use file columns to store file data up to a specified maximum size. File columns are optimized for storing binary data. Dataverse doesn't save this data in the relational data store, which improves performance and reduces the capacity usage. [Learn more about storage capacity](/power-platform/admin/whats-new-storage)
+
+A custom or customizable table can have zero or more file columns. This article is about working with column definitions in code. To use data stored in these columns, see [Use file column data](file-column-data.md).
 
 ## Create file columns
 
 The recommended way to create file columns is to use [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and define your columns using the designer. More information: [File columns](../../maker/data-platform/types-of-fields.md#file-columns).
 
 > [!NOTE]
-> A key consideration when creating file columns is the **Maximum file size** stored in the `MaxSizeInKB` property. The default setting for this is `32768`, or 32 MB. The maximum value is `10485760` KB (10 GB). While the API can handle files up to 10 GB in size, Power Apps client controls currently only support files up to 128 MB. Exceeding the 128 MB value when using these controls will result in errors uploading or downloading files.
+> A key consideration when creating file columns is the **Maximum file size** stored in the `MaxSizeInKB` property. The default setting for this is `32768`, or 32 MB. The maximum value is `10485760` KB (10 GB). While the API can handle files up to 10 GB in size, the requests must be 'chunked'. The size limit to send a single request is 128 MB. When a client application attempts to send a file larger than 128 MB in a single request, an error will be thrown. [Learn to upload files](file-column-data.md#upload-files).
 >
 > The `MaxSizeInKB` value cannot be changed in [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) using the designer after you create the file column.
 > You can use the API to update the `MaxSizeInKB` property. More information: [Update a column using Web API](webapi/create-update-column-definitions-using-web-api.md#update-a-column) and [Update a column using SDK](org-service/metadata-attributemetadata.md#update-a-column)
@@ -120,15 +122,15 @@ Use the `FileAttributeMetadata.MaxSizeInKB` property to set the maximum size.
 
 ```http
 HTTP/1.1 204 NoContent
-Location: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='account')/Attributes(9554c5f9-8c51-ed11-bba1-000d3a9933c9)
+Location: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='account')/Attributes(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)
 OData-Version: 4.0
-OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='account')/Attributes(9554c5f9-8c51-ed11-bba1-000d3a9933c9)
+OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='account')/Attributes(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)
 ```
 
 More information:
 
 - [Create and update table definitions using the Web API](webapi/create-update-entity-definitions-using-web-api.md)
-- [Web API Metadata Operations Sample (C#)](webapi/samples/webapiservice-metadata-operations.md)
+- [Web API table schema operations sample (C#)](webapi/samples/webapiservice-metadata-operations.md)
 
 ---
 
@@ -158,6 +160,6 @@ More information:
 ### See Also
 
 [Use file column data](file-column-data.md)<br />
-[Image columns](image-attributes.md)
+[Work with image column definitions using code](image-attributes.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

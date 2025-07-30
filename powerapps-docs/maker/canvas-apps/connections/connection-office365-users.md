@@ -146,7 +146,7 @@ If you create a contact and select that contact in the browse screen of the app,
 
 1. Update the vertical gallery formula to the following.
 
-    ```powerapps-dot
+    ```power-fx
     Office365Users.SearchUserV2({searchTerm:TextInput1.Text,top:5}).value
     ```
 

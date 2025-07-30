@@ -1,8 +1,8 @@
 ---
-title: "Xrm.WebApi (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "Xrm.WebApi (Client API reference) in model-driven apps"
 description: "Provides properties and methods to use Web API to create and manage records and execute Web API actions and functions in model-driven apps."
-author: adrianorth
-ms.author: aorth
+author: sriharibs-msft
+ms.author: srihas
 ms.date: 11/18/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -25,7 +25,8 @@ Provides properties and methods to use Web API to create and manage records and 
 |[offline](xrm-webapi/offline.md)|[!INCLUDE[xrm-webapi/includes/offline-description.md](xrm-webapi/includes/offline-description.md)]|
 
 ## Methods
-With mobile offline configured, the source for these records will depend on the current client state.  In offline mode, the source is the offline data store.  In online mode, the source is the server.  If the client is offline-first (in preview), the methods in [online](xrm-webapi/online.md) can be used to access tables and records that are not part of the offline profile, as long as the client has network connectivity.
+
+With mobile offline configured, the source for these records depends on the current client state. In offline mode, the source is the offline data store. In online mode, the source is the server. If the client is offline-first, the methods in [online](xrm-webapi/online.md) can be used to access tables and records that aren't part of the offline profile, as long as the client has network connectivity.
 
 |Method | Description |
 |------ |-------------|

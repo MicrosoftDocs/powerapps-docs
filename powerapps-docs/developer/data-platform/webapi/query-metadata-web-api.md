@@ -2,11 +2,11 @@
 title: "Query table definitions using the Web API (Microsoft Dataverse) | Microsoft Docs"
 description: "The capability to query table definitions (metadata) is available using the Web API and using the SDK for .NET by using RetrieveMetadataChangesRequest"
 ms.date: 03/01/2023
-ms.topic: article
+ms.topic: how-to
 applies_to: 
   - "Dynamics 365 (online)"
-author: NHelgren # GitHub ID
-ms.author: nhelgren
+author: mkannapiran
+ms.author: kamanick
 ms.reviewer: pehecke
 search.audienceType: 
   - developer
@@ -26,7 +26,7 @@ Because Microsoft Dataverse is a metadata-driven application, developers may nee
 
 ## Querying the EntityMetadata entity type
 
-You'll use the same techniques described in [Query data using the Web API](query-data-web-api.md) when you query EntityMetadata, with a few variations. Use the `EntityDefinitions` entity set path to retrieve information about the <xref:Microsoft.Dynamics.CRM.EntityMetadata?text=EntityMetadata EntityType>. EntityMetadata entities contain a lot of data so you'll want to be careful to only retrieve the data that you need. The following example shows the data returned for just the `DisplayName`, `IsKnowledgeManagementEnabled`, and `EntitySetName` properties of the definition for the `Account` entity. The `MetadataId` property value is always returned.  
+You'll use the same techniques described in [Query data using the Web API](query/overview.md) when you query EntityMetadata, with a few variations. Use the `EntityDefinitions` entity set path to retrieve information about the <xref:Microsoft.Dynamics.CRM.EntityMetadata?text=EntityMetadata EntityType>. EntityMetadata entities contain a lot of data so you'll want to be careful to only retrieve the data that you need. The following example shows the data returned for just the `DisplayName`, `IsKnowledgeManagementEnabled`, and `EntitySetName` properties of the definition for the `Account` entity. The `MetadataId` property value is always returned.  
   
  **Request:**
 
@@ -374,8 +374,8 @@ You can also access the definition of a global option set from within the `Globa
 [Retrieve metadata by name or MetadataId](retrieve-metadata-name-metadataid.md)  
 [Metadata entities and attributes using the Web API](create-update-entity-definitions-using-web-api.md)  
 [Metadata entity relationships using the Web API](create-update-entity-relationships-using-web-api.md)  
-[Web API Metadata Operations Sample](web-api-metadata-operations-sample.md)  
-[Web API Metadata Operations Sample (C#)](samples/webapiservice-metadata-operations.md)
+[Web API table schema operations sample](web-api-metadata-operations-sample.md)  
+[Web API table schema operations sample (C#)](samples/webapiservice-metadata-operations.md)
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

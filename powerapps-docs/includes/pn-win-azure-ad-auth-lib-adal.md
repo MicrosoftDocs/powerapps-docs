@@ -1,1 +1,1 @@
-Azure Active Directory Authentication Library (ADAL)
+Microsoft Entra Authentication Library (ADAL)

@@ -1,0 +1,1 @@
+The string does not begin with another string.

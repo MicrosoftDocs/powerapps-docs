@@ -1,17 +1,13 @@
 ---
 title: Collaborate using SharePoint | Microsoft Docs
 description: Learn how to collaborate using SharePoint within a model-driven app
-documentationcenter: ''
-author: sericks007
-ms.reviewer: sericks
-tags: ''
-
-ms.devlang: na
-ms.topic: conceptual
+author: shwetamurkute
+ms.reviewer: smurkute
+ms.topic: how-to
 ms.component: model
-ms.date: 12/14/2020
+ms.date: 07/15/2025
 ms.subservice: end-user
-ms.author: sericks
+ms.author: smurkute
 search.audienceType: 
   - maker
 ---
@@ -27,7 +23,8 @@ Before you can use SharePoint to store documents, it must be enabled by your sys
 -   [Manage your documents using SharePoint](/power-platform/admin/manage-documents-using-sharepoint)  
 
 > [!IMPORTANT]
-> SharePoint managed documents that are deleted using a Power Apps or Dynamics 365 customer engagement app are permanently deleted from both the app and the SharePoint site. 
+> - When you delete a SharePoint managed document using a Power Apps or Dynamics 365 customer engagement app, the app permanently deletes the document from both the app and the SharePoint site.
+> - When you merge records, the app doesn't merge SharePoint document libraries. The app deactivates the subordinate record, but its SharePoint folder and documents remain accessible unless you delete them manually.
 
 ## Where do you access the documents from?
 
@@ -127,7 +124,7 @@ You can create new or edit existing SharePoint locations from your app in Datave
    > [!div class="mx-imgBorder"]
    > ![Add Location.](media/add_location.png "Add Location")
 
-3. The display name, parent site, and folder name are automatically populated. Change the details if required, and then select **Save**.
+3. The display name, parent site, and folder name are automatically populated. Change the details if necessary, and then select **Save**.
 
 ## Files tab FAQ
 
@@ -135,7 +132,7 @@ You can create new or edit existing SharePoint locations from your app in Datave
 - We moved the command to make documents easier to find with fewer clicks.
 
 *Has the Documents tab gone away?*
-- No, it hasn’t gone away. Users can still access the documents associated with the row in question the old way, simply by selecting the **Related** menu and then the **Documents** link.
+- No, it hasn't gone away. Users can still access the documents associated with the row in question the old way, simply by selecting the **Related** menu and then the **Documents** link.
 
 *With the change, will subfolders in SharePoint still be created automatically?*
 - Yes. The behavior is similar to that of the **Documents** link under the **Related** menu. When a user selects the **Files** tab for the first time, the corresponding SharePoint subfolder is created by the system. 

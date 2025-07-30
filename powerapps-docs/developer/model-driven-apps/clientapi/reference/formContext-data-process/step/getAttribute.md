@@ -1,8 +1,8 @@
 ---
-title: "step.getAttribute (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "step.getAttribute (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the getAttribute method.
-author: HemantGaur
-ms.author: hemantg
+author: matthidinger
+ms.author: mahiding
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -13,8 +13,6 @@ contributors:
   - JimDaly
 ---
 # step.getAttribute (Client API reference)
-
-
 
 [!INCLUDE[./includes/getAttribute-description.md](./includes/getAttribute-description.md)]
 
@@ -32,5 +30,4 @@ contributors:
 
 [formContext.data.process](../../formContext-data-process.md)
  
-
 [!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

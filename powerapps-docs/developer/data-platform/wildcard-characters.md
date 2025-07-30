@@ -1,9 +1,9 @@
 ---
 title: Use wildcard characters in conditions for string values
 description: Learn how to use wildcard characters in query conditions that use string values.
-ms.date: 04/17/2023
+ms.date: 06/04/2024
 ms.reviewer: jdaly
-ms.topic: conceptual
+ms.topic: article
 author: mayadumesh
 ms.author: mayadu
 ms.subservice: dataverse-developer
@@ -17,7 +17,7 @@ ms.custom: bap-template
 
 You can use wildcard characters with the following operators when you build queries that include conditions on string values:
 
-# [FetchXml](#tab/fetchxml)
+## [FetchXml](#tab/fetchxml)
 
 `like`<br/>
 `not-like`<br/>
@@ -26,10 +26,10 @@ You can use wildcard characters with the following operators when you build quer
 `ends-with`<br/>
 `not-end-with`<br/>
 
-More information: [Use FetchXML to construct a query](use-fetchxml-construct-query.md)
+More information: [Query data using FetchXml](fetchxml/overview.md)
 
 
-# [QueryExpression](#tab/queryexpression)
+## [QueryExpression](#tab/queryexpression)
 
 <xref:Microsoft.Xrm.Sdk.Query.ConditionOperator>.`Like`<br/>
 <xref:Microsoft.Xrm.Sdk.Query.ConditionOperator>.`NotLike`<br/>
@@ -38,9 +38,9 @@ More information: [Use FetchXML to construct a query](use-fetchxml-construct-que
 <xref:Microsoft.Xrm.Sdk.Query.ConditionOperator>.`EndsWith`<br/>
 <xref:Microsoft.Xrm.Sdk.Query.ConditionOperator>.`DoesNotEndWith`<br/>
 
-More information: [Use the ConditionExpression class](org-service/use-conditionexpression-class.md)
+More information: [Filter rows using QueryExpression](org-service/queryexpression/filter-rows.md)
 
-# [Web API](#tab/webapi)
+## [Web API](#tab/webapi)
 
 `contains`<br/>
 `not contains`<br/>
@@ -49,7 +49,7 @@ More information: [Use the ConditionExpression class](org-service/use-conditione
 `endswith`<br/>
 `not endswith`<br/>
 
-More information: [Use OData query functions](webapi/query-data-web-api.md#use-odata-query-functions)
+More information: [Use OData query functions](webapi/query/filter-rows.md#use-odata-query-functions)
 
 ---
 
@@ -67,42 +67,46 @@ When you use these condition operators, you can use certain characters to repres
 
 You can use the wildcard pattern matching characters as literal characters. To use a wildcard character as a literal character, enclose the wildcard character in brackets. More information: [Using Wildcard Characters As Literals](/sql/t-sql/language-elements/like-transact-sql#using-wildcard-characters-as-literals).
 
-## Don't use trailing wild cards
+## Don't use leading wild cards
 
-Using trailing wildcards isn't supported.
+Queries which use condition operators with implicit leading wild cards (like `ends-with`) or explicit leading wild cards will be less performant and can lead to poor performance across the organization in certain scenarios. More information: 
+- [Optimize performance using FetchXml](fetchxml/optimize-performance.md)
+- [Optimize performance using QueryExpression](org-service/queryexpression/optimize-performance.md)
 
-# [FetchXml](#tab/fetchxml)
+Queries that use these anti-patterns introduce performance problems because the queries can't be optimized.
 
-Don't use trailing wild cards in expressions using `begins-with`, `not-begin-with`, `ends-with`, or `not-end-with`.
-Here are some examples of trailing wildcards:
+### [FetchXml](#tab/fetchxml)
+
+Don't use trailing wild cards in expressions using `like`, `begins-with`, `not-begin-with`, `ends-with`, or `not-end-with`. Here are some examples of trailing wildcards:
 
 |Bad Examples  |
 |---------|
+|`<condition attribute='name' operator='like' value='%value' />`|
 |`<condition attribute='name' operator='begins-with' value='%value' />`|
 |`<condition attribute='name' operator='not-begins-with' value='%value' />`|
-|`<condition attribute='name' operator='ends-with' value='value%' />`|
-|`<condition attribute='name' operator='not-ends-with' value='value%' />`|
+|`<condition attribute='name' operator='ends-with' value='value' />`|
+|`<condition attribute='name' operator='not-ends-with' value='value' />`|
 
-# [QueryExpression](#tab/queryexpression)
+### [QueryExpression](#tab/queryexpression)
 
-Don't use trailing wild cards in expressions using `BeginsWith`, `DoesNotBeginWith`, `EndsWith`, or `DoesNotEndWith`. 
-Here are some examples of trailing wildcards:
+Don't use leading wild cards in expressions using `Like`, `BeginsWith`, `DoesNotBeginWith`, `EndsWith`, or `DoesNotEndWith`. Here are some examples of excess wildcards:
 
 |Bad Examples  |
 |---------|
+|`query.Criteria.AddCondition("name", ConditionOperator.Like, "%value");`|
 |`query.Criteria.AddCondition("name", ConditionOperator.BeginsWith, "%value");`|
 |`query.Criteria.AddCondition("name", ConditionOperator.DoesNotBeginWith, "%value");`|
-|`query.Criteria.AddCondition("name", ConditionOperator.EndsWith, "value%");`|
-|`query.Criteria.AddCondition("name", ConditionOperator.DoesNotEndWith, "value%");`|
+|`query.Criteria.AddCondition("name", ConditionOperator.EndsWith, "value");`|
+|`query.Criteria.AddCondition("name", ConditionOperator.DoesNotEndWith, "value");`|
 
-# [Web API](#tab/webapi)
+### [Web API](#tab/webapi)
 
-Don't use trailing wild cards in expressions using `startswith`, `not startswith`, `endswith`, or `not endswith`.
-Here are some examples of trailing wildcards:
+Don't use leading wild cards in expressions using `like`, `startswith`, `not startswith`, `endswith`, or `not endswith`. Here are some examples of excess wildcards:
 
 
 |Bad Examples  |
 |---------|
+|`like(name,'%value')`|
 |`startswith(name,'%value')`|
 |`not startswith(name,'%value')`|
 |`endswith(name,'value%')`|
@@ -110,12 +114,10 @@ Here are some examples of trailing wildcards:
 
 ---
 
-Queries that use these anti-patterns introduce performance problems because the queries can't be optimized.
-
 ### See also
 
-[Use FetchXML to construct a query](use-fetchxml-construct-query.md)   
-[Use the ConditionExpression class](org-service/use-conditionexpression-class.md)   
-[Query data using the Web API](webapi/query-data-web-api.md)
+[Filter rows using FetchXml](fetchxml/filter-rows.md)   
+[Filter rows using QueryExpression](org-service/queryexpression/filter-rows.md)   
+[Query data using the Web API](webapi/query/overview.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

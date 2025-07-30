@@ -1,9 +1,9 @@
 ---
-title: Enable users to discuss ideas (contains video)
+title: Enable users to discuss ideas
 description: Explains how to extend the Employee Ideas sample app template for Microsoft Teams to take users to a discussion about an idea in Teams.
 author: joel-lindstrom
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: 
 ms.date: 08/26/2021
 ms.subservice: teams
@@ -23,7 +23,7 @@ The Employee Ideas sample app template for Microsoft Teams makes it easy to capt
 Currently the Employee Ideas app posts messages to a teams channel when an Idea is submitted. In this article, we'll extend the app to provide a mechanism for users to go to the idea channel message so the can interact and discuss the idea with other users.
 
 Watch this video to learn how to enable users to discuss ideas:
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLxVr]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=c4d6d539-42ef-4ad4-996e-f2e5e1452682]
 
 ## Prerequisites
 
@@ -82,14 +82,14 @@ Now we'll update the button that submits ideas to store the message ID in the **
 
 1. Find the part of the formula that begins with the following:
 
-    ```powerapps-dot
+    ```power-fx
     If(
         tglIdeaDetailControls_PostToTeams.Value,......
     ```
 
     And replace that part of the formula with the following formula:
 
-    ```powerapps-dot
+    ```power-fx
     If(
         tglIdeaDetailControls_PostToTeams.Value,
         If(
@@ -155,7 +155,7 @@ Now we'll update the button that submits ideas to store the message ID in the **
     > [!NOTE]
     > The example below uses **msteams:** as the launcher. This launcher can also be **https:**, or dynamically switch to use the appropriate client.
 
-    ```powerapps-dot
+    ```power-fx
     With({varMessage: gblRecordCampaignIdea.'Message ID'},Launch(Concatenate("msteams://teams.microsoft.com/l/message/",gblSettingNotificationChannelId,"/",varMessage,"?groupId=",gblSettingTeamId,"&parentMessageId=",varMessage)))
     ```
 

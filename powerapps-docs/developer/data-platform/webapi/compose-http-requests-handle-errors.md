@@ -2,9 +2,9 @@
 title: Compose HTTP requests and handle errors
 description: Learn about the HTTP methods and headers that form a part of HTTP requests for the Web API and how to identify and handle errors returned in the response.
 ms.topic: how-to
-ms.date: 09/26/2023
-author: divkamath
-ms.author: dikamath
+ms.date: 08/29/2024
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
@@ -49,7 +49,13 @@ Protocol + Environment Name + Region + Base URL + Web API path + Version + Resou
 
 ### Maximum URL length
 
-The maximum length of URL accepted by is 32 KB (32768 characters). This should be adequate for most kinds of request except certain `GET` operations which require very long string query parameters, such as queries using FetchXml. If you send requests inside the body of a `$batch` request, you can send requests with URLs up to 64 KB (65,536 characters). [Learn more about sending FetchXml within a $batch request](use-fetchxml-web-api.md#use-fetchxml-within-a-batch-request).
+The maximum length of URL accepted by is 32 KB (32768 characters). This should be adequate for most kinds of request except certain `GET` operations which require very long string query parameters, such as queries using FetchXml. If you send requests inside the body of a `$batch` request, you can send requests with URLs up to 64 KB (65,536 characters). [Learn more about sending FetchXml within a $batch request](../fetchxml/retrieve-data.md#use-fetchxml-within-a-batch-request).
+
+### Maximum OData segment length
+
+The maximum length of any individual segment in an OData request cannot be longer than 260 characters. If a single segment of the OData request is more than 260 characters in length, then this can result in `400 Bad Request - Invalid URL`. The segment is the 'Resource' part of the url as described above and includes all characters needed to describe the endpoint and any inline parameters.
+
+For example, if the request is  `api/data/v9.2/MyApi(MyParameter='longvalue')`, `MyApi(MyParameter='longvalue')` is the segment that cannot exceed 260 characters. We recommend that you always use parameter aliases with OData functions. For example, composing your function as `/api/data/v9.2/MyApi(MyParameter=@alias)?@alias='longvalue'` shortens the segment to just `MyApi(MyParameter=@alias)`. [Learn more about using parameter aliases with Web API functions](use-web-api-functions.md#passing-parameters-to-a-function)
 
 <a name="version_compatiblity"></a>
 
@@ -113,7 +119,7 @@ You can use the [Prefer](https://www.rfc-editor.org/rfc/rfc7240) header with the
 |---------|---------|
 |`return=representation`|Use this preference to return data on create (`POST`) or update (`PATCH`) operations for entities. When this preference is applied to a `POST` request, a successful response has status `201 Created` . For a `PATCH` request, a successful response has a status `200 OK.` Without this preference applied, both operations return status `204 No Content` to reflect that no data is returned in the body of the response by default. More information: [Create with data returned](create-entity-web-api.md#create-with-data-returned) & [Update with data returned](update-delete-entities-using-web-api.md#update-with-data-returned)|
 |`odata.include-annotations`|See [Request annotations](#request-annotations)|
-|`odata.maxpagesize`|Use this preference to specify how many pages you want to return in a query. More information: [Page results](query-data-web-api.md#page-results) |
+|`odata.maxpagesize`|Use this preference to specify how many pages you want to return in a query. More information: [Page results](query/page-results.md) |
 |`odata.track-changes`|The change tracking feature allows you to keep the data synchronized in an efficient manner by detecting what data has changed since the data was initially extracted or last synchronized. More information: [Use change tracking to synchronize data with external systems](../use-change-tracking-synchronize-data-external-systems.md)|
 |`respond-async`|Specifies that the request should be processed asynchronously. More information: [Background operations (preview)](../background-operations.md)|
 
@@ -129,9 +135,9 @@ You can request different OData annotation data to be returned with the results 
 
 |Annotation|Description|
 |---------|---------|
-|`OData.Community.Display.V1.FormattedValue`| Returns formatted string values you can use in your application. More information: [Formatted values](query-data-web-api.md#formatted-values)|
-|`Microsoft.Dynamics.CRM.associatednavigationproperty`<br />`Microsoft.Dynamics.CRM.lookuplogicalname`|Returns information about related lookup columns. More information:  [Lookup property data](query-data-web-api.md#lookup-property-data)|
-|`Microsoft.Dynamics.CRM.totalrecordcount`<br />`Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded`|When you use the `$count` query option the `@odata.count` annotation tells the number of records, but only 5,000 records can be returned at a time. Request the `Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded` to get a boolean value that will tell you if the total number of records matching the query exceeds 5,000.  More information: [Count number of rows](query-data-web-api.md#count-number-of-rows) |
+|`OData.Community.Display.V1.FormattedValue`| Returns formatted string values you can use in your application. More information: [Formatted values](query/select-columns.md#formatted-values)|
+|`Microsoft.Dynamics.CRM.associatednavigationproperty`<br />`Microsoft.Dynamics.CRM.lookuplogicalname`|Returns information about related lookup columns. More information:  [Lookup property data](query/select-columns.md#lookup-property-data)|
+|`Microsoft.Dynamics.CRM.totalrecordcount`<br />`Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded`|When you use the `$count` query option the `@odata.count` annotation tells the number of records, but only 5,000 standard table records records can be returned at a time. For elastic tables the page size limit is 500. Request the `Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded` to get a boolean value that will tell you if the total number of records matching the query exceeds the maximum page size limit for the type of table you are using.  More information: [Count number of rows](query/count-rows.md) |
 |`Microsoft.Dynamics.CRM.globalmetadataversion`|This annotation is returned on the request and you can cache it in your application. The value changes when any schema change occurs, indicating that you may need to refresh any schema data that your application has cached. More information: [Cache Schema data](../cache-schema-data.md)|
 |`Microsoft.PowerApps.CDS.ErrorDetails.OperationStatus`<br />`Microsoft.PowerApps.CDS.ErrorDetails.SubErrorCode`<br />`Microsoft.PowerApps.CDS.HelpLink`<br />`Microsoft.PowerApps.CDS.TraceText`<br />`Microsoft.PowerApps.CDS.InnerError.Message`|These annotations provide more details when errors are returned. More information: [Include more details with errors](#include-more-details-with-errors)|
 
@@ -172,7 +178,7 @@ When you execute batch operations, you must apply many different headers in the 
 |`304 Not Modified`|Expect this status code when testing whether an entity has been modified since it was last retrieved. More information: [Conditional retrievals](perform-conditional-operations-using-web-api.md#bkmk_DetectIfChanged)|Redirection|  
 |`403 Forbidden`|Expect this  status code for the following types of errors:<br /><br />- `AccessDenied`<br />- `AttributePermissionReadIsMissing`<br />- `AttributePermissionUpdateIsMissingDuringUpdate`<br />- `AttributePrivilegeCreateIsMissing`<br />-   `CannotActOnBehalfOfAnotherUser`<br />- `CannotAddOrActonBehalfAnotherUserPrivilege`<br />- `CrmSecurityError`<br />- `InvalidAccessRights`<br />- `PrincipalPrivilegeDenied`<br />- `PrivilegeCreateIsDisabledForOrganization`<br />- `PrivilegeDenied`<br />- `unManagedinvalidprincipal`<br />- `unManagedinvalidprivilegeedepth`|Client Error|  
 |`401 Unauthorized`|Expect this status code for the following types of errors:<br /><br />- `BadAuthTicket`<br />- `ExpiredAuthTicket`<br />-   `InsufficientAuthTicket`<br />- `InvalidAuthTicket`<br />- `InvalidUserAuth`<br />- `MissingCrmAuthenticationToken`<br />- `MissingCrmAuthenticationTokenOrganizationName`<br />- `RequestIsNotAuthenticated`<br />- `TamperedAuthTicket`<br />- `UnauthorizedAccess`<br />-   `UnManagedInvalidSecurityPrincipal`|Client Error|  
-|`413 Payload Too Large`|Expect this  status code when the request length is too large.|Client Error|  
+|`413 Payload Too Large`|Expect this  status code when the request length is too large. [Learn about request and response payload size limitations](../work-with-data.md#request-and-response-payload-size-limitations)|Client Error|  
 |`400 BadRequest`|Expect this  status code when an argument is invalid.|Client Error|  
 |`404 Not Found`|Expect this  status code when the resource doesn't exist.|Client Error|  
 |`405 Method Not Allowed`|This error occurs for incorrect method and resource combinations. For example, you can't use DELETE or PATCH on a collection of entities.<br /><br /> Expect this for the following types of errors:<br /><br />- `CannotDeleteDueToAssociation`<br />-   `InvalidOperation`<br />- `NotSupported`|Client Error|  
@@ -238,7 +244,7 @@ When this plug-in is registered on the Create message of an account entity, and 
 **Request:**
 
 ```http
-POST https://yourorg.api.crm.dynamics.com/api/data/v9.1/accounts HTTP/1.1
+POST https://yourorg.api.crm.dynamics.com/api/data/v9.2/accounts HTTP/1.1
 Content-Type: application/json;
 Prefer: odata.include-annotations="*"
 {
@@ -294,7 +300,7 @@ You can set a string value that is available to plug-ins within the ExecutionCon
 ### See also  
 
 [Perform operations using the Web API](perform-operations-web-api.md)   
-[Query data using the Web API](query-data-web-api.md)   
+[Query data using the Web API](query/overview.md)   
 [Create a table row using the Web API](create-entity-web-api.md)   
 [Retrieve a table row using the Web API](retrieve-entity-using-web-api.md)   
 [Update and delete table rows using the Web API](update-delete-entities-using-web-api.md)   

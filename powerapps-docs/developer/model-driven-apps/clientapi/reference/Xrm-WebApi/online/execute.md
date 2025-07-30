@@ -1,11 +1,10 @@
 ---
-title: "Xrm.WebApi.online.execute (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "Xrm.WebApi.online.execute (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the Xrm.WebApi.online.execute method.
-author: adrianorth
-ms.author: aorth
-ms.date: 03/12/2022
+author: sriharibs-msft
+ms.author: srihas
+ms.date: 04/29/2025
 ms.reviewer: jdaly
-
 ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
@@ -30,7 +29,7 @@ contributors:
 |---|---|---|---|
 |`request`|Object|Yes|Object that will be passed to the Web API endpoint to execute an action, function, or CRUD request. The object exposes a `getMetadata` method *via its prototype* that lets you define the metadata for the action, function or CRUD request you want to execute. See [request.getMetadata method](#requestgetmetadata-method)|
 |`successCallback`|Function|No|A function to call when operation is executed successfully. See [Return Value](#return-value)|
-|`errorCallback`|Function|No|A function to call when the operation fails.|
+|`errorCallback`|Function|No|[!INCLUDE [errorcallback-description](../includes/errorcallback-description.md)]|
 
 ### request.getMetadata method
 
@@ -71,6 +70,9 @@ Find these examples below:
 - [Delete a record](#delete-a-record)
 - [Associate a record](#associate-a-record)
 - [Disassociate a record](#disassociate-a-record)
+
+> [!TIP]
+> You can use the [Dataverse REST Builder](https://github.com/GuidoPreite/DRB) to generate JavaScript code that uses the `Xrm.WebApi.online.execute` method.
 
 ### Execute an action
 

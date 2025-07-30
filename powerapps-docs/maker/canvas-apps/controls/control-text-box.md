@@ -1,19 +1,19 @@
 ---
 title: Label control in Power Apps
 description: Learn about the details, properties and examples of the label control in Power Apps.
-author: chmoncay
+author: yogeshgupta698
 
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 12/08/2021
 ms.subservice: canvas-maker
-ms.author: chmoncay
+ms.author: yogupt
 search.audienceType: 
   - maker
 contributors:
   - mduelae
-  - chmoncay
+  - yogeshgupta698
 ---
 # Label control in Power Apps
 

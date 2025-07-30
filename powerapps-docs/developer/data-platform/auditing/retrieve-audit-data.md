@@ -3,7 +3,7 @@ title: Retrieve the history of audited data changes
 description: Learn how to programmatically retrieve the audit change history of records in Microsoft Dataverse.
 ms.date: 06/02/2023
 ms.reviewer: jdaly
-ms.topic: conceptual
+ms.topic: how-to
 author: paulliew
 ms.author: paulliew
 ms.subservice: dataverse-developer
@@ -321,7 +321,7 @@ static void ShowNumberContactsDeletedByUserQE(
 
 Learn more about:
 
-- [Build queries with QueryExpression](../org-service/build-queries-with-queryexpression.md)
+- [Build queries with QueryExpression](../org-service/queryexpression/overview.md)
 
 
 `ShowNumberContactsDeletedByUserFetchXml` uses <xref:Microsoft.Xrm.Sdk.Query.FetchExpression> with a query composed using FetchXml.
@@ -382,8 +382,8 @@ Guid systemuserid)
 
 Learn more about:
 
-- [Use FetchXML to construct a query](../use-fetchxml-construct-query.md)
-- [Use FetchXML aggregation](../use-fetchxml-aggregation.md)
+- [Query data using FetchXml](../fetchxml/overview.md)
+- [Aggregate data using FetchXml](../fetchxml/aggregate-data.md)
 
 ---
 
@@ -393,7 +393,7 @@ You can use any of three messages to retrieve data changes that are audited.
 
 |Web API |SDK for .NET |Description|
 |---------|---------|---------|
-|[RetrieveAuditDetails Function](xref:Microsoft.Dynamics.CRM.RetrieveAuditDetails)|[RetrieveAuditDetailsRequest Class>](xref:Microsoft.Crm.Sdk.Messages.RetrieveAuditDetailsRequest)|Retrieve the full audit details from an audit record.|
+|[RetrieveAuditDetails Function](xref:Microsoft.Dynamics.CRM.RetrieveAuditDetails)|[RetrieveAuditDetailsRequest Class](xref:Microsoft.Crm.Sdk.Messages.RetrieveAuditDetailsRequest)|Retrieve the full audit details from an audit record.|
 |[RetrieveAttributeChangeHistory Function](xref:Microsoft.Dynamics.CRM.RetrieveAttributeChangeHistory)|[RetrieveAttributeChangeHistoryRequest Class](xref:Microsoft.Crm.Sdk.Messages.RetrieveAttributeChangeHistoryRequest)|Retrieve the change history for a single column of an audited record.|
 |[RetrieveRecordChangeHistory Function](xref:Microsoft.Dynamics.CRM.RetrieveRecordChangeHistory)|[RetrieveRecordChangeHistoryRequest Class](xref:Microsoft.Crm.Sdk.Messages.RetrieveRecordChangeHistoryRequest)|Retrieve all audited data changes for a specific record.|
 
@@ -410,13 +410,13 @@ These messages provide more details that depend on the type of action. The detai
 |[RelationshipAuditDetail ComplexType](xref:Microsoft.Dynamics.CRM.RelationshipAuditDetail)|[RelationshipAuditDetail Class](xref:Microsoft.Crm.Sdk.Messages.RelationshipAuditDetail)|Provides details when records are associated or disassociated using a many-to-many relationship. Provides the name of the relationship and a list of the records the operation changed.<br/>Returned by [many-to-many relationship events](#many-to-many-relationship-events).|
 |[RolePrivilegeAuditDetail ComplexType](xref:Microsoft.Dynamics.CRM.RolePrivilegeAuditDetail)|[RolePrivilegeAuditDetail Class](xref:Microsoft.Crm.Sdk.Messages.RolePrivilegeAuditDetail)|Provides details when the definitions of [Security Role (Role)](../reference/entities/role.md) records change. Provides information about the old and new role privileges associated with the role.<br/>Returned by [security role change events](#security-role-change-events).|
 |[ShareAuditDetail ComplexType](xref:Microsoft.Dynamics.CRM.ShareAuditDetail)|[ShareAuditDetail Class](xref:Microsoft.Crm.Sdk.Messages.ShareAuditDetail)|Provides details when a record is shared or unshared or when the level of access to a shared record changes.<br/> Returned by [record sharing events](#record-sharing-events).|
-|[UserAccessAuditDetail ComplexType](xref:Microsoft.Dynamics.CRM.UserAccessAuditDetail)|[UserAccessAuditDetail Class>](xref:Microsoft.Crm.Sdk.Messages.UserAccessAuditDetail)|Provides details to track user access auditing. Provides details on the interval and access time.<br/> Returned by [user access events](#user-access-events).|
+|[UserAccessAuditDetail ComplexType](xref:Microsoft.Dynamics.CRM.UserAccessAuditDetail)|[UserAccessAuditDetail Class](xref:Microsoft.Crm.Sdk.Messages.UserAccessAuditDetail)|Provides details to track user access auditing. Provides details on the interval and access time.<br/> Returned by [user access events](#user-access-events).|
 
 > [!IMPORTANT]
 >
 > - The Web API types listed earlier that inherit from [AuditDetail ComplexType](xref:Microsoft.Dynamics.CRM.AuditDetail) don't return the `AuditRecord` navigation property value they should inherit from `AuditDetail`. The SDK for .NET classes returns this data.
 >
-> - Large column values included in `AttributeAuditDetail` `OldValue` or `NewValue` properties such as [Email.Description](../reference/entities/email.md#BKMK_Description) or [Annotation](../reference/entities/annotation.md) are capped at 5KB or about 5,000 characters. A capped column value can be recognized by an ellipsis (&hellips;) at the end of the text; for example, "lorem ipsum, lorem ip…" Because the data is truncated, you can't use it to restore changes to these column values.
+> - Large column values included in `AttributeAuditDetail` `OldValue` or `NewValue` properties such as [Email.Description](../reference/entities/email.md#BKMK_Description) or [Annotation](../reference/entities/annotation.md) are capped at 5KB or about 5,000 characters. A capped column value can be recognized by an ellipsis (&hellip;) at the end of the text; for example, "lorem ipsum, lorem ip…" Because the data is truncated, you can't use it to restore changes to these column values.
 
 ### RetrieveAuditDetails message
 
@@ -424,7 +424,7 @@ Use this message to retrieve the audit details for a single audit record.
 
 # [Web API](#tab/webapi)
 
-<xref:Microsoft.Dynamics.CRM.RetrieveAuditDetails> is a function bound to the audit table. Include the `Prefer: odata.include-annotations="*"` request header to get [formatted values](../webapi/query-data-web-api.md#formatted-values).
+<xref:Microsoft.Dynamics.CRM.RetrieveAuditDetails> is a function bound to the audit table. Include the `Prefer: odata.include-annotations="*"` request header to get [formatted values](../webapi/query/select-columns.md#formatted-values).
 
 The following example shows the [AttributeAuditDetail ComplexType](xref:Microsoft.Dynamics.CRM.AttributeAuditDetail) returned when the `parentaccountid` is set on an `account` record.
 

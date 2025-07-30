@@ -1,13 +1,13 @@
 ---
 title: "About dialog for model-driven apps | MicrosoftDocs"
 description: Learn about the various parts of the About dialog for model-driven apps.
-author: sericks007
+author: shwetamurkute
 ms.component: pa-user
-ms.topic: conceptual
-ms.date: 06/27/2023
+ms.topic: concept-article
+ms.date: 11/06/2023
 ms.subservice: end-user
-ms.author: sericks
-ms.reviewer: sericks
+ms.author: smurkute
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser
@@ -21,7 +21,7 @@ This article explains the various parts of the **About** dialog for model-driven
 
 :::image type="content" source="media/about-dialog/about-dialog-channel.png" alt-text="About dialog for model-driven apps.":::
 
-- The **Channel** attribute indicates the feature set being used. Admins can set a channel value of **Semi-annual** or **Monthly** in the Power Platform admin center or through code. More information: [Manage behavior settings](/power-platform/admin/settings-behavior)
+- The **Channel** attribute indicates the feature set being used. This attribute can be set by environment, app, user, or URL parameter so that a suffix indicates the release name of the current session. More information: [Changing release channels](../maker/model-driven-apps/channel-change.md)
 
 - The **semi-annual channel** is the current, twice-a-year release wave that is updated in April and October. The release for the semi-annual channel is shown at the top of the dialog like **2023 release wave 1 enabled**.
 

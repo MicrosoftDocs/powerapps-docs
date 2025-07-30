@@ -2,11 +2,11 @@
 title: "Impersonate another user (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Use impersonation to execute business logic on behalf of another Microsoft Dataverse user." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 03/22/2022
-ms.reviewer: "pehecke"
-ms.topic: "article"
-author: "divkamath" # GitHub ID
+ms.reviewer: pehecke
+ms.topic: article
+author: MsSQLGirl
 ms.subservice: dataverse-developer
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
+ms.author: jukoesma
 search.audienceType: 
   - developer
 contributors:
@@ -17,7 +17,7 @@ contributors:
 
 Use impersonation to execute business logic on behalf of another Microsoft Dataverse user to provide a desired feature or service using the appropriate role and object-based security of that impersonated user.
 
-This is necessary because the Dataverse web services can be called by various clients and services on behalf of a Dataverse user.
+Impersonation can be used by various clients and services to call the Dataverse web services on behalf of a Dataverse user.
 
 Impersonation involves two different user accounts:
 
@@ -36,15 +36,19 @@ The actual set of privileges that is used to modify data is the intersection of 
 
 In other words, the *impersonator* is allowed to do something *if and only if* the *impersonator* and the *impersonated user* have the privilege necessary for the action.
 
+### Direct assignment required
+
+The **Act on Behalf of Another User** privilege (`prvActOnBehalfOfAnotherUser`), or a role containing that privilege, must be assigned directly to users since it can't be inherited through a Team. This direct assignment is needed because of the sensitive nature of the privilege.
+
 ## Impersonation with Server-to-Server authentication
 
-If you are creating a web client application that requires a user account that can act on behalf of a subscribing user, you can use the special *application user* account so that you do not need to use a paid Dataverse user license.
+If you're creating a web client application that requires a user account that can act on behalf of a subscribing user, you can use the special *application user* account so that you don't need to use a paid Dataverse user license.
 
 More information: [Build web applications using Server-to-Server (S2S) authentication](build-web-applications-server-server-s2s-authentication.md).
 
 ## Impersonate another user using the Web API
 
-To impersonate a user, add a request header named `CallerObjectId` with a GUID value equal to the impersonated user's Microsoft Entra ID object id before sending the request to the web service. The user's Microsoft Entra ID object id is included in the [SystemUser.AzureActiveDirectoryObjectId](reference/entities/systemuser.md#BKMK_AzureActiveDirectoryObjectId).
+To impersonate a user, add a request header named `CallerObjectId` with a GUID value equal to the impersonated user's Microsoft Entra ID object identifier before sending the request to the web service. The user's Microsoft Entra ID object identifier is included in the [SystemUser.AzureActiveDirectoryObjectId](reference/entities/systemuser.md#BKMK_AzureActiveDirectoryObjectId).
 
 More information: [Impersonate another user using the Web API](webapi/impersonate-another-user-web-api.md).
 
@@ -59,7 +63,7 @@ To impersonate another user, set the `CallerId` property to the Guid value of th
 
 ## Impersonate another user using plug-ins
 
-You can register a plug-in you can specify a user that the operations should use. Within the code of a plug-in you can override this setting.
+You can register a plug-in containing code to specify the user that the operations should use.
 More information: [Impersonate a user](impersonate-a-user.md).
 
 

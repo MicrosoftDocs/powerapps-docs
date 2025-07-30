@@ -3,9 +3,9 @@ title: Query schema definitions
 description: Write a query to retrieve definitions of tables, columns, relationships, and labels for a Dataverse organization. Optionally, track changes to these definitions over time.
 ms.date: 08/05/2023
 ms.topic: how-to
-author: NHelgren
+author: mkannapiran
+ms.author: kamanick
 ms.subservice: dataverse-developer
-ms.author: nhelgren
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
@@ -526,9 +526,9 @@ OData-Version: 4.0
 
 {
   "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.WhoAmIResponse",
-  "BusinessUnitId": "38e0dbe4-131b-e111-ba3e-78e7d1620f5e",
-  "UserId": "4026be43-6b69-e111-8f65-78e7d1620f5e",
-  "OrganizationId": "883278f5-03af-45eb-a0bc-3fea67caa544"
+  "BusinessUnitId": "11bb11bb-cc22-dd33-ee44-55ff55ff55ff",
+  "UserId": "22cc22cc-dd33-ee44-ff55-66aa66aa66aa",
+  "OrganizationId": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee"
 }
 ```
 
@@ -537,7 +537,7 @@ Then use the `UserId` value to filter the records using the `systemuserid` from 
 **Request:**
 
 ```http
-GET [Organization URI]/api/data/v9.2/usersettingscollection?$select=uilanguageid&$filter=systemuserid eq 4026be43-6b69-e111-8f65-78e7d1620f5e&$top=1&$count=true HTTP/1.1
+GET [Organization URI]/api/data/v9.2/usersettingscollection?$select=uilanguageid&$filter=systemuserid eq 22cc22cc-dd33-ee44-ff55-66aa66aa66aa&$top=1&$count=true HTTP/1.1
 OData-MaxVersion: 4.0
 OData-Version: 4.0
 If-None-Match: null
@@ -558,7 +558,7 @@ OData-Version: 4.0
     {
       "@odata.etag": "W/\"47652882\"",
       "uilanguageid": 1033,
-      "systemuserid": "4026be43-6b69-e111-8f65-78e7d1620f5e"
+      "systemuserid": "22cc22cc-dd33-ee44-ff55-66aa66aa66aa"
     }
   ]
 }

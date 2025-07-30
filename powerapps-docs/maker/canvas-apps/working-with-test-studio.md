@@ -1,14 +1,14 @@
 ---
-title: Working with Test Studio (contains video)
+title: Working with Test Studio
 description: Describes how to use Test Studio with example for testing canvas apps.
 author: aengusheaney
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 06/04/2020
 ms.subservice: canvas-maker
-ms.author: aheaney
+ms.author: mkaur
 search.audienceType: 
   - maker
 contributors:
@@ -21,7 +21,7 @@ contributors:
 In this quickstart, you'll create tests for a canvas app called Kudos. You can also explore and discover testing concepts and apply them to writing tests for your own canvas apps. The sample Kudos app is part of a suite of employee engagement apps available to download from [Employee Experience Starter Kit](https://powerapps.microsoft.com/en-us/blog/powerapps-employee-experience-starter-kit).
 
 Watch this video to learn how to work with Test Studio:
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLvMa]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=3fe85f46-745a-411c-aba8-6044cb184e78]
 
 ## Open Test Studio
 
@@ -115,7 +115,7 @@ To add test steps and test assertions in the Kudos app:
 
     You can use any supported expression. You can also query any data sources, collections, variables, or run flows that are contained in your app, and create new global variables or collections to use in your tests.
 
-    ```powerapps-dot
+    ```power-fx
     Set(kudosBeforeTest, CountRows(Filter(Kudos, Receiver.Email = "someone@example.com")))```
 
 5. Select Step 2 or the step above which you want to insert a new step.
@@ -124,7 +124,7 @@ To add test steps and test assertions in the Kudos app:
 
 7. Enter an expression or formula in the action input to [Trace](./functions/function-trace.md) and write the *kudosBeforeTest* value to test the results record.
 
-    ```powerapps-dot
+    ```power-fx
     Trace("kudosBeforeTest : " & kudosBeforeTest);
     ```
 
@@ -132,12 +132,12 @@ To add test steps and test assertions in the Kudos app:
 
 8. Go to the bottom of the test case and insert a new step to count the records in the database after the test has completed.
 
-    ```powerapps-dot
+    ```power-fx
     Set(kudosAfterTest, CountRows(Filter(Kudos, Receiver.Email = "someone@example.com")))```
 
 9. Add a final step to validate that the record count in the database has increased by a count of 1, and enter the following assertion action to verify:
 
-    ```powerapps-dot
+    ```power-fx
     Assert(kudosAfterTest = kudosBeforeTest + 1, "Kudos count incorrect. Expected : " & kudosBeforeTest + 1  & " Actual :" & kudosAfterTest)
     ```
 
@@ -176,7 +176,7 @@ In this section, you'll change the test assertion to experience a failed test:
 
 2. Update ```+ 1``` to ```+ 2``` in test action. This update means that the test  expects two records to be created, which is incorrect. If the test is successful, only one record should be created in the database.
 
-    ```powerapps-dot
+    ```power-fx
     Assert(kudosAfterTest = kudosBeforeTest + 2, "Kudos count incorrect. Expected : " & kudosBeforeTest + 2  & " Actual :" & kudosAfterTest)
     ```
 
@@ -243,7 +243,7 @@ In the below example, you'll customize the **OnTestCaseStart** property so every
 
 3. Input an expression to Navigate to first screen and fetch the test data for your test. 
 
-    ```powerapps-dot
+    ```power-fx
     //Start every cases on the first screen in the Kudos app
     Navigate('Dashboard Screen');
 
@@ -307,7 +307,7 @@ In this quickstart, you'll create two custom tables in the Dataverse database to
     > [!NOTE]
     > The following samples connect to Microsoft Dataverse. You can create a [simple app](data-platform-create-app.md) or [build an app from scratch](data-platform-create-app-scratch.md) using Dataverse. Also, refer to the [Patch](./functions/function-patch.md) function reference for more details to modify records of a data source used in the following samples.
 
-    ```powerapps-dot
+    ```power-fx
     //Save to Dataverse
     Patch(AppTestResults
     , Defaults(AppTestResults)
@@ -331,7 +331,7 @@ In this quickstart, you'll create two custom tables in the Dataverse database to
 
 5. Input an expression to process the results of your test. In the following sample, you'll save each test suite's results to the custom AppTestSuiteResults table in Dataverse. 
 
-    ```powerapps-dot
+    ```power-fx
     //Save to Dataverse
     Patch(AppTestSuiteResults
         , Defaults(AppTestSuiteResults)
@@ -352,13 +352,13 @@ Other examples of expressions you could use in these properties are:
 
 - Send results to a flow in Power Automate.
 
-    ```powerapps-dot
+    ```power-fx
     MyTestResultsFlow.Run(JSON(TestCaseResult))
     ```
 
 - Email your results.
 
-    ```powerapps-dot
+    ```power-fx
     Office365.SendMailV2("someone@example.com", "Test case results", JSON(TestCaseResult, JSONFormat.IndentFour))
     ```
 
@@ -366,7 +366,7 @@ Other examples of expressions you could use in these properties are:
 
   For example, receive a notification after the test completes when playing the test in a browser, outside of Test Studio.
 
-    ```powerapps-dot
+    ```power-fx
     Notify(TestCaseResult.TestCaseName & " : "
             & If( TestCaseResult.Success
                 , " Passed"

@@ -3,7 +3,7 @@ title: "Files and images overview (Microsoft Dataverse) | Microsoft Docs" # Inte
 description: "Learn about using file and image data in Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 05/26/2023
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: concept-article
 author: JimDaly # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: jdaly # MSFT alias of Microsoft employees only
@@ -20,7 +20,7 @@ Dataverse provides several different ways to save binary data representing files
 ||File|Image|Attachment & Note|
 |---------|---------|---------|---------|
 |**Attribute Type**|File|Image|String|
-|**Create new columns?**|Yes. See [File columns](file-attributes.md)|Yes, See [Image columns](image-attributes.md)|No, only `activitymimeattachment.body` and `annotation.documentbody` columns.|
+|**Create new columns?**|Yes. See [Work with file column definitions using code](file-attributes.md)|Yes, See [Work with image column definitions using code](image-attributes.md)|No, only `activitymimeattachment.body` and `annotation.documentbody` columns.|
 |**File Size limits**|Configurable by column `MaxSizeInKB` setting<br />Up to 10 GB, but client controls limited to 128 MB|Configurable by column `MaxSizeInKB` setting<br />Up to 30 MB.|Configurable by [Organization.MaxUploadFileSize](reference/entities/organization.md#BKMK_MaxUploadFileSize) setting up to 128 MB. See [File size limits](attachment-annotation-files.md#file-size-limits)|
 |**Upload Messages**|`InitializeFileBlocksUpload`<br >`UploadBlock`<br />`CommitFileBlocksUpload`|`InitializeFileBlocksUpload`<br >`UploadBlock`<br />`CommitFileBlocksUpload`|`InitializeAttachmentBlocksUpload`<br >`UploadBlock`<br />`CommitAttachmentBlocksUpload`<br />OR<br />`InitializeAnnotationBlocksUpload`<br >`UploadBlock`<br />`CommitAnnotationBlocksUpload`|
 |**Download Messages**|`InitializeFileBlocksDownload`<br >`DownloadBlock`|`InitializeFileBlocksDownload`<br >`DownloadBlock`|`InitializeAttachmentBlocksDownload`<br >`DownloadBlock`<br />OR<br />`InitializeAnnotationBlocksDownload`<br >`DownloadBlock`|
@@ -66,7 +66,7 @@ Returns a string value like this by default:
 
 `ade;adp;app;asa;ashx;asmx;asp;bas;bat;cdx;cer;chm;class;cmd;com;config;cpl;crt;csh;dll;exe;fxp;hlp;hta;htr;htw;ida;idc;idq;inf;ins;isp;its;jar;js;jse;ksh;lnk;mad;maf;mag;mam;maq;mar;mas;mat;mau;mav;maw;mda;mdb;mde;mdt;mdw;mdz;msc;msh;msh1;msh1xml;msh2;msh2xml;mshxml;msi;msp;mst;ops;pcd;pif;prf;prg;printer;pst;reg;rem;scf;scr;sct;shb;shs;shtm;shtml;soap;stm;tmp;url;vb;vbe;vbs;vsmacros;vss;vst;vsw;ws;wsc;wsf;wsh;svg`
 
-More information: [Build queries with QueryExpression](org-service/build-queries-with-queryexpression.md)
+More information: [Build queries with QueryExpression](org-service/queryexpression/overview.md)
 
 #### [Web API](#tab/webapi)
 
@@ -94,13 +94,13 @@ OData-Version: 4.0
         {
             "@odata.etag": "W/\"75142950\"",
             "blockedattachments": "ade;adp;app;asa;ashx;asmx;asp;bas;bat;cdx;cer;chm;class;cmd;com;config;cpl;crt;csh;dll;exe;fxp;hlp;hta;htr;htw;ida;idc;idq;inf;ins;isp;its;jar;js;jse;ksh;lnk;mad;maf;mag;mam;maq;mar;mas;mat;mau;mav;maw;mda;mdb;mde;mdt;mdw;mdz;msc;msh;msh1;msh1xml;msh2;msh2xml;mshxml;msi;msp;mst;ops;pcd;pif;prf;prg;printer;pst;reg;rem;scf;scr;sct;shb;shs;shtm;shtml;soap;stm;tmp;url;vb;vbe;vbs;vsmacros;vss;vst;vsw;ws;wsc;wsf;wsh;svg",
-            "organizationid": "883278f5-07af-45eb-a0bc-3fee67caa544"
+            "organizationid": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee"
         }
     ]
 }
 ```
 
-More information: [Query data using the Web API](webapi/query-data-web-api.md)
+More information: [Query data using the Web API](webapi/query/overview.md)
 
 ---
 
@@ -159,7 +159,7 @@ OData-Version: 4.0
             "@odata.etag": "W/\"4719801\"",
             "blockedmimetypes": "image/svg+xml",
             "allowedmimetypes": null,
-            "organizationid": "8daa44aa-e2f8-ed11-a66e-00224820c64b"
+            "organizationid": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee"
         }
     ]
 }

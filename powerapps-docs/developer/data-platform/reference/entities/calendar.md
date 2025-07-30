@@ -1,52 +1,51 @@
 ---
-title: "Calendar table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the Calendar table/entity."
-ms.date: 09/01/2023
-ms.service: "powerapps"
-ms.topic: "reference"
-ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "phecke"
-ms.author: "pehecke"
+title: "Calendar table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the Calendar table/entity with Microsoft Dataverse."
+ms.topic: generated-reference
+author: phecke
+ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# Calendar table/entity reference
-
-> [!NOTE]
-> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
+# Calendar table/entity reference (Microsoft Dataverse)
 
 Calendar used by the scheduling system to define when an appointment or activity is to occur.
 
-
 ## Messages
 
-|Message|Web API Operation|SDK class or method|
-|-|-|-|
-|Create|POST /calendars<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE /calendars(*calendarid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|ExpandCalendar|<xref:Microsoft.Dynamics.CRM.ExpandCalendar?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.ExpandCalendarRequest>|
-|Retrieve|GET /calendars(*calendarid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET /calendars<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|Update|PATCH /calendars(*calendarid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+The following table lists the messages for the Calendar table.
+Messages represent operations that can be performed on the table. They may also be events.
+
+| Name <br />Is Event? |Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Create`<br />Event: True |`POST` /calendars<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `Delete`<br />Event: True |`DELETE` /calendars(*calendarid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `ExpandCalendar`<br />Event: False |<xref:Microsoft.Dynamics.CRM.ExpandCalendar?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ExpandCalendarRequest>|
+| `Retrieve`<br />Event: True |`GET` /calendars(*calendarid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveMultiple`<br />Event: True |`GET` /calendars<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
+| `Update`<br />Event: True |`PATCH` /calendars(*calendarid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
+| `Upsert`<br />Event: False |`PATCH` /calendars(*calendarid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
 
 ## Properties
 
-|Property|Value|
-|--------|-----|
-|CollectionSchemaName|Calendars|
-|DisplayCollectionName|Calendars|
-|DisplayName|Calendar|
-|EntitySetName|calendars|
-|IsBPFEntity|False|
-|LogicalCollectionName|calendars|
-|LogicalName|calendar|
-|OwnershipType|BusinessOwned|
-|PrimaryIdAttribute|calendarid|
-|PrimaryNameAttribute|name|
-|SchemaName|Calendar|
+The following table lists selected properties for the Calendar table.
 
-<a name="writable-attributes"></a>
+|Property|Value|
+| --- | --- |
+| **DisplayName** | **Calendar** |
+| **DisplayCollectionName** | **Calendars** |
+| **SchemaName** | `Calendar` |
+| **CollectionSchemaName** | `Calendars` |
+| **EntitySetName** | `calendars`|
+| **LogicalName** | `calendar` |
+| **LogicalCollectionName** | `calendars` |
+| **PrimaryIdAttribute** | `calendarid` |
+| **PrimaryNameAttribute** |`name` |
+| **TableType** | `Standard` |
+| **OwnershipType** | `BusinessOwned` |
 
 ## Writable columns/attributes
 
@@ -61,655 +60,512 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [PrimaryUserId](#BKMK_PrimaryUserId)
 - [Type](#BKMK_Type)
 
-
 ### <a name="BKMK_BusinessUnitId"></a> BusinessUnitId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the business unit with which the calendar is associated.|
-|DisplayName|Business Unit|
+|---|---|
+|Description|**Unique identifier of the business unit with which the calendar is associated.**|
+|DisplayName|**Business Unit**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|businessunitid|
+|LogicalName|`businessunitid`|
 |RequiredLevel|None|
-|Targets|businessunit|
 |Type|Lookup|
-
+|Targets|businessunit|
 
 ### <a name="BKMK_CalendarId"></a> CalendarId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the calendar.|
-|DisplayName|Calendar|
+|---|---|
+|Description|**Unique identifier of the calendar.**|
+|DisplayName|**Calendar**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|calendarid|
+|LogicalName|`calendarid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_Description"></a> Description
 
 |Property|Value|
-|--------|-----|
-|Description|Calendar used by the scheduling system to define when an appointment or activity is to occur.|
-|DisplayName|Description|
-|Format|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Calendar used by the scheduling system to define when an appointment or activity is to occur.**|
+|DisplayName|**Description**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|description|
-|MaxLength|2000|
+|LogicalName|`description`|
 |RequiredLevel|None|
 |Type|Memo|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|2000|
 
 ### <a name="BKMK_HolidayScheduleCalendarId"></a> HolidayScheduleCalendarId
 
 |Property|Value|
-|--------|-----|
-|Description|Holiday Schedule CalendarId|
-|DisplayName|Holiday Schedule CalendarId|
+|---|---|
+|Description|**Holiday Schedule CalendarId**|
+|DisplayName|**Holiday Schedule CalendarId**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|holidayschedulecalendarid|
+|LogicalName|`holidayschedulecalendarid`|
 |RequiredLevel|None|
-|Targets|calendar|
 |Type|Lookup|
-
+|Targets|calendar|
 
 ### <a name="BKMK_IsShared"></a> IsShared
 
 |Property|Value|
-|--------|-----|
-|Description|Calendar is shared by other calendars, such as the organization calendar.|
-|DisplayName|Is Shared|
+|---|---|
+|Description|**Calendar is shared by other calendars, such as the organization calendar.**|
+|DisplayName|**Is Shared**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|isshared|
+|LogicalName|`isshared`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
-
-#### IsShared Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`calendar_isshared`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_Name"></a> Name
 
 |Property|Value|
-|--------|-----|
-|Description|Name of the calendar.|
-|DisplayName|Name|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Name of the calendar.**|
+|DisplayName|**Name**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|name|
-|MaxLength|160|
+|LogicalName|`name`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|160|
 
 ### <a name="BKMK_PrimaryUserId"></a> PrimaryUserId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the primary user of this calendar.|
-|DisplayName|Primary User|
+|---|---|
+|Description|**Unique identifier of the primary user of this calendar.**|
+|DisplayName|**Primary User**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|primaryuserid|
+|LogicalName|`primaryuserid`|
 |RequiredLevel|ApplicationRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_Type"></a> Type
 
 |Property|Value|
-|--------|-----|
-|Description|Calendar type, such as User work hour calendar, or Customer service hour calendar.|
-|DisplayName|Calendar type|
+|---|---|
+|Description|**Calendar type, such as User work hour calendar, or Customer service hour calendar.**|
+|DisplayName|**Calendar type**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|type|
+|LogicalName|`type`|
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
+|DefaultFormValue|0|
+|GlobalChoiceName|`calendar_type`|
 
 #### Type Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|-1|Inner Calendar type||
-|0|Default||
-|1|Customer Service||
-|2|Holiday Schedule||
+|Value|Label|
+|---|---|
+|-1|**Inner Calendar type**|
+|0|**Default**|
+|1|**Customer Service**|
+|2|**Holiday Schedule**|
 
-
-<a name="read-only-attributes"></a>
 
 ## Read-only columns/attributes
 
-These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** and **IsValidForUpdate**. Listed by **SchemaName**.
 
-- [BusinessUnitIdName](#BKMK_BusinessUnitIdName)
 - [CreatedBy](#BKMK_CreatedBy)
-- [CreatedByName](#BKMK_CreatedByName)
-- [CreatedByYomiName](#BKMK_CreatedByYomiName)
 - [CreatedOn](#BKMK_CreatedOn)
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
-- [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
-- [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
-- [HolidayScheduleCalendarIdName](#BKMK_HolidayScheduleCalendarIdName)
 - [ModifiedBy](#BKMK_ModifiedBy)
-- [ModifiedByName](#BKMK_ModifiedByName)
-- [ModifiedByYomiName](#BKMK_ModifiedByYomiName)
 - [ModifiedOn](#BKMK_ModifiedOn)
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
-- [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
-- [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
 - [OrganizationId](#BKMK_OrganizationId)
-- [OrganizationIdName](#BKMK_OrganizationIdName)
 - [VersionNumber](#BKMK_VersionNumber)
-
-
-### <a name="BKMK_BusinessUnitIdName"></a> BusinessUnitIdName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|businessunitidname|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
 
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user who created the calendar.|
-|DisplayName|Created By|
+|---|---|
+|Description|**Unique identifier of the user who created the calendar.**|
+|DisplayName|**Created By**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|createdby|
+|LogicalName|`createdby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedByName"></a> CreatedByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedByYomiName"></a> CreatedByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_CreatedOn"></a> CreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when the calendar was created.|
-|DisplayName|Created On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Date and time when the calendar was created.**|
+|DisplayName|**Created On**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|createdon|
+|LogicalName|`createdon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_CreatedOnBehalfBy"></a> CreatedOnBehalfBy
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the delegate user who created the calendar.|
-|DisplayName|Created By (Delegate)|
+|---|---|
+|Description|**Unique identifier of the delegate user who created the calendar.**|
+|DisplayName|**Created By (Delegate)**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|createdonbehalfby|
+|LogicalName|`createdonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedOnBehalfByName"></a> CreatedOnBehalfByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedOnBehalfByYomiName"></a> CreatedOnBehalfByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_HolidayScheduleCalendarIdName"></a> HolidayScheduleCalendarIdName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|holidayschedulecalendaridname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user who last modified the calendar.|
-|DisplayName|Modified By|
+|---|---|
+|Description|**Unique identifier of the user who last modified the calendar.**|
+|DisplayName|**Modified By**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|modifiedby|
+|LogicalName|`modifiedby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedByName"></a> ModifiedByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedByYomiName"></a> ModifiedByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_ModifiedOn"></a> ModifiedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when the calendar was last modified.|
-|DisplayName|Modified On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Date and time when the calendar was last modified.**|
+|DisplayName|**Modified On**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|modifiedon|
+|LogicalName|`modifiedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_ModifiedOnBehalfBy"></a> ModifiedOnBehalfBy
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the delegate user who last modified the calendar.|
-|DisplayName|Modified By (Delegate)|
+|---|---|
+|Description|**Unique identifier of the delegate user who last modified the calendar.**|
+|DisplayName|**Modified By (Delegate)**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|modifiedonbehalfby|
+|LogicalName|`modifiedonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedOnBehalfByName"></a> ModifiedOnBehalfByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedOnBehalfByYomiName"></a> ModifiedOnBehalfByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_OrganizationId"></a> OrganizationId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the organization with which the calendar is associated.|
-|DisplayName|Organization|
+|---|---|
+|Description|**Unique identifier of the organization with which the calendar is associated.**|
+|DisplayName|**Organization**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|organizationid|
+|LogicalName|`organizationid`|
 |RequiredLevel|SystemRequired|
-|Targets|organization|
 |Type|Lookup|
-
-
-### <a name="BKMK_OrganizationIdName"></a> OrganizationIdName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|organizationidname|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|organization|
 
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|versionnumber|
-|MaxValue|9223372036854775807|
-|MinValue|-9223372036854775808|
+|LogicalName|`versionnumber`|
 |RequiredLevel|None|
 |Type|BigInt|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
 
-<a name="onetomany"></a>
+## Many-to-One relationships
 
-## One-To-Many Relationships
+These relationships are many-to-one. Listed by **SchemaName**.
 
-Listed by **SchemaName**.
-
-- [calendar_system_users](#BKMK_calendar_system_users)
-- [Calendar_AsyncOperations](#BKMK_Calendar_AsyncOperations)
-- [Calendar_Annotation](#BKMK_Calendar_Annotation)
-- [calendar_customercalendar_holidaycalendar](#BKMK_calendar_customercalendar_holidaycalendar)
-- [Calendar_BulkDeleteFailures](#BKMK_Calendar_BulkDeleteFailures)
-- [BusinessUnit_Calendar](#BKMK_BusinessUnit_Calendar)
-- [slabase_businesshoursid](#BKMK_slabase_businesshoursid)
-- [calendar_organization](#BKMK_calendar_organization)
-- [calendar_slaitem](#BKMK_calendar_slaitem)
-
-
-### <a name="BKMK_calendar_system_users"></a> calendar_system_users
-
-Same as the [calendar_system_users](systemuser.md#BKMK_calendar_system_users) many-to-one relationship for the [systemuser](systemuser.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|systemuser|
-|ReferencingAttribute|calendarid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|calendar_system_users|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_Calendar_AsyncOperations"></a> Calendar_AsyncOperations
-
-Same as the [Calendar_AsyncOperations](asyncoperation.md#BKMK_Calendar_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|asyncoperation|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|Calendar_AsyncOperations|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_Calendar_Annotation"></a> Calendar_Annotation
-
-Same as the [Calendar_Annotation](annotation.md#BKMK_Calendar_Annotation) many-to-one relationship for the [annotation](annotation.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|annotation|
-|ReferencingAttribute|objectid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|Calendar_Annotation|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
-
-
-### <a name="BKMK_calendar_customercalendar_holidaycalendar"></a> calendar_customercalendar_holidaycalendar
-
-Same as the [calendar_customercalendar_holidaycalendar](calendar.md#BKMK_calendar_customercalendar_holidaycalendar) many-to-one relationship for the [calendar](calendar.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|calendar|
-|ReferencingAttribute|holidayschedulecalendarid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|calendar_customercalendar_holidaycalendar|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_Calendar_BulkDeleteFailures"></a> Calendar_BulkDeleteFailures
-
-Same as the [Calendar_BulkDeleteFailures](bulkdeletefailure.md#BKMK_Calendar_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|bulkdeletefailure|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|Calendar_BulkDeleteFailures|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_BusinessUnit_Calendar"></a> BusinessUnit_Calendar
-
-Same as the [BusinessUnit_Calendar](businessunit.md#BKMK_BusinessUnit_Calendar) many-to-one relationship for the [businessunit](businessunit.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|businessunit|
-|ReferencingAttribute|calendarid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|BusinessUnit_Calendar|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_slabase_businesshoursid"></a> slabase_businesshoursid
-
-Same as the [slabase_businesshoursid](sla.md#BKMK_slabase_businesshoursid) many-to-one relationship for the [sla](sla.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|sla|
-|ReferencingAttribute|businesshoursid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|slabase_businesshoursid|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_calendar_organization"></a> calendar_organization
-
-Same as the [calendar_organization](organization.md#BKMK_calendar_organization) many-to-one relationship for the [organization](organization.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|organization|
-|ReferencingAttribute|businessclosurecalendarid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|calendar_organization|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_calendar_slaitem"></a> calendar_slaitem
-
-**Added by**: Service Level Agreement (SLA) Solution
-
-Same as the [calendar_slaitem](slaitem.md#BKMK_calendar_slaitem) many-to-one relationship for the [slaitem](slaitem.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|slaitem|
-|ReferencingAttribute|businesshoursid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|calendar_slaitem|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-<a name="manytoone"></a>
-
-## Many-To-One Relationships
-
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
-
+- [business_unit_calendars](#BKMK_business_unit_calendars)
+- [calendar_customercalendar_holidaycalendar](#BKMK_calendar_customercalendar_holidaycalendar-many-to-one)
 - [lk_calendar_createdby](#BKMK_lk_calendar_createdby)
 - [lk_calendar_createdonbehalfby](#BKMK_lk_calendar_createdonbehalfby)
 - [lk_calendar_modifiedby](#BKMK_lk_calendar_modifiedby)
-- [organization_calendars](#BKMK_organization_calendars)
-- [calendar_customercalendar_holidaycalendar](#BKMK_calendar_customercalendar_holidaycalendar)
 - [lk_calendar_modifiedonbehalfby](#BKMK_lk_calendar_modifiedonbehalfby)
-- [business_unit_calendars](#BKMK_business_unit_calendars)
-
-
-### <a name="BKMK_lk_calendar_createdby"></a> lk_calendar_createdby
-
-See the [lk_calendar_createdby](systemuser.md#BKMK_lk_calendar_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_calendar_createdonbehalfby"></a> lk_calendar_createdonbehalfby
-
-See the [lk_calendar_createdonbehalfby](systemuser.md#BKMK_lk_calendar_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_calendar_modifiedby"></a> lk_calendar_modifiedby
-
-See the [lk_calendar_modifiedby](systemuser.md#BKMK_lk_calendar_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_organization_calendars"></a> organization_calendars
-
-See the [organization_calendars](organization.md#BKMK_organization_calendars) one-to-many relationship for the [organization](organization.md) table/entity.
-
-### <a name="BKMK_calendar_customercalendar_holidaycalendar"></a> calendar_customercalendar_holidaycalendar
-
-See the [calendar_customercalendar_holidaycalendar](calendar.md#BKMK_calendar_customercalendar_holidaycalendar) one-to-many relationship for the [calendar](calendar.md) table/entity.
-
-### <a name="BKMK_lk_calendar_modifiedonbehalfby"></a> lk_calendar_modifiedonbehalfby
-
-See the [lk_calendar_modifiedonbehalfby](systemuser.md#BKMK_lk_calendar_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+- [organization_calendars](#BKMK_organization_calendars)
 
 ### <a name="BKMK_business_unit_calendars"></a> business_unit_calendars
 
-See the [business_unit_calendars](businessunit.md#BKMK_business_unit_calendars) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
+One-To-Many Relationship: [businessunit business_unit_calendars](businessunit.md#BKMK_business_unit_calendars)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`businessunit`|
+|ReferencedAttribute|`businessunitid`|
+|ReferencingAttribute|`businessunitid`|
+|ReferencingEntityNavigationPropertyName|`businessunitid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_calendar_customercalendar_holidaycalendar-many-to-one"></a> calendar_customercalendar_holidaycalendar
+
+One-To-Many Relationship: [calendar calendar_customercalendar_holidaycalendar](#BKMK_calendar_customercalendar_holidaycalendar-one-to-many)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`calendar`|
+|ReferencedAttribute|`calendarid`|
+|ReferencingAttribute|`holidayschedulecalendarid`|
+|ReferencingEntityNavigationPropertyName|`holidayschedulecalendarid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_calendar_createdby"></a> lk_calendar_createdby
+
+One-To-Many Relationship: [systemuser lk_calendar_createdby](systemuser.md#BKMK_lk_calendar_createdby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdby`|
+|ReferencingEntityNavigationPropertyName|`createdby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_calendar_createdonbehalfby"></a> lk_calendar_createdonbehalfby
+
+One-To-Many Relationship: [systemuser lk_calendar_createdonbehalfby](systemuser.md#BKMK_lk_calendar_createdonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`createdonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_calendar_modifiedby"></a> lk_calendar_modifiedby
+
+One-To-Many Relationship: [systemuser lk_calendar_modifiedby](systemuser.md#BKMK_lk_calendar_modifiedby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedby`|
+|ReferencingEntityNavigationPropertyName|`modifiedby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_calendar_modifiedonbehalfby"></a> lk_calendar_modifiedonbehalfby
+
+One-To-Many Relationship: [systemuser lk_calendar_modifiedonbehalfby](systemuser.md#BKMK_lk_calendar_modifiedonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`modifiedonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_organization_calendars"></a> organization_calendars
+
+One-To-Many Relationship: [organization organization_calendars](organization.md#BKMK_organization_calendars)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`organization`|
+|ReferencedAttribute|`organizationid`|
+|ReferencingAttribute|`organizationid`|
+|ReferencingEntityNavigationPropertyName|`organizationid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+
+## One-to-Many relationships
+
+These relationships are one-to-many. Listed by **SchemaName**.
+
+- [BusinessUnit_Calendar](#BKMK_BusinessUnit_Calendar)
+- [Calendar_Annotation](#BKMK_Calendar_Annotation)
+- [Calendar_AsyncOperations](#BKMK_Calendar_AsyncOperations)
+- [Calendar_BulkDeleteFailures](#BKMK_Calendar_BulkDeleteFailures)
+- [calendar_calendar_rules](#BKMK_calendar_calendar_rules)
+- [calendar_customercalendar_holidaycalendar](#BKMK_calendar_customercalendar_holidaycalendar-one-to-many)
+- [calendar_organization](#BKMK_calendar_organization)
+- [calendar_slaitem](#BKMK_calendar_slaitem)
+- [calendar_system_users](#BKMK_calendar_system_users)
+- [inner_calendar_calendar_rules](#BKMK_inner_calendar_calendar_rules)
+- [slabase_businesshoursid](#BKMK_slabase_businesshoursid)
+
+### <a name="BKMK_BusinessUnit_Calendar"></a> BusinessUnit_Calendar
+
+Many-To-One Relationship: [businessunit BusinessUnit_Calendar](businessunit.md#BKMK_BusinessUnit_Calendar)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`businessunit`|
+|ReferencingAttribute|`calendarid`|
+|ReferencedEntityNavigationPropertyName|`BusinessUnit_Calendar`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_Calendar_Annotation"></a> Calendar_Annotation
+
+Many-To-One Relationship: [annotation Calendar_Annotation](annotation.md#BKMK_Calendar_Annotation)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`annotation`|
+|ReferencingAttribute|`objectid`|
+|ReferencedEntityNavigationPropertyName|`Calendar_Annotation`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_Calendar_AsyncOperations"></a> Calendar_AsyncOperations
+
+Many-To-One Relationship: [asyncoperation Calendar_AsyncOperations](asyncoperation.md#BKMK_Calendar_AsyncOperations)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`asyncoperation`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`Calendar_AsyncOperations`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_Calendar_BulkDeleteFailures"></a> Calendar_BulkDeleteFailures
+
+Many-To-One Relationship: [bulkdeletefailure Calendar_BulkDeleteFailures](bulkdeletefailure.md#BKMK_Calendar_BulkDeleteFailures)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`bulkdeletefailure`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`Calendar_BulkDeleteFailures`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_calendar_calendar_rules"></a> calendar_calendar_rules
+
+Many-To-One Relationship: [calendarrule calendar_calendar_rules](calendarrule.md#BKMK_calendar_calendar_rules)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`calendarrule`|
+|ReferencingAttribute|`calendarid`|
+|ReferencedEntityNavigationPropertyName|`calendar_calendar_rules`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_calendar_customercalendar_holidaycalendar-one-to-many"></a> calendar_customercalendar_holidaycalendar
+
+Many-To-One Relationship: [calendar calendar_customercalendar_holidaycalendar](#BKMK_calendar_customercalendar_holidaycalendar-many-to-one)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`calendar`|
+|ReferencingAttribute|`holidayschedulecalendarid`|
+|ReferencedEntityNavigationPropertyName|`calendar_customercalendar_holidaycalendar`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_calendar_organization"></a> calendar_organization
+
+Many-To-One Relationship: [organization calendar_organization](organization.md#BKMK_calendar_organization)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`organization`|
+|ReferencingAttribute|`businessclosurecalendarid`|
+|ReferencedEntityNavigationPropertyName|`calendar_organization`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_calendar_slaitem"></a> calendar_slaitem
+
+Many-To-One Relationship: [slaitem calendar_slaitem](slaitem.md#BKMK_calendar_slaitem)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`slaitem`|
+|ReferencingAttribute|`businesshoursid`|
+|ReferencedEntityNavigationPropertyName|`calendar_slaitem`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_calendar_system_users"></a> calendar_system_users
+
+Many-To-One Relationship: [systemuser calendar_system_users](systemuser.md#BKMK_calendar_system_users)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`systemuser`|
+|ReferencingAttribute|`calendarid`|
+|ReferencedEntityNavigationPropertyName|`calendar_system_users`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_inner_calendar_calendar_rules"></a> inner_calendar_calendar_rules
+
+Many-To-One Relationship: [calendarrule inner_calendar_calendar_rules](calendarrule.md#BKMK_inner_calendar_calendar_rules)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`calendarrule`|
+|ReferencingAttribute|`innercalendarid`|
+|ReferencedEntityNavigationPropertyName|`inner_calendar_calendar_rules`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_slabase_businesshoursid"></a> slabase_businesshoursid
+
+Many-To-One Relationship: [sla slabase_businesshoursid](sla.md#BKMK_slabase_businesshoursid)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`sla`|
+|ReferencingAttribute|`businesshoursid`|
+|ReferencedEntityNavigationPropertyName|`slabase_businesshoursid`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
-<xref href="Microsoft.Dynamics.CRM.calendar?text=calendar EntityType" />
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
+[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
+<xref:Microsoft.Dynamics.CRM.calendar?displayProperty=fullName>

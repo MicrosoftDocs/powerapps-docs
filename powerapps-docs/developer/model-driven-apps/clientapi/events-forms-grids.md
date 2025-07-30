@@ -1,10 +1,9 @@
 ---
-title: "Events in forms and grids in model-driven apps| MicrosoftDocs"
-description: All client-side code is initiated by events. In model-driven apps, you associate a specific function in a JavaScript library to be executed when an event occurs. This function is called an *event handler*.
-author: HemantGaur
-ms.author: hemantg
-
-ms.date: 04/01/2022
+title: "Events in forms and grids in model-driven apps"
+description: Events initiate all client-side code. In model-driven apps, you associate a specific function in a JavaScript library to be executed when an event occurs. This function is called an *event handler*.
+author: MitiJ
+ms.author: mijosh
+ms.date: 07/08/2024
 ms.reviewer: jdaly
 ms.topic: reference
 ms.subservice: mda-developer
@@ -16,9 +15,9 @@ contributors:
 ---
 # Events in forms and grids in model-driven apps
 
-All client-side code is initiated by events. In model-driven apps, you associate a specific function in a JavaScript library ([Script web resource](../script-jscript-web-resources.md)) to be executed when an event occurs. This function is called an *event handler*. Each event handler specifies a single function within a JavaScript library and any parameters that can be passed to the function.
+Events initiate all client-side code. In model-driven apps, you associate a specific function in a JavaScript library ([Script web resource](../script-jscript-web-resources.md)) to be executed when an event occurs. This function is called an *event handler*. Each event handler specifies a single function within a JavaScript library and any parameters that can be passed to the function.
 
-You can associate event handlers to only some events using the UI. For events that are not available to be associated through UI, Client API provides methods that can be used to attach event handlers to such events. 
+You can associate event handlers to only some events using the UI. For events that aren't available to be associated through UI, Client API provides methods that can be used to attach event handlers to such events. 
 
 [!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
 
@@ -41,7 +40,7 @@ To add or remove event handler functions to events in the new Unified Interface:
 
     ![Select form from list.](../media/select-form-from-list.png "Select form from list")
 
-1. Select **Events** tab. You'll notice that both the **On Save** and **On Load** event handlers.
+1. Select **Events** tab. Notice both the **On Save** and **On Load** event handlers.
 
     ![Form event handlers.](../media/form-event-handlers.png "Form event handlers")
 
@@ -63,12 +62,13 @@ To determine when an event handler is called on a form in bulk edit mode use [`g
 
 ## Add or remove event handler function to event using code
 
-Using the following methods to add and remove event handler for events that cannot be associated through UI:
+Using the following methods to add and remove event handler for events that can't be associated through UI:
 
 |Events |Event handler|
 |-------|-------|
 |Attribute [OnChange](reference/events/attribute-onchange.md) | [addOnChange](reference/attributes/addonchange.md) and [removeOnChange](reference/attributes/removeOnchange.md) methods|
 |Form [OnLoad](reference/events/form-onload.md)| formContext.ui [addOnLoad](reference/formcontext-ui/addonload.md) and [removeOnLoad](reference/formcontext-ui/removeonload.md) methods|
+|Form [Loaded](reference/events/form-loaded.md)| formContext.ui [addLoaded](reference/formcontext-ui/addloaded.md) and [removeLoaded](reference/formcontext-ui/removeloaded.md) methods|
 |Form data [OnLoad](reference/events/form-data-onload.md)| formContext.data [addOnLoad](reference/formcontext-data/addonload.md) and [removeOnLoad](reference/formcontext-data/removeonload.md) methods|
 |Form [OnSave](reference/events/form-onsave.md)| [addOnSave](reference/formcontext-data-entity/addonsave.md) and [removeOnSave](reference/formcontext-data-entity/removeonsave.md) methods|
 |Lookup control [PreSearch](reference/events/presearch.md)| [addPreSearch](reference/controls/addpresearch.md) and [removePreSearch](reference/controls/removepresearch.md) methods|
@@ -81,7 +81,7 @@ Using the following methods to add and remove event handler for events that cann
 
 ## Form event pipeline
 
-You can define up to 50 event handlers for each event. Each event handler is executed in the order that it is displayed in the **Event Handlers** section in the **Events** tab of the **Form Properties** dialog box.
+You can define up to 50 event handlers for each event. Each event handler is executed in the order that it's displayed in the **Event Handlers** section in the **Events** tab of the **Form Properties** dialog box.
 
 Use the [setSharedVariable](reference/executioncontext/setSharedVariable.md) and [getSharedVariable](reference/executioncontext/getSharedVariable.md) methods to pass a common variable between event handlers (functions). Use the execution context [getDepth](reference/executioncontext/getDepth.md) method to know the sequence that an event handler is being executed in relative to other event handlers. 
 
@@ -90,7 +90,5 @@ Use the [setSharedVariable](reference/executioncontext/setSharedVariable.md) and
 [Understand the Client API object model](understand-clientapi-object-model.md)   
 [Client API execution context](clientapi-execution-context.md)   
 [Events (Client API reference)](reference/events.md)   
-
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -3,7 +3,7 @@ title: Use Teams integration object | Microsoft Docs
 description: Learn how to use the Teams integration object when creating apps using Power Apps inside Teams.
 author: msftsamperl
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: 
 ms.date: 09/25/2020
 ms.subservice: teams
@@ -31,7 +31,7 @@ Teams uses three themes: *Default*, *Dark*, and *High contrast.* When using the 
 
 To retrieve a theme name, use the following formula.
 
-```powerapps-dot
+```power-fx
 Switch(
     Teams.Theme.Name,
     TeamsTheme.Default,

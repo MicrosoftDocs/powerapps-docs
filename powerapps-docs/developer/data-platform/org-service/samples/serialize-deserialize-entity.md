@@ -2,8 +2,8 @@
 title: "Sample: Serialize and deserialize entity instances (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample showcases how to serialize and deserialize entity instances." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/03/2022
-author: divkamath
-ms.author: dikamath
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: pehecke
 ms.topic: sample
 search.audienceType:
@@ -18,7 +18,7 @@ contributors:
 This sample shows how to serialize early-bound and late-bound entity instances into an XML format, and how to de-serialize from an XML format to an early-bound entity instances.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Serialize and deserialize entity instances sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/SerializeDeserializeEntity)
+> [SDK for .NET: Serialize and deserialize entity instances sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/SerializeDeserializeEntity)
 
 ## How to run this sample
 

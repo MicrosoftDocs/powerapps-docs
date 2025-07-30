@@ -1,0 +1,1 @@
+Indicates that all non-null column values for each row are returned. It is the same as not adding any [attribute elements](../attribute.md). We don't recommend using this element for most cases.

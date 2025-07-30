@@ -1,8 +1,8 @@
 ---
 title: UserSettings (Power Apps component framework API reference) | Microsoft Docs
 description: Provides information about the current user settings.
-ms.author: hemantg
-author: HemantGaur
+author: anuitz
+ms.author: anuitz
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -15,7 +15,7 @@ contributors:
 
 [!INCLUDE [usersettings-description](includes/usersettings-description.md)]
 
-## Available for 
+## Available for
 
 Model-driven and canvas apps
 
@@ -65,7 +65,7 @@ The username of the current user. Supported only in model-driven apps.
 
 ## Methods
 
-|Method | Description | 
+|Method | Description |
 | ------|-------------|
 |[getTimeZoneOffsetMinutes](usersettings/gettimezoneoffsetminutes.md)|[!INCLUDE [gettimezoneoffsetminutes-description](usersettings/includes/gettimezoneoffsetminutes-description.md)]|
 

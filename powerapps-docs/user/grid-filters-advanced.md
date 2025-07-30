@@ -3,11 +3,11 @@ title: Create and manage personal views on a grid page
 description: Create and manage personal views on a grid page in model-driven Power Apps.
 author: jasongre
 ms.component: pa-user
-ms.topic: conceptual
-ms.date: 05/18/2023
+ms.topic: how-to
+ms.date: 03/08/2024
 ms.subservice: end-user
 ms.author: jasongre
-ms.reviewer: sericks
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser
@@ -31,6 +31,9 @@ A view consists of the following elements:
 - The columns to display
 - Default sorting options
 - Filters to show rows that match specific criteria, if needed
+
+> [!IMPORTANT]
+> To ensure proper functionality of all views, it's recommended to create all views with the View designer in the maker portal or the Edit filters panel in the view page. Custom views imported from solutions can include invalid fetchXML and might not be supported.
 
 For more information, see [Understand model-driven app views](../maker/model-driven-apps/create-edit-views.md).
 
@@ -119,10 +122,10 @@ Sorting options depend on the type of data. Alphanumeric columns can be sorted i
 
 ## Edit column width
 
-If your administrator has turned on [modern advanced find](/power-platform/admin/settings-features), you can drag the vertical column separator bar to change the **minimum** width of a column. When you change the width of a column, as asterisk appears besige the view name to indicate that you edited the view and haven't saved it. See [Save your edits to as a new view](/power-apps/user/grid-filters-advanced#save-your-edits-as-a-new-view) to learn more about different options to save a view.
+If your administrator has turned on [modern advanced find](/power-platform/admin/settings-features), you can drag the vertical column separator bar to change the **minimum** width of a column. When you change the width of a column, as asterisk appears beside the view name to indicate that you edited the view and haven't saved it. See [Save your edits to as a new view](/power-apps/user/grid-filters-advanced#save-your-edits-as-a-new-view) to learn more about different options to save a view.
 
 > [!TIP]
-> Since the column width edits change the **minimum** width of the column, you may see column widths getting adjusted after the view is saved, to fill the available horizontal screen space.
+> Since the column width edits change the **minimum** width of the column, you might see column widths getting adjusted after the view is saved, to fill the available horizontal screen space.
 
 ## Save your view
 
@@ -183,7 +186,7 @@ If your administrator has turned on [modern advanced find](/power-platform/admin
 
 ## Manage and share personal views
 
-If your administrator has turn on [modern advanced find](/power-platform/admin/settings-features), you can share, hide, rename, and delete views.
+If your administrator has turned on [modern advanced find](/power-platform/admin/settings-features), you can share, hide, rename, and delete views.
 
 1. In the view selector, select **Manage and share views**.
 

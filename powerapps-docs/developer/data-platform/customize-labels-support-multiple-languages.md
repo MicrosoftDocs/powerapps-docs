@@ -71,10 +71,8 @@ Because you can only perform customizations in the application by using the base
 
 You can export the translations in the web application or by using the `ExportTranslation` message (<xref:Microsoft.Dynamics.CRM.ExportTranslation?text=ExportTranslation Action> or <xref:Microsoft.Crm.Sdk.Messages.ExportTranslationRequest> class).  
 
-Exported text is saved as a compressed file that contains a CrmTranslations.xml that you open by using Office Excel. You can send this file to a linguistic expert, translation agency, or localization firm.  
-
-For more information, see [Office 2003 XML Reference Schemas](https://www.microsoft.com/downloads/details.aspx?FamilyID=fe118952-3547-420a-a412-00a2662442d9).  
-
+Exported text is saved as a compressed file that contains a CrmTranslations.xml that you open by using Office Excel. You can send this file to a linguistic expert, translation agency, or localization firm. 
+ 
 ### Import translated text
 
 After you have exported the customized table or column text and had it translated, you can import the translated text strings in the Web application by using the `ImportTranslation` message (<xref:Microsoft.Dynamics.CRM.ImportTranslation?text=ImportTranslation Action> or <xref:Microsoft.Crm.Sdk.Messages.ImportTranslationRequest> class). The file that you import must be a compressed file that contains the CrmTranslations.xml and the [Content_Types].xml file just as they were exported.  
@@ -90,7 +88,7 @@ Because customization is supported only in the base language, you may be working
 
 ## Manage languages for your organization
 
- Dataverse enables you to install multiple language packs on a server and allows the user to select a language pack. For more information about how to install language packs, see [Enable Languages](/dynamics365/customer-engagement/admin/enable-languages). This section contains information about messages used to manage languages installed for your organization.  
+ Dataverse enables you to install multiple language packs on a server and allows the user to select a language pack. For more information about how to install language packs, see [Enable Languages](/power-platform/admin/enable-languages). This section contains information about messages used to manage languages installed for your organization.  
 
 The following table lists the messages that you use to work with language packs. Use these messages with the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A> method.
 

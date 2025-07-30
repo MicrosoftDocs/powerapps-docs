@@ -4,7 +4,7 @@ description: Learn about developing solutions with canvas apps for enterprise de
 author: mduelae
 
 ms.subservice: canvas-developer
-ms.topic: conceptual
+ms.topic: article
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 08/17/2022
@@ -13,7 +13,7 @@ search.audienceType:
   - maker
 contributors:
   - mduelae
-  - KumarVivek
+  - mduelae
   - evlew
 ---
 

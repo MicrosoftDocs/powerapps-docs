@@ -1,8 +1,8 @@
 ---
-title: Understand Power Apps Studio in Dataverse for a Teams environment (contains video) | Microsoft Docs
+title: Understand Power Apps Studio in Dataverse for a Teams environment | Microsoft Docs
 description: Learn the components inside Power Apps Studio in Teams.
 author: jessicaszelo
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: 
 ms.date: 07/7/2022
 ms.subservice: teams
@@ -351,7 +351,7 @@ the table name. You can also expand the *Advanced settings* to update the table'
 ![Create table.](media/studio-create-table.png "Create table")
 
 Watch this video that shows you how to quickly create table and columns.
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWJ4MI]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=40f4f29f-77df-420a-a182-cb71b39f4613]
 
 > [!NOTE]
 > You can use visual editor in Power Apps Studio to quickly create a table while authoring an app. However, you can also use the [Build tab](edit-delete-table.md) to edit or delete the tables you create by using Power Apps Studio. Go to [Create tables in Microsoft Teams](create-table.md) for more information about creating tables by using the **Build** tab.

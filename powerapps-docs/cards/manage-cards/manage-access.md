@@ -3,8 +3,8 @@ title: Manage access
 description: This article helps you use security roles to manage cards.
 ms.date: 11/17/2022
 ms.topic: overview
-author: sericks007
-ms.author: sericks
+author: mduelae
+ms.author: mkaur
 ms.reviewer: 
 ms.custom: 
 ms.collection: 
@@ -12,6 +12,8 @@ ms.collection:
 ---
 
 # Manage access
+
+[!INCLUDE[cards-deprecation-banner](~/includes/cards-deprecation-notice.md)]
 
 This article explains how to manage cards using security roles, and also provides guidance on deleting a record.
 

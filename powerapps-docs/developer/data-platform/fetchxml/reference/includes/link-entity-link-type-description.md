@@ -1,0 +1,1 @@
+The type of link use. Default behavior is *inner*. [Learn about link-type options](../link-entity.md#link-type-options)

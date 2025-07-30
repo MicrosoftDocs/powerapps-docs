@@ -1,12 +1,12 @@
 ---
 title: "Manage invalid characters | Microsoft Docs"
 description: "Describes how to manage invalid characters with the Dataverse API. Only allowed characters can be used or an error is thrown."
-ms.date: 03/22/2022
-ms.reviewer: jdaly
+ms.date: 06/20/2025
 ms.topic: article
-author: divkamath
+author: MsSQLGirl
+ms.author: jukoesma
+ms.reviewer: jdaly
 ms.subservice: dataverse-developer
-ms.author: dikamath
 search.audienceType: 
   - developer
 contributors:
@@ -15,18 +15,18 @@ contributors:
 
 # Manage invalid characters
 
-There are a set of characters that cannot be saved in string or memo columns. When an application saves data containing these characters to Dataverse, the following error will occur:
+There is a set of characters that can't be saved in string or memo columns. When an application saves data containing these characters to Dataverse, the following error occurs:
 
 Name: `InvalidCharactersInField`<br />
-Hexadecimal error code : `80040278`<br />
+Hexadecimal error code: `80040278`<br />
 Error Number: `-2147220872`<br />
 Description: `The field '{0}' contains one or more invalid characters.`<br />
 
 Dataverse uses the [System.Xml.XmlConvert.VerifyXmlChars(String) Method](/dotnet/api/system.xml.xmlconvert.verifyxmlchars) for every string value passed to these columns. This error is thrown on the first invalid character encountered.
 
-You may encounter these characters in email content that includes replies or when text is copied from another source which may have characters to control presentation.
+You might encounter these characters in email content that includes replies or when text is copied from another source that might have characters to control presentation.
 
-To prevent this error you can:
+To prevent this error, you can:
 
 - HTML encode the content before saving.
 

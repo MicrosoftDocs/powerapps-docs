@@ -1,12 +1,12 @@
 ---
-title: "Define custom state model transitions (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about defining custom state model transitions for the Incident (Case) table or custom tables." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Define custom state model transitions (Microsoft Dataverse) | Microsoft Docs"
+description: "Learn about defining custom state model transitions for the Incident (Case) table or custom tables."
 ms.date: 06/15/2022
 ms.reviewer: jdaly
 ms.topic: article
-author: NHelgren # GitHub ID
+author: mkannapiran
+ms.author: kamanick
 ms.subservice: dataverse-developer
-ms.author: nhelgren # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 contributors:
@@ -27,14 +27,14 @@ Custom state transitions are an optional level of filtering to define which stat
 
 ## What is the state model?
 
-Tables that support the concept of state have a pair of columns that capture this data, as shown in this table.  
+Tables that support the concept of state have a pair of columns that capture state model data, as shown in the following table.  
   
 |Logical Name|Display Name|Description|  
 |------------------|------------------|-----------------|  
-|`statecode`|**Status**|Represents the state of the record. For custom tables this is **Active** or **Inactive**. You can't add more state choices but you can change the choice labels.|  
-|`statuscode`|**Status Reason**|Represents a status that is linked to a specific state. Each state must have at least one possible status. You can add additional status choices and change the labels of existing choices.|  
+|`statecode`|**Status**|Represents the state of the record. For custom tables this value is **Active** or **Inactive**. You can't add more state choices but you can change the choice labels.|  
+|`statuscode`|**Status Reason**|Represents a status that is linked to a specific state. Each state must have at least one possible status. You can add more status choices and change the labels of existing choices.|  
   
-The table definitions for the columns defines what status values are valid for a given state. For example, for the `Incident` (**Case**) table, the default state and status options are shown in the following table.  
+The table definitions for the columns define what status values are valid for a given state. For example, for the `Incident` (**Case**) table, the default state and status options are shown in the following table.  
   
 |State|Status|  
 |-----------|------------|  
@@ -57,7 +57,7 @@ To view table definitions for your organization, install the Metadata Browser so
 
 You can modify the `statuscode` column to define which other status options represent valid transitions from the current status. For instructions, see the [Define status reason transitions for the Case or custom tables](../../maker/data-platform/define-status-reason-transitions.md)
   
-When custom state transitions are applied to a table, the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.EnforceStateTransitions?text=EntityMetadata.EnforceStateTransitions> property will be `true`. Also, each <xref:Microsoft.Xrm.Sdk.Metadata.StatusOptionMetadata> within the <xref:Microsoft.Xrm.Sdk.Metadata.StatusAttributeMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.OptionSetMetadata.Options> collection will have a <xref:Microsoft.Xrm.Sdk.Metadata.StatusOptionMetadata.TransitionData> property. This property will contain a string value that represents an XML document. This document contains the definition of the allowed transitions. For example, the default `Incident` (**Case**) `StatusCode` column option may have the following `TransitionData` value.
+When custom state transitions are applied to a table, the [EntityMetadata.EnforceStateTransitions](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.EnforceStateTransitions) property is `true`. Also, each <xref:Microsoft.Xrm.Sdk.Metadata.StatusOptionMetadata> within the <xref:Microsoft.Xrm.Sdk.Metadata.StatusAttributeMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.OptionSetMetadata.Options> collection has a <xref:Microsoft.Xrm.Sdk.Metadata.StatusOptionMetadata.TransitionData> property. This property contains a string value that represents an XML document. This document contains the definition of the allowed transitions. For example, the default `Incident` (**Case**) `StatusCode` column option might have the following `TransitionData` value.
   
 ```xml  
 <allowedtransitions xmlns="https://schemas.microsoft.com/crm/2009/WebServices">  

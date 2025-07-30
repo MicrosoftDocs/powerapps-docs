@@ -6,9 +6,8 @@ author: Mattp123
 ms.subservice: mda-maker
 ms.author: matp
 ms.custom: ""
-ms.date: 05/04/2020
+ms.date: 11/14/2024
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -23,14 +22,14 @@ search.audienceType:
 
 # Navigate to advanced model-driven app making and customization areas
 
-This topic describes how to access advanced customization and administration areas that are available within a Power Apps environment.
+This article describes how to access advanced customization and administration areas that are available within a Power Apps environment.
 
 ## Solutions
 
 The [solutions](../model-driven-apps/model-driven-app-glossary.md#solution) area is where you can view, edit, create, import, export, and delete managed and unmanaged solutions.
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-2. On the top right select the [Environment](../model-driven-apps/model-driven-app-glossary.md#environment) where your solution is located.
+2. On the top right, select the [Environment](../model-driven-apps/model-driven-app-glossary.md#environment) where your solution is located.
 3. On the left navigation pane, select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 4. Select the solution you want.
 
@@ -38,18 +37,14 @@ The [solutions](../model-driven-apps/model-driven-app-glossary.md#solution) area
 
 ## Solution explorer
 
-Use solution explorer to perform app making and customization tasks that can’t be completed from the Power Apps website (make.powerapps.com).
+Use classic solution explorer to perform app making and customization tasks that can’t be completed from the Power Apps website (make.powerapps.com).
 
+1. From Power Apps (make.powerapps.com), go to **Solutions** on the left navigation pane, and then open the solution your want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. On the command bar select **Switch to classic**.
+
+The solution explorer is displayed in a new browser window.
 > [!div class="mx-imgBorder"]
 > ![Solution explorer.](media/model-driven-app-overview/solutionexplorer-entitiescollapsed.png "Classic solution explorer")
-
-1. From a Power Apps model-driven app, select **Settings** ![Settings.](../model-driven-apps/media/powerapps-gear.png) on the app toolbar, and then select **Advanced Settings**.
-
-2. Select **Settings** > **Customizations** > **Customize the System**, and then select the settings area that you want.
-
-   :::image type="content" source="../../maker/model-driven-apps/media/settings-areas.png" alt-text="Accessing advanced settings":::
-
-3. Use the settings area to configure email and document management, activate or deactivate processes, and more.
 
 ## Next steps
 

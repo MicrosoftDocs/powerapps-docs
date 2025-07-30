@@ -80,6 +80,10 @@ In the desktop app for Microsoft Teams:
 * Not all sensors, such as **Acceleration**, **Compass**, and **Location**, are supported.
 * Only these audio formats are supported: AAC, H264, OGG Vorbis, and WAV.
 
+In the mobile app for Microsoft Teams:
+* End users can't download attachments from canvas apps. As a workaround, use Microsoft Teams desktop to access the canvas app and download the attachment.
+
+
 ## Clean up resources
 
 To remove the app from the channel, choose the **Product Showcase** tab > **Remove**.

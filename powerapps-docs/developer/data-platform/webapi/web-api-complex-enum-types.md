@@ -1,9 +1,9 @@
 ---
 title: "Web API Complex and Enumeration types (Microsoft Dataverse)| Microsoft Docs"
 description: "Describes OData Complex and Enumeration types elements defined for the Dataverse Web API."
-ms.date: 04/06/2022
-author: divkamath
-ms.author: dikamath
+ms.date: 08/30/2024
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 ms.service: powerapps
 applies_to: 
@@ -15,13 +15,13 @@ contributors:
 ---
 # Web API Complex and Enumeration types
 
-Within the [CSDL $metadata document](web-api-service-documents.md#csdl-metadata-document), you will find `ComplexType` and `EnumType` elements.
+Within the [CSDL $metadata document](web-api-service-documents.md#csdl-metadata-document), there are `ComplexType` and `EnumType` elements.
 
 ## Complex types
 
 Complex types are keyless named structured types consisting of a set of properties. Complex types are commonly used as property values in table definitions, or as parameters or return values for operations.
 
-For example the <xref:Microsoft.Dynamics.CRM.WhoAmI?text=WhoAmI Function>  returns this <xref:Microsoft.Dynamics.CRM.WhoAmIResponse?text=WhoAmIResponse ComplexType>:
+For example, the [WhoAmI function](xref:Microsoft.Dynamics.CRM.WhoAmI)  returns this [WhoAmIResponse complex type](xref:Microsoft.Dynamics.CRM.WhoAmIResponse):
 
 ```xml
 <ComplexType Name="WhoAmIResponse">  
@@ -35,7 +35,7 @@ For example the <xref:Microsoft.Dynamics.CRM.WhoAmI?text=WhoAmI Function>  retur
 
 Enumeration types are named primitive types whose values are named constants with underlying integer values.
 
-For example, the following is the definition of the <xref:Microsoft.Dynamics.CRM.AccessRights?text=AccessRights EnumType>
+For example, the following XML node is the definition of the [AccessRights enum type](xref:Microsoft.Dynamics.CRM.AccessRights)
 
 ```xml
 <EnumType Name="AccessRights">  
@@ -51,14 +51,14 @@ For example, the following is the definition of the <xref:Microsoft.Dynamics.CRM
 </EnumType>
 ```
 
-The `AccessRights` enum type is used for the `AccessMask` property of the <xref:Microsoft.Dynamics.CRM.PrincipalAccess?text=PrincipalAccess ComplexType>, which is used to set the `PrincipalAccess` parameter for the <xref:Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action>. This is the action used to change the access when sharing a record.
+The `AccessRights` enum type is used for the `AccessMask` property of the [PrincipalAccess complex type](xref:Microsoft.Dynamics.CRM.PrincipalAccess), which is used to set the `PrincipalAccess` parameter for the [ModifyAccess action](xref:Microsoft.Dynamics.CRM.ModifyAccess). Use this action to change the access when sharing a record.
 
 The example below grants `ReadAccess`, `WriteAccess`, `DeleteAccess`, `AppendAccess`, and `AssignAccess` access rights to the `account` record specified by the `Target` parameter to the `systemuser` designated by the `Principal` property of the `PrincipalAccess` complex type.
 
 **Request:**
 
 ```http
-POST [Organization URI]/api/data/v9.0/ModifyAccess
+POST [Organization URI]/api/data/v9.2/ModifyAccess
 OData-Version: 4.0
 OData-MaxVersion: 4.0
 Content-Type: application/json; charset=UTF-8

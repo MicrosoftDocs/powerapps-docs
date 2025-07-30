@@ -8,9 +8,9 @@ metadata:
   title: Official Microsoft Power Apps documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
   description: Discover how to make the most of Power Apps with online training courses, docs, and videos covering product capabilities and how-to articles. Learn how to quickly build low-code apps that modernize processes and solve tough business challenges in your organization using Power Apps. 
   ms.topic: hub-page # Required
-  author: KumarVivek #Required; your GitHub user alias, with correct capitalization.
-  ms.author: kvivek #Required; microsoft alias of author; optional team alias.
-  ms.date: 06/30/2023 #Required; mm/dd/yyyy format.
+  author: tapanm-msft #Required; your GitHub user alias, with correct capitalization.
+  ms.author: tapanm #Required; microsoft alias of author; optional team alias.
+  ms.date: 05/29/2025 #Required; mm/dd/yyyy format.
   ms.custom: bap-template
   hide_bc: true
 
@@ -35,7 +35,7 @@ highlightedContent:
 
     # Card
     - title: Troubleshoot
-      itemType: concept
+      itemType: how-to-guide
       url: /troubleshoot/power-platform/power-apps/welcome-power-apps
 
 additionalContent:
@@ -52,17 +52,17 @@ additionalContent:
           links:
             - text: Choose an app type
               url: maker/index.md
+            - text: Use the Plan designer 
+              url: maker/plan-designer/plan-designer.md
             - text: Create a canvas app
               url: maker/canvas-apps/index.yml
             - text: Create a model-driven app
               url: maker/model-driven-apps/index.yml
-            - text: Create a card
-              url: cards/overview.md
         - title: AI copilot capabilities
           links:
             - text: Get started with AI copilot (preview)
               url: maker/canvas-apps/ai-overview.md
-            - text: Build apps through conversation (preview)
+            - text: Build apps through conversation
               url: maker/canvas-apps/ai-conversations-create-app.md
             - text: Add a Copilot control to a canvas app (preview)
               url: maker/canvas-apps/add-ai-copilot.md
@@ -86,8 +86,6 @@ additionalContent:
               url: /power-platform/alm/pipelines
         - title: Integrate with other products
           links:
-            - text: Add a Chatbot control to a canvas app
-              url: maker/canvas-apps/add-ai-chatbot.md
             - text: Visualize data with Power BI
               url: user/visualize-in-power-bi.md
             - text: Get real-time insights with Azure Synapse Link
@@ -187,9 +185,6 @@ additionalContent:
         - title: Power Pages
           summary: Design, host, and administer secure, modern, and low-code business websites.
           url: /power-pages
-        - title: Power Virtual Agents
-          summary: Create powerful bots using a guided, no-code graphical interface without the need for data scientists or developers.
-          url: /power-virtual-agents
         - title: Dynamics 365
           summary: Empower your organization with the next generation of CRM and ERP applications.
           url: /dynamics365/

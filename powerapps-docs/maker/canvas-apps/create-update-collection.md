@@ -1,12 +1,12 @@
 ---
-title: Create and update a collection in a canvas app (contains video)
+title: Create and update a collection in a canvas app
 description: Create a collection, add items to the collection, and remove one or all items from a collection in a canvas app.
 author: mduelae
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 01/28/2019
+ms.date: 02/6/2025
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType:
@@ -15,6 +15,7 @@ contributors:
   - gregli-msft
   - mduelae
 ---
+
 # Create and update a collection in a canvas app
 
 Use a collection to store data that users can manage in your app. A collection is a group of items that are similar, such as products in a product list. For more information about different types of variables such as collections: [Understand canvas-app variables](working-with-variables.md).
@@ -26,25 +27,23 @@ Use a collection to store data that users can manage in your app. A collection i
 - Learn how to [configure a control](add-configure-controls.md) in Power Apps.
 
 Watch this video to learn how to create and update a collection:
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLvLS]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=b709db8a-7d9c-4869-b2f7-76027df3bee0]
 
 ## Create a multicolumn collection
 
 1. In Power Apps Studio, add a **Text input** control.
 
-    ![Insert a Text input control.](./media/create-update-collection/add-textbox.png)
-
 1. Rename the control by selecting its ellipsis in the left navigation pane, selecting **Rename**, and then typing **ProductName**.
 
-    ![Rename a control.](./media/create-update-collection/rename-textbox.png)
+   :::image type="content" source="./media/create-update-collection/rename-textbox.png" alt-text="Screenshot that shows you how to rename a control.":::
 
 1. Add a **Drop down** control.
 
-    ![Add dropdown list.](./media/create-update-collection/add-dropdown.png)
+   :::image type="content" source="./media/create-update-collection/add-dropdown.png" alt-text="Screenshot that shows how to add a dropdown list.":::
 
 1. Rename the **Drop down** control **Colors**, and make sure that the **Items** property is selected in the property list.
 
-    ![Items property.](./media/create-update-collection/items-property.png)
+   :::image type="content" source="./media/create-update-collection/items-property.png" alt-text="Screenshot that shows the Items property next to the formula bar.":::
 
 1. In the formula bar, replace **DropDownSample** with this expression:
 
@@ -52,62 +51,41 @@ Watch this video to learn how to create and update a collection:
 
 1. Add a **Button** control, set its **Text** property to **"Add"**, and set its **OnSelect** property to this formula:
 
-    ```powerapps-dot
+    ```power-fx
     Collect(
         ProductList,
         {
-            Product: ProductName.Text,
-            Color: Colors.Selected.Value
+            Product: "ProductName.Text",
+            Color: "Colors.Selected.Value"
         }
     )
     ```
 
-1. Press F5, type some text into **ProductName**, select an option in **Colors**, and then select **Add**.
+1. To preview the app, press `F5` or select the play button. Type some text into **ProductName**, select an option in **Colors**, and then select **Add**.
 
-    ![Preview of the app.](./media/create-update-collection/preview-add.png)
+1. Repeat the previous step at least two more times, and then press `Esc`.
 
-1. Repeat the previous step at least two more times, and then press Esc.
+1. Select the **Variables** pane and then select **Collections** to see the collections that you created.
 
-1. If you're using the preview version of Power Apps Studio, select the **Variables** pane and then select **Collections** to see the collections that you created.
-
-   ![Show collections.](./media/create-update-collection/collections.png)
-
-   If you're using the classic version of Power Apps Studio, on the **File** menu, select **Collections**.
-   
-   ![Show collection.](./media/create-update-collection/show-collection.png)
-   
-
-
+   :::image type="content" source="./media/create-update-collection/collections.png" alt-text="Screenshot that shows the Collections section of the Variables list.":::
 
 ## Show a collection
 
-1. Add a vertical **Gallery** control.
-
-    ![Add a vertical gallery.](./media/create-update-collection/add-gallery.png)
+1. Select **Insert** > **Vertical gallery** control.
 
 1. Set the gallery's **Items** property to **ProductList**.
 
-1. In the **Data** pane, set the subtitle field to **Color**, and set the title field to **Product**.
+1. Select the gallery in the tree view and then select **Fields**.
 
-    ![Set the gallery's Items property, and change the fields that it shows.](./media/create-update-collection/configure-gallery.png)
+1. Set the subtitle field to **Color**, and set the title field to **Product**.
 
-1. Close the **Data** pane, select the gallery, and then set the **Layout** field to **Title and subtitle**.
+1. Select **Layout** > **Title and subtitle**.
 
-    ![Change layout of the gallery.](./media/create-update-collection/change-layout.png)
-
-    Your screen resembles this example:
-
-    ![First screen example.](./media/create-update-collection/screen-example1.png)
+   :::image type="content" source="./media/create-update-collection/change-layout.png" alt-text="Screenshot that shows the Layout tab with Title and subtitle tile selected.":::
 
 ## Remove one or all items
 
-1. Select the gallery template by clicking or tapping near the bottom of the gallery and then clicking or tapping the pencil icon near the upper-left corner.
-
-    ![Select gallery template.](./media/create-update-collection/select-template.png)
-
-1. Add a **Trash** icon to the gallery template.
-
-    ![Add trash icon.](./media/create-update-collection/trash-icon.png)
+1. Select the gallery and add a **Trash** icon to the gallery template.
 
 1. Set the icon's **OnSelect** property to this formula:
 
@@ -121,25 +99,21 @@ Watch this video to learn how to create and update a collection:
 
 ## Put a list into a collection
 
-1. [Create a connection to a list created using Microsoft Lists](connections/connection-sharepoint-online.md#create-a-connection).
+1. [Create a connection to a list created using Microsoft Lists](connections/connection-sharepoint-online.md#create-a-sharepoint-connection).
 
-1. Add a button, and set its **[OnSelect](controls/properties-core.md)** property to this function, replacing *ListName* with the name of your list:<br>
+1. Add a button, and set its **[OnSelect](controls/properties-core.md)** property to this function, replacing *ListName* with the name of your list:
 
     `Collect(MySPCollection, ListName)`
 
-    This function creates a collection that's named **MySPCollection** and that contains the same data as your list.
+    This function creates a collection named **MySPCollection** and that contains the same data as your list.
 
-1. While holding down the Alt key, select the button.
+1. While holding down the `Alt` key, select the button.
 
-1. (optional) To preview the collection that you created, select **Collections** on the **File**  menu.
-
-For information about how to show data from Microsoft Lists or SharePoint (such as dates, choices, and people) in a gallery: [Show list columns in a gallery](connections/connection-sharepoint-online.md#show-list-columns-in-a-gallery). For information about how to show data in a form (with drop-down lists, date pickers, and people pickers): [Edit form and 
-Display form controls](controls/control-form-detail.md).
+For information about how to show data in a form (with drop-down lists, date pickers, and people pickers): [Edit form and Display form controls](controls/control-form-detail.md).
 
 ## Next steps
 
-- Review the [reference topic](functions/function-clear-collect-clearcollect.md) for the **Collect** function.
+- Review the [reference article](functions/function-clear-collect-clearcollect.md) for the **Collect** function.
 - Learn how to shape data in a collection by using the [AddColumns, DropColumns, RenameColumns, and ShowColumns](functions/function-table-shaping.md) functions.
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

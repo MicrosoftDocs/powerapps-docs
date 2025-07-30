@@ -6,7 +6,7 @@ ms.date: 08/30/2023
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: upgrade-and-migration-article
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -66,6 +66,9 @@ The procedure to import the updated solution is similar to installing a new mana
 
 **Completing Solution Upgrade**
 If you chose to stage for upgrade, or if the system had an issue completing an upgrade, you'll see that you have the original solution still installed in your system as well as a new solution that has the same solution name as the base solution suffixed with \_Upgrade.  To complete the upgrade, select the base solution in the solution list and select **Apply Solution Upgrade**.  This uninstalls all previous patches and the base solution then rename the \_Upgrade solution to be the same name as the previous base solution.  Any components that were in the original solution and patches that aren't present in the \_Upgrade solution will be deleted as part of this process.
+
+> [!NOTE]
+> Recent changes in the platform have optimized the single step upgrade process to no longer use a temporary _Upgrade solution or use an uninstall operation on the original solution.
 
 ## Understanding version numbers for updates
 

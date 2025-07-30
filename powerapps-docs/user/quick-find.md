@@ -1,15 +1,15 @@
 ---
 title: "Quick Find| MicrosoftDocs"
 description: Learn how to use quick find to search for records
-author: sericks007
+author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
-ms.date: 10/27/2022
+ms.topic: how-to
+ms.date: 10/22/2024
 ms.subservice: end-user
-ms.author: sericks
+ms.author: smurkute
 ms.custom: ""
-ms.reviewer: sericks
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser
@@ -36,13 +36,13 @@ With categorized search, you can search for rows that begin with a specific word
 
 ## Single table quick find 
 
-*Single table quick find* is aslo called *grid search*. For more information, see [Grid search](grid-filters.md#grid-search).
+*Single table quick find* is also called *grid search*. For more information, see [Grid search](grid-filters.md#grid-search).
 
 ## Multiple-table quick find (categorized search)
 
 Multiple-table quick find searches up to 10 tables and returns the search results grouped by table.
 
-You can view a maximum of 80 rows per table with multiple-table quick find. You may need to refine your query, if the row that you're looking for is outside the maximum range.
+You can view a maximum of 80 rows per table with multiple-table quick find. You might need to refine your query, if the row that you're looking for is outside the maximum range.
 
 1.  To start a categorized search, on the command bar, select **Search**.  
 

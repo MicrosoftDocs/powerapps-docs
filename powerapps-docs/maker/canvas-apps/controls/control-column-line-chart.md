@@ -1,19 +1,19 @@
 ---
 title: Column chart and Line chart controls in Power Apps
 description: Learn about the details, properties and examples of the Column chart, and Line chart controls in Power Apps.
-author: chmoncay
+author: yogeshgupta698
 
 ms.topic: reference
 ms.custom: canvas
 ms.date: 10/25/2016
 ms.subservice: canvas-maker
-ms.author: chmoncay
+ms.author: yogupt
 ms.reviewer: mkaur
 search.audienceType: 
   - maker
 contributors:
   - mduelae
-  - chmoncay
+  - yogeshgupta698
 ---
 # Column chart and Line chart controls in Power Apps
 Controls that show data as graphs with x- and y-axes.
@@ -25,6 +25,9 @@ Controls that show data as graphs with x- and y-axes.
 **[Items](properties-core.md)** – The source of data that appears in a control such as a gallery, a list, or a chart.
 
 **NumberOfSeries** – How many columns of data are reflected in a column or line chart.
+
+> [!NOTE]
+> A maximum of 9 series can be displayed
 
 ## Additional chart properties
 **[BorderColor](properties-color-border.md)** – The color of a control's border.

@@ -1,8 +1,8 @@
 ---
 title: EntityMetadata (Power Apps component framework API reference)| Microsoft Docs
 description: Information about methods and properties for table definitions.
-ms.author: hemantg
-author: HemantGaur
+author: anuitz
+ms.author: anuitz
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference

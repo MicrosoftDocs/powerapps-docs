@@ -2,8 +2,8 @@
 title: "WebApiService class library (C#) (Microsoft Dataverse) | Microsoft Docs"
 description: "This sample .NET 6.0 class library project that demonstrates several important capabilities that you should include when you use the Dataverse Web API"
 ms.date: 08/29/2022
-author: divkamath
-ms.author: dikamath
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
@@ -15,7 +15,7 @@ contributors:
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
-WebAPIService is a sample .NET 6.0 class library project that demonstrates several important capabilities that you should include when you use the Dataverse Web API.
+`WebAPIService` is a sample .NET 6.0 class library project that demonstrates several important capabilities that you should include when you use the Dataverse Web API.
 
 This library demonstrates:
 
@@ -33,27 +33,27 @@ This library demonstrates:
 
 This library doesn't:
 
-- **Manage authentication**. It depends on a function passed from an application that will provide the access token to use. All Web API samples depend on a shared [App class](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/App.cs) that manages authentication using the [Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview). MSAL supports several different types of authentication flows. These samples use the [Username/password (ROPC)](/azure/active-directory/develop/msal-authentication-flows) flow for simplicity but this isn't recommended. For your apps, you should use one of the other flows. More information: [Authentication flow support in the Microsoft Authentication Library](/azure/active-directory/develop/msal-authentication-flows).
+- **Manage authentication**. It depends on a function passed from an application that provides the access token to use. All Web API samples depend on a shared [App class](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/CSharp-NETx/App.cs) that manages authentication using the [Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview). MSAL supports several different types of authentication flows. These samples use the [Username/password (ROPC)](/azure/active-directory/develop/msal-authentication-flows) flow for simplicity but this flow isn't recommended. For your apps, you should use one of the other flows. More information: [Authentication flow support in the Microsoft Authentication Library](/azure/active-directory/develop/msal-authentication-flows).
 - **Provide for any code generation capabilities**. All classes used in the samples are written by hand. All business entity data uses the well-known [Json.NET JObject Class](https://www.newtonsoft.com/json/help/html/t_newtonsoft_json_linq_jobject.htm) rather than a class representing the entity type.
 - **Provide an object model for composing OData queries**. All queries show the OData query syntax as query parameters.
 
 ## Code
 
-You can find the WebApiService class library source code and Visual Studio solution at [PowerApps-Samples/dataverse/webapi/C#-NETx/WebAPIService](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23-NETx/WebAPIService)
+You can find the `WebApiService` class library source code and Visual Studio solution at [PowerApps-Samples/dataverse/webapi/C#-NETx/WebAPIService](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/CSharp-NETx/WebAPIService)
 
 ## Class list
 
-The following are classes included in the WebAPIService.
+The following are classes included in the `WebAPIService`.
 
 ### Service Class
 
 The `Service` class provides methods to send requests to Dataverse through an [HttpClient](/dotnet/api/system.net.http.httpclient) managed using [IHttpClientFactory](/dotnet/api/system.net.http.ihttpclientfactory).
 
-The `Service` is the core component for all samples and can be used by itself to complete any operations demonstrated with sample code. Everything else that is included in the WebAPIService or any of the samples using it provides for reuse of code and allows for the capabilities of the Dataverse Web API to be demonstrated at a higher level.
+The `Service` is the core component for all samples and you can use it to complete any operations demonstrated with sample code. Everything else that is included in the `WebAPIService` or any of the samples using it provides for reuse of code and allows for the capabilities of the Dataverse Web API to be demonstrated at a higher level.
 
 The `Service` constructor accepts a [Config](#config-class) class instance, which contains two required properties: `GetAccessToken` and `Url`. All the other properties represent options that have defaults.
 
-The constructor uses dependency injection to create an `IHttpClientFactory` that can return a named `HttpClient` with the properties specified in the `ConfigureHttpClient` function. Whether or not this client will use cookies is based on whether the `Config.DisableCookies` parameter is set. In the constructor the policy defined by the static `GetRetryPolicy` method that controls how transient errors and Dataverse service protection limits will be managed.
+The constructor uses dependency injection to create an `IHttpClientFactory` that can return a named `HttpClient` with the properties specified in the `ConfigureHttpClient` function. Whether or not this client uses cookies is based on whether the `Config.DisableCookies` parameter is set. In the constructor the policy defined by the static `GetRetryPolicy` method that controls how transient errors and Dataverse service protection limits are managed.
 
 #### Service Methods
 
@@ -61,7 +61,7 @@ The `Service` class has the following methods:
 
 ##### SendAsync Method
 
-This is the single method ultimately responsible for all operations.
+This method is ultimately responsible for all operations.
 
 This method:
 
@@ -70,7 +70,7 @@ This method:
 - Exposes the same signature as the [HttpClient.SendAsync(HttpRequestMessage) Method](/dotnet/api/system.net.http.httpclient.sendasync?view=net-6.0&preserve-view=true) and can be used in the same way.
 - Calls the function set in the `Config.GetAccessToken` method to set the `Authorization` header value for the request.
 - Uses the [IHttpClientFactory.CreateClient Method](/dotnet/api/system.net.http.ihttpclientfactory.createclient?view=dotnet-plat-ext-6.0&preserve-view=true) to get the named `HttpClient` to send the request.
-- Will throw a [ServiceException](#serviceexception) if the [HttpResponseMessage.IsSuccessStatusCode Property](/dotnet/api/system.net.http.httpresponsemessage.issuccessstatuscode?view=net-6.0&preserve-view=true) is false, so you don't need to check this when using this method.
+- Throws a [ServiceException](#serviceexception) if the [HttpResponseMessage.IsSuccessStatusCode Property](/dotnet/api/system.net.http.httpresponsemessage.issuccessstatuscode?view=net-6.0&preserve-view=true) is false, so you don't need to check the `IsSuccessStatusCode` when using this method.
 
 ##### SendAsync&lt;T&gt; Method
 
@@ -94,7 +94,7 @@ static async Task WhoAmI(Service service)
 
 ##### ParseError Method
 
-This method will parse the content of an `HttpResponseMessage` for an unsuccessful `HttpRequestMessage` to return an [ServiceException](#serviceexception). It's used within the [SendAsync method](#sendasync-method) when the [HttpResponseMessage.IsSuccessStatusCode Property](/dotnet/api/system.net.http.httpresponsemessage.issuccessstatuscode?view=net-6.0&preserve-view=true) is false. You can also use it to extract error information from `HttpResponseMessage` instances returned by `BatchResponse.HttpResponseMessages` when the `BatchRequest.ContinueOnError` property is set to true. More information: [Batch](#batch)
+This method parses the content of an `HttpResponseMessage` for an unsuccessful `HttpRequestMessage` to return an [ServiceException](#serviceexception). The [SendAsync method](#sendasync-method) uses this method when the [HttpResponseMessage.IsSuccessStatusCode Property](/dotnet/api/system.net.http.httpresponsemessage.issuccessstatuscode?view=net-6.0&preserve-view=true) is false. You can also use it to extract error information from `HttpResponseMessage` instances returned by `BatchResponse.HttpResponseMessages` when the `BatchRequest.ContinueOnError` property is set to true. More information: [Batch](#batch)
 
 #### Service Properties
 
@@ -102,16 +102,16 @@ Service has a single property: `BaseAddress`.
 
 ##### BaseAddress Property
 
-This property returns the base URL set in the `Config.Url`. This is needed when instantiating the [BatchRequest](#batchrequest) class and to append to a relative URL anytime an absolute URL is required.
+This property returns the base URL set in the `Config.Url`. You need this URL when instantiating the [BatchRequest](#batchrequest) class and to append to a relative URL anytime an absolute URL is required.
 
 ### Config Class
 
-The Config class contains properties that control the behavior of the application as shown in the table below:
+The Config class contains properties that control the behavior of the application as shown in the following table:
 
 |Property|Type|Description|
 |---------|---------|---------|
 |`GetAccessToken`|`Func<Task<string>>`|A function provided by the client application to return an access token.|
-|`Url`|`string?`|The base Url of the environment. that is: `https://org.api.crm.dynamics.com`|
+|`Url`|`string?`|The base Url of the environment. For example: `https://org.api.crm.dynamics.com`|
 |`CallerObjectId`|`Guid`|The [SystemUser.ActiveDirectoryGuid](../../reference/entities/systemuser.md#BKMK_ActiveDirectoryGuid) value to apply for impersonation. Default is [Guid.Empty](/dotnet/api/system.guid.empty)<br /> More information: [Impersonate another user using the Web API](../impersonate-another-user-web-api.md)|
 |`TimeoutInSeconds`|`ushort`|How long to wait for a timeout. Default is 120 seconds.|
 |`MaxRetries`|`byte`|Maximum number of times to retry when service protection limits occur. Default is 3.|
@@ -120,11 +120,11 @@ The Config class contains properties that control the behavior of the applicatio
 
 ### EntityReference Class
 
-The EntityReference class represents a reference to a record in a Dataverse table. In OData resources are identified by a URL. EntityReference provides methods to make it easier create and access properties of Urls.
+The `EntityReference` class represents a reference to a record in a Dataverse table. OData identifies resources with a URL. `EntityReference` provides methods to make it easier create and access properties of Urls.
 
 #### EntityReference Constructors
 
-Use the following constructors to instantiate an EntityReference.
+Use the following constructors to instantiate an `EntityReference`.
 
 ##### EntityReference(string entitySetName, Guid? ID)
 
@@ -143,7 +143,7 @@ Use this constructor to instantiate an entity reference using an alternate key.
 
 #### EntityReference Properties
 
-EntityReference has the following public properties:
+`EntityReference` has the following public properties:
 
 |Property  |Type   |Description  |
 |---------|---------|---------|
@@ -154,16 +154,16 @@ EntityReference has the following public properties:
 
 #### EntityReference Methods
 
-EntityReference has the following public methods. Neither of them require any parameters.
+`EntityReference` has the following public methods. Neither of them require any parameters.
 
 |Method Name|Return Type|Description|
 |---------|---------|---------|
 |`AsODataId`|`string`|Returns a string formatted for use as a parameter reference to a record in the URL for an OData Function.|
-|`AsJObject`|`JObject`|Returns a JObject that can be used as a parameter reference to a record in an OData Action.|
+|`AsJObject`|`JObject`|Returns a `JObject` that can be used as a parameter reference to a record in an OData Action.|
 
 ### Error Classes
 
-`ODataError`, `Error`, and `ODataException` are classes used to deserialize errors returned by the service. You won't need to work with them directly.
+`ODataError`, `Error`, and `ODataException` are classes used to deserialize errors returned by the service. You don't need to work with them directly.
 
 #### ServiceException
 
@@ -171,11 +171,11 @@ ServiceException is an [Exception class](/dotnet/api/system.exception?view=net-6
 
 ## Extensions
 
-WebAPIService has one extension method from a .NET type.
+`WebApiService` has one extension method from a .NET type.
 
 ### HttpResponseMessage As&lt;T&gt;
 
-This extension instantiates an instance of `T` where `T` is derived from [HttpResponseMessage](/dotnet/api/system.net.http.httpresponsemessage?view=net-6.0&preserve-view=true) and copies the properties of the `HttpResponseMessage` to the derived class. It's used by the `Service` [SendAsync&lt;T&gt; Method](#sendasynct-method) but can also be used separately. For example, when using the [BatchRequest](#batchrequest) class, the items in the `BatchResponse.HttpResponseMessages` will be `HttpResponseMessage` types. You can use this extension to convert them to the appropriate derived class to facilitate accessing any properties.
+This extension instantiates an instance of `T` where `T` is derived from [HttpResponseMessage](/dotnet/api/system.net.http.httpresponsemessage?view=net-6.0&preserve-view=true) and copies the properties of the `HttpResponseMessage` to the derived class. The `Service` [SendAsync&lt;T&gt; Method](#sendasynct-method) uses this method, but can also be used separately. For example, when using the [BatchRequest](#batchrequest) class, the items in the `BatchResponse.HttpResponseMessages` are `HttpResponseMessage` types. You can use this extension to convert them to the appropriate derived class to facilitate accessing any properties.
 
 ## Messages
 
@@ -185,16 +185,16 @@ These classes provide reusable definitions of requests and responses that corres
 
 These classes also provide examples of specific operations that can be applied using `HttpRequestMessage` and `HttpResponseMessage` without deriving from those types.
 
-Within an application, you may also create custom messages, for example representing a custom API in your environment, using the same pattern. These are modular classes and aren't required to be included in the `WebAPIService.Messages` folder.
+Within an application, you might also create custom messages, for example representing a custom API in your environment, using the same pattern. These are modular classes and aren't required to be included in the `WebAPIService.Messages` folder.
 
 For example, the [Web API Functions and Actions Sample (C#)](webapiservice-functions-and-actions.md) uses a custom API that isn't included in Dataverse until a solution containing the custom API is installed. The definition for the corresponding classes to use this message are located in the sample application that uses it:
 
-- [FunctionsAndActions/Messages/IsSystemAdminRequest.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/FunctionsAndActions/Messages/IsSystemAdminRequest.cs)
-- [FunctionsAndActions/Messages/IsSystemAdminResponse.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/FunctionsAndActions/Messages/IsSystemAdminResponse.cs)
+- [FunctionsAndActions/Messages/IsSystemAdminRequest.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/CSharp-NETx/FunctionsAndActions/Messages/IsSystemAdminRequest.cs)
+- [FunctionsAndActions/Messages/IsSystemAdminResponse.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/CSharp-NETx/FunctionsAndActions/Messages/IsSystemAdminResponse.cs)
 
 ### *Request classes
 
-These classes will generally have a constructor with parameters that will instantiate a [HttpRequestMessage](/dotnet/api/system.net.http.httprequestmessage?view=net-6.0&preserve-view=true) with the data needed to perform the operation. They may have separate properties as appropriate.
+These classes generally have a constructor with parameters that instantiates a [HttpRequestMessage](/dotnet/api/system.net.http.httprequestmessage?view=net-6.0&preserve-view=true) with the data needed to perform the operation. They can have separate properties as appropriate.
 
 The most simple example of this pattern is the `WhoAmIRequest` class.
 
@@ -220,15 +220,15 @@ namespace PowerApps.Samples.Messages
 }
 ```
 
-The names of these classes may align with the classes in the Dataverse SDK <xref:Microsoft.Xrm.Sdk.Messages?text=Microsoft.Xrm.Sdk.Messages Namespace> but aren't limited to those operations. Web API provides for performing some operations that can't be done with the SDK, for example `CreateRetrieveRequest` is message that will create a record and retrieve it. The Dataverse SDK doesn't provide this capability in a single request.
+The names of these classes generally align with the classes in the Dataverse SDK <xref:Microsoft.Xrm.Sdk.Messages?text=Microsoft.Xrm.Sdk.Messages Namespace> but aren't limited to those operations. Web API provides for performing some operations that can't be done with the SDK, for example `CreateRetrieveRequest` is message that creates a record and retrieves it. The Dataverse SDK doesn't provide this capability in a single request.
 
 ### *Response classes
 
-When \*Request classes returns a value there will be a corresponding \*Response class to access the returned properties. If the \*Request returns `204 No Content`, the operation will return an [HttpResponseMessage](/dotnet/api/system.net.http.httpresponsemessage?view=net-6.0&preserve-view=true) but there will be no derived class. Use the [SendAsync method](#sendasync-method) to send these requests.
+When \*Request classes return a value, there's a corresponding \*Response class to access the returned properties. If the \*Request returns `204 No Content`, the operation returns an [HttpResponseMessage](/dotnet/api/system.net.http.httpresponsemessage?view=net-6.0&preserve-view=true) but there's no derived class. Use the [SendAsync method](#sendasync-method) to send these requests.
 
 \*Response classes provide typed properties that access the `HttpResponseMessage` `Headers` or `Content` properties and parse them to provide access to the Complex Type returned by the operation.
 
-An example of this is the WhoAmIResponse class. Within this class you can find all the code needed to extract the properties of the <xref:Microsoft.Dynamics.CRM.WhoAmIResponse?text=WhoAmIResponse ComplexType>.
+The `WhoAmIResponse` class is an example. Within this class you can find all the code needed to extract the properties of the <xref:Microsoft.Dynamics.CRM.WhoAmIResponse?text=WhoAmIResponse ComplexType>.
 
 ```csharp
 using Newtonsoft.Json.Linq;
@@ -278,7 +278,7 @@ namespace PowerApps.Samples.Messages
 
 ```
 
-These classes can only be properly instantiated when returned by the [SendAsync&lt;T&gt; Method](#sendasynct-method) or by using the [HttpResponseMessage As&lt;T&gt;](#httpresponsemessage-ast) extension on an `HttpResponseMessage` that was returned by a `BatchResponse.HttpResponseMessages` property.
+These classes can only be properly instantiated when returned by the [SendAsync&lt;T&gt; Method](#sendasynct-method) or by using the [HttpResponseMessage As&lt;T&gt;](#httpresponsemessage-ast) extension on an `HttpResponseMessage` in the `BatchResponse.HttpResponseMessages` property.
 
 ## Batch
 
@@ -296,7 +296,7 @@ The `BatchRequest` constructor initializes an `HttpRequestMessage` that can be u
 |`ChangeSets` |`List<ChangeSet>`|One or more change sets to be included in the batch.|
 |`Requests`|`List<HttpRequestMessage>` |One or more `HttpMessageRequest` to be sent outside of any `ChangeSet`. |
 
-When `ChangeSets` or `Requests` are set they're encapsulated into [HttpMessageContent](/previous-versions/aspnet/hh834416(v=vs.118)) and added to the `Content` of the request. The private `ToMessageContent` method applies the required changes to headers and returns the `HttpMessageContent` for both `ChangeSets` and `Requests` properties.
+When `ChangeSets` or `Requests` are set, they're encapsulated into [HttpMessageContent](/previous-versions/aspnet/hh834416(v=vs.118)) and added to the `Content` of the request. The private `ToMessageContent` method applies the required changes to headers and returns the `HttpMessageContent` for both `ChangeSets` and `Requests` properties.
 
 ### ChangeSet
 
@@ -322,7 +322,7 @@ To access type properties of the `HttpResponseMessage` instances returned, you c
 
 ## Methods
 
-For operations that are frequently performed, the `Methods` folder contains extensions of the `Service` class. These allow for using the corresponding *Request classes in a single line.
+For operations that are frequently performed, the `Methods` folder contains extensions of the `Service` class. These methods allow for using the corresponding *Request classes in a single line.
 
 The following methods are included:
 
@@ -339,9 +339,9 @@ The following methods are included:
 |`Update` |`Task`|Updates a record. |
 |`Upsert` |`Task<UpsertResponse>`|Performs an Upsert on a record.|
 
-Within an a sample application using WebAPIService when the operation doesn't represent an API found in Dataverse by default, the method will be defined in the application rather than in the WebAPIService.
+Within a sample application using `WebAPIService`, when the operation doesn't represent an API found in Dataverse by default, the method is defined in the application rather than in the `WebAPIService`.
 
-For example, the [Web API Functions and Actions Sample (C#)](webapiservice-functions-and-actions.md) uses a custom API that isn't included in Dataverse until a solution containing the custom API is installed. The definition for this method is located in the sample application that uses it: [FunctionsAndActions/Methods/IsSystemAdmin.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/FunctionsAndActions/Methods/IsSystemAdmin.cs)
+For example, the [Web API Functions and Actions Sample (C#)](webapiservice-functions-and-actions.md) uses a custom API that isn't included in Dataverse until a solution containing the custom API is installed. The definition for this method is located in the sample application that uses it: [FunctionsAndActions/Methods/IsSystemAdmin.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/CSharp-NETx/FunctionsAndActions/Methods/IsSystemAdmin.cs)
 
 ## Types
 
@@ -349,7 +349,7 @@ The `Types` folder contains any classes or enums that correspond to <xref:Micros
 
 ## Metadata
 
-The `Metadata` folder contains `Messages` and `Types` specific to operations that work with Dataverse Schema definitions. These are frequently classes with many properties that return complex types. These types are used in the [Web API Metadata Operations Sample (C#)](webapiservice-metadata-operations.md).
+The `Metadata` folder contains `Messages` and `Types` specific to operations that work with Dataverse Schema definitions. These classes frequently have many properties that return complex types. These types are used in the [Web API table schema operations sample (C#)](webapiservice-metadata-operations.md).
 
 ### See also
 
@@ -357,7 +357,7 @@ The `Metadata` folder contains `Messages` and `Types` specific to operations tha
 [Web API Query Data sample (C#)](webapiservice-query-data.md)<br />
 [Web API Conditional Operations sample (C#)](webapiservice-conditional-operations.md)<br />
 [Web API Functions and Actions Sample (C#)](webapiservice-functions-and-actions.md)<br />
-[Web API Metadata Operations Sample (C#)](webapiservice-metadata-operations.md)<br />
+[Web API table schema operations sample (C#)](webapiservice-metadata-operations.md)<br />
 [Web API WebApiService Parallel Operations Sample (C#)](webapiservice-parallel-operations.md)<br />
 [Web API Parallel Operations with TPL Dataflow components Sample (C#)](webapiservice-tpl-dataflow-parallel-operations.md)<br />
 

@@ -2,13 +2,12 @@
 title: Add a list box, a drop-down list, or radio buttons to a canvas app | Microsoft Docs
 description: In Power Apps, create or configure multi-select options in a canvas app
 author: chmoncay
-
-ms.topic: conceptual
+ms.author: chmoncay
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 01/24/2022
 ms.subservice: canvas-maker
-ms.author: chmoncay
 search.audienceType: 
   - maker
 contributors:
@@ -105,7 +104,7 @@ In these steps, you used an expression to create a list of items. You can apply 
    
 2. Set **[OnSelect](controls/properties-core.md)** property on **btnReset** to this formula:
    
-    ```powerapps-dot
+    ```power-fx
     ClearCollect(MyItems, {value: "circle"},{value: "triangle"},{value: "rectangle"})
     ```
    
@@ -132,7 +131,7 @@ In these steps, you used an expression to create a list of items. You can apply 
 
 11. Set **[OnSelect](controls/properties-core.md)** property of **btnAdd** to the following formula:
 
-    ```powerapps-dot
+    ```power-fx
     Collect(MyItems,{value: txtAdd.Text}); Reset(txtAdd)
     ```
 
@@ -163,7 +162,7 @@ In these steps, you used an expression to create a list of items. You can apply 
 
 3. Set **[OnSelect](controls/properties-core.md)** property of **btnDelete** to the following formula:
 
-    ```powerapps-dot
+    ```power-fx
     Remove(MyItems, lbItems.Selected)
     ```
 

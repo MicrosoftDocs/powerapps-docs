@@ -3,7 +3,7 @@ title: Build a multi-language app
 description: Use Power Apps to build apps that that can support multiple languages.
 author: mduelae
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 01/27/2021
@@ -88,7 +88,7 @@ When working with a multi-language app, the first step is to create a reusable c
 
 1. Copy and paste the following formula in the formula bar for the **OnReset** property.
 
-   ```powerapps-dot
+   ```power-fx
    Set(
     varTranslations,
     Table(
@@ -120,7 +120,7 @@ When working with a multi-language app, the first step is to create a reusable c
 
 1. Copy and paste the following formula in the formula bar for the **Labels** property.
 
-    ```powerapps-dot
+    ```power-fx
        LookUp(
         varTranslations,
         Language = Lower(
@@ -179,7 +179,7 @@ Previously, you created the translation component library for reuse. In this sec
 
 1. Update the formula for the **OnCheck** property of the toggle control to the following.
 
-    ```powerapps-dot
+    ```power-fx
         Set(varLanguage,"pt-br")
     ```
 
@@ -187,7 +187,7 @@ Previously, you created the translation component library for reuse. In this sec
 
 1. Update the formula for the **OnUncheck** property of the toggle control to the following.
 
-    ```powerapps-dot
+    ```power-fx
         Set(varLanguage,"en-us")
     ```
 

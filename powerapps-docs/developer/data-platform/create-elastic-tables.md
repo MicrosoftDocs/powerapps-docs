@@ -1,21 +1,20 @@
 ---
-title: Create elastic tables using code (preview)
+title: Create elastic tables using code
 description: Learn how to create Dataverse elastic tables with code.
-ms.topic: article
-ms.date: 07/18/2023
-author: pnghub
-ms.author: gned
+ms.topic: how-to
+ms.date: 02/22/2024
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
 contributors:
  - sumantb-msft
  - JimDaly
+ - bhavana95
 ---
 
-# Create elastic tables using code (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Create elastic tables using code
 
 By using [Power Apps](https://make.powerapps.com/), you can [create and edit elastic tables without writing code](../../maker/data-platform/create-edit-entities-portal.md).
 
@@ -172,10 +171,10 @@ OData-Version: 4.0
 ```http
 HTTP/1.1 204 No Content
 OData-Version: 4.0
-OData-EntityId: [Organization URI]/api/data/v9.2/EntityDefinitions(417129e1-207c-e511-80d2-00155d2a68d2) 
+OData-EntityId: [Organization URI]/api/data/v9.2/EntityDefinitions(00aa00aa-bb11-cc22-dd33-44ee44ee44ee) 
 ```
 
-In this case, `417129e1-207c-e511-80d2-00155d2a68d2` is the ID of the `contoso_SensorData` table. You must make a separate request to get the ID of the `contoso_SensorType` primary name string column.
+In this case, `00aa00aa-bb11-cc22-dd33-44ee44ee44ee` is the ID of the `contoso_SensorData` table. You must make a separate request to get the ID of the `contoso_SensorType` primary name string column.
 
 [Learn more about creating and updating table definitions using the Web API](webapi/create-update-entity-definitions-using-web-api.md).
 
@@ -191,7 +190,6 @@ You can also create columns by using the SDK or Web API. However, there are limi
 - MultiSelectPicklist (`MultiSelectPicklistAttributeMetadata`)
 - State (`StateAttributeMetadata`)
 - Status (`StatusAttributeMetadata`)
-- File (`FileAttributeMetadata`)
 - Image (`ImageAttributeMetadata`)
 - Calculated, Rollup, or Formula Columns
 
@@ -289,7 +287,7 @@ OData-Version: 4.0
 ```http
 HTTP/1.1 204 No Content
 OData-Version: 4.0
-OData-EntityId: [Organization URI]/api/data/v9.2/EntityDefinitions(402fa40f-287c-e511-80d2-00155d2a68d2)/Attributes(f01bef16-287c-e511-80d2-00155d2a68d2)
+OData-EntityId: [Organization URI]/api/data/v9.2/EntityDefinitions(11bb11bb-cc22-dd33-ee44-55ff55ff55ff)/Attributes(22cc22cc-dd33-ee44-ff55-66aa66aa66aa)
 ```
 
 [Learn more about creating columns using the Web API](webapi/create-update-column-definitions-using-web-api.md#create-columns).
@@ -322,9 +320,21 @@ One-to-many relationships are supported for elastic tables with the following li
 - Formatted values for lookup columns aren't returned when the following conditions are true:
 
     - The table that is retrieved is a standard table, and the lookup refers to an elastic table.
-    - You're using a custom elastic table `partitionid` value. In other words, the `partitionid` value is set to something other than the default value (the primary key value of the elastic table row). [Learn how to choose a partitionid value](elastic-tables.md#choosing-a-partitionid-value).
+    - You're using a custom elastic table `partitionid` value. In other words, the `partitionid` value is set to something other than the default value (null). [Learn how to choose a partitionid value](elastic-tables.md#choosing-a-partitionid-value).
 
 Elastic tables support one-to-many relationships, and related rows can be retrieved when a record is retrieved. Related records can't be included in a query. [Learn how to return related rows in a query](use-elastic-tables.md#return-related-rows-in-a-query).
+
+### Partitionid value column on referencing table
+
+When you create a many-to-one relationship on a table that refers to an elastic table, a lookup column is created on the referencing table as you would expect.
+
+At the same time, a string column is created that follows this naming convention `<lookup name>pid`. This column stores the `partitionid` value for the related elastic table record.
+
+The `<lookup name>pid` column value is set automatically when you use the elastic table alternate key to set the lookup column. [Learn to associate elastic table records](use-elastic-tables.md#associate-elastic-table-records)
+
+If you are *not* using a partitioning strategy for your elastic table, the value for this `<lookup name>pid` column is null, and you shouldn't change it after the record is created.
+
+If you *are* using a partitioning strategy for your elastic table, and you want to retrieve the related elastic table record, you can't rely on the value of the lookup column alone. You must also include the `partitionid` value from the `<lookup name>pid` column to uniquely identify the related table. [Learn more about partitioning and horizontal scaling](elastic-tables.md#partitioning-and-horizontal-scaling)
 
 ## Next steps
 
@@ -333,7 +343,7 @@ Elastic tables support one-to-many relationships, and related rows can be retrie
 
 ### See also
 
-[Elastic tables for developers (preview)](elastic-tables.md)   
-[Query JSON columns in elastic tables (preview)](query-json-columns-elastic-tables.md)   
-[Use bulk operation messages (preview)](bulk-operations.md)   
-[Elastic table sample code (preview)](elastic-table-samples.md)
+[Elastic tables for developers](elastic-tables.md)   
+[Query JSON columns in elastic tables](query-json-columns-elastic-tables.md)   
+[Use bulk operation messages](bulk-operations.md)   
+[Elastic table sample code](elastic-table-samples.md)

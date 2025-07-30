@@ -1,9 +1,9 @@
 ---
-title: How to add tag to mark prioritized ideas in the Employee ideas app (contains video)
+title: How to add tag to mark prioritized ideas in the Employee ideas app
 description: Learn about how to customize the employee ideas app to mark prioritized ideas.
 author: sbahl10
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: 
 ms.date: 07/02/2021
 ms.subservice: teams
@@ -30,7 +30,7 @@ In this article, we'll learn how to add a **Priority** tag to an idea in the Man
 > Before starting with the steps in this article, read [Customize the Employee Ideas app](customize-employee-ideas.md).
 
 Watch this video to learn how to add a tag to mark prioritized ideas:
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLn9D]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=50df516b-65a5-436b-83be-da737271ed28]
 
 ## Prerequisites
 
@@ -116,7 +116,7 @@ All the changes to the Manage Ideas app are completed. The app can now be publis
 
 1. To update the label text to indicate that the idea is prioritized, update the **Text** property to the following formula:
 
-    ```powerapps-dot
+    ```power-fx
     Concatenate(
     
     gblRecordCampaignIdea.'Owning User'.'Full Name',

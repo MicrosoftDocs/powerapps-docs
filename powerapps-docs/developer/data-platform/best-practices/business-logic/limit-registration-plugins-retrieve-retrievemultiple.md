@@ -1,26 +1,17 @@
 ---
 title: "Limit the registration of plug-ins for Retrieve and RetrieveMultiple messages | MicrosoftDocs"
 description: "Adding synchronous plug-in logic to the Retrieve and RetrieveMultiple message events can cause slowness."
-services: ''
 suite: powerapps
-documentationcenter: na
 author: jowells
-editor: ''
-tags: ''
-
-ms.devlang: na
+ms.author: jowells
+ms.reviewer: jdaly
 ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
 ms.date: 1/15/2019
 ms.subservice: dataverse-developer
-ms.author: jowells
 search.audienceType: 
   - developer
 ---
 # Limit the registration of plug-ins for Retrieve and RetrieveMultiple messages
-
-
 
 **Category**: Performance
 
@@ -30,7 +21,7 @@ search.audienceType:
 
 ## Symptoms
 
-Adding synchronous plug-in logic to the Retrieve and RetrieveMultiple message events can result in:
+Adding synchronous plug-in logic to the `Retrieve` and `RetrieveMultiple` message events can result in:
 
 - Unresponsive model-driven apps
 - Slow client interactions
@@ -40,29 +31,29 @@ Adding synchronous plug-in logic to the Retrieve and RetrieveMultiple message ev
 
 ## Guidance
 
-Evaluate the design of solutions that include plug-ins registered for the Retrieve and RetrieveMultiple messages.  In general, it is not recommended to register plug-ins for these messages due to the risks associated with slowing down the requests to return an entity record or records from various entry points.  However, it may be appropriate for the design of your application. An example of a common application would be the injection of additional filter criteria to a specific existing query. This allows a solution to compensate for what cannot be done in the user interface for views.  The view designer can only support a certain depth of complexity and then other options must be employed to augment the results or the query.
+Evaluate the design of solutions that include plug-ins registered for the `Retrieve` and `RetrieveMultiple` messages. In general, it isn't recommended to register plug-ins for these messages due to the risks associated with slowing down the requests to return an entity record or records from various entry points. However, it might be appropriate for the design of your application. An example of a common application would be the injection of more filter criteria to a specific existing query. This approach allows a solution to compensate for what can't be done in the user interface for views. The view designer can only support a certain depth of complexity and then other options must be employed to augment the results or the query.
 
-If it is an appropriate solution, then follow these tips to minimize the impact to the environment:
+If it's an appropriate solution, then follow these tips to minimize the impact to the environment:
 
-- Include conditions in the plug-in code to quickly check if the targeted logic needs to be performed. If it does not, then return quickly, refraining from executing unnecessary extra steps that will delay returning the data to the caller.
+- Include conditions in the plug-in code to quickly check if the targeted logic needs to be performed. If it doesn't, then return quickly, refraining from executing unnecessary extra steps that delay returning the data to the caller.
 
-- Avoid including long running tasks, especially those that can be non-deterministic, such as the invocation of external service calls or complex queries to Dynamics 365.
+- Avoid including long running tasks, especially nondeterministic tasks, such as the invocation of external service calls or complex queries to Dataverse.
 
-- Limit or avoid querying for additional data from Microsoft Dataverse
+- Limit or avoid querying for more data from Microsoft Dataverse.
 
 ### Virtual Entities
 
-Most commonly Retrieve and RetrieveMultiple is called within plug-ins to retrieve data from external sources. The data from the external sources are rendered within Power Apps or used to work/manipulate existing data. Dynamics 365 (online), version 9.0 introduces a feature called [Virtual Entities](/dynamics365/customer-engagement/developer/virtual-entities/get-started-ve) which allows integration of data residing in external systems by seamlessly representing that data as entities in Power Apps, without replication of data and often without custom coding. Review the [Virtual Entities](/dynamics365/customer-engagement/developer/virtual-entities/get-started-ve) documentation for further information about the capabilities, limitations, and configuration.
+Most commonly `Retrieve` and `RetrieveMultiple` are called within plug-ins to retrieve data from external sources. The data from the external sources are rendered within Power Apps or used to work/manipulate existing data. Dataverse [virtual tables](../../../../maker/data-platform/create-edit-virtual-entities.md) allow integration of data residing in external systems by seamlessly representing that data as tables in Power Apps, without replication of data and often without custom coding.
 
 ### Retrieve Caution
 
-Dataverse will trigger at least two Retrieve messages for each entity form load.  One retrieve contains limited attributes, which can vary by entity, and subsequent calls will include more attributes.  If you expect a single action to occur during the loading of a form, then do not rely strictly on the trigger of a Retrieve message.
+Dataverse triggers at least two `Retrieve` messages for each entity form load. One retrieve contains limited attributes, which can vary by entity, and subsequent calls include more attributes. If you expect a single action to occur during the loading of a form, then don't rely strictly on the trigger of a `Retrieve` message.
 
 <a name='additional'></a>
 
 ## Additional information
 
-The `Retrieve` and `RetrieveMultiple` messages are two of the most frequently processed messages. The `Retrieve` message is triggered when opening up an entity form or when an entity is being accessed using the `Retrieve` operation in one of the service endpoints. `RetrieveMultiple` is triggered due to various actions in the application and service endpoints, for example, when populating a grid in the user interface.  Adding synchronous plug-in logic to these message events can cause slowness.
+The `Retrieve` and `RetrieveMultiple` messages are two of the most frequently processed messages. The `Retrieve` message is triggered when opening up an entity form or when an entity is being accessed using the `Retrieve` operation in one of the service endpoints. `RetrieveMultiple` is triggered due to various actions in the application and service endpoints, for example, when populating a grid in the user interface. Adding synchronous plug-in logic to these message events can cause slowness.
 
 <a name='seealso'></a>
 

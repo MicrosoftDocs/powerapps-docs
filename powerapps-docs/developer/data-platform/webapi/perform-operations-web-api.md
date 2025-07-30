@@ -2,8 +2,8 @@
 title: "Perform operations using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Microsoft Dataverse Web API provides a RESTful web service interface that you can use to interact with data in Dataverse using a wide variety of programming languages. Read about the operations that can be performed using the Web API"
 ms.date: 04/06/2022
-author: divkamath
-ms.author: dikamath
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
@@ -23,7 +23,7 @@ The Web API provides a RESTful web service interface that you can use to interac
 ## In this section
 
 [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)<br />
-[Query data using the Web API](query-data-web-api.md)<br />
+[Query data using the Web API](query/overview.md)<br />
 [Retrieve and execute predefined queries](retrieve-and-execute-predefined-queries.md)<br />
 [Create a table row using the Web API](create-entity-web-api.md)<br />
 [Retrieve a table row using the Web API](retrieve-entity-using-web-api.md)<br />

@@ -1,13 +1,12 @@
 ---
 title: "Activities data model and storage | MicrosoftDocs"
 description: "This article will help you understand the activities data model and its impact on storage capacity."
-ms.custom: ""
 ms.date: 07/18/2022
-ms.reviewer: mduelae
-ms.topic: "article"
 author: DanaMartens
-ms.subservice: dataverse-developer
 ms.author: dmartens
+ms.reviewer: mduelae
+ms.topic: article
+ms.subservice: dataverse-developer
 search.audienceType: 
   - developer
 ---
@@ -79,7 +78,7 @@ ActivityPointerBase contains data that was saved as users create activity rows s
 
 #### Why does ActivityPartyBase have so many rows?
 
-There's one row for each activity participation. It’s easy to have many rows in this table, however the space utilized by these individual rows is minimal.
+There's one row for each activity participation. It's easy to have many rows in this table, however the space utilized by these individual rows is minimal.
 
 ### Other Questions 
 

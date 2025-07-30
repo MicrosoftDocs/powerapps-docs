@@ -3,8 +3,8 @@ title: Web API navigation properties
 description: Learn about OData navigation property elements that are defined for EntityTypes in the Microsoft Dataverse Web API.
 ms.topic: how-to
 ms.date: 04/06/2022
-author: divkamath
-ms.author: dikamath
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 ms.service: powerapps
 applies_to: 
@@ -107,7 +107,7 @@ An entity type may have something like the following combination, where a single
 </EntityType>
 ```
 
-In these cases, setting the value of any of the single-valued navigation properties sets all the other participating single-valued navigation properties to null. The corresponding lookup property GUID value changes, but you need to retrieve specific annotations to know which table it now refers to. More information: [Lookup property data](query-data-web-api.md#lookup-property-data)
+In these cases, setting the value of any of the single-valued navigation properties sets all the other participating single-valued navigation properties to null. The corresponding lookup property GUID value changes, but you need to retrieve specific annotations to know which table it now refers to. More information: [Lookup property data](query/select-columns.md#lookup-property-data)
 
 ## Collection-valued navigation properties
 

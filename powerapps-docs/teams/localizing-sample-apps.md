@@ -1,9 +1,8 @@
 ---
-title: Localize sample app templates (contains video)
+title: Localize sample app templates
 description: Learn how to add extra localizations to the sample for Microsoft Teams.
-
-ms.topic: conceptual
-ms.custom: 
+ms.topic: how-to
+ms.subservice: teams 
 ms.date: 08/05/2021
 author: joel-lindstrom
 ms.author: saperlmu
@@ -23,7 +22,7 @@ For example, consider that you use the Russian language. Russian isn't a languag
 This article covers the approach used for localization of the sample app templates for Teams, and how to extend it to add support for another language (such as Russian). In this example, we'll use the [Milestones app](milestones.md); but this same approach is used consistently across all of the Teams template Power Apps, and you can follow the same approach for localization of your own canvas apps.
 
 Watch this video to learn how to localize sample app templates:
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWKV6N]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=2b55d792-7cde-4948-9072-5d38d33e844f]
 
 ## Prerequisites
 
@@ -128,7 +127,7 @@ To add Russian, you would first add Russian translation to the spreadsheet for e
 
 1. Update the app OnStart function **gblUserLanguage** to include the language that you added to the Excel file. In the example below we've added Russian:
 
-    ```powerapps-dot
+    ```power-fx
     //user language
     Set(gblUserLanguage,Switch(Left(Language(),2),"de","de-DE","en","en-US","es","es-ES","fr","fr-FR","it","it-IT","ja","ja-JP","nl","nl-NL",
     "pt","pt-BR","ru-RU",
@@ -202,7 +201,7 @@ Let us add a label to the Loading screen:
 
 1. Open the **Text** property of the label and paste the following formula:
 
-   ```powerapps-dot
+   ```power-fx
    With({varDefault: "Welcome to the app", varOOBTextId: "lblLoadingText_Welcome_locText"}, With({varLocalizedText: LookUp(colLocalization;OOBTextID = varOOBTextId, LocalizedText)}, Coalesce(varLocalizedText;varDefault)))
    ```
 

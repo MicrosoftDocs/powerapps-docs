@@ -1,30 +1,31 @@
 ---
 title: "Create and use custom APIs (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "custom API is a code-first way to define custom messages for Microsoft Dataverse" # 115-145 characters including spaces. This abstract displays in the search result.
-author: divkamath
-ms.author: dikamath
-ms.date: 10/18/2023
+description: "Custom API is a code-first way to define custom messages for Microsoft Dataverse" # 115-145 characters including spaces. This abstract displays in the search result.
+author: MsSQLGirl
+ms.author: jukoesma
+ms.date: 11/26/2024
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: how-to
 ms.subservice: dataverse-developer
 search.audienceType: 
   - developer
 contributors:
  - JimDaly
+ - SomaDaDe
 ---
 # Create and use custom APIs
 
 Use custom APIs to create your own APIs in Dataverse. You can consolidate one or more operations into a custom API that you and other developers can call in their code or from Power Automate. The [Microsoft Dataverse connector](/connectors/commondataserviceforapps/) enables calling  actions in Power Automate.
 
-You can use custom API as business events to enable creating new integration capabilities such as exposing a new type of trigger event in the Microsoft Dataverse connector. More information: [Microsoft Dataverse business events](business-events.md)
+You can use custom API as business events to enable creating new integration capabilities such as exposing a new type of trigger event in the Microsoft Dataverse connector. [Learn more about Microsoft Dataverse business events](business-events.md)
 
 Custom APIs are an alternative to custom process actions. Custom process actions provide a no-code way to include custom messages but has some limitations for developers. Custom APIs provide capabilities specifically for developers to define their logic in code with more options. For a full comparison of custom process action and custom API, see [Compare custom process action and custom API](custom-actions.md#compare-custom-process-action-and-custom-api).
 
 ## Create a custom API
 
-A custom API can include logic implemented with a plug-in. Using [Microsoft Dataverse business events](business-events.md), you can create a custom API without a plug-in to pass data about an event that other subscribers respond to.
+A custom API usually includes logic implemented with a plug-in, but it isn't required. Using [Microsoft Dataverse business events](business-events.md), you can create a custom API without a plug-in to pass data about an event that other subscribers respond to.
 
-However, in other cases you'll combine a custom API with a plug-in to define some operation that is delegated to Dataverse to compute and return the result.
+Most of the time, combine a custom API with a plug-in to define some operation that is delegated to Dataverse to compute and return the result.
 
 There are several different ways to create a custom API:
 
@@ -32,7 +33,7 @@ There are several different ways to create a custom API:
 |---------|---------|
 |[Plug-in registration tool](create-custom-api-prt.md)|An easy-to-use GUI tool integrated with tools used to develop plug-ins.|
 |[Power Apps](create-custom-api-maker-portal.md)|Using forms to enter data. You don't need to install a separate tool, you must create a separate record for each part of the custom API.|
-|[With Code](create-custom-api-with-code.md)|After you understand the data model, you can create custom API quickly using Postman. Or you can build your own experience to create custom API.|
+|[With Code](create-custom-api-with-code.md)|After you understand the data model, you can create custom API quickly using an API Client like Postman or [Insomnia](webapi/insomnia.md). Or you can build your own experience to create custom API.|
 |[With solution files](create-custom-api-solution.md)|When you use Application Lifecycle Management (ALM) tools, you can create or modify custom API definitions with XML files in a solution that is included in your source code repository. The custom API is created when you import the solution generated from your source code.|
 
 > [!NOTE]
@@ -60,25 +61,25 @@ You can set the **Is Customizable** managed property from the solution in Power 
 
 You need to set this property for each custom API, Request Parameter, and Response Property individually.
 
-More information [Managed properties](/power-platform/alm/managed-properties-alm)
+[Learn more about Managed properties](/power-platform/alm/managed-properties-alm)
 
 ### Add more request parameters and response properties
 
-Even when you have set the **Is Customizable** managed property to these components to `false`, new request parameters and response properties can be added to your custom API. However, these request parameters can't be made required. If you choose to allow custom processing steps on your custom API, other plug-ins registered for the message created by your custom API can use them. Because custom request parameters can only be optional, the plug-in you provide for the main operation of the custom API can ignore them and isn't responsible for using any custom request parameters or setting any custom response properties.
+Even when you set the **Is Customizable** managed property to these components to `false`, new request parameters and response properties can be added to your custom API. However, the people who add these request parameters can't make them required. If you [choose to allow custom processing steps on your custom API](#select-a-custom-processing-step-type), other plug-ins registered for the message created by your custom API can use them. Because custom request parameters can only be optional, the plug-in you provide for the main operation of the custom API can ignore them and isn't responsible for using any custom request parameters or setting any custom response properties added to the custom API you specified.
 
 ## Custom API tables/entities
 
-See [CustomAPI tables](custom-api-tables.md) for information about the tables and column values to use when creating Custom APIs.
+See [CustomAPI tables](custom-api-tables.md) for information about the tables and column values to use when creating custom APIs.
 
 
-## Select a Custom Processing Step Type
+## Select a custom processing step type
 
 The following table describes which custom API **Custom Processing Step Type** (`AllowedCustomProcessingStepType`) you should use. 
 
 |Option |When to use  |
 |---------|---------|
-|**None**|When the plug-in set for this custom API using [CustomAPI.PluginTypeId](reference/entities/customapi.md#BKMK_PluginTypeId) is the only logic that occurs when this operation executes.<br/>You won't allow another developer to register any more steps that can trigger other logic, modify the behavior of this operation, or cancel the operation.<br/>Use this option when the custom API provides some capability that shouldn't be customizable.|
-|**Async Only**|When you want to allow other developers to detect when this operation occurs, but you don't want them to be able to cancel the operation or customize the behavior of the operation.<br/> Other developers can register asynchronous steps to detect that this operation occurred and respond to it after it has completed.<br/>This option is recommended if you're using the business events pattern. A business event creates a trigger in Power Automate to you can use when this event occurs. More information: [Microsoft Dataverse business events](business-events.md)|
+|**None**|When the plug-in set for this custom API using [CustomAPI.PluginTypeId](reference/entities/customapi.md#BKMK_PluginTypeId) is the only logic that occurs when this operation executes.<br/>You don't allow other developers to register any more steps that can trigger other logic, modify the behavior of this operation, or cancel the operation.<br/>Use this option when the custom API provides some capability that shouldn't be customizable.|
+|**Async Only**|When you want to allow other developers to detect when this operation occurs, but you don't want them to be able to cancel the operation or customize the behavior of the operation.<br/> Other developers can register asynchronous steps to detect that this operation occurred and respond to it after it has completed.<br/>This option is recommended if you're using the business events pattern. A business event creates a trigger in Power Automate to you can use when this event occurs. [Learn about Microsoft Dataverse business events](business-events.md)|
 |**Sync and Async**|When you want to allow other developers to have the ability to change the behavior of the operation, and even cancel it if their business logic dictates.<br/>If the operation succeeds, other developers can also detect this event and add logic to run asynchronously.<br/>Most Dataverse messages enable extension in this manner.  Use this option when your message represents a business process that should be customizable.|
 
 ## Select a Binding Type
@@ -118,7 +119,7 @@ You can more easily test `GET` requests using your browser alone, but there's a 
 > - A Function is not allowed when the **Enabled for Workflow** option is selected. See [Use a custom API in a workflow](#use-a-custom-api-in-a-workflow)
 > - Currently the [Microsoft Dataverse Connector](/connectors/commondataserviceforapps/) only enables performing actions. If you need the operation to be performed using Power Automate, you should create your custom API as an Action.
 
-More information: [Use Web API functions](webapi/use-web-api-functions.md)
+[Learn to use Web API functions](webapi/use-web-api-functions.md)
 
 ## When to make your custom API private
 
@@ -147,9 +148,12 @@ Set the custom API **Execute Privilege Name** (`ExecutePrivilegeName`) property 
 
 If you don't set the custom API **Plugin Type** (`PluginTypeId`)  to specify main operation logic you can still invoke the custom API.
 
-You might choose to not include any logic in the plug-in because you're using the custom API as a business event. More information: [Microsoft Dataverse business events](business-events.md).
+You might choose to not include any logic in the plug-in because you're using the custom API as a business event. [Learn about Microsoft Dataverse business events](business-events.md).
 
-You might not want to add a plug-in as a testing step. Without a plug-in, any output parameter values return the default values for the type because there's no code to set them.
+You might not want to add a plug-in as a testing step. Without a plug-in, any output parameter values return the default values for the type because there's no code to set them. Otherwise, see [Write a Plug-in for your custom API](#write-a-plug-in-for-your-custom-api)
+
+> [!NOTE]
+> You can't pass configuration data to the plug-in specified for the main operation logic. [There is a workaround for this](#secure-and-unsecure-configuration-cant-be-set-for-the-custom-api-main-operation-plug-in).
 
 ## Use a custom API in a workflow
 
@@ -182,7 +186,7 @@ A custom API creates a new message that can be invoked via the Web API or Datave
 
 ### Invoking custom APIs from the Web API
 
-While testing, you can invoke your API using PostMan. Use the steps described in [Set up a Postman environment](webapi/setup-postman-environment.md) to set up a PostMan environment that generates the access token you need. Then, apply the steps described in [Use Web API actions](webapi/use-web-api-actions.md) if your API is an action. If it's a function, use the steps in [Use Web API functions](webapi/use-web-api-functions.md).
+While testing, you can invoke your API using an API client like Postman or Insomnia. Use the steps described in [Use Insomnia with Dataverse Web API](webapi/insomnia.md) to set up a Insomnia environment that generates the access token you need. Then, apply the steps described in [Use Web API actions](webapi/use-web-api-actions.md) if your API is an action. If it's a function, use the steps in [Use Web API functions](webapi/use-web-api-functions.md).
 
 See the following examples:
 
@@ -252,15 +256,15 @@ var resp = svc.Execute(req);
 var newOwner = (EntityReference) resp["AssignedTo"];
 ```
 
-More information: [Use messages with the SDK for .NET](org-service/use-messages.md).
+[Learn to use messages with the SDK for .NET](org-service/use-messages.md).
 
 ### Invoke custom API as a background operation
 
-The logic to be performed using a background operation must be defined as a custom API. More information:[Background operations (Preview)](background-operations.md)
+The logic to be performed using a background operation must be defined as a custom API.[Learn to use background operations (Preview)](background-operations.md)
 
 ## Write a Plug-in for your custom API
 
-Writing a plug-in to implement the main operation for your custom API isn't different from writing any other plug-in, except that you don't use the Plug-in Registration tool to set a specific step.
+Writing a plug-in to implement the main operation for your custom API isn't different from writing any other plug-in, except that you don't use the Plug-in Registration tool to set a specific step and [you can't specify configuration data to pass to the plug-in](#secure-and-unsecure-configuration-cant-be-set-for-the-custom-api-main-operation-plug-in).
 
 You need to know the following information:
 
@@ -320,7 +324,7 @@ namespace CustomAPIExamples
 
 ```
 
-For more information about writing plug-ins, see [Tutorial: Write and register a plug-in](tutorial-write-plug-in.md). You need to register the assembly, but you don't need to register a step. More information: [Use a plug-in to include logic in your custom API](#use-a-plug-in-to-include-logic-in-your-custom-api)
+For more information about writing plug-ins, see [Tutorial: Write and register a plug-in](tutorial-write-plug-in.md). You need to register the assembly, but you don't need to register a step. [Learn to use a plug-in to include logic in your custom API](#use-a-plug-in-to-include-logic-in-your-custom-api)
 
 See the example [Sample: IsSystemAdmin custom API](org-service/samples/issystemadmin-customapi-sample-plugin.md)
 
@@ -339,7 +343,7 @@ The following example shows editing the Excel worksheet to add Japanese translat
 :::image type="content" source="media/solution-strings-for-translation.png" alt-text="Shows how labels are localized.":::
 
 > [!TIP]
-> If you are editing the solution files to create your custom APIs, you can provide the localized labels directly. More information: [Providing Localized Labels with the solution](create-custom-api-solution.md#providing-localized-labels-with-the-solution)
+> If you are editing the solution files to create your custom APIs, you can provide the localized labels directly.[Learn about providing Localized Labels with the solution](create-custom-api-solution.md#providing-localized-labels-with-the-solution)
 
 ### Setting localized values
 
@@ -388,7 +392,7 @@ HTTP/1.1 204 No Content
 
 ### Retrieving localized values
 
-To retrieve the localized labels, use the `RetrieveLocLabels` message using either the Web API [RetrieveLocLabels Function](/dynamics365/customer-engagement/web-api/retrieveloclabels) or the SDK for .NET <xref:Microsoft.Crm.Sdk.Messages.RetrieveLocLabelsRequest>.
+To retrieve the localized labels, use the `RetrieveLocLabels` message using either the Web API [RetrieveLocLabels Function](xref:Microsoft.Dynamics.CRM.RetrieveLocLabels) or the SDK for .NET [RetrieveLocLabelsRequest class](xref:Microsoft.Crm.Sdk.Messages.RetrieveLocLabelsRequest).
 
 The following example shows using the RetrieveLocLabels Function to retrieve the labels for the `displayname` property of a custom API with the `customapiid` of `88602189-183d-4584-ba4b-8b60f0f5b89f`
 
@@ -465,7 +469,7 @@ More information:
 
 ## Known issues with custom APIs
 
-Custom API is now generally available, but there are still some related capabilities that we expect to change.
+Custom APIs are now generally available, but there are still some related capabilities that we expect to change.
 
 ### Not able to use profiler for debugging
 
@@ -475,7 +479,15 @@ To debug using the Plug-in Registration tool and the Plug-in profiler solution, 
 
 ### Private messages can't be used in plug-ins
 
-If you define your custom API to be private, you can't use that message in a plug-in. More information: [Private Messages](org-service/use-messages.md#private-messages)
+If you define your custom API to be private, you can't use that message in a plug-in. [Learn about private messages](org-service/use-messages.md#private-messages)
+
+### Secure and unsecure configuration can't be set for the custom API main operation plug-in
+
+You can't pass [secure or unsecure configuration](write-plug-in.md#pass-configuration-data-to-your-plug-in) in to the main operation Plugin for the custom API.
+
+**Workaround**: Rather than associate the plug-in with the custom API, register the plug-in on the `PostOperation` stage using the Plug-in Registration tool (PRT). This way, you can [specify configuration data in the `PostOperation` plug-in step as you usually do](register-plug-in.md#set-configuration-data).
+
+To use this workaround, you must configure your custom API to enable **Sync and Async** [custom processing step types](#select-a-custom-processing-step-type) when you create the custom api. You can't change this after you create it.
 
 ### Next Steps
 

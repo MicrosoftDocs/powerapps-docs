@@ -1,63 +1,62 @@
 ---
-title: "workqueueitem table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the workqueueitem table/entity."
-ms.date: 09/01/2023
-ms.service: "powerapps"
-ms.topic: "reference"
-ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "phecke"
-ms.author: "pehecke"
+title: "Work Queue Item (workqueueitem) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the Work Queue Item (workqueueitem) table/entity with Microsoft Dataverse."
+ms.topic: generated-reference
+author: phecke
+ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# workqueueitem table/entity reference
+# Work Queue Item (workqueueitem) table/entity reference (Microsoft Dataverse)
 
-> [!NOTE]
-> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
-
-
-
-**Added by**: Power Automate Extensions core package Solution
 
 
 ## Messages
 
-|Message|Web API Operation|SDK class or method|
-|-|-|-|
-|Assign|PATCH /workqueueitems(*workqueueitemid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|Create|POST /workqueueitems<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|CreateMultiple|<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
-|Delete|DELETE /workqueueitems(*workqueueitemid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|GrantAccess|<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
-|IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
-|ModifyAccess|<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-|Retrieve|GET /workqueueitems(*workqueueitemid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET /workqueueitems<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|RetrievePrincipalAccess|<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
-|RetrieveSharedPrincipalsAndAccess|<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
-|RevokeAccess|<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|SetState|PATCH /workqueueitems(*workqueueitemid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH /workqueueitems(*workqueueitemid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
-|UpdateMultiple|<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+The following table lists the messages for the Work Queue Item (workqueueitem) table.
+Messages represent operations that can be performed on the table. They may also be events.
+
+| Name <br />Is Event? |Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `AddWorkQueueItemProcessingHistoryEntry`<br />Event: False |<xref:Microsoft.Dynamics.CRM.AddWorkQueueItemProcessingHistoryEntry?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
+| `Assign`<br />Event: True |`PATCH` /workqueueitems(*workqueueitemid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Create`<br />Event: True |`POST` /workqueueitems<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+| `Delete`<br />Event: True |`DELETE` /workqueueitems(*workqueueitemid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
+| `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
+| `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
+| `Retrieve`<br />Event: True |`GET` /workqueueitems(*workqueueitemid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveMultiple`<br />Event: True |`GET` /workqueueitems<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
+| `RetrievePrincipalAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
+| `RetrieveSharedPrincipalsAndAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
+| `RevokeAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
+| `SetState`<br />Event: True |`PATCH` /workqueueitems(*workqueueitemid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `statecode` and `statuscode` properties. |<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+| `Update`<br />Event: True |`PATCH` /workqueueitems(*workqueueitemid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
+| `UpdateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+| `Upsert`<br />Event: False |`PATCH` /workqueueitems(*workqueueitemid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
+| `UpsertMultiple`<br />Event: False |<xref:Microsoft.Dynamics.CRM.UpsertMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpsertMultipleRequest>|
 
 ## Properties
 
-|Property|Value|
-|--------|-----|
-|CollectionSchemaName|workqueueitems|
-|DisplayCollectionName|Work Queue Items|
-|DisplayName|Work Queue Item|
-|EntitySetName|workqueueitems|
-|IsBPFEntity|False|
-|LogicalCollectionName|workqueueitems|
-|LogicalName|workqueueitem|
-|OwnershipType|UserOwned|
-|PrimaryIdAttribute|workqueueitemid|
-|PrimaryNameAttribute|name|
-|SchemaName|workqueueitem|
+The following table lists selected properties for the Work Queue Item (workqueueitem) table.
 
-<a name="writable-attributes"></a>
+|Property|Value|
+| --- | --- |
+| **DisplayName** | **Work Queue Item** |
+| **DisplayCollectionName** | **Work Queue Items** |
+| **SchemaName** | `workqueueitem` |
+| **CollectionSchemaName** | `workqueueitems` |
+| **EntitySetName** | `workqueueitems`|
+| **LogicalName** | `workqueueitem` |
+| **LogicalCollectionName** | `workqueueitems` |
+| **PrimaryIdAttribute** | `workqueueitemid` |
+| **PrimaryNameAttribute** |`name` |
+| **TableType** | `Standard` |
+| **OwnershipType** | `UserOwned` |
 
 ## Writable columns/attributes
 
@@ -70,1089 +69,1082 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [input](#BKMK_input)
 - [IsCustomizable](#BKMK_IsCustomizable)
+- [machineuser](#BKMK_machineuser)
 - [name](#BKMK_name)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
 - [priority](#BKMK_priority)
+- [processingduration](#BKMK_processingduration)
 - [processingresult](#BKMK_processingresult)
+- [processingstarttime](#BKMK_processingstarttime)
+- [processinguser](#BKMK_processinguser)
+- [processorid](#BKMK_processorid)
+- [processortype](#BKMK_processortype)
 - [requeuecount](#BKMK_requeuecount)
+- [retrycount](#BKMK_retrycount)
+- [slastatus](#BKMK_slastatus)
+- [slathresholddate](#BKMK_slathresholddate)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
+- [uniqueidbyqueue](#BKMK_uniqueidbyqueue)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 - [workqueueid](#BKMK_workqueueid)
 - [workqueueitemId](#BKMK_workqueueitemId)
 
-
 ### <a name="BKMK_completedon"></a> completedon
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|The date and time when the work queue item was completed.|
-|DisplayName|Completed on|
-|Format|DateOnly|
+|---|---|
+|Description|**The date and time when the work queue item was completed.**|
+|DisplayName|**Completed on**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|completedon|
+|LogicalName|`completedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateOnly|
+|ImeMode|Auto|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_delayuntil"></a> delayuntil
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|The date and time after which the work queue item can be dequeued again.|
-|DisplayName|Delay until|
-|Format|DateOnly|
+|---|---|
+|Description|**The date and time after which the work queue item can be dequeued again.**|
+|DisplayName|**Delay until**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|delayuntil|
+|LogicalName|`delayuntil`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateOnly|
+|ImeMode|Auto|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_executioncontext"></a> executioncontext
 
 |Property|Value|
-|--------|-----|
-|Description|The execution context contains a system-managed list of processing attempts, along with important debugging information.|
-|DisplayName|Execution Context|
-|Format|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**The execution context contains a system-managed list of processing attempts, along with important debugging information.**|
+|DisplayName|**Execution Context**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|executioncontext|
-|MaxLength|1048576|
+|LogicalName|`executioncontext`|
 |RequiredLevel|None|
 |Type|Memo|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1048576|
 
 ### <a name="BKMK_expirydate"></a> expirydate
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|The expiry date indicates the deadline when the work queue items has to be processed by.|
-|DisplayName|Expiry Date|
-|Format|DateOnly|
+|---|---|
+|Description|**The expiry date indicates the deadline when the work queue items has to be processed by.**|
+|DisplayName|**Expiry Date**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|expirydate|
+|LogicalName|`expirydate`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Auto|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Sequence number of the import that created this record.|
-|DisplayName|Import Sequence Number|
-|Format|None|
+|---|---|
+|Description|**Sequence number of the import that created this record.**|
+|DisplayName|**Import Sequence Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|importsequencenumber|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`importsequencenumber`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_input"></a> input
 
 |Property|Value|
-|--------|-----|
-|Description|The input field contains the actual work item data used for processing by bots, humans, or integrations.|
-|DisplayName|Input|
-|Format|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**The input field contains the actual work item data used for processing by bots, humans, or integrations.**|
+|DisplayName|**Input**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|input|
-|MaxLength|1048576|
+|LogicalName|`input`|
 |RequiredLevel|None|
 |Type|Memo|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1048576|
 
 ### <a name="BKMK_IsCustomizable"></a> IsCustomizable
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Is Customizable|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Is Customizable**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|iscustomizable|
+|LogicalName|`iscustomizable`|
 |RequiredLevel|SystemRequired|
 |Type|ManagedProperty|
 
+### <a name="BKMK_machineuser"></a> machineuser
+
+|Property|Value|
+|---|---|
+|Description|**Machine User that processed the item.**|
+|DisplayName|**Machine User**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`machineuser`|
+|RequiredLevel|None|
+|Type|Memo|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_name"></a> name
 
 |Property|Value|
-|--------|-----|
-|Description|The name of the work queue item which is by default set to an auto number (e.g., 2023-02-13-000000001).|
-|DisplayName|Name|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**The name of the work queue item which is by default set to an auto number (e.g., 2023-02-13-000000001).**|
+|DisplayName|**Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|name|
-|MaxLength|100|
+|LogicalName|`name`|
 |RequiredLevel|ApplicationRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time that the record was migrated.|
-|DisplayName|Record Created On|
-|Format|DateOnly|
+|---|---|
+|Description|**Date and time that the record was migrated.**|
+|DisplayName|**Record Created On**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|overriddencreatedon|
+|LogicalName|`overriddencreatedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateOnly|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_OwnerId"></a> OwnerId
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Owner Id|
-|DisplayName|Owner|
+|---|---|
+|Description|**Owner Id**|
+|DisplayName|**Owner**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|ownerid|
+|LogicalName|`ownerid`|
 |RequiredLevel|SystemRequired|
-|Targets|systemuser,team|
 |Type|Owner|
-
+|Targets|systemuser, team|
 
 ### <a name="BKMK_OwnerIdType"></a> OwnerIdType
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Owner Id Type|
+|---|---|
+|Description|**Owner Id Type**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owneridtype|
+|LogicalName|`owneridtype`|
 |RequiredLevel|SystemRequired|
 |Type|EntityName|
-
 
 ### <a name="BKMK_priority"></a> priority
 
 |Property|Value|
-|--------|-----|
-|Description|The priority value determines the pick and processing order for work queue items in a work queue. A lower value corresponds to a higher priority with 1 being the highest.|
-|DisplayName|Priority|
-|Format|None|
+|---|---|
+|Description|**The priority value determines the pick and processing order for work queue items in a work queue. A lower value corresponds to a higher priority with 1 being the highest.**|
+|DisplayName|**Priority**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|priority|
-|MaxValue|2147483647|
-|MinValue|1|
+|LogicalName|`priority`|
 |RequiredLevel|None|
 |Type|Integer|
+|MaxValue|2147483647|
+|MinValue|1|
 
+### <a name="BKMK_processingduration"></a> processingduration
+
+|Property|Value|
+|---|---|
+|Description|**The duration of the processing in seconds.**|
+|DisplayName|**Processing Duration**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`processingduration`|
+|RequiredLevel|None|
+|Type|Integer|
+|MaxValue|2147483647|
+|MinValue|0|
 
 ### <a name="BKMK_processingresult"></a> processingresult
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|Processing Result|
-|Format|Text|
-|IsLocalizable|False|
+|DisplayName|**Processing Result**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|processingresult|
-|MaxLength|1048576|
+|LogicalName|`processingresult`|
 |RequiredLevel|None|
 |Type|Memo|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1048576|
 
+### <a name="BKMK_processingstarttime"></a> processingstarttime
+
+|Property|Value|
+|---|---|
+|Description|**The date and time when the processing has started.**|
+|DisplayName|**Processing Start Time**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`processingstarttime`|
+|RequiredLevel|None|
+|Type|DateTime|
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateOnly|
+|ImeMode|Auto|
+|SourceTypeMask|0|
+
+### <a name="BKMK_processinguser"></a> processinguser
+
+|Property|Value|
+|---|---|
+|Description|**Unique identifier for the user that processed the item.**|
+|DisplayName|**Processing User**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`processinguser`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|systemuser|
+
+### <a name="BKMK_processorid"></a> processorid
+
+|Property|Value|
+|---|---|
+|Description|**Unique identifier for the processor (workflow, flowmachine, etc.) that processed the item.**|
+|DisplayName|**Processor id**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`processorid`|
+|RequiredLevel|None|
+|Type|Memo|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
+
+### <a name="BKMK_processortype"></a> processortype
+
+|Property|Value|
+|---|---|
+|Description|**The processor type allows to display if the item was processed through a cloud flow, a flow machine or another processor type.**|
+|DisplayName|**Processor Type**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`processortype`|
+|RequiredLevel|None|
+|Type|Picklist|
+|DefaultFormValue|0|
+|GlobalChoiceName|`workqueueitem_processortype`|
+
+#### processortype Choices/Options
+
+|Value|Label|
+|---|---|
+|0|**None**|
+|1|**Cloud Flow**|
+|2|**Flow Machine**|
 
 ### <a name="BKMK_requeuecount"></a> requeuecount
 
 |Property|Value|
-|--------|-----|
-|Description|The number of times the item has been requeued.|
-|DisplayName|Requeue Count|
-|Format|None|
+|---|---|
+|Description|**The number of times the item has been requeued.**|
+|DisplayName|**Requeue Count**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|requeuecount|
-|MaxValue|2147483647|
-|MinValue|0|
+|LogicalName|`requeuecount`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
+|MaxValue|2147483647|
+|MinValue|0|
 
+### <a name="BKMK_retrycount"></a> retrycount
+
+|Property|Value|
+|---|---|
+|Description|**The number of times the item has been retried.**|
+|DisplayName|**Retry Count**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`retrycount`|
+|RequiredLevel|SystemRequired|
+|Type|Integer|
+|MaxValue|2147483647|
+|MinValue|0|
+
+### <a name="BKMK_slastatus"></a> slastatus
+
+|Property|Value|
+|---|---|
+|Description|**The SLA status provides more context for on the item processing status (In SLA, At Risk, Out of SLA).**|
+|DisplayName|**SLA Status**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`slastatus`|
+|RequiredLevel|None|
+|Type|Picklist|
+|DefaultFormValue|0|
+|GlobalChoiceName|`workqueueitem_slastatus`|
+
+#### slastatus Choices/Options
+
+|Value|Label|
+|---|---|
+|0|**NotSet**|
+|1|**In**|
+|2|**AtRisk**|
+|3|**Out**|
+
+### <a name="BKMK_slathresholddate"></a> slathresholddate
+
+|Property|Value|
+|---|---|
+|Description|**Date and time on which the work queue item starts to be at risk of SLA violation.**|
+|DisplayName|**SLA Threshold Time**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`slathresholddate`|
+|RequiredLevel|None|
+|Type|DateTime|
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_statecode"></a> statecode
 
 |Property|Value|
-|--------|-----|
-|Description|The status of the work queue item (Queued, Processed, Exception etc.)|
-|DisplayName|Status|
-|IsValidForCreate|False|
+|---|---|
+|Description|**The status of the work queue item (Queued, Processed, Exception etc.)**|
+|DisplayName|**Status**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|statecode|
+|LogicalName|`statecode`|
 |RequiredLevel|SystemRequired|
 |Type|State|
+|DefaultFormValue||
+|GlobalChoiceName|`workqueueitem_statecode`|
 
 #### statecode Choices/Options
 
-|Value|Label|DefaultStatus|InvariantName|
-|-----|-----|-------------|-------------|
-|0|Queued|0|Queued|
-|1|Processing|1|Processing|
-|2|Processed|2|Processed|
-|3|OnHold|3|OnHold|
-|4|Error|4|Error|
-
-
+|Value|Details|
+|---|---|
+|0|Label: **Queued**<br />DefaultStatus: 0<br />InvariantName: `Queued`|
+|1|Label: **Processing**<br />DefaultStatus: 1<br />InvariantName: `Processing`|
+|2|Label: **Processed**<br />DefaultStatus: 2<br />InvariantName: `Processed`|
+|3|Label: **OnHold**<br />DefaultStatus: 3<br />InvariantName: `OnHold`|
+|4|Label: **Error**<br />DefaultStatus: 4<br />InvariantName: `Error`|
 
 ### <a name="BKMK_statuscode"></a> statuscode
 
 |Property|Value|
-|--------|-----|
-|Description|The status reason provides more context for a set status (Queued, Processing, On hold etc.).|
-|DisplayName|Status Reason|
+|---|---|
+|Description|**The status reason provides more context for a set status (Queued, Processing, On hold etc.).**|
+|DisplayName|**Status Reason**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|statuscode|
+|LogicalName|`statuscode`|
 |RequiredLevel|None|
 |Type|Status|
+|DefaultFormValue||
+|GlobalChoiceName|`workqueueitem_statuscode`|
 
 #### statuscode Choices/Options
 
-|Value|Label|State|
-|-----|-----|-----|
-|0|Queued|0|
-|1|Processing|1|
-|2|Processed|2|
-|3|Paused|3|
-|4|GenericException|4|
-|5|ITException|4|
-|6|BusinessException|4|
-|7|DeadLetter|4|
-
-
+|Value|Details|
+|---|---|
+|0|Label: **Queued**<br />State:0<br />TransitionData: None|
+|1|Label: **Processing**<br />State:1<br />TransitionData: None|
+|2|Label: **Processed**<br />State:2<br />TransitionData: None|
+|3|Label: **Paused**<br />State:3<br />TransitionData: None|
+|4|Label: **GenericException**<br />State:4<br />TransitionData: None|
+|5|Label: **ITException**<br />State:4<br />TransitionData: None|
+|6|Label: **BusinessException**<br />State:4<br />TransitionData: None|
+|7|Label: **DeadLetter**<br />State:4<br />TransitionData: None|
+|8|Label: **ProcessingTimeout**<br />State:4<br />TransitionData: None|
 
 ### <a name="BKMK_TimeZoneRuleVersionNumber"></a> TimeZoneRuleVersionNumber
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Time Zone Rule Version Number|
-|Format|None|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Time Zone Rule Version Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|timezoneruleversionnumber|
-|MaxValue|2147483647|
-|MinValue|-1|
+|LogicalName|`timezoneruleversionnumber`|
 |RequiredLevel|None|
 |Type|Integer|
+|MaxValue|2147483647|
+|MinValue|-1|
 
+### <a name="BKMK_uniqueidbyqueue"></a> uniqueidbyqueue
+
+|Property|Value|
+|---|---|
+|Description|**An identifier of the work queue item used to uniquely identify a work queue item inside a work queue.**|
+|DisplayName|**Unique Id By Queue**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`uniqueidbyqueue`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
 
 |Property|Value|
-|--------|-----|
-|Description|Time zone code that was in use when the record was created.|
-|DisplayName|UTC Conversion Time Zone Code|
-|Format|None|
+|---|---|
+|Description|**Time zone code that was in use when the record was created.**|
+|DisplayName|**UTC Conversion Time Zone Code**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|utcconversiontimezonecode|
-|MaxValue|2147483647|
-|MinValue|-1|
+|LogicalName|`utcconversiontimezonecode`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-1|
 
 ### <a name="BKMK_workqueueid"></a> workqueueid
 
 |Property|Value|
-|--------|-----|
-|Description|The work queue id of the parent work queue record.|
-|DisplayName|Work Queue Id|
+|---|---|
+|Description|**The work queue id of the parent work queue record.**|
+|DisplayName|**Work Queue Id**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|workqueueid|
+|LogicalName|`workqueueid`|
 |RequiredLevel|SystemRequired|
-|Targets|workqueue|
 |Type|Lookup|
-
+|Targets|workqueue|
 
 ### <a name="BKMK_workqueueitemId"></a> workqueueitemId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for entity instances.|
-|DisplayName|Work Queue Item|
+|---|---|
+|Description|**Unique identifier for entity instances.**|
+|DisplayName|**Work Queue Item**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|workqueueitemid|
+|LogicalName|`workqueueitemid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
 
-<a name="read-only-attributes"></a>
 
 ## Read-only columns/attributes
 
-These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** and **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [ComponentIdUnique](#BKMK_ComponentIdUnique)
 - [ComponentState](#BKMK_ComponentState)
 - [CreatedBy](#BKMK_CreatedBy)
-- [CreatedByName](#BKMK_CreatedByName)
-- [CreatedByYomiName](#BKMK_CreatedByYomiName)
 - [CreatedOn](#BKMK_CreatedOn)
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
-- [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
-- [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
 - [IsManaged](#BKMK_IsManaged)
 - [ModifiedBy](#BKMK_ModifiedBy)
-- [ModifiedByName](#BKMK_ModifiedByName)
-- [ModifiedByYomiName](#BKMK_ModifiedByYomiName)
 - [ModifiedOn](#BKMK_ModifiedOn)
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
-- [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
-- [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
 - [OverwriteTime](#BKMK_OverwriteTime)
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
-- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [SolutionId](#BKMK_SolutionId)
 - [SupportingSolutionId](#BKMK_SupportingSolutionId)
 - [VersionNumber](#BKMK_VersionNumber)
-- [workqueueidName](#BKMK_workqueueidName)
-
 
 ### <a name="BKMK_ComponentIdUnique"></a> ComponentIdUnique
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Row id unique|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Row id unique**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|componentidunique|
+|LogicalName|`componentidunique`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
 
-
 ### <a name="BKMK_ComponentState"></a> ComponentState
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Component State|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Component State**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|componentstate|
+|LogicalName|`componentstate`|
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
+|DefaultFormValue||
+|GlobalChoiceName|`componentstate`|
 
 #### ComponentState Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|0|Published||
-|1|Unpublished||
-|2|Deleted||
-|3|Deleted Unpublished||
-
-
+|Value|Label|
+|---|---|
+|0|**Published**|
+|1|**Unpublished**|
+|2|**Deleted**|
+|3|**Deleted Unpublished**|
 
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user who created the record.|
-|DisplayName|Created By|
+|---|---|
+|Description|**Unique identifier of the user who created the record.**|
+|DisplayName|**Created By**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdby|
+|LogicalName|`createdby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedByName"></a> CreatedByName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedByYomiName"></a> CreatedByYomiName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_CreatedOn"></a> CreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when the record was created.|
-|DisplayName|Created On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Date and time when the record was created.**|
+|DisplayName|**Created On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdon|
+|LogicalName|`createdon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_CreatedOnBehalfBy"></a> CreatedOnBehalfBy
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the delegate user who created the record.|
-|DisplayName|Created By (Delegate)|
+|---|---|
+|Description|**Unique identifier of the delegate user who created the record.**|
+|DisplayName|**Created By (Delegate)**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdonbehalfby|
+|LogicalName|`createdonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedOnBehalfByName"></a> CreatedOnBehalfByName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedOnBehalfByYomiName"></a> CreatedOnBehalfByYomiName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_IsManaged"></a> IsManaged
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Indicates whether the solution component is part of a managed solution.|
-|DisplayName|Is Managed|
+|---|---|
+|Description|**Indicates whether the solution component is part of a managed solution.**|
+|DisplayName|**Is Managed**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|ismanaged|
+|LogicalName|`ismanaged`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
-
-#### IsManaged Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Managed||
-|0|Unmanaged||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`ismanaged`|
+|DefaultValue|False|
+|True Label|Managed|
+|False Label|Unmanaged|
 
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user who modified the record.|
-|DisplayName|Modified By|
+|---|---|
+|Description|**Unique identifier of the user who modified the record.**|
+|DisplayName|**Modified By**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedby|
+|LogicalName|`modifiedby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedByName"></a> ModifiedByName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedByYomiName"></a> ModifiedByYomiName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_ModifiedOn"></a> ModifiedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when the record was modified.|
-|DisplayName|Modified On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Date and time when the record was modified.**|
+|DisplayName|**Modified On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedon|
+|LogicalName|`modifiedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_ModifiedOnBehalfBy"></a> ModifiedOnBehalfBy
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the delegate user who modified the record.|
-|DisplayName|Modified By (Delegate)|
+|---|---|
+|Description|**Unique identifier of the delegate user who modified the record.**|
+|DisplayName|**Modified By (Delegate)**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedonbehalfby|
+|LogicalName|`modifiedonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedOnBehalfByName"></a> ModifiedOnBehalfByName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedOnBehalfByYomiName"></a> ModifiedOnBehalfByYomiName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_OverwriteTime"></a> OverwriteTime
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|For internal use only.|
-|DisplayName|Record Overwrite Time|
-|Format|DateAndTime|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Record Overwrite Time**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|overwritetime|
+|LogicalName|`overwritetime`|
 |RequiredLevel|SystemRequired|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_OwnerIdName"></a> OwnerIdName
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Name of the owner|
+|---|---|
+|Description|**Name of the owner**|
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owneridname|
-|MaxLength|100|
+|LogicalName|`owneridname`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_OwnerIdYomiName"></a> OwnerIdYomiName
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Yomi name of the owner|
+|---|---|
+|Description|**Yomi name of the owner**|
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owneridyominame|
-|MaxLength|100|
+|LogicalName|`owneridyominame`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_OwningBusinessUnit"></a> OwningBusinessUnit
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for the business unit that owns the record|
-|DisplayName|Owning Business Unit|
+|---|---|
+|Description|**Unique identifier for the business unit that owns the record**|
+|DisplayName|**Owning Business Unit**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|owningbusinessunit|
+|LogicalName|`owningbusinessunit`|
 |RequiredLevel|None|
-|Targets|businessunit|
 |Type|Lookup|
-
-
-### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|owningbusinessunitname|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|businessunit|
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for the team that owns the record.|
-|DisplayName|Owning Team|
+|---|---|
+|Description|**Unique identifier for the team that owns the record.**|
+|DisplayName|**Owning Team**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owningteam|
+|LogicalName|`owningteam`|
 |RequiredLevel|None|
-|Targets|team|
 |Type|Lookup|
-
+|Targets|team|
 
 ### <a name="BKMK_OwningUser"></a> OwningUser
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for the user that owns the record.|
-|DisplayName|Owning User|
+|---|---|
+|Description|**Unique identifier for the user that owns the record.**|
+|DisplayName|**Owning User**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owninguser|
+|LogicalName|`owninguser`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_SolutionId"></a> SolutionId
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the associated solution.|
-|DisplayName|Solution|
+|---|---|
+|Description|**Unique identifier of the associated solution.**|
+|DisplayName|**Solution**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|solutionid|
+|LogicalName|`solutionid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
 
-
 ### <a name="BKMK_SupportingSolutionId"></a> SupportingSolutionId
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Solution|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Solution**|
 |IsValidForForm|False|
 |IsValidForRead|False|
-|LogicalName|supportingsolutionid|
+|LogicalName|`supportingsolutionid`|
 |RequiredLevel|None|
 |Type|Uniqueidentifier|
 
-
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Version Number|
-|DisplayName|Version Number|
+|---|---|
+|Description|**Version Number**|
+|DisplayName|**Version Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|versionnumber|
-|MaxValue|9223372036854775807|
-|MinValue|-9223372036854775808|
+|LogicalName|`versionnumber`|
 |RequiredLevel|None|
 |Type|BigInt|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
 
+## Many-to-One relationships
 
-### <a name="BKMK_workqueueidName"></a> workqueueidName
+These relationships are many-to-one. Listed by **SchemaName**.
 
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|workqueueidname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-<a name="onetomany"></a>
-
-## One-To-Many Relationships
-
-Listed by **SchemaName**.
-
-- [workqueueitem_SyncErrors](#BKMK_workqueueitem_SyncErrors)
-- [workqueueitem_DuplicateMatchingRecord](#BKMK_workqueueitem_DuplicateMatchingRecord)
-- [workqueueitem_DuplicateBaseRecord](#BKMK_workqueueitem_DuplicateBaseRecord)
-- [workqueueitem_AsyncOperations](#BKMK_workqueueitem_AsyncOperations)
-- [workqueueitem_MailboxTrackingFolders](#BKMK_workqueueitem_MailboxTrackingFolders)
-- [workqueueitem_ProcessSession](#BKMK_workqueueitem_ProcessSession)
-- [workqueueitem_BulkDeleteFailures](#BKMK_workqueueitem_BulkDeleteFailures)
-- [workqueueitem_PrincipalObjectAttributeAccesses](#BKMK_workqueueitem_PrincipalObjectAttributeAccesses)
-
-
-### <a name="BKMK_workqueueitem_SyncErrors"></a> workqueueitem_SyncErrors
-
-**Added by**: System Solution Solution
-
-Same as the [workqueueitem_SyncErrors](syncerror.md#BKMK_workqueueitem_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|syncerror|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|workqueueitem_SyncErrors|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_workqueueitem_DuplicateMatchingRecord"></a> workqueueitem_DuplicateMatchingRecord
-
-**Added by**: System Solution Solution
-
-Same as the [workqueueitem_DuplicateMatchingRecord](duplicaterecord.md#BKMK_workqueueitem_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|duplicaterecord|
-|ReferencingAttribute|duplicaterecordid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|workqueueitem_DuplicateMatchingRecord|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_workqueueitem_DuplicateBaseRecord"></a> workqueueitem_DuplicateBaseRecord
-
-**Added by**: System Solution Solution
-
-Same as the [workqueueitem_DuplicateBaseRecord](duplicaterecord.md#BKMK_workqueueitem_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|duplicaterecord|
-|ReferencingAttribute|baserecordid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|workqueueitem_DuplicateBaseRecord|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_workqueueitem_AsyncOperations"></a> workqueueitem_AsyncOperations
-
-**Added by**: System Solution Solution
-
-Same as the [workqueueitem_AsyncOperations](asyncoperation.md#BKMK_workqueueitem_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|asyncoperation|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|workqueueitem_AsyncOperations|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_workqueueitem_MailboxTrackingFolders"></a> workqueueitem_MailboxTrackingFolders
-
-**Added by**: System Solution Solution
-
-Same as the [workqueueitem_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_workqueueitem_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|mailboxtrackingfolder|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|workqueueitem_MailboxTrackingFolders|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_workqueueitem_ProcessSession"></a> workqueueitem_ProcessSession
-
-**Added by**: System Solution Solution
-
-Same as the [workqueueitem_ProcessSession](processsession.md#BKMK_workqueueitem_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|processsession|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|workqueueitem_ProcessSession|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_workqueueitem_BulkDeleteFailures"></a> workqueueitem_BulkDeleteFailures
-
-**Added by**: System Solution Solution
-
-Same as the [workqueueitem_BulkDeleteFailures](bulkdeletefailure.md#BKMK_workqueueitem_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|bulkdeletefailure|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|workqueueitem_BulkDeleteFailures|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_workqueueitem_PrincipalObjectAttributeAccesses"></a> workqueueitem_PrincipalObjectAttributeAccesses
-
-**Added by**: System Solution Solution
-
-Same as the [workqueueitem_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_workqueueitem_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|principalobjectattributeaccess|
-|ReferencingAttribute|objectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|workqueueitem_PrincipalObjectAttributeAccesses|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-<a name="manytoone"></a>
-
-## Many-To-One Relationships
-
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
-
+- [business_unit_workqueueitem](#BKMK_business_unit_workqueueitem)
 - [lk_workqueueitem_createdby](#BKMK_lk_workqueueitem_createdby)
 - [lk_workqueueitem_createdonbehalfby](#BKMK_lk_workqueueitem_createdonbehalfby)
 - [lk_workqueueitem_modifiedby](#BKMK_lk_workqueueitem_modifiedby)
 - [lk_workqueueitem_modifiedonbehalfby](#BKMK_lk_workqueueitem_modifiedonbehalfby)
-- [user_workqueueitem](#BKMK_user_workqueueitem)
+- [owner_workqueueitem](#BKMK_owner_workqueueitem)
 - [team_workqueueitem](#BKMK_team_workqueueitem)
-- [business_unit_workqueueitem](#BKMK_business_unit_workqueueitem)
+- [user_workqueueitem](#BKMK_user_workqueueitem)
 - [workqueue_workqueueitem](#BKMK_workqueue_workqueueitem)
-
-
-### <a name="BKMK_lk_workqueueitem_createdby"></a> lk_workqueueitem_createdby
-
-**Added by**: System Solution Solution
-
-See the [lk_workqueueitem_createdby](systemuser.md#BKMK_lk_workqueueitem_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_workqueueitem_createdonbehalfby"></a> lk_workqueueitem_createdonbehalfby
-
-**Added by**: System Solution Solution
-
-See the [lk_workqueueitem_createdonbehalfby](systemuser.md#BKMK_lk_workqueueitem_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_workqueueitem_modifiedby"></a> lk_workqueueitem_modifiedby
-
-**Added by**: System Solution Solution
-
-See the [lk_workqueueitem_modifiedby](systemuser.md#BKMK_lk_workqueueitem_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_workqueueitem_modifiedonbehalfby"></a> lk_workqueueitem_modifiedonbehalfby
-
-**Added by**: System Solution Solution
-
-See the [lk_workqueueitem_modifiedonbehalfby](systemuser.md#BKMK_lk_workqueueitem_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_user_workqueueitem"></a> user_workqueueitem
-
-**Added by**: System Solution Solution
-
-See the [user_workqueueitem](systemuser.md#BKMK_user_workqueueitem) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_team_workqueueitem"></a> team_workqueueitem
-
-**Added by**: System Solution Solution
-
-See the [team_workqueueitem](team.md#BKMK_team_workqueueitem) one-to-many relationship for the [team](team.md) table/entity.
+- [workqueueitem_processinguser](#BKMK_workqueueitem_processinguser)
 
 ### <a name="BKMK_business_unit_workqueueitem"></a> business_unit_workqueueitem
 
-**Added by**: System Solution Solution
+One-To-Many Relationship: [businessunit business_unit_workqueueitem](businessunit.md#BKMK_business_unit_workqueueitem)
 
-See the [business_unit_workqueueitem](businessunit.md#BKMK_business_unit_workqueueitem) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
+|Property|Value|
+|---|---|
+|ReferencedEntity|`businessunit`|
+|ReferencedAttribute|`businessunitid`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencingEntityNavigationPropertyName|`owningbusinessunit`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `Restrict`<br />Assign: `NoCascade`<br />Delete: `Restrict`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_workqueueitem_createdby"></a> lk_workqueueitem_createdby
+
+One-To-Many Relationship: [systemuser lk_workqueueitem_createdby](systemuser.md#BKMK_lk_workqueueitem_createdby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdby`|
+|ReferencingEntityNavigationPropertyName|`createdby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_workqueueitem_createdonbehalfby"></a> lk_workqueueitem_createdonbehalfby
+
+One-To-Many Relationship: [systemuser lk_workqueueitem_createdonbehalfby](systemuser.md#BKMK_lk_workqueueitem_createdonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`createdonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_workqueueitem_modifiedby"></a> lk_workqueueitem_modifiedby
+
+One-To-Many Relationship: [systemuser lk_workqueueitem_modifiedby](systemuser.md#BKMK_lk_workqueueitem_modifiedby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedby`|
+|ReferencingEntityNavigationPropertyName|`modifiedby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_workqueueitem_modifiedonbehalfby"></a> lk_workqueueitem_modifiedonbehalfby
+
+One-To-Many Relationship: [systemuser lk_workqueueitem_modifiedonbehalfby](systemuser.md#BKMK_lk_workqueueitem_modifiedonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`modifiedonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_owner_workqueueitem"></a> owner_workqueueitem
+
+One-To-Many Relationship: [owner owner_workqueueitem](owner.md#BKMK_owner_workqueueitem)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`owner`|
+|ReferencedAttribute|`ownerid`|
+|ReferencingAttribute|`ownerid`|
+|ReferencingEntityNavigationPropertyName|`ownerid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_team_workqueueitem"></a> team_workqueueitem
+
+One-To-Many Relationship: [team team_workqueueitem](team.md#BKMK_team_workqueueitem)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`team`|
+|ReferencedAttribute|`teamid`|
+|ReferencingAttribute|`owningteam`|
+|ReferencingEntityNavigationPropertyName|`owningteam`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_user_workqueueitem"></a> user_workqueueitem
+
+One-To-Many Relationship: [systemuser user_workqueueitem](systemuser.md#BKMK_user_workqueueitem)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`owninguser`|
+|ReferencingEntityNavigationPropertyName|`owninguser`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_workqueue_workqueueitem"></a> workqueue_workqueueitem
 
-See the [workqueue_workqueueitem](workqueue.md#BKMK_workqueue_workqueueitem) one-to-many relationship for the [workqueue](workqueue.md) table/entity.
+One-To-Many Relationship: [workqueue workqueue_workqueueitem](workqueue.md#BKMK_workqueue_workqueueitem)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`workqueue`|
+|ReferencedAttribute|`workqueueid`|
+|ReferencingAttribute|`workqueueid`|
+|ReferencingEntityNavigationPropertyName|`workqueueid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `Cascade`<br />RollupView: `NoCascade`<br />Share: `Cascade`<br />Unshare: `Cascade`|
+
+### <a name="BKMK_workqueueitem_processinguser"></a> workqueueitem_processinguser
+
+One-To-Many Relationship: [systemuser workqueueitem_processinguser](systemuser.md#BKMK_workqueueitem_processinguser)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`processinguser`|
+|ReferencingEntityNavigationPropertyName|`processinguser`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+
+## One-to-Many relationships
+
+These relationships are one-to-many. Listed by **SchemaName**.
+
+- [workqueueitem_AsyncOperations](#BKMK_workqueueitem_AsyncOperations)
+- [workqueueitem_BulkDeleteFailures](#BKMK_workqueueitem_BulkDeleteFailures)
+- [workqueueitem_DuplicateBaseRecord](#BKMK_workqueueitem_DuplicateBaseRecord)
+- [workqueueitem_DuplicateMatchingRecord](#BKMK_workqueueitem_DuplicateMatchingRecord)
+- [workqueueitem_flowlog_workqueueitemid](#BKMK_workqueueitem_flowlog_workqueueitemid)
+- [workqueueitem_MailboxTrackingFolders](#BKMK_workqueueitem_MailboxTrackingFolders)
+- [workqueueitem_PrincipalObjectAttributeAccesses](#BKMK_workqueueitem_PrincipalObjectAttributeAccesses)
+- [workqueueitem_ProcessSession](#BKMK_workqueueitem_ProcessSession)
+- [workqueueitem_SyncErrors](#BKMK_workqueueitem_SyncErrors)
+
+### <a name="BKMK_workqueueitem_AsyncOperations"></a> workqueueitem_AsyncOperations
+
+Many-To-One Relationship: [asyncoperation workqueueitem_AsyncOperations](asyncoperation.md#BKMK_workqueueitem_AsyncOperations)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`asyncoperation`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`workqueueitem_AsyncOperations`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_workqueueitem_BulkDeleteFailures"></a> workqueueitem_BulkDeleteFailures
+
+Many-To-One Relationship: [bulkdeletefailure workqueueitem_BulkDeleteFailures](bulkdeletefailure.md#BKMK_workqueueitem_BulkDeleteFailures)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`bulkdeletefailure`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`workqueueitem_BulkDeleteFailures`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_workqueueitem_DuplicateBaseRecord"></a> workqueueitem_DuplicateBaseRecord
+
+Many-To-One Relationship: [duplicaterecord workqueueitem_DuplicateBaseRecord](duplicaterecord.md#BKMK_workqueueitem_DuplicateBaseRecord)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`duplicaterecord`|
+|ReferencingAttribute|`baserecordid`|
+|ReferencedEntityNavigationPropertyName|`workqueueitem_DuplicateBaseRecord`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_workqueueitem_DuplicateMatchingRecord"></a> workqueueitem_DuplicateMatchingRecord
+
+Many-To-One Relationship: [duplicaterecord workqueueitem_DuplicateMatchingRecord](duplicaterecord.md#BKMK_workqueueitem_DuplicateMatchingRecord)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`duplicaterecord`|
+|ReferencingAttribute|`duplicaterecordid`|
+|ReferencedEntityNavigationPropertyName|`workqueueitem_DuplicateMatchingRecord`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_workqueueitem_flowlog_workqueueitemid"></a> workqueueitem_flowlog_workqueueitemid
+
+Many-To-One Relationship: [flowlog workqueueitem_flowlog_workqueueitemid](flowlog.md#BKMK_workqueueitem_flowlog_workqueueitemid)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`flowlog`|
+|ReferencingAttribute|`workqueueitemid`|
+|ReferencedEntityNavigationPropertyName|`workqueueitem_flowlog_workqueueitemid`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_workqueueitem_MailboxTrackingFolders"></a> workqueueitem_MailboxTrackingFolders
+
+Many-To-One Relationship: [mailboxtrackingfolder workqueueitem_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_workqueueitem_MailboxTrackingFolders)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`mailboxtrackingfolder`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`workqueueitem_MailboxTrackingFolders`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_workqueueitem_PrincipalObjectAttributeAccesses"></a> workqueueitem_PrincipalObjectAttributeAccesses
+
+Many-To-One Relationship: [principalobjectattributeaccess workqueueitem_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_workqueueitem_PrincipalObjectAttributeAccesses)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`principalobjectattributeaccess`|
+|ReferencingAttribute|`objectid`|
+|ReferencedEntityNavigationPropertyName|`workqueueitem_PrincipalObjectAttributeAccesses`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_workqueueitem_ProcessSession"></a> workqueueitem_ProcessSession
+
+Many-To-One Relationship: [processsession workqueueitem_ProcessSession](processsession.md#BKMK_workqueueitem_ProcessSession)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`processsession`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`workqueueitem_ProcessSession`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_workqueueitem_SyncErrors"></a> workqueueitem_SyncErrors
+
+Many-To-One Relationship: [syncerror workqueueitem_SyncErrors](syncerror.md#BKMK_workqueueitem_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`syncerror`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`workqueueitem_SyncErrors`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
-<xref href="Microsoft.Dynamics.CRM.workqueueitem?text=workqueueitem EntityType" />
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
+[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
+<xref:Microsoft.Dynamics.CRM.workqueueitem?displayProperty=fullName>

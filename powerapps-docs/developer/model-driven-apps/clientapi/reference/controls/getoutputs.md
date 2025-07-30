@@ -1,8 +1,8 @@
 ---
 title: control.getOutputs (Client API reference)
 description: Includes description and supported parameters for the control.getOutputs method.
-ms.author: noazarur
-author: noazarur-microsoft
+author: MitiJ
+ms.author: mijosh
 ms.date: 09/20/2022
 ms.reviewer: jdaly
 ms.topic: reference

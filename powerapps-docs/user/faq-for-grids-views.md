@@ -1,14 +1,14 @@
 ---
 title: Frequently asked questions and known issues about grids and views
 description: Frequently asked questions and known issues about grids and views in Power Apps.
-author: sericks
+author: smurkute
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: faq
 ms.date: 03/09/2022
 ms.subservice: end-user
-ms.author: sericks
+ms.author: smurkute
 ms.custom: ""
-ms.reviewer: sericks
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser

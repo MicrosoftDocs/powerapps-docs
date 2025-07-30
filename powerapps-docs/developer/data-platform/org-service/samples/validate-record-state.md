@@ -2,8 +2,8 @@
 title: " Validate and set record state (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample showcases how to validate a change of state of a table and set state." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/06/2022
-author: NHelgren
-ms.author: nhelgren
+author: mkannapiran
+ms.author: kamanick
 ms.reviewer: pehecke
 ms.topic: sample
 search.audienceType:
@@ -18,7 +18,7 @@ contributors:
 This sample shows how to validate a change of state of a table and set a state of a table.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Validate record state and set the state of record sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/ValidateAndSetRecordState)
+> [SDK for .NET: Validate record state and set the state of record sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/ValidateAndSetRecordState)
 
 ## How to run this sample
 

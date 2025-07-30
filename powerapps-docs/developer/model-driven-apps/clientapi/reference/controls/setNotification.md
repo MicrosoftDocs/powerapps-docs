@@ -1,8 +1,8 @@
 ---
-title: "setNotification (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "setNotification (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the setNotification method.
-ms.author: chmoncay
-author: chmoncay
+author: MitiJ
+ms.author: mijosh
 ms.date: 11/27/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -32,7 +32,7 @@ Standard, lookup, choices and choice control types.
 ## Parameters
 
 |Name | Type | Required | Description|
-|--|--|--|--|
+|----|----|----|----|
 |`message` |String |Yes|The message to display.|
 |`uniqueId` |String |No|The ID to use to clear this message when using the **clearNotification** method.
 
@@ -48,7 +48,7 @@ Setting an error notification on a control will block the form from saving.
 
 ### Related articles
 
-[addNotification](addNotification.md)<br />
+[addNotification](addNotification.md)   
 [clearNotification](clearNotification.md)
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

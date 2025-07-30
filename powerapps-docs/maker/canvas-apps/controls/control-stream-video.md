@@ -13,7 +13,7 @@ search.audienceType:
   - maker
 contributors:
   - mduelae
-  - chmoncay
+  - yogeshgupta698
 ---
 # Microsoft Stream video control in Power Apps
 A video player for Microsoft Stream videos and channels.

@@ -1,9 +1,9 @@
 ---
-title: Create a canvas app that can trigger a Power Automate flow (contains video)
+title: Create a canvas app that can trigger a Power Automate flow
 description: Learn about how to create a canvas app that can trigger a Power Automate flow.
 author: joel-lindstrom
 
-ms.topic: article
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 01/27/2022
@@ -24,7 +24,7 @@ Power Automate can be used to create logic that performs one or more tasks when 
 In this article, we'll learn how create and trigger a flow using canvas apps.
 
 Watch this video to learn how to create a canvas app that can trigger a flow:
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLvLE]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=97f1d303-9f0d-4817-9f9d-c899d023d9b1]
 
 ## Prerequisites
 
@@ -212,7 +212,7 @@ In this lesson, we'll create an app to search, view, and create customer account
 
 1. Select the **Yes** button > in the **OnSelect** property enter the two parameters for the To email address and the Body of the email as follows:
 
-    ```powerapps-dot
+    ```power-fx
     FlowtriggeredbyaPowerapp.Run(
        EditForm3.LastSubmit.Email,
        TextInput1.Text

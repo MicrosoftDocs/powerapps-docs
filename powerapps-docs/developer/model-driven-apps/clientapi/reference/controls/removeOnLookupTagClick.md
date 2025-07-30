@@ -1,8 +1,8 @@
 ---
-title: "removeOnLookupTagClick (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "removeOnLookupTagClick (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the removeOnLookupTagClick method.
-author: chmoncay
-ms.author: chmoncay
+author: MitiJ
+ms.author: mijosh
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -26,7 +26,7 @@ Lookup
 ## Parameter
 
 |Name|Type|Required|Description|
-|--|--|--|--|
+|----|----|----|----|
 |`myFunction`|Function reference|Yes|The function to be removed from the [OnLookupTagClick](../events/onlookuptagclick.md) event.|
 
 ### Related articles

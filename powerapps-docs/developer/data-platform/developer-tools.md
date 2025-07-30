@@ -2,7 +2,7 @@
 title: "Developer tools and resources (Microsoft Dataverse) | Microsoft Docs" 
 description: "Learn about available tools and resources when working with solutions."
 ms.date: 03/27/2023
-ms.reviewer: phecke
+ms.reviewer: pehecke
 ms.topic: article
 author: shmcarth # GitHub ID
 ms.subservice: dataverse-developer

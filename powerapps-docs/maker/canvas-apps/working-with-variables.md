@@ -3,10 +3,10 @@ title: Understand variables in canvas apps
 description: Reference information about working with state, context variables, and collections in canvas apps.
 author: gregli-msft
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 02/7/2023
+ms.date: 01/25/2025
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -135,13 +135,10 @@ Let's rebuild our adding machine by using a global variable:
 
     ![Text-input control contains a value, and the label contains the running total.](media/working-with-variables/global-variable-4.png)
 
-7. To show the global variable's value, do one of the following:
- 
-    - If you're using the preview version of Power Apps Studio, select **Variables** on the app authoring menu.
+7. To show the global variable's value, select **Variables** on the app authoring menu.
 
       ![Variables and collections menu.](media/working-with-variables/var-collections-menu.png)
       
-     - If you're using the classic version of Power Apps Studio, select the **File** menu, and select **Variables** in the left-hand pane.
 
 8. To show all the places where the variable is defined and used, select it under **Global variables**.
 

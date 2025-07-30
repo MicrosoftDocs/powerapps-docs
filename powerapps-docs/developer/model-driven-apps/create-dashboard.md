@@ -1,12 +1,12 @@
 ---
-title: "Create a dashboard (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
-description: "Organization-owned dashboards can be created by using the Microsoft Dataverse web services (SDK) or by customizing the form in Dataverse by editing the customizations.xml file." # 115-145 characters including spaces. This abstract displays in the search result."
+title: "Create a dashboard (model-driven apps)"
+description: "Organization-owned dashboards can be created by using the Microsoft Dataverse web services (SDK) or by customizing the form in Dataverse by editing the customizations.xml file."
 ms.date: 04/01/2022
-ms.topic: article
-author: sriharibs-msft
+ms.topic: how-to
+author: jasongre
+ms.author: jasongre
+ms.reviewer: jdaly
 ms.subservice: mda-developer
-ms.author: srihas
-ms.reviewer:
 search.audienceType:
   - developer
 contributors:
@@ -139,7 +139,7 @@ SystemForm dashboard = new SystemForm
 _dashboardId = service.Create(dashboard);
 ```
 
-For a complete sample, see [Sample: Create, retrieve, update, and delete (CRUD) a dashboard](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/CRUDOperationsDashboard). For a sample to create a user-owned dashboard, and assign it to another user, see [Sample: Assign a user-owned dashboard to another user](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/AssignUserOwnedDashboardToAnother).
+For a complete sample, see [Sample: Create, retrieve, update, and delete (CRUD) a dashboard](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/CRUDOperationsDashboard). For a sample to create a user-owned dashboard, and assign it to another user, see [Sample: Assign a user-owned dashboard to another user](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/AssignUserOwnedDashboardToAnother).
 
 <a name="UsingFormCustomization"></a>
 
@@ -150,14 +150,10 @@ The customizations.xml file that is exported with an unmanaged solution contains
 #### Create a dashboard by customizing a form
 
 1. Log in to Dataverse.
-
-2. Export a solution. For information about doing so, see [Exporting, Preparing to Edit, and Importing the Ribbon](export-prepare-edit-import-ribbon.md).
-
-3. Browse to the customizations.xml file in the exported solution folder, and open it for editing.
-
-4. Browse to the end of the dashboards area in the customizations.xml file by searching for the following tag: `</Dashboards>`
-
-5. Before the `</Dashboards>` tag, add the following to define a new dashboard:
+1. Export a solution. For information about doing so, see [Exporting, Preparing to Edit, and Importing the Ribbon](export-prepare-edit-import-ribbon.md).
+1. Browse to the customizations.xml file in the exported solution folder, and open it for editing.
+1. Browse to the end of the dashboards area in the customizations.xml file by searching for the following tag: `</Dashboards>`
+1. Before the `</Dashboards>` tag, add the following to define a new dashboard:
 
    ```xml
    <Dashboard>
@@ -174,9 +170,8 @@ The customizations.xml file that is exported with an unmanaged solution contains
    </Dashboard>
    ```
 
-6. Save the customizations.xml file.
-
-7. Import the .zip file as a solution in Dataverse. More information: [Exporting, Preparing to Edit, and Importing the Ribbon](export-prepare-edit-import-ribbon.md).
+1. Save the customizations.xml file.
+1. Import the .zip file as a solution in Dataverse. More information: [Exporting, Preparing to Edit, and Importing the Ribbon](export-prepare-edit-import-ribbon.md).
 
 <a name="Limitations"></a>
 
@@ -209,10 +204,10 @@ Certain dashboards that are created or modified using the Dataverse or through f
 ### See also
 
 [Dashboards](analyze-data-with-dashboards.md)  
- [Using FormXML for dashboards](understand-dashboards-dashboard-components-formxml.md)  
- [Actions on dashboards](actions-dashboards.md)  
- [Sample dashboards](sample-dashboards.md)  
- [Sample: Create, retrieve, update, and delete (CRUD) a dashboard](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/CRUDOperationsDashboardd)  
- [Customize forms](customize-entity-forms.md)
+[Using FormXML for dashboards](understand-dashboards-dashboard-components-formxml.md)  
+[Actions on dashboards](actions-dashboards.md)  
+[Sample dashboards](sample-dashboards.md)  
+[Sample: Create, retrieve, update, and delete (CRUD) a dashboard](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/CRUDOperationsDashboardd)  
+[Customize forms](customize-entity-forms.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

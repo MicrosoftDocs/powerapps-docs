@@ -1,92 +1,103 @@
 ---
-title: Build apps through conversation
-description: Build apps through conversation with AI.
+title: Build apps through conversation with Copilot 
+description: Build apps easily with AI in Microsoft Power Apps. Describe the information you want to collect, track, or show in your app, and Copilot creates Dataverse tables and guides you through the process.
 author: mduelae
-ms.topic: conceptual
-ms.custom: canvas
-ms.collection: get-started
-ms.reviewer: 
-ms.date: 10/17/2022
+ms.topic: how-to
+ms.collection:
+  - bap-ai-copilot
+  - get started
+ms.reviewer:
+ms.date: 5/28/2025
+ms.update-cycle: 180-days
 ms.subservice: canvas-maker
 ms.author: tapanm
-search.audienceType: 
+search.audienceType:
   - maker
 contributors:
   - mduelae
+ms.custom:
+  - canvas
+  - ai-gen-docs-bap
+  - ai-gen-title
+  - ai-gen-desc
+  - ai-seo-date:08/28/2024
+  - copilot-scenario-highlight
+ai-usage: ai-assisted
 ---
 
-# Build apps through conversation
+# Build apps through conversation with Copilot 
 
-Create Power Apps with the help of AI. Describe the app that you want to build, and AI will design it for you.
+Create apps without writing code or designing screens. With Copilot in Power Apps, you can use natural language to describe what you want your app to do, and AI does the rest.
 
-With the **Copilot** feature in Power Apps, you get in-app guidance using natural language processing to help you build your app.
-
-The AI assistant is available from the Power Apps home screen. You can tell the AI assistant what kind of information you want to collect, track, or show and the assistant will generate a Dataverse table and use it to build your canvas app.
-
-> [!div class="mx-imgBorder"]
-> ![Tell the AI assistant the information you want to track in your app.](media/artificial-intelligence/create-app-using-ai-1.png)
-
+Copilot is a feature in Power Apps that helps you build apps with AI assistance. You can access Copilot from the Power Apps home screen. Type what kind of information you want to collect, track, or show in your app, and Copilot generates one or more Microsoft Dataverse tables that you can use to build your canvas app.
 
 ## Prerequisites
 
-Prerequisites for AI features: [AI Copilot overview (preview)](ai-overview.md)
+- Ensure you meet the prerequisites and region availability in [Copilot in Power Apps overview (preview)](ai-overview.md).
+- Depending on where your environment is hosted, you might need to allow data movement across regions. Learn more in [Copilots and generative AI features that are available when you enable data movement across regions](/power-platform/admin/geographical-availability-copilot#copilots-and-generative-ai-features-that-are-available-when-you-enable-data-movement-across-regions).
+- Include a Dataverse database in your environment. Learn more in [Add a Microsoft Dataverse database](/power-platform/admin/create-database).
+- Confirm that this feature is available in your region. Learn more in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/en-US/availability-reports/?report=copilotfeaturereport).
+- The system customizer security role in the environment.
 
+## Create an app with Copilot
 
-## Step 1: Create an app with the help of AI
-
-To help you get started, let's build an app to track housekeeping tasks for a hotel.
+To show you how Copilot works, let's create an app to track housekeeping tasks for a hotel.
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
-2. In the text box, enter **hotel housekeeping**.
+1. On the left navigation pane, select **Create** > **Start with Copilot**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Describle your app.](media/artificial-intelligence/describe-your-app.png)
+1. Type your prompt in the text box such as the example prompt shown below.
 
-3. A Dataverse table with data that includes typical hotel housekeeping tasks is created for you.
+    ```copilot-prompt
+    Hotel housekeeping
+    ```
+1. Select table options, like multiple tables or one table, then select **Generate**.
+ 
+Copilot creates one or more Dataverse tables with data that includes typical hotel housekeeping tasks.
 
-## Step 2: Review the table for your app
+> [!IMPORTANT]
+> If you don't have the right permissions and access to Dataverse in the environment you're working in, an alert asks you to create the app in your own environment. Confirm that the table and app can be created in your environment to proceed. If you don't have a personal developer environment, a new one is created for you automatically. Learn more in [Get your developer environment (preview)](../maker-create-environment.md).
 
-Based on what you described, AI generates a table for your app. You can take the following actions:
+## Review the table
 
-1. **Suggestions**: These are suggested actions that you can ask the AI assistant to take to help you finalize the table.
+Copilot generates tables and relationships based on your description. Review them and make any changes you need to before you go on to create your app.
 
-2. **View column**: Select to view the column name.
+### Review the tables for your app
 
-3. **Edit table name**: View the table name and its properties.
+Copilot shows you the tables and relationships that it generated based on your description.
 
-4. **Copilot**: Enter text to instruct the AI assistant on how to modify the table, such as remove room type column.
+:::image type="content" source="media/artificial-intelligence/data-workspace-copilot.png" alt-text="Screenshot of Dataverse tables and relationships for a hotel housekeeping app, with numbered annotations.":::
 
-5. **Create app**: Select **Create app** to create an app based on the table or select **Cancel** to start over.
+Legend:
 
-   > [!div class="mx-imgBorder"]
-   > ![Review table for your app.](media/artificial-intelligence/table-created.png)
+1. **Edit**: Edit or create more tables. Learn more in [Create and edit tables](../data-platform/create-edit-entities-portal.md).
 
-   
-   > [!IMPORTANT]
-   > If you encounter any issues during the app creation process related to permissions or if you don't have access to Dataverse, a dialog box will appear asking you to create the app in your own environment. You will need to confirm that the table and app can be created in your environment to proceed. In case you don't have a personal developer environment, a new one will be automatically created for you. For more information, see [Get your developer environment (preview)](../maker-create-environment.md).
+1. **Copilot text box**: [Ask Copilot to modify the table](#use-copilot-to-make-changes) or create more tables for you.
 
-## Step 3: Make edits
+1. **View prompt**: View examples of things that you can ask Copilot to do.
 
-If you want to make changes, use the **Copilot** panel to describe what you want to do, and it will make the change for you. Let's ask **Copilot** to add a column to track cleaning start and end time.
-
-1. In the **Copilot** text box enter, **Add columns to track start and end time**.
-
-2. **Copilot** has added two new columns called, **Start Time** and **End Time**.
-
-3. You can continue editing the table by adding features such as room status, change rooms, or set priority levels for each room. When you're ready to create your app, select **Create app**.
+1. **Save and open app**: Save your tables and create your app. To start over, select **Back**.
 
 
-### See also
+## Use Copilot to make changes
 
-[AI Copilot overview (preview)](ai-overview.md)
+If you want to change something, enter in the Copilot panel a brief description of the change you want to make. Copilot does it for you.
 
-[Add Chatbot control to a canvas app (preview)](add-ai-chatbot.md)
+For example, ask Copilot to add columns to track cleaning start and end time.
 
-[Add Copilot control to a canvas app (preview)](add-ai-copilot.md)
+1. In the Copilot text box, enter **Add columns to track start and end time**.
 
-[Leverage Azure OpenAI Service in AI Builder (preview)](/ai-builder/prebuilt-azure-openai) 
+    Copilot adds two new columns called **Start Time** and **End Time**.
 
+1. Continue editing the table as needed. For example, add room status, change room types, or set a priority level for each room.
 
+1. When you're ready to create your app, select **Save and open app**.
+
+## Related information
+
+- [Copilot in Power Apps overview (preview)](ai-overview.md)
+- [Add a Copilot control to a canvas app (preview)](add-ai-copilot.md)
+- [Build apps through conversation (video)](https://youtu.be/A4cBqQjnIBg?feature=shared)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

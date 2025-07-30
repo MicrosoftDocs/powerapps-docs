@@ -1,19 +1,21 @@
 ---
 title: "Create and edit public model-driven app views | MicrosoftDocs"
 description: "Learn how to create or edit public or system model-driven app views."
-ms.date: 07/04/2021
+ms.date: 05/29/2025
+ms.update-cycle: 180-days
 ms.subservice: mda-maker
 ms.topic: tutorial
-author: Joel-Lindstrom
-ms.author: matp
+author: jasongre
+ms.author: jasongre
 ms.reviewer: matp
+ms.collection: bap-ai-copilot
 ---
 # Create and edit public or system views
 
-Model-driven apps can contain a range of views, so that app users can open the most suitably presented and filtered version of the table.  Views can be **Personal**, **System** or **Public**.
+Model-driven apps can contain a range of views, so that app users can open the most suitably presented and filtered version of the table.  Views can be **Personal**, **System, or **Public**.
 
 > [!NOTE]
-> Views are tied to a given table. However, you can select views during the process of creating a model driven app. By default, ALL views are made available in an app.
+> Views are tied to a given table. However, you can select views during the process of creating a model-driven app. By default, ALL views are made available in an app.
 
 :::image type="content" source="media/create-or-edit-model-driven-app-view/switch-views.gif" alt-text="Configure views in model-driven apps":::
 
@@ -24,26 +26,24 @@ Model-driven apps can contain a range of views, so that app users can open the m
 
 Public views are available for users to display table records. App makers can create and configure public views using Power Apps.
 
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select an [environment](model-driven-app-glossary.md#environment)
+1. On the left navigation pane, select **Solutions**, and open the solution you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Open a table, such as the account table, and then select the **Views** area.
+1. Select **New view** on the command bar, and then enter a **View name**, and optionally enter a **Description**.
+1. If you want to have suggestions from Copilot for the columns to create for the form based on the **View name** and **Description** values, select **Get AI-generated column suggestions**. For more information about using this AI feature, go to [Column suggestions by Copilot](create-and-edit-forms.md#column-suggestions-by-copilot).
+1. Select **Create**.
+
 > [!NOTE]
-> Public views created in Power Apps that include **Contains data** or **Does not contain data** filters will not appear in the list of saved views in Advanced Find.
+> Public views created in Power Apps that include **Contains data** or **Does not contain data** filters don't appear in the list of saved views in Advanced Find.
 
 ## Edit public views from a table
 
-In the solution that we opened earlier, create a new table or find an existing table where the public views need to be edited.
+In the solution that you opened earlier, create a new table or find an existing table where the public views need to be edited.
 
-1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. Select an [environment](model-driven-app-glossary.md#environment)
-
-   > [!NOTE]
-   > It is best practice to create tables inside a custom solution. More information: [Solution (glossary)](model-driven-app-glossary.md#solution)
-
-1. Select **Tables**, and then open the table you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
-1. Select the **Views** area.  If using a custom solution, open the solution, open the table, and then select the **Views** area.
-1. On the toolbar, select **Add view**.
-   :::image type="content" source="media/add-view.png" alt-text="Add view to table":::
-1. On the **Create a view** dialog, enter a name and, optionally, a description, and then select **Create**.
-   :::image type="content" source="media/create-a-view-dialog.png" alt-text="Create a view":::
-1. In the view designer, select **+ View column** to add additional columns needed within the view. Or, select **Table columns** in the left navigation and drag the table columns into your view.
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select an [environment](model-driven-app-glossary.md#environment)
+1. On the left navigation pane, select **Solutions**, and open the solution you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Open a table, such as the account table, and then select the **Views** area, and then open the view you that want to edit.
+1. In the view designer, select **+ View column** to add additional columns needed within the view. Or, in the **Table columns** left navigation pane drag the table columns onto your view.
 
     > [!TIP]
     > Only include the specific columns you need for the view, as larger numbers of columns in a view can cause degradation of grid performance.  
@@ -56,15 +56,16 @@ In the solution that we opened earlier, create a new table or find an existing t
 1. In the view designer, the following tasks can be performed:
 
    - To change the column filtering select the header of the column where the filter is required, and then in the dropdown list select **Filter by**.
-   - To change the column sorting select the header of the column where sorting is needed then select **Sort A-Z**, **Sort Z-A**, **Sort descending**, or **Sort ascending**.  
+   - To change the column sorting select the header of the column where sorting is needed then select **Sort A-Z**, **Sort Z-A**, **Sort descending**, or **Sort ascending**.
+       - You can configure multi-column sorts by holding Shift when selecting a sort option to add a sort condition to the set of the existing sorts.  
    - Configure column width by selecting and dragging the column to the desired position.
    - Reorder columns by dragging a column to the desired position.
-    > [!NOTE]
-    > Depending on the data type of the column the term **Sort A-Z**/**Sort Z-A** or **Sort ascending**/**Sort descending** is used
+   > [!NOTE]
+   > Depending on the data type of the column the term **Sort A-Z**/**Sort Z-A** or **Sort ascending**/**Sort descending** is used
 
-    > [!TIP]
-    > It is also possible to change column order by selecting the column header and then selecting **Move Right** or **Move Left**.
-2. Select **Publish** to save the view and make it available for other users in your organization.
+   > [!TIP]
+   > It is also possible to change column order by selecting the column header and then selecting **Move Right** or **Move Left**.
+1. Select **Save and publish** to save the view and make it available for other users in your organization.
 
 ### Next steps
 

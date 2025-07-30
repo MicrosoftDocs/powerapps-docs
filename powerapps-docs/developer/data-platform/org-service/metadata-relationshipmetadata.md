@@ -2,10 +2,10 @@
 title: Create and retrieve table relationships
 description: Shows code samples to create and retrieve table relationships.
 ms.date: 08/12/2023
-author: NHelgren
-ms.author: nhelgren
+author: mkannapiran
+ms.author: kamanick
 ms.reviewer: jdaly
-ms.topic: "article"
+ms.topic: how-to
 search.audienceType:
   - developer
 contributors:
@@ -20,7 +20,7 @@ contributors:
 This topic shows how to create and retrieve table relationships.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Create and retrieve table relationships sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/CreateRetrieveEntityRelationships)
+> [SDK for .NET: Create and retrieve table relationships sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/CreateRetrieveEntityRelationships)
 
 <a name="BKMK_Create1NEntityRelationship"></a>
 

@@ -2,8 +2,8 @@
 title: "Workflow Extensions (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to add custom workflow activities to the workflow designer." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/06/2022
-author: divkamath
-ms.author: dikamath
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
@@ -362,7 +362,7 @@ If you make changes that include significant changes to public classes or method
 
 1. Make sure the new assembly has the same `Name`, `PublicKeyToken`, and `Culture` as the existing assembly.
 1. Change the **Major Version** and/or **Minor Version** values in your `AssemblyInfo.cs` `AssemblyVersion` attribute. For example, change from `1.0.0.0` to `2.0.0.0`.
-1. Use the Plug-in Registration tool to register the assembly as a new assembly. More information: [Register an assembly](../register-plug-in.md#register-an-assembly)
+1. Use the Plug-in Registration tool to register the assembly as a new assembly. More information: [Register an assembly](../register-plug-in.md#assembly-registration)
 1. For each process using the custom workflow activity, you must deactivate the process and edit the steps that use the custom workflow activity.
 
     You'll find a **Version** selector in the process designer that you can use to choose which version of the assembly should be used.

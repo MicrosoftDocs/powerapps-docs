@@ -1,11 +1,11 @@
 ---
 title: "Code components application lifecycle management | MicrosoftDocs"
 description: "Learn about the considerations and strategies for working with specific aspects of ALM from the perspective of code components in Microsoft Dataverse."
-ms.author: hemantg
-author: HemantGaur
+author: anuitz
+ms.author: anuitz
 ms.date: 05/27/2022
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: how-to
 ms.subservice: pcf
 contributors:
  - JimDaly
@@ -38,7 +38,7 @@ When developing code components, you would follow the steps below:
 
 When your code component is ready for testing inside a model-driven app, canvas app, or portal, there are two ways to deploy a code component to Dataverse:
 
-1. [pac pcf push](/power-platform/developer/cli/reference/pcf#pac-pcf-push): This deploys a single code component at a time to a temporary **PowerAppsTools** solution.
+1. [pac pcf push](/power-platform/developer/cli/reference/pcf#pac-pcf-push): This deploys a single code component at a time to a solution specified by the `--solution-unique-name` parameter, or a temporary **PowerAppsTools** solution when no solution is specified.
 
 2. Using [pac solution init](/power-platform/developer/cli/reference/solution#pac-solution-init) and `msbuild` to build a `cdsproj` solution project that has references to one or more code components. Each code component is added to the `cdsproj` using [pac solution add-reference](/power-platform/developer/cli/reference/solution#pac-solution-add-reference). A solution project can contain references to multiple code components, whereas code component projects may only contain a single code component.
 

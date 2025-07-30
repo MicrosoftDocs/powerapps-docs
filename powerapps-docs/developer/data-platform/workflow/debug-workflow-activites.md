@@ -2,8 +2,8 @@
 title: "Debug Workflow Activities (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Describes how to debug workflow activities using the Plug-in Registration tool." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/06/2022
-author: divkamath
-ms.author: dikamath
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
@@ -46,8 +46,8 @@ This will open the **Profiler Settings** dialog which will provide the following
 
 |Field|Description|
 |--|--|
-|**Workflow**|Select the Workflow or Custom action that contains the workflow activity you want to debug.|
-|**Steps**|Select the specific steps within that workflow or custom action that you want to debug.|
+|**Workflow**|Select the Workflow that contains the workflow activity you want to debug.|
+|**Steps**|Select the specific steps within that workflow that you want to debug.|
 |**Specify profile storage**|We recommend that you choose **Persist to Entity**.|
 |**Set profiler settings**|If your are working with a system where the workflow is being executed frequently, you can reduce performance impact by choosing to limit the number of profiles that are captured.|
 |**Include secure configuration**|This provides the option to avoid seeing potentially sensitive data that may be passed as secure configuration.|

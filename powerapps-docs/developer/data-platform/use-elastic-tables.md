@@ -1,21 +1,20 @@
 ---
-title: Use elastic tables using code (preview)
+title: Use elastic tables using code
 description: Learn how to perform data operations on Dataverse elastic tables using code.
 ms.topic: how-to
-ms.date: 07/21/2023
-author: pnghub
-ms.author: gned
+ms.date: 12/16/2024
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
 contributors:
  - sumantb-msft
  - JimDaly
+ - bhavana95
 ---
 
-# Use elastic tables using code (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Use elastic tables using code
 
 This article describes how to use code to perform data operations on elastic tables.
 
@@ -86,6 +85,9 @@ MSCRM.SessionToken: 240:8#144100870#7=-1
 
 As was mentioned in [Partitioning and horizontal scaling](elastic-tables.md#partitioning-and-horizontal-scaling), each elastic table has a `partitionid` column that you must use if you choose to apply a partitioning strategy for the table. Otherwise, don't set a value for the `partitionid` column.
 
+> [!IMPORTANT]
+> If you choose to use a partitioning strategy for your elastic table, all operations on that table or referring to records in that table **MUST** specify the `partitionid` column value to uniquely identify the record. There is no error thrown if `partitionid` is not specified in the lookup value of referencing table, but the lookup will fail to locate the record when you use it. You must document and enforce this requirement via code reviews to ensure that your data is consistent and `partitionid` is used appropriately for all the operations.
+
 After you specify a non-null value for the `partitionid` column when you create a row, you must specify it when you perform any other data operation on that row. You can't change the value later.
 
 If you don't set a `partitionid` value for a record when you create it, the `partitionid` column value remains null, and you can't change it later. In this case, you can identify records by using the primary key, just as you do with standard tables. Specifying a `partitionid` value isn't required.
@@ -99,7 +101,7 @@ You can set the `partitionid` value in following ways when you perform various d
 
 As was mentioned in [Alternate keys](create-elastic-tables.md#alternate-keys), every elastic table has an alternate key that is named `KeyForNoSqlEntityWithPKPartitionId`. This alternate key combines the primary key of the table with the `partitionid` column.
 
-You can use this alternate key to specify the `partitionid` value when you use `Retrieve`, `Update`, or `Delete` operations.
+If you are using a partitioning strategy, you must specify an alternate key to specify the `partitionid` value when you use `Retrieve`, `Update`, or `Delete` operations, or when you set a lookup column for another table that refers to an elastic table record.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -123,13 +125,14 @@ This example shows how you can use the special syntax in Web API to refer to rec
 > [!NOTE]
 > Because the primary key value is a globally unique identifier (GUID), no single quotation marks are needed around it. However, because the `partitionid` value is a string, single quotation marks are needed.
 
-Here is an example:
+Here's an example:
 
 ```http
 /contoso_sensordatas(contoso_sensordataid=e61a662e-68d8-487e-94e7-ae3a22fd4bbd,partitionid='device-001')
 ```
 
 ---
+
 ### Using the partitionId parameter
 
 Currently, you can use a `partitionId` parameter to specify the value of the `partitionid` column only for `Retrieve` and `Delete` operations. For more information, go to [Known issue: The partitionId optional parameter isn't available for all messages](elastic-tables.md#the-partitionid-optional-parameter-isnt-available-for-all-messages).
@@ -148,7 +151,7 @@ request["partitionId"] = "device-001"
 > [!NOTE]
 > The `partitionId` parameter doesn't work with `POST` or `PATCH` requests, and it is ignored if it's sent.
 
-Here is an example:
+Here's an example:
 
 ```http
 /contoso_sensordatas(<primary key value>)?partitionId='<partitionid value>'
@@ -234,6 +237,9 @@ public static Guid CreateExample(
 
 Use the `x-ms-session-token` value that is returned to set the `SessionToken` optional parameter when you retrieve the record that you created. [Learn more about sending the session token](#sending-the-session-token).
 
+> [!NOTE]
+> *Deep insert* is not supported with elastic tables. Each related record needs to be created independently. [Only standard tables support deep insert](org-service/entity-operations-create.md#create-related-entities-in-one-operation)
+
 #### [Web API](#tab/webapi)
 
 **Request:**
@@ -261,12 +267,24 @@ Accept: application/json
 HTTP/1.1 204 No Content
 OData-Version: 4.0
 x-ms-session-token: 240:8#144035050#7=-1
-OData-EntityId: [Organization URI]/api/data/v9.2/sensordata(7eb682f1-ca75-e511-80d4-00155d2a68d1)
+OData-EntityId: [Organization URI]/api/data/v9.2/sensordata(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)
 ```
 
 Use the `x-ms-session-token` value that is returned with the `MSCRM.SessionToken` request header to retrieve the latest version of a record. [Learn more about sending the session token](#sending-the-session-token).
 
+
+> [!NOTE]
+> *Deep insert* is not supported with elastic tables. Each related record needs to be created independently. [Only standard tables support deep insert](webapi/create-entity-web-api.md#create-related-table-rows-in-one-operation).
+
 ---
+
+### Setting the primary key value
+
+If you don't specify a primary key value, Dataverse sets a primary key value for the record when you create it. Letting Dataverse set this value is the normal practice. You can specify the primary key value if you need to. For elastic tables, there's no performance benefit in letting Dataverse set the primary key value.
+
+Dataverse stores primary key data in telemetry to help maintain the service. If you specify customized primary key values, don't use sensitive information in those values.
+
+Elastic tables don't return an error when you create a record with a primary key value that isn't unique. By setting the primary key values with elastic tables, you can create records with that have the same primary key values and different `partitionid` values. However, this pattern isn't compatible with Power Apps. Don't create records with duplicate primary key values when people need to use this data in canvas or model-driven apps.
 
 ## Update a record in an elastic table
 
@@ -345,7 +363,7 @@ If-Match: *
 ```http
 HTTP/1.1 204 No Content
 OData-Version: 4.0
-OData-EntityId: [Organization URI]/api/data/v9.2/contoso_sensordatas(contoso_sensordataid=21d455f2-70f3-ed11-8848-000d3a993550,partitionid='deviceid-001')
+OData-EntityId: [Organization URI]/api/data/v9.2/contoso_sensordatas(contoso_sensordataid=11bb11bb-cc22-dd33-ee44-55ff55ff55ff,partitionid='deviceid-001')
 x-ms-session-token: 240:8#144035978#7=-1
 ```
 
@@ -452,7 +470,8 @@ When you query the rows of an elastic table, you get the best performance if you
 > 
 > Specifying a filter on the `partitionid` value in the usual manner doesn't have the same performance benefits as specifying it through the `partitionId` parameter as shown in the following examples.
 
-These examples retrieve the first 5,000 rows in the `contoso_SensorData` table that belong to the logical partition where `partitionid` = `'deviceid-001'`.
+These examples retrieve the first 500 rows in the `contoso_SensorData` table that belong to the logical partition where `partitionid` = `'deviceid-001'`.
+
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -517,6 +536,13 @@ OData-Version: 4.0
     ]
 }
 ```
+
+> [!NOTE]
+> The default page size for elastic tables is 500 rows. For standard tables, the default size is 5,000. Learn more about paging:
+> 
+> - [Page results using FetchXml](fetchxml/page-results.md)
+> - [Page results using QueryExpression](org-service/queryexpression/page-results.md)
+> - [Page results using OData](webapi/query/page-results.md)
 
 ---
 
@@ -666,6 +692,173 @@ OData-Version: 4.0
 You can also use the `partitionId` parameter:
 
 `sensordata(02d82842-f3f4-ed11-8848-000d3a993550)?partitionId=deviceid-001`
+
+---
+
+## Associate elastic table records
+
+When a table record refers to an elastic table record where the `partitionid` column value is null, you can associate a record in that table to a elastic table record just like standard records. Refer [SDK for .NET](org-service/entity-operations-associate-disassociate.md), or [the Web API](webapi/associate-disassociate-entities-using-web-api.md).
+
+When a table record refers to an elastic table record which has `partitionid` column value set, you must include the `partitionid` column value of the elastic table record when you set the lookup column of the referencing table. You can do this by including the value as an alternate key. 
+
+As described in [Partitionid value column on referencing table](create-elastic-tables.md#partitionid-value-column-on-referencing-table), when a one-to-many relationship is created and the elastic table is the *referenced* table, a string column and a lookup column is created on the *referencing* table. The string column stores the `partitionid` value of the referenced elastic table record.
+
+You can set both the lookup and the string column values with their respective values by:
+
+- Using an alternate key reference to set only the lookup
+- Setting the two column values together in one update
+
+How you do this depends on whether you are using the SDK for .NET or Web API
+
+
+#### [SDK for .NET](#tab/sdk)
+
+This example associates an elastic `contoso_SensorData` table record with the specified ID and `partitionid` to an existing account record by setting the lookup column with an alternate key:
+
+```csharp
+/// <summary>
+/// Demonstrates associate to elastic table operation.
+/// </summary>
+/// <param name="service">Authenticated client implementing the IOrganizationService interface</param>
+/// <param name="sensordataId">The unique identifier of the contoso_sensordata table.</param>
+/// <param name="deviceId">The deviceId. PartitionId of sensor data record.</param>
+/// <param name="accountId">The unique identifier of the account record to update.</param>
+public static void AssociateAccountAlternateKeyExample(
+    IOrganizationService service,
+    Guid sensordataId,
+    string deviceId,
+    Guid accountId)
+{
+    var keys = new KeyAttributeCollection() {
+        { "contoso_sensordataid", sensordataId },
+        { "partitionid", deviceId }
+    };
+
+    var sensorDataReference = new EntityReference("contoso_sensordata", keys);
+
+    Entity account = new("account", accountId)
+    {
+        Attributes =
+            {
+                {"contoso_sensordata", sensorDataReference}
+            }
+    };
+
+    service.Update(account);
+}
+```
+
+This example does the same thing, but sets both of the columns together:
+
+```csharp
+/// <summary>
+/// Demonstrates associate to elastic table operation.
+/// </summary>
+/// <param name="service">Authenticated client implementing the IOrganizationService interface</param>
+/// <param name="sensordataId">The unique identifier of the contoso_sensordata table.</param>
+/// <param name="deviceId">The deviceId. PartitionId of sensor data record.</param>
+/// <param name="deviceId">The unique identifier of the account record to update.</param>
+public static void AssociateAccountBothColumnsExample(
+    IOrganizationService service,
+    Guid sensordataId,
+    string deviceId,
+    Guid accountId)
+{
+    Entity account = new("account", accountId) {
+        Attributes =
+            {
+                {"contoso_sensordata", new EntityReference("contoso_sensordata", sensordataId)},
+                {"contoso_sensordatapid", deviceId }
+            }
+    };
+
+    service.Update(account);
+}
+```
+
+Finally, this example shows using the [AssociateRequest](xref:Microsoft.Xrm.Sdk.Messages.AssociateRequest) to associate a collection of `account` records to the same `contoso_SensorData` table record in one operation.
+
+```csharp
+/// <summary>
+/// Demonstrates associating multiple accounts to a contoso_sensordata elastic table record
+/// </summary>
+/// <param name="service">Authenticated client implementing the IOrganizationService interface</param>
+/// <param name="sensordataId">The unique identifier of the contoso_sensordata table.</param>
+/// <param name="deviceId">The deviceId. PartitionId of sensor data record.</param>
+/// <param name="relatedEntities">A collection of references to account records to associate to the contoso_sensordata elastic table record</param>
+public static void AssociateMultipleElasticTableExample(
+   IOrganizationService service,
+   Guid sensordataId,
+   string deviceId,
+   EntityReferenceCollection relatedEntities)
+{
+
+   // The keys to the elastic table record including the partitionid
+   var keys = new KeyAttributeCollection() {
+         { "contoso_sensordataid", sensordataId },
+         { "partitionid", deviceId }
+   };
+
+   AssociateRequest request = new()
+   {
+         Target = new EntityReference("contoso_sensordata", keys),
+         Relationship = new Relationship("contoso_SensorData_contoso_SensorData_Acc"),
+         RelatedEntities = relatedEntities
+   };
+
+   service.Execute(request);
+}
+```
+
+
+#### [Web API](#tab/webapi)
+
+This example uses the alternate key style to associate a row of the `contoso_SensorData` table with `contoso_sensordataid` = `490c3c40-e8d1-ee11-9079-000d3a993550` and `partitionid` = `'DEVICE-123'` to account record with `accountid` value of `2ada33e7-ef8b-ee11-8179-000d3a9933c9`.
+
+**Request:**
+
+```http
+PATCH [Organization URI]/api/data/v9.2/accounts(2ada33e7-ef8b-ee11-8179-000d3a9933c9)
+Content-Type: application/json
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+
+{
+  "contoso_SensorData@odata.bind": "contoso_sensordatas(contoso_sensordataid=490c3c40-e8d1-ee11-9079-000d3a993550,partitionid='DEVICE-123')"
+}
+```
+
+**Response:**
+
+```http
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+```
+
+This example does the same thing, but sets both of the columns together:
+
+**Request:**
+
+```http
+PATCH [Organization URI]/api/data/v9.2/accounts(2ada33e7-ef8b-ee11-8179-000d3a9933c9)
+Content-Type: application/json
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+
+
+{
+  "contoso_sensordatapid": "DEVICE-123",
+  "contoso_SensorData@odata.bind": "contoso_sensordatas(490c3c40-e8d1-ee11-9079-000d3a993550)"
+}
+
+```
+
+**Response:**
+
+```http
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+```
 
 ---
 
@@ -913,10 +1106,11 @@ You can use the `DeleteMultiple` message with either the SDK for .NET or Web API
 
 #### [SDK for .NET](#tab/sdk)
 
-> [!NOTE]
-> With the SDK, you must use the [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) because the SDK doesn't currently have a `DeleteMultipleRequest` class. [Learn more about using messages with the SDK for .NET](org-service/use-messages.md).
 
 The following `DeleteMultipleExample` static method uses the `DeleteMultiple` message with the [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) to delete multiple rows from the `contoso_SensorData` elastic table. The alternate key is used to include the `partitionid` value to uniquely identify the rows.
+
+> [!NOTE]
+> The [DeleteMultipleRequest Class](/dotnet/api/microsoft.xrm.sdk.messages.deletemultiplerequest) is now available to use.
 
 ```csharp
 public static void DeleteMultipleExample(IOrganizationService service)
@@ -954,10 +1148,7 @@ public static void DeleteMultipleExample(IOrganizationService service)
 
 #### [Web API](#tab/webapi)
 
-This example shows how to use the `DeleteMultiple` action to delete multiple rows from `contoso_SensorData` elastic table. The `partitionid` value is included to uniquely identify the rows.
-
-> [!NOTE]
-> Currently, the Web API `DeleteMultiple` action is a private action. You won't find it in the [CSDL $metadata document](webapi/web-api-service-documents.md#csdl-metadata-document) or in the Dataverse <xref:Microsoft.Dynamics.CRM.ActionIndex?displayProperty=fullName>. This action will become public in the coming weeks. You can use it while it's private.
+This example shows how to use the [DeleteMultiple action](xref:Microsoft.Dynamics.CRM.DeleteMultiple) to delete multiple rows from `contoso_SensorData` elastic table. The `partitionid` value is included to uniquely identify the rows.
 
 **Request:**
 
@@ -1009,8 +1200,8 @@ Learn how to use code to create and query JavaScript Object Notation (JSON) data
 
 ### See also
 
-[Elastic tables for developers (preview)](elastic-tables.md)  
-[Create elastic tables using code (preview)](create-elastic-tables.md)  
-[Query JSON columns in elastic tables (preview)](query-json-columns-elastic-tables.md) 
-[Elastic table sample code (preview)](elastic-table-samples.md)  
+[Elastic tables for developers](elastic-tables.md)  
+[Create elastic tables using code](create-elastic-tables.md)  
+[Query JSON columns in elastic tables](query-json-columns-elastic-tables.md)  
+[Elastic table sample code](elastic-table-samples.md)  
 [Bulk operation messages (preview)](bulk-operations.md)

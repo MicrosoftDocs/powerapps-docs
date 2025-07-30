@@ -1,26 +1,17 @@
 ---
 title: "Retrieve published metadata | MicrosoftDocs"
-description: "Retrieving unpublished metadata not only will add overhead to processing the request itself, performing more slowly, it could also return metadata that the requestor does not expect."
-services: ''
+description: "Retrieving unpublished metadata not only adds overhead to processing the request itself, performing more slowly, it could also return metadata that the requestor doesn't expect."
 suite: powerapps
-documentationcenter: na
-author: jowells
-editor: ''
-tags: ''
-
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+author: mkannapiran
+ms.author: kamanick
+ms.reviewer: jdaly
+ms.topic: how-to
 ms.date: 1/15/2019
 ms.subservice: dataverse-developer
-ms.author: jowells
 search.audienceType: 
   - developer
 ---
 # Retrieve published metadata
-
-
 
 **Category**: Performance, Usage
 
@@ -39,15 +30,15 @@ Retrieving unpublished metadata could result in:
 
 ## Guidance
 
-It is not common to retrieve unpublished customizations and rarely would you have the need to retrieve those customizations.
+It isn't common to retrieve unpublished customizations and rarely would you have the need to retrieve those customizations.
 
-An example of when you would need to retrieve unpublished customizations is if you want to create an application to edit customizable metadata.  For instance, if you were to create a custom metadata editor, you must retrieve any unpublished definitions of those items. If a developer defines some changes but does not publish them, your application must be able to retrieve them to ensure the developer is retrieving the latest developed customizations. Failure to do so could result in the loss of unpublished customizations.
+An example of when you would need to retrieve unpublished customizations is if you want to create an application to edit customizable metadata. For instance, if you were to create a custom metadata editor, you must retrieve any unpublished definitions of those items. If a developer defines some changes but doesn't publish them, your application must be able to retrieve them to ensure the developer is retrieving the latest developed customizations. Failure to do so could result in the loss of unpublished customizations.
 
-However, if you are not creating an editor or do not have an explicit need for retrieving unpublished definitions, then only retrieve those that are published. The following examples show how to retrieve published customizations:
+However, if you aren't creating an editor or don't have an explicit need for retrieving unpublished definitions, then only retrieve definitions that are published. The following examples show how to retrieve published customizations:
 
 ### Default behavior
 
-By default, retrieving metadata will get only published customizations
+By default, retrieving metadata gets only published customizations.
 
 ```csharp
 public RetrieveAllEntitiesAttributesResponse GetAllEntitiesImplicit(IOrganizationService service)
@@ -145,7 +136,7 @@ This guidance applies to the following Web API functions as well:
 
 The Dynamics 365 service allows for retrieval of certain metadata that is published or unpublished. Ever since Dynamics CRM 2011, published metadata is returned, by default, from the application's in-memory metadata cache unless the developer explicitly assigns the `RetrieveAsIfPublished` property value to `true`.
 
-Retrieving unpublished metadata not only will add overhead to processing the request itself, performing more slowly, it could also return metadata that the requestor does not expect. For example, retrieving unpublished optionset metadata could return a label value that is not visible in the user interface, causing confusion to the end-user.
+Retrieving unpublished metadata not only adds overhead to processing the request itself, performing more slowly, it could also return metadata that the requestor doesn't expect. For example, retrieving unpublished optionset metadata could return a label value that isn't visible in the user interface, causing confusion to the end-user.
 
 <a name='seealso'></a>
 

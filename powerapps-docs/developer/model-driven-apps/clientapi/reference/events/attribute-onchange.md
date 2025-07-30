@@ -1,8 +1,8 @@
 ---
-title: "Column OnChange Event in model-driven apps| MicrosoftDocs"
+title: "Column OnChange Event in model-driven apps"
 description: Learn about how to set the column OnChange event.
-author: HemantGaur
-ms.author: hemantg
+author: MitiJ
+ms.author: mijosh
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -43,11 +43,8 @@ There are three methods you can use to work with the `OnChange` event for a colu
 
 ### Related articles
 
-[Columns (Client API reference)](../attributes.md)
- 
-
-
-
-
+[Columns (Client API reference)](../attributes.md)   
+[Events (Client API reference)](../events.md)   
+[Events in forms and grids in model-driven apps](../../events-forms-grids.md)
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

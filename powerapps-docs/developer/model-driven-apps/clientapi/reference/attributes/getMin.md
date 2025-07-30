@@ -1,8 +1,8 @@
 ---
-title: "getMin (Client API reference)| MicrosoftDocs"
+title: "getMin (Client API reference)"
 description: Includes description and supported parameters for the getMin method.
-author: HemantGaur
-ms.author: hemantg
+author: clromano
+ms.author: clromano
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -13,8 +13,6 @@ contributors:
   - JimDaly
 ---
 # getMin (Client API reference)
-
-
 
 Returns a number indicating the minimum allowed value for a column. 
 
@@ -31,7 +29,5 @@ Decimal, integer, double, money
 **Type**: Number. 
 
 **Description**: The minimum allowed value for the column.
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

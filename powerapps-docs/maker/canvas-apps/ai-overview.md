@@ -1,81 +1,119 @@
 ---
-title: AI Copilot overview
-description: AI Copilot overview in Power Apps.
+title: Copilot in Power Apps overview (preview)
+description: Learn how Copilot in Microsoft Power Apps makes it easy to build apps by providing insights and actions in response to natural language requests.
 author: mduelae
-ms.topic: conceptual
-ms.custom: canvas
-ms.collection: get-started
-ms.reviewer: 
-ms.date: 3/13/2023
-ms.subservice: canvas-maker
 ms.author: tapanm
+ms.topic: article
+ms.custom: 
+  - canvas
+  - ai-gen-docs-bap
+  - ai-gen-title
+  - ai-gen-desc
+  - ai-seo-date: 5/25/2025
+ai-usage: ai-assisted
+ms.reviewer: 
+ms.date: 06/27/2025
+ms.update-cycle: 180-days
+ms.subservice: canvas-maker
 search.audienceType: 
   - maker
+ms.collection: 
+    - bap-ai-copilot
+    - get started
 contributors:
   - mduelae
+  - Mattp123
 ---
 
-# AI Copilot overview
+# Copilot in Power Apps overview (preview)
 
-[This article is prerelease documentation and is subject to change.]
+[!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
-Bringing the power of AI Copilot to both app makers and their end-users in Power Apps. With Copilot you can build an app, including the data behind it, just by describing what you need through multiple steps of conversation. Your apps will have copilot-powered experiences built in from the first screen&mdash;so your users can discover insights in conversation instead of mouse-clicks.
+Copilot in Power Apps helps you build apps using natural language. You can build an app with a data model behind it, by having a conversation with Copilot. You don't need to write any code or design any screens. Copilot generates the app for you based on your description of the business solution.
 
-To learn how to use the new AI features in Power Apps, see:
+Users can ask questions or give commands to the app, and Copilot responds with relevant insights or actions. All questions or commands can be in natural language, making your app more engaging and intuitive for your users.
 
-- [Build apps through conversation](ai-conversations-create-app.md)
-- [Continue editing your app with Copilot (preview)](ai-edit-app.md)
-- [Add Chatbot control to a canvas app (preview)](add-ai-chatbot.md)
-- [Add Copilot control to a canvas app (preview)](add-ai-copilot.md)
-- [Leverage Azure OpenAI Service in AI Builder (preview)](/ai-builder/prebuilt-azure-openai)
+In this article, you learn how to use Copilot features in Power Apps.
 
 > [!IMPORTANT]
-> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
-> - For more information, go to the [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
-> - This capability is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview).
-> - This capability is in the process of rolling out, and may not be available in your region yet.
-> - This capability may be subject to usage limits or capacity throttling.
-> - To understand capabilities and limitations of AI-powered and Copilot features in Power Apps, see [FAQ about using AI responsibly in Power Apps](../common/transparency-note.md)
+>
+> - This is a preview feature.
+> - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2189520), and are available before an official release so that customers can get early access and provide feedback.
 
-## Prerequisites for the AI features in Power Apps
+> [!NOTE]
+>
+> This capability is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview).
 
-The following are requirements to access the waitlist for this preview:
+## Prerequisites
 
-- Your environment must be in the United States region.
+Each Copilot feature might have different requirements. Refer to the specific documentation for each feature in the following articles.
 
-- Your account must have **English (United States)** as the browser language.
+If you need to disable Copilot, see [Disable Copilot in Power Apps](#disable-copilot-in-power-apps).
 
-- Have a [Microsoft Dataverse database](/power-platform/admin/create-database) in your environment.  
+### Availability
 
-- AI Builder must be enabled for your environment to use the AI models or controls leveraging AI models:
+- This capability might not be available in your region yet. Learn more in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/en-US/availability-reports/?report=copilotfeaturereport).
+- This capability might be subject to usage limits or capacity throttling.
+- Understand the capabilities and limitations of AI-powered and Copilot features in Power Apps. Learn more in [FAQ about using AI responsibly in Power Apps](../common/transparency-note.md).
 
-    1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
+## Copilot use in Power Apps
 
-    2. In the admin center, go to **Environments** &gt; *\[select an environment\]* &gt; **Settings** &gt; **Product** &gt; **Features**.
+The following articles can help you build various apps in different scenarios using Copilot.
 
-    3. On the **Features** settings page, under **AI Builder**, enable or disable **AI Builder preview models**.
+- [Create a plan using Plan designer](../plan-designer/create-plan.md)
+
+## Copilot in canvas apps
+
+- [Build apps through conversation](ai-conversations-create-app.md)
+- [Edit your app with Copilot (preview)](ai-edit-app.md)
+- [Add a Copilot control to a canvas app (preview)](add-ai-copilot.md)
+- [Create Power Fx formulas with Copilot](ai-formulas-formulabar.md)
+- [Use field suggestions by Copilot](ai-field-suggestions.md)
+- [Add a custom Copilot to a canvas app (preview)](add-custom-copilot.md)
+- [Build an agent to automate your business process (preview)](agent-builder.md)
+- [Rename controls in canvas apps with Copilot (preview)](./controls/copilot-rename-controls.md)
+
+## Copilot in model-driven apps
+
+Model-driven apps support [AI features](../../user/ai-in-apps.md) to improve the efficiency and productivity of business processes with intelligent automation and assistance.
+
+## Copilot feature use
+
+- [Filter, sort, and search galleries with Copilot (preview)](../../user/smartgrid.md)
+- [Draft well-written input text with Copilot (preview)](../../user/well-written-input-text-copilot.md)
+- [Visualize data in a view with Copilot (preview)](../../user/visualize-data-in-copilot.md)
+
+## Microsoft Dataverse
+
+- [Add knowledge to an existing copilot: Dataverse](../data-platform/data-platform-copilot.md)
 
 ## Disable Copilot in Power Apps
 
-For this preview, Copilot in Power Apps is enabled by default. To disable it, you need to have administrator access.
-
-Follow these steps to disable **Copilot** in Power Apps for your tenant.
-
-1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
-2. Select **Settings** > **Tenant settings** in the left-side navigation pane.
-3. Select **Copilot (preview)** > set the toggle to **Off** > **Save**.
+Preview Copilot features are enabled by default, but your admin can turn them off for an environment or tenant.
 
 > [!NOTE]
-> Turning off Copilot for your tenant will only disable Copilot for makers. It won't disable [Copilot control for canvas apps](add-ai-copilot.md) or [Copilot for model-driven apps](../model-driven-apps/add-ai-copilot.md).
+>
+> [Generally available](/power-platform/admin/general-availability-deployment) Copilot features are enabled by default and can't be turned off except by Microsoft Support. To disable them, a tenant admin must [contact Support](/power-platform/admin/get-help-support).
 
-Follow these steps to disable **Copilot** for your environment.
+### Disable preview Copilot for an environment
 
 1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
-2. In the left-side navigation pane **Environment**.
-3. Select the environment and on the command bar, select **Settings**.
-4. Set the toggle to **Off** for **Copilot**.
+1. In the navigation pane, select **Environments**, then select an environment.
+1. From the command bar, select **Settings** > **Features**.
+1. Set the **Copilot** toggle to **Off**.
 
+### Disable preview Copilot for your tenant
 
-## See also
+1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
+1. In the navigation pane, select **Settings** and you see the **Tenant settings** page.
+1. Select **Copilot in Power Apps (preview)**, and then set the toggle to **Off**.
+1. Select **Save**.
 
-[Transparency notes for Power Apps](../common/transparency-note.md)
+> [!NOTE]
+> Turning off Copilot for your tenant disables Copilot for makers only. It doesn't disable the [Copilot control for canvas apps](add-ai-copilot.md) or [Copilot for model-driven apps](../model-driven-apps/add-ai-copilot.md).
+
+### Related information
+
+- [FAQ about using AI responsibly in Power Apps](../common/transparency-note.md)
+- [Language availability for Power Platform](https://dynamics.microsoft.com/availability-reports/languagereport/)
+- [Geographical availability for Power Platform](https://dynamics.microsoft.com/availability-reports/georeport/)

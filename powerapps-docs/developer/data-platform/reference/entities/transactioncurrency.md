@@ -1,53 +1,52 @@
 ---
-title: "Currency (TransactionCurrency)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the Currency (TransactionCurrency)  table/entity."
-ms.date: 09/01/2023
-ms.service: "powerapps"
-ms.topic: "reference"
-ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "phecke"
-ms.author: "pehecke"
+title: "Currency (TransactionCurrency) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the Currency (TransactionCurrency) table/entity with Microsoft Dataverse."
+ms.topic: generated-reference
+author: phecke
+ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# Currency (TransactionCurrency)  table/entity reference
-
-> [!NOTE]
-> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
+# Currency (TransactionCurrency) table/entity reference (Microsoft Dataverse)
 
 Currency in which a financial transaction is carried out.
 
-
 ## Messages
 
-|Message|Web API Operation|SDK class or method|
-|-|-|-|
-|Create|POST /transactioncurrencies<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE /transactioncurrencies(*transactioncurrencyid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET /transactioncurrencies(*transactioncurrencyid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveExchangeRate|<xref:Microsoft.Dynamics.CRM.RetrieveExchangeRate?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveExchangeRateRequest>|
-|RetrieveMultiple|GET /transactioncurrencies<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|SetState|PATCH /transactioncurrencies(*transactioncurrencyid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH /transactioncurrencies(*transactioncurrencyid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+The following table lists the messages for the Currency (TransactionCurrency) table.
+Messages represent operations that can be performed on the table. They may also be events.
+
+| Name <br />Is Event? |Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Create`<br />Event: True |`POST` /transactioncurrencies<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `Delete`<br />Event: True |`DELETE` /transactioncurrencies(*transactioncurrencyid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `Retrieve`<br />Event: False |`GET` /transactioncurrencies(*transactioncurrencyid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveExchangeRate`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrieveExchangeRate?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrieveExchangeRateRequest>|
+| `RetrieveMultiple`<br />Event: False |`GET` /transactioncurrencies<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
+| `SetState`<br />Event: True |`PATCH` /transactioncurrencies(*transactioncurrencyid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `statecode` and `statuscode` properties. |<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+| `Update`<br />Event: True |`PATCH` /transactioncurrencies(*transactioncurrencyid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
+| `Upsert`<br />Event: False |`PATCH` /transactioncurrencies(*transactioncurrencyid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
 
 ## Properties
 
-|Property|Value|
-|--------|-----|
-|CollectionSchemaName|TransactionCurrencies|
-|DisplayCollectionName|Currencies|
-|DisplayName|Currency|
-|EntitySetName|transactioncurrencies|
-|IsBPFEntity|False|
-|LogicalCollectionName|transactioncurrencies|
-|LogicalName|transactioncurrency|
-|OwnershipType|OrganizationOwned|
-|PrimaryIdAttribute|transactioncurrencyid|
-|PrimaryNameAttribute|currencyname|
-|SchemaName|TransactionCurrency|
+The following table lists selected properties for the Currency (TransactionCurrency) table.
 
-<a name="writable-attributes"></a>
+|Property|Value|
+| --- | --- |
+| **DisplayName** | **Currency** |
+| **DisplayCollectionName** | **Currencies** |
+| **SchemaName** | `TransactionCurrency` |
+| **CollectionSchemaName** | `TransactionCurrencies` |
+| **EntitySetName** | `transactioncurrencies`|
+| **LogicalName** | `transactioncurrency` |
+| **LogicalCollectionName** | `transactioncurrencies` |
+| **PrimaryIdAttribute** | `transactioncurrencyid` |
+| **PrimaryNameAttribute** |`currencyname` |
+| **TableType** | `Standard` |
+| **OwnershipType** | `OrganizationOwned` |
 
 ## Writable columns/attributes
 
@@ -56,6 +55,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [CurrencyName](#BKMK_CurrencyName)
 - [CurrencyPrecision](#BKMK_CurrencyPrecision)
 - [CurrencySymbol](#BKMK_CurrencySymbol)
+- [CurrencyType](#BKMK_CurrencyType)
 - [EntityImage](#BKMK_EntityImage)
 - [ExchangeRate](#BKMK_ExchangeRate)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
@@ -65,1494 +65,1275 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [StatusCode](#BKMK_StatusCode)
 - [TransactionCurrencyId](#BKMK_TransactionCurrencyId)
 
-
 ### <a name="BKMK_CurrencyName"></a> CurrencyName
 
 |Property|Value|
-|--------|-----|
-|Description|Name of the transaction currency.|
-|DisplayName|Currency Name|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Name of the transaction currency.**|
+|DisplayName|**Currency Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|currencyname|
-|MaxLength|100|
+|LogicalName|`currencyname`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_CurrencyPrecision"></a> CurrencyPrecision
 
 |Property|Value|
-|--------|-----|
-|Description|Number of decimal places that can be used for currency.|
-|DisplayName|Currency Precision|
-|Format|None|
+|---|---|
+|Description|**Number of decimal places that can be used for currency.**|
+|DisplayName|**Currency Precision**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|currencyprecision|
-|MaxValue|10|
-|MinValue|0|
+|LogicalName|`currencyprecision`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
-
+|MaxValue|10|
+|MinValue|0|
 
 ### <a name="BKMK_CurrencySymbol"></a> CurrencySymbol
 
 |Property|Value|
-|--------|-----|
-|Description|Symbol for the transaction currency.|
-|DisplayName|Currency Symbol|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Symbol for the transaction currency.**|
+|DisplayName|**Currency Symbol**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|currencysymbol|
-|MaxLength|10|
+|LogicalName|`currencysymbol`|
 |RequiredLevel|SystemRequired|
 |Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|10|
 
+### <a name="BKMK_CurrencyType"></a> CurrencyType
+
+|Property|Value|
+|---|---|
+|Description|**Currency type that can be used for new currency.**|
+|DisplayName|**Currency Type**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`currencytype`|
+|RequiredLevel|SystemRequired|
+|Type|Picklist|
+|DefaultFormValue|0|
+|GlobalChoiceName|`transactioncurrency_currencytype`|
+
+#### CurrencyType Choices/Options
+
+|Value|Label|
+|---|---|
+|0|**System**|
+|1|**Custom**|
 
 ### <a name="BKMK_EntityImage"></a> EntityImage
 
 |Property|Value|
-|--------|-----|
-|Description|The default image for the entity.|
-|DisplayName|Entity Image|
-|IsPrimaryImage|True|
+|---|---|
+|Description|**The default image for the entity.**|
+|DisplayName|**Entity Image**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|entityimage|
-|MaxHeight|144|
-|MaxWidth|144|
+|LogicalName|`entityimage`|
 |RequiredLevel|None|
 |Type|Image|
-
+|CanStoreFullImage|False|
+|IsPrimaryImage|True|
+|MaxHeight|144|
+|MaxSizeInKB|10240|
+|MaxWidth|144|
 
 ### <a name="BKMK_ExchangeRate"></a> ExchangeRate
 
 |Property|Value|
-|--------|-----|
-|Description|Exchange rate between the transaction currency and the base currency.|
-|DisplayName|Exchange Rate|
+|---|---|
+|Description|**Exchange rate between the transaction currency and the base currency.**|
+|DisplayName|**Exchange Rate**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|exchangerate|
-|MaxValue|100000000000|
-|MinValue|0.000000000001|
-|Precision|12|
+|LogicalName|`exchangerate`|
 |RequiredLevel|SystemRequired|
 |Type|Decimal|
-
+|ImeMode|Disabled|
+|MaxValue|100000000000|
+|MinValue|1E-12|
+|Precision|12|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the data import or data migration that created this record.|
-|DisplayName|Import Sequence Number|
-|Format|None|
+|---|---|
+|Description|**Unique identifier of the data import or data migration that created this record.**|
+|DisplayName|**Import Sequence Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|importsequencenumber|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`importsequencenumber`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_ISOCurrencyCode"></a> ISOCurrencyCode
 
 |Property|Value|
-|--------|-----|
-|Description|ISO currency code for the transaction currency.|
-|DisplayName|Currency Code|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**ISO currency code for the transaction currency.**|
+|DisplayName|**Currency Code**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|isocurrencycode|
-|MaxLength|5|
+|LogicalName|`isocurrencycode`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|5|
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time that the record was migrated.|
-|DisplayName|Record Created On|
-|Format|DateOnly|
+|---|---|
+|Description|**Date and time that the record was migrated.**|
+|DisplayName|**Record Created On**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|overriddencreatedon|
+|LogicalName|`overriddencreatedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateOnly|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_StateCode"></a> StateCode
 
 |Property|Value|
-|--------|-----|
-|Description|Status of the transaction currency.|
-|DisplayName|Status|
-|IsValidForCreate|False|
+|---|---|
+|Description|**Status of the transaction currency.**|
+|DisplayName|**Status**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|statecode|
+|LogicalName|`statecode`|
 |RequiredLevel|SystemRequired|
 |Type|State|
+|DefaultFormValue|0|
+|GlobalChoiceName|`transactioncurrency_statecode`|
 
 #### StateCode Choices/Options
 
-|Value|Label|DefaultStatus|InvariantName|
-|-----|-----|-------------|-------------|
-|0|Active|1|Active|
-|1|Inactive|2|Inactive|
-
-
+|Value|Details|
+|---|---|
+|0|Label: **Active**<br />DefaultStatus: 1<br />InvariantName: `Active`|
+|1|Label: **Inactive**<br />DefaultStatus: 2<br />InvariantName: `Inactive`|
 
 ### <a name="BKMK_StatusCode"></a> StatusCode
 
 |Property|Value|
-|--------|-----|
-|Description|Reason for the status of the transaction currency.|
-|DisplayName|Status Reason|
+|---|---|
+|Description|**Reason for the status of the transaction currency.**|
+|DisplayName|**Status Reason**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|statuscode|
+|LogicalName|`statuscode`|
 |RequiredLevel|None|
 |Type|Status|
+|DefaultFormValue|-1|
+|GlobalChoiceName|`transactioncurrency_statuscode`|
 
 #### StatusCode Choices/Options
 
-|Value|Label|State|
-|-----|-----|-----|
-|1|Active|0|
-|2|Inactive|1|
-
-
+|Value|Details|
+|---|---|
+|1|Label: **Active**<br />State:0<br />TransitionData: None|
+|2|Label: **Inactive**<br />State:1<br />TransitionData: None|
 
 ### <a name="BKMK_TransactionCurrencyId"></a> TransactionCurrencyId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the transaction currency.|
-|DisplayName|Transaction Currency|
+|---|---|
+|Description|**Unique identifier of the transaction currency.**|
+|DisplayName|**Transaction Currency**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|transactioncurrencyid|
+|LogicalName|`transactioncurrencyid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
 
-<a name="read-only-attributes"></a>
 
 ## Read-only columns/attributes
 
-These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** and **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [CreatedBy](#BKMK_CreatedBy)
-- [CreatedByName](#BKMK_CreatedByName)
-- [CreatedByYomiName](#BKMK_CreatedByYomiName)
 - [CreatedOn](#BKMK_CreatedOn)
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
-- [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
-- [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
 - [EntityImage_Timestamp](#BKMK_EntityImage_Timestamp)
 - [EntityImage_URL](#BKMK_EntityImage_URL)
 - [EntityImageId](#BKMK_EntityImageId)
 - [ModifiedBy](#BKMK_ModifiedBy)
-- [ModifiedByName](#BKMK_ModifiedByName)
-- [ModifiedByYomiName](#BKMK_ModifiedByYomiName)
 - [ModifiedOn](#BKMK_ModifiedOn)
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
-- [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
-- [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
 - [OrganizationId](#BKMK_OrganizationId)
 - [UniqueDscId](#BKMK_UniqueDscId)
 - [VersionNumber](#BKMK_VersionNumber)
 
-
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user who created the transaction currency.|
-|DisplayName|Created By|
+|---|---|
+|Description|**Unique identifier of the user who created the transaction currency.**|
+|DisplayName|**Created By**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdby|
+|LogicalName|`createdby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedByName"></a> CreatedByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedByYomiName"></a> CreatedByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_CreatedOn"></a> CreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when the transaction currency was created.|
-|DisplayName|Created On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Date and time when the transaction currency was created.**|
+|DisplayName|**Created On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdon|
+|LogicalName|`createdon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_CreatedOnBehalfBy"></a> CreatedOnBehalfBy
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the delegate user who created the transactioncurrency.|
-|DisplayName|Created By (Delegate)|
+|---|---|
+|Description|**Unique identifier of the delegate user who created the transactioncurrency.**|
+|DisplayName|**Created By (Delegate)**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdonbehalfby|
+|LogicalName|`createdonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedOnBehalfByName"></a> CreatedOnBehalfByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedOnBehalfByYomiName"></a> CreatedOnBehalfByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_EntityImage_Timestamp"></a> EntityImage_Timestamp
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|entityimage_timestamp|
-|MaxValue|9223372036854775807|
-|MinValue|-9223372036854775808|
+|LogicalName|`entityimage_timestamp`|
 |RequiredLevel|None|
 |Type|BigInt|
-
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
 
 ### <a name="BKMK_EntityImage_URL"></a> EntityImage_URL
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
-|FormatName|Url|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|entityimage_url|
-|MaxLength|200|
+|LogicalName|`entityimage_url`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Url|
+|FormatName|Url|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|200|
 
 ### <a name="BKMK_EntityImageId"></a> EntityImageId
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Entity Image Id|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Entity Image Id**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|entityimageid|
+|LogicalName|`entityimageid`|
 |RequiredLevel|None|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user who last modified the transaction currency.|
-|DisplayName|Modified By|
+|---|---|
+|Description|**Unique identifier of the user who last modified the transaction currency.**|
+|DisplayName|**Modified By**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedby|
+|LogicalName|`modifiedby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedByName"></a> ModifiedByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedByYomiName"></a> ModifiedByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_ModifiedOn"></a> ModifiedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when the transaction currency was last modified.|
-|DisplayName|Modified On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Date and time when the transaction currency was last modified.**|
+|DisplayName|**Modified On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedon|
+|LogicalName|`modifiedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_ModifiedOnBehalfBy"></a> ModifiedOnBehalfBy
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the delegate user who last modified the transactioncurrency.|
-|DisplayName|Modified By (Delegate)|
+|---|---|
+|Description|**Unique identifier of the delegate user who last modified the transactioncurrency.**|
+|DisplayName|**Modified By (Delegate)**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedonbehalfby|
+|LogicalName|`modifiedonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedOnBehalfByName"></a> ModifiedOnBehalfByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedOnBehalfByYomiName"></a> ModifiedOnBehalfByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_OrganizationId"></a> OrganizationId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the organization associated with the transaction currency.|
-|DisplayName|Organization|
+|---|---|
+|Description|**Unique identifier of the organization associated with the transaction currency.**|
+|DisplayName|**Organization**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|organizationid|
+|LogicalName|`organizationid`|
 |RequiredLevel|SystemRequired|
-|Targets|organization|
 |Type|Lookup|
-
+|Targets|organization|
 
 ### <a name="BKMK_UniqueDscId"></a> UniqueDscId
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|UniqueDscId|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**UniqueDscId**|
 |IsValidForForm|False|
 |IsValidForRead|False|
-|LogicalName|uniquedscid|
+|LogicalName|`uniquedscid`|
 |RequiredLevel|None|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
 |Property|Value|
-|--------|-----|
-|Description|Version number of the transaction currency.|
-|DisplayName|Version Number|
+|---|---|
+|Description|**Version number of the transaction currency.**|
+|DisplayName|**Version Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|versionnumber|
-|MaxValue|9223372036854775807|
-|MinValue|-9223372036854775808|
+|LogicalName|`versionnumber`|
 |RequiredLevel|None|
 |Type|BigInt|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
 
-<a name="onetomany"></a>
+## Many-to-One relationships
 
-## One-To-Many Relationships
+These relationships are many-to-one. Listed by **SchemaName**.
 
-Listed by **SchemaName**.
-
-- [TransactionCurrency_Goal](#BKMK_TransactionCurrency_Goal)
-- [TransactionCurrency_SharePointSite](#BKMK_TransactionCurrency_SharePointSite)
-- [TransactionCurrency_QueueItem](#BKMK_TransactionCurrency_QueueItem)
-- [transactioncurrency_actioncard](#BKMK_transactioncurrency_actioncard)
-- [TransactionCurrency_officegraphdocument](#BKMK_TransactionCurrency_officegraphdocument)
-- [TransactionCurrency_KnowledgeBaseRecord](#BKMK_TransactionCurrency_KnowledgeBaseRecord)
-- [TransactionCurrency_ActionCardUserState](#BKMK_TransactionCurrency_ActionCardUserState)
-- [TransactionCurrency_SharePointDocumentLocation](#BKMK_TransactionCurrency_SharePointDocumentLocation)
-- [TransactionCurrency_SLAItem](#BKMK_TransactionCurrency_SLAItem)
-- [transactioncurrency_expiredprocess](#BKMK_transactioncurrency_expiredprocess)
-- [TransactionCurrency_ProcessSessions](#BKMK_TransactionCurrency_ProcessSessions)
-- [TransactionCurrency_SyncErrors](#BKMK_TransactionCurrency_SyncErrors)
-- [transactioncurrency_socialactivity](#BKMK_transactioncurrency_socialactivity)
-- [TransactionCurrency_MailMergeTemplate](#BKMK_TransactionCurrency_MailMergeTemplate)
-- [TransactionCurrency_UserMapping](#BKMK_TransactionCurrency_UserMapping)
-- [transactioncurrency_fixedmonthlyfiscalcalendar](#BKMK_transactioncurrency_fixedmonthlyfiscalcalendar)
-- [transactioncurrency_semiannualfiscalcalendar](#BKMK_transactioncurrency_semiannualfiscalcalendar)
-- [TransactionCurrency_PhoneCall](#BKMK_TransactionCurrency_PhoneCall)
-- [TransactionCurrency_Fax](#BKMK_TransactionCurrency_Fax)
-- [transactioncurrency_usersettings](#BKMK_transactioncurrency_usersettings)
-- [TransactionCurrency_ActivityPointer](#BKMK_TransactionCurrency_ActivityPointer)
-- [transactioncurrency_category](#BKMK_transactioncurrency_category)
-- [transactioncurrency_position](#BKMK_transactioncurrency_position)
-- [TransactionCurrency_Task](#BKMK_TransactionCurrency_Task)
-- [TransactionCurrency_SLA](#BKMK_TransactionCurrency_SLA)
-- [basecurrency_organization](#BKMK_basecurrency_organization)
-- [TransactionCurrency_Letter](#BKMK_TransactionCurrency_Letter)
-- [TransactionCurrency_SystemUser](#BKMK_TransactionCurrency_SystemUser)
-- [TransactionCurrency_Team](#BKMK_TransactionCurrency_Team)
-- [TransactionCurrency_Email](#BKMK_TransactionCurrency_Email)
-- [TransactionCurrency_BusinessUnit](#BKMK_TransactionCurrency_BusinessUnit)
-- [transactioncurrency_SocialProfile](#BKMK_transactioncurrency_SocialProfile)
-- [TransactionCurrency_Queue](#BKMK_TransactionCurrency_Queue)
-- [TransactionCurrency_DuplicateMatchingRecord](#BKMK_TransactionCurrency_DuplicateMatchingRecord)
-- [TransactionCurrency_Appointment](#BKMK_TransactionCurrency_Appointment)
-- [transactioncurrency_quarterlyfiscalcalendar](#BKMK_transactioncurrency_quarterlyfiscalcalendar)
-- [TransactionCurrency_KbArticle](#BKMK_TransactionCurrency_KbArticle)
-- [transactioncurrency_monthlyfiscalcalendar](#BKMK_transactioncurrency_monthlyfiscalcalendar)
-- [TransactionCurrency_CustomerAddress](#BKMK_TransactionCurrency_CustomerAddress)
-- [transactioncurrency_annualfiscalcalendar](#BKMK_transactioncurrency_annualfiscalcalendar)
-- [TransactionCurrency_Connection](#BKMK_TransactionCurrency_Connection)
-- [transactioncurrency_translationprocess](#BKMK_transactioncurrency_translationprocess)
-- [transactioncurrency_feedback](#BKMK_transactioncurrency_feedback)
-- [transactioncurrency_contact](#BKMK_transactioncurrency_contact)
-- [TransactionCurrency_ReportCategory](#BKMK_TransactionCurrency_ReportCategory)
-- [TransactionCurrency_InteractionForEmail](#BKMK_TransactionCurrency_InteractionForEmail)
-- [TransactionCurrency_slakpiinstance](#BKMK_TransactionCurrency_slakpiinstance)
-- [TransactionCurrency_DuplicateBaseRecord](#BKMK_TransactionCurrency_DuplicateBaseRecord)
-- [TransactionCurrency_AsyncOperations](#BKMK_TransactionCurrency_AsyncOperations)
-- [transactioncurrency_knowledgearticleviews](#BKMK_transactioncurrency_knowledgearticleviews)
-- [TransactionCurrency_Theme](#BKMK_TransactionCurrency_Theme)
-- [transactioncurrency_newprocess](#BKMK_transactioncurrency_newprocess)
-- [TransactionCurrency_knowledgearticle](#BKMK_TransactionCurrency_knowledgearticle)
-- [TransactionCurrency_RecurringAppointmentMaster](#BKMK_TransactionCurrency_RecurringAppointmentMaster)
-- [transactioncurrency_account](#BKMK_transactioncurrency_account)
-- [TransactionCurrency_recommendeddocument](#BKMK_TransactionCurrency_recommendeddocument)
-- [TransactionCurrency_Territory](#BKMK_TransactionCurrency_Territory)
-- [chat_transactioncurrency_transactioncurrencyid](#BKMK_chat_transactioncurrency_transactioncurrencyid)
-
-
-### <a name="BKMK_TransactionCurrency_Goal"></a> TransactionCurrency_Goal
-
-Same as the [TransactionCurrency_Goal](goal.md#BKMK_TransactionCurrency_Goal) many-to-one relationship for the [goal](goal.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|goal|
-|ReferencingAttribute|transactioncurrencyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|TransactionCurrency_Goal|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_TransactionCurrency_SharePointSite"></a> TransactionCurrency_SharePointSite
-
-Same as the [TransactionCurrency_SharePointSite](sharepointsite.md#BKMK_TransactionCurrency_SharePointSite) many-to-one relationship for the [sharepointsite](sharepointsite.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|sharepointsite|
-|ReferencingAttribute|transactioncurrencyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|TransactionCurrency_SharePointSite|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_TransactionCurrency_QueueItem"></a> TransactionCurrency_QueueItem
-
-Same as the [TransactionCurrency_QueueItem](queueitem.md#BKMK_TransactionCurrency_QueueItem) many-to-one relationship for the [queueitem](queueitem.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|queueitem|
-|ReferencingAttribute|transactioncurrencyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|TransactionCurrency_QueueItem|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_transactioncurrency_actioncard"></a> transactioncurrency_actioncard
-
-Same as the [transactioncurrency_actioncard](actioncard.md#BKMK_transactioncurrency_actioncard) many-to-one relationship for the [actioncard](actioncard.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|actioncard|
-|ReferencingAttribute|transactioncurrencyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|transactioncurrency_actioncard|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_TransactionCurrency_officegraphdocument"></a> TransactionCurrency_officegraphdocument
-
-Same as the [TransactionCurrency_officegraphdocument](officegraphdocument.md#BKMK_TransactionCurrency_officegraphdocument) many-to-one relationship for the [officegraphdocument](officegraphdocument.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|officegraphdocument|
-|ReferencingAttribute|transactioncurrencyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|TransactionCurrency_officegraphdocument|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_TransactionCurrency_KnowledgeBaseRecord"></a> TransactionCurrency_KnowledgeBaseRecord
-
-Same as the [TransactionCurrency_KnowledgeBaseRecord](knowledgebaserecord.md#BKMK_TransactionCurrency_KnowledgeBaseRecord) many-to-one relationship for the [knowledgebaserecord](knowledgebaserecord.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|knowledgebaserecord|
-|ReferencingAttribute|transactioncurrencyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|TransactionCurrency_KnowledgeBaseRecord|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_TransactionCurrency_ActionCardUserState"></a> TransactionCurrency_ActionCardUserState
-
-Same as the [TransactionCurrency_ActionCardUserState](actioncarduserstate.md#BKMK_TransactionCurrency_ActionCardUserState) many-to-one relationship for the [actioncarduserstate](actioncarduserstate.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|actioncarduserstate|
-|ReferencingAttribute|transactioncurrencyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|TransactionCurrency_ActionCardUserState|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_TransactionCurrency_SharePointDocumentLocation"></a> TransactionCurrency_SharePointDocumentLocation
-
-Same as the [TransactionCurrency_SharePointDocumentLocation](sharepointdocumentlocation.md#BKMK_TransactionCurrency_SharePointDocumentLocation) many-to-one relationship for the [sharepointdocumentlocation](sharepointdocumentlocation.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|sharepointdocumentlocation|
-|ReferencingAttribute|transactioncurrencyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|TransactionCurrency_SharePointDocumentLocation|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_TransactionCurrency_SLAItem"></a> TransactionCurrency_SLAItem
-
-Same as the [TransactionCurrency_SLAItem](slaitem.md#BKMK_TransactionCurrency_SLAItem) many-to-one relationship for the [slaitem](slaitem.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|slaitem|
-|ReferencingAttribute|transactioncurrencyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|TransactionCurrency_SLAItem|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_transactioncurrency_expiredprocess"></a> transactioncurrency_expiredprocess
-
-Same as the [transactioncurrency_expiredprocess](expiredprocess.md#BKMK_transactioncurrency_expiredprocess) many-to-one relationship for the [expiredprocess](expiredprocess.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|expiredprocess|
-|ReferencingAttribute|transactioncurrencyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|transactioncurrency_expiredprocess|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_TransactionCurrency_ProcessSessions"></a> TransactionCurrency_ProcessSessions
-
-Same as the [TransactionCurrency_ProcessSessions](processsession.md#BKMK_TransactionCurrency_ProcessSessions) many-to-one relationship for the [processsession](processsession.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|processsession|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|TransactionCurrency_ProcessSessions|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 110|
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_TransactionCurrency_SyncErrors"></a> TransactionCurrency_SyncErrors
-
-Same as the [TransactionCurrency_SyncErrors](syncerror.md#BKMK_TransactionCurrency_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|syncerror|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|TransactionCurrency_SyncErrors|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: Cascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
-
-
-### <a name="BKMK_transactioncurrency_socialactivity"></a> transactioncurrency_socialactivity
-
-Same as the [transactioncurrency_socialactivity](socialactivity.md#BKMK_transactioncurrency_socialactivity) many-to-one relationship for the [socialactivity](socialactivity.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|socialactivity|
-|ReferencingAttribute|transactioncurrencyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|transactioncurrency_socialactivity|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_TransactionCurrency_MailMergeTemplate"></a> TransactionCurrency_MailMergeTemplate
-
-Same as the [TransactionCurrency_MailMergeTemplate](mailmergetemplate.md#BKMK_TransactionCurrency_MailMergeTemplate) many-to-one relationship for the [mailmergetemplate](mailmergetemplate.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|mailmergetemplate|
-|ReferencingAttribute|transactioncurrencyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|TransactionCurrency_MailMergeTemplate|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_TransactionCurrency_UserMapping"></a> TransactionCurrency_UserMapping
-
-Same as the [TransactionCurrency_UserMapping](usermapping.md#BKMK_TransactionCurrency_UserMapping) many-to-one relationship for the [usermapping](usermapping.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|usermapping|
-|ReferencingAttribute|transactioncurrencyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|TransactionCurrency_UserMapping|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_transactioncurrency_fixedmonthlyfiscalcalendar"></a> transactioncurrency_fixedmonthlyfiscalcalendar
-
-Same as the [transactioncurrency_fixedmonthlyfiscalcalendar](fixedmonthlyfiscalcalendar.md#BKMK_transactioncurrency_fixedmonthlyfiscalcalendar) many-to-one relationship for the [fixedmonthlyfiscalcalendar](fixedmonthlyfiscalcalendar.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|fixedmonthlyfiscalcalendar|
-|ReferencingAttribute|transactioncurrencyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|transactioncurrency_fixedmonthlyfiscalcalendar|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_transactioncurrency_semiannualfiscalcalendar"></a> transactioncurrency_semiannualfiscalcalendar
-
-Same as the [transactioncurrency_semiannualfiscalcalendar](semiannualfiscalcalendar.md#BKMK_transactioncurrency_semiannualfiscalcalendar) many-to-one relationship for the [semiannualfiscalcalendar](semiannualfiscalcalendar.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|semiannualfiscalcalendar|
-|ReferencingAttribute|transactioncurrencyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|transactioncurrency_semiannualfiscalcalendar|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_TransactionCurrency_PhoneCall"></a> TransactionCurrency_PhoneCall
-
-Same as the [TransactionCurrency_PhoneCall](phonecall.md#BKMK_TransactionCurrency_PhoneCall) many-to-one relationship for the [phonecall](phonecall.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|phonecall|
-|ReferencingAttribute|transactioncurrencyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|TransactionCurrency_PhoneCall|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_TransactionCurrency_Fax"></a> TransactionCurrency_Fax
-
-Same as the [TransactionCurrency_Fax](fax.md#BKMK_TransactionCurrency_Fax) many-to-one relationship for the [fax](fax.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|fax|
-|ReferencingAttribute|transactioncurrencyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|TransactionCurrency_Fax|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_transactioncurrency_usersettings"></a> transactioncurrency_usersettings
-
-Same as the [transactioncurrency_usersettings](usersettings.md#BKMK_transactioncurrency_usersettings) many-to-one relationship for the [usersettings](usersettings.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|usersettings|
-|ReferencingAttribute|transactioncurrencyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|transactioncurrency_usersettings|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_TransactionCurrency_ActivityPointer"></a> TransactionCurrency_ActivityPointer
-
-Same as the [TransactionCurrency_ActivityPointer](activitypointer.md#BKMK_TransactionCurrency_ActivityPointer) many-to-one relationship for the [activitypointer](activitypointer.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|activitypointer|
-|ReferencingAttribute|transactioncurrencyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|TransactionCurrency_ActivityPointer|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_transactioncurrency_category"></a> transactioncurrency_category
-
-Same as the [transactioncurrency_category](category.md#BKMK_transactioncurrency_category) many-to-one relationship for the [category](category.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|category|
-|ReferencingAttribute|transactioncurrencyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|transactioncurrency_category|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_transactioncurrency_position"></a> transactioncurrency_position
-
-Same as the [transactioncurrency_position](position.md#BKMK_transactioncurrency_position) many-to-one relationship for the [position](position.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|position|
-|ReferencingAttribute|transactioncurrencyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|transactioncurrency_position|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_TransactionCurrency_Task"></a> TransactionCurrency_Task
-
-Same as the [TransactionCurrency_Task](task.md#BKMK_TransactionCurrency_Task) many-to-one relationship for the [task](task.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|task|
-|ReferencingAttribute|transactioncurrencyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|TransactionCurrency_Task|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_TransactionCurrency_SLA"></a> TransactionCurrency_SLA
-
-Same as the [TransactionCurrency_SLA](sla.md#BKMK_TransactionCurrency_SLA) many-to-one relationship for the [sla](sla.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|sla|
-|ReferencingAttribute|transactioncurrencyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|TransactionCurrency_SLA|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_basecurrency_organization"></a> basecurrency_organization
-
-Same as the [basecurrency_organization](organization.md#BKMK_basecurrency_organization) many-to-one relationship for the [organization](organization.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|organization|
-|ReferencingAttribute|basecurrencyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|basecurrency_organization|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_TransactionCurrency_Letter"></a> TransactionCurrency_Letter
-
-Same as the [TransactionCurrency_Letter](letter.md#BKMK_TransactionCurrency_Letter) many-to-one relationship for the [letter](letter.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|letter|
-|ReferencingAttribute|transactioncurrencyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|TransactionCurrency_Letter|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_TransactionCurrency_SystemUser"></a> TransactionCurrency_SystemUser
-
-Same as the [TransactionCurrency_SystemUser](systemuser.md#BKMK_TransactionCurrency_SystemUser) many-to-one relationship for the [systemuser](systemuser.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|systemuser|
-|ReferencingAttribute|transactioncurrencyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|TransactionCurrency_SystemUser|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_TransactionCurrency_Team"></a> TransactionCurrency_Team
-
-Same as the [TransactionCurrency_Team](team.md#BKMK_TransactionCurrency_Team) many-to-one relationship for the [team](team.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|team|
-|ReferencingAttribute|transactioncurrencyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|TransactionCurrency_Team|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_TransactionCurrency_Email"></a> TransactionCurrency_Email
-
-Same as the [TransactionCurrency_Email](email.md#BKMK_TransactionCurrency_Email) many-to-one relationship for the [email](email.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|email|
-|ReferencingAttribute|transactioncurrencyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|TransactionCurrency_Email|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_TransactionCurrency_BusinessUnit"></a> TransactionCurrency_BusinessUnit
-
-Same as the [TransactionCurrency_BusinessUnit](businessunit.md#BKMK_TransactionCurrency_BusinessUnit) many-to-one relationship for the [businessunit](businessunit.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|businessunit|
-|ReferencingAttribute|transactioncurrencyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|TransactionCurrency_BusinessUnit|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_transactioncurrency_SocialProfile"></a> transactioncurrency_SocialProfile
-
-Same as the [transactioncurrency_SocialProfile](socialprofile.md#BKMK_transactioncurrency_SocialProfile) many-to-one relationship for the [socialprofile](socialprofile.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|socialprofile|
-|ReferencingAttribute|transactioncurrencyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|transactioncurrency_SocialProfile|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_TransactionCurrency_Queue"></a> TransactionCurrency_Queue
-
-Same as the [TransactionCurrency_Queue](queue.md#BKMK_TransactionCurrency_Queue) many-to-one relationship for the [queue](queue.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|queue|
-|ReferencingAttribute|transactioncurrencyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|TransactionCurrency_Queue|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_TransactionCurrency_DuplicateMatchingRecord"></a> TransactionCurrency_DuplicateMatchingRecord
-
-Same as the [TransactionCurrency_DuplicateMatchingRecord](duplicaterecord.md#BKMK_TransactionCurrency_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|duplicaterecord|
-|ReferencingAttribute|duplicaterecordid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|TransactionCurrency_DuplicateMatchingRecord|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_TransactionCurrency_Appointment"></a> TransactionCurrency_Appointment
-
-Same as the [TransactionCurrency_Appointment](appointment.md#BKMK_TransactionCurrency_Appointment) many-to-one relationship for the [appointment](appointment.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|appointment|
-|ReferencingAttribute|transactioncurrencyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|TransactionCurrency_Appointment|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_transactioncurrency_quarterlyfiscalcalendar"></a> transactioncurrency_quarterlyfiscalcalendar
-
-Same as the [transactioncurrency_quarterlyfiscalcalendar](quarterlyfiscalcalendar.md#BKMK_transactioncurrency_quarterlyfiscalcalendar) many-to-one relationship for the [quarterlyfiscalcalendar](quarterlyfiscalcalendar.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|quarterlyfiscalcalendar|
-|ReferencingAttribute|transactioncurrencyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|transactioncurrency_quarterlyfiscalcalendar|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_TransactionCurrency_KbArticle"></a> TransactionCurrency_KbArticle
-
-Same as the [TransactionCurrency_KbArticle](kbarticle.md#BKMK_TransactionCurrency_KbArticle) many-to-one relationship for the [kbarticle](kbarticle.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|kbarticle|
-|ReferencingAttribute|transactioncurrencyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|TransactionCurrency_KbArticle|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_transactioncurrency_monthlyfiscalcalendar"></a> transactioncurrency_monthlyfiscalcalendar
-
-Same as the [transactioncurrency_monthlyfiscalcalendar](monthlyfiscalcalendar.md#BKMK_transactioncurrency_monthlyfiscalcalendar) many-to-one relationship for the [monthlyfiscalcalendar](monthlyfiscalcalendar.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|monthlyfiscalcalendar|
-|ReferencingAttribute|transactioncurrencyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|transactioncurrency_monthlyfiscalcalendar|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_TransactionCurrency_CustomerAddress"></a> TransactionCurrency_CustomerAddress
-
-Same as the [TransactionCurrency_CustomerAddress](customeraddress.md#BKMK_TransactionCurrency_CustomerAddress) many-to-one relationship for the [customeraddress](customeraddress.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|customeraddress|
-|ReferencingAttribute|transactioncurrencyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|TransactionCurrency_CustomerAddress|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_transactioncurrency_annualfiscalcalendar"></a> transactioncurrency_annualfiscalcalendar
-
-Same as the [transactioncurrency_annualfiscalcalendar](annualfiscalcalendar.md#BKMK_transactioncurrency_annualfiscalcalendar) many-to-one relationship for the [annualfiscalcalendar](annualfiscalcalendar.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|annualfiscalcalendar|
-|ReferencingAttribute|transactioncurrencyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|transactioncurrency_annualfiscalcalendar|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_TransactionCurrency_Connection"></a> TransactionCurrency_Connection
-
-Same as the [TransactionCurrency_Connection](connection.md#BKMK_TransactionCurrency_Connection) many-to-one relationship for the [connection](connection.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|connection|
-|ReferencingAttribute|transactioncurrencyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|TransactionCurrency_Connection|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_transactioncurrency_translationprocess"></a> transactioncurrency_translationprocess
-
-Same as the [transactioncurrency_translationprocess](translationprocess.md#BKMK_transactioncurrency_translationprocess) many-to-one relationship for the [translationprocess](translationprocess.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|translationprocess|
-|ReferencingAttribute|transactioncurrencyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|transactioncurrency_translationprocess|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_transactioncurrency_feedback"></a> transactioncurrency_feedback
-
-Same as the [transactioncurrency_feedback](feedback.md#BKMK_transactioncurrency_feedback) many-to-one relationship for the [feedback](feedback.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|feedback|
-|ReferencingAttribute|transactioncurrencyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|transactioncurrency_feedback|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_transactioncurrency_contact"></a> transactioncurrency_contact
-
-Same as the [transactioncurrency_contact](contact.md#BKMK_transactioncurrency_contact) many-to-one relationship for the [contact](contact.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|contact|
-|ReferencingAttribute|transactioncurrencyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|transactioncurrency_contact|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_TransactionCurrency_ReportCategory"></a> TransactionCurrency_ReportCategory
-
-Same as the [TransactionCurrency_ReportCategory](reportcategory.md#BKMK_TransactionCurrency_ReportCategory) many-to-one relationship for the [reportcategory](reportcategory.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|reportcategory|
-|ReferencingAttribute|transactioncurrencyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|TransactionCurrency_ReportCategory|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_TransactionCurrency_InteractionForEmail"></a> TransactionCurrency_InteractionForEmail
-
-Same as the [TransactionCurrency_InteractionForEmail](interactionforemail.md#BKMK_TransactionCurrency_InteractionForEmail) many-to-one relationship for the [interactionforemail](interactionforemail.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|interactionforemail|
-|ReferencingAttribute|transactioncurrencyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|TransactionCurrency_InteractionForEmail|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_TransactionCurrency_slakpiinstance"></a> TransactionCurrency_slakpiinstance
-
-Same as the [TransactionCurrency_slakpiinstance](slakpiinstance.md#BKMK_TransactionCurrency_slakpiinstance) many-to-one relationship for the [slakpiinstance](slakpiinstance.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|slakpiinstance|
-|ReferencingAttribute|transactioncurrencyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|TransactionCurrency_slakpiinstance|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_TransactionCurrency_DuplicateBaseRecord"></a> TransactionCurrency_DuplicateBaseRecord
-
-Same as the [TransactionCurrency_DuplicateBaseRecord](duplicaterecord.md#BKMK_TransactionCurrency_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|duplicaterecord|
-|ReferencingAttribute|baserecordid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|TransactionCurrency_DuplicateBaseRecord|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_TransactionCurrency_AsyncOperations"></a> TransactionCurrency_AsyncOperations
-
-Same as the [TransactionCurrency_AsyncOperations](asyncoperation.md#BKMK_TransactionCurrency_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|asyncoperation|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|TransactionCurrency_AsyncOperations|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_transactioncurrency_knowledgearticleviews"></a> transactioncurrency_knowledgearticleviews
-
-Same as the [transactioncurrency_knowledgearticleviews](knowledgearticleviews.md#BKMK_transactioncurrency_knowledgearticleviews) many-to-one relationship for the [knowledgearticleviews](knowledgearticleviews.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|knowledgearticleviews|
-|ReferencingAttribute|transactioncurrencyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|transactioncurrency_knowledgearticleviews|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_TransactionCurrency_Theme"></a> TransactionCurrency_Theme
-
-Same as the [TransactionCurrency_Theme](theme.md#BKMK_TransactionCurrency_Theme) many-to-one relationship for the [theme](theme.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|theme|
-|ReferencingAttribute|transactioncurrencyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|TransactionCurrency_Theme|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_transactioncurrency_newprocess"></a> transactioncurrency_newprocess
-
-Same as the [transactioncurrency_newprocess](newprocess.md#BKMK_transactioncurrency_newprocess) many-to-one relationship for the [newprocess](newprocess.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|newprocess|
-|ReferencingAttribute|transactioncurrencyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|transactioncurrency_newprocess|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_TransactionCurrency_knowledgearticle"></a> TransactionCurrency_knowledgearticle
-
-Same as the [TransactionCurrency_knowledgearticle](knowledgearticle.md#BKMK_TransactionCurrency_knowledgearticle) many-to-one relationship for the [knowledgearticle](knowledgearticle.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|knowledgearticle|
-|ReferencingAttribute|transactioncurrencyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|transactioncurrency_knowledgearticle|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_TransactionCurrency_RecurringAppointmentMaster"></a> TransactionCurrency_RecurringAppointmentMaster
-
-Same as the [TransactionCurrency_RecurringAppointmentMaster](recurringappointmentmaster.md#BKMK_TransactionCurrency_RecurringAppointmentMaster) many-to-one relationship for the [recurringappointmentmaster](recurringappointmentmaster.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|recurringappointmentmaster|
-|ReferencingAttribute|transactioncurrencyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|TransactionCurrency_RecurringAppointmentMaster|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_transactioncurrency_account"></a> transactioncurrency_account
-
-Same as the [transactioncurrency_account](account.md#BKMK_transactioncurrency_account) many-to-one relationship for the [account](account.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|account|
-|ReferencingAttribute|transactioncurrencyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|transactioncurrency_account|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_TransactionCurrency_recommendeddocument"></a> TransactionCurrency_recommendeddocument
-
-Same as the [TransactionCurrency_recommendeddocument](recommendeddocument.md#BKMK_TransactionCurrency_recommendeddocument) many-to-one relationship for the [recommendeddocument](recommendeddocument.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|recommendeddocument|
-|ReferencingAttribute|transactioncurrencyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|TransactionCurrency_recommendeddocument|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_TransactionCurrency_Territory"></a> TransactionCurrency_Territory
-
-**Added by**: Application Common Solution
-
-Same as the [TransactionCurrency_Territory](territory.md#BKMK_TransactionCurrency_Territory) many-to-one relationship for the [territory](territory.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|territory|
-|ReferencingAttribute|transactioncurrencyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|TransactionCurrency_Territory|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_chat_transactioncurrency_transactioncurrencyid"></a> chat_transactioncurrency_transactioncurrencyid
-
-**Added by**: Activities Patch Solution
-
-Same as the [chat_transactioncurrency_transactioncurrencyid](chat.md#BKMK_chat_transactioncurrency_transactioncurrencyid) many-to-one relationship for the [chat](chat.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|chat|
-|ReferencingAttribute|transactioncurrencyid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|chat_transactioncurrency_transactioncurrencyid|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-<a name="manytoone"></a>
-
-## Many-To-One Relationships
-
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
-
+- [lk_transactioncurrency_createdonbehalfby](#BKMK_lk_transactioncurrency_createdonbehalfby)
+- [lk_transactioncurrency_modifiedonbehalfby](#BKMK_lk_transactioncurrency_modifiedonbehalfby)
 - [lk_transactioncurrencybase_createdby](#BKMK_lk_transactioncurrencybase_createdby)
 - [lk_transactioncurrencybase_modifiedby](#BKMK_lk_transactioncurrencybase_modifiedby)
-- [lk_transactioncurrency_modifiedonbehalfby](#BKMK_lk_transactioncurrency_modifiedonbehalfby)
 - [organization_transactioncurrencies](#BKMK_organization_transactioncurrencies)
-- [lk_transactioncurrency_createdonbehalfby](#BKMK_lk_transactioncurrency_createdonbehalfby)
-
-
-### <a name="BKMK_lk_transactioncurrencybase_createdby"></a> lk_transactioncurrencybase_createdby
-
-See the [lk_transactioncurrencybase_createdby](systemuser.md#BKMK_lk_transactioncurrencybase_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_transactioncurrencybase_modifiedby"></a> lk_transactioncurrencybase_modifiedby
-
-See the [lk_transactioncurrencybase_modifiedby](systemuser.md#BKMK_lk_transactioncurrencybase_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_transactioncurrency_modifiedonbehalfby"></a> lk_transactioncurrency_modifiedonbehalfby
-
-See the [lk_transactioncurrency_modifiedonbehalfby](systemuser.md#BKMK_lk_transactioncurrency_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_organization_transactioncurrencies"></a> organization_transactioncurrencies
-
-See the [organization_transactioncurrencies](organization.md#BKMK_organization_transactioncurrencies) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_lk_transactioncurrency_createdonbehalfby"></a> lk_transactioncurrency_createdonbehalfby
 
-See the [lk_transactioncurrency_createdonbehalfby](systemuser.md#BKMK_lk_transactioncurrency_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+One-To-Many Relationship: [systemuser lk_transactioncurrency_createdonbehalfby](systemuser.md#BKMK_lk_transactioncurrency_createdonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`createdonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_transactioncurrency_modifiedonbehalfby"></a> lk_transactioncurrency_modifiedonbehalfby
+
+One-To-Many Relationship: [systemuser lk_transactioncurrency_modifiedonbehalfby](systemuser.md#BKMK_lk_transactioncurrency_modifiedonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`modifiedonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_transactioncurrencybase_createdby"></a> lk_transactioncurrencybase_createdby
+
+One-To-Many Relationship: [systemuser lk_transactioncurrencybase_createdby](systemuser.md#BKMK_lk_transactioncurrencybase_createdby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdby`|
+|ReferencingEntityNavigationPropertyName|`createdby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_transactioncurrencybase_modifiedby"></a> lk_transactioncurrencybase_modifiedby
+
+One-To-Many Relationship: [systemuser lk_transactioncurrencybase_modifiedby](systemuser.md#BKMK_lk_transactioncurrencybase_modifiedby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedby`|
+|ReferencingEntityNavigationPropertyName|`modifiedby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_organization_transactioncurrencies"></a> organization_transactioncurrencies
+
+One-To-Many Relationship: [organization organization_transactioncurrencies](organization.md#BKMK_organization_transactioncurrencies)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`organization`|
+|ReferencedAttribute|`organizationid`|
+|ReferencingAttribute|`organizationid`|
+|ReferencingEntityNavigationPropertyName|`organizationid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+
+## One-to-Many relationships
+
+These relationships are one-to-many. Listed by **SchemaName**.
+
+- [adx_inviteredemption_transactioncurrency_transactioncurrencyid](#BKMK_adx_inviteredemption_transactioncurrency_transactioncurrencyid)
+- [adx_portalcomment_transactioncurrency_transactioncurrencyid](#BKMK_adx_portalcomment_transactioncurrency_transactioncurrencyid)
+- [basecurrency_organization](#BKMK_basecurrency_organization)
+- [chat_transactioncurrency_transactioncurrencyid](#BKMK_chat_transactioncurrency_transactioncurrencyid)
+- [transactioncurrency_account](#BKMK_transactioncurrency_account)
+- [transactioncurrency_actioncard](#BKMK_transactioncurrency_actioncard)
+- [TransactionCurrency_ActionCardUserState](#BKMK_TransactionCurrency_ActionCardUserState)
+- [TransactionCurrency_ActivityPointer](#BKMK_TransactionCurrency_ActivityPointer)
+- [transactioncurrency_annualfiscalcalendar](#BKMK_transactioncurrency_annualfiscalcalendar)
+- [TransactionCurrency_Appointment](#BKMK_TransactionCurrency_Appointment)
+- [TransactionCurrency_AsyncOperations](#BKMK_TransactionCurrency_AsyncOperations)
+- [TransactionCurrency_BusinessUnit](#BKMK_TransactionCurrency_BusinessUnit)
+- [transactioncurrency_category](#BKMK_transactioncurrency_category)
+- [TransactionCurrency_Connection](#BKMK_TransactionCurrency_Connection)
+- [transactioncurrency_contact](#BKMK_transactioncurrency_contact)
+- [TransactionCurrency_CustomerAddress](#BKMK_TransactionCurrency_CustomerAddress)
+- [TransactionCurrency_DuplicateBaseRecord](#BKMK_TransactionCurrency_DuplicateBaseRecord)
+- [TransactionCurrency_DuplicateMatchingRecord](#BKMK_TransactionCurrency_DuplicateMatchingRecord)
+- [TransactionCurrency_Email](#BKMK_TransactionCurrency_Email)
+- [transactioncurrency_expiredprocess](#BKMK_transactioncurrency_expiredprocess)
+- [TransactionCurrency_Fax](#BKMK_TransactionCurrency_Fax)
+- [transactioncurrency_feedback](#BKMK_transactioncurrency_feedback)
+- [transactioncurrency_fixedmonthlyfiscalcalendar](#BKMK_transactioncurrency_fixedmonthlyfiscalcalendar)
+- [TransactionCurrency_Goal](#BKMK_TransactionCurrency_Goal)
+- [TransactionCurrency_InteractionForEmail](#BKMK_TransactionCurrency_InteractionForEmail)
+- [TransactionCurrency_KbArticle](#BKMK_TransactionCurrency_KbArticle)
+- [TransactionCurrency_knowledgearticle](#BKMK_TransactionCurrency_knowledgearticle)
+- [transactioncurrency_knowledgearticleviews](#BKMK_transactioncurrency_knowledgearticleviews)
+- [TransactionCurrency_KnowledgeBaseRecord](#BKMK_TransactionCurrency_KnowledgeBaseRecord)
+- [TransactionCurrency_Letter](#BKMK_TransactionCurrency_Letter)
+- [TransactionCurrency_MailMergeTemplate](#BKMK_TransactionCurrency_MailMergeTemplate)
+- [transactioncurrency_monthlyfiscalcalendar](#BKMK_transactioncurrency_monthlyfiscalcalendar)
+- [transactioncurrency_newprocess](#BKMK_transactioncurrency_newprocess)
+- [TransactionCurrency_officegraphdocument](#BKMK_TransactionCurrency_officegraphdocument)
+- [TransactionCurrency_PhoneCall](#BKMK_TransactionCurrency_PhoneCall)
+- [transactioncurrency_position](#BKMK_transactioncurrency_position)
+- [TransactionCurrency_ProcessSessions](#BKMK_TransactionCurrency_ProcessSessions)
+- [transactioncurrency_quarterlyfiscalcalendar](#BKMK_transactioncurrency_quarterlyfiscalcalendar)
+- [TransactionCurrency_Queue](#BKMK_TransactionCurrency_Queue)
+- [TransactionCurrency_QueueItem](#BKMK_TransactionCurrency_QueueItem)
+- [TransactionCurrency_recommendeddocument](#BKMK_TransactionCurrency_recommendeddocument)
+- [TransactionCurrency_RecurringAppointmentMaster](#BKMK_TransactionCurrency_RecurringAppointmentMaster)
+- [TransactionCurrency_ReportCategory](#BKMK_TransactionCurrency_ReportCategory)
+- [transactioncurrency_semiannualfiscalcalendar](#BKMK_transactioncurrency_semiannualfiscalcalendar)
+- [TransactionCurrency_SharePointDocumentLocation](#BKMK_TransactionCurrency_SharePointDocumentLocation)
+- [TransactionCurrency_SharePointSite](#BKMK_TransactionCurrency_SharePointSite)
+- [TransactionCurrency_SimilarityRule](#BKMK_TransactionCurrency_SimilarityRule)
+- [TransactionCurrency_SLA](#BKMK_TransactionCurrency_SLA)
+- [TransactionCurrency_SLAItem](#BKMK_TransactionCurrency_SLAItem)
+- [TransactionCurrency_slakpiinstance](#BKMK_TransactionCurrency_slakpiinstance)
+- [transactioncurrency_socialactivity](#BKMK_transactioncurrency_socialactivity)
+- [transactioncurrency_SocialProfile](#BKMK_transactioncurrency_SocialProfile)
+- [TransactionCurrency_SyncErrors](#BKMK_TransactionCurrency_SyncErrors)
+- [TransactionCurrency_SystemUser](#BKMK_TransactionCurrency_SystemUser)
+- [TransactionCurrency_Task](#BKMK_TransactionCurrency_Task)
+- [TransactionCurrency_Team](#BKMK_TransactionCurrency_Team)
+- [TransactionCurrency_Territory](#BKMK_TransactionCurrency_Territory)
+- [TransactionCurrency_Theme](#BKMK_TransactionCurrency_Theme)
+- [transactioncurrency_translationprocess](#BKMK_transactioncurrency_translationprocess)
+- [TransactionCurrency_UserMapping](#BKMK_TransactionCurrency_UserMapping)
+- [transactioncurrency_usersettings](#BKMK_transactioncurrency_usersettings)
+
+### <a name="BKMK_adx_inviteredemption_transactioncurrency_transactioncurrencyid"></a> adx_inviteredemption_transactioncurrency_transactioncurrencyid
+
+Many-To-One Relationship: [adx_inviteredemption adx_inviteredemption_transactioncurrency_transactioncurrencyid](adx_inviteredemption.md#BKMK_adx_inviteredemption_transactioncurrency_transactioncurrencyid)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`adx_inviteredemption`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`adx_inviteredemption_transactioncurrency_transactioncurrencyid`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_adx_portalcomment_transactioncurrency_transactioncurrencyid"></a> adx_portalcomment_transactioncurrency_transactioncurrencyid
+
+Many-To-One Relationship: [adx_portalcomment adx_portalcomment_transactioncurrency_transactioncurrencyid](adx_portalcomment.md#BKMK_adx_portalcomment_transactioncurrency_transactioncurrencyid)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`adx_portalcomment`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`adx_portalcomment_transactioncurrency_transactioncurrencyid`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_basecurrency_organization"></a> basecurrency_organization
+
+Many-To-One Relationship: [organization basecurrency_organization](organization.md#BKMK_basecurrency_organization)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`organization`|
+|ReferencingAttribute|`basecurrencyid`|
+|ReferencedEntityNavigationPropertyName|`basecurrency_organization`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_chat_transactioncurrency_transactioncurrencyid"></a> chat_transactioncurrency_transactioncurrencyid
+
+Many-To-One Relationship: [chat chat_transactioncurrency_transactioncurrencyid](chat.md#BKMK_chat_transactioncurrency_transactioncurrencyid)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`chat`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`chat_transactioncurrency_transactioncurrencyid`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_transactioncurrency_account"></a> transactioncurrency_account
+
+Many-To-One Relationship: [account transactioncurrency_account](account.md#BKMK_transactioncurrency_account)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`account`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`transactioncurrency_account`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_transactioncurrency_actioncard"></a> transactioncurrency_actioncard
+
+Many-To-One Relationship: [actioncard transactioncurrency_actioncard](actioncard.md#BKMK_transactioncurrency_actioncard)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`actioncard`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`transactioncurrency_actioncard`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_TransactionCurrency_ActionCardUserState"></a> TransactionCurrency_ActionCardUserState
+
+Many-To-One Relationship: [actioncarduserstate TransactionCurrency_ActionCardUserState](actioncarduserstate.md#BKMK_TransactionCurrency_ActionCardUserState)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`actioncarduserstate`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`TransactionCurrency_ActionCardUserState`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_TransactionCurrency_ActivityPointer"></a> TransactionCurrency_ActivityPointer
+
+Many-To-One Relationship: [activitypointer TransactionCurrency_ActivityPointer](activitypointer.md#BKMK_TransactionCurrency_ActivityPointer)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`activitypointer`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`TransactionCurrency_ActivityPointer`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_transactioncurrency_annualfiscalcalendar"></a> transactioncurrency_annualfiscalcalendar
+
+Many-To-One Relationship: [annualfiscalcalendar transactioncurrency_annualfiscalcalendar](annualfiscalcalendar.md#BKMK_transactioncurrency_annualfiscalcalendar)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`annualfiscalcalendar`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`transactioncurrency_annualfiscalcalendar`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_TransactionCurrency_Appointment"></a> TransactionCurrency_Appointment
+
+Many-To-One Relationship: [appointment TransactionCurrency_Appointment](appointment.md#BKMK_TransactionCurrency_Appointment)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`appointment`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`TransactionCurrency_Appointment`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_TransactionCurrency_AsyncOperations"></a> TransactionCurrency_AsyncOperations
+
+Many-To-One Relationship: [asyncoperation TransactionCurrency_AsyncOperations](asyncoperation.md#BKMK_TransactionCurrency_AsyncOperations)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`asyncoperation`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`TransactionCurrency_AsyncOperations`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_TransactionCurrency_BusinessUnit"></a> TransactionCurrency_BusinessUnit
+
+Many-To-One Relationship: [businessunit TransactionCurrency_BusinessUnit](businessunit.md#BKMK_TransactionCurrency_BusinessUnit)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`businessunit`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`TransactionCurrency_BusinessUnit`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_transactioncurrency_category"></a> transactioncurrency_category
+
+Many-To-One Relationship: [category transactioncurrency_category](category.md#BKMK_transactioncurrency_category)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`category`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`transactioncurrency_category`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_TransactionCurrency_Connection"></a> TransactionCurrency_Connection
+
+Many-To-One Relationship: [connection TransactionCurrency_Connection](connection.md#BKMK_TransactionCurrency_Connection)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`connection`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`TransactionCurrency_Connection`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_transactioncurrency_contact"></a> transactioncurrency_contact
+
+Many-To-One Relationship: [contact transactioncurrency_contact](contact.md#BKMK_transactioncurrency_contact)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`contact`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`transactioncurrency_contact`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_TransactionCurrency_CustomerAddress"></a> TransactionCurrency_CustomerAddress
+
+Many-To-One Relationship: [customeraddress TransactionCurrency_CustomerAddress](customeraddress.md#BKMK_TransactionCurrency_CustomerAddress)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`customeraddress`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`TransactionCurrency_CustomerAddress`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_TransactionCurrency_DuplicateBaseRecord"></a> TransactionCurrency_DuplicateBaseRecord
+
+Many-To-One Relationship: [duplicaterecord TransactionCurrency_DuplicateBaseRecord](duplicaterecord.md#BKMK_TransactionCurrency_DuplicateBaseRecord)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`duplicaterecord`|
+|ReferencingAttribute|`baserecordid`|
+|ReferencedEntityNavigationPropertyName|`TransactionCurrency_DuplicateBaseRecord`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_TransactionCurrency_DuplicateMatchingRecord"></a> TransactionCurrency_DuplicateMatchingRecord
+
+Many-To-One Relationship: [duplicaterecord TransactionCurrency_DuplicateMatchingRecord](duplicaterecord.md#BKMK_TransactionCurrency_DuplicateMatchingRecord)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`duplicaterecord`|
+|ReferencingAttribute|`duplicaterecordid`|
+|ReferencedEntityNavigationPropertyName|`TransactionCurrency_DuplicateMatchingRecord`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_TransactionCurrency_Email"></a> TransactionCurrency_Email
+
+Many-To-One Relationship: [email TransactionCurrency_Email](email.md#BKMK_TransactionCurrency_Email)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`email`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`TransactionCurrency_Email`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_transactioncurrency_expiredprocess"></a> transactioncurrency_expiredprocess
+
+Many-To-One Relationship: [expiredprocess transactioncurrency_expiredprocess](expiredprocess.md#BKMK_transactioncurrency_expiredprocess)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`expiredprocess`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`transactioncurrency_expiredprocess`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_TransactionCurrency_Fax"></a> TransactionCurrency_Fax
+
+Many-To-One Relationship: [fax TransactionCurrency_Fax](fax.md#BKMK_TransactionCurrency_Fax)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`fax`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`TransactionCurrency_Fax`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_transactioncurrency_feedback"></a> transactioncurrency_feedback
+
+Many-To-One Relationship: [feedback transactioncurrency_feedback](feedback.md#BKMK_transactioncurrency_feedback)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`feedback`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`transactioncurrency_feedback`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_transactioncurrency_fixedmonthlyfiscalcalendar"></a> transactioncurrency_fixedmonthlyfiscalcalendar
+
+Many-To-One Relationship: [fixedmonthlyfiscalcalendar transactioncurrency_fixedmonthlyfiscalcalendar](fixedmonthlyfiscalcalendar.md#BKMK_transactioncurrency_fixedmonthlyfiscalcalendar)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`fixedmonthlyfiscalcalendar`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`transactioncurrency_fixedmonthlyfiscalcalendar`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_TransactionCurrency_Goal"></a> TransactionCurrency_Goal
+
+Many-To-One Relationship: [goal TransactionCurrency_Goal](goal.md#BKMK_TransactionCurrency_Goal)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`goal`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`TransactionCurrency_Goal`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_TransactionCurrency_InteractionForEmail"></a> TransactionCurrency_InteractionForEmail
+
+Many-To-One Relationship: [interactionforemail TransactionCurrency_InteractionForEmail](interactionforemail.md#BKMK_TransactionCurrency_InteractionForEmail)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`interactionforemail`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`TransactionCurrency_InteractionForEmail`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_TransactionCurrency_KbArticle"></a> TransactionCurrency_KbArticle
+
+Many-To-One Relationship: [kbarticle TransactionCurrency_KbArticle](kbarticle.md#BKMK_TransactionCurrency_KbArticle)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`kbarticle`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`TransactionCurrency_KbArticle`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_TransactionCurrency_knowledgearticle"></a> TransactionCurrency_knowledgearticle
+
+Many-To-One Relationship: [knowledgearticle TransactionCurrency_knowledgearticle](knowledgearticle.md#BKMK_TransactionCurrency_knowledgearticle)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`knowledgearticle`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`transactioncurrency_knowledgearticle`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_transactioncurrency_knowledgearticleviews"></a> transactioncurrency_knowledgearticleviews
+
+Many-To-One Relationship: [knowledgearticleviews transactioncurrency_knowledgearticleviews](knowledgearticleviews.md#BKMK_transactioncurrency_knowledgearticleviews)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`knowledgearticleviews`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`transactioncurrency_knowledgearticleviews`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_TransactionCurrency_KnowledgeBaseRecord"></a> TransactionCurrency_KnowledgeBaseRecord
+
+Many-To-One Relationship: [knowledgebaserecord TransactionCurrency_KnowledgeBaseRecord](knowledgebaserecord.md#BKMK_TransactionCurrency_KnowledgeBaseRecord)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`knowledgebaserecord`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`TransactionCurrency_KnowledgeBaseRecord`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_TransactionCurrency_Letter"></a> TransactionCurrency_Letter
+
+Many-To-One Relationship: [letter TransactionCurrency_Letter](letter.md#BKMK_TransactionCurrency_Letter)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`letter`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`TransactionCurrency_Letter`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_TransactionCurrency_MailMergeTemplate"></a> TransactionCurrency_MailMergeTemplate
+
+Many-To-One Relationship: [mailmergetemplate TransactionCurrency_MailMergeTemplate](mailmergetemplate.md#BKMK_TransactionCurrency_MailMergeTemplate)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`mailmergetemplate`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`TransactionCurrency_MailMergeTemplate`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_transactioncurrency_monthlyfiscalcalendar"></a> transactioncurrency_monthlyfiscalcalendar
+
+Many-To-One Relationship: [monthlyfiscalcalendar transactioncurrency_monthlyfiscalcalendar](monthlyfiscalcalendar.md#BKMK_transactioncurrency_monthlyfiscalcalendar)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`monthlyfiscalcalendar`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`transactioncurrency_monthlyfiscalcalendar`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_transactioncurrency_newprocess"></a> transactioncurrency_newprocess
+
+Many-To-One Relationship: [newprocess transactioncurrency_newprocess](newprocess.md#BKMK_transactioncurrency_newprocess)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`newprocess`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`transactioncurrency_newprocess`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_TransactionCurrency_officegraphdocument"></a> TransactionCurrency_officegraphdocument
+
+Many-To-One Relationship: [officegraphdocument TransactionCurrency_officegraphdocument](officegraphdocument.md#BKMK_TransactionCurrency_officegraphdocument)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`officegraphdocument`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`TransactionCurrency_officegraphdocument`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_TransactionCurrency_PhoneCall"></a> TransactionCurrency_PhoneCall
+
+Many-To-One Relationship: [phonecall TransactionCurrency_PhoneCall](phonecall.md#BKMK_TransactionCurrency_PhoneCall)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`phonecall`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`TransactionCurrency_PhoneCall`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_transactioncurrency_position"></a> transactioncurrency_position
+
+Many-To-One Relationship: [position transactioncurrency_position](position.md#BKMK_transactioncurrency_position)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`position`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`transactioncurrency_position`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_TransactionCurrency_ProcessSessions"></a> TransactionCurrency_ProcessSessions
+
+Many-To-One Relationship: [processsession TransactionCurrency_ProcessSessions](processsession.md#BKMK_TransactionCurrency_ProcessSessions)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`processsession`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`TransactionCurrency_ProcessSessions`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 110<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_transactioncurrency_quarterlyfiscalcalendar"></a> transactioncurrency_quarterlyfiscalcalendar
+
+Many-To-One Relationship: [quarterlyfiscalcalendar transactioncurrency_quarterlyfiscalcalendar](quarterlyfiscalcalendar.md#BKMK_transactioncurrency_quarterlyfiscalcalendar)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`quarterlyfiscalcalendar`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`transactioncurrency_quarterlyfiscalcalendar`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_TransactionCurrency_Queue"></a> TransactionCurrency_Queue
+
+Many-To-One Relationship: [queue TransactionCurrency_Queue](queue.md#BKMK_TransactionCurrency_Queue)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`queue`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`TransactionCurrency_Queue`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_TransactionCurrency_QueueItem"></a> TransactionCurrency_QueueItem
+
+Many-To-One Relationship: [queueitem TransactionCurrency_QueueItem](queueitem.md#BKMK_TransactionCurrency_QueueItem)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`queueitem`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`TransactionCurrency_QueueItem`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_TransactionCurrency_recommendeddocument"></a> TransactionCurrency_recommendeddocument
+
+Many-To-One Relationship: [recommendeddocument TransactionCurrency_recommendeddocument](recommendeddocument.md#BKMK_TransactionCurrency_recommendeddocument)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`recommendeddocument`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`TransactionCurrency_recommendeddocument`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_TransactionCurrency_RecurringAppointmentMaster"></a> TransactionCurrency_RecurringAppointmentMaster
+
+Many-To-One Relationship: [recurringappointmentmaster TransactionCurrency_RecurringAppointmentMaster](recurringappointmentmaster.md#BKMK_TransactionCurrency_RecurringAppointmentMaster)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`recurringappointmentmaster`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`TransactionCurrency_RecurringAppointmentMaster`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_TransactionCurrency_ReportCategory"></a> TransactionCurrency_ReportCategory
+
+Many-To-One Relationship: [reportcategory TransactionCurrency_ReportCategory](reportcategory.md#BKMK_TransactionCurrency_ReportCategory)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`reportcategory`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`TransactionCurrency_ReportCategory`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_transactioncurrency_semiannualfiscalcalendar"></a> transactioncurrency_semiannualfiscalcalendar
+
+Many-To-One Relationship: [semiannualfiscalcalendar transactioncurrency_semiannualfiscalcalendar](semiannualfiscalcalendar.md#BKMK_transactioncurrency_semiannualfiscalcalendar)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`semiannualfiscalcalendar`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`transactioncurrency_semiannualfiscalcalendar`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_TransactionCurrency_SharePointDocumentLocation"></a> TransactionCurrency_SharePointDocumentLocation
+
+Many-To-One Relationship: [sharepointdocumentlocation TransactionCurrency_SharePointDocumentLocation](sharepointdocumentlocation.md#BKMK_TransactionCurrency_SharePointDocumentLocation)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`sharepointdocumentlocation`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`TransactionCurrency_SharePointDocumentLocation`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_TransactionCurrency_SharePointSite"></a> TransactionCurrency_SharePointSite
+
+Many-To-One Relationship: [sharepointsite TransactionCurrency_SharePointSite](sharepointsite.md#BKMK_TransactionCurrency_SharePointSite)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`sharepointsite`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`TransactionCurrency_SharePointSite`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_TransactionCurrency_SimilarityRule"></a> TransactionCurrency_SimilarityRule
+
+Many-To-One Relationship: [similarityrule TransactionCurrency_SimilarityRule](similarityrule.md#BKMK_TransactionCurrency_SimilarityRule)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`similarityrule`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`TransactionCurrency_SimilarityRule`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_TransactionCurrency_SLA"></a> TransactionCurrency_SLA
+
+Many-To-One Relationship: [sla TransactionCurrency_SLA](sla.md#BKMK_TransactionCurrency_SLA)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`sla`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`TransactionCurrency_SLA`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_TransactionCurrency_SLAItem"></a> TransactionCurrency_SLAItem
+
+Many-To-One Relationship: [slaitem TransactionCurrency_SLAItem](slaitem.md#BKMK_TransactionCurrency_SLAItem)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`slaitem`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`TransactionCurrency_SLAItem`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_TransactionCurrency_slakpiinstance"></a> TransactionCurrency_slakpiinstance
+
+Many-To-One Relationship: [slakpiinstance TransactionCurrency_slakpiinstance](slakpiinstance.md#BKMK_TransactionCurrency_slakpiinstance)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`slakpiinstance`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`TransactionCurrency_slakpiinstance`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_transactioncurrency_socialactivity"></a> transactioncurrency_socialactivity
+
+Many-To-One Relationship: [socialactivity transactioncurrency_socialactivity](socialactivity.md#BKMK_transactioncurrency_socialactivity)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`socialactivity`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`transactioncurrency_socialactivity`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_transactioncurrency_SocialProfile"></a> transactioncurrency_SocialProfile
+
+Many-To-One Relationship: [socialprofile transactioncurrency_SocialProfile](socialprofile.md#BKMK_transactioncurrency_SocialProfile)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`socialprofile`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`transactioncurrency_SocialProfile`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_TransactionCurrency_SyncErrors"></a> TransactionCurrency_SyncErrors
+
+Many-To-One Relationship: [syncerror TransactionCurrency_SyncErrors](syncerror.md#BKMK_TransactionCurrency_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`syncerror`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`TransactionCurrency_SyncErrors`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_TransactionCurrency_SystemUser"></a> TransactionCurrency_SystemUser
+
+Many-To-One Relationship: [systemuser TransactionCurrency_SystemUser](systemuser.md#BKMK_TransactionCurrency_SystemUser)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`systemuser`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`TransactionCurrency_SystemUser`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_TransactionCurrency_Task"></a> TransactionCurrency_Task
+
+Many-To-One Relationship: [task TransactionCurrency_Task](task.md#BKMK_TransactionCurrency_Task)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`task`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`TransactionCurrency_Task`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_TransactionCurrency_Team"></a> TransactionCurrency_Team
+
+Many-To-One Relationship: [team TransactionCurrency_Team](team.md#BKMK_TransactionCurrency_Team)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`team`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`TransactionCurrency_Team`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_TransactionCurrency_Territory"></a> TransactionCurrency_Territory
+
+Many-To-One Relationship: [territory TransactionCurrency_Territory](territory.md#BKMK_TransactionCurrency_Territory)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`territory`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`TransactionCurrency_Territory`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_TransactionCurrency_Theme"></a> TransactionCurrency_Theme
+
+Many-To-One Relationship: [theme TransactionCurrency_Theme](theme.md#BKMK_TransactionCurrency_Theme)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`theme`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`TransactionCurrency_Theme`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_transactioncurrency_translationprocess"></a> transactioncurrency_translationprocess
+
+Many-To-One Relationship: [translationprocess transactioncurrency_translationprocess](translationprocess.md#BKMK_transactioncurrency_translationprocess)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`translationprocess`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`transactioncurrency_translationprocess`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_TransactionCurrency_UserMapping"></a> TransactionCurrency_UserMapping
+
+Many-To-One Relationship: [usermapping TransactionCurrency_UserMapping](usermapping.md#BKMK_TransactionCurrency_UserMapping)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`usermapping`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`TransactionCurrency_UserMapping`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_transactioncurrency_usersettings"></a> transactioncurrency_usersettings
+
+Many-To-One Relationship: [usersettings transactioncurrency_usersettings](usersettings.md#BKMK_transactioncurrency_usersettings)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`usersettings`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencedEntityNavigationPropertyName|`transactioncurrency_usersettings`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
-<xref href="Microsoft.Dynamics.CRM.transactioncurrency?text=transactioncurrency EntityType" />
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
+[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
+<xref:Microsoft.Dynamics.CRM.transactioncurrency?displayProperty=fullName>

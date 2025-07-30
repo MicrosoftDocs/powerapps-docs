@@ -1,9 +1,9 @@
 ---
 title: "Sample: File Operations using Dataverse SDK for .NET (Microsoft Dataverse) | Microsoft Learn" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample demonstrates how to perform operations with file columns using the Dataverse SDK for .NET." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 10/28/2022
-author: divkamath
-ms.author: dikamath
+ms.date: 12/04/2024
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 ms.topic: sample
 search.audienceType:
@@ -43,7 +43,11 @@ When the sample runs, you will be prompted in the default browser to select an e
 }
 ```
 
->**Tip**: You can set a user environment variable named DATAVERSE_APPSETTINGS to the file path of the appsettings.json file stored anywhere on your computer. The samples will use that appsettings file if the environment variable exists and is not null. Be sure to log out and back in again after you define the variable for it to take affect. To set an environment variable, go to **Settings > System > About**, select **Advanced system settings**, and then choose **Environment variables**.
+Read the following important information about using a connection string in application code.
+[!INCLUDE [cc-connection-string](../../includes/cc-connection-string.md)]
+
+> [!TIP]
+> You can set a user environment variable named DATAVERSE_APPSETTINGS to the file path of the appsettings.json file stored anywhere on your computer. The samples will use that appsettings file if the environment variable exists and is not null. Be sure to log out and back in again after you define the variable for it to take affect. To set an environment variable, go to **Settings > System > About**, select **Advanced system settings**, and then choose **Environment variables**.
 
 ## Sample Output
 
@@ -65,9 +69,9 @@ Deleted the file column named 'sample_filecolumn' in the account table.
 
 ## Demonstrates
 
-The code for this sample is in the [Program.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/C%23-NETCore/FileOperations/Program.cs) file.
+The code for this sample is in the [Program.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/CSharp-NETCore/FileOperations/Program.cs) file.
 
-The project uses a `Utility` class to perform operations involving creating or retrieving schema data. This class is in the [Utility.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/C%23-NETCore/FileOperations/Utility.cs) file.
+The project uses a `Utility` class to perform operations involving creating or retrieving schema data. This class is in the [Utility.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/CSharp-NETCore/FileOperations/Utility.cs) file.
 
 This project performs these operations:
 
@@ -99,8 +103,6 @@ To upload a PDF file named `25MB.pdf` to the `sample_FileColumn` file column on 
 1. Split the file up into 4MB block and send each block using the [UploadBlockRequest Class](xref:Microsoft.Crm.Sdk.Messages.UploadBlockRequest). Each instance must include a base64 encoded string to uniquely identify the block. This request doesn't have any response value to process.
 1. After all the blocks are sent, use the [CommitFileBlocksUploadRequest Class](xref:Microsoft.Crm.Sdk.Messages.CommitFileBlocksUploadRequest) with an array of the base64 encoded string values to finalize the operation.
 1. Process the response with the [CommitFileBlocksUploadResponse Class](xref:Microsoft.Crm.Sdk.Messages.CommitFileBlocksUploadResponse) to get the `FileId` value that will be used to delete the file.
-
-
 
 ### Download the file
 

@@ -1,10 +1,10 @@
 ---
 title: "Implement all types of queries when filtering results using PreOperation RetrieveMultiple | MicrosoftDocs"
-description: "For best performance and consistent results for all applications you must implement filtering for all types of queries that can be used with plug-ins that are registered for the PreOperation stage of RetrieveMultiple"
+description: "For best performance and consistent results for all applications you must implement filtering for all types of queries that can be used with plug-ins that are registered for the PreOperation stage of RetrieveMultiple."
 suite: powerapps
 ms.date: 04/03/2022
-author: divkamath
-ms.author: dikamath
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: pehecke
 ms.topic: article
 ms.subservice: dataverse-developer
@@ -41,19 +41,19 @@ Plug-ins registered on the `RetrieveMultiple` message are typically intended to 
 
 ### PostOperation filtering
 
-In the `PostOperation` stage, evaluate the records returned in the <xref:Microsoft.Xrm.Sdk.IExecutionContext.OutputParameters> `BusinessEntityCollection` <xref:Microsoft.Xrm.Sdk.EntityCollection.Entities> property and remove entities that should not be returned.
+In the `PostOperation` stage, evaluate the records returned in the <xref:Microsoft.Xrm.Sdk.IExecutionContext.OutputParameters> `BusinessEntityCollection` <xref:Microsoft.Xrm.Sdk.EntityCollection.Entities> property and remove entities that shouldn't be returned.
 
-This approach will potentially change the expected number of records returned in each page of results and can result in inconsistent experiences when the data is displayed in an application.
+This approach potentially changes the expected number of records returned in each page of results and can result in inconsistent experiences when the data is displayed in an application.
 
 ### PreOperation filtering
 
-In the `PreOperation` stage, evaluate the <xref:Microsoft.Xrm.Sdk.IExecutionContext.InputParameters>  <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest.Query> property and adjust the query to filter what will be returned before it is executed.
+In the `PreOperation` stage, evaluate the <xref:Microsoft.Xrm.Sdk.IExecutionContext.InputParameters>  <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest.Query> property and adjust the query to filter what is returned before it's executed.
 
-When using this approach you must implement the appropriate filtering for the different possible types of queries, most importantly: <xref:Microsoft.Xrm.Sdk.Query.FetchExpression> and <xref:Microsoft.Xrm.Sdk.Query.QueryExpression>. If you implement just one of these, different applications that use the other type of query will not apply your changes.
+When using this approach you must implement the appropriate filtering for the different possible types of queries, most importantly: <xref:Microsoft.Xrm.Sdk.Query.FetchExpression> and <xref:Microsoft.Xrm.Sdk.Query.QueryExpression>. If you implement just one of these, different applications that use the other type of query don't apply your changes.
 
-Although the `QueryExpressionToFetchXml` and `FetchXmlToQueryExpression` messages provide the capability to convert one query type to another, because of the performance impact of including additional calls within `RetrieveMultiple`, we recommend that you do not use these messages in this context. Rather, implement your filtering using the equivalent logic in both. 
+Although the `QueryExpressionToFetchXml` and `FetchXmlToQueryExpression` messages provide the capability to convert one query type to another, because of the performance impact of including more calls within `RetrieveMultiple`, we recommend that you don't use these messages in this context. Rather, implement your filtering using the equivalent logic in both. 
 
-There is a third type of query that can also be used with `RetrieveMultiple`: <xref:Microsoft.Xrm.Sdk.Query.QueryByAttribute>. This type of query does not provide for complex filtering and it isn't possible to include more complex filtering logic within a plug-in. Fortunately, this type of query is not frequently used. Depending on the sensitivity of the filtering you add, you may choose to reject queries of this type by throwing an <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException>.
+There's a third type of query that can also be used with `RetrieveMultiple`: <xref:Microsoft.Xrm.Sdk.Query.QueryByAttribute>. This type of query doesn't provide for complex filtering and it isn't possible to include more complex filtering logic within a plug-in. Fortunately, this type of query isn't frequently used. Depending on the sensitivity of the filtering you add, you might choose to reject queries of this type by throwing an <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException>.
 
 ## Example
 
@@ -61,7 +61,7 @@ See [Sample: Modify query in PreOperation stage](../../org-service/samples/modif
 
 ## Problematic patterns
 
-If a plug-in is written to change the records returned in a specific application which uses just one type of query used by that application, either <xref:Microsoft.Xrm.Sdk.Query.FetchExpression> or <xref:Microsoft.Xrm.Sdk.Query.QueryExpression>, the results may not be consistent in other applications or if the application changes the type of query used. Plug-ins should be written to provide the same result regardless of the application.
+When someone writes a plug-in to change the records returned in a specific application that uses just one type of query used by that application, either <xref:Microsoft.Xrm.Sdk.Query.FetchExpression> or <xref:Microsoft.Xrm.Sdk.Query.QueryExpression>, the results might not be consistent in other applications or if the application changes the type of query used. Write plug-ins that provide the same result regardless of the application.
 
 <a name='additional'></a>
 
@@ -69,7 +69,7 @@ If a plug-in is written to change the records returned in a specific application
 
 When using the Web API, GET requests on a collection are converted to <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> unless the query uses FetchXml as described in [Retrieve and execute predefined queries](../../webapi/retrieve-and-execute-predefined-queries.md). In that case the queries use <xref:Microsoft.Xrm.Sdk.Query.FetchExpression>.
 
-The legacy web client for model-driven apps was replaced by Unified Interface. Unified Interface uses the FetchXml defined in the [SavedQuery.FetchXml](../../reference/entities/savedquery.md#BKMK_FetchXml) or [UserQuery.FetchXml](../../reference/entities/userquery.md#BKMK_FetchXml) properties. For better performance, Unified Interface does not convert the FetchXml data to a <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> before executing these queries as the legacy web client did. Therefore, queries that were modified in plug-in code for the legacy web client which used  <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> will not apply the same changes now that the query to support views is being passed using <xref:Microsoft.Xrm.Sdk.Query.FetchExpression> unless the plug-in code is written to apply same logic to <xref:Microsoft.Xrm.Sdk.Query.FetchExpression> queries. 
+Unified Interface replaced the legacy web client for model-driven apps. Unified Interface uses the FetchXml defined in the [SavedQuery.FetchXml](../../reference/entities/savedquery.md#BKMK_FetchXml) or [UserQuery.FetchXml](../../reference/entities/userquery.md#BKMK_FetchXml) properties. For better performance, Unified Interface doesn't convert the FetchXml data to a <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> before executing these queries as the legacy web client did. Therefore, queries that were modified in plug-in code for the legacy web client that used  <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> don't apply the same changes now that the query to support views is being passed using <xref:Microsoft.Xrm.Sdk.Query.FetchExpression> unless the plug-in code is written to apply same logic to <xref:Microsoft.Xrm.Sdk.Query.FetchExpression> queries.
 
 <a name='seealso'></a>
 
@@ -77,8 +77,8 @@ The legacy web client for model-driven apps was replaced by Unified Interface. U
 
 [Sample: Modify query in PreOperation stage](../../org-service/samples/modify-query-preoperation-stage.md)<br />
 [Query data using the SDK for .NET](../../org-service/entity-operations-query-data.md)<br />
-[Use FetchXML to construct a query](../../use-fetchxml-construct-query.md)<br />
-[Build queries with QueryExpression](../../org-service/build-queries-with-queryexpression.md)<br />
+[Query data using FetchXml](../../fetchxml/overview.md)<br />
+[Build queries with QueryExpression](../../org-service/queryexpression/overview.md)<br />
 [Limit the registration of plug-ins for Retrieve and RetrieveMultiple messages](limit-registration-plugins-retrieve-retrievemultiple.md)<br />
 [Unified Interface Community](https://community.dynamics.com/forums/thread/?discussionforumid=bc304ecc-c131-4b63-92dd-7464bba3ce3b)
 

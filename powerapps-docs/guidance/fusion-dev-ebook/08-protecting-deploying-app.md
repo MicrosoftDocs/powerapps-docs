@@ -3,12 +3,12 @@ title: "8: Protecting and deploying the app  | Microsoft Docs"
 description: "Learn about how to protect and deploy the app."
 author: spboyer
 
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: ebook
 ms.date: 04/26/2021
 ms.subservice: guidance
 ms.author: shboyer
-ms.reviewer: kvivek
+ms.reviewer: tapanm
 
 ---
 
@@ -18,7 +18,7 @@ The app is now functionally complete, but Preeti and Kiana want to ensure that t
 
 ## Protecting the app and resources
 
-When you first sign in to [Power Apps](https://make.powerapps.com), you're required to authenticate yourself, typically by providing your email address and password. Office 365 uses its own Azure Active Directory (Azure AD) domain; each organization has its own domain. Your credentials are checked against your organization's domain for Office 365. An app built by using Power Apps can only access the Office 365 resources to which you've been granted the appropriate authority. Authorization is managed by your Office 365 administrator (Preeti in the VanArsdel scenario). For more information, go to [Securing the app and data](../planning/security.md) in the Planning a Power Apps project guide.
+When you first sign in to [Power Apps](https://make.powerapps.com), you're required to authenticate yourself, typically by providing your email address and password. Office 365 uses its own Microsoft Entra domain; each organization has its own domain. Your credentials are checked against your organization's domain for Office 365. An app built by using Power Apps can only access the Office 365 resources to which you've been granted the appropriate authority. Authorization is managed by your Office 365 administrator (Preeti in the VanArsdel scenario). For more information, go to [Securing the app and data](../planning/security.md) in the Planning a Power Apps project guide.
 
 The Azure resources that an app accesses are also subject to authorization. Services such as Azure Storage require an application to provide an access key. Additionally, many services can be protected through role-based access control, which describes the operations that individual users and groups can perform. The IT Operations Manager (Preeti, again) can set the authorization policy that defines which accounts and machines can connect to services such as Azure SQL Database, Azure Blob Storage, Azure API Management, and Azure App Services. Some services also enable you to restrict the endpoints from which authenticated users can request access. For example, you can configure a firewall for Azure SQL Database to deny access to requests emanating from unexpected IP addresses.
 
@@ -57,9 +57,9 @@ When someone runs an app, it can retrieve information about the user from the Of
 > [!NOTE]
 > Feel free to style the **UserName** control to make it stand out more.
 
-Office 365 runs in an Azure AD domain, but you can also extend this security domain with your own Azure AD installation. If your organization authenticates users through your own Azure AD domain, you can obtain user information by using the **Azure AD** connector instead of **Office365Users**.
+Office 365 runs in an Microsoft Entra domain, but you can also extend this security domain with your own Microsoft Entra installation. If your organization authenticates users through your own Microsoft Entra domain, you can obtain user information by using the **Microsoft Entra** connector instead of **Office365Users**.
 
-![Add the Azure AD connector.](media/image236.png)
+![Add the Microsoft Entra connector.](media/image236.png)
 
 In this case, set the **Text** property of the **UserName** label to the following.
 
@@ -81,7 +81,7 @@ Set(id, Office365Users.MyProfileV2().id);
 ClearCollect(appointmentsCollection, Sort(Filter(FieldEngineerAPI.getapischeduleengineeridappointments(id), DateDiff(Today(), startDateTime) >= 0), startDateTime);
 ```
 
-If you're authenticating with Azure AD, use the following formula instead.
+If you're authenticating with Microsoft Entra ID, use the following formula instead.
 
 ```
 Set(id, AzureAD.GetUser(User().Email).id);

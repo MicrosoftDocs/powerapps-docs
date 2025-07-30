@@ -2,8 +2,8 @@
 title: "Sample: Create a custom activity (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to create a custom activity" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/03/2022
-author: NHelgren
-ms.author: nhelgren
+author: mkannapiran
+ms.author: kamanick
 ms.reviewer: jdaly
 ms.topic: sample
 search.audienceType:
@@ -18,7 +18,7 @@ contributors:
 This sample demonstrates how to create a custom activity using [CreateEntityRequest](/dotnet/api/microsoft.xrm.sdk.messages.createentityrequest) and [CreateAttributeRequest](/dotnet/api/microsoft.xrm.sdk.messages.createattributerequest).
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Create a custom activity sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/CustomActivity)
+> [SDK for .NET: Create a custom activity sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/CustomActivity)
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 

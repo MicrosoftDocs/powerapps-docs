@@ -4,9 +4,9 @@ description: "Learn about choices columns that allow storing multiple choices in
 ms.date: 01/09/2023
 ms.reviewer: jdaly
 ms.topic: article
-author: NHelgren # GitHub ID
+author: mkannapiran
+ms.author: kamanick
 ms.subservice: dataverse-developer
-ms.author: nhelgren # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 contributors:
@@ -55,7 +55,7 @@ OData-Version: 4.0
 ```http
 HTTP/1.1 204 No Content
 OData-Version: 4.0
-OData-EntityId: [organization uri]/api/data/v9.0/contacts(0c67748a-b78d-e711-811c-000d3a75bdf1)
+OData-EntityId: [organization uri]/api/data/v9.0/contacts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)
 ```
 
 ### [SDK for .NET](#tab/sdk)
@@ -403,7 +403,7 @@ var response = (CreateAttributeResponse)service.Execute(createAttributeRequest);
 
 [Column definitions](entity-attribute-metadata.md)<br />
 [Create a table row using the Web API](webapi/create-entity-web-api.md)<br />
-[Query Data using the Web API](webapi/query-data-web-api.md)<br />
+[Query Data using the Web API](webapi/query/overview.md)<br />
 [Work with column definitions](org-service/metadata-attributemetadata.md)<br />
 [Sample: Work with columns definitions](org-service/samples/work-with-attributes.md)<br />
 [Late-bound and early-bound programming using the SDK for .NET](org-service/early-bound-programming.md)

@@ -2,11 +2,11 @@
 title: "Azure Synapse Link Advance Configuration | MicrosoftDocs"
 description: "Learn about the advance configuration options and concepts in Azure Synapse Link for Dataverse."
 ms.custom: ""
-ms.date: 02/07/2023
+ms.date: 10/28/2024
 ms.reviewer: "Mattp123"
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "conceptual"
+ms.topic: how-to
 applies_to: 
   - "powerapps"
 author: "sabinn-msft"
@@ -17,17 +17,23 @@ search.audienceType:
   - maker
 contributors:
   - sama-zaki
-  - ProfessorKendrick
 ---
 
-# Advanced Configuration Options in Azure Synapse Link
+# Advanced configuration options in Azure Synapse Link
 
-Azure Synapse Link offers multiple ways to write and read your data to fit various analytical scenarios.
+Azure Synapse Link offers multiple ways to write and read your data to fit various analytical scenarios. Depending on your analytical scenario, you can choose a specific configuration from the options below.
+
+|Scenario  | Applies to  | Available configuration options |
+|----------|----------------|---------------------------------|
+| Operational reporting | Dataverse tables,  finance and operations tables and entities |  Synapse Analytics with Delta lake option provides better query response times especially applicable for  querying large amounts of data. More information: [Synapse Link with Delta lake option](azure-synapse-link-delta-lake.md)  |
+| Operational reporting | Dataverse tables only |  Synapse Link with "In place update" configuration option provides CSV files in your data lake that are updated near-real time  <br><br> This is a legacy option available for Dataverse tables. This option isn't supported for tables from finance and operations apps |
+| Data integration | Dataverse tables and finance and operations tables and entities | **"Append only** option provides CSV files that contain incremental data. You can build pipelines that consume incremental data and populate downstream systems <br><br> **User-specified data partition** feature enables choosing a custom data partitioning strategy specifically for Dataverse tables. Finance and operations table data are partitioned by the system based on appropriate partition strategy. This option isn't available for finance and operations apps|
 
 > [!NOTE]
-> Azure Synapse Link for Dataverse was formerly known as Export to data lake. The service was renamed effective May 2021 and will continue to export data to Azure Data Lake as well as Azure Synapse Analytics.
+> Azure Synapse Link for Dataverse was formerly known as export to data lake. The service was renamed effective May 2021 and will continue to export data to Azure Data Lake Storage as well as Azure Synapse Analytics.
+> Starting Sept-2023, Azure Synapse Link also enables you to choose data from Dynamics 365 finance and operations applications. Not all integration patterns are supported with finance and operations apps. For guidance on transitioning from export to data lake feature in finance and operations apps to Synapse Link, go to the [Transition guide](/power-apps/maker/data-platform/azure-synapse-link-transition-from-fno).
 
-This article covers:
+This article covers advanced configuration settings available for Dataverse tables. These options aren't available for finance and operations apps.
 
 1. In-place updates vs. append-only writes.
 2. User-specified data partitioning.
@@ -40,7 +46,7 @@ The default setting (for tables where `createdOn` is available) is to do an in-p
 
 You can switch the default behavior of an in place update by using an optional setting called **Append only**. Rather than an **In place update**, in **Append only** mode, incremental data from Dataverse tables are appended to the corresponding file partition in the lake. This is a per table setting and available as a checkbox under **Advanced** > **Show advanced configuration settings**. For Dataverse tables with **Append only** turned on, all the CUD changes are incrementally appended to the corresponding destination files in the lake. When you choose this option, the partition strategy defaults to **Year** and when data is written to the data lake, it's partitioned by yearly basis. **Append only** is also the default setting for Dataverse tables that don't have `createdOn` value.
 
-The table below describes how rows are handled in the lake against CUD events for each of the data write options.
+This table describes how rows are handled in the lake against CUD events for each of the data write options.
 
 |Event  |In place update  |Append only  |
 |---------|---------|---------|

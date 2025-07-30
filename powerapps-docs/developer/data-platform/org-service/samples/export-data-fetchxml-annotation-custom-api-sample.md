@@ -19,7 +19,7 @@ contributors:
 This sample shows how to write a plug-in that supports a custom API 
 named `sample_ExportDataUsingFetchXmlToAnnotation`.
 You can access the sample code from 
-[PowerApps-Samples/dataverse/orgsvc/C#/ExportDataUsingFetchXmlToAnnotation/](https://github.com/Microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/ExportDataUsingFetchXmlToAnnotation).
+[PowerApps-Samples/dataverse/orgsvc/C#/ExportDataUsingFetchXmlToAnnotation/](https://github.com/Microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/ExportDataUsingFetchXmlToAnnotation).
 
 The plug-in provides logic for the main operation of the custom API. 
 The `sample_ExportDataUsingFetchXmlToAnnotation` custom api retrieves data using 
@@ -188,7 +188,7 @@ You can use either the Web API or the Dataverse SDK for .NET to use the `sample_
 
 ### [Web API](#tab/webapi)
 
-To use the `sample_ExportDataUsingFetchXmlToAnnotation` custom API with the Web API, send a `POST` request to the API endpoint. You can use Postman to send this request. More information: [Set up a Postman environment](../../webapi/setup-postman-environment.md)
+To use the `sample_ExportDataUsingFetchXmlToAnnotation` custom API with the Web API, send a `POST` request to the API endpoint. You can use Insomnia to send this request. [Use Insomnia with Dataverse Web API](../../webapi/insomnia.md)
 
  **Request:**
 
@@ -272,7 +272,7 @@ You can use either the Web API or the Dataverse SDK for .NET to use the `sample_
 
 ### [Web API](#tab/webapi)
 
-To use the `sample_CleanupExportedDataAnnotations` custom API with the Web API, send a `POST` request to the API endpoint. You can use Postman to send this request. More information: [Set up a Postman environment](../../webapi/setup-postman-environment.md)
+To use the `sample_CleanupExportedDataAnnotations` custom API with the Web API, send a `POST` request to the API endpoint. You can use Insomnia to send this request. [Use Insomnia with Dataverse Web API](../../webapi/insomnia.md)
 
  **Request:**
 

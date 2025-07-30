@@ -3,7 +3,7 @@ title: "Configure Exchange folder-level tracking rules (Microsoft Dataverse) | M
 description: "Learn how to configure Exchange folder-level tracking rules" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 03/24/2021
 ms.reviewer: pehecke
-ms.topic: article
+ms.topic: how-to
 author: DanaMartens # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: dmartens # MSFT alias of Microsoft employees only
@@ -16,7 +16,7 @@ search.audienceType:
 
 Configure folder-level tracking rules to map a Microsoft Exchange inbox folder to a Microsoft Dataverse record so that all the emails in the Microsoft Exchange folder get automatically tracked against the mapped record in Dataverse. Folder-level tracking of emails will work only if:  
 
-- The folder-level tracking feature is enabled for your Dataverse instance. You can enable folder-level tracking by using the web client or Dynamics 365 for Outlook. More information: [Configure folder-level tracking](/dynamics365/customer-engagement/admin/configure-outlook-exchange-folder-level-tracking)  
+- The folder-level tracking feature is enabled for your Dataverse instance. You can enable folder-level tracking by using the web client or Dynamics 365 for Outlook. More information: [Configure folder-level tracking](/power-platform/admin/configure-outlook-exchange-folder-level-tracking)  
 
 - The folder that you are tracking is under the **Inbox** folder in Microsoft Exchange. Emails in the folders that are not under the **Inbox** folder won't be tracked.  
 
@@ -88,7 +88,7 @@ foreach (var folderMapping in resp.MailboxTrackingFolderMappings)
  <xref:Microsoft.Dynamics.CRM.RetrieveMailboxTrackingFolders?text=RetrieveMailboxTrackingFolders Function><br />
  [Mailbox Auto Tracking Folder (MailboxTrackingFolder)  table](reference/entities/mailboxtrackingfolder.md)<br />
  [Mailbox table](reference/entities/mailbox.md)<br />
- [Configure folder-level tracking](/dynamics365/customer-engagement/admin/configure-outlook-exchange-folder-level-tracking)<br />
+ [Configure folder-level tracking](/power-platform/admin/configure-outlook-exchange-folder-level-tracking)<br />
  [Server-side Synchronization tables](server-side-synchronization-entities.md)<br />
 
 

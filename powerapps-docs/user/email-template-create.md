@@ -1,15 +1,15 @@
 ---
 title: "How to create an email template  in model-driven apps | MicrosoftDocs"
 description: Learn how to create an email template.
-author: sericks007
+author: paulliew
 
 ms.component: pa-user
-ms.topic: conceptual
-ms.date: 04/01/2023
+ms.topic: how-to
+ms.date: 06/03/2025
 ms.subservice: end-user
-ms.author: sericks
+ms.author: paulliew
 ms.custom: ""
-ms.reviewer: sericks
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser
@@ -17,14 +17,25 @@ search.audienceType:
 
 # Create email templates
 
-Email templates are a fast and easy way to send consistent, professional, preformatted email messages to your customers. To create email templates, the legacy email template editor is available by default. However, the enhanced email template editor is displayed as a choice if it is enabled by your administrator.
+> [!IMPORTANT]
+> - As of May 23, 2025, the following functionalities will no longer be available:
+>     - The enhanced email template and legacy rich text editor. 
+>     - The drag and drop functionality of the enhanced email template editor.
+> - The modern rich text editor supports HTML formatting. Any existing templates created using the enhanced email template editor will now open in the modern rich text editor. If you any see any formatting issues, we recommend that you update or recreate the template using the modern rich text editor.
+
+
+Email templates are a fast and easy way to send consistent, professional, preformatted email messages to your customers. 
 
 You can create email templates by using one of the following options:  
-- **Start with a blank template**: Create a template from scratch. The editor that's displayed depends on wether the enhanced email template editor option is enabled.
-- **Start with an existing template** : Create a template by choosing an existing template. The editor that's displayed depends on the editor in which the existing template was created.
+- **Start with a blank template**: Create a template from scratch. 
+- **Start with an existing template** : Create a template by choosing an existing template. 
 
 :::image type="content" source="media/email-how-to-create-an-email-template-1a.png" alt-text="Screenshot that shows options to create a template from blank or from an existing template.":::
 
+## Prerequisites
+
+When you need to create an email template based on a table, make sure that you have the necessary permissions on the related tables, such as the Account table for the email template based on a case.
+ 
 ## Start with a blank template
 
 When you start with a blank template, nothing is provided for you. You must add everything you want customers to see. 
@@ -33,7 +44,7 @@ When you start with a blank template, nothing is provided for you. You must add 
 
 3. Enter the following details:
    - **Template name**: Give your email template a detailed name to help you identify it later.
-   - **Permission level**: Select **Organization** to share your template with others or **Individual** for personal use.
+   - **Permission level**: Select from **Organization** or **Individual**. More information: [Permission level for email templates](#permission-level-for-email-templates)
    - **Category**: The default value is **User**. Categories determine which dynamic text fields are available for use in your template.
    - **Language**: Display installed language packs. **Language** also helps to categorize your templates.
    - **Create**: Opens one of two editors where you can build your template.
@@ -42,10 +53,15 @@ When you start with a blank template, nothing is provided for you. You must add 
  
 3. Select **Create**. The template editor is displayed.
 
-The editor page you see depends on whether your administrator has turned on the enhanced email template editor option:
 
-- If yes, you'll use the enhanced email template editor page.
-- If not, you'll use the email template editor page. 
+### Permission level for email templates
+
+Selecting **Organization** permission level for email templates allows you to create templates that everyone in the organization can use. **Individual** permission level is for personal use.
+
+> [!NOTE]
+> For **Individual** permission templates, these templates do not show up on the list of email templates unless your are the owner of the templates or the owner has shared the template with you.
+> 
+> For **Organization** permission templates, these templates show up for all users in the organization.
 
 ## Start with existing templates
 
@@ -61,48 +77,20 @@ Start with an existing template to create an email template faster and with less
   
 3. The template editor page is displayed.
 
-When you create a template from an existing template, irrespective of the enhanced email template editor option setting, the app displays the newly-created email template in one of the following template editors:
-  - Enhanced email template: If the selected email template was created with the enhanced email template.
-  - Email template: If the selected template was created with the legacy email template.
-
-> [!Important]
-> If you create templates in the enhanced editing environment, don't edit them in the legacy web client. You'll lose any inline images and strip out some of the advanced formatting and functionality.
-
-### Work with existing templates
-
-:::image type="content" source="media/email-template-copy-1a.png" alt-text="Screenshot of the email template editor with an existing template open for editing.":::
-
-- **Template** tab: Specify or change the template details and the email subject. The name includes **– Copy** at the end to identify this template is a copy of another one.
-- **Template editor** section: [Design and customize the email template](cs-template-options.md).
-- Select **New Attachment** to add attachments to your template if needed.
-
-
 ## Email template editor
 
-You can use either the enhanced email template editor or the legacy email template editor to create email templates.
-
-### Enhanced email template editor
- 
-The enhanced email template editor is displayed if the enhanced email template editor option is enabled. However, for Customer Service workspace and Customer Service Hub apps, the enhanced email template editor is displayed by default. More information: [Enhanced email template editor option](cs-email-template-builder.md) 
+You can use the email template editor to to create a new email template or edit an existing template.
 
 :::image type="content" source="media/email-template-enh.png" alt-text="Screenshot of the enhanced email template editor with a blank template open for editing.":::
 
-- **Editor** tab: Use this tab to design and customize your email template. See: [Design and customize the email template](cs-template-options.md).
+- **Designer** tab: Use this tab to draft and apply standard formatting to your email template. You can also add [dynamic text](email-dynamic-text.md), images, and attachments. You can add Copilot prompts to your email template for a consistent experience. Learn more in [Add Copilot prompts to email template](/dynamics365/customer-service/administer/add-prompt-email-template).
+  > [!NOTE]
+  > Across all the model-driven apps, the email template editor supports upto 1048576 characters.
+- **HTML** tab: Use this tab to view and edit the HTML code of your email template. You can add HTML code to customize your templates with elements such as layouts, images, and buttons.
 - **Template** tab: Specify or change the template details and the email subject.
 - **Attachments** tab: Add attachments to your template if needed.
-
-### Email template editor
-
-The email template editor is displayed if the enhanced email template editor option is disabled. 
-
-:::image type="content" source="media/email-new-customer-template-1c.png" alt-text="Screenshot of the default email template editor with a blank template open for editing.":::
-
-   1. **Insert dynamic text**: Use dynamic text in the subject and body of the email.
-   2. **Subject**: Enter or change the email subject.
-   3. **New Attachment**: Add one or more attachments to your template, if needed.
 
 ### See also
 
 [Personalize content with Insert dynamic text](email-dynamic-text.md)<br>
-[Set up enhanced email](/power-platform/admin/system-settings-dialog-box-email-tab)<br>
 [Understand the email experience](view-create-email.md)   

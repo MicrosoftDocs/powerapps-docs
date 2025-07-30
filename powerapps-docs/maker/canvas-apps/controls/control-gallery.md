@@ -1,18 +1,18 @@
 ---
 title: Gallery control in Power Apps
 description: Learn about the details, properties and examples of the gallery control in Power Apps.
-author: chmoncay
+author: yogeshgupta698
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 06/01/2022
+ms.date: 03/25/2024
 ms.subservice: canvas-maker
-ms.author: chmoncay
+ms.author: yogupt
 search.audienceType:
   - maker
 contributors:
   - mduelae
-  - chmoncay
+  - yogeshgupta698
 ---
 # Gallery control in Power Apps
 
@@ -33,8 +33,10 @@ Predefined templates for showing images and text in a gallery are available, and
 
 ## Limitations
 
-- If a user scrolls the **Flexible height** gallery control before all items are loaded, the item that's currently in view may be pushed down and out of view when the data loading is finished. To avoid this issue, use a standard **Gallery** control instead of the **Flexible height** variant.
-- The following controls are not supported within a gallery:
+The gallery control has these limitations:
+
+1. If a user scrolls the **Flexible height** gallery control before all items are loaded, the item that's currently in view may be pushed down and out of view when the data loading is finished. To avoid this issue, use a standard **Gallery** control instead of the **Flexible height** variant.
+1. The following controls are not supported within a gallery:
     - [Display form](control-form-detail.md)
     - [Edit form](control-form-detail.md)
     - [PDF viewer](control-pdf-viewer.md)
@@ -42,8 +44,12 @@ Predefined templates for showing images and text in a gallery are available, and
     - [Rich text editor](control-richtexteditor.md)
     - [Scrollable screen (Fluid grid)](../add-scrolling-screen.md)
     - [Web barcode scanner](control-barcodescanner.md)
-- You can only add one gallery inside another gallery.
-- The minimum **TemplateSize** is one. This can cause controls in the **Gallery** to drift from their expected **X** or **Y** values, when you don't account for the template size.
+1. You can only add one gallery inside another gallery.
+1. The minimum **TemplateSize** is one. This can cause controls in the **Gallery** to drift from their expected **X** or **Y** values, when you don't account for the template size.
+1. If you generate an app automatically from data, save the app, and then reopen it, the browse gallery might not immediately show any data. To resolve this issue, type at least one character in the search box, and then delete the text that you typed. The gallery will then show the data as expected.
+1. If a gallery includes a ComboBox, DatePicker, Slider, or Toggle control with an `OnChange` rule that patches the same data source or collection as the gallery, it may lead to unexpected or reduced performance. This is because an `OnChange` rule that patches the data source of the gallery can create a never-ending cycle of patching and reloading. To avoid this issue, it is advisable not to use `OnChange` rules when these controls are placed within a gallery.
+
+
 
 
 ## Key properties

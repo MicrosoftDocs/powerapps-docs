@@ -1,0 +1,1 @@
+Indicates that the `link-entity` is used to join tables and not return any columns, typically for a many-to-many relationship. The existence of this attribute doesn't change the query execution. You might add this attribute to your `link-entity` when you join a table but don't include any [attribute elements](../attribute.md) to show that this is intentional.

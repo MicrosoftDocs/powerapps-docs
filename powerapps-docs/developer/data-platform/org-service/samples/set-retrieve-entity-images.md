@@ -1,9 +1,9 @@
 ---
 title: "Sample: Image Operations using Dataverse SDK for .NET | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample showcases how to work with image column data." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 01/11/2023
-author: NHelgren
-ms.author: nhelgren
+ms.date: 12/04/2024
+author: mkannapiran
+ms.author: kamanick
 ms.reviewer: jdaly
 ms.topic: sample
 search.audienceType:
@@ -43,6 +43,9 @@ When the sample runs, you'll be prompted in the default browser to select an env
   }
 }
 ```
+
+Read the following important information about using a connection string in application code.
+[!INCLUDE [cc-connection-string](../../includes/cc-connection-string.md)]
 
 > [!TIP]
 > You can set a user environment variable named DATAVERSE_APPSETTINGS to the file path of the appsettings.json file stored anywhere on your computer. The samples will use that appsettings file if the environment variable exists and is not null. Be sure to log out and back in again after you define the variable for it to take effect. To set an environment variable, go to **Settings > System > About**, select **Advanced system settings**, and then choose **Environment variables**.
@@ -97,9 +100,9 @@ Sample completed.
 
 ## Demonstrates
 
-The code for this sample is in the [Program.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/C%23-NETCore/ImageOperations/Program.cs) file.
+The code for this sample is in the [Program.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/CSharp-NETCore/ImageOperations/Program.cs) file.
 
-The project uses a `Utility` class to perform operations involving creating or retrieving schema data. This class is in the [Utility.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/C%23-NETCore/ImageOperations/Utility.cs) file.
+The project uses a `Utility` class to perform operations involving creating or retrieving schema data. This class is in the [Utility.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/CSharp-NETCore/ImageOperations/Utility.cs) file.
 
 This project performs these operations:
 
@@ -114,7 +117,6 @@ This sample needs to create a new image column that is the primary image for the
    > This image column `CanStoreFullImage` value is false.
 
 1. Use the `Utility.SetTablePrimaryImageName` method to make `sample_ImageColumn` the primary image.
-
 
 ### Create account records with image data
 
@@ -156,7 +158,7 @@ To leave the system in the state before the sample ran, it does the following:
 ### See Also
 
 [Use image column data](../../image-column-data.md)<br />
-[Image columns](../../image-attributes.md)<br />
+[Work with image column definitions using code](../../image-attributes.md)<br />
 [Use file column data](../../file-column-data.md)<br />
 [Sample: Image Operations using Dataverse Web API](../../webapi/samples/image-operations.md)
 

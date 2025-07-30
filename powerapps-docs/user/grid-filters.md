@@ -1,14 +1,15 @@
 ---
 title: Explore data on a grid page
 description: Explore tabular data on a grid page in model-driven apps.
-author: jasongre
+author: clromano 
 ms.component: pa-user
-ms.topic: conceptual
-ms.date: 08/10/2023
+ms.topic: how-to
+ms.date: 06/30/2025
 ms.subservice: end-user
-ms.author: jasongre
-ms.reviewer: sericks
+ms.author: clromano
+ms.reviewer: smurkute
 ms.assetid: 
+ms.custom: ignite-2024
 search.audienceType: 
   - enduser
 ---
@@ -16,28 +17,20 @@ search.audienceType:
 
 In model-driven apps, the default control that's used to show data in tabular form is the read-only grid. When a subarea contains a table, the subarea's default layout in the app sitemap is called the grid page.
 
-:::image type="content" source="./media/grid-page-1.png" alt-text="A screenshot of a grid page in a model-driven app.":::
+:::image type="content" source="./media/grid-page-2.png" alt-text="A screenshot of a grid page in a model-driven app.":::
 
 Legend:
 
-1. **Command bar**: The commands available for the page
-1. **View selector**: Select to change views
-1. **Edit columns**: Select to add, remove, or reorder columns
-1. **Edit filters**: Select to filter the view with advanced queries
+1. [**Command bar**](#command-bar): The commands available for the page
+1. [**View selector**](#view-selector): Select to change views
+1. [**Edit columns**](#column-editor): Select to add, remove, or reorder columns
+1. [**Edit filters**](#filter-editor): Select to filter the view with advanced queries
 1. [**Filter by keyword** or **Quick find**](#grid-search): Show only the rows in the current view that match your search criteria
-1. **Hierarchy icon**: Indicates the record is part of a hierarchy
-1. **Record counter**: The position of this page of records in the total number of records that are shown in the view
-1. **Page navigation**: Move forward or backward by page in the set of records that are shown in the view
+1. [**Row counter**](#row-counter): Shows total number of rows
 
-## Navigation
+## Command bar
 
-To view the details of a record, select the link in the first column. To open the record details in a new tab or a new window, right-click the link in the column and select **Open link in new tab** or **Open link in new window**.
-
-If a record is in a hierarchy relationship, select the hierarchy icon to open the hierarchy view.
-
-:::image type="content" source="./media/grid-page-hierarchy-view.png" alt-text="A screenshot of a record hierarchy view.":::
-
- If you navigate away from the grid page and come back, the view retains your filters, sort order, and the state the page was in, including the grid control you had last chosen from the **Show as** menu.
+The command bar provides quick access to various commands and actions within an application.
 
 ## View selector
   
@@ -69,7 +62,7 @@ Use the [filter editor](./grid-filters-advanced.md#select-filter-conditions-in-t
 
 ## Grid search
 
-Grid search enables you to filter the current view based on a keyword. When you choose the search box, an information tooltip appears indicating the list of columns on which a begins-with match is applied.
+Grid search enables you to filter the current view based on a keyword. When you choose the search box, an information tooltip appears to indicate the list of columns on which a begins-with match is applied.
 
 > ![Information tooltip that indicates the list of columns on which a begins-with match is applied.](media/Grid-search-tooltip-smaller.png "Information tooltip that indicates the list of columns on which a begins-with match is applied.")
 
@@ -87,45 +80,94 @@ The search box can offer two different experiences, depending on how your admini
 If your administrator has turned on quick find, then the search box shows **Quick find**. When you enter text in the **Quick find** box, the system filters the table's quick find view. It displays the results in the columns of the quick find view rather than the current view.
 
 > [!NOTE]
-> Grid search keywords that begin with an asterisk (\*) will display a warning informing you that the search might be slower. If your administrator has turned on the [Prevent slow keyword filter for quick find terms on view pages](/power-platform/admin/settings-features) setting, then you cannot perform a search on keywords that begin with an asterisk (\*). 
+> Grid search keywords that begin with an asterisk (\*) will display a warning informing you that the search might be slower. If your administrator has turned on the [Prevent slow keyword filter for quick find terms on view pages](/power-platform/admin/settings-features) setting, then you cannot perform a search on keywords that begin with an asterisk (\*).
 >
 > ![Searching for keywords that begin with an asterisk will display a warning message.](media/grid-search-warning-smaller.png "Searching for keywords that begin with an asterisk will display a warning message.")
-  
 
-## Column filters
-  
-To focus on records that meet particular criteria, you can filter a view by column. The type of data in the column determines the filter options you can select.
+## Find and visualize data
 
->[!IMPORTANT]
->In Unified Interface, grids don't pre-populate column filters based on the current view definition.
+[Find data with AI](find-data-with-ai.md) and [visualize data with AI](visualize-data-in-copilot.md) using the natural language text input box.
 
-### Filtering on a lookup column
+## Row counter
 
-When you filter data on a lookup column, you can select from a list of values rather than typing. For example, to filter a view by **Primary Contact**, you can select a name from the list that appears when you select the filter text box.
+Row counter displays the total number of rows and indicates infinite scrolling on the page. This is the default view available.
 
-If you start typing, the filter suggests matching results to help you complete the search. The results include all rows that aren't otherwise filtered out.
+## Record counter
 
-:::image type="content" source="./media/lookup-filter.png" alt-text="A screenshot of the Primary Contact column filter that shows search completion.":::
+Record counter shows the position of the current page of records within the total number of records in the view. This is typically shown as a record counter, such as "Records 21-40 of 100". To view the record counter, your administrator must enable the settings.
 
-### Filtering on a date column
+## Page navigation
 
-When you filter on a date column, you can select from many different ways to specify a date or a time frame. For example, you can search **On or after** an exact date, **Next fiscal year**, or **Last week**.
-  
-### Filtering activities
-
-Use the activity type filter to show only the activities you're interested in, such as appointments or email.
-
-:::image type="content" source="./media/activity_filter.png" alt-text="A screenshot of the activity type filter that shows several types of activities selected.":::
+Page navigation allows you to move forward or backward by page in the set of records shown in the view and see the position of each page within the total dataset. To view the page navigation, your administrator must enable the settings.
 
 ## Jump bar
 
 The jump bar is a quick way to filter out records based on letters of the alphabet. To see only records that start with the letter *S*, for instance, select **S** in the jump bar.
 
-The jump bar acts on the first sorted column. If the sort order hasn't changed, the jump bar uses the primary column.
+The jump bar acts on the first sorted column. If the sort order hasn't changed, the jump bar uses the primary column. To view the jump bar, your administrator must enable the settings.
 
 :::image type="content" source="./media/jumpbar-filter-on-sorted-column.png" alt-text="A screenshot of the jump bar that's used to filter records by letter.":::
 
 <!-- I don't see the jump bar in my demo environment. I did some Binging and found that the jump bar was removed in the latest wave. You can bring it back, but it involves using the classic settings and seems kind of involved. Would it be better to remove the section on the jump bar instead? -->
+
+## Column header actions
+
+Dropdown column headers provide various options to let you modify the data shown in the grid. 
+
+### Sorting
+
+You can modify the order of records in the grid using the sorting actions in the dropdown column headers. By default, selecting to sort by a column replaces any existing sorting criteria on the grid. 
+
+> [!NOTE]
+> Multi-column sorting can be accomplished by holding the **Shift** key when you select a sort on a different column. This adds the sort condition to the existing sorting criteria on the grid, instead of replacing the sorting criteria.  
+
+### Filtering
+  
+To focus on records that meet particular criteria, you can filter a view by one or more columns. The type of data in the column determines the available filter options.
+
+> [!IMPORTANT]
+> In Unified Interface, grids don't pre-populate column filters based on the current view definition.
+
+> [!NOTE]
+> Filtering isn't supported on virtual entities. The grid filter's look-up list is limited to 100 results.  
+
+#### Filtering on a lookup column
+
+When you filter data on a lookup column, you can select from a list of values, rather than typing. For example, to filter a view by **Primary Contact**, you can select a name from the list that appears when you select the filter text box.
+
+If you start typing, the filter suggests matching results to help you complete the search. The results include all rows that aren't otherwise filtered out.
+
+:::image type="content" source="./media/lookup-filter.png" alt-text="A screenshot of the Primary Contact column filter that shows search completion.":::
+
+#### Filtering on a date column
+
+When you filter on a date column, you can select from many different ways to specify a date or a time frame. For example, you can search **On or after** an exact date, **Next fiscal year**, or **Last week**.
+  
+#### Filtering activities
+
+Use the activity type filter to show only the activities you're interested in, such as appointments or email.
+
+:::image type="content" source="./media/activity_filter.png" alt-text="A screenshot of the activity type filter that shows several types of activities selected.":::
+
+### Grouping
+
+When configured, the dropdown column headers surface a **Group by** option. This allows you to group the data in the grid by values in the selected group. 
+
+-  Grouping is available for most kinds of columns. This notably doesn't include lookup columns.
+-  When grouping on date fields, you need to choose a timeframe to on which to group. This includes day, week, month, quarter, and year.
+-  You can only group by one column at a time; selecting **Group by** on a different column replaces any existing grouping criteria.
+-  You can remove the grouping by selecting **Ungroup** from the same dropdown column header to remove the grouping.    
+
+> [!NOTE]
+> Grouping criteria isn't saved to a view.
+> Grouping is not supported on nested grids or when paging on the grid is allowed.
+
+### Aggregation
+
+When configured, the dropdown column headers surface a **Totals** option in numeric columns. This allows you to surface an aggregate calculation in the grid footer for the data in this column. You can choose between showing a sum, the maximum value, the minimum value, or the average value. If the data in the grid has been grouped, the aggregate is calculated and displayed for each group.  
+
+> [!NOTE]
+> Aggregations aren't saved to a view.  
 
 ## Show as
 

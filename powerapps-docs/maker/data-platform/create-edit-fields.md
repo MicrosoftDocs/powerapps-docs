@@ -1,5 +1,5 @@
 ---
-title: "How to create and edit columns for Microsoft Dataverse(contains video) | MicrosoftDocs"
+title: "How to create and edit columns for Microsoft Dataverse | MicrosoftDocs"
 description: Learn how to create and edit columns
 ms.custom: ""
 ms.date: 02/08/2019
@@ -27,7 +27,7 @@ search.audienceType:
 In Microsoft Dataverse columns define the individual data items that can be used to store data in a table. Columns are sometimes called *attributes* by developers. 
 
 Watch this video for a quick overview about columns:
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWEC1G]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=3379c026-1830-4265-86fc-c7d16a0b6b49]
   
 Before you create a custom column, evaluate whether using an existing column would meet your requirements. More information: [Create new metadata or use existing metadata?](create-edit-metadata.md#create-new-metadata-or-use-existing-metadata)
 

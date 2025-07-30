@@ -6,7 +6,7 @@ ms.date: 09/21/2023
 
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: how-to
 applies_to: 
   - "Dynamics 365 (online)"
 ms.assetid: 767f39d4-6a8e-48f0-bf7d-69ea1191acef
@@ -55,7 +55,7 @@ Accept: application/json
 
 Where:
 
-- Membership type is defined in the [team property](/dynamics365/customer-engagement/web-api/team#properties) `membershiptype`
+- Membership type is defined in the [Team table MembershipType column](reference/entities/team.md#BKMK_MembershipType)
 - Name of the team is the name of the Microsoft Entra ID group
 - Team type is based on the Microsoft Entra ID group type - for example "Security" or "Microsoft 365"
 
@@ -242,7 +242,7 @@ GET [Organization URI]/api/data/v9.0/RetrieveAadUserPrivileges(DirectoryObjectId
 
 ## Checking user or team's access rights on a record
 
-If you have a non-interactive process where your service needs to check if the user has access rights to a record, you can make a [RetrievePrincipalAccess function](/dynamics365/customer-engagement/web-api/retrieveprincipalaccess) call on behalf of the user by specifying the `CallerID`.
+If you have a non-interactive process where your service needs to check if the user has access rights to a record, you can make a [RetrievePrincipalAccess function](xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess) call on behalf of the user by specifying the `CallerID`.
 
 More information: [Impersonate another user](impersonate-another-user.md)
 

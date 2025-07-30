@@ -1,9 +1,9 @@
 ---
 title: "Merge table rows using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Read how to use the Merge unbound action to merge two table rows"
-ms.date: 08/10/2023
-author: divkamath
-ms.author: dikamath
+ms.date: 08/30/2024
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
@@ -15,7 +15,7 @@ contributors:
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-When you find duplicate records you can combine them into one using the <xref:Microsoft.Dynamics.CRM.Merge?text=Merge Action>.
+When you find duplicate records, you can combine them into one using the [Merge Action](xref:Microsoft.Dynamics.CRM.Merge).
 
 > [!NOTE]
 > Only the following entity types can be merged:
@@ -34,11 +34,11 @@ Merge is an unbound action that accepts four parameters:
 |---------|---------|---------|---------|
 |`Target`|<xref:Microsoft.Dynamics.CRM.crmbaseentity>|The target of the merge operation.| No|
 |`Subordinate`|<xref:Microsoft.Dynamics.CRM.crmbaseentity>|The entity record from which to merge data.| No|
-|`UpdateContent`|<xref:Microsoft.Dynamics.CRM.crmbaseentity>|Additional entity attributes to be set during the merge operation.| Yes|
+|`UpdateContent`|<xref:Microsoft.Dynamics.CRM.crmbaseentity>|More entity attributes to be set during the merge operation.| Yes|
 |`PerformParentingChecks`|Boolean|Indicates whether to check if the parent information is different for the two entity records.| No|
 
-Merging will move any useful data from the `Subordinate` record to the `Target` record. Any existing data in the `Target` record will not be overwritten. Then the `Subordinate` record is deactivated.
-To perform this operation the caller must have privileges and access rights to both the records identified as the `Target` and `Subordinate`.
+Merging moves any useful data from the `Subordinate` record to the `Target` record. Any existing data in the `Target` record aren't overwritten. Then the `Subordinate` record is deactivated.
+To perform this operation, the caller must have privileges and access rights to both the records identified as the `Target` and `Subordinate`.
 
 Use a POST request to send data to merge records. 
 This example merges two account entity records while updating `accountnumber` property of the record that will remain after the merge.
@@ -46,7 +46,7 @@ This example merges two account entity records while updating `accountnumber` pr
 **Request:**
 
 ```http
-POST [Organization URI]/api/data/v9.0/Merge HTTP/1.1
+POST [Organization URI]/api/data/v9.2/Merge HTTP/1.1
 Content-Type: application/json; charset=utf-8
 OData-MaxVersion: 4.0
 OData-Version: 4.0
@@ -85,18 +85,18 @@ OData-Version: 4.0
 
 The merge behavior for `incident` (case) table is different from `account`, `contact`, or `lead` tables.
 
-- The `UpdateContent` parameter data is not used.
+- The `UpdateContent` parameter data isn't used.
 - Merge is performed in the security context of the user
 
-   Merge operations for other tables are performed with a system user security context. Because incident merge operations are performed in the security context of the user, the user must have the security privileges to perform any of the actions, such as re-parenting related records, that are performed by the merge operation.
+   Merge operations for other tables are performed with a system user security context. Because incident merge operations are performed in the security context of the user, the user must have the security privileges to perform any of the actions, such as reparenting related records, that the merge operation performs.
 
-   If the user merging records doesn't have privileges for all the actions contained within the merge operation, the merge operation will fail and roll back to the original state.
+   If the user merging records doesn't have privileges for all the actions contained within the merge operation, the merge operation fail and roll back to the original state.
 
 ### See also
 
 [Use Web API actions](use-web-api-actions.md)<br />
 [Merge duplicate records](../../../user/merge-duplicate-records.md)<br />
-<xref:Microsoft.Crm.Sdk.Messages.MergeRequest?text=MergeRequest Class><br />
+[MergeRequest Class](xref:Microsoft.Crm.Sdk.Messages.MergeRequest)<br />
 [Administration Guide: Merge data](/power-platform/admin/merge-data)<br />
 [Dynamics 365 for Service: Merge cases](/dynamics365/customer-service/customer-service-hub-user-guide-merge-cases)
 

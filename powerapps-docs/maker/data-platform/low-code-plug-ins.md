@@ -1,22 +1,25 @@
 ---
-title: Use Dataverse low-code plug-ins
-description: Overview and how to create Microsoft Dataverse low-code plug-ins  
+title:  Streamline app development with low-code plug-ins in Microsoft Dataverse
+description: Guide to crafting low-code plug-ins in Microsoft Dataverse
 author: Mattp123
 ms.author: matp
 ms.service: powerapps
+ms.subservice: dataverse-maker
 ms.topic: how-to
-ms.date: 10/04/2023
+ms.date: 11/13/2024
 ms.custom: template-how-to
 contributors:
 - denise-msft
 ---
-# Use Dataverse low-code plug-ins (preview)
+# Use low-code plug-ins in Dataverse (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 Microsoft Dataverse offers a powerful solution for achieving more efficient data architecture and reducing client-side workload through low-code plug-ins. These plug-ins are reusable, real-time workflows that execute a specific set of commands within Dataverse, running server-side and triggered by personalized event handlers.
 
 > [!IMPORTANT]
+>
+> - Instant low-code plug-ins are deprioritized and aren't being delivered as a feature. Instant low-code plug-ins are replaced with functions. More information: [Functions in Microsoft Dataverse (preview)](functions-overview.md)
 > - This is a preview feature.
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
@@ -237,7 +240,7 @@ Test automated plug-ins by invoking the data event. Observe if the plug-in ran s
     1. Capture the response in a `Set()` or `UpdateContext()` formula: `Set( ActionResult, Environments.CalculateSum({ X: TextInput1.Text, Y: TextInput2.Text }) );`. Display the variable in a label. Alternatively use the `Notify()` formula to display data in a notification.
 1. Play the app and select the command on the command bar to run the low-code plug-in.
 
-Learn more about how you can [call Dataverse actions directly from Power Fx in canvas apps](../canvas-apps/connections/connection-common-data-service.md#call-dataverse-actions-directly-in-power-fx-preview).
+Learn more about how you can [call Dataverse actions directly from Power Fx in canvas apps](../canvas-apps/connections/connection-common-data-service.md#call-dataverse-actions-directly-in-power-fx).
 
 #### Invoke an instant plug-in from a Power Automate cloud flow
 
@@ -250,9 +253,13 @@ Learn more about how you can [call Dataverse actions directly from Power Fx in c
 
 Follow the steps for **Unbound action** or **Function bound to table** sections in the [Invoking custom APIs from the Web API documentation](/power-apps/developer/data-platform/custom-api#invoking-custom-apis-from-the-web-api) (depending on the appropriate scope of the plug-in).
 
-## Contacting Help + support
+## Getting help with you low-code plug-ins
 
-For issues with the Dataverse Accelerator solution installation or low-code plug-ins, such as errors received, [use the Help + support experience](/power-platform/admin/get-help-support) and include the following information:
+If you encounter issues creating or running your low-code plug-in, go to these tips for common issues that can occur: [Microsoft Dataverse low-code plug-ins tips and known issues](low-code-plug-ins-tips.md)
+
+### Contacting Help + support
+
+For issues with the Dataverse Accelerator solution installation or low-code plug-ins not covered in [Microsoft Dataverse low-code plug-ins tips and known issues](low-code-plug-ins-tips.md), such as undocumented errors received, [use the Help + support experience](/power-platform/admin/get-help-support) and include the following information:
 
 - Problem Type- Dataverse Web API and SDK
 - Problem Subtype- Accelerator kit for Dataverse
@@ -268,18 +275,34 @@ For a few examples of how to create a low-code plug-in, go to [Example Dataverse
 - Nested support. Plug-ins can only call first-party actions published by Microsoft from Power Fx expressions.
 - Some `Collect` scenarios require `Patch`. There are some scenarios where `Collect()` doesn't work. The workaround is to use `Patch()` as shown in the populating regarding column example below. If you're creating an automated plug-in, prepend @ to each table referenced in the Power Fx formula.
 
-    ```powerapps-dot
+    ```power-fx
     Patch(Faxes,
         Collect(Faxes, { Subject : "Sub1" } ),
         { Regarding : First(Accounts) }
     )
     ```
 - When low-code plug-ins interact with connectors and DLP is employed, the admin can block creation of connections using DLP. However, existing connection references in the Dataverse environment continue to function. In case the admin needs to block all low-code plug-in interactions with any connectors, they can disable the organization setting `Allowconnectorsonpowerfxactions`. This setting is enabled by default and can be disabled by usual SDK methods (WebAPI, SDK, PowerShell, and so on). You can disable this using a low-code instant plug-in as follows:
-   ```powerapps-dot
+   ```power-fx
    Patch(Organizations, First(Organizations), { 'Enable connectors on power fx actions.': 'Enable connectors on power fx actions. (Organizations)'.No })
    ```
 - Plug-ins that use connectors can only output results from specific fields. Due to this, you need to map specific primitive values from the connector response to output values.
 
+### Low-code plugins that have custom connectors limitation
+
+If you have low-code plugins with custom connectors, the custom connectors must be imported first, before connection references or flows.
+
+If your environment doesn’t contain the custom connector in a solution, import a separate solution that only includes the custom connector. Do this import before you import the actual solution. You need to do this first because Azure must register the custom connector before the other solution components can be imported.
+
+If you import a solution that contains custom connectors and flows, Azure isn't able to register the custom connector while it's registering your connection references or flows. This also applies to connection references for the custom connector that wasn't previously imported in a separate solution. If Azure didn't register your custom connector, the import fails, or you aren't able to start the import.
+
+More information: [Create custom connectors in solutions: Known limitations](/connectors/custom-connectors/customconnectorssolutions#known-limitations)
+
 ## See also
 
 [Low-code plug-ins Power Fx (preview)](low-code-plug-ins-powerfx.md)
+
+[Use a prebuilt prompt in a Dataverse low-code plug-in in Power Apps](/ai-builder/prebuilt-prompts-in-dataverse-plug-in-powerapps)
+
+[Create an automated low-code plug-in with Power Apps (video)](https://youtu.be/hwqVochKJJA?feature=shared)
+
+[Create an instant low-code plug-in with Power Apps (video)](https://youtu.be/2Bj57PiUr0E?feature=shared)

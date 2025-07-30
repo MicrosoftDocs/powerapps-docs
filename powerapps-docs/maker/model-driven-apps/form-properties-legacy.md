@@ -11,7 +11,7 @@ applies_to:
 ms.subservice: mda-maker
 ms.author: matp
 ms.date: 10/17/2023
-ms.topic: conceptual
+ms.topic: article
 ms.assetid: 4ed30bb7-dca1-4de8-80f3-842152ea921a
 search.audienceType: 
   - maker
@@ -24,7 +24,7 @@ search.audienceType:
 >
 > We recommend that you transition to use the modern designers to create and edit your model-driven apps and components.
 
-This article describes the classic solution explorer. We recommend that you use the modern form designer to edit properties for your model-driven app forms. More information: [Configure a form](create-and-edit-forms.md#configure-a-form) and [Configure model-driven app form event handlers](configure-event-handlers-legacy.md)
+This article describes the classic solution explorer. We recommend that you use the modern form designer to edit properties for your model-driven app forms. More information: [Configure a form](create-and-edit-forms.md#form-properties) and [Configure model-driven app form event handlers](configure-event-handlers-legacy.md)
 
 You can access **Form properties** in solution explorer. Under **Components**, expand **Tables**, expand the table you want, and then select **Forms**. In the list of forms, open the form of type **Main**. Then on the **Home** tab, select **Form Properties**.
 

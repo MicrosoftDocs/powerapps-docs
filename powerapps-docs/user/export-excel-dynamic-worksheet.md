@@ -1,15 +1,15 @@
 ---
 title: "Export to an Excel dynamic worksheet in model-driven Power Apps| MicrosoftDocs"
 description: How to export to an Excel dynamic worksheet in model-driven Power Apps
-author: sericks007
+author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
-ms.date: 3/12/2021
+ms.topic: how-to
+ms.date: 10/22/2024
 ms.subservice: end-user
-ms.author: sericks
+ms.author: smurkute
 ms.custom: ""
-ms.reviewer: sericks
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser
@@ -75,43 +75,6 @@ A few things to note:
 
 ## Refresh All doesn't work
 
-After you use the **Export to Excel** command to export a file to your local computer and open the file by selecting **Data** > **Refresh All**. The data disappears and workbook appears blank.
-
-This issue occurs when the data that you're accessing is password-protected and the Excel file can't submit passwords to external data sources. To resolve this issue, you must edit and save the web query.
-
-1. In the Excel file, select the **Data** tab > **Queries and Connections**.
-
-   > [!div class="mx-imgBorder"] 
-   > ![Go to Queries and Connections.](media/excel-dynamic-ts-1.png "Go to Queries and Connections") 
-   
-3. The **Queries & Connections** pane opens on the right of the window. On the **Connections** tab, right-click to select the query and then select **Properties**.
-
-   > [!div class="mx-imgBorder"] 
-   > ![Go connections properties.](media/excel-dynamic-ts-2.png "Go connections properties")
-   
-5. The **Connection Properties** window opens. On **Definition** tab, select **Edit Query**
-
-   > [!div class="mx-imgBorder"] 
-   > ![Edit query.](media/excel-dynamic-ts-3.png "Edit Query")
-
-6. If prompted, enter username and password. Enter the same user and password that you use to sign in to your app.
-
-7. On the **Edit Web Query** window, select **GO**. An error message will show: **Can't complete this action** 
-
-   > [!div class="mx-imgBorder"] 
-   > ![Select Go.](media/excel-dynamic-ts-4.png "Select GO")
-
-8. Close the **Edit Web Query** window.
-
-   > [!div class="mx-imgBorder"] 
-   > ![Close the window.](media/excel-dynamic-ts-5.png "Close the window")
-
-9. This should fix the issue. Refresh the data in the worksheet again by going to, **Data** > **Refresh All**. 
-
-   > [!div class="mx-imgBorder"] 
-   > ![Refresh your app data in Excel.](media/refresh-data.png "Refresh your app data in Excel") 
-
-
-
+If selecting **Data** > **Refresh All** causes data to disappear with a blank workbook after export to a dynamic worksheet, see [Troubleshoot: Refresh All doesn't work after exporting app data to a dynamic worksheet](/troubleshoot/power-platform/power-apps/create-and-use-apps/export-dynamic-worksheet-refresh-all).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

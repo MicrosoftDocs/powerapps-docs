@@ -5,7 +5,7 @@ ms.date: 06/19/2023
 author: jaredha
 ms.author: jaredha
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: how-to
 search.audienceType:
   - developer
 contributors:
@@ -18,7 +18,7 @@ contributors:
 The plug-in demonstrates how to obtain the execution context and the tracing service from the service provider parameter of the `Execute` method. The plug-in then posts the context to the Azure Service Bus endpoint and writes information to the trace log to facilitate debugging.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Azure aware custom plug-in sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/Azureplugin)
+> [SDK for .NET: Azure aware custom plug-in sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/Azureplugin)
 
 ## How to run this sample
 

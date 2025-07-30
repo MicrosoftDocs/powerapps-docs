@@ -1,9 +1,10 @@
 ---
 title: Web API Functions and Actions Sample
 description: This collection of code samples demonstrates how to perform bound and unbound functions and actions, including custom actions, using the Microsoft Dataverse Web API. These samples are implemented using client-side JavaScript and C#.
+ms.topic: sample
 ms.date: 09/02/2022
-author: divkamath
-ms.author: dikamath
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
@@ -63,9 +64,9 @@ OData-Version: 4.0
 
 {
   "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.WhoAmIResponse",
-  "BusinessUnitId": "cca3985e-c618-ea11-a811-000d3a33f066",
-  "UserId": "2138bd90-ec19-ea11-a811-000d3a334e11",
-  "OrganizationId": "f2c9290b-0806-4d48-bf9c-3814d4286755"
+  "BusinessUnitId": "11bb11bb-cc22-dd33-ee44-55ff55ff55ff",
+  "UserId": "22cc22cc-dd33-ee44-ff55-66aa66aa66aa",
+  "OrganizationId": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee"
 }
 ```
 
@@ -73,9 +74,9 @@ OData-Version: 4.0
 
 ```
 WhoAmI tells us:
-WhoAmIResponse.BusinessUnitId:cca3985e-c618-ea11-a811-000d3a33f066
-WhoAmIResponse.UserId:2138bd90-ec19-ea11-a811-000d3a334e11
-WhoAmIResponse.OrganizationId:f2c9290b-0806-4d48-bf9c-3814d4286755
+WhoAmIResponse.BusinessUnitId:11bb11bb-cc22-dd33-ee44-55ff55ff55ff
+WhoAmIResponse.UserId:22cc22cc-dd33-ee44-ff55-66aa66aa66aa
+WhoAmIResponse.OrganizationId:00aa00aa-bb11-cc22-dd33-44ee44ee44ee
 ```
 
 The `BusinessUnitId` value retrieved here will be used in [Section 8: Bound Action AddPrivilegesRole](#section-8-bound-action-addprivilegesrole).
@@ -203,7 +204,7 @@ More information:
    ```http
    HTTP/1.1 204 NoContent
    OData-Version: 4.0
-   OData-EntityId: [Organization Uri]/api/data/v9.2/accounts(98d463e4-6d29-ed11-9db1-00224804f8e2)
+   OData-EntityId: [Organization Uri]/api/data/v9.2/accounts(22cc22cc-dd33-ee44-ff55-66aa66aa66aa)
    ```
 
 1. Use `InitializeFrom` to get the data for a new record from the original record.
@@ -211,7 +212,7 @@ More information:
    **Request:**
 
    ```http
-   GET [Organization Uri]/api/data/v9.2/InitializeFrom(EntityMoniker=@p1,TargetEntityName=@p2,TargetFieldType=@p3)?@p1={'@odata.id':'accounts(98d463e4-6d29-ed11-9db1-00224804f8e2)'}&@p2='account'&@p3=Microsoft.Dynamics.CRM.TargetFieldType'ValidForCreate' HTTP/1.1
+   GET [Organization Uri]/api/data/v9.2/InitializeFrom(EntityMoniker=@p1,TargetEntityName=@p2,TargetFieldType=@p3)?@p1={'@odata.id':'accounts(22cc22cc-dd33-ee44-ff55-66aa66aa66aa)'}&@p2='account'&@p3=Microsoft.Dynamics.CRM.TargetFieldType'ValidForCreate' HTTP/1.1
    OData-MaxVersion: 4.0
    OData-Version: 4.0
    If-None-Match: null
@@ -228,7 +229,7 @@ More information:
    {
    "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#accounts/$entity",
    "@odata.type": "#Microsoft.Dynamics.CRM.account",
-   "parentaccountid@odata.bind": "accounts(98d463e4-6d29-ed11-9db1-00224804f8e2)"
+   "parentaccountid@odata.bind": "accounts(22cc22cc-dd33-ee44-ff55-66aa66aa66aa)"
    }
    ```
 
@@ -239,7 +240,7 @@ More information:
    {
    "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#accounts/$entity",
    "@odata.type": "#Microsoft.Dynamics.CRM.account",
-   "parentaccountid@odata.bind": "accounts(98d463e4-6d29-ed11-9db1-00224804f8e2)"
+   "parentaccountid@odata.bind": "accounts(22cc22cc-dd33-ee44-ff55-66aa66aa66aa)"
    }
    ```
 
@@ -310,7 +311,7 @@ More information:
    {
    "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#accounts/$entity",
    "@odata.type": "#Microsoft.Dynamics.CRM.account",
-   "parentaccountid@odata.bind": "accounts(98d463e4-6d29-ed11-9db1-00224804f8e2)",
+   "parentaccountid@odata.bind": "accounts(22cc22cc-dd33-ee44-ff55-66aa66aa66aa)",
    "name": "Contoso Consulting Chicago Branch",
    "address1_city": "Chicago",
    "address1_line1": "456 Elm St.",
@@ -327,7 +328,7 @@ More information:
    ```http
    HTTP/1.1 204 NoContent
    OData-Version: 4.0
-   OData-EntityId: [Organization Uri]/api/data/v9.2/accounts(9ad463e4-6d29-ed11-9db1-00224804f8e2)
+   OData-EntityId: [Organization Uri]/api/data/v9.2/accounts(33dd33dd-ee44-ff55-aa66-77bb77bb77bb)
    ```
 
    **Console output:**
@@ -337,7 +338,7 @@ More information:
    {
    "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#accounts/$entity",
    "@odata.type": "#Microsoft.Dynamics.CRM.account",
-   "parentaccountid@odata.bind": "accounts(98d463e4-6d29-ed11-9db1-00224804f8e2)",
+   "parentaccountid@odata.bind": "accounts(22cc22cc-dd33-ee44-ff55-66aa66aa66aa)",
    "name": "Contoso Consulting Chicago Branch",
    "address1_city": "Chicago",
    "address1_line1": "456 Elm St.",
@@ -378,13 +379,13 @@ OData-Version: 4.0
 {
   "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.RetrieveCurrentOrganizationResponse",
   "Detail": {
-    "OrganizationId": "f2c9290b-0806-4d48-bf9c-3814d4286755",
+    "OrganizationId": "11bb11bb-cc22-dd33-ee44-55ff55ff55ff",
     "FriendlyName": "[Organization Name]",
     "OrganizationVersion": "9.2.22074.168",
-    "EnvironmentId": "Default-f6976b02-5a42-4e90-ac3d-8bf516ce0859",
+    "EnvironmentId": "Default-aaaabbbb-0000-cccc-1111-dddd2222eeee",
     "DatacenterId": "695014e1-bafd-4d7e-9d3d-2261d4aaf780",
     "Geo": "NA",
-    "TenantId": "f6976b02-5a42-4e90-ac3d-8bf516ce0859",
+    "TenantId": "aaaabbbb-0000-cccc-1111-dddd2222eeee",
     "UrlName": "org619726b5",
     "UniqueName": "org0335df44",
     "State": "Enabled",
@@ -411,13 +412,13 @@ OData-Version: 4.0
 ```
 Data returned with RetrieveCurrentOrganizationResponse:
 {
-  "OrganizationId": "f2c9290b-0806-4d48-bf9c-3814d4286755",
+  "OrganizationId": "11bb11bb-cc22-dd33-ee44-55ff55ff55ff",
   "FriendlyName": "[Organization Name]",
   "OrganizationVersion": "9.2.22074.168",
-  "EnvironmentId": "Default-f6976b02-5a42-4e90-ac3d-8bf516ce0859",
+  "EnvironmentId": "Default-aaaabbbb-0000-cccc-1111-dddd2222eeee",
   "DatacenterId": "695014e1-bafd-4d7e-9d3d-2261d4aaf780",
   "Geo": "NA",
-  "TenantId": "f6976b02-5a42-4e90-ac3d-8bf516ce0859",
+  "TenantId": "aaaabbbb-0000-cccc-1111-dddd2222eeee",
   "UrlName": "org619726b5",
   "UniqueName": "org0335df44",
   "Endpoints": {
@@ -666,7 +667,7 @@ The sample code performs the following operations:
    ```http
    HTTP/1.1 204 NoContent
    OData-Version: 4.0
-   OData-EntityId: [Organization Uri]/api/data/v9.2/roles(669876fd-6d29-ed11-9db1-00224804f8e2)
+   OData-EntityId: [Organization Uri]/api/data/v9.2/roles(44ee44ee-ff55-aa66-bb77-88cc88cc88cc)
    ```
 
 1. Retrieve the role, expanding the `roleprivileges_association` collection-valued navigation property to include the privileges included with the role.
@@ -674,7 +675,7 @@ The sample code performs the following operations:
    **Request:**
 
    ```http
-   GET [Organization Uri]/api/data/v9.2/roles(669876fd-6d29-ed11-9db1-00224804f8e2)?$select=roleid&$expand=roleprivileges_association($select=name) HTTP/1.1
+   GET [Organization Uri]/api/data/v9.2/roles(44ee44ee-ff55-aa66-bb77-88cc88cc88cc)?$select=roleid&$expand=roleprivileges_association($select=name) HTTP/1.1
    OData-MaxVersion: 4.0
    OData-Version: 4.0
    If-None-Match: null
@@ -691,7 +692,7 @@ The sample code performs the following operations:
    {
    "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#roles(roleid,roleprivileges_association(name))/$entity",
    "@odata.etag": "W/\"13278232\"",
-   "roleid": "669876fd-6d29-ed11-9db1-00224804f8e2",
+   "roleid": "44ee44ee-ff55-aa66-bb77-88cc88cc88cc",
    "roleprivileges_association": [
       {
          "@odata.etag": "W/\"142279\"",
@@ -800,7 +801,7 @@ The sample code performs the following operations:
    **Request:**
 
    ```http
-   POST [Organization Uri]/api/data/v9.2/roles(669876fd-6d29-ed11-9db1-00224804f8e2)/Microsoft.Dynamics.CRM.AddPrivilegesRole HTTP/1.1
+   POST [Organization Uri]/api/data/v9.2/roles(44ee44ee-ff55-aa66-bb77-88cc88cc88cc)/Microsoft.Dynamics.CRM.AddPrivilegesRole HTTP/1.1
    OData-MaxVersion: 4.0
    OData-Version: 4.0
    If-None-Match: null
@@ -836,7 +837,7 @@ The sample code performs the following operations:
    **Request:**
 
    ```http
-   GET [Organization Uri]/api/data/v9.2/roles(669876fd-6d29-ed11-9db1-00224804f8e2)?$select=roleid&$expand=roleprivileges_association($select=name) HTTP/1.1
+   GET [Organization Uri]/api/data/v9.2/roles(44ee44ee-ff55-aa66-bb77-88cc88cc88cc)?$select=roleid&$expand=roleprivileges_association($select=name) HTTP/1.1
    OData-MaxVersion: 4.0
    OData-Version: 4.0
    If-None-Match: null
@@ -853,7 +854,7 @@ The sample code performs the following operations:
    {
    "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#roles(roleid,roleprivileges_association(name))/$entity",
    "@odata.etag": "W/\"13278248\"",
-   "roleid": "669876fd-6d29-ed11-9db1-00224804f8e2",
+   "roleid": "44ee44ee-ff55-aa66-bb77-88cc88cc88cc",
    "roleprivileges_association": [
       {
          "@odata.etag": "W/\"142189\"",
@@ -949,7 +950,7 @@ Content-Type: application/http
 Content-Transfer-Encoding: binary
 Content-Length: 121
 
-DELETE /api/data/v9.2/accounts(98d463e4-6d29-ed11-9db1-00224804f8e2) HTTP/1.1
+DELETE /api/data/v9.2/accounts(22cc22cc-dd33-ee44-ff55-66aa66aa66aa) HTTP/1.1
 
 
 --batch_d6010246-cd97-429f-bc05-cf20054cfe8a
@@ -957,7 +958,7 @@ Content-Type: application/http
 Content-Transfer-Encoding: binary
 Content-Length: 121
 
-DELETE /api/data/v9.2/accounts(9ad463e4-6d29-ed11-9db1-00224804f8e2) HTTP/1.1
+DELETE /api/data/v9.2/accounts(33dd33dd-ee44-ff55-aa66-77bb77bb77bb) HTTP/1.1
 
 
 --batch_d6010246-cd97-429f-bc05-cf20054cfe8a
@@ -981,7 +982,7 @@ Content-Type: application/http
 Content-Transfer-Encoding: binary
 Content-Length: 118
 
-DELETE /api/data/v9.2/roles(669876fd-6d29-ed11-9db1-00224804f8e2) HTTP/1.1
+DELETE /api/data/v9.2/roles(44ee44ee-ff55-aa66-bb77-88cc88cc88cc) HTTP/1.1
 
 
 --batch_d6010246-cd97-429f-bc05-cf20054cfe8a--

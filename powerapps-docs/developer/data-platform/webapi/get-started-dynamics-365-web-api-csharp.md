@@ -1,9 +1,9 @@
 ---
 title: "Get started with Dataverse Web API (C#) (Dataverse)| Microsoft Docs"
 description: "Learn how to access the Dataverse Web API using the Microsoft Visual C# programming language."
-ms.date: 06/22/2023
-author: divkamath
-ms.author: dikamath
+ms.date: 05/28/2025
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
@@ -29,6 +29,6 @@ To learn more, please explore the [Web API Samples (C#)](web-api-samples-csharp.
   
 [Perform operations using the Web API](perform-operations-web-api.md)  
 [Web API Samples (C#)](web-api-samples-csharp.md)  
-[Set up a Postman environment](setup-postman-environment.md)
+[Use Insomnia with Dataverse Web API](insomnia.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

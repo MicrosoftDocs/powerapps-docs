@@ -5,8 +5,8 @@ ms.collection: get-started
 ms.date: 04/14/2023
 ms.reviewer: pehecke
 ms.topic: article
-author: phecke # GitHub ID
-ms.author: pehecke # MSFT alias of Microsoft employees only
+author: MsSQLGirl # GitHub ID
+ms.author: jukoesma # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 contributors:
@@ -61,6 +61,6 @@ Contains the Plug-in Registration tool used for registering plug-in assemblies, 
 ### See also
 
 [NuGet Documentation](/nuget/)  
-[Install NuGet client tools](https://learn.microsoft.com/nuget/install-nuget-client-tools)
+[Install NuGet client tools](/nuget/install-nuget-client-tools)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

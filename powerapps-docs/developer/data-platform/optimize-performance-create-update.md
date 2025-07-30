@@ -3,7 +3,7 @@ title: Optimize performance for bulk operations
 description: Choose the best approach when building client applications that create or update large numbers records.
 author: apurvghai
 ms.topic: article
-ms.date: 08/28/2023
+ms.date: 07/01/2024
 ms.subservice: dataverse-developer
 ms.author: apurvgh
 ms.reviewer: jdaly
@@ -14,7 +14,7 @@ search.app:
   - D365CE
 contributors:
   - JimDaly
-  - divkamath
+  - MicroSri
 ---
 # Optimize performance for bulk operations
 
@@ -22,7 +22,7 @@ When you need to create or update thousands or millions of records in Dataverse,
 
 ## Table type
 
-The type of table you choose to store your data has the greatest impact on how much throughput you can expect with bulk operations. Dataverse offers two types of tables: *standard* and *elastic*. Elastic tables are currently a preview feature.
+The type of table you choose to store your data has the greatest impact on how much throughput you can expect with bulk operations. Dataverse offers two types of tables: *standard* and *elastic*. 
 
 - A **standard** table stores data using Azure SQL. Standard tables provide transaction support and greater capabilities for modeling relationships.
 - An **elastic** table stores data using Azure Cosmos DB. Elastic tables automatically scale horizontally to handle large amounts of data and high levels of throughput with low latency. Elastic tables are suitable for applications that have unpredictable, spiky, or rapidly growing workloads.
@@ -44,13 +44,13 @@ Any plug-in that is registered to run synchronously increases the time for the o
 
 ### Bypass business logic
 
-To expedite the bulk operation project, you can disable synchronous plug-ins registered for the create or update operations to improve performance. If the business logic isn't essential, or if you plan other steps to ensure eventual data consistency, you can manually disable the plug-in steps and re-enable them when the bulk operation project is complete. However, disabling plug-ins disables the logic from being applied from *any* client. Any user or other process adding data to Dataverse during this period won't have any of the business logic applied.
+To expedite the bulk operation project, you can disable plug-ins registered for the create or update operations to improve performance. If the business logic isn't essential, or if you plan other steps to ensure eventual data consistency, you can manually disable the plug-in steps and re-enable them when the bulk operation project is complete. However, disabling plug-ins disables the logic from being applied from *any* client. Any user or other process adding data to Dataverse during this period won't have any of the business logic applied.
 
-As a developer of a client application performing the bulk operation, you can apply an [optional parameter](optional-parameters.md) to the requests you send to by-pass synchronous logic. Only a system administrator, or users who have been granted a specific privilege can use this header. [Learn more about how to bypass synchronous logic](bypass-custom-business-logic.md#bypass-synchronous-logic).
+As a developer of a client application performing the bulk operation, you can apply an [optional parameter](optional-parameters.md) to the requests you send to by-pass logic. Only a system administrator, or users who have been granted a specific privilege can use this header. [Learn more about how to bypass custom Dataverse logic](bypass-custom-business-logic.md).
 
 ## Bulk operation APIs
 
-Dataverse provides [bulk operation APIs](bulk-operations.md) that enable the highest possible throughput for create and update operations. These APIs are currently in preview. These APIs include `CreateMultiple`, `UpdateMultiple`, and for elastic tables only: `DeleteMultiple`. `UpsertMultiple` is coming soon.
+Dataverse provides [bulk operation APIs](bulk-operations.md) that enable the highest possible throughput for create and update operations. These APIs include `CreateMultiple`, `UpdateMultiple`, and `UpsertMultiple`. For elastic tables only, you can use `DeleteMultiple`.
 
 While these APIs provide the highest throughput, they have the following limitations for standard tables:
 
@@ -61,7 +61,7 @@ While these APIs provide the highest throughput, they have the following limitat
 
 Bulk operations are available for all elastic tables and elastic tables can return information about individual operations that fail. [Learn more about bulk operations with elastic tables](use-elastic-tables.md#bulk-operations-with-elastic-tables).
 
-### Batch APIs
+## Batch APIs
 
 If you aren't able to use bulk operation APIs, with the SDK for .NET you can use [ExecuteMultiple](org-service/execute-multiple-requests.md), and with Web API you can use [OData $batch](webapi/execute-batch-operations-using-web-api.md).
 
@@ -85,7 +85,7 @@ Service protection limit errors are just another kind of transient error that yo
 
 Read these articles to learn more:
 
-- [How to retry Dataverse requests](api-limits.md#how-to-re-try)
+- [How to retry Dataverse requests](api-limits.md#how-to-retry)
 - [Dataverse service protection limits](api-limits.md)
 - [Azure best practices: Transient fault handling](/azure/architecture/best-practices/transient-faults)
 
@@ -121,6 +121,7 @@ System.Net.ServicePointManager.Expect100Continue = false;
 // Can decrease overall transmission overhead but can cause delay in data packet arrival
 System.Net.ServicePointManager.UseNagleAlgorithm = false;
 ```
+
 ## Recommendation summary
 
 Based on the factors previously described, follow these recommendations to optimize throughput for bulk operation projects:
@@ -134,11 +135,11 @@ Based on the factors previously described, follow these recommendations to optim
 
 ### See also
 
-[Elastic tables (Preview)](elastic-tables.md)   
+[Elastic tables](elastic-tables.md)   
 [Use plug-ins to extend business processes](plug-ins.md)   
-[Bypass synchronous logic](bypass-custom-business-logic.md#bypass-synchronous-logic)   
-[Bulk Operation messages (preview)](bulk-operations.md)   
-[Write plug-ins for CreateMultiple and UpdateMultiple (Preview)](write-plugin-multiple-operation.md)   
+[Bypass custom Dataverse logic](bypass-custom-business-logic.md)   
+[Bulk Operation messages](bulk-operations.md)   
+[Write plug-ins for CreateMultiple and UpdateMultiple](write-plugin-multiple-operation.md)   
 [Send parallel requests](send-parallel-requests.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

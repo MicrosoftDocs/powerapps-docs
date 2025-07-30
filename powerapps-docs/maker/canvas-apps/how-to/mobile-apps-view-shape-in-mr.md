@@ -1,12 +1,12 @@
 ---
-title: Create an app to view a shape in mixed reality (contains video)
+title: Create an app to view a shape in mixed reality
 description: Learn how to use the view shape in MR control in your Power Apps.
 author: joel-lindstrom
 
 ms.subservice: canvas-maker
 search.audienceType: 
   - maker
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.date: 11/22/2021
 ms.author: anuitz
@@ -23,7 +23,7 @@ You can use the **View Shape in MR** control in your app to let users see if a s
 The control creates a button in your app. When app users select the button, it overlays a cube onto the live camera feed of the device. You set up the dimensions of the cube when you edit the control in Power Apps.
 
 Watch this video to learn how to build mobile apps with View Shape in MR control:
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLAkb]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=2b6080fd-8236-48a5-b9b2-48285eccdba6]
 
 In this article, we'll create a screen in an app that will allow users to create a custom cube shape by inputting unit to be used (centimeters, feet, inches, or meters), and defining the height, width, and depth of the cube.
 

@@ -24,14 +24,14 @@ The examples in this article use the [Hospital Emergency Response sample solutio
 
 ## Use App.Formulas instead of App.OnStart
 
-> [!IMPORTANT]
-> Named formulas is an experimental feature. Experimental features aren't meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback You can use the With function and canvas component custom output properties as an alternative to named formulas. They're harder to use than named formulas, but are fully supported.
+> [!TIP]
+> You can use [With](/power-platform/power-fx/reference/function-with) function and canvas component custom output properties as an alternative to named formulas.
 
 The best way to reduce loading time for both Power Apps Studio and your app is to replace variable and collection initialization in **App.OnStart** with [named formulas in **App.Formulas**](/power-platform/power-fx/reference/object-app#formulas-property).
 
 Let's look at the following example, which uses App.OnStart.
 
-```powerapps-dot
+```power-fx
 // Get the color of text on a dark background.
 Set(varColorOnDark,RGBA(0, 0, 0, 1));
 
@@ -70,7 +70,7 @@ Because they're a sequence of statements, your app must evaluate these **Set** a
 
 There's a better way. Use **App.Formulas** instead and define these variables and collections as named formulas, as in the following example.
 
-```powerapps-dot
+```power-fx
 // Get the color of text on a dark background.
 varColorOnDark = RGBA(0, 0, 0, 1);
 
@@ -128,7 +128,7 @@ In the earlier example, we used named formulas as a replacement for **App.OnStar
 
 For example, one of the screens in the Hospital Emergency Response sample solution includes this logic in **Screen.OnVisible**:
 
-```powerapps-dot
+```power-fx
 ClearCollect(
     MySplashSelectionsCollection,
     {
@@ -155,7 +155,7 @@ ClearCollect(
 
 This formula can be split into a set of named formulas. It also makes the formula easier to read.
 
-```powerapps-dot
+```power-fx
 MyRegion = LookUp(
                     Regions,
                     Region = MyParamRegion
@@ -183,7 +183,7 @@ Named formulas are evaluated only when their values are needed. If the original 
 
 You can also use the **With** function in a formula to split up logic. Create a record in the first parameter with the values you want to use as fields, and then use those fields in the second parameter to calculate the return value from **With**. For example, the previous example can be written as just one named formula:
 
-```powerapps-dot
+```power-fx
 MySplashSelectionsCollection = 
     With( { MyRegion: LookUp(
                             Regions,
@@ -239,7 +239,7 @@ Named formulas and canvas component custom output properties don't support imper
 
 For example, one of the screens in our sample has the following **OnSelect** property on a **Button** control. (This simple example is for illustration purposes only. Normally, you would only use this technique for longer formulas.)
 
-```powerapps-dot
+```power-fx
 btnAction_17.OnSelect = 
     Trace("Feedback Screen: Submit Button",TraceSeverity.Information);
     If(
@@ -261,7 +261,7 @@ btnAction_17.OnSelect =
 
 To split this logic into parts, we can put portions onto separate **Button** controls and **Select** them from the original:
 
-```powerapps-dot
+```power-fx
 btnTrace.OnSelect = 
     Trace("Feedback Screen: Submit Button",TraceSeverity.Information);
 
@@ -305,7 +305,7 @@ This approach was used in the [Hospital Emergency Response sample solution](../.
 
 When the user selects an area, the component uses metadata about the apps available and which app is hosting the component. If the desired screen is in this app (that is, **ThisItem.Screen** is not blank), then a **Navigate** call is made. But if the desired screen is in a different app (that  is, **ThisItem.PowerAppID** is not blank), then a **Launch** function is used with the App ID of the target and the FacilityID context:
 
-```powerapps-dot
+```power-fx
 If(
     IsBlank(ThisItem.Screen),
     If(IsBlank(ThisItem.PowerAppID), 

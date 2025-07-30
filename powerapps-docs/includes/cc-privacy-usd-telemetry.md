@@ -1,4 +1,4 @@
-﻿The Help Improve [!INCLUDE[pn_unified_service_desk](pn-unified-service-desk.md)] feature sends [!INCLUDE[pn_unified_service_desk](pn-unified-service-desk.md)] usage information, such as operating system details, browser details, [!INCLUDE[pn_unified_service_desk](../includes/pn-unified-service-desk.md)] application-specific information, and [!INCLUDE[pn_unified_service_desk](pn-unified-service-desk.md)] version from the computer on which you install the client. [!INCLUDE[pn_unified_service_desk](pn-unified-service-desk.md)] sends the information to [!INCLUDE[cc_Microsoft](cc-microsoft.md)] through a secure connection to Organization Insights and stored in [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Table Storage.
+The Help Improve [!INCLUDE[pn_unified_service_desk](pn-unified-service-desk.md)] feature sends [!INCLUDE[pn_unified_service_desk](pn-unified-service-desk.md)] usage information, such as operating system details, browser details, [!INCLUDE[pn_unified_service_desk](../includes/pn-unified-service-desk.md)] application-specific information, and [!INCLUDE[pn_unified_service_desk](pn-unified-service-desk.md)] version from the computer on which you install the client. [!INCLUDE[pn_unified_service_desk](pn-unified-service-desk.md)] sends the information to [!INCLUDE[cc_Microsoft](cc-microsoft.md)] through a secure connection to Organization Insights and stored in [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Table Storage.
   
 > [!NOTE]
 >  Organization Insights provides the System Administrator of a [!INCLUDE[pn_crm_shortest](pn-crm-shortest.md)] organization with a quick overview of how the org is being used. The System Administrator can view most active users, the number of SDK requests being initiated, and the number of being viewed by SDK users.
@@ -20,7 +20,7 @@
   
  Raw telemetry data in [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Blob Storage is aggregated and stored in Azure Table Storage, which is read by the Cloud Service.  
   
- [Azure Active Directory](https://azure.microsoft.com/services/active-directory/)  
+ [Microsoft Entra ID](https://azure.microsoft.com/services/active-directory/)  
   
  Organization Insights uses  [!INCLUDE[pn_azure_active_directory](pn-azure-active-directory.md)] Service to authenticate web services.  
   

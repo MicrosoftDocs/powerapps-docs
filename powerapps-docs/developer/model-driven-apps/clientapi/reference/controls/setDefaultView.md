@@ -1,8 +1,8 @@
 ---
-title: "setDefaultView (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "setDefaultView (Client API reference) in model-driven apps"
 description: Sets teh default view for the lookup control dialog box.
-author: chmoncay
-ms.author: chmoncay
+author: MitiJ
+ms.author: mijosh
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -27,7 +27,7 @@ Lookup
 ## Parameter
 
 |Name|Type|Required|Description|
-|--|--|--|--|
+|----|----|----|----|
 |`viewId`|String|Yes|The ID of the view to be set as the default view.|
 
 [!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
@@ -46,8 +46,5 @@ function setDefaultViewSample(executionContext) {
 ### Related articles
 
 [getDefaultView](getDefaultView.md) 
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

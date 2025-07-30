@@ -2,13 +2,12 @@
 title: "Use access teams and owner teams to collaborate and share information (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about using access teams and owner teams to colloborate and share information." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 03/28/2018
+ms.date: 12/12/2023
 ms.reviewer: "pehecke"
-
 ms.topic: "article"
 author: "paulliew" # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
+ms.author: "paulliew" # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 ---
@@ -33,7 +32,7 @@ With *owner* teams or *access* teams, you can easily share business objects and 
   
 ### When to use owner teams  
   
-- Owning records by tables other than users is required by your company’s business policies.  
+- Owning records by teams other than users is required by your company’s business policies.  
   
 - The number of teams is known at the design time of your Dataverse system.  
   
@@ -88,7 +87,7 @@ With *owner* teams or *access* teams, you can easily share business objects and 
   
  To enable a table for the auto-created access teams, set the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.AutoCreateAccessTeams> attribute to `true`.  
   
- A maximum number of team templates that you can create for a table is specified in the <xref:Microsoft.Xrm.Sdk.Deployment.TeamSettings.MaxAutoCreatedAccessTeamsPerEntity> deployment setting. The default value is 2. A maximum number of tables that you can enable for auto created access teams is specified in the <xref:Microsoft.Xrm.Sdk.Deployment.TeamSettings.MaxEntitiesEnabledForAutoCreatedAccessTeams> deployment setting. The default value is 5. 
+ A maximum number of team templates that you can create for a table is specified in the `MaxAutoCreatedAccessTeamsPerEntity` [environment database settings](/power-platform/admin/environment-database-settings). The default value is four (4). A maximum number of tables that you can enable for auto created access teams is specified in the `MaxEntitiesEnabledForAutoCreatedAccessTeams` [environment database settings](/power-platform/admin/environment-database-settings). The default value is one hundred (100). You can update these settings uinsg the [OrganizationSettingsEditor](/power-platform/admin/environment-database-settings#install-the-organizationsettingseditor-tool).
   
  The users are automatically added and removed in the system-managed team, when you add or remove the users in a particular record by using the <xref:Microsoft.Crm.Sdk.Messages.AddUserToRecordTeamRequest> message and the <xref:Microsoft.Crm.Sdk.Messages.RemoveUserFromRecordTeamRequest> message. The actual team is created when you add the first user to the record and the team ID is returned in <xref:Microsoft.Crm.Sdk.Messages.AddUserToRecordTeamResponse.AccessTeamId>. The `Team.SystemManaged` column for this team is set to `true`. For a list of the `Team.SystemManaged` values, refer to the `Team` entity metadata. You can find this information in the table definitions in your environment. The caller of the message must have the Share privilege on the table and the access rights on the row that match the access rights provided in the template. For example, if the template specifies the Read access rights, the calling user must have the Read access rights on the row. To be added to the team, a minimum access level a user must have on the table specified in the template is Basic (User) Read.  
   

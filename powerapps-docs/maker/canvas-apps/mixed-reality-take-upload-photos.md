@@ -2,7 +2,7 @@
 title: Take screenshots of 3D objects in mixed reality
 description: Take photos of 3D objects in the real world with augmented reality features in Power Apps.
 author: anuitz
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.date: 03/4/2022
 ms.reviewer: mduelae
@@ -59,7 +59,8 @@ With your app open for [editing](edit-app.md) in [Power Apps Studio](https://cre
 
    :::image type="content" source="./media/augmented-upload-photo/augmented-view-mr.png" alt-text="A screenshot of a View in MR control under construction in Microsoft Power Apps Studio, shown with its Source property.":::
 
-1. [Save and publish the app](save-publish-app.md) and [run it on your mobile device](/powerapps/maker/canvas-apps/../mobile/run-powerapps-on-mobile).
+1. [Save and publish the app](save-publish-app.md) and [run it on your mobile device](../../mobile/run-powerapps-on-mobile.md).
+
 1. Select **View in MR** to view the 3D object in mixed reality. Select the camera icon to take a photo of the MR view.
 
 ## Insert a gallery control to view photos taken in the app
@@ -100,7 +101,7 @@ To make the photos in the gallery easier to see, you can add a full-size overlay
 
     :::image type="content" source="./media/augmented-upload-photo/set-gallery-onselect.png" alt-text="A screenshot of a thumbnail image in a gallery in Microsoft Power Apps Studio, shown with its OnSelect property.":::
 
-1. [Save and publish the app](save-publish-app.md) and [run it on your mobile device](/powerapps/maker/canvas-apps/../mobile/run-powerapps-on-mobile).
+1. [Save and publish the app](save-publish-app.md) and [run it on your mobile device](../../mobile/run-powerapps-on-mobile.md).
 1. Select **View in MR**, and then select the camera icon to take a photo. Select the back arrow at the top of the screen to exit the MR view.
 1. Select the thumbnail in the gallery to show a larger version of the photo. Select the image to hide it.
 
@@ -186,7 +187,7 @@ You can add photos to Dataverse tables through an Image data type column. Image 
 
 For example, if you wanted to upload the first photo captured by the Markup in MR control to a Dataverse column called Image:
 
-```powerapps-dot
+```power-fx
     Image: {Full: First(MarkupInMR.Photos).ImageURI, Value: First(MarkupInMR.Photos).ImageURI}
 ```
 
