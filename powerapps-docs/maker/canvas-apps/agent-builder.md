@@ -5,7 +5,7 @@ author: noazarur-microsoft
 ms.topic: how-to
 ms.date: 4/25/2025
 ms.subservice: canvas-maker
-ms.author: noazarur
+ms.author: hillaryyaory
 ms.reviewer: mkaur
 search.audienceType: 
   - maker
