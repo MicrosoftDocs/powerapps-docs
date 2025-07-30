@@ -26,12 +26,13 @@ landingContent:
 
           - text: Copilot in Power Apps overview
             url: maker/canvas-apps/ai-overview.md
-          - text: Turn off Copilot
-            url: maker/canvas-apps/ai-overview.md#turn-off-copilot-preview-features-in-power-apps
+        
           - text: Copilot admin settings
             url: /power-platform/admin/settings-features
           - text: FAQ about using AI responsibly
             url: maker/common/responsible-ai-overview.md
+          - text: Turn off Copilot preview feature
+            url: maker/canvas-apps/ai-overview.md#turn-off-copilot-preview-features-in-power-apps
 
   # Card
   - title: Use Plan designer
