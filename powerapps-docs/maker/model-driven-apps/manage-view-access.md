@@ -2,7 +2,7 @@
 title: "Manage access to public system views"
 description: "Learn how to managed access with security roles to public system views for model-driven apps in Microsoft Power Apps"
 ms.custom: ""
-ms.date: 06/23/2025
+ms.date: 07/29/2025
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -35,7 +35,6 @@ Data access continues to be secured with security role privileges, which means o
 ## Prerequisites
 
 - System administrator security role membership in the Microsoft Dataverse environment.
-- By default, the manage system views feature is turned off. Turn on the `EnableRoleBasedSystemViews` setting by downloading and running the OrganizationSettingsEditor tool. More information: [How to change default environment database settings](/power-platform/admin/environment-database-settings#install-the-organizationsettingseditor-tool)
 - Turning on auditing is recommended, but not required.
 
 ## System views in a Dataverse environment
