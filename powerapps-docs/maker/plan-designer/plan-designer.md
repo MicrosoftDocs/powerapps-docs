@@ -53,7 +53,7 @@ If you have a plan and want to switch between the preview and generally availabl
 > When you switch the preview experience for Plan designer on or off, some content in the plan can be modified, regenerated, or deleted.
 
 
-Preview Copilot features are available by default, but admins can turn them off for a specific environment or tenant. Learn more in [Copilot in Power Apps overview (preview)](../canvas-apps/ai-overview.md#disable-copilot-in-power-apps).
+Preview Copilot features are on by default, but admins can turn them off for a specific environment or tenant. Learn more in [Enable or disable Copilot features](../canvas-apps/ai-overview.md#enable-or-disable-copilot-features).
 
 
 ## Next steps
