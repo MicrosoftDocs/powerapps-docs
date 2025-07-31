@@ -16,17 +16,17 @@ search.audienceType:
 
 # Set up mobile offline for model-driven apps
 
-Use the [modern app designer](../maker/model-driven-apps/app-designer-overview.md) to enable your model-driven apps for offline use on a mobile device. When offline mode is enabled, users can interact with their data without internet connectivity on the [Power Apps mobile app](https://powerapps.microsoft.com/downloads/).
+Use the [modern app designer](../maker/model-driven-apps/app-designer-overview.md) to enable your model-driven apps for offline use on a mobile device. When offline mode is enabled, users interact with their data without internet connectivity on the [Power Apps mobile app](https://powerapps.microsoft.com/downloads/).
 
 ## Prerequisites
 
 Verify the following prerequisites before you enable mobile offline:
 
-- Environment maker, system administrator, or system customizer role is needed to configure offline mode for model-driven apps. These roles have Create, Read, Write, Delete, and Share privileges on the **Mobile offline profile** table. For more information, see [About predefined security roles](../maker/model-driven-apps/share-model-driven-app.md#about-predefined-security-roles)
+- You need the environment maker, system administrator, or system customizer role to configure offline mode for model-driven apps. These roles have Create, Read, Write, Delete, and Share privileges on the **Mobile offline profile** table. For more information, see [About predefined security roles](../maker/model-driven-apps/share-model-driven-app.md#about-predefined-security-roles)
 
-- Users with the basic user role can open and use an offline application. This role has the Read privilege for the **Mobile offline profile** table.
+- Users with the basic user role can open and use an offline app. This role has the Read privilege for the **Mobile offline profile** table.
 
-   If you have a custom security role, make sure you have the Read privilege for the **Mobile offline profile** table. For more information, see [Miscellaneous privileges](/power-platform/admin/miscellaneous-privileges)
+   If you have a custom security role, ensure you have the read privilege for the **Mobile offline profile** table. For more information, see [Miscellaneous privileges](/power-platform/admin/miscellaneous-privileges)
 
 ## Optimize your app for mobile offline
 
