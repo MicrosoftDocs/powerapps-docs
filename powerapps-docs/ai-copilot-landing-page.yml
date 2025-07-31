@@ -31,8 +31,8 @@ landingContent:
             url: /power-platform/admin/settings-features
           - text: FAQ about using AI responsibly
             url: maker/common/responsible-ai-overview.md
-          - text: Turn off Copilot preview feature
-            url: maker/canvas-apps/ai-overview.md#turn-off-copilot-preview-features-in-power-apps
+          - text: Enable or disable Copilot features
+            url: maker/canvas-apps/ai-overview.md#enable-or-disable-copilot-features
 
   # Card
   - title: Use Plan designer
