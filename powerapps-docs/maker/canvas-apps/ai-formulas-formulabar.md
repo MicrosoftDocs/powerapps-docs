@@ -28,7 +28,7 @@ Copilot is an AI feature in Power Apps Studio that helps you create and modify P
 
 ## Prerequisites
 
-Copilot must be enabled for your environment and tenant. For more information, see [Enable or disable Copilot (preview) in Power Apps](ai-overview.md#disable-copilot-in-power-apps).
+Copilot must be enabled for your environment and tenant. For more information, see [Enable or disable Copilot (preview) in Power Apps](ai-overview.md#turn-off-copilot-preview-features-in-power-apps).
 
 ## Explain a formula
 
