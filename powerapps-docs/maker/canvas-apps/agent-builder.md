@@ -31,7 +31,7 @@ After creating the agent, makers can edit, test, and publish it in Microsoft Cop
 
 ## Prerequisites
 
-- Preview Copilot features are enabled by default, but your admin can turn them off for an environment or tenant. More information: [Copilot in Power Apps overview (preview)](ai-overview.md#disable-copilot-in-power-apps).
+- Preview Copilot features are enabled by default, but your admin can turn them off for an environment or tenant. More information: [Copilot in Power Apps overview (preview)](ai-overview.md#turn-off-copilot-preview-features-in-power-apps).
 - Your tenant administrator must turn on the [Publish Copilots with AI features](/microsoft-copilot-studio/security-and-governance) setting in the Power Platform admin center.
 - Include a Dataverse database in your environment. More information: [Add a Microsoft Dataverse database](/power-platform/admin/create-database).
 - The environment must be in the United States region. Depending on where the environment is hosted, you might need to allow data movement across regions. More information: [Copilots and generative AI features that are available when you enable data movement across regions](/power-platform/admin/geographical-availability-copilot#copilots-and-generative-ai-features-that-are-available-when-you-enable-data-movement-across-regions).
