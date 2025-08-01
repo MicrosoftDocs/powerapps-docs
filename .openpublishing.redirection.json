@@ -1,6 +1,26 @@
 {
   "redirections": [
    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/samples/enable-field-security-entity.md",
+      "redirect_url": "column-level-security",
+      "redirect_document_id": "false"
+   },
+   {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/samples/retrieve-field-permissions.md",
+      "redirect_url": "column-level-security",
+      "redirect_document_id": "false"
+   },
+   {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/samples/retrieve-field-sharing-records.md",
+      "redirect_url": "column-level-security",
+      "redirect_document_id": "false"
+   },
+   {
+      "source_path": "powerapps-docs/developer/data-platform/field-security-entities.md",
+      "redirect_url": "column-level-security",
+      "redirect_document_id": "false"
+   },
+   {
       "source_path": "powerapps-docs/developer/data-platform/calculated-rollup-attributes.md",
       "redirect_url": "specialized-columns.md",
       "redirect_document_id": "false"
@@ -4132,7 +4152,7 @@
     },
     {
       "source_path": "powerapps-docs/developer/common-data-service/field-security-entities.md",
-      "redirect_url": "../data-platform/field-security-entities",
+      "redirect_url": "../data-platform/column-level-security",
       "redirect_document_id": false
     },
     {
