@@ -81,7 +81,7 @@ After you interact with a suggested action:
 
 ## How suggested actions differ from agent activity
 - **Suggested actions** help reduce the mental effort of deciding what to do next. They guide you toward high-impact tasks based on context and history.
-- **Agent activity** is for the purpose of [supervising work that autonomous agents do](/supervise-agents-with-agent-feed.md) on your behalf.
+- **Agent activity** is for the purpose of [supervising work that autonomous agents do](supervise-agents-with-agent-feed.md) on your behalf.
 
 Both features are part of the agent feed because they contribute to the same goal of using AI to make you job easiser.
 
