@@ -149,18 +149,11 @@ landingContent:
             url: maker/canvas-apps/ai-formulas-formulabar.md
           - text: Rename controls in canvas apps with Copilot (preview)
             url: maker/canvas-apps/controls/copilot-rename-controls.md
-
-  # Card
-  - title: Use Copilot in canvas apps
-    linkLists:
-
-      - linkListType: how-to-guide
-        links:
-
           - text: Add a Copilot control to a canvas app (preview)
             url: maker/canvas-apps/add-ai-copilot.md
           - text: Add a custom Copilot to a canvas app (preview)
             url: maker/canvas-apps/add-custom-copilot.md
+
 
   # Card
   - title: Integrate Custom AI
