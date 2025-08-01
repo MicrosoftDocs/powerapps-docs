@@ -51,6 +51,8 @@ items:
     href: basic-operations-powershell.md
   - name: Metadata Operations
     href: metadata-operations-powershell.md
+  - name: Column-level security
+    href: column-level-security-powershell.md
 - name: (JavaScript) samples
   items:
   - name: About the client-side samples
