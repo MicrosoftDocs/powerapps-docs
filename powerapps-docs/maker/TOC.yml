@@ -418,6 +418,8 @@
               href: ./canvas-apps/add-gallery.md
             - name: Add a variable-height gallery
               href: ./canvas-apps/gallery-dynamic-sizing.md
+            - name: Working with gallery
+              href: ./canvas-apps/show-images-text-gallery-sort-filter.md
             - name: Best practices and recommendations
               href: ./canvas-apps/gallery-best-practice.md
           - name: Add and configure a form
@@ -498,16 +500,14 @@
             href: ./canvas-apps/powerapps-custom-visual.md
           - name: Create an app to edit tables
             href: ./canvas-apps/add-editable-tables.md
-          - name: Working with gallery
-            href: ./canvas-apps/show-images-text-gallery-sort-filter.md
-          - name: Use modern themes
-            href: ./canvas-apps/controls/modern-controls/modern-theming.md
           - name: Modern control reference
             items:
             - name: Overview
               href: ./canvas-apps/controls/modern-controls/overview-modern-controls.md
             - name: List of modern controls and properties
               href: ./canvas-apps/controls/modern-controls/modern-controls-reference.md
+            - name: Use modern themes
+              href: ./canvas-apps/controls/modern-controls/modern-theming.md
             - name:  Rename controls with Copilot (preview) 
               href: ./canvas-apps/controls/copilot-rename-controls.md
             - name: Limitations of modern controls

@@ -1,0 +1,164 @@
+### YamlMime:Landing
+
+title: Microsoft Power Apps documentation for canvas apps
+summary: Learn how to build and design canvas apps in Microsoft Power Apps. 
+
+metadata:
+  title: Canvas apps documentation
+  description: Provides access to documentation on how to build and design canvas apps in Microsoft Power Apps.
+  services: service
+  ms.subservice: canvas-maker
+  ms.topic: landing-page 
+  ms.collection: collection
+  author: mduelae
+  ms.author: mkaur
+  ms.date: 08/01/2025 
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+  # Card 
+  - title: Get started
+    linkLists:
+       - linkListType: overview
+         links:
+          - text: Understand Power Apps Studio
+            url: power-apps-studio.md
+          - text: Understand data sources and connections
+            url: working-with-data-sources.md  
+          - text: Understand coauthoring and copresence
+            url: copresence-power-apps-studio.md 
+       - linkListType: learn
+         links:
+          - text: Get started with Power Apps canvas apps
+            url: /training/modules/get-started-with-powerapps/
+
+
+
+  # Card
+  - title: Connect to data
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Overview of connectors
+            url: connections-list.md
+          - text: Connect to Microsoft Dataverse
+            url: connections/connection-common-data-service.md
+      - linkListType: how-to-guide
+        links:
+          - text: Add data connections 
+            url: add-data-connection.md
+          - text: Manage connections
+            url: add-manage-connections.md
+
+
+  # Card
+  - title: Add screens, controls, and data elements
+    linkLists:
+       - linkListType: how-to-guide
+         links:
+          - text: Add and navigate screens 
+            url: add-screen-context-variables.md
+          - text: Add and configure controls
+            url: add-configure-controls.md
+          - text: Add a Copilot control (preview)
+            url: add-ai-copilot.md
+          - text: Create and edit tables using the table designer
+            url: create-edit-tables.md
+
+  # Card
+  - title: Work with a gallery
+    linkLists:
+       - linkListType: how-to-guide
+         links:
+          - text: Add a gallery
+            url: add-gallery.md
+          - text: Add variable-height gallery
+            url: gallery-dynamic-sizing.md
+          - text: Show, sort, and filter data in a gallery
+            url: show-images-text-gallery-sort-filter.md
+          - text: Show items of different heights in a gallery  
+            url: show-sort-filter-gallery.md
+          - text: Best practices and recommendations
+            url: gallery-best-practice.md
+
+
+  # Card
+  - title: Add and configure forms
+    linkLists:
+       - linkListType: how-to-guide
+         links:
+          - text: Understand canvas-app forms
+            url: working-with-forms.md
+          - text: Show, edit, or add a record
+            url: add-form.md
+          - text: Understand form layout
+            url: working-with-form-layout.md
+          - text: Display a full-sized image
+            url: display-full-image-on-form.md
+ 
+
+  # Card
+  - title: Add a list, chart, or multimedia
+    linkLists:
+       - linkListType: how-to-guide
+         links:
+          - text: Add a list box, a drop-down list, a combo box, or radio buttons
+            url: add-list-box-drop-down-list-radio-button.md
+          - text: Create dependent drop-down lists
+            url: dependent-drop-down-lists.md
+          - text: Add a chart
+            url: use-line-pie-bar-chart.md
+          - text: Add multimedia 
+            url: add-images-pictures-audio-video.md
+          - text: 
+            url: 
+
+  # Card
+  - title: Work with controls
+    linkLists:
+       - linkListType: how-to-guide
+         links:
+          - text: Overview of modern controls and themes
+            url: controls/modern-controls/overview-modern-controls.md
+          - text: Modern controls and properties
+            url: controls/modern-controls/modern-controls-reference.md
+          - text: 
+            url: 
+          - text: 
+            url: 
+          - text: 
+            url: 
+
+  # Card
+  - title: 
+    linkLists:
+       - linkListType: how-to-guide
+         links:
+          - text: 
+            url: 
+          - text: 
+            url: 
+          - text: 
+            url: 
+          - text: 
+            url: 
+          - text: 
+            url: 
+
+  # Card
+  - title: 
+    linkLists:
+       - linkListType: how-to-guide
+         links:
+          - text: 
+            url: 
+          - text: 
+            url: 
+          - text: 
+            url: 
+          - text: 
+            url: 
+          - text: 
+            url: 
