@@ -33,6 +33,8 @@ landingContent:
             url: maker/common/responsible-ai-overview.md
           - text: Enable or disable Copilot features
             url: maker/canvas-apps/ai-overview.md#enable-or-disable-copilot-features
+          - text: Improve Copilot responses from Microsoft Dataverse
+            url: maker/data-platform/data-platform-copilot.md  
 
   # Card
   - title: Use Plan designer
@@ -55,6 +57,8 @@ landingContent:
       - linkListType: how-to-guide
         links:
 
+          - text: Add Copilot chat in model-driven apps
+            url: maker/model-driven-apps/add-ai-copilot.md
           - text: Use Copilot chat in model-driven apps
             url: user/use-copilot-model-driven-apps.md
           - text: Customize Copilot chat using Copilot Studio (preview)
@@ -75,6 +79,8 @@ landingContent:
             url: maker/model-driven-apps/form-designer-add-configure-agent-response.md
           - text: Build an agent to automate your business process (preview)
             url: maker/canvas-apps/agent-builder.md
+          - text: Add agents to your model-driven app
+            url: maker/model-driven-apps/add-agents-to-app.md
 
   # Card
   - title: Streamline data entry
@@ -103,8 +109,6 @@ landingContent:
             url: user/visualize-data-in-copilot.md
           - text: See row summaries in a form and view
             url: user/record-summaries.md
-          - text: Create a custom row summary
-            url: maker/data-platform/configure-form-row-summary.md
 
   # Card
   - title: Summarize and provide contextual insight
@@ -117,6 +121,8 @@ landingContent:
             url: user/copilot-case-summary.md
           - text: Use timeline highlights powered by generative AI
             url: user/add-activities.md#use-timeline-highlights-powered-by-generative-ai
+          - text: Create a custom row summary
+            url: maker/data-platform/configure-form-row-summary.md
 
   # Card
   - title: Create and edit apps with Copilot
