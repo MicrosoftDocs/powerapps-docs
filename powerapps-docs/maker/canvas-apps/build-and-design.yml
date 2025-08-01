@@ -78,8 +78,6 @@ landingContent:
             url: gallery-dynamic-sizing.md
           - text: Show, sort, and filter data in a gallery
             url: show-images-text-gallery-sort-filter.md
-          - text: Show items of different heights in a gallery  
-            url: show-sort-filter-gallery.md
           - text: Best practices and recommendations
             url: gallery-best-practice.md
 
