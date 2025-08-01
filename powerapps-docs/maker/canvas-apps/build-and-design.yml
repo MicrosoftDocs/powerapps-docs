@@ -112,8 +112,7 @@ landingContent:
             url: use-line-pie-bar-chart.md
           - text: Add multimedia 
             url: add-images-pictures-audio-video.md
-          - text: 
-            url: 
+
 
   # Card
   - title: Work with controls
@@ -124,41 +123,5 @@ landingContent:
             url: controls/modern-controls/overview-modern-controls.md
           - text: Modern controls and properties
             url: controls/modern-controls/modern-controls-reference.md
-          - text: 
-            url: 
-          - text: 
-            url: 
-          - text: 
-            url: 
 
-  # Card
-  - title: 
-    linkLists:
-       - linkListType: how-to-guide
-         links:
-          - text: 
-            url: 
-          - text: 
-            url: 
-          - text: 
-            url: 
-          - text: 
-            url: 
-          - text: 
-            url: 
 
-  # Card
-  - title: 
-    linkLists:
-       - linkListType: how-to-guide
-         links:
-          - text: 
-            url: 
-          - text: 
-            url: 
-          - text: 
-            url: 
-          - text: 
-            url: 
-          - text: 
-            url: 
