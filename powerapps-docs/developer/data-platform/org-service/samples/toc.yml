@@ -187,14 +187,8 @@ items:
         href: attachment-annotation-files.md
       - name: Use optimistic concurrency with update and delete operations
         href: use-optimistic-concurrency-update-delete-operations.md
-  - name: Field Level Security
-    items:
-      - name: Enable field security for a table
-        href: enable-field-security-entity.md
-      - name: Retrieve field permissions
-        href: retrieve-field-permissions.md
-      - name: Retrieve field sharing records
-        href: retrieve-field-sharing-records.md
+  - name: Column-Level Security
+    href: column-level-security.md
   - name: Files and images
     items:
       - name: File Operations
