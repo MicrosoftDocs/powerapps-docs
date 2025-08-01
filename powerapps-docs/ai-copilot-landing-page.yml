@@ -143,6 +143,8 @@ landingContent:
             url: maker/model-driven-apps/create-model-driven-app.md#create-an-app-description-with-copilot
           - text: Use field suggestions by Copilot
             url: maker/canvas-apps/ai-field-suggestions.md
+          - text: Create a generative page in a model-driven app (preview)
+            url: maker/model-driven-apps/generative-pages.md
           - text: Use Copilot to create and edit Power Fx formulas
             url: maker/canvas-apps/ai-formulas-formulabar.md
           - text: Rename controls in canvas apps with Copilot (preview)
