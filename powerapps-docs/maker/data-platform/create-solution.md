@@ -2,7 +2,7 @@
 title: "Create a solution in Power Apps"
 description: "Learn how to create a solution in Power Apps"
 ms.custom: ""
-ms.date: 07/04/2025
+ms.date: 08/04/2025
 ms.reviewer: ""
 ms.topic: "how-to"
 author: "Mattp123"
@@ -38,7 +38,7 @@ To create a solution:
   
 3. Select **Save**.  
   
-## Add solution objects
+## Add or remove solution objects
 
 After you create your solution, it won’t contain any solution objects. You can create new objects to add to the solution or add existing objects to your new solution.
 
@@ -56,10 +56,21 @@ With solutions that are unmanaged and not the system default solution, you can u
 Many of the customizations you want to do involve tables. Select **Tables** in the left pane to filter and display a list of all the tables in the current solution. Once you drill into a table, you can view the objects that are part of the table as shown with the account table in this screenshot.
 
 :::image type="content" source="media/create-solution/solution-table-account.png" alt-text="Account table with objects to view":::
+
+### Remove objects from a solution
+
+You can remove objects from an unmanaged solution. With the solution open, select the object, and then select **Remove from this solution** on the command bar.
+
+When the object is removed, it’s no longer part of the solution. However, the object still exists in the environment and can be added to another solution. Once the object is removed from all solutions in the environment, it can be deleted.
+
+> [!IMPORTANT]
+> Once the object is deleted it can't be recovered and all associated data, such as table records when you delete a custom table are lost. If you want to keep the object, but not have it in the solution, remove it from the solution without deleting it.
+
+To delete an object, select it, and then select **Delete from this environment**.
   
 ## Publish changes 
 
-When you make unmanaged changes in an environment, some components, such as tables, forms, model-driven apps, site maps, and views are saved in an unpublished state. The publish action promotes these changes to an active state and makes them available to end users and for solution export.
+When you make unmanaged changes in an environment, some objects, such as tables, forms, model-driven apps, site maps, and views are saved in an unpublished state. The publish action promotes these changes to an active state and makes them available to end users and for solution export.
 
 ### Publish your customizations
 
