@@ -108,11 +108,11 @@ You can change a solution publisher for an *unmanaged* solution by following the
 
 ## Create segmented tables in a solution
 
-Use solution segmentation so that you only include table components that are updated when you distribute solution updates. More information: [Use segmented solutions](/power-platform/alm/segmented-solutions-alm) in the Power Platform ALM guide
+Use table segmentation so that you only include table objects that are updated when you distribute solution updates. More information: [Use segmented solutions](/power-platform/alm/segmented-solutions-alm) in the Power Platform ALM guide
 
-To create a segmented solution, start with creating an unmanaged solution and add only the components that you've updated.
+To create a solution with table segmentation, start with creating an unmanaged solution and add only the objects that you've updated.
 
-For example, imagine that you've created a new custom table that doesn't exist in any other environment named *Custom table* and also added a new column named *Top Ten* for the account table. To create a segmented solution, follow these steps. 
+For example, imagine that you've created a new custom table that doesn't exist in any other environment named *Custom table* and also added a new column named *Top Ten* for the account table. To create a solution with table segmentation, follow these steps.
   
 1. Go to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and then select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
   
@@ -123,7 +123,7 @@ For example, imagine that you've created a new custom table that doesn't exist i
 4. In the **Add existing tables** pane, select one or more tables you want to add to the solution. For example, select **Account** and **Custom table**. Select **Next**.  
 
 5. In the **Select tables** pane, you can choose from the assets to include: 
-    - **Include all objects**. This option includes all components *and* metadata associated with the table. It can include other tables or table components such as business process flows, reports, connections, and queues. For example, if the custom table has never been imported into the target environment, select this option. In this example, custom table has never been imported into the target environment, so select this option.
+    - **Include all objects**. This option includes all components *and* metadata associated with the table. It can include other tables or table components such as business process flows, reports, connections, and queues. For example, if the custom table has never been imported into the target environment, select this option. In this example, custom table has never been imported into the target environment, so select this option for **Custom table**.
     - **Include table metadata**. This option includes *only* the metadata associated with the table. Metadata includes the table attributes, such as auditing, duplicate detection, or change tracking. 
     - **Edit objects**. This option lets you individually select each component that’s associated with the table, such as columns, relationships, business rules, views, forms, and charts. Notice that the account table is included in Dataverse and by design also exists in the target environment. Therefore, in our example only the *Top Ten* custom column is new to the account table so you select it after selecting **Edit objects** (in the next step).
     - **Clear all objects**. If you selected objects using the **Edit objects** option, you can clear all the selected objects and start over.
@@ -141,7 +141,7 @@ When you add an existing system table, such as account or contact, or a custom t
 > [!IMPORTANT]
 > Notice that if a table has never been imported or doesn't already exist in the target environment you must select **Include all objects** when you add the table to the solution, such as when adding a new custom table that you recently created. Otherwise you receive a dependency error message when you try to import the solution.
 
-### Create a segmented solution using solution explorer
+### Create a solution with table segmentation using solution explorer
 
 The following illustrations provide an example of creating a segmented solution by choosing table assets from the `Account`, `Case`, and `Contact` tables.  
 
