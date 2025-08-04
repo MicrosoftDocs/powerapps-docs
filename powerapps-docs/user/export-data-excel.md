@@ -28,7 +28,7 @@ Export data from your model-driven app to Excel. The allowed data export size de
 2. On the command bar, select **Export to Excel**.
 
    > [!div class="mx-imgBorder"] 
-   > ![Export to excel.](media/export_to_excel.png "Select export to Excel")
+   > ![Export to Excel.](media/export_to_excel.png "Select Export to Excel")
 3. When the download is complete, navigate to the location of the downloaded file.
   
    > [!NOTE]
@@ -67,7 +67,7 @@ The data is exported in the same format that you see in your app. Text remains a
 There are other export options such as Excel Online, Static Worksheet, Dynamics Worksheet, or Dynamics PivotTable.
 
 > [!div class="mx-imgBorder"] 
-> ![Export to excel options.](media/export_to_excel_options.png "Select export to Excel options")
+> ![Export to Excel options.](media/export_to_excel_options.png "Select Export to Excel options")
 
 
 The following table summarizes the different options. Pick the one that works best for you.
@@ -82,9 +82,9 @@ The following table summarizes the different options. Pick the one that works be
 
 ## Known issues
 
-- Export to excel does not support virtual tables.
+- Export to Excel does not support virtual tables.
 
-- If export to excel times out, try these options
+- If Export to Excel times out, try these options
   - Export in smaller batches by adjusting the filter criteria
   - Reduce the lookup fields, which increase the query complexity to retrieve data from related tables
   - Reduce the number of columns
