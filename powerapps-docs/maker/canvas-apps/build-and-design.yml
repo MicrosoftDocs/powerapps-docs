@@ -159,4 +159,4 @@ landingContent:
           - text: Build an AI agent to automate your business process (preview)
             url: agent-builder.md  
           - text: Create and update a collection
-            url: ccreate-update-collection.md  
+            url: create-update-collection.md  
