@@ -29,6 +29,9 @@ After you describe the page, the system then processes your requirements and spe
 - The Power Platform environment must be located in the US region.
 - The **Enable new AI-powered Copilot features for people who make apps** environment setting must be enabled. More information: [Copilot environment setting](/power-platform/admin/settings-features?tabs=new#copilot-preview)
 - This feature is being gradually rolled out across regions and might not be available yet in your region.
+- Configure your Content Security Policy (CSP): Ensure the following URLs are added to your firewall allowed list.  
+    - https://esm.sh 
+    - https://cdn.jsdelivr.net
 
 ## Create a generative page in model-driven apps
 
@@ -69,10 +72,26 @@ These are the current limitations of generative pages:
 - You can't edit the generated code.
 - Generated pages can't be exported and imported in other Power Platform with Dataverse environments.
 - The publish action is only applied to the current generative page. As such, you must select **Publish** on each generative page in your app for it to be available in the played app.
-- You must add all needed Dataverse tables in the first prompt.
 - Only US English is supported.
-- Collaboration isn't supported. Ensure only one maker is working on a generative page at a time to avoid unintended conflicts.  
-- You can only access your last 5 iterations with the agent. 
+- Collaboration isn't supported. Ensure only one maker is working on a generative page at a time to avoid unintended conflicts.
+- You can only access 5 iterations with the agent (the first prompt plus the last 4).
+- Only these data types are currently supported:
+    - Choice
+    - Currency
+    - Customer
+    - Date and Time
+    - Date Only
+    - Decimal Number
+    - Floating Point Number
+    - Image
+    - Lookup
+    - Multiline Text
+    - Status
+    - Status Reason
+    - Text
+    - Whole Number
+    - Yes/No
+    - Unique Identifier
 
 ## Frequently asked questions
 
