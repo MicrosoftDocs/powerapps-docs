@@ -152,8 +152,6 @@ landingContent:
             url: working-with-formulas-in-depth.md
           - text: Formula reference 
             url: /power-platform/power-fx/formula-reference-canvas-apps
-          - text: 
-            url:
        - linkListType: how-to-guide
          links:
           - text: Use Copilot to create and edit Power Fx formulas
