@@ -68,13 +68,14 @@ Select **Save** to make sure you don't lose your generated page. When you're sat
 
 These are the current limitations of generative pages:
 
-- Working with data. Your page can connect to only Dataverse tables (up to 6 for a single page). You can perform create, read, update, and delete (CRUD) operations against these tables. No other data sources can be used.  
+- Working with data. Your page can connect to only Dataverse tables (up to 6 for a single page). You can perform create, read, update, and delete (CRUD) operations against these tables. No other data sources can be used.
+- Virtual tables are not supported. 
 - You can't edit the generated code.
 - Generated pages can't be exported and imported in other Power Platform with Dataverse environments.
 - Only US English is supported.
 - Collaboration isn't supported. Ensure only one maker is working on a generative page at a time to avoid unintended conflicts.
-- When returning to a page, you can only access the first prompt + 5 most recent iterations. 
-- Only these data types are currently supported:
+- When returning to a page, you can only access the first prompt + 5 most recent iterations.
+- Only these data types are supported:
     - Choice
     - Currency
     - Customer
