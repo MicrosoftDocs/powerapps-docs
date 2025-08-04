@@ -1478,9 +1478,11 @@
       items:
       - name: App interface design overview
         href: ./model-driven-apps/app-interface-design-overview.md
+
       - name: Use the modern app designer
         href:
         items:
+
         - name: App designer overview
           href: ./model-driven-apps/app-designer-overview.md
         - name: Create an app
@@ -1495,6 +1497,7 @@
           href: ./model-driven-apps/app-properties.md
         - name: Use custom pages within model-driven apps
           items:
+
           - name: Custom pages overview
             href: ./model-driven-apps/model-app-page-overview.md
           - name: Add a custom page to a model-driven app
@@ -1516,13 +1519,51 @@
             href: ./model-driven-apps/custom-page-localize.md
           - name: Known issues with custom pages
             href: ./model-driven-apps/model-app-page-issues.md
-          - name: Use live monitor to troubleshoot custom pages
-            href: ./model-driven-apps/monitor-page-checker.md
-        - name: Create a generative page
-          href: ./model-driven-apps/generative-pages.md
-        - name: Create, add, or remove forms and views
-          href: ./model-driven-apps/create-add-remove-forms-views-dashboards.md
-      - name: Work with views
+    - name: Design the app interface
+      items:
+      - name: App interface design overview
+        href: ./model-driven-apps/app-interface-design-overview.md
+
+      - name: Use the modern app designer
+        href:
+        items:
+
+        - name: App designer overview
+          href: ./model-driven-apps/app-designer-overview.md
+        - name: Create an app
+          href: ./model-driven-apps/create-model-driven-app.md
+        - name: Create an app with an account table
+          href: ./model-driven-apps/build-first-model-driven-app.md
+        - name: Understanding app navigation
+          href: ./model-driven-apps/app-navigation.md
+        - name: Work with pages
+          href: ./model-driven-apps/create-remove-pages.md
+        - name: Manage app settings
+          href: ./model-driven-apps/app-properties.md
+        - name: Use custom pages within model-driven apps
+          items:
+
+          - name: Custom pages overview
+            href: ./model-driven-apps/model-app-page-overview.md
+          - name: Add a custom page to a model-driven app
+            href: ./model-driven-apps/add-page-to-model-app.md
+          - name: Design considerations for a custom page
+            href: ./model-driven-apps/design-page-for-model-app.md
+          - name: Navigating to and from a custom page
+            href: ../developer/model-driven-apps/clientapi/navigate-to-custom-page-examples.md
+          - name: Use Power Fx in a custom page
+            href: ./model-driven-apps/page-powerfx-in-model-app.md
+          - name: Add canvas components to a custom page
+            href: ./model-driven-apps/page-canvas-components.md
+          - name: Add code components to a custom page
+            href: ./model-driven-apps/page-code-components.md
+          - name: Add connectors to a custom page
+            href: ./canvas-apps/connections-list.md
+          - name: Localize text for a custom page
+            href: ./model-driven-apps/custom-page-localize.md
+          - name: Known issues with custom pages
+            href: ./model-driven-apps/model-app-page-issues.md
+    - name: Work with views
         href:
         items:
         - name: Views overview
