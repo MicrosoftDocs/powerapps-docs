@@ -386,16 +386,16 @@
           href: ./canvas-apps/working-with-tables.md
         - name: Understand record references
           href: ./canvas-apps/working-with-references.md
-      - name: Make basic customizations
-        items:
+    - name: Make basic customizations
+      items:
           - name: Galleries
             href: ./canvas-apps/customize-layout-sharepoint.md
           - name: Forms
             href: ./canvas-apps/customize-forms-sharepoint.md
           - name: Cards
             href: ./canvas-apps/customize-card.md
-      - name: Design the interface
-        items:
+    - name: Design the interface
+      items:
           - name: Understand Power Apps Studio
             href: ./canvas-apps/power-apps-studio.md
           - name: Use inline actions in Power Apps Studio
