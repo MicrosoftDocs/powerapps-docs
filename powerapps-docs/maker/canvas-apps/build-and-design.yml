@@ -27,6 +27,8 @@ landingContent:
             url: power-apps-studio.md
           - text: Understand data sources and connections
             url: working-with-data-sources.md  
+          - text: Build responsive apps
+            url: build-responsive-apps.md  
           - text: Understand coauthoring and copresence
             url: copresence-power-apps-studio.md 
        - linkListType: learn
@@ -85,14 +87,18 @@ landingContent:
   # Card
   - title: Add and configure forms
     linkLists:
+       - linkListType: concept
+         links:
+         - text: Understand canvas-app forms
+           url: working-with-forms.md
+         - text: Understand form layout
+           url: working-with-form-layout.md
+         - text: Understand data cards in canvas apps
+           url: working-with-cards.md  
        - linkListType: how-to-guide
          links:
-          - text: Understand canvas-app forms
-            url: working-with-forms.md
           - text: Show, edit, or add a record
             url: add-form.md
-          - text: Understand form layout
-            url: working-with-form-layout.md
           - text: Display a full-sized image
             url: display-full-image-on-form.md
  
@@ -115,11 +121,44 @@ landingContent:
   # Card
   - title: Work with controls
     linkLists:
-       - linkListType: how-to-guide
+       - linkListType: concept
          links:
           - text: Overview of modern controls and themes
             url: controls/modern-controls/overview-modern-controls.md
+          - text: Core properties
+            url: controls/properties-core.md
+          - text: Add mixed reality controls 
+            url: mixed-reality-overview.md
+          - text: Add geospatial controls
+            url: geospatial-overview.md
+       - linkListType: how-to-guide
+         links:
           - text: Modern controls and properties
             url: controls/modern-controls/modern-controls-reference.md
+          - text: Rename controls (preview)
+            url: controls/copilot-rename-controls.md
+          - text: Use modern themes
+            url: controls/modern-controls/modern-theming.md
 
 
+ # Card
+  - title: Configure app functionality 
+    linkLists:
+       - linkListType: concept
+         links:
+          - text: Get started with formulas
+            url: working-with-formulas.md
+          - text: Understand behavior formulas 
+            url: working-with-formulas-in-depth.md
+          - text: Formula reference 
+            url: /power-platform/power-fx/formula-reference-canvas-apps
+          - text: 
+            url:
+       - linkListType: how-to-guide
+         links:
+          - text: Use Copilot to create and edit Power Fx formulas
+            url: ai-formulas-formulabar.md
+          - text: Build an AI agent to automate your business process (preview)
+            url: agent-builder.md  
+          - text: Create and update a collection
+            url: ccreate-update-collection.md  
