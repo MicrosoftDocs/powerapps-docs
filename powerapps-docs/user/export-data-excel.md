@@ -49,7 +49,7 @@ Export data from your model-driven app to Excel. The allowed data export size de
    > [!div class="mx-imgBorder"] 
    > ![Enable content.](media/enable-content.png "Enable content") 
 
-The data is exported in the same format that you see in your app. Text remains as text, numbers remains as numbers, and dates remains as dates. However, when you export data from your app to Excel, some cell formats might change. The following table summarizes how you see the data in apps and how the cell format changes when you export the data to Excel.  
+The data is exported in the same format that you see in your app. Text remains as text, numbers remain as numbers, and dates remain as dates. However, when you export data from your app to Excel, some cell formats might change. The following table summarizes how you see the data in apps and how the cell format changes when you export the data to Excel.  
   
   
 | Data format in model-driven apps |                                            Cell format in Excel                                             |
