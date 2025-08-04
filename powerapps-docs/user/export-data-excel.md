@@ -32,7 +32,7 @@ Export data from your model-driven app to Excel. The allowed data export size de
 3. When the download is complete, navigate to the location of the downloaded file.
   
    > [!NOTE]
-   > When you download a worksheet it should automatically save to your computer. However, if it doesn't then make sure that you save it before you open and edit it. Otherwise, you might get this error message: **Excel cannot open or save any more documents because there is not enough available memory or disk space.**  
+   > When you download a worksheet, it should automatically save to your computer. However, if it doesn't then make sure that you save it before you open and edit it. Otherwise, you might get this error message: **Excel cannot open or save any more documents because there is not enough available memory or disk space.**  
    > 
    > Follow these steps to fix the issue:  
    > 
@@ -49,7 +49,7 @@ Export data from your model-driven app to Excel. The allowed data export size de
    > [!div class="mx-imgBorder"] 
    > ![Enable content.](media/enable-content.png "Enable content") 
 
-The data is exported in the same format that you see in your app. Text will remain text, numbers will remain numbers, and dates will remain dates. However, when you export data from your app to Excel, some cell formats might change. The following table summarizes how you’ll see the data in apps and how the cell format changes when you export the data to Excel.  
+The data is exported in the same format that you see in your app. Text remains as text, numbers remains as numbers, and dates remains as dates. However, when you export data from your app to Excel, some cell formats might change. The following table summarizes how you see the data in apps and how the cell format changes when you export the data to Excel.  
   
   
 | Data format in model-driven apps |                                            Cell format in Excel                                             |
@@ -86,14 +86,14 @@ The following table summarizes the different options. Pick the one that works be
 
 - If export to excel times out, try these options
   - Export in smaller batches by adjusting the filter criteria
-  - Reduce the lookup fields which increase the query complexity to retrieve data from related tables
+  - Reduce the lookup fields, which increase the query complexity to retrieve data from related tables
   - Reduce the number of columns
 
-- You can export your app data to Excel (.xlsx format) and use the file as a template to add more data and import back into your app. However, if you add or modify columns in the Excel file and then import the file back into your app, the import will fail. This happens because columns were added or modified and those columns don’t map to tables in your app. When you import an Excel file into your app make sure that columns and tables are mapped correctly otherwise the import will fail. For more information on mapping, see [Review mapping](import-data.md#review-mapping). 
+- You can export your app data to Excel (.xlsx format) and use the file as a template to add more data and import back into your app. However, if you add or modify columns in the Excel file and then import the file back into your app, the import fails. This happens because columns were added or modified and those columns don’t map to tables in your app. When you import an Excel file into your app, make sure that columns and tables are mapped correctly otherwise the import fails. For more information on mapping, see [Review mapping](import-data.md#review-mapping). 
   
 - If you’re using Excel 2010, you might get this error message when you export data from the Accounts area: `The file is corrupt and cannot be opened.`  
   
-  The error message occurs due to a setting in Excel. To fix the issue, do this:  
+  The error message occurs due to a setting in Excel. To fix the issue:  
   
   1. Open Excel 2010 and go to **File** > **Options** > **Trust Center** > **Trust Center settings**.  
   
