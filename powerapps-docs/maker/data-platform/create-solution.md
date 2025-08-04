@@ -18,9 +18,7 @@ search.audienceType:
 To locate and work with just the components you customize, create a solution and do all your customization there. Then, always remember to work in the context of the custom solution as you add, edit, and create components. This makes it easy to export your solution so that it can be backed up or imported to another environment. 
 
 > [!NOTE]
->
-> - For information about implementing healthy application lifecycle management (ALM) using solutions, see the [Power Platform ALM guide](/power-platform/alm).
-> - Consider specifying a custom solution as you preferred solution. This is a way you can control where your solution components are stored when you don't specifically create them in the context of a custom solution. More information: [Set the preferred solution](preferred-solution.md).
+> Consider specifying a custom solution as you preferred solution. This way you can control where your solution components are stored when your don't specifically create them in the context of a custom solution. More information: [Set the preferred solution](preferred-solution.md).
   
 To create a solution:
 
@@ -35,8 +33,8 @@ To create a solution:
     |**Publisher**|You can select the default publisher or create a new publisher. We recommend that you create a publisher for your organization to use consistently across your environments where you'll use the solution. See [Solution publisher](#solution-publisher) later in this article. |  
     |**Version**|Enter a number for the version of your solution. This is only important if you export your solution. The version number is included in the file name when you export the solution.|
     | **Set as your preferred solution**   |  Using a preferred solution is a way you can control where your solution components are stored when you don't specifically create them in the context of a custom solution. When your preferred solution isn't set, by default, the Common Data Services Default Solution is your preferred solution. If Common Data Services Default Solution isn't available, the solution named Default Solution is used as your preferred solution. More information: [Set the preferred solution](preferred-solution.md)  |
-    |**Description**|Under **More options** you can optionally add a description of the solution. This is useful if you want to share the solution with others or if you want to remember what the solution is for.|
     |**Configuration Page**|Under **More options** you can, optionally select a web resource to use as a configuration page. The configuration page is typically used by independent software vendors (ISVs) who distribute solutions. When this is set, a new **Configuration** node appears below the **Information** node to display this web resource. Developers use the web resource, which is an HTML page, to include instructions or controls to allow you to set configuration data or launch their solution.|
+    |**Description**|Under **More options** you can optionally add a description of the solution. This is useful if you want to share the solution with others or if you want to remember what the solution is for.|
   
 3. Select **Save**.  
   
@@ -46,23 +44,22 @@ After you create your solution, it won’t contain any solution objects. You can
 
 ### Create objects in a solution
 
-You can use the **New** command to create different types of objects. Selecting **New** takes you to a different create experience depending on the object type that you choose. After you finish creating the object, it's added to the solution.
+You can use the **New** command to create different types of objects. Selecting **New** and then selecting the object you want takes you to a different create experience depending on the object type that you choose. After you finish creating the object, it's added to the solution.
 
 ### Add an existing object to a solution
 
 With solutions that are unmanaged and not the system default solution, you can use the **Add existing** command to bring in objects that aren’t already in the solution.
 
 > [!NOTE]
-> The list of existing components are different depending on the version and solutions imported in your environment. 
+> The list of existing objects are different depending on the version and solutions imported in your environment. 
   
-Many of the customizations you want to do involve tables. You can use the **table** filter to show a list of all the tables in the current solution that can be customized in some way. Once you drill into a table, you can see the components that are part of the table as shown with the account table in this screenshot. 
-   
-> [!div class="mx-imgBorder"]  
-> ![Demo solution showing expanded account table.](media/solution-entity-account.png "Demo solution showing expanded account table")  
+Many of the customizations you want to do involve tables. Select **Tables** in the left pane to filter and display a list of all the tables in the current solution. Once you drill into a table, you can view the objects that are part of the table as shown with the account table in this screenshot.
+
+:::image type="content" source="media/create-solution/solution-table-account.png" alt-text="Account table with objects to view":::
   
 ## Publish changes 
 
-When you make unmanaged changes in an environment, some components, such as forms, tables, model-driven apps, site maps, and views are saved in an unpublished state. The publish action promotes these changes to an active state and makes them available to end users and for solution export. 
+When you make unmanaged changes in an environment, some components, such as tables, forms, model-driven apps, site maps, and views are saved in an unpublished state. The publish action promotes these changes to an active state and makes them available to end users and for solution export.
 
 ### Publish your customizations
 
@@ -79,7 +76,7 @@ When you make unmanaged changes in an environment, some components, such as form
 
 Every app you create or customization you make is part of a solution. Every solution has a publisher. You specify the publisher when you create a solution. 
 
-The solution publisher indicates who developed the app. For this reason, you should create a solution publisher that is meaningful. You can view the solution publisher for a solution by selecting the solution, and then select **...** > **Settings** on the command bar from the **Solutions** area in Power Apps. For more information about the solution publisher, see [Solution publisher](/power-platform/alm/solution-concepts-alm#solution-publisher) in the Power Platform ALM guide.
+The solution publisher indicates who developed the app. For this reason, you should create a solution publisher that is meaningful. You can view the solution publisher for a solution by selecting the solution, and then select **...** > **Settings** on the command bar from the **Solutions** area in Power Apps. For more information about the solution publisher, go to [Solution publisher](/power-platform/alm/solution-concepts-alm#solution-publisher) in the Power Platform ALM guide.
 
 > [!NOTE]
 > The **Common Data Services Default Solution** is associated with the **Microsoft Dataverse Default Publisher**. The default customization prefix is randomly assigned for this publisher, for example it could be `cr8a3`. This means that the name of every new item of metadata created for your organization in this solution has this prepended to the names used to uniquely identify the items.
@@ -103,19 +100,17 @@ The solution publisher indicates who developed the app. For this reason, you sho
 
 ### Change a solution publisher
 
-You can change a solution publisher for an unmanaged solution by following these steps:
+You can change a solution publisher for an *unmanaged* solution by following these steps:
 
 1. In [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Solutions**, select the solution you want, and then select **...** > **Settings** on the command bar. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 2. In the **Solution settings** pane, select a different publisher from the **Publisher** drop down list or select **New publisher** to create a new one. More information: [Create a solution publisher](#create-a-solution-publisher).
 3. Select **Update**.
 
-## Create a segmented solution
+## Create segmented tables in a solution
 
 Use solution segmentation so that you only include table components that are updated when you distribute solution updates. More information: [Use segmented solutions](/power-platform/alm/segmented-solutions-alm) in the Power Platform ALM guide
 
-### Create a segmented solution with table assets
-
-To create a segmented solution, start with creating an unmanaged solution and add only the components that you've updated. The wizard-like setup takes you step by step through the process of adding table assets. 
+To create a segmented solution, start with creating an unmanaged solution and add only the components that you've updated.
 
 For example, imagine that you've created a new custom table that doesn't exist in any other environment named *Custom table* and also added a new column named *Top Ten* for the account table. To create a segmented solution, follow these steps. 
   
@@ -130,21 +125,21 @@ For example, imagine that you've created a new custom table that doesn't exist i
 5. In the **Select tables** pane, you can choose from the assets to include: 
     - **Include all objects**. This option includes all components *and* metadata associated with the table. It can include other tables or table components such as business process flows, reports, connections, and queues. For example, if the custom table has never been imported into the target environment, select this option. In this example, custom table has never been imported into the target environment, so select this option.
     - **Include table metadata**. This option includes *only* the metadata associated with the table. Metadata includes the table attributes, such as auditing, duplicate detection, or change tracking. 
-    - **Edit objects**. This option lets you individually select each component that’s associated with the table, such as columns, relationships, business rules, views, forms, and charts. Because the account table is included in Dataverse and by design also exists in the target environment only the *Top Ten* custom column is new to the account table, so select **Top Ten**, and then select **Add**.
+    - **Edit objects**. This option lets you individually select each component that’s associated with the table, such as columns, relationships, business rules, views, forms, and charts. Notice that the account table is included in Dataverse and by design also exists in the target environment. Therefore, in our example only the *Top Ten* custom column is new to the account table so you select it after selecting **Edit objects** (in the next step).
     - **Clear all objects**. If you selected objects using the **Edit objects** option, you can clear all the selected objects and start over.
    :::image type="content" source="media/create-solution/select-add-existing-options.png" alt-text="Choose the appropriate options when adding solution objects" lightbox="media/create-solution/select-add-existing-options.png":::
 
    More information: [Why table segmentation in a solution is important](#why-table-segmentation-in-a-solution-is-important)
-6. If you selected **Edit objects**, an object list pane opens. Here you can select the objects you want to include in the solution. For example, if you selected the **Account** table, you select the **Top Ten** column since that's the only new or edited component for the table.
+6. If you selected **Edit objects**, an object list pane opens. Here you can select the specific objects you want to include in the solution. In our example you selected the **Account** table earlier, so now you select the **Top Ten** column since that's the only new or edited component for the table, and then select **Add**.
    :::image type="content" source="media/create-solution/select-objects.png" alt-text="Select objects to include in the solution" lightbox="media/create-solution/select-objects.png":::
-7. Select **Add** to add the components to the solution. 
+7. Select **Add** to add the objects to the solution. 
 
 ### Why table segmentation in a solution is important
 
-When you add an existing system table, such as account or contact, or a custom table to a solution for a table that's already been imported into your downstream environments, the best practice is to *only add the table objects that were updated in your solution*. With solution segmentation, you export solution updates with selected table assets, such as table columns, forms, and views, rather than entire tables with all the assets. This avoids unnecessary layers that hinder other solutions from being effective and unnecessary dependencies on other solutions. The system automatically selects **Include all objects** if the table is unmanaged, and **Include table metadata** if there's an unmanaged layer on the table. The system also preselects the table assets that are unmanaged or have unmanaged customizations automatically you can select the **Select objects** link to review that selection before select **Add* to complete the process. More information: [Create a segmented solution with table assets](#create-a-segmented-solution-with-table-assets)
+When you add an existing system table, such as account or contact, or a custom table to a solution for a table that's already been imported into your downstream environments, the best practice is to *only add the table objects that were updated* in your solution. With solution segmentation, you export solution updates with selected table assets, such as table columns, forms, and views, rather than entire tables with all the assets. This avoids unnecessary layers that hinder other solutions from being effective and unnecessary dependencies on other solutions. The system automatically selects **Include all objects** if the table is unmanaged, and **Include table metadata** if there's an unmanaged layer on the table. The system also preselects the table assets that are unmanaged or have unmanaged customizations automatically you can select the **Edit objects** link to review that selection before select **Add** to complete the process.
 
 > [!IMPORTANT]
-> Notice that if a table has never been imported or doesn't already exist in the target environment you must select **Include all objects** when you add the table to the solution, such as adding a new custom table that you recently created. Otherwise you receive a dependency error message when you try to import the solution.
+> Notice that if a table has never been imported or doesn't already exist in the target environment you must select **Include all objects** when you add the table to the solution, such as when adding a new custom table that you recently created. Otherwise you receive a dependency error message when you try to import the solution.
 
 ### Create a segmented solution using solution explorer
 
@@ -215,10 +210,10 @@ Deleting an unmanaged solution deletes the solution container but doesn't delete
 - Number of solutions is limited by Microsoft Dataverse capacity.
 - Number of objects in a solution is limited by Dataverse capacity.
 
-### See also
+### Related articles
 
- [Use solutions](./solutions-overview.md) <br />
-[For developers: Create, export, or import an unmanaged solution](/power-platform/alm/solution-api#create-export-or-import-an-unmanaged-solution)
-
+- [Use solutions](solutions-overview.md)
+- [For developers: Create, export, or import an unmanaged solution](/power-platform/alm/solution-api#create-export-or-import-an-unmanaged-solution)
+- [Power Platform ALM guide](/power-platform/alm)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
