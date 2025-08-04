@@ -62,7 +62,7 @@ Refine the output by iteratively chatting with the app agent to fix errors, adju
 
 :::image type="content" source="media/generative-page/generative-page-view-code-iterate.png" alt-text="View generative page code and iterate on the design":::
 
-When you're satisfied with the generated page, select **Save and Publish** to make the page available when you play the model-driven app.
+When you're satisfied with the generated page, select **Save and Publish.** This will publish all pending changes for the app (which includes any generative page added to the model-driven app).  
 
 ## Limitations
 
@@ -71,10 +71,9 @@ These are the current limitations of generative pages:
 - Working with data. Your page can connect to only Dataverse tables (up to 6 for a single page). You can perform create, read, update, and delete (CRUD) operations against these tables. No other data sources can be used.  
 - You can't edit the generated code.
 - Generated pages can't be exported and imported in other Power Platform with Dataverse environments.
-- The publish action is only applied to the current generative page. As such, you must select **Publish** on each generative page in your app for it to be available in the played app.
 - Only US English is supported.
 - Collaboration isn't supported. Ensure only one maker is working on a generative page at a time to avoid unintended conflicts.
-- You can only access 5 iterations with the agent (the first prompt plus the last 4).
+- When returning to a page, you can only access the first prompt + 5 most recent iterations. 
 - Only these data types are currently supported:
     - Choice
     - Currency
