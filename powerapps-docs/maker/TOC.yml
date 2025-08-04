@@ -1510,6 +1510,7 @@
           - name: Add code components to a custom page
             href: ./model-driven-apps/page-code-components.md
           - name: Add connectors to a custom page
+
             href: ./canvas-apps/connections-list.md
           - name: Localize text for a custom page
             href: ./model-driven-apps/custom-page-localize.md
