@@ -56,10 +56,10 @@ Deep links for the Power Apps mobile app should start with the following:
 | autoLoginUpn=&lt;e-mail&gt;      | Autopopulates e-mail and triggers sign-in. <br><br>**Note**: This parameter will be ignored if a user is already signed into the app. | No|
 | forceOfflineDataSync=true | Ensures that data sync is triggered so that all the latest data is available. | No|
 
-> [!*NOTE]
-> - The environment ID and appLogicalName are mandatory for all new deep links.
-> - Existing deep links without an environment ID or appLogicalName will experience slower performance until December 2025, after which they will not be supported.  
-> - Update all existing deep links to include the environment ID and appLogicalName to improve performance and reduce wait time.
+***Consideration**
+- The environment ID and appLogicalName are mandatory for all new deep links.
+- Existing deep links without an environment ID or appLogicalName will experience slower performance until December 2025, after which they will not be supported.  
+- Update all existing deep links to include the environment ID and appLogicalName to improve performance and reduce wait time.
 
 If opening an `entityrecord` form or creating a new `entityrecord`, use the following parameters:
 
@@ -91,10 +91,10 @@ If the link goes to an `entitylist` view, add the following parameters:
 | restartApp=true      |  Restarts the Canvas app. Required to ensure parameters are passed when the app is already open. | No|
 | autoLoginUpn=&lt;e-mail&gt;      | Autopopulates e-mail and triggers sign-in. <br><br>**Note**: This parameter will be ignored if a user is already signed into the app. | No|
 
-> [!*NOTE]
-> - The environment ID is mandatory for all new deep links.
-> - Existing deep links without an environment ID will experience slower performance until December 2025, after which they will not be supported.  
-> - Update all existing deep links to include the environment ID to improve performance and reduce wait time.
+***Considerations**
+- The environment ID is mandatory for all new deep links.
+- Existing deep links without an environment ID will experience slower performance until December 2025, after which they will not be supported.  
+- Update all existing deep links to include the environment ID to improve performance and reduce wait time.
 
   ## Supported Urls parameters for a wrapped native mobile app
   
