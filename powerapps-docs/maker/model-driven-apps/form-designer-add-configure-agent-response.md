@@ -1,7 +1,7 @@
 ---
 title: "Add agent response using the form designer" 
 description: Learn how to add the agent response component to model forms to call Copilot Studio topics.
-ms.date: 07/07/2025
+ms.date: 08/07/2025
 ms.reviewer: matp
 ms.topic: how-to
 author: adrianorth
@@ -75,20 +75,22 @@ When the Copilot Studio response is an Adaptive Card, ensure the following best 
 
 ## Limitations
 
-The following component properties are currently not supported:
+- Agent Response component properties below are currently not supported:
 
-- Label
-- Hide label
-- Hide on phone
-- Lock
-- Read-only
-- Component width
-- Component height
-- Bind to table column
+  - Label
+  - Hide label
+  - Hide on phone
+  - Lock
+  - Read-only
+  - Component width
+  - Component height
+  - Bind to table column
 
-The component does not support passing additional context to MCS. If additional context is needed, create a custom PCF and use [Agent API executeEvent](../../developer/component-framework/bring-intelligence-using-agent-apis.md)
+- Agent Response component does not support passing additional context to MCS. Create a custom PCF using [Agent API executeEvent](../../developer/component-framework/bring-intelligence-using-agent-apis.md) to support additional context.
 
-The component isn't supported for mobile or tablets.
+- Agent Response component only supports a read-only adaptive card. Create a custom PCF using [Agent API executeEvent](../../developer/component-framework/bring-intelligence-using-agent-apis.md) to support additional logic.
+
+- Agent Response component isn't supported for mobile or tablets.
 
 ## Related articles
 
