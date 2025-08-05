@@ -14,7 +14,7 @@ search.audienceType:
 
 [!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
-Add the agent response component to a model-driven app form, which can directly call a Microsoft Copilot Studio topic and display the response to the user. This builds on the [Agent API executeEvent](../../developer/component-framework/bring-intelligence-using-agent-apis.md) and simplifies usage by not requiring a new custom component. The implicit context of the app, page, and record are available in Copilot Studio.
+Add the agent response component to a model-driven app form, which can directly call a Microsoft Copilot Studio topic and display the response to the user. This component builds on the [Agent API executeEvent](../../developer/component-framework/bring-intelligence-using-agent-apis.md) and simplifies usage by not requiring a new custom component. The implicit context of the app, page, and record are available in Copilot Studio.
 
 This component supports the following responses from Copilot Studio:
 
@@ -86,9 +86,9 @@ When the Copilot Studio response is an Adaptive Card, ensure the following best 
   - Component height
   - Bind to table column
 
-- Agent Response component does not support passing additional context to MCS. Create a custom PCF using [Agent API executeEvent](../../developer/component-framework/bring-intelligence-using-agent-apis.md) to support additional context.
+- Agent Response component does not support passing additional context to Copilot Studio. Create a custom component using [Agent API executeEvent](../../developer/component-framework/bring-intelligence-using-agent-apis.md) to support passing more context.
 
-- Agent Response component only supports a read-only adaptive card. Create a custom PCF using [Agent API executeEvent](../../developer/component-framework/bring-intelligence-using-agent-apis.md) to support additional logic.
+- Agent Response component only supports a read-only adaptive card. Create a custom component using [Agent API executeEvent](../../developer/component-framework/bring-intelligence-using-agent-apis.md) to support client side logic.
 
 - Agent Response component isn't supported for mobile or tablets.
 
