@@ -117,11 +117,11 @@ You can change a solution publisher for an *unmanaged* solution by following the
 2. In the **Solution settings** pane, select a different publisher from the **Publisher** drop down list or select **New publisher** to create a new one. More information: [Create a solution publisher](#create-a-solution-publisher).
 3. Select **Update**.
 
-## Create segmented tables in a solution
+## Use segmented tables in a solution
 
 Use table segmentation so that you only include table objects that are updated when you distribute solution updates. More information: [Use segmented solutions](/power-platform/alm/segmented-solutions-alm) in the Power Platform ALM guide
 
-To create a solution with table segmentation, start with creating an unmanaged solution and add only the objects that you've updated.
+To create a solution with proper table segmentation, start with creating an unmanaged solution and add only the objects that you've updated.
 
 For example, imagine that you've created a new custom table that doesn't exist in any other environment named *Custom table* and also added a new column named *Top Ten* for the account table. To create a solution with table segmentation, follow these steps.
   
@@ -147,7 +147,7 @@ For example, imagine that you've created a new custom table that doesn't exist i
 
 ### Why table segmentation in a solution is important
 
-When you add an existing system table, such as account or contact, or a custom table to a solution for a table that's already been imported into your downstream environments, the best practice is to *only add the table objects that were updated* in your solution. With solution segmentation, you export solution updates with selected table assets, such as table columns, forms, and views, rather than entire tables with all the assets. This avoids unnecessary layers that hinder other solutions from being effective and unnecessary dependencies on other solutions. The system automatically selects **Include all objects** if the table is unmanaged, and **Include table metadata** if there's an unmanaged layer on the table. The system also preselects the table assets that are unmanaged or have unmanaged customizations automatically you can select the **Edit objects** link to review that selection before select **Add** to complete the process.
+When you add an existing system table, such as account or contact, or a custom table to a solution for a table that's already been imported into your downstream environments, the best practice is to *only add the table objects that were updated* in your solution. With solution segmentation, you export solution updates with selected table assets, such as table columns, forms, and views, rather than entire tables with all the assets. This avoids unnecessary layers that hinder other solutions from being effective and unnecessary dependencies on other solutions. The system automatically selects **Include all objects** if the table is unmanaged, and **Include table metadata** if there's an unmanaged layer on the table. The system also preselects the table assets that are unmanaged or have unmanaged customizations automatically. You can select the **Edit objects** link to review that selection before you select **Add** to complete the process.
 
 > [!IMPORTANT]
 > Notice that if a table has never been imported or doesn't already exist in the target environment you must select **Include all objects** when you add the table to the solution, such as when adding a new custom table that you recently created. Otherwise you receive a dependency error message when you try to import the solution.
