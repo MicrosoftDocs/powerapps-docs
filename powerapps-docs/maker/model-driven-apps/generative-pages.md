@@ -29,6 +29,9 @@ After you describe the page, the system then processes your requirements and spe
 - The Power Platform environment must be located in the US region.
 - The **Enable new AI-powered Copilot features for people who make apps** environment setting must be enabled. More information: [Copilot environment setting](/power-platform/admin/settings-features?tabs=new#copilot-preview)
 - This feature is being gradually rolled out across regions and might not be available yet in your region.
+- For Content Security Policy (CSP) configuration, ensure the following URLs are added to your firewall allowed list:
+    - https://esm.sh 
+    - https://cdn.jsdelivr.net
 
 ## Create a generative page in model-driven apps
 
@@ -59,20 +62,36 @@ Refine the output by iteratively chatting with the app agent to fix errors, adju
 
 :::image type="content" source="media/generative-page/generative-page-view-code-iterate.png" alt-text="View generative page code and iterate on the design":::
 
-When you're satisfied with the generated page, select **Save and Publish** to make the page available when you play the model-driven app.
+Select **Save** to make sure you don't lose your generated page. When you're satisfied with the generated page, select **Save and Publish** to publish all pending changes for the app, including any added generative pages.  
 
 ## Limitations
 
 These are the current limitations of generative pages:
 
-- Working with data. Your page can connect to only Dataverse tables (up to 6 for a single page). You can perform create, read, update, and delete (CRUD) operations against these tables. No other data sources can be used.  
+- Working with data. Your page can connect to only Dataverse tables (up to 6 for a single page). You can perform create, read, update, and delete (CRUD) operations against these tables. No other data sources can be used.
+- Virtual tables are not supported. 
 - You can't edit the generated code.
 - Generated pages can't be exported and imported in other Power Platform with Dataverse environments.
-- The publish action is only applied to the current generative page. As such, you must select **Publish** on each generative page in your app for it to be available in the played app.
-- You must add all needed Dataverse tables in the first prompt.
 - Only US English is supported.
-- Collaboration isn't supported. Ensure only one maker is working on a generative page at a time to avoid unintended conflicts.  
-- You can only access your last 5 iterations with the agent. 
+- Collaboration isn't supported. Ensure only one maker is working on a generative page at a time to avoid unintended conflicts.
+- When returning to a page, you can only access the first prompt + 5 most recent iterations.
+- Only these data types are supported:
+    - Choice
+    - Currency
+    - Customer
+    - Date and Time
+    - Date Only
+    - Decimal Number
+    - Floating Point Number
+    - Image
+    - Lookup
+    - Multiline Text
+    - Status
+    - Status Reason
+    - Text
+    - Whole Number
+    - Yes/No
+    - Unique Identifier
 
 ## Frequently asked questions
 
