@@ -68,6 +68,7 @@ When you update and republish your app, the wrapped app is automatically updated
        1. Select edit icon next to the **Publisher** to view or change the prefix.  
        1. If the prefix isn't "new", edit it to set the prefix to "new".
        1. Save the changes.
+       :::image type="content" source="media/how-to-v2/new-prefix-solution.png" alt-text="Screenshot that shows screen with prefix as new" lightbox="media/how-to-v2/new-prefix-solution.png":::
   
    b. To add vault information to your environment variables, access the **Azure** portal as an admin. Navigate to **All Resources** > **Your Key Vault** > **Properties**, and then copy the **Resource ID**.
       :::image type="content" source="media/how-to-v2/copy-resource-id.png" alt-text="Screenshot that shows resource id to be copied." lightbox="media/how-to-v2/copy-resource-id.png":::
