@@ -357,6 +357,8 @@
     - name: Environment settings
       displayName: Organization table
       href: organization-table.md
+    - name: AI Model table
+      href: msdyn_aimodel-table.md
     - name: Activity tables
       href: activity-entities.md
       items:
