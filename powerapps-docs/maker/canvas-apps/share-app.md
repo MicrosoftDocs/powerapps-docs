@@ -5,7 +5,7 @@ author: jessicaszelo
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 5/29/2025
+ms.date: 8/6/2025
 ms.subservice: canvas-maker
 ms.author: szlo
 search.audienceType: 
@@ -188,27 +188,39 @@ When sharing an app that requires a license for use, you can request Power Apps 
 
 You can share an app with [Microsoft 365 groups](/microsoft-365/admin/create-groups/compare-groups). However, the group must have security enabled. Enabling security ensures that the Microsoft 365 group can receive security tokens for authentication to access apps or resources.
 
-**To check whether a Microsoft 365 group has security enabled**
 
-1. Ensure that you have access to the [Microsoft Entra ID cmdlets](/azure/active-directory/users-groups-roles/groups-settings-v2-cmdlets).
+**Using Microsoft Graph:**
 
-1. Go to [Azure portal](https://portal.azure.com/) \> **Microsoft Entra** \> **Groups**, select the appropriate group, and then copy the **Object Id**.
+1. Install the Microsoft Graph module:
 
-1. [Connect to Microsoft Entra ID](/powershell/module/azuread/connect-azuread) by using the `Connect-AzureAD` PowerShell cmdlet.
+    ```powershell
+    Install-Module Microsoft.Graph -Scope CurrentUser
+    ```
 
-    ![Connect-AzureAD.](media/share-app/azure_cmdlet_connect.png "Connect-AzureAD")
+2. Connect to Microsoft Graph:
 
-1. Get the [group details](/powershell/module/AzureAD/Get-AzureADGroup) by using `Get-AzureADGroup -ObjectId <ObjectID\> | select *`. <br> In the output, ensure that the property **SecurityEnabled** is set to **True**.
+    ```powershell
+    Connect-MgGraph -Scopes "Group.ReadWrite.All"
+    ```
 
-    ![Check the SecurityEnabled property.](media/share-app/azure_cmdlet_get_azuread_group_details.png "Check the SecurityEnabled property")
+3. Set the Object ID:
 
-**To enable security for a group**
+    ```powershell
+    $ObjectID = "<ObjectID>"
+    ```
 
-If the group isn't security-enabled, you can use the PowerShell cmdlet [Set-AzureADGroup](/powershell/module/AzureAD/Set-AzureADGroup) to set the **SecurityEnabled** property to **True**: 
+4. Enable security:
 
-```Set-AzureADGroup -ObjectId <ObjectID> -SecurityEnabled $True```
+    ```powershell
+    Update-MgGroup -GroupId $ObjectID -BodyParameter @{ SecurityEnabled = $true }
+    ```
 
-![Set SecurityEnabled to True.](media/share-app/azure_cmdlet_set_security_enabled.png "Set SecurityEnabled to True")
+5. Verify the update:
+
+    ```powershell
+    Get-MgGroup -GroupId $ObjectID | Select-Object DisplayName, SecurityEnabled
+    ```
+
 
 > [!NOTE]
 > You must be the owner of the Microsoft 365 group to enable security.
@@ -217,6 +229,8 @@ If the group isn't security-enabled, you can use the PowerShell cmdlet [Set-Azur
 After a few minutes, you can discover this group in the Power Apps sharing panel and share apps with this group.
 <a name="manage-table-permissions"></a>
 <a name="dataverse"></a>
+
+
 
 ## Manage table permissions for Dataverse
 
