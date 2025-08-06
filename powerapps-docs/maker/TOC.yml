@@ -241,7 +241,7 @@
     href: search.md      
   - name: Use Dynamics 365 App for Outlook
     href: ../user/use-outlook-app.md
-- name: Plan designer 
+- name: Plans  
   items:
   - name: Overview
     href: ./plan-designer/plan-designer.md  
@@ -2639,7 +2639,7 @@
     href: ./common/faq-filter-with-copilot.md
   - name:  FAQ about agent builder in canvas apps 
     href: ./common/faq-agent-builder.md  
-  - name: FAQ about the Plan designer
+  - name: FAQ about plans
     href: ./common/faq-plan-designer.md
   - name: FAQ about renaming controls with Copilot
     href: ./common/faq-rename-control.md

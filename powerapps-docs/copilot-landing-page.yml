@@ -36,14 +36,14 @@ landingContent:
             url: maker/data-platform/data-platform-copilot.md  
 
   # Card
-  - title: Use Plan designer
+  - title: Create and use plans
     linkLists:
 
       - linkListType: overview
         links: 
           - text: Overview and prerequisites
             url: maker/plan-designer/plan-designer.md
-          - text: FAQ for the Plan designer
+          - text: FAQ for plans
             url: maker/common/faq-plan-designer.md  
       - linkListType: how-to-guide
         links:
