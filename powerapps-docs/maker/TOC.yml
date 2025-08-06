@@ -21,7 +21,7 @@
   - name: Copilot in Power Apps 
     items: 
     - name: Copilot in Power Apps 
-      href: ../ai-copilot-landing-page.yml
+      href: ../copilot-landing-page.yml
     - name: Overview 
       href: ./canvas-apps/ai-overview.md
   - name: Use the learn hub
