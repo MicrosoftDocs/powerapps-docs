@@ -4,7 +4,7 @@ description: Learn how to configure suggested actions in your model-driven apps
 ms.date: 08/05/2025
 ms.reviewer: matp
 ms.topic: how-to
-author: jacwilkinson
+author: jacob-wilkinson
 ms.subservice: mda-maker
 ms.author: jacwilkinson
 ms.service: powerapps
@@ -18,7 +18,6 @@ search.audienceType:
 Suggested actions help users focus on what matters most by surfacing intelligent, context-aware recommendations for high-value records. These actions are defined by makers and dynamically suggested upon record navigation to users based on record data and inferred business logic.
 
 This guide walks thorugh how to configure suggested actions.
-:::image type="content" source="media/suggested-actions/suggested-actions-.png" alt-text="App designer Agents pane" lightbox="media/suggested-actions/suggested-actions-.png":::
 
 > [!IMPORTANT]
 >
