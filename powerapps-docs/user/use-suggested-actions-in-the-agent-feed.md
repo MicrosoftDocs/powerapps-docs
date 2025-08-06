@@ -5,7 +5,7 @@ description: Learn about suggested actions and how to use them in the agent feed
 ms.date: 07/31/2025
 ms.reviewer: "smurkute"
 ms.topic: "how-to"
-author: "jacobwilkinson"
+author: "jacob-wilkinson"
 ms.subservice: end-user
 ms.author: "jacwilkinson"
 contributors: 
@@ -52,7 +52,7 @@ Each suggested action includes:
 1. Dismiss button
 1. A rationale explaining why the action is being suggested
 1. Name of the tables's suggested action agent
-:::image type="content" source="media/suggested-actions/suggested-actions-card-map.png" alt-text="Filtering suggested actions" lightbox="media/suggested-actions/suggested-actions-card-map.png":::
+:::image type="content" source="media/suggested-actions/suggested-actions-card-map.png" alt-text="Suggested actions card" lightbox="media/suggested-actions/suggested-actions-card-map.png":::
 
 ## Example workflow
 
@@ -67,9 +67,9 @@ A typical interaction with suggested action might look like this:
 
 You can interact with suggested actions in two ways:
 -**Mark as complete:** Use this wehn you have manually completed the suggested task.
-:::image type="content" source="media/suggested-actions/suggested-actions-mark-completed.png" alt-text="Filtering suggested actions" lightbox="media/suggested-actions/suggested-actions-mark-complete.png":::
+:::image type="content" source="media/suggested-actions/suggested-actions-mark-completed.png" alt-text="Mark an action as complete" lightbox="media/suggested-actions/suggested-actions-mark-complete.png":::
 -**Dismiss:** Use this when the suggestion is not relevant to your current workflow.
-:::image type="content" source="media/suggested-actions/suggested-actions-dismiss.png" alt-text="Filtering suggested actions" lightbox="media/suggested-actions/suggested-actions-dismiss.png":::
+:::image type="content" source="media/suggested-actions/suggested-actions-dismiss.png" alt-text="Dismiss an action" lightbox="media/suggested-actions/suggested-actions-dismiss.png":::
 
 > [!IMPORTANT]
 > Completing or dismissing an action helps improve future suggestions. The system uses this feedback to learn which actions are helpful and when they should be shown. Also, note that once you complete or dismiss an action, you cannot undo it.
