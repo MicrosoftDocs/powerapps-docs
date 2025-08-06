@@ -1,7 +1,7 @@
 ---
 title: "Add agent response using the form designer" 
 description: Learn how to add the agent response component to model forms to call Copilot Studio topics.
-ms.date: 08/07/2025
+ms.date: 08/06/2025
 ms.reviewer: matp
 ms.topic: how-to
 author: adrianorth
@@ -75,8 +75,7 @@ When the Copilot Studio response is an Adaptive Card, ensure the following best 
 
 ## Limitations
 
-- Agent Response component properties below are currently not supported:
-
+- Agent response component properties currently not supported:
   - Label
   - Hide label
   - Hide on phone
@@ -86,15 +85,15 @@ When the Copilot Studio response is an Adaptive Card, ensure the following best 
   - Component height
   - Bind to table column
 
-- Agent Response component does not support passing additional context to Copilot Studio. Create a custom component using [Agent API executeEvent](../../developer/component-framework/bring-intelligence-using-agent-apis.md) to support passing more context.
+- Agent response component doesn't support passing additional context to Copilot Studio. Create a custom component using [Agent API executeEvent](../../developer/component-framework/bring-intelligence-using-agent-apis.md) to support passing more context.
 
-- Agent Response component only supports a read-only adaptive card. Create a custom component using [Agent API executeEvent](../../developer/component-framework/bring-intelligence-using-agent-apis.md) to support client side logic.
+- Agent response component only supports a read-only adaptive card. Create a custom component using [Agent API executeEvent](../../developer/component-framework/bring-intelligence-using-agent-apis.md) to support client side logic.
 
-- Agent Response component isn't supported for mobile or tablets.
+- Agent response component isn't supported for mobile or tablets.
 
 ## Related articles
 
-[FAQ for Agent APIs and Agent Response component](../../maker/common/faq-agent-api-component.md)
+[FAQ for Agent APIs and Agent response component](../../maker/common/faq-agent-api-component.md)
 
 [Agent API executeEvent](../../developer/component-framework/bring-intelligence-using-agent-apis.md)
 
