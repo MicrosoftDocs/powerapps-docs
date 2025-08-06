@@ -75,7 +75,7 @@ In model-driven apps, users often spend significant time identifying which recor
 1. Save and publish your app
 
 > - [!NOTE]
-> - To completely delete the suggested action, you must delete it from your solution our of the AI Skill Config folder.
+> - To completely delete the suggested action, you must delete it from your solution out of the AI Skill Config folder.
 
 ## Where suggested actions are stored
 Successfully generated suggested actions can be viewed in the **Suggested Action** table accessible via the maker portal.
