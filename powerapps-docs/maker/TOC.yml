@@ -314,6 +314,8 @@
             displayName: Troubleshoot common errors when creating app from Figma
   - name: Design and build an app
     items:
+      - name: Design and build an app
+        href: ./canvas-apps/build-and-design.yml
       - name: Connect to data
         items:
         - name: Connections overview
