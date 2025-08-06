@@ -63,6 +63,7 @@ When you update and republish your app, the wrapped app is automatically updated
    a. To create the environment variable, go to [Power Apps](https://make.powerapps.com) > **Solutions** > **Default solution**. Then select **New** > **More** > **Environment variable**, add the display name as "PA_Wrap_KV_ResourceID".
       :::image type="content" source="media/how-to-v2/add-new-env-variable.png" alt-text="Screenshot that shows screen for adding new environment variable." lightbox="media/how-to-v2/add-new-env-variable.png":::
     The name of the new environment variable must have the prefix "new." If it doesn't, see [Set Environment Variable Prefix](#set-environment-variable-prefix) for detailed steps.
+    :::image type="content" source="media/how-to-v2/new-prefix-solution.png" alt-text="Screenshot that shows screen with prefix as new" lightbox="media/how-to-v2/new-prefix-solution.png":::
    b. To add vault information to your environment variables, access the **Azure** portal as an admin. Navigate to **All Resources** > **Your Key Vault** > **Properties**, and then copy the **Resource ID**.
       :::image type="content" source="media/how-to-v2/copy-resource-id.png" alt-text="Screenshot that shows resource id to be copied." lightbox="media/how-to-v2/copy-resource-id.png":::
 
@@ -117,7 +118,6 @@ The name of the new environment variable must have the prefix "new." If it doesn
 1. If the prefix isn't "new," edit it to set the prefix to "new."
 1. Save the changes.
 
-:::image type="content" source="media/how-to-v2/new-prefix-solution.png" alt-text="Screenshot that shows screen with prefix as new" lightbox="media/how-to-v2/new-prefix-solution.png":::
 
 ### 4. Register your app
 
