@@ -80,21 +80,7 @@ landingContent:
           - text: Add a custom Copilot to a canvas app (preview)
             url: maker/canvas-apps/add-custom-copilot.md
 
-  # Card
-  - title: Explore Copilot chat features
-    linkLists:
-
-      - linkListType: how-to-guide
-        links:
-
-          - text: Add Copilot chat in model-driven apps
-            url: maker/model-driven-apps/add-ai-copilot.md
-          - text: Use Copilot chat in model-driven apps
-            url: user/use-copilot-model-driven-apps.md
-          - text: Customize Copilot chat using Copilot Studio (preview)
-            url: maker/model-driven-apps/customize-copilot-chat.md
-
-  # Card
+ # Card
   - title: Implement agent supervision and automation
     linkLists:
 
@@ -112,6 +98,21 @@ landingContent:
           - text: Add agents to your model-driven app
             url: maker/model-driven-apps/add-agents-to-app.md
 
+  # Card
+  - title: Explore Copilot chat features
+    linkLists:
+
+      - linkListType: how-to-guide
+        links:
+
+          - text: Add Copilot chat in model-driven apps
+            url: maker/model-driven-apps/add-ai-copilot.md
+          - text: Use Copilot chat in model-driven apps
+            url: user/use-copilot-model-driven-apps.md
+          - text: Customize Copilot chat using Copilot Studio (preview)
+            url: maker/model-driven-apps/customize-copilot-chat.md
+
+  
   # Card
   - title: Streamline data entry
     linkLists:
