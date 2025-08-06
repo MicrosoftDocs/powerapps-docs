@@ -27,7 +27,7 @@ This guide walks thorugh how to configure suggested actions.
 > - This feature is available only in the English language
 
 ## Prerequisites
-- The [Copilot in Power Apps](../canvas-apps/ai-overview..md) environment flag must be enabled. 
+- The [Copilot in Power Apps](../canvas-apps/ai-overview.md) environment flag must be enabled. 
 
 ## Why suggested actions matter
 In model-driven apps, users often spend significant time identifying which records are most urgent, deciding what to do next, and executing those tasks. Suggested actions reduce this effort by guiding users toward meaningful next steps that help them act faster and more intelligently.
