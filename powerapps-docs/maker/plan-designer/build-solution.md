@@ -4,7 +4,7 @@ description: Learn how to build business solutions using canvas apps, model-driv
 author: szlo 
 contributors:  
 ms.topic: how-to  
-ms.date: 07/31/2025  
+ms.date: 08/6/2025  
 ms.author: mkaur  
 ms.reviewer: mkaur  
 ---  

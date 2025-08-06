@@ -4,7 +4,7 @@ description: Use plans to create business solutions with AI-powered experiences.
 author: mduelae
 contributors:
 ms.topic: how-to
-ms.date: 6/25/2025
+ms.date: 8/6/2025
 ms.update-cycle: 180-days
 ms.author: szlo
 ms.reviewer: mkaur

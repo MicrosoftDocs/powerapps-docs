@@ -4,7 +4,7 @@ description: Learn how plans promotes healthy application lifecycle management (
 author: szlo  
 contributors:  
 ms.topic: how-to  
-ms.date: 05/19/2025  
+ms.date: 8/6/2025
 ms.update-cycle: 180-days
 ms.author: mkaur  
 ms.reviewer: mkaur  

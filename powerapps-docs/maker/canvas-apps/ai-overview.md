@@ -12,7 +12,7 @@ ms.custom:
   - ai-seo-date: 5/25/2025
 ai-usage: ai-assisted
 ms.reviewer: 
-ms.date: 07/31/2025
+ms.date: 08/6/2025
 ms.update-cycle: 180-days
 ms.subservice: canvas-maker
 search.audienceType: 
@@ -79,7 +79,7 @@ Copilot preview features are on by default, but your admin can turn them off for
 
 ### Related information
 
-- [Copilot features in Power Apps](../../ai-copilot-landing-page.yml)
+- [Copilot features in Power Apps](../../copilot-landing-page.yml)
 - [FAQ about using AI responsibly in Power Apps](../common/transparency-note.md)
 - [Language availability for Power Platform](https://dynamics.microsoft.com/availability-reports/languagereport/)
 - [Geographical availability for Power Platform](https://dynamics.microsoft.com/availability-reports/georeport/)
