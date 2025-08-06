@@ -1,7 +1,7 @@
 ---
 title: "Add agent response using the form designer" 
 description: Learn how to add the agent response component to model forms to call Copilot Studio topics.
-ms.date: 07/07/2025
+ms.date: 08/06/2025
 ms.reviewer: matp
 ms.topic: how-to
 author: adrianorth
@@ -14,7 +14,7 @@ search.audienceType:
 
 [!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
-Add the agent response component to a model-driven app form, which can directly call a Microsoft Copilot Studio topic and display the response to the user. This builds on the [Agent API executeEvent](../../developer/component-framework/bring-intelligence-using-agent-apis.md) and simplifies usage by not requiring a new custom component. The implicit context of the app, page, and record are available in Copilot Studio.
+Add the agent response component to a model-driven app form, which can directly call a Microsoft Copilot Studio topic and display the response to the user. This component builds on the [Agent API executeEvent](../../developer/component-framework/bring-intelligence-using-agent-apis.md) and simplifies usage by not requiring a new custom component. The implicit context of the app, page, and record are available in Copilot Studio.
 
 This component supports the following responses from Copilot Studio:
 
@@ -75,24 +75,25 @@ When the Copilot Studio response is an Adaptive Card, ensure the following best 
 
 ## Limitations
 
-The following component properties are currently not supported:
+- Agent response component properties currently not supported:
+  - Label
+  - Hide label
+  - Hide on phone
+  - Lock
+  - Read-only
+  - Component width
+  - Component height
+  - Bind to table column
 
-- Label
-- Hide label
-- Hide on phone
-- Lock
-- Read-only
-- Component width
-- Component height
-- Bind to table column
+- Agent response component doesn't support passing additional context to Copilot Studio. Create a custom component using [Agent API executeEvent](../../developer/component-framework/bring-intelligence-using-agent-apis.md) to support passing more context.
 
-The component does not support passing additional context to MCS. If additional context is needed, create a custom PCF and use [Agent API executeEvent](../../developer/component-framework/bring-intelligence-using-agent-apis.md)
+- Agent response component only supports a read-only adaptive card. Create a custom component using [Agent API executeEvent](../../developer/component-framework/bring-intelligence-using-agent-apis.md) to support client side logic.
 
-The component isn't supported for mobile or tablets.
+- Agent response component isn't supported for mobile or tablets.
 
 ## Related articles
 
-[FAQ for Agent APIs and Agent Response component](../../maker/common/faq-agent-api-component.md)
+[FAQ for Agent APIs and Agent response component](../../maker/common/faq-agent-api-component.md)
 
 [Agent API executeEvent](../../developer/component-framework/bring-intelligence-using-agent-apis.md)
 
