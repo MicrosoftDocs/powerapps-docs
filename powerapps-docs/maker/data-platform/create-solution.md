@@ -18,7 +18,7 @@ search.audienceType:
 To locate and work with just the components you customize, create a solution and do all your customization there. Then, always remember to work in the context of the custom solution as you add, edit, and create components. This makes it easy to export your solution so that it can be backed up or imported to another environment. 
 
 > [!NOTE]
-> Consider specifying a custom solution as you preferred solution. This way you can control where your solution components are stored when your don't specifically create them in the context of a custom solution. More information: [Set the preferred solution](preferred-solution.md).
+> Consider specifying a custom solution as you preferred solution. This way you can control where your solution components are stored when you don't specifically create them in the context of a custom solution. More information: [Set the preferred solution](preferred-solution.md).
   
 To create a solution:
 
