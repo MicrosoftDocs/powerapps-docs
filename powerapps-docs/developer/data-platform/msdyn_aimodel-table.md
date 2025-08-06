@@ -22,6 +22,8 @@ The Web API exposes the [msdyn_aimodel EntityType](xref:Microsoft.Dynamics.CRM.m
 
 AI Model table has the following writable columns:
 
+<!-- Writable columns are usually the most interesting ones -->
+
 |Name|Type|Description|
 |---|---|---|
 |`msdyn_ActiveRunConfigurationId`|Lookup| Unique identifier for the active run configuration id associated with AIModel.  TODO: Explain why this look up has no `Targets` property value. Which kind of records does it point to?|
@@ -34,17 +36,18 @@ AI Model table has the following writable columns:
 |`msdyn_ShareWithOrganizationOnCreate`|Boolean|TODO add missing description?|
 |`msdyn_TemplateId`|Lookup|Unique identifier for [AI Template](reference/entities/msdyn_aitemplate.md) associated with AIModel.|
 |`OwnerId`|Owner|Owner Id|
-|`statecode`|State|Status of the AIModel|
-|`statuscode`|Status|Reason for the status of the AIModel|
+|`statecode`|State|Status of the AI Model|
+|`statuscode`|Status|Reason for the status of the AI Model|
 
 ### Retrieve AI Model data
 
-TODO: Add some example queries here
+TODO: Add some example queries here  I can help with these.
 
 ### [SDK for .NET](#tab/sdk)
 
 ```csharp
 // Add .NET sample code using the SDK here
+ ///I can help with these.
 ```
 
 ### [Web API](#tab/webapi)
@@ -73,14 +76,14 @@ AI Model table supports the following actions:
 
 |Name|Description|
 |---|---|
-|[AddToFeedbackLoop](xref:Microsoft.Dynamics.Crm.AddToFeedbackLoop )|API to add a feedback loop item to a model.|
-|[BatchPrediction](xref:Microsoft.Dynamics.Crm.BatchPrediction)|Runs batch prediction on an AI Model.|
-|[Predict](xref:Microsoft.Dynamics.Crm.Predict)|Uses AI to make a prediction.|
-|[PredictByReference](xref:Microsoft.Dynamics.Crm.PredictByReference)|Run real time prediction with reference to record to predict on.|
-|[PredictionSchema](xref:Microsoft.Dynamics.Crm.PredictionSchema)|Gets the prediction schema.|
-|[SchedulePrediction](xref:Microsoft.Dynamics.Crm.SchedulePrediction)|Schedules a prediction for an AI model.|
-|[ScheduleRetrain](xref:Microsoft.Dynamics.Crm.ScheduleRetrain)|Schedules retraining for an AI model.|
-|[UnschedulePrediction](xref:Microsoft.Dynamics.Crm.UnschedulePrediction)|Unschedules batch prediction on an AI model.|
+|[AddToFeedbackLoop](xref:Microsoft.Dynamics.CRM.AddToFeedbackLoop)|API to add a feedback loop item to a model.|
+|[BatchPrediction](xref:Microsoft.Dynamics.CRM.BatchPrediction)|Runs batch prediction on an AI Model.|
+|[Predict](xref:Microsoft.Dynamics.CRM.Predict)|Uses AI to make a prediction.|
+|[PredictByReference](xref:Microsoft.Dynamics.CRM.PredictByReference)|Run real time prediction with reference to record to predict on.|
+|[PredictionSchema](xref:Microsoft.Dynamics.CRM.PredictionSchema)|Gets the prediction schema.|
+|[SchedulePrediction](xref:Microsoft.Dynamics.CRM.SchedulePrediction)|Schedules a prediction for an AI model.|
+|[ScheduleRetrain](xref:Microsoft.Dynamics.CRM.ScheduleRetrain)|Schedules retraining for an AI model.|
+|[UnschedulePrediction](xref:Microsoft.Dynamics.CRM.UnschedulePrediction)|Unschedules batch prediction on an AI model.|
 
 
 ## Predict action
@@ -91,6 +94,7 @@ TODO Describe this action in more detail here
 
 ```csharp
 // Add .NET sample code using the SDK here
+//  I can help with these.
 ```
 
 ### [Web API](#tab/webapi)
@@ -98,6 +102,7 @@ TODO Describe this action in more detail here
 **Request**:
 ```http
 POST [Organization URI]/api/data/v9.2/
+ I can help with these.
 ```
 
 **Response**:
