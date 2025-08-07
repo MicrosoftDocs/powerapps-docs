@@ -191,31 +191,31 @@ You can share an app with [Microsoft 365 groups](/microsoft-365/admin/create-gro
 
 **Using Microsoft Graph:**
 
-1. Install the Microsoft Graph module:
+1. Install the Microsoft Graph module. 
 
     ```powershell
     Install-Module Microsoft.Graph -Scope CurrentUser
     ```
 
-2. Connect to Microsoft Graph:
+2. Connect to Microsoft Graph. For information about the administrator roles required to manage groups, see  [Microsoft Entra roles for managing groups](/graph/api/resources/groups-overview?view=graph-rest-1.0&tabs=http#microsoft-entra-roles-for-managing-groups).
 
     ```powershell
     Connect-MgGraph -Scopes "Group.ReadWrite.All"
     ```
 
-3. Set the Object ID:
+3. Set the Object ID of Microsoft 365 group.
 
     ```powershell
     $ObjectID = "<ObjectID>"
     ```
 
-4. Enable security:
+4. Enable security.
 
     ```powershell
     Update-MgGroup -GroupId $ObjectID -BodyParameter @{ SecurityEnabled = $true }
     ```
 
-5. Verify the update:
+5. Verify the update.
 
     ```powershell
     Get-MgGroup -GroupId $ObjectID | Select-Object DisplayName, SecurityEnabled
