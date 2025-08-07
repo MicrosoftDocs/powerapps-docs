@@ -26,7 +26,7 @@ The `OnSave` event occurs when:
 
 [!INCLUDE [cc_book-instead-of-save](../../../../../includes/cc_book-instead-of-save.md)]
 
-To determine which button was clicked to perform the save, use the [getSaveMode method](../save-event-arguments/getSaveMode.md) method.
+To determine which button was clicked to perform the save, use the [getSaveMode](../save-event-arguments/getSaveMode.md) method.
 
 You can cancel the save action by using the preventDefault method within the event arguments object. The preventDefault method is accessible by using the getEventArgs method that is part of the execution context. Execution context is automatically passed to the form event handler.
 
