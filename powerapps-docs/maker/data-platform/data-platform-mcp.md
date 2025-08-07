@@ -222,17 +222,25 @@ To learn how to use Visual Studio Code and MCP Severs go to this document: [Use 
 
 The following Dataverse MCP tools are available. Your prompt in the MCP client like Claude desktop and VS Code GitHub Copilot is automatically routed to one or more of these tools. So you can ask a question like "view Accounts data," which is likely be mapped to the `read_query` tool or `retrieve_knowledge`.  
 
-| Tool                   | Description                                                                                                              |
-|------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| `create_record`         | Insert a row into a table in Dataverse and returns the GUID of the created row.                                          |
-| `describe_table`         | Get the table schema of the requested table in Dataverse.                                                                 |
-| `execute_prompt`         | Execute a prompt from the list of available predefined prompts in the environment.                                       |
-| `list_knowledge_sources` | Returns a list of knowledge sources available in Dataverse. Knowledge sources created and used in Copilot Studio agents in the same environment are shown here. |
-| `list_prompts`           | List predefined prompts available in the environment.                                                                     |
-| `list_tables`            | List tables that are available in the environment                                                                        |
-| `read_query`             | Read data from tables in Dataverse.                                                                                       |
-| `retrieve_knowledge`     | Use a preconfigured knowledge source to answer questions.                                                                 |
-| `update_record`          | Update a row in a Dataverse table.                                                                                          |
+## Dataverse Tool Reference Guide
+
+This table provides an overview of commonly used tools in Dataverse, organized by functionality.
+
+| Tool                    | Description                                                                                                                  |
+|-------------------------|------------------------------------------------------------------------------------------------------------------------------|
+| `create_table`          | Creates a new table in Dataverse with specified columns and data types.                                                      |
+| `update_table`          | Modifies the structure of an existing table, such as adding or removing columns.                                             |
+| `delete_table`          | Permanently deletes a table from Dataverse.                                                                                  |
+| `describe_table`        | Retrieves the schema of a specified table in Dataverse, including column names and data types.                              |
+| `list_tables`           | Returns a list of tables accessible in the current environment.                                                              |
+| `create_record`         | Inserts a new row into a Dataverse table and returns the GUID of the created row.                                            |
+| `read_query`            | Reads and retrieves data from tables in Dataverse based on query parameters.                                                 |
+| `update_record`         | Updates an existing row in a Dataverse table.                                                                                |
+| `delete_record`         | Removes a specific row from a Dataverse table using its unique identifier or a condition.                                    |
+| `list_knowledge_sources`| Lists all knowledge sources available in Dataverse, including those used in Copilot Studio agents within the same environment.|
+| `retrieve_knowledge`    | Uses a configured knowledge source to answer user questions.                                                                 |
+| `execute_prompt`        | Runs a predefined prompt available in the current environment.                                                               |
+| `list_prompts`          | Displays all predefined prompts available in the environment.                                                                |
 
 ## Related articles
 
