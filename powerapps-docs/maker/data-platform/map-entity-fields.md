@@ -1,22 +1,16 @@
 ---
 title: "Map table columns in Power Apps | MicrosoftDocs"
 description: "Learn how to map table columns"
-ms.custom: ""
 ms.date: 08/07/2025
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
+ms.reviewer: matp
 ms.topic: how-to
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "powerapps"
-author: "Mattp123"
-ms.assetid: 7c5aa1c3-bde9-43f1-a369-fdcdbf14dec0
-caps.latest.revision: 33
+author: Mattp123
 ms.subservice: dataverse-maker
-ms.author: "matp"
-tags: 
+ms.author: matp
 search.audienceType: 
   - maker
 ---
@@ -34,7 +28,7 @@ When you map table columns for a 1:N table relationship, certain items of data f
 > [!NOTE]
 >
 > - These mappings only set default values to a row before it's saved. People can edit the values before saving. The data that is transferred is the data at that point in time. The data isn't synchronized if the source data later changes.
-> - These mappings aren't applied to related rows created using a workflow or dialog process. They aren't automatically applied to new rows created using code, although developers can use a special message called `InitializeFrom` ([InitializeFrom Function](/dynamics365/customer-engagement/web-api/initializefrom) or [InitializeFromRequest Class](/dotnet/api/microsoft.crm.sdk.messages.initializefromrequest)) to create a new row using available mappings.
+> - These mappings aren't applied to related rows created using a workflow or dialog process. They aren't automatically applied to new rows created using code, although developers can use a special message called `InitializeFrom` ([InitializeFrom Function](/power-apps/developer/data-platform/webapi/reference/initializefrom) or [InitializeFromRequest Class](/dotnet/api/microsoft.crm.sdk.messages.initializefromrequest)) to create a new row using available mappings.
 > - These mappings aren't applied for new related table forms that are opened when an app doesn't have an active network connection to Microsoft Dataverse, except for parent lookup columns.
 > - Column mapping between tables isn't supported when you're using an app in offline mode. For more information, see the limitations listed in [Mobile offline limitations for model-driven apps](../../mobile/offline-limitations.md).
 
@@ -100,7 +94,5 @@ If there are any mappings that you don't want to apply, you can select them and 
 [Developer Documentation: Customize table and column mappings](../../developer/data-platform/customize-entity-attribute-mappings.md)  
 [Developer Documentation: Create a record from another record using Web API](../../developer/data-platform/webapi/create-entity-web-api.md#create-a-record-from-another-record)  
 [Developer Documentation: Set default values from the primary table row](../../developer/data-platform/org-service/entity-operations-create.md#set-default-values-from-the-primary-table-row)
-
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
