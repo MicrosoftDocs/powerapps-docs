@@ -47,7 +47,7 @@ Definitions of views for tables are included in the customizations.xml file and 
 
 **Editing the ISV.config**
 
-For Microsoft Dataverse, the Ribbon provides the way to extend the application. The only remaining capability left in ISV.Config is to customize the appearance of the Service Calendar. For more information, see  [Service calendar appearance configuration](/dynamics365/customer-engagement/developer/customize-dev/service-calendar-appearance-configuration).  
+For Microsoft Dataverse, the Ribbon provides the way to extend the application. The only remaining capability left in ISV.Config is to customize the appearance of the Service Calendar. For more information, see  [Service calendar appearance configuration](/dynamics365/customer-engagement/developer/customize-dev/service-calendar-appearance-configuration).  <!-- This is only documented for /dynamics365/customer-engagement -->
   
 ## Unsupported tasks  
 

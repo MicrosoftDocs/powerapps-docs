@@ -22,8 +22,6 @@ search.audienceType:
 ---
 # How to create and edit columns
 
-
-
 In Microsoft Dataverse columns define the individual data items that can be used to store data in a table. Columns are sometimes called *attributes* by developers. 
 
 Watch this video for a quick overview about columns:
@@ -74,17 +72,18 @@ You should use the Power Apps portal to create and edit columns for Dataverse un
 
 ## Community tools
 
-**[Attribute Manager](https://www.xrmtoolbox.com/plugins/DLaB.Xrm.AttributeManager/)** is a tool that XrmToolbox community developed for Dataverse. Please see the [Developer Tools](/dynamics365/customer-engagement/developer/developer-tools) topic for more community developed tools.
+**[Attribute Manager](https://www.xrmtoolbox.com/plugins/DLaB.Xrm.AttributeManager/)** is a tool that XrmToolbox community developed for Dataverse. Please see the [Developer tools and resources](../../developer/data-platform/developer-tools.md) topic for more community developed tools.
 
 > [!NOTE]
 > The community tools are not a product of Microsoft and does not extend support to the community tools. 
 > If you have questions pertaining to the tool, please contact the publisher. More Information: [XrmToolBox](https://www.xrmtoolbox.com).
 
-### See also  
-[Create and edit columns for Dataverse using Power Apps portal](create-edit-field-portal.md)<br />
-[Create and edit columns for Dataverse using Power Apps solution explorer](create-edit-field-solution-explorer.md)<br />
-[Types of columns and column data types](types-of-fields.md)<br />
-[Developer Documentation: Work with attribute metadata](/dynamics365/customer-engagement/developer/org-service/work-attribute-metadata)
+### Related articles
+
+[Create and edit columns for Dataverse using Power Apps portal](create-edit-field-portal.md)   
+[Create and edit columns for Dataverse using Power Apps solution explorer](create-edit-field-solution-explorer.md)   
+[Types of columns and column data types](types-of-fields.md)   
+[Developer Documentation: Column definitions](../../developer/data-platform/entity-attribute-metadata.md)   
  
 
 
