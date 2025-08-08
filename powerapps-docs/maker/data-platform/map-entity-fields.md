@@ -86,14 +86,14 @@ The following rules show what kinds of data can be mapped:
 
 ## Delete mappings
 <!--Addresses TSG 74902 -->
-While [viewing mappable columns](#view-mappable-columns) ff there are any *unmanaged* mappings that you don't want in the environment, you can select them and then select **Delete** ![Delete column mappings](media/delete.gif).
+While [viewing mappable columns](#view-mappable-columns) if there are any *unmanaged* mappings that you don't want in the environment, you can select them and then select **Delete** ![Delete column mappings](media/delete.gif).
 
 > [!NOTE]
 > System and managed mappings can't be deleted the same way as unmanaged mappings, which is by using the legacy solution explorer.
 
 ### System mappings
 
-You can't delete system generated mappings. When you try to delete a system generated mapping, an error like this one is shown: "Cannot create or delete system attribute map having id &lt;GUID&gt; from '&lt;name&gt;' to '&lt;name&gt;' belonging to an entity map with id &lt;GUID&gt; from '&lt;name&gt;' to 'X&lt;name&gt;".
+You can't delete system generated mappings. When you try to delete a system generated mapping, an error like this one is shown: "Cannot create or delete system attribute map having id &lt;GUID&gt; from '&lt;name&gt;' to '&lt;name&gt;' belonging to an entity map with id &lt;GUID&gt; from '&lt;name&gt;' to 'X&lt;name&gt;."
 
 To remove a system generated mapping, delete the relationship or the lookup field associated with the mapping, which also deletes the mapping. More information: [Delete relationships](/power-apps/maker/data-platform/create-edit-1n-relationships-portal#delete-relationships)
 
