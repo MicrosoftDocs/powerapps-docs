@@ -152,7 +152,7 @@ In earlier releases, you could define a rollup column for an individual activity
 
 In this example, we count the total number of emails sent to an account, where the account is listed on the email's "To Recipient" line or "Cc Recipient line. This is done by specifying the **Participation Type** in **FILTERS** for the Activity Party table in the rollup column definition. If you don't use filtering, then all available participation types for an activity are used in the calculation. 
  
-For more information about the Activity Party table and participation types available for a particular activity, see [ActivityParty table](/dynamics365/customer-engagement/developer/activityparty-entity).
+For more information about the Activity Party table and participation types available for a particular activity, see [ActivityParty table](../../developer/data-platform/activityparty-entity.md).
 
   
 ![Rollup related activities and activity party.](media/rollup-enhancements-indirect-activities.png)  
