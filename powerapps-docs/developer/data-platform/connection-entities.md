@@ -60,8 +60,11 @@ By record:
 [ConnectionRole table](reference/entities/connectionrole.md)   
 [Sample: Create a connection](org-service/samples/create-connection-early-bound.md)  
 [Sample: Create a connection role](org-service/samples/create-connection-role-early-bound.md)  
+[Sample: Create a reciprocal connection role](org-service/samples/create-reciprocal-connection-role-early-bound.md)  
 [Sample: Query connections by a record (early bound)](org-service/samples/query-connections-record-early-bound.md)  
 [Sample: Query connection roles by entity type code (early bound)](org-service/samples/query-connection-roles-entity-type-code-early-bound.md)  
+[Sample: Query connections by reciprocal roles (early bound)](org-service/samples/query-connections-reciprocal-roles-early-bound.md)  
+[Sample: Update a connection role (early bound)](org-service/samples/update-connection-role.md)  
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
