@@ -163,7 +163,7 @@ For information about creating custom security roles, see
   
 - [Create or edit a security role](/dynamics365/customer-engagement/admin/create-edit-security-role)  
 - [Copy a security role](/dynamics365/customer-engagement/admin/copy-security-role)  
-- [Add solution components](../../maker/data-platform/create-solution.md#add-solution-components)
+- [Add solution components](../../maker/data-platform/create-solution.md#add-or-remove-solution-objects)
   
   For information about creating a Dataverse solution, see the following topics:
   
