@@ -2,7 +2,7 @@
 title: "Solution layers in Power Platform"
 description: "Learn how you can use solution layers"
 keywords: 
-ms.date: 11/21/2024
+ms.date: 08/04/2025
 ms.custom: 
 ms.topic: article
 ms.assetid: 
@@ -64,7 +64,9 @@ There are other tabs available for specific component solution layers.
 Unmanaged customizations reside at the top layer for a component and subsequently define the runtime behavior of the component. In most situations you don't want unmanaged customizations determining the behavior of your components in your test and production environments.
 
 > [!IMPORTANT]
-> By design, your dev and maker environments where you're working with unmanaged components typically have unmanaged layers.
+>
+> - By design, your dev and maker environments where you're working with unmanaged components typically have unmanaged layers.
+> - If the unmanaged layer you want to remove is the only layer and as such the base layer for the component, you can’t remove it with the remove active customizations command. To remove the layer, you have to delete the unmanaged component. More information: [Remove objects from a solution](create-solution.md#remove-objects-from-a-solution).
 
 To remove the unmanaged layer for a component, follow these steps:
 
