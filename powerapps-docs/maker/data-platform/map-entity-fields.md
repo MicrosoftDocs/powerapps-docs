@@ -85,8 +85,20 @@ The following rules show what kinds of data can be mapped:
 > If you need to map choice columns, we recommend you configure both columns to use the same global choice. Otherwise, it can be difficult to keep two separate sets of options synchronized manually. If the integer values for each option aren't mapped correctly you can introduce problems in your data. More information: [Create and edit global choices for Microsoft Dataverse (picklists)](create-edit-global-option-sets.md)  
 
 ## Delete mappings
+<!--Addresses TSG 74902 -->
+If there are any unmanaged mappings that you don't want in the environment, you can select them and then select ![Delete column mappings](media/delete.gif). 
 
-If there are any mappings that you don't want to apply, you can select them and then select ![Delete column mappings](media/delete.gif).
+However, system and managed mappings can't be deleted the same way as unmanaged mappings.
+
+### System mappings
+
+You can't delete system generated mappings. When you try to delete a system generated mapping, an error like this one is shown: "Cannot create or delete system attribute map having id &lt;GUID&gt; from '&lt;name&gt;' to '&lt;name&gt;' belonging to an entity map with id &lt;GUID&gt; from '&lt;name&gt;' to 'X&lt;name&gt;".
+
+To remove a system generated mapping, delete the relationship or the lookup field associated with the mapping, which also deletes the mapping. More information: [Delete relationships](/power-apps/maker/data-platform/create-edit-1n-relationships-portal#delete-relationships)
+
+### Managed mappings
+
+You can't delete a mapping if the mapping is managed. To remove the mapping, you must do an upgrade to the solution that brought this mapping in the target environment. To do this, delete the unmanaged mapping in your dev environment as an update to the solution. Export the solution as managed to import it into your downstream environments. More information: [Upgrade or update a solution](update-solutions.md)
 
 ### See also
 
