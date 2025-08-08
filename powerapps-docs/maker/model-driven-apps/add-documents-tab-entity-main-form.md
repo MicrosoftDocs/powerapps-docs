@@ -32,7 +32,7 @@ Adding a tab on a table main form to display SharePoint documents helps users di
 ## Add the documents tab in the FormXML
 
 1. Create a new solution or open an existing solution. For more information on creating solutions see: [Create a solution](../data-platform/create-solution.md).
-1. Add the table to the solution or select an existing table. All standard and custom tables are supported. For more information on tables in solutions see: [Add solution components](../data-platform/create-solution.md#add-solution-components)
+1. Add the table to the solution or select an existing table. All standard and custom tables are supported. For more information on tables in solutions see: [Add solution components](../data-platform/create-solution.md#add-or-remove-solution-objects)
 1. Include the form for the table in the solution, such as the main form for the account table. Next to the table, select **...**, and then select **Edit**. Select the **Forms** area. If the required form is missing then it should be added.
 1. Add a one-column tab to the main form. To do this, in the form designer select an area on the form canvas, select **Add Component**, and then select **1 Column Tab**.  
    ![Insert one column tab.](media/insert-one-column-tab.png)
