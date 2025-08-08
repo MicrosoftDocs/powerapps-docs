@@ -15,8 +15,6 @@ contributors:
 
 # Edit the customizations XML file with schema validation
 
-<!-- https://learn.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/edit-customizations-xml-file-schema-validation -->
-
 The customizations.xml file is included within the compressed .zip file exported as a solution. Certain portions of the customizations.xml file can be edited manually. Information about the schema helps you confirm that any modifications you make are valid.  
   
 ## XSD schema files  
