@@ -27,7 +27,7 @@ search.audienceType:
 
 You can enable any custom or customizable table for connection by updating the table definitions. Use the <xref:Microsoft.Xrm.Sdk.Messages.UpdateEntityRequest> message to set the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsConnectionsEnabled> property to `true`.  
   
-To create a connection between two records, use the [Connection table](reference/entities/connection.md). You must specify a record from which you create a connection (source) and a record to which you connect (target). Use the [Connection.Record1Id](reference/entities/connection#BKMK_Record1Id) column to specify the source record and the [Connection.Record2Id](reference/entities/connection#BKMK_Record2Id) column to specify the target record. Optionally, you can specify the duration of the connection and the description. To describe the relationship between the participants in the connection, use the connection roles. To specify the connection roles, use the [Connection.Record1RoleId](reference/entities/connection#BKMK_Record1RoleId) column and the [Connection.Record2RoleId](reference/entities/connection#BKMK_Record2RoleId) column.  
+To create a connection between two records, use the [Connection table](reference/entities/connection.md). You must specify a record from which you create a connection (source) and a record to which you connect (target). Use the [Connection.Record1Id](reference/entities/connection.md#BKMK_Record1Id) column to specify the source record and the [Connection.Record2Id](reference/entities/connection.md#BKMK_Record2Id) column to specify the target record. Optionally, you can specify the duration of the connection and the description. To describe the relationship between the participants in the connection, use the connection roles. To specify the connection roles, use the [Connection.Record1RoleId](reference/entities/connection.md#BKMK_Record1RoleId) column and the [Connection.Record2RoleId](reference/entities/connection.md#BKMK_Record2RoleId) column.  
   
 ## Querying connections
 
@@ -59,9 +59,9 @@ By record:
 [Connection table](reference/entities/connection.md)   
 [ConnectionRole table](reference/entities/connectionrole.md)   
 [Sample: Create a connection](org-service/samples/create-connection-early-bound.md)  
-[Sample: Create a connection role](org-service/samples/create-connection-role-early-bound.md)
-[Sample: Query connections by a record (early bound)](org-service/samples/query-connections-record-early-bound.md)
-[Sample: Query connection roles by entity type code (early bound)](org-service/samples/query-connection-roles-entity-type-code-early-bound.md)
+[Sample: Create a connection role](org-service/samples/create-connection-role-early-bound.md)  
+[Sample: Query connections by a record (early bound)](org-service/samples/query-connections-record-early-bound.md)  
+[Sample: Query connection roles by entity type code (early bound)](org-service/samples/query-connection-roles-entity-type-code-early-bound.md)  
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
