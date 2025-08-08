@@ -1,15 +1,14 @@
-
 ---
-title: "Use suggested actions in the agent feed" 
+title: Use suggested actions in the agent feed
 description: Learn about suggested actions and how to use them in the agent feed.
 ms.date: 07/31/2025
-ms.reviewer: "smurkute"
-ms.topic: "how-to"
-author: "jacob-wilkinson"
+ms.reviewer: smurkute
+ms.topic: how-to
+author: jacob-wilkinson
 ms.subservice: end-user
-ms.author: "jacwilkinson"
+ms.author: jacwilkinson
 contributors: 
-ms.service: "powerapps"
+ms.service: powerapps
 search.audienceType: 
   - enduser
 ---
@@ -21,8 +20,8 @@ Suggested actions help users focus on what matters most by surfacing intelligent
 
 ## Prerequisites
 
-- Suggested actions only appear in the agent feed after makers have configured them
-- Learn how to [Configure suggested actions in model-driven apps](../maker/model-driven-apps/configure-suggested-actions-in-model-driven-apps.md)
+- Suggested actions only appear in the agent feed after makers have configured them.
+- Learn how to [configure suggested actions in model-driven apps](../maker/model-driven-apps/configure-suggested-actions-in-model-driven-apps.md).
 
 > [!IMPORTANT]
 >
