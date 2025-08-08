@@ -86,9 +86,10 @@ The following rules show what kinds of data can be mapped:
 
 ## Delete mappings
 <!--Addresses TSG 74902 -->
-If there are any unmanaged mappings that you don't want in the environment, you can select them and then select ![Delete column mappings](media/delete.gif). 
+While [viewing mappable columns](#view-mappable-columns) ff there are any *unmanaged* mappings that you don't want in the environment, you can select them and then select **Delete** ![Delete column mappings](media/delete.gif).
 
-However, system and managed mappings can't be deleted the same way as unmanaged mappings.
+> [!NOTE]
+> System and managed mappings can't be deleted the same way as unmanaged mappings, which is by using the legacy solution explorer.
 
 ### System mappings
 
