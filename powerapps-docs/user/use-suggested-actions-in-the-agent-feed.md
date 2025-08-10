@@ -39,18 +39,19 @@ Suggested actions are recommendations. They don't perform tasks for you. Instead
 
 You can also select a previously generated suggested action to automatically navigate to the associated record. This allows you to revisit and complete tasks even after switching context.
 
-> [!TIP]
-> Filter the agent feed to show only suggested actions, making it easier to focus on them.
-> :::image type="content" source="media/suggested-actions/suggested-actions-filtering.png" alt-text="Filtering suggested actions" lightbox="media/suggested-actions/suggested-actions-filtering.png":::
+Filter the agent feed to show only suggested actions, making it easier to focus on them.
+:::image type="content" source="media/suggested-actions/suggested-actions-filtering.png" alt-text="Filtering suggested actions" lightbox="media/suggested-actions/suggested-actions-filtering.png":::
 
-Each suggested action includes:
+The following illustration shows each suggested action:
+:::image type="content" source="media/suggested-actions/suggested-actions-card-map.png" alt-text="Suggested actions card" lightbox="media/suggested-actions/suggested-actions-card-map.png":::
+Legend
 1. A title that describes the task.
 1. A timestamp.
 1. A **Mark as complete** button.
 1. A **Dismiss** button.
 1. A rationale explaining why the action is suggested.
 1. The name of the table's suggested action agent.
-:::image type="content" source="media/suggested-actions/suggested-actions-card-map.png" alt-text="Suggested actions card" lightbox="media/suggested-actions/suggested-actions-card-map.png":::
+
 
 ## Example workflow
 
