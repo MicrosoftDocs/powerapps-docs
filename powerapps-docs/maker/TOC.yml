@@ -57,6 +57,8 @@
         href: ../user/ai-in-apps.md
       - name: Supervise agents using agent feed (preview)
         href: ../user/supervise-agents-with-agent-feed.md
+      - name: Use suggested actions in the agent feed (preview)
+        href: ../user/use-suggested-actions-in-the-agent-feed.md
       - name: Use form fill assistance
         href: ../user/form-filling-assistance.md
       - name: Use row summary
