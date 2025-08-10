@@ -124,7 +124,7 @@ Search for a specific component by its name.
 > [!div class="mx-imgBorder"]  
 > ![Solution specific commands.](media/solution-commands.PNG "Solution specific commands")  
 
-With solutions that are unmanaged or the default one, you can use the **New** or **Add Existing** command to create or add different types of components. More information: [Add solution components](create-solution.md#add-solution-components)
+With solutions that are unmanaged or the default one, you can use the **New** or **Add Existing** command to create or add different types of components. More information: [Add solution components](create-solution.md#add-or-remove-solution-objects)
 
 > [!NOTE]
 > You can't add components to a managed solution. When you try to, you’ll get the following message:<br/>
