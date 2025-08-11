@@ -35,7 +35,7 @@ Each of the specific Dynamics 365 products may add additional tables. The follow
 |---------|---------|
 |[Sales](/dynamics365/sales/)|[Sales table/entity reference](/dynamics365/sales/developer/about-entity-reference)|
 |[Field Service](/dynamics365/field-service/)|[Field Service table/entity reference](/dynamics365/field-service/developer/reference/about-entity-reference)|
-|[Customer Service](/dynamics365/customer-service/)|[Customer Service table/entity reference](/dynamics365/customer-service/develop/reference/about-entity-reference)| 
+|[Customer Service](/dynamics365/customer-service/)|[Customer Service table/entity reference](/dynamics365/customer-service/develop/reference/about-entity-reference)|
 
 
 ## Properties
