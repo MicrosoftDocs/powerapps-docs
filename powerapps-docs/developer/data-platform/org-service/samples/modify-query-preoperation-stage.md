@@ -222,7 +222,7 @@ try
     queryExpression.Criteria = qeFilter;
 
     //Fetch
-    var fetchXml = $@"<fetch mapping='logical' count='1'>
+    var fetchXml = $@"<fetch count='1'>
                 <entity name='account'>
                     <attribute name='accountid'/>
                     <attribute name='name'/>

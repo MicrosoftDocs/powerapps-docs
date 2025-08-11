@@ -105,7 +105,7 @@ static Guid BulkDeleteRetainedAccountsFetchXmlExample(IOrganizationService servi
     var convertRequest = new FetchXmlToQueryExpressionRequest
     {
         FetchXml = @"
-        <fetch version='1.0' output-format='xml-platform' mapping='logical' datasource='retained'>
+        <fetch datasource='retained'>
             <entity name='account'>
         </entity>
         </fetch>"

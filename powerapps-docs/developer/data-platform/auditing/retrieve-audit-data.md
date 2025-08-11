@@ -338,8 +338,6 @@ IOrganizationService svc,
 Guid systemuserid)
 {
     string fetchXml = $@"<fetch 
-    distinct='false' 
-    mapping='logical' 
     aggregate='true'>
 <entity name='audit'>
     <attribute name='auditid' 

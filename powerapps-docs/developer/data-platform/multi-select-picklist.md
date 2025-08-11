@@ -252,7 +252,7 @@ The following code shows the use of FetchXml with Web API and SDK for .NET.
 This example shows the use of the `not-contain-values` operator in the following `FetchXml` query using the Web API.
 
 ```xml
-<fetch distinct='false' no-lock='false' mapping='logical'>
+<fetch>
     <entity name='contact'>
         <attribute name='fullname' />
         <attribute name='sample_outdooractivities' />
@@ -321,7 +321,7 @@ This sample shows the use of the `not-contain-values` using <xref:Microsoft.Dyna
 ```csharp
 //Retrieving contacts who do not like hiking:
 //Using Fetch Expression
-string fetchXml = @"<fetch distinct='false' no-lock='false' mapping='logical'>
+string fetchXml = @"<fetch>
                      <entity name='contact'>
                       <attribute name='fullname' />
                       <attribute name='sample_outdooractivities' />
