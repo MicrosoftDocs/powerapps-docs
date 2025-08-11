@@ -5,8 +5,8 @@ ms.collection: get-started
 ms.date: 08/11/2025
 ms.topic: how-to
 ms.subservice: dataverse-developer
-author: sumadhey
-ms.author: sumadhey
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType: 
   - developer

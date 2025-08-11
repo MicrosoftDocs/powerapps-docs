@@ -3,9 +3,9 @@ title: Delete data in bulk
 description: Learn how to use the bulk deletion feature in Microsoft Dataverse to delete data you no longer need, helping to maintain data quality and manage the consumption of system storage.
 ms.date: 07/25/2023
 ms.topic: how-to
-author: mayadumesh
+author: MsSQLGirl
 ms.subservice: dataverse-developer
-ms.author: mayadu
+ms.author: jukoesma
 ms.reviewer: pehecke
 search.audienceType: 
   - developer
