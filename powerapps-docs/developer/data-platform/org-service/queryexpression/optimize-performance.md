@@ -105,7 +105,7 @@ LinkEntity linkToContact = query.AddLink(
 linkToContact.EntityAlias = "co";
 ```
 
-[!INCLUDE [cc-automatic-query-optimization](../includes/cc-automatic-query-optimization.md)]
+[!INCLUDE [cc-automatic-query-optimization](../../includes/cc-automatic-query-optimization.md)]
 
 
 ### See also
