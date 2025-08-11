@@ -5,7 +5,7 @@ author: jasongre
 ms.subservice: mda-maker
 ms.author: jasongre
 ms.reviewer: matp
-ms.date: 07/25/2025
+ms.date: 08/11/2025
 ms.topic: how-to
 applies_to: 
   - PowerApps
@@ -131,7 +131,7 @@ The best way to give feedback on generative pages is to use the thumbs up/down b
 Below are the conditions to check to make sure the feature is available in your environment:
 
 - Confirm your environment is in the US region.
-- Confirm that copilot is enabled for your tenant.  
+- Confirm that Copilot is enabled for your tenant.  
 - Power Platform admins should check that the **Enable new AI-powered Copilot features for people who make apps** environment setting is enabled. This setting can be found in the Power Platform admin center under environment > **Settings** > **Features**.
 
 ## Related articles
