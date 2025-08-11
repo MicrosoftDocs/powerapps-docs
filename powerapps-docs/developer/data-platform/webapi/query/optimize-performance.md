@@ -19,6 +19,8 @@ For guidance about general things to avoid when composing Dataverse queries, see
 
 You can [use FetchXml with the Dataverse Web API](../../fetchxml/retrieve-data.md). In that case, see [Optimize performance using FetchXml](../../fetchxml/optimize-performance.md)
 
+[!INCLUDE [cc-automatic-query-optimization](../../includes/cc-automatic-query-optimization.md)]
+
 ### See also
 
 [Query data using OData](overview.md)   
