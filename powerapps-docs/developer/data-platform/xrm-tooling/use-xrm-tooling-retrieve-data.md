@@ -74,7 +74,7 @@ CrmServiceClient svc = new CrmServiceClient(connectionstring);
 if (svc != null && svc.IsReady)  
 {   
     string fetchXML =   
-        @"<fetch version='1.0' output-format='xml-platform' mapping='logical' distinct='false' returntotalrecordcount='true' >  
+        @"<fetch returntotalrecordcount='true' >  
             <entity name='account'>  
               <attribute name='accountid' />  
             </entity>  
