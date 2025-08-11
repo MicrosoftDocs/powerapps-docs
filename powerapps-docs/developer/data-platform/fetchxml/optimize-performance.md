@@ -95,6 +95,7 @@ The following example sets a filter with the `union` hint on the `telephone1` co
 </fetch>
 ```
 
+[!INCLUDE [cc-automatic-query-optimization](../includes/cc-automatic-query-optimization.md)]
 
 
 ### See also
