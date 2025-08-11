@@ -301,8 +301,6 @@
           href: run-data-import.md
         - name: Data import entities
           href: data-import-entities.md
-    - name: Data Export Service
-      href: data-export-service.md
     - name: Migrate data between environments using OData dataflows
       href: dataverse-odata-dataflows-migration.md
     - name: Synchronize data
