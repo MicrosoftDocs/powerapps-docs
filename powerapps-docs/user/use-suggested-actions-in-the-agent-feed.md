@@ -56,6 +56,7 @@ Legend
 ## Example workflow
 
 A typical interaction with a suggested action might look like this:
+
 1. **Navigate to a record:** Open a record from a table with suggested actions configured in a model-driven app. This triggers the system to evaluate whether any suggested actions apply.
 1. **Review the suggested action:** A suggested action appears in the agent feed with a short title and a rationale explaining why it was suggested, and you decide if it's something you should act on.
 1. **Take action manually:** Complete the task outside the agent feed (for example, update a field, send an email, or approve a request).
@@ -65,10 +66,11 @@ A typical interaction with a suggested action might look like this:
 ## Interacting with suggested actions
 
 You can interact with suggested actions in two ways:
--**Mark as complete:** Use this when you have manually completed the suggested task.
-:::image type="content" source="media/suggested-actions/suggested-actions-mark-complete.png" alt-text="Mark an action as complete" lightbox="media/suggested-actions/suggested-actions-mark-complete.png":::
--**Dismiss:** Use this when the suggestion isn't relevant to your current workflow.
-:::image type="content" source="media/suggested-actions/suggested-actions-dismiss.png" alt-text="Dismiss an action" lightbox="media/suggested-actions/suggested-actions-dismiss.png":::
+
+- **Mark as complete:** Use this when you have manually completed the suggested task.
+  :::image type="content" source="media/suggested-actions/suggested-actions-mark-complete.png" alt-text="Mark an action as complete" lightbox="media/suggested-actions/suggested-actions-mark-complete.png":::
+- **Dismiss:** Use this when the suggestion isn't relevant to your current workflow.
+  :::image type="content" source="media/suggested-actions/suggested-actions-dismiss.png" alt-text="Dismiss an action" lightbox="media/suggested-actions/suggested-actions-dismiss.png":::
 
 > [!IMPORTANT]
 > Completing or dismissing an action helps improve future suggestions. The system uses this feedback to learn which actions are helpful and when they should be shown. Also, once you complete or dismiss an action, you can't undo it.
@@ -87,5 +89,4 @@ Both features are part of the agent feed because they contribute to the same goa
 ## Related information
 
 [Add agents to an app](../maker/model-driven-apps/add-agents-to-app.md)  
-[Customize Copilot chat](../maker/model-driven-apps/customize-copilot-chat.md)
-
+[Customize Copilot chat](../maker/model-driven-apps/customize-copilot-chat.md)  
