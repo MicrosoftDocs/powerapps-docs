@@ -40,8 +40,8 @@ There are two designers you can use to create or edit columns:
 > You can also create columns in your environment using the following:
 > - In model-driven apps, select **New Column** from the form editor.
 > - Import a solution that contains the definition of the columns.
-> - Use Power Query to create new tables and fill them with data.<br />More information: [Add data to a table in the Dataverse by using Power Query](/power-query/dataflows/add-data-power-query).
-> - A developer can use [Metadata services](/powerapps/developer/data-platform/use-web-services#metadata-services) to write a program to create and update columns.
+> - Use Power Query to create new tables and fill them with data. [Learn how to add data to a table in the Dataverse by using Power Query](/power-query/dataflows/add-data-power-query).
+> - A developer can use [Metadata services](../../developer/data-platform/metadata-services.md) to write a program to retrieve information about, create, and update columns.
 
 Information in this topic will help you choose which designer you can use. 
 
@@ -75,7 +75,7 @@ You should use the Power Apps portal to create and edit columns for Dataverse un
 **[Attribute Manager](https://www.xrmtoolbox.com/plugins/DLaB.Xrm.AttributeManager/)** is a tool that XrmToolbox community developed for Dataverse. Please see the [Developer tools and resources](../../developer/data-platform/developer-tools.md) topic for more community developed tools.
 
 > [!NOTE]
-> The community tools are not a product of Microsoft and does not extend support to the community tools. 
+> The community tools are not a product of Microsoft and does not extend support to the community tools.
 > If you have questions pertaining to the tool, please contact the publisher. More Information: [XrmToolBox](https://www.xrmtoolbox.com).
 
 ### Related articles
