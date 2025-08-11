@@ -47,4 +47,13 @@ Checks for the current version of the org.
 
 Display an option to delete the records in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
 
+[Use connections to link records to each other](../../connection-entities.md)   
+[Describe a relationship between tables with connection roles](../../describe-relationship-entities-connection-roles.md)  
+[Sample: Create a connection](create-connection-early-bound.md)  
+[Sample: Create a connection role](create-connection-role-early-bound.md)  
+[Sample: Create a reciprocal connection role](create-reciprocal-connection-role-early-bound.md)  
+[Sample: Query connections by a record (early bound)](query-connections-record-early-bound.md)  
+[Sample: Query connections by reciprocal roles (early bound)](query-connections-reciprocal-roles-early-bound.md)  
+[Sample: Update a connection role (early bound)](update-connection-role.md)  
+
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

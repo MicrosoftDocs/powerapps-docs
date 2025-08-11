@@ -231,7 +231,7 @@ To register a plug-in, you'll need the Plug-in Registration tool.
 1. For Microsoft 365 users, verify that the **isolation mode** is set to **sandbox** and the **location** to store the assembly is **Database**.
 
     > [!NOTE]
-    > Other options for **isolation mode** and **location** apply to on-premises Dynamics 365 deployments. For the location, you can specify the D365 server's database, the server's local storage (disk), or the server's Global Assembly Cache. For more information, see [Plug-in storage](/dynamics365/customer-engagement/developer/register-deploy-plugins#plug-in-storage).
+    > Other options for **isolation mode** and **location** apply to on-premises Dynamics 365 deployments. For the location, you can specify the D365 server's database, the server's local storage (disk), or the server's Global Assembly Cache. For more information, see [Plug-in storage](/dynamics365/customer-engagement/developer/register-deploy-plugins#plug-in-storage). <!-- This is only relevant for on-premises -->
 
 1. Click **Register Selected Plug-ins**.
 1. You'll see a **Registered Plug-ins** confirmation dialog.
