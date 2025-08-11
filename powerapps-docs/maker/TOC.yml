@@ -2148,6 +2148,8 @@
         href: ./data-platform/map-entity-fields.md
       - name: How to delete columns
         href: ./data-platform/delete-fields.md
+      - name: Delete a column with AI Skill Config dependency
+        href: ./data-platform/ai-skill-config-table.md
   - name: Apply business logic
     href: ./data-platform/processes.md
     items:
