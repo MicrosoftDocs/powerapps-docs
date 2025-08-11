@@ -1,6 +1,11 @@
 {
   "redirections": [
    {
+      "source_path": "powerapps-docs/developer/data-platform/data-export-service.md",
+      "redirect_url": "https://aka.ms/DESDeprecationBlog",
+      "redirect_document_id": "false"
+   },
+   {
       "source_path": "powerapps-docs/developer/data-platform/org-service/samples/enable-field-security-entity.md",
       "redirect_url": "column-level-security",
       "redirect_document_id": "false"
