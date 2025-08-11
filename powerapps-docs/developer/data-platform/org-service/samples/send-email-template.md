@@ -1,6 +1,6 @@
 ---
-title: "Sample: Send an email using a template (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample shows how to send an email message by using a template." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Sample: Send an email using a template"
+description: "This sample shows how to send an email message by using a template."
 ms.date: 04/03/2022
 author: JimDaly #TODO: No Owner
 ms.author: jdaly
@@ -14,8 +14,6 @@ contributors:
 ---
 
 # Sample: Send an email using a template
-
-<!-- https://learn.microsoft.com/dynamics365/customer-engagement/developer/sample-send-email-template -->
 
 This sample shows how to send an email message by using a template using the [SendEmailFromTemplateRequest](/dotnet/api/microsoft.crm.sdk.messages.sendemailfromtemplaterequest) message.
 

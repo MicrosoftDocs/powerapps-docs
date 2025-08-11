@@ -1,6 +1,6 @@
 ---
-title: "Data export service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Capabilities, prerequisites, API, and programming of the Data Export Service." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Data export service (Microsoft Dataverse) | Microsoft Docs"
+description: "Capabilities, prerequisites, API, and programming of the Data Export Service." 
 ms.date: 12/02/2021
 ms.reviewer: pehecke
 ms.topic: article
@@ -38,7 +38,7 @@ Because this service requires access to an external Microsoft Azure SQL Database
   
 - Firewall settings must allow access from the IP address of your  Data Export service. For more information, see [Configure an Azure SQL Database server-level firewall rule using the Azure Portal](/azure/azure-sql/database/firewall-configure).  
   
-- It is recommended that option “Allow access to azure services” be enabled.  
+- It is recommended that option "Allow access to azure services" be enabled.  
   
 - The database user, specified in the  data export connection string, must have the proper create and alter permissions on the target database.  At minimum these include: `CRTB`, `CRTY`, `CRVW`, `CRPR`, `ALUS`, and 'VWDS'. For more information, see [Permissions (Database Engine)](/sql/relational-databases/security/permissions-database-engine).  
   
@@ -152,7 +152,7 @@ These failure entries can be retrieved through the [Get the failure details for 
 ```  
   
 Entity: <entity-name>,   
-RecordId: <”N/A” | guid>,   
+RecordId: <"N/A" | guid>,   
 NotificationTime: <datetime>,   
 ChangeType: <sync-type>,  
 FailureReason: <description>  
@@ -170,7 +170,6 @@ Entity: account, RecordId: b2a19cdd-88df-e311-b8e5-6c3be5a8b200, NotificationTim
   
 ### See also
 
-[Manage your data in Dynamics 365](/dynamics365/customer-engagement/developer/manage-data)   
 [Import data](import-data.md)
 
 

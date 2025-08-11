@@ -23,7 +23,7 @@ search.audienceType:
 ---
 # Define alternate keys to reference rows
 
-*Alternate keys* provide an efficient and accurate way of integrating data with external systems. It’s essential in cases when an external system doesn’t store the Globally Unique Identifier (GUID) IDs that uniquely identify rows in Microsoft Dataverse. 
+*Alternate keys* provide an efficient and accurate way of integrating data with external systems. It's essential in cases when an external system doesn't store the Globally Unique Identifier (GUID) IDs that uniquely identify rows in Microsoft Dataverse. 
 
 A data integration system uses alternate keys to uniquely identify rows using one or more table column values that represent a unique combination. Each alternate key has a unique name. 
 
@@ -32,8 +32,8 @@ For example, to identify an account row with an alternate key, you can use the a
 > [!NOTE]
 > While you can define alternate keys with Power Apps, they can only be used programmatically in code. 
 > To learn more about using alternate keys programmatically, see:   
-> - [Developer Documentation: Use an alternate key to create a row](/dynamics365/customer-engagement/developer/use-alternate-key-create-record) 
-> - [Developer Documentation: Retrieve a row with the Web API using an alternate key](/dynamics365/customer-engagement/developer/webapi/retrieve-entity-using-web-api#retrieve-using-an-alternate-key)
+> - [Developer Documentation: Use an alternate key to reference a record](../../developer/data-platform/use-alternate-key-reference-record.md)
+> - [Developer Documentation: Retrieve record using an alternate key](../../developer/data-platform/webapi/retrieve-entity-using-web-api.md#retrieve-record-using-an-alternate-key)
 
 Some of the benefits of the alternate keys feature include:  
   
@@ -54,7 +54,7 @@ There are two designers you can use to create alternate keys:
 > [!NOTE]
 > You can also create an alternate key in your environment using the following:
 > - Import a solution that contains the definition of the alternate key.
-> - A developer can also write code to create them. More information: [Developer Documentation: Define alternate keys for a table](/dynamics365/customer-engagement/developer/define-alternate-keys-entity)
+> - A developer can also write code to create them. More information: [Developer Documentation: Work with alternate keys](../../developer/data-platform/define-alternate-keys-entity.md)
 
 Information in this article helps you choose which designer you can use. 
 
@@ -80,7 +80,7 @@ Only these kinds of columns can be used to create alternate keys:
 
 > [!NOTE]
 >
-> - Columns that have the **Enable column security** property enabled can’t be used as an alternate key. More information: [Field security tables]( /power-apps/developer/data-platform/field-security-entities)
+> - Columns that have the **Enable column security** property enabled can't be used as an alternate key. More information: [Field security tables]( /power-apps/developer/data-platform/field-security-entities)
 > - When NULL values are used in alternate key columns, uniqueness will not be enforced. To avoid duplicate records, don't use null values in the columns defined in the unique constraint of the alternate key.
 
 ### Number of keys
@@ -89,7 +89,7 @@ You can define up to 10 different keys for a table.
  
 ### Valid key size
 
-When a key is created, the system validates that the key can be supported by the platform, including that the total key size doesn't violate SQL-based index constraints like 900 bytes per key and 16 columns per key. If the key size doesn’t meet the constraints, an error message is displayed.
+When a key is created, the system validates that the key can be supported by the platform, including that the total key size doesn't violate SQL-based index constraints like 900 bytes per key and 16 columns per key. If the key size doesn't meet the constraints, an error message is displayed.
 
 ### Unicode characters in key value
 
@@ -118,10 +118,11 @@ If the system job fails, locate the system job to view any errors. The system jo
   
 ### See also  
 
-[Define alternate keys using Power Apps portal](define-alternate-keys-portal.md)<br />
-[Define alternate keys using solution explorer](define-alternate-keys-solution-explorer.md)<br />
-[Developer Documentation: Define alternate keys for a table](/dynamics365/customer-engagement/developer/define-alternate-keys-entity)<br />
-[Developer Documentation: Use an alternate key to create a row](/dynamics365/customer-engagement/developer/use-alternate-key-create-record)
+[Define alternate keys using Power Apps portal](define-alternate-keys-portal.md)  
+[Define alternate keys using solution explorer](define-alternate-keys-solution-explorer.md)  
+[Developer Documentation: Work with alternate keys](../../developer/data-platform/define-alternate-keys-entity.md)  
+[Developer Documentation: Use an alternate key to reference a record](../../developer/data-platform/use-alternate-key-reference-record.md)  
+[Developer Documentation: Retrieve record using an alternate key](../../developer/data-platform/webapi/retrieve-entity-using-web-api.md#retrieve-record-using-an-alternate-key)  
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
