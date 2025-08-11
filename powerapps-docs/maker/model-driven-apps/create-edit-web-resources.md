@@ -28,9 +28,9 @@ Web resources are typically used by developers to extend an app using files that
 
 ## What are web resources?  
 
-Web resources are virtual files stored in the system. Each web resource has a unique name that can be used in a URL to retrieve the file. Think of them this way: If you had access to the actual web server running the web app, you could copy files over to that website. But with most online services, you can’t do this.  Instead, you can use web resources to upload files to the system and then reference them by name just as though you had copied them as files to the web server.  
+Web resources are virtual files stored in the system. Each web resource has a unique name that can be used in a URL to retrieve the file. Think of them this way: If you had access to the actual web server running the web app, you could copy files over to that website. But with most online services, you can't do this.  Instead, you can use web resources to upload files to the system and then reference them by name just as though you had copied them as files to the web server.  
   
-For example, if you create an HTML page as a web resource named “new_myWebResource.htm”, you could open that page in a browser using a URL like this:  
+For example, if you create an HTML page as a web resource named "new_myWebResource.htm", you could open that page in a browser using a URL like this:  
  
 `<base URL>/WebResources/new_myWebResource.htm`
   
@@ -40,7 +40,7 @@ Because web resources are data in the system and are solution aware, you can mov
   
 ## Solution publisher prefix
 
-Part of the name of any web resource you create is the solution publisher prefix. This is set based on the solution publisher for the solution you’re working in. Make sure that you're working in the unmanaged solution where the publisher prefix is the one you want for this web resource. More information: [Solution publisher](../data-platform/create-solution.md#solution-publisher)  
+Part of the name of any web resource you create is the solution publisher prefix. This is set based on the solution publisher for the solution you're working in. Make sure that you're working in the unmanaged solution where the publisher prefix is the one you want for this web resource. More information: [Solution publisher](../data-platform/create-solution.md#solution-publisher)  
 
 ## Add a web resource to a solution
 
@@ -62,10 +62,10 @@ Part of the name of any web resource you create is the solution publisher prefix
    |-----------|-----------------|  
    |**Upload file**|Select the **Upload file** button to choose a file to upload as a web resource.<br />&bull; You can upload a file when creating a new web resource or to overwrite an existing web resource.<br />&bull; The file name extension of the file must match allowed extensions.<br />&bull; By default the maximum size file that can be uploaded as a web resource is 5MB. This value can be modified by using the **System Settings** > **Email** tab > **Set file size limit for attachments** setting. More information: [System Settings dialog box - Email tab](/dynamics365/customer-engagement/admin/system-settings-dialog-box-email-tab) |  
    |**Display Name**|The name displayed if you view a list of web resources.|  
-   |**Name**|*Required*. The unique name for this web resource. You can’t change this after you save the web resource.<br />&bull; This name can only include letters, numbers, periods, and nonconsecutive forward slash (“/”) characters.<br /> &bull; The solution publisher customization prefix will be prepended to the name of the web resource.|  
-   |**Type**|*Required*. This is the type of web resource. You can’t change this after you save the web resource.|  
+   |**Name**|*Required*. The unique name for this web resource. You can't change this after you save the web resource.<br />&bull; This name can only include letters, numbers, periods, and nonconsecutive forward slash ("/") characters.<br /> &bull; The solution publisher customization prefix will be prepended to the name of the web resource.|  
+   |**Type**|*Required*. This is the type of web resource. You can't change this after you save the web resource.|  
    |**Description**|A description of the web resource.|  
-   |**Advanced options**| Expand **Advanced options** to reveal the **Language** field, which allows for a selection of a language. This option just tags the row that stores the web resource data. It doesn’t change the behavior of the web resource.|  
+   |**Advanced options**| Expand **Advanced options** to reveal the **Language** field, which allows for a selection of a language. This option just tags the row that stores the web resource data. It doesn't change the behavior of the web resource.|  
 
 1. After you have added your changes, select **Save** and then select **Publish**.  After you save the web resource, the **URL** to the web resource is displayed in the web resource definition. Select this link to view the web resource in your browser.
 
@@ -83,7 +83,7 @@ Part of the name of any web resource you create is the solution publisher prefix
 1. Select the web resource from the list and then select **Add**. Alternatively, select **New web resource** to create the web resource you want. More information: [Web resource properties for model-driven app forms](web-resource-properties-legacy.md)
 
 > [!NOTE]
-> You can’t add a web resource to a form header or footer.
+> You can't add a web resource to a form header or footer.
 
 ## Add a web resource to an app (preview)
 
@@ -112,12 +112,12 @@ You can add a web resource as a subarea type in a model-driven app. Web resource
   
 |Column|Description|  
 |-----------|-----------------|  
-|**Name**|*Required*. This is the unique name for this web resource. You can’t change it after you save the web resource.<br />&bull; This name can only include letters, numbers, periods, and nonconsecutive forward slash (“/”) characters.<br /> &bull; The solution publisher customization prefix will be prepended to the name of the web resource.|  
+|**Name**|*Required*. This is the unique name for this web resource. You can't change it after you save the web resource.<br />&bull; This name can only include letters, numbers, periods, and nonconsecutive forward slash ("/") characters.<br /> &bull; The solution publisher customization prefix will be prepended to the name of the web resource.|  
 |**Display Name**|The name displayed if you view a list of web resources.|  
 |**Description**|A description of the web resource.|  
-|**Type**|*Required*. Type of web resource. You can’t change this after you save the web resource.|  
+|**Type**|*Required*. Type of web resource. You can't change this after you save the web resource.|  
 |**Text Editor**|When the type of web resource represents a kind of text file, select this button to open a page to edit the content using the text editor.<br />More information: [Use the text editor appropriately](#use-the-text-editor-appropriately)| 
-|**Language**|Allows for a selection of a language. This option just tags the row that stores the web resource data. It doesn’t change the behavior of the web resource.|  
+|**Language**|Allows for a selection of a language. This option just tags the row that stores the web resource data. It doesn't change the behavior of the web resource.|  
 |**Upload File**|Select the **Choose File** button to choose a file to upload as a web resource.<br />&bull; You can upload a file when creating a new web resource or to overwrite an existing web resource.<br />&bull; The file name extension of the file must match allowed extensions.<br />&bull; By default the maximum size file that can be uploaded as a web resource is 5 MB. This value can be modified by using the **System Settings** > **Email** tab > **Set file size limit for attachments** setting. More information: [System Settings dialog box - Email tab](/dynamics365/customer-engagement/admin/system-settings-dialog-box-email-tab) |  
 |**URL**|After you save the web resource, the URL to the web resource will be displayed here. Select this link to view the web resource in your browser.|  
   
@@ -128,8 +128,8 @@ You can add a web resource as a subarea type in a model-driven app. Web resource
 The text editor provided in the application for web resources should only be used for simple edits of text files. You can use it to create and edit HTML web resources, but you should only edit HTML web resources that were created using the text editor. The text editor is designed for very simple HTML content. 
 
 > [!IMPORTANT]
-> If the content of an HTML web resource wasn’t created using the text editor, don’t use the text editor to edit it.  
-> The text editor uses a control that modifies the HTML source in a way that allows it to be edited. These changes can make the page behave differently in the browser and cause more sophisticated code to stop working. Opening an HTML web resource with the text editor and saving it without making any changes can break some HTML web resources.  <!--More information: [Developer Documentation: Use the text editor for HTML web resources](/dynamics365/customer-engagement/developer/webpage-html-web-resources#use-the-text-editor-for-html-web-resources)  -->
+> If the content of an HTML web resource wasn't created using the text editor, don't use the text editor to edit it.  
+> The text editor uses a control that modifies the HTML source in a way that allows it to be edited. These changes can make the page behave differently in the browser and cause more sophisticated code to stop working. Opening an HTML web resource with the text editor and saving it without making any changes can break some HTML web resources. 
   
 We recommend that you use an external editor to edit text files and then save them locally before uploading them with the **Upload File** button. This way you can preserve a copy of the web resource if you need to return to an earlier version. You can use a simple editor like Notepad, but a text editor with more advanced capabilities is highly recommended. [Visual Studio Community](https://www.visualstudio.com/vs/community/) and [Visual Studio Code](https://code.visualstudio.com/) are free and provide powerful capabilities for editing the text-based files used by web resources.  
 

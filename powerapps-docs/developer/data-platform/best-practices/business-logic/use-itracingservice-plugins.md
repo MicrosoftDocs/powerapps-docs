@@ -33,7 +33,7 @@ Debugging and/or troubleshooting plug-in issues or behaviors are complicated wit
 The <xref:Microsoft.Xrm.Sdk.ITracingService> interface assists developers by recording run-time custom information as an aid in diagnosing the cause of code failures or unexpected behavior in plug-ins. Before writing to the tracing service, you must first extract the tracing service object from the passed execution context. Afterwards, simply add [Trace](/dotnet/api/microsoft.xrm.sdk.itracingservice.trace) calls to your custom code where appropriate passing any relevant diagnostic information in that method call.
 
 > [!NOTE]
-> Trace logging using `ITracingService` interface works only when the plug-in is registered in Sandbox mode and you must enable trace logging to get run-time data. For more information see: [Logging and tracing](/dynamics365/customer-engagement/developer/debug-plugin#logging-and-tracing)
+> Trace logging using `ITracingService` interface works only when the plug-in is registered in Sandbox mode and you must enable trace logging to get run-time data. For more information see: [Tracing and logging](../../logging-tracing.md)
 
 ```csharp
 //Extract the tracing service for use in debugging sandboxed plug-ins.

@@ -62,9 +62,6 @@ landingContent:
             url: ./data-synchronization.md
           - text: Import data
             url: ./import-data.md
-          - text: Data Export Service
-            url: ./data-export-service.md
-      
 
   # Card
   - title: Apply business logic

@@ -1,11 +1,11 @@
 ---
-title: "Create a custom table using code (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Shows how to programmatically create a custom table in Microsoft Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
+title: Create a custom table using code
+description: "Shows how to programmatically create a custom table in Microsoft Dataverse."
 ms.date: 03/22/2022
 ms.reviewer: pehecke
 ms.topic: how-to
-author: mkannapiran
-ms.author: kamanick
+author: MsSQLGirl
+ms.author: jukoesma
 search.audienceType: 
   - developer
 contributors:
@@ -19,7 +19,7 @@ contributors:
 
 This topic shows how to programmatically create a custom user-owned table (entity) called **Bank Account** and add four different types of columns (attributes) to it.  
   
-You can also create organization-owned custom tables. More information: [Table ownership](/dynamics365/customer-engagement/developer/introduction-entities#entity-ownership)  
+You can also create organization-owned custom tables. More information: [Table ownership](../../../maker/data-platform/types-of-entities.md#table-ownership)
   
 > [!NOTE]
 > You won't be able to see the custom table in the application navigation unless the table properties are edited to set the **Areas that display this entity** are set.  
