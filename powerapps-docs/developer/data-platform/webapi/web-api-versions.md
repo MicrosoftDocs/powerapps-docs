@@ -51,10 +51,10 @@ The following operations have been added to the Web API for the v9.x release.
 
 ## Web API Limitations  
 
-The Dataverse Web API provides complete parity with the capabilities of the SDK for .NET. For Dataverse, this topic describes the limitations carried forward from the Dataverse v8.x release. For earlier releases, see [Dynamics CRM 2016 Web API Limitations](https://msdn.microsoft.com/library/mt628816\(CRM.8\).aspx).  
+The Dataverse Web API provides complete parity with the capabilities of the SDK for .NET. For Dataverse, this topic describes the limitations carried forward from the Dataverse v8.x release. For earlier releases, see [Dynamics CRM 2016 Web API Limitations](/previous-versions/dynamicscrm-2016/developers-guide/mt628816(v=crm.8)).  
  
 > [!NOTE] 
-> If you defined a custom action which included a complex return value and a simple return value, a corresponding Action was not available in the Web API but was available using the Organization service. A complex return value is an `EntityReference`, `Entity`, or `EntityCollection`. You can have any combination of simple return values or a single complex return value. More information: [Create your own actions](/dynamics365/customer-engagement/developer/create-own-actions).
+> If you defined a custom action which included a complex return value and a simple return value, a corresponding Action was not available in the Web API but was available using the Organization service. A complex return value is an `EntityReference`, `Entity`, or `EntityCollection`. You can have any combination of simple return values or a single complex return value. More information: [Create your own messages](../custom-actions.md).
 
 ### See also  
 

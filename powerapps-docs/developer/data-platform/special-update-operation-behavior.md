@@ -27,7 +27,7 @@ This change introduced some special behaviors that should be noted for plug-ins 
 
 ## For plug-ins
 
-When update requests are processed that include both owner fields plus other standard fields for business owned tables, plug-ins registered for the **Update** message in **PreOperation** and/or **PostOperation** stages execute once for all non-owner fields, and then once for the owner fields. Examples of owner fields would be `businessunit` and `manager` (for a [SystemUser table](reference/entities/systemuser.md)). Examples of business owned tables include [SystemUser](reference/entities/systemuser.md), [BusinessUnit](reference/entities/businessunit.md),[Equipment](/dynamics365/customer-engagement/developer/entities/equipment) and [Team](reference/entities/team.md).
+When update requests are processed that include both owner fields plus other standard fields for business owned tables, plug-ins registered for the **Update** message in **PreOperation** and/or **PostOperation** stages execute once for all non-owner fields, and then once for the owner fields. Examples of owner fields would be `businessunit` and `manager` (for a [SystemUser table](reference/entities/systemuser.md)). Examples of business owned tables include [SystemUser](reference/entities/systemuser.md), [BusinessUnit](reference/entities/businessunit.md),[Equipment](/dynamics365/developer/reference/entities/equipment) and [Team](reference/entities/team.md).
 
 When update requests are processed that include both state/status fields plus other standard fields, plug-ins registered for the **Update** message in **PreOperation** and/or **PostOperation** stages execute once for all non-state/status fields, and then once for the state/status fields.
 
@@ -41,7 +41,7 @@ When update requests are processed that include both state/status fields plus ot
 
 ### See also
 
-[Update and Delete tables using the SDK for .NET](org-service/entity-operations-update-delete.md)<br />
+[Update and Delete tables using the SDK for .NET](org-service/entity-operations-update-delete.md)    
 [Event Framework](event-framework.md)
 
 
