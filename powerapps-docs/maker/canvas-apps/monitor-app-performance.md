@@ -1,11 +1,11 @@
 ---
-title: Monitor your canvas apps performance
+title: Monitor your apps performance
 description: Get valuable insights and recommendations for your canvas and model-driven apps using Monitor.
 author: dalajogun
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 11/18/2024
+ms.date: 10/12/2025
 ms.subservice: canvas-maker
 ms.author: damialajogun
 search.audienceType: 
