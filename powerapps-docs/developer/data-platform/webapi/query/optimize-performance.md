@@ -1,7 +1,7 @@
 ---
 title: Optimize performance using OData
 description: Learn how to optimize performance when you retrieve data from Microsoft Dataverse using OData.
-ms.date: 01/06/2025
+ms.date: 08/11/2025
 ms.topic: how-to
 author: MsSQLGirl
 ms.author: jukoesma
@@ -18,6 +18,8 @@ contributors:
 For guidance about general things to avoid when composing Dataverse queries, see [Query anti-patterns](../../query-antipatterns.md).
 
 You can [use FetchXml with the Dataverse Web API](../../fetchxml/retrieve-data.md). In that case, see [Optimize performance using FetchXml](../../fetchxml/optimize-performance.md)
+
+[!INCLUDE [cc-automatic-query-optimization](../../includes/cc-automatic-query-optimization.md)]
 
 ### See also
 
