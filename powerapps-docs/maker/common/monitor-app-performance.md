@@ -1,11 +1,11 @@
 ---
 title: Monitor your apps performance
-description: Get valuable insights and recommendations for your canvas and model-driven apps using Monitor.
+description: Get valuable insights and recommendations for your app using Monitor.
 author: dalajogun
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 10/12/2025
+ms.date: 8/12/2025
 ms.subservice: canvas-maker
 ms.author: damialajogun
 search.audienceType: 
@@ -14,7 +14,7 @@ contributors:
   - mduelae
   - damialajogun
 ---
-#  Use Monitor to get insights and recommendations for your canvas and model-driven apps
+#  Use Monitor to get insights and recommendations for your app
 
 Monitor in Power Apps offers insights and recommendations to enhance app performance. It provides makers with detailed information on their app's performance and actionable steps to improve their apps.
 
@@ -28,14 +28,14 @@ To use this feature, your administrator must enable certain analytics and monito
 1. Sign in to [Power Apps](https://make.powerapps.com).
 1. On the left navigation, select **Apps**.
 1. On the command bar, select **Monitor**.
-1. On the left navigation pane, select the ![Pin button.](media/intro-maker-portal/pin-button.png) pin button next to **Monitor**.
+1. On the left navigation pane, select the :::image type="content" source="../canvas-apps/media/intro-maker-portal/pin-button.png" alt-text="Pin button next to Monitor"::: pin button next to **Monitor**.
 
 
 ## Use Monitor 
 
 The **Monitor** page displays metric cards at the top, highlighting the top three underperforming apps for each metric. If all apps perform well on a specific metric, then no apps are listed in the card. Use the tabs underneath the cards to switch between viewing your model-driven and canvas apps. 
 
-:::image type="content" source="media/monitor-apps/power_apps_monitor.png" alt-text="Monitor main screen showing app metrics":::
+:::image type="content" source="media/monitor-apps/power-apps-monitor.png" alt-text="Monitor main screen showing app metrics":::
 
 | Metric | Definition | Available for Canvas apps | Available for Model-driven apps |
 | ------------- | ------------- |------------- | ------------- |
