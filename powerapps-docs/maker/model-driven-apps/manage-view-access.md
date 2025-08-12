@@ -96,14 +96,8 @@ All system views can be managed with security roles. Once they’re managed, use
 >
 > If you select multiple views and go to the view settings, only the first selected Views can be updated. You're required to select individual view to update the view settings. 
 
-## Manage business unit system views with security roles
-
-You can create **business unit** system views by applying a filter in the view. Follow the same steps for [Manage system views with security roles](#manage-system-views-with-security-roles) to set the **Specify security roles** option to the business unit view. Then, filter the view using **Owning Business Unit** equals the business unit you want.
-:::image type="content" source="media/filter-view-owning-business-unit.png" alt-text="Filter view by owning business unit to secure":::
-The users who are assigned with the security role of the business unit are able to access the view in their view selector. All other users can't access the business unit view.
-
-> [!NOTE]
-> The security roles as listed under the **View settings** are shown from the parent business unit. Business unit level security roles are inherited from the parent business unit. When these security roles are selected, the system automatically applies the security role filtering based on the view's business unit.
+> [!Important]
+> The security roles as listed under the **View settings** are from the **root business unit**. Business unit level security roles are inherited from the root business unit. When you select the security roles from the **View settings**, the system automatically applies filtering to users who are assigned the corresponding business unit level security roles.
 
 ### Related articles
 
