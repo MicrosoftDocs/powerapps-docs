@@ -40,8 +40,8 @@ In model-driven apps, users often spend significant time identifying which recor
 ## Configure suggested actions
   
 1. Sign in to [Power Apps](https://make.powerapps.com), select **Apps**, and then select **Edit** for the app you want to modify.
-1. In the app designer, go to the **Agents** tab in the sitemap
-:::image type="content" source="media/suggested-actions/suggested-actions-agent-pane.png" alt-text="App designer Agents pane" lightbox="media/suggested-actions/suggested-actions-agent-pane.png":::
+1. In the app designer, select **Agents** on the left navigation pane.
+   :::image type="content" source="media/suggested-actions/suggested-actions-agent-pane.png" alt-text="App designer Agents pane" lightbox="media/suggested-actions/suggested-actions-agent-pane.png":::
 1. Select **+ Create**, and then select **Suggested action**.
 1. Select a table used in your application where suggested actions should be generated. The table where you want to generate suggested actions must first be added to your application.
   :::image type="content" source="media/suggested-actions/suggested-actions-table-select.png" alt-text="Suggested action configuration choose a table" lightbox="media/suggested-actions/suggested-actions-table-select.png":::
@@ -54,14 +54,14 @@ In model-driven apps, users often spend significant time identifying which recor
 1. To add additional suggested actions for a table, select **+ New action**
 1. Select **Save** to store the configuration when you're finished creating suggested actions for this table.
 
-   - If you want to configure suggested actions for other tables, begin again at step 3.
+   If you want to configure suggested actions for other tables, begin again at step 3.
    :::image type="content" source="media/suggested-actions/suggested-actions-new-action-save.png" alt-text="Save or add a new suggested action" lightbox="media/suggested-actions/suggested-actions-new-action-save.png":::
 
 1. Save and publish your app to activate any created suggested actions.
 
 ## Edit suggested actions
 
-1. Select the **"..."** (ellipsis) menu on the suggested action table you want to edit, and then select **Edit actions**.
+1. Select the **...** (ellipsis) menu on the suggested action table you want to edit, and then select **Edit actions**.
    :::image type="content" source="media/suggested-actions/suggested-actions-edit-action.png" alt-text="Edit suggested actions" lightbox="media/suggested-actions/suggested-actions-edit-action.png":::
 
 1. Edit the action you want.
@@ -72,7 +72,7 @@ In model-driven apps, users often spend significant time identifying which recor
 
 To remove a specific suggested action within a table:
 
-1.Select **Edit actions**
+1. Select the **...** (ellipsis) menu on the suggested action table you want to edit, and then select **Edit actions**
   :::image type="content" source="media/suggested-actions/suggested-actions-edit-action.png" alt-text="Edit suggested actions" lightbox="media/suggested-actions/suggested-actions-edit-action.png":::
 
 1. Select **X** next to the action you want to remove.
@@ -83,13 +83,13 @@ To remove a specific suggested action within a table:
 
 To remove all suggested actions from a table:
 
-Select the **"..."** (ellipsis) menu on the suggested action you want to edit, and then select **Remove from app**.
+1. Select the **"..."** (ellipsis) menu on the suggested action you want to edit, and then select **Remove from app**.
    :::image type="content" source="media/suggested-actions/suggested-actions-delete-all.png" alt-text="Delete all suggested actions for a table" lightbox="media/suggested-actions/suggested-actions-delete-all.png":::
 
 1. Save and publish your app.
 
-> - [!NOTE]
-> - To completely delete the suggested action, you must delete the table record for it from your solution in the AI Skill Config table. <!-- Add link to AI Skill Config table article when published. -->
+> [!NOTE]
+> To completely delete the suggested action, you must delete the table record for it from your solution in the AI Skill Config table. <!-- Add link to AI Skill Config table article when published. -->
 
 ## View all suggested actions
 
