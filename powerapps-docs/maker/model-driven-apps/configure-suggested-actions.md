@@ -15,7 +15,7 @@ search.audienceType:
 
 [!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
-Suggested actions help users focus on what matters most by surfacing intelligent, context-aware recommendations for high-value records. These actions are defined by makers and dynamically suggested upon record navigation to users based on record data and inferred business logic.
+Suggested actions help users focus on what matters most by surfacing intelligent, context-aware recommendations for high-value records. Makers define these actions, and the system dynamically suggests them to users when they navigate to records based on record data and inferred business logic.
 
 This article shows you how to configure suggested actions.
 
@@ -39,7 +39,7 @@ In model-driven apps, users often spend significant time identifying which recor
 
 ## Configure suggested actions
   
-1. Sign in to [Power Apps](https://make.powersapps.com), select **Apps**, and then select **Edit** for the app you want to modify.
+1. Sign in to [Power Apps](https://make.powerapps.com), select **Apps**, and then select **Edit** for the app you want to modify.
 1. In the app designer, go to the **Agents** tab in the sitemap
 :::image type="content" source="media/suggested-actions/suggested-actions-agent-pane.png" alt-text="App designer Agents pane" lightbox="media/suggested-actions/suggested-actions-agent-pane.png":::
 1. Select **+ Create**, and then select **Suggested action**.
@@ -52,7 +52,7 @@ In model-driven apps, users often spend significant time identifying which recor
   :::image type="content" source="media/suggested-actions/suggested-actions-fields.png" alt-text="Suggested action configuration fields" lightbox="media/suggested-actions/suggested-actions-fields.png":::
 
 1. To add additional suggested actions for a table, select **+ New action**
-1. Select **Save** to store the configuration when you have finished creating suggested actions for this table.
+1. Select **Save** to store the configuration when you're finished creating suggested actions for this table.
 
    - If you want to configure suggested actions for other tables, begin again at step 3.
    :::image type="content" source="media/suggested-actions/suggested-actions-new-action-save.png" alt-text="Save or add a new suggested action" lightbox="media/suggested-actions/suggested-actions-new-action-save.png":::
@@ -96,6 +96,7 @@ Select the **"..."** (ellipsis) menu on the suggested action you want to edit, a
 Successfully generated suggested actions can be viewed in the **Suggested Action** table available in the **Tables** area in [Power Apps](https://make.powerapps.com).
 
 ## Related information
+<!-- Remove comment tags when this article is live.
+[Use suggested actions in the agent feed (preview)](../../user/use-suggested-actions-in-the-agent-feed.md) -->
 
-[Use suggested actions in the agent feed (preview)](../user/use-suggested-actions-in-the-agent-feed.md)<br/>
 [Add agents to your model-driven app (preview)](add-agents-to-app.md)
