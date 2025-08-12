@@ -1,7 +1,7 @@
 ---
-title: "Sample: Modify query in PreOperation stage (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample shows how to write a plug-in that modifies a query defined within the PreOperation stage of a RetrieveMultiple request." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 04/03/2022
+title: "Sample: Modify query in PreOperation stage"
+description: "This sample shows how to write a plug-in that modifies a query defined within the PreOperation stage of a RetrieveMultiple request."
+ms.date: 08/11/2025
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: pehecke
@@ -17,9 +17,9 @@ contributors:
 
 This sample shows how to write a plug-in that modifies a query defined within the `PreOperation` stage of a `RetrieveMultiple` request.
 
-Data filtering in a plug-in is commonly done in the `PostOperation` stage. The <xref:Microsoft.Xrm.Sdk.EntityCollection.Entities> data can be examined and tables that should not be returned are removed from the collection. But this pattern introduces issues where the number of records returned within a page may not match the expected paging sizes.
+Data filtering in a plug-in is commonly done in the `PostOperation` stage. The <xref:Microsoft.Xrm.Sdk.EntityCollection.Entities> data can be examined and tables that shouldn't be returned are removed from the collection. But this pattern introduces issues where the number of records returned within a page might not match the expected paging sizes.
 
-The approach described by this sample is different. Rather than filter tables after they have been retrieved, this plug-in will apply changes to the query in the `PreOperation` stage before it is executed.
+The approach described by this sample is different. Rather than filter tables after they're retrieved, this plug-in applies changes to the query in the `PreOperation` stage before it's executed.
 
 A key point demonstrated by this sample is that the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest.Query> can be one of three different types that are derived from the <xref:Microsoft.Xrm.Sdk.Query.QueryBase>. To accommodate queries of any type, the plug-in code
 must detect the type of query and implement the appropriate type of filter.
@@ -29,23 +29,23 @@ must detect the type of query and implement the appropriate type of filter.
 
 ## How to run this sample
 
-1. Download or clone the [Samples](https://github.com/Microsoft/PowerApps-Samples) repo so that you have a local copy. This sample is located under PowerApps-Samples-master\cds\orgsvc\C#\RetrieveMultipleAccountPreOperation.
-1. Open the sample solution in Visual Studio, navigate to the project's properties, and verify the assembly will be signed during the build. Press F6 to build the sample's assembly (RetrieveMultipleAccountPreOperation.dll).
+1. Download or clone the [Samples](https://github.com/Microsoft/PowerApps-Samples) repo so that you have a local copy. This sample is located under `/dataverse/orgsvc/CSharp/RetrieveMultipleAccountPreOperation`.
+1. Open the sample solution in Visual Studio, navigate to the project's properties, and verify the assembly is signed during the build. Press F6 to build the sample's assembly (`RetrieveMultipleAccountPreOperation.dll`).
 1. Run the Plug-in Registration tool and register the assembly in the Microsoft Dataverse server's sandbox and database for the `PreOperation` stage of the `RetrieveMultiple` message for the `Account` table.
-1. Using an app or write code to retrieve accounts to trigger the plug-in. See [Code to test this sample](#code-to-test-this-sample) below for an example.
-1. When you are done testing, unregister the assembly and step.
+1. Use an app or write code to retrieve accounts to trigger the plug-in. See the following [Code to test this sample](#code-to-test-this-sample) for an example.
+1. When you're done testing, unregister the assembly and step.
 
 ## What this sample does
 
-When executed, the plug-in will ensure that inactive account records will not be returned for the most common types of queries: <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> and <xref:Microsoft.Xrm.Sdk.Query.FetchExpression>.
+When executed, the plug-in ensures that inactive account records aren't returned for the most common types of queries: <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> and <xref:Microsoft.Xrm.Sdk.Query.FetchExpression>.
 
-<xref:Microsoft.Xrm.Sdk.Query.QueryByAttribute> is a third type of query that may also be used. It doesn't support complex queries and therefore complex filtering cannot be applied using this method. Fortunately, this type of query is not frequently used. You may want to reject queries of this type by throwing an <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException> in the `PreValidation` stage.
+<xref:Microsoft.Xrm.Sdk.Query.QueryByAttribute> is a third type of query that might also be used. It doesn't support complex queries and therefore complex filtering can't be applied using this method. Fortunately, this type of query isn't frequently used. You might want to reject queries of this type by throwing an <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException> in the `PreValidation` stage.
 
 ## How this sample works
 
-In order to simulate the scenario described in [What this sample does](#what-this-sample-does), the sample will do the following:
+In order to simulate the scenario described in [What this sample does](#what-this-sample-does), the sample does the following steps:
 
-1. Verify that the input parameters includes a parameter named `Query`
+1. Verify that the input parameters include a parameter named `Query`
 1. Test the type of the query by attempting to cast it as one of the three expected types.
 1. Based on the type of the query, the query is altered in the following manner:
 
@@ -55,7 +55,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 1. Verify that the `entity` element `attribute` specifies the `account` table.
 1. Examine all the `filter` elements in the query for conditions that test the `statecode` column.
 1. Remove any existing conditions based on that column.
-1. Add a new `filter` to the Query that requires that only accounts where the `statecode` is not equal to 1 (Inactive) will be returned.
+1. Add a new `filter` to the Query that requires that only accounts where the `statecode` isn't equal to 1 (Inactive) are returned.
 1. Set the modified query to the <xref:Microsoft.Xrm.Sdk.Query.FetchExpression.Query> value
 
 ```csharp
@@ -111,8 +111,8 @@ if (fetchExpressionQuery != null)
 
 1. Verify that the <xref:Microsoft.Xrm.Sdk.Query.QueryExpression.EntityName> is the `account` table.
 1. Loop through the <xref:Microsoft.Xrm.Sdk.Query.QueryExpression.Criteria>.<xref:Microsoft.Xrm.Sdk.Query.FilterExpression.Filters> collection
-1. Use the recursive `RemoveAttributeConditions` method to look for any <xref:Microsoft.Xrm.Sdk.Query.ConditionExpression> instances that test the statecode attribute and remove them.
-1. Add a new <xref:Microsoft.Xrm.Sdk.Query.FilterExpression> to the <xref:Microsoft.Xrm.Sdk.Query.QueryExpression.Criteria>.<xref:Microsoft.Xrm.Sdk.Query.FilterExpression.Filters> collection that requires that only accounts where the `statecode` is not equal to 1 (Inactive) will be returned.
+1. Use the recursive `RemoveAttributeConditions` method to look for any <xref:Microsoft.Xrm.Sdk.Query.ConditionExpression> instances that test the `statecode` attribute and remove them.
+1. Add a new <xref:Microsoft.Xrm.Sdk.Query.FilterExpression> to the <xref:Microsoft.Xrm.Sdk.Query.QueryExpression.Criteria>.<xref:Microsoft.Xrm.Sdk.Query.FilterExpression.Filters> collection that requires that only accounts where the `statecode` isn't equal to 1 (Inactive) are returned.
 
 ```csharp
 if (queryExpressionQuery != null)
@@ -193,11 +193,11 @@ if (queryByAttributeQuery != null)
 
 ## Code to test this sample
 
-The following code demonstrates 5 different ways to perform the same query that will trigger the plug-in.
+The following code demonstrates five different ways to perform the same query that trigger the plug-in.
 
-By specifying a specific criteria, in this case the `address1_city` column value, which only one active record will match, these queries will return just that record.
+By specifying a specific criteria, in this case, the `address1_city` column value, which only one active record matches, these queries return just that record.
 
-Then, deactivate that record and run this code a second time. No records will be returned.
+Then, deactivate that record and run this code a second time. No records are returned.
 
 ```csharp
 try
@@ -222,7 +222,7 @@ try
     queryExpression.Criteria = qeFilter;
 
     //Fetch
-    var fetchXml = $@"<fetch mapping='logical' count='1'>
+    var fetchXml = $@"<fetch count='1'>
                 <entity name='account'>
                     <attribute name='accountid'/>
                     <attribute name='name'/>
