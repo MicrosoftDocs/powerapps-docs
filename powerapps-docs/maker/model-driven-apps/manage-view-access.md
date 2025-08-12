@@ -2,7 +2,7 @@
 title: "Manage access to public system views"
 description: "Learn how to managed access with security roles to public system views for model-driven apps in Microsoft Power Apps"
 ms.custom: ""
-ms.date: 07/29/2025
+ms.date: 08/12/2025
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -97,7 +97,7 @@ All system views can be managed with security roles. Once they’re managed, use
 > If you select multiple views and go to the view settings, only the first selected Views can be updated. You're required to select individual view to update the view settings. 
 
 > [!Important]
-> The security roles as listed under the **View settings** are from the **root business unit**. Business unit level security roles are inherited from the root business unit. When you select the security roles from the **View settings**, the system automatically applies filtering to users who are assigned the corresponding business unit level security roles.
+> The security roles as listed under **View settings** are from the *root business unit*. Business unit level security roles are inherited from the root business unit. When you select the security roles from **View settings**, the system automatically applies filtering to users who are assigned the corresponding business unit level security roles.
 
 ### Related articles
 
