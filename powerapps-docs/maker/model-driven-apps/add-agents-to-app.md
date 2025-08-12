@@ -1,7 +1,7 @@
 ---
 title: "Add agents to your model-driven app" 
 description: Learn how to add agents to your model-driven app in Power Apps.
-ms.date: 07/07/2025
+ms.date: 08/12/2025
 ms.reviewer: matp
 ms.topic: how-to
 author: adrianorth
@@ -44,14 +44,14 @@ You can add an agent to any model-driven app of your choosing. We recommend addi
 > [!NOTE]
 > To be eligible for addition to an app, an agent must be published. A maker can verify an agent's eligibility to be added to an app via the right-hand properties pane where the requirements for an agent to be added to an app are displayed. The **Add to app** button is disabled for any agents that don't meet the requirements to be eligible for addition.
 :::image type="content" source="media/add-agents-to-app/app-designer-properties-pane.png" alt-text="App Designer Properties pane":::
-> Only ten agents may be added to an app at a time.
+> Up to 10 agents can be added to an app at a time.
 
 1. Sign in to Power Apps, select **Apps**, and then select **Edit** for the app you want to modify.
 1. In the app designer, go to the **Agents** tab.
-1. Under the **Agent feed** dropdown, you will find the **In your environment** dropdown that lists all agents in your environment. Locate the agent you want to add.
+1. Under the **Agent feed** dropdown, the **In your environment** dropdown appears that lists all agents in your environment. Locate the agent you want to add.
 1. Select **...** (more options) next to the agent, and then select **Add to app**.
     :::image type="content" source="media/add-agents-to-app/app-designer-add-agent-to-app.png" alt-text="App designer add agent to app":::
-1. Verify agent feed has been added to your app with all added agents by saving, publishing, and playing your app. Previewing agent feed in the app designer isn't currently supported.
+1. Verify agent feed is added to your app with all added agents by saving, publishing, and playing your app. Previewing agent feed in the app designer isn't currently supported.
 1. To view or edit the agent in Copilot Studio, select **Edit in Microsoft Copilot Studio**.
    :::image type="content" source="media/add-agents-to-app/app-designer-edit-in-copilot-studio.png" alt-text="App Designer edit in Copilot Studio":::
 
@@ -109,7 +109,7 @@ The interactive agent isn't able to be defined or referenced in app designer for
 - Field Service
 - Field Service Mobile
 - Inventory Visibility
-- Omni Channel Engagement Hub
+- Omnichannel engagement hub
 - Project Operations
 - Sales Hub
 - Sustainability

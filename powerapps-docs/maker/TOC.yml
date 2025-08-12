@@ -1801,7 +1801,9 @@
       - name: Create a Power BI embedded dashboard
         href: ./model-driven-apps/create-edit-powerbi-embedded-page.md
     - name: Add agents to your app (preview)
-      href: ./model-driven-apps/add-agents-to-app.md  
+      href: ./model-driven-apps/add-agents-to-app.md
+    - name: Configure suggested actions (preview)
+      href: ./model-driven-apps/configure-suggested-actions.md
     - name: Copilot chat for apps
       href:
       items:
