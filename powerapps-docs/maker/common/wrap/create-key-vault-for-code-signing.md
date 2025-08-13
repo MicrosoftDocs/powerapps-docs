@@ -61,16 +61,19 @@ This article explains how to use an existing Azure Key Vault or create a new one
       > [!div class="mx-imgBorder"] 
       > ![Assign Reader role to Wrap KeyVault Access App.](media/how-to-v2/Add_role_for_wrap_signing.png "Assign Reader role to Wrap KeyVault Access App.")
 
+3. Repeat the above step and add the user access permission for the resouce which you are during key vault
+
 3. Create or access an existing Key Vault. More information: [Create a key vault using the Azure portal](/azure/key-vault/general/quick-create-portal).
 
-4. **Add access policies for the Key Vault**
+4. Check the configuration of the access policies. Go to settings -> Access configuration -> Vault access policies.
+5. **Add access policies for the Key Vault**
 
    For **Secret permissions** and **Certificate permissions**, select **Get** and **List**.
 
    > [!div class="mx-imgBorder"] 
    > ![Access Policies required: Get, List for secret and certificates permissions.](media/how-to-v2/AzureKV-Access-Policy.png "Access Policies required: Get, List for secret and certificates permissions")
 
-5. **Upload certificates and secrets**
+6. **Upload certificates and secrets**
 
    Choose your platform and follow the steps below:
 
@@ -95,6 +98,8 @@ This article explains how to use an existing Azure Key Vault or create a new one
 
      :::image type="content" source="media/wrap-canvas-app/wrap-2.png" alt-text="Create a cert for iOS.":::
 
+6. Repeat the above step and add user (your account) as well as shown below.
+   
 6. **Add tags for certificates**
 
    After uploading iOS or Android certificates, add three tags with the name as the bundle ID and the value as the uploaded certificate name(s). Use the same bundle ID as in the [wrap wizard](wrap-how-to.md#3-choose-target-platform).
