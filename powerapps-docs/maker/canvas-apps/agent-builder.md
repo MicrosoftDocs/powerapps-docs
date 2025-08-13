@@ -3,7 +3,7 @@ title: Automate your business processes with agent builder in a canvas app
 description: How to create an agent to help automate business processes in a canvas app using agent builder.
 author: noazarur-microsoft
 ms.topic: how-to
-ms.date: 8/15/2025
+ms.date: 8/14/2025
 ms.subservice: canvas-maker
 ms.author: mkaur
 ms.reviewer: mkaur
@@ -42,7 +42,7 @@ To streamline your manual process, generate an agent that replicates the steps y
 1. Select your app and then select **Next** on the command bar.
 :::image type="content" source="media/agent-builder/ab-select-app-then-next.png" alt-text="Select an app and then select next":::
 
-    Alternatively, you can select **Apps** in the left navigation pane. Select your app, and then select **Create agent from app ** on the command bar. You can also select **Commands** (![Commands button.](media/power-apps-page-icons/apps-commands-menu-to-edit.png)) for the app and then select **Create agent from app**.
+    Alternatively, you can select **Apps** in the left navigation pane. Select your app, and then select **Create agent from app** on the command bar. You can also select **Commands** (![Commands button.](media/power-apps-page-icons/apps-commands-menu-to-edit.png)) for the app and then select **Create agent from app**.
 
 
 1. Select a suggestion, or in the text box, describe the process you want to automate, and then select **Next**.

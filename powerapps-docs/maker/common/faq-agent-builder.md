@@ -1,7 +1,7 @@
 ---
 title: FAQ about agent builder in canvas apps
 description: This FAQ provides information about the AI technology used in agent builder with key considerations and details about how AI is used, how it was tested and evaluated, and any specific limitations.
-ms.date: 8/15/2025
+ms.date: 8/14/2025
 ms.update-cycle: 180-days
 author: noazarur-microsoft
 ms.author: mkaur
