@@ -1,7 +1,7 @@
 ---
-title: FAQ about agent builder in canvas apps (preview)
+title: FAQ about agent builder in canvas apps
 description: This FAQ provides information about the AI technology used in agent builder with key considerations and details about how AI is used, how it was tested and evaluated, and any specific limitations.
-ms.date: 4/28/2025
+ms.date: 8/15/2025
 ms.update-cycle: 180-days
 author: noazarur-microsoft
 ms.author: noazarur
@@ -14,7 +14,7 @@ ms.collection:
     - bap-ai-copilot
 ---
 
-# FAQ for agent builder in canvas apps (preview)
+# FAQ for agent builder in canvas apps
 
 These frequently asked questions (FAQ) describe the AI impact of agent builder in canvas apps.
 
@@ -33,9 +33,6 @@ We qualitatively tested the model's agent generation capabilities by testing aga
 ## What are the limitations of agent builder? How can users minimize the impact of agent builder’s limitations when using the system?  
 - This feature is only currently available for Power Apps canvas applications. 
 
-- Preview features aren’t meant for production use and might have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback. 
-
-- For more information, see [preview terms](https://www.microsoft.com/business-applications/legal/supp-powerplatform-preview/). 
 
 - This capability is powered by [Azure OpenAI Service](/azure/ai-services/openai/overview). 
 
@@ -64,6 +61,6 @@ Because triggers use maker authentication, be aware of what data potential users
 
 ## Related information
 
-[Build an agent to automate your business process (preview)](../canvas-apps/agent-builder.md)
+[Build an agent to automate your business process](../canvas-apps/agent-builder.md)
 
 

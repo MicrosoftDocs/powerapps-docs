@@ -694,7 +694,7 @@
         items:
         - name: Get started with formulas
           href: ./canvas-apps/working-with-formulas.md
-        - name: Build an agent to automate your business process (preview)
+        - name: Build an agent to automate your business process
           href: ./canvas-apps/agent-builder.md  
         - name: Use Copilot to create and edit Power Fx formulas
           href: ./canvas-apps/ai-formulas-formulabar.md
