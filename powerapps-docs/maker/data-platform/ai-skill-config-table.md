@@ -10,7 +10,7 @@ ms.reviewer: matp
 ---
 # Delete a column with an AI Skill Config table dependency in Power Apps
 
-The AI Skill Config table is a configuration table used to manage AI-related features, such as form fill assistance and row summary. The AI Skill Config table acts as a centralized store for AI feature settings, helping to avoid schema changes for each new feature and supports application lifecycle management (ALM) to ensure smooth transitions across environments.
+The AI Skill Config table is a configuration table used to manage AI-related features, such as form fill assistance and row summary. The AI Skill Config table acts as a centralized store for AI feature settings, which helps avoid schema changes for each new feature and supports application lifecycle management (ALM) to ensure smooth transitions across environments.
 
 To locate the AI Skill Config table go to **Solutions** on the left navigation pane, then open the desired solution. If any AI-related features have been customized in the solution, the AI skill config table appears in the **Objects** pane on the left.
 
