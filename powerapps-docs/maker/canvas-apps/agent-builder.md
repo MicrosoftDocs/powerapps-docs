@@ -16,9 +16,8 @@ contributors:
 # Build an AI agent to automate your business process
 
 
-Agent builder in Power Apps lets organizations transition into the AI-first era by using the knowledge, logic, and actions of an app to create copilot agents. These agents handle daily tasks, streamline processes, enhance productivity, and improve overall business efficiency. Watch this brief video to see how to build an agent:
+Agent builder in Power Apps lets organizations transition into the AI-first era by using the knowledge, logic, and actions of an app to create copilot agents. These agents handle daily tasks, streamline processes, enhance productivity, and improve overall business efficiency.
 
-> [!VIDEO 284820d9-7fbc-4c8f-bf20-e8678614ed3d]
 
  Makers can create agents that automate processes within their existing canvas apps. Agent builder uses the app's metadata and the desired agent goal to generate a comprehensive step-by-step process, extract knowledge, and identify triggers. This process, knowledge, and triggers are then combined with extracted skills from the app, resulting in a fully equipped copilot that offers detailed instructions, knowledge, triggers, and actions.
 
@@ -28,7 +27,6 @@ After creating the agent, makers can edit, test, and publish it in Microsoft Cop
 
 - Your tenant administrator must turn on the [Publish Copilots with AI features](/microsoft-copilot-studio/security-and-governance) setting in the Power Platform admin center.
 - Include a Dataverse database in your environment. More information: [Add a Microsoft Dataverse database](/power-platform/admin/create-database).
-- The environment must be in the United States region. Depending on where the environment is hosted, you might need to allow data movement across regions. More information: [Copilots and generative AI features that are available when you enable data movement across regions](/power-platform/admin/geographical-availability-copilot#copilots-and-generative-ai-features-that-are-available-when-you-enable-data-movement-across-regions).
 - Ensure that block unmanaged customizations is disabled. Learn more in [Block unmanaged customizations in Dataverse environments](/power-platform/alm/block-unmanaged-customizations).
 - Current environment has Power Virtual Agents solution version 2.0.0.649.1 or higher.
 
@@ -103,7 +101,6 @@ When you edit the instructions, follow these suggestions:
 
 - Agent builder is available only in regions where Microsoft Copilot Studio generative agents are available.
 - This feature is available only for canvas apps.
-- This feature is available only in English (EN-US).
 
 ## Provide feedback
 

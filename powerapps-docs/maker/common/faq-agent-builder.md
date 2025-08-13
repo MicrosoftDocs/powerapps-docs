@@ -40,8 +40,6 @@ We qualitatively tested the model's agent generation capabilities by testing aga
 
 - This capability can be subject to usage limits or capacity throttling. 
 
-- Your environment must be in the United States region. 
-
 ## What operational factors and settings allow for effective and responsible use of agent builder? 
 
 Follow these procedures to make the most out of the feature: 
