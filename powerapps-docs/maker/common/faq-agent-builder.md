@@ -4,7 +4,7 @@ description: This FAQ provides information about the AI technology used in agent
 ms.date: 8/15/2025
 ms.update-cycle: 180-days
 author: noazarur-microsoft
-ms.author: noazarur
+ms.author: mkaur
 ms.reviewer: mkaur
 ms.topic: faq
 ms.subservice: common

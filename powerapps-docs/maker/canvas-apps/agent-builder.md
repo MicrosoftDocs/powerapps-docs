@@ -5,7 +5,7 @@ author: noazarur-microsoft
 ms.topic: how-to
 ms.date: 8/15/2025
 ms.subservice: canvas-maker
-ms.author: noazarur
+ms.author: mkaur
 ms.reviewer: mkaur
 search.audienceType: 
   - maker
@@ -49,7 +49,7 @@ To streamline your manual process, generate an agent that replicates the steps y
 
 1. Select a suggestion, or in the text box, describe the process you want to automate, and then select **Next**.
 
-    :::image type="content" source="media/agent-builder/-1.png" alt-text="Select a suggestion or describe the process you want to automate":::
+    :::image type="content" source="media/agent-builder/ab-suggestions-1.png" alt-text="Select a suggestion or describe the process you want to automate":::
 
 1. When you select a suggestion, the text box is automatically filled. You can edit it and add more details about what you want the agent to do. To improve the agent's accuracy, use simple, everyday language, and be specific, like:
 
