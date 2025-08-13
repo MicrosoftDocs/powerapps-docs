@@ -2,9 +2,8 @@
 title: "How to create and edit columns for Microsoft Dataverse | MicrosoftDocs"
 description: Learn how to create and edit columns
 ms.custom: ""
-ms.date: 02/08/2019
+ms.date: 08/12/2025
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -22,69 +21,38 @@ search.audienceType:
 ---
 # How to create and edit columns
 
-In Microsoft Dataverse columns define the individual data items that can be used to store data in a table. Columns are sometimes called *attributes* by developers. 
+In Microsoft Dataverse columns, define the individual data items that can be used to store data in a table. Columns are sometimes called *attributes* by developers. 
 
 Watch this video for a quick overview about columns:
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=3379c026-1830-4265-86fc-c7d16a0b6b49]
   
 Before you create a custom column, evaluate whether using an existing column would meet your requirements. More information: [Create new metadata or use existing metadata?](create-edit-metadata.md#create-new-metadata-or-use-existing-metadata)
 
-There are two designers you can use to create or edit columns:
-
-|Designer| Description|
-|--|--|
-|[Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)|Provides an easy streamlined experience, but some special settings are not available.<br />More information: [Create and edit columns for Dataverse using Power Apps portal](create-edit-field-portal.md)|
-|Solution explorer|Not as easy, but provides for more flexibility for less common requirements.<br />More information: [Create and edit columns for Dataverse using Power Apps solution explorer](create-edit-field-solution-explorer.md) |
-
 > [!NOTE]
-> You can also create columns in your environment using the following:
-> - In model-driven apps, select **New Column** from the form editor.
+> You can also create columns in your environment using these methods:
+>
+> - For model-driven apps, select **New table column** in the form editor.
 > - Import a solution that contains the definition of the columns.
 > - Use Power Query to create new tables and fill them with data. [Learn how to add data to a table in the Dataverse by using Power Query](/power-query/dataflows/add-data-power-query).
 > - A developer can use [Metadata services](../../developer/data-platform/metadata-services.md) to write a program to retrieve information about, create, and update columns.
 
-Information in this topic will help you choose which designer you can use. 
-
-You should use the Power Apps portal to create and edit columns for Dataverse unless you need to address any of the following requirements:
-
-- Create a Customer Lookup column. 
-   - More information: [Different types of lookups](types-of-fields.md#different-types-of-lookups)
-- Create a column in a solution other than the Common Data Service Default Solution. 
-   - More information: [Solutions overview](solutions-overview.md)
-- Define status reason transitions. 
-   - More information: [Define status reason transitions for the Case or custom tables](define-status-reason-transitions.md)
-- Edit multiple columns at once.
-- Enable Auditing. 
-   - More information: [Auditing overview](../../developer/data-platform/auditing/overview.md)
-- Enable Column Level Security. 
-   - More information: [Column security tables](../../developer/data-platform/field-security-entities.md)
-- Select whether the column appears in global filter in interactive experience. 
-   - More information: [Configure model-driven app interactive experience dashboards](../model-driven-apps/configure-interactive-experience-dashboards.md)
-- Select whether the column is sortable in interactive experience dashboards. 
-   - More information: [Configure model-driven app interactive experience dashboards](../model-driven-apps/configure-interactive-experience-dashboards.md)
-- Set a column Requirement Level as Business Recommended. 
-   - More information: [Create business rules and recommendations to apply logic in a model-driven app form](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md)
-- Set managed properties for a column. 
-   - More information: [Set managed properties for columns](set-managed-properties-for-field.md)
-
 > [!NOTE]
-> You can create a Lookup column in the Power Apps portal or in solution explorer by creating a One-to-many relationship on the table. But only solution explorer offers the option to create this relationship while creating a column.
+> You can create a Lookup column in Power Apps by creating a one-to-many relationship on the table. 
+
+For more information about how to create a table column, go to [Create and edit columns for Dataverse using Power Apps portal](create-edit-field-portal.md).
 
 ## Community tools
 
-**[Attribute Manager](https://www.xrmtoolbox.com/plugins/DLaB.Xrm.AttributeManager/)** is a tool that XrmToolbox community developed for Dataverse. Please see the [Developer tools and resources](../../developer/data-platform/developer-tools.md) topic for more community developed tools.
+**[Attribute Manager](https://www.xrmtoolbox.com/plugins/DLaB.Xrm.AttributeManager/)** is a tool that XrmToolbox community developed for Dataverse. Go to the [Developer tools and resources](../../developer/data-platform/developer-tools.md) article for more community developed tools.
 
 > [!NOTE]
-> The community tools are not a product of Microsoft and does not extend support to the community tools.
-> If you have questions pertaining to the tool, please contact the publisher. More Information: [XrmToolBox](https://www.xrmtoolbox.com).
+> The community tools aren't a product of Microsoft and Microsoft doesn't offer support for the community tools.
+> If you have questions pertaining to the tool, contact the publisher. More Information: [XrmToolBox](https://www.xrmtoolbox.com)
 
 ### Related articles
 
-[Create and edit columns for Dataverse using Power Apps portal](create-edit-field-portal.md)   
-[Create and edit columns for Dataverse using Power Apps solution explorer](create-edit-field-solution-explorer.md)   
-[Types of columns and column data types](types-of-fields.md)   
+[Types of columns and column data types](types-of-fields.md)
+
 [Developer Documentation: Column definitions](../../developer/data-platform/entity-attribute-metadata.md)   
  
-
-
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
