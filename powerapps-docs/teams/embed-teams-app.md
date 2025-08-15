@@ -128,7 +128,7 @@ The following context variables from Teams are supported:
 - channelId
 - channelType
 - chatId
-- groupId
+- groupId (not supported with private channels)
 - hostClientType
 - subEntityId
 - teamId
