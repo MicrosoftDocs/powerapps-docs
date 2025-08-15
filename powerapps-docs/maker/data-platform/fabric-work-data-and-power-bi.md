@@ -2,7 +2,7 @@
 title: Work with Dataverse data in Fabric and generate Power BI reports
 description: This article describes how to work with Dataverse data in Microsoft Fabric and generate Power BI reports.
 author: MilindaV2
-ms.author: Milindav
+ms.author: jasonhuang
 ms.reviewer: matp
 ms.service: powerapps
 ms.subservice: dataverse-maker
