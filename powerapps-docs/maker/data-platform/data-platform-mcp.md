@@ -167,9 +167,7 @@ If you don’t have VS Code installed, [download Visual Studio Code - Mac, Linux
 
 These instructions help you configure a Dataverse MCP server at the user setting level.
 
-1. In VS Code, go to **Manage** (gear on lower left) > **Settings** or CTRL+, and then type *MCP*.
-1. **Mcp** is listed under the **User** tab. Select **Edit in settings.json**.
-   :::image type="content" source="media/mcp-edit-vsc.png" alt-text="Edit Mcp JSON in VS Code":::
+1. In VS Code, open the command palette using Ctrl+Shift+P or **View** > **Command Palette**. Type *MCP: Open User Configuration*
 1. Add the Dataverse MCP configuration text inside the mcp "servers" setting following the curly brace.
    :::image type="content" source="media/mcp-dataverse-json.png" alt-text="JSON snippet location for MCP Dataverse":::
 
