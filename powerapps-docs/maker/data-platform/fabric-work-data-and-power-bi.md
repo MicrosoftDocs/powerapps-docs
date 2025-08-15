@@ -22,7 +22,7 @@ When you select **Link to Microsoft Fabric**, a Dataverse generated Azure Synaps
 
 The tables you selected are added to the Azure Synapse Analytics lakehouse and displayed in Power BI as shown here. These tables are linked to your Power Platform environment using **Dataverse shortcuts**. As data changes in Dataverse, the Dataverse shortcuts in Fabric reflect the latest data.
 
-![Dataverse generated Synapse lakehouse](media/fabric/fabric-with-dv-shortcuts-shown.png)
+![Dataverse generated Fabric Lakehouse](media/fabric/fabric-with-dv-shortcuts-shown.png)
 
 Note that Dataverse manages these shortcuts. You shouldn't delete or remove these shortcuts in Fabric. If you accidentally delete a link, you can go to the **Azure Synapse Link for Dataverse** area in Power Apps and select **Refresh Fabric links** to re-create the links.
 
