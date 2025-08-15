@@ -30,7 +30,7 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 
 ## Prerequisites
 
-- Azure Data Lake Storage Gen2: You must have an Azure Data Lake Storage Gen2 account and **Owner** and **Storage Blob Data Contributor** role access. Your storage account must enable **Hierarchical namespace** for both initial setup and delta sync. **Allow storage account key access** is required only for the initial setup.
+- Azure Data Lake Storage Gen2: You must have an Azure Data Lake Storage Gen2 account and **Owner** and **Storage Blob Data Contributor** role access. Your storage account must enable **Hierarchical namespace** for both initial setup and delta sync. **Allow storage account key access** is required only for the initial setup. Your storage account must have [Permitted scope for copy operations](https://learn.microsoft.com/en-us/azure/storage/common/security-restrict-copy-operations?tabs=portal#configure-the-permitted-scope-for-copy-operations-preview) set to **From any storage account**.
 
 > [!NOTE]
 >
