@@ -50,7 +50,7 @@ Deep links for the Power Apps mobile app should start with the following:
 | &lt;app-id&gt;       | Opens the correct app module.                                                 | Yes|
 | tenantId=&lt;tenand-id&gt;             | Connects to the correct tenant.                                               | Yes|
 | *environmentId=&lt;environment-id&gt;             | Uniquely identifies the environment within a tenant.                                               | Yes|
-| *appLogicalName=&lt;app-logical-name&gt;             | Unique Name of the app. For more information on how to find this unique name of the app, refer [Manage model-driven app properties in the app designer (classic)](/power-apps/maker/model-driven-apps/manage-app-properties)                     | Yes|
+| *appLogicalName=&lt;app-logical-name&gt;             | Unique Name of the app. For more information on how to find this unique name of the app in modern studio, refer [Manage model-driven app settings in the app designer](/power-apps/maker/model-driven-apps/app-properties) and for classic editor, refer [Manage model-driven app properties in the app designer (classic)](/power-apps/maker/model-driven-apps/manage-app-properties)                     | Yes|
 |appType=AppModule     | Indicates that the targeted app is a model-driven app.                                                 | Yes|
 | restartApp=true      | Restarts the model-driven app. Required to ensure parameters are passed when the app is already open. | No |
 | autoLoginUpn=&lt;e-mail&gt;      | Autopopulates e-mail and triggers sign-in. <br><br>**Note**: This parameter will be ignored if a user is already signed into the app. | No|
@@ -112,3 +112,7 @@ If the link goes to an `entitylist` view, add the following parameters:
 Deeplinks may open in your browser depending on the company's organizational policies and the user's device settings. Mobile Device Management (MDM) tools and device operating systems have different options and settings that impact how deeplinks are handled. If deeplinks are opening in a browser instead of directly in Power Apps mobile, make sure your MDM policies and device settings are appropriately configured. 
 
 As an example, on some Android devices, go to **Settings** > **Apps** > **Power Apps** > **Open by default** and add **apps.powerapps.com** to make deeplinks open directly in Power Apps mobile.
+
+### See also
+
+[Important upcoming changes (deprecations) in canvas apps](/power-apps/maker/canvas-apps/important-changes-deprecations)
