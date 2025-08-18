@@ -1,14 +1,14 @@
 ---
 title: "Create an Azure Synapse Link for Dataverse with Azure Data Lake in Power Apps"
 description: "Learn how to export table data to Azure Data Lake Storage Gen2 in Power Apps."
-ms.date: 04/29/2025
+ms.date: 08/18/2025
 ms.reviewer: "Mattp123"
 ms.topic: "how-to"
 applies_to: 
   - "powerapps"
-author: MilindaV2
+author: swatimadhukargit
 ms.subservice: dataverse-maker
-ms.author: "milindav"
+ms.author: "swatim"
 search.audienceType: 
   - maker
 contributors:
@@ -30,7 +30,7 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 
 ## Prerequisites
 
-- Azure Data Lake Storage Gen2: You must have an Azure Data Lake Storage Gen2 account and **Owner** and **Storage Blob Data Contributor** role access. Your storage account must enable **Hierarchical namespace** for both initial setup and delta sync. **Allow storage account key access** is required only for the initial setup. Your storage account must have [Permitted scope for copy operations](https://learn.microsoft.com/en-us/azure/storage/common/security-restrict-copy-operations?tabs=portal#configure-the-permitted-scope-for-copy-operations-preview) set to **From any storage account**.
+- Azure Data Lake Storage Gen2: You must have an Azure Data Lake Storage Gen2 account and **Owner** and **Storage Blob Data Contributor** role access. Your storage account must enable **Hierarchical namespace** for both initial setup and delta sync. **Allow storage account key access** is required only for the initial setup. Your storage account must have [Permitted scope for copy operations](/azure/storage/common/security-restrict-copy-operations?tabs=portal#configure-the-permitted-scope-for-copy-operations-preview) set to **From any storage account**.
 
 > [!NOTE]
 >
