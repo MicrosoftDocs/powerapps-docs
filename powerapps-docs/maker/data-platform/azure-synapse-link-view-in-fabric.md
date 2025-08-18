@@ -1,13 +1,13 @@
 ---
 title: Link your Dataverse environment to Microsoft Fabric and unlock deep insights
 description: Link your Microsoft Dataverse data from Power Apps and Dynamics 365 with Microsoft Fabric and unlock advanced insights.
-author: MilindaV2
-ms.author: Milindav
+author: swatimadhukargit
+ms.author: swatim
 ms.reviewer: matp
 ms.service: powerapps
 ms.subservice: dataverse-maker
 ms.topic: how-to
-ms.date: 05/13/2025
+ms.date: 08/18/2025
 ms.custom: template-how-to
 ---
 # Link your Dataverse environment to Microsoft Fabric and unlock deep insights
@@ -32,7 +32,7 @@ Watch this video to learn about accessing Dataverse data in Fabric:
 
 From the **Tables** area in Power Apps (make.powerapps.com), makers link to Fabric by selecting **Analyze** > **Link to Microsoft Fabric** on the command bar.
 
-When you select the command for the first time, a wizard driven experience links your Dataverse environment to a Fabric workspace. A Synapse lakehouse, SQL endpoint, a Power BI dataset are created and Dataverse tables are linked to the lakehouse via shortcuts which is in read only mode.
+When you select the command for the first time, a wizard driven experience links your Dataverse environment to a Fabric workspace. A Synapse lakehouse, SQL endpoint, a Power BI dataset are created and Dataverse tables are linked to the lakehouse via shortcuts, which are in read-only mode.
 
 Once the link is set up, you can grant other users access to the Fabric workspace so that they can work with Dataverse data using all Fabric workloads. The lakehouse, SQL endpoint, and Power BI dataset are updated with new data as changes occur in Dataverse. More information: [Link to Microsoft Fabric](fabric-link-to-data-platform.md)
 
