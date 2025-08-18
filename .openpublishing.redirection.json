@@ -1,36 +1,41 @@
 {
   "redirections": [
-   {
+    {
+      "source_path": "powerapps-docs/developer/data-platform/data-export-service.md",
+      "redirect_url": "https://aka.ms/DESDeprecationBlog",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/developer/data-platform/org-service/samples/enable-field-security-entity.md",
       "redirect_url": "column-level-security",
       "redirect_document_id": "false"
-   },
-   {
+    },
+    {
       "source_path": "powerapps-docs/developer/data-platform/org-service/samples/retrieve-field-permissions.md",
       "redirect_url": "column-level-security",
       "redirect_document_id": "false"
-   },
-   {
+    },
+    {
       "source_path": "powerapps-docs/developer/data-platform/org-service/samples/retrieve-field-sharing-records.md",
       "redirect_url": "column-level-security",
       "redirect_document_id": "false"
-   },
-   {
+    },
+    {
       "source_path": "powerapps-docs/developer/data-platform/field-security-entities.md",
       "redirect_url": "column-level-security",
       "redirect_document_id": "false"
-   },
-   {
+    },
+    {
       "source_path": "powerapps-docs/developer/data-platform/calculated-rollup-attributes.md",
       "redirect_url": "specialized-columns.md",
       "redirect_document_id": "false"
-   }, 
-   {
+    },
+    {
       "source_path": "powerapps-docs/developer/data-platform/deletemultiple.md",
       "redirect_url": "bulk-operations#deletemultiple",
       "redirect_document_id": "false"
-   }, 
-   {
+    },
+    {
       "source_path": "powerapps-docs/developer/test-engine/overview.md",
       "redirect_url": "/power-platform/test-engine/overview",
       "redirect_document_id": "false"
@@ -9633,6 +9638,11 @@
     {
       "source_path": "powerapps-docs/maker/model-driven-apps/build-app-three-steps.md",
       "redirect_url": "../../../power-apps/maker/model-driven-apps/build-first-model-driven-app",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/monitor-app-performance.md",
+      "redirect_url": "../../power-apps/maker/common/monitor-app-performance",
       "redirect_document_id": false
     }
   ]

@@ -5,7 +5,7 @@ author: jasongre
 ms.subservice: mda-maker
 ms.author: jasongre
 ms.reviewer: matp
-ms.date: 07/25/2025
+ms.date: 08/11/2025
 ms.topic: how-to
 applies_to: 
   - PowerApps
@@ -45,6 +45,9 @@ After you describe the page, the system then processes your requirements and spe
    :::image type="content" source="media/generative-page/add-table-generative-page.png" alt-text="Add a table to the generative page" lightbox="media/generative-page/add-table-generative-page.png":::
 
 1. Optionally upload an image to guide the UI of your generated page by selecting **Add data** > **Attach image**. This can be a rough napkin sketch or a higher resolution image.
+1. Optionally choose the AI model you want to use to generate the page. 
+    :::image type="content" source="media/generative-page/choose-model-generative-page.png" alt-text="Choose the AI model you want to use to generate your page" lightbox="media/generative-page/choose-model-generative-page.png":::
+    
 1. When you're finished describing the page, select **Generate page**.
 
 When the agent finishes building your page, the user experience is displayed. If the user experience isn't already displayed, you can view it by selecting **Preview**.
@@ -68,7 +71,7 @@ Select **Save** to make sure you don't lose your generated page. When you're sat
 
 These are the current limitations of generative pages:
 
-- Working with data. Your page can connect to only Dataverse tables (up to 6 for a single page). You can perform create, read, update, and delete (CRUD) operations against these tables. No other data sources can be used.
+- Your page can connect to only Dataverse tables (up to 6 for a single page). You can perform create, read, update, and delete (CRUD) operations against these tables. No other data sources can be used.
 - Virtual tables are not supported. 
 - You can't edit the generated code.
 - Generated pages can't be exported and imported in other Power Platform with Dataverse environments.
@@ -125,9 +128,10 @@ The best way to give feedback on generative pages is to use the thumbs up/down b
 
 ## What if I don't see generative pages enabled in my environment?
 
-There are two reasons you may not see the feature enabled in your environment:
+Below are the conditions to check to make sure the feature is available in your environment:
 
 - Confirm your environment is in the US region.
+- Confirm that Copilot is enabled for your tenant.  
 - Power Platform admins should check that the **Enable new AI-powered Copilot features for people who make apps** environment setting is enabled. This setting can be found in the Power Platform admin center under environment > **Settings** > **Features**.
 
 ## Related articles
