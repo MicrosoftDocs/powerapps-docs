@@ -2,7 +2,7 @@
 title: "Privileges required for customizing apps build on Dataverse | MicrosoftDocs"
 description: Understand the privileges required to apps built on Dataverse
 ms.custom: ""
-ms.date: 04/14/2025
+ms.date: 08/19/2025
 ms.reviewer: "matp"
 ms.topic: article
 ms.subservice: mda-maker
@@ -26,8 +26,8 @@ Anyone who customizes have at least the system customizer security role associat
   
 |System administrator|System customizer|  
 |--------------------------|-----------------------|  
-|Has full permission to customize the system|Has full permission to customize the system|  
-|Can view all data in the system|Can view all custom tables in the system but only view rows (records) in the account, contact, and activity tables that they create|  
+|Has full permission to customize the system and manage the environment. |Has permission to customize the system.|  
+|Can view all data in the system. |Can view all custom tables in the system but only view rows (records) in the account, contact, and activity tables that they create. |  
   
 The difference between the system administrator and system customizer security roles is that a system administrator has read privileges on most records in the system and can see everything. Assign the system customizer role to someone who needs to perform customization tasks and has access to all the custom tables but only has access to the account, contact, and activity rows (records) they create. However, testing is an important part of customizing the system. If system customizers can’t see any data, they need to create rows (records) to test their customizations. By default, system customizers have full access to custom tables. If you want to have the same limitations that exist for system tables, you need to adjust the system customizer security role so that the access level is **User** rather than **Organization** for custom tables. 
 
