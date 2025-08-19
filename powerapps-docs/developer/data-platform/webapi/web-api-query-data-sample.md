@@ -3190,7 +3190,7 @@ Accept: application/json
   "description": "User query to display contact info.",
   "querytype": 0,
   "returnedtypecode": "contact",
-  "fetchxml": "<fetch mapping='logical' output-format='xml-platform' version='1.0' distinct='false'>
+  "fetchxml": "<fetch>
     <entity name ='contact'>
       <attribute name ='fullname' />
       <attribute name ='contactid' />

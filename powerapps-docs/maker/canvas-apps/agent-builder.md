@@ -3,7 +3,7 @@ title: Automate your business processes with agent builder in a canvas app
 description: How to create an agent to help automate business processes in a canvas app using agent builder.
 author: noazarur-microsoft
 ms.topic: how-to
-ms.date: 4/25/2025
+ms.date: 8/14/2025
 ms.subservice: canvas-maker
 ms.author: hillaryyaory
 ms.reviewer: mkaur
@@ -13,28 +13,19 @@ contributors:
   - noazarur-microsoft
 ---
 
-# Build an AI agent to automate your business process (preview) 
+# Build an AI agent to automate your business process
 
-[!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
-Agent builder in Power Apps lets organizations transition into the AI-first era by using the knowledge, logic, and actions of an app to create copilot agents. These agents handle daily tasks, streamline processes, enhance productivity, and improve overall business efficiency. Watch this brief video to see how to build an agent:
+Agent builder in Power Apps lets organizations transition into the AI-first era by using the knowledge, logic, and actions of an app to create copilot agents. These agents handle daily tasks, streamline processes, enhance productivity, and improve overall business efficiency.
 
-> [!VIDEO 284820d9-7fbc-4c8f-bf20-e8678614ed3d]
 
  Makers can create agents that automate processes within their existing canvas apps. Agent builder uses the app's metadata and the desired agent goal to generate a comprehensive step-by-step process, extract knowledge, and identify triggers. This process, knowledge, and triggers are then combined with extracted skills from the app, resulting in a fully equipped copilot that offers detailed instructions, knowledge, triggers, and actions.
 
 After creating the agent, makers can edit, test, and publish it in Microsoft Copilot Studio.
 
-> [!IMPORTANT]
-> - This is a preview feature.
-> - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2189520), and are available before an official release so that customers can get early access and provide feedback.
-
 ## Prerequisites
-
-- Preview Copilot features are enabled by default, but your admin can turn them off for an environment or tenant. More information: [Enable or disable Copilot features](ai-overview.md#enable-or-disable-copilot-features).
 - Your tenant administrator must turn on the [Publish Copilots with AI features](/microsoft-copilot-studio/security-and-governance) setting in the Power Platform admin center.
 - Include a Dataverse database in your environment. More information: [Add a Microsoft Dataverse database](/power-platform/admin/create-database).
-- The environment must be in the United States region. Depending on where the environment is hosted, you might need to allow data movement across regions. More information: [Copilots and generative AI features that are available when you enable data movement across regions](/power-platform/admin/geographical-availability-copilot#copilots-and-generative-ai-features-that-are-available-when-you-enable-data-movement-across-regions).
 - Ensure that block unmanaged customizations is disabled. Learn more in [Block unmanaged customizations in Dataverse environments](/power-platform/alm/block-unmanaged-customizations).
 - Current environment has Power Virtual Agents solution version 2.0.0.649.1 or higher.
 
@@ -50,23 +41,19 @@ To streamline your manual process, generate an agent that replicates the steps y
 1. Select your app and then select **Next** on the command bar.
 :::image type="content" source="media/agent-builder/ab-select-app-then-next.png" alt-text="Select an app and then select next":::
 
-    Alternatively, you can select **Apps** in the left navigation pane. Select your app, and then select **Create agent from app (Preview)** on the command bar. You can also select **Commands** (![Commands button.](media/power-apps-page-icons/apps-commands-menu-to-edit.png)) for the app and then select **Create agent from app (Preview)**.
+    Alternatively, you can select **Apps** in the left navigation pane. Select your app, and then select **Create agent from app** on the command bar. You can also select **Commands** (![Commands button.](media/power-apps-page-icons/apps-commands-menu-to-edit.png)) for the app and then select **Create agent from app**.
 
-    :::image type="content" source="media/agent-builder/ab-create-agent-from-app.png" alt-text="Create agent from app":::
 
 1. Select a suggestion, or in the text box, describe the process you want to automate, and then select **Next**.
 
-    :::image type="content" source="media/agent-builder/ab-suggestions.png" alt-text="Select a suggestion or describe the process you want to automate":::
+    :::image type="content" source="media/agent-builder/ab-suggestions-1.png" alt-text="Select a suggestion or describe the process you want to automate":::
 
 1. When you select a suggestion, the text box is automatically filled. You can edit it and add more details about what you want the agent to do. To improve the agent's accuracy, use simple, everyday language, and be specific, like:
 
-   - Submit completed claim forms to the database for processing.
-   - Generate reports for claims filed within a specific date range.
+   - Review pending vacation requests and update their status based on predefined approval criteria.
+   - Generate and dispatch notification messages to employees regarding the status of their vacation requests.
 
-1. Based on the suggestion or the information that you provide for the agent's goal and the app's metadata, agent builder generates step-by-step instructions to replace your manual process and extracts triggers and knowledge. Review the instructions for accuracy, and make any necessary edits. Then review the extracted knowledge and triggers for accuracy, and make any necessary edits.
-
-    :::image type="content" source="media/agent-builder/ab-process-summary.png" alt-text="Reivew the process summary":::
-
+1. Based on the suggestion or the information that you provide for the agent's goal and the app's metadata, agent builder generates step-by-step instructions to replace your manual process and extracts triggers and knowledge. Review the instructions for accuracy, and make any necessary edits. Then review the extracted knowledge and triggers for accuracy, and make any necessary edits. When you're done, select **Create**.
 
 ### Regenerate instructions to improve the response
 
@@ -113,7 +100,6 @@ When you edit the instructions, follow these suggestions:
 
 - Agent builder is available only in regions where Microsoft Copilot Studio generative agents are available.
 - This feature is available only for canvas apps.
-- This feature is available only in English (EN-US).
 
 ## Provide feedback
 

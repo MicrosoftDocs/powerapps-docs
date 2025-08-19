@@ -40,6 +40,7 @@ The following is a list of known limitations for virtual tables created using th
 - Virtual table queries are limited to return 1,000 records. If you have a 1:N or N custom multi-table (polymorphic) relationship with a virtual table, any query exceeding this limit fails and provides an error. Use filtering in your query to reduce the record set as a workaround to this limitation.
 - Audit functionality isn't available for virtual tables because Dataverse can only perform and store audit data for locally stored data.
 - Rollups and calculated fields can't be calculated for virtual tables. This is because rollups are a server side calculation in Dataverse, which requires the data to be stored locally.
+- Formula columns can't use virtual tables.
 - The **Microsoft Entra ID** virtual table provided by Microsoft only allows read access.
 - Dataverse virtual tables can display values in fields that exceed the normal maximum values of Dataverse. This behavior is because the values being presented aren't stored locally. For example, the Dataverse integer maximum value is 100,000,000,000, but it could retrieve and display 9,000,000,000,000 from SharePoint. However, if the user attempts to edit the number to a size larger than the max accepted size in Dataverse an error is provided indicating the record can't be saved because it exceeds the maximum size.
 - Import and export functionality of table data isn't supported for virtual tables.
@@ -66,6 +67,7 @@ The following are limitations for each data source.
    - Geometry
    - Geography
    - RowVersion
+   - Choice
  - The following column types are included in a virtual table but are only shown as text fields:
    - HierarchyID
    - XML
@@ -171,6 +173,12 @@ The following are limitations for each data source.
 - Table creation's system job succeeded but you receive runtime errors related to invalid or missing columns.<br />
   **Solution**: If a failure occurs while you create a table field, the table creation process doesn't fail and try to continue with the remaining fields. This is because the system doesn't want to block the virtual table creation when some column types are unsupported. To get details on the error, enable logging in **Administration**> **System Settings** > **Customizations** > **Enable logging to plug-in trace log**, then delete the virtual table and try to create it again.
 
+- If you deleted the connection connected to virtual table and recreated it, the Virtual Connector Provider app loses permission to access the new connection, preventing data retrieval.<br />
+**Solution**: Manually share the recreated connection with the 'Virtual Connector Provider' app using the connection's share feature to restore access.
+
+- When a custom data provider for a virtual table is updated to support new operations (e.g., create, update, delete), the platform does not automatically add corresponding permissions to the existing virtual table entity.<br />
+**Solution**: To enable new permissions, the user must recreate the virtual table entity after updating the data provider.
+  
 ## Next steps
 
 [Create virtual tables using the virtual connector provider (preview)](create-virtual-tables-using-connectors.md)

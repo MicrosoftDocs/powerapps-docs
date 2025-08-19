@@ -3,7 +3,7 @@ title: "Dataverse table/entity reference | Microsoft Docs"
 description: "Use this reference to understand the available operations that can be performed for specific tables, the default columns/attributes of each table/entity and the relationships between tables in Microsoft Dataverse"
 author: phecke
 ms.topic: reference
-ms.date: 09/26/2024
+ms.date: 08/11/2025
 ms.author: pehecke
 ms.reviewer: jdaly
 search.audienceType: 
@@ -24,6 +24,18 @@ This reference includes only those tables where:
   - Most intersect tables contain just the 4 columns necessary to support the Many-to-Many relationship. They are not useful. Intersect tables with more than four columns are more interesting.
 
 To view information about all tables in your environment, see [Browse tables definitions in your environment](../browse-your-metadata.md).
+
+## Dynamics 365 products table reference
+
+Dynamics 365 products use Dataverse. When you create an environment for Dynamics 365 products, the environment has a common set of tables for all Dynamics 365 products. These tables are included in the [Dynamics 365 Enabled apps table/entity reference](/dynamics365/developer/reference/about-entity-reference).
+
+Each of the specific Dynamics 365 products may add additional tables. The following table shows the table reference for specific Dynamics 365 products:
+
+|Product Documentation |Product Table reference|
+|---------|---------|
+|[Sales](/dynamics365/sales/)|[Sales table/entity reference](/dynamics365/sales/developer/about-entity-reference)|
+|[Field Service](/dynamics365/field-service/)|[Field Service table/entity reference](/dynamics365/field-service/developer/reference/about-entity-reference)|
+|[Customer Service](/dynamics365/customer-service/)|[Customer Service table/entity reference](/dynamics365/customer-service/develop/reference/about-entity-reference)|
 
 
 ## Properties

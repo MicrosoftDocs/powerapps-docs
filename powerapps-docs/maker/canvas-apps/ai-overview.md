@@ -49,7 +49,25 @@ Each Copilot feature can have different requirements. Check the documentation fo
 
 - This capability might not be available in your region yet. Learn more in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/en-US/availability-reports/?report=copilotfeaturereport).
 - This capability might be subject to usage limits or capacity throttling.
-- Learn about the capabilities and limitations of AI-powered and Copilot features in Power Apps. For more information, see [FAQ about using AI responsibly in Power Apps](../common/transparency-note.md).
+- Understand the capabilities and limitations of AI-powered and Copilot features in Power Apps. Learn more in [FAQ about using AI responsibly in Power Apps](../common/transparency-note.md).
+
+## Copilot use in Power Apps
+
+The following articles can help you build various apps in different scenarios using Copilot.
+
+- [Create a plan using Plan designer](../plan-designer/create-plan.md)
+
+## Copilot in canvas apps
+
+- [Build apps through conversation](ai-conversations-create-app.md)
+- [Edit your app with Copilot (preview)](ai-edit-app.md)
+- [Add a Copilot control to a canvas app (preview)](add-ai-copilot.md)
+- [Create Power Fx formulas with Copilot](ai-formulas-formulabar.md)
+- [Use field suggestions by Copilot](ai-field-suggestions.md)
+- [Add a custom Copilot to a canvas app (preview)](add-custom-copilot.md)
+- [Build an agent to automate your business process](agent-builder.md)
+- [Rename controls in canvas apps with Copilot (preview)](./controls/copilot-rename-controls.md)
+
 
 
 ## Enable or disable Copilot features
