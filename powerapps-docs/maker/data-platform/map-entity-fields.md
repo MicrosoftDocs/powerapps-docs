@@ -88,6 +88,9 @@ The following rules show what kinds of data can be mapped:
 
 If there are any mappings that you don't want to apply, you can select them and then select ![Delete column mappings](media/delete.gif).
 
+## Known limitations
+- Mappings are automatically generated for lookup fields and cannot be deleted.  As a result, if multiple lookups to the same parent table have been created, all of the lookups will be auto populated with the same value opening a create form.  As a workaround, you can implement custom form logic to clear any unneeded referential lookup values.
+
 ### See also
 
 [Create and edit 1:N (one-to-many) or N:1 (many-to-one) table relationships using solution explorer](create-edit-1n-relationships-solution-explorer.md)  
