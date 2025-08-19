@@ -1,6 +1,6 @@
 ---
-title: How to set up Azure Key Vault for code signing in Wrap Wizard
-description: Step-by-step guide to configure Azure Key Vault and automate code signing for native mobile apps in Wrap Wizard.
+title: How to set up Azure Key Vault for code signing in wrap wizard
+description: Step-by-step guide to configure Azure Key Vault and automate code signing for native mobile apps in wrap wizard.
 author: komala2019
 ms.topic: how-to
 ms.custom: canvas
@@ -14,9 +14,9 @@ contributors:
   - mduelae
 ---
 
-# Set up Azure Key Vault for Wrap Wizard code signing
+# Set up Azure Key Vault for wrap wizard code signing
 
-Azure Key Vault is a cloud service that securely stores secrets like certificates, passwords, encryption keys, and other sensitive data. Use Key Vault to manage certificates and secrets for automated code signing in Wrap Wizard. For more information, see [Introduction to Azure Key Vault](/azure/key-vault/general/overview).  
+Azure Key Vault is a cloud service that securely stores secrets like certificates, passwords, encryption keys, and other sensitive data. Use Key Vault to manage certificates and secrets for automated code signing in wrap wizard. For more information, see [Introduction to Azure Key Vault](/azure/key-vault/general/overview).  
 
 This guide explains how new users create and configure an Azure Key Vault.
 
@@ -33,9 +33,9 @@ Before you begin, ensure you have the following:
 
 If you do not already have a Key Vault, follow the steps in [Create a vault](/azure/key-vault/general/quick-create-portal#create-a-vault) using the Azure portal.
 
-## Step 2: Create a service principal for Wrap Key Vault access
+## Step 2: Create a service principal for wrap Key Vault access
 
-A service principal is required so Wrap Wizard can access your Key Vault.
+A service principal is required so wrap wizard can access your Key Vault.
 
 1. Sign in to your tenant as an admin.
 2. Open PowerShell and run the following command:
@@ -103,7 +103,7 @@ After uploading your iOS or Android certificates, add three tags:
 - Tag name: Use your app’s bundle ID.
 - Tag value: Use the name of the uploaded certificate.
 
-Use the same bundle ID that you’ll use in the [Wrap Wizard](wrap-how-to.md#3-choose-target-platform).
+Use the same bundle ID that you’ll use in the [wrap wizard](wrap-how-to.md#3-choose-target-platform).
 
 :::image type="content" source="media/wrap-canvas-app/wrap-3.png" alt-text="Screenshot that shows how to add tags." lightbox="media/wrap-canvas-app/wrap-3.png":::
 
