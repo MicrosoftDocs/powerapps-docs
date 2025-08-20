@@ -89,7 +89,7 @@ To remove all suggested actions from a table:
 1. Save and publish your app.
 
 > [!NOTE]
-> To completely delete the suggested action, you must delete the table record for it from your solution in the AI Skill Config table. <!-- Add link to AI Skill Config table article when published. -->
+> To completely delete the suggested action, you must delete the table record for it from your solution in the AI Skill Config table. More information: [Delete a column with an AI Skill Config table dependency in Power Apps](../data-platform/ai-skill-config-table.md)
 
 ## View all suggested actions
 
