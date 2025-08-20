@@ -4,7 +4,7 @@ description: Step-by-step instructions for setup, connect, and use Microsoft Dat
 author: sabinn-msft
 ms.component: cds
 ms.topic: how-to
-ms.date: 07/14/2025
+ms.date: 08/20/2025
 ms.subservice: dataverse-maker
 ms.author: sabinn
 ms. reviewer: matp
@@ -167,11 +167,9 @@ If you don’t have VS Code installed, [download Visual Studio Code - Mac, Linux
 
 These instructions help you configure a Dataverse MCP server at the user setting level.
 
-1. In VS Code, go to **Manage** (gear on lower left) > **Settings** or CTRL+, and then type *MCP*.
-1. **Mcp** is listed under the **User** tab. Select **Edit in settings.json**.
-   :::image type="content" source="media/mcp-edit-vsc.png" alt-text="Edit Mcp JSON in VS Code":::
-1. Add the Dataverse MCP configuration text inside the mcp "servers" setting following the curly brace.
-   :::image type="content" source="media/mcp-dataverse-json.png" alt-text="JSON snippet location for MCP Dataverse":::
+1. In VS Code, open the command palette by selecting **View** > **Command Palette** (Ctrl + Shift + P).
+1. Type *MCP: Open User Configuration*, and then select it.
+1. Copy and paste this Dataverse MCP configuration JSON inside the mcp "servers" node following the curly brace.
 
    ```json
    "<friendly name>": {
@@ -195,10 +193,12 @@ These instructions help you configure a Dataverse MCP server at the user setting
    }
    ```
 
-1. Replace &lt;connection URL&gt; and &lt;tenant ID&gt; from the [prerequisite steps](#prerequisites). Use a &lt;friendly name&gt; for your Dataverse MCP server that you can easily remember, for example: `MyDataverseMCPServerForGitHubCopilot`.
+   :::image type="content" source="media/mcp-dataverse-json.png" alt-text="JSON snippet location for MCP Dataverse" lightbox="media/mcp-dataverse-json.png":::
+1. In the mcp.json file where you pasted in the json in the previous step, replace &lt;connection URL&gt; and &lt;tenant ID&gt; from the [prerequisite steps](#prerequisites). Use a &lt;friendly name&gt; for your Dataverse MCP server that you can easily remember, for example: `MyDataverseMCPServerForGitHubCopilot`.
+1. Select **File** > **Save**.
 
 > [!NOTE]
-> When the MCP server is configured correctly in settings.json, you notice a status like **Start**. This means that syntactically, it's correct and you can start the MCP server. In case it doesn’t show **Start**, you can go to **Command Palette** (Ctrl+Shift+P), type *MCP:* and then select **MCP: List Servers**. You should observe the friendly name that you have assigned for the Dataverse MCP server so you can start the MCP server.
+> When the MCP server is configured correctly in mcp.json, you notice a status like **Start**. This means that syntactically, it's correct and you can start the MCP server. In case it doesn’t show **Start**, you can go to **Command Palette** (Ctrl+Shift+P), type *MCP:* and then select **MCP: List Servers**. You should observe the friendly name that you have assigned for the Dataverse MCP server so you can start the MCP server.
 
 #### Interact with Dataverse MCP server in VS Code GitHub Copilot
 
