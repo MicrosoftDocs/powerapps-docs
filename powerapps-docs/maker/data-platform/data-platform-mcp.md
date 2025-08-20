@@ -193,7 +193,7 @@ These instructions help you configure a Dataverse MCP server at the user setting
    }
    ```
 
-   :::image type="content" source="media/mcp-dataverse-json.png" alt-text="JSON snippet location for MCP Dataverse":::
+   :::image type="content" source="media/mcp-dataverse-json.png" alt-text="JSON snippet location for MCP Dataverse" lightbox="media/mcp-dataverse-json.png":::
 1. In the mcp.json file where you pasted in the json in the previous step, replace &lt;connection URL&gt; and &lt;tenant ID&gt; from the [prerequisite steps](#prerequisites). Use a &lt;friendly name&gt; for your Dataverse MCP server that you can easily remember, for example: `MyDataverseMCPServerForGitHubCopilot`.
 1. Select **File** > **Save**.
 
