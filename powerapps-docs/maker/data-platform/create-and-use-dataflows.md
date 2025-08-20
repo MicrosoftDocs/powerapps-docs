@@ -50,7 +50,7 @@ The following sections look at each of these steps so you can become familiar wi
 Dataflows are created in one environment. Therefore, you'll only be able to see and manage them from that environment. In addition, individuals who want to get data from your dataflow must have access to the environment in which you created
 it.
 
-> [!NOTE]
+> [!IMPORTANT]
 >
 > - Creating dataflows is currently not available with Power Apps Developer Plan licenses.
 > - The Firefox web browser currently isn't supported for use in creating and maintaining dataflows in Power Apps. More information: [You receive the error message "There was a problem refreshing the dataflow"](#you-receive-the-error-message-there-was-a-problem-refreshing-the-dataflow)
