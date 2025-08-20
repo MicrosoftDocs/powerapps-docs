@@ -70,7 +70,8 @@ The export can take several minutes to complete. Once finished, the export .zip 
 <a name="BKMK_SettingsOptionsOnSolutionExport"></a>  
  
 ### Settings options for solution export  
- If you export the solution from Power Apps, please disregard this section. The following table shows the options available when you export a solution from the classic experience.  
+
+If you export the solution from Power Apps, please disregard this section. The following table shows the options available when you export a solution from the classic experience.  
   
 |Group|Setting|Description|  
 |-----------|-------------|-----------------|  
@@ -120,9 +121,10 @@ The export can take several minutes to complete. Once finished, the export .zip 
 |Auto-Tag Interval|Normal polling frequency used for email auto-tagging in Outlook.|  
 |ISV Config|Service Calendar Appearance Configuration|You can define visual styles for service calendars.
 
-More information:   [Service Calendar Appearance Configuration](/dynamics365/customer-engagement/developer/customize-dev/service-calendar-appearance-configuration)
+More information:   [Service Calendar Appearance Configuration](/dynamics365/customer-engagement/developer/customize-dev/service-calendar-appearance-configuration) <!-- This is only documented for /dynamics365/customer-engagement -->
 
 ### See also
+
 [Import solutions](import-update-export-solutions.md) <br />
 [Update solutions](update-solutions.md) <br />
 [For developers: Create, export, or import an unmanaged solution](/power-platform/alm/solution-api#create-export-or-import-an-unmanaged-solution)

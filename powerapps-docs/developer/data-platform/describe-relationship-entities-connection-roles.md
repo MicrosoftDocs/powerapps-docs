@@ -1,12 +1,12 @@
 ---
-title: "Describe a relationship between tables with connection roles (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Describing a relationship between tables using create connection roles and connection role categories." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 03/11/2021
+title: Describe a relationship between tables with connection roles
+description: "Describing a relationship between tables using create connection roles and connection role categories." 
+ms.date: 08/08/2025
 ms.reviewer: pehecke
 ms.topic: article
-author: mayadumesh # GitHub ID
+author: MsSQLGirl
 ms.subservice: dataverse-developer
-ms.author: mayadu # MSFT alias of Microsoft employees only
+ms.author: jukoesma
 search.audienceType: 
   - developer
 ---
@@ -16,9 +16,9 @@ You can describe the relationship between records through the roles that you ass
   
  There are several ways you can use the connection roles in a connection:  
   
-- Apply the same role to the source record and to the target record. A “friend”, a “team member”, or a “colleague” are examples of roles that could be applied to both records in the connection.  
-- Apply a role to the source record or to the target record, but not to both. A “salesperson” role in a contact to opportunity connection is an example of such role. The records, such as opportunity, invoice, or sales order usually contain sufficient information about what they represent and do not require a role assigned to them.  
-- Apply two matching roles (sometimes referred to as reciprocal roles). One role applies to a source record and the other role applies to a target record. A “doctor” and a “patient”, a “parent” and a “child” are examples of matching roles.  
+- Apply the same role to the source record and to the target record. A "friend", a "team member", or a "colleague" are examples of roles that could be applied to both records in the connection.  
+- Apply a role to the source record or to the target record, but not to both. A "salesperson" role in a contact to opportunity connection is an example of such role. The records, such as opportunity, invoice, or sales order usually contain sufficient information about what they represent and do not require a role assigned to them.  
+- Apply two matching roles (sometimes referred to as reciprocal roles). One role applies to a source record and the other role applies to a target record. A "doctor" and a "patient", a "parent" and a "child" are examples of matching roles.  
   
 ## Connection Role Categories
 
@@ -49,10 +49,15 @@ To associate the roles in the connection, use the <xref:Microsoft.Xrm.Sdk.IOrgan
   
 ### See also
 
-[Connection tables](connection-entities.md)<br />
-[Sample Code for Connection tables](/dynamics365/customer-engagement/developer/sample-code-connection-entities)<br />
-[Sample: Create a reciprocal connection role](org-service/samples/create-reciprocal-connection-role-early-bound.md)<br />
-[Connection table](reference/entities/connection.md)
+[Connection tables](connection-entities.md)   
+[Connection table](reference/entities/connection.md)  
+[Sample: Create a connection](org-service/samples/create-connection-early-bound.md)  
+[Sample: Create a connection role](org-service/samples/create-connection-role-early-bound.md)  
+[Sample: Create a reciprocal connection role](org-service/samples/create-reciprocal-connection-role-early-bound.md)  
+[Sample: Query connections by a record (early bound)](org-service/samples/query-connections-record-early-bound.md)  
+[Sample: Query connection roles by entity type code (early bound)](org-service/samples/query-connection-roles-entity-type-code-early-bound.md)  
+[Sample: Query connections by reciprocal roles (early bound)](org-service/samples/query-connections-reciprocal-roles-early-bound.md)  
+[Sample: Update a connection role (early bound)](org-service/samples/update-connection-role.md)  
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

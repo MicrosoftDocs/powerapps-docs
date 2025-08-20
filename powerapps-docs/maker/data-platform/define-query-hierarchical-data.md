@@ -43,7 +43,7 @@ When a self-referential one-to-many (1:N) relationship exists, in the relationsh
 
 ![Hierarchical setting in relationship definition.](media/self-referential-relationship-widget.png)
 
-To query the data as a hierarchy, you must set one of the table’s one-to-many (1:N) self-referential relationships as hierarchical. 
+To query the data as a hierarchy, you must set one of the table's one-to-many (1:N) self-referential relationships as hierarchical. 
 
 To turn on the hierarchy:  
   
@@ -51,7 +51,7 @@ To turn on the hierarchy:
 2. In the relationship definition, set **Hierarchical** to **Yes**.  
   
 > [!NOTE]
-> - Some of the out-of the-box (1:N) relationships can’t be customized. This will prevent you from setting those relationships as hierarchical.
+> - Some of the out-of the-box (1:N) relationships can't be customized. This will prevent you from setting those relationships as hierarchical.
 > - You can specify a hierarchical relationship for the system self-referential relationships. This includes the 1:N self-referential relationships of system type,  such as the "contact_master_contact" relationship.  
 
 > [!IMPORTANT]
@@ -69,7 +69,7 @@ To turn on the hierarchy:
 Without a defined hierarchy, to retrieve hierarchical data, need to iteratively query for the related rows. With a defined hierarchy, you can query the related data as a hierarchy in one step. You're able to query rows using the **Under** and **Not Under** logic. The **Under** and **Not Under** hierarchical operators are exposed in Advanced Find and the workflow editor. For more information about how to use these operators, see [Configure workflow steps](/flow/configure-workflow-steps#setting-conditions-for-workflow-actions). For more information about Advanced Find, see [Create, edit, or save an Advanced Find search](/dynamics365/customer-engagement/basics/save-advanced-find-search)  
 
 > [!NOTE]
-> Developers will also be able to use these operators in code. More information [Developer Documentation: Query hierarchical data](/dynamics365/customer-engagement/developer/org-service/query-hierarchical-data)
+> Developers will also be able to use these operators in code. More information [Developer Documentation: Query hierarchical data](../../developer/data-platform/query-hierarchical-data.md)
   
 The following examples illustrate scenarios for querying hierarchies:  
   
@@ -86,6 +86,7 @@ The following examples illustrate scenarios for querying hierarchies:
 ![Query account's related opportunities.](media/query-account-related-opportunities.png)  
   
 ## See also 
+
 [Create and edit 1:N (one-to-many) or N:1 (many-to-one) table relationships](create-edit-1n-relationships.md)<br />
 [Create and edit 1:N (one-to-many) or N:1 (many-to-one) table relationships using solution explorer](create-edit-1n-relationships-solution-explorer.md)<br />
 [Visualize hierarchical data with model-driven apps](visualize-hierarchical-data.md)<br />

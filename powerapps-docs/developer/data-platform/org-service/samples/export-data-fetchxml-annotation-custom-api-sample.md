@@ -164,7 +164,7 @@ You can use either the Web API or the Dataverse SDK for .NET to use the `sample_
    {
        var req = new OrganizationRequest("sample_ExportDataUsingFetchXmlToAnnotation")
        {
-           ["FetchXml"] = @"<fetch version='1.0' output-format='xml-platform' mapping='logical'>
+           ["FetchXml"] = @"<fetch>
                            <entity name='account'>
                                <attribute name='accountid'/>
                                <attribute name='name'/>  
@@ -200,7 +200,7 @@ OData-Version: 4.0
 Accept: application/json
 
 {
-    "FetchXml": "<fetch version='1.0' output-format='xml-platform' mapping='logical'>
+    "FetchXml": "<fetch>
                     <entity name='account'>
                         <attribute name='accountid'/>
                         <attribute name='name'/>  
