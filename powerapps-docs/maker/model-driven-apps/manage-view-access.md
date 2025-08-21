@@ -34,6 +34,7 @@ Data access continues to be secured with security role privileges, which means o
 
 ## Prerequisites
 
+- Confirm that the orgdbsettings `EnableRoleBasedSystemViews' property is set to **true** using [OrganizationSettingsEditor tool](https://learn.microsoft.com/power-platform/admin/environment-database-settings).
 - System administrator security role membership in the Microsoft Dataverse environment.
 - Turning on auditing is recommended, but not required.
 
