@@ -1,7 +1,7 @@
 ---
 title: Add the rich text editor control to a model-driven app
 description: Learn how to add and customize the rich text editor control in Power Apps model-driven apps to create and edit formatted text.
-ms.date: 07/14/2025
+ms.date: 08/22/2025
 ms.update-cycle: 180-days
 ms.topic: how-to
 ms.author: saperlmu
@@ -467,6 +467,15 @@ Email templates and signatures:
 
 - If you experience an issue with the way an email template renders, we recommend that you recreate it in the modern editor.
 - Nested HTML structures—such as deeply nested &lt;div&gt; or &lt;table&gt; elements—can cause rendering problems in the rich text editor. We recommend that you simplify the HTML structure by removing unnecessary nested &lt;div&gt; or &lt;table&gt; tags to ensure consistent rendering across clients.
+
+## Tags
+
+The following tags are no longer supported in the modern rich text editor.
+
+| Tag | Description | Modern rich text editor alternative |
+|----------|-----------|-----------------|
+| &lt;acronym&gt; | Defines an acronym | &lt;abbr&gt;
+|
 
 ## Frequently asked questions
 
