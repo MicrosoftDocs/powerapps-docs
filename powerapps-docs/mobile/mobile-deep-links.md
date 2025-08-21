@@ -56,7 +56,7 @@ Deep links for the Power Apps mobile app should start with the following:
 | autoLoginUpn=&lt;e-mail&gt;      | Autopopulates e-mail and triggers sign-in. <br><br>**Note**: This parameter will be ignored if a user is already signed into the app. | No|
 | forceOfflineDataSync=true | Ensures that data sync is triggered so that all the latest data is available. | No|
 
-***Consideration**
+***Considerations**
 - The environment ID and appLogicalName are mandatory for all new deep links.
 - Existing deep links without an environment ID or appLogicalName will experience slower performance until December 2025, after which they will not be supported.  
 - Update all existing deep links to include the environment ID and appLogicalName to improve performance and reduce wait time.
