@@ -1,13 +1,13 @@
 ---
 title: Link your Dataverse environment to Microsoft Fabric and unlock deep insights
 description: Link your Microsoft Dataverse data from Power Apps and Dynamics 365 with Microsoft Fabric and unlock advanced insights.
-author: MilindaV2
-ms.author: jasonhuang
+author: swatimadhukargit
+ms.author: swatim
 ms.reviewer: matp
 ms.service: powerapps
 ms.subservice: dataverse-maker
 ms.topic: how-to
-ms.date: 08/15/2025
+ms.date: 08/18/2025
 ms.custom: template-how-to
 ---
 # Link your Dataverse environment to Microsoft Fabric and unlock deep insights

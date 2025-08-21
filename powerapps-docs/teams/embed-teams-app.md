@@ -6,7 +6,7 @@ ms.topic: how-to
 ms.custom: canvas
 ms.collection: get-started
 ms.reviewer: mkaur
-ms.date: 08/25/2022
+ms.date: 08/19/2025
 ms.subservice: teams
 ms.author: mabolan
 search.audienceType: 
@@ -128,7 +128,7 @@ The following context variables from Teams are supported:
 - channelId
 - channelType
 - chatId
-- groupId
+- groupId (not supported with private channels)
 - hostClientType
 - subEntityId
 - teamId
