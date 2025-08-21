@@ -96,7 +96,7 @@ To remove all suggested actions from a table:
 Successfully generated suggested actions can be viewed in the **Suggested Action** table available in the **Tables** area in [Power Apps](https://make.powerapps.com).
 
 ## Related information
-<!-- Remove comment tags when this article is live.
-[Use suggested actions in the agent feed (preview)](../../user/use-suggested-actions-in-the-agent-feed.md) -->
 
-[Add agents to your model-driven app (preview)](add-agents-to-app.md)
+[Use suggested actions in the agent feed](../../user/use-suggested-actions-in-the-agent-feed.md)
+
+[Add agents to your model-driven app](add-agents-to-app.md)
