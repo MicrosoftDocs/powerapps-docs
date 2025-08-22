@@ -52,6 +52,10 @@ In addition to creating and managing connections in [powerapps.com](https://make
 * Update an existing app, or create one from scratch as [add a connection](add-data-connection.md) describes.
 * Open an app that another user created and [shared with you](share-app.md).
 
+### How data connections are used when running the app
+
+When a canvas app runs, Power Apps attempts to locate and reuse an existing connection. If no suitable connection is found, a new one is created for the user based on the connection information stored in the app. This newly created connection may differ from the one originally used during app authoring. This behavior may differ from how other products in the Power Platform handle connections.
+
 > [!NOTE]
 > If you want to use Power Apps Studio instead, open the **File** menu, and then click or tap **Connections**, [powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) opens so that you can create and manage connections there.
 
