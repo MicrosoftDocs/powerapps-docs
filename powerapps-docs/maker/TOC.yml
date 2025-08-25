@@ -57,6 +57,8 @@
         href: ../user/ai-in-apps.md
       - name: Supervise agents using agent feed (preview)
         href: ../user/supervise-agents-with-agent-feed.md
+      - name: Use suggested actions in the agent feed (preview)
+        href: ../user/use-suggested-actions-in-the-agent-feed.md
       - name: Use form fill assistance
         href: ../user/form-filling-assistance.md
       - name: Use row summary
@@ -694,7 +696,7 @@
         items:
         - name: Get started with formulas
           href: ./canvas-apps/working-with-formulas.md
-        - name: Build an agent to automate your business process (preview)
+        - name: Build an agent to automate your business process
           href: ./canvas-apps/agent-builder.md  
         - name: Use Copilot to create and edit Power Fx formulas
           href: ./canvas-apps/ai-formulas-formulabar.md
@@ -1300,8 +1302,8 @@
     items:
     - name: Overview
       href: ./canvas-apps/create-performant-apps-overview.md
-    - name: Use Monitor to get insights and recommendations (preview)
-      href: ./canvas-apps/monitor-app-performance.md
+    - name: Use Monitor to get insights and recommendations 
+      href: common/monitor-app-performance.md
     - name: Analyze app telemetry using Application Insights
       href: ./canvas-apps/application-insights.md 
     - name: Understand canvas app execution phases and data flow
@@ -1801,7 +1803,9 @@
       - name: Create a Power BI embedded dashboard
         href: ./model-driven-apps/create-edit-powerbi-embedded-page.md
     - name: Add agents to your app (preview)
-      href: ./model-driven-apps/add-agents-to-app.md  
+      href: ./model-driven-apps/add-agents-to-app.md
+    - name: Configure suggested actions (preview)
+      href: ./model-driven-apps/configure-suggested-actions.md
     - name: Copilot chat for apps
       href:
       items:
@@ -1877,6 +1881,8 @@
       href: ./common/performance-insights-overview.md
     - name: Understand performance insights
       href: ./common/performance-insights-categories.md
+    - name:  Use Monitor to get insights and recommendations
+      href: common/monitor-app-performance.md
   - name: App ratings (preview)
     href: ./common/app-ratings.md
   - name: FAQ about model-driven apps
@@ -2148,6 +2154,8 @@
         href: ./data-platform/map-entity-fields.md
       - name: How to delete columns
         href: ./data-platform/delete-fields.md
+      - name: Delete a column with AI Skill Config dependency
+        href: ./data-platform/ai-skill-config-table.md
   - name: Apply business logic
     href: ./data-platform/processes.md
     items:

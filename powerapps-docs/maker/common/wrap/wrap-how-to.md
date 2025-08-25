@@ -54,11 +54,11 @@ When you update and republish your app, the wrapped app is automatically updated
 1. On the **Choose mobile platform to target** screen, enter a **Bundle ID**.
 
    > [!NOTE]
-   > The **Bundle ID** is a unique identifier for your app. It must contain one period (.) and no spaces. Use this same bundle ID when [creating the Azure key vault](create-key-vault-for-code-signing.md#configure-key-vault) after generating and uploading your iOS or Android certificates. If you have already created the Azure Key Vault, verify the bundle ID in the **Tags** section of the [Azure portal](https://portal.azure.com).
+   > The **Bundle ID** is a unique identifier for your app. It must contain one period (.) and no spaces. Use this same bundle ID when [creating the Azure key vault](create-key-vault-for-code-signing.md) after generating and uploading your iOS or Android certificates. If you have already created the Azure Key Vault, verify the bundle ID in the **Tags** section of the [Azure portal](https://portal.azure.com).
 
 2. Under **Target platform(s)**, select all the mobile platforms that your end users use on their mobile devices.
 
-3. You need to have Azure key vault, to upload your build to Azure blob storage. If you haven't already created, create one. For more information see, [create an Azure key vault](create-key-vault-for-code-signing.md#configure-key-vault). Add the required tags, secrets, and certificates. Add the environment variable if not created already.
+3. You need to have Azure key vault, to upload your build to Azure blob storage. If you haven't already created, create one. For more information see, [create an Azure key vault](create-key-vault-for-code-signing.md). Add the required tags, secrets, and certificates. Add the environment variable if not created already.
 
    a. To create the environment variable, go to [Power Apps](https://make.powerapps.com) > **Solutions** > **Default solution**. Then select **New** > **More** > **Environment variable**, add the display name as "PA_Wrap_KV_ResourceID".
       :::image type="content" source="media/how-to-v2/add-new-env-variable.png" alt-text="Screenshot that shows screen for adding new environment variable." lightbox="media/how-to-v2/add-new-env-variable.png":::

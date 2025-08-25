@@ -1,6 +1,6 @@
 ---
-title: "Sample: End a recurring appointment (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample shows how to end an recurring appointment series" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Sample: End a recurring appointment series" 
+description: "This sample shows how to end an recurring appointment series" 
 ms.date: 04/03/2022
 author: JimDaly #TODO: No Owner
 ms.author: jdaly
@@ -14,8 +14,6 @@ contributors:
 ---
 
 # Sample: End a recurring appointment series
-
-<!-- https://learn.microsoft.com/dynamics365/customer-engagement/developer/sample-end-recurring-appointment-series -->
 
 This sample shows how to end a recurring appointment series by using the [DeleteOpenInstancesRequest](/dotnet/api/microsoft.crm.sdk.messages.deleteopeninstancesrequest) message.
 
