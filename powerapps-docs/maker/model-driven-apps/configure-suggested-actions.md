@@ -62,7 +62,7 @@ In model-driven apps, users often spend significant time 1) identifying which re
 
 ## Edit suggested actions
 
-1. Select the **"..."** menu on the suggested action table you want to edit, and then select **Edit actions**.
+1. Select **...** next to the suggested action table you want to edit, and then select **Edit actions**.
    :::image type="content" source="media/suggested-actions/suggested-actions-edit-action.png" alt-text="Edit suggested actions" lightbox="media/suggested-actions/suggested-actions-edit-action.png":::
 
 1. Edit the action you want.
@@ -73,7 +73,7 @@ In model-driven apps, users often spend significant time 1) identifying which re
 
 To remove a specific suggested action within a table:
 
-1. Select the **"..."** menu on the suggested action table you want to edit, and then select **Edit actions**
+1. Select **...** next to the suggested action table you want to edit, and then select **Edit actions**
   :::image type="content" source="media/suggested-actions/suggested-actions-edit-action.png" alt-text="Edit suggested actions" lightbox="media/suggested-actions/suggested-actions-edit-action.png":::
 
 1. Select **X** on the action you want to remove.
@@ -84,7 +84,7 @@ To remove a specific suggested action within a table:
 
 To remove all suggested actions from a table:
 
-1. Select the **"..."** menu on the suggested action you want to edit, and then select **Remove from app**.
+1. Select **...** next to the suggested action you want to edit, and then select **Remove from app**.
    :::image type="content" source="media/suggested-actions/suggested-actions-delete-all.png" alt-text="Delete all suggested actions for a table" lightbox="media/suggested-actions/suggested-actions-delete-all.png":::
 
 1. Save and publish your app.
