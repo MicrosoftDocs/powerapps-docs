@@ -16,7 +16,7 @@ search.audienceType:
 
 [!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
-Suggested actions help users focus on what matters most by showing intelligent, context-aware recommendations for high-value records. These actions are defined by makers and automatically appear when you go to an applicable record in a model-driven app.
+Suggested actions let users focus on what matters most by showing intelligent, context-aware recommendations for high-value records. These actions are defined by makers and automatically appear when you go to an applicable record in a model-driven app.
 
 ## Prerequisites
 
@@ -35,13 +35,14 @@ Suggested actions help users focus on what matters most by showing intelligent, 
 Suggested actions are evaluated when a form loads. If the system determines that a configured action is relevant, it appears in the agent feed.
 :::image type="content" source="media/suggested-actions/suggested-actions-agent-feed.png" alt-text="Screenshot of suggested actions in the agent feed." lightbox="media/suggested-actions/suggested-actions-agent-feed.png":::
 
-Note that suggested actions are only recommendations, and they don't perform tasks for you. Instead, they highlight actions you might want to take based on maker configurations, the current record’s data, and your past behavior. Suggested actions must be performed by the user.
+Suggested actions are only recommendations, and they don't perform tasks for you. Instead, they highlight actions you might want to take based on maker configurations, the current record’s data, and your past behavior. Suggested actions must be performed by the user.
 
-You can select a previously generated suggested action to automatically navigate back to the associated record if you have navigated away from that record.
+Select a previously generated suggested action to automatically navigate back to the associated record if you have navigated away from it.
 
 > [!NOTE]
-> Filter the agent feed to show only suggested actions, making it easier to focus on them.
-> :::image type="content" source="media/suggested-actions/suggested-actions-filtering.png" alt-text="Filtering suggested actions" lightbox="media/suggested-actions/suggested-actions-filtering.png":::
+> Filter the agent feed to show only suggested actions to make it easier to focus on them.
+
+:::image type="content" source="media/suggested-actions/suggested-actions-filtering.png" alt-text="Filtering suggested actions" lightbox="media/suggested-actions/suggested-actions-filtering.png":::
 
 Here is an annotated example of a suggested action:
 :::image type="content" source="media/suggested-actions/suggested-actions-card-map.png" alt-text="Suggested actions card" lightbox="media/suggested-actions/suggested-actions-card-map.png":::
@@ -72,13 +73,13 @@ After interacting with a suggested action:
 
 ## Example workflow
 
-A typical interaction with a suggested action might look like this:
+A typical interaction with a suggested action look like this:
 
-1. **Navigate to a record:** Open a record from a table that has suggested actions configured in a model-driven app. This triggers the system to evaluate whether any suggested actions apply.
-1. **Review the suggested action:** A suggested action appears in the agent feed and you decide if it's something you should act on.
-1. **Take action manually:** Complete the task manually (for example, update a field, send an email, or approve a request).
+1. **Navigate to a record:** Open a record from a table with suggested actions configured in a model-driven app. This triggers the system to evaluate whether any suggested actions apply.
+1. **Review the suggested action:** A suggested action appears in the agent feed. Decide if it's something you should act on.
+1. **Take action manually:** Complete the task manually. For example, update a field, send an email, or approve a request.
 1. **Mark the action as complete:** After manually finishing the task, return to the agent feed and mark the action as complete.
-1. **Or dismiss it:** If the action isn’t relevant and you decide not to do the task, dismiss it instead.
+1. **Or dismiss it:** If the action isn’t relevant and you decide not to do the task, dismiss it.
 
 ## How suggested actions differ from agent activity
 - **Suggested actions** help reduce the mental effort of deciding what to do next. They guide you toward high-impact tasks based on context and history.
