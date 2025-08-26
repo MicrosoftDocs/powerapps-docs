@@ -20,29 +20,29 @@ contributors:
 
 **[Display form](controls/control-form-detail.md)** and **[Edit form](controls/control-form-detail.md)** controls in canvas apps are containers for entire records. Each form has multiple [Card controls](controls/control-card.md), which are the building blocks of the form. Each card shows or lets you edit a single field from the record and links to that field through its **DataField** property. The form shows the complete record, and each card focuses on one field, so you control how data is shown or updated.
 
-Open your app for editing in Power Apps Studio. In the tree view, select a form control. In the **Properties** pane, choose which fields to show, how to show each field, and the order to show them. For example, the screenshot below shows an **Edit form** control in an app built from a list named **Assets**, where you customize fields to fit your needs.
+Open your app for editing in Power Apps Studio. In the tree view, select a form control. In the **Properties** pane, choose which fields to show, how to show each field, and the order to show them. For example, the following screenshot shows an **Edit form** control in an app built from a list named **Assets**, where you customize fields to fit your needs.
 
-![Screenshot of the first screen showing an Edit form control in an app built from a list named Assets.](./media/working-with-cards/first-screen.png "Screenshot of the first screen showing an Edit form control in an app built from a list named Assets.")
+![Screenshot of an Edit form control in an app built from a list named Assets. The form displays several fields that you can customize.](./media/working-with-cards/first-screen.png "Screenshot of an Edit form control in an app built from a list named Assets. The form displays several fields that you can customize.")
 
-Start with cards by reading [add a form](add-form.md) and [understand data forms](working-with-forms.md). This article explains how cards work and how to customize or create your own.
+Start with cards by reading [add a form](add-form.md) and [understand data forms](working-with-forms.md). This article explains how cards work, and how to customize or create your own.
 
 ## Predefined cards
 
-Power Apps offers a predefined set of cards for strings, numbers, and other data types, so you can tailor your app to specific data requirements. In the right pane, you see the available variations and can change the card used for a field.
+Power Apps offers a predefined set of cards for strings, numbers, and other data types, so you can tailor your app to specific data needs. In the right pane, you see the available types and can change the card for a field.
 
-![Selected card.](./media/working-with-cards/selected-card.png "Selected card")
+![Screenshot of a selected card in Power Apps.](./media/working-with-cards/selected-card.png "Screenshot of a selected card in Power Apps.")
 
-In this example, a single-line text card is selected, but the URL text is longer than what fits on a single line. Change this to a multi-line text card so users have more room to edit.
+In this example, a single-line text card is selected, but the URL text is longer than what fits on one line. Change this to a multi-line text card so users have more space to edit.
 
-![Multiline edit.](./media/working-with-cards/multiline-edit.png "Multiline edit")
+![Screenshot of a multiline text card edit in Power Apps.](./media/working-with-cards/multiline-edit.png "Screenshot of a multiline text card edit in Power Apps.")
 
-Several fields in this data source aren't shown, but you show or hide a field by selecting its checkbox. This example shows how to show the **SecurityCode** field.
+Several fields in this data source aren't shown, but you can show or hide a field by selecting its checkbox. This example shows how to show the **SecurityCode** field.
 
 ## Customize a card
 
 Cards have other controls. In an **Edit form** control, the user enters data in a standard **[Text input](controls/control-text-input.md)** control that you add from the **Insert** tab.
 
-This article explains how to change a card's appearance by changing controls in it.
+This article explains how to change a card's appearance by changing the controls in it.
 
 1. First, return to the card that was inserted most recently for the **SecurityCode** field. Select this card by selecting it once:
    
