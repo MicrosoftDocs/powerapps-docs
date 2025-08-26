@@ -41,11 +41,17 @@ In model-driven apps, users often spend significant time 1) identifying which re
   
 1. Sign in to [Power Apps](https://make.powerapps.com), select **Apps**, and then select **Edit** for the app you want to modify.
 1. In the app designer, select **Agents** on the left navigation pane.
+
    :::image type="content" source="media/suggested-actions/suggested-actions-agent-pane.png" alt-text="App designer Agents pane" lightbox="media/suggested-actions/suggested-actions-agent-pane.png":::
+
 1. Select **+ Create**, and then select **Suggested action**.
+
    :::image type="content" source="media/suggested-actions/suggested-actions-create.png" alt-text="App designer create button" lightbox="media/suggested-actions/suggested-actions-create.png":::
+
 1. Select a table used in your application where you want suggested actions to be generated. The table where you want to generate suggested actions must first be added to your application.
-  :::image type="content" source="media/suggested-actions/suggested-actions-table-select.png" alt-text="Suggested action configuration choose a table" lightbox="media/suggested-actions/suggested-actions-table-select.png":::
+
+   :::image type="content" source="media/suggested-actions/suggested-actions-table-select.png" alt-text="Suggested action configuration choose a table" lightbox="media/suggested-actions/suggested-actions-table-select.png":::
+
 1. Fill in the fields:
 
    - **Action to suggest**: Enter a short, task-oriented label, such as *Approve claim*.
@@ -63,6 +69,7 @@ In model-driven apps, users often spend significant time 1) identifying which re
 ## Edit suggested actions
 
 1. Select **...** next to the suggested action table you want to edit, and then select **Edit actions**.
+
    :::image type="content" source="media/suggested-actions/suggested-actions-edit-action.png" alt-text="Edit suggested actions" lightbox="media/suggested-actions/suggested-actions-edit-action.png":::
 
 1. Edit the action you want.
@@ -74,10 +81,11 @@ In model-driven apps, users often spend significant time 1) identifying which re
 To remove a specific suggested action within a table:
 
 1. Select **...** next to the suggested action table you want to edit, and then select **Edit actions**
-  :::image type="content" source="media/suggested-actions/suggested-actions-edit-action.png" alt-text="Edit suggested actions" lightbox="media/suggested-actions/suggested-actions-edit-action.png":::
+
+   :::image type="content" source="media/suggested-actions/suggested-actions-edit-action.png" alt-text="Edit suggested actions" lightbox="media/suggested-actions/suggested-actions-edit-action.png":::
 
 1. Select **X** on the action you want to remove.
-  :::image type="content" source="media/suggested-actions/suggested-actions-delete-single.png" alt-text="Delete a single suggested action" lightbox="media/suggested-actions/suggested-actions-delete-single.png":::
+   :::image type="content" source="media/suggested-actions/suggested-actions-delete-single.png" alt-text="Delete a single suggested action" lightbox="media/suggested-actions/suggested-actions-delete-single.png":::
 
 1. Select **Save**.
 1. Save and publish your app.
@@ -85,6 +93,7 @@ To remove a specific suggested action within a table:
 To remove all suggested actions from a table:
 
 1. Select **...** next to the suggested action you want to edit, and then select **Remove from app**.
+
    :::image type="content" source="media/suggested-actions/suggested-actions-delete-all.png" alt-text="Delete all suggested actions for a table" lightbox="media/suggested-actions/suggested-actions-delete-all.png":::
 
 1. Save and publish your app.
