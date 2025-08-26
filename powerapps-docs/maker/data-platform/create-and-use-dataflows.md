@@ -53,7 +53,7 @@ it.
 > [!IMPORTANT]
 >
 > - Creating dataflows is currently not available with Power Apps Developer Plan licenses.
-> - The Firefox web browser currently isn't supported for use in creating and maintaining dataflows in Power Apps. More information: [You receive the error message "There was a problem refreshing the dataflow"](#you-receive-the-error-message-there-was-a-problem-refreshing-the-dataflow)
+> - The Firefox web browser currently isn't supported for the "Download refresh history file" action in Power Apps dataflows. More information: [You receive the error message "There was a problem refreshing the dataflow"](#you-receive-the-error-message-there-was-a-problem-refreshing-the-dataflow)
 
 1. Sign in to Power Apps, and verify which environment you're in, find the environment switcher near the right side of the command bar.
 
