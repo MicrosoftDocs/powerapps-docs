@@ -57,6 +57,8 @@
         href: ../user/ai-in-apps.md
       - name: Supervise agents using agent feed (preview)
         href: ../user/supervise-agents-with-agent-feed.md
+      - name: Use suggested actions in the agent feed (preview)
+        href: ../user/use-suggested-actions-in-the-agent-feed.md
       - name: Use form fill assistance
         href: ../user/form-filling-assistance.md
       - name: Use row summary
@@ -1548,7 +1550,7 @@
           href: ./model-driven-apps/specify-properties-for-unified-interface-apps.md
         - name: Specifying a default view
           href: ./model-driven-apps/specify-default-views.md
-        - name: Manage access to views (preview)
+        - name: Manage access to views
           href: ./model-driven-apps/manage-view-access.md
         - name: Deleting and turning off views
           href: ./model-driven-apps/remove-views.md
@@ -2471,7 +2473,7 @@
     items:
     - name: Security in Dataverse
       href: /power-platform/admin/wp-security-cds?context=/power-apps/maker/context
-    - name: Manage access to views (preview)
+    - name: Manage access to views
       href: ./model-driven-apps/manage-view-access.md
   - name: For developers
     href: ../developer/data-platform/overview.md
