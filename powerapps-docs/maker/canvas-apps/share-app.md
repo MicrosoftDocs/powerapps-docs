@@ -197,7 +197,7 @@ You can share an app with [Microsoft 365 groups](/microsoft-365/admin/create-gro
     Install-Module Microsoft.Graph -Scope CurrentUser
     ```
 
-2. Connect to Microsoft Graph. For information about the administrator roles required to manage groups, see  [Microsoft Entra roles for managing groups](/graph/api/resources/groups-overview?view=graph-rest-1.0&tabs=http#microsoft-entra-roles-for-managing-groups).
+2. Connect to Microsoft Graph. For information about the administrator roles required to manage groups, see  [Microsoft Entra roles for managing groups](/graph/api/resources/groups-overview#microsoft-entra-roles-for-managing-groups).
 
     ```powershell
     Connect-MgGraph -Scopes "Group.ReadWrite.All"
