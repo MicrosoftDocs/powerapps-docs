@@ -6,9 +6,9 @@ author: lancedMicrosoft
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 04/2/2025
+ms.date: 08/27/2025
 ms.subservice: canvas-maker
-ms.author: lanced
+ms.author: alaug
 search.audienceType: 
   - maker
 contributors:
