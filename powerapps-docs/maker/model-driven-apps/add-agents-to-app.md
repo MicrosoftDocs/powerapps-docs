@@ -114,6 +114,8 @@ The interactive agent isn't able to be defined or referenced in app designer for
 - Sales Hub
 - Sustainability
 
+> [!NOTE] When a model-driven app includes both Lead and Opportunity tables, it is implicitly using the **Copilot in Dynamics 365 Sales** agent. The app designer will not show the interactive agent but the **Copilot in Dynamics 365 Sales** agent can be customized from **Copilot Studio**. 
+
 ## Related information
 
 [Overview of App Designer](app-designer-overview.md)<br/>
