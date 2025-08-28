@@ -104,7 +104,7 @@ The interactive agent isn't able to be defined or referenced in app designer for
 - Connected Field Service
 - Customer Insights
 - Customer Service Hub
-- Customer Services workspace
+- Customer Service workspace
 - Dynamics 365 App for Outlook
 - Field Service
 - Field Service Mobile
