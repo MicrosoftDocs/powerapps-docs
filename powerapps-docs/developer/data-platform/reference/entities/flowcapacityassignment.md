@@ -126,7 +126,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|`capacityoverage`|
-|RequiredLevel|None|
+|RequiredLevel|SystemRequired|
 |Type|Integer|
 |MaxValue|2147483647|
 |MinValue|0|
@@ -165,7 +165,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`capacitytype`|
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
-|DefaultFormValue|-1|
+|DefaultFormValue||
 |GlobalChoiceName|`flowcapacityassignment_capacitytype`|
 
 #### CapacityType Choices/Options

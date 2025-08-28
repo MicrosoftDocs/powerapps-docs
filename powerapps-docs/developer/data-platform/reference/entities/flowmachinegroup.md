@@ -99,6 +99,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [trytoreusewindowssession](#BKMK_trytoreusewindowssession)
+- [UsageType](#BKMK_UsageType)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 
 ### <a name="BKMK_Description"></a> Description
@@ -653,6 +654,28 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |DefaultValue|False|
 |True Label|Yes|
 |False Label|No|
+
+### <a name="BKMK_UsageType"></a> UsageType
+
+|Property|Value|
+|---|---|
+|Description|**Flow Machine Group Usage Type.**|
+|DisplayName|**Flow Machine Group Usage Type**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`usagetype`|
+|RequiredLevel|SystemRequired|
+|Type|Picklist|
+|DefaultFormValue|0|
+|GlobalChoiceName|`flowmachinegroup_usagetype`|
+
+#### UsageType Choices/Options
+
+|Value|Label|
+|---|---|
+|0|**RpaOnly**|
+|1|**CuaOnly**|
+|2|**RpaAndCua**|
 
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
 

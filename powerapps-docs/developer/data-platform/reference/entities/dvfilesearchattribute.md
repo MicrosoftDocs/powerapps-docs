@@ -69,6 +69,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [IsFilterable](#BKMK_IsFilterable)
 - [IsSearchable](#BKMK_IsSearchable)
+- [IsVectorizable](#BKMK_IsVectorizable)
 - [Name](#BKMK_Name)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
@@ -189,6 +190,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Boolean|
 |GlobalChoiceName|`dvfilesearchattribute_issearchable`|
 |DefaultValue|True|
+|True Label|Yes|
+|False Label|No|
+
+### <a name="BKMK_IsVectorizable"></a> IsVectorizable
+
+|Property|Value|
+|---|---|
+|Description||
+|DisplayName|**Is Vectorizable**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`isvectorizable`|
+|RequiredLevel|None|
+|Type|Boolean|
+|GlobalChoiceName|`dvfilesearchattribute_isvectorizable`|
+|DefaultValue|False|
 |True Label|Yes|
 |False Label|No|
 

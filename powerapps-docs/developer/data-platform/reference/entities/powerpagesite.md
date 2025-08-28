@@ -84,6 +84,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
 - [powerpagesiteId](#BKMK_powerpagesiteId)
+- [powerpagesitetype](#BKMK_powerpagesitetype)
 - [primarydomainname](#BKMK_primarydomainname)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
@@ -220,6 +221,27 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`powerpagesiteid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
+
+### <a name="BKMK_powerpagesitetype"></a> powerpagesitetype
+
+|Property|Value|
+|---|---|
+|Description||
+|DisplayName|**Site Type**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`powerpagesitetype`|
+|RequiredLevel|ApplicationRequired|
+|Type|Picklist|
+|DefaultFormValue|-1|
+|GlobalChoiceName|`powerpagesitetype`|
+
+#### powerpagesitetype Choices/Options
+
+|Value|Label|
+|---|---|
+|0|**Default**|
+|2|**Code Site**|
 
 ### <a name="BKMK_primarydomainname"></a> primarydomainname
 
@@ -726,6 +748,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [powerpagesite_powerpagecomponent_powerpagesiteid](#BKMK_powerpagesite_powerpagecomponent_powerpagesiteid)
 - [powerpagesite_powerpagesitelanguage_powerpagesiteid](#BKMK_powerpagesite_powerpagesitelanguage_powerpagesiteid)
 - [powerpagesite_powerpagesitepublished_powerpagesiteid](#BKMK_powerpagesite_powerpagesitepublished_powerpagesiteid)
+- [powerpagesite_powerpagessourcefile_powerpagesiteid](#BKMK_powerpagesite_powerpagessourcefile_powerpagesiteid)
 - [powerpagesite_PrincipalObjectAttributeAccesses](#BKMK_powerpagesite_PrincipalObjectAttributeAccesses)
 - [powerpagesite_ProcessSession](#BKMK_powerpagesite_ProcessSession)
 - [powerpagesite_SyncErrors](#BKMK_powerpagesite_SyncErrors)
@@ -814,6 +837,18 @@ Many-To-One Relationship: [powerpagesitepublished powerpagesite_powerpagesitepub
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_powerpagesite_powerpagessourcefile_powerpagesiteid"></a> powerpagesite_powerpagessourcefile_powerpagesiteid
+
+Many-To-One Relationship: [powerpagessourcefile powerpagesite_powerpagessourcefile_powerpagesiteid](powerpagessourcefile.md#BKMK_powerpagesite_powerpagessourcefile_powerpagesiteid)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`powerpagessourcefile`|
+|ReferencingAttribute|`powerpagesiteid`|
+|ReferencedEntityNavigationPropertyName|`powerpagesite_powerpagessourcefile_powerpagesiteid`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 ### <a name="BKMK_powerpagesite_PrincipalObjectAttributeAccesses"></a> powerpagesite_PrincipalObjectAttributeAccesses
 
 Many-To-One Relationship: [principalobjectattributeaccess powerpagesite_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_powerpagesite_PrincipalObjectAttributeAccesses)
@@ -855,6 +890,9 @@ Many-To-One Relationship: [syncerror powerpagesite_SyncErrors](syncerror.md#BKMK
 
 These relationships are many-to-many. Listed by **SchemaName**.
 
+- [powerpagesite_dvfilesearch](#BKMK_powerpagesite_dvfilesearch)
+- [powerpagesite_dvtablesearch](#BKMK_powerpagesite_dvtablesearch)
+
 ### <a name="BKMK_powerpagesite_dvfilesearch"></a> powerpagesite_dvfilesearch
 
 See [dvfilesearch powerpagesite_dvfilesearch Many-To-Many Relationship](dvfilesearch.md#BKMK_powerpagesite_dvfilesearch)
@@ -866,6 +904,19 @@ See [dvfilesearch powerpagesite_dvfilesearch Many-To-Many Relationship](dvfilese
 |SchemaName|`powerpagesite_dvfilesearch`|
 |IntersectAttribute|`powerpagesiteid`|
 |NavigationPropertyName|`powerpagesite_dvfilesearch`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_powerpagesite_dvtablesearch"></a> powerpagesite_dvtablesearch
+
+See [dvtablesearch powerpagesite_dvtablesearch Many-To-Many Relationship](dvtablesearch.md#BKMK_powerpagesite_dvtablesearch)
+
+|Property|Value|
+|---|---|
+|IntersectEntityName|`powerpagesite_dvtablesearch`|
+|IsCustomizable|False|
+|SchemaName|`powerpagesite_dvtablesearch`|
+|IntersectAttribute|`powerpagesiteid`|
+|NavigationPropertyName|`powerpagesite_dvtablesearch`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 
