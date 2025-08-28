@@ -1,7 +1,7 @@
 ---
 title: "Add agents to your model-driven app" 
 description: Learn how to add agents to your model-driven app in Power Apps.
-ms.date: 08/12/2025
+ms.date: 08/28/2025
 ms.reviewer: matp
 ms.topic: how-to
 author: adrianorth
@@ -115,7 +115,7 @@ The interactive agent isn't able to be defined or referenced in app designer for
 - Sustainability
 
 > [!NOTE]
-> When a model-driven app includes both Lead and Opportunity tables, it is implicitly using the **Copilot in Dynamics 365 Sales** agent. The app designer will not show the interactive agent but the **Copilot in Dynamics 365 Sales** agent can be customized from **Copilot Studio**. 
+> When a model-driven app includes both Lead and Opportunity tables, it implicitly uses the **Copilot in Dynamics 365 Sales** agent. The app designer doesn't show the interactive agent but the **Copilot in Dynamics 365 Sales** agent can be customized from Copilot Studio. 
 
 ## Related information
 
