@@ -251,7 +251,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [IsBaseCardStaticFieldDataEnabled](#BKMK_IsBaseCardStaticFieldDataEnabled)
 - [IsBasicGeospatialIntegrationEnabled](#BKMK_IsBasicGeospatialIntegrationEnabled)
 - [IsBPFEntityCustomizationFeatureEnabled](#BKMK_IsBPFEntityCustomizationFeatureEnabled)
+- [IsCloudFlowSavingsEnabled](#BKMK_IsCloudFlowSavingsEnabled)
 - [IsCollaborationExperienceEnabled](#BKMK_IsCollaborationExperienceEnabled)
+- [IsComputerUseInMCSEnabled](#BKMK_IsComputerUseInMCSEnabled)
 - [IsConflictDetectionEnabledForMobileClient](#BKMK_IsConflictDetectionEnabledForMobileClient)
 - [IsContactMailingAddressSyncEnabled](#BKMK_IsContactMailingAddressSyncEnabled)
 - [IsContentSecurityPolicyEnabled](#BKMK_IsContentSecurityPolicyEnabled)
@@ -266,6 +268,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [IsDesktopFlowConnectionEmbeddingEnabled](#BKMK_IsDesktopFlowConnectionEmbeddingEnabled)
 - [IsDesktopFlowRuntimeRepairAttendedEnabled](#BKMK_IsDesktopFlowRuntimeRepairAttendedEnabled)
 - [IsDesktopFlowRuntimeRepairUnattendedEnabled](#BKMK_IsDesktopFlowRuntimeRepairUnattendedEnabled)
+- [IsDesktopFlowSavingsEnabled](#BKMK_IsDesktopFlowSavingsEnabled)
 - [IsDesktopFlowSchemaV2Enabled](#BKMK_IsDesktopFlowSchemaV2Enabled)
 - [IsDesktopFlowVanillaImageSharingEnabled](#BKMK_IsDesktopFlowVanillaImageSharingEnabled)
 - [IsDuplicateDetectionEnabled](#BKMK_IsDuplicateDetectionEnabled)
@@ -328,6 +331,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [IsTextWrapEnabled](#BKMK_IsTextWrapEnabled)
 - [IsUserAccessAuditEnabled](#BKMK_IsUserAccessAuditEnabled)
 - [ISVIntegrationCode](#BKMK_ISVIntegrationCode)
+- [IsWorkQueueSavingsEnabled](#BKMK_IsWorkQueueSavingsEnabled)
 - [IsWriteInProductsAllowed](#BKMK_IsWriteInProductsAllowed)
 - [KaPrefix](#BKMK_KaPrefix)
 - [KbPrefix](#BKMK_KbPrefix)
@@ -2552,7 +2556,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`enableenvironmentsettingsapp`|
-|RequiredLevel|None|
+|RequiredLevel|SystemRequired|
 |Type|Boolean|
 |GlobalChoiceName|`organization_featureenabled`|
 |DefaultValue|False|
@@ -3816,6 +3820,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |True Label|Yes|
 |False Label|No|
 
+### <a name="BKMK_IsCloudFlowSavingsEnabled"></a> IsCloudFlowSavingsEnabled
+
+|Property|Value|
+|---|---|
+|Description|**Indicates whether Power Automate savings feature is enabled for Cloudflow.**|
+|DisplayName|**Enable Power Automate savings feature for Cloudflow**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`iscloudflowsavingsenabled`|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+|GlobalChoiceName|`organization_featureenabled`|
+|DefaultValue|True|
+|True Label|Yes|
+|False Label|No|
+
 ### <a name="BKMK_IsCollaborationExperienceEnabled"></a> IsCollaborationExperienceEnabled
 
 |Property|Value|
@@ -3828,6 +3848,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 |GlobalChoiceName|`organization_iscollaborationexperienceenabled`|
+|DefaultValue|True|
+|True Label|Yes|
+|False Label|No|
+
+### <a name="BKMK_IsComputerUseInMCSEnabled"></a> IsComputerUseInMCSEnabled
+
+|Property|Value|
+|---|---|
+|Description|**Indicates whether Computer Use in MCS feature is enabled in this organization.**|
+|DisplayName|**Enable Computer Use in MCS feature for this organization**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`iscomputeruseinmcsenabled`|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+|GlobalChoiceName|`organization_featureenabled`|
 |DefaultValue|True|
 |True Label|Yes|
 |False Label|No|
@@ -4049,6 +4085,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|`isdesktopflowruntimerepairunattendedenabled`|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+|GlobalChoiceName|`organization_featureenabled`|
+|DefaultValue|True|
+|True Label|Yes|
+|False Label|No|
+
+### <a name="BKMK_IsDesktopFlowSavingsEnabled"></a> IsDesktopFlowSavingsEnabled
+
+|Property|Value|
+|---|---|
+|Description|**Indicates whether Power Automate savings feature is enabled for Desktopflow.**|
+|DisplayName|**Enable Power Automate savings feature for Desktopflow**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`isdesktopflowsavingsenabled`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 |GlobalChoiceName|`organization_featureenabled`|
@@ -5059,6 +5111,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |5|**Web; Outlook Laptop Client**|
 |6|**Outlook**|
 |7|**All**|
+
+### <a name="BKMK_IsWorkQueueSavingsEnabled"></a> IsWorkQueueSavingsEnabled
+
+|Property|Value|
+|---|---|
+|Description|**Indicates whether Power Automate savings feature is enabled for WorkQueue.**|
+|DisplayName|**Enable Power Automate savings feature for WorkQueue**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`isworkqueuesavingsenabled`|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+|GlobalChoiceName|`organization_featureenabled`|
+|DefaultValue|True|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_IsWriteInProductsAllowed"></a> IsWriteInProductsAllowed
 
@@ -7788,6 +7856,7 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 - [EntityImageId](#BKMK_EntityImageId)
 - [FiscalSettingsUpdated](#BKMK_FiscalSettingsUpdated)
 - [IsAllMoneyDecimal](#BKMK_IsAllMoneyDecimal)
+- [IsClusteringEnabled](#BKMK_IsClusteringEnabled)
 - [IsDisabled](#BKMK_IsDisabled)
 - [MaxSupportedInternetExplorerVersion](#BKMK_MaxSupportedInternetExplorerVersion)
 - [MaxVerboseLoggingMailbox](#BKMK_MaxVerboseLoggingMailbox)
@@ -8028,6 +8097,22 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 |GlobalChoiceName|`organization_featureenabled`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
+
+### <a name="BKMK_IsClusteringEnabled"></a> IsClusteringEnabled
+
+|Property|Value|
+|---|---|
+|Description|**Read-only flag indicating whether clustering is enabled for the organization.**|
+|DisplayName|**Clustering is enabled.**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`isclusteringenabled`|
+|RequiredLevel|None|
+|Type|Boolean|
+|GlobalChoiceName|`organization_isclusteringenabled`|
 |DefaultValue|False|
 |True Label|Yes|
 |False Label|No|
@@ -8467,6 +8552,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [organization_application](#BKMK_organization_application)
 - [organization_appmodule](#BKMK_organization_appmodule)
 - [Organization_AsyncOperations](#BKMK_Organization_AsyncOperations)
+- [organization_attributeclusterconfig](#BKMK_organization_attributeclusterconfig)
 - [Organization_BulkDeleteFailures](#BKMK_Organization_BulkDeleteFailures)
 - [organization_business_unit_news_articles](#BKMK_organization_business_unit_news_articles)
 - [organization_business_units](#BKMK_organization_business_units)
@@ -8539,6 +8625,8 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [organization_retentionoperationdetail](#BKMK_organization_retentionoperationdetail)
 - [organization_roleeditorlayout](#BKMK_organization_roleeditorlayout)
 - [organization_roles](#BKMK_organization_roles)
+- [organization_sa_suggestedaction](#BKMK_organization_sa_suggestedaction)
+- [organization_sa_suggestedactioncriteria](#BKMK_organization_sa_suggestedactioncriteria)
 - [organization_saved_queries](#BKMK_organization_saved_queries)
 - [organization_saved_query_visualizations](#BKMK_organization_saved_query_visualizations)
 - [organization_sdkmessage](#BKMK_organization_sdkmessage)
@@ -8882,6 +8970,18 @@ Many-To-One Relationship: [asyncoperation Organization_AsyncOperations](asyncope
 |ReferencingAttribute|`regardingobjectid`|
 |ReferencedEntityNavigationPropertyName|`Organization_AsyncOperations`|
 |IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_organization_attributeclusterconfig"></a> organization_attributeclusterconfig
+
+Many-To-One Relationship: [attributeclusterconfig organization_attributeclusterconfig](attributeclusterconfig.md#BKMK_organization_attributeclusterconfig)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`attributeclusterconfig`|
+|ReferencingAttribute|`organizationid`|
+|ReferencedEntityNavigationPropertyName|`organization_attributeclusterconfig`|
+|IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_Organization_BulkDeleteFailures"></a> Organization_BulkDeleteFailures
@@ -9746,6 +9846,30 @@ Many-To-One Relationship: [role organization_roles](role.md#BKMK_organization_ro
 |ReferencingAttribute|`organizationid`|
 |ReferencedEntityNavigationPropertyName|`organization_roles`|
 |IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_organization_sa_suggestedaction"></a> organization_sa_suggestedaction
+
+Many-To-One Relationship: [sa_suggestedaction organization_sa_suggestedaction](sa_suggestedaction.md#BKMK_organization_sa_suggestedaction)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`sa_suggestedaction`|
+|ReferencingAttribute|`organizationid`|
+|ReferencedEntityNavigationPropertyName|`organization_sa_suggestedaction`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_organization_sa_suggestedactioncriteria"></a> organization_sa_suggestedactioncriteria
+
+Many-To-One Relationship: [sa_suggestedactioncriteria organization_sa_suggestedactioncriteria](sa_suggestedactioncriteria.md#BKMK_organization_sa_suggestedactioncriteria)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`sa_suggestedactioncriteria`|
+|ReferencingAttribute|`organizationid`|
+|ReferencedEntityNavigationPropertyName|`organization_sa_suggestedactioncriteria`|
+|IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_organization_saved_queries"></a> organization_saved_queries

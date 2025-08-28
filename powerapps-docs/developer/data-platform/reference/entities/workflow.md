@@ -1050,7 +1050,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`throttlingbehavior`|
 |RequiredLevel|None|
 |Type|Picklist|
-|DefaultFormValue|-1|
+|DefaultFormValue||
 |GlobalChoiceName|`workflow_throttlingbehaviortype`|
 
 #### ThrottlingBehavior Choices/Options
