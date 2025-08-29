@@ -45,16 +45,19 @@ AI Model table has the following writable columns:
 ### [SDK for .NET](#tab/sdk)
 
 ```csharp
-var query = new QueryExpression("msdyn_aimodel")
+static RetrieveAIModelsExample (IOrganizationService service)
 {
-    ColumnSet = new ColumnSet("msdyn_name", "msdyn_aimodelid")
-};
-
-var results = service.RetrieveMultiple(query);
-
-foreach (var entity in results.Entities)
-{
-    Console.WriteLine($"Model Name: {entity["msdyn_name"]}, ID: {entity["msdyn_aimodelid"]}");
+	var query = new QueryExpression("msdyn_aimodel")
+	{
+	    ColumnSet = new ColumnSet("msdyn_name", "msdyn_aimodelid")
+	};
+	
+	var results = service.RetrieveMultiple(query);
+	
+	foreach (var entity in results.Entities)
+	{
+	    Console.WriteLine($"Model Name: {entity["msdyn_name"]}, ID: {entity["msdyn_aimodelid"]}");
+	}
 }
 ```
 
@@ -113,43 +116,47 @@ The Predict action allows you to use an AI Model to generate predictions based o
 ### [SDK for .NET](#tab/sdk)
 
 ```csharp
-// Create the nested 'patient' entity
-var patientEntity = new Entity
+static PredictActionExample (IOrganizationService service, Guid yourAiModelId)
 {
-    Attributes =
-    {
-        { "firstname", "John" },
-        { "lastname", "Smith" }
-    }
-};
-
-// Create the main 'requestv2' entity
-var requestV2Entity = new Entity
-{
-    Attributes =
-    {
-        { "pai_sex", 1 },
-        { "pai_age", 10 },
-        { "patient", patientEntity }
-    }
-};
-
-// Create the Predict action request
-var predictRequest = new OrganizationRequest("Microsoft.Dynamics.CRM.Predict")
-{
-    Parameters = new ParameterCollection
-    {
-        { "version", "2.0" },
-        { "requestv2", requestV2Entity },
-        { "Target", new EntityReference("msdyn_aimodel", new Guid("your-ai-model-id")) }
-    }
-};
-
-// Execute the request
-var response = service.Execute(predictRequest);
-
-Console.WriteLine("Prediction Result:");
-Console.WriteLine(response.Results);
+	// Create the nested 'patient' entity
+	var patientEntity = new Entity
+	{
+	    Attributes =
+	    {
+	        { "firstname", "John" },
+	        { "lastname", "Smith" }
+	    }
+	};
+	
+	// Create the main 'requestv2' entity
+	var requestV2Entity = new Entity
+	{
+	    Attributes =
+	    {
+	        { "pai_sex", 1 },
+	        { "pai_age", 10 },
+	        { "patient", patientEntity }
+	    }
+	};
+	
+	// Create the Predict action request
+	var predictRequest = new OrganizationRequest("Predict")
+	{
+	    Parameters = new ParameterCollection
+	    {
+	        { "version", "2.0" },
+	        { "requestv2", requestV2Entity },
+	        { "Target", new EntityReference("msdyn_aimodel", new Guid(yourAiModelId)) }
+	    }
+	};
+	
+	// Execute the request
+	var response = service.Execute(predictRequest);
+	
+	Console.WriteLine("Prediction Result:");
+	Console.WriteLine(response.Results);
+	}
+}
 ```
 
 ### [Web API](#tab/webapi)
