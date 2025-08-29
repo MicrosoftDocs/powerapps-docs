@@ -20,7 +20,7 @@ Model-driven apps support the use of agents to enhance user productivity and aut
 
 - *Autonomous agents*, created in Microsoft Copilot Studio, can be added to apps for supervised execution by users.
 
-- *Interactive agents*, which can be created to provide custom topics, knowledge sources, and more within the model-driven app.
+- *App assistance agents*, which can be created to provide custom topics, knowledge sources, and more within the model-driven app.
 
 :::image type="content" source="media/add-agents-to-app/app-designer-agent-tab.png" alt-text="App designer Agents pane" lightbox="media/add-agents-to-app/app-designer-agent-tab.png":::
 
@@ -69,33 +69,34 @@ You can add an agent to any model-driven app of your choosing. We recommend addi
 > [!NOTE]
 > Removing an agent from an app doesn't remove the agent from the environment.
 
-## Working with an interactive agent
+## Working with an app assistant agent
 
-The interactive agent makes a model-driven app more intelligent and relevant for your organization by adding additional topics, knowledge sources, and more. The [Copilot Chat](add-ai-copilot.md), Agent APIs, and agent response components access the topics within this agent.
+The app assistant agent makes a model-driven app more intelligent and relevant for your organization by adding additional topics, knowledge sources, and more. The [Copilot Chat](add-ai-copilot.md), Agent APIs, and agent response components access the topics within this agent.
 
 > :::image type="content" source="media/add-agents-to-app/app-designer-interactive-agent.png" alt-text="App Designer Agents pane Interactive agent":::
 
 > [!NOTE]
-> The interactive agent is the improved experience for **... > Configure in Copilot Studio** and is gradually rolling out. The agents created with the previous experience are now shown as the **Interactive agent**.
+> The app assistant agent is a rename of interactive agent which is the improved experience for **... > Configure in Copilot Studio**. The agents created with the previous experiences are now shown as the **App assistant agent**.
 
-### Creating an interactive agent
+### Creating an app assistant agent
 
-When an interactive agent is created, it's named as **Copilot in Power Apps - \<app name\>**. The created agent is associated with the app when saved and published.
+When an app assistant agent is created, it's named as **Copilot in Power Apps - \<app name\>**. The created agent is associated with the app when the app is saved and published.
 
 1. In the app designer, select the **Agents** pane.
-1. Expand **In your app** > **AI capabilities**.
-1. On **Interactive agent**, select **...** > **Configure**.
-1. Select **Configure in Copilot Studio** to create the agent.
-1. While the agent is being created, **Setting up your app's copilot** is shown in the popup.
+1. Expand **Agent assistance**.
+1. On **App assistant agent**, select **...** > **Configure**.
 
    A new browser tab for **Copilot Studio** is opened with the new agent.
    > [!NOTE]
    > Pop-ups need to be enabled in your web browser to allow editing the created agent.
-1. Select refresh in pane header after popup to show the created agent.
-   > :::image type="content" source="media/add-agents-to-app/app-designer-interactive-agent-created.png" alt-text="Interactive agent with created agent":::
-1. Switch to the **Copilot Studio** browser tab to add topics, knowledge, and so on, to the agent.
+1. After configure completes, the right pane is expanded showing the status of **Not published** and the agent name.
+   > :::image type="content" source="media/add-agents-to-app/app-designer-interactive-agent-created.png" alt-text="App assistant agent property pane not published":::
+1. Switch to the **Copilot Studio** browser tab or select **Edit in Copiot Studio** to add topics, knowledge, and so on, to the agent.
 1. Save and publish the agent.
-1. Switch to the app designer browser tab to save and publish the app.
+1. Switch to the app designer browser tab and select refresh in **Agents** pane header to show agent published status.
+1. In the app designer, save and publish the app.
+
+### Editing an app assistant agent
 
 ### Limitations
 
