@@ -113,36 +113,37 @@ The Predict action allows you to use an AI Model to generate predictions based o
 ### [SDK for .NET](#tab/sdk)
 
 ```csharp
-// Create the input parameters for the Predict action
-var inputParameters = new ParameterCollection
+// Create the nested 'patient' entity
+var patientEntity = new Entity
 {
-    { "version", "2.0" },
+    Attributes =
     {
-        "requestv2", new Dictionary<string, object>
-        {
-            { "@odata.type", "#Microsoft.Dynamics.CRM.expando" },
-            { "pai_sex", 1 },
-            { "pai_age", 10 },
-            {
-                "patient", new Dictionary<string, object>
-                {
-                    { "@odata.type", "#Microsoft.Dynamics.CRM.expando" },
-                    { "firstname", "John" },
-                    { "lastname", "Smith" }
-                }
-            }
-        }
+        { "firstname", "John" },
+        { "lastname", "Smith" }
     }
 };
 
-// Create the OrganizationRequest for the Predict action
-var predictRequest = new OrganizationRequest("Microsoft.Dynamics.CRM.Predict")
+// Create the main 'requestv2' entity
+var requestV2Entity = new Entity
 {
-    Parameters = inputParameters
+    Attributes =
+    {
+        { "pai_sex", 1 },
+        { "pai_age", 10 },
+        { "patient", patientEntity }
+    }
 };
 
-// Set the target AI Model ID
-predictRequest["Target"] = new EntityReference("msdyn_aimodel", new Guid("your-ai-model-id"));
+// Create the Predict action request
+var predictRequest = new OrganizationRequest("Microsoft.Dynamics.CRM.Predict")
+{
+    Parameters = new ParameterCollection
+    {
+        { "version", "2.0" },
+        { "requestv2", requestV2Entity },
+        { "Target", new EntityReference("msdyn_aimodel", new Guid("your-ai-model-id")) }
+    }
+};
 
 // Execute the request
 var response = service.Execute(predictRequest);
