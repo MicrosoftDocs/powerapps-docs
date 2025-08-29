@@ -1,12 +1,12 @@
 ---
 title: Optimize performance using FetchXml
 description: Learn how to optimize performance when you retrieve data from Microsoft Dataverse using FetchXml.
-ms.date: 01/06/2025
+ms.date: 08/11/2025
 ms.reviewer: jdaly
 ms.topic: how-to
-author: pnghub
+author: MsSQLGirl
 ms.subservice: dataverse-developer
-ms.author: gned
+ms.author: jukoesma
 search.audienceType: 
   - developer
 contributors:
@@ -95,7 +95,7 @@ The following example sets a filter with the `union` hint on the `telephone1` co
 </fetch>
 ```
 
-
+[!INCLUDE [cc-automatic-query-optimization](../includes/cc-automatic-query-optimization.md)]
 
 ### See also
 

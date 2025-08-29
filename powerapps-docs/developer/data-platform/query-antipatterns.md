@@ -3,8 +3,8 @@ title: "Query anti-patterns (Microsoft Dataverse)"
 description: "Read about patterns to avoid when constructing queries to retrieve data from Dataverse."
 ms.date: 01/06/2025
 ms.topic: how-to
-author: pnghub
-ms.author: gned
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 ms.subservice: dataverse-developer
 search.audienceType: 
@@ -96,7 +96,7 @@ Database collation unicode sorting rules make some search strings that start wit
 
 ## <a name="FilteringOnCalculatedColumns"></a> Avoid using formula or calculated columns in filter conditions
 
-[Formula and calculated column](calculated-rollup-attributes.md#formula-and-calculated-columns) values are calculated in real-time when they're retrieved. Queries that use filters on these columns force Dataverse to calculate the value for each possible record that can be returned so the filter can be applied. Queries are slower because Dataverse can't improve the performance of these queries using SQL.
+[Formula and calculated column](specialized-columns.md#formula-and-calculated-columns) values are calculated in real-time when they're retrieved. Queries that use filters on these columns force Dataverse to calculate the value for each possible record that can be returned so the filter can be applied. Queries are slower because Dataverse can't improve the performance of these queries using SQL.
 
 When queries time out and this pattern is detected, Dataverse returns a unique error to help identify which queries are using this pattern:
 

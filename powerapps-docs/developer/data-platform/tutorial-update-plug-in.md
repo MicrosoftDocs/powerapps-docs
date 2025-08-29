@@ -4,9 +4,9 @@ description: "The third of three tutorials that will show you how to work with p
 ms.date: 07/12/2022
 ms.reviewer: "pehecke"
 ms.topic: tutorial
-author: MicroSri
+author: MsSQLGirl
 ms.subservice: dataverse-developer
-ms.author: sriknair
+ms.author: jukoesma
 search.audienceType: 
   - developer
 contributors:

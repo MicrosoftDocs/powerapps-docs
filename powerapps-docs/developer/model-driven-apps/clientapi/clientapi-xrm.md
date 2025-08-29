@@ -3,7 +3,7 @@ title: "Client API Xrm object for model-driven apps "
 description: "Describes the client API Xrm object"
 author: sriharibs-msft
 ms.author: srihas
-ms.date: 04/01/2022
+ms.date: 07/29/2025
 ms.reviewer: jdaly
 ms.topic: article
 applies_to:
@@ -24,12 +24,14 @@ The **Xrm** object is globally available to use in your code without having to u
 
 The following illustration displays the Xrm object model:
 
-![Xrm Object Model.](../media/ClientAPI-XrmModel.png)
+:::image type="content" source="media/client-api-xrm-model.png" alt-text="Xrm Object Model":::
 
 Here's the information about each of the namespaces in the Xrm object:
 
 | Namespace| Description|
 | ---| ---|
+| [Xrm.App](reference/xrm-app.md)|[!INCLUDE [xrm-app-description](reference/Xrm-App/includes/xrm-app-description.md)]|
+| [Xrm.Copilot](reference/xrm-copilot.md)| [!INCLUDE [xrm-copilot-description](reference/Xrm-Copilot/includes/xrm-copilot-description.md)]|
 | [Xrm.Device](reference/xrm-device.md)| Provides methods to use native device capabilities. |
 | [Xrm.Encoding](reference/xrm-encoding.md)     | Provides methods to encode strings.|
 | [Xrm.Navigation](reference/xrm-navigation.md) | Provides methods for navigating forms and items in model-driven apps.|

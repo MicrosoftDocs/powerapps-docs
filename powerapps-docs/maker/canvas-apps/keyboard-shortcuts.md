@@ -6,7 +6,7 @@ author: TashasEv
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 05/30/2025
+ms.date: 06/10/2025
 ms.subservice: canvas-maker
 ms.author: tashas
 search.audienceType: 
@@ -23,12 +23,10 @@ contributors:
 
 | Shortcut | Action |
 |--|--|
-| Ctrl+O (or Alt+F) | Open a file |
 | Ctrl+Shift+S (or Alt+P) | Save the app with a different name |
 | Ctrl+S | Save the app with the same name or for the first time |
 | Ctrl+Shift+P | Save the app and activate the publish dialog |
 | F12 | Download the app file (.msapp) |
-| Alt+F | Open the **File** menu |
 
 ## Ribbon
 
@@ -51,10 +49,9 @@ contributors:
 | Ctrl+=, Ctrl+Shift+=, or Ctrl+Mouse wheel up | Zoom in |
 | Ctrl+-, Ctrl+Shift+-, or Ctrl+Mouse wheel down | Zoom out |
 | Ctrl+0 | Fit canvas to page |
-| <kbd>Shift</kbd>+<kbd>Enter</kbd> | Break a line in a formula |
-| <kbd>Enter</kbd> or <kbd>Shift</kbd>+<kbd>Enter</kbd> | Select a suggestion in a formula without adding a new line |
-| <kbd>Enter</kbd> | Select a suggestion in a formula and create a new line |
-| <kbd>Shift</kbd>+<kbd>Enter</kbd> | Create a new line in a formula without keeping the suggestion |
+| <kbd>Enter</kbd> or <kbd>Shift</kbd>+<kbd>Enter</kbd> | Select a suggestion in a formula without adding a new line (Enhanced formula bar shortcuts is turned off) |
+| <kbd>Enter</kbd> | Select a suggestion in a formula and create a new line (Enhanced formula bar shortcuts must be turned on)|
+| <kbd>Shift</kbd>+<kbd>Enter</kbd> | Create a new line in a formula without keeping the suggestion (Enhanced formula bar shortcuts must be turned on)| |
 
 > [!IMPORTANT]
 > To use keyboard shortcuts for the formula bar, turn on **Enhanced formula bar shortcuts**. In Power Apps, go to [**Settings**](intro-maker-portal.md#settings), and then select **Power App settings**. On the **Editing** tab, turn on **Enhanced formula bar shortcuts**.

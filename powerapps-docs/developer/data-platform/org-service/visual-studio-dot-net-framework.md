@@ -1,12 +1,12 @@
 ---
-title: "Visual Studio and the .NET Framework (Microsoft Dataverse) | Microsoft Docs" 
+title: Visual Studio and the .NET Framework
 description: "Learn about managed code development tools and requirements."
 ms.collection: get-started
-ms.date: 04/03/2022
-author: MicroSri
-ms.author: sriknair
+ms.date: 08/08/2025
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: pehecke
-ms.topic: "article"
+ms.topic: article
 search.audienceType: 
   - developer
 contributors:
@@ -27,16 +27,16 @@ Plug-ins and custom workflow assemblies should use .NET Framework 4.6.2. While a
 > More information: <https://cloudblogs.microsoft.com/dynamics365/bdm/2017/09/28/updates-coming-to-dynamics-365-customer-engagement-connection-security/>
 >
 > [!TIP]
-> When installing .NET Framework 4.6.2 on your development computer, be sure to install the developer pack and not just the run-time. This will enable the 4.6.2 Framework to be chosen in the **New Project** dialog box of Visual Studio and in the target framework drop-down menu of the project’s properties.  
+> When installing .NET Framework 4.6.2 on your development computer, be sure to install the developer pack and not just the run-time. This will enable the 4.6.2 Framework to be chosen in the **New Project** dialog box of Visual Studio and in the target framework drop-down menu of the project's properties.  
 
-You can use a Visual Studio Community edition for development. However, use of extensions isn’t supported in the Express edition so you won’t be able to install useful extensions in that version of Visual Studio.
+You can use a Visual Studio Community edition for development. However, use of extensions isn't supported in the Express edition so you won't be able to install useful extensions in that version of Visual Studio.
 
-More information: [Support for .NET Framework versions](/dynamics365/customer-engagement/developer/supported-extensions#SupportNET)
+More information: [Support for .NET Framework versions](../supported-customizations.md#support-for-net-framework-versions)
 
-For a complete statement of supported and unsupported development, see [Supported Extensions for Dynamics 365](/dynamics365/customer-engagement/developer/supported-extensions#SupportNET).
+For a complete statement of supported and unsupported development, see [Supported customizations for Dataverse](../supported-customizations.md).
 
 ## See Also
 
-[Developer Tools](/dynamics365/customer-engagement/developer/developer-tools)
+[Developer tools and resources](../developer-tools.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

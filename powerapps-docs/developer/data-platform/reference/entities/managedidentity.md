@@ -187,8 +187,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description||
-|DisplayName||
+|Description|**The name assigned to this Managed Identity.**|
+|DisplayName|**Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`name`|
@@ -805,6 +805,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [managedidentity_DuplicateMatchingRecord](#BKMK_managedidentity_DuplicateMatchingRecord)
 - [managedidentity_emailserverprofile_acsmanagedidentityid](#BKMK_managedidentity_emailserverprofile_acsmanagedidentityid)
 - [managedidentity_emailserverprofile_managedidentityid](#BKMK_managedidentity_emailserverprofile_managedidentityid)
+- [managedidentity_emailserverprofile_purviewmanagedidentityid](#BKMK_managedidentity_emailserverprofile_purviewmanagedidentityid)
 - [managedidentity_KeyVaultReference](#BKMK_managedidentity_KeyVaultReference)
 - [managedidentity_MailboxTrackingFolders](#BKMK_managedidentity_MailboxTrackingFolders)
 - [managedidentity_PluginAssembly](#BKMK_managedidentity_PluginAssembly)
@@ -897,6 +898,18 @@ Many-To-One Relationship: [emailserverprofile managedidentity_emailserverprofile
 |ReferencingEntity|`emailserverprofile`|
 |ReferencingAttribute|`managedidentityid`|
 |ReferencedEntityNavigationPropertyName|`managedidentity_emailserverprofile_managedidentityid`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_managedidentity_emailserverprofile_purviewmanagedidentityid"></a> managedidentity_emailserverprofile_purviewmanagedidentityid
+
+Many-To-One Relationship: [emailserverprofile managedidentity_emailserverprofile_purviewmanagedidentityid](emailserverprofile.md#BKMK_managedidentity_emailserverprofile_purviewmanagedidentityid)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`emailserverprofile`|
+|ReferencingAttribute|`purviewmanagedidentityid`|
+|ReferencedEntityNavigationPropertyName|`managedidentity_emailserverprofile_purviewmanagedidentityid`|
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 

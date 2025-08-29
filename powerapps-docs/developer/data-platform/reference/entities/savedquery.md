@@ -64,6 +64,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [ColumnSetXml](#BKMK_ColumnSetXml)
 - [ConditionalFormatting](#BKMK_ConditionalFormatting)
 - [Description](#BKMK_Description)
+- [EnableCrossPartition](#BKMK_EnableCrossPartition)
 - [FetchXml](#BKMK_FetchXml)
 - [IntroducedVersion](#BKMK_IntroducedVersion)
 - [IsCustomizable](#BKMK_IsCustomizable)
@@ -160,6 +161,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|True|
 |MaxLength|2000|
+
+### <a name="BKMK_EnableCrossPartition"></a> EnableCrossPartition
+
+|Property|Value|
+|---|---|
+|Description|**Tells whether the view can retrieve data from all cluster partitions.**|
+|DisplayName|**Default**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`enablecrosspartition`|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+|GlobalChoiceName|`savedquery_enablecrosspartition`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_FetchXml"></a> FetchXml
 

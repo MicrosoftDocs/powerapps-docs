@@ -59,7 +59,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [ChartType](#BKMK_ChartType)
 - [DataDescription](#BKMK_DataDescription)
 - [Description](#BKMK_Description)
+- [EnableCrossPartition](#BKMK_EnableCrossPartition)
 - [IsDefault](#BKMK_IsDefault)
+- [isNLGenerated](#BKMK_isNLGenerated)
 - [Name](#BKMK_Name)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
@@ -123,6 +125,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsLocalizable|False|
 |MaxLength|2000|
 
+### <a name="BKMK_EnableCrossPartition"></a> EnableCrossPartition
+
+|Property|Value|
+|---|---|
+|Description|**Tells whether the chart can retrieve data from all cluster partitions.**|
+|DisplayName|**Default**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`enablecrosspartition`|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+|GlobalChoiceName|`userqueryvisualization_enablecrosspartition`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
+
 ### <a name="BKMK_IsDefault"></a> IsDefault
 
 |Property|Value|
@@ -135,6 +153,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 |GlobalChoiceName|`userqueryvisualization_isdefault`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
+
+### <a name="BKMK_isNLGenerated"></a> isNLGenerated
+
+|Property|Value|
+|---|---|
+|Description||
+|DisplayName|**NL Generated Chart**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`isnlgenerated`|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+|GlobalChoiceName|`userqueryvisualization_isnlgenerated`|
 |DefaultValue|False|
 |True Label|Yes|
 |False Label|No|

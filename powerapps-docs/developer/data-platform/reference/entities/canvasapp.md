@@ -331,6 +331,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |1|**App Component Library**|
 |2|**Custom Canvas Page**|
 |3|**Unified App**|
+|4|**Code App**|
 
 ### <a name="BKMK_CdsDependencies"></a> CdsDependencies
 

@@ -5,7 +5,8 @@ author: lancedMicrosoft
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 5/21/2025
+ms.date: 07/28/2025
+ms.update-cycle: 180-days
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -26,6 +27,10 @@ ms.collection:
 This article contains information on supported device platforms, web browser requirements, limits, and configuration values for Power Apps. 
 
 ## Supported platforms for running apps using the Power Apps mobile app
+
+> [!NOTE]
+> - To ensure optimal user experience, we recommend that you test your app on the specific devices intended for production deployment. 
+> - Performance testing and results may vary between device types such as mobile, desktop, and laptops due to processing power, memory capacity, network connectivity, app complexity and other apps running in parallel in a device. Make sure the test results meet your business requirements before you roll out the solutions in production.
 
 | **Platform** | **Version**
 | --- | --- |

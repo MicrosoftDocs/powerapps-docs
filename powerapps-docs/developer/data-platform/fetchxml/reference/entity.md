@@ -1,8 +1,8 @@
 ---
 title: entity element
 description: Use this element to specify the entity of the query.
-author: pnghub
-ms.author: gned
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 ms.date: 02/29/2024
 ms.topic: reference

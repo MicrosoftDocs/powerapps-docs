@@ -23,7 +23,7 @@ To add commands to a solution, you add the solution objects that depend on your 
 - Power Fx commands use a Dataverse component library. Add the component library to your solution if you plan to export it.
 - JavaScript commands use a web resource. Add the web resource that includes the underlying JavaScript to run your command to the solution if you plan to export it.
 
-More information: [Add an existing component to a solution](../data-platform/create-solution.md#add-an-existing-component-to-a-solution)
+More information: [Add an existing component to a solution](../data-platform/create-solution.md#add-an-existing-object-to-a-solution)
 
 Modern commanding provides these benefits when you work with solutions:
 

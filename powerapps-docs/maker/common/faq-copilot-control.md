@@ -2,6 +2,7 @@
 title: FAQ for Copilot in canvas apps   
 description: FAQ for Copilot in canvas apps.
 ms.date: 5/28/2025
+ms.update-cycle: 180-days
 ms.custom: 
   - transparency-note
 ms.topic: faq

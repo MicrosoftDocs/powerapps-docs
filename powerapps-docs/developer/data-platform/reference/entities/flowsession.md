@@ -64,6 +64,7 @@ The following table lists selected properties for the Flow Session (flowsession)
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [CallbackUrl](#BKMK_CallbackUrl)
+- [ClientTrackingId](#BKMK_ClientTrackingId)
 - [CompletedOn](#BKMK_CompletedOn)
 - [ConnectionId](#BKMK_ConnectionId)
 - [Context](#BKMK_Context)
@@ -123,6 +124,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|False|
 |MaxLength|2000|
+
+### <a name="BKMK_ClientTrackingId"></a> ClientTrackingId
+
+|Property|Value|
+|---|---|
+|Description|**The client tracking id of the run**|
+|DisplayName|**Client Tracking Id**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`clienttrackingid`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|255|
 
 ### <a name="BKMK_CompletedOn"></a> CompletedOn
 

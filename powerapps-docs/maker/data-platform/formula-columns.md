@@ -4,8 +4,9 @@ description: Learn how to create and use formula columns in Microsoft Dataverse.
 author: sanjeevgoyalmsft
 reviewer: mattp123
 ms.topic: how-to
-ms.custom: 
-ms.date: 11/19/2024
+ms.custom: needs-feature-review
+ms.date: 06/23/2025
+ms.update-cycle: 180-days
 ms.subservice: dataverse-maker
 ms.author: sriknair
 ms.reviewer: matp
@@ -38,7 +39,7 @@ Formula columns are columns that display a calculated value in a Microsoft Datav
    # [Get formula suggestions (preview)](#tab/natural-language)
 
    [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-   a.  Select the up and down arrows, and then select **Get formula suggestions**.<br />
+   a. Select the up and down arrows, and then select **Get formula suggestions**.<br />
        :::image type="content" source="media/formula-suggestions-selector.png" alt-text="Select the formula suggestions selector":::
    b. Type your question, such as *what is the Price times Quantity*, in the **Get formula suggestions** box. More information: [Get formula suggestions (preview)](#get-formula-suggestions-preview-1)
 
@@ -483,4 +484,4 @@ This section describes guidelines and the known limitations with formula columns
 
 [Microsoft Power Fx overview](/power-platform/power-fx/overview)
 
-[Formula, calculated, and rollup columns using code](../../developer/data-platform/calculated-rollup-attributes.md)
+[Specialized columns](../../developer/data-platform/specialized-columns.md)

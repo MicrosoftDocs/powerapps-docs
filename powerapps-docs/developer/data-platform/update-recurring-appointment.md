@@ -1,14 +1,12 @@
 ---
-title: "Update a recurring appointment (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Update a recurring appointment series by using the IOrganizationService.Entity method or the UpdateRequest message on the RecurringAppointmentMaster entity." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
+title: "Update a recurring appointment (Microsoft Dataverse) | Microsoft Docs"
+description: "Update a recurring appointment series by using the IOrganizationService.Entity method or the UpdateRequest message on the RecurringAppointmentMaster entity."
 ms.date: 03/25/2021
 ms.reviewer: "pehecke"
-
 ms.topic: how-to
-author: "mayadumesh" # GitHub ID
+author: manasmams
 ms.subservice: dataverse-developer
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
+ms.author: manasma
 search.audienceType: 
   - developer
 ---
@@ -46,7 +44,7 @@ You can either update the whole series or update an instance of a recurring appo
   
 ### See also  
     
- [Sample: Create, Retrieve, Update, and Delete (CRUD) a Recurring Appointment](org-service/samples/create-retrieve-update-delete-recurring-appointment.md) 
+ [Sample: Create, Retrieve, Update, and Delete (CRUD) a Recurring Appointment](org-service/samples/create-retrieve-update-delete-recurring-appointment.md)   
  [Sample: Reschedule and Cancel Recurring Appointment](org-service/samples/reschedule-cancel-recurring-appointment.md)
 
 

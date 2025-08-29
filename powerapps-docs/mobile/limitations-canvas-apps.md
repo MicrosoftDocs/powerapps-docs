@@ -2,12 +2,12 @@
 
 title: Mobile offline limitations for canvas apps
 description: Learn about the limitations for canvas apps that use mobile offline.
-author: vamseedillimsft
+author: Murugesh1985
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 03/24/2025
+ms.date: 07/16/2025
 ms.subservice: mobile
-ms.author: vamseedilli
+ms.author: murugeshs
 ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
@@ -28,6 +28,7 @@ Before you set up the mobile app in offline mode, be sure to read through the fo
 |Connectors|Non-Dataverse connectors, like SharePoint, aren't supported in offline mode.|
 |Dataverse table types| Virtual tables and elastic tables aren't supported in offline mode.|
 |Shared offline profile| If the same, offline profile is used in a canvas app and in a model-driven app, it creates two, separate local databases. |
+| Power Automate flows| Power Automate flows aren't supported in offline mode.| 
 
 > [!NOTE]
 > If your app connects to data from Excel, CSV files, or SharePoint lists, you can [start with Copilot](/power-apps/maker/data-platform/create-edit-entities-portal?#tabpanel_1_sharepoint) to import data to Dataverse. Once your data is in Dataverse, you can turn on offline support for your canvas apps with one selection.
@@ -54,4 +55,9 @@ Before you set up the mobile app in offline mode, be sure to read through the fo
 |Auto-generated offline profile| The auto-generated offline profile doesn't handle filters. As a result, for each table used in the app, it downloads *all* rows to which the user has permissions.|
 
 ### See also
-[Troubleshoot offline sync errors in the Power Apps mobile app](/troubleshoot/power-platform/power-apps/mobile-apps/mobile-offline-troubleshooting)
+
+[Troubleshoot offline sync errors in the Power Apps mobile app](/troubleshoot/power-platform/power-apps/mobile-apps/mobile-offline-troubleshooting)    
+
+[Supported platforms for running apps using the Power Apps mobile app](/power-apps/limits-and-config#supported-platforms-for-running-apps-using-the-power-apps-mobile-app)   
+
+

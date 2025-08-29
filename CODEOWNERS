@@ -3,10 +3,10 @@
 
 /powerapps-docs/                                    @tapanm-msft
 /powerapps-docs/cards                               @tapanm-msft @mduelae
-/powerapps-docs/developer/                          @PHecke @leeclontz @JimDaly
-/powerapps-docs/developer/data-platform/cli         @JimDaly @leeclontz
-/powerapps-docs/developer/data-platform/cli         @JimDaly @leeclontz
-/powerapps-docs/developer/model-driven-apps         @JimDaly @leeclontz
+/powerapps-docs/developer/                          @PHecke @tapanm-msft @JimDaly
+/powerapps-docs/developer/data-platform/cli         @JimDaly @tapanm-msft
+/powerapps-docs/developer/data-platform/cli         @JimDaly @tapanm-msft
+/powerapps-docs/developer/model-driven-apps         @JimDaly @tapanm-msft
 /powerapps-docs/guidance                            @tapanm-msft @mduelae @Mattp123
 /powerapps-docs/maker/canvas-apps                   @tapanm-msft @mduelae
 /powerapps-docs/maker/data-platform                 @Mattp123 @tapanm-msft

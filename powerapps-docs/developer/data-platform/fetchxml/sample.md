@@ -4,9 +4,9 @@ description: Try using FetchXML to retrieve Dataverse data using this sample cod
 ms.date: 12/04/2024
 ms.reviewer: jdaly
 ms.topic: how-to
-author: pnghub
+author: MsSQLGirl
 ms.subservice: dataverse-developer
-ms.author: gned
+ms.author: jukoesma
 search.audienceType: 
   - developer
 contributors:
@@ -539,8 +539,8 @@ When you run the program using the `OutputFetchRequest` method, the output shoul
 
 ### Related articles
 
-[Query data using FetchXml](overview.md)
-[Use FetchXml to retrieve data](retrieve-data.md)
-[Sample: Use FetchXML with a paging cookie](../org-service/samples/use-fetchxml-paging-cookie.md)
-[Sample: Use aggregation in FetchXML](../org-service/samples/use-aggregation-fetchxml.md)
+[Query data using FetchXml](overview.md)  
+[Use FetchXml to retrieve data](retrieve-data.md)  
+[Sample: Use FetchXML with a paging cookie](../org-service/samples/use-fetchxml-paging-cookie.md)  
+[Sample: Use aggregation in FetchXML](../org-service/samples/use-aggregation-fetchxml.md)  
 [Sample: Convert queries between FetchXML and QueryExpression](../org-service/samples/convert-queries-fetch-queryexpression.md)

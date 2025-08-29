@@ -3,8 +3,8 @@ title: Web API query data sample
 description: Use this sample code to learn how to query data using the Dataverse Web API. These samples use C# and client-side JavaScript.
 ms.topic: sample
 ms.date: 04/14/2023
-author: MicroSri
-ms.author: sriknair
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
@@ -3190,7 +3190,7 @@ Accept: application/json
   "description": "User query to display contact info.",
   "querytype": 0,
   "returnedtypecode": "contact",
-  "fetchxml": "<fetch mapping='logical' output-format='xml-platform' version='1.0' distinct='false'>
+  "fetchxml": "<fetch>
     <entity name ='contact'>
       <attribute name ='fullname' />
       <attribute name ='contactid' />

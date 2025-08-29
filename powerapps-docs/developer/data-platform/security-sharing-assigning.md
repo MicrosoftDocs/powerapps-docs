@@ -1,7 +1,7 @@
 ---
 title: Sharing and assigning
 description: Learn about the security that applies to sharing and assigning records.
-ms.date: 06/06/2023
+ms.date: 04/06/2025
 ms.reviewer: pehecke
 ms.topic: concept-article
 author: paulliew
@@ -42,6 +42,7 @@ rights that they wouldn't have for that type of table, based on the role
 assigned to that user. For example, if a user doesn't have **Read** privileges on
 accounts and you share an account with that user, the user is unable to see
 that account.
+
 
 ### GrantAccess example
 
@@ -199,50 +200,7 @@ OData-Version: 4.0
 
 ---
 
-## Sharing and inheritance
-
-If a record is created and the parent record has certain sharing properties, the
-new record inherits those properties. For example, Joe and Mike are working on a
-high priority lead. Joe creates a new lead and two activities, shares the lead
-with Mike, and selects cascade sharing. Mike makes a telephone call and sends an
-email regarding the new lead. Joe sees that Mike has contacted the company two
-times, so Joe doesn't make another call.
-
-Sharing is maintained on individual records. A record inherits the sharing
-properties from its parent and maintains its own sharing properties. Therefore,
-a record can have two sets of sharing properties—one that it has on its own, and
-one that it inherits from its parent.
-
-Removing the share of a parent record removes the sharing properties of objects
-(records) that it inherited from the parent. That is, all users who previously
-had visibility into this record no longer have visibility. Child objects still
-could be shared to some of these users if they were shared individually, not
-from the parent record.
-
-## Assigning records
-
-Anyone with **Assign** access rights on a record can assign that record to
-another user. To assign a record, change the `ownerid` lookup value to refer to a new principal.
-
-> [!NOTE]
-> The SDK has an [AssignRequest class](xref:Microsoft.Crm.Sdk.Messages.AssignRequest) that is deprecated. More information: [Legacy update messages](org-service/entity-operations-update-delete.md#legacy-update-messages)
-
-When a record is assigned, the new user, team or organization becomes the owner
-of the record and its related records. The original user, team or organization loses ownership
-of the record, but automatically shares it with the new owner.
-
-In Microsoft Dataverse, the system administrator can decide for an organization
-whether records should be shared with previous owners or not after the assign
-operation. If **Share reassigned records with original owner** is selected (see **System Settings** > **General**), then the previous owner
-shares the record with all access rights after the assign operation. Otherwise,
-the previous owner doesn't share the record and may not have access to the
-record, depending on their privileges. The Organization table's
-[ShareToPreviousOwnerOnAssign](reference/entities/organization.md#BKMK_ShareToPreviousOwnerOnAssign) column controls this setting.
-
-> [!NOTE]
-> The [Appointment table](reference/entities/appointment.md) has special logic when an appointment is assigned to another user. If the current owner is still a participant, such as the organizer or an attendee, the appointment record is shared with this user when the appointment is reassigned. This behavior occurs even if the **Share reassigned records with original owner** setting is disabled. Because the appointment may be shared with the previous owner, the user assigning the meeting requires both the **Assign** and **Share** access rights on the record.
-
-## Revoking access
+### RevokeAccess example
 
 The owner of the record can use the `RevokeAccess` message to revoke (remove) user access to the shared record.
 
@@ -309,6 +267,51 @@ OData-Version: 4.0
 ---
 
 More information: [Shared access](/power-platform/admin/how-record-access-determined#shared-access.md)
+
+## Sharing and inheritance
+
+If a record is created and the parent record has certain sharing properties, the
+new record inherits those properties. For example, Joe and Mike are working on a
+high priority lead. Joe creates a new lead and two activities, shares the lead
+with Mike, and selects cascade sharing. Mike makes a telephone call and sends an
+email regarding the new lead. Joe sees that Mike has contacted the company two
+times, so Joe doesn't make another call.
+
+Sharing is maintained on individual records. A record inherits the sharing
+properties from its parent and maintains its own sharing properties. Therefore,
+a record can have two sets of sharing properties—one that it has on its own, and
+one that it inherits from its parent.
+
+Removing the share of a parent record removes the sharing properties of objects
+(records) that it inherited from the parent. That is, all users who previously
+had visibility into this record no longer have visibility. Child objects still
+could be shared to some of these users if they were shared individually, not
+from the parent record.
+
+## Assigning records
+
+Anyone with **Assign** access rights on a record can assign that record to
+another user. To assign a record, change the `ownerid` lookup value to refer to a new principal.
+
+> [!NOTE]
+> The SDK has an [AssignRequest class](xref:Microsoft.Crm.Sdk.Messages.AssignRequest) that is deprecated. More information: [Legacy update messages](org-service/entity-operations-update-delete.md#legacy-update-messages)
+
+When a record is assigned, the new user, team or organization becomes the owner
+of the record and its related records. The original user, team or organization loses ownership
+of the record, but automatically shares it with the new owner.
+
+In Microsoft Dataverse, the system administrator can decide for an organization
+whether records should be shared with previous owners or not after the assign
+operation. If **Share reassigned records with original owner** is selected (see **System Settings** > **General**), then the previous owner
+shares the record with all access rights after the assign operation. Otherwise,
+the previous owner doesn't share the record and may not have access to the
+record, depending on their privileges. The Organization table's
+[ShareToPreviousOwnerOnAssign](reference/entities/organization.md#BKMK_ShareToPreviousOwnerOnAssign) column controls this setting.
+
+> [!NOTE]
+> The [Appointment table](reference/entities/appointment.md) has special logic when an appointment is assigned to another user. If the current owner is still a participant, such as the organizer or an attendee, the appointment record is shared with this user when the appointment is reassigned. This behavior occurs even if the **Share reassigned records with original owner** setting is disabled. Because the appointment may be shared with the previous owner, the user assigning the meeting requires both the **Assign** and **Share** access rights on the record.
+
+
 
 ## Determine why a user has access
 
@@ -408,6 +411,7 @@ OData-Version: 4.0
 
 ### See also
 
+[Share data in secured fields](column-level-security.md#share-data-in-secured-fields)   
 [Sample: Share records using GrantAccess, ModifyAccess and RevokeAccess messages](org-service/samples/share-records-using-grantaccess-modifyaccess-revokeaccess-messages.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

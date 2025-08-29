@@ -4,7 +4,8 @@ description: Learn how to use Plan designer, an AI-powered tool in Power Platfor
 author: szlo
 contributors:
 ms.topic: how-to
-ms.date: 05/23/2025
+ms.date: 06/25/2025
+ms.update-cycle: 180-days
 ms.author: mkaur
 ms.reviewer: mkaur
 ms.collection:
@@ -30,11 +31,11 @@ If your environment doesn't meet the prerequisites and you have access to develo
 
 If your environment doesn't meet the prerequisites and you don't have access to existing developer environments or the ability to create new ones, you can't create plans in your current environment. In this situation, switch to an environment where you have the necessary permissions to create tables and start building your plan there.
 
+To create a plan, you must have a system admin or system customizer [security role](/power-platform/admin/security-roles-privileges). If you have a different security role, you will be redirected to your own developer environment to create a plan.
+
 ## Availability
 
-Plan designer is generally available and is still rolling out, so it might not be available in your region yet. If you don't have access to the feature, you can use it in [preview](../powerapps-preview-program.md).
-
-Check if this feature is available in your region. Learn more in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/availability-reports/?report=copilotfeaturereport).
+Plan designer is generally available. Check if this feature is available in your region. Learn more in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/availability-reports/?report=copilotfeaturereport).
 
 ### Turn on preview features for Plan designer
 

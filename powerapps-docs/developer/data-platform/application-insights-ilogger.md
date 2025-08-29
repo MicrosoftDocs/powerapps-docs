@@ -1,9 +1,9 @@
 ---
 title: "Write Telemetry to your Application Insights resource using ILogger (Microsoft Dataverse) | Microsoft Docs"
 description: "When you enable Application Insights for your organization, any plug-ins written using the ILogger Interface provided in the SDK writes telemetry to your Application Insights resource."
-ms.date: 03/10/2023
-author: MicroSri
-ms.author: sriknair
+ms.date: 06/20/2025
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: pehecke
 ms.topic: how-to
 ms.subservice: dataverse-developer
@@ -17,12 +17,12 @@ contributors:
 # Write Telemetry to your Application Insights resource using ILogger
 
 > [!IMPORTANT]
-> To use this capability you must first enable the Application Insights integration feature. More information: [Analyze model-driven apps and Microsoft Dataverse telemetry with Application Insights](/power-platform/admin/analyze-telemetry)<p/>
-> There is presently no support of `ILogger` within a plug-in profiling/debug session of the Plug-in Registration tool or the Power Platform Tools extension for Visual Studio.
+> To use this capability, you must first enable the Application Insights integration feature using an administrator account. Ensure that the user enabling the feature has the necessary privileges to modify the Dataverse organization (such as System Administrator role or being a Power Platform/Dynamics 365 admin) and has contributor access to the Application Insights resource. If a user without the necessary permissions enables the integration, telemetry data will not be written to Application Insights. More information: [Analyze model-driven apps and Microsoft Dataverse telemetry with Application Insights](/power-platform/admin/analyze-telemetry)<p/>
+> There's presently no support of `ILogger` within a plug-in profiling/debug session of the Plug-in Registration tool or the Power Platform Tools extension for Visual Studio.
 
 When you enable Application Insights for your organization, any plug-ins written using the [ILogger Interface](/dotnet/api/microsoft.xrm.sdk.plugintelemetry.ilogger) provided in the SDK for .NET assemblies write telemetry to your Application Insights resource.
 
-The Dataverse platform captures the Dataverse and model-driven app telemetry data and exports it to your Application Insights resource. There's some latency between the time it was captured and when it becomes available to you in Application Insights.  Because Microsoft gathers this telemetry, you don't need to write any code to enable it.
+The Dataverse platform captures the Dataverse and model-driven app telemetry data and exports it to your Application Insights resource. There's some latency between the time it was captured and when it becomes available to you in Application Insights. Because Microsoft gathers this telemetry, you don't need to write any code to enable it.
 
 Telemetry data that comes from plug-ins using the ILogger interface is different in two ways:
 
@@ -37,24 +37,24 @@ Using ILogger provides true telemetry data and is intended to work together with
 |---------|---------|---------|
 |Intended use|Capture telemetry over time for analysis and debugging.|While developing and debugging plug-ins|
 |How long data is stored|According to your Application Insights data retention period, which is 90 days by default|24 hours|
-|Available|Only for organizations that have subscribed to Application Insights integration.|Available for any organization when Plug-in tracing is enabled.|
-|Amount of data|Each log message can pass a String value.|Only 10 kb of text can be written for each plug-in execution. Any more is truncated.|
+|Available|Only for organizations that subscribe to Application Insights integration.|Available for any organization when Plug-in tracing is enabled.|
+|Amount of data|Each log message can pass a String value.|Only 10 kb of text can be written for each plug-in execution. The text is truncated after the first 10 kb.|
 |Available in runtime errors|No|Available in model-driven app client errors and as annotations in Web API. More information: [Include more details with errors](webapi/compose-http-requests-handle-errors.md#include-more-details-with-errors)|
 
 You should continue to use the [ITracingService.Trace](xref:Microsoft.Xrm.Sdk.ITracingService.Trace%2A) to write to the Plug-in Trace Log table when needed. Not every organization enables Application Insights. If your plug-in code uses the ILogger interface and the organization doesn't have Application Insights integration enabled, nothing is written. So, it's important to continue to use the ITracingService Trace method in your plug-ins. Plug-in trace logs continue to be an important way to capture data while developing and debugging plug-ins, but they were never intended to provide telemetry data. More information: [Plug-ins: Tracing and logging](logging-tracing.md)
 
 You should use [ILogger](xref:Microsoft.Xrm.Sdk.PluginTelemetry.ILogger) because it provides telemetry about what happens within a plug-in. This telemetry is integrated with the larger scope of data captured with the Application Insights integration. The Application Insights integration tells you when a plug-in executes, how long it takes to run and whether it makes any external http requests, but Microsoft can't add any telemetry code within the plug-ins that you write to extend the behavior of the platform.
 
-If you're an ISV with a product that includes plug-ins, your customers who enable Application Insights appreciate being able to see what is going on within your plug-ins and this data may help you support them if there are issues. But data captured using ILogger is only sent to the subscribing customer's resource. You'll only be able to see data captured for your own environments when you have Application Insights enabled.
+If you're an ISV with a product that includes plug-ins, your customers who enable Application Insights appreciate being able to see what is going on within your plug-ins and this data might help you support them if there are issues. But data captured using ILogger is only sent to the subscribing customer's resource. You'll only be able to see data captured for your own environments when you have Application Insights enabled.
 
 ## Use ILogger
 
-ILogger is a common interface for capturing log information. The implementation provided with the SDK for .NET assemblies provides common methods to support establishing a scope and different levels of logging.  There's currently no setting to control what level of logs are written. The levels can be used within Application Insights to filter which logs to view.
+ILogger is a common interface for capturing log information. The implementation provided with the SDK for .NET assemblies provides common methods to support establishing a scope and different levels of logging. There's currently no setting to control what level of logs are written. The levels can be used within Application Insights to filter the logs to view.
 
-The following is an example of a plug-in using both ILogger and ITracingService.Trace.
+The following example plug-in shows using both ILogger and ITracingService.Trace.
 
 > [!NOTE]
-> Make sure you include `using Microsoft.Xrm.Sdk.PluginTelemetry;`. Don't use `using Microsoft.Extensions.Logging;`, otherwise the `ILogger` instance will be null.
+> Make sure you include `using Microsoft.Xrm.Sdk.PluginTelemetry;`. Don't use `using Microsoft.Extensions.Logging;`, otherwise the `ILogger` instance is null.
 
 ```csharp
 using Microsoft.Xrm.Sdk;
@@ -206,7 +206,7 @@ When this plug-in is registered on a synchronous `PostOperation` step for the `C
 
 You can filter items for a single operation using the `operation_ParentId` that represents the request ID of the response header.
 
-:::image type="content" source="media/application-insights-ilogger-trace-operation_parentid.png" alt-text="Filter items for a single operation using the operation_ParentId .":::
+:::image type="content" source="media/application-insights-ilogger-trace-operation_parentid.png" alt-text="Filter items for a single operation using the operation_ParentId.":::
 
 The corresponding plug-in trace log entry looks like this:
 
@@ -232,7 +232,7 @@ And this query limits the results to the logs added during the `OutboundCall` sc
 
 ## Logging Exceptions
 
-At the bottom of the plug-in code example above, the following code uses [LogError](/dotnet/api/microsoft.xrm.sdk.plugintelemetry.ilogger.logerror) to log a caught exception and throws an [InvalidPluginExecutionException](/dotnet/api/microsoft.xrm.sdk.invalidpluginexecutionexception):
+At the bottom of the previous plug-in code example, the following code uses [LogError](/dotnet/api/microsoft.xrm.sdk.plugintelemetry.ilogger.logerror) to log a caught exception and throws an [InvalidPluginExecutionException](/dotnet/api/microsoft.xrm.sdk.invalidpluginexecutionexception):
 
 ```csharp
 catch (Exception e)
@@ -250,7 +250,7 @@ Using the plug-in code above, you can cause an exception by passing an invalid v
 
 This value overrides the default value (`https://www.bing.com`) and cause the outbound call to fail.
 
-There's nothing wrong with the request that a client may send:
+There's nothing wrong with the request that a client might send:
 
 ```http
 POST [Organization URI]/api/data/v9.1/accounts HTTP/1.1
@@ -326,7 +326,7 @@ Within Application Insights, if you view traces scoped to this request and with 
 
 :::image type="content" source="media/application-insights-ilogger-trace-error.png" alt-text="View traces scoped to this request and with the scope set to OutboundCall.":::
 
-Within Application Insights, when you switch your query to use `exceptions` rather than `traces`, you'll see three exceptions logged: 
+Within Application Insights, when you switch your query to use `exceptions` rather than `traces`, you see three exceptions logged: 
 
 :::image type="content" source="media/application-insights-ilogger-cause-error-exceptions.png" alt-text="Switch your query to use exceptions rather than traces.":::
 

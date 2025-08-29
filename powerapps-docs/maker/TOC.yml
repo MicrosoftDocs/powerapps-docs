@@ -51,17 +51,23 @@
       href: ../user/modern-fluent-design.md
     - name: Unified Interface
       href: ../user/unified-interface.md
-    - name: Supervise agents using agent feed (preview)
-      href: ../user/supervise-agents-with-agent-feed.md
-    - name: Copilot features
+    - name: AI features
       items:
+      - name: AI in apps overview
+        href: ../user/ai-in-apps.md
+      - name: Supervise agents using agent feed (preview)
+        href: ../user/supervise-agents-with-agent-feed.md
+      - name: Use suggested actions in the agent feed (preview)
+        href: ../user/use-suggested-actions-in-the-agent-feed.md
       - name: Use form fill assistance
         href: ../user/form-filling-assistance.md
       - name: Use row summary
         href: ../user/record-summaries.md
       - name: Use Copilot chat
         href: ../user/use-copilot-model-driven-apps.md
-      - name: Use Copilot to visualize data in a view (preview)
+      - name: Find data in a view (preview)
+        href: ../user/find-data-with-ai.md
+      - name: Visualize data in a view (preview)
         href: ../user/visualize-data-in-copilot.md
       - name: Use Copilot case summary in model-driven apps
         href: ../user/copilot-case-summary.md       
@@ -310,11 +316,13 @@
             displayName: Troubleshoot common errors when creating app from Figma
   - name: Design and build an app
     items:
+      - name: Design and build an app
+        href: ./canvas-apps/build-and-design.yml
       - name: Connect to data
         items:
         - name: Connections overview
           href: ./canvas-apps/connections-list.md
-        - name: Working with untyped and dynamic objects
+        - name: Working with dynamic values
           href: ./canvas-apps/untyped-and-dynamic-objects.md
         - name: Manage expired tokens
           href: ./canvas-apps/working-with-tokens.md  
@@ -396,7 +404,7 @@
             href: ./canvas-apps/inline-actions.md
           - name: Add comments
             href: ./canvas-apps/comments.md
-          - name: Understand coauthoring
+          - name: Understand coauthoring and copresence
             href: ./canvas-apps/copresence-power-apps-studio.md
           - name: Add and configure controls
             href: ./canvas-apps/add-configure-controls.md
@@ -688,7 +696,7 @@
         items:
         - name: Get started with formulas
           href: ./canvas-apps/working-with-formulas.md
-        - name: Build an agent to automate your business process (preview)
+        - name: Build an agent to automate your business process
           href: ./canvas-apps/agent-builder.md  
         - name: Use Copilot to create and edit Power Fx formulas
           href: ./canvas-apps/ai-formulas-formulabar.md
@@ -1244,6 +1252,8 @@
         href: ./common/wrap/code-sign-ios.md
       - name: Code sign for Android
         href: ./common/wrap/code-sign-android.md
+      - name: Code signing process for AAB file
+        href: ./common/wrap/code-sign-aab-file.md
       - name: Azure key vault for wrap
         href: ./common/wrap/create-key-vault-for-code-signing.md
       - name: Use deep links with wrapped mobile apps
@@ -1292,8 +1302,8 @@
     items:
     - name: Overview
       href: ./canvas-apps/create-performant-apps-overview.md
-    - name: Use Monitor to get insights and recommendations (preview)
-      href: ./canvas-apps/monitor-app-performance.md
+    - name: Use Monitor to get insights and recommendations 
+      href: common/monitor-app-performance.md
     - name: Analyze app telemetry using Application Insights
       href: ./canvas-apps/application-insights.md 
     - name: Understand canvas app execution phases and data flow
@@ -1439,8 +1449,6 @@
       href: ./model-driven-apps/model-driven-app-overview.md
     - name: The benefits of the model-driven approach
       href: ./model-driven-apps/app-value-proposition.md
-    - name: Build an app in three steps (preview)
-      href: ./model-driven-apps/build-app-three-steps.md
     - name: Release channels for model-driven apps
       items:
       - name: Release channel overview
@@ -1509,8 +1517,10 @@
             href: ./model-driven-apps/custom-page-localize.md
           - name: Known issues with custom pages
             href: ./model-driven-apps/model-app-page-issues.md
-          - name: Use monitor to troubleshoot custom pages
+          - name: Use live monitor to troubleshoot custom pages
             href: ./model-driven-apps/monitor-page-checker.md
+        - name: Create a generative page
+          href: ./model-driven-apps/generative-pages.md
         - name: Create, add, or remove forms and views
           href: ./model-driven-apps/create-add-remove-forms-views-dashboards.md
       - name: Work with views
@@ -1540,7 +1550,7 @@
           href: ./model-driven-apps/specify-properties-for-unified-interface-apps.md
         - name: Specifying a default view
           href: ./model-driven-apps/specify-default-views.md
-        - name: Manage access to views (preview)
+        - name: Manage access to views
           href: ./model-driven-apps/manage-view-access.md
         - name: Deleting and turning off views
           href: ./model-driven-apps/remove-views.md
@@ -1597,6 +1607,8 @@
             href: ./model-driven-apps/form-designer-add-configure-quickview.md
           - name: Configure lookup component
             href: ./model-driven-apps/form-designer-add-configure-lookup.md
+          - name: Add the agent response component
+            href: ./model-driven-apps/form-designer-add-configure-agent-response.md
           - name: Add a chart to a form
             href: ./model-driven-apps/add-chart-to-form.md
           - name: Add a map on a form
@@ -1671,7 +1683,7 @@
             href: ./model-driven-apps/form-component-control.md
         - name: Troubleshoot forms
           items:
-          - name: Use Monitor to troubleshoot forms
+          - name: Use live monitor to troubleshoot forms
             href: ./model-driven-apps/monitor-form-checker.md#filter-live-monitor-for-form-related-issues
       - name: Use custom pages within model-driven apps
         items:
@@ -1691,7 +1703,7 @@
           href: ./model-driven-apps/page-code-components.md
         - name: Known issues with custom pages
           href: ./model-driven-apps/model-app-page-issues.md
-        - name: Use monitor to troubleshoot custom pages
+        - name: Use live monitor to troubleshoot custom pages
           href: ./model-driven-apps/monitor-page-checker.md
       - name: Customize app commands
         href: ./model-driven-apps/command-designer-overview.md
@@ -1791,7 +1803,9 @@
       - name: Create a Power BI embedded dashboard
         href: ./model-driven-apps/create-edit-powerbi-embedded-page.md
     - name: Add agents to your app (preview)
-      href: ./model-driven-apps/add-agents-to-app.md  
+      href: ./model-driven-apps/add-agents-to-app.md
+    - name: Configure suggested actions (preview)
+      href: ./model-driven-apps/configure-suggested-actions.md
     - name: Copilot chat for apps
       href:
       items:
@@ -1867,6 +1881,8 @@
       href: ./common/performance-insights-overview.md
     - name: Understand performance insights
       href: ./common/performance-insights-categories.md
+    - name:  Use Monitor to get insights and recommendations
+      href: common/monitor-app-performance.md
   - name: App ratings (preview)
     href: ./common/app-ratings.md
   - name: FAQ about model-driven apps
@@ -2104,6 +2120,8 @@
       href: ./data-platform/create-edit-global-option-sets.md
     - name: Autonumber columns
       href: ./data-platform/autonumber-fields.md
+    - name: Prompt columns (preview)
+      href: ./data-platform/prompt-column.md
     - name: Work with Power Fx formula columns
       items:
       - name: Power Fx formula columns
@@ -2136,6 +2154,8 @@
         href: ./data-platform/map-entity-fields.md
       - name: How to delete columns
         href: ./data-platform/delete-fields.md
+      - name: Delete a column with AI Skill Config dependency
+        href: ./data-platform/ai-skill-config-table.md
   - name: Apply business logic
     href: ./data-platform/processes.md
     items:
@@ -2415,6 +2435,8 @@
       href: ./data-platform/data-platform-mcp.md
     - name: Connect to Dataverse with MCP FAQ
       href: ./data-platform/data-platform-mcp-faq.md
+    - name: Disable the Dataverse MCP server
+      href: ./data-platform/data-platform-mcp-disable.md
   - name: License requirements for tables
     href: ./data-platform/data-platform-entity-licenses.md
     items:
@@ -2451,7 +2473,7 @@
     items:
     - name: Security in Dataverse
       href: /power-platform/admin/wp-security-cds?context=/power-apps/maker/context
-    - name: Manage access to views (preview)
+    - name: Manage access to views
       href: ./model-driven-apps/manage-view-access.md
   - name: For developers
     href: ../developer/data-platform/overview.md
@@ -2629,3 +2651,7 @@
     href: ./common/faq-rename-control.md
   - name: FAQ about Copilot visualizations on a view
     href: ./common/faq-visualize-view.md
+  - name: FAQ for Agent APIs in model-driven apps
+    href: ./common/faq-agent-api-component.md
+  - name: FAQ about generative pages in model-driven apps
+    href: ./common/faq-generative-pages-model-driven.md

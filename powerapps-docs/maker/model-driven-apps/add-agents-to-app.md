@@ -1,14 +1,14 @@
 ---
 title: "Add agents to your model-driven app" 
 description: Learn how to add agents to your model-driven app in Power Apps.
-ms.date: 06/04/2025
-ms.reviewer: "matp"
-ms.topic: "how-to"
-author: "adrianorth"
+ms.date: 08/28/2025
+ms.reviewer: matp
+ms.topic: how-to
+author: adrianorth
 ms.subservice: mda-maker
-ms.author: "aorth"
+ms.author: aorth
 contributors: Jacob-Wilkinson
-ms.service: "powerapps"
+ms.service: powerapps
 search.audienceType: 
   - maker
 ---
@@ -28,30 +28,30 @@ Model-driven apps support the use of agents to enhance user productivity and aut
 >
 > - This is a preview feature.
 > - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2216214), and are available before an official release so that customers can get early access and provide feedback.
-> - This feature is being gradually rolled out across regions and might not be available yet in your region.
-> - To access the feature, you must use an [early release cycle environment](/power-platform/admin/early-release#create-early-release-cycle-environments) and use [https://make.preview.powerapps.com/](https://make.preview.powerapps.com/)
+> - This feature is available only in the English language.
 
 Autonomous agents can be added to model-driven apps to assist users with task completion. When added to an app, these agents can be supervised by users, allowing them to validate completed tasks, intervene when errors occur, and complete tasks that the agent was unable to finish—all within the context of their regular workflows.
 
 [Learn more about how to supervise agents](../../user/supervise-agents-with-agent-feed.md)
 
 > [!IMPORTANT]
-> Currently, only the owner of an agent can view and supervise that agent’s data in a model-driven app.
+> Currently, only the owner of an agent can view and supervise that agent's data in a model-driven app.
 
 ## Add an autonomous agent to an app
 
 You can add an agent to any model-driven app of your choosing. We recommend adding agents to model-driven apps that have related data. 
 
 > [!NOTE]
-> To be eligible for addition to an app, an agent must be published, have [generative AI enabled](/microsoft-copilot-studio/advanced-generative-actions), and include at least one [trigger](/microsoft-copilot-studio/authoring-triggers-about). A maker can verify an agent's eligibility to be added to an app via the right-hand properties pane where the requirements for an agent to be added to an app are displayed. The **Add to app** button is disabled for any agents that don't meet the requirements to be eligible for addition.
+> To be eligible for addition to an app, an agent must be published. A maker can verify an agent's eligibility to be added to an app via the right-hand properties pane where the requirements for an agent to be added to an app are displayed. The **Add to app** button is disabled for any agents that don't meet the requirements to be eligible for addition.
 :::image type="content" source="media/add-agents-to-app/app-designer-properties-pane.png" alt-text="App Designer Properties pane":::
+> Up to 10 agents can be added to an app at a time.
 
 1. Sign in to Power Apps, select **Apps**, and then select **Edit** for the app you want to modify.
 1. In the app designer, go to the **Agents** tab.
-1. In the **In your environment** dropdown list all agents in your environment are displayed. Locate the agent you want to add.
+1. Under the **Agent feed** dropdown, the **In your environment** dropdown appears that lists all agents in your environment. Locate the agent you want to add.
 1. Select **...** (more options) next to the agent, and then select **Add to app**.
     :::image type="content" source="media/add-agents-to-app/app-designer-add-agent-to-app.png" alt-text="App designer add agent to app":::
-1. Verify agent feed has been added to your app with all added agents by saving, publishing, and playing your app. Previewing agent feed in the app designer isn't currently supported.
+1. Verify agent feed is added to your app with all added agents by saving, publishing, and playing your app. Previewing agent feed in the app designer isn't currently supported.
 1. To view or edit the agent in Copilot Studio, select **Edit in Microsoft Copilot Studio**.
    :::image type="content" source="media/add-agents-to-app/app-designer-edit-in-copilot-studio.png" alt-text="App Designer edit in Copilot Studio":::
 
@@ -96,6 +96,26 @@ When an interactive agent is created, it's named as **Copilot in Power Apps - \<
 1. Switch to the **Copilot Studio** browser tab to add topics, knowledge, and so on, to the agent.
 1. Save and publish the agent.
 1. Switch to the app designer browser tab to save and publish the app.
+
+### Limitations
+
+The interactive agent isn't able to be defined or referenced in app designer for these Microsoft model-driven apps:
+
+- Connected Field Service
+- Customer Insights
+- Customer Service Hub
+- Customer Service workspace
+- Dynamics 365 App for Outlook
+- Field Service
+- Field Service Mobile
+- Inventory Visibility
+- Omnichannel engagement hub
+- Project Operations
+- Sales Hub
+- Sustainability
+
+> [!NOTE]
+> When a model-driven app includes both Lead and Opportunity tables, it implicitly uses the **Copilot in Dynamics 365 Sales** agent. The app designer doesn't show the interactive agent but the **Copilot in Dynamics 365 Sales** agent can be customized from Copilot Studio. 
 
 ## Related information
 

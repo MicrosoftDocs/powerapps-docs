@@ -4,9 +4,9 @@ description: Try using QueryExpression to retrieve Dataverse data using this sam
 ms.date: 12/04/2024
 ms.reviewer: jdaly
 ms.topic: how-to
-author: pnghub
+author: MsSQLGirl
 ms.subservice: dataverse-developer
-ms.author: gned
+ms.author: jukoesma
 search.audienceType: 
   - developer
 contributors:
@@ -240,6 +240,6 @@ When you run the program using the `OutputQueryExpression` method, the output sh
 
 ### Related articles
 
-[Query data using QueryExpression](overview.md)
-[Sample: Retrieve multiple with the QueryExpression class](../samples/retrieve-multiple-queryexpression-class.md)
+[Query data using QueryExpression](overview.md)  
+[Sample: Retrieve multiple with the QueryExpression class](../samples/retrieve-multiple-queryexpression-class.md)  
 [Sample: Use QueryExpression with a paging cookie](../samples/use-queryexpression-with-a-paging-cookie.md)

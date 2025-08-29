@@ -1,12 +1,12 @@
 ---
 title: Optimize performance using QueryExpression
 description: Learn how to optimize performance when you retrieve data from Microsoft Dataverse using QueryExpression.
-ms.date: 01/06/2025
+ms.date: 08/11/2025
 ms.reviewer: jdaly
 ms.topic: how-to
-author: pnghub
+author: MsSQLGirl
 ms.subservice: dataverse-developer
-ms.author: gned
+ms.author: jukoesma
 search.audienceType: 
   - developer
 contributors:
@@ -105,7 +105,7 @@ LinkEntity linkToContact = query.AddLink(
 linkToContact.EntityAlias = "co";
 ```
 
-
+[!INCLUDE [cc-automatic-query-optimization](../../includes/cc-automatic-query-optimization.md)]
 
 ### See also
 

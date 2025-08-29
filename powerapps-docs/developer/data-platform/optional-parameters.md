@@ -1,12 +1,12 @@
 ---
 title: "Use optional parameters (Microsoft Dataverse) | Microsoft Docs" 
 description: "Use optional parameters to control operation behaviors" 
-ms.date: 07/01/2024
+ms.date: 06/20/2025
 ms.reviewer: jdaly
 ms.topic: how-to
-author: MicroSri
+author: MsSQLGirl
 ms.subservice: dataverse-developer
-ms.author: sriknair
+ms.author: jukoesma
 search.audienceType: 
   - developer
 contributors:
@@ -20,7 +20,7 @@ contributors:
 Dataverse provides a set of optional parameters or request header values a developer of a client application can use to modify the behavior of individual requests. This article describes the parameter values and request headers that you can use to get the behaviors you need.
 
 > [!NOTE]
-> This article introduces these parameters but does not explain them in depth. Please follow the links for more information to fully understand the scenarios for using these parameters.
+> This article introduces these parameters but doesn't explain them in depth. Follow the links for more information to fully understand the scenarios for using these parameters.
 
 ## How to use
 
@@ -28,21 +28,21 @@ How you use these optional parameters depends on whether you're using the Datave
 
 ### [SDK for .NET](#tab/sdk)
 
-Usually, you will add the parameter to the [OrganizationRequest.Parameters Collection](xref:Microsoft.Xrm.Sdk.OrganizationRequest.Parameters) of the named request class.
+Usually, you'll add the parameter to the [OrganizationRequest.Parameters Collection](xref:Microsoft.Xrm.Sdk.OrganizationRequest.Parameters) of the named request class.
 
 > [!NOTE]
-> You cannot specify these parameters using the 7 shortcut methods exposed with the <xref:Microsoft.Xrm.Sdk.IOrganizationService>. You must use the named request class with the [IOrganizationService.Execute method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A).
+> You can't specify these parameters using the seven shortcut methods exposed with the <xref:Microsoft.Xrm.Sdk.IOrganizationService>. You must use the named request class with the [IOrganizationService.Execute method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A).
 
-One exception is when setting the `partitionid`, this is set as an attribute of the entity instance. More information: [Perform a data operation with specified partition](#perform-a-data-operation-with-specified-partition)
+One exception is when setting the `partitionid`. The `partitionid` is set as an attribute of the entity instance. More information: [Perform a data operation with specified partition](#perform-a-data-operation-with-specified-partition)
 
 More information:
 
 - [Use messages with the SDK for .NET](org-service/use-messages.md)
-- See the examples below
+- See the following examples
 
 ### [Web API](#tab/webapi)
 
-Usually, you'll add the parameter as a request header with the `MSCRM.` namespace.
+Usually, you add the parameter as a request header with the `MSCRM.` namespace.
 
 Two exceptions are the following that are appended to the URL.
 
@@ -52,7 +52,7 @@ Two exceptions are the following that are appended to the URL.
 More information:
 
 - [Compose HTTP requests and handle errors : Other headers](webapi/compose-http-requests-handle-errors.md#other-headers)
-- See the examples below.
+- See the following examples.
 
 ---
 
@@ -277,7 +277,7 @@ More information: [Shared variables](understand-the-data-context.md#shared-varia
 
 ## Perform a data operation with specified partition
 
-When using elastic tables with a partitioning strategy, you can pass a unique string value with the `partitionid` parameter to access non-relational table data within a storage partition.
+When using elastic tables with a partitioning strategy, you can pass a unique string value with the `partitionid` parameter to access nonrelational table data within a storage partition.
 
 The following examples use the `partitionid` value of `deviceId` when retrieving a `contoso_sensordata` record.
 
@@ -327,7 +327,7 @@ Alternatively, you can use the `partitionid` value using alternate key style.
 
 ## Bypass custom Dataverse logic
 
-Synchronous logic must be applied during the transaction and can significantly impact performance of individual operations. When performing bulk operations, the additional time for these individual operations can increase the time required. Use the `BypassBusinessLogicExecution` parameter when you want to improve performance while performing bulk data operations.
+Synchronous logic must be applied during the transaction and can significantly impact performance of individual operations. With bulk operations, the extra time for these individual operations can increase the time required. Use the `BypassBusinessLogicExecution` parameter when you want to improve performance while performing bulk data operations.
 
 > [!IMPORTANT]
 > The calling user must have the `prvBypassCustomBusinessLogic` privilege.
@@ -376,12 +376,12 @@ MSCRM.BypassBusinessLogicExecution: CustomSync,CustomAsync
 
 ## Bypass Power Automate Flows
 
-When bulk data operations occur that trigger flows, Dataverse creates system jobs to execute the flows. When the number of system jobs is very large, it may cause performance issues for the system. If this occurs, you can choose to bypass triggering the flows by using the `SuppressCallbackRegistrationExpanderJob` optional parameter.
+When bulk data operations occur that trigger flows, Dataverse creates system jobs to execute the flows. When the number of system jobs is large, it might cause performance issues for the system. If performance issues occur, you can choose to bypass triggering the flows by using the `SuppressCallbackRegistrationExpanderJob` optional parameter.
 
 The [CallbackRegistration table](reference/entities/callbackregistration.md) manages flow triggers, and there's an internal operation called *expander* that calls the registered flow triggers.
 
 > [!NOTE]
-> When this option is used, the flow owners will not receive a notification that their flow logic was bypassed.
+> When this option is used, the flow owners won't receive a notification that their flow logic was bypassed.
 
 ### [SDK for .NET](#tab/sdk)
 
@@ -422,10 +422,49 @@ MSCRM.SuppressCallbackRegistrationExpanderJob: true
 
 More information: [Bypass Power Automate Flows](bypass-power-automate-flows.md)
 
+## Return unmasked data
+
+When you have a column configured to use the [masking rules](/power-platform/admin/create-manage-masking-rules) preview feature you can use the `UnMaskedData` optional parameter to request that the unmasked value is returned.  
+
+### [SDK for .NET](#tab/sdk)
+
+```csharp
+RetrieveMultipleRequest request = new()
+{
+   Query = query,
+   ["UnMaskedData"] = true
+};
+
+var response = (RetrieveMultipleResponse)service.Execute(request);
+```
+
+### [Web API](#tab/webapi)
+
+Use the `UnMaskedData=true` query option to indicate that unmasked values should be returned.
+
+> [!IMPORTANT]
+> The `UnMaskedData` option is case sensitive. If you use the incorrect parameter value you will get this error:
+> `{"error":{"code":"0x80060888","message":"The query parameter [REDACTED] is not supported"}}`
+
+**Request:**
+
+```http
+GET [ORGANIZATION URI]/api/data/v9.2/sample_examples?$select=sample_name,sample_email,sample_governmentid,sample_telephonenumber,sample_dateofbirth&$orderby=sample_name desc&UnMaskedData=true HTTP/1.1
+Accept: application/json
+Authorization: Bearer [REDACTED]
+OData-Version: 4.0
+OData-MaxVersion: 4.0
+```
+
+---
+
+[Learn more about retrieving unmasked data](column-level-security.md#retrieve-unmasked-data).
+
+
 ### See also
 
-[Use messages with the SDK for .NET](org-service/use-messages.md)<br />
-[Web API: Compose HTTP requests and handle errors : Other headers](webapi/compose-http-requests-handle-errors.md#other-headers)<br />
+[Use messages with the SDK for .NET](org-service/use-messages.md)   
+[Web API: Compose HTTP requests and handle errors : Other headers](webapi/compose-http-requests-handle-errors.md#other-headers)   
 [Bypass Custom Business Logic](bypass-custom-business-logic.md)
 
 

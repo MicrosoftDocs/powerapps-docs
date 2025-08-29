@@ -1,9 +1,9 @@
 ---
 title: Use bulk operation messages
 description: Learn how to use special APIs to perform operations on multiple rows of data in a Microsoft Dataverse table. 
-ms.date: 01/31/2025
-author: MicroSri
-ms.author: sriknair
+ms.date: 07/07/2025
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 ms.topic: how-to
 ms.subservice: dataverse-developer
@@ -20,8 +20,8 @@ To get the best performance when you run operations on multiple rows of a Micros
 
 - [`CreateMultiple`](#createmultiple): Creates multiple records of the same type in a single request.
 - [`UpdateMultiple`](#updatemultiple): Updates multiple records of the same type in a single request.
-- [`UpsertMultiple`](upsertmultiple.md): Creates or updates multiple records of the same type in a single request.
-- [`DeleteMultiple` (preview)](deletemultiple.md): For elastic tables only. Deletes multiple records of the same type in a single request.
+- [`UpsertMultiple`](#upsertmultiple): Creates or updates multiple records of the same type in a single request.
+- [`DeleteMultiple`](#deletemultiple): For elastic tables only. Deletes multiple records of the same type in a single request.
 
 > [!NOTE]
 > For guidance about options when performing bulk operations, such when to use these APIs compared to batch APIs like `ExecuteMultiple`, see [Optimize performance for bulk operations](optimize-performance-create-update.md).
@@ -374,6 +374,107 @@ These queries will not return results for the `UpsertMultiple` message. A table 
 
 Multiple records with the same primary key or alternate key values in the payload are not supported with `UpsertMultiple`. When more than one record in the `Targets` parameter is uniquely identified by a primary or alternate key, `UpsertMultiple` will return an error. [This behavior is different from `UpdateMultiple`](#duplicate-records-in-updatemultiple-targets-parameter).
 
+### DeleteMultiple
+
+Delete multiple rows of data in elastic tables with a single request.
+
+##### [SDK for .NET](#tab/sdk)
+
+You must use the [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) because the [SDK for .NET](org-service/overview.md) doesn't have a `DeleteMultipleRequest` class. Learn how to [use messages with the SDK for .NET](org-service/use-messages.md).
+
+The following `DeleteMultipleExample` static method uses the `DeleteMultiple` message with the [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) to delete multiple rows from the `contoso_SensorData` elastic table using the alternate key to include the `partitionid` to uniquely identify the rows.
+
+```csharp
+public static void DeleteMultipleExample(IOrganizationService service)
+{
+    string tableLogicalName = "contoso_sensordata";
+
+    List<EntityReference> entityReferences = new() {
+        {
+            new EntityReference(logicalName: tableLogicalName,
+               keyAttributeCollection: new KeyAttributeCollection
+               {
+                  { "contoso_sensordataid", "3f56361a-b210-4a74-8708-3c664038fa41" },
+                  { "partitionid", "deviceid-001" }
+               })
+        },
+        { new EntityReference(logicalName: tableLogicalName,
+               keyAttributeCollection: new KeyAttributeCollection
+               {
+                  { "contoso_sensordataid", "e682715b-1bba-415e-b2bc-de9327308423" },
+                  { "partitionid", "deviceid-002" }
+               })
+        }
+    };
+
+    OrganizationRequest request = new(requestName:"DeleteMultiple")
+    {
+        Parameters = {
+            {"Targets", new EntityReferenceCollection(entityReferences)}
+        }
+    };
+
+    service.Execute(request);
+}
+```
+
+##### [Web API](#tab/webapi)
+
+The following example shows how to use the [DeleteMultiple action](xref:Microsoft.Dynamics.CRM.DeleteMultiple) to delete multiple rows from the `contoso_SensorData` elastic table including the `partitionid` to uniquely identify the rows.
+
+**Request:**
+
+```http
+POST [Organization Uri]/api/data/v9.2/contoso_sensordatas/Microsoft.Dynamics.CRM.DeleteMultiple
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+Content-Type: application/json; charset=utf-8
+Content-Length: 603
+
+{
+    "Targets": [
+        {
+            "@odata.type": "Microsoft.Dynamics.CRM.contoso_sensordata",
+            "contoso_sensordataid": "6114ca58-0928-ee11-9965-6045bd5cd155",
+            "partitionid": "Device-ABC-1234"
+        },
+        {
+            "@odata.type": "Microsoft.Dynamics.CRM.contoso_sensordata",
+            "contoso_sensordataid": "6214ca58-0928-ee11-9965-6045bd5cd155",
+            "partitionid": "Device-ABC-1234"
+        },
+        {
+            "@odata.type": "Microsoft.Dynamics.CRM.contoso_sensordata",
+            "contoso_sensordataid": "6314ca58-0928-ee11-9965-6045bd5cd155",
+            "partitionid": "Device-ABC-1234"
+        }
+    ]
+}
+```
+
+**Response:**
+
+```http
+HTTP/1.1 204 NoContent
+OData-Version: 4.0
+```
+
+---
+
+#### DeleteMultiple availability
+
+`DeleteMultiple` is supported only for elastic tables. Elastic tables don't support [table relationship cascading behavior](configure-entity-relationship-cascading-behavior.md), which can result in unpredictable execution times for delete operations. If you use `DeleteMultiple` on a standard table, you get the error: `DeleteMultiple has not yet been implemented.`
+
+
+#### DeleteMultiple examples
+
+You can find sample code on GitHub in [github.com/microsoft/PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples):
+
+- [Elastic table sample code](elastic-table-samples.md)
+- Within [Sample: SDK for .NET Use bulk operations](org-service/samples/create-update-multiple.md) or [Sample: Web API Use bulk operations](webapi/samples/create-update-multiple.md), change the `Settings.cs` config file and choose the `UseElastic` option.
+
 
 ## Standard and elastic table usage
 
@@ -384,7 +485,7 @@ Both standard and elastic tables benefit from a significant performance boost wh
 | [Number of records](#number-of-records) | Operations are more efficient with a larger number of records. There's no limit on the number of records, but there are message size and time limits. We recommend sending 100 - 1000 records at a time.| We recommend sending 100 records at a time. |
 | [On Error behavior](#on-error-behavior) | All operations roll back on error. | Partial success is possible. |
 | [Availability](#availability) | Not all standard tables support these messages. | Messages are available for all elastic tables. |
-| [DeleteMultiple](deletemultiple.md) | Not available. Use the SDK [BulkDeleteRequest class](xref:Microsoft.Crm.Sdk.Messages.BulkDeleteRequest) or the Web API [BulkDelete action](xref:Microsoft.Dynamics.CRM.BulkDelete) instead. [Learn how to delete data in bulk](delete-data-bulk.md). | Available using the SDK [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest). The Web API `DeleteMultiple` action is private, but you can use it now. It will become public soon. |
+| [DeleteMultiple](#deletemultiple) | Not available. Use the SDK [BulkDeleteRequest class](xref:Microsoft.Crm.Sdk.Messages.BulkDeleteRequest) or the Web API [BulkDelete action](xref:Microsoft.Dynamics.CRM.BulkDelete) instead. [Learn how to delete data in bulk](delete-data-bulk.md). | Use the SDK [DeleteMultipleRequest Class](/dotnet/api/microsoft.xrm.sdk.messages.deletemultiplerequest) or Web API [DeleteMultiple Action](/power-apps/developer/data-platform/webapi/reference/deletemultiple)|
 
 Standard and elastic table usage is different because standard tables use Azure SQL and support transactions. Elastic tables use Azure Cosmos DB, which doesn't support transactions but is able to handle large amounts of data at high levels of throughput with low latency. The following sections provide more details. [Learn more about bulk operations on elastic tables](use-elastic-tables.md#bulk-operations-with-elastic-tables).
 
@@ -444,9 +545,6 @@ When you use the Web API to perform a bulk operation on an elastic table, you ne
 ### Availability
 
 Bulk operation message availability depends on whether you're using standard tables or elastic tables. All elastic tables support the `CreateMultiple`, `UpdateMultiple`, `UpsertMultiple`, and `DeleteMultiple` messages.
-
-See also:
-- [DeleteMultiple Availability](deletemultiple.md#availability)
 
 #### Availability with standard tables
 
@@ -626,8 +724,6 @@ These limits are based on data changes: `Create`, `Update`, and `Delete` operati
 
 ### See also
 
-[Use UpsertMultiple (preview)](upsertmultiple.md)   
-[Use DeleteMultiple (preview)](deletemultiple.md)   
 [Elastic tables](elastic-tables.md)  
 [Write plug-ins for CreateMultiple and UpdateMultiple](write-plugin-multiple-operation.md)  
 [Sample: SDK for .NET Use bulk operations](org-service/samples/create-update-multiple.md)  
