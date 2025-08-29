@@ -108,6 +108,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
 - [ProcessEmailsReceivedAfter](#BKMK_ProcessEmailsReceivedAfter)
+- [PurviewManagedIdentityId](#BKMK_PurviewManagedIdentityId)
 - [SendEmailAlert](#BKMK_SendEmailAlert)
 - [ServerAuthority](#BKMK_ServerAuthority)
 - [ServerType](#BKMK_ServerType)
@@ -990,6 +991,19 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Inactive|
 |SourceTypeMask|0|
 
+### <a name="BKMK_PurviewManagedIdentityId"></a> PurviewManagedIdentityId
+
+|Property|Value|
+|---|---|
+|Description|**Unique identifier for managed identity associated with emailserverprofile for Purview integration.**|
+|DisplayName|**Purview Managed Identity**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`purviewmanagedidentityid`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|managedidentity|
+
 ### <a name="BKMK_SendEmailAlert"></a> SendEmailAlert
 
 |Property|Value|
@@ -1561,6 +1575,7 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [lk_emailserverprofile_modifiedonbehalfby](#BKMK_lk_emailserverprofile_modifiedonbehalfby)
 - [managedidentity_emailserverprofile_acsmanagedidentityid](#BKMK_managedidentity_emailserverprofile_acsmanagedidentityid)
 - [managedidentity_emailserverprofile_managedidentityid](#BKMK_managedidentity_emailserverprofile_managedidentityid)
+- [managedidentity_emailserverprofile_purviewmanagedidentityid](#BKMK_managedidentity_emailserverprofile_purviewmanagedidentityid)
 - [organization_emailserverprofile](#BKMK_organization_emailserverprofile)
 - [owner_emailserverprofile](#BKMK_owner_emailserverprofile)
 - [team_emailserverprofile](#BKMK_team_emailserverprofile)
@@ -1666,6 +1681,19 @@ One-To-Many Relationship: [managedidentity managedidentity_emailserverprofile_ma
 |ReferencedAttribute|`managedidentityid`|
 |ReferencingAttribute|`managedidentityid`|
 |ReferencingEntityNavigationPropertyName|`managedidentityid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_managedidentity_emailserverprofile_purviewmanagedidentityid"></a> managedidentity_emailserverprofile_purviewmanagedidentityid
+
+One-To-Many Relationship: [managedidentity managedidentity_emailserverprofile_purviewmanagedidentityid](managedidentity.md#BKMK_managedidentity_emailserverprofile_purviewmanagedidentityid)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`managedidentity`|
+|ReferencedAttribute|`managedidentityid`|
+|ReferencingAttribute|`purviewmanagedidentityid`|
+|ReferencingEntityNavigationPropertyName|`purviewmanagedidentityid`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 

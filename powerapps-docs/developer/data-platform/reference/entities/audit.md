@@ -222,6 +222,9 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |120|**Restore**|
 |121|**ApplicationBasedAccessDenied**|
 |122|**ApplicationBasedAccessAllowed**|
+|123|**Create - AI assisted**|
+|124|**Update - AI assisted**|
+|125|**Read Unmasked**|
 
 ### <a name="BKMK_AttributeMask"></a> AttributeMask
 

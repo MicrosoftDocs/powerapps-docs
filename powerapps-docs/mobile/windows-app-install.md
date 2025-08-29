@@ -1,12 +1,12 @@
 ---
 title: Install Power Apps for Windows | Microsoft Docs
 description: Install Power Apps for Windows.
-author: trdehove
+author: RitGan
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 10/11/2024
+ms.date: 06/10/2025
 ms.subservice: mobile
-ms.author: trdehove
+ms.author: ritwikganni
 ms.custom: ""
 ms.reviewer: smurkute
 ms.assetid: 

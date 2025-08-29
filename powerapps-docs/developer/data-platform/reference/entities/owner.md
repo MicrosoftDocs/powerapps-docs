@@ -159,6 +159,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [owner_approvalprocess](#BKMK_owner_approvalprocess)
 - [owner_approvalstageapproval](#BKMK_owner_approvalstageapproval)
 - [owner_approvalstagecondition](#BKMK_owner_approvalstagecondition)
+- [owner_approvalstageintelligent](#BKMK_owner_approvalstageintelligent)
 - [owner_approvalstageorder](#BKMK_owner_approvalstageorder)
 - [owner_asyncoperations](#BKMK_owner_asyncoperations)
 - [owner_bot](#BKMK_owner_bot)
@@ -226,6 +227,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [owner_interactionforemail](#BKMK_owner_interactionforemail)
 - [owner_keyvaultreference](#BKMK_owner_keyvaultreference)
 - [owner_knowledgearticle](#BKMK_owner_knowledgearticle)
+- [owner_knowledgefaq](#BKMK_owner_knowledgefaq)
 - [owner_letters](#BKMK_owner_letters)
 - [owner_mailbox](#BKMK_owner_mailbox)
 - [owner_mailboxtrackingfolder](#BKMK_owner_mailboxtrackingfolder)
@@ -239,6 +241,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [owner_msdyn_aibfile](#BKMK_owner_msdyn_aibfile)
 - [owner_msdyn_aibfileattacheddata](#BKMK_owner_msdyn_aibfileattacheddata)
 - [owner_msdyn_aidataprocessingevent](#BKMK_owner_msdyn_aidataprocessingevent)
+- [owner_msdyn_aidocumenttemplate](#BKMK_owner_msdyn_aidocumenttemplate)
 - [owner_msdyn_aievaluationconfiguration](#BKMK_owner_msdyn_aievaluationconfiguration)
 - [owner_msdyn_aievaluationrun](#BKMK_owner_msdyn_aievaluationrun)
 - [owner_msdyn_aievent](#BKMK_owner_msdyn_aievent)
@@ -286,6 +289,8 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [owner_msdyn_flow_flowapproval](#BKMK_owner_msdyn_flow_flowapproval)
 - [owner_msdyn_formmapping](#BKMK_owner_msdyn_formmapping)
 - [owner_msdyn_function](#BKMK_owner_msdyn_function)
+- [owner_msdyn_historicalcaseharvestbatch](#BKMK_owner_msdyn_historicalcaseharvestbatch)
+- [owner_msdyn_historicalcaseharvestrun](#BKMK_owner_msdyn_historicalcaseharvestrun)
 - [owner_msdyn_integratedsearchprovider](#BKMK_owner_msdyn_integratedsearchprovider)
 - [owner_msdyn_kalanguagesetting](#BKMK_owner_msdyn_kalanguagesetting)
 - [owner_msdyn_kbattachment](#BKMK_owner_msdyn_kbattachment)
@@ -293,6 +298,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [owner_msdyn_knowledgearticleimage](#BKMK_owner_msdyn_knowledgearticleimage)
 - [owner_msdyn_knowledgearticletemplate](#BKMK_owner_msdyn_knowledgearticletemplate)
 - [owner_msdyn_knowledgeassetconfiguration](#BKMK_owner_msdyn_knowledgeassetconfiguration)
+- [owner_msdyn_knowledgeharvestjobrecord](#BKMK_owner_msdyn_knowledgeharvestjobrecord)
 - [owner_msdyn_knowledgeinteractioninsight](#BKMK_owner_msdyn_knowledgeinteractioninsight)
 - [owner_msdyn_knowledgemanagementsetting](#BKMK_owner_msdyn_knowledgemanagementsetting)
 - [owner_msdyn_knowledgepersonalfilter](#BKMK_owner_msdyn_knowledgepersonalfilter)
@@ -339,6 +345,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [owner_powerbireportapdx](#BKMK_owner_powerbireportapdx)
 - [owner_powerfxrule](#BKMK_owner_powerfxrule)
 - [owner_powerpagecomponent](#BKMK_owner_powerpagecomponent)
+- [owner_powerpagesddosalert](#BKMK_owner_powerpagesddosalert)
 - [owner_powerpagesite](#BKMK_owner_powerpagesite)
 - [owner_powerpagesitelanguage](#BKMK_owner_powerpagesitelanguage)
 - [owner_powerpagesitepublished](#BKMK_owner_powerpagesitepublished)
@@ -346,7 +353,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [owner_powerpagesmanagedidentity](#BKMK_owner_powerpagesmanagedidentity)
 - [owner_powerpagesscanreport](#BKMK_owner_powerpagesscanreport)
 - [owner_powerpagessiteaifeedback](#BKMK_owner_powerpagessiteaifeedback)
-- [owner_principalentitybusinessunitmap](#BKMK_owner_principalentitybusinessunitmap)
+- [owner_powerpagessourcefile](#BKMK_owner_powerpagessourcefile)
 - [owner_privilegecheckerrun](#BKMK_owner_privilegecheckerrun)
 - [owner_processsessions](#BKMK_owner_processsessions)
 - [owner_processstageparameter](#BKMK_owner_processstageparameter)
@@ -735,6 +742,18 @@ Many-To-One Relationship: [approvalstagecondition owner_approvalstagecondition](
 |ReferencingEntity|`approvalstagecondition`|
 |ReferencingAttribute|`ownerid`|
 |ReferencedEntityNavigationPropertyName|`owner_approvalstagecondition`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_owner_approvalstageintelligent"></a> owner_approvalstageintelligent
+
+Many-To-One Relationship: [approvalstageintelligent owner_approvalstageintelligent](approvalstageintelligent.md#BKMK_owner_approvalstageintelligent)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`approvalstageintelligent`|
+|ReferencingAttribute|`ownerid`|
+|ReferencedEntityNavigationPropertyName|`owner_approvalstageintelligent`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
@@ -1542,6 +1561,18 @@ Many-To-One Relationship: [knowledgearticle owner_knowledgearticle](knowledgeart
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_owner_knowledgefaq"></a> owner_knowledgefaq
+
+Many-To-One Relationship: [knowledgefaq owner_knowledgefaq](knowledgefaq.md#BKMK_owner_knowledgefaq)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`knowledgefaq`|
+|ReferencingAttribute|`ownerid`|
+|ReferencedEntityNavigationPropertyName|`owner_knowledgefaq`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 ### <a name="BKMK_owner_letters"></a> owner_letters
 
 Many-To-One Relationship: [letter owner_letters](letter.md#BKMK_owner_letters)
@@ -1696,6 +1727,18 @@ Many-To-One Relationship: [msdyn_aidataprocessingevent owner_msdyn_aidataprocess
 |ReferencingAttribute|`ownerid`|
 |ReferencedEntityNavigationPropertyName|`owner_msdyn_aidataprocessingevent`|
 |IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_owner_msdyn_aidocumenttemplate"></a> owner_msdyn_aidocumenttemplate
+
+Many-To-One Relationship: [msdyn_aidocumenttemplate owner_msdyn_aidocumenttemplate](msdyn_aidocumenttemplate.md#BKMK_owner_msdyn_aidocumenttemplate)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_aidocumenttemplate`|
+|ReferencingAttribute|`ownerid`|
+|ReferencedEntityNavigationPropertyName|`owner_msdyn_aidocumenttemplate`|
+|IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_owner_msdyn_aievaluationconfiguration"></a> owner_msdyn_aievaluationconfiguration
@@ -2262,6 +2305,30 @@ Many-To-One Relationship: [msdyn_function owner_msdyn_function](msdyn_function.m
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_owner_msdyn_historicalcaseharvestbatch"></a> owner_msdyn_historicalcaseharvestbatch
+
+Many-To-One Relationship: [msdyn_historicalcaseharvestbatch owner_msdyn_historicalcaseharvestbatch](msdyn_historicalcaseharvestbatch.md#BKMK_owner_msdyn_historicalcaseharvestbatch)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_historicalcaseharvestbatch`|
+|ReferencingAttribute|`ownerid`|
+|ReferencedEntityNavigationPropertyName|`owner_msdyn_historicalcaseharvestbatch`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_owner_msdyn_historicalcaseharvestrun"></a> owner_msdyn_historicalcaseharvestrun
+
+Many-To-One Relationship: [msdyn_historicalcaseharvestrun owner_msdyn_historicalcaseharvestrun](msdyn_historicalcaseharvestrun.md#BKMK_owner_msdyn_historicalcaseharvestrun)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_historicalcaseharvestrun`|
+|ReferencingAttribute|`ownerid`|
+|ReferencedEntityNavigationPropertyName|`owner_msdyn_historicalcaseharvestrun`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 ### <a name="BKMK_owner_msdyn_integratedsearchprovider"></a> owner_msdyn_integratedsearchprovider
 
 Many-To-One Relationship: [msdyn_integratedsearchprovider owner_msdyn_integratedsearchprovider](msdyn_integratedsearchprovider.md#BKMK_owner_msdyn_integratedsearchprovider)
@@ -2343,6 +2410,18 @@ Many-To-One Relationship: [msdyn_knowledgeassetconfiguration owner_msdyn_knowled
 |ReferencingEntity|`msdyn_knowledgeassetconfiguration`|
 |ReferencingAttribute|`ownerid`|
 |ReferencedEntityNavigationPropertyName|`owner_msdyn_knowledgeassetconfiguration`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_owner_msdyn_knowledgeharvestjobrecord"></a> owner_msdyn_knowledgeharvestjobrecord
+
+Many-To-One Relationship: [msdyn_knowledgeharvestjobrecord owner_msdyn_knowledgeharvestjobrecord](msdyn_knowledgeharvestjobrecord.md#BKMK_owner_msdyn_knowledgeharvestjobrecord)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_knowledgeharvestjobrecord`|
+|ReferencingAttribute|`ownerid`|
+|ReferencedEntityNavigationPropertyName|`owner_msdyn_knowledgeharvestjobrecord`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
@@ -2898,6 +2977,18 @@ Many-To-One Relationship: [powerpagecomponent owner_powerpagecomponent](powerpag
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_owner_powerpagesddosalert"></a> owner_powerpagesddosalert
+
+Many-To-One Relationship: [powerpagesddosalert owner_powerpagesddosalert](powerpagesddosalert.md#BKMK_owner_powerpagesddosalert)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`powerpagesddosalert`|
+|ReferencingAttribute|`ownerid`|
+|ReferencedEntityNavigationPropertyName|`owner_powerpagesddosalert`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 ### <a name="BKMK_owner_powerpagesite"></a> owner_powerpagesite
 
 Many-To-One Relationship: [powerpagesite owner_powerpagesite](powerpagesite.md#BKMK_owner_powerpagesite)
@@ -2982,15 +3073,15 @@ Many-To-One Relationship: [powerpagessiteaifeedback owner_powerpagessiteaifeedba
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_owner_principalentitybusinessunitmap"></a> owner_principalentitybusinessunitmap
+### <a name="BKMK_owner_powerpagessourcefile"></a> owner_powerpagessourcefile
 
-Many-To-One Relationship: [principalentitybusinessunitmap owner_principalentitybusinessunitmap](principalentitybusinessunitmap.md#BKMK_owner_principalentitybusinessunitmap)
+Many-To-One Relationship: [powerpagessourcefile owner_powerpagessourcefile](powerpagessourcefile.md#BKMK_owner_powerpagessourcefile)
 
 |Property|Value|
 |---|---|
-|ReferencingEntity|`principalentitybusinessunitmap`|
-|ReferencingAttribute|`principalid`|
-|ReferencedEntityNavigationPropertyName|`owner_principalentitybusinessunitmap`|
+|ReferencingEntity|`powerpagessourcefile`|
+|ReferencingAttribute|`ownerid`|
+|ReferencedEntityNavigationPropertyName|`owner_powerpagessourcefile`|
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
