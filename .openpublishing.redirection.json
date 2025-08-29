@@ -9809,6 +9809,31 @@
       "source_path": "powerapps-docs/cards/manage-cards/manage-cards.md",
       "redirect_url": "/power-apps/",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/make-a-card/connectors/connector-intro.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/make-a-card/power-fx/intro-to-pfx.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/make-a-card/screens/use-screens.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/make-a-card/testing/debugging-cards.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/make-a-card/variables/variables.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
     }
   ]
 }
