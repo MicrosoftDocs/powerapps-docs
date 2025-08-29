@@ -41,7 +41,7 @@ When creating a code component, ensure the following best practices in [code com
 [Copilot](reference/copilot.md)  
 [executeEvent](reference/copilot/executeevent.md)  
 [executePrompt](reference/copilot/executeprompt.md)  
-[Working with an interactive agent](../../maker/model-driven-apps/add-agents-to-app.md#working-with-an-interactive-agent)  
+[Working with an app assistant agent](../../maker/model-driven-apps/add-agents-to-app.md#working-with-an-app-assistant-agent)  
 [Power Apps component framework overview](overview.md)  
 [Create your first code component](implementing-controls-using-typescript.md)  
 [Learn Power Apps component framework](/training/paths/use-power-apps-component-framework)  
