@@ -528,10 +528,10 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |4216|**Social Activity**|
 |4251|**Recurring Appointment**|
 |9953|**Knowledge Article**|
-|10209|**Teams chat**|
-|10225|**Knowledge Article Template**|
-|10349|**Invite Redemption**|
-|10350|**Portal Comment**|
+|10228|**Teams chat**|
+|10244|**Knowledge Article Template**|
+|10378|**Invite Redemption**|
+|10379|**Portal Comment**|
 
 ### <a name="BKMK_OrganizationId"></a> OrganizationId
 

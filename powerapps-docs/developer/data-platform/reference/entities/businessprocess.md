@@ -70,6 +70,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
+- [processingcontext](#BKMK_processingcontext)
 - [processmap](#BKMK_processmap)
 - [processmapcreatedon](#BKMK_processmapcreatedon)
 - [processmapstatus](#BKMK_processmapstatus)
@@ -194,6 +195,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|SystemRequired|
 |Type|EntityName|
 
+### <a name="BKMK_processingcontext"></a> processingcontext
+
+|Property|Value|
+|---|---|
+|Description|**Json representing the processing context**|
+|DisplayName|**Processing Context**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`processingcontext`|
+|RequiredLevel|None|
+|Type|Memo|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1048576|
+
 ### <a name="BKMK_processmap"></a> processmap
 
 |Property|Value|
@@ -249,6 +267,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |100000000|**Unknown**|
 |100000001|**Processing**|
 |100000002|**Ready**|
+|100000003|**Refreshing**|
 
 ### <a name="BKMK_processmapversion"></a> processmapversion
 
@@ -780,6 +799,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [businessprocess_PrincipalObjectAttributeAccesses](#BKMK_businessprocess_PrincipalObjectAttributeAccesses)
 - [businessprocess_ProcessSession](#BKMK_businessprocess_ProcessSession)
 - [businessprocess_SyncErrors](#BKMK_businessprocess_SyncErrors)
+- [msdyn_businessprocess_msdyn_pminferredtask_msdyn_businessprocessid](#BKMK_msdyn_businessprocess_msdyn_pminferredtask_msdyn_businessprocessid)
 
 ### <a name="BKMK_businessprocess_AsyncOperations"></a> businessprocess_AsyncOperations
 
@@ -876,6 +896,18 @@ Many-To-One Relationship: [syncerror businessprocess_SyncErrors](syncerror.md#BK
 |ReferencedEntityNavigationPropertyName|`businessprocess_SyncErrors`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_msdyn_businessprocess_msdyn_pminferredtask_msdyn_businessprocessid"></a> msdyn_businessprocess_msdyn_pminferredtask_msdyn_businessprocessid
+
+Many-To-One Relationship: [msdyn_pminferredtask msdyn_businessprocess_msdyn_pminferredtask_msdyn_businessprocessid](msdyn_pminferredtask.md#BKMK_msdyn_businessprocess_msdyn_pminferredtask_msdyn_businessprocessid)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_pminferredtask`|
+|ReferencingAttribute|`msdyn_businessprocessid`|
+|ReferencedEntityNavigationPropertyName|`msdyn_businessprocess_msdyn_pminferredtask_msdyn_businessprocessid`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 
 

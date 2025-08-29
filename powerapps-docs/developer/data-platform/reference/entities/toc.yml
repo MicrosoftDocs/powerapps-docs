@@ -55,6 +55,9 @@ items:
 - name: "AI Configuration"
   displayName: "msdyn_AIConfiguration entity"
   href: msdyn_aiconfiguration.md
+- name: "AI Document Template"
+  displayName: "msdyn_aidocumenttemplate entity"
+  href: msdyn_aidocumenttemplate.md
 - name: "AI Evaluation Configuration"
   displayName: "msdyn_AIEvaluationConfiguration entity"
   href: msdyn_aievaluationconfiguration.md
@@ -238,6 +241,9 @@ items:
 - name: "Approval Stage Condition"
   displayName: "approvalstagecondition entity"
   href: approvalstagecondition.md
+- name: "Approval Stage Intelligent"
+  displayName: "approvalstageintelligent entity"
+  href: approvalstageintelligent.md
 - name: "Approval Stage Order"
   displayName: "approvalstageorder entity"
   href: approvalstageorder.md
@@ -262,6 +268,9 @@ items:
 - name: "Attribute"
   displayName: "Attribute entity"
   href: attribute.md
+- name: "Attribute Cluster Config"
+  displayName: "AttributeClusterConfig entity"
+  href: attributeclusterconfig.md
 - name: "Auditing"
   displayName: "Audit entity"
   href: audit.md
@@ -835,12 +844,18 @@ items:
 - name: "Knowledge Configuration"
   displayName: "msdyn_knowledgeconfiguration entity"
   href: msdyn_knowledgeconfiguration.md
+- name: "Knowledge FAQ"
+  displayName: "KnowledgeFAQ entity"
+  href: knowledgefaq.md
 - name: "Knowledge Federated Article"
   displayName: "msdyn_federatedarticle entity"
   href: msdyn_federatedarticle.md
 - name: "Knowledge Federated Article Incident"
   displayName: "msdyn_federatedarticleincident entity"
   href: msdyn_federatedarticleincident.md
+- name: "Knowledge Harvest Job Record"
+  displayName: "msdyn_knowledgeharvestjobrecord entity"
+  href: msdyn_knowledgeharvestjobrecord.md
 - name: "Knowledge Interaction Insight"
   displayName: "msdyn_knowledgeinteractioninsight entity"
   href: msdyn_knowledgeinteractioninsight.md
@@ -937,6 +952,15 @@ items:
 - name: "Ms Graph Resource To Subscription"
   displayName: "MsGraphResourceToSubscription entity"
   href: msgraphresourcetosubscription.md
+- name: "msdyn_aiconfiguration_documenttemplate"
+  displayName: "msdyn_aiconfiguration_documenttemplate entity"
+  href: msdyn_aiconfiguration_documenttemplate.md
+- name: "msdyn_historicalcaseharvestbatch"
+  displayName: "msdyn_historicalcaseharvestbatch entity"
+  href: msdyn_historicalcaseharvestbatch.md
+- name: "msdyn_historicalcaseharvestrun"
+  displayName: "msdyn_historicalcaseharvestrun entity"
+  href: msdyn_historicalcaseharvestrun.md
 - name: "Multistep Form"
   displayName: "mspp_webform entity"
   href: mspp_webform.md
@@ -1132,15 +1156,18 @@ items:
 - name: "powerpagecomponent_powerpagecomponent"
   displayName: "powerpagecomponent_powerpagecomponent entity"
   href: powerpagecomponent_powerpagecomponent.md
+- name: "PowerPagesDDOSAlert"
+  displayName: "PowerPagesDDOSAlert entity"
+  href: powerpagesddosalert.md
 - name: "powerpagesite_dvfilesearch"
   displayName: "powerpagesite_dvfilesearch entity"
   href: powerpagesite_dvfilesearch.md
+- name: "powerpagesite_dvtablesearch"
+  displayName: "powerpagesite_dvtablesearch entity"
+  href: powerpagesite_dvtablesearch.md
 - name: "PowerPagesManagedIdentity"
   displayName: "PowerPagesManagedIdentity entity"
   href: powerpagesmanagedidentity.md
-- name: "PrincipalEntityBusinessUnitMap"
-  displayName: "PrincipalEntityBusinessUnitMap entity"
-  href: principalentitybusinessunitmap.md
 - name: "PrincipalObjectAccess"
   displayName: "PrincipalObjectAccess entity"
   href: principalobjectaccess.md
@@ -1414,6 +1441,9 @@ items:
 - name: "Site Setting"
   displayName: "mspp_sitesetting entity"
   href: mspp_sitesetting.md
+- name: "Site Source File"
+  displayName: "powerpagessourcefile entity"
+  href: powerpagessourcefile.md
 - name: "SLA"
   displayName: "SLA entity"
   href: sla.md
@@ -1513,6 +1543,12 @@ items:
 - name: "Subscription Sync Entry Outlook"
   displayName: "SubscriptionSyncEntryOutlook entity"
   href: subscriptionsyncentryoutlook.md
+- name: "Suggested Action"
+  displayName: "sa_SuggestedAction entity"
+  href: sa_suggestedaction.md
+- name: "Suggested Action Criteria"
+  displayName: "sa_SuggestedActionCriteria entity"
+  href: sa_suggestedactioncriteria.md
 - name: "SupportUserTable"
   displayName: "supportusertable entity"
   href: supportusertable.md

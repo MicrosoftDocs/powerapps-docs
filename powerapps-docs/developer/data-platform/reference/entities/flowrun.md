@@ -60,6 +60,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [CallingProductResourceId](#BKMK_CallingProductResourceId)
 - [CallingProductRunId](#BKMK_CallingProductRunId)
 - [CallingProductType](#BKMK_CallingProductType)
+- [ClientTrackingId](#BKMK_ClientTrackingId)
 - [ConversationId](#BKMK_ConversationId)
 - [DurationInMs](#BKMK_DurationInMs)
 - [EndTime](#BKMK_EndTime)
@@ -128,6 +129,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`callingproducttype`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|255|
+
+### <a name="BKMK_ClientTrackingId"></a> ClientTrackingId
+
+|Property|Value|
+|---|---|
+|Description|**The client tracking id of the run**|
+|DisplayName|**Client Tracking Id**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`clienttrackingid`|
 |RequiredLevel|None|
 |Type|String|
 |Format|Text|

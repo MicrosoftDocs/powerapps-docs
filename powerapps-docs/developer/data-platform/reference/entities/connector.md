@@ -73,6 +73,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [IconBlob](#BKMK_IconBlob)
 - [IconBrandColor](#BKMK_IconBrandColor)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
+- [Interfaces](#BKMK_Interfaces)
 - [IntroducedVersion](#BKMK_IntroducedVersion)
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [Name](#BKMK_Name)
@@ -295,6 +296,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Integer|
 |MaxValue|2147483647|
 |MinValue|-2147483648|
+
+### <a name="BKMK_Interfaces"></a> Interfaces
+
+|Property|Value|
+|---|---|
+|Description|**Interfaces of the Connector**|
+|DisplayName|**Interfaces**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`interfaces`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|4000|
 
 ### <a name="BKMK_IntroducedVersion"></a> IntroducedVersion
 
