@@ -131,8 +131,7 @@ The option values drop-down list combines the values available in the incoming f
 After import, the import wizard will add all mapped values in your app, but will drop unmapped values from the import file that aren't yet in your app. For example, you could map the "Low" source value to the "Cold" target value, but map the "High" source value to the (new) "High" target value. Based on these mappings, the import wizard creates "High" as a target value in your app. It doesn't create "Low" as a target value in your app because you didn't map any source to this target value.
 
 >[!NOTE]
->You can also map a column in your source file to a column of type "Two Options" and "Multiselect Option Set" (where a column can have multiple values). You must map each **Source Option Values** to the items in the **Dynamics 365 Option Values** list. When mapping to a column of type "Multiselect Option Set," if your source file includes values that aren't available in your app, new values won't be created in your app.
-
+>You can map a column in your source file to a "Two Options" or "Multiselect Option Set" column. When mapping to a "Multiselect Option Set," if your source file includes values not available in your app, new values may be created in Dataverse if the import mapping is set to "NotMapped." If the mapping is set to "Ignore," the import will fail.
 
 ### Map lookup columns
 
