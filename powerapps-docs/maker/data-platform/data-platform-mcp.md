@@ -4,7 +4,7 @@ description: Step-by-step instructions for setup, connect, and use Microsoft Dat
 author: sabinn-msft
 ms.component: cds
 ms.topic: how-to
-ms.date: 07/14/2025
+ms.date: 09/02/2025
 ms.subservice: dataverse-maker
 ms.author: sabinn
 ms. reviewer: matp
@@ -16,7 +16,7 @@ search.audienceType:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-The Model Context Protocol (MCP) is an open protocol that enables seamless integration between LLM applications and external data sources and tools. Microsoft Dataverse can act as an MCP server, providing intelligent access to tables and records to various MCP clients like Copilot Studio agents, VS Code GitHub Copilot, Claude desktop, and many others. This integration standardizes and streamlines the interaction between AI models and Dataverse data, making it more efficient and effective for developers to apply Dataverse's rich data capabilities within their AI-driven applications.  
+The Model Context Protocol (MCP) is an open protocol that enables seamless integration between LLM applications and external data sources and tools. Microsoft Dataverse can act as an MCP server, providing intelligent access to tables and records to various MCP clients like Copilot Studio agents, Visual Studio (VS) Code GitHub Copilot, Claude desktop, and many others. This integration standardizes and streamlines the interaction between AI models and Dataverse data, making it more efficient and effective for developers to apply Dataverse's rich data capabilities within their AI-driven applications.  
 
 Once connected to the Dataverse MCP Server, you can choose from various tools in the Power Platform environment. These tools are: list tables, describe table, read data, create record, update record, list prompts, execute prompt, list knowledge sources, and retrieve knowledge.
 
@@ -33,7 +33,7 @@ This article explains how to set up and use the Dataverse MCP server with Micros
 1. Select **Create**.
 1. Scroll down to the **Tools** section and select **+ Add tool**.
 1. Select **Model Context Protocol**, and then select **Dataverse MCP Server**.
-   1. If there is no existing Dataverse connection, you're prompted to do so.
+   1. If there's no existing Dataverse connection, you're prompted to do so.
 1. Select **Add to agent**.
 
 The individual tools available on this MCP server can be viewed and modified by selecting **...** > **Edit** next to the **Dataverse MCP Server** tool.
@@ -206,9 +206,9 @@ These instructions help you configure a Dataverse MCP server at the user setting
 1. From this point on, you can interact with the MCP server via Agent mode of GitHub Copilot. For example, “list tables in Dataverse,” “describe table account,” or “how many accounts do I have,” and so on.
 
 > [!TIP]
-> If you have other MCP servers registered with GitHub Copilot, there are a few ways to help MCP Client to choose the apporpriate MCP Server. Examples:
+> If you have other MCP servers registered with GitHub Copilot, there are a few ways to help MCP Client to choose the appropriate MCP Server. Examples:
 > * add "in Dataverse" to your prompt to be specific about which MCP server you’d like to use for your question, or
-> * at the beginning of the session, you can say "Use `<insert your MCP server name>` for this session".  
+> * at the beginning of the session, you can say "Use `<insert your MCP server name>` for this session."  
 
 For more resources about how to use GitHub Copilot in VS Code:
 
@@ -222,7 +222,7 @@ To learn how to use Visual Studio Code and MCP Severs go to this document: [Use 
 
 The following Dataverse MCP tools are available. Your prompt in the MCP client like Claude desktop and VS Code GitHub Copilot is automatically routed to one or more of these tools. So you can ask a question like "view Accounts data," which is likely be mapped to the `read_query` tool or `retrieve_knowledge`.  
 
-## Dataverse Tool Reference Guide
+## Dataverse tool reference
 
 This table provides an overview of commonly used tools in Dataverse, organized by functionality.
 
