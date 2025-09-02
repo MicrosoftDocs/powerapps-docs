@@ -60,7 +60,7 @@ Power Apps provides a fully featured low-code and no-code development environmen
 - [Power BI](https://powerplatform.microsoft.com/power-bi/) – make informed confident business decisions by putting data-driven insights into everyone’s hands.
 - [Power Pages](https://powerpages.microsoft.com/) – quickly create low-code business websites for delivering vital information and services to your customers.
 - [Power Automate](https://powerplatform.microsoft.com/power-automate/) – boost business productivity by giving everyone the ability to automate organizational processes.
-- [Power Virtual Agents](https://powerplatform.microsoft.com/power-virtual-agents/) – easily build chat bots to engage conversationally with your customers and employees, all without requiring coding.
+- [Microsoft Copilot Studio](/microsoft-copilot/microsoft-copilot-studio/) – easily build chat bots to engage conversationally with your customers and employees, all without requiring coding.
 
 This content concentrates on how Power Apps enables businesses to benefit from new, more integrated ways of working, starting with establishing an effective collaboration model. The fusion team model supports multi-role collaboration generating an advanced way to building apps involving both domain and specialist knowledge and experience.
 

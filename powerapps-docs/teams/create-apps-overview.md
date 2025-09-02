@@ -49,7 +49,7 @@ You can create:
 
 - Power Automate flows by using the new Power Apps app in Teams. More information: [Create flows using the Power Apps app in Teams](/power-automate/teams/create-flows-power-apps-app)
 
-- Chatbots by using the new Power Virtual Agents app in Teams. More information: [Power Virtual Agents in Teams](/power-virtual-agents/teams/fundamentals-what-is-power-virtual-agents-teams)
+- Chatbots by using the new Microsoft Copilot Studio app in Teams. More information: [Microsoft Copilot Studio in Teams](/microsoft-copilot-studio/fundamentals-get-started-teams)
 
 ### Next steps
 

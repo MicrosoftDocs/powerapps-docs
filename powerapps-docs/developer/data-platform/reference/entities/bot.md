@@ -476,7 +476,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|
 |---|---|
-|0|**Power Virtual Agents**|
+|0|**Microsoft Copilot Studio**|
 |1|**Nuance Mix Shell**|
 
 ### <a name="BKMK_SchemaName"></a> SchemaName
