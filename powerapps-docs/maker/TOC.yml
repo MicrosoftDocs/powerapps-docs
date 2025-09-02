@@ -57,6 +57,8 @@
         href: ../user/ai-in-apps.md
       - name: Supervise agents using agent feed (preview)
         href: ../user/supervise-agents-with-agent-feed.md
+      - name: Use suggested actions in the agent feed (preview)
+        href: ../user/use-suggested-actions-in-the-agent-feed.md
       - name: Use form fill assistance
         href: ../user/form-filling-assistance.md
       - name: Use row summary
@@ -694,7 +696,7 @@
         items:
         - name: Get started with formulas
           href: ./canvas-apps/working-with-formulas.md
-        - name: Build an agent to automate your business process (preview)
+        - name: Build an agent to automate your business process
           href: ./canvas-apps/agent-builder.md  
         - name: Use Copilot to create and edit Power Fx formulas
           href: ./canvas-apps/ai-formulas-formulabar.md
@@ -1300,8 +1302,8 @@
     items:
     - name: Overview
       href: ./canvas-apps/create-performant-apps-overview.md
-    - name: Use Monitor to get insights and recommendations (preview)
-      href: ./canvas-apps/monitor-app-performance.md
+    - name: Use Monitor to get insights and recommendations 
+      href: common/monitor-app-performance.md
     - name: Analyze app telemetry using Application Insights
       href: ./canvas-apps/application-insights.md 
     - name: Understand canvas app execution phases and data flow
@@ -1548,7 +1550,7 @@
           href: ./model-driven-apps/specify-properties-for-unified-interface-apps.md
         - name: Specifying a default view
           href: ./model-driven-apps/specify-default-views.md
-        - name: Manage access to views (preview)
+        - name: Manage access to views
           href: ./model-driven-apps/manage-view-access.md
         - name: Deleting and turning off views
           href: ./model-driven-apps/remove-views.md
@@ -1801,7 +1803,9 @@
       - name: Create a Power BI embedded dashboard
         href: ./model-driven-apps/create-edit-powerbi-embedded-page.md
     - name: Add agents to your app (preview)
-      href: ./model-driven-apps/add-agents-to-app.md  
+      href: ./model-driven-apps/add-agents-to-app.md
+    - name: Configure suggested actions (preview)
+      href: ./model-driven-apps/configure-suggested-actions.md
     - name: Copilot chat for apps
       href:
       items:
@@ -1877,6 +1881,8 @@
       href: ./common/performance-insights-overview.md
     - name: Understand performance insights
       href: ./common/performance-insights-categories.md
+    - name:  Use Monitor to get insights and recommendations
+      href: common/monitor-app-performance.md
   - name: App ratings (preview)
     href: ./common/app-ratings.md
   - name: FAQ about model-driven apps
@@ -2148,6 +2154,8 @@
         href: ./data-platform/map-entity-fields.md
       - name: How to delete columns
         href: ./data-platform/delete-fields.md
+      - name: Delete a column with AI Skill Config dependency
+        href: ./data-platform/ai-skill-config-table.md
   - name: Apply business logic
     href: ./data-platform/processes.md
     items:
@@ -2465,102 +2473,12 @@
     items:
     - name: Security in Dataverse
       href: /power-platform/admin/wp-security-cds?context=/power-apps/maker/context
-    - name: Manage access to views (preview)
+    - name: Manage access to views
       href: ./model-driven-apps/manage-view-access.md
   - name: For developers
     href: ../developer/data-platform/overview.md
   - name: Community tools for Dataverse
     href: ./model-driven-apps/model-driven-app-community.md
-- name: Cards
-  items:
-    - name: What are cards?
-      href: ../cards/overview.md
-    - name: Requirements for cards
-      href: ../cards/card-requirements.md
-    - name: Design cards
-      items:
-        - name: Card Designer overview
-          href: ../cards/make-a-card/designer-overview.md
-        - name: Add controls
-          href: ../cards/make-a-card/ui-elements/controls.md
-        - name: Add buttons
-          href: ../cards/make-a-card/ui-elements/use-buttons.md
-        - name: Add and configure screens
-          href: ../cards/make-a-card/screens/use-screens.md
-        - name: Work with repeating controls in cards
-          href: ../cards/make-a-card/ui-elements/data-binding.md
-        - name: Control reference
-          items:
-            - name: List of controls and properties
-              href: ../cards/controls/control-reference.md
-            - name: Button
-              href: ../cards/controls/button.md
-            - name: Button set
-              href: ../cards/controls/button-set.md
-            - name: Check box
-              href: ../cards/controls/check-box.md
-            - name: Column
-              href: ../cards/controls/column.md
-            - name: Column set
-              href: ../cards/controls/column-set.md
-            - name: Container
-              href: ../cards/controls/container.md
-            - name: Date picker
-              href: ../cards/controls/date-picker.md
-            - name: Drop down
-              href: ../cards/controls/drop-down.md
-            - name: Fact set
-              href: ../cards/controls/fact-set.md
-            - name: Image
-              href: ../cards/controls/Image.md
-            - name: Image set
-              href: ../cards/controls/image-set.md
-            - name: Media
-              href: ../cards/controls/media.md
-            - name: Number input
-              href: ../cards/controls/number-input.md
-            - name: Table
-              href: ../cards/controls/table.md
-            - name: Text input
-              href: ../cards/controls/text-input.md
-            - name: Text label
-              href: ../cards/controls/text-label.md
-            - name: Time picker
-              href: ../cards/controls/time-picker.md
-    - name: Connect to data and services
-      items:
-        - name: Add variables
-          href: ../cards/make-a-card/variables/variables.md
-        - name: Access connectors
-          href: ../cards/make-a-card/connectors/connector-intro.md
-    - name: Add business logic with Power Fx
-      href: ../cards/make-a-card/power-fx/intro-to-pfx.md
-    - name: Test and debug cards
-      href: ../cards/make-a-card/testing/debugging-cards.md
-    - name: Send cards
-      items:
-        - name: Share a card in Teams
-          href: ../cards/send-a-card/send-card-in-teams.md
-        - name: Send cards automatically with a flow (preview)
-          href: ../cards/send-a-card/send-card-with-flow.md
-    - name: Manage cards
-      items:
-        - name: Manage cards in solutions
-          href: ../cards/manage-cards/manage-cards.md
-        - name: Manage access
-          href: ../cards/manage-cards/manage-access.md
-        - name: Manage cards with DLP policies
-          href: ../cards/manage-cards/data-loss-prevention.md
-        - name: Delete a card
-          href: ../cards/manage-cards/delete-cards.md
-    - name: Tutorials
-      items:
-        - name: Create a simple card
-          href: ../cards/tutorials/hello-world-card.md
-        - name: Create a shopping list card
-          href: ../cards/tutorials/simple-shopping-list.md
-        - name: Create a card with data from Dataverse
-          href: ../cards/tutorials/dataverse-card.md
 - name: Resources
   items:
   - name: Microsoft Credentials for Power Platform

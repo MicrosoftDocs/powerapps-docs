@@ -1,6 +1,6 @@
 ---
-title: "Sample: Use aggregation in FetchXML (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample shows how to retrieve aggregate record data using FetchXML." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Sample: Use aggregation in FetchXML"
+description: "This sample shows how to retrieve aggregate record data using FetchXML."
 ms.date: 04/03/2022
 author: MsSQLGirl
 ms.author: jukoesma
@@ -14,8 +14,6 @@ contributors:
 ---
 
 # Sample: Use aggregation in FetchXML
-
-<!-- https://learn.microsoft.com/dynamics365/customer-engagement/developer/org-service/sample-use-aggregation-fetchxml -->
 
 This sample shows how to retrieve aggregate record data using FetchXML.
 

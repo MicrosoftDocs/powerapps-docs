@@ -109,7 +109,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`objectid`|
 |RequiredLevel|None|
 |Type|Lookup|
-|Targets|activityfileattachment, activitypointer, approvalprocess, asyncoperation, botcomponent, canvasapp, cascadegrantrevokeaccessrecordstracker, deleteditemreference, desktopflowbinary, desktopflowmodule, email, exportedexcel, exportsolutionupload, flowmachineimageversion, flowsession, imagedescriptor, knowledgearticle, mailbox, msdyn_aibfeedbackloop, msdyn_aibfile, msdyn_aiconfiguration, msdyn_aidataprocessingevent, msdyn_aitestcasedocument, msdyn_analysisjob, msdyn_dataworkspace, msdyn_fileupload, msdyn_integratedsearchprovider, msdyn_kbattachment, msdyn_knowledgearticleimage, msdyn_mobileapp, msdyn_plan, msdyn_planartifact, msdyn_planattachment, msdyn_pminferredtask, msdyn_richtextfile, mspcat_catalogsubmissionfiles, mspcat_packagestore, package, packagehistory, pluginpackage, powerbidataset, powerbireport, powerpagecomponent, powerpagesitepublished, powerpagesscanreport, report, retaineddataexcel, revokeinheritedaccessrecordstracker, ribbonclientmetadata, searchcustomanalyzer, solution, stagesolutionupload, unstructuredfilesearchrecord, webresource, workflowbinary, workflowlog, workflowmetadata|
+|Targets|activityfileattachment, activitypointer, approvalprocess, approvalstageintelligent, asyncoperation, botcomponent, canvasapp, cascadegrantrevokeaccessrecordstracker, deleteditemreference, desktopflowbinary, desktopflowmodule, email, exportedexcel, exportsolutionupload, flowmachineimageversion, flowsession, imagedescriptor, knowledgearticle, mailbox, msdyn_aibfeedbackloop, msdyn_aibfile, msdyn_aiconfiguration, msdyn_aidataprocessingevent, msdyn_aidocumenttemplate, msdyn_aievent, msdyn_aitestcasedocument, msdyn_analysisjob, msdyn_dataworkspace, msdyn_fileupload, msdyn_integratedsearchprovider, msdyn_kbattachment, msdyn_knowledgearticleimage, msdyn_mobileapp, msdyn_plan, msdyn_planartifact, msdyn_planattachment, msdyn_pminferredtask, msdyn_richtextfile, mspcat_catalogsubmissionfiles, mspcat_packagestore, package, packagehistory, pluginpackage, powerbidataset, powerbireport, powerpagecomponent, powerpagesitepublished, powerpagesscanreport, powerpagessourcefile, report, retaineddataexcel, revokeinheritedaccessrecordstracker, ribbonclientmetadata, searchcustomanalyzer, solution, stagesolutionupload, unstructuredfilesearchrecord, uxagentcomponentrevision, webresource, workflowbinary, workflowlog, workflowmetadata|
 
 ### <a name="BKMK_ObjectIdTypeCode"></a> ObjectIdTypeCode
 
@@ -302,6 +302,7 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [activityfileattachment_FileAttachments](#BKMK_activityfileattachment_FileAttachments)
 - [activitypointer_FileAttachments](#BKMK_activitypointer_FileAttachments)
 - [approvalprocess_FileAttachments](#BKMK_approvalprocess_FileAttachments)
+- [approvalstageintelligent_FileAttachments](#BKMK_approvalstageintelligent_FileAttachments)
 - [asyncoperation_FileAttachments](#BKMK_asyncoperation_FileAttachments)
 - [botcomponent_FileAttachments](#BKMK_botcomponent_FileAttachments)
 - [canvasapp_FileAttachments](#BKMK_canvasapp_FileAttachments)
@@ -319,6 +320,8 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [msdyn_aibfile_FileAttachments](#BKMK_msdyn_aibfile_FileAttachments)
 - [msdyn_aiconfiguration_FileAttachments](#BKMK_msdyn_aiconfiguration_FileAttachments)
 - [msdyn_aidataprocessingevent_FileAttachments](#BKMK_msdyn_aidataprocessingevent_FileAttachments)
+- [msdyn_aidocumenttemplate_FileAttachments](#BKMK_msdyn_aidocumenttemplate_FileAttachments)
+- [msdyn_aievent_FileAttachments](#BKMK_msdyn_aievent_FileAttachments)
 - [msdyn_aitestcasedocument_FileAttachments](#BKMK_msdyn_aitestcasedocument_FileAttachments)
 - [msdyn_analysisjob_FileAttachments](#BKMK_msdyn_analysisjob_FileAttachments)
 - [msdyn_fileupload_FileAttachments](#BKMK_msdyn_fileupload_FileAttachments)
@@ -338,6 +341,7 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [powerpagecomponent_FileAttachments](#BKMK_powerpagecomponent_FileAttachments)
 - [powerpagesitepublished_FileAttachments](#BKMK_powerpagesitepublished_FileAttachments)
 - [powerpagesscanreport_FileAttachments](#BKMK_powerpagesscanreport_FileAttachments)
+- [powerpagessourcefile_FileAttachments](#BKMK_powerpagessourcefile_FileAttachments)
 - [report_FileAttachments](#BKMK_report_FileAttachments)
 - [retaineddataexcel_FileAttachments](#BKMK_retaineddataexcel_FileAttachments)
 - [searchcustomanalyzer_FileAttachments](#BKMK_searchcustomanalyzer_FileAttachments)
@@ -384,6 +388,19 @@ One-To-Many Relationship: [approvalprocess approvalprocess_FileAttachments](appr
 |ReferencedAttribute|`approvalprocessid`|
 |ReferencingAttribute|`objectid`|
 |ReferencingEntityNavigationPropertyName|`objectid_approvalprocess`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_approvalstageintelligent_FileAttachments"></a> approvalstageintelligent_FileAttachments
+
+One-To-Many Relationship: [approvalstageintelligent approvalstageintelligent_FileAttachments](approvalstageintelligent.md#BKMK_approvalstageintelligent_FileAttachments)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`approvalstageintelligent`|
+|ReferencedAttribute|`approvalstageintelligentid`|
+|ReferencingAttribute|`objectid`|
+|ReferencingEntityNavigationPropertyName|`objectid_approvalstageintelligent`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
@@ -605,6 +622,32 @@ One-To-Many Relationship: [msdyn_aidataprocessingevent msdyn_aidataprocessingeve
 |ReferencedAttribute|`msdyn_aidataprocessingeventid`|
 |ReferencingAttribute|`objectid`|
 |ReferencingEntityNavigationPropertyName|`objectid_msdyn_aidataprocessingevent`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msdyn_aidocumenttemplate_FileAttachments"></a> msdyn_aidocumenttemplate_FileAttachments
+
+One-To-Many Relationship: [msdyn_aidocumenttemplate msdyn_aidocumenttemplate_FileAttachments](msdyn_aidocumenttemplate.md#BKMK_msdyn_aidocumenttemplate_FileAttachments)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msdyn_aidocumenttemplate`|
+|ReferencedAttribute|`msdyn_aidocumenttemplateid`|
+|ReferencingAttribute|`objectid`|
+|ReferencingEntityNavigationPropertyName|`objectid_msdyn_aidocumenttemplate`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msdyn_aievent_FileAttachments"></a> msdyn_aievent_FileAttachments
+
+One-To-Many Relationship: [msdyn_aievent msdyn_aievent_FileAttachments](msdyn_aievent.md#BKMK_msdyn_aievent_FileAttachments)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msdyn_aievent`|
+|ReferencedAttribute|`msdyn_aieventid`|
+|ReferencingAttribute|`objectid`|
+|ReferencingEntityNavigationPropertyName|`objectid_msdyn_aievent`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
@@ -855,6 +898,19 @@ One-To-Many Relationship: [powerpagesscanreport powerpagesscanreport_FileAttachm
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
+### <a name="BKMK_powerpagessourcefile_FileAttachments"></a> powerpagessourcefile_FileAttachments
+
+One-To-Many Relationship: [powerpagessourcefile powerpagessourcefile_FileAttachments](powerpagessourcefile.md#BKMK_powerpagessourcefile_FileAttachments)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`powerpagessourcefile`|
+|ReferencedAttribute|`powerpagessourcefileid`|
+|ReferencingAttribute|`objectid`|
+|ReferencingEntityNavigationPropertyName|`objectid_powerpagessourcefile`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
 ### <a name="BKMK_report_FileAttachments"></a> report_FileAttachments
 
 One-To-Many Relationship: [report report_FileAttachments](report.md#BKMK_report_FileAttachments)
@@ -981,6 +1037,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [FileAttachment_ActivityPointer_DescriptionBlobId](#BKMK_FileAttachment_ActivityPointer_DescriptionBlobId)
 - [FileAttachment_approvalprocess_Inputs](#BKMK_FileAttachment_approvalprocess_Inputs)
 - [FileAttachment_approvalprocess_Stages](#BKMK_FileAttachment_approvalprocess_Stages)
+- [FileAttachment_approvalstageintelligent_Inputs](#BKMK_FileAttachment_approvalstageintelligent_Inputs)
 - [FileAttachment_AsyncOperation_DataBlobId](#BKMK_FileAttachment_AsyncOperation_DataBlobId)
 - [FileAttachment_botcomponent_FileData](#BKMK_FileAttachment_botcomponent_FileData)
 - [FileAttachment_CanvasApp_Assets](#BKMK_FileAttachment_CanvasApp_Assets)
@@ -1007,6 +1064,9 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [FileAttachment_msdyn_AIBFile_msdyn_File](#BKMK_FileAttachment_msdyn_AIBFile_msdyn_File)
 - [FileAttachment_msdyn_AIConfiguration_msdyn_Model](#BKMK_FileAttachment_msdyn_AIConfiguration_msdyn_Model)
 - [FileAttachment_msdyn_AIDataProcessingEvent_msdyn_InputData](#BKMK_FileAttachment_msdyn_AIDataProcessingEvent_msdyn_InputData)
+- [FileAttachment_msdyn_aidocumenttemplate_msdyn_document](#BKMK_FileAttachment_msdyn_aidocumenttemplate_msdyn_document)
+- [FileAttachment_msdyn_AIEvent_msdyn_DataInfoFile](#BKMK_FileAttachment_msdyn_AIEvent_msdyn_DataInfoFile)
+- [FileAttachment_msdyn_AIEvent_msdyn_OutputFile](#BKMK_FileAttachment_msdyn_AIEvent_msdyn_OutputFile)
 - [FileAttachment_msdyn_AITestCaseDocument_msdyn_InputFile](#BKMK_FileAttachment_msdyn_AITestCaseDocument_msdyn_InputFile)
 - [FileAttachment_msdyn_analysisjob_msdyn_AnalysisJobsReport](#BKMK_FileAttachment_msdyn_analysisjob_msdyn_AnalysisJobsReport)
 - [FileAttachment_msdyn_FileUpload_msdyn_ErrorLog](#BKMK_FileAttachment_msdyn_FileUpload_msdyn_ErrorLog)
@@ -1046,6 +1106,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [FileAttachment_powerpagesitepublished_publishedmetadata](#BKMK_FileAttachment_powerpagesitepublished_publishedmetadata)
 - [FileAttachment_powerpagesitepublished_publishedsource](#BKMK_FileAttachment_powerpagesitepublished_publishedsource)
 - [FileAttachment_PowerPagesScanReport_FileContent](#BKMK_FileAttachment_PowerPagesScanReport_FileContent)
+- [FileAttachment_powerpagessourcefile_filecontent](#BKMK_FileAttachment_powerpagessourcefile_filecontent)
 - [FileAttachment_Report_FileContent](#BKMK_FileAttachment_Report_FileContent)
 - [FileAttachment_retaineddataexcel_ExcelContent](#BKMK_FileAttachment_retaineddataexcel_ExcelContent)
 - [FileAttachment_searchcustomanalyzer_analyzers](#BKMK_FileAttachment_searchcustomanalyzer_analyzers)
@@ -1105,6 +1166,18 @@ Many-To-One Relationship: [approvalprocess FileAttachment_approvalprocess_Stages
 |ReferencingEntity|`approvalprocess`|
 |ReferencingAttribute|`stages`|
 |ReferencedEntityNavigationPropertyName|`FileAttachment_approvalprocess_Stages`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_FileAttachment_approvalstageintelligent_Inputs"></a> FileAttachment_approvalstageintelligent_Inputs
+
+Many-To-One Relationship: [approvalstageintelligent FileAttachment_approvalstageintelligent_Inputs](approvalstageintelligent.md#BKMK_FileAttachment_approvalstageintelligent_Inputs)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`approvalstageintelligent`|
+|ReferencingAttribute|`inputs`|
+|ReferencedEntityNavigationPropertyName|`FileAttachment_approvalstageintelligent_Inputs`|
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
@@ -1417,6 +1490,42 @@ Many-To-One Relationship: [msdyn_aidataprocessingevent FileAttachment_msdyn_AIDa
 |ReferencingEntity|`msdyn_aidataprocessingevent`|
 |ReferencingAttribute|`msdyn_inputdata`|
 |ReferencedEntityNavigationPropertyName|`FileAttachment_msdyn_AIDataProcessingEvent_msdyn_InputData`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_FileAttachment_msdyn_aidocumenttemplate_msdyn_document"></a> FileAttachment_msdyn_aidocumenttemplate_msdyn_document
+
+Many-To-One Relationship: [msdyn_aidocumenttemplate FileAttachment_msdyn_aidocumenttemplate_msdyn_document](msdyn_aidocumenttemplate.md#BKMK_FileAttachment_msdyn_aidocumenttemplate_msdyn_document)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_aidocumenttemplate`|
+|ReferencingAttribute|`msdyn_document`|
+|ReferencedEntityNavigationPropertyName|`msdyn_aidocumenttemplatefileid_fileAttachment`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_FileAttachment_msdyn_AIEvent_msdyn_DataInfoFile"></a> FileAttachment_msdyn_AIEvent_msdyn_DataInfoFile
+
+Many-To-One Relationship: [msdyn_aievent FileAttachment_msdyn_AIEvent_msdyn_DataInfoFile](msdyn_aievent.md#BKMK_FileAttachment_msdyn_AIEvent_msdyn_DataInfoFile)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_aievent`|
+|ReferencingAttribute|`msdyn_datainfofile`|
+|ReferencedEntityNavigationPropertyName|`FileAttachment_msdyn_AIEvent_msdyn_DataInfoFile`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_FileAttachment_msdyn_AIEvent_msdyn_OutputFile"></a> FileAttachment_msdyn_AIEvent_msdyn_OutputFile
+
+Many-To-One Relationship: [msdyn_aievent FileAttachment_msdyn_AIEvent_msdyn_OutputFile](msdyn_aievent.md#BKMK_FileAttachment_msdyn_AIEvent_msdyn_OutputFile)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_aievent`|
+|ReferencingAttribute|`msdyn_outputfile`|
+|ReferencedEntityNavigationPropertyName|`FileAttachment_msdyn_AIEvent_msdyn_OutputFile`|
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
@@ -1885,6 +1994,18 @@ Many-To-One Relationship: [powerpagesscanreport FileAttachment_PowerPagesScanRep
 |ReferencingEntity|`powerpagesscanreport`|
 |ReferencingAttribute|`filecontent`|
 |ReferencedEntityNavigationPropertyName|`FileAttachment_PowerPagesScanReport_FileContent`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_FileAttachment_powerpagessourcefile_filecontent"></a> FileAttachment_powerpagessourcefile_filecontent
+
+Many-To-One Relationship: [powerpagessourcefile FileAttachment_powerpagessourcefile_filecontent](powerpagessourcefile.md#BKMK_FileAttachment_powerpagessourcefile_filecontent)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`powerpagessourcefile`|
+|ReferencingAttribute|`filecontent`|
+|ReferencedEntityNavigationPropertyName|`FileAttachment_powerpagessourcefile_filecontent`|
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 

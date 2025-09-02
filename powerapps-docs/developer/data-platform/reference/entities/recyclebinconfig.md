@@ -144,7 +144,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`isreadyforrecyclebin`|
-|RequiredLevel|None|
+|RequiredLevel|SystemRequired|
 |Type|Boolean|
 |GlobalChoiceName|`recyclebinconfig_isreadyforrecyclebin`|
 |DefaultValue|False|

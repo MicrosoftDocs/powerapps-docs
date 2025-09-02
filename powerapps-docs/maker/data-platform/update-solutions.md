@@ -94,7 +94,7 @@ The option to overwrite customizations is available with the classic import expe
 
 ### See also
 [Layering within a managed solution](/power-platform/alm/solution-layers-alm#layering-within-a-managed-solution)
-[Add solution components](create-solution.md#add-solution-components) <br />
+[Add solution components](create-solution.md#add-or-remove-solution-objects) <br />
 [Create solution patches](/power-platform/alm/update-solutions-alm#create-solution-patches) <br />
 [For developers: Cloning, patching, and upgrading](/power-platform/alm/solution-api#cloning-patching-and-upgrading)
 

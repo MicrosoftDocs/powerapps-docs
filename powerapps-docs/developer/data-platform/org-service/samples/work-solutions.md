@@ -1,20 +1,16 @@
 ---
-title: "Sample: Work with solutions (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample shows how to work with solutions" # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
+title: "Sample: Work with solutions"
+description: "This sample shows how to work with solutions"
 ms.date: 10/31/2018
-ms.reviewer: "pehecke"
-
+ms.reviewer: pehecke
 ms.topic: sample
-author: "shmcarth" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
+author: JimDaly
+ms.author: jdaly
 search.audienceType:
   - developer
 ---
 
 # Sample: Work with solutions
-
-<!-- https://learn.microsoft.com/dynamics365/customer-engagement/developer/sample-work-solutions -->
 
 This sample shows how to how to perform the following actions with solutions:
 

@@ -285,6 +285,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |7|**RibbonMetadataGeneration**|
 |8|**WorkflowSetState**|
 |9|**None**|
+|10|**ExportLite**|
+|11|**UpdatingMissingPackages**|
 
 ### <a name="BKMK_msdyn_packagename"></a> msdyn_packagename
 
@@ -484,6 +486,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |---|---|
 |0|**Started**|
 |1|**Completed**|
+|2|**Queued**|
 
 ### <a name="BKMK_msdyn_suboperation"></a> msdyn_suboperation
 
@@ -508,6 +511,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |2|**Upgrade**|
 |3|**Update**|
 |4|**Delete**|
+|5|**InlineUpgrade**|
+|6|**WaitingForMissingPackages**|
+|7|**InstalledMissingPackages**|
+|8|**FailedInstallingMissingPackages**|
 
 ### <a name="BKMK_msdyn_totaltime"></a> msdyn_totaltime
 
