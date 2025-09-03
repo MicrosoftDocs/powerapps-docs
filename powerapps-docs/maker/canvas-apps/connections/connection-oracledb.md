@@ -6,7 +6,7 @@ author: lancedMicrosoft
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 01/27/2022
+ms.date: 09/3/2025
 ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
@@ -101,11 +101,18 @@ Power Apps creates an app that has three screens and shows data from the table t
    
     This error appears if the Oracle client SDK isn't installed on the same computer as the on-premises data gateway. To resolve this issue, [install the official provider](/power-bi/connect-data/desktop-connect-oracle-database).
 
-3. Table '[Tablename]' doesn't define any key columns.
+1. Table '[Tablename]' doesn't define any key columns.
    
     This error appears if you're connecting to a table that doesn't have a primary key, which the Oracle Database connection requires.
 
-4. Stored procedures, tables with composite keys, and nested object types in tables aren't directly supported in Power Apps. However, stored procedures using Power Automate are supported.
+1. Stored procedures, tables with composite keys, and nested object types in tables aren't directly supported in Power Apps. However, stored procedures using Power Automate are supported.
+
+1. Schema name dependency across environments.
+
+  When connecting Power Apps to Oracle on-premises data sources, the schema prefix is treated as part of the table name. This means that the schema name must be exactly the same in every environment such as development, preproduction, and production. If you use different Oracle usernames or schemas in each environment, your app may not be able to find the tables during deployment—even if you update the connection references correctly. This will result in an **Entity Not Found** error.
+
+  This limitation is by design: Power Apps does not currently support dynamic schema name substitution using environment variables. To prevent deployment failures, you should use the same Oracle schema name in all environments. Alternatively, you can consider solutions like Power Automate flows or Dataverse virtual entities, which provide more flexibility for managing environment-specific configurations.
+
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
