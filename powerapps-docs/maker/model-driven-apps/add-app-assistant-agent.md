@@ -1,6 +1,6 @@
 ---
-title: "Add app assistant agent to your model-driven app" 
-description: Learn how to add app assistant agent to your model-driven app in Power Apps.
+title: "Add an app assistant agent to your model-driven app" 
+description: Learn how to add an app assistant agent to your model-driven app in Power Apps.
 ms.date: 09/03/2025
 ms.reviewer: matp
 ms.topic: how-to
@@ -11,11 +11,14 @@ ms.service: powerapps
 search.audienceType: 
   - maker
 ---
-# Add app assistant agent to your model-driven app (preview)
+# Add an app assistant agent to your model-driven app (preview)
 
 The app assistant agent makes a model-driven app more intelligent and relevant for your organization by adding additional topics, knowledge sources, and more. The [Copilot Chat](add-ai-copilot.md), Agent APIs, and agent response components access the topics within this agent.
 
-> :::image type="content" source="media/add-agents-to-app/app-designer-app-assistant-agent-not-configured.png" alt-text="App Designer Agents pane App assistant agent":::
+:::image type="content" source="media/add-agents-to-app/app-designer-app-assistant-agent-not-configured.png" alt-text="App Designer Agents pane App assistant agent":::\
+
+> [!NOTE]
+> The app assistant agent is a rename of interactive agent which is the improved experience for **... > Configure in Copilot Studio**. The agents created with the previous experiences are now shown as the **App assistant agent**.
 
 ### Creating an app assistant agent
 
@@ -29,11 +32,11 @@ When an app assistant agent is created, it's named as **Copilot in Power Apps - 
    > [!NOTE]
    > Pop-ups need to be enabled in your web browser to allow editing the created agent.
 1. After configure completes, the right pane is expanded showing the status of **Not published** and the agent name.
-   > :::image type="content" source="media/add-agents-to-app/app-designer-app-assistant-agent-not-published.png" alt-text="App assistant agent property pane not published":::
+   :::image type="content" source="media/add-agents-to-app/app-designer-app-assistant-agent-not-published.png" alt-text="App assistant agent property pane not published":::
 1. Switch to the **Copilot Studio** browser tab or select **Edit in Copiot Studio** to add topics, knowledge, and so on, to the agent.
 1. Save and publish the agent.
 1. Switch to the app designer browser tab and select refresh in **Agents** pane header to show agent published status.
-   > :::image type="content" source="media/add-agents-to-app/app-designer-app-assistant-agent-last-published.png" alt-text="App assistant agent last published status":::
+   :::image type="content" source="media/add-agents-to-app/app-designer-app-assistant-agent-last-published.png" alt-text="App assistant agent last published status":::
 1. In the app designer, save and publish the app.
 
 ### Editing an app assistant agent
@@ -76,5 +79,3 @@ The app assistant agent isn't able to be defined or referenced in app designer f
 [Add agents to your model-driven app](add-agents-to-app.md)<br/>
 [Customize Copilot Chat](customize-copilot-chat.md)
 
-
-<img width="1110" height="4024" alt="image" src="https://github.com/user-attachments/assets/9a0fc4a2-cd8d-4365-88f4-4c16f4c316d2" />
