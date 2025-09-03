@@ -23,7 +23,7 @@ Agent APIs are a set of interfaces introduced in Microsoft Power Apps that allow
 - [Xrm.Copilot namespace used for client scripts in model-driven apps.](../model-driven-apps/clientapi/bring-intelligence-using-agent-apis.md)
 
 These APIs are designed to enhance integration with Microsoft Copilot Studio, enabling more intelligent and responsive app experiences. The APIs use a single Copilot Studio agent that is either:
-- Interactive agent selected in the model app designer of custom apps. See more at [Working with an interactive agent](../../maker/model-driven-apps/add-agents-to-app.md#working-with-an-interactive-agent).
+- App assistant agent selected in the model app designer of custom apps. See more at [Working with an app assistant agent](../../maker/model-driven-apps/add-agents-to-app.md#working-with-an-app-assistant-agent).
 - Model app containing lead or opportunity table, which implicitly uses the "Copilot in Dynamics 365 Sales" agent.
 
 |API|Description|
@@ -41,7 +41,7 @@ When creating a code component, ensure the following best practices in [code com
 [Copilot](reference/copilot.md)  
 [executeEvent](reference/copilot/executeevent.md)  
 [executePrompt](reference/copilot/executeprompt.md)  
-[Working with an interactive agent](../../maker/model-driven-apps/add-agents-to-app.md#working-with-an-interactive-agent)  
+[Working with an app assistant agent](../../maker/model-driven-apps/add-agents-to-app.md#working-with-an-app-assistant-agent)  
 [Power Apps component framework overview](overview.md)  
 [Create your first code component](implementing-controls-using-typescript.md)  
 [Learn Power Apps component framework](/training/paths/use-power-apps-component-framework)  
