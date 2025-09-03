@@ -41,7 +41,7 @@ When an app assistant agent is created, it's named as **Copilot in Power Apps - 
    :::image type="content" source="media/add-agents-to-app/app-designer-app-assistant-agent-last-published.png" alt-text="App assistant agent last published status":::
 1. In the app designer, save and publish the app.
 
-### Editing an app assistant agent
+### Edit an app assistant agent
 
 After the app assistant agent has been initially configured, it can be edited from either the **Agents** pane or the **App assistant agent property** pane.
 
