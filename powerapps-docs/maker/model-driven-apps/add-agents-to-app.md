@@ -73,12 +73,13 @@ You can add an agent to any model-driven app of your choosing. We recommend addi
 
 The app assistant agent makes a model-driven app more intelligent and relevant for your organization by adding additional topics, knowledge sources, and more. The [Copilot Chat](add-ai-copilot.md), Agent APIs, and agent response components access the topics within this agent. Learn more at [Add app assistant agent](add-app-assistant-agent.md).
 
-> :::image type="content" source="media/add-agents-to-app/app-designer-app-assistant-agent-not-configured.png" alt-text="App Designer Agents pane App assistant agent":::
+:::image type="content" source="media/add-agents-to-app/app-designer-app-assistant-agent-not-configured.png" alt-text="App Designer Agents pane App assistant agent":::
 
 > [!NOTE]
-> The app assistant agent is a rename of interactive agent which is the improved experience for **... > Configure in Copilot Studio**. The agents created with the previous experiences are now shown as the **App assistant agent**.
+> The app assistant agent is a rename of interactive agent, which is the improved experience for **... > Configure in Copilot Studio**. The agents created with the previous experiences are now shown as the **App assistant agent**.
 
 ## Related information
 
-[Overview of App Designer](app-designer-overview.md)<br/>
+[Overview of App Designer](app-designer-overview.md)
+
 [Add app assistant agent](add-app-assistant-agent.md)
