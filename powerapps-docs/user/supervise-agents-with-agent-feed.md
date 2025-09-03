@@ -104,7 +104,7 @@ You can take these actions on activity in the feed:
 
 ## Navigation
 
-For actions that use a Dataverse tool, users will be provided with a direct link to either the Dataverse record or entity associated with that action depending on which is more relevant to that action. This enables seamless for further review or follow-up. 
+For actions that use a Dataverse tool, users are provided with a direct link to the most relevant Dataverse record or entity. This allows users to quickly access and review related data, making it easier to follow up or take further action as needed.
 
 :::image type="content" source="media/agent-supervision/agent-feed-navigate-to-record.png" alt-text="Agent feed record navigation button":::
 
