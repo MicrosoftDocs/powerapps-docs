@@ -8,12 +8,12 @@ ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 09/3/2025
 ms.subservice: canvas-maker
-ms.author: lanced
+ms.author: mkaur
 search.audienceType: 
   - maker
 contributors:
   - mduelae
-  - lancedmicrosoft
+
 ---
 # Connect to an Oracle database from Power Apps
 
@@ -109,9 +109,9 @@ Power Apps creates an app that has three screens and shows data from the table t
 
 1. Schema name dependency across environments.
 
-  When connecting Power Apps to Oracle on-premises data sources, the schema prefix is treated as part of the table name. This means that the schema name must be exactly the same in every environment such as development, preproduction, and production. If you use different Oracle usernames or schemas in each environment, your app may not be able to find the tables during deployment—even if you update the connection references correctly. This will result in an **Entity Not Found** error.
+   When connecting Power Apps to Oracle on-premises data sources, the schema prefix is treated as part of the table name. This means that the schema name must be exactly the same in every environment such as development, preproduction, and production. If you use different Oracle usernames or schemas in each environment, your app may not be able to find the tables during deployment—even if you update the connection references correctly. This will result in an **Entity Not Found** error.
 
-  This limitation is by design: Power Apps does not currently support dynamic schema name substitution using environment variables. To prevent deployment failures, you should use the same Oracle schema name in all environments. Alternatively, you can consider solutions like Power Automate flows or Dataverse virtual entities, which provide more flexibility for managing environment-specific configurations.
+   This limitation is by design: Power Apps does not currently support dynamic schema name substitution using environment variables. To prevent deployment failures, you should use the same Oracle schema name in all environments. Alternatively, you can consider solutions like Power Automate flows or Dataverse virtual entities, which provide more flexibility for managing environment-specific configurations.
 
 
 
