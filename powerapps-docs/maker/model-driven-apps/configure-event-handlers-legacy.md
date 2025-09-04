@@ -75,7 +75,7 @@ This simple example demonstrates how to configure an onload form event using par
    :::image type="content" source="media/configure-event-handlers-form/add-javascript-library.png" alt-text="Add a javascript file for the web resource":::
 1. Select **On Load** to expand it, and then select **Event Handler**.
 1. In the **Configure Event** pane, enter the **Function** name (in this example, *helloworld*), and then in the **Comma separated list of parameters that will be passed to the function** box enter a parameter such as `n = "Hello world!"`.
-   :::image type="content" source="media/configure-event-handlers-form/configure-event-form.png" alt-text="Configure the form event":::
+   :::image type="content" source="media/configure-event-handlers-form/configure-event-form.png" alt-text="Configure the form event" lightbox="media/configure-event-handlers-form/configure-event-form.png":::
 1. Select **Done**.
 1. **Save and publish** the form.
 
