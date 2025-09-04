@@ -138,4 +138,5 @@ Below are the conditions to check to make sure the feature is available in your 
 - Power Platform admins should check that the **Enable new AI-powered Copilot features for people who make apps** environment setting is enabled. This setting can be found in the Power Platform admin center under environment > **Settings** > **Features**.
 
 ## Related articles
-- [FAQ about generative pages in model-driven apps](../common/faq-generative-pages-model-driven.md)
+
+[FAQ about generative pages in model-driven apps](../common/faq-generative-pages-model-driven.md)
