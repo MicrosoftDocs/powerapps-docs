@@ -5,3 +5,13 @@ items:
     href: overview.md
   - name: "Quickstart: Create your first code app"
     href: quickstart.md
+  - name: How-to guides
+    items:
+    - name: "Create an app from scratch"
+      href: how-to/create-an-app-from-scratch.md
+    - name: "Connect to data"
+      href: how-to/connect-to-data.md
+    - name: "Connect to Azure SQL"
+      href: how-to/connect-to-azure-sql.md
+    - name: "Create a Simple Asset Management API with Azure Functions"
+      href: how-to/create-simple-asset-management-api-azure-functions.md

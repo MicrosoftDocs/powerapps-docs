@@ -6,13 +6,12 @@ author: alaug
 ms.date: 09/10/2025
 ms.reviewer: jdaly
 ms.topic: quickstart
-ms.subservice: code-apps  #requested new value
 contributors:
  - JimDaly
 ---
 # Quickstart: Create your first code app
 
-In this quickstart, you..
+In this quickstart, you will build a code app, run it locally, and then publish it.
 
 <!-- 
 TODO: 
@@ -65,8 +64,6 @@ TODO: Explain why this is necessary
 
 In the terminal window, run these commands:
 
-
-
 ```powershell
 npm install
 pac code init
@@ -83,7 +80,7 @@ In the terminal window, run these commands:
 npm run dev | pac code run
 ```
 
-- [npm run dev](https://docs.npmjs.com/cli/v9/commands/npm-run-script) Runs the scripts configured in the `package.json` file with the key value of `dev`. In this case, the script are `"concurrently \"vite\" \"pac code run\""`.
+- [npm run dev](https://docs.npmjs.com/cli/v9/commands/npm-run-script) Runs the scripts configured in the `package.json` file with the key value of `dev`. In this case, the script are `"concurrently \"vite\" \"pac code run\""`. <!-- QUESTION: It looks like pac code run is invoked twice. Is this intentional? -->
 - [pac code run](/power-platform/developer/cli/reference/code#pac-code-run) Runs a local server for connections loading locally in the app.
 
 
@@ -112,7 +109,7 @@ If successful, this command should return a Power Apps URL to run the app.
 
 Optionally, you can open  [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to see the app. You can play, share, or see details from there. 
 
-Congratulations! You have successfully pushed your first code app! 
+Congratulations! You have successfully pushed your first code app!
 
 ## Troubleshooting
 

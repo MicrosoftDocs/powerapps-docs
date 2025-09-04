@@ -6,13 +6,13 @@ author: alaug
 ms.date: 09/10/2025
 ms.reviewer: jdaly
 ms.topic: overview
-ms.subservice: code-apps  #requested new value
 contributors:
  - JimDaly
 ---
 # Power Apps code apps overview
 
-[!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+> [!NOTE]
+> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
 Power Apps empowers developers of all skillsets—including those building web apps in IDEs like Visual Studio Code—to efficiently build and run business apps on a managed platform.
 
@@ -34,6 +34,8 @@ Code apps require several developer tools like Visual Studio Code, git, dotnet, 
 
 ### Install the following developer tools
 
+You will use these tools while creating code apps:
+
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Node.js](https://nodejs.org/) (LTS version)
 - [Git](https://git-scm.com/)
@@ -43,7 +45,7 @@ Code apps require several developer tools like Visual Studio Code, git, dotnet, 
 
 Code apps can be enabled via environment setting which can be set by Power Platform Admins and environment admins. The environment setting respects groups and rules set by Power Platform Admins.
 
-1. As an admin, go to https://admin.powerplatform.microsoft.com
+1. As an admin, go to [Power Platform admin center](https://admin.powerplatform.microsoft.com)
 1. Navigate to **Manage** > **Environments** > select the environment where you will use code apps
 1. Navigate to **Settings** >  Expand the **Product** subsection > Select **Features**
 
@@ -57,9 +59,11 @@ Code apps can be enabled via environment setting which can be set by Power Platf
 
 > [!NOTE]
 > If the Power Apps Code Apps setting doesn't appear in the admin center UI it is because a UI update hasn't reached your environment yet. You can get the setting to appear by appending `?ecs.ShowCodeAppSetting=true` to the admin center URI.
+> 
 > For example, if this is the URL to the admin settings:
 > `https://admin.powerplatform.microsoft.com/manage/environments/1c137ea4-049e-ef11-8a66-000d3a106833/settings/Features`
-> Append the query string to the end.
+> 
+> Append the query string to the end:
 > `https://admin.powerplatform.microsoft.com/manage/environments/1c137ea4-049e-ef11-8a66-000d3a106833/settings/Features?ecs.ShowCodeAppSetting=true`
 
 ### License end-users with Power Apps Premium
@@ -68,11 +72,11 @@ End-users that run code apps need a [Power Apps Premium license](https://www.mic
 
 ## Limitations
 
-1. Code apps can invoke APIs outside of Power Platform connectors. Code apps do not yet support [Content Security Policy](/power-platform/admin/content-security-policy) (CSP).
-1. Code apps do not yet support [Storage Shared Access Signature (SAS) IP restriction](/power-platform/admin/security/data-storage#advanced-security-features ).
-1. Code apps don't support Power Platform Native source code integration.
-1. Code apps don't support Dataverse solutions and therefore cannot use Power Platform pipelines for deployments.
-1. Code apps don't have a Power Platform native integration with Azure Application Insights. Azure Application Insights can be added as it would be to a generic web app but it will not include information recognized in the platform layer, such as app open events (to measure success/failure)
+- Code apps can invoke APIs outside of Power Platform connectors. Code apps do not yet support [Content Security Policy](/power-platform/admin/content-security-policy) (CSP).
+- Code apps do not yet support [Storage Shared Access Signature (SAS) IP restriction](/power-platform/admin/security/data-storage#advanced-security-features ).
+- Code apps don't support Power Platform Native source code integration.
+- Code apps don't support Dataverse solutions and therefore cannot use Power Platform pipelines for deployments.
+- Code apps don't have a Power Platform native integration with Azure Application Insights. Azure Application Insights can be added as it would be to a generic web app but it will not include information recognized in the platform layer, such as app open events (to measure success/failure)
 
 ## Managed Platform capability support
 
@@ -88,3 +92,31 @@ This table enumerates Power Platform management capabilities that work for code 
 | Admin consent dialog suppression | Consent suppression is supported for both Microsoft connecters that use OAuth as well as custom connectors that use OAuth. [Learn more](/power-apps/maker/canvas-apps/add-manage-connections#suppress-consent-dialog-for-apps-that-use-custom-connectors-using-microsoft-entra-id-oauth)  |
 | Tenant isolation | [Learn more](/power-platform/admin/cross-tenant-restrictions) |
 | Azure B2B (external user access) | Code apps may be shared with and access by end-users using Azure B2B to access resources in a tenant, similar to canvas apps. [Learn more](/power-apps/maker/canvas-apps/share-app-guests) |
+
+## System configuration
+
+This article contains information on the configuration for Power Apps code apps.
+
+### Hosted app code
+
+When a code app is published to Power Platform (e.g. when using pac code push) app code is hosted on a publicly accessible endpoint. Sensitive user or organizational data should not be stored in the app and they should be stored in a data source so the content is retrieved after end-users playing the app go through authentication and authorization checks. 
+
+###  Configurable behavior
+
+#### Hide the Power Apps header when playing an app
+
+You can hide the header that appears when playing an app adding 'hideNavBar=true' as a query string parameter. In practice, append this to the app link before sharing the app link. 
+
+<pre>
+https://apps.powerapps.com/play/e/{environment id}/a/{app id}
+
+https://apps.powerapps.com/play/e/{environment id}/a/{app id}?<b>hideNavBar=true</b>
+</pre>
+
+### Development system requirements
+
+#### PAC CLI generated files must be editable by the developer
+
+The files generated by PAC CLI in a code app project, e.g. power.config.json, must be editable by a developer for additional PAC CLI commands to work as expected. If system read or write privileges for a user are removed on files like power.config.json then PAC CLI code app commands will fail. 
+
+
