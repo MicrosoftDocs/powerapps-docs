@@ -79,7 +79,7 @@ This simple example demonstrates how to configure an onload form event using par
 1. Select **Done**.
 1. **Save and publish** the form.
 
-Test the event by playing a model-driven app that includes the form. When a main form loads, an alert displays the modal dialog message "Hello world!" For this example, the user must select **OK** to dismiss the alert and continue using the form.
+Test the event by playing a model-driven app that includes the form. When a main form loads, an alert displays the modal dialog message "Hello world!" For this example, the user must select **OK** to dismiss the alert to continue using the form.
 :::image type="content" source="media/configure-event-handlers-form/form-onload-helloworld.png" alt-text="Alert displayed for form onload event":::
 
 ### Hello world JavaScript sample
