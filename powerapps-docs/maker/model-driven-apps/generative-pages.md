@@ -1,5 +1,7 @@
 ---
 title: Generate a page using natural language with model-driven apps in Power Apps
+description: Learn how to use natural language to create an AI-generative page to use with a model-driven app.
+author: jasongre
 ms.subservice: mda-maker
 ms.author: jasongre
 ms.reviewer: matp
@@ -15,18 +17,18 @@ ms.collection:
 
 # Generate a page using natural language (preview)
 
-../../../shared/preview-includes/preview-banner.md]
+[!INCLUDE [preview-note-pp.md](../../../shared/preview-includes/preview-banner.md)]
 
 Use natural language to build a *generative page* that's created using AI. Generative pages are an AI-driven experience designed to simplify, accelerate, and improve your app design process in model-driven apps. By interacting with the app agent, you create fully functional pages in your model-driven apps by describing what you need in natural language and specifying which Microsoft Dataverse tables to reference. You can even attach an image of what you’d like the page to look like. 
 
 After you describe the page, the system then processes your requirements and specifications and intelligently generates React code that covers both the front-end user experience by selecting the right components and determining the best layout, and the corresponding business logic. Through an interactive, conversational experience, you can refine the page design in real time, adjusting elements, layout, and functionality to perfectly match your vision.
 
-[!INCLUDEshared/preview-includes/preview-note-pp.md]
+[!INCLUDE [preview-note-pp.md](../../../shared/preview-includes/preview-note-pp.md)]
 
 ## Prerequisites
 
 - The Power Platform environment must be located in the US region.
-- The **Enable new AI-powered Copilot features for people who make apps** environment setting must be enabled. More information: [Copilot environment settinggs-features?tabs=new#copilot-preview
+- The **Enable new AI-powered Copilot features for people who make apps** environment setting must be enabled. More information: [Copilot environment setting](/power-platform/admin/settings-features?tabs=new#copilot-preview)
 - This feature is being gradually rolled out across regions and might not be available yet in your region.
 - For Content Security Policy (CSP) configuration, ensure the following URLs are added to your firewall allowed list:
     - https://esm.sh 
@@ -34,7 +36,7 @@ After you describe the page, the system then processes your requirements and spe
 
 ## Create a generative page in model-driven apps
 
-1. Sign in to [Power Apps](httpsapps.com.
+1. Sign in to [Power Apps](https://make.powerapps.com).
 1. Open a model-driven app for editing.
 1. In the app designer, select **Add a page** > **Describe a page**.
 
@@ -136,6 +138,4 @@ Below are the conditions to check to make sure the feature is available in your 
 - Power Platform admins should check that the **Enable new AI-powered Copilot features for people who make apps** environment setting is enabled. This setting can be found in the Power Platform admin center under environment > **Settings** > **Features**.
 
 ## Related articles
-
-description: Learn how to use natural language to create an AI-generative page to use with a model-driven app.
-author: jasongre
+[FAQ about generative pages in model-driven apps](../common/faq-generative-pages-model-driven.md)
