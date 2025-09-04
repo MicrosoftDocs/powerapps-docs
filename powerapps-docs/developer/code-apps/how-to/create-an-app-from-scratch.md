@@ -20,7 +20,7 @@ This guide covers configuring a TypeScript app using the Power Platform SDK
 - [Power Platform environment with Code Apps enabled](../overview.md#enable-code-apps-on-a-power-platform-environment)
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Node.js](https://nodejs.org/) (LTS version)
-- [Power Platform Tools for VS Code](https://learn.microsoft.com/en-us/power-platform/developer/cli/introduction)
+- [Power Platform Tools for VS Code](/power-platform/developer/cli/introduction)
 
 ## Initialize your Vite App
 
@@ -101,7 +101,7 @@ This guide covers configuring a TypeScript app using the Power Platform SDK
 
 1. The template project will start and run locally. Browse to the http://localhost:3000 address given.
 
-   :::image type="content" source="media/sql-localhost.png" alt-text="TODO":::
+   :::image type="content" source="media/sql-localhost.png" alt-text="Vite + React TypeScript starter page running on port 3000":::
 
    > [!IMPORTANT]
    > If you do not see the port 3000, then revisit the steps above.
@@ -160,7 +160,7 @@ This guide covers configuring a TypeScript app using the Power Platform SDK
 
    Save the updated `pacakage.json`.
 
-1. **Add a new file** under the `src` folder named `PowerProvider.tsx` and grab the code from [PowerProvider.tsx](./assets/PowerProvider.tsx)
+1. **Add a new file** under the `src` folder named `PowerProvider.tsx` and grab the code from [github.com/microsoft/PowerAppsCodeApps/docs/assets/PowerProvider.tsx](https://github.com/microsoft/PowerAppsCodeApps/blob/main/docs/assets/PowerProvider.tsx)
 1. **Save** the file.
 1. **Open** `main.tsx` and add the following import under the existing imports:
 
@@ -187,7 +187,6 @@ This guide covers configuring a TypeScript app using the Power Platform SDK
    ```
 
 1. **Save** the file
-
 1. You can now test the Code App by using:
 
     ```
@@ -196,7 +195,7 @@ This guide covers configuring a TypeScript app using the Power Platform SDK
 
     This will run the vite server, but also start the Power SDK server:
 
-   :::image type="content" source="media/sql-testapp.png" alt-text="TODO":::
+   :::image type="content" source="media/sql-testapp.png" alt-text="Power SDK server page showing test app URL and status":::
 
 1. Open the URL provided by the Power SDK Server.
 
@@ -205,4 +204,4 @@ This guide covers configuring a TypeScript app using the Power Platform SDK
 
 1. You should see the app open similar to:
 
-   :::image type="content" source="media/sql-vite-running-powerapps.png" alt-text="TODO":::
+   :::image type="content" source="media/sql-vite-running-powerapps.png" alt-text="Vite React app running inside Power Apps Code Apps host":::

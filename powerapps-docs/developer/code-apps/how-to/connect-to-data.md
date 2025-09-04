@@ -35,7 +35,7 @@ You will need to start by creating and configuring connections at <https://make.
 
    Go to <https://make.powerapps.com> and navigate to the **Connections** page from the left-hand navigation.
 
-   :::image type="content" source="media/powerapps_create_connection.png" alt-text="TODO":::
+   :::image type="content" source="media/powerapps_create_connection.png" alt-text="Power Apps Connections page showing New connection button":::
 
 1. Create an Office 365 Users connection
 
@@ -44,12 +44,12 @@ You will need to start by creating and configuring connections at <https://make.
    > [!NOTE]
    > Information the user should notice even if skimmingIf you already have an Office 365 Users connection, you can use that instead of creating a new one.
 
-   :::image type="content" source="media/powerapps_create_office_connection.png" alt-text="TODO":::
+   :::image type="content" source="media/powerapps_create_office_connection.png" alt-text="Create Office 365 Users connection in Power Apps":::
 
 1. (Optional) Create a SQL connection (or a connection for another tabular data source)
 
    > [!TIP]
-   > For a step-by-step guide to connecting your code app to Azure SQL, see [docs/how-to-connect-to-azure-sql.md](docs/how-to-connect-to-azure-sql.md).
+   > For a step-by-step guide to connecting your code app to Azure SQL, see [How to: Connect your code app to Azure SQL](connect-to-azure-sql.md).
 
    1. Get connection metadata for all created connections
 
@@ -61,13 +61,13 @@ You will need to start by creating and configuring connections at <https://make.
 
    This command will display a table of all your connections, including the **Connection ID** and **API Name** (which is used as the appId when adding a data source).
 
-   :::image type="content" source="media/pac_cli_connection_list.png" alt-text="TODO":::
+   :::image type="content" source="media/pac_cli_connection_list.png" alt-text="PAC CLI list output showing Connection ID and API Name":::
 
-   You can also retrive this using the Power Apps:
+   You can also retrieve this using the Power Apps:
 
-   :::image type="content" source="media/powerapps_select_connection.png" alt-text="TODO":::
+   :::image type="content" source="media/powerapps_select_connection.png" alt-text="Select a connection in Power Apps to view its details":::
 
-   :::image type="content" source="media/powerapps_connection_apiName_connectionId.png" alt-text="TODO":::
+   :::image type="content" source="media/powerapps_connection_apiName_connectionId.png" alt-text="Connection details showing API name and Connection ID values":::
 
    Copy the API name and the connection ID from PAC CLI the URL for each connection:
 
@@ -93,13 +93,14 @@ Adding the data sources to the app will automatically generate a strongly typed 
 
    > [!NOTE]
    > If you observe a PAC CLI 403 error whent attempting to add a data source, which you have access to, it's expected to be a result of not using a first release environment as guided above.
-   > :::image type="content" source="media/add_data_source_error_without_first_release.png" alt-text="TODO":::
+   > :::image type="content" source="media/add_data_source_error_without_first_release.png" alt-text="PAC CLI 403 error adding data source without first release environment":::
 
 1. (Optional) Add a tabular data source (e.g. SQL, SharePoint) to the app
 
    From a command line, run the following. Use the API name and connection ID collected from Step #2 above.
 
-   >[!NOTE] You will additionally need to pass a table ID and dataset name, which is controlled by the schema of your tabular data source. If you don't already have these, instructions on how to find it are below.
+   > [!NOTE]
+   > You will additionally need to pass a table ID and dataset name, which is controlled by the schema of your tabular data source. If you don't already have these, instructions on how to find it are below.
 
    ```bash
    pac code add-data-source -a <apiName> -c <connectionId> -t <tableId> -d <datasetName> 

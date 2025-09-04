@@ -19,8 +19,6 @@ This guide covers:
 - Creating SQL tables and stored procedures
 - Connecting a Power Apps Code App using the Power SDK
 
-> [!IMPORTANT] This guide assumes you have access to the Azure Portal and a Power Apps environment with Code App capabilities enabled.
-
 ## Prerequisites
 
 - An Azure subscription
@@ -62,7 +60,7 @@ This guide covers:
 
 1. Under Connections, select **+ Add Connection**  
 
-   :::image type="content" source="media/sql-addconnection.png" alt-text="TODO":::
+  :::image type="content" source="media/sql-addconnection.png" alt-text="Add Connection in VS Code SQL Server extension":::
 
 1. In the Connect to Database dialog, Select **Browse Azure**, select your Subscription, Resource group (e.g. `rg-codeapps-dev`), Server (e.g. `sql-codeapps-dev`), and then database (e.g. `sqldb-codeapps-dev` ) 
 
@@ -70,15 +68,15 @@ This guide covers:
 
 1. Ensure you have your Azure portal open in your browser, and then select **Sign In**. You should be prompted to login, and then see:
 
-   :::image type="content" source="media/sql-signin.png" alt-text="TODO":::
+  :::image type="content" source="media/sql-signin.png" alt-text="Microsoft Entra sign-in prompt for SQL connection":::
 
 1. Select Connect
 
-   :::image type="content" source="media/sql-connect .png" alt-text="TODO":::
+  :::image type="content" source="media/sql-connect.png" alt-text="Connected to Azure SQL database in VS Code":::
 
 1. In the SQL SERVER panel, right click on your database and select **New Query**
 
-   :::image type="content" source="media/sql-newquery.png" alt-text="TODO":::
+  :::image type="content" source="media/sql-newquery.png" alt-text="New Query command for database in VS Code SQL extension":::
 
 1. In the new query window, paste the following:
 
@@ -300,7 +298,7 @@ This guide covers:
 
 1. The template project will start and run locally. Browse to the http://localhost:3000 address given.
 
-   :::image type="content" source="media/sql-localhost.png" alt-text="TODO":::
+  :::image type="content" source="media/sql-localhost.png" alt-text="Vite React app running on localhost port 3000":::
 
 
    > [!IMPORTANT]
@@ -358,12 +356,10 @@ This guide covers:
    "dev": "start pac code run && vite",
    ```
 
-   Save the updated `pacakage.json`.
+   Save the updated `package.json`.
 
-1. **Add a new file** under the `src` folder named `PowerProvider.tsx` and grab the code from [PowerProvider.tsx](./assets/PowerProvider.tsx)
-
+1. **Add a new file** under the `src` folder named `PowerProvider.tsx` and grab the code from [PowerProvider.tsx](https://github.com/microsoft/PowerAppsCodeApps/blob/main/docs/assets/PowerProvider.tsx)
 1. **Save** the file.
-
 1. **Open** `main.tsx` and add the following import under the existing imports:
 
    ```
@@ -394,9 +390,9 @@ This guide covers:
     npm run dev
     ```
 
-    This will run the vite server, but also start the Power SDK server:
+  This will run the vite server, but also start the Power SDK server:
 
-   :::image type="content" source="media/sql-testapp.png" alt-text="TODO":::
+   :::image type="content" source="media/sql-testapp.png" alt-text="Power SDK server console with app URL and status":::
 
 1. Open the URL provided by the Power SDK Server.
 
@@ -406,7 +402,7 @@ This guide covers:
 
 1. You should see the app open similar to:
 
-   :::image type="content" source="media/sql-vite-running-powerapps.png" alt-text="TODO":::
+  :::image type="content" source="media/sql-vite-running-powerapps.png" alt-text="Vite app running in Power Apps with Power SDK":::
 
 ### Create a SQL Server Connection in Power Platform
 
@@ -415,7 +411,7 @@ This guide covers:
 1. Navigate to **Connections** (It might be in the **... More menu**)
 1. Select **+ New Connection**
 
-   :::image type="content" source="media/sql-createconnection.png" alt-text="TODO":::
+  :::image type="content" source="media/sql-createconnection.png" alt-text="+ New Connection in Power Apps maker portal":::
 
 1. Select **SQL Server**
 1. Select Authentication type: **Microsoft Entra ID Integrated**
@@ -429,9 +425,9 @@ This guide covers:
    pac connection list
    ```
 
-   You should see a list similar to:
+  You should see a list similar to:
 
-   :::image type="content" source="media/sql-connectionlist.png" alt-text="TODO":::
+  :::image type="content" source="media/sql-connectionlist.png" alt-text="Power Platform connections list showing SQL connection":::
 
 1. To add the Projects table to the project, copy the the connection Id (the first column) and use the following command:
 
@@ -851,17 +847,17 @@ This guide covers:
    npm run dev
    ````
 
-   In the command window that opens up, open the app link provided:
+  In the command window that opens up, open the app link provided:
 
-   :::image type="content" source="media/sql-testapp.png" alt-text="TODO":::
+  :::image type="content" source="media/sql-testapp.png" alt-text="Power SDK server console with app URL and status":::
 
 1. When the app opens, you should see a consent dialog, select **Allow**
 
-   :::image type="content" source="media/sql-consent.png" alt-text="TODO":::
+  :::image type="content" source="media/sql-consent.png" alt-text="Consent dialog requesting permissions for the app":::
 
 1. You should see data grid of projects:
 
-   :::image type="content" source="media/sql-datagrid.png" alt-text="TODO":::
+  :::image type="content" source="media/sql-datagrid.png" alt-text="Projects data grid with sortable columns and badges":::
 
 ### Publishing the App to Power Apps
 
@@ -874,7 +870,7 @@ This guide covers:
 
 1. Open the app using the link provided to test it out!
 
-   :::image type="content" source="media/sql-pushed.png" alt-text="TODO":::
+  :::image type="content" source="media/sql-pushed.png" alt-text="App published to Power Apps with Open app link":::
 
 ## Troubleshooting
 
