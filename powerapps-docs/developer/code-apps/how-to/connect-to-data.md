@@ -16,7 +16,7 @@ Code apps enable connecting to Power Platform connectors. To do this, you will c
 Note that these steps require that you have completed the Getting Started section and already initialized the app with "pac code init".
 
 > [!IMPORTANT]
-> For the initial release, only SQL, SharePoint, and Office 365 Users connectors are formally supported. Other connectors (e.g. SharePoint) are expected to work but are untested. Dataverse is explicitly not supported, yet.
+> The following connectors are officially supported: SQL, SharePoint, Office 365 Users, Office 365 Groups, Azure Data Explorer, OneDrive for Business, Power Apps for Makers, Microsoft Teams, MSN Weather and Microsoft Translator V2. [Dataverse create, read, update and delete operations](./connect-to-dataverse.md) are officially supported. Other connectors are expected to work but are untested. 
 
 Use the following steps:
 
