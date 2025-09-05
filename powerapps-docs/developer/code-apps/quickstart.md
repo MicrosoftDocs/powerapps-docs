@@ -11,12 +11,7 @@ contributors:
 ---
 # Quickstart: Create your first code app
 
-In this quickstart, you will build a code app, run it locally, and then publish it.
-
-<!-- 
-TODO: 
-- Explain why people are performing the instructions in this quick start.
--->
+In this quickstart, you will build a code app, run it locally, and then publish it. You will be guided to download a sample code app, use PAC CLI to target a Power Platform environment to publish the app, you'll proceed with publishing the app and, last, you'll run the app hosted in Power Platform.  
 
 ## Prerequisites
 
@@ -42,13 +37,9 @@ cd samples\HelloWorld
 code .
 ```
 
-<!-- 
-TODO: 
-- Explain the important contents of the HelloWorld folder
-- Explain that this project uses [Vite](https://vite.dev/) and why this was chosen over alternatives that might be the readers preferred option. Will their preferred option work instead?
--->
+The base of this app project was created using Vite and it has two notable additions: 1) package.json has a reference to the Power Apps SDK which helps an app connect to Power Platform connectors and 2) PowerProvider.tsx which contains an initialize() function which the app uses to communicate to the Power Apps host that the app is ready to run. 
 
-## Authenticate PAC CLI and point to your first release environment
+## Authenticate PAC CLI and point to your development environment
 
 Visual Studio Code, open a new terminal window and use the [pac auth create](/power-platform/developer/cli/reference/auth#pac-auth-create) command to create an authentication profile.
 
@@ -56,9 +47,7 @@ Visual Studio Code, open a new terminal window and use the [pac auth create](/po
 pac auth create --environment {environment id}
 ```
 
-<!-- 
-TODO: Explain why this is necessary
--->
+All Power Platform apps, flows and agents publish to an environment, including code apps. The PAC CLI's auth command will prompt you to authenticate with your MS Entra identity and ensure the code app you add connections to and publish to Power Platform go in the specififed environment. 
 
 ## Install dependencies
 
