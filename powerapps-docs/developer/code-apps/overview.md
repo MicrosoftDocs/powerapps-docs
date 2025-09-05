@@ -16,7 +16,7 @@ contributors:
 
 Power Apps empowers developers of all skillsets—including those building web apps in IDEs like Visual Studio Code—to efficiently build and run business apps on a managed platform.
 
-**Code apps** let developers bring Power Apps capabilities into custom web apps built in a code‑first IDE. You can develop locally and run the same app in Power Platform. Build with popular frameworks (React, Angular, Vue, etc.) while keeping full control over your UI and logic.
+**Code apps** let developers bring Power Apps capabilities into custom web apps built in a code‑first IDE. You can develop locally and run the same app in Power Platform. Build with popular frameworks (React, Vue, etc.) while keeping full control over your UI and logic.
 
 **Key features include:**
 
@@ -57,15 +57,6 @@ Code apps can be enabled via environment setting which can be set by Power Platf
 
 1. Click **Save** in the settings experience.
 
-> [!NOTE]
-> If the Power Apps Code Apps setting doesn't appear in the admin center UI it is because a UI update hasn't reached your environment yet. You can get the setting to appear by appending `?ecs.ShowCodeAppSetting=true` to the admin center URI.
-> 
-> For example, if this is the URL to the admin settings:
-> `https://admin.powerplatform.microsoft.com/manage/environments/1c137ea4-049e-ef11-8a66-000d3a106833/settings/Features`
-> 
-> Append the query string to the end:
-> `https://admin.powerplatform.microsoft.com/manage/environments/1c137ea4-049e-ef11-8a66-000d3a106833/settings/Features?ecs.ShowCodeAppSetting=true`
-
 ### License end-users with Power Apps Premium
 
 End-users that run code apps need a [Power Apps Premium license](https://www.microsoft.com/power-platform/products/power-apps/pricing).
@@ -74,7 +65,7 @@ End-users that run code apps need a [Power Apps Premium license](https://www.mic
 
 - Code apps can invoke APIs outside of Power Platform connectors. Code apps do not yet support [Content Security Policy](/power-platform/admin/content-security-policy) (CSP).
 - Code apps do not yet support [Storage Shared Access Signature (SAS) IP restriction](/power-platform/admin/security/data-storage#advanced-security-features ).
-- Code apps don't support Power Platform Native source code integration.
+- Code apps don't support [Power Platform Git integration](/power-platform/alm/git-integration/overview).
 - Code apps don't support Dataverse solutions and therefore cannot use Power Platform pipelines for deployments.
 - Code apps don't have a Power Platform native integration with Azure Application Insights. Azure Application Insights can be added as it would be to a generic web app but it will not include information recognized in the platform layer, such as app open events (to measure success/failure)
 
