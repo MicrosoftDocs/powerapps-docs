@@ -2,7 +2,7 @@
 title: "Import solutions in Power Platform"
 description: "Learn how to import a solution in Power Platform"
 ms.custom: ""
-ms.date: 08/04/2025
+ms.date: 09/05/2025
 ms.reviewer: ""
 ms.topic: how-to
 author: "Mattp123"
@@ -10,6 +10,7 @@ ms.assetid: 56363ea3-ea76-4311-9b7a-b71675e446fb
 caps.latest.revision: 57
 ms.subservice: dataverse-maker
 ms.author: "matp"
+contributors: ChrisGarty
 ai-usage: ai-assisted
 search.audienceType: 
   - maker
@@ -45,9 +46,9 @@ To import a solution:
 
 1. Select **Next**.  
   
-1. Information about the solution is displayed. By default, in the **Advanced settings** section, if plugin steps (also known as SDK message processing steps) and flows exist in the solution, they'll be imported. Clear the **Enable Plugin steps and flows included in the solution** option if you don't want the import to attempt to activate any that are imported in an inactive state. Flows [will not be deactivated](/power-automate/import-flow-solution#what-will-the-flow-state-be-after-import) when the option is unchecked.
+1. Information about the solution is displayed. By default, in the **Advanced settings** section, if plugin steps (also known as SDK message processing steps) and flows exist in the solution, they'll be imported. Clear the **Enable Plugin steps and flows included in the solution** option if you don't want the import to attempt to activate any plugin steps that are imported in an inactive state. Flows [will not be deactivated](/power-automate/import-flow-solution#what-will-the-flow-state-be-after-import) when the option is unchecked.
 
-1. If your solution contains [connection references](create-connection-reference.md), you are prompted to select the connections you want. If a connection doesn't already exist, create a new one. Select **Next**.
+1. If your solution contains [connection references](create-connection-reference.md), you're prompted to select the connections you want. If a connection doesn't already exist, create a new one. Select **Next**.
 
 1. If your solution contains [environment variables](EnvironmentVariables.md), you'll be prompted to enter values. You won't see this screen if value(s) are already present in your solution or the target environment. 
 
@@ -55,7 +56,7 @@ To import a solution:
 
 1. Select **Import**.
 
-Your solution imports in the background and may take a few moments.  
+Your solution imports in the background and might take a few moments.  
   
 If you have imported any changes that require publishing, you must publish customizations before they're available.
   
