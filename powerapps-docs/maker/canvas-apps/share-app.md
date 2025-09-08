@@ -5,7 +5,7 @@ author: jessicaszelo
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 08/26/2025
+ms.date: 09/8/2025
 ms.subservice: canvas-maker
 ms.author: szlo
 search.audienceType: 
@@ -48,7 +48,9 @@ Before you share an app, you must [save it](save-publish-app.md) (not locally) a
 
         :::image type="content" source="media/share-app/share-app-coowner.png" alt-text="share with a co-owner":::
       
-    - If your app connects to a table in a Dataverse database, permission dropdown will also have a "More security roles" menu. Select apporiate security roles, and the roles will be assigned to user when the canvas app is shared.
+    - When your app connects to a Dataverse table, the permissions dropdown will display a **More security roles** option. Select the appropriate security roles, and those roles will be automatically assigned to users when you share the app.
+      
+       :::image type="content" source="media/share-app/more-security-roles.png" alt-text="More security roles option":::
 
 1. Optional steps:
    - Select the **overflow menu (...)** at the top-right corner and then select **Upload app image** to include an image of the app in the email.
@@ -237,7 +239,7 @@ If you create an app based on Dataverse, you must also ensure that the users you
 > [!NOTE]
 > - You can assign security roles to individual users and security groups in Microsoft Entra ID, but not to Microsoft 365 groups.
 > - If a user isn't in the Dataverse root business unit, you can share the app without providing a security role, and then set the security role directly.
-> - Once a security role is assigned to a user or group, the role can't be unassigned in app share interface. Security roles can still be unassigned in admin portal.
+> - After a security role is assigned to a user or group, you can't unassigned it when you share an app. However, you can still unassign security roles through the admin portal.
 
 ### Prerequisite
 
