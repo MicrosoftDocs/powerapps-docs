@@ -26,7 +26,7 @@ Create new columns to capture data when existing standard tables don’t have co
 
 ## How table columns are used in apps
 
-After you create a new column, you include it on the appropriate forms, using the [form designer](../model-driven-apps/form-designer-overview.md) and views, using the [view designer](../model-driven-apps/accessing-view-definitions.md), for the table so that they are available in your app.
+After you create a new column, you include it on the appropriate forms, using the [form designer](../model-driven-apps/form-designer-overview.md), and views, using the [view designer](../model-driven-apps/accessing-view-definitions.md), for the table so that they're available in your app.
 
 Here are default columns on a form for the account table in a model-driven app.
 :::image type="content" source="media/account-main-form-columns.png" alt-text="Several columns on the default account main form":::
