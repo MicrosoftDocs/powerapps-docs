@@ -48,7 +48,7 @@ Before you share an app, you must [save it](save-publish-app.md) (not locally) a
 
         :::image type="content" source="media/share-app/share-app-coowner.png" alt-text="share with a co-owner":::
       
-    - If your app connects to a table in a Dataverse database, permission dropdown will also have a "More security roles" menu. Select apporiate security roles, and the roles will be assigned to user when the canvsa app is shared.
+    - If your app connects to a table in a Dataverse database, permission dropdown will also have a "More security roles" menu. Select apporiate security roles, and the roles will be assigned to user when the canvas app is shared.
 
 1. Optional steps:
    - Select the **overflow menu (...)** at the top-right corner and then select **Upload app image** to include an image of the app in the email.
