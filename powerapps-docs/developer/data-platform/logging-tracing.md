@@ -83,7 +83,7 @@ The <xref:Microsoft.Xrm.Sdk.ITracingService> batches the information provided to
 
 Each `Trace` call is logged as a new line in the [PluginTraceLog](reference/entities/plugintracelog.md) [MessageBlock](reference/entities/plugintracelog.md#BKMK_MessageBlock) column. Only 10 kb of text can be written. Older trace lines are removed to meet this limit so that only the most recent lines are saved.
   
-[PluginTraceLog](reference/entities/plugintracelog.md) records have a finite lifetime. A bulk deletion background job runs once per day to delete records that are older than 24 hours from creation.
+[PluginTraceLog](reference/entities/plugintracelog.md) records have a finite lifetime. A bulk deletion background job runs once per day to delete records that are older than 24 hours from creation. To prevent excessive database growth, Microsoft may disable logging to Plug-in Trace Log if the plugintracelogbase table exceeds 100 GB in size.
 
 > [!CAUTION]
 > While this job can be disabled or the frequency in which it occurs can be adjusted, failure to set it back to the original setting is frequently discovered to be the cause of performance issues later on.
