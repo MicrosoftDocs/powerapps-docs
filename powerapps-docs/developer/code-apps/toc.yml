@@ -7,6 +7,8 @@ items:
     href: quickstart.md
   - name: Architecture
     href: architecture.md
+  - name: System limits and configuration
+    href: system-limits-configuration.md
   - name: How-to guides
     items:
     - name: "Create an app from scratch"
