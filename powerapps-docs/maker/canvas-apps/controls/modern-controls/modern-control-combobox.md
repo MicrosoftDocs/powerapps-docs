@@ -34,7 +34,7 @@ Use the control's SearchText property within a PowerFX function to dynamically f
 You can configure which column to show as combobox options. In the **Properties** pane, select **Fields** > Edit. The first field in the **Fields** pane is used as options in the combobox's drop down menu.
 
 > [!NOTE]
-> If you change **Items**, remember to go to the **Fields** pane and change the field used for options' text. Otherwise, the drop down menu might be empty or show unexpected data.
+> If you change **Items**, remember to go to the **Fields** pane and check the field used for options' text. Otherwise, the drop down menu might be empty or show unexpected data.
 
 **AccessibleLabel** – Label for screen readers.
 
