@@ -15,7 +15,7 @@ contributors:
 An HTML or TypeScript/JavaScript app is a prerequisite to use code apps technology. The Power Platform CLI and Power Apps SDK allow you to augment your app to use Power Platform connectors and be hosted in a Power Platform environment. 
 
 <p align="center">
- 
+  ![development-architecture](media/code-app-architecture-development.png "Development architecture")
 </p>
 
 1. Power.config.json is a file, generated from the Power Apps SDK, which contains metadata both the CLI and Power Apps SDK use for Power Platform connections and to publish an app to an environment. Your app logic is not expected to interact with the power.config.json file.
@@ -26,7 +26,7 @@ An HTML or TypeScript/JavaScript app is a prerequisite to use code apps technolo
 When a code app runs there are three logical components: your code, the Power Apps SDK and the Power Apps host.
 
 <p align="center">
-  
+  ![runtime-architecture](media/code-app-architecture-runtime.png "Runtime architecture")
 </p>
 
 1. At runtime, the Power Apps SDK is the npm package (@microsoft/power-apps) which exposes APIs that may be invoked by your code and the generated models and services your app uses to perform data requests via Power Platform connectors. 
