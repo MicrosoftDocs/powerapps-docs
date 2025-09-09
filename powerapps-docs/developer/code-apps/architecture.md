@@ -21,7 +21,7 @@ Power Apps code app architecture describes how your app code, the Power Apps SDK
 
 ## App Development
 
-An HTML or TypeScript/JavaScript app is a prerequisite to use code apps technology. Code apps support Single Page Applications (SPAs). The Power Platform CLI and Power Apps SDK allow you to augment your app to use Power Platform connectors and be hosted in a Power Platform environment. 
+An HTML or TypeScript/JavaScript app is a prerequisite to use code apps technology. Code apps support Single-Page Applications (SPAs). The Power Platform CLI and Power Apps SDK allow you to augment your app to use Power Platform connectors and be hosted in a Power Platform environment. 
 
 :::image type="content" source="media/code-app-architecture-development.png" alt-text="Development architecture":::
 
