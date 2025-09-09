@@ -11,21 +11,17 @@ contributors:
 ---
 # Code apps architecture
 
-
 **This is an AI generated intro**
 
 Power Apps code app architecture describes how your app code, the Power Apps SDK (@microsoft/power-apps), the generated models/services for connectors, the configuration file (power.config.json), and the Power Apps host collaborate through development, publishing, and runtime execution. After reviewing this overview you will be able to:
 
-1. Explain the role of each layer (your code vs. SDK vs. host) and what logic belongs where.
+1. Explain the role of each layer (your code vs. SDK vs. host).
 2. Add or remove connectors and understand how models/services are generated and consumed.
-3. Know exactly what is packaged and published with `pac code push` and what stays local.
-4. Trace a user action through authentication, data access, and response rendering to diagnose performance or loading issues.
-5. Make informed decisions about where to implement caching, error handling, and security checks.
-
+3. Know exactly what is packaged and published with `pac code push`.
 
 ## App Development
 
-An HTML or TypeScript/JavaScript app is a prerequisite to use code apps technology. The Power Platform CLI and Power Apps SDK allow you to augment your app to use Power Platform connectors and be hosted in a Power Platform environment. 
+An HTML or TypeScript/JavaScript app is a prerequisite to use code apps technology. Code apps support Single Page Applications (SPAs). The Power Platform CLI and Power Apps SDK allow you to augment your app to use Power Platform connectors and be hosted in a Power Platform environment. 
 
 :::image type="content" source="media/code-app-architecture-development.png" alt-text="Development architecture":::
 
