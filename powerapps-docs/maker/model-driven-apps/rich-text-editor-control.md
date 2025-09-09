@@ -1,7 +1,7 @@
 ---
 title: Add the rich text editor control to a model-driven app
 description: Learn how to add and customize the rich text editor control in Power Apps model-driven apps to create and edit formatted text.
-ms.date: 08/22/2025
+ms.date: 09/09/2025
 ms.update-cycle: 180-days
 ms.topic: how-to
 ms.author: saperlmu
@@ -470,12 +470,30 @@ Email templates and signatures:
 
 ## Tags
 
-The following tags are no longer supported in the modern rich text editor.
+The following HTML tags are either no longer supported or are replaced by a modern alternative in the rich text editor.
 
 | Tag | Description | Modern rich text editor alternative |
 |----------|-----------|-----------------|
 | &lt;acronym&gt; | Defines an acronym | &lt;abbr&gt;
-|
+| &lt;applet&gt;  | Embeds Java applet | &lt;object&gt; |
+| &lt;basefont&gt; | Sets default font size and color | CSS |
+| &lt;big&gt; | Enlarges text | CSS font-size |
+| &lt;blink&gt; | Makes text flash | CSS animations |
+| &lt;center&gt; | Centers content | CSS text-align |
+| &lt;dir&gt; | Directory list | &lt;ul&gt; |
+| &lt;font&gt; | Styles fonts | CSS |
+| &lt;frame&gt; | Defines a frame | &lt;iframe&gt; |
+| &lt;frameset&gt; | Groups frames | &lt;iframe&gt; |
+| &lt;isindex&gt; | Single-line input | &lt;form&gt; |
+| &lt;marquee&gt; | Scrolling text | CSS animations |
+| &lt;menu&gt; | Menu list | &lt;ul&gt; |
+| &lt;noframes&gt; | Fallback for no frame support | Not needed |
+| &lt;plaintext&gt; | Displays plain text | &lt;pre&gt; |
+| &lt;s&gt; | Strikethrough text | &lt;del&gt;, CSS |
+| &lt;strike&gt; | Strikethrough text | &lt;del&gt:, &lt;s&gt; |
+| &lt;tt&gt; | Teletype text | &lt;code&gt;, CSS |
+| &lt;u&gt; | Underlined text | CSS text-decoration |
+| &lt;xmp&gt; | Preformatted text | &lt;pre&gt; |
 
 ## Frequently asked questions
 
