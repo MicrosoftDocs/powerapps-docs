@@ -26,7 +26,7 @@ Create new columns to capture data when existing standard tables don’t have co
 
 ## How table columns are used in apps
 
-After you create a new column, you include it on the appropriate forms, using the [form designer](../model-driven-apps/form-designer-overview.md), and views, using the [view designer](../model-driven-apps/accessing-view-definitions.md), for the table so that they're available in your app.
+After you create a new column, you include it on the appropriate forms using the [form designer](../model-driven-apps/form-designer-overview.md), and views using the [view designer](../model-driven-apps/accessing-view-definitions.md), for the table so that they're available in your app.
 
 Here are default columns on a form for the account table in a model-driven app.
 :::image type="content" source="media/account-main-form-columns.png" alt-text="Several columns on the default account main form":::
@@ -42,7 +42,7 @@ Watch this short video that shows you how to quickly create a column.
 Create a column in Power Apps (make.powerapps.com). You can also create columns while working in the model-driven app form designer or view designer.
 
 1. Go to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Solutions** in the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
-1. Select the table where you want to add a column. If the solution doesn't already have the table, select **Add existing** > **Table** or to create a new table select **New** > **Table**.
+1. Select the table where you want to add a column. If the solution doesn't already have the table, select **Add existing** > **Table** or to create a new table select **New** > **Table** > **Table (advanced properties)**. More information: [Set advanced properties for a table](create-edit-entities-portal.md#set-advanced-properties)
 1. In the table **Schema** area, select **Columns**.
 1. In the list of columns for the table, select **New column**.
 1. Complete the required and optional properties for the column, and then select **Save**.
