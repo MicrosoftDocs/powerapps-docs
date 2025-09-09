@@ -86,4 +86,5 @@ This table enumerates Power Platform management capabilities that work for code 
 
 
 ## Related topics
-[Architecture](architecture.md)
+- [Architecture](architecture.md)
+- [System limits and configuration](system-limits-configuration.md)
