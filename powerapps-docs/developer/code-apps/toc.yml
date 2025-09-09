@@ -5,6 +5,8 @@ items:
     href: overview.md
   - name: "Quickstart: Create your first code app"
     href: quickstart.md
+  - name: Architecture
+    href: architecture.md
   - name: How-to guides
     items:
     - name: "Create an app from scratch"
