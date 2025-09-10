@@ -19,18 +19,16 @@ This article contains information on the configuration for Power Apps code apps.
 
 ## Hosted app code
 
-When a code app is published to Power Platform (e.g. when using pac code push) app code is hosted on a publicly accessible endpoint. Sensitive user or organizational data should not be stored in the app and they should be stored in a data source so the content is retrieved after end-users playing the app go through authentication and authorization checks. 
+When a code app is published to Power Platform using [pac code push](/power-platform/developer/cli/reference/code#pac-code-push), the code is hosted on a publicly accessible endpoint. Sensitive user or organizational data shouldn't be stored in the app. Store this kind of data in a data source so the content is retrieved after end-users playing the app go through authentication and authorization checks.
 
 ## Hide the Power Apps header when playing an app
 
-You can hide the header that appears when playing an app adding `hideNavBar=true` as a query string parameter. In practice, append this to the app link before sharing the app link.
+To hide the header that appears when you play the app, append a `hideNavBar=true` query string parameter to the url of an app when you share it.
 
-**Before**
+**Before**: Header is visible
 
 `https://apps.powerapps.com/play/e/{environment id}/a/{app id}`
 
-**After**
+**After**: Header is hidden
 
 `https://apps.powerapps.com/play/e/{environment id}/a/{app id}?hideNavBar=true`
-
-
