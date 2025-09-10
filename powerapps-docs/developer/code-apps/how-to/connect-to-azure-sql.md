@@ -400,7 +400,7 @@ This guide covers:
 1. Navigate to **Connections**. It might be in the **... More menu**.
 1. Select **+ New Connection**
 
-   :::image type="content" source="media/sql-createconnection.png" alt-text="+ New Connection in Power Apps maker portal":::
+   :::image type="content" source="media/sql-createconnection.png" alt-text="+ New Connection in Power Apps":::
 
 1. Select **SQL Server**
 1. Select Authentication type: **Microsoft Entra ID Integrated**
@@ -995,7 +995,7 @@ You might experience these issues when using Node.js and npm.
 1. **Check Power Platform Connection:**
 
    - Verify the SQL Server connection is working in Power Platform
-   - Test the connection in Power Platform maker portal
+   - Test the connection in [Power Apps](https://make.powerapps.com)
 
 1. **Consent Issues:**
 

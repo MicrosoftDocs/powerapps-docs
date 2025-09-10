@@ -104,7 +104,7 @@ module.exports = async function (context, req) {
    :::image type="content" source="media/custom-connector-apim-create-connector.png" alt-text="Create custom connector":::
 
 1. Select your environment, display name and select **Create**. The custom connector will be created in your selected environment.
-1. In the [Power Apps maker portal](https://make.powerapps.com/), go to **Custom connectors** to review, edit, and test your new connector.
+1. In the [Power Apps](https://make.powerapps.com), go to **Custom connectors** to review, edit, and test your new connector.
 
    :::image type="content" source="media/custom-connector-test-connector.png" alt-text="Test custom connector":::
 
