@@ -18,7 +18,7 @@ This simple API provides a mock asset list and is ready for integration with Pow
 ## Prerequisites
 
 - Access to the [Azure Portal](https://portal.azure.com)
-- [Power Platform environment with Code Apps enabled](../overview.md#enable-code-apps-on-a-power-platform-environment)
+- [Power Platform environment with code apps enabled](../overview.md#enable-code-apps-on-a-power-platform-environment)
 
 ## Create a New Azure Function in the Azure Portal
 
@@ -110,7 +110,7 @@ module.exports = async function (context, req) {
 
 ## Next Steps
 
-- Create a new Code App using this custom connector with **Power Apps SDK** 
+- Create a new code app using this custom connector with **Power Apps SDK** 
 - Expand the API with more operations as needed. Don't forget to update the connector with the new operations when you do.
 - Secure your API if you move beyond development/testing.
 

@@ -15,7 +15,7 @@ This guide helps developers use the Power Apps SDK to connect their code app to 
 
 ## Prerequisites
 
-- Power Apps Code Apps SDK version [v0.0.4 or later](https://github.com/microsoft/PowerAppsCodeApps/releases/tag/v0.0.4)
+- Power Apps code apps SDK version [v0.0.4 or later](https://github.com/microsoft/PowerAppsCodeApps/releases/tag/v0.0.4)
 - Power Apps CLI (PAC CLI) version 1.46 or later
 - An environment with Dataverse enabled
 - You must be connected to the environment using PAC CLI
@@ -36,7 +36,7 @@ This guide helps developers use the Power Apps SDK to connect their code app to 
 
 The following scenarios are supported when connecting to Dataverse using the Power Apps SDK:
 
-- Add Dataverse entities to Code Apps using the PAC CLI
+- Add Dataverse entities to code apps using the PAC CLI
 - Perform CRUD operations:
 
   - Create

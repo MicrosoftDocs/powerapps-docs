@@ -51,7 +51,7 @@ Code apps can be enabled via environment setting that Power Platform Admins and 
 
    :::image type="content" source="media/enable-settings-products-features.png" alt-text="Enable features":::
 
-1. Navigate to the feature **Power Apps Code Apps** and use the **Enable code apps** toggle for enablement.
+1. Navigate to the feature **Power Apps code apps** and use the **Enable code apps** toggle for enablement.
 
    :::image type="content" source="media/enable-code-apps.png" alt-text="Enable code apps":::
 

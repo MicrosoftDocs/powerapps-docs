@@ -11,19 +11,19 @@ contributors:
 ---
 # How to: Connect your code app to Azure SQL
 
-This guide walks through how to set up an Azure SQL Database and connect it to a Power Apps Code App using the Power SDK. 
+This guide walks through how to set up an Azure SQL Database and connect it to a Power Apps code app using the Power SDK. 
 
 This guide covers:
 
 - Provisioning an Azure SQL Server and database
 - Creating SQL tables and stored procedures
-- Connecting a Power Apps Code App using the Power SDK
+- Connecting a Power Apps code app using the Power SDK
 
 ## Prerequisites
 
 - An Azure subscription
 - Access to the [Azure portal](https://portal.azure.com)
-- [Power Platform environment with Code Apps enabled](../overview.md#enable-code-apps-on-a-power-platform-environment)
+- [Power Platform environment with code apps enabled](../overview.md#enable-code-apps-on-a-power-platform-environment)
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Node.js](https://nodejs.org/) (LTS version)
 - [Power Platform Tools for VS Code](/power-platform/developer/cli/introduction)
@@ -61,7 +61,7 @@ This guide covers:
 
 1. In the **Connect to Database** dialog, select **Browse Azure**, select your subscription, resource group (for example: `rg-codeapps-dev`), Server (for example: `sql-codeapps-dev`), and then database (for example `sqldb-codeapps-dev` )
 1. Under **Authentication type**, select **Microsoft Entra ID - Universal with MFA support**
-1. Ensure you have your Azure portal open in your browser, and then select **Sign In**. You should be prompted to log in, and then see:
+1. Ensure you have your Azure portal open in your browser, and then select **Sign In**. You should be prompted to sign-in, and then see:
 
    :::image type="content" source="media/sql-signin.png" alt-text="Microsoft Entra sign-in prompt for SQL connection":::
 
@@ -73,7 +73,7 @@ This guide covers:
 
    :::image type="content" source="media/sql-newquery.png" alt-text="New Query command for database in VS Code SQL extension":::
 
-1. In the new query window, paste the following:
+1. In the new query window, paste the following SQL:
 
    ```sql
    -- Drop existing objects if they exist
@@ -259,7 +259,7 @@ This guide covers:
    npm i --save-dev @types/node
    ```
 
-   Open the `vite.config.ts`, and update to be:
+   Open the `vite.config.ts`, and change it to:
 
    ```typescript
    import { defineConfig } from 'vite'
@@ -283,23 +283,23 @@ This guide covers:
    ```
 
 1. **Save** the file.
-1. Open the `tsconfig.app.json`, and set the value of `verbatimModuleSyntax` to be `false` . This is currently required to work with the Power SDK Generated code. (See [[Bug\] Power SDK generated code causes error with verbatimModuleSyntax enabled · Issue #14 ](https://github.com/microsoft/PowerAppsCodeApps/issues/14))
+1. Open the `tsconfig.app.json`, and set the value of `verbatimModuleSyntax` to be `false` . This setting is currently required to work with the Power SDK Generated code. (See [[Bug\] Power SDK generated code causes error with verbatimModuleSyntax enabled · Issue #14 ](https://github.com/microsoft/PowerAppsCodeApps/issues/14))
 1. Enter the following to test your vite app:
 
    ```powershell
    npm run dev
    ```
 
-1. The template project will start and run locally. Browse to the `http://localhost:3000` address given.
+1. The template project starts and runs locally. Browse to the `http://localhost:3000` address given.
 
    :::image type="content" source="media/sql-localhost.png" alt-text="Vite React app running on localhost port 3000":::
 
    > [!IMPORTANT]
-   > If you do not see the port 3000, revisit the steps above.
+   > If you don't see the port 3000, revisit the previous steps.
 
-1. Press <kbd>Ctrl + C</kbd> to stop the local server when you have checked it runs ok.
+1. Press <kbd>Ctrl + C</kbd> to stop the local server when finish testing.
 
-### Initialize your Code App
+### Initialize your code app
 
 1. Authenticate the Power Platform CLI against your Power Platform tenant:
 
@@ -307,10 +307,10 @@ This guide covers:
    pac auth create
    ```
 
-   Login as your Power Platform account when prompted.
+   Sign-in as your Power Platform account when prompted.
 
    > [!NOTE]
-   > You can also use the [Power Platform Tools VS Code Extension](/power-platform/developer/howto/install-vs-code-extension) to do this.
+   > You can also use the [Power Platform Tools VS Code Extension](/power-platform/developer/howto/install-vs-code-extension) to do sign-in.
 
 1. **Select** your environment using:
 
@@ -326,7 +326,7 @@ This guide covers:
    pac code init --displayName "Project Management App" -l "C:\CodeApps\ProjectManagementApp\public\vite.svg"
    ```
 
-   Notice that there is now a `power.config.json` file in your project.
+   Notice that there's now a `power.config.json` file in your project.
 
 1. **Install** the Power SDK using:
 
@@ -375,12 +375,12 @@ This guide covers:
    ```
 
 1. **Save** the file
-1. You can now test the Code App by using:
+1. You can now test the code app by using:
     ```
     npm run dev
     ```
 
-   This will run the vite server, but also start the Power SDK server:
+   This command runs the Vite server and starts the Power SDK server:
 
    :::image type="content" source="media/sql-testapp.png" alt-text="Power SDK server console with app URL and status":::
 
@@ -404,11 +404,11 @@ This guide covers:
 
 1. Select **SQL Server**
 1. Select Authentication type: **Microsoft Entra ID Integrated**
-1. Select **Create** and login in the popup authentication prompt
+1. Select **Create** and sign-in in the popup authentication prompt
 
 ## Add SQL table connections to your app
 
-1. First list the available connections in your environment. You should see the connection you just created:
+1. First list the available connections in your environment. You should see the connection you created:
 
    ```powershell
    pac connection list
@@ -418,7 +418,7 @@ This guide covers:
 
    :::image type="content" source="media/sql-connectionlist.png" alt-text="Power Platform connections list showing SQL connection":::
 
-1. To add the projects table to the project, copy the the connection Id (the first column) and use the following command:
+1. To add the projects table to the project, copy the connection ID (the first column) and use the following command:
 
    ```powershell
    pac code add-data-source -a "shared_sql" -c "[CONNECTION ID]"  -d "[SQL SERVER NAME].database.windows.net,[DATA BASE NAME]" -sp "dbo.GetAllProjects"
@@ -435,14 +435,14 @@ This guide covers:
 
 ### Add Table of Projects
 
-1. We will use Fluent UI to show a table of projects, so downgrade to React 18 and install using:
+1. We use Fluent UI to show a table of projects, so downgrade to React 18 and install using:
 
    ```
    npm install react@^18.0.0 react-dom@^18.0.0 @types/react@^18.0.0 @types/react-dom@^18.0.0
    npm install @fluentui/react-components
    ```
 
-1. Add a new file under `src` named `ProjectsTable.tsx` with the following:
+1. Add a new file under `src` named `ProjectsTable.tsx` with the following code:
 
    ```typescript
    /**
@@ -836,7 +836,7 @@ This guide covers:
    npm run dev
    ````
 
-  In the command window that opens up, open the app link provided:
+   In the command window that opens up, open the app link provided:
 
    :::image type="content" source="media/sql-testapp.png" alt-text="Power SDK server console with app URL and status":::
 
@@ -863,17 +863,17 @@ This guide covers:
 
 ## Troubleshooting
 
-This section covers common issues you might encounter while setting up Power Apps Code Apps with Azure SQL Database.
+This section covers common issues you might encounter while setting up Power Apps code apps with Azure SQL Database.
 
 ### Azure SQL Database Issues
 
 You might experience these issues when using Azure SQL Databases.
 
-- [Cannot Connect to Azure SQL Database](#cannot-connect-to-azure-sql-database)
+- [Can't Connect to Azure SQL Database](#cant-connect-to-azure-sql-database)
 - [SQL Query Execution Errors](#sql-query-execution-errors)
 
 
-#### Cannot Connect to Azure SQL Database
+#### Can't Connect to Azure SQL Database
 
 **Symptoms:**
 - Connection timeout errors
@@ -883,7 +883,7 @@ You might experience these issues when using Azure SQL Databases.
 
 1. **Check Firewall Settings:**
 
-   - In Azure Portal, navigate to your SQL Server
+   - In Azure portal, navigate to your SQL Server
    - Go to **Security** → **Networking**
    - Ensure "Allow Azure services and resources to access this server" is set to **Yes**
    - Add your current client IP address to the firewall rules
@@ -891,7 +891,7 @@ You might experience these issues when using Azure SQL Databases.
 1. **Verify Authentication Method:**
 
    - Ensure you're using **Microsoft Entra ID - Universal with MFA support** in VS Code
-   - Make sure you're signed into the same Azure account in both Azure Portal and VS Code
+   - Make sure you're signed into the same Azure account in both Azure portal and VS Code
    - Try signing out and back in to refresh authentication tokens
 
 1. **Check Network Connectivity:**
@@ -912,7 +912,7 @@ You might experience these issues when using Azure SQL Databases.
 
 1. **Permission Issues:**
 
-   - Ensure your user account is set as the Azure AD admin for the SQL Server
+   - Ensure your user account is set as the Microsoft Entra admin for the SQL Server
    - Verify you have `db_owner` or appropriate permissions on the database
 
 1. **Object Exists Errors:**
@@ -933,7 +933,7 @@ You might experience these issues when using Node.js and npm.
 **Symptoms:**
 
 - "EADDRINUSE: address already in use :::3000"
-- Vite server won't start
+- Vite server doesn't start
 
 **Solutions:**
 
@@ -948,7 +948,7 @@ You might experience these issues when using Node.js and npm.
 
 1. **Use Alternative Port:**
 
-   - Update `vite.config.ts` to use a different port
+   - To use a different port, update `vite.config.ts`
    - Update Power SDK configuration accordingly
 
 #### Package Installation Failures
@@ -999,7 +999,7 @@ You might experience these issues when using Node.js and npm.
 
 1. **Consent Issues:**
 
-   - Ensure you've given consent when the app first loads
+   - Ensure you give consent when the app first loads
    - Clear browser cache and try again
 
 1. **Environment Mismatch:**

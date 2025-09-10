@@ -17,7 +17,7 @@ This guide covers configuring a TypeScript app using the Power Platform SDK
 
 ## Prerequisites
 
-- [Power Platform environment with Code Apps enabled](../overview.md#enable-code-apps-on-a-power-platform-environment)
+- [Power Platform environment with code apps enabled](../overview.md#enable-code-apps-on-a-power-platform-environment)
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Node.js](https://nodejs.org/) (LTS version)
 - [Power Platform Tools for VS Code](/power-platform/developer/cli/introduction)
@@ -108,7 +108,7 @@ This guide covers configuring a TypeScript app using the Power Platform SDK
 
 1. Press <kbd>Ctrl + C</kbd> to stop the local server when you have checked it runs ok.
 
-## Initialize your Code App
+## Initialize your code app
 
 1. Authenticate the Power Platform CLI against your Power Platform tenant:
 
@@ -187,7 +187,7 @@ This guide covers configuring a TypeScript app using the Power Platform SDK
    ```
 
 1. **Save** the file
-1. You can now test the Code App by using:
+1. You can now test the code app by using:
 
     ```
     npm run dev
@@ -204,4 +204,4 @@ This guide covers configuring a TypeScript app using the Power Platform SDK
 
 1. You should see the app open similar to:
 
-   :::image type="content" source="media/sql-vite-running-powerapps.png" alt-text="Vite React app running inside Power Apps Code Apps host":::
+   :::image type="content" source="media/sql-vite-running-powerapps.png" alt-text="Vite React app running inside Power Apps code apps host":::
