@@ -11,7 +11,7 @@ contributors:
 ---
 # How to: Create a code app from scratch
 
-This guide walks through how to set up an blank app from vite and turn it into a Power Apps code app. 
+This guide walks through how to set up a blank app from [Vite](https://vite.dev/) and turn it into a Power Apps code app. 
 
 This guide covers configuring a TypeScript app using the Power Platform SDK
 
@@ -19,7 +19,7 @@ This guide covers configuring a TypeScript app using the Power Platform SDK
 
 - [Power Platform environment with code apps enabled](../overview.md#enable-code-apps-on-a-power-platform-environment)
 - [Visual Studio Code](https://code.visualstudio.com/)
-- [Node.js](https://nodejs.org/) (LTS version)
+- [Node.js](https://nodejs.org/) Long term support (LTS) version)
 - [Power Platform Tools for VS Code](/power-platform/developer/cli/introduction)
 
 ## Initialize your Vite App
@@ -34,13 +34,13 @@ This guide covers configuring a TypeScript app using the Power Platform SDK
    npm install
    ```
 
-1. If you are asked, agree to install `create-vite`
+1. If asked, agree to install `create-vite`
 1. Accept the default package name `appfromscratch` by pressing **Enter**.
-1. If you are asked to select a framework, select **React**.
-1. If you are asked to select a variant, select **TypeScript**.
-1. At this time, the Power SDK requires the port to be 3000 in the default configuration. 
+1. If asked to select a framework, select **React**.
+1. If asked to select a variant, select **TypeScript**.
+1. At this time, the Power SDK requires the port to be 3000 in the default configuration.
 
-   Install the node type defintions using:
+   Install the node type definition using:
 
    ```powershell
    npm i --save-dev @types/node
@@ -70,16 +70,16 @@ This guide covers configuring a TypeScript app using the Power Platform SDK
    ```
 
 1. **Save** the file.
-1. Enter the following to test your vite app:
+1. Enter the following to test your Vite app:
 
    ```powershell
    npm run dev
    ```
 
    > [!NOTE]
-   > If you are developing on macOS, you may need to update package.json to not reference 'start vite'. For instance you'd change the dev entry from:
+   > If you're developing on macOS, you might need to update package.json to not reference `start vite`. For instance you'd change the dev entry from `start vite && start pac code run`:
    >
-   >```powershell
+   >```json
    >"scripts": {    
    >    "dev": "start vite && start pac code run",
    >    "build": "tsc -b && vite build",
@@ -88,9 +88,9 @@ This guide covers configuring a TypeScript app using the Power Platform SDK
    > }
    >```
    >
-   > to
+   > to `vite && pac code run`
    >
-   >```powershell
+   >```json
    >  "scripts": {    
    >    "dev": "vite && pac code run",
    >    "build": "tsc -b && vite build",
@@ -99,14 +99,14 @@ This guide covers configuring a TypeScript app using the Power Platform SDK
    >  }
    >```
 
-1. The template project will start and run locally. Browse to the http://localhost:3000 address given.
+1. The template project starts and runs locally. Browse to the `http://localhost:3000` address given.
 
    :::image type="content" source="media/sql-localhost.png" alt-text="Vite + React TypeScript starter page running on port 3000":::
 
    > [!IMPORTANT]
-   > If you do not see the port 3000, then revisit the steps above.
+   > If you don't see port 3000, then revisit the previous steps.
 
-1. Press <kbd>Ctrl + C</kbd> to stop the local server when you have checked it runs ok.
+1. Press <kbd>Ctrl + C</kbd> to stop the local server.
 
 ## Initialize your code app
 
@@ -116,10 +116,10 @@ This guide covers configuring a TypeScript app using the Power Platform SDK
    pac auth create
    ```
 
-   Login as your Power Platform account when prompted. 
+   Sign-in using your Power Platform account when prompted. 
 
    > [!NOTE]
-   > You can also use the Power Platform Tools VS Code Extension to do this.
+   > You can also use the [Power Platform Tools VS Code Extension](/power-platform/developer/howto/install-vs-code-extension) to do authenticate.
 
 1. **Select** your environment using:
 
@@ -127,7 +127,7 @@ This guide covers configuring a TypeScript app using the Power Platform SDK
    pac env select -env <URL of your environment>
    ```
 
-   You can also use the Power Platform Tools VS Code Extension to select the Environment
+   You can also use the Power Platform Tools VS Code Extension to select the environment
 
 1. **Initialize** your code app using:
 
@@ -135,16 +135,13 @@ This guide covers configuring a TypeScript app using the Power Platform SDK
    pac code init --displayName "App From Scratch"
    ```
 
-   Notice that there is now a `power.config.json` file in your project.
+   Notice that there's now a `power.config.json` file in your project.
 
 1. **Install** the Power SDK using:
 
    ```powershell
-   npm install --save-dev "@pa-client/power-code-sdk@https://github.com/microsoft/PowerAppsCodeApps/releases/download/v0.0.4/7-31-pa-client-power-code-sdk-0.0.1.tgz"
+   npm install --save-dev "@microsoft/power-apps"
    ```
-
-   > [!NOTE]
-   > This SDK is currently not yet available on `npmjs.com` and must be installed from the GitHub release.
 
 1. **Open** the `package.json`, and update the existing line:
 
@@ -152,33 +149,33 @@ This guide covers configuring a TypeScript app using the Power Platform SDK
    "dev": "vite"
    ```
 
-   to be:
+   Change it to:
 
    ```json
    "dev": "start pac code run && vite",
    ```
 
-   Save the updated `pacakage.json`.
+   Save the updated `package.json`.
 
 1. **Add a new file** under the `src` folder named `PowerProvider.tsx` and grab the code from [github.com/microsoft/PowerAppsCodeApps/docs/assets/PowerProvider.tsx](https://github.com/microsoft/PowerAppsCodeApps/blob/main/docs/assets/PowerProvider.tsx)
 1. **Save** the file.
 1. **Open** `main.tsx` and add the following import under the existing imports:
 
-   ```
+   ```typescript
    import PowerProvider from './PowerProvider.tsx'
    ```
 
 1. **Update** `main.tsx`
 
-   ```
+   ```typescript
    <StrictMode>
      <App />
    </StrictMode>,
    ```
 
-   to be
+   Change it to:
 
-   ```
+   ```typescript
    <StrictMode>
      <PowerProvider>
        <App />
@@ -189,11 +186,11 @@ This guide covers configuring a TypeScript app using the Power Platform SDK
 1. **Save** the file
 1. You can now test the code app by using:
 
-    ```
+    ```powershell
     npm run dev
     ```
 
-    This will run the vite server, but also start the Power SDK server:
+    This runs the Vite server, but also starts the Power SDK server:
 
    :::image type="content" source="media/sql-testapp.png" alt-text="Power SDK server page showing test app URL and status":::
 
@@ -205,3 +202,8 @@ This guide covers configuring a TypeScript app using the Power Platform SDK
 1. You should see the app open similar to:
 
    :::image type="content" source="media/sql-vite-running-powerapps.png" alt-text="Vite React app running inside Power Apps code apps host":::
+
+### Related articles
+
+[How to: Connect your code app to data](connect-to-data.md)  
+[Power Apps CLI](/power-platform/developer/cli/introduction)
