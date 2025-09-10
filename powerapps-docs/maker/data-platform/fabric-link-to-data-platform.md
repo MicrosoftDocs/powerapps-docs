@@ -19,7 +19,7 @@ You can use an existing Dataverse environment or create a new developer environm
 
 ## Prerequisites
 
-- You must have the Systems Administrator security role in the Power Platform environment to enable **Link to Fabric** or **Synapse Link**. 
+- You must have the System Administrator security role in the Power Platform environment to enable **Link to Fabric** or **Synapse Link**. 
 - You must be an administrator of the Power BI workspace. 
 - If you want the system to create a Power BI workspace, you need to have Power BI Capacity Administrator access to a capacity within the same region as the Dataverse environment.
 - A Power BI premium license or Fabric capacity within the same Azure geographical region as your Dataverse environment is required. If you don’t have Power BI premium license or Fabric capacity within the same geographical region, you can buy a capacity or sign up for a free Fabric trial capacity. More information: [Fabric (preview) trial](/fabric/get-started/fabric-trial)
