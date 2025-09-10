@@ -5,7 +5,7 @@ ms.author: alaug
 author: alaug
 ms.date: 09/10/2025
 ms.reviewer: jdaly
-ms.topic: quickstart
+ms.topic: article
 contributors:
  - JimDaly
 ---
@@ -14,12 +14,12 @@ contributors:
 > [!NOTE]
 > [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
-In this quickstart, you will build a code app, run it locally, and then publish it. You will be guided to download a sample code app, use PAC CLI to target a Power Platform environment to publish the app, you'll proceed with publishing the app and, last, you'll run the app hosted in Power Platform.  
+In this quickstart, build a code app, run it locally, and then publish it. These instructions guide you to download a sample code app, use PAC CLI to target a Power Platform environment to publish the app. Then you publish the app before running the app hosted in Power Platform.
 
 ## Prerequisites
 
 > [!NOTE]
-> Please refer to the general code app prerequisites: [Prerequisites](overview.md#prerequisites)
+> Refer to the general code app prerequisites: [Prerequisites](overview.md#prerequisites)
 
 Clone the [PowerAppsCodeApps repository](https://github.com/microsoft/PowerAppsCodeApps)
 
@@ -40,7 +40,10 @@ cd samples\HelloWorld
 code .
 ```
 
-The base of this app project was created using Vite and it has two notable additions: 1) package.json has a reference to the Power Apps SDK which helps an app connect to Power Platform connectors and 2) PowerProvider.tsx which contains an initialize() function which the app uses to communicate to the Power Apps host that the app is ready to run. 
+This app project was created using [Vite](https://vite.dev/) and it has two notable additions:
+
+- `package.json` has a reference to the Power Apps SDK that helps an app connect to Power Platform connectors.
+- `PowerProvider.tsx` which contains an `initialize()` function that the app uses to communicate to the Power Apps host that the app is ready to run.
 
 ## Authenticate PAC CLI and point to your development environment
 
@@ -50,7 +53,7 @@ Visual Studio Code, open a new terminal window and use the [pac auth create](/po
 pac auth create --environment {environment id}
 ```
 
-All Power Platform apps, flows and agents publish to an environment, including code apps. The PAC CLI's auth command will prompt you to authenticate with your MS Entra identity and ensure the code app you add connections to and publish to Power Platform go in the specififed environment. 
+All Power Platform apps, flows, and agents publish to an environment. The PAC CLI's auth command prompts you to authenticate with your Microsoft Entra identity and ensure the code app you add connections to and publish to Power Platform go in the specified environment.
 
 ## Install dependencies
 
@@ -58,7 +61,7 @@ In the terminal window, run these commands:
 
 ```powershell
 npm install
-pac code init
+pac code init --displayName 'Hello World'
 ```
 
 - [npm install](https://docs.npmjs.com/cli/v11/commands/npm-install) Installs the dependent libraries found in the `package.json` file.
@@ -72,17 +75,8 @@ In the terminal window, run these commands:
 npm run dev | pac code run
 ```
 
-- [npm run dev](https://docs.npmjs.com/cli/v9/commands/npm-run-script) Runs the scripts configured in the `package.json` file with the key value of `dev`. In this case, the script are `"concurrently \"vite\" \"pac code run\""`. <!-- QUESTION: It looks like pac code run is invoked twice. Is this intentional? -->
+- [npm run dev](https://docs.npmjs.com/cli/v9/commands/npm-run-script) Runs the scripts configured in the `package.json` file with the key value of `dev`. In this case, the script is `"concurrently \"vite\" \"pac code run\""`. 
 - [pac code run](/power-platform/developer/cli/reference/code#pac-code-run) Runs a local server for connections loading locally in the app.
-
-
-<!-- 
-TODO:
-There is an opportunity to describe what people will see here.
-I think a lot of people don't actually run these quick starts, they just skim the content to get a sense for the experience provided.
-You might add a screenshot showing what people should see here. 
--->
-
 
 
 ## Build and deploy to Power Apps
@@ -93,15 +87,15 @@ In the terminal window, run these commands:
 npm run build | pac code push
 ```
 
-- [npm run build](https://docs.npmjs.com/cli/v9/commands/npm-run-script) Runs the scripts configured in the `package.json` file with the key value of `build`. In this case, the script are `"tsc -b && vite build"`. 
-- [pac code push](/power-platform/developer/cli/reference/code#pac-code-push) Publishes a new version of a Code app..
+- [npm run build](https://docs.npmjs.com/cli/v9/commands/npm-run-script) Runs the scripts configured in the `package.json` file with the key value of `build`. In this case, the script is `"tsc -b && vite build"`.
+- [pac code push](/power-platform/developer/cli/reference/code#pac-code-push) Publishes a new version of a Code app.
 
 
 If successful, this command should return a Power Apps URL to run the app. 
 
 Optionally, you can open  [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to see the app. You can play, share, or see details from there. 
 
-Congratulations! You have successfully pushed your first code app!
+Congratulations! You successfully pushed your first code app!
 
 ## Troubleshooting
 
