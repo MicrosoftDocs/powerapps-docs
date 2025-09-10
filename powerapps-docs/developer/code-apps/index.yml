@@ -1,11 +1,11 @@
 ### YamlMime:Landing
 
-title: Power Apps Code Apps documentation
+title: Power Apps Code Apps (Preview) documentation
 summary: Power Apps code apps let developers bring Power Apps capabilities into custom web apps built in a code‑first IDE. You can develop locally and run the same app in Power Platform. Build with popular frameworks (React, Vue, etc.) while keeping full control over your UI and logic.
 
 metadata:
-  title: Power Apps code apps documentation
-  description: Provides access to highlighted areas within the Power Apps code apps documentation
+  title: Power Apps code apps (Preview) documentation
+  description: Provides access to highlighted areas within the Power Apps code apps (Preview) documentation
   services: service
   ms.subservice: code-apps
   ms.topic: landing-page

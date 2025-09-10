@@ -1,5 +1,5 @@
 ---
-title: "Power Apps code apps overview"
+title: "Power Apps code apps overview (Preview)"
 description: "Use Power Apps code apps"
 ms.author: alaug
 author: alaug
@@ -9,7 +9,7 @@ ms.topic: overview
 contributors:
  - JimDaly
 ---
-# Power Apps code apps overview
+# Power Apps code apps overview (Preview)
 
 > [!NOTE]
 > [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]

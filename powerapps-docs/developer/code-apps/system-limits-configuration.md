@@ -1,18 +1,21 @@
 ---
-title: "Power Apps code apps system limits and configuration"
+title: "Power Apps code apps system limits and configuration (Preview)"
 description: "Power Apps code apps system limits and configuration"
 ms.author: alaug
 author: alaug
 ms.date: 09/10/2025
 ms.reviewer: jdaly
-ms.topic: configuration
+ms.topic: article
 contributors:
  - JimDaly
 ---
 
-# System configuration
+# System configuration (Preview)
 
 This article contains information on the configuration for Power Apps code apps.
+
+> [!NOTE]
+> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
 ## Hosted app code
 
@@ -29,11 +32,5 @@ You can hide the header that appears when playing an app adding `hideNavBar=true
 **After**
 
 `https://apps.powerapps.com/play/e/{environment id}/a/{app id}?hideNavBar=true`
-
-<pre>
-https://apps.powerapps.com/play/e/{environment id}/a/{app id}
-
-https://apps.powerapps.com/play/e/{environment id}/a/{app id}?<b>hideNavBar=true</b>
-</pre>
 
 
