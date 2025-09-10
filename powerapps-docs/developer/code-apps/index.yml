@@ -36,6 +36,8 @@ landingContent:
             url: how-to/create-an-app-from-scratch.md
           - text: "Connect to data"
             url: how-to/connect-to-data.md
+          - text: "Connect to Dataverse"
+            url: how-to/connect-to-dataverse.md
           - text: "Connect to Azure SQL"
             url: how-to/connect-to-azure-sql.md
           - text: "Create a Simple Asset Management API with Azure Functions"

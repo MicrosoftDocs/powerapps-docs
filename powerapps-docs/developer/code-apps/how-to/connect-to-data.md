@@ -13,17 +13,18 @@ contributors:
 
 Code apps enable connecting to Power Platform connectors.
 
+Use the following steps:
+
+1. [Create and set up connections in Power Apps](#create-and-set-up-connections-in-power-apps)
+1. [Add a connection to a code app](#add-a-connection-to-a-code-app)
+1. [Update the app to call connections](#update-the-app-to-call-connections)
+
 > [!NOTE]
 > Use these steps after you initialize the app with [pac code init](/power-platform/developer/cli/reference/code#pac-code-init). See the steps leading up to the [Initialize your code app](create-an-app-from-scratch.md#initialize-your-code-app) section in [How to: Create a code app from scratch](create-an-app-from-scratch.md).
 
 > [!IMPORTANT]
 > The following connectors are officially supported: SQL, SharePoint, Office 365 Users, Office 365 Groups, Azure Data Explorer, OneDrive for work or school, Power Apps for Makers, Microsoft Teams, MSN Weather, and Microsoft Translator V2. [Dataverse create, read, update, and delete operations](./connect-to-dataverse.md) are officially supported. Other connectors are expected to work but are untested.
 
-Use the following steps:
-
-1. [Create and set up connections in Power Apps](#create-and-set-up-connections-in-power-apps)
-1. [Add a connection to a code app](#add-a-connection-to-a-code-app)
-1. [Update the app to call connections](#update-the-app-to-call-connections)
 
 ## Create and set up connections in Power Apps
 
@@ -32,41 +33,53 @@ Start by creating and configuring connections at [Power Apps](https://make.power
 > [!IMPORTANT]
 > For the initial release, you can only configure code apps to use existing connections in [Power Apps](https://make.powerapps.com). You can't create new connections through PAC CLI commands. Support for creating new connections will be added in a future release.
 
-1. Launch the Power Apps Connections page
+### Launch the Power Apps Connections page
 
    Go to [Power Apps](https://make.powerapps.com) and navigate to the **Connections** page from the left-hand navigation.
 
    :::image type="content" source="media/powerapps_create_connection.png" alt-text="Power Apps Connections page showing New connection button":::
 
-1. Create an Office 365 Users connection
 
-   Select **+ New connection** and select **Office 365 Users**. Select **Create**.
+#### Example Create an Office 365 Users connection
 
-   > [!NOTE]
-   > If you already have an Office 365 Users connection, you can use that instead of creating a new one.
+Select **+ New connection** and select **Office 365 Users**. Select **Create**.
 
-   :::image type="content" source="media/powerapps_create_office_connection.png" alt-text="Create Office 365 Users connection in Power Apps":::
+> [!NOTE]
+> If you already have an Office 365 Users connection, you can use that instead of creating a new one.
 
-1. (Optional) Create a SQL connection (or a connection for another tabular data source)
+:::image type="content" source="media/powerapps_create_office_connection.png" alt-text="Create Office 365 Users connection in Power Apps":::
 
-   > [!TIP]
-   > For a step-by-step guide to connecting your code app to Azure SQL, see [How to: Connect your code app to Azure SQL](connect-to-azure-sql.md).
+#### (Optional) Create a SQL connection (or a connection for another tabular data source)
 
-1. Get connection metadata for all created connections
+> [!TIP]
+> For a step-by-step guide to connecting your code app to Azure SQL, see [How to: Connect your code app to Azure SQL](connect-to-azure-sql.md).
 
-   You can use the Power Apps CLI to list your available connections and retrieve their IDs using [pac connection list](/power-platform/developer/cli/reference/connection#pac-connection-list)
+### Get connection metadata for all created connections
 
-   This command displays a table of all your connections, including the **Connection ID** and **API Name** (which is used as the appId when adding a data source).
+There are two ways to do this:
 
-   :::image type="content" source="media/pac_cli_connection_list.png" alt-text="PAC CLI list output showing Connection ID and API Name":::
+- Use the PAC CLI [pac connection list](/power-platform/developer/cli/reference/connection#pac-connection-list) command.
+- Get data from the URL in Power Apps.
 
-   You can also retrieve this information using Power Apps:
+#### Use PAC CLI
 
-   :::image type="content" source="media/powerapps_select_connection.png" alt-text="Select a connection in Power Apps to view its details":::
+You can use the Power Apps CLI to list your available connections and retrieve their IDs using [pac connection list](/power-platform/developer/cli/reference/connection#pac-connection-list) command.
 
-   :::image type="content" source="media/powerapps_connection_apiName_connectionId.png" alt-text="Connection details showing API name and Connection ID values":::
+`pac connection list` displays a table of all your connections, including the **Connection ID** and **API Name**, which is used as the `appId` when adding a data source.
 
-   Copy the API name and the connection ID from PAC CLI the URL for each connection.
+:::image type="content" source="media/pac_cli_connection_list.png" alt-text="PAC CLI list output showing Connection ID and API Name":::
+
+#### Use Power Apps
+
+You can also retrieve this information using Power Apps by viewing the URL when you examine the details of a connection.
+
+:::image type="content" source="media/powerapps_select_connection.png" alt-text="Select a connection in Power Apps to view its details":::
+
+Notice how the API name and connection ID are appended to the URL:
+
+:::image type="content" source="media/powerapps_connection_apiName_connectionId.png" alt-text="Connection details showing API name and Connection ID values":::
+
+Copy the API name and the connection ID from PAC CLI the URL for each connection.
 
 ## Add a connection to a code app
 
@@ -226,14 +239,14 @@ If you don't already have the table and dataset name, you can get them by runnin
 1. Bind the connection to a gallery control.
 1. Publish and run the app.
 1. Open your browser's **Developer Tools**, go to the **Network** tab, and inspect requests made when the app loads. Check the "invoke" request, and go to its response.
-1. Find an APIM request with the connection ID, dataset name, and table ID, and copy those values.
+1. Find an Azure API Management (APIM) request with the connection ID, dataset name, and table ID, and copy those values.
 
-Example data request URL through APIM. The bolded sections are the **connection ID**, **dataset name, and **table ID**.
+Example data request URL through APIM. The bolded sections are the **connection ID**, **dataset name**, and **table ID**.
 
 https[]()://00aa00aa-bb11-cc22-dd33-44ee44ee44ee.01.common.azure-apihub.net/apim/sharepointonline/**11bb11bbcc22dd33ee4455ff55ff55ff**/datasets/**https%253A%252F%252Ftstgeo.sharepoint.com%252Fsites%252FTEST_TST**/tables/**22cc22cc-dd33-ee44-ff55-66aa66aa66aa**/items
 
 | property| example value|
 |---|---|
-| connection ID | 11bb11bbcc22dd33ee4455ff55ff55ff|
-| dataset name  |https%253A%252F%252Ftstgeo.sharepoint.com%252Fsites%252FTEST_TST |
-| table ID      | 22cc22cc-dd33-ee44-ff55-66aa66aa66aa|
+| Connection ID | 11bb11bbcc22dd33ee4455ff55ff55ff|
+| Dataset name  |https%253A%252F%252Ftstgeo.sharepoint.com%252Fsites%252FTEST_TST |
+| Table ID      | 22cc22cc-dd33-ee44-ff55-66aa66aa66aa|
