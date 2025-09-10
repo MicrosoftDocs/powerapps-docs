@@ -27,6 +27,15 @@ landingContent:
             url: overview.md
           - text: "Quickstart: Create your first code app"
             url: quickstart.md
+    # Card 
+  - title: Architecture
+    linkLists:
+       - linkListType: architecture
+         links:
+          - text: Code apps Architecture
+            url: architecture.md
+          - text: System limits and configuration
+            url: system-limits-configuration.md
   # Card 
   - title: How To
     linkLists:
