@@ -106,7 +106,7 @@ This guide covers configuring a TypeScript app using the Power Platform SDK
    > [!IMPORTANT]
    > If you do not see the port 3000, then revisit the steps above.
 
-1. Press `Ctrl + C` to stop the local server when you have checked it runs ok.
+1. Press <kbd>Ctrl + C</kbd> to stop the local server when you have checked it runs ok.
 
 ## Initialize your Code App
 

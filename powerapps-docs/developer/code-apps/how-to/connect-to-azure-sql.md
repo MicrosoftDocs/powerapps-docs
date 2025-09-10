@@ -11,7 +11,7 @@ contributors:
 ---
 # How to: Connect your code app to Azure SQL
 
-This guide walks through how to set up an Azure SQL Database and connect it to a Power Apps Code App using the the Power SDK. 
+This guide walks through how to set up an Azure SQL Database and connect it to a Power Apps Code App using the Power SDK. 
 
 This guide covers:
 
@@ -22,18 +22,19 @@ This guide covers:
 ## Prerequisites
 
 - An Azure subscription
-- Access to the [Azure Portal](https://portal.azure.com)
+- Access to the [Azure portal](https://portal.azure.com)
 - [Power Platform environment with Code Apps enabled](../overview.md#enable-code-apps-on-a-power-platform-environment)
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Node.js](https://nodejs.org/) (LTS version)
 - [Power Platform Tools for VS Code](/power-platform/developer/cli/introduction)
+- [SQL Server (mssql) VS Code extension](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
 
 ## Set Up Azure SQL Server and Database
 
 1. Navigate to [Select SQL deployment option - Microsoft Azure](https://portal.azure.com/#create/Microsoft.AzureSQL)
 1. Select **SQL database** -> Resource type: **Single database** -> **Create**
 1. Fill in:
-   - Resource group: Select **Create new** and enter a Resource group name, e.g. `rg-codeapps-dev`
+   - Resource group: Select **Create new** and enter a Resource group name, for example, `rg-codeapps-dev`
    - Database name: `sqldb-codeapps-dev`
    - Server: Select **Create new** and Fill in:
      - Server name: `sql-codeapps-dev`
@@ -48,35 +49,29 @@ This guide covers:
    - Allow Azure services and resources to access this server: **Yes**
    - Add current client IP address: **Yes**
 1. Select **Review + create** -> **Create**
-1. Wait until the Deployment has completed, and then select **Go to resource**
+1. Wait until the Deployment completes, and then select **Go to resource**
 
 ### Deploy sample data
 
-1. Inside Visual Studio Code, select **Extensions** (`Ctrl + Shift + X`)
+1. Inside Visual Studio Code, select **Extensions** (<kbd>Ctrl + Shift + X</kbd>)
+1. Locate the **SQL Server (mssql)** extension on the Activity Bar and open it, or use <kbd>Ctrl + Alt + D</kbd>
+1. Under **Connections**, select **+ Add Connection**  
 
-1. Search for **SQL Server (mssql)** and install if you do not already have them installed.
+   :::image type="content" source="media/sql-addconnection.png" alt-text="Add Connection in VS Code SQL Server extension":::
 
-1. Locate the SQL Server extension on the Activity Bar and open it, or use `Ctrl + Alt + D`
+1. In the **Connect to Database** dialog, select **Browse Azure**, select your subscription, resource group (for example: `rg-codeapps-dev`), Server (for example: `sql-codeapps-dev`), and then database (for example `sqldb-codeapps-dev` )
+1. Under **Authentication type**, select **Microsoft Entra ID - Universal with MFA support**
+1. Ensure you have your Azure portal open in your browser, and then select **Sign In**. You should be prompted to log in, and then see:
 
-1. Under Connections, select **+ Add Connection**  
-
-  :::image type="content" source="media/sql-addconnection.png" alt-text="Add Connection in VS Code SQL Server extension":::
-
-1. In the Connect to Database dialog, Select **Browse Azure**, select your Subscription, Resource group (e.g. `rg-codeapps-dev`), Server (e.g. `sql-codeapps-dev`), and then database (e.g. `sqldb-codeapps-dev` ) 
-
-1. Under Authentication type, select **Microsoft Entra ID - Universal with MFA support**
-
-1. Ensure you have your Azure portal open in your browser, and then select **Sign In**. You should be prompted to login, and then see:
-
-  :::image type="content" source="media/sql-signin.png" alt-text="Microsoft Entra sign-in prompt for SQL connection":::
+   :::image type="content" source="media/sql-signin.png" alt-text="Microsoft Entra sign-in prompt for SQL connection":::
 
 1. Select Connect
 
-  :::image type="content" source="media/sql-connect.png" alt-text="Connected to Azure SQL database in VS Code":::
+   :::image type="content" source="media/sql-connect.png" alt-text="Connected to Azure SQL database in VS Code":::
 
 1. In the SQL SERVER panel, right click on your database and select **New Query**
 
-  :::image type="content" source="media/sql-newquery.png" alt-text="New Query command for database in VS Code SQL extension":::
+   :::image type="content" source="media/sql-newquery.png" alt-text="New Query command for database in VS Code SQL extension":::
 
 1. In the new query window, paste the following:
 
@@ -235,7 +230,7 @@ This guide covers:
    PRINT 'Projects-only database schema created successfully with sample data!';
    ```
    
-1. Select the green play icon (`Ctrl-Shift-E`) to **Execute the query**.
+1. Select the green play icon (<kbd>Ctrl-Shift-E</kbd>) to **Execute the query**.
 
 1. You should see no errors in the **QUERY RESULTS** output.
 
@@ -252,13 +247,13 @@ This guide covers:
    npm install
    ```
 
-1. If you are asked, agree to install `create-vite`
+1. If asked, agree to install `create-vite`
 1. Accept the default package name `projectmanagementapp` by pressing **Enter**.
-1. If you are asked to select a framework, select **React**.
-1. If you are asked to select a variant, select **TypeScript**.
+1. If asked to select a framework, select **React**.
+1. If asked to select a variant, select **TypeScript**.
 1. At this time, the Power SDK requires the port to be 3000 in the default configuration.
 
-   Install the node type defintions using:
+   Install the node type definitions using:
 
    ```powershell
    npm i --save-dev @types/node
@@ -289,22 +284,20 @@ This guide covers:
 
 1. **Save** the file.
 1. Open the `tsconfig.app.json`, and set the value of `verbatimModuleSyntax` to be `false` . This is currently required to work with the Power SDK Generated code. (See [[Bug\] Power SDK generated code causes error with verbatimModuleSyntax enabled · Issue #14 ](https://github.com/microsoft/PowerAppsCodeApps/issues/14))
-
 1. Enter the following to test your vite app:
 
    ```powershell
    npm run dev
    ```
 
-1. The template project will start and run locally. Browse to the http://localhost:3000 address given.
+1. The template project will start and run locally. Browse to the `http://localhost:3000` address given.
 
-  :::image type="content" source="media/sql-localhost.png" alt-text="Vite React app running on localhost port 3000":::
-
+   :::image type="content" source="media/sql-localhost.png" alt-text="Vite React app running on localhost port 3000":::
 
    > [!IMPORTANT]
-   > If you do not see the port 3000, then revisit the steps above.
+   > If you do not see the port 3000, revisit the steps above.
 
-1. Press `Ctrl + C` to stop the local server when you have checked it runs ok.
+1. Press <kbd>Ctrl + C</kbd> to stop the local server when you have checked it runs ok.
 
 ### Initialize your Code App
 
@@ -317,7 +310,7 @@ This guide covers:
    Login as your Power Platform account when prompted.
 
    > [!NOTE]
-   > You can also use the Power Platform Tools VS Code Extension to do this.
+   > You can also use the [Power Platform Tools VS Code Extension](/power-platform/developer/howto/install-vs-code-extension) to do this.
 
 1. **Select** your environment using:
 
@@ -325,7 +318,7 @@ This guide covers:
    pac env select -env <URL of your environment>
    ```
 
-   You can also use the Power Platform Tools VS Code Extension to select the Environment
+   You can also use the Power Platform Tools VS Code Extension to select the environment
 
 1. **Initialize** your code app using:
 
@@ -338,11 +331,8 @@ This guide covers:
 1. **Install** the Power SDK using:
 
    ```powershell
-   npm install --save-dev "@pa-client/power-code-sdk@https://github.com/microsoft/PowerAppsCodeApps/releases/download/v0.0.4/7-31-pa-client-power-code-sdk-0.0.1.tgz"
+   npm install --save-dev @microsoft/power-apps
    ```
-
-   > [!NOTE]
-   > This SDK is currently not yet available on `npmjs.com` and must be installed from the GitHub release.
 
 1. **Open** the `package.json`, and update the existing line:
 
@@ -350,7 +340,7 @@ This guide covers:
    "dev": "vite"
    ```
 
-   to be:
+   Change it to:
 
    ```json
    "dev": "start pac code run && vite",
@@ -374,7 +364,7 @@ This guide covers:
    </StrictMode>,
    ```
 
-   to be
+   Change it to:
 
    ```
    <StrictMode>
@@ -390,12 +380,11 @@ This guide covers:
     npm run dev
     ```
 
-  This will run the vite server, but also start the Power SDK server:
+   This will run the vite server, but also start the Power SDK server:
 
    :::image type="content" source="media/sql-testapp.png" alt-text="Power SDK server console with app URL and status":::
 
 1. Open the URL provided by the Power SDK Server.
-
 
    > [!IMPORTANT]
    > Open the url in the same browser profile as your power platform tenant.
@@ -406,12 +395,12 @@ This guide covers:
 
 ### Create a SQL Server Connection in Power Platform
 
-1. Open [PowerApps](https://make.powerapps.com)
+1. Open [Power Apps](https://make.powerapps.com)
 1. Select your **Environment**
-1. Navigate to **Connections** (It might be in the **... More menu**)
+1. Navigate to **Connections**. It might be in the **... More menu**.
 1. Select **+ New Connection**
 
-  :::image type="content" source="media/sql-createconnection.png" alt-text="+ New Connection in Power Apps maker portal":::
+   :::image type="content" source="media/sql-createconnection.png" alt-text="+ New Connection in Power Apps maker portal":::
 
 1. Select **SQL Server**
 1. Select Authentication type: **Microsoft Entra ID Integrated**
@@ -425,20 +414,20 @@ This guide covers:
    pac connection list
    ```
 
-  You should see a list similar to:
+   You should see a list similar to:
 
-  :::image type="content" source="media/sql-connectionlist.png" alt-text="Power Platform connections list showing SQL connection":::
+   :::image type="content" source="media/sql-connectionlist.png" alt-text="Power Platform connections list showing SQL connection":::
 
-1. To add the Projects table to the project, copy the the connection Id (the first column) and use the following command:
+1. To add the projects table to the project, copy the the connection Id (the first column) and use the following command:
 
    ```powershell
-   pac code add-data-source -a "shared_sql" -c "[CONNECTION ID]"  -d "[SQL SERVER NAME].database.windows.net,[DATASBASE NAME]" -sp "dbo.GetAllProjects"
+   pac code add-data-source -a "shared_sql" -c "[CONNECTION ID]"  -d "[SQL SERVER NAME].database.windows.net,[DATA BASE NAME]" -sp "dbo.GetAllProjects"
    ```
 
-   e.g.
+   For example:
 
    ```powershell
-   pac code add-data-source -a "shared_sql" -c "f7bb6f0af75545c8afa6939a54902878"  -d "sql-codeapps-dev.database.windows.net,sqldb-codeapps-dev" -sp "dbo.GetAllProjects"
+   pac code add-data-source -a "shared_sql" -c "aaaa0000bb11222233cc444444dddddd"  -d "sql-codeapps-dev.database.windows.net,sqldb-codeapps-dev" -sp "dbo.GetAllProjects"
    ```
 
 1. Open the `Services` and `Models` folder, and observer the newly generated code. 
@@ -849,19 +838,19 @@ This guide covers:
 
   In the command window that opens up, open the app link provided:
 
-  :::image type="content" source="media/sql-testapp.png" alt-text="Power SDK server console with app URL and status":::
+   :::image type="content" source="media/sql-testapp.png" alt-text="Power SDK server console with app URL and status":::
 
 1. When the app opens, you should see a consent dialog, select **Allow**
 
-  :::image type="content" source="media/sql-consent.png" alt-text="Consent dialog requesting permissions for the app":::
+   :::image type="content" source="media/sql-consent.png" alt-text="Consent dialog requesting permissions for the app":::
 
 1. You should see data grid of projects:
 
-  :::image type="content" source="media/sql-datagrid.png" alt-text="Projects data grid with sortable columns and badges":::
+   :::image type="content" source="media/sql-datagrid.png" alt-text="Projects data grid with sortable columns and badges":::
 
 ### Publishing the App to Power Apps
 
-1. Once your app is ready for publishing and sharing, make sure the Vite server is stopped using `Ctrl + C`, then use the following PowerShell:
+1. Once your app is ready for publishing and sharing, make sure the Vite server is stopped using <kbd>Ctrl + C</kbd>, then use the following PowerShell:
 
    ```
    npm run build
@@ -870,13 +859,19 @@ This guide covers:
 
 1. Open the app using the link provided to test it out!
 
-  :::image type="content" source="media/sql-pushed.png" alt-text="App published to Power Apps with Open app link":::
+   :::image type="content" source="media/sql-pushed.png" alt-text="App published to Power Apps with Open app link":::
 
 ## Troubleshooting
 
 This section covers common issues you might encounter while setting up Power Apps Code Apps with Azure SQL Database.
 
 ### Azure SQL Database Issues
+
+You might experience these issues when using Azure SQL Databases.
+
+- [Cannot Connect to Azure SQL Database](#cannot-connect-to-azure-sql-database)
+- [SQL Query Execution Errors](#sql-query-execution-errors)
+
 
 #### Cannot Connect to Azure SQL Database
 
@@ -926,6 +921,12 @@ This section covers common issues you might encounter while setting up Power App
    - If you get constraint errors, run the drop statements individually first
 
 ### Node.js and npm Issues
+
+You might experience these issues when using Node.js and npm.
+
+- [Port 3000 Already in Use](#port-3000-already-in-use)
+- [Package Installation Failures](#package-installation-failures)
+- [Runtime Connection Errors](#runtime-connection-errors)
 
 #### Port 3000 Already in Use
 
