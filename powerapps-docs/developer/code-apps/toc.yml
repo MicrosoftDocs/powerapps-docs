@@ -19,5 +19,5 @@ items:
       href: how-to/connect-to-dataverse.md
     - name: "Connect to Azure SQL"
       href: how-to/connect-to-azure-sql.md
-    - name: "Create a Simple Asset Management API with Azure Functions"
-      href: how-to/create-simple-asset-management-api-azure-functions.md
+    - name: "Create a Basic Asset Management API with Azure Functions"
+      href: how-to/create-basic-asset-management-api-azure-functions.md

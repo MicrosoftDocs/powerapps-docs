@@ -11,9 +11,7 @@ contributors:
 ---
 # How to: Create a code app from scratch
 
-This guide walks through how to set up a blank app from [Vite](https://vite.dev/) and turn it into a Power Apps code app. 
-
-This guide covers configuring a TypeScript app using the Power Platform SDK
+This article walks through how to set up a blank app from [Vite](https://vite.dev/) and turn it into a Power Apps code app. It covers configuring a TypeScript app using the Power Platform SDK
 
 ## Prerequisites
 
