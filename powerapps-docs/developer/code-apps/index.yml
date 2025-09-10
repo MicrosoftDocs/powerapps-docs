@@ -27,15 +27,6 @@ landingContent:
             url: overview.md
           - text: "Quickstart: Create your first code app"
             url: quickstart.md
-    # Card 
-  - title: Architecture
-    linkLists:
-       - linkListType: architecture
-         links:
-          - text: Code apps Architecture
-            url: architecture.md
-          - text: System limits and configuration
-            url: system-limits-configuration.md
   # Card 
   - title: How To
     linkLists:
@@ -48,4 +39,13 @@ landingContent:
           - text: "Connect to Azure SQL"
             url: how-to/connect-to-azure-sql.md
           - text: "Create a Simple Asset Management API with Azure Functions"
-            url: how-to/create-simple-asset-management-api-azure-functions.md
+            url: how-to/create-simple-asset-management-api-azure-functions.md            
+    # Card 
+  - title: Architecture
+    linkLists:
+       - linkListType: architecture
+         links:
+          - text: Code apps Architecture
+            url: architecture.md
+          - text: System limits and configuration
+            url: system-limits-configuration.md
