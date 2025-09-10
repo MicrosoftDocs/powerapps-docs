@@ -32,27 +32,6 @@ You will be more successful when you understand how these parts collaborate thro
 An HTML or TypeScript/JavaScript app is a prerequisite to use code apps technology. Code apps support Single-Page Applications (SPAs). The Power Platform CLI and Power Apps SDK enable your app to use Power Platform connectors and be hosted in a Power Platform environment.
 
 
-<!-- ```mermaid
----
-config:
-  theme: neutral
-  look: classic
-  layout: dagre
----
-flowchart LR
- subgraph Project["Web app project"]
-        App["TS/JS files"]
-        Config["power.config.json"]
-        SDK["Power Apps SDK"]
-        Models["SDK generated<br>Models &amp; Services"]
-  end
-    CLI["Power Platform CLI"] --> Project & Services["Power Platform Services"]
-    App --> SDK & Models
-    SDK --> Config
-    SDK <--> Models & Connectors["Power Platform Connectors"]
-
-``` -->
-
 :::image type="content" source="media/code-app-architecture-development.png" alt-text="Development architecture":::
 
 
