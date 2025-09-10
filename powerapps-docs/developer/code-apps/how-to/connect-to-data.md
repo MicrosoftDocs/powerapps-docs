@@ -37,7 +37,7 @@ Start by creating and configuring connections at [Power Apps](https://make.power
 
    Go to [Power Apps](https://make.powerapps.com) and navigate to the **Connections** page from the left-hand navigation.
 
-   :::image type="content" source="media/powerapps_create_connection.png" alt-text="Power Apps Connections page showing New connection button":::
+   :::image type="content" source="media/powerapps-create-connection.png" alt-text="Power Apps Connections page showing New connection button":::
 
 
 #### Example Create an Office 365 Users connection
@@ -47,7 +47,7 @@ Select **+ New connection** and select **Office 365 Users**. Select **Create**.
 > [!NOTE]
 > If you already have an Office 365 Users connection, you can use that instead of creating a new one.
 
-:::image type="content" source="media/powerapps_create_office_connection.png" alt-text="Create Office 365 Users connection in Power Apps":::
+:::image type="content" source="media/powerapps-create-office-connection.png" alt-text="Create Office 365 Users connection in Power Apps":::
 
 #### (Optional) Create a SQL connection (or a connection for another tabular data source)
 
@@ -67,17 +67,17 @@ You can use the Power Apps CLI to list your available connections and retrieve t
 
 `pac connection list` displays a table of all your connections, including the **Connection ID** and **API Name**, which is used as the `appId` when adding a data source.
 
-:::image type="content" source="media/pac_cli_connection_list.png" alt-text="PAC CLI list output showing Connection ID and API Name":::
+:::image type="content" source="media/pac-cli-connection-list.png" alt-text="PAC CLI list output showing Connection ID and API Name":::
 
 #### Use Power Apps
 
 You can also retrieve this information using Power Apps by viewing the URL when you examine the details of a connection.
 
-:::image type="content" source="media/powerapps_select_connection.png" alt-text="Select a connection in Power Apps to view its details":::
+:::image type="content" source="media/powerapps-select-connection.png" alt-text="Select a connection in Power Apps to view its details":::
 
 Notice how the API name and connection ID are appended to the URL:
 
-:::image type="content" source="media/powerapps_connection_apiName_connectionId.png" alt-text="Connection details showing API name and Connection ID values":::
+:::image type="content" source="media/powerapps-connection-apiname-connectionid.png" alt-text="Connection details showing API name and Connection ID values":::
 
 Copy the API name and the connection ID from PAC CLI the URL for each connection.
 
@@ -241,12 +241,8 @@ If you don't already have the table and dataset name, you can get them by runnin
 1. Open your browser's **Developer Tools**, go to the **Network** tab, and inspect requests made when the app loads. Check the "invoke" request, and go to its response.
 1. Find an Azure API Management (APIM) request with the connection ID, dataset name, and table ID, and copy those values.
 
-Example data request URL through APIM. The bolded sections are the **connection ID**, **dataset name**, and **table ID**.
+Example data request URL through APIM. Look for the `<Connection ID>`, `<Dataset name>`, and `<Table ID>` values in these places in the URL:
 
-https[]()://00aa00aa-bb11-cc22-dd33-44ee44ee44ee.01.common.azure-apihub.net/apim/sharepointonline/**11bb11bbcc22dd33ee4455ff55ff55ff**/datasets/**https%253A%252F%252Ftstgeo.sharepoint.com%252Fsites%252FTEST_TST**/tables/**22cc22cc-dd33-ee44-ff55-66aa66aa66aa**/items
-
-| property| example value|
-|---|---|
-| Connection ID | 11bb11bbcc22dd33ee4455ff55ff55ff|
-| Dataset name  |https%253A%252F%252Ftstgeo.sharepoint.com%252Fsites%252FTEST_TST |
-| Table ID      | 22cc22cc-dd33-ee44-ff55-66aa66aa66aa|
+```http
+https[]()://{id value}.01.common.azure-apihub.net/apim/sharepointonline/<Connection ID>/datasets/<Dataset name>/tables/<Table ID>/items
+```
