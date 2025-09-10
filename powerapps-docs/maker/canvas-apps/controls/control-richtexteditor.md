@@ -16,24 +16,22 @@ contributors:
   - tahoon-ms
 ---
 # Rich text editor control in Power Apps
-Allows end users to format text inside a WYSIWYG editing area.  Output format is HTML.
+Allows end users to format text inside a WYSIWYG editing area. Output format is HTML.
 
 ## Description
-The **Rich text editor** control provides the app user a WYSIWYG editing area for formatting text.  Control's input and output format is HTML.
+The **Rich text editor** control provides the app user a WYSIWYG editing area for formatting text.
 
-Control allows copied rich text (i.e from web browser or Word) to be pasted into the control.
-
-Control's intended use is to format text and doesn't guarantee to preserve the integrity of the input HTML.  All script, style, object, and other potentially compromising tags will be removed by the editor.  This means that if rich text was created outside of Power Apps, it may not look the same as in the product where it was created.
+Although the input and output format is HTML, the control is not a HTML editor. All script, style, object, and unsupported HTML elements and attributes are removed by the editor.
 
 Currently supported features include:
-- Bold, Italic, Underline
-- Text color, highlight Color
-- Text Size
-- Numbered lists, bullet lists
+- Bold, italic, and underline
+- Text and highlight color
+- Text size
+- Numbered and bulleted lists
 - Hyperlinks
 - Clear formatting
 
-To use the control inside a form, select the **Edit multi-line tex** card, and customize it by inserting the RTE control.
+To use the control inside a form, select the **Edit multi-line text** card, and customize it by inserting the RTE control.
 
 ## Key properties
 **[Default](properties-core.md)** – Input property for the initial text value shown in editor.
@@ -76,19 +74,28 @@ To use the control inside a form, select the **Edit multi-line tex** card, and c
 
 ## Limitations
 
-You can only interact with the rich text editor control in Power Apps Studio when using the preview mode.
+### Appearance isn't guaranteed when working with other products
+When rich text is used across different products, it may not look exactly the same.
 
-Pasting images in the rich text editor has the following limitations:
-- Cross-Origin Resource Sharing (CORS)
-- Authentication
-- Image format support in browser
-- Type of image (inline vs URL)
-- When inserting an image, don't expect it to be automatically stored with the bound data source. A possible solution is to implement additional logic that uploads images from the rich text editor to the data source, processes the response, and then pastes it back into the original field. It's also important to understand that different programs may represent copied images in various ways.
+- Users can paste rich text from web pages, Microsoft Word, and other apps. However, the appearance may differ depending on the capabilities of the device, browser, and external source. 
+- Similarly, if rich text is created outside of canvas apps, it may look slightly different because built-in styles of the other app aren't present.
+- If the canvas app is embedded in another app, the host app may override the styles of the rich text. For example, when a canvas app is used as a [custom page](../../model-driven-apps/model-app-page-overview.md) in a model-driven app, the host app removes list styles. Bulleted lists appear without bullet points in a custom app.
 
-> [!NOTE]
-> Browsers represent image data differently, some browsers will capture the image as raw image data while others may get a reference to a URL which may not be accessible after pasting.
+A different appearance can be desirable if rich text should adapt to the product where it's shown. For example, the primary font could be different in another product. Or the text color should be different when the user enables dark mode. For consistent appearance, compose rich text and display it in canvas apps only.
+
+### Pasted images may not appear consistently
+A pasted image may appear in a browser but not in a mobile app. Or it may appear intermittently or not at all. These are signs that the pasted image is not supported because of:
+
+- Cross-Origin Resource Sharing (CORS). The image host blocks the image from loading on Power Apps.
+- Authentication. The image is not publicly accessible and can only be accessed after logging into the image host.
+- Image format support. Common image formats like jpg and png are supported but less common types may not be supported by the browser or device.
+
+Images in rich text can be represented differently. Some browsers or devices copy the image as raw image data while others may copy the image's URL which may not be accessible for the reasons above.
 
 > [!TIP]
->  Using a screen clipping or screen shotting tool to copy / paste images will provide the best experience.
+>  Use a screen clipping or screenshot tool to copy and paste images for the best experience.
+
+### When editing an app, Alt key doesn't allow interaction with the control
+In [Power Apps Studio](../power-apps-studio.md), the keyboard shortcut of [Alt key for quick interaction](../keyboard-shortcuts#alternate-behavior.md) doesn't work. You can only interact with the rich text editor when [previewing the app](../power-apps-studio#preview.md).
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
