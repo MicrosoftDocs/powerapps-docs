@@ -21,7 +21,7 @@ Power Apps code app architecture consists of:
 - The `power.config.json` configuration file
 - The Power Apps host
 
-You will be more successful when you understand how these parts collaborate through development, publishing, and runtime execution. Learn about:
+Understanding how these parts collaborate through development, publishing, and runtime execution make you more successful. Learn about:
 
 - The role of each layer (your code vs. SDK vs. host)
 - How models/services are generated and consumed when you add or remove connectors
@@ -49,39 +49,8 @@ When a code app runs, there are three logical components:
 - The Power Apps SDK
 - The Power Apps host
 
-```mermaid
-%% Mermaid block diagram (block-beta).
-block-beta
-  %% Layout
-  columns 5
-
-  block:AssetStack:Assets to run a code app {
-    columns 1
-    YourCode["Your code"]
-    SDK["Power Apps SDK"]
-    Host["Power Apps host"]
-    YourCode --> SDK
-    SDK --> Host
-  }
-
-  block:MsServices:Microsoft Services {
-    columns 4
-    Connectors["Power Platform connectors"]
-    Core["Power Platform Services"]
-    Entra["Microsoft Entra"]
-    Admin["Power Platform Admin Center"]
-
-    Connectors <--> Core
-  }
-
-  %% Cross-block relationships
-  Host --> Core
-  Host --> Connectors
-  Host --> Entra
-  Host --> Admin
-```
 
 :::image type="content" source="media/code-app-architecture-runtime.png" alt-text="Runtime architecture":::
 
-1. The Power Apps SDK exposes APIs that may be invoked by your code and the generated models and services your app uses to perform data requests via Power Platform connectors.
-1. The Power Apps host manages end-user authentication, app loading and presenting contextual messages to the user if an app fails to load.
+1. The Power Apps SDK exposes APIs that your code can use and the generated models and services your app uses to perform data requests via Power Platform connectors.
+1. The Power Apps host manages end-user authentication, app loading, and presenting contextual messages to the user if an app fails to load.
