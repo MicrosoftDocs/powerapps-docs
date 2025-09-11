@@ -171,7 +171,7 @@ Once connections are added, you can update the app to use the generated model an
 
 1. Update the app to use the nontabular data source (for example, Office 365 Users)
 
-   You can see the generated files under the src/Models and src/Services folders for the typed connection API.
+   You can see the generated files under the src/generated/models and src/generated/services folders for the typed connection API.
 
    ```javascript
    await Office365UsersService.MyProfile() 
