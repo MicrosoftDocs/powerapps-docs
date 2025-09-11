@@ -14,3 +14,22 @@ contributors:
  - ColinBe
 ---
 # Code interpreter PCF component sample
+
+This sample shows how to generate content using a prompt defined by Copilot Studio or AI Builder.
+
+This sample is a Power Apps Component Framework (PCF) control that integrates with Code Interpreter–enabled prompts to render interactive HTML/JavaScript data visuals or generate previews and downloads for PDF, Word, PowerPoint and Excel files.
+
+This example demonstrates:
+
+<!-- TODO: NEED Screenshots here -->
+
+- Interactive visuals returned as text/html (rendered in the control)
+- Native preview and direct download support for generated PDF, .docx, .pptx and .xlsx files
+
+## Available for
+
+Model-driven apps
+
+## Code
+
+You can find the code for sample here: [PowerApps-Samples/component-framework/CodeInterpreterControl/](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/CodeInterpreterControl).
