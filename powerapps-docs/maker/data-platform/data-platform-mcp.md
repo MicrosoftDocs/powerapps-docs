@@ -4,7 +4,7 @@ description: Step-by-step instructions for setup, connect, and use Microsoft Dat
 author: sabinn-msft
 ms.component: cds
 ms.topic: how-to
-ms.date: 07/14/2025
+ms.date: 09/02/2025
 ms.subservice: dataverse-maker
 ms.author: sabinn
 ms. reviewer: matp
@@ -16,7 +16,7 @@ search.audienceType:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-The Model Context Protocol (MCP) is an open protocol that enables seamless integration between LLM applications and external data sources and tools. Microsoft Dataverse can act as an MCP server, providing intelligent access to tables and records to various MCP clients like Copilot Studio agents, VS Code GitHub Copilot, Claude desktop, and many others. This integration standardizes and streamlines the interaction between AI models and Dataverse data, making it more efficient and effective for developers to apply Dataverse's rich data capabilities within their AI-driven applications.  
+The Model Context Protocol (MCP) is an open protocol that enables seamless integration between LLM applications and external data sources and tools. Microsoft Dataverse can act as an MCP server, providing intelligent access to tables and records to various MCP clients like Copilot Studio agents, Visual Studio (VS) Code GitHub Copilot, Claude desktop, and many others. This integration standardizes and streamlines the interaction between AI models and Dataverse data, making it more efficient and effective for developers to apply Dataverse's rich data capabilities within their AI-driven applications.  
 
 Once connected to the Dataverse MCP Server, you can choose from various tools in the Power Platform environment. These tools are: list tables, describe table, read data, create record, update record, list prompts, execute prompt, list knowledge sources, and retrieve knowledge.
 
@@ -33,7 +33,7 @@ This article explains how to set up and use the Dataverse MCP server with Micros
 1. Select **Create**.
 1. Scroll down to the **Tools** section and select **+ Add tool**.
 1. Select **Model Context Protocol**, and then select **Dataverse MCP Server**.
-   1. If there is no existing Dataverse connection, you're prompted to do so.
+   1. If there's no existing Dataverse connection, you're prompted to do so.
 1. Select **Add to agent**.
 
 The individual tools available on this MCP server can be viewed and modified by selecting **...** > **Edit** next to the **Dataverse MCP Server** tool.
@@ -167,11 +167,9 @@ If you don’t have VS Code installed, [download Visual Studio Code - Mac, Linux
 
 These instructions help you configure a Dataverse MCP server at the user setting level.
 
-1. In VS Code, go to **Manage** (gear on lower left) > **Settings** or CTRL+, and then type *MCP*.
-1. **Mcp** is listed under the **User** tab. Select **Edit in settings.json**.
-   :::image type="content" source="media/mcp-edit-vsc.png" alt-text="Edit Mcp JSON in VS Code":::
-1. Add the Dataverse MCP configuration text inside the mcp "servers" setting following the curly brace.
-   :::image type="content" source="media/mcp-dataverse-json.png" alt-text="JSON snippet location for MCP Dataverse":::
+1. In VS Code, open the command palette by selecting **View** > **Command Palette** (Ctrl + Shift + P).
+1. Type *MCP: Open User Configuration*, and then select it.
+1. Copy and paste this Dataverse MCP configuration JSON inside the mcp "servers" node following the curly brace.
 
    ```json
    "<friendly name>": {
@@ -195,10 +193,12 @@ These instructions help you configure a Dataverse MCP server at the user setting
    }
    ```
 
-1. Replace &lt;connection URL&gt; and &lt;tenant ID&gt; from the [prerequisite steps](#prerequisites). Use a &lt;friendly name&gt; for your Dataverse MCP server that you can easily remember, for example: `MyDataverseMCPServerForGitHubCopilot`.
+   :::image type="content" source="media/mcp-dataverse-json.png" alt-text="JSON snippet location for MCP Dataverse" lightbox="media/mcp-dataverse-json.png":::
+1. In the mcp.json file where you pasted in the json in the previous step, replace &lt;connection URL&gt; and &lt;tenant ID&gt; from the [prerequisite steps](#prerequisites). Use a &lt;friendly name&gt; for your Dataverse MCP server that you can easily remember, for example: `MyDataverseMCPServerForGitHubCopilot`.
+1. Select **File** > **Save**.
 
 > [!NOTE]
-> When the MCP server is configured correctly in settings.json, you notice a status like **Start**. This means that syntactically, it's correct and you can start the MCP server. In case it doesn’t show **Start**, you can go to **Command Palette** (Ctrl+Shift+P), type *MCP:* and then select **MCP: List Servers**. You should observe the friendly name that you have assigned for the Dataverse MCP server so you can start the MCP server.
+> When the MCP server is configured correctly in mcp.json, you notice a status like **Start**. This means that syntactically, it's correct and you can start the MCP server. In case it doesn’t show **Start**, you can go to **Command Palette** (Ctrl+Shift+P), type *MCP:* and then select **MCP: List Servers**. You should observe the friendly name that you have assigned for the Dataverse MCP server so you can start the MCP server.
 
 #### Interact with Dataverse MCP server in VS Code GitHub Copilot
 
@@ -206,9 +206,9 @@ These instructions help you configure a Dataverse MCP server at the user setting
 1. From this point on, you can interact with the MCP server via Agent mode of GitHub Copilot. For example, “list tables in Dataverse,” “describe table account,” or “how many accounts do I have,” and so on.
 
 > [!TIP]
-> If you have other MCP servers registered with GitHub Copilot, there are a few ways to help MCP Client to choose the apporpriate MCP Server. Examples:
+> If you have other MCP servers registered with GitHub Copilot, there are a few ways to help MCP Client to choose the appropriate MCP Server. Examples:
 > * add "in Dataverse" to your prompt to be specific about which MCP server you’d like to use for your question, or
-> * at the beginning of the session, you can say "Use `<insert your MCP server name>` for this session".  
+> * at the beginning of the session, you can say "Use `<insert your MCP server name>` for this session."  
 
 For more resources about how to use GitHub Copilot in VS Code:
 
@@ -222,17 +222,25 @@ To learn how to use Visual Studio Code and MCP Severs go to this document: [Use 
 
 The following Dataverse MCP tools are available. Your prompt in the MCP client like Claude desktop and VS Code GitHub Copilot is automatically routed to one or more of these tools. So you can ask a question like "view Accounts data," which is likely be mapped to the `read_query` tool or `retrieve_knowledge`.  
 
-| Tool                   | Description                                                                                                              |
-|------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| `create_record`         | Insert a row into a table in Dataverse and returns the GUID of the created row.                                          |
-| `describe_table`         | Get the table schema of the requested table in Dataverse.                                                                 |
-| `execute_prompt`         | Execute a prompt from the list of available predefined prompts in the environment.                                       |
-| `list_knowledge_sources` | Returns a list of knowledge sources available in Dataverse. Knowledge sources created and used in Copilot Studio agents in the same environment are shown here. |
-| `list_prompts`           | List predefined prompts available in the environment.                                                                     |
-| `list_tables`            | List tables that are available in the environment                                                                        |
-| `read_query`             | Read data from tables in Dataverse.                                                                                       |
-| `retrieve_knowledge`     | Use a preconfigured knowledge source to answer questions.                                                                 |
-| `update_record`          | Update a row in a Dataverse table.                                                                                          |
+## Dataverse tool reference
+
+This table provides an overview of commonly used tools in Dataverse, organized by functionality.
+
+| Tool                    | Description                                                                                                                  |
+|-------------------------|------------------------------------------------------------------------------------------------------------------------------|
+| `create_table`          | Creates a new table in Dataverse with specified columns and data types.                                                      |
+| `update_table`          | Modifies the structure of an existing table, such as adding or removing columns.                                             |
+| `delete_table`          | Permanently deletes a table from Dataverse.                                                                                  |
+| `describe_table`        | Retrieves the schema of a specified table in Dataverse, including column names and data types.                              |
+| `list_tables`           | Returns a list of tables accessible in the current environment.                                                              |
+| `create_record`         | Inserts a new row into a Dataverse table and returns the GUID of the created row.                                            |
+| `read_query`            | Reads and retrieves data from tables in Dataverse based on query parameters.                                                 |
+| `update_record`         | Updates an existing row in a Dataverse table.                                                                                |
+| `delete_record`         | Removes a specific row from a Dataverse table using its unique identifier or a condition.                                    |
+| `list_knowledge_sources`| Lists all knowledge sources available in Dataverse, including those used in Copilot Studio agents within the same environment.|
+| `retrieve_knowledge`    | Uses a configured knowledge source to answer user questions.                                                                 |
+| `execute_prompt`        | Runs a predefined prompt available in the current environment.                                                               |
+| `list_prompts`          | Displays all predefined prompts available in the environment.                                                                |
 
 ## Related articles
 

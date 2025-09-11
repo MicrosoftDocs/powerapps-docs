@@ -22,13 +22,13 @@ Agent feed in Power Apps lets business users easily manage and work with agents 
 
 - The agent feed shows when at least one agent is supervised in the app.
 - Learn how to [Add agents to an app](../maker/model-driven-apps/add-agents-to-app.md)
-- Generative agents must be enabled in the environment.
 
 > [!IMPORTANT]
 >
 > - This is a preview feature.
 > - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2216214), and are available before an official release so that customers can get early access and provide feedback.
 > - This feature is being gradually rolled out across regions and might not be available yet in your region.
+> - This feature is only available in the English language.
 
 > [!NOTE]
 > Currently, only the owner of an agent can view and supervise that agent’s data in a model-driven app. Support for sharing agent history with other users is a top priority and is in development.
@@ -48,6 +48,9 @@ The feed shows a list of agent activity. Each item includes:
 1. A timestamp of the most recent activity
 1. The agent's name and icon
    :::image type="content" source="media/agent-supervision/agent-feed-card-map.png" alt-text="Agent feed card map":::
+
+> [!NOTE]
+> You can only supervise up to ten agents at a time in the feed.
 
 Activity is grouped into two sections:
 
@@ -101,7 +104,7 @@ You can take these actions on activity in the feed:
 
 ## Navigation
 
-For actions that use a Dataverse tool, users will be provided with a direct link to either the Dataverse record or entity associated with that action depending on which is more relevant to that action. This enables seamless for further review or follow-up. 
+For actions that use a Dataverse tool, users are provided with a direct link to the most relevant Dataverse record or entity. This allows users to quickly access and review related data, making it easier to follow up or take further action as needed.
 
 :::image type="content" source="media/agent-supervision/agent-feed-navigate-to-record.png" alt-text="Agent feed record navigation button":::
 

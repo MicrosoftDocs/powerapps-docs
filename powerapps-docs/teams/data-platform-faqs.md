@@ -19,7 +19,7 @@ Here is a list of frequently asked (FAQs) for Dataverse for Teams; also see [Dat
 
 ### What does Dataverse for Teams enable and how does this impact Microsoft Power Platform and Teams users? 
 
-Power Apps developers and Power Virtual Agents chatbot creators will now be able to make and manage their apps and bots directly in Teams with embedded [Power Apps](overview.md) and [Power Virtual Agents](/power-virtual-agents/teams/fundamentals-what-is-power-virtual-agents-teams) apps. This enables a streamlined end-to-end user experience and allows makers to deploy to Teams with one click through the Teams app store. These new features are powered by Power Platform enhancement in Teams that provide enterprise datastores with rich data types to Microsoft 365 users and is now included in Microsoft 365 and Office 365 licenses.
+Power Apps developers and Microsoft Copilot Studio chatbot creators will now be able to make and manage their apps and bots directly in Teams with embedded [Power Apps](overview.md) and [Microsoft Copilot Studio](/microsoft-copilot-studio/fundamentals-get-started-teams) apps. This enables a streamlined end-to-end user experience and allows makers to deploy to Teams with one click through the Teams app store. These new features are powered by Power Platform enhancement in Teams that provide enterprise datastores with rich data types to Microsoft 365 users and is now included in Microsoft 365 and Office 365 licenses.
 
 Also, apps built with Power Apps and used in Teams will be responsive to the form factor that they're loaded on, meaning a creator can build an app once for users to view full screen on both mobile devices and desktops.  
 

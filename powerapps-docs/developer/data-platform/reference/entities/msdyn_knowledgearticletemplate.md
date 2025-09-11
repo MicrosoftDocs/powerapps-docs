@@ -70,6 +70,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [msdyn_languagelocaleid](#BKMK_msdyn_languagelocaleid)
 - [msdyn_LanguageLocaleIdName](#BKMK_msdyn_LanguageLocaleIdName)
 - [msdyn_name](#BKMK_msdyn_name)
+- [msdyn_sectiondetails](#BKMK_msdyn_sectiondetails)
 - [msdyn_subjectid](#BKMK_msdyn_subjectid)
 - [msdyn_title](#BKMK_msdyn_title)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
@@ -223,6 +224,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|False|
 |MaxLength|4000|
+
+### <a name="BKMK_msdyn_sectiondetails"></a> msdyn_sectiondetails
+
+|Property|Value|
+|---|---|
+|Description|**Shows the section details of the template for article generation.**|
+|DisplayName|**Template Section Details**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_sectiondetails`|
+|RequiredLevel|None|
+|Type|Memo|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1048576|
 
 ### <a name="BKMK_msdyn_subjectid"></a> msdyn_subjectid
 

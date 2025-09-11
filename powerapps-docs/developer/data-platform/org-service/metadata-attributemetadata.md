@@ -4,8 +4,8 @@ description: "Describes common operations on column definitions (attribute metad
 ms.date: 12/12/2022
 ms.reviewer: jdaly
 ms.topic: how-to
-author: mkannapiran
-ms.author: kamanick
+author: MsSQLGirl
+ms.author: jukoesma
 search.audienceType: 
   - developer
 contributors:
@@ -259,7 +259,7 @@ foreach (AttributeMetadata aColumn in addedColumns)
  This code sample shows how to retrieve the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata> for a column using the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveAttributeRequest>. This sample retrieves the definition for a custom <xref:Microsoft.Xrm.Sdk.Metadata.StringAttributeMetadata> column called 'new_string' from the Contact table that was created in [Create columns](#BKMK_CreateAttributes).
   
 > [!NOTE]
-> Because <xref:Microsoft.Xrm.Sdk.Messages.RetrieveAttributeRequest.RetrieveAsIfPublished> is true, this request returns the current unpublished definition of this column. You might use this if you are creating a column editor and you want to retrieve the unpublished definition of the column. Otherwise, you should not specify `RetrieveAsIfPublished`. More information: [Retrieving unpublished definitions](/dynamics365/customer-engagement/developer/customize-dev/publish-customizations#retrieving-unpublished-metadata).  
+> Because <xref:Microsoft.Xrm.Sdk.Messages.RetrieveAttributeRequest.RetrieveAsIfPublished> is true, this request returns the current unpublished definition of this column. You might use this if you are creating a column editor and you want to retrieve the unpublished definition of the column. Otherwise, you should not specify `RetrieveAsIfPublished`. More information: [Best practice: Retrieve published metadata](../best-practices/work-with-metadata/retrieve-published-metadata.md).  
 
 ```csharp
 // Create the request

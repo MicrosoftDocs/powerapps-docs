@@ -6,7 +6,7 @@ author: yogeshgupta698
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: mkaur-msft
-ms.date: 06/14/2024
+ms.date: 08/19/2025
 ms.subservice: canvas-maker
 ms.author: yogupt
 
@@ -29,8 +29,8 @@ Modern controls in canvas apps are a new set of controls that are based on the [
 
 ## Enable modern controls and themes for your app
 With your [canvas app open for editing](../../edit-app.md):
-1. On the command bar, select **Settings** > **General**.
-2. From the Preview tab, set the toggle for **Modern controls and themes** to **On**.
+1. On the command bar, select **Settings** > **Updates**.
+2. Select the **New** tab and then turn on **Modern controls and themes**.
 
 - The app will refresh with the new app authoring menu with modern controls part of existing categories. There will be two additional categories for legacy controls - Classic and Classic icons.
 

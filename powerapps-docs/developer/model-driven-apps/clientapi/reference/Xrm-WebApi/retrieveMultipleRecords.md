@@ -128,7 +128,7 @@ Xrm.WebApi.retrieveMultipleRecords("account", "?$select=name&$top=3").then(
 This example queries the `account` entity using fetchXML.
 
 ```JavaScript
-var fetchXml = "?fetchXml=<fetch mapping='logical'><entity name='account'><attribute name='accountid'/><attribute name='name'/></entity></fetch>";
+var fetchXml = "?fetchXml=<fetch><entity name='account'><attribute name='accountid'/><attribute name='name'/></entity></fetch>";
 
 Xrm.WebApi.retrieveMultipleRecords("account", fetchXml).then(
     function success(result) {
@@ -196,7 +196,7 @@ You can use the `FetchXML` parameter while online or offline to retrieve the `na
 
 ```JavaScript
 var fetchXml = `?fetchXml=
-    <fetch mapping='logical'>
+    <fetch>
        <entity name='account'>
           <attribute name='name'/>
           <attribute name='primarycontactid'/>
@@ -298,7 +298,7 @@ The following example demonstrates the use of the `count` parameter of the Fetch
 > The FetchXML paging cookie is only returned for online `retrieveMultipleRecords` operations.  ([Xrm.WebApi.online](online.md)). It is not supported offline.
 
 ```JavaScript
-var fetchXml = "?fetchXml=<fetch mapping='logical' count='3'><entity name='account'><attribute name='accountid'/><attribute name='name'/></entity></fetch>";
+var fetchXml = "?fetchXml=<fetch count='3'><entity name='account'><attribute name='accountid'/><attribute name='name'/></entity></fetch>";
 
 Xrm.WebApi.online.retrieveMultipleRecords("account", fetchXml).then(
     function success(result) {

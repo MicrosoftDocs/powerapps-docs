@@ -128,7 +128,7 @@
         ]
       },
       "ms.date": {
-        "developer/data-platform/reference/entities/*.md": "01/21/2025"
+        "developer/data-platform/reference/entities/*.md": "08/28/2025"
       }
     },
     "template": [],
@@ -136,3 +136,4 @@
     "markdownEngineName": "markdig"
   }
 }
+

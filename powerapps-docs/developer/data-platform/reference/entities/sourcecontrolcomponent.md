@@ -82,7 +82,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`action`|
-|RequiredLevel|None|
+|RequiredLevel|SystemRequired|
 |Type|Picklist|
 |DefaultFormValue|0|
 |GlobalChoiceName|`sourcecontrolcomponent_action`|
@@ -196,7 +196,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`iscommitted`|
-|RequiredLevel|ApplicationRequired|
+|RequiredLevel|SystemRequired|
 |Type|Boolean|
 |GlobalChoiceName|`sourcecontrolcomponent_iscommitted`|
 |DefaultValue|False|
@@ -263,7 +263,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`solutioncomponentstate`|
-|RequiredLevel|None|
+|RequiredLevel|SystemRequired|
 |Type|Picklist|
 |DefaultFormValue|0|
 |GlobalChoiceName|`sourcecontrolcomponent_solutioncomponentstate`|
@@ -341,7 +341,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`useraction`|
-|RequiredLevel|None|
+|RequiredLevel|SystemRequired|
 |Type|Picklist|
 |DefaultFormValue|0|
 |GlobalChoiceName|`sourcecontrolcomponent_useraction`|

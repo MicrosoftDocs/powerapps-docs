@@ -1,8 +1,8 @@
 ---
-title: "Create and use dataflows in Power Apps | MicrosoftDocs"
+title: "Create and use dataflows in Power Apps"
 description: "Learn how to create and use dataflows in Power Apps"
 ms.custom: ""
-ms.date: 04/21/2025
+ms.date: 08/20/2025
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -41,7 +41,7 @@ There are three primary steps to using a dataflow:
 
 2. Schedule dataflow runs. This is the frequency in which the Power Platform Dataflow should refresh the data that your dataflow will load and transform.
 
-3. Use the data you loaded to the destination storage. You can build apps, flows, Power BI reports, and dashboards or connect directly to the dataflow’s Common Data Model folder in your organization’s lake using Azure data services like Azure Data Factory, Azure Databricks or any other service that supports the Common Data Model folder standard.
+3. Use the data you loaded to the destination storage. You can build apps, flows, Power BI reports, and dashboards or connect directly to the dataflow’s Common Data Model folder in your organization’s lake using Azure data services like Azure Data Factory, Azure Databricks, or any other service that supports the Common Data Model folder standard.
 
 The following sections look at each of these steps so you can become familiar with the tools provided to complete each step.
 
@@ -50,8 +50,10 @@ The following sections look at each of these steps so you can become familiar wi
 Dataflows are created in one environment. Therefore, you'll only be able to see and manage them from that environment. In addition, individuals who want to get data from your dataflow must have access to the environment in which you created
 it.
 
-> [!NOTE]
-> Creating dataflows is currently not available with Power Apps Developer Plan licenses.
+> [!IMPORTANT]
+>
+> - Creating dataflows is currently not available with Power Apps Developer Plan licenses.
+> - The Firefox web browser currently isn't supported for the "Download refresh history file" action in Power Apps dataflows. More information: [You receive the error message "There was a problem refreshing the dataflow"](#you-receive-the-error-message-there-was-a-problem-refreshing-the-dataflow)
 
 1. Sign in to Power Apps, and verify which environment you're in, find the environment switcher near the right side of the command bar.
 
@@ -61,7 +63,7 @@ it.
 1. Select **New dataflow**. On the **New Dataflow** page, enter a **Name** for the dataflow. By default, dataflows store tables in Dataverse. Select **Analytical entities only** if you want tables to be stored in your organization's Azure Data Lake storage account. Select **Create**.
 
      > [!IMPORTANT]
-     > There is only one owner of any dataflow—the person who created it. Only the owner can edit the dataflow. Authorization
+     > There's only one owner of any dataflow—the person who created it. Only the owner can edit the dataflow. Authorization
      > and access to data created by the dataflow depend on the destination you loaded
      > data to. Data loaded into Dataverse will be available via the Dataverse
      > Connector and requires the person accessing the data to be authorized to Dataverse.
@@ -129,8 +131,8 @@ Dataflows use a data refresh process to keep data up to date. In the **Power Pla
 1. Select **Refresh automatically**.
 
 2. Enter the dataflow frequency: 
-   - **Frequency-based refresh**. Set how often in 30 minute increments, start date and time in UTC.
-   - **Refresh on specific days and times**. Choose time zone, frequency (daily or weekly) and time of day in 30 minute increments.
+   - **Frequency-based refresh**. Set how often in 30-minute increments, start date, and time in UTC.
+   - **Refresh on specific days and times**. Choose time zone, frequency (daily or weekly) and time of day in 30-minute increments.
 
      ![Refresh automatically option.](media/refresh-automatically.png)
 
@@ -165,6 +167,10 @@ To resolve this issue:
 3. Select the **Fix connection** link in the **Status** column, and follow the instructions on your screen.
 
 After the fix completes, retry the export.
+
+### You receive the error message "There was a problem refreshing the dataflow"
+
+This error occurs when you try to refresh the dataflow while using the Firefox web browser. To work around this issue use a different web browser, such as Microsoft Edge or Google Chrome.
 
 ## Next steps
 
