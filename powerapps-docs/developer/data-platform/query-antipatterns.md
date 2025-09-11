@@ -1,10 +1,10 @@
 ---
 title: "Query anti-patterns (Microsoft Dataverse)"
 description: "Read about patterns to avoid when constructing queries to retrieve data from Dataverse."
-ms.date: 01/06/2025
+ms.date: 09/10/2025
 ms.topic: how-to
-author: MsSQLGirl
-ms.author: jukoesma
+author: manasmams
+ms.author: manasma
 ms.reviewer: jdaly
 ms.subservice: dataverse-developer
 search.audienceType: 
