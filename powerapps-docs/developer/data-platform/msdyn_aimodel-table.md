@@ -13,7 +13,7 @@ contributors:
  - JimDaly
  - ColinBe
 ---
-# AI Model table
+# TODO: Delete this AI Model table
 
 The [AI Model (msdyn_AIModel) table](reference/entities/msdyn_aimodel.md) represents machine learning models used to provide AI-driven capabilities such as predictions, classifications, and recommendations. This table is essential for anyone who wants to integrate AI models into their business applications. It provides metadata and configuration details for each AI model, enabling automation, retraining, and inference scheduling.
 
@@ -47,47 +47,49 @@ AI Model table has the following writable columns:
 ```csharp
 static RetrieveAIModelsExample (IOrganizationService service)
 {
-	var query = new QueryExpression("msdyn_aimodel")
-	{
-	    ColumnSet = new ColumnSet("msdyn_name", "msdyn_aimodelid")
-	};
-	
-	var results = service.RetrieveMultiple(query);
-	
-	foreach (var entity in results.Entities)
-	{
-	    Console.WriteLine($"Model Name: {entity["msdyn_name"]}, ID: {entity["msdyn_aimodelid"]}");
-	}
+ var query = new QueryExpression("msdyn_aimodel")
+ {
+     ColumnSet = new ColumnSet("msdyn_name", "msdyn_aimodelid")
+ };
+ 
+ var results = service.RetrieveMultiple(query);
+ 
+ foreach (var entity in results.Entities)
+ {
+     Console.WriteLine($"Model Name: {entity["msdyn_name"]}, ID: {entity["msdyn_aimodelid"]}");
+ }
 }
 ```
 
 ### [Web API](#tab/webapi)
 
 **Request**:
+
 ```http
 GET [Organization URI]/api/data/v9.2/msdyn_aimodels?$select=msdyn_name,msdyn_aimodelid
 ```
 
 **Response**:
+
 ```http
 HTTP/1.1 200 OK  
 Content-Type: application/json; odata.metadata=minimal  
 OData-Version: 4.0  
 
 {
-	"@odata.context": "[Organization URI]/api/data/v9.2/$metadata#msdyn_aimodels(msdyn_name,msdyn_aimodelid,modifiedon)",
-  	"value": [
-		{
-			"@odata.etag": "W/\"5080532\"",
-			"msdyn_aimodelid": "a0440df3-2656-e911-8194-000d3a6cd5a5",
-			"msdyn_name": "BusinessCard model"
-		},
-		{
-			"@odata.etag": "W/\"5080568\"",
-			"modifiedon": "2025-08-28T18:17:39Z",
-			"msdyn_aimodelid": "046ab801-2756-e911-8194-000d3a6cd5a5",
-			"msdyn_name": "ObjectDetectionProposal model"
-		}
+ "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#msdyn_aimodels(msdyn_name,msdyn_aimodelid,modifiedon)",
+   "value": [
+  {
+   "@odata.etag": "W/\"5080532\"",
+   "msdyn_aimodelid": "a0440df3-2656-e911-8194-000d3a6cd5a5",
+   "msdyn_name": "BusinessCard model"
+  },
+  {
+   "@odata.etag": "W/\"5080568\"",
+   "modifiedon": "2025-08-28T18:17:39Z",
+   "msdyn_aimodelid": "046ab801-2756-e911-8194-000d3a6cd5a5",
+   "msdyn_name": "ObjectDetectionProposal model"
+  }
 }
 ```
 
@@ -108,7 +110,6 @@ AI Model table supports the following actions:
 |[ScheduleRetrain](xref:Microsoft.Dynamics.CRM.ScheduleRetrain)|Schedules retraining of an AI Model.|
 |[UnschedulePrediction](xref:Microsoft.Dynamics.CRM.UnschedulePrediction)|Cancels a scheduled batch prediction job.|
 
-
 ## Predict action
 
 The Predict action allows you to use an AI Model to generate predictions based on input data. This is typically used in real-time scenarios where immediate insights are needed, such as predicting customer churn or recommending next best actions.
@@ -118,50 +119,51 @@ The Predict action allows you to use an AI Model to generate predictions based o
 ```csharp
 static PredictActionExample (IOrganizationService service, Guid yourAiModelId)
 {
-	// Create the nested 'patient' entity
-	var patientEntity = new Entity
-	{
-	    Attributes =
-	    {
-	        { "firstname", "John" },
-	        { "lastname", "Smith" }
-	    }
-	};
-	
-	// Create the main 'requestv2' entity
-	var requestV2Entity = new Entity
-	{
-	    Attributes =
-	    {
-	        { "pai_sex", 1 },
-	        { "pai_age", 10 },
-	        { "patient", patientEntity }
-	    }
-	};
-	
-	// Create the Predict action request
-	var predictRequest = new OrganizationRequest("Predict")
-	{
-	    Parameters = new ParameterCollection
-	    {
-	        { "version", "2.0" },
-	        { "requestv2", requestV2Entity },
-	        { "Target", new EntityReference("msdyn_aimodel", new Guid(yourAiModelId)) }
-	    }
-	};
-	
-	// Execute the request
-	var response = service.Execute(predictRequest);
-	
-	Console.WriteLine("Prediction Result:");
-	Console.WriteLine(response.Results);
-	}
+ // Create the nested 'patient' entity
+ var patientEntity = new Entity
+ {
+     Attributes =
+     {
+         { "firstname", "John" },
+         { "lastname", "Smith" }
+     }
+ };
+ 
+ // Create the main 'requestv2' entity
+ var requestV2Entity = new Entity
+ {
+     Attributes =
+     {
+         { "pai_sex", 1 },
+         { "pai_age", 10 },
+         { "patient", patientEntity }
+     }
+ };
+ 
+ // Create the Predict action request
+ var predictRequest = new OrganizationRequest("Predict")
+ {
+     Parameters = new ParameterCollection
+     {
+         { "version", "2.0" },
+         { "requestv2", requestV2Entity },
+         { "Target", new EntityReference("msdyn_aimodel", new Guid(yourAiModelId)) }
+     }
+ };
+ 
+ // Execute the request
+ var response = service.Execute(predictRequest);
+ 
+ Console.WriteLine("Prediction Result:");
+ Console.WriteLine(response.Results);
+ }
 }
 ```
 
 ### [Web API](#tab/webapi)
 
 **Request**:
+
 ```http
 POST msdyn_aimodels([AI Model ID])/Microsoft.Dynamics.CRM.Predict
 
@@ -181,6 +183,7 @@ POST msdyn_aimodels([AI Model ID])/Microsoft.Dynamics.CRM.Predict
 ```
 
 **Response**:
+
 ```http
 HTTP/1.1 200 OK  
 Content-Type: application/json; odata.metadata=minimal  
