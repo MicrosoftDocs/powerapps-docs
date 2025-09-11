@@ -1,8 +1,8 @@
 ---
-title: "Opening the view designer| MicrosoftDocs"
-description: Learn how to open the view designer
+title: "Open the view designer for a model-driven app"
+description: Learn how to open the view designer with Power Apps
 ms.custom: ""
-ms.date: 03/23/2020
+ms.date: 09/09/2025
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -19,17 +19,16 @@ ms.author: "matp"
 search.audienceType: 
   - maker
 ---
-# Opening the view designer
+# Open the view designer
 
-In this article, a view definition will be opened to display properties and options to configure the view.
+In this article, a view definition is opened that displays properties and options to configure a table view using the view designer for use with model-driven apps.
 
-## Open a view for editing in the solution explorer
+## Open a view for editing in Power Apps
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. Select **Solutions**, and then open the solution that needs to be modified. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)] 
+1. Select **Solutions** on the left navigation pane, and then open the solution that needs to be modified. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)] 
 1. Select the table that contains the required view, such as the **Account** table.
 1. Select the **Views** area.
-
 1. Select the view, such as the account table **All Accounts** view.
 
     > [!div class="mx-imgBorder"]
