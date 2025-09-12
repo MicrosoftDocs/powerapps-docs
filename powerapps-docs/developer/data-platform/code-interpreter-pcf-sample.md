@@ -1,7 +1,7 @@
 ---
 title: "Code interpreter PCF component sample"
 description: "Learn how to use code interpreter enabled prompts from a PCF component in a model-driven application."
-ms.date: 09/11/2025
+ms.date: 09/15/2025
 ms.reviewer: jdaly
 ms.topic: article
 author: rapraj
@@ -17,7 +17,7 @@ contributors:
 
 This sample shows how to generate content using a prompt defined by Copilot Studio or AI Builder
 
-This sample is a Power Apps Component Framework (PCF) control that integrates with code interpreter enabled prompts to render interactive HTML/JavaScript data visuals or generate previews and downloads for PDF, Word, PowerPoint and Excel files.
+This sample is a Power Apps Component Framework (PCF) control that integrates with code interpreter enabled prompts to render interactive HTML/JavaScript data visuals or generate previews and downloads for PDF, Word, PowerPoint, and Excel files.
 
 ## Available for
 
@@ -45,7 +45,7 @@ The provided solution includes the definition for a table named `sample_example`
 
 ### Prompt: Example interactive row summary chart
 
-This prompt specifies an interactive chart that returns a mimetype of text/html:
+This prompt specifies an interactive chart that returns a `mimetype` value of `text/html`:
 
 :::image type="content" source="media/code-interpreter-interactive-row-summary-chart-prompt.png" alt-text="Example interactive row summary chart prompt":::
 
@@ -79,4 +79,4 @@ Generated .docx, .pptx and .xlsx files are also supported, but the sample PCF co
 
 ### App: sample_example app
 
-The solution also includes a pre-configured model-driven application with form available for you to configure the CodeInterpreter PCF control. This reduces the number of steps necessary to try the sample.
+The solution also includes a preconfigured model-driven application with form available for you to configure the CodeInterpreter PCF control. This app reduces the number of steps necessary to try the sample.

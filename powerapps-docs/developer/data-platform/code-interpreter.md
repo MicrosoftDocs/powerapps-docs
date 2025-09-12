@@ -1,7 +1,7 @@
 ---
 title: "Code interpreter for developers"
 description: "Learn how developers can use code interpreter enabled prompts."
-ms.date: 09/11/2025
+ms.date: 09/15/2025
 ms.reviewer: jdaly
 ms.topic: article
 author: rapraj
@@ -25,7 +25,7 @@ As described in [Use code interpreter to generate and execute Python code](/micr
 This article describes how developers can use the Dataverse `Predict` message to pass parameters to code interpreter enabled prompts and process the responses.  
 
 > [!NOTE]
-> A common scenario for this code interpreter enabled prompts is to generate UI experiences for model-driven applications using PCF components. Refer to the [Code interpreter PCF component sample](code-interpreter-pcf-sample.md) for an example.
+> A common scenario for code interpreter enabled prompts is to generate UI experiences for model-driven applications using Power Apps Component (PCF) components. Refer to the [Code interpreter PCF component sample](code-interpreter-pcf-sample.md) for an example.
 
 ## Enable code interpreter for the environment
 
@@ -37,7 +37,7 @@ Developers can use the Power Platform [Environment Management Settings](/rest/ap
 
 Every prompt created using Microsoft Copilot Studio or AI Builder creates a new record in the Dataverse [AI Model (msdyn_AIModel) table](reference/entities/msdyn_aimodel.md). You need the ID of the row when you invoke the `Predict` message.
 
-You can't create a prompt by creating a new row in the `msdyn_AIModel`. Prompts are created updated using the [AIModelPublish](/power-apps/developer/data-platform/webapi/reference/aimodelpublish) message. This public message is for internal use only. You must use the UI to create code interpreter enabled prompts. You must also make sure that each prompt is enabled for code interpreter. How you do this is slightly different depending on whether you edit the prompt in Power Apps or Copilot Studio. See these instructions:
+You can't create a prompt by creating a new row in the `msdyn_AIModel`. Prompts are created updated using the [AIModelPublish](/power-apps/developer/data-platform/webapi/reference/aimodelpublish) message. This public message is for internal use only. You must use the UI to create code interpreter enabled prompts. You must also make sure that each prompt is enabled for code interpreter. Enabling a prompt is slightly different depending on whether you edit the prompt in Power Apps or Copilot Studio. See these instructions:
 
 - [Power Apps](/microsoft-copilot-studio/code-interpreter-for-prompts#enable-code-interpreter-in-power-apps-ai-hub)
 - [Copilot Studio](/microsoft-copilot-studio/code-interpreter-for-prompts#enable-code-interpreter-in-prompt-tool-within-an-agent)
@@ -109,7 +109,7 @@ The `Predict` message is available in both the Dataverse SDK for .NET and Web AP
 
 Regardless of how you send the request, the `Predict` message requires three parameters:
 
-- The ID of the `msdyn_AIModel` record. How you set this depends on whether you use the SDK for .NET or Web API.
+- The ID of the `msdyn_AIModel` record. How you set this value depends on whether you use the SDK for .NET or Web API.
 - The data that contains the parameters that the prompt is configured to accept. This is passed as a parameter named `requestv2`. [Learn more about the `requestv2` parameter](#requestv2-parameter)
 - The `version` parameter. The value is always `"2.0"`.
 
@@ -117,11 +117,11 @@ Regardless of how you send the request, the `Predict` message requires three par
 
 This parameter is configured as an *open type*. [Learn more about how to use open types in general](use-open-types.md#how-to-use-open-types)
 
-An open type is a dictionary that contains keys and values. The values can also be dictionaries, so it is possible to send complex, hierarchical data to an open type parameter.
+An open type is a dictionary that contains keys and values. The values can also be dictionaries, so it's possible to send complex, hierarchical data to an open type parameter.
 
 ### [SDK for .NET](#tab/sdk)
 
-With the SDK for .NET, use the [Entity class](/dotnet/api/microsoft.xrm.sdk.entity) and set the [Attributes](/dotnet/api/microsoft.xrm.sdk.entity.attributes) collection with the values.  The key difference in this scenario is that the `Entity` instance doesn't have a [LogicalName](/dotnet/api/microsoft.xrm.sdk.entity.logicalname) set, so it doesn't refer to a specific Dataverse table.
+With the SDK for .NET, use the [Entity class](/dotnet/api/microsoft.xrm.sdk.entity) and set the [Attributes](/dotnet/api/microsoft.xrm.sdk.entity.attributes) collection with the values. The key difference in this scenario is that the `Entity` instance doesn't have a [LogicalName](/dotnet/api/microsoft.xrm.sdk.entity.logicalname) set, so it doesn't refer to a specific Dataverse table.
 
 In the following `PredictActionExample` sample method, the `Predict` action is invoked using the [OrganizationRequest class](/dotnet/api/microsoft.xrm.sdk.organizationrequest) as described in [Use messages with the SDK for .NET](org-service/use-messages.md). Alternatively, you can generate a pair of typed `PredictRequest` and `PredictResponse` classes. [Learn how to generate early-bound classes for the SDK for .NET](org-service/generate-early-bound-classes.md)
 
@@ -174,7 +174,7 @@ static PredictActionExample (IOrganizationService service, Guid yourAiModelId)
 
 The [Predict Action](/power-apps/developer/data-platform/webapi/reference/predict) is bound to the [msdyn_aimodel entity type](/power-apps/developer/data-platform/webapi/reference/msdyn_aimodel). When you use [actions bound to a table](webapi/use-web-api-actions.md#actions-bound-to-a-table), you pass the reference in the URL and invoke the action using the fully qualified name: `Microsoft.Dynamics.CRM.Predict`.
 
-As explained in [Use Entity as a dictionary](use-open-types.md?tabs=webapi#use-entity-as-a-dictionary), set the `requestv2` property with a dictionary that includes an `@odata.type` property set to `"Microsoft.Dynamics.CRM.expando"`.  This indicates the value is an open type.
+As explained in [Use Entity as a dictionary](use-open-types.md?tabs=webapi#use-entity-as-a-dictionary), set the `requestv2` property with a dictionary that includes an `@odata.type` property set to `"Microsoft.Dynamics.CRM.expando"`. This indicates the value is an open type.
 
 Notice how this example uses two nested open dictionaries.
 
@@ -265,9 +265,9 @@ The [PredictResponse complex type](/power-apps/developer/data-platform/webapi/re
 
 | Property | Type | Description |
 |----------|------|-------------|
-|`overrideHttpStatusCode`|String|In case the prediction is not completed, 202 will indicate that a polling is necessary, otherwise null.|
-|`overrideLocation`|String| Null except when `overrideHttpStatusCode` is not null. The location of the polling. Sent a GET request to this location to poll for the result.|
-|`overrideRetryAfter`|String|Null except when `overrideHttpStatusCode` is not null. Suggestion on when to try polling.|
+|`overrideHttpStatusCode`|String|In case the prediction isn't completed, 202 indicates that a polling is necessary, otherwise null.|
+|`overrideLocation`|String| Null except when `overrideHttpStatusCode` isn't null. The location of the polling. Sent a GET request to this location to poll for the result.|
+|`overrideRetryAfter`|String|Null except when `overrideHttpStatusCode` isn't null. Suggestion on when to try polling.|
 |`response`|String|This property is obsolete since the introduction of the `responsev2` property and should always be null.|
 |`responsev2`| Entity/expando | See [PredictResponse responsev2 properties](#predictresponse-responsev2-properties)|
 
@@ -294,11 +294,11 @@ The `responsev2` property has two properties:
 
 ## Troubleshooting
 
-The following are some errors you might encounter while using the Predict action with code enterpreter enabled prompts.
+The following are some errors you might encounter while using the Predict action with code interpreter enabled prompts.
 
 ### Insufficient capacity
 
-When you don't have any remaining AI Builder capacity you may get this `403 Forbidden` `EntitlementNotAvailable` error:
+When you don't have any remaining AI Builder capacity, you'll get this `403 Forbidden` `EntitlementNotAvailable` error:
 
 ```json
 { 
@@ -309,13 +309,13 @@ When you don't have any remaining AI Builder capacity you may get this `403 Forb
 }
 ```
 
-A PCF control that encounters this error will display this message: **Access denied. You don't have permission to use this model.**
+A PCF control that encounters this error displays this message: **Access denied. You don't have permission to use this model.**
 
-The resolution to this error is to purchase additional AI Builder capacity. [Learn more about how to get entitlement to AI Builder credits](/ai-builder/credit-management#get-entitlement-to-ai-builder-credits)
+The resolution to this error is to purchase more AI Builder capacity. [Learn more about how to get entitlement to AI Builder credits](/ai-builder/credit-management#get-entitlement-to-ai-builder-credits)
 
 ### Max concurrency calls reached
 
-When you are sending too many requests concurrently per environment or tenant, you may get this `500 Internal Server Error` `MaxConcurrentPlexCallsReachedException` error:
+When you're sending too many requests concurrently per environment or tenant, you'll get this `500 Internal Server Error` `MaxConcurrentPlexCallsReachedException` error:
 
 ```json
 { 
@@ -326,6 +326,6 @@ When you are sending too many requests concurrently per environment or tenant, y
 }
 ```
 
-A PCF control that encounters this error will display this message: **Server error. Please try again later or contact administrator.**
+A PCF control that encounters this error displays this message: **Server error. Please try again later or contact administrator.**
 
-The resolution of this error is to send fewer requests. Wait a short time and try again. There is no `RetryAfter` response header to recommend how long you should wait.
+The resolution of this error is to send fewer requests. Wait a short time and try again. There's no `RetryAfter` response header to recommend how long you should wait.
