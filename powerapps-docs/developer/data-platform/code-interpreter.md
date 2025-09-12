@@ -37,10 +37,10 @@ Developers can use the Power Platform [Environment Management Settings](/rest/ap
 
 Every prompt created using Microsoft Copilot Studio or AI Builder creates a new record in the Dataverse [AI Model (msdyn_AIModel) table](reference/entities/msdyn_aimodel.md). You need the ID of the row when you invoke the `Predict` message.
 
-You can't create a prompt by creating a new row in the `msdyn_AIModel`. Prompts are created updated using the [AIModelPublish](/power-apps/developer/data-platform/webapi/reference/aimodelpublish) message. This public message is for internal use only. You must use the UI to create code interpreter enabled prompts. You must also make sure that each prompt is enabled for code interpreter. How you do this is slightly different depending on the UI. See these instructions:
+You can't create a prompt by creating a new row in the `msdyn_AIModel`. Prompts are created updated using the [AIModelPublish](/power-apps/developer/data-platform/webapi/reference/aimodelpublish) message. This public message is for internal use only. You must use the UI to create code interpreter enabled prompts. You must also make sure that each prompt is enabled for code interpreter. How you do this is slightly different depending on whether you edit the prompt in Power Apps or Copilot Studio. See these instructions:
 
-- [Enable code interpreter in Power Apps AI Hub](/microsoft-copilot-studio/code-interpreter-for-prompts#enable-code-interpreter-in-power-apps-ai-hub)
-- [Enable code interpreter in prompt tool within a Copilot Studio agent](/microsoft-copilot-studio/code-interpreter-for-prompts#enable-code-interpreter-in-prompt-tool-within-an-agent)
+- [Power Apps](/microsoft-copilot-studio/code-interpreter-for-prompts#enable-code-interpreter-in-power-apps-ai-hub)
+- [Copilot Studio](/microsoft-copilot-studio/code-interpreter-for-prompts#enable-code-interpreter-in-prompt-tool-within-an-agent)
 
 You can query the `msdyn_AIModel` table using the `msdyn_Name` column value to identify code interpreter enabled prompts by name. The `msdyn_AIModel` doesn't have a property you can use to filter only those prompts that are code interpreter enabled.
 
@@ -233,23 +233,23 @@ OData-Version: 4.0
             "files": [
                 {
                     "@odata.type": "#Microsoft.Dynamics.CRM.expando",
-                    "base64_content": "[Sales_Proposal.pdf base64 content]",
+                    "base64_content": "[Example_Document.pdf base64 content]",
                     "content_type": "application/pdf",
-                    "file_name": "Sales_Proposal.pdf"
+                    "file_name": "Example_Document.pdf"
                 }
             ],
             "structuredOutput": {
                 "@odata.type": "#Microsoft.Dynamics.CRM.expando",
                 "mimetype": "text/markdown",
-                "text": "# Sales Proposal\n\nSales proposal for Example record Example 2.\n\n[Download the proposal PDF here](Sales_Proposal.pdf)"
+                "text": "# Example Document\n\nExample document for Example record Example 2.\n\n[Download the PDF document here](Example_Document.pdf)"
             },
             "artifacts":{
                 "@odata.type": "#Microsoft.Dynamics.CRM.expando",
-                "Sales_Proposal": {
+                "Example_Document": {
                     "@odata.type": "#Microsoft.Dynamics.CRM.expando",
-                    "artifactName": "Sales_Proposal.pdf",
+                    "artifactName": "Example_Document.pdf",
                     "mimeType": "application/pdf",
-                    "base64Content": "[Sales_Proposal.pdf base64 content]"
+                    "base64Content": "[Example_Document.pdf base64 content]"
         }
       }
     }
@@ -261,14 +261,14 @@ OData-Version: 4.0
 
 ### Processing the response
 
-The [PredictResponse complex type](/power-apps/developer/data-platform/webapi/reference/predictresponse) contains the response from the `Predict` message in web API. The SDK for .NET has similar response properties.
+The [PredictResponse complex type](/power-apps/developer/data-platform/webapi/reference/predictresponse) contains the response from the `Predict` message in web API. The SDK for .NET has similar response properties. Refer to the previous Web API response example for details.
 
 | Property | Type | Description |
 |----------|------|-------------|
-|`overrideHttpStatusCode`|String|In case the prediction is not completed, 202 will indicate that a polling is necessary.|
-|`overrideLocation`|String| The location of the polling (do a GET on this to poll for the result).|
-|`overrideRetryAfter`|String|Suggestion on when to try polling.|
-|`response`|String|This property should always be null.|
+|`overrideHttpStatusCode`|String|In case the prediction is not completed, 202 will indicate that a polling is necessary, otherwise null.|
+|`overrideLocation`|String| Null except when `overrideHttpStatusCode` is not null. The location of the polling. Sent a GET request to this location to poll for the result.|
+|`overrideRetryAfter`|String|Null except when `overrideHttpStatusCode` is not null. Suggestion on when to try polling.|
+|`response`|String|This property is obsolete since the introduction of the `responsev2` property and should always be null.|
 |`responsev2`| Entity/expando | See [PredictResponse responsev2 properties](#predictresponse-responsev2-properties)|
 
 #### PredictResponse responsev2 properties
@@ -283,11 +283,49 @@ The `responsev2` property has two properties:
 | `text` | string | Primary generated content. Content depends on the type of value returned by the prompt. |
 | `mimetype` | string | Text [MIME type](https://developer.mozilla.org/docs/Web/HTTP/Guides/MIME_types/Common_types). |
 | `textMimeType` | string | Duplicate/confirming [MIME type](https://developer.mozilla.org/docs/Web/HTTP/Guides/MIME_types/Common_types)|
-| `finishReason` | string | Reason generation stopped. |
+| `finishReason` | string | The reason the reasoning finished. This is usually `stop`. |
 | `code` | string | Python Source code or placeholder describing executed code. |
 | `signature` | string | a Base64‑encoded, versioned metadata and integrity token |
-| `logs` | string | Execution log output (if provided). |
+| `logs` | string | Python code execution log output (if provided). |
 | `codeThinking` | object | Empty/internal placeholder object. |
-| `files` | array of objects | Generated file artifacts with name, content type, and base64 content. |
-| `structuredOutput` | object | Canonical form of main output (`text` + `mimetype`). |
-| `artifacts` | object | Map of artifact identifiers to metadata & base64 content. |
+| `files` | array of objects | Generated file artifacts with `file_name`, `content_type`, and `base64_content` properties. |
+| `structuredOutput` | object | Canonical form of main output with `mimetype` and `text` properties. |
+| `artifacts` | object | Map of artifact identifiers to metadata & base64 content. This object contains properties specific to the output and these properties are objects that have the following properties:  `artifactName`, `mimeType`, and `base64Content` |
+
+## Troubleshooting
+
+The following are some errors you might encounter while using the Predict action with code enterpreter enabled prompts.
+
+### Insufficient capacity
+
+When you don't have any remaining AI Builder capacity you may get this `403 Forbidden` `EntitlementNotAvailable` error:
+
+```json
+{ 
+   "error": { 
+       "code": "0x80048d06", 
+       "message": "{\"operationStatus\":\"Error\",\"error\":{\"type\":\"Error\",\"code\":\"EntitlementNotAvailable\",\"innerErrors\":[{\"scope\":\"Generic\",\"target\":null,\"code\":\"NoCapacity\",\"type\":\"Error\",\"message\":\"No capacity was found.\"}]},\"predictionId\":null}" 
+   } 
+}
+```
+
+A PCF control that encounters this error will display this message: **Access denied. You don't have permission to use this model.**
+
+The resolution to this error is to purchase additional AI Builder capacity. [Learn more about how to get entitlement to AI Builder credits](/ai-builder/credit-management#get-entitlement-to-ai-builder-credits)
+
+### Max concurrency calls reached
+
+When you are sending too many requests concurrently per environment or tenant, you may get this `500 Internal Server Error` `MaxConcurrentPlexCallsReachedException` error:
+
+```json
+{ 
+   "error": { 
+       "code": "0x80048d0a", 
+       "message": "{\"operationStatus\":\"Error\",\"error\":{\"type\":\"Error\",\"code\":\"Unknown\",\"message\":\"Unhandled exception: Microsoft.PowerAI.MiddleEarth.HttpService.CodeInterpreter.Exceptions.MaxConcurrentPlexCallsReachedException\"},\"predictionId\":null}" 
+   } 
+}
+```
+
+A PCF control that encounters this error will display this message: **Server error. Please try again later or contact administrator.**
+
+The resolution of this error is to send fewer requests. Wait a short time and try again. There is no `RetryAfter` response header to recommend how long you should wait.

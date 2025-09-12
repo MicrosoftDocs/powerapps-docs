@@ -17,7 +17,7 @@ contributors:
 
 This sample shows how to generate content using a prompt defined by Copilot Studio or AI Builder
 
-This sample is a Power Apps Component Framework (PCF) control that integrates with Code Interpreter–enabled prompts to render interactive HTML/JavaScript data visuals or generate previews and downloads for PDF, Word, PowerPoint and Excel files.
+This sample is a Power Apps Component Framework (PCF) control that integrates with code interpreter enabled prompts to render interactive HTML/JavaScript data visuals or generate previews and downloads for PDF, Word, PowerPoint and Excel files.
 
 ## Available for
 
@@ -51,18 +51,18 @@ This prompt specifies an interactive chart that returns a mimetype of text/html:
 
 > [!TIP]
 > If you **Test** this prompt, use one of the example GUID values from the first prompt and set it as the **Sample data** for the **RecordId** parameter.
+>
+> :::image type="content" source="media/code-interpreter-set-recordid.png" alt-text="Setting sample data for the recordid parameter":::
 
-:::image type="content" source="media/code-interpreter-set-recordid.png" alt-text="Setting sample data for the recordid parameter":::
+The HTML isn't currently rendered in the **Model response**, but you can view **Run details** to confirm it ran successfully.
 
-The HTML isn't currently rendered in the **Model response**, but you can view the **Run details** to confirm it ran successfully.
-
-The control renders this interactive HTML within the form:
+The PCF control renders this interactive HTML within the form:
 
 :::image type="content" source="media/code-interpreter-comparison-credit-limit-accross-records.png" alt-text="The code interpreter PCF component sample showing generated HTML interactive row summary chart":::
 
 ### Prompt: Example sales proposal document
 
-This prompt specifies a preview and direct download for this generated PDF file.
+This prompt specifies a preview and direct download for a generated PDF file.
 
 :::image type="content" source="media/code-interpreter-sales-proposal-prompt.png" alt-text="foo":::
 
@@ -79,4 +79,4 @@ Generated .docx, .pptx and .xlsx files are also supported, but the sample PCF co
 
 ### App: sample_example app
 
-The solution also includes a pre-configured model-driven application with form available for you to configure the CodeInterpreter PCF control.
+The solution also includes a pre-configured model-driven application with form available for you to configure the CodeInterpreter PCF control. This reduces the number of steps necessary to try the sample.
