@@ -73,6 +73,9 @@ static RetrieveAIModelsExample (IOrganizationService service)
 
 ```http
 GET [Organization URI]/api/data/v9.2/msdyn_aimodels?$select=msdyn_name,msdyn_aimodelid
+Accept: application/json  
+OData-MaxVersion: 4.0  
+OData-Version: 4.0
 ```
 
 **Response**:
