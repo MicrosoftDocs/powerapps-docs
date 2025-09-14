@@ -3,7 +3,7 @@ title: "Power Apps code apps architecture (Preview)"
 description: "Power Apps code apps architecture during development and runtime"
 ms.author: alaug
 author: alaug
-ms.date: 09/10/2025
+ms.date: 09/14/2025
 ms.reviewer: jdaly
 ms.topic: article
 contributors:
@@ -32,7 +32,7 @@ Understanding how these parts collaborate through development, publishing, and r
 An HTML or TypeScript/JavaScript app is a prerequisite to use code apps technology. Code apps support Single-Page Applications (SPAs). The Power Platform CLI and Power Apps SDK enable your app to use Power Platform connectors and be hosted in a Power Platform environment.
 
 
-:::image type="content" source="media/code-app-architecture-development.png" alt-text="Development architecture":::
+:::image type="content" source="media/app-development-architecture.png" alt-text="Development architecture":::
 
 
 |Component|Description  |
@@ -50,7 +50,7 @@ When a code app runs, there are three logical components:
 - The Power Apps host
 
 
-:::image type="content" source="media/code-app-architecture-runtime.png" alt-text="Runtime architecture":::
+:::image type="content" source="media/app-development-runtime.png" alt-text="Runtime architecture":::
 
 1. The Power Apps SDK exposes APIs that your code can use and the generated models and services your app uses to perform data requests via Power Platform connectors.
 1. The Power Apps host manages end-user authentication, app loading, and presenting contextual messages to the user if an app fails to load.
