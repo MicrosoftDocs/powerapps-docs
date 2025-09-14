@@ -52,5 +52,5 @@ When a code app runs, there are three logical components:
 
 :::image type="content" source="media/app-development-runtime.png" alt-text="Runtime architecture":::
 
-1. The Power Apps SDK exposes APIs that your code can use and the generated models and services your app uses to perform data requests via Power Platform connectors.
-1. The Power Apps host manages end-user authentication, app loading, and presenting contextual messages to the user if an app fails to load.
+- The Power Apps SDK exposes APIs that your code can use and the generated models and services your app uses to perform data requests via Power Platform connectors.
+- The Power Apps host manages end-user authentication, app loading, and presenting contextual messages to the user if an app fails to load.
