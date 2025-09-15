@@ -21,6 +21,9 @@ search.audienceType:
 ---
 # Query and visualize hierarchically related data
 
+> [!IMPORTANT]
+> This feature is deprecated. For more information, go to [Hierarchy control in model-driven apps is deprecated](/power-platform/important-changes-coming#hierarchy-control-in-model-driven-apps-is-deprecated).
+
 Get valuable business insights by visualizing hierarchically related data. The hierarchical modelling and visualization capabilities give you a number of benefits:  
   
 -   View and explore complex hierarchical information.  
