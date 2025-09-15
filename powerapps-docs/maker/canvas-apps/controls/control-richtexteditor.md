@@ -5,7 +5,7 @@ author: yogeshgupta698
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 04/17/2024
+ms.date: 09/15/2025
 ms.subservice: canvas-maker
 ms.author: yogupt
 search.audienceType:
@@ -96,6 +96,6 @@ Images in rich text can be represented differently. Some browsers or devices cop
 >  Use a screen clipping or screenshot tool to copy and paste images for the best experience.
 
 ### When editing an app, Alt key doesn't allow interaction with the control
-In [Power Apps Studio](../power-apps-studio.md), pressing [Alt key for quick interaction](../keyboard-shortcuts#alternate-behavior.md) doesn't work. You can only interact with the rich text editor when [previewing the app](../power-apps-studio#preview.md).
+In [Power Apps Studio](../power-apps-studio.md), pressing [Alt key for quick interaction](../keyboard-shortcuts.md#alternate-behavior) doesn't work. You can only interact with the rich text editor when [previewing the app](../power-apps-studio.md#preview).
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
