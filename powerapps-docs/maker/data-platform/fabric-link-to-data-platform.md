@@ -1,14 +1,14 @@
 ---
 title: Configure your environment and link to Microsoft Fabric
 description: This article shows you how to configure your Power Platform environment and link it to Microsoft Fabric.
-author: MilindaV2
-ms.author: Milindav
+author: anibakore-msft
+ms.author: banirud
 ms.reviewer: matp
 contributors: saviegas
 ms.service: powerapps
 ms.subservice: dataverse-maker
 ms.topic: how-to
-ms.date: 06/23/2025
+ms.date: 09/09/2025
 ms.custom: template-how-to
 ---
 # Link to Microsoft Fabric
@@ -19,7 +19,7 @@ You can use an existing Dataverse environment or create a new developer environm
 
 ## Prerequisites
 
-- You must have the Systems Administrator security role in the Power Platform environment to enable **Link to Fabric** or **Synapse Link**. 
+- You must have the System Administrator security role in the Power Platform environment to enable **Link to Fabric** or **Synapse Link**. 
 - You must be an administrator of the Power BI workspace. 
 - If you want the system to create a Power BI workspace, you need to have Power BI Capacity Administrator access to a capacity within the same region as the Dataverse environment.
 - A Power BI premium license or Fabric capacity within the same Azure geographical region as your Dataverse environment is required. If you don’t have Power BI premium license or Fabric capacity within the same geographical region, you can buy a capacity or sign up for a free Fabric trial capacity. More information: [Fabric (preview) trial](/fabric/get-started/fabric-trial)
@@ -34,13 +34,19 @@ Link to Microsoft Fabric from the Power Apps **Tables** area: Select **Analyze**
 1. Sign into [Power Apps](https://make.powerapps.com).
 2. Select the environment you want, select **Tables** on the left navigation pane, and then select **Analyze** > **Link to Microsoft Fabric** on the command bar.
 3. If you're linking to Fabric for the first time, a wizard appears. You can launch Fabric with the same option in subsequent runs.
-4. The wizard validates your Fabric subscription settings the first time. In the event you don't have a Fabric capacity in the same geography or region as your Dataverse environment, the wizard notifies you to get a capacity in the required geography. 
-5. If needed, the wizard asks you to create a one time connection to Microsoft Fabric within the same step. This connection is needed to enable Fabric and Dataverse services to securely access data. You need to sign in and then save the connection to proceed.
-6. The wizard asks you to select an existing Fabric workspace or to create a new one. You can expect to see shortcuts to all your tables within this workspace.
-7. If you don't see workspaces, ask the system to create a workspace. Go to [Troubleshooting common issues](fabric-troubleshoot.md) if you don't see the desired workspace.  
-8. All Dataverse tables where the "Change tracking" property is enabled are linked to Fabric. If this environment is linked to finance and operations apps, you can add finance and operations tables later using the **Manage tables** option. More information: [Manage link to Fabric](#manage-link-to-fabric).
-9. When done, select **Create** in the wizard to create the workspace, create shortcuts, and to perform the initialization for the first time.
-10. When complete, Fabric lakehouse opens in a separate browser tab. 
+4. The wizard starts with **Validate configuration**, which checks your prerequisites and Fabric subscription settings. If you don't have a Fabric capacity in the same geography or region as your Dataverse environment, the wizard notifies you to get a capacity in the required geography.
+5. Next, choose the **Workspace** tab in the wizard. First, select a Fabric workspace. For that workspace, you also choose a connection for the first time. When creating a connection, you can select from three authentication options: **Organizational Account**, **Service Principal**, or **Workspace Identity**.
+
+   - To use **Workspace Identity** as an authentication option, you must first create a workspace identity in Fabric. For more information, go to [Workspace identity in Fabric](/fabric/security/workspace-identity).
+   - You also need to onboard the same workspace identity as an AppUser inside Dataverse. For instructions, go to [Create an application user in Dataverse](/power-platform/admin/manage-application-users?tabs=new#create-an-application-user).
+
+   - For **Service Principal** authentication, you must first add an application user in Dataverse. For instructions, go to [Create an application user in Dataverse](/power-platform/admin/manage-application-users?tabs=new#create-an-application-user). Then, in the wizard, provide the required details: **Tenant ID**, **Client ID**, and **Key** for your service principal to connect to the Fabric workspace.
+
+   This connection enables Fabric and Dataverse services to securely access data.
+6. You can expect to see shortcuts to all your tables within the selected workspace. If you don't see workspaces, ask the system to create a workspace. Go to [Troubleshooting common issues](fabric-troubleshoot.md) if you don't see the desired workspace.
+7. All Dataverse tables where the **Track changes** property is enabled are linked to Fabric. If this environment is linked to finance and operations apps, you can add finance and operations tables later using the **Manage tables** option. More information: [Manage link to Fabric](#manage-link-to-fabric).
+8. When you're done, select **Create** in the wizard to create the workspace, create shortcuts, and to perform the initialization for the first time.
+9. When complete, Fabric lakehouse opens in a separate browser tab.
 
 > [!NOTE]
 >
