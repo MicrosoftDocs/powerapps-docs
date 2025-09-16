@@ -144,4 +144,4 @@ Here are the conditions to check to make sure the feature is available in your e
 ## Related articles
 
 [FAQ about generative pages in model-driven apps](../common/faq-generative-pages-model-driven.md)
-[Legal landing page](https://go.microsoft.com/fwlink/?linkid=2173149)
+[See legal terms](https://go.microsoft.com/fwlink/?linkid=2173149)
