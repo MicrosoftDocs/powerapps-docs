@@ -1,3 +1,15 @@
+---
+title: "How to: Analyze data requests and responses"
+description: "Learn how to filter network traces in browser dev tools to analyze code app data requests and responses."
+ms.author: alaug
+author: alaug
+ms.date: 09/16/2025
+ms.reviewer: jdaly
+ms.topic: how-to
+contributors:
+ - JimDaly
+---
+
 # How to: Analyze data requests and responses
 This article outlines how to review code app data requests and responses in browser dev tools. 
 
