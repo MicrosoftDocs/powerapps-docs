@@ -39,7 +39,7 @@ The following security roles can see the Plan designer entry point on the Power 
 
 For custom security roles, you need the following privileges for each operation in the Plan designer:
 
-| Operation in Plan designer | Privileges [Table name - privilege] |
+| Operation in Plan designer | Privileges (table name - privilege) |
 |---------------------------|-------------------------------------|
 | Create a plan | - Plan - Read<br>- Publisher - Read<br>- Entity - Read<br>- Attribute - Read<br>- Solution - Read<br>- Relationship - Read<br>- Entity - Create |
 | Save tables in plan | - Entity - Read<br>- User settings - Read<br>- Async operations - Read<br>- Entity - Append to<br>- Entity - Create |
