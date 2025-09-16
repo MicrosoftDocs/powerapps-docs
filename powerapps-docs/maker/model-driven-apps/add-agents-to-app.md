@@ -1,7 +1,7 @@
 ---
 title: "Add agents to your model-driven app" 
 description: Learn how to add agents to your model-driven app in Power Apps.
-ms.date: 09/03/2025
+ms.date: 09/16/2025
 ms.reviewer: matp
 ms.topic: how-to
 author: adrianorth
@@ -43,7 +43,8 @@ You can add an agent to any model-driven app of your choosing. We recommend addi
 
 > [!NOTE]
 > To be eligible for addition to an app, an agent must be published. A maker can verify an agent's eligibility to be added to an app via the right-hand properties pane where the requirements for an agent to be added to an app are displayed. The **Add to app** button is disabled for any agents that don't meet the requirements to be eligible for addition.
-:::image type="content" source="media/add-agents-to-app/app-designer-properties-pane.png" alt-text="App Designer Properties pane":::
+> :::image type="content" source="media/add-agents-to-app/app-designer-properties-pane.png" alt-text="App Designer Properties pane":::
+>
 > Up to 10 agents can be added to an app at a time.
 
 1. Sign in to Power Apps, select **Apps**, and then select **Edit** for the app you want to modify.
