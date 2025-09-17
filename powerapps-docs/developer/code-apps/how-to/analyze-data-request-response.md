@@ -1,6 +1,6 @@
 ---
 title: "How to: Analyze data requests and responses (preview)"
-description: "Learn how to filter network traces in browser dev tools to analyze code app data requests and responses with PowerApps code apps."
+description: "Learn how to filter network traces in browser dev tools to analyze code app data requests and responses with Power Apps code apps."
 ms.author: alaug
 author: alaug
 ms.date: 09/17/2025
@@ -16,10 +16,10 @@ This article explains how to review code app data requests and responses in brow
 > [!NOTE]
 > [!INCLUDE [cc-preview-features-definition](../../../includes/cc-preview-features-definition.md)]
 
-Browser developer tools (DevTools) are built-in tools in modern web browsers that let you inspect network traffic, view console logs, debug JavaScript, and examine HTML/CSS. You can open DevTools by pressing F12 or Ctrl+Shift+I, or by right-clicking a page element and choosing "Inspect" (on macOS use Command+Option+I). For detailed guidance see the browser documentation:
+Browser developer tools (DevTools) are built-in tools in modern web browsers that let you inspect network traffic, view console logs, debug JavaScript, and examine HTML/CSS. You can open DevTools by pressing <kbd>F12</kbd> or <kbd>Ctrl+Shift+I</kbd>, or by right-clicking a page element and choosing **Inspect** (on macOS use <kbd>Command+Option+I</kbd>). For detailed guidance, see the browser documentation:
 
 - [Chrome DevTools](https://developer.chrome.com/docs/devtools/)
-- [Microsoft Edge DevTools](https://learn.microsoft.com/microsoft-edge/devtools-guide-chromium/)
+- [Microsoft Edge DevTools](/microsoft-edge/devtools-guide-chromium/)
 - [Firefox DevTools](https://developer.mozilla.org/docs/Tools)
 
 ## Prerequisites
