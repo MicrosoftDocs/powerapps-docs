@@ -40,4 +40,4 @@ You can filter data requests using these strings:
 
 This screenshot shows how to filter requests to connectors using dev tools in Edge using the `apihub.net` filter.
 
-:::image type="content" source="media/code_app_browser_dev_tools_to_see_data_requests.png" alt-text="Image shows using the apihub.net string to filter requests for connectors using dev tools with the Edge browser":::
+:::image type="content" source="media/code-app_browser-dev-tools-data-requests.png" alt-text="Image shows using the apihub.net string to filter requests for connectors using dev tools with the Edge browser":::
