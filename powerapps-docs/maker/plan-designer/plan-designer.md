@@ -25,35 +25,46 @@ Plan designer is a copilot-first development tool that lets you quickly create c
 
 ## Prerequisites
 
-Include a Dataverse database in your environment. Learn more in [Add a Microsoft Dataverse database](/power-platform/admin/create-database).
+Make sure your environment has a Dataverse database. Learn more in [Add a Microsoft Dataverse database](/power-platform/admin/create-database).
 
-If your environment doesn't meet the prerequisites and you have access to developer environments, you're routed to your own developer environment where you have permissions to create Dataverse tables. Learn more in [Create a developer environment with the Power Apps Developer Plan](/power-platform/developer/create-developer-environment).
+If your environment doesn't meet the prerequisites and you can use developer environments, you're routed to your own developer environment where you have permission to create Dataverse tables. Learn more in [Create a developer environment with the Power Apps Developer Plan](/power-platform/developer/create-developer-environment).
 
-If your environment doesn't meet the prerequisites and you don't have access to existing developer environments or the ability to create new ones, you can't create plans in your current environment. In this situation, switch to an environment where you have the necessary permissions to create tables and start building your plan there.
+If your environment doesn't meet the prerequisites and you can't use existing developer environments or create new ones, you can't create plans in your current environment. In this situation, switch to an environment where you have permission to create tables and start building your plan there.
 
 The following security roles can see the Plan designer entry point on the Power Apps home page:
 
 - System admin
-- System customizer [security role](/power-platform/admin/security-roles-privileges).
+- System customizer [security role](/power-platform/admin/security-roles-privileges)
 - Environment maker. Environment makers are redirected to their own developer environment when they save tables.
 
 For custom security roles, you need the following privileges for each operation in the Plan designer:
 
-| Operation in Plan designer | Privileges (table name - privilege) |
-|---------------------------|-------------------------------------|
-| Create a plan | - Plan - Read<br>- Publisher - Read<br>- Entity - Read<br>- Attribute - Read<br>- Solution - Read<br>- Relationship - Read<br>- Entity - Create |
-| Save tables in plan | - Entity - Read<br>- User settings - Read<br>- Async operations - Read<br>- Entity - Append to<br>- Entity - Create |
-| Share a plan | - Plan - Share |
+| **Operation in Plan designer** | **Table**        | **Privilege** |
+|--------------------------------|------------------|---------------|
+| Create a plan                  | Plan             | Read          |
+|                                | Publisher        | Read          |
+|                                | Entity           | Read          |
+|                                | Attribute        | Read          |
+|                                | Solution         | Read          |
+|                                | Relationship     | Read          |
+|                                | Entity           | Create        |
+| Save tables in plan            | Entity           | Read          |
+|                                | User settings    | Read          |
+|                                | Async operations | Read          |
+|                                | Entity           | Append to     |
+|                                | Entity           | Create        |
+| Share a plan                   | Plan             | Share         |
+
 
 
 
 ## Availability
 
-Plan designer is generally available. Check if this feature is available in your region. Learn more in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/availability-reports/?report=copilotfeaturereport).
+Plan designer is generally available. Check if the feature is available in your region. Learn more in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/availability-reports/?report=copilotfeaturereport).
 
 ### Turn on preview features for Plan designer
 
-Some features in Plan designer are only available in preview. When you turn on the preview experience for a plan, the entire plan is generated using the preview experience, which can include multiple preview features at any time.
+Some features in Plan designer are only available in preview. When you turn on the preview experience for a plan, the plan is generated using the preview experience, which can include multiple preview features at any time.
 
 To turn on preview features, select the **Include preview features** option when you enter your business problem.
 
@@ -64,7 +75,7 @@ If you have a plan and want to switch between the preview and generally availabl
 :::image type="content" source="media/overview-plan-designer/turn-off-preview.png" alt-text="Screenshot of turning off preview feature for Plan designer.":::
 
 > [!NOTE]
-> When you switch the preview experience for Plan designer on or off, some content in the plan can be modified, regenerated, or deleted.
+> When you switch the preview experience for Plan designer on or off, some content in the plan can change, regenerate, or be deleted.
 
 
 Preview Copilot features are available by default, but admins can turn them off for a specific environment or tenant. Learn more in [Copilot in Power Apps overview (preview)](../canvas-apps/ai-overview.md#disable-copilot-in-power-apps).
