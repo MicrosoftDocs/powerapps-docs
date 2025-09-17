@@ -138,7 +138,7 @@ This article walks through how to set up a blank app from [Vite](https://vite.de
 1. **Install** the Power SDK using:
 
    ```powershell
-   npm install --save-dev "@microsoft/power-apps"
+   npm install --save "@microsoft/power-apps"
    ```
 
 1. **Open** the `package.json`, and update the existing line:
