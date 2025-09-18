@@ -29,7 +29,7 @@ To use the Plan designer in Power Apps, follow these steps:
 
 **1. Environment requirments** 
 
-1. **Dataverse Database Required:** Make sure your environment includes a Microsoft Dataverse database. If you need help adding one, see [Add a Dataverse table](power-platform/admin/create-database).
+1. **Dataverse Database Required:** Make sure your environment includes a [Microsoft Dataverse database](power-platform/admin/create-database).
 1. **Tenant-level setting enabled**
 1. **Environment must be in an eligible locale**
 
