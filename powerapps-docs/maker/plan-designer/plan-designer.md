@@ -35,7 +35,7 @@ To use the Plan designer in Power Apps, follow these steps:
 
 **What If You Don’t Meet the Prerequisites?**
 
-1. **Developer Environment Option:** If your current environment doesn’t meet the requirements but you can use developer environments, you’ll be automatically routed to your own developer environment. There, you’ll have permission to create Dataverse tables. Learn more in [Create a developer environment](power-platform/developer/create-developer-environment).
+1. **Developer Environment Option**: If your current environment doesn’t meet the requirements but you can use developer environments, you’ll be automatically routed to your own developer environment. There, you’ll have permission to create Dataverse tables. Learn more in [Create a developer environment](power-platform/developer/create-developer-environment).
 1. **No Developer Environment Available:** If you can’t use or create a developer environment, you won’t be able to create plans in your current environment. In this case, switch to an environment where you have permission to create tables and start building your plan there.
 
 **Who Can Access the Plan designer?**
@@ -43,10 +43,10 @@ To use the Plan designer in Power Apps, follow these steps:
 The following security roles can see the Plan designer entry point on the Power Apps home page:
 
 - **System admin**
-- **System customizer:** Learn more about this (role) (/power-platform/admin/security-roles-privileges)
-- **Environment maker:** Environment makers are redirected to their own developer environment when they save tables.
+- **[System customizer](/power-platform/admin/security-roles-privileges)**
+- **Environment maker**: Environment makers are redirected to their own developer environment when they save tables.
 
-- For custom security roles, you need the following privileges for each operation in the Plan designer:
+- **For custom security roles**: You need the following privileges for each operation in the Plan designer:
 
     | **Operation in Plan designer** | **Table**        | **Privilege** |
     |--------------------------------|------------------|---------------|
@@ -63,8 +63,6 @@ The following security roles can see the Plan designer entry point on the Power 
     |                                | Entity           | Append to     |
     |                                | Entity           | Create        |
     | Share a plan                   | Plan             | Share         |
-
-
 
 
 ## Availability
