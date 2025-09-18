@@ -27,7 +27,7 @@ Plan designer is a copilot-first development tool that lets you quickly create c
 
 To use the Plan designer in Power Apps, follow these steps:
 
-**1. Environment requirments** 
+**1. Environment requirements** 
 
 1. **Dataverse Database Required:** Make sure your environment includes a [Microsoft Dataverse database](/power-platform/admin/create-database).
 1. **Tenant-level setting enabled**
@@ -35,7 +35,7 @@ To use the Plan designer in Power Apps, follow these steps:
 
 **2. What If You Don’t Meet the Prerequisites?**
 
-1. **Developer Environment Option**: If your current environment doesn’t meet the requirements but you can use developer environments, you’ll be automatically routed to your own developer environment. There, you’ll have permission to create Dataverse tables. Learn more in [Create a developer environment](/power-platform/developer/create-developer-environment).
+1. **Developer Environment Option**: If your current environment doesn’t meet the requirements but you can use developer environments, you're automatically routed to your own developer environment. There, you have permission to create Dataverse tables. Learn more in [Create a developer environment](/power-platform/developer/create-developer-environment).
 1. **No Developer Environment Available:** If you can’t use or create a developer environment, you won’t be able to create plans in your current environment. In this case, switch to an environment where you have permission to create tables and start building your plan there.
 
 **3. Who Can Access the Plan designer?**
