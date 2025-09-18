@@ -53,10 +53,10 @@ Link to Microsoft Fabric from the Power Apps **Tables** area: Select **Analyze**
        - Go to **Power Platform admin center** > **Users (See all)** > **App users list**.  
        - Select **+ New app user**, then **+ Add an app**, search for the workspace name you noted earlier(srr-athena-test in the above example), and add it.  
        - Assign the correct **Business unit** and **System Administrator** role, then select **Create**.  
-     For detailed steps, go to [Create an application user in Dataverse](/power-platform/admin/manage-application-users?tabs=new#create-an-application-user).
+     For detailed steps, go to the [Create an application user in Dataverse](/power-platform/admin/manage-application-users?tabs=new#create-an-application-user) step.
 
    - **Service Principal**:  
-       To use this option, go to the [Create an application user](#create-an-application-user) paragraph to create a service principal. Follow these steps:  
+       To use this option, go to the create an application user with workspace identity previous step to create a service principal. Then, follow these steps:  
        1. First, add the service principal as an application user in Dataverse following the same process described in the Workspace Identity section.  
        2. After adding the application user, return to the **Link to Fabric** wizard.  
        3. In the connection setup, provide the following details for your service principal:  
