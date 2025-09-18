@@ -8,7 +8,7 @@ contributors: saviegas
 ms.service: powerapps
 ms.subservice: dataverse-maker
 ms.topic: how-to
-ms.date: 09/09/2025
+ms.date: 09/18/2025
 ms.custom: template-how-to
 ---
 # Link to Microsoft Fabric
@@ -19,13 +19,12 @@ You can use an existing Dataverse environment or create a new developer environm
 
 ## Prerequisites
 
-- You must have the System Administrator security role in the Power Platform environment to enable **Link to Fabric** or **Synapse Link**. 
+- You must have the System Administrator security role in the Power Platform environment to enable **Link to Fabric** or **Synapse Link**. This role is also required to add application users in your environment using the Power Platform admin center who need access to work with this feature.
 - You must be an administrator of the Power BI workspace. 
 - If you want the system to create a Power BI workspace, you need to have Power BI Capacity Administrator access to a capacity within the same region as the Dataverse environment.
 - A Power BI premium license or Fabric capacity within the same Azure geographical region as your Dataverse environment is required. If you don’t have Power BI premium license or Fabric capacity within the same geographical region, you can buy a capacity or sign up for a free Fabric trial capacity. More information: [Fabric (preview) trial](/fabric/get-started/fabric-trial)
 - Your administrator needs to grant you access to create Fabric lakehouses and artifacts. You can find these settings in the  Fabric admin portal. Go to **Tenant Settings** > **Microsoft Fabric** > **Users can create Fabric items**, **Tenant settings** > **Workspace settings** > **Create workspaces** as well as **Tenant settings** > **oneLake settings** > **Users can access data stored in OneLake with apps external to Fabric**.
 - If you plan to use workspace identity authentication, you must be a workspace admin to create and manage a workspace identity. The workspace you're creating the identity for can't be a My Workspace.
-- You should be able to add an application user in your environment using the Power Platform admin center.
 - To confirm whether you have access to the required premium capacity, go to [Power BI](https://app.powerbi.com), open the workspace, and select **Workspace settings** > **Premium**. Make sure that **Trial** or **Premium capacity** is selected.
    :::image type="content" source="media/fabric/fabric-trial-capacity.png" alt-text="You need either Trial or Premium capacity for your Power BI workspace." lightbox="media/fabric/fabric-trial-capacity.png":::
 
@@ -45,31 +44,30 @@ Link to Microsoft Fabric from the Power Apps **Tables** area: Select **Analyze**
        2. Go to **Workspace settings** > **Workspace identity**.  
        3. Select **+ Workspace identity** to create it.  
           - Note the name of the workspace identity (it matches the workspace name).  
-          <img width="942" height="867" alt="workspaceidentity" src="https://github.com/user-attachments/assets/24bad0d0-8f63-4c59-9e6d-e7db5933269e" />
-
-            *Figure: Workspace identity page in Fabric. The name (e.g., `srr-athena-test`) will be used later when adding the application user in Dataverse.*  
-       4. For more information, see [Workspace identity in Fabric](https://learn.microsoft.com/en-us/fabric/security/workspace-identity).  
+          :::image type="content" source="media/fabric/fabric-link-workspace-identity.png" alt-text="Workspace identity page in Fabric. The name, such as `srr-athena-test` in this example, is used later when adding the application user in Dataverse.":::
+ 
+       4. For more information, go to [Workspace identity in Fabric](/fabric/security/workspace-identity).  
 
    - **Create an application user with worskpace identity**:  
-     After creating the identity, add it as an Application user in Dataverse:  
+     After you create the identity, add it as an application user in Dataverse:  
        - Go to **Power Platform admin center** > **Users (See all)** > **App users list**.  
        - Select **+ New app user**, then **+ Add an app**, search for the workspace name you noted earlier(srr-athena-test in the above example), and add it.  
-       - Assign the correct **Business unit** and **System Administrator** role, then click **Create**.  
-     For detailed steps, see [Create an application user in Dataverse](https://learn.microsoft.com/en-us/power-platform/admin/manage-application-users?tabs=new#create-an-application-user).
+       - Assign the correct **Business unit** and **System Administrator** role, then select **Create**.  
+     For detailed steps, go to [Create an application user in Dataverse](/power-platform/admin/manage-application-users?tabs=new#create-an-application-user).
 
    - **Service Principal**:  
-       To use this option, refer to the [Create an application user](#create-an-application-user) paragraph above to create a service principal. Follow these steps:  
+       To use this option, go to the [Create an application user](#create-an-application-user) paragraph to create a service principal. Follow these steps:  
        1. First, add the service principal as an application user in Dataverse following the same process described in the Workspace Identity section.  
        2. After adding the application user, return to the **Link to Fabric** wizard.  
        3. In the connection setup, provide the following details for your service principal:  
-          - **Tenant ID**: Your Azure tenant identifier  
-          - **Client ID**: The application (client) ID of your service principal  
-          - **Key**: The client secret or certificate for authentication  
+          - **Tenant ID**: Your Azure tenant identifier.
+          - **Client ID**: The application (client) ID of your service principal.
+          - **Key**: The client secret or certificate for authentication.
        4. Save the connection to complete the setup.
-          
+
    - **Organizational Account**:  
-     Provide your credentials and save the connection. To change credentials later, click **Switch account** and provide new credentials.
-     
+     Provide your credentials and save the connection. To change credentials later, select **Switch account** and provide new credentials.
+
 6. You can expect to see shortcuts to all your tables within the selected workspace. If you don't see workspaces, ask the system to create a workspace. Go to [Troubleshooting common issues](fabric-troubleshoot.md) if you don't see the desired workspace.
 7. All Dataverse tables where the **Track changes** property is enabled are linked to Fabric. If this environment is linked to finance and operations apps, you can add finance and operations tables later using the **Manage tables** option. More information: [Manage link to Fabric](#manage-link-to-fabric).
 8. When you're done, select **Create** in the wizard to create the workspace, create shortcuts, and to perform the initialization for the first time.
