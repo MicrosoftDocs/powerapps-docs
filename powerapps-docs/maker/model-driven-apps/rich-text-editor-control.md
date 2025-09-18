@@ -490,7 +490,7 @@ The following HTML tags are either no longer supported or are replaced by a mode
 | &lt;noframes&gt; | Fallback for no frame support | Not needed |
 | &lt;plaintext&gt; | Displays plain text | &lt;pre&gt; |
 | &lt;s&gt; | Strikethrough text | &lt;del&gt;, CSS |
-| &lt;strike&gt; | Strikethrough text | &lt;del&gt:, &lt;s&gt; |
+| &lt;strike&gt; | Strikethrough text | &lt;del&gt;, &lt;s&gt; |
 | &lt;tt&gt; | Teletype text | &lt;code&gt;, CSS |
 | &lt;u&gt; | Underlined text | CSS text-decoration |
 | &lt;xmp&gt; | Preformatted text | &lt;pre&gt; |
