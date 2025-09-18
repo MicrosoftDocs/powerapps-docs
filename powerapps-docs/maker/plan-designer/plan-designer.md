@@ -42,11 +42,10 @@ To use the Plan designer in Power Apps, follow these steps:
 
 The following security roles can see the Plan designer entry point on the Power Apps home page:
 
-- **System admin**
-- **[System customizer](/power-platform/admin/security-roles-privileges)**
-- **Environment maker**: Are redirected to their own developer environment when they save tables.
-
-- **For custom security roles**: You need the following privileges for each operation in the Plan designer:
+- System admin
+- [System customizer](/power-platform/admin/security-roles-privileges)
+- Environment maker: Are redirected to their own developer environment when they save tables.
+- For custom security roles: You need the following privileges for each operation in the Plan designer:
 
     | **Operation in Plan designer** | **Table**        | **Privilege** |
     |--------------------------------|------------------|---------------|
