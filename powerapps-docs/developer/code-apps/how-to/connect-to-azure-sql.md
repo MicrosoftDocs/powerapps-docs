@@ -1,5 +1,5 @@
 ---
-title: "How to: Connect your code app to Azure SQL"
+title: "How to: Connect your code app to Azure SQL (preview)"
 description: "Learn how to connect your code app to Azure SQL"
 ms.author: alaug
 author: alaug
@@ -9,9 +9,12 @@ ms.topic: how-to
 contributors:
  - JimDaly
 ---
-# How to: Connect your code app to Azure SQL
+# How to: Connect your code app to Azure SQL (preview)
 
-This guide walks through how to set up an Azure SQL Database and connect it to a Power Apps code app using the Power SDK. 
+This guide walks through how to set up an Azure SQL Database and connect it to a Power Apps code app using the Power SDK.
+
+> [!NOTE]
+> [!INCLUDE [cc-preview-features-definition](../../../includes/cc-preview-features-definition.md)]
 
 This guide covers:
 
@@ -229,11 +232,10 @@ This guide covers:
    
    PRINT 'Projects-only database schema created successfully with sample data!';
    ```
-   
+
 1. Select the green play icon (<kbd>Ctrl-Shift-E</kbd>) to **Execute the query**.
 
 1. You should see no errors in the **QUERY RESULTS** output.
-
 
 ### Initialize your Vite App
 
@@ -283,7 +285,7 @@ This guide covers:
    ```
 
 1. **Save** the file.
-1. Open the `tsconfig.app.json`, and set the value of `verbatimModuleSyntax` to be `false` . This setting is currently required to work with the Power SDK Generated code. (See [[Bug\] Power SDK generated code causes error with verbatimModuleSyntax enabled · Issue #14 ](https://github.com/microsoft/PowerAppsCodeApps/issues/14))
+1. Open the `tsconfig.app.json`, and set the value of `verbatimModuleSyntax` to be `false` . This setting is currently required to work with the Power SDK Generated code. (See [[Bug\] Power SDK generated code causes error with verbatimModuleSyntax enabled · Issue #14](https://github.com/microsoft/PowerAppsCodeApps/issues/14))
 1. Enter the following to test your vite app:
 
    ```powershell
@@ -376,6 +378,7 @@ This guide covers:
 
 1. **Save** the file
 1. You can now test the code app by using:
+
     ```
     npm run dev
     ```
@@ -430,8 +433,7 @@ This guide covers:
    pac code add-data-source -a "shared_sql" -c "aaaa0000bb11222233cc444444dddddd"  -d "sql-codeapps-dev.database.windows.net,sqldb-codeapps-dev" -sp "dbo.GetAllProjects"
    ```
 
-1. Open the `Services` and `Models` folder, and observer the newly generated code. 
-   
+1. Open the `Services` and `Models` folder, and observer the newly generated code.
 
 ### Add Table of Projects
 
@@ -872,10 +874,10 @@ You might experience these issues when using Azure SQL Databases.
 - [Can't Connect to Azure SQL Database](#cant-connect-to-azure-sql-database)
 - [SQL Query Execution Errors](#sql-query-execution-errors)
 
-
 #### Can't Connect to Azure SQL Database
 
 **Symptoms:**
+
 - Connection timeout errors
 - Authentication failures when connecting from VS Code SQL extension
 

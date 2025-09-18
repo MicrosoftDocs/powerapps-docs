@@ -1,5 +1,5 @@
 ---
-title: "How to: Create a code app from scratch"
+title: "How to: Create a code app from scratch (preview)"
 description: "Learn how to create a code app from scratch"
 ms.author: alaug
 author: alaug
@@ -9,9 +9,12 @@ ms.topic: how-to
 contributors:
  - JimDaly
 ---
-# How to: Create a code app from scratch
+# How to: Create a code app from scratch (preview)
 
 This article walks through how to set up a blank app from [Vite](https://vite.dev/) and turn it into a Power Apps code app. It covers configuring a TypeScript app using the Power Platform SDK
+
+> [!NOTE]
+> [!INCLUDE [cc-preview-features-definition](../../../includes/cc-preview-features-definition.md)]
 
 ## Prerequisites
 
@@ -114,7 +117,7 @@ This article walks through how to set up a blank app from [Vite](https://vite.de
    pac auth create
    ```
 
-   Sign-in using your Power Platform account when prompted. 
+   Sign-in using your Power Platform account when prompted.
 
    > [!NOTE]
    > You can also use the [Power Platform Tools VS Code Extension](/power-platform/developer/howto/install-vs-code-extension) to do authenticate.
@@ -138,7 +141,7 @@ This article walks through how to set up a blank app from [Vite](https://vite.de
 1. **Install** the Power SDK using:
 
    ```powershell
-   npm install --save-dev "@microsoft/power-apps"
+   npm install --save "@microsoft/power-apps"
    ```
 
 1. **Open** the `package.json`, and update the existing line:
