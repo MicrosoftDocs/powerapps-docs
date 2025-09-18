@@ -1,5 +1,5 @@
 ---
-title: "How to: Connect your code app to data"
+title: "How to: Connect your code app to data (preview)"
 description: "Learn how to connect your code app to data"
 ms.author: alaug
 author: alaug
@@ -9,9 +9,12 @@ ms.topic: how-to
 contributors:
  - JimDaly
 ---
-# How to: Connect your code app to data
+# How to: Connect your code app to data (preview)
 
 Code apps enable connecting to Power Platform connectors.
+
+> [!NOTE]
+> [!INCLUDE [cc-preview-features-definition](../../../includes/cc-preview-features-definition.md)]
 
 Use the following steps:
 
@@ -25,7 +28,6 @@ Use the following steps:
 > [!IMPORTANT]
 > The following connectors are officially supported: SQL, SharePoint, Office 365 Users, Office 365 Groups, Azure Data Explorer, OneDrive for work or school, Power Apps for Makers, Microsoft Teams, MSN Weather, and Microsoft Translator V2. [Dataverse create, read, update, and delete operations](./connect-to-dataverse.md) are officially supported. Other connectors are expected to work but are untested.
 
-
 ## Create and set up connections in Power Apps
 
 Start by creating and configuring connections at [Power Apps](https://make.powerapps.com). Copy connection metadata from there for use in later steps.
@@ -38,7 +40,6 @@ Start by creating and configuring connections at [Power Apps](https://make.power
    Go to [Power Apps](https://make.powerapps.com) and navigate to the **Connections** page from the left-hand navigation.
 
    :::image type="content" source="media/powerapps-create-connection.png" alt-text="Power Apps Connections page showing New connection button":::
-
 
 #### Example Create an Office 365 Users connection
 
