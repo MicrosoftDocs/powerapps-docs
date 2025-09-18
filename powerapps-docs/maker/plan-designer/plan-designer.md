@@ -25,35 +25,44 @@ Plan designer is a copilot-first development tool that lets you quickly create c
 
 ## Prerequisites
 
-Make sure your environment has a Dataverse database. Learn more in [Add a Microsoft Dataverse database](/power-platform/admin/create-database).
+To use the Plan designer in Power Apps, follow these steps:
 
-If your environment doesn't meet the prerequisites and you can use developer environments, you're routed to your own developer environment where you have permission to create Dataverse tables. Learn more in [Create a developer environment with the Power Apps Developer Plan](/power-platform/developer/create-developer-environment).
+**Environment eligibility**
 
-If your environment doesn't meet the prerequisites and you can't use existing developer environments or create new ones, you can't create plans in your current environment. In this situation, switch to an environment where you have permission to create tables and start building your plan there.
+1. **Dataverse Database Required:** Make sure your environment includes a Microsoft Dataverse database. If you need help adding one, see [Add a Dataverse table](power-platform/admin/create-database).
+1. **Tenant-level setting enabled**
+1. **Environment must be in an eligible locale**
+
+**What If You Don’t Meet the Prerequisites?**
+
+1. **Developer Environment Option:** If your current environment doesn’t meet the requirements but you can use developer environments, you’ll be automatically routed to your own developer environment. There, you’ll have permission to create Dataverse tables. Learn more in [Create a developer environment](power-platform/developer/create-developer-environment).
+1. **No Developer Environment Available:** If you can’t use or create a developer environment, you won’t be able to create plans in your current environment. In this case, switch to an environment where you have permission to create tables and start building your plan there.
+
+**Who Can Access the Plan designer?**
 
 The following security roles can see the Plan designer entry point on the Power Apps home page:
 
-- System admin
-- System customizer [security role](/power-platform/admin/security-roles-privileges)
-- Environment maker. Environment makers are redirected to their own developer environment when they save tables.
+- **System admin**
+- **System customizer:** Learn more about this (role) (/power-platform/admin/security-roles-privileges)
+- **Environment maker:** Environment makers are redirected to their own developer environment when they save tables.
 
-For custom security roles, you need the following privileges for each operation in the Plan designer:
+- For custom security roles, you need the following privileges for each operation in the Plan designer:
 
-| **Operation in Plan designer** | **Table**        | **Privilege** |
-|--------------------------------|------------------|---------------|
-| Create a plan                  | Plan             | Read          |
-|                                | Publisher        | Read          |
-|                                | Entity           | Read          |
-|                                | Attribute        | Read          |
-|                                | Solution         | Read          |
-|                                | Relationship     | Read          |
-|                                | Entity           | Create        |
-| Save tables in plan            | Entity           | Read          |
-|                                | User settings    | Read          |
-|                                | Async operations | Read          |
-|                                | Entity           | Append to     |
-|                                | Entity           | Create        |
-| Share a plan                   | Plan             | Share         |
+    | **Operation in Plan designer** | **Table**        | **Privilege** |
+    |--------------------------------|------------------|---------------|
+    | Create a plan                  | Plan             | Read          |
+    |                                | Publisher        | Read          |
+    |                                | Entity           | Read          |
+    |                                | Attribute        | Read          |
+    |                                | Solution         | Read          |
+    |                                | Relationship     | Read          |
+    |                                | Entity           | Create        |
+    | Save tables in plan            | Entity           | Read          |
+    |                                | User settings    | Read          |
+    |                                | Async operations | Read          |
+    |                                | Entity           | Append to     |
+    |                                | Entity           | Create        |
+    | Share a plan                   | Plan             | Share         |
 
 
 
