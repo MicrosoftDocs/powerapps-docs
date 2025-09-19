@@ -55,6 +55,9 @@ If you have the System Administrator or System Customizer role, you can configur
 
 **More information**: [Configure tables and columns](configure.md#configure-tables-and-columns)
 
+## Audit details
+The Audit table details can be found in the [AttributeAuditDetail Class](https://learn.microsoft.com/dotnet/api/microsoft.crm.sdk.messages.attributeauditdetail?view=dataverse-sdk-latest). The **CreatedOn** attribute property was expanded to include milliseconds, eg 2025-09-13T00:29:49.222Z to capture the correct sequence of audit events in multi-operations transaction.
+
 ## Retrieve audit history
 
 Audit history data is stored in the [Auditing (Audit) table](../reference/entities/audit.md). Use the following messages to retrieve audit history data:
