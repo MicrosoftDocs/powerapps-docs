@@ -6,38 +6,36 @@ summary: Learn how to write applications and web pages that can access Dataverse
 metadata:
   title: Dataverse developer documentation
   description: Provides access to highlighted areas within the Dataverse developer documentation
-  services: service  
+  services: service
   ms.subservice: dataverse-developer
-  ms.topic: landing-page 
+  ms.topic: landing-page
   ms.collection: collection
   author: phecke
   ms.author: pehecke
-  ms.date: 03/28/2021 
+  ms.date: 09/19/2025
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
 landingContent:
-
-  # Card 
+  # Card
   - title: Get started
     linkLists:
-       - linkListType: overview
-         links:
+      - linkListType: overview
+        links:
           - text: "Developers: Get started"
             url: get-started-developers.md
           - text: "Developers: Understand terminology"
             url: understand-terminology.md
-       - linkListType: learn
-         links:
+      - linkListType: learn
+        links:
           - text: Introduction to Dataverse for developers
             url: /training/modules/intro-cds-developers-power-platform/
-         
-          
+
   # Card
   - title: Work with data
     linkLists:
-       - linkListType: overview
-         links:
+      - linkListType: overview
+        links:
           - text: Work with data using code
             url: work-with-data.md
           - text: Types and operations (Web API)
@@ -80,7 +78,7 @@ landingContent:
         links:
           - text: Write and register a plug-in
             url: ./tutorial-write-plug-in.md
-  
+
   # Card
   - title: Deploy and publish
     linkLists:
@@ -101,9 +99,9 @@ landingContent:
 
     # Card
   - title: Create client applications
-    linkLists: 
-       - linkListType: overview
-         links:
+    linkLists:
+      - linkListType: overview
+        links:
           - text: Authentication and the web services
             url: authentication.md
           - text: Build web applications using Server-to-Server (S2S) authentication
@@ -112,8 +110,8 @@ landingContent:
             url: ./oauth-cross-origin-resource-sharing-connect-single-page-application.md
           - text: Build Windows client applications using the XRM tools
             url: xrm-tooling/build-windows-client-applications-xrm-tools.md
-       - linkListType: tutorial
-         links:  
+      - linkListType: tutorial
+        links:
           - text: Register an app with Microsoft Entra ID
             url: walkthrough-register-app-azure-active-directory.md
 
@@ -130,7 +128,7 @@ landingContent:
             url: ./powerapps-cli.md
           - text: Community tools
             url: ./community-tools.md
-  
+
   # Card
   - title: Table and API reference
     linkLists:
@@ -145,7 +143,6 @@ landingContent:
           - text: XRM Tooling API Reference
             url: /dotnet/api/microsoft.xrm.tooling.connector
 
-
   # Card
   - title: Related resources
     linkLists:
@@ -157,3 +154,5 @@ landingContent:
             url: ../model-driven-apps/index.yml
           - text: Power Apps component framework
             url: ../component-framework/overview.md
+          - text: Code apps (preview)
+            url: ../code-apps/index.yml
