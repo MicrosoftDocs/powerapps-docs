@@ -1,7 +1,7 @@
 ---
 title: Add the rich text editor control to a model-driven app
 description: Learn how to add and customize the rich text editor control in Power Apps model-driven apps to create and edit formatted text.
-ms.date: 07/14/2025
+ms.date: 09/04/2025
 ms.update-cycle: 180-days
 ms.topic: how-to
 ms.author: saperlmu
@@ -458,10 +458,6 @@ Rich text editor limitations include the following:
 - You can't use rich text editor content from any external sources like Microsoft Word, Excel, and so forth.
 - The following file types for attachments are supported out of the box: .aac, .avi, .csv, .doc, .docx, .gif, .html, .jpeg, .mid, .midi, .mp3, .mp4, .mpeg, .msg, .pdf, .png, .ppt, .pptx, .svg, .txt, .vsd, .wav, .xls, .xlsm, and .xlsx. You can configure the allowed extensions for your environment in your advanced settings by going to **Administration** > **General** > **Set blocked file extensions for attachments** and removing the extensions you want to allow.
 - Non-Microsoft plugins aren't supported.
-
-Knowledge management:
-
-- A preview tab isn't currently available.
 
 Email templates and signatures:
 

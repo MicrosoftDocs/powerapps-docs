@@ -1,0 +1,25 @@
+items:
+  - name: Power Apps code apps
+    items:
+      - name: Overview
+        href: overview.md
+      - name: "Quickstart: Create your first code app"
+        href: quickstart.md
+      - name: Architecture
+        href: architecture.md
+      - name: System limits and configuration
+        href: system-limits-configuration.md
+      - name: How-to guides
+        items:
+          - name: "Create an app from scratch"
+            href: how-to/create-an-app-from-scratch.md
+          - name: "Connect to data"
+            href: how-to/connect-to-data.md
+          - name: "Connect to Dataverse"
+            href: how-to/connect-to-dataverse.md
+          - name: "Connect to Azure SQL"
+            href: how-to/connect-to-azure-sql.md
+          - name: "Create a Basic Asset Management API with Azure Functions"
+            href: how-to/create-basic-asset-management-api-azure-functions.md
+          - name: "Analyze data requests and responses"
+            href: how-to/analyze-data-request-response.md
