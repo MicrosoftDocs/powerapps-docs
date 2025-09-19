@@ -504,7 +504,13 @@ The following HTML attributes are either no longer supported or are replaced by 
 | align    | Many      | CSS text-align, float |
 | alink, vlink, link | &lt;body&gt; | CSS :link, :visited |
 | background | &lt;body&gt;, &lt;table&gt; | CSS background-image |
-| bgcolor |
+| bgcolor | Many | CSS background-color |
+| border | &lt;img&gt;, &lt;table&gt; |
+| height, width | &lt;body&gt;, &lt;td&gt; | CSS height, width |
+| hspace, vspace | &lt;img&gt; |
+| language | &lt;script&gt; | type="text/javascript" |
+| nowrap | &lt;td&gt; | CSS white-space: nowrap |
+| type (on &lt;li&gt;, &lt;ul&gt;) | Lists | CSS list-style-type |
 
 
 ## Frequently asked questions
