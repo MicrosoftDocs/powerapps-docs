@@ -1,7 +1,7 @@
 ---
 title: Disable the Dataverse model context protocol (MCP) server
 description: Step-by-step instructions about how to disable a Microsoft Dataverse model context protocol server using advanced connector policies. 
-author: anibakore-msft
+author: anibakore-msft, spatankar
 ms.component: cds
 ms.topic: how-to
 ms.date: 07/07/2025
@@ -11,7 +11,7 @@ ms. reviewer: matp
 search.audienceType: 
   - maker
 ---
-# Disable the Dataverse MCP server using advanced connector policies (preview)
+# Configure the Dataverse MCP server using advanced connector policies (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
@@ -21,6 +21,10 @@ Microsoft Dataverse model context protocol (MCP) is provided through the connect
 
 ## Prerequisites
 
+- To enable Dataverse MCP server, navigate to [Power Platform Admin Center](https://admin.powerplatform.microsoft.com/). Click on **Manage** tab and then select **Environments**.
+- Select the **Environment Name** for which you want to turn the Dataverse MCP server and then select **Settings**.
+- Under Settings, navigate to **Product** and then select **Features**.
+- Under Features scroll down to locate **Dataverse MCP server** and toggle it on. 
 - A Power Platform with Dataverse environment setup with MCP via connector as described in [Connect to Dataverse with model context protocol (preview)](data-platform-mcp.md).
 - Power Platform administrator role in order to manage environment group and connector policies.
 - The steps described in this article require that the environment be a Managed Environment.
