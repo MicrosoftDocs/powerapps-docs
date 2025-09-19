@@ -26,7 +26,7 @@ You can use an existing Dataverse environment or create a new developer environm
 - Your administrator needs to grant you access to create Fabric lakehouses and artifacts. You can find these settings in the  Fabric admin portal. Go to **Tenant Settings** > **Microsoft Fabric** > **Users can create Fabric items**, **Tenant settings** > **Workspace settings** > **Create workspaces** as well as **Tenant settings** > **oneLake settings** > **Users can access data stored in OneLake with apps external to Fabric**.
 - If you plan to use workspace identity authentication, you must be a workspace admin to create and manage a workspace identity. The workspace you're creating the identity for can't be a My Workspace.
 - To confirm whether you have access to the required premium capacity, go to [Power BI](https://app.powerbi.com), open the workspace, and select **Workspace settings** > **Premium**. Make sure that **Trial** or **Premium capacity** is selected.
-   :::image type="content" source="media/fabric/fabric-trial-capacity.png" alt-text="You need either Trial or Premium capacity for your Power BI workspace." lightbox="media/fabric/fabric-trial-capacity.png":::
+   :::image type="content" source="media/Fabric/fabric-trial-capacity.png" alt-text="You need either Trial or Premium capacity for your Power BI workspace." lightbox="media/Fabric/fabric-trial-capacity.png":::
 
 ## Create a link to Fabric
 
@@ -44,7 +44,7 @@ Link to Microsoft Fabric from the Power Apps **Tables** area: Select **Analyze**
        2. Go to **Workspace settings** > **Workspace identity**.  
        3. Select **+ Workspace identity** to create it.  
           - Note the name of the workspace identity (it matches the workspace name).  
-          :::image type="content" source="media/fabric/fabric-link-workspace-identity.png" alt-text="Workspace identity page in Fabric. The name, such as `srr-athena-test` in this example, is used later when adding the application user in Dataverse.":::
+          :::image type="content" source="media/Fabric/fabric-link-workspace-identity.png" alt-text="Workspace identity page in Fabric. The name, such as `srr-athena-test` in this example, is used later when adding the application user in Dataverse.":::
  
        4. For more information, go to [Workspace identity in Fabric](/fabric/security/workspace-identity).  
 
@@ -113,13 +113,13 @@ You can stop syncing specific Dataverse and FnO tables to reduce storage costs a
 2. Tables that are already syncing are checked.
 3. To stop syncing a table, uncheck it.
 
-   :::image type="content" source="media/fabric/manage-tables-unlink.png" alt-text="Screenshot of the Manage tables pane showing checked and unchecked tables for syncing to Fabric." lightbox="media/fabric/manage-tables-unlink.png":::
+   :::image type="content" source="media/Fabric/manage-tables-unlink.png" alt-text="Screenshot of the Manage tables pane showing checked and unchecked tables for syncing to Fabric." lightbox="media/Fabric/manage-tables-unlink.png":::
 
 4. To keep syncing, leave it checked.
 5. After making your selections, select **Save**.
 6. A confirmation dialog appears listing the tables that will stop syncing.
 
-   :::image type="content" source="media/fabric/unlink-confirmation-dialog.png" alt-text="Screenshot of the confirmation dialog showing tables that will be unlinked from Fabric and stop syncing." lightbox="media/fabric/unlink-confirmation-dialog.png":::
+   :::image type="content" source="media/Fabric/unlink-confirmation-dialog.png" alt-text="Screenshot of the confirmation dialog showing tables that will be unlinked from Fabric and stop syncing." lightbox="media/Fabric/unlink-confirmation-dialog.png":::
 
 7. Review the list and select **Confirm**.
 
