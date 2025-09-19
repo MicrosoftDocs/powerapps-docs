@@ -1,6 +1,6 @@
 ---
 title: Configure your environment and link to Microsoft Fabric
-description: This article shows you how to configure your Power Platform environment and link it to Microsoft Fabric.
+description: This article shows you how to configure your Power Platform environment and li1. You're prompted to choose a Power BI premium workspace to continue. A list of workspaces in the same region as your environment are displayed. If you don't see a workspace in the drop-down list, you might need to create one, and then return to this task. More information: [Create a link to Fabric](#create-a-link-to-fabric)k it to Microsoft Fabric.
 author: anibakore-msft
 ms.author: banirud
 ms.reviewer: matp
@@ -104,8 +104,34 @@ Admins can manage tables linked to OneLake from the **Azure Synapse Link for Dat
 
 > [!NOTE]
 > If you've installed Dynamics 365 apps such as Customer Insights, the tables required for the app are also included in the **Microsoft OneLake** link.
-> 
-> Removing already added tables has been disabled since it might impact already built reports.
+
+### Unlink your Dataverse and FnO tables
+
+You can stop syncing specific Dataverse and FnO tables to reduce storage costs and optimize your Fabric workspace. After accessing **Manage tables** (as described in step 4 above), follow these steps to unlink tables:
+
+1. The **Manage tables** pane shows all Dataverse and FnO tables currently linked to Fabric.
+2. Tables that are already syncing are checked.
+3. To stop syncing a table, uncheck it.
+
+   :::image type="content" source="media/fabric/manage-tables-unlink.png" alt-text="Screenshot of the Manage tables pane showing checked and unchecked tables for syncing to Fabric." lightbox="media/fabric/manage-tables-unlink.png":::
+
+4. To keep syncing, leave it checked.
+5. After making your selections, select **Save**.
+6. A confirmation dialog appears listing the tables that will stop syncing.
+
+   :::image type="content" source="media/fabric/unlink-confirmation-dialog.png" alt-text="Screenshot of the confirmation dialog showing tables that will be unlinked from Fabric and stop syncing." lightbox="media/fabric/unlink-confirmation-dialog.png":::
+
+7. Review the list and select **Confirm**.
+
+After confirmation:
+- Shortcuts for the unselected tables are removed from the Fabric Lakehouse.
+- Selected tables are removed from the internal storage that is synchronized to Fabric via Shortcuts. This ensures that you're paying only for the storage of tables that you selected.
+- Sync for those tables stops immediately.
+- Remaining tables continue syncing without interruption.
+
+> [!IMPORTANT]
+> - Removing a table does not delete the table in Dataverse; it only removes the OneLake shortcut and stops data sync.
+> - If you need to add tables later, repeat the same steps and check the tables you want to include.
 
 ### Share the data connection with other users
 
