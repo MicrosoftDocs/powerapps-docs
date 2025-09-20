@@ -32,6 +32,7 @@ The modern text editor is designed to align with the familiar and intuitive inte
 
 > [!NOTE]
 > The classic version of the rich text editor was deprecated as of April 2025. If you have issues with upgrading or using the modern rich text editor, contact [Microsoft Customer Support](/power-platform/admin/get-help-support).
+> If you had customizations you created in the previous version of the rich text editor, you might have to recreate those customizations in the latest version.
 
 ## Add the rich text editor control to a text column on a form
 
