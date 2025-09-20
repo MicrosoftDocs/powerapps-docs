@@ -930,6 +930,9 @@ Many-To-One Relationship: [syncerror dvtablesearch_SyncErrors](syncerror.md#BKMK
 
 These relationships are many-to-many. Listed by **SchemaName**.
 
+- [botcomponent_dvtablesearch](#BKMK_botcomponent_dvtablesearch)
+- [powerpagesite_dvtablesearch](#BKMK_powerpagesite_dvtablesearch)
+
 ### <a name="BKMK_botcomponent_dvtablesearch"></a> botcomponent_dvtablesearch
 
 See [botcomponent botcomponent_dvtablesearch Many-To-Many Relationship](botcomponent.md#BKMK_botcomponent_dvtablesearch)
@@ -941,6 +944,19 @@ See [botcomponent botcomponent_dvtablesearch Many-To-Many Relationship](botcompo
 |SchemaName|`botcomponent_dvtablesearch`|
 |IntersectAttribute|`dvtablesearchid`|
 |NavigationPropertyName|`botcomponent_dvtablesearch`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_powerpagesite_dvtablesearch"></a> powerpagesite_dvtablesearch
+
+See [powerpagesite powerpagesite_dvtablesearch Many-To-Many Relationship](powerpagesite.md#BKMK_powerpagesite_dvtablesearch)
+
+|Property|Value|
+|---|---|
+|IntersectEntityName|`powerpagesite_dvtablesearch`|
+|IsCustomizable|False|
+|SchemaName|`powerpagesite_dvtablesearch`|
+|IntersectAttribute|`dvtablesearchid`|
+|NavigationPropertyName|`powerpagesite_dvtablesearch`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 

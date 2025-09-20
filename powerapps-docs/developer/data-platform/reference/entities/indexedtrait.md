@@ -636,4 +636,4 @@ One-To-Many Relationship: [systemuser user_indexedtrait](systemuser.md#BKMK_user
 
 [Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
-
+<xref:Microsoft.Dynamics.CRM.indexedtrait?displayProperty=fullName>

@@ -39,20 +39,6 @@ Messages represent operations that can be performed on the table. They may also 
 | `Upsert`<br />Event: False |`PATCH` /approvalstageorders(*approvalstageorderid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
 | `UpsertMultiple`<br />Event: False |<xref:Microsoft.Dynamics.CRM.UpsertMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpsertMultipleRequest>|
 
-
-## Events
-
-The following table lists the events for the Approval Stage Order (approvalstageorder) table.
-Events are messages that exist so that you can subscribe to them. Unless you added the event, you shouldn't invoke the message, only subscribe to it.
-
-|Name|Web API Operation |SDK for .NET |
-| ---- | ----- |----- |
-| `BulkRetain`|<xref:Microsoft.Dynamics.CRM.BulkRetain?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
-| `PurgeRetainedContent`|<xref:Microsoft.Dynamics.CRM.PurgeRetainedContent?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
-| `Retain`|<xref:Microsoft.Dynamics.CRM.Retain?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
-| `RollbackRetain`|<xref:Microsoft.Dynamics.CRM.RollbackRetain?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
-| `ValidateRetentionConfig`|<xref:Microsoft.Dynamics.CRM.ValidateRetentionConfig?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
-
 ## Properties
 
 The following table lists selected properties for the Approval Stage Order (approvalstageorder) table.
@@ -85,6 +71,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [OwnerIdType](#BKMK_OwnerIdType)
 - [StageApproval](#BKMK_StageApproval)
 - [StageCondition](#BKMK_StageCondition)
+- [StageIntelligent](#BKMK_StageIntelligent)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
@@ -229,6 +216,19 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Lookup|
 |Targets|approvalstagecondition|
 
+### <a name="BKMK_StageIntelligent"></a> StageIntelligent
+
+|Property|Value|
+|---|---|
+|Description|**The linked intelligent stage**|
+|DisplayName|**Stage Intelligent**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`stageintelligent`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|approvalstageintelligent|
+
 ### <a name="BKMK_statecode"></a> statecode
 
 |Property|Value|
@@ -308,6 +308,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |---|---|
 |192350000|**Approval**|
 |192350001|**Condition**|
+|192350002|**AI**|
 
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
 
@@ -521,6 +522,7 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [approvalstageorder_approval_msdyn_flow_approval](#BKMK_approvalstageorder_approval_msdyn_flow_approval)
 - [approvalstageorder_stageapproval_approvalstageapproval](#BKMK_approvalstageorder_stageapproval_approvalstageapproval)
 - [approvalstageorder_stagecondition_approvalstagecondition](#BKMK_approvalstageorder_stagecondition_approvalstagecondition)
+- [approvalstageorder_stageintelligent_approvalstageintelligent](#BKMK_approvalstageorder_stageintelligent_approvalstageintelligent)
 - [business_unit_approvalstageorder](#BKMK_business_unit_approvalstageorder)
 - [lk_approvalstageorder_createdby](#BKMK_lk_approvalstageorder_createdby)
 - [lk_approvalstageorder_createdonbehalfby](#BKMK_lk_approvalstageorder_createdonbehalfby)
@@ -566,6 +568,19 @@ One-To-Many Relationship: [approvalstagecondition approvalstageorder_stagecondit
 |ReferencedAttribute|`approvalstageconditionid`|
 |ReferencingAttribute|`stagecondition`|
 |ReferencingEntityNavigationPropertyName|`stagecondition`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `Cascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_approvalstageorder_stageintelligent_approvalstageintelligent"></a> approvalstageorder_stageintelligent_approvalstageintelligent
+
+One-To-Many Relationship: [approvalstageintelligent approvalstageorder_stageintelligent_approvalstageintelligent](approvalstageintelligent.md#BKMK_approvalstageorder_stageintelligent_approvalstageintelligent)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`approvalstageintelligent`|
+|ReferencedAttribute|`approvalstageintelligentid`|
+|ReferencingAttribute|`stageintelligent`|
+|ReferencingEntityNavigationPropertyName|`stageintelligent`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `Cascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
@@ -802,4 +817,4 @@ Many-To-One Relationship: [msdyn_flow_approval msdyn_flow_approval_currentstage_
 
 [Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
-
+<xref:Microsoft.Dynamics.CRM.approvalstageorder?displayProperty=fullName>

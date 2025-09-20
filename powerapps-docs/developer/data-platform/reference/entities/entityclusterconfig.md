@@ -88,6 +88,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |0|**Partitioned**|
 |1|**Replicated**|
 |2|**Local**|
+|3|**Replicated if the parent entity cluster mode is Replicated.**|
 
 ### <a name="BKMK_EntityClusterConfigId"></a> EntityClusterConfigId
 
@@ -132,8 +133,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**For internal use only.**|
-|DisplayName|**Is Customizable**|
+|Description|**Information that specifies whether this component can be customized.**|
+|DisplayName|**Customizable**|
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|`iscustomizable`|

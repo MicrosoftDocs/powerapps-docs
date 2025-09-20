@@ -459,10 +459,6 @@ Rich text editor limitations include the following:
 - The following file types for attachments are supported out of the box: .aac, .avi, .csv, .doc, .docx, .gif, .html, .jpeg, .mid, .midi, .mp3, .mp4, .mpeg, .msg, .pdf, .png, .ppt, .pptx, .svg, .txt, .vsd, .wav, .xls, .xlsm, and .xlsx. You can configure the allowed extensions for your environment in your advanced settings by going to **Administration** > **General** > **Set blocked file extensions for attachments** and removing the extensions you want to allow.
 - Non-Microsoft plugins aren't supported.
 
-Knowledge management:
-
-- A preview tab isn't currently available.
-
 Email templates and signatures:
 
 - If you experience an issue with the way an email template renders, we recommend that you recreate it in the modern editor.

@@ -82,6 +82,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [msdyn_analysisschedule](#BKMK_msdyn_analysisschedule)
 - [msdyn_automationdata](#BKMK_msdyn_automationdata)
 - [msdyn_automationstatus](#BKMK_msdyn_automationstatus)
+- [msdyn_businessprocessid](#BKMK_msdyn_businessprocessid)
 - [msdyn_datavalidation](#BKMK_msdyn_datavalidation)
 - [msdyn_description](#BKMK_msdyn_description)
 - [msdyn_inputdatabinding](#BKMK_msdyn_inputdatabinding)
@@ -186,6 +187,19 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |200000001|**NotRecommended**|
 |200000002|**InProgress**|
 |200000003|**Complete**|
+
+### <a name="BKMK_msdyn_businessprocessid"></a> msdyn_businessprocessid
+
+|Property|Value|
+|---|---|
+|Description||
+|DisplayName|**Business Process**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_businessprocessid`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|businessprocess|
 
 ### <a name="BKMK_msdyn_datavalidation"></a> msdyn_datavalidation
 
@@ -523,6 +537,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |5|Label: **AnalyzeFailed**<br />State:3<br />TransitionData: None|
 |6|Label: **DeleteFailed**<br />State:3<br />TransitionData: None|
 |7|Label: **Imported**<br />State:4<br />TransitionData: None|
+|8|Label: **Ingesting**<br />State:1<br />TransitionData: None|
 
 ### <a name="BKMK_TimeZoneRuleVersionNumber"></a> TimeZoneRuleVersionNumber
 
@@ -883,6 +898,7 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [lk_msdyn_pminferredtask_createdonbehalfby](#BKMK_lk_msdyn_pminferredtask_createdonbehalfby)
 - [lk_msdyn_pminferredtask_modifiedby](#BKMK_lk_msdyn_pminferredtask_modifiedby)
 - [lk_msdyn_pminferredtask_modifiedonbehalfby](#BKMK_lk_msdyn_pminferredtask_modifiedonbehalfby)
+- [msdyn_businessprocess_msdyn_pminferredtask_msdyn_businessprocessid](#BKMK_msdyn_businessprocess_msdyn_pminferredtask_msdyn_businessprocessid)
 - [owner_msdyn_pminferredtask](#BKMK_owner_msdyn_pminferredtask)
 - [team_msdyn_pminferredtask](#BKMK_team_msdyn_pminferredtask)
 - [user_msdyn_pminferredtask](#BKMK_user_msdyn_pminferredtask)
@@ -964,6 +980,19 @@ One-To-Many Relationship: [systemuser lk_msdyn_pminferredtask_modifiedonbehalfby
 |ReferencingEntityNavigationPropertyName|`modifiedonbehalfby`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msdyn_businessprocess_msdyn_pminferredtask_msdyn_businessprocessid"></a> msdyn_businessprocess_msdyn_pminferredtask_msdyn_businessprocessid
+
+One-To-Many Relationship: [businessprocess msdyn_businessprocess_msdyn_pminferredtask_msdyn_businessprocessid](businessprocess.md#BKMK_msdyn_businessprocess_msdyn_pminferredtask_msdyn_businessprocessid)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`businessprocess`|
+|ReferencedAttribute|`businessprocessid`|
+|ReferencingAttribute|`msdyn_businessprocessid`|
+|ReferencingEntityNavigationPropertyName|`msdyn_businessprocessid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_owner_msdyn_pminferredtask"></a> owner_msdyn_pminferredtask
 
