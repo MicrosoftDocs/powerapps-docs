@@ -89,7 +89,7 @@ Admins can manage tables linked to OneLake from the **Azure Synapse Link for Dat
    > [!NOTE]
    > This feature is enabled by default on all environments. Power Platform admins can disable this feature in the Power Platform admin center. More information: [Environment settings: Microsoft Fabric](/power-platform/admin/settings-features?tabs=new#microsoft-fabric)
 
-2. Select **Azure Synapse Link** from the left navigation pane, and the select **Microsoft OneLake**.
+2. Select **Azure Synapse Link** from the left navigation pane, and then select **Microsoft OneLake**.
 3. Open Fabric by selecting **View in Microsoft Fabric**.
 4. Add more table links to Fabric by selecting **Manage tables**.
 5. When you add a table, the system performs an initial sync and indexes the data. When the initial sync is completed, a shortcut to OneLake is created. View the status of tables by selecting **Manage tables**. Use the **Refresh Fabric tables** option to add the newly enabled table in Fabric. You might need to review the report and downstream data flows to see that they aren't impacted by the change.
