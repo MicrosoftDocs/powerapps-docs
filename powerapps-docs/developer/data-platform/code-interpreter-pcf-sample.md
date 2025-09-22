@@ -1,7 +1,7 @@
 ---
 title: "Code interpreter PCF component sample"
 description: "Learn how to use code interpreter enabled prompts from a PCF component in a model-driven application."
-ms.date: 09/15/2025
+ms.date: 09/22/2025
 ms.reviewer: jdaly
 ms.topic: article
 author: rapraj
@@ -15,7 +15,7 @@ contributors:
 ---
 # Code interpreter PCF component sample
 
-This sample shows how to generate content using a prompt defined by Copilot Studio or AI Builder
+This sample shows how to generate content using a prompt defined by Copilot Studio or AI Hub.
 
 This sample is a Power Apps Component Framework (PCF) control that integrates with code interpreter enabled prompts to render interactive HTML/JavaScript data visuals or generate previews and downloads for PDF, Word, PowerPoint, and Excel files.
 
