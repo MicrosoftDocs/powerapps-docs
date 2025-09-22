@@ -1,5 +1,5 @@
 ---
-title: "How to: Create a basic asset management API with Azure Functions"
+title: "How to: Create a basic asset management API with Azure Functions (preview)"
 description: "Learn how to create a basic asset management API with Azure Functions"
 ms.author: alaug
 author: alaug
@@ -9,9 +9,12 @@ ms.topic: how-to
 contributors:
  - JimDaly
 ---
-# How to: Create a basic asset management API with Azure Functions
+# How to: Create a basic asset management API with Azure Functions (preview)
 
 This article walks you through creating a basic mock API for an asset management application using Azure Functions. The API exposes a single operation to return a list of assets. You'll also learn how to create a custom connector in Power Platform using API Management.
+
+> [!NOTE]
+> [!INCLUDE [cc-preview-features-definition](../../../includes/cc-preview-features-definition.md)]
 
 This basic API provides a mock asset list and is ready for integration with Power Platform using a custom connector via API Management.
 
@@ -20,7 +23,7 @@ This basic API provides a mock asset list and is ready for integration with Powe
 - Access to the [Azure portal](https://portal.azure.com)
 - [Power Platform environment with code apps enabled](../overview.md#enable-code-apps-on-a-power-platform-environment)
 
-## Create a New Azure Function in the Azure portal
+## Create a new Azure Function in the Azure portal
 
 1. Go to the [Azure portal](https://portal.azure.com/).
 1. Select **Create a resource** > **Web** > **Function App**.
@@ -97,21 +100,21 @@ module.exports = async function (context, req) {
 
 1. Save your changes.
 
-## Create a Custom Connector in Power Platform Using API Management (from Azure portal)
+## Create a custom connector in Power Platform using API Management (from Azure portal)
 
 1. In **API Management Services** In the left menu within APIs, select **Power Platform**.
 1. Select **Create a connector**.
-1. Select Your API
+1. Select Your API:
 
    :::image type="content" source="media/custom-connector-apim-create-connector.png" alt-text="Create custom connector":::
 
-1. Select your environment, display name and select **Create**. The custom connector is created in your selected environment.
+1. Select your environment and display name and then select **Create**. The custom connector is created in your selected environment.
 1. In [Power Apps](https://make.powerapps.com), go to **Custom connectors** to review, edit, and test your new connector.
 
    :::image type="content" source="media/custom-connector-test-connector.png" alt-text="Test custom connector":::
 
-## Next Steps
+## Next steps
 
-- Create a new code app using this custom connector with **Power Apps SDK** 
+- Create a new code app using this custom connector with **Power Apps SDK**
 - Expand the API with more operations as needed. Don't forget to update the connector with the new operations when you do.
 - Secure your API if you move beyond development/testing.

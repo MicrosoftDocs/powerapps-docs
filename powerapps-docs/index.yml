@@ -6,11 +6,11 @@ brand: power-apps
 
 metadata:
   title: Official Microsoft Power Apps documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
-  description: Discover how to make the most of Power Apps with online training courses, docs, and videos covering product capabilities and how-to articles. Learn how to quickly build low-code apps that modernize processes and solve tough business challenges in your organization using Power Apps. 
+  description: Discover how to make the most of Power Apps with online training courses, docs, and videos covering product capabilities and how-to articles. Learn how to quickly build low-code apps that modernize processes and solve tough business challenges in your organization using Power Apps.
   ms.topic: hub-page # Required
   author: tapanm-msft #Required; your GitHub user alias, with correct capitalization.
   ms.author: tapanm #Required; microsoft alias of author; optional team alias.
-  ms.date: 05/29/2025 #Required; mm/dd/yyyy format.
+  ms.date: 09/19/2025 #Required; mm/dd/yyyy format.
   ms.custom: bap-template
   hide_bc: true
 
@@ -52,12 +52,14 @@ additionalContent:
           links:
             - text: Choose an app type
               url: maker/index.md
-            - text: Use the Plan designer 
+            - text: Use the Plan designer
               url: maker/plan-designer/plan-designer.md
             - text: Create a canvas app
               url: maker/canvas-apps/index.yml
             - text: Create a model-driven app
               url: maker/model-driven-apps/index.yml
+            - text: Create a code app (preview)
+              url: developer/code-apps/index.yml
         - title: AI copilot capabilities
           links:
             - text: Get started with AI copilot (preview)

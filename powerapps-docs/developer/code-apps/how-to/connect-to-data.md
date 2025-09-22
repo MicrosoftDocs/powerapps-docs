@@ -1,5 +1,5 @@
 ---
-title: "How to: Connect your code app to data"
+title: "How to: Connect your code app to data (preview)"
 description: "Learn how to connect your code app to data"
 ms.author: alaug
 author: alaug
@@ -9,9 +9,12 @@ ms.topic: how-to
 contributors:
  - JimDaly
 ---
-# How to: Connect your code app to data
+# How to: Connect your code app to data (preview)
 
 Code apps enable connecting to Power Platform connectors.
+
+> [!NOTE]
+> [!INCLUDE [cc-preview-features-definition](../../../includes/cc-preview-features-definition.md)]
 
 Use the following steps:
 
@@ -25,7 +28,6 @@ Use the following steps:
 > [!IMPORTANT]
 > The following connectors are officially supported: SQL, SharePoint, Office 365 Users, Office 365 Groups, Azure Data Explorer, OneDrive for work or school, Power Apps for Makers, Microsoft Teams, MSN Weather, and Microsoft Translator V2. [Dataverse create, read, update, and delete operations](./connect-to-dataverse.md) are officially supported. Other connectors are expected to work but are untested.
 
-
 ## Create and set up connections in Power Apps
 
 Start by creating and configuring connections at [Power Apps](https://make.powerapps.com). Copy connection metadata from there for use in later steps.
@@ -38,7 +40,6 @@ Start by creating and configuring connections at [Power Apps](https://make.power
    Go to [Power Apps](https://make.powerapps.com) and navigate to the **Connections** page from the left-hand navigation.
 
    :::image type="content" source="media/powerapps-create-connection.png" alt-text="Power Apps Connections page showing New connection button":::
-
 
 #### Example Create an Office 365 Users connection
 
@@ -79,15 +80,15 @@ Notice how the API name and connection ID are appended to the URL:
 
 :::image type="content" source="media/powerapps-connection-apiname-connectionid.png" alt-text="Connection details showing API name and Connection ID values":::
 
-Copy the API name and the connection ID from PAC CLI the URL for each connection.
+Copy the API name and the connection ID from PAC CLI to the URL for each connection.
 
 ## Add a connection to a code app
 
-After you create or identify existing connections to use, and copied the connection metadata from the previous step, add those connections to the app.
+After you create or identify existing connections to use, and copy the connection metadata from the previous step, add those connections to the app.
 
 Adding the data sources to the app will automatically generate a typed TypeScript model and service file in the repo. For example, the Office 365 Users data source produces `Office365UsersModel` and `Office365UsersService`.
 
-1. Add a nontabular data source (For example Office 365 Users) to the app using the PAC CLI [pac code add-data-source](/power-platform/developer/cli/reference/code#pac-code-add-data-source) command.
+1. Add a nontabular data source (for example Office 365 Users) to the app using the PAC CLI [pac code add-data-source](/power-platform/developer/cli/reference/code#pac-code-add-data-source) command.
 
    From a command line, run the following. Use the API name and connection ID collected from previous steps.
 
@@ -125,7 +126,7 @@ Adding the data sources to the app will automatically generate a typed TypeScrip
    -d "paconnectivitysql0425.database.windows.net,paruntimedb" 
    ```
 
-1. (Optional) Add a SQL stored procedure as a data source
+1. (Optional) Add a SQL stored procedure as a data source.
 
    From a command line, run the following. Use the API name and connection ID collected previously.
 
@@ -143,7 +144,7 @@ Adding the data sources to the app will automatically generate a typed TypeScrip
    -sp "[dbo].[GetRecordById]" 
    ```
 
-1. (Optional) If needed, you can delete data sources after adding
+1. (Optional) If needed, you can delete data sources after adding.
 
    From a command line, run the following. Use the API name and connection ID collected previously.
 
@@ -241,8 +242,8 @@ If you don't already have the table and dataset name, you can get them by runnin
 1. Open your browser's **Developer Tools**, go to the **Network** tab, and inspect requests made when the app loads. Check the "invoke" request, and go to its response.
 1. Find an Azure API Management (APIM) request with the connection ID, dataset name, and table ID, and copy those values.
 
-Example data request URL through APIM. Look for the `<Connection ID>`, `<Dataset name>`, and `<Table ID>` values in these places in the URL:
+   Using this example data request URL through APIM, look for the `<Connection ID>`, `<Dataset name>`, and `<Table ID>` values in these places in the URL:
 
-```http
-https[]()://{id value}.01.common.azure-apihub.net/apim/sharepointonline/<Connection ID>/datasets/<Dataset name>/tables/<Table ID>/items
-```
+   ```http
+   https[]()://{id value}.01.common.azure-apihub.net/apim/sharepointonline/<Connection ID>/datasets/<Dataset name>/tables/<Table ID>/items
+   ```
