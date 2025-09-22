@@ -16,7 +16,7 @@ This article explains how to review code app data requests and responses in brow
 > [!NOTE]
 > [!INCLUDE [cc-preview-features-definition](../../../includes/cc-preview-features-definition.md)]
 
-Browser developer tools (DevTools) are built-in tools in modern web browsers that let you inspect network traffic, view console logs, debug JavaScript, and examine HTML/CSS. You can open DevTools by pressing <kbd>F12</kbd> or <kbd>Ctrl+Shift+I</kbd>, or by right-clicking a page element and choosing **Inspect** (on macOS use <kbd>Command+Option+I</kbd>). For detailed guidance, see the browser documentation:
+Browser developer tools (DevTools) are built-in tools in modern web browsers that let you inspect network traffic, view console logs, debug JavaScript, and examine HTML/CSS. You can open DevTools by pressing <kbd>F12</kbd> or <kbd>Ctrl+Shift+I</kbd>, or by right-clicking a page element and choosing **Inspect** (on macOS use <kbd>Command+Option+I</kbd>). For detailed guidance, review the browser documentation:
 
 - [Chrome DevTools](https://developer.chrome.com/docs/devtools/)
 - [Microsoft Edge DevTools](/microsoft-edge/devtools-guide-chromium/)

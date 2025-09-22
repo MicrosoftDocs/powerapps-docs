@@ -1,5 +1,5 @@
 ---
-title: "Quickstart: Create your first code app (Preview)"
+title: "Quickstart: Create your first code app (preview)"
 description: "Create your first code app using this quick start"
 ms.author: alaug
 author: alaug
@@ -9,12 +9,12 @@ ms.topic: article
 contributors:
  - JimDaly
 ---
-# Quickstart: Create your first code app (Preview)
+# Quickstart: Create your first code app (preview)
 
 > [!NOTE]
 > [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
-In this quickstart, build a code app, run it locally, and then publish it. These instructions guide you to download a sample code app, use PAC CLI to target a Power Platform environment to publish the app. Then you publish the app before running the app hosted in Power Platform.
+In this quickstart, build a code app, run it locally, and then publish it. These instructions guide you to download a sample code app and use PAC CLI to target a Power Platform environment to publish the app. Then you publish the app before running the app hosted in Power Platform.
 
 ## Prerequisites
 
@@ -24,7 +24,6 @@ In this quickstart, build a code app, run it locally, and then publish it. These
 Clone the [PowerAppsCodeApps repository](https://github.com/microsoft/PowerAppsCodeApps)
 
 This repository has the start of a TypeScript app that already includes the Power Platform SDK. Later we'll add guidance to that allows you to start from scratch without using this base app.
-
 
 ```powershell
 git clone https://github.com/microsoft/PowerAppsCodeApps.git
@@ -47,7 +46,7 @@ This app project was created using [Vite](https://vite.dev/) and it has two nota
 
 ## Authenticate PAC CLI and point to your development environment
 
-Visual Studio Code, open a new terminal window and use the [pac auth create](/power-platform/developer/cli/reference/auth#pac-auth-create) command to create an authentication profile.
+In Visual Studio Code, open a new terminal window and use the [pac auth create](/power-platform/developer/cli/reference/auth#pac-auth-create) command to create an authentication profile.
 
 ```powershell
 pac auth create --environment {environment id}
@@ -75,9 +74,8 @@ In the terminal window, run these commands:
 npm run dev | pac code run
 ```
 
-- [npm run dev](https://docs.npmjs.com/cli/v9/commands/npm-run-script) Runs the scripts configured in the `package.json` file with the key value of `dev`. In this case, the script is `"concurrently \"vite\" \"pac code run\""`. 
+- [npm run dev](https://docs.npmjs.com/cli/v9/commands/npm-run-script) Runs the scripts configured in the `package.json` file with the key value of `dev`. In this case, the script is `"concurrently \"vite\" \"pac code run\""`.
 - [pac code run](/power-platform/developer/cli/reference/code#pac-code-run) Runs a local server for connections loading locally in the app.
-
 
 ## Build and deploy to Power Apps
 
@@ -90,10 +88,9 @@ npm run build | pac code push
 - [npm run build](https://docs.npmjs.com/cli/v9/commands/npm-run-script) Runs the scripts configured in the `package.json` file with the key value of `build`. In this case, the script is `"tsc -b && vite build"`.
 - [pac code push](/power-platform/developer/cli/reference/code#pac-code-push) Publishes a new version of a Code app.
 
+If successful, this command should return a Power Apps URL to run the app.
 
-If successful, this command should return a Power Apps URL to run the app. 
-
-Optionally, you can open  [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to see the app. You can play, share, or see details from there. 
+Optionally, you can open  [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to see the app. You can play, share, or see details from there.
 
 Congratulations! You successfully pushed your first code app!
 

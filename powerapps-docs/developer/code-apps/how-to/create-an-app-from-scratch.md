@@ -20,7 +20,7 @@ This article walks through how to set up a blank app from [Vite](https://vite.de
 
 - [Power Platform environment with code apps enabled](../overview.md#enable-code-apps-on-a-power-platform-environment)
 - [Visual Studio Code](https://code.visualstudio.com/)
-- [Node.js](https://nodejs.org/) Long term support (LTS) version)
+- [Node.js](https://nodejs.org/) Long term support (LTS) version
 - [Power Platform Tools for VS Code](/power-platform/developer/cli/introduction)
 
 ## Initialize your Vite App
@@ -117,7 +117,7 @@ This article walks through how to set up a blank app from [Vite](https://vite.de
    pac auth create
    ```
 
-   Sign-in using your Power Platform account when prompted.
+   Sign in using your Power Platform account when prompted.
 
    > [!NOTE]
    > You can also use the [Power Platform Tools VS Code Extension](/power-platform/developer/howto/install-vs-code-extension) to do authenticate.
@@ -128,7 +128,7 @@ This article walks through how to set up a blank app from [Vite](https://vite.de
    pac env select -env <URL of your environment>
    ```
 
-   You can also use the Power Platform Tools VS Code Extension to select the environment
+   You can also use the Power Platform Tools VS Code Extension to select the environment.
 
 1. **Initialize** your code app using:
 
@@ -166,7 +166,7 @@ This article walks through how to set up a blank app from [Vite](https://vite.de
    import PowerProvider from './PowerProvider.tsx'
    ```
 
-1. **Update** `main.tsx`
+1. **Update** `main.tsx`:
 
    ```typescript
    <StrictMode>
@@ -184,7 +184,7 @@ This article walks through how to set up a blank app from [Vite](https://vite.de
    </StrictMode>,
    ```
 
-1. **Save** the file
+1. **Save** the file.
 1. You can now test the code app by using:
 
     ```powershell
@@ -198,13 +198,13 @@ This article walks through how to set up a blank app from [Vite](https://vite.de
 1. Open the URL provided by the Power SDK Server.
 
    > [!IMPORTANT]
-   > Open the url in the same browser profile as your power platform tenant.
+   > Open the URL in the same browser profile as your Power Platform tenant.
 
 1. You should see the app open similar to:
 
    :::image type="content" source="media/sql-vite-running-powerapps.png" alt-text="Vite React app running inside Power Apps code apps host":::
 
-### Related articles
+### Related information
 
-[How to: Connect your code app to data](connect-to-data.md)  
-[Power Apps CLI](/power-platform/developer/cli/introduction)
+- [How to: Connect your code app to data](connect-to-data.md)  
+- [Power Apps CLI](/power-platform/developer/cli/introduction)
