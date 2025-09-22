@@ -79,3 +79,8 @@ Generated `.docx`, `.pptx` and `.xlsx` files are also supported, but the sample 
 ### App: sample_example app
 
 The managed solution also includes a preconfigured model-driven application with form available for you to configure the CodeInterpreter PCF control. This app reduces the number of steps necessary to try the sample.
+
+### More information
+
+- [Code interpreter for developers](code-interpreter.md)
+- [Power Apps component framework overview](../component-framework/overview.md)
