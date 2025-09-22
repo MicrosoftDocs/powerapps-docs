@@ -372,3 +372,7 @@ When you're sending too many requests concurrently per environment or tenant, yo
 A PCF control that encounters this error displays this message: **Server error. Please try again later or contact administrator.**
 
 The resolution of this error is to send fewer requests. Wait a short time and try again. There's no `RetryAfter` response header to recommend how long you should wait.
+
+### More information
+
+[Code interpreter PCF component sample](code-interpreter-pcf-sample.md)
