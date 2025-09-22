@@ -12,6 +12,7 @@ search.audienceType:
 contributors:
  - JimDaly
  - ColinBe
+ - daauro
 ---
 # Code interpreter PCF component sample
 
@@ -32,11 +33,11 @@ You can find the code for sample here: [PowerApps-Samples/component-framework/Co
 
 ## Demonstrates
 
-This example demonstrates how a single PCF control can render different output in the model-driven app form that depends on the prompt provided. This sample provides a solution you can install that contains three prompts that are prepared for you.
+This example demonstrates how a single PCF control can render different output in the model-driven app form that depends on the prompt provided. This sample provides a managed solution you can install that contains three prompts that are prepared for you.
 
 ### Prompt: Create sample data for the example table
 
-The provided solution includes the definition for a table named `sample_example`. Testing this prompt creates 10 sample records to use in this demonstration.
+The provided managed solution also includes the definition for a table named `sample_example`. Testing this prompt creates 10 sample records to use in this demonstration.
 
 :::image type="content" source="media/code-interpreter-create-sample-data-prompt.jpg" alt-text="A prompt designed to create sample data for the sample_example table":::
 
@@ -64,19 +65,17 @@ The PCF control renders this interactive HTML within the form:
 
 This prompt specifies a preview and direct download for a generated PDF file.
 
-:::image type="content" source="media/code-interpreter-sales-proposal-prompt.png" alt-text="foo":::
+:::image type="content" source="media/code-interpreter-sales-proposal-prompt.png" alt-text="The code interpreter PCF component sample showing generated sales proposal document":::
 
 > [!TIP]
 > If you **Test** this prompt, use one of the example GUID values from the first prompt and set it as the **Sample data** for the **RecordId** parameter.
 
-If you **Test** this prompt, you can preview results in the **Model response**.
-
-The control renders a different experience within the form:
+If you **Test** this prompt, you can preview results in the **Model response**. The control renders a different experience within the form:
 
 :::image type="content" source="media/code-interpreter-sales-proposal.png" alt-text="The code interpreter PCF component sample showing generated PDF sales proposal document":::
 
-Generated .docx, .pptx and .xlsx files are also supported, but the sample PCF control currently doesn't support .pptx.
+Generated `.docx`, `.pptx` and `.xlsx` files are also supported, but the sample PCF control currently doesn't support `.pptx`.
 
 ### App: sample_example app
 
-The solution also includes a preconfigured model-driven application with form available for you to configure the CodeInterpreter PCF control. This app reduces the number of steps necessary to try the sample.
+The managed solution also includes a preconfigured model-driven application with form available for you to configure the CodeInterpreter PCF control. This app reduces the number of steps necessary to try the sample.

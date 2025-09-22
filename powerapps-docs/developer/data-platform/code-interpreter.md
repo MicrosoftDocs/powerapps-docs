@@ -12,6 +12,7 @@ search.audienceType:
 contributors:
  - JimDaly
  - ColinBe
+ - daauro
 ---
 # Code interpreter for developers
 
@@ -46,7 +47,7 @@ You can query the `msdyn_AIModel` table using the `msdyn_Name` column value to i
 
 ### Retrieve AI Model data
 
-Use queries like the following to retrieve data from the `msdyn_AIModel` table.
+Use queries like the following to retrieve data from the `msdyn_AIModel` table using the name of the model as a filter.
 
 ### [SDK for .NET](#tab/sdk)
 
@@ -159,15 +160,15 @@ Regardless of how you send the request, the `Predict` message requires three par
 
 This parameter is configured as an *open type*. [Learn more about how to use open types in general](use-open-types.md#how-to-use-open-types)
 
-An open type is a dictionary that contains keys and values. The values can also be dictionaries, so it's possible to send complex, hierarchical data to an open type parameter.
+An open type is a dictionary that contains keys and values. The values can also be dictionaries, so it's possible to send complex, hierarchical data using an open type parameter.
 
 ### [SDK for .NET](#tab/sdk)
 
 With the SDK for .NET, use the [Entity class](/dotnet/api/microsoft.xrm.sdk.entity) and set the [Attributes](/dotnet/api/microsoft.xrm.sdk.entity.attributes) collection with the values. The key difference in this scenario is that the `Entity` instance doesn't have a [LogicalName](/dotnet/api/microsoft.xrm.sdk.entity.logicalname) set, so it doesn't refer to a specific Dataverse table.
 
-In the following `PredictActionExample` sample method, the `Predict` action is invoked using the [OrganizationRequest class](/dotnet/api/microsoft.xrm.sdk.organizationrequest) as described in [Use messages with the SDK for .NET](org-service/use-messages.md). Alternatively, you can generate a pair of typed `PredictRequest` and `PredictResponse` classes. [Learn how to generate early-bound classes for the SDK for .NET](org-service/generate-early-bound-classes.md)
+The following `PredictActionExample` sample method uses the [OrganizationRequest class](/dotnet/api/microsoft.xrm.sdk.organizationrequest) to use the `Predict` message as described in [Use messages with the SDK for .NET](org-service/use-messages.md). Alternatively, you can generate a pair of typed `PredictRequest` and `PredictResponse` classes. [Learn how to generate early-bound classes for the SDK for .NET](org-service/generate-early-bound-classes.md)
 
-It also shows how to set the `Target` parameter with an [EntityReference](/dotnet/api/microsoft.xrm.sdk.entityreference) that refers to the `msdyn_AIModel` record using the ID.
+This example also shows how to set the `Target` parameter with an [EntityReference](/dotnet/api/microsoft.xrm.sdk.entityreference) that refers to the `msdyn_AIModel` record using the ID.
 
 ```csharp
 static PredictActionExample (IOrganizationService service, Guid yourAiModelId)
@@ -218,12 +219,12 @@ The [Predict Action](/power-apps/developer/data-platform/webapi/reference/predic
 
 As explained in [Use Entity as a dictionary](use-open-types.md?tabs=webapi#use-entity-as-a-dictionary), set the `requestv2` property with a dictionary that includes an `@odata.type` property set to `"Microsoft.Dynamics.CRM.expando"`. This indicates the value is an open type.
 
-Notice how this example uses two nested open dictionaries.
+Notice how this example uses nested dictionaries.
 
 **Request**:
 
 ```http
-POST msdyn_aimodels([AI Model ID])/Microsoft.Dynamics.CRM.Predict
+POST msdyn_aimodels(<AI Model ID>)/Microsoft.Dynamics.CRM.Predict
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0
@@ -320,23 +321,23 @@ The `responsev2` property has two properties:
 - `operationStatus`: A string value showing whether the operation succeeded. Expected value is `Success`.
 - `predictionOutput`: A dictionary with the following properties:
 
-| Property | Type | Description |
-|----------|------|-------------|
-| `text` | string | Primary generated content. Content depends on the type of value returned by the prompt. |
-| `mimetype` | string | Text [MIME type](https://developer.mozilla.org/docs/Web/HTTP/Guides/MIME_types/Common_types). |
-| `textMimeType` | string | Duplicate/confirming [MIME type](https://developer.mozilla.org/docs/Web/HTTP/Guides/MIME_types/Common_types)|
-| `finishReason` | string | The reason the reasoning finished. This is usually `stop`. |
-| `code` | string | Python Source code or placeholder describing executed code. |
-| `signature` | string | a Base64‑encoded, versioned metadata and integrity token |
-| `logs` | string | Python code execution log output (if provided). |
-| `codeThinking` | object | Empty/internal placeholder object. |
-| `files` | array of objects | Generated file artifacts with `file_name`, `content_type`, and `base64_content` properties. |
-| `structuredOutput` | object | Canonical form of main output with `mimetype` and `text` properties. |
-| `artifacts` | object | Map of artifact identifiers to metadata & base64 content. This object contains properties specific to the output and these properties are objects that have the following properties:  `artifactName`, `mimeType`, and `base64Content` |
+    | Property | Type | Description |
+    |----------|------|-------------|
+    | `text` | string | Primary generated content. Content depends on the type of value returned by the prompt. |
+    | `mimetype` | string | Text [MIME type](https://developer.mozilla.org/docs/Web/HTTP/Guides/MIME_types/Common_types). |
+    | `textMimeType` | string | Duplicate/confirming [MIME type](https://developer.mozilla.org/docs/Web/HTTP/Guides/MIME_types/Common_types)|
+    | `finishReason` | string | The reason the reasoning finished. This is usually `stop`. |
+    | `code` | string | Python Source code or placeholder describing executed code. |
+    | `signature` | string | a Base64‑encoded, versioned metadata and integrity token |
+    | `logs` | string | Python code execution log output (if provided). |
+    | `codeThinking` | object | Empty/internal placeholder object. |
+    | `files` | array of objects | Generated file artifacts with `file_name`, `content_type`, and `base64_content` properties. |
+    | `structuredOutput` | object | Canonical form of main output with `mimetype` and `text` properties. |
+    | `artifacts` | object | Map of artifact identifiers to metadata & base64 content. This object contains properties specific to the output and these properties are objects that have the following properties:  `artifactName`, `mimeType`, and `base64Content` |
 
 ## Troubleshooting
 
-The following are some errors you might encounter while using the Predict action with code interpreter enabled prompts.
+The following are some errors you might encounter while using the `Predict` action with code interpreter enabled prompts.
 
 ### Insufficient capacity
 
