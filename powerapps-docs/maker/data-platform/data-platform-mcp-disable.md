@@ -12,7 +12,7 @@ ms. reviewer: matp
 search.audienceType: 
   - maker
 ---
-# Enable the Dataverse MCP server using advanced connector policies (preview)
+# Enable the Dataverse MCP server for an environment (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
