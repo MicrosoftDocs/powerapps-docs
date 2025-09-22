@@ -1,7 +1,7 @@
 ---
 title: "Code interpreter for developers"
 description: "Learn how developers can use code interpreter enabled prompts."
-ms.date: 09/15/2025
+ms.date: 09/22/2025
 ms.reviewer: jdaly
 ms.topic: article
 author: rapraj
@@ -51,28 +51,65 @@ Use queries like the following to retrieve data from the `msdyn_AIModel` table.
 ### [SDK for .NET](#tab/sdk)
 
 ```csharp
-static RetrieveAIModelsExample (IOrganizationService service)
+/// <summary>
+/// Retrieves AI models from Dataverse that match the specified model name pattern.
+/// </summary>
+/// <param name="service">The IOrganizationService instance used to connect to Dataverse</param>
+/// <param name="modelName">The model name prefix to search for (uses BeginsWith matching)</param>
+/// <remarks>
+/// This method queries the msdyn_aimodel table using a BeginsWith condition, which means it will find
+/// models whose names start with the specified modelName string. The search is case-insensitive.
+/// If no matching models are found, a message is displayed to the console.
+/// </remarks>
+/// <example>
+/// <code>
+/// RetrieveAIModelsExample(service, "GPT");
+/// // This will find all AI models whose names start with "GPT"
+/// </code>
+/// </example>
+static void RetrieveAIModelsExample(IOrganizationService service, string modelName)
 {
- var query = new QueryExpression("msdyn_aimodel")
- {
-     ColumnSet = new ColumnSet("msdyn_name", "msdyn_aimodelid")
- };
- 
- var results = service.RetrieveMultiple(query);
- 
- foreach (var entity in results.Entities)
- {
-     Console.WriteLine($"Model Name: {entity["msdyn_name"]}, ID: {entity["msdyn_aimodelid"]}");
- }
+    var query = new QueryExpression("msdyn_aimodel")
+    {
+        ColumnSet = new ColumnSet("msdyn_name", "msdyn_aimodelid"),
+        Criteria = new FilterExpression(LogicalOperator.And)
+        {
+            Conditions = {
+                new ConditionExpression(
+                    attributeName:"msdyn_name",
+                    conditionOperator: ConditionOperator.BeginsWith,
+                    value: modelName
+                 )
+            }
+        }
+    };
+
+    var results = service.RetrieveMultiple(query);
+
+    if (results.Entities.Any())
+    {
+        foreach (var entity in results.Entities)
+        {
+            Console.WriteLine($"Model Name: {entity["msdyn_name"]}, ID: {entity["msdyn_aimodelid"]}");
+        }
+    }
+    else
+    {
+        Console.WriteLine($"No model with a name starting with '{modelName}' was found.");
+    }
 }
 ```
 
+[Learn how to query data using QueryExpression](org-service/queryexpression/overview.md)
+
 ### [Web API](#tab/webapi)
+
+This example will retrieve all AI model records with a name starting with 'example'.
 
 **Request**:
 
 ```http
-GET [Organization URI]/api/data/v9.2/msdyn_aimodels?$select=msdyn_name,msdyn_aimodelid
+GET [Organization URI]/api/data/v9.2/msdyn_aimodels?$select=msdyn_name&$filter=startswith(msdyn_name, 'example')
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0
@@ -86,21 +123,23 @@ Content-Type: application/json; odata.metadata=minimal
 OData-Version: 4.0  
 
 {
- "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#msdyn_aimodels(msdyn_name,msdyn_aimodelid,modifiedon)",
-   "value": [
+ "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#msdyn_aimodels(msdyn_name)",
+ "value": [
   {
-   "@odata.etag": "W/\"5080532\"",
-   "msdyn_aimodelid": "a0440df3-2656-e911-8194-000d3a6cd5a5",
-   "msdyn_name": "BusinessCard model"
+   "@odata.etag": "W/\"9275465\"",
+   "msdyn_aimodelid": "b412c9a3-1b4f-45c4-956d-33bd4412be33",
+   "msdyn_name": "Example Sales Proposal document"
   },
   {
-   "@odata.etag": "W/\"5080568\"",
-   "modifiedon": "2025-08-28T18:17:39Z",
-   "msdyn_aimodelid": "046ab801-2756-e911-8194-000d3a6cd5a5",
-   "msdyn_name": "ObjectDetectionProposal model"
+   "@odata.etag": "W/\"9259792\"",
+   "msdyn_aimodelid": "6ed18606-78da-4903-a868-73c7b462b336",
+   "msdyn_name": "Example Interactive Row Summary Chart"
   }
+ ]
 }
 ```
+
+[Learn how to use OData to query data](webapi/query/overview.md)
 
 ---
 
