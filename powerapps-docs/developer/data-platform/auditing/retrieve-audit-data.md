@@ -1,7 +1,7 @@
 ---
 title: Retrieve the history of audited data changes
 description: Learn how to programmatically retrieve the audit change history of records in Microsoft Dataverse.
-ms.date: 06/02/2023
+ms.date: 09/22/2025
 ms.reviewer: jdaly
 ms.topic: how-to
 author: paulliew
@@ -39,7 +39,7 @@ The following table summarizes important columns in the audit table.
 |`AttributeMask`<br/>`attributemask`<br/>**Changed Field**|Memo|When the change represents a change to record data, contains a comma-separated list of numbers that correspond to the [AttributeMetadata.ColumnNumber](xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.ColumnNumber) for the columns that were changed.<br/><br/>**Note:** Don't use this data. Instead, use the messages to [retrieve change history](#retrieve-audit-change-history).|
 |`AuditId`<br/>`auditid`<br/> **Record Id**|Unique identifier|Identifies the primary key for the audit table.|
 |`CallingUserId`<br/>`callinguserid`<br/>**Calling User**|Lookup|Identifies the calling user when impersonation is used for the operation; otherwise, null.|
-|`CreatedOn`<br/>`createdon`<br/>**Changed Date**|DateTime|Identifies when the audit record was created, which is when the user operation took place.|
+|`CreatedOn`<br/>`createdon`<br/>**Changed Date**|DateTime|Identifies when the audit record was created, which is when the user operation took place.<br/>In July of 2025 the accuracy of this value was enhanced to include milliseconds. This captures the correct sequence of audit events in transactions that have multiple operations. |
 |`ObjectId`<br/>`objectid`<br/>**Record**|Lookup|Uniquely identifies the record that was audited.|
 |`ObjectTypeCode`<br/>`objecttypecode`<br/>**Entity**|EntityName|Displays the logical name of the table referred to by the `objectid` column.|
 |`Operation`<br/>`operation`<br/>**Operation**|Choice|Identifies the operation that created the audit record; one of four values:<br/>1 = Create<br/>2 = Update<br/>3 = Delete<br/>4 = Access<br/>|
@@ -260,10 +260,7 @@ Preference-Applied: odata.include-annotations="*"
 
 The following two static methods show the number of contact records the specified user deleted. These queries use aggregation, so they aren't limited to 5,000 results. However, they're limited to the higher 50,000 record limit for aggregation.
 
-
 `ShowNumberContactsDeletedByUserQE` uses <xref:Microsoft.Xrm.Sdk.Query.QueryExpression>.
-
-
 
 ```csharp
 /// <summary>
@@ -323,9 +320,7 @@ Learn more about:
 
 - [Build queries with QueryExpression](../org-service/queryexpression/overview.md)
 
-
 `ShowNumberContactsDeletedByUserFetchXml` uses <xref:Microsoft.Xrm.Sdk.Query.FetchExpression> with a query composed using FetchXml.
-
 
 ```csharp
 /// <summary>
@@ -506,8 +501,6 @@ static void ShowAuditDetail(
 #### DisplayAuditDetail method
 
 The `DisplayAuditDetail` static method outputs different details to the console depending on the type of audit detail. This method is used by other SDK for .NET samples on this page.
-
-
 
 ```csharp
 /// <summary>
