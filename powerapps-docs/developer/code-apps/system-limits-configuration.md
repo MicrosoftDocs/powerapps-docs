@@ -1,6 +1,6 @@
 ---
-title: "Power Apps code apps system limits and configuration (Preview)"
-description: "Power Apps code apps system limits and configuration"
+title: "System configuration (preview)"
+description: "Power Apps code apps system configuration"
 ms.author: alaug
 author: alaug
 ms.date: 09/10/2025
@@ -10,7 +10,7 @@ contributors:
  - JimDaly
 ---
 
-# System configuration (Preview)
+# System configuration (preview)
 
 This article contains information on the configuration for Power Apps code apps.
 
