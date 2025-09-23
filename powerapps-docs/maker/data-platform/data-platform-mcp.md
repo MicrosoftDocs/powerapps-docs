@@ -30,7 +30,7 @@ This article explains how to set up and use the Dataverse MCP server with Micros
 
 - Power Platform administrator role in order to manage environment settings, environment group, and connector policies.
 - To use this feature the environment be a Managed Environment.
-- By default, the Dataverse MCP server is disabled for environments. You must enable it in the Power Platform admin center before you can connect to it. More information: [Enable the Dataverse MCP server (preview)](data-platform-mcp-disable.md#enable-the-dataverse-mcp-server)
+- By default, the Dataverse MCP server is disabled for environments. You must enable it in the Power Platform admin center before you can connect to it. More information: [Enable the Dataverse MCP server (preview)](data-platform-mcp-disable.md)
 - The Power Platform with Dataverse environment must be setup with the MCP via connector as described in this article.
 
 ## Connect to Dataverse using an MCP server in Microsoft Copilot Studio
