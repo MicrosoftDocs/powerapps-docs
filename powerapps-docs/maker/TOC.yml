@@ -2435,12 +2435,12 @@
           href: ./data-platform/azure-synapse-link-choices-powerbi.md      
   - name: Connect to Dataverse with MCP (preview)
     items:
+    - name: Enable the Dataverse MCP server
+      href: ./data-platform/data-platform-mcp-disable.md    
     - name: Connect to Dataverse with MCP overview
       href: ./data-platform/data-platform-mcp.md
     - name: Connect to Dataverse with MCP FAQ
       href: ./data-platform/data-platform-mcp-faq.md
-    - name: Disable the Dataverse MCP server
-      href: ./data-platform/data-platform-mcp-disable.md
   - name: License requirements for tables
     href: ./data-platform/data-platform-entity-licenses.md
     items:

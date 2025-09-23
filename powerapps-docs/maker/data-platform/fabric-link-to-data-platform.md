@@ -1,6 +1,6 @@
 ---
 title: Configure your environment and link to Microsoft Fabric
-description: This article shows you how to configure your Power Platform environment and link it to Microsoft Fabric.
+description: This article shows you how to configure your Power Platform environment so you can can link it to Microsoft Fabric.
 author: anibakore-msft
 ms.author: banirud
 ms.reviewer: matp
@@ -87,10 +87,9 @@ Admins can manage tables linked to OneLake from the **Azure Synapse Link for Dat
 
 1. Sign into [Power Apps](https://make.powerapps.com). 
    > [!NOTE]
-   >
-   > This feature is enabled by default on all environments. Power Platform admins can disable this feature in the Power Platform admin center in the environment feature settings.
+   > This feature is enabled by default on all environments. Power Platform admins can disable this feature in the Power Platform admin center. More information: [Environment settings: Microsoft Fabric](/power-platform/admin/settings-features?tabs=new#microsoft-fabric)
 
-2. Select **Azure Synapse Link** from the left navigation pane, and the select **Microsoft OneLake**.
+2. Select **Azure Synapse Link** from the left navigation pane, and then select **Microsoft OneLake**.
 3. Open Fabric by selecting **View in Microsoft Fabric**.
 4. Add more table links to Fabric by selecting **Manage tables**.
 5. When you add a table, the system performs an initial sync and indexes the data. When the initial sync is completed, a shortcut to OneLake is created. View the status of tables by selecting **Manage tables**. Use the **Refresh Fabric tables** option to add the newly enabled table in Fabric. You might need to review the report and downstream data flows to see that they aren't impacted by the change.
@@ -104,8 +103,36 @@ Admins can manage tables linked to OneLake from the **Azure Synapse Link for Dat
 
 > [!NOTE]
 > If you've installed Dynamics 365 apps such as Customer Insights, the tables required for the app are also included in the **Microsoft OneLake** link.
-> 
-> Removing already added tables has been disabled since it might impact already built reports.
+
+### Unlink your Dataverse and finance and operations apps tables
+
+You can stop syncing specific Dataverse and finance and operations apps tables to reduce storage costs and optimize your Fabric workspace. After accessing **Manage tables** (as described in step 4 in [Manage link to Fabric](#manage-link-to-fabric)), follow these steps to unlink tables:
+
+1. The **Manage tables** pane shows all Dataverse and finance and operations apps tables currently linked to Fabric.
+2. Tables that are already syncing are checked.
+3. To stop syncing a table, clear the option to select it.
+
+   :::image type="content" source="media/fabric/manage-tables-unlink.png" alt-text="Screenshot of the Manage tables pane showing checked and unchecked tables for syncing to Fabric." lightbox="media/fabric/manage-tables-unlink.png":::
+
+4. To keep syncing, leave it checked.
+5. After making your selections, select **Save**.
+6. A confirmation dialog appears listing the tables that stop syncing.
+
+   :::image type="content" source="media/fabric/unlink-confirmation-dialog.png" alt-text="Screenshot of the confirmation dialog showing tables that will be unlinked from Fabric and stop syncing." lightbox="media/fabric/unlink-confirmation-dialog.png":::
+
+7. Review the list, and then select **Confirm**.
+
+After confirmation:
+
+- Shortcuts for the unselected tables are removed from the Fabric lakehouse.
+- Selected tables are removed from the internal storage that are synchronized to Fabric via shortcuts. This ensures that you're paying only for the storage of tables that you selected.
+- Synchronization stops immediately for those tables no longer selected.
+- Remaining tables continue syncing without interruption.
+
+> [!IMPORTANT]
+>
+> - Removing a table does not delete the table in Dataverse; it only removes the OneLake shortcut and stops data sync.
+> - If you need to add tables later, repeat the same steps and check the tables you want to include. More information: [Manage link to Fabric](#manage-link-to-fabric).
 
 ### Share the data connection with other users
 
