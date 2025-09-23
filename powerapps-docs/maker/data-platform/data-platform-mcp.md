@@ -4,7 +4,7 @@ description: Step-by-step instructions for setup, connect, and use Microsoft Dat
 author: sabinn-msft
 ms.component: cds
 ms.topic: how-to
-ms.date: 09/02/2025
+ms.date: 09/22/2025
 ms.subservice: dataverse-maker
 ms.author: sabinn
 ms. reviewer: matp
@@ -26,6 +26,13 @@ This article explains how to set up and use the Dataverse MCP server with Micros
 
 [!INCLUDE [preview-note-pp.md](../../../shared/preview-includes/preview-note-pp.md)]
 
+## Prerequisites
+
+- Power Platform administrator role in order to manage environment settings, environment group, and connector policies.
+- To use this feature the environment be a Managed Environment.
+- By default, the Dataverse MCP server is disabled for environments. You must enable it in the Power Platform admin center before you can connect to it. More information: [Enable the Dataverse MCP server (preview)](data-platform-mcp-disable.md)
+- The Power Platform with Dataverse environment must be setup with the MCP via connector as described in this article.
+
 ## Connect to Dataverse using an MCP server in Microsoft Copilot Studio
 
 1. Go to [Power App](https://make.powerapps.com) and select your environment from the top right environment selector.
@@ -43,7 +50,7 @@ You can now interact with the Dataverse MCP Server tool in the **Test your agent
 
 ## Connect to Dataverse using an MCP Server with Claude or GitHub Copilot in VS Code
 
-### Prerequisites
+### Prerequisites to connect
 
 These are the prerequisites for using a Dataverse MCP Server with Claude or GitHub Copilot in VS Code:
 
