@@ -23,9 +23,7 @@ search.audienceType:
 
 Controls allow app users to visualize data within table columns in addition to enabling interaction with them.
 
-Controls exist to provide a more touch-friendly experience with model-driven apps. These include toggle, star rating, calendar, number input, and other controls.
-
-Most controls are configured for a table column, but some controls, like the grid controls can be configured for the table.
+Most controls are configured for a table column, but some controls, like the grid control, can be configured for the table.
 
 ## Using controls in the form designer
 
@@ -174,8 +172,6 @@ The rich text editor control provides the app user a WYSIWYG editing area for fo
 
 The toggle control allows users to choose between binary values, such as on/off and yes/no, by toggling the button. It can be configured with yes/no choice columns.
 
-:::image type="content" source="media/toggle-control-example.png" alt-text="Example toggle control in a model-driven app.":::
-
 ## AI Builder
 
 ### Business card reader
@@ -194,7 +190,7 @@ Some components aren't displayed in the default **Components** list in the form 
 
 ### Form component
 
-The form component control lets users edit information of a related table record directly from another table’s form. For example, here's the form component on a separate tab on the main account form, which lets the user edit a contact record without leaving the account form. More information: [Edit related table records directly from another table’s main form](form-component-control.md)
+The form component control lets users edit information of a related table record directly from another table’s form. More information: [Edit related table records directly from another table’s main form](form-component-control.md)
 
 ### Collaboration controls
 
@@ -211,113 +207,6 @@ The timer control shows your users how much time is available to complete an act
 Only available in classic.
 
 Gain valuable insights from the latest news about your customers, competitors, and contacts. The news control delivers relevant news from Bing News. More information: [Set up and use the news control](stay-current-with-news-control.md)
-
-
-## Deprecated controls
-
-### Arc knob
-
-Only available in classic.
-
-The arc knob provides a way for users to enter data by sliding the knob, and shows up on the screen as an arc. The arc knob control provides whole number input and display only. Use this control for any numerical and money columns. You can use touch to change the value, you can also focus on the number and edit it using the keypad.  
-  
-> [!IMPORTANT]
-> - This control isn’t supported on Android 4.2 and 4.3 devices. It impacts the scrolling experience on those versions.  
-  
-|Property|Description|  
-|--------------|-----------------|  
-|Max|Set the maximum value to display on the gauge.|  
-|Min|Set the minimum value to display on the gauge.|  
-|Value|Get or set the value to display on the gauge.|  
-|Step|Set the amount to add or subtract from the current value when entering data with this control.|  
-
-### Auto-complete
-
-Only available in classic.
-
-The auto-complete control filters an item list as you type and lets you select a value from the drop-down list. For example, you can use this control to let users choose from a dropdown list of states or countries/regions. This control maps to a **Single Line of Text** type column.  
-  
-|Property|Description|  
-|--------------|-----------------|  
-|Column|Shows the column the control is mapped to.|  
-|Source|Set the source for the data (Grouped Options, Choice, or View).|  
-|Choice|Select the option set for this column.|  
-|View|Select the table and view for this column.|  
-|Column|Select the column of the view’s primary table to use as the data source.|  
-
-### Flip
-
-The flip switch is like an on/off switch, providing a choice between two values.
-  
-### Linear gauge
-
-Only available in classic.
-
-The linear gauge lets your users input numerical values by dragging a slider instead of typing in the exact quantity. The slider provides whole number input and display only. Use this control for any numerical and money columns.  
-  
-> [!IMPORTANT]
-> This control will be deprecated in April 2021. More information: [Model-driven app controls deprecation](/power-platform/important-changes-coming#model-driven-app-controls-deprecation)
-
-|Property|Description|  
-|--------------|-----------------|  
-|Max|Set the maximum value to display on the gauge.|  
-|Min|Set the minimum value to display on the gauge.|  
-|Value|Get or set the value to display on the gauge.|  
-|Step|Set the amount to add or subtract from the current value when entering data with this control.|  
-
-### Multimedia  
-
-Only available in classic.
-
-You can embed videos to provide a richer customer experience for sales and people on the go. Use this control to map to a URL column that contains the audio or video link to play in the control.  
-  
-> [!NOTE]
->  This control is supported on Android versions 4.4 and later.  
->   
->  YouTube videos aren’t currently supported on Windows 8 and Windows 8.1 tablets and phones. On Windows 10, only HTTPS videos (including YouTube) are supported.  
-  
- Supported media types include:  
-  
--   Streaming MP4 files  
-  
--   YouTube videos  
-  
--   Azure media  
-  
--   Audio streams  
-  
- [Privacy notice](use-the-form-editor-legacy.md#BKMK_PrivacyNotices)  
-  
-|Property|Description|  
-|--------------|-----------------|  
-|Media|Enter the URL of the media to play in this control.|  
-
-### Number input
-
-Use the number input control to help users enter data quickly. Users only have to tap the plus and minus buttons to change a numeric value in increments you set. Use this control for any numerical or money column. Users can also type a number directly into the column. This column is only supported in edit mode.  
-
-:::image type="content" source="media/number-input-control-example.png" alt-text="Example of the number input control in a model-driven app.":::
-  
-|Property|Description|  
-|--------------|-----------------|  
-|Step|Set the amount to add or subtract from the current value when entering data with this control.|  
-|Column|Shows the column the control is mapped to.|  
-
-
-  ### Star rating
-
-Use the star rating to provide a visual representation of a rating. The maximum number of stars you can set is five. You can use this control with whole number columns. It can’t be used with decimal columns.  
-
-:::image type="content" source="media/star-rating-control-example.png" alt-text="Example of the star rating control in a model-driven app.":::
-
-  > [!IMPORTANT]
-> - This control will be deprecated in April 2021. More information: [Model-driven app controls deprecation](/power-platform/important-changes-coming#model-driven-app-controls-deprecation)
-> - Be sure to select the **Hide on web** option for this control.  
-  
-|Property|Description|  
-|--------------|-----------------|  
-|Max|Select the maximum number of stars for the control from the dropdown list.| 
-
 
 ## Next steps
 
