@@ -1,6 +1,6 @@
 ---
 title: Configure your environment and link to Microsoft Fabric
-description: This article shows you how to configure your Power Platform environment and li1. You're prompted to choose a Power BI premium workspace to continue. A list of workspaces in the same region as your environment are displayed. If you don't see a workspace in the drop-down list, you might need to create one, and then return to this task. More information: [Create a link to Fabric](#create-a-link-to-fabric)k it to Microsoft Fabric.
+description: This article shows you how to configure your Power Platform environment so you can can link it to Microsoft Fabric.
 author: anibakore-msft
 ms.author: banirud
 ms.reviewer: matp
@@ -28,7 +28,7 @@ You can use an existing Dataverse environment or create a new developer environm
 - If you plan to use workspace identity authentication, the workspace identity must be onboarded as an Application user in the Dataverse environment and granted the appropriate role (commonly System Administrator) so it can access Dataverse data on behalf of Fabric.
 - You must have permissions in Fabric to manage connections via **Settings** > **Manage connections and gateways**.
 - To confirm whether you have access to the required premium capacity, go to [Power BI](https://app.powerbi.com), open the workspace, and select **Workspace settings** > **Premium**. Make sure that **Trial** or **Premium capacity** is selected.
-   :::image type="content" source="media/Fabric/fabric-trial-capacity.png" alt-text="You need either Trial or Premium capacity for your Power BI workspace." lightbox="media/Fabric/fabric-trial-capacity.png":::
+   :::image type="content" source="media/fabric/fabric-trial-capacity.png" alt-text="You need either Trial or Premium capacity for your Power BI workspace." lightbox="media/fabric/fabric-trial-capacity.png":::
 
 ## Create a link to Fabric
 
@@ -46,7 +46,7 @@ Link to Microsoft Fabric from the Power Apps **Tables** area: Select **Analyze**
        2. Go to **Workspace settings** > **Workspace identity**.  
        3. Select **+ Workspace identity** to create it.  
           - Note the name of the workspace identity (it matches the workspace name).  
-          :::image type="content" source="media/Fabric/fabric-link-workspace-identity.png" alt-text="Workspace identity page in Fabric. The name, such as `srr-athena-test` in this example, is used later when adding the application user in Dataverse.":::
+          :::image type="content" source="media/fabric/fabric-link-workspace-identity.png" alt-text="Workspace identity page in Fabric. The name, such as `srr-athena-test` in this example, is used later when adding the application user in Dataverse.":::
  
        4. For more information, go to [Workspace identity in Fabric](/fabric/security/workspace-identity).  
 
@@ -93,10 +93,9 @@ Admins can manage tables linked to OneLake from the **Azure Synapse Link for Dat
 
 1. Sign into [Power Apps](https://make.powerapps.com). 
    > [!NOTE]
-   >
-   > This feature is enabled by default on all environments. Power Platform admins can disable this feature in the Power Platform admin center in the environment feature settings.
+   > This feature is enabled by default on all environments. Power Platform admins can disable this feature in the Power Platform admin center. More information: [Environment settings: Microsoft Fabric](/power-platform/admin/settings-features?tabs=new#microsoft-fabric)
 
-2. Select **Azure Synapse Link** from the left navigation pane, and the select **Microsoft OneLake**.
+2. Select **Azure Synapse Link** from the left navigation pane, and then select **Microsoft OneLake**.
 3. Open Fabric by selecting **View in Microsoft Fabric**.
 4. Add more table links to Fabric by selecting **Manage tables**.
 5. When you add a table, the system performs an initial sync and indexes the data. When the initial sync is completed, a shortcut to OneLake is created. View the status of tables by selecting **Manage tables**. Use the **Refresh Fabric tables** option to add the newly enabled table in Fabric. You might need to review the report and downstream data flows to see that they aren't impacted by the change.
@@ -113,31 +112,33 @@ Admins can manage tables linked to OneLake from the **Azure Synapse Link for Dat
 
 #### Remove tables from Fabric
 
-You can stop syncing specific Dataverse and FnO tables to reduce storage costs and optimize your Fabric workspace. After accessing **Manage tables** (as described in step 4 above), follow these steps to unlink tables:
+You can stop syncing specific Dataverse and finance and operations apps tables to reduce storage costs and optimize your Fabric workspace. After accessing **Manage tables** (as described in step 4 in [Manage link to Fabric](#manage-link-to-fabric)), follow these steps to unlink tables:
 
-1. The **Manage tables** pane shows all Dataverse and FnO tables currently linked to Fabric.
+1. The **Manage tables** pane shows all Dataverse and finance and operations apps tables currently linked to Fabric.
 2. Tables that are already syncing are checked.
-3. To stop syncing a table, uncheck it.
+3. To stop syncing a table, clear the option to select it.
 
-   :::image type="content" source="media/Fabric/manage-tables-unlink.png" alt-text="Screenshot of the Manage tables pane showing checked and unchecked tables for syncing to Fabric." lightbox="media/Fabric/manage-tables-unlink.png":::
+   :::image type="content" source="media/fabric/manage-tables-unlink.png" alt-text="Screenshot of the Manage tables pane showing checked and unchecked tables for syncing to Fabric." lightbox="media/fabric/manage-tables-unlink.png":::
 
 4. To keep syncing, leave it checked.
 5. After making your selections, select **Save**.
-6. A confirmation dialog appears listing the tables that will stop syncing.
+6. A confirmation dialog appears listing the tables that stop syncing.
 
-   :::image type="content" source="media/Fabric/unlink-confirmation-dialog.png" alt-text="Screenshot of the confirmation dialog showing tables that will be unlinked from Fabric and stop syncing." lightbox="media/Fabric/unlink-confirmation-dialog.png":::
+   :::image type="content" source="media/fabric/unlink-confirmation-dialog.png" alt-text="Screenshot of the confirmation dialog showing tables that will be unlinked from Fabric and stop syncing." lightbox="media/fabric/unlink-confirmation-dialog.png":::
 
-7. Review the list and select **Confirm**.
+7. Review the list, and then select **Confirm**.
 
 After confirmation:
-- Shortcuts for the unselected tables are removed from the Fabric Lakehouse.
-- Selected tables are removed from the internal storage that is synchronized to Fabric via Shortcuts. This ensures that you're paying only for the storage of tables that you selected.
-- Sync for those tables stops immediately.
+
+- Shortcuts for the unselected tables are removed from the Fabric lakehouse.
+- Selected tables are removed from the internal storage that are synchronized to Fabric via shortcuts. This ensures that you're paying only for the storage of tables that you selected.
+- Synchronization stops immediately for those tables no longer selected.
 - Remaining tables continue syncing without interruption.
 
 > [!IMPORTANT]
+>
 > - Removing a table does not delete the table in Dataverse; it only removes the OneLake shortcut and stops data sync.
-> - If you need to add tables later, repeat the same steps and check the tables you want to include.
+> - If you need to add tables later, repeat the same steps and check the tables you want to include. More information: [Manage link to Fabric](#manage-link-to-fabric).
 
 ### Configure Fabric link to use workspace identity
 

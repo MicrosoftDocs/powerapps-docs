@@ -34,7 +34,7 @@ This guide helps developers use the Power Apps SDK to connect their code app to 
 
    Replace `<table-logical-name>` with the logical name of the Dataverse table you want to connect to.
 
-## Supported Scenarios
+## Supported scenarios
 
 The following scenarios are supported when connecting to Dataverse using the Power Apps SDK:
 
@@ -55,7 +55,7 @@ The following scenarios are supported when connecting to Dataverse using the Pow
 
 - Paging support
 
-## Unsupported Scenarios
+## Unsupported scenarios
 
 The following features aren't yet supported:
 
@@ -65,7 +65,7 @@ The following features aren't yet supported:
 - Entity Metadata updates
 - FetchXML support
 
-### Related articles
+### Related information
 
-[How to: Connect your code app to data](connect-to-data.md)  
-[Power Apps CLI](/power-platform/developer/cli/introduction)
+- [How to: Connect your code app to data](connect-to-data.md)  
+- [Power Apps CLI](/power-platform/developer/cli/introduction)
