@@ -1019,7 +1019,6 @@ public static void UpdateMultiple(IOrganizationService service)
         {
             Attributes =
             {
-                { "contoso_sensordataid", "6214ca58-0928-ee11-9965-6045bd5cd155" },
                 { "contoso_value", "15" },
                 { "partitionid", "deviceid-002" }
             }
