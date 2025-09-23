@@ -1,6 +1,6 @@
 ---
 title: Configure your environment and link to Microsoft Fabric
-description: This article shows you how to configure your Power Platform environment so you can can link it to Microsoft Fabric.
+description: This article shows you how to configure your Power Platform environment so you can link it to Microsoft Fabric.
 author: anibakore-msft
 ms.author: banirud
 ms.reviewer: matp
@@ -81,7 +81,7 @@ Link to Microsoft Fabric from the Power Apps **Tables** area: Select **Analyze**
 >
 > When the initial sync is complete, the system continuously refreshes updates in Dataverse in the lakehouse. It might take up to 60 minutes for the data to be refreshed especially during peak load periods.
 >
-> If you have more than 2,000 active Dataverse tables, Link to Fabric can fail with an error. Go to [Troubleshooting common issues](fabric-troubleshoot.md) for help resolving issues.
+> If you have more than 2,000 active Dataverse tables, Link to Fabric can fail with an error. Go to [Troubleshooting common issues](fabric-troubleshoot.md) for help with resolving issues.
 
 ## Manage link to Fabric
 
@@ -139,7 +139,7 @@ After confirmation:
 
 > [!IMPORTANT]
 >
-> - Removing a table does not delete the table in Dataverse; it only removes the OneLake shortcut and stops data sync.
+> - Removing a table doesn't delete the table in Dataverse; it only removes the OneLake shortcut and stops data sync.
 > - If you need to add tables later, repeat the same steps and check the tables you want to include. More information: [Manage link to Fabric](#manage-link-to-fabric).
 
 ### Configure Fabric link to use workspace identity
@@ -218,7 +218,7 @@ To enable an existing link, follow these steps:
 >
 > - Select **Enable Parquet/Delta lake** to enable the view in Fabric.
 > - Existing Azure Synapse Link for Dataverse profiles where the data is saved as CSV files can't be linked to Microsoft Fabric.
-> - Azure Synapse Link profiles secured with managed identities, formerly Managed Service Identity (MSI), can't be linked to Microsoft Fabric at this point in time.  
+> - Currently, Azure Synapse Link profiles secured with managed identities, formerly Managed Service Identity (MSI), can't be linked to Microsoft Fabric.  
 
 ## Next steps
 
