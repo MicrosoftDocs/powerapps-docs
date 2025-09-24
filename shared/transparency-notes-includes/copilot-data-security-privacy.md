@@ -31,7 +31,7 @@ A few ways in which Copilot for natural language generation is unique:
 
 With Copilot, Dynamics 365 and Power Platform harness the power of foundation models coupled with proprietary Microsoft technologies and apply to your business data with:
 
-- Search (using Bing and [Azure Cognitive Search](/azure/search/search-what-is-azure-search)), which brings domain-specific context to a Copilot prompt, enabling a response to integrate information from content like manuals, documents or other data within the organization's tenant. Currently, Power Virtual Agents and Dynamics 365 Customer Service use this retrieval augmented generation approach as preprocessing to call an LLM.
+- Search (using Bing and [Azure Cognitive Search](/azure/search/search-what-is-azure-search)), which brings domain-specific context to a Copilot prompt, enabling a response to integrate information from content like manuals, documents or other data within the organization's tenant. Currently, Microsoft Copilot Studio and Dynamics 365 Customer Service use this retrieval augmented generation approach as preprocessing to call an LLM.
 
 - Microsoft applications like Dynamics 365, Viva Sales, Dataverse, and Power Platform.
 

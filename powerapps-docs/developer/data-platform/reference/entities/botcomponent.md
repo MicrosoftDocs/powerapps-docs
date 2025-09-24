@@ -68,6 +68,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [ComponentType](#BKMK_ComponentType)
 - [Content](#BKMK_Content)
 - [Data](#BKMK_Data)
+- [Dependencies](#BKMK_Dependencies)
 - [Description](#BKMK_Description)
 - [HelpLink](#BKMK_HelpLink)
 - [IconUrl](#BKMK_IconUrl)
@@ -215,6 +216,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`data`|
+|RequiredLevel|None|
+|Type|Memo|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1048576|
+
+### <a name="BKMK_Dependencies"></a> Dependencies
+
+|Property|Value|
+|---|---|
+|Description|**Used to store dependencies between bots.**|
+|DisplayName|**Dependencies**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`dependencies`|
 |RequiredLevel|None|
 |Type|Memo|
 |Format|Text|

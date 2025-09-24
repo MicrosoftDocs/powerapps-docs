@@ -57,6 +57,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 - [DisplayName](#BKMK_DisplayName)
 - [FetchXml](#BKMK_FetchXml)
+- [FilterLinkedRecords](#BKMK_FilterLinkedRecords)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
@@ -100,6 +101,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|False|
 |MaxLength|4000|
+
+### <a name="BKMK_FilterLinkedRecords"></a> FilterLinkedRecords
+
+|Property|Value|
+|---|---|
+|Description|**Does Record Filter Query recursively filter Linked Records**|
+|DisplayName|**Filter Linked Records**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`filterlinkedrecords`|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+|GlobalChoiceName|`recordfilter_filterlinkedrecords`|
+|DefaultValue|True|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 

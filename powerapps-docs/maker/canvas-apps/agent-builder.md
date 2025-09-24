@@ -27,7 +27,7 @@ After creating the agent, makers can edit, test, and publish it in Microsoft Cop
 - Your tenant administrator must turn on the [Publish Copilots with AI features](/microsoft-copilot-studio/security-and-governance) setting in the Power Platform admin center.
 - Include a Dataverse database in your environment. More information: [Add a Microsoft Dataverse database](/power-platform/admin/create-database).
 - Ensure that block unmanaged customizations is disabled. Learn more in [Block unmanaged customizations in Dataverse environments](/power-platform/alm/block-unmanaged-customizations).
-- Current environment has Power Virtual Agents solution version 2.0.0.649.1 or higher.
+- Current environment has Microsoft Copilot Studio solution version 2.0.0.649.1 or higher.
 
 ## Create an agent
 

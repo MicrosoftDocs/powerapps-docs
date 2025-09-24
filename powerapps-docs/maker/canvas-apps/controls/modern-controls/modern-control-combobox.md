@@ -4,7 +4,7 @@ description: Learn about the details, properties, and examples of the combobox m
 author: clromano
 ms.topic: reference
 ms.component: canvas
-ms.date: 1/15/2025
+ms.date: 09/15/2025
 ms.subservice: canvas-maker
 ms.author: clromano
 ms.reviewer: mkaur
@@ -19,57 +19,62 @@ contributors:
 
 # Combobox modern control in Power Apps
 
-A control that lets users select from provided choices, supports search, and multiple selections. 
+This control lets users select from provided choices, search, and make multiple selections. 
 
 ## Description
 
-A **Combobox** control lets you present collections of items for users to select. Configure single or multi-select mode via the SelectMultiple property. Key properties for this control are Items, DefaultSelectedItems, SelectedItems, SelectMultiple, and IsSearchable.
+A **Combobox** control lets you show a collection of items for the user to select. Set single or multi-select mode with the `SelectMultiple` property. Key properties are `Items`, `DefaultSelectedItems`, `SelectedItems`, `SelectMultiple`, and `IsSearchable`.
 
 ## General
 
-**Items** – The source of data that contains the items that appear in the control. If the source has multiple columns, set the control's **Value** property to the column of data that you want to show. 
-Use the control's SearchText property within a PowerFX function to dynamically filter large datasets. 
-For example: `Items = Filter(<dataset>, StartsWith(<column name>, Combobox.SearchText))`
+**Items** – The source of data that has the items that appear in the control.
+
+Use the control's `SearchText` property in a PowerFX function to filter large datasets dynamically. For example: `Items = Filter(<dataset>, StartsWith(<column name>, Combobox.SearchText))`
+
+Set which column appears as combobox options. In the **Properties** pane, select **Fields** > Edit. The first field in the **Fields** pane appears as options in the combobox's drop down menu.
+
+> [!NOTE]
+> If you change **Items**, go to the **Fields** pane and check the field used for options' text. Otherwise, the drop down menu might be empty or show unexpected data.
 
 **AccessibleLabel** – Label for screen readers.
 
-**Visible** - Whether a control appears or is hidden.
+**Visible** – Whether a control appears or is hidden.
 
 ## Behavior
 
-**SelectMultiple** - Lets the user select a single item or multiple items. 
+**SelectMultiple** – Lets the user select one or more items.
 
-**IsSearchable** - Lets the user search for items before selecting. 
+**IsSearchable** – Lets the user search for items before selecting.
 
-**DisplayMode** – Specifies if the control allows user input (Edit), only displays data (View), or is disabled (Disabled). 
+**DisplayMode** – Specifies if the control lets user input (Edit), only shows data (View), or is disabled (Disabled).
 
 ## Size and position 
 
-**[X](../properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
+**[X](../properties-size-location.md)** – The distance from the left edge of a control to the left edge of its parent container (or the screen if there's no parent container).
 
-**[Y](../properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
+**[Y](../properties-size-location.md)** – The distance from the top edge of a control to the top edge of its parent container (or the screen if there's no parent container).
 
-**Width** - The distance between a control's left and right edges. 
+**Width** – The distance between a control's left and right edges.
 
-**Height** - The distance between a control's top and bottom edges. 
+**Height** – The distance between a control's top and bottom edges. 
 
 ## Style and theme
 
-**BasePaletteColor** - The color palette applied to a control. This impacts all surfaces of the control that render a theme color. 
+**BasePaletteColor** - The color palette applied to a control. It affects all surfaces of the control that show a theme color.
 
-**Font** - The name of the family of fonts in which text appears. 
+**Font** - The font family name for the text.
 
-**FontSize** - The font size of the text that appears on a control. If the value is null or zero, then the font size is driven by selected Fluent theme. 
+**FontSize** - The font size of the text on a control. If the value is null or zero, the font size comes from the selected Fluent theme.
 
-**FontColor** - The color of text in a control. 
+**FontColor** - The text color in a control.
 
-**FontWeight** - The weight of the text in a control: Bold, Lighter, Normal, or Semibold. 
+**FontWeight** - The text weight in a control: Bold, Lighter, Normal, or Semibold.
 
-**FontItalic** - Whether the text in a control is italic. 
+**FontItalic** - Whether the text in a control is italic.
 
-**FontUnderline** - Whether a line appears under the text that appears on a control. 
+**FontUnderline** - Whether a line appears under the text in a control.
 
-**FontStrikethrough** - Whether a line appears through the text that appears on a control. 
+**FontStrikethrough** - Whether a line appears through the text in a control. 
 
 ## Additional properties
 

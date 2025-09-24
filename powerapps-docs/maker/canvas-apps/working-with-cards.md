@@ -6,7 +6,7 @@ author: gregli-msft
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 5/29/2025
+ms.date: 8/21/2025
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -17,41 +17,40 @@ contributors:
 ---
 # Understand data cards in canvas apps
 
-**[Card](controls/control-card.md)** controls are the building blocks of the **[Edit form](controls/control-form-detail.md)** and **[Display form](controls/control-form-detail.md)** controls in canvas apps. The form represents the entire record, and each card represents a single field of that record.
 
-Interact with cards easily in the right-hand pane after selecting a form control in the design workspace. In that pane, you can choose which fields to show, how to show each field, and in what order to show them. For example, the image below shows an **Edit form** control in an app built from a list named **Assets**, where you can customize fields to meet your specific needs.
+**[Display form](controls/control-form-detail.md)** and **[Edit form](controls/control-form-detail.md)** controls in canvas apps are containers for entire records. Each form has multiple [Card controls](controls/control-card.md), which are the building blocks of the form. Each card shows or lets you edit a single field from the record and links to that field through its **DataField** property. The form shows the complete record, and each card focuses on one field, so you control how data is shown or updated.
 
-![Screenshot of the first screen showing an Edit form control in an app built from a list named Assets.](./media/working-with-cards/first-screen.png "First screen")
+Open your app for editing in Power Apps Studio. In the tree view, select a form control. In the **Properties** pane, choose which fields to show, how to show each field, and the order to show them. For example, the following screenshot shows an **Edit form** control in an app built from a list named **Assets**, where you customize fields to fit your needs.
 
-Get started with cards by reading [add a form](add-form.md) and [understand data forms](working-with-forms.md). The remainder of this article explains how cards work and how to customize or create your own.
+![Screenshot of an Edit form control in an app built from a list named Assets. The form displays several fields that you can customize.](./media/working-with-cards/first-screen.png "Screenshot of an Edit form control in an app built from a list named Assets. The form displays several fields that you can customize.")
+
+Start with cards by reading [add a form](add-form.md) and [understand data forms](working-with-forms.md). This article explains how cards work, and how to customize or create your own.
 
 ## Predefined cards
 
-Power Apps offers a predefined set of cards for strings, numbers, and other data types, making it easy to tailor your app to specific data requirements. In the right pane, you see the available variations and can change the card used for a field:  
+Power Apps offers a predefined set of cards for strings, numbers, and other data types, so you can tailor your app to specific data needs. In the right pane, you see the available types and can change the card for a field.
 
-![Selected card.](./media/working-with-cards/selected-card.png "Selected card")
+![Screenshot of a selected card in Power Apps.](./media/working-with-cards/selected-card.png "Screenshot of a selected card in Power Apps.")
 
-In this example, a single-line text card is selected, but the URL text is longer than what fits on a single line. Let's change this to a multi-line text card to give our users more room to edit:
+In this example, a single-line text card is selected, but the URL text is longer than what fits on one line. Change this to a multi-line text card so users have more space to edit.
 
-![Multiline edit.](./media/working-with-cards/multiline-edit.png "Multiline edit")
+![Screenshot of a multiline text card edit in Power Apps.](./media/working-with-cards/multiline-edit.png "Screenshot of a multiline text card edit in Power Apps.")
 
-Several fields in this data source aren't shown, but you can show or hide a field by selecting its checkbox. This example shows how to display the **SecurityCode** field.
+Several fields in this data source aren't shown, but you can show or hide a field by selecting its checkbox. This example shows how to show the **SecurityCode** field.
 
 ## Customize a card
 
-Cards include other controls. In an **Edit form** control, the user enters data in a standard **[Text input](controls/control-text-input.md)** control that you add from the **Insert** tab.  
+Cards have other controls. In an **Edit form** control, the user enters data in a standard **[Text input](controls/control-text-input.md)** control that you add from the **Insert** tab.
 
-This article walks through an example of how to change a card's appearance by manipulating controls in it.
+This article explains how to change a card's appearance by changing the controls in it.
 
-1. First, return to the card that was inserted most recently for the **SecurityCode** field. Select this card by clicking or tapping it once:
+1. First, return to the card that was inserted most recently for the **SecurityCode** field. Select this card by selecting it once:
    
     ![Select security code.](./media/working-with-cards/select-security-code.png "Select security code")
-2. Select the **[Text input](controls/control-text-input.md)** control inside the card by clicking or tapping the input control itself.
+1. Select the **[Text input](controls/control-text-input.md)** control inside the card by selecting the input control itself.
    
     ![Select text input.](./media/working-with-cards/select-text-input.png "Select text input")
-3. Move the control within the card by dragging the selection box, and resize it by dragging the handles along the edge of the selection box:
-   
-    ![Customize text input.](./media/working-with-cards/customize-text-input.png "Customize text input")  
+1. Move the control within the card by dragging the selection box, and resize it by dragging the handles along the edge of the selection box. ![Screenshot of dragging and resizing the text input control inside the SecurityCode card.](./media/working-with-cards/customize-text-input.png "Customize text input")
 
 Resize, move, and make other modifications to controls within a card, but you can't delete it without unlocking it first.
 
@@ -93,7 +92,7 @@ In the formula bar, set the **Image** property of this control to *TextBox*.**Te
 
 ![Show image.](./media/working-with-cards/show-image.png "Show image")
 
-Now you can see the images and edit their URLs. Note that we could have used **Parent.Default** as the **Image** property, but it wouldn't have updated if the user changed the URL.
+Now you can see the images and edit their URLs. We could have used **Parent.Default** as the **Image** property, but it wouldn't have updated if the user changed the URL.
 
 We can do the same thing on the second screen of this app, where we use a **Display form** control to display the details of a record. In this case, we may want to hide the label (set the **Visible** property of the label, not the card, to **false**) because the user won't edit the URL on that screen:
 

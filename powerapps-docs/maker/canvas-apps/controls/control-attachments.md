@@ -32,6 +32,8 @@ The attachment control has these limitations:
 
 1. Attachments control on a web browser lets you select multiple files, and allows use of drag and drop functionality. However, when using attachments control on [Power Apps Mobile](https://powerapps.microsoft.com/downloads/), you can only add files one at a time.
 
+1. Files stored in OneDrive or any other cloud storage may not be attached correctly. Try downloading these files to the device before attaching them using the device's file picker.
+
 ## Key properties
 **[Items](properties-core.md)** – The **Attachment** column of the list or Dataverse table. [Collections](../create-update-collection.md) and [Tables](../working-with-tables.md) are not supported.
 
@@ -173,3 +175,4 @@ The following properties must be present:
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
+

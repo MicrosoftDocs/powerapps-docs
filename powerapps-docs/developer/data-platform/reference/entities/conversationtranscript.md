@@ -183,7 +183,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |FormatName|Text|
 |ImeMode|Auto|
 |IsLocalizable|False|
-|MaxLength|100|
+|MaxLength|500|
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
@@ -231,7 +231,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**This defines the type of schema used for the conversation based on format used by the application writing this conversation (PVA, Omni-Channel, OBI, etc)**|
+|Description|**This defines the type of schema used for the conversation based on format used by the application writing this conversation (Microsoft Copilot Studio, Omni-Channel, OBI, etc)**|
 |DisplayName|**SchemaType**|
 |IsValidForForm|True|
 |IsValidForRead|True|

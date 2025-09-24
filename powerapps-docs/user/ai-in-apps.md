@@ -29,6 +29,8 @@ Agent feed helps business users manage and work with agents directly in their ap
 
 - [Add agents to be supervised in app](../maker/model-driven-apps/add-agents-to-app.md)
 - [Supervise agents in app](supervise-agents-with-agent-feed.md)
+- [Configure suggested actions in model-driven apps](../maker/model-driven-apps/configure-suggested-actions.md)
+- [Use suggested actions in the agent feed](use-suggested-actions-in-the-agent-feed.md)
 
 ## Agent assistance
 
