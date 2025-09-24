@@ -165,13 +165,32 @@ You’re now ready to [build your solutions](build-solution.md).
 
 :::image type="content" source="media/create-a-plan/create-objects.png" alt-text="Screenshot showing the 'Ready to build your solution' message.":::
 
-## Export your plan to a PDF
+## Share a plan
+
+
+You can easily share your plan with collaborators and then can assign either read or edit access to each collaborator.
+
+To open and work with a shared plan, collaborators must have sufficient privileges to access the Plan designer. If the plan owner has enabled the [plan level security roles](/power-platform/admin/settings-collaboration) toggle for the environment in the Power Platform Admin center, privileges can be automatically granted during sharing. Only users with the System Admin or System Customizer role can grant these privileges.
+
+If a collaborator does not have the required privileges to access plans, they will see an error message when attempting to open the shared plan.
+
+1. Open your plan and then select **Share** in the top right corner.
+ 
+    :::image type="content" source="media/create-a-plan/export-plan-to-pdf.png" alt-text="Screenshot of the sharing icon on the top right":::
+
+1. Select **Share**.
+1. In the **Share** dialog box, type the names or alias of the user or security groups.
+1. Select the down arrow to choose permissions for the plan. Options include:
+    - **Viewer**: Can only view the plan.
+    - **Co-Owner**: Can use, edit, and share the plan but not delete or change owners.
+1. Select **Manage access** to displays app access details, including current users and co-owners. You can also edit user access and assign security roles here. 
+1. When you're done, select **Share**.
+
+## Export a plan to a PDF
 
 The export to PDF feature lets you share plans with stakeholders. It includes all content from the document side of the plan, but not the diagram side. Use this feature to share user requirements, data models, and proposed data tables with leaders who don't have access to Power Apps.
 
-To export a plan to PDF, select **Export this plan as a PDF** in the top right corner.
-
-:::image type="content" source="media/create-a-plan/export-plan-to-pdf.png" alt-text="Screenshot of the Export to PDF icon on the top right":::
+- To export a plan to PDF open a plan and then select **Share** > **Export as a PDF** in the top right corner.
 
 ## View and edit plans
 
