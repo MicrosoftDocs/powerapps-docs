@@ -9,7 +9,7 @@ ms.author: cgarty
 ms.reviewer: angieandrews
 ms.topic: how-to
 ms.custom: canvas, bap-template
-ms.date: 7/28/2025
+ms.date: 9/25/2025
 ms.subservice: canvas-maker
 search.audienceType: 
   - maker
@@ -121,7 +121,7 @@ The following scenarios were improved to support cloud flows and canvas apps def
 
 As of October 29, 2024, the cloud flows setting is generally available. The canvas apps setting remains in preview.
 
-The cloud flows setting continues to be off by default and optional.
+The cloud flows setting is on by default.
 
 ## Does putting flows into Dataverse use Dataverse capacity?
 
