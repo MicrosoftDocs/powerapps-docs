@@ -2575,7 +2575,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 |GlobalChoiceName|`organization_featureenabled`|
-|DefaultValue|False|
+|DefaultValue|True|
 |True Label|Yes|
 |False Label|No|
 
