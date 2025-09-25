@@ -74,11 +74,11 @@ The following table summarizes the methods that allow you to create cloud flows 
 
 ## Enable the feature
 
-This feature is disabled by default. You must enable it before you can use it.
+This feature is enabled by default for cloud flows, however, it is disabled by default for canvas apps.  You must enable it before you can use it for canvas apps.
 
 1. Sign in to the Power Platform admin center and select an environment.
 1. Go to **Settings** > **Product** > **Features**.
-1. Under **Create new canvas apps and cloud flows in Dataverse solutions**, turn on **Canvas apps (Preview`)** or **Cloud flows** as desired.
+1. Under **Create new canvas apps and cloud flows in Dataverse solutions**, turn on **Canvas apps (Preview`)**.
 
 Learn more about managing feature settings in [Manage feature settings](/power-platform/admin/settings-features).
 
