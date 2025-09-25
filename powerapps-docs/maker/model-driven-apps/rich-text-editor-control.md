@@ -505,7 +505,7 @@ The following HTML attributes are either no longer supported or are replaced by 
 | border | &lt;img&gt;, &lt;table&gt; |
 | height, width | &lt;body&gt;, &lt;td&gt; | CSS height, width |
 | hspace, vspace | &lt;img&gt; |
-| language | &lt;script&gt; | type="text/javascript" |
+| language | &lt;script&gt; | type="text/JavaScript" |
 | nowrap | &lt;td&gt; | CSS white-space: nowrap |
 | type (on &lt;li&gt;, &lt;ul&gt;) | Lists | CSS list-style-type |
 
