@@ -1,6 +1,6 @@
 ---
 title: Configure your environment and link to Microsoft Fabric
-description: This article shows you how to configure your Power Platform environment and link it to Microsoft Fabric.
+description: This article shows you how to configure your Power Platform environment so you can link it to Microsoft Fabric.
 author: anibakore-msft
 ms.author: banirud
 ms.reviewer: matp
@@ -24,7 +24,9 @@ You can use an existing Dataverse environment or create a new developer environm
 - If you want the system to create a Power BI workspace, you need to have Power BI Capacity Administrator access to a capacity within the same region as the Dataverse environment.
 - A Power BI premium license or Fabric capacity within the same Azure geographical region as your Dataverse environment is required. If you don’t have Power BI premium license or Fabric capacity within the same geographical region, you can buy a capacity or sign up for a free Fabric trial capacity. More information: [Fabric (preview) trial](/fabric/get-started/fabric-trial)
 - Your administrator needs to grant you access to create Fabric lakehouses and artifacts. You can find these settings in the  Fabric admin portal. Go to **Tenant Settings** > **Microsoft Fabric** > **Users can create Fabric items**, **Tenant settings** > **Workspace settings** > **Create workspaces** as well as **Tenant settings** > **oneLake settings** > **Users can access data stored in OneLake with apps external to Fabric**.
-- If you plan to use workspace identity authentication, you must be a workspace admin to create and manage a workspace identity. The workspace you're creating the identity for can't be a My Workspace.
+- If you plan to use workspace identity authentication, you must be a workspace admin to create and manage a workspace identity. The workspace you're creating the identity for can't be a My Workspace. More information: [Workspace identity in Fabric](/fabric/security/workspace-identity)
+- If you plan to use workspace identity authentication, the workspace identity must be onboarded as an application user in the Dataverse environment and granted the appropriate role (commonly System Administrator) so it can access Dataverse data on behalf of Fabric.
+- You must have permissions in Fabric to manage connections via **Settings** > **Manage connections and gateways**.
 - To confirm whether you have access to the required premium capacity, go to [Power BI](https://app.powerbi.com), open the workspace, and select **Workspace settings** > **Premium**. Make sure that **Trial** or **Premium capacity** is selected.
    :::image type="content" source="media/fabric/fabric-trial-capacity.png" alt-text="You need either Trial or Premium capacity for your Power BI workspace." lightbox="media/fabric/fabric-trial-capacity.png":::
 
@@ -41,8 +43,8 @@ Link to Microsoft Fabric from the Power Apps **Tables** area: Select **Analyze**
    - **Workspace Identity**:  
      To use this option, you must first create a workspace identity in Fabric:  
        1. In Fabric, open the target workspace.  
-       2. Go to **Workspace settings** > **Workspace identity**.  
-       3. Select **+ Workspace identity** to create it.  
+       2. Go to **Workspace settings** > **Workspace Identity**.  
+       3. Select **+ Workspace Identity** to create it.  
           - Note the name of the workspace identity (it matches the workspace name).  
           :::image type="content" source="media/fabric/fabric-link-workspace-identity.png" alt-text="Workspace identity page in Fabric. The name, such as `srr-athena-test` in this example, is used later when adding the application user in Dataverse.":::
  
@@ -57,7 +59,7 @@ Link to Microsoft Fabric from the Power Apps **Tables** area: Select **Analyze**
 
    - **Service Principal**:  
        To use this option, go to the create an application user with workspace identity previous step to create a service principal. Then, follow these steps:  
-       1. First, add the service principal as an application user in Dataverse following the same process described in the Workspace Identity section.  
+       1. First, add the service principal as an application user in Dataverse following the same process described in the **Workspace Identity** section.  
        2. After adding the application user, return to the **Link to Fabric** wizard.  
        3. In the connection setup, provide the following details for your service principal:  
           - **Tenant ID**: Your Azure tenant identifier.
@@ -79,18 +81,23 @@ Link to Microsoft Fabric from the Power Apps **Tables** area: Select **Analyze**
 >
 > When the initial sync is complete, the system continuously refreshes updates in Dataverse in the lakehouse. It might take up to 60 minutes for the data to be refreshed especially during peak load periods.
 >
-> If you have more than 2,000 active Dataverse tables, Link to Fabric can fail with an error. Go to [Troubleshooting common issues](fabric-troubleshoot.md) for help resolving issues.
+> If you have more than 2,000 active Dataverse tables, Link to Fabric can fail with an error. Go to [Troubleshooting common issues](fabric-troubleshoot.md) for help with resolving issues.
 
 ## Manage link to Fabric
 
+This section describes how to add or remove tables linked to Fabric, configure the link to use workspace identity, and share the data connection with other users.
+
+### Add or remove tables linked to Fabric
+
 Admins can manage tables linked to OneLake from the **Azure Synapse Link for Dataverse** page. If this environment is linked to Fabric, you see a link called **Microsoft OneLake**.
+
+#### Add tables to Fabric
 
 1. Sign into [Power Apps](https://make.powerapps.com). 
    > [!NOTE]
-   >
-   > This feature is enabled by default on all environments. Power Platform admins can disable this feature in the Power Platform admin center in the environment feature settings.
+   > This feature is enabled by default on all environments. Power Platform admins can disable this feature in the Power Platform admin center. More information: [Environment settings: Microsoft Fabric](/power-platform/admin/settings-features?tabs=new#microsoft-fabric)
 
-2. Select **Azure Synapse Link** from the left navigation pane, and the select **Microsoft OneLake**.
+2. Select **Azure Synapse Link** from the left navigation pane, and then select **Microsoft OneLake**.
 3. Open Fabric by selecting **View in Microsoft Fabric**.
 4. Add more table links to Fabric by selecting **Manage tables**.
 5. When you add a table, the system performs an initial sync and indexes the data. When the initial sync is completed, a shortcut to OneLake is created. View the status of tables by selecting **Manage tables**. Use the **Refresh Fabric tables** option to add the newly enabled table in Fabric. You might need to review the report and downstream data flows to see that they aren't impacted by the change.
@@ -104,8 +111,80 @@ Admins can manage tables linked to OneLake from the **Azure Synapse Link for Dat
 
 > [!NOTE]
 > If you've installed Dynamics 365 apps such as Customer Insights, the tables required for the app are also included in the **Microsoft OneLake** link.
-> 
-> Removing already added tables has been disabled since it might impact already built reports.
+
+#### Remove tables from Fabric
+
+You can stop syncing specific Dataverse and finance and operations apps tables to reduce storage costs and optimize your Fabric workspace. After accessing **Manage tables** (as described in step 4 in [Manage link to Fabric](#manage-link-to-fabric)), follow these steps to unlink tables:
+
+1. The **Manage tables** pane shows all Dataverse and finance and operations apps tables currently linked to Fabric.
+2. Tables that are already syncing are checked.
+3. To stop syncing a table, clear the option to select it.
+
+   :::image type="content" source="media/fabric/manage-tables-unlink.png" alt-text="Screenshot of the Manage tables pane showing checked and unchecked tables for syncing to Fabric." lightbox="media/fabric/manage-tables-unlink.png":::
+
+4. To keep syncing, leave it checked.
+5. After making your selections, select **Save**.
+6. A confirmation dialog appears listing the tables that stop syncing.
+
+   :::image type="content" source="media/fabric/unlink-confirmation-dialog.png" alt-text="Screenshot of the confirmation dialog showing tables that will be unlinked from Fabric and stop syncing." lightbox="media/fabric/unlink-confirmation-dialog.png":::
+
+7. Review the list, and then select **Confirm**.
+
+After confirmation:
+
+- Shortcuts for the unselected tables are removed from the Fabric lakehouse.
+- Selected tables are removed from the internal storage that are synchronized to Fabric via shortcuts. This ensures that you're paying only for the storage of tables that you selected.
+- Synchronization stops immediately for those tables no longer selected.
+- Remaining tables continue syncing without interruption.
+
+> [!IMPORTANT]
+>
+> - Removing a table doesn't delete the table in Dataverse; it only removes the OneLake shortcut and stops data sync.
+> - If you need to add tables later, repeat the same steps and check the tables you want to include. More information: [Manage link to Fabric](#manage-link-to-fabric).
+
+### Configure Fabric link to use workspace identity
+
+If you linked your Dataverse environment to Fabric earlier using an organizational account, you can switch to workspace identity or service principal. Workspace identity is a Fabric managed service principal bound to a specific workspace; it removes the need to manage secrets and enables secure, keyless authentication for Fabric items that connect to Dataverse.
+
+#### Things to verify before you begin
+
+Before proceeding, ensure you meet the requirements described in the [Prerequisites](#prerequisites) section, and specifically verify these three essential items:
+
+- Workspace identity exists: The target Fabric workspace must have a workspace identity configured. Go to **Workspace settings** > **Workspace Identity**. If the identity doesn't exist, create it first. More information: [Workspace identity in Fabric](/fabric/security/workspace-identity)
+- Dataverse application user: The same workspace identity must be onboarded as an application user in the Dataverse environment and granted the appropriate role (commonly System Administrator) so it can access Dataverse data on behalf of Fabric. This might already be in place if you followed the **Workspace Identity** steps in the [Create a link to Fabric](#create-a-link-to-fabric) section previously.
+- Rights to edit connections: You must have permissions in Fabric to manage connections via **Settings** > **Manage connections and gateways**.
+
+#### What changes?
+
+After you update the connection's authentication method to Workspace identity, all Fabric items that use that connection (for example, Lakehouses via OneLake shortcuts, Dataflows Gen2, pipelines, semantic models) authenticate with your workspace identity going forward.
+
+#### Before you begin
+
+Identify the connection name. When you used **Link to Microsoft Fabric**, the system created a Dataverse connection that typically includes (or matches) your environment name. You update this specific connection.
+
+#### Switch to workspace identity authentication
+
+1. **Open Fabric settings**
+   - In Microsoft Fabric, select the gear icon (top right) and choose **Settings** > **Manage connections and gateways**.
+
+   :::image type="content" source="media/Fabric/fabric-settings-manage-connections.png" alt-text="Screenshot showing how to access Fabric settings by selecting the gear icon and choosing Settings > Manage connections and gateways." lightbox="media/Fabric/fabric-settings-manage-connections.png":::
+
+2. **Locate the Dataverse connection created by Link to Fabric**
+   - In **Manage connections and gateways**, open the **Connections** tab (if not already selected).
+   - Find the connection associated with your Dataverse environment. The **Link to Fabric** wizard typically creates this connection and names it using your environment's name so it's easy to recognize.
+
+3. **Open the connection's management pane**
+   - Select the ellipsis (⋮) next to the connection and choose **Settings** to open its settings.
+
+   :::image type="content" source="media/Fabric/fabric-connection-settings-authentication.png" alt-text="Screenshot showing the connection settings pane with Authentication section and Authentication method dropdown showing Workspace identity, OAuth 2.0, and Service Principal options." lightbox="media/Fabric/fabric-connection-settings-authentication.png":::
+
+4. **Switch the authentication method to Workspace identity**
+   - In the connection's **Settings** pane, go to **Authentication**.
+   - From the **Authentication method** dropdown, select **Workspace identity**.
+   - Select **Save** to apply the change.
+
+> [!NOTE]
+> If your items run through a gateway, review your gateway and cloud connection policies as applicable. Fabric's manage connections and gateways experience governs connection usage, including gateway scenarios for shareable cloud connections.
 
 ### Share the data connection with other users
 
@@ -113,11 +192,9 @@ The system creates a data connection between the Power Platform environment and 
 
 The system uses this connection to enable Fabric users to connect to Dataverse - the data store behind the Power Platform environment. If you want to enable other users to add or remove tables to Fabric link, you need to share this data connection with other users. 
 
-1. Go to [Fabric.Microsoft.com](https://fabric.microsoft.com) and select the gear icon on top left (next to the user icon).
-2. On the **Settings** menu, select **Data connections and Gateways**. The available data connections are displayed.
-3. Select the **Connections** tab, and then choose the data connection you created with the connection type **Dataverse**. You might notice a connection that is named similar to **org...crm.dynamics.com**. In case you have multiple connections like this, you need to select the connection that links to the specific Power Platform environment.
-4. Once you select the correct data connection, select **...** > **manage users**. Then you're shown users who have access to this connection.
-5. Enter the name or email of other users who need access to data. When you select a user, specify either the **Owner** role or **Reader** role. You only need to provide reader role to enable them to consume data. The users you specify receive an e-mail confirming access to data.
+1. Follow steps 1-2 from [Switch to workspace identity authentication](#switch-to-workspace-identity-authentication) to access **Manage connections and gateways** and locate your Dataverse connection.
+2. Once you select the correct data connection, select **...** > **Manage users**. Then you're shown users who have access to this connection.
+3. Enter the name or email of other users who need access to data. When you select a user, specify either the **Owner** role or **Reader** role. You only need to provide reader role to enable them to consume data. The users you specify receive an e-mail confirming access to data.
 
 You might need to grant access to other users to this workspace so that they can work with data. Depending on the need for data access, you might need to secure the data in this workspace before you share this data with others. You can secure the lakehouse as well as tables within the lakehouse using OneLake security. More information: [OneLake security overview](/fabric/onelake/security/get-started-security)
 
@@ -141,7 +218,7 @@ To enable an existing link, follow these steps:
 >
 > - Select **Enable Parquet/Delta lake** to enable the view in Fabric.
 > - Existing Azure Synapse Link for Dataverse profiles where the data is saved as CSV files can't be linked to Microsoft Fabric.
-> - Azure Synapse Link profiles secured with managed identities, formerly Managed Service Identity (MSI), can't be linked to Microsoft Fabric at this point in time.  
+> - Currently, Azure Synapse Link profiles secured with managed identities, formerly Managed Service Identity (MSI), can't be linked to Microsoft Fabric.  
 
 ## Next steps
 
