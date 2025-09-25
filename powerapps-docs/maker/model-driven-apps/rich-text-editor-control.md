@@ -31,7 +31,7 @@ You can customize the editor's appearance, features, and behavior.
 The modern text editor is designed to align with the familiar and intuitive interfaces of Microsoft applications such as Outlook, Word, and OneNote. This experience, set by default, introduces a modern design, dark mode, high contrast themes, and a new Copilot feature to enhance your text editing capabilities.
 
 > [!NOTE]
-> The classic version of the rich text editor was deprecated as of April 2025. If you have issues with upgrading or using the modern rich text editor, contact [Microsoft Customer Support](/power-platform/admin/get-help-support).
+> - The classic version of the rich text editor was deprecated as of April 2025. If you have issues with upgrading or using the modern rich text editor, contact [Microsoft Customer Support](/power-platform/admin/get-help-support).
 > - If you customized the previous version of the rich text editor, you might need to recreate your customizations in the modern rich text editor.
 
 ## Add the rich text editor control to a text column on a form
