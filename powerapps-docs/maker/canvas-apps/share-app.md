@@ -46,11 +46,10 @@ Before you share an app, you must [save it](save-publish-app.md) (not locally) a
     - **User**: Can use the app only.
     - **Co-Owner**: Can use, edit, and share the app but not delete or change owners.
 
-        :::image type="content" source="media/share-app/share-app-coowner.png" alt-text="share with a co-owner":::
-      
+        :::image type="content" source="media/share-app/share-app-coowner.png" alt-text="share with a co-owner":::\
     - If your app connects to a Dataverse table, the permissions dropdown will display a **More security roles** option. Select the appropriate security roles, and those roles will be automatically assigned to users when you share the app.
-    - If your admin enables the [plan level security roles](/power-platform/admin/settings-collaboration#security-roles) in Power Platform Admin only system admins can grant collaborators with app-level privileges when sharing. The privilege can be read or edit access.
-      
+    - If your admin enables the [app level security roles](/power-platform/admin/settings-collaboration#security-roles) in Power Platform Admin, only system admins can grant collaborators with app-level privileges when sharing. The privilege can be read or edit access.
+
        :::image type="content" source="media/share-app/more-security-roles.png" alt-text="More security roles option":::
 
 1. Optional steps:
