@@ -40,7 +40,7 @@ Row summaries can be configured for table main forms.
 > [!NOTE]
 >
 > - When you configure the row summary, it applies to all main forms for the table.
-> - The case table, which is available with some Dynamics 365 apps like Dynamics 365 Customer Service, doesn't support the row summary feature. This is to prevent conflicts with the [manage case and custom record summary](/en-us/dynamics365/customer-service/administer/copilot-map-custom-fields) feature.
+> - Some out-of-box (OOB) tables (i.e. Case, Lead, and Opportunity) provide their own summaries via the Dynamics 365 Customer Service and Dynamics 365 Sales applications. To avoid conflicts, the row summary feature is not available for these tables. You can find more information details about the OOB summaries by reading more about the [Customer Service summary](/en-us/dynamics365/customer-service/administer/copilot-map-custom-fields) and [Sales summary](/en-us/dynamics365/sales/copilot-summarize-records) features.
 
 1. Sign in to Power Apps (make.powerapps.com) select **Tables** on the left navigation pane, and then open the table where you want to configure a row summary. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Under **Customizations**, select **Row summary**.
@@ -51,6 +51,11 @@ Row summaries can be configured for table main forms.
    The most recently edited row in the table is used to generate a test response.
 1. Once you're satisfied with the columns and response from the test, select **Apply to main forms**.
 
+> [!IMPORTANT]
+> Any user who needs to see summaries in the running apps need to be assigned the following privileges via security roles:
+> -  prvReadSettingDefinition
+> -  prvReadLanguageLocale
+
 ## Determine which main forms include a row summary
 
 After you apply a row summary, the summary displays on all main forms for the table. To view the forms that include a row summary, in Power Apps, select **Tables** on the left navigation pane, and then under **Data experiences** select **Forms**.
@@ -60,7 +65,7 @@ All forms with the row summary applied have a form AI icon next to the form name
 
 ## Write a good prompt for the row summary
 
-Writing a custom prompt gives you the ability to instruct the generative pretrained transformer (GPT) model to perform a specific task. By carefully crafting a prompt, you can generate a response that suits your specific business need. Here are some tips to consider when writing a prompt:
+Writing a custom prompt gives you the ability to instruct the AI model to perform a specific task. By carefully crafting a prompt, you can generate a response that suits your specific business need. Here are some tips to consider when writing a prompt:
 
 - Provide a list of the columns you want to include in the summary. Alternatively, you might wish to provide a list of columns that you want to exclude from the summary.
 - Specify any formatting preferences, such as write the summary as a bulleted list.
