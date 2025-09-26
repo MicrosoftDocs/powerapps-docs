@@ -169,7 +169,7 @@ You’re now ready to [build your solutions](build-solution.md).
 
 Share your plan with collaborators, and assign read or edit access to each collaborator.
 
-Collaborators need sufficient privileges to open and work with a shared plan. If the plan owner enables the [plan level security roles](/power-platform/admin/settings-collaboration) toggle for the environment in Power Platform Admin center, sharing automatically grants privileges. Only users with the System Admin or System Customizer role can grant these privileges.
+Collaborators need sufficient privileges to open and work with a shared plan. If the plan owner enables the [plan level security roles](/power-platform/admin/settings-collaboration#security-roles) toggle for the environment in Power Platform Admin center, sharing automatically grants privileges. Only users with the System Admin or System Customizer role can grant these privileges.
 
 If a collaborator doesn't have the required privileges to use plans, they see an error message when they try to open the shared plan.
 
