@@ -167,11 +167,13 @@ You’re now ready to [build your solutions](build-solution.md).
 
 ## Share a plan
 
-Share your plan with other makers to collaborate by assigning them read or edit access.
+Share your plan with other makers to collaborate by assigning read or edit access.
 
 Collaborators need sufficient privileges to open and work with a shared plan. If your admin enables the [plan level security roles](/power-platform/admin/settings-collaboration#security-roles) in Power Platform Admin only system admins  can grant collaborators with plan-level privileges when sharing. The privilege can be read or edit access.
 
-If a maker missing required privileges, they will see an error message when they open the shared plan.
+ Collaborators need sufficient privileges to open and work with a shared plan. If your admin turn on [plan level security roles](/power-platform/admin/settings-collaboration#security-roles) in Power Platform Admin, only system admins can grant collaborators plan-level privileges when sharing. The privilege can be read or edit access.
+
+ If a maker doesn't have the required privileges, they see an error message when they open the shared plan.
 
 **Follow these steps to share your plan**:
 
