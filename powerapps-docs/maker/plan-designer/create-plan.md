@@ -167,11 +167,13 @@ You’re now ready to [build your solutions](build-solution.md).
 
 ## Share a plan
 
-Share your plan with collaborators, and assign read or edit access to each collaborator.
+Share your plan with other makers to collaborate by assigning them read or edit access.
 
-Collaborators need sufficient privileges to open and work with a shared plan. If the plan owner enables the [plan level security roles](/power-platform/admin/settings-collaboration#security-roles) toggle for the environment in Power Platform Admin center, sharing automatically grants privileges. Only users with the System Admin or System Customizer role can grant these privileges.
+Collaborators need sufficient privileges to open and work with a shared plan. If your admin enables the [plan level security roles](/power-platform/admin/settings-collaboration#security-roles) in Power Platform Admin only system admins  can grant collaborators with plan-level privileges when sharing. The privilege can be read or edit access.
 
-If a collaborator doesn't have the required privileges to use plans, they see an error message when they try to open the shared plan.
+If a maker missing required privileges, they will see an error message when they open the shared plan.
+
+**Follow these steps to share your plan**:
 
 1. Open your plan and then select **Share** in the top right corner.
  
@@ -182,7 +184,7 @@ If a collaborator doesn't have the required privileges to use plans, they see an
 1. Select the down arrow to choose permissions for the plan. Options include:
     - **Viewer**: Can only view the plan.
     - **Co-Owner**: Can use, edit, and share the plan but not delete or change owners.
-1. Select **Manage access** to displays app access details, including current users and co-owners. You can also edit user access and assign security roles here. 
+1. Select **Manage access** to see access details, including current users and co-owners. You can also edit user access and assign security roles here. 
 1. When you're done, select **Share**.
 
 ## Export a plan to a PDF
