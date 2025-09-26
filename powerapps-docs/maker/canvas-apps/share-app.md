@@ -5,7 +5,7 @@ author: jessicaszelo
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 09/8/2025
+ms.date: 10/10/2025
 ms.subservice: canvas-maker
 ms.author: szlo
 search.audienceType: 
