@@ -107,10 +107,10 @@ Row summaries are solution-aware and can easily be added to Solutions to facilit
 
 1.  In Power Apps, select **Solutions** on the left navigation pane, and open the desired solution. 
 1.  Select **Add existing > More > Other > AI Skill Config**.
-1.  Select the rows corresponding to the tables you created summaries for, and select **Add**.
+1.  Select the rows corresponding to the tables you created summaries for, and select **Add**. 
 
-> [!NOTE]
-> - When you configure the row summary, it applies to all main forms for the table.
+> [!IMPORTANT]
+> - Do not add AI Skill Config rows with an owner of *System* to your solutions. These do not correspond to row summaries you have created and may cause solution import to fail.  
  
 
 ## Related information
