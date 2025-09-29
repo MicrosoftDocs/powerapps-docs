@@ -69,6 +69,21 @@ For more information, see [Insert an email template](insert-email-template.md).
     >[!Important]
     > - The **From** and **To** fields are automatically populated based on the user and the account and contact of the original record.
 
+## View email sentiment
+
+ When you get an incoming email from a customer, the Customer sentiment card is displayed on the email form.
+
+The customer sentiment card displays the following:
+
+ - **Current sentiment**: The customer’s current sentiment. A sentiment intensity indicator in the corresponding colors is also displayed.
+ - **Sentiment timeline**: A visual representation that shows how the customer sentiment in the emails received changes across a period.   
+ The timeline displays indicators for up to six customer emails, including the current email. Customer service representatives can select historical sentiment and then select **View email**. The system shows the relevant email for that period and sentiment in a new tab.
+
+- The **Inbox** view also displays the sentiment with the sentiment intensity indicator.
+
+> [!Note]
+> For emails received before the feature is enabled, the system doesn’t display the sentiment.
+
 ## Reply to an email
 The way you can reply to an email depends on where you are in your app. 
 
