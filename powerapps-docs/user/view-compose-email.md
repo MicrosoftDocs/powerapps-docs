@@ -69,7 +69,10 @@ For more information, see [Insert an email template](insert-email-template.md).
     >[!Important]
     > - The **From** and **To** fields are automatically populated based on the user and the account and contact of the original record.
 
-## View email sentiment
+## View email sentiment (preview)
+
+[!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
+
 
  When you get an incoming email from a customer, the Customer sentiment card is displayed on the email form.
 
@@ -83,6 +86,9 @@ The customer sentiment card displays the following:
 
 > [!Note]
 > For emails received before the feature is enabled, the system doesn’t display the sentiment.
+
+[!INCLUDE [preview-banner](../../../shared-content/shared/preview-includes/production-ready-preview-dynamics365.md)]
+
 
 ## Reply to an email
 The way you can reply to an email depends on where you are in your app. 
