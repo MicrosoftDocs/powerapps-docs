@@ -1,8 +1,8 @@
 ---
 title: "How to: Connect your code app to Dataverse (preview)"
 description: "Learn how to connect your code app to Dataverse"
-ms.author: jordanchodakWork
-author: jordanchodak
+ms.author:  jordanchodak
+author: jordanchodakWork
 ms.date: 09/29/2025
 ms.reviewer: jdaly
 ms.topic: how-to
