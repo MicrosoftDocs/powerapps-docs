@@ -1,13 +1,14 @@
 ---
 title: "Configure a row summary for a model-driven app main form"
 description: "Learn how to configure a row summary for a model-driven app main form that uses AI to let your users view key information on a form."
-ms.date: 05/23/2025
+ms.date: 08/30/2025
 ms.update-cycle: 180-days
 ms.subservice: dataverse-maker
 ms.topic: how-to
 author: Mattp123
 ms.author: damialajogun
 ms.reviewer: matp
+contributors: jasongre
 ms.collection: bap-ai-copilot
 ms.custom: ignite-2024
 ms.service: powerapps
@@ -39,7 +40,7 @@ Row summaries can be configured for table main forms.
 
 > [!NOTE]
 > - When you configure the row summary, it applies to all main forms for the table.
-> - Some out-of-box (OOB) tables (i.e. Case, Lead, and Opportunity) provide their own summaries via the Dynamics 365 Customer Service and Dynamics 365 Sales applications. To avoid conflicts, the row summary feature is not available for these tables. You can find more information details about the OOB summaries by reading more about the [Customer Service summary](/en-us/dynamics365/customer-service/administer/copilot-map-custom-fields) and [Sales summary](/en-us/dynamics365/sales/copilot-summarize-records) features.
+> - Some out-of-box tables, such as Case, Lead, and Opportunity, provide their own summaries via the Dynamics 365 Customer Service and Dynamics 365 Sales applications. To avoid conflicts, the row summary feature isn't available for these tables. You can find more information details about the summaries for these tables by reading about the [Customer Service summary](/en-us/dynamics365/customer-service/administer/copilot-map-custom-fields) and [Sales summary](/en-us/dynamics365/sales/copilot-summarize-records) features.
 
 1. Sign in to Power Apps (make.powerapps.com) select **Tables** on the left navigation pane, and then open the table where you want to configure a row summary. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Under **Customizations**, select **Row summary**.
@@ -51,7 +52,7 @@ Row summaries can be configured for table main forms.
 1. Once you're satisfied with the columns and response from the test, select **Apply to main forms**.
 
 > [!IMPORTANT]
-> Any user who needs to see summaries in the running apps need to be assigned the following privileges via security roles:
+> Any user who needs to view summaries in the running apps must be assigned these privileges through a security role:
 > -  prvReadSettingDefinition
 > -  prvReadLanguageLocale
 
@@ -101,16 +102,16 @@ To edit a row summary for a main form, open the table, and then under **Customiz
 1. On the command bar, select **Row summary** > **Hide on all main forms**.
    :::image type="content" source="media/hide-form-row-summary.png" alt-text="Hide all main form row summaries":::
 
-## Adding summaries to Solutions
+## Adding summaries to solutions
 
-Row summaries are solution-aware and can easily be added to Solutions to facilitate moving between environments. To add a summary to a solution, do the following: 
+Row summaries are solution-aware and can be added to a solution to facilitate moving between environments. To add a summary to a solution, do the following: 
 
 1.  In Power Apps, select **Solutions** on the left navigation pane, and open the desired solution. 
 1.  Select **Add existing > More > Other > AI Skill Config**.
-1.  Select the rows corresponding to the tables you created summaries for, and select **Add**. 
+1.  Select the rows corresponding to the tables you created summaries for, and then select **Add**. 
 
 > [!IMPORTANT]
-> - Do not add AI Skill Config rows with an owner of *System* to your solutions. These do not correspond to row summaries you have created and may cause solution import to fail.  
+> - Don't add AI Skill Config table rows with an owner of *System* to your solutions. These don't correspond to row summaries you have created and might cause solution import to fail.  
  
 
 ## Related information
