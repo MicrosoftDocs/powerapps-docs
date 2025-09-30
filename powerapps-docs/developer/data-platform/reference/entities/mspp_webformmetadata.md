@@ -1075,7 +1075,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |FormatName|Text|
 |ImeMode|Disabled|
 |IsLocalizable|False|
-|MaxLength|100000|
+|MaxLength|1048576|
 
 ### <a name="BKMK_mspp_tabname"></a> mspp_tabname
 

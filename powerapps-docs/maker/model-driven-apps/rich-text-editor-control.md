@@ -1,7 +1,7 @@
 ---
 title: Add the rich text editor control to a model-driven app
 description: Learn how to add and customize the rich text editor control in Power Apps model-driven apps to create and edit formatted text.
-ms.date: 07/14/2025
+ms.date: 09/25/2025
 ms.update-cycle: 180-days
 ms.topic: how-to
 ms.author: saperlmu
@@ -31,7 +31,8 @@ You can customize the editor's appearance, features, and behavior.
 The modern text editor is designed to align with the familiar and intuitive interfaces of Microsoft applications such as Outlook, Word, and OneNote. This experience, set by default, introduces a modern design, dark mode, high contrast themes, and a new Copilot feature to enhance your text editing capabilities.
 
 > [!NOTE]
-> The classic version of the rich text editor was deprecated as of April 2025. If you have issues with upgrading or using the modern rich text editor, contact [Microsoft Customer Support](/power-platform/admin/get-help-support).
+> - The classic version of the rich text editor was deprecated as of April 2025. If you have issues with upgrading or using the modern rich text editor, contact [Microsoft Customer Support](/power-platform/admin/get-help-support).
+> - If you customized the previous version of the rich text editor, you might need to recreate your customizations in the modern rich text editor.
 
 ## Add the rich text editor control to a text column on a form
 
@@ -459,14 +460,55 @@ Rich text editor limitations include the following:
 - The following file types for attachments are supported out of the box: .aac, .avi, .csv, .doc, .docx, .gif, .html, .jpeg, .mid, .midi, .mp3, .mp4, .mpeg, .msg, .pdf, .png, .ppt, .pptx, .svg, .txt, .vsd, .wav, .xls, .xlsm, and .xlsx. You can configure the allowed extensions for your environment in your advanced settings by going to **Administration** > **General** > **Set blocked file extensions for attachments** and removing the extensions you want to allow.
 - Non-Microsoft plugins aren't supported.
 
-Knowledge management:
-
-- A preview tab isn't currently available.
-
 Email templates and signatures:
 
 - If you experience an issue with the way an email template renders, we recommend that you recreate it in the modern editor.
 - Nested HTML structures—such as deeply nested &lt;div&gt; or &lt;table&gt; elements—can cause rendering problems in the rich text editor. We recommend that you simplify the HTML structure by removing unnecessary nested &lt;div&gt; or &lt;table&gt; tags to ensure consistent rendering across clients.
+
+## HTML tags
+
+The following HTML tags are either no longer supported or are replaced by a modern alternative in the rich text editor.
+
+| Tag | Description | Modern rich text editor alternative |
+|----------|-----------|-----------------|
+| &lt;acronym&gt; | Defines an acronym | &lt;abbr&gt;
+| &lt;applet&gt;  | Embeds Java applet | &lt;object&gt; |
+| &lt;basefont&gt; | Sets default font size and color | CSS |
+| &lt;big&gt; | Enlarges text | CSS font-size |
+| &lt;blink&gt; | Makes text flash | CSS animations |
+| &lt;center&gt; | Centers content | CSS text-align |
+| &lt;dir&gt; | Directory list | &lt;ul&gt; |
+| &lt;font&gt; | Styles fonts | CSS |
+| &lt;frame&gt; | Defines a frame | &lt;iframe&gt; |
+| &lt;frameset&gt; | Groups frames | &lt;iframe&gt; |
+| &lt;isindex&gt; | Single-line input | &lt;form&gt; |
+| &lt;marquee&gt; | Scrolling text | CSS animations |
+| &lt;menu&gt; | Menu list | &lt;ul&gt; |
+| &lt;noframes&gt; | Fallback for no frame support | Not needed |
+| &lt;plaintext&gt; | Displays plain text | &lt;pre&gt; |
+| &lt;s&gt; | Strikethrough text | &lt;del&gt;, CSS |
+| &lt;strike&gt; | Strikethrough text | &lt;del&gt;, &lt;s&gt; |
+| &lt;tt&gt; | Teletype text | &lt;code&gt;, CSS |
+| &lt;u&gt; | Underlined text | CSS text-decoration |
+| &lt;xmp&gt; | Preformatted text | &lt;pre&gt; |
+
+## HTML attributes
+
+The following HTML attributes are either no longer supported or are replaced by a modern alternative in the rich text editor.
+
+| Attribute | Affected tags | Modern rich text editor alternative |
+|----------|-----------|-----------------|
+| align    | Many      | CSS text-align, float |
+| alink, vlink, link | &lt;body&gt; | CSS :link, :visited |
+| background | &lt;body&gt;, &lt;table&gt; | CSS background-image |
+| bgcolor | Many | CSS background-color |
+| border | &lt;img&gt;, &lt;table&gt; |
+| height, width | &lt;body&gt;, &lt;td&gt; | CSS height, width |
+| hspace, vspace | &lt;img&gt; |
+| language | &lt;script&gt; | type="text/JavaScript" |
+| nowrap | &lt;td&gt; | CSS white-space: nowrap |
+| type (on &lt;li&gt;, &lt;ul&gt;) | Lists | CSS list-style-type |
+
 
 ## Frequently asked questions
 

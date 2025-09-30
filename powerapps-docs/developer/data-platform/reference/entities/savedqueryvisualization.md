@@ -56,6 +56,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [ChartType](#BKMK_ChartType)
 - [DataDescription](#BKMK_DataDescription)
 - [Description](#BKMK_Description)
+- [EnableCrossPartition](#BKMK_EnableCrossPartition)
 - [IntroducedVersion](#BKMK_IntroducedVersion)
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [IsDefault](#BKMK_IsDefault)
@@ -132,6 +133,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|True|
 |MaxLength|2000|
+
+### <a name="BKMK_EnableCrossPartition"></a> EnableCrossPartition
+
+|Property|Value|
+|---|---|
+|Description|**Tells whether the chart can retrieve data from all cluster partitions.**|
+|DisplayName|**Default**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`enablecrosspartition`|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+|GlobalChoiceName|`savedqueryvisualization_enablecrosspartition`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_IntroducedVersion"></a> IntroducedVersion
 

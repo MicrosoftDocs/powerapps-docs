@@ -51,7 +51,7 @@ The languages supported across Teams, Dataverse for Teams, and other Power Platf
 The fallback languages are denoted in *italics*.
 
 
-| Teams             | Dataverse for Teams           | Power Apps Studio | Power Automate    | Power Virtual Agents | Power BI           |
+| Teams             | Dataverse for Teams           | Power Apps Studio | Power Automate    | Microsoft Copilot Studio | Power BI           |
 |-----------------------|-----------------------|------------------------------|-----------------------|-------------------------|-----------------------|
 | Arabic                | Arabic                | *English US*                   | *English US*            | *English US*              | Arabic                |
 | Brazilian Portuguese  | Brazilian Portuguese  | Brazilian Portuguese         | Brazilian Portuguese  | Brazilian Portuguese    | Brazilian Portuguese  |

@@ -5,7 +5,7 @@ author: jessicaszelo
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 8/6/2025
+ms.date: 09/8/2025
 ms.subservice: canvas-maker
 ms.author: szlo
 search.audienceType: 
@@ -47,22 +47,22 @@ Before you share an app, you must [save it](save-publish-app.md) (not locally) a
     - **Co-Owner**: Can use, edit, and share the app but not delete or change owners.
 
         :::image type="content" source="media/share-app/share-app-coowner.png" alt-text="share with a co-owner":::
+      
+    - When your app connects to a Dataverse table, the permissions dropdown will display a **More security roles** option. Select the appropriate security roles, and those roles will be automatically assigned to users when you share the app.
+      
+       :::image type="content" source="media/share-app/more-security-roles.png" alt-text="More security roles option":::
 
 1. Optional steps:
    - Select the **overflow menu (...)** at the top-right corner and then select **Upload app image** to include an image of the app in the email.
 
-
     :::image type="content" source="media/share-app/share-app-app-image.png" alt-text="Add an app image":::
-. 
-   - Select **Manage access** to displays app access details, including current users and co-owners. You can also edit user access here. The **Additional data access** tab shows app connections to data sources like Dataverse tables or Excel files on OneDrive for Business. To manage security roles for Dataverse tables, use the [classic sharing experience](share-app.md#classic-app-sharing-experience). For other data sources, such as Excel files on OneDrive, ensure you share these data sources with the app users.
+
+   - Select **Manage access** to displays app access details, including current users and co-owners. You can also edit user access and assign security roles here. The **Additional data access** tab shows app connections to data sources like Dataverse tables or Excel files on OneDrive for Business. To manage security roles for data sources other than Dataverse, such as Excel files on OneDrive, ensure you share these data sources with the app users.
 
      :::image type="content" source="media/share-app/share-app-access.png" alt-text="Manage app access":::
 
 1. Add an optional message and then select **Share**.
 
-### App sharing limitations
-
-Managing security roles for Dataverse tables. 
 
 > [!NOTE]
 > - To learn about sharing apps outside of your organization, see [Share a canvas app with guest users](share-app-guests.md).
@@ -197,7 +197,7 @@ You can share an app with [Microsoft 365 groups](/microsoft-365/admin/create-gro
     Install-Module Microsoft.Graph -Scope CurrentUser
     ```
 
-2. Connect to Microsoft Graph. For information about the administrator roles required to manage groups, see  [Microsoft Entra roles for managing groups](/graph/api/resources/groups-overview?view=graph-rest-1.0&tabs=http#microsoft-entra-roles-for-managing-groups).
+2. Connect to Microsoft Graph. For information about the administrator roles required to manage groups, see  [Microsoft Entra roles for managing groups](/graph/api/resources/groups-overview#microsoft-entra-roles-for-managing-groups).
 
     ```powershell
     Connect-MgGraph -Scopes "Group.ReadWrite.All"
@@ -239,6 +239,7 @@ If you create an app based on Dataverse, you must also ensure that the users you
 > [!NOTE]
 > - You can assign security roles to individual users and security groups in Microsoft Entra ID, but not to Microsoft 365 groups.
 > - If a user isn't in the Dataverse root business unit, you can share the app without providing a security role, and then set the security role directly.
+> - After a security role is assigned to a user or group, you can't unassigned it when you share an app. However, you can still unassign security roles through the admin portal.
 
 ### Prerequisite
 
