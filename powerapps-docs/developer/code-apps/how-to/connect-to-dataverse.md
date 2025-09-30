@@ -26,7 +26,7 @@ This guide helps developers use the Power Apps SDK to connect their code app to 
 ## Steps
 
 1. Ensure you're connected to your environment using PAC CLI.
-2. Use the [pac code add-data-source](/power-platform/developer/cli/reference/code#pac-code-add-data-source) command to add Dataverse as a data source to your code app
+1. Use the [pac code add-data-source](/power-platform/developer/cli/reference/code#pac-code-add-data-source) command to add Dataverse as a data source to your code app
 
    ```powershell
    pac code add-data-source -a dataverse -t <table-logical-name>
