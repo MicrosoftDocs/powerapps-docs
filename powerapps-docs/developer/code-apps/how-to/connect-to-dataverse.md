@@ -57,13 +57,13 @@ The following scenarios are supported when connecting to Dataverse using the Pow
 
 ## Read Data from a Dataverse Table
 To successfully read data from a Dataverse table in your application, follow these steps:
-1. Ensure SDK Initialization Before Data Calls
+1. Ensure Power Apps SDK Initialization Before Data Calls
    In your App.tsx file, implement logic that waits for the Power Apps SDK to fully initialize before performing any data operations. This prevents errors caused by uninitialized services or missing context.
    Use an asynchronous function or state management to confirm initialization before making API calls. For example:
    
    ```typescript
    
-   seEffect(() => {
+   useEffect(() => {
      // Define an async function to initialize the Power Apps SDK
      const init = async () => {
        try {
