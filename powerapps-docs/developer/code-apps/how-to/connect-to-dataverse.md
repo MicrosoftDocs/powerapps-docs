@@ -1,9 +1,9 @@
 ---
 title: "How to: Connect your code app to Dataverse (preview)"
 description: "Learn how to connect your code app to Dataverse"
-ms.author: alaug
-author: alaug
-ms.date: 09/10/2025
+ms.author: jordanchodakWork
+author: jordanchodak
+ms.date: 09/29/2025
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
@@ -55,14 +55,17 @@ The following scenarios are supported when connecting to Dataverse using the Pow
 
 - Paging support
 
-## Read Data from a Dataverse Table
-To successfully read data from a Dataverse table in your application, follow these steps:
-1. Ensure Power Apps SDK Initialization Before Data Calls
-   In your App.tsx file, implement logic that waits for the Power Apps SDK to fully initialize before performing any data operations. This prevents errors caused by uninitialized services or missing context.
+## Read data from a Dataverse table
+
+Follow these steps to read data from a Dataverse table in your application:
+
+1. **Ensure Power Apps SDK initialization before data calls**
+
+   In your `App.tsx` file, implement logic that waits for the Power Apps SDK to fully initialize before performing any data operations. This prevents errors caused by uninitialized services or missing context.
+
    Use an asynchronous function or state management to confirm initialization before making API calls. For example:
-   
+
    ```typescript
-   
    useEffect(() => {
      // Define an async function to initialize the Power Apps SDK
      const init = async () => {
@@ -86,21 +89,30 @@ To successfully read data from a Dataverse table in your application, follow the
    }, []);
    
    ```
-2. Use Model and Service Files for Data Access
-   Access Dataverse data by using the provided model and service files. These files should encapsulate logic for:
+
+1. **Use model and service files for data access**
+
+   Use the provided model and service files to access Dataverse data. These files should encapsulate logic for:
+
    - Building queries
    - Handling responses
    - Managing data transformations
-3. Buld the Application
-    After implementing your data access logic, build the application to ensure that all new code compiles correctly and integrates with existing functionality.
-    ```powershell
-    npm run dev
-    ```
-4. Run and Test
+
+1. **Build the application**
+
+   After implementing your data access logic, build the application to ensure that all new code compiles correctly and integrates with existing functionality.
+
+   ```powershell
+   npm run dev
+   ```
+
+1. **Run and test**
+
    Run the application to verify that data is successfully read from the targeted Dataverse table. Test across multiple scenarios to ensure reliability and handle errors gracefully.
+
    ```powershell
     pac code run
-    ```
+   ```
 
 ## Unsupported scenarios
 
