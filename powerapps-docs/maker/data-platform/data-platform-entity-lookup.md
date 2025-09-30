@@ -18,8 +18,8 @@ Data in one table often relates to data in another table. For example, you might
 
 You can create several types of relationships from one table to another (or between a table and itself). Each table can have a relationship with more than one table, and each table can have more than one relationship to another table. Some common relationship types are:
 
-* **Many-to-one** - In this type of relationship, each row in table A can match more than one row in table B, but each row in table B can match only one row in table A. For example, a class has a single classroom. This is the most common type of relationship and is shown in the column list as a **Lookup column**
-* **One-to-many** - In this type of relationship, each row in table B can match more than one row in table A, but each row in table A can match only one row in table B. For example, a single teacher, teaches many classes.
+* **Many-to-one** - In this type of relationship, each row in table B can match more than one row in table A, but each row in table A can match only one row in table B. For example, a class has a single classroom. This is the most common type of relationship and is shown in the column list as a **Lookup column**
+* **One-to-many** - In this type of relationship, each row in table A can match more than one row in table B, but each row in table B can match only one row in table A. For example, a single teacher, teaches many classes.
 * **Many-to-many** - In this type of relationship, each row in table A can match more than one row in table B, and vice versa. For example, students attend many classes, and each class can have multiple students.
 
 Additionally, you can set advanced cascading behaviors on many-to-one and one-to-many relationships whenever an action is taken on the parent table.
