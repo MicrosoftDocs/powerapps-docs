@@ -87,7 +87,7 @@ The customer sentiment card displays the following:
 > [!Note]
 > For emails received before the feature is enabled, the system doesn’t display the sentiment.
 
-[!INCLUDE [preview-banner](../../../shared-content/shared/preview-includes/production-ready-preview-dynamics365.md)]
+[!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/production-ready-preview-dynamics365.md)]
 
 
 ## Reply to an email
