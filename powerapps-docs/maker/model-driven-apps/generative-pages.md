@@ -30,9 +30,6 @@ After you describe the page, the system then processes your requirements and spe
 - The Power Platform environment must be located in the US region.
 - The **Enable new AI-powered Copilot features for people who make apps** environment setting must be enabled. More information: [Copilot environment setting](/power-platform/admin/settings-features?tabs=new#copilot-preview)
 - This feature is being gradually rolled out across regions and might not be available yet in your region.
-- For Content Security Policy (CSP) configuration, ensure the following URLs are added to your firewall allowed list:
-    - https://esm.sh 
-    - https://cdn.jsdelivr.net
 
 ## Create a generative page in model-driven apps
 
