@@ -12,7 +12,7 @@ ms.custom:
   - ai-seo-date: 5/25/2025
 ai-usage: ai-assisted
 ms.reviewer: 
-ms.date: 08/6/2025
+ms.date: 10/1/2025
 ms.update-cycle: 180-days
 ms.subservice: canvas-maker
 search.audienceType: 
@@ -27,14 +27,7 @@ contributors:
 
 # Copilot in Power Apps overview 
 
-[!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
-
-Copilot in Power Apps lets you quickly build apps using natural language. Describe your business needs, and the service generates an app and data model for you—no coding required. People interact with your app by asking questions or giving commands in everyday language, making the experience more intuitive and engaging. This article gives an overview of Copilot in Power Apps, including prerequisites, availability, and how to manage Copilot features in your environment.
-
-> [!IMPORTANT]
->
-> - Some Copilot features are in preview.
-> - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2189520), and are available before an official release so customers can get early access and provide feedback.
+Copilot in Power Apps lets you quickly build apps using natural language. Describe your business needs, and the service generates an app and data model for you—no coding required. People interact with your app by asking questions or giving commands in everyday language, making the experience more intuitive and engaging. This article gives an overview of Copilot in Power Apps, including prerequisites, availability, and how to manage Copilot features in your environment.Learn about Copilot and generative AI features in [Microsoft Power Apps.](../../copilot-landing-page.yml)
 
 > [!NOTE]
 >
@@ -44,30 +37,16 @@ Copilot in Power Apps lets you quickly build apps using natural language. Descri
 
 Each Copilot feature can have different requirements. Check the documentation for each feature to learn what you need.
 
+> [!IMPORTANT]
+>
+> - Some Copilot features are in preview.
+> - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2189520), and are available before an official release so customers can get early access and provide feedback.
 
 ## Availability
 
 - This capability might not be available in your region yet. Learn more in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/en-US/availability-reports/?report=copilotfeaturereport).
 - This capability might be subject to usage limits or capacity throttling.
 - Understand the capabilities and limitations of AI-powered and Copilot features in Power Apps. Learn more in [FAQ about using AI responsibly in Power Apps](../common/transparency-note.md).
-
-## Copilot use in Power Apps
-
-The following articles can help you build various apps in different scenarios using Copilot.
-
-- [Create a plan using Plan designer](../plan-designer/create-plan.md)
-
-## Copilot in canvas apps
-
-- [Build apps through conversation](ai-conversations-create-app.md)
-- [Edit your app with Copilot (preview)](ai-edit-app.md)
-- [Add a Copilot control to a canvas app (preview)](add-ai-copilot.md)
-- [Create Power Fx formulas with Copilot](ai-formulas-formulabar.md)
-- [Use field suggestions by Copilot](ai-field-suggestions.md)
-- [Add a custom Copilot to a canvas app (preview)](add-custom-copilot.md)
-- [Build an agent to automate your business process](agent-builder.md)
-- [Rename controls in canvas apps with Copilot (preview)](./controls/copilot-rename-controls.md)
-
 
 
 ## Enable or disable Copilot features
