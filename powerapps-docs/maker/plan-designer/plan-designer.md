@@ -4,7 +4,7 @@ description: Learn how to use plans, an AI-powered tool in Power Platform, to cr
 author: szlo
 contributors:
 ms.topic: how-to
-ms.date: 09/18/2025
+ms.date: 10/1/2025
 ms.update-cycle: 180-days
 ms.author: mkaur
 ms.reviewer: mkaur
@@ -25,7 +25,7 @@ Plans in Power Apps is a copilot-first development tool that lets you quickly cr
 
 ## Prerequisites
 
-To use the Plan designer in Power Apps, follow these steps:
+To use plans in Power Apps, follow these steps:
 
 **1. Environment requirements** 
 
@@ -38,16 +38,16 @@ To use the Plan designer in Power Apps, follow these steps:
 1. **Developer Environment Option**: If your current environment doesn’t meet the requirements but you can use developer environments, you're automatically routed to your own developer environment. There, you have permission to create Dataverse tables. Learn more in [Create a developer environment](/power-platform/developer/create-developer-environment).
 1. **No Developer Environment Available:** If you can’t use or create a developer environment, you won’t be able to create plans in your current environment. In this case, switch to an environment where you have permission to create tables and start building your plan there.
 
-**3. Who Can Access the Plan designer?**
+**3. Who Can Access plans?**
 
-The following security roles can see the Plan designer entry point on the Power Apps home page:
+The following security roles can see the entry point for plans on the Power Apps home page:
 
 - System admin
 - [System customizer](/power-platform/admin/security-roles-privileges)
 - Environment maker: Are redirected to their own developer environment when they save tables.
-- For custom security roles: You need the following privileges for each operation in the Plan designer:
+- For custom security roles: You need the following privileges for each operation in plans:
 
-    | **Operation in Plan designer** | **Table**        | **Privilege** |
+    | **Operation in plans** | **Table**        | **Privilege** |
     |--------------------------------|------------------|---------------|
     | Create a plan                  | Plan             | Read          |
     |                                | Publisher        | Read          |
@@ -67,13 +67,13 @@ The following security roles can see the Plan designer entry point on the Power 
 ## Availability
 
 
-Plan designer is generally available. Check if the feature is available in your region. Learn more in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/availability-reports/?report=copilotfeaturereport).
+Plans is generally available. Check if the feature is available in your region. Learn more in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/availability-reports/?report=copilotfeaturereport).
 
 
 ### Turn on preview features for plans
 
 
-Some features in Plan designer are only available in preview. When you turn on the preview experience for a plan, the plan is generated using the preview experience, which can include multiple preview features at any time.
+Some features in plans are only available in preview. When you turn on the preview experience for a plan, the plan is generated using the preview experience, which can include multiple preview features at any time.
 
 
 To turn on preview features, select the **Include preview features** option when you enter your business problem.
@@ -85,7 +85,7 @@ If you have a plan and want to switch between the preview and generally availabl
 :::image type="content" source="media/overview-plan-designer/turn-off-preview.png" alt-text="Screenshot of turning off preview feature for plans.":::
 
 > [!NOTE]
-> When you switch the preview experience for Plan designer on or off, some content in the plan can change, regenerate, or be deleted.
+> When you switch the preview experience for plans on or off, some content in the plan can change, regenerate, or be deleted.
 
 
 

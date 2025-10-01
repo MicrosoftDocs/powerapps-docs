@@ -6,7 +6,7 @@ contributors: mduelae
 ms.custom:
   - responsible-ai-faqs
 ms.topic: faq
-ms.date: 6/19/2025
+ms.date: 10/1/2025
 ms.update-cycle: 180-days
 ms.author: norliu
 ms.reviewer: mkaur
@@ -18,7 +18,7 @@ ms.collection:
 
 ## What is plans?
 
-The plans in Power Apps is an AI-powered experience that builds an end-to-end business solution in minutes. Describe your business problem in natural language and include images, like a screenshot of a legacy app or a process diagram. The plan designer outlines user roles and requirements, and generates a complete Power Platform solution with objects like Dataverse tables, Power Apps (canvas and model-driven apps), Power Automate cloud flows, Power Pages sites, Power BI, and Microsoft Copilot Studio agents. You can iterate and refine your business requirements in the plan designer to get a more precise solution that fits your needs.
+Plans in Power Apps is an AI-powered experience that builds an end-to-end business solution in minutes. Describe your business problem in natural language and include images, like a screenshot of a legacy app or a process diagram. Plans outlines user roles and requirements, and generates a complete Power Platform solution with objects like Dataverse tables, Power Apps (canvas and model-driven apps), Power Automate cloud flows, Power Pages sites, Power BI, and Microsoft Copilot Studio agents. You can iterate and refine your business requirements in your plan to get a more precise solution that fits your needs.
 
 ## What can plans do?
 

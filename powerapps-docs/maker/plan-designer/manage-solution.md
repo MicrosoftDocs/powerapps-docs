@@ -4,7 +4,7 @@ description: Learn how plans promotes healthy application lifecycle management (
 author: szlo  
 contributors:  
 ms.topic: how-to  
-ms.date: 8/6/2025
+ms.date: 10/1/2025
 ms.update-cycle: 180-days
 ms.author: mkaur  
 ms.reviewer: mkaur  
@@ -21,7 +21,7 @@ ms.custom:
 
 Business solutions built with plans promote healthy application lifecycle management (ALM) practices by using Power Platform resources. Use advanced ALM capabilities to deploy artifacts to target environments through managed solutions by packaging all components of a plan into a single solution artifact.
 
-When you create a plan, the plan is stored in the main solution, which enables the **Objects** view in plan designer. Makers can switch between the plan and the solution view without leaving plan designer.
+When you create a plan, the plan is stored in the main solution, which enables the **Objects** view in plans. Makers can switch between the plan and the solution view without leaving  the plan.
 
 A plan might be associated with multiple solutions. For example, adding an existing Microsoft Dataverse table to the plan's data model links the solutions associated with the Dataverse table to the plan.
 
@@ -29,7 +29,7 @@ The solutions associated with the plan display as tabs across the top when you s
 
 Learn more about solutions in [Solution view](/power-apps/maker/data-platform/solutions-area).
 
-:::image type="content" source="media/manage-solution/object-view.png" alt-text="Screenshot of the Objects view in plan designer that shows objects in a solution.":::
+:::image type="content" source="media/manage-solution/object-view.png" alt-text="Screenshot of the Objects view in plans that shows objects in a solution.":::
 
 ## Show objects in this plan
 
