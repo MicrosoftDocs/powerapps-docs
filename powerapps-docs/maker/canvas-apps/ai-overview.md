@@ -27,7 +27,7 @@ contributors:
 
 # Copilot in Power Apps overview 
 
-Copilot in Power Apps lets you quickly build apps using natural language. Describe your business needs, and the service generates an app and data model for you—no coding required. People interact with your app by asking questions or giving commands in everyday language, making the experience more intuitive and engaging. This article gives an overview of Copilot in Power Apps, including prerequisites, availability, and how to manage Copilot features in your environment.Learn about Copilot and generative AI features in [Microsoft Power Apps.](../../copilot-landing-page.yml)
+Copilot in Power Apps lets you quickly build apps using natural language. Describe your business needs, and the service generates an app and data model for you—no coding required. People interact with your app by asking questions or giving commands in everyday language, making the experience more intuitive and engaging. This article gives an overview of Copilot in Power Apps, including prerequisites, availability, and how to manage Copilot features in your environment. Learn about Copilot and generative AI features in [Microsoft Power Apps.](../../copilot-landing-page.yml)
 
 > [!NOTE]
 >
