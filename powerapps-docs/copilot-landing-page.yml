@@ -11,7 +11,7 @@ metadata:
   ms.collection: collection
   author: mduelae
   ms.author: tapanm
-  ms.date: 08/5/2025
+  ms.date: 10/1/2025
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -93,7 +93,7 @@ landingContent:
             url: maker/model-driven-apps/add-agents-to-app.md
           - text: Add an agent response control (preview)
             url: maker/model-driven-apps/form-designer-add-configure-agent-response.md
-          - text: Build an agent to automate your business process (preview)
+          - text: Build an agent to automate your business process
             url: maker/canvas-apps/agent-builder.md
           - text: Add agents to your model-driven app
             url: maker/model-driven-apps/add-agents-to-app.md
