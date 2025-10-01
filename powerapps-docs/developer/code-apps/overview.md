@@ -83,6 +83,7 @@ This table enumerates Power Platform management capabilities that work for code 
 | Admin consent dialog suppression | Consent suppression is supported for both Microsoft connecters that use OAuth and custom connectors that use OAuth. [Learn more](/power-apps/maker/canvas-apps/add-manage-connections#suppress-consent-dialog-for-apps-that-use-custom-connectors-using-microsoft-entra-id-oauth)  |
 | Tenant isolation | [Learn more](/power-platform/admin/cross-tenant-restrictions) |
 | Azure B2B (external user access) | Code apps might be shared with and accessed by end-users using Azure B2B to access resources in a tenant, similar to canvas apps. [Learn more](/power-apps/maker/canvas-apps/share-app-guests) |
+| Health metrics | Operational health metrics for code apps are available in both the Power Platform admin center and the maker portal. [Learn more](https://learn.microsoft.com/en-us/power-platform/admin/monitoring/monitor-power-apps?branch=main) |
 
 ## Related information
 
