@@ -4,7 +4,7 @@ description: Learn how to use plans, an AI-powered tool in Power Platform, to cr
 author: szlo
 contributors:
 ms.topic: how-to
-ms.date: 09/18/2025
+ms.date: 10/1/2025
 ms.update-cycle: 180-days
 ms.author: mkaur
 ms.reviewer: mkaur
