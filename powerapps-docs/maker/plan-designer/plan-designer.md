@@ -25,7 +25,7 @@ Plans in Power Apps is a copilot-first development tool that lets you quickly cr
 
 ## Prerequisites
 
-To use the plans in Power Apps, follow these steps:
+To use plans in Power Apps, follow these steps:
 
 **1. Environment requirements** 
 
