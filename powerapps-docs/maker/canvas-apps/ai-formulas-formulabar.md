@@ -3,7 +3,7 @@ title: Use Copilot to create and edit Power Fx formulas in Power Apps
 description: Learn how to use Copilot, an AI feature in Power Apps, to create and edit Power Fx formulas in the formula bar from natural language or code comments.
 author: warrenbryant-msft
 ms.author: warrenbryant
-ms.date: 5/27/2025
+ms.date: 7/31/2025
 ms.update-cycle: 180-days
 ms.topic: how-to
 ms.reviewer: mkaur
@@ -24,38 +24,38 @@ ms.custom:
 
 # Use Copilot to create and edit Power Fx formulas
 
-Copilot is an AI feature in Power Apps Studio that helps you create and modify Power Fx formulas quickly. You can use Copilot in the formula bar to explain Power Fx formulas in natural language or generate Power Fx formulas from natural language or code comments.
+Copilot is an AI feature in Power Apps Studio that lets you create and change Power Fx formulas quickly. Use Copilot in the formula bar to explain Power Fx formulas in everyday language or generate Power Fx formulas from natural language or code comments.
 
 ## Prerequisites
 
-Copilot must be enabled for your environment and tenant. For more information, see [Enable or disable Copilot (preview) in Power Apps](ai-overview.md#disable-copilot-in-power-apps).
+Copilot needs to be enabled for your environment and tenant. For more information, see [Copilot in Power Apps overview](ai-overview.md).
 
 ## Explain a formula
 
-Use Copilot in the formula bar to understand what a formula is doing in plain language.
+Use Copilot in the formula bar to learn what a formula does in plain language.
 
-1. Select a control and its corresponding property. For example, a label control with its **Text** property.
+1. Select a control and its property. For example, select a label control with its **Text** property.
 
-1. On the formula bar, select the dropdown near the **fx** field label to see and choose **Explain this formula**.
+1. On the formula bar, select the dropdown near the **fx** field label, and then select **Explain this formula**.
 
    :::image type="content" source="media/copilot/ufb-copilot-dropdown.png" alt-text="Screenshot of the Copilot functionality menu showing the Explain this formula item.":::
 
-   Alternatively, you can select a subset of a formula and then select the dropdown near the **fx** field label and choose **Explain this selection** to explain only that part.
+   Alternatively, select part of a formula, select the dropdown near the **fx** field label, and then select **Explain this selection** to explain only that part.
 
    :::image type="content" source="media/copilot/copilot-explain-section.png" alt-text="Screenshot of Copilot's option to Explain this section, showing part of the formula highlighted by the user." lightbox="media/copilot/copilot-explain-section.png":::
 
-    Copilot provides an explanation of the formula that you can copy and insert as a code comment or share with other makers who are working on the same app. When Copilot explains a selection, it might add context if that's important for the explanation.
+    Copilot gives you an explanation of the formula that you can copy and insert as a code comment, or share with other makers working on the same app. When Copilot explains a selection, it can add context if that's important for the explanation.
 
     :::image type="content" source="media/copilot/copilot-explanation.png" alt-text="Screenshot of Copilot's explanation of a formula.":::
 
 ### Known limitations of explaining formulas
 
-- The maximum length for a formula explanation is 5,000 characters. If the formula exceeds this limit, use a partial explanation to ensure it works.
-- Copilot only recognizes default properties in Power Apps.
+- The maximum length for a formula explanation is 5,000 characters. If the formula is longer, use a partial explanation to make sure it works.
+- Copilot recognizes only default properties in Power Apps.
 - Copilot doesn't recognize user-defined functions.
 
 > [!NOTE]
-> AI generated content may be inaccurate and should be checked for accuracy.
+> AI-generated content can be inaccurate, so check it for accuracy.
 
 ## Generate formulas from code comments
 
@@ -97,7 +97,7 @@ You can keep the comments used for generating Power Fx formulas in the formula b
 From the Copilot dropdown menu in the formula bar, you can now generate a formula using natural language to make a discrete request.
 
 > [!NOTE]
-> The **Copilot for formulas** feature is turned on by default. To turn it off, you can find the setting with your app open. Go to Settings/Updates/Preview and find the **Copilot for formulas** toggle. Turning the setting off makes the **Create a formula (preview)** menu option disappear from the Copilot dropdown menu of the formula bar.
+> The **Copilot for formulas** feature is on by default. To turn it off, open your app, go to **Settings** > **Updates** > **Preview**, and find the **Copilot for formulas** toggle. If you turn off the setting, the **Create a formula (preview)** menu option disappears from the Copilot dropdown menu in the formula bar.
 
 ### Use Copilot to create a formula from a discrete request
 
@@ -117,7 +117,7 @@ From the Copilot dropdown menu in the formula bar, you can now generate a formul
     :::image type="content" source="media/copilot/copilot-request-result.png" alt-text="Screenshot that shows the day of the week in a text label.":::
 
   > [!NOTE]
-  > The same limitations apply for creating a formulas from a discrete request as [generating formulas from code comments](ai-formulas-formulabar.md#known-limitations-of-generating-formulas-from-code-comments).
+  > The same limitations apply for creating formulas from a discrete request as [generating formulas from code comments](ai-formulas-formulabar.md#known-limitations-of-generating-formulas-from-code-comments).
 
 ## Responsible AI
 

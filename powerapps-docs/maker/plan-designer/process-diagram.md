@@ -1,10 +1,10 @@
 ---
-title: Use Plan Designer to Simplify Process Diagrams
-description: Discover how to use Plan Designer to generate process diagrams that enhance clarity and efficiency in complex workflows.
+title: Use plans to simplify process diagrams
+description: Discover how to use plans to generate process diagrams that enhance clarity and efficiency in complex workflows.
 author: szlo
 contributors: mduelae
 ms.topic: how-to
-ms.date: 05/19/2025
+ms.date: 08/6/2025
 ms.update-cycle: 180-days
 ms.author: mkaur
 ms.reviewer: mkaur
@@ -23,14 +23,14 @@ ms.custom:
 
 [This article is prerelease documentation and is subject to change.]
 
-Plan designer helps teams create and refine diagrams as part of the plan to clarify user interactions and build effective solutions. Process diagrams make workflows clearer, improve communication, and help teams work more efficiently, especially on complex projects.
+Plans in Power Apps helps teams create and refine diagrams as part of the plan to clarify user interactions and build effective solutions. Process diagrams make workflows clearer, improve communication, and help teams work more efficiently, especially on complex projects.
 
 Optionally, include images of existing process diagrams as additional resources during the creation experience to enhance clarity. But if you add predefined processes, Copilot might just replicate what you provide, which can limit creativity and cause duplication or misinterpretation.
 
 > [!IMPORTANT]
 > - This is a preview feature.
 > - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2189520), and are available before an official release so that customers can get early access and provide feedback.
-> - Make sure you have preview features turned on for Plan designer. Learn more in [Turn on preview features for Plan designer](plan-designer.md#turn-on-preview-features-for-plan-designer)
+> - Make sure you have preview features turned on for plans. Learn more in [Turn on preview features for plans](plan-designer.md#turn-on-preview-features-for-plans)
 
 To use the process diagram feature, turn on preview features. When preview features are on, the process diagram appears on the right as you [create a plan](create-plan.md). The diagram generates after you [create user requirements](create-plan.md#generate-user-requirements).
 
