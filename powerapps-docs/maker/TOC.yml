@@ -2154,7 +2154,7 @@
         href: ./data-platform/define-calculated-fields.md
       - name: How to define rollup columns
         href: ./data-platform/define-rollup-fields.md
-      - name: How to map entity columns
+      - name: How to map table columns
         href: ./data-platform/map-entity-fields.md
       - name: How to delete columns
         href: ./data-platform/delete-fields.md
