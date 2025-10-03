@@ -17,9 +17,7 @@ contributors:
   - jasongre
      
 ---
-# Avatar modern control in Power Apps (preview)
-
-[This article is prerelease documentation and is subject to change.]
+# Avatar modern control in Power Apps
 
 A control that shows a graphic representation of a user, team, or entity.  
 
