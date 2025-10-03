@@ -114,6 +114,87 @@ Follow these steps to read data from a Dataverse table in your application:
     pac code run
    ```
 
+## Create records in a Dataverse table
+Follow these steps to successfully create records in Dataverse.
+
+1. **Define your record type**
+
+   First, create a TypeScript interface or type that includes the required OData annotation.
+
+   ```typescript
+   type CreateRecordPayload = { 
+   // Required OData annotation 
+   '@odata.type': string; 
+   // Your record fields 
+   name: string; 
+   // ... other fields 
+   };
+   ```
+2. **Create the record object**
+
+   When preparing your record data, always include the OData type annotation. For standard Dataverse tables, the @odata.type annotation always follows the pattern of ‘#Microsoft.Dynamics.CRM.\<logicaltablename\>’
+
+   ```typescript
+   const newRecord: CreateRecordPayload = { 
+   // Specify the entity type 
+   '@odata.type': '#Microsoft.Dynamics.CRM.account',  // for Account entity   
+   // Add your record data 
+   name: 'New Account Name', 
+   // ... other fields 
+   };
+   ```
+
+3. **Submit the record**
+
+   Use the appropriate service to create the record.
+
+   ```typescript
+   try { 
+   const result = await YourEntityService.create(newRecord); 
+   if (result.success) { 
+    // Handle success 
+   } 
+   } catch (error) { 
+   // Handle error 
+   }
+   ```
+**Here is a complete example showing best practices:**
+
+```typescript
+// Type definition 
+type CreateAccountPayload = { 
+  '@odata.type': string; 
+  name: string; 
+  accountnumber?: string; 
+  // ... other fields 
+}; 
+
+// Create record function 
+async function createAccount(accountData: Omit<CreateAccountPayload, '@odata.type'>) { 
+  const record: CreateAccountPayload = { 
+    '@odata.type': '#Microsoft.Dynamics.CRM.account', 
+    ...accountData 
+  }; 
+
+  try { 
+    const result = await AccountsService.create(record); 
+    if (!result.success) { 
+      throw new Error(result.error?.message || 'Failed to create account'); 
+    } 
+    return result.data; 
+  } catch (error) { 
+    console.error('Error creating account:', error); 
+    throw error; 
+  } 
+}
+// Usage 
+await createAccount({ 
+  name: 'New Customer Account', 
+  accountnumber: 'ACC-001' 
+}); 
+```
+
+
 ## Unsupported scenarios
 
 The following features aren't yet supported:
