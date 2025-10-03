@@ -1,0 +1,168 @@
+### YamlMime:Landing
+
+title: Copilot and AI features in Power Apps documentation
+summary: Learn about Copilot and generative AI features in Microsoft Power Apps.
+metadata:
+  title: Copilot and generative AI features in Power Apps documentation
+  description: Provides access to Copilot and AI feature documentation in Power Apps
+  services: service
+  ms.subservice: canvas-maker
+  ms.topic: landing-page
+  ms.collection: collection
+  author: mduelae
+  ms.author: tapanm
+  ms.date: 10/1/2025
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+  # Card
+  - title: Get started
+    linkLists:
+
+      - linkListType: get-started
+        links:
+
+          - text: Copilot in Power Apps overview
+            url: maker/canvas-apps/ai-overview.md
+          - text: Copilot admin settings
+            url: /power-platform/admin/settings-features
+          - text: FAQ about using AI responsibly
+            url: maker/common/responsible-ai-overview.md
+          - text: Enable or disable Copilot features
+            url: maker/canvas-apps/ai-overview.md#enable-or-disable-copilot-features
+          - text: Improve Copilot responses from Microsoft Dataverse
+            url: maker/data-platform/data-platform-copilot.md  
+
+  # Card
+  - title: Create and use plans
+    linkLists:
+
+      - linkListType: overview
+        links: 
+          - text: Overview and prerequisites
+            url: maker/plan-designer/plan-designer.md
+          - text: FAQ for plans
+            url: maker/common/faq-plan-designer.md  
+      - linkListType: how-to-guide
+        links:
+          - text: Create a plan
+            url: maker/plan-designer/create-plan.md
+          - text: Create a plan from a solution
+            url: maker/plan-designer/create-plan-from-solution.md  
+
+   # Card
+  - title: Create and edit apps with Copilot
+    linkLists:
+
+      - linkListType: how-to-guide
+        links:
+
+          - text: Build apps through conversation with Copilot
+            url: maker/canvas-apps/ai-conversations-create-app.md
+          - text: Edit your app with Copilot
+            url: maker/canvas-apps/ai-edit-app.md
+          - text: Create a canvas app description with Copilot (preview)
+            url: maker/canvas-apps/save-publish-app.md#create-an-app-description-with-copilot-preview
+          - text: Create a model-driven app description with Copilot
+            url: maker/model-driven-apps/create-model-driven-app.md#create-an-app-description-with-copilot
+          - text: Use field suggestions by Copilot
+            url: maker/canvas-apps/ai-field-suggestions.md
+          - text: Create a generative page in a model-driven app (preview)
+            url: maker/model-driven-apps/generative-pages.md
+          - text: Use Copilot to create and edit Power Fx formulas
+            url: maker/canvas-apps/ai-formulas-formulabar.md
+          - text: Rename controls in canvas apps with Copilot (preview)
+            url: maker/canvas-apps/controls/copilot-rename-controls.md
+          - text: Add a Copilot control to a canvas app (preview)
+            url: maker/canvas-apps/add-ai-copilot.md
+          - text: Add a custom Copilot to a canvas app (preview)
+            url: maker/canvas-apps/add-custom-copilot.md
+
+ # Card
+  - title: Implement agent supervision and automation
+    linkLists:
+
+      - linkListType: how-to-guide
+        links:
+
+          - text: Supervise agents using agent feed (preview)
+            url: user/supervise-agents-with-agent-feed.md
+          - text: Add agents to be supervised in app (preview)
+            url: maker/model-driven-apps/add-agents-to-app.md
+          - text: Add an agent response control (preview)
+            url: maker/model-driven-apps/form-designer-add-configure-agent-response.md
+          - text: Build an agent to automate your business process
+            url: maker/canvas-apps/agent-builder.md
+          - text: Add agents to your model-driven app
+            url: maker/model-driven-apps/add-agents-to-app.md
+
+  # Card
+  - title: Explore Copilot chat features
+    linkLists:
+
+      - linkListType: how-to-guide
+        links:
+
+          - text: Add Copilot chat in model-driven apps
+            url: maker/model-driven-apps/add-ai-copilot.md
+          - text: Use Copilot chat in model-driven apps
+            url: user/use-copilot-model-driven-apps.md
+          - text: Customize Copilot chat using Copilot Studio (preview)
+            url: maker/model-driven-apps/customize-copilot-chat.md
+
+  
+  # Card
+  - title: Streamline data entry
+    linkLists:
+
+      - linkListType: how-to-guide
+        links:
+
+          - text: Get assistance filling forms
+            url: user/form-filling-assistance.md
+          - text: Use smart paste (preview)
+            url: user/form-filling-assistance.md#use-smart-paste-preview
+          - text: Use Copilot in the email rich text editor
+            url: maker/model-driven-apps/use-copilot-email-assist.md
+
+  # Card
+  - title: Explore and visualize data
+    linkLists:
+
+      - linkListType: how-to-guide
+        links:
+
+          - text: Explore data in a view (preview)
+            url: user/find-data-with-ai.md
+          - text: Visualize data in a view (preview)
+            url: user/visualize-data-in-copilot.md
+          - text: See row summaries in a form and view
+            url: user/record-summaries.md
+          - text: Use prompt columns
+            url: maker/data-platform/prompt-column.md
+
+  # Card
+  - title: Summarize and provide contextual insight
+    linkLists:
+
+      - linkListType: how-to-guide
+        links:
+
+          - text: Use Copilot case summary
+            url: user/copilot-case-summary.md
+          - text: Use timeline highlights powered by generative AI
+            url: user/add-activities.md#use-timeline-highlights-powered-by-generative-ai
+          - text: Create a custom row summary
+            url: maker/data-platform/configure-form-row-summary.md
+
+  # Card
+  - title: Integrate custom AI experiences
+    linkLists:
+
+      - linkListType: concept
+        links:
+
+          - text: Use APIs to create custom AI powered experiences (preview)
+            url: developer/model-driven-apps/clientapi/bring-intelligence-using-agent-apis.md
