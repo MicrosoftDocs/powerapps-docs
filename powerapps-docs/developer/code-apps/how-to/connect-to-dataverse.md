@@ -55,81 +55,71 @@ The following scenarios are supported when connecting to Dataverse using the Pow
 
 - Paging support
 
-## Read data from a Dataverse table
+## Set up your code app for Dataverse CRUD operations
+   Before performing create, read, update, and delete (CRUD) operations in your code app, complete these two setup steps.
 
-Follow these steps to read data from a Dataverse table in your application:
+   1. **Ensure Power Apps SDK initialization before data calls**
 
-1. **Ensure Power Apps SDK initialization before data calls**
-
-   In your `App.tsx` file, implement logic that waits for the Power Apps SDK to fully initialize before performing any data operations. This prevents errors caused by uninitialized services or missing context.
-
-   Use an asynchronous function or state management to confirm initialization before making API calls. For example:
-
-   ```typescript
-   useEffect(() => {
-     // Define an async function to initialize the Power Apps SDK
-     const init = async () => {
-       try {
-         await initialize(); // Wait for SDK initialization
-         setIsInitialized(true); // Mark the app as ready for data operations
-       } catch (err) {
-         setError('Failed to initialize Power Apps SDK'); // Handle initialization errors
-         setLoading(false); // Stop any loading indicators
-       }
-     };
+       In your `App.tsx` file, implement logic that waits for the Power Apps SDK to fully initialize before performing any data operations. This prevents errors caused by uninitialized services or missing context.
+    
+       Use an asynchronous function or state management to confirm initialization before making API calls. For example:
+    
+       ```typescript
+       useEffect(() => {
+         // Define an async function to initialize the Power Apps SDK
+         const init = async () => {
+           try {
+             await initialize(); // Wait for SDK initialization
+             setIsInitialized(true); // Mark the app as ready for data operations
+           } catch (err) {
+             setError('Failed to initialize Power Apps SDK'); // Handle initialization errors
+             setLoading(false); // Stop any loading indicators
+           }
+         };
+       
+         init(); // Call the initialization function when the component mounts
+       }, []);
+       
+       useEffect(() => {
+         // Prevent data operations until the SDK is fully initialized
+         if (!isInitialized) return;
+       
+         // Place your data reading logic here
+       }, []);
+       ```
    
-     init(); // Call the initialization function when the component mounts
-   }, []);
-   
-   useEffect(() => {
-     // Prevent data operations until the SDK is fully initialized
-     if (!isInitialized) return;
-   
-     // Place your data reading logic here
-   }, []);
-   
-   ```
+   2. **Import required types and services**
 
-1. **Use model and service files for data access**
+      When you add a data source, model and service files are automatically generated and placed in the /generated/services/ folder.
+      For example, if you add the built-in Accounts table as a data source, the following files are created:
+      
+      - AccountsModel.ts – Defines the data model for the Accounts table.
+      
+      - AccountsService.ts – Provides service methods for interacting with the Accounts data.
+      
+      You can import and use them in your code as shown below:
+        
+      ```typescript
+      import { AccountsService } from './generated/services/AccountsService';
+      import type { Accounts } from './generated/models/AccountsModel';
+      ```
 
-   Use the provided model and service files to access Dataverse data. These files should encapsulate logic for:
 
-   - Building queries
-   - Handling responses
-   - Managing data transformations
+## Follow these steps to successfully create records in Dataverse
 
-1. **Build the application**
+1. **Create the record object using the generated model**
 
-   After implementing your data access logic, build the application to ensure that all new code compiles correctly and integrates with existing functionality.
-
-   ```powershell
-   npm run dev
-   ```
-
-1. **Run and test**
-
-   Run the application to verify that data is successfully read from the targeted Dataverse table. Test across multiple scenarios to ensure reliability and handle errors gracefully.
-
-   ```powershell
-    pac code run
-   ```
-
-## Create records in a Dataverse table
-Follow these steps to successfully create records in Dataverse.
-
-1. **Create the record object using the model generated for you**
-
-    When you add a Dataverse data source using the PAC CLI add-data-source command, model files are automatically generated in the /generated/models folder of your app. These models reflect the schema of your Dataverse table and should be used to create record objects.
+    The generated models reflect the schema of your Dataverse table and should be used to create record objects.
 
     > [!NOTE]
-    > When creating a record, exclude system-managed or read-only columns such as primary keys and ownership fields. For example, in the Accounts table, do not include the following fields:
+    > When creating a record, exclude system-managed or read-only columns such as primary keys and ownership fields. Read [this](/power-apps/developer/data-platform/browse-your-metadata?view=dataverse-latest) documentation to understand which columns are read-only. For example, in the Accounts table, do not include the following fields:
     >  - accountid
     >  - ownerid
     >  - owneridname
     >  - owneridtype
     >  - owneridyominame
    
-    If you add the built-in Accounts table as a data source, a file named AccountsModel.ts is generated. You can then create a record like this:
+    Example:
    
      ```typescript
      
@@ -151,14 +141,9 @@ Follow these steps to successfully create records in Dataverse.
      ```
 2. **Submit the record using the generated service**
 
-   A service file is also generated when you add Dataverse tables as a data source. You can find it in the /generated/services/ folder. Use the functions in this service to submit your record.
+   Use the functions in the generated service file to submit your record. For example, for the Accounts entity:
 
-   For example, for the Accounts entity:
-
-   ```typescript
-   
-   port { AccountsService } from "./generated/services/AccountsService";
-   
+   ```typescript   
    try {
      const result = await AccountsService.create(record);
      if (result.success) {
@@ -168,6 +153,78 @@ Follow these steps to successfully create records in Dataverse.
      // Handle error
    }
    ```
+
+## Read data from a Dataverse table in your application
+
+  **Retrieve a single record**
+  
+   To retrieve a single record, you need its primary key (for example, `accountid`).
+   
+   Example:
+   
+   ```typescript
+   const accountId = "00000000-0000-0000-0000-000000000000"; // Replace with actual GUID
+   
+   try {
+     const result = await AccountsService.get(accountId);
+     if (result.data) {
+       console.log('Account retrieved:', result.data);
+     }
+   } catch (err) {
+     console.error('Failed to retrieve account:', err);
+   }
+   ```
+
+  **Retrieve multiple records**
+  
+    To retrieve all records from a Dataverse table, use the getAll method:
+    
+    ```typescript
+    try {
+      const result = await AccountsService.getAll();
+      if (result.data) {
+        const accounts = result.data;
+        console.log(`Retrieved ${accounts.length} accounts`);
+      }
+    } catch (err) {
+      console.error('Failed to retrieve accounts:', err);
+    }
+    ```
+    
+    The getAll method accepts an optional IGetAllOptions parameter that lets you customize the query:
+    
+    ```typescript
+    interface IGetAllOptions {
+      maxPageSize?: number;    // Maximum number of records per page
+      select?: string[];       // Specific fields to retrieve
+      filter?: string;         // OData filter string
+      orderBy?: string[];     // Fields to sort by
+      top?: number;           // Maximum number of records to retrieve
+      skip?: number;          // Number of records to skip
+      skipToken?: string;     // Token for pagination
+    }
+    ```
+   Here's an example with multiple options:
+   
+   ```typescript
+   const fetchAccounts = async () => {
+     const options: IGetAllOptions = {
+       select: ['name', 'accountnumber', 'address1_city'],
+       filter: "address1_country eq 'USA'",
+       orderBy: ['name asc'],
+       top: 50
+     };
+   
+     try {
+       const result = await AccountsService.getAll(options);
+       return result.data || [];
+     } catch (err) {
+       console.error('Failed to fetch accounts:', err);
+       return [];
+     }
+   };
+   ```
+   
 
 ## Unsupported scenarios
 
