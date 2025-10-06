@@ -119,7 +119,7 @@ Follow these steps to successfully create records in Dataverse.
 
 1. **Create the record object using the model generated for you**
 
-    When you add a Dataverse data source using the PAC CLI add-data-source command, model files are automatically generated in the /generated/models folder of your app. These models define the structure of your Dataverse tables and should be used to create record objects.
+    When you add a Dataverse data source using the PAC CLI add-data-source command, model files are automatically generated in the /generated/models folder of your app. These models reflect the schema of your Dataverse table and should be used to create record objects.
 
     > [!NOTE]
     > When creating a record, exclude system-managed or read-only columns such as primary keys and ownership fields. For example, in the Accounts table, do not include the following fields:
@@ -151,7 +151,7 @@ Follow these steps to successfully create records in Dataverse.
      ```
 2. **Submit the record using the generated service**
 
-   A service file is also generated when you add the Dataverse data source. You can find it in the /generated/services/ folder. Use the functions in this service to submit your record.
+   A service file is also generated when you add Dataverse tables as a data source. You can find it in the /generated/services/ folder. Use the functions in this service to submit your record.
 
    For example, for the Accounts entity:
 
