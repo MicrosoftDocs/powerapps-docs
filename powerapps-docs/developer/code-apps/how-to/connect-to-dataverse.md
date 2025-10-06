@@ -117,83 +117,57 @@ Follow these steps to read data from a Dataverse table in your application:
 ## Create records in a Dataverse table
 Follow these steps to successfully create records in Dataverse.
 
-1. **Define your record type**
+1. **Create the record object using the model generated for you**
 
-   First, create a TypeScript interface or type that includes the required OData annotation.
+    When you add a Dataverse data source using the PAC CLI add-data-source command, model files are automatically generated in the /generated/models folder of your app. These models define the structure of your Dataverse tables and should be used to create record objects.
+
+    > [!NOTE]
+    > When creating a record, exclude system-managed or read-only columns such as primary keys and ownership fields. For example, in the Accounts table, do not include the following fields:
+    >  - accountid
+    >  - ownerid
+    >  - owneridname
+    >  - owneridtype
+    >  - owneridyominame
+   
+    If you add the built-in Accounts table as a data source, a file named AccountsModel.ts is generated. You can then create a record like this:
+   
+     ```typescript
+     
+     import type { Accounts } from "./generated/models/AccountsModel";
+     
+     const record: Omit<
+         Accounts,
+         | "accountid"
+         | "ownerid"
+         | "owneridname"
+         | "owneridtype"
+         | "owneridyominame"
+       > = {
+         name: formData.name,
+         statecode: 0,
+         numberofemployees: 7,
+        // ... other fields
+
+     ```
+2. **Submit the record using the generated service**
+
+   A service file is also generated when you add the Dataverse data source. You can find it in the /generated/services/ folder. Use the functions in this service to submit your record.
+
+   For example, for the Accounts entity:
 
    ```typescript
-   type CreateRecordPayload = { 
-   // Required OData annotation 
-   '@odata.type': string; 
-   // Your record fields 
-   name: string; 
-   // ... other fields 
-   };
-   ```
-2. **Create the record object**
-
-   When preparing your record data, always include the OData type annotation. For standard Dataverse tables, the @odata.type annotation always follows the pattern of ‘#Microsoft.Dynamics.CRM.\<logicaltablename\>’
-
-   ```typescript
-   const newRecord: CreateRecordPayload = { 
-   // Specify the entity type 
-   '@odata.type': '#Microsoft.Dynamics.CRM.account',  // for Account entity   
-   // Add your record data 
-   name: 'New Account Name', 
-   // ... other fields 
-   };
-   ```
-
-3. **Submit the record**
-
-   Use the appropriate service to create the record.
-
-   ```typescript
-   try { 
-   const result = await YourEntityService.create(newRecord); 
-   if (result.success) { 
-    // Handle success 
-   } 
-   } catch (error) { 
-   // Handle error 
+   
+   port { AccountsService } from "./generated/services/AccountsService";
+   
+   try {
+     const result = await AccountsService.create(record);
+     if (result.success) {
+       // Handle success
+     }
+   } catch (error) {
+     // Handle error
    }
    ```
-**Here is a complete example showing best practices:**
-
-```typescript
-// Type definition 
-type CreateAccountPayload = { 
-  '@odata.type': string; 
-  name: string; 
-  accountnumber?: string; 
-  // ... other fields 
-}; 
-
-// Create record function 
-async function createAccount(accountData: Omit<CreateAccountPayload, '@odata.type'>) { 
-  const record: CreateAccountPayload = { 
-    '@odata.type': '#Microsoft.Dynamics.CRM.account', 
-    ...accountData 
-  }; 
-
-  try { 
-    const result = await AccountsService.create(record); 
-    if (!result.success) { 
-      throw new Error(result.error?.message || 'Failed to create account'); 
-    } 
-    return result.data; 
-  } catch (error) { 
-    console.error('Error creating account:', error); 
-    throw error; 
-  } 
-}
-// Usage 
-await createAccount({ 
-  name: 'New Customer Account', 
-  accountnumber: 'ACC-001' 
-}); 
-```
-
 
 ## Unsupported scenarios
 
