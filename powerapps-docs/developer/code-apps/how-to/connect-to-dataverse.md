@@ -120,39 +120,36 @@ Before performing create, read, update, and delete (CRUD) operations in your cod
    > - owneridtype
    > - owneridyominame
 
-   Example:
+   Form a record with only the fields you wish to populate. For example, for the Accounts entity:
 
    ```typescript
 
-   const record: Omit<
-            Accounts,
-            | "accountid"
-            | "ownerid"
-            | "owneridname"
-            | "owneridtype"
-            | "owneridyominame"
-      > = {
-            name: formData.name,
-            statecode: 0,
-            numberofemployees: 7,
-         // ... other fields
-
+   const newAccount = {
+   	name: "New Account"
+   	statecode: 0,
+   	accountnumber: "ACCOO1"
+   	...
+   };
    ```
 
-1. **Submit the record using the generated service**
+2. **Submit the record using the generated service**
 
    Use the functions in the generated service file to submit your record. For example, for the Accounts entity:
 
-   ```typescript
-   try {
-   const result = await AccountsService.create(record);
-   if (result.success) {
-      // Handle success
-   }
-   } catch (error) {
-   // Handle error
-   }
-   ```
+```typescript
+
+try {
+const result = await AccountsService.create(newAccount as Omit<Accounts, 'accountid'>);
+
+if (result.data) {
+	console.log('Account created:', result.data);
+	return result.data;
+}
+} catch (err) {
+console.error('Failed to create account:', err);
+throw err;
+};
+```
 
 ## Read data
 
@@ -277,7 +274,8 @@ try {
 
 The following features aren't yet supported:
 
-- Option sets, lookup fields (including polymorphic lookups)
+- Retrieving formatted values/display names for option sets
+- Lookup fields (including polymorphic lookups)
 - Dataverse actions and functions
 - Deleting Dataverse datasources via PAC CLI
 - Schema definition (entity metadata) CRUD
