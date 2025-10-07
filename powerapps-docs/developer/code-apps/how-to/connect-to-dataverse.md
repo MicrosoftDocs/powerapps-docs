@@ -98,7 +98,7 @@ Before performing create, read, update, and delete (CRUD) operations in your cod
 
    - `AccountsService.ts` – Provides service methods for interacting with the Accounts data.
 
-   You can import and use them in your code as shown below:
+   You can import and use them in your code like this:
 
    ```typescript
    import { AccountsService } from './generated/services/AccountsService';
@@ -112,7 +112,7 @@ Before performing create, read, update, and delete (CRUD) operations in your cod
    The generated models reflect the schema of your Dataverse table and should be used to create record objects.
 
    > [!NOTE]
-   > When creating a record, exclude system-managed or read-only columns such as primary keys and ownership fields. Read [this](/power-apps/developer/data-platform/browse-your-metadata?view=dataverse-latest) documentation to understand which columns are read-only. For example, in the Accounts table, do not include the following fields:
+   > When creating a record, exclude system-managed or read-only columns such as primary keys and ownership fields. [Browse table definitions in your environment](../../data-platform/browse-your-metadata.md) describes a tool you can use to understand which columns are read-only. For example, in the [Accounts table](../../data-platform/reference/entities/account.md), don't include the following fields:
    >
    > - accountid
    > - ownerid
@@ -156,6 +156,8 @@ Before performing create, read, update, and delete (CRUD) operations in your cod
 
 ## Read data
 
+You can retrieve a single record or compose a query to return multiple records.
+
 **Retrieve a single record**
 
 To retrieve a single record, you need its primary key (for example, `accountid`).
@@ -189,7 +191,7 @@ try {
 }
 ```
 
-The `getAll` method accepts an optional  parameter that implements the `IGetAllOptions` interface. Use this to customize the query:
+The `getAll` method accepts an optional parameter that implements the `IGetAllOptions` interface. Use these options to customize the query:
 
 ```typescript
 interface IGetAllOptions {
@@ -204,7 +206,7 @@ interface IGetAllOptions {
 ```
 
 > [!IMPORTANT]
-> Always limit the number of columns you are retrieving with the `select` parameter.
+> Always limit the number of columns you're retrieving with the `select` parameter.
 
 Here's an example with multiple options:
 
@@ -235,7 +237,7 @@ To update a record, you need:
 1. The changes you want to make
 
 > [!IMPORTANT]
-> When updating an record, only include the properties you are changing in the request body. Simply updating the properties of an record that you previously retrieved, and including that data in your request, will update each property even though the value is the same. This can cause system events that can trigger business logic that expects that the values have changed. This can cause properties to appear to have been updated in auditing data when in fact they haven't actually changed.
+> When you update a record, only include the properties you're changing in the request body. Simply setting changed properties of a record that you previously retrieved, and including that data in your request updates each property even though the value is the same. This can cause system events that can trigger business logic that expects that the values changed. This can cause properties to appear to have been updated in auditing data when in fact they haven't actually changed.
 
 This example updates the `name` and `telephone1` properties of the account record:
 
