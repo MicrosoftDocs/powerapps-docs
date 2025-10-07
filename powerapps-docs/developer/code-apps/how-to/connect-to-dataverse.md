@@ -3,7 +3,7 @@ title: "How to: Connect your code app to Dataverse (preview)"
 description: "Learn how to connect your code app to Dataverse"
 ms.author:  jordanchodak
 author: jordanchodakWork
-ms.date: 09/29/2025
+ms.date: 10/07/2025
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
@@ -125,10 +125,10 @@ Before performing create, read, update, and delete (CRUD) operations in your cod
    ```typescript
 
    const newAccount = {
-   	name: "New Account"
-   	statecode: 0,
-   	accountnumber: "ACCOO1"
-   	...
+      name: "New Account"
+      statecode: 0,
+      accountnumber: "ACCOO1"
+      ...
    };
    ```
 
@@ -136,31 +136,30 @@ Before performing create, read, update, and delete (CRUD) operations in your cod
 
    Use the functions in the generated service file to submit your record. For example, for the Accounts entity:
 
-```typescript
+   ```typescript
+   try {
+   const result = await AccountsService.create(newAccount as Omit<Accounts, 'accountid'>);
 
-try {
-const result = await AccountsService.create(newAccount as Omit<Accounts, 'accountid'>);
-
-if (result.data) {
-	console.log('Account created:', result.data);
-	return result.data;
-}
-} catch (err) {
-console.error('Failed to create account:', err);
-throw err;
-};
-```
+   if (result.data) {
+   console.log('Account created:', result.data);
+   return result.data;
+   }
+   } catch (err) {
+   console.error('Failed to create account:', err);
+   throw err;
+   };
+   ```
 
 ## Read data
 
 You can retrieve a single record or compose a query to return multiple records.
 
-**Retrieve a single record**
+### Retrieve a single record
 
 To retrieve a single record, you need its primary key (for example, `accountid`).
 
 ```typescript
-const accountId = "00000000-0000-0000-0000-000000000000"; // Replace with actual GUID
+const accountId = "<00000000-0000-0000-0000-000000000000>"; // Replace with actual ID value
 
 try {
       const result = await AccountsService.get(accountId);
@@ -172,7 +171,7 @@ try {
 }
 ```
 
-**Retrieve multiple records**
+### Retrieve multiple records
 
 To retrieve all records from a Dataverse table, use the `getAll` method:
 
@@ -230,11 +229,11 @@ try {
 
 To update a record, you need:
 
-1. The record's primary key (for example, `accountid`)
-1. The changes you want to make
+1. The record's primary key value. For example, with the account table, the `accountid` value.
+1. The changes you want to make.
 
 > [!IMPORTANT]
-> When you update a record, only include the properties you're changing in the request body. Simply setting changed properties of a record that you previously retrieved, and including that data in your request updates each property even though the value is the same. This can cause system events that can trigger business logic that expects that the values changed. This can cause properties to appear to have been updated in auditing data when in fact they haven't actually changed.
+> When you update a record, only include the properties you're changing in the request. Simply setting some changed properties of a record that you previously retrieved and including that data in your request updates all properties even though their values didn't change. False updates like these can trigger business logic that expects the values changed, or can corrupt auditing data to indicate that someone changed data that didn't change.
 
 This example updates the `name` and `telephone1` properties of the account record:
 
@@ -255,12 +254,12 @@ try {
 
 ## Delete records in Dataverse
 
-To delete a record, you need the record's primary key (for example, `accountid`).
+To delete a record, you need the record's primary key value. For example, with the account table, the `accountid` value.
 
 For example:
 
 ```typescript
-const accountId = "<00000000-0000-0000-0000-000000000000>"; // Replace with actual GUID
+const accountId = "<00000000-0000-0000-0000-000000000000>"; // Replace with actual ID value
 
 try {
   await AccountsService.delete(accountId);
