@@ -5,7 +5,7 @@ author: jasongre
 
 ms.topic: reference
 ms.component: canvas
-ms.date: 05/20/2023
+ms.date: 10/8/2025
 ms.subservice: canvas-maker
 ms.author: jasongre
 
