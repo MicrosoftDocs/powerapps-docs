@@ -169,11 +169,11 @@ You’re now ready to [build your solutions](build-solution.md).
 
 Share your plan with other makers to collaborate by assigning read or edit access.
 
-Collaborators need sufficient privileges to open and work with a shared plan. If your admin enables the [plan level security roles](/power-platform/admin/settings-collaboration#security-roles) in Power Platform Admin only system admins  can grant collaborators with plan-level privileges when sharing. The privilege can be read or edit access.
+Plan collaborators need sufficient privileges to open and work with a shared plan. If your admin enabled [plan level security roles](/power-platform/admin/settings-collaboration#security-roles) in Power Platform Admin Center, makers with the System Admin security role can directly grant collaborators with plan-level privileges when sharing the plan. 
 
- Collaborators need sufficient privileges to open and work with a shared plan. If your admin turn on [plan level security roles](/power-platform/admin/settings-collaboration#security-roles) in Power Platform Admin, only system admins can grant collaborators plan-level privileges when sharing. The privilege can be read or edit access.
+For example, User 1 doesn't have sufficient privilges to see/edit plans. When the maker shares a plan with User 1, a custom security role is automatically generated and assigned, which then grants them with necessary plan privileges. The auto-generated security role can be found in the Power Platform Admin center with the following naming convention "Plan + Plan name + Role name + Plan ID". To edit assigned security roles, unshare and reshare the plan to assigned the appropriate security role under Manage Access.  
 
- If a maker doesn't have the required privileges, they see an error message when they open the shared plan.
+If [plan level security roles](/power-platform/admin/settings-collaboration#security-roles) is not enabled in PPAC, makers will have to assign necessary privileges manually to collaborators in order for collaborators to properly access the plan. 
 
 **Follow these steps to share your plan**:
 
