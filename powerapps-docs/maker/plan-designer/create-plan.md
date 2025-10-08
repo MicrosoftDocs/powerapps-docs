@@ -169,11 +169,11 @@ You’re now ready to [build your solutions](build-solution.md).
 
 Share your plan with other makers to collaborate by assigning read or edit access.
 
-Plan collaborators need sufficient privileges to open and work with a shared plan. If your admin enabled [plan level security roles](/power-platform/admin/settings-collaboration#security-roles) in Power Platform Admin Center, makers with the System Admin security role can directly grant collaborators with plan-level privileges when sharing the plan. 
+Plan collaborators need sufficient privileges to open and work with a shared plan. If your admin enabled [plan level security roles](/power-platform/admin/settings-collaboration#security-roles) in Power Platform Admin Center, makers with the System Admin security role can directly give collaborators plan-level privileges when sharing the plan.
 
-For example, User 1 doesn't have sufficient privilges to see/edit plans. When the maker shares a plan with User 1, a custom security role is automatically generated and assigned, which then grants them with necessary plan privileges. The auto-generated security role can be found in the Power Platform Admin center with the following naming convention "Plan + Plan name + Role name + Plan ID". To edit assigned security roles, unshare and reshare the plan to assigned the appropriate security role under Manage Access.  
+For example, User 1 doesn't have enough privileges to see or edit plans. When the maker shares a plan with User 1, a custom security role is automatically created and assigned, which then gives them the needed plan privileges. The auto-generated security role appears in Power Platform Admin Center with the naming convention **Plan + Plan name + Role name + Plan ID**. To change assigned security roles, unshare and reshare the plan to assign the right security role under **Manage Access**.
 
-If [plan level security roles](/power-platform/admin/settings-collaboration#security-roles) is not enabled in PPAC, makers will have to assign necessary privileges manually to collaborators in order for collaborators to properly access the plan. 
+If [plan level security roles](/power-platform/admin/settings-collaboration#security-roles) isn't enabled in Power Platform Admin Center, makers need to manually give collaborators the needed privileges so they can access the plan. 
 
 **Follow these steps to share your plan**:
 
