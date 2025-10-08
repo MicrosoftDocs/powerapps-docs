@@ -173,7 +173,7 @@ Plan collaborators need sufficient privileges to open and work with a shared pla
 
 For example, User 1 doesn't have enough privileges to see or edit plans. When the maker shares a plan with User 1, a custom security role is automatically created and assigned, which then gives them the needed plan privileges. The auto-generated security role appears in Power Platform Admin Center with the naming convention **Plan + Plan name + Role name + Plan ID**. To change assigned security roles, unshare and reshare the plan to assign the right security role under **Manage Access**.
 
-If [plan level security roles](/power-platform/admin/settings-collaboration#security-roles) isn't enabled in Power Platform Admin Center, makers need to manually give collaborators the needed privileges so they can access the plan. 
+If [plan level security roles](/power-platform/admin/settings-collaboration#security-roles) isn't enabled in Power Platform Admin Center, makers need to manually give collaborators the [needed privileges](plan-designer.md#prerequisites) so they can access the plan. 
 
 **Follow these steps to share your plan**:
 
@@ -186,6 +186,7 @@ If [plan level security roles](/power-platform/admin/settings-collaboration#secu
 1. Select the down arrow to choose permissions for the plan. Options include:
     - **Viewer**: Can only view the plan.
     - **Co-Owner**: Can use, edit, and share the plan but not delete or change owners.
+      :::image type="content" source="media/create-a-plan/share-plans.png" alt-text="share a plan":::
 1. Select **Manage access** to see access details, including current users and co-owners. You can also edit user access and assign security roles here. 
 1. When you're done, select **Share**.
 
