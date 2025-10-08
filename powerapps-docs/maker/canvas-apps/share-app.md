@@ -46,9 +46,15 @@ Before you share an app, you must [save it](save-publish-app.md) (not locally) a
     - **User**: Can use the app only.
     - **Co-Owner**: Can use, edit, and share the app but not delete or change owners.
 
-        :::image type="content" source="media/share-app/share-app-coowner.png" alt-text="share with a co-owner":::\
+        :::image type="content" source="media/share-app/share-app-coowner.png" alt-text="share with a co-owner":::
     - If your app connects to a Dataverse table, the permissions dropdown will display a **More security roles** option. Select the appropriate security roles, and those roles will be automatically assigned to users when you share the app.
-    - If your admin enables the [app level security roles](/power-platform/admin/settings-collaboration#security-roles) in Power Platform Admin, only system admins can grant collaborators with app-level privileges when sharing. The privilege can be read or edit access.
+    - If your admin enabled the [app level security roles](/power-platform/admin/settings-collaboration#security-roles) in Power Platform Admin, makers with System Admin role can grant collaborators with app-level privileges when sharing. Makers can assign privileges from the security role picker, with App reader, App user, App maker, and App admin as the security role options. To edit assigned security roles, unshare and reshare the app to assigned the appropriate security role under Manage Access.  
+        - App reader: This role indicates read privilege for both user/team owned tables and org owned tables. 
+        - App user: This role indicates full privilege access to only their own records in user/team owned tables, and read privilege to org owned tables.
+        - App maker: This role indicates create and read privilege for all records user/team owned tables, but only write, delete, assign, share, append, and append to privilges for their own records in user/team owned tables. Additionally, read privilege to org-owned tables. 
+        - App admin: This role indicates full access to all records in user/team owned tables and org owned tables.
+     
+    
 
        :::image type="content" source="media/share-app/more-security-roles.png" alt-text="More security roles option":::
 
