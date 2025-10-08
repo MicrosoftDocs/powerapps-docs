@@ -560,16 +560,15 @@ You need to follow up with the table owner who has disabled quick create through
 
 ## Table doesn't appear in the quick create menu flyout
 
-When opening the global quick create menu flyout, not all tables are available. There are few reasons why the tables are filtered in this list:
+When opening the global quick create menu, not all tables are available. Some possible reasons:
 
-- There's no quick create form available for the table.
-- Table isn't enabled for quick create form.
-- Table isn't enabled for the new Unified Interface.
-- Table is read-only in Unified Interface.
-- Table's mobile client visibility can't be modified.
-- Table isn't part of the app module.
-- User doesn't have a create privilege on the table.
-- The create privilege isn't supported for the table.
+- Table isn't enabled for quick create. [Check if the table supports quick create and that it's enabled](create-edit-quick-create-forms.md#tables-with-quick-create-forms).
+- Table isn't added to the app. [Ensure all required components are added to an app](/troubleshoot/power-platform/power-apps/create-and-use-apps/isolate-model-app-issues#ensure-all-required-components-are-added-to-an-app).
+- No quick create form is available for the table. [Create a quick create form](create-edit-quick-create-forms.md#create-a-quick-create-form).
+- Table is read-only.
+- User doesn't have permission to access the quick create form. Check if the user has appropriate security roles.
+- User doesn't have create privilege for the table.
+- Table doesn't support create privilege.
 
 ### How to troubleshoot
 
