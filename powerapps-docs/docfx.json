@@ -76,8 +76,8 @@
       },
       "searchScope": {
         "**.*": [
-          "Power Platform",
-          "Power Apps"
+          "Power Apps",
+          "Power Platform"
         ]
       },
       "ms.topic": {
@@ -137,4 +137,5 @@
     "markdownEngineName": "markdig"
   }
 }
+
 
