@@ -4,7 +4,7 @@ description: Use plans to create business solutions with AI-powered experiences.
 author: mduelae
 contributors:
 ms.topic: how-to
-ms.date: 10/1/2025
+ms.date: 10/10/2025
 ms.update-cycle: 180-days
 ms.author: szlo
 ms.reviewer: mkaur
@@ -165,13 +165,36 @@ You’re now ready to [build your solutions](build-solution.md).
 
 :::image type="content" source="media/create-a-plan/create-objects.png" alt-text="Screenshot showing the 'Ready to build your solution' message.":::
 
-## Export your plan to a PDF
+## Share a plan
+
+Share your plan with other makers to collaborate by assigning read or edit access.
+
+Plan collaborators need sufficient privileges to open and work with a shared plan. If your admin enabled [plan level security roles](/power-platform/admin/settings-collaboration#security-roles) in Power Platform Admin Center, makers with the System Admin security role can directly give collaborators plan-level privileges when sharing the plan.
+
+For example, User 1 doesn't have enough privileges to see or edit plans. When the maker shares a plan with User 1, a custom security role is automatically created and assigned, which then gives them the needed plan privileges. The auto-generated security role appears in Power Platform Admin Center with the naming convention **Plan + Plan name + Role name + Plan ID**. To change assigned security roles, unshare and reshare the plan to assign the right security role under **Manage Access**.
+
+If [plan level security roles](/power-platform/admin/settings-collaboration#security-roles) isn't enabled in Power Platform Admin Center, makers need to manually give collaborators the [needed privileges](plan-designer.md#prerequisites) so they can access the plan. 
+
+**Follow these steps to share your plan**:
+
+1. Open your plan and then select **Share** in the top right corner.
+ 
+    :::image type="content" source="media/create-a-plan/export-plan-to-pdf.png" alt-text="Screenshot of the sharing icon on the top right":::
+
+1. Select **Share**.
+1. In the **Share** dialog box, type the names or alias of the user or security groups.
+1. Select the down arrow to choose permissions for the plan. Options include:
+    - **Viewer**: Can only view the plan.
+    - **Co-Owner**: Can use, edit, and share the plan but not delete or change owners.
+      :::image type="content" source="media/create-a-plan/share-plans.png" alt-text="share a plan":::
+1. Select **Manage access** to see access details, including current users and co-owners. You can also edit user access and assign security roles here. 
+1. When you're done, select **Share**.
+
+## Export a plan to a PDF
 
 The export to PDF feature lets you share plans with stakeholders. It includes all content from the document side of the plan, but not the diagram side. Use this feature to share user requirements, data models, and proposed data tables with leaders who don't have access to Power Apps.
 
-To export a plan to PDF, select **Export this plan as a PDF** in the top right corner.
-
-:::image type="content" source="media/create-a-plan/export-plan-to-pdf.png" alt-text="Screenshot of the Export to PDF icon on the top right":::
+- To export a plan to PDF open a plan and then select **Share** > **Export as a PDF** in the top right corner.
 
 ## View and edit plans
 
