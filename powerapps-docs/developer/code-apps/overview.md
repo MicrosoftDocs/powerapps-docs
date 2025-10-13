@@ -66,9 +66,9 @@ End-users that run code apps need a [Power Apps Premium license](https://www.mic
 - Code apps can invoke APIs outside of Power Platform connectors. Code apps don't yet support [Content Security Policy](/power-platform/admin/content-security-policy) (CSP).
 - Code apps don't yet support [Storage Shared Access Signature (SAS) IP restriction](/power-platform/admin/security/data-storage#advanced-security-features ).
 - Code apps don't support [Power Platform Git integration](/power-platform/alm/git-integration/overview).
-- Code apps don't support Dataverse solutions and therefore can't use Power Platform pipelines for deployments.
 - Code apps don't have a Power Platform native integration with Azure Application Insights. Azure Application Insights can be added as it would be to a generic web app but it doesn't include information recognized in the platform layer, such as app open events (to measure success/failure).
-- Code apps are not supported in the Power Apps mobile app or Power Apps for Windows.
+- Code apps aren't supported in the Power Apps mobile app or Power Apps for Windows.
+- Code apps don't yet support PowerBI integration.
 
 ## Managed Platform capability support
 
