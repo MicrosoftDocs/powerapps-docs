@@ -18,8 +18,12 @@
     href:  ./canvas-apps/sign-in-to-power-apps.md
   - name: Get started with Power Apps
     href: ./canvas-apps/intro-maker-portal.md
-  - name: Copilot in Power Apps (preview)
-    href: ./canvas-apps/ai-overview.md
+  - name: Copilot in Power Apps 
+    items: 
+    - name: Copilot in Power Apps 
+      href: ../copilot-landing-page.yml
+    - name: Overview 
+      href: ./canvas-apps/ai-overview.md
   - name: Use the learn hub
     href: ./common/learn-hub.md
   - name: "What's new?"
@@ -239,7 +243,7 @@
     href: search.md      
   - name: Use Dynamics 365 App for Outlook
     href: ../user/use-outlook-app.md
-- name: Plan designer 
+- name: Plans  
   items:
   - name: Overview
     href: ./plan-designer/plan-designer.md  
@@ -546,15 +550,15 @@
               href: ./canvas-apps/controls/modern-controls/modern-control-text-input.md
             - name: Toggle
               href: ./canvas-apps/controls/modern-controls/modern-control-toggle.md
-            - name: Avatar (preview)
+            - name: Avatar
               href: ./canvas-apps/controls/modern-controls/modern-control-avatar.md
             - name: Copilot answer (preview)
               href: ./canvas-apps/controls/modern-controls/modern-control-copilot-answer.md
             - name: Dropdown (preview)
               href: ./canvas-apps/controls/modern-controls/modern-control-dropdown.md
-            - name: Header (preview)
+            - name: Header
               href: ./canvas-apps/controls/modern-controls/modern-controls-header.md
-            - name: Info button (preview)
+            - name: Info button
               href: ./canvas-apps/controls/modern-controls/modern-control-info-button.md
             - name: Stream video (preview)
               href: ./canvas-apps/controls/modern-controls/new-stream-video-control.md
@@ -2154,7 +2158,7 @@
         href: ./data-platform/define-calculated-fields.md
       - name: How to define rollup columns
         href: ./data-platform/define-rollup-fields.md
-      - name: How to map entity columns
+      - name: How to map table columns
         href: ./data-platform/map-entity-fields.md
       - name: How to delete columns
         href: ./data-platform/delete-fields.md
@@ -2435,12 +2439,12 @@
           href: ./data-platform/azure-synapse-link-choices-powerbi.md      
   - name: Connect to Dataverse with MCP (preview)
     items:
+    - name: Enable the Dataverse MCP server
+      href: ./data-platform/data-platform-mcp-disable.md    
     - name: Connect to Dataverse with MCP overview
       href: ./data-platform/data-platform-mcp.md
     - name: Connect to Dataverse with MCP FAQ
       href: ./data-platform/data-platform-mcp-faq.md
-    - name: Disable the Dataverse MCP server
-      href: ./data-platform/data-platform-mcp-disable.md
   - name: License requirements for tables
     href: ./data-platform/data-platform-entity-licenses.md
     items:
@@ -2559,7 +2563,7 @@
     href: ./common/faq-filter-with-copilot.md
   - name:  FAQ about agent builder in canvas apps 
     href: ./common/faq-agent-builder.md  
-  - name: FAQ about the Plan designer
+  - name: FAQ about plans
     href: ./common/faq-plan-designer.md
   - name: FAQ about renaming controls with Copilot
     href: ./common/faq-rename-control.md

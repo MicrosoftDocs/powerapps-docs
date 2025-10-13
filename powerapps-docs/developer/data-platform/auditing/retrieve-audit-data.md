@@ -1,7 +1,7 @@
 ---
 title: Retrieve the history of audited data changes
 description: Learn how to programmatically retrieve the audit change history of records in Microsoft Dataverse.
-ms.date: 06/02/2023
+ms.date: 09/22/2025
 ms.reviewer: jdaly
 ms.topic: how-to
 author: paulliew
@@ -21,7 +21,7 @@ When auditing is enabled and data in audited tables and columns is changed, you 
 
 Audit data isn't available using the [Dataverse TDS (SQL) endpoint](../dataverse-sql-query.md).
 
-Audit history is not available for tables in the mobile app.
+Audit history isn't available for tables in the mobile app.
 
 ## Audit table
 
@@ -39,7 +39,7 @@ The following table summarizes important columns in the audit table.
 |`AttributeMask`<br/>`attributemask`<br/>**Changed Field**|Memo|When the change represents a change to record data, contains a comma-separated list of numbers that correspond to the [AttributeMetadata.ColumnNumber](xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.ColumnNumber) for the columns that were changed.<br/><br/>**Note:** Don't use this data. Instead, use the messages to [retrieve change history](#retrieve-audit-change-history).|
 |`AuditId`<br/>`auditid`<br/> **Record Id**|Unique identifier|Identifies the primary key for the audit table.|
 |`CallingUserId`<br/>`callinguserid`<br/>**Calling User**|Lookup|Identifies the calling user when impersonation is used for the operation; otherwise, null.|
-|`CreatedOn`<br/>`createdon`<br/>**Changed Date**|DateTime|Identifies when the audit record was created, which is when the user operation took place.|
+|`CreatedOn`<br/>`createdon`<br/>**Changed Date**|DateTime|Identifies when the audit record was created, which is when the user operation took place.<br/>In July of 2025, the accuracy of this value was enhanced to include milliseconds. This captures the correct sequence of audit events in transactions that have multiple operations. |
 |`ObjectId`<br/>`objectid`<br/>**Record**|Lookup|Uniquely identifies the record that was audited.|
 |`ObjectTypeCode`<br/>`objecttypecode`<br/>**Entity**|EntityName|Displays the logical name of the table referred to by the `objectid` column.|
 |`Operation`<br/>`operation`<br/>**Operation**|Choice|Identifies the operation that created the audit record; one of four values:<br/>1 = Create<br/>2 = Update<br/>3 = Delete<br/>4 = Access<br/>|
@@ -100,7 +100,7 @@ The [Sample: Audit user access](../org-service/samples/audit-user-access.md) sho
 
 #### Metadata change events
 
-These events capture changes to table and column definitions as well as changes to the organization table.
+These events capture changes to table and column definitions and changes to the organization table.
 
 |Value|Label|Description|
 |-----|-----|-------|
@@ -138,7 +138,7 @@ These events capture changes to security roles.
 
 The remaining action options generally refer to auditable operations that apply to specific solutions, such as Dynamics 365 Sales, Customer Service, and Marketing.
 
-The labels for these actions should align with an [SdkMessage.Name](../reference/entities/sdkmessage.md#BKMK_Name) value that represents the action. The specific operation may be a combination of the action name and a table. For example, an option with a value of 10 and the label **Close** should correspond to the `CloseIncident` or `CloseQuote` messages.
+The labels for these actions should align with an [SdkMessage.Name](../reference/entities/sdkmessage.md#BKMK_Name) value that represents the action. The specific operation might be a combination of the action name and a table. For example, an option with a value of 10 and the label **Close** should correspond to the `CloseIncident` or `CloseQuote` messages.
 
 ### Audit table relationships
 
@@ -260,10 +260,7 @@ Preference-Applied: odata.include-annotations="*"
 
 The following two static methods show the number of contact records the specified user deleted. These queries use aggregation, so they aren't limited to 5,000 results. However, they're limited to the higher 50,000 record limit for aggregation.
 
-
 `ShowNumberContactsDeletedByUserQE` uses <xref:Microsoft.Xrm.Sdk.Query.QueryExpression>.
-
-
 
 ```csharp
 /// <summary>
@@ -323,9 +320,7 @@ Learn more about:
 
 - [Build queries with QueryExpression](../org-service/queryexpression/overview.md)
 
-
 `ShowNumberContactsDeletedByUserFetchXml` uses <xref:Microsoft.Xrm.Sdk.Query.FetchExpression> with a query composed using FetchXml.
-
 
 ```csharp
 /// <summary>
@@ -414,7 +409,7 @@ These messages provide more details that depend on the type of action. The detai
 >
 > - The Web API types listed earlier that inherit from [AuditDetail ComplexType](xref:Microsoft.Dynamics.CRM.AuditDetail) don't return the `AuditRecord` navigation property value they should inherit from `AuditDetail`. The SDK for .NET classes returns this data.
 >
-> - Large column values included in `AttributeAuditDetail` `OldValue` or `NewValue` properties such as [Email.Description](../reference/entities/email.md#BKMK_Description) or [Annotation](../reference/entities/annotation.md) are capped at 5KB or about 5,000 characters. A capped column value can be recognized by an ellipsis (&hellip;) at the end of the text; for example, "lorem ipsum, lorem ip…" Because the data is truncated, you can't use it to restore changes to these column values.
+> - Large column values included in `AttributeAuditDetail` `OldValue` or `NewValue` properties such as [Email.Description](../reference/entities/email.md#BKMK_Description) or [Annotation](../reference/entities/annotation.md) are capped at 5KB or about 5,000 characters. Recognize a capped column value by the ellipsis (&hellip;) at the end of the text; for example, "lorem ipsum, lorem ip…". Because the data is truncated, you can't use it to restore changes to these column values.
 
 ### RetrieveAuditDetails message
 
@@ -477,7 +472,7 @@ Learn more about:
 
 # [SDK for .NET](#tab/sdk)
 
-The following `ShowAuditDetail` static method returns audit details for any type of audit details that can be tracked by an audit record.
+The following `ShowAuditDetail` static method returns audit details for any type of audit details that an audit record can track.
 
 ```csharp
 /// <summary>
@@ -506,8 +501,6 @@ static void ShowAuditDetail(
 #### DisplayAuditDetail method
 
 The `DisplayAuditDetail` static method outputs different details to the console depending on the type of audit detail. This method is used by other SDK for .NET samples on this page.
-
-
 
 ```csharp
 /// <summary>

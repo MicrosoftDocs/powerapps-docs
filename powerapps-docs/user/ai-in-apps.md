@@ -21,7 +21,7 @@ AI features in apps combine model-driven apps with intelligent automation and as
 
 ## Prerequisites
 
-Copilot needs to be [enabled for your tenant and environment](../maker/canvas-apps/ai-overview.md#disable-copilot-in-power-apps), and apps need to have the [new look](modern-fluent-design.md) turned on. AI features also have their own [enablement settings](/power-platform/admin/settings-features).
+Copilot needs to be [enabled for your tenant and environment](../maker/canvas-apps/ai-overview.md#enable-or-disable-copilot-features), and apps need to have the [new look](modern-fluent-design.md) turned on. AI features also have their own [enablement settings](/power-platform/admin/settings-features).
 
 ## Agent supervision
 

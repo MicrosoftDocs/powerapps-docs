@@ -76,7 +76,6 @@
       },
       "searchScope": {
         "**.*": [
-          "Power Platform",
           "Power Apps"
         ]
       },
@@ -91,6 +90,7 @@
         "developer/data-platform/**/*.md": "dataverse-developer",
         "developer/model-driven-apps/**/*.md": "mda-developer",
         "developer/component-framework/**/*.md": "pcf",
+        "developer/code-apps/**/*.md": "code-apps",
         "maker/portals/**/*.md": "portals",
         "maker/model-driven-apps/**/*.md": "mda-maker",
         "maker/canvas/**/*.md": "canvas-maker",
@@ -136,4 +136,3 @@
     "markdownEngineName": "markdig"
   }
 }
-
