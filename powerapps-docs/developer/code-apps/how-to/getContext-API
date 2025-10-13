@@ -1,0 +1,66 @@
+---
+title: "getContext API"
+description: "Use the getContext API for information about the app and signed-in user"
+ms.author:  jordanchodak
+author: jordanchodakWork
+ms.date: 10/13/2025
+ms.reviewer: 
+ms.topic: how-to
+contributors:
+
+---
+
+# How to: Use the getContext API (preview)
+
+The getContext() API retrieves contextual information about the app and the signed-in user. This enables apps to deliver personalized experiences and make informed decisions at runtime based on metadata. The API communicates with the web player to obtain context data and is designed to be lightweight, focusing on metadata and authentication-related properties.
+
+## Steps
+
+1. Import the getContext API
+
+```powershell
+import { initialize, getContext } from ‘@microsoft/power-apps/app’; 
+```
+
+2. Initialize 
+You must call and wait for initialize() to be done before making any data calls to ensure that the SDK is fully initialized. 
+
+```typescript
+await initialize(); 
+```
+
+3. Retrieve context
+Call getContext() as an asynchronous function to get the context object. 
+
+```typescript
+const ctx = await getContext();
+```
+		
+## API Response Structure
+
+```typescript
+export interface IContext { 
+  app: IAppContext; 
+  host: IHostContext; 
+  user: IUserContext; 
+} 
+ 
+export interface IUserContext { 
+  fullName?: string; 
+  objectId?: string; 
+  tenantId?: string; 
+  userPrincipalName?: string; 
+} 
+ 
+export interface IAppContext { 
+  appId: string; 
+  appSettings: object; 
+  environmentId: string; 
+  queryParams: Record<string, string>; 
+} 
+ 
+export interface IHostContext { 
+  sessionId: string;  
+} 
+```
+ 
