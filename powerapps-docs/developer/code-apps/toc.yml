@@ -25,3 +25,5 @@ items:
             href: how-to/create-basic-asset-management-api-azure-functions.md
           - name: "Analyze data requests and responses"
             href: how-to/analyze-data-request-response.md
+          - name: "Use the getContext API"
+            href: how-to/getcontext-api.md
