@@ -1,6 +1,6 @@
 ---
 title: "How to: Use the getContext API (preview)"
-description: "Use the getContext API for information about the app and signed-in user"
+description: "Use the getContext API to get information about the app and signed-in user. This information enables apps to deliver personalized experiences and make informed decisions at runtime based on metadata."
 ms.author:  jordanchodak
 author: jordanchodakWork
 ms.date: 10/14/2025
@@ -12,7 +12,7 @@ contributors:
 
 # How to: Use the getContext API (preview)
 
-The `getContext()` API retrieves contextual information about the app and the signed-in user. This enables apps to deliver personalized experiences and make informed decisions at runtime based on metadata. The API communicates with the web player to obtain context data and is designed to be lightweight, focusing on metadata and authentication-related properties.
+The `getContext()` API retrieves contextual information about the app and the signed-in user. This information enables apps to deliver personalized experiences and make informed decisions at runtime based on metadata. The API communicates with the web player to obtain context data and is designed to be lightweight. It focuses on metadata and authentication-related properties.
 
 ## Steps
 
@@ -69,4 +69,4 @@ The context returned is an [IContext](#icontext) type.
 
 ### IHostContext
 
-| `sessionId` | string | The ID of the current session. This will change every time the app is opened |
+| `sessionId` | string | The ID of the current session. This changes every time the app is opened |
