@@ -44,6 +44,8 @@ The context returned is an [IContext](#icontext) type.
 
 ### IContext
 
+The following table describes the properties available in the `IContext` object:
+
 |Property|Type|Description|
 |---|---|---|
 | `app` | [IAppContext](#iappcontext) | The app's context |
@@ -52,6 +54,8 @@ The context returned is an [IContext](#icontext) type.
 
 ### IAppContext
 
+The following table describes the properties available in the `IAppContext` object:
+
 |Property|Type|Description|
 |---|---|---|
 | `appId`| string | The ID of the app being played |
@@ -59,6 +63,8 @@ The context returned is an [IContext](#icontext) type.
 | `queryParams` | Record<string, string> | The query parameters added to the URL |
 
 ### IUserContext
+
+The following table describes the properties available in the `IUserContext` object:
 
 |Property|Type|Description|
 |---|---|---|
@@ -69,4 +75,8 @@ The context returned is an [IContext](#icontext) type.
 
 ### IHostContext
 
+The following table describes the property available in the `IHostContext` object:
+
+|Property|Type|Description|
+|---|---|---|
 | `sessionId` | string | The ID of the current session. This changes every time the app is opened |
