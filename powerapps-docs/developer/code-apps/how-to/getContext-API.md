@@ -40,11 +40,11 @@ The `getContext()` API retrieves contextual information about the app and the si
 
 ## API Response
 
-The context returned is an [IContext](#icontext) type.
+The context returned implements the [IContext](#icontext) interface.
 
 ### IContext
 
-The following table describes the properties available in the `IContext` object:
+The following table describes the properties available in the `IContext` interface:
 
 |Property|Type|Description|
 |---|---|---|
@@ -54,7 +54,7 @@ The following table describes the properties available in the `IContext` object:
 
 ### IAppContext
 
-The following table describes the properties available in the `IAppContext` object:
+The following table describes the properties available in the `IAppContext` interface:
 
 |Property|Type|Description|
 |---|---|---|
@@ -64,7 +64,7 @@ The following table describes the properties available in the `IAppContext` obje
 
 ### IUserContext
 
-The following table describes the properties available in the `IUserContext` object:
+The following table describes the properties available in the `IUserContext` interface:
 
 |Property|Type|Description|
 |---|---|---|
@@ -75,7 +75,7 @@ The following table describes the properties available in the `IUserContext` obj
 
 ### IHostContext
 
-The following table describes the property available in the `IHostContext` object:
+The following table describes the property available in the `IHostContext` interface:
 
 |Property|Type|Description|
 |---|---|---|
