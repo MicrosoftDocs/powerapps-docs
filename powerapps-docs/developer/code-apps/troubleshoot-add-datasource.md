@@ -11,7 +11,7 @@ contributors:
 ---
 # Troubleshoot adding a data source (preview)
 
-This article provides troubleshooting steps for when the PAC CLI (Power Apps Command Line Interface)  [pac code add-data-source](/power-platform/developer/cli/reference/code#pac-code-add-data-source) commmand fails.
+This article provides troubleshooting steps for when the PAC CLI (Power Apps Command Line Interface)  [pac code add-data-source](/power-platform/developer/cli/reference/code#pac-code-add-data-source) command fails.
 
 ## Symptoms
 
@@ -33,7 +33,7 @@ The authentication context used by the CLI might not have sufficient permissions
 
 To diagnose the root cause, follow these steps:
 
-### Step 1: Use your browser to verify you can connect
+### Step 1: Verify browser connectivity
 
 This step helps confirm that your user account has the correct permissions and that the data source is reachable from your computer.
 
@@ -43,7 +43,7 @@ This step helps confirm that your user account has the correct permissions and t
 1. If you can't access the resource, a permissions issue with your user account is the likely root cause.
 1. If you can access it, move to Step 2.
 
-### Step 2: Use Fiddler to analyze network communication data
+### Step 2: Analyze network traffic
 
 This is the most effective way to see the raw network communication data between the PAC CLI and the data source endpoint.
 
