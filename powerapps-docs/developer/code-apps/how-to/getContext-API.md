@@ -36,31 +36,19 @@ Call getContext() as an asynchronous function to get the context object.
 const ctx = await getContext();
 ```
 		
-## API Response Structure
+## API Response
 
-```typescript
-export interface IContext { 
-  app: IAppContext; 
-  host: IHostContext; 
-  user: IUserContext; 
-} 
- 
-export interface IUserContext { 
-  fullName?: string; 
-  objectId?: string; 
-  tenantId?: string; 
-  userPrincipalName?: string; 
-} 
- 
-export interface IAppContext { 
-  appId: string; 
-  appSettings: object; 
-  environmentId: string; 
-  queryParams: Record<string, string>; 
-} 
- 
-export interface IHostContext { 
-  sessionId: string;  
-} 
-```
+|Property|Type|Description|
+|---|---|---|
+| IContext.app | IAppContext | The app's context |
+| IContext.user | IUserContext | The user's context |
+| IContext.host | IHostContext | The host's context |
+| IAppContext.appId | string | The ID of the app being played |
+| IAppContext.environmentId | string | The ID of the environment where the app lives |
+| IAppContext.queryParams | Record<string, string> | The query parameters added to the URL |
+| IUserContext.fullName | string | The full name of the user playing the app |
+| IUserContext.objectId | string | The ID of the user playing the app |
+| IUserContext.tenantId | string | The ID of the tenant where the app lives |
+| IUserContext.userPrincipalName | string | The UPN of the user playing the app |
+| IHostContext.sessionId | string | The ID of the current session. This will change every time the app is opened |
  
