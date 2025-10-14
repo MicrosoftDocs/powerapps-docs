@@ -19,15 +19,12 @@ When you use the PAC CLI to add a data source, it might fail. These failures are
 
 ## Cause
 
-There are two potential causes of this issue:
+The following table describes the common causes for connectivity issues.
 
-### Cause 1: Network security
-
-Firewalls, proxies, or other network security components might be blocking the network calls made by the `pac.exe` process.
-
-### Cause 2: Authentication issues
-
-The authentication context used by the CLI might not have sufficient permissions, or it might be affected by conditional access policies.
+|Cause|Description|
+|---------|---------|
+|**Network security**|Firewalls, proxies, or other network security components might be blocking the network calls made by the `pac.exe` process.|
+|**Authentication issues**|The authentication context used by the CLI might not have sufficient permissions, or it might be affected by conditional access policies.|
 
 ## Troubleshooting steps
 
