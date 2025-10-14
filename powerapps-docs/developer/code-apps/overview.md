@@ -68,7 +68,8 @@ End-users that run code apps need a [Power Apps Premium license](https://www.mic
 - Code apps don't support [Power Platform Git integration](/power-platform/alm/git-integration/overview).
 - Code apps don't have a Power Platform native integration with Azure Application Insights. Azure Application Insights can be added as it would be to a generic web app but it doesn't include information recognized in the platform layer, such as app open events (to measure success/failure).
 - Code apps aren't supported in the Power Apps mobile app or Power Apps for Windows.
-- Code apps don't yet support PowerBI integration.
+- Code apps don't yet support Power BI data integration (PowerBIIntegration function), but can be embedded in Power BI Reports using [Power Apps Visual](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/powerapps-custom-visual).
+- Code apps don't support [SharePoint forms integration](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/sharepoint-form-integration).
 
 ## Managed Platform capability support
 
