@@ -11,15 +11,15 @@ contributors:
 ---
 
 # Why use getContext? (preview)
-The getContext API provides makers with rich details about the app and the user, enabling scenarios that go beyond basic app functionality. Here’s why these properties matter:
+The getContext API provides rich details about the app and the user, enabling scenarios that go beyond basic app functionality. Here’s why these properties matter:
 
-- Enhanced Telemetry and Debugging: Parameters like sessionId allow makers to correlate app sessions with platform telemetry, making it easier to troubleshoot issues. Access to identifiers such as appId and userPrincipalName helps track usage patterns and diagnose problems quickly.
+- Enhanced Telemetry and Debugging: Parameters like sessionId allow you to correlate app sessions with platform telemetry, making it easier to troubleshoot issues. Access to identifiers such as appId and userPrincipalName helps track usage patterns and diagnose problems quickly.
 
-- Personalized Experiences: User context properties simplify personalization without requiring additional data calls. Makers can tailor app behavior based on user identity, delivering dynamic experiences for different roles or individuals.
+- Personalized Experiences: User context properties simplify personalization without requiring additional data calls. You can tailor app behavior based on user identity, delivering dynamic experiences for different roles or individuals.
 
-- Feature Control and Conditional Logic: Parameters can act as feature gates or flags, enabling makers to turn features on or off for specific users or environments. They can also be used to show different UI elements or workflows depending on the context.
+- Feature Control and Conditional Logic: Parameters can act as feature gates or flags, enabling you to turn features on or off for specific users or environments. They can also be used to show different UI elements or workflows depending on the context.
 
-- Consistency with Canvas Apps: These parameters align with session details available in canvas apps, but now makers can use them directly in code, unlocking more flexibility.
+- Consistency with Canvas Apps: These parameters align with session details available in canvas apps, but now you can use them directly in code, unlocking more flexibility.
 
 
 # How to: Use the getContext API
