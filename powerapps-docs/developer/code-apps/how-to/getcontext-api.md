@@ -1,6 +1,6 @@
 ---
-title: "How to: Use the getContext API (preview)"
-description: "Use the getContext API to get information about the app and signed-in user. This information enables apps to deliver personalized experiences and make informed decisions at runtime based on metadata."
+title: "How to: Get context data (preview)"
+description: "Use the getContext function to get context information about the app and signed-in user. This information enables apps to deliver personalized experiences and make informed decisions at runtime based on metadata."
 ms.author:  jordanchodak
 author: jordanchodakWork
 ms.date: 10/15/2025
@@ -9,13 +9,13 @@ ms.topic: how-to
 contributors:
 - JimDaly
 ---
-# How to: Use the `getContext` API (preview)
+# How to: Get context data (preview)
 
-The `getContext()` API retrieves contextual information about the app and the signed-in user. This information enables apps to deliver personalized experiences and make informed decisions at runtime based on metadata. The API communicates with the web player to obtain context data and is designed to be lightweight. It focuses on metadata and authentication-related properties.
+The `getContext` function retrieves contextual information about the app and the signed-in user. This information enables apps to deliver personalized experiences and make informed decisions at runtime based on metadata. The `getContext` function communicates with the web player to obtain context data. It is designed to be lightweight and focuses on metadata and authentication-related properties.
 
-## Why use `getContext`?
+## Why use context data?
 
-The `getContext` API provides rich details about the app and the user, enabling scenarios that go beyond basic app functionality. Here's why these properties matter:
+The context data returned by the `getContext` function provides rich details about the app and the user, enabling scenarios that go beyond basic app functionality. Here's why these properties matter:
 
 - **Enhanced Telemetry and Debugging**: Parameters like `sessionId` allow you to correlate app sessions with platform telemetry, making it easier to troubleshoot issues. Access to identifiers such as [IAppContext.appId](#iappcontext) and [IUserContext.userPrincipalName](#iusercontext) helps track usage patterns and diagnose problems quickly.
 
@@ -27,7 +27,7 @@ The `getContext` API provides rich details about the app and the user, enabling 
 
 ## Steps
 
-1. Import the `getContext` API
+1. Import the `initialize` and `getContext` functions
 
    ```typescript
    import { initialize, getContext } from '@microsoft/power-apps/app'; 
@@ -35,7 +35,7 @@ The `getContext` API provides rich details about the app and the user, enabling 
 
 1. Initialize
 
-   You must call and wait for `initialize()` to be done before making any data calls to ensure that the SDK is fully initialized.
+   You must call and wait for the `initialize` function to complete before making any data calls to ensure that the SDK is fully initialized.
 
    ```typescript
    await initialize(); 
@@ -43,10 +43,20 @@ The `getContext` API provides rich details about the app and the user, enabling 
 
 1. Retrieve context
 
-   Call `getContext()` as an asynchronous function to get the context object.
+   Call `getContext` as an asynchronous function to get the context object.
 
    ```typescript
    const ctx = await getContext();
+
+   // Now you can access these context properties
+   const appId = ctx.app.appId
+   const environmentId = ctx.app.environmentId
+   const queryParams = ctx.app.queryParams
+   const fullName = ctx.user.fullName
+   const objectId = ctx.user.objectId
+   const tenantId = ctx.user.tenantId
+   const userPrincipalName = ctx.user.userPrincipalName
+   const sessionId = ctx.host.sessionId
    ```
 
 ## API Response
