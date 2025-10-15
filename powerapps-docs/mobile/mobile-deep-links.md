@@ -4,7 +4,7 @@ description: How to configure deep links for Power Apps mobile.
 author: vamseedillimsft
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 06/14/2024
+ms.date: 10/15/2025
 ms.subservice: mobile
 ms.author: vamseedilli
 ms.custom: ""
