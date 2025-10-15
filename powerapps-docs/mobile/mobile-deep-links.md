@@ -101,7 +101,7 @@ If the link goes to an `entitylist` view, add the following parameters:
   
  ```ms-mobile-apps:///providers/Microsoft.PowerApps/apps/<appID>?tenantId=<tenantId>&restartApp=true```
  > [!IMPORTANT]
-> The deep link URL for wrapped apps works when there's ONLY one wrapped app installed on the mobile device and will NOT work when there are more than one wrapped apps installed. 
+> The deep link URL for a wrapped app works only when one wrapped app is installed on the mobile device. It doesn't work if more than one wrapped app is installed.
 
 | **Parameter**        | **Description**                                                                              |**Required**|
 |----------------------|----------------------------------------------------------------------------------------------|-------------|
