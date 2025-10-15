@@ -27,3 +27,7 @@ items:
             href: how-to/analyze-data-request-response.md
           - name: "Use the getContext API"
             href: how-to/getcontext-api.md
+      - name: Troubleshoot
+        items:
+          - name: "Adding a data source"
+            href: troubleshoot-add-datasource.md
