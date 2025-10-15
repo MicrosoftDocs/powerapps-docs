@@ -11,7 +11,8 @@ contributors:
 ---
 
 # Why use getContext? (preview)
-The getContext API provides rich details about the app and the user, enabling scenarios that go beyond basic app functionality. Here’s why these properties matter:
+
+The getContext API provides rich details about the app and the user, enabling scenarios that go beyond basic app functionality. Here's why these properties matter:
 
 - Enhanced Telemetry and Debugging: Parameters like sessionId allow you to correlate app sessions with platform telemetry, making it easier to troubleshoot issues. Access to identifiers such as appId and userPrincipalName helps track usage patterns and diagnose problems quickly.
 
@@ -20,7 +21,6 @@ The getContext API provides rich details about the app and the user, enabling sc
 - Feature Control and Conditional Logic: Parameters can act as feature gates or flags, enabling you to turn features on or off for specific users or environments. They can also be used to show different UI elements or workflows depending on the context.
 
 - Consistency with Canvas Apps: These parameters align with session details available in canvas apps, but now you can use them directly in code, unlocking more flexibility.
-
 
 # How to: Use the getContext API
 
