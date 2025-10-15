@@ -3,14 +3,26 @@ title: "How to: Use the getContext API (preview)"
 description: "Use the getContext API to get information about the app and signed-in user. This information enables apps to deliver personalized experiences and make informed decisions at runtime based on metadata."
 ms.author:  jordanchodak
 author: jordanchodakWork
-ms.date: 10/14/2025
+ms.date: 10/15/2025
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
 - JimDaly
 ---
 
-# How to: Use the getContext API (preview)
+# Why use getContext? (preview)
+The getContext API provides makers with rich details about the app and the user, enabling scenarios that go beyond basic app functionality. Here’s why these properties matter:
+
+- Enhanced Telemetry and Debugging: Parameters like sessionId allow makers to correlate app sessions with platform telemetry, making it easier to troubleshoot issues. Access to identifiers such as appId and userPrincipalName helps track usage patterns and diagnose problems quickly.
+
+- Personalized Experiences: User context properties simplify personalization without requiring additional data calls. Makers can tailor app behavior based on user identity, delivering dynamic experiences for different roles or individuals.
+
+- Feature Control and Conditional Logic: Parameters can act as feature gates or flags, enabling makers to turn features on or off for specific users or environments. They can also be used to show different UI elements or workflows depending on the context.
+
+- Consistency with Canvas Apps: These parameters align with session details available in canvas apps, but now makers can use them directly in code, unlocking more flexibility.
+
+
+# How to: Use the getContext API
 
 The `getContext()` API retrieves contextual information about the app and the signed-in user. This information enables apps to deliver personalized experiences and make informed decisions at runtime based on metadata. The API communicates with the web player to obtain context data and is designed to be lightweight. It focuses on metadata and authentication-related properties.
 
