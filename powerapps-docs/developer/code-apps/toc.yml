@@ -27,6 +27,8 @@ items:
             href: how-to/analyze-data-request-response.md
           - name: "Get context data"
             href: how-to/retrieve-context.md
+          - name: "Application lifecycle management (ALM)"
+            href: how-to/alm.md
       - name: Troubleshoot
         items:
           - name: "Adding a data source"
