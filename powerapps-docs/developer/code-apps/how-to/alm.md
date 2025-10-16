@@ -3,7 +3,7 @@ title: "How to: Application Lifecycle Management (ALM) for code apps"
 description: "Learn best practices for ALM with Power Apps code apps."
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 10/15/2025
+ms.date: 10/16/2025
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
@@ -33,6 +33,6 @@ After deploying a code app to an environment with the [pac code push](/power-pla
 
 At this time, Code apps:
 
-- Are not saved to a solution by default.
-- Do not support use of [solution packager](/power-platform/alm/solution-packager-tool).
-- Do not support [source code integration](/power-platform/alm/git-integration/overview).
+- Aren't saved to a solution by default.
+- Don't support use of [solution packager](/power-platform/alm/solution-packager-tool).
+- Don't support [source code integration](/power-platform/alm/git-integration/overview).
