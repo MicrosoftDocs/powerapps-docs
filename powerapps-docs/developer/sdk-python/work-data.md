@@ -1,12 +1,12 @@
 ---
-title: "Working with data (preview)
+title: "Working with data (preview)"
 description: "Learn common scenarios (use cases) for working with Dataverse data,
 and how to go about writing Python code for those scenarios."
 ms.author: paulliew
 author: paulliew
 ms.date: 10/20/2025
 ms.reviewer: phecke
-ms.topic: getting-started
+ms.topic: example-scenario
 contributors:
  - phecke
 ---

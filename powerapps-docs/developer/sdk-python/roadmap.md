@@ -1,11 +1,11 @@
 ---
 title: "Roadmap to Dataverse (preview)"
-description: "Learn key aspects of Dataverse that every programmer needs to know for success."
+description: "Learn key concepts of Dataverse that every programmer needs to know for success."
 ms.author: paulliew
 author: paulliew
 ms.date: 10/20/2025
 ms.reviewer: phecke
-ms.topic: overview
+ms.topic: concept-article
 contributors:
  - phecke
 ---

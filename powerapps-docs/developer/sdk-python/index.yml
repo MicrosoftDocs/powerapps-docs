@@ -1,13 +1,13 @@
 ### YamlMime:Landing
 
 title: Dataverse SDK for Python (preview) documentation
-summary: Enables data scientists and developers to create, access, and manager Dataverse business data using Python programming. The Dataverse SDK for Python implements common Python programming paradigms and best practices, provides a more natural Python interface to Dataverse, and supports community contributions.
+summary: Enables data scientists and developers to create, access, and manager Dataverse business data using Python programming. The Dataverse SDK for Python implements common Python programming paradigms and best practices, provides a more natural Python interface to Dataverse.
 
 metadata:
   title: Dataverse SDK for Python (preview) documentation
   description: Provides access to highlighted areas within the Dataverse SDK for Python (preview) documentation
-  services: dataverse-sdk
-  ms.subservice: dataverse-sdk-python
+  services: power-platform
+  ms.subservice: dataverse
   ms.topic: landing-page
   ms.collection: collection
   author: phecke
@@ -28,7 +28,7 @@ landingContent:
         links:
           - text: "Getting started"
             url: get-started.md
-      - linkListType: learn
+      - linkListType: concept
         links:
           - text: "Roadmap to Dataverse"
             url: roadmap.md
