@@ -4,7 +4,7 @@ description: Discover how to import data into your model-driven app, ensuring co
 author: shwetamurkute
 ms.component: pa-user
 ms.topic: how-to
-ms.date: 21/10/2025
+ms.date: 10/21/2025
 ms.subservice: end-user
 ms.author: smurkute
 ms.reviewer: smurkute
