@@ -15,6 +15,8 @@ ms.custom:
   - ai-gen-docs-bap
   - ai-gen-desc
   - ai-seo-date:05/08/2024
+contributors:
+  - dingbx
 ---
 
 # How to import data
@@ -181,7 +183,7 @@ After the import is complete, you can view the records that were successfully im
    - **Completed**
 
 >[!NOTE]
->When an entity includes a self-referencing lookup, these relationships are resolved in two phases during the **Importing** stage. In the first phase, the base records are created. In the second phase, the self-references are updated to ensure data integrity.
+> For tables that include a self-referencing lookup,  relationships are resolved in two phases during the **Importing** stage. In the first phase, the base records are created. In the second phase, the self-references are updated to ensure data integrity.
 
 1. After the import is complete, the **Success**, **Failures**, and **Partial Failures** columns show the number of records that were successfully imported, failed to import, or were partially imported.
 
@@ -214,7 +216,7 @@ You can delete the import file and imported records if you want to reimport the 
 - Excel import jobs run in parallel only when the file size is under 1 MB. Files larger than 1 MB are processed sequentially to avoid resource exhaustion.
 
 >[!NOTE]
->To enable parallel processing, keep each file under 1 MB. For `.zip` files, the decompressed size must also be under 1 MB. Note that files with special characters may have a calculated size that exceeds 1 MB even if the original file appears smaller.
+> To enable parallel processing, keep each file under 1 MB. For `.zip` files, the decompressed size must also be under 1 MB. Note that files with special characters may have a calculated size that exceeds 1 MB even if the original file appears smaller.
 
 ### See also
 
