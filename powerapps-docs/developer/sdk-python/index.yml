@@ -7,7 +7,7 @@ metadata:
   title: Dataverse SDK for Python (preview) documentation
   description: Provides access to highlighted areas within the Dataverse SDK for Python (preview) documentation
   ms.service: powerapps
-  ms.subservice: dataverse-sdk
+  ms.subservice: dataverse-developer
   ms.topic: landing-page
   ms.collection: collection
   author: phecke
