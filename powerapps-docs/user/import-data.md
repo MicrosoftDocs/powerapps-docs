@@ -182,8 +182,8 @@ After the import is complete, you can view the records that were successfully im
    - **Importing**
    - **Completed**
 
-  >[!NOTE]
-  > For tables that include a self-referencing lookup,  relationships are resolved in two phases during the **Importing** stage. In the first phase, the base records are created. In the second phase, the self-references are updated to ensure data integrity.
+    >[!NOTE]
+    > For tables that include a self-referencing lookup,  relationships are resolved in two phases during the **Importing** stage. In the first phase, the base records are created. In the second phase, the self-references are updated to ensure data integrity.
 
 1. After the import is complete, the **Success**, **Failures**, and **Partial Failures** columns show the number of records that were successfully imported, failed to import, or were partially imported.
 
