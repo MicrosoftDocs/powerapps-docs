@@ -6,8 +6,8 @@ summary: Enables data scientists and developers to create, access, and manager D
 metadata:
   title: Dataverse SDK for Python (preview) documentation
   description: Provides access to highlighted areas within the Dataverse SDK for Python (preview) documentation
-  services: power-platform
-  ms.subservice: dataverse
+  ms.service: powerapps
+  ms.subservice: dataverse-sdk
   ms.topic: landing-page
   ms.collection: collection
   author: phecke

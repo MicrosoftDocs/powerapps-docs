@@ -91,6 +91,7 @@
         "developer/model-driven-apps/**/*.md": "mda-developer",
         "developer/component-framework/**/*.md": "pcf",
         "developer/code-apps/**/*.md": "code-apps",
+        "developer/sdk-python/**/*.md": "dataverse-sdk",
         "maker/portals/**/*.md": "portals",
         "maker/model-driven-apps/**/*.md": "mda-maker",
         "maker/canvas/**/*.md": "canvas-maker",
