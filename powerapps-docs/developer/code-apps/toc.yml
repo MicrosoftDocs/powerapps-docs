@@ -25,3 +25,11 @@ items:
             href: how-to/create-basic-asset-management-api-azure-functions.md
           - name: "Analyze data requests and responses"
             href: how-to/analyze-data-request-response.md
+          - name: "Get context data"
+            href: how-to/retrieve-context.md
+          - name: "Application lifecycle management (ALM)"
+            href: how-to/alm.md
+      - name: Troubleshoot
+        items:
+          - name: "Adding a data source"
+            href: troubleshoot-add-datasource.md

@@ -550,15 +550,15 @@
               href: ./canvas-apps/controls/modern-controls/modern-control-text-input.md
             - name: Toggle
               href: ./canvas-apps/controls/modern-controls/modern-control-toggle.md
-            - name: Avatar (preview)
+            - name: Avatar
               href: ./canvas-apps/controls/modern-controls/modern-control-avatar.md
             - name: Copilot answer (preview)
               href: ./canvas-apps/controls/modern-controls/modern-control-copilot-answer.md
             - name: Dropdown (preview)
               href: ./canvas-apps/controls/modern-controls/modern-control-dropdown.md
-            - name: Header (preview)
+            - name: Header
               href: ./canvas-apps/controls/modern-controls/modern-controls-header.md
-            - name: Info button (preview)
+            - name: Info button
               href: ./canvas-apps/controls/modern-controls/modern-control-info-button.md
             - name: Stream video (preview)
               href: ./canvas-apps/controls/modern-controls/new-stream-video-control.md

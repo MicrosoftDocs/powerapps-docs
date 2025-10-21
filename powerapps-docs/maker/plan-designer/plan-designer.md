@@ -94,4 +94,4 @@ Preview Copilot features are on by default, but admins can turn them off for a s
 
 ## Next steps
 
-[Create a plan using](create-plan.md)
+[Create a plan](create-plan.md)

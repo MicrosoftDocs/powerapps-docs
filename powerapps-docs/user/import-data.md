@@ -4,7 +4,7 @@ description: Discover how to import data into your model-driven app, ensuring co
 author: shwetamurkute
 ms.component: pa-user
 ms.topic: how-to
-ms.date: 05/08/2024
+ms.date: 10/21/2025
 ms.subservice: end-user
 ms.author: smurkute
 ms.reviewer: smurkute
@@ -208,6 +208,7 @@ You can delete the import file and imported records if you want to reimport the 
 
 - Excel Import isn't supported with [Virtual tables](../maker/data-platform/limits-tshoot-virtual-tables.md#general-limitations) or [Elastic tables](../maker/data-platform/create-edit-elastic-tables.md#features-currently-not-supported-with-elastic-tables)
 - Excel import updates fields from the primary table but ignores fields from related tables.
+- Excel import jobs run in parallel only when the file size is less than 1 MB.
 
 ### See also
 
