@@ -10,7 +10,9 @@ ms.topic: concept-article
 
 # Create apps, data, and plans together
 
-The new workspace experience in Power Apps combines plans, data models, and apps in a single design surface, enabling you to design the app, data model, and requirements together. It reduces context switching and keeps you focused. Key capabilities:
+The new workspace experience in Power Apps combines plans, data models, and apps in a single design surface, enabling you to design the app, data model, and requirements together. It reduces context switching and keeps you focused. 
+
+Key capabilities:
 
 - **Design everything together**: Create the app, plan, and data model in a single, seamless process
 - **Build faster with AI**: Iterate and prototype through chat, from idea to a working app
@@ -23,7 +25,7 @@ The new workspace experience in Power Apps combines plans, data models, and apps
 - This capability is available only in the US region and in English only. Learn more in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/en-US/availability-reports/?report=copilotfeaturereport).
 
 
-## Turn on new experience
+## Turn on the new experience
 
 Follow these steps to enable the new experience in Power Apps:
 
@@ -47,12 +49,16 @@ To turn off the new experience and use the default experience using [plans](make
 
     :::image type="content" source="media/new-powerapps-experience/power-apps-prompt-textbox.png" alt-text="Screenshot of Power Apps showing a prompt input box for the new experience." lightbox="media/new-powerapps-experience/power-apps-prompt-textbox.png":::
 
-1. As the agents go to work and assets begin to load in the new workspace, you see the plan, the data model, and the app preview generating. 
+1. Agents start working and assets load. You’ll see the plan, data model, and app preview generate. 
  
    :::image type="content" source="media/new-powerapps-experience/powerapps-data-model-app-preview.png" alt-text="Screenshot of the Power Apps new workspace showing AI agents generating the plan, data model, and app preview simultaneously." lightbox="media/new-powerapps-experience/powerapps-data-model-app-preview.png":::
 
-1. Data starts as in-memory draft tables. You can iterate on your data model and app without committing to any data source for rapid prototyping. And when you're ready to publish your data, you can choose between publishing as Dataverse tables or as SharePoint lists.
+    Data lives in in‑memory draft tables. You can iterate on your data model and app without committing to a data source for quick prototyping. 
 
-1. The initial save action stores the app, tables, and plan together in the preferred solution.
+1. Once the plan, data, and app are created, select **Save** on the top right. The first save stores the app, tables, and plan together in your preferred solution.
 
+1. When you’re ready to publish, on the top right select **Publish**.
 
+1. Select a data source to publish and store the draft tables in your app and then select **Publish**.
+
+    :::image type="content" source="media/new-powerapps-experience/save-and-select-data-source.png" alt-text="Select a data source":::
