@@ -1,7 +1,7 @@
 ---
 title: Select columns using FetchXml
 description: Learn how to use FetchXml to select columns when you retrieve data from Microsoft Dataverse.
-ms.date: 02/29/2024
+ms.date: 10/21/2025
 ms.reviewer: jdaly
 ms.topic: how-to
 author: MsSQLGirl
@@ -306,7 +306,7 @@ Preference-Applied: odata.include-annotations="*"
 }
 ```
 
-This `GetRowValues` method extracts a list of formatted string values for a <xref:System.Json.JsonObject> instance of a record where they exist. This method is part of the `OutputFetchRequest` method in the [FetchXml sample code](sample.md).
+This `GetRowValues` method extracts a list of formatted string values for a <xref:System.Text.Json.Nodes.JsonObject> instance of a record where they exist. This method is part of the `OutputFetchRequest` method in the [FetchXml sample code](sample.md).
 
 ```csharp
 /// <summary>
