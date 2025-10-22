@@ -33,7 +33,7 @@ Follow these steps to enable the new experience in Power Apps:
 
 ### Turn off preview
 
-To turn off the new experience and go back to generally available default experience using [plans](maker/plan-designer/plan-designer.md), in the lower left, select **Preview** > **Default homepage**.
+To turn off the new experience and use the default experience using [plans](maker/plan-designer/plan-designer.md), in the lower left, select **Preview** > **Default homepage**.
 
 ## Create an app
 
