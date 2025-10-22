@@ -82,7 +82,7 @@ Currently, the only active schema version of Power Apps source code is Source Co
 |Format name|File extension|Description|
 |-----------|-----------|-------|
 | [Experimental](power-apps-yaml.md#experimental-format-fxyaml) | *.fx.yaml| Retired. Version used by the experimental [Power Apps Git version control](git-version-control.md) and [pac canvas unpack](/power-platform/developer/cli/reference/canvas#pac-canvas-unpack)—no longer in development.|
-| [Early preview](power-apps-yaml.md#early-preview) | -  | Retired. The version used by code view, copy code, and paste code. There's no version information in this schema, so it isn't suitable for version control. When [code view](code-view.md) is generally available (GA), it switches to the source code preview format.|
+| [Early preview](power-apps-yaml.md#early-preview) | -  | Retired. The version used by code view, copy code, and paste code. There's no version information in this schema.|
 | [Source code](power-apps-yaml.md#source-code-payaml) | *.pa.yaml files | Active. Includes enhancements and version details for source control. |
 
 ## Experimental format (*.fx.yaml)
@@ -97,9 +97,9 @@ You can't directly convert ***.fx.yaml** files to the new formats. To convert ol
 
 This schema is retired.
 
-This version is used by [Code view](code-view.md) during the [preview](working-with-experimental-preview.md#preview) period. It is designed to create canvas apps in Power Apps Studio, letting you easily copy and paste controls. In this version, the source code is used in Power Apps Studio instead of being converted, like the experimental format.
+This version was used by [Code view](code-view.md) during the [preview](working-with-experimental-preview.md#preview) period. It is designed to create canvas apps in Power Apps Studio, letting you easily copy and paste controls. In this version, the source code is used in Power Apps Studio instead of being converted, like the experimental format.
 
-The format during preview was temporary and is no longer in use. You can paste code from the preview format.
+The format during preview was temporary and is no longer in use. You cannot paste code from the preview format.
 
 Here are the changes made from the experimental format:
 
