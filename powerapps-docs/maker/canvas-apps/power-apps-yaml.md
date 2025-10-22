@@ -82,7 +82,7 @@ Currently, the only active schema version of Power Apps source code is Source Co
 |Format name|File extension|Description|
 |-----------|-----------|-------|
 | [Experimental](power-apps-yaml.md#experimental-format-fxyaml) | *.fx.yaml| Retired. Version used by the experimental [Power Apps Git version control](git-version-control.md) and [pac canvas unpack](/power-platform/developer/cli/reference/canvas#pac-canvas-unpack)—no longer in development.|
-| [Early preview](power-apps-yaml.md#early-preview) | -  | Retired. The version used by code view, copy code, and paste code. There's no version information in this schema.|
+| [Early preview](power-apps-yaml.md#preview) | -  | Retired. The version used by code view, copy code, and paste code. There's no version information in this schema.|
 | [Source code](power-apps-yaml.md#source-code-payaml) | *.pa.yaml files | Active. Includes enhancements and version details for source control. |
 
 ## Experimental format (*.fx.yaml)
