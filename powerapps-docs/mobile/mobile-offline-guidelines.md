@@ -4,7 +4,7 @@ description: Guidance for optimizing offline profiles for model-driven apps.
 author: RitGan
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 05/06/2025
+ms.date: 10/23/2025
 ms.subservice: mobile
 ms.author: ritwikganni
 ms.custom: ""
@@ -124,9 +124,9 @@ If a custom filter results in a slow Dataverse query, downloads take longer. Fol
 
 - Avoid using small time windows to reduce data downloads on tables that change frequently. If a table in your offline profile is large and changes frequently, reduce the number of records downloaded by filtering on fields like status, group, region, owner, or assigned to.
 
-### Optimize data downloaded to improve sync time and usage
+### Optimize data downloaded to improve sync time and usage with column selection capabilities (Preview)
 
-#### For model-driven apps
+This feature is in full availability for model-driven apps and in preview for canvas apps.
    
 The first sync can take time for organizations with large datasets, especially in remote areas. Optimize this by explicitly selecting only the required columns to download on the device and avoid downloading columns that are never used in the app. This saves both network and disk usage and results in faster sync time. While this impacts both the first sync and delta syncs, the first sync sees a greater impact as there are more records to download.
 

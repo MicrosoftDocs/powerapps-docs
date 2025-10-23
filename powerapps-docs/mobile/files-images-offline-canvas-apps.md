@@ -5,7 +5,7 @@ description: Learn how to configure files and images in offline canvas apps.
 author: trdehove
 ms.component: pa-user
 ms.topic: how-to
-ms.date: 04/09/2025
+ms.date: 10/23/2025
 ms.subservice: mobile
 ms.author: ritwikganni
 ms.custom: ""
@@ -65,9 +65,22 @@ The remainder of this article helps you configure on sync.
 
 ### Prerequisites - mobile offline profile
 
-To configure the automatic download of files and images on sync, you need to [create a custom, mobile offline profile](canvas-mobile-offline-setup.md#create-a-custom-mobile-offline-profile-with-admin-rights) in the Power Platform admin center.
+To configure the automatic download of files and images on sync, you need to [create a custom, mobile offline profile](canvas-mobile-offline-setup.md#create-a-custom-mobile-offline-profile-with-admin-rights). There are two ways to configure sync.
 
-### Enable offline access to images and files
+#### Configure on sync from within Power apps studio (Preview)  
+
+1. Sign in to Power Apps.
+1. In the left navigation pane, select **Apps**.
+1. Select a canvas app, and then on the command bar, select **Edit** to open your app in editing mode in canvas app designer.
+1. Select **Settings > General**.
+1. Set the **Can be used offline** toggle to On.
+1. Under **Select offline mode and profile**, select **Edit selected profile** from the "...".
+1. Find the table that has the file or image column you want to enable for offline, then select **Edit** from the **More actions** button.
+1. In the **Include these files and images** section, select the column where **Data Type** is set to **File** or **Image** (the columns are grouped by **Files** or **Images**).
+1. Select **Save**.
+1. Save and publish the app.
+
+#### Configure columns from within Power Platform admin center (requires admin access)
 
 You can add both the **Image Descriptor** and **FileAttachment** tables to your mobile offline profile by configuring the settings of your environment.
 
