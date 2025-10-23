@@ -42,7 +42,7 @@ Use this versatile **Text** control to display text, messages, and information o
 
 **VerticalAlign** - The location of text on a control in relation to the vertical center of that control. 
 
-**AutoHeight** - Whether a label automatically increases its height if its text contains more characters than the control can show at one time. 
+**AutoHeight** - Whether a label automatically increases its height if its text contains more characters than the control can show at one time. If the control is not visible, then the output property Height will not be updated as the text changes.
 
 **[X](../properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
 
