@@ -86,7 +86,7 @@ Use the chat input on the work surface to ask questions or request changes to th
 
 ### Edit using inline actions
 
-You can make pinpoint adjustments to the styling of your app using inline actions. 
+Use inline actions to edit the style of your app.
 
  1. Select the option to toggle inline edits.
  1. Select the item you want to edit. The element is outlined and labeled with the corresponding code object so you know exactly what you’re editing.
@@ -96,17 +96,17 @@ You can make pinpoint adjustments to the styling of your app using inline action
 
     When an element is selected, open inline chat and request a change like “Make this button primary blue”. The selected element’s context is passed automatically, so you don’t have to describe it in the prompt. This is equivalent to typing the same request in the main chat but faster.
 
-1. After editing, review the result in the visual preview; if needed, switch to Code view or Split view to inspect the generated files.
+1. When you're done, review the result in the visual preview; if needed, switch to Code view or Split view to inspect the generated files.
 
 ## Edit the generated plan
 
-Focus on the plan by switching to the Plan pivot in the new workspace. Here you’ll find the generated user roles and requirements, the proposed tables for your data model, and the recommended technologies to complete your solution.
+Select **Plan** to edit the plan. The plan shows generated user roles and requirements, the proposed tables for your data model, and the recommended technologies to complete your solution.
 
 ### Edit using chat
 
-1. Open the chat on the work surface.
-1. Ask questions or request changes for example, “Update the manager role,” “Add a requirement for offline access,” or “Remove the Power BI report”.
-1. The agent analyzes your request and applies updates to the plan.
+Open the chat, enter your questions or request changes like "Update the manager role,” “Add a requirement for offline access,” or “Remove the Power BI report”.
+
+The agent analyzes your request and applies updates to the plan.
 
 ### Edit via inline actions
 
@@ -119,7 +119,7 @@ You can also make targeted edits directly inline.
 
 #### Edit data model  -----Left off here
 
-1. In the data model area, select the ellipsis for the specific table you'd like to edit. Alternatively, you can select to view the data workspace, save the proposed tables, or chat with the agents to pass in specific context about the edit you're requesting.
+1. 10/28 – Tuesday, from 1-3pm
 
 #### Edit technology
 
