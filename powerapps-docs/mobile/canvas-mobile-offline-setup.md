@@ -98,7 +98,7 @@ There are two ways you can create offline profile.
 1. Go to App > Settings.
 1. Turn on the **Can be used offline** setting.
 1. In the drop-down menu, select an offline profile. You can select the **Auto-generated** option or **New profile with current app data**.
-1. Enter a name and description for the profile. Add the tables you need for the profile. For those tables, apply filters (as detailed below—see the hyperlink to the following section) and choose columns as described in [Optimize the offline profile - Power Apps | Microsoft Learn](https://learn.microsoft.com/power-apps/maker/model-driven-apps/optimize-offline-profile).
+1. Enter a name and description for the profile. Add the tables you need for the profile. For those tables, apply filters (as detailed below—see the hyperlink to the following section) and choose columns as described in [Optimize the offline profile - Power Apps | Microsoft Learn](/power-apps/maker/model-driven-apps/optimize-offline-profile).
 1. Save the profile.
 1. Publish the profile.
 
