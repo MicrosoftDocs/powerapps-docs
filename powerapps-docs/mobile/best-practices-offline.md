@@ -19,8 +19,8 @@ searchScope:
 # Best practices for developing an app for offline use
 This article provides recommendations for how to create the best experience for users of apps configured for offline use. 
 
-- If you configure a canvas app for offline use, you need to optimize how the app fetches data from the data source. Learn more: [How to create the best offline user experience in canvas apps](best-practices-offline.md#how-to-create-the-best-offline-user-experience-in-canvas-apps)
-- To function offline, an app must initially download all necessary assets, including resources and data, to operate independently of a network connection. This process is a one-time setup task that occurs during the app’s first use. The speed of this initial download is influenced by the volume of data downloaded to the device, which is determined by the offline profile settings and the quantity of data available to the user within the app’s environment. For a seamless, initial experience, it’s advisable to plan your [offline app rollout](best-practices-offline.md#plan-your-offline-app-rollout).    
+- If you configure a canvas app for offline use, you need to optimize how the app fetches data from the data source. Learn more: [How to create the best offline user experience in canvas apps](best-practices-offline#how-to-create-the-best-offline-user-experience-in-canvas-apps)
+- To function offline, an app must initially download all necessary assets, including resources and data, to operate independently of a network connection. This process is a one-time setup task that occurs during the app’s first use. The speed of this initial download is influenced by the volume of data downloaded to the device, which is determined by the offline profile settings and the quantity of data available to the user within the app’s environment. For a seamless, initial experience, it’s advisable to plan your [offline app rollout](best-practices-offline#plan-your-offline-app-rollout).    
 
 ## How to create the best offline user experience in canvas apps
 
@@ -47,7 +47,7 @@ Develop and roll out your offline app in three phases.
 
 ### Phase 1: Develop and iterate
 
-After you've [set up mobile offline for canvas apps](canvas-mobile-offline-setup.md#create-a-custom-mobile-offline-profile-with-admin-rights) or [set up mobile offline for model-driven apps](setup-mobile-offline.md#set-up-a-mobile-offline-profile), it's time to start testing and tweaking. Use [Power Apps mobile](run-powerapps-on-mobile.md) or [Field Service Mobile](/dynamics365/field-service/field-service-mobile-app-user-guide) to determine how the app behaves when it's offline. For Windows, you'll find the [Power Apps for Windows](windows-app-install.md) app in the Microsoft Store that allows iterating without the need for a mobile device.
+After you've [set up mobile offline for canvas apps](canvas-mobile-offline-setup#create-profiles-from-within-power-platform-admin-center-with-admin-rights) or [set up mobile offline for model-driven apps](setup-mobile-offline#set-up-a-mobile-offline-profile), it's time to start testing and tweaking. Use [Power Apps mobile](run-powerapps-on-mobile.md) or [Field Service Mobile](/dynamics365/field-service/field-service-mobile-app-user-guide) to determine how the app behaves when it's offline. For Windows, you'll find the [Power Apps for Windows](windows-app-install.md) app in the Microsoft Store that allows iterating without the need for a mobile device.
 
 In this phase, you'll add tables and apply filters to existing tables to make sure that the right data is downloaded to the app, following the guidelines to [Optimize the offline profile](mobile-offline-guidelines.md).
 
