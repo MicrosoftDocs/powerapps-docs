@@ -63,11 +63,9 @@ The remainder of this article helps you configure on sync.
 
 ## Configure on sync
 
-### Prerequisites - mobile offline profile
-
 To configure the automatic download of files and images on sync, you need to [create a custom, mobile offline profile](canvas-mobile-offline-setup.md#create-profiles-from-within-power-platform-admin-center-with-admin-rights). There are two ways to configure sync.
 
-#### Configure on sync from within Power apps studio (Preview)  
+### Configure on sync from within Power apps studio (Preview)  
 
 1. Sign in to Power Apps.
 1. In the left navigation pane, select **Apps**.
@@ -80,7 +78,7 @@ To configure the automatic download of files and images on sync, you need to [cr
 1. Select **Save**.
 1. Save and publish the app.
 
-#### Configure columns from within Power Platform admin center (requires admin access)
+### Configure columns from within Power Platform admin center (requires admin access)
 
 You can add both the **Image Descriptor** and **FileAttachment** tables to your mobile offline profile by configuring the settings of your environment.
 
