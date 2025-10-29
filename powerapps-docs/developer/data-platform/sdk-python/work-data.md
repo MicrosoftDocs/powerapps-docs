@@ -18,7 +18,7 @@ contributors:
 
 ## Related information
 
-- [Use the SDK for .NET](../data-platform/org-service/overview.md)
+- [Use the SDK for .NET](../../data-platform/org-service/overview.md)
 
 ## See also
 

@@ -28,7 +28,7 @@ The following list describes a key features of the SDK.
 - Data operations
 
     The SDK supports create, retrieve, update, and delete (CRUD) data operations using a single request, and also bulk operations. Data retrievals support OData options and paging, plus single or multiple "gets" in one call (as needed).
-    Direct-SQL is supported for simple "SELECT" statements with paging. SQL JOINs are currently not supported.
+    Direct-SQL is supported for simple "SELECT" statements with paging.
 - Metadata operations on tables
 
     The SDK supports create, update, and delete (CUD) of tables,  optional solution association, plus retrieve and list table definitions. <!-- What about prefix usage?-->
@@ -44,8 +44,7 @@ The following list describes a key features of the SDK.
 - Integration with [pandas](https://pandas.pydata.org/)
 
     The API call return value is in JSON format, which can be mapped to a [DataFrame](https://pandas.pydata.org/docs/reference/frame.html).
-- SDK [source code](https://github.com/microsoft/PowerPlatform-DataverseClient-Python)
- is published under open source licensing
+- SDK is published under open source licensing
 
 ## Benefits
 
@@ -63,7 +62,8 @@ Here are a few known limitations of the current (preview) release.
 
 - General purpose OData batching, upsert, and association operations are not supported.
 - Dataverse DeleteMultiple functionality is not yet available from the Python SDK.
-- Minimal retry policy support in the library - currently network-error only. Our code examples include additional backoff for transient Dataverse consistency.
+- Minimal retry policy support is in the SDK. Currently, only network errors are retried. Our code examples include additional backoff for transient Dataverse consistency.
+- SQL JOINs are currently not supported, and there is limited support for a WHERE/TOP/ORDER BY clause.
 
 ## Related information
 
