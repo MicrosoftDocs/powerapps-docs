@@ -33,7 +33,7 @@ The following list describes a key features of the SDK.
 - Simplified authentication
     You can use client secret and User Principal authentication. The SDK supports [DefaultAzureCredentials](/dotnet/api/azure.identity.defaultazurecredential?view=azure-dotnet), and you can use your own token, for example from [InteractiveBrowserCredential](/dotnet/api/azure.identity.interactivebrowsercredential?view=azure-dotnet).
 - File upload
-    Upload a file to a [File column](../../maker/data-platform/types-of-fields#file-columns.md) in a table.
+    Upload a file to a [File column](../../maker/data-platform/types-of-fields.md#file-columns) in a table.
 - OptionSet/enum handling
     OptionSet columns in a API call are mapped to enumeration values automatically.
 - Integration with [pandas](https://pandas.pydata.org/)
