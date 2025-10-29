@@ -34,7 +34,7 @@ The following list describes a key features of the SDK.
     The SDK supports create, update, and delete (CUD) of tables,  optional solution association, plus retrieve and list table definitions. <!-- What about prefix usage?-->
 - Simplified authentication
 
-    You can use client secret and User Principal authentication. The SDK supports [DefaultAzureCredentials](/dotnet/api/azure.identity.defaultazurecredential?view=azure-dotnet&preserve-view=true), and you can use your own token, for example from [InteractiveBrowserCredential](/dotnet/api/azure.identity.interactivebrowsercredential?view=azure-dotnet&preserve-view=true).
+    You can use client secret and Service Principal authentication. The SDK supports [DefaultAzureCredentials](/dotnet/api/azure.identity.defaultazurecredential?view=azure-dotnet&preserve-view=true), and you can use your own token, for example from [InteractiveBrowserCredential](/dotnet/api/azure.identity.interactivebrowsercredential?view=azure-dotnet&preserve-view=true).
 - File upload
 
     Upload a file to a [File column](../../../maker/data-platform/types-of-fields.md#file-columns) in a table.
@@ -64,4 +64,5 @@ TBD Where are we going with the SDK? -->
 
 ## Related information
 
+- [Project source](https://github.com/microsoft/PowerPlatform-DataverseClient-Python)
 - [Use the SDK for .NET](../../data-platform/org-service/overview.md)
