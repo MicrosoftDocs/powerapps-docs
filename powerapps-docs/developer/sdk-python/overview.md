@@ -26,19 +26,26 @@ The SDK empowers the development of automated, intelligent processes (agentic wo
 The following list describes a key features of the SDK.
 
 - Data operations
+
     The SDK supports create, retrieve, update, and delete (CRUD) data operations using a single request, and also bulk operations. Data retrievals support OData options and paging, plus single or multiple "gets" in one call (as needed).
     Direct-SQL is supported for simple "SELECT" statements with paging. SQL JOINs are currently not supported.
 - Metadata operations on tables
+
     The SDK supports create, update, and delete (CUD) of tables,  optional solution association, plus retrieve and list table definitions. <!-- What about prefix usage?-->
 - Simplified authentication
+
     You can use client secret and User Principal authentication. The SDK supports [DefaultAzureCredentials](/dotnet/api/azure.identity.defaultazurecredential?view=azure-dotnet), and you can use your own token, for example from [InteractiveBrowserCredential](/dotnet/api/azure.identity.interactivebrowsercredential?view=azure-dotnet).
 - File upload
+
     Upload a file to a [File column](../../maker/data-platform/types-of-fields.md#file-columns) in a table.
 - OptionSet/enum handling
+
     OptionSet columns in a API call are mapped to enumeration values automatically.
 - Integration with [pandas](https://pandas.pydata.org/)
+
     The API call return value is in JSON format, which can be mapped to a [DataFrame](https://pandas.pydata.org/docs/reference/frame.html).
 - SDK source code is published under open source licensing
+
     [Source code](https://github.com/microsoft/PowerPlatform-DataverseClient-Python)
 
 ## Benefits
