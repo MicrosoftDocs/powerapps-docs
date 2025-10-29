@@ -115,4 +115,8 @@ sections:
      answer: |
         You can schedule multiple retention policies, however only one policy is executed at a time.  
 
+   - question: How do we ensure there is no data loss during long-term retention?
+     answer: |
+         Before retaining, there is a process that confirms that data has been successfully stored in data lake. Only those records that are successfully reconciled are deleted from live database, ensuring data integrity.
+
                               
