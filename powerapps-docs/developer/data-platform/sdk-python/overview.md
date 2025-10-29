@@ -57,10 +57,13 @@ The following list describes a few benefits of the SDK.
 - Accelerates automation, AI, and data-driven development
 - Accessible to data scientists, developers, and engineers across platforms
 
-<!--
-## What are we working on for the next release?
+## Limitations
 
-TBD Where are we going with the SDK? -->
+Here are a few known limitations of the current (preview) release.
+
+- General purpose OData batching, upsert, and association operations are not supported.
+- Dataverse DeleteMultiple functionality is not yet available from the Python SDK.
+- Minimal retry policy support in the library - currently network-error only. Our code examples include additional backoff for transient Dataverse consistency.
 
 ## Related information
 

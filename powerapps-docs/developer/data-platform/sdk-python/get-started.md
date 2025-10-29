@@ -13,8 +13,9 @@ contributors:
 # Getting started (preview)
 
 > [!NOTE]
-> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+> [!INCLUDE [cc-preview-features-definition](../../../includes/cc-preview-features-definition.md)]
 
 ## Related information
 
-- [Use the SDK for .NET](../data-platform/org-service/overview.md)
+- [Python examples](https://github.com/microsoft/PowerPlatform-DataverseClient-Python/tree/main/examples)
+- [Use the SDK for .NET](../../data-platform/org-service/overview.md)

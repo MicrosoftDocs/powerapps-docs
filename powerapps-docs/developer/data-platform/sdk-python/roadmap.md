@@ -13,7 +13,7 @@ contributors:
 # Roadmap to Dataverse (preview)
 
 > [!NOTE]
-> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+> [!INCLUDE [cc-preview-features-definition](../../../includes/cc-preview-features-definition.md)]
 
 ## Related information
 

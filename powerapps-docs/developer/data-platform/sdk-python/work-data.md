@@ -14,7 +14,7 @@ contributors:
 # Working with data (preview)
 
 > [!NOTE]
-> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+> [!INCLUDE [cc-preview-features-definition](../../../includes/cc-preview-features-definition.md)]
 
 ## Related information
 
