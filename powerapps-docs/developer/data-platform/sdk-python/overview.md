@@ -3,7 +3,7 @@ title: "Dataverse SDK for Python overview (preview)"
 description: "Use Dataverse to store and access data for use in data science and analyses."
 ms.author: paulliew
 author: paulliew
-ms.date: 10/28/2025
+ms.date: 10/29/2025
 ms.reviewer: phecke
 ms.topic: overview
 contributors:
@@ -34,7 +34,7 @@ The following list describes a key features of the SDK.
     The SDK supports create, update, and delete (CUD) of tables,  optional solution association, plus retrieve and list table definitions. <!-- What about prefix usage?-->
 - Simplified authentication
 
-    You can use client secret and User Principal authentication. The SDK supports [DefaultAzureCredentials](/dotnet/api/azure.identity.defaultazurecredential?view=azure-dotnet), and you can use your own token, for example from [InteractiveBrowserCredential](/dotnet/api/azure.identity.interactivebrowsercredential?view=azure-dotnet).
+    You can use client secret and User Principal authentication. The SDK supports [DefaultAzureCredentials](/dotnet/api/azure.identity.defaultazurecredential?view=azure-dotnet&preserve-view=true), and you can use your own token, for example from [InteractiveBrowserCredential](/dotnet/api/azure.identity.interactivebrowsercredential?view=azure-dotnet&preserve-view=true).
 - File upload
 
     Upload a file to a [File column](../../maker/data-platform/types-of-fields.md#file-columns) in a table.
@@ -44,9 +44,8 @@ The following list describes a key features of the SDK.
 - Integration with [pandas](https://pandas.pydata.org/)
 
     The API call return value is in JSON format, which can be mapped to a [DataFrame](https://pandas.pydata.org/docs/reference/frame.html).
-- SDK source code is published under open source licensing
-
-    [Source code](https://github.com/microsoft/PowerPlatform-DataverseClient-Python)
+- SDK [source code](https://github.com/microsoft/PowerPlatform-DataverseClient-Python)
+ is published under open source licensing
 
 ## Benefits
 
