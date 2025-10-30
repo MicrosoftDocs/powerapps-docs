@@ -1,11 +1,41 @@
 {
   "redirections": [
-   {
+    {
+      "source_path": "powerapps-docs/developer/data-platform/data-export-service.md",
+      "redirect_url": "https://aka.ms/DESDeprecationBlog",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/samples/enable-field-security-entity.md",
+      "redirect_url": "column-level-security",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/samples/retrieve-field-permissions.md",
+      "redirect_url": "column-level-security",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/samples/retrieve-field-sharing-records.md",
+      "redirect_url": "column-level-security",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/field-security-entities.md",
+      "redirect_url": "column-level-security",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/calculated-rollup-attributes.md",
+      "redirect_url": "specialized-columns.md",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/developer/data-platform/deletemultiple.md",
       "redirect_url": "bulk-operations#deletemultiple",
       "redirect_document_id": "false"
-   }, 
-   {
+    },
+    {
       "source_path": "powerapps-docs/developer/test-engine/overview.md",
       "redirect_url": "/power-platform/test-engine/overview",
       "redirect_document_id": "false"
@@ -4127,7 +4157,7 @@
     },
     {
       "source_path": "powerapps-docs/developer/common-data-service/field-security-entities.md",
-      "redirect_url": "../data-platform/field-security-entities",
+      "redirect_url": "../data-platform/column-level-security",
       "redirect_document_id": false
     },
     {
@@ -9608,6 +9638,201 @@
     {
       "source_path": "powerapps-docs/maker/model-driven-apps/build-app-three-steps.md",
       "redirect_url": "../../../power-apps/maker/model-driven-apps/build-first-model-driven-app",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/monitor-app-performance.md",
+      "redirect_url": "../../power-apps/maker/common/monitor-app-performance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/card-requirements.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/overview.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/make-a-card/ui-elements/data-binding.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/make-a-card/ui-elements/controls.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/make-a-card/ui-elements/use-buttons.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/make-a-card/designer-overview.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/send-a-card/send-card-with-flow.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/send-a-card/send-card-in-teams.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/tutorials/dataverse-card.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/tutorials/hello-world-card.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/tutorials/simple-shopping-list.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/controls/button.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/controls/modern-controls/modern-controls-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/controls/button-set.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/controls/modern-controls/modern-controls-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/controls/check-box.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/controls/modern-controls/modern-controls-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/controls/column.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/controls/modern-controls/modern-controls-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/controls/column-set.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/controls/modern-controls/modern-controls-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/controls/container.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/controls/modern-controls/modern-controls-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/controls/control-reference.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/controls/modern-controls/modern-controls-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/controls/date-picker.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/controls/modern-controls/modern-controls-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/controls/drop-down.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/controls/modern-controls/modern-controls-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/controls/fact-set.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/controls/modern-controls/modern-controls-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/controls/image.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/controls/modern-controls/modern-controls-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/controls/image-set.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/controls/modern-controls/modern-controls-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/controls/media.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/controls/modern-controls/modern-controls-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/controls/number-input.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/controls/modern-controls/modern-controls-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/controls/table.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/controls/modern-controls/modern-controls-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/controls/text-input.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/controls/modern-controls/modern-controls-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/controls/text-label.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/controls/modern-controls/modern-controls-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/controls/time-picker.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/controls/modern-controls/modern-controls-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/manage-cards/data-loss-prevention.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/manage-cards/delete-cards.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/manage-cards/manage-access.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/manage-cards/manage-cards.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/make-a-card/connectors/connector-intro.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/make-a-card/power-fx/intro-to-pfx.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/make-a-card/screens/use-screens.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/make-a-card/testing/debugging-cards.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/make-a-card/variables/variables.md",
+      "redirect_url": "/power-apps/",
       "redirect_document_id": false
     }
   ]

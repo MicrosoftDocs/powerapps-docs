@@ -5,7 +5,7 @@ author: mduelae
 
 ms.topic: how-to
 ms.collection: get-started
-ms.date: 02/05/2025
+ms.date: 08/26/2025
 ms.subservice: teams
 ms.author: saperlmu
 ms.reviewer: mkaur-msft

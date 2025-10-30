@@ -4,7 +4,7 @@ description: How to configure deep links for Power Apps mobile.
 author: vamseedillimsft
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 06/14/2024
+ms.date: 10/15/2025
 ms.subservice: mobile
 ms.author: vamseedilli
 ms.custom: ""
@@ -37,11 +37,11 @@ Use the following application handler and query string parameters to compose the
 
 Deep links for the Power Apps mobile app should start with the following:
 
-```ms-apps://<org-url>_<app-id>?tenantId=<tenant-id>&appType=AppModule&openApp=true&restartApp=true&forceOfflineDataSync=true```
+```ms-apps://<org-url>_<app-id>?tenantId=<tenant-id>&environmentId=<environment-id>&appLogicalName=<appLogicalName>&appType=AppModule&openApp=true&restartApp=true&forceOfflineDataSync=true```
 
 > [!IMPORTANT]
-> The org-url can't contain **https://**. The following is a example of a model-driven app deeplink: <br>
-> ms-apps://contoso.onmicrosoft.com_e6429eba-2204-40e8-b9dd-fc74791ff2c2?tenantId=aaaabbbb-0000-cccc-1111-dddd2222eeee
+> The org-url can't contain **https://**. The following is an example of a model-driven app deep link: <br>
+> ms-apps://contoso.onmicrosoft.com_e6429eba-2204-40e8-b9dd-fc74791ff2c2?tenantId=aaaabbbb-0000-cccc-1111-dddd2222eeee&environmentId=g67tfyufhkjfg&appLogicalName=cr12_e567
 
 | **Parameter**        | **Description**                                                              | **Required**|
 |----------------------|------------------------------------------------------------------------------|-------------|
@@ -49,11 +49,18 @@ Deep links for the Power Apps mobile app should start with the following:
 | &lt;org-url&gt;      | Connects to the correct org URL.                                              | Yes|
 | &lt;app-id&gt;       | Opens the correct app module.                                                 | Yes|
 | tenantId=&lt;tenand-id&gt;             | Connects to the correct tenant.                                               | Yes|
+| *environmentId=&lt;environment-id&gt;             | Uniquely identifies the environment within a tenant.                                               | Yes|
+| *appLogicalName=&lt;app-logical-name&gt;             | Unique Name of the app. For more information on how to find this unique name of the app in modern studio, refer [Manage model-driven app settings in the app designer](/power-apps/maker/model-driven-apps/app-properties) and for classic editor, refer [Manage model-driven app properties in the app designer (classic)](/power-apps/maker/model-driven-apps/manage-app-properties)                     | Yes|
 |appType=AppModule     | Indicates that the targeted app is a model-driven app.                                                 | Yes|
 | restartApp=true      | Restarts the model-driven app. Required to ensure parameters are passed when the app is already open. | No |
 | autoLoginUpn=&lt;e-mail&gt;      | Autopopulates e-mail and triggers sign-in. <br><br>**Note**: This parameter will be ignored if a user is already signed into the app. | No|
 | forceOfflineDataSync=true | Ensures that data sync is triggered so that all the latest data is available. | No|
 
+***Considerations**
+
+- The environment ID and appLogicalName are mandatory for all new deep links.
+- Existing deep links without an environment ID or appLogicalName will experience slower performance until December 2025, after which they won't be supported.  
+- Update all existing deep links to include the environment ID and appLogicalName to improve performance and reduce wait time.
 
 If opening an `entityrecord` form or creating a new `entityrecord`, use the following parameters:
 
@@ -61,7 +68,7 @@ If opening an `entityrecord` form or creating a new `entityrecord`, use the foll
 |---------------------------------|--------------------------------------------------------------------------------------------------------|-------------|
 | etn=&lt;entity-logical-name&gt; | Designates which table to go to.                                                                 | Yes|
 | pagetype=entityrecord           | Indicates that the target is a form.    | Yes|
-| id=&lt;record-id&gt;            | Designates which specific record to go to; if left blank, the create form for the table opens. | Yes|
+| id=&lt;record-id&gt;            | Designates which specific record to go to; if left blank, the created form for the table opens. | Yes|
 | extraqs=&lt;form-id&gt;         | Designates which form to open for the `entityrecord`; if not specified, the default form opens. The `extraqs` parameter can also be used to default field values.        |  No|
 
 If the link goes to an `entitylist` view, add the following parameters:
@@ -75,18 +82,26 @@ If the link goes to an `entitylist` view, add the following parameters:
 
 ## Supported Urls parameters for a canvas app
   
-```ms-apps:///providers/Microsoft.PowerApps/apps/<appID>?tenantId=<tenantId>&restartApp=true```
+```ms-apps:///providers/Microsoft.PowerApps/apps/<appID>?tenantId=<tenantId>&environmentId=<environment-id>&restartApp=true```
 
 | **Parameter**        | **Description**                                                                              | **Required**|
 |----------------------|----------------------------------------------------------------------------------------------|-------------|
 | &lt;app-id&gt;       | Opens the correct app module.                                                                 | Yes|
 | tenantId=&lt;tenantId&gt;     | Connects to the correct tenant.                                                               | Yes|
+| *environmentId=&lt;environment-id&gt; | Uniquely identifies the environment within a tenant. | Yes|
 | restartApp=true      |  Restarts the Canvas app. Required to ensure parameters are passed when the app is already open. | No|
 | autoLoginUpn=&lt;e-mail&gt;      | Autopopulates e-mail and triggers sign-in. <br><br>**Note**: This parameter will be ignored if a user is already signed into the app. | No|
+
+***Considerations**
+- The environment ID is mandatory for all new deep links.
+- Existing deep links without an environment ID will experience slower performance until December 2025, after which they won't be supported.  
+- Update all existing deep links to include the environment ID to improve performance and reduce wait time.
 
   ## Supported Urls parameters for a wrapped native mobile app
   
  ```ms-mobile-apps:///providers/Microsoft.PowerApps/apps/<appID>?tenantId=<tenantId>&restartApp=true```
+ > [!IMPORTANT]
+> The deep link URL for a wrapped app works only when one wrapped app is installed on the mobile device. It doesn't work if more than one wrapped app is installed.
 
 | **Parameter**        | **Description**                                                                              |**Required**|
 |----------------------|----------------------------------------------------------------------------------------------|-------------|
@@ -97,6 +112,10 @@ If the link goes to an `entitylist` view, add the following parameters:
 
 ## Troubleshooting
 
-Deeplinks may open in your browser depending on the company's organizational policies and the user's device settings. Mobile Device Management (MDM) tools and device operating systems have different options and settings that impact how deeplinks are handled. If deeplinks are opening in a browser instead of directly in Power Apps mobile, make sure your MDM policies and device settings are appropriately configured. 
+Deep links can open in your browser depending on the company's organizational policies and the user's device settings. Mobile Device Management (MDM) tools and device operating systems have different options and settings that affect how deep links are handled. If deep links are opening in a browser instead of directly in Power Apps mobile, make sure your MDM policies and device settings are appropriately configured. 
 
-As an example, on some Android devices, go to **Settings** > **Apps** > **Power Apps** > **Open by default** and add **apps.powerapps.com** to make deeplinks open directly in Power Apps mobile.
+As an example, on some Android devices, go to **Settings** > **Apps** > **Power Apps** > **Open by default** and add **apps.powerapps.com** to make deep links open directly in Power Apps mobile.
+
+### See also
+
+[Important upcoming changes (deprecations) in canvas apps](/power-apps/maker/canvas-apps/important-changes-deprecations)

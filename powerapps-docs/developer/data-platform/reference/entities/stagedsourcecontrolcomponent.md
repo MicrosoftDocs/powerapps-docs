@@ -86,7 +86,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`componentoperationtype`|
-|RequiredLevel|None|
+|RequiredLevel|SystemRequired|
 |Type|Picklist|
 |DefaultFormValue|0|
 |GlobalChoiceName|`stagedsourcecontrolcomponent_componentoperationtype`|

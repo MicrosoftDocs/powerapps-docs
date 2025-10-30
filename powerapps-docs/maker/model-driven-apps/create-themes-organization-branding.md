@@ -58,7 +58,7 @@ Theming is used to enhance the app user interface, not drastically alter it. The
   
 ## Solution awareness
 
-Themes aren't solution aware. The changes made for an organization's theme aren’t included in  solutions exported from the organization. The data is stored in the theme table that can be exported and reimported in another environment. The imported theme must be published to take effect.  
+Themes aren't solution aware. The changes made for an organization's theme aren't included in  solutions exported from the organization. The data is stored in the theme table that can be exported and reimported in another environment. The imported theme must be published to take effect.  
   
 ## Copy and alter the existing theme
 
@@ -111,7 +111,7 @@ We recommend the following approach to providing contrast colors:
   
 ### Theme colors
 
-We recommend that you don’t use a large number of different colors. Although you can set a different color for every table, we recommend one of two patterns:  
+We recommend that you don't use a large number of different colors. Although you can set a different color for every table, we recommend one of two patterns:  
   
 - Make all tables in neutral colors and highlight the key tables.  
   
@@ -125,26 +125,26 @@ You should consider the following when planning on using custom themes:
   
 - Even though the theme colors are applied globally throughout the application, some legacy UI areas, such as gradient buttons, retain the default colors.  
   
-- Certain areas must use dark or light colors to contrast with the default icon colors. The icon color isn’t customizable.  
+- Certain areas must use dark or light colors to contrast with the default icon colors. The icon color isn't customizable.  
   
-- A table can’t be displayed in different colors under different Sitemap nodes.  
+- A table can't be displayed in different colors under different Sitemap nodes.  
   
-- The Sitemap nodes colors aren’t customizable.  
+- The Sitemap nodes colors aren't customizable.  
 
 ## Known issues with mobile devices and themes
 
-### The custom theme isn’t applied on devices running the Power Apps mobile app
+### The custom theme isn't applied on devices running the Power Apps mobile app
 
 When you run the Power Apps mobile app with an environment that is using a custom theme as the default theme, the mobile device displays the system CRM Default Theme.  
 
-### Card forms aren’t displayed in table views in a web browser
+### Card forms aren't displayed in table views in a web browser
 
-On a mobile device running the app in a web browser, the view is displayed in the standard view, which isn’t optimized for small screens and is displayed similar to the image here. For more information about card forms, see [Create a card form](create-card-forms.md).
+On a mobile device running the app in a web browser, the view is displayed in the standard view, which isn't optimized for small screens and is displayed similar to the image here. For more information about card forms, see [Create a card form](create-card-forms.md).
 
 :::image type="content" source="media/standard-view-theme-mobile-browser.png" alt-text="Standard view displayed on a mobile device due to custom theme":::
 
 ## See also  
 
-[Query and edit an organization theme](/dynamics365/customer-engagement/developer/customize-dev/query-and-edit-an-organization-theme)
+[Query and edit an organization theme](../../developer/model-driven-apps/query-and-edit-an-organization-theme.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

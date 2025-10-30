@@ -1,6 +1,6 @@
 ---
-title: "Sample: Retrieve currency exchange rate (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample shows how to create a new currency and retrieve and display currency exchange rate." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Sample: Retrieve currency exchange rate" 
+description: "This sample shows how to create a new currency and retrieve and display currency exchange rate."
 ms.date: 04/03/2022
 author: JimDaly #TODO: No Owner
 ms.author: jdaly
@@ -15,9 +15,7 @@ contributors:
 
 # Sample: Retrieve currency exchange rate
 
-<!-- https://learn.microsoft.com/dynamics365/customer-engagement/developer/sample-retrieve-currency-exchange-rate -->
-
-This sample shows how to create a new currency, and how to retrieve and display the currency exchange rate relative to the organization’s base currency.
+This sample shows how to create a new currency, and how to retrieve and display the currency exchange rate relative to the organization's base currency.
 
 > [!div class="nextstepaction"]
 > [SDK for .NET: Retrieve currency exchange rate sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/RetrieveCurrencyExchangeRate)

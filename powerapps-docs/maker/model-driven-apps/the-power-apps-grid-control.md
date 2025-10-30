@@ -2,7 +2,7 @@
 title: "Power Apps grid control in Power Apps"
 description: "A control for use with Power Apps that lets users view, open, and edit records from a view or subgrid in model-driven apps."
 ms.custom: ""
-ms.date: 05/12/2025
+ms.date: 08/26/2025
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -12,6 +12,7 @@ applies_to:
 author: "Jasongre"
 ms.subservice: mda-maker
 ms.author: "matp"
+contributors: JonBaker007
 search.audienceType: 
   - maker
 ---
@@ -82,6 +83,8 @@ When you configure the Power Apps grid control for a table, all views for that t
     - The **Show data type icons** property determines whether column headers display an icon corresponding to the data type next to the column name. The default value is **No**.
     - The **Navigation types allowed** property determines which lookup controls in the grid render as hyperlinks. The default value is **All**. Select **Primary only** to suppress hyperlinks on all lookup fields except the primary column for the selected entity, or **None** to suppress all hyperlinks in the grid.
     - The **Reflow behavior** property determines whether the grid components render always in a tabular fashion (**Grid only**), always as a list (**List only**), or switches between tabular and list depending on the available width (**Reflow**). The default value is **Reflow**.
+    - The **Show avatar** property determines if the avatar is shown while the grid is in a list view. This avatar is typically represented as a colored icon with text showing the first letters of the row value. The default value is **Yes**.
+    - The **Number of columns for list view** property allows you to define the number of columns to render while the grid is in list view. The default number of columns for a list is 3, the maximum number of columns is 10.
     - The **Child  items** property is used to configure the nested grid capability, which allows users to expand rows to see related records in a subgrid. To set this up, you specify the **Entity** where the related records come from and the **View** that defines the filters, sorts, and columns to show in the subgrid. The default value is no nested grid configured.
         - The **Child items parent ID** property is also needed to configure a nested grid and specifies the column (and relationship) to use to link the parent and child tables together.
         - The **Disable editing in child items grid** property provides some control over the editability of the nested grid. By default, the nested grid inherits the editability of the parent grid, but this property can be used to suppress editing in the nested grid when the parent grid is editable. The default value is **No**.  

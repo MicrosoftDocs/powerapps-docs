@@ -484,4 +484,4 @@ This section describes guidelines and the known limitations with formula columns
 
 [Microsoft Power Fx overview](/power-platform/power-fx/overview)
 
-[Formula, calculated, and rollup columns using code](../../developer/data-platform/calculated-rollup-attributes.md)
+[Specialized columns](../../developer/data-platform/specialized-columns.md)

@@ -26,7 +26,7 @@ Power Fx and YAML are the languages used for Power Apps source code. YAML is val
 
 ## Access source code files
 
-You have access to the source code files if you're using the [Dataverse Git Integration](/power-platform/alm/git-integration/overview), eliminating the need for **.msapp** files.
+You have access to the source code files if you're using the [Power Platform Git Integration](/power-platform/alm/git-integration/overview), eliminating the need for **.msapp** files.
 
 The Power Apps Studio creates the source code for canvas apps, which is stored as *.pa.yaml files within the **.msapp** file. The **.msapp** file is a binary file that contains a collection of files, including the source code.
 
@@ -77,15 +77,17 @@ Only ***.pa.yaml** files within the **\src** folder can be used as source code. 
 
 ## Power Apps YAML schema versions
 
-Currently, there are three schema versions of Power Apps source code:
+Currently, the only active schema version of Power Apps source code is Source Code (*.pa.yaml). The following table shows the other historical formats:
 
 |Format name|File extension|Description|
 |-----------|-----------|-------|
-| [Experimental](power-apps-yaml.md#experimental-format-fxyaml) | *.fx.yaml| Version used by the experimental [Power Apps Git version control](git-version-control.md) and [pac canvas unpack](/power-platform/developer/cli/reference/canvas#pac-canvas-unpack)—no longer in development.|
-| [Early preview](power-apps-yaml.md#early-preview) | -  | The version used by code view, copy code, and paste code. There's no version information in this schema, so it isn't suitable for version control. When [code view](code-view.md) is generally available (GA), it switches to the source code preview format.|
-| [Source code](power-apps-yaml.md#source-code-payaml) | *.pa.yaml files | Includes enhancements and version details for source control and is in active development. |
+| [Experimental](power-apps-yaml.md#experimental-format-fxyaml) | *.fx.yaml| Retired. Version used by the experimental [Power Apps Git version control](git-version-control.md) and [pac canvas unpack](/power-platform/developer/cli/reference/canvas#pac-canvas-unpack)—no longer in development.|
+| [Early preview](power-apps-yaml.md#preview) | -  | Retired. The version used by code view, copy code, and paste code. There's no version information in this schema.|
+| [Source code](power-apps-yaml.md#source-code-payaml) | *.pa.yaml files | Active. Includes enhancements and version details for source control. |
 
 ## Experimental format (*.fx.yaml)
+
+This schema is retired.
 
 This schema describes an experimental format used by the Power Platform CLI to process and convert canvas apps into a source code format. This format isn't actively developed anymore.
 
@@ -93,9 +95,11 @@ You can't directly convert ***.fx.yaml** files to the new formats. To convert ol
 
 ## Preview
 
-This version is used by [Code view](code-view.md) during the [preview](working-with-experimental-preview.md#preview) period. It is designed to create canvas apps in Power Apps Studio, letting you easily copy and paste controls. In this version, the source code is used in Power Apps Studio instead of being converted, like the experimental format.
+This schema is retired.
 
-The format during preview was temporary and is no longer in use. You can paste code from the preview format.
+This version was used by [Code view](code-view.md) during the [preview](working-with-experimental-preview.md#preview) period. It is designed to create canvas apps in Power Apps Studio, letting you easily copy and paste controls. In this version, the source code is used in Power Apps Studio instead of being converted, like the experimental format.
+
+The format during preview was temporary and is no longer in use. You cannot paste code from the preview format.
 
 Here are the changes made from the experimental format:
 
@@ -106,13 +110,14 @@ Here are the changes made from the experimental format:
 - **Variant**: Identifies a variant of a control type, which might alter default property values, add or remove properties, or modify the behavior or layout of the control.
 
 These properties are used for instantiating controls and don't accept Power Fx expressions.
+
 ## Source code (*.pa.yaml)
 
 > [!IMPORTANT]
 >
 > - The YAML source code for canvas apps is actively being developed. The content may be incomplete and subject to change.
 > - The **.pa.yaml** files are read-only and should only be used to review changes made in Power Apps Studio. These files are not used when an app is loading.
-> - External editing, merging, and conflict resolution isn't supported.
+> - External editing, merging, and conflict resolution is supported only in [Power Platform Git Integration](/power-platform/alm/git-integration/overview).
 
 This schema is designed for source control purposes and allows the use of a single YAML file.
 

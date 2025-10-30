@@ -231,7 +231,7 @@ You can retrieve a list of the privileges available in your environment by execu
 following FetchXML query.
 
 ```XML
-<fetch version='1.0' distinct='true' no-lock='true' >
+<fetch distinct='true' >
   <entity name='privilege' >
     <attribute name='name' />
   </entity>
@@ -250,21 +250,19 @@ special privileges that aren't associated with tables. You can use the
 following query to retrieve these privileges.
 
 ```XML
-<fetch version='1.0' distinct='true' no-lock='true' >
-
-<entity name='privilege' >
+<fetch distinct='true' >
+ <entity name='privilege' >
   <attribute name='name' />
-  <filter>
-    <condition attribute='name' operator='not-begin-with' value='prvAppend' />
-    <condition attribute='name' operator='not-begin-with' value='prvAssign' />
-    <condition attribute='name' operator='not-begin-with' value='prvCreate' />
-    <condition attribute='name' operator='not-begin-with' value='prvDelete' />
-    <condition attribute='name' operator='not-begin-with' value='prvRead' />
-    <condition attribute='name' operator='not-begin-with' value='prvShare' />
-    <condition attribute='name' operator='not-begin-with' value='prvWrite' />
+   <filter>
+   <condition attribute='name' operator='not-begin-with' value='prvAppend' />
+   <condition attribute='name' operator='not-begin-with' value='prvAssign' />
+   <condition attribute='name' operator='not-begin-with' value='prvCreate' />
+   <condition attribute='name' operator='not-begin-with' value='prvDelete' />
+   <condition attribute='name' operator='not-begin-with' value='prvRead' />
+   <condition attribute='name' operator='not-begin-with' value='prvShare' />
+   <condition attribute='name' operator='not-begin-with' value='prvWrite' />
   </filter>
-</entity>
-
+ </entity>
 </fetch>
 ```
 

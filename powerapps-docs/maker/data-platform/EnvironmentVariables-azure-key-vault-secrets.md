@@ -133,7 +133,7 @@ Follow these steps:
    :::image type="content" source="media/env-var-secret2.png" alt-text="View my access in Azure":::
 
 1. Select the **Key Vault Secrets User** role, and then select **Next**.
-1. Select **Select Members**, search for *Power Virtual Agents Service*, select it, and then choose **Select**.
+1. Select **Select Members**, search for *Microsoft Copilot Studio Service*, select it, and then choose **Select**.
 1. Select **Review + assign** on the bottom of the screen. Review the information and select **Review + assign** again if all is correct.
 
 ### Add a tag to allow a copilot to access the secret in Azure Key Vault

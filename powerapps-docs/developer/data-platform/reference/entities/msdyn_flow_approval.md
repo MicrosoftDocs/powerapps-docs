@@ -1136,6 +1136,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 
 - [approvalstageapproval_approval_msdyn_flow_approval](#BKMK_approvalstageapproval_approval_msdyn_flow_approval)
 - [approvalstagecondition_approval_msdyn_flow_approval](#BKMK_approvalstagecondition_approval_msdyn_flow_approval)
+- [approvalstageintelligent_approval_msdyn_flow_approval](#BKMK_approvalstageintelligent_approval_msdyn_flow_approval)
 - [approvalstageorder_approval_msdyn_flow_approval](#BKMK_approvalstageorder_approval_msdyn_flow_approval)
 - [msdyn_flow_approval_Annotations](#BKMK_msdyn_flow_approval_Annotations)
 - [msdyn_flow_approval_AsyncOperations](#BKMK_msdyn_flow_approval_AsyncOperations)
@@ -1172,6 +1173,18 @@ Many-To-One Relationship: [approvalstagecondition approvalstagecondition_approva
 |ReferencingEntity|`approvalstagecondition`|
 |ReferencingAttribute|`approval`|
 |ReferencedEntityNavigationPropertyName|`approvalstagecondition_approval_msdyn_flow_approval`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_approvalstageintelligent_approval_msdyn_flow_approval"></a> approvalstageintelligent_approval_msdyn_flow_approval
+
+Many-To-One Relationship: [approvalstageintelligent approvalstageintelligent_approval_msdyn_flow_approval](approvalstageintelligent.md#BKMK_approvalstageintelligent_approval_msdyn_flow_approval)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`approvalstageintelligent`|
+|ReferencingAttribute|`approval`|
+|ReferencedEntityNavigationPropertyName|`approvalstageintelligent_approval_msdyn_flow_approval`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 

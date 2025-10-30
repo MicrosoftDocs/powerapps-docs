@@ -5,7 +5,7 @@ author: jessicaszelo
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 5/29/2025
+ms.date: 10/10/2025
 ms.subservice: canvas-maker
 ms.author: szlo
 search.audienceType: 
@@ -48,21 +48,29 @@ Before you share an app, you must [save it](save-publish-app.md) (not locally) a
 
         :::image type="content" source="media/share-app/share-app-coowner.png" alt-text="share with a co-owner":::
 
+    - If your app connects to a Dataverse table, the permissions dropdown will display a **More security roles** option. Select the appropriate security roles, and those roles will be automatically assigned to users when you share the app.
+    - If your admin enabled [app level security roles](/power-platform/admin/settings-collaboration#security-roles) in Power Platform Admin, makers with the **System Administrator** security role can give collaborators app-level privileges when sharing. Makers assign privileges from the security role picker, with App reader, App user, App maker, or App admin as the security role options. To edit assigned security roles, unshare and reshare the app to assign the appropriate security role under Manage Access.
+        - **App reader**: This role gives read privilege for both user or team owned tables and org owned tables. 
+        - **App user**: This role gives full access to only their own records in user or team owned tables, and read privilege to org owned tables.
+        - **App maker**: This role gives create and read privilege for all records in user or team owned tables, but only write, delete, assign, share, append, and append to privileges for their own records in user or team owned tables. Additionally, it gives read privilege to org owned tables.
+        - **App admin**: This role gives full access to all records in user or team owned tables and org owned tables.
+        
+            :::image type="content" source="media/share-app/app-level-security-roles.png" alt-text="App level security roles":::
+     
+    
+
+
 1. Optional steps:
    - Select the **overflow menu (...)** at the top-right corner and then select **Upload app image** to include an image of the app in the email.
 
-
     :::image type="content" source="media/share-app/share-app-app-image.png" alt-text="Add an app image":::
-. 
-   - Select **Manage access** to displays app access details, including current users and co-owners. You can also edit user access here. The **Additional data access** tab shows app connections to data sources like Dataverse tables or Excel files on OneDrive for Business. To manage security roles for Dataverse tables, use the [classic sharing experience](share-app.md#classic-app-sharing-experience). For other data sources, such as Excel files on OneDrive, ensure you share these data sources with the app users.
+
+   - Select **Manage access** to displays app access details, including current users and co-owners. You can also edit user access and assign security roles here. The **Additional data access** tab shows app connections to data sources like Dataverse tables or Excel files on OneDrive for Business. To manage security roles for data sources other than Dataverse, such as Excel files on OneDrive, ensure you share these data sources with the app users.
 
      :::image type="content" source="media/share-app/share-app-access.png" alt-text="Manage app access":::
 
 1. Add an optional message and then select **Share**.
 
-### App sharing limitations
-
-Managing security roles for Dataverse tables. 
 
 > [!NOTE]
 > - To learn about sharing apps outside of your organization, see [Share a canvas app with guest users](share-app-guests.md).
@@ -188,27 +196,39 @@ When sharing an app that requires a license for use, you can request Power Apps 
 
 You can share an app with [Microsoft 365 groups](/microsoft-365/admin/create-groups/compare-groups). However, the group must have security enabled. Enabling security ensures that the Microsoft 365 group can receive security tokens for authentication to access apps or resources.
 
-**To check whether a Microsoft 365 group has security enabled**
 
-1. Ensure that you have access to the [Microsoft Entra ID cmdlets](/azure/active-directory/users-groups-roles/groups-settings-v2-cmdlets).
+**Using Microsoft Graph:**
 
-1. Go to [Azure portal](https://portal.azure.com/) \> **Microsoft Entra** \> **Groups**, select the appropriate group, and then copy the **Object Id**.
+1. Install the Microsoft Graph module. 
 
-1. [Connect to Microsoft Entra ID](/powershell/module/azuread/connect-azuread) by using the `Connect-AzureAD` PowerShell cmdlet.
+    ```powershell
+    Install-Module Microsoft.Graph -Scope CurrentUser
+    ```
 
-    ![Connect-AzureAD.](media/share-app/azure_cmdlet_connect.png "Connect-AzureAD")
+2. Connect to Microsoft Graph. For information about the administrator roles required to manage groups, see  [Microsoft Entra roles for managing groups](/graph/api/resources/groups-overview#microsoft-entra-roles-for-managing-groups).
 
-1. Get the [group details](/powershell/module/AzureAD/Get-AzureADGroup) by using `Get-AzureADGroup -ObjectId <ObjectID\> | select *`. <br> In the output, ensure that the property **SecurityEnabled** is set to **True**.
+    ```powershell
+    Connect-MgGraph -Scopes "Group.ReadWrite.All"
+    ```
 
-    ![Check the SecurityEnabled property.](media/share-app/azure_cmdlet_get_azuread_group_details.png "Check the SecurityEnabled property")
+3. Set the Object ID of Microsoft 365 group.
 
-**To enable security for a group**
+    ```powershell
+    $ObjectID = "<ObjectID>"
+    ```
 
-If the group isn't security-enabled, you can use the PowerShell cmdlet [Set-AzureADGroup](/powershell/module/AzureAD/Set-AzureADGroup) to set the **SecurityEnabled** property to **True**: 
+4. Enable security.
 
-```Set-AzureADGroup -ObjectId <ObjectID> -SecurityEnabled $True```
+    ```powershell
+    Update-MgGroup -GroupId $ObjectID -BodyParameter @{ SecurityEnabled = $true }
+    ```
 
-![Set SecurityEnabled to True.](media/share-app/azure_cmdlet_set_security_enabled.png "Set SecurityEnabled to True")
+5. Verify the update.
+
+    ```powershell
+    Get-MgGroup -GroupId $ObjectID | Select-Object DisplayName, SecurityEnabled
+    ```
+
 
 > [!NOTE]
 > You must be the owner of the Microsoft 365 group to enable security.
@@ -218,6 +238,8 @@ After a few minutes, you can discover this group in the Power Apps sharing panel
 <a name="manage-table-permissions"></a>
 <a name="dataverse"></a>
 
+
+
 ## Manage table permissions for Dataverse
 
 If you create an app based on Dataverse, you must also ensure that the users you share the app with have the appropriate permissions for the table or tables used by the app. Particularly, those users must belong to a security role that can do tasks such as creating, reading, writing, and deleting relevant records. In many cases, you'll want to create one or more custom security roles with the exact permissions that users need to run the app. You can then assign the role to each user as appropriate.
@@ -225,10 +247,11 @@ If you create an app based on Dataverse, you must also ensure that the users you
 > [!NOTE]
 > - You can assign security roles to individual users and security groups in Microsoft Entra ID, but not to Microsoft 365 groups.
 > - If a user isn't in the Dataverse root business unit, you can share the app without providing a security role, and then set the security role directly.
+> - After a security role is assigned to a user or group, you can't unassigned it when you share an app. However, you can still unassign security roles through the admin portal.
 
 ### Prerequisite
 
-To assign a role, you must have **System administrator** permissions for a Dataverse database.
+To assign a role, you must have **System Administrator** permissions for a Dataverse database.
 
 **To assign a security group in Microsoft Entra to a role**
 

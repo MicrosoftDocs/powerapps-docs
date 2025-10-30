@@ -2,11 +2,11 @@
 title: Background operations (preview)
 description: Learn how to use background operations to send Dataverse requests invoked as custom APIs asynchronously.
 ms.collection: get-started
-ms.date: 06/05/2023
+ms.date: 08/11/2025
 ms.topic: how-to
 ms.subservice: dataverse-developer
-author: sumadhey
-ms.author: sumadhey
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
@@ -82,9 +82,7 @@ static void SendRequestAsynchronously(IOrganizationService service)
     {
         Parameters =
         {
-            {"FetchXml",  @"<fetch version='1.0'  
-                                    output-format='xml-platform' 
-                                    mapping='logical'>
+            {"FetchXml",  @"<fetch>
                                 <entity name='account'>
                                     <attribute name='accountid'/>
                                     <attribute name='name'/>  
@@ -134,7 +132,7 @@ OData-Version: 4.0
 Prefer: respond-async
 
 {
-    "FetchXml": "<fetch version='1.0' output-format='xml-platform' mapping='logical'>
+    "FetchXml": "<fetch>
                     <entity name='account'>
                         <attribute name='accountid'/>
                         <attribute name='name'/>  
@@ -440,9 +438,7 @@ static void SendRequestAsynchronouslyWithCallback(IOrganizationService service)
     {
         Parameters =
         {
-            {"FetchXml",  @"<fetch version='1.0'  
-                                    output-format='xml-platform' 
-                                    mapping='logical'>
+            {"FetchXml",  @"<fetch>
                                 <entity name='account'>
                                     <attribute name='accountid'/>
                                     <attribute name='name'/>  
@@ -483,7 +479,7 @@ Accept: application/json
 Prefer: respond-async, odata.callback; url="https://webhook.site/<id>"
 
 {
-    "FetchXml": "<fetch version='1.0' output-format='xml-platform' mapping='logical'>
+    "FetchXml": "<fetch>
                     <entity name='account'>
                         <attribute name='accountid'/>
                         <attribute name='name'/>  

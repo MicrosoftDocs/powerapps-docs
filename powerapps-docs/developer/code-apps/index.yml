@@ -1,0 +1,52 @@
+### YamlMime:Landing
+
+title: Power Apps code apps (preview) documentation
+summary: Power Apps code apps let developers bring Power Apps capabilities into custom web apps built in a code‑first IDE. You can develop locally and run the same app in Power Platform. Build with popular frameworks (React, Vue, and others) while keeping full control over your UI and logic.
+
+metadata:
+  title: Power Apps code apps (preview) documentation
+  description: Provides access to highlighted areas within the Power Apps code apps (preview) documentation
+  services: service
+  ms.subservice: code-apps
+  ms.topic: landing-page
+  ms.collection: collection
+  author: JimDaly
+  ms.author: jdaly
+  ms.date: 09/22/2025
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+  # Card
+  - title: Get started
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Overview
+            url: overview.md
+          - text: "Quickstart: Create your first code app"
+            url: quickstart.md
+  # Card
+  - title: How To
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: "Create an app from scratch"
+            url: how-to/create-an-app-from-scratch.md
+          - text: "Connect to data"
+            url: how-to/connect-to-data.md
+          - text: "Connect to Dataverse"
+            url: how-to/connect-to-dataverse.md
+          - text: "Connect to Azure SQL"
+            url: how-to/connect-to-azure-sql.md
+          - text: "Create a Basic Asset Management API with Azure Functions"
+            url: how-to/create-basic-asset-management-api-azure-functions.md
+    # Card
+  - title: Architecture
+    linkLists:
+      - linkListType: architecture
+        links:
+          - text: Code apps Architecture
+            url: architecture.md
+          - text: System limits and configuration
+            url: system-limits-configuration.md

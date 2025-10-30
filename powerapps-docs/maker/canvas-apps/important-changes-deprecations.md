@@ -22,6 +22,10 @@ Makers, developers, and IT professionals can use this information to prepare for
 > [!IMPORTANT]
 > "Deprecated" means we intend to remove the feature or capability from a future major release. The feature or capability will continue to work and is fully supported until it is officially removed. This deprecation notification can span a few months or years. After removal, the feature or capability no longer work. This notice is to allow you sufficient time to plan and update your code before the feature or capability is removed.
 
+## Enhanced deep link creation requirement
+
+Starting January 1, 2026, all deep links for Power Apps mobile must include the environment ID as a required parameter. For model-driven apps, the app logical name is also required. Existing deep links without these parameters stop working after the deprecation date. Update your links now to avoid disruptions. Until support ends, old links without the environment ID have slower performance. For more information, see [Use deep links with the Power Apps mobile app](/power-apps/maker/canvas-apps/important-changes-deprecations).
+
 ## Deprecated endpoints
 
 For information about deprecated endpoints, see [Deprecated endpoints](../../limits-and-config.md#deprecated-endpoints)

@@ -51,7 +51,7 @@ You can take advantage of new query condition operators to query tables with exp
  Use the `rowaggregate` column in a FetchXML based query to retrieve the number of hierarchically related child records. When this value is set to `CountChildren` a value that includes the total number of child records for the record is included in the <xref:Microsoft.Xrm.Sdk.EntityCollection>. For example, the following query will include an `AccountChildren` aggregate value representing the number of child account records in the hierarchical relationship where the `{0}` parameter represents the `AccountId` of the parent record.  
   
 ```xml  
-<fetch distinct='false' no-lock='false' mapping='logical'>  
+<fetch>  
   <entity name='account'>  
     <attribute name='name' />  
     <attribute name='accountid' />  

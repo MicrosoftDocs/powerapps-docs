@@ -5,7 +5,7 @@ author: komala2019
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: smurkute
-ms.date: 07/09/2025
+ms.date: 08/06/2025
 ms.subservice: canvas-maker
 ms.author: koagarwa
 search.audienceType: 
@@ -54,15 +54,16 @@ When you update and republish your app, the wrapped app is automatically updated
 1. On the **Choose mobile platform to target** screen, enter a **Bundle ID**.
 
    > [!NOTE]
-   > The **Bundle ID** is a unique identifier for your app. It must contain one period (.) and no spaces. Use this same bundle ID when [creating the Azure key vault](create-key-vault-for-code-signing.md#configure-key-vault) after generating and uploading your iOS or Android certificates. If you have already created the Azure Key Vault, verify the bundle ID in the **Tags** section of the [Azure portal](https://portal.azure.com).
+   > The **Bundle ID** is a unique identifier for your app. It must contain one period (.) and no spaces. Use this same bundle ID when [creating the Azure key vault](create-key-vault-for-code-signing.md) after generating and uploading your iOS or Android certificates. If you have already created the Azure Key Vault, verify the bundle ID in the **Tags** section of the [Azure portal](https://portal.azure.com).
 
 2. Under **Target platform(s)**, select all the mobile platforms that your end users use on their mobile devices.
 
-3. You need to have Azure key vault, to upload your build to Azure blob storage. If you haven't already created, create one. For more information see, [create an Azure key vault](create-key-vault-for-code-signing.md#configure-key-vault). Add the required tags, secrets, and certificates. Add the environment variable if not created already.
+3. You need to have Azure key vault, to upload your build to Azure blob storage. If you haven't already created, create one. For more information see, [create an Azure key vault](create-key-vault-for-code-signing.md). Add the required tags, secrets, and certificates. Add the environment variable if not created already.
 
    a. To create the environment variable, go to [Power Apps](https://make.powerapps.com) > **Solutions** > **Default solution**. Then select **New** > **More** > **Environment variable**, add the display name as "PA_Wrap_KV_ResourceID".
       :::image type="content" source="media/how-to-v2/add-new-env-variable.png" alt-text="Screenshot that shows screen for adding new environment variable." lightbox="media/how-to-v2/add-new-env-variable.png":::
-  
+    The name of the new environment variable must have the prefix "new." If it doesn't, see [Set Environment Variable Prefix](#set-environment-variable-prefix) for detailed steps.
+    :::image type="content" source="media/how-to-v2/new-prefix-solution.png" alt-text="Screenshot that shows screen with prefix as new" lightbox="media/how-to-v2/new-prefix-solution.png":::
    b. To add vault information to your environment variables, access the **Azure** portal as an admin. Navigate to **All Resources** > **Your Key Vault** > **Properties**, and then copy the **Resource ID**.
       :::image type="content" source="media/how-to-v2/copy-resource-id.png" alt-text="Screenshot that shows resource id to be copied." lightbox="media/how-to-v2/copy-resource-id.png":::
 
@@ -80,9 +81,7 @@ When you update and republish your app, the wrapped app is automatically updated
 4. You need to have Azure blob storage account and container, to upload your build to Azure blob storage. If you haven't already created, create one.
    - More about creating a storage account: [Create an Azure storage account](/azure/storage/common/storage-account-create?tabs=azure-portal).
    - Watch a tutorial: [How to create a storage account](https://www.youtube.com/watch?v=AhuNgBafmUo&list=PLLasX02E8BPBKgXP4oflOL29TtqTzwhxR&index=6).
-   > [!NOTE]
-   > You can download the link from the wrap wizard if you don't use the blob storage mechanism.
-   
+ 
    1. In your key vault in the [Azure portal](https://ms.portal.azure.com), go to **Secrets** to create a secret for your Azure blob storage access key. More information: [Add a secret to key vault](/azure/key-vault/secrets/quick-create-portal#add-a-secret-to-key-vault).
       :::image type="content" source="media/how-to-v2/azure-secret-2.png" alt-text="Screenshot that shows how to create Azure secrets" lightbox="media/how-to-v2/azure-secret-2.png":::
       
@@ -109,6 +108,17 @@ When you update and republish your app, the wrapped app is automatically updated
 
 6. Select **Next**.
 
+#### Set environment variable prefix
+
+The name of the new environment variable must have the prefix "new." If it doesn't, follow these steps:
+
+1. Go to **Solutions** > **New solution**.
+1. Select a **Publisher** or create one.
+1. Select the edit icon next to the **Publisher** to view or change the prefix.
+1. If the prefix isn't "new," edit it to set the prefix to "new."
+1. Save the changes.
+
+
 ### 4. Register your app
 
 On the **Register your app** screen, register your application in Azure to establish trust with the Microsoft identity platform.
@@ -134,6 +144,8 @@ On the **Register your app** screen, register your application in Azure to estab
 
 The wrap wizard configures required API permissions automatically. To grant admin access:
 
+# [For Windows](#tab/windows)
+
 1. Open Windows PowerShell as administrator.
 2. Run these commands:
    ```powershell
@@ -144,6 +156,20 @@ The wrap wizard configures required API permissions automatically. To grant admi
    Get-AdminAllowedThirdPartyApps
    ```
 3. Provide the App ID when prompted.
+
+# [For Mac](#tab/mac)
+
+1. Open Azure PowerShell as tenant admin.
+2. Run these commands:
+   ```powershell
+   Install-Module -Name Microsoft.PowerApps.Administration.PowerShell -AllowClobber -Force
+   Import-Module -Name Microsoft.PowerApps.Administration.PowerShell
+   Add-AdminAllowedThirdPartyApps
+   Get-AdminAllowedThirdPartyApps
+   ```
+3. Provide the App ID when prompted.
+
+---
 
 After completing these steps, the registration screen will look like this:
 

@@ -4,7 +4,7 @@ description: "You can achieve significant performance gains using React and plat
 keywords: "Component Framework, code components, Power Apps controls"
 author: anuitz
 ms.author: anuitz
-ms.date: 12/04/2024
+ms.date: 10/10/2025
 ms.reviewer: jdaly
 ms.custom:
   - "dyn365-a11y"
@@ -118,7 +118,7 @@ Platform libraries are made available both at the build and runtime to the contr
 | React  | react                       | 16.14.0                | 17.0.2 (Model), 16.14.0 (Canvas) |
 | Fluent | @fluentui/react             | 8.29.0                 | 8.29.0         |
 | Fluent | @fluentui/react             | 8.121.1                | 8.121.1        |
-| Fluent | @fluentui/react-components  | >=9.4.0 <=9.46.2       | 9.46.2         |
+| Fluent | @fluentui/react-components  | >=9.4.0 <=9.46.2       | 9.68.0         |
 
 > [!NOTE]
 > The application might load a higher compatible version of a platform library at runtime, but the version might not be the latest version available. Fluent 8 and Fluent 9 are each supported but can not both be specified in the same manifest.

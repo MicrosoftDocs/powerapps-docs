@@ -1,12 +1,12 @@
 ---
 title: Set up mobile offline for model-driven apps
 description: Set up and configure mobile offline for model-driven apps made with Power Apps.
-author: trdehove
+author: Murugesh1985
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 03/07/2025
+ms.date: 07/31/2025
 ms.subservice: mobile
-ms.author: trdehove
+ms.author: murugeshs
 ms.custom: ""
 ms.reviewer: smurkute
 ms.assetid: 
@@ -16,17 +16,17 @@ search.audienceType:
 
 # Set up mobile offline for model-driven apps
 
-Use the [modern app designer](../maker/model-driven-apps/app-designer-overview.md) to enable your model-driven apps for offline use on a mobile device. When offline mode is enabled, users can interact with their data without internet connectivity on the [Power Apps mobile app](https://powerapps.microsoft.com/downloads/).
+Use the [modern app designer](../maker/model-driven-apps/app-designer-overview.md) to enable your model-driven apps for offline use on a mobile device. When offline mode is enabled, users interact with their data without internet connectivity on the [Power Apps mobile app](https://powerapps.microsoft.com/downloads/).
 
 ## Prerequisites
 
 Verify the following prerequisites before you enable mobile offline:
 
-- Environment maker, system administrator, or system customizer role is needed to configure offline mode for model-driven apps. These roles have Create, Read, Write, Delete, and Share privileges on the **Mobile offline profile** table. For more information, see [About predefined security roles](../maker/model-driven-apps/share-model-driven-app.md#about-predefined-security-roles)
+- You need the environment maker, system administrator, or system customizer role to configure offline mode for model-driven apps. These roles have Create, Read, Write, Delete, and Share privileges on the **Mobile offline profile** table. For more information, see [About predefined security roles](../maker/model-driven-apps/share-model-driven-app.md#about-predefined-security-roles)
 
-- Users with the basic user role can open and use an offline application. This role has the Read privilege for the **Mobile offline profile** table.
+- Users with the basic user role can open and use an offline app. This role has the Read privilege for the **Mobile offline profile** table.
 
-   If you have a custom security role, make sure you have the Read privilege for the **Mobile offline profile** table. For more information, see [Miscellaneous privileges](/power-platform/admin/miscellaneous-privileges)
+   If you have a custom security role, ensure you have the read privilege for the **Mobile offline profile** table. For more information, see [Miscellaneous privileges](/power-platform/admin/miscellaneous-privileges)
 
 ## Optimize your app for mobile offline
 
@@ -193,21 +193,15 @@ You can allow users to control the automatic sync intervals or the connection ty
     - Set the **Allow users to adjust sync frequency** option to **On** to adjust the sync interval to sync more or less frequently depending on individual needs. Users can choose to not automatically sync, if they only want to sync on demand.
     - Set the **Allow users to sync on Wi-Fi only** option to **On** to let users choose if their automatic sync happens on cellular networks and Wi-Fi connections or only when connected to a Wi-Fi network.
   
-## Turn on Online mode (Preview)
-[This section is prerelease documentation and is subject to change.]
+## Turn on Online mode
 
 Offline-first mode provides the best experience for users in no and low network conditions. Once your data is synchronized, you work with the data on your local device regardless of the network status. However, if your offline profile includes filters, you may not be able to access all the data you could when online in a browser, even when your device is connected to the network. 
 
 If it's important for users to access data that's not downloaded to their devices, you can activate the **Online mode** toggle that's visible to users in the Device status page. When users use the **Online mode** toggle, they can access data that's not synchronized to the local device. The toggle can be activated only when the device is connected to a network. 
 
 1. On the command bar, select **Settings**.
-1. Select the **Upcoming** tab. 
+1. Select the **Features** tab. 
 1. Set the **Allow users to work in online mode** option to **On** to let users choose if they want to use the app in online mode when connected to a network.
-
-> [!IMPORTANT]
->
-> - This is a preview feature.
-> - Preview features aren't meant for production use and might have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
 ## Supported capabilities 
 

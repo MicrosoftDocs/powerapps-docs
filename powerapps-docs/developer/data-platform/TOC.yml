@@ -24,6 +24,8 @@
       href: security-access-coding.md
     - name: Security roles and templates
       href: security-roles.md
+    - name: Column-level security
+      href: column-level-security.md
     - name: Microsoft Entra ID group teams
       href: aad-group-team.md
 - name: Work with data using code
@@ -299,8 +301,6 @@
           href: run-data-import.md
         - name: Data import entities
           href: data-import-entities.md
-    - name: Data Export Service
-      href: data-export-service.md
     - name: Migrate data between environments using OData dataflows
       href: dataverse-odata-dataflows-migration.md
     - name: Synchronize data
@@ -408,8 +408,6 @@
           href: time-zone-entities.md
         - name: BusinessUnit table
           href: businessunit-entity.md
-        - name: Field security tables
-          href: field-security-entities.md
         - name: Use access teams and owner teams to collaborate and share information
           href: use-access-teams-owner-teams-collaborate-share-information.md
         - name: Azure AD user tables
@@ -439,8 +437,8 @@
           href: entity-attribute-metadata-messages.md
         - name: Behavior and format of the date and time column
           href: behavior-format-date-time-attribute.md
-        - name: Formula, calculated, and rollup columns
-          href: calculated-rollup-attributes.md
+        - name: Specialized columns
+          href: specialized-columns.md
         - name: Create auto-number columns
           href: create-auto-number-attributes.md
         - name: Choices
@@ -495,6 +493,11 @@
       href: elastic-table-samples.md
 - name: Introduction to solutions
   href: introduction-solutions.md
+- name: Code intepreter
+  href: code-interpreter.md
+  items:
+    - name: Code interpreter PCF sample
+      href: code-interpreter-pcf-sample.md
 - name: Create applications
   href: connect-dataverse.md
   items:
