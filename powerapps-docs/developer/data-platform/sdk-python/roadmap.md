@@ -12,7 +12,7 @@ contributors:
 
 # Roadmap to Dataverse (preview)
 
-In this article, we explore basic information about Dataverse that you need to know in order to be successful when working with Dataverse. We also provide links to more detailed information. Dataverse capabilities are extensive, however, you can explore these additional capabilities at your own pace should you choose to do so.
+In this article, we explore key concepts about Dataverse that you need to know in order to be successful when working with Dataverse. We also provide links to more detailed information. Dataverse capabilities are extensive, however, you can explore these additional capabilities at your own pace should you choose to do so.
 
 > [!NOTE]
 > [!INCLUDE [cc-preview-features-definition](../../../includes/cc-preview-features-definition.md)]
@@ -27,7 +27,7 @@ There are three kinds of tables in Dataverse: system, customizable, and custom. 
 
 To interactively create or modify a table, use the [Power Platform admin center](/power-platform/admin/) (PPAC). To programmatically create or modify a table, you modify table metadata. The SDK for Python includes functions (for example `create_table`, `delete_table`) that easily enable you to work with table metadata.
 
-More information: [Entity Types](../webapi/web-api-entitytypes.md), [Use the Web API with table definitions](../../data-platform/webapi/use-web-api-metadata.md)
+More information: [Entity Type Reference](../../data-platform/webapi/reference/entitytypes.md), [Use the Web API with table definitions](../../data-platform/webapi/use-web-api-metadata.md)
 
 ### Messages
 

@@ -20,7 +20,13 @@ In this article, we demonstrate some example code that uses the SDK to work with
 
 ## Basic operations
 
-<!-- CRUD -->
+## Bulk operations
+
+## File upload
+
+## Retrieve multiple with paging
+
+## Table metadata
 
 ## Related information
 
