@@ -4,7 +4,7 @@ description: "Learn common scenarios for working with Dataverse data,
     and how to go about writing Python code for those scenarios."
 ms.author: paulliew
 author: paulliew
-ms.date: 10/29/2025
+ms.date: 10/30/2025
 ms.reviewer: phecke
 ms.topic: example-scenario
 contributors:
@@ -17,6 +17,10 @@ In this article, we demonstrate some example code that uses the SDK to work with
 
 > [!NOTE]
 > [!INCLUDE [cc-preview-features-definition](../../../includes/cc-preview-features-definition.md)]
+
+## Basic operations
+
+<!-- CRUD -->
 
 ## Related information
 
