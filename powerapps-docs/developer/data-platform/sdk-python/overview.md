@@ -67,5 +67,4 @@ Here are a few known limitations of the current (preview) release.
 
 ## Related information
 
-- [Project source](https://github.com/microsoft/PowerPlatform-DataverseClient-Python)
-- [Use the SDK for .NET](../../data-platform/org-service/overview.md)
+- [SDK for Python source](https://github.com/microsoft/PowerPlatform-DataverseClient-Python)
