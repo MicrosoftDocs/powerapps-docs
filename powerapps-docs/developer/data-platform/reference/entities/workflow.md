@@ -645,6 +645,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |---|---|
 |0|**PowerAutomateFlow**|
 |1|**CopilotStudioFlow**|
+|2|**M365CopilotAgentFlow**|
 
 ### <a name="BKMK_ModifyMetadata"></a> ModifyMetadata
 
@@ -1887,6 +1888,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [workflow_active_workflow](#BKMK_workflow_active_workflow-one-to-many)
 - [Workflow_Annotation](#BKMK_Workflow_Annotation)
 - [workflow_businessprocess](#BKMK_workflow_businessprocess)
+- [workflow_componentchangesetversions](#BKMK_workflow_componentchangesetversions)
 - [workflow_componentversionnrddatasourceset](#BKMK_workflow_componentversionnrddatasourceset)
 - [workflow_componentversions](#BKMK_workflow_componentversions)
 - [workflow_desktopflowbinary_Process](#BKMK_workflow_desktopflowbinary_Process)
@@ -2211,6 +2213,18 @@ Many-To-One Relationship: [businessprocess workflow_businessprocess](businesspro
 |ReferencedEntityNavigationPropertyName|`workflow_businessprocess`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: Root Process<br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_workflow_componentchangesetversions"></a> workflow_componentchangesetversions
+
+Many-To-One Relationship: [componentchangesetversion workflow_componentchangesetversions](componentchangesetversion.md#BKMK_workflow_componentchangesetversions)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`componentchangesetversion`|
+|ReferencingAttribute|`component`|
+|ReferencedEntityNavigationPropertyName|`componentchangesetversions`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_workflow_componentversionnrddatasourceset"></a> workflow_componentversionnrddatasourceset
 

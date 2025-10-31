@@ -51,6 +51,7 @@ The following table lists selected properties for the Staged Entity Attribute (S
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [AttributeDescription](#BKMK_AttributeDescription)
+- [AttributeOf](#BKMK_AttributeOf)
 - [AttributeTypeId](#BKMK_AttributeTypeId)
 - [ComponentState](#BKMK_ComponentState)
 - [EntityId](#BKMK_EntityId)
@@ -67,6 +68,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [PhysicalName](#BKMK_PhysicalName)
 - [SolutionId](#BKMK_SolutionId)
 - [StagedEntityAttributeId](#BKMK_StagedEntityAttributeId)
+- [StagingExecutionContextId](#BKMK_StagingExecutionContextId)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
@@ -89,6 +91,18 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|False|
 |MaxLength|8000|
+
+### <a name="BKMK_AttributeOf"></a> AttributeOf
+
+|Property|Value|
+|---|---|
+|Description|**The id of the parent attribute.**|
+|DisplayName|**Attribute of**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`attributeof`|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
 
 ### <a name="BKMK_AttributeTypeId"></a> AttributeTypeId
 
@@ -330,6 +344,18 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|`stagedentityattributeid`|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
+
+### <a name="BKMK_StagingExecutionContextId"></a> StagingExecutionContextId
+
+|Property|Value|
+|---|---|
+|Description|**A unique identifier used to tie together all objects staged within the same transaction.**|
+|DisplayName|**Staging Execution Context Id**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`stagingexecutioncontextid`|
 |RequiredLevel|None|
 |Type|Uniqueidentifier|
 

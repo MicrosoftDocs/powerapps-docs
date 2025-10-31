@@ -260,6 +260,9 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 
 These relationships are one-to-many. Listed by **SchemaName**.
 
+- [sensitivitylabel_email_SensitivityLabelId](#BKMK_sensitivitylabel_email_SensitivityLabelId)
+- [sensitivitylabelattributemapping_sensitivitylabel](#BKMK_sensitivitylabelattributemapping_sensitivitylabel)
+
 ### <a name="BKMK_sensitivitylabel_email_SensitivityLabelId"></a> sensitivitylabel_email_SensitivityLabelId
 
 Many-To-One Relationship: [email sensitivitylabel_email_SensitivityLabelId](email.md#BKMK_sensitivitylabel_email_SensitivityLabelId)
@@ -270,6 +273,18 @@ Many-To-One Relationship: [email sensitivitylabel_email_SensitivityLabelId](emai
 |ReferencingAttribute|`sensitivitylabelid`|
 |ReferencedEntityNavigationPropertyName|`sensitivitylabel_email_SensitivityLabelId`|
 |IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_sensitivitylabelattributemapping_sensitivitylabel"></a> sensitivitylabelattributemapping_sensitivitylabel
+
+Many-To-One Relationship: [sensitivitylabelattributemapping sensitivitylabelattributemapping_sensitivitylabel](sensitivitylabelattributemapping.md#BKMK_sensitivitylabelattributemapping_sensitivitylabel)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`sensitivitylabelattributemapping`|
+|ReferencingAttribute|`labelid`|
+|ReferencedEntityNavigationPropertyName|`sensitivitylabelattributemapping_sensitivitylabel`|
+|IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 
