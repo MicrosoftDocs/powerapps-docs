@@ -53,7 +53,7 @@ With managed identities, access to your storage account is restricted to request
    - Provide the Azure subscription ID.
    - Provide the Azure resource group name.
    - Provide preferred enterprise policy name.
-   - Provide the Azure resource group location.
+   - Provide the enterprise policy location.
 1. Save the copy of the **ResourceId** after policy creation.
 
 > [!NOTE]
@@ -130,6 +130,12 @@ Only the Dynamics 365 and Power Platform admins who were granted the reader role
 
 > [!IMPORTANT]
 > You must have - `Microsoft.Authorization/roleAssignments/write` permissions, such as  [User Access Administrator](/azure/role-based-access-control/built-in-roles#user-access-administrator) or [Owner](/azure/role-based-access-control/built-in-roles#owner) to complete this task.
+
+1. Run from PowerShell prompt ´az ad signed-in-user show --query id --output tsv´ to get current user **ObjectID**
+1. Open Azure CLI and run the following command, replacing the `<objId>` with the user’s **ObjectID** and the `<EP Resource Id>` with the ResourceId saved from step **Create enterprise policy**.
+   - `New-AzRoleAssignment -ObjectId <objId> -RoleDefinitionName Reader -Scope <EP Resource Id>`
+
+OR
 
 1. Sign into the [Azure portal](https://portal.azure.com/).
 1. Obtain the Dynamics 365 Power Platform admin user’s **ObjectID**.
