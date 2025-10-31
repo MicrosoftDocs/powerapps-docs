@@ -27,7 +27,7 @@ There are three kinds of tables in Dataverse: system, customizable, and custom. 
 
 To interactively create or modify a table, use the [Power Platform admin center](/power-platform/admin/) (PPAC). To programmatically create or modify a table, you modify table metadata. The SDK for Python includes functions (for example `create_table`, `delete_table`) that easily enable you to work with table metadata.
 
-More information: [Entity Type Reference](../../data-platform/webapi/reference/entitytypes.md), [Use the Web API with table definitions](../../data-platform/webapi/use-web-api-metadata.md)
+More information: [Entity Type Reference](../../data-platform/webapi/reference/entitytypes?view=dataverse-latest&preserve-view=true), [Use the Web API with table definitions](../../data-platform/webapi/use-web-api-metadata.md)
 
 ### Messages
 
