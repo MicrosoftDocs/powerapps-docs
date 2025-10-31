@@ -80,7 +80,7 @@ Additional information about bulk operations:
 
 - Returns `None` (same as single update) to keep semantics consistent.
 - Broadcast vs per-record determined by whether the `changes` parameter is a dictionary or list.
-- Primary key attribute is injected automatically when constructing [UpdateMultiple](../../data-platform/webapi/reference/updatemultiple.md) targets.
+- Primary key attribute is injected automatically when constructing [UpdateMultiple](../../data-platform/webapi/reference/updatemultiple?view=dataverse-latest) targets.
 - If any payload omits @odata.type, it's stamped automatically (cached logical name lookup).
 - Response includes only IDs - the SDK returns those GUID strings.
 - Single-record create returns a one-element list of GUIDs.
@@ -130,7 +130,7 @@ Here is a list of supported parameters where all are optional except `logical_na
 - orderby: list[str] | None — Sort expressions -> $orderby (comma joined).
 - top: int | None — Global cap via $top (applied on first request; service enforces across pages).
 - expand: list[str] | None — Navigation expansions -> $expand; pass raw clauses (e.g., primarycontactid($select=fullname,emailaddress1)).
-- page_size: int | None — Per-page hint using Prefer: odata.maxpagesize=<N> (not guaranteed; last page may be smaller).
+- page_size: int | None — Per-page hint using Prefer: odata.maxpagesize=\<N\> (not guaranteed; last page may be smaller).
 
 <!-- TODO: This info should be in the package reference once written -->
 Here is a list of return values & semantics.
