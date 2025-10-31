@@ -39,3 +39,13 @@ landingContent:
         links:
           - text: "Work with data"
             url: work-data.md
+
+  # Card
+  - title: Reference
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Table (entity) reference
+            url: ../webapi/reference/entitytypes?view=dataverse-latest&preserve-view=true
+          - text: SDK package reference
+            url: /python/api/?view=agent-sdk-python-latest&preserve-view=true

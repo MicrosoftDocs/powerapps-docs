@@ -23,7 +23,7 @@ The SDK empowers the development of automated, intelligent processes (agentic wo
 
 ## Key Features
 
-The following list describes a key features of the SDK.
+The following list describes key features of the SDK.
 
 - Data operations
 
@@ -63,6 +63,7 @@ Here are a few known limitations of the current (preview) release.
 - General purpose OData batching, upsert, and association operations are not supported.
 - Dataverse DeleteMultiple functionality is not yet available from the Python SDK.
 - Minimal retry policy support is in the SDK. Currently, only network errors are retried. Our code examples include additional backoff for transient Dataverse consistency.
+<!-- TODO: move to the SQL article -->
 - SQL JOINs are currently not supported, and there is limited support for a WHERE/TOP/ORDER BY clause.
 
 ## Related information

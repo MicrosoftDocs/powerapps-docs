@@ -46,9 +46,7 @@ client = DataverseClient(base_url="https://<myorg>.crm.dynamics.com", config=cfg
 
 You can customize the connection using optional HTTP tunable settings to handle connection timeouts, retries, etc. Access these settings via `cfg.http_retries`, `cfg.http_backoff`, and `cfg.http_timeout`.
 
-The client makes use of [DefaultAzureCredentials](/dotnet/api/azure.identity.defaultazurecredential?view=azure-dotnet&preserve-view=true) when no credentials are specified.
-
-Alternately, `DataverseClient` supports client secret or Service Principal authentication.
+The client makes use of [DefaultAzureCredentials](/dotnet/api/azure.identity.defaultazurecredential?view=azure-dotnet&preserve-view=true) when no credentials are specified. Alternately, `DataverseClient` supports client secret and Service Principal authentication.
 
 ```python
 client = DataverseClient(
@@ -79,5 +77,5 @@ Before you leave this page, take note that you cannot work with Dataverse effect
 
 ## Related information
 
-<!-- TODO: Add Ignite video link -->
+<!-- TODO: Add Ignite demo video link -->
 - [Dataverse Python examples](https://github.com/microsoft/PowerPlatform-DataverseClient-Python/tree/main/examples)
