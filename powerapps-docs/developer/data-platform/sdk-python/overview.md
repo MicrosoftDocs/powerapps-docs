@@ -31,7 +31,7 @@ The following list describes a key features of the SDK.
     Direct-SQL is supported for simple "SELECT" statements with paging.
 - Metadata operations on tables
 
-    The SDK supports create, update, and delete (CUD) of tables,  optional solution association, plus retrieve and list table definitions. <!-- What about prefix usage?-->
+    The SDK supports create, update, and delete (CUD) of tables,  optional solution association, plus retrieve and list table definitions. <!-- TODO: What about prefix usage?-->
 - Simplified authentication
 
     You can use client secret and Service Principal authentication. The SDK supports [DefaultAzureCredentials](/dotnet/api/azure.identity.defaultazurecredential?view=azure-dotnet&preserve-view=true), and you can use your own token, for example from [InteractiveBrowserCredential](/dotnet/api/azure.identity.interactivebrowsercredential?view=azure-dotnet&preserve-view=true).

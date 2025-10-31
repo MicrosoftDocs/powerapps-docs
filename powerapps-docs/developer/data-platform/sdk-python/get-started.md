@@ -79,5 +79,5 @@ Before you leave this page, take note that you cannot work with Dataverse effect
 
 ## Related information
 
-<!-- [Ignite video]() -->
+<!-- TODO: Add Ignite video link -->
 - [Dataverse Python examples](https://github.com/microsoft/PowerPlatform-DataverseClient-Python/tree/main/examples)
