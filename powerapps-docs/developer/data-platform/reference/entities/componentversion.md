@@ -92,7 +92,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`component`|
 |RequiredLevel|ApplicationRequired|
 |Type|Lookup|
-|Targets|workflow|
+|Targets|desktopflowbinary, uxagentproject, uxagentprojectfile, workflow|
 
 ### <a name="BKMK_ComponentIdType"></a> ComponentIdType
 
@@ -364,12 +364,26 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 
 These relationships are many-to-one. Listed by **SchemaName**.
 
+- [desktopflowbinary_componentversions](#BKMK_desktopflowbinary_componentversions)
 - [lk_componentversion_createdby](#BKMK_lk_componentversion_createdby)
 - [lk_componentversion_modifiedby](#BKMK_lk_componentversion_modifiedby)
 - [restoreversions](#BKMK_restoreversions-many-to-one)
 - [team_componentversion](#BKMK_team_componentversion)
 - [user_componentversion](#BKMK_user_componentversion)
 - [workflow_componentversions](#BKMK_workflow_componentversions)
+
+### <a name="BKMK_desktopflowbinary_componentversions"></a> desktopflowbinary_componentversions
+
+One-To-Many Relationship: [desktopflowbinary desktopflowbinary_componentversions](desktopflowbinary.md#BKMK_desktopflowbinary_componentversions)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`desktopflowbinary`|
+|ReferencedAttribute|`desktopflowbinaryid`|
+|ReferencingAttribute|`component`|
+|ReferencingEntityNavigationPropertyName|`component_desktopflowbinary`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_lk_componentversion_createdby"></a> lk_componentversion_createdby
 

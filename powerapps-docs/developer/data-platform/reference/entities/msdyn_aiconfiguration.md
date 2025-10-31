@@ -1072,6 +1072,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [msdyn_aiconfiguration_FileAttachments](#BKMK_msdyn_aiconfiguration_FileAttachments)
 - [msdyn_aiconfiguration_MailboxTrackingFolders](#BKMK_msdyn_aiconfiguration_MailboxTrackingFolders)
 - [msdyn_aiconfiguration_msdyn_aiconfiguration](#BKMK_msdyn_aiconfiguration_msdyn_aiconfiguration-one-to-many)
+- [msdyn_aiconfiguration_msdyn_aiconfigurationsearch](#BKMK_msdyn_aiconfiguration_msdyn_aiconfigurationsearch)
 - [msdyn_aiconfiguration_msdyn_aievent](#BKMK_msdyn_aiconfiguration_msdyn_aievent)
 - [msdyn_aiconfiguration_msdyn_aiodtrainingimage](#BKMK_msdyn_aiconfiguration_msdyn_aiodtrainingimage)
 - [msdyn_aiconfiguration_PrincipalObjectAttributeAccesses](#BKMK_msdyn_aiconfiguration_PrincipalObjectAttributeAccesses)
@@ -1137,6 +1138,18 @@ Many-To-One Relationship: [msdyn_aiconfiguration msdyn_aiconfiguration_msdyn_aic
 |ReferencingEntity|`msdyn_aiconfiguration`|
 |ReferencingAttribute|`msdyn_trainedmodelaiconfigurationpareid`|
 |ReferencedEntityNavigationPropertyName|`msdyn_aiconfiguration_msdyn_aiconfiguration`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_msdyn_aiconfiguration_msdyn_aiconfigurationsearch"></a> msdyn_aiconfiguration_msdyn_aiconfigurationsearch
+
+Many-To-One Relationship: [msdyn_aiconfigurationsearch msdyn_aiconfiguration_msdyn_aiconfigurationsearch](msdyn_aiconfigurationsearch.md#BKMK_msdyn_aiconfiguration_msdyn_aiconfigurationsearch)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_aiconfigurationsearch`|
+|ReferencingAttribute|`msdyn_aiconfiguration`|
+|ReferencedEntityNavigationPropertyName|`msdyn_aiconfiguration_msdyn_aiconfigurationsearch`|
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
