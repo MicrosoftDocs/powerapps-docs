@@ -5,8 +5,8 @@ items:
         href: index.yml
       - name: Overview
         href: overview.md
-      - name: Roadmap to Dataverse
-        href: roadmap.md
+      - name: Quick guide to Dataverse
+        href: quick-guide-dataverse.md
       - name: Getting started
         href: get-started.md
       - name: Working with data

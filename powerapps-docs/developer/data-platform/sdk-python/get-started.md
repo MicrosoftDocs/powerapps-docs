@@ -68,12 +68,12 @@ else:
 
 Now that you have an established client connection to a Dataverse environment, you can start using the SDK to work with business data, table metadata, and more. The next article will cover some examples of this.
 
-Before you leave this page, take note that you cannot work with Dataverse effectively unless you have some knowledge of Dataverse. We have provided a roadmap article that teaches you the basics.  
+Before you leave this page, take note that you cannot work with Dataverse effectively unless you have some knowledge of Dataverse. We have provided a quick guide article that teaches you the basics.  
 
 ## Next steps
 
 - [Working with data (preview)](work-data.md)
-- [Roadmap to Dataverse (preview)](roadmap.md)
+- [Quick guide to Dataverse (preview)](quick-guide-dataverse.md)
 
 ## Related information
 

@@ -30,8 +30,8 @@ landingContent:
             url: get-started.md
       - linkListType: concept
         links:
-          - text: "Roadmap to Dataverse"
-            url: roadmap.md
+          - text: "Quick guide to Dataverse"
+            url: quick-guide-dataverse.md
   # Card
   - title: How To
     linkLists:

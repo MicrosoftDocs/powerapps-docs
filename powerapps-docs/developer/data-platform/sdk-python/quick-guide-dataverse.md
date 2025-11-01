@@ -1,18 +1,20 @@
 ---
-title: "Roadmap to Dataverse (preview)"
-description: "Learn key concepts of Dataverse that every programmer needs to know for success."
+title: "Quick guide to Dataverse (preview)"
+description: "Learn some key concepts of Dataverse that every programmer needs to know for success."
 ms.author: paulliew
 author: paulliew
-ms.date: 10/30/2025
+ms.date: 10/31/2025
 ms.reviewer: phecke
 ms.topic: concept-article
 contributors:
  - phecke
 ---
 
-# Roadmap to Dataverse (preview)
+# Quick guide to Dataverse (preview)
 
-In this article, we explore key concepts about Dataverse that you need to know in order to be successful when working with Dataverse. We also provide links to more detailed information. Dataverse capabilities are extensive, however, you can explore these additional capabilities at your own pace should you choose to do so.
+In this article, we explore some key concepts about Dataverse that Python (and other non-.NET) programmers should know in order to be successful when working with Dataverse. We also provide links to more detailed information. Dataverse capabilities are extensive, however, you can explore these additional capabilities at your own pace should you choose to do so.
+
+Programmers coding in C#/.NET should read our extensive [Dataverse Developer Guide](../../data-platform/overview.md).
 
 > [!NOTE]
 > [!INCLUDE [cc-preview-features-definition](../../../includes/cc-preview-features-definition.md)]
@@ -49,7 +51,7 @@ Here we cover some ways to customize and extend Dataverse.
 
 Dataverse supports customizable and custom tables. A customizable table is an existing table that ships with Dataverse that can be modified, for example to add or delete columns, change the table name, etc.
 
-Custom tables are tables that you (or a 3rd party) create. As stated earlier in this article, the SDK provides Python functions that create and delete custom tables.
+Custom tables are tables that you (or a 3rd party) create. As stated earlier in this article, the SDK provides Python functions enabling you to create and delete custom tables.
 
 ### Extensions
 

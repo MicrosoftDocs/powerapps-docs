@@ -248,4 +248,4 @@ Additional information about working with custom table metadata:
 ## See also
 
 - [Getting started (preview)](get-started.md)
-- [Roadmap to Dataverse (preview)](roadmap.md)
+- [Quick guide to Dataverse (preview)](quick-guide-dataverse.md)
