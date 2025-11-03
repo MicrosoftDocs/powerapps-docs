@@ -72,10 +72,10 @@ After generating your page, you have several options to refine and finalize it:
     This capability is currently only available starting with the second iteration in the current session.
 
 1. **Attach a screenshot for quick reference**
-    Click **Attach** > **Add screenshot** to include a screenshot of the current preview with your next interaction with the app agent. This is useful for helping to adjust the visuals of the page. 
+    In the chat experience, click **Attach** > **Add screenshot** to include a screenshot of the current preview with your next interaction with the app agent. This is useful for helping to adjust the visuals of the page. 
 
 1. **Save and publish**
-    Select **Save** to avoid losing progress on your page.  
+    In the command bar, select **Save** to avoid losing progress on your page.  
     When you are satisfied with your page, select **Save and Publish** to publish all pending changes for the app, including any generative pages.
 
 > [!IMPORTANT]
