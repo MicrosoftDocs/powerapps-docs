@@ -132,6 +132,10 @@ Consider these tactics when you customize forms:
 - Collection variables aren't reset on closing the Power Apps form and the state is persisted for the entire session. If there are any use-cases where the variables need to be reset, clear the variables in the **OnView** property of the `SharePointIntegration` object.
 
 - Don't use imperative functions such as **Launch()** in the `SharePointIntegration` properties (such as **OnNew** and **OnView**). This use can cause unexpected behavior since the `SharePointIntegration` lifecycle events (such as selections changing) can trigger in the background even when the form isn't visible.
+- 
+
+## Understand user access to customized forms
+You cannot manually share a SharePoint form customized with Power Apps. Instead, access to the form is inherited by any user who has at least **Read** or **Restricted View** access to the linked SharePoint list. Users who have only been given permissions to specific items in the list will not have access to the customized form.
 
 ### Related information
 
