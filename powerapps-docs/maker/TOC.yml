@@ -295,29 +295,8 @@
           href: ./canvas-apps/customize-list-form.md  
       - name: From Excel
         href: ./canvas-apps/get-started-create-from-blank.md
-    - name: Create an app from a design or a template
-      items:
-      - name: Create an app from a template
-        href: ./canvas-apps/get-started-test-drive.md
-      - name: Create an app from a design
-        items:
-        - name: Express design overview
-          href: ./canvas-apps/express-design.md
-        - name: Create an app from an image
-          href: ./canvas-apps/app-from-image.md
-        - name: Create an app from Figma
-          items:
-          - name: Overview
-            href: ./canvas-apps/figma/overview.md
-          - name: Design apps using the UI kit
-            href: ./canvas-apps/figma/design-using-kit.md
-          - name: Components supported by the UI kit
-            href: ./canvas-apps/figma/supported-components.md
-          - name: Create a canvas app from Figma
-            href: ./canvas-apps/figma/create-app-from-figma.md
-          - name: Troubleshoot common errors
-            href: ./canvas-apps/figma/common-errors.md
-            displayName: Troubleshoot common errors when creating app from Figma
+    - name: Create an app from a template
+      href: ./canvas-apps/get-started-test-drive.md
   - name: Design and build an app
     items:
       - name: Design and build an app
