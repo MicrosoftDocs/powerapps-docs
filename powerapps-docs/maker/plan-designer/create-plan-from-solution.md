@@ -4,7 +4,7 @@ description: Use plans to create a detailed plan for your existing solution, inc
 author: szlo  
 contributors:  
 ms.topic: how-to  
-ms.date: 08/6/2025  
+ms.date: 11/4/2025  
 ms.author: mkaur  
 ms.reviewer: mkaur  
 ---  
