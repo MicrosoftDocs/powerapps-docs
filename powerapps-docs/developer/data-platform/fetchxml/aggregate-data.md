@@ -235,7 +235,9 @@ The following example returns the number of related accounts in a column named `
 
 ### Per query limit
 
-Even with the default limit for aggregate queries applied, the query might take some time to complete. You can use the `aggregatelimit` attribute in a query to apply a custom lower limit that returns the `AggregateQueryRecordLimit exceeded` error if the results are higher than your custom limit.
+Even with the default limit for aggregate queries applied, the query might take some time to complete. You can use the `aggregatelimit` attribute in a query to apply a custom lower limit that limits the total row count returned if the results are higher than your custom limit.
+
+Note that the `AggregateQueryRecordLimit exceeded` error will not be returned if the `aggregatelimit` attribute is specified. Instead, if the limit is reached the query will silently aggregate over a subset of the data.
 
 In this example, the custom maximum rows limit is 10:
 
@@ -250,7 +252,7 @@ In this example, the custom maximum rows limit is 10:
 </fetch>
 ```
 
-The per query limit can't exceed default aggregate limit.
+The per query limit can't exceed the default aggregate limit.
 
 ## Next steps
 
