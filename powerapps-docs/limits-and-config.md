@@ -101,8 +101,8 @@ This list identifies all services to which Power Apps communicates and their usa
 | graph.microsoft.com<br>graph.windows.net |https |Azure Graph - For getting user info (for example, profile photo) |
 | \*.azure-apim.net |https |API Hubs - Different subdomains for each locale |
 | \*.azure-apihub.net |https |API Hubs - Different subdomains for each locale |
-| \*.powerapps.com |https | create.powerapps.com, content.powerapps.com, apps.powerapps.com, make.powerapps.com, \*gateway.prod.island.powerapps.com, and \*gateway.prod.cm.powerapps.com |
-| \*.gateway.prod.island.powerapps.com | WSS | Required for communication with and startup of canvas apps. |
+| \*.powerapps.com |https | create.powerapps.com, content.powerapps.com, apps.powerapps.com, make.powerapps.com, \*gateway.prod.island.powerapps.com, \*gateway.prod.cm.powerapps.com, \*harvest.preview.powerapps.com, and \*harvest.powerapps.com |
+| \*.gateway.prod.island.powerapps.com<br>\*.harvest.preview.powerapps.com<br>\*.harvest.powerapps.com| WSS | Required for communication with and startup of canvas apps and real-time updates with Coding Agent. |
 | \*.azureedge.net |https | create.powerapps.com, content.powerapps.com, and make.powerapps.com <br>(Optional) We highly recommend that you use the wildcard listed under Domain(s). You can [download](https://go.microsoft.com/fwlink/?linkid=2225562) the complete list if you want to allow specific domain names instead of using *.azureedge.net. However, this list is subject to change.</br> |
 | \*.azurefd.net |https | create.powerapps.com, content.powerapps.com, and make.powerapps.com |
 | \*.ces.microsoftcloud.com<br/>config.centro.core.microsoft<br/>admin.microsoft.com<br/>petrol.office.microsoft.com<br/>oness.microsoft.com  | https  | Access to net promoter score (NPS) and surveys. |
