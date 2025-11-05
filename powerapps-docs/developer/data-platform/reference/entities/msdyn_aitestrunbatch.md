@@ -70,6 +70,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [msdyn_CompletedOn](#BKMK_msdyn_CompletedOn)
 - [msdyn_Description](#BKMK_msdyn_Description)
 - [msdyn_ErrorMessage](#BKMK_msdyn_ErrorMessage)
+- [msdyn_LastReviewedOn](#BKMK_msdyn_LastReviewedOn)
 - [msdyn_Name](#BKMK_msdyn_Name)
 - [msdyn_RunDuration](#BKMK_msdyn_RunDuration)
 - [msdyn_StartedOn](#BKMK_msdyn_StartedOn)
@@ -228,6 +229,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|False|
 |MaxLength|2000|
+
+### <a name="BKMK_msdyn_LastReviewedOn"></a> msdyn_LastReviewedOn
+
+|Property|Value|
+|---|---|
+|Description|**Date and time when the batch run was last reviewed.**|
+|DisplayName|**Last Reviewed On**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_lastreviewedon`|
+|RequiredLevel|None|
+|Type|DateTime|
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_msdyn_Name"></a> msdyn_Name
 
