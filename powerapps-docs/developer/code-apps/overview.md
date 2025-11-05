@@ -68,7 +68,8 @@ End-users that run code apps need a [Power Apps Premium license](https://www.mic
 - Code apps don't support [Power Platform Git integration](/power-platform/alm/git-integration/overview).
 - Code apps don't have a Power Platform native integration with Azure Application Insights. Azure Application Insights can be added as it would be to a generic web app but it doesn't include information recognized in the platform layer, such as app open events (to measure success/failure).
 - Code apps aren't supported in the Power Apps mobile app or Power Apps for Windows.
-- Code apps don't yet support PowerBI integration.
+- Code apps don't yet support Power BI data integration (PowerBIIntegration function), but can be embedded in Power BI Reports using [Power Apps Visual](/power-apps/maker/canvas-apps/powerapps-custom-visual).
+- Code apps don't support [SharePoint forms integration](/power-apps/maker/canvas-apps/sharepoint-form-integration).
 
 ## Managed Platform capability support
 
@@ -81,7 +82,7 @@ This table enumerates Power Platform management capabilities that work for code 
 | App Quarantine | [Learn more](/power-platform/admin/admin-manage-apps?tabs=new#manage-app-quarantine-state) |
 | Data Loss policy enforcement during app launch | [Learn more](/power-platform/admin/wp-data-loss-prevention) |
 | Conditional Access on an individual app | [Learn more](/power-platform/admin/admin-manage-apps?tabs=new#managed-environments-conditional-access-on-individual-apps) |
-| Admin consent dialog suppression | Consent suppression is supported for both Microsoft connecters that use OAuth and custom connectors that use OAuth. [Learn more](/power-apps/maker/canvas-apps/add-manage-connections#suppress-consent-dialog-for-apps-that-use-custom-connectors-using-microsoft-entra-id-oauth)  |
+| Admin consent dialog suppression | Consent suppression is supported for both Microsoft connectors that use OAuth and custom connectors that use OAuth. [Learn more](/power-apps/maker/canvas-apps/add-manage-connections#suppress-consent-dialog-for-apps-that-use-custom-connectors-using-microsoft-entra-id-oauth)  |
 | Tenant isolation | [Learn more](/power-platform/admin/cross-tenant-restrictions) |
 | Azure B2B (external user access) | Code apps might be shared with and accessed by end-users using Azure B2B to access resources in a tenant, similar to canvas apps. [Learn more](/power-apps/maker/canvas-apps/share-app-guests) |
 | Health metrics | Operational health metrics for code apps are available in both the Power Platform admin center and the maker portal. [Learn more](/power-platform/admin/monitoring/monitor-power-apps) |

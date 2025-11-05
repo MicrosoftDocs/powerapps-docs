@@ -32,6 +32,8 @@ Messages represent operations that can be performed on the table. They may also 
 | `RetrieveMultiple`<br />Event: True |`GET` /desktopflowbinaries<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 | `RetrievePrincipalAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 | `RetrieveSharedPrincipalsAndAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
+| `RetrieveUnpublished`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrieveUnpublished?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrieveUnpublishedRequest>|
+| `RetrieveUnpublishedMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrieveUnpublishedMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrieveUnpublishedMultipleRequest>|
 | `RevokeAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
 | `SetState`<br />Event: True |`PATCH` /desktopflowbinaries(*desktopflowbinaryid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `statecode` and `statuscode` properties. |<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 | `Update`<br />Event: True |`PATCH` /desktopflowbinaries(*desktopflowbinaryid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
@@ -845,6 +847,9 @@ These relationships are one-to-many. Listed by **SchemaName**.
 
 - [desktopflowbinary_AsyncOperations](#BKMK_desktopflowbinary_AsyncOperations)
 - [desktopflowbinary_BulkDeleteFailures](#BKMK_desktopflowbinary_BulkDeleteFailures)
+- [desktopflowbinary_componentchangesetversions](#BKMK_desktopflowbinary_componentchangesetversions)
+- [desktopflowbinary_componentversionnrddatasourceset](#BKMK_desktopflowbinary_componentversionnrddatasourceset)
+- [desktopflowbinary_componentversions](#BKMK_desktopflowbinary_componentversions)
 - [desktopflowbinary_FileAttachments](#BKMK_desktopflowbinary_FileAttachments)
 - [desktopflowbinary_MailboxTrackingFolders](#BKMK_desktopflowbinary_MailboxTrackingFolders)
 - [desktopflowbinary_PrincipalObjectAttributeAccesses](#BKMK_desktopflowbinary_PrincipalObjectAttributeAccesses)
@@ -872,6 +877,42 @@ Many-To-One Relationship: [bulkdeletefailure desktopflowbinary_BulkDeleteFailure
 |ReferencingEntity|`bulkdeletefailure`|
 |ReferencingAttribute|`regardingobjectid`|
 |ReferencedEntityNavigationPropertyName|`desktopflowbinary_BulkDeleteFailures`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_desktopflowbinary_componentchangesetversions"></a> desktopflowbinary_componentchangesetversions
+
+Many-To-One Relationship: [componentchangesetversion desktopflowbinary_componentchangesetversions](componentchangesetversion.md#BKMK_desktopflowbinary_componentchangesetversions)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`componentchangesetversion`|
+|ReferencingAttribute|`component`|
+|ReferencedEntityNavigationPropertyName|`componentchangesetversions`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_desktopflowbinary_componentversionnrddatasourceset"></a> desktopflowbinary_componentversionnrddatasourceset
+
+Many-To-One Relationship: [componentversionnrddatasource desktopflowbinary_componentversionnrddatasourceset](componentversionnrddatasource.md#BKMK_desktopflowbinary_componentversionnrddatasourceset)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`componentversionnrddatasource`|
+|ReferencingAttribute|`component`|
+|ReferencedEntityNavigationPropertyName|`componentversionnrddatasourceset`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_desktopflowbinary_componentversions"></a> desktopflowbinary_componentversions
+
+Many-To-One Relationship: [componentversion desktopflowbinary_componentversions](componentversion.md#BKMK_desktopflowbinary_componentversions)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`componentversion`|
+|ReferencingAttribute|`component`|
+|ReferencedEntityNavigationPropertyName|`componentversions`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 

@@ -81,6 +81,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [msdyn_compliancestatecode](#BKMK_msdyn_compliancestatecode)
 - [msdyn_creationmode](#BKMK_msdyn_creationmode)
 - [msdyn_externalreferenceid](#BKMK_msdyn_externalreferenceid)
+- [msdyn_harvestsourceentity](#BKMK_msdyn_harvestsourceentity)
 - [msdyn_ingestedarticleurl](#BKMK_msdyn_ingestedarticleurl)
 - [msdyn_integratedsearchproviderid](#BKMK_msdyn_integratedsearchproviderid)
 - [msdyn_iscontentsyncedtostore](#BKMK_msdyn_iscontentsyncedtostore)
@@ -461,6 +462,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|False|
 |MaxLength|450|
+
+### <a name="BKMK_msdyn_harvestsourceentity"></a> msdyn_harvestsourceentity
+
+|Property|Value|
+|---|---|
+|Description||
+|DisplayName|**Knowledge Harvest Source Entity**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_harvestsourceentity`|
+|RequiredLevel|None|
+|Type|Memo|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1048576|
 
 ### <a name="BKMK_msdyn_ingestedarticleurl"></a> msdyn_ingestedarticleurl
 
@@ -1690,8 +1708,10 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [lk_expiredprocess_knowledgearticleid](#BKMK_lk_expiredprocess_knowledgearticleid)
 - [lk_newprocess_knowledgearticleid](#BKMK_lk_newprocess_knowledgearticleid)
 - [lk_translationprocess_knowledgearticleid](#BKMK_lk_translationprocess_knowledgearticleid)
+- [msdyn_interimupdateknowledgearticle_knowledgearticle](#BKMK_msdyn_interimupdateknowledgearticle_knowledgearticle)
 - [msdyn_knowledgearticle_favoriteknowledgearticle](#BKMK_msdyn_knowledgearticle_favoriteknowledgearticle)
 - [msdyn_knowledgearticle_feedback_context](#BKMK_msdyn_knowledgearticle_feedback_context)
+- [msdyn_knowledgearticlecustomentity_knowledgearticle](#BKMK_msdyn_knowledgearticlecustomentity_knowledgearticle)
 - [msdyn_knowledgearticleimage_parentknowledgearticleid](#BKMK_msdyn_knowledgearticleimage_parentknowledgearticleid)
 
 ### <a name="BKMK_knowledgearticle_activity_parties"></a> knowledgearticle_activity_parties
@@ -2138,6 +2158,18 @@ Many-To-One Relationship: [translationprocess lk_translationprocess_knowledgeart
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_msdyn_interimupdateknowledgearticle_knowledgearticle"></a> msdyn_interimupdateknowledgearticle_knowledgearticle
+
+Many-To-One Relationship: [msdyn_interimupdateknowledgearticle msdyn_interimupdateknowledgearticle_knowledgearticle](msdyn_interimupdateknowledgearticle.md#BKMK_msdyn_interimupdateknowledgearticle_knowledgearticle)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_interimupdateknowledgearticle`|
+|ReferencingAttribute|`msdyn_targetknowledgearticleid`|
+|ReferencedEntityNavigationPropertyName|`msdyn_interimupdateknowledgearticle_knowledgearticle`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 ### <a name="BKMK_msdyn_knowledgearticle_favoriteknowledgearticle"></a> msdyn_knowledgearticle_favoriteknowledgearticle
 
 Many-To-One Relationship: [msdyn_favoriteknowledgearticle msdyn_knowledgearticle_favoriteknowledgearticle](msdyn_favoriteknowledgearticle.md#BKMK_msdyn_knowledgearticle_favoriteknowledgearticle)
@@ -2159,6 +2191,18 @@ Many-To-One Relationship: [feedback msdyn_knowledgearticle_feedback_context](fee
 |ReferencingEntity|`feedback`|
 |ReferencingAttribute|`msdyn_contextobjectid`|
 |ReferencedEntityNavigationPropertyName|`msdyn_knowledgearticle_feedback_context`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_msdyn_knowledgearticlecustomentity_knowledgearticle"></a> msdyn_knowledgearticlecustomentity_knowledgearticle
+
+Many-To-One Relationship: [msdyn_knowledgearticlecustomentity msdyn_knowledgearticlecustomentity_knowledgearticle](msdyn_knowledgearticlecustomentity.md#BKMK_msdyn_knowledgearticlecustomentity_knowledgearticle)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_knowledgearticlecustomentity`|
+|ReferencingAttribute|`msdyn_knowledgearticleid`|
+|ReferencedEntityNavigationPropertyName|`msdyn_knowledgearticlecustomentity_knowledgearticle`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 

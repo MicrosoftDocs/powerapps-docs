@@ -251,7 +251,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**Used to visually identify your bot in channels and services. Represented in a base64 encoded string. Must be in PNG format, and no larger than 30K in size. This value can be changed at any time.**|
+|Description|**Used to visually identify your bot in channels and services. Represented in a base64 encoded string. Must be in PNG format, and no larger than 100KB in size. This value can be changed at any time.**|
 |DisplayName|**Icon (Base64)**|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -262,7 +262,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |FormatName|Text|
 |ImeMode|Auto|
 |IsLocalizable|False|
-|MaxLength|51200|
+|MaxLength|102400|
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
@@ -476,7 +476,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|
 |---|---|
-|0|**Microsoft Copilot Studio**|
+|0|**Power Virtual Agents**|
 |1|**Nuance Mix Shell**|
 
 ### <a name="BKMK_SchemaName"></a> SchemaName
