@@ -47,7 +47,7 @@ To turn off the new experience and return to the default experience, in the lowe
 
 1. Enter your prompt in the text box, and then select **Enter**.  
 
-    :::image type="content" source="media/new-powerapps-experience/power-apps-prompt-textbox.png" alt-text="Screenshot of Power Apps showing a prompt input box for the new experience." lightbox="media/new-powerapps-experience/power-apps-prompt-text-box.png":::
+    :::image type="content" source="media/new-powerapps-experience/power-apps-prompt-text-box.png" alt-text="Screenshot of Power Apps showing a prompt input box for the new experience." lightbox="media/new-powerapps-experience/power-apps-prompt-text-box.png":::
 
 1. Agents start working and assets load. You’ll see the plan, data model, and app preview generate. 
  
