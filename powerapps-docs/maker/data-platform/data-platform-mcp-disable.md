@@ -34,6 +34,18 @@ Microsoft Dataverse model context protocol (MCP) is provided through the connect
 1. Under **Settings**, select **Product** > **Features**.
 1. Under **Features** scroll down to locate **Dataverse MCP server** and turn it **On**.
 
+## Connect to Dataverse MCP server in Visual Studio Code
+
+1. Click this link:
+      https://<orgurl> /main.aspx?appid=76d9c540-8ca5-f011-b422-000d3a346029&pagetype=entitylist&etn=allowedmcpclient&viewid=2f87c3fe-4ed3-4425-9800-77ff580d9135&viewType=1039
+2. Select Microsoft Github Copilot
+   <img width="1090" height="591" alt="image" src="https://github.com/user-attachments/assets/f138cfa6-771d-4135-9551-a17d57a3d8ed" />
+3. Turn the Is Enabled = Yes
+   <img width="1090" height="584" alt="image" src="https://github.com/user-attachments/assets/2c359ee9-9696-48f0-a232-188e672e048d" />
+
+
+   
+
 ## Disable the Dataverse MCP server for an  environment
 
 1. Go to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/), select **Manage**, and then select **Environment groups**. 
