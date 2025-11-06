@@ -14,8 +14,7 @@ contributors:
 
 Dataverse SDK for Python enables Python developers to interact directly with Microsoft Dataverse, making it easy to access, manage, and manipulate data stored in Dataverse using familiar Python syntax—no .NET knowledge required.
 
-> [!IMPORTANT]
-> [!INCLUDE [preview-note-pp](../../../../shared/preview-includes/preview-note-pp.md)]
+[!INCLUDE [preview-note-pp](../../../../shared/preview-includes/preview-note-pp.md)]
 
 ## Supporting Agentic Processes
 
