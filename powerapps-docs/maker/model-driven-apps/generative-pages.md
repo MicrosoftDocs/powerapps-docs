@@ -168,6 +168,5 @@ The best way to give feedback on generative pages is to use the thumbs up/down b
 Confirm that your environment is in the US region. 
 
 ## Related articles
-
-[FAQ about generative pages in model-driven apps](../common/faq-generative-pages-model-driven.md)
-[Legal terms](https://go.microsoft.com/fwlink/?linkid=2173149)
+-  [FAQ about generative pages in model-driven apps](../common/faq-generative-pages-model-driven.md)
+-  [Legal terms](https://go.microsoft.com/fwlink/?linkid=2173149)
