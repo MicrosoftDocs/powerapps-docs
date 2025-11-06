@@ -68,8 +68,8 @@ After generating your page, you have several options to refine and finalize it:
 1. **Compare iterations**
     After completing two or more iterations with the agent, you can select **Compare** on the Code tab to view a code diff between the current and previous iteration.  
 
-    [!NOTE]
-    This capability is currently only available starting with the second iteration in the current session.
+   > [!NOTE]
+   > This capability is currently only available starting with the second iteration in the current session.
 
 1. **Attach a screenshot for quick reference**
     In the chat experience, click **Attach** > **Add screenshot** to include a screenshot of the current preview with your next interaction with the app agent. This is useful for helping to adjust the visuals of the page. 
