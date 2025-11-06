@@ -4,20 +4,20 @@ description: Learn how to build business solutions using canvas apps, model-driv
 author: szlo 
 contributors:  
 ms.topic: how-to  
-ms.date: 07/31/2025  
+ms.date: 08/6/2025  
 ms.author: mkaur  
 ms.reviewer: mkaur  
 ---  
 
 # Build a solution from a plan
 
-Build a solution based on the objects Plan designer suggests for your business problem.
+Build a solution based on the objects plan's suggests for your business problem.
 
 To follow this article, create and save a plan. Learn more in [Create a plan](create-plan.md).
 
-:::image type="content" source="media/build-your-solution/save-plan.png" alt-text="Screenshot of Plan designer interface showing the Save tables option." lightbox="media/build-your-solution/save-plan.png":::
+:::image type="content" source="media/build-your-solution/save-plan.png" alt-text="Screenshot of plans interface showing the Save tables option." lightbox="media/build-your-solution/save-plan.png":::
 
-After you save a plan in a solution, create apps like canvas apps, model-driven apps, Power Automate flows, and Copilot Studio agents based on the solution proposal from Plan designer.
+After you save a plan in a solution, create apps like canvas apps, model-driven apps, Power Automate flows, and Copilot Studio agents based on the solution proposal from a plan.
 
 :::image type="content" source="media/create-a-plan/create-objects.png" alt-text="Screenshot of the interface to create a solution.":::
 
@@ -43,7 +43,7 @@ After you save a plan in a solution, create apps like canvas apps, model-driven 
         > [!NOTE]
         > If you're using the preview experience to create flows, use a preview environment for consistent results. Learn more in [Early release cycle environments](/power-platform/admin/early-release).
     
-    - **Copilot Studio agents**: Opens Microsoft Copilot Studio, where you finish creating your agent and then publish it. An agent is an AI-powered assistant that simplifies workflows, boosts productivity, and automates repetitive tasks. Plan designer includes agents as part of its recommended technologies. The plan prefills the agent with the following information:
+    - **Copilot Studio agents**: Opens Microsoft Copilot Studio, where you finish creating your agent and then publish it. An agent is an AI-powered assistant that simplifies workflows, boosts productivity, and automates repetitive tasks. Plans includes agents as part of its recommended technologies. The plan prefills the agent with the following information:
 
         - **Name**: Name of the agent.
         - **Description**: Purpose of the agent.
@@ -62,7 +62,7 @@ After you save a plan in a solution, create apps like canvas apps, model-driven 
 
 ## Use existing apps
 
-When Plan designer proposes apps, replace a proposed app with an existing app or add an existing app to the plan. This approach helps if you already developed apps and want to use them in a new business solution. It saves time, reduces redundancy, and keeps your solutions consistent.
+When apps are proposes apps, replace a proposed app with an existing app or add an existing app to the plan. This approach helps if you already developed apps and want to use them in a new business solution. It saves time, reduces redundancy, and keeps your solutions consistent.
 
 - To replace an app proposed in the plan, select **Replace** on the app tile you want to replace, and then select an app.
 

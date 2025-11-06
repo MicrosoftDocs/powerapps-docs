@@ -10,7 +10,7 @@ search.audienceType:
 
 # AI Document Template (msdyn_aidocumenttemplate) table/entity reference (Microsoft Dataverse)
 
-Used to store Document templates
+Stores AI-powered document templates, including file content, metadata, and ownership details, to support automated document generation and management scenarios in Power Platform solutions.
 
 ## Messages
 
