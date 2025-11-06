@@ -67,6 +67,12 @@ To configure the automatic download of files and images on sync, you need to [cr
 
 ### Configure on sync from within Power apps studio (Preview)  
 
+> [!IMPORTANT]
+>
+> - This is a preview feature.
+> - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2216214), and are available before an official release so that customers can get early access and provide feedback.
+> - This feature is being gradually rolled out across regions and might not be available yet in your region.
+
 1. Sign in to Power Apps.
 1. In the left navigation pane, select **Apps**.
 1. Select a canvas app, and then on the command bar, select **Edit** to open your app in editing mode in canvas app designer.

@@ -95,6 +95,12 @@ There are two ways you can create offline profile.
 
 ### Create a custom mobile offline profile from within Power apps studio (Preview)
 
+> [!IMPORTANT]
+>
+> - This is a preview feature.
+> - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2216214), and are available before an official release so that customers can get early access and provide feedback.
+> - This feature is being gradually rolled out across regions and might not be available yet in your region.
+
 1. Go to App > Settings.
 1. Turn on the **Can be used offline** setting.
 1. In the drop-down menu, select an offline profile. You can select the **Auto-generated** option or **New profile with current app data**.

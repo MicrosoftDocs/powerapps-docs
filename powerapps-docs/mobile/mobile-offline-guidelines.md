@@ -126,7 +126,12 @@ If a custom filter results in a slow Dataverse query, downloads take longer. Fol
 
 ### Optimize data downloaded to improve sync time and usage with column selection capabilities (Preview)
 
-This feature is in full availability for model-driven apps and in preview for canvas apps.
+> [!IMPORTANT]
+>
+> - This feature is in full availability for model-driven apps and in preview for canvas apps.
+> - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2216214), and are available before an official release so that customers can get early access and provide feedback.
+> - This feature is being gradually rolled out across regions and might not be available yet in your region.
+
    
 The first sync can take time for organizations with large datasets, especially in remote areas. Optimize this by explicitly selecting only the required columns to download on the device and avoid downloading columns that are never used in the app. This saves both network and disk usage and results in faster sync time. While this impacts both the first sync and delta syncs, the first sync sees a greater impact as there are more records to download.
 
