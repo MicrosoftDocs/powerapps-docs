@@ -65,13 +65,13 @@ The remainder of this article helps you configure on sync.
 
 To configure the automatic download of files and images on sync, you need to [create a custom, mobile offline profile](canvas-mobile-offline-setup.md#create-profiles-from-within-power-platform-admin-center-with-admin-rights). There are two ways to configure sync.
 
-### Configure on sync from within Power apps studio (Preview)  
+### Configure on sync from within Power apps studio (preview)  
 
 > [!IMPORTANT]
 >
 > - This is a preview feature.
 > - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2216214), and are available before an official release so that customers can get early access and provide feedback.
-> - This feature is being gradually rolled out across regions and might not be available yet in your region.
+> - This feature is in the process of rolling out and might not be available in your region yet.
 
 1. Sign in to Power Apps.
 1. In the left navigation pane, select **Apps**.
@@ -104,7 +104,7 @@ You can add both the **Image Descriptor** and **FileAttachment** tables to your 
 
 1. Proceed with adding [image columns](#add-image-columns-to-mobile-offline-with-image-descriptor) and [file columns](#add-file-columns-to-mobile-offline-with-fileattachment).
 
-#### Add image columns to mobile offline with Image Descriptor
+#### Add image columns to mobile offline with image descriptor
 
 In your mobile configuration setting, you can add the **Image Descriptor** table to enable image downloads.
 
