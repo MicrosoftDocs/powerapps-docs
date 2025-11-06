@@ -10,24 +10,24 @@ ms.topic: concept-article
 
 # Create apps, data, and plans together
 
-The new experience in Power Apps combines plans, data models, and apps in a single design surface, enabling you to design an app, data model, and requirements together. It reduces context switching and keeps you focused. 
+The new experience in Power Apps combines plans, data models, and apps in a single design surface. This combination lets you design an app, data model, and requirements together. It reduces context switching and keeps you focused. 
 
-Key capabilities:
+Key capabilities
 
-- **Design everything together**: Create apps, plan, and data model in a single, seamless process
-- **Build faster with AI**: Iterate and prototype through chat, from idea to a working app
-- **One-click app generation**: Modern web apps are created from your requirements and data
+- **Design everything together**: Create apps, plans, and data models in a single, seamless process.
+- **Build faster with AI**: Iterate and prototype through chat, from idea to a working app.
+- **One-click app generation**: Modern web apps are created from your requirements and data.
 
 ## Prerequisites
 
-- Copilot must be enabled in the tenant and environment. Learn more: [Copilot in Power Apps overview](maker/canvas-apps/ai-overview.md).
+- Copilot must be enabled in the tenant and environment. Learn more: [Copilot in Power Apps overview](maker/canvas-apps/ai-overview.md)
 
-- This capability is available only in the US region and in English only. Learn more in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/en-US/availability-reports/?report=copilotfeaturereport).
+- This capability is available only in the US region and in English only. Learn more in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/en-US/availability-reports/?report=copilotfeaturereport)
 
 
 ## Turn on the new experience
 
-Follow these steps to enable the new experience in Power Apps:
+To enable the new experience in Power Apps:
 
 1. Sign in to [Power Apps](https://make.preview.powerapps.com/).
 1. In the top right, select **Try new experience (Preview)**.
@@ -35,7 +35,7 @@ Follow these steps to enable the new experience in Power Apps:
 
 ### Turn off preview
 
-To turn off the new experience and use the default experience using [plans](maker/plan-designer/plan-designer.md), in the lower left, select **Preview** > **Default homepage**.
+To turn off the new experience and return to the default experience, in the lower left, select **Preview** > **Default homepage**.
 
 ## Create an app
 
@@ -54,12 +54,12 @@ To turn off the new experience and use the default experience using [plans](make
    :::image type="content" source="media/new-powerapps-experience/powerapps-data-model-app-preview.png" alt-text="Screenshot of the Power Apps new workspace showing AI agents generating the plan, data model, and app preview simultaneously." lightbox="media/new-powerapps-experience/powerapps-data-model-app-preview.png":::
 
 
-1. After the plan, data, and app are generated, choose **Save** in the top‑right corner. The first save stores the app, tables, and plan together in your selected solution, while your data remains in in‑memory draft tables. This lets you iterate on the data model and app quickly without committing to a data source. When you publish the app, you then select the data source.
+1. After the plan, data, and app are generated, choose **Save** in the top-right corner. The first save stores the app, tables, and plan together in your selected solution, while your data remains in in-memory draft tables. This lets you iterate on the data model and app quickly without committing to a data source. When you publish the app, you then select the data source.
 
 
 ## Review and refine your generated app and data model
 
-The new workspace uses a single, unified chat that keeps context as you switch between **Plan**, **Data**, and **App**. It speeds up development by letting you preview the app visually, inspect and edit code, and make inline changes—all without leaving the workspace
+The new workspace uses a single, unified chat that keeps context as you switch between **Plan**, **Data**, and **App**. It speeds up development by letting you preview the app visually, inspect and edit code, and make inline changes—all without leaving the workspace.
 
 :::image type="content" source="media/new-powerapps-experience/plan-data-app-menu-options.png" alt-text="view plan, data, and app ":::
 
@@ -84,7 +84,7 @@ Use the chat input on the work surface to ask questions or request changes to th
 
 - If you ask a question, the agent provides an explanatory response.
 - If you request a change, the agent evaluates the request, outlines an implementation plan, and then applies it.
-- If the agent cannot implement the change directly, you will receive step‑by‑step guidance or instructions for retrying the request.
+- If the agent can't implement the change directly, you receive step-by-step guidance or instructions for retrying the request.
 
 ### Edit using inline actions
 
@@ -106,7 +106,7 @@ Select **Plan** to edit the plan. The plan shows generated user roles and requir
 
 :::image type="content" source="media/new-powerapps-experience/edit-plan.png" alt-text="Edit the plan pivot":::
 
-### Edit the paln using chat
+### Edit the plan using chat
 
 Open the chat, enter your questions or request changes like "Update the manager role,” “Add a requirement for offline access,” or “Remove the Power BI report”.
 
@@ -116,7 +116,7 @@ You can also make targeted edits directly inline.
 
 #### Edit user requirements
 
-Select the area you want to change and start typing, or select the **Edit** button to add new roles and requirements. Use inline chat while an area is selected to provide context for the agent. This saves you from describing the specific element.
+Select the area you want to change and start typing, or select the **Edit** button to add new roles and requirements. Use inline chat while an area is selected to provide context for the agent. This approach saves you from describing the specific element.
 
 :::image type="content" source="media/new-powerapps-experience/edit-user-roles.png" alt-text="Select Edit to make edits to user roles":::
 
@@ -134,7 +134,7 @@ In the **Technology** area, select the ellipsis beside any recommended technolog
 
 ## Editing the generated data model
 
-Select **Data** and review and refine your data. The data view displays all proposed tables, their relationships, and sample data, helping you understand the schema and how data is used in the generated app. The tables are currently in-memory only and have not been published to any data source, giving you full flexibility to modify them until they meet your business needs.  For more information, see [Create and edit tables using Power Apps](maker/data-platform/create-edit-entities-portal.md)
+Select **Data** and review and refine your data. The data view displays all proposed tables, their relationships, and sample data, helping you understand the schema and how data's used in the generated app. The tables are currently in-memory only and haven't been published to any data source, giving you full flexibility to modify them until they meet your business needs.  For more information, see [Create and edit tables using Power Apps](maker/data-platform/create-edit-entities-portal.md)
 
 :::image type="content" source="media/new-powerapps-experience/edit-data-model-details.png" alt-text="Edit the data for your app":::
 
@@ -153,7 +153,7 @@ Use the chat to ask questions or request changes to the proposed fields, tables,
 You can also ask for additional sample data to enrich your dataset for the app.
 The agents will analyze your requests and make the necessary updates.
 
-Some actions may not be supported through agent chat. For details review the [limitations](new-powerapps-experience.md#known-limitations)
+Some actions might not be supported through agent chat. For details review the [limitations](new-powerapps-experience.md#known-limitations)
 
 
 ### Edit data using inline actions
@@ -178,7 +178,7 @@ Add new or existing tables, or make targeted changes to relationships, tables, a
 
 1. To edit a relationship, select the relationship line between two tables and select edit from the dropdown menu. Here you can change the relationship type or add a lookup column. You can also perform advanced edits like changing the logical names used in the relationship.
 
-1. Some relationship configurations are currently not supported. See Known limitations for more details.
+1. Some relationship configurations currently aren't supported. See Known limitations for more details.
 
 ### Remove a table
 
@@ -196,9 +196,9 @@ Add new or existing tables, or make targeted changes to relationships, tables, a
 
 ### Row ownership
 
-Follow one these steps to change the ownership type to User or Team or Organization:
+Follow one of these steps to change the ownership type to User, Team, or Organization:
 
-- Select **View options** and then select **Row ownershiop**.
+- Select **View options** and then select **Row ownership**.
 
   :::image type="content" source="media/new-powerapps-experience/edit-row-ownership.png" alt-text="Edit the row ownership":::
 
@@ -218,18 +218,18 @@ Follow one these steps to change the ownership type to User or Team or Organizat
 
 The following [ALM](/power-platform/alm/overview-alm) features are supported: 
 
-- **Save**: Auto-save is not currently available. To save your progress, select **Save** in the command bar at any time. This action saves all edits to every solution object in your preferred solution.
+- **Save**: Auto-save isn't currently available. To save your progress, select **Save** in the command bar at any time. This action saves all edits to every solution object in your preferred solution.
 - **Publish data**: To publish draft tables, select **Publish draft tables** from the data card’s context menu when you’re ready to make a table available for production. You can choose either Dataverse or SharePoint as the target data source. Once published, any apps using these draft tables will automatically update to use the published versions.
 
 - **Publishing app**: When you’re ready to release your app for production, select **Publish** in the app’s command bar. If your app uses any draft tables, you’ll be prompted to publish those tables as well.
 
-**Share the app**: To share your app with others, select **Share** and add the accounts of users you want to grant access to run the app.
+- **Share the app**: To share your app with others, select **Share** and add the accounts of users you want to grant access to run the app.
 
-## Shre your feedback 
+## Share your feedback 
 
-- **Feedback on generated content**: Use the thumbs up or thumbs down icons in the chat pane to rate the generated content. For more details, select "Tell us why" to provide specific feedback.
+- **Feedback on generated content**: Use the thumbs up or thumbs down icons in the chat pane to rate the generated content. For more details, select **Tell us why** to provide specific feedback.
 
-- **Feedback on the Overall Experience**: Select **Give feedback** in the command bar to share your thoughts about the overall experience. Choose a feedback category and enter your comments in the provided field.
+- **Feedback on the overall experience**: Select **Give feedback** in the command bar to share your thoughts about the overall experience. Choose a feedback category and enter your comments in the provided field.
  :::image type="content" source="media/new-powerapps-experience/give-feedback.png" alt-text="Provide feedback":::
 
 
@@ -243,9 +243,9 @@ The following [ALM](/power-platform/alm/overview-alm) features are supported:
 
 ## Known limitations
 
-The followoing are limitation of the new Power Apps experience:
+The following are limitations of the new Power Apps experience:
 
-- The new experince can only be used in one browser tab at a time. Using multiple tabs may cause unexpected behavior.
+- The new experience can only be used in one browser tab at a time. Using multiple tabs might cause unexpected behavior.
 
 - Only one app is currently supported per solution.
 
@@ -253,9 +253,9 @@ The followoing are limitation of the new Power Apps experience:
 
 - Pre-existing plans cannot be opened in the new experience.
 
-- Canvas and model-driven apps are not recommended or supported. You also cannot open or edit canvas and model-driven apps in the new experience.
+- Canvas and model-driven apps are not recommended or supported. You also can't open or edit canvas and model-driven apps in the new experience.
 
-- Apps can be shared with users, but adding additional co-owners isn't supported.
+- Apps can be shared with users, but adding additional co-owners is not supported.
 
 - Existing tables are not automatically suggested during data model creation. Makers must manually add any existing tables they want to include.
 
@@ -267,11 +267,11 @@ The followoing are limitation of the new Power Apps experience:
   - Many-to-one relationships between an existing table and a new table
   - Relationships between existing tables across different data sources (e.g., between a SharePoint list and a Dataverse table).
 
-- Previously created code apps can only be edited in the in the new experience. 
+- Previously created code apps can only be edited in the new experience. 
 
 - Code view and split view do not currently support direct code editing.
   - As a result, code apps in the app list or home page may have the edit option disabled in the context menu. Makers must open the plan to edit the app.
-  - If you export a code app and edit it outside of OWS (such as in Visual Studio Code), you may not be able to edit it further in OWS after re-importing.
+  - If you export a code app and edit it outside of OWS (such as in Visual Studio Code), you might not be able to edit it further in OWS after re-importing.
 
 - Undo is only available by making a request in the chat.
 
