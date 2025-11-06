@@ -101,10 +101,14 @@ There are two ways you can create offline profile.
 > - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2216214), and are available before an official release so that customers can get early access and provide feedback.
 > - This feature is in the process of rolling out and might not be available in your region yet.
 
-1. Go to App > Settings.
+1. Sign in to [Power Apps Studio](https://make.powerapps.com/). 
+1. In the left side panel, select **Apps**.
+1. Select your canvas app, and then select **Edit**.
+1. Select **Settings**.
+1. Select **General**.
 1. Turn on the **Can be used offline** setting.
 1. In the drop-down menu, select an offline profile. You can select the **Auto-generated** option or **New profile with current app data**.
-1. Enter a name and description for the profile. Add the tables you need for the profile. For those tables, apply filters (as detailed below—see the hyperlink to the following section) and choose columns as described in [Optimize the offline profile - Power Apps | Microsoft Learn](/power-apps/maker/model-driven-apps/optimize-offline-profile).
+1. Enter a name and description for the profile. Add the tables you need for the profile. For those tables, [apply filters](#add-a-table-to-an-offline-profile-and-apply-filters) and choose columns as described in [Optimize the offline profile](mobile-offline-guidelines.md#use-column-selection-to-reduce-data-download-and-sync-time-preview).
 1. Save the profile.
 1. Publish the profile.
 
@@ -157,7 +161,8 @@ Be sure that you configure at least one of the profile rules for each table to d
 
 1. Select **Save**.
 
-Each table in your offline setup can link to up to 15 other tables through filters or relationships. If you link to a table that already connects to other tables, those connections count toward the limit. For example, if Table B connects to two other tables and you link Table A to Table B, Table A has three relationships: one for Table B and two for the tables Table B connects to. This setup is a transitive relationship. If any table has more than 15 total connections, you get an error and can't publish the offline profile.
+> [!NOTE]
+> Each table in your offline setup can link to up to 15 other tables through filters or relationships. If you link to a table that already connects to other tables, those connections count toward the limit. For example, if Table B connects to two other tables and you link Table A to Table B, Table A has three relationships: one for Table B and two for the tables Table B connects to. This setup is a transitive relationship. If any table has more than 15 total connections, you get an error and can't publish the offline profile.
 
 
 ## Using the Offline template and offline status icon
