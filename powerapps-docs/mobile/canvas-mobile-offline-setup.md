@@ -103,12 +103,11 @@ There are two ways you can create offline profile.
 
 1. Sign in to [Power Apps Studio](https://make.powerapps.com/). 
 1. In the left side panel, select **Apps**.
-1. Select your canvas app, and then select **Edit**.
-1. Select **Settings**.
-1. Select **General**.
+1. Select your app, and then select **Edit**.
+1. Select **Settings** > **General**.
 1. Turn on the **Can be used offline** setting.
 1. In the drop-down menu, select an offline profile. You can select the **Auto-generated** option or **New profile with current app data**.
-1. Enter a name and description for the profile. Add the tables you need for the profile. For those tables, [apply filters](#add-a-table-to-an-offline-profile-and-apply-filters) and choose columns as described in [Optimize the offline profile](mobile-offline-guidelines.md#use-column-selection-to-reduce-data-download-and-sync-time-preview).
+1. Enter a name and description for the profile. Add the tables you need for the profile. For those tables, [apply filters](#add-a-table-to-an-offline-profile-and-apply-filters) and choose columns as described in [optimize the offline profile](mobile-offline-guidelines.md#use-column-selection-to-reduce-data-download-and-sync-time-preview).
 1. Save the profile.
 1. Publish the profile.
 
