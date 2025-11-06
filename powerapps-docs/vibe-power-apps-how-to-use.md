@@ -8,7 +8,10 @@ ms.date: 11/06/2025
 ms.topic: concept-article
 ---
 
-# Create apps, data, and plans together
+# Create apps, data, and plans together (preview)
+
+
+[This article is prerelease documentation and is subject to change.]
 
 The new experience in Power Apps combines plans, data models, and apps in a single design surface. This combination lets you design an app, data model, and requirements together. It reduces context switching and keeps you focused. 
 
@@ -17,6 +20,12 @@ Key capabilities
 - **Design everything together**: Create apps, plans, and data models in a single, seamless process.
 - **Build faster with AI**: Iterate and prototype through chat, from idea to a working app.
 - **One-click app generation**: Modern web apps are created from your requirements and data.
+
+
+> [!IMPORTANT]
+
+> - This is a preview feature.
+> - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2216214), and are available before an official release so that customers can get early access and provide feedback.
 
 ## Prerequisites
 
@@ -31,7 +40,7 @@ To enable the new experience in Power Apps:
 
 1. Sign in to [Power Apps](https://make.preview.powerapps.com/).
 1. In the top right, select **Try new experience (Preview)**.
-:::image type="content" source="media/new-powerapps-experience/turn-on-new-experience.png" alt-text="Screenshot of the Power Apps workspace showing the Try new workspace (Preview) toggle enabled and a tutorial pop-up explaining the feature.":::
+:::image type="content" source="media/vibe-powerapps-experience/turn-on-new-experience.png" alt-text="Screenshot of the Power Apps workspace showing the Try new workspace (Preview) toggle enabled and a tutorial pop-up explaining the feature.":::
 
 ### Turn off preview
 
@@ -47,11 +56,11 @@ To turn off the new experience and return to the default experience, in the lowe
 
 1. Enter your prompt in the text box, and then select **Enter**.  
 
-    :::image type="content" source="media/new-powerapps-experience/power-apps-prompt-text-box.png" alt-text="Screenshot of Power Apps showing a prompt input box for the new experience." lightbox="media/new-powerapps-experience/power-apps-prompt-text-box.png":::
+    :::image type="content" source="media/vibe-powerapps-experience/power-apps-prompt-text-box.png" alt-text="Screenshot of Power Apps showing a prompt input box for the new experience." lightbox="media/vibe-powerapps-experience/power-apps-prompt-text-box.png":::
 
 1. Agents start working and assets load. You’ll see the plan, data model, and app preview generate. 
  
-   :::image type="content" source="media/new-powerapps-experience/powerapps-data-model-app-preview.png" alt-text="Screenshot of the Power Apps new workspace showing AI agents generating the plan, data model, and app preview simultaneously." lightbox="media/new-powerapps-experience/powerapps-data-model-app-preview.png":::
+   :::image type="content" source="media/vibe-powerapps-experience/powerapps-data-model-app-preview.png" alt-text="Screenshot of the Power Apps new workspace showing AI agents generating the plan, data model, and app preview simultaneously." lightbox="media/vibe-powerapps-experience/powerapps-data-model-app-preview.png":::
 
 
 1. After the plan, data, and app are generated, choose **Save** in the top-right corner. The first save stores the app, tables, and plan together in your selected solution, while your data remains in in-memory draft tables. This lets you iterate on the data model and app quickly without committing to a data source. When you publish the app, you then select the data source.
@@ -61,11 +70,11 @@ To turn off the new experience and return to the default experience, in the lowe
 
 The new workspace uses a single, unified chat that keeps context as you switch between **Plan**, **Data**, and **App**. It speeds up development by letting you preview the app visually, inspect and edit code, and make inline changes—all without leaving the workspace.
 
-:::image type="content" source="media/new-powerapps-experience/plan-data-app-menu-options.png" alt-text="view plan, data, and app ":::
+:::image type="content" source="media/vibe-powerapps-experience/plan-data-app-menu-options.png" alt-text="view plan, data, and app ":::
 
 Each focus area shows its own tools above the work surface. In **App** focus, for example, you can choose visual preview, code view, or split view.
 
-:::image type="content" source="media/new-powerapps-experience/app-menu-options.png" alt-text="Menu option in the App area":::
+:::image type="content" source="media/vibe-powerapps-experience/app-menu-options.png" alt-text="Menu option in the App area":::
 
 
 ## Edit the generated app
@@ -104,7 +113,7 @@ Use inline actions to edit the style of your app.
 
 Select **Plan** to edit the plan. The plan shows generated user roles and requirements, the proposed tables for your data model, and the recommended technologies to complete your solution.
 
-:::image type="content" source="media/new-powerapps-experience/edit-plan.png" alt-text="Edit the plan pivot":::
+:::image type="content" source="media/vibe-powerapps-experience/edit-plan.png" alt-text="Edit the plan pivot":::
 
 ### Edit the plan using chat
 
@@ -118,13 +127,13 @@ You can also make targeted edits directly inline.
 
 Select the area you want to change and start typing, or select the **Edit** button to add new roles and requirements. Use inline chat while an area is selected to provide context for the agent. This approach saves you from describing the specific element.
 
-:::image type="content" source="media/new-powerapps-experience/edit-user-roles.png" alt-text="Select Edit to make edits to user roles":::
+:::image type="content" source="media/vibe-powerapps-experience/edit-user-roles.png" alt-text="Select Edit to make edits to user roles":::
 
 #### Edit data model 
 
 In the **Data model** area, select the ellipsis for the specific table you’d like to edit.
 
-:::image type="content" source="media/new-powerapps-experience/edit-data-model.png" alt-text="Edit a data table":::
+:::image type="content" source="media/vibe-powerapps-experience/edit-data-model.png" alt-text="Edit a data table":::
 
 You can select to view the data workspace, save the proposed tables, or chat with the agents to pass in specific context about the edit you’re requesting.
 
@@ -136,7 +145,7 @@ In the **Technology** area, select the ellipsis beside any recommended technolog
 
 Select **Data** and review and refine your data. The data view displays all proposed tables, their relationships, and sample data, helping you understand the schema and how data's used in the generated app. The tables are currently in-memory only and haven't been published to any data source, giving you full flexibility to modify them until they meet your business needs.  For more information, see [Create and edit tables using Power Apps](maker/data-platform/create-edit-entities-portal.md)
 
-:::image type="content" source="media/new-powerapps-experience/edit-data-model-details.png" alt-text="Edit the data for your app":::
+:::image type="content" source="media/vibe-powerapps-experience/edit-data-model-details.png" alt-text="Edit the data for your app":::
 
 Legend
 
@@ -163,14 +172,14 @@ Add new or existing tables, or make targeted changes to relationships, tables, a
 1. To edit, select the relationship line or the ellipsis (…) next to the table you want to modify.
 1. Select **Remove** to remove relationships or tables from the data model, or make specific edits as needed.
 
-    :::image type="content" source="media/new-powerapps-experience/edit-data-relationships.png" alt-text="Edit data relationships":::
+    :::image type="content" source="media/vibe-powerapps-experience/edit-data-relationships.png" alt-text="Edit data relationships":::
 
 ### Add table
 
 1. Select the **Add table** button in the command bar to include a new or existing table in your data model.
 2. Choose **Draft table** to create a new in-memory table from scratch, or select **Existing Dataverse table** or **Existing SharePoint list** to add data you already have.
 
-    :::image type="content" source="media/new-powerapps-experience/add-tables.png" alt-text="Add more data tables":::
+    :::image type="content" source="media/vibe-powerapps-experience/add-tables.png" alt-text="Add more data tables":::
 
 ### Add and edit relationship
 
@@ -191,7 +200,7 @@ Add new or existing tables, or make targeted changes to relationships, tables, a
 ### View and edit data
 
 1. Select **View data** from the command bar.
-   :::image type="content" source="media/new-powerapps-experience/view-edit-data.png" alt-text="View and edit data"::: 
+   :::image type="content" source="media/vibe-powerapps-experience/view-edit-data.png" alt-text="View and edit data"::: 
 1. In this view, you can add, remove, or modify columns and rows as needed.
 
 ### Row ownership
@@ -200,11 +209,11 @@ Follow one of these steps to change the ownership type to User, Team, or Organiz
 
 - Select **View options** and then select **Row ownership**.
 
-  :::image type="content" source="media/new-powerapps-experience/edit-row-ownership.png" alt-text="Edit the row ownership":::
+  :::image type="content" source="media/vibe-powerapps-experience/edit-row-ownership.png" alt-text="Edit the row ownership":::
 
 - Select **View data** on the command bar, select a row, and then select **Row ownership**.
 
-  :::image type="content" source="media/new-powerapps-experience/edit-row-ownership-detailed-view.png" alt-text="Edit the row relationship from the detailed view":::
+  :::image type="content" source="media/vibe-powerapps-experience/edit-row-ownership-detailed-view.png" alt-text="Edit the row relationship from the detailed view":::
 
 ### Edit table properties
 
@@ -230,7 +239,7 @@ The following [ALM](/power-platform/alm/overview-alm) features are supported:
 - **Feedback on generated content**: Use the thumbs up or thumbs down icons in the chat pane to rate the generated content. For more details, select **Tell us why** to provide specific feedback.
 
 - **Feedback on the overall experience**: Select **Give feedback** in the command bar to share your thoughts about the overall experience. Choose a feedback category and enter your comments in the provided field.
- :::image type="content" source="media/new-powerapps-experience/give-feedback.png" alt-text="Provide feedback":::
+ :::image type="content" source="media/vibe-powerapps-experience/give-feedback.png" alt-text="Provide feedback":::
 
 
 ## Choose a data source and publish
@@ -239,7 +248,7 @@ The following [ALM](/power-platform/alm/overview-alm) features are supported:
 
 1. Select a data source to publish and store the draft tables in your app and then select **Publish**.
 
-    :::image type="content" source="media/new-powerapps-experience/save-and-select-data-source.png" alt-text="Select a data source":::
+    :::image type="content" source="media/vibe-powerapps-experience/save-and-select-data-source.png" alt-text="Select a data source":::
 
 ## Known limitations
 
