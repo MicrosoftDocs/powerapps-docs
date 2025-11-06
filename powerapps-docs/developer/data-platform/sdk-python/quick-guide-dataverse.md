@@ -3,7 +3,7 @@ title: "Quick guide to Dataverse (preview)"
 description: "Learn some key concepts of Dataverse that every programmer needs to know for success."
 ms.author: paulliew
 author: paulliew
-ms.date: 10/31/2025
+ms.date: 11/05/2025
 ms.reviewer: phecke
 ms.topic: concept-article
 contributors:
@@ -11,6 +11,8 @@ contributors:
 ---
 
 # Quick guide to Dataverse (preview)
+
+[!INCLUDE [preview-banner](../../../../shared/preview-includes/preview-banner.md)]
 
 In this article, we explore some key concepts about Dataverse that Python (and other non-.NET) programmers should know in order to be successful when working with Dataverse. We also provide links to more detailed information. Dataverse capabilities are extensive, however, you can explore these additional capabilities at your own pace should you choose to do so.
 
@@ -25,7 +27,7 @@ Data is stored in tables which are organized into rows and columns. Messages are
 
 ### Tables
 
-There are three kinds of tables in Dataverse: system, customizable, and custom. System tables, also known as out-of-box tables, cannot be changed and support the basic functionality of Dataverse. Customizable and custom tables can be interactively or programmatically modified by the user if that person has the appropriate permissions to do so.
+There are three kinds of tables you would commonly use in Dataverse: system, customizable, and custom. System tables, also known as out-of-box tables, cannot be changed and support the basic functionality of Dataverse. Customizable and custom tables can be interactively or programmatically modified by the user if that person has the appropriate permissions to do so.
 
 To interactively create or modify a table, use the [Power Platform admin center](/power-platform/admin/) (PPAC). To programmatically create or modify a table, you modify table metadata. The SDK for Python includes functions (for example `create_table`, `delete_table`) that easily enable you to work with table metadata.
 

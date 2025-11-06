@@ -3,7 +3,7 @@ title: "Getting started (preview)"
 description: "Get started using the Dataverse SDK for Python."
 ms.author: paulliew
 author: paulliew
-ms.date: 10/29/2025
+ms.date: 11/05/2025
 ms.reviewer: phecke
 ms.topic: quickstart-sdk
 contributors:
@@ -12,10 +12,9 @@ contributors:
 
 # Getting started (preview)
 
-In this article, we describe how to set up your Python environment to access Dataverse through the Dataverse SDK for Python. We then show some simple coding examples to get you started.
+[!INCLUDE [preview-banner](../../../../shared/preview-includes/preview-banner.md)]
 
-> [!NOTE]
-> [!INCLUDE [cc-preview-features-definition](../../../includes/cc-preview-features-definition.md)]
+In this article, we describe how to set up your Python environment to access Dataverse through the Dataverse SDK for Python. We then show some simple coding examples to get you started.
 
 ## Prerequisites
 
@@ -25,11 +24,10 @@ In this article, we describe how to set up your Python environment to access Dat
 
 ## Install the SDK and dependencies
 
-Let's start by installing the required dependencies into your Python environment. Install the dependencies listed in the [requirements.txt](https://github.com/microsoft/PowerPlatform-DataverseClient-Python/blob/main/requirements.txt) file of the source code repo root.
+From a terminal window, execute the following command. This installs the SDK from [pypi.org](https://pypi.org/).
 
 ```python
-pip install dataverse-sdk
-pip install -r requirements.txt
+python.exe - m pip install dataverse-sdk
 ```
 
 ## Connect to Dataverse
@@ -37,16 +35,18 @@ pip install -r requirements.txt
 This code example imports the client and configuration types from the SDK packages and establishes a connection to your Dataverse environment. Be sure to change 'myorg' in the URL to the correct name of your environment.
 
 ```python
+from azure.identity import InteractiveBrowserCredential
 from dataverse_sdk import DataverseClient
 from dataverse_sdk.config import DataverseConfig
 
 cfg = DataverseConfig()  # defaults to language_code=1033
-client = DataverseClient(base_url="https://<myorg>.crm.dynamics.com", config=cfg)
+client = DataverseClient(base_url="https://<myorg>.crm.dynamics.com", 
+    InteractiveBrowserCredential(), config=cfg)
 ```
 
 You can customize the connection using optional HTTP tunable settings to handle connection timeouts, retries, etc. Access these settings via `cfg.http_retries`, `cfg.http_backoff`, and `cfg.http_timeout`.
 
-The client makes use of [DefaultAzureCredentials](/dotnet/api/azure.identity.defaultazurecredential?view=azure-dotnet&preserve-view=true) when no credentials are specified. Alternately, `DataverseClient` supports client secret and Service Principal authentication.
+Here is another example.
 
 ```python
 client = DataverseClient(

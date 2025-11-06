@@ -4,7 +4,7 @@ description: "Learn common scenarios for working with Dataverse data,
     and how to go about writing Python code for those scenarios."
 ms.author: paulliew
 author: paulliew
-ms.date: 10/30/2025
+ms.date: 11/05/2025
 ms.reviewer: phecke
 ms.topic: example-scenario
 contributors:
@@ -13,21 +13,20 @@ contributors:
 
 # Working with data (preview)
 
-In this article, we demonstrate some example code that uses the SDK to work with Dataverse data and metadata. Be sure you read [Getting started (preview)](get-started.md) first before continuing with this article.
+[!INCLUDE [preview-banner](../../../../shared/preview-includes/preview-banner.md)]
 
-> [!NOTE]
-> [!INCLUDE [cc-preview-features-definition](../../../includes/cc-preview-features-definition.md)]
+In this article, we demonstrate some example code that uses the SDK to work with Dataverse data and metadata. Be sure you read [Getting started (preview)](get-started.md) first before continuing with this article.
 
 ## Basic operations
 
 Here is some example code that operates on the account table.
 
 ```python
-from azure.identity import DefaultAzureCredential
+from azure.identity import InteractiveBrowserCredential
 from dataverse_sdk import DataverseClient
 
 base_url = "https://<myorg>.crm.dynamics.com"
-client = DataverseClient(base_url=base_url, credential=DefaultAzureCredential())
+client = DataverseClient(base_url=base_url, credential=InteractiveBrowserCredential())
 
 # Create an account and set some properties (returns list[str] of new GUIDs)
 account_id = client.create("account", {"name": "Acme, Inc.", "telephone1": "555-0100"})[0]

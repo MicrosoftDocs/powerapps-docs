@@ -3,7 +3,7 @@ title: "Dataverse SDK for Python overview (preview)"
 description: "Use Dataverse to store and access data for use in data science and analyses."
 ms.author: paulliew
 author: paulliew
-ms.date: 10/29/2025
+ms.date: 11/05/2025
 ms.reviewer: phecke
 ms.topic: overview
 contributors:
@@ -14,8 +14,8 @@ contributors:
 
 Dataverse SDK for Python enables Python developers to interact directly with Microsoft Dataverse, making it easy to access, manage, and manipulate data stored in Dataverse using familiar Python syntax—no .NET knowledge required.
 
-> [!NOTE]
-> [!INCLUDE [cc-preview-features-definition](../../../includes/cc-preview-features-definition.md)]
+> [!IMPORTANT]
+> [!INCLUDE [preview-note-pp](../../../../shared/preview-includes/preview-note-pp.md)]
 
 ## Supporting Agentic Processes
 
@@ -34,7 +34,7 @@ The following list describes key features of the SDK.
     The SDK supports create, update, and delete (CUD) of tables,  optional solution association, plus retrieve and list table definitions. <!-- TODO: What about prefix usage?-->
 - Simplified authentication
 
-    You can use client secret and Service Principal authentication. The SDK supports [DefaultAzureCredentials](/dotnet/api/azure.identity.defaultazurecredential?view=azure-dotnet&preserve-view=true), and you can use your own token, for example from [InteractiveBrowserCredential](/dotnet/api/azure.identity.interactivebrowsercredential?view=azure-dotnet&preserve-view=true).
+     The SDK supports authentication credentials of any class derived from [TokenCredential class](/dotnet/api/azure.core.tokencredential?view=azure-dotnet&preserve-view=true). For example, you can use [InteractiveBrowserCredential class](/dotnet/api/azure.identity.interactivebrowsercredential?view=azure-dotnet&preserve-view=true), [ClientSecretCredential class](/dotnet/api/azure.identity.clientsecretcredential?view=azure-dotnet&preserve-view=true), and [ManagedIdentityCredential class](/dotnet/api/azure.identity.managedidentitycredential?view=azure-dotnet&preserve-view=true).
 - File upload
 
     Upload a file to a [File column](../../../maker/data-platform/types-of-fields.md#file-columns) in a table.

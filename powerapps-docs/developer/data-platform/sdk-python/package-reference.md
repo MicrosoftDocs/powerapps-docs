@@ -3,7 +3,7 @@ title: "SDK package reference (preview)"
 description: "Python API reference."
 ms.author: paulliew
 author: paulliew
-ms.date: 10/31/2025
+ms.date: 11/05/2025
 ms.reviewer: phecke
 ms.topic: quickstart-sdk
 contributors:
@@ -11,6 +11,8 @@ contributors:
 ---
 
 # Dataverse SDK for Python Package Reference
+
+[!INCLUDE [preview-banner](../../../../shared/preview-includes/preview-banner.md)]
 
 ## Data operations
 
