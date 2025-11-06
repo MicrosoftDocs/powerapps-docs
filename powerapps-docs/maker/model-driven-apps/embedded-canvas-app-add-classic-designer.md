@@ -8,9 +8,9 @@ ms.topic: "how-to"
 applies_to: 
   - "Dynamics 365 (online)"
   - "PowerApps"
-author: "matthewbolanos"
+author: "shivanichander"
 ms.subservice: mda-maker
-ms.author: "mabolan"
+ms.author: "shivchan"
 tags: 
   - "Power Apps maker portal impact"
 search.audienceType: 
