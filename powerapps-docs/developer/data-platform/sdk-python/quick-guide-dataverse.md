@@ -23,13 +23,13 @@ Programmers coding in C#/.NET should read our extensive [Dataverse Developer Gui
 
 ## Tables and messages
 
-Data is stored in tables which are organized into rows and columns. Messages are the operations that act on tables and table data. Tables are also known and *entities*, and rows are sometimes called *records* in our documentation.
+Data is stored in [tables](https://learn.microsoft.com/power-apps/developer/data-platform/reference/about-entity-reference) which are organized into rows and columns. Messages are the operations that act on tables and table data. Tables are also known and *entities*, and rows are sometimes called *records* in our documentation.
 
 ### Tables
 
 There are three kinds of tables you would commonly use in Dataverse: system, customizable, and custom. System tables, also known as out-of-box tables, cannot be changed and support the basic functionality of Dataverse. Customizable and custom tables can be interactively or programmatically modified by the user if that person has the appropriate permissions to do so.
 
-To interactively create or modify a table, use the [Power Platform admin center](/power-platform/admin/) (PPAC). To programmatically create or modify a table, you modify table metadata. The SDK for Python includes functions (for example `create_table`, `delete_table`) that easily enable you to work with table metadata.
+To interactively [create or modify a table](https://learn.microsoft.com/power-apps/maker/data-platform/create-edit-entities-portal?tabs=excel), use the [Power Platform admin center](/power-platform/admin/) (PPAC). To programmatically create or modify a table, you modify table metadata. The SDK for Python includes functions (for example `create_table`, `delete_table`) that easily enable you to work with table metadata.
 
 More information: [Entity Type Reference](../../data-platform/webapi/reference/entitytypes?view=dataverse-latest&preserve-view=true), [Use the Web API with table definitions](../../data-platform/webapi/use-web-api-metadata.md)
 
