@@ -1,20 +1,20 @@
 ---
 title: "Create apps, data, and plans together"
-description: Learn how the Power Apps new workspace simplifies app creation by generating plans, data models, and apps in parallel. Build smarter and faster.
+description: Learn how the Power Apps new experience simplifies app creation by generating plans, data models, and apps in parallel. Build apps smarter and faster.
 author: mduelae
 ms.author: mkaur
 ms.reviewer: mkaur
-ms.date: 10/21/2025
+ms.date: 11/06/2025
 ms.topic: concept-article
 ---
 
 # Create apps, data, and plans together
 
-The new workspace experience in Power Apps combines plans, data models, and apps in a single design surface, enabling you to design the app, data model, and requirements together. It reduces context switching and keeps you focused. 
+The new experience in Power Apps combines plans, data models, and apps in a single design surface, enabling you to design an app, data model, and requirements together. It reduces context switching and keeps you focused. 
 
 Key capabilities:
 
-- **Design everything together**: Create the app, plan, and data model in a single, seamless process
+- **Design everything together**: Create apps, plan, and data model in a single, seamless process
 - **Build faster with AI**: Iterate and prototype through chat, from idea to a working app
 - **One-click app generation**: Modern web apps are created from your requirements and data
 
@@ -30,7 +30,7 @@ Key capabilities:
 Follow these steps to enable the new experience in Power Apps:
 
 1. Sign in to [Power Apps](https://make.preview.powerapps.com/).
-1. In the top right, select **Try new workspace (Preview)**.
+1. In the top right, select **Try new experience (Preview)**.
 :::image type="content" source="media/new-powerapps-experience/turn-on-new-experience.png" alt-text="Screenshot of the Power Apps workspace showing the Try new workspace (Preview) toggle enabled and a tutorial pop-up explaining the feature.":::
 
 ### Turn off preview
@@ -76,6 +76,8 @@ You can explore the app directly on the work surface interact with the generated
 
 To inspect the code, switch to Code view or Split view. Expand the src folder to reveal the subfolders and files that make up the app, and select any file to view the generated code.
 
+When you modify the app, plan, or data, the agent analyzes your changes to see if updates are needed elsewhere in the solution. If so, the agent automatically applies those updates and summarizes the changes in the chat.
+
 ### Edit using chat
 
 Use the chat input on the work surface to ask questions or request changes to the generated app. For example: “What does this button do?” or “Change theme to blue.”
@@ -102,46 +104,73 @@ Use inline actions to edit the style of your app.
 
 Select **Plan** to edit the plan. The plan shows generated user roles and requirements, the proposed tables for your data model, and the recommended technologies to complete your solution.
 
-### Edit using chat
+:::image type="content" source="media/new-powerapps-experience/edit-plan.png" alt-text="Edit the plan pivot":::
+
+### Edit the paln using chat
 
 Open the chat, enter your questions or request changes like "Update the manager role,” “Add a requirement for offline access,” or “Remove the Power BI report”.
 
 The agent analyzes your request and applies updates to the plan.
 
-### Edit via inline actions
-
-You can also make targeted edits directly inline. 
+You can also make targeted edits directly inline.
 
 #### Edit user requirements
 
-- Select the area you want to change and start typing, or select the **Edit** button to add new roles and requirements.
-- Use inline chat while an area is selected to provide context for the agent. This saves you from describing the specific element.
+Select the area you want to change and start typing, or select the **Edit** button to add new roles and requirements. Use inline chat while an area is selected to provide context for the agent. This saves you from describing the specific element.
 
-#### Edit data model  -----Left off here
+:::image type="content" source="media/new-powerapps-experience/edit-user-roles.png" alt-text="Select Edit to make edits to user roles":::
 
-1. 10/28 – Tuesday, from 1-3pm
+#### Edit data model 
+
+In the **Data model** area, select the ellipsis for the specific table you’d like to edit.
+
+:::image type="content" source="media/new-powerapps-experience/edit-data-model.png" alt-text="Edit a data table":::
+
+You can select to view the data workspace, save the proposed tables, or chat with the agents to pass in specific context about the edit you’re requesting.
 
 #### Edit technology
 
-> In the technology area, select the ellipsis beside any recommended technology to remove it from the plan. You can also add new technologies or chat with the agent with specific context for the change you're requesting.
+In the **Technology** area, select the ellipsis beside any recommended technology to remove it from the plan. You can also add new technologies or chat with the agent with specific context for the change you're requesting.
 
 ## Editing the generated data model
 
-1. Focus on the data model by switching to the Data pivot in the workspace. Here you can see all the proposed data for the solution, the relationships between tables, and sample data to help you understand the proposed schema and to illustrate how the data is used in the generated app. These tables are in-memory and are not published yet to any data source, you will have all the flexibility to iterate on them so they can meet your business requirements.
+Select **Data** and review and refine your data. The data view displays all proposed tables, their relationships, and sample data, helping you understand the schema and how data is used in the generated app. The tables are currently in-memory only and have not been published to any data source, giving you full flexibility to modify them until they meet your business needs.  For more information, see [Create and edit tables using Power Apps](maker/data-platform/create-edit-entities-portal.md)
 
-### Edit using chat
+:::image type="content" source="media/new-powerapps-experience/edit-data-model-details.png" alt-text="Edit the data for your app":::
 
-  Ask questions and make changes to the proposed data via the chat—just ask for updates to the proposed fields, tables, and relationships. Ask for more sample data to get a rich data set for your proposed app. The agents will analyze your request and make the necessary updates.
+Legend
 
-  Note: not all actions are supported via the agent chat. See Known limitations for more details.
+1. Add table 
+1. Create relationships
+1. Data view
+1. Remove
 
-### Edit via inline actions
 
-Add new or existing tables, and also remove or make targeted edits to relationships, tables, and sample data. Select the relationship line or the ellipsis of the table you'd like to edit. From here you can remove the relationship or table from the data model or make edits.
+### Edit data using chat
+
+Use the chat to ask questions or request changes to the proposed fields, tables, and relationships.
+
+You can also ask for additional sample data to enrich your dataset for the app.
+The agents will analyze your requests and make the necessary updates.
+
+Some actions may not be supported through agent chat. For details review the [limitations](new-powerapps-experience.md#known-limitations)
+
+
+### Edit data using inline actions
+
+Add new or existing tables, or make targeted changes to relationships, tables, and sample data directly within the workspace.
+
+1. To edit, select the relationship line or the ellipsis (…) next to the table you want to modify.
+1. Select **Remove** to remove relationships or tables from the data model, or make specific edits as needed.
+
+    :::image type="content" source="media/new-powerapps-experience/edit-data-relationships.png" alt-text="Edit data relationships":::
 
 ### Add table
 
-Select **Add table** button from the command bar to add a new or existing table to your data model. Select Draft table if you want to create a new in-memory table from scratch. Select Existing Dataverse table or Existing SharePoint list if you want to bring your existing data to this solution.
+1. Select the **Add table** button in the command bar to include a new or existing table in your data model.
+2. Choose **Draft table** to create a new in-memory table from scratch, or select **Existing Dataverse table** or **Existing SharePoint list** to add data you already have.
+
+    :::image type="content" source="media/new-powerapps-experience/add-tables.png" alt-text="Add more data tables":::
 
 ### Add and edit relationship
 
@@ -151,78 +180,57 @@ Select **Add table** button from the command bar to add a new or existing table 
 
 1. Some relationship configurations are currently not supported. See Known limitations for more details.
 
-### Remove
+### Remove a table
 
-To remove a table from your solution, first select a table from the canvas, then select **Remove** from the command bar. When a Draft table is selected, this will delete the table and all associated table rows. When an existing Dataverse table or SharePoint list is selected, Remove doesn't delete the table and associate rows.
+1. Select the table you want to remove.
+2. Select **Remove** in the command bar.
 
-### View data
+   - If you remove a draft table, it will be deleted along with all its rows.
+   - If you remove an existing Dataverse table or SharePoint list, the table and its data remain in the original source; only the reference is removed from your solution.
 
-Select **View data** from the command bar or the context menu available under the ellipsis for the table you would like to edit. Here you can add, remove, and edit columns and rows of data.
+### View and edit data
+
+1. Select **View data** from the command bar.
+   :::image type="content" source="media/new-powerapps-experience/view-edit-data.png" alt-text="View and edit data"::: 
+1. In this view, you can add, remove, or modify columns and rows as needed.
 
 ### Row ownership
 
-Edit row ownership from the context menu or data view drawer. Select the row ownership option from either location to change the ownership type to User or Team or Organization.
+Follow one these steps to change the ownership type to User or Team or Organization:
 
-### Properties
+- Select **View options** and then select **Row ownershiop**.
 
-Edit table properties from the context menu or data view drawer.
+  :::image type="content" source="media/new-powerapps-experience/edit-row-ownership.png" alt-text="Edit the row ownership":::
 
-When you make changes to the app, plan, or data, the agent performs an analysis to determine whether updates are needed to the other parts of the solution. If changes are required, the agent proactively makes them and outlines the changes made in the chat.
+- Select **View data** on the command bar, select a row, and then select **Row ownership**.
 
-## ALM capabilities
+  :::image type="content" source="media/new-powerapps-experience/edit-row-ownership-detailed-view.png" alt-text="Edit the row relationship from the detailed view":::
 
-**Save**: Auto-save is not supported yet. Select Save in the command bar at any time to save the progress of your solution. Selecting save will save all edits to all solution objects to your preferred solution.
+### Edit table properties
 
-**Publish**:
+1. Select the table you want to edit and then select **View data** in the command bar.
+2. Select **Properties** to update the table’s display name, plural name, description, and other details.
 
-- **Publishing data**: Select **Publish draft tables** from the context menu of data card when you're ready to commit your table for production use. Choose between Dataverse or SharePoint as a target data source. Once the draft tables are published, the apps using the draft tables are automatically updated to use the published tables as well.
+ :::image type="content" source="maker/canvas-apps/media/tables/edit-table-properties.png" alt-text="Edit table properties":::
 
-- **Publishing app**: Select **Publish** button on the command bar of the app when you're ready to publish the app for production use. If there's any draft table being used by the app, you're prompted to publish those draft tables as well.
 
-**Share the app:** You can share your app with others for them to use. Select the **Share** button and add the accounts you'd like to be able to run the created app.
+## Application lifecycle management (ALM) capabilities
 
-## Provide feedback
+The following [ALM](/power-platform/alm/overview-alm) features are supported: 
 
-Share your feedback about the generated content or the experience at any time by using either the thumbs icons in the chat pane or the feedback icon in the command bar.
+- **Save**: Auto-save is not currently available. To save your progress, select **Save** in the command bar at any time. This action saves all edits to every solution object in your preferred solution.
+- **Publish data**: To publish draft tables, select **Publish draft tables** from the data card’s context menu when you’re ready to make a table available for production. You can choose either Dataverse or SharePoint as the target data source. Once published, any apps using these draft tables will automatically update to use the published versions.
 
-- **Provide feedback using thumbs:** to provide feedback about the generated content, use the thumbs in the chat pane. Provide additional details by selecting "Tell us why."
+- **Publishing app**: When you’re ready to release your app for production, select **Publish** in the app’s command bar. If your app uses any draft tables, you’ll be prompted to publish those tables as well.
 
-- **Provide feedback about the experience:** to provide feedback about the overall experience, use the Feedback icon in the command bar. Select the category of feedback you want to provide and then share the details in the provided input.
+**Share the app**: To share your app with others, select **Share** and add the accounts of users you want to grant access to run the app.
 
-## Known limitations
+## Shre your feedback 
 
-- The new workspace can only be used in one browser tab at a time. Working in multiple browser tabs may result in unexpected behavior.
+- **Feedback on generated content**: Use the thumbs up or thumbs down icons in the chat pane to rate the generated content. For more details, select "Tell us why" to provide specific feedback.
 
-- Only one app will be recommended/allowed in the new workspace per solution at this time
-
-- Individual components of a generated solution cannot be saved individually at this time
-
-- Pre-existing plans can't be opened in OWS
-
-- Canvas and model apps aren't recommended
-
-- You can't open or edit canvas and model apps in OWS
-
-- <span class="mark">Apps created can be shared with users, but cannot be shared with additional co-owners at this time</span>
-
-- Existing tables aren't automatically recommended during data model proposal. Makers need to manually add the existing tables to be included in their solution.
-
-- Editing existing Dataverse tables and SharePoint lists via chat isn't supported yet.
-
-- Inline editing on SharePoint lists isn't supported yet. Makers can select **Edit in new tab** to edit the SharePoint list from the SharePoint site. Some relationship configurations currently aren't supported, including many-to-many relationship between any table, many-to-one relationship between existing table and new table, and any relationship between existing tables across different data sources (for example, relationship between SharePoint list and Dataverse table).
-
-- Previously created Code apps are only editable from OWS
-
-- Code view/Split view doesn't support direct edits of code at this time.
-
-  - <span class="mark">^ this means that code apps in the apps list/home page might have edit disabled in the context menu – makers will have to open the plan to edit the app</span>
-
-  - If you export a code app and edit it outside of OWS (in VS Code for example), you might not be able to further edit it in OWS if you re-import it.
-
-  - Undo is only available by asking in the chat.
-
-  - Proposed technologies (apart from code apps) can't be directly created from the plan at this time.
-
+- **Feedback on the Overall Experience**: Select **Give feedback** in the command bar to share your thoughts about the overall experience. Choose a feedback category and enter your comments in the provided field.
+ :::image type="content" source="media/new-powerapps-experience/give-feedback.png" alt-text="Provide feedback":::
 
 
 ## Choose a data source and publish
@@ -232,3 +240,39 @@ Share your feedback about the generated content or the experience at any time by
 1. Select a data source to publish and store the draft tables in your app and then select **Publish**.
 
     :::image type="content" source="media/new-powerapps-experience/save-and-select-data-source.png" alt-text="Select a data source":::
+
+## Known limitations
+
+The followoing are limitation of the new Power Apps experience:
+
+- The new experince can only be used in one browser tab at a time. Using multiple tabs may cause unexpected behavior.
+
+- Only one app is currently supported per solution.
+
+- Individual components of a generated solution cannot be saved separately.
+
+- Pre-existing plans cannot be opened in the new experience.
+
+- Canvas and model-driven apps are not recommended or supported. You also cannot open or edit canvas and model-driven apps in the new experience.
+
+- Apps can be shared with users, but adding additional co-owners isn't supported.
+
+- Existing tables are not automatically suggested during data model creation. Makers must manually add any existing tables they want to include.
+
+- Editing existing Dataverse tables and SharePoint lists via chat is not yet supported.
+
+- Inline editing for SharePoint lists is not supported. To edit a SharePoint list, select **Edit in new tab** to open it on the SharePoint site.
+- Some relationship configurations are not supported, including:
+  - Many-to-many relationships between any tables
+  - Many-to-one relationships between an existing table and a new table
+  - Relationships between existing tables across different data sources (e.g., between a SharePoint list and a Dataverse table).
+
+- Previously created code apps can only be edited in the in the new experience. 
+
+- Code view and split view do not currently support direct code editing.
+  - As a result, code apps in the app list or home page may have the edit option disabled in the context menu. Makers must open the plan to edit the app.
+  - If you export a code app and edit it outside of OWS (such as in Visual Studio Code), you may not be able to edit it further in OWS after re-importing.
+
+- Undo is only available by making a request in the chat.
+
+- Technologies other than code apps cannot be created directly from the plan at this time.
