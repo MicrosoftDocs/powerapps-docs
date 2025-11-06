@@ -9,7 +9,7 @@ ms.author: cgarty
 ms.reviewer: angieandrews
 ms.topic: how-to
 ms.custom: canvas, bap-template
-ms.date: 7/28/2025
+ms.date: 11/6/2025
 ms.subservice: canvas-maker
 search.audienceType: 
   - maker
@@ -72,16 +72,16 @@ The following table summarizes the methods that allow you to create cloud flows 
 > [!IMPORTANT]
 > Unsupported entry points will fail to create any cloud flow until that support is added to create a solution cloud flow with that entry point. You must first create a cloud flow in a solution using a supported method.
 
-# Manage feature settings for Cloud flows and Canvas apps in Dataverse solutions
+## Manage feature settings for Cloud flows and Canvas apps in Dataverse solutions
 
 You can control whether makers can create new canvas apps and cloud flows directly in Dataverse solutions.
 
-## Existing environments
+### Existing environments
 1. Sign in to the Power Platform admin center and select an environment.  
 2. Go to **Settings** > **Product** > **Features**.  
 3. Under **Create new canvas apps and cloud flows in Dataverse solutions**, turn on **Canvas apps (Preview)** or **Cloud flows** as desired.  
 
-## New environments
+### New environments
 - All new environments provisioned with a Dataverse database have the **Cloud flows** setting enabled by default.  
 - The **Canvas apps (Preview)** setting is also enabled by default, though it remains in preview.  
 - If you prefer not to use these features, you must manually disable them in the environment settings.  
