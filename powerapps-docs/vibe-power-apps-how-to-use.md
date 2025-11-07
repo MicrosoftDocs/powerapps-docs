@@ -33,7 +33,7 @@ Key capabilities
 1. Sign in to [Power Apps](https://make.preview.powerapps.com/).
 
    > [!IMPORTANT]
-   > Make sure to turn on [Try new workspace (Preview)](vibe-power-apps-how-to.md#turn-on-the-new-experience). 
+   > Make sure to turn on [Try new workspace (Preview)](vibe-power-apps-overview.md#turn-on-the-new-experience). 
 
 
 1. Enter your prompt in the text box, and then select **Enter**.  
