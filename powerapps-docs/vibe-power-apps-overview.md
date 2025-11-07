@@ -12,7 +12,7 @@ ms.topic: concept-article
 
 [This article is prerelease documentation and is subject to change.]
 
-The new Power Apps experience is an AI-native platform that builds apps with generated code. Users can automate workflows, integrate data sources seamlessly, and accelerate app development without extensive coding knowledge.
+The new Power Apps experience is an AI-native platform that builds apps with generated code. You can automate workflows, integrate data sources seamlessly, and accelerate app development without extensive coding knowledge.
 
 :::image type="content" source="media/vibe-power-apps-overview/new-experience-home-page.png" alt-text="Screenshot of the new Power Apps experience interface.":::
 
@@ -25,22 +25,22 @@ The new Power Apps experience is an AI-native platform that builds apps with gen
 > - The new Power Apps experience is currently limited to an early action program. If you're interested, use this link to join the waitlist.
 
 
-- Copilot must be enabled in the tenant and environment. Learn more: [Copilot in Power Apps overview](maker/canvas-apps/ai-overview.md).
+- Copilot must be enabled in the tenant and environment. Learn more: [Copilot in Power Apps overview](maker/canvas-apps/ai-overview.md)
 
-- This capability is available only in the US region and in English only. Learn more in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/en-US/availability-reports/?report=copilotfeaturereport).
+- This capability is available only in the US region and in English only. Learn more in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/en-US/availability-reports/?report=copilotfeaturereport)
 
 
 ## Turn on the new experience
 
-To enable the new experience in Power Apps:
+To turn on the new experience in Power Apps:
 
-1. Sign in to [Power Apps](https://make.preview.powerapps.com/).
-1. In the top right, select **Try new experience (Preview)**.
+1. 1. Sign in to [Power Apps](https://make.preview.powerapps.com/).
+1. 1. In the top right, select **Try new experience (Preview)**.
 
    :::image type="content" source="media/vibe-power-apps-overview/new-experience.png" alt-text="Try the new Power Apps experience":::
 
 
-### Turn off preview
+### Turn off the preview
 
 To turn off the new experience and return to the default experience, in the lower left, select **Preview** > **Default homepage**.
 
