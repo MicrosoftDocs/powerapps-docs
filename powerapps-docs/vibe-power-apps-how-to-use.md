@@ -33,7 +33,7 @@ Key capabilities
 1. Sign in to [Power Apps](https://make.preview.powerapps.com/).
 
    > [!IMPORTANT]
-   > Make sure to turn on [Try new workspace (Preview)](vibe-power-apps-overview.md#turn-on-the-new-experience). 
+   > Make sure to turn on [new experience (Preview)](vibe-power-apps-overview.md#turn-on-the-new-experience). 
 
 
 1. Enter your prompt in the text box, and then select **Enter**.  
@@ -54,7 +54,7 @@ The new workspace uses a single, unified chat that keeps context as you switch b
 
 :::image type="content" source="media/vibe-powerapps-experience/plan-data-app-menu-options.png" alt-text="view plan, data, and app ":::
 
-Each focus area displays its specific tools above the work surface. For instance, when the **App** focus area is selected, you will see these options:
+Each focus area displays its specific tools above the work surface. For instance, when the **App** focus area is selected, you'll see these options:
 
 :::image type="content" source="media/vibe-powerapps-experience/app-menu-options.png" alt-text="Menu option in the App area":::
 
@@ -91,7 +91,7 @@ Use inline actions to edit the style of your app.
 
  1. Select the option to toggle inline edits.
  1. Select the item you want to edit. The element is outlined and labeled with the corresponding code object so you know exactly what you’re editing.
-    Depending on the element type, a properties pane or inline controls appear for typography, styling, or layout. Adjust values like font, color, or spacing directly in the pane. If multiple elements share the same style, a single change can apply across the group for example, changing a button color inside a card updates all buttons in that card group.
+    Depending on the element type, a properties pane or inline controls appear for typography, styling, or lay out. Adjust values like font, color, or spacing directly in the pane. If multiple elements share the same style, a single change can apply across the group for example, changing a button color inside a card updates all buttons in that card group.
  
     Inline edits update the associated code directly without an AI agent involved.
 
@@ -160,7 +160,7 @@ Legend
 Use the chat to ask questions or request changes to the proposed fields, tables, and relationships.
 
 You can also ask for additional sample data to enrich your dataset for the app.
-The agents will analyze your requests and make the necessary updates.
+The agent analyzes your requests and make the necessary updates.
 
 Some actions might not be supported through agent chat. For more information, see the [limitations](vibe-power-apps-how-to-use.md#known-limitations) section in the article.
 
@@ -186,14 +186,14 @@ Add new or existing tables, or make targeted changes to relationships, tables, a
 
 1. To edit a relationship, select the relationship line between two tables and select edit from the dropdown menu. Here you can change the relationship type or add a lookup column. You can also perform advanced edits like changing the logical names used in the relationship.
 
-1. Some relationship configurations currently aren't supported. See Known limitations for more details.
+1. Some relationship configurations currently aren't supported. For more information, see [Known limitations](vibe-power-apps-how-to-use.md#known-limitations).
 
 ### Remove a data table
 
 1. Select the table you want to remove.
 2. Select **Remove** in the command bar.
 
-   - If you remove a draft table, it will be deleted along with all its rows.
+   - If you remove a draft table, it is deleted along with all its rows.
    - If you remove an existing Dataverse table or SharePoint list, the table and its data remain in the original source; only the reference is removed from your solution.
 
 ### View and edit data in a table
@@ -226,10 +226,10 @@ Follow one of these steps to change the ownership type to **User**, **Team**, or
 
 The following [ALM](/power-platform/alm/overview-alm) features are supported: 
 
-- **Save**: Auto-save isn't currently available. To save your progress, select **Save** in the command bar at any time. This action saves all edits to every solution object in your preferred solution.
+- **Save**: AutoSave isn't currently available. To save your progress, select **Save** in the command bar at any time. This action saves all edits to every solution object in your preferred solution.
 - **Publish data**: To publish draft tables, select **Publish draft tables** from the data card’s context menu when you’re ready to make a table available for production. You can choose either Dataverse or SharePoint as the target data source. Once published, any apps using these draft tables will automatically update to use the published versions.
 
-- **Publishing app**: When you’re ready to release your app for production, select **Publish** in the app’s command bar. If your app uses any draft tables, you’ll be prompted to publish those tables as well.
+- **Publishing app**: When you’re ready to release your app for production, select **Publish** in the app’s command bar. If your app uses any draft tables, you're prompted to publish those tables as well.
 
 - **Share the app**: To share your app with others, select **Share** and add the accounts of users you want to grant access to run the app.
 
@@ -250,33 +250,33 @@ The following are limitations of the new Power Apps experience:
 
 - Only one app is currently supported per solution.
 
-- Individual components of a generated solution cannot be saved separately.
+- Individual components of a generated solution can't be saved separately.
 
-- Pre-existing plans cannot be opened in the new experience.
+- Preexisting plans can't be opened in the new experience.
 
-- Canvas and model-driven apps are not recommended or supported. You also can't open or edit canvas and model-driven apps in the new experience.
+- Canvas and model-driven apps aren't recommended or supported. You also can't open or edit canvas and model-driven apps in the new experience.
 
-- Apps can be shared with users, but adding additional co-owners is not supported.
+- Apps can be shared with users, but adding additional co-owners isn't supported.
 
-- Existing tables are not automatically suggested during data model creation. Makers must manually add any existing tables they want to include.
+- Existing tables aren't automatically suggested during data model creation. Makers must manually add any existing tables they want to include.
 
-- Editing existing Dataverse tables and SharePoint lists via chat is not yet supported.
+- Editing existing Dataverse tables and SharePoint lists via chat isn't yet supported.
 
-- Inline editing for SharePoint lists is not supported. To edit a SharePoint list, select **Edit in new tab** to open it on the SharePoint site.
-- Some relationship configurations are not supported, including:
+- Inline editing for SharePoint lists isn't supported. To edit a SharePoint list, select **Edit in new tab** to open it on the SharePoint site.
+- Some relationship configurations aren't supported, including:
   - Many-to-many relationships between any tables
   - Many-to-one relationships between an existing table and a new table
-  - Relationships between existing tables across different data sources (e.g., between a SharePoint list and a Dataverse table).
+  - Relationships between existing tables across different data sources (for example, between a SharePoint list and a Dataverse table).
 
 - Previously created code apps can only be edited in the new experience. 
 
-- Code view and split view do not currently support direct code editing.
+- Code view and split view don't currently support direct code editing.
   - As a result, code apps in the app list or home page may have the edit option disabled in the context menu. Makers must open the plan to edit the app.
-  - If you export a code app and edit it outside of OWS (such as in Visual Studio Code), you might not be able to edit it further in OWS after re-importing.
+  - If you export a code app and edit it outside of OWS (such as in Visual Studio Code), you might not be able to edit it further in OWS after reimporting.
 
 - Undo is only available by making a request in the chat.
 
-- Technologies other than code apps cannot be created directly from the plan at this time.
+- Technologies other than code apps can't be created directly from the plan at this time.
 
 ## Share your feedback 
 
