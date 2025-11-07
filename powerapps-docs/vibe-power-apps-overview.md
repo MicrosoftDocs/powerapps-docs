@@ -1,6 +1,6 @@
 ---
 title: Overview of the new Power Apps experience
-description: Discover the new AI-native Power Apps experience! Build apps with generated code, automate workflows, and integrate data seamlessly—no coding expertise is required.
+description: Discover the new AI-native Power Apps experience. Build apps with generated code, automate workflows, and integrate data seamlessly—no coding expertise is required.
 author: mduelae
 ms.author: mkaur
 ms.reviewer: mkaur
