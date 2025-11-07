@@ -27,24 +27,6 @@ Key capabilities
 > - This is a preview feature.
 > - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2216214), and are available before an official release so that customers can get early access and provide feedback.
 
-## Prerequisites
-
-- Copilot must be enabled in the tenant and environment. Learn more: [Copilot in Power Apps overview](maker/canvas-apps/ai-overview.md)
-
-- This capability is available only in the US region and in English only. Learn more in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/en-US/availability-reports/?report=copilotfeaturereport)
-
-
-## Turn on the new experience
-
-To enable the new experience in Power Apps:
-
-1. Sign in to [Power Apps](https://make.preview.powerapps.com/).
-1. In the top right, select **Try new experience (Preview)**.
-:::image type="content" source="media/vibe-powerapps-experience/turn-on-new-experience.png" alt-text="Screenshot of the Power Apps workspace showing the Try new workspace (Preview) toggle enabled and a tutorial pop-up explaining the feature.":::
-
-### Turn off preview
-
-To turn off the new experience and return to the default experience, in the lower left, select **Preview** > **Default homepage**.
 
 ## Create an app
 
