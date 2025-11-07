@@ -176,7 +176,7 @@ Add new or existing tables, or make targeted changes to relationships, tables, a
 ### Add a data table
 
 1. Select **Add table** in the command bar to include a new or existing table in your data model.
-1. Choose **Draft table** to create a new in-memory table from scratch, or select **Existing Dataverse table** or **Existing SharePoint list** to add data you already have.
+1. Choose **Draft table** to create a new in-memory table from scratch, or select **Existing Dataverse table** to add data you already have.
 
     :::image type="content" source="media/vibe-powerapps-experience/add-tables.png" alt-text="Add more data tables":::
 
@@ -194,7 +194,7 @@ Add new or existing tables, or make targeted changes to relationships, tables, a
 1. Select **Remove** in the command bar.
 
    - If you remove a draft table, you delete it along with all its rows.
-   - If you remove an existing Dataverse table or SharePoint list, the table and its data remain in the original source; you only remove the reference from your solution.
+   - If you remove an existing Dataverse table the table and its data remain in the original source; you only remove the reference from your solution.
 
 ### View and edit data in a table
 
@@ -227,7 +227,7 @@ Follow one of these steps to change the ownership type to **User**, **Team**, or
 The following [ALM](/power-platform/alm/overview-alm) features are supported: 
 
 - **Save**: AutoSave isn't currently available. To save your progress, select **Save** in the command bar at any time. This action saves all edits to every solution object in your preferred solution.
-- **Publish data**: To publish draft tables, select **Publish draft tables** from the data card’s context menu when you’re ready to make a table available for production. You can choose either Dataverse or SharePoint as the target data source. Once published, any apps using these draft tables automatically update to use the published versions.
+- **Publish data**: To publish draft tables, select **Publish draft tables** from the data card’s context menu when you’re ready to make a table available for production. You can choose Dataverse as the target data source. Once published, any apps using these draft tables automatically update to use the published versions.
 
 - **Publishing app**: When you’re ready to release your app for production, select **Publish** in the app’s command bar. If your app uses any draft tables, you're prompted to publish those tables as well.
 
@@ -260,9 +260,8 @@ The new Power Apps experience has the following limitations:
 
 - The new experience doesn't automatically suggest existing tables when you create a data model. You must manually add any existing tables you want to include.
 
-- You can't edit existing Dataverse tables and SharePoint lists through chat.
+- You can't edit existing Dataverse tables through chat.
 
-- You can't use inline editing for SharePoint lists. To edit a SharePoint list, select **Edit in new tab** to open it on the SharePoint site.
 - The new experience doesn't support some relationship configurations, including:
   - Many-to-many relationships between any tables
   - Many-to-one relationships between an existing table and a new table
