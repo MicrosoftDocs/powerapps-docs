@@ -265,7 +265,7 @@ The new Power Apps experience has the following limitations:
 - The new experience doesn't support some relationship configurations, including:
   - Many-to-many relationships between any tables
   - Many-to-one relationships between an existing table and a new table
-  - Relationships between existing tables across different data sources (for example, between a SharePoint list and a Dataverse table).
+
 
 - You can edit previously created code apps only in the new experience. 
 
