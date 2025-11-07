@@ -12,4 +12,4 @@ items:
       - name: Working with data
         href: work-data.md
       - name: Python Package Reference
-        href: package-reference.md
+        href: https://review.learn.microsoft.com/en-us/python/api/dataverse-sdk-docs-python/dataverse-overview?view=dataverse-sdk-python-latest&branch=pr-en-us-3
