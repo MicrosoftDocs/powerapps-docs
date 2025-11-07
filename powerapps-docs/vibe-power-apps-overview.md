@@ -8,13 +8,13 @@ ms.date: 11/06/2025
 ms.topic: concept-article
 ---
 
-# Overview of the new Power Apps experience (preview)
+# Overview (preview)
 
 [This article is prerelease documentation and is subject to change.]
 
 The new Power Apps experience is an AI-native platform that builds apps with generated code, allowing users to automate workflows, integrate data sources seamlessly, and accelerate app development without extensive coding knowledge.
 
-:::image type="content" source="media/vibe-power-apps-overview/image1.png" alt-text="Screenshot of the new Power Apps experience interface.":::
+:::image type="content" source="media/vibe-power-apps-overview/new-experience-home-page..png" alt-text="Screenshot of the new Power Apps experience interface.":::
 
 # Prerequisites 
 
@@ -34,7 +34,7 @@ To try the new Power Apps experience, follow these steps:
 
 Click on the "Try new experience (preview)" button in the top left of the Power Apps home page.
 
-:::image type="content" source="media/vibe-power-apps-overview/image2.png" alt-text="Screenshot of the Try new experience preview button on Power Apps home page.":::
+:::image type="content" source="media/vibe-power-apps-overview/turn-on-new-experience.png" alt-text="Screenshot of the Try new experience preview button on Power Apps home page.":::
 
 You will be redirected to the landing page. Select the appropriate tab below to learn more:
 
@@ -44,7 +44,7 @@ You will be redirected to the landing page. Select the appropriate tab below to 
 
 # 1 – Left navigation pane
 
-:::image type="content" source="media/vibe-power-apps-overview/image3.png" alt-text="Screenshot of the left navigation pane in the new Power Apps experience.":::
+:::image type="content" source="media/vibe-power-apps-overview/left-navigation-pane.png" alt-text="Screenshot of the left navigation pane in the new Power Apps experience.":::
 
 The left navigation pane shows the following:
 
@@ -60,7 +60,7 @@ The left navigation pane shows the following:
 
 # 2 – Write your prompt
 
-:::image type="content" source="media/vibe-power-apps-overview/image4.png" alt-text="Screenshot of the prompt writing interface with enhance prompt button.":::
+:::image type="content" source="media/vibe-power-apps-overview/enter-prompt.png" alt-text="Screenshot of the prompt writing interface with enhance prompt button.":::
 
 Use natural language to describe what you want to build. The *enhance prompt* button is an optional feature that provides additional detail to your prompt before generating your app.
 
