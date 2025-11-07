@@ -36,16 +36,16 @@ Key capabilities
    > Make sure to turn on [new experience (Preview)](vibe-power-apps-overview.md#turn-on-the-new-experience). 
 
 
-1. Enter your prompt in the text box, and then select **Enter**.  
+1. Enter your prompt in the text box, then select **Enter**.  
 
     :::image type="content" source="media/vibe-powerapps-experience/power-apps-prompt-text-box.png" alt-text="Screenshot of Power Apps showing a prompt input box for the new experience." lightbox="media/vibe-powerapps-experience/power-apps-prompt-text-box.png":::
 
-1. Agents start working and assets load. You’ll see the plan, data model, and app preview generate. 
+1. Agents start working and assets load. You see the plan, data model, and app preview generate. 
  
    :::image type="content" source="media/vibe-powerapps-experience/powerapps-data-model-app-preview.png" alt-text="Screenshot of the Power Apps new workspace showing AI agents generating the plan, data model, and app preview simultaneously." lightbox="media/vibe-powerapps-experience/powerapps-data-model-app-preview.png":::
 
 
-1. After the plan, data, and app are generated, choose **Save** in the top-right corner. The first save stores the app, tables, and plan together in your selected solution, while your data remains in in-memory draft tables. This lets you iterate on the data model and app quickly without committing to a data source. When you publish the app, you then select the data source.
+1. After the plan, data, and app generate, select **Save** in the upper-right corner. The first save stores the app, tables, and plan together in your selected solution, while your data remains in in-memory draft tables. This approach lets you iterate on the data model and app quickly without committing to a data source. When you publish the app, you select the data source.
 
 
 ## Review and refine your generated app and data model
@@ -54,7 +54,7 @@ The new workspace uses a single, unified chat that keeps context as you switch b
 
 :::image type="content" source="media/vibe-powerapps-experience/plan-data-app-menu-options.png" alt-text="view plan, data, and app ":::
 
-Each focus area displays its specific tools above the work surface. For instance, when the **App** focus area is selected, you'll see these options:
+Each focus area displays its specific tools above the work surface. For instance, when you select the **App** focus area, you see these options:
 
 :::image type="content" source="media/vibe-powerapps-experience/app-menu-options.png" alt-text="Menu option in the App area":::
 
@@ -71,13 +71,13 @@ Legend:
 
 When generation finishes, the visual preview appears in focus on the work surface.
 
-Once generation is complete, the visual preview appears in focus on the work surface. You can interact with the app directly, using the navigation items and buttons to see how they function and respond.
+You can interact with the app directly, using the navigation items and buttons to see how they function and respond.
 
 To inspect the code, switch to **Code** view or **Split** view. Expand the **src** folder to see subfolders and files, then select any file to view the generated code.
 
-When you modify the app, plan, or data, the agent analyzes your changes to see if updates are needed elsewhere in the solution. If so, updates are automatically applied and summarized in the chat.
+When you modify the app, plan, or data, the agent analyzes your changes to see if updates are needed elsewhere in the solution. If so, the agent automatically applies updates and summarizes them in the chat.
 
-### Edit the app using chat
+### Edit the app by using chat
 
 Use the chat input on the work surface to ask questions or request changes to the generated app. For example: “What does this button do?” or “Change theme to blue.”
 
@@ -85,17 +85,17 @@ Use the chat input on the work surface to ask questions or request changes to th
 - If you request a change, the agent evaluates the request, outlines an implementation plan, and then applies it.
 - If the agent can't implement the change directly, you receive step-by-step guidance or instructions for retrying the request.
 
-### Edit the app using inline actions
+### Edit the app by using inline actions
 
 Use inline actions to edit the style of your app.
 
  1. Select the option to toggle inline edits.
  1. Select the item you want to edit. The element is outlined and labeled with the corresponding code object so you know exactly what you’re editing.
-    Depending on the element type, a properties pane or inline controls appear for typography, styling, or lay out. Adjust values like font, color, or spacing directly in the pane. If multiple elements share the same style, a single change can apply across the group for example, changing a button color inside a card updates all buttons in that card group.
+    Depending on the element type, a properties pane or inline controls appear for typography, styling, or layout. Adjust values like font, color, or spacing directly in the pane. If multiple elements share the same style, a single change can apply across the group. For example, changing a button color inside a card updates all buttons in that card group.
  
     Inline edits update the associated code directly without an AI agent involved.
 
-    When an element is selected, open inline chat and request a change like **Make this button primary blue**. The selected element’s context is passed automatically, so you don’t have to describe it in the prompt. This is equivalent to typing the same request in the main chat but faster.
+    When you select an element, open inline chat and request a change like **Make this button primary blue**. The selected element’s context is passed automatically, so you don’t have to describe it in the prompt. This feature is equivalent to typing the same request in the main chat but faster.
 
 1. When you're done, review the result in the visual preview; if needed, switch to **Code** view or **Split** view to inspect the generated files.
 
