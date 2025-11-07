@@ -1,6 +1,6 @@
 ---
 title: Overview of the new Power Apps experience
-description: Discover the new AI-native Power Apps experience! Build apps with generated code, automate workflows, and integrate data seamlessly—no coding expertise required.
+description: Discover the new AI-native Power Apps experience! Build apps with generated code, automate workflows, and integrate data seamlessly—no coding expertise is required.
 author: mduelae
 ms.author: mkaur
 ms.reviewer: mkaur
@@ -12,7 +12,7 @@ ms.topic: concept-article
 
 [This article is prerelease documentation and is subject to change.]
 
-The new Power Apps experience is an AI-native platform that builds apps with generated code, allowing users to automate workflows, integrate data sources seamlessly, and accelerate app development without extensive coding knowledge.
+The new Power Apps experience is an AI-native platform that builds apps with generated code. Users can automate workflows, integrate data sources seamlessly, and accelerate app development without extensive coding knowledge.
 
 :::image type="content" source="media/vibe-power-apps-overview/new-experience-home-page.png" alt-text="Screenshot of the new Power Apps experience interface.":::
 
@@ -22,12 +22,12 @@ The new Power Apps experience is an AI-native platform that builds apps with gen
 >
 > - This is a preview feature.
 > - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2216214), and are available before an official release so that customers can get early access and provide feedback.
-> - The new Power Apps experience is currently limited to an early action program. If interested, use this link to join the waitlist.
+> - The new Power Apps experience is currently limited to an early action program. If you're interested, use this link to join the waitlist.
 
 
-- Copilot must be enabled in the tenant and environment. Learn more: [Copilot in Power Apps overview](maker/canvas-apps/ai-overview.md)
+- Copilot must be enabled in the tenant and environment. Learn more: [Copilot in Power Apps overview](maker/canvas-apps/ai-overview.md).
 
-- This capability is available only in the US region and in English only. Learn more in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/en-US/availability-reports/?report=copilotfeaturereport)
+- This capability is available only in the US region and in English only. Learn more in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/en-US/availability-reports/?report=copilotfeaturereport).
 
 
 ## Turn on the new experience
@@ -45,7 +45,7 @@ To turn off the new experience and return to the default experience, in the lowe
 
 ## Navigation pane
 
-The left navigation pane shows the following:
+The left navigation pane shows the following items:
 
 
 :::image type="content" source="media/vibe-power-apps-overview/left-navigation-pane.png" alt-text="Screenshot of the left navigation pane in the new Power Apps experience.":::
@@ -59,10 +59,9 @@ Legend:
 1. **Profile**: Access the environment picker, session details, notifications, and settings.
 
 
-
 ## Enter your prompt
 
-Describe your app idea using natural language.
+Describe your app idea using natural language
 
 :::image type="content" source="media/vibe-power-apps-overview/enter-prompt.png" alt-text="Screenshot of the prompt writing interface with enhance prompt button.":::
 
@@ -71,9 +70,9 @@ Legend:
 
 1. **Enter prompt**: Type a description of what you want to build.
 
-1. **Enhance prompt**: (Optional) Use this button to add more detail to your prompt before generating your app..
+1. **Enhance prompt**: (Optional) Use this button to add more detail to your prompt before generating your app.
 
-1. **Suggestions**: Want to experiment? Select one of the suggestion to explore the new app-building experience.
+1. **Suggestions**: Want to experiment? Select one of the suggestions to explore the new app-building experience.
 
 ## Next steps
 
