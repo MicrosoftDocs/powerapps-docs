@@ -140,7 +140,7 @@ You can select to view the data workspace, save the proposed tables, or chat wit
 
 In the **Technology** area, select the ellipsis beside any recommended technology to remove it from the plan. You can also add new technologies or chat with the agent with specific context for the change you're requesting.
 
-## Editing the generated data model
+## Edit the generated data model
 
 Select **Data** and review and refine your data. The data view displays all proposed tables, their relationships, and sample data, helping you understand the schema and how data's used in the generated app. The tables are currently in-memory only and haven't been published to any data source, giving you full flexibility to modify them until they meet your business needs.  For more information, see [Create and edit tables using Power Apps](maker/data-platform/create-edit-entities-portal.md)
 
@@ -148,10 +148,11 @@ Select **Data** and review and refine your data. The data view displays all prop
 
 Legend
 
-1. Add table 
-1. Create relationships
-1. Data view
-1. Remove
+1. **Data**: Edit the data model directly in this view.
+1. **Add table**: Create a new table.
+1. **Create relationships**:  Creates a table relationship between two tables.
+1. **Data view**: View the data workspace experience where you create tables, configure table relationships, and can view a diagram of your data.
+1. **Remove**: Deletes the table and all associated table rows.
 
 
 ### Edit data using chat
@@ -161,34 +162,33 @@ Use the chat to ask questions or request changes to the proposed fields, tables,
 You can also ask for additional sample data to enrich your dataset for the app.
 The agents will analyze your requests and make the necessary updates.
 
-Some actions might not be supported through agent chat. For details review the [limitations](vibe-power-apps-how-to-use.md#known-limitations)
-
+Some actions might not be supported through agent chat. For more information, see the [limitations](vibe-power-apps-how-to-use.md#known-limitations) section in the article.
 
 ### Edit data using inline actions
 
-Add new or existing tables, or make targeted changes to relationships, tables, and sample data directly within the workspace.
+Add new or existing tables, or make targeted changes to relationships, tables, and sample data directly within the data workspace.
 
 1. To edit, select the relationship line or the ellipsis (…) next to the table you want to modify.
 1. Select **Remove** to remove relationships or tables from the data model, or make specific edits as needed.
 
     :::image type="content" source="media/vibe-powerapps-experience/edit-data-relationships.png" alt-text="Edit data relationships":::
 
-### Add table
+### Add a data table
 
-1. Select the **Add table** button in the command bar to include a new or existing table in your data model.
+1. Select **Add table** in the command bar to include a new or existing table in your data model.
 2. Choose **Draft table** to create a new in-memory table from scratch, or select **Existing Dataverse table** or **Existing SharePoint list** to add data you already have.
 
     :::image type="content" source="media/vibe-powerapps-experience/add-tables.png" alt-text="Add more data tables":::
 
 ### Add and edit relationship
 
-1. Select **Add relationship** button from the command bar to add a new relationship between two tables.
+1. Select **Add relationship** in the command bar to add a new relationship between two tables.
 
 1. To edit a relationship, select the relationship line between two tables and select edit from the dropdown menu. Here you can change the relationship type or add a lookup column. You can also perform advanced edits like changing the logical names used in the relationship.
 
 1. Some relationship configurations currently aren't supported. See Known limitations for more details.
 
-### Remove a table
+### Remove a data table
 
 1. Select the table you want to remove.
 2. Select **Remove** in the command bar.
@@ -196,7 +196,7 @@ Add new or existing tables, or make targeted changes to relationships, tables, a
    - If you remove a draft table, it will be deleted along with all its rows.
    - If you remove an existing Dataverse table or SharePoint list, the table and its data remain in the original source; only the reference is removed from your solution.
 
-### View and edit data
+### View and edit data in a table
 
 1. Select **View data** from the command bar.
    :::image type="content" source="media/vibe-powerapps-experience/view-edit-data.png" alt-text="View and edit data"::: 
@@ -204,17 +204,17 @@ Add new or existing tables, or make targeted changes to relationships, tables, a
 
 ### Row ownership
 
-Follow one of these steps to change the ownership type to User, Team, or Organization:
+Follow one of these steps to change the ownership type to **User**, **Team**, or **Organization**:
 
-- Select **View options** and then select **Row ownership**.
+1. Select **View options** and then select **Row ownership**.
 
-  :::image type="content" source="media/vibe-powerapps-experience/edit-row-ownership.png" alt-text="Edit the row ownership":::
+   :::image type="content" source="media/vibe-powerapps-experience/edit-row-ownership.png" alt-text="Edit the row ownership":::
 
-- Select **View data** on the command bar, select a row, and then select **Row ownership**.
+1. Select **View data** on the command bar, select a row, and then select **Row ownership**.
 
-  :::image type="content" source="media/vibe-powerapps-experience/edit-row-ownership-detailed-view.png" alt-text="Edit the row relationship from the detailed view":::
+   :::image type="content" source="media/vibe-powerapps-experience/edit-row-ownership-detailed-view.png" alt-text="Edit the row relationship from the detailed view":::
 
-### Edit table properties
+### Edit the data table properties
 
 1. Select the table you want to edit and then select **View data** in the command bar.
 2. Select **Properties** to update the table’s display name, plural name, description, and other details.
