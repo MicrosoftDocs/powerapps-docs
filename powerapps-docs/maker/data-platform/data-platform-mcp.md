@@ -1,12 +1,12 @@
 ---
 title: Connect to Dataverse with model context protocol (MCP)
 description: Step-by-step instructions for setup, connect, and use Microsoft Dataverse with a model context protocol server. 
-author: sabinn-msft
+author: ShefaaliP
 ms.component: cds
 ms.topic: how-to
 ms.date: 11/17/2025
 ms.subservice: dataverse-maker
-ms.author: sabinn
+ms.author: spatankar
 ms. reviewer: matp
 contributors: MsSQLGirl
 search.audienceType: 
