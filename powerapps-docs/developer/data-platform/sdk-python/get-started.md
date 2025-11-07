@@ -46,17 +46,6 @@ client = DataverseClient(base_url="https://<myorg>.crm.dynamics.com",
 
 You can customize the connection using optional HTTP tunable settings to handle connection timeouts, retries, etc. Access these settings via `cfg.http_retries`, `cfg.http_backoff`, and `cfg.http_timeout`.
 
-Here is another example.
-
-```python
-client = DataverseClient(
-    tenant_id=<TID>,
-    client_id=<CID>,
-    client_secret=<CS>,
-    environment_url=<URL>
-)
-```
-
 It is good practice the test the connection before proceeding.
 
 ```python

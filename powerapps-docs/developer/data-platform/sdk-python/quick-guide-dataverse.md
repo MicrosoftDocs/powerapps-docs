@@ -18,9 +18,6 @@ In this article, we explore some key concepts about Dataverse that Python (and o
 
 Programmers coding in C#/.NET should read our extensive [Dataverse Developer Guide](../../data-platform/overview.md).
 
-> [!NOTE]
-> [!INCLUDE [cc-preview-features-definition](../../../includes/cc-preview-features-definition.md)]
-
 ## Tables and messages
 
 Data is stored in tables which are organized into rows and columns. Messages are the operations that act on tables and table data. Tables are also known and *entities*, and rows are sometimes called *records* in our documentation.
