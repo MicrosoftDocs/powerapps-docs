@@ -2416,7 +2416,7 @@
           href: ./data-platform/azure-synapse-link-choice-labels.md
         - name: Access Dataverse choices with Power BI
           href: ./data-platform/azure-synapse-link-choices-powerbi.md      
-  - name: Work with Dataverse MCP server (preview)
+  - name: Work with Dataverse MCP server
     items:
     - name: Enable the Dataverse MCP server
       href: ./data-platform/data-platform-mcp-disable.md    

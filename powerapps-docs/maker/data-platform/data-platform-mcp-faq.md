@@ -11,16 +11,9 @@ ms. reviewer: matp
 search.audienceType: 
   - maker
 ---
-# Connect to Dataverse with model context protocol FAQ (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Connect to Dataverse with model context protocol FAQ
 
 This article provides answers to frequently asked questions about using Microsoft Dataverse with a model context protocol (MCP) server.
-
-> [!IMPORTANT]
->
-> - This is a preview feature.
-> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
 ## Claude doesn't show Dataverse MCP server at all. What should I do?
 
