@@ -149,7 +149,7 @@ Select **Data** and review and refine your data. The data view displays all prop
 Legend
 
 1. **Data**: Edit the data model directly in this view.
-1. **Add table**: Create a new table.
+1. **Add table**: Add a draft or existing table.
 1. **Create relationships**:  Creates a table relationship between two tables.
 1. **Data view**: View the data workspace experience where you create tables, configure table relationships, and can view a diagram of your data.
 1. **Remove**: Deletes the table and all associated table rows.
