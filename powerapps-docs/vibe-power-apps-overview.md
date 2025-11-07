@@ -16,7 +16,7 @@ The new Power Apps experience is an AI-native platform that builds apps with gen
 
 :::image type="content" source="media/vibe-power-apps-overview/new-experience-home-page..png" alt-text="Screenshot of the new Power Apps experience interface.":::
 
-# Prerequisites 
+## Prerequisites 
 
 > [!IMPORTANT]
 >
@@ -30,7 +30,7 @@ To try the new Power Apps experience, follow these steps:
 
 1. Environment must be in an eligible locale: The new experience is only available in en-us
 
-# How to enable 
+## How to enable 
 
 Click on the "Try new experience (preview)" button in the top left of the Power Apps home page.
 
@@ -42,7 +42,7 @@ You will be redirected to the landing page. Select the appropriate tab below to 
 
 1. Write your prompt
 
-# 1 – Left navigation pane
+## Navigation pane
 
 :::image type="content" source="media/vibe-power-apps-overview/left-navigation-pane.png" alt-text="Screenshot of the left navigation pane in the new Power Apps experience.":::
 
@@ -58,7 +58,7 @@ The left navigation pane shows the following:
 
 1. Profile icon: This includes the environment picker, session details, notifications, and settings
 
-# 2 – Write your prompt
+# Enter your prompt
 
 :::image type="content" source="media/vibe-power-apps-overview/enter-prompt.png" alt-text="Screenshot of the prompt writing interface with enhance prompt button.":::
 
