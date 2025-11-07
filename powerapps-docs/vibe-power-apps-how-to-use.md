@@ -97,7 +97,7 @@ Use inline actions to edit the style of your app.
 
     When you select an element, open inline chat and request a change like **Make this button primary blue**. The selected element’s context is passed automatically, so you don’t have to describe it in the prompt. This feature is equivalent to typing the same request in the main chat but faster.
 
-1. When you're done, review the result in the visual preview; if needed, switch to **Code** view or **Split** view to inspect the generated files.
+1. When you're done, review the result in the visual preview. If needed, switch to **Code** view or **Split** view to inspect the generated files.
 
 ## Edit the generated plan
 
@@ -130,11 +130,11 @@ Select the area you want to change and start typing, or select the **Edit** butt
 
 #### Edit the data model 
 
-In the **Data model** area, select the ellipsis for the specific table you’d like to edit.
+In the **Data model** area, select the ellipsis for the specific table you want to edit.
 
 :::image type="content" source="media/vibe-powerapps-experience/edit-data-model.png" alt-text="Edit a data table":::
 
-You can select to view the data workspace, save the proposed tables, or chat with the agents to pass in specific context about the edit you’re requesting.
+You can select to view the data workspace, save the proposed tables, or chat with the agents to pass in specific context about the edit you're requesting.
 
 #### Edit technology
 
@@ -142,7 +142,7 @@ In the **Technology** area, select the ellipsis beside any recommended technolog
 
 ## Edit the generated data model
 
-Select **Data** and review and refine your data. The data view displays all proposed tables, their relationships, and sample data, helping you understand the schema and how data's used in the generated app. The tables are currently in-memory only and haven't been published to any data source, giving you full flexibility to modify them until they meet your business needs.  For more information, see [Create and edit tables using Power Apps](maker/data-platform/create-edit-entities-portal.md)
+Select **Data** and review and refine your data. The data view displays all proposed tables, their relationships, and sample data. It helps you understand the schema and how the generated app uses the data. The tables are currently in-memory only and aren't published to any data source. You can modify them until they meet your business needs. For more information, see [Create and edit tables using Power Apps](maker/data-platform/create-edit-entities-portal.md).
 
 :::image type="content" source="media/vibe-powerapps-experience/edit-data-model-details.png" alt-text="Edit the data for your app":::
 
@@ -160,11 +160,11 @@ Legend
 Use the chat to ask questions or request changes to the proposed fields, tables, and relationships.
 
 You can also ask for additional sample data to enrich your dataset for the app.
-The agent analyzes your requests and make the necessary updates.
+The agent analyzes your requests and makes the necessary updates.
 
 Some actions might not be supported through agent chat. For more information, see the [limitations](vibe-power-apps-how-to-use.md#known-limitations) section in the article.
 
-### Edit data using inline actions
+### Edit data with inline actions
 
 Add new or existing tables, or make targeted changes to relationships, tables, and sample data directly within the data workspace.
 
@@ -176,7 +176,7 @@ Add new or existing tables, or make targeted changes to relationships, tables, a
 ### Add a data table
 
 1. Select **Add table** in the command bar to include a new or existing table in your data model.
-2. Choose **Draft table** to create a new in-memory table from scratch, or select **Existing Dataverse table** or **Existing SharePoint list** to add data you already have.
+1. Choose **Draft table** to create a new in-memory table from scratch, or select **Existing Dataverse table** or **Existing SharePoint list** to add data you already have.
 
     :::image type="content" source="media/vibe-powerapps-experience/add-tables.png" alt-text="Add more data tables":::
 
@@ -184,17 +184,17 @@ Add new or existing tables, or make targeted changes to relationships, tables, a
 
 1. Select **Add relationship** in the command bar to add a new relationship between two tables.
 
-1. To edit a relationship, select the relationship line between two tables and select edit from the dropdown menu. Here you can change the relationship type or add a lookup column. You can also perform advanced edits like changing the logical names used in the relationship.
+1. To edit a relationship, select the relationship line between two tables and select **Edit** from the dropdown menu. Here you can change the relationship type or add a lookup column. You can also perform advanced edits like changing the logical names used in the relationship.
 
 1. Some relationship configurations currently aren't supported. For more information, see [Known limitations](vibe-power-apps-how-to-use.md#known-limitations).
 
 ### Remove a data table
 
 1. Select the table you want to remove.
-2. Select **Remove** in the command bar.
+1. Select **Remove** in the command bar.
 
-   - If you remove a draft table, it is deleted along with all its rows.
-   - If you remove an existing Dataverse table or SharePoint list, the table and its data remain in the original source; only the reference is removed from your solution.
+   - If you remove a draft table, you delete it along with all its rows.
+   - If you remove an existing Dataverse table or SharePoint list, the table and its data remain in the original source; you only remove the reference from your solution.
 
 ### View and edit data in a table
 
@@ -217,7 +217,7 @@ Follow one of these steps to change the ownership type to **User**, **Team**, or
 ### Edit the data table properties
 
 1. Select the table you want to edit and then select **View data** in the command bar.
-2. Select **Properties** to update the table’s display name, plural name, description, and other details.
+1. Select **Properties** to update the table’s display name, plural name, description, and other details.
 
  :::image type="content" source="maker/canvas-apps/media/tables/edit-table-properties.png" alt-text="Edit table properties":::
 
@@ -227,7 +227,7 @@ Follow one of these steps to change the ownership type to **User**, **Team**, or
 The following [ALM](/power-platform/alm/overview-alm) features are supported: 
 
 - **Save**: AutoSave isn't currently available. To save your progress, select **Save** in the command bar at any time. This action saves all edits to every solution object in your preferred solution.
-- **Publish data**: To publish draft tables, select **Publish draft tables** from the data card’s context menu when you’re ready to make a table available for production. You can choose either Dataverse or SharePoint as the target data source. Once published, any apps using these draft tables will automatically update to use the published versions.
+- **Publish data**: To publish draft tables, select **Publish draft tables** from the data card’s context menu when you’re ready to make a table available for production. You can choose either Dataverse or SharePoint as the target data source. Once published, any apps using these draft tables automatically update to use the published versions.
 
 - **Publishing app**: When you’re ready to release your app for production, select **Publish** in the app’s command bar. If your app uses any draft tables, you're prompted to publish those tables as well.
 
@@ -244,39 +244,39 @@ The following [ALM](/power-platform/alm/overview-alm) features are supported:
 
 ## Known limitations
 
-The following are limitations of the new Power Apps experience:
+The new Power Apps experience has the following limitations:
 
-- The new experience can only be used in one browser tab at a time. Using multiple tabs might cause unexpected behavior.
+- You can use the new experience in only one browser tab at a time. If you use multiple tabs, you might see unexpected behavior.
 
-- Only one app is currently supported per solution.
+- Only one app per solution is supported.
 
-- Individual components of a generated solution can't be saved separately.
+- You can't save individual components of a generated solution separately.
 
-- Preexisting plans can't be opened in the new experience.
+- You can't open preexisting plans in the new experience.
 
-- Canvas and model-driven apps aren't recommended or supported. You also can't open or edit canvas and model-driven apps in the new experience.
+- You shouldn't use canvas and model-driven apps. The new experience doesn't support canvas and model-driven apps. You can't open or edit canvas and model-driven apps in the new experience.
 
-- Apps can be shared with users, but adding additional co-owners isn't supported.
+- You can share apps with users, but you can't add co-owners.
 
-- Existing tables aren't automatically suggested during data model creation. Makers must manually add any existing tables they want to include.
+- The new experience doesn't automatically suggest existing tables when you create a data model. You must manually add any existing tables you want to include.
 
-- Editing existing Dataverse tables and SharePoint lists via chat isn't yet supported.
+- You can't edit existing Dataverse tables and SharePoint lists through chat.
 
-- Inline editing for SharePoint lists isn't supported. To edit a SharePoint list, select **Edit in new tab** to open it on the SharePoint site.
-- Some relationship configurations aren't supported, including:
+- You can't use inline editing for SharePoint lists. To edit a SharePoint list, select **Edit in new tab** to open it on the SharePoint site.
+- The new experience doesn't support some relationship configurations, including:
   - Many-to-many relationships between any tables
   - Many-to-one relationships between an existing table and a new table
   - Relationships between existing tables across different data sources (for example, between a SharePoint list and a Dataverse table).
 
-- Previously created code apps can only be edited in the new experience. 
+- You can edit previously created code apps only in the new experience. 
 
 - Code view and split view don't currently support direct code editing.
-  - As a result, code apps in the app list or home page may have the edit option disabled in the context menu. Makers must open the plan to edit the app.
+  - As a result, the edit option might be disabled in the context menu for code apps in the app list or home page. You must open the plan to edit the app.
   - If you export a code app and edit it outside of OWS (such as in Visual Studio Code), you might not be able to edit it further in OWS after reimporting.
 
-- Undo is only available by making a request in the chat.
+- You can undo only by making a request in the chat.
 
-- Technologies other than code apps can't be created directly from the plan at this time.
+- You can't create technologies other than code apps directly from the plan at this time.
 
 ## Share your feedback 
 
