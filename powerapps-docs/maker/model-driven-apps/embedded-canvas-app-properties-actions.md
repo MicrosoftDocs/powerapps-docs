@@ -22,10 +22,15 @@ search.audienceType:
 ---
 # ModelDrivenFormIntegration control properties and actions
 
-Canvas apps embedded on model-driven forms contain a special control named **ModelDrivenFormIntegration**. This control is responsible for 
-bringing contextual data from the host model-driven form to the embedded canvas app.  
+Canvas apps embedded on model-driven forms contain a special control named **ModelDrivenFormIntegration**. This control is responsible for
+bringing contextual data from the host model-driven form to the embedded canvas app.
 
-This topic explains the properties and actions available on the ModelDrivenFormIntegration control.
+> [!IMPORTANT]
+> To be able to interact with the `ModelDrivenFormIntegration` control, the canvas app must be *created* by selecting **Customize** on the **Canvas app** control properties for the model-driven form using the classic form designer. More information: [Embed a canvas app using the classic experience](embedded-canvas-app-add-classic-designer.md#embed-a-canvas-app-using-the-classic-experience)
+
+This article explains the properties and actions available on the `ModelDrivenFormIntegration` control. This control is available to customize in Power Apps Studio when you create the canvas app using the Canvas app control properties UI in the classic form designer.
+
+mod:::image type="content" source="media/embedded-canvas-app/modeldrivenformintegration-control.png" alt-text="Modeldrivenformintegration control in Power Apps Studio":::
 
 | Property or action | Description |
 |:--------------|:-------------------------|
