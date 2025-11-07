@@ -37,7 +37,7 @@ To enable the new experience in Power Apps:
 1. Sign in to [Power Apps](https://make.preview.powerapps.com/).
 1. In the top right, select **Try new experience (Preview)**.
 :::image type="content" source="media/vibe-powerapps-experience/turn-on-new-experience.png" 
-alt-text="Screenshot of the Power Apps workspace showing the Try new workspace (Preview) toggle enabled and a tutorial pop-up explaining the feature.":::
+alt-text="Screenshot showing the Try new experience (Preview) toggle enabled.":::
 
 ### Turn off preview
 
