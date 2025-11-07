@@ -54,7 +54,7 @@ Legend:
 
 1. **Home**: Returns you to the main landing page.
 1. **Plans**: Access and manage your plans.
-1. **Apps**: Open, play, or edit apps you’ve created or that have been shared with you.
+1. **Apps**: Open, play, or edit apps you created or that others shared with you.
 1. **Preview**: Switch between the new Power Apps experience and the classic home page.
 1. **Profile**: Access the environment picker, session details, notifications, and settings.
 
