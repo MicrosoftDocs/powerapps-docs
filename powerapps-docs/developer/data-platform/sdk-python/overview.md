@@ -33,7 +33,7 @@ The following list describes key features of the SDK.
     The SDK supports create, update, and delete (CUD) of tables,  optional solution association, plus retrieve and list table definitions. <!-- TODO: What about prefix usage?-->
 - Simplified authentication
 
-     The SDK supports authentication credentials of any class derived from [TokenCredential class](/dotnet/api/azure.core.tokencredential?view=azure-dotnet&preserve-view=true). For example, you can use [InteractiveBrowserCredential class](/dotnet/api/azure.identity.interactivebrowsercredential?view=azure-dotnet&preserve-view=true), [ClientSecretCredential class](/dotnet/api/azure.identity.clientsecretcredential?view=azure-dotnet&preserve-view=true), and [ManagedIdentityCredential class](/dotnet/api/azure.identity.managedidentitycredential?view=azure-dotnet&preserve-view=true).
+     The SDK supports authentication using Azure identity [credentials](/python/api/azure-identity/azure.identity?view=azure-python&preserve-view=true) that supports getting a token (get_token() method).
 - File upload
 
     Upload a file to a [File column](../../../maker/data-platform/types-of-fields.md#file-columns) in a table.
