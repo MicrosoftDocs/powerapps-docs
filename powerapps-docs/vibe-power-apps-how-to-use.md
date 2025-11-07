@@ -101,9 +101,16 @@ Use inline actions to edit the style of your app.
 
 ## Edit the generated plan
 
-Select **Plan** to edit the plan. The plan shows generated user roles and requirements, the proposed tables for your data model, and the recommended technologies to complete your solution.
+Select the **Plan** focus area to access these options:
 
 :::image type="content" source="media/vibe-powerapps-experience/edit-plan.png" alt-text="Edit the plan pivot":::
+
+Legend:
+
+1. **Plan**: Edit the plan directly in this view.
+1. **User roles**: View the generated user roles and requirements.
+1. **Data model**: See the proposed tables for the data model.
+1. **Technology**: Review the recommended technologies for your solution.
 
 ### Edit the plan using chat
 
@@ -121,7 +128,7 @@ Select the area you want to change and start typing, or select the **Edit** butt
 
 :::image type="content" source="media/vibe-powerapps-experience/edit-user-roles.png" alt-text="Select Edit to make edits to user roles":::
 
-#### Edit data model 
+#### Edit the data model 
 
 In the **Data model** area, select the ellipsis for the specific table you’d like to edit.
 
