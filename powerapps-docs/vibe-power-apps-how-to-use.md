@@ -194,7 +194,7 @@ Add new or existing tables, or make targeted changes to relationships, tables, a
 1. Select **Remove** in the command bar.
 
    - If you remove a draft table, you delete it along with all its rows.
-   - If you remove an existing Dataverse table the table and its data remain in the original source; you only remove the reference from your solution.
+   - If you remove an existing Dataverse table, the table and its data remain in the original source; you only remove the reference from your solution.
 
 ### View and edit data in a table
 
@@ -246,36 +246,15 @@ The following [ALM](/power-platform/alm/overview-alm) features are supported:
 
 The new Power Apps experience has the following limitations:
 
-- You can use the new experience in only one browser tab at a time. If you use multiple tabs, you might see unexpected behavior.
-
-- Only one app per solution is supported.
-
-- You can't save individual components of a generated solution separately.
-
-- You can't open preexisting plans in the new experience.
-
-- You shouldn't use canvas and model-driven apps. The new experience doesn't support canvas and model-driven apps. You can't open or edit canvas and model-driven apps in the new experience.
-
-- You can share apps with users, but you can't add co-owners.
-
-- The new experience doesn't automatically suggest existing tables when you create a data model. You must manually add any existing tables you want to include.
-
-- You can't edit existing Dataverse tables through chat.
-
-- The new experience doesn't support some relationship configurations, including:
-  - Many-to-many relationships between any tables
-  - Many-to-one relationships between an existing table and a new table
-
-
-- You can edit previously created code apps only in the new experience. 
-
-- Code view and split view don't currently support direct code editing.
-  - As a result, the edit option might be disabled in the context menu for code apps in the app list or home page. You must open the plan to edit the app.
-  - If you export a code app and edit it outside of OWS (such as in Visual Studio Code), you might not be able to edit it further in OWS after reimporting.
-
-- You can undo only by making a request in the chat.
-
-- You can't create technologies other than code apps directly from the plan at this time.
+- You can't access or edit apps created in the new authoring experience outside of the new authoring experience.
+- If you export a code app and edit it outside the new authoring experience (for example, in VS Code), redeploying via PAC CLI creates a new app, and it disconnects from the original plan.
+- Currently, you can only have one app per plan; multiple apps within a single plan are temporarily not enabled.
+- You can't open pre-existing plans in the new experience.
+- Canvas and model-driven apps aren't supported; you can't recommend, open, or edit these app types in the new authoring experience.
+- Existing tables aren't automatically recommended during data model proposal; you can manually add existing tables to your plan.
+- Editing existing Dataverse tables via chat isn't currently supported; you can make changes to these tables through the data editor manually.
+- Direct code edits in **Code** view or **Split** view aren't supported; you can't modify code directly in these views.
+- You can't directly create proposed technologies (apart from code apps) from the plan; you must add additional technologies manually.
 
 ## Share your feedback 
 
