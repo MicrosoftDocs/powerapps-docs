@@ -24,7 +24,6 @@ The new Power Apps experience is an AI-native platform that builds apps with gen
 > - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2216214), and are available before an official release so that customers can get early access and provide feedback.
 > - The new Power Apps experience is currently limited to an early action program. If you're interested, use this link to join the waitlist.
 
-
 - Copilot must be enabled in the tenant and environment. Learn more: [Copilot in Power Apps overview](maker/canvas-apps/ai-overview.md)
 
 - This capability is available only in the US region and in English only. Learn more in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/en-US/availability-reports/?report=copilotfeaturereport)
@@ -40,7 +39,7 @@ To turn on the new experience in Power Apps:
    :::image type="content" source="media/vibe-power-apps-overview/new-experience.png" alt-text="Try the new Power Apps experience":::
 
 
-### Turn off the preview
+### Turn off the preview experience
 
 To turn off the new experience and return to the default experience, in the lower left, select **Preview** > **Default homepage**.
 
