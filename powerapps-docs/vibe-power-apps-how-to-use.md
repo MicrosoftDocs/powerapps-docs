@@ -50,26 +50,34 @@ Key capabilities
 
 ## Review and refine your generated app and data model
 
-The new workspace uses a single, unified chat that keeps context as you switch between **Plan**, **Data**, and **App**. It speeds up development by letting you preview the app visually, inspect and edit code, and make inline changes—all without leaving the workspace.
+The new workspace uses a single, unified chat that keeps context as you switch between **Plan**, **Data**, and **App**. It speeds up development by letting you preview the app visually, inspect and edit code, and make inline changes all without leaving the workspace.
 
 :::image type="content" source="media/vibe-powerapps-experience/plan-data-app-menu-options.png" alt-text="view plan, data, and app ":::
 
-Each focus area shows its own tools above the work surface. In **App** focus, for example, you can choose visual preview, code view, or split view.
+Each focus area displays its specific tools above the work surface. For instance, when the **App** focus area is selected, you will see these options:
 
 :::image type="content" source="media/vibe-powerapps-experience/app-menu-options.png" alt-text="Menu option in the App area":::
+
+Legend:
+
+1. **App**: When selected, this focus area displays menu options specific to the app.
+1. **Preview**: View a live preview of the app.
+1. **Code**: Access and review the app’s code.
+1. **Split**: See both the code and the app preview side by side.
+1. **Refresh preview**: Reload the app preview to see the latest changes.
 
 
 ## Edit the generated app
 
 When generation finishes, the visual preview appears in focus on the work surface.
 
-You can explore the app directly on the work surface interact with the generated navigation items and buttons to see what’s produced and how it behaves.
+Once generation is complete, the visual preview appears in focus on the work surface. You can interact with the app directly, using the navigation items and buttons to see how they function and respond.
 
-To inspect the code, switch to Code view or Split view. Expand the src folder to reveal the subfolders and files that make up the app, and select any file to view the generated code.
+To inspect the code, switch to **Code** view or **Split** view. Expand the **src** folder to see subfolders and files, then select any file to view the generated code.
 
-When you modify the app, plan, or data, the agent analyzes your changes to see if updates are needed elsewhere in the solution. If so, the agent automatically applies those updates and summarizes the changes in the chat.
+When you modify the app, plan, or data, the agent analyzes your changes to see if updates are needed elsewhere in the solution. If so, updates are automatically applied and summarized in the chat.
 
-### Edit using chat
+### Edit the app using chat
 
 Use the chat input on the work surface to ask questions or request changes to the generated app. For example: “What does this button do?” or “Change theme to blue.”
 
@@ -77,7 +85,7 @@ Use the chat input on the work surface to ask questions or request changes to th
 - If you request a change, the agent evaluates the request, outlines an implementation plan, and then applies it.
 - If the agent can't implement the change directly, you receive step-by-step guidance or instructions for retrying the request.
 
-### Edit using inline actions
+### Edit the app using inline actions
 
 Use inline actions to edit the style of your app.
 
@@ -87,9 +95,9 @@ Use inline actions to edit the style of your app.
  
     Inline edits update the associated code directly without an AI agent involved.
 
-    When an element is selected, open inline chat and request a change like “Make this button primary blue”. The selected element’s context is passed automatically, so you don’t have to describe it in the prompt. This is equivalent to typing the same request in the main chat but faster.
+    When an element is selected, open inline chat and request a change like **Make this button primary blue**. The selected element’s context is passed automatically, so you don’t have to describe it in the prompt. This is equivalent to typing the same request in the main chat but faster.
 
-1. When you're done, review the result in the visual preview; if needed, switch to Code view or Split view to inspect the generated files.
+1. When you're done, review the result in the visual preview; if needed, switch to **Code** view or **Split** view to inspect the generated files.
 
 ## Edit the generated plan
 
@@ -99,11 +107,13 @@ Select **Plan** to edit the plan. The plan shows generated user roles and requir
 
 ### Edit the plan using chat
 
-Open the chat, enter your questions or request changes like "Update the manager role,” “Add a requirement for offline access,” or “Remove the Power BI report”.
+Open the chat and enter your questions or request changes, such as:
 
-The agent analyzes your request and applies updates to the plan.
+- Update the manager role
+- Add a requirement for offline access
+- Remove the Power BI report
 
-You can also make targeted edits directly inline.
+The agent analyzes your request and applies updates to the plan. You can also make targeted edits directly inline.
 
 #### Edit user requirements
 
