@@ -216,13 +216,6 @@ The following [ALM](/power-platform/alm/overview-alm) features are supported:
 
 - **Share the app**: To share your app with others, select **Share** and add the accounts of users you want to grant access to run the app.
 
-## Share your feedback 
-
-- **Feedback on generated content**: Use the thumbs up or thumbs down icons in the chat pane to rate the generated content. For more details, select **Tell us why** to provide specific feedback.
-
-- **Feedback on the overall experience**: Select **Give feedback** in the command bar to share your thoughts about the overall experience. Choose a feedback category and enter your comments in the provided field.
- :::image type="content" source="media/vibe-powerapps-experience/give-feedback.png" alt-text="Provide feedback":::
-
 
 ## Choose a data source and publish
 
@@ -267,3 +260,10 @@ The following are limitations of the new Power Apps experience:
 - Undo is only available by making a request in the chat.
 
 - Technologies other than code apps cannot be created directly from the plan at this time.
+
+## Share your feedback 
+
+- **Feedback on generated content**: Use the thumbs up or thumbs down icons in the chat pane to rate the generated content. For more details, select **Tell us why** to provide specific feedback.
+
+- **Feedback on the overall experience**: Select **Give feedback** in the command bar to share your thoughts about the overall experience. Choose a feedback category and enter your comments in the provided field.
+ :::image type="content" source="media/vibe-powerapps-experience/give-feedback.png" alt-text="Provide feedback":::
