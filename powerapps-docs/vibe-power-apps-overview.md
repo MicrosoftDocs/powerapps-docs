@@ -34,8 +34,8 @@ The new Power Apps experience is an AI-native platform that builds apps with gen
 
 To turn on the new experience in Power Apps:
 
-1. 1. Sign in to [Power Apps](https://make.preview.powerapps.com/).
-1. 1. In the top right, select **Try new experience (Preview)**.
+1. Sign in to [Power Apps](https://make.preview.powerapps.com/).
+1. In the top right, select **Try new experience (Preview)**.
 
    :::image type="content" source="media/vibe-power-apps-overview/new-experience.png" alt-text="Try the new Power Apps experience":::
 
