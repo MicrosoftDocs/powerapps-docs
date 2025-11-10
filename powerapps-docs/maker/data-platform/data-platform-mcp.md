@@ -228,7 +228,7 @@ To learn how to use Visual Studio Code and MCP Severs go to this document: [Use 
 
 Once connected to the Dataverse MCP Server, you can choose from various tools in the Power Platform environment.
 
-| Tool          | Tool Description                                                                    |
+| Tool          | Description                                                                    |
 |---------------|--------------------------------------------------------------------------------------|
 | `create_record` | Inserts a new row into a Dataverse table and returns the GUID.                       |
 | `describe_table`| Retrieves the T-SQL schema of a specified table.                                    |
