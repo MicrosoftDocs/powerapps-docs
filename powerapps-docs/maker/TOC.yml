@@ -243,6 +243,12 @@
     href: search.md      
   - name: Use Dynamics 365 App for Outlook
     href: ../user/use-outlook-app.md
+- name: New experience in Power Apps
+  items:
+  - name: Overview
+    href: ../vibe-power-apps-overview.md
+  - name: Create apps, data, and plans together 
+    href: ../vibe-power-apps-how-to-use.md
 - name: Plans  
   items:
   - name: Overview
