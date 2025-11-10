@@ -13,13 +13,13 @@ ms.topic: concept-article
 
 [This article is prerelease documentation and is subject to change.]
 
-The new experience in Power Apps combines plans, data models, and apps in a single design surface. This combination lets you design an app, data model, and requirements together. It reduces context switching and keeps you focused. 
+The new experience in Power Apps combines plans, data models, and apps in a single design surface. This integrated approach minimizes distractions and keeps you focused on building solutions efficiently.
 
 Key capabilities
 
-- **Design everything together**: Create apps, plans, and data models in a single, seamless process.
-- **Build faster with AI**: Iterate and prototype through chat, from idea to a working app.
-- **One-click app generation**: Modern web apps are created from your requirements and data.
+- **Design everything together**: Build apps, plans, and data models together in a single, cohesive process.
+- **Build faster with AI**: Quickly move from ideas to working prototypes using conversational chat.
+- **OInstant app creation**: Generate modern web apps directly from your requirements and data with one click.
 
 
 > [!IMPORTANT]
