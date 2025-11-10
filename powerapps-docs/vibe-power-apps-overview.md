@@ -25,7 +25,7 @@ The new Power Apps experience is an AI-native platform that builds apps with gen
 > - The new Power Apps experience is currently limited to an early action program. If you're interested, use this link to join the waitlist.
 
 - Copilot must be enabled in the tenant and environment. Learn more: [Copilot in Power Apps overview](maker/canvas-apps/ai-overview.md)
-
+- This capability is not available in a default environment.
 - This capability is available only in the US region and in English only. Learn more in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/en-US/availability-reports/?report=copilotfeaturereport)
 
 
