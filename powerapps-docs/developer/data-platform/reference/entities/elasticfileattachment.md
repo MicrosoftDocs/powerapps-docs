@@ -138,7 +138,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`objectid`|
 |RequiredLevel|None|
 |Type|Lookup|
-|Targets|componentversionnrddatasource, sourcecontrolcomponentpayload|
+|Targets|componentchangesetpayload, componentversionnrddatasource, sourcecontrolcomponentpayload|
 
 ### <a name="BKMK_ObjectIdTypeCode"></a> ObjectIdTypeCode
 
@@ -341,8 +341,22 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 
 These relationships are many-to-one. Listed by **SchemaName**.
 
+- [componentchangesetpayload_ElasticFileAttachments](#BKMK_componentchangesetpayload_ElasticFileAttachments)
 - [componentversionnrddatasource_ElasticFileAttachments](#BKMK_componentversionnrddatasource_ElasticFileAttachments)
 - [sourcecontrolcomponentpayload_ElasticFileAttachments](#BKMK_sourcecontrolcomponentpayload_ElasticFileAttachments)
+
+### <a name="BKMK_componentchangesetpayload_ElasticFileAttachments"></a> componentchangesetpayload_ElasticFileAttachments
+
+One-To-Many Relationship: [componentchangesetpayload componentchangesetpayload_ElasticFileAttachments](componentchangesetpayload.md#BKMK_componentchangesetpayload_ElasticFileAttachments)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`componentchangesetpayload`|
+|ReferencedAttribute|`componentchangesetpayloadid`|
+|ReferencingAttribute|`objectid`|
+|ReferencingEntityNavigationPropertyName|`objectid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_componentversionnrddatasource_ElasticFileAttachments"></a> componentversionnrddatasource_ElasticFileAttachments
 
@@ -353,7 +367,7 @@ One-To-Many Relationship: [componentversionnrddatasource componentversionnrddata
 |ReferencedEntity|`componentversionnrddatasource`|
 |ReferencedAttribute|`componentversionnrddatasourceid`|
 |ReferencingAttribute|`objectid`|
-|ReferencingEntityNavigationPropertyName|`objectid`|
+|ReferencingEntityNavigationPropertyName|`objectid_componentversionnrddatasource`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
@@ -375,9 +389,22 @@ One-To-Many Relationship: [sourcecontrolcomponentpayload sourcecontrolcomponentp
 
 These relationships are one-to-many. Listed by **SchemaName**.
 
+- [ElasticFileAttachment_componentchangesetpayload_payload](#BKMK_ElasticFileAttachment_componentchangesetpayload_payload)
 - [ElasticFileAttachment_componentversionnrddatasource_Payload](#BKMK_ElasticFileAttachment_componentversionnrddatasource_Payload)
 - [ElasticFileAttachment_SourceControlComponentPayload_ComponentPayload](#BKMK_ElasticFileAttachment_SourceControlComponentPayload_ComponentPayload)
 - [ElasticFileAttachment_SourceControlComponentPayload_ComponentPayloadInGit](#BKMK_ElasticFileAttachment_SourceControlComponentPayload_ComponentPayloadInGit)
+
+### <a name="BKMK_ElasticFileAttachment_componentchangesetpayload_payload"></a> ElasticFileAttachment_componentchangesetpayload_payload
+
+Many-To-One Relationship: [componentchangesetpayload ElasticFileAttachment_componentchangesetpayload_payload](componentchangesetpayload.md#BKMK_ElasticFileAttachment_componentchangesetpayload_payload)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`componentchangesetpayload`|
+|ReferencingAttribute|`payload`|
+|ReferencedEntityNavigationPropertyName|`ElasticFileAttachment_componentchangesetpayload_payload`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_ElasticFileAttachment_componentversionnrddatasource_Payload"></a> ElasticFileAttachment_componentversionnrddatasource_Payload
 

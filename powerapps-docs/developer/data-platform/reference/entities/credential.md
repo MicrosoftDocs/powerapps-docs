@@ -76,6 +76,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [groupmapping](#BKMK_groupmapping)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsCustomizable](#BKMK_IsCustomizable)
+- [logincontext](#BKMK_logincontext)
 - [name](#BKMK_name)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
@@ -125,6 +126,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |4|**CyberArkIdentity**|
 |5|**CertificateBasedAuthentication**|
 |6|**MachineMapping**|
+|7|**ConnectionReference**|
 
 ### <a name="BKMK_credentialId"></a> credentialId
 
@@ -305,6 +307,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|SystemRequired|
 |Type|ManagedProperty|
 
+### <a name="BKMK_logincontext"></a> logincontext
+
+|Property|Value|
+|---|---|
+|Description|**The login context in which the credential should be used.**|
+|DisplayName|**Login context**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`logincontext`|
+|RequiredLevel|None|
+|Type|Memo|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100000|
+
 ### <a name="BKMK_name"></a> name
 
 |Property|Value|
@@ -437,7 +456,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description||
+|Description|**Types of allowed usage for the credential.**|
 |DisplayName|**Usage Type**|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -454,6 +473,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |280920000|**Connection**|
 |280920001|**DesktopScript**|
 |280920002|**Network**|
+|280920003|**Cua**|
 
 ### <a name="BKMK_username"></a> username
 

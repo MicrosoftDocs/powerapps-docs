@@ -295,29 +295,8 @@
           href: ./canvas-apps/customize-list-form.md  
       - name: From Excel
         href: ./canvas-apps/get-started-create-from-blank.md
-    - name: Create an app from a design or a template
-      items:
-      - name: Create an app from a template
-        href: ./canvas-apps/get-started-test-drive.md
-      - name: Create an app from a design
-        items:
-        - name: Express design overview
-          href: ./canvas-apps/express-design.md
-        - name: Create an app from an image
-          href: ./canvas-apps/app-from-image.md
-        - name: Create an app from Figma
-          items:
-          - name: Overview
-            href: ./canvas-apps/figma/overview.md
-          - name: Design apps using the UI kit
-            href: ./canvas-apps/figma/design-using-kit.md
-          - name: Components supported by the UI kit
-            href: ./canvas-apps/figma/supported-components.md
-          - name: Create a canvas app from Figma
-            href: ./canvas-apps/figma/create-app-from-figma.md
-          - name: Troubleshoot common errors
-            href: ./canvas-apps/figma/common-errors.md
-            displayName: Troubleshoot common errors when creating app from Figma
+    - name: Create an app from a template
+      href: ./canvas-apps/get-started-test-drive.md
   - name: Design and build an app
     items:
       - name: Design and build an app
@@ -2437,7 +2416,7 @@
           href: ./data-platform/azure-synapse-link-choice-labels.md
         - name: Access Dataverse choices with Power BI
           href: ./data-platform/azure-synapse-link-choices-powerbi.md      
-  - name: Connect to Dataverse with MCP (preview)
+  - name: Work with Dataverse MCP server (preview)
     items:
     - name: Enable the Dataverse MCP server
       href: ./data-platform/data-platform-mcp-disable.md    

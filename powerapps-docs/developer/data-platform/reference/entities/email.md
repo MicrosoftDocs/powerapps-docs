@@ -116,6 +116,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [ParentActivityId](#BKMK_ParentActivityId)
 - [PriorityCode](#BKMK_PriorityCode)
 - [ProcessId](#BKMK_ProcessId)
+- [PurviewRights](#BKMK_PurviewRights)
 - [ReadReceiptRequested](#BKMK_ReadReceiptRequested)
 - [ReceivingMailboxId](#BKMK_ReceivingMailboxId)
 - [RegardingObjectId](#BKMK_RegardingObjectId)
@@ -855,6 +856,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`processid`|
 |RequiredLevel|None|
 |Type|Uniqueidentifier|
+
+### <a name="BKMK_PurviewRights"></a> PurviewRights
+
+|Property|Value|
+|---|---|
+|Description|**Purview Rights**|
+|DisplayName|**Purview Rights**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`purviewrights`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|500|
 
 ### <a name="BKMK_ReadReceiptRequested"></a> ReadReceiptRequested
 

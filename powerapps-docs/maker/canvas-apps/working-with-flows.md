@@ -6,7 +6,7 @@ author: TashasEv
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 12/17/2024
+ms.date: 11/10/2025
 ms.subservice: canvas-maker
 ms.author: tashas
 search.audienceType: 
@@ -143,13 +143,16 @@ You can now edit flows added to your app without leaving Power Apps Studio.
 
 ## Refresh a flow
 
-If any changes are made to the flow in [Power Automate](https://make.powerautomate.com) (instead of using Power Apps Studio) while you're editing the app, refresh your flow to get the latest changes.
+If any changes are made to the flow in [Power Automate](https://make.powerautomate.com) (instead of using Power Apps Studio), refresh your flow to get the latest changes.
 
 To refresh the flow and pull the latest changes, select **...** (ellipsis) to the right of your flow, and then select **Refresh**.
 
 :::image type="content" source="media/working-with-flows/refresh-flow.png" alt-text="A screenshot showing the option to refresh the flow and pull in the latest changes.":::
 
 A loading spinner appears, and the flow is refreshed.
+
+  >[!IMPORTANT]
+  > After making changes to a flow outside of Power Apps Studio, you must perform this step; otherwise, the flow may fail to run—even in previously published apps. Skipping this step can also lead to performance issues in the Power Platform admin center, as each time the canvas app runs, it will try to validate the flow's connections using outdated information, which may not succeed.
 
 ## Remove a flow
 

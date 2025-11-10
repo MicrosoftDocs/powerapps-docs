@@ -22,7 +22,6 @@ Messages represent operations that can be performed on the table. They may also 
 | `Assign`<br />Event: True |`PATCH` /managedidentities(*managedidentityid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
 | `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `Create`<br />Event: False |`POST` /managedidentities<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
-| `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 | `Delete`<br />Event: True |`DELETE` /managedidentities(*managedidentityid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
 | `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
@@ -35,9 +34,7 @@ Messages represent operations that can be performed on the table. They may also 
 | `RevokeAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
 | `SetState`<br />Event: True |`PATCH` /managedidentities(*managedidentityid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `statecode` and `statuscode` properties. |<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 | `Update`<br />Event: False |`PATCH` /managedidentities(*managedidentityid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
-| `UpdateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 | `Upsert`<br />Event: False |`PATCH` /managedidentities(*managedidentityid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
-| `UpsertMultiple`<br />Event: False |<xref:Microsoft.Dynamics.CRM.UpsertMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpsertMultipleRequest>|
 
 ## Properties
 
@@ -64,6 +61,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [ApplicationId](#BKMK_ApplicationId)
 - [ClientSecret](#BKMK_ClientSecret)
 - [CredentialSource](#BKMK_CredentialSource)
+- [IdentityType](#BKMK_IdentityType)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [KeyVaultReferenceId](#BKMK_KeyVaultReferenceId)
@@ -131,6 +129,27 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |1|**KeyVault**|
 |2|**IsManaged**|
 |3|**MicrosoftFirstPartyCertificate**|
+
+### <a name="BKMK_IdentityType"></a> IdentityType
+
+|Property|Value|
+|---|---|
+|Description|**Determines Identity type for Managed Identity**|
+|DisplayName|**Identity Type**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`identitytype`|
+|RequiredLevel|SystemRequired|
+|Type|Picklist|
+|DefaultFormValue|0|
+|GlobalChoiceName|`identitytype`|
+
+#### IdentityType Choices/Options
+
+|Value|Label|
+|---|---|
+|0|**App Registeration**|
+|1|**AgentId**|
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
