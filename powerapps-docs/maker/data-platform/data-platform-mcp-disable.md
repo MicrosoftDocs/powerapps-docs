@@ -1,5 +1,5 @@
 ---
-title: Enable the Dataverse model context protocol (MCP) server
+title: Configure the Dataverse model context protocol (MCP) server
 description: Step-by-step instructions about how to enable or disable a Microsoft Dataverse model context protocol server that uses advanced connector policies. 
 author: ShefaaliP
 ms.component: cds
@@ -11,24 +11,26 @@ ms. reviewer: matp
 search.audienceType: 
   - maker
 ---
-# Enable the Dataverse MCP server for an environment
+# Configure the Dataverse MCP server for an environment
 
-Microsoft Dataverse model context protocol (MCP) is provided through the connector infrastructure. While the Dataverse connector itself is a non-blockable connector—meaning you can't disable it using traditional data loss prevention (DLP) settings within the Power Platform admin center—you can selectively disable a Dataverse MCP server by setting advanced connector policies.
+<!--Needs intro -->
 
 ## Prerequisites
 
-- Power Platform administrator role in order to manage environment settings, environment group, and connector policies.
+- Power Platform administrator role in order to enable Dataverse MCP server, manage environment settings, environment group, and connector policies.
 - The steps described in this article require that the environment be a Managed Environment.
-- By default, the Dataverse MCP server is disabled for environments. You must enable it in the Power Platform admin center before you can connect to it. More information: [Enable the Dataverse MCP server for an environment](#enable-the-dataverse-mcp-server-for-an-environment)
-- The Power Platform with Dataverse environment must be setup with the MCP via connector as described in [Connect to Dataverse with model context protocol](data-platform-mcp.md).
+- By default, the Dataverse MCP server is enabled for all environments in Microsoft Copilot Studio. You must enable the additional clients it in the Power Platform admin center before you can connect to the client.
 
-## Enable the Dataverse MCP server for an environment
+## Configure and manage the Dataverse MCP server for an environment
 
-1. To enable Dataverse MCP server, go to [Power Platform Admin Center](https://admin.powerplatform.microsoft.com/). Select **Manage** > **Environments**.
-1. Select the **Environment Name** where you want to turn on the Dataverse MCP server, and then select **Settings**.
-1. Under **Settings**, select **Product** > **Features**.
-1. Under **Features** scroll down to locate **Dataverse MCP server** and turn it **On**.
+1. Go to [Power Platform Admin Center](https://admin.powerplatform.microsoft.com/). Select **Manage** > **Environments**.
+1. Select the **Environment Name** where you want to turn on the Dataverse MCP server, and then select **Settings**. Under **Settings**, select **Product** > **Features**. Scroll down to locate **Dataverse Model Context Protocol**.
+1. By default the **Allow MCP clients to interact with Dataverse MCP server** is turned on for Microsoft Copilot Studio, clear it to turn it off. <!--You're prompted for confirmation that it will halt any existing workflows. Need clarification on impact. -->
+1. To enable the Dataverse MCP server for Visual Studio GitHub Copilot or any other non-Microsoft client, you must use advanced settings to enable each client. Select **Advanced Settings**.
+1. The list of available clients is shown. Open the client that you want. In this example, the **Microsoft GitHub Copilot** client is enabled.
+1. <!-- Stop here-->
 
+<!-- REMOVE THIS IF NO LONGER NEEDED
 ## Connect to Dataverse MCP server in Visual Studio Code
 
 1. Go to this view in Dataverse, where *&lt;orgurl&gt;* is your environment URL, such as *contoso.crm.dynamics.com*:
@@ -49,7 +51,7 @@ Microsoft Dataverse model context protocol (MCP) is provided through the connect
    :::image type="content" source="media/data-platform-mcp/data-platform-connector.png" alt-text="Screenshot showing where to select the Microsoft Dataverse connector and then select Edit actions" lightbox="media/data-platform-mcp/data-platform-connector.png":::
 1. Locate the action named **Dataverse MCP Server**, and turn **Off** this action as needed for your environment group.
    :::image type="content" source="media/data-platform-mcp/dataverse-mcp-server-action.png" alt-text="Screenshot of the Dataverse MCP server action" lightbox="media/data-platform-mcp/dataverse-mcp-server-action.png":::
-1. Select **Save**, and then select **Publish rules** to the enable the rule.
+1. Select **Save**, and then select **Publish rules** to the enable the rule. -->
 
 ## Related articles
 
