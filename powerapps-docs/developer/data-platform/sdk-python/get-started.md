@@ -27,7 +27,7 @@ In this article, we describe how to set up your Python environment to access Dat
 From a terminal window, execute the following command. This installs the SDK from [pypi.org](https://pypi.org/).
 
 ```python
-python.exe -m pip install dataverse-sdk
+python.exe -m pip install PowerPlatform-Dataverse-Client
 ```
 
 ## Connect to Dataverse
@@ -36,8 +36,8 @@ This code example imports the client and configuration types from the SDK packag
 
 ```python
 from azure.identity import InteractiveBrowserCredential
-from dataverse_sdk import DataverseClient
-from dataverse_sdk.config import DataverseConfig
+from PowerPlatform.Dataverse import DataverseClient
+from PowerPlatform.Dataverse.config import DataverseConfig
 
 cfg = DataverseConfig()  # defaults to language_code=1033
 client = DataverseClient(base_url="https://<myorg>.crm.dynamics.com", 
