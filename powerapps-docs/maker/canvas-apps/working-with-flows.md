@@ -6,7 +6,7 @@ author: TashasEv
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 12/17/2024
+ms.date: 11/10/2025
 ms.subservice: canvas-maker
 ms.author: tashas
 search.audienceType: 
@@ -152,7 +152,7 @@ To refresh the flow and pull the latest changes, select **...** (ellipsis) to th
 A loading spinner appears, and the flow is refreshed.
 
   >[!IMPORTANT]
-  > Failing to perform this step after making changes to a flow outside of Power Apps Studio can cause the run of the flow to fail, even for apps that had been previously published. It may also cause performance issues in the Power Platform, as each time the canvas app runs, it will attempt to validate the connections used by the flow based on the information from the time the flow was last added or refreshed, which may not succeed.
+  > After making changes to a flow outside of Power Apps Studio, you must perform this step; otherwise, the flow may fail to run—even in previously published apps. Skipping this step can also lead to performance issues in the Power Platform admin center, as each time the canvas app runs, it will try to validate the flow's connections using outdated information, which may not succeed.
 
 ## Remove a flow
 
