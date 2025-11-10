@@ -35,6 +35,7 @@ search.audienceType:
    :::image type="content" source="media/data-platform-mcp/data-platform-mcp-client-enabled.png" alt-text="GitHub Copilot client enabled." lightbox="media/data-platform-mcp/data-platform-mcp-client-enabled.png":::
 
 1. Select **Save & Close**.
+1. Repeat steps 4-7 to enable other clients as needed.
 
 ## Disable the Dataverse MCP server for an  environment in Copilot Studio <!-- What do you mean by "in Copilot Studio?" Worded this way it makes it sound like you disable the server in MCS, which is not how these instructions work. Do you mean only the Microsoft Copilot Studio MCP server or any MCP servers that appear in Copilot Studio?-->
 
