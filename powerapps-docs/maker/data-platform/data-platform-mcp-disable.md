@@ -27,31 +27,25 @@ search.audienceType:
 1. Select the **Environment Name** where you want to turn on the Dataverse MCP server, and then select **Settings**. Under **Settings**, select **Product** > **Features**. Scroll down to locate **Dataverse Model Context Protocol**.
 1. By default the **Allow MCP clients to interact with Dataverse MCP server** is turned on for Microsoft Copilot Studio, clear it to turn it off. <!--You're prompted for confirmation that it will halt any existing workflows. Need clarification on impact. -->
 1. To enable the Dataverse MCP server for Visual Studio GitHub Copilot or any other non-Microsoft client, you must use advanced settings to enable each client. Select **Advanced Settings**.
+      :::image type="content" source="media/data-platform-mcp/data-platform-mcp-enable-clients.png" alt-text="Open GitHub Copilot to enable.":::
+
 1. The list of available clients is shown. Open the client that you want. In this example, the **Microsoft GitHub Copilot** client is enabled.
-1. <!-- Stop here-->
+   :::image type="content" source="media/data-platform-mcp/data-platform-mcp-enable-github-copilot.png" alt-text="Enable GitHub Copilot client." lightbox="media/data-platform-mcp/data-platform-enable-mcp-github-copilot.png":::
+1. On the MCP client record, set **Is Enabled** to **Yes**.
+   :::image type="content" source="media/data-platform-mcp/data-platform-mcp-client-enabled.png" alt-text="GitHub Copilot client enabled." lightbox="media/data-platform-mcp/data-platform-mcp-client-enabled.png":::
 
-<!-- REMOVE THIS IF NO LONGER NEEDED
-## Connect to Dataverse MCP server in Visual Studio Code
-
-1. Go to this view in Dataverse, where *&lt;orgurl&gt;* is your environment URL, such as *contoso.crm.dynamics.com*:
-
-      `https://*<orgurl>*/main.aspx?appid=76d9c540-8ca5-f011-b422-000d3a346029&pagetype=entitylist&etn=allowedmcpclient&viewid=2f87c3fe-4ed3-4425-9800-77ff580d9135&viewType=1039`
-1. Open the **Microsoft Github Copilot** record.
-   :::image type="content" source="media/data-platform-mcp/allowed-mcp-clients.png" alt-text="Allowed MCP clients" lightbox="media/data-platform-mcp/allowed-mcp-clients.png":::
-1. Turn **Is Enabled** to **Yes**.
-   :::image type="content" source="media/data-platform-mcp/github-copilot-record.png" alt-text="GitHub Copilot record enable." lightbox="media/data-platform-mcp/github-copilot-record.png":::
 1. Select **Save & Close**.
 
-## Disable the Dataverse MCP server for an  environment
+## Disable the Dataverse MCP server for an  environment in Copilot Studio <!-- What do you mean by "in Copilot Studio?" Worded this way it makes it sound like you disable the server in MCS, which is not how these instructions work. Do you mean only the Microsoft Copilot Studio MCP server or any MCP servers that appear in Copilot Studio?-->
 
-1. Go to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/), select **Manage**, and then select **Environment groups**. 
+1. Go to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/), select **Manage**, and then select **Environment groups**.
 1. Select **New group** to create a new environment group or select an existing group where you want to turn off the Dataverse MCP server.
 1. Open the environment group, and then on the **Rules** tab select **Advanced connector policies**.
 1. Select the **Microsoft Dataverse** connector, and then select **Edit actions**.
    :::image type="content" source="media/data-platform-mcp/data-platform-connector.png" alt-text="Screenshot showing where to select the Microsoft Dataverse connector and then select Edit actions" lightbox="media/data-platform-mcp/data-platform-connector.png":::
 1. Locate the action named **Dataverse MCP Server**, and turn **Off** this action as needed for your environment group.
    :::image type="content" source="media/data-platform-mcp/dataverse-mcp-server-action.png" alt-text="Screenshot of the Dataverse MCP server action" lightbox="media/data-platform-mcp/dataverse-mcp-server-action.png":::
-1. Select **Save**, and then select **Publish rules** to the enable the rule. -->
+1. Select **Save**, and then select **Publish rules** to the enable the rule. 
 
 ## Related articles
 
