@@ -1,6 +1,6 @@
 ---
-title: Connect Dataverse MCP with Github Copilot in Visual Studio Code
-description: Learn how to connect to Dataverse using the Model Context Protocol (MCP) server in Visual Studio Code Github Copilot. Follow step-by-step instructions to enable seamless data interaction.
+title: Connect Dataverse MCP with GitHub Copilot in Visual Studio Code
+description: Learn how to connect to Dataverse using the Model Context Protocol (MCP) server in Visual Studio Code GitHub Copilot. Follow step-by-step instructions to enable seamless data interaction.
 #customer intent: As a Power Apps maker, I want to connect to Dataverse using the Model Context Protocol server so that I can choose from different MCP clients that can interact with my data through natural language queries.
 author: ShefaaliP
 ms.author: spatankar
@@ -10,9 +10,9 @@ ms.topic: how-to
 ms.collection: bap-ai-copilot
 ---
 
-# Connect Dataverse MCP with Github Copilot in Visual Studio Code
+# Connect Dataverse MCP with GitHub Copilot in Visual Studio Code
 
-This article explains how to set up and use the Dataverse MCP server with Visual Studio Github Copilot.
+This article explains how to set up and use the Microsoft Dataverse model context protocol (MCP) server with Visual Studio GitHub Copilot.
 
 ## Prerequisites
 
@@ -28,7 +28,7 @@ This article explains how to set up and use the Dataverse MCP server with Visual
 1. Paste your organization MCP URL as copied above in step 3, append */api/mcp* and press **Enter**.  <!--There's no step 3 above. How does the user get the org url? -->
    :::image type="content" source="media/data-platform-mcp-vsc/data-platform-mcp-github-org-url.png" alt-text="Organization URL with appendix.":::
 
-   This generates the MCP server configuration in Visual Studio Code.  
+   This step generates the MCP server configuration in Visual Studio Code.  
    
 1. Press **Ctrl+Alt+I** and ensure that agent mode is selected.
    :::image type="content" source="media/data-platform-mcp-vsc/vsc-agent-mode.png" alt-text="Agent mode in Visual Studio Code GitHub Copilot":::

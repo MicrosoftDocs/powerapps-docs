@@ -16,20 +16,18 @@ search.audienceType:
 
 The Model Context Protocol (MCP) is an open protocol that enables seamless integration between large language model (LLM) applications and external data sources and tools. Microsoft Dataverse can act as an MCP server, providing intelligent access to tables and records to various MCP clients like Copilot Studio agents, Visual Studio (VS) Code GitHub Copilot, Claude desktop, and many others. This integration standardizes and streamlines the interaction between AI models and Dataverse data, making it more efficient and effective for developers to apply Dataverse's rich data capabilities within their AI-driven applications.
 
-In order to enable a Dataverse MCP server go to the Power Platform admin center settings for your environment and turn MCP server on and choose the clients you want to enable.
-
 There are multiple ways to connect to a Dataverse MCP server:
 
-- Microsoft Copilot Studio. To learn how to connect to MCS through DV MCP refer the guidelines here: <URL>
-- Visual Studio GitHub Copilot. To learn how to connect to VS code through DV MCP refer the guidelines here: <URL>
-- Non-Microsoft clients such as Claude. To learn how to connect to Claude through DV MCP refer the guidelines here: <URL>
+- Microsoft Copilot Studio. To learn how to connect to MCP through Dataverse MCP go to [Connect to Dataverse with model context protocol in Microsoft Copilot Studio](data-platform-mcp-copilot-studio.md).
+- Visual Studio GitHub Copilot. To learn how to connect to GitHub Copilot in Visual Studio Code go to [Connect Dataverse MCP with GitHub Copilot in Visual Studio Code](data-platform-mcp-vscode.md).
+- Non-Microsoft clients such as Claude. To learn how to connect to Claude through Dataverse MCP go to <URL>.
 
 ## Prerequisites
 
 - Power Platform administrator role in order to manage environment settings, environment group, and connector policies.
-- To use this feature the environment be a Managed Environment.
+- To use this feature the environment must be a Managed Environment.
 - By default, the Dataverse MCP server is disabled for environments. You must enable it in the Power Platform admin center before you can connect to it. More information: [Enable the Dataverse MCP server](data-platform-mcp-disable.md)
-- The Power Platform with Dataverse environment must be setup with the MCP via connector as described in this article: [Enable the Dataverse MCP server for an environment](data-platform-mcp-disable.md)
+- The Power Platform with Dataverse environment must be set up with the MCP via connector as described in this article: [Enable the Dataverse MCP server for an environment](data-platform-mcp-disable.md)
 
 <!-- MOVE TO OTHER ARTICLES
 ## Connect to Dataverse using an MCP server in Microsoft Copilot Studio

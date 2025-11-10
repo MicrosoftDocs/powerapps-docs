@@ -12,7 +12,7 @@ ms.collection: bap-ai-copilot
 
 # Connect to Dataverse with model context protocol in Microsoft Copilot Studio
 
-This article explains how to set up and use the Microsoft Dataverse MCP server with Microsoft Copilot Studio. By following the steps in this article, you can interact with Dataverse, asking natural language questions like *show me my contacts* and receive answers based on stored data.
+This article explains how to set up and use the Microsoft Dataverse model context protocol (MCP) server with Microsoft Copilot Studio. By following the steps in this article, you can interact with Dataverse, asking natural language questions like *show me my contacts* and receive answers based on stored data.
 
 ## Prerequisites
 
