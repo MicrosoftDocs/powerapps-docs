@@ -25,7 +25,7 @@ search.audienceType:
 
 1. Go to [Power Platform Admin Center](https://admin.powerplatform.microsoft.com/). Select **Manage** > **Environments**.
 1. Select the **Environment Name** where you want to turn on the Dataverse MCP server, and then select **Settings**. Under **Settings**, select **Product** > **Features**. Scroll down to locate **Dataverse Model Context Protocol**.
-1. By default the **Allow MCP clients to interact with Dataverse MCP server** is turned on for Microsoft Copilot Studio, clear it to turn it off. <!--You're prompted for confirmation that it will halt any existing workflows. Need clarification on impact. -->
+1. By default the **Allow MCP clients to interact with Dataverse MCP server** is turned on for Microsoft Copilot Studio, clear it to turn it off. <!--You're prompted for confirmation that it will halt any existing workflows. Also, can you re-enable the setting so that 1P MCP clients can work? Need clarification on impact and how the setting can be used with both 1P and 3P MCP servers. -->
 1. To enable the Dataverse MCP server for Visual Studio GitHub Copilot or any other non-Microsoft client, you must use advanced settings to enable each client. Select **Advanced Settings**.
       :::image type="content" source="media/data-platform-mcp/data-platform-mcp-enable-clients.png" alt-text="Open GitHub Copilot to enable.":::
 
