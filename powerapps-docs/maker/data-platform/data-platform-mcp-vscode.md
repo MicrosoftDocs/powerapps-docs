@@ -31,7 +31,7 @@ This article explains how to set up and use the Microsoft Dataverse model contex
    This step generates the MCP server configuration in Visual Studio Code.  
    
 1. Press **Ctrl+Alt+I** and ensure that agent mode is selected.
-   :::image type="content" source="media/data-platform-mcp-vsc/vsc-agent-mode.png" alt-text="Agent mode in Visual Studio Code GitHub Copilot":::
+   :::image type="content" source="media/data-platform-mcp-vsc/vscode-agent-mode.png" alt-text="Agent mode in Visual Studio Code GitHub Copilot":::
 
 ## Related articles
 

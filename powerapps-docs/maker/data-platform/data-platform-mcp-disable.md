@@ -30,7 +30,7 @@ search.audienceType:
       :::image type="content" source="media/data-platform-mcp/data-platform-mcp-enable-clients.png" alt-text="Open GitHub Copilot to enable.":::
 
 1. The list of available clients is shown. Open the client that you want. In this example, the **Microsoft GitHub Copilot** client is enabled.
-   :::image type="content" source="media/data-platform-mcp/data-platform-mcp-enable-github-copilot.png" alt-text="Enable GitHub Copilot client." lightbox="media/data-platform-mcp/data-platform-enable-mcp-github-copilot.png":::
+   :::image type="content" source="media/data-platform-mcp/data-platform-mcp-enable-github-copilot.png" alt-text="Enable GitHub Copilot client." lightbox="media/data-platform-mcp/data-platform-mcp-enable-github-copilot.png":::
 1. On the MCP client record, set **Is Enabled** to **Yes**.
    :::image type="content" source="media/data-platform-mcp/data-platform-mcp-client-enabled.png" alt-text="GitHub Copilot client enabled." lightbox="media/data-platform-mcp/data-platform-mcp-client-enabled.png":::
 

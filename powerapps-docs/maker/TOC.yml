@@ -2420,11 +2420,11 @@
     items: 
     - name: Connect to Dataverse with MCP overview
       href: ./data-platform/data-platform-mcp.md
-    - name: Configure clients for the Dataverse MCP server
+    - name: Configure the Dataverse MCP server
       href: ./data-platform/data-platform-mcp-disable.md      
     - name: Connect to Dataverse MCP with Copilot Studio
       href: ./data-platform/data-platform-mcp-copilot-studio.md
-    - name: Connect to Dataverse with GitHub Copilot in Visual Studio Code
+    - name: Connect to Dataverse MCP with Visual Studio Code
       href: ./data-platform/data-platform-mcp-vscode.md
     - name: Connect to Dataverse with MCP FAQ
       href: ./data-platform/data-platform-mcp-faq.md
