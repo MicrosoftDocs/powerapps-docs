@@ -21,13 +21,15 @@ Power Apps is a high-productivity development platform for business apps. It has
 - Model-driven apps
 - Microsoft Dataverse
 
+
+
 Let's learn more about each of these components.
 
 ## Plans
 
 [Plans](plan-designer/plan-designer.md) in Power Apps is a copilot-first development tool that helps you rapidly build end-to-end business solutions. Simply describe your business scenario in natural language and include relevant visuals, such as process flows or screenshots of existing systems. Plans then generates a complete Power Platform solution tailored to your requirements, including Microsoft Dataverse tables, canvas apps, model-driven apps, Power Pages sites, Power Automate flows, and Copilot Studio agents.
 
-## Create apps using Copilot:
+## Create apps using Copilot
 
 [Copilot in Power Apps](canvas-apps/ai-overview.md) lets you to quickly create apps by simply describing your business requirements in natural language. Copilot automatically generates both the app and its data model—no coding needed. Users can interact with your app using everyday language, making the experience intuitive and engaging. For more information, see [Copilot and AI features in Power Apps](../copilot-landing-page.yml)
 
