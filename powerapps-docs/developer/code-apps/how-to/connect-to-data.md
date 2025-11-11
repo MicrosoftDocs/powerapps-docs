@@ -1,13 +1,14 @@
 ---
 title: "How to: Connect your code app to data (preview)"
 description: "Learn how to connect your code app to data"
-ms.author: alaug
-author: alaug
-ms.date: 09/10/2025
+ms.author: jordanchodak
+author: jordanchodakWork
+ms.date: 11/10/2025
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
  - JimDaly
+ - alaug
 ---
 # How to: Connect your code app to data (preview)
 
@@ -203,11 +204,11 @@ Once connections are added, you can update the app to use the generated model an
 1. **Import required types and services**
 
    When you add a data source, model and service files are automatically generated and placed in the `/generated/services/` folder.
-   For example, if you add Office365Users as a data source, the following files are created:
+   For example, if you add `Office365Users` as a data source, the following files are created:
 
-   - `Office365UsersModel.ts` – Defines the data model for requests and response objects in the Office365Users connector.
+   - `Office365UsersModel.ts` – Defines the data model for requests and response objects in the `Office365Users` connector.
 
-   - `Office365UsersService.ts` – Provides service methods for interacting with the Office365Users data.
+   - `Office365UsersService.ts` – Provides service methods for interacting with the `Office365Users` data.
 
    You can import and use them in your code like this:
 
@@ -218,7 +219,7 @@ Once connections are added, you can update the app to use the generated model an
 
 1. **Update the app to use the nontabular data source (for example, Office 365 Users)**
 
-   You can see the generated files under the src/generated/models and src/generated/services folders for the typed connection API.
+   You can see the generated files under the `src/generated/models and src/generated/services` folders for the typed connection API.
 
    ```javascript
    await Office365UsersService.MyProfile() 
