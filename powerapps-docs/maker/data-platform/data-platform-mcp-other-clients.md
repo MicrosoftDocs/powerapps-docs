@@ -73,7 +73,7 @@ After you have Claude desktop installed, you can find and launch Claude from you
 1. If you haven't configured any MCP servers for Claude desktop previously, you observe a **Settings** dialog. Select **Edit Config**.
 1.	The Claude desktop files displays. Open the `claude_desktop_config.json` file with your favorite JSON editor.
 1. Replace &lt;connection URL&gt; and &lt;Tenant Id&gt; with your connection URL and tenant ID and paste the JSON snippet into the appropriate section of the file.
-   More information: [Create a Dataverse connection for the MCP configuration](data-platform-mcp.md#create-a-dataverse-connection-for-the-mcp-configuration) and [Get the tenant ID of your Dataverse environment](data-platform-mcp.md#get-the-tenant-id-of-your-dataverse-environment)
+   More information: [Create a Dataverse connection for the MCP configuration](#create-a-dataverse-connection-for-the-mcp-configuration) and [Get the tenant ID of your Dataverse environment](#get-the-tenant-id-of-your-dataverse-environment)
 
    Use a &lt;friendly name&gt; for your Dataverse MCP server that you can easily remember, for example: *MyDataverseMCPServer*.
 
@@ -105,7 +105,6 @@ After you have Claude desktop installed, you can find and launch Claude from you
 
 5. Save this file and go back to Claude desktop.
  
-
 ### Verify and interact with the connection in Claude desktop
 
 1. Restart Claude desktop and ensure that the changes take effect. Select **File** > **Exit**.
