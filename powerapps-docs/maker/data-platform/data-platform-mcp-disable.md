@@ -17,9 +17,9 @@ This article provides detailed instructions about how to enable, manage, configu
 
 ## Prerequisites
 
-- Power Platform administrator role in order to enable Dataverse MCP server, manage environment settings, environment group, and connector policies.
+- Power Platform administrator role in order to access Dataverse MCP server environment settings, enable allowed MCP clients, create or edit an environment group, and change connector policies.
 - The steps described in this article require that the environment be a Managed Environment.
-- By default, the Dataverse MCP server is enabled for all environments in Microsoft Copilot Studio. You must enable the additional clients it in the Power Platform admin center before you can connect to the client. <!--What do you mean by "for Copilot Studio?" We need more clarity on what MCP clients this means.-->
+- By default, the Dataverse MCP server is enabled for all environments in Microsoft Copilot Studio. You must enable the additional clients in the Power Platform admin center before you can connect to the client. <!--What do you mean by "for Copilot Studio?" We need more clarity on what MCP clients this means.-->
 
 ## Configure and manage the Dataverse MCP server for an environment
 

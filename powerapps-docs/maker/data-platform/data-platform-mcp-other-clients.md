@@ -45,6 +45,7 @@ These steps install the Dataverse MCP server local proxy that is used by the MCP
 
    `winget install Microsoft.DotNet.SDK.8`
 1. In a Windows terminal window, run this command to install the Microsoft `PowerPlatform.Dataverse.MCP` local proxy.
+
    `dotnet tool install --global --add-source https://api.nuget.org/v3/index.json Microsoft.PowerPlatform.Dataverse.MCP`
 
 ## Get the tenant ID of your Dataverse environment
