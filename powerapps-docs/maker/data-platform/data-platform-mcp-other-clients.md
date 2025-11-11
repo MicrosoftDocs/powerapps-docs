@@ -48,13 +48,82 @@ These steps install the Dataverse MCP server local proxy that is used by the MCP
    `dotnet tool install --global --add-source https://api.nuget.org/v3/index.json Microsoft.PowerPlatform.Dataverse.MCP`
 
 ## Get the tenant ID of your Dataverse environment
-<!-- Start here-->
-When you configure the Dataverse MCP server for either Claude Desktop or VS Code GitHub, you need to provide the TenantID value.
-Here’s one of the ways to get tenant ID details:
-1.	Go to https://make.powerapps.com.
-2.	Select Settings (gear icon) on the top right, and then select Session details.
-3.	Copy the value of the Tenant ID from the Power Apps session details. Make a note of this GUID because it's used in the configuration steps later.
+
+When you configure the Dataverse MCP server for either Claude Desktop or VS Code GitHub, you need to provide the `TenantID` value.
+
+Here’s one way to get tenant ID details:
+
+1. Go to [Power Apps](https://make.powerapps.com).
+1. Select **Settings** (gear icon) on the top right, and then select **Session details**.
+1. Copy the value of the **Tenant ID** from the **Power Apps session details** to the Windows clipboard. Make a note of this GUID because it's used in the configuration steps later.
 
 ## Configure and use the Dataverse MCP server in Claude
 
-<!--STEPS -->
+Claude AI is a large language model (LLM) and chatbot developed by Anthropic. It excels at natural language processing and is multimodal, meaning it can process text, audio, and visual inputs. Claude can answer questions, summarize documents, generate text, and even create diagrams, animations, and code.
+
+### Download Claude desktop
+
+If you haven't already done so, [download and install Claude desktop](https://claude.ai/download).
+
+After you have Claude desktop installed, you can find and launch Claude from your desktop.
+
+### Configure Dataverse MCP server in Claude desktop
+
+1. Open Claude desktop and go to **File** > **Settings**.
+1. If you haven't configured any MCP servers for Claude desktop previously, you observe a **Settings** dialog. Select **Edit Config**.
+1.	The Claude desktop files displays. Open the `claude_desktop_config.json` file with your favorite JSON editor.
+1. Replace &lt;connection URL&gt; and &lt;Tenant Id&gt; with your connection URL and tenant ID and paste the JSON snippet into the appropriate section of the file.
+   More information: [Create a Dataverse connection for the MCP configuration](data-platform-mcp.md#create-a-dataverse-connection-for-the-mcp-configuration) and [Get the tenant ID of your Dataverse environment](data-platform-mcp.md#get-the-tenant-id-of-your-dataverse-environment)
+
+   Use a &lt;friendly name&gt; for your Dataverse MCP server that you can easily remember, for example: *MyDataverseMCPServer*. <!--Where do you insert the JSON snippet? -->
+
+```json
+{
+     "mcpServers": {
+    "<friendly name>": {
+      "command": "Microsoft.PowerPlatform.Dataverse.MCP",
+      "args": [
+        "--ConnectionUrl",
+        "<URL for Dataverse connection>",
+        "--MCPServerName",
+        "DataverseMCPServer",
+        "--TenantId",
+        "<Tenant Id GUID>",
+        "--EnableHttpLogging",
+        "true",
+        "--EnableMsalLogging",
+        "false",
+        "--Debug",
+        "false",
+        "--BackendProtocol",
+        "HTTP"
+         ]
+       }
+     }
+   }
+```
+
+5. Save this file and go back to Claude desktop.
+ 
+
+### Verify and interact with the connection in Claude desktop
+
+1. Restart Claude desktop and ensure that the changes take effect. Select **File** > **Exit**.
+1. Open Claude desktop now that the Dataverse MCP server configuration is completed from the previous step. You need to use your credentials to sign in to your Dataverse environment.
+1. Verify that you can view the Dataverse MCP server and the tools by selecting **Search and tools**. You should be able to observe your friendly name of Dataverse MCP server, *MyDataverseMCPServer* for example.
+   :::image type="content" source="media/data-platform-mcp/claude-connected-data-platform.png" alt-text="Verify Claude desktop connection with Dataverse":::
+1. Selecting the MCP server (*MyDataverseMCPServer*) allows you to view the list of tools, supported by that MCP server.
+
+> [!TIP]
+> You can enable and disable individual tools for each MCP server registered with Claude. This gives you control over what tools to use.
+
+#### Interact with Dataverse MCP server in Claude desktop
+
+If you have data in the Dataverse environment, you can start testing your setup by asking *list tables in Dataverse*, *describe table account*, or *how many accounts do I have*, and so on. More information: [Add and remove sample data](/power-platform/admin/add-remove-sample-data)
+
+> [!TIP]
+> If you have other MCP servers registered with Claude, it’s best to add in Dataverse in your prompt to be specific about which MCP server you’d like to use.
+
+## Related articles
+
+[Connect to Dataverse with Model Context Protocol](data-platform-mcp.md)
