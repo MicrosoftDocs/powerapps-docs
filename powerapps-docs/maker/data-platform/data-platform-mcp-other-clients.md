@@ -35,7 +35,7 @@ These are the prerequisites for using a Dataverse MCP server with Claude.
 
    Make a note of the user name in the connection **Name**, this should be the same name that you used to create the environment earlier.
 
-1. Select the connection to open it. Copy the entire URL from the browser and towards the end add *()* and save it. You need this URL for Claude desktop MCP configuration. <!--Need image of URL. The image resolution in the Word doc was too small to capture the URL in your screenshot. Please add the screenshot to SharePoint so as to maintain higher resolution. Only the open and closed parentheses should be added? Also "towards the end" do you mean at the end of the URL. We need to be specific.-->
+1. Select the connection to open it. Copy the entire URL from the browser and towards the end add *()* and save it. You need this URL for Claude desktop MCP configuration. <!--Need image of URL. The image resolution in the Word doc was too small to view the URL in your screenshot. Please add the screenshot to SharePoint so as to maintain higher resolution. Only the open and closed parentheses should be added? Also "towards the end" do you mean at the end of the URL. We need to be specific.-->
 
 ## Install the Dataverse MCP server local proxy
 
@@ -44,7 +44,7 @@ These steps install the Dataverse MCP server local proxy that is used by the MCP
 1. Install the .NET SDK 8.0 either from download or with this PowerShell command.
 
    `winget install Microsoft.DotNet.SDK.8`
-1. In a Windows terminal window, run this command to install the Microsoft `PowerPlatform.Dataverse.MCP` local proxy.<!--Where is the step to open the terminal window in this article? I assume this doesn't exist in this article so removed your reference about an earlier step assuming this is a Windows terminal.  -->
+1. In a Windows terminal window, run this command to install the Microsoft `PowerPlatform.Dataverse.MCP` local proxy.
    `dotnet tool install --global --add-source https://api.nuget.org/v3/index.json Microsoft.PowerPlatform.Dataverse.MCP`
 
 ## Get the tenant ID of your Dataverse environment
@@ -75,7 +75,7 @@ After you have Claude desktop installed, you can find and launch Claude from you
 1. Replace &lt;connection URL&gt; and &lt;Tenant Id&gt; with your connection URL and tenant ID and paste the JSON snippet into the appropriate section of the file.
    More information: [Create a Dataverse connection for the MCP configuration](data-platform-mcp.md#create-a-dataverse-connection-for-the-mcp-configuration) and [Get the tenant ID of your Dataverse environment](data-platform-mcp.md#get-the-tenant-id-of-your-dataverse-environment)
 
-   Use a &lt;friendly name&gt; for your Dataverse MCP server that you can easily remember, for example: *MyDataverseMCPServer*. <!--Where do you insert the JSON snippet? -->
+   Use a &lt;friendly name&gt; for your Dataverse MCP server that you can easily remember, for example: *MyDataverseMCPServer*.
 
 ```json
 {
