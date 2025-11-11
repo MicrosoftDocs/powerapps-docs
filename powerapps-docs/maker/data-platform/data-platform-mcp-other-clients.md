@@ -39,12 +39,12 @@ These are the prerequisites for using a Dataverse MCP server with Claude.
 
 ## Install the Dataverse MCP server local proxy
 
-These steps install the Dataverse MCP server local proxy that is used by the MCP client, such as Claude desktop or VS Code GitHub Copilot.
+These steps install the Dataverse MCP server local proxy that is used by the MCP client, such as Claude desktop or VS Code GitHub Copilot.<!-- The local proxy steps aren't in the VS Code GitHub Copilot article. Shouldn't they be?-->
 
 1. Install the .NET SDK 8.0 either from download or with this PowerShell command.
 
    `winget install Microsoft.DotNet.SDK.8`
-1. In a terminal window, run this command to install the Microsoft PowerPlatform.Dataverse.MCP local proxy.<!--Where is the step to open the terminal window in this article? I assume this is VS Code so I'm adding it and removed your reference about an earlier step.  -->
+1. In a Windows terminal window, run this command to install the Microsoft `PowerPlatform.Dataverse.MCP` local proxy.<!--Where is the step to open the terminal window in this article? I assume this doesn't exist in this article so removed your reference about an earlier step assuming this is a Windows terminal.  -->
    `dotnet tool install --global --add-source https://api.nuget.org/v3/index.json Microsoft.PowerPlatform.Dataverse.MCP`
 
 ## Get the tenant ID of your Dataverse environment

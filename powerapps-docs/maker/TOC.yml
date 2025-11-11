@@ -2426,6 +2426,8 @@
       href: ./data-platform/data-platform-mcp-copilot-studio.md
     - name: Connect to Dataverse MCP with Visual Studio Code
       href: ./data-platform/data-platform-mcp-vscode.md
+    - name: Connect to Dataverse MCP with non-Microsoft clients
+      href: ./data-platform/data-platform-mcp-other-clients.md
     - name: Connect to Dataverse with MCP FAQ
       href: ./data-platform/data-platform-mcp-faq.md
   - name: License requirements for tables
