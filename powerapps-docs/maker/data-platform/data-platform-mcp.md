@@ -16,18 +16,13 @@ search.audienceType:
 
 The Model Context Protocol (MCP) is an open protocol that enables seamless integration between large language model (LLM) applications and external data sources and tools. Microsoft Dataverse can act as an MCP server, providing intelligent access to tables and records to various MCP clients like Copilot Studio agents, Visual Studio (VS) Code GitHub Copilot, Claude desktop, and many others. This integration standardizes and streamlines the interaction between AI models and Dataverse data, making it more efficient and effective for developers to apply Dataverse's rich data capabilities within their AI-driven applications.
 
+To use Dataverse as an MCP server, you need to enable and configure the MCP server for your Power Platform environment. Once configured, you can connect to the Dataverse MCP server using different MCP clients. More information: [Configure the Dataverse MCP server for an environment](data-platform-mcp-disable.md)
+
 There are multiple ways to connect to a Dataverse MCP server:
 
 - Microsoft Copilot Studio. To learn how to connect to MCP through Dataverse MCP go to [Connect to Dataverse with model context protocol in Microsoft Copilot Studio](data-platform-mcp-copilot-studio.md).
 - Visual Studio GitHub Copilot. To learn how to connect to GitHub Copilot in Visual Studio Code go to [Connect Dataverse MCP with GitHub Copilot in Visual Studio Code](data-platform-mcp-vscode.md).
 - Non-Microsoft clients such as Claude. To learn how to connect to Claude through Dataverse MCP go to [Connect Dataverse MCP with non-Microsoft clients](data-platform-mcp-other-clients.md).
-
-## Prerequisites
-
-- Power Platform administrator role in order to manage environment settings, environment group, and connector policies.
-- To use this feature the environment must be a Managed Environment.
-- By default, the Dataverse MCP server is disabled for environments. You must enable it in the Power Platform admin center before you can connect to it. More information: [Enable the Dataverse MCP server](data-platform-mcp-disable.md)
-- The Power Platform with Dataverse environment must be set up with the MCP via connector as described in this article: [Enable the Dataverse MCP server for an environment](data-platform-mcp-disable.md)
 
 ## List of tools available in Dataverse MCP server
 
@@ -47,11 +42,6 @@ Once connected to the Dataverse MCP Server, you can choose from various tools in
 | `Search`        | Searches through keywords over Dataverse for specific record                        |
 | `Fetch`         | Retrieves full content of a record in Dataverse using table name and ID          |
 
-## Related articles
+## Next steps
 
-[Disable a Dataverse MCP server using advanced connector policies](data-platform-mcp-disable.md)
-
-Learn more about MCP:
-
-- [Introducing the Model Context Protocol](https://www.anthropic.com/news/model-context-protocol)
-- [Anthropic and Introduction - Model Context Protocol](https://modelcontextprotocol.io/introduction)
+[Configure the Dataverse MCP server for an environment](data-platform-mcp-disable.md)

@@ -19,13 +19,13 @@ This article provides detailed instructions about how to enable, manage, configu
 
 - Power Platform administrator role in order to enable Dataverse MCP server, manage environment settings, environment group, and connector policies.
 - The steps described in this article require that the environment be a Managed Environment.
-- By default, the Dataverse MCP server is enabled for all environments in Microsoft Copilot Studio. You must enable the additional clients it in the Power Platform admin center before you can connect to the client.
+- By default, the Dataverse MCP server is enabled for all environments in Microsoft Copilot Studio. You must enable the additional clients it in the Power Platform admin center before you can connect to the client. <!--What do you mean by "for Copilot Studio?" We need more clarity on what MCP clients this means.-->
 
 ## Configure and manage the Dataverse MCP server for an environment
 
 1. Go to [Power Platform admin center](https://admin.powerplatform.microsoft.com/). Select **Manage** > **Environments**.
 1. Select the **Environment Name** where you want to turn on the Dataverse MCP server, and then select **Settings**. Under **Settings**, select **Product** > **Features**. Scroll down to locate **Dataverse Model Context Protocol**.
-1. By default the **Allow MCP clients to interact with Dataverse MCP server** is turned on for Microsoft Copilot Studio, clear it to turn it off. <!--What do you mean by "for Copilot Studio?" We need more clarity on what MCP clients this means. Also, by disabling the setting can you go back and re-enable it after you've configured the 3P clients you want so as to continue with the previous tools and agents that rely on the setting enabled? -->
+1. By default the **Allow MCP clients to interact with Dataverse MCP server** is turned on for Microsoft Copilot Studio, clear it to turn it off. <!--Same question as above. What do you mean by "for Copilot Studio?" We need more clarity on what MCP clients this means. Also, by disabling the setting can you go back and re-enable it after you've configured the 3P clients you want so as to continue with the previous tools and agents that rely on the setting enabled? -->
    > [!IMPORTANT]
    > Disabling the Dataverse MCP Server stops all tools and agents that rely on it. Any ongoing development or AI integration testing using MCP is also interrupted.
 1. To enable the Dataverse MCP server for Visual Studio GitHub Copilot or any other non-Microsoft client, you must use advanced settings to enable each client. Select **Advanced Settings**.
