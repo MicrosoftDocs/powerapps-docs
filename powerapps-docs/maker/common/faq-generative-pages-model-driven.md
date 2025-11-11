@@ -31,6 +31,9 @@ The intended use of generative pages is to streamline the app design process for
 
 In our evaluations, we measure how often the agent can generate syntactically correct code, and we also test how good the code generation is in terms of UX design and meeting functional requirements. Moreover, the agent is evaluated for satisfying Microsoft’s responsible AI principles.
 
+## Are the images from the Include images tool AI-generated?
+No. When the Include images tool is enabled, the resulting images are not AI-generated. They are sourced from a library of curated stock images. The tool only decides whether images are needed based on the prompt and then selects the most relevant image(s) from this library.
+
 ## What are the limitations of generative pages? How can users minimize the impact of generative page limitations when using the system?
 
 The current limitations of generative pages include:
