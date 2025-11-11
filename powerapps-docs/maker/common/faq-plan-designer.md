@@ -6,7 +6,7 @@ contributors: mduelae
 ms.custom:
   - responsible-ai-faqs
 ms.topic: faq
-ms.date: 10/27/2025
+ms.date: 11/17/2025
 ms.update-cycle: 180-days
 ms.author: norliu
 ms.reviewer: mkaur
