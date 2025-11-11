@@ -26,7 +26,7 @@ ai-usage: ai-assisted
 [!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
 > [!IMPORTANT]
-> Starting January 6, 2026, this feature will be removed. To continue creating apps with Copilot, use [Plans](../plan-designer/plan-designer.md) instead.
+> Starting January 6, 2026, this feature will be removed. To continue creating apps with Copilot, use [Plans](../plan-designer/plan-designer.md).
 
 Edit your apps without writing code or designing screens. With Copilot in Power Apps, you can use natural language to describe the changes you want to make, and AI does the rest.
 
