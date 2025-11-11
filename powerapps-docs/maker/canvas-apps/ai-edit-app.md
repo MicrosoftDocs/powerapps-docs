@@ -7,7 +7,7 @@ ms.collection:
     - bap-ai-copilot
     - get started
 ms.reviewer: 
-ms.date: 11/10/2026
+ms.date: 11/10/2025
 ms.update-cycle: 180-days
 ms.subservice: canvas-maker
 ms.author: mkaur
