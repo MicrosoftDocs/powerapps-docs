@@ -25,6 +25,9 @@ Power Apps is a high-productivity development platform for business apps. It has
 
 Let's learn more about each of these components.
 
+> [!NOTE]
+> Try the new Power Apps experience—an AI-native solution designed to simplify app creation. Effortlessly automate workflows, connect data sources, and speed up development, all without needing advanced coding skills. For more information, see [Overview of the New Power Apps experience (preview)].
+
 ## Plans
 
 [Plans](plan-designer/plan-designer.md) in Power Apps is a copilot-first development tool that helps you rapidly build end-to-end business solutions. Simply describe your business scenario in natural language and include relevant visuals, such as process flows or screenshots of existing systems. Plans then generates a complete Power Platform solution tailored to your requirements, including Microsoft Dataverse tables, canvas apps, model-driven apps, Power Pages sites, Power Automate flows, and Copilot Studio agents.
