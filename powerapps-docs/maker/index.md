@@ -13,23 +13,29 @@ searchScope:
 
 # Overview of creating apps in Power Apps
 
-Power Apps is a high-productivity development platform for business apps, and has these major components:
+Power Apps is a high-productivity development platform for business apps. It has these major components:
 
+- Plans
 - Canvas apps
 - Model-driven apps
 - Microsoft Dataverse
 
-Let's learn more about each of these.
+Let's learn more about each of these components.
+
+## Plans
+
+[Plans](plan-designer/plan-designer.md) in Power Apps is a copilot-first development tool that helps you rapidly build end-to-end business solutions. Simply describe your business scenario in natural language and include relevant visuals, such as process flows or screenshots of existing systems. Plans then generates a complete Power Platform solution tailored to your requirements, including Microsoft Dataverse tables, canvas apps, model-driven apps, Power Pages sites, Power Automate flows, and Copilot Studio agents.
+
+## Create apps using Copilot:
+
+[Copilot in Power Apps](canvas-apps/ai-overview.md) lets you to quickly create apps by simply describing your business requirements in natural language. Copilot automatically generates both the app and its data model—no coding needed. Users can interact with your app using everyday language, making the experience intuitive and engaging. For more information, see [Copilot and AI features in Power Apps](../copilot-landing-page.yml)
 
 ## Canvas apps
 
-[Canvas apps](canvas-apps/getting-started.md) start with your user experience, crafting a highly tailored interface with the power of a blank canvas and connecting it to your choice of more than 200 data sources. You can build canvas apps for web, mobile, and tablet applications.
+[Canvas apps](canvas-apps/getting-started.md) start with your user experience. You craft a highly tailored interface with the power of a blank canvas and connect it to your choice of more than 200 data sources. You can build canvas apps for web, mobile, and tablet applications.
 
-Canvas apps give you the flexibility to arrange the user experience and interface the way you want it. Allow your creativity and business sense to guide how you want your apps to look and feel.
+Canvas apps give you the flexibility to arrange the user experience and interface the way you want it. Let your creativity and business sense guide how you want your apps to look and feel.
 
-Create app using natural language with Copilot:
-
-- [Copilot in Power Apps overview](canvas-apps/ai-overview.md)
 
 You can start to build your app from Microsoft tools where your data lives, such as:
 
@@ -38,22 +44,23 @@ You can start to build your app from Microsoft tools where your data lives, such
 
 Creating a canvas app is easy. With Power Apps, you can find or create your app in several ways:
 
-- [From data](canvas-apps/app-from-sharepoint.md)
-- [From a sample](canvas-apps/open-and-run-a-sample-app.md)
-- [From a Dataverse source](canvas-apps/data-platform-create-app.md)
-- [From a blank canvas](canvas-apps/data-platform-create-app-scratch.md)
+- [From a Dataverse source](canvas-apps/data-platform-create-app-scratch.md)
+- [From data in a SharePoint List](canvas-apps/app-from-sharepoint.md)
+- [From Excel data](canvas-apps/get-started-create-from-blank.md)
+- [From a blank canvas](canvas-apps/create-blank-app.md)
 - [Via AppSource](../user/app-source.md)
 
 
-In addition to creating apps in Power Apps, you can now create apps directly within Microsoft Teams using Power Apps. More information: [Create apps in Microsoft Teams by using Power Apps](/powerapps/teams/create-apps-overview).
+In addition to creating apps in Power Apps, you can also create apps directly within Microsoft Teams by using Power Apps. For more information, see [Create apps in Microsoft Teams by using Power Apps](/powerapps/teams/create-apps-overview).
 
 ## Model-driven apps
 
-[Model-driven apps](model-driven-apps/model-driven-app-overview.md) start with your data model – building up from the shape of your core business data and processes in the Dataverse to model forms, views, and other components. Model-driven apps automatically generate great UI that's responsive across devices. 
+[Model-driven apps](model-driven-apps/model-driven-app-overview.md) start with your data model. You build up from the shape of your core business data and processes in the Dataverse to model forms, views, and other components. Model-driven apps automatically generate a great UI that's responsive across devices. 
 
 When you create a model-driven app, you can use all the power of the Dataverse to rapidly configure your forms, business rules, and process flows. You create a model-driven app from the Power Apps site.
 
-As part of the custom page public preview, the new page type based on canvas can be added into a new or existing model-driven app. This allows the power and flexibility of a canvas experience within the model-driven app. Custom pages allow
+As part of the custom page public preview, you can add the new page type based on canvas into a new or existing model-driven app. This addition brings the power and flexibility of a canvas experience within the model-driven app. Custom pages allow
+
 - Full control over page layout 
 - Out of box controls and custom components
 - Power Apps connectors
@@ -73,9 +80,9 @@ Getting started with model-driven apps is simple. You can begin with these topic
 
 ## Dataverse
 
-[Dataverse](data-platform/data-platform-intro.md) is the data platform that comes with Power Apps and allows you to store and model business data. It's the platform on which Dynamics 365 apps (such as Dynamics 365 Sales, Customer Service, Field Service, Marketing, and Project Service Automation) are built. If you’re a Dynamics 365 customer, your data is already in Dataverse.
+[Dataverse](data-platform/data-platform-intro.md) is the data platform that comes with Power Apps and allows you to store and model business data. It's the platform on which Dynamics 365 apps (such as Dynamics 365 Sales, Customer Service, Field Service, Marketing, and Project Service Automation) are built. If you're a Dynamics 365 customer, your data is already in Dataverse.
 
-Dataverse allows you to securely store and manage data within a set of standard and custom tables, and you can add columns to those tables when you need them.
+Dataverse allows you to securely store and manage data within a set of standard and custom tables. You can add columns to those tables when you need them.
 
 Start working with Dataverse by reading these topics:
 
@@ -86,7 +93,7 @@ Start working with Dataverse by reading these topics:
 
 ## Planning a Power Apps app or project
 
-It's easy to begin building out your first app. Simply sign in to [Power Apps](https://make.powerapps.com). For more information, go to [Sign in to Power Apps for the first time](canvas-apps/intro-maker-portal.md). If you're interested in exploring even more functionality, such as creating environments, we have a [30-day trial](signup-for-powerapps.md) or [Developer Plan](developer-plan.md).
+It's easy to begin building your first app. Simply sign in to [Power Apps](https://make.powerapps.com). For more information, see [Sign in to Power Apps for the first time](canvas-apps/intro-maker-portal.md). If you're interested in exploring even more functionality, such as creating environments, we have a [30-day trial](signup-for-powerapps.md) or [Developer Plan](developer-plan.md).
 
 If you're new to Power Apps and want to learn about how to convert your ideas into a fully working solution, start with [Planning a Power Apps project](/powerapps/guidance/planning/introduction).
 
