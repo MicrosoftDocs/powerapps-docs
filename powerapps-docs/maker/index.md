@@ -4,7 +4,7 @@ description: Get an introduction to creating canvas or model-driven apps in Powe
 author: alaug
 ms.subservice: common
 ms.topic: overview
-ms.date: 11/11/2025
+ms.date: 11/17/2025
 ms.author: alaug
 ms.reviewer: mkaur-msft
 searchScope:
