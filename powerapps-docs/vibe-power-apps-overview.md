@@ -12,7 +12,7 @@ ms.topic: concept-article
 
 [This article is prerelease documentation and is subject to change.]
 
-The new Power Apps experience is an AI-native platform that builds apps with generated code. You can automate workflows, integrate data sources seamlessly, and accelerate app development without extensive coding knowledge.
+The new Power Apps experience is an AI-native platform that builds solutions to business problems, including requirements, data, and full apps with generated code. You can automate workflows, integrate data sources seamlessly, and accelerate app development without extensive coding knowledge.
 
 :::image type="content" source="media/vibe-power-apps-overview/new-experience-home-page.png" alt-text="Screenshot of the new Power Apps experience interface.":::
 
@@ -20,12 +20,12 @@ The new Power Apps experience is an AI-native platform that builds apps with gen
 
 > [!IMPORTANT]
 >
-> - This is a preview feature.
+> - This feature is in preview.
 > - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2216214), and are available before an official release so that customers can get early access and provide feedback.
 > - The new Power Apps experience is currently limited to an early action program. If you're interested, use this link to join the waitlist.
 
 - Copilot must be enabled in the tenant and environment. Learn more: [Copilot in Power Apps overview](maker/canvas-apps/ai-overview.md)
-- This capability is not available in a default environment.
+- This capability isn't available in a default environment.
 - This capability is available only in the US region and in English only. Learn more in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/en-US/availability-reports/?report=copilotfeaturereport)
 
 
@@ -34,7 +34,7 @@ The new Power Apps experience is an AI-native platform that builds apps with gen
 To turn on the new experience in Power Apps:
 
 1. Sign in to [Power Apps](https://make.preview.powerapps.com/).
-1. In the top right, select **Try new experience (Preview)**.
+1. In the upper-right corner, select **Try new experience (Preview)**.
 
    :::image type="content" source="media/vibe-power-apps-overview/new-experience.png" alt-text="Try the new Power Apps experience":::
 
@@ -61,7 +61,7 @@ Legend:
 
 ## Enter your prompt
 
-Describe your idea using natural language
+Describe your idea using natural language.
 
 :::image type="content" source="media/vibe-power-apps-overview/enter-prompt.png" alt-text="Screenshot of the prompt writing interface with enhance prompt button.":::
 
