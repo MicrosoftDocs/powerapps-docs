@@ -57,8 +57,6 @@ Copilot assistance for filling forms generates suggestions for blank form fields
 
 Suggestions are entirely optional and aren't saved in the app until you accept them. To learn more about a suggestion, hover over the field, and specifically hover over the information icon. This is a citation, and identifies the source of a specific suggestion, for example "Records you have updated recently" or "Clipboard".
 
-Suggestions are optional and aren't saved in the app until you accept them. To learn more about a suggestion, hover over the field and to be specifically the information icon. The citation identifies the source of a specific suggestion, such as "Records you updated recently" or "Clipboard".
-
 :::image type="content" source="media/formfill_citation.png" alt-text="Screenshot that shows a citation for a form fill suggestion.":::
 
 To accept a specific suggestion, hover over the field, and then select **Accept**. Alternatively, select the field, and then select the **Enter** key.
