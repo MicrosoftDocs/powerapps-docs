@@ -96,7 +96,7 @@ This step helps confirm that your user account has the correct permissions and t
 1. Navigate directly to the data source you're trying to add. For example, the SharePoint site or the Dataverse environment URL.
 1. Sign in with the **same credentials** you used to authenticate with the PAC CLI [pac auth create](/power-platform/developer/cli/reference/auth#pac-auth-create) command
 1. If you can't access the resource, a permissions issue with your user account is the likely root cause.
-1. If you can access it, move to Step 2.
+1. If you can access it, move to [Analyze network traffic](#analyze-network-traffic).
 
 #### Analyze network traffic
 
