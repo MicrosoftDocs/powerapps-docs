@@ -8,6 +8,7 @@ ms.reviewer: matp
 ms.date: 11/10/2025
 ms.topic: how-to
 ms.collection: bap-ai-copilot
+ms.subservice: dataverse-maker
 ---
 
 # Connect to Dataverse with model context protocol in Microsoft Copilot Studio
