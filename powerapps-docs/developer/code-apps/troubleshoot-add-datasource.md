@@ -3,7 +3,7 @@ title: "Troubleshoot adding a data source (preview)"
 description: "Learn how to troubleshoot issues when errors occur while adding a datasource using the PAC CLI pac code add-data-source command."
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 10/14/2025
+ms.date: 11/12/2025
 ms.reviewer: jdaly
 ms.topic: article
 contributors:
@@ -16,7 +16,7 @@ This article provides troubleshooting steps for when the PAC CLI (Power Apps Com
 
 ## Symptoms
 
-When you use the PAC CLI to add a data source, it might fail. These failures aren't usually caused by a problem in the PAC CLI. Failures usually happen because something on your computer or network is blocking the connection or messing up authentication.
+Failures usually happen because something on your computer or network is blocking the connection or disrupting authentication.
 
 | Symptom                  | Example Message                           |
 | ------------------------ | ----------------------------------------- |
@@ -24,60 +24,71 @@ When you use the PAC CLI to add a data source, it might fail. These failures are
 | Timeout / network errors | `ETIMEDOUT`, `ENOTFOUND`, `ECONNRESET`    |
 | Environment mismatch     | Data source not found / unexpected schema |
 
-## Prerquisites checklist
-1. Latest Power Platform CLI installed (update if unsure).
-2. Authenticated to the correct environment (`pac auth create` / `pac auth list`).
-3. Network allows outbound HTTPS to Power Platform endpoints.
+## Prerequisites
+
+1. Verify you have the [latest Power Platform CLI installed](/power-platform/developer/cli/introduction#install-microsoft-power-platform-cli). Update it if you aren't sure.
+1. Verify you are authenticated to the correct environment. Use [`pac auth create`](/power-platform/developer/cli/reference/auth#pac-auth-create) and [`pac auth list`](/power-platform/developer/cli/reference/auth#pac-auth-list) commands.
+1. Verify your network allows outbound HTTPS calls to Power Platform endpoints.
 
 ## Troubleshooting steps
 
 To diagnose the root cause, follow these steps:
 
-### Step 1: Validate Configuration
-Open `power.config.json` and confirm:
-- `environmentId` matches the environment you intend to target.
-- `region` is set to `prod` (unless you intentionally target another region). Add it if missing.
+### Step 1: Validate configuration
 
-### Step 2: Cross‑Check Environment Context
-Run:
-```cmd
-pac env who
-```
+Open `power.config.json` file and confirm:
+
+- `environmentId` matches the environment you intend to target.
+- `region` is set to `prod`,  unless you are intentionally targeting another region. Add it if missing.
+
+### Step 2: Cross-check environment context
+
+Run the [`pac env who`](/power-platform/developer/cli/reference/env#pac-env-who) command.
+
+
 Compare the `Environment ID` in the output with the `environmentId` value in `power.config.json`.
 
 Example output (annotated):
-```
+
+```powershell
 Connected as user@domain.com
 Organization Information
-  Org ID:                     2889ab2b-e728-ef11-8406-000d3a33f333
+  Org ID:                     00aa00aa-bb11-cc22-dd33-44ee44ee44ee
   Unique Name:                unq2889ab2be728ef118406000d3a33f
   Friendly Name:              User Name
-  Org URL:                    https://myorgguid.crm.dynamics.com/
+  Org URL:                    https://myorg.crm.dynamics.com/
   User Email:                 user@domain.com
-  User ID:                    dabaf5e1-a427-ef11-840a-6045bd07ba63
-  Environment ID:             5c1dc2ed-bf65-e52c-ab22-ea1fc9c10106  <-- Ensure this matches
+  User ID:                    aaaaaaaa-bbbb-cccc-1111-222222222222
+  Environment ID:             aaaabbbb-0000-cccc-1111-dddd2222eeee  <-- Ensure this matches
 ```
 
-Corresponding `power.config.json` snippet:
+Corresponding `power.config.json` example snippet:
+
 ```json
 {
-  "environmentId": "5c1dc2ed-bf65-e52c-ab22-ea1fc9c10106",
+  "environmentId": "aaaabbbb-0000-cccc-1111-dddd2222eeee",
   "region": "prod"
 }
 ```
 
-### Step 3: Re‑run Command
+### Step 3: Re-run command
+
+Run the [`pac code add-data-source`](/power-platform/developer/cli/reference/code#pac-code-add-data-source) command again. For example:
+
 ```cmd
 pac code add-data-source -a dataverse -t account
 ```
+
 Look for HTTP status codes or error messages in the output.
 
-### Step 4: Network & Security Validation
-If still failing:
-- Confirm no corporate proxy/firewall blocks CLI processes (non-browser traffic).
-- Whitelist required Power Platform endpoints. Reference [Power Platform connectivity requirements](/power-platform/admin/online-requirements)
+### Step 4: Network & security validation
 
-**Verify browser connectivity**
+If still failing:
+
+- Confirm no corporate proxy/firewall blocks CLI processes (non-browser traffic).
+- Approve required Power Platform endpoints. [Review Power Platform connectivity requirements](/power-platform/admin/online-requirements)
+
+#### Verify browser connectivity
 
 This step helps confirm that your user account has the correct permissions and that the data source is reachable from your computer.
 
@@ -87,7 +98,7 @@ This step helps confirm that your user account has the correct permissions and t
 1. If you can't access the resource, a permissions issue with your user account is the likely root cause.
 1. If you can access it, move to Step 2.
 
-**Analyze network traffic**
+#### Analyze network traffic
 
 This is the most effective way to see the raw network communication data between the PAC CLI and the data source endpoint.
 
@@ -101,24 +112,30 @@ This is the most effective way to see the raw network communication data between
     - A `401` (Unauthorized) or `403` (Forbidden) status code points to an authentication or permission issue.
     - Other error codes or a complete lack of response can indicate that a firewall or proxy is blocking the request.
 
-### Step 5: Clear/Reset Auth Context (If Mismatch Detected)
+### Step 5: Clear/Reset auth context
+
+If a mismatch is detected, you should clear or reset the auth context using the following PAC CLI commands.
+
 ```cmd
 pac auth list
 pac auth select --index <n>
 pac env who
 ```
+
 If incorrect, re-authenticate:
+
 ```cmd
 pac auth create --environment <yourEnvironmentId>
 ```
 
-### Escalation Data (Collect Before Filing Issue)
-Provide:
-- CLI version (`pac --version`)
-- OS and shell (Windows cmd / PowerShell / WSL)
-- Full command used
-- Sanitized debug output excerpt
-- `power.config.json` (redact secrets)
+### Escalation data
 
-  
- 
+Before you contact technical support to file an issue, collect the following data.
+
+Provide:
+
+- CLI version. Use the `pac --version` command
+- OS and shell (Windows cmd / PowerShell / WSL)
+- The full command used
+- Sanitized debug output excerpt
+- `power.config.json` after you redact secrets
