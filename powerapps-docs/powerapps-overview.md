@@ -4,7 +4,7 @@ description: Learn how end users, app makers, admins, and developers can use Pow
 author: tapanm-msft
 ms.subservice: common
 ms.topic: overview
-ms.date: 11/11/2025
+ms.date: 11/17/2025
 ms.author: tapanm
 ms.reviewer: tapanm
 searchScope:

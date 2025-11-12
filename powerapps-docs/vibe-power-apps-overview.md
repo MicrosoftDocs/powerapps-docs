@@ -4,7 +4,7 @@ description: Discover the new AI-native Power Apps experience. Build apps with g
 author: mduelae
 ms.author: mkaur
 ms.reviewer: mkaur
-ms.date: 11/06/2025
+ms.date: 11/17/2025
 ms.topic: concept-article
 ---
 
@@ -61,7 +61,7 @@ Legend:
 
 ## Enter your prompt
 
-Describe your app idea using natural language
+Describe your idea using natural language
 
 :::image type="content" source="media/vibe-power-apps-overview/enter-prompt.png" alt-text="Screenshot of the prompt writing interface with enhance prompt button.":::
 

@@ -4,7 +4,7 @@ description: Learn how the Power Apps new experience simplifies app creation by 
 author: mduelae
 ms.author: mkaur
 ms.reviewer: mkaur
-ms.date: 11/06/2025
+ms.date: 11/17/2025
 ms.topic: concept-article
 ---
 
