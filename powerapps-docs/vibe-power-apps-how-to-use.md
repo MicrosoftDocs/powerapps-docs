@@ -19,7 +19,7 @@ Key capabilities
 
 - **Design everything together**: Build apps, plans, and data models together in a single, cohesive process.
 - **Build faster with AI**: Quickly move from ideas to working prototypes using conversational chat.
-- **OInstant app creation**: Generate modern web apps directly from your requirements and data with one click.
+- **Instant app creation**: Generate modern web apps directly from your requirements and data with one click.
 
 
 > [!IMPORTANT]
@@ -50,7 +50,7 @@ Key capabilities
 
 ## Review and refine your generated app and data model
 
-The new workspace uses a single, unified chat that keeps context as you switch between **Plan**, **Data**, and **App**. It speeds up development by letting you preview the app visually, inspect and edit code, and make inline changes all without leaving the workspace.
+The new workspace uses a single, unified chat that keeps context as you switch between **Plan**, **Data**, and **App**. It speeds up development by letting you preview the app visually, inspect the code, and make inline changes all without leaving the workspace.
 
 :::image type="content" source="media/vibe-powerapps-experience/plan-data-app-menu-options.png" alt-text="view plan, data, and app ":::
 
@@ -247,7 +247,7 @@ The following [ALM](/power-platform/alm/overview-alm) features are supported:
 The new Power Apps experience has the following limitations:
 
 - You can't access or edit apps created in the new authoring experience outside of the new authoring experience.
-- If you export a code app and edit it outside the new authoring experience (for example, in VS Code), redeploying via PAC CLI creates a new app, and it disconnects from the original plan.
+- If you export an app and edit it outside the new authoring experience (for example, in VS Code), redeploying via PAC CLI creates a new app, and it disconnects from the original plan.
 - Currently, you can only have one app per plan; multiple apps within a single plan are temporarily not enabled.
 - You can't open pre-existing plans in the new experience.
 - Canvas and model-driven apps aren't supported; you can't recommend, open, or edit these app types in the new authoring experience.
