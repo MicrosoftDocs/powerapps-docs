@@ -140,7 +140,7 @@ In the **Technology** area, select the ellipsis beside any recommended technolog
 
 Select **Data** and review and refine your data. The data view displays all proposed tables, their relationships, and sample data. It helps you understand the schema and how the generated app uses the data. The tables are currently in-memory only and aren't published to any data source. You can modify them until they meet your business needs. For more information, see [Create and edit tables using Power Apps](maker/data-platform/create-edit-entities-portal.md).
 
-:::image type="content" source="media/create-app-data-plan/edit-data-model-details.png" alt-text="Edit the data for your app":::
+:::image type="content" source="media/create-app-data-plan/edit-data-model-details.png" alt-text="Edit the data for your app" lightbox="media/create-app-data-plan/edit-data-model-details.png":::
 
 Legend
 
@@ -216,6 +216,7 @@ Follow one of these steps to change the ownership type to **User**, **Team**, or
 1. Select **Properties** to update the table’s display name, plural name, description, and other details.
 
  :::image type="content" source="maker/canvas-apps/media/tables/edit-table-properties.png" alt-text="Edit table properties":::
+
 
 
 ## Application lifecycle management (ALM) capabilities
