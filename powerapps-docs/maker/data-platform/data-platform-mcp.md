@@ -46,7 +46,7 @@ Once connected to the Dataverse MCP Server, you can choose from various tools in
 | Delete Record | Deletes a row from a Dataverse table. | Tool | Basic | Text and generative AI tools (basic) per 10 response | Dataverse MCP Tools – delete_record | 0.1 |
 | Search | Searches through keywords over Dataverse for specific records. | Index based search tool | Premium | Version 1 searches for keyword, Version 2 is for knowledge retrieval | Tenant grounding<br>Dataverse MCP Tools – search | 10 |
 
-For more information about Copilot Credits, go to [Use AI to create agents and extend Microsoft 365](https://azure.microsoft.com/en-us/pricing/details/copilot-studio/).
+For more information about Copilot Credits, go to [Use AI to create agents and extend Microsoft 365](https://azure.microsoft.com/pricing/details/copilot-studio/).
 <!-- Old table to be removed
 
 | Tool          | Description                                                                    |
