@@ -39,7 +39,7 @@ For more information:
 
 > [!NOTE]
 >
-> Try the new Power Apps experience—an AI-native solution designed to simplify app creation. Effortlessly automate workflows, connect data sources, and speed up development, all without needing advanced coding skills. For more information, see [Overview of the New Power Apps experience (preview)](vibe-power-apps-overview.md).
+> Try the new Power Apps experience—an AI-native solution designed to simplify app creation. Effortlessly automate workflows, connect data sources, and speed up development, all without needing advanced coding skills. For more information, see [Overview of the New Power Apps experience (preview)](vibe/overview.md).
 
 With Power Apps, you can create two types of apps: **canvas** and **model-driven**. For more information, see [Overview of creating apps in Power Apps](maker/index.md).
 
