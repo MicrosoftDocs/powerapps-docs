@@ -129,7 +129,7 @@ Then complete Steps 3-4 with the matched certificate.
 ### Works outside VPN only
 
 This indicates network-level blocking, not certificate trust issues. Corporate split-tunnel VPN configurations may route Power Platform API traffic through on-premises firewalls that block Node.js/CLI tools or apply restrictive policies to non-browser traffic.[^7] The `NODE_EXTRA_CA_CERTS` fix won't help here. Engage your network/security team to:
-- Whitelist PAC CLI traffic to `*.powerplatform.com`, `*.dynamics.com`, `*.azure.net`
+- Allowlist PAC CLI traffic to `*.powerplatform.com`, `*.dynamics.com`, `*.azure.net`
 - Allow direct HTTPS (port 443) from developer workstations to Microsoft cloud services
 - Configure split-tunnel rules to bypass inspection/filtering for trusted Microsoft endpoints
 
@@ -166,23 +166,21 @@ Provide:
 
 ## References
 
-Power Platform connectivity requirements:
-https://learn.microsoft.com/en-us/power-platform/admin/online-requirements
+[Power Platform connectivity requirements](/power-platform/admin/online-requirements)
 
-Node.js NODE_EXTRA_CA_CERTS documentation:
-https://nodejs.org/api/cli.html#node_extra_ca_certsfile
+[Node.js NODE_EXTRA_CA_CERTS documentation](https://nodejs.org/api/cli.html#node_extra_ca_certsfile)
 
 [^1]: **Zscaler SSL Inspection**: Zscaler is a cloud-based security platform that performs SSL/TLS inspection by decrypting and re-encrypting HTTPS traffic. It acts as a man-in-the-middle (by design) to inspect content for threats. See [Zscaler SSL Inspection Overview](https://help.zscaler.com/zia/about-ssl-inspection)
 
 [^2]: **SSL Certificate Interception**: When a proxy like Zscaler intercepts HTTPS traffic, it replaces the original server certificate with its own certificate signed by a corporate root CA. This allows the proxy to decrypt, inspect, and re-encrypt traffic. Browsers trust this because the corporate root CA is installed in the system trust store. See [How HTTPS Interception Works](https://www.eff.org/deeplinks/2017/02/https-interception-weakens-web-security)
 
-[^3]: **Windows Certificate Store & PEM Format**: `Get-ChildItem Cert:\CurrentUser\Root` accesses the Windows Certificate Store via PowerShell's certificate provider. PEM (Privacy Enhanced Mail) is a Base64-encoded format for certificates. The conversion is necessary because Node.js requires PEM format while Windows stores certificates in DER format. See [PowerShell Certificate Provider](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.security/about/about_certificate_provider) and [PEM Format RFC](https://datatracker.ietf.org/doc/html/rfc7468)
+[^3]: **Windows Certificate Store & PEM Format**: `Get-ChildItem Cert:\CurrentUser\Root` accesses the Windows Certificate Store via PowerShell's certificate provider. PEM (Privacy Enhanced Mail) is a Base64-encoded format for certificates. The conversion is necessary because Node.js requires PEM format while Windows stores certificates in DER format. See [PowerShell Certificate Provider](powershell/module/microsoft.powershell.security/about/about_certificate_provider) and [PEM Format RFC](https://datatracker.ietf.org/doc/html/rfc7468)
 
-[^4]: **Windows icacls Command**: `icacls` (Integrity Control Access Control List) is a Windows command-line utility for managing file permissions. The parameters used: `/inheritance:r` removes inherited permissions, `/grant:r` replaces existing permissions with read-only access for the specified user. See [icacls Documentation](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/icacls)
+[^4]: **Windows icacls Command**: `icacls` (Integrity Control Access Control List) is a Windows command-line utility for managing file permissions. The parameters used: `/inheritance:r` removes inherited permissions, `/grant:r` replaces existing permissions with read-only access for the specified user. See [icacls Documentation](/windows-server/administration/windows-commands/icacls)
 
 [^5]: **NODE_EXTRA_CA_CERTS Environment Variable**: This Node.js environment variable specifies a file containing additional trusted Certificate Authorities beyond Node.js's built-in list (Mozilla's CA bundle). When set, Node.js will trust certificates signed by CAs in both the built-in list and the specified file. See [Node.js CLI Environment Variables](https://nodejs.org/api/cli.html#node_extra_ca_certsfile)
 
 [^6]: **Disabling TLS Validation (`NODE_TLS_REJECT_UNAUTHORIZED=0`)**: This forces Node.js to accept any presented certificate (including self-signed or spoofed certificates), removing all authenticity and integrity guarantees of HTTPS. It exposes sessions to MITM attacks, credential harvesting, and content tampering. Never use outside a short-lived diagnostic session.
 
-[^7]: **Split‑Tunnel / Whitelisting Guidance**: Some enterprise VPNs route only a subset of traffic directly while forcing other destinations through inspection gateways. Power Platform endpoints must be reachable without blocking or SSL interception conflicts. See Microsoft connectivity requirements for endpoint whitelisting guidance: https://learn.microsoft.com/en-us/power-platform/admin/online-requirements
+[^7]: **Split‑Tunnel / Allowlisting Guidance**: Some enterprise VPNs route only a subset of traffic directly while forcing other destinations through inspection gateways. Power Platform endpoints must be reachable without blocking or SSL interception conflicts. See Microsoft connectivity requirements for [endpoint allowlisting guidance](/power-platform/admin/online-requirements).
 
