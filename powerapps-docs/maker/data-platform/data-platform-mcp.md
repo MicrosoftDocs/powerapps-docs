@@ -44,7 +44,7 @@ Once connected to the Dataverse MCP Server, you can choose from various tools in
 | Delete Record | Deletes a row from a Dataverse table. |
 | Search | Searches through keywords over Dataverse for specific records. |
 
-All but the search tool use text and generative AI tools (basic) per 10 responses. The search tool searches for keyword. <!-- This information was removed from the "Feature name" column in the original doc. Search doesn't seem to explain how billing is enforced so IMO more information is needed.-->For more information about Copilot billing, go to [Billing rates and management](/microsoft-copilot-studio/requirements-messages-management).
+All but the search tool use text and generative AI tools (basic) per 10 responses. The search tool searches for keyword. <!-- This information was removed from the "Feature name" column in the original doc. Search doesn't seem to explain how billing is enforced so IMO more information is needed.-->For more information about Copilot billing, go to [Billing rates and management](/microsoft-copilot-studio/requirements-messages-management). <!--Added this link since it has information about the "text and generative AI tools (basic) per 10 responses" mentioned. -->
 
 ## Next steps
 
