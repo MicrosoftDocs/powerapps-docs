@@ -14,7 +14,8 @@ ms.topic: concept-article
 
 The new Power Apps experience is an AI-native platform that builds solutions to business problems, including requirements, data, and full apps with generated code. You can automate workflows, integrate data sources seamlessly, and accelerate app development without extensive coding knowledge.
 
-:::image type="content" source="media/vibe-power-apps-overview/new-experience-home-page.png" alt-text="Screenshot of the new Power Apps experience interface.":::
+
+:::image type="content" source="media/overview/new-experience-home-page.png" alt-text="Screenshot of the home page for the new Power Apps experience":::
 
 ## Prerequisites 
 
@@ -22,40 +23,37 @@ The new Power Apps experience is an AI-native platform that builds solutions to 
 >
 > - This feature is in preview.
 > - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2216214), and are available before an official release so that customers can get early access and provide feedback.
-> - The new Power Apps experience is currently limited to an early action program. If you're interested, use this link to join the waitlist.
 
 - Copilot must be enabled in the tenant and environment. Learn more: [Copilot in Power Apps overview](maker/canvas-apps/ai-overview.md)
 - This capability isn't available in a default environment.
 - This capability is available only in the US region and in English only. Learn more in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/en-US/availability-reports/?report=copilotfeaturereport)
 
 
-## Turn on the new experience
+## Access the new experience 
 
-To turn on the new experience in Power Apps:
+You can access the new experience in one of two ways:
 
-1. Sign in to [Power Apps](https://make.preview.powerapps.com/).
-1. In the upper-right corner, select **Try new experience (Preview)**.
+- Go to [https://vibe.preview.powerapps.com](https://vibe.preview.powerapps.com/) and sign in to start using the new experience.
 
-   :::image type="content" source="media/vibe-power-apps-overview/new-experience.png" alt-text="Try the new Power Apps experience":::
+- Alternatively, sign in to [Power Apps](https://make.preview.powerapps.com/). In the upper-right corner, select **Try new experience (Preview)** to enable it.
 
+   :::image type="content" source="media/overview/new-experience.png" alt-text="Try the new Power Apps experience":::
 
-### Turn off the preview experience
-
-To turn off the new experience and return to the default experience, in the lower left, select **Preview** > **Default homepage**.
+   > [!NOTE]
+   > If you access the new experience through [Power Apps](https://make.preview.powerapps.com/),  you will need to enable it each time you sign in.
 
 ## Navigation pane
 
 The left navigation pane shows the following items:
 
 
-:::image type="content" source="media/vibe-power-apps-overview/left-navigation-pane.png" alt-text="Screenshot of the left navigation pane in the new Power Apps experience.":::
+:::image type="content" source="media/overview/left-navigation-pane.png" alt-text="Screenshot of the left navigation pane in the new Power Apps experience.":::
 
 Legend:
 
 1. **Home**: Returns you to the main landing page.
 1. **Plans**: Access and manage your plans.
 1. **Apps**: Open, play, or edit apps you created or that others shared with you.
-1. **Preview**: Switch between the new Power Apps experience and the classic home page.
 1. **Profile**: Access the environment picker, session details, notifications, and settings.
 
 
@@ -63,7 +61,7 @@ Legend:
 
 Describe your idea using natural language.
 
-:::image type="content" source="media/vibe-power-apps-overview/enter-prompt.png" alt-text="Screenshot of the prompt writing interface with enhance prompt button.":::
+:::image type="content" source="media/overview/enter-prompt.png" alt-text="Screenshot of the prompt writing interface with enhance prompt button.":::
 
 
 Legend:
