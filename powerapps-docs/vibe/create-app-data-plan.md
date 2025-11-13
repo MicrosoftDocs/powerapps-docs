@@ -48,7 +48,7 @@ Key capabilities
 
 The new workspace uses a single, unified chat that keeps context as you switch between **Plan**, **Data**, and **App**. It speeds up development by letting you preview the app visually, inspect the code, and make inline changes all without leaving the workspace.
 
-:::image type="content" source="media/create-app-data-plan/create-app-data-plan/plan-data-app-menu-options.png" alt-text="view plan, data, and app ":::
+:::image type="content" source="media/create-app-data-plan/plan-data-app-menu-options.png" alt-text="view plan, data, and app ":::
 
 Each focus area displays its specific tools above the work surface. For instance, when you select the **App** focus area, you see these options:
 
