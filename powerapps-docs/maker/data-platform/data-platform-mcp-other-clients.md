@@ -36,7 +36,7 @@ These are the prerequisites for using a Dataverse MCP server with Claude.
 
    Make a note of the user name in the connection **Name**, this should be the same name that you used to create the environment earlier.
 
-1. Select the connection to open it. Copy the entire URL from the browser and towards the end add *()* and save it. You need this URL for Claude desktop MCP configuration. <!--Need image of URL. The image resolution in the Word doc was too small to view the URL in your screenshot. Please add the screenshot to SharePoint so as to maintain higher resolution. Only the open and closed parentheses should be added? Also "towards the end" do you mean at the end of the URL. We need to be specific.-->
+1. Select the connection to open it. Copy the URL from the browser and towards the end add *()* and save it. You need this URL for Claude desktop MCP configuration. <!--Need image of URL. The image resolution in the Word doc was too small to view the URL in your screenshot. Please add the screenshot to SharePoint so as to maintain higher resolution. Only the open and closed parentheses should be added? Also "towards the end" do you mean at the end of the URL. We need to be specific.-->
 
 ## Install the Dataverse MCP server local proxy
 
