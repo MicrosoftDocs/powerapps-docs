@@ -24,7 +24,7 @@ There are multiple ways to connect to a Dataverse MCP server:
 - Visual Studio GitHub Copilot. To learn how to connect to GitHub Copilot in Visual Studio Code go to [Connect Dataverse MCP with GitHub Copilot in Visual Studio Code](data-platform-mcp-vscode.md).
 - Non-Microsoft clients such as Claude. To learn how to connect to Claude through Dataverse MCP go to [Connect Dataverse MCP with non-Microsoft clients](data-platform-mcp-other-clients.md).
 
-## List of tools, features, and Copilot credits
+## List of tools
 
 Once connected to the Dataverse MCP Server, you can choose from various tools in the Power Platform environment.
 <!-- Below in the read_query row "simple call" is stated? What does that mean?-->
