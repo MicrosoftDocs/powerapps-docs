@@ -138,7 +138,9 @@ In the **Technology** area, select the ellipsis beside any recommended technolog
 
 ## Edit the generated data model
 
-Select **Data** and review and refine your data. The data view displays all proposed tables, their relationships, and sample data. It helps you understand the schema and how the generated app uses the data. The tables are currently in-memory only and aren't published to any data source. You can modify them until they meet your business needs. For more information, see [Create and edit tables using Power Apps](maker/data-platform/create-edit-entities-portal.md).
+Select **Data** and review and refine your data. The data view displays all proposed tables, their relationships, and sample data. It helps you understand the schema and how the generated app uses the data. The tables are currently in-memory only and aren't published to any data source. You can modify them until they meet your business needs. For more information, see [Create and edit tables using Power Apps](../maker/data-platform/create-edit-entities-portal.md).
+
+
 
 :::image type="content" source="media/create-app-data-plan/edit-data-model-details.png" alt-text="Edit the data for your app" lightbox="media/create-app-data-plan/edit-data-model-details.png":::
 
@@ -158,7 +160,7 @@ Use the chat to ask questions or request changes to the proposed fields, tables,
 You can also ask for additional sample data to enrich your dataset for the app.
 The agent analyzes your requests and makes the necessary updates.
 
-Some actions might not be supported through agent chat. For more information, see the [limitations](vibe-power-apps-how-to-use.md#known-limitations) section in the article.
+Some actions might not be supported through agent chat. For more information, see the [limitations](create-app-data-plan.md#known-limitations) section in the article.
 
 ### Edit data with inline actions
 
@@ -182,7 +184,7 @@ Add new or existing tables, or make targeted changes to relationships, tables, a
 
 1. To edit a relationship, select the relationship line between two tables and select **Edit** from the dropdown menu. Here you can change the relationship type or add a lookup column. You can also perform advanced edits like changing the logical names used in the relationship.
 
-1. Some relationship configurations currently aren't supported. For more information, see [Known limitations](vibe-power-apps-how-to-use.md#known-limitations).
+1. Some relationship configurations currently aren't supported. For more information, see [Known limitations](create-app-data-plan.md#known-limitations).
 
 ### Remove a data table
 
@@ -215,7 +217,7 @@ Follow one of these steps to change the ownership type to **User**, **Team**, or
 1. Select the table you want to edit and then select **View data** in the command bar.
 1. Select **Properties** to update the table’s display name, plural name, description, and other details.
 
- :::image type="content" source="maker/canvas-apps/media/tables/edit-table-properties.png" alt-text="Edit table properties":::
+ :::image type="content" source="media/create-app-data-plan/edit-table-properties.png" alt-text="Edit table properties":::
 
 
 
