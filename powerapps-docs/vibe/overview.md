@@ -42,9 +42,9 @@ You can access the new experience in one of two ways:
    > [!NOTE]
    > If you access the new experience through [Power Apps](https://make.preview.powerapps.com/),  you will need to enable it each time you sign in.
 
-## Navigation pane
+## Navigation
 
-The left navigation pane shows the following items:
+The left navigation shows the following items:
 
 
 :::image type="content" source="media/overview/left-navigation-pane.png" alt-text="Screenshot of the left navigation pane in the new Power Apps experience.":::
