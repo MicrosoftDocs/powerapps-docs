@@ -35,7 +35,7 @@ You can access the new experience in one of two ways:
 
 - Go to [https://vibe.preview.powerapps.com](https://vibe.preview.powerapps.com/) and sign in to start using the new experience.
 
-- Alternatively, sign in to [Power Apps](https://make.preview.powerapps.com/). In the upper-right corner, select **Try new experience (Preview)** to enable it.
+- Alternatively, sign in to [Power Apps](https://make.preview.powerapps.com/). At the top, select **Try new experience (Preview)** to enable it.
 
    :::image type="content" source="media/overview/new-experience.png" alt-text="Try the new Power Apps experience":::
 
