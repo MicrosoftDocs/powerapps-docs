@@ -26,7 +26,7 @@ This article explains how to set up and use the Microsoft Dataverse model contex
 
 1. Select **HTTP or Server Sent Events** and then press **Enter**.  
 
-1. Paste your organization MCP URL as copied above in step 3, append */api/mcp* and press **Enter**.  <!--There's no step 3 above. How does the user get the MCP org url? -->
+1. Paste your instance URL, such as `https://contoso.crm.dynamics.com/`, append */api/mcp* to it, and press Enter. You can get the instance URL at make.powerapps.com > **Settings** (gear icon) > **Session details** > **Instance url**.
    :::image type="content" source="media/data-platform-mcp-vsc/data-platform-mcp-github-org-url.png" alt-text="Organization URL with appendix.":::
 
    This step generates the MCP server configuration in Visual Studio Code.  

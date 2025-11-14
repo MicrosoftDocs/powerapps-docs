@@ -27,23 +27,22 @@ There are multiple ways to connect to a Dataverse MCP server:
 ## List of tools
 
 Once connected to the Dataverse MCP Server, you can choose from various tools in the Power Platform environment.
-<!-- Below in the read_query row "simple call" is stated? What does that mean?-->
 
 | Tool | Description |
 |------|-------------|
 | create_record | Inserts a new row into a Dataverse table and returns the GUID. |
 | describe_table | Retrieves the T-SQL schema of a specified table. |
-| execute_prompt | Executes a selected prompt using the required input structure. This call also invokes AIB prompt which has its own AIB prompt billing meter. |
-| list_prompts | Lists all predefined prompts available in the environment. |
 | list_tables | Lists all tables in the Dataverse environment. |
-| read_query | Executes SELECT queries to fetch data from Dataverse. It is Read multiple but simple call. |
+| read_query | Executes SELECT queries to fetch data from Dataverse. |
 | update_record | Updates an existing row in a Dataverse table. |
 | Create Table | Creates a new table with a specified schema. |
 | Update Table | Modifies schema or metadata of an existing table. |
 | Delete Table | Deletes a table from Dataverse. |
 | Delete Record | Deletes a row from a Dataverse table. |
-| Search | Searches through keywords over Dataverse for specific records. |
+| Search | Searches through keywords over Dataverse for specific record. |
+| Fetch | Retrieves full content of record in Dataverse using entity name and ID. |
 
+<!-- This paragraph will be replaced with updated info from PM.-->
 All but the search tool use text and generative AI tools (basic) per 10 responses. The search tool searches for keyword. <!-- This information was removed from the "Feature name" column in the original doc. Search doesn't seem to explain how billing is enforced so IMO more information is needed.-->For more information about Copilot billing, go to [Billing rates and management](/microsoft-copilot-studio/requirements-messages-management). <!--Added this link since it has information about the "text and generative AI tools (basic) per 10 responses" mentioned. -->
 
 ## Next steps

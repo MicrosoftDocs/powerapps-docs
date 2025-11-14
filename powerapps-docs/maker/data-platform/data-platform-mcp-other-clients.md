@@ -36,11 +36,13 @@ These are the prerequisites for using a Dataverse MCP server with Claude.
 
    Make a note of the user name in the connection **Name**, this should be the same name that you used to create the environment earlier.
 
-1. Select the connection to open it. Copy the URL from the browser and towards the end add *()* and save it. You need this URL for Claude desktop MCP configuration. <!--Need image of URL. The image resolution in the Word doc was too small to view the URL in your screenshot. Please add the screenshot to SharePoint so as to maintain higher resolution. Only the open and closed parentheses should be added? Also "towards the end" do you mean at the end of the URL. We need to be specific.-->
+1. Select the connection to open it. Paste this URL when you're prompted.
+   `https://make.preprod.powerautomate.com/environments/fb6637eb-601d-e9d2-b7f0-1613fca29e7e/connections?apiName=shared_commondataserviceforapps&connectionName=64244f45b6f045299463becb30bcd9b8`
+
 
 ## Install the Dataverse MCP server local proxy
 
-These steps install the Dataverse MCP server local proxy that is used by the MCP client, such as Claude desktop or VS Code GitHub Copilot.<!-- The local proxy steps aren't in the VS Code GitHub Copilot article. Shouldn't they be?-->
+These steps install the Dataverse MCP server local proxy that is used by the MCP client, such as Claude desktop or VS Code GitHub Copilot.
 
 1. Install the .NET SDK 8.0 either from download or with this PowerShell command.
 
@@ -74,7 +76,7 @@ After you have Claude desktop installed, you can find and launch Claude from you
 1. Open Claude desktop and go to **File** > **Settings**.
 1. If you haven't configured any MCP servers for Claude desktop previously, you observe a **Settings** dialog. Select **Edit Config**.
 1.	The Claude desktop files displays. Open the `claude_desktop_config.json` file with your favorite JSON editor.
-1. Replace &lt;connection URL&gt; and &lt;Tenant Id&gt; with your connection URL and tenant ID and paste the JSON snippet into the appropriate section of the file.
+1. Replace &lt;connection URL&gt; and &lt;Tenant Id&gt; with your [connection URL](#create-a-dataverse-connection-for-the-mcp-configuration) and [tenant ID](#get-the-tenant-id-of-your-dataverse-environment) and paste the JSON snippet into the appropriate section of the file.
    More information: [Create a Dataverse connection for the MCP configuration](#create-a-dataverse-connection-for-the-mcp-configuration) and [Get the tenant ID of your Dataverse environment](#get-the-tenant-id-of-your-dataverse-environment)
 
    Use a &lt;friendly name&gt; for your Dataverse MCP server that you can easily remember, for example: *MyDataverseMCPServer*.
