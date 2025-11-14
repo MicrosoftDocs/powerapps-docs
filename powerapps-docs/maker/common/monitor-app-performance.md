@@ -5,7 +5,7 @@ author: dalajogun
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 8/12/2025
+ms.date: 11/13/2025
 ms.subservice: canvas-maker
 ms.author: damialajogun
 search.audienceType: 
@@ -21,7 +21,7 @@ Monitor in Power Apps offers insights and recommendations to enhance app perform
 
 ## Prerequisites
 
-To use this feature, your administrator must enable certain analytics and monitoring settings in the Power Platform Admin Center. More information: [Monitoring experiences for makers](/power-platform/admin/monitoring/monitoring-overview#monitoring-experiences-for-makers)
+To use this feature, your administrator must enable certain analytics and monitoring settings in the Power Platform Admin Center. For more information, see [Monitoring experiences for makers](/power-platform/admin/monitoring/monitoring-overview#monitoring-experiences-for-makers).
 
 ## Open and pin Monitor
 
@@ -33,9 +33,9 @@ To use this feature, your administrator must enable certain analytics and monito
 
 ## Use Monitor 
 
-The **Monitor** page displays metric cards at the top, highlighting the top three underperforming apps for each metric. If all apps perform well on a specific metric, then no apps are listed in the card. Use the tabs underneath the cards to switch between viewing your model-driven, canvas, and code apps. 
+The **Monitor** page displays metric cards at the top, highlighting the top three underperforming apps for each metric. If all apps perform well on a specific metric, the card doesn't list any apps. Use the tabs under the cards to switch between viewing your model-driven, canvas, and code apps. 
 
-:::image type="content" source="powerapps-docs/maker/common/media/monitor-apps/monitor in power apps.jpg" alt-text="Monitor main screen showing app metrics":::
+:::image type="content" source="powerapps-docs/maker/common/media/monitor-apps/monitor-in-power-apps.jpg" alt-text="Monitor main screen showing app metrics":::
 
 | Metric | Definition | Available for Canvas apps | Available for Model-driven apps | Available for Code apps |
 | ------------- | ------------- |------------- | ------------- | ------------- |
@@ -50,7 +50,7 @@ The **Monitor** page displays metric cards at the top, highlighting the top thre
 
 ### View metrics and recommendations for an app
 
-  When you select an app on the  **Monitor** page a side pane opens and display more data for each metric, including a data chart for the last 30 days.
+  When you select an app on the  **Monitor** page, a side pane opens and displays more data for each metric, including a data chart for the last 30 days.
 
 1. On **Monitor** page, select an app.
 
@@ -59,4 +59,4 @@ The **Monitor** page displays metric cards at the top, highlighting the top thre
     :::image type="content" source="media/monitor-apps/monitor-side-pane.png" alt-text="App metrics and recommendations":::
 
   > [!IMPORTANT]
-  > Recommendations are only available in Managed Environments. Please contact your admin to enable Managed Environments for access to recommendations.
+  > Recommendations are only available in Managed Environments. Contact your admin to enable Managed Environments for access to recommendations.
