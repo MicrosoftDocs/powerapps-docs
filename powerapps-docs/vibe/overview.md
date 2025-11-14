@@ -24,7 +24,7 @@ The new Power Apps experience is an AI-native platform that builds solutions to 
 > - This feature is in preview.
 > - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2216214), and are available before an official release so that customers can get early access and provide feedback.
 
-- Copilot must be enabled in the tenant and environment. Learn more: [Copilot in Power Apps overview](maker/canvas-apps/ai-overview.md)
+- Copilot must be enabled in the tenant and environment. Learn more: [Copilot in Power Apps overview](../maker/canvas-apps/ai-overview.md)
 - This capability isn't available in a default environment.
 - This capability is available only in the US region and in English only. Learn more in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/en-US/availability-reports/?report=copilotfeaturereport)
 
@@ -74,4 +74,4 @@ Legend:
 
 ## Next steps
 
- [Create apps, data, and plans together (preview)](vibe-power-apps-how-to-use.md)
+ [Create apps, data, and plans together (preview)](create-app-data-plan.md)
