@@ -2416,12 +2416,18 @@
           href: ./data-platform/azure-synapse-link-choice-labels.md
         - name: Access Dataverse choices with Power BI
           href: ./data-platform/azure-synapse-link-choices-powerbi.md      
-  - name: Work with Dataverse MCP server (preview)
-    items:
-    - name: Enable the Dataverse MCP server
-      href: ./data-platform/data-platform-mcp-disable.md    
+  - name: Work with Dataverse MCP server
+    items: 
     - name: Connect to Dataverse with MCP overview
       href: ./data-platform/data-platform-mcp.md
+    - name: Configure the Dataverse MCP server
+      href: ./data-platform/data-platform-mcp-disable.md      
+    - name: Connect to Dataverse MCP with Copilot Studio
+      href: ./data-platform/data-platform-mcp-copilot-studio.md
+    - name: Connect to Dataverse MCP with Visual Studio Code
+      href: ./data-platform/data-platform-mcp-vscode.md
+    - name: Connect to Dataverse MCP with non-Microsoft clients
+      href: ./data-platform/data-platform-mcp-other-clients.md
     - name: Connect to Dataverse with MCP FAQ
       href: ./data-platform/data-platform-mcp-faq.md
   - name: License requirements for tables
