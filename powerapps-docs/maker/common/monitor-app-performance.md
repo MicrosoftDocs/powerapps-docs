@@ -35,7 +35,7 @@ To use this feature, your administrator must enable certain analytics and monito
 
 The **Monitor** page displays metric cards at the top, highlighting the top three underperforming apps for each metric. If all apps perform well on a specific metric, the card doesn't list any apps. Use the tabs under the cards to switch between viewing your model-driven, canvas, and code apps. 
 
-:::image type="content" source="powerapps-docs/maker/common/media/monitor-apps/monitor-in-power-apps.jpg" alt-text="Monitor main screen showing app metrics":::
+:::image type="content" source="media/monitor-apps/monitor-in-power-apps.jpg" alt-text="Monitor main screen showing app metrics":::
 
 | Metric | Definition | Available for Canvas apps | Available for Model-driven apps | Available for Code apps |
 | ------------- | ------------- |------------- | ------------- | ------------- |
