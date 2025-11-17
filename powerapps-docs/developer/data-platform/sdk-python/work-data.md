@@ -4,7 +4,7 @@ description: "Learn common scenarios for working with Dataverse data,
     and how to go about writing Python code for those scenarios."
 ms.author: paulliew
 author: paulliew
-ms.date: 11/05/2025
+ms.date: 11/17/2025
 ms.reviewer: phecke
 ms.topic: example-scenario
 contributors:
@@ -19,7 +19,7 @@ In this article, we demonstrate some example code that uses the SDK to work with
 
 ## Basic operations
 
-Here is some example code that operates on the account table.
+Here's some example code that operates on the account table.
 
 ```python
 from azure.identity import InteractiveBrowserCredential
@@ -83,7 +83,7 @@ Additional information about bulk operations:
 - If any payload omits @odata.type, it's stamped automatically (cached logical name lookup).
 - Response includes only IDs - the SDK returns those GUID strings.
 - Single-record create returns a one-element list of GUIDs.
-- Metadata lookup for @odata.type is performed once per entity set (cached in-memory).
+- Metadata lookup for `@odata.type` is performed once per entity set (cached in-memory).
 
 ## File upload
 
@@ -98,7 +98,7 @@ Additional information about file uploads:
 
 - `upload_file` picks one of the three methods to use based on the file size. If the file size is less than 128 MB the SDK uses `upload_file_small`, otherwise, the SDK uses `upload_file_chunk`
 - `upload_file_small` makes a single Web API call and only supports file size < 128 MB.
-- `upload_file_chunk` uses PATCH with Content-Range to upload the file (more aligned with HTTP standard compared to Dataverse messages). It consists of 2 stages - 1. PATCH request to get the headers used for actual upload, and 2. Actual upload in chunks. The function uses OData x-ms-chunk-size returned in the first stage to determine chunk size (normally 4 MB), and then uses Content-Range and Content-Length as metadata for the upload. The total number of Web API calls is the number of chunks + 1.
+- `upload_file_chunk` uses PATCH with Content-Range to upload the file (more aligned with HTTP standard compared to Dataverse messages). It consists of two stages - 1. PATCH request to get the headers used for actual upload, and 2. Actual upload in chunks. The function uses OData `x-ms-chunk-size` returned in the first stage to determine chunk size (normally 4 MB), and then uses `Content-Range` and `Content-Length` as metadata for the upload. The total number of Web API calls is the number of chunks + 1.
 
 ## Retrieve multiple with paging
 
@@ -121,26 +121,26 @@ print({"total_rows": total})
 ```
 
 <!-- TODO: This info should be in the package reference once written -->
-Here is a list of supported parameters where all are optional except `logical_name`.
+Here's a list of supported parameters where all are optional except `logical_name`.
 
-- logical_name: str — Logical (singular) name, e.g., "account".
+- logical_name: str — Logical (singular) name, for example, "account".
 - select: list[str] | None — Columns -> $select (comma joined).
-- filter: str | None — OData $filter expression (e.g., contains(name,'Acme') and statecode eq 0).
+- filter: str | None — OData $filter expression (for example, contains(name,'Acme') and statecode eq 0).
 - orderby: list[str] | None — Sort expressions -> $orderby (comma joined).
 - top: int | None — Global cap via $top (applied on first request; service enforces across pages).
 - expand: list[str] | None — Navigation expansions -> $expand; pass raw clauses (e.g., primarycontactid($select=fullname,emailaddress1)).
 - page_size: int | None — Per-page hint using Prefer: odata.maxpagesize=\<N\> (not guaranteed; last page may be smaller).
 
 <!-- TODO: This info should be in the package reference once written -->
-Here is a list of return values & semantics.
+Here's a list of return values & semantics.
 
-- $select, $filter, $orderby, $expand, $top map directly to corresponding OData query options on the first request.
-- $top caps total rows; the service may partition those rows across multiple pages.
-- page_size (Prefer: odata.maxpagesize) is a hint; the server decides actual page boundaries.
-- Returns a generator yielding non-empty pages (list[dict]). Empty pages are skipped.
+- `$select`, `$filter`, `$orderby`, `$expand`, `$top` map directly to corresponding OData query options on the first request.
+- `$top` caps total rows; the service may partition those rows across multiple pages.
+- page_size (`Prefer: odata.maxpagesize`) is a hint; the server decides actual page boundaries.
+- Returns a generator yielding nonempty pages (list[dict]). Empty pages are skipped.
 - Each yielded list corresponds to a value page from the Web API.
-- Iteration stops when no @odata.nextLink remains (or when $top satisfied server-side).
-- The generator does not materialize all results; pages are fetched lazily.
+- Iteration stops when no @odata.nextLink remains (or when `$top` satisfied server-side).
+- The generator doesn't materialize all results; pages are fetched lazily.
 
 Let's see an example with all supported parameters plus expected response.
 
@@ -233,7 +233,7 @@ Additional information about working with custom table metadata:
 - `get` supports single record retrieval with record ID or paging through result sets (prefer select to limit columns).
 - For CRUD methods that take a record ID, pass the GUID string (36-char hyphenated). Parentheses around the GUID are accepted but not required.
 <!-- TODO: Move this to the SQL article when written-->
-- SQL queries are executed directly against the entity set endpoints using the `?sql=` parameter. Supported subset only (single SELECT, optional WHERE/TOP/ORDER BY, alias). Unsupported constructs will be rejected by the service.
+- SQL queries are executed directly against the entity set endpoints using the `?sql=` parameter. Supported subset only (single SELECT, optional WHERE/TOP/ORDER BY, alias). Unsupported constructs are rejected by the service.
 
 ## Using pandas with the SDK
 

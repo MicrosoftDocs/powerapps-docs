@@ -3,7 +3,7 @@ title: "Dataverse SDK for Python overview (preview)"
 description: "Use Dataverse to store and access data for use in data science and analyses."
 ms.author: paulliew
 author: paulliew
-ms.date: 11/05/2025
+ms.date: 11/17/2025
 ms.reviewer: phecke
 ms.topic: overview
 contributors:
@@ -39,7 +39,7 @@ The following list describes key features of the SDK.
     Upload a file to a [File column](../../../maker/data-platform/types-of-fields.md#file-columns) in a table.
 - OptionSet/enum handling
 
-    OptionSet columns in a API call are mapped to enumeration values automatically.
+    OptionSet columns in an API call are mapped to enumeration values automatically.
 - Integration with [pandas](https://pandas.pydata.org/)
 
     The API call return value is in JSON format, which can be mapped to a [DataFrame](https://pandas.pydata.org/docs/reference/frame.html).
@@ -59,11 +59,11 @@ The following list describes a few benefits of the SDK.
 
 Here are a few known limitations of the current (preview) release.
 
-- General purpose OData batching, upsert, and association operations are not supported.
-- Dataverse DeleteMultiple functionality is not yet available from the Python SDK.
-- Minimal retry policy support is in the SDK. Currently, only network errors are retried. Our code examples include additional backoff for transient Dataverse consistency.
+- General purpose OData batching, upsert, and association operations aren't supported.
+- Dataverse DeleteMultiple functionality isn't yet available from the Python SDK.
+- Minimal retry policy support is in the SDK. Currently, only network errors are retried. Our code examples include another backoff for transient Dataverse consistency.
 <!-- TODO: move to the SQL article -->
-- SQL JOINs are currently not supported, and there is limited support for a WHERE/TOP/ORDER BY clause.
+- SQL JOINs are currently not supported, and there's limited support for a WHERE/TOP/ORDER BY clause.
 
 ## Related information
 
