@@ -2,16 +2,16 @@
 title: "Create an Azure Synapse Link for Dataverse with your Azure Synapse Workspace | MicrosoftDocs"
 description: "Learn how to export table data to Azure Synapse Analytics in Power Apps."
 ms.custom: ""
-ms.date: 08/18/2025
+ms.date: 11/06/2025
 ms.reviewer: "Mattp123"
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
 applies_to: 
   - "powerapps"
-author: "swatimadhukargit"
+author: "anibakore-msft"
 ms.subservice: dataverse-maker
-ms.author: "swatim"
+ms.author: "banirud"
 search.audienceType: 
   - maker
 contributors:
@@ -36,7 +36,28 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 
 - Dataverse: You must have the Dataverse **system administrator** security role. Additionally, tables you want to export via Azure Synapse Link must have the **Track changes** property enabled. More information: [Advanced options](create-edit-entities-portal.md#advanced-options)
 
-- Azure Data Lake Storage Gen2: You must have an Azure Data Lake Storage Gen2 account and **Owner** and **Storage Blob Data Contributor** role access. Your storage account must enable **Hierarchical namespace** for both initial setup and delta sync. **Allow storage account key access** is required only for the initial setup. Your storage account must have [Permitted scope for copy operations](/azure/storage/common/security-restrict-copy-operations?tabs=portal#configure-the-permitted-scope-for-copy-operations-preview) set to **From any storage account**.
+### Azure Data Lake Storage Gen2 requirements
+
+You must have an Azure Data Lake Storage Gen2 account and the following roles:
+
+- **Owner**
+- **Storage Blob Data Contributor**
+- **Storage Blob Data Owner**
+
+**Owner role requirement:**
+The Owner role is required because adding the managed identity of the Azure Synapse Link service to the storage account is a privileged operation. This managed identity enables the service to perform synchronization from Dataverse to Synapse. Currently, the Owner role is required and custom roles with similar privileges aren't supported for this step.
+
+**Privileges for managed identity:**
+
+- **Owner and Storage Account Contributor:** Required only during first-time setup to create the filesystem in the storage account and are assigned on the storage account. After the setup, these privileges can be removed without impacting sync operations.
+- **Storage Blob Data Contributor:** Required for normal blob operations during regular sync.
+- **Storage Blob Data Owner:** Currently required for managing both data and access permissions in scenarios involving Azure Data Lake Storage Gen2.
+
+Your storage account must enable **Hierarchical namespace** for both initial setup and delta sync.
+
+**Allow storage account key access** is required only for the initial setup because the service uses Shared Key authorization to perform privileged operations such as creating the filesystem and establishing the link before switching to managed identity authentication. After setup, key-based access is no longer needed.
+
+Your storage account must have [permitted scope for copy operations](/azure/storage/common/security-restrict-copy-operations?tabs=portal#configure-the-permitted-scope-for-copy-operations-preview) set to **From any storage account**.
 
 - Synapse workspace: You must have a Synapse workspace and the **Synapse Administrator** role access within the Synapse Studio. The Synapse workspace must be in the same region as your Azure Data Lake Storage Gen2 account. The storage account must be added as a linked service within the Synapse Studio. To create a Synapse workspace, go to [Creating a Synapse workspace](/azure/synapse-analytics/get-started-create-workspace).
 
