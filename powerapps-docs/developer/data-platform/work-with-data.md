@@ -53,6 +53,8 @@ If you're using our [PowerShell module](https://www.powershellgallery.com/packag
 
 If you are working with Python, we recommend using our [SDK for Python](./sdk-python/overview.md). The SDK enables data scientists and developers to create, access, and manager Dataverse business data using Python programming. The Dataverse SDK for Python implements common Python programming paradigms and best practices, provides a more natural Python interface to Dataverse, and supports community contributions.
 
+More information: [Getting started](./sdk-python/get-started.md)
+
 ### Web API
 
 The Dataverse Web API is an OData v4 RESTful endpoint. Use the Web API for any programming language that supports HTTP requests and authentication using OAuth 2.0, including .NET.
