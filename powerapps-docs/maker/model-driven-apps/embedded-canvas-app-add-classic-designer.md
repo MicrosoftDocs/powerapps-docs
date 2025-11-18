@@ -2,7 +2,7 @@
 title: "Add an embedded canvas app on a model-driven app form"
 description: Learn how to embed a canvas app into a model-driven app form in Power Apps.
 ms.custom: ""
-ms.date: 11/06/2025
+ms.date: 11/17/2025
 ms.reviewer: "matp"
 ms.topic: "how-to"
 applies_to: 
@@ -26,8 +26,7 @@ Two methods of integration are described in this article. First, using the moder
 >
 > - There is a third and more recent method of embedding canvas apps inside a modern app, which uses custom pages for better integration with the canvas app. More information: [Overview of custom pages for model-driven apps](model-app-page-overview.md).
 > - Both the modern form and classic form designers allow you to add an existing canvas app to embed in a model-driven form. However, currently only the classic form designer allows you to create a new canvas app to embed. More information: [Embed a canvas app using the classic experience](#embed-a-canvas-app-using-the-classic-experience)
-> - To be able to interact with the `ModelDrivenFormIntegration` control, you must *create* the canvas app by selecting **Customize** on the **Canvas app** control properties for the model-driven form using the classic form designer. More information: [Embed a canvas app using the classic experience](#embed-a-canvas-app-using-the-classic-experience)
-
+> - To enable access to form data through the `ModelDrivenFormIntegration` control, the embedded canvas app *must be created using the classic form designer*. Apps *added* through the modern or classic experience don't currently support this integration. For more information about how to create a canvas app to embed on a model-driven form using the classic form designer go to [Embed a canvas app using the classic experience](#embed-a-canvas-app-using-the-classic-experience). For more information about the `ModelDrivenFormIntegration` control go to [ModelDrivenFormIntegration control properties and actions](embedded-canvas-app-properties-actions.md).
 
 :::image type="content" source="media/embedded-canvas-app.png" alt-text="Example of an embedded canvas app on a model-driven app main form.":::
 
