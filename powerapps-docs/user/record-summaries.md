@@ -34,7 +34,9 @@ The feature enhances user efficiency by delivering context-rich insights directl
 
 ## Prerequisite
 
-Copilot assistance is available for all model-driven apps where the [AI insight cards](/power-platform/admin/settings-features#ai-insight-cards-preview) toggle is turned on. 
+Row summaries are available for all model-driven apps where
+- Copilot is turned on for the tenant.
+- The [AI insight cards](/power-platform/admin/settings-features#ai-insight-cards-preview) toggle is turned on. 
 
 ## Limitations
 
