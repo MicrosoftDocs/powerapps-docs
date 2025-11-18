@@ -1,0 +1,15 @@
+items:
+  - name: Dataverse SDK for Python
+    items:
+      - name: Dataverse SDK for Python (preview)
+        href: index.yml
+      - name: Overview
+        href: overview.md
+      - name: Quick guide to Dataverse
+        href: quick-guide-dataverse.md
+      - name: Getting started
+        href: get-started.md
+      - name: Working with data
+        href: work-data.md
+      - name: Python Package Reference
+        href: /python/api/dataverse-sdk-docs-python/dataverse-overview?view=dataverse-sdk-python-latest

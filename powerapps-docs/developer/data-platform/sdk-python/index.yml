@@ -1,0 +1,51 @@
+### YamlMime:Landing
+
+title: "Dataverse SDK for Python (preview) documentation"
+summary: Enables data scientists and developers to create, access, and manager Dataverse business data using Python programming. The Dataverse SDK for Python implements common Python programming paradigms and best practices, provides a more natural Python interface to Dataverse.
+
+metadata:
+  title: Dataverse SDK for Python (preview) documentation
+  description: Provides access to highlighted areas within the Dataverse SDK for Python (preview) documentation
+  ms.service: powerapps
+  ms.subservice: dataverse-developer
+  ms.topic: landing-page
+  ms.collection: collection
+  author: phecke
+  ms.author: pehecke
+  ms.date: 10/20/2025
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+  # Card
+  - title: Get started
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Overview
+            url: overview.md
+      - linkListType: get-started
+        links:
+          - text: "Getting started"
+            url: get-started.md
+      - linkListType: concept
+        links:
+          - text: "Quick guide to Dataverse"
+            url: quick-guide-dataverse.md
+  # Card
+  - title: How To
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: "Work with data"
+            url: work-data.md
+
+  # Card
+  - title: Reference
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Table (entity) reference
+            url: ../webapi/reference/entitytypes?view=dataverse-latest&preserve-view=true
+          - text: SDK package reference
+            url: /python/api/dataverse-sdk-docs-python/dataverse-overview?view=dataverse-sdk-python-latest
