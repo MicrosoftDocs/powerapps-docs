@@ -1,7 +1,7 @@
 ---
 title: Use row summaries in model-driven apps 
 description: Learn how to access and utilize AI-generated row summaries in main forms.
-ms.date: 05/22/2025
+ms.date: 11/18/2025
 ms.update-cycle: 180-days
 ms.topic: article
 ms.component: pa-user
@@ -34,9 +34,10 @@ The feature enhances user efficiency by delivering context-rich insights directl
 
 ## Prerequisite
 
-Row summaries are available for all model-driven apps where
+Each of the following settings must be turned on to see the row summaries for model-driven apps.
+
 - Copilot is turned on for the tenant.
-- The [AI insight cards](/power-platform/admin/settings-features#ai-insight-cards-preview) toggle is turned on. 
+- The [AI insight cards](/power-platform/admin/settings-features#ai-insight-cards-preview) toggle is turned on for the Power Platform environment. 
 
 ## Limitations
 
