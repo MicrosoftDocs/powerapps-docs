@@ -35,6 +35,8 @@
       href: ./webapi/overview.md
     - name: Use the SDK for .NET
       href: ./org-service/overview.md
+    - name: Use the SDK for Python
+      href: ./sdk-python/overview.md
     - name: Search for records
       href: ./search/overview.md
       items:
@@ -567,6 +569,8 @@
       href: /dynamics365/customer-engagement/web-api/about
     - name: SDK for .NET
       href: /dotnet/api/microsoft.crm.sdk
+    - name: SDK for Python
+      href: /python/api/dataverse-sdk-docs-python/dataverse-overview?view=dataverse-sdk-python-latest&preserve-view=true
     - name: FetchXml reference
       href: fetchxml/reference/index.md
     - name: XRM Tooling
