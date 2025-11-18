@@ -35,6 +35,8 @@
       href: ./webapi/overview.md
     - name: Use the SDK for .NET
       href: ./org-service/overview.md
+    - name: Use the SDK for Python
+      href: ./sdk-python/overview.md
     - name: Search for records
       href: ./search/overview.md
       items:

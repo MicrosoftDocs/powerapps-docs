@@ -1,7 +1,7 @@
 ---
 title: "Work with data using code in Microsoft Dataverse (PowerApps) | Microsoft Docs" 
 description: "Microsoft Dataverse provides web services and APIs that you can use to interact with your data."
-ms.date: 05/20/2024
+ms.date: 11/18/2025
 ms.reviewer: pehecke
 ms.topic: article
 author: MsSQLGirl
@@ -17,7 +17,7 @@ contributors:
 
 There are several different ways to access Dataverse data using code.
 
-- Use the Dataverse [SDK for .NET](#sdk-for-net) or [Web API](#web-api) to retrieve, add, and modify data.
+- Use the Dataverse [SDK for .NET](#sdk-for-net), [SDK for Python](./sdk-python/), or [Web API](#web-api) to retrieve, add, and modify data.
 - Use [Dataverse search](#search-dataverse-data) search Dataverse data.
 - Use the Dataverse Tabular Data Stream (TDS) endpoint to [query data with SQL](#query-data-with-sql).
 
@@ -49,6 +49,10 @@ If you're using our [PowerShell module](https://www.powershellgallery.com/packag
 - [Use the SDK for .NET](org-service/overview.md)
 - [Quickstart: Execute an SDK for .NET request (C#)](org-service/quick-start-org-service-console-app.md)
 
+### SDK for Python
+
+If you are working with Python, we recommend using our [SDK for Python](./sdk-python/). The SDK enables data scientists and developers to create, access, and manager Dataverse business data using Python programming. The Dataverse SDK for Python implements common Python programming paradigms and best practices, provides a more natural Python interface to Dataverse, and supports community contributions.
+
 ### Web API
 
 The Dataverse Web API is an OData v4 RESTful endpoint. Use the Web API for any programming language that supports HTTP requests and authentication using OAuth 2.0, including .NET.
@@ -56,7 +60,6 @@ The Dataverse Web API is an OData v4 RESTful endpoint. Use the Web API for any p
 - [Learn to use the Dataverse Web API](webapi/overview.md)
 - [Quick Start: Web API with PowerShell and Visual Studio Code](webapi/quick-start-ps.md)
 - [Quick Start: Web API sample (C#)](webapi/quick-start-console-app-csharp.md)
-
 
 ## Search Dataverse data
 
@@ -73,7 +76,6 @@ The [Power Query Dataverse connector](/power-query/connectors/dataverse) uses th
 [Retrieving data using SQL Management Studio (SSMS)](dataverse-sql-query.md#sql-server-management-studio-preview) is a preview feature.
 
 [Learn to use SQL to query data](dataverse-sql-query.md)
-
 
 ## Request and Response payload size limitations
 
