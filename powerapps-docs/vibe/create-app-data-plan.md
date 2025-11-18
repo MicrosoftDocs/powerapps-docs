@@ -1,6 +1,6 @@
 ---
 title: "Create apps, data, and plans together"
-description: Learn how the Power Apps new experience simplifies app creation by generating plans, data models, and apps in parallel. Build apps smarter and faster.
+description: Learn how the Power Apps new vibe code experience simplifies app creation by generating plans, data models, and apps in parallel. Build apps smarter and faster.
 author: mduelae
 ms.author: mkaur
 ms.reviewer: mkaur
