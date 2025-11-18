@@ -48,4 +48,4 @@ landingContent:
           - text: Table (entity) reference
             url: ../webapi/reference/entitytypes?view=dataverse-latest&preserve-view=true
           - text: SDK package reference
-            url: https://review.learn.microsoft.com/en-us/python/api/dataverse-sdk-docs-python/dataverse-overview?view=dataverse-sdk-python-latest&branch=pr-en-us-3
+            url: https://learn.microsoft.com/python/api/dataverse-sdk-docs-python/dataverse-overview?view=dataverse-sdk-python-latest

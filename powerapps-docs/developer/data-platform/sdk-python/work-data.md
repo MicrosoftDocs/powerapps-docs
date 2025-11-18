@@ -23,7 +23,7 @@ Here's some example code that operates on the account table.
 
 ```python
 from azure.identity import InteractiveBrowserCredential
-from PowerPlatform.Dataverse import DataverseClient
+from PowerPlatform.Dataverse.client import DataverseClient
 
 base_url = "https://<myorg>.crm.dynamics.com"
 client = DataverseClient(base_url=base_url, credential=InteractiveBrowserCredential())

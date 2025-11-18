@@ -19,7 +19,7 @@ In this article, we describe how to set up your Python environment to access Dat
 ## Prerequisites
 
 - Read/write access to a Dataverse environment. A [trial environment](/power-platform/admin/create-environment) can be used.
-- An activated Python 3.13+ environment.
+- An activated Python 3.10+ environment.
 - Network access to [pypi.org](https://pypi.org) to obtain the SDK packages.
 
 ## Install the SDK and dependencies
@@ -36,7 +36,7 @@ This code example imports the client and configuration types from the SDK packag
 
 ```python
 from azure.identity import InteractiveBrowserCredential
-from PowerPlatform.Dataverse import DataverseClient
+from PowerPlatform.Dataverse.client import DataverseClient
 from PowerPlatform.Dataverse.config import DataverseConfig
 
 cfg = DataverseConfig()  # defaults to language_code=1033
