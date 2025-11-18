@@ -37,7 +37,7 @@ This code example imports the client and configuration types from the SDK packag
 ```python
 from azure.identity import InteractiveBrowserCredential
 from PowerPlatform.Dataverse.client import DataverseClient
-from PowerPlatform.Dataverse.config import DataverseConfig
+from PowerPlatform.Dataverse.core.config import DataverseConfig
 
 cfg = DataverseConfig()  # defaults to language_code=1033
 client = DataverseClient(base_url="https://<myorg>.crm.dynamics.com", 
