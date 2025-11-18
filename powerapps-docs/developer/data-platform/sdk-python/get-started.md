@@ -46,15 +46,6 @@ client = DataverseClient(base_url="https://<myorg>.crm.dynamics.com",
 
 You can customize the connection using optional HTTP tunable settings to handle connection timeouts, retries, etc. Access these settings via `cfg.http_retries`, `cfg.http_backoff`, and `cfg.http_timeout`.
 
-It's good practice the test the connection before proceeding.
-
-```python
-if client.is_connected():
-    print("Successfully connected to Dataverse!")
-else:
-    print("Connection failed. Please check your credentials.")
-```
-
 Now that you have an established client connection to a Dataverse environment, you can start using the SDK to work with business data, table metadata, and more. The next article will cover some examples of these operations.
 
 Before you leave this page, take note that you can't work with Dataverse effectively unless you have some knowledge of Dataverse. We provide a quick guide article that teaches you the basics.  
