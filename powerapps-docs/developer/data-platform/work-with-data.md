@@ -17,7 +17,7 @@ contributors:
 
 There are several different ways to access Dataverse data using code.
 
-- Use the Dataverse [SDK for .NET](#sdk-for-net), [SDK for Python](./sdk-python/), or [Web API](#web-api) to retrieve, add, and modify data.
+- Use the Dataverse [SDK for .NET](#sdk-for-net), [SDK for Python](#sdk-for-python), or [Web API](#web-api) to retrieve, add, and modify data.
 - Use [Dataverse search](#search-dataverse-data) search Dataverse data.
 - Use the Dataverse Tabular Data Stream (TDS) endpoint to [query data with SQL](#query-data-with-sql).
 
@@ -51,7 +51,7 @@ If you're using our [PowerShell module](https://www.powershellgallery.com/packag
 
 ### SDK for Python
 
-If you are working with Python, we recommend using our [SDK for Python](./sdk-python/). The SDK enables data scientists and developers to create, access, and manager Dataverse business data using Python programming. The Dataverse SDK for Python implements common Python programming paradigms and best practices, provides a more natural Python interface to Dataverse, and supports community contributions.
+If you are working with Python, we recommend using our [SDK for Python](./sdk-python/overview.md). The SDK enables data scientists and developers to create, access, and manager Dataverse business data using Python programming. The Dataverse SDK for Python implements common Python programming paradigms and best practices, provides a more natural Python interface to Dataverse, and supports community contributions.
 
 ### Web API
 
