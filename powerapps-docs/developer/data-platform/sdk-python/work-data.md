@@ -79,7 +79,7 @@ Additional information about bulk operations:
 
 - Returns `None` (same as single update) to keep semantics consistent.
 - Broadcast vs per-record determined by whether the `changes` parameter is a dictionary or list.
-- Primary key attribute is injected automatically when constructing [UpdateMultiple](../../data-platform/webapi/reference/updatemultiple?view=dataverse-latest&preserve-view=true) targets.
+- Primary key attribute is injected automatically when constructing [UpdateMultiple action](xref:Microsoft.Dynamics.CRM.UpdateMultiple) targets.
 - If any payload omits @odata.type, it's stamped automatically (cached logical name lookup).
 - Response includes only IDs - the SDK returns those GUID strings.
 - Single-record create returns a one-element list of GUIDs.

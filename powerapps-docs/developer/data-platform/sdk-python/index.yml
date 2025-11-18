@@ -46,6 +46,6 @@ landingContent:
       - linkListType: reference
         links:
           - text: Table (entity) reference
-            url: ../webapi/reference/entitytypes?view=dataverse-latest&preserve-view=true
+            url:  xref:Microsoft.Dynamics.CRM.EntityTypeIndex
           - text: SDK package reference
             url: /python/api/dataverse-sdk-docs-python/dataverse-overview?view=dataverse-sdk-python-latest
