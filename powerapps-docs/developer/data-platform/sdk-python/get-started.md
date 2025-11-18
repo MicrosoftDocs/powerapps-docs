@@ -27,7 +27,7 @@ In this article, we describe how to set up your Python environment to access Dat
 From a terminal window, execute the following command. This installs the SDK from [pypi.org](https://pypi.org/).
 
 ```python
-python.exe -m pip install PowerPlatform-Dataverse-Client
+pip install PowerPlatform-Dataverse-Client
 ```
 
 ## Connect to Dataverse
