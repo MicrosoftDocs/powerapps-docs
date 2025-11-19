@@ -196,7 +196,7 @@ Furthermore, columns are enabled for Dataverse search only if a Quick Find view 
 7.	Unselect the tables and Save the change:
  
  
-How to unselect columns that are not being used so that they are not indexed / searchable
+**How to unselect columns that are not being used so that they are not indexed / searchable**
 1.	Go to Power Apps
  
 2.	In the navigation pane, select Tables:
@@ -256,7 +256,7 @@ Copilot in model-driven apps uses AI to interpret natural language queries and g
 > - Even if this action is taken, additional Dataverse Search consumption may be incurred, triggered by other experiences, such as a Dynamics 365 Copilot for Sales.
 
 
-5.	**Copilot for Dynamics 365 Apps: Turn off Copilot feature for D365 applications**
+5.	**Copilot for Dynamics 365 Apps: Specify which applications you'd like Copilot to be enabled for**
 **Why**
 Just like model driven applications in Power Apps, Copilot in model-driven apps uses AI to interpret natural language queries and generate suggestions or actions based on the app’s underlying Dataverse data. In some situations, applications do not require that level of enhanced search through Copilot, thus managing Copilot at an app level may help with consumption control.
 
@@ -291,7 +291,7 @@ Just like model driven applications in Power Apps, Copilot in model-driven apps 
 
 
 
-6.	**Copilot Studio: Remove all Dataverse toold, Dataverse Tables or files from Copilot Studio agent’s knowledge**
+6.	**Copilot Studio: Remove all Dataverse tools, Dataverse Tables or files from Copilot Studio agent’s knowledge**
 **Why**
 Dataverse tables and files in Copilot Studio knowledge leverage indexed data by creating semantic indexes that map content and relationships for fast, context-aware retrieval. These indexes enable Copilot to interpret natural language queries and deliver precise answers or actions based on structured and unstructured data.
 
@@ -314,7 +314,7 @@ The same instructions are applicable for the following knowledge sources:
 ### Environment level:
 To manage search index at the environment level, Admins can review purpose and usage of each application and agent, as well as Global Search to confirm that search is needed. If not, Admins can take the following actions:
 
-7.	**Global Search: Change Dataverse Search to “Default” (Admin)**
+7.	**Global Search not needed: Just focus on Copilot experiences**
 **Why**
 When Dataverse Search is set to “Default”, the Global Search experience is not enabled on the navigation of the model-driven apps or Dynamics 365. This means that users cannot query Global Search nor data that is marked as “searchable” for exclusive purpose of Global Search will be indexed, while still allowing for Dataverse data to be indexed for other experiences, such as Copilot in Copilot Studio or in model driven applications.
 
@@ -352,9 +352,9 @@ Copilot in Power Apps uses Dataverse indexed data to quickly retrieve and interp
 
 
 
-9.	**Dataverse Search is not needed for the environment. Admins set Dataverse search to "Off".**
+9.	**Dataverse Search is not needed for the environment.**
 **Why**
-If Dataverse search is set to "Off" for the environment, you can't use the search capability in the Power Apps navigation bar or any generative AI experience that relies on Dataverse, like uploaded files or using OneDrive or Sharepoint files in Microsoft Copilot Studio agents, among other experiences. 
+At any time, Dataverse can be manually set to "Off". If Dataverse search is set to "Off" for the environment, you can't use the search capability in the Power Apps navigation bar or any generative AI experience that relies on Dataverse, like uploaded files or using OneDrive or Sharepoint files in Microsoft Copilot Studio agents, among other experiences. 
 
 **How to turn off Dataverse Search for the environment**
 1.	In Power Platform Admin Center go to Manage > Environments:
@@ -370,7 +370,6 @@ If Dataverse search is set to "Off" for the environment, you can't use the searc
 > Notes:
 > -	Turning off Dataverse search deprovisions and removes the index within a period of 12 hours. If you turn on Dataverse search after its been off for 12 hours, it provisions a fresh index that needs to go through a full sync. Syncing may take up to an hour or more for average size organizations, and a couple of days for large organizations. Be sure to consider these implications when you turn off Dataverse search temporarily. ([Configure Dataverse search for your environment]([url](https://learn.microsoft.com/en-us/power-platform/admin/configure-relevance-search-organization?tabs=new)))
 > -	Index removal (or provisioning) can take multiple days to be completed, depending on the amount of Dataverse Search consumption. Example: an organization with 10GB of indexed data may take 1 day to clean up all indexes, while an organization with 500GB may take multiple days to see it reflected in Dataverse search reporting. Please give a few days or a week before sumitting a support ticket, to ensure a complete removal of Dataverse Search indexed data.
-
 
 
 ## What happens if Dataverse search is turned off?
