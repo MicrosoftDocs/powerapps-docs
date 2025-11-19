@@ -62,8 +62,12 @@ additionalContent:
               url: developer/code-apps/index.yml
         - title: AI copilot capabilities
           links:
-            - text: Get started with AI copilot (preview)
+            - text: Get started with AI copilot 
               url: maker/canvas-apps/ai-overview.md
+            - text: Use the Plan designer
+              url: maker/plan-designer/plan-designer.md
+            - text: Overview of the new experience (preview) 
+              url: vibe/overview.md    
             - text: Build apps through conversation
               url: maker/canvas-apps/ai-conversations-create-app.md
             - text: Add a Copilot control to a canvas app (preview)
