@@ -1,9 +1,9 @@
 ---
 title: "How to: Create a code app from scratch (preview)"
 description: "Learn how to create a code app from scratch"
-ms.author: alaug
-author: alaug
-ms.date: 09/10/2025
+ms.author: jordanchodak
+author: jordanchodakWork
+ms.date: 11/19/2025
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
@@ -39,7 +39,7 @@ This article walks through how to set up a blank app from [Vite](https://vite.de
 1. Accept the default package name `appfromscratch` by pressing **Enter**.
 1. If asked to select a framework, select **React**.
 1. If asked to select a variant, select **TypeScript**.
-1. At this time, the Power SDK requires the port to be 3000 in the default configuration.
+1. At this time, the Power Apps SDK requires the port to be 3000 in the default configuration.
 
    Install the node type definition using:
 
