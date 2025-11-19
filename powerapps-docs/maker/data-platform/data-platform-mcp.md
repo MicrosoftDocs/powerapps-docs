@@ -43,7 +43,7 @@ Once connected to the Dataverse MCP Server, you can choose from various tools in
 | Fetch | Retrieves full content of record in Dataverse using entity name and ID. |
 
 > [!NOTE]
-> Dataverse MCP tools are charged when accessed by AI agents created outside of Microsoft Copilot Studio. If you have Dynamics 365 Premium licenses (such as Dynamics 365 Sales Premium, Finance Premium, Supply Chain Premium, and Customer Service Premium) or a Microsoft 365 Copilot User Subscription License (USL), you aren't charged for accessing Dynamics 365 data, even when that data is accessed from outside Microsoft Copilot Studio.
+> Starting December 15, 2025 Dataverse MCP tools are charged when accessed by AI agents created outside of Microsoft Copilot Studio. If you have Dynamics 365 Premium licenses (such as Dynamics 365 Sales Premium, Finance Premium, Supply Chain Premium, and Customer Service Premium) or a Microsoft 365 Copilot User Subscription License (USL), you aren't charged for accessing Dynamics 365 data, even when that data is accessed from outside Microsoft Copilot Studio.
 
 The Search tool is billed at the same Copilot Credit rate as Tenant graph grounding, while all other tools follow the Text and generative AI tools (basic) per 10 response Copilot credit rate. For information about Copilot billing, go to [Billing rates and management](/microsoft-copilot-studio/requirements-messages-management).
 
