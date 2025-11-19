@@ -115,7 +115,7 @@ For the examples in the following steps, the example types from the model file a
 
 > [!NOTE]
 > Generated models may include internal property names with # (ex: "Choices1#Id") which are used for binding in forms but should not be included in the payload sent to the SharePoint connector. When updating or creating a row in your list, the SharePoint API expects you to provide the expanded object for referenced columns (author, editor, person/group columns etc.) rather than just the IDs. 
-Refer to the [SharePoint API documentation]( https://learn.microsoft.com/en-us/sharepoint/dev/sp-add-ins/complete-basic-operations-using-sharepoint-rest-endpoints) for more information. 
+Refer to the [SharePoint API documentation](/sharepoint/dev/sp-add-ins/complete-basic-operations-using-sharepoint-rest-endpoints) for more information. 
 
 ```typescript 
 const choices1Obj = selectedChoices1Id 
