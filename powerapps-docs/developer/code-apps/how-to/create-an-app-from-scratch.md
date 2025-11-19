@@ -1,9 +1,9 @@
 ---
 title: "How to: Create a code app from scratch (preview)"
 description: "Learn how to create a code app from scratch"
-ms.author: alaug
-author: alaug
-ms.date: 09/10/2025
+ms.author: jordanchodak
+author: jordanchodakWork
+ms.date: 11/19/2025
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
