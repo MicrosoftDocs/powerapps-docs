@@ -24,12 +24,14 @@ contributors:
 
 ## What is Dataverse search?
 
-Dataverse search lets you quickly find content in model-driven apps and other products that use Dataverse as a data source. Learn more about Dataverse search and its features in [What is Dataverse search](relevance-search-benefits.md).
+Dataverse Search is the foundation that enables Copilot and in-app search experiences to understand and reason over business data, helping organizations turn raw information into actionable intelligence.. Learn more about Dataverse search and its enabled experiences in [What is Dataverse search](relevance-search-benefits.md).
 
 ## What is the difference between "On" and "Default" state for Dataverse search?
 
-- When you set Dataverse search to **On**, the search bar appears in the header of all model-driven apps in the environment, letting users have a global search experience. Generative AI experiences can also be enabled.
-- When you set Dataverse search to "**Default**", the search bar in the header of all model-driven apps in the environment allowing your users to have a global-search experience is hidden, but generative AI experiences can still be enabled.
+ The state selected for Dataverse Search impacts the ability to leverage Dataverse data across the enabled experiences for all the organization.
+ For a better understanding of what each Dataverse search state means, please refer to:
+ - /relevance-search-benefits.md#what-dataverse-search-setting-means-for-global-search
+ - /relevance-search-benefits.md#what-dataverse-search-means-for-generative-ai-enabled-experiences
 
 ## What is the scope of content searched by Dataverse search?
 
@@ -137,11 +139,11 @@ Learn more in [Dataverse capacity-based storage](/power-platform/admin/capacity-
 
 ## What actions can admins take to manage Dataverse search?
 
-To ensure optimal operations for the organization, admins with the right permissions can use several ways to optimize storage consumption. Turning off Dataverse search isn't recommended because it affects all the enabled experiences, like search and generative AI conversational experiences. To learn more about managing Dataverse search, go to [Dataverse capacity-based storage](/power-platform/admin/capacity-storage).
+Depending on the experience that leverages Dataverse Search and its usage, consumption size may increase more drastically. As such, to learn more about managing Dataverse search, go to [What is Dataverse search](/relevance-search-benefits.md#what-actions-can-makers-or-admins-take-to-manage-dataverse-search-efficiently).
 
 ## What happens if Dataverse search is turned off?
 
-If Dataverse search is set to "**Off**" for the environment, you can't use the search capability in the Power Apps navigation bar or any generative AI experience that relies on Dataverse, like uploaded files or using OneDrive or Sharepoint files in Microsoft Copilot Studio agents, among other experiences. TFor details about these limitations, see [What is Dataverse search](/power-apps/user/relevance-search-benefits).
+If Dataverse search is set to "**Off**" for the environment, you can't use the search capability in the Power Apps navigation bar or any generative AI experience that relies on Dataverse, like uploaded files or using OneDrive or Sharepoint files in Microsoft Copilot Studio agents, among other experiences. TFor details about these limitations, see [What is Dataverse search](/relevance-search-benefits.md#what-happens-if-dataverse-search-is-turned-off).
 
 ### See also
 
