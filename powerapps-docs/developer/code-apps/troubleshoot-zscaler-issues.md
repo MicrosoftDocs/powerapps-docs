@@ -28,7 +28,7 @@ The following table lists symptoms that may indicate Zscaler-related issues.
 | TLS Handshake / Cert errors | `UNABLE_TO_VERIFY_LEAF_SIGNATURE` / `SELF_SIGNED CERT IN CHAIN` (if debug enabled)|
 | Works off corporate network | Command succeeds when disconnected from Zscaler|
 
-## Prerequisites Checklist
+## Prerequisites checklist
 
 Before you begin, verify the following:
 
@@ -42,13 +42,13 @@ Before you begin, verify the following:
 
 Use the information in the following sections to troubleshoot.
 
-### Step 1: Validate Baseline
+### Step 1: Validate baseline
 
 To eliminate causes not related to a proxy, run the [`pac env who`](/power-platform/developer/cli/reference/env#pac-env-who) command.
 
 If this command succeeds, general connectivity is fine; failures are isolated to data source calls.
 
-### Step 2: Confirm Proxy Interception
+### Step 2: Confirm proxy interception
 
 Optionally, inspect the certificate chain using this command:
 
@@ -62,7 +62,7 @@ If Zscaler injects its certificate, you see a Zscaler issuer instead of Microsof
 > When a proxy like Zscaler intercepts HTTPS traffic, it replaces the original server certificate with its own certificate signed by a corporate root CA. This allows the proxy to decrypt, inspect, and re-encrypt traffic. Browsers trust this because the corporate root CA is installed in the system trust store. See [How HTTPS Interception Works](https://www.eff.org/deeplinks/2017/02/https-interception-weakens-web-security)
 
 
-### Step 3: Export Zscaler Root CA to PEM
+### Step 3: Export Zscaler root CA to PEM
 
 Run this command to export the Zscaler Root Certificate Authority (CA) to Privacy Enhanced Mail (PEM)
 
@@ -98,12 +98,12 @@ Result: `~\.zscaler-root-ca.pem` created.
 > icacls "$env:USERPROFILE\.zscaler-root-ca.pem" /grant:r "$env:USERNAME:(R)"
 > ```
 
-#### Windows Certificate Store and PEM Format
+#### Windows certificate store and PEM format
 
 The `Get-ChildItem Cert:\CurrentUser\Root` command accesses the Windows Certificate Store via PowerShell's certificate provider. PEM is a Base64-encoded format for certificates. The conversion is necessary because Node.js requires PEM format while Windows stores certificates in DER (Distinguished Encoding Rules) format. See [PowerShell Certificate Provider](/powershell/module/microsoft.powershell.security/about/about_certificate_provider) and [PEM Format RFC](https://datatracker.ietf.org/doc/html/rfc7468)
 
 
-#### Windows `icacls` Command
+#### Windows `icacls` command
 
 `icacls` (Integrity Control Access Control List) is a Windows command-line utility for managing file permissions. The parameters used: `/inheritance:r` removes inherited permissions, `/grant:r` replaces existing permissions with read-only access for the specified user. See [icacls Documentation](/windows-server/administration/windows-commands/icacls)
 
@@ -121,11 +121,11 @@ Close & reopen terminal / VS Code to propagate.
 > [!CAUTION]
 > **Scope impact:** This [NODE_EXTRA_CA_CERTS Environment Variable](#node_extra_ca_certs-environment-variable) affects ALL Node.js processes run by your user account. If the PEM file is tampered with, every Node.js application trusts the modified certificate authority, not just the PAC CLI. Verify the file hash periodically and keep it secured.
 
-#### NODE_EXTRA_CA_CERTS Environment Variable
+#### NODE_EXTRA_CA_CERTS environment variable
 
 This Node.js environment variable specifies a file containing more trusted Certificate Authorities beyond Node.js's built-in list (Mozilla's CA bundle). When set, Node.js trusts certificates signed by CAs in both the built-in list and the specified file. See [Node.js CLI Environment Variables](https://nodejs.org/api/cli.html#node_extra_ca_certsfile)
 
-### Step 5: Re‑run the Command
+### Step 5: Re-run the command
 
 Try running the command again.
 
@@ -135,7 +135,7 @@ pac code add-data-source -a <apiId> -c <connectionId> [-t <tableName>] [-d <data
 
 Expect connector retrieval success instead of fetch failure.
 
-### (Avoid) Insecure Workaround
+### (Avoid) Insecure workaround
 
 A final, definitive test that should be avoided is to disable TLS validation temporarily.
 
@@ -169,7 +169,7 @@ Instead of:
 [AddDataSource.ServiceCall.GetConnector.Failure] { apiId: 'shared_office365users', error: 'fetch failed' }
 ```
 
-## Troubleshooting Matrix
+## Troubleshooting matrix
 
 If you still experience issues after completing the [Troubleshooting steps](#troubleshooting-steps), investigate the following issues.
 
@@ -209,7 +209,7 @@ The `NODE_EXTRA_CA_CERTS` fix doesn't help here. Engage your network/security te
 - Allow direct HTTPS (port 443) from developer workstations to Microsoft cloud services
 - Configure split-tunnel rules to bypass inspection/filtering for trusted Microsoft endpoints
 
-#### Split‑Tunnel / Allowlisting Guidance
+#### Split-tunnel / allowlisting guidance
 
 Some enterprise VPNs route only a subset of traffic directly while forcing other destinations through inspection gateways. Power Platform endpoints must be reachable without blocking or SSL interception conflicts. See Microsoft connectivity requirements for [endpoint allowlisting guidance](/power-platform/admin/online-requirements).
 
@@ -217,7 +217,7 @@ Some enterprise VPNs route only a subset of traffic directly while forcing other
 
 Certificate chain is incomplete. Either export the full certificate chain (root + intermediates) or request your network team to provide the complete root CA bundle. Some proxies require both root and intermediate CAs to be trusted.
 
-## Quick Checks
+## Quick checks
 
 ```powershell
 Test-Path "$env:USERPROFILE\.zscaler-root-ca.pem"        # Expect True
@@ -238,7 +238,7 @@ Get-Content "$env:USERPROFILE\.zscaler-root-ca.pem" -TotalCount 2
 - Safe: adds trust; doesn't disable validation.
 - Use a dedicated dev machine if policy restricts certificate export.
 
-## Escalation Data
+## Escalation data
 
 If none of the steps in this article help, before you contact technical support, collect the following information and provide it:
 
