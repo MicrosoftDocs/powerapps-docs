@@ -125,6 +125,27 @@ Close & reopen terminal / VS Code to propagate.
 
 This Node.js environment variable specifies a file containing more trusted Certificate Authorities beyond Node.js's built-in list (Mozilla's CA bundle). When set, Node.js trusts certificates signed by CAs in both the built-in list and the specified file. See [Node.js CLI Environment Variables](https://nodejs.org/api/cli.html#node_extra_ca_certsfile)
 
+### Quick checks to validate that the fix was correctly applied in Steps 3-4
+
+Follow these steps to validate that the fix was correctly applied in Steps 3-4 before moving to Step 5.
+
+1. Confirm that the PEM file was created and exists at the expected location
+   ```powershell
+    Test-Path "$env:USERPROFILE\.zscaler-root-ca.pem"        # Expect True
+   ```
+2. Verify that the environment variable was set correctly and returns the path to the PEM file
+    ```powershell
+    [System.Environment]::GetEnvironmentVariable(
+        'NODE_EXTRA_CA_CERTS',
+        'User'
+    )
+    ```
+3. Check that the PEM file has valid content rather than being empty or corrupted
+    ```powershell
+    Get-Content "$env:USERPROFILE\.zscaler-root-ca.pem" -TotalCount 2
+    # First line should be: -----BEGIN CERTIFICATE-----
+    ```
+    
 ### Step 5: Re-run the command
 
 Try running the command again.
@@ -217,22 +238,9 @@ Some enterprise VPNs route only a subset of traffic directly while forcing other
 
 Certificate chain is incomplete. Either export the full certificate chain (root + intermediates) or request your network team to provide the complete root CA bundle. Some proxies require both root and intermediate CAs to be trusted.
 
-## Quick checks
-
-```powershell
-Test-Path "$env:USERPROFILE\.zscaler-root-ca.pem"        # Expect True
-
-[System.Environment]::GetEnvironmentVariable(
-    'NODE_EXTRA_CA_CERTS',
-    'User'
-)
-
-Get-Content "$env:USERPROFILE\.zscaler-root-ca.pem" -TotalCount 2
-# First line should be: -----BEGIN CERTIFICATE-----
-```
-
 ## Notes
 
+Keep these notes in mind to maintain a secure and reliable setup when working behind SSL‑inspecting proxies like Zscaler.
 - Repeat export if Zscaler rotates certificates.
 - Change affects only current user scope (no system‑wide risk).
 - Safe: adds trust; doesn't disable validation.
