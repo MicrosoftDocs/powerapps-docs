@@ -136,8 +136,10 @@ landingContent:
         links:
           - text: Table reference
             url: reference/about-entity-reference.md
-          - text: SDK API class libraries
+          - text: SDK for .NET API reference
             url: /dotnet/api/?view=dataverse-sdk-latest
+          - text: SDK for Python package reference
+            url: /python/api/dataverse-sdk-docs-python/dataverse-overview?view=dataverse-sdk-python-latest
           - text: Web API
             url: /dynamics365/customer-engagement/web-api/about
           - text: XRM Tooling API Reference
