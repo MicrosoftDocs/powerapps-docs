@@ -33,5 +33,3 @@ items:
         items:
           - name: "Adding a data source"
             href: troubleshoot-add-datasource.md
-          - name: "Zscaler issues"
-            href: troubleshoot-zscaler-issues.md
