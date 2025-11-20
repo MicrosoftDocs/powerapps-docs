@@ -19,12 +19,14 @@ Zscaler is a cloud-based security platform that performs Secure Socket Layer/Tra
 
 ## Symptoms
 
-| Symptom                     | Example Message / Pattern                                                                       |
-| --------------------------- | ----------------------------------------------------------------------------------------------- |
-| Fetch Failed                | `TypeError: fetch failed` / `[AddDataSource.ServiceCall.GetConnector.Failure] ... fetch failed` |
-| Empty Request Failed        | `Error: Request failed: {}` (no body)                                                           |
-| TLS Handshake / Cert errors | `UNABLE_TO_VERIFY_LEAF_SIGNATURE` / `SELF_SIGNED CERT IN CHAIN` (if debug enabled)              |
-| Works off corporate network | Command succeeds when disconnected from Zscaler                                                 |
+The following table lists symptoms that may indicate Zscaler-related issues.
+
+| Symptom| Example Message / Pattern|
+| --- | --- |
+| Fetch Failed| `TypeError: fetch failed` / `[AddDataSource.ServiceCall.GetConnector.Failure] ... fetch failed` |
+| Empty Request Failed| `Error: Request failed: {}` (no body)|
+| TLS Handshake / Cert errors | `UNABLE_TO_VERIFY_LEAF_SIGNATURE` / `SELF_SIGNED CERT IN CHAIN` (if debug enabled)|
+| Works off corporate network | Command succeeds when disconnected from Zscaler|
 
 ## Prerequisites Checklist
 
@@ -32,7 +34,7 @@ Before you begin, verify the following:
 
 1. The [latest Power Platform CLI](/power-platform/developer/cli/introduction#install-microsoft-power-platform-cli) is installed. Update it if you aren't sure.
 1. You're authenticated to the correct environment. Use [`pac auth create`](/power-platform/developer/cli/reference/auth#pac-auth-create) and [`pac auth list`](/power-platform/developer/cli/reference/auth#pac-auth-list) commands.
-1. Node.js ≥ 22 is installed. Older versions have different trust behavior that is more strict.
+1. Installed Node.js version is greater or equal to v22. Older versions have different trust behavior that are more strict.
 1. You are able to read read the user certificate store. There are no locked‑down profile restrictions.
 1. Your corporate policy permits adding Zscaler root CA to user trust for developer tooling.
 
@@ -48,7 +50,7 @@ If this command succeeds, general connectivity is fine; failures are isolated to
 
 ### Step 2: Confirm Proxy Interception
 
-Optionally inspect certificate chain using this command:
+Optionally, inspect the certificate chain using this command:
 
 ```powershell
 Invoke-WebRequest https://api.powerplatform.com -UseBasicParsing | Select-Object -ExpandProperty RawContent
@@ -62,11 +64,22 @@ If Zscaler injects its certificate, you see a Zscaler issuer instead of Microsof
 
 ### Step 3: Export Zscaler Root CA to PEM
 
-Run this command:
+Run this command to export the Zscaler Root Certificate Authority (CA) to Privacy Enhanced Mail (PEM)
 
 ```powershell
-$cert = Get-ChildItem Cert:\CurrentUser\Root | Where-Object { $_.Subject -like "*Zscaler*" } | Select-Object -First 1
-$pem  = "-----BEGIN CERTIFICATE-----`n" + [System.Convert]::ToBase64String($cert.RawData,[System.Base64FormattingOptions]::InsertLineBreaks) + "`n-----END CERTIFICATE-----"
+$cert = Get-ChildItem Cert:\CurrentUser\Root |
+    Where-Object { $_.Subject -like "*Zscaler*" } |
+    Select-Object -First 1
+
+$pem = @(
+    '-----BEGIN CERTIFICATE-----'
+    [System.Convert]::ToBase64String(
+        $cert.RawData,
+        [System.Base64FormattingOptions]::InsertLineBreaks
+    )
+    '-----END CERTIFICATE-----'
+) -join "`n"
+
 Set-Content -Path "$env:USERPROFILE\.zscaler-root-ca.pem" -Value $pem
 ```
 
@@ -87,7 +100,7 @@ Result: `~\.zscaler-root-ca.pem` created.
 
 #### Windows Certificate Store and PEM Format
 
-`Get-ChildItem Cert:\CurrentUser\Root` command accesses the Windows Certificate Store via PowerShell's certificate provider. PEM (Privacy Enhanced Mail) is a Base64-encoded format for certificates. The conversion is necessary because Node.js requires PEM format while Windows stores certificates in DER format. See [PowerShell Certificate Provider](/powershell/module/microsoft.powershell.security/about/about_certificate_provider) and [PEM Format RFC](https://datatracker.ietf.org/doc/html/rfc7468)
+The `Get-ChildItem Cert:\CurrentUser\Root` command accesses the Windows Certificate Store via PowerShell's certificate provider. PEM is a Base64-encoded format for certificates. The conversion is necessary because Node.js requires PEM format while Windows stores certificates in DER (Distinguished Encoding Rules) format. See [PowerShell Certificate Provider](/powershell/module/microsoft.powershell.security/about/about_certificate_provider) and [PEM Format RFC](https://datatracker.ietf.org/doc/html/rfc7468)
 
 
 #### Windows `icacls` Command
@@ -97,7 +110,7 @@ Result: `~\.zscaler-root-ca.pem` created.
 
 ### Step 4: Instruct Node.js to trust the certificate
 
-Run the following script
+Run the following script to instruct Node.js to trust the certificate.
 
 ```powershell
 [System.Environment]::SetEnvironmentVariable('NODE_EXTRA_CA_CERTS', "$env:USERPROFILE\.zscaler-root-ca.pem", 'User')
@@ -106,7 +119,7 @@ Run the following script
 Close & reopen terminal / VS Code to propagate.
 
 > [!CAUTION]
-> **Scope impact:** This environment variable affects ALL Node.js processes run by your user account. If the PEM file is tampered with, every Node.js application (not just PAC CLI) trusts the modified certificate authority. Verify the file hash periodically and keep it secured.
+> **Scope impact:** This [NODE_EXTRA_CA_CERTS Environment Variable](#node_extra_ca_certs-environment-variable) affects ALL Node.js processes run by your user account. If the PEM file is tampered with, every Node.js application trusts the modified certificate authority, not just the PAC CLI. Verify the file hash periodically and keep it secured.
 
 #### NODE_EXTRA_CA_CERTS Environment Variable
 
@@ -126,10 +139,10 @@ Expect connector retrieval success instead of fetch failure.
 
 A final, definitive test that should be avoided is to disable TLS validation temporarily.
 
-This workaround forces Node.js to accept any presented certificate (including self-signed or spoofed certificates), removing all authenticity and integrity guarantees of HTTPS. It exposes sessions to MITM attacks, credential harvesting, and content tampering. Never use outside a short-lived diagnostic session.
+This workaround forces Node.js to accept any presented certificate, including self-signed or spoofed certificates. This removes all authenticity and integrity guarantees of HTTPS. It exposes sessions to man-in-the-middle (MITM) attacks, credential harvesting, and content tampering. Never use outside a short-lived diagnostic session.
 
 > [!WARNING]
-> **Security Risk:** This completely disables SSL certificate validation for all Node.js HTTPS connections in the current session. Any attacker with network access can perform man-in-the-middle (MITM) attacks. Use ONLY for one-time diagnostic to prove certificate trust is the root cause. Never commit to scripts; never use in production environments; immediately unset after testing.
+> **Security Risk:** This completely disables SSL certificate validation for all Node.js HTTPS connections in the current session. Any attacker with network access can perform MITM attacks. Use this workaround ONLY for one-time diagnostic to prove certificate trust is the root cause. Never commit to scripts; never use in production environments; immediately unset after testing.
 
 ```powershell
 $env:NODE_TLS_REJECT_UNAUTHORIZED = "0"
@@ -158,6 +171,8 @@ Instead of:
 
 ## Troubleshooting Matrix
 
+If you still experience issues after completing the [Troubleshooting steps](#troubleshooting-steps), investigate the following issues.
+
 ### `fetch failed` persists
 
 Reconfirm `NODE_EXTRA_CA_CERTS` set after restarting shell; ensure PEM not zero bytes. Run [Quick Checks](#quick-checks) to validate file exists and environment variable is properly set.
@@ -172,9 +187,14 @@ The solution works for any corporate proxy that performs SSL inspection (Blue Co
 
 ```powershell
 # For Blue Coat:
-$cert = Get-ChildItem Cert:\CurrentUser\Root | Where-Object { $_.Subject -like "*Blue Coat*" } | Select-Object -First 1
+$cert = Get-ChildItem Cert:\CurrentUser\Root |
+    Where-Object { $_.Subject -like "*Blue Coat*" } |
+    Select-Object -First 1
+
 # For Forcepoint:
-$cert = Get-ChildItem Cert:\CurrentUser\Root | Where-Object { $_.Subject -like "*Forcepoint*" } | Select-Object -First 1
+$cert = Get-ChildItem Cert:\CurrentUser\Root |
+    Where-Object { $_.Subject -like "*Forcepoint*" } |
+    Select-Object -First 1
 ```
 
 Then complete Steps 3-4 with the matched certificate.
@@ -200,9 +220,15 @@ Certificate chain is incomplete. Either export the full certificate chain (root 
 ## Quick Checks
 
 ```powershell
-Test-Path "$env:USERPROFILE\.zscaler-root-ca.pem"            # Should be True
-[System.Environment]::GetEnvironmentVariable('NODE_EXTRA_CA_CERTS','User')
-Get-Content "$env:USERPROFILE\.zscaler-root-ca.pem" -TotalCount 2  # Begins with -----BEGIN CERTIFICATE-----
+Test-Path "$env:USERPROFILE\.zscaler-root-ca.pem"        # Expect True
+
+[System.Environment]::GetEnvironmentVariable(
+    'NODE_EXTRA_CA_CERTS',
+    'User'
+)
+
+Get-Content "$env:USERPROFILE\.zscaler-root-ca.pem" -TotalCount 2
+# First line should be: -----BEGIN CERTIFICATE-----
 ```
 
 ## Notes
@@ -211,7 +237,6 @@ Get-Content "$env:USERPROFILE\.zscaler-root-ca.pem" -TotalCount 2  # Begins with
 - Change affects only current user scope (no system‑wide risk).
 - Safe: adds trust; doesn't disable validation.
 - Use a dedicated dev machine if policy restricts certificate export.
-
 
 ## Escalation Data
 
