@@ -63,11 +63,11 @@ if (!isInitialized) return;
 
 ### Add your SharePoint data source
 
-Add your SharePoint data source by following the instructions in [Connect to data](how-to/connect-to-data.md).
+Add your SharePoint data source by following the instructions in [Connect to data](connect-to-data.md).
 
 ### Import required types and services
 
-When you add a data source, model and service files are automatically generated and placed in the /generated/services/ folder. For example, if you add the `ChoicesTest1` list, the following files are created:
+When you add a data source, model and service files are automatically generated and placed in the `/generated/services/` folder. For example, if you add the `ChoicesTest1` list, the following files are created:
 
 - `ChoicesTest1Model.ts` – Defines the data model for the ChoicesTest1 list.
 - `ChoicesTest1Service.ts` – Provides service methods for interacting with data in the ChoicesTest1 list.
