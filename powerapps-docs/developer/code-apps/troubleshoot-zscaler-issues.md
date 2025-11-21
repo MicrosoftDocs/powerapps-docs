@@ -53,7 +53,9 @@ If this command succeeds, general connectivity is fine; failures are isolated to
 Run this command to ensure that the Zscaler certificate exists in the store.
 
 ```powershell
-Get-ChildItem Cert:\CurrentUser\Root | Where-Object { $_.Subject -like "*Zscaler*" } | Select-Object Subject, Thumbprint
+Get-ChildItem Cert:\CurrentUser\Root |
+    Where-Object { $_.Subject -like "*Zscaler*" } |
+    Select-Object Subject, Thumbprint
 ```
 
 If Zscaler injects its certificate, you see a Zscaler issuer instead of Microsoft.
