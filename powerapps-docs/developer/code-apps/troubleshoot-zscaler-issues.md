@@ -48,18 +48,18 @@ To eliminate causes not related to a proxy, run the [`pac env who`](/power-platf
 
 If this command succeeds, general connectivity is fine; failures are isolated to data source calls.
 
-### Step 2: Confirm proxy interception
+### Step 2: Confirm that Zscaler is installed
 
-Optionally, inspect the certificate chain using this command:
+Run this command to ensure that the Zscaler certificate exists in the store.
 
 ```powershell
-Invoke-WebRequest https://api.powerplatform.com -UseBasicParsing | Select-Object -ExpandProperty RawContent
+Get-ChildItem Cert:\CurrentUser\Root | Where-Object { $_.Subject -like "*Zscaler*" } | Select-Object Subject, Thumbprint
 ```
 
 If Zscaler injects its certificate, you see a Zscaler issuer instead of Microsoft.
 
 > [!NOTE]
-> When a proxy like Zscaler intercepts HTTPS traffic, it replaces the original server certificate with its own certificate signed by a corporate root CA. This allows the proxy to decrypt, inspect, and re-encrypt traffic. Browsers trust this because the corporate root CA is installed in the system trust store. See [How HTTPS Interception Works](https://www.eff.org/deeplinks/2017/02/https-interception-weakens-web-security)
+> When a proxy like Zscaler intercepts HTTPS traffic, it replaces the original server certificate with its own certificate signed by a corporate root CA. This allows the proxy to decrypt, inspect, and re-encrypt traffic. Browsers trust this because the corporate root CA is installed in the system trust store. See [How HTTPS Interception Works](https://www.cisa.gov/news-events/alerts/2017/03/16/https-interception-weakens-tls-security)
 
 
 ### Step 3: Export Zscaler root CA to PEM
