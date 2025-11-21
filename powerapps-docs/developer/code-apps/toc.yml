@@ -21,7 +21,7 @@ items:
             href: how-to/connect-to-dataverse.md
           - name: Connect to Azure SQL
             href: how-to/connect-to-azure-sql.md
-          - name: Sharepoint operations
+          - name: SharePoint operations
             href: how-to/sharepoint-operations.md
           - name: Create a basic asset management API with Azure Functions
             href: how-to/create-basic-asset-management-api-azure-functions.md
