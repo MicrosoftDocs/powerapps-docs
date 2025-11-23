@@ -210,6 +210,52 @@ OData-Version: 4.0
 
 ---
 
+## Pagging
+
+To implement pagination in a Cosmos DB SQL query, you typically use a combination of the `OFFSET` and `LIMIT` clauses (similar to SQL Server’s `OFFSET FETCH`). However, Cosmos DB SQL API has its own way to handle pagination via continuation tokens rather than `OFFSET` and `LIMIT` directly.
+
+Here is how you can approach it:
+
+1. **First Request**: Fetch the initial set of records along with a continuation token.
+2. **Subsequent Requests**: Use the continuation token to fetch the next set of records.
+
+Here is an example of how you can perform this:
+
+### Initial Request
+Make an initial request to fetch the first page of results:
+```plaintext
+https://<environment url>/api/data/v9.0/ExecuteCosmosSqlQuery(QueryText=@p1,EntityLogicalName=@p2,PageSize=5000)?@p1='select * from c where c.props.<json column>.title = \"Cozy Cottage\"'&@p2='<table name>'
+```
+
+### Subsequent Requests with Continuation Token
+Once you receive the initial response, you will get a continuation token in the response metadata. Use this token to fetch the next set of records.
+
+For example, if you receive a continuation token named `continuationTokenValue`, your next request would look like this:
+
+```plaintext
+https://<environment url>/api/data/v9.0/ExecuteCosmosSqlQuery(QueryText=@p1,EntityLogicalName=@p2,PageSize=5000,PagingCookie=@p3)?@p1='select * from c where c.props.<json column>.title = \"Cozy Cottage\" '&@p2='<table name>'&@p3='continuationTokenValue'
+```
+
+### Example API Call with Continuation Token
+```plaintext
+https://<environment url>/api/data/v9.0/ExecuteCosmosSqlQuery(QueryText=@p1,EntityLogicalName=@p2,PagingCookie=@p3,PageSize=5000)?@p1='select * from c where c.props.<json column>.title = \"Cozy Cottage\""'&@p2='<table name>'&@p3='yourContinuationTokenHere'
+```
+
+### Note:
+- The `PageSize` parameter defines the number of records to be fetched per page.
+- The `PagingCookie` parameter should contain the continuation token from the previous request.
+
+Ensure your application logic is prepared to handle continuation tokens and make subsequent requests until all desired data is retrieved.
+
+### Example Query with OFFSET and LIMIT (not supported directly in Cosmos DB SQL)
+If you were using a traditional SQL database that supports `OFFSET` and `LIMIT`, your query would look like this:
+```sql
+select * from c where c.props.<json column>.title = "Cozy Cottage" order by c.props.<column name> desc offset 0 limit 10
+```
+But Cosmos DB SQL requires the use of continuation tokens as explained above.
+
+---
+
 ## Next steps
 
 > [!div class="nextstepaction"]
