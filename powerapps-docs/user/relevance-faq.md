@@ -24,7 +24,7 @@ contributors:
 
 ## What is Dataverse search?
 
-Dataverse search is the foundation that enables Copilot and in-app search experiences to understand and reason over business data, helping organizations turn raw information into actionable intelligence.. Learn more about Dataverse search and its enabled experiences in [What is Dataverse search](relevance-search-benefits.md).
+Dataverse search is the foundation that enables Copilot and in-app search experiences to understand and process business data, helping organizations turn raw information into meaningful insights. Learn more about Dataverse search and its enabled experiences in [What is Dataverse search](relevance-search-benefits.md).
 
 ## What is the difference between "On" and "Default" state for Dataverse search?
 
