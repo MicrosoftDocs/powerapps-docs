@@ -4,7 +4,7 @@ description: Dataverse search for model-driven apps helps you quickly find what 
 author: shwetamurkute
 ms.component: pa-user
 ms.topic: article
-ms.date: 11/01/2023
+ms.date: 11/24/2025
 ms.subservice: end-user
 ms.author: smurkute
 ms.custom: 
@@ -19,11 +19,11 @@ ms.contributors:
 
 # What is Dataverse search?
 
-Dataverse Search is the foundation that enables Copilot and in-app search experiences to understand and reason over business data, helping organizations turn raw information into actionable intelligence.
+Dataverse search is the foundation that enables Copilot and in-app search experiences to understand and reason over business data, helping organizations turn raw information into actionable intelligence.
 
 <img width="1157" height="580" alt="image" src="https://github.com/user-attachments/assets/84e56b80-f5e5-44de-a5d5-ba53cc17ffef" />
 
-Dataverse Search today powers Global Search experiences, API calls, agents built with Copilot Studio, agents run on M365 copilot and MCP tools. As such, in addition to helping users of model-driven apps quickly find what they're looking for, Dataverse search is how Microsoft enables rich search and AI-powered experiences across different products that use Dataverse as one of the data sources.
+Dataverse search today powers Global Search experiences, API calls, agents built with Copilot Studio, agents run on Microsoft 365 Copilot and MCP tools. As such, in addition to helping users of model-driven apps quickly find what they're looking for, Dataverse search is how Microsoft enables rich search and AI-powered experiences across different products that use Dataverse as one of the data sources.
 
 
 ## What type of data Dataverse search indexes
@@ -83,7 +83,7 @@ Dataverse search lets you use multiple features in Power Platform, including Cop
 <img width="797" height="495" alt="image" src="https://github.com/user-attachments/assets/c664300f-afaa-4c71-b030-cbe376ed2562" />
 
 
-# Benefits of Dataverse Search:
+## Benefits of Dataverse Search:
 
 1.	**Integration with AI / Copilot experiences**
     Users can have a “conversation” with their data and identify themes, patterns and insights using natural language. Applies AI technology to interpret natural language such as misspellings, common abbreviations, and synonyms to deliver quality results.
@@ -109,12 +109,12 @@ Dataverse search lets you use multiple features in Power Platform, including Cop
 > Note: Global Search supports up to 2MB of file search.
 
 
-# Dataverse Search implications
+## Dataverse Search implications
 
 Dataverse search is an opt-out feature, for which setting is set to On for all new production environments and Default for all other environment types. This setting can be found in PPAC > Manage > Environment > Setting > Product > Features > Dataverse Search:
 <img width="1125" height="582" alt="image" src="https://github.com/user-attachments/assets/ee6047e9-fe9a-4796-89e5-c6f59b518b46" />
 
-In Power Platform Admin Center, Admins can [leverage the Dataverse Search setting](power-platform/admin/configure-relevance-search-organization?tabs=new#managing-dataverse-search) to manage it. The state selected for Dataverse Search impacts the ability to leverage Dataverse data across the enabled experiences for all the organization.
+In Power Platform admin center, admins can [leverage the Dataverse Search setting](power-platform/admin/configure-relevance-search-organization#managing-dataverse-search) to manage it. The state selected for Dataverse Search impacts the ability to leverage Dataverse data across the enabled experiences for all the organization.
 The following tables show how each Dataverse Search setting impact Global Search experiences (including SearchQuery API) and Generative AI experiences, and how can Admins leverage this setting to manage it:
 
 ## What Dataverse Search setting means for Global Search
