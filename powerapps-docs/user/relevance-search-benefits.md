@@ -118,13 +118,13 @@ Dataverse search lets you use multiple features in Power Platform, including Cop
 Dataverse search is an opt-out feature. The feature is **On** for all new production environments and **Default** for all other environment types. You can find this setting in **PPAC** > **Manage** > **Environment** > **Setting** > **Product** > **Features** > **Dataverse Search**:
 <img width="1125" height="582" alt="image" src="https://github.com/user-attachments/assets/ee6047e9-fe9a-4796-89e5-c6f59b518b46" />
 
-In Power Platform admin center, admins can [use the Dataverse Search setting](power-platform/admin/configure-relevance-search-organization#managing-dataverse-search) to manage it. The state selected for Dataverse search impacts the ability to use Dataverse data across the enabled experiences for all the organization.
+In Power Platform admin center, admins can [use the Dataverse Search setting](/power-platform/admin/configure-relevance-search-organization?tabs=new#managing-dataverse-search) to manage it. The state selected for Dataverse search impacts the ability to use Dataverse data across the enabled experiences for all the organization.
 The following tables show how each Dataverse Search setting impacts Global Search experiences (including SearchQuery API) and Generative AI experiences, and how admins can use this setting to manage it:
 
 ## What Dataverse search setting means for global search
 
 When you set Dataverse search to **On**, the **Global Search** search box appears at the top of every page in your model-driven app. It's the default global search experience for all model-driven apps.
-Learn more in [Search for records by using Dataverse search](power-apps/user/relevance-search).
+Learn more in [Search for records by using Dataverse search](relevance-search.md).
 
 | Dataverse Search set to On	|  Dataverse Search set to Default	|   Dataverse Search set to Off  |
 |-----------------------------|-----------------------------------|--------------------------------|
@@ -136,8 +136,8 @@ Learn more in [Search for records by using Dataverse search](power-apps/user/rel
 ## What Dataverse search means for Generative AI enabled experiences
 
 Some Generative AI experiences use Dataverse search data. When you enable this feature, you can access Copilot chat through the Copilot icon in the right navigation bar in a model-driven app. You can open or minimize the Copilot chat pane as you want.
--	**Power Apps**: [Copilot chat for model-driven apps in Power Apps](https://learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/add-ai-copilot) is a next-generation AI assistant that helps app users get insights about the data in their apps through conversation in natural language.
-- **Copilot Studio**: [Integrating Dataverse tables as your knowledge source](microsoft-copilot-studio/knowledge-add-dataverse) allows you to ground your agent in the data contained in your tables. This integration can also happen by using [unstructured data as knowledge](/microsoft-copilot-studio/knowledge-unstructured-data) or [Dataverse tools](microsoft-copilot-studio/advanced-plugin-actions).
+-	**Power Apps**: [Copilot chat for model-driven apps in Power Apps](../../maker/model-driven-apps/add-ai-copilot.md) is a next-generation AI assistant that helps app users get insights about the data in their apps through conversation in natural language.
+- **Copilot Studio**: [Integrating Dataverse tables as your knowledge source](/microsoft-copilot-studio/knowledge-add-dataverse) allows you to ground your agent in the data contained in your tables. This integration can also happen by using [unstructured data as knowledge](/microsoft-copilot-studio/knowledge-unstructured-data) or [Dataverse tools](/microsoft-copilot-studio/advanced-plugin-actions).
 
 | Dataverse search set to **On**	|  Dataverse search set to Default	|   Dataverse search set to **Off**  |
 |-----------------------------|-----------------------------------|--------------------------------|
@@ -175,7 +175,8 @@ Consider breaking the data into separate columns and only select the specific at
 |  1234  |  Main Street	|  NY  |	 98052  |
 |  7890  |  Main Street	 |  NY	|  98052  |
 
-> **Note**: While this action helps reduce some of the indexed data, the impact on Dataverse Search consumption is relative to the baseline consumption. For more drastic approaches, go through the other steps, in order of recommendation.
+> [!NOTE] 
+> While this action helps reduce some of the indexed data, the impact on Dataverse Search consumption is relative to the baseline consumption. For more drastic approaches, go through the other steps, in order of recommendation.
 
 
 2.	**Global Search: Only select columns that need to be “searchable”**
@@ -257,7 +258,7 @@ Copilot in model-driven apps uses AI to interpret natural language queries and g
  
 
 > Notes:
-> - Even if you take this action, you might incur additional Dataverse Search consumption that's triggered by other experiences, such as a Dynamics 365 Copilot for Sales.
+> Even if you take this action, you might incur additional Dataverse Search consumption that's triggered by other experiences, such as a Dynamics 365 Copilot for Sales.
 
 
 5.	**Copilot for Dynamics 365 Apps: Specify which applications you'd like Copilot to be enabled for**
@@ -291,7 +292,8 @@ Just like model driven applications in Power Apps, Copilot in model-driven apps 
  
 1.	Select **Continue** and save changes. 
 
-> Note: If you take this action, you might incur additional Dataverse Search consumption that's triggered by other experiences, such as Copilot for Power Apps, or agents using Dataverse knowledge in Copilot Studio.
+> [!NOTE]
+> If you take this action, you might incur additional Dataverse Search consumption that's triggered by other experiences, such as Copilot for Power Apps, or agents using Dataverse knowledge in Copilot Studio.
 
 
 
@@ -311,7 +313,7 @@ Use the same instructions for the following knowledge sources:
 1.	Select **Delete** when the modal appears:
  
 > [!NOTE]
-> Note: The same process is applicable to Dataverse MCP tools, except it happens in the Tools section (as opposed to the Knowledge section).
+> The same process is applicable to Dataverse MCP tools, except it happens in the Tools section (as opposed to the Knowledge section).
 
 
 
@@ -334,7 +336,7 @@ When Dataverse Search is set to “Default”, the Global Search experience isn'
 1.	Save changes
 
 > Notes:
-> For organizations that want to search in these applications and don't need relevance-based search, they can enable [Quick Find]([url](https://learn.microsoft.com/en-us/power-apps/user/quick-find)).
+> For organizations that want to search in these applications and don't need relevance-based search, they can enable [Quick Find](quick-find.md).
 > If you take this action exclusively, you might incur additional Dataverse Search consumption that's triggered by other experiences, such as Copilot for Power Apps, or agents using Dataverse knowledge or tools in Copilot Studio.
 
 
@@ -371,8 +373,8 @@ At any time, you can manually set Dataverse to **Off**. If you set Dataverse sea
  
 1.	Save changes:
  
-> Notes:
-> -	Turning off Dataverse search deprovisions and removes the index within a period of 12 hours. If you turn on Dataverse search after it's been off for 12 hours, it provisions a fresh index that needs to go through a full sync. Syncing might take up to an hour or more for average size organizations, and a couple of days for large organizations. Be sure to consider these implications when you turn off Dataverse search temporarily. ([Configure Dataverse search for your environment]([url](https://learn.microsoft.com/en-us/power-platform/admin/configure-relevance-search-organization?tabs=new)))
+> [!NOTE]
+> - Turning off Dataverse search deprovisions and removes the index within a period of 12 hours. If you turn on Dataverse search after it's been off for 12 hours, it provisions a fresh index that needs to go through a full sync. Syncing might take up to an hour or more for average size organizations, and a couple of days for large organizations. Be sure to consider these implications when you turn off Dataverse search temporarily. [Configure Dataverse search for your environment](/power-platform/admin/configure-relevance-search-organization)
 > -	Index removal (or provisioning) can take multiple days to be completed, depending on the amount of Dataverse Search consumption. For example, an organization with 10 GB of indexed data might take one day to clean up all indexes, while an organization with 500 GB might take multiple days to see it reflected in Dataverse search reporting. Please give a few days or a week before submitting a support ticket, to ensure a complete removal of Dataverse Search indexed data.
 
 
