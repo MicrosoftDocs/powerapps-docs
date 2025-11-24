@@ -41,11 +41,11 @@ Any file or Dataverse knowledge added to Agents or model-driven apps defines the
 
 ## What are the column types that can be searched in Dataverse search?
 
-The **Find Columns** on a **Quick Find View** define the searchable fields in the Dataverse search index. Text fields such as Single Line of Text and Multiple Lines of Text, Lookups, and Option Sets are searchable. **Find Columns** of all other data types such as Integer, Double are ignored. For more information, see [Select searchable fields and filters for each table](/power-platform/admin/configure-relevance-search-organization#select-searchable-fields-and-filters-for-each-table).
+The **Find Columns** on a **Quick Find View** define the searchable fields in the Dataverse search index. Text fields such as Single Line of Text and Multiple Lines of Text, Lookups, and Option Sets are searchable. **Find Columns** of all other data types such as Integer, Double are ignored. Learn more in [Select searchable fields and filters for each table](/power-platform/admin/configure-relevance-search-organization#select-searchable-fields-and-filters-for-each-table).
 
 ## Why am I not seeing search results from a table that is enabled for Dataverse search?
 
-If a table isn't part of the model-driven app, it is not included in search results. Use the Power Apps app designer to verify that the table is included in that app's components. Make sure that the table has a default Quick Find View created and defined. A default Quick Find View is created with a table, but if it has been removed you need to select the Quick Find View you want and set as the default for your table. For more information, see [Add or edit model-driven app components](../maker/model-driven-apps/add-edit-app-components.md#add-a-component). 
+If a table isn't part of the model-driven app, it is not included in search results. Use the Power Apps app designer to verify that the table is included in that app's components. Make sure that the table has a default Quick Find View created and defined. A default Quick Find View is created with a table, but if it has been removed you need to select the Quick Find View you want and set as the default for your table. Learn more in [Add or edit model-driven app components](../maker/model-driven-apps/add-edit-app-components.md#add-a-component). 
 
 ## Can I configure quick actions to show or hide certain commands?
 Yes, you can with version 9.2.21034.00126 or later. Quick actions are a subset of a table's grid-level command set. You can configure them by using ribbon rules.
@@ -53,7 +53,7 @@ For more information on how to configure quick actions, see [Configure Dataverse
 
 ## Why are results that appear in suggestions sometimes not seen on the results page?
 
-Suggestions are quick results based on a search performed on the primary column of a table. This feature is enabled for Dataverse search in model-driven apps. More information: [Inline suggestions](relevance-search.md#inline-suggestions)
+Suggestions are quick results based on a search performed on the primary column of a table. This feature is enabled for Dataverse search in model-driven apps. Learn more in [Inline suggestions](relevance-search.md#inline-suggestions)
 
 When you navigate to the results page, the search terms are treated as the complete search query. The search performs many more types of matching to display a more comprehensive set of results.
 
@@ -79,7 +79,7 @@ Columns are enabled for Dataverse search only if a quick find view is set as the
 
 ## Why doesn't search on the OwnerID attribute work when I enable search on it?
 
-The search and suggest operations don't have access to data from the Owner column. For more information, see [Types of columns](../maker/data-platform/types-of-fields.md).
+The search and suggest operations don't have access to data from the Owner column. Learn more in [Types of columns](../maker/data-platform/types-of-fields.md).
 
 ## Why doesn't search on the RegardingObjectId attribute work when I enable search on it?
 
