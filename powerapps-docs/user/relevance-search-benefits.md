@@ -89,39 +89,40 @@ Dataverse search lets you use multiple features in Power Platform, including Cop
 
 ## Benefits of Dataverse Search
 
-1.	**Integration with AI / Copilot experiences**
-    Users can have a 'conversation' with their data and identify themes, patterns, and insights by using natural language. Applies AI technology to interpret natural language such as misspellings, common abbreviations, and synonyms to deliver quality results.
+### Integration with AI / Copilot experiences
+Users can have a 'conversation' with their data and identify themes, patterns, and insights by using natural language. Applies AI technology to interpret natural language such as misspellings, common abbreviations, and synonyms to deliver quality results.
   	
-2.	**Unified Search**
-    Dataverse search lets you quickly find content in model-driven apps and other products that use Dataverse as a data through a single unified search experience. Provides a better user experience compared to [quick find](quick-find.md) search, where all words in the search term must be found in one column. 
+### Unified search
+Dataverse search lets you quickly find content in model-driven apps and other products that use Dataverse as a data source through a single unified search experience. It provides a better user experience compared to [quick find](quick-find.md) search, where all words in the search term must be found in one column. 
   	
-3.	**Efficient Relevance-Based Results**
-    Intelligent ranking algorithms to return the most relevant records first, with a performance that's superior to [categorized search](quick-find.md#multiple-table-quick-find-categorized-search), reducing time spent searching and increasing its accuracy.
+### Efficient relevance-based results
+Intelligent ranking algorithms return the most relevant records first, with performance that's superior to [categorized search](quick-find.md#multiple-table-quick-find-categorized-search), reducing time spent searching and increasing its accuracy.
   	
-4.  **Smart fuzzy search**
-    Handles variations in spelling and terminology, so it doesn't depend on exact keyword matches.
+### Smart fuzzy search
+Handles variations in spelling and terminology, so it doesn't depend on exact keyword matches.
     
-5.	**Security and Compliance**
-    Respects Dataverse security roles and permissions: users can only see search results for records that they have access to.
+### Security and compliance
+Respects Dataverse security roles and permissions: users can only see search results for records that they have access to.
   	
-6.	**Scalability and Performance**
-    Optimized for large datasets and supports multiple data types (such as Choice and Lookups).
+### Scalability and performance
+Optimized for large datasets and supports multiple data types (such as Choice and Lookup).
 
-7.   **Search across documents in Microsoft Dataverse**
-      Includes search results for text in documents that are stored in Dataverse such as PDF, Microsoft Office documents, HTML, XML, ZIP, EML, plain text, and JSON file formats. It also searches text in notes and attachments.
+### Search across documents in Microsoft Dataverse
+Includes search results for text in documents that are stored in Dataverse, such as PDF, Microsoft Office documents, HTML, XML, ZIP, EML, plain text, and JSON file formats. It also searches text in notes and attachments.
 
-> Note: Global Search supports up to 2MB of file search.
+> [!NOTE] 
+> Global Search supports up to 2MB of file search.
 
 
 ## Dataverse search implications
 
-Dataverse search is an opt-out feature. The feature is **On** for all new production environments and **Default** for all other environment types. You can find this setting in **PPAC** > **Manage** > **Environment** > **Setting** > **Product** > **Features** > **Dataverse Search**:
+Dataverse search is an opt-out feature. The feature is **On** for all new production environments and set to **Default** for all other environment types. You can find this setting in **PPAC** > **Manage** > **Environment** > **Settings** > **Product** > **Features** > **Dataverse Search**:
 <img width="1125" height="582" alt="image" src="https://github.com/user-attachments/assets/ee6047e9-fe9a-4796-89e5-c6f59b518b46" />
 
-In Power Platform admin center, admins can [use the Dataverse Search setting](/power-platform/admin/configure-relevance-search-organization?tabs=new#managing-dataverse-search) to manage it. The state selected for Dataverse search impacts the ability to use Dataverse data across the enabled experiences for all the organization.
-The following tables show how each Dataverse Search setting impacts Global Search experiences (including SearchQuery API) and Generative AI experiences, and how admins can use this setting to manage it:
+In Power Platform admin center, admins can [use the Dataverse Search setting](/power-platform/admin/configure-relevance-search-organization?tabs=new#managing-dataverse-search) to manage it. The selected Dataverse search state affects the ability to use Dataverse data across the enabled experiences for the entire organization.
+The following tables show how each Dataverse Search setting affects Global Search experiences (including SearchQuery API) and Generative AI experiences, and how admins can use this setting to manage it:
 
-## What Dataverse search setting means for global search
+### What Dataverse search setting means for global search
 
 When you set Dataverse search to **On**, the **Global Search** search box appears at the top of every page in your model-driven app. It's the default global search experience for all model-driven apps.
 Learn more in [Search for records by using Dataverse search](relevance-search.md).
@@ -133,10 +134,10 @@ Learn more in [Search for records by using Dataverse search](relevance-search.md
 |  Dataverse data is automatically indexed. Data is searchable  |  Dataverse data isn't indexed. Data isn't searchable	|  Dataverse data isn't indexed. Data isn't searchable  |
 
 
-## What Dataverse search means for Generative AI enabled experiences
+### What Dataverse search means for Generative AI enabled experiences
 
 Some Generative AI experiences use Dataverse search data. When you enable this feature, you can access Copilot chat through the Copilot icon in the right navigation bar in a model-driven app. You can open or minimize the Copilot chat pane as you want.
--	**Power Apps**: [Copilot chat for model-driven apps in Power Apps](../../maker/model-driven-apps/add-ai-copilot.md) is a next-generation AI assistant that helps app users get insights about the data in their apps through conversation in natural language.
+-	**Power Apps**: [Copilot chat for model-driven apps in Power Apps](../maker/model-driven-apps/add-ai-copilot.md) is a next-generation AI assistant that helps app users get insights about the data in their apps through conversation in natural language.
 - **Copilot Studio**: [Integrating Dataverse tables as your knowledge source](/microsoft-copilot-studio/knowledge-add-dataverse) allows you to ground your agent in the data contained in your tables. This integration can also happen by using [unstructured data as knowledge](/microsoft-copilot-studio/knowledge-unstructured-data) or [Dataverse tools](/microsoft-copilot-studio/advanced-plugin-actions).
 
 | Dataverse search set to **On**	|  Dataverse search set to Default	|   Dataverse search set to **Off**  |
@@ -152,7 +153,8 @@ Depending on the experience that uses Dataverse search and its usage, consumptio
 ### Data level
 
 To manage the search index at the data level, review each table and each column to confirm that search is needed. If not, take the following actions:
-1.	**Global Search: Break down tables into multiple columns**
+
+#### Global Search: Break down tables into multiple columns
 
 **Why**
 Indexed data often includes additional structures like inverted indexes, metadata, and pointers to enable fast search and retrieval. These extra components add overhead beyond the raw data and can significantly increase storage requirements compared to the original dataset.
@@ -179,199 +181,170 @@ Consider breaking the data into separate columns and only select the specific at
 > While this action helps reduce some of the indexed data, the impact on Dataverse Search consumption is relative to the baseline consumption. For more drastic approaches, go through the other steps, in order of recommendation.
 
 
-2.	**Global Search: Only select columns that need to be “searchable”**
+#### Global Search: Only select columns that need to be searchable
 
 **Why**
 Dataverse search has default selected columns. By default, certain columns such as Primary Name and ID are indexed for all tables. These columns are part of the 50 fields indexed by default and aren't counted for every table. 
 Furthermore, columns are enabled for Dataverse search only if a Quick Find view is set as the default view for the table. (Know more at /configure-relevance-search-organization?tabs=new#managing-dataverse-search)
 
 **How to unselect tables that aren't used so that they're not indexed or searchable**
-1.	Go to Power Apps
- 
-2.	In the navigation pane, select Solutions
- 
-3.	Choose the solution you want to modify, then select Edit in the command bar:
- 
-4.	On the Objects page, in the navigation pane, select Overview:
- 
-5.	In the Dataverse search pane, select Manage search index:
- 
-6.	This step shows all tables that are indexed:
- 
-7.	Unselect the tables and Save the change:
+1. Sign in to [Power Apps](https://make.powerapps.com/).
+1. On the left navigation pane, select **Solutions**.
+1. Choose the solution you want to modify, then select **Edit** in the command bar.
+1. On the **Objects** page, in the navigation pane, select **Overview**.
+1. In the Dataverse search pane, select **Manage search index**.
+1. Review all tables that are indexed.
+1. Unselect the tables and select **Save**.
  
  
 **How to unselect columns that aren't used so that they're not indexed or searchable**
-1.	Go to Power Apps
- 
-2.	In the navigation pane, select Tables:
- 
-3.	On the Tables page, select the table you want to edit.
- 
-4.	In the Data experiences pane, select Views
- 
-5.	From the list of views, select the Quick Find View type. For example, select Quick Find Active Accounts.
- 
-6.	Edit **View columns**.
- 
-7.	Go to the columns you want to remove and select **Remove** in the dropdown menu.
- 
-8.	Select **Save and Publish** to publish the changes to the view.
+1. Sign in to [Power Apps](https://make.powerapps.com/).
+1. On the left navigation pane, select **Tables**.
+1. On the Tables page, select the table you want to edit.
+1. In the Data experiences pane, select **Views**.
+1. From the list of views, select the Quick Find View type. For example, select **Quick Find Active Accounts**.
+1. Edit **View columns**.
+1. Go to the columns you want to remove, and select **Remove** in the dropdown menu.
+1. Select **Save and Publish** to publish the changes to the view.
  
 
-> Note: If this action is exclusively taken, additional Dataverse Search consumption may be incurred, triggered by other experiences, such as a Generative AI experience.
+> [!NOTE]
+> If this action is exclusively taken, additional Dataverse Search consumption may be incurred, triggered by other experiences, such as a Generative AI experience.
 
 
-3.	**Copilot Studio: Ensure specific Dataverse Tables or files are added to Copilot Studio agent’s knowledge**
+#### Copilot studio: Ensure specific Dataverse tables or files are added to Copilot studio agent’s knowledge
 
 **Why**
-When you add a Dataverse tool or knowledge, such as Dataverse MCP, Dataverse table, or file to a Copilot Studio agent, the process automatically indexes all the underlying Dataverse data for efficient, semantically relevant searches.
+When you add a Dataverse tool or knowledge, such as Dataverse MCP, Dataverse table, or file to a Copilot studio agent, the process automatically indexes all the underlying Dataverse data for efficient, semantically relevant searches.
 Reducing knowledge and tools to strictly the necessary content not only helps indexing processing and storage consumption but also helps increase the quality of the searches.
 
 **How to remove unnecessary content or imagery / tables from files**
 -	File Upload, OneDrive, and SharePoint upload: On the files themselves, reduce the file to the needed content. Consider removing pages, sheets, or any accessory data point from the files.
 - OneDrive and SharePoint upload: Ensure that only selected files or folders are needed instead of selecting nested folders.
 
-> Note: If this action is exclusively taken, additional Dataverse Search consumption may be incurred, triggered by other experiences, such as a Global Search (if Dataverse Search is set to “On” for the environment).
+> [!NOTE]
+> If this action is exclusively taken, additional Dataverse Search consumption may be incurred, triggered by other experiences, such as a Global Search (if Dataverse Search is set to “On” for the environment).
 
 
 ### App or agent level
 
 To manage the search index at the app or agent level, review the purpose and usage of each application and agent to confirm that search is needed. If not, take the following actions:
 
-4.	**Copilot for Power Apps: Specify which applications you'd like Copilot to be enabled for**
+#### Copilot for Power Apps: Specify which applications you'd like Copilot to be enabled for
+
 **Why**
 Copilot in model-driven apps uses AI to interpret natural language queries and generate suggestions or actions based on the app’s underlying Dataverse data. It leverages semantic indexing and context from the app’s schema to provide relevant answers and automate tasks within the application. In some situations, applications don't require that level of enhanced search through Copilot, so managing Copilot at an app level can help with consumption control.
 
 **How to turn off Copilot feature for each model-driven application**
-1.	Open the model-driven app in the app designer for Edit:
- 
-1.	Select Settings from the command bar:
- 
-1.	On the Settings screen, select Upcoming:
- 
-1.	Select the **Copilot control** setting:
- 
-1.	Set the **Copilot control** to **Off**:
- 
-1.	Save and Publish the model-driven app for the changes to take effect:
+1. Open the model-driven app in the app designer for editing.
+1. Select **Settings** from the command bar.
+1. On the **Settings** screen, select **Upcoming**.
+1. Select the **Copilot control** setting, and set it to **Off**.
+1. Select **Save and Publish** for the changes to take effect.
  
 
-> Notes:
+> [!NOTE]
 > Even if you take this action, you might incur additional Dataverse Search consumption that's triggered by other experiences, such as a Dynamics 365 Copilot for Sales.
 
 
-5.	**Copilot for Dynamics 365 Apps: Specify which applications you'd like Copilot to be enabled for**
+#### Copilot for Dynamics 365 Apps: Specify which applications you'd like Copilot to be enabled for**
+
 **Why**
 Just like model driven applications in Power Apps, Copilot in model-driven apps uses AI to interpret natural language queries and generate suggestions or actions based on the app’s underlying Dataverse data. In some situations, applications don't require that level of enhanced search through Copilot, so managing Copilot at an app level can help with consumption control.
 
 **How to turn off Copilot feature for each Dynamics 365 application**
-1.	In the Sales Hub app, go to Change area in the lower-left corner of the page  
-1.	Select App Settings:
- 
-1.	Sales Settings opens:
- 
-1.	Select Copilot:
- 
-1.	Select Edit settings:
- 
-1.	Select **Advanced settings**
- 
-1.	A new Copilot in Dynamics 365 Sales appears:
- 
-1.	Select **Individual apps**
- 
-1.	Select desired app and turn the setting to **Off**
+
+1. In the Sales Hub app, change the area using option in the lower-left corner of the page.
+1. Select **App Settings** to open sales setting.
+1. Select **Copilot** > **Edit settings** > **Advanced settings**, which opens a new Copilot in Dynamics 365 Sales page.
+1. Select **Individual apps**.
+1. Select desired app and turn the setting to **Off**.
  
 **How to turn off Copilot feature for each Dynamics 365 application**
-1.	Repeat the steps 1-7 and select “All Apps”:
+
+1. In the Sales Hub app, change the area using option in the lower-left corner of the page.
+1. Select **App Settings** to open sales setting.
+1. Select **Copilot** > **Edit settings** > **Advanced settings**, which opens a new Copilot in Dynamics 365 Sales page.
+1. Select **All Apps** and turn the setting to **Off**.
  
-1.	OR Repeat steps 1-5 above
-   
-1.	Change dropdown to **Off**, which prompts the modal to appear
- 
-1.	Select **Continue** and save changes. 
+The other to turn off Copilot feature for all apps is as follow:
+
+1. In the Sales Hub app, change the area using option in the lower-left corner of the page.
+1. Select **App Settings** to open sales settings.
+1. Select **Copilot** > **Edit settings**.
+1. Select **Off** from the Copilot dropdown, which opens a dialog box.
+1. Select **Continue**, and then save your changes. 
 
 > [!NOTE]
 > If you take this action, you might incur additional Dataverse Search consumption that's triggered by other experiences, such as Copilot for Power Apps, or agents using Dataverse knowledge in Copilot Studio.
 
 
 
-6.	**Copilot Studio: Remove all Dataverse tools, Dataverse Tables, or files from Copilot Studio agent’s knowledge**
-**Why**
-Dataverse tables and files in Copilot Studio knowledge leverage indexed data by creating semantic indexes that map content and relationships for fast, context-aware retrieval. These indexes enable Copilot to interpret natural language queries and deliver precise answers or actions based on structured and unstructured data.
+#### Copilot studio: Remove all Dataverse tools, Dataverse tables, or files from Copilot studio agent’s knowledge
 
-**How to remove Dataverse Tables or files from Copilot Studio agent’s knowledge**
+**Why**
+Dataverse tables and files in Copilot studio knowledge leverage indexed data by creating semantic indexes that map content and relationships for fast, context-aware retrieval. These indexes enable Copilot to interpret natural language queries and deliver precise answers or actions based on structured and unstructured data.
+
+**How to remove Dataverse tables or files from Copilot studio agent’s knowledge**
+
+In the **Overview** or **Knowledge** tabs on a Copilot Studio agent, go to the **Knowledge** section and select the dot menu for each of the Dataverse-enabled knowledge sources, and then select **Delete**.
 Use the same instructions for the following knowledge sources:
 -	Dataverse Tables
 -	Files you upload
 -	OneDrive files
 -	SharePoint files (from upload)
-
-1.	In the Overview or Knowledge tabs, on a Copilot Studio agent, go to the “Knowledge” section and select the dot menu for each of the Dataverse-enabled knowledge sources:
- 
-1.	Select **Delete** when the modal appears:
  
 > [!NOTE]
 > The same process is applicable to Dataverse MCP tools, except it happens in the Tools section (as opposed to the Knowledge section).
 
 
-
 ### Environment level
 To manage the search index at the environment level, Admins can review the purpose and usage of each application and agent, as well as Global Search to confirm that search is needed. If not, Admins can take the following actions:
 
-7.	**Global Search not needed: Just focus on Copilot experiences**
+#### Global Search not needed: Just focus on Copilot experiences
+
 **Why**
 When Dataverse Search is set to “Default”, the Global Search experience isn't enabled on the navigation of the model-driven apps or Dynamics 365. This setting means that users can't query Global Search, and data marked as “searchable” for the exclusive purpose of Global Search isn't indexed. However, Dataverse data is still indexed for other experiences, such as Copilot in Copilot Studio or in model-driven applications.
 
 **How to change Dataverse Search to “Default”**
-1.	In Power Platform admin center, go to **Manage > Environments**.
- 
-1.	Select environment and then select **Settings**
- 
-1.	Go to **Product > Features**:
- 
-1.	Change **Dataverse search** to **Default**:
- 
-1.	Save changes
+1. In Power Platform admin center, go to **Manage** > **Environments**.
+1. Select the environment, and then select **Settings**.
+1. Select **Product** > **Features**.
+1. Change **Dataverse search** to **Default**.
+1. Select **Save**.
 
-> Notes:
+> [!NOTE]
 > For organizations that want to search in these applications and don't need relevance-based search, they can enable [Quick Find](quick-find.md).
 > If you take this action exclusively, you might incur additional Dataverse Search consumption that's triggered by other experiences, such as Copilot for Power Apps, or agents using Dataverse knowledge or tools in Copilot Studio.
 
 
-8.	**Copilot for Power Apps and Dynamics 365 apps not needed: Focus just on Global Search**
+#### Copilot for Power Apps and Dynamics 365 apps not needed: Focus just on Global Search
+
 **Why**
 Copilot in Power Apps uses Dataverse indexed data to quickly retrieve and interpret relevant records when responding to natural language queries within the model-driven app. The semantic indexes enable efficient search across tables and relationships, allowing Copilot to provide accurate suggestions and automate actions based on the underlying data context. For organizations that don't want Copilot to be used with their model-driven applications, Admins can turn the feature off at an environment level.
 
-**How to turn off the “Copilot” setting in Power Platform Admin Center**
-1.	In Power Platform admin center, go to **Manage > Environments**.
- 
-1.	Select environment and then select **Settings**
- 
-1.	Go to **Product > Features**:
- 
-1.	Turn the toggle and the set the dropdown to **Off**:
+**How to turn off the Copilot setting in Power Platform Admin Center**
+1. In Power Platform admin center, go to **Manage** > **Environments**.
+1. Select the environment, and then select **Settings**.
+1. Select **Product** > **Features**.
+1. Turn the toggle and the set the dropdown to **Off**:
  
 
-> Note: If you take this action exclusively, you might incur additional Dataverse Search consumption that's triggered by other experiences, such as agents using Dataverse knowledge in Copilot Studio.
+> [!NOTE]
+> If you take this action exclusively, you might incur additional Dataverse Search consumption that's triggered by other experiences, such as agents using Dataverse knowledge in Copilot Studio.
 
+#### Dataverse search isn't needed for the environment
 
-
-9.	**Dataverse Search isn't needed for the environment.**
 **Why**
 At any time, you can manually set Dataverse to **Off**. If you set Dataverse search to "Off" for the environment, you can't use the search capability in the Power Apps navigation bar or any generative AI experience that relies on Dataverse, like uploaded files or using OneDrive or SharePoint files in Microsoft Copilot Studio agents, among other experiences.  
 
 **How to turn off Dataverse Search for the environment**
-1.	In Power Platform admin center, go to **Manage > Environments**.
- 
-1.	Select environment and then select **Settings**
- 
-1.	Go to **Product > Features**:
- 
-1.	Change **Dataverse search** to **Off**. This change prompts a confirmation modal. Acknowledge the impact of turning Dataverse Search off, write the name of the environment, and select **Turn Off**:
- 
-1.	Save changes:
+
+1. In Power Platform admin center, go to **Manage** > **Environments**.
+1. Select the environment, and then select **Settings**.
+1. Select **Product** > **Features**.
+1. Change **Dataverse search** to **Off**. This change opens a dialog box. Acknowledge the impact of turning Dataverse Search off, write the name of the environment, and select **Turn Off**:
+1. Select **Save**.
  
 > [!NOTE]
 > - Turning off Dataverse search deprovisions and removes the index within a period of 12 hours. If you turn on Dataverse search after it's been off for 12 hours, it provisions a fresh index that needs to go through a full sync. Syncing might take up to an hour or more for average size organizations, and a couple of days for large organizations. Be sure to consider these implications when you turn off Dataverse search temporarily. [Configure Dataverse search for your environment](/power-platform/admin/configure-relevance-search-organization)
