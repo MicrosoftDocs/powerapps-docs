@@ -96,6 +96,14 @@ sections:
         - Calendar
         - Calendarrule
 
+        Certain Dataverse tables—such as postcomment, postregarding, postlike, post, and postrole—are not available for customers to enable synchronization through Azure Synapse Link.
+        
+        In some cases, these tables may appear when Long-Term Retention (LTR) is enabled. If that happens, a subset or all records from these tables might be exported. This is expected behavior for LTR scenarios.
+        
+        > [!IMPORTANT]
+        > - These tables should not be selected for synchronization.
+        > - Their presence does not indicate full support for incremental sync.
+
         > [!NOTE]
         > You can add the audit table for export using Azure Synapse Link for Dataverse. However, the export of the audit table is only supported with [Delta Lake profiles](/power-apps/maker/data-platform/azure-synapse-link-delta-lake).
    - question: I'm using export to delta lake feature, can I stop the Apache Spark job or change the execution time?
