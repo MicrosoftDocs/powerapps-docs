@@ -21,7 +21,7 @@ ms.contributors:
 
 Dataverse search is the foundation that enables Copilot and in-app search experiences to understand and process business data. It helps organizations turn raw information into actionable intelligence.
 
-<img width="1157" height="580" alt="image" src="https://github.com/user-attachments/assets/84e56b80-f5e5-44de-a5d5-ba53cc17ffef" />
+:::image type="content" source="media/dataverse-types.png" alt-text="Screenshot of Dataverse types and clients." lightbox="media/dataverse-types.png":::
 
 Dataverse search powers global search experiences, API calls, and agents built with Copilot Studio, including those running on Microsoft 365 Copilot and MCP tools. In addition to helping users of model-driven apps quickly find what they need, Dataverse search enables rich search and AI-driven experiences across products that use Dataverse as a data source.
 
@@ -39,11 +39,6 @@ Dataverse search includes three index types:
 - Unstructured index
 
 The structured and unstructured indexes enable Copilot and generative AI experiences in scenarios such as agents built with Copilot Studio, Copilot in Dynamics 365, declarative agents, app Copilot or Copilot chat, and Dataverse MCP.
-
-<img width="1026" height="384" alt="image" src="https://github.com/user-attachments/assets/4f531873-6586-43fb-b7ae-aea69b9c8997" />
-<img width="690" height="484" alt="image" src="https://github.com/user-attachments/assets/b0166a68-b219-460c-97cc-bdbd8e44fe57" />
-
-
 
 ### What is the value of indexed data
 
@@ -81,12 +76,6 @@ Dataverse search lets you use multiple features in Power Platform, including Cop
 - [Power Apps / Power Automate - Custom AI Prompts](/ai-builder/create-a-custom-prompt)
 
 
-### How Dataverse Search is used across experiences
-
-<img width="1026" height="384" alt="image" src="https://github.com/user-attachments/assets/1509bf10-c9ea-42d9-85e0-155e431006ae" />
-<img width="797" height="495" alt="image" src="https://github.com/user-attachments/assets/c664300f-afaa-4c71-b030-cbe376ed2562" />
-
-
 ## Benefits of Dataverse Search
 
 ### Integration with AI / Copilot experiences
@@ -116,8 +105,11 @@ Includes search results for text in documents that are stored in Dataverse, such
 
 ## Dataverse search implications
 
-Dataverse search is an opt-out feature. The feature is **On** for all new production environments and set to **Default** for all other environment types. You can find this setting in **PPAC** > **Manage** > **Environment** > **Settings** > **Product** > **Features** > **Dataverse Search**:
-<img width="1125" height="582" alt="image" src="https://github.com/user-attachments/assets/ee6047e9-fe9a-4796-89e5-c6f59b518b46" />
+Dataverse search is an opt-out feature. The feature is **On** for all new production environments and set to **Default** for all other environment types. You can find this setting in [Power Platform admion center](https://admin.powerplatform.microsoft.com/). 
+Go to **Manage** > **Environment** > **Settings** > **Product** > **Features** > **Dataverse Search**.
+
+:::image type="content" source="media/dataverse-search-admin.png" alt-text="Screenshot of Dataverse search option in Power Platform admin center." lightbox="media/dataverse-search-admin.png":::
+
 
 In Power Platform admin center, admins can [use the Dataverse Search setting](/power-platform/admin/configure-relevance-search-organization?tabs=new#managing-dataverse-search) to manage it. The selected Dataverse search state affects the ability to use Dataverse data across the enabled experiences for the entire organization.
 The following tables show how each Dataverse Search setting affects Global Search experiences (including SearchQuery API) and Generative AI experiences, and how admins can use this setting to manage it:
