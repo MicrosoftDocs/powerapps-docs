@@ -64,9 +64,9 @@ This guide covers:
 
 1. In the **Connect to Database** dialog, select **Browse Azure**, select your subscription, resource group (for example: `rg-codeapps-dev`), Server (for example: `sql-codeapps-dev`), and then database (for example `sqldb-codeapps-dev` )
 1. Under **Authentication type**, select **Microsoft Entra ID - Universal with MFA support**
-1. Ensure you have your Azure portal open in your browser, and then select **Sign In**. You should be prompted to sign-in, and then see:
+1. Ensure you have your Azure portal open in your browser, and then select **Sign In**. You should be prompted to sign in, and then see:
 
-   :::image type="content" source="media/sql-signin.png" alt-text="Microsoft Entra sign-in prompt for SQL connection":::
+   :::image type="content" source="media/sql-signin.png" alt-text="Microsoft Entra sign in prompt for SQL connection":::
 
 1. Select Connect
 
@@ -309,10 +309,10 @@ This guide covers:
    pac auth create
    ```
 
-   Sign-in as your Power Platform account when prompted.
+   Sign in as your Power Platform account when prompted.
 
    > [!NOTE]
-   > You can also use the [Power Platform Tools VS Code Extension](/power-platform/developer/howto/install-vs-code-extension) to do sign-in.
+   > You can also use the [Power Platform Tools VS Code Extension](/power-platform/developer/howto/install-vs-code-extension) to do sign in.
 
 1. **Select** your environment using:
 
@@ -407,11 +407,11 @@ This guide covers:
 
 1. Select **SQL Server**
 1. Select Authentication type: **Microsoft Entra ID Integrated**
-1. Select **Create** and sign-in in the popup authentication prompt
+1. Select **Create** and sign in in the popup authentication prompt
 
 ## Add SQL table connections to your app
 
-1. First list the available connections in your environment. You should see the connection you created:
+1. List the available connections in your environment. You should see the connection you created:
 
    ```powershell
    pac connection list
@@ -433,9 +433,9 @@ This guide covers:
    pac code add-data-source -a "shared_sql" -c "aaaa0000bb11222233cc444444dddddd"  -d "sql-codeapps-dev.database.windows.net,sqldb-codeapps-dev" -sp "dbo.GetAllProjects"
    ```
 
-1. Open the `Services` and `Models` folder, and observer the newly generated code.
+1. Open the `Services` and `Models` folder, and observe the newly generated code.
 
-### Add Table of Projects
+### Add table of projects
 
 1. We use Fluent UI to show a table of projects, so downgrade to React 18 and install using:
 
@@ -834,15 +834,15 @@ This guide covers:
 
 1. Run your app using:
 
-   ````
+   ```powershell
    npm run dev
-   ````
+   ```
 
    In the command window that opens up, open the app link provided:
 
    :::image type="content" source="media/sql-testapp.png" alt-text="Power SDK server console with app URL and status":::
 
-1. When the app opens, you should see a consent dialog, select **Allow**
+1. When the app opens, you should see a consent dialog, select **Allow**.
 
    :::image type="content" source="media/sql-consent.png" alt-text="Consent dialog requesting permissions for the app":::
 
@@ -854,7 +854,7 @@ This guide covers:
 
 1. Once your app is ready for publishing and sharing, make sure the Vite server is stopped using <kbd>Ctrl + C</kbd>, then use the following PowerShell:
 
-   ```
+   ```powershell
    npm run build
    pac code push
    ```

@@ -56,6 +56,7 @@ The following table lists selected properties for the Entity Cluster Configurati
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [ClusterMode](#BKMK_ClusterMode)
+- [DefaultToLocalPartition](#BKMK_DefaultToLocalPartition)
 - [EntityClusterConfigId](#BKMK_EntityClusterConfigId)
 - [ExtensionOfRecordId](#BKMK_ExtensionOfRecordId)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
@@ -88,7 +89,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |0|**Partitioned**|
 |1|**Replicated**|
 |2|**Local**|
-|3|**Replicated if the parent entity cluster mode is Replicated.**|
+|3|**Inherited**|
+
+### <a name="BKMK_DefaultToLocalPartition"></a> DefaultToLocalPartition
+
+|Property|Value|
+|---|---|
+|Description|**When creating a partitioned entity record, if a clusterpartitionid is not specified, the entity record is created in a local partition instead of failing the creation operation.**|
+|DisplayName|**Default to local cluster partition.**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`defaulttolocalpartition`|
+|RequiredLevel|None|
+|Type|Boolean|
+|GlobalChoiceName|`entitycclusterconfig_defaulttolocalpartition`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_EntityClusterConfigId"></a> EntityClusterConfigId
 

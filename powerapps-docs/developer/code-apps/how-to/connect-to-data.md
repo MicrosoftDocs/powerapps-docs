@@ -1,13 +1,14 @@
 ---
 title: "How to: Connect your code app to data (preview)"
 description: "Learn how to connect your code app to data"
-ms.author: alaug
-author: alaug
-ms.date: 09/10/2025
+ms.author: jordanchodak
+author: jordanchodakWork
+ms.date: 11/10/2025
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
  - JimDaly
+ - alaug
 ---
 # How to: Connect your code app to data (preview)
 
@@ -80,15 +81,15 @@ Notice how the API name and connection ID are appended to the URL:
 
 :::image type="content" source="media/powerapps-connection-apiname-connectionid.png" alt-text="Connection details showing API name and Connection ID values":::
 
-Copy the API name and the connection ID from PAC CLI the URL for each connection.
+Copy the API name and the connection ID from PAC CLI to the URL for each connection.
 
 ## Add a connection to a code app
 
-After you create or identify existing connections to use, and copied the connection metadata from the previous step, add those connections to the app.
+After you create or identify existing connections to use, and copy the connection metadata from the previous step, add those connections to the app.
 
 Adding the data sources to the app will automatically generate a typed TypeScript model and service file in the repo. For example, the Office 365 Users data source produces `Office365UsersModel` and `Office365UsersService`.
 
-1. Add a nontabular data source (For example Office 365 Users) to the app using the PAC CLI [pac code add-data-source](/power-platform/developer/cli/reference/code#pac-code-add-data-source) command.
+1. Add a nontabular data source (for example Office 365 Users) to the app using the PAC CLI [pac code add-data-source](/power-platform/developer/cli/reference/code#pac-code-add-data-source) command.
 
    From a command line, run the following. Use the API name and connection ID collected from previous steps.
 
@@ -126,7 +127,7 @@ Adding the data sources to the app will automatically generate a typed TypeScrip
    -d "paconnectivitysql0425.database.windows.net,paruntimedb" 
    ```
 
-1. (Optional) Add a SQL stored procedure as a data source
+1. (Optional) Add a SQL stored procedure as a data source.
 
    From a command line, run the following. Use the API name and connection ID collected previously.
 
@@ -144,7 +145,7 @@ Adding the data sources to the app will automatically generate a typed TypeScrip
    -sp "[dbo].[GetRecordById]" 
    ```
 
-1. (Optional) If needed, you can delete data sources after adding
+1. (Optional) If needed, you can delete data sources after adding.
 
    From a command line, run the following. Use the API name and connection ID collected previously.
 
@@ -170,9 +171,55 @@ Once connections are added, you can update the app to use the generated model an
 > [!NOTE]
 > These changes can also be made via with an IDE's agent. For instance, in Visual Studio Code you might use GitHub Copilot agent mode to make them for you after the data sources are added.
 
-1. Update the app to use the nontabular data source (for example, Office 365 Users)
+1. **Ensure Power Apps SDK initialization before data calls**
 
-   You can see the generated files under the src/generated/models and src/generated/services folders for the typed connection API.
+   In your `App.tsx` file, implement logic that waits for the Power Apps SDK to fully initialize before performing any data operations. This prevents errors caused by uninitialized services or missing context. This only needs to be done once.
+
+   Use an asynchronous function or state management to confirm initialization before making API calls. For example:
+
+   ```typescript
+   useEffect(() => {
+   // Define an async function to initialize the Power Apps SDK
+   const init = async () => {
+         try {
+               await initialize(); // Wait for SDK initialization
+               setIsInitialized(true); // Mark the app as ready for data operations
+         } catch (err) {
+               setError('Failed to initialize Power Apps SDK'); // Handle initialization errors
+               setLoading(false); // Stop any loading indicators
+         }
+   };
+
+   init(); // Call the initialization function when the component mounts
+   }, []);
+
+   useEffect(() => {
+   // Prevent data operations until the SDK is fully initialized
+   if (!isInitialized) return;
+
+   // Place your data reading logic here
+   }, []);
+   ```
+   
+1. **Import required types and services**
+
+   When you add a data source, model and service files are automatically generated and placed in the `/generated/services/` folder.
+   For example, if you add `Office365Users` as a data source, the following files are created:
+
+   - `Office365UsersModel.ts` – Defines the data model for requests and response objects in the `Office365Users` connector.
+
+   - `Office365UsersService.ts` – Provides service methods for interacting with the `Office365Users` data.
+
+   You can import and use them in your code like this:
+
+   ```typescript
+   import { Office365UsersService } from './generated/services/Office365UsersService';
+   import type { User } from './generated/models/Office365UsersModel';
+   ```
+
+1. **Update the app to use the nontabular data source (for example, Office 365 Users)**
+
+   You can see the generated files under the `src/generated/models and src/generated/services` folders for the typed connection API.
 
    ```javascript
    await Office365UsersService.MyProfile() 
@@ -195,7 +242,7 @@ Once connections are added, you can update the app to use the generated model an
          if (photoData) setPhoto(`data:image/jpeg;base64,${photoData}`); 
    ```
 
-1. (Optional) Update the app to use the tabular data source (for example, SQL)
+1. **(Optional) Update the app to use the tabular data source (for example, SQL)**
 
    You can see the generated files under the `src/Models` and `src/Services` folders for the typed connection API.
 
@@ -216,13 +263,13 @@ Once connections are added, you can update the app to use the generated model an
        if (asset.id === assetId) { 
    ```
 
-1. Run the app locally to verify changes
+1. **Run the app locally to verify changes**
 
    ```powershell
    npm run dev
    ```
 
-1. Push the app to run on Power Apps
+1. **Push the app to run on Power Apps**
 
    ```powershell
    npm run build | pac code push
@@ -242,8 +289,8 @@ If you don't already have the table and dataset name, you can get them by runnin
 1. Open your browser's **Developer Tools**, go to the **Network** tab, and inspect requests made when the app loads. Check the "invoke" request, and go to its response.
 1. Find an Azure API Management (APIM) request with the connection ID, dataset name, and table ID, and copy those values.
 
-Example data request URL through APIM. Look for the `<Connection ID>`, `<Dataset name>`, and `<Table ID>` values in these places in the URL:
+   Using this example data request URL through APIM, look for the `<Connection ID>`, `<Dataset name>`, and `<Table ID>` values in these places in the URL:
 
-```http
-https[]()://{id value}.01.common.azure-apihub.net/apim/sharepointonline/<Connection ID>/datasets/<Dataset name>/tables/<Table ID>/items
-```
+   ```http
+   https[]()://{id value}.01.common.azure-apihub.net/apim/sharepointonline/<Connection ID>/datasets/<Dataset name>/tables/<Table ID>/items
+   ```
