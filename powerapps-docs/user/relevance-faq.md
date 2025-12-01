@@ -33,17 +33,17 @@ Dataverse search is the foundation that enables Copilot and in-app search experi
  - [What Dataverse search setting means for global search](relevance-search-benefits.md#what-dataverse-search-setting-means-for-global-search)
  - [What Dataverse search means for generative AI enabled experiences](relevance-search-benefits.md#what-dataverse-search-means-for-generative-ai-enabled-experiences)
 
-## What is the scope of content searched by Dataverse search?
+## What is the scope of content searched by Dataverse search using Global Search?
 
 Any file or Dataverse knowledge added to Agents or model-driven apps defines the scope of content that's searched.
 
 ![An example of search results on the Contacts tab.](media/search-faq-1.png "An example of search results on the Contacts tab") 
 
-## What are the column types that can be searched in Dataverse search?
+## What are the column types that can be searched in Dataverse search using Global Search?
 
 The **Find Columns** on a **Quick Find View** define the searchable fields in the Dataverse search index. Text fields such as Single Line of Text and Multiple Lines of Text, Lookups, and Option Sets are searchable. **Find Columns** of all other data types such as Integer, Double are ignored. Learn more in [Select searchable fields and filters for each table](/power-platform/admin/configure-relevance-search-organization#select-searchable-fields-and-filters-for-each-table).
 
-## Why am I not seeing search results from a table that is enabled for Dataverse search?
+## Why am I not seeing Global Search results from a table that is enabled for Dataverse search?
 
 If a table isn't part of the model-driven app, it is not included in search results. Use the Power Apps app designer to verify that the table is included in that app's components. Make sure that the table has a default Quick Find View created and defined. A default Quick Find View is created with a table, but if it has been removed you need to select the Quick Find View you want and set as the default for your table. Learn more in [Add or edit model-driven app components](../maker/model-driven-apps/add-edit-app-components.md#add-a-component). 
 
@@ -57,11 +57,11 @@ Suggestions are quick results based on a search performed on the primary column 
 
 When you navigate to the results page, the search terms are treated as the complete search query. The search performs many more types of matching to display a more comprehensive set of results.
 
-## Can I configure the order of tables appearing in the search results page?
+## Can I configure the order of tables appearing in the Global Search results page?
 
 The order of tables in the **Top results** tab and in the horizontal list of tabs is based on the ranking and relevance of search results for that search term. You can make results from a particular table appear at the top by including the table name in the search term. For example, searching for **account fabrikam** would, in most cases, rank result records that have the term **fabrikam** of type **account** higher than result records that have the term **fabrikam** of a type other than **account**.
 
-## Can I see search results from SharePoint files and documents through Dataverse search?
+## Can I see search results from SharePoint files and documents through Global Search?
 
 Currently, Dataverse search searches your data in Microsoft Dataverse only. It doesn't search SharePoint files and documents, including the names of the files and the content in the files. It also doesn't search objects of **File** data type in Dataverse.
 
@@ -73,7 +73,7 @@ Party list fields are special fields. Dataverse search doesn't support them, and
 
 Dataverse search doesn't return HTML formatting for memo types to optimize the UI experience.
 
-## Why aren't columns enabled for Dataverse search after adding them to a quick find view?
+## Why aren't columns enabled for Dataverse search after adding them to a quick find view, to use them in Global Search?
 
 Columns are enabled for Dataverse search only if a quick find view is set as the default view. For more information on how to set a default view, see [Specify a default view for a table](../maker/model-driven-apps/specify-default-views.md#specify-a-default-view-for-a-table).
 
@@ -89,7 +89,7 @@ Search doesn't support polymorphic lookup attributes. The RegardingObjectId attr
 
 When you use the Dataverse search API, throttling limits restrict you to one request per second for each user. Additionally, each organization can make up to 150 requests per minute.
 
-## What attribute types does indexing support?
+## What attribute types does Dataverse search indexing support?
 
 - BigInt
 - Boolean
@@ -123,7 +123,7 @@ When you use the Dataverse search API, throttling limits restrict you to one req
 - State
 - Status
 
-## How can I use the search API?
+## How can I use the Dataverse search API?
 
 [Developer's guide: Search for Dataverse records using the API](../developer/data-platform/search/overview.md)
 
