@@ -4,53 +4,53 @@ metadata:
   description: Get answers to frequently asked questions about Microsoft Fabric Link for Dataverse.
   author: anibakore-msft
   ms.search.keywords: 
-  ms.date: 11/25/2025
+  ms.date: 12/01/2025
   ms.author: banirud
   ms.reviewer: matp
   ms.topic: faq
   ms.subservice: dataverse-maker
 title: Microsoft Fabric Link for Dataverse FAQ
-summary: This article provides information on frequently asked questions about linking Microsoft Dataverse to Microsoft Fabric.
+summary: This article provides information about frequently asked questions when you link Microsoft Dataverse to Microsoft Fabric.
 sections:
 - name: General
   questions:
-   - question: What authentication methods are supported for Fabric Link?
+   - question: What authentication methods are supported for Fabric link?
      answer: |
-        Fabric Link supports three authentication methods when creating a connection:
-        - **Organizational Account**: Provide your credentials and save the connection
-        - **Service Principal**: Provide Tenant ID, Client ID, and Key for authentication  
-        - **Workspace Identity**: Uses a Fabric-managed service principal bound to a specific workspace
+        Fabric link supports three authentication methods when creating a connection:
+        - **Organizational Account**: Provide your credentials and save the connection.
+        - **Service Principal**: Provide Tenant ID, Client ID, and Key for authentication.
+        - **Workspace Identity**: Uses a Fabric-managed service principal bound to a specific workspace.
    - question: What happens when I unlink from Fabric?
      answer: |
         When you unlink, the Fabric lakehouse is removed along with all shortcuts to your Dataverse tables.
-- name: Table Support and Limitations  
+- name: Table support and limitations  
   questions:
    - question: Which Dataverse tables are automatically linked to Fabric?
      answer: |
         All Dataverse tables where the **Track changes** property is enabled are linked to Fabric.
-   - question: Which Dataverse tables aren't supported for Fabric Link?
+   - question: Which Dataverse tables aren't supported for Fabric link?
      answer: |
-        Any table that doesn't have change tracking enabled isn't supported. Additionally, certain Dataverse tables—such as postcomment, postregarding, postlike, post, and postrole—are not available for customers to enable synchronization through Microsoft Fabric Link.
-        In some cases, these tables may appear when Long-Term Retention (LTR) is enabled. If that happens, a subset or all records from these tables might be exported. This is expected behavior for LTR scenarios.
+        Any table that doesn't have change tracking enabled isn't supported. Additionally, certain Dataverse tables, such as postcomment, postregarding, postlike, post, and postrole, aren't available for customers to enable synchronization through Fabric link.
+        In some cases, these tables might appear when Dataverse long term retention is enabled. If that happens, a subset or all records from these tables might be exported. This is expected behavior for long term retention scenarios.
         
         > [!IMPORTANT]
-        > - These tables should not be selected for synchronization.
-        > - Their presence does not indicate full support for incremental sync.
-   - question: Can I add or remove specific tables from Fabric Link?
+        > - These tables shouldn't be selected for synchronization.
+        > - Their presence doesn't indicate full support for incremental sync.
+   - question: Can I add or remove specific tables from Fabric link?
      answer: |
         Yes, you can manage which tables are linked:
-        - Add more table links to Fabric by selecting **Manage tables**
-        - To stop syncing specific tables, uncheck them in the **Manage tables** pane and select **Save**
-        - After confirmation, shortcuts for unselected tables are removed from the Fabric Lakehouse and sync stops immediately
+        - Add more table links to Fabric by selecting **Manage tables**.
+        - To stop syncing specific tables, clear them in the **Manage tables** pane and then select **Save**
+        - After confirmation, shortcuts for unselected tables are removed from the Fabric Lakehouse and sync stops immediately.
         
         > [!IMPORTANT]
-        > Removing a table does not delete the table in Dataverse; it only removes the OneLake shortcut and stops data sync.
+        > Removing a table doesn't delete the table in Dataverse; it only removes the OneLake shortcut and stops data sync.
    - question: Are Finance and Operations tables supported?
      answer: |
-        If your environment is linked to a Dynamics 365 finance and operations environment, the add tables option enables you to include tables from finance and operations apps. Finance and operations apps tables aren't auto-selected when creating the initial Fabric link.
+        If your environment is linked to a Dynamics 365 finance and operations environment, the add tables option enables you to include tables from finance and operations apps. Finance and operations apps tables aren't autoselected when creating the initial Fabric link.
    - question: Are there system tables that are automatically synchronized and can't be unlinked?
      answer: |
-        Yes, certain system tables are automatically synchronized in Link to Fabric and cannot be unlinked by users. Examples of these system tables include:
+        Yes, certain system tables are automatically synchronized in Link to Fabric and can't be unlinked by users. Examples of these system tables include:
         - bot
         - msdyn_copilotknowledgeinteraction
         - desktopflowmodule
@@ -66,10 +66,10 @@ sections:
   questions:
    - question: How long does initial data synchronization take?
      answer: |
-        Initial sync time depends on several factors including table size, number of updates/transactions happening in the environment, number of tables, and row count. The data is converted to delta parquet format during this process. When you open Fabric lakehouse, the links appear as **unidentified** until the initial sync is completed.
+        Initial sync time depends on several factors including table size, number of updates and transactions happening in the environment, number of tables, and row count. The data is converted to delta parquet format during this process. When you open Fabric Lakehouse, the links appear as **unidentified** until the initial sync is completed.
    - question: How often is data refreshed in Fabric?
      answer: |
-        When the initial sync is complete, the system continuously refreshes updates in Dataverse in the lakehouse. Incremental updates typically take up to 1 hour to appear, though actual timing depends on table size, number of updates/transactions happening in the environment, number of tables, row count, and system load periods.
+        When the initial sync is complete, the system continuously refreshes updates in Dataverse in the lakehouse. Incremental updates typically take up to one hour to appear, though actual timing depends on table size, number of updates and transactions happening in the environment, number of tables, row count, and system load periods.
 - name: Limitations and Errors
   questions:
    - question: What are the limits for Fabric Link?
@@ -78,8 +78,8 @@ sections:
    - question: Can I link existing Azure Synapse Link profiles to Fabric?
      answer: |
         You can link your existing Azure Synapse Link for Dataverse profiles with Fabric if you select the **Enable Parquet/Delta lake** option. However:
-        - Existing profiles where the data is saved as CSV files can't be linked to Microsoft Fabric
-        - Azure Synapse Link profiles secured with managed identities can't be linked to Microsoft Fabric at this point in time
+        - Existing profiles where the data is saved as CSV files can't be linked to Fabric.
+        - Azure Synapse Link profiles secured with managed identities currently can't be linked to Fabric.
 
 additionalContent: |
 

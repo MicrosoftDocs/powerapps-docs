@@ -1,7 +1,7 @@
 ---
 title: Choose finance and operations data in Azure Synapse Link for Dataverse
 description: Learn how to choose Dynamics 365 finance and operations apps data in Microsoft Azure Synapse Link for Dataverse and work with Azure Synapse Link and Power BI.
-ms.date: 06/24/2025
+ms.date: 12/1/2025
 ms.reviewer: matp 
 ms.topic: "how-to"
 applies_to: 
