@@ -5,7 +5,7 @@ author: yogeshgupta698
 
 ms.topic: reference
 ms.component: canvas
-ms.date: 3/23/2023
+ms.date: 10/8/2025
 ms.subservice: canvas-maker
 ms.author: yogupt
 
@@ -19,9 +19,7 @@ contributors:
   - noazarur-microsoft
   
 ---
-# Info button modern control in Power Apps (preview)
-
-[This article is pre-release document and is subject to change.]
+# Info button modern control in Power Apps
 
 Use **Info button** control to provide additional information to users.
 

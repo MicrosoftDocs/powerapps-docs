@@ -428,6 +428,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |100000301|**DesktopFlowOrchestrationRepairSessionMismatchResponse**|
 |100000310|**DesktopFlowOrchestrationRepairWindowsIdentityIncorrectRequest**|
 |100000311|**DesktopFlowOrchestrationRepairWindowsIdentityIncorrectResponse**|
+|100000400|**CuaStartSession**|
+|100000401|**CuaReasoningStep**|
+|100000402|**CuaWaitOrCompleteSession**|
 
 ### <a name="BKMK_workqueueid"></a> workqueueid
 

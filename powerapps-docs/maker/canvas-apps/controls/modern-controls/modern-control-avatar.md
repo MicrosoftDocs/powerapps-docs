@@ -5,7 +5,7 @@ author: jasongre
 
 ms.topic: reference
 ms.component: canvas
-ms.date: 05/20/2023
+ms.date: 10/8/2025
 ms.subservice: canvas-maker
 ms.author: jasongre
 
@@ -17,9 +17,7 @@ contributors:
   - jasongre
      
 ---
-# Avatar modern control in Power Apps (preview)
-
-[This article is prerelease documentation and is subject to change.]
+# Avatar modern control in Power Apps
 
 A control that shows a graphic representation of a user, team, or entity.  
 

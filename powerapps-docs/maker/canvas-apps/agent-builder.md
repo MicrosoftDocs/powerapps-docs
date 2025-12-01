@@ -5,7 +5,7 @@ author: noazarur-microsoft
 ms.topic: how-to
 ms.date: 8/14/2025
 ms.subservice: canvas-maker
-ms.author: mkaur
+ms.author: hillaryyaory
 ms.reviewer: mkaur
 search.audienceType: 
   - maker
@@ -24,7 +24,6 @@ Agent builder in Power Apps lets organizations transition into the AI-first era 
 After creating the agent, makers can edit, test, and publish it in Microsoft Copilot Studio.
 
 ## Prerequisites
-
 - Your tenant administrator must turn on the [Publish Copilots with AI features](/microsoft-copilot-studio/security-and-governance) setting in the Power Platform admin center.
 - Include a Dataverse database in your environment. More information: [Add a Microsoft Dataverse database](/power-platform/admin/create-database).
 - Ensure that block unmanaged customizations is disabled. Learn more in [Block unmanaged customizations in Dataverse environments](/power-platform/alm/block-unmanaged-customizations).
