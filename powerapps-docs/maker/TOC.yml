@@ -2368,7 +2368,7 @@
       - name: Build apps using Fabric data
         href: ./data-platform/azure-synapse-link-build-apps-with-fabric.md
       - name: Fabric Link for Dataverse FAQ
-        href: ./data-platform/fabric-link-faq.md
+        href: ./data-platform/fabric-link-faq.yml
       - name: Troubleshoot link to Fabric
         href: ./data-platform/fabric-troubleshoot.md 
     - name: Azure Synapse Link
