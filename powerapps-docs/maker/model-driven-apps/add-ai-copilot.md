@@ -31,6 +31,7 @@ Copilot chat for model-driven apps in Power Apps is a next-generation AI assista
 > - For more information, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
 > - This capability is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview).
 > - This capability might be subject to usage limits or capacity throttling.
+> - [M365 Copilot Chat](use-m365-copilot-model-driven-apps.md) will eventually replace **Copilot chat in model-driven apps**.  For a period of time, the transition from one to the other will be at the discretion of the app maker. App makers will be able to control whether an end user has one, the other, or both available to them.
 
 When enabled, Copilot chat can be accessed through the Copilot icon in the right navigation bar in a model-driven app. The Copilot chat pane can be opened or minimized as desired.
 
