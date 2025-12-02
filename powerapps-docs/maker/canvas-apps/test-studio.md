@@ -3,7 +3,7 @@ title: Test Studio
 description: Describes Test Studio with overview, terminology, best practices, and limitations.
 author: mduelae
 
-ms.topic: conceptual
+ms.topic: concept-article
 ms.reviewer: mkaur
 ms.date: 05/21/2025
 ms.subservice: canvas-maker
