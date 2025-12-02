@@ -26,7 +26,7 @@ M365 Copilot chat for model-driven apps is a next-generation AI assistant that h
 >
 > This feature is in preview.  
 >
-> - Initially, you must have or create an [Early release cycle environment](https://learn.microsoft.com/power-platform/admin/early-release) to use this feature.
+> - You must have or create an [Early release cycle environment](https://learn.microsoft.com/power-platform/admin/early-release) to use this feature.
 > - Preview features aren't meant for production use and might have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 > - For more information, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
 > - M365 Copilot Chat will eventually replace [Copilot chat in model-driven apps](use-copilot-model-driven-apps.md).  For a period of time, the transition from one to the other will be at the discretion of the app maker. App makers will be able to control whether an end user has one, the other, or both available to them.
