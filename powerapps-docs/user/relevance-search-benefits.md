@@ -268,7 +268,7 @@ Just like model-driven applications in Power Apps, Copilot in model-driven apps 
 1. Select **Copilot** > **Edit settings** > **Advanced settings**, which opens a new Copilot in Dynamics 365 Sales page.
 1. Select **All Apps** and turn the setting to **Off**.
  
-The other to turn off Copilot feature for all apps is as follow:
+The other way to turn off Copilot feature for all apps is as follow:
 
 1. In the Sales Hub app, change the area using option in the lower-left corner of the page.
 1. Select **App Settings** to open sales settings.
