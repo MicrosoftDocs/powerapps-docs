@@ -3,7 +3,7 @@ title: "How to: Connect your code app to Azure SQL (preview)"
 description: "Learn how to connect your code app to Azure SQL"
 ms.author: alaug
 author: alaug
-ms.date: 09/10/2025
+ms.date: 10/02/2025
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
