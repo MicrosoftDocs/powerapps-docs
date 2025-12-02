@@ -158,3 +158,5 @@ landingContent:
             url: ../component-framework/overview.md
           - text: Code apps (preview)
             url: ../code-apps/index.yml
+          - text: Dataverse SDK for Python
+            url: ./sdk-python/index.yml
