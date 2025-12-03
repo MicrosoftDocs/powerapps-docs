@@ -3,7 +3,7 @@ title: "Dataverse SDK for Python overview (preview)"
 description: "Use Dataverse to store and access data for use in data science and analyses."
 ms.author: paulliew
 author: paulliew
-ms.date: 11/17/2025
+ms.date: 12/02/2025
 ms.reviewer: phecke
 ms.topic: overview
 contributors:
@@ -12,9 +12,12 @@ contributors:
 
 # Dataverse SDK for Python overview (preview)
 
-Dataverse SDK for Python enables Python developers to interact directly with Microsoft Dataverse, making it easy to access, manage, and manipulate data stored in Dataverse using familiar Python syntax—no .NET knowledge required.
+Dataverse SDK for Python enables Python developers to interact directly with Microsoft Dataverse, making it easy to access, manage, and manipulate data stored in Dataverse using familiar Python syntax — no .NET knowledge required.
 
 [!INCLUDE [preview-note-pp](../../../../shared/preview-includes/preview-note-pp.md)]
+
+Check out this video!
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=541974da-10b2-46d9-95da-53587c83f84e]
 
 ## Supporting Agentic Processes
 
