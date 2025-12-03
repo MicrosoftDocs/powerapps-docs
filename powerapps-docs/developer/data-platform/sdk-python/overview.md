@@ -71,3 +71,4 @@ Here are a few known limitations of the current (preview) release.
 ## Related information
 
 - [SDK for Python source](https://github.com/microsoft/PowerPlatform-DataverseClient-Python)
+- [Blog: Introducing the Dataverse SDK for Python](https://www.microsoft.com/power-platform/blog/2025/12/03/dataverse-sdk-python/)
