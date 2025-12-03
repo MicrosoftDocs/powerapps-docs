@@ -84,26 +84,26 @@ Dataverse search lets you use multiple features in Power Platform, including Cop
 
 ## Benefits of Dataverse search
 
-### Integration with AI and Copilot experiences
-You can have a conversation with your data and identify themes, patterns, and insights by using natural language. The feature uses AI technology to interpret natural language such as misspellings, common abbreviations, and synonyms to deliver quality results.
-  	
-### Unified search
-Dataverse search lets you quickly find content in model-driven apps and other products that use Dataverse as a data source. It provides a better user experience than [quick find](quick-find.md), where all words in the search term must be found in one column. 
-  	
-### Efficient relevance-based results
-Intelligent ranking algorithms return the most relevant records first, with performance that's superior to [categorized search](quick-find.md#multiple-table-quick-find-categorized-search). This reduces time spent searching and increases accuracy.
-  	
-### Smart fuzzy search
-Dataverse search handles variations in spelling and terminology, so it doesn't depend on exact keyword matches.
-    
-### Security and compliance
-Dataverse search respects Dataverse security roles and permissions. Users can only see search results for records that they have access to.
-  	
-### Scalability and performance
-Dataverse search is optimized for large datasets and supports multiple data types, such as Choice and Lookup.
+**1. Integration with AI and Copilot experiences**
+  You can have a conversation with your data and identify themes, patterns, and insights by using natural language. The feature uses AI technology to interpret natural language such as misspellings, common abbreviations, and synonyms to deliver quality results.
 
-### Search across documents in Microsoft Dataverse
-Dataverse search includes search results for text in documents that are stored in Dataverse, such as PDF, Microsoft Office documents, HTML, XML, ZIP, EML, plain text, and JSON file formats. It also searches text in notes and attachments.
+**1. Unified search**
+  Dataverse search lets you quickly find content in model-driven apps and other products that use Dataverse as a data source. It provides a better user experience than [quick find](quick-find.md), where all words in the search term must be found in one column.     
+  	
+**1. Efficient relevance-based results**
+  Intelligent ranking algorithms return the most relevant records first, with performance that's superior to [categorized search](quick-find.md#multiple-table-quick-find-categorized-search). This reduces time spent searching and increases accuracy.
+  	
+**1. Smart fuzzy search**
+  Dataverse search handles variations in spelling and terminology, so it doesn't depend on exact keyword matches.
+    
+**1. Security and compliance**
+  Dataverse search respects Dataverse security roles and permissions. Users can only see search results for records that they have access to.
+  	
+**1. Scalability and performance**
+  Dataverse search is optimized for large datasets and supports multiple data types, such as Choice and Lookup.
+
+**1. Search across documents in Microsoft Dataverse**
+  Dataverse search includes search results for text in documents that are stored in Dataverse, such as PDF, Microsoft Office documents, HTML, XML, ZIP, EML, plain text, and JSON file formats. It also searches text in notes and attachments.
 
 > [!NOTE]
 > Global search supports up to 2 MB of file search.
