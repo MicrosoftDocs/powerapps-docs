@@ -242,7 +242,7 @@ Copilot in model-driven apps uses AI to interpret natural language queries and g
 > Even if you take this action, you might incur additional Dataverse search consumption that's triggered by other experiences, such as a Dynamics 365 Copilot for Sales.
 
 
-#### Copilot for Dynamics 365 Apps: Specify which applications you'd like Copilot to be enabled for**
+#### Copilot for Dynamics 365 Apps: Specify which applications you'd like Copilot to be enabled for
 
 **Why**
 Just like model-driven applications in Power Apps, Copilot in model-driven apps uses AI to interpret natural language queries and generate suggestions or actions based on the app's underlying Dataverse data. In some situations, applications don't require that level of enhanced search through Copilot. Managing Copilot at an app level can help with consumption control.
