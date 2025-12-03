@@ -46,6 +46,9 @@ You can expand or collapse the M365 Copilot pane as you want.
 
 M365 Copilot chat in model-driven apps can answer questions about the Dataverse table data in the app.
 
+:::image type="content" source="media/m365-copilot-question.png" alt-text="Screenshot that shows asking a question in M365 Copilot.":::
+:::image type="content" source="media/m365-copilot-question-response.png" alt-text="Screenshot that shows a question and response in M365 Copilot.":::
+
 ## M365 Copilot chat suggested questions
 
 To help you get started, M365 Copilot chat suggests questions for you to ask. Many of the suggested questions have placeholders that you must replace with appropriate text to complete the question.
