@@ -26,12 +26,13 @@ Copilot chat for model-driven apps in Power Apps is a next-generation AI assista
 >
 > This feature is generally available in Dynamics 365 apps and is available as a preview feature in Power Apps.
 >
-> - You must allow data movement across regions for Generative AI features as a prerequisite for using Copilot in Power Apps. This step is especially important if your organization and your environment are in different regions. Learn more in [Turn on copilots and generative AI features](/power-platform/admin/geographical-availability-copilot#enable-data-movement-across-regions).
-> - Preview features aren't meant for production use and might have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+> - Preview features aren't meant for production use and might have restricted functionality.
 > - For more information, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
+> - This feature available as a preview feature in Power Apps will be deprecated in the future. We recommend replacing with [M365 Copilot Chat](use-m365-copilot-model-driven-apps.md). For a period of time, the transition from one to the other will be at the discretion of the app maker. App makers will be able to control whether an end user has one, the other, or both available to them.
+> - Starting January 20, 2026, newly created model-driven apps in environments that haven't been [enabled for Dynamics 365 apps](https://learn.microsoft.com/power-platform/admin/create-environment?tabs=new#create-an-environment-with-a-database) will no longer have the ability to include this Copilot chat.
+> - You must allow data movement across regions for Generative AI features as a prerequisite for using Copilot in Power Apps. This step is especially important if your organization and your environment are in different regions. Learn more in [Turn on copilots and generative AI features](/power-platform/admin/geographical-availability-copilot#enable-data-movement-across-regions).
 > - This capability is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview).
 > - This capability might be subject to usage limits or capacity throttling.
-> - [M365 Copilot Chat](use-m365-copilot-model-driven-apps.md) will eventually replace **Copilot chat in model-driven apps**.  For a period of time, the transition from one to the other will be at the discretion of the app maker. App makers will be able to control whether an end user has one, the other, or both available to them.
 
 When enabled, Copilot chat can be accessed through the Copilot icon in the right navigation bar in a model-driven app. The Copilot chat pane can be opened or minimized as desired.
 
