@@ -59,7 +59,7 @@ To help you get started, M365 Copilot chat suggests questions for you to ask. Ma
 
 > [!IMPORTANT]
 >
-> When you explicitly select an agent in M365 Copilot chat in model-driven apps, the agent will no longer answer questions about the Dataverse table data in the app unless you have explicitly configured your agent to do so.  However, the agent will use information from the chat history.  To get the side chat toanswer questions about the Dataverse table data in the app again, you will need to remove the explicit agent selection.
+> When you explicitly select an agent in M365 Copilot chat in model-driven apps, the agent will no longer answer questions about the Dataverse table data in the app unless you have explicitly configured your agent to do so.  However, the agent will use information from the chat history.  To get the side chat to answer questions about the Dataverse table data in the app again, you will need to remove the explicit agent selection.
 
 M365 Copilot chat in model-driven apps allows you to use any agent available in M365 Copilot right from the side pane. Once an agent is available within M365 Copilot, you can interact with your agent by either choosing it from the navigation panel or @ mentioning it.
 
