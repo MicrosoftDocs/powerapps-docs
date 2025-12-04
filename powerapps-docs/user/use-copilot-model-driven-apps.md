@@ -27,8 +27,8 @@ Copilot chat for model-driven apps in Power Apps is a next-generation AI assista
 >
 > - [M365 Copilot Chat](use-m365-copilot-model-driven-apps.md) will eventually replace **Copilot chat in model-driven apps**.  For a period of time, the transition from one to the other will be at the discretion of the app maker. App makers will be able to control whether an end user has one, the other, or both available to them.
 > - Preview features aren't meant for production use and might have restricted functionality. This feature available as a preview feature in Power Apps will be deprecated in the future. We recommend replacing with Microsoft 365 Copilot Chat.
-> - An administrator must enable Copilot chat in your application before it becomes visible in your app. More information: [Add Copilot for app users in model-driven apps](../maker/model-driven-apps/add-ai-copilot.md)
-> - Starting January 20, 2026, newly created model-driven apps will no longer have the ability to include this Copilot chat
+> - An administrator must enable Copilot chat in your application before it becomes visible in your app. More information: [Add Copilot for app users in model-driven apps](../maker/model-driven-apps/add-ai-copilot.md).
+> - Starting January 20, 2026, newly created model-driven apps in environments that haven't been [enabled for Dynamics 365 apps](https://learn.microsoft.com/power-platform/admin/create-environment?tabs=new#create-an-environment-with-a-database) will no longer have the ability to include this Copilot chat.
 
 ## Copilot pane
 
