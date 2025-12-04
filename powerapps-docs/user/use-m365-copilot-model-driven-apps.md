@@ -61,11 +61,11 @@ To help you get started, M365 Copilot chat suggests questions for you to ask. Ma
 >
 > When you explicitly select an agent in M365 Copilot chat in model-driven apps, the agent will no longer answer questions about the Dataverse table data in the app unless you have explicitly configured your agent to do so.  However, the agent will use information from the chat history.  To get the side chat to answer questions about the Dataverse table data in the app again, you will need to remove the explicit agent selection.
 
-M365 Copilot chat in model-driven apps allows you to use any agent available in M365 Copilot right from the side pane. Once an agent is available within M365 Copilot, you can interact with your agent by either choosing it from the navigation panel or @ mentioning it.
+M365 Copilot chat in model-driven apps allows you to use any agent available in M365 Copilot right from the side pane. Once an agent is available within M365 Copilot, you can interact with your agent by either choosing it from the navigation panel or @ mentioning it. One of the benefits of @ mentioning an agent is that you can add or remove it from an ongoing conversation, which allows you to have several agents collaborating in one conversation. When selecting an agent from the navigation panel, you are having a direct conversation only with the agent you selected.
 
+:::image type="content" source="media/m365-copilot-at-mention.png" alt-text="Screenshot that shows how to @ mention agents in M365 Copilot.":::
 :::image type="content" source="media/m365-copilot-open-nav-panel.png" alt-text="Screenshot that shows how to open the M365 Copilot navigation panel.":::
 :::image type="content" source="media/m365-copilot-nav-panel-agents.png" alt-text="Screenshot that shows agents in the M365 Copilot navigation panel.":::
-:::image type="content" source="media/m365-copilot-at-mention.png" alt-text="Screenshot that shows how to @ mention agents in M365 Copilot.":::
 
 ## Related information
 
