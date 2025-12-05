@@ -12,22 +12,25 @@ contributors:
 
 # How to: Get metadata for Dataverse tables (preview)
 
-Use the getMetadata() function to retrieve Dataverse table (entity) metadata at runtime. This function lightly wraps the [Dataverse Web API metadata query capabilities](/power-apps/developer/data-platform/webapi/query-metadata-web-api) and provides strongly-typed access to entity definitions, attributes, and relationships.
+Use the `getMetadata` function to retrieve Dataverse table (entity) metadata at runtime. This function lightly wraps the capabilities described in [Query table definitions using the Web API](../../data-platform/webapi/query-metadata-web-api.md) and provides strongly-typed access to entity definitions, attributes, and relationships.
 
-## Function signature
+## getMetadata signature
+
+The getMetadata function require an instance of `GetEntityMetadataOptions` to define the data to return.
 
 ```typescript
 AccountsService.getMetadata(
   options?: GetEntityMetadataOptions<Account>
 ): Promise<IOperationResult<Partial<EntityMetadata>>>
 ```
+
 > [!NOTE]
-> You must follow the steps in **Set up your code app** in [Connect to Dataverse](/power-apps/developer/code-apps/how-to/connect-to-dataverse) to initialize the Power SDK and import the service file before calling `getMetadata()`.
+> You must follow the steps in [Set up your code app](connect-to-dataverse.md#set-up-your-code-app) in [Connect to Dataverse](connect-to-dataverse.md) to initialize the Power SDK and import the service file before calling `getMetadata`.
 
 
-### Options parameter
+## GetEntityMetadataOptions parameter
 
-The `options` parameter allows you to specify which metadata to retrieve. See example:
+Use the `options` parameter to select the metadata you want to retrieve:
 
 ```typescript
 interface GetEntityMetadataOptions<Account> {
@@ -41,74 +44,80 @@ interface GetEntityMetadataOptions<Account> {
 }
 ```
 
-- `metadata`: array of entity-level properties to fetch. See [EntityMetadata](/power-apps/developer/data-platform/webapi/reference/entitymetadata?view=dataverse-latest) for a full list of queryable table properties.
+- `metadata`: array of entity-level properties to fetch. [EntityMetadata](xref:Microsoft.Dynamics.CRM.EntityMetadata) for a full list of queryable table properties.
 - `schema`:
+
     - `columns`:  Retrieve column (attribute) metadata - `"all"` or an array of column logical names.
     - `oneToMany`, `manyToOne`, `manyToMany`: booleans to include relationship metadata
+
       
-The response includes arrays named `Attributes` of type [AttributeMetadata](/power-apps/developer/data-platform/webapi/reference/attributemetadata?view=dataverse-latest), `OneToManyRelationships` of type [OneToManyRelationshipMetadata](/power-apps/developer/data-platform/webapi/reference/onetomanyrelationshipmetadata?view=dataverse-latest), `ManyToOneRelationships` of type [OneToManyRelationshipMetadata](/power-apps/developer/data-platform/webapi/reference/onetomanyrelationshipmetadata?view=dataverse-latest), and `ManyToManyRelationships` of type [ManyToManyRelationshipMetadata](/power-apps/developer/data-platform/webapi/reference/manytomanyrelationshipmetadata?view=dataverse-latest) when requested.
+The response includes arrays named `Attributes` of type [AttributeMetadata](xref:Microsoft.Dynamics.CRM.AttributeMetadata), `OneToManyRelationships` of type [OneToManyRelationshipMetadata](xref:Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata), `ManyToOneRelationships` of type [OneToManyRelationshipMetadata](xref:Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata), and `ManyToManyRelationships` of type [ManyToManyRelationshipMetadata](xref:Microsoft.Dynamics.CRM.ManyToManyRelationshipMetadata) when requested.
 
 ## Examples
 
-1. **Get user-localized labels for all columns**
+The snippets below show common ways to retrieve and use table metadata.
+
+
+
+### Get user-localized labels for all columns
 
 Retrive display names in the user's language. Use these labels to drive form labels, table headers, and accessibility text.
 
 ```typescript
 async function getColumnDisplayNames() {
-  // Request all column metadata
-  const { data } = await AccountsService.getMetadata({
-    schema: { columns: 'all' }
-  });
+// Request all column metadata
+const { data } = await AccountsService.getMetadata({
+   schema: { columns: 'all' }
+});
 
-  const columnDisplayNames: Record<string, string> = {};
-  if (data.Attributes) {
-    for (const attr of data.Attributes) {
+const columnDisplayNames: Record<string, string> = {};
+if (data.Attributes) {
+   for (const attr of data.Attributes) {
       const label = attr.DisplayName?.UserLocalizedLabel?.Label;
       if (label) {
-        columnDisplayNames[attr.LogicalName] = label;
+      columnDisplayNames[attr.LogicalName] = label;
       }
-    }
-  }
+   }
+}
 
-  console.log(columnDisplayNames);
-  // Output: { "accountid": "Account", "name": "Account Name", ... }
-  return columnDisplayNames;
+console.log(columnDisplayNames);
+// Output: { "accountid": "Account", "name": "Account Name", ... }
+return columnDisplayNames;
 }
 ```
 
-2. **Identify required fields for form validation**
+### Identify required fields for form validation
 
 Find attributes that are required on forms to build client‑side validation rules based on metadata instead of hard‑coding.
 
 ```typescript
 async function getRequiredFields() {
-  const { data } = await AccountsService.getMetadata({
-    schema: { columns: 'all' }
-  });
-  if (!data.Attributes) return [];
+const { data } = await AccountsService.getMetadata({
+   schema: { columns: 'all' }
+});
+if (!data.Attributes) return [];
 
-  // Filter attributes that are required for forms
-  const requiredColumns = data.Attributes
-    .filter(attr => attr.IsRequiredForForm)
-    .map(attr => ({
+// Filter attributes that are required for forms
+const requiredColumns = data.Attributes
+   .filter(attr => attr.IsRequiredForForm)
+   .map(attr => ({
       logicalName: attr.LogicalName,
       displayName: attr.DisplayName?.UserLocalizedLabel?.Label,
       attributeType: attr.AttributeTypeName?.Value
-    }));
+   }));
 
-  console.log('Required fields:', requiredColumns);
-  // Output: [
-  //   { logicalName: "name", displayName: "Account Name", attributeType: "StringType" },
-  //   { logicalName: "ownerid", displayName: "Owner", attributeType: "OwnerType" }
-  // ]
-  
-  return requiredColumns;
+console.log('Required fields:', requiredColumns);
+// Output: [
+//   { logicalName: "name", displayName: "Account Name", attributeType: "StringType" },
+//   { logicalName: "ownerid", displayName: "Owner", attributeType: "OwnerType" }
+// ]
+
+return requiredColumns;
 }
 ```
 
-3. **Map column types for client-side validation**
-   
+### Map column types for client-side validation
+
 Get attribute types to inform validation and UI controls. Choose the right UI control (e.g., date picker, money, choice) and validate values consistently.
 
 ```typescript
@@ -149,7 +158,8 @@ async function getColumnTypes() {
 }
 ```
 
-4. **Discover lookup relationships (many‑to‑one)**
+### Discover lookup relationships (many‑to‑one)
+
 Find which lookup fields point to other tables to dynamically build lookup UI and navigation based on relationships.
 
 ```typescript
@@ -192,10 +202,10 @@ async function getLookupRelationships() {
 
 ## Best practices
 
-1. Cache metadata – Metadata calls can be heavy; cache at app start or per session.
-2. Request only what you need – Prefer a column list over `"all"` for performance.
-3. Defensive access – Check for property existence before accessing nested values (e.g., `DisplayName?.UserLocalizedLabel?.Label`).
-4. Use TypeScript types – Rely on generated types from the Dataverse Web API for safer code.
+- Cache metadata – Metadata calls can be heavy; cache at app start or per session.
+- Request only what you need – Prefer a column list over `"all"` for performance.
+- Defensive access – Check for property existence before accessing nested values (e.g., `DisplayName?.UserLocalizedLabel?.Label`).
+- Use TypeScript types – Rely on generated types from the Dataverse Web API for safer code.
 
 ## Options reference (quick view)
 
@@ -203,12 +213,6 @@ async function getLookupRelationships() {
 - `schema.columns` — `"all"` or `["name", "telephone1", ...]`. Response includes Attributes (type `AttributeMetadata`).
 - `schema.oneToMany` — Includes `OneToManyRelationships` (type `OneToManyRelationshipMetadata`).
 - `schema.manyToOne` — Includes `ManyToOneRelationships` (type `OneToManyRelationshipMetadata`).
-- `schema.manyToMany` — Includes `ManyToManyRelationships` (type `ManyToManyRelationshipMetadata`). 
+- `schema.manyToMany` — Includes `ManyToManyRelationships` (type `ManyToManyRelationshipMetadata`).
 
 For full schema and property lists, see the [Dataverse Web API documentation](/power-apps/developer/data-platform/webapi/query-metadata-web-api).
-
-
-
-
-
-
