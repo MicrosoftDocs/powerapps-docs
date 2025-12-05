@@ -43,7 +43,7 @@ interface GetEntityMetadataOptions<Account> {
 
 - `metadata`: array of entity-level properties to fetch. See [EntityMetadata](/power-apps/developer/data-platform/webapi/reference/entitymetadata?view=dataverse-latest) for a full list of queryable table properties.
 - `schema`:
-    - `columns`:  Retrieve column (attribute) metadata - "`all`" or an array of column logical names.
+    - `columns`:  Retrieve column (attribute) metadata - `"all"` or an array of column logical names.
     - `oneToMany`, `manyToOne`, `manyToMany`: booleans to include relationship metadata
       
 The response includes arrays named `Attributes` of type [AttributeMetadata](/power-apps/developer/data-platform/webapi/reference/attributemetadata?view=dataverse-latest), `OneToManyRelationships` of type [OneToManyRelationshipMetadata](/power-apps/developer/data-platform/webapi/reference/onetomanyrelationshipmetadata?view=dataverse-latest), `ManyToOneRelationships` of type [OneToManyRelationshipMetadata](/power-apps/developer/data-platform/webapi/reference/onetomanyrelationshipmetadata?view=dataverse-latest), and `ManyToManyRelationships` of type [ManyToManyRelationshipMetadata](/power-apps/developer/data-platform/webapi/reference/manytomanyrelationshipmetadata?view=dataverse-latest) when requested.
@@ -193,14 +193,14 @@ async function getLookupRelationships() {
 ## Best practices
 
 1. Cache metadata – Metadata calls can be heavy; cache at app start or per session.
-2. Request only what you need – Prefer a column list over "`all`" for performance.
+2. Request only what you need – Prefer a column list over `"all"` for performance.
 3. Defensive access – Check for property existence before accessing nested values (e.g., `DisplayName?.UserLocalizedLabel?.Label`).
 4. Use TypeScript types – Rely on generated types from the Dataverse Web API for safer code.
 
 ## Options reference (quick view)
 
 - `metadata` — Entity‑level properties (see EntityMetadata).
-- `schema.columns` — "`all`" or ["`name`", "`telephone1`", ...]. Response includes Attributes (type `AttributeMetadata`).
+- `schema.columns` — `"all"` or `["name", "telephone1", ...]`. Response includes Attributes (type `AttributeMetadata`).
 - `schema.oneToMany` — Includes `OneToManyRelationships` (type `OneToManyRelationshipMetadata`).
 - `schema.manyToOne` — Includes `ManyToOneRelationships` (type `OneToManyRelationshipMetadata`).
 - `schema.manyToMany` — Includes `ManyToManyRelationships` (type `ManyToManyRelationshipMetadata`). 
