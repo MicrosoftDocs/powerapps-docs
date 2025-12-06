@@ -12,11 +12,13 @@ contributors:
 
 # How to: Get metadata for Dataverse tables (preview)
 
+The table metadata contains customizations applied to tables in Dataverse. Metadata also contains localized labels when your organization supports multiple languages. Leveraging metadata in your code app means your app can adapt to customization or localization changes without having to change your code.
+
 Use the `getMetadata` function to retrieve Dataverse table (entity) metadata at runtime. This function lightly wraps the capabilities described in [Query table definitions using the Web API](../../data-platform/webapi/query-metadata-web-api.md) and provides strongly-typed access to entity definitions, attributes, and relationships.
 
 ## getMetadata signature
 
-The getMetadata function require an instance of `GetEntityMetadataOptions` to define the data to return.
+The `getMetadata` function require an instance of [`GetEntityMetadataOptions`](#getentitymetadataoptions-parameter) to define the data to return.
 
 ```typescript
 AccountsService.getMetadata(
@@ -30,13 +32,13 @@ AccountsService.getMetadata(
 
 ## GetEntityMetadataOptions parameter
 
-Use the `options` parameter to select the metadata you want to retrieve:
+Set the [getMetadata](#getmetadata-signature) `options` parameter to select the metadata you want to retrieve:
 
 ```typescript
 interface GetEntityMetadataOptions<Account> {
-  metadata?: Array<"Privileges" | "DisplayName" | "IsCustomizable" | ...>;
+  metadata?: Array<String>;
   schema?: {
-    columns?: "all" | Array<"name" | "telephone1" | "createdon" | ...>;
+    columns?: "all" | Array<String>;
     oneToMany?: boolean;
     manyToOne?: boolean;
     manyToMany?: boolean;
@@ -44,11 +46,15 @@ interface GetEntityMetadataOptions<Account> {
 }
 ```
 
-- `metadata`: array of entity-level properties to fetch. [EntityMetadata](xref:Microsoft.Dynamics.CRM.EntityMetadata) for a full list of queryable table properties.
+- `metadata`: Array of entity-level properties to fetch such as `["Privileges","DisplayName","IsCustomizable"]`. See [EntityMetadata properties](xref:Microsoft.Dynamics.CRM.EntityMetadata) for a full list of queryable table properties.
 - `schema`:
 
-    - `columns`:  Retrieve column (attribute) metadata - `"all"` or an array of column logical names.
-    - `oneToMany`, `manyToOne`, `manyToMany`: booleans to include relationship metadata
+    - `columns`:  Retrieve column (attribute) metadata - `"all"` or an array of column logical names such as `["name","telephone1","createdon"]`. See [AttributeMetadata properties](xref:Microsoft.Dynamics.CRM.AttributeMetadata ) for a full list of queryable attribute properties.
+
+      > [!NOTE]
+      > You can't specify properties that aren't defined by `AttributeMetadata`. Properties defined by [derived types](/power-apps/developer/data-platform/webapi/reference/attributemetadata#derived-types) are not available. This means you can't access properties such as choice (picklist) column options because they are defined by a derived type.
+
+    - `oneToMany`, `manyToOne`, `manyToMany`: Set boolean values to include relationship metadata
 
       
 The response includes arrays named `Attributes` of type [AttributeMetadata](xref:Microsoft.Dynamics.CRM.AttributeMetadata), `OneToManyRelationships` of type [OneToManyRelationshipMetadata](xref:Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata), `ManyToOneRelationships` of type [OneToManyRelationshipMetadata](xref:Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata), and `ManyToManyRelationships` of type [ManyToManyRelationshipMetadata](xref:Microsoft.Dynamics.CRM.ManyToManyRelationshipMetadata) when requested.
@@ -58,10 +64,9 @@ The response includes arrays named `Attributes` of type [AttributeMetadata](xref
 The snippets below show common ways to retrieve and use table metadata.
 
 
-
 ### Get user-localized labels for all columns
 
-Retrive display names in the user's language. Use these labels to drive form labels, table headers, and accessibility text.
+Retrieve display names in the user's language. Use these labels to drive form labels, table headers, and accessibility text.
 
 ```typescript
 async function getColumnDisplayNames() {
@@ -118,7 +123,7 @@ return requiredColumns;
 
 ### Map column types for client-side validation
 
-Get attribute types to inform validation and UI controls. Choose the right UI control (e.g., date picker, money, choice) and validate values consistently.
+Get attribute types to inform validation and UI controls. Choose the right UI control (for example: date picker, money, choice) and validate values consistently.
 
 ```typescript
 async function getColumnTypes() {
@@ -202,17 +207,7 @@ async function getLookupRelationships() {
 
 ## Best practices
 
-- Cache metadata – Metadata calls can be heavy; cache at app start or per session.
-- Request only what you need – Prefer a column list over `"all"` for performance.
-- Defensive access – Check for property existence before accessing nested values (e.g., `DisplayName?.UserLocalizedLabel?.Label`).
-- Use TypeScript types – Rely on generated types from the Dataverse Web API for safer code.
-
-## Options reference (quick view)
-
-- `metadata` — Entity‑level properties (see EntityMetadata).
-- `schema.columns` — `"all"` or `["name", "telephone1", ...]`. Response includes Attributes (type `AttributeMetadata`).
-- `schema.oneToMany` — Includes `OneToManyRelationships` (type `OneToManyRelationshipMetadata`).
-- `schema.manyToOne` — Includes `ManyToOneRelationships` (type `OneToManyRelationshipMetadata`).
-- `schema.manyToMany` — Includes `ManyToManyRelationships` (type `ManyToManyRelationshipMetadata`).
-
-For full schema and property lists, see the [Dataverse Web API documentation](/power-apps/developer/data-platform/webapi/query-metadata-web-api).
+- **Cache metadata** : Metadata calls can be heavy. Cache at app start or per session.
+- **Request only what you need**  :  Prefer a column list over `"all"` for performance.
+- **Defensive access**  :  Check for property existence before accessing nested values (For example: `DisplayName?.UserLocalizedLabel?.Label`).
+- **Use TypeScript types**  :  Rely on generated types from the Dataverse Web API for safer code.
