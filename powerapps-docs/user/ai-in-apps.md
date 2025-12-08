@@ -1,7 +1,7 @@
 ---
 title: AI features overview
 description: Learn how to incorporate AI into your model-driven apps
-ms.date: 06/30/2025
+ms.date: 12/08/2025
 ms.reviewer: smurkute
 ms.topic: "how-to"
 author: anuitz
