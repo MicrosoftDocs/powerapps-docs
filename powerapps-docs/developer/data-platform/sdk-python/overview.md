@@ -3,7 +3,7 @@ title: "Dataverse SDK for Python overview (preview)"
 description: "Use Dataverse to store and access data for use in data science and analyses."
 ms.author: paulliew
 author: paulliew
-ms.date: 12/02/2025
+ms.date: 12/08/2025
 ms.reviewer: phecke
 ms.topic: overview
 contributors:
