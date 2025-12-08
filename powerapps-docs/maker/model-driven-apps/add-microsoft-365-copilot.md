@@ -1,5 +1,5 @@
 ---
-title: Add Microsoft 365 Copilot chat for app users in model-driven apps
+title: Add Microsoft 365 Copilot chat for app users in model-driven apps (preview)
 description: Learn how to enable Microsoft 365 Copilot chat in model-driven apps to provide AI-powered insights and enhance productivity for your app users.
 author: Mattp123
 ms.service: powerapps
@@ -18,61 +18,77 @@ contributors:
 ms.collection: bap-ai-copilot
 ---
 
-# Add Microsoft 365 Copilot for app users in model-driven apps
+# Add Microsoft 365 Copilot for app users in model-driven apps (preview)
 
-Microsoft 365 Copilot chat for model-driven apps is a next-generation AI assistant that helps app users get insights about the data in their apps through conversation in natural language. Microsoft 365 Copilot chat helps app users boost their productivity through AI-powered insights and intuitive app navigation.
+[This article is prerelease documentation and is subject to change.]
+
+Microsoft 365 Copilot chat makes it easier for users to work with model-driven apps by offering AI-powered insights through natural language conversations. With this feature, users can quickly find information, navigate apps more easily, and get help to boost their productivity.
+App makers can enable Microsoft 365 Copilot chat to give users access to conversational AI that understands app data and provides helpful, contextual answers. Users can ask questions about their Microsoft Dataverse table data in plain language and receive immediate, relevant responses.
+
+This article shows you how to enable and configure Microsoft 365 Copilot chat for your model-driven apps, both at the environment level and for individual apps.
+
+When enabled, users can open Microsoft 365 Copilot chat by clicking the Copilot button near the upper-right corner of the page. For more information, see [Use Microsoft 365 Copilot chat in model-driven apps](../../user/use-microsoft-365-copilot-model-driven-apps.md).
+
+
+:::image type="content" source="media/m365-copilot-button.png" alt-text="Screenshot of the Microsoft 365 Copilot chat pane in a model-driven app.":::
 
 > [!IMPORTANT]
 >
 > This feature is in preview.  
 >
-> - You must have or create an [Early release cycle environment](/power-platform/admin/early-release) to use this feature.
 > - Preview features aren't meant for production use and might have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 > - For more information, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
-> - Microsoft 365 Copilot Chat will eventually replace [Copilot chat in model-driven apps](../../user/use-copilot-model-driven-apps.md).  For a period of time, the transition from one to the other is at the discretion of the app maker. App makers can control whether an end user has one, the other, or both available to them.
 
-When enabled, app users can access Microsoft 365 Copilot chat through the Copilot button near the upper-right corner of the page.
 
-:::image type="content" source="media/m365-copilot-button.png" alt-text="Screenshot of the Microsoft 365 Copilot chat pane in a model-driven app.":::
+## Prerequisites
 
-If Microsoft 365 Copilot chat and [Use Copilot chat in model-driven apps](../../user/use-copilot-model-driven-apps.md) are both enabled, users can try both. The **Chat** option represents Microsoft 365 Copilot and the **App Skills** option represents [Copilot chat in model-driven apps](../../user/use-copilot-model-driven-apps.md).  These terms align with Microsoft 365 apps for consistency.
+- You must have or create an [Early release cycle environment](/power-platform/admin/early-release) to use this feature.
 
-:::image type="content" source="media/copilot-chat-switcher.png" alt-text="Screenshot that shows the Copilot split button showcasing Chat and App Skills options on a page.":::
+> [!NOTE]
+>
+> - Microsoft 365 Copilot Chat is gradually replacing [Copilot chat in model-driven apps](../../user/use-copilot-model-driven-apps.md). During this transition, app makers can decide which chat experience is available to users. Makers can enable Microsoft 365 Copilot Chat, Copilot chat, or both, depending on their needs. 
+> - If both Microsoft 365 Copilot Chat and [Copilot chat in model-driven apps](../../user/use-copilot-model-driven-apps.md) are enabled, users can access and try each option. The **Chat** button opens Microsoft 365 Copilot Chat, and the **App Skills** button opens Copilot chat in model-driven apps. :::image type="content" source="media/copilot-chat-switcher.png" alt-text="Screenshot that shows the Copilot split button showcasing Chat and App Skills options on a page.":::
 
-Microsoft 365 Copilot chat in model-driven apps can answer questions about the Microsoft Dataverse table data in the environment. For more information, see [Use Microsoft 365 Copilot chat in model-driven apps](../../user/use-microsoft-365-copilot-model-driven-apps.md).
 
 ## Enable Microsoft 365 Copilot for model-driven apps in your environment
 
-To manage Microsoft 365 Copilot for model-driven apps, first understand how to [Manage Microsoft 365 Copilot Chat](/copilot/manage).
+To manage Microsoft 365 Copilot Chat for model-driven apps, start by learning [how to manage Microsoft 365 Copilot Chat](/copilot/manage).
 
-Power Platform administrators configure the Microsoft 365 Copilot chat feature in model-driven apps for users in their environments in the [Power Platform admin center](https://admin.powerplatform.microsoft.com).
+Power Platform administrators can set up and configure the Microsoft 365 Copilot chat feature for users in their environment. 
 
-1. Sign in to the Power Platform admin center at [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com).
+1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
 
-1. In the navigation pane, go to **Copilot** > **Settings**. In the **Power Apps** section, expand **Chat Agent** and select **Microsoft 365 Copilot Chat**.
-  :::image type="content" source="media/m365-copilot-ppac-setting.png" alt-text="Screenshot that shows how to find the Microsoft 365 Copilot in Power Platform Admin center.":::
+1. In the navigation pane, go to **Copilot** > **Settings**. Under **Power Apps**, expand **Chat Agent** and choose **M365 Copilot Chat**.
 
-1. Select either an **Environment Group** or an **Environment**, then select **Edit Setting**.
-  :::image type="content" source="media/m365-copilot-ppac-group-selection.png" alt-text="Screenshot that shows how to edit the Copilot setting in Power Platform Admin center for an Environment Group or Environment.":::
+:::image type="content" source="media/microsoft-365-chat-model-driven-apps/enable-chat-in-admin-center.png" alt-text="Screenshot of admin setting to enable Microsoft 365 Copilot Chat for model-driven apps":::
 
-1. Adjust the setting to reflect your preference, then select the **Save** button.
-  :::image type="content" source="media/m365-copilot-ppac-save.png" alt-text="Screenshot that shows how to Save the Microsoft 365 Copilot setting preference.":::
+1. Select an environment group or an environment name, and then select **Edit Setting**.
+
+1. Select **On** and then select **Save** to enable Microsoft 365 Copilot chat for your model-driven apps in the selected environment group or environment.
+
 
 ## Enable Microsoft 365 Copilot chat for a model-driven app
 
-Makers can enable or disable Microsoft 365 Copilot chat for a specific model-driven app. In app designer, open the model-driven app for **Edit**, then select **Settings** on the command bar. Select **Upcoming** on the **Settings** screen, set **Microsoft 365 Copilot control** to **Default**, **On**, or **Off**, then select **Save**.
+Makers can enable or disable Microsoft 365 Copilot chat for a specific model-driven app. 
 
-:::image type="content" source="media/m365-copoliot-app-setting.png" alt-text="Screenshot that shows how to turn Microsoft 365 Copilot chat on or off in a model-driven app.":::
+1. Sign in to [Power Apps](https://make.powerapps.com).
+1. Open a model-driven app for editing.
+1. Select **Settings** in the command bar.
+1. Select **Upcoming** on the Settings screen.
+1. Set **M365 Copilot in model-driven apps** to  **On**.
 
-**Save** and **Publish** the model-driven app for the changes to take effect.
+    :::image type="content" source="media/microsoft-365-chat-model-driven-apps/microsoft-365-copilot-app-setting.png" alt-text="Screenshot that shows how to turn Microsoft 365 Copilot chat on or off in a model-driven app.":::
+
+1. Select **Save** and then publish the app for the changes to take effect.
 
 ### Known limitations
 
-1. **Microsoft 365 Copilot for model-driven apps** enables users to retrieve information from Dataverse through read-only operations. This capability means that users can only view data that matches their queries and can't make any changes to the data unless they customize with an agent.
-1. Create, update, or other generic actions aren't supported unless you customize with an agent.
-1. **Microsoft 365 Copilot model-driven apps** isn't supported with the Power Apps mobile app.
+1. Microsoft 365 Copilot for model-driven apps allows users to view Dataverse data using read-only operations. This capability means that users can only view data that matches their queries and can't make any changes. To make changes, customization with an agent is required.
+1. Creating, updating, or performing other actions isn't supported unless you customize with an agent.
+1. Microsoft 365 Copilot for model-driven apps isn't available in the Power Apps mobile app.
+
 
 ## Related information
 
-- [Customize Microsoft 365 Copilot chat in model-driven apps](../model-driven-apps/Microsoft 365-customize-copilot-chat.md)
-- [Use Microsoft 365 Copilot chat in model-driven apps](../model-driven-apps/use-Microsoft 365-copilot-model-driven-apps.md)
+- [Customize Microsoft 365 Copilot chat in model-driven apps](../model-driven-apps/microsoft-365-customize-copilot-chat.md)
+- [Use Microsoft 365 Copilot chat in model-driven apps](../../user/use-microsoft-365-copilot-model-driven-apps.md)
