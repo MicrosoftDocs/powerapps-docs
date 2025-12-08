@@ -92,5 +92,5 @@ Makers can enable or disable Microsoft 365 Copilot chat for a specific model-dri
 
 ## Related information
 
-- [Customize Microsoft 365 Copilot chat in model-driven apps](../model-driven-apps/microsoft-365-customize-copilot-chat.md)
+- [Customize Microsoft 365 Copilot chat with an agent (preview)](customize-microsoft-365-copilot-chat.md)
 - [Use Microsoft 365 Copilot chat in model-driven apps](../../user/use-microsoft-365-copilot-model-driven-apps.md)
