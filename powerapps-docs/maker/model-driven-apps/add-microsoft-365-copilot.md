@@ -27,10 +27,12 @@ App makers can enable Microsoft 365 Copilot chat to give users access to convers
 
 This article shows you how to enable and configure Microsoft 365 Copilot chat for your model-driven apps, both at the environment level and for individual apps.
 
-When enabled, users can open Microsoft 365 Copilot chat by clicking the Copilot button near the upper-right corner of the page. For more information, see [Use Microsoft 365 Copilot chat in model-driven apps](../../user/use-microsoft-365-copilot-model-driven-apps.md).
+When enabled, users can open Microsoft 365 Copilot chat in their model-driven app by selecting **Copilot** > **Chat** on the upper-right corner.
 
 
-:::image type="content" source="media/m365-copilot-button.png" alt-text="Screenshot of the Microsoft 365 Copilot chat pane in a model-driven app.":::
+:::image type="content" source="media/microsoft-365-chat-model-driven-apps/copilot-chat-in-model-driven-apps.png" alt-text="Screenshot of Microsoft 365 Copilot chat in a model-driven app":::
+
+For more information, see [Use Microsoft 365 Copilot chat in model-driven apps](../../user/use-microsoft-365-copilot-model-driven-apps.md).
 
 > [!IMPORTANT]
 >
@@ -47,7 +49,7 @@ When enabled, users can open Microsoft 365 Copilot chat by clicking the Copilot 
 > [!NOTE]
 >
 > - Microsoft 365 Copilot Chat is gradually replacing [Copilot chat in model-driven apps](../../user/use-copilot-model-driven-apps.md). During this transition, app makers can decide which chat experience is available to users. Makers can enable Microsoft 365 Copilot Chat, Copilot chat, or both, depending on their needs. 
-> - If both Microsoft 365 Copilot Chat and [Copilot chat in model-driven apps](../../user/use-copilot-model-driven-apps.md) are enabled, users can access and try each option. The **Chat** button opens Microsoft 365 Copilot Chat, and the **App Skills** button opens Copilot chat in model-driven apps. :::image type="content" source="media/copilot-chat-switcher.png" alt-text="Screenshot that shows the Copilot split button showcasing Chat and App Skills options on a page.":::
+> - If both Microsoft 365 Copilot Chat and [Copilot chat in model-driven apps](../../user/use-copilot-model-driven-apps.md) are enabled, users can access and try each option. The **Chat** button opens Microsoft 365 Copilot Chat, and the **App Skills** button opens Copilot chat in model-driven apps. :::image type="content" source="media/microsoft-365-chat-model-driven-apps/both-chat-experiences.png" alt-text="Screenshot show both chat experiences in a model-driven app":::
 
 
 ## Enable Microsoft 365 Copilot for model-driven apps in your environment
