@@ -71,13 +71,13 @@ Power Platform administrators can set up and configure the Microsoft 365 Copilot
 
 ## Enable Microsoft 365 Copilot chat for a model-driven app
 
-Makers can enable or disable Microsoft 365 Copilot chat for a specific model-driven app. 
+Makers can enable or disable Microsoft 365 Copilot chat for a specific model-driven app.
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 1. Open a model-driven app for editing.
 1. Select **Settings** in the command bar.
 1. Select **Upcoming** on the Settings screen.
-1. Set **M365 Copilot in model-driven apps** to  **On**.
+1. To enable Microsoft 365 Copilot chat set **M365 Copilot in model-driven apps** to  **On**. Or, to set it to **Off** to disable it.
 
     :::image type="content" source="media/microsoft-365-chat-model-driven-apps/microsoft-365-copilot-app-setting.png" alt-text="Screenshot that shows how to turn Microsoft 365 Copilot chat on or off in a model-driven app.":::
 
