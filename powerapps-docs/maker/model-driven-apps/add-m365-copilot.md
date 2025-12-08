@@ -26,16 +26,16 @@ M365 Copilot chat for model-driven apps is a next-generation AI assistant that h
 >
 > This feature is in preview.  
 >
-> - You must have or create an [Early release cycle environment](https://learn.microsoft.com/power-platform/admin/early-release) to use this feature.
+> - You must have or create an [Early release cycle environment](/power-platform/admin/early-release) to use this feature.
 > - Preview features aren't meant for production use and might have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 > - For more information, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
-> - M365 Copilot Chat will eventually replace [Copilot chat in model-driven apps](use-copilot-model-driven-apps.md).  For a period of time, the transition from one to the other will be at the discretion of the app maker. App makers will be able to control whether an end user has one, the other, or both available to them.
+> - M365 Copilot Chat will eventually replace [Copilot chat in model-driven apps](../../user/use-copilot-model-driven-apps.md).  For a period of time, the transition from one to the other will be at the discretion of the app maker. App makers will be able to control whether an end user has one, the other, or both available to them.
 
 When enabled, M365 Copilot chat can be accessed through the Copilot button near the upper-right corner of the page.
 
 :::image type="content" source="media/m365-copilot-button.png" alt-text="Screenshot of the M365 Copilot chat pane in a model-driven app.":::
 
-If M365 Copilot chat and [Copilot chat in model-driven apps](use-copilot-model-driven-apps.md) are both enabled, users will have the option to try both. The **Chat** option represents M365 Copilot and the **App Skills** option represents [Copilot chat in model-driven apps](use-copilot-model-driven-apps.md).  These terms are used to align with M365 apps for consistency.
+If M365 Copilot chat and [Use Copilot chat in model-driven apps](../../user/use-copilot-model-driven-apps.md) are both enabled, users will have the option to try both. The **Chat** option represents M365 Copilot and the **App Skills** option represents [Copilot chat in model-driven apps](../../user/use-copilot-model-driven-apps.md).  These terms are used to align with M365 apps for consistency.
 
 :::image type="content" source="media/copilot-chat-switcher.png" alt-text="Screenshot that shows the Copilot split button showcasing Chat and App Skills options on a page.":::
 
@@ -43,7 +43,7 @@ M365 Copilot chat in model-driven apps can answer questions about the Microsoft 
 
 ## Enable M365 Copilot for model-driven apps in your environment
 
-Management of M365 Copilot for model-driven apps starts with an understanding of how to [Manage Microsoft 365 Copilot Chat](https://learn.microsoft.com/copilot/manage).
+Management of M365 Copilot for model-driven apps starts with an understanding of how to [Manage Microsoft 365 Copilot Chat](/copilot/manage).
 
 Additionally, Power Platform administrators configure the M365 Copilot chat feature in model-driven apps for users in their environments in the [Power Platform admin center](https://admin.powerplatform.microsoft.com).
 
