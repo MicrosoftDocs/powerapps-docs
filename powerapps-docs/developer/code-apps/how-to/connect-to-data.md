@@ -24,7 +24,7 @@ Use the following steps:
 1. [Update the app to call connections](#update-the-app-to-call-connections)
 
 > [!NOTE]
-> Use these steps after you initialize the app with [pac code init](/power-platform/developer/cli/reference/code#pac-code-init). See the steps leading up to the [Initialize your code app](create-an-app-from-scratch.md#initialize-your-code-app) section in [How to: Create a code app from scratch](create-an-app-from-scratch.md).
+> Use these steps after you initialize the app with [pac code init](/power-platform/developer/cli/reference/code#pac-code-init). This is the third step in [how to create a code app from scratch](create-an-app-from-scratch.md)
 
 > [!IMPORTANT]
 > The following connectors are officially supported: SQL, SharePoint, Office 365 Users, Office 365 Groups, Azure Data Explorer, OneDrive for work or school, Power Apps for Makers, Microsoft Teams, MSN Weather, and Microsoft Translator V2. [Dataverse create, read, update, and delete operations](./connect-to-dataverse.md) are officially supported. Other connectors are expected to work but are untested.
