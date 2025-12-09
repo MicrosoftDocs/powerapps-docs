@@ -12,13 +12,13 @@ contributors:
 
 # How to: Get metadata for Dataverse tables (preview)
 
-The table metadata contains customizations applied to tables in Dataverse. Metadata also contains localized labels when your organization supports multiple languages. Leveraging metadata in your code app means your app can adapt to customization or localization changes without having to change your code.
+The table metadata contains customizations applied to tables in Dataverse. Metadata also contains localized labels when your organization supports multiple languages. Using metadata in your code app means your app can adapt to customization or localization changes without having to change your code.
 
-Use the `getMetadata` function to retrieve Dataverse table (entity) metadata at runtime. This function lightly wraps the capabilities described in [Query table definitions using the Web API](../../data-platform/webapi/query-metadata-web-api.md) and provides strongly-typed access to entity definitions, attributes, and relationships.
+Use the `getMetadata` function to retrieve Dataverse table (entity) metadata at runtime. This function lightly wraps the capabilities described in [Query table definitions using the Web API](../../data-platform/webapi/query-metadata-web-api.md) and provides strongly typed access to entity definitions, attributes, and relationships.
 
 ## getMetadata signature
 
-The `getMetadata` function require an instance of [`GetEntityMetadataOptions`](#getentitymetadataoptions-parameter) to define the data to return.
+The `getMetadata` function requires an instance of [`GetEntityMetadataOptions`](#getentitymetadataoptions-parameter) to define the data to return.
 
 ```typescript
 AccountsService.getMetadata(
@@ -52,7 +52,7 @@ interface GetEntityMetadataOptions {
     - `columns`:  Retrieve column (attribute) metadata - `"all"` or an array of column logical names such as `["name","telephone1","createdon"]`. See [AttributeMetadata properties](xref:Microsoft.Dynamics.CRM.AttributeMetadata ) for a full list of queryable attribute properties.
 
       > [!NOTE]
-      > You can't specify properties that aren't defined by `AttributeMetadata`. Properties defined by [derived types](/power-apps/developer/data-platform/webapi/reference/attributemetadata#derived-types) are not available. This means you can't access properties such as choice (picklist) column options because they are defined by a derived type.
+      > You can't specify properties that aren't included in `AttributeMetadata`. Properties defined by [derived types](/power-apps/developer/data-platform/webapi/reference/attributemetadata#derived-types) aren't available. This means you can't access properties such as choice (picklist) column options because they're defined by a derived type.
 
     - `oneToMany`, `manyToOne`, `manyToMany`: Set boolean values to include relationship metadata
 
@@ -61,7 +61,7 @@ The response includes arrays named `Attributes` of type [AttributeMetadata](xref
 
 ## Examples
 
-The snippets below show common ways to retrieve and use table metadata.
+The following examples show common ways to retrieve and use table metadata.
 
 
 ### Get user-localized labels for all columns
