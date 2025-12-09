@@ -29,6 +29,8 @@ items:
             href: how-to/analyze-data-request-response.md
           - name: Get context data
             href: how-to/retrieve-context.md
+          - name: Get Dataverse tables metadata
+            href: how-to/get-table-metadata.md
           - name: Application lifecycle management (ALM)
             href: how-to/alm.md
       - name: Troubleshoot
