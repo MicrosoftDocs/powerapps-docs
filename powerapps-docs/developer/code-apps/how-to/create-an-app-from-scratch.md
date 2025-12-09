@@ -3,7 +3,7 @@ title: "How to: Create a code app from scratch (preview)"
 description: "Learn how to create a code app from scratch"
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 11/19/2025
+ms.date: 12/9/2025
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
@@ -47,20 +47,19 @@ npm install
 pac code init --displayname "App From Scratch"
 ```
    
-5. Enter the following to test your code app locally. Then, open the URL provided by the Power SDK Server:
+5. Enter the following to test your code app locally:
 
 ```shell 
 npm run dev 
-``` 
+```
+  Then, open the URL labelled **Local Play**.
 
    > [!IMPORTANT]
    > Open the URL in the same browser profile as your Power Platform tenant.
 
-##TODO - add image here
-
 You should see the app open similar to:
 
-##TODO - add image here
+:::image type="content" source="media/sql-testapp.png" alt-text="Power SDK server page showing test app URL and status":::
 
 ### Related information
 
