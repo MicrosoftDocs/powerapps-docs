@@ -35,7 +35,7 @@ AccountsService.getMetadata(
 Set the [getMetadata](#getmetadata-signature) `options` parameter to select the metadata you want to retrieve:
 
 ```typescript
-interface GetEntityMetadataOptions<Account> {
+interface GetEntityMetadataOptions {
   metadata?: Array<String>;
   schema?: {
     columns?: "all" | Array<String>;
@@ -136,7 +136,7 @@ async function getColumnTypes() {
   // Map attributes to their types for validation
   const columnTypes = data.Attributes.map(attr => ({
     logicalName: attr.LogicalName,
-    attributeType: attr.AttributeType,
+    attributeType: attr.AttributeTypeName?.Value,
   }));
 
   console.log('Column types:', columnTypes);
