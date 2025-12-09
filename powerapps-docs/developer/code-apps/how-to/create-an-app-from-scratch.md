@@ -59,7 +59,7 @@ npm run dev
 
 You should see the app open similar to:
 
-:::image type="content" source="media/sql-testapp.png" alt-text="Power SDK server page showing test app URL and status":::
+:::image type="content" source="media/npm-run-dev-result.png" alt-text="See the test app playing locally in the browser":::
 
 ### Related information
 
