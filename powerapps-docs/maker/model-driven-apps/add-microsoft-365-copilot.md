@@ -43,7 +43,7 @@ When enabled, users can open Microsoft 365 Copilot chat in their model-driven ap
 
 ## Prerequisites
 
-Crate need to have access to an [early release cycle environment](/power-platform/admin/early-release) to use this feature.
+You must have access to an [early release cycle environment](/power-platform/admin/early-release) to use this feature.
 
 
 ## Enable Microsoft 365 Copilot for your environment
