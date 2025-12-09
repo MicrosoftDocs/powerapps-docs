@@ -87,9 +87,7 @@ These options combine as follows:
 
 ## Locating the CLI Config Directory and Settings File
 
-The settings file is located at *<home_directory>/.powerapps-cli/userSettings.json*, where home_directory looks like `C:\Users\<username>`.
-
-So the settings file is present at `C:\Users\<username>\.powerapps-cli\userSettings.json`
+The settings file is located at `C:\Users\<username>\.powerapps-cli\userSettings.json`.
 
 ## Piping Telemetry to a File
 
