@@ -132,7 +132,7 @@ Adding the data sources to the app will automatically generate a typed TypeScrip
    From a command line, run the following. Use the API name and connection ID collected previously.
 
    ```powershell
-   pac code add-data-source -a <apiId> -c <connectionId> -d <datasourceName> -sp <storedProcedureName> 
+   pac code add-data-source -a <apiId> -c <connectionId> -d <dataSourceName> -sp <storedProcedureName> 
    ```
 
    For example:
@@ -150,7 +150,7 @@ Adding the data sources to the app will automatically generate a typed TypeScrip
    From a command line, run the following. Use the API name and connection ID collected previously.
 
    ```powershell
-   pac code delete-data-source -a <apiName> -ds <datasourceName> 
+   pac code delete-data-source -a <apiName> -ds <dataSourceName> 
    ```
 
    For example:
