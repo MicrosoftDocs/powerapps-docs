@@ -38,5 +38,5 @@ The Microsoft 365 Copilot [Agents Overview](/microsoft-365-copilot/extensibility
 
 ## Related information
 
-- [Add Microsoft 365 Copilot chat to model-driven apps](../model-driven-apps/add-microsoft-365-copilot.md)
-- [Use Microsoft 365 Copilot chat in model-driven apps](../model-driven-apps/use-microsoft-365-copilot-model-driven-apps.md)
+- [Add Microsoft 365 Copilot for app users in model-driven apps (preview)](add-microsoft-365-copilot.md)
+- [Use Microsoft 365 Copilot chat in model-driven apps](../../user/use-microsoft-365-copilot-model-driven-apps.md)
