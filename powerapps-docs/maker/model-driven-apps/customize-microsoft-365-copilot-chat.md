@@ -44,7 +44,7 @@ You can customize agents in several ways to fit your organization's needs.
  - There's also guidance on how to [Choose between Microsoft 365 Copilot and Copilot Studio to build your agent](/microsoft-365-copilot/extensibility/copilot-studio-experience).
 
 > [!NOTE]
-> When you explicitly select an agent in Microsoft 365 Copilot chat in model-driven apps, the agent no longer answers questions about the Dataverse table data in the app unless you explicitly configure your agent to do so. However, the agent uses information from the chat history. To get the side chat to answer questions about the Dataverse table data in the app again, you need to remove the explicit agent selection.
+> When you select an agent in Microsoft 365 Copilot chat for a model-driven app, the agent doesn't answer Dataverse data questions unless you configure it to do so. It uses information from your chat history. To allow Dataverse data questions, remove the selected agent.
 
 ## Related information
 
