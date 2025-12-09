@@ -62,7 +62,7 @@ Power Platform administrators can set up and configure the Microsoft 365 Copilot
 
 1. In the navigation pane, go to **Copilot** > **Settings**. Under **Power Apps**, expand **Chat Agent** and choose **M365 Copilot Chat**.
 
-:::image type="content" source="media/microsoft-365-chat-model-driven-apps/enable-chat-in-admin-center.png" alt-text="Screenshot of admin setting to enable Microsoft 365 Copilot Chat for model-driven apps":::
+    :::image type="content" source="media/microsoft-365-chat-model-driven-apps/enable-chat-in-admin-center.png" alt-text="Screenshot of admin setting to enable Microsoft 365 Copilot Chat for model-driven apps":::
 
 1. Select an environment group or an environment name, then select **Edit Setting**.
 
