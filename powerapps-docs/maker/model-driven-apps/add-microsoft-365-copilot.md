@@ -82,7 +82,7 @@ Makers can enable or disable Microsoft 365 Copilot chat for a specific model-dri
 
  Microsoft 365 Copilot chat is gradually replacing [Copilot chat in model-driven apps](add-ai-copilot.md).
 
-During the transition period, makers may enable either one or both chat experiences. When both options are available, the **Copilot** dropdown menu shows the following options:
+During the transition period, makers can enable either one or both chat experiences. When both options are available, the **Copilot** dropdown menu shows the following options:
 
 - **Chat** button opens [Microsoft 365 Copilot chat](../../user/use-microsoft-365-copilot-model-driven-apps.md)
 - **App Skills** button opens [Copilot chat in model-driven apps](../../user/use-copilot-model-driven-apps.md).

@@ -28,11 +28,15 @@ Copilot chat for model-driven apps in Power Apps is a next-generation AI assista
 >
 > - Preview features aren't meant for production use and might have restricted functionality.
 > - For more information, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
-> - This feature available as a preview feature in Power Apps will be deprecated in the future. We recommend replacing with [Microsoft 365 Copilot chat in model-driven apps](../../user/use-microsoft-365-copilot-model-driven-apps.md) For a period of time, the transition from one to the other will be at the discretion of the app maker. App makers will be able to control whether an end user has one, the other, or both available to them.
-> - Starting January 20, 2026, newly created model-driven apps in environments that haven't been [enabled for Dynamics 365 apps](/power-platform/admin/create-environment?tabs=new#create-an-environment-with-a-database) will no longer have the ability to include this Copilot chat.
 > - You must allow data movement across regions for Generative AI features as a prerequisite for using Copilot in Power Apps. This step is especially important if your organization and your environment are in different regions. Learn more in [Turn on copilots and generative AI features](/power-platform/admin/geographical-availability-copilot#enable-data-movement-across-regions).
 > - This capability is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview).
 > - This capability might be subject to usage limits or capacity throttling.
+
+> [!NOTE]
+>
+> - Copilot chat in Power Apps is a preview feature that will be deprecated. We recommend switching to [Microsoft 365 Copilot chat](../../user/use-microsoft-365-copilot-model-driven-apps.md). During the transition period, makers can enable either one or both chat experiences.
+> - Starting January 20, 2026, new model-driven apps created in environments not [enabled for Dynamics 365 apps](/power-platform/admin/create-environment#create-an-environment-with-a-database) won't support Copilot chat.
+
 
 When enabled, Copilot chat can be accessed through the Copilot icon in the right navigation bar in a model-driven app. The Copilot chat pane can be opened or minimized as desired.
 
