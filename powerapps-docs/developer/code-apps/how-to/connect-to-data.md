@@ -132,7 +132,7 @@ Adding the data sources to the app will automatically generate a typed TypeScrip
    From a command line, run the following. Use the API name and connection ID collected previously.
 
    ```powershell
-   pac code add-data-source -a <apiId> -c <connectionId> -d <dataSourceName> -sp <storedProcedureName> 
+   pac code add-data-source -a <apiId> -c <connectionId> -d <data sourceName> -sp <storedProcedureName> 
    ```
 
    For example:
@@ -150,7 +150,7 @@ Adding the data sources to the app will automatically generate a typed TypeScrip
    From a command line, run the following. Use the API name and connection ID collected previously.
 
    ```powershell
-   pac code delete-data-source -a <apiName> -ds <dataSourceName> 
+   pac code delete-data-source -a <apiName> -ds <data sourceName> 
    ```
 
    For example:
@@ -163,6 +163,51 @@ Adding the data sources to the app will automatically generate a typed TypeScrip
 
    > [!IMPORTANT]
    > If the schema on a connection changes, there's no command to refresh the typed model and service files. Delete the data source and readd it instead.
+
+### Use connection references to add a data source
+
+> [!NOTE]
+> This section assumes a basic knowledge of Solutions in Power Apps and connection references, and assumes that you have already created a solution, and a connection reference in that solution for your data source. If you haven't, follow the steps outlined in the official documentation links below to create one.
+> 
+> For more information about solutions in Power Apps, refer to the official documentation: [Solutions in Power Apps](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/solutions-overview).
+> 
+> For more information on what connection references are and what makes them useful to your Power Apps, refer to the official documentation: [Using Connection References](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/create-connection-reference).
+>
+
+#### Get the solution ID
+- Sign in to [Power Apps](https://make.powerapps.com).
+- On the left pane, select Solutions. If the item isn’t in the side panel pane, select …More and then select the item you want.
+- Find the solution that contains the connection reference for your data source.
+- Select the solution to open it.
+- In the URL of the browser, you will see the solution ID at the end of the URL.
+Your URL will be of the form *https://make.powerapps.com/environments/environmentId/solutions/solutionId*
+- Copy the solution ID from the URL and save it for later use.
+
+#### Get the name of the connection reference to your data source
+
+There are two ways to get the connection reference to your data source:
+1. Using the Power Apps solution explorer to examine the connection references in a solution:
+   - Sign in to [Power Apps](https://make.powerapps.com).
+   - On the left pane, select Solutions. If the item isn’t in the side panel pane, select …More and then select the item you want.
+   - Find the solution that contains the connection reference for your data source.
+   - Select "Connection References" from the list of Objects in the left pane.
+2. Use the PAC CLI code command to list the connection references in a solution:
+   - Open a command prompt or terminal window.
+   - Run the following command to get the solution ID and name of the connection reference to your data source:
+    ```powershell
+    pac code list-connection-references -env <environmentURL> -s <solutionID>
+    ```
+   - The output will include the display name, logical name, and description of the connection references in the solution.
+
+
+#### Add the data source to your code app using the connection reference
+
+From a command line, run the following. Use the solution ID and connection reference logical name collected from previous steps.
+
+```powershell
+pac code add-data-source -a <apiName> -cr <connectionReferenceLogicalName> -s <solutionID>
+```
+
 
 ## Update the app to call connections
 
