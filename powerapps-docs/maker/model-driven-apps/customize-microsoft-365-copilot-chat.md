@@ -21,14 +21,16 @@ ai-usage: ai-assisted
 ---
 # Customize Microsoft 365 Copilot chat with an agent (preview)
 
-With Microsoft 365 Copilot chat in model-driven apps, users can easily select and interact with any available agent directly from the side pane.
+Microsoft 365 Copilot chat in model-driven apps enables users to interact with custom agents that extend Copilot's capabilities beyond standard functionality. By customizing agents, you can create tailored experiences that address your organization's specific business processes and data requirements.
+
+This article describes the different types of agents you can build and integrate with Microsoft 365 Copilot chat in model-driven apps. You'll learn about the capabilities and use cases for each agent type, helping you choose the right approach for your customization needs.
 
 > [!IMPORTANT]
 >
 > - This is a preview feature.
-> - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2216214), and are available before an official release so that customers can get early access and provide feedback.
+> - Preview features aren't meant for production use and might have restricted functionality. > - These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2216214), and are available before an official release so that customers can get early access and provide feedback.
 
-There are several ways to customize agents to fit your organization's needs.
+You can customize agents in several ways to fit your organization's needs.
 
 |Agent Type  |Description  |Common use cases  |
 |---------|---------|---------|
@@ -37,7 +39,7 @@ There are several ways to customize agents to fit your organization's needs.
 |Copilot Studio Agent     |    Built and managed in Microsoft Copilot Studio, enabling integration with Teams and Microsoft 365 for conversational experiences.     |    Interactive chatbots, team collaboration, and personalized support within Microsoft 365 apps.     |
 
 - The [Microsoft 365 Copilot Agents Overview](/microsoft-365-copilot/extensibility/agents-overview) documentation provides guidance on how to [choose what type of agent to build](/microsoft-365-copilot/extensibility/agents-overview#choose-what-type-of-agent-to-build).
- - You can create agents as  [Declarative Agents for Microsoft 365 Coiplot](/microsoft-365-copilot/extensibility/overview-declarative-agent) or as [Custom engine agents for Microsoft 365](/microsoft-365-copilot/extensibility/overview-custom-engine-agent).
+ - You can create agents as  [Declarative Agents for Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/overview-declarative-agent) or as [Custom engine agents for Microsoft 365](/microsoft-365-copilot/extensibility/overview-custom-engine-agent).
  - A popular Power Platform option is to use [Microsoft Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio), then [connect and configure an agent for Teams and Microsoft 365](/microsoft-copilot-studio/publication-add-bot-to-microsoft-teams) to make it available within Microsoft 365 Copilot Chat. 
  - There's also guidance on how to [Choose between Microsoft 365 Copilot and Copilot Studio to build your agent](/microsoft-365-copilot/extensibility/copilot-studio-experience).
 
