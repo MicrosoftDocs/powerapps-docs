@@ -27,8 +27,9 @@ This article describes the different types of agents you can build and integrate
 
 > [!IMPORTANT]
 >
-> - This is a preview feature.
-> - Preview features aren't meant for production use and might have restricted functionality. > - These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2216214), and are available before an official release so that customers can get early access and provide feedback.
+> - This feature is in preview.  
+> - Preview features aren't meant for production use and might have restricted functionality These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2189520), and are available before an official release so that customers can get early access and provide feedback.
+
 
 You can customize agents in several ways to fit your organization's needs.
 
