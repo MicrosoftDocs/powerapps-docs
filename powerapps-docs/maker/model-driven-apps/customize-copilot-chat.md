@@ -27,16 +27,22 @@ Customize Copilot chat to make it even more intelligent and relevant for your or
 
 > [!IMPORTANT]
 >
-> This feature is generally available in Dynamics 365 apps and is available as a preview feature in Power Apps.
->
-> - Preview features aren't meant for production use and might have restricted functionality.
-> - For more information, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
-> - This feature available as a preview feature in Power Apps will be deprecated in the future. We recommend replacing with [M365 Copilot Chat](use-m365-copilot-model-driven-apps.md). For a period of time, the transition from one to the other will be at the discretion of the app maker. App makers will be able to control whether an end user has one, the other, or both available to them.
-> - Starting January 20, 2026, newly created model-driven apps in environments that haven't been [enabled for Dynamics 365 apps](https://learn.microsoft.com/power-platform/admin/create-environment?tabs=new#create-an-environment-with-a-database) will no longer have the ability to include this Copilot chat.
+> - This feature is in preview.
+> - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2189520), and are available before an official release so that customers can get early access and provide feedback.
+> - Copilot Chat is generally available in Dynamics 365 apps, but remains a preview feature in Power Apps.
 
-You customize Copilot chat using [Microsoft Copilot Studio](/microsoft-copilot-studio/) and expand the capabilities to go beyond just handling [Microsoft Dataverse tables questions](/power-apps/user/use-copilot-model-driven-apps) and out-of-the-box skills. Before customizing, make sure [Copilot chat is enabled](/power-apps/maker/model-driven-apps/add-ai-copilot#enable-copilot-for-model-driven-apps-in-your-environment) for your environment.
+> [!NOTE]
+>
+> - Copilot chat in Power Apps is currently available as a preview and will be deprecated in the future. We recommend switching to [Microsoft 365 Copilot chat](../../user/use-microsoft-365-copilot-model-driven-apps.md). During the transition period, app makers can choose whether users have access to one, the other, or both options.
+> - Beginning January 20, 2026, newly created model-driven apps in environments not [enabled for Dynamics 365 apps](/power-platform/admin/create-environment#create-an-environment-with-a-database) will no longer support Copilot chat.
+
+
+
+You customize Copilot chat using [Microsoft Copilot Studio](/microsoft-copilot-studio/) and expand the capabilities to go beyond just handling [Microsoft Dataverse tables questions](../../user/use-copilot-model-driven-apps) and out-of-the-box skills. Before customizing, make sure [Copilot chat is enabled](add-ai-copilot.md#enable-copilot-for-model-driven-apps-in-your-environment) for your environment.
 
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=d0439343-f464-4ec7-a92d-b3c528430fb5]
+
+
 
 > [!NOTE]
 >
