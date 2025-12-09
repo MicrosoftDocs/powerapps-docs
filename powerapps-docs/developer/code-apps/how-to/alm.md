@@ -29,6 +29,11 @@ After deploying a code app to an environment with the [pac code push](/power-pla
 3. Select **Add existing** -> **App** -> **Code app** and select the app you want to add.
 4. Deploy your solution via pipelines. [Learn how to use pipelines in the Power Platform](/power-platform/alm/pipelines).
 
+## Using connection references in your code app
+
+Refer to the [Use connection references to add a data source](./connect-to-data.md#use-connection-references-to-add-a-data-source) section in the  How to: Connect your code app to data (preview) page for more information on using connection references in your code app.
+
+
 ## Limitations
 
 At this time, Code apps:
