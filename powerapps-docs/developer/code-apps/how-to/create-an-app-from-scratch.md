@@ -27,31 +27,34 @@ This article walks through how to set up a blank app from [Vite](https://vite.de
 
 1. Open a new terminal and enter:
 
-```shell
-npx degit github:microsoft/PowerAppsCodeApps/templates/vite my-app
-cd my-app 
-```
+   ```bash
+   npx degit github:microsoft/PowerAppsCodeApps/templates/vite my-app
+   cd my-app 
+   ```
 
-2. Authenticate the Power Platform CLI against your Power Platform tenant and select your environment:
+1. Authenticate the Power Platform CLI against your Power Platform tenant and select your environment:
 
-```shell 
-pac auth create
-pac env select --environment {environment id}
-```
+   ```bash
+   pac auth create
+   pac env select --environment {environment id}
+   ```
+
    Sign in using your Power Platform account when prompted. All Power Platform apps, flows, and agents publish to an environment. The PAC CLI's auth command prompts you to authenticate with your Microsoft Entra identity and ensure the code app you add connections to and publish to Power Platform go in the specified environment. 
 
-3. Install the Power SDK and initialize your code app using:
+1. Install the Power SDK and initialize your code app using:
    
-```shell
-npm install
-pac code init --displayname "App From Scratch"
-```
-   
-5. Enter the following to test your code app locally:
 
-```shell 
-npm run dev 
-```
+   ```bash
+   npm install
+   pac code init --displayname "App From Scratch"
+   ```
+   
+1. Enter the following to test your code app locally:
+
+   ```bash
+   npm run dev 
+   ```
+
   Then, open the URL labelled **Local Play**.
 
    > [!IMPORTANT]
