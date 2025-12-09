@@ -132,7 +132,7 @@ Adding the data sources to the app will automatically generate a typed TypeScrip
    From a command line, run the following. Use the API name and connection ID collected previously.
 
    ```powershell
-   pac code add-data-source -a <apiId> -c <connectionId> -d <data sourceName> -sp <storedProcedureName> 
+   pac code add-data-source -a <apiId> -c <connectionId> -d <datasourceName> -sp <storedProcedureName> 
    ```
 
    For example:
@@ -150,7 +150,7 @@ Adding the data sources to the app will automatically generate a typed TypeScrip
    From a command line, run the following. Use the API name and connection ID collected previously.
 
    ```powershell
-   pac code delete-data-source -a <apiName> -ds <data sourceName> 
+   pac code delete-data-source -a <apiName> -ds <datasourceName> 
    ```
 
    For example:
@@ -196,9 +196,9 @@ There are two ways to get the connection reference to your data source:
 2. Use the PAC CLI code command to list the connection references in a solution:
    - Open a command prompt or terminal window.
    - Run the following command to get the solution ID and name of the connection reference to your data source:
-    ```powershell
+   ```powershell
     pac code list-connection-references -env <environmentURL> -s <solutionID>
-    ```
+   ```
    - The output will include the display name, logical name, and description of the connection references in the solution.
 
 
