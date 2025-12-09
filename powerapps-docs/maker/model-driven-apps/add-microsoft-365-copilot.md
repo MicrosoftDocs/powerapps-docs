@@ -46,9 +46,17 @@ For more information, see [Use Microsoft 365 Copilot chat in model-driven apps](
 
 You must have or create an [Early release cycle environment](/power-platform/admin/early-release) to use this feature.
 
-> [!NOTE]
->
-> Microsoft 365 Copilot chat is gradually replacing Copilot chat in model-driven apps. During this transition, makers choose which chat experience users see - Microsoft 365 Copilot chat, Copilot chat, or both. If both are enabled, the **Chat** button opens [Microsoft 365 Copilot chat](../../user/use-microsoft-365-copilot-model-driven-apps.md), and the **App Skills** button opens [Copilot chat in model-driven apps](../../user/use-copilot-model-driven-apps.md).:::image type="content" source="media/microsoft-365-chat-model-driven-apps/both-chat-experiences.png" alt-text="Screenshot show both chat experiences in a model-driven app":::
+
+## Microsoft 365 Copilot chat vs Copilot chat
+
+ Microsoft 365 Copilot chat is gradually replacing [Copilot chat in model-driven apps](add-ai-copilot.md).
+
+During the transition period, makers may enable either one or both chat experiences. When both options are available, the **Copilot** dropdown menu shows the following options:
+
+- **Chat** button opens [Microsoft 365 Copilot chat](../../user/use-microsoft-365-copilot-model-driven-apps.md)
+- **App Skills** button opens [Copilot chat in model-driven apps](../../user/use-copilot-model-driven-apps.md).
+
+    :::image type="content" source="media/microsoft-365-chat-model-driven-apps/both-chat-experiences.png" alt-text="Screenshot show both chat experiences in a model-driven app":::
 
 
 ## Enable Microsoft 365 Copilot for your environment
