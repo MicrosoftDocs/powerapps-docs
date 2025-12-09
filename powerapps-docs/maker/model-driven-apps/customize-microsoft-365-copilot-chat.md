@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.subservice: mda-maker
 ms.author: hemantg
 ms.reviewer: matp
-ms.date: 05/21/2025
+ms.date: 12/9/2025
 ms.update-cycle: 180-days
 ms.topic: how-to
 applies_to: 
@@ -21,7 +21,7 @@ ai-usage: ai-assisted
 ---
 # Customize Microsoft 365 Copilot chat with an agent (preview)
 
-Microsoft 365 Copilot chat in model-driven apps enables users to interact with custom agents that extend Copilot's capabilities beyond standard functionality. By customizing agents, you can create tailored experiences that address your organization's specific business processes and data requirements.
+Microsoft 365 Copilot chat in model-driven apps enables users to interact with custom agents that extend Copilot's capabilities beyond standard functionality. By customizing agents, you can create tailored experiences that address your organization's specific business processes and data requirements. For more information, see [Use agents in Microsoft 365 Copilot](../../user/use-microsoft-365-copilot-model-driven-apps.md#use-agents-in-microsoft-365-copilot)
 
 This article describes the different types of agents you can build and integrate with Microsoft 365 Copilot chat in model-driven apps. You'll learn about the capabilities and use cases for each agent type, helping you choose the right approach for your customization needs.
 

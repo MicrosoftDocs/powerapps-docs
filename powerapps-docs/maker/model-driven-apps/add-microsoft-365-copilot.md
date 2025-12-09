@@ -48,8 +48,7 @@ You must have or create an [Early release cycle environment](/power-platform/adm
 
 > [!NOTE]
 >
-> - Microsoft 365 Copilot Chat is gradually replacing [Copilot chat in model-driven apps](../../user/use-copilot-model-driven-apps.md). During this transition, app makers can decide which chat experience is available to users. Makers can enable Microsoft 365 Copilot Chat, Copilot chat, or both, depending on their needs. 
-> - If both Microsoft 365 Copilot Chat and [Copilot chat in model-driven apps](../../user/use-copilot-model-driven-apps.md) are enabled, users can access and try each option. The **Chat** button opens Microsoft 365 Copilot Chat, and the **App Skills** button opens Copilot chat in model-driven apps.:::image type="content" source="media/microsoft-365-chat-model-driven-apps/both-chat-experiences.png" alt-text="Screenshot show both chat experiences in a model-driven app":::
+> Microsoft 365 Copilot chat is gradually replacing Copilot chat in model-driven apps. During this transition, makers choose which chat experience users see - Microsoft 365 Copilot chat, Copilot chat, or both. If both are enabled, the **Chat** button opens [Microsoft 365 Copilot chat](../../user/use-microsoft-365-copilot-model-driven-apps.md), and the **App Skills** button opens [Copilot chat in model-driven apps](../../user/use-copilot-model-driven-apps.md).:::image type="content" source="media/microsoft-365-chat-model-driven-apps/both-chat-experiences.png" alt-text="Screenshot show both chat experiences in a model-driven app":::
 
 
 ## Enable Microsoft 365 Copilot for your environment
@@ -85,7 +84,7 @@ Makers can enable or disable Microsoft 365 Copilot chat for a specific model-dri
 
 ### Known limitations
 
-- Microsoft 365 Copilot for model-driven apps allows users to view Dataverse data using read-only operations. This capability means that users can only view data that matches their queries and can't make any changes. To make changes, customization with an agent is required.
+- Microsoft 365 Copilot for model-driven apps allows users to view Dataverse data by using read-only operations. This capability means that users can only view data that matches their queries and can't make any changes. To make changes, customization with an agent is required.
 - Creating, updating, or performing other actions isn't supported unless you customize with an agent.
 - Microsoft 365 Copilot for model-driven apps isn't available in the Power Apps mobile app.
 
