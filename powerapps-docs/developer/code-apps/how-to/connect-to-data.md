@@ -208,6 +208,7 @@ From a command line, run the following. Use the solution ID and connection refer
 pac code add-data-source -a <apiName> -cr <connectionReferenceLogicalName> -s <solutionID>
 ```
 
+The app will now use the connection associated with the connection reference in your Power Apps solution.
 
 ## Update the app to call connections
 
