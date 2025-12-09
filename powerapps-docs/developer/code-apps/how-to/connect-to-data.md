@@ -3,7 +3,7 @@ title: "How to: Connect your code app to data (preview)"
 description: "Learn how to connect your code app to data"
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 11/10/2025
+ms.date: 12/9/2025
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
@@ -166,47 +166,53 @@ Adding the data sources to the app will automatically generate a typed TypeScrip
 
 ### Use connection references to add a data source
 
-Starting in version 1.51.1 of the Power Apps CLI, you can use connection references to add data sources to your code app. This allows you to manage and reuse connections across multiple apps and solutions.
+Starting in version 1.51.1 of the Power Apps CLI, you can use connection references to add data sources to your code app. A connection reference is a solution component that points to a specific connection for a connector (e.g., SharePoint, Dataverse). Instead of binding your app or flow directly to a user-specific connection, you bind it to a reference. This makes the solution environment-aware and portable across Dev, Test, and Prod environments for smooth Application Lifecycle Management.
 
 > [!NOTE]
-> This section assumes a basic knowledge of Solutions in Power Apps and connection references, and assumes that you have already created a solution, and a connection reference in that solution for your data source. If you haven't, follow the steps outlined in the official documentation links below to create one.
+> This section assumes a basic knowledge of Solutions in Power Apps and connection references, and assumes that you have already created a solution and a connection reference in that solution for your data source. If you haven't, follow the steps outlined in the official documentation links below to create one.
 > 
-> For more information about solutions in Power Apps, refer to the official documentation: [Solutions in Power Apps](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/solutions-overview).
+> For more information about solutions in Power Apps, refer to the official documentation: [Solutions in Power Apps](/power-apps/maker/data-platform/solutions-overview).
 > 
-> For more information on what connection references are and what makes them useful to your Power Apps, refer to the official documentation: [Using Connection References](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/create-connection-reference).
+> For more information on what connection references are and what makes them useful to your Power Apps, refer to the official documentation: [Using Connection References](/power-apps/maker/data-platform/create-connection-reference).
 >
 
 #### Get the solution ID
 - Sign in to [Power Apps](https://make.powerapps.com).
-- On the left pane, select Solutions. If the item isn’t in the side panel pane, select …More and then select the item you want.
+- On the left pane, select **Solutions**. If the item isn’t in the side panel pane, select **More** and then select the item you want.
 - Find the solution that contains the connection reference for your data source.
 - Select the solution to open it.
-- In the URL of the browser, you will see the solution ID at the end of the URL.
-Your URL will be of the form *https://make.powerapps.com/environments/environmentId/solutions/solutionId*
+- In the URL of the browser, you will see the solution ID at the end of the URL. Your URL will be of the form:
+
+  ```
+  https://make.powerapps.com/environments/environmentId/solutions/solutionId
+  ```
+  
 - Copy the solution ID from the URL and save it for later use.
 
 #### Get the name of the connection reference to your data source
 
 There are two ways to get the connection reference to your data source:
-1. Using the Power Apps solution explorer to examine the connection references in a solution:
-   - Sign in to [Power Apps](https://make.powerapps.com).
-   - On the left pane, select Solutions. If the item isn’t in the side panel pane, select …More and then select the item you want.
-   - Find the solution that contains the connection reference for your data source.
-   - Select "Connection References" from the list of Objects in the left pane.
-2. Use the PAC CLI code command to list the connection references in a solution:
+
+1. Use the PAC CLI code command to list the connection references in a solution:
    - Open a command prompt or terminal window.
    - Run the following command to get the solution ID and name of the connection reference to your data source:
-   ```powershell
+     
+   ```shell
     pac code list-connection-references -env <environmentURL> -s <solutionID>
    ```
    - The output will include the display name, logical name, and description of the connection references in the solution.
 
+2. Using the Power Apps solution explorer to examine the connection references in a solution:
+   - Sign in to [Power Apps](https://make.powerapps.com).
+   - On the left pane, select **Solutions**. If the item isn’t in the side panel pane, select **More** and then select the item you want.
+   - Find the solution that contains the connection reference for your data source.
+   - Select **Connection References** from the list of **Objects** in the left pane.
 
 #### Add the data source to your code app using the connection reference
 
 From a command line, run the following. Use the solution ID and connection reference logical name collected from previous steps.
 
-```powershell
+```shell
 pac code add-data-source -a <apiName> -cr <connectionReferenceLogicalName> -s <solutionID>
 ```
 
