@@ -4,7 +4,7 @@ description: Learn how to build business solutions using canvas apps, model-driv
 author: szlo 
 contributors:  
 ms.topic: how-to  
-ms.date: 08/6/2025  
+ms.date: 12/9/2025  
 ms.author: mkaur  
 ms.reviewer: mkaur  
 ---  
@@ -60,6 +60,8 @@ After you save a plan in a solution, create apps like canvas apps, model-driven 
          - [Key concepts – Publish and deploy your agent](/microsoft-copilot-studio/publication-fundamentals-publish-channels)
          - [Key concepts - Analytics](/microsoft-copilot-studio/analytics-overview)  
 
+    - **Power BI dashboards**: Plans can recommend Power BI dashboards, but connecting a Power BI report with plan context is not currently supported.
+      
 ## Use existing apps
 
 When apps are proposes apps, replace a proposed app with an existing app or add an existing app to the plan. This approach helps if you already developed apps and want to use them in a new business solution. It saves time, reduces redundancy, and keeps your solutions consistent.
