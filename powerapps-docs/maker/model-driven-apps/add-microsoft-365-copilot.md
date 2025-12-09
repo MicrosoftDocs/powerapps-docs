@@ -27,12 +27,11 @@ App makers can enable Microsoft 365 Copilot chat to give users access to convers
 
 This article shows you how to enable and configure Microsoft 365 Copilot chat for your model-driven apps, both at the environment level and for individual apps.
 
-When enabled, users can open Microsoft 365 Copilot chat in their model-driven app by selecting **Copilot** > **Chat** on the upper-right corner.
+When enabled, users can open Microsoft 365 Copilot chat in their model-driven app by selecting **Copilot** > **Chat** on the upper-right corner. For more information, see [Use Microsoft 365 Copilot chat in model-driven apps](../../user/use-microsoft-365-copilot-model-driven-apps.md).
 
 
 :::image type="content" source="media/microsoft-365-chat-model-driven-apps/copilot-chat-in-model-driven-apps.png" alt-text="Screenshot of Microsoft 365 Copilot chat in a model-driven app":::
 
-For more information, see [Use Microsoft 365 Copilot chat in model-driven apps](../../user/use-microsoft-365-copilot-model-driven-apps.md).
 
 > [!IMPORTANT]
 >
@@ -44,7 +43,7 @@ For more information, see [Use Microsoft 365 Copilot chat in model-driven apps](
 
 ## Prerequisites
 
-You must have or create an [Early release cycle environment](/power-platform/admin/early-release) to use this feature.
+Crate need to have access to an [early release cycle environment](/power-platform/admin/early-release) to use this feature.
 
 
 ## Enable Microsoft 365 Copilot for your environment
