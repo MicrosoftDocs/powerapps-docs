@@ -6,7 +6,7 @@ ms.reviewer: smurkute
 ms.topic: "how-to"
 author: anuitz
 ms.subservice: end-user
-ms.author: anuitz
+ms.author: smurkute
 contributors: 
 ms.service: powerapps
 search.audienceType: 
@@ -54,8 +54,8 @@ Built-in agents help you enter, explore, and summarize data faster and better.
 
 **Chat agent**
 
-- [Chat with M365 Copilot](use-m365-copilot-model-driven-apps.md)
-- [Customize M365 Copilot chat](../maker/model-driven-apps/customize-m365-copilot-chat.md)
+- [Chat with Microsoft 365 Copilot](use-microsoft-365-copilot-model-driven-apps.md)
+- [Customize Microsoft 365 Copilot chat](../maker/model-driven-apps/customize-microsoft-365-copilot-chat.md)
 - [Chat with Copilot](use-copilot-model-driven-apps.md)
 - [Customize Copilot chat](../maker/model-driven-apps/customize-copilot-chat.md)
 
