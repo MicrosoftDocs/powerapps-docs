@@ -35,10 +35,8 @@ When enabled, users can open Microsoft 365 Copilot chat in their model-driven ap
 
 > [!IMPORTANT]
 >
-> This feature is in preview.  
->
-> - Preview features aren't meant for production use and might have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
-> - For more information, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
+> - This feature is in preview.  
+> - Preview features aren't meant for production use and might have restricted functionality These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2189520), and are available before an official release so that customers can get early access and provide feedback.
 
 
 ## Prerequisites
