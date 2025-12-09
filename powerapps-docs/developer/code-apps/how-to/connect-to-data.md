@@ -166,6 +166,8 @@ Adding the data sources to the app will automatically generate a typed TypeScrip
 
 ### Use connection references to add a data source
 
+Starting in version 1.51.1 of the Power Apps CLI, you can use connection references to add data sources to your code app. This allows you to manage and reuse connections across multiple apps and solutions.
+
 > [!NOTE]
 > This section assumes a basic knowledge of Solutions in Power Apps and connection references, and assumes that you have already created a solution, and a connection reference in that solution for your data source. If you haven't, follow the steps outlined in the official documentation links below to create one.
 > 
