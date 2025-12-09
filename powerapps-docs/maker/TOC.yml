@@ -60,7 +60,7 @@
       - name: AI in apps overview
         href: ../user/ai-in-apps.md
       - name: Use Microsoft 365 Copilot chat
-        href: ../user/use-m365-copilot-model-driven-apps.md
+        href: ../user/use-microsoft-365-copilot-model-driven-apps.md
       - name: Supervise agents using agent feed (preview)
         href: ../user/supervise-agents-with-agent-feed.md
       - name: Use suggested actions in the agent feed (preview)
@@ -1804,7 +1804,11 @@
     - name: Copilot chat for apps
       href:
       items:
-      - name: Add Copilot chat to your app
+      - name: Add Microsoft 365 Copilot chat to your app (preview)
+        href: ./model-driven-apps/add-microsoft-365-copilot.md
+      - name:  Customize Microsoft 365 Copilot chat with an agent (preview) 
+        href: ./model-driven-apps/customize-microsoft-365-copilot-chat.md
+      - name: Add Copilot chat to your app 
         href: ./model-driven-apps/add-ai-copilot.md
       - name: Customize Copilot chat (preview)
         href:

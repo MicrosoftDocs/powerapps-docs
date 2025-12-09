@@ -1,6 +1,6 @@
 ---
 title: Customize Microsoft 365 Copilot chat in model-driven apps (preview)
-description: Learn how to customize Microsoft 365 Copilot chat in model-driven apps
+description: Learn how to customize Microsoft 365 Copilot chat with declarative agents, custom engine agents, and Copilot Studio agents in Power Apps model-driven apps.
 author: Mattp123
 ms.service: powerapps
 ms.subservice: mda-maker
