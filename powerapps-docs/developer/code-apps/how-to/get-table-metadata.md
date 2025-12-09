@@ -143,19 +143,19 @@ async function getColumnTypes() {
   // Output: [
   //   {
   //     logicalName: "accountid",
-  //     attributeType: "Uniqueidentifier",
+  //     attributeType: "UniqueidentifierType",
   //   },
   //   {
   //     logicalName: "name",
-  //     attributeType: "String",
+  //     attributeType: "StringType",
   //   },
   //   {
   //     logicalName: "revenue",
-  //     attributeType: "Money",
+  //     attributeType: "MoneyType",
   //   },
   //   {
   //     logicalName: "createdon",
-  //     attributeType: "DateTime",
+  //     attributeType: "DateTimeType",
   //   }
   // ]
   
