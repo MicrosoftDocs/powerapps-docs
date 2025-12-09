@@ -24,10 +24,9 @@ Copilot chat for model-driven apps in Power Apps is a next-generation AI assista
 
 > [!IMPORTANT]
 >
-> This feature is generally available in Dynamics 365 apps and is available as a preview feature in Power Apps.
+> This feature is generally available in Dynamics 365 apps, but remains a preview feature in Power Apps.
 >
-> - Preview features aren't meant for production use and might have restricted functionality.
-> - For more information, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
+> - Preview features aren't meant for production use and might have restricted functionality These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2189520), and are available before an official release so that customers can get early access and provide feedback.
 > - You must allow data movement across regions for Generative AI features as a prerequisite for using Copilot in Power Apps. This step is especially important if your organization and your environment are in different regions. Learn more in [Turn on copilots and generative AI features](/power-platform/admin/geographical-availability-copilot#enable-data-movement-across-regions).
 > - This capability is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview).
 > - This capability might be subject to usage limits or capacity throttling.
