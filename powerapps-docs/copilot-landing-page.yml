@@ -103,12 +103,12 @@ landingContent:
       - linkListType: how-to-guide
         links:
 
-          - text: Add Microsoft 365 Copilot chat in model-driven apps
-            url: maker/add-microsoft-365-copilot.md
-          - text: Use Microsoft 365 Copilot chat in model-driven apps
+          - text: Add Microsoft 365 Copilot chat in model-driven apps (preview)
+            url: maker/model-driven-apps/add-microsoft-365-copilot.md
+          - text: Use Microsoft 365 Copilot chat in model-driven apps (preview)
             url: user/use-microsoft-365-copilot-model-driven-apps.md
           - text: Customize Microsoft 365 Copilot chat with an agent (preview)
-            url: maker/customize-microsoft-365-copilot-chat.md
+            url: maker/model-driven-apps/customize-microsoft-365-copilot-chat.md
 
   
   # Card
