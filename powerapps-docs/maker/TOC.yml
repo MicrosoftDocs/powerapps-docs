@@ -59,7 +59,7 @@
       items:
       - name: AI in apps overview
         href: ../user/ai-in-apps.md
-      - name: Use Microsoft 365 Copilot chat
+      - name: Use Microsoft 365 Copilot chat (preview)
         href: ../user/use-microsoft-365-copilot-model-driven-apps.md
       - name: Supervise agents using agent feed (preview)
         href: ../user/supervise-agents-with-agent-feed.md
