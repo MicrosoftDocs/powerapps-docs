@@ -37,7 +37,21 @@ See [pac telemetry reference](https://learn.microsoft.com/en-us/power-platform/d
 
 Starting with version 1.51.1 of the Power Apps CLI, you can manage telemetry for the `code` command alone, without affecting other PAC CLI commands.
 
-The user‑configurable settings are stored in a JSON file under the CLI config directory (see [Locating the CLI Config Directory and Settings File](#locating-the-cli-config-directory-and-settings-file)). The effective settings object is:
+The user‑configurable settings are stored in a JSON file under the CLI config directory (see [Locating the CLI Config Directory and Settings File](#locating-the-cli-config-directory-and-settings-file)). You can create this file manually or use the following PowerShell script:
+
+```powershell
+$settingsPath = Join-Path $env:USERPROFILE ".powerapps-cli\userSettings.json"
+$settingsDir = Split-Path $settingsPath
+if (-not (Test-Path $settingsDir)) { New-Item -ItemType Directory -Path $settingsDir -Force }
+$settings = @{
+    enabled = $true
+    consoleOnly = $false
+    outputToConsole = $false
+}
+$settings | ConvertTo-Json | Set-Content $settingsPath
+```
+
+The effective settings object is:
 
 - `enabled: boolean` – Whether remote telemetry is enabled.
 - `consoleOnly: boolean` – Whether to only log telemetry to the console and never send it remotely.
