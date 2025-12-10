@@ -36,7 +36,7 @@ See [pac telemetry reference](/power-platform/developer/cli/reference/telemetry)
 
 Starting with version 1.51.1 of the Power Platform CLI, you can manage telemetry for the `code` command alone, without affecting other PAC CLI commands.
 
-The user‑configurable settings are stored in a JSON file under the CLI config directory (see [Locating the CLI Config Directory and Settings File](#locating-the-cli-config-directory-and-settings-file)). The settings file is located at `C:\Users\<username>\.powerapps-cli\userSettings.json`.
+The user‑configurable settings are stored in a JSON file under the CLI config directory. The settings file is located at `C:\Users\<username>\.powerapps-cli\userSettings.json`.
 
 The effective settings object is:
 
