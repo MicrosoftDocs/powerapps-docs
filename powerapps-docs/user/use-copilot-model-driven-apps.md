@@ -30,7 +30,7 @@ Copilot chat for model-driven apps in Power Apps is a next-generation AI assista
 
 > [!NOTE]
 >
-> Copilot chat in Power Apps is a preview feature that will be deprecated for model-driven apps in environments not [enabled for Dynamics 365 apps](/power-platform/admin/create-environment#create-an-environment-with-a-database), starting January 2026. We recommend switching to [Microsoft 365 Copilot chat](../../user/use-microsoft-365-copilot-model-driven-apps.md). During the transition period, makers can enable either one or both chat experiences. For more information, see [Deprecation of Copilot chat in model-driven apps](/power-platform/important-changes-coming#deprecation-of-copilot-chat-in-model-driven-apps)
+> Copilot chat in Power Apps is a preview feature that will be deprecated for model-driven apps in environments not [enabled for Dynamics 365 apps](/power-platform/admin/create-environment#create-an-environment-with-a-database), starting January 2026. We recommend switching to [Microsoft 365 Copilot chat](use-microsoft-365-copilot-model-driven-apps.md). During the transition period, makers can enable either one or both chat experiences. For more information, see [Deprecation of Copilot chat in model-driven apps](/power-platform/important-changes-coming#deprecation-of-copilot-chat-in-model-driven-apps)
 
 ## Prerequisites
 
