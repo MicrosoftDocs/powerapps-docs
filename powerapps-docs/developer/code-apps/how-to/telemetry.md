@@ -1,21 +1,21 @@
 ---
-title: "Manage telemetry settings for Power Apps CLI code commands"
-description: "Learn how to configure and manage telemetry settings for Power Apps CLI code commands."
+title: "Manage CLI telemetry settings"
+description: "Learn how to configure and manage telemetry settings for Power Platform CLI code commands."
 ms.author: pakempar
 author: pakempar
 ms.date: 12/09/2025
 ms.topic: how-to
 ---
-# Manage telemetry settings for the Power Apps CLI code commands
+# Manage telemetry settings for the Power Platform CLI code commands
 
-The Power Apps CLI `code` commands collect limited telemetry to help improve reliability, performance, and usability. This section explains what is collected, how it flows, and how you can control it.
+The Power Platform CLI (PAC CLI) `code` commands collect limited telemetry to help improve reliability, performance, and usability. This section explains what is collected, how it flows, and how you can control it.
 
 > [!NOTE]
-> This section refers to the telemetry settings for the Power Apps CLI `code` commands, and not the telemetry collected when your code app is played.
+> This section refers to the telemetry settings for the Power Platform CLI `code` commands, and not the telemetry collected when your code app is played. Learn more about the Power Platform CLI here: [Microsoft Power Platform CLI](/power-platform/developer/cli/introduction?tabs=windows)
 
-## What Telemetry Is Collected
+## Why enable telemetry
 
-When enabled, the CLI sends:
+When telemetry is enabled, the Power Platform CLI sends the following information:
 
 - Activity events – High‑level actions such as running commands or completing scenarios (for example, model and service files generation, environment selection).
 - Error events – Failures and exceptions (command failures, unexpected errors), including error names and messages.
@@ -26,18 +26,19 @@ When enabled, the CLI sends:
 > [!NOTE]
 > Telemetry failures never block CLI operations.
 
-
-## Toggling Telemetry 
+## Toggling telemetry 
 
 The PAC `telemetry` verb allows you to manage telemetry settings. These changes are persisted across runs.
 
-See [pac telemetry reference](https://learn.microsoft.com/en-us/power-platform/developer/cli/reference/telemetry) for information on how to use the verb.
+See [pac telemetry reference](/power-platform/developer/cli/reference/telemetry) for information on how to use the verb.
 
-## code Command‑Specific Telemetry
+## `code` command‑specific telemetry
 
-Starting with version 1.51.1 of the Power Apps CLI, you can manage telemetry for the `code` command alone, without affecting other PAC CLI commands.
+Starting with version 1.51.1 of the Power Platform CLI, you can manage telemetry for the `code` command alone, without affecting other PAC CLI commands.
 
-The user‑configurable settings are stored in a JSON file under the CLI config directory (see [Locating the CLI Config Directory and Settings File](#locating-the-cli-config-directory-and-settings-file)). The effective settings object is:
+The user‑configurable settings are stored in a JSON file under the CLI config directory (see [Locating the CLI Config Directory and Settings File](#locating-the-cli-config-directory-and-settings-file)). The settings file is located at `C:\Users\<username>\.powerapps-cli\userSettings.json`.
+
+The effective settings object is:
 
 - `enabled: boolean` – Whether remote telemetry is enabled.
 - `consoleOnly: boolean` – Whether to only log telemetry to the console and never send it remotely.
@@ -85,11 +86,7 @@ These options combine as follows:
 > - `consoleOnly = false`
 > - `outputToConsole = false`
 
-## Locating the CLI Config Directory and Settings File
-
-The settings file is located at `C:\Users\<username>\.powerapps-cli\userSettings.json`.
-
-## Piping Telemetry to a File
+## Piping telemetry to a file
 
 When telemetry is configured to output to the console (using `consoleOnly: true` or `outputToConsole: true`), you can redirect the output to a file. This is particularly useful for capturing logs for debugging or support requests.
 
