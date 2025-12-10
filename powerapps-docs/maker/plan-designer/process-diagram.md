@@ -19,20 +19,15 @@ ms.custom:
   - ai-gen-description
 ---
 
-# Generate process diagrams (preview)
+# Generate process diagrams
 
-[This article is prerelease documentation and is subject to change.]
 
 Plans in Power Apps helps teams create and refine diagrams as part of the plan to clarify user interactions and build effective solutions. Process diagrams make workflows clearer, improve communication, and help teams work more efficiently, especially on complex projects.
 
 Optionally, include images of existing process diagrams as additional resources during the creation experience to enhance clarity. But if you add predefined processes, Copilot might just replicate what you provide, which can limit creativity and cause duplication or misinterpretation.
 
-> [!IMPORTANT]
-> - This is a preview feature.
-> - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2189520), and are available before an official release so that customers can get early access and provide feedback.
-> - Make sure you have preview features turned on for plans. Learn more in [Turn on preview features for plans](plan-designer.md#turn-on-preview-features-for-plans)
 
-To use the process diagram feature, turn on preview features. When preview features are on, the process diagram appears on the right as you [create a plan](create-plan.md). The diagram generates after you [create user requirements](create-plan.md#generate-user-requirements).
+The process diagram appears on the right as you [create a plan](create-plan.md). The diagram generates after you [create user requirements](create-plan.md#generate-user-requirements). If you prefer to see a plan overview instead, you can toggle off the process diagram.
 
 
 Processes use a two level hierarchy.
@@ -84,20 +79,13 @@ Legend:
 1. **Connect nodes**: Add connecting edges between nodes by selecting a node anchor and dragging it to another node.
 
 
-## Known limitations (preview)
+## Known limitations
 
-- Exclusive gateways are only supported.
 
 - You can't add events manually.
 
 - The process doesn't directly affect technology proposals.
 
-- User stories don't update to reflect changes in the process.
+- Only one set of changes can be validated at a time.
 
-- Only one set of changes can be validated at a time. If you make more changes while the AI validates, validation can lock up.
-
-- After validation, you can't undo changes to the process. You can only make more changes.
-
-- You can't edit process stages directly. To edit them, refine user stories and regenerate the process.
-
-- You can't change node types. You can only delete and readd them.
+- You can't change node types. You can only delete and re-add them.
