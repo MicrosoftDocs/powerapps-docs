@@ -46,14 +46,13 @@ Expand or collapse the Microsoft 365 Copilot pane as needed.
 
 Microsoft 365 Copilot chat in model-driven apps answers questions about the Dataverse table data in the app.
 
-:::image type="content" source="media/microsoft-365-copilot-question.png" alt-text="Screenshot that shows asking a question in Microsoft 365 Copilot.":::
-:::image type="content" source="media/microsoft-365-copilot-question-response.png" alt-text="Screenshot that shows a question and response in Microsoft 365 Copilot.":::
+:::image type="content" source="media/microsoft-365-copilot-question-answer.png" alt-text="Screenshot that shows a question and response in Microsoft 365 Copilot." lightbox="media/microsoft-365-copilot-question-answer.png":::
 
 ## Microsoft 365 Copilot chat suggested questions
 
 To help you get started, Microsoft 365 Copilot chat suggests questions to ask. Many suggested questions have placeholders you replace with appropriate text.
 
-:::image type="content" source="media/microsoft-365-copilot-prompts.png" alt-text="Screenshot that shows suggested prompts that have placeholders.":::
+:::image type="content" source="media/microsoft-365-copilot-prompts.png" alt-text="Screenshot that shows suggested prompts that have placeholders." lightbox="media/microsoft-365-copilot-prompts.png":::
 
 ## Use agents in Microsoft 365 Copilot
 
@@ -63,13 +62,11 @@ To help you get started, Microsoft 365 Copilot chat suggests questions to ask. M
 
 Microsoft 365 Copilot chat in model-driven apps lets you use any agent available in Microsoft 365 Copilot right from the side pane. Once an agent is available within Microsoft 365 Copilot, you can interact with your agent by either choosing it from the navigation panel or @ mentioning it. 
 
-:::image type="content" source="media/microsoft-365-copilot-opened-navigation.png" alt-text="Screenshot that shows how to open the Microsoft 365 Copilot navigation panel with different agents displayed.":::
+:::image type="content" source="media/microsoft-365-copilot-opened-navigation.png" alt-text="Screenshot that shows how to open the Microsoft 365 Copilot navigation panel with different agents displayed." lightbox="media/microsoft-365-copilot-opened-navigation.png":::
 
 One of the benefits of @ mentioning an agent is that you can add or remove it from an ongoing conversation, which lets you have several agents collaborating in one conversation. When you select an agent from the navigation panel, you have a direct conversation only with the agent you selected.
 
 :::image type="content" source="media/microsoft-365-copilot-at-mention.png" alt-text="Screenshot that shows how to @ mention agents in Microsoft 365 Copilot.":::
-:::image type="content" source="media/microsoft-365-copilot-open-nav-panel.png" alt-text="Screenshot that shows how to open the Microsoft 365 Copilot navigation panel.":::
-:::image type="content" source="media/microsoft-365-copilot-nav-panel-agents.png" alt-text="Screenshot that shows agents in the Microsoft 365 Copilot navigation panel.":::
 
 ## Related information
 
