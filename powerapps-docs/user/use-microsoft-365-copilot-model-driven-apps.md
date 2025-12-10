@@ -23,12 +23,12 @@ ms.collection:
 
 > [!IMPORTANT]
 >
-> This feature is in preview.  
->
-> - Preview features aren't meant for production use and might have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
-> - For more information, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
-> - An administrator must enable Microsoft 365 Copilot chat in your application before it becomes visible in your app. For more information, see [Add Microsoft 365 Copilot for app users in model-driven apps](../maker/model-driven-apps/add-microsoft-365-copilot.md).
-> - Microsoft 365 Copilot Chat is gradually replacing [Copilot chat in model-driven apps](use-copilot-model-driven-apps.md). During this transition, app makers can decide which chat experience is available to users. Makers can enable Microsoft 365 Copilot Chat, App Copilot chat, or both, depending on their needs.
+> - This feature is in preview.  
+> - Preview features aren't meant for production use and might have restricted functionality These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2189520), and are available before an official release so that customers can get early access and provide feedback.
+
+## Prerequisites
+
+An administrator must enable Microsoft 365 Copilot chat in your application before it becomes visible in your app. For more information, see [Add Microsoft 365 Copilot for app users in model-driven apps](../maker/model-driven-apps/add-microsoft-365-copilot.md).
 
 ## Copilot pane
 
