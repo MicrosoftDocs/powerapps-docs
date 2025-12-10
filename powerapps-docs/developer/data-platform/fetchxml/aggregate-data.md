@@ -256,7 +256,7 @@ In this example, the custom maximum rows limit is 5:
 </fetch>
 ```
 
-The results are a single row aggregating up to 6 of the records:
+The results are a single row aggregating up to six of the records:
 
 ```text
  -----------------
