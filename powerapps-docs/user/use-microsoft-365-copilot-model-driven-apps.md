@@ -28,7 +28,7 @@ ms.collection:
 
 ## Prerequisites
 
-An administrator must enable Microsoft 365 Copilot chat in your application before it becomes visible in your app. For more information, see [Add Microsoft 365 Copilot for app users in model-driven apps](../maker/model-driven-apps/add-microsoft-365-copilot.md).
+An administrator must enable Microsoft 365 Copilot chat in your application before it becomes visible in your app. For more information, see [Add Microsoft 365 Copilot chat for app users in model-driven apps](../maker/model-driven-apps/add-microsoft-365-copilot.md).
 
 ## Copilot pane
 
