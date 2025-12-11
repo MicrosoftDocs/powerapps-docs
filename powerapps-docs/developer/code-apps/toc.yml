@@ -33,6 +33,8 @@ items:
             href: how-to/get-table-metadata.md
           - name: Application lifecycle management (ALM)
             href: how-to/alm.md
+          - name: Manage PAC CLI code command telemetry
+            href: how-to/telemetry.md
       - name: Troubleshoot
         items:
           - name: Adding a data source
