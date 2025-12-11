@@ -2,7 +2,7 @@
   "redirections": [
     {
       "source_path": "powerapps-docs/developer/code-apps/quickstart.md",
-      "redirect_url": "/how-to/create-an-app-from-scratch",
+      "redirect_url": "how-to/create-an-app-from-scratch",
       "redirect_document_id": "false"
     },
     {
