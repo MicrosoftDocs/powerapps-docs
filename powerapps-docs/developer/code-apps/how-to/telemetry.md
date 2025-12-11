@@ -13,7 +13,7 @@ The Power Platform CLI (PAC CLI) [`code` commands](/power-platform/developer/cli
 > [!NOTE]
 > This section refers to the telemetry settings for the Power Platform CLI [`code` commands](/power-platform/developer/cli/reference/code), and not the telemetry collected when your code app is played. Learn more about the Power Platform CLI here: [Microsoft Power Platform CLI](/power-platform/developer/cli/introduction)
 
-## Why enable telemetry
+## Why enable telemetry?
 
 When telemetry is enabled, the Power Platform CLI sends the following information:
 
@@ -36,7 +36,7 @@ Starting with version 1.51.1 of the Power Platform CLI, you can manage telemetry
 
 The user‑configurable settings are stored in a `userSettings.json` JSON file under the CLI config directory named `.powerapps-cli`.
 
-The userSettings.json file content has three properties:
+The `userSettings.json` file content has three properties:
 
 ```json
 {
