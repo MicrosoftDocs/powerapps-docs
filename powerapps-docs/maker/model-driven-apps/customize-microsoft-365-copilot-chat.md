@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.subservice: mda-maker
 ms.author: hemantg
 ms.reviewer: matp
-ms.date: 12/9/2025
+ms.date: 12/12/2025
 ms.update-cycle: 180-days
 ms.topic: how-to
 applies_to: 
@@ -29,6 +29,7 @@ This article describes the different types of agents you can build and integrate
 >
 > - This feature is in preview.  
 > - Preview features aren't meant for production use and might have restricted functionality These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2189520), and are available before an official release so that customers can get early access and provide feedback.
+> - This feature is in the process of rolling out and might not be available in your region yet.
 
 
 You can customize agents in several ways to fit your organization's needs.
