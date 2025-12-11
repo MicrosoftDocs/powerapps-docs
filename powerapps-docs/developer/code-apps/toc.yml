@@ -5,16 +5,14 @@ items:
         href: index.yml
       - name: Overview
         href: overview.md
-      - name: "Quickstart: Create your first code app"
-        href: quickstart.md
+      - name: "Quickstart: Create a code app"
+        href: how-to/create-an-app-from-scratch.md
       - name: Architecture
         href: architecture.md
       - name: System configuration
         href: system-limits-configuration.md
       - name: How-to guides
         items:
-          - name: Create an app from scratch
-            href: how-to/create-an-app-from-scratch.md
           - name: Connect to data
             href: how-to/connect-to-data.md
           - name: Connect to Dataverse
