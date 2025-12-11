@@ -61,13 +61,16 @@ To help you get started, Microsoft 365 Copilot chat suggests questions to ask. M
 >
 > When you explicitly select an agent in Microsoft 365 Copilot chat in model-driven apps, the agent no longer answers questions about the Dataverse table data in the app unless you explicitly configure your agent to do so. However, the agent uses information from the chat history. To get the side chat to answer questions about the Dataverse table data in the app again, you need to remove the explicit agent selection.
 
-Microsoft 365 Copilot chat in model-driven apps lets you use any agent available in Microsoft 365 Copilot right from the side pane. Once an agent is available within Microsoft 365 Copilot, you can interact with your agent by either choosing it from the navigation panel or @ mentioning it. 
+Microsoft 365 Copilot chat in model-driven apps lets you use any agent available in Microsoft 365 Copilot right from the side pane. Once an agent is available within Microsoft 365 Copilot, you can interact with your agent by choosing it from the navigation panel. 
 
 :::image type="content" source="media/microsoft-365-copilot-opened-navigation.png" alt-text="Screenshot that shows how to open the Microsoft 365 Copilot navigation panel with different agents displayed." lightbox="media/microsoft-365-copilot-opened-navigation.png":::
 
-One of the benefits of @ mentioning an agent is that you can add or remove it from an ongoing conversation, which lets you have several agents collaborating in one conversation. When you select an agent from the navigation panel, you have a direct conversation only with the agent you selected.
+## Limitations
 
-:::image type="content" source="media/microsoft-365-copilot-at-mention.png" alt-text="Screenshot that shows how to @ mention agents in Microsoft 365 Copilot.":::
+1. The input box styling doesn't match the refreshed look and feel of the standalone [Microsoft 365 Copilot](https://m365.cloud.microsoft/chat) interface.
+1. The model chooser option, which allows users to select different AI models or configurations in the standalone version, is not available.
+1. The **Tools** and **Sources** menu inside the input box is not available in the embedded experience.
+1. Context IQ results, which provide intelligent contextual information and suggestions, do not currently load in the embedded Copilot chat experience.
 
 ## Related information
 
