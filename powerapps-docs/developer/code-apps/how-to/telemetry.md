@@ -77,6 +77,7 @@ mkdir -p "$HOME/.powerapps-cli" && cat > "$HOME/.powerapps-cli/userSettings.json
   "consoleOnly": false,
   "outputToConsole": false
 }
+EOF
 ```
 
 ---
