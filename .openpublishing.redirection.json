@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/developer/code-apps/quickstart.md",
+      "redirect_url": "/how-to/create-an-app-from-scratch",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/developer/data-platform/data-export-service.md",
       "redirect_url": "https://aka.ms/DESDeprecationBlog",
       "redirect_document_id": "false"
