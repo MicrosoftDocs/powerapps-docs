@@ -21,7 +21,6 @@ ms.custom:
 
 # Generate process diagrams
 
-
 Plans in Power Apps helps teams create and refine diagrams as part of the plan to clarify user interactions and build effective solutions. Process diagrams make workflows clearer, improve communication, and help teams work more efficiently, especially on complex projects.
 
 Optionally, include images of existing process diagrams as additional resources during the creation experience to enhance clarity. But if you add predefined processes, Copilot might just replicate what you provide, which can limit creativity and cause duplication or misinterpretation.
@@ -64,20 +63,12 @@ The process is an AI-first experience and might not always produce the results y
 
 Legend:
 
-
-1. **Ask Process Agent**: Use natural language to enter the changes you want to make. Type your prompt in the text box, as in the example prompt.
-
-     ```copilot-prompt
-    Add an approval gateway for HR to approve or reject the vacation request based on company HR policies.
-    ```
-
-1. **Add event**: Add a new event.
-1. **Add decision**: Add a new decision.
 1. **Add step**: Add a new step.
-1. **Validate changes**: Confirm your changes. Changes aren't finalized or saved with the plan until you validate them. The process experience in plans is an AI-first experience, even when you make manual edits. When you validate changes, the AI reviews and merges them with the existing process. As a best practice, batch three to five manual changes at a time, then validate them. If you want to make more than five changes, try the natural language update first to save time and improve the accuracy of the AI-generated content.
+1. **Add event**: Add a new event.
+1. **Add decision**: Add a yes/no decision, run multiple branches at once, or run all matching conditions. 
 1. **Delete**: Delete a node. Remove connecting lines by selecting the backspace key.
 1. **Connect nodes**: Add connecting edges between nodes by selecting a node anchor and dragging it to another node.
-
+1. **Validate changes**: Confirm your changes. Changes aren't finalized or saved with the plan until you validate them. The process experience in plans is an AI-first experience, even when you make manual edits. When you validate changes, the AI reviews and merges them with the existing process. As a best practice, batch three to five manual changes at a time, then validate them. If you want to make more than five changes, try the natural language update first to save time and improve the accuracy of the AI-generated content.
 
 ## Known limitations
 
@@ -86,6 +77,6 @@ Legend:
 
 - The process doesn't directly affect technology proposals.
 
-- Only one set of changes can be validated at a time.
+- You can validate only one set of changes at a time.
 
 - You can't change node types. You can only delete and re-add them.
