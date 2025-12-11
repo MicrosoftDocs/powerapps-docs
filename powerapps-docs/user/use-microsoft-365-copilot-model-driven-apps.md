@@ -69,7 +69,7 @@ Microsoft 365 Copilot chat in model-driven apps lets you use any agent available
 
 1. The input box styling doesn't match the refreshed look and feel of the standalone [Microsoft 365 Copilot](https://m365.cloud.microsoft/chat) interface.
 1. The model chooser option, which allows users to select different AI models or configurations in the standalone version, is not available.
-1. The **Tools** and **Sources** menu inside the input box is not available in the embedded experience.
+1. The **Tools** and **Sources** menu inside the input box is not available.
 1. Context IQ results, which provide intelligent contextual information and suggestions, do not currently load in the embedded Copilot chat experience.
 
 ## Related information
