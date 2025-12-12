@@ -55,6 +55,11 @@ Once the app is in a solution, use Power Platform Pipelines to deploy across sta
 
 [Learn how to use pipelines in the Power Platform](/power-platform/alm/pipelines).
 
+## Using connection references in your code app
+
+Refer to the [Use connection references to add a data source](./connect-to-data.md#use-connection-references-to-add-a-data-source) section in the  How to: Connect your code app to data (preview) page for more information on using connection references in your code app.
+
+
 ## Limitations
 
 At this time, Code apps:
