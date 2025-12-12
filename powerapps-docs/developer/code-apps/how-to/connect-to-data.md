@@ -79,7 +79,7 @@ There are two ways to do this:
 
 #### Use PAC CLI
 
-You can use the Power Apps CLI to list your available connections and retrieve their IDs using [pac connection list](/power-platform/developer/cli/reference/connection#pac-connection-list) command.
+Use the Power Apps CLI to list your available connections and retrieve their IDs using [pac connection list](/power-platform/developer/cli/reference/connection#pac-connection-list) command.
 
 `pac connection list` displays a table of all your connections, including the **Connection ID** and **API Name**, which is used as the `appId` when adding a data source.
 
@@ -121,7 +121,7 @@ pac code add-data-source -a "shared_office365users" -c "aaaaaaaa000011112222bbbb
 
 ### Add a tabular data source
 
-Add a tabular data source (for example SQL or SharePoint) to the app.
+SQL or SharePoint are examples of tabular data sources.
 
 Use the same PAC CLI [pac code add-data-source](/power-platform/developer/cli/reference/code#pac-code-add-data-source) command, but include a table ID and dataset name. The schema of your tabular data source specifies these values. If you don't already have these, see [Retrieve a dataset name and table ID](#retrieve-a-dataset-name-and-table-id).
 
@@ -145,9 +145,27 @@ pac code add-data-source `
 -d "paconnectivitysql0425.database.windows.net,paruntimedb" 
 ```
 
-### Add a SQL stored procedure as a data source
+#### Retrieve a dataset name and table ID
 
-Add a SQL stored procedure as a data source.
+> [!IMPORTANT]
+> The following steps to retrieve a dataset name and table ID are a temporary workaround. We plan to add an easier mechanism to get these values.
+
+If you don't already have the table and dataset name, you can get them by running a canvas app and copying the values from the browser network inspector:
+
+1. Create a new canvas app in Studio.
+1. Add the connection to a canvas app.
+1. Bind the connection to a gallery control.
+1. Publish and run the app.
+1. Open your browser's **Developer Tools**, go to the **Network** tab, and inspect requests made when the app loads. Check the "invoke" request, and go to its response.
+1. Find an Azure API Management (APIM) request with the connection ID, dataset name, and table ID, and copy those values.
+
+   Using this example data request URL through APIM, look for the `<Connection ID>`, `<Dataset name>`, and `<Table ID>` values in these places in the URL:
+
+   ```http
+   https[]()://{id value}.01.common.azure-apihub.net/apim/sharepointonline/<Connection ID>/datasets/<Dataset name>/tables/<Table ID>/items
+   ```
+
+### Add a SQL stored procedure as a data source
 
 From a command line, run the following. Use the API name and connection ID collected previously.
 
@@ -188,7 +206,7 @@ pac code delete-data-source `
 
 ### Use connection references to add a data source
 
-Starting in version 1.51.1 of the Power Apps CLI, you can use connection references to add data sources to your code app. A connection reference is a solution component that points to a specific connection for a connector. Instead of binding your app directly to a user-specific connection, you bind it to a reference. This makes the solution environment-aware and portable across Dev, Test, and Prod environments for smooth application lifecycle management.
+Starting in version 1.51.1 of the Power Apps CLI released in December 2025, you can use connection references to add data sources to your code app. A connection reference is a solution component that points to a specific connection for a connector. Instead of binding your app directly to a user-specific connection, you bind it to a reference. This makes the solution environment-aware and portable across Dev, Test, and Prod environments for smooth application lifecycle management.
 
 > [!NOTE]
 > This section assumes a basic knowledge of solutions in Power Apps and connection references. You should have a solution created already and a connection reference in that solution for your data source. If you haven't, follow the steps outlined in the links below to create one.
@@ -212,7 +230,7 @@ There are two ways to get the ID of your solution:
 
    This command will output a table to the console with the `Id`, `SolutionUniqueName`, and `FriendlyName` solution properties.
 
-1. Copy the solution Id and save it for later use.
+1. Copy the solution `Id` and save it for later use.
 
 **Use the Power Apps solution explorer:**
 
@@ -374,22 +392,4 @@ Once connections are added, you can update the app to use the generated model an
    npm run build | pac code push
    ```
 
-## Retrieve a dataset name and table ID
 
-> [!IMPORTANT]
-> The following steps to retrieve a dataset name and table ID are a temporary workaround. We plan to add an easier mechanism to get these values.
-
-If you don't already have the table and dataset name, you can get them by running a canvas app and copying the values from the browser network inspector:
-
-1. Create a new canvas app in Studio.
-1. Add the connection to a canvas app.
-1. Bind the connection to a gallery control.
-1. Publish and run the app.
-1. Open your browser's **Developer Tools**, go to the **Network** tab, and inspect requests made when the app loads. Check the "invoke" request, and go to its response.
-1. Find an Azure API Management (APIM) request with the connection ID, dataset name, and table ID, and copy those values.
-
-   Using this example data request URL through APIM, look for the `<Connection ID>`, `<Dataset name>`, and `<Table ID>` values in these places in the URL:
-
-   ```http
-   https[]()://{id value}.01.common.azure-apihub.net/apim/sharepointonline/<Connection ID>/datasets/<Dataset name>/tables/<Table ID>/items
-   ```
