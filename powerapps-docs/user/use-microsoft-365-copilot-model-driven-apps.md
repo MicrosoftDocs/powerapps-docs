@@ -72,6 +72,7 @@ Microsoft 365 Copilot chat in model-driven apps lets you use any agent available
 1. The **Tools** and **Sources** menu inside the input box is not available.
 1. Context IQ results, which provide intelligent contextual information and suggestions, do not currently load in the embedded Copilot chat experience.
 1. To obtain answers about your Dataverse data within the app, you need to be on a grid or form page in the application.
+1. Agents published to Microsoft 365 Copilot via Microsoft Copilot Studio channels are not currently available.
 
 ## Related information
 
