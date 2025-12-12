@@ -180,7 +180,7 @@ Some proxies are configured by default to host resources in a manner that appear
 
 > [!NOTE]
 > Microsoft Support cannot resolve these networking issues.
-> Enterprise admins may be able mitigate this by using Microsoft Edge policies such as [LocalNetworkAccessAllowedForUrls](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-browser-policies/localnetworkaccessallowedforurls) or by updating proxy configurations according to their vendor's guidelines.
+> Enterprise admins may be able mitigate this by updating browser policies such as LocalNetworkAccessAllowedForUrls for [Microsoft Edge](https://learn.microsoft.com/deployedge/microsoft-edge-browser-policies/localnetworkaccessallowedforurls) and [Google Chrome](https://chromeenterprise.google/policies/#LocalNetworkAccessAllowedForUrls) or by updating proxy configurations according to their vendor's guidelines.
 
 ## Data types size limits
 
