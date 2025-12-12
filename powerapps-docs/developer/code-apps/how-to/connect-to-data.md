@@ -101,13 +101,13 @@ Copy the API name and the connection ID from PAC CLI to the URL for each connect
 
 After you create or identify existing connections to use, and copy the connection metadata from the previous step, add those connections to the app.
 
-Adding the data sources to the app will automatically generate a typed TypeScript model and service file in the repo. For example, the Office 365 Users data source produces `Office365UsersModel` and `Office365UsersService`.
+Adding the data sources to the app automatically generates a typed TypeScript model and service file in the repo. For example, the Office 365 Users data source produces `Office365UsersModel` and `Office365UsersService`.
 
 ### Add a nontabular data source
 
 Add a nontabular data source (for example Office 365 Users) to the app using the PAC CLI [pac code add-data-source](/power-platform/developer/cli/reference/code#pac-code-add-data-source) command.
 
-From a command line, run the following. Use the API name and connection ID collected from previous steps.
+From a command line, run the following command. Use the API name and connection ID collected from previous steps.
 
 ```powershell
 pac code add-data-source -a <apiName> -c <connectionId>
@@ -167,7 +167,7 @@ If you don't already have the table and dataset name, you can get them by runnin
 
 ### Add a SQL stored procedure as a data source
 
-From a command line, run the following. Use the API name and connection ID collected previously.
+From a command line, run the following command. Use the API name and connection ID collected previously.
 
 ```powershell
 pac code add-data-source -a <apiId> -c <connectionId> -d <dataSourceName> -sp <storedProcedureName> 
@@ -187,7 +187,7 @@ pac code add-data-source `
 
 If needed, you can delete data sources after adding.
 
-From a command line, run the following. Use the API name and connection ID collected previously.
+From a command line, run the following command. Use the API name and connection ID collected previously.
 
 ```powershell
 pac code delete-data-source -a <apiName> -ds <dataSourceName> 
@@ -209,7 +209,7 @@ pac code delete-data-source `
 Starting in version 1.51.1 of the Power Apps CLI released in December 2025, you can use connection references to add data sources to your code app. A connection reference is a solution component that points to a specific connection for a connector. Instead of binding your app directly to a user-specific connection, you bind it to a reference. This makes the solution environment-aware and portable across Dev, Test, and Prod environments for smooth application lifecycle management.
 
 > [!NOTE]
-> This section assumes a basic knowledge of solutions in Power Apps and connection references. You should have a solution created already and a connection reference in that solution for your data source. If you haven't, follow the steps outlined in the links below to create one.
+> This section assumes you have a basic knowledge of solutions in Power Apps and connection references. You should have a solution created already and a connection reference in that solution for your data source. If you haven't, follow the steps outlined in the links below to create one.
 >
 > - [Learn about solutions in Power Apps](../../../maker/data-platform/solutions-overview.md).
 > - [Learn about connection references and what makes them useful to your Power Apps](../../../maker/data-platform/create-connection-reference.md)
@@ -222,13 +222,13 @@ There are two ways to get the ID of your solution:
 **Use the PAC CLI solution list command:**
 
 1. Open a command prompt or terminal window.
-1. Run the following command to get a list of solutions in [the environment you are connected to](/power-platform/developer/cli/introduction#manage-auth-profiles):
+1. Run the following command to get a list of solutions in [the environment you're connected to](/power-platform/developer/cli/introduction#manage-auth-profiles):
 
    ```powershell
    pac solution list --json | ConvertFrom-Json | Format-Table
    ```
 
-   This command will output a table to the console with the `Id`, `SolutionUniqueName`, and `FriendlyName` solution properties.
+   This command outputs a table to the console with the `Id`, `SolutionUniqueName`, and `FriendlyName` solution properties.
 
 1. Copy the solution `Id` and save it for later use.
 
@@ -238,7 +238,7 @@ There are two ways to get the ID of your solution:
 1. On the left pane, select **Solutions**. If the item isn't in the side panel pane, select **More** and then select the item you want.
 1. Find the solution that contains the connection reference for your data source.
 1. Select the solution to open it.
-1. In the URL of the browser, you will see the solution ID at the end of the URL. Your URL will be of the form:
+1. In the URL of the browser, find the solution ID at the end of the URL. Your URL is of the form:
 
    ```
    https://make.powerapps.com/environments/environmentId/solutions/solutionId
@@ -259,7 +259,7 @@ There are two ways to get the connection reference to your data source:
     pac code list-connection-references -env <environmentURL> -s <solutionID>
    ```
 
-1. The output will include the display name, logical name, and description of the connection references in the solution.
+1. The output includes the display name, logical name, and description of the connection references in the solution.
 
 **Use the Power Apps solution explorer to examine the connection references in a solution:**
 
@@ -270,13 +270,13 @@ There are two ways to get the connection reference to your data source:
 
 #### Add the data source to your code app using the connection reference
 
-From a command line, run the following. Use the solution ID and connection reference logical name collected from previous steps.
+From a command line, run the following command. Use the solution ID and connection reference logical name collected from previous steps.
 
 ```shell
 pac code add-data-source -a <apiName> -cr <connectionReferenceLogicalName> -s <solutionID>
 ```
 
-The app will now use the connection associated with the connection reference in your Power Apps solution.
+The app now uses the connection associated with the connection reference in your Power Apps solution.
 
 ## Update the app to call connections
 
