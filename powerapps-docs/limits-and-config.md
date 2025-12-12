@@ -179,7 +179,7 @@ In 2025, many browsers introduced additional security controls to prevent cross-
 Some proxies are configured by default to host resources in a manner that appears to the end-user's browser as a local network resource, which now results in those requests being blocked. This may appear to end-users as unexpected permission prompts, silent failures, or generic messages such as "This app stopped working. Try refreshing your browser".
 
 > [!NOTE]
-> Power Apps cannot resolve these networking issues.
+> Microsoft Support cannot resolve these networking issues.
 > Enterprise admins may be able mitigate this by using Microsoft Edge policies such as [LocalNetworkAccessAllowedForUrls](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-browser-policies/localnetworkaccessallowedforurls) or by updating proxy configurations according to their vendor's guidelines.
 
 ## Data types size limits
