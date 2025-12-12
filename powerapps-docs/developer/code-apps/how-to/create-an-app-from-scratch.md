@@ -1,15 +1,15 @@
 ---
-title: "How to: Create a code app from scratch (preview)"
+title: "Quickstart: Create a code app from scratch (preview)"
 description: "Learn how to create a code app from scratch"
 ms.author: jordanchodak
 author: jordanchodakWork
 ms.date: 12/9/2025
 ms.reviewer: jdaly
-ms.topic: how-to
+ms.topic: quickstart
 contributors:
  - JimDaly
 ---
-# How to: Create a code app from scratch (preview)
+# Quickstart: Create a code app from scratch (preview)
 
 This article walks through how to set up a blank app from [Vite](https://vite.dev/) and turn it into a Power Apps code app. It covers configuring a TypeScript app using the Power Platform SDK.
 
@@ -63,6 +63,23 @@ This article walks through how to set up a blank app from [Vite](https://vite.de
 You should see the app open similar to:
 
 :::image type="content" source="media/npm-run-dev-result.png" alt-text="See the test app playing locally in the browser":::
+
+## Build and deploy to Power Apps
+
+In the terminal window, run these commands:
+
+```powershell
+npm run build | pac code push
+```
+
+- [npm run build](https://docs.npmjs.com/cli/v9/commands/npm-run-script) Runs the scripts configured in the `package.json` file with the key value of `build`. In this case, the script is `"tsc -b && vite build"`.
+- [pac code push](/power-platform/developer/cli/reference/code#pac-code-push) Publishes a new version of a Code app.
+
+If successful, this command should return a Power Apps URL to run the app.
+
+Optionally, you can open  [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to see the app. You can play, share, or see details from there.
+
+Congratulations! You successfully pushed your first code app!
 
 ### Related information
 

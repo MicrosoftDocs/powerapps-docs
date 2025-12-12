@@ -25,14 +25,12 @@ landingContent:
           - text: Overview
             url: overview.md
           - text: "Quickstart: Create your first code app"
-            url: quickstart.md
+            url: how-to/create-an-app-from-scratch.md
   # Card
   - title: How To
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: "Create an app from scratch"
-            url: how-to/create-an-app-from-scratch.md
           - text: "Connect to data"
             url: how-to/connect-to-data.md
           - text: "Connect to Dataverse"
