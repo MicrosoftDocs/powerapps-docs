@@ -5,7 +5,7 @@ author: yogeshgupta698
 
 ms.topic: reference
 ms.component: canvas
-ms.date: 2/14/2024
+ms.date: 12/15/2025
 ms.subservice: canvas-maker
 ms.author: yogupt
 ms.reviewer: mkaur
@@ -21,6 +21,14 @@ contributors:
 [This article is pre-release document and is subject to change.]
 
 A control that makers can use to add predefined questions that end users can use to get generated answers.
+
+> [!IMPORTANT]
+> Starting February 2, 2026, adding the Copilot control to new canvas apps will be discontinued. Existing apps with this control will remain functional for a limited time but will eventually no longer be supported.
+
+> [!NOTE]
+> - This is a preview feature.
+> - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2189520), and are available before an official release so that customers can get early access and provide feedback.
+> - App Copilot for canvas apps is currently rolling out and might not yet be available in your region. App Copilot may be available on [Power Apps mobile](../../mobile/run-powerapps-on-mobile.md) for mobile devices before it becomes available on the web browser during rollout.
 
 ## Description
 
