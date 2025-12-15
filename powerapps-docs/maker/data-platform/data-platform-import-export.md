@@ -71,6 +71,9 @@ The new import experience lets users import data directly from an Excel file int
 
 To use the feature a Power Platform admin must enable the **"Import Excel to existing table with assisted mapping"** environment setting in the Power Platform admin center. Select the environment, and then select **Settings** > **Product** > **Features** and enable the **"Import Excel to existing table with assisted mapping"** setting.
 
+> [!NOTE]
+> The **"Import Excel to existing table with assisted mapping"** for Import from Excel does not accurately control the feature during the rollout. This setting is scheduled to be retired and will be removed from PPAC as we transition fully to the new experience.
+
 ##### Import from Excel (preview) steps
 
 1. Go to the table you want to import data to, and then on the command bar select **Import** > **Import from Excel (Preview)**.
