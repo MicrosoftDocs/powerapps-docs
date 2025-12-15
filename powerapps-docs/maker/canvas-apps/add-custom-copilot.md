@@ -25,7 +25,6 @@ You can integrate a custom Copilot created in Microsoft Copilot Studio and enabl
 > [!NOTE]
 > - This is a preview feature.
 > - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2189520), and are available before an official release so that customers can get early access and provide feedback.
-> - Starting February 2, 2026, this feature will be removed. Makers will no longer be able to add a custom copilot to new Canvas apps. Existing apps that already use this will continue to function for now, but will be fully deprecated in the future.
 > - App Copilot for canvas apps is currently rolling out and might not yet be available in your region. App Copilot may be available on [Power Apps mobile](../../mobile/run-powerapps-on-mobile.md) for mobile devices before it becomes available on the web browser during rollout.
 
 ## Availability
