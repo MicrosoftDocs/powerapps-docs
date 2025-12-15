@@ -24,9 +24,10 @@ contributors:
 Model-driven apps have a modern, refreshed look when the **New look** toggle is turned on. The new look provides updated styling including fonts, colors, borders, and shadows that align with the latest [Microsoft Fluent design system](https://react.fluentui.dev/?path=/docs/concepts-introduction--page). The updated look makes model-driven apps easier to use so that users can accomplish their goals quickly and efficiently. The Fluent design system provides consistency, quality, and Microsoft-wide platform coherence. It also provides a solid foundation for extensibility and allows support for dark mode in the future.
 
 > [!IMPORTANT]
-> With the **2025 Wave 1** release, the **New Look** toggle is removed for users. Learn more in [Managing always on rollout](#managing-always-on-rollout).
+> With the **2026 Wave 1** release, the **New Look** will be mandatory for all users. Makers will no longer be able to switch a model-driven app to the classic clook. Learn more in [Managing always on rollout](#managing-always-on-rollout).
 >
-> With the [October 2024 monthly channel release](/power-platform/released-versions/common-data-service/monthly-2410), the **New Look** toggle is removed for monthly channel users. Learn more in [Managing always on rollout](#managing-always-on-rollout). This change was shared in [2024 wave 2 release note](/power-platform/release-plan/2024wave2/power-apps/use-modern-refreshed-look-model-driven-apps) and [October 2024 monthly release note](/power-platform/released-versions/common-data-service/monthly-2410#new-look-always-on).
+> The **New look** toggle was removed for users with the **2025 Wave 1** release. 
+
 
 ## What's included with the modern, refreshed look
 
@@ -36,9 +37,6 @@ Here's what you can expect in the modern, refreshed experience:
 - New Fluent-based controls in forms, business process flows, and dialogs. Dialogs now resize height automatically based on the content.
 - A new Power Apps grid in place of the read-only grid in view and standard, dashboard pages.
 - A new mechanism for customizing the app header colors to match your personal or organizational branding. Learn more in [Use modern themes](../maker/model-driven-apps/modern-theme-overrides.md).
-- An end user setting called **Try the new look** that turns on the modern, refreshed experience.
-
-:::image type="content" source="media/modern-try-toggle-off.png" alt-text="The 'Try the new look' setting.":::
 
 ### Command bar
 
@@ -177,13 +175,11 @@ After using the modern, refreshed look in your model-driven apps, tell us what y
 
 With the **2025 Wave 1** (or October 2024 monthly release for monthly channel users), users no longer see the **New look** toggle in the app header. The new look is always on. Makers and admins can force users to have the classic look by turning the app setting **New look for model driven apps** to **false**. Learn more in [Revert to the classic look](#revert-to-the-old-ui).
 
-### Revert to the old UI
- > [!NOTE]
- > Starting **2025 Wave 1** end users in the semi-annual channel lose the option of switching back to the old UI. Admins can still turn off the new look for all users by updating the app setting.
+### Revert to the classic look
+> [!NOTE]
+> With the **2026 Wave 1** release, the **New Look** will be mandatory for all users. Makers will no longer be able to switch a model-driven app to the classic clook.
 
-Learn more about turning off the modern, refreshed look, in [Manage model-driven app settings in the app designer](../maker/model-driven-apps/app-properties.md).
-
-Admins can turn off the **New look** setting across all apps in an organization by using the solution explorer to set the **New look for model driven apps** value to **No**. This hides the **New look** toggle and prevents the modern, refreshed look from taking effect.
+While end users have not been able to switch back to the classic look since the **2025 Wave 1** release, admins can still turn off the new look for all users by updating the **New look for model driven apps** app setting. 
 
 1. Open <https://make.powerapps.com/>
 2. Under **Solutions** open an existing solution with one or more model-driven apps.
@@ -198,20 +194,5 @@ Admins can turn off the **New look** setting across all apps in an organization 
 11. Select **Save**.
 12. Publish all customizations.
 
-### Enabling the modern look for my app and removing the toggle
-
-In scenarios where makers and admins want to turn on an "Always on" modern experience, they can activate this by setting the **New look always on** app setting. This turns on the modern, refreshed look for all users of the app and removes the header switch ability for end users to turn off **New look**.
-
-Admins can turn on the **New look always on** setting across all apps in an organization by using the solution explorer to set the **New look always on** value to **Yes**. This hides the **New look** toggle and turns on the modern, refreshed look for all users.
-
-1. Open <https://make.powerapps.com/>
-1. Under Solutions open an existing solution with one or more model-driven apps:
-1. Select **Add Existing** > **More** > **Setting**.
-1. Search for **New look always on**.
-1. Select **New look always on**.
-1. Select **Add** to add it to the solution.
-1. Select **New look always on** from the solution explorer.
-1. Update **Setting Environment Value** to **Yes**.
-1. Select **Save**.
-1. Publish all customizations.
+See [Manage model-driven app settings in the app designer](../maker/model-driven-apps/app-properties.md) for more information about this and other app settings.
 
