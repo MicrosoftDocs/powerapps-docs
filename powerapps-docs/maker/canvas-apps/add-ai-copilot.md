@@ -31,6 +31,7 @@ The Copilot control is an AI assistant that you can add to your canvas apps. Cop
 >
 > - This is a preview feature.
 > - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2216214), and are available before an official release so that customers can get early access and provide feedback.
+> - Starting February 2, 2026, this feature will be removed. Makers will no longer be able to add the Copilot control to new Canvas apps. Existing apps that already use this control will continue to function for now, but will be fully deprecated in the future.
 
 > [!NOTE]
 >
