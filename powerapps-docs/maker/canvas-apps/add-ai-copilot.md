@@ -29,7 +29,7 @@ The Copilot control is an AI assistant that you can add to your canvas apps. Cop
 
 > [!IMPORTANT]
 >
-> February 2, 2026, adding the Copilot control to new canvas apps will be discontinued. Existing apps with this control will remain functional for a limited time but will eventually no longer be supported.
+> Starting February 2, 2026, adding the Copilot control to new canvas apps will be discontinued. Existing apps with this control will remain functional for a limited time but will eventually no longer be supported.
 
 
 > [!NOTE]
