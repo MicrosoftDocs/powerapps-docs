@@ -15,9 +15,6 @@ search.audienceType:
 
 The Microsoft Dataverse business layer provides a Tabular Data Stream (TDS) endpoint that emulates a SQL data connection. The SQL connection provides read-only access to the table data of the target Dataverse environment allowing you to execute SQL queries against the Dataverse data tables. No custom views of the data are provided. The Dataverse endpoint SQL connection uses the Dataverse security model for data access. Data can be obtained for all Dataverse tables to which a user has access.
 
-> [!NOTE]
-> Only the SQL data connection through SQL Server Management Studio and .NET libraries is in preview. Power BI is generally available.
-
 ## Prerequisites
 
 The **Enable TDS endpoint** setting must be enabled in your environment. That setting is enabled by default. More information: [Manage feature settings](/power-platform/admin/settings-features)
@@ -28,7 +25,7 @@ To prevent data exfiltration, turn on the [user level access control for TDS end
 
 TDS (SQL) endpoint applications support for Power BI and SQL Server Management Studio is described next.
 
-### SQL Server Management Studio (Preview)
+### SQL Server Management Studio 
 
 You can also use [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) (SSMS) version 18.12.1 or later with the Dataverse endpoint SQL connection. Examples of using SSMS with the SQL data connection are shown in the figure.
 

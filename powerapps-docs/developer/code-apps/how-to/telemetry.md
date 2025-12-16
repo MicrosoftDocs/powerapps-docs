@@ -32,7 +32,7 @@ The [PAC `telemetry` commands](/power-platform/developer/cli/reference/telemetry
 
 ## `code` command‑specific telemetry
 
-Starting with version 1.51.1 of the Power Platform CLI, you can manage telemetry for the [`code` commands](/power-platform/developer/cli/reference/code), without affecting other PAC CLI commands.
+Starting with version 1.51.1 of the Power Platform CLI released in December 2025, you can manage telemetry for the [`code` commands](/power-platform/developer/cli/reference/code), without affecting other PAC CLI commands.
 
 The user‑configurable settings are stored in a `userSettings.json` JSON file under the CLI config directory named `.powerapps-cli`.
 
