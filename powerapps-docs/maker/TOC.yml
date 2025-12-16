@@ -59,6 +59,8 @@
       items:
       - name: AI in apps overview
         href: ../user/ai-in-apps.md
+      - name: Use Microsoft 365 Copilot chat (preview)
+        href: ../user/use-microsoft-365-copilot-model-driven-apps.md
       - name: Supervise agents using agent feed (preview)
         href: ../user/supervise-agents-with-agent-feed.md
       - name: Use suggested actions in the agent feed (preview)
@@ -255,7 +257,7 @@
     href: ./plan-designer/plan-designer.md  
   - name: Create a plan
     href: ./plan-designer/create-plan.md 
-  - name: Generate process diagrams (preview)
+  - name: Generate process diagrams
     href: ./plan-designer/process-diagram.md
   - name: Build a solution
     href: ./plan-designer/build-solution.md
@@ -1802,7 +1804,11 @@
     - name: Copilot chat for apps
       href:
       items:
-      - name: Add Copilot chat to your app
+      - name: Add Microsoft 365 Copilot chat to your app (preview)
+        href: ./model-driven-apps/add-microsoft-365-copilot.md
+      - name:  Customize Microsoft 365 Copilot chat with an agent (preview) 
+        href: ./model-driven-apps/customize-microsoft-365-copilot-chat.md
+      - name: Add Copilot chat to your app 
         href: ./model-driven-apps/add-ai-copilot.md
       - name: Customize Copilot chat (preview)
         href:
