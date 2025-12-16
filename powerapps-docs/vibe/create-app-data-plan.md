@@ -101,7 +101,7 @@ Use inline actions to edit the style of your app.
 You can use quick keys to open and close inline edit actions while editing your app.
 
 - **Hold and release Alt** to toggle the inline edit gesture.
-- **Press Esc** or **select outside the of the app editing area** to dismiss the inline edit gesture.
+- **Press Esc** to dismiss the inline edit gesture.
 
 ## Edit the generated plan
 
