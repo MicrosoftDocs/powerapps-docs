@@ -36,14 +36,15 @@ After you describe the page, the system then processes your requirements and spe
 1. Add tables and images as appropriate by selecting **Add data** > **Add table**. You can link up to six Dataverse tables. In the screenshot, the account table is added.
    :::image type="content" source="media/generative-page/add-table-generative-page.png" alt-text="Add a table to the generative page" lightbox="media/generative-page/add-table-generative-page.png":::
 
-1. Optionally upload an image to guide the UI of your generated page by selecting **Add data** > **Attach image**. This can be a rough napkin sketch or a higher resolution image.
+1. Optionally upload one or more images to guide the UI of your generated page by selecting **Add data** > **Attach image**. This can be a rough napkin sketch or a higher resolution image. The image can represent the structure or layout of the entire page you want to create or it can be visuals for a certain section or component you want to mimic.
+1. Optionally enable or disable the **Include images (preview)** tool to allow the agent to utilize images from a curated, safe library of 25k stock images to support use cases like default/placeholder images, decorative backgrounds, static content blocks, and richer empty/error states.
 1. Optionally choose the AI model you want to use to generate the page. 
     :::image type="content" source="media/generative-page/choose-model-generative-page.png" alt-text="Choose the AI model you want to use to generate your page" lightbox="media/generative-page/choose-model-generative-page.png":::
     
 1. When you're finished describing the page, select **Generate page**.
 
 The agent will begin a multi-step build process that you can observe in real time:
-- **Streaming its thoughts**: The agent first outlines its interpretation of your prompt, listing requirements, assumptions, and an execution plan.
+- **Thought streaming**: The agent first outlines its interpretation of your prompt, listing requirements, assumptions, and an execution plan.
 - **Code generation**: Next, it writes the underlying code for your page based on the plan.
 - **Transpilation**: The generated code is then transpiled to ensure compatibility and proper rendering.
 - **Final rendering**: Finally, the completed user experience is displayed.
@@ -72,7 +73,10 @@ After generating your page, you have several options to refine and finalize it:
    > This capability is currently only available starting with the second iteration in the current session.
 
 1. **Attach a screenshot for quick reference**
-    In the chat experience, click **Attach** > **Add screenshot** to include a screenshot of the current preview with your next interaction with the app agent. This is useful for helping to adjust the visuals of the page. 
+    In the chat experience, click **Attach** > **Add screenshot** to include a screenshot of the current preview with your next interaction with the app agent. This is useful for helping to adjust the visuals of the page. You can alternatively attach other images to help refine the visuals of the entire page or a particular piece of the page.
+
+1.  **Check for accessibility issues (new)**
+    After each iteration of code generation, the **Accessibility assistant** at the bottom of the screen scans the generated code assessing it with respect to accessibility. You can see a high level status update directly on screen and can choose to open the detailed results in a panel. Click **Auto fix** to pass any violations directly to the agent for automatic resolution. 
 
 1. **Save and publish**
     In the command bar, select **Save** to avoid losing progress on your page.  
@@ -133,7 +137,7 @@ These are the current limitations of generative pages:
 
 ### Can I start designing my app in Plan Designer and then use generative pages? 
 
-Yes, while there's currently no direct integration between plans and generative pages, you can use plans to define your tables and apps, and then switch to the app designer to create any desired generative pages.
+Yes, while there's currently no direct integration between plans and generative pages, you can use plans to define your tables and apps, and then switch to the model app designer to create any desired generative pages.
 
 ### Are there any additional fees or credits needed to use generative pages? 
 
