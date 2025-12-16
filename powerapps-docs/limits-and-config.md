@@ -172,6 +172,16 @@ Power Apps doesn't support running with a proxy enabled. This can cause unpredic
 - Some proxies (such as Zscaler, Blue Coat) modify Power Apps requests by removing headers (CORS or authentication headers). Power Apps relies on these headers to load the app.
 - Some proxies (such as Microsoft Defender for Cloud Apps, McAfee) might intercept and change the URL of an app or embedded app. For example, if there's a Dynamics 365 app that is running under domain **org.crm.dynamics.com** or a canvas app that is running under domain **apps.powerapps.com**, the platform doesn't support a proxy that changes these domains to a custom domain such as **mycustomdomain.com**. This can cause unpredictable behavior when the platform tries to retrieve tokens that are necessary to run the app.
 
+## Local network access and permission issues
+
+In 2025, many browsers introduced additional security controls to prevent cross-origin attacks and unauthorized access to [private network resources.](https://developer.chrome.com/blog/local-network-access) These changes went into effect for Edge with their [December 4, 2025 release](/deployedge/microsoft-edge-relnote-stable-channel#version-1430365066-december-4-2025).
+
+Some proxies are configured by default to host resources in a manner that appears to the end-user's browser as a local network resource, which now results in those requests being blocked. This may appear to end-users as unexpected permission prompts, silent failures, or generic messages such as "This app stopped working. Try refreshing your browser".
+
+> [!NOTE]
+> Microsoft Support cannot resolve these networking issues.
+> Enterprise admins may be able mitigate this by updating browser policies such as LocalNetworkAccessAllowedForUrls for [Microsoft Edge](/deployedge/microsoft-edge-browser-policies/localnetworkaccessallowedforurls) and [Google Chrome](https://chromeenterprise.google/policies/#LocalNetworkAccessAllowedForUrls) or by updating proxy configurations according to their vendor's guidelines.
+
 ## Data types size limits
 
 For canvas app data type limits, you can find information about size limits on text, hyperlinks, images, and media in [Data types in Power Apps](/power-platform/power-fx/data-types#text-hyperlink-image-and-media).
