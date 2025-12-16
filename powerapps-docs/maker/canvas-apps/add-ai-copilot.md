@@ -10,7 +10,7 @@ ms.collection:
     - bap-ai-copilot
     - get started
 ms.reviewer: 
-ms.date: 5/25/2025
+ms.date: 12/15/2025
 ms.update-cycle: 180-days
 ms.subservice: canvas-maker
 ms.author: tapanm
@@ -29,12 +29,15 @@ The Copilot control is an AI assistant that you can add to your canvas apps. Cop
 
 > [!IMPORTANT]
 >
-> - This is a preview feature.
-> - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2216214), and are available before an official release so that customers can get early access and provide feedback.
+> Starting February 2, 2026, adding the Copilot control to new canvas apps will be discontinued. Existing apps with this control will remain functional for a limited time but will eventually no longer be supported.
+
 
 > [!NOTE]
 >
-> This feature is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview).
+> - This is a preview feature.
+> - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2216214), and are available before an official release so that customers can get early access and provide feedback.
+> - This feature is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview).
+
 
 ## Prerequisites
 
