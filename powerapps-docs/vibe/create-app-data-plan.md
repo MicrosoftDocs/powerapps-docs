@@ -4,7 +4,7 @@ description: Learn how the new Power Apps vibe code experience simplifies app cr
 author: mduelae
 ms.author: mkaur
 ms.reviewer: mkaur
-ms.date: 11/17/2025
+ms.date: 12/16/2025
 ms.topic: concept-article
 ---
 
@@ -80,6 +80,13 @@ Use the chat input on the work surface to ask questions or request changes to th
 - If you ask a question, the agent provides an explanatory response.
 - If you request a change, the agent evaluates the request, outlines an implementation plan, and then applies it.
 - If the agent can't implement the change directly, you receive step-by-step guidance or instructions for retrying the request.
+
+### Keyboard shortcuts for inline actions
+
+You can use quick keys to open and close inline edit actions white editing your app.
+
+- **Hold and release Alt** to toggle the inline edit gesture.
+- **Press Esc** or **select outside the of the app editing area** to dismiss the inline edit gesture.
 
 ### Edit the app by using inline actions
 
