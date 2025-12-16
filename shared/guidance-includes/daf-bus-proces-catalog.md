@@ -25,10 +25,10 @@ The catalog defines six levels of content:
 
     In Dynamics 365, scenarios are patterns of repeatable configurations that support a specific business process. They include the most common use cases, scenarios, and industries. Often, there are many ways to implement Dynamics 365 to meet your business requirements. Our goal with patterns is to provide a baseline for your implementation. We've identified more than 3000 scenarios and patterns, and we expect that number to grow over time.
 
-1. System process
+1. System processes
 
     A system process is a portion of a business process that uses a specific form, page, or UI element in Dynamics 365.
 
 1. Test cases
 
-A test case is a detailed set of conditions and steps used to determine whether a software application or system functions correctly. It is an essential part of the software testing process, designed to ensure that the software meets its requirements and performs as expected. Test cases are used to identify defects, ensure quality, and verify that the software behaves as intended under various conditions.  
+A test case is a detailed set of conditions and steps used to determine whether a software application or system functions correctly. It is an essential part of the software testing process, designed to ensure that the software meets its requirements and performs as expected. Test cases are used to identify defects, ensure quality, and verify that the software behaves as intended under various conditions.
