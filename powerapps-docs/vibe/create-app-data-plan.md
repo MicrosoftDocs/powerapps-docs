@@ -81,13 +81,6 @@ Use the chat input on the work surface to ask questions or request changes to th
 - If you request a change, the agent evaluates the request, outlines an implementation plan, and then applies it.
 - If the agent can't implement the change directly, you receive step-by-step guidance or instructions for retrying the request.
 
-### Keyboard shortcuts for inline actions
-
-You can use quick keys to open and close inline edit actions white editing your app.
-
-- **Hold and release Alt** to toggle the inline edit gesture.
-- **Press Esc** or **select outside the of the app editing area** to dismiss the inline edit gesture.
-
 ### Edit the app by using inline actions
 
 Use inline actions to edit the style of your app.
@@ -101,6 +94,14 @@ Use inline actions to edit the style of your app.
     When you select an element, open inline chat and request a change like **Make this button primary blue**. The selected element’s context is passed automatically, so you don’t have to describe it in the prompt. This feature is equivalent to typing the same request in the main chat but faster.
 
 1. When you're done, review the result in the visual preview. If needed, switch to **Code** view or **Split** view to inspect the generated files.
+
+
+### Keyboard shortcuts for inline actions
+
+You can use quick keys to open and close inline edit actions white editing your app.
+
+- **Hold and release Alt** to toggle the inline edit gesture.
+- **Press Esc** or **select outside the of the app editing area** to dismiss the inline edit gesture.
 
 ## Edit the generated plan
 
