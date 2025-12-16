@@ -23,7 +23,7 @@ contributors:
 A control that makers can use to add predefined questions that end users can use to get generated answers.
 
 > [!IMPORTANT]
-> Starting February 2, 2026, adding the Copilot control to new canvas apps will be discontinued. Existing apps with this control will remain functional for a limited time but will eventually no longer be supported.
+> Starting February 2, 2026, adding a Copilot answer control to new canvas apps will be discontinued. Existing apps with this control will remain functional for a limited time but will eventually no longer be supported.
 
 > [!NOTE]
 > - This is a preview feature.
