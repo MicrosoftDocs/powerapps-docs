@@ -14,29 +14,29 @@ search.audienceType:
 contributors:
   - mduelae
   - shivchan-msft
----
-# Grid Container Control in Power Apps
-
-The **Grid container** control allows you to **layout child components anywhere in a grid pattern**, giving precise control over row and column placement.
-
-CSS-style grids inspire this container: you can define **rows and columns** and position each child exactly where you want using child properties.
 
 ---
+# Grid container control in Power Apps
+
+The **Grid container** control gives you a way to **layout child components in a grid pattern**. You get precise control over where each component goes in terms of rows and columns.
+
+This container works like CSS-style grids. You define the **rows and columns** and set the exact position for each child component using its properties.
+
+
 
 ## Description
 
-The **Grid** container control provides a flexible layout system for Canvas apps, enabling:
+The **Grid** container control offers a flexible layout system for canvas apps. It enables you to:
 
-- Placement of child components in a **grid pattern**
-- Specification of **row and column start/end** for each child
-- Responsive adjustments when the container or screen size changes
-- Alignment, spacing, and overflow control within the grid
+- Place child components in a **grid pattern**
+- Specify the **row and column start and end** for each child
+- Make responsive adjustments when the container or screen size changes
+- Control alignment, spacing, and overflow within the grid
 
-This approach eliminates the need for manually positioning each component, making apps **more maintainable and responsive**.
+By using this approach, you don't need to manually position each component. Your apps become **more maintainable and responsive**.
 
----
 
-## Grid Container Properties
+## Grid container properties
 
 ### Display
 
@@ -55,48 +55,45 @@ This approach eliminates the need for manually positioning each component, makin
 - **Padding**
   - **Top / Bottom / Left / Right** – The spacing between the container edges and its child components.
 
-### Color & Border
+### Color and border
 
-- **Color** – Foreground color of the container (used for borders and text if applicable).
+- **Color** – Foreground color of the container, used for borders and text if applicable.
 - **Border**
   - **Style** – Type of border: Solid, Dashed, Dotted, or None.
   - **Thickness** – Width of the border in pixels.
   - **Color** – Color of the border.
-- **Border radius** – The degree to which the corners of the container are rounded (applied to all corners uniformly or can be split into individual corners in advanced settings).
+- **Border radius** – The degree to which the corners of the container are rounded. You can apply this setting to all corners uniformly or split it into individual corners in advanced settings.
 - **Drop shadow** – Shadow effect applied to the container. Options: None, Light, Medium, or Heavy.
 
 ### Visibility
 
-- **Visible** – Whether the grid container is displayed. Toggle On/Off.
+- **Visible** – Whether the grid container is displayed. Toggle On or Off.
 
-### Grid Layout Properties (Child-specific)
+### Grid layout properties (child-specific)
 
 - **Column Start / Column End** – Defines the starting and ending columns for a child component.
 - **Row Start / Row End** – Defines the starting and ending rows for a child component.
 
----
-
 ## Example
 
-1. Create a [blank canvas app](../create-blank-app.md) with **Responsive** layout.
-2. Create a new screen.
-3. From the **Insert** pane under **Layout**, select **Grid container**.
+1. Create a [blank canvas app](../create-blank-app.md) with a **Responsive** layout.
+1. Create a new screen.
+1. From the **Insert** pane under **Layout**, select **Grid container**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Insert grid container](../media/create-responsive-layout/insert-grid-container.png "Insert Grid Container")
+   :::image type="content" source="../media/create-responsive-layout/insert-grid-container.png" alt-text="Screenshot of inserting a grid container in Power Apps.":::
 
-4. Set container properties to occupy the full screen:  
+1. Set container properties to occupy the full screen:  
    - X = 0  
    - Y = 0  
    - Width = Parent.Width  
    - Height = Parent.Height
 
-5. Add several child components (buttons, text inputs, icons, media). For each child, set grid placement properties:  
+1. Add several child components, such as buttons, text inputs, icons, and media. For each child, set grid placement properties:  
    - Column Start / End  
    - Row Start / End  
    - Align in Cell
 
-6. Press **F5** to preview. Resize the screen and observe how child components **remain in their grid positions** and adjust responsively.
+1. Press **F5** to preview. Resize the screen and observe how child components **remain in their grid positions** and adjust responsively.
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
