@@ -38,7 +38,7 @@ After you describe the page, the system then processes your requirements and spe
 
 1. Optionally upload one or more images to guide the UI of your generated page by selecting **Add data** > **Attach image**. This can be a rough napkin sketch or a higher resolution image. The image can represent the structure or layout of the entire page you want to create or it can be visuals for a certain section or component you want to mimic.
 1. Optionally enable or disable the **Include images** (preview) tool to allow the agent to utilize images from a curated, safe library of 25,000 stock images to support use cases like default/placeholder images, decorative backgrounds, static content blocks, and richer empty or error states.
-   :::image type="content" source="media/generative-page/generative-page-includeImage-tool.png" alt-text="Include image tool to add an image from a library of stock images":::
+   :::image type="content" source="media/generative-page/generative-page-include-image-tool.png" alt-text="Include image tool to add an image from a library of stock images":::
 1. Optionally choose the AI model you want to use to generate the page. 
     :::image type="content" source="media/generative-page/choose-model-generative-page.png" alt-text="Choose the AI model you want to use to generate your page" lightbox="media/generative-page/choose-model-generative-page.png":::
     
