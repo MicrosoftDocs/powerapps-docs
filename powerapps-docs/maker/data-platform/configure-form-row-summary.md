@@ -12,7 +12,6 @@ contributors: jasongre
 ms.collection: bap-ai-copilot
 ms.custom: ignite-2024
 ms.service: powerapps
-contributors: jasongre
 ---
 # Configure a row summary for a model-driven app main form (preview)
 
