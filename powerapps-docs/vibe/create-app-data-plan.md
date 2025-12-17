@@ -4,7 +4,7 @@ description: Learn how the new Power Apps vibe code experience simplifies app cr
 author: mduelae
 ms.author: mkaur
 ms.reviewer: mkaur
-ms.date: 11/17/2025
+ms.date: 12/16/2025
 ms.topic: concept-article
 ---
 
@@ -94,6 +94,14 @@ Use inline actions to edit the style of your app.
     When you select an element, open inline chat and request a change like **Make this button primary blue**. The selected element’s context is passed automatically, so you don’t have to describe it in the prompt. This feature is equivalent to typing the same request in the main chat but faster.
 
 1. When you're done, review the result in the visual preview. If needed, switch to **Code** view or **Split** view to inspect the generated files.
+
+
+### Keyboard shortcuts for inline actions
+
+You can use quick keys to open and close inline edit actions while editing your app.
+
+- **Hold and release Alt** to toggle the inline edit gesture.
+- **Press Esc** to dismiss the inline edit gesture.
 
 ## Edit the generated plan
 
