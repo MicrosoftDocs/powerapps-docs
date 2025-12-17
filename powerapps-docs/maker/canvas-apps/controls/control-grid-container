@@ -16,17 +16,18 @@ contributors:
   - shivchan-msft
 
 ---
-# Grid container control in Power Apps
+# Grid container modern control in Power Apps (preview)
+
+[This article is a pre-release document and is subject to change.]
 
 The **Grid container** control gives you a way to **layout child components in a grid pattern**. You get precise control over where each component goes in terms of rows and columns.
 
 This container works like CSS-style grids. You define the **rows and columns** and set the exact position for each child component using its properties.
 
 
-
 ## Description
 
-The **Grid** container control offers a flexible layout system for canvas apps. It enables you to:
+The **Grid container** control offers a flexible layout system for canvas apps. It enables you to:
 
 - Place child components in a **grid pattern**
 - Specify the **row and column start and end** for each child
@@ -36,26 +37,21 @@ The **Grid** container control offers a flexible layout system for canvas apps. 
 By using this approach, you don't need to manually position each component. Your apps become **more maintainable and responsive**.
 
 
-## Grid container properties
-
-### Display
+## Display properties
 
 - **Gap** – The spacing in pixels between child components inside the grid.
-- **Rows** – The number of rows in the grid layout.
 - **Columns** – The number of columns in the grid layout.
+- **Rows** – The number of rows in the grid layout.
 
-- **Position**
-  - **X** – The horizontal distance from the left edge of the parent container (or screen if no parent).
-  - **Y** – The vertical distance from the top edge of the parent container (or screen if no parent).
+## Size and position
 
-- **Size**
-  - **Width** – The width of the grid container.
-  - **Height** – The height of the grid container.
+- **X** – The horizontal distance from the left edge of the parent container (or screen if no parent).
+- **Y** – The vertical distance from the top edge of the parent container (or screen if no parent).
+- **Width** – The distance between a control's left and right edges.
+- **Height** – The distance between a control's top and bottom edges.
+- **Padding** - The spacing between the container edges and its child components.
 
-- **Padding**
-  - **Top / Bottom / Left / Right** – The spacing between the container edges and its child components.
-
-### Color and border
+## Color and border
 
 - **Color** – Foreground color of the container, used for borders and text if applicable.
 - **Border**
@@ -65,11 +61,11 @@ By using this approach, you don't need to manually position each component. Your
 - **Border radius** – The degree to which the corners of the container are rounded. You can apply this setting to all corners uniformly or split it into individual corners in advanced settings.
 - **Drop shadow** – Shadow effect applied to the container. Options: None, Light, Medium, or Heavy.
 
-### Visibility
+## Visibility
 
-- **Visible** – Whether the grid container is displayed. Toggle On or Off.
+- **Visible** – Whether the grid container is displayed. Toggle **On** or **Off**.
 
-### Grid layout properties (child-specific)
+## Grid layout properties (child-specific)
 
 - **Column Start / Column End** – Defines the starting and ending columns for a child component.
 - **Row Start / Row End** – Defines the starting and ending rows for a child component.
