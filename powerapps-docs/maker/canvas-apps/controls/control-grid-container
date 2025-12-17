@@ -1,0 +1,102 @@
+---
+title: Grid container control in Power Apps
+description: Learn about the details, properties and examples of the grid container control in Power Apps.
+author: shivchan-msft
+
+ms.topic: reference
+ms.custom: canvas
+ms.reviewer: mkaur
+ms.date: 12/16/2025
+ms.subservice: canvas-maker
+ms.author: shivchan
+search.audienceType: 
+  - maker
+contributors:
+  - mduelae
+  - shivchan-msft
+---
+# Grid Container Control in Power Apps
+
+The **Grid container** control allows you to **layout child components anywhere in a grid pattern**, giving precise control over row and column placement.
+
+CSS-style grids inspire this container: you can define **rows and columns** and position each child exactly where you want using child properties.
+
+---
+
+## Description
+
+The **Grid** container control provides a flexible layout system for Canvas apps, enabling:
+
+- Placement of child components in a **grid pattern**
+- Specification of **row and column start/end** for each child
+- Responsive adjustments when the container or screen size changes
+- Alignment, spacing, and overflow control within the grid
+
+This approach eliminates the need for manually positioning each component, making apps **more maintainable and responsive**.
+
+---
+
+## Grid Container Properties
+
+### Display
+
+- **Gap** – The spacing in pixels between child components inside the grid.
+- **Rows** – The number of rows in the grid layout.
+- **Columns** – The number of columns in the grid layout.
+
+- **Position**
+  - **X** – The horizontal distance from the left edge of the parent container (or screen if no parent).
+  - **Y** – The vertical distance from the top edge of the parent container (or screen if no parent).
+
+- **Size**
+  - **Width** – The width of the grid container.
+  - **Height** – The height of the grid container.
+
+- **Padding**
+  - **Top / Bottom / Left / Right** – The spacing between the container edges and its child components.
+
+### Color & Border
+
+- **Color** – Foreground color of the container (used for borders and text if applicable).
+- **Border**
+  - **Style** – Type of border: Solid, Dashed, Dotted, or None.
+  - **Thickness** – Width of the border in pixels.
+  - **Color** – Color of the border.
+- **Border radius** – The degree to which the corners of the container are rounded (applied to all corners uniformly or can be split into individual corners in advanced settings).
+- **Drop shadow** – Shadow effect applied to the container. Options: None, Light, Medium, or Heavy.
+
+### Visibility
+
+- **Visible** – Whether the grid container is displayed. Toggle On/Off.
+
+### Grid Layout Properties (Child-specific)
+
+- **Column Start / Column End** – Defines the starting and ending columns for a child component.
+- **Row Start / Row End** – Defines the starting and ending rows for a child component.
+
+---
+
+## Example
+
+1. Create a [blank canvas app](../create-blank-app.md) with **Responsive** layout.
+2. Create a new screen.
+3. From the **Insert** pane under **Layout**, select **Grid container**.
+
+   > [!div class="mx-imgBorder"]
+   > ![Insert grid container](../media/create-responsive-layout/insert-grid-container.png "Insert Grid Container")
+
+4. Set container properties to occupy the full screen:  
+   - X = 0  
+   - Y = 0  
+   - Width = Parent.Width  
+   - Height = Parent.Height
+
+5. Add several child components (buttons, text inputs, icons, media). For each child, set grid placement properties:  
+   - Column Start / End  
+   - Row Start / End  
+   - Align in Cell
+
+6. Press **F5** to preview. Resize the screen and observe how child components **remain in their grid positions** and adjust responsively.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]
