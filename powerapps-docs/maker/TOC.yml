@@ -547,8 +547,6 @@
               href: ./canvas-apps/controls/modern-controls/modern-control-copilot-answer.md
             - name: Dropdown (preview)
               href: ./canvas-apps/controls/modern-controls/modern-control-dropdown.md
-            - name: Grid container (preview)
-              href: ./canvas-apps/controls/modern-controls/modern-control-grid-container.md
             - name: Stream video (preview)
               href: ./canvas-apps/controls/modern-controls/new-stream-video-control.md
             - name: Table (preview)
@@ -601,6 +599,8 @@
               href: ./canvas-apps/controls/control-export-import.md
             - name: Gallery
               href: ./canvas-apps/controls/control-gallery.md
+            - name: Grid container (preview)
+              href: ./canvas-apps/controls/modern-control-grid-container.md
             - name: Horizontal container
               href: ./canvas-apps/controls/control-horizontal-container.md
             - name: HTML text
