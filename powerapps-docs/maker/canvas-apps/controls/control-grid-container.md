@@ -23,6 +23,12 @@ The **Grid container** control gives you a way to **layout child components in a
 
 This container works like CSS-style grids. You define the **rows and columns** and set the exact position for each child component using its properties.
 
+> [!IMPORTANT]
+>
+> - This feature is in preview.  
+> - Preview features aren't meant for production use and might have restricted functionality These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2189520), and are available before an official release so that customers can get early access and provide feedback.
+> - This feature is in the process of rolling out and might not be available in your region yet.
+
 
 ## Description
 
