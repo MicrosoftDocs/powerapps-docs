@@ -600,7 +600,7 @@
             - name: Gallery
               href: ./canvas-apps/controls/control-gallery.md
             - name: Grid container (preview)
-              href: ./canvas-apps/controls/modern-control-grid-container.md
+              href: ./canvas-apps/controls/control-grid-container.md
             - name: Horizontal container
               href: ./canvas-apps/controls/control-horizontal-container.md
             - name: HTML text

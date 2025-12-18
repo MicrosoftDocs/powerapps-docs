@@ -1,8 +1,7 @@
 ---
 title: Grid container control in Power Apps
 description: Learn about the details, properties and examples of the grid container control in Power Apps.
-author: shivchan-msft
-
+author: shivanichander
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: mkaur
@@ -13,7 +12,7 @@ search.audienceType:
   - maker
 contributors:
   - mduelae
-  - shivchan-msft
+  - shivchan
 
 ---
 # Grid container control in Power Apps (preview)
@@ -72,7 +71,7 @@ By using this approach, you don't need to manually position each component. Your
 
 ## Example
 
-1. [Create a blank canvas app from scratch](/../create-blank-app.md) with a **Responsive** layout.
+1. [Create a blank canvas app from scratch](../create-blank-app.md) with a **Responsive** layout.
 1. Create a new screen.
 1. From the **Insert** pane under **Layout**, select **Grid container**.
 1. Set container properties to occupy the full screen:  
