@@ -72,12 +72,9 @@ By using this approach, you don't need to manually position each component. Your
 
 ## Example
 
-1. Create a [blank canvas app](../create-blank-app.md) with a **Responsive** layout.
+1. [Create a blank canvas app from scratch](../../create-blank-app.md) with a **Responsive** layout.
 1. Create a new screen.
 1. From the **Insert** pane under **Layout**, select **Grid container**.
-
-   :::image type="content" source="../media/create-responsive-layout/insert-grid-container.png" alt-text="Screenshot of inserting a grid container in Power Apps.":::
-
 1. Set container properties to occupy the full screen:  
    - X = 0  
    - Y = 0  
@@ -92,4 +89,4 @@ By using this approach, you don't need to manually position each component. Your
 1. Press **F5** to preview. Resize the screen and observe how child components **remain in their grid positions** and adjust responsively.
 
 
-[!INCLUDE[footer-include](../../../includes/footer-banner.md)]
+
