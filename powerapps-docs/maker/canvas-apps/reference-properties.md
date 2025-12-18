@@ -65,8 +65,6 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Gallery](controls/control-gallery.md)** – Show a list of records that can contain multiple types of data.
 
-**[Grid container ](controls/control-grid-container.md)** – Allows you to layout child components anywhere in a grid pattern*, giving precise control over row and column placement.
-
 **[HTML text](controls/control-html-text.md)** – Convert HTML tags automatically.
 
 **[Horizontal container ](controls/control-horizontal-container.md)** – Determines the position of the child components so that you never have to set X, Y for a component inside the container.
