@@ -43,6 +43,8 @@ Configure the behavior of a modern control by setting one of its properties. Eac
 
 **[Header (preview)](modern-controls-header.md)** – A control that creates a modern app header.
 
+**[Grid container (prview) ](modern-control-grid-container.md)** – Allows you to layout child components anywhere in a grid pattern*, giving precise control over row and column placement.
+
 **[Info button (preview)](modern-control-info-button.md)** – Use this control to provide additional information to users.
 
 **[Link](modern-control-link.md)** – Open hyperlinks in new tab.
