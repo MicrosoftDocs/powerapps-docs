@@ -99,7 +99,7 @@ You can use a markdown structured block of instructions as a starting point for 
 
 #### Sample agent instructions
 
-```json
+```md
 # Role
 Act as an autonomous agent responsible for interacting with the Micorosft Dataverse app. 
 
