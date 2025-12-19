@@ -17,7 +17,7 @@ This article explains how to set up and use the Microsoft Dataverse model contex
 
 ## Prerequisites
 
-- The Microsoft Copilot Studio MCP client must be allowed in the environment. More information: [Configure and manage the Dataverse MCP server for an environment](data-platform-mcp-disable.md#configure-and-manage-the-dataverse-mcp-server-for-an-environment)
+- The Microsoft Copilot Studio MCP client must be allowed in the environment. More information: [Configure and manage the Dataverse MCP server for an environment](data-platform-mcp-disable.md#configure-and-manage-the-dataverse-mcp-server)
 
 ## Connect to Dataverse using an MCP server in Microsoft Copilot Studio
 
