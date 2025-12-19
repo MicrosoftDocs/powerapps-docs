@@ -83,7 +83,7 @@ When writing instructions for a Dataverse MCP server agent, consider the followi
 
 You can use a markdown structured block of instructions as a starting point for your own agent’s instructions.
 
-#### Add Instructions in Visual Studio Code
+#### Add instructions in Visual Studio Code
 
 1. Open Visual Studio Code.
 2. Open the **Chat** pane.
