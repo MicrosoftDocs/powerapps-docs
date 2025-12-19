@@ -44,11 +44,9 @@ By default the **Allow MCP clients to interact with Dataverse MCP server** is tu
 > [!WARNING]
 > Disabling the Dataverse MCP Server stops all tools and agents that rely on it. Any ongoing development or AI integration testing using MCP is also interrupted.
 
-## Writing effective instructions for a Dataverse MCP server agent
+## Write effective instructions for a Dataverse MCP server agent
 
 When you configure your agent in Copilot Studio or Visual Studio Code to use a Dataverse MCP server, clear and well-structured instructions are key to guiding how the agent operates. These instructions help the agent understand its role, what capabilities it has via the MCP server tools, and how to carry out workflows reliably and consistently.
-
-### What agent instructions do
 
 Agent instructions are natural-language directives that tell your agent what it should do, how it should behave, and how to use the MCP tools available to it. They give important context so the agent can:
 
@@ -85,7 +83,7 @@ When writing instructions for a Dataverse MCP server agent, consider the followi
 
 You can use a markdown structured block of instructions as a starting point for your own agent’s instructions.
 
-### Add Instructions in Visual Studio Code
+#### Add Instructions in Visual Studio Code
 
 1. Open Visual Studio Code.
 2. Open the **Chat** pane.
@@ -93,13 +91,13 @@ You can use a markdown structured block of instructions as a starting point for 
 4. Select **New instruction file**.
 5. Copy and paste the instruction content into the new file, such as the [sample instructions](#sample-agent-instructions).
 
-### Add instructions in Copilot Studio
+#### Add instructions in Copilot Studio
 
 1. Open Copilot Studio.
 2. Select your agent.
 3. Go to **System instructions** and paste your agent instructions, such as the [sample instructions](#sample-agent-instructions).
 
-### Sample agent instructions
+#### Sample agent instructions
 
 ```json
 # Role
