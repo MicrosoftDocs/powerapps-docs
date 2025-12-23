@@ -1922,6 +1922,8 @@
       href: ../mobile/optimize-for-devices-controls.md
   - name: Configure mobile apps for offline use
     items:
+    - name: How offline works in Power Apps mobile
+      href: ../mobile/mobile-offline-works-overview.md
     - name: Mobile offline for canvas apps
       items:
       - name: Mobile offline for canvas apps overview
