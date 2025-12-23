@@ -3,6 +3,7 @@ title: How mobile offline works in Power Apps
 description: Understand the data sync model in Power Apps Mobile, including incremental syncs, configurable intervals, and automatic resumption after connectivity returns.
 #customer intent: As a Power Apps user, I want to understand how data sync works so that I can ensure my offline data stays up to date.
 reviewer: shwetamurkute
+author: Murugesh1985
 ms.author: murugeshs
 ms.reviewer: smurkute
 ms.date: 12/23/2025
