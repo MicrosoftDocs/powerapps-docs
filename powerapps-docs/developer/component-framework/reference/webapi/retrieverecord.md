@@ -10,20 +10,51 @@ ms.subservice: pcf
 contributors:
  - JimDaly
 ---
-
 # retrieveRecord
 
 [!INCLUDE [retrieverecord-description](includes/retrieverecord-description.md)]
 
 ## Available for 
-
 Model-driven apps & portals.
 
 ## Syntax
 
 `context.webAPI.retrieveRecord(entityLogicalName, id, options).then(successCallback, errorCallback);`
 
-## Parameters
+## PowerApps Pages Syntax (Non-Standard)
+
+**Note:** PowerApps Pages uses a different API wrapper with `dataApi.retrieveRow` instead of `context.webAPI.retrieveRecord`. The signature differs from the standard Web API.
+
+### Standard PowerApps Pages Syntax:
+```typescript
+dataApi.retrieveRow(entityLogicalName, { id: guid }, options)
+```
+
+### PowerApps Pages Parameters:
+- **entityLogicalName** (String, Required): The table logical name of the record you want to retrieve
+- **options object** (Object, Required): Must contain an `id` property with the GUID
+  - `id` (String, Required): GUID of the table record you want to retrieve
+- **query options** (String, Optional): Third parameter for OData query options like `"?$select=field1,field2"`
+
+### PowerApps Pages Examples:
+```typescript
+// Retrieve all fields
+const record = await dataApi.retrieveRow("account", { 
+    id: "d0062612-99e4-f011-8544-7c1e520a8675" 
+});
+
+// Retrieve specific fields
+const record = await dataApi.retrieveRow("account", { 
+    id: "d0062612-99e4-f011-8544-7c1e520a8675" 
+}, "?$select=name,accountnumber");
+
+// With expand
+const record = await dataApi.retrieveRow("account", { 
+    id: "d0062612-99e4-f011-8544-7c1e520a8675" 
+}, "?$select=name&$expand=primarycontactid($select=fullname)");
+```
+
+## Standard Component Framework Parameters
 
 <table>
 <tr>
@@ -74,8 +105,6 @@ Model-driven apps & portals.
 ## Return Value
 
 Type: [Promise](https://developer.mozilla.org/docs/Web/JavaScript/reference/Global_Objects/Promise)<[Entity](../entity.md)>
-
-
 
 ### Related articles
 
