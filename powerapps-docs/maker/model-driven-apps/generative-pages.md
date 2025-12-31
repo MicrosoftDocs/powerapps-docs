@@ -37,6 +37,10 @@ After you describe the page, the system then processes your requirements and spe
    :::image type="content" source="media/generative-page/add-table-generative-page.png" alt-text="Add a table to the generative page" lightbox="media/generative-page/add-table-generative-page.png":::
 
 1. Optionally upload one or more images to guide the UI of your generated page by selecting **Add data** > **Attach image**. This can be a rough napkin sketch or a higher resolution image. The image can represent the structure or layout of the entire page you want to create or it can be visuals for a certain section or component you want to mimic.
+
+   > [!NOTE]
+   > If you want the generated page to display a particular image, instead of attaching the image to the prompt, you can (1) include the image in a referenced Datatable table and have the agent retrieve the image from there, (2) host the image publicly and give the agent the URL, or (3) add the image as a web resource and give the agent the URL for the web resource.  
+   
 1. Optionally enable or disable the **Include images** (preview) tool to allow the agent to utilize images from a curated, safe library of 25,000 stock images to support use cases like default/placeholder images, decorative backgrounds, static content blocks, and richer empty or error states.
    :::image type="content" source="media/generative-page/generative-page-include-image-tool.png" alt-text="Include image tool to add an image from a library of stock images":::
 1. Optionally choose the AI model you want to use to generate the page. 
@@ -77,7 +81,7 @@ After generating your page, you have several options to refine and finalize it:
     In the chat experience, select **Attach** > **Add screenshot** to include a screenshot of the current preview with your next interaction with the app agent. A screenshot is useful for helping to adjust the visuals of the page. You can alternatively attach other images to help refine the visuals of the entire page or a particular piece of the page.
 
 1.  **Check for accessibility issues (new)**
-    After each iteration of code generation, the **Accessibility assistant** at the bottom of the screen scans the generated code assessing it with respect to accessibility. You can see a high level status update directly on screen and can choose to open the detailed results in a panel. Select **Auto fix** to pass any violations directly to the agent for automatic resolution. 
+    After each iteration of code generation, the **Accessibility assistant** at the bottom of the screen scans the generated code assessing it with respect to accessibility. You can see a high level status update directly on screen and can choose to open the detailed results in a panel. Select **Auto fix** to pass any violations directly to the agent for it to try to automatically resolve. 
 
 1. **Save and publish**
     In the command bar, select **Save** to avoid losing progress on your page.  
