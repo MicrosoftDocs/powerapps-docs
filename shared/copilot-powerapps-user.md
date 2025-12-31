@@ -1,4 +1,4 @@
-| Feature | Description | Learn More |
+| Feature | Description | Learn more |
 |------------|-------------|------------|
 | **Agent feed (preview)** | Lets you manage and work with agents directly within your apps. It makes the app a central place for human‑agent collaboration by providing a complete activity feed that shows everything agents do for you, wherever you are in the app. | [Supervise agents in model-driven apps with agent feed (preview)](/power-apps/user/supervise-agents-with-agent-feed) |
 | **Form fill assistance** | Helps you complete forms more efficiently by suggesting relevant values based on context. It analyzes available data to autopopulate fields and reduce manual input. This helps you to fill forms faster and with fewer errors. | [Use Copilot's form fill assistance feature in model-driven apps](/power-apps/user/form-filling-assistance) |
