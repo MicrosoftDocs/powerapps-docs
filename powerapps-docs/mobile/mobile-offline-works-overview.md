@@ -10,21 +10,19 @@ ms.date: 12/23/2025
 ms.topic: concept-article
 ---
 
-# How offline works in Power Apps mobile
+# How offline first functionality works in Power Apps mobile
 
-Offline functionality in Power Apps mobile enables users to access and work with app data on their mobile devices without an active internet connection. The offline feature uses a local database on the device to store data, allowing users to continue working seamlessly regardless of network availability.
-
-When you configure Power Apps mobile for offline use, it operates in an "offline-first" mode. This means the app always reads data from the local device storage, even when connected to the internet. This design provides faster load times, a consistent user experience, and reduced dependency on network connectivity. Changes made while offline automatically sync with Dataverse when connectivity is restored.
+Offline first functionality in Power Apps mobile enables users to access and work with app data on their mobile devices without an active internet connection. This feature uses a local database on the device to store data. Changes made while the network is offline automatically sync with Dataverse when connectivity is restored. Changes made while network is online automatically sync with Dataverse based on the sync frequency configured by the maker in the offline settings.
 
 ## Offline profile
 
-An offline profile is created by the app maker and serves as the foundation for offline functionality: The profile defines:
+First, to create an offline-first app, maker must create the offline profile. The profile defines:
 
 - Tables and columns available for offline use
-- Optional filters to limit the data downloaded
+- Optional filters to limit the data downloaded per table
 - Relationships between tables for linked data access
 
-After it's created, the offline profile is downloaded and stored locally on the device in a SQLite-based cache. This local copy becomes the primary data source for all app operations and doesn't access Dataverse directly, even when you're connected to the internet.
+After you create the profile, when you first open the app, the data for the offline profile downloads and stores locally on the device in a SQLite-based cache. This local copy becomes the primary data source for all app operations. The app doesn't access Dataverse directly, even when you're online. Learn more about setting up offline for canvas apps in [Set up mobile offline for canvas apps](canvas-mobile-offline-setup.md) and about setting up offline for model-driven apps in [Set up mobile offline for model-driven apps](setup-mobile-offline.md).
 
 ## Data synchronization
 
@@ -32,7 +30,7 @@ The sync process keeps offline data up to date with Dataverse through automatic 
 
 - **Initial download**: When the app first opens, all data defined in the offline profile is downloaded to the local device.
 - **Incremental updates**: Subsequent syncs fetch only changes (inserts, updates, deletes) since the last sync, reducing data transfer.
-- **Configurable frequency**: Makers can set sync intervals (every few minutes, hourly, or daily) for each table in the offline profile through the maker studio.
+- **Configurable frequency**: Makers can set sync intervals (every few minutes, hourly, or daily) for each table in the offline profile in the maker studio.
 - **Smart sync**: If no changes are detected across tables, the sync is skipped to save bandwidth.
 - **Automatic resumption**: When the mobile device reconnects to the network, the sync operation resumes automatically.
 - **Platform differences**: On iOS, syncs happen only in the foreground. On Android, syncs that start in the foreground continue even when the app moves to the background.
@@ -57,18 +55,18 @@ When the mobile app is configured as offline-first, queries always run against t
 
 Complex lookups and relationships use predownloaded related tables stored locally. Users can navigate between related records without requiring an active connection.
 
-**Online mode option**: In model driven apps, makers can set up an **Online mod** feature. Once configured, users can toggle this option to access data directly from Dataverse instead of the local device data. Meanwhile, the app continues syncing data in the background, allowing users to switch back to offline mode at any time without losing functionality.
+**Online mode option**: In model driven apps, makers can set up an **Online mod** feature. Once configured, users can toggle this option to access data directly from Dataverse instead of the local device data. Meanwhile, the app continues syncing data in the background, allowing users to switch back to offline mode at any time without losing functionality. Learn more in [Turn on Online mode](setup-mobile-offline.md#turn-on-online-mode)
 
 ## Maker controls and optimization
 
-Makers have several tools to optimize offline performance and control the offline experience:
+Makers have several tools to optimize data download, offline performance and control the offline experience:
 
 - **Column selection**: Choose specific columns to minimize payload size and reduce download time
 - **Relationship configuration**: Define parent-child table relationships for linked data access
 - **Sync frequency**: Configure sync intervals and filters for each table individually
 - **Media settings**: Configure which images and files should be downloaded for offline access
 
-These controls allow makers to balance offline functionality with performance and storage constraints on mobile devices.
+These controls allow makers to balance offline functionality with performance and storage constraints on mobile devices. Learn more about how to optimize offline profile in [Optimize the offline profile](mobile-offline-guidelines.md)
 
 ## Building offline app screens
 
