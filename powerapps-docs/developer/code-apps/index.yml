@@ -58,9 +58,9 @@ landingContent:
       - linkListType: tutorial
         links:
            - text: "Adding a data source"
-             url: how-to/troubleshoot-add-datasource.md
+             url: troubleshoot-add-datasource.md
            - text: "Zscaler issues"
-             url: how-to/troubleshoot-zscaler-issues.md
+             url: troubleshoot-zscaler-issues.md
     
     # Card
   - title: Architecture
