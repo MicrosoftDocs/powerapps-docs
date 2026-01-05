@@ -55,7 +55,7 @@ landingContent:
     # Card
   - title: Troubleshooting guides
       linkLists:
-        - linkListType: architecture
+        - linkListType: troubleshooting-guide
           links:
            - text: "Adding a data source"
             url: how-to/troubleshoot-add-datasource.md
