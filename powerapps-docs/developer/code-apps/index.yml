@@ -54,13 +54,13 @@ landingContent:
 
     # Card
   - title: Troubleshooting guides
-      linkLists:
-        - linkListType: troubleshooting-guide
-          links:
+    linkLists:
+      - linkListType: tutorial
+        links:
            - text: "Adding a data source"
-            url: how-to/troubleshoot-add-datasource.md
+             url: how-to/troubleshoot-add-datasource.md
            - text: "Zscaler issues"
-            url: how-to/troubleshoot-zscaler-issues.md
+             url: how-to/troubleshoot-zscaler-issues.md
     
     # Card
   - title: Architecture
