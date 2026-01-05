@@ -248,7 +248,7 @@ All buttons in this template have prebuilt Power Fx, so there's no need for furt
 
 When you have more than one screen in your app, you can put them in a different order in your tree view.
 
-Select the overflow menu of a screen that you want to reorder, and then select **Move up** or **Move down**.
+Select the overflow menu of a screen that you want to reorder, and then select **Move up** or **Move down**. You can also drag and drop.
 
 :::image type="content" source="media/add-screen-context-variables/move-screen-up-down.png" alt-text="Screenshot that shows where the overflow menu is located in order to move a screen up or down in your tree view.":::
 
