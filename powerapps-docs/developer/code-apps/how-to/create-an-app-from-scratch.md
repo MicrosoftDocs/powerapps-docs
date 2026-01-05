@@ -61,7 +61,7 @@ This article walks through how to set up a blank app from [Vite](https://vite.de
    > Open the URL in the same browser profile as your Power Platform tenant.
 
    > [!NOTE]
-   > Local Network Access Restrictions.
+   > **Local Network Access Restrictions**
    > 
    > Since December 2025, Chrome and Microsoft Edge browsers block requests from public origins to local endpoints by default.
    > - Because your code app connects to localhost during development, you might need to grant browser permission or configure enterprise policies.
