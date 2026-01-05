@@ -107,7 +107,7 @@ After export, you can import the app and generative pages into another environme
 
 These are the current limitations of generative pages:
 
-- Your page can connect to only Dataverse tables (up to 6 for a single page). You can perform create, read, update, and delete (CRUD) operations against these tables. No other data sources can be used.
+- Your page can connect to only Dataverse tables (up to 6 for a single page). No other data sources can be used. On the connected Dataverse tables, you can perform create, read, update, and delete (CRUD) operations against these tables using [these CRUD APIs](https://learn.microsoft.com/en-us/power-apps/developer/model-driven-apps/clientapi/reference/xrm-webapi#methods). 
 - Your prompt can have a maximum of 50,000 characters. 
 - Only US English is supported.
 - Collaboration isn't supported. Ensure only one maker is working on a generative page at a time to avoid unintended conflicts.
