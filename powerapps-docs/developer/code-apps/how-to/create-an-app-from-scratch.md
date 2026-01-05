@@ -60,11 +60,13 @@ This article walks through how to set up a blank app from [Vite](https://vite.de
    > [!IMPORTANT]
    > Open the URL in the same browser profile as your Power Platform tenant.
 
-> [!NOTE] Local Network Access Restrictions
-> Starting with Chrome 142 and Edge 143, browsers block requests from public origins to local endpoints by default.
-> - Because your code app connects to localhost during development, you may need to grant browser permission or configure enterprise policies.
-> - For embedded scenarios, include `allow="local-network-access"` in iframe tags.
-> - See [Microsoft Edge policy docs](https://support.microsoft.com/en-us/topic/control-a-website-s-access-to-the-local-network-in-microsoft-edge-ef7eff4c-676d-4105-935c-2acbcd841d51) and [Chrome LNA guide](https://developer.chrome.com/blog/local-network-access) for details. 
+   > [!NOTE]
+   > Local Network Access Restrictions.
+   > 
+   > Since December 2025, Chrome and Microsoft Edge browsers block requests from public origins to local endpoints by default.
+   > - Because your code app connects to localhost during development, you might need to grant browser permission or configure enterprise policies.
+   > - For embedded scenarios, include `allow="local-network-access"` in iframe tags.
+   > - Learn to [Control a website's access to the local network in Microsoft Edge](https://support.microsoft.com/topic/control-a-website-s-access-to-the-local-network-in-microsoft-edge-ef7eff4c-676d-4105-935c-2acbcd841d51) and about the [new permission prompt for Local Network Access using Chrome](https://developer.chrome.com/blog/local-network-access) for details.
 
 You should see the app open similar to:
 
