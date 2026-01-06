@@ -3,7 +3,7 @@ title: "Quick guide to Dataverse (preview)"
 description: "Learn some key concepts of Dataverse that every programmer needs to know for success."
 ms.author: paulliew
 author: paulliew
-ms.date: 11/17/2025
+ms.date: 01/06/2026
 ms.reviewer: phecke
 ms.topic: concept-article
 contributors:
@@ -20,7 +20,7 @@ Programmers coding in C#/.NET should read our extensive [Dataverse Developer Gui
 
 ## Tables and messages
 
-Data is stored in tables, which are organized into rows and columns. Messages are the operations that act on tables and table data. Tables are also known and *entities*, and rows are sometimes called *records* in our documentation.
+Data is stored in tables, which are organized into rows and columns. Messages are the operations that act on tables and table data. Tables are also known as *entities*, and rows are sometimes called *records* in our documentation.
 
 ### Tables
 
