@@ -26,7 +26,7 @@ Preview tools are early versions of Dataverse MCP server capabilities released f
 Preview tools might not yet support full functionality, scale, or GA features.
 
 ## Prerequisites
-
+<!-- Added this prerequiste that wasn't already mentioned.-->
 The environment must be enabled and configured for Dataverse MCP server. More information: [Configure the Dataverse MCP server for an environment](data-platform-mcp-disable.md)
 
 ## Enable preview features for Dataverse MCP server 
@@ -40,25 +40,25 @@ Follow these steps to enable preview capabilities:
 1. Open the **Environment** where you want to turn on the Dataverse MCP server, and then select **Settings** on the command bar.
 1. Expand **Product**, and then select **Features**.
 1. Scroll down to locate **Dataverse Model Context Protocol** and enable **Allow MCP clients to interact with Dataverse MCP server (Preview version)**.
-   :::image type="content" source="media/data-platform-mcp-preview-tools/mcp-server-preview-features-setting.png" alt-text="Environment settings to enable preview features for Dataverse MCP server":::
+   :::image type="content" source="media/data-platform-mcp-preview-tools/mcp-server-preview-features-setting.png" alt-text="Environment settings to enable preview features for Dataverse MCP server" lightbox="media/data-platform-mcp-preview-tools/mcp-server-preview-features-setting.png":::
 
 The environment might take a few minutes to apply the changes.
 
-## Connect to Dataverse MCP server (preview) 
+## Connect to Dataverse MCP server (preview)
 
-Once preview features are enabled, you can connect to the Dataverse MCP server preview endpoint. 
+Once the environment setting for preview features are enabled, you can connect to the Dataverse MCP server preview endpoint.
 
 ### Connect from Microsoft Copilot Studio
 
 When adding a connector in Copilot Studio, select the connector named **Microsoft Dataverse MCP Server (Preview)**.
 
-This connector is different from the standard **Microsoft Dataverse MCP Server** connector and is required specifically for preview features. 
+This connector is different from the standard **Microsoft Dataverse MCP Server** connector and is required specifically for preview features.
 
 ### Connect using Claude, GitHub, or other non-Microsoft MCP clients
 
-Use the preview endpoint `\<orgUrl\>/api/mcp_preview`.
+Use the preview endpoint `https://<orgUrl>/api/mcp_preview`.
 
-Examples: 
+Examples:
 
 - `https://contoso.crm.dynamics.com/api/mcp_preview`
 - `https://org123.crm4.dynamics.com/api/mcp_preview`
