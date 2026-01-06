@@ -40,7 +40,7 @@ Follow these steps to enable preview capabilities:
 1. Open the **Environment** where you want to turn on the Dataverse MCP server, and then select **Settings** on the command bar.
 1. Expand **Product**, and then select **Features**.
 1. Scroll down to locate **Dataverse Model Context Protocol** and enable **Allow MCP clients to interact with Dataverse MCP server (Preview version)**.
-   :::image type="content" source="media/data-platform-mcp-preview-tools/mcp-server-preview-features-setting.png" alt-text="":::
+   :::image type="content" source="media/data-platform-mcp-preview-tools/mcp-server-preview-features-setting.png" alt-text="Environment settings to enable preview features for Dataverse MCP server":::
 
 The environment might take a few minutes to apply the changes.
 
