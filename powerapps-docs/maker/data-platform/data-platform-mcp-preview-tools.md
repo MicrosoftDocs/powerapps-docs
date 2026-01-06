@@ -10,7 +10,7 @@ ms.topic: how-to
 ---
 # Use preview tools and upcoming features in Dataverse MCP server
 
-To help customers experiment with new capabilities and provide early feedback, the Microsoft Dataverse model context protocol (MCP) server includes preview tools that enables upcoming features before they are generally available (GA).
+To help customers experiment with new capabilities and provide early feedback, the Microsoft Dataverse model context protocol (MCP) server includes preview tools that enable upcoming features before they're generally available (GA).
 
 This article explains what preview tools are, what to expect when you use them, and how administrators can turn on the the preview features for Dataverse MCP server setting from the Power Platform admin center to access the latest Dataverse MCP server enhancements.
 
@@ -18,7 +18,7 @@ This article explains what preview tools are, what to expect when you use them, 
 
 Preview tools are early versions of Dataverse MCP server capabilities released for customer evaluation. They allow makers, developers, and system integrators to: 
 
-- Try out new API endpoints and behaviours before GA.
+- Try out new API endpoints and behaviors before GA.
 - Validate integration scenarios.
 - Provide feedback that shapes final product design.
 - Prepare internal systems for upcoming releases.
@@ -63,16 +63,16 @@ Examples: 
 - `https://contoso.crm.dynamics.com/api/mcp_preview`
 - `https://org123.crm4.dynamics.com/api/mcp_preview`
 
-This endpoint makes availalble all preview tools and capabilities.
+This endpoint makes available all preview tools and capabilities.
 
-## What happens after enabling preview for Dataverrse MCP server
+## What happens after enabling preview for Dataverse MCP server
 
 Once preview is enabled:
 
 - MCP Server makes available the corresponding preview tools automatically.
 - Agents and Copilots can begin calling these new endpoints immediately.
-- You might notice additional telemetry logs or messages marked as **Preview**.
-- Behavior may change as Microsoft iterates based on feedback. 
+- You might notice additional system-generated logs or messages marked as **Preview**.
+- Behavior might change as Microsoft iterates based on feedback. 
 
 If you encounter any issues, you can disable the **Allow MCP clients to interact with Dataverse MCP server (Preview version)** environment setting at any time.
 
@@ -80,7 +80,7 @@ If you encounter any issues, you can disable the **Allow MCP clients to intera
 
 | Topic | Details |
 | ---- | ---- |
-| Support | Preview tools are not covered by Microsoft support agreements.  |
+| Support | Preview tools aren't covered by Microsoft support agreements.  |
 | Breaking changes | Preview APIs might change without notice.  |
 | Performance | Features might not meet production-grade reliability.  |
 
