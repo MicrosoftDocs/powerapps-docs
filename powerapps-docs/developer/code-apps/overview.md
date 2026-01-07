@@ -61,6 +61,24 @@ Code apps can be enabled via an environment setting that Power Platform Admins a
 
 End-users that run code apps need a [Power Apps Premium license](https://www.microsoft.com/power-platform/products/power-apps/pricing).
 
+## Explore samples and report issues
+
+To help you get started and stay productive, we recommend using the resources available in the [Power Apps Code Apps Github repository](https://github.com/microsoft/PowerAppsCodeApps/issues)
+
+### Find samples
+
+Browse sample projects and starter templates shared by the community and Microsoft. These examples can help you learn best practices and accelerate development.
+
+### Submit new issues
+
+If you encounter a bug or need help, open a new issue in the repository. Provide clear details about your scenario, steps to reproduce, and any error messages. For bugs, use the template provided in the issue creation experience to ensure all necessary information is captured. This helps the team and community respond quickly and effectively.
+
+Tip: If you find an existing issue or enhancement that applies to you, upvote or comment on it to signal its priority to the product team.
+
+### Review completed issues
+
+Check the **Closed** tab in **Issues** to see how other customers have solved problems or requested enhancements. This is a great way to learn from real-world scenarios and confirm whether a fix or feature you need is already available.
+
 ## Limitations
 
 - Code apps can invoke APIs outside of Power Platform connectors. Code apps don't yet support [Content Security Policy](/power-platform/admin/content-security-policy) (CSP).
