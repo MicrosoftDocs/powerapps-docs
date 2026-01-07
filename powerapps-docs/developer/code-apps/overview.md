@@ -1,9 +1,9 @@
 ---
 title: "Power Apps code apps overview (preview)"
-description: "Use Power Apps code apps"
-ms.author: alaug
-author: alaug
-ms.date: 09/10/2025
+description: "Learn to use Power Apps code apps"
+ms.author: jordanchodak
+author: jordanchodakWork
+ms.date: 01/07/2026
 ms.reviewer: jdaly
 ms.topic: overview
 contributors:
@@ -24,7 +24,7 @@ Power Apps empowers developers of all skill sets, including those building web a
 - Access to Power Platform data sources and 1,500+ connectors, callable directly from JavaScript
 - Easy publishing and hosting of line-of-business web apps in Power Platform
 - Adherence to your organization's Managed Platform policies (app sharing limits, Conditional Access, Data Loss Prevention, and so on)
-- Simplified deployment and ALM
+- Simplified deployment and application lifecycle management (ALM)
 
 The managed platform accelerates safe, rapid innovation, and when ready, apps can be deployed to dedicated production environments.
 
@@ -60,6 +60,25 @@ Code apps can be enabled via an environment setting that Power Platform Admins a
 ### License end-users with Power Apps Premium
 
 End-users that run code apps need a [Power Apps Premium license](https://www.microsoft.com/power-platform/products/power-apps/pricing).
+
+## Explore samples and report issues
+
+To help you get started and stay productive, we recommend using the resources available in the [Power Apps Code Apps GitHub repository](https://github.com/microsoft/PowerAppsCodeApps)
+
+### Find samples
+
+Browse [sample projects](https://github.com/microsoft/PowerAppsCodeApps/tree/main/samples) and [starter templates](https://github.com/microsoft/PowerAppsCodeApps/tree/main/templates) shared by the community and Microsoft. These examples can help you learn best practices and accelerate development.
+
+### Submit new issues
+
+If you encounter a bug or need help, [open a new issue in the repository](https://github.com/microsoft/PowerAppsCodeApps/issues). Provide clear details about your scenario, steps to reproduce, and any error messages. For bugs, use the template provided in the issue creation experience to ensure all necessary information is captured. This template helps the team and community respond quickly and effectively.
+
+> [!TIP]
+> If you find an existing issue or enhancement that applies to you, upvote or comment on it to signal its priority to the product team.
+
+### Review completed issues
+
+Check the **Closed** tab in **Issues** to see how other customers solved problems or requested enhancements. Closed issues are a great way to learn from real-world scenarios and confirm whether a fix or feature you need is already available.
 
 ## Limitations
 
