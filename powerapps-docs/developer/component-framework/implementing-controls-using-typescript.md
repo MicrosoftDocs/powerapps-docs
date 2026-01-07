@@ -337,7 +337,7 @@ The completed manifest file should look like this:
 
 ## Implementing component logic
 
-The next step after implementing the manifest file is to implement the component logic using TypeScript. The component logic should be implemented inside the `index.ts` file. When you open the `index.ts` file in the Visual Studio Code, you'll notice that the four essential functions ([init](reference/control/init.md), [updateView](reference/control/updateview.md) , [getOutputs](reference/control/getoutputs.md), and [destroy](reference/control/getoutputs.md)) are predefined. Now, let's implement the logic for the code component.
+The next step after implementing the manifest file is to implement the component logic using TypeScript. The component logic should be implemented inside the `index.ts` file. When you open the `index.ts` file in the Visual Studio Code, you'll notice that the four essential functions ([init](reference/control/init.md), [updateView](reference/control/updateview.md) , [getOutputs](reference/control/getoutputs.md), and [destroy](reference/control/destroy.md)) are predefined. Now, let's implement the logic for the code component.
 
 Open the `index.ts` file in the code editor of your choice and make the following changes:
 
