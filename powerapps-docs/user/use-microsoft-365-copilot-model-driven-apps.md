@@ -72,7 +72,7 @@ One of the benefits of @ mentioning an agent is that you can add or remove it fr
 ## Limitations
 
 1. The model chooser option, which allows users to select different AI models or configurations in the standalone version, is not available.
-1. Agents published to Microsoft 365 Copilot via Microsoft Copilot Studio channels are do not show up in the navigation panel or when @ mentioning.
+1. Agents published to Microsoft 365 Copilot via Microsoft Copilot Studio channels do not show up in the navigation panel or when @ mentioning within Microsoft 365 Copilot chat in model-driven apps.  They do show up using <https://m365.cloud.microsoft/chat>.
 
 ## Related information
 
