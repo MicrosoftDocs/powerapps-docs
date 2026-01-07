@@ -64,6 +64,8 @@ After generating your page, you have several options to refine and finalize it:
 
     -  Iteratively chat with the app agent to fix errors, adjust layout, or add functionality.
     -  Manually edit the code by selecting **Edit** on the Code tab. After making some edits, you can select **Save** to commit your changes as a new iteration, or **Cancel** to discard your changes.
+   
+   [Learn about the dataApi object methods used for data operations](../../developer/model-driven-apps/generative-page/data-api/index.md)
 
 1. **Compare iterations**
     After completing two or more iterations with the agent, you can select **Compare** on the Code tab to view a code diff between the current and previous iteration.  

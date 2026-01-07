@@ -1,0 +1,293 @@
+---
+title: "dataApi reference for generative pages"
+description: "The topic provides dataApi reference for generative pages."
+ms.date: 01/07/2026
+author: jasongre
+ms.author: jasongre
+ms.reviewer: jdaly
+ms.topic: reference
+search.audienceType: 
+  - developer
+contributors:
+  - JimDaly
+  - ruxyrezidenttm
+---
+# dataApi reference for generative pages
+
+When you [generate a page using natural language](../../../../maker/model-driven-apps/generative-pages.md), the AI generates React code that covers both the front-end user experience by selecting the right components and determining the best layout, and the corresponding business logic.
+
+You have the opportunity to [view and edit the generated code to refine the output](../../../../maker/model-driven-apps/generative-pages.md#view-the-generated-code-iterate-and-publish). Data operations will use a `dataApi` object that exposes the following public methods
+
+|Method|Description|
+|---|---|
+|[`createRow`](#createrow-method)|Creates a new row in the specified table.|
+|[`updateRow`](#updaterow-method)|Updates an existing row in the specified table.|
+|[`deleteRow`](#deleterow-method)|Deletes a row from the specified table.|
+|[`retrieveRow`](#retrieverow-method)|Deletes a row from the specified table with the specified options.|
+|[`queryTable`](#querytable-method)|Queries a table with the specified options.|
+|[`getChoices`](#getchoices-method)|Retrieves the choices for the specified choice column name.|
+
+
+## `createRow` method
+
+Creates a new row in the specified table.
+<!-- Compare with https://learn.microsoft.com/en-us/power-apps/developer/model-driven-apps/clientapi/reference/xrm-webapi/createrecord -->
+
+### Parameters
+
+Set values for these required parameters.
+
+|Name|Type|Description|
+|---|---|---|
+|`tableName`|string|The logical name of the table to create the row in.|
+|`row`|object|The row data to create.|
+
+### Returns
+
+The ID value of the created row.
+
+### Remarks
+
+TODO: Add any special details to help customers succeed
+
+
+### Example
+
+<!-- 
+
+TODO: Add examples showing this method being used. 
+The following is an untested example based on the Xrm.WebApi.createRecord example.
+-->
+
+```typescript
+// define the data to create new account
+var data =
+    {
+        "name": "Sample Account",
+        "creditonhold": false,
+        "address1_latitude": 47.639583,
+        "description": "This is the description of the sample account",
+        "revenue": 5000000,
+        "accountcategorycode": 1,
+        "opendeals_date": new Date("2024-02-03T00:00:00Z")
+    }
+
+// create account record
+
+try{
+let result = await dataApi.createRow("account", data);
+
+   console.log("Account created with ID: " + result.id);
+
+}
+catch (error){
+ console.log(error.message);
+}
+
+```
+
+
+## `updateRow` method
+
+Updates an existing row in the specified table.
+<!-- Compare with https://learn.microsoft.com/en-us/power-apps/developer/model-driven-apps/clientapi/reference/xrm-webapi/updaterecord -->
+
+### Parameters
+
+Set values for these required parameters.
+
+|Name|Type|Description|
+|---|---|---|
+|`tableName`|string|The logical name of the table to update the row in.|
+|`rowId`|string|The ID of the row to update.|
+|`row`|Object|The row data to create.|
+
+### Returns
+
+This method doesn't return a value.
+
+### Remarks
+
+TODO: Add any special details to help customers succeed
+
+### Example
+
+<!-- 
+
+TODO: Add examples showing this method being used. 
+The following is an untested example based on the Xrm.WebApi.createRecord example.
+-->
+
+```typescript
+let id = "5531d753-95af-e711-a94e-000d3a11e605"
+
+// Define the row to update a record
+var row =
+    {
+        "name": "Updated Sample Account ",
+        "creditonhold": true,
+        "address1_latitude": 47.639583,
+        "description": "This is the updated description of the sample account",
+        "revenue": 6000000,
+        "accountcategorycode": 2
+    }
+
+// update the record
+
+try{
+ await dataApi.createRow("account", id, row);
+}
+catch (error){
+ console.log(error.message);
+}
+```
+
+## `deleteRow` method
+
+Deletes a row from the specified table.
+<!-- Compare with https://learn.microsoft.com/en-us/power-apps/developer/model-driven-apps/clientapi/reference/xrm-webapi/deleterecord -->
+
+### Parameters
+
+Set values for these required parameters.
+
+|Name|Type|Description|
+|---|---|---|
+|`tableName`|string|The logical name of the table to delete the row in.|
+|`rowId`|string|The ID of the row to delete.|
+
+### Returns
+
+A promise indicating whether the operation succeeded or not.
+
+### Remarks
+
+TODO: Add any special details to help customers succeed
+
+### Example
+
+TODO: Add examples showing this method being used.
+
+```typescript
+let rowId = "5531d753-95af-e711-a94e-000d3a11e605";
+try{
+   await dataApi.deleteRow("account", rowId);
+}
+catch (error){
+ console.log(error.message);
+}
+```
+
+## `retrieveRow` method
+
+Deletes a row from the specified table with the specified options.
+<!-- Compare to https://learn.microsoft.com/en-us/power-apps/developer/model-driven-apps/clientapi/reference/xrm-webapi/retrieverecord -->
+
+### Parameters
+
+Set values for these required parameters.
+
+|Name|Type|Description|
+|---|---|---|
+|`tableName`|string|The logical name of the table to retrieve the row from.|
+|`options`|object|Options to control the data returned.|
+
+### Returns
+
+An object containing the data of the record.
+
+### Remarks
+
+TODO: Add any special details to help customers succeed
+<!-- For example, how to set the ID of the row to retrieve. I don't see a parameter for it -->
+
+### Example
+
+TODO: Add an example showing this method being used.
+
+```typescript
+```
+
+## `queryTable` method
+
+Queries a table with the specified options.
+<!-- Compare to https://learn.microsoft.com/en-us/power-apps/developer/model-driven-apps/clientapi/reference/xrm-webapi/retrievemultiplerecords -->
+
+### Parameters
+
+Set values for these required parameters.
+
+|Name|Type|Description|
+|---|---|---|
+|`tableName`|string|The logical name of the table to retrieve the row from.|
+|`query`|object|Options to control the data returned.|
+
+### Returns
+
+A promise containing a data table with the results.
+
+### Remarks
+
+TODO: Add any special details to help customers succeed.
+For example, explain how to use the QueryTableOptions type?
+
+### Example
+
+TODO: Add an example showing this method being used.
+
+```typescript
+```
+
+## `getChoices` method
+
+Retrieves the choices for the specified choice column name.
+
+### Parameters
+
+This parameter is required.
+
+|Name|Type|Description|
+|---|---|---|
+|`enumName`|string|The unique name of the global choice.|
+
+### Returns
+
+A promise containing an array of the choice options. Each option has these properties:
+
+|Name|Type|Description|
+|---|---|---|
+|`label`|string|The localized label value of the option.|
+|`value`|number|The numeric value of the option.|
+
+### Remarks
+
+TODO: Add any special details to help customers succeed
+
+<!-- 
+
+Please review the sample_RetrieveOptions Custom API example I've published here: https://github.com/JimDaly/DataversePowerAutomateHelpers?tab=readme-ov-file#sample_retrieveoptions.
+
+This describes my expectations for a function that retrieves options from metadata.
+
+> This Custom API addresses the need that many people have expressed to be able to retrieve the valid options for a given entity attribute. The Web API doesn't expose the equivalent to the RetrieveOptionSet message found in the SDK. But even this message is limited in capability because it only returns information about Global optionsets. There are many 'local' optionsets which are not defined globally.
+
+> Retrieving information about local optionsets in the Web API is made more complicated because the OptionSet property isn't part of the base AttributeMetadata class. It is only found in specific classes derived from AttributeMetadata. This requires that you know the sub-type before you send your request and cast the attribute in the URL, and there are five different types of attributes with options.
+
+> For example, if you want to get the options for an ordinary PicklistAttributeMetadata attribute, you need to compose a URL like this:
+
+> GET [Organization URI]/api/data/v9.2/EntityDefinitions(LogicalName='account')/Attributes(LogicalName='accountcategorycode')/Microsoft.Dynamics.CRM.PicklistAttributeMetadata/OptionSet?$select=Options
+
+> However, the following classes also support OptionSets:
+
+> BooleanAttributeMetadata
+> MultiSelectPicklistAttributeMetadata
+> StateAttributeMetadata
+> StatusAttributeMetadata
+> More information Query metadata using the Web API > Retrieving attributes (https://learn.microsoft.com/power-apps/developer/data-platform/webapi/query-metadata-web-api#retrieving-attributes) -->
+
+### Example
+
+TODO: Add an example showing this method being used.
+
+```typescript
+```
