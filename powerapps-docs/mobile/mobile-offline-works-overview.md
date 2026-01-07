@@ -31,7 +31,7 @@ The sync process keeps offline data up to date with Dataverse through automatic 
 - **Initial download**: When the app first opens, all data defined in the offline profile is downloaded to the local device.
 - **Incremental updates**: Subsequent down-syncs fetch only changes (inserts, updates, deletes) since the last sync, reducing data transfer.
 - **Configurable frequency**: Makers can set down-sync intervals (every few minutes, hourly, or daily) for each table in the offline profile in the maker studio.
-- **Smart sync**: If no changes are detected across tables, the doen-sync is skipped to save bandwidth.
+- **Smart sync**: If no changes are detected across tables, the down-sync is skipped to save bandwidth.
 - **Automatic resumption**: When the mobile device reconnects to the network, the down-sync operation resumes automatically.
 - **Platform differences**: On iOS, syncs happen only in the foreground. On Android, syncs that start in the foreground continue even when the app moves to the background.
 
@@ -48,14 +48,6 @@ All offline data is stored in a local database on the device, ensuring data avai
 - The user clears the app cache or uninstalls the app
 - The maker updates the offline profile, which can trigger a full refresh
 - The user sign out of the app before the sync is complete
-
-## Offline-first behavior
-
-When the mobile app is configured as offline-first, queries always run against the local device data, regardless of network availability. This ensures consistent performance and eliminates latency from server round trips.
-
-Complex lookups and relationships use predownloaded related tables stored locally. Users can navigate between related records without requiring an active connection.
-
-**Online mode option**: In model driven apps, makers can set up an **Online mod** feature. Once configured, users can toggle this option to access data directly from Dataverse instead of the local device data. Meanwhile, the app continues syncing data in the background, allowing users to switch back to offline mode at any time without losing functionality. Learn more in [Turn on Online mode](setup-mobile-offline.md#turn-on-online-mode)
 
 ## Maker controls and optimization
 
