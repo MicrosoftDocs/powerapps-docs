@@ -39,6 +39,9 @@ This guide helps developers use the Power Apps SDK to connect their code app to 
 The following scenarios are supported when connecting to Dataverse using the Power Apps SDK:
 
 - Add Dataverse entities to code apps using the PAC CLI
+- Retrieve formatted values/display names for option sets
+- [Get Dataverse table metadata](/power-apps/developer/code-apps/how-to/get-table-metadata)
+- Lookups (Currently, you’ll need to follow the [lookup patch formatting guidelines](/power-apps/developer/data-platform/webapi/create-entity-web-api#associate-table-rows-on-create) when working with lookups. A dedicated how-to guide is coming soon, and we’re actively working to make lookups easier to use in code apps.)
 - Perform CRUD operations:
 
   - Create
@@ -273,8 +276,7 @@ try {
 
 The following features aren't yet supported:
 
-- Retrieving formatted values/display names for option sets
-- Lookup fields (including polymorphic lookups)
+- Polymorphic lookups
 - Dataverse actions and functions
 - Deleting Dataverse datasources via PAC CLI
 - Schema definition (entity metadata) CRUD
