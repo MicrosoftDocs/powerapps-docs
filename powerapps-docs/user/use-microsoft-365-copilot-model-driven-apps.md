@@ -71,12 +71,8 @@ One of the benefits of @ mentioning an agent is that you can add or remove it fr
 
 ## Limitations
 
-1. The input box styling doesn't match the refreshed look and feel of the standalone [Microsoft 365 Copilot](https://m365.cloud.microsoft/chat) interface.
 1. The model chooser option, which allows users to select different AI models or configurations in the standalone version, is not available.
-1. The **Tools** and **Sources** menu inside the input box is not available.
-1. Context IQ results, which provide intelligent contextual information and suggestions, do not currently load in the embedded Copilot chat experience.
-1. To obtain answers about your Dataverse data within the app, you need to be on a grid or form page in the application.
-1. Agents published to Microsoft 365 Copilot via Microsoft Copilot Studio channels are not currently available.
+1. Agents published to Microsoft 365 Copilot via Microsoft Copilot Studio channels are do not show up in the navigation panel or when @ mentioning.
 
 ## Related information
 
