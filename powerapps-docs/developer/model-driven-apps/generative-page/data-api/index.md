@@ -1,6 +1,6 @@
 ---
 title: "dataApi reference for generative pages"
-description: "The topic provides dataApi reference for generative pages."
+description: "The article provides dataApi reference for generative pages."
 ms.date: 01/07/2026
 author: jasongre
 ms.author: jasongre
@@ -16,7 +16,7 @@ contributors:
 
 When you [generate a page using natural language](../../../../maker/model-driven-apps/generative-pages.md), the AI generates React code that covers both the front-end user experience by selecting the right components and determining the best layout, and the corresponding business logic.
 
-You have the opportunity to [view and edit the generated code to refine the output](../../../../maker/model-driven-apps/generative-pages.md#view-the-generated-code-iterate-and-publish). Data operations will use a `dataApi` object that exposes the following public methods
+You have the opportunity to [view and edit the generated code to refine the output](../../../../maker/model-driven-apps/generative-pages.md#view-the-generated-code-iterate-and-publish). Data operations use a `dataApi` object that exposes the following public methods:
 
 |Method|Description|
 |---|---|
@@ -44,7 +44,7 @@ Set values for these required parameters.
 
 ### Returns
 
-The ID value of the created row.
+A [promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) containing the result of the operation. When the operation succeeds, the result returned is the ID value of the created row.
 
 ### Remarks
 
@@ -60,8 +60,8 @@ The following is an untested example based on the Xrm.WebApi.createRecord exampl
 -->
 
 ```typescript
-// define the data to create new account
-var data =
+// define the row data to create new account
+var row =
     {
         "name": "Sample Account",
         "creditonhold": false,
@@ -75,9 +75,9 @@ var data =
 // create account record
 
 try{
-let result = await dataApi.createRow("account", data);
+let result = await dataApi.createRow("account", row);
 
-   console.log("Account created with ID: " + result.id);
+   console.log("Account created with ID: " + result);
 
 }
 catch (error){
@@ -104,7 +104,7 @@ Set values for these required parameters.
 
 ### Returns
 
-This method doesn't return a value.
+A [promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) containing the result of the operation. When the operation succeeds, no value is returned.
 
 ### Remarks
 
@@ -119,7 +119,7 @@ The following is an untested example based on the Xrm.WebApi.createRecord exampl
 -->
 
 ```typescript
-let id = "5531d753-95af-e711-a94e-000d3a11e605"
+let rowId = "5531d753-95af-e711-a94e-000d3a11e605"
 
 // Define the row to update a record
 var row =
@@ -135,7 +135,7 @@ var row =
 // update the record
 
 try{
- await dataApi.createRow("account", id, row);
+ await dataApi.createRow("account", rowId, row);
 }
 catch (error){
  console.log(error.message);
@@ -158,7 +158,7 @@ Set values for these required parameters.
 
 ### Returns
 
-A promise indicating whether the operation succeeded or not.
+A [promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) containing the result of the operation. When the operation succeeds, no value is returned.
 
 ### Remarks
 
@@ -194,7 +194,7 @@ Set values for these required parameters.
 
 ### Returns
 
-An object containing the data of the record.
+A [promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) containing the result of the operation. When the operation succeeds, an object containing the data of the record is returned.
 
 ### Remarks
 
@@ -224,12 +224,12 @@ Set values for these required parameters.
 
 ### Returns
 
-A promise containing a data table with the results.
+A [promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) containing the result of the operation. When the operation succeeds, an object containing a data table with the results is returned.
 
 ### Remarks
 
 TODO: Add any special details to help customers succeed.
-For example, explain how to use the QueryTableOptions type?
+<!-- For example, explain how to use the QueryTableOptions type? -->
 
 ### Example
 
@@ -252,7 +252,7 @@ This parameter is required.
 
 ### Returns
 
-A promise containing an array of the choice options. Each option has these properties:
+A [promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) containing the result of the operation. When the operation succeeds, an array of the choice options is returned. Each option has these properties:
 
 |Name|Type|Description|
 |---|---|---|
