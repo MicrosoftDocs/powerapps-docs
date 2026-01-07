@@ -2,7 +2,7 @@
 title: Web API navigation properties
 description: Learn about OData navigation property elements that are defined for EntityTypes in the Microsoft Dataverse Web API.
 ms.topic: how-to
-ms.date: 04/06/2022
+ms.date: 01/07/2026
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: jdaly
@@ -31,6 +31,8 @@ The following table describes the attributes of `NavigationProperty` elements.
 
 > [!IMPORTANT]
 > There are two types of navigation properties: [*single-valued*](#single-valued-navigation-properties) and [*collection-valued*](#collection-valued-navigation-properties). This distinction is important because the capabilities of each type of navigation property are different.
+> 
+> When constructing a query with OData, we don't refer to the one-to-many, many-to-one, or many-to-many relationships. The two types of navigation properties describe how to navigate these relationships.
 
 ## Single-valued navigation properties
 
