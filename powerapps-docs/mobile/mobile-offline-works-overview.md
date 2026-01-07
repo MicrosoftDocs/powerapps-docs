@@ -6,13 +6,13 @@ reviewer: shwetamurkute
 author: Murugesh1985
 ms.author: murugeshs
 ms.reviewer: smurkute
-ms.date: 12/23/2025
+ms.date: 01/07/2026
 ms.topic: concept-article
 ---
 
 # How offline first functionality works in Power Apps mobile
 
-Offline first functionality in Power Apps mobile enables users to access and work with app data on their mobile devices without an active internet connection. This feature uses a local database on the device to store data. Changes made while the network is offline automatically sync with Dataverse when connectivity is restored. Changes made while network is online automatically sync with Dataverse based on the sync frequency configured by the maker in the offline settings.
+Offline first functionality in Power Apps mobile enables users to access and work with app data on their mobile devices without an active internet connection. This feature uses a local database on the device to store data. When your device is connected to a network, any writes made in the app sync to Dataverse immediately. If you perform updates while the network is offline, those changes sync automatically with Dataverse as soon as connectivity returns. Reads performed while the device is connected to the internet follow the sync frequency configured by the maker in the app’s offline settings. When the device transitions from no network to an active connection, read operations are triggered again to refresh data. 
 
 ## Offline profile
 
@@ -22,26 +22,26 @@ First, to create an offline-first app, maker must create the offline profile. Th
 - Optional filters to limit the data downloaded per table
 - Relationships between tables for linked data access
 
-After you create the profile, when you first open the app, the data for the offline profile downloads and stores locally on the device in a SQLite-based cache. This local copy becomes the primary data source for all app operations. The app doesn't access Dataverse directly, even when you're online. Learn more about setting up offline for canvas apps in [Set up mobile offline for canvas apps](canvas-mobile-offline-setup.md) and about setting up offline for model-driven apps in [Set up mobile offline for model-driven apps](setup-mobile-offline.md).
+After you create the profile, when you first open the app, the data for the offline profile downloads and stores locally on the device in a SQLite-based cache. This local copy becomes the primary data source for all app operations. Learn more about setting up offline for canvas apps in [Set up mobile offline for canvas apps](canvas-mobile-offline-setup.md) and about setting up offline for model-driven apps in [Set up mobile offline for model-driven apps](setup-mobile-offline.md).
 
 ## Data synchronization
 
 The sync process keeps offline data up to date with Dataverse through automatic synchronization:
 
 - **Initial download**: When the app first opens, all data defined in the offline profile is downloaded to the local device.
-- **Incremental updates**: Subsequent syncs fetch only changes (inserts, updates, deletes) since the last sync, reducing data transfer.
-- **Configurable frequency**: Makers can set sync intervals (every few minutes, hourly, or daily) for each table in the offline profile in the maker studio.
-- **Smart sync**: If no changes are detected across tables, the sync is skipped to save bandwidth.
-- **Automatic resumption**: When the mobile device reconnects to the network, the sync operation resumes automatically.
+- **Incremental updates**: Subsequent down-syncs fetch only changes (inserts, updates, deletes) since the last sync, reducing data transfer.
+- **Configurable frequency**: Makers can set down-sync intervals (every few minutes, hourly, or daily) for each table in the offline profile in the maker studio.
+- **Smart sync**: If no changes are detected across tables, the doen-sync is skipped to save bandwidth.
+- **Automatic resumption**: When the mobile device reconnects to the network, the down-sync operation resumes automatically.
 - **Platform differences**: On iOS, syncs happen only in the foreground. On Android, syncs that start in the foreground continue even when the app moves to the background.
 
 ## Local storage and data access
 
 All offline data is stored in a local database on the device, ensuring data availability regardless of network status.
 
-**Read operations**: When offline, the app reads from the local cache for all data operations. This includes viewing records, searching, and filtering data.
+**Read operations**: In an offline first app, the app reads from the local cache for all data operations, regardless of network connectivity. This includes viewing records, searching, and filtering data.
 
-**Write operations**: Changes made offline are queued locally and pushed to Dataverse when connectivity is restored. Users can continue making modifications without interruption.
+**Write operations**: Changes made when the network is offline are queued locally and pushed to Dataverse when connectivity is restored. Users can continue making modifications without interruption. Changes made when network is online are saved locally and instantly synced to Dataverse.
 
 **Data retention**: Retention duration isn't fixed by the platform. Data persists as long as the app and offline profile remain installed on the device. There's no automatic expiry unless:
 
