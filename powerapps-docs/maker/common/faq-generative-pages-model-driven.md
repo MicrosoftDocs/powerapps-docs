@@ -1,7 +1,7 @@
 ---
 title: FAQ about generative pages in model-driven apps
 description: This FAQ provides information about the AI technology used in the generative pages feature with key considerations and details about how AI is used, how it was tested and evaluated, and any specific limitations.
-ms.date: 12/1/2025
+ms.date: 01/7/2025
 ms.custom: 
   - responsible-ai-faqs
 ms.topic: faq
@@ -31,9 +31,9 @@ The intended use of generative pages is to streamline the app design process for
 
 In our evaluations, we measure how often the agent can generate syntactically correct code, and we also test how good the code generation is in terms of UX design and meeting functional requirements. Moreover, the agent is evaluated for satisfying Microsoft’s responsible AI principles.
 
-## Are the images from the Include images tool AI-generated?
-<!-- What is the Include images tool? I only see the Attach image option in the generative page UI.-->
-No. When the Include images tool is enabled, the resulting images are not AI-generated. They are sourced from a library of curated stock images. The tool only decides whether images are needed based on the prompt and then selects the most relevant images from this library.
+## Are the images from the include images option AI-generated?
+
+No. When the **Include images** option is enabled, the resulting images aren't AI-generated. They're sourced from a library of curated stock images. The option only decides whether images are needed based on the prompt and then selects the most relevant images from this library.
 
 ## What are the limitations of generative pages? How can users minimize the impact of generative page limitations when using the system?
 
