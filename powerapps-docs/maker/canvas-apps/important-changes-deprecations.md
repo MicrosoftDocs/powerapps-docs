@@ -11,6 +11,7 @@ ms.author: tapanm
 ms.reviewer: mkaur-msft
 contributors:
     - mduelae
+    - shwetamurkute
 ---
 
 # Important upcoming changes (deprecations) in canvas apps
