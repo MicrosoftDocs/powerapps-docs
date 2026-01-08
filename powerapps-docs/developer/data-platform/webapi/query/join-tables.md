@@ -1,7 +1,7 @@
 ---
 title: Join tables using OData
 description: Learn how to use OData to join tables when you retrieve data from Microsoft Dataverse Web API.
-ms.date: 10/30/2024
+ms.date: 01/07/2026
 ms.topic: how-to
 author: MsSQLGirl
 ms.author: jukoesma
@@ -100,11 +100,12 @@ Preference-Applied: odata.maxpagesize=1
 
 ## Navigation property type differences
 
-It's important to remember there are two types of navigation properties. [Learn more about Web API Navigation Properties](../web-api-navigation-properties.md)  
-  
-- *Single-valued* navigation properties correspond to lookup attributes that support many-to-one relationships and allow setting a reference to another record.  
-  
-- *Collection-valued* navigation properties correspond to one-to-many or many-to-many relationships.
+> [!IMPORTANT]
+> Remember there are two types of navigation properties. [Learn more about Web API Navigation Properties](../web-api-navigation-properties.md)  
+> 
+> - *Single-valued* navigation properties correspond to lookup attributes that support many-to-one relationships and allow setting a reference to another record.  
+>   
+> - *Collection-valued* navigation properties correspond to one-to-many or many-to-many relationships.
 
 Expanding a collection-valued navigation property can make the size of the response large in ways it's difficult to anticipate. It's important that you include limits to control how much data is returned. You can limit the number of records by using paging. [Learn more about paging results](page-results.md)
 
