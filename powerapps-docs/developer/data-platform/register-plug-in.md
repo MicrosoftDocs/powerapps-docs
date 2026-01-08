@@ -1,7 +1,7 @@
 ---
 title: "Register a plug-in (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to register a plug-in assembly and step with the Microsoft Dataverse event framework pipeline." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 08/28/2024
+ms.date: 01/07/2026
 ms.reviewer: "pehecke"
 ms.topic: how-to
 author: MsSQLGirl

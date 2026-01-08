@@ -1,7 +1,7 @@
 ---
 title: "Dataverse development tools (Microsoft Dataverse) | Microsoft Docs"
 description: "Download and launch the Plug-in Registration, Package Deployment, and other Dataverse development tools."
-ms.date: 05/27/2025
+ms.date: 01/07/2026
 ms.reviewer: pehecke
 ms.topic: article
 author: davidjenni # GitHub ID
