@@ -1,7 +1,7 @@
 ---
 title: Set up mobile offline for canvas apps 
 description: Learn how to set up canvas apps for use offline on mobile devices in Microsoft Power Apps.
-ms.date: 10/23/2025
+ms.date: 01/08/2026
 ms.topic: how-to
 ms.subservice: mobile
 ms.component: pa-user
@@ -93,13 +93,7 @@ You need to publish your new offline profile before you can select it in your ca
 
 There are two ways you can create offline profile.
 
-### Create a custom mobile offline profile from within Power apps studio (preview)
-
-> [!IMPORTANT]
->
-> - This is a preview feature.
-> - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2216214), and are available before an official release so that customers can get early access and provide feedback.
-> - This feature is in the process of rolling out and might not be available in your region yet.
+### Create a custom mobile offline profile from within Power apps studio
 
 1. Sign in to [Power Apps Studio](https://make.powerapps.com/). 
 1. In the left side panel, select **Apps**.
@@ -107,7 +101,7 @@ There are two ways you can create offline profile.
 1. Select **Settings** > **General**.
 1. Turn on the **Can be used offline** setting.
 1. In the drop-down menu, select an offline profile. You can select the **Auto-generated** option or **New profile with current app data**.
-1. Enter a name and description for the profile. Add the tables you need for the profile. For those tables, [apply filters](#add-a-table-to-an-offline-profile-and-apply-filters) and choose columns as described in [optimize the offline profile](mobile-offline-guidelines.md#use-column-selection-to-reduce-data-download-and-sync-time-preview).
+1. Enter a name and description for the profile. Add the tables you need for the profile. For those tables, [apply filters](#add-a-table-to-an-offline-profile-and-apply-filters) and choose columns as described in [optimize the offline profile](mobile-offline-guidelines.md#use-column-selection-to-reduce-data-download-and-sync-time).
 1. Save the profile.
 1. Publish the profile.
 
