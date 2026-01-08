@@ -5,7 +5,7 @@ author: komala2019
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: smurkute
-ms.date: 08/06/2025
+ms.date: 01/08/2026
 ms.subservice: canvas-maker
 ms.author: koagarwa
 search.audienceType: 
