@@ -41,7 +41,7 @@ The following scenarios are supported when connecting to Dataverse using the Pow
 - Add Dataverse entities to code apps using the PAC CLI
 - Retrieve formatted values/display names for option sets
 - [Get metadata for Dataverse tables](get-table-metadata.md)
-- Lookups (Currently, you'll need to follow the [lookup patch formatting guidelines](../../data-platform/webapi/create-entity-web-api.md#associate-table-rows-on-create) when working with lookups. A dedicated how-to guide is coming soon, and we're actively working to make lookups easier to use in code apps.)
+- Lookups. Currently, you'll need to use the guidance to [associate with a single-valued navigation property](../../data-platform/webapi/associate-disassociate-entities-using-web-api.md#associate-with-a-single-valued-navigation-property) or [associate records on create](../../data-platform/webapi/create-entity-web-api.md#associate-table-rows-on-create) when working with lookups. A dedicated how-to guide is coming soon, and we're actively working to make lookups easier to use in code apps.
 - Perform CRUD operations:
 
   - Create
