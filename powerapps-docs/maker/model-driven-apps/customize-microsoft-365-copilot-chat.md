@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.subservice: mda-maker
 ms.author: hemantg
 ms.reviewer: matp
-ms.date: 12/12/2025
+ms.date: 01/07/2025
 ms.update-cycle: 180-days
 ms.topic: how-to
 applies_to: 
@@ -16,6 +16,7 @@ search.audienceType:
 contributors:
   - makolomi
   - Jacob-Wilkinson
+  - devkeydet
 ms.collection: bap-ai-copilot
 ai-usage: ai-assisted
 ---
@@ -49,6 +50,10 @@ Use the following information to find the best solution for your organization:
 
 > [!NOTE]
 > When you select an agent in Microsoft 365 Copilot chat in a model-driven app, the agent doesn't answer Dataverse data questions unless you configure it to do so. It does use information from your chat history that might have information about your data. To allow questions about your Dataverse data, remove the selected agent.
+
+## Limitation
+
+- Agents published to Microsoft 365 Copilot via Microsoft Copilot Studio channels don't show up in the navigation panel or when @ mentioning within Microsoft 365 Copilot chat in model-driven apps.  They do show up when you use the chat experience at [https://m365.cloud.microsoft/chat](https://m365.cloud.microsoft/chat).
 
 ## Related information
 
