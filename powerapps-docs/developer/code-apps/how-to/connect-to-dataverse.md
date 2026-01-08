@@ -3,7 +3,7 @@ title: "How to: Connect your code app to Dataverse (preview)"
 description: "Learn how to connect your code app to Dataverse"
 ms.author:  jordanchodak
 author: jordanchodakWork
-ms.date: 10/07/2025
+ms.date: 01/07/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
@@ -40,8 +40,8 @@ The following scenarios are supported when connecting to Dataverse using the Pow
 
 - Add Dataverse entities to code apps using the PAC CLI
 - Retrieve formatted values/display names for option sets
-- [Get Dataverse table metadata](/power-apps/developer/code-apps/how-to/get-table-metadata)
-- Lookups (Currently, you’ll need to follow the [lookup patch formatting guidelines](/power-apps/developer/data-platform/webapi/create-entity-web-api#associate-table-rows-on-create) when working with lookups. A dedicated how-to guide is coming soon, and we’re actively working to make lookups easier to use in code apps.)
+- [Get metadata for Dataverse tables](get-table-metadata.md)
+- Lookups (Currently, you'll need to follow the [lookup patch formatting guidelines](../../data-platform/webapi/create-entity-web-api.md#associate-table-rows-on-create) when working with lookups. A dedicated how-to guide is coming soon, and we're actively working to make lookups easier to use in code apps.)
 - Perform CRUD operations:
 
   - Create
