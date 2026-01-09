@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.subservice: mda-maker
 ms.author: hemantg
 ms.reviewer: matp
-ms.date: 12/9/2025
+ms.date: 01/09/2026
 ms.update-cycle: 180-days
 ms.topic: how-to
 applies_to: 

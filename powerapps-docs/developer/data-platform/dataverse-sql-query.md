@@ -1,7 +1,7 @@
 ---
 title: "Use SQL to query data (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to query Microsoft Dataverse table data using SQL." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 05/27/2025
+ms.date: 01/07/2026
 ms.reviewer: "pehecke"
 ms.topic: how-to
 author: "pnghub" # GitHub ID
@@ -184,8 +184,8 @@ If the connection is successful a line "TcpTestSucceeded : True" is returned.
 
 In some cases, traffic can be blocked directly at the IP level. To validate the IP address is also working, take the IP address returned from the above domain test connection and replace the ComputerName parameter value with the IP address.
 
-3. Take the address returned from the above command as "RemoteAddress"
-4. Run the Test-NetConnection -ComputerName \<RemoteAddress> -port 1433
+1. Take the address returned from the above command as "RemoteAddress"
+2. Run the Test-NetConnection -ComputerName \<RemoteAddress> -port 1433
   
 This command should return "TcpTestSucceeded : True"
 

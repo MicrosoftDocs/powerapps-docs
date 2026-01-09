@@ -4,7 +4,7 @@ description: Learn how to use Copilot chat to gain insights about the data in yo
 author: srihas
 ms.component: pa-user
 ms.topic: overview
-ms.date: 12/08/2025
+ms.date: 01/08/2026
 ms.update-cycle: 180-days
 ms.subservice: end-user
 ms.author: srihas
