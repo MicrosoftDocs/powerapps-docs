@@ -4,7 +4,7 @@ description: Learn how the new Power Apps vibe code experience simplifies app cr
 author: mduelae
 ms.author: mkaur
 ms.reviewer: mkaur
-ms.date: 12/16/2025
+ms.date: 1/9/2026
 ms.topic: concept-article
 ---
 
@@ -147,7 +147,7 @@ Or, select the ellipsis for the specific table you want to edit. You can select 
 
 In the **Technology** area, select the **Chat with Copilot button** and enter your changes. You can also add new technologies or chat with the agent with specific context for the change you're requesting.
 
-Select the **Create** button to open Microsoft Copilot Studio and create new workflows.
+Select the **Create** button to open Power Automate and create a new workflow.
 
 :::image type="content" source="media/create-app-data-plan/edit-tech-area.png" alt-text="Edit the technology area":::
 
