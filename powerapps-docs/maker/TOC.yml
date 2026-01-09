@@ -517,6 +517,10 @@
               href: ./canvas-apps/controls/modern-controls/modern-control-combobox.md
             - name: Date picker
               href: ./canvas-apps/controls/modern-controls/modern-controls-date-picker.md
+            - name: Header
+              href: ./canvas-apps/controls/modern-controls/modern-controls-header.md
+            - name: Info button
+              href: ./canvas-apps/controls/modern-controls/modern-control-info-button.md
             - name: Link
               href: ./canvas-apps/controls/modern-controls/modern-control-link.md
             - name: Number input
@@ -543,10 +547,6 @@
               href: ./canvas-apps/controls/modern-controls/modern-control-copilot-answer.md
             - name: Dropdown (preview)
               href: ./canvas-apps/controls/modern-controls/modern-control-dropdown.md
-            - name: Header
-              href: ./canvas-apps/controls/modern-controls/modern-controls-header.md
-            - name: Info button
-              href: ./canvas-apps/controls/modern-controls/modern-control-info-button.md
             - name: Stream video (preview)
               href: ./canvas-apps/controls/modern-controls/new-stream-video-control.md
             - name: Table (preview)
@@ -599,6 +599,8 @@
               href: ./canvas-apps/controls/control-export-import.md
             - name: Gallery
               href: ./canvas-apps/controls/control-gallery.md
+            - name: Grid container (preview)
+              href: ./canvas-apps/controls/control-grid-container.md
             - name: Horizontal container
               href: ./canvas-apps/controls/control-horizontal-container.md
             - name: HTML text
@@ -1920,6 +1922,8 @@
       href: ../mobile/optimize-for-devices-controls.md
   - name: Configure mobile apps for offline use
     items:
+    - name: How offline first functionality works in Power Apps mobile
+      href: ../mobile/mobile-offline-works-overview.md
     - name: Mobile offline for canvas apps
       items:
       - name: Mobile offline for canvas apps overview
@@ -2442,6 +2446,8 @@
       href: ./data-platform/data-platform-mcp-vscode.md
     - name: Connect to Dataverse MCP with non-Microsoft clients
       href: ./data-platform/data-platform-mcp-other-clients.md
+    - name: Use preview tools in Dataverse MCP server
+      href: ./data-platform/data-platform-mcp-preview-tools.md
     - name: Connect to Dataverse with MCP FAQ
       href: ./data-platform/data-platform-mcp-faq.md
   - name: License requirements for tables

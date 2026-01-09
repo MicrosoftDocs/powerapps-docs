@@ -4,7 +4,7 @@ description: Learn how the new Power Apps vibe code experience simplifies app cr
 author: mduelae
 ms.author: mkaur
 ms.reviewer: mkaur
-ms.date: 11/17/2025
+ms.date: 1/9/2026
 ms.topic: concept-article
 ---
 
@@ -60,6 +60,9 @@ Legend:
 1. **Preview**: View a live preview of the app.
 1. **Code**: Access and review the app’s code.
 1. **Split**: See both the code and the app preview side by side.
+1. **Download source**: Download the source files of the app.
+1. **Play**: Play and test the app.
+1. **Toggle inline edits**: Select any area in the app and edit its text directly.
 1. **Refresh preview**: Reload the app preview to see the latest changes.
 
 
@@ -95,6 +98,14 @@ Use inline actions to edit the style of your app.
 
 1. When you're done, review the result in the visual preview. If needed, switch to **Code** view or **Split** view to inspect the generated files.
 
+
+### Keyboard shortcuts for inline actions
+
+You can use quick keys to open and close inline edit actions while editing your app.
+
+- **Hold and release Alt** to toggle the inline edit gesture.
+- **Press Esc** to dismiss the inline edit gesture.
+
 ## Edit the generated plan
 
 Select the **Plan** focus area to access these options:
@@ -120,21 +131,25 @@ The agent analyzes your request and applies updates to the plan. You can also ma
 
 #### Edit user requirements
 
-Select the area you want to change and start typing, or select the **Edit** button to add new roles and requirements. Use inline chat while an area is selected to provide context for the agent. This approach saves you from describing the specific element.
+Select the area you want to change and select the **Edit** button or **Chat with Copilot** button to add new roles and requirements. Use inline chat while an area is selected to provide context for the agent. This approach saves you from describing the specific element.
 
 :::image type="content" source="media/create-app-data-plan/edit-user-roles.png" alt-text="Select Edit to make edits to user roles":::
 
 #### Edit the data model 
 
-In the **Data model** area, select the ellipsis for the specific table you want to edit.
+In the **Data model** area, select the **Chat with Copilot button** and enter your changes.
+ 
+Or, select the ellipsis for the specific table you want to edit. You can select to view the data workspace, save the proposed tables, or chat with the agents to pass in specific context about the edit you're requesting.
 
 :::image type="content" source="media/create-app-data-plan/edit-data-model.png" alt-text="Edit a data table":::
 
-You can select to view the data workspace, save the proposed tables, or chat with the agents to pass in specific context about the edit you're requesting.
-
 #### Edit technology
 
-In the **Technology** area, select the ellipsis beside any recommended technology to remove it from the plan. You can also add new technologies or chat with the agent with specific context for the change you're requesting.
+In the **Technology** area, select the **Chat with Copilot button** and enter your changes. You can also add new technologies or chat with the agent with specific context for the change you're requesting.
+
+Select the **Create** button to open Power Automate and create a new workflow.
+
+:::image type="content" source="media/create-app-data-plan/edit-tech-area.png" alt-text="Edit the technology area":::
 
 ## Edit the generated data model
 

@@ -24,7 +24,7 @@ landingContent:
         links:
           - text: Overview
             url: overview.md
-          - text: "Quickstart: Create your first code app"
+          - text: "Quickstart: Create a code app"
             url: how-to/create-an-app-from-scratch.md
   # Card
   - title: How To
@@ -37,8 +37,31 @@ landingContent:
             url: how-to/connect-to-dataverse.md
           - text: "Connect to Azure SQL"
             url: how-to/connect-to-azure-sql.md
+          - text: "SharePoint operations"
+            url: how-to/sharepoint-operations.md
           - text: "Create a Basic Asset Management API with Azure Functions"
             url: how-to/create-basic-asset-management-api-azure-functions.md
+          - text: "Analyze data requests and responses"
+            url: how-to/analyze-data-request-response.md
+          - text: "Get context data"
+            url: how-to/retrieve-context.md
+          - text: "Get Dataverse tables metadata"
+            url: how-to/get-table-metadata.md
+          - text: "Application Lifecycle Management (ALM)"
+            url: how-to/alm.md
+          - text: "Manage telemetry for the PAC CLI code commands"
+            url: how-to/telemetry.md
+
+    # Card
+  - title: Troubleshooting guides
+    linkLists:
+      - linkListType: tutorial
+        links:
+           - text: "Adding a data source"
+             url: troubleshoot-add-datasource.md
+           - text: "Zscaler issues"
+             url: troubleshoot-zscaler-issues.md
+    
     # Card
   - title: Architecture
     linkLists:

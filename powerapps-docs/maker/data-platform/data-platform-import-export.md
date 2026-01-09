@@ -4,7 +4,7 @@ description: Bulk import and export data from Excel or CSV files into tables in 
 author: sabinn-msft
 ms.topic: how-to
 ms.component: cds
-ms.date: 06/17/2025
+ms.date: 01/09/2026
 ms.subservice: dataverse-maker
 ms.author: sabinn
 ms.reviewer: matp

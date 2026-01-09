@@ -5,7 +5,7 @@ author: mduelae
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 4/10/2025
+ms.date: 12/15/2025
 ms.subservice: canvas-maker
 ms.author: mkaur
 search.audienceType: 
@@ -20,13 +20,12 @@ contributors:
 You can integrate a custom Copilot created in Microsoft Copilot Studio and enable it for your canvas app. This lets users interact with Copilot to ask questions about the data in your app. With just a few simple steps, you can embed a custom Copilot across all your canvas app screens without changing the app's design.
 
 > [!IMPORTANT]
-> - This feature is available only on mobile devices. For web scenarios, this feature will be deprecated by September 2025. If you're running a canvas apps in a web browser, use the [Copilot control for canvas apps](../../maker/canvas-apps/add-ai-copilot.md) instead.
-> - This is a preview feature.
-> - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2189520), and are available before an official release so that customers can get early access and provide feedback.
+> Starting February 2, 2026, adding a custom Copilot to new canvas apps will be discontinued. Existing apps using this feature will remain functional for a limited time but will eventually no longer be supported.
 
 > [!NOTE]
->
-> App Copilot for canvas apps is currently rolling out and might not yet be available in your region. App Copilot may be available on [Power Apps mobile](../../mobile/run-powerapps-on-mobile.md) for mobile devices before it becomes available on the web browser during rollout.
+> - This is a preview feature.
+> - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2189520), and are available before an official release so that customers can get early access and provide feedback.
+> - App Copilot for canvas apps is currently rolling out and might not yet be available in your region. App Copilot may be available on [Power Apps mobile](../../mobile/run-powerapps-on-mobile.md) for mobile devices before it becomes available on the web browser during rollout.
 
 ## Availability
 
