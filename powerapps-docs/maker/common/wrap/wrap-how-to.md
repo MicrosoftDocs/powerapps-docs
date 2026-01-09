@@ -315,4 +315,4 @@ You can sign your app automatically in **Step 2** or manually after building. [C
 - [Manual code sign for iOS](code-sign-ios.md)
 - [Manual code sign for Android](code-sign-android.md)
 - [Create your Azure Key Vault for automated code signing](create-key-vault-for-code-signing.md)
-- [Frequently asked questions for wrap](faq.yml)
+- [Frequently asked questions for wrap](faq.yml)  
