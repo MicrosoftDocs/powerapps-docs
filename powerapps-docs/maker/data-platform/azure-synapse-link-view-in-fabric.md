@@ -7,7 +7,7 @@ ms.reviewer: matp
 ms.service: powerapps
 ms.subservice: dataverse-maker
 ms.topic: how-to
-ms.date: 08/18/2025
+ms.date: 01/09/2026
 ms.custom: template-how-to
 ---
 # Link your Dataverse environment to Microsoft Fabric and unlock deep insights

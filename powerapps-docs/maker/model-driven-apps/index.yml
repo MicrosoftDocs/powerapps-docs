@@ -8,12 +8,12 @@ metadata:
   description: Provides access to highlighted areas within the Power Apps model-driven apps documentation.
   services: service
   
-  ms.subservice: subservice
+  ms.subservice: mda-maker
   ms.topic: landing-page 
   ms.collection: collection
   author: Mattp123
   ms.author: matp
-  ms.date: 01/16/2025 
+  ms.date: 01/09/2026 
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
