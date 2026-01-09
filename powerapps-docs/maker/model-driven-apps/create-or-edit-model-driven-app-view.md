@@ -1,7 +1,7 @@
 ---
 title: "Create and edit public model-driven app views | MicrosoftDocs"
 description: "Learn how to create or edit public or system model-driven app views."
-ms.date: 05/29/2025
+ms.date: 01/09/2026
 ms.update-cycle: 180-days
 ms.subservice: mda-maker
 ms.topic: tutorial

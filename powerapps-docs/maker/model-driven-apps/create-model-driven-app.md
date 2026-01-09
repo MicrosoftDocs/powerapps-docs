@@ -2,7 +2,7 @@
 title: "Create a model-driven app using the designer"
 description: Learn how to create a model-driven app with Power Apps.
 ms.custom: ""
-ms.date: 05/06/2025
+ms.date: 01/09/2026
 ms.update-cycle: 180-days
 ms.suite: ""
 ms.tgt_pltfrm: ""
