@@ -2,7 +2,7 @@
 title: "Solution layers in Power Platform"
 description: "Learn how you can use solution layers"
 keywords: 
-ms.date: 08/04/2025
+ms.date: 01/09/2026
 ms.custom: 
 ms.topic: article
 ms.assetid: 
