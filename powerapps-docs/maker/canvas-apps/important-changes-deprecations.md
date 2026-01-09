@@ -5,7 +5,7 @@ author: mduelae
 
 ms.topic: article
 ms.custom: 
-ms.date: 01/07/2026
+ms.date: 01/09/2026
 ms.subservice: canvas-maker
 ms.author: tapanm
 ms.reviewer: mkaur-msft
