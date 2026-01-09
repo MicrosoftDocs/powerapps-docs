@@ -4,7 +4,7 @@ description: Introduction to Microsoft Dataverse, tables, server-side logic, sec
 author: mattp123
 ms.topic: overview
 ms.collection: get-started
-ms.date: 05/29/2025
+ms.date: 01/09/2026
 ms.reviewer: matp
 ms.subservice: dataverse-maker
 ms.author: matp
