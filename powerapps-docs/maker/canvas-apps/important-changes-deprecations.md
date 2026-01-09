@@ -25,7 +25,7 @@ Makers, developers, and IT professionals can use this information to prepare for
 
 ## Enhanced deep link creation requirement
 
-Starting May 1, 2026, for canvas apps, all deep links for Power Apps mobile must include the environment ID as a required parameter. For model-driven apps, both environment ID and app logical name must be included. Existing deep links without these parameters will stop working after the deprecation date. You also need to create new shortcuts. Update your links now to avoid disruptions. Old links have slower performance until support ends. Learn more in [Use deep links with the Power Apps mobile app](/power-apps/mobile/mobile-deep-links).
+Starting May 1, 2026, for canvas apps, all deep links for Power Apps mobile must include the environment ID as a required parameter. Existing deep links without these parameters will stop working after the deprecation date. You also need to create new shortcuts. Update your links now to avoid disruptions. Old links have slower performance until support ends. Learn more in [Use deep links with the Power Apps mobile app](/power-apps/mobile/mobile-deep-links).
 
 ## Deprecated endpoints
 
