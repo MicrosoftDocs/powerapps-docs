@@ -1,7 +1,7 @@
 ---
 title: "Configure a row summary for a model-driven app main form"
 description: "Learn how to configure a row summary for a model-driven app main form that uses AI to let your users view key information on a form."
-ms.date: 12/16/2025
+ms.date: 01/09/2026
 ms.update-cycle: 180-days
 ms.subservice: dataverse-maker
 ms.topic: how-to
