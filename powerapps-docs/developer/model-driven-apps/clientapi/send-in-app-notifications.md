@@ -164,9 +164,9 @@ The app stores notifications sent by using the `SendAppNotification` message in 
 |**Title**|`Title`|The title of the notification.|
 |**Owner**|`OwnerId`|The *user* who receives the notification. While this column can be set to either a user or team, set it only to a user. You can't set the notification to a team.|
 |**Body**|`Body`|Details about the notification.|
-|IconType|`IconType`|The list of predefined icons. The default value is `Info`. For more information, see [Changing the notification icon](#changing-the-notification-icon) later in this article.|
-|**Toast Type**|`ToastType`|The list of notification behaviors. The default value is `Timed`. For more information, see [Changing the notification behavior](#changing-the-notification-behavior) later in this article.|
-|**Priority** | `Priority` |Enables prioritization of notifications, which determines the order in which the notifications are displayed in the notification center. For more information, see [Changing the notification behavior](#changing-the-notification-behavior) later in this article. |
+|IconType|`IconType`|The list of predefined icons. The default value is `Info`. For more information, see [Change the notification icon](#change-the-notification-icon) later in this article.|
+|**Toast Type**|`ToastType`|The list of notification behaviors. The default value is `Timed`. For more information, see [Change the notification behavior](#change-the-notification-behavior) later in this article.|
+|**Priority** | `Priority` |Enables prioritization of notifications, which determines the order in which the notifications are displayed in the notification center. For more information, see [Change the notification behavior](#change-the-notification-behavior) later in this article. |
 |**Expiry (seconds)**|`TTLInSeconds`|The number of seconds from when the notification should be deleted if not already dismissed.|
 |**Data**|`Data`|JSON that's used for extensibility and parsing richer data into the notification. The maximum length is 5,000 characters.|
 
