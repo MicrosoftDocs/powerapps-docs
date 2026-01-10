@@ -1,6 +1,6 @@
 ---
-title: "Sample: Detect solution dependencies(Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample shows how to detect dependencies on solutions." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Sample: Detect solution dependencies(Microsoft Dataverse) | Microsoft Docs"
+description: "This sample shows how to detect dependencies on solutions." 
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"
