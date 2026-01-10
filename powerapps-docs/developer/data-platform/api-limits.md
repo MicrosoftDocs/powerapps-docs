@@ -24,7 +24,7 @@ When a client application makes extraordinarily demanding requests, Dataverse fo
 - With the Web API, Dataverse returns a [429 Too Many Requests](https://developer.mozilla.org/docs/Web/HTTP/Status/429) error.
 - With the Dataverse SDK for .NET, you get an [OrganizationServiceFault](/dotnet/api/microsoft.xrm.sdk.organizationservicefault) error with one of three specific error codes.
 
-[Learn about the service protection API limit errors returned](#service-protection-api-limit-errors-returned)
+[Learn about the Service protection API limit errors](#service-protection-api-limit-errors)
 
 
 ## Impact on client applications
@@ -49,7 +49,7 @@ Portal applications typically send requests from anonymous users through a servi
 
 Plug-ins and custom workflow activities apply business logic triggered by incoming requests. Service protection limits don't apply to data operations that originate from plug-ins and custom workflow activities. Plug-ins and custom workflow activities run within the isolated sandbox service. Dataverse operations invoked on the sandbox service don't use the public API endpoints.
 
-If your application performs operations that trigger custom logic, the number of requests sent by plug-ins or custom workflow activities doesn't count towards service protection API limits. However, the extra computation time that these operations contribute is added to the initial request that triggered them. This computation time is part of the service protection API limits. [Learn how service protection API limits are enforced](#how-service-protection-api-limits-are-enforced).
+If your application performs operations that trigger custom logic, the number of requests sent by plug-ins or custom workflow activities doesn't count towards service protection API limits. However, the extra computation time that these operations contribute is added to the initial request that triggered them. This computation time is part of the service protection API limits. [Learn how the system enforces Service Protection API Limits](#how-the-system-enforces-service-protection-api-limits).
 
 ## Retry operations
 

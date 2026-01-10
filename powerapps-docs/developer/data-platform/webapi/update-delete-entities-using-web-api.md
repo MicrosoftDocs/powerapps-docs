@@ -177,7 +177,7 @@ OData-Version: 4.0
 ```  
   
 > [!NOTE]
->  You can't use this approach with a single-valued navigation property to disassociate two entities. For an alternative approach, see [Disassociate with a single-valued navigation property](associate-disassociate-entities-using-web-api.md#disassociate-with-a-single-valued-navigation-property).  
+>  You can't use this approach with a single-valued navigation property to disassociate two entities. For an alternative approach, see [Disassociate by using a single-valued navigation property](associate-disassociate-entities-using-web-api.md#disassociate-by-using-a-single-valued-navigation-property).  
   
 <a name="bkmk_upsert"></a>
 
