@@ -1,6 +1,6 @@
 ---
-title: "Query hierarchical data (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how you can use the query condition operators to query tables with explicit hierarchical relationships." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Query hierarchical data (Microsoft Dataverse) | Microsoft Docs"
+description: "Learn how you can use the query condition operators to query tables with explicit hierarchical relationships." 
 ms.date: 03/22/2022
 ms.reviewer: "pehecke"
 ms.topic: "article"

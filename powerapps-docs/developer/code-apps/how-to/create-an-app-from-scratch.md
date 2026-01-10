@@ -3,7 +3,7 @@ title: "Quickstart: Create a code app from scratch (preview)"
 description: "Learn how to create a code app from scratch"
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 12/9/2025
+ms.date: 01/09/2026
 ms.reviewer: jdaly
 ms.topic: quickstart
 contributors:
@@ -11,7 +11,7 @@ contributors:
 ---
 # Quickstart: Create a code app from scratch (preview)
 
-This article walks through how to set up a blank app from [Vite](https://vite.dev/) and turn it into a Power Apps code app. It covers configuring a TypeScript app using the Power Platform SDK.
+This article shows how to set up a blank app from [Vite](https://vite.dev/) and turn it into a Power Apps code app. It covers configuring a TypeScript app by using the Power Platform SDK.
 
 > [!NOTE]
 > [!INCLUDE [cc-preview-features-definition](../../../includes/cc-preview-features-definition.md)]
@@ -39,9 +39,9 @@ This article walks through how to set up a blank app from [Vite](https://vite.de
    pac env select --environment {environment id}
    ```
 
-   Sign in using your Power Platform account when prompted. All Power Platform apps, flows, and agents publish to an environment. The PAC CLI's [auth command](/power-platform/developer/cli/reference/auth) prompts you to authenticate with your Microsoft Entra identity and ensure the code app you add connections to and publish to Power Platform go in the specified environment.
+   Sign in by using your Power Platform account when prompted. All Power Platform apps, flows, and agents publish to an environment. The PAC CLI's [auth command](/power-platform/developer/cli/reference/auth) prompts you to authenticate by using your Microsoft Entra identity and ensures the code app you add connections to and publish to Power Platform go in the specified environment.
 
-1. Install the Power SDK and initialize your code app using:
+1. Install the Power SDK and initialize your code app by using:
    
 
    ```bash
@@ -49,7 +49,7 @@ This article walks through how to set up a blank app from [Vite](https://vite.de
    pac code init --displayname "App From Scratch"
    ```
    
-1. Enter the following to test your code app locally:
+1. Enter the following command to test your code app locally:
 
    ```bash
    npm run dev 
@@ -81,9 +81,9 @@ npm run build | pac code push
 ```
 
 - [npm run build](https://docs.npmjs.com/cli/v9/commands/npm-run-script) Runs the scripts configured in the `package.json` file with the key value of `build`. In this case, the script is `"tsc -b && vite build"`.
-- [pac code push](/power-platform/developer/cli/reference/code#pac-code-push) Publishes a new version of a Code app.
+- [pac code push](/power-platform/developer/cli/reference/code#pac-code-push) Publishes a new version of a code app.
 
-If successful, this command should return a Power Apps URL to run the app.
+If successful, this command returns a Power Apps URL to run the app.
 
 Optionally, you can open  [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to see the app. You can play, share, or see details from there.
 
