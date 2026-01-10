@@ -1,6 +1,6 @@
 ---
-title: "Build web applications using server-to-server (S2S) authentication (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Use server-to-server (S2S) authentication to securely and seamlessly communicate with Microsoft Dataverse with your web applications and services." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Build web applications using server-to-server (S2S) authentication (Microsoft Dataverse) | Microsoft Docs"
+description: "Use server-to-server (S2S) authentication to securely and seamlessly communicate with Microsoft Dataverse with your web applications and services." 
 ms.custom: ""
 ms.date: 03/24/2021
 ms.reviewer: "pehecke"

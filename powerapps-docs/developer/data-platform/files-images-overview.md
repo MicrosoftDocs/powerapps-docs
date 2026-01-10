@@ -1,6 +1,6 @@
 ---
-title: "Files and images overview (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about using file and image data in Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Files and images overview (Microsoft Dataverse) | Microsoft Docs"
+description: "Learn about using file and image data in Dataverse." 
 ms.date: 05/26/2023
 ms.reviewer: jdaly
 ms.topic: concept-article
