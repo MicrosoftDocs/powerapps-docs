@@ -1,5 +1,5 @@
 ---
-title: Card control in Power Apps
+title: Card modern control control in Power Apps
 description: Learn about the details, properties, and examples of the card modern control in Power Apps.
 author: yogupt
 
