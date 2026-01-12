@@ -1,0 +1,63 @@
+---
+title: Card control in Power Apps
+description: Learn about the details, properties, and examples of the card modern control in Power Apps.
+author: yogupt
+
+ms.topic: reference
+ms.component: canvas
+ms.date: 1/13/2025
+ms.subservice: canvas-maker
+ms.author: yogupt
+
+
+ms.reviewer: mkaur
+search.audienceType: 
+  - maker
+contributors:
+  - yogupt
+     
+---
+
+# Card modern control (preview)# responsive object summaries such as contact tiles, document previews, or product listings in either horizontal or vertical orientation.
+
+## Description
+Use a Card when you want to show a concise overview of an item with optional imagery and text.  
+The control adapts its layout to the sections a maker chooses to configure, enabling consistent patterns without requiring multiple independent controls.
+
+---
+
+## General
+
+**Title** – Header title text displayed at the top of the card  
+**Subtitle** – Supplemental text displayed under or beside the title in the header  
+**Description** – Body text displayed below the header  
+**Image** – Main preview image for the card  
+**ImageAltText** – Alt text for the preview image for accessibility  
+**HeaderImage** – Small avatar or icon displayed in the header  
+**HeaderImageAltText** – Alt text for the header image  
+**ImagePosition** – Determines whether the preview image appears before or after the header section  
+**Alignment** – Determines whether the card layout is vertical or horizontal  
+
+---
+
+## Behavior
+
+**OnSelect** – Action triggered when the card is selected by the user  
+**DisplayMode** – Controls whether the card is interactive, view‑only, or disabled  
+**Visible** – Shows or hides the card  
+
+---
+
+## Size and position
+
+**X, Y** – Position of the control on the canvas  
+**Width, Height** – Dimensions of the control  
+
+---
+
+## Style and theme
+
+**Radius** – Controls corner roundness of the card container  
+**DropShadow** – Defines the shadow style applied to the card  
+**Appearance** – Determines the visual style of the card, such as Filled or Outline (based on phase availability)
+
