@@ -26,7 +26,7 @@ Set up and customize the Dynamics 365 App for Outlook to best suit your organiza
 Before you can customize the App for Outlook, you must install the solution and then deploy it in your environment. 
    
 1. To deploy the app, see, [Deploy Dynamics 365 App for Outlook](/dynamics365/customer-engagement/outlook-app/deploy-dynamics-365-app-for-outlook).
-2. For environments in Microsoft Dataverse an administrator can get the App for Outlook solution from Microsoft AppSource. Go to go [Install Microsoft Dynamics 365 App for Outlook](https://appsource.microsoft.com/product/dynamics-365/mscrm.fa50aa98-e8bb-4757-83ce-6d607959b985?tab=Overview), then choose **GET IT NOW** and follow the steps to select the environment to install it on.
+2. For environments in Microsoft Dataverse an administrator can get the App for Outlook solution from Microsoft Marketplace. Go to go [Install Microsoft Dynamics 365 App for Outlook](https://marketplace.microsoft.com/product/dynamics-365/mscrm.fa50aa98-e8bb-4757-83ce-6d607959b985?tab=Overview), then choose **GET IT NOW** and follow the steps to select the environment to install it on.
 
    > [!div class="mx-imgBorder"]
    > ![Install Outlook App.](media/appsource.png "Install Outlook App")

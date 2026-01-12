@@ -1,6 +1,6 @@
 ---
-title: "Publish code components on AppSource | Microsoft Docs"
-description: "After you have tested your code components and want it to distribute to others to use it, you must publish it on Microsoft AppSource."
+title: "Publish code components on Marketplace | Microsoft Docs"
+description: "After you have tested your code components and want it to distribute to others to use it, you must publish it on Microsoft Marketplace."
 keywords: "Component Framework, code components, Power Apps controls"
 author: anuitz
 ms.author: anuitz
@@ -12,8 +12,8 @@ contributors:
  - JimDaly
 ---
 
-# Publish code components on AppSource
+# Publish code components on Marketplace
 
-After you have tested your code components and want it to distribute to others to use it, you must publish it on Microsoft AppSource.
+After you have tested your code components and want it to distribute to others to use it, you must publish it on Microsoft Marketplace.
 
-For detailed information on how to publish your code components on AppSource, see [Publish your app on AppSource](/power-platform/developer/appsource/publish-app).
+For detailed information on how to publish your code components on Marketplace, see [Publish your app on Marketplace](/power-platform/developer/appsource/publish-app).
