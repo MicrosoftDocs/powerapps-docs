@@ -6,7 +6,7 @@ author: caburk
 ms.subservice: dataverse-maker
 ms.author: caburk
 ms.reviewer: matp
-ms.date: 03/31/2025
+ms.date: 01/09/2026
 ms.update-cycle: 180-days
 ms.topic: overview
 ms.collection: bap-ai-copilot

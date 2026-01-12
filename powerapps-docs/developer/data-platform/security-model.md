@@ -1,6 +1,6 @@
 ---
-title: "Security and data access (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Microsoft Dataverse provides a security model that protects data integrity and privacy, and supports efficient data access and collaboration." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Security and data access (Microsoft Dataverse) | Microsoft Docs"
+description: "Microsoft Dataverse provides a security model that protects data integrity and privacy, and supports efficient data access and collaboration." 
 ms.collection: get-started
 ms.date: 03/11/2021
 ms.reviewer: "pehecke"

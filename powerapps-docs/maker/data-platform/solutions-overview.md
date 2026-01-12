@@ -1,7 +1,7 @@
 ---
 title: Solutions in Power Apps
 description: Provides an overview of solutions in Power Apps
-ms.date: 05/29/2025
+ms.date: 01/09/2026
 ms.reviewer: matp
 ms.topic: overview
 author: "Mattp123"

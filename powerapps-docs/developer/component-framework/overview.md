@@ -4,7 +4,7 @@ description: "Use the Power Apps component framework to create code components t
 keywords: "Component Framework, code components, Power Apps controls"
 ms.author: anuitz
 author: anuitz
-ms.date: 05/27/2022
+ms.date: 01/09/2026
 ms.reviewer: jdaly
 ms.topic: overview
 ms.subservice: pcf
@@ -14,7 +14,7 @@ contributors:
 
 # Power Apps component framework overview
 
-Power Apps component framework empowers professional developers and app makers to create code components for model-driven and canvas apps. These code components can be used to enhance the user experience for users working with data on forms, views, dashboards, and canvas app screens. For example, you can:
+Power Apps component framework enables professional developers and app makers to create code components for model-driven and canvas apps. Use these code components to enhance the user experience for users working with data on forms, views, dashboards, and canvas app screens. For example, you can:
 
 - Replace a column on a form that displays a numeric text value with a `dial` or `slider` code component.
 - Transform a list into an entirely different visual experience bound to the dataset, like a `Calendar` or `Map`.
@@ -24,16 +24,15 @@ Power Apps component framework empowers professional developers and app makers t
 
 > [!IMPORTANT]
 >
-> - Power Apps component framework works only on Unified Interface and not on the legacy web client. 
-> - Power Apps component framework is currently not supported for on-premises environments. 
+> - Power Apps component framework isn't supported for on-premises environments.
 
 ## How is it different from web resources?
 
-Unlike HTML web resources, code components are rendered as part of the same context and loaded at the same time as any other components, providing a seamless experience for the user. 
+Unlike HTML web resources, code components render as part of the same context and load at the same time as any other components. This approach provides a seamless experience for the user. 
 
-You can create code components that can be used across the full breadth of Power Apps capabilities, and reuse these components many times across different tables and forms.
+Create code components that you can use across the full breadth of Power Apps capabilities. Reuse these components many times across different tables and forms.
 
-Developers can bundle all the HTML, CSS, and TypeScript files into a single [solution](../../maker/data-platform/solutions-overview.md) package file and move across environments, and also make it available<!--note from editor: Edit okay? Didn't know what "shipped" meant.--> via [Marketplace](https://marketplace.microsoft.com/marketplace/apps?page=1&product=dynamics-365). 
+Developers can bundle all the HTML, CSS, and TypeScript files into a single [solution](../../maker/data-platform/solutions-overview.md) package file to move across environments. They can also make it available via [Marketplace](https://marketplace.microsoft.com/marketplace/apps?page=1&product=dynamics-365). 
 
 
 ## Advantages 
@@ -43,15 +42,15 @@ Developers can bundle all the HTML, CSS, and TypeScript files into a single [sol
 - Support for modern web practices
 - Optimized for performance
 - Reusability
-- Ability to bundle all files into a single solution file.
-- Ability to handle being destroyed and reloaded for performance reasons while preserving state.
+- Ability to bundle all files into a single solution file
+- Ability to handle being destroyed and reloaded for performance reasons while preserving state
 
 ## Licensing
 
-Power Apps component framework licensing requirements are inline with existing connectors and components and are based on the type of data and connections used in your app. More information: [Power Apps pricing](https://powerapps.microsoft.com/pricing/). To align with the licensing requirements, we will be classifying code components into two types:
+Power Apps component framework licensing requirements align with existing connectors and components. They're based on the type of data and connections you use in your app. For more information, see [Power Apps pricing](https://powerapps.microsoft.com/pricing/). To align with the licensing requirements, classify code components into two types:
 
-- Code components that connect to external services or data directly via the user's browser client and not through connectors are considered as premium. When these components are used in an app, the app becomes premium, and end-users are required to have **Power Apps** licenses.
-- Code components that don't connect to external services or data. When these components are used in an app that uses standard features, the app remains standard, and end- users are required to be licensed at minimum for **Office 365**. More information: [Power Apps pricing](https://powerapps.microsoft.com/pricing/)
+- Code components that connect to external services or data directly through the user's browser client and not through connectors are premium. When these components are used in an app, the app becomes premium, and end-users need **Power Apps** licenses.
+- Code components that don't connect to external services or data. When these components are used in an app that uses standard features, the app remains standard, and end-users need at least an **Office 365** license. For more information, see [Power Apps pricing](https://powerapps.microsoft.com/pricing/).
 - Code components can be declared as premium components by adding a `<external-service-usage>` node to the component's manifest file with all the external service domains this component is connecting to.
    ```xml
     <external-service-usage enabled="true">
@@ -60,7 +59,7 @@ Power Apps component framework licensing requirements are inline with existing c
     ```
 
 > [!NOTE]
-> If you're currently using code components in model-driven apps connected to Microsoft Dataverse, end users will require **Power Apps** licenses.
+> If you're currently using code components in model-driven apps connected to Microsoft Dataverse, end users need **Power Apps** licenses.
 
 ## Related topics
 

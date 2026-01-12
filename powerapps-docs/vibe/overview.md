@@ -4,7 +4,7 @@ description: Discover the new AI-native Power Apps vibe code experience. Build a
 author: mduelae
 ms.author: mkaur
 ms.reviewer: mkaur
-ms.date: 1/7/2025
+ms.date: 1/9/2026
 ms.topic: concept-article
 ---
 
