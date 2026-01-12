@@ -39,7 +39,7 @@ This section describes the prerequisites necessary to transport the Azure Synaps
 
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select the source environment for the Azure Synapse Link for Dataverse configuration.
 1. On the left navigation pane, select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
-1. Select **Open Marketplace**.
+1. Select **Open Appsource**.
 
     ![Open App Source](media/open-app-source.png "Open App Source")
 
