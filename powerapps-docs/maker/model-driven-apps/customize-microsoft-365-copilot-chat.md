@@ -53,7 +53,7 @@ Use the following information to find the best solution for your organization:
 
 ## Limitation
 
-- Agents published to Microsoft 365 Copilot via Microsoft Copilot Studio channels don't show up in the navigation panel or when @ mentioning within Microsoft 365 Copilot chat in model-driven apps.  They do show up when you use the chat experience at [https://m365.cloud.microsoft/chat](https://m365.cloud.microsoft/chat).
+- Microsoft Copilot Studio agents published to M365 Copilot through Copilot Studio channels will not have context passed from the app through M365 Copilot chat to the agent.
 
 ## Related information
 
