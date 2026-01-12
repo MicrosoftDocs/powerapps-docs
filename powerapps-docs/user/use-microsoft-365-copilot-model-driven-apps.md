@@ -4,7 +4,7 @@ description: Learn how to use Microsoft 365 Copilot chat to gain insights about 
 author: srihas
 ms.component: pa-user
 ms.topic: overview
-ms.date: 01/07/2026
+ms.date: 01/12/2026
 ms.update-cycle: 180-days
 ms.subservice: end-user
 ms.author: srihas
@@ -71,8 +71,8 @@ One of the benefits of @ mentioning an agent is that you can add or remove it fr
 
 ## Limitations
 
-1. The model chooser option, which allows users to select different AI models or configurations in the standalone version, is not available.
-1. Microsoft Copilot Studio agents published to M365 Copilot through Copilot Studio channels will not have context passed from the app through M365 Copilot chat to the agent.
+- The model chooser option, which allows users to select different AI models or configurations in the standalone version, is not available.
+- Microsoft Copilot Studio agents published to Microsoft 365 Copilot through Copilot Studio channels don't have context passed from the app through Microsoft 365 Copilot chat to the agent.
 
 ## Related information
 
