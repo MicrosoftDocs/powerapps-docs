@@ -58,7 +58,7 @@ More information: [Managed properties in the Power Platform](/power-platform/alm
 
 - **New solution**: To locate and work with just the components you’ve customized, create a solution and do all your customization there. Then, you can easily distribute your solution to other environments. More information: [Create a solution](create-solution.md) 
 - **Import solution**: Import a solution into your environment. More information: [Import solutions](import-update-export-solutions.md) 
-- **Open Appsource**: [Microsoft Marketplace](https://marketplace.microsoft.com/) is where you can go to get solutions tailored to your industry that work with the products you already use. 
+- **Open AppSource**: [Microsoft Marketplace](https://marketplace.microsoft.com/) is where you can go to get solutions tailored to your industry that work with the products you already use. 
 - **Publish all customizations**: Publish all active customizations in your environment.
 - **Set preferred solution**: Set your [preferred solution](preferred-solution.md) where all solution components are created in.
 - **See history**: View details about solution operations over time, such as import, export, and uninstall. More information: [View the history of a solution](solution-history.md)
