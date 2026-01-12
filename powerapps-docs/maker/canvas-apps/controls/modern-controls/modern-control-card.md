@@ -28,30 +28,42 @@ The control adapts its layout to the sections a maker chooses to configure, enab
 
 ## General
 
-**Direction** – Determines whether the card layout is vertical or horizontal  
+**Direction** – Determines whether the card layout is vertical or horizontal
+
 **Title** – Header title text displayed at the top of the card  
-**Subtitle** – Supplemental text displayed under or beside the title in the header  
+
+**Subtitle** – Supplemental text displayed under or beside the title in the header 
+
 **Description** – Description text displayed below the header of the card  
+
 **Image** – Main preview image for the card  
+
 **ImageAltText** – Alt text for the preview image for accessibility  
+
 **HeaderImage** – Small avatar or icon displayed in the header with the title and subtitle  
+
 **HeaderImageAltText** – Alt text for the header image  
+
 **ImagePosition** – Determines whether the preview image appears before or after the header section  
 
 ## Behavior
 
 **OnSelect** – Action triggered when the card is selected by the user  
+
 **DisplayMode** – Controls whether the card is interactive, view‑only, or disabled  
+
 **Visible** – Shows or hides the card  
 
 ## Style and theme
 
 **Radius** – Controls corner roundness of the card container  
+
 **DropShadow** – Defines the shadow style applied to the card  
 
 ## Size and position
 
 **X, Y** – Position of the control on the canvas  
+
 **Width, Height** – Dimensions of the control  
 
 ## Examples
@@ -68,6 +80,7 @@ Below are three example Card configurations you can copy and paste directly into
       Width: =329
       X: =50
       Y: =45
+```
 
 ### **Horizontal card with long description and no image**
 ```yaml
@@ -81,6 +94,7 @@ Below are three example Card configurations you can copy and paste directly into
       Width: =300
       X: =40
       Y: =40
+```
 
 ### **Vertical card with header on top***
 ```yaml
@@ -95,4 +109,4 @@ Below are three example Card configurations you can copy and paste directly into
       Width: =350
       X: =40
       Y: =40
-
+```
