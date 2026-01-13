@@ -511,6 +511,8 @@
               href: ./canvas-apps/controls/modern-controls/modern-controls-badge.md
             - name: Button
               href: ./canvas-apps/controls/modern-controls/modern-control-button.md
+            - name: Card (preview)
+              href: ./canvas-apps/controls/modern-controls/modern-control-card.md
             - name: Checkbox
               href: ./canvas-apps/controls/modern-controls/modern-control-checkbox.md
             - name: Combobox 
