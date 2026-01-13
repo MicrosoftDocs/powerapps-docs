@@ -143,7 +143,7 @@ Depending on the experience that uses Dataverse search and its usage, the consum
 
 ## What happens if I turn off Dataverse search?
 
-If you set Dataverse search to **Off** for the environment, you can't use the search capability in the Power Apps navigation bar or any generative AI experience that relies on Dataverse. This limitation includes experiences like uploaded files or using OneDrive or SharePoint files (via upload) in Microsoft Copilot Studio agents, among other experiences. For details about these limitations, see [What is Dataverse search](relevance-search-benefits.md#what-happens-if-dataverse-search-is-turned-off).
+If you set Dataverse search to **Off** for the environment, you can't use the search capability in the Power Apps navigation bar or any generative AI experience that relies on Dataverse. This limitation includes experiences like uploaded files or using OneDrive or SharePoint files (via upload) in Microsoft Copilot Studio agents, among other experiences. For details about these limitations, see [What is Dataverse search](relevance-search-benefits.md#what-happens-when-you-turn-off-dataverse-search).
 
 ### See also
 
