@@ -19,7 +19,7 @@ Connect to Microsoft Dataverse using a non-Microsoft model context protocol (MCP
 
 These are the prerequisites for using a Dataverse MCP server with Claude.
 
-- Enable the Dataverse MCP server for the environment through PPAC settings. More information: [Configure and manage the Dataverse MCP server for an environment](data-platform-mcp-disable.md#configure-and-manage-the-dataverse-mcp-server-for-an-environment)
+- Enable the Dataverse MCP server for the environment through PPAC settings. More information: [Configure and manage the Dataverse MCP server for an environment](data-platform-mcp-disable.md#configure-and-manage-the-dataverse-mcp-server)
 - A Dataverse connection for the MCP configuration.
 - Install the Dataverse MCP server local proxy.
 - The tenant ID of your Dataverse environment.

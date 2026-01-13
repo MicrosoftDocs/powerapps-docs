@@ -1,13 +1,13 @@
 ---
 title: Customize and build your mobile app using the wrap wizard
 description: Learn about the steps to build and customize your mobile app using wrap wizard.
-author: komala2019
+author: shwetamurkute
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: smurkute
-ms.date: 08/06/2025
+ms.date: 01/08/2026
 ms.subservice: canvas-maker
-ms.author: koagarwa
+ms.author: smurkute
 search.audienceType: 
   - maker
 contributors:
@@ -21,8 +21,6 @@ Use this guide to convert one or more canvas apps into a single custom-branded a
 The wrap feature in Power Apps enables you to create native mobile versions of your [canvas apps](../../canvas-apps/getting-started.md) as custom-branded Android and iOS mobile apps (IPA, APK, AAB packages). You can distribute these wrapped native mobile apps to end users through [Google Play](https://support.google.com/googleplay/work/answer/6138458), [Apple Business Manager](https://developer.apple.com/custom-apps/), or other native distribution methods.
 
 When you update and republish your app, the wrapped app is automatically updated for users.
-
-
 
 ## Steps to create a custom-branded native app using the wrap wizard
 
@@ -317,4 +315,4 @@ You can sign your app automatically in **Step 2** or manually after building. [C
 - [Manual code sign for iOS](code-sign-ios.md)
 - [Manual code sign for Android](code-sign-android.md)
 - [Create your Azure Key Vault for automated code signing](create-key-vault-for-code-signing.md)
-- [Frequently asked questions for wrap](faq.yml)
+- [Frequently asked questions for wrap](faq.yml)  

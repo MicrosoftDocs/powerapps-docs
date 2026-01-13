@@ -1,6 +1,6 @@
 ---
-title: "Use access teams and owner teams to collaborate and share information (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about using access teams and owner teams to colloborate and share information." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Use access teams and owner teams to collaborate and share information (Microsoft Dataverse) | Microsoft Docs"
+description: "Learn about using access teams and owner teams to colloborate and share information." 
 ms.custom: ""
 ms.date: 12/12/2023
 ms.reviewer: "pehecke"

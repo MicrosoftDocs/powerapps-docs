@@ -5,7 +5,7 @@ author: jasongre
 ms.subservice: mda-maker
 ms.author: jasongre
 ms.reviewer: matp
-ms.date: 10/01/2025
+ms.date: 01/05/2025
 ms.topic: how-to
 applies_to: 
   - PowerApps
@@ -17,7 +17,7 @@ ms.collection:
 
 # Generate a page using natural language
 
-Use natural language to build a *generative page* that's created using AI. Generative pages are an AI-driven experience designed to simplify, accelerate, and improve your app design process in model-driven apps. By interacting with the app agent, you create fully functional pages in your model-driven apps by describing what you need in natural language and specifying which Microsoft Dataverse tables to reference. You can even attach an image of what you’d like the page to look like. 
+Use natural language to build a *generative page* that's created using AI. Generative pages are an AI-driven experience designed to simplify, accelerate, and improve your app design process in model-driven apps. By interacting with the app agent, you create fully functional pages in your model-driven apps by describing what you need in natural language and specifying which Microsoft Dataverse tables to reference. You can even attach an image of what you’d like the page to look like.
 
 After you describe the page, the system then processes your requirements and specifications and intelligently generates React code that covers both the front-end user experience by selecting the right components and determining the best layout, and the corresponding business logic. Through an interactive, conversational experience, you can refine the page design in real time, adjusting elements, layout, and functionality to perfectly match your vision.
 
@@ -36,14 +36,20 @@ After you describe the page, the system then processes your requirements and spe
 1. Add tables and images as appropriate by selecting **Add data** > **Add table**. You can link up to six Dataverse tables. In the screenshot, the account table is added.
    :::image type="content" source="media/generative-page/add-table-generative-page.png" alt-text="Add a table to the generative page" lightbox="media/generative-page/add-table-generative-page.png":::
 
-1. Optionally upload an image to guide the UI of your generated page by selecting **Add data** > **Attach image**. This can be a rough napkin sketch or a higher resolution image.
+1. Optionally upload one or more images to guide the UI of your generated page by selecting **Add data** > **Attach image**. This can be a rough napkin sketch or a higher resolution image. The image can represent the structure or layout of the entire page you want to create or it can be visuals for a certain section or component you want to mimic.
+
+   > [!NOTE]
+   > If you want the generated page to display a particular image, instead of attaching the image to the prompt, you can (1) include the image in a referenced Datatable table and have the agent retrieve the image from there, (2) host the image publicly and give the agent the URL, or (3) add the image as a web resource and give the agent the URL for the web resource.  
+   
+1. Optionally enable or disable the **Include images** (preview) tool to allow the agent to utilize images from a curated, safe library of 25,000 stock images to support use cases like default/placeholder images, decorative backgrounds, static content blocks, and richer empty or error states.
+   :::image type="content" source="media/generative-page/generative-page-include-image-tool.png" alt-text="Include image tool to add an image from a library of stock images":::
 1. Optionally choose the AI model you want to use to generate the page. 
     :::image type="content" source="media/generative-page/choose-model-generative-page.png" alt-text="Choose the AI model you want to use to generate your page" lightbox="media/generative-page/choose-model-generative-page.png":::
     
 1. When you're finished describing the page, select **Generate page**.
 
-The agent will begin a multi-step build process that you can observe in real time:
-- **Streaming its thoughts**: The agent first outlines its interpretation of your prompt, listing requirements, assumptions, and an execution plan.
+The agent begins a multi-step build process that you can observe in real time:
+- **Thought streaming**: The agent first outlines its interpretation of your prompt, listing requirements, assumptions, and an execution plan.
 - **Code generation**: Next, it writes the underlying code for your page based on the plan.
 - **Transpilation**: The generated code is then transpiled to ensure compatibility and proper rendering.
 - **Final rendering**: Finally, the completed user experience is displayed.
@@ -72,23 +78,26 @@ After generating your page, you have several options to refine and finalize it:
    > This capability is currently only available starting with the second iteration in the current session.
 
 1. **Attach a screenshot for quick reference**
-    In the chat experience, click **Attach** > **Add screenshot** to include a screenshot of the current preview with your next interaction with the app agent. This is useful for helping to adjust the visuals of the page. 
+    In the chat experience, select **Attach** > **Add screenshot** to include a screenshot of the current preview with your next interaction with the app agent. A screenshot is useful for helping to adjust the visuals of the page. You can alternatively attach other images to help refine the visuals of the entire page or a particular piece of the page.
+
+1.  **Check for accessibility issues (new)**
+    After each iteration of code generation, the **Accessibility assistant** at the bottom of the screen scans the generated code assessing it with respect to accessibility. You can see a high level status update directly on screen and can choose to open the detailed results in a panel. Select **Auto fix** to pass any violations directly to the agent for it to try to automatically resolve. 
 
 1. **Save and publish**
     In the command bar, select **Save** to avoid losing progress on your page.  
-    When you are satisfied with your page, select **Save and Publish** to publish all pending changes for the app, including any generative pages.
+    When you're satisfied with your page, select **Save and Publish** to publish all pending changes for the app, including any generative pages.
 
 > [!IMPORTANT]
-> While the agent makes a best-effort attempt to generate complete, production-ready code, including considerations for accessibility and security best practices, you're ultimately responsible for validating the code. Ensure the generated code meets your organization’s standards and compliance requirements.
-
+> While the agent makes a best-effort attempt to generate complete, production-ready code, including considerations for accessibility and security best practices, you're ultimately responsible for validating the code. Ensure the generated code meets your organization's standards and compliance requirements.
 
 ## Adding generative pages to solutions
+
 Generative pages are solution-aware and can be added to a solution (via an app) to facilitate moving between environments. To add a generative page to a solution, do the following:
  
 > [!IMPORTANT]
-> If your generative page was created during the preview phase, you must load the generative page in the model app designer to initiate a one-time migration to the new solution-aware data model. When the page loads in the designer, you'll see an "Upgrading your page" progress message. Do not close the window until migration completes.
+> If your generative page was created during the preview phase, you must load the generative page in the model app designer to initiate a one-time migration to the new solution-aware data model. When the page loads in the designer, you'll see an "Upgrading your page" progress message. Don't close the window until migration completes.
 
-1. Add the app containing your generative page(s) to a solution
+1. Add the app containing your generative pages to a solution
     - In Power Apps, select **Solutions** on the left navigation pane, and open the desired solution.
     - Select **Add existing > App > Model-driven app**.
     - Select the app that contains the generative pages.
@@ -97,18 +106,20 @@ Generative pages are solution-aware and can be added to a solution (via an app) 
     - Generative pages (shown as **UX Agent Project** rows) will also be requested based on their dependency on the sitemap.
       
 > [!NOTE]
+>
 > Check these items if no generative pages are requested during dependency checks:
+>
 > - Pages created during preview will only appear if they've been migrated. Load them in the designer to trigger migration.
-> - If the sitemap is included in the solution and your generative pages have been migrated, try making a minor change to the sitemap (e.g. reordering or renaming a page), republishing the app, and then trying the export again.
- 
-After export, you can import the app and generative pages into another environment. When opened in the designer in the target environment, only the first prompt and published code will be available. The full agent conversation does not transfer with the page.  
+> - If the sitemap is included in the solution and your generative pages have been migrated, try making a minor change to the sitemap, such as reordering or renaming a page, republishing the app, and then trying the export again.
+
+After export, you can import the app and generative pages into another environment. When opened in the designer in the target environment, only the first prompt and published code are available. The full agent conversation doesn't transfer with the page.  
 
 ## Limitations
 
 These are the current limitations of generative pages:
 
-- Your page can connect to only Dataverse tables (up to 6 for a single page). You can perform create, read, update, and delete (CRUD) operations against these tables. No other data sources can be used.
-- Your prompt can have a maximum of 50,000 characters. 
+- Your page can connect to only Dataverse tables (up to 6 for a single page). No other data sources can be used.
+- Your prompt can have a maximum of 50,000 characters.
 - Only US English is supported.
 - Collaboration isn't supported. Ensure only one maker is working on a generative page at a time to avoid unintended conflicts.
 - Only these data types are supported:
@@ -133,7 +144,7 @@ These are the current limitations of generative pages:
 
 ### Can I start designing my app in Plan Designer and then use generative pages? 
 
-Yes, while there's currently no direct integration between plans and generative pages, you can use plans to define your tables and apps, and then switch to the app designer to create any desired generative pages.
+Yes, while there's currently no direct integration between plans and generative pages, you can use plans to define your tables and apps, and then switch to the model-driven app designer to create any desired generative pages.
 
 ### Are there any additional fees or credits needed to use generative pages? 
 
@@ -155,9 +166,9 @@ Yes, generative pages are solution-aware elements that can be moved across envir
 
 Yes. You can manually edit the generated code by selecting **Edit** on the **Code** tab. Your changes are saved as a new iteration. Select **Cancel** to cancel your edits if you choose not to keep them.
 
-### Is the code generated by generative pages guaranteed to be production-ready and compliant with my organization’s standards?
+### Is the code generated by generative pages guaranteed to be production-ready and compliant with my organization's standards?
 
-No. While the agent makes a best-effort attempt to produce high-quality, production-ready code with accessibility and security best practices in mind, it's your responsibility to validate the output. Always review the generated code to ensure it aligns with your organization’s standards, policies, and compliance requirements.
+No. While the agent makes a best-effort attempt to produce high-quality, production-ready code with accessibility and security best practices in mind, it's your responsibility to validate the output. Always review the generated code to ensure it aligns with your organization's standards, policies, and compliance requirements.
 
 ### How do I give feedback on the feature?
 
@@ -168,5 +179,6 @@ The best way to give feedback on generative pages is to use the thumbs up/down b
 Confirm that your environment is in the US region. 
 
 ## Related articles
+
 -  [FAQ about generative pages in model-driven apps](../common/faq-generative-pages-model-driven.md)
 -  [Legal terms](https://go.microsoft.com/fwlink/?linkid=2173149)

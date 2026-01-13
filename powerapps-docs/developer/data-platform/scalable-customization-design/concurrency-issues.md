@@ -1,6 +1,6 @@
 ---
-title: "Scalable Customization Design: Concurrency issues (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "The third in a series of topics. " # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Scalable Customization Design: Concurrency issues (Microsoft Dataverse) | Microsoft Docs"
+description: "The third in a series of topics. " 
 ms.custom: ""
 ms.date: 1/15/2019
 ms.reviewer: "pehecke"

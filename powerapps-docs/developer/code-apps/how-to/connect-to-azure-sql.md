@@ -3,7 +3,7 @@ title: "How to: Connect your code app to Azure SQL (preview)"
 description: "Learn how to connect your code app to Azure SQL"
 ms.author: alaug
 author: alaug
-ms.date: 09/10/2025
+ms.date: 12/02/2025
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
@@ -237,164 +237,9 @@ This guide covers:
 
 1. You should see no errors in the **QUERY RESULTS** output.
 
-### Initialize your Vite App
-
-1. Open Visual Studio Code and open a new PowerShell terminal and enter:
-
-   ```powershell
-   mkdir C:\CodeApps -Force
-   cd C:\CodeApps
-   npm create vite@latest ProjectManagementApp -- --template react-ts
-   cd C:\CodeApps\ProjectManagementApp
-   npm install
-   ```
-
-1. If asked, agree to install `create-vite`
-1. Accept the default package name `projectmanagementapp` by pressing **Enter**.
-1. If asked to select a framework, select **React**.
-1. If asked to select a variant, select **TypeScript**.
-1. At this time, the Power SDK requires the port to be 3000 in the default configuration.
-
-   Install the node type definitions using:
-
-   ```powershell
-   npm i --save-dev @types/node
-   ```
-
-   Open the `vite.config.ts`, and change it to:
-
-   ```typescript
-   import { defineConfig } from 'vite'
-   import react from '@vitejs/plugin-react'
-   import * as path from 'path'
-   
-   // https://vite.dev/config/
-   export default defineConfig({
-     base: "./",
-     server: {
-       host: "::",
-       port: 3000,
-     },
-     plugins: [react()],
-     resolve: {
-       alias: {
-         "@": path.resolve(__dirname, "./src"),
-       },
-     },
-   });
-   ```
-
-1. **Save** the file.
-1. Open the `tsconfig.app.json`, and set the value of `verbatimModuleSyntax` to be `false` . This setting is currently required to work with the Power SDK Generated code. (See [[Bug\] Power SDK generated code causes error with verbatimModuleSyntax enabled · Issue #14](https://github.com/microsoft/PowerAppsCodeApps/issues/14))
-1. Enter the following to test your vite app:
-
-   ```powershell
-   npm run dev
-   ```
-
-1. The template project starts and runs locally. Browse to the `http://localhost:3000` address given.
-
-   :::image type="content" source="media/sql-localhost.png" alt-text="Vite React app running on localhost port 3000":::
-
-   > [!IMPORTANT]
-   > If you don't see the port 3000, revisit the previous steps.
-
-1. Press <kbd>Ctrl + C</kbd> to stop the local server when finish testing.
-
 ### Initialize your code app
 
-1. Authenticate the Power Platform CLI against your Power Platform tenant:
-
-   ```powershell
-   pac auth create
-   ```
-
-   Sign in as your Power Platform account when prompted.
-
-   > [!NOTE]
-   > You can also use the [Power Platform Tools VS Code Extension](/power-platform/developer/howto/install-vs-code-extension) to do sign in.
-
-1. **Select** your environment using:
-
-   ```powershell
-   pac env select -env <URL of your environment>
-   ```
-
-   You can also use the Power Platform Tools VS Code Extension to select the environment
-
-1. **Initialize** your code app using:
-
-   ```powershell
-   pac code init --displayName "Project Management App" -l "C:\CodeApps\ProjectManagementApp\public\vite.svg"
-   ```
-
-   Notice that there's now a `power.config.json` file in your project.
-
-1. **Install** the Power SDK using:
-
-   ```powershell
-   npm install --save-dev @microsoft/power-apps
-   ```
-
-1. **Open** the `package.json`, and update the existing line:
-
-   ```json
-   "dev": "vite"
-   ```
-
-   Change it to:
-
-   ```json
-   "dev": "start pac code run && vite",
-   ```
-
-   Save the updated `package.json`.
-
-1. **Add a new file** under the `src` folder named `PowerProvider.tsx` and grab the code from [PowerProvider.tsx](https://github.com/microsoft/PowerAppsCodeApps/blob/main/docs/assets/PowerProvider.tsx)
-1. **Save** the file.
-1. **Open** `main.tsx` and add the following import under the existing imports:
-
-   ```
-   import PowerProvider from './PowerProvider.tsx'
-   ```
-
-1. **Update** `main.tsx`
-
-   ```
-   <StrictMode>
-     <App />
-   </StrictMode>,
-   ```
-
-   Change it to:
-
-   ```
-   <StrictMode>
-     <PowerProvider>
-       <App />
-     </PowerProvider>
-   </StrictMode>,
-   ```
-
-1. **Save** the file
-1. You can now test the code app by using:
-
-    ```
-    npm run dev
-    ```
-
-   This command runs the Vite server and starts the Power SDK server:
-
-   :::image type="content" source="media/sql-testapp.png" alt-text="Power SDK server console with app URL and status":::
-
-1. Open the URL provided by the Power SDK Server.
-
-   > [!IMPORTANT]
-   > Open the url in the same browser profile as your power platform tenant.
-
-1. You should see the app open similar to:
-
-  :::image type="content" source="media/sql-vite-running-powerapps.png" alt-text="Vite app running in Power Apps with Power SDK":::
+If you have not yet, create and/or initialize your code app using the instructions here: [Create an app from scratch](/power-apps/developer/code-apps/how-to/create-an-app-from-scratch).
 
 ### Create a SQL Server Connection in Power Platform
 
