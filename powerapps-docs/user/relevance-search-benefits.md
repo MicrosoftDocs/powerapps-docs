@@ -195,8 +195,8 @@ When you add a Dataverse tool or knowledge, such as Dataverse MCP, Dataverse tab
 Reducing knowledge and tools to only the necessary content helps indexing processing and storage consumption and increases search quality.
 
 ##### How to remove unnecessary content or imagery, or tables from files
-- File Upload, OneDrive, and SharePoint upload: Remove files that aren't needed for search from the agent's knowledge base. You might want to consider removing pages, sheets, or any accessory data point from the files themselves.
-- OneDrive and SharePoint upload: Select only the files or folders you need instead of selecting nested folders.
+- **File Upload, OneDrive, and SharePoint upload**: Remove files that aren't needed for search from the agent's knowledge base. You might want to consider removing pages, sheets, or any accessory data point from the files themselves.
+- **OneDrive and SharePoint upload**: Select only the files or folders you need instead of selecting nested folders.
 
 ##### How to remove Dataverse tables or files from Copilot studio agent’s knowledge
 
@@ -216,10 +216,10 @@ To manage the search index at the app or agent level, review the purpose and usa
 
 #### Copilot for Power Apps: Specify which applications you'd like Copilot to be enabled for
 
-**Why**
+##### Why this helps?
 Copilot in model-driven apps uses AI to interpret natural language queries and generates suggestions or actions based on the app's underlying Dataverse data. In some situations, applications don't require enhanced search through Copilot, so managing Copilot at an app level can help control consumption.
 
-**How to turn off Copilot feature for each model-driven application**
+##### How to turn off Copilot feature for each model-driven application
 1. In the app designer, open the model-driven app for editing.
 1. Select **Settings** from the command bar.
 1. On the **Settings** screen, select **Upcoming**.
@@ -229,10 +229,10 @@ Copilot in model-driven apps uses AI to interpret natural language queries and g
 
 #### Copilot for Dynamics 365 Apps: Specify which applications you'd like Copilot to be enabled for
 
-**Why**
+##### Why this helps?
 Just like model-driven applications in Power Apps, Copilot in model-driven apps uses AI to interpret natural language queries and generate suggestions or actions based on the app's underlying Dataverse data. In some situations, applications don't require that level of enhanced search through Copilot. Managing Copilot at an app level can help with consumption control.
 
-**How to turn off Copilot feature for each Dynamics 365 application**
+##### How to turn off Copilot feature for each Dynamics 365 application
 
 1. In the Sales Hub app, change the area by using the option in the lower-left corner of the page.
 1. Select **App Settings** to open sales setting.
@@ -240,7 +240,7 @@ Just like model-driven applications in Power Apps, Copilot in model-driven apps 
 1. Select **Individual apps**.
 1. Select desired app and turn the setting to **Off**.
  
-**How to turn off Copilot feature for all Dynamics 365 application**
+##### How to turn off Copilot feature for all Dynamics 365 application
 
 1. In the Sales Hub app, change the area by using the option in the lower-left corner of the page.
 1. Select **App Settings** to open sales setting.
@@ -260,10 +260,10 @@ To manage the search index at the environment level, admins can review the purpo
 
 #### Global search is disabled while Copilot experiences are enabled
 
-**Why**
+##### Why this helps?
 When Dataverse search is set to **Default**, the global search experience isn't enabled on the navigation of the model-driven apps or Dynamics 365. This setting means that users can't query global search, and data marked as "searchable" for the exclusive purpose of global search isn't indexed. However, Dataverse data might still be indexed for other experiences, such as Copilot in model-driven applications or Copilot Studio agents.
 
-**How to change Dataverse search to Default value**
+##### How to change Dataverse search to Default value
 1. In Power Platform admin center, go to **Manage** > **Environments**.
 1. Select the environment, and then select **Settings**.
 1. Select **Product** > **Features**.
@@ -275,10 +275,10 @@ When Dataverse search is set to **Default**, the global search experience isn't 
 
 #### Copilot for Power Apps and Dynamics 365 apps is disabled while global search is anabled
 
-**Why**
+##### Why this helps?
 Copilot in Power Apps uses Dataverse indexed data to quickly retrieve and interpret relevant records when responding to natural language queries within the model-driven app. The semantic indexes enable efficient search across tables and relationships, allowing Copilot to provide accurate suggestions and automate actions based on the underlying data context. For organizations that don't want Copilot to be used with their model-driven applications, admins can turn off the feature at an environment level.
 
-**How to turn off the Copilot setting in Power Platform admin center**
+##### How to turn off the Copilot setting in Power Platform admin center
 1. In Power Platform admin center, go to **Manage** > **Environments**.
 1. Select the environment, and then select **Settings**.
 1. Select **Product** > **Features**.
@@ -287,11 +287,10 @@ Copilot in Power Apps uses Dataverse indexed data to quickly retrieve and interp
 
 #### Dataverse search isn't needed for the environment
 
-**Why**
+##### Why this helps?
 At any time, you can manually set Dataverse to **Off**. If you set Dataverse search to "Off" for the environment, all users of features, apps, or agents of the environment can't use the search capability in the Power Apps navigation bar or any generative AI experience that relies on Dataverse, like uploaded files or using OneDrive or SharePoint files (via upload) in Microsoft Copilot Studio agents, among other experiences.  
 
-**How to turn off Dataverse search for the environment**
-
+##### How to turn off Dataverse search for the environment
 1. In Power Platform admin center, go to **Manage** > **Environments**.
 1. Select the environment, and then select **Settings**.
 1. Select **Product** > **Features**.
