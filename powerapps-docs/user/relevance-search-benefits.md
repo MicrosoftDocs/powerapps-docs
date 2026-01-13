@@ -154,20 +154,20 @@ To manage the search index at the data level, review each table and each column 
 
 #### Global Search: Break down tables into multiple columns
 
-**Why**
-Indexed data often includes more structures like inverted indexes, metadata, and pointers to enable fast search and retrieval. These extra components add overhead beyond the raw data and can significantly increase storage requirements compared to the original dataset.
+##### Why this helps?
+Indexed data includes structures like inverted indexes, metadata, and pointers to enable fast search and retrieval. These components add overhead beyond the raw data and can significantly increase storage requirements compared to the original dataset.
 
-**How**
+##### How to implement?
 - Ensure the data is consistently formatted across records to increase repetitiveness of words and reduce the number of indexes.
 - By breaking down the data across multiple columns, you can be more specific about which data to search over.
 
 #### Global Search: Only select columns that need to be searchable
 
-**Why**
+##### Why this helps?
 Dataverse search has default selected columns. By default, certain columns like Primary Name and ID are indexed for all tables. These columns are part of the 50 fields indexed by default and don't count toward the limit for every table.
 Enable columns for Dataverse search only if a Quick Find view is set as the default view for the table. For more information, see [Managing Dataverse search](/power-platform/admin/configure-relevance-search-organization?tabs=new#managing-dataverse-search).
 
-**How to unselect tables that aren't used so that they're not indexed or searchable**
+##### How to unselect tables that aren't used so that they're not indexed or searchable
 1. Sign in to [Power Apps](https://make.powerapps.com/).
 1. On the left navigation pane, select **Solutions**.
 1. Choose the solution you want to modify, and then select **Edit** in the command bar.
@@ -177,7 +177,7 @@ Enable columns for Dataverse search only if a Quick Find view is set as the defa
 1. Unselect the tables, and then select **Save**.
  
  
-**How to unselect columns that aren't used so that they're not indexed or searchable**
+##### How to unselect columns that aren't used so that they're not indexed or searchable
 1. Sign in to [Power Apps](https://make.powerapps.com/).
 1. On the left navigation pane, select **Tables**.
 1. On the **Tables** page, select the table you want to edit.
@@ -188,17 +188,17 @@ Enable columns for Dataverse search only if a Quick Find view is set as the defa
 1. Select **Save and Publish** to publish the changes to the view.
  
 
-#### Copilot Studio: Ensure specific Dataverse tables or files are added to Copilot Studio agent’s knowledge
+#### Copilot Studio: Ensure specific Dataverse tables or files are added to Copilot Studio agent's knowledge
 
-**Why**
+##### Why this helps?
 When you add a Dataverse tool or knowledge, such as Dataverse MCP, Dataverse table, or file to a Copilot Studio agent, the process automatically indexes all the underlying Dataverse data for efficient, semantically relevant searches.
 Reducing knowledge and tools to only the necessary content helps indexing processing and storage consumption and increases search quality.
 
-**How to remove unnecessary content or imagery, or tables from files**
+##### How to remove unnecessary content or imagery, or tables from files
 - File Upload, OneDrive, and SharePoint upload: Remove files that aren't needed for search from the agent's knowledge base. You might want to consider removing pages, sheets, or any accessory data point from the files themselves.
 - OneDrive and SharePoint upload: Select only the files or folders you need instead of selecting nested folders.
 
-**How to remove Dataverse tables or files from Copilot studio agent’s knowledge**
+##### How to remove Dataverse tables or files from Copilot studio agent’s knowledge
 
 In the **Overview** or **Knowledge** tabs on a Copilot Studio agent, go to the **Knowledge** section and select the dot menu for each of the Dataverse-enabled knowledge sources, and then select **Delete**.
 Use the same instructions for the following knowledge sources:
@@ -258,7 +258,7 @@ The other way to turn off Copilot feature for all apps is as follows:
 ### Environment level
 To manage the search index at the environment level, admins can review the purpose and usage of each application and agent, as well as global search to confirm that search is needed. If not, admins can take the following actions:
 
-#### Global search not needed: Just focus on Copilot experiences
+#### Global search is disabled while Copilot experiences are enabled
 
 **Why**
 When Dataverse search is set to **Default**, the global search experience isn't enabled on the navigation of the model-driven apps or Dynamics 365. This setting means that users can't query global search, and data marked as "searchable" for the exclusive purpose of global search isn't indexed. However, Dataverse data might still be indexed for other experiences, such as Copilot in model-driven applications or Copilot Studio agents.
@@ -273,7 +273,7 @@ When Dataverse search is set to **Default**, the global search experience isn't 
 > [!NOTE]
 > For organizations that want to search in these applications and don't need relevance-based search, they can enable [Quick Find](quick-find.md).
 
-#### Copilot for Power Apps and Dynamics 365 apps not needed: Focus just on global search
+#### Copilot for Power Apps and Dynamics 365 apps is disabled while global search is anabled
 
 **Why**
 Copilot in Power Apps uses Dataverse indexed data to quickly retrieve and interpret relevant records when responding to natural language queries within the model-driven app. The semantic indexes enable efficient search across tables and relationships, allowing Copilot to provide accurate suggestions and automate actions based on the underlying data context. For organizations that don't want Copilot to be used with their model-driven applications, admins can turn off the feature at an environment level.
