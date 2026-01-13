@@ -139,11 +139,11 @@ Learn more in [Dataverse capacity-based storage](/power-platform/admin/capacity-
 
 ## What actions can admins take to manage Dataverse search?
 
-Depending on the experience that uses Dataverse search and its usage, consumption size might increase more drastically. To learn more about managing Dataverse search, see [What is Dataverse search](relevance-search-benefits.md#what-actions-can-makers-or-admins-take-to-manage-dataverse-search-efficiently).
+Depending on the experience that uses Dataverse search and its usage, consumption size might increase. To learn more about managing Dataverse search, see [What is Dataverse search](relevance-search-benefits.md#what-actions-can-makers-or-admins-take-to-manage-dataverse-search-efficiently).
 
 ## What happens if Dataverse search is turned off?
 
-If you set Dataverse search to **Off** for the environment, you can't use the search capability in the Power Apps navigation bar or any generative AI experience that relies on Dataverse, like uploaded files or using OneDrive or SharePoint files in Microsoft Copilot Studio agents, among other experiences. For details about these limitations, see [What is Dataverse search](relevance-search-benefits.md#what-happens-if-dataverse-search-is-turned-off).
+If you set Dataverse search to **Off** for the environment, you can't use the search capability in the Power Apps navigation bar or any generative AI experience that relies on Dataverse, like uploaded files or using OneDrive or SharePoint files (via upload) in Microsoft Copilot Studio agents, among other experiences. For details about these limitations, see [What is Dataverse search](relevance-search-benefits.md#what-happens-if-dataverse-search-is-turned-off).
 
 ### See also
 
