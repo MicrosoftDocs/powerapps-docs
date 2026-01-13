@@ -1,7 +1,7 @@
 ---
 title: Use Copilot's form fill assistance feature in model-driven apps 
 description: Learn how to use AI-generated optional suggestions for fields in a form.
-ms.date: 03/28/2025
+ms.date: 01/08/2026
 ms.update-cycle: 180-days
 ms.custom: 
   - responsible-ai-faqs

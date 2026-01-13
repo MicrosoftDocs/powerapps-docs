@@ -3,7 +3,7 @@ title: "How to: Connect your code app to Dataverse (preview)"
 description: "Learn how to connect your code app to Dataverse"
 ms.author:  jordanchodak
 author: jordanchodakWork
-ms.date: 10/07/2025
+ms.date: 01/07/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
@@ -39,6 +39,9 @@ This guide helps developers use the Power Apps SDK to connect their code app to 
 The following scenarios are supported when connecting to Dataverse using the Power Apps SDK:
 
 - Add Dataverse entities to code apps using the PAC CLI
+- Retrieve formatted values/display names for option sets
+- [Get metadata for Dataverse tables](get-table-metadata.md)
+- Lookups. Currently, you'll need to use the guidance to [associate with a single-valued navigation property](../../data-platform/webapi/associate-disassociate-entities-using-web-api.md#associate-with-a-single-valued-navigation-property) or [associate records on create](../../data-platform/webapi/create-entity-web-api.md#associate-table-rows-on-create) when working with lookups. A dedicated how-to guide is coming soon, and we're actively working to make lookups easier to use in code apps.
 - Perform CRUD operations:
 
   - Create
@@ -273,8 +276,7 @@ try {
 
 The following features aren't yet supported:
 
-- Retrieving formatted values/display names for option sets
-- Lookup fields (including polymorphic lookups)
+- Polymorphic lookups
 - Dataverse actions and functions
 - Deleting Dataverse datasources via PAC CLI
 - Schema definition (entity metadata) CRUD

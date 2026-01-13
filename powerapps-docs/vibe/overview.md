@@ -4,7 +4,7 @@ description: Discover the new AI-native Power Apps vibe code experience. Build a
 author: mduelae
 ms.author: mkaur
 ms.reviewer: mkaur
-ms.date: 11/17/2025
+ms.date: 1/9/2026
 ms.topic: concept-article
 ---
 
@@ -26,7 +26,7 @@ The new Power Apps experience is an AI-native platform that builds solutions to 
 
 - Copilot must be enabled in the tenant and environment. Learn more: [Copilot in Power Apps overview](../maker/canvas-apps/ai-overview.md)
 - This capability isn't available in a default environment.
-- This capability is available only in the US region and in English only. Learn more in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/en-US/availability-reports/?report=copilotfeaturereport)
+- This capability is currently available only in the US and Australia regions, and only in English. Learn more in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/en-US/availability-reports/?report=copilotfeaturereport)
 
 
 ## Access the new experience 
