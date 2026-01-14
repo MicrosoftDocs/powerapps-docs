@@ -60,7 +60,7 @@ To access the CSP settings for code apps:
 The **Enable reporting** toggle controls whether CSP violation reports are sent.
 When enabled, you must specify a valid endpoint.
 Violation reports are sent to this endpoint regardless of whether **Enforce content security policy** is enabled.
-For more information about reporting, see the [reporting documentation](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP#violation_reporting).
+For more information about reporting, see the [reporting documentation](https://developer.mozilla.org/docs/Web/HTTP/Guides/CSP#violation_reporting).
 
 :::image type="content" source="media/csp-reporting.png" alt-text="Screenshot of a toggle labeled Enable reporting turned on and a text box labeled Reporting endpoint containing a url.":::
 
@@ -82,7 +82,7 @@ The example shows three different directives with different configurations:
 
 ## Configure CSP using REST API
 
-You can programmatically configure CSP using the [Microsoft Power Platform API](https://learn.microsoft.com/en-us/rest/api/power-platform/).
+You can programmatically configure CSP using the [Microsoft Power Platform API](/rest/api/power-platform/).
 Settings are managed with the Environment Management Settings API: `https://api.powerplatform.com/environmentmanagement/environments/{environmentId}/settings`
 
 The following settings are available:
