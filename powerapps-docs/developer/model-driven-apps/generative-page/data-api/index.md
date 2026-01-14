@@ -53,14 +53,8 @@ TODO: Add any special details to help customers succeed
 
 ### Example
 
-<!-- 
-
-TODO: Add examples showing this method being used. 
-The following is an untested example based on the Xrm.WebApi.createRecord example.
--->
-
 ```typescript
-// define the row data to create new account
+// Define the row data to create new account
 var row =
     {
         "name": "Sample Account",
@@ -72,18 +66,22 @@ var row =
         "opendeals_date": new Date("2024-02-03T00:00:00Z")
     }
 
-// create account record
+try {
+  // Create a new account record
+  const newAccountId = await dataApi.createRow("account", row);
+  console.log("Account created with ID: " + newAccountId);
 
-try{
-let result = await dataApi.createRow("account", row);
-
-   console.log("Account created with ID: " + result);
-
+  // Create a contact with a lookup to an account
+  const newContactId = await dataApi.createRow('contact', {
+    firstname: 'John',
+    lastname: 'Doe',
+    emailaddress1: 'john.doe@contoso.com',
+    _parentcustomerid_value: `/account(${newAccountId})`, // Lookup format
+  });
 }
-catch (error){
- console.log(error.message);
+catch (error) {
+  console.log(error.message);
 }
-
 ```
 
 
