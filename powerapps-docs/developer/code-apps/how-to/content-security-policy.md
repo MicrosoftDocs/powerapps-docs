@@ -53,7 +53,7 @@ To access the CSP settings for code apps:
 1. Expand **Product**, then select **Privacy + Security**.
 1. Under **Content security policy** select the **App** tab.
 
-:::image type="content" source="media/csp-overview.png" alt-text="Image of the Code Apps CSP setting UO in the Power Platform admin center":::
+:::image type="content" source="media/content-security-policy-settings-overview.png" alt-text="Image of the Code Apps CSP setting UO in the Power Platform admin center":::
 
 ### Enable reporting
 
@@ -62,7 +62,7 @@ When enabled, you must specify a valid endpoint.
 Violation reports are sent to this endpoint regardless of whether **Enforce content security policy** is enabled.
 For more information about reporting, see the [reporting documentation](https://developer.mozilla.org/docs/Web/HTTP/Guides/CSP#violation_reporting).
 
-:::image type="content" source="media/csp-reporting.png" alt-text="Screenshot of a toggle labeled Enable reporting turned on and a text box labeled Reporting endpoint containing a url.":::
+:::image type="content" source="media/content-security-policy-reporting-setting.png" alt-text="Screenshot of a toggle labeled Enable reporting turned on and a text box labeled Reporting endpoint containing a url.":::
 
 ### Configure directives
 
@@ -78,7 +78,7 @@ The example shows three different directives with different configurations:
 - `script-src` is enabled and adds another source, which is merged with the default value. The resulting directive value is: `script-src 'self' 'unsafe-inline' https://contoso.com`
 - `img-src` is disabled. The directive is omitted from the policy.
 
-:::image type="content" source="media/csp-directives.png" alt-text="Screenshot of CSP directives configured in different states":::
+:::image type="content" source="media/content-security-policy-directive-settings.png" alt-text="Screenshot of CSP directives configured in different states":::
 
 ## Configure CSP using REST API
 
