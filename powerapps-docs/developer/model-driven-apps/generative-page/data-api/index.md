@@ -164,15 +164,13 @@ TODO: Add any special details to help customers succeed
 
 ### Example
 
-TODO: Add examples showing this method being used.
-
 ```typescript
 let rowId = "5531d753-95af-e711-a94e-000d3a11e605";
-try{
-   await dataApi.deleteRow("account", rowId);
+try {
+  await dataApi.deleteRow("account", rowId);
 }
-catch (error){
- console.log(error.message);
+catch (error) {
+  console.log(error.message);
 }
 ```
 
