@@ -8,7 +8,7 @@ ms.collection: get-started
 ms.reviewer: mkaur
 ms.date: 01/13/2026
 ms.subservice: canvas-maker
-ms.author: lanced
+ms.author: mkaur
 search.audienceType: 
   - maker
 contributors:
