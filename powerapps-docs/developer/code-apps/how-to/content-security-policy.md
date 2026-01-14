@@ -11,10 +11,10 @@ ms.date: 01/16/2026
 
 # How to: Configure Content Security Policy (preview)
 
-This article covers how to configure [Content Security Policy](https://developer.mozilla.org/docs/Web/HTTP/CSP) (CSP) for code apps.
-You can configure the individual CSP directives, whether CSP is enforced or reporting only, and where reports are sent.
+This article explains how to configure [Content Security Policy](https://developer.mozilla.org/docs/Web/HTTP/CSP) (CSP) for code apps.
+You can set up the individual CSP directives, choose whether to enforce CSP or use reporting only, and specify where to send reports.
 
-These settings are configured at the environment level and apply to all code apps in the environment.
+Set these settings at the environment level to apply to all code apps in the environment.
 By default, CSP is enforced with the following default directives:
 
 | Directive                          | Default Value                                                                                                                 |
@@ -35,44 +35,46 @@ By default, CSP is enforced with the following default directives:
 | [object-src][object-src]           | `'self' data:`                                                                                                                |
 | [worker-src][worker-src]           | `'none'`                                                                                                                      |
 
+<!-- Find reference-style links at the bottom of this article -->
+
 If your environment has a Dataverse instance, you can configure the CSP settings in the [Power Platform admin center](#configure-csp-using-power-platform-admin-center).
-Otherwise, see the instructions for configuring CSP using the [REST API](#configure-csp-using-rest-api).
+Otherwise, see the instructions for configuring CSP by using the [REST API](#configure-csp-using-rest-api).
 
 ## Prerequisites
 
 - You must be an administrator of the environment to configure CSP settings.
 
-## Configure CSP using Power Platform admin center
+## Configure CSP by using Power Platform admin center
 
 To access the CSP settings for code apps:
 
 1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
-1. In the navigation pane, select **Manage**, then in the **Manage** pane, select **Environments**.
+1. In the navigation pane, select **Manage**. In the **Manage** pane, select **Environments**.
 1. On the **Environments** page, select an environment.
 1. In the command bar, select **Settings**.
-1. Expand **Product**, then select **Privacy + Security**.
-1. Under **Content security policy** select the **App** tab.
+1. Expand **Product**, and then select **Privacy + Security**.
+1. Under **Content security policy**, select the **App** tab.
 
 :::image type="content" source="media/content-security-policy-settings-overview.png" alt-text="Image of the Code Apps CSP setting UO in the Power Platform admin center":::
 
 ### Enable reporting
 
 The **Enable reporting** toggle controls whether CSP violation reports are sent.
-When enabled, you must specify a valid endpoint.
-Violation reports are sent to this endpoint regardless of whether **Enforce content security policy** is enabled.
+When you enable it, specify a valid endpoint.
+The system sends violation reports to this endpoint regardless of whether **Enforce content security policy** is enabled.
 For more information about reporting, see the [reporting documentation](https://developer.mozilla.org/docs/Web/HTTP/Guides/CSP#violation_reporting).
 
 :::image type="content" source="media/content-security-policy-reporting-setting.png" alt-text="Screenshot of a toggle labeled Enable reporting turned on and a text box labeled Reporting endpoint containing a url.":::
 
 ### Configure directives
 
-The **Configure directives** section allows you to control the value of individual directives.
-Leaving the defaults toggled on uses the default values specified earlier.
-Turning off the toggle allows you to add custom values for the directive.
+Use the **Configure directives** section to control the value of individual directives.
+If you leave the defaults toggled on, you use the default values specified earlier.
+If you turn off the toggle, you can add custom values for the directive.
 Custom values are merged with the default values for the directive.
-Turning off a toggle and leaving the Source list blank disabled the directive.
+If you turn off a toggle and leave the Source list blank, you disable the directive.
 
-The example shows three different directives with different configurations:
+The following example shows three different directives with different configurations:
 
 - `frame-ancestors` is enabled and set to use its default value. The resulting directive value is: `'self' https://*.powerapps.com`
 - `script-src` is enabled and adds another source, which is merged with the default value. The resulting directive value is: `script-src 'self' 'unsafe-inline' https://contoso.com`
@@ -80,17 +82,17 @@ The example shows three different directives with different configurations:
 
 :::image type="content" source="media/content-security-policy-directive-settings.png" alt-text="Screenshot of CSP directives configured in different states":::
 
-## Configure CSP using REST API
+## Configure CSP by using REST API
 
-You can programmatically configure CSP using the [Microsoft Power Platform API](/rest/api/power-platform/).
-Settings are managed with the Environment Management Settings API: `https://api.powerplatform.com/environmentmanagement/environments/{environmentId}/settings`
+You can programmatically configure CSP by using the [Microsoft Power Platform API](/rest/api/power-platform/).
+Manage settings by using the [Environment Management Settings](/rest/api/power-platform/environmentmanagement/environment-management-settings) API: `https://api.powerplatform.com/environmentmanagement/environments/{environmentId}/settings`
 
 The following settings are available:
 
 - `PowerApps_CSPEnabledCodeApps` controls whether CSP is enforced for code apps.
 - `PowerApps_CSPReportingEndpoint` controls the reporting of CSP violations.
-  This setting should be set to a valid URL where CSP violation report should be sent or `null` if reporting is disabled.
-- `PowerApps_CSPConfigCodeApps` is the configuration for directives. This setting is a stringified JSON object with the format:
+  Set this setting to a valid URL where CSP violation reports are sent or `null` if reporting is disabled.
+- `PowerApps_CSPConfigCodeApps` is the configuration for directives. Set this setting to a stringified JSON object with the format:
   
   ```jsonc
   {
@@ -106,9 +108,39 @@ The following settings are available:
 
 ### PowerShell helper functions
 
-To simplify calling the REST API, we created the following PowerShell functions.
+To simplify calling the REST API, use the following PowerShell functions.
+
+#### Get-CodeAppContentSecurityPolicy
+
+Use the `Get-CodeAppContentSecurityPolicy` function to retrieve the current CSP settings for code apps in a specified environment. The function returns the enforcement status, reporting endpoint, and configured directives.
 
 ```powershell
+  <#
+  .SYNOPSIS
+    Retrieves the Content Security Policy settings for code apps in a Power Platform environment.
+
+  .DESCRIPTION
+    Gets the current CSP configuration for code apps, including enforcement status,
+    reporting endpoint, and configured directives from the Power Platform API.
+
+  .PARAMETER Env
+    The environment ID of the Power Platform environment.
+
+  .PARAMETER Token
+    A secure string containing the authentication token for the Power Platform API.
+
+  .PARAMETER ApiEndpoint
+    The base URI of the Power Platform API. Defaults to 'https://api.powerplatform.com/'.
+
+  .OUTPUTS
+    A hashtable containing:
+    - ReportingEndpoint: The URL where CSP violation reports are sent.
+    - Enabled: Whether CSP enforcement is enabled.
+    - Directives: A hashtable of CSP directives and their configured sources.
+
+  .EXAMPLE
+    Get-CodeAppContentSecurityPolicy -Token $token -Env "00000000-0000-0000-0000-000000000000"
+  #>
 function Get-CodeAppContentSecurityPolicy {
   [CmdletBinding()]
   param(
@@ -145,7 +177,43 @@ function Get-CodeAppContentSecurityPolicy {
 }
 ```
 
+#### Set-CodeAppContentSecurityPolicy
+
+Use the `Set-CodeAppContentSecurityPolicy` function to update CSP settings for code apps in a specified environment. You can enable or disable CSP enforcement, configure a reporting endpoint, and update individual directives.
+
 ```powershell
+<#
+.SYNOPSIS
+  Updates the Content Security Policy settings for code apps in a Power Platform environment.
+
+.DESCRIPTION
+  Configures CSP settings for code apps, including enabling or disabling enforcement,
+  setting a reporting endpoint for violation reports, and updating CSP directives.
+
+.PARAMETER Env
+  The environment ID of the Power Platform environment.
+
+.PARAMETER Token
+  A secure string containing the authentication token for the Power Platform API.
+
+.PARAMETER ApiEndpoint
+  The base URI of the Power Platform API. Defaults to 'https://api.powerplatform.com/'.
+
+.PARAMETER ReportingEndpoint
+  The URL where CSP violation reports are sent. Pass $null to disable reporting.
+
+.PARAMETER Enabled
+  Whether to enable or disable CSP enforcement for code apps.
+
+.PARAMETER Directives
+  A hashtable of CSP directives and their source values. Replaces the entire directive collection.
+
+.EXAMPLE
+  Set-CodeAppContentSecurityPolicy -Token $token -Env "00000000-0000-0000-0000-000000000000" -Enabled $true
+
+.EXAMPLE
+  Set-CodeAppContentSecurityPolicy -Token $token -Env "00000000-0000-0000-0000-000000000000" -ReportingEndpoint "https://contoso.com/report"
+#>
 function Set-CodeAppContentSecurityPolicy {
   [CmdletBinding(SupportsShouldProcess = $true)]
   param(
@@ -203,10 +271,10 @@ function Set-CodeAppContentSecurityPolicy {
 
 ### Authentication
 
-To use the PowerShell functions, you need to supply an authentication token.
-We recommend using the [Microsoft Authentication CLI](https://github.com/AzureAD/microsoft-authentication-cli) to generate this token.
+To use the PowerShell functions, supply an authentication token.
+Use the [Microsoft Authentication CLI](https://github.com/AzureAD/microsoft-authentication-cli) to generate this token.
 Refer to their documentation for installation instructions.
-After installing the tool, you can use the following command to generate an authentication token:
+After installing the tool, use the following command to generate an authentication token:
 
 ```powershell
 $tenantId = "<your-tenant-id>"
@@ -215,6 +283,8 @@ $token = azureauth aad --resource "https://api.powerplatform.com/" --tenant $ten
 ```
 
 ### Examples
+
+The following examples show how to use the [PowerShell helper functions](#powershell-helper-functions) to manage CSP settings.
 
 #### Retrieve settings
 
@@ -230,13 +300,17 @@ ReportingEndpoint              http://constoso.com/report
 Directives                     {[Frame-Ancestors, System.Object[]], [Script-Src, 'self']}
 ```
 
-#### Enable/Disable enforcement
+#### Enable or disable enforcement
+
+Use the `-Enabled` parameter to turn CSP enforcement on or off for code apps.
 
 ```powershell
 Set-CodeAppContentSecurityPolicy -Token $token -Env "<your-env-id>" -Enabled $true
 ```
 
-#### Enable/Disable reporting
+#### Enable or disable reporting
+
+Use the `-ReportingEndpoint` parameter to specify where CSP violation reports are sent, or pass `$null` to disable reporting.
 
 ```powershell
 Set-CodeAppContentSecurityPolicy -Token $token -Env "<your-env-id>" -ReportingEndpoint "https://contoso.com/report"
@@ -252,7 +326,7 @@ Set-CodeAppContentSecurityPolicy -Token $token -Env "<your-env-id>" -ReportingEn
 
 > [!WARNING]
 > Updating the directives replaces the entire directive collection.
-> To update the existing directives, retrieve them first and update them in place.
+> To update the existing directives, first retrieve them and then update them in place.
 
 To reset a directive to its default value, omit it from the collection.
 To disable a directive entirely, pass an empty array for the directive.
