@@ -37,8 +37,8 @@ By default, CSP is enforced with the following default directives:
 
 <!-- Find reference-style links at the bottom of this article -->
 
-If your environment has a Dataverse instance, you can configure the CSP settings in the [Power Platform admin center](#configure-csp-using-power-platform-admin-center).
-Otherwise, see the instructions for configuring CSP by using the [REST API](#configure-csp-using-rest-api).
+If your environment has a Dataverse instance, you can configure the CSP settings in the [Power Platform admin center](#configure-csp-by-using-power-platform-admin-center).
+Otherwise, see the instructions for configuring CSP by using the [REST API](#configure-csp-by-using-rest-api).
 
 ## Prerequisites
 
