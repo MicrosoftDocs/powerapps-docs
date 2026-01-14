@@ -6,7 +6,7 @@ author: gregli-msft
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 02/11/2025
+ms.date: 01/13/2026
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -22,7 +22,7 @@ In Power Apps, you can create a canvas app that accesses information in Microsof
 * A record contains one or more categories of information about a person, a place, or a thing. For example, a record might contain the name, the email address, and the phone number of a single customer. Other tools refer to a record as a "row" or an "item."
 * A table holds one or more records that contain the same categories of information. For example, a table might contain the names, the email addresses, and the phone numbers of 50 customers.
 
-In your app, you'll use [formulas](working-with-formulas.md) to create, update, and manipulate records and tables. You'll probably read and write data to an external [data source](working-with-data-sources.md), which is an extended table. In addition, you might create one or more internal tables, which are called [collections](working-with-data-sources.md#collections).
+In your app, use [formulas](working-with-formulas.md) to create, update, and manipulate records and tables. You probably read and write data to an external [data source](working-with-data-sources.md), which is an extended table. In addition, you might create one or more internal tables, which are called [collections](working-with-data-sources.md#collections).
 
 You can build a variety of formulas that take the name of a table as an argument, just as a formula in Excel takes one or more cell references as arguments. Some formulas in Power Apps return a table that reflects the other arguments that you specify. For example, you might create a formula:
 
@@ -35,7 +35,7 @@ You can build a variety of formulas that take the name of a table as an argument
 ### Records
 Each record contains at least one category of information for a person, a place, or a thing. The example above shows a record for each product (**Chocolate**, **Bread**, and **Water**) and a column for each category of information (**Price**, **Quantity on Hand**, and **Quantity on Order**).
 
-In a formula, you can refer to a record by itself, outside of a table's context, by using curly braces. For example, this record **{ Name: "Strawberries", Price: 7.99 }** isn't associated with a table. Note that field names, such as **Name** and **Price** in that example, aren't enclosed in double quotation marks.
+In a formula, you can refer to a record by itself, outside of a table's context, by using curly braces. For example, this record **{ Name: "Strawberries", Price: 7.99 }** isn't associated with a table. Field names, such as **Name** and **Price** in that example, aren't enclosed in double quotation marks.
 
 ### Fields
 A field is an individual piece of information in a record. You can visualize this sort of field as a value in a column for a particular record.
@@ -45,7 +45,7 @@ Just as with a control, you refer to a field of a record by using the **.** [ope
 A field can contain another record or table, as the example for the **[GroupBy](functions/function-groupby.md)** function shows. You can nest as many levels of records and tables as you want.
 
 ### Columns
-A column refers to the same field for one or more records in a table. In the above example, each product has a price field, and that price is in the same column for all products.  The above table has four columns, shown horizontally across the top:
+A column refers to the same field for one or more records in a table. In the preceding example, each product has a price field, and all products share the same column for that price. The preceding table has four columns, shown horizontally across the top:
 
 * **Name**
 * **Price**
@@ -54,23 +54,23 @@ A column refers to the same field for one or more records in a table. In the abo
 
 The column's name reflects the fields in that column.
 
-All values within a column are of the same data type. In the above example, the "Quantity on Hand" column always contains a number and can't contain a string, such as "12 units," for one record.  The value of any field may also be *blank*.  
+All values within a column are of the same data type. In the preceding example, the "Quantity on Hand" column always contains a number and can't contain a string, such as "12 units," for one record. The value of any field can also be *blank*.  
 
-You may have referred to columns as "fields" in other tools.
+You might have referred to columns as "fields" in other tools.
 
 > [!NOTE]
-> For data sources such as SharePoint, Excel, or Power BI tiles that contain column names with spaces, Power Apps will replace the spaces with **"\_x0020\_"**. For example, **"Column Name"** in SharePoint, Excel, or Power BI tile will appear as **"Column_x0020_Name"** in Power Apps when displayed in the data layout or used in a formula.
+> For data sources such as SharePoint, Excel, or Power BI tiles that contain column names with spaces, Power Apps replaces the spaces with **"\_x0020\_"**. For example, **"Column Name"** in SharePoint, Excel, or Power BI tile appears as **"Column_x0020_Name"** in Power Apps when displayed in the data layout or used in a formula.
 
 ### Table
 A table comprises one or more records, each with multiple fields that have consistent names across the records.
 
-Any table that's stored in a data source or a collection has a name, which you use to refer to the table and pass it to functions that take tables as arguments.  Tables can also be the result of a function or a formula.
+You use the table name to refer to any table stored in a data source or a collection. You can also pass the table name to functions that take tables as arguments. A function or formula can also return tables.
 
-As in the following example, you can express a table in a formula by using the **[Table](functions/function-table.md)** function with a set of records, which you express in curly braces:
+As shown in the following example, you can express a table in a formula by using the **[Table](functions/function-table.md)** function with a set of records, which you express in curly braces:
 
 `Table( { Value: "Strawberry" }, { Value: "Vanilla" } )`
 
-You can also define a single-column table with square brackets.  An equivalent way to write the above:
+You can also define a single-column table by using square brackets. The following expression is an equivalent way to write the preceding expression:
 
 `[ "Strawberry", "Vanilla" ]`
 
@@ -84,7 +84,7 @@ In both cases, the calculated value changes automatically if you change the valu
 
 Similarly, you can use formulas to access and manipulate data in tables and records. You can use names of tables as arguments in some formulas, such as **Min(Catalog, Price)** to show the lowest value in the **Price** column of the **Catalog** table. Other formulas provide whole tables as return values, such as **RenameColumns(Catalog, "Price", "Cost")**, which returns all the records from the **Catalog** table but changes the name of the **Price** column to **Cost**.
 
-Just as with numbers, formulas that involve tables and records are automatically recalculated as the underlying table or record changes. If the cost of a product in the **Catalog** table is lowered below the previous minimum, the return value of the **[Min](functions/function-aggregates.md)** formula will automatically change to match it.
+Just as with numbers, formulas that involve tables and records automatically recalculate as the underlying table or record changes. If the cost of a product in the **Catalog** table is lowered to a value that is less than the previous minimum, the return value of the **[Min](functions/function-aggregates.md)** formula automatically changes to match it.
 
 Let's walk through some simple examples.
 
@@ -95,9 +95,9 @@ Let's walk through some simple examples.
     ![Gallery.](media/working-with-tables/gallery-items.png)
 
     > [!NOTE]
-    > Some controls have been rearranged and enlarged for illustration purposes.
+    > Some controls are rearranged and enlarged for illustration purposes.
 
-2. Instead of setting the **[Items](controls/properties-core.md)** property to the name of a table, set it to a formula that includes the name of the table as an argument, as in this example:
+1. Instead of setting the **[Items](controls/properties-core.md)** property to the name of a table, set it to a formula that includes the name of the table as an argument, as in this example:
 
     `Sort(CustomGallerySample, SampleHeading, SortOrder.Descending)`
 
@@ -105,7 +105,7 @@ Let's walk through some simple examples.
 
     ![Sort for gallery.](media/working-with-tables/gallery-items-sort.png)
 
-3. Set the **[Items](controls/properties-core.md)** property to a formula that takes the formula from the previous step as an argument and returns a table, as in this example:
+1. Set the **[Items](controls/properties-core.md)** property to a formula that takes the formula from the previous step as an argument and returns a table, as in this example:
 
     `FirstN(Sort(CustomGallerySample, SampleHeading, SortOrder.Descending), 2)`
 
@@ -117,18 +117,18 @@ Let's walk through some simple examples.
 
 ## Table functions and control properties
 
-Consider the **Lower** function. If the variable **welcome** contains the text string **"Hello, World"**, the formula **Lower( welcome )** returns **"hello, world"**.  This function doesn't, in any way, change the value in that variable. **Lower** is a pure function in that it only processes input and produces output. That's all; it has no side effects. All functions in Excel and most functions in Power Apps are pure functions, which allow the workbook or the app to be recalculated automatically.
+Consider the **Lower** function. If the variable **welcome** contains the text string **"Hello, World"**, the formula **Lower( welcome )** returns **"hello, world"**. This function doesn't change the value in that variable. **Lower** is a pure function because it only processes input and produces output. It has no side effects. All functions in Excel and most functions in Power Apps are pure functions, which means the workbook or the app recalculates automatically.
 
 Power Apps offers a set of functions that operate on tables in the same manner. These functions take tables as input and filter, sort, transform, reduce, and summarize entire tables of data. In fact, **Lower** and many other functions that typically take a single value can also take a single-column table as input.
 
-* **[Sort](functions/function-sort.md)**, **[Filter](functions/function-filter-lookup.md)** - Sorts and filters records.
-* **[FirstN](functions/function-first-last.md)**, **[LastN](functions/function-first-last.md)** - Returns the first N or last N records of the table.
-* **[Abs](functions/function-numericals.md)**, **[Sqrt](functions/function-numericals.md)**, **[Round](functions/function-round.md)**, **[RoundUp](functions/function-round.md)**, **[RoundDown](functions/function-round.md)** - Arithmetic operations on each record of a single-column table, resulting in a single-column table of results.
-* **[Left](functions/function-left-mid-right.md)**, **[Mid](functions/function-left-mid-right.md)**, **[Right](functions/function-left-mid-right.md)**, **[Replace](functions/function-replace-substitute.md)**, **[Substitute](functions/function-replace-substitute.md)**, **[Trim](functions/function-trim.md)**, **[Lower](functions/function-lower-upper-proper.md)**, **[Upper](functions/function-lower-upper-proper.md)**, **[Proper](functions/function-lower-upper-proper.md)** - String manipulations on each record of a single-column table, resulting in a single-column table of strings.
+* **[Sort](functions/function-sort.md)**, **[Filter](functions/function-filter-lookup.md)** - Sort and filter records.
+* **[FirstN](functions/function-first-last.md)**, **[LastN](functions/function-first-last.md)** - Return the first N or last N records of the table.
+* **[Abs](functions/function-numericals.md)**, **[Sqrt](functions/function-numericals.md)**, **[Round](functions/function-round.md)**, **[RoundUp](functions/function-round.md)**, **[RoundDown](functions/function-round.md)** - Perform arithmetic operations on each record of a single-column table, resulting in a single-column table of results.
+* **[Left](functions/function-left-mid-right.md)**, **[Mid](functions/function-left-mid-right.md)**, **[Right](functions/function-left-mid-right.md)**, **[Replace](functions/function-replace-substitute.md)**, **[Substitute](functions/function-replace-substitute.md)**, **[Trim](functions/function-trim.md)**, **[Lower](functions/function-lower-upper-proper.md)**, **[Upper](functions/function-lower-upper-proper.md)**, **[Proper](functions/function-lower-upper-proper.md)** - Perform string manipulations on each record of a single-column table, resulting in a single-column table of strings.
 * **[Len](functions/function-len.md)** - For a column of strings, returns a single-column table that contains the length of each string.
 * **[Concatenate](functions/function-concatenate.md)** - Concatenates multiple columns of strings, resulting in a single-column table of strings.
-* **[AddColumns](functions/function-table-shaping.md)**, **[DropColumns](functions/function-table-shaping.md)**, **[RenameColumns](functions/function-table-shaping.md)**, **[ShowColumns](functions/function-table-shaping.md)** - Column manipulation of the table, resulting in a new table with different columns.
-* **[Distinct](functions/function-distinct.md)** - Removes duplicates records.
+* **[AddColumns](functions/function-table-shaping.md)**, **[DropColumns](functions/function-table-shaping.md)**, **[RenameColumns](functions/function-table-shaping.md)**, **[ShowColumns](functions/function-table-shaping.md)** - Perform column manipulation of the table, resulting in a new table with different columns.
+* **[Distinct](functions/function-distinct.md)** - Removes duplicate records.
 * **[Shuffle](functions/function-shuffle.md)** - Shuffles records into a random order.
 * **[HashTags](functions/function-hashtags.md)** - Searches for hashtags in a string.
 * **[Errors](functions/function-errors.md)** - Provides error information when you work with a data source.
@@ -140,11 +140,11 @@ You can completely reshape a table however you want by using the **[AddColumns](
 Properties of controls can also be tables:
 
 * **Items** - Applies to galleries, list boxes, and combo boxes. This property defines the table that the gallery or the list shows.
-* **SelectedItems** - Applies to list boxes and combo boxes. This property defines the table of items that the user has selected if **SelectMultiple** is enabled.
+* **SelectedItems** - Applies to list boxes and combo boxes. This property defines the table of items that the user selected if **SelectMultiple** is enabled.
 
 ## Behavioral formulas
 
-Other functions are specifically designed to modify data and have side effects. Because these functions aren't pure, you must build them carefully, and they can't participate in automatically recalculating values in the app. You can use these functions only within [behavioral formulas](working-with-formulas-in-depth.md).
+Some functions are specifically designed to modify data and have side effects. Because these functions aren't pure, you must build them carefully. They can't participate in automatically recalculating values in the app. You can use these functions only within [behavioral formulas](working-with-formulas-in-depth.md).
 
 * **[Collect](functions/function-clear-collect-clearcollect.md)**, **[Clear](functions/function-clear-collect-clearcollect.md)**, **[ClearCollect](functions/function-clear-collect-clearcollect.md)** - Creates collections, clears them, and adds data to them.
 * **[Patch](functions/function-patch.md)** - Modifies one or more fields in a record.
@@ -153,23 +153,23 @@ Other functions are specifically designed to modify data and have side effects. 
 
 ## Record formulas
 
-You can also build a formula that calculates data for an individual record, takes an individual record as an argument, and provides an individual record as a return value. Returning to our gallery example above, let's use the **Gallery1.Selected** property to display information from whatever record the user selects in that gallery.
+You can also build a formula that calculates data for an individual record, takes an individual record as an argument, and provides an individual record as a return value. Returning to the gallery example, use the **Gallery1.Selected** property to display information from whatever record the user selects in that gallery.
 
 1. Add a [**Button**](controls/control-button.md), and set its **[OnSelect](controls/properties-core.md)** property to this formula:<br>
     **Collect( SelectedRecord, Gallery1.Selected )**
 
-2. While holding down the Alt key, select the button.
+1. Select the button while holding down the Alt key.
 
-3. In the **File** menu, select **Collections.**
+1. In the **File** menu, select **Collections.**
 
     ![SelectedRecord collection.](media/working-with-tables/selected-collection.png)
 
 This formula returns a record that includes not only the data from the record that's currently selected in the gallery but also each control in that gallery. For example, the record contains both a **SampleText** column, which matches the **SampleText** column in the original table, and a **Subtitle1** column, which represents the label that shows the data from that column. Select the table icon in the **Subtitle1** column to drill into that data.
 
 > [!NOTE]
-> The **Subtitle1** column might be named **Subtitle2** or similar if you've added elements other than those that this topic specifies.
+> The **Subtitle1** column might be named **Subtitle2** or similar if you add elements other than those that this topic specifies.
 
-Now that you have the selected record, you can extract individual fields from it with the **.** operator.
+Now that you have the selected record, you can extract individual fields from it by using the **.** operator.
 
 1. Add a **[Label](controls/control-text-box.md)** control, and then move it under the gallery and the button.
 
@@ -178,12 +178,12 @@ Now that you have the selected record, you can extract individual fields from it
 
     ![Text property with updated label.](media/working-with-tables/gallery-selected.png)
 
-You've taken the **Selected** property, which is a record, and extracted the **SampleHeading** property from it.
+You took the **Selected** property, which is a record, and extracted the **SampleHeading** property from it.
 
 You can also use a record as a general-purpose container for related named values.
 
 * If you build a formula around the **[UpdateContext](functions/function-updatecontext.md)** and **[Navigate](functions/function-navigate.md)** functions, use a record to gather the [context variables](working-with-variables.md#use-a-context-variable) that you want to update.
-* Use the **[Updates](controls/control-form-detail.md)** property on an **[Edit form](controls/control-form-detail.md)** control to gather the changes that have been made by the user in a form.
+* Use the **[Updates](controls/control-form-detail.md)** property on an **[Edit form](controls/control-form-detail.md)** control to gather the changes that the user makes in a form.
 * Use the **[Patch](functions/function-patch.md)** function to update a data source but also to merge records.
 
 In these cases, the record was never a part of a table.
@@ -204,20 +204,20 @@ Properties that return records:
 
 ## Record scope
 
-Some functions operate by evaluating a formula across all the records of a table individually. The formula's result is used in various ways:
+Some functions work by evaluating a formula across all the records of a table, one record at a time. You use the formula's result in different ways for each function:
 
-* **AddColumns** - Formula provides the value of the added field.
-* **Average**, **Max**, **Min**, **Sum**, **StdevP**, **VarP** - Formula provides the value to aggregate.
-* **Filter**, **Lookup** - Formula determines if the record should be included in the output.
-* **Concat** - Formula determines the strings to concatenate together.
-* **Distinct** - Formula returns a value, used to identify duplicate records.
-* **ForAll** - Formula can return any value, potentially with side effects.
-* **Sort** - Formula provides the value to sort the records on.
-* **With** - Formula can return any value, potentially with side effects.
+* **AddColumns** - Use the formula to get the value for the new field you add.
+* **Average**, **Max**, **Min**, **Sum**, **StdevP**, **VarP** - Use the formula to get the value you want to aggregate.
+* **Filter**, **Lookup** - Use the formula to decide if the record should be part of the output.
+* **Concat** - Use the formula to decide which strings to join together.
+* **Distinct** - Use the formula to return a value that helps find duplicate records.
+* **ForAll** - Use the formula to return any value, possibly with side effects.
+* **Sort** - Use the formula to get the value to sort the records by.
+* **With** - Use the formula to return any value, possibly with side effects.
 
-Inside these formulas, you can reference the fields of the record being processed. Each of these functions creates a "record scope" in which the formula is evaluated, where the fields of the record are available as top-level identifiers. You can also reference control properties and other values from throughout your app.
+Inside these formulas, you can reference the fields of the record you're working on. Each of these functions creates a "record scope" where the formula runs. The fields of the record show up as top-level identifiers. You can also reference control properties and other values from throughout your app.
 
-For example, take a table of **Products**:
+For example, consider a table of **Products**:
 
 ![Products example.](media/working-with-tables/requested.png)
 
@@ -234,15 +234,15 @@ Set( Products,
 )
 ```
 
-To determine whether any of any of these products had more requested than is available:
+To check if any of these products have more requested than is available, use this formula:
 
 `Filter( Products, 'Quantity Requested' > 'Quantity Available' )`
 
-The first argument to **Filter** is the table of records to operate on, and the second argument is a formula.  **Filter** creates a record scope for evaluating this formula in which the fields of each record are available, in this case **Product**, **Quantity Requested**, and **Quantity Available**.  The result of the comparison determines if each record should be included in the result of the function:
+The first argument to **Filter** is the table of records to work on. The second argument is a formula. **Filter** makes a record scope for evaluating this formula. The fields of each record are available, like **Product**, **Quantity Requested**, and **Quantity Available**. The result of the comparison decides if each record should be part of the function's result:
 
 ![Filtered table.](media/working-with-tables/needed.png)
 
-Adding to this example, we can calculate how much of each product to order:
+You can add to this example by calculating how much of each product to order:
 
 ```power-fx
 AddColumns( 
@@ -251,11 +251,11 @@ AddColumns(
 )
 ```
 
-Here we are adding a calculated column to the result. **AddColumns** has its own record scope that it uses to calculate the difference between what has been requested and what is available.
+Here, you add a calculated column to the result. **AddColumns** uses its own record scope to calculate the difference between what you requested and what is available.
 
 ![Added columns.](media/working-with-tables/toorder.png)
 
-Finally, we can reduce the result table to just the columns that we want:
+Finally, you can reduce the result table to just the columns that you want:
 
 ```power-fx
 ShowColumns(
@@ -270,28 +270,28 @@ ShowColumns(
 
 ![Updated table.](media/working-with-tables/toorderonly.png)
 
-Note that in the above, we used double quotes (") in some places and single quotes (') in other places.  Single quotes are required when referencing the value of an object, such as a field or table, in which the name of the object contains a space.  Double quotes are used when we are not referencing the value of an object but instead talking about it, especially in situations in which the object does not yet exist, as in the case of **AddColumns**.
+In the preceding example, you used double quotes (") in some places and single quotes (') in other places. You need single quotes when you reference the value of an object, such as a field or table, and the name of the object contains a space. Use double quotes when you're not referencing the value of an object but instead talking about it. Use double quotes especially in situations where the object doesn't yet exist, as in the case of **AddColumns**.
 
 ## Disambiguation
 
-Field names added with the record scope override the same names from elsewhere in the app.  When this happens, you can still access values from outside the record scope with the [**@** disambiguation](functions/operators.md) operator:
+Field names you add with the record scope override the same names from elsewhere in the app.  When this happens, you can still access values from outside the record scope by using the [**@** disambiguation](functions/operators.md) operator:
 
-* To access values from nested record scopes, use the **@** operator with the name of the table being operated upon using this pattern:<br>_Table_**[@**_FieldName_**]**
+* To access values from nested record scopes, use the **@** operator with the name of the table you're operating upon, using this pattern:<br>_Table_**[@**_FieldName_**]**
 * To access global values, such as data sources, collections, and context variables, use the pattern **[@**_ObjectName_**]** (without a table designation).
 
-If the table being operated upon is an expression, such as **Filter(** _Table_**,** ... **)**, then the disambiguation operator cannot be used.  Only the innermost record scope can access fields from this table expression, by not using the disambiguation operator.
+If the table you're operating upon is an expression, such as **Filter(** _Table_**,** ... **)**, you can't use the disambiguation operator.  Only the innermost record scope can access fields from this table expression, by not using the disambiguation operator.
 
 For example, imagine having a collection **X**:
 
 ![Collection X.](media/working-with-tables/X.png)
 
-You can create this collection with **ClearCollect( X, \[1, 2\] )**.
+You create this collection by using **ClearCollect( X, \[1, 2\] )**.
 
 And another collection **Y**:
 
 ![Collection Y.](media/working-with-tables/Y.png)
 
-You can create this collection with **ClearCollect( Y, ["A", "B"] )**.
+You create this collection by using **ClearCollect( Y, ["A", "B"] )**.
 
 In addition, define a context variable named **Value** with this formula: **UpdateContext( {Value: "!"} )**
 
@@ -312,11 +312,11 @@ produces this table:
 
 ![XY table.](media/working-with-tables/XY.png)
 
-What is going on here?  The outermost **ForAll** function defines a record scope for **X**, allowing access to the **Value** field of each record as it is processed.  It can be accessed by simply using the word **Value** or by using **X[@Value]**.
+What's going on here?  The outermost **ForAll** function defines a record scope for **X**, allowing access to the **Value** field of each record as it processes.  You can access it by simply using the word **Value** or by using **X[@Value]**.
 
-The innermost **ForAll** function defines another record scope for **Y**.  Since this table also has a **Value** field defined, using **Value** here refers to the field in **Y**'s record and no longer the one from **X**.  Here, to access **X**'s **Value** field, we must use the longer version with the disambiguation operator.
+The innermost **ForAll** function defines another record scope for **Y**.  Since this table also has a **Value** field defined, using **Value** here refers to the field in **Y**'s record and no longer the one from **X**.  To access **X**'s **Value** field, you must use the longer version with the disambiguation operator.
 
-Since **Y** is the innermost record scope, accessing fields of this table do not require disambiguation, allowing us to use this formula with the same result:
+Since **Y** is the innermost record scope, accessing fields of this table doesn't require disambiguation, so you can use this formula with the same result:
 
 ```power-fx
 Ungroup(
@@ -329,7 +329,7 @@ Ungroup(
 )
 ```
 
-All the **ForAll** record scopes override the global scope. The **Value** context variable we defined isn't available by name without the disambiguation operator. To access this value, use **[@Value]**.
+All the **ForAll** record scopes override the global scope. The **Value** context variable you defined isn't available by name without the disambiguation operator. To access this value, use **[@Value]**.
 
 **Ungroup** flattens the result because nested **ForAll** functions result in a nested result table.
 
@@ -353,7 +353,7 @@ Products.Product
 
 ## Inline records
 
-You express records by using curly braces that contain named field values.  For example, you can express the first record in the table at the start of this topic by using this formula:
+Express records by using curly braces that contain named field values.  For example, you can express the first record in the table at the start of this topic by using this formula:
 
 `{ Name: "Chocolate", Price: 3.95, 'Quantity on Hand': 12, 'Quantity on Order': 10 }`
 
@@ -367,10 +367,10 @@ You can nest records by nesting curly braces, as this example shows:
 
 Enclose each column name that contains a special character, such as a space or a colon, in single quotes.  To use a single quote within a column name, double it.
 
-Note that the value in the **Price** column doesn't include a currency symbol, such as a dollar sign. That formatting will be applied when the value is displayed.  
+Note that the value in the **Price** column doesn't include a currency symbol, such as a dollar sign. That formatting is applied when the value is displayed.  
 
 ## Inline tables
-You can create a table by using the **[Table](functions/function-table.md)** function and a set of records. You can express the table at the start of this topic by using this formula:
+Create a table by using the **[Table](functions/function-table.md)** function and a set of records. You can express the table at the start of this topic by using this formula:
 
 ```power-fx
 Table( 
@@ -392,7 +392,7 @@ Table(
 ```
 
 ## Inline value tables
-You can create single-column tables by specifying values in square brackets. The resulting table has a single column, named **Value**.
+Create single-column tables by specifying values in square brackets. The resulting table has a single column, named **Value**.
 
 For example, `[ 1, 2, 3, 4 ]` is equivalent to `Table( { Value: 1 }, { Value: 2 }, { Value: 3 }, { Value: 4 } )` and returns this table:
 

@@ -6,7 +6,7 @@ ms.subservice: common
 ms.topic: how-to
 ms.custom: canvas
 ms.collection: get-started
-ms.date: 05/22/2025
+ms.date: 01/13/2026
 ms.author: alaug
 ms.reviewer: mkaur
 contributors:
@@ -15,7 +15,9 @@ contributors:
 ---
 # Explore Power Apps for free for 30 days
 
-Explore all Power Apps capabilities for free by signing up for a 30-day Power Apps trial plan. If you don't have a license for Power Apps, the trial plan gives temporary access to these activities:
+Get instant access to all Power Apps capabilities with a free 30-day trial. Whether you're new to Power Apps or want to explore premium features, this trial unlocks everything you need to build powerful business applications.
+
+If you don't have a license for Power Apps, the trial plan gives temporary access to these activities:
 
 - Extend the capabilities of Office 365 (SharePoint Online, Teams, Excel, and more)
 - Create and run canvas apps that connect to Microsoft Dataverse and over 200 other data sources, including premium connectors and on-premises data.
@@ -27,13 +29,15 @@ If you have a Power Apps license or a license through Office 365, you already ha
 
 > [!NOTE]
 > - If you're an administrator, see [Purchase Power Apps for your organization](/power-platform/admin/signup-for-powerapps-admin) or [Power Apps in your organization Q&A](/power-platform/admin/signup-question-and-answer).
-> - Starting January 2020, self-service purchase, subscription, and license management capabilities for Power Platform products (Power BI, Power Apps, and Power Automate) are available for commercial cloud customers in the United States. Learn more, including steps to enable or disable self-service purchasing in your organization, in the [Self-service purchase FAQ](/microsoft-365/commerce/subscriptions/self-service-purchase-faq).
+> - Starting January 2020, self-service purchase, subscription, and license management capabilities for Power Platform products (Power BI, Power Apps, and Power Automate) are available for commercial cloud customers in the United States. For more information, including steps to enable or disable self-service purchasing in your organization, see the [Self-service purchase FAQ](/microsoft-365/commerce/subscriptions/self-service-purchase-faq).
 
 ## Need an account?  
 If you don't have a work or school account, create a free account with Microsoft Entra and become a low-code developer with Power Apps. To keep building apps after the trial period, opt in to the free [Power Apps Developer Plan](https://powerapps.microsoft.com/developerplan/). 
 
-1. Go to [PowerApps.com](https://powerapps.microsoft.com/) and select **Start free**.
-1. Enter your email. If your email isn't a work or school account, you're prompted to create a free Microsoft Entra account using [this sign-up experience](https://signup.microsoft.com/get-started/signup?products=83d3609a-14c1-4fc2-a18e-0f5ca7047e46).
+**Ready to get started?**
+
+1. **[Start your free trial now →](https://powerapps.microsoft.com/)** - Go to PowerApps.com and select **Start free**.
+1. Enter your email. If your email isn't a work or school account, you're prompted to create a free Microsoft Entra account by using [this sign-up experience](https://signup.microsoft.com/get-started/signup?products=83d3609a-14c1-4fc2-a18e-0f5ca7047e46).
 
 If you want to evaluate Power Apps integrations with Microsoft 365, sign up for an [Office 365 trial](https://signup.microsoft.com/get-started/signup?products=ec920d3e-7e24-492d-ba28-79763d637b79) account. 
 
@@ -42,7 +46,7 @@ If you want to evaluate Power Apps integrations with Microsoft 365, sign up for 
 
 ## Identify your current license
 
-To find out which license or licenses you already have:
+**Compare license options:** Learn what capabilities each type of license offers on the [pricing page](https://powerapps.microsoft.com/pricing/) to choose the best plan for your needs.
 
 1. [Sign in to Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) using your work or school credentials.
 

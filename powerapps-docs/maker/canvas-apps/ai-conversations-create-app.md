@@ -7,7 +7,7 @@ ms.collection:
   - bap-ai-copilot
   - get started
 ms.reviewer:
-ms.date: 8/26/2025
+ms.date: 01/12/2026
 ms.update-cycle: 180-days
 ms.subservice: canvas-maker
 ms.author: tapanm
@@ -27,19 +27,19 @@ ai-usage: ai-assisted
 
 # Build apps through conversation with Copilot 
 
-Create apps without writing code or designing screens. With Copilot in Power Apps, you use natural language to describe what you want your app to do, and AI does the rest.
+Create apps without writing code or designing screens. By using Copilot in Power Apps, you use natural language to describe what you want your app to do, and AI does the rest.
 
 Copilot is a feature in Power Apps that helps you build apps with AI assistance. Access Copilot from the Power Apps home screen. Enter the type of information you want to collect, track, or show in your app, and Copilot generates one or more Microsoft Dataverse tables that you use to build your canvas app.
 
 ## Prerequisites
 
 - Check the prerequisites and region availability in [Copilot in Power Apps overview (preview)](ai-overview.md).
-- Depending on where your environment is hosted, you might need to enable data movement across regions. Learn more in [Copilots and generative AI features that are available when you enable data movement across regions](/power-platform/admin/geographical-availability-copilot#copilots-and-generative-ai-features-that-are-available-when-you-enable-data-movement-across-regions).
-- Add a Dataverse database to your environment. Learn more in [Add a Microsoft Dataverse database](/power-platform/admin/create-database).
-- Check if this feature is available in your region. Learn more in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/en-US/availability-reports/?report=copilotfeaturereport).
+- Depending on where your environment is hosted, you might need to enable data movement across regions. For more information, see [Copilots and generative AI features that are available when you enable data movement across regions](/power-platform/admin/geographical-availability-copilot#copilots-and-generative-ai-features-that-are-available-when-you-enable-data-movement-across-regions).
+- Add a Dataverse database to your environment. For more information, see [Add a Microsoft Dataverse database](/power-platform/admin/create-database).
+- Check if this feature is available in your region. For more information, see [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/en-US/availability-reports/?report=copilotfeaturereport).
 - Assign the system customizer security role in the environment.
 
-## Create an app with Copilot
+## Create an app by using Copilot
 
 Let's create an app to track housekeeping tasks for a hotel so you can see how Copilot works.
 
@@ -47,7 +47,7 @@ Let's create an app to track housekeeping tasks for a hotel so you can see how C
 
 1. On the left navigation pane, select **Create** > **Start with Copilot**.
 
-1. Enter your prompt in the text box, like the example prompt below.
+1. Enter your prompt in the text box, like the example prompt in the following section.
 
     ```copilot-prompt
     Hotel housekeeping
@@ -57,7 +57,7 @@ Let's create an app to track housekeeping tasks for a hotel so you can see how C
 Copilot creates one or more Dataverse tables with data that includes typical hotel housekeeping tasks.
 
 > [!IMPORTANT]
-> If you don't have the right permissions or access to Dataverse in the environment you're working in, an alert asks you to create the app in your own environment. Make sure the table and app can be created in your environment to continue. If you don't have a personal developer environment, a new one is created for you automatically. Learn more in [Get your developer environment (preview)](../maker-create-environment.md).
+> If you don't have the right permissions or access to Dataverse in the environment you're working in, an alert asks you to create the app in your own environment. Make sure you can create the table and app in your environment to continue. If you don't have a personal developer environment, a new one is created for you automatically. For more information, see [Get your developer environment (preview)](../maker-create-environment.md).
 
 ## Review the table
 
