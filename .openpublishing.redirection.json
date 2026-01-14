@@ -9875,10 +9875,15 @@
       "redirect_url": "/power-apps/maker/canvas-apps/get-started-test-drive",
       "redirect_document_id": false
     },
-        {
+    {
       "source_path": "powerapps-docs/maker/model-driven-apps/configure-suggested-actions.md",
       "redirect_url": "/power-apps/maker/model-driven-apps/add-agents-to-app",
       "redirect_document_id": false
-    }
+    },
+    {
+      "source_path": "powerapps-docs/user/use-suggested-actions-in-the-agent-feed.md",
+      "redirect_url": "/power-apps/user/supervise-agents-with-agent-feed",
+      "redirect_document_id": false
+    }  
   ]
 }
