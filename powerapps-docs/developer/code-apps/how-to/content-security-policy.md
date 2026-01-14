@@ -21,23 +21,23 @@ You can configure the following settings:
 These settings are configured at the environment level and apply to all code apps in the environment.
 CSP is enabled by default with the following directives:
 
-| Directive    | Default Value                                                                                                                |
-| ------------ | ---------------------------------------------------------------------------------------------------------------------------- |
-| [frame-ancestors](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) | `'self' https://*.powerapps.com` |
-| [default-src](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy/default-src)  |`'self'`                                                                                                                      |
-| [style-src](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy/style-src)    |`'self' 'unsafe-inline'`                                                                                                      |
-| [form-action](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy/form-action)  |`'none'`                                                                                                                      |
-| [frame-src](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy/frame-src)    |`'self'`                                                                                                                      |
-| [child-src](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy/child-src)    |`'none'`                                                                                                                      |
-| [img-src](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy/img-src)      |`'self' https://res-dev.cdn.officeppe.net/ https://res-sdf.cdn.office.net/ <https://cdn.hubblecontent.osi.office.net/> data:` |
-| [media-src](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy/media-src)    |`'self' data:`                                                                                                                |
-| [script-src](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy/script-src)   |`'self' 'unsafe-inline'`                                                                                                      |
-| [worker-src](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy/worker-src)   |`'none'`                                                                                                                      |
-| [object-src](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy/object-src)   |`'self' data:`                                                                                                                |
-| [connect-src](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy/connect-src)  |`'none'`                                                                                                                      |
-| [font-src](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy/font-src)     |`'self' 'unsafe-inline'`                                                                                                      |
-| [base-uri](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy/base-uri)     |`'self'`                                                                                                                      |
-| [manifest-src](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy/manifest-src) |`'none'`                                                                                                                      |
+| Directive                          | Default Value                                                                                                                 |
+| ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| [frame-ancestors][frame-ancestors] | `'self' https://*.powerapps.com`                                                                                              |
+| [script-src][script-src]           | `'self' 'unsafe-inline'`                                                                                                      |
+| [img-src][img-src]                 | `'self' https://res-dev.cdn.officeppe.net/ https://res-sdf.cdn.office.net/ <https://cdn.hubblecontent.osi.office.net/> data:` |
+| [style-src][style-src]             | `'self' 'unsafe-inline'`                                                                                                      |
+| [font-src][font-src]               | `'self' 'unsafe-inline'`                                                                                                      |
+| [connect-src][connect-src]         | `'none'`                                                                                                                      |
+| [frame-src][frame-src]             | `'self'`                                                                                                                      |
+| [form-action][form-action]         | `'none'`                                                                                                                      |
+| [base-uri][base-uri]               | `'self'`                                                                                                                      |
+| [child-src][child-src]             | `'none'`                                                                                                                      |
+| [default-src][default-src]         | `'self'`                                                                                                                      |
+| [manifest-src][manifest-src]       | `'none'`                                                                                                                      |
+| [media-src][media-src]             | `'self' data:`                                                                                                                |
+| [object-src][object-src]           | `'self' data:`                                                                                                                |
+| [worker-src][worker-src]           | `'none'`                                                                                                                      |
 
 If your environment has a Dataverse instance you can configure the CSP settings in the [Power Platform admin center](#configure-csp-using-power-platform-admin-center).
 Otherwise, please see the instructions for configuring CSP using the [REST API](#configure-csp-using-rest-api).
@@ -265,3 +265,21 @@ $directives = (Get-CodeAppContentSecurityPolicy -Token $token -Env $env).Directi
 # Update existing directives
 Set-CodeAppContentSecurityPolicy -Token $token -Env $env -Directives $directives
 ```
+
+<!--Reference links in article-->
+
+[frame-ancestors]:  https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors
+[script-src]:  https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy/script-src
+[img-src]:  https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy/img-src
+[style-src]:  https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy/style-src
+[font-src]:  https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy/font-src
+[connect-src]:  https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy/connect-src
+[frame-src]:  https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy/frame-src
+[form-action]:  https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy/form-action
+[base-uri]:  https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy/base-uri
+[child-src]:  https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy/child-src
+[default-src]:  https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy/default-src
+[manifest-src]:  https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy/manifest-src
+[media-src]:  https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy/media-src
+[object-src]:  https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy/object-src
+[worker-src]:  https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy/worker-src
