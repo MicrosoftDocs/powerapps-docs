@@ -39,8 +39,8 @@ CSP is enabled by default with the following directives:
 | [object-src][object-src]           | `'self' data:`                                                                                                                |
 | [worker-src][worker-src]           | `'none'`                                                                                                                      |
 
-If your environment has a Dataverse instance you can configure the CSP settings in the [Power Platform admin center](#configure-csp-using-power-platform-admin-center).
-Otherwise, please see the instructions for configuring CSP using the [REST API](#configure-csp-using-rest-api).
+If your environment has a Dataverse instance, you can configure the CSP settings in the [Power Platform admin center](#configure-csp-using-power-platform-admin-center).
+Otherwise, see the instructions for configuring CSP using the [REST API](#configure-csp-using-rest-api).
 
 ## Prerequisites
 
@@ -62,8 +62,8 @@ To access the CSP settings for code apps:
 ### Enable reporting
 
 The **Enable reporting** toggle controls whether CSP violation reports are sent.
-When enabled you are required to specify a valid endpoint.
-Violation reports are sent to this endpoint regardless of whether **Enforce content security policy** is enabled. For more information, please refer to the MDN [documentation](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP#violation_reporting).
+When enabled, you are required to specify a valid endpoint.
+Violation reports are sent to this endpoint regardless of whether **Enforce content security policy** is enabled. For more information, refer to the [reporting documentation](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP#violation_reporting).
 
 :::image type="content" source="media/csp-reporting.png" alt-text="Screenshot of a toggle labeled Enable reporting turned on and a text box labeled Reporting endpoint containing a url.":::
 
@@ -75,18 +75,18 @@ Turning off the toggle allows you to add custom values for the directive.
 Custom values are merged with the default values for the directive.
 Turning off a toggle and leaving the Source list blank disabled the directive.
 
-The example below shows three different directives with different configurations.
+The example shows three different directives with different configurations:
 
-- `frame-ancestors` is enabled and set to use its default value. i.e. `'self' https://*.powerapps.com`
-- `script-src` is enabled and adds an additional source which will be merged with the default value. i.e. `script-src 'self' 'unsafe-inline' https://contoso.com`
-- `img-src` is disabled. The directive will not be sent.
+- `frame-ancestors` is enabled and set to use its default value. The resulting directive value is: `'self' https://*.powerapps.com`
+- `script-src` is enabled and adds another source, which is merged with the default value. The resulting directive value is: `script-src 'self' 'unsafe-inline' https://contoso.com`
+- `img-src` is disabled. The directive is omitted from the policy.
 
-:::image type="content" source="media/csp-directives.png" alt-text="Screenshot":::
+:::image type="content" source="media/csp-directives.png" alt-text="Screenshot of CSP directives configured in different states":::
 
 ## Configure CSP using REST API
 
 You can programmatically configure CSP using the [Microsoft Power Platform API](https://learn.microsoft.com/en-us/rest/api/power-platform/).
-Settings are managed with the Environment Management Settings API i.e. `https://api.powerplatform.com/environmentmanagement/environments/{environmentId}/settings`
+Settings are managed with the Environment Management Settings API: `https://api.powerplatform.com/environmentmanagement/environments/{environmentId}/settings`
 
 The following settings are available:
 
