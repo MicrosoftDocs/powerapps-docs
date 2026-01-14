@@ -14,7 +14,7 @@ contributors:
 ---
 # dataApi reference for generative pages
 
-When you [generate a page using natural language](../../../../maker/model-driven-apps/generative-pages.md), the AI generates React code that covers both the front-end user experience by selecting the right components and determining the best layout, and the corresponding business logic.
+When you [generate a page using natural language](../../../../maker/model-driven-apps/generative-pages.md), the AI generates a React page in TypeScript that covers both the front-end user experience by selecting the right components and determining the best layout, and the corresponding business logic.
 
 You have the opportunity to [view and edit the generated code to refine the output](../../../../maker/model-driven-apps/generative-pages.md#view-the-generated-code-iterate-and-publish). Data operations use a `dataApi` object that exposes the following public methods:
 
