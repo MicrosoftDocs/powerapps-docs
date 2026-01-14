@@ -11,15 +11,11 @@ ms.date: 01/16/2026
 
 # How to: Configure Content Security Policy (preview)
 
-In this article, you will learn how to configure [Content Security Policy](https://developer.mozilla.org/docs/Web/HTTP/CSP) (CSP) for code apps.
-You can configure the following settings:
-
-- Whether CSP is enabled
-- The values of individual directives
-- Whether reporting is enabled and where reports are sent
+This article covers how to configure [Content Security Policy](https://developer.mozilla.org/docs/Web/HTTP/CSP) (CSP) for code apps.
+You can configure the individual CSP directives, whether CSP is enforced or reporting only, and where reports are sent.
 
 These settings are configured at the environment level and apply to all code apps in the environment.
-CSP is enabled by default with the following directives:
+By default, CSP is enforced with the following default directives:
 
 | Directive                          | Default Value                                                                                                                 |
 | ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
@@ -62,8 +58,9 @@ To access the CSP settings for code apps:
 ### Enable reporting
 
 The **Enable reporting** toggle controls whether CSP violation reports are sent.
-When enabled, you are required to specify a valid endpoint.
-Violation reports are sent to this endpoint regardless of whether **Enforce content security policy** is enabled. For more information, refer to the [reporting documentation](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP#violation_reporting).
+When enabled, you must specify a valid endpoint.
+Violation reports are sent to this endpoint regardless of whether **Enforce content security policy** is enabled.
+For more information about reporting, see the [reporting documentation](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP#violation_reporting).
 
 :::image type="content" source="media/csp-reporting.png" alt-text="Screenshot of a toggle labeled Enable reporting turned on and a text box labeled Reporting endpoint containing a url.":::
 
@@ -92,7 +89,7 @@ The following settings are available:
 
 - `PowerApps_CSPEnabledCodeApps` controls whether CSP is enforced for code apps.
 - `PowerApps_CSPReportingEndpoint` controls the reporting of CSP violations.
-  This setting should be set to a valid URL where CSP violation report will be sent or `null` if reporting is disabled.
+  This setting should be set to a valid URL where CSP violation report should be sent or `null` if reporting is disabled.
 - `PowerApps_CSPConfigCodeApps` is the configuration for directives. This setting is a stringified JSON object with the format:
   
   ```jsonc
@@ -109,7 +106,7 @@ The following settings are available:
 
 ### PowerShell helper functions
 
-As an alternative to directly calling the REST API, we have created the following PowerShell functions you can use to configure CSP.
+To simplify calling the REST API, we created the following PowerShell functions.
 
 ```powershell
 function Get-CodeAppContentSecurityPolicy {
@@ -206,10 +203,10 @@ function Set-CodeAppContentSecurityPolicy {
 
 ### Authentication
 
-To use the PowerShell functions you will need to supply an authentication token.
+To use the PowerShell functions, you need to supply an authentication token.
 We recommend using the [Microsoft Authentication CLI](https://github.com/AzureAD/microsoft-authentication-cli) to generate this token.
-Please refer to their documentation for installation instructions.
-Once you have installed the tool you can use the following command to generate an authentication token.
+Refer to their documentation for installation instructions.
+After installing the tool, you can use the following command to generate an authentication token:
 
 ```powershell
 $tenantId = "<your-tenant-id>"
@@ -253,11 +250,12 @@ Set-CodeAppContentSecurityPolicy -Token $token -Env "<your-env-id>" -ReportingEn
 
 #### Update directives
 
-Updating the directives replaces the entire directive collection.
-To avoid overriding existing directives please retrieve the existing settings and edit them.
+> [!WARNING]
+> Updating the directives replaces the entire directive collection.
+> To update the existing directives, retrieve them first and update them in place.
 
 To reset a directive to its default value, omit it from the collection.
-To disable a directive entirely pass an empty array for the directive.
+To disable a directive entirely, pass an empty array for the directive.
 
 ```powershell
 $env = "<your-env-id>"
