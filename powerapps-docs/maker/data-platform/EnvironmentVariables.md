@@ -217,8 +217,6 @@ Yes. [Environment variable support in custom connectors](/connectors/custom-conn
 [Use environment variables in Power Automate solution cloud flows](environmentvariables-power-automate.md) <br>
 [EnvironmentVariableDefinition table/entity reference](/powerapps/developer/data-platform/reference/entities/environmentvariabledefinition) </BR>
 [Web API samples](/powerapps/developer/data-platform/webapi/web-api-samples) </BR>
-[Use data source environment variables in Canvas apps](EnvironmentVariables-data-source-canvas-apps.md)</BR>
-[Use environment variables in Power Automate solution cloud flows](EnvironmentVariables-power-automate.md)</BR>
 [Use Azure Key Vault secrets](EnvironmentVariables-azure-key-vault-secrets.md)</BR>
 [Environment variable support in custom connectors](/connectors/custom-connectors/environment-variables)</BR>
 [Power Apps Blog: Environment variables available in preview!](https://powerapps.microsoft.com/blog/environment-variables-available-in-preview/) 
