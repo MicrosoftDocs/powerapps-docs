@@ -39,7 +39,7 @@
   items:
   - name: In a browser
     href: ../user/run-app-browser.md
-  - name: From AppSource
+  - name: From Marketplace
     href: ../user/app-source.md
   - name: Use canvas apps
     items:

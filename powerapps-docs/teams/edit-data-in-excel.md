@@ -18,7 +18,7 @@ contributors:
 By opening Dataverse for Teams table data in Microsoft Excel, you can quickly and easily view and edit the data by using the Microsoft Power Apps Office Add-in.
 :::image type="content" source="../maker/data-platform/media/data-platform-cds-excel-addin/ExcelAddin.png" alt-text="Dataverse for Teams table data in Excel.":::
 
-To install the Power Apps Excel Add-in, see [Microsoft PowerApps Office Add-in](https://appsource.microsoft.com/product/office/WA104380330?tab=Overview). For more information about how to add or remove an Office Excel Add-in, see [Add or remove add-ins in Excel](https://support.office.com/article/add-or-remove-add-ins-in-excel-0af570c4-5cf3-4fa9-9b88-403625a0b460).
+To install the Power Apps Excel Add-in, see [Microsoft PowerApps Office Add-in](https://marketplace.microsoft.com/product/office/WA104380330?tab=Overview). For more information about how to add or remove an Office Excel Add-in, see [Add or remove add-ins in Excel](https://support.office.com/article/add-or-remove-add-ins-in-excel-0af570c4-5cf3-4fa9-9b88-403625a0b460).
 
 ## Open table data in Excel
 
