@@ -15,15 +15,16 @@ This article explains how to configure [Content Security Policy](https://develop
 You can set up the individual CSP directives, choose whether to enforce CSP or use reporting only, and specify where to send reports.
 
 Set these settings at the environment level to apply to all code apps in the environment.
-By default, CSP is enforced with the following default directives:
+By default, CSP is enforced with the following directive configuration.
+The `<platform>` value represents URLs required by the platform.
 
 | Directive                          | Default Value                                                                                                                 |
 | ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | [frame-ancestors][frame-ancestors] | `'self' https://*.powerapps.com`                                                                                              |
-| [script-src][script-src]           | `'self' 'unsafe-inline'`                                                                                                      |
-| [img-src][img-src]                 | `'self' https://res-dev.cdn.officeppe.net/ https://res-sdf.cdn.office.net/ <https://cdn.hubblecontent.osi.office.net/> data:` |
+| [script-src][script-src]           | `'self' <platform>`                                                                                                           |
+| [img-src][img-src]                 | `'self' data: <platform>`                                                                                                     |
 | [style-src][style-src]             | `'self' 'unsafe-inline'`                                                                                                      |
-| [font-src][font-src]               | `'self' 'unsafe-inline'`                                                                                                      |
+| [font-src][font-src]               | `'self'`                                                                                                                      |
 | [connect-src][connect-src]         | `'none'`                                                                                                                      |
 | [frame-src][frame-src]             | `'self'`                                                                                                                      |
 | [form-action][form-action]         | `'none'`                                                                                                                      |
