@@ -16,25 +16,25 @@ You can set up the individual CSP directives, choose whether to enforce CSP or u
 
 Set these settings at the environment level to apply to all code apps in the environment.
 By default, CSP is enforced with the following directive configuration.
-The `<platform>` value represents URLs required by the platform.
+The `<platform>` value represents values required by the platform.
 
-| Directive                          | Default Value                                                                                                                 |
-| ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| [frame-ancestors][frame-ancestors] | `'self' https://*.powerapps.com`                                                                                              |
-| [script-src][script-src]           | `'self' <platform>`                                                                                                           |
-| [img-src][img-src]                 | `'self' data: <platform>`                                                                                                     |
-| [style-src][style-src]             | `'self' 'unsafe-inline'`                                                                                                      |
-| [font-src][font-src]               | `'self'`                                                                                                                      |
-| [connect-src][connect-src]         | `'none'`                                                                                                                      |
-| [frame-src][frame-src]             | `'self'`                                                                                                                      |
-| [form-action][form-action]         | `'none'`                                                                                                                      |
-| [base-uri][base-uri]               | `'self'`                                                                                                                      |
-| [child-src][child-src]             | `'none'`                                                                                                                      |
-| [default-src][default-src]         | `'self'`                                                                                                                      |
-| [manifest-src][manifest-src]       | `'none'`                                                                                                                      |
-| [media-src][media-src]             | `'self' data:`                                                                                                                |
-| [object-src][object-src]           | `'self' data:`                                                                                                                |
-| [worker-src][worker-src]           | `'none'`                                                                                                                      |
+| Directive                          | Default Value                    |
+| ---------------------------------- | -------------------------------- |
+| [frame-ancestors][frame-ancestors] | `'self' https://*.powerapps.com` |
+| [script-src][script-src]           | `'self' <platform>`              |
+| [img-src][img-src]                 | `'self' data: <platform>`        |
+| [style-src][style-src]             | `'self' 'unsafe-inline'`         |
+| [font-src][font-src]               | `'self'`                         |
+| [connect-src][connect-src]         | `'none'`                         |
+| [frame-src][frame-src]             | `'self'`                         |
+| [form-action][form-action]         | `'none'`                         |
+| [base-uri][base-uri]               | `'self'`                         |
+| [child-src][child-src]             | `'none'`                         |
+| [default-src][default-src]         | `'self'`                         |
+| [manifest-src][manifest-src]       | `'none'`                         |
+| [media-src][media-src]             | `'self' data:`                   |
+| [object-src][object-src]           | `'self' data:`                   |
+| [worker-src][worker-src]           | `'none'`                         |
 
 <!-- Find reference-style links at the bottom of this article -->
 
