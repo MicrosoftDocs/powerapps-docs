@@ -24,7 +24,9 @@ at [Microsoft Power Platform: Learning Resources](https://aka.ms/PowerPlatformRe
 
 The following are the basic steps for creating canvas apps.
 
-1. Set up the data source.
+1. Create a [solution](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/add-app-solution#create-a-solution).
+
+2. Set up the data source.
 
    - [Set up tables](/powerapps/maker/data-platform/data-platform-create-entity) (when using Microsoft Dataverse).
 
@@ -33,13 +35,13 @@ The following are the basic steps for creating canvas apps.
    - [Set up lists](https://support.office.com/article/create-a-list-in-sharepoint-0d397414-d95f-41eb-addd-5e6eff41b083)
         (when using SharePoint).
 
-2. [Create a new
+4. [Create a new
     app](../../maker/canvas-apps/getting-started.md#build-an-app).
 
-3. [Add
+5. [Add
     connectors](../../maker/canvas-apps/add-manage-connections.md).
 
-4. [Create
+6. [Create
     the following screens](../../maker/canvas-apps/add-screen-context-variables.md):
 
    - Home screen
@@ -50,7 +52,7 @@ The following are the basic steps for creating canvas apps.
 
    - Edit form
 
-5. [Create Power Automate flows](/power-automate/get-started-logic-flow).
+7. [Create Power Automate flows](/power-automate/get-started-logic-flow).
 
 ## Basic steps for making model-driven apps
 
