@@ -3,7 +3,7 @@ title: Add and navigate screens in canvas apps
 description: Learn how to add screens to your canvas app, use arrows to navigate between them, reorder the screens, and set the start screen in Microsoft Power Apps.
 author: emcoope-msft
 ms.author: emcoope
-ms.date: 5/29/2025
+ms.date: 01/13/2026
 ms.topic: how-to
 ms.subservice: canvas-maker
 search.audienceType: 
@@ -38,16 +38,16 @@ The following new prebuilt screens are available:
 
 1. On the [command bar](power-apps-studio.md#1--power-apps-studio-modern-command-bar), select **New screen**, and then select a screen layout.
 
-1. [Preview](power-apps-studio.md#preview) the app to determine how it looks on different devices. Learn more in [Preview an app](preview-app.md).
+1. [Preview](power-apps-studio.md#preview) the app to determine how it looks on different devices. For more information, see [Preview an app](preview-app.md).
 
 > [!TIP]
-> To make the app adapt to the size of the device display it's being run on, turn off the **[Scale to fit](create-responsive-layout.md#disable-scale-to-fit)** option.
+> To make the app adapt to the size of the device display it's running on, turn off the **[Scale to fit](create-responsive-layout.md#disable-scale-to-fit)** option.
 
 ## Welcome screen
 
-The **Welcome screen** is ideal for the first screen of an app, where you can customize tiles such as an image, a title, and a description. You can  change the number of tiles by adding or removing them in the main container. Use the tiles to navigate users to other parts of the app.  
+The **Welcome screen** works well as the first screen of an app. You can customize each tile with an image, a title, and a description. Add or remove tiles in the main container to change the number of tiles. Use the tiles to guide users to other parts of the app.  
 
-The **Welcome screen** has the following template for controls:
+The **Welcome screen** template includes the following controls:
 
 - Screen container
   - Header container
@@ -84,7 +84,7 @@ The **Welcome screen** has the following template for controls:
 
 Use the **Header and gallery** screen to show a range of product or service information, like a product catalog. When you connect a gallery control to a data source, a catalog is automatically created with little customization required.
 
-The [gallery control](controls/control-gallery.md) in the **Header and gallery** screen is a classic control. When the modern gallery control is released, the **Header and gallery** screen uses it. Learn more in [Overview of modern controls and themes in canvas apps](controls/modern-controls/overview-modern-controls.md).
+The [gallery control](controls/control-gallery.md) in the **Header and gallery** screen is a classic control. When the modern gallery control is released, the **Header and gallery** screen uses it. For more information, see [Overview of modern controls and themes in canvas apps](controls/modern-controls/overview-modern-controls.md).
 
 The **Header and gallery** screen has the following template for controls:
 
@@ -104,7 +104,7 @@ The **Header and gallery** screen has the following template for controls:
 
 :::image type="content" source="media/add-screen-context-variables/header-and-gallery-screen.png" alt-text="Screenshot showing the Header and gallery screen." lightbox="media/add-screen-context-variables/header-and-gallery-screen.png":::
 
-### Add and customize the Header and gallery screen
+### Add and customize the header and gallery screen
 
 1. Select **New Screen** > **Header and gallery**.
 
@@ -121,7 +121,7 @@ The **Header and gallery** screen has the following template for controls:
 The **Approval request** screen has a header, a form with a submit button, and a gallery with predefined stages. The **Approval request** screen is useful for scenarios where actions are triggered by form submissions, such as submitting an approval request or displaying a workflow process for a business.
 
 > [!TIP]
-> When you add an approval request screen, you're asked to connect it with a data source. The data source determines the field names in the request form.
+> When you add an approval request screen, connect it to a data source. The data source determines the field names in the request form.
 
 The **Approval request** screen has the following template for controls:
 
@@ -143,11 +143,11 @@ The **Approval request** screen has the following template for controls:
 
 1. Select **New Screen** > **Approval request**.
 
-1. In the tree view on **ApprovalForm**, you're prompted to connect to a data source such as Dataverse.
+1. In the tree view on **ApprovalForm**, connect to a data source such as Dataverse.
 
 1. Choose a data source.
 
-1. To view the details of the approval stages, in the tree view, select **ReviewersGallery** under the **SidebarContainer** node. Then in the properties pane, select the **Advanced** tab and go to **Items**.
+1. To view the details of the approval stages, select **ReviewersGallery** under the **SidebarContainer** node in the tree view. Then, in the properties pane, select the **Advanced** tab and go to **Items**.
 
     The approval stages have the following details:
    - **Name**: Name of the stage or approver
@@ -157,7 +157,7 @@ The **Approval request** screen has the following template for controls:
 
    :::image type="content" source="media/add-screen-context-variables/items-reviewers-gallery.png" alt-text="Screenshot that shows the Items advanced property.":::
 
-You can add a Power Automate approval workflow in the button to notify the approver. Learn more in [Create and test an approval workflow with Power Automate](/power-automate/modern-approvals).
+To notify the approver, add a Power Automate approval workflow in the button. For more information, see [Create and test an approval workflow with Power Automate](/power-automate/modern-approvals).
 
 ## Header and form
 
@@ -189,7 +189,7 @@ The **Header and form** screen has the following template for controls:
 
 ## Header and table
 
-The **Header and table** screen has two controls, a header control and a table control. This template is great for showing a detailed data table on a screen.
+The **Header and table** screen has two controls: a header control and a table control. This template is great for showing a detailed data table on a screen.
 
 The **Header and table** screen has the following controls:
 
@@ -206,7 +206,7 @@ The **Header and table** screen has the following controls:
 
 ## Table and form
 
-The Table and form screen contains two main controls: the modern table control and the modern form control. This template has built-in Power Fx formulas to allow easy data connection and customization. This template is ideal for selecting and editing a record using a form.  
+The Table and form screen contains two main controls: the modern table control and the modern form control. This template has built-in Power Fx formulas to make data connection and customization easy. This template is ideal for selecting and editing a record by using a form.  
 
 The Table and form screen contains the following controls:
 
@@ -232,37 +232,37 @@ In Power Apps Studio:
 
 1. Select **New Screen** > **Table and form**.
 1. Select **Data** in the inline action bar.
-1. Select the desired data source.
+1. Select the data source you want.
 
    :::image type="content" source="media\add-screen-context-variables\select-data-source.png" alt-text="Screenshot that shows the location of the Data button, where you can select a data source from a list.":::
 
-   Once connected, the table and form controls are both bound to the data source.
+   When you connect, the table and form controls both connect to the data source.
 
-You can select a record in the table control and the form displays the details of the selected record.
+You can select a record in the table control, and the form shows the details of the selected record.
 
-All buttons in this template have prebuilt Power Fx, so there's no need for further customization. When you connect the screen to the selected data source, the screen is now fully functional.
+All buttons in this template have prebuilt Power Fx, so you don't need to customize them. When you connect the screen to the selected data source, the screen becomes fully functional.
 
 :::image type="content" source="media\add-screen-context-variables\screen-view-connected.png" alt-text="Screenshot that shows the screen view when connected to a data source: a data list and its form elements with a submit button." lightbox="media\add-screen-context-variables\screen-view-connected.png" :::
 
 ## Reorder screens
 
-When you have more than one screen in your app, you can put them in a different order in your tree view.
+When your app has more than one screen, you can change their order in the tree view.
 
 Select the overflow menu of a screen that you want to reorder, and then select **Move up** or **Move down**.
 
 :::image type="content" source="media/add-screen-context-variables/move-screen-up-down.png" alt-text="Screenshot that shows where the overflow menu is located in order to move a screen up or down in your tree view.":::
 
-Use the **[StartScreen](/power-platform/power-fx/reference/object-app#startscreen-property)** property to set the screen to be displayed first.
+Use the **[StartScreen](/power-platform/power-fx/reference/object-app#startscreen-property)** property to set the screen that displays first.
 
 ## Add navigation
 
-When you have more than one screen in your app, you can add navigation so that your users can move between them.
+When your app has more than one screen, add navigation so your users can move between them.
 
-1. With the screen selected, select **Insert**. In the search box, type **Next arrow** and then select it.
+1. Select the screen. Select **Insert**. In the search box, type **Next arrow** and then select it.
 
 1. Move the arrow to where you want it to appear on the screen.
 
-1. With the arrow selected, set the **[OnSelect](controls/properties-core.md)** property to the **Navigate** function; for example, **Navigate(*Target*, Fade)**.
+1. Select the arrow. Set the **[OnSelect](controls/properties-core.md)** property to the **Navigate** function. For example, use **Navigate(*Target*, Fade)**.
 
     Replace *Target* with the name of the screen where you want to navigate.
 

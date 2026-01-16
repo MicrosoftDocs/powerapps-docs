@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.subservice: mda-maker
 ms.author: hemantg
 ms.reviewer: matp
-ms.date: 01/07/2025
+ms.date: 01/12/2025
 ms.update-cycle: 180-days
 ms.topic: how-to
 applies_to: 
@@ -44,16 +44,16 @@ You can customize agents in several ways to fit your organization's needs.
 Use the following information to find the best solution for your organization:
 
 - [Microsoft 365 Copilot Agents Overview](/microsoft-365-copilot/extensibility/agents-overview) documentation provides guidance on how to [choose what type of agent to build](/microsoft-365-copilot/extensibility/agents-overview#choose-what-type-of-agent-to-build).
- - Create agents as  [Declarative Agents for Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/overview-declarative-agent) or as [Custom engine agents for Microsoft 365](/microsoft-365-copilot/extensibility/overview-custom-engine-agent).
- - Use [Microsoft Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio) to [connect and configure an agent for Teams and Microsoft 365](/microsoft-copilot-studio/publication-add-bot-to-microsoft-teams), making it available in Microsoft 365 Copilot Chat.
- - Review guidance on how to [Choose between Microsoft 365 Copilot and Copilot Studio to build your agent](/microsoft-365-copilot/extensibility/copilot-studio-experience).
+- Create agents as  [Declarative Agents for Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/overview-declarative-agent) or as [Custom engine agents for Microsoft 365](/microsoft-365-copilot/extensibility/overview-custom-engine-agent).
+- Use [Microsoft Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio) to [connect and configure an agent for Teams and Microsoft 365](/microsoft-copilot-studio/publication-add-bot-to-microsoft-teams), making it available in Microsoft 365 Copilot Chat.
+- Review guidance on how to [Choose between Microsoft 365 Copilot and Copilot Studio to build your agent](/microsoft-365-copilot/extensibility/copilot-studio-experience).
 
 > [!NOTE]
 > When you select an agent in Microsoft 365 Copilot chat in a model-driven app, the agent doesn't answer Dataverse data questions unless you configure it to do so. It does use information from your chat history that might have information about your data. To allow questions about your Dataverse data, remove the selected agent.
 
 ## Limitation
 
-- Agents published to Microsoft 365 Copilot via Microsoft Copilot Studio channels don't show up in the navigation panel or when @ mentioning within Microsoft 365 Copilot chat in model-driven apps.  They do show up when you use the chat experience at [https://m365.cloud.microsoft/chat](https://m365.cloud.microsoft/chat).
+- Microsoft Copilot Studio agents published to Microsoft 365 Copilot through Copilot Studio channels don't have context passed from the app through Microsoft 365 Copilot chat to the agent.
 
 ## Related information
 

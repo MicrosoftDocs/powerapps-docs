@@ -3,7 +3,7 @@ title: "Power Apps code apps overview (preview)"
 description: "Learn to use Power Apps code apps"
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 01/07/2026
+ms.date: 01/09/2026
 ms.reviewer: jdaly
 ms.topic: overview
 contributors:
@@ -43,15 +43,15 @@ Use these tools while creating code apps:
 
 ### Enable code apps on a Power Platform environment
 
-Code apps can be enabled via an environment setting that Power Platform Admins and environment admins can set. The environment setting respects groups and rules set by Power Platform Admins.
+Admins can enable code apps by setting an environment option. Power Platform admins and environment admins can set this option. The environment setting respects groups and rules set by Power Platform admins.
 
 1. As an admin, go to [Power Platform admin center](https://admin.powerplatform.microsoft.com)
-1. Navigate to **Manage** > **Environments** > select the environment where you'll use code apps
-1. Navigate to **Settings** >  Expand the **Product** subsection > Select **Features**
+1. Go to **Manage** > **Environments** > select the environment where you use code apps
+1. Go to **Settings** >  Expand the **Product** subsection > Select **Features**
 
    :::image type="content" source="media/enable-settings-products-features.png" alt-text="Enable features":::
 
-1. Navigate to the feature **Power Apps code apps** and use the **Enable code apps** toggle for enablement.
+1. Go to the feature **Power Apps code apps** and use the **Enable code apps** toggle to turn it on.
 
    :::image type="content" source="media/enable-code-apps.png" alt-text="Enable code apps":::
 
@@ -63,7 +63,7 @@ End-users that run code apps need a [Power Apps Premium license](https://www.mic
 
 ## Explore samples and report issues
 
-To help you get started and stay productive, we recommend using the resources available in the [Power Apps Code Apps GitHub repository](https://github.com/microsoft/PowerAppsCodeApps)
+To help you get started and stay productive, use the resources available in the [Power Apps Code Apps GitHub repository](https://github.com/microsoft/PowerAppsCodeApps).
 
 ### Find samples
 
@@ -85,25 +85,25 @@ Check the **Closed** tab in **Issues** to see how other customers solved problem
 - Code apps can invoke APIs outside of Power Platform connectors. Code apps don't yet support [Content Security Policy](/power-platform/admin/content-security-policy) (CSP).
 - Code apps don't yet support [Storage Shared Access Signature (SAS) IP restriction](/power-platform/admin/security/data-storage#advanced-security-features ).
 - Code apps don't support [Power Platform Git integration](/power-platform/alm/git-integration/overview).
-- Code apps don't have a Power Platform native integration with Azure Application Insights. Azure Application Insights can be added as it would be to a generic web app but it doesn't include information recognized in the platform layer, such as app open events (to measure success/failure).
+- Code apps don't have a Power Platform native integration with Azure Application Insights. Azure Application Insights can be added as it would be to a generic web app but it doesn't include information recognized in the platform layer, such as app open events (to measure success or failure).
 - Code apps aren't supported in the Power Apps mobile app or Power Apps for Windows.
 - Code apps don't yet support Power BI data integration (PowerBIIntegration function), but can be embedded in Power BI Reports using [Power Apps Visual](/power-apps/maker/canvas-apps/powerapps-custom-visual).
 - Code apps don't support [SharePoint forms integration](/power-apps/maker/canvas-apps/sharepoint-form-integration).
 
-## Managed Platform capability support
+## Managed platform capability support
 
-This table enumerates Power Platform management capabilities that work for code apps.
+This table lists Power Platform management capabilities that work for code apps.
 
 |Capability|Notes|
 |---|---|
 | End-users see consent dialog for connector permissions | [Learn more](/power-apps/maker/canvas-apps/add-manage-connections#consent-dialog-fine-grained-permssions)|
-| Sharing limits | Code apps respect canvas app sharing limits. [Learn more](/power-platform/admin/managed-environment-sharing-limits)  |
+| Sharing limits | Code apps follow canvas app sharing limits. [Learn more](/power-platform/admin/managed-environment-sharing-limits)  |
 | App Quarantine | [Learn more](/power-platform/admin/admin-manage-apps?tabs=new#manage-app-quarantine-state) |
 | Data Loss policy enforcement during app launch | [Learn more](/power-platform/admin/wp-data-loss-prevention) |
 | Conditional Access on an individual app | [Learn more](/power-platform/admin/admin-manage-apps?tabs=new#managed-environments-conditional-access-on-individual-apps) |
-| Admin consent dialog suppression | Consent suppression is supported for both Microsoft connectors that use OAuth and custom connectors that use OAuth. [Learn more](/power-apps/maker/canvas-apps/add-manage-connections#suppress-consent-dialog-for-apps-that-use-custom-connectors-using-microsoft-entra-id-oauth)  |
+| Admin consent dialog suppression | Consent suppression works for both Microsoft connectors that use OAuth and custom connectors that use OAuth. [Learn more](/power-apps/maker/canvas-apps/add-manage-connections#suppress-consent-dialog-for-apps-that-use-custom-connectors-using-microsoft-entra-id-oauth)  |
 | Tenant isolation | [Learn more](/power-platform/admin/cross-tenant-restrictions) |
-| Azure B2B (external user access) | Code apps might be shared with and accessed by end-users using Azure B2B to access resources in a tenant, similar to canvas apps. [Learn more](/power-apps/maker/canvas-apps/share-app-guests) |
+| Azure B2B (external user access) | End-users can share code apps and access them by using Azure B2B to access resources in a tenant, similar to canvas apps. [Learn more](/power-apps/maker/canvas-apps/share-app-guests) |
 | Health metrics | Operational health metrics for code apps are available in both the Power Platform admin center and the maker portal. [Learn more](/power-platform/admin/monitoring/monitor-power-apps) |
 
 ## Related information

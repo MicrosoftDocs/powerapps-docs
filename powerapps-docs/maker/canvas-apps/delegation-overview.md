@@ -6,7 +6,7 @@ author: lancedMicrosoft
 ms.topic: overview
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 08/26/2025
+ms.date: 01/13/2026
 ms.subservice: canvas-maker
 ms.author: mkaur
 search.audienceType: 
@@ -19,11 +19,11 @@ contributors:
 ---
 # Query limitations: Delegation and query limits
 
-Power Apps works best with a back-end data source when a Power Fx query fully translates into an equivalent query that runs on the data source. Power Apps sends a query the data source understands, the data source runs the query, and Power Apps gets the results. For example, the data source filters the data and only returns the rows that meet the filter criteria. When this happens, the query is **delegated** to the data source.
+Power Apps works best with a back-end data source when a Power Fx query fully translates into an equivalent query that runs on the data source. Power Apps sends a query the data source understands, the data source runs the query, and Power Apps gets the results. For example, the data source filters the data and only returns the rows that meet the filter criteria. When this process happens, Power Apps **delegates** the query to the data source.
 
 But Power Fx queries can't always translate into equivalent queries on every data source. For example, Dataverse supports more query features than Excel. Dataverse supports the 'in' (membership) query operator, but Excel doesn't. A query is **nondelegable** if it uses a feature the data source doesn't support. If any part of a query expression is nondelegable, Power Apps doesn't delegate any part of the query.
 
-When a query is nondelegable, Power Apps gets the first 500 records from the data source and then runs the actions in the query. You can increase this limit to 2,000 records. [Changing the limit](#changing-the-limit) **Power Apps limits the result size to 500 records to keep your app performing well.** Larger result sets can cause performance issues for your app and Power Apps.
+When a query is nondelegable, Power Apps gets the first 500 records from the data source and then runs the actions in the query. You can increase this limit to 2,000 records. [Changing the limit](#changing-the-limit) **Power Apps limits the result size to 500 records to keep your app performing well.** Larger result sets can cause performance problems for your app and Power Apps.
 
 But this limitation can be a problem because the query might return incorrect results if the data source has more than 500 or 2,000 records. For example, if your data source has 10 million records and your query needs to work on the last part of the data, like family names that start with 'Z', and your query uses a nondelegable operator like distinct, you only get the first 500 or 2,000 records. So, you get incorrect results.
 
@@ -43,15 +43,15 @@ Delegation works only with certain tabular data sources. If a data source suppor
 - [Power Apps delegable functions and operations for Salesforce](/connectors/salesforce/#power-apps-delegable-functions-and-operations-for-salesforce)
 
 
-Imported Excel workbooks (using the **Add static data to your app** data source), collections, and tables stored in context variables don't need delegation. This data is already in memory, so you use the full Power Apps language.
+Imported Excel workbooks (by using the **Add static data to your app** data source), collections, and tables stored in context variables don't need delegation. This data is already in memory, so you use the full Power Apps language.
 
 ## Delegable functions
-Use only formulas that can be delegated. This article lists formula elements that can be delegated. Every data source is different, and not all support all these elements. Check for delegation warnings in your formula.
+Use only formulas that can be delegated. This article lists formula elements that can be delegated. Every data source is different, and not all data sources support all these elements. Check for delegation warnings in your formula.
 
 ### Filter functions
-**[Filter](functions/function-filter-lookup.md)**, **[Search](functions/function-filter-lookup.md)**, **[First](functions/function-first-last.md)**, and **[LookUp](functions/function-filter-lookup.md)** can be delegated.
+You can delegate **[Filter](functions/function-filter-lookup.md)**, **[Search](functions/function-filter-lookup.md)**, **[First](functions/function-first-last.md)**, and **[LookUp](functions/function-filter-lookup.md)**.
 
-Within the **Filter** and **LookUp** functions, use these with columns of the table to select the appropriate records:
+Within the **Filter** and **LookUp** functions, use these functions with columns of the table to select the appropriate records:
 
 * **[And](functions/function-logicals.md)** (including **[&&](functions/operators.md)**), **[Or](functions/function-logicals.md)** (including **[||](functions/operators.md)**), **[Not](functions/function-logicals.md)** (including **[!](functions/operators.md)**)
 * **[In](functions/operators.md)**
@@ -86,7 +86,7 @@ When you use `With`, `UpdateContext`, or `Set`, these functions create collectio
 ### Lookup and expand levels
 Power Apps lets you use up to two lookup levels. A Power Fx query expression can include a maximum of two lookup functions to maintain performance. When a query expression includes a lookup, Power Apps first queries the base table, then runs a second query to expand the first table with the lookup information. One additional level beyond this is supported as the maximum. For offline scenarios, only one level of lookup expand is supported.
 
-Expand or join up to 20 entities in a single query. If you need to join more than 20 tables in one query, try creating a view on the data server if possible.
+You can expand or join up to 20 entities in a single query. If you need to join more than 20 tables in one query, try creating a view on the data server if possible.
 
 ### Expression evaluation - property of entity must be on left side 'LHS' of equality operator
 Put the property of an entity to be compared on the left hand side (LHS) of an equation. For example, in the following expression, the entity property **'Business unit ID'.Name** is on the LHS, and the expression works:
@@ -138,7 +138,7 @@ All other functions can't delegate. Notable functions include:
 ## Nondelegable limits
 Formulas that can't be delegated are processed locally. Local processing lets you use the full Power Apps formula language. But there's a tradeoff: all the data comes to the device first, which can mean getting a large amount of data over the network. This process can take time and make your app seem slow or unresponsive.
 
-To avoid this, Power Apps limits the amount of data that can be processed locally to 500 records by default. This limit lets you use small data sets completely and work with large data sets by seeing partial results.
+To avoid this problem, Power Apps limits the amount of data that can be processed locally to 500 records by default. This limit lets you use small data sets completely and work with large data sets by seeing partial results.
 
 Be careful when using this feature because it can confuse users. For example, if you use the **Filter** function with a selection formula that can't be delegated over a data source with a million records, only the first 500 records are scanned. If the record you want is record 501 or 500,001, **Filter** doesn't find or return it.
 
