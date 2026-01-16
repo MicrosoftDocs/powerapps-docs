@@ -75,7 +75,7 @@ In this scenario, two user roles are generated: the employee and the manager. Ea
 
         Legend:
 
-        a. Select and modify a user role.
+        a. Select and modify a user role.  
         b. Add a new user role or delete the selected user role.  
         c. Add a new user need.  
         d. Add a new user need either at top of selected user need or after it, or delete the selected user need.  
