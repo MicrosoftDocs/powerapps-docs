@@ -130,9 +130,6 @@ The following table shows the current and previous versions for Azure Synapse Li
 | Apache Spark | 3.5 | 3.4 | 3.4 retired | [Apache Spark 3.4 runtime](https://learn.microsoft.com/en-us/azure/synapse-analytics/spark/apache-spark-34-runtime) |
 | Delta Lake | 3.0 | 2.4 | - | [Delta Lake compatibility](https://docs.delta.io/releases/) |
 
-> [!IMPORTANT]
-> Update this table when new versions are released. All version references in this document should use the current versions listed above.
-
 ### Upgrade from Apache Spark 3.4 to 3.5
 
 In accordance with the Synapse runtime for Apache Spark lifecycle policy, Azure Synapse runtime for Apache Spark 3.4 is retired. After the end of support date, the retired runtimes are unavailable for new Spark pools and existing workflows with Spark 3.4 pools won't be executed while metadata will temporarily remain in the Synapse workspace. More information: [Azure Synapse Runtime for Apache Spark 3.4](https://learn.microsoft.com/en-us/azure/synapse-analytics/spark/apache-spark-34-runtime).
