@@ -78,7 +78,7 @@ If you turn off a toggle and leave the Source list blank, you disable the direct
 The following example shows three different directives with different configurations:
 
 - `frame-ancestors` is enabled and set to use its default value. The resulting directive value is: `'self' https://*.powerapps.com`
-- `script-src` is enabled and adds another source, which is merged with the default value. The resulting directive value is: `script-src 'self' 'unsafe-inline' https://contoso.com`
+- `script-src` is enabled and adds another source, which is merged with the default value. The resulting directive value is: `script-src 'self' https://contoso.com`
 - `img-src` is disabled. The directive is omitted from the policy.
 
 :::image type="content" source="media/content-security-policy-directive-settings.png" alt-text="Screenshot of CSP directives configured in different states":::
