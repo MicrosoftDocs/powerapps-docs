@@ -4,7 +4,7 @@ description: Bulk import and export data from Excel or CSV files into tables in 
 author: sabinn-msft
 ms.topic: how-to
 ms.component: cds
-ms.date: 01/09/2026
+ms.date: 01/16/2026
 ms.subservice: dataverse-maker
 ms.author: sabinn
 ms.reviewer: matp
@@ -72,7 +72,7 @@ The new import experience lets users import data directly from an Excel file int
 To use the feature a Power Platform admin must enable the **"Import Excel to existing table with assisted mapping"** environment setting in the Power Platform admin center. Select the environment, and then select **Settings** > **Product** > **Features** and enable the **"Import Excel to existing table with assisted mapping"** setting.
 
 > [!NOTE]
-> The **"Import Excel to existing table with assisted mapping"** for Import from Excel does not accurately control the feature during the rollout. This setting is scheduled to be retired and will be removed from PPAC as we transition fully to the new experience.
+> The **Import Excel to existing table with assisted mapping** environment setting is being removed from the Power Platform admin center. This feature is currently being improved and that setting is no longer used.
 
 ##### Import from Excel (preview) steps
 
