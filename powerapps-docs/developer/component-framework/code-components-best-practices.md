@@ -167,6 +167,16 @@ Before you can use `eslint`, you need to add some scripts to the `package.json`:
   }
 ```
 
+You also need to specify the React version by ading the script below to `package.json`:
+
+```json
+,
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    }
+```
 
 The `eslint` script accepts the folder that contains your code. Replace **MY_CONTROL_NAME** to be the same name as the code component used when calling [pac pcf init](/power-platform/developer/cli/reference/pcf#pac-pcf-init).
 
