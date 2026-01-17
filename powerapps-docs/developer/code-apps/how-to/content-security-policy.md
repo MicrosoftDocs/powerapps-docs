@@ -38,6 +38,9 @@ The `<platform>` value represents values required by the platform.
 
 <!-- Find reference-style links at the bottom of this article -->
 
+When you customize a directive, the values you supply are appended to the default value.
+If the default value is `'none'`, your custom values replace the default value.
+
 If your environment has a Dataverse instance, you can configure the CSP settings in the [Power Platform admin center](#configure-csp-by-using-power-platform-admin-center).
 Otherwise, see the instructions for configuring CSP by using the [REST API](#configure-csp-by-using-rest-api).
 
@@ -78,7 +81,7 @@ If you turn off a toggle and leave the Source list blank, you disable the direct
 The following example shows three different directives with different configurations:
 
 - `frame-ancestors` is enabled and set to use its default value. The resulting directive value is: `'self' https://*.powerapps.com`
-- `script-src` is enabled and adds another source, which is merged with the default value. The resulting directive value is: `script-src 'self' 'unsafe-inline' https://contoso.com`
+- `script-src` is enabled and adds another source, which is merged with the default value. The resulting directive value is: `script-src 'self' https://contoso.com`
 - `img-src` is disabled. The directive is omitted from the policy.
 
 :::image type="content" source="media/content-security-policy-directive-settings.png" alt-text="Screenshot of CSP directives configured in different states":::
