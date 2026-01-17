@@ -53,9 +53,9 @@ Use the following syntax:
 | Date  | `{!EntityLogicalName:FieldLogicalName/@date;}` |
 | Time | `{!EntityLogicalName:FieldLogicalName/@time;}` |
 
-For example, let's say you want to insert a custom field, *Customer ID*, linked to the record type *User*. Type the following placeholder in your template: ``{{!User:CustomerId;}}``.
+For example, let's say you want to insert a custom field, *Customer ID*, linked to the record type *User*. Type the following placeholder in your template: ``{!User:CustomerId;}``.
 
-If you want to insert a custom field, *ModifiedOn*, linked to the record type *User*. Type the following placeholder in your template: ``{{!User:ModifiedOn/@date;}}``.
+If you want to insert a custom field, *ModifiedOn*, linked to the record type *User*. Type the following placeholder in your template: ``{!User:ModifiedOn/@date;}``.
 
 ### See also
 
