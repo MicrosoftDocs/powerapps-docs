@@ -6,7 +6,7 @@ author: mduelae
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 02/6/2025
+ms.date: 01/13/2026
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType:
@@ -18,7 +18,7 @@ contributors:
 
 # Create and update a collection in a canvas app
 
-Use a collection to store data that users can manage in your app. A collection is a group of items that are similar, such as products in a product list. For more information about different types of variables such as collections: [Understand canvas-app variables](working-with-variables.md).
+Use a collection to store data that users can manage in your app. A collection is a group of items that are similar, such as products in a product list. For more information about different types of variables, including collections, see [Understand canvas-app variables](working-with-variables.md).
 
 ## Prerequisites
 
@@ -105,11 +105,11 @@ Watch this video to learn how to create and update a collection:
 
     `Collect(MySPCollection, ListName)`
 
-    This function creates a collection named **MySPCollection** and that contains the same data as your list.
+    This function creates a collection named **MySPCollection** that contains the same data as your list.
 
-1. While holding down the `Alt` key, select the button.
+1. Select the button while holding down the `Alt` key.
 
-For information about how to show data in a form (with drop-down lists, date pickers, and people pickers): [Edit form and Display form controls](controls/control-form-detail.md).
+For information about how to show data in a form (with drop-down lists, date pickers, and people pickers), see [Edit form and Display form controls](controls/control-form-detail.md).
 
 ## Next steps
 

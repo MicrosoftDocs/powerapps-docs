@@ -4,7 +4,7 @@ description: Learn about the Power Apps app in Microsoft Teams.
 author: chmoncay
 ms.author: chmoncay
 ms.topic: overview
-ms.date: 02/11/2025
+ms.date: 01/13/2026
 ms.subservice: teams
 ms.reviewer: mkaur
 contributors:
@@ -14,10 +14,10 @@ contributors:
 
 # Overview of the Power Apps app
 
-You can use the Power Apps app to create and manage apps across the available environments for the applicable teams. Select the Power Apps app from the left pane in Microsoft Teams to open the Power Apps interface.
+Use the Power Apps app to create and manage apps across the available environments for your teams. Select the Power Apps app from the left pane in Microsoft Teams to open the Power Apps interface.
 
 > [!NOTE]
-> If **Power Apps** doesn't appear on the left pane, you can [install](install-personal-app.md) it. After you install the app, you need to [create your first app](create-first-app.md) to create an environment. More information: [About Teams environments](/power-platform/admin/about-teams-environment)
+> If **Power Apps** doesn't appear on the left pane, you can [install](install-personal-app.md) it. After you install the app, you need to [create your first app](create-first-app.md) to create an environment. For more information, see [About Teams environments](/power-platform/admin/about-teams-environment).
 
 ![Power Apps app.](media/power-apps-overview-app.png "Power Apps app")
 
@@ -35,23 +35,23 @@ Your **Power Apps** experience in Teams starts with the **Home** tab. Use the **
 
 1. **Introduction Video**: Watch a one-minute video to find out what Power Apps in Teams is all about.
 
-1. **Create an app**: Select **Create an app** to enter the Power Apps Studio integrated inside Teams and start building a Power Apps app. As you've learned from [Create your first app in Teams](create-first-app.md), a new environment is created for your team when you first create an app. Creating additional apps in the same team uses the environment that was already created for the team.
+1. **Create an app**: Select **Create an app** to enter the Power Apps Studio integrated inside Teams and start building a Power Apps app. As you learned from [Create your first app in Teams](create-first-app.md), a new environment is created for your team when you first create an app. Creating additional apps in the same team uses the environment that you already created for the team.
 
-1. **Recent apps**: You'll find the apps that you have recently edited in this section. Select an app from this section to directly open the app inside the Studio. This section may be empty if you haven't edited any app yet.
+1. **Recent apps**: Find the apps that you recently edited in this section. Select an app from this section to directly open the app inside the Studio. This section is empty if you didn't edit any app yet.
 
 1. **Sample app templates**: This section shows available sample app templates.
 
-1. **Learn**: You'll find helpful articles in this section to get you started with Power Apps in Teams.
+1. **Learn**: Find helpful articles in this section to get you started with Power Apps in Teams.
 
 ## Build hub
 
-Select the **Build** hub to see the list of environments for each team that you're a member of, and the list of apps or objects that have been created or installed.
+Select the **Build** hub to see the list of environments for each team that you're a member of, and the list of apps or objects that the team created or installed.
 
 ![Build.](media/power-apps-overview-4.png "Build")
 
 1. **Environments**: Each Microsoft Teams team with an environment that you have access to is listed here.
 
-    If you have more than one team with environments created, select the team or environment you want from the left pane.
+    If you have more than one team with environments, select the team or environment you want from the left pane.
 
     ![Environment list.](media/power-apps-overview-6.png "Environment list")
 
@@ -59,11 +59,11 @@ Select the **Build** hub to see the list of environments for each team that you'
 
     ![Expand and collapse the list.](media/power-apps-overview-8.png "Expand and collapse the list")
 
-    When you select an environment from the list, you'll see the recent resources built by the selected environment's team, or the apps installed in the selected environment on the right side of the screen.
+    When you select an environment from the list, you see the recent resources built by the selected environment's team, or the apps installed in the selected environment on the right side of the screen.
 
 1. **Built by this team**: This list shows all Power Apps objects such as apps, flows, and tables created in the selected environment (the Teams team). Select **New app** to create a new app. Select **See all** to open the solution explorer for the environment. More information: [Solution explorer](#solution-explorer)
 
-    Select **See all** to view the all the components in the selected environment, and to create new apps or components.
+    Select **See all** to view all the components in the selected environment, and to create new apps or components.
 
     ![Built by this team.](media/power-apps-overview-5.png "Built by this team")
 
@@ -77,7 +77,7 @@ Select the **Build** hub to see the list of environments for each team that you'
 
 ## Solution explorer
 
-When you select **See all** from the environment list on the **Build** hub, you'll see the Power Apps solution explorer with a tree view of the pages for the environment. To get started, select a page from the solution explorer on the left.
+When you select **See all** from the environment list on the **Build** hub, you see the Power Apps solution explorer with a tree view of the pages for the environment. To get started, select a page from the solution explorer on the left.
 
 ### All
 
@@ -129,7 +129,7 @@ Select the **About** tab to view the version of the installed Power Apps app.
 ![About tab.](media/power-apps-overview-2.png "About tab")
 
 You can get your current session details by selecting the **About** tab and then selecting **Session details**. The session details include
-useful information that you can then share with others when investigating an issue or working with support teams.
+useful information that you can share with others when investigating an issue or working with support teams.
 
 ![About tab - Session details.](media/power-apps-overview-1.png "About tab - Session details")
 
@@ -143,11 +143,11 @@ useful information that you can then share with others when investigating an iss
 - **Instance url**: URL of the Dataverse instance.
 
 > [!NOTE]
-> Session details are only used when you reach out to Microsoft Support to investigate an issue.
+> Use session details only when you contact Microsoft Support to investigate an issue.
 
 ## Canvas apps terminology reference and definitions
 
-While creating canvas aps using Power Apps from the Teams interface, you need to understand the terms and definitions of various objects, options, and actions in an app. The following table defines these canvas app terms.
+When you create canvas apps by using Power Apps from the Teams interface, you need to understand the terms and definitions for various objects, options, and actions in an app. The following table defines these canvas app terms.
 
 | **Component or action**                                                                                        | **Description**                                                                                                                                                                                              |
 |----------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -155,15 +155,15 @@ While creating canvas aps using Power Apps from the Teams interface, you need to
 | [Canvas app](../maker/canvas-apps/getting-started.md)                           | An app that you can create from scratch or by using any available template through Power Apps Studio.                                                                                             |
 | [Model-driven app](../maker/model-driven-apps/model-driven-app-overview.md)     | An application based on Dataverse forms, views, tables, columns, and other components.                                                                                                                     |
 | [Connector](/connectors/connectors)                                                  | A connection object that connects an app with a data source. For example, a connector for SharePoint or a connector for OneDrive.                                                                                |
-| [Control](../maker/canvas-apps/reference-properties.md#controls)                | An object that can be added on the canvas to provide certain app functionality.                                                                                                                              |
+| [Control](../maker/canvas-apps/reference-properties.md#controls)                | An object that you add on the canvas to provide certain app functionality.                                                                                                                              |
 | [Property](../maker/canvas-apps/reference-properties.md#all-properties)         | Behaviors representing the controls available in an app.                                                                                                                                                     |
 | [Function](../maker/canvas-apps/formula-reference.md)                           | Readily available functionality to extend the behavior of a control or app.                                                                                                                                      |
 | [Formula](../maker/canvas-apps/formula-reference.md)                            | A combination of one or more functions to accomplish a certain task or action.                                                                                                                                 |
 | [Screen](../maker/canvas-apps/add-screen-context-variables.md)                  | The visible area of an app enclosing available visible controls. An app can have multiple screens.                                                                                                               |
-| [Component](../maker/canvas-apps/create-component.md)                           | Reusable combinations of controls that can be defined, saved, and used for new apps, as defined by the maker or user.                                                                                     |
+| [Component](../maker/canvas-apps/create-component.md)                           | Reusable combinations of controls that you can define, save, and use for new apps.                                                                                     |
 | [Save an app](../maker/canvas-apps/save-publish-app.md)  | Saving an app for the first time, or saving new changes to an app.                                                                                                                                           |
 | [Publish an app](../maker/canvas-apps/save-publish-app.md)       | Making an app available to the app store for general consumption.                                                                                                                                            |
-| [Versions](../maker/canvas-apps/save-publish-app.md#identify-the-live-version)  | Each time an app is saved, a new version is created that you can [restore](../maker/canvas-apps/restore-an-app.md) by using functionality available at the time you save the app. |
+| [Versions](../maker/canvas-apps/save-publish-app.md#identify-the-live-version)  | Each time you save an app, you create a new version that you can [restore](../maker/canvas-apps/restore-an-app.md). |
 | [Share an app](../maker/canvas-apps/share-app.md)                               | Allowing users or groups to use the app, as consumers or co-owners.                                                                                                                                          |
 
 ### See also

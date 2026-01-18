@@ -36,7 +36,7 @@ This article shows how to set up a blank app from [Vite](https://vite.dev/) and 
 
    ```bash
    pac auth create
-   pac env select --environment {environment id}
+   pac env select --environment < Your environment ID >
    ```
 
    Sign in by using your Power Platform account when prompted. All Power Platform apps, flows, and agents publish to an environment. The PAC CLI's [auth command](/power-platform/developer/cli/reference/auth) prompts you to authenticate by using your Microsoft Entra identity and ensures the code app you add connections to and publish to Power Platform go in the specified environment.

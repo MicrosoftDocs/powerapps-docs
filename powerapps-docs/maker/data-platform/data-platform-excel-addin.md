@@ -17,7 +17,7 @@ By opening table data in Microsoft Excel, you can quickly and easily view and ed
 > [!div class="mx-imgBorder"] 
 > ![Excel Add-in.](./media/data-platform-cds-excel-addin/ExcelAddin.png "Power Apps Excel Add-in")
 
-To install the Power Apps Excel add-in, see [Microsoft PowerApps Office Add-in](https://appsource.microsoft.com/en-us/product/office/WA104380330?tab=Overview). For more information about how to add or remove an Office Excel Add-in, see [Add or remove add-ins in Excel](https://support.office.com/en-us/article/add-or-remove-add-ins-in-excel-0af570c4-5cf3-4fa9-9b88-403625a0b460).
+To install the Power Apps Excel add-in, see [Microsoft PowerApps Office Add-in](https://marketplace.microsoft.com/en-us/product/office/WA104380330?tab=Overview). For more information about how to add or remove an Office Excel Add-in, see [Add or remove add-ins in Excel](https://support.office.com/en-us/article/add-or-remove-add-ins-in-excel-0af570c4-5cf3-4fa9-9b88-403625a0b460).
 
 ## Open table data in Excel
 

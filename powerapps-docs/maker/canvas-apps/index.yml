@@ -1,7 +1,7 @@
 ### YamlMime:Landing
 
 title: Power Apps canvas apps documentation
-summary: Design and build a business app from a canvas in Microsoft Power Apps with data from a variety of sources without writing any code using traditional programming languages, such as C#.
+summary: Build business apps with canvas apps in Microsoft Power Apps. Connect to various data sources and create custom applications without writing code in traditional programming languages like C#.
 
 metadata:
   title: Power Apps canvas apps documentation
@@ -12,7 +12,7 @@ metadata:
   ms.collection: collection
   author: mduelae
   ms.author: tapanm
-  ms.date: 07/10/2025 
+  ms.date: 01/13/2026
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 

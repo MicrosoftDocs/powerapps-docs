@@ -2,7 +2,7 @@
 title: "Create or edit model-driven app web resources in Power Apps | MicrosoftDocs"
 description: "Learn how to create or edit a web resource"
 ms.custom: ""
-ms.date: 11/13/2024
+ms.date: 01/12/2026
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -37,6 +37,8 @@ For example, if you create an HTML page as a web resource named "new_myWebResour
 where *\<base URL>* is the part of the URL you use to view apps that end in `dynamics.com`. Because the web resource is data in the system, only licensed users for your organization can access them this way. Normally, web resources are included in forms rather than referenced directly. The most common usage is to provide JavaScript libraries for form scripts.  
 
 Because web resources are data in the system and are solution aware, you can move them to different organizations by exporting them as part of a solution and importing the solution into a different organization. You must use solution explorer to work with web resources.
+
+File types accepted as a web resource are HTML, CSS, JScript, XML, PNG, JPG, GIF, ICO, and XSL.
   
 ## Solution publisher prefix
 

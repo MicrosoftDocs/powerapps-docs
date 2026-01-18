@@ -6,7 +6,7 @@ ms.topic: how-to
 ms.custom: canvas
 ms.collection: get-started
 ms.reviewer: 
-ms.date: 03/13/2025
+ms.date: 01/13/2026
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
@@ -16,9 +16,9 @@ contributors:
 ---
 # Create a canvas app based on Excel data
 
-There are a few different ways to use Excel data to create a canvas app. 
+You can use Excel data in several ways to create a canvas app. 
 
-In Excel, it's important to format your data as a table rather than just a range of cells. This makes it easier for Power Apps to read and interact with the data. To do this, select your data and select **Insert** > **Table** in Excel. This ensures that Power Apps can recognize and use the data effectively. More information: [Formatted as a table in Excel](https://support.office.com/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664).
+In Excel, format your data as a table rather than just a range of cells. This formatting makes it easier for Power Apps to read and interact with the data. To format your data as a table, select your data and select **Insert** > **Table** in Excel. This formatting ensures that Power Apps can recognize and use the data effectively. For more information, see [Formatted as a table in Excel](https://support.office.com/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664).
 
 To create an app using Excel data, select one of the following options in [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
@@ -56,7 +56,7 @@ Power Apps has an Excel connector that allows you to access your Excel data. The
 
 - The older version connects to Excel files stored in specific locations, such as OneDrive for Business. 
 
-- We recommend that you use the newer version, called [Excel Online (Business)](/connectors/excelonlinebusiness/), which offers greater flexibility by accessing a wider variety of cloud-based file storage services.
+- Use the newer version, called [Excel Online (Business)](/connectors/excelonlinebusiness/), which offers greater flexibility by accessing a wider variety of cloud-based file storage services.
 
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. Depending on how you want to create your app, from the home screen, select one of the following options:
@@ -256,7 +256,7 @@ For more information about these and other functions, see the [formula reference
 
     `ResetForm(EditForm1);Navigate(ViewScreen, ScreenTransition.None)`
 
-    When the user selects this icon, any changes made in this screen are discarded, and the view screen opens.
+    When the user selects this icon, the app discards any changes made in this screen and opens the view screen.
 
 1. In the upper-right corner, select the checkmark icon.
 
@@ -266,7 +266,7 @@ For more information about these and other functions, see the [formula reference
 
     `SubmitForm(EditForm1); Navigate(ViewScreen, ScreenTransition.None)`
 
-    When the user selects this icon, any changes made in this screen are saved, and the view screen opens.
+    When the user selects this icon, the app saves any changes made in this screen and opens the view screen.
 
 1. On the **Insert** tab, select **Icons**, and then select the **Trash** icon.
 
@@ -284,7 +284,7 @@ For more information about these and other functions, see the [formula reference
 
     `Remove(Schedule, BrowseGallery1.Selected); Navigate(ViewScreen, ScreenTransition.None)`
 
-When the user selects this icon, the selected record is deleted from the data source and the view screen opens.
+When the user selects this icon, the app deletes the selected record from the data source and opens the view screen.
 
 ### Test the app
 

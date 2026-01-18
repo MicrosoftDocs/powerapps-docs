@@ -23,7 +23,7 @@ Create a virtual table to integrate data from an Excel file located in OneDrive 
 
 ## Download and install the virtual connector provider for Excel
 
-1. Download and install the virtual connector. Go to [the Microsoft commercial marketplace](https://appsource.microsoft.com/) and search for `Virtual Connector` or select the link to download the provider: [Virtual connectors in Dataverse](https://appsource.microsoft.com/product/dynamics-365/mscrm.connector_provider?tab=Overview)
+1. Download and install the virtual connector. Go to [the Microsoft commercial marketplace](https://marketplace.microsoft.com/) and search for `Virtual Connector` or select the link to download the provider: [Virtual connectors in Dataverse](https://marketplace.microsoft.com/product/dynamics-365/mscrm.connector_provider?tab=Overview)
 
    :::image type="content" source="media/ve-virtual-connectors-provider.png" alt-text="Virtual connectors in Dataverse":::
 

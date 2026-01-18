@@ -9874,6 +9874,11 @@
       "source_path": "powerapps-docs/maker/canvas-apps/figma/supported-components.md",
       "redirect_url": "/power-apps/maker/canvas-apps/get-started-test-drive",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/component-framework/publish-components-app-source.md",
+      "redirect_url": "/power-apps/developer/component-framework/publish-components-marketplace",
+      "redirect_document_id": false
     }
   ]
 }

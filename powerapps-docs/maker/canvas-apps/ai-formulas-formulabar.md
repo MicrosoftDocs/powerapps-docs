@@ -3,7 +3,7 @@ title: Use Copilot to create and edit Power Fx formulas in Power Apps
 description: Learn how to use Copilot, an AI feature in Power Apps, to create and edit Power Fx formulas in the formula bar from natural language or code comments.
 author: warrenbryant-msft
 ms.author: warrenbryant
-ms.date: 7/31/2025
+ms.date: 01/12/2026
 ms.update-cycle: 180-days
 ms.topic: how-to
 ms.reviewer: mkaur
@@ -24,11 +24,11 @@ ms.custom:
 
 # Use Copilot to create and edit Power Fx formulas
 
-Copilot is an AI feature in Power Apps Studio that lets you create and change Power Fx formulas quickly. Use Copilot in the formula bar to explain Power Fx formulas in everyday language or generate Power Fx formulas from natural language or code comments.
+Copilot is an AI feature in Power Apps Studio that helps you create and change Power Fx formulas quickly. Use Copilot in the formula bar to explain Power Fx formulas in everyday language or generate Power Fx formulas from natural language or code comments.
 
 ## Prerequisites
 
-Copilot needs to be enabled for your environment and tenant. For more information, see [Copilot in Power Apps overview](ai-overview.md).
+An admin must enable Copilot for your environment and tenant. For more information, see [Copilot in Power Apps overview](ai-overview.md).
 
 ## Explain a formula
 
@@ -94,7 +94,7 @@ You can keep the comments used for generating Power Fx formulas in the formula b
 
 [This section is prerelease documentation and is subject to change.]
 
-From the Copilot dropdown menu in the formula bar, you can now generate a formula using natural language to make a discrete request.
+From the Copilot dropdown menu in the formula bar, you can now generate a formula by using natural language to make a discrete request.
 
 > [!NOTE]
 > The **Copilot for formulas** feature is on by default. To turn it off, open your app, go to **Settings** > **Updates** > **Preview**, and find the **Copilot for formulas** toggle. If you turn off the setting, the **Create a formula (preview)** menu option disappears from the Copilot dropdown menu in the formula bar.
@@ -108,7 +108,7 @@ From the Copilot dropdown menu in the formula bar, you can now generate a formul
     :::image type="content" source="media/copilot/ufb-create-input.png" alt-text="Screenshot of the Create a Formula functionality showing a sample input." lightbox="media/copilot/ufb-create-input.png":::
 1. In the Copilot text box, type your request, such as *show today's day of the week*.
 1. Select the **Create** arrow to submit your request.
-1. Copilot attempts to create a formula. Select **Apply** to insert the formula in the same position as the Copilot interface, or update and resumbit your request.
+1. Copilot attempts to create a formula. Select **Apply** to insert the formula in the same position as the Copilot interface, or update and resubmit your request.
 
     :::image type="content" source="media/copilot/ufb-create-formula.png" alt-text="Screenshot of the Create a Formula functionality showing recommended formula." lightbox="media/copilot/ufb-create-formula.png":::
 
@@ -123,9 +123,9 @@ From the Copilot dropdown menu in the formula bar, you can now generate a formul
 
 Understand the choices you have when working with AI. Learn more in [FAQ about using AI responsibly in Power Apps](../common/responsible-ai-overview.md). Review the [Power Fx Copilot FAQ](../common/faqs-copilot-powerfx.md) for questions about this feature specifically.
 
-## Language Support
+## Language support
 
-The following table lists the languages available for the formula bar copilot features, which is based on the settings in your Power Platform environment and browser.
+The following table lists the languages available for the formula bar copilot features. The list is based on the settings in your Power Platform environment and browser.
 
 | **Name** | **Language Code** | **Functionality Supported** |
 |----------|-------------------|-----------------------------|

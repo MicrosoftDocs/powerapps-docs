@@ -8,7 +8,7 @@ ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 05/21/2025
 ms.subservice: canvas-maker
-ms.author: lanced
+ms.author: mkaur
 search.audienceType: 
   - maker
 contributors:
@@ -22,7 +22,7 @@ There are different ways to [connect](../connections-list.md#security-and-types-
 connect to SQL Server with a security approach that matches requirements for your app.
 
 > [!IMPORTANT]
-> The [**secure implicit connections**](../connections-list.md#shared-connections--secure-implicit-connections) feature was released in January 2024. Microsoft strongly encourages all apps currently using implicit connections to convert to secure implicit connections and to revoke connections shared with end users. 
+> The [**secure implicit connections**](../connections-list.md#shared-connections-and-secure-implicit-connections) feature was released in January 2024. Microsoft strongly encourages all apps currently using implicit connections to convert to secure implicit connections and to revoke connections shared with end users. 
 
 
 ## Difference between explicit, implicit, and secure implicit connections
@@ -50,7 +50,7 @@ The following four connection authentication types can be used with SQL Server f
 All new applications automatically use the new secure implicit connections. However, with apps that use the older 'implicit connections', both the app and its connections are deployed to end users, it means that **end users can author new applications based on those connections**. 
 
 
-When an author uses [**secure implicit connections**](../connections-list.md#shared-connections--secure-implicit-connections), it means that no connection is shared and no end user receives the connection object. This eliminates the risk of an end-user author reusing a connection to create a new app. Instead, the app works with a proxy connection that is aware of the app and only communicates with that specific app. The proxy connection allows limited actions (create, read, update, delete) and access to specific tables in the app that are defined when the app is published. Therefore, only authorized actions and access are granted to the end user.
+When an author uses [**secure implicit connections**](../connections-list.md#shared-connections-and-secure-implicit-connections), it means that no connection is shared and no end user receives the connection object. This eliminates the risk of an end-user author reusing a connection to create a new app. Instead, the app works with a proxy connection that is aware of the app and only communicates with that specific app. The proxy connection allows limited actions (create, read, update, delete) and access to specific tables in the app that are defined when the app is published. Therefore, only authorized actions and access are granted to the end user.
 
 The older style simple implicit connection actually distributes a connection object to the end user. For example, if you create an app that filters out the data you don’t want users to see. But, the filtered out data is present in the database. But you're relying on the filter you configured to ensure the end users won’t see certain data.
 
