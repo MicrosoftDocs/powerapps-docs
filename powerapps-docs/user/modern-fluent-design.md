@@ -3,7 +3,7 @@ title: Modern, refreshed look for model-driven apps
 description: Learn about the updated user interface that makes model-driven apps easier to use.
 author: sriharibs-msft
 ms.topic: overview
-ms.date: 12/15/2025
+ms.date: 01/19/2026
 ms.service: powerapps
 ms.subservice: end-user
 ms.author: srihas
@@ -21,7 +21,7 @@ contributors:
 
 # Modern, refreshed look for model-driven apps
 
-Model-driven apps have a modern, refreshed look when the **New look** app setting is turned on. The new look provides updated styling including fonts, colors, borders, and shadows that align with the latest [Microsoft Fluent design system](https://react.fluentui.dev/?path=/docs/concepts-introduction--page). The updated look makes model-driven apps easier to use so that users can accomplish their goals quickly and efficiently. The Fluent design system provides consistency, quality, and Microsoft-wide platform coherence. It also provides a solid foundation for extensibility and allows support for dark mode in the future.
+Model-driven apps have updated styling including fonts, colors, borders, and shadows that align with the latest [Microsoft Fluent design system](https://react.fluentui.dev/?path=/docs/concepts-introduction--page). The updated look makes model-driven apps easier to use so that users can accomplish their goals quickly and efficiently. The Fluent design system provides consistency, quality, and Microsoft-wide platform coherence. It also provides a solid foundation for extensibility and allows support for dark mode in the future.
 
 > [!IMPORTANT]
 > With the **2026 Wave 1** release, the **New Look** is mandatory for all users. Makers will no longer be able to switch a model-driven app to the classic look. 
