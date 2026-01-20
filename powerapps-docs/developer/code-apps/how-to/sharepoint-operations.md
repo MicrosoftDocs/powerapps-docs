@@ -31,36 +31,6 @@ The following scenarios are supported when connecting to SharePoint using the Po
 
 Before performing create, read, update, and delete (CRUD) operations in your code app, complete these setup steps.
 
-### Ensure Power Apps SDK initialization before data calls
-
-In your `App.tsx` file, implement logic that waits for the Power Apps SDK to fully initialize before performing any data operations. This approach prevents errors caused by uninitialized services or missing context.
-
-Use an asynchronous function or state management to confirm initialization before making API calls. For example:
-
-```typescript
-useEffect(() => { 
-// Define an async function to initialize the Power Apps SDK 
-const init = async () => { 
-      try { 
-            await initialize(); // Wait for SDK initialization 
-            setIsInitialized(true); // Mark the app as ready for data operations 
-      } catch (err) { 
-            setError('Failed to initialize Power Apps SDK'); // Handle initialization errors 
-            setLoading(false); // Stop any loading indicators 
-      } 
-};
-
-init(); // Call the initialization function when the component mounts 
-}, []); 
- 
-useEffect(() => { 
-// Prevent data operations until the SDK is fully initialized 
-if (!isInitialized) return; 
- 
-// Place your data reading logic here 
-}, []); 
-```
-
 ### Add your SharePoint data source
 
 Add your SharePoint data source by following the instructions in [Connect to data](connect-to-data.md).
