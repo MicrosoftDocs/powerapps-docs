@@ -27,18 +27,10 @@ The context data returned by the `getContext` function provides rich details abo
 
 ## Steps
 
-1. Import the `initialize` and `getContext` functions
+1. Import the `getContext` function
 
    ```typescript
-   import { initialize, getContext } from '@microsoft/power-apps/app'; 
-   ```
-
-1. Initialize
-
-   You must call and wait for the `initialize` function to complete before making any data calls to ensure that the SDK is fully initialized.
-
-   ```typescript
-   await initialize(); 
+   import { getContext } from '@microsoft/power-apps/app'; 
    ```
 
 1. Retrieve context
