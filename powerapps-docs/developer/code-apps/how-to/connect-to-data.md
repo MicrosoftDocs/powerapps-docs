@@ -284,36 +284,6 @@ Once connections are added, you can update the app to use the generated model an
 
 > [!NOTE]
 > You can also make these changes using an agent in your IDE. For instance, in Visual Studio Code you might use GitHub Copilot agent mode to make them for you after the data sources are added.
-
-1. **Ensure Power Apps SDK initialization before data calls**
-
-   In your `App.tsx` file, implement logic that waits for the Power Apps SDK to fully initialize before performing any data operations. This prevents errors caused by uninitialized services or missing context. This only needs to be done once.
-
-   Use an asynchronous function or state management to confirm initialization before making API calls. For example:
-
-   ```typescript
-   useEffect(() => {
-   // Define an async function to initialize the Power Apps SDK
-   const init = async () => {
-         try {
-               await initialize(); // Wait for SDK initialization
-               setIsInitialized(true); // Mark the app as ready for data operations
-         } catch (err) {
-               setError('Failed to initialize Power Apps SDK'); // Handle initialization errors
-               setLoading(false); // Stop any loading indicators
-         }
-   };
-
-   init(); // Call the initialization function when the component mounts
-   }, []);
-
-   useEffect(() => {
-   // Prevent data operations until the SDK is fully initialized
-   if (!isInitialized) return;
-
-   // Place your data reading logic here
-   }, []);
-   ```
    
 1. **Import required types and services**
 
