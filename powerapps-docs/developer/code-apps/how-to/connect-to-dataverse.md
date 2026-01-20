@@ -62,7 +62,7 @@ The following scenarios are supported when connecting to Dataverse using the Pow
 
 Before performing create, read, update, and delete (CRUD) operations in your code app, import the required types and services.
 
-1. **Import required types and services**
+**Import required types and services**
 
    When you add a data source, model and service files are automatically generated and placed in the `/generated/services/` folder.
    For example, if you add the built-in [Accounts](../../data-platform/reference/entities/account.md) table as a data source, the following files are created:
