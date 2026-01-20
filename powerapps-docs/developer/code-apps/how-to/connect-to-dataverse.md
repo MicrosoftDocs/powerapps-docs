@@ -60,37 +60,7 @@ The following scenarios are supported when connecting to Dataverse using the Pow
 
 ## Set up your code app
 
-Before performing create, read, update, and delete (CRUD) operations in your code app, complete these two setup steps.
-
-1. **Ensure Power Apps SDK initialization before data calls**
-
-   In your `App.tsx` file, implement logic that waits for the Power Apps SDK to fully initialize before performing any data operations. This prevents errors caused by uninitialized services or missing context.
-
-   Use an asynchronous function or state management to confirm initialization before making API calls. For example:
-
-   ```typescript
-   useEffect(() => {
-   // Define an async function to initialize the Power Apps SDK
-   const init = async () => {
-         try {
-               await initialize(); // Wait for SDK initialization
-               setIsInitialized(true); // Mark the app as ready for data operations
-         } catch (err) {
-               setError('Failed to initialize Power Apps SDK'); // Handle initialization errors
-               setLoading(false); // Stop any loading indicators
-         }
-   };
-
-   init(); // Call the initialization function when the component mounts
-   }, []);
-
-   useEffect(() => {
-   // Prevent data operations until the SDK is fully initialized
-   if (!isInitialized) return;
-
-   // Place your data reading logic here
-   }, []);
-   ```
+Before performing create, read, update, and delete (CRUD) operations in your code app, import the required types and services.
 
 1. **Import required types and services**
 
