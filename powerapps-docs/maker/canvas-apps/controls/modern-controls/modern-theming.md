@@ -43,9 +43,6 @@ There are several out-of-the-box themes available to style your app. You can als
 
 1. On the app authoring menu, select ![Themes icon](media/theme-icon.png) **Themes**.
 2. On the **Themes** pane, select **Add a theme**.
-
-   :::image type="content" source="media/add-a-theme.png" alt-text="Screenshot that shows the location of the Add a theme selector.":::
-
 3. Select **Create custom theme** to design a new theme, or select **Paste theme** to import a theme from YAML format. For more information about pasting themes, see [Copy and paste themes](#copy-and-paste-themes).
 
    The **Create a theme** dialog appears.
