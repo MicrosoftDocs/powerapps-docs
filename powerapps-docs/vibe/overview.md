@@ -4,7 +4,7 @@ description: Discover the new AI-native Power Apps vibe code experience. Build a
 author: mduelae
 ms.author: mkaur
 ms.reviewer: mkaur
-ms.date: 1/9/2026
+ms.date: 01/21/2026
 ms.topic: concept-article
 ---
 
@@ -17,6 +17,9 @@ The new Power Apps experience is an AI-native platform that builds solutions to 
 
 :::image type="content" source="media/overview/new-experience-home-page.png" alt-text="Screenshot of the home page for the new Power Apps experience":::
 
+Watch this video to learn about the new Power Apps experience.
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=085271a3-bec6-4740-89df-044f984466d2]
+
 ## Prerequisites 
 
 > [!IMPORTANT]
@@ -24,9 +27,9 @@ The new Power Apps experience is an AI-native platform that builds solutions to 
 > - This feature is in preview.
 > - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2216214), and are available before an official release so that customers can get early access and provide feedback.
 
-- Copilot must be enabled in the tenant and environment. Learn more: [Copilot in Power Apps overview](../maker/canvas-apps/ai-overview.md)
+- An admin must enable Copilot in the tenant and environment. For more information, see [Copilot in Power Apps overview](../maker/canvas-apps/ai-overview.md).
 - This capability isn't available in a default environment.
-- This capability is currently available only in the US and Australia regions, and only in English. Learn more in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/en-US/availability-reports/?report=copilotfeaturereport)
+- This capability is currently available only in the US and Australia regions, and only in English. For more information, see [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/en-US/availability-reports/?report=copilotfeaturereport).
 
 
 ## Access the new experience 
@@ -40,7 +43,7 @@ You can access the new experience in one of two ways:
    :::image type="content" source="media/overview/new-experience.png" alt-text="Try the new Power Apps experience":::
 
    > [!NOTE]
-   > If you access the new experience through [Power Apps](https://make.preview.powerapps.com/),  you will need to enable it each time you sign in.
+   > If you access the new experience through [Power Apps](https://make.preview.powerapps.com/), you need to enable it each time you sign in.
 
 ## Navigation
 
