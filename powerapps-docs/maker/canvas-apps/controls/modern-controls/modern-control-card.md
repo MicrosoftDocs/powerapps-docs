@@ -89,7 +89,7 @@ Below are three example Card configurations you can copy and paste directly into
     Properties:
       Description: ="This is a long description text. It provides a rich, narrative overview designed to help users understand the purpose, value, and key capabilities of the experience. This section typically expands beyond a short summary by offering contextual background, explaining how the feature solves real user problems, and detailing what makes it uniquely impactful."
       Height: =240
-      Image: =
+      Image: =Blank()
       LayoutDirection: =LayoutDirection.Horizontal
       Width: =300
       X: =40
@@ -101,7 +101,7 @@ Below are three example Card configurations you can copy and paste directly into
 - VerticalCardwithHeaderOnTop:
     Control: ModernCard@1.0.0
     Properties:
-      HeaderImage: =
+      HeaderImage: =Blank()
       Height: =240
       ImagePlacement: =ImagePlacement.AfterHeader
       Subtitle: ="This is subtitle which can take whole of single line."
