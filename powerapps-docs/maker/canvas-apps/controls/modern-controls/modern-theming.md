@@ -27,10 +27,10 @@ Modern themes streamline the customization process and enable creators to effort
 Enable the modern themes feature in the settings of an app:
 
 1. Open your app or create a new app.
-1. From your app, open **Settings** from the app authoring menu or [modern command bar](../../power-apps-studio.md#1--power-apps-studio-modern-command-bar).
-1. Go to **Updates** > **New** > **Modern controls and themes**.
-1. Set the **Modern controls and themes** toggle to **On**.
-1. Close the **Settings** popup.
+2. From your app, open **Settings** from the app authoring menu or [modern command bar](../../power-apps-studio.md#1--power-apps-studio-modern-command-bar).
+3. Go to **Updates** > **New** > **Modern controls and themes**.
+4. Set the **Modern controls and themes** toggle to **On**.
+5. Close the **Settings** popup.
 
 For more information, see [Enable modern controls and themes for your app](overview-modern-controls.md#enable-modern-controls-and-themes-for-your-app).
 
@@ -42,17 +42,17 @@ For more information, see [Enable modern controls and themes for your app](overv
 There are several out-of-the-box themes available to style your app. You can also design your own theme for a more personalized visual aesthetic or paste a theme from YAML format.
 
 1. On the app authoring menu, select ![Themes icon](media/theme-icon.png) **Themes**.
-1. On the **Themes** pane, select **Add a theme**.
+2. On the **Themes** pane, select **Add a theme**.
 
    :::image type="content" source="media/add-a-theme.png" alt-text="Screenshot that shows the location of the Add a theme selector.":::
 
-1. Select **Create custom theme** to design a new theme, or select **Paste theme** to import a theme from YAML format. For more information about pasting themes, see [Copy and paste themes](#copy-and-paste-themes).
+3. Select **Create custom theme** to design a new theme, or select **Paste theme** to import a theme from YAML format. For more information about pasting themes, see [Copy and paste themes](#copy-and-paste-themes).
 
    The **Create a theme** dialog appears.
 
-    :::image type="content" source="media/theme-create-custom-theme.png" alt-text="Screenshot showing the Create a theme user interface.":::
+    :::image type="content" source="media/create-custom-theme.png" alt-text="Screenshot showing the Create a theme user interface.":::
 
-1. In the **Create a theme** dialog, choose or enter the following information:
+4. In the **Create a theme** dialog, choose or enter the following information:
 
    | Feature | Action or description |
    |---------|-------------|
@@ -68,7 +68,7 @@ There are several out-of-the-box themes available to style your app. You can als
 
    :::image type="content" source="media/preview-option.png" alt-text="Screenshot showing the Preview section of the pane when you create or edit a theme. ":::
 
-1. Select **Create**. Your new theme is created and applied to your app.
+5. Select **Create**. Your new theme is created and applied to your app.
 
 ## Copy and paste themes
 
@@ -79,8 +79,10 @@ You can copy and paste themes in YAML format to duplicate themes within your app
 To copy a theme's YAML definition:
 
 1. On the app authoring menu, select ![Themes icon](media/theme-icon.png) **Themes**.
-1. On the **Themes** pane, locate the theme you want to copy.
-1. Select the **More options** (...) button on the theme card, then select **Copy theme**.
+2. On the **Themes** pane, locate the theme you want to copy.
+3. Select the **More options** (...) button on the theme card, then select **Copy theme**.
+   
+   :::image type="content" source="media/copy-a-theme.png" alt-text="Screenshot that shows the location of the copy theme selector.":::
 
 The theme definition is copied to your clipboard in YAML format.
 
@@ -89,9 +91,11 @@ The theme definition is copied to your clipboard in YAML format.
 To paste a theme from YAML:
 
 1. Copy a valid theme YAML definition to your clipboard.
-1. On the app authoring menu, select ![Themes icon](media/theme-icon.png) **Themes**.
-1. On the **Themes** pane, select **Add a theme**.
-1. Select **Paste theme**.
+2. On the app authoring menu, select ![Themes icon](media/theme-icon.png) **Themes**.
+3. On the **Themes** pane, select **Add a theme**.
+4. Select **Paste theme**.
+ 
+   :::image type="content" source="media/paste-a-theme.png" alt-text="Screenshot showing the location of the ellipses points where you can paste a theme.":::
 
 The new theme is created and appears in your themes list with the name specified in the YAML. If a theme with the same name already exists, the pasted theme is automatically renamed to avoid conflicts.
 
@@ -176,7 +180,7 @@ You can edit the theme and change one or more parameters of the custom theme.
 
 1. On the **Themes** pane, find the tile of the theme you want to edit and select the overflow menu and then **Edit**.
 
-   :::image type="content" source="media/theme-options-edit.png" alt-text="Screenshot showing the location of the ellipses points where you can select Edit.":::
+   :::image type="content" source="media/edit-a-theme.png" alt-text="Screenshot showing the location of the ellipses points where you can select Edit.":::
 
 1. On the **Edit theme** pane, adjust the theme as needed.
 1. Select **Save** or cancel out of the dialog.
