@@ -33,7 +33,7 @@ contributors:
 
 ### pageInput parameter
 
-The object definition changes depending on the type of page to navigate to: [entity list](#entity-list), [entity record](#entity-record), [dashboard](#dashboard), [HTML web resource](#html-web-resource), or [custom page](#custom-page). 
+The object definition changes depending on the type of page to navigate to: [entity list](#entity-list), [entity record](#entity-record), [dashboard](#dashboard), [HTML web resource](#html-web-resource), [custom page](#custom-page), or [generative page](#generative-page).
 
 #### Entity list
 
@@ -108,13 +108,27 @@ The Custom page object contains the following values.
 | `entityName` | String | (Optional) The logical name of the table to be made available in the custom page via `Param("entityName")`. |
 | `recordId` | String | (Optional) ID of the table record to be made available in the custom page via `Param("recordId")`. |
 
+#### Generative page
+
+The Generative page object contains the following values.
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `pageType` | String | Specify `generative`. |
+| `pageId` | String | The ID of the generative page to open. |
+
+> [!NOTE]
+> Navigating to a generative page using `navigateTo` currently **does not support passing initialization or contextual data** (such as table name, record ID, or custom parameters). The generative page is opened without context.
+
+
+
 ### navigationOptions parameter
 
 The navigationOptions object contains the following values.
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `target` | Number | Specify `1` to open the page inline; `2` to open the page in a dialog.<br /> Also, rest of the values (width, height, and position) are valid only if you have specified 2 in this value (open page in a dialog).<br />**Note**: Entity lists can only be opened inline; entity records and web resources can be opened either inline or in a dialog. |
+| `target` | Number | Specify `1` to open the page inline; `2` to open the page in a dialog.<br /> Also, rest of the values (width, height, and position) are valid only if you have specified 2 in this value (open page in a dialog).<br />**Note**: Entity lists can only be opened inline; entity records, web resources, and generative pages can be opened either inline or in a dialog. |
 | `width` | Number or Object | (Optional) The width of dialog. To specify the width in pixels, just type a numeric value. To specify the width in percentage, specify an object of type SizeValue with the following properties:<br />- `value`: The numerical value of type Number.<br />- `unit`: The unit of measurement of type String. Specify `%` or `px`. Default value is `px`.|
 | `height` | Number or Object | (Optional) The height of dialog. To specify the height in pixels, just type a numeric value. To specify the width in percentage, specify an object of type SizeValue with the following properties:<br />- value: The numerical value of type Number.<br />- unit: The unit of measurement of type String. Specify `%` or `px`. Default value is `px`.|
 | `position` | Number | (Optional) Specify `1` to open the dialog in center; `2` to open the dialog on the far side. Default is `1` (center). |
