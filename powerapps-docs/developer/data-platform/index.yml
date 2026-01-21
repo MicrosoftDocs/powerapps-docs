@@ -94,7 +94,7 @@ landingContent:
             url: /power-platform/alm/solution-api
       - linkListType: how-to-guide
         links:
-          - text: Publish your app on AppSource
+          - text: Publish your app on Marketplace
             url: /power-platform/developer/appsource/publish-app
 
     # Card

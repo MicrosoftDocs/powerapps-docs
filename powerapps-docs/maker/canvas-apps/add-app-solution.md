@@ -125,7 +125,7 @@ For information about known limitations, see [Solutions overview](../data-platfo
 ## Next steps
 
 - Create or link more apps and [other components](/powerapps/maker/canvas-apps/solutions-overview), such as tables, flows, and dashboards, to your solution.
-- [Export your solution](../data-platform/import-update-export-solutions.md) so that you can deploy it to another environment, on AppSource, and so forth.
+- [Export your solution](../data-platform/import-update-export-solutions.md) so that you can deploy it to another environment, on Marketplace, and so forth.
 
 ### See also
 

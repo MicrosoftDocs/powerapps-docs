@@ -32,7 +32,7 @@ Unlike HTML web resources, code components render as part of the same context an
 
 Create code components that you can use across the full breadth of Power Apps capabilities. Reuse these components many times across different tables and forms.
 
-Developers can bundle all the HTML, CSS, and TypeScript files into a single [solution](../../maker/data-platform/solutions-overview.md) package file to move across environments. They can also make it available via [AppSource](https://appsource.microsoft.com/marketplace/apps?page=1&product=dynamics-365). 
+Developers can bundle all the HTML, CSS, and TypeScript files into a single [solution](../../maker/data-platform/solutions-overview.md) package file to move across environments. They can also make it available via [Marketplace](https://marketplace.microsoft.com/marketplace/apps?page=1&product=dynamics-365). 
 
 
 ## Advantages 

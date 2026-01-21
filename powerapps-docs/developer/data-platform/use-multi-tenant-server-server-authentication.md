@@ -14,7 +14,7 @@ search.audienceType:
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
-Multi-tenancy is the most common app scenario and the one which is used for apps distributed using Microsoft AppSource, but you can also use multi-tenancy without listing your application with Microsoft AppSource.  
+Multi-tenancy is the most common app scenario and the one which is used for apps distributed using Microsoft Marketplace, but you can also use multi-tenancy without listing your application with Microsoft Marketplace.  
   
 Each Microsoft Dataverse organization is associated with an Microsoft Entra ID tenant. Your web application or service is registered with its own Microsoft Entra ID tenant.  
   
