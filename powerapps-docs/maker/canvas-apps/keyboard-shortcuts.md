@@ -6,7 +6,7 @@ author: TashasEv
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 06/10/2025
+ms.date: 01/21/2026
 ms.subservice: canvas-maker
 ms.author: tashas
 search.audienceType: 
@@ -118,15 +118,15 @@ contributors:
 |--|--|
 | Alt or Ctrl+Shift | 1. Before selecting a control, hide design elements so that you can interact with the controls as the app's user would.<br>2. After initiating a resize or reposition of a control, holding down these keys overrides any snap points. |
 
-Like an Excel spreadsheet, canvas apps are live and running even when you're editing them. You don't need to switch to preview mode to test your app, so editing and testing are much faster. But this creates a challenge: How do you select a button control to resize it instead of selecting it to run the app logic?
+Like an Excel spreadsheet, canvas apps are live and running even when you're editing them. You don't need to switch to preview mode to test your app, so editing and testing are much faster. But this feature creates a challenge: How do you select a button control to resize it instead of selecting it to run the app logic?
 
-When you're in design mode, selecting an object lets you edit it—move, resize, change properties, and configure the object. To override this default, hold down the Alt or Ctrl+Shift keys *before* you select the object. This treats the selection as if a user of the app selected it.
+When you're in design mode, selecting an object lets you edit it. You can move, resize, change properties, and configure the object. To override this default behavior, hold down the Alt or Ctrl+Shift keys *before* you select the object. This action treats the selection as if a user of the app selected it.
 
 In the following animation, a button control is first selected for editing. Adorners appear around the control, and the formula bar shows the **OnSelect** property, ready to edit. After you release the button, hold down the Alt key and select the button control again. This time, the **OnSelect** property runs, and the notification appears, just like when a user selects the button in a running app.
 
 ![Animation that shows holding down the Alt key before selecting a button control, which triggers the OnSelect property and displays a notification.](media/keyboard-shortcuts/alt-select.gif)
 
-You can also use the Alt key *after* you select a control to override snap points when moving or resizing. The next animation shows how to resize a data card in an [**Edit form**](controls/control-form-detail.md) control. At first, resizing is limited to specific snap points. Later, *without releasing the mouse button*, hold down the Alt key. This overrides the snap points, so you can set any width with the mouse.
+You can also use the Alt key *after* you select a control to override snap points when moving or resizing. The next animation shows how to resize a data card in an [**Edit form**](controls/control-form-detail.md) control. At first, resizing is limited to specific snap points. Later, *without releasing the mouse button*, hold down the Alt key. This action overrides the snap points, so you can set any width with the mouse.
 
 ![Animation that shows holding down the Alt key while resizing a data card in an Edit form control to override snap points.](media/keyboard-shortcuts/alt-fine-control.gif)
 
@@ -135,8 +135,8 @@ You can also use the Alt key *after* you select a control to override snap point
 | Shortcut | Action |
 |--|--|
 | F1 | Open documentation |
-| Ctrl+F6 | Go to the next landmark |
-| Ctrl+Shift+F6 | Go to the previous landmark |
+| Ctrl+F6 | Go to the next landmark. It navigates clockwise through the landmarks of a page (for example, headers, navigation bars, main content). Adding the Shift key (Ctrl+Shift+F6) moves through them in counterclockwise order. |
+| Ctrl+Shift+F6 | Go to the previous landmark. It navigates in counterclockwise order through the landmarks of a page (for example, headers, navigation bars, main content). |
 | Shift+F10 | Open a shortcut menu, for example, in **Tree view** |
 
 
