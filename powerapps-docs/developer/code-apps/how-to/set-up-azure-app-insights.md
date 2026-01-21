@@ -18,13 +18,13 @@ Azure Application Insights is a powerful telemetry and monitoring service that h
 > This page shows **one example** of how to initialize and configure telemetry for your app. You can follow the same pattern to integrate any monitoring tool, not just Application Insights.
 > Azure Application Insights complements [Power Platform Monitor](/power-platform/admin/monitoring/monitor-power-apps) bby providing granular logs and custom events, but it only captures telemetry after the app successfully loads. Startup failures—including issues caused by blocked files or failed initialization—are not captured here and appear only in Monitor.
 
-# Prerequisites 
+## Prerequisites 
 
 - An Azure subscription
 - An Application Insights resource created in the Azure portal. 
 - The connection string or instrumentation key from your App Insights resource. 
 
-# Steps 
+## Steps 
 
 1. **Create an Application Insights resource**
 
