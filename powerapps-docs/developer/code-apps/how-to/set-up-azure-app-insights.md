@@ -16,7 +16,7 @@ Azure Application Insights is a powerful telemetry and monitoring service that h
 
 > [!NOTE]
 > This page shows **one example** of how to initialize and configure telemetry for your app. You can follow the same pattern to integrate any monitoring tool, not just Application Insights.
-> Azure Application Insights complements [Power Platform Monitor](/power-platform/admin/monitoring/monitor-power-apps) bby providing granular logs and custom events, but it only captures telemetry after the app successfully loads. Startup failures—including issues caused by blocked files or failed initialization—are not captured here and appear only in Monitor.
+> Azure Application Insights complements [Power Platform Monitor](/power-platform/admin/monitoring/monitor-power-apps) by providing granular logs and custom events, but it only captures telemetry after the app successfully loads. Startup failures—including issues caused by blocked files or failed initialization—are not captured here and appear only in Monitor.
 
 ## Prerequisites 
 
@@ -66,9 +66,7 @@ const initializeAppInsights = () => {
 
 4. **Configure the logger**
 
-Provide a logger so the platform can forward session and network metrics to your monitoring system. The platform calls `logMetric` function with metrics like `sessionLoadSummary` and `networkLoadSummary`.  
-
-Note that `initializeLogger` is an asynchronous function, so you do not need to wait for it. It is a **fire‑and‑forget call**: it will set up telemetry and start logging once it completes, including events that occurred before it finished. Additionally, you should only call this once. 
+Provide a logger so the platform can forward session and network metrics to your monitoring system. The platform calls `logMetric` function with metrics like `sessionLoadSummary` and `networkLoadSummary`. You should only call this once. 
 
 ```typescript 
 import { setConfig } from '@microsoft/power-apps/app' 
