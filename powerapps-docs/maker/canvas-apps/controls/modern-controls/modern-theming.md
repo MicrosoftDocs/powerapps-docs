@@ -39,12 +39,14 @@ For more information, see [Enable modern controls and themes for your app](overv
 
 ## Create a theme
 
-There are several out-of-the-box themes available to style your app. You can also design your own theme for a more personalized visual aesthetic.
+There are several out-of-the-box themes available to style your app. You can also design your own theme for a more personalized visual aesthetic or paste a theme from YAML format.
 
 1. On the app authoring menu, select ![Themes icon](media/theme-icon.png) **Themes**.
 1. On the **Themes** pane, select **Add a theme**.
 
    :::image type="content" source="media/add-a-theme.png" alt-text="Screenshot that shows the location of the Add a theme selector.":::
+
+1. Select **Create custom theme** to design a new theme, or select **Paste theme** to import a theme from YAML format. For more information about pasting themes, see [Copy and paste themes](#copy-and-paste-themes).
 
    The **Create a theme** dialog appears.
 
@@ -61,12 +63,100 @@ There are several out-of-the-box themes available to style your app. You can als
    | Torsion | Impacts the tint, shade, or tone of the palette. Torsion isn't applicable if you choose **Lock primary color**. |
    | Vibrancy | Impacts the muteness or brightness of the palette. Vibrancy isn't applicable if you choose **Lock primary color**. |
    | Palette overrides | Override the color used for one or more slots in the palette by selecting a slot and choosing a new color. You can select **Reset** to return to the generated value for that slot.  |
-   
+
    You can also look at a static preview of your new theme. Interact with the sample controls to see how your theme is applied to the rest state and various interaction states.
-  
-   :::image type="content" source="media/preview-option.png" alt-text="Screenshot showing the Preview section of the pane when you create or edit a theme. "::: 
+
+   :::image type="content" source="media/preview-option.png" alt-text="Screenshot showing the Preview section of the pane when you create or edit a theme. ":::
 
 1. Select **Create**. Your new theme is created and applied to your app.
+
+## Copy and paste themes
+
+You can copy and paste themes in YAML format to duplicate themes within your app or share them across different apps. This makes it easy to maintain consistent branding across multiple applications or back up your custom theme configurations.
+
+### Copy a theme
+
+To copy a theme's YAML definition:
+
+1. On the app authoring menu, select ![Themes icon](media/theme-icon.png) **Themes**.
+1. On the **Themes** pane, locate the theme you want to copy.
+1. Select the **More options** (...) button on the theme card, then select **Copy theme**.
+
+The theme definition is copied to your clipboard in YAML format.
+
+### Paste a theme
+
+To paste a theme from YAML:
+
+1. Copy a valid theme YAML definition to your clipboard.
+1. On the app authoring menu, select ![Themes icon](media/theme-icon.png) **Themes**.
+1. On the **Themes** pane, select **Add a theme**.
+1. Select **Paste theme**.
+
+The new theme is created and appears in your themes list with the name specified in the YAML. If a theme with the same name already exists, the pasted theme is automatically renamed to avoid conflicts.
+
+### YAML format
+
+Theme definitions use the following YAML structure:
+
+```yaml
+Themes:
+  Theme Name:
+    Font: "'Segoe UI', 'Open Sans', sans-serif"
+    BasePaletteColor: '#2e4bf0'
+    HueTorsion: -27
+    Vibrancy: -52
+    ColorOverrides:
+      Lighter30: '#bd3535'
+      Darker10: '#1a2d8f'
+```
+
+The following table describes each property in the YAML format:
+
+| Property | Description | Required |
+|----------|-------------|----------|
+| Theme Name | The display name for your theme. Must be unique within the app. | Yes |
+| Font | CSS font family specification. Use standard web font names. | Yes |
+| BasePaletteColor | The seed color for palette generation in hex format (for example, '#2e4bf0'). This color determines the base for all 16 color slots. | Yes |
+| HueTorsion | Adjusts the hue rotation of generated colors. Range: -100 to 100. Negative values shift toward cooler tones, positive toward warmer tones. | Yes |
+| Vibrancy | Adjusts the saturation and brightness. Range: -100 to 100. Negative values create more muted colors, positive values create more vibrant colors. | Yes |
+| ColorOverrides | Optional overrides for individual color slots (Lighter30, Lighter20, Lighter10, Base, Darker10, Darker20, Darker30, Darker40). Specify only the colors you want to customize. | No |
+
+### Example: Share a corporate brand theme
+
+This example shows a theme configured with corporate brand colors:
+
+```yaml
+Themes:
+  Corporate Brand:
+    Font: "'Segoe UI', 'Open Sans', sans-serif"
+    BasePaletteColor: '#0078d4'
+    HueTorsion: 0
+    Vibrancy: 10
+    ColorOverrides:
+      Base: '#0078d4'
+      Darker10: '#106ebe'
+      Darker20: '#005a9e'
+      Lighter10: '#2b88d8'
+      Lighter20: '#c7e0f4'
+```
+
+To use this theme in another app:
+
+1. Copy the YAML above.
+1. Open the target app in Power Apps Studio.
+1. In the **Themes** panel, select **Add a theme** > **Paste theme**.
+
+The Corporate Brand theme is now available in your app.
+
+### Tips for using copy and paste with themes
+
+- **Save themes externally**: Copy and save your custom themes to a text file or documentation system for backup and version control.
+- **Share across teams**: Share theme YAML definitions with team members to ensure consistent branding across multiple apps.
+- **Duplicate and modify**: To create theme variations, copy an existing theme, paste it, then modify the YAML properties rather than starting from scratch.
+- **Font availability**: When pasting themes across apps or organizations, ensure the specified font families are available and properly licensed.
+- **Minimal overrides**: For easier maintenance, only specify ColorOverrides for colors that must differ from the generated palette. Let the BasePaletteColor, HueTorsion, and Vibrancy properties handle the rest.
+- **Test accessibility**: After pasting a theme, test it on both desktop and mobile views to ensure color contrast and readability meet accessibility standards (WCAG 2.1 AA minimum).
 
 ## Apply modern theme
 
@@ -92,7 +182,7 @@ You can edit the theme and change one or more parameters of the custom theme.
 1. Select **Save** or cancel out of the dialog.
 
 > [!NOTE]
-> You can't edit out-of-the-box themes.
+> You can't edit out-of-the-box themes. Changes made through the visual theme editor update the underlying YAML properties. If you copy, modify, and re-paste a theme's YAML, those changes reflect in the visual editor and anywhere the theme is applied.
 
 ## Delete a theme
 
@@ -107,9 +197,12 @@ If you have any Power Fx formulas that reference this theme in your app, you nee
 > [!NOTE]
 > You can't delete out-of-the-box themes.
 
+> [!TIP]
+> Before deleting a custom theme, consider copying its YAML definition for backup. You can easily restore the theme later by pasting the YAML.
+
 ## Use themes with Power Fx
 
-Modern theme objects are available for makers to use through Power Fx. The currently active theme object can be referenced by **App.Theme**. Any theme loaded into the app can be referenced by its instance name such as **RedTheme**. We recommend that you reference the theme object using **App.Theme** to ensure that the color selections adapt to theme changes.  
+Modern theme objects are available for makers to use through Power Fx. The currently active theme object can be referenced by **App.Theme**. Any theme loaded into the app can be referenced by its instance name such as **RedTheme**. We recommend that you reference the theme object using **App.Theme** to ensure that the color selections adapt to theme changes.
 
 Each theme object includes the following information:
 
@@ -117,7 +210,7 @@ Each theme object includes the following information:
 - **Colors**, a 16-color brand ramp collection individually accessible by name; **Primary foreground color** is the default text color, for example the color of text on a background
 - **Font** used in the theme
 
-The image shows the slot variables inside the **Colors** collection and, as an example, the corresponding colors for the **Steel** theme.  
+The image shows the slot variables inside the **Colors** collection and, as an example, the corresponding colors for the **Steel** theme.
 
 :::image type="content" source="media/modern-themes-color-ramp.png" alt-text="Screenshot that shows the slot variables and 16-part color brand ramp for the steel theme.":::
 
@@ -125,9 +218,9 @@ Using the theme brand ramp, you can manually style a classic control based on th
 
 > [!NOTE]
 > To provide feedback, see: [Provide your feedback to Microsoft](overview-modern-controls.md#provide-feedback-to-microsoft).
-> 
+>
 
 ## See also
 
-[Modern controls blog post](https://go.microsoft.com/fwlink/?linkid=2229189)  
+[Modern controls blog post](https://go.microsoft.com/fwlink/?linkid=2229189)
 [Using modern themes with Power Apps (video)](https://youtu.be/xuyR2BikwyQ?feature=shared)
