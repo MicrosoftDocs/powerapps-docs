@@ -27,7 +27,7 @@ landingContent:
           - text: "Quickstart: Create a code app"
             url: how-to/create-an-app-from-scratch.md
   # Card
-  - title: How To
+  - title: How To Connect to Data
     linkLists:
       - linkListType: how-to-guide
         links:
@@ -41,6 +41,15 @@ landingContent:
             url: how-to/sharepoint-operations.md
           - text: "Create a Basic Asset Management API with Azure Functions"
             url: how-to/create-basic-asset-management-api-azure-functions.md
+          - text: "Get context data"
+            url: how-to/retrieve-context.md
+          - text: "Get Dataverse tables metadata"
+            url: how-to/get-table-metadata.md
+  # Card
+  - title: Advanced How-To Guides
+    linkLists:
+      - linkListType: how-to-guide
+        links:
           - text: "Analyze data requests and responses"
             url: how-to/analyze-data-request-response.md
           - text: "Get context data"
@@ -49,8 +58,11 @@ landingContent:
             url: how-to/get-table-metadata.md
           - text: "Application Lifecycle Management (ALM)"
             url: how-to/alm.md
-          - text: "Manage telemetry for the PAC CLI code commands"
-            url: how-to/telemetry.md
+          - text: "Set up Azure App Insights"
+            url: how-to/set-up-azure-app-insights.md
+          - text: "Migrate your code to v1.0"
+            url: how-to/migrate-to-v1.md
+
 
     # Card
   - title: Troubleshooting guides

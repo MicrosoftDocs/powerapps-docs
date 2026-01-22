@@ -37,7 +37,7 @@ items:
             href: how-to/telemetry.md
           - name: Set up Azure App Insights
             href: how-to/set-up-azure-app-insights.md
-          - name: Migrate your code to v1.0.0
+          - name: Migrate your code to v1.0
             href: how-to/migrate-to-v1.md
       - name: Troubleshoot
         items:
