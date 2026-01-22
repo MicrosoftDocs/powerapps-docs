@@ -85,51 +85,52 @@ For the examples in the following steps, the example types from the model file a
 
  1. Map selected IDs to expanded objects  
    
-   > [!NOTE]
-   > Generated models might include internal property names with `#` (for example: `Choices1#Id`) that are used for binding in forms but shouldn't be included in the payload sent to the SharePoint connector. When you update or create a row in your list, the SharePoint API expects you to provide the expanded object for referenced columns (author, editor, person/group columns, and so on) rather than just the IDs.
-   Refer to the [SharePoint API documentation](/sharepoint/dev/sp-add-ins/complete-basic-operations-using-sharepoint-rest-endpoints) for more information.
-   
-   ```typescript
-   const choices1Obj = selectedChoices1Id 
-   ? choices1Options.find(c => c.Id === selectedChoices1Id) 
-   : undefined; 
-   const personObj = selectedPersonClaims 
-   ? personOptions.find(p => p.Claims === selectedPersonClaims) 
-   : undefined; 
-   const lookupObj = selectedLookupId 
-   ? lookupOptions.find(l => l.Id === selectedLookupId) 
-   : undefined; 
-   ```
-   
+  > [!NOTE]
+  > Generated models might include internal property names with `#` (for example: `Choices1#Id`) that are used for binding in forms but shouldn't be included in the payload sent to the SharePoint connector. When you update or create a row in your list, the SharePoint API expects you to provide the expanded object for referenced columns (author, editor, person/group columns, and so on) rather than just the IDs.
+  >
+  >Refer to the [SharePoint API documentation](/sharepoint/dev/sp-add-ins/complete-basic-operations-using-sharepoint-rest-endpoints) for more information.
+  
+  ```typescript
+  const choices1Obj = selectedChoices1Id 
+  ? choices1Options.find(c => c.Id === selectedChoices1Id) 
+  : undefined; 
+  const personObj = selectedPersonClaims 
+  ? personOptions.find(p => p.Claims === selectedPersonClaims) 
+  : undefined; 
+  const lookupObj = selectedLookupId 
+  ? lookupOptions.find(l => l.Id === selectedLookupId) 
+  : undefined; 
+  ```
+  
  1. Build payload and create
    
-   Make sure to omit the properties containing `#`, include expanded objects for choice, lookups, and people, and add content type info if necessary. Use the generated model types to help build the payload.
-   
-   ```typescript
-   // Content type (example static sample; retrieve dynamically if needed) 
-   const contentTypeId = "0x0100..."; // replace with your content type id 
-   
-   const payload = { 
-   Title: titleValue, 
-   Choices1: choices1Obj, 
-   Choices2: choices2Obj, 
-   Choices3: choices3Obj, 
-   person: personObj, 
-   yesno: yesnoBoolean, 
-   lookup: lookupObj,
-   "{ContentType}": { 
-      "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedContentType",
-      Id: contentTypeId, 
-      Name: "Item" 
-   } 
-   } as Partial<Omit<ChoicesTest1, "ID">>; 
-   
-   // create 
-   const created = await ChoicesTest1Service.create(payload as Omit<ChoicesTest1, "ID">); 
-   if (created.data) { 
-   // success 
-   } 
-   ```
+  Make sure to omit the properties containing `#`, include expanded objects for choice, lookups, and people, and add content type info if necessary. Use the generated model types to help build the payload.
+  
+  ```typescript
+  // Content type (example static sample; retrieve dynamically if needed) 
+  const contentTypeId = "0x0100..."; // replace with your content type id 
+  
+  const payload = { 
+  Title: titleValue, 
+  Choices1: choices1Obj, 
+  Choices2: choices2Obj, 
+  Choices3: choices3Obj, 
+  person: personObj, 
+  yesno: yesnoBoolean, 
+  lookup: lookupObj,
+  "{ContentType}": { 
+     "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedContentType",
+     Id: contentTypeId, 
+     Name: "Item" 
+    } 
+  } as Partial<Omit<ChoicesTest1, "ID">>; 
+  
+  // create 
+  const created = await ChoicesTest1Service.create(payload as Omit<ChoicesTest1, "ID">); 
+  if (created.data) { 
+  // success 
+  } 
+  ```
    
 ## Update records
 
