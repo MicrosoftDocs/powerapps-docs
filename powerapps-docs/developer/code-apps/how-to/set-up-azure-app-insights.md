@@ -92,7 +92,7 @@ Use the following steps to provision Application Insights, install the SDK, conn
    - **`logMetric` type**: Define it as `(value: Metric) => void` for clarity.
    - **Logger interface**:
 
-      ```typescript 
+      ```typescript
       interface ILogger { 
       logMetric?: (value: Metric) => void; 
       } 
@@ -134,7 +134,7 @@ Use the following steps to provision Application Insights, install the SDK, conn
 
 1. (Optional) Log custom events
 
-   You can log additional telemetry (beyond default metrics) by calling your monitoring tool's own APIs at the desired points in your app. For more advanced scenarios, refer to the official [Application Insights documentation](/azure/azure-monitor/app/app-insights-overview) for guidance. Note that you should avoid logging sensitive or unnecessary data and always follow your organization's compliance guidelines.
+   You can log more telemetry (beyond default metrics) by calling your monitoring tool's own APIs at the desired points in your app. For more advanced scenarios, refer to the official [Application Insights documentation](/azure/azure-monitor/app/app-insights-overview) for guidance. You should avoid logging sensitive or unnecessary data and always follow your organization's compliance guidelines.
 
 ## Sample queries
 
