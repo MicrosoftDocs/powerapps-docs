@@ -63,7 +63,7 @@ Remove code that checks initialization state flags, such as `isInitialized`, bef
 
 ## New `setConfig` API
 
-A new `setConfig` API is available from [@microsoft/apps-powerapps/app](https://www.npmjs.com/package/@microsoft/apps-powerapps/app). By using this API, apps can opt in to optional behaviors and observability features.
+A new `setConfig` API is available from [@microsoft/power-apps](https://www.npmjs.com/package/@microsoft/power-apps)/app. By using this API, apps can opt in to optional behaviors and observability features.
 
 Supported config options include:
 

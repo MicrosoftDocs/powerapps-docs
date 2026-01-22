@@ -52,17 +52,12 @@ landingContent:
         links:
           - text: "Analyze data requests and responses"
             url: how-to/analyze-data-request-response.md
-          - text: "Get context data"
-            url: how-to/retrieve-context.md
-          - text: "Get Dataverse tables metadata"
-            url: how-to/get-table-metadata.md
           - text: "Application Lifecycle Management (ALM)"
             url: how-to/alm.md
           - text: "Set up Azure App Insights"
             url: how-to/set-up-azure-app-insights.md
           - text: "Migrate your code to v1.0"
             url: how-to/migrate-to-v1.md
-
 
     # Card
   - title: Troubleshooting guides
