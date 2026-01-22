@@ -83,7 +83,7 @@ const fetchOne = async (id: string) => {
 
 For the examples in the following steps, the example types from the model file are `ChoicesTest1`, `Choices1Value`, `personValue`, and `lookupValue`.
 
- 1. Map selected IDs to expanded objects  
+1. Map selected IDs to expanded objects  
 
    > [!NOTE]
    > Generated models might include internal property names with `#` (for example: `Choices1#Id`) that are used for binding in forms but shouldn't be included in the payload sent to the SharePoint connector. When you update or create a row in your list, the SharePoint API expects you to provide the expanded object for referenced columns (author, editor, person/group columns, and so on) rather than just the IDs.
@@ -102,7 +102,7 @@ For the examples in the following steps, the example types from the model file a
    : undefined; 
    ```
 
- 1. Build payload and create
+1. Build payload and create
 
    Make sure to omit the properties containing `#`, include expanded objects for choice, lookups, and people, and add content type info if necessary. Use the generated model types to help build the payload.
 
