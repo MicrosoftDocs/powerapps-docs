@@ -3,7 +3,7 @@ title: Modern, refreshed look for model-driven apps
 description: Learn about the updated user interface that makes model-driven apps easier to use.
 author: sriharibs-msft
 ms.topic: overview
-ms.date: 01/19/2026
+ms.date: 01/22/2026
 ms.service: powerapps
 ms.subservice: end-user
 ms.author: srihas
@@ -27,7 +27,6 @@ Model-driven apps have updated styling including fonts, colors, borders, and sha
 > With the **2026 Wave 1** release, the **New Look** is mandatory for all users. Makers will no longer be able to switch a model-driven app to the classic look. 
 >
 > The **New look** toggle was removed for users with the **2025 Wave 1** release. 
-
 
 ## What's included with the modern, refreshed look
 
