@@ -1,5 +1,5 @@
 ---
-title: "Migration Guide v1.0.3"
+title: "Power Apps SDK v1.0.1 Migration Guide"
 description: "This is the migration guide for v.1.0.3 of the Power Apps SDK."
 ms.author: jordanchodak
 author: jordanchodakWork
@@ -33,9 +33,3 @@ A new setConfig API is available from `@microsoft/apps-powerapps/app`. This allo
 Supported config options include:
 
 **Logger**: Supply a logger with a `logMetric` function. This logMetric function will be used to log session and network metrics to the telemetry or monitoring service of your choice. See [How to set up Azure Application Insights](/how-to/set-up-azure-app-insights) for more information.
-
-
-
-
-
-
