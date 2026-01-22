@@ -12,7 +12,7 @@ ms.custom:
   - ai-seo-date: 5/25/2025
 ai-usage: ai-assisted
 ms.reviewer: 
-ms.date: 10/1/2025
+ms.date: 01/21/2026
 ms.update-cycle: 180-days
 ms.subservice: canvas-maker
 search.audienceType: 
@@ -29,9 +29,6 @@ contributors:
 
 Copilot in Power Apps lets you quickly build apps using natural language. Describe your business needs, and the service generates an app and data model for you—no coding required. People interact with your app by asking questions or giving commands in everyday language, making the experience more intuitive and engaging. This article gives an overview of Copilot in Power Apps, including prerequisites, availability, and how to manage Copilot features in your environment. Learn about Copilot and generative AI features in [Microsoft Power Apps.](../../copilot-landing-page.yml)
 
-> [!NOTE]
->
-> This capability is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview).
 
 ## Prerequisites
 
@@ -39,8 +36,10 @@ Each Copilot feature can have different requirements. Check the documentation fo
 
 > [!IMPORTANT]
 >
+> - This capability is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview).
 > - Some Copilot features are in preview.
 > - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2189520), and are available before an official release so customers can get early access and provide feedback.
+
 
 ## Availability
 
