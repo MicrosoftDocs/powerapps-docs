@@ -1,18 +1,20 @@
 ---
-title: "Power Apps SDK v1.0.1 Migration Guide"
-description: "This is the migration guide for v.1.0.3 of the Power Apps SDK."
+title: "Power Apps SDK v1.0 Migration Guide (preview)"
+description: "This is the migration guide for v.1.0 of the Power Apps SDK."
 ms.author: jordanchodak
 author: jordanchodakWork
 ms.date: 1/20/2025
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
-
+ - JimDaly
 ---
 
-# Power Apps SDK v1.0.1 Migration Guide
+# Power Apps SDK v1.0 Migration Guide (preview)
 
-This guide applies to apps built using SDK 0.3.21 or earlier.
+As code apps are approaching general availability, we are taking steps to improve our SDK as we release version 1.0. These include some breaking changes from version 0.3.21 or earlier.
+
+
 
 ## Breaking changes
 
@@ -26,9 +28,9 @@ The initialize API has been fully removed in SDK 1.0.3. Apps must no longer impo
 
 ## Key changes
 
-**New setConfig API**
+**New `setConfig` API**
 
-A new setConfig API is available from `@microsoft/apps-powerapps/app`. This allows apps to opt in to optional behaviors and observability features.
+A new `setConfig` API is available from `@microsoft/apps-powerapps/app`. This allows apps to opt in to optional behaviors and observability features.
 
 Supported config options include:
 

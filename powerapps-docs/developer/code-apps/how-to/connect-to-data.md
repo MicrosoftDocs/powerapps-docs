@@ -3,7 +3,7 @@ title: "How to: Connect your code app to data (preview)"
 description: "Learn how to connect your code app to data"
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 12/11/2025
+ms.date: 01/22/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
