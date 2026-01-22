@@ -3,7 +3,7 @@ title: "How to: Connect your code app to Dataverse (preview)"
 description: "Learn how to connect your code app to Dataverse"
 ms.author:  jordanchodak
 author: jordanchodakWork
-ms.date: 01/07/2026
+ms.date: 01/22/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
@@ -62,23 +62,22 @@ The following scenarios are supported when connecting to Dataverse using the Pow
 
 Before performing create, read, update, and delete (CRUD) operations in your code app, import the required types and services.
 
-**Import required types and services**
+When you add a data source, model and service files are automatically generated and placed in the `/generated/services/` folder.
+For example, if you add the built-in [Accounts](../../data-platform/reference/entities/account.md) table as a data source, the following files are created:
 
-   When you add a data source, model and service files are automatically generated and placed in the `/generated/services/` folder.
-   For example, if you add the built-in [Accounts](../../data-platform/reference/entities/account.md) table as a data source, the following files are created:
+- `AccountsModel.ts` – Defines the data model for the Accounts table.
+- `AccountsService.ts` – Provides service methods for interacting with the Accounts data.
 
-   - `AccountsModel.ts` – Defines the data model for the Accounts table.
+You can import and use them in your code like this:
 
-   - `AccountsService.ts` – Provides service methods for interacting with the Accounts data.
-
-   You can import and use them in your code like this:
-
-   ```typescript
-   import { AccountsService } from './generated/services/AccountsService';
-   import type { Accounts } from './generated/models/AccountsModel';
-   ```
+```typescript
+import { AccountsService } from './generated/services/AccountsService';
+import type { Accounts } from './generated/models/AccountsModel';
+```
 
 ## Create records
+
+Use the generated model types and service methods to create new Dataverse records from your code app.
 
 1. **Create the record object using the generated model**
 
@@ -105,7 +104,7 @@ Before performing create, read, update, and delete (CRUD) operations in your cod
    };
    ```
 
-2. **Submit the record using the generated service**
+1. **Submit the record using the generated service**
 
    Use the functions in the generated service file to submit your record. For example, for the Accounts entity:
 
