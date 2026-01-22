@@ -4,7 +4,7 @@ description: Discover the new AI-native Power Apps vibe code experience. Build a
 author: mduelae
 ms.author: mkaur
 ms.reviewer: mkaur
-ms.date: 01/21/2026
+ms.date: 01/22/2026
 ms.topic: concept-article
 ---
 
@@ -13,9 +13,6 @@ ms.topic: concept-article
 [This article is prerelease documentation and is subject to change.]
 
 The new Power Apps experience is an AI-native platform that builds solutions to business problems, including requirements, data, and full apps with generated code. You can automate workflows, integrate data sources seamlessly, and accelerate app development without extensive coding knowledge.
-
-
-:::image type="content" source="media/overview/new-experience-home-page.png" alt-text="Screenshot of the home page for the new Power Apps experience":::
 
 Watch this video to learn about the new Power Apps experience.
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=085271a3-bec6-4740-89df-044f984466d2]
