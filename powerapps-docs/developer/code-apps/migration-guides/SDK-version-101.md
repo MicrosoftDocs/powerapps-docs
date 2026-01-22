@@ -1,6 +1,6 @@
 ---
-title: "Migration Guide v1.0.1"
-description: "This is the migration guide for v.1.0.1 of the Power Apps SDK."
+title: "Migration Guide v1.0.3"
+description: "This is the migration guide for v.1.0.3 of the Power Apps SDK."
 ms.author: jordanchodak
 author: jordanchodakWork
 ms.date: 1/20/2025
@@ -16,7 +16,7 @@ This guide applies to apps built using SDK 0.3.21 or earlier.
 
 ## Breaking changes
 
-The initialize API has been fully removed in SDK 1.0.1. Apps must no longer import or call `initialize`. You can now make data calls, retrieve context, and interact with the platform directly without waiting on SDK initialization.
+The initialize API has been fully removed in SDK 1.0.3. Apps must no longer import or call `initialize`. You can now make data calls, retrieve context, and interact with the platform directly without waiting on SDK initialization.
 
 **Required action**
 
