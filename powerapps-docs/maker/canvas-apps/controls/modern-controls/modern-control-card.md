@@ -5,7 +5,7 @@ author: yogeshgupta698
 
 ms.topic: reference
 ms.component: canvas
-ms.date: 1/13/2025
+ms.date: 01/21/2026
 ms.subservice: canvas-maker
 ms.author: yogupt
 
@@ -48,7 +48,7 @@ The control adapts its layout to the sections a maker chooses to configure, enab
 
 ## Behavior
 
-**OnSelect** – Action triggered when the card is selected by the user  
+**OnSelect** – Action triggered when the user selects the card  
 
 **DisplayMode** – Controls whether the card is interactive, view‑only, or disabled  
 
@@ -68,7 +68,7 @@ The control adapts its layout to the sections a maker chooses to configure, enab
 
 ## Examples
 
-Below are three example Card configurations you can copy and paste directly into your app configuration.
+The following examples show three Card configurations you can copy and paste directly into your app configuration.
 
 ### **Vertical card with description**
 ```yaml
@@ -89,19 +89,19 @@ Below are three example Card configurations you can copy and paste directly into
     Properties:
       Description: ="This is a long description text. It provides a rich, narrative overview designed to help users understand the purpose, value, and key capabilities of the experience. This section typically expands beyond a short summary by offering contextual background, explaining how the feature solves real user problems, and detailing what makes it uniquely impactful."
       Height: =240
-      Image: =
+      Image: =Blank()
       LayoutDirection: =LayoutDirection.Horizontal
       Width: =300
       X: =40
       Y: =40
 ```
 
-### **Vertical card with header on top***
+### **Vertical card with header on top**
 ```yaml
 - VerticalCardwithHeaderOnTop:
     Control: ModernCard@1.0.0
     Properties:
-      HeaderImage: =
+      HeaderImage: =Blank()
       Height: =240
       ImagePlacement: =ImagePlacement.AfterHeader
       Subtitle: ="This is subtitle which can take whole of single line."
