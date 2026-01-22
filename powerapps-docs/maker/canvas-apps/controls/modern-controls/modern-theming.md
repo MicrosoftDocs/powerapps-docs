@@ -1,12 +1,12 @@
 ---
 title: Use modern themes in canvas apps
-description: Learn about modern themes and how to use them in Microsoft Power Apps.
+description: Learn how to create, customize, and apply modern themes in Power Apps canvas apps. Streamline app styling with Fluent design and consistent visual appeal.
 author: jasongre
 
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: mkaur-msft
-ms.date: 04/04/2024
+ms.date: 01/21/2026
 ms.subservice: canvas-maker
 ms.author: jasongre
 
@@ -18,38 +18,38 @@ contributors:
 
 # Use modern themes in canvas apps
 
-Modern themes are pre-established style sets that can transform the look of your app. These themes, based on Microsoft's Fluent design language, modify various style aspects such as color, typography, borders, and shadows, ensuring a visually pleasing interface.
+Modern themes are preestablished style sets that transform the look of your canvas app in Power Apps. These themes, based on Microsoft's Fluent design language, modify various style aspects such as color, typography, borders, and shadows, ensuring a visually pleasing interface that streamlines app development.
 
-Modern themes streamline the customization process and enable creators to effortlessly design an app with a unified and consistent visual appeal.
+Modern themes enable makers to effortlessly design apps with unified and consistent visual appeal, reducing customization time while maintaining professional aesthetics.
 
 ## Prerequisites
 
 Enable the modern themes feature in the settings of an app:
 
 1. Open your app or create a new app.
-2. From your app, open **Settings** from the app authoring menu or [modern command bar](../../power-apps-studio.md#1--power-apps-studio-modern-command-bar).
-3. Go to **Updates** > **New** > **Modern controls and themes**.
-4. Set the **Modern controls and themes** toggle to **On**.
-5. Close the **Settings** popup.
+1. From your app, open **Settings** from the app authoring menu or [modern command bar](../../power-apps-studio.md#1--power-apps-studio-modern-command-bar).
+1. Go to **Updates** > **New** > **Modern controls and themes**.
+1. Set the **Modern controls and themes** toggle to **On**.
+1. Close the **Settings** popup.
 
 For more information, see [Enable modern controls and themes for your app](overview-modern-controls.md#enable-modern-controls-and-themes-for-your-app).
 
 > [!NOTE]
-> When modern controls and themes is enabled, you can't select classic themes from the command bar. To use *retired* classic themes, go to **Keep classic themes** on the **Retired** tab of **Updates**  in **Settings** and toggle it to **On**.
+> When you enable modern controls and themes, you can't select classic themes from the command bar. To use *retired* classic themes, go to **Retired** > **Keep classic themes** in **Updates** and toggle it to **On**.
 
 ## Create a theme
 
-There are several out-of-the-box themes available to style your app. You can also design your own theme for a more personalized visual aesthetic or paste a theme from YAML format.
+Use the available themes to style your app. Or, design your own theme for a more personalized visual aesthetic. You can also paste a theme from YAML format.
 
 1. On the app authoring menu, select ![Themes icon](media/theme-icon.png) **Themes**.
-2. On the **Themes** pane, select **Add a theme**.
-3. Select **Create custom theme** to design a new theme, or select **Paste theme** to import a theme from YAML format. For more information about pasting themes, see [Copy and paste themes](#copy-and-paste-themes).
+1. On the **Themes** pane, select **Add a theme**.
+1. Select **Create custom theme** to design a new theme, or select **Paste theme** to import a theme from YAML format. For more information about pasting themes, see [Copy and paste themes](#copy-and-paste-themes).
 
    The **Create a theme** dialog appears.
 
     :::image type="content" source="media/create-custom-theme.png" alt-text="Screenshot showing the Create a theme user interface.":::
 
-4. In the **Create a theme** dialog, choose or enter the following information:
+1. In the **Create a theme** dialog, choose or enter the following information:
 
    | Feature | Action or description |
    |---------|-------------|
@@ -59,25 +59,25 @@ There are several out-of-the-box themes available to style your app. You can als
    | Font | Choose your default font used by the controls in the app. |
    | Torsion | Impacts the tint, shade, or tone of the palette. Torsion isn't applicable if you choose **Lock primary color**. |
    | Vibrancy | Impacts the muteness or brightness of the palette. Vibrancy isn't applicable if you choose **Lock primary color**. |
-   | Palette overrides | Override the color used for one or more slots in the palette by selecting a slot and choosing a new color. You can select **Reset** to return to the generated value for that slot.  |
+   | Palette overrides | Override the color used for one or more slots in the palette by selecting a slot and choosing a new color. Select **Reset** to return to the generated value for that slot.  |
 
    You can also look at a static preview of your new theme. Interact with the sample controls to see how your theme is applied to the rest state and various interaction states.
 
    :::image type="content" source="media/preview-option.png" alt-text="Screenshot showing the Preview section of the pane when you create or edit a theme. ":::
 
-5. Select **Create**. Your new theme is created and applied to your app.
+1. Select **Create**. Your new theme is created and applied to your app.
 
 ## Copy and paste themes
 
-You can copy and paste themes in YAML format to duplicate themes within your app or share them across different apps. This makes it easy to maintain consistent branding across multiple applications or back up your custom theme configurations.
+You can copy and paste themes in YAML format to duplicate themes within your app or share them across different apps. This approach makes it easy to maintain consistent branding across multiple applications or back up your custom theme configurations.
 
 ### Copy a theme
 
 To copy a theme's YAML definition:
 
 1. On the app authoring menu, select ![Themes icon](media/theme-icon.png) **Themes**.
-2. On the **Themes** pane, locate the theme you want to copy.
-3. Select the **More options** (...) button on the theme card, then select **Copy theme**.
+1. On the **Themes** pane, locate the theme you want to copy.
+1. Select the **More options** (...) button on the theme card, and then select **Copy theme**.
    
    :::image type="content" source="media/copy-a-theme.png" alt-text="Screenshot that shows the location of the copy theme selector.":::
 
@@ -88,9 +88,9 @@ The theme definition is copied to your clipboard in YAML format.
 To paste a theme from YAML:
 
 1. Copy a valid theme YAML definition to your clipboard.
-2. On the app authoring menu, select ![Themes icon](media/theme-icon.png) **Themes**.
-3. On the **Themes** pane, select **Add a theme**.
-4. Select **Paste theme**.
+1. On the app authoring menu, select ![Themes icon](media/theme-icon.png) **Themes**.
+1. On the **Themes** pane, select **Add a theme**.
+1. Select **Paste theme**.
  
    :::image type="content" source="media/paste-a-theme.png" alt-text="Screenshot showing the location of the ellipses points where you can paste a theme.":::
 
@@ -119,7 +119,7 @@ The following table describes each property in the YAML format:
 | Theme Name | The display name for your theme. Must be unique within the app. | Yes |
 | Font | CSS font family specification. Use standard web font names. | Yes |
 | BasePaletteColor | The seed color for palette generation in hex format (for example, '#2e4bf0'). This color determines the base for all 16 color slots. | Yes |
-| HueTorsion | Adjusts the hue rotation of generated colors. Range: -100 to 100. Negative values shift toward cooler tones, positive toward warmer tones. | Yes |
+| HueTorsion | Adjusts the hue rotation of generated colors. Range: -100 to 100. Negative values shift toward cooler tones, positive values toward warmer tones. | Yes |
 | Vibrancy | Adjusts the saturation and brightness. Range: -100 to 100. Negative values create more muted colors, positive values create more vibrant colors. | Yes |
 | ColorOverrides | Optional overrides for individual color slots (Lighter30, Lighter20, Lighter10, Base, Darker10, Darker20, Darker30, Darker40). Specify only the colors you want to customize. | No |
 
@@ -144,7 +144,7 @@ Themes:
 
 To use this theme in another app:
 
-1. Copy the YAML above.
+1. Copy the YAML code.
 1. Open the target app in Power Apps Studio.
 1. In the **Themes** panel, select **Add a theme** > **Paste theme**.
 
@@ -156,26 +156,26 @@ The Corporate Brand theme is now available in your app.
 - **Share across teams**: Share theme YAML definitions with team members to ensure consistent branding across multiple apps.
 - **Duplicate and modify**: To create theme variations, copy an existing theme, paste it, then modify the YAML properties rather than starting from scratch.
 - **Font availability**: When pasting themes across apps or organizations, ensure the specified font families are available and properly licensed.
-- **Minimal overrides**: For easier maintenance, only specify ColorOverrides for colors that must differ from the generated palette. Let the BasePaletteColor, HueTorsion, and Vibrancy properties handle the rest.
+- **Minimal overrides**: For easier maintenance, only specify `ColorOverrides` for colors that must differ from the generated palette. Let the `BasePaletteColor`, `HueTorsion`, and `Vibrancy` properties handle the rest.
 - **Test accessibility**: After pasting a theme, test it on both desktop and mobile views to ensure color contrast and readability meet accessibility standards (WCAG 2.1 AA minimum).
 
 ## Apply modern theme
 
 1. On the app authoring menu, select ![Themes icon](media/theme-icon.png) **Themes**.
-2. On the **Themes** pane, select one of the default themes.
-3. If you have classic controls in your app, you're prompted to apply the modern theme to these controls. You can always select **Undo** from the command bar if you don't like the theme.
+1. On the **Themes** pane, select one of the default themes.
+1. If you have classic controls in your app, you're prompted to apply the modern theme to these controls. You can always select **Undo** from the command bar if you don't like the theme.
    > [!NOTE]
-   > When you choose to apply modern themes to classic controls, Power Fx formulas are set on properties of the impacted controls that reference variables from the modern theme. Visually, classic controls might not align exactly with their modern control counterparts, as the classic controls are not based on Fluent v9.
+   > When you choose to apply modern themes to classic controls, Power Fx formulas are set on properties of the impacted controls that reference variables from the modern theme. Visually, classic controls might not align exactly with their modern control counterparts, as the classic controls aren't based on Fluent v9.
 
-When a modern theme is selected, the style of the theme is automatically applied to the controls in your app. This action sets the **App.Theme** property.
+When you select a modern theme, the style of the theme automatically applies to the controls in your app. This action sets the **App.Theme** property.
 
 ## Edit a theme
 
-You can edit the theme and change one or more parameters of the custom theme.
+You can edit a theme and change one or more parameters of the custom theme.
 
 1. On the app authoring menu, select ![Themes icon](media/theme-icon.png) **Themes**.
 
-1. On the **Themes** pane, find the tile of the theme you want to edit and select the overflow menu and then **Edit**.
+1. On the **Themes** pane, find the tile of the theme you want to edit. Select the overflow menu and then select **Edit**.
 
    :::image type="content" source="media/edit-a-theme.png" alt-text="Screenshot showing the location of the ellipses points where you can select Edit.":::
 
@@ -183,39 +183,39 @@ You can edit the theme and change one or more parameters of the custom theme.
 1. Select **Save** or cancel out of the dialog.
 
 > [!NOTE]
-> You can't edit out-of-the-box themes. Changes made through the visual theme editor update the underlying YAML properties. If you copy, modify, and re-paste a theme's YAML, those changes reflect in the visual editor and anywhere the theme is applied.
+> You can't edit default themes. Changes that you make through the visual theme editor update the underlying YAML properties. If you copy, modify, and re-paste a theme's YAML, those changes appear in the visual editor and anywhere the theme is applied.
 
 ## Delete a theme
 
-If you decide you no longer need a custom theme in your app, you can delete it.
+If you no longer need a custom theme in your app, you can delete it.
 
 1. On the app authoring menu, select ![Themes icon](media/theme-icon.png) **Themes**.
-1. On the **Themes** pane, find theme that you want to edit, select the overflow menu, then select **Delete**.
+1. On the **Themes** pane, find the theme that you want to delete, select the overflow menu, and then select **Delete**.
 1. On the confirmation dialog box, select **Delete theme**.
 
-If you have any Power Fx formulas that reference this theme in your app, you need to manually update the formula.
+If your app has any Power Fx formulas that reference this theme, you need to manually update the formula.
 
 > [!NOTE]
-> You can't delete out-of-the-box themes.
+> You can't delete built-in themes.
 
 > [!TIP]
 > Before deleting a custom theme, consider copying its YAML definition for backup. You can easily restore the theme later by pasting the YAML.
 
 ## Use themes with Power Fx
 
-Modern theme objects are available for makers to use through Power Fx. The currently active theme object can be referenced by **App.Theme**. Any theme loaded into the app can be referenced by its instance name such as **RedTheme**. We recommend that you reference the theme object using **App.Theme** to ensure that the color selections adapt to theme changes.
+Makers can use modern theme objects through Power Fx. Reference the currently active theme object by using **App.Theme**. Reference any theme loaded into the app by its instance name, such as **RedTheme**. To ensure that the color selections adapt to theme changes, reference the theme object by using **App.Theme**.
 
 Each theme object includes the following information:
 
 - **Name** of the theme
-- **Colors**, a 16-color brand ramp collection individually accessible by name; **Primary foreground color** is the default text color, for example the color of text on a background
+- **Colors**, a 16-color brand ramp collection that you can access individually by name; **Primary foreground color** is the default text color, such as the color of text on a background
 - **Font** used in the theme
 
-The image shows the slot variables inside the **Colors** collection and, as an example, the corresponding colors for the **Steel** theme.
+The following image shows the slot variables inside the **Colors** collection and, as an example, the corresponding colors for the **Steel** theme.
 
 :::image type="content" source="media/modern-themes-color-ramp.png" alt-text="Screenshot that shows the slot variables and 16-part color brand ramp for the steel theme.":::
 
-Using the theme brand ramp, you can manually style a classic control based on the current modern theme, for example `Button.Fill = App.Theme.Colors.Primary`.
+By using the theme brand ramp, you can manually style a classic control based on the current modern theme. For example, set `Button.Fill = App.Theme.Colors.Primary`.
 
 > [!NOTE]
 > To provide feedback, see: [Provide your feedback to Microsoft](overview-modern-controls.md#provide-feedback-to-microsoft).
