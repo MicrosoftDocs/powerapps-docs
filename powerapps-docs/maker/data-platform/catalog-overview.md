@@ -70,7 +70,6 @@ You can submit unmanaged solutions to the catalog for other makers to install an
    > - Environment variables.
    > - Canvas apps.
    > - Modern workflows.
-   > - Security roles.
    > - `AiModel` and its subcomponents like `AiConfig`.
    > - Web resources.
    > - Power Apps component framework components. This includes modern solution aware components created using the Power Apps component framework. For example custom API, `AiPlugin`, and `AIPlugin` operation.
