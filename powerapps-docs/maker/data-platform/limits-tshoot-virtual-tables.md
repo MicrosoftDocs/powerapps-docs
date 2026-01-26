@@ -127,7 +127,7 @@ The following are limitations for each data source.
   1. Select the **History** tab.
   1. **Search** for `ConnectorProvider`.
   1. View the information to see whether the solution needs to be updated.
-  1. If the history indicates an update is needed, go to [the Microsoft commercial marketplace](https://appsource.microsoft.com/) search for **Virtual Connector Provider**, and then select **Get it now** to import the solution into your environment.
+  1. If the history indicates an update is needed, go to [the Microsoft commercial marketplace](https://marketplace.microsoft.com/) search for **Virtual Connector Provider**, and then select **Get it now** to import the solution into your environment.
   1. Follow the steps to create the virtual table again.
 
 - A message is displayed “Connection ‘xyz’ not found in current environment.” when retrieving the list of connections.<br />
@@ -138,7 +138,7 @@ The following are limitations for each data source.
   1. Select the **History** tab.
   1. **Search** for `ConnectorProvider`.
   1. View the information to see whether the solution needs to be updated.
-  1. If the history indicates an update is needed, go to [the Microsoft commercial marketplace](https://appsource.microsoft.com/) search for **Virtual Connector Provider**, and then select **Get it now** to import the solution into your environment.
+  1. If the history indicates an update is needed, go to [the Microsoft commercial marketplace](https://marketplace.microsoft.com/) search for **Virtual Connector Provider**, and then select **Get it now** to import the solution into your environment.
   1. Follow the steps to create the virtual table again.
 
 - You get notified that a timeout occurred during the virtual table creation. <br />

@@ -67,6 +67,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [msdyn_conditions](#BKMK_msdyn_conditions)
 - [msdyn_fieldmapping](#BKMK_msdyn_fieldmapping)
 - [msdyn_harvestingdatatype](#BKMK_msdyn_harvestingdatatype)
+- [msdyn_harvestsourceentity](#BKMK_msdyn_harvestsourceentity)
 - [msdyn_historicalcaseharvestrunId](#BKMK_msdyn_historicalcaseharvestrunId)
 - [msdyn_pageIndex](#BKMK_msdyn_pageIndex)
 - [msdyn_paginationmarker](#BKMK_msdyn_paginationmarker)
@@ -183,6 +184,24 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |---|---|
 |0|**Case**|
 |1|**Conversation**|
+|2|**Custom Entity**|
+
+### <a name="BKMK_msdyn_harvestsourceentity"></a> msdyn_harvestsourceentity
+
+|Property|Value|
+|---|---|
+|Description||
+|DisplayName|**Knowledge Harvest Source Entity**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_harvestsourceentity`|
+|RequiredLevel|None|
+|Type|Memo|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1048576|
 
 ### <a name="BKMK_msdyn_historicalcaseharvestrunId"></a> msdyn_historicalcaseharvestrunId
 

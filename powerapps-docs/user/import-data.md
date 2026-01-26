@@ -4,7 +4,7 @@ description: Discover how to import data into your model-driven app, ensuring co
 author: shwetamurkute
 ms.component: pa-user
 ms.topic: how-to
-ms.date: 05/08/2024
+ms.date: 10/21/2025
 ms.subservice: end-user
 ms.author: smurkute
 ms.reviewer: smurkute
@@ -15,6 +15,8 @@ ms.custom:
   - ai-gen-docs-bap
   - ai-gen-desc
   - ai-seo-date:05/08/2024
+contributors:
+  - dingbx
 ---
 
 # How to import data
@@ -131,7 +133,7 @@ The option values drop-down list combines the values available in the incoming f
 After import, the import wizard will add all mapped values in your app, but will drop unmapped values from the import file that aren't yet in your app. For example, you could map the "Low" source value to the "Cold" target value, but map the "High" source value to the (new) "High" target value. Based on these mappings, the import wizard creates "High" as a target value in your app. It doesn't create "Low" as a target value in your app because you didn't map any source to this target value.
 
 >[!NOTE]
->You can map a column in your source file to a "Two Options" or "Multiselect Option Set" column. When mapping to a "Multiselect Option Set," if your source file includes values not available in your app, new values may be created in Dataverse if the import mapping is set to "NotMapped." If the mapping is set to "Ignore," the import will fail.
+>You can map a column in your source file to a "Two Options" or "Multiselect Option Set" column. When mapping to a "Multiselect Option Set," if your source file includes values not available in your app, new values may be created in Dataverse if the import mapping is set to **NotMapped**. If the mapping is set to **Ignore**, the record can be successfully imported. And, for "Multi-Select Option Set" fields, the values are not imported, and no new values are created in the target environment.
 
 ### Map lookup columns
 
@@ -180,6 +182,9 @@ After the import is complete, you can view the records that were successfully im
    - **Importing**
    - **Completed**
 
+    >[!NOTE]
+    > For tables that include a self-referencing lookup,  relationships are resolved in two phases during the **Importing** stage. In the first phase, the base records are created. In the second phase, the self-references are updated to ensure data integrity.
+
 1. After the import is complete, the **Success**, **Failures**, and **Partial Failures** columns show the number of records that were successfully imported, failed to import, or were partially imported.
 
 1. Select an import job to view the records that didn't import or were partially imported.
@@ -208,6 +213,10 @@ You can delete the import file and imported records if you want to reimport the 
 
 - Excel Import isn't supported with [Virtual tables](../maker/data-platform/limits-tshoot-virtual-tables.md#general-limitations) or [Elastic tables](../maker/data-platform/create-edit-elastic-tables.md#features-currently-not-supported-with-elastic-tables)
 - Excel import updates fields from the primary table but ignores fields from related tables.
+- Excel import jobs run in parallel only when the file size is under 1 MB. Files larger than 1 MB are processed sequentially to avoid resource exhaustion.
+
+>[!NOTE]
+> To enable parallel processing, keep each file under 1 MB. For `.zip` files, the decompressed size must also be under 1 MB. Note that files with special characters may have a calculated size that exceeds 1 MB even if the original file appears smaller.
 
 ### See also
 

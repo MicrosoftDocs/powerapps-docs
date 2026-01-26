@@ -18,8 +18,12 @@
     href:  ./canvas-apps/sign-in-to-power-apps.md
   - name: Get started with Power Apps
     href: ./canvas-apps/intro-maker-portal.md
-  - name: Copilot in Power Apps (preview)
-    href: ./canvas-apps/ai-overview.md
+  - name: Copilot in Power Apps 
+    items: 
+    - name: Copilot in Power Apps 
+      href: ../copilot-landing-page.yml
+    - name: Overview 
+      href: ./canvas-apps/ai-overview.md
   - name: Use the learn hub
     href: ./common/learn-hub.md
   - name: "What's new?"
@@ -35,7 +39,7 @@
   items:
   - name: In a browser
     href: ../user/run-app-browser.md
-  - name: From AppSource
+  - name: From Marketplace
     href: ../user/app-source.md
   - name: Use canvas apps
     items:
@@ -55,6 +59,8 @@
       items:
       - name: AI in apps overview
         href: ../user/ai-in-apps.md
+      - name: Use Microsoft 365 Copilot chat (preview)
+        href: ../user/use-microsoft-365-copilot-model-driven-apps.md
       - name: Supervise agents using agent feed (preview)
         href: ../user/supervise-agents-with-agent-feed.md
       - name: Use suggested actions in the agent feed (preview)
@@ -239,13 +245,19 @@
     href: search.md      
   - name: Use Dynamics 365 App for Outlook
     href: ../user/use-outlook-app.md
-- name: Plan designer 
+- name: New experience (preview)
+  items:
+  - name: Overview
+    href:   ../vibe/overview.md
+  - name: Create apps, data, and plans together 
+    href: ../vibe/create-app-data-plan.md
+- name: Plans  
   items:
   - name: Overview
     href: ./plan-designer/plan-designer.md  
   - name: Create a plan
     href: ./plan-designer/create-plan.md 
-  - name: Generate process diagrams (preview)
+  - name: Generate process diagrams
     href: ./plan-designer/process-diagram.md
   - name: Build a solution
     href: ./plan-designer/build-solution.md
@@ -291,29 +303,8 @@
           href: ./canvas-apps/customize-list-form.md  
       - name: From Excel
         href: ./canvas-apps/get-started-create-from-blank.md
-    - name: Create an app from a design or a template
-      items:
-      - name: Create an app from a template
-        href: ./canvas-apps/get-started-test-drive.md
-      - name: Create an app from a design
-        items:
-        - name: Express design overview
-          href: ./canvas-apps/express-design.md
-        - name: Create an app from an image
-          href: ./canvas-apps/app-from-image.md
-        - name: Create an app from Figma
-          items:
-          - name: Overview
-            href: ./canvas-apps/figma/overview.md
-          - name: Design apps using the UI kit
-            href: ./canvas-apps/figma/design-using-kit.md
-          - name: Components supported by the UI kit
-            href: ./canvas-apps/figma/supported-components.md
-          - name: Create a canvas app from Figma
-            href: ./canvas-apps/figma/create-app-from-figma.md
-          - name: Troubleshoot common errors
-            href: ./canvas-apps/figma/common-errors.md
-            displayName: Troubleshoot common errors when creating app from Figma
+    - name: Create an app from a template
+      href: ./canvas-apps/get-started-test-drive.md
   - name: Design and build an app
     items:
       - name: Design and build an app
@@ -520,12 +511,18 @@
               href: ./canvas-apps/controls/modern-controls/modern-controls-badge.md
             - name: Button
               href: ./canvas-apps/controls/modern-controls/modern-control-button.md
+            - name: Card (preview)
+              href: ./canvas-apps/controls/modern-controls/modern-control-card.md
             - name: Checkbox
               href: ./canvas-apps/controls/modern-controls/modern-control-checkbox.md
             - name: Combobox 
               href: ./canvas-apps/controls/modern-controls/modern-control-combobox.md
             - name: Date picker
               href: ./canvas-apps/controls/modern-controls/modern-controls-date-picker.md
+            - name: Header
+              href: ./canvas-apps/controls/modern-controls/modern-controls-header.md
+            - name: Info button
+              href: ./canvas-apps/controls/modern-controls/modern-control-info-button.md
             - name: Link
               href: ./canvas-apps/controls/modern-controls/modern-control-link.md
             - name: Number input
@@ -546,16 +543,12 @@
               href: ./canvas-apps/controls/modern-controls/modern-control-text-input.md
             - name: Toggle
               href: ./canvas-apps/controls/modern-controls/modern-control-toggle.md
-            - name: Avatar (preview)
+            - name: Avatar
               href: ./canvas-apps/controls/modern-controls/modern-control-avatar.md
             - name: Copilot answer (preview)
               href: ./canvas-apps/controls/modern-controls/modern-control-copilot-answer.md
             - name: Dropdown (preview)
               href: ./canvas-apps/controls/modern-controls/modern-control-dropdown.md
-            - name: Header (preview)
-              href: ./canvas-apps/controls/modern-controls/modern-controls-header.md
-            - name: Info button (preview)
-              href: ./canvas-apps/controls/modern-controls/modern-control-info-button.md
             - name: Stream video (preview)
               href: ./canvas-apps/controls/modern-controls/new-stream-video-control.md
             - name: Table (preview)
@@ -608,6 +601,8 @@
               href: ./canvas-apps/controls/control-export-import.md
             - name: Gallery
               href: ./canvas-apps/controls/control-gallery.md
+            - name: Grid container (preview)
+              href: ./canvas-apps/controls/control-grid-container.md
             - name: Horizontal container
               href: ./canvas-apps/controls/control-horizontal-container.md
             - name: HTML text
@@ -1813,7 +1808,11 @@
     - name: Copilot chat for apps
       href:
       items:
-      - name: Add Copilot chat to your app
+      - name: Add Microsoft 365 Copilot chat to your app (preview)
+        href: ./model-driven-apps/add-microsoft-365-copilot.md
+      - name:  Customize Microsoft 365 Copilot chat with an agent (preview) 
+        href: ./model-driven-apps/customize-microsoft-365-copilot-chat.md
+      - name: Add Copilot chat to your app 
         href: ./model-driven-apps/add-ai-copilot.md
       - name: Customize Copilot chat (preview)
         href:
@@ -1925,6 +1924,8 @@
       href: ../mobile/optimize-for-devices-controls.md
   - name: Configure mobile apps for offline use
     items:
+    - name: How offline first functionality works in Power Apps mobile
+      href: ../mobile/mobile-offline-works-overview.md
     - name: Mobile offline for canvas apps
       items:
       - name: Mobile offline for canvas apps overview
@@ -2154,7 +2155,7 @@
         href: ./data-platform/define-calculated-fields.md
       - name: How to define rollup columns
         href: ./data-platform/define-rollup-fields.md
-      - name: How to map entity columns
+      - name: How to map table columns
         href: ./data-platform/map-entity-fields.md
       - name: How to delete columns
         href: ./data-platform/delete-fields.md
@@ -2367,6 +2368,8 @@
         href: ./data-platform/fabric-work-data-and-power-bi.md      
       - name: Build apps using Fabric data
         href: ./data-platform/azure-synapse-link-build-apps-with-fabric.md
+      - name: Fabric link for Dataverse FAQ
+        href: ./data-platform/fabric-link-faq.yml
       - name: Troubleshoot link to Fabric
         href: ./data-platform/fabric-troubleshoot.md 
     - name: Azure Synapse Link
@@ -2433,14 +2436,22 @@
           href: ./data-platform/azure-synapse-link-choice-labels.md
         - name: Access Dataverse choices with Power BI
           href: ./data-platform/azure-synapse-link-choices-powerbi.md      
-  - name: Connect to Dataverse with MCP (preview)
-    items:
+  - name: Work with Dataverse MCP server
+    items: 
     - name: Connect to Dataverse with MCP overview
       href: ./data-platform/data-platform-mcp.md
+    - name: Configure the Dataverse MCP server
+      href: ./data-platform/data-platform-mcp-disable.md      
+    - name: Connect to Dataverse MCP with Copilot Studio
+      href: ./data-platform/data-platform-mcp-copilot-studio.md
+    - name: Connect to Dataverse MCP with Visual Studio Code
+      href: ./data-platform/data-platform-mcp-vscode.md
+    - name: Connect to Dataverse MCP with non-Microsoft clients
+      href: ./data-platform/data-platform-mcp-other-clients.md
+    - name: Use preview tools in Dataverse MCP server
+      href: ./data-platform/data-platform-mcp-preview-tools.md
     - name: Connect to Dataverse with MCP FAQ
       href: ./data-platform/data-platform-mcp-faq.md
-    - name: Disable the Dataverse MCP server
-      href: ./data-platform/data-platform-mcp-disable.md
   - name: License requirements for tables
     href: ./data-platform/data-platform-entity-licenses.md
     items:
@@ -2559,7 +2570,7 @@
     href: ./common/faq-filter-with-copilot.md
   - name:  FAQ about agent builder in canvas apps 
     href: ./common/faq-agent-builder.md  
-  - name: FAQ about the Plan designer
+  - name: FAQ about plans
     href: ./common/faq-plan-designer.md
   - name: FAQ about renaming controls with Copilot
     href: ./common/faq-rename-control.md
