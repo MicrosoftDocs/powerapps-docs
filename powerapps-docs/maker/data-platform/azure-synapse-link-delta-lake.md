@@ -133,12 +133,12 @@ The following table shows the current and previous versions for Azure Synapse Li
 
 In accordance with the Synapse runtime for Apache Spark lifecycle policy, Azure Synapse runtime for Apache Spark 3.4 is retired. After the end of the support date, the retired runtimes are unavailable for new Spark pools and existing workflows with Spark 3.4 pools won't be executed and metadata temporarily remains in the Synapse workspace. More information: [Azure Synapse Runtime for Apache Spark 3.4](/azure/synapse-analytics/spark/apache-spark-34-runtime).
 
-To ensure that your existing Synapse Link profiles continue to process data, upgrade your Synapse Link profiles using the in-place upgrade process below.
+To ensure that your existing Synapse Link profiles continue to process data, upgrade your Synapse Link profiles using the in-place upgrade process here.
 
 #### Prerequisites for upgrade
 
 - You must have an existing Azure Synapse Link for Dataverse Delta lake profile running with a previous Apache Spark version.
-- You must create a new Synapse Spark pool with the current Spark version ([go to table above](#current-versions-and-requirements)), *using the same or higher nodes hardware configuration within the same Synapse workspace*. For information about how to create a Spark pool, go to [Create new Apache Spark pool](/azure/synapse-analytics/quickstart-create-apache-spark-pool-portal#create-new-apache-spark-pool). This Spark pool should be created independent of your existing pool - *don't delete your current Spark pool or create the new pool with the same name*.
+- You must create a new Synapse Spark pool with the current Spark version ([go to versions and requirements table](#current-versions-and-requirements)), *using the same or higher nodes hardware configuration within the same Synapse workspace*. For information about how to create a Spark pool, go to [Create new Apache Spark pool](/azure/synapse-analytics/quickstart-create-apache-spark-pool-portal#create-new-apache-spark-pool). This Spark pool should be created independent of your existing pool - *don't delete your current Spark pool or create the new pool with the same name*.
 
 #### Upgrade steps
 
