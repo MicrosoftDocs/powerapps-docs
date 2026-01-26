@@ -14,6 +14,7 @@ search.audienceType:
 contributors:
   - mduelae
   - emcoope-msft
+  - dtw
 ---
 # Create responsive layouts in canvas apps
 
@@ -23,11 +24,11 @@ After you make that choice, you can make a few more choices if you select **Sett
 
 Those choices underlie every other choice you make as you design screen layouts. If your app runs on a device of a different size or on the web, your entire layout scales to fit the screen where the app is running. If an app designed for a phone runs in a large browser window, for example, the app scales to compensate and looks oversized for its space. The app can't take advantage of the additional pixels by showing more controls or more content.
 
-If you create a responsive layout, controls can respond to different devices or window sizes, making various experiences feel more natural. To achieve responsive layout, you adjust some settings and write expressions throughout your app. 
+If you create a responsive layout, controls can respond to different devices or window sizes, making various experiences feel more natural. To achieve a responsive layout, you adjust some settings and write expressions throughout your app. 
 
 ## Disable Scale to fit
 
-You can configure each screen so that its layout adapts to the actual space in which the app is running.
+You can configure each screen control so that its layout adapts to the actual space in which the app is running.
 
 You activate responsiveness by turning off the app's **Scale to fit** setting, which is on by default. When you turn this setting off, you also turn off **Lock aspect ratio** because you're no longer designing for a specific screen shape. (You can still specify whether your app supports device rotation.)
 
@@ -35,25 +36,25 @@ You activate responsiveness by turning off the app's **Scale to fit** setting, w
 
 To make your app responsive, you must take additional steps, but this change is the first step toward making responsiveness possible.
 
-## Understand app and screen dimensions
+## Understand app and device screen dimensions
 
-To make your app's layouts respond to changes in the screen dimensions, you'll write formulas that use the **Width** and **Height** properties of the screen. To show these properties, open an app in Power Apps Studio, and then select a screen. The default formulas for these properties appear on the **Advanced** tab of the right-hand pane.
+To make your app's layouts respond to changes in the device screen, or web browser, dimensions, you'll write formulas that use the **Width** and **Height** properties of the screen. To show these properties, open an app in Power Apps Studio, and then select a screen control. The default formulas for these properties appear on the **Advanced** tab of the right-hand pane.
 
-**Width** = `Max(App.Width, App.DesignWidth)`
+**Width** = `Max(App.Width, App.MinScreenWidth)`
 
-**Height** = `Max(App.Height, App.DesignHeight)`
+**Height** = `Max(App.Height, App.MinScreenHeight)`
 
-These formulas refer to the **Width**, **Height**, **DesignWidth**, and **DesignHeight** properties of the app. The app's **Width** and **Height** properties correspond to the dimensions of the device or browser window in which your app is running. If the user resizes the browser window (or rotates the device if you've turned off **Lock orientation**), the values of these properties change dynamically. The formulas in the screen's **Width** and **Height** properties are reevaluated when these values change.
+These formulas refer to the **Width**, **Height**, **MinScreenWidth**, and **MinScreenHeight** properties of the app. The app's **Width** and **Height** properties correspond to the dimensions of the device or browser window in which your app is running. If the user resizes the browser window (or rotates the device if you've turned off **Lock orientation**), the values of these properties change dynamically. The formulas in the screen control's **Width** and **Height** properties are reevaluated when these values change.
 
-The **DesignWidth** and **DesignHeight** properties come from the dimensions that you specify in the **Display** pane of **Settings**. For example, if you select the phone layout in portrait orientation, **DesignWidth** is 640, and **DesignHeight** is 1136.
+The values in the **App.Width** and **App.Height** properties come from the dimensions that you specify in the **Display** pane of **Settings**. For example, if you select the landscape "16:9 Default" size, **App.Width** is 1366, and **App.Height** is 768.
 
-As they're used in the formulas for the screen's **Width** and **Height** properties, you can think of **DesignWidth** and **DesignHeight** as the minimum dimensions for which you'll design the app. If the actual area available to your app is even smaller than these minimum dimensions, the formulas for the screen's **Width** and **Height** properties ensure that their values won't become any smaller than minimums. In that case, the user must scroll to view all of the screen's content.
+As they're used in the formulas for the screen control's **Width** and **Height** properties, **MinScreenWidth** and **MinScreenHeight** are the minimum dimensions for which you'll design the app. If the actual area available to your app is even smaller than these minimum dimensions, the formulas for the screen control's **Width** and **Height** properties ensure that their values won't become any smaller than minimums. In that case, the user must scroll to view all of the layout's content. The **MinScreenWidth** and **MinScreenHeight** properties can be set in the  **App Object** > **Properties** > **Advanced**.
 
-After you establish your app's **DesignWidth** and **DesignHeight**, you won't (in most cases) need to change default formulas for each screen's **Width** and **Height** properties. Later, this topic discusses cases in which you might want to customize these formulas.
+After you establish your app's **MinScreenWidth** and **MinScreenHeight**, you won't (in most cases) need to change default formulas for each screen control's **Width** and **Height** properties. Later, this topic discusses cases in which you might want to customize these formulas.
 
 ## Use formulas for dynamic layout
 
-To create a responsive design, you locate and size each control by using formulas instead of absolute (constant) coordinate values. These formulas express each control's position and size in terms of the overall screen size or relative to other controls on the screen.
+To create a responsive design, you locate and size each control by using formulas instead of absolute (constant) coordinate values. These formulas express each control's position and size in terms of the overall screen size or relative to other controls in the current screen.
 
 > [!IMPORTANT]
 > After you write formulas for the **X**, **Y**, **Width** and **Height** properties of a control, your formulas will be overwritten with constant values if you subsequently drag the control in the canvas editor. When you start to use formulas to achieve dynamic layout, you should avoid dragging controls.
@@ -67,7 +68,7 @@ In the simplest case, one control fills an entire screen. To create this effect,
 | **Width**  | `Parent.Width`  |
 | **Height** | `Parent.Height` |
 
-These formulas use the **Parent** operator. For a control placed directly on a screen, **Parent** refers to the screen. With these property values, the control appears in the upper-left corner of the screen (0, 0) and has the same **Width** and **Height** as the screen.
+These formulas use the **Parent** operator. For any control placed directly on a screen, **Parent** refers to the screen. With these property values, the control appears in the upper-left corner of the screen (0, 0) and has the same **Width** and **Height** as the screen.
 
 Later in this topic, you'll apply these principles (and the **Parent** operator) to position controls inside other containers, such as galleries, group controls, and components.
 
