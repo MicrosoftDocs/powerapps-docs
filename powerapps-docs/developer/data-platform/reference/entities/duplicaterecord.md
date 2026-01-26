@@ -98,7 +98,7 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |LogicalName|`baserecordid`|
 |RequiredLevel|None|
 |Type|Lookup|
-|Targets|account, activityfileattachment, adx_invitation, adx_inviteredemption, aicopilot, aipluginauth, aipluginoperationparameter, aipluginoperationresponsetemplate, aiplugintitle, aipluginusersetting, applicationuser, appointment, approvalprocess, approvalstageapproval, approvalstagecondition, approvalstageintelligent, approvalstageorder, archivecleanupinfo, archivecleanupoperation, bulkarchiveconfig, bulkarchivefailuredetail, bulkarchiveoperation, businessprocess, canvasappextendedmetadata, card, cascadegrantrevokeaccessrecordstracker, cascadegrantrevokeaccessversiontracker, catalogassignment, certificatecredential, channelaccessprofile, connectioninstance, connector, contact, conversationtranscript, credential, datalakefolder, datalakefolderpermission, datalakeworkspace, datalakeworkspacepermission, dataprocessingconfiguration, deleteditemreference, desktopflowmodule, email, emailserverprofile, enablearchivalrequest, entityrecordfilter, environmentvariabledefinition, environmentvariablevalue, exportedexcel, exportsolutionupload, fax, featurecontrolsetting, federatedknowledgecitation, federatedknowledgemetadatarefresh, feedback, flowcredentialapplication, flowevent, flowmachinegroup, flowmachineimage, flowmachineimageversion, flowmachinenetwork, fxexpression, goal, goalrollupquery, governanceconfiguration, kbarticle, keyvaultreference, knowledgearticle, knowledgebaserecord, letter, managedidentity, maskingrule, msdyn_aibdataset, msdyn_aibdatasetfile, msdyn_aibdatasetrecord, msdyn_aibdatasetscontainer, msdyn_aibfeedbackloop, msdyn_aibfile, msdyn_aibfileattacheddata, msdyn_aievent, msdyn_aimodelcatalog, msdyn_aiodimage, msdyn_aiodlabel, msdyn_aiodtrainingboundingbox, msdyn_aiodtrainingimage, msdyn_aitestrunbatch, msdyn_analysiscomponent, msdyn_analysisjob, msdyn_analysisoverride, msdyn_analysisresult, msdyn_analysisresultdetail, msdyn_appinsightsmetadata, msdyn_copilotinteractions, msdyn_customcontrolextendedsettings, msdyn_dataflow, msdyn_dataflowconnectionreference, msdyn_dataflowrefreshhistory, msdyn_dataflow_datalakefolder, msdyn_dmsrequest, msdyn_dmsrequeststatus, msdyn_entitylinkchatconfiguration, msdyn_entityrefreshhistory, msdyn_favoriteknowledgearticle, msdyn_federatedarticle, msdyn_federatedarticleincident, msdyn_fileupload, msdyn_flow_actionapprovalmodel, msdyn_flow_approval, msdyn_flow_approvalrequest, msdyn_flow_approvalresponse, msdyn_flow_approvalstep, msdyn_flow_awaitallactionapprovalmodel, msdyn_flow_awaitallapprovalmodel, msdyn_flow_basicapprovalmodel, msdyn_flow_flowapproval, msdyn_formmapping, msdyn_function, msdyn_integratedsearchprovider, msdyn_kalanguagesetting, msdyn_kbattachment, msdyn_kmfederatedsearchconfig, msdyn_knowledgearticleimage, msdyn_knowledgearticletemplate, msdyn_knowledgeconfiguration, msdyn_knowledgeinteractioninsight, msdyn_knowledgemanagementsetting, msdyn_knowledgepersonalfilter, msdyn_knowledgesearchfilter, msdyn_knowledgesearchinsight, msdyn_mobileapp, msdyn_modulerundetail, msdyn_pmanalysishistory, msdyn_pmbusinessruleautomationconfig, msdyn_pmcalendar, msdyn_pmcalendarversion, msdyn_pminferredtask, msdyn_pmprocessextendedmetadataversion, msdyn_pmprocesstemplate, msdyn_pmprocessusersettings, msdyn_pmprocessversion, msdyn_pmrecording, msdyn_pmsimulation, msdyn_pmtemplate, msdyn_pmview, msdyn_qna, msdyn_schedule, msdyn_serviceconfiguration, msdyn_slakpi, msdyn_solutionhealthrule, msdyn_solutionhealthruleargument, msdyn_solutionhealthruleset, msdyn_virtualtablecolumncandidate, mspcat_catalogsubmissionfiles, mspcat_packagestore, organizationdatasyncfnostate, organizationdatasyncstate, organizationdatasyncsubscription, organizationdatasyncsubscriptionentity, organizationdatasyncsubscriptionfnotable, package, packagehistory, phonecall, powerbidataset, powerbidatasetapdx, powerbimashupparameter, powerbireport, powerbireportapdx, powerfxrule, powerpagesddosalert, powerpagesmanagedidentity, powerpagesscanreport, privilegesremovalsetting, publisher, queue, reconciliationinfo, recordfilter, recurringappointmentmaster, reportparameter, retaineddataexcel, retentioncleanupinfo, retentioncleanupoperation, retentionconfig, retentionfailuredetail, retentionoperation, retentionsuccessdetail, revokeinheritedaccessrecordstracker, roleeditorlayout, savingrule, searchattributesettings, searchcustomanalyzer, searchrelationshipsettings, serviceplan, serviceplancustomcontrol, serviceplanmapping, sharedlinksetting, sharepointdocumentlocation, sharepointsite, socialactivity, socialprofile, solutioncomponentattributeconfiguration, solutioncomponentbatchconfiguration, solutioncomponentconfiguration, solutioncomponentrelationshipconfiguration, stagesolutionupload, supportusertable, synapsedatabase, synapselinkexternaltablestate, synapselinkprofile, synapselinkprofileentity, synapselinkprofileentitystate, synapselinkschedule, systemuser, task, tdsmetadata, team, transactioncurrency, unstructuredfilesearchentity, unstructuredfilesearchrecord, userrating, workflowmetadata, workqueue, workqueueitem|
+|Targets|account, activityfileattachment, adx_invitation, adx_inviteredemption, aicopilot, aipluginauth, aipluginoperationparameter, aipluginoperationresponsetemplate, aiplugintitle, aipluginusersetting, applicationuser, appointment, approvalprocess, approvalstageapproval, approvalstagecondition, approvalstageintelligent, approvalstageorder, archivecleanupinfo, archivecleanupoperation, bulkarchiveconfig, bulkarchivefailuredetail, bulkarchiveoperation, businessprocess, canvasappextendedmetadata, card, cascadegrantrevokeaccessrecordstracker, cascadegrantrevokeaccessversiontracker, catalogassignment, certificatecredential, channelaccessprofile, connectioninstance, connector, contact, conversationtranscript, credential, datalakefolder, datalakefolderpermission, datalakeworkspace, datalakeworkspacepermission, dataprocessingconfiguration, deleteditemreference, desktopflowmodule, email, emailserverprofile, enablearchivalrequest, entityrecordfilter, environmentvariabledefinition, environmentvariablevalue, exportedexcel, exportsolutionupload, fax, featurecontrolsetting, federatedknowledgecitation, federatedknowledgemetadatarefresh, feedback, flowcredentialapplication, flowevent, flowmachinegroup, flowmachineimage, flowmachineimageversion, flowmachinenetwork, flowsessionbinary, fxexpression, goal, goalrollupquery, governanceconfiguration, kbarticle, keyvaultreference, knowledgearticle, knowledgebaserecord, knowledgesourceconsumer, knowledgesourceprofile, letter, managedidentity, maskingrule, msdyn_aibdataset, msdyn_aibdatasetfile, msdyn_aibdatasetrecord, msdyn_aibdatasetscontainer, msdyn_aibfeedbackloop, msdyn_aibfile, msdyn_aibfileattacheddata, msdyn_aiconfigurationsearch, msdyn_aievent, msdyn_aimodelcatalog, msdyn_aiodimage, msdyn_aiodlabel, msdyn_aiodtrainingboundingbox, msdyn_aiodtrainingimage, msdyn_aioptimization, msdyn_aioptimizationprivatedata, msdyn_aitestrunbatch, msdyn_analysiscomponent, msdyn_analysisjob, msdyn_analysisoverride, msdyn_analysisresult, msdyn_analysisresultdetail, msdyn_appinsightsmetadata, msdyn_copilotinteractions, msdyn_customcontrolextendedsettings, msdyn_dataflow, msdyn_dataflowconnectionreference, msdyn_dataflowrefreshhistory, msdyn_dataflow_datalakefolder, msdyn_dmsrequest, msdyn_dmsrequeststatus, msdyn_entitylinkchatconfiguration, msdyn_entityrefreshhistory, msdyn_favoriteknowledgearticle, msdyn_federatedarticle, msdyn_federatedarticleincident, msdyn_fileupload, msdyn_flow_actionapprovalmodel, msdyn_flow_approval, msdyn_flow_approvalrequest, msdyn_flow_approvalresponse, msdyn_flow_approvalstep, msdyn_flow_awaitallactionapprovalmodel, msdyn_flow_awaitallapprovalmodel, msdyn_flow_basicapprovalmodel, msdyn_flow_flowapproval, msdyn_formmapping, msdyn_function, msdyn_integratedsearchprovider, msdyn_kalanguagesetting, msdyn_kbattachment, msdyn_kmfederatedsearchconfig, msdyn_knowledgearticleimage, msdyn_knowledgearticletemplate, msdyn_knowledgeconfiguration, msdyn_knowledgeinteractioninsight, msdyn_knowledgemanagementsetting, msdyn_knowledgepersonalfilter, msdyn_knowledgesearchfilter, msdyn_knowledgesearchinsight, msdyn_mobileapp, msdyn_modulerundetail, msdyn_pmanalysishistory, msdyn_pmbusinessruleautomationconfig, msdyn_pmcalendar, msdyn_pmcalendarversion, msdyn_pminferredtask, msdyn_pmprocessextendedmetadataversion, msdyn_pmprocesstemplate, msdyn_pmprocessusersettings, msdyn_pmprocessversion, msdyn_pmrecording, msdyn_pmsimulation, msdyn_pmtab, msdyn_pmtemplate, msdyn_pmview, msdyn_qna, msdyn_schedule, msdyn_serviceconfiguration, msdyn_slakpi, msdyn_solutionhealthrule, msdyn_solutionhealthruleargument, msdyn_solutionhealthruleset, msdyn_virtualtablecolumncandidate, mspcat_catalogsubmissionfiles, mspcat_packagestore, organizationdatasyncfnostate, organizationdatasyncstate, organizationdatasyncsubscription, organizationdatasyncsubscriptionentity, organizationdatasyncsubscriptionfnotable, package, packagehistory, phonecall, powerbidataset, powerbidatasetapdx, powerbimashupparameter, powerbireport, powerbireportapdx, powerfxrule, powerpagesddosalert, powerpagesmanagedidentity, powerpagesscanreport, privilegesremovalsetting, publisher, purviewlabelinfo, purviewlabelsynccache, queue, reconciliationinfo, recordfilter, recurringappointmentmaster, reportparameter, retaineddataexcel, retentioncleanupinfo, retentioncleanupoperation, retentionconfig, retentionfailuredetail, retentionoperation, retentionsuccessdetail, revokeinheritedaccessrecordstracker, roleeditorlayout, savingrule, searchattributesettings, searchcustomanalyzer, searchrelationshipsettings, sensitivitylabelattributemapping, serviceplan, serviceplancustomcontrol, serviceplanmapping, sharedlinksetting, sharepointdocumentlocation, sharepointsite, socialactivity, socialprofile, solutioncomponentattributeconfiguration, solutioncomponentbatchconfiguration, solutioncomponentconfiguration, solutioncomponentrelationshipconfiguration, stagesolutionupload, supportusertable, synapsedatabase, synapselinkexternaltablestate, synapselinkprofile, synapselinkprofileentity, synapselinkprofileentitystate, synapselinkschedule, systemuser, task, tdsmetadata, team, transactioncurrency, unstructuredfilesearchentity, unstructuredfilesearchrecord, userrating, workflowmetadata, workqueue, workqueueitem|
 
 ### <a name="BKMK_BaseRecordIdTypeCode"></a> BaseRecordIdTypeCode
 
@@ -140,7 +140,7 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |LogicalName|`duplicaterecordid`|
 |RequiredLevel|None|
 |Type|Lookup|
-|Targets|account, activityfileattachment, adx_invitation, adx_inviteredemption, aicopilot, aipluginauth, aipluginoperationparameter, aipluginoperationresponsetemplate, aiplugintitle, aipluginusersetting, applicationuser, appointment, approvalprocess, approvalstageapproval, approvalstagecondition, approvalstageintelligent, approvalstageorder, archivecleanupinfo, archivecleanupoperation, bulkarchiveconfig, bulkarchivefailuredetail, bulkarchiveoperation, businessprocess, canvasappextendedmetadata, card, cascadegrantrevokeaccessrecordstracker, cascadegrantrevokeaccessversiontracker, catalogassignment, certificatecredential, channelaccessprofile, connectioninstance, connector, contact, conversationtranscript, credential, datalakefolder, datalakefolderpermission, datalakeworkspace, datalakeworkspacepermission, dataprocessingconfiguration, deleteditemreference, desktopflowmodule, email, emailserverprofile, enablearchivalrequest, entityrecordfilter, environmentvariabledefinition, environmentvariablevalue, exportedexcel, exportsolutionupload, fax, featurecontrolsetting, federatedknowledgecitation, federatedknowledgemetadatarefresh, feedback, flowcredentialapplication, flowevent, flowmachinegroup, flowmachineimage, flowmachineimageversion, flowmachinenetwork, fxexpression, goal, goalrollupquery, governanceconfiguration, kbarticle, keyvaultreference, knowledgearticle, knowledgebaserecord, letter, managedidentity, maskingrule, msdyn_aibdataset, msdyn_aibdatasetfile, msdyn_aibdatasetrecord, msdyn_aibdatasetscontainer, msdyn_aibfeedbackloop, msdyn_aibfile, msdyn_aibfileattacheddata, msdyn_aievent, msdyn_aimodelcatalog, msdyn_aiodimage, msdyn_aiodlabel, msdyn_aiodtrainingboundingbox, msdyn_aiodtrainingimage, msdyn_aitestrunbatch, msdyn_analysiscomponent, msdyn_analysisjob, msdyn_analysisoverride, msdyn_analysisresult, msdyn_analysisresultdetail, msdyn_appinsightsmetadata, msdyn_copilotinteractions, msdyn_customcontrolextendedsettings, msdyn_dataflow, msdyn_dataflowconnectionreference, msdyn_dataflowrefreshhistory, msdyn_dataflow_datalakefolder, msdyn_dmsrequest, msdyn_dmsrequeststatus, msdyn_entitylinkchatconfiguration, msdyn_entityrefreshhistory, msdyn_favoriteknowledgearticle, msdyn_federatedarticle, msdyn_federatedarticleincident, msdyn_fileupload, msdyn_flow_actionapprovalmodel, msdyn_flow_approval, msdyn_flow_approvalrequest, msdyn_flow_approvalresponse, msdyn_flow_approvalstep, msdyn_flow_awaitallactionapprovalmodel, msdyn_flow_awaitallapprovalmodel, msdyn_flow_basicapprovalmodel, msdyn_flow_flowapproval, msdyn_formmapping, msdyn_function, msdyn_integratedsearchprovider, msdyn_kalanguagesetting, msdyn_kbattachment, msdyn_kmfederatedsearchconfig, msdyn_knowledgearticleimage, msdyn_knowledgearticletemplate, msdyn_knowledgeconfiguration, msdyn_knowledgeinteractioninsight, msdyn_knowledgemanagementsetting, msdyn_knowledgepersonalfilter, msdyn_knowledgesearchfilter, msdyn_knowledgesearchinsight, msdyn_mobileapp, msdyn_modulerundetail, msdyn_pmanalysishistory, msdyn_pmbusinessruleautomationconfig, msdyn_pmcalendar, msdyn_pmcalendarversion, msdyn_pminferredtask, msdyn_pmprocessextendedmetadataversion, msdyn_pmprocesstemplate, msdyn_pmprocessusersettings, msdyn_pmprocessversion, msdyn_pmrecording, msdyn_pmsimulation, msdyn_pmtemplate, msdyn_pmview, msdyn_qna, msdyn_schedule, msdyn_serviceconfiguration, msdyn_slakpi, msdyn_solutionhealthrule, msdyn_solutionhealthruleargument, msdyn_solutionhealthruleset, msdyn_virtualtablecolumncandidate, mspcat_catalogsubmissionfiles, mspcat_packagestore, organizationdatasyncfnostate, organizationdatasyncstate, organizationdatasyncsubscription, organizationdatasyncsubscriptionentity, organizationdatasyncsubscriptionfnotable, package, packagehistory, phonecall, powerbidataset, powerbidatasetapdx, powerbimashupparameter, powerbireport, powerbireportapdx, powerfxrule, powerpagesddosalert, powerpagesmanagedidentity, powerpagesscanreport, privilegesremovalsetting, publisher, queue, reconciliationinfo, recordfilter, recurringappointmentmaster, reportparameter, retaineddataexcel, retentioncleanupinfo, retentioncleanupoperation, retentionconfig, retentionfailuredetail, retentionoperation, retentionsuccessdetail, revokeinheritedaccessrecordstracker, roleeditorlayout, savingrule, searchattributesettings, searchcustomanalyzer, searchrelationshipsettings, serviceplan, serviceplancustomcontrol, serviceplanmapping, sharedlinksetting, sharepointdocumentlocation, sharepointsite, socialactivity, socialprofile, solutioncomponentattributeconfiguration, solutioncomponentbatchconfiguration, solutioncomponentconfiguration, solutioncomponentrelationshipconfiguration, stagesolutionupload, supportusertable, synapsedatabase, synapselinkexternaltablestate, synapselinkprofile, synapselinkprofileentity, synapselinkprofileentitystate, synapselinkschedule, systemuser, task, tdsmetadata, team, transactioncurrency, unstructuredfilesearchentity, unstructuredfilesearchrecord, userrating, workflowmetadata, workqueue, workqueueitem|
+|Targets|account, activityfileattachment, adx_invitation, adx_inviteredemption, aicopilot, aipluginauth, aipluginoperationparameter, aipluginoperationresponsetemplate, aiplugintitle, aipluginusersetting, applicationuser, appointment, approvalprocess, approvalstageapproval, approvalstagecondition, approvalstageintelligent, approvalstageorder, archivecleanupinfo, archivecleanupoperation, bulkarchiveconfig, bulkarchivefailuredetail, bulkarchiveoperation, businessprocess, canvasappextendedmetadata, card, cascadegrantrevokeaccessrecordstracker, cascadegrantrevokeaccessversiontracker, catalogassignment, certificatecredential, channelaccessprofile, connectioninstance, connector, contact, conversationtranscript, credential, datalakefolder, datalakefolderpermission, datalakeworkspace, datalakeworkspacepermission, dataprocessingconfiguration, deleteditemreference, desktopflowmodule, email, emailserverprofile, enablearchivalrequest, entityrecordfilter, environmentvariabledefinition, environmentvariablevalue, exportedexcel, exportsolutionupload, fax, featurecontrolsetting, federatedknowledgecitation, federatedknowledgemetadatarefresh, feedback, flowcredentialapplication, flowevent, flowmachinegroup, flowmachineimage, flowmachineimageversion, flowmachinenetwork, flowsessionbinary, fxexpression, goal, goalrollupquery, governanceconfiguration, kbarticle, keyvaultreference, knowledgearticle, knowledgebaserecord, knowledgesourceconsumer, knowledgesourceprofile, letter, managedidentity, maskingrule, msdyn_aibdataset, msdyn_aibdatasetfile, msdyn_aibdatasetrecord, msdyn_aibdatasetscontainer, msdyn_aibfeedbackloop, msdyn_aibfile, msdyn_aibfileattacheddata, msdyn_aiconfigurationsearch, msdyn_aievent, msdyn_aimodelcatalog, msdyn_aiodimage, msdyn_aiodlabel, msdyn_aiodtrainingboundingbox, msdyn_aiodtrainingimage, msdyn_aioptimization, msdyn_aioptimizationprivatedata, msdyn_aitestrunbatch, msdyn_analysiscomponent, msdyn_analysisjob, msdyn_analysisoverride, msdyn_analysisresult, msdyn_analysisresultdetail, msdyn_appinsightsmetadata, msdyn_copilotinteractions, msdyn_customcontrolextendedsettings, msdyn_dataflow, msdyn_dataflowconnectionreference, msdyn_dataflowrefreshhistory, msdyn_dataflow_datalakefolder, msdyn_dmsrequest, msdyn_dmsrequeststatus, msdyn_entitylinkchatconfiguration, msdyn_entityrefreshhistory, msdyn_favoriteknowledgearticle, msdyn_federatedarticle, msdyn_federatedarticleincident, msdyn_fileupload, msdyn_flow_actionapprovalmodel, msdyn_flow_approval, msdyn_flow_approvalrequest, msdyn_flow_approvalresponse, msdyn_flow_approvalstep, msdyn_flow_awaitallactionapprovalmodel, msdyn_flow_awaitallapprovalmodel, msdyn_flow_basicapprovalmodel, msdyn_flow_flowapproval, msdyn_formmapping, msdyn_function, msdyn_integratedsearchprovider, msdyn_kalanguagesetting, msdyn_kbattachment, msdyn_kmfederatedsearchconfig, msdyn_knowledgearticleimage, msdyn_knowledgearticletemplate, msdyn_knowledgeconfiguration, msdyn_knowledgeinteractioninsight, msdyn_knowledgemanagementsetting, msdyn_knowledgepersonalfilter, msdyn_knowledgesearchfilter, msdyn_knowledgesearchinsight, msdyn_mobileapp, msdyn_modulerundetail, msdyn_pmanalysishistory, msdyn_pmbusinessruleautomationconfig, msdyn_pmcalendar, msdyn_pmcalendarversion, msdyn_pminferredtask, msdyn_pmprocessextendedmetadataversion, msdyn_pmprocesstemplate, msdyn_pmprocessusersettings, msdyn_pmprocessversion, msdyn_pmrecording, msdyn_pmsimulation, msdyn_pmtab, msdyn_pmtemplate, msdyn_pmview, msdyn_qna, msdyn_schedule, msdyn_serviceconfiguration, msdyn_slakpi, msdyn_solutionhealthrule, msdyn_solutionhealthruleargument, msdyn_solutionhealthruleset, msdyn_virtualtablecolumncandidate, mspcat_catalogsubmissionfiles, mspcat_packagestore, organizationdatasyncfnostate, organizationdatasyncstate, organizationdatasyncsubscription, organizationdatasyncsubscriptionentity, organizationdatasyncsubscriptionfnotable, package, packagehistory, phonecall, powerbidataset, powerbidatasetapdx, powerbimashupparameter, powerbireport, powerbireportapdx, powerfxrule, powerpagesddosalert, powerpagesmanagedidentity, powerpagesscanreport, privilegesremovalsetting, publisher, purviewlabelinfo, purviewlabelsynccache, queue, reconciliationinfo, recordfilter, recurringappointmentmaster, reportparameter, retaineddataexcel, retentioncleanupinfo, retentioncleanupoperation, retentionconfig, retentionfailuredetail, retentionoperation, retentionsuccessdetail, revokeinheritedaccessrecordstracker, roleeditorlayout, savingrule, searchattributesettings, searchcustomanalyzer, searchrelationshipsettings, sensitivitylabelattributemapping, serviceplan, serviceplancustomcontrol, serviceplanmapping, sharedlinksetting, sharepointdocumentlocation, sharepointsite, socialactivity, socialprofile, solutioncomponentattributeconfiguration, solutioncomponentbatchconfiguration, solutioncomponentconfiguration, solutioncomponentrelationshipconfiguration, stagesolutionupload, supportusertable, synapsedatabase, synapselinkexternaltablestate, synapselinkprofile, synapselinkprofileentity, synapselinkprofileentitystate, synapselinkschedule, systemuser, task, tdsmetadata, team, transactioncurrency, unstructuredfilesearchentity, unstructuredfilesearchrecord, userrating, workflowmetadata, workqueue, workqueueitem|
 
 ### <a name="BKMK_DuplicateRecordIdTypeCode"></a> DuplicateRecordIdTypeCode
 
@@ -318,6 +318,8 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [flowmachineimageversion_DuplicateMatchingRecord](#BKMK_flowmachineimageversion_DuplicateMatchingRecord)
 - [flowmachinenetwork_DuplicateBaseRecord](#BKMK_flowmachinenetwork_DuplicateBaseRecord)
 - [flowmachinenetwork_DuplicateMatchingRecord](#BKMK_flowmachinenetwork_DuplicateMatchingRecord)
+- [flowsessionbinary_DuplicateBaseRecord](#BKMK_flowsessionbinary_DuplicateBaseRecord)
+- [flowsessionbinary_DuplicateMatchingRecord](#BKMK_flowsessionbinary_DuplicateMatchingRecord)
 - [fxexpression_DuplicateBaseRecord](#BKMK_fxexpression_DuplicateBaseRecord)
 - [fxexpression_DuplicateMatchingRecord](#BKMK_fxexpression_DuplicateMatchingRecord)
 - [Goal_DuplicateBaseRecord](#BKMK_Goal_DuplicateBaseRecord)
@@ -334,6 +336,10 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [knowledgearticle_DuplicateMatchingRecord](#BKMK_knowledgearticle_DuplicateMatchingRecord)
 - [KnowledgeBaseRecord_DuplicateBaseRecord](#BKMK_KnowledgeBaseRecord_DuplicateBaseRecord)
 - [KnowledgeBaseRecord_DuplicateMatchingRecord](#BKMK_KnowledgeBaseRecord_DuplicateMatchingRecord)
+- [knowledgesourceconsumer_DuplicateBaseRecord](#BKMK_knowledgesourceconsumer_DuplicateBaseRecord)
+- [knowledgesourceconsumer_DuplicateMatchingRecord](#BKMK_knowledgesourceconsumer_DuplicateMatchingRecord)
+- [knowledgesourceprofile_DuplicateBaseRecord](#BKMK_knowledgesourceprofile_DuplicateBaseRecord)
+- [knowledgesourceprofile_DuplicateMatchingRecord](#BKMK_knowledgesourceprofile_DuplicateMatchingRecord)
 - [Letter_DuplicateBaseRecord](#BKMK_Letter_DuplicateBaseRecord)
 - [Letter_DuplicateMatchingRecord](#BKMK_Letter_DuplicateMatchingRecord)
 - [managedidentity_DuplicateBaseRecord](#BKMK_managedidentity_DuplicateBaseRecord)
@@ -354,6 +360,8 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [msdyn_aibfile_DuplicateMatchingRecord](#BKMK_msdyn_aibfile_DuplicateMatchingRecord)
 - [msdyn_aibfileattacheddata_DuplicateBaseRecord](#BKMK_msdyn_aibfileattacheddata_DuplicateBaseRecord)
 - [msdyn_aibfileattacheddata_DuplicateMatchingRecord](#BKMK_msdyn_aibfileattacheddata_DuplicateMatchingRecord)
+- [msdyn_aiconfigurationsearch_DuplicateBaseRecord](#BKMK_msdyn_aiconfigurationsearch_DuplicateBaseRecord)
+- [msdyn_aiconfigurationsearch_DuplicateMatchingRecord](#BKMK_msdyn_aiconfigurationsearch_DuplicateMatchingRecord)
 - [msdyn_aievent_DuplicateBaseRecord](#BKMK_msdyn_aievent_DuplicateBaseRecord)
 - [msdyn_aievent_DuplicateMatchingRecord](#BKMK_msdyn_aievent_DuplicateMatchingRecord)
 - [msdyn_aiodimage_DuplicateBaseRecord](#BKMK_msdyn_aiodimage_DuplicateBaseRecord)
@@ -364,6 +372,10 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [msdyn_aiodtrainingboundingbox_DuplicateMatchingRecord](#BKMK_msdyn_aiodtrainingboundingbox_DuplicateMatchingRecord)
 - [msdyn_aiodtrainingimage_DuplicateBaseRecord](#BKMK_msdyn_aiodtrainingimage_DuplicateBaseRecord)
 - [msdyn_aiodtrainingimage_DuplicateMatchingRecord](#BKMK_msdyn_aiodtrainingimage_DuplicateMatchingRecord)
+- [msdyn_aioptimization_DuplicateBaseRecord](#BKMK_msdyn_aioptimization_DuplicateBaseRecord)
+- [msdyn_aioptimization_DuplicateMatchingRecord](#BKMK_msdyn_aioptimization_DuplicateMatchingRecord)
+- [msdyn_aioptimizationprivatedata_DuplicateBaseRecord](#BKMK_msdyn_aioptimizationprivatedata_DuplicateBaseRecord)
+- [msdyn_aioptimizationprivatedata_DuplicateMatchingRecord](#BKMK_msdyn_aioptimizationprivatedata_DuplicateMatchingRecord)
 - [msdyn_aitestrunbatch_DuplicateBaseRecord](#BKMK_msdyn_aitestrunbatch_DuplicateBaseRecord)
 - [msdyn_aitestrunbatch_DuplicateMatchingRecord](#BKMK_msdyn_aitestrunbatch_DuplicateMatchingRecord)
 - [msdyn_analysiscomponent_DuplicateBaseRecord](#BKMK_msdyn_analysiscomponent_DuplicateBaseRecord)
@@ -478,6 +490,8 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [msdyn_pmrecording_DuplicateMatchingRecord](#BKMK_msdyn_pmrecording_DuplicateMatchingRecord)
 - [msdyn_pmsimulation_DuplicateBaseRecord](#BKMK_msdyn_pmsimulation_DuplicateBaseRecord)
 - [msdyn_pmsimulation_DuplicateMatchingRecord](#BKMK_msdyn_pmsimulation_DuplicateMatchingRecord)
+- [msdyn_pmtab_DuplicateBaseRecord](#BKMK_msdyn_pmtab_DuplicateBaseRecord)
+- [msdyn_pmtab_DuplicateMatchingRecord](#BKMK_msdyn_pmtab_DuplicateMatchingRecord)
 - [msdyn_pmtemplate_DuplicateBaseRecord](#BKMK_msdyn_pmtemplate_DuplicateBaseRecord)
 - [msdyn_pmtemplate_DuplicateMatchingRecord](#BKMK_msdyn_pmtemplate_DuplicateMatchingRecord)
 - [msdyn_pmview_DuplicateBaseRecord](#BKMK_msdyn_pmview_DuplicateBaseRecord)
@@ -540,6 +554,10 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [privilegesremovalsetting_DuplicateMatchingRecord](#BKMK_privilegesremovalsetting_DuplicateMatchingRecord)
 - [Publisher_DuplicateBaseRecord](#BKMK_Publisher_DuplicateBaseRecord)
 - [Publisher_DuplicateMatchingRecord](#BKMK_Publisher_DuplicateMatchingRecord)
+- [purviewlabelinfo_DuplicateBaseRecord](#BKMK_purviewlabelinfo_DuplicateBaseRecord)
+- [purviewlabelinfo_DuplicateMatchingRecord](#BKMK_purviewlabelinfo_DuplicateMatchingRecord)
+- [purviewlabelsynccache_DuplicateBaseRecord](#BKMK_purviewlabelsynccache_DuplicateBaseRecord)
+- [purviewlabelsynccache_DuplicateMatchingRecord](#BKMK_purviewlabelsynccache_DuplicateMatchingRecord)
 - [Queue_DuplicateBaseRecord](#BKMK_Queue_DuplicateBaseRecord)
 - [Queue_DuplicateMatchingRecord](#BKMK_Queue_DuplicateMatchingRecord)
 - [recordfilter_DuplicateBaseRecord](#BKMK_recordfilter_DuplicateBaseRecord)
@@ -568,6 +586,8 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [searchcustomanalyzer_DuplicateMatchingRecord](#BKMK_searchcustomanalyzer_DuplicateMatchingRecord)
 - [searchrelationshipsettings_DuplicateBaseRecord](#BKMK_searchrelationshipsettings_DuplicateBaseRecord)
 - [searchrelationshipsettings_DuplicateMatchingRecord](#BKMK_searchrelationshipsettings_DuplicateMatchingRecord)
+- [sensitivitylabelattributemapping_DuplicateBaseRecord](#BKMK_sensitivitylabelattributemapping_DuplicateBaseRecord)
+- [sensitivitylabelattributemapping_DuplicateMatchingRecord](#BKMK_sensitivitylabelattributemapping_DuplicateMatchingRecord)
 - [serviceplan_DuplicateBaseRecord](#BKMK_serviceplan_DuplicateBaseRecord)
 - [serviceplan_DuplicateMatchingRecord](#BKMK_serviceplan_DuplicateMatchingRecord)
 - [serviceplanmapping_DuplicateBaseRecord](#BKMK_serviceplanmapping_DuplicateBaseRecord)
@@ -1901,6 +1921,32 @@ One-To-Many Relationship: [flowmachinenetwork flowmachinenetwork_DuplicateMatchi
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
+### <a name="BKMK_flowsessionbinary_DuplicateBaseRecord"></a> flowsessionbinary_DuplicateBaseRecord
+
+One-To-Many Relationship: [flowsessionbinary flowsessionbinary_DuplicateBaseRecord](flowsessionbinary.md#BKMK_flowsessionbinary_DuplicateBaseRecord)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`flowsessionbinary`|
+|ReferencedAttribute|`flowsessionbinaryid`|
+|ReferencingAttribute|`baserecordid`|
+|ReferencingEntityNavigationPropertyName|`baserecordid_flowsessionbinary`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_flowsessionbinary_DuplicateMatchingRecord"></a> flowsessionbinary_DuplicateMatchingRecord
+
+One-To-Many Relationship: [flowsessionbinary flowsessionbinary_DuplicateMatchingRecord](flowsessionbinary.md#BKMK_flowsessionbinary_DuplicateMatchingRecord)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`flowsessionbinary`|
+|ReferencedAttribute|`flowsessionbinaryid`|
+|ReferencingAttribute|`duplicaterecordid`|
+|ReferencingEntityNavigationPropertyName|`duplicaterecordid_flowsessionbinary`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
 ### <a name="BKMK_fxexpression_DuplicateBaseRecord"></a> fxexpression_DuplicateBaseRecord
 
 One-To-Many Relationship: [fxexpression fxexpression_DuplicateBaseRecord](fxexpression.md#BKMK_fxexpression_DuplicateBaseRecord)
@@ -2106,6 +2152,58 @@ One-To-Many Relationship: [knowledgebaserecord KnowledgeBaseRecord_DuplicateMatc
 |ReferencedAttribute|`knowledgebaserecordid`|
 |ReferencingAttribute|`duplicaterecordid`|
 |ReferencingEntityNavigationPropertyName|`duplicaterecordid_knowledgebaserecord`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_knowledgesourceconsumer_DuplicateBaseRecord"></a> knowledgesourceconsumer_DuplicateBaseRecord
+
+One-To-Many Relationship: [knowledgesourceconsumer knowledgesourceconsumer_DuplicateBaseRecord](knowledgesourceconsumer.md#BKMK_knowledgesourceconsumer_DuplicateBaseRecord)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`knowledgesourceconsumer`|
+|ReferencedAttribute|`knowledgesourceconsumerid`|
+|ReferencingAttribute|`baserecordid`|
+|ReferencingEntityNavigationPropertyName|`baserecordid_knowledgesourceconsumer`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_knowledgesourceconsumer_DuplicateMatchingRecord"></a> knowledgesourceconsumer_DuplicateMatchingRecord
+
+One-To-Many Relationship: [knowledgesourceconsumer knowledgesourceconsumer_DuplicateMatchingRecord](knowledgesourceconsumer.md#BKMK_knowledgesourceconsumer_DuplicateMatchingRecord)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`knowledgesourceconsumer`|
+|ReferencedAttribute|`knowledgesourceconsumerid`|
+|ReferencingAttribute|`duplicaterecordid`|
+|ReferencingEntityNavigationPropertyName|`duplicaterecordid_knowledgesourceconsumer`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_knowledgesourceprofile_DuplicateBaseRecord"></a> knowledgesourceprofile_DuplicateBaseRecord
+
+One-To-Many Relationship: [knowledgesourceprofile knowledgesourceprofile_DuplicateBaseRecord](knowledgesourceprofile.md#BKMK_knowledgesourceprofile_DuplicateBaseRecord)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`knowledgesourceprofile`|
+|ReferencedAttribute|`knowledgesourceprofileid`|
+|ReferencingAttribute|`baserecordid`|
+|ReferencingEntityNavigationPropertyName|`baserecordid_knowledgesourceprofile`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_knowledgesourceprofile_DuplicateMatchingRecord"></a> knowledgesourceprofile_DuplicateMatchingRecord
+
+One-To-Many Relationship: [knowledgesourceprofile knowledgesourceprofile_DuplicateMatchingRecord](knowledgesourceprofile.md#BKMK_knowledgesourceprofile_DuplicateMatchingRecord)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`knowledgesourceprofile`|
+|ReferencedAttribute|`knowledgesourceprofileid`|
+|ReferencingAttribute|`duplicaterecordid`|
+|ReferencingEntityNavigationPropertyName|`duplicaterecordid_knowledgesourceprofile`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
@@ -2369,6 +2467,32 @@ One-To-Many Relationship: [msdyn_aibfileattacheddata msdyn_aibfileattacheddata_D
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
+### <a name="BKMK_msdyn_aiconfigurationsearch_DuplicateBaseRecord"></a> msdyn_aiconfigurationsearch_DuplicateBaseRecord
+
+One-To-Many Relationship: [msdyn_aiconfigurationsearch msdyn_aiconfigurationsearch_DuplicateBaseRecord](msdyn_aiconfigurationsearch.md#BKMK_msdyn_aiconfigurationsearch_DuplicateBaseRecord)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msdyn_aiconfigurationsearch`|
+|ReferencedAttribute|`msdyn_aiconfigurationsearchid`|
+|ReferencingAttribute|`baserecordid`|
+|ReferencingEntityNavigationPropertyName|`baserecordid_msdyn_aiconfigurationsearch`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msdyn_aiconfigurationsearch_DuplicateMatchingRecord"></a> msdyn_aiconfigurationsearch_DuplicateMatchingRecord
+
+One-To-Many Relationship: [msdyn_aiconfigurationsearch msdyn_aiconfigurationsearch_DuplicateMatchingRecord](msdyn_aiconfigurationsearch.md#BKMK_msdyn_aiconfigurationsearch_DuplicateMatchingRecord)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msdyn_aiconfigurationsearch`|
+|ReferencedAttribute|`msdyn_aiconfigurationsearchid`|
+|ReferencingAttribute|`duplicaterecordid`|
+|ReferencingEntityNavigationPropertyName|`duplicaterecordid_msdyn_aiconfigurationsearch`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
 ### <a name="BKMK_msdyn_aievent_DuplicateBaseRecord"></a> msdyn_aievent_DuplicateBaseRecord
 
 One-To-Many Relationship: [msdyn_aievent msdyn_aievent_DuplicateBaseRecord](msdyn_aievent.md#BKMK_msdyn_aievent_DuplicateBaseRecord)
@@ -2496,6 +2620,58 @@ One-To-Many Relationship: [msdyn_aiodtrainingimage msdyn_aiodtrainingimage_Dupli
 |ReferencedAttribute|`msdyn_aiodtrainingimageid`|
 |ReferencingAttribute|`duplicaterecordid`|
 |ReferencingEntityNavigationPropertyName|`duplicaterecordid_msdyn_aiodtrainingimage`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msdyn_aioptimization_DuplicateBaseRecord"></a> msdyn_aioptimization_DuplicateBaseRecord
+
+One-To-Many Relationship: [msdyn_aioptimization msdyn_aioptimization_DuplicateBaseRecord](msdyn_aioptimization.md#BKMK_msdyn_aioptimization_DuplicateBaseRecord)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msdyn_aioptimization`|
+|ReferencedAttribute|`msdyn_aioptimizationid`|
+|ReferencingAttribute|`baserecordid`|
+|ReferencingEntityNavigationPropertyName|`baserecordid_msdyn_aioptimization`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msdyn_aioptimization_DuplicateMatchingRecord"></a> msdyn_aioptimization_DuplicateMatchingRecord
+
+One-To-Many Relationship: [msdyn_aioptimization msdyn_aioptimization_DuplicateMatchingRecord](msdyn_aioptimization.md#BKMK_msdyn_aioptimization_DuplicateMatchingRecord)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msdyn_aioptimization`|
+|ReferencedAttribute|`msdyn_aioptimizationid`|
+|ReferencingAttribute|`duplicaterecordid`|
+|ReferencingEntityNavigationPropertyName|`duplicaterecordid_msdyn_aioptimization`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msdyn_aioptimizationprivatedata_DuplicateBaseRecord"></a> msdyn_aioptimizationprivatedata_DuplicateBaseRecord
+
+One-To-Many Relationship: [msdyn_aioptimizationprivatedata msdyn_aioptimizationprivatedata_DuplicateBaseRecord](msdyn_aioptimizationprivatedata.md#BKMK_msdyn_aioptimizationprivatedata_DuplicateBaseRecord)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msdyn_aioptimizationprivatedata`|
+|ReferencedAttribute|`msdyn_aioptimizationprivatedataid`|
+|ReferencingAttribute|`baserecordid`|
+|ReferencingEntityNavigationPropertyName|`baserecordid_msdyn_aioptimizationprivatedata`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msdyn_aioptimizationprivatedata_DuplicateMatchingRecord"></a> msdyn_aioptimizationprivatedata_DuplicateMatchingRecord
+
+One-To-Many Relationship: [msdyn_aioptimizationprivatedata msdyn_aioptimizationprivatedata_DuplicateMatchingRecord](msdyn_aioptimizationprivatedata.md#BKMK_msdyn_aioptimizationprivatedata_DuplicateMatchingRecord)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msdyn_aioptimizationprivatedata`|
+|ReferencedAttribute|`msdyn_aioptimizationprivatedataid`|
+|ReferencingAttribute|`duplicaterecordid`|
+|ReferencingEntityNavigationPropertyName|`duplicaterecordid_msdyn_aioptimizationprivatedata`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
@@ -3981,6 +4157,32 @@ One-To-Many Relationship: [msdyn_pmsimulation msdyn_pmsimulation_DuplicateMatchi
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
+### <a name="BKMK_msdyn_pmtab_DuplicateBaseRecord"></a> msdyn_pmtab_DuplicateBaseRecord
+
+One-To-Many Relationship: [msdyn_pmtab msdyn_pmtab_DuplicateBaseRecord](msdyn_pmtab.md#BKMK_msdyn_pmtab_DuplicateBaseRecord)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msdyn_pmtab`|
+|ReferencedAttribute|`msdyn_pmtabid`|
+|ReferencingAttribute|`baserecordid`|
+|ReferencingEntityNavigationPropertyName|`baserecordid_msdyn_pmtab`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msdyn_pmtab_DuplicateMatchingRecord"></a> msdyn_pmtab_DuplicateMatchingRecord
+
+One-To-Many Relationship: [msdyn_pmtab msdyn_pmtab_DuplicateMatchingRecord](msdyn_pmtab.md#BKMK_msdyn_pmtab_DuplicateMatchingRecord)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msdyn_pmtab`|
+|ReferencedAttribute|`msdyn_pmtabid`|
+|ReferencingAttribute|`duplicaterecordid`|
+|ReferencingEntityNavigationPropertyName|`duplicaterecordid_msdyn_pmtab`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
 ### <a name="BKMK_msdyn_pmtemplate_DuplicateBaseRecord"></a> msdyn_pmtemplate_DuplicateBaseRecord
 
 One-To-Many Relationship: [msdyn_pmtemplate msdyn_pmtemplate_DuplicateBaseRecord](msdyn_pmtemplate.md#BKMK_msdyn_pmtemplate_DuplicateBaseRecord)
@@ -4787,6 +4989,58 @@ One-To-Many Relationship: [publisher Publisher_DuplicateMatchingRecord](publishe
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
+### <a name="BKMK_purviewlabelinfo_DuplicateBaseRecord"></a> purviewlabelinfo_DuplicateBaseRecord
+
+One-To-Many Relationship: [purviewlabelinfo purviewlabelinfo_DuplicateBaseRecord](purviewlabelinfo.md#BKMK_purviewlabelinfo_DuplicateBaseRecord)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`purviewlabelinfo`|
+|ReferencedAttribute|`purviewlabelinfoid`|
+|ReferencingAttribute|`baserecordid`|
+|ReferencingEntityNavigationPropertyName|`baserecordid_purviewlabelinfo`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_purviewlabelinfo_DuplicateMatchingRecord"></a> purviewlabelinfo_DuplicateMatchingRecord
+
+One-To-Many Relationship: [purviewlabelinfo purviewlabelinfo_DuplicateMatchingRecord](purviewlabelinfo.md#BKMK_purviewlabelinfo_DuplicateMatchingRecord)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`purviewlabelinfo`|
+|ReferencedAttribute|`purviewlabelinfoid`|
+|ReferencingAttribute|`duplicaterecordid`|
+|ReferencingEntityNavigationPropertyName|`duplicaterecordid_purviewlabelinfo`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_purviewlabelsynccache_DuplicateBaseRecord"></a> purviewlabelsynccache_DuplicateBaseRecord
+
+One-To-Many Relationship: [purviewlabelsynccache purviewlabelsynccache_DuplicateBaseRecord](purviewlabelsynccache.md#BKMK_purviewlabelsynccache_DuplicateBaseRecord)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`purviewlabelsynccache`|
+|ReferencedAttribute|`purviewlabelsynccacheid`|
+|ReferencingAttribute|`baserecordid`|
+|ReferencingEntityNavigationPropertyName|`baserecordid_purviewlabelsynccache`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_purviewlabelsynccache_DuplicateMatchingRecord"></a> purviewlabelsynccache_DuplicateMatchingRecord
+
+One-To-Many Relationship: [purviewlabelsynccache purviewlabelsynccache_DuplicateMatchingRecord](purviewlabelsynccache.md#BKMK_purviewlabelsynccache_DuplicateMatchingRecord)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`purviewlabelsynccache`|
+|ReferencedAttribute|`purviewlabelsynccacheid`|
+|ReferencingAttribute|`duplicaterecordid`|
+|ReferencingEntityNavigationPropertyName|`duplicaterecordid_purviewlabelsynccache`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
 ### <a name="BKMK_Queue_DuplicateBaseRecord"></a> Queue_DuplicateBaseRecord
 
 One-To-Many Relationship: [queue Queue_DuplicateBaseRecord](queue.md#BKMK_Queue_DuplicateBaseRecord)
@@ -5148,6 +5402,32 @@ One-To-Many Relationship: [searchrelationshipsettings searchrelationshipsettings
 |ReferencedAttribute|`searchrelationshipsettingsid`|
 |ReferencingAttribute|`duplicaterecordid`|
 |ReferencingEntityNavigationPropertyName|`duplicaterecordid_searchrelationshipsettings`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_sensitivitylabelattributemapping_DuplicateBaseRecord"></a> sensitivitylabelattributemapping_DuplicateBaseRecord
+
+One-To-Many Relationship: [sensitivitylabelattributemapping sensitivitylabelattributemapping_DuplicateBaseRecord](sensitivitylabelattributemapping.md#BKMK_sensitivitylabelattributemapping_DuplicateBaseRecord)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`sensitivitylabelattributemapping`|
+|ReferencedAttribute|`sensitivitylabelattributemappingid`|
+|ReferencingAttribute|`baserecordid`|
+|ReferencingEntityNavigationPropertyName|`baserecordid_sensitivitylabelattributemapping`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_sensitivitylabelattributemapping_DuplicateMatchingRecord"></a> sensitivitylabelattributemapping_DuplicateMatchingRecord
+
+One-To-Many Relationship: [sensitivitylabelattributemapping sensitivitylabelattributemapping_DuplicateMatchingRecord](sensitivitylabelattributemapping.md#BKMK_sensitivitylabelattributemapping_DuplicateMatchingRecord)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`sensitivitylabelattributemapping`|
+|ReferencedAttribute|`sensitivitylabelattributemappingid`|
+|ReferencingAttribute|`duplicaterecordid`|
+|ReferencingEntityNavigationPropertyName|`duplicaterecordid_sensitivitylabelattributemapping`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 

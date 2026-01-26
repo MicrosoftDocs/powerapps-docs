@@ -1,6 +1,6 @@
 ---
-title: "Web service error codes (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This topic lists the error codes you might encounter when you debug your code. " # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Web service error codes (Microsoft Dataverse) | Microsoft Docs"
+description: "This topic lists the error codes you might encounter when you debug your code. " 
 ms.date: 07/21/2025
 author: MsSQLGirl
 ms.author: jukoesma

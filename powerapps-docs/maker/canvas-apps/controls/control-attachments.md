@@ -4,7 +4,7 @@ description: Learn about the details, properties and examples of the attachments
 author: yogeshgupta698
 ms.topic: reference
 ms.custom: canvas
-ms.date: 06/01/2022
+ms.date: 12/16/2025
 ms.subservice: canvas-maker
 ms.author: yogupt
 ms.reviewer: mkaur
@@ -31,6 +31,14 @@ The attachment control has these limitations:
 1. Upload and delete functionality work only inside a form. The Attachment control appears disabled when in Edit mode and not inside a form. To save file additions and deletions, the app user must save the form. Because of this limitation, the Attachment control isn't available from the **Insert** tab but appears in the form when the Attachment form field is enabled in a SharePoint or Dataverse form.
 
 1. Attachments control on a web browser lets you select multiple files, and allows use of drag and drop functionality. However, when using attachments control on [Power Apps Mobile](https://powerapps.microsoft.com/downloads/), you can only add files one at a time.
+
+1. Files stored in OneDrive or any other cloud storage may not be attached correctly. Try downloading these files to the device before attaching them using the device's file picker.
+
+1. The Power Apps mobile app doesn't support capturing videos directly from the camera or selecting videos from the photo library when using the **Attachments** control. To add a video, users must use the **Browse** option.
+   - **On Android**: The **Browse** option displays all file types, including videos, letting you to select and attach your video files.
+   - **On iOS**: The **Browse** option only shows files stored in the Files app. If your video isn't already saved there, you need to move it to the Files app before you attach it.
+   
+   If a video doesn't appear as an option to attach, first save the video to your device’s Files app and then try again.
 
 ## Key properties
 **[Items](properties-core.md)** – The **Attachment** column of the list or Dataverse table. [Collections](../create-update-collection.md) and [Tables](../working-with-tables.md) are not supported.
@@ -173,3 +181,5 @@ The following properties must be present:
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
+
+

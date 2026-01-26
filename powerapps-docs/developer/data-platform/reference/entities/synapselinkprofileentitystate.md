@@ -78,6 +78,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [profile](#BKMK_profile)
 - [profileentity](#BKMK_profileentity)
+- [SourceRecordCount](#BKMK_SourceRecordCount)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
 - [synapselinkprofileentitystateId](#BKMK_synapselinkprofileentitystateId)
@@ -481,6 +482,20 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|SystemRequired|
 |Type|Lookup|
 |Targets|synapselinkprofileentity|
+
+### <a name="BKMK_SourceRecordCount"></a> SourceRecordCount
+
+|Property|Value|
+|---|---|
+|Description|**Source Record count**|
+|DisplayName|**SourceRecordCount**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`sourcerecordcount`|
+|RequiredLevel|None|
+|Type|BigInt|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
 
 ### <a name="BKMK_statecode"></a> statecode
 

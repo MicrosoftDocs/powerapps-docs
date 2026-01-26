@@ -5,7 +5,7 @@ author: jessicaszelo
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 08/26/2025
+ms.date: 10/10/2025
 ms.subservice: canvas-maker
 ms.author: szlo
 search.audienceType: 
@@ -48,21 +48,29 @@ Before you share an app, you must [save it](save-publish-app.md) (not locally) a
 
         :::image type="content" source="media/share-app/share-app-coowner.png" alt-text="share with a co-owner":::
 
+    - If your app connects to a Dataverse table, the permissions dropdown will display a **More security roles** option. Select the appropriate security roles, and those roles will be automatically assigned to users when you share the app.
+    - If your admin enabled [app level security roles](/power-platform/admin/settings-collaboration#security-roles) in Power Platform Admin, makers with the **System Administrator** security role can give collaborators app-level privileges when sharing. Makers assign privileges from the security role picker, with App reader, App user, App maker, or App admin as the security role options. To edit assigned security roles, unshare and reshare the app to assign the appropriate security role under Manage Access.
+        - **App reader**: This role gives read privilege for both user or team owned tables and org owned tables. 
+        - **App user**: This role gives full access to only their own records in user or team owned tables, and read privilege to org owned tables.
+        - **App maker**: This role gives create and read privilege for all records in user or team owned tables, but only write, delete, assign, share, append, and append to privileges for their own records in user or team owned tables. Additionally, it gives read privilege to org owned tables.
+        - **App admin**: This role gives full access to all records in user or team owned tables and org owned tables.
+        
+            :::image type="content" source="media/share-app/app-level-security-roles.png" alt-text="App level security roles":::
+     
+    
+
+
 1. Optional steps:
    - Select the **overflow menu (...)** at the top-right corner and then select **Upload app image** to include an image of the app in the email.
 
-
     :::image type="content" source="media/share-app/share-app-app-image.png" alt-text="Add an app image":::
-. 
-   - Select **Manage access** to displays app access details, including current users and co-owners. You can also edit user access here. The **Additional data access** tab shows app connections to data sources like Dataverse tables or Excel files on OneDrive for Business. To manage security roles for Dataverse tables, use the [classic sharing experience](share-app.md#classic-app-sharing-experience). For other data sources, such as Excel files on OneDrive, ensure you share these data sources with the app users.
+
+   - Select **Manage access** to displays app access details, including current users and co-owners. You can also edit user access and assign security roles here. The **Additional data access** tab shows app connections to data sources like Dataverse tables or Excel files on OneDrive for Business. To manage security roles for data sources other than Dataverse, such as Excel files on OneDrive, ensure you share these data sources with the app users.
 
      :::image type="content" source="media/share-app/share-app-access.png" alt-text="Manage app access":::
 
 1. Add an optional message and then select **Share**.
 
-### App sharing limitations
-
-Managing security roles for Dataverse tables. 
 
 > [!NOTE]
 > - To learn about sharing apps outside of your organization, see [Share a canvas app with guest users](share-app-guests.md).
@@ -131,7 +139,7 @@ You can still use the classic app sharing experience by selecting the classic sh
 
 1. At the bottom of the share panel, select **Share**.
 
-    Users can now run the app by using Power Apps Mobile on a mobile device or from AppSource on [Microsoft 365](https://www.office.com/apps) in a browser. Co-owners can edit and share the app in [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+    Users can now run the app by using Power Apps Mobile on a mobile device or from Marketplace on [Microsoft 365](https://www.office.com/apps) in a browser. Co-owners can edit and share the app in [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
     If you sent an email invitation, users can also run the app by selecting the link in the invitation email:
 
@@ -239,10 +247,11 @@ If you create an app based on Dataverse, you must also ensure that the users you
 > [!NOTE]
 > - You can assign security roles to individual users and security groups in Microsoft Entra ID, but not to Microsoft 365 groups.
 > - If a user isn't in the Dataverse root business unit, you can share the app without providing a security role, and then set the security role directly.
+> - After a security role is assigned to a user or group, you can't unassigned it when you share an app. However, you can still unassign security roles through the admin portal.
 
 ### Prerequisite
 
-To assign a role, you must have **System administrator** permissions for a Dataverse database.
+To assign a role, you must have **System Administrator** permissions for a Dataverse database.
 
 **To assign a security group in Microsoft Entra to a role**
 

@@ -1,7 +1,7 @@
 ---
 title: Use Copilot's form fill assistance feature in model-driven apps 
 description: Learn how to use AI-generated optional suggestions for fields in a form.
-ms.date: 03/28/2025
+ms.date: 01/08/2026
 ms.update-cycle: 180-days
 ms.custom: 
   - responsible-ai-faqs
@@ -56,8 +56,6 @@ Copilot assistance for filling forms generates suggestions for blank form fields
 :::image type="content" source="media/formfill_suggestions.png" alt-text="Screenshot that shows form fill suggestions being presented in a form.":::
 
 Suggestions are entirely optional and aren't saved in the app until you accept them. To learn more about a suggestion, hover over the field, and specifically hover over the information icon. This is a citation, and identifies the source of a specific suggestion, for example "Records you have updated recently" or "Clipboard".
-
-Suggestions are optional and aren't saved in the app until you accept them. To learn more about a suggestion, hover over the field and to be specifically the information icon. The citation identifies the source of a specific suggestion, such as "Records you updated recently" or "Clipboard".
 
 :::image type="content" source="media/formfill_citation.png" alt-text="Screenshot that shows a citation for a form fill suggestion.":::
 

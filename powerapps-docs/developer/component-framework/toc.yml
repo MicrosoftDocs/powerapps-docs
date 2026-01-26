@@ -1,521 +1,523 @@
 items:
-- name: Power Apps component framework
-  items:
-  - name: Overview
-    href: overview.md
-  - name: Code components
-    href: custom-controls-overview.md
-    displayName: "What are code components?"
-  - name: For model-driven apps
-    href: code-components-model-driven-apps.md
-  - name: For canvas apps
-    href: component-framework-for-canvas-apps.md
-  - name: For Power Pages
-    href: /power-pages/configure/component-framework
-  - name: "React controls & platform libraries"
-    href: react-controls-platform-libraries.md
-  - name: "Style components with modern theming (preview)"
-    href: fluent-modern-theming.md
-  - name: Dependent libraries (preview)
-    href: dependent-libraries.md
-  - name: Events  (preview)
-    href: events.md
-  - name: Get tooling
-    href: get-powerapps-cli.md
-  - name: Limitations
-    href: limitations.md
-  - name: Tutorials
+  - name: Power Apps component framework
     items:
-    - name: Create your first component
-      href: implementing-controls-using-typescript.md
-    - name: Create a model-driven app field component
-      href: tutorial-create-model-driven-field-component.md
-    - name: Create a model-driven app dataset component
-      href: tutorial-create-model-driven-app-dataset-component.md
-    - name: Create a canvas app dataset component
-      href: tutorial-create-canvas-dataset-component.md
-    - name: Define an event in a component
-      href: tutorial-define-event.md
-    - name: Use dependent libraries
-      href: tutorial-use-dependent-libraries.md
-  - name: Online learning
-    href: /training/paths/use-power-apps-component-framework
-  - name: Code components ALM
-    href: code-components-alm.md
-  - name: Best practices
-    href: code-components-best-practices.md
-  - name: How-to guides
-    items:
-    - name: Create and build a code component
-      href: create-custom-controls-using-pcf.md
-    - name: Package a code component
-      href: import-custom-controls.md
-    - name: Debug a code component
-      href: debugging-custom-controls.md
-    - name: Add components to model-driven apps
-      href: add-custom-controls-to-a-field-or-entity.md
-    - name: Add components to canvas apps
-      href: component-framework-for-canvas-apps.md#add-components-to-a-canvas-app
-    - name: Add components to portals (Preview)
-      href: ../../maker/portals/component-framework-tutorial.md
-    - name: Publish code components on AppSource
-      href: publish-components-app-source.md
-    - name: Customize the editable grid control
-      href: customize-editable-grid-control.md
-    - name: Bring intelligence into your components using Agent APIs
-      href: bring-intelligence-using-agent-apis.md
-  - name: Troubleshooting
-    items:
-    - name: Common issues and workarounds
-      href: issues-and-workarounds.md
-  - name: FAQs
-    href: faq.yml
-  - name: Sample components
-    items:
-    - name: How to use the sample components?
-      href: use-sample-components.md
-    - name: Angular Flip component
-      href: sample-controls/angular-flip-control.md
-    - name: Canvas app grid component
-      href: tutorial-create-canvas-dataset-component.md
-    - name: Choice picker component
-      href: tutorial-create-model-driven-field-component.md
-    - name: Control State API component
-      href: sample-controls/control-state-api.md
-    - name: Customized editable grid
-      href: sample-controls/customized-editable-grid-control.md
-    - name: Data Set Grid component
-      href: sample-controls/data-set-grid-control.md
-    - name: Device API component
-      href: sample-controls/device-api-control.md
-    - name: Modern theming API component
-      href: sample-controls/modern-theming-api-control.md
-    - name: Formatting API component
-      href: sample-controls/formatting-api-control.md
-    - name: IFRAME component
-      href: sample-controls/iframe-control.md
-    - name: Image upload component
-      href: sample-controls/image-upload-control.md
-    - name: Increment component
-      href: sample-controls/increment-control.md
-    - name: Linear input component
-      href: sample-controls/linear-input-control.md
-    - name: Localization API component
-      href: sample-controls/localization-api-control.md
-    - name: Lookup component
-      href: sample-controls/lookup-control.md
-    - name: Map component
-      href: sample-controls/map-control.md
-    - name: Model-driven app grid component
-      href: tutorial-create-model-driven-app-dataset-component.md
-    - name: Choices (Multi select option set) component
-      href: sample-controls/multi-select-option-set-control.md
-    - name: Navigation API component
-      href: sample-controls/navigation-api-control.md
-    - name: Object Output component
-      href: sample-controls/object-output.md
-    - name: Property set table component
-      href: sample-controls/data-set-component-canvas.md
-    - name: React Facepile component
-      href: sample-controls/react-facepile-control.md
-    - name: Table component
-      href: sample-controls/table-control.md
-    - name: Table grid component
-      href: sample-controls/table-grid-control.md
-    - name: Web API component
-      href: sample-controls/webapi-control.md
-  - name: Reference
-    items:
-    - name: Power Apps component framework
-      href: reference/index.md
-      items:
-      - name: AttributeMetadata
-        href: reference/attributemetadata.md
-      - name: AttributeType
-        href: reference/attributetype.md
-      - name: Client
-        href: reference/client.md
+      - name: Overview
+        href: overview.md
+      - name: Code components
+        href: custom-controls-overview.md
+        displayName: "What are code components?"
+      - name: For model-driven apps
+        href: code-components-model-driven-apps.md
+      - name: For canvas apps
+        href: component-framework-for-canvas-apps.md
+      - name: For Power Pages
+        href: /power-pages/configure/component-framework
+      - name: "React controls & platform libraries"
+        href: react-controls-platform-libraries.md
+      - name: "Style components with modern theming (preview)"
+        href: fluent-modern-theming.md
+      - name: Dependent libraries (preview)
+        href: dependent-libraries.md
+      - name: Events  (preview)
+        href: events.md
+      - name: Get tooling
+        href: get-powerapps-cli.md
+      - name: Limitations
+        href: limitations.md
+      - name: Tutorials
         items:
-        - name: getClient
-          href: reference/client/getclient.md
-        - name: getFormFactor
-          href: reference/client/getformfactor.md
-        - name: isNetworkAvailable
-          href: reference/client/isnetworkavailable.md
-        - name: isOffline
-          href: reference/client/isoffline.md
-      - name: Column
-        href: reference/column.md
-      - name: ColumnInfo
-        href: reference/columninfo.md
-      - name: ConditionExpression
-        href: reference/conditionexpression.md
-      - name: Context
-        href: reference/context.md
-      - name: ControlAttributes
-        href: reference/controlattributes.md
-      - name: ControlAttributesType
-        href: reference/controlattributestype.md
-      - name: Copilot
-        href: reference/copilot.md
+          - name: Create your first component
+            href: implementing-controls-using-typescript.md
+          - name: Create a model-driven app field component
+            href: tutorial-create-model-driven-field-component.md
+          - name: Create a model-driven app dataset component
+            href: tutorial-create-model-driven-app-dataset-component.md
+          - name: Create a canvas app dataset component
+            href: tutorial-create-canvas-dataset-component.md
+          - name: Define an event in a component
+            href: tutorial-define-event.md
+          - name: Use dependent libraries
+            href: tutorial-use-dependent-libraries.md
+      - name: Online learning
+        href: /training/paths/use-power-apps-component-framework
+      - name: Code components ALM
+        href: code-components-alm.md
+      - name: Best practices
+        href: code-components-best-practices.md
+      - name: How-to guides
         items:
-        - name: executeEvent
-          href: reference/copilot/executeevent.md
-        - name: executePrompt
-          href: reference/copilot/executeprompt.md
-        - name: MCSResponse
-          href: reference/copilot/mcsresponse.md
-      - name: DataProviderCapabilities
-        href: reference/dataprovidercapabilities.md
-      - name: DataSet
-        href: reference/dataset.md
+          - name: Create and build a code component
+            href: create-custom-controls-using-pcf.md
+          - name: Package a code component
+            href: import-custom-controls.md
+          - name: Debug a code component
+            href: debugging-custom-controls.md
+          - name: Add components to model-driven apps
+            href: add-custom-controls-to-a-field-or-entity.md
+          - name: Add components to canvas apps
+            href: component-framework-for-canvas-apps.md#add-components-to-a-canvas-app
+          - name: Add components to portals (Preview)
+            href: ../../maker/portals/component-framework-tutorial.md
+          - name: Publish code components on Marketplace
+            href: publish-components-app-source.md
+          - name: Customize the editable grid control
+            href: customize-editable-grid-control.md
+          - name: Bring intelligence into your components using Agent APIs
+            href: bring-intelligence-using-agent-apis.md
+      - name: Troubleshooting
         items:
-        - name: addColumn
-          href: reference/dataset/addcolumn.md
-        - name: clearSelectedRecordIds
-          href: reference/dataset/clearselectedrecordids.md
-        - name: delete
-          href: reference/dataset/delete.md
-        - name: getCommands
-          href: reference/dataset/getcommands.md
-        - name: getDataSetCapabilities
-          href: reference/dataset/getdatasetcapabilities.md
-        - name: getSelectedRecordIds
-          href: reference/dataset/getselectedrecordids.md
-        - name: getTargetEntityType
-          href: reference/dataset/gettargetentitytype.md
-        - name: getTitle
-          href: reference/dataset/gettitle.md
-        - name: getViewId
-          href: reference/dataset/getviewid.md
-        - name: newRecord
-          href: reference/dataset/newrecord.md
-        - name: openDatasetItem
-          href: reference/dataset/opendatasetitem.md
-        - name: refresh
-          href: reference/dataset/refresh.md
-        - name: retrieveRecordCommand
-          href: reference/dataset/retrieverecordcommand.md
-        - name: setSelectedRecordIds
-          href: reference/dataset/setselectedrecordids.md
-      - name: DateFormattingInfo
-        href: reference/dateformattinginfo.md
-      - name: DateTimeFieldBehavior
-        href: reference/datetimefieldbehavior.md
-      - name: Device
-        href: reference/device.md
+          - name: Common issues and workarounds
+            href: issues-and-workarounds.md
+      - name: FAQs
+        href: faq.yml
+      - name: Sample components
         items:
-        - name: captureAudio
-          href: reference/device/captureaudio.md
-        - name: captureImage
-          href: reference/device/captureimage.md
-        - name: captureVideo
-          href: reference/device/capturevideo.md
-        - name: getBarcodeValue
-          href: reference/device/getbarcodevalue.md
-        - name: getCurrentPosition
-          href: reference/device/getcurrentposition.md
-        - name: pickFile
-          href: reference/device/pickfile.md
-      - name: Theming
-        href: reference/theming.md
-      - name: Entity
-        href: reference/entity.md
-      - name: EntityFormOptions
-        href: reference/entityformoptions.md
-      - name: EntityRecord
-        href: reference/entityrecord.md
+          - name: How to use the sample components?
+            href: use-sample-components.md
+          - name: Angular Flip component
+            href: sample-controls/angular-flip-control.md
+          - name: Canvas app grid component
+            href: tutorial-create-canvas-dataset-component.md
+          - name: Choice picker component
+            href: tutorial-create-model-driven-field-component.md
+          - name: Code interpreter component
+            href: ../data-platform/code-interpreter-pcf-sample.md
+          - name: Control State API component
+            href: sample-controls/control-state-api.md
+          - name: Customized editable grid
+            href: sample-controls/customized-editable-grid-control.md
+          - name: Data Set Grid component
+            href: sample-controls/data-set-grid-control.md
+          - name: Device API component
+            href: sample-controls/device-api-control.md
+          - name: Modern theming API component
+            href: sample-controls/modern-theming-api-control.md
+          - name: Formatting API component
+            href: sample-controls/formatting-api-control.md
+          - name: IFRAME component
+            href: sample-controls/iframe-control.md
+          - name: Image upload component
+            href: sample-controls/image-upload-control.md
+          - name: Increment component
+            href: sample-controls/increment-control.md
+          - name: Linear input component
+            href: sample-controls/linear-input-control.md
+          - name: Localization API component
+            href: sample-controls/localization-api-control.md
+          - name: Lookup component
+            href: sample-controls/lookup-control.md
+          - name: Map component
+            href: sample-controls/map-control.md
+          - name: Model-driven app grid component
+            href: tutorial-create-model-driven-app-dataset-component.md
+          - name: Choices (Multi select option set) component
+            href: sample-controls/multi-select-option-set-control.md
+          - name: Navigation API component
+            href: sample-controls/navigation-api-control.md
+          - name: Object Output component
+            href: sample-controls/object-output.md
+          - name: Property set table component
+            href: sample-controls/data-set-component-canvas.md
+          - name: React Facepile component
+            href: sample-controls/react-facepile-control.md
+          - name: Table component
+            href: sample-controls/table-control.md
+          - name: Table grid component
+            href: sample-controls/table-grid-control.md
+          - name: Web API component
+            href: sample-controls/webapi-control.md
+      - name: Reference
         items:
-        - name: getColumnInfo
-          href: reference/entityrecord/getcolumninfo.md
-        - name: getFormattedValue
-          href: reference/entityrecord/getformattedvalue.md
-        - name: getNamedReference
-          href: reference/entityrecord/getnamedreference.md
-        - name: getRecordId
-          href: reference/entityrecord/getrecordid.md
-        - name: getValue
-          href: reference/entityrecord/getvalue.md
-        - name: isDirty
-          href: reference/entityrecord/isdirty.md
-        - name: isValid
-          href: reference/entityrecord/isvalid.md
-        - name: save
-          href: reference/entityrecord/save.md
-        - name: setValue
-          href: reference/entityrecord/setvalue.md
-      - name: EntityMetadata
-        href: reference/entitymetadata.md
-      - name: EntityReference
-        href: reference/entityreference.md
-      - name: Events
-        href: reference/events.md
-      - name: Factory
-        href: reference/factory.md
-        items:
-        - name: getPopupService
-          href: reference/factory/getpopupservice.md
-        - name: requestRender
-          href: reference/factory/requestrender.md
-      - name: FileObject
-        href: reference/fileobject.md
-      - name: Filtering
-        href: reference/filtering.md
-        items:
-        - name: clearFilter
-          href: reference/filtering/clearfilter.md
-        - name: getFilter
-          href: reference/filtering/getfilter.md
-        - name: setFilter
-          href: reference/filtering/setfilter.md
-      - name: FilterExpression
-        href: reference/filterexpression.md
-      - name: Formatting
-        href: reference/formatting.md
-        items:
-        - name: formatCurrency
-          href: reference/formatting/formatcurrency.md
-        - name: formatDateAsFilterStringInUTC
-          href: reference/formatting/formatdateasfilterstringinutc.md
-        - name: formatDateLong
-          href: reference/formatting/formatdatelong.md
-        - name: formatDateLongAbbreviated
-          href: reference/formatting/formatdatelongabbreviated.md
-        - name: formatDateShort
-          href: reference/formatting/formatdateshort.md
-        - name: formatDateYearMonth
-          href: reference/formatting/formatdateyearmonth.md
-        - name: formatDecimal
-          href: reference/formatting/formatdecimal.md
-        - name: formatInteger
-          href: reference/formatting/formatinteger.md
-        - name: formatLanguage
-          href: reference/formatting/formatlanguage.md
-        - name: formatTime
-          href: reference/formatting/formattime.md
-        - name: formatUserDateTimeToUTC
-          href: reference/formatting/formatuserdatetimetoutc.md
-        - name: formatUserInput
-          href: reference/formatting/formatUserInput.md
-        - name: formatUTCDateTimeToUserDate
-          href: reference/formatting/formatutcdatetimetouserdate.md
-        - name: getWeekOfYear
-          href: reference/formatting/getweekofyear.md
-        - name: parseDateFromInput
-          href: reference/formatting/parsedatefrominput.md
-      - name: ICommand
-        href: reference/icommand.md
-      - name: ImageObject
-        href: reference/imageobject.md
-      - name: Linking
-        href: reference/linking.md
-        items:
-        - name: addLinkedEntity
-          href: reference/linking/addlinkedentity.md
-        - name: getLinkedEntity
-          href: reference/linking/getlinkedentities.md
-      - name: LinkEntityExposedExpression
-        href: reference/ilinkentityexposedexpression.md
-      - name: LookupValue
-        href: reference/lookupvalue.md
-      - name: Metadata
-        href: reference/metadata.md
-      - name: Mode
-        href: reference/mode.md
-        items:
-        - name: setControlState
-          href: reference/mode/setcontrolstate.md
-        - name: setFullScreen
-          href: reference/mode/setfullscreen.md
-        - name: trackContainerResize
-          href: reference/mode/trackcontainerresize.md
-      - name: MoneyPrecisionSource
-        href: reference/moneyprecisionsource.md
-      - name: Navigation
-        href: reference/navigation.md
-        items:
-        - name: openAlertDialog
-          href: reference/navigation/openalertdialog.md
-        - name: openConfirmDialog
-          href: reference/navigation/openconfirmdialog.md
-        - name: openErrorDialog
-          href: reference/navigation/openerrordialog.md
-        - name: openFile
-          href: reference/navigation/openfile.md
-        - name: openForm
-          href: reference/navigation/openform.md
-        - name: openUrl
-          href: reference/navigation/openurl.md
-        - name: openWebResource
-          href: reference/navigation/openwebresource.md
-      - name: NumberFormattingInfo
-        href: reference/numberformattinginfo.md
-      - name: OptionDescriptor
-        href: reference/optiondescriptor.md
-      - name: Paging
-        href: reference/paging.md
-        items:
-        - name: loadExactPage
-          href: reference/paging/loadexactpage.md
-        - name: loadNextPage
-          href: reference/paging/loadnextpage.md
-        - name: loadPreviousPage
-          href: reference/paging/loadpreviouspage.md
-        - name: reset
-          href: reference/paging/reset.md
-        - name: setPageSize
-          href: reference/paging/setpagesize.md
-      - name: PickFileOptions
-        href: reference/pickfileoptions.md
-      - name: Popup
-        href: reference/popup.md
-      - name: PopupService
-        href: reference/popupservice.md
-        items:
-        - name: closePopup
-          href: reference/popupservice/closepopup.md
-        - name: createPopup
-          href: reference/popupservice/createpopup.md
-        - name: deletePopup
-          href: reference/popupservice/deletepopup.md
-        - name: getPopupsId
-          href: reference/popupservice/getpopupsid.md
-        - name: openPopup
-          href: reference/popupservice/openpopup.md
-        - name: setPopupsId
-          href: reference/popupservice/setpopupsid.md
-        - name: updatePopup
-          href: reference/popupservice/updatepopup.md
-      - name: Position
-        href: reference/position.md
-      - name: Property
-        href: reference/property.md
-      - name: ReactControl
-        href: reference/react-control.md
-        items:
-        - name: destroy
-          href: reference/react-control/destroy.md
-        - name: getOutputs
-          href: reference/react-control/getOutputs.md
-        - name: getOutputSchema
-          href: reference/react-control/getoutputschema.md
-        - name: init
-          href: reference/react-control/init.md
-        - name: updateView
-          href: reference/react-control/updateview.md
-      - name: RetrieveMultipleResponse
-        href: reference/retrievemultipleresponse.md
+          - name: Power Apps component framework
+            href: reference/index.md
+            items:
+              - name: AttributeMetadata
+                href: reference/attributemetadata.md
+              - name: AttributeType
+                href: reference/attributetype.md
+              - name: Client
+                href: reference/client.md
+                items:
+                  - name: getClient
+                    href: reference/client/getclient.md
+                  - name: getFormFactor
+                    href: reference/client/getformfactor.md
+                  - name: isNetworkAvailable
+                    href: reference/client/isnetworkavailable.md
+                  - name: isOffline
+                    href: reference/client/isoffline.md
+              - name: Column
+                href: reference/column.md
+              - name: ColumnInfo
+                href: reference/columninfo.md
+              - name: ConditionExpression
+                href: reference/conditionexpression.md
+              - name: Context
+                href: reference/context.md
+              - name: ControlAttributes
+                href: reference/controlattributes.md
+              - name: ControlAttributesType
+                href: reference/controlattributestype.md
+              - name: Copilot
+                href: reference/copilot.md
+                items:
+                  - name: executeEvent
+                    href: reference/copilot/executeevent.md
+                  - name: executePrompt
+                    href: reference/copilot/executeprompt.md
+                  - name: MCSResponse
+                    href: reference/copilot/mcsresponse.md
+              - name: DataProviderCapabilities
+                href: reference/dataprovidercapabilities.md
+              - name: DataSet
+                href: reference/dataset.md
+                items:
+                  - name: addColumn
+                    href: reference/dataset/addcolumn.md
+                  - name: clearSelectedRecordIds
+                    href: reference/dataset/clearselectedrecordids.md
+                  - name: delete
+                    href: reference/dataset/delete.md
+                  - name: getCommands
+                    href: reference/dataset/getcommands.md
+                  - name: getDataSetCapabilities
+                    href: reference/dataset/getdatasetcapabilities.md
+                  - name: getSelectedRecordIds
+                    href: reference/dataset/getselectedrecordids.md
+                  - name: getTargetEntityType
+                    href: reference/dataset/gettargetentitytype.md
+                  - name: getTitle
+                    href: reference/dataset/gettitle.md
+                  - name: getViewId
+                    href: reference/dataset/getviewid.md
+                  - name: newRecord
+                    href: reference/dataset/newrecord.md
+                  - name: openDatasetItem
+                    href: reference/dataset/opendatasetitem.md
+                  - name: refresh
+                    href: reference/dataset/refresh.md
+                  - name: retrieveRecordCommand
+                    href: reference/dataset/retrieverecordcommand.md
+                  - name: setSelectedRecordIds
+                    href: reference/dataset/setselectedrecordids.md
+              - name: DateFormattingInfo
+                href: reference/dateformattinginfo.md
+              - name: DateTimeFieldBehavior
+                href: reference/datetimefieldbehavior.md
+              - name: Device
+                href: reference/device.md
+                items:
+                  - name: captureAudio
+                    href: reference/device/captureaudio.md
+                  - name: captureImage
+                    href: reference/device/captureimage.md
+                  - name: captureVideo
+                    href: reference/device/capturevideo.md
+                  - name: getBarcodeValue
+                    href: reference/device/getbarcodevalue.md
+                  - name: getCurrentPosition
+                    href: reference/device/getcurrentposition.md
+                  - name: pickFile
+                    href: reference/device/pickfile.md
+              - name: Theming
+                href: reference/theming.md
+              - name: Entity
+                href: reference/entity.md
+              - name: EntityFormOptions
+                href: reference/entityformoptions.md
+              - name: EntityRecord
+                href: reference/entityrecord.md
+                items:
+                  - name: getColumnInfo
+                    href: reference/entityrecord/getcolumninfo.md
+                  - name: getFormattedValue
+                    href: reference/entityrecord/getformattedvalue.md
+                  - name: getNamedReference
+                    href: reference/entityrecord/getnamedreference.md
+                  - name: getRecordId
+                    href: reference/entityrecord/getrecordid.md
+                  - name: getValue
+                    href: reference/entityrecord/getvalue.md
+                  - name: isDirty
+                    href: reference/entityrecord/isdirty.md
+                  - name: isValid
+                    href: reference/entityrecord/isvalid.md
+                  - name: save
+                    href: reference/entityrecord/save.md
+                  - name: setValue
+                    href: reference/entityrecord/setvalue.md
+              - name: EntityMetadata
+                href: reference/entitymetadata.md
+              - name: EntityReference
+                href: reference/entityreference.md
+              - name: Events
+                href: reference/events.md
+              - name: Factory
+                href: reference/factory.md
+                items:
+                  - name: getPopupService
+                    href: reference/factory/getpopupservice.md
+                  - name: requestRender
+                    href: reference/factory/requestrender.md
+              - name: FileObject
+                href: reference/fileobject.md
+              - name: Filtering
+                href: reference/filtering.md
+                items:
+                  - name: clearFilter
+                    href: reference/filtering/clearfilter.md
+                  - name: getFilter
+                    href: reference/filtering/getfilter.md
+                  - name: setFilter
+                    href: reference/filtering/setfilter.md
+              - name: FilterExpression
+                href: reference/filterexpression.md
+              - name: Formatting
+                href: reference/formatting.md
+                items:
+                  - name: formatCurrency
+                    href: reference/formatting/formatcurrency.md
+                  - name: formatDateAsFilterStringInUTC
+                    href: reference/formatting/formatdateasfilterstringinutc.md
+                  - name: formatDateLong
+                    href: reference/formatting/formatdatelong.md
+                  - name: formatDateLongAbbreviated
+                    href: reference/formatting/formatdatelongabbreviated.md
+                  - name: formatDateShort
+                    href: reference/formatting/formatdateshort.md
+                  - name: formatDateYearMonth
+                    href: reference/formatting/formatdateyearmonth.md
+                  - name: formatDecimal
+                    href: reference/formatting/formatdecimal.md
+                  - name: formatInteger
+                    href: reference/formatting/formatinteger.md
+                  - name: formatLanguage
+                    href: reference/formatting/formatlanguage.md
+                  - name: formatTime
+                    href: reference/formatting/formattime.md
+                  - name: formatUserDateTimeToUTC
+                    href: reference/formatting/formatuserdatetimetoutc.md
+                  - name: formatUserInput
+                    href: reference/formatting/formatUserInput.md
+                  - name: formatUTCDateTimeToUserDate
+                    href: reference/formatting/formatutcdatetimetouserdate.md
+                  - name: getWeekOfYear
+                    href: reference/formatting/getweekofyear.md
+                  - name: parseDateFromInput
+                    href: reference/formatting/parsedatefrominput.md
+              - name: ICommand
+                href: reference/icommand.md
+              - name: ImageObject
+                href: reference/imageobject.md
+              - name: Linking
+                href: reference/linking.md
+                items:
+                  - name: addLinkedEntity
+                    href: reference/linking/addlinkedentity.md
+                  - name: getLinkedEntity
+                    href: reference/linking/getlinkedentities.md
+              - name: LinkEntityExposedExpression
+                href: reference/ilinkentityexposedexpression.md
+              - name: LookupValue
+                href: reference/lookupvalue.md
+              - name: Metadata
+                href: reference/metadata.md
+              - name: Mode
+                href: reference/mode.md
+                items:
+                  - name: setControlState
+                    href: reference/mode/setcontrolstate.md
+                  - name: setFullScreen
+                    href: reference/mode/setfullscreen.md
+                  - name: trackContainerResize
+                    href: reference/mode/trackcontainerresize.md
+              - name: MoneyPrecisionSource
+                href: reference/moneyprecisionsource.md
+              - name: Navigation
+                href: reference/navigation.md
+                items:
+                  - name: openAlertDialog
+                    href: reference/navigation/openalertdialog.md
+                  - name: openConfirmDialog
+                    href: reference/navigation/openconfirmdialog.md
+                  - name: openErrorDialog
+                    href: reference/navigation/openerrordialog.md
+                  - name: openFile
+                    href: reference/navigation/openfile.md
+                  - name: openForm
+                    href: reference/navigation/openform.md
+                  - name: openUrl
+                    href: reference/navigation/openurl.md
+                  - name: openWebResource
+                    href: reference/navigation/openwebresource.md
+              - name: NumberFormattingInfo
+                href: reference/numberformattinginfo.md
+              - name: OptionDescriptor
+                href: reference/optiondescriptor.md
+              - name: Paging
+                href: reference/paging.md
+                items:
+                  - name: loadExactPage
+                    href: reference/paging/loadexactpage.md
+                  - name: loadNextPage
+                    href: reference/paging/loadnextpage.md
+                  - name: loadPreviousPage
+                    href: reference/paging/loadpreviouspage.md
+                  - name: reset
+                    href: reference/paging/reset.md
+                  - name: setPageSize
+                    href: reference/paging/setpagesize.md
+              - name: PickFileOptions
+                href: reference/pickfileoptions.md
+              - name: Popup
+                href: reference/popup.md
+              - name: PopupService
+                href: reference/popupservice.md
+                items:
+                  - name: closePopup
+                    href: reference/popupservice/closepopup.md
+                  - name: createPopup
+                    href: reference/popupservice/createpopup.md
+                  - name: deletePopup
+                    href: reference/popupservice/deletepopup.md
+                  - name: getPopupsId
+                    href: reference/popupservice/getpopupsid.md
+                  - name: openPopup
+                    href: reference/popupservice/openpopup.md
+                  - name: setPopupsId
+                    href: reference/popupservice/setpopupsid.md
+                  - name: updatePopup
+                    href: reference/popupservice/updatepopup.md
+              - name: Position
+                href: reference/position.md
+              - name: Property
+                href: reference/property.md
+              - name: ReactControl
+                href: reference/react-control.md
+                items:
+                  - name: destroy
+                    href: reference/react-control/destroy.md
+                  - name: getOutputs
+                    href: reference/react-control/getOutputs.md
+                  - name: getOutputSchema
+                    href: reference/react-control/getoutputschema.md
+                  - name: init
+                    href: reference/react-control/init.md
+                  - name: updateView
+                    href: reference/react-control/updateview.md
+              - name: RetrieveMultipleResponse
+                href: reference/retrievemultipleresponse.md
+              - name: Resources
+                href: reference/resources.md
+                items:
+                  - name: getResource
+                    href: reference/resources/getresource.md
+                  - name: getString
+                    href: reference/resources/getstring.md
+              - name: SecurityPrivilegesMetadata
+                href: reference/securityprivilegesmetadata.md
+              - name: SecurityValues
+                href: reference/securityvalues.md
+              - name: SortStatus
+                href: reference/sortstatus.md
+              - name: StandardControl
+                href: reference/control.md
+                items:
+                  - name: destroy
+                    href: reference/control/destroy.md
+                  - name: getOutputs
+                    href: reference/control/getOutputs.md
+                  - name: getOutputSchema
+                    href: reference/control/getoutputschema.md
+                  - name: init
+                    href: reference/control/init.md
+                  - name: updateView
+                    href: reference/control/updateview.md
+              - name: updatedProperties
+                href: reference/updatedproperties.md
+              - name: UserSettings
+                href: reference/usersettings.md
+                items:
+                  - name: getTimeZoneOffsetMinutes
+                    href: reference/usersettings/gettimezoneoffsetminutes.md
+              - name: Utility
+                href: reference/utility.md
+                items:
+                  - name: getEntityMetadata
+                    href: reference/utility/getentitymetadata.md
+                  - name: hasEntityPrivilege
+                    href: reference/utility/hasentityprivilege.md
+                  - name: lookupObjects
+                    href: reference/utility/lookupobjects.md
+              - name: WebApi
+                href: reference/webapi.md
+                items:
+                  - name: createRecord
+                    href: reference/webapi/createrecord.md
+                  - name: deleteRecord
+                    href: reference/webapi/deleterecord.md
+                  - name: retrieveMultipleRecords
+                    href: reference/webapi/retrievemultiplerecords.md
+                  - name: retrieveRecord
+                    href: reference/webapi/retrieverecord.md
+                  - name: updateRecord
+                    href: reference/webapi/updaterecord.md
+          - name: Manifest schema reference
+            href: manifest-schema-reference/index.md
+            items:
+              - name: code
+                href: manifest-schema-reference/code.md
+              - name: control
+                href: manifest-schema-reference/control.md
+              - name: css
+                href: manifest-schema-reference/css.md
+              - name: data-set
+                href: manifest-schema-reference/data-set.md
+              - name: dependency
+                href: manifest-schema-reference/dependency.md
+              - name: domain
+                href: manifest-schema-reference/domain.md
+              - name: external-service-usage
+                href: manifest-schema-reference/external-service-usage.md
+              - name: event
+                href: manifest-schema-reference/event.md
+              - name: feature-usage
+                href: manifest-schema-reference/feature-usage.md
+              - name: img
+                href: manifest-schema-reference/img.md
+              - name: manifest
+                href: manifest-schema-reference/manifest.md
+              - name: platform-action
+                href: manifest-schema-reference/platform-action.md
+              - name: platform-library
+                href: manifest-schema-reference/platform-library.md
+              - name: property-dependencies
+                href: manifest-schema-reference/property-dependencies.md
+              - name: property-dependency
+                href: manifest-schema-reference/property-dependency.md
+              - name: property-set
+                href: manifest-schema-reference/property-set.md
+              - name: property
+                href: manifest-schema-reference/property.md
+              - name: resources
+                href: manifest-schema-reference/resources.md
+              - name: resx
+                href: manifest-schema-reference/resx.md
+              - name: type
+                href: manifest-schema-reference/type.md
+              - name: type-group
+                href: manifest-schema-reference/type-group.md
+              - name: types
+                href: manifest-schema-reference/types.md
+              - name: uses-feature
+                href: manifest-schema-reference/uses-feature.md
       - name: Resources
-        href: reference/resources.md
         items:
-        - name: getResource
-          href: reference/resources/getresource.md
-        - name: getString
-          href: reference/resources/getstring.md
-      - name: SecurityPrivilegesMetadata
-        href: reference/securityprivilegesmetadata.md
-      - name: SecurityValues
-        href: reference/securityvalues.md
-      - name: SortStatus
-        href: reference/sortstatus.md
-      - name: StandardControl
-        href: reference/control.md
-        items:
-        - name: destroy
-          href: reference/control/destroy.md
-        - name: getOutputs
-          href: reference/control/getOutputs.md
-        - name: getOutputSchema
-          href: reference/control/getoutputschema.md
-        - name: init
-          href: reference/control/init.md
-        - name: updateView
-          href: reference/control/updateview.md
-      - name: updatedProperties
-        href: reference/updatedproperties.md
-      - name: UserSettings
-        href: reference/usersettings.md
-        items:
-          - name: getTimeZoneOffsetMinutes
-            href: reference/usersettings/gettimezoneoffsetminutes.md
-      - name: Utility
-        href: reference/utility.md
-        items:
-        - name: getEntityMetadata
-          href: reference/utility/getentitymetadata.md
-        - name: hasEntityPrivilege
-          href: reference/utility/hasentityprivilege.md
-        - name: lookupObjects
-          href: reference/utility/lookupobjects.md
-      - name: WebApi
-        href: reference/webapi.md
-        items:
-        - name: createRecord
-          href: reference/webapi/createrecord.md
-        - name: deleteRecord
-          href: reference/webapi/deleterecord.md
-        - name: retrieveMultipleRecords
-          href: reference/webapi/retrievemultiplerecords.md
-        - name: retrieveRecord
-          href: reference/webapi/retrieverecord.md
-        - name: updateRecord
-          href: reference/webapi/updaterecord.md
-    - name: Manifest schema reference
-      href: manifest-schema-reference/index.md
-      items:
-      - name: code
-        href: manifest-schema-reference/code.md
-      - name: control
-        href: manifest-schema-reference/control.md
-      - name: css
-        href: manifest-schema-reference/css.md
-      - name: data-set
-        href: manifest-schema-reference/data-set.md
-      - name: dependency
-        href: manifest-schema-reference/dependency.md
-      - name: domain
-        href: manifest-schema-reference/domain.md
-      - name: external-service-usage
-        href: manifest-schema-reference/external-service-usage.md
-      - name: event
-        href: manifest-schema-reference/event.md
-      - name: feature-usage
-        href: manifest-schema-reference/feature-usage.md
-      - name: img
-        href: manifest-schema-reference/img.md
-      - name: manifest
-        href: manifest-schema-reference/manifest.md
-      - name: platform-action
-        href: manifest-schema-reference/platform-action.md
-      - name: platform-library
-        href: manifest-schema-reference/platform-library.md
-      - name: property-dependencies
-        href: manifest-schema-reference/property-dependencies.md
-      - name: property-dependency
-        href: manifest-schema-reference/property-dependency.md
-      - name: property-set
-        href: manifest-schema-reference/property-set.md
-      - name: property
-        href: manifest-schema-reference/property.md
-      - name: resources
-        href: manifest-schema-reference/resources.md
-      - name: resx
-        href: manifest-schema-reference/resx.md
-      - name: type
-        href: manifest-schema-reference/type.md
-      - name: type-group
-        href: manifest-schema-reference/type-group.md
-      - name: types
-        href: manifest-schema-reference/types.md
-      - name: uses-feature
-        href: manifest-schema-reference/uses-feature.md
-  - name: Resources
-    items:
-    - name: Community resources
-      href: community-resources.md
-    - name: Community forum
-      href: https://aka.ms/PCFForum
-    - name: Feature ideas
-      href: https://aka.ms/PCFIdea
-  - name: Share your feedback
-    href: share-your-feedback-for-pcf.md
+          - name: Community resources
+            href: community-resources.md
+          - name: Community forum
+            href: https://aka.ms/PCFForum
+          - name: Feature ideas
+            href: https://aka.ms/PCFIdea
+      - name: Share your feedback
+        href: share-your-feedback-for-pcf.md

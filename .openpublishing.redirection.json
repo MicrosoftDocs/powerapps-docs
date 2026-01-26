@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/developer/code-apps/quickstart.md",
+      "redirect_url": "how-to/create-an-app-from-scratch",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/developer/data-platform/data-export-service.md",
       "redirect_url": "https://aka.ms/DESDeprecationBlog",
       "redirect_document_id": "false"
@@ -9833,6 +9838,46 @@
     {
       "source_path": "powerapps-docs/cards/make-a-card/variables/variables.md",
       "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/express-design.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/get-started-test-drive",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/app-from-image.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/get-started-test-drive",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/figma/common-errors.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/get-started-test-drive",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/figma/create-app-from-figma.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/get-started-test-drive",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/figma/design-using-kit.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/get-started-test-drive",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/figma/overview.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/get-started-test-drive",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/figma/supported-components.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/get-started-test-drive",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/component-framework/publish-components-app-source.md",
+      "redirect_url": "/power-apps/developer/component-framework/publish-components-marketplace",
       "redirect_document_id": false
     }
   ]

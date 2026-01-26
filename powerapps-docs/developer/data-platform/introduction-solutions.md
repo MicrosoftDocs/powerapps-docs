@@ -19,7 +19,7 @@ search.audienceType:
 
 Every customization that you make to Dataverse, or to a previously installed solution, is part of a solution. Every change you apply is tracked and any dependencies can be calculated. When you export a managed solution, it contains all the changes that have been applied for that solution into a file that you can then import into a different Dataverse environment.
 
-If you intend to transport customizations or extensions between different Dataverse environments or distribute solutions using AppSource, you must understand the solution framework.
+If you intend to transport customizations or extensions between different Dataverse environments or distribute solutions using Marketplace, you must understand the solution framework.
 
 > [!NOTE]
 > For detailed information about how to effectively use solutions for a successful application lifecycle management (ALM) implementation, see [Application lifecycle management (ALM) with Microsoft Power Platform](/power-platform/alm).

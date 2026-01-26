@@ -1,7 +1,7 @@
 ---
 title: "Build your first modern model-driven app with Power Apps"
 description: "Learn how to build your first model driven app with Power Apps"
-ms.date: 05/06/2025
+ms.date: 01/09/2026
 ms.update-cycle: 180-days
 ms.subservice: mda-maker
 ms.topic: tutorial

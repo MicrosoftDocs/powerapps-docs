@@ -21,7 +21,6 @@ Messages represent operations that can be performed on the table. They may also 
 | ---- | ----- |----- |
 | `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `Create`<br />Event: False |`POST` /packagehistories<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
-| `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 | `Delete`<br />Event: False |`DELETE` /packagehistories(*packagehistoryid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
 | `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
@@ -29,9 +28,7 @@ Messages represent operations that can be performed on the table. They may also 
 | `RetrieveMultiple`<br />Event: True |`GET` /packagehistories<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 | `SetState`<br />Event: True |`PATCH` /packagehistories(*packagehistoryid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `statecode` and `statuscode` properties. |<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 | `Update`<br />Event: False |`PATCH` /packagehistories(*packagehistoryid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
-| `UpdateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 | `Upsert`<br />Event: False |`PATCH` /packagehistories(*packagehistoryid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
-| `UpsertMultiple`<br />Event: False |<xref:Microsoft.Dynamics.CRM.UpsertMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpsertMultipleRequest>|
 
 ## Properties
 
@@ -59,6 +56,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [ApplicationName](#BKMK_ApplicationName)
 - [CatalogId](#BKMK_CatalogId)
 - [CorrelationId](#BKMK_CorrelationId)
+- [DeployAsUserId](#BKMK_DeployAsUserId)
+- [DeploymentMessageId](#BKMK_DeploymentMessageId)
 - [ExecutionName](#BKMK_ExecutionName)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [OperationId](#BKMK_OperationId)
@@ -66,6 +65,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [packagehistoryId](#BKMK_packagehistoryId)
 - [PackageId](#BKMK_PackageId)
 - [PackageInstanceId](#BKMK_PackageInstanceId)
+- [PackageType](#BKMK_PackageType)
+- [Priority](#BKMK_Priority)
 - [PublisherId](#BKMK_PublisherId)
 - [PublisherName](#BKMK_PublisherName)
 - [Settings](#BKMK_Settings)
@@ -140,6 +141,40 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|False|
 |MaxLength|200|
+
+### <a name="BKMK_DeployAsUserId"></a> DeployAsUserId
+
+|Property|Value|
+|---|---|
+|Description|**deploy package as given user (azureactivedirectoryobjectid)**|
+|DisplayName|**Deploy As User Id**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`deployasuserid`|
+|RequiredLevel|None|
+|Type|Memo|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|400000|
+
+### <a name="BKMK_DeploymentMessageId"></a> DeploymentMessageId
+
+|Property|Value|
+|---|---|
+|Description|**Stores Deployment MessageId for the queued package.**|
+|DisplayName|**Deployment Message Id**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`deploymentmessageid`|
+|RequiredLevel|None|
+|Type|Memo|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_ExecutionName"></a> ExecutionName
 
@@ -237,6 +272,50 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Uniqueidentifier|
 
+### <a name="BKMK_PackageType"></a> PackageType
+
+|Property|Value|
+|---|---|
+|Description|**Type of the package**|
+|DisplayName|**Package Type**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`packagetype`|
+|RequiredLevel|None|
+|Type|Picklist|
+|DefaultFormValue|0|
+|GlobalChoiceName|`packagehistories_packagetype`|
+
+#### PackageType Choices/Options
+
+|Value|Label|
+|---|---|
+|0|**App**|
+|1|**Solution**|
+|2|**DatabaseVersionUpdate**|
+
+### <a name="BKMK_Priority"></a> Priority
+
+|Property|Value|
+|---|---|
+|Description|**Priority level for the package**|
+|DisplayName|**Priority**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`priority`|
+|RequiredLevel|None|
+|Type|Picklist|
+|DefaultFormValue|1|
+|GlobalChoiceName|`packagehistories_priority`|
+
+#### Priority Choices/Options
+
+|Value|Label|
+|---|---|
+|1|**High**|
+|2|**Medium**|
+|3|**Low**|
+
 ### <a name="BKMK_PublisherId"></a> PublisherId
 
 |Property|Value|
@@ -308,6 +387,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |4|**CustomCode**|
 |5|**DataImport**|
 |6|**FnO**|
+|7|**SchemaDeployed**|
+|8|**QueuedForCluster**|
 
 ### <a name="BKMK_statecode"></a> statecode
 
@@ -444,10 +525,13 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
 - [DeploymentLog](#BKMK_DeploymentLog)
 - [DeploymentLog_Name](#BKMK_DeploymentLog_Name)
+- [IsClusterOperation](#BKMK_IsClusterOperation)
 - [ModifiedBy](#BKMK_ModifiedBy)
 - [ModifiedOn](#BKMK_ModifiedOn)
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
 - [OrganizationId](#BKMK_OrganizationId)
+- [PackageFile](#BKMK_PackageFile)
+- [PackageFile_Name](#BKMK_PackageFile_Name)
 - [VersionNumber](#BKMK_VersionNumber)
 
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
@@ -523,6 +607,22 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |IsLocalizable|False|
 |MaxLength|200|
 
+### <a name="BKMK_IsClusterOperation"></a> IsClusterOperation
+
+|Property|Value|
+|---|---|
+|Description|**Indicates whether this package history record represents a cluster operation**|
+|DisplayName|**Cluster Operation**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`isclusteroperation`|
+|RequiredLevel|None|
+|Type|Boolean|
+|GlobalChoiceName|`packagehistories_isclusteroperation`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
+
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
 |Property|Value|
@@ -579,6 +679,36 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |Type|Lookup|
 |Targets|organization|
 
+### <a name="BKMK_PackageFile"></a> PackageFile
+
+|Property|Value|
+|---|---|
+|Description|**Stores the package file for installation**|
+|DisplayName|**Package File**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`packagefile`|
+|RequiredLevel|None|
+|Type|File|
+|MaxSizeInKB|256000|
+
+### <a name="BKMK_PackageFile_Name"></a> PackageFile_Name
+
+|Property|Value|
+|---|---|
+|Description||
+|DisplayName||
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`packagefile_name`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Disabled|
+|IsLocalizable|False|
+|MaxLength|200|
+
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
 |Property|Value|
@@ -598,6 +728,7 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 These relationships are many-to-one. Listed by **SchemaName**.
 
 - [FileAttachment_packagehistory_DeploymentLog](#BKMK_FileAttachment_packagehistory_DeploymentLog)
+- [FileAttachment_packagehistory_PackageFile](#BKMK_FileAttachment_packagehistory_PackageFile)
 - [lk_packagehistory_createdby](#BKMK_lk_packagehistory_createdby)
 - [lk_packagehistory_createdonbehalfby](#BKMK_lk_packagehistory_createdonbehalfby)
 - [lk_packagehistory_modifiedby](#BKMK_lk_packagehistory_modifiedby)
@@ -614,6 +745,19 @@ One-To-Many Relationship: [fileattachment FileAttachment_packagehistory_Deployme
 |ReferencedAttribute|`fileattachmentid`|
 |ReferencingAttribute|`deploymentlog`|
 |ReferencingEntityNavigationPropertyName|`deploymentlog`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_FileAttachment_packagehistory_PackageFile"></a> FileAttachment_packagehistory_PackageFile
+
+One-To-Many Relationship: [fileattachment FileAttachment_packagehistory_PackageFile](fileattachment.md#BKMK_FileAttachment_packagehistory_PackageFile)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`fileattachment`|
+|ReferencedAttribute|`fileattachmentid`|
+|ReferencingAttribute|`packagefile`|
+|ReferencingEntityNavigationPropertyName|`packagefile`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 

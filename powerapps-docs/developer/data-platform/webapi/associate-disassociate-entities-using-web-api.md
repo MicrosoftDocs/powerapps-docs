@@ -1,10 +1,11 @@
 ---
 title: "Associate and disassociate table rows using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "How to relate and unrelate records using the Web API"
-ms.date: 08/15/2022
+ms.date: 01/09/2026
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: jdaly
+ms.topic: concept-article
 search.audienceType: 
   - developer
 contributors: 
@@ -17,7 +18,9 @@ contributors:
 
 You can associate individual records in table rows with other records using relationships that exist between the table definitions. In OData, the relationships are expressed as navigation properties.
 
-You can discover which navigation properties exist in the $metadata service document. See [Web API Navigation Properties](web-api-navigation-properties.md). For existing Dataverse tables, see the [Web API EntityType Reference](xref:Microsoft.Dynamics.CRM.EntityTypeIndex), for each entity type, see the listed single-valued and collection-valued navigation properties.
+You can discover which navigation properties exist in the $metadata service document. See [Web API Navigation Properties](web-api-navigation-properties.md). For existing Dataverse tables, see the [Web API EntityType Reference](xref:Microsoft.Dynamics.CRM.EntityTypeIndex)
+
+, for each entity type, see the listed single-valued and collection-valued navigation properties.
 
 The following table describes the three types of relationships between tables in Dataverse.
 
@@ -33,7 +36,7 @@ For existing records on the *many* side of a one-to-many or many-to-one relation
 
 ### Associate with a single-valued navigation property
 
-For example, to associate a <xref:Microsoft.Dynamics.CRM.contact?text=contact> record to an <xref:Microsoft.Dynamics.CRM.account?text=account> using the `parentcustomerid_account` single-valued navigation property:
+For example, to associate a <xref:Microsoft.Dynamics.CRM.contact?text=contact> record to an <xref:Microsoft.Dynamics.CRM.account?text=account> record using the `parentcustomerid_account` single-valued navigation property:
 
 **Request:**
 
@@ -58,11 +61,11 @@ OData-Version: 4.0
 OData-EntityId: [Organization Uri]/api/data/v9.2/contacts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)
 ```
 
-As described in [Associate table rows on create](create-entity-web-api.md#associate-table-rows-on-create), new records can also be associated with existing records in the same way.
+As described in [Associate table rows on create](create-entity-web-api.md#associate-table-rows-on-create), you can also associate new records with existing records in the same way.
 
-### Disassociate with a single-valued navigation property
+### Disassociate by using a single-valued navigation property
 
-If you want to disassociate, you can simply set the value to null.
+To disassociate, set the value to null.
 
 **Request:**
 
@@ -87,7 +90,7 @@ OData-Version: 4.0
 OData-EntityId: [Organization Uri]/api/data/v9.2/contacts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)
 ```
 
-When disassociating in this manner, you don't need to include the `@odata.bind` annotation. You can simply use the name of the single-valued navigation property:
+When you disassociate by using this method, don't include the `@odata.bind` annotation. Use the name of the single-valued navigation property:
 
 **Request:**
 
@@ -116,9 +119,9 @@ More information: [Basic update](update-delete-entities-using-web-api.md#basic-u
 
 ### Other methods
 
-There are other ways to achieve the same results described previously with single-valued navigation properties.
+You can use other methods to achieve the same results described previously with single-valued navigation properties.
 
-You can use the following `PUT` request to set the value of the `parentcustomerid_account` single-valued navigation property:
+Use the following `PUT` request to set the value of the `parentcustomerid_account` single-valued navigation property:
 
 **Request:**
 
@@ -142,9 +145,9 @@ OData-Version: 4.0
 ```
 
 > [!NOTE]
-> Note: You must use an absolute URL when setting the value for `@odata.id`.
+> You must use an absolute URL when setting the value for `@odata.id`.
 
-To remove the reference, you can also use this `DELETE` request:
+To remove the reference, use this `DELETE` request:
 
 **Request:**
 
@@ -165,7 +168,7 @@ OData-Version: 4.0
 
 ## Using collection-valued navigation properties
 
-With OData, both sides of a many-to-many relationship have collection-valued navigation properties. For one-to-many and many-to-one relationships, the table one the 'One' side has a collection-valued navigation property. There's no difference how you work with any of these types of relationships while using collection-valued navigation properties. This section describes how to work with collection-valued navigation properties with any type of relationship.
+With OData, both sides of a many-to-many relationship have collection-valued navigation properties. For one-to-many and many-to-one relationships, the table on the 'One' side has a collection-valued navigation property. There's no difference in how you work with any of these types of relationships while using collection-valued navigation properties. This section describes how to work with collection-valued navigation properties for any type of relationship.
 
 ## Add a record to a collection
 
@@ -263,10 +266,10 @@ The code snippet in the following section doesn't work, so removing this section
 
 ## Associate table rows on update using collection-valued navigation property
 
-The following example shows how to associate multiple existing [ActivityParty](../reference/entities/activityparty.md) with an [Email](../reference/entities/email.md) using collection-valued navigation property `email_activity_parties`.
+The following example shows how to associate multiple existing [ActivityParty](../reference/entities/activityparty.md) with an [Email](../reference/entities/email.md) using the collection-valued navigation property `email_activity_parties`.
 
 > [!NOTE]
-> Associating multiple tables with a table on update is a special scenario that is possible only with <xref:Microsoft.Dynamics.CRM.activityparty?text=activityparty EntityType>.
+> Associating multiple tables with a table on update is a special scenario that's possible only with <xref:Microsoft.Dynamics.CRM.activityparty?text=activityparty EntityType>.
 
 **Request:**
 
