@@ -19,7 +19,7 @@ This article describes the differences between Dataverse SQL and Transact-SQL. D
 
 ## Data types
 
-In an SQL database, each column, local variable, expression, and parameter has a related data type. A data type is an attribute that specifies the type of data that the object can hold: integer data, character data, monetary data, date and time data, binary strings, and so on.
+In a SQL database, each column, local variable, expression, and parameter has a related data type. A data type is an attribute that specifies the type of data that the object can hold: integer data, character data, monetary data, date and time data, binary strings, and so on.
 
 More information: [Data types (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql)
 
