@@ -35,7 +35,7 @@ More information: [Data types (Transact-SQL)](/sql/t-sql/data-types/data-types-t
 - :::no-loc text="money":::
 - :::no-loc text="nchar":::
 - :::no-loc text="numeric":::
-- [nvarchar*](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql#nvarchar---n--max--)"
+- [nvarchar*](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql#nvarchar---n--max--)
 - :::no-loc text="nvarchar(max) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# multi-line text":::
 - :::no-loc text="real":::
 - :::no-loc text="smalldatetime":::
