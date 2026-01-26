@@ -1,8 +1,8 @@
 ---
 title: Export Microsoft Dataverse data in Delta Lake format
 description: Use Azure Synapse Link to export your Microsoft Dataverse data to Azure Synapse Analytics in Delta Lake format to explore your data and accelerate time to insight.
-author: JasonHQX
-ms.author: jasonhuang
+author: anibakore-msft
+ms.author: banirud
 ms.reviewer: matp
 ms.service: powerapps
 ms.topic: how-to
@@ -45,7 +45,7 @@ When setting up an Azure Synapse Link for Dataverse, you can enable the **export
 > - For the Dataverse configuration, append-only is enabled by default to export CSV data in `appendonly` mode. The Delta Lake table will have an in-place update structure because the Delta Lake conversion comes with a periodic merge process.
 > - You need to provision a Spark pool (compute resources) in your own Azure subscription for Delta conversion. This Spark pool is used to perform periodic Delta conversions based on the time interval chosen by you. 
 > - There are no costs incurred with the creation of Spark pools. Charges are only incurred once a Spark job is executed on the target Spark pool and the Spark instance is instantiated on demand. These costs are related to the usage of Azure Synapse workspace Spark and are billed monthly. The cost of conducting Spark computing mainly depends on the time interval for incremental update and the data volumes. More information: [Azure Synapse Analytics pricing](https://azure.microsoft.com/pricing/details/synapse-analytics/)
-> - You need to create a Spark pool with the current version (see the version table in [In-place upgrade from previous versions](#in-place-upgrade-from-previous-versions)). If you're using a previous Spark version, perform an in-place upgrade for your existing profiles. More information: [In-place upgrade from previous versions](#in-place-upgrade-from-previous-versions)
+> - You need to create a Spark pool with the current version (go to the version table in [In-place upgrade from previous versions](#in-place-upgrade-from-previous-versions)). If you're using a previous Spark version, perform an in-place upgrade for your existing profiles. More information: [In-place upgrade from previous versions](#in-place-upgrade-from-previous-versions)
 
 > [!NOTE]
 > The Azure Synapse Link status in Power Apps (make.powerapps.com) reflects the Delta Lake conversion state:
@@ -58,7 +58,7 @@ When setting up an Azure Synapse Link for Dataverse, you can enable the **export
 - Dataverse: You must have the Dataverse **system administrator** security role. Additionally, tables you want to export via Azure Synapse Link must have the **Track changes** property enabled. More information: [Advanced options](create-edit-entities-portal.md#advanced-options)
 - Azure Data Lake Storage Gen2: You must have an Azure Data Lake Storage Gen2 account and **Owner** and **Storage Blob Data Contributor** role access. Your storage account must enable **Hierarchical namespace** and **public network access** for both initial setup and delta sync. **Allow storage account key access** is required only for the initial setup.  
 - Synapse workspace: You must have a Synapse workspace and **Owner** role in access control(IAM) and the **Synapse Administrator** role access within the Synapse Studio. The Synapse workspace must be in the same region as your Azure Data Lake Storage Gen2 account. The storage account must be added as a linked service within the Synapse Studio. To create a Synapse workspace, go to [Creating a Synapse workspace](/azure/synapse-analytics/get-started-create-workspace).
-- An Apache Spark pool in the connected Azure Synapse workspace with the current Apache Spark version (see [version requirements](#current-versions-and-requirements)) using this [recommended Spark Pool configuration](#recommended-spark-pool-configuration). For information about how to create a Spark Pool, go to [Create new Apache Spark pool](/azure/synapse-analytics/quickstart-create-apache-spark-pool-portal#create-new-apache-spark-pool).
+- An Apache Spark pool in the connected Azure Synapse workspace with the current Apache Spark version (go to [version requirements](#current-versions-and-requirements)) using this [recommended Spark Pool configuration](#recommended-spark-pool-configuration). For information about how to create a Spark Pool, go to [Create new Apache Spark pool](/azure/synapse-analytics/quickstart-create-apache-spark-pool-portal#create-new-apache-spark-pool).
 - The Microsoft Dynamics 365 minimum version requirement to use this feature is 9.2.22082. More information: [Opt in to early access updates](/power-platform/admin/opt-in-early-access-updates#how-to-enableearly-access-updates)
 
 ### Recommended Spark Pool configuration
@@ -70,7 +70,7 @@ This configuration can be considered a bootstrap step for average use cases.
 - Number of nodes: 3 to 10 (or 20 if needed. <sup>1</sup>More information below.)  
 - Automatic pausing: Enabled
 - Number of minutes idle: 5
-- Apache Spark: 3.5 (see [version requirements](#current-versions-and-requirements) for latest)
+- Apache Spark: 3.5 (go to [version requirements](#current-versions-and-requirements) for latest)
 - Dynamically allocate executors: Enabled
 - Default number of executors: 1 to 9
 
@@ -109,7 +109,6 @@ and then expand **Tables**. All Parquet tables are listed and available for anal
 
 > [!NOTE]
 > Don't use tables with the naming convention *_partitioned*. When you choose Delta parquet as the format, tables with the *_partition* naming convention are used as staging tables and removed after they're used by the system.
->  
 
 ## View your data from Azure Data Lake Storage Gen2
 
@@ -123,35 +122,35 @@ bar.
 
 ### Current versions and requirements
 
-The following table shows the current and previous versions for Azure Synapse Link with Delta Lake. When upgrading or creating a new configuration, use the current versions listed below.
+The following table shows the current and previous versions for Azure Synapse Link with Delta Lake. When you upgrade or create a new configuration, use the current versions listed below.
 
-| Component | Current Version | Previous Version | Status | Reference Link |
+| Component | Current version | Previous version | Status | Reference link |
 |-----------|----------------|------------------|--------|----------------|
-| Apache Spark | 3.5 | 3.4 | 3.4 retired | [Apache Spark 3.4 runtime](https://learn.microsoft.com/en-us/azure/synapse-analytics/spark/apache-spark-34-runtime) |
+| Apache Spark | 3.5 | 3.4 | 3.4 retired | [Apache Spark 3.4 runtime](/azure/synapse-analytics/spark/apache-spark-34-runtime) |
 | Delta Lake | 3.0 | 2.4 | - | [Delta Lake compatibility](https://docs.delta.io/releases/) |
 
 ### Upgrade from Apache Spark 3.4 to 3.5
 
-In accordance with the Synapse runtime for Apache Spark lifecycle policy, Azure Synapse runtime for Apache Spark 3.4 is retired. After the end of support date, the retired runtimes are unavailable for new Spark pools and existing workflows with Spark 3.4 pools won't be executed while metadata will temporarily remain in the Synapse workspace. More information: [Azure Synapse Runtime for Apache Spark 3.4](https://learn.microsoft.com/en-us/azure/synapse-analytics/spark/apache-spark-34-runtime).
+In accordance with the Synapse runtime for Apache Spark lifecycle policy, Azure Synapse runtime for Apache Spark 3.4 is retired. After the end of the support date, the retired runtimes are unavailable for new Spark pools and existing workflows with Spark 3.4 pools won't be executed and metadata temporarily remains in the Synapse workspace. More information: [Azure Synapse Runtime for Apache Spark 3.4](/azure/synapse-analytics/spark/apache-spark-34-runtime).
 
 To ensure that your existing Synapse Link profiles continue to process data, upgrade your Synapse Link profiles using the in-place upgrade process below.
 
-#### Prerequisites
+#### Prerequisites for upgrade
 
 - You must have an existing Azure Synapse Link for Dataverse Delta lake profile running with a previous Apache Spark version.
-- You must create a new Synapse Spark pool with the current Spark version (see table above), **using the same or higher nodes hardware configuration within the same Synapse workspace**. For information about how to create a Spark pool, go to [Create new Apache Spark pool](/azure/synapse-analytics/quickstart-create-apache-spark-pool-portal#create-new-apache-spark-pool). This Spark pool should be created independent of your existing pool - **do not delete your current Spark pool or create the new pool with the same name**.
+- You must create a new Synapse Spark pool with the current Spark version ([go to table above](#current-versions-and-requirements)), *using the same or higher nodes hardware configuration within the same Synapse workspace*. For information about how to create a Spark pool, go to [Create new Apache Spark pool](/azure/synapse-analytics/quickstart-create-apache-spark-pool-portal#create-new-apache-spark-pool). This Spark pool should be created independent of your existing pool - *don't delete your current Spark pool or create the new pool with the same name*.
 
 #### Upgrade steps
 
 1. Sign in to Power Apps and select your preferred environment.
 2. On the left navigation pane, select **Azure Synapse Link**. If the item isn't in the left navigation pane, select **…More** and then select the item you want.
-3. If you're using a retired Spark version, you'll see an error message indicating that support has ended. Select the upgrade button in the ribbon to begin the upgrade process.
+3. If you're using a retired Spark version, an error message indicating that support has ended appears. Select the upgrade button in the ribbon to begin the upgrade process.
 
-   :::image type="content" source="media/synapse-link-spark-34-eol-message.jpg" alt-text="Error message showing Apache Spark end of support with upgrade button in ribbon.":::
+   :::image type="content" source="media/synapse-link-spark-34-eol-message.png" alt-text="Error message showing Apache Spark end of support with upgrade button in ribbon.":::
 
 4. In the upgrade dialog, select the available Spark pool with the current version from the dropdown list.
 
-   :::image type="content" source="media/synapse-link-spark-35-pool-selection.png.jpg" alt-text="Dropdown menu showing available Apache Spark pools for upgrade.":::
+   :::image type="content" source="media/synapse-link-spark-35-pool-selection.png" alt-text="Dropdown menu showing available Apache Spark pools for upgrade.":::
 
 5. Select **Update** to complete the upgrade.
 
