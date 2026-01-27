@@ -3,7 +3,7 @@ title: "How to: Connect your code app to data (preview)"
 description: "Learn how to connect your code app to data"
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 01/22/2026
+ms.date: 01/28/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
@@ -31,21 +31,16 @@ Use the following steps:
 
 Start by creating and configuring connections at [Power Apps](https://make.powerapps.com). Copy connection metadata from there for use in later steps.
 
-The following connectors are officially supported:
+All connectors are officially supported except the ones listed below.
 
-- [SQL Server](/connectors/sql/)
-- [SharePoint](/connectors/sharepointonline/)
-- [Office 365 Users](/connectors/office365users/)
+The following connectors are not yet supported:
+- [Excel Online (Business)](/connectors/excelonlinebusiness/)
+- [Excel Online (OneDrive)](/connectors/excelonline/)
+
+There are currently known limitations with the following connectors:
 - [Office 365 Groups](/connectors/office365groups/)
-- [Azure Data Explorer](/connectors/kusto/)
-- [OneDrive for work or school](/connectors/onedrive/)
-- [Power Apps for Makers](/connectors/powerappsforappmakers/)
 - [Microsoft Teams](/connectors/teams/)
-- [MSN Weather](/connectors/msnweather/)
-- [Microsoft Translator V2](/connectors/translatorv2/)
-- [Dataverse create, read, update, and delete operations](./connect-to-dataverse.md)
-
-Other connectors are expected to work but are untested.
+- [Office 365 Outlook](/connectors/office365/)
 
 > [!IMPORTANT]
 > For the initial release, you can only configure code apps to use existing connections in [Power Apps](https://make.powerapps.com). You can't create new connections through PAC CLI commands. Support for creating new connections will be added in a future release.
