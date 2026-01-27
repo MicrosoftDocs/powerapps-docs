@@ -57,8 +57,16 @@ sections:
         - flowmachine
         - flowmachinegroup
         - workflow
-        
+
         These tables are essential for system functionality and are always included in the synchronization process.
+
+        **First-party add-ins and table selection**
+
+        Fabric link table selection is also dependent on first-party add-ins such as Business Process Advisor (BPA) and Customer Insights - Journeys. These products use the same pipeline to export data from Dataverse to provide transformed insights.
+
+        Which tables can't be unselected depends on which add-on products you've enabled. When you enable an add-in (for example, Customer Insights - Journeys), the specific tables required by that add-in are added to the entityanalyticsconfig table in Dataverse.
+
+        Any table that has **isenabledforadls** set to **true** in the entityanalyticsconfig table will be unselectable from the Fabric link.
    - question: What happens when I add a new column to a linked table?
      answer: |
         If a new column is added to a table that's already part of the profile (metadata change), you can use the **Refresh Fabric tables** option from the command bar to update the change in Fabric. The update occurs after the next table data change is triggered.
