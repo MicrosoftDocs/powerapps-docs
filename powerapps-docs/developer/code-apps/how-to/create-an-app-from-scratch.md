@@ -11,7 +11,7 @@ contributors:
 ---
 # Quickstart: Create a code app from scratch (preview)
 
-This article shows how to set up a blank app from [Vite](https://vite.dev/) and turn it into a Power Apps code app. It covers configuring a TypeScript app by using the Power Platform SDK.
+This article shows how to set up a blank app from [Vite](https://vite.dev/) and turn it into a Power Apps code app. It covers configuring a TypeScript app by using the Power Apps SDK.
 
 > [!NOTE]
 > [!INCLUDE [cc-preview-features-definition](../../../includes/cc-preview-features-definition.md)]
@@ -41,7 +41,7 @@ This article shows how to set up a blank app from [Vite](https://vite.dev/) and 
 
    Sign in by using your Power Platform account when prompted. All Power Platform apps, flows, and agents publish to an environment. The PAC CLI's [auth command](/power-platform/developer/cli/reference/auth) prompts you to authenticate by using your Microsoft Entra identity and ensures the code app you add connections to and publish to Power Platform go in the specified environment.
 
-1. Install the Power SDK and initialize your code app by using:
+1. Install the Power Apps SDK and initialize your code app by using:
    
 
    ```bash

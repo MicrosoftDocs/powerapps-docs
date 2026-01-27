@@ -1,11 +1,11 @@
 ---
 title: Sign in to Power Apps
-description: Learn about signing in to Power Apps for the first time, choosing an environment, creating an app, playing or editing an app, and other common tasks.
+description: Sign in to Power Apps and learn how to access environments, create apps, and manage Azure B2B collaboration. Step-by-step guide for first-time users and common tasks.
 author: alaug
 ms.topic: how-to
 ms.collection: get-started
 ms.reviewer: 
-ms.date: 01/13/2026
+ms.date: 01/21/2026
 ms.subservice: canvas-maker
 ms.author: alaug
 search.audienceType: 
@@ -17,7 +17,13 @@ contributors:
 ---
 # Sign in to Power Apps
 
-Sign in to Power Apps at [https://make.powerapps.com](https://make.powerapps.com) to create, edit, or play an app. To create canvas apps, you need the [environment maker predefined security role](/power-platform/admin/database-security#predefined-security-roles).
+Sign in to Power Apps at [https://make.powerapps.com](https://make.powerapps.com) to create, edit, or play an app. 
+
+This article shows you how to access Power Apps for the first time, choose the right environment, and navigate different authentication options including Azure B2B and Microsoft Account sign-in.
+
+To create canvas apps, you need the [environment maker predefined security role](/power-platform/admin/database-security#predefined-security-roles).
+
+If you don't have a work or school account, you can sign up for a trial account. For information, see [Explore Power Apps for free for 30 days](../signup-for-powerapps.md).
 
 **What you'll learn:**
 
@@ -148,7 +154,7 @@ If your Microsoft Account is associated with a Microsoft Entra tenant, you can s
 
 Today, Microsoft accounts are bound to limited trial periods. You can't sign up for the same free license twice with the same account. Also, Microsoft accounts can't [purchase Power Apps plans](https://powerapps.microsoft.com/pricing/).
 
-You might proceed with building and running apps by creating a Microsoft Entra identity in the same Microsoft Entra tenant your Microsoft Account is associated with and sign up for a [Power Apps Developer plan](https://powerapps.microsoft.com/developerplan/) with that identity. With your Microsoft Account, you need to [share your apps](share-app.md) with your Microsoft Entra identity to proceed with editing and playing them. 
+You might proceed with building and running apps by creating a Microsoft Entra identity in the same Microsoft Entra tenant your Microsoft Account is associated with and sign up for a [Power Apps Developer plan](https://powerapps.microsoft.com/developerplan/) by using that identity. With your Microsoft Account, you need to [share your apps](share-app.md) with your Microsoft Entra identity to proceed with editing and playing them. 
 
 To create a Microsoft Entra identity with administrative rights, follow the steps under “How do I create a Microsoft Entra identity with the same administrative privileges as my Microsoft Account?”.
 
