@@ -5,7 +5,7 @@ author: shwetamurkute
 
 ms.component: pa-user
 ms.topic: article
-ms.date: 05/10/2024
+ms.date: 01/27/2026
 ms.subservice: end-user
 ms.author: smurkute
 ms.custom: ""
@@ -73,10 +73,9 @@ For more information, see [Insert an email template](insert-email-template.md).
 
 [!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
+ When you get an incoming email from a customer, the customer sentiment card is displayed on the email form.
 
- When you get an incoming email from a customer, the Customer sentiment card is displayed on the email form.
-
-The customer sentiment card displays the following:
+The customer sentiment card displays the following features:
 
  - **Current sentiment**: The customer’s current sentiment. A sentiment intensity indicator in the corresponding colors is also displayed.
  - **Sentiment timeline**: A visual representation that shows how the customer sentiment in the emails received changes across a period.   
