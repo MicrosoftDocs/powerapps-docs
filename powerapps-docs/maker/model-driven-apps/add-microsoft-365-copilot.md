@@ -42,7 +42,15 @@ When enabled, users can open Microsoft 365 Copilot chat in their model-driven ap
 
 ## Prerequisites
 
-You must have access to an [early release cycle environment](/power-platform/admin/early-release) to use this feature.
+- You must have access to an [early release cycle environment](/power-platform/admin/early-release) to use this feature.
+- To reason over Power Apps, Dataverse Search must be set to "Default" or "On" for the environment. [Know what this means for generative AI experiences](https://learn.microsoft.com/en-us/power-platform/admin/configure-relevance-search-organization#what-dataverse-search-means-for-generative-ai-enabled-experiences).
+
+
+> NOTE!
+> 
+> Microsoft 365 Copilot chat for model‑driven apps relies on Dataverse Search indexes. Enabling this feature may increase your environment’s Dataverse capacity consumption. [Know more about Dataverse search](https://learn.microsoft.com/en-us/power-apps/user/relevance-search-benefits?branch=main&branchFallbackFrom=pr-en-us-11552#what-actions-can-makers-or-admins-take-to-manage-dataverse-search-efficiently)
+> 
+> Sufficient Dataverse database capacity must be available to support indexing, semantic search, and Copilot operations. [Learn more about how to varify your environment's Dataverse capacity.](https://learn.microsoft.com/en-us/power-platform/admin/capacity-storage?branch=main&branchFallbackFrom=pr-en-us-10374#capacity-page-details)
 
 
 ## Enable Microsoft 365 Copilot for your environment
