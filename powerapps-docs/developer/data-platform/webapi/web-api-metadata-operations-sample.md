@@ -2,7 +2,7 @@
 title: "Web API table schema operations sample (Microsoft Dataverse)| Microsoft Docs"
 description: "This collection of code samples demonstrates how to perform operations that change the Dataverse data structures."
 ms.topic: sample
-ms.date: 03/22/2025
+ms.date: 01/27/2026
 author: mkannapiran
 ms.author: kamanick
 ms.reviewer: jdaly
@@ -16,7 +16,10 @@ contributors:
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-This collection of http requests and responses demonstrate how to perform selected operations that modify the Dataverse schema, or metadata, using the [Web API table schema operations sample (C#)](samples/webapiservice-metadata-operations.md)
+This collection of http requests and responses demonstrate how to perform selected operations that modify the Dataverse schema, or metadata, using these samples:
+
+- [Web API table schema operations sample (C#)](samples/webapiservice-metadata-operations.md)
+- [Web API table schema operations sample (PowerShell)](samples/metadata-operations-powershell.md)
   
 This article describes a common set of operations implemented by each sample in this group. This article describes the HTTP requests and responses and text output that each sample performs without the language specific details. See the language specific descriptions and the individual samples for details about how these operations are performed.  
   
