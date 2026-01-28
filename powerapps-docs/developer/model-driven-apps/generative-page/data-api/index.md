@@ -46,10 +46,11 @@ Set values for these required parameters.
 
 A [promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) containing the result of the operation. When the operation succeeds, the result returned is the ID value of the created row.
 
-### Remarks
+<!-- ### Remarks
 
 TODO: Add any special details to help customers succeed
 
+-->
 
 ### Example
 
@@ -104,17 +105,13 @@ Set values for these required parameters.
 
 A [promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) containing the result of the operation. When the operation succeeds, no value is returned.
 
-### Remarks
+<!-- ### Remarks
 
 TODO: Add any special details to help customers succeed
 
-### Example
-
-<!-- 
-
-TODO: Add examples showing this method being used. 
-The following is an untested example based on the Xrm.WebApi.createRecord example.
 -->
+
+### Example
 
 ```typescript
 let rowId = "5531d753-95af-e711-a94e-000d3a11e605"
@@ -132,11 +129,11 @@ var row =
 
 // update the record
 
-try{
- await dataApi.createRow("account", rowId, row);
+try {
+   await dataApi.updateRow("account", rowId, row);
 }
 catch (error){
- console.log(error.message);
+  console.log(error.message);
 }
 ```
 
@@ -158,9 +155,11 @@ Set values for these required parameters.
 
 A [promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) containing the result of the operation. When the operation succeeds, no value is returned.
 
-### Remarks
+<!-- ### Remarks
 
 TODO: Add any special details to help customers succeed
+
+-->
 
 ### Example
 
@@ -192,10 +191,12 @@ Set values for these required parameters.
 
 A [promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) containing the result of the operation. When the operation succeeds, an object containing the data of the record is returned.
 
-### Remarks
+<!-- ### Remarks
 
 TODO: Add any special details to help customers succeed
-<!-- For example, how to set the ID of the row to retrieve. I don't see a parameter for it -->
+For example, how to set the ID of the row to retrieve. I don't see a parameter for it 
+
+-->
 
 ### Example
 
