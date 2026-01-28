@@ -269,9 +269,9 @@ Retrieves the choices for the specified choice column name.
 
 This parameter is required.
 
-|Name|Type|Description|
-|---|---|---|
-|`enumName`|string|The unique name of the global choice.|
+| Name | Type | Description |
+|------|------|-------------|
+| `enumName` | `string` | The name of the choice column in format `tablename-columnname` |
 
 ### Returns
 
@@ -309,7 +309,10 @@ This describes my expectations for a function that retrieves options from metada
 
 ### Example
 
-TODO: Add an example showing this method being used.
-
 ```typescript
+const categoryChoices = await dataApi.getChoices("account-accountcategorycode");
+
+const stateChoices = await dataApi.getChoices('account-statecode');
+
+const statusChoices = await dataApi.getChoices('account-statuscode');
 ```
