@@ -15,6 +15,9 @@ contributors:
 
 This PowerShell version 7.4.0 sample demonstrates how to perform operations that are conditionally based upon the version of the table row contained on the Microsoft Dataverse server and/or currently maintained by the client. This sample implements the Dataverse operations and console output detailed in [Web API Conditional Operations Sample](../web-api-conditional-operations-sample.md).
 
+> [!div class="nextstepaction"]
+> [View this sample on Github](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/PS/ConditionalOperations)
+
 This sample uses the [Dataverse Web API PowerShell Helper functions](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/PS/README.md) to manage authentication and provide reusable functions to perform common operations. These scripts are referenced using [dot sourcing](/powershell/module/microsoft.powershell.core/about/about_scripts#script-scope-and-dot-sourcing) with the following lines:
 
 ```powershell
@@ -90,13 +93,13 @@ By default this sample deletes all the records created in it. If you want to vie
 
 ### See also
 
-[Use the Dataverse Web API](../overview.md)
-[Perform conditional operations using the Web API](../perform-conditional-operations-using-web-api.md)
-[Quick Start Web API with PowerShell and Visual Studio Code](../quick-start-ps.md)
-[Use PowerShell and Visual Studio Code with the Dataverse Web API](../use-ps-and-vscode-web-api.md)
-[Web API Samples](../web-api-samples.md)
-[Web API Conditional Operations Sample](../web-api-conditional-operations-sample.md)
-[Web API Conditional Operations Sample (C#)](webapiservice-conditional-operations.md)
+[Use the Dataverse Web API](../overview.md)   
+[Perform conditional operations using the Web API](../perform-conditional-operations-using-web-api.md)   
+[Quick Start Web API with PowerShell and Visual Studio Code](../quick-start-ps.md)   
+[Use PowerShell and Visual Studio Code with the Dataverse Web API](../use-ps-and-vscode-web-api.md)   
+[Web API Samples](../web-api-samples.md)   
+[Web API Conditional Operations Sample](../web-api-conditional-operations-sample.md)   
+[Web API Conditional Operations Sample (C#)](webapiservice-conditional-operations.md)   
 [Web API Conditional Operations Sample (Client-side JavaScript)](conditional-operations-client-side-javascript.md)
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

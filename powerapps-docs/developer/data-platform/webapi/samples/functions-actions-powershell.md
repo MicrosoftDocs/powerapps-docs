@@ -15,6 +15,9 @@ contributors:
 
 This PowerShell version 7.4.0 sample demonstrates how to call bound and unbound functions and actions, including custom actions, using the Microsoft Dataverse Web API. This sample implements the Dataverse operations and console output detailed in [Web API Functions and Actions Sample](../web-api-functions-actions-sample.md).
 
+> [!div class="nextstepaction"]
+> [View this sample on Github](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/PS/FunctionsAndActions)
+
 This sample uses the [Dataverse Web API PowerShell Helper functions](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/PS/README.md) to manage authentication and provide reusable functions to perform common operations. These scripts are referenced using [dot sourcing](/powershell/module/microsoft.powershell.core/about/about_scripts#script-scope-and-dot-sourcing) with the following lines:
 
 ```powershell
@@ -124,14 +127,14 @@ By default this sample deletes all the records created in it. If you want to vie
 
 ### See also
 
-[Use the Dataverse Web API](../overview.md)
-[Use Web API functions](../use-web-api-functions.md)
-[Use Web API actions](../use-web-api-actions.md)
-[Quick Start Web API with PowerShell and Visual Studio Code](../quick-start-ps.md)
-[Use PowerShell and Visual Studio Code with the Dataverse Web API](../use-ps-and-vscode-web-api.md)
-[Web API Samples](../web-api-samples.md)
-[Web API Functions and Actions Sample](../web-api-functions-actions-sample.md)
-[Web API Functions and Actions Sample (C#)](webapiservice-functions-and-actions.md)
+[Use the Dataverse Web API](../overview.md)   
+[Use Web API functions](../use-web-api-functions.md)   
+[Use Web API actions](../use-web-api-actions.md)   
+[Quick Start Web API with PowerShell and Visual Studio Code](../quick-start-ps.md)   
+[Use PowerShell and Visual Studio Code with the Dataverse Web API](../use-ps-and-vscode-web-api.md)   
+[Web API Samples](../web-api-samples.md)   
+[Web API Functions and Actions Sample](../web-api-functions-actions-sample.md)   
+[Web API Functions and Actions Sample (C#)](webapiservice-functions-and-actions.md)   
 [Web API Functions and Actions Sample (Client-side JavaScript)](functions-actions-client-side-javascript.md)
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

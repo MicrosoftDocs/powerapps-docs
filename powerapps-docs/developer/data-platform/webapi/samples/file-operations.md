@@ -17,6 +17,9 @@ This .NET 6.0 sample demonstrates how to perform operations with file columns us
 
 This sample uses the common helper code in the [WebAPIService class library (C#)](webapiservice.md).
 
+> [!div class="nextstepaction"]
+> [View this sample on Github](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/CSharp-NETx/FileOperations)
+
 ## Prerequisites
 
 - Microsoft Visual Studio 2022
