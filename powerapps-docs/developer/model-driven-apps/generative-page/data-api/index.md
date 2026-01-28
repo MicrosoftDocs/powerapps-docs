@@ -226,25 +226,39 @@ Queries a table with the specified options.
 
 Set values for these required parameters.
 
-|Name|Type|Description|
-|---|---|---|
-|`tableName`|string|The logical name of the table to retrieve the row from.|
-|`query`|object|Options to control the data returned.|
+| Name | Type | Description |
+|------|------|-------------|
+| `tableName` | `string` | The logical name of the table to query |
+| `query` | `QueryTableOptions` | Options for querying the table |
+
+#### QueryTableOptions
+
+| Name | Type | Description |
+|------|------|-------------|
+| `select` | `string[]` | Array of column names to retrieve. (Optional) |
+| `filter` | `string` | OData filter expression. (Optional) |
+| `orderBy` | `string` | OData orderby expression (e.g., `name asc`, `createdon desc`). (Optional) |
+| `pageSize` | `number` | Maximum number of rows to return per page. (Optional) |
 
 ### Returns
 
 A [promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) containing the result of the operation. When the operation succeeds, an object containing a data table with the results is returned.
 
+<!-- 
 ### Remarks
 
 TODO: Add any special details to help customers succeed.
-<!-- For example, explain how to use the QueryTableOptions type? -->
+-->
 
 ### Example
 
-TODO: Add an example showing this method being used.
-
 ```typescript
+const result = await dataApi.queryTable("task", {
+    select: ["activityid", "subject", "scheduledend", "prioritycode", "statecode"],
+    orderBy: "scheduledend asc",
+    pageSize: 50,
+    filter: "statecode eq 0" // Only active tasks
+});
 ```
 
 ## `getChoices` method
@@ -268,11 +282,10 @@ A [promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_O
 |`label`|string|The localized label value of the option.|
 |`value`|number|The numeric value of the option.|
 
+<!-- 
 ### Remarks
 
 TODO: Add any special details to help customers succeed
-
-<!-- 
 
 Please review the sample_RetrieveOptions Custom API example I've published here: https://github.com/JimDaly/DataversePowerAutomateHelpers?tab=readme-ov-file#sample_retrieveoptions.
 
