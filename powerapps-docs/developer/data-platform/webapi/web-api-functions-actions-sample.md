@@ -2,7 +2,7 @@
 title: Web API Functions and Actions Sample
 description: This collection of code samples demonstrates how to perform bound and unbound functions and actions, including custom actions, using the Microsoft Dataverse Web API. These samples are implemented using client-side JavaScript and C#.
 ms.topic: sample
-ms.date: 09/02/2022
+ms.date: 01/27/2026
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: jdaly
@@ -16,12 +16,13 @@ contributors:
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-This group of samples demonstrate how to perform bound and unbound functions and actions, including custom actions, using the Microsoft Dataverse Web API. This sample is implemented as a separate project for the following languages:  
+This group of samples demonstrates how to perform bound and unbound functions and actions, including custom actions, by using the Microsoft Dataverse Web API. The sample is implemented as a separate project for the following languages:  
   
 - [Functions and Actions Sample (C#)](samples/webapiservice-functions-and-actions.md)
 - [Functions and Actions Sample (Client-side JavaScript)](samples/functions-actions-client-side-javascript.md)
+- [Web API Functions and Actions Sample (PowerShell)](samples/functions-actions-powershell.md)
   
-This article explains the structure and content of the sample at a higher, language-neutral level. Review the linked sample articles above for language-specific implementation details about how to perform the operations described in this article.  
+This article explains the structure and content of the sample at a higher, language-neutral level. For language-specific implementation details about how to perform the operations described in this article, see the linked sample articles.  
   
 <a name="bkmk_demonstrates"></a>  
  
@@ -40,11 +41,11 @@ This sample is divided into the following principal sections, containing Web API
 |[Section 8: Bound Actions AddPrivilegesRole](#section-8-bound-action-addprivilegesrole)|[Bound actions](web-api-actions.md#bound-actions)<br />[Use Bound actions](use-web-api-actions.md#bound-actions)<br /><xref:Microsoft.Dynamics.CRM.AddPrivilegesRole?text=AddPrivilegesRole Action><br />[Security Role (Role)  table/entity reference](../reference/entities/role.md)|
 |[Section 9: Delete sample records](#section-9-delete-sample-records)|[Basic delete](update-delete-entities-using-web-api.md#basic-delete)<br />[Execute batch operations using the Web API](execute-batch-operations-using-web-api.md)|
   
-The following sections contain a brief discussion of the Dataverse Web API operations performed, along with the corresponding HTTP messages and associated console output.  
+The following sections contain a brief discussion of the Dataverse Web API operations, along with the corresponding HTTP messages and associated console output.  
 
-## Section 1: Unbound Function WhoAmI
+## Section 1: Unbound function WhoAmI
 
-[WhoAmI Function](xref:Microsoft.Dynamics.CRM.WhoAmI) is a simple and commonly used unbound function.
+The [WhoAmI Function](xref:Microsoft.Dynamics.CRM.WhoAmI) is a simple and commonly used unbound function.
 
 **Request:**
 
@@ -79,13 +80,13 @@ WhoAmIResponse.UserId:22cc22cc-dd33-ee44-ff55-66aa66aa66aa
 WhoAmIResponse.OrganizationId:00aa00aa-bb11-cc22-dd33-44ee44ee44ee
 ```
 
-The `BusinessUnitId` value retrieved here will be used in [Section 8: Bound Action AddPrivilegesRole](#section-8-bound-action-addprivilegesrole).
+Use the `BusinessUnitId` value retrieved here in [Section 8: Bound Action AddPrivilegesRole](#section-8-bound-action-addprivilegesrole).
 
-## Section 2: Unbound Function FormatAddress
+## Section 2: Unbound function FormatAddress
 
-[FormatAddress function](xref:Microsoft.Dynamics.CRM.FormatAddress) is an unbound function that requires parameters to be set. It returns a string that represents an address according to country/regional format specific requirements.
+[FormatAddress function](xref:Microsoft.Dynamics.CRM.FormatAddress) is an unbound function that requires parameters. It returns a string that represents an address according to country or regional format specific requirements.
 
-In this example, the parameters are set using query string parameter values.
+In this example, set the parameters by using query string parameter values.
 
 1. A request for an address in the United States:
 
@@ -155,9 +156,9 @@ In this example, the parameters are set using query string parameter values.
    JAPAN
    ```
 
-## Section 3: Unbound Function InitializeFrom
+## Section 3: Unbound function InitializeFrom
 
-[InitializeFrom function](xref:Microsoft.Dynamics.CRM.InitializeFrom) is an unbound function that requires parameters. This function returns the data for a new record to create in the context of an existing record. Depending on the configuration data to control what data is copied over, the record data returned includes data copied from the original record.
+The [InitializeFrom function](xref:Microsoft.Dynamics.CRM.InitializeFrom) is an unbound function that requires parameters. This function returns the data for a new record to create in the context of an existing record. Depending on the configuration data to control what data is copied, the record data returned includes data copied from the original record.
 
 More information:
 
@@ -245,7 +246,7 @@ More information:
    ```
 
    > [!NOTE]
-   > If there are no columns mapped for this relationship, only the minimum column values are included as shown above. In this case, only the `parentaccountid` lookup to associate the new record with the original.
+   > If there are no columns mapped for this relationship, only the minimum column values are included as shown in the preceding example. In this case, the only value is the `parentaccountid` lookup to associate the new record with the original.
 
    If all the available columns are mapped for this relationship, the value returned includes more data from the original record, for example:
 
@@ -297,7 +298,7 @@ More information:
    }     
    ```
 
-1. Create a new record using the data returned with `InitializeFrom`.
+1. Create a new record using the data returned by `InitializeFrom`.
 
    **Request:**
 
@@ -352,12 +353,12 @@ More information:
 
 ## Section 4: Unbound Function RetrieveCurrentOrganization
 
-[RetrieveCurrentOrganization function](xref:Microsoft.Dynamics.CRM.RetrieveCurrentOrganization) returns information about the current organization. It requires an [EndpointAccessType enum type](xref:Microsoft.Dynamics.CRM.EndpointAccessType) value as a parameter.
+The [RetrieveCurrentOrganization function](xref:Microsoft.Dynamics.CRM.RetrieveCurrentOrganization) returns information about the current organization. It requires an [EndpointAccessType enum type](xref:Microsoft.Dynamics.CRM.EndpointAccessType) value as a parameter.
 
-`RetrieveCurrentOrganization` returns a [RetrieveCurrentOrganizationResponse complex type](xref:Microsoft.Dynamics.CRM.RetrieveCurrentOrganizationResponse) which includes a `Detail` property that is an [OrganizationDetail complex type](xref:Microsoft.Dynamics.CRM.OrganizationDetail), which has complex properties that use the [EndpointCollection complex type](xref:Microsoft.Dynamics.CRM.EndpointCollection), [EndpointType enum type](xref:Microsoft.Dynamics.CRM.EndpointType) and [OrganizationState enum type](xref:Microsoft.Dynamics.CRM.OrganizationState)
+`RetrieveCurrentOrganization` returns a [RetrieveCurrentOrganizationResponse complex type](xref:Microsoft.Dynamics.CRM.RetrieveCurrentOrganizationResponse) which includes a `Detail` property that is an [OrganizationDetail complex type](xref:Microsoft.Dynamics.CRM.OrganizationDetail). This complex type has properties that use the [EndpointCollection complex type](xref:Microsoft.Dynamics.CRM.EndpointCollection), [EndpointType enum type](xref:Microsoft.Dynamics.CRM.EndpointType), and [OrganizationState enum type](xref:Microsoft.Dynamics.CRM.OrganizationState).
 
 > [!NOTE]
-> Notice how the `AccessType` [EndpointAccessType enum type](xref:Microsoft.Dynamics.CRM.EndpointAccessType) parameter value is passed in the URL. The fully qualified name with the selected member name is required.
+> The URL passes the `AccessType` [EndpointAccessType enum type](xref:Microsoft.Dynamics.CRM.EndpointAccessType) parameter value. It requires the fully qualified name with the selected member name.
 
 
 **Request:**
@@ -441,7 +442,7 @@ Data returned with RetrieveCurrentOrganizationResponse:
 
 ## Section 5: Unbound Function RetrieveTotalRecordCount
 
-[RetrieveTotalRecordCount function](xref:Microsoft.Dynamics.CRM.RetrieveTotalRecordCount) returns data on the total number of records for specific entities. The data retrieved is from a snapshot within last 24 hours, so it isn't an exact count at a given moment in time.
+The [RetrieveTotalRecordCount function](xref:Microsoft.Dynamics.CRM.RetrieveTotalRecordCount) returns data on the total number of records for specific entities. The function retrieves data from a snapshot that's less than 24 hours old, so it isn't an exact count at a given moment in time.
 
 **Request:**
 
@@ -484,7 +485,7 @@ The number of records for each table according to RetrieveTotalRecordCount:
         contact:3
 ```
 
-## Section 6: Bound Function IsSystemAdmin custom API
+## Section 6: Bound function IsSystemAdmin custom API
 
 To demonstrate a bound function, this sample imports a custom message defined within a solution before running this portion of the sample.
 
@@ -515,7 +516,7 @@ OData-Version: 4.0
 }
 ```
 
-This sample retrieves 10 user records and test each one to determine whether each user has the System Administrator security role.
+This sample retrieves 10 user records and tests each one to determine whether each user has the System Administrator security role.
 
 **Console output:**
 
@@ -539,13 +540,13 @@ For another example of a bound function, see the use of the [RetrievePrincipalAc
 
 ## Section 7: Unbound Action GrantAccess
 
-[GrantAccess action](xref:Microsoft.Dynamics.CRM.GrantAccess) is an unbound action allows people to share specific privileges to other users in their environment.
+By using the [GrantAccess action](xref:Microsoft.Dynamics.CRM.GrantAccess), users can share specific privileges with other users in their environment.
 
 The sample code demonstrates the following operations:
 
 1. Create a record to share.
 1. Find an enabled user other than the current user.
-1. Use [RetrievePrincipalAccess function](xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess) to determine what access rights the user has for the record created.
+1. Use the [RetrievePrincipalAccess function](xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess) to check what access rights the user has for the record you created.
 
    **Request:**
 
@@ -576,7 +577,7 @@ The sample code demonstrates the following operations:
    Current users access: ShareAccess
    ```
 
-1. If the user doesn't have <xref:Microsoft.Dynamics.CRM.AccessRights?text=AccessRights>.`DeleteAccess`, grant the user this access using the `GrantAccess` action.
+1. If the user doesn't have <xref:Microsoft.Dynamics.CRM.AccessRights?text=AccessRights>.`DeleteAccess`, grant the user this access by using the `GrantAccess` action.
 
    **Request:**
 
@@ -609,7 +610,7 @@ The sample code demonstrates the following operations:
    OData-Version: 4.0
    ```
 
-1. Once `DeleteAccess` has been granted, the same call to <xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function> shows that they now have access to delete this record:
+1. After you grant `DeleteAccess`, the same call to <xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function> shows that the user now has access to delete this record:
 
    **Request:**
 
@@ -641,11 +642,11 @@ The sample code demonstrates the following operations:
 
 ## Section 8: Bound Action AddPrivilegesRole
 
-[AddPrivilegesRole action](xref:Microsoft.Dynamics.CRM.AddPrivilegesRole) is an action bound to the [role entity type](xref:Microsoft.Dynamics.CRM.role). It's the way to add privileges to a security role.
+[AddPrivilegesRole action](xref:Microsoft.Dynamics.CRM.AddPrivilegesRole) is an action bound to the [role entity type](xref:Microsoft.Dynamics.CRM.role). Use it to add privileges to a security role.
 
 The sample code performs the following operations:
 
-1. Create a security role. The role must be associated with a business unit. The business unit id value was retrieved in [Section 1: Unbound Function WhoAmI](#section-1-unbound-function-whoami).
+1. Create a security role. You must associate the role with a business unit. You retrieved the business unit ID value in [Section 1: Unbound Function WhoAmI](#section-1-unbound-function-whoami).
    
    **Request:**
 
@@ -832,7 +833,7 @@ The sample code performs the following operations:
    OData-Version: 4.0
    ```
 
-1. Retrieve the privileges associated with the role again to confirm that they have been added.
+1. Retrieve the privileges associated with the role again to confirm that you added them.
    
    **Request:**
 
@@ -934,7 +935,7 @@ The sample code performs the following operations:
 
 ## Section 9: Delete sample records
 
-Each record created in this sample was added to a list to be deleted at the end. These records are deleted using a `$batch` request.
+Add each record you create in this sample to a list so you can delete them at the end. Use a `$batch` request to delete these records.
 
 **Request:**
 
@@ -1047,10 +1048,12 @@ Deleting created records.
 
 ### See also  
 
-[Use the Dataverse Web API](overview.md)<br />
-[Use Web API functions](use-web-api-functions.md)<br />
-[Use Web API actions](use-web-api-actions.md)<br />
-[Web API Functions and Actions Sample (C#)](samples/webapiservice-functions-and-actions.md)
+[Use the Dataverse Web API](overview.md)   
+[Use Web API functions](use-web-api-functions.md)   
+[Use Web API actions](use-web-api-actions.md)   
+[Web API Functions and Actions Sample (C#)](samples/webapiservice-functions-and-actions.md)   
+[Functions and Actions Sample (Client-side JavaScript)](samples/functions-actions-client-side-javascript.md)   
+[Web API Functions and Actions Sample (PowerShell)](samples/functions-actions-powershell.md)
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
