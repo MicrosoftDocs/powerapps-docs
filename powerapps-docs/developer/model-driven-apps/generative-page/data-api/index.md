@@ -57,7 +57,6 @@ var row =
         "description": "This is the description of the sample account",
         "revenue": 5000000,
         "accountcategorycode": 1,
-        "opendeals_date": new Date("2024-02-03T00:00:00Z")
     }
 
 try {
@@ -70,7 +69,7 @@ try {
     firstname: 'John',
     lastname: 'Doe',
     emailaddress1: 'john.doe@contoso.com',
-    _parentcustomerid_value: `/account(${newAccountId})`, // Lookup format
+    "parentcustomerid@odata.bind": `/account(${newAccountId})`, // Lookup format
   });
 }
 catch (error) {
