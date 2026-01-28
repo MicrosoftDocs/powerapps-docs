@@ -1,6 +1,6 @@
 ---
-title: "Behavior of specialized update operations (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Describes special behavior in plug-ins and workflows for update events due to deprecated messages." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Behavior of specialized update operations (Microsoft Dataverse) | Microsoft Docs"
+description: "Describes special behavior in plug-ins and workflows for update events due to deprecated messages." 
 ms.date: 03/22/2022
 ms.reviewer: "pehecke"
 ms.topic: "article"

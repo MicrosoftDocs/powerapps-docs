@@ -2,7 +2,7 @@
 title: "Web API basic operations sample "
 description: "Code samples that demonstrate how to perform CRUD (Create, Retrieve, Update, and Delete) operations using the Dataverse Web API. The samples are coded using C#, PowerShell, and client-side JavaScript."
 ms.topic: sample
-ms.date: 03/22/2025
+ms.date: 01/27/2026
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: jdaly
@@ -12,23 +12,23 @@ contributors:
   - JimDaly
 ---
 
-# Web API Basic Operations Sample
+# Web API basic operations sample
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-This collection of sample code snippets demonstrate how to perform basic CRUD (Create, Retrieve, Update, and Delete) and associative operations using the Microsoft Dataverse Web API. These language specific versions implement the same operations:
+This collection of sample code snippets demonstrates how to perform basic CRUD (Create, Retrieve, Update, and Delete) and associative operations by using the Microsoft Dataverse Web API. These language-specific versions implement the same operations:
   
 - [Web API Basic Operations Sample (C#)](samples/webapiservice-basic-operations.md)
 - [Web API Basic Operations Sample (PowerShell)](samples/basic-operations-powershell.md)
 - [Web API Basic Operations Sample (client-side JavaScript)](samples/basic-operations-client-side-javascript.md)
   
-This article describes a common set of operations implemented by each sample snippet in this group. This article describes the HTTP requests and responses and text output that each sample performs without the language specific details. See the language specific descriptions and the individual samples for details about how these operations are performed.  
+This article describes a common set of operations that each sample snippet in this group implements. It describes the HTTP requests and responses, and text output that each sample performs without the language-specific details. For details about how these operations are performed, see the language-specific descriptions and the individual samples.  
   
 <a name="bkmk_demonstrates"></a>  
 
 ## Demonstrates  
 
-This sample is divided into the following sections, containing Dataverse Web API operations which are discussed in greater detail in the specified associated conceptual articles.  
+This sample is divided into the following sections. Each section contains Dataverse Web API operations that are discussed in greater detail in the specified associated conceptual articles.  
   
 |Code section|Associated conceptual articles|  
 |------------------|----------------------------------|  
@@ -39,13 +39,13 @@ This sample is divided into the following sections, containing Dataverse Web API
 |[Section 5: Delete table rows (sample cleanup)](#bkmk_section5)|[Basic delete](update-delete-entities-using-web-api.md#bkmk_delete)|  
   
 > [!NOTE]
->  For brevity, less pertinent HTTP headers are omitted. The URLs of the records vary with the base organization address and the ID of the row assigned by your Dataverse server.  
+>  For brevity, the sample omits less pertinent HTTP headers. The URLs of the records vary with the base organization address and the ID of the row assigned by your Dataverse server.  
   
 <a name="bkmk_section1"></a>
    
 ## Section 1: Basic create and update operations
 
-This section creates a single contact then performs a series of updates upon that instance. The response header [OData-EntityId](https://docs.oasis-open.org/odata/odata/v4.0/os/part1-protocol/odata-v4.0-os-part1-protocol.html#_Toc372793637) contains the URL to this newly created row, which parenthetically includes the unique ID for this record.  
+This section creates a single contact then performs a series of updates on that instance. The response header [OData-EntityId](https://docs.oasis-open.org/odata/odata/v4.0/os/part1-protocol/odata-v4.0-os-part1-protocol.html#_Toc372793637) contains the URL to this newly created row, which parenthetically includes the unique ID for this record.  
   
 1. Create a new contact, named  Rafel Shillo.  
   
@@ -113,7 +113,7 @@ This section creates a single contact then performs a series of updates upon tha
    Contact 'Rafel Shillo' updated with jobtitle and annual income
    ```  
   
-1. Retrieve the contact with its set of explicitly initialized properties. The `fullname` is a read-only property that is calculated from the `firstname` and `lastname` properties, which were explicitly initialized when the instance was created. In contrast, the `description` property wasn't explicitly initialized, so it retains its default value, a `null` string.  
+1. Retrieve the contact with its set of explicitly initialized properties. The `fullname` is a read-only property that is calculated from the `firstname` and `lastname` properties, which you explicitly initialized when you created the instance. In contrast, the `description` property wasn't explicitly initialized, so it retains its default value, a `null` string.  
    
    In addition to the requested values and typical headers, the response also automatically returns the following types of additional information:  
    
@@ -167,7 +167,7 @@ This section creates a single contact then performs a series of updates upon tha
    ```  
     
    > [!IMPORTANT]
-   >  You should always use selection and filtering in retrieval operations to optimize performance. For more information, see [Query Data using the Web API](query/overview.md).  
+   >  Always use selection and filtering in retrieval operations to optimize performance. For more information, see [Query Data using the Web API](query/overview.md).  
   
 1. Update the contact instance by supplying new values to these same properties.  
   
@@ -208,7 +208,7 @@ This section creates a single contact then performs a series of updates upon tha
    > [!IMPORTANT]
    >  Only send changed properties in update requests. For more information, see [Basic update](update-delete-entities-using-web-api.md#bkmk_update).  
   
-1. Explicitly set a single property, the primary phone number. Note this is a `PUT` request and that the JSON key named `value` is used when performing operations on individual properties.  
+1. Explicitly set a single property, the primary phone number. This example uses a `PUT` request and the JSON key named `value` when performing operations on individual properties.  
   
    **Request:**
    
@@ -237,7 +237,7 @@ This section creates a single contact then performs a series of updates upon tha
    Contact 'Rafel Shillo' phone number updated.
    ```  
   
-1. Retrieve that same single property, the primary phone number. Again note the use of the key named `value`.  
+1. Retrieve that same single property, the primary phone number. Again, use the key named `value`.  
   
    **Request:**
    
@@ -271,9 +271,9 @@ This section creates a single contact then performs a series of updates upon tha
     
 ## Section 2: Create with association
 
-This section creates a new account record named `Contoso, Ltd.` and associates it to an existing contact, `Rafel Shillo`, which was created in [Section 1](#bkmk_section1). This creation and association is performed in a single POST operation.  
+This section creates a new account record named `Contoso, Ltd.` and associates it to an existing contact, `Rafel Shillo`, which you created in [Section 1](#bkmk_section1). You perform this creation and association in a single POST operation.  
   
-1. Create the Contoso, Ltd. account and set its primary contact attribute to the existing contact Rafel Shillo. The `@odata.bind` annotation indicates that an association is being created, here binding the `primarycontactid` single-valued navigation property to an existing contact, Rafel Shillo.  
+1. Create the Contoso, Ltd. account and set its primary contact attribute to the existing contact Rafel Shillo. The `@odata.bind` annotation indicates that you're creating an association. In this case, it binds the `primarycontactid` single-valued navigation property to an existing contact, Rafel Shillo.  
      
    **Request:**
    
@@ -306,7 +306,7 @@ This section creates a new account record named `Contoso, Ltd.` and associates i
    Account URI: accounts(11bb11bb-cc22-dd33-ee44-55ff55ff55ff)
    ```  
    
-1. Retrieve the primary contact for the account Contoso, Ltd., again using `$expand`  with the  `primarycontactid` single-valued navigation property to access the associated <xref:Microsoft.Dynamics.CRM.contact?text=contact EntityType> record.  
+1. Retrieve the primary contact for the account Contoso, Ltd. Again, use `$expand` with the `primarycontactid` single-valued navigation property to access the associated <xref:Microsoft.Dynamics.CRM.contact?text=contact EntityType> record.  
   
    **Request:**
    
@@ -359,7 +359,7 @@ This section creates a new account record named `Contoso, Ltd.` and associates i
    
 ## Section 3: Create related table rows (deep insert)  
 
-This section demonstrates how to create a table row and related row, in a single POST request. When you use this method, all rows are newly created; there are no existing rows to associate with. This approach has two advantages. It's more efficient, replacing multiple simpler creation and association operations with one combined operation. Also, it's atomic, where either the entire operation succeeds and all the related objects are created, or the operation fails and none are created.  
+This section shows how to create a table row and related row in a single POST request. When you use this method, you create all rows new; you don't associate with existing rows. This approach has two advantages. It's more efficient because it replaces multiple simpler creation and association operations with one combined operation. Also, it's atomic, so either the entire operation succeeds and all the related objects are created, or the operation fails and none are created.  
   
 This section creates an account, its primary contact, and a set of tasks for that contact in one request.  
   
@@ -556,9 +556,9 @@ This section creates an account, its primary contact, and a set of tasks for tha
       
 ## Section 4: Associate and disassociate existing entities  
 
-This section demonstrates how to associate and disassociate existing table rows. Forming an association requires the use of a reference URI and relationship object, which are then sent in a POST request. Disassociating requires sending a DELETE request to the reference URI for that association. First a one-to-many association is formed between a contact and an account. Then a many-to-many association is formed between a competitor and one or more opportunities.  
+This section shows how to associate and disassociate existing table rows. To form an association, use a reference URI and relationship object, and send them in a POST request. To disassociate, send a DELETE request to the reference URI for that association. First, create a one-to-many association between a contact and an account. Then, create a many-to-many association between a competitor and one or more opportunities.  
   
-1. Add Rafel Shillo as a contact to the account Fourth Coffee using the `contact_customer_accounts` collection-valued navigation property. Note the use of the special key `@odata.id` to specify the associated record.  
+1. Add Rafel Shillo as a contact to the account Fourth Coffee by using the `contact_customer_accounts` collection-valued navigation property. Note the use of the special key `@odata.id` to specify the associated record.  
    
    **Request:**
    
@@ -619,7 +619,7 @@ This section demonstrates how to associate and disassociate existing table rows.
           Name: Rafel Shillo, Job title: Senior Developer  
    ```  
    
-1. Remove the association that was created between account Fourth Coffee and contact Rafel Shillo.  
+1. Remove the association that you created between account Fourth Coffee and contact Rafel Shillo.  
    
    **Request:**
    
@@ -692,7 +692,7 @@ This section demonstrates how to associate and disassociate existing table rows.
    Security Role 'Example Security Role' associated with to your user account.
    ```  
   
-1. Retrieve the Example Security Role using the `systemuserroles_association` many-to-many relationship: 
+1. Retrieve the Example Security Role by using the `systemuserroles_association` many-to-many relationship: 
    
    **Request:**
    
@@ -728,7 +728,7 @@ This section demonstrates how to associate and disassociate existing table rows.
    Retrieved role: Example Security Role
    ``` 
    
-1. Dissociate the security role from your user record. Note again, that this has the same general syntax used to remove a one-to-many association.  
+1. Dissociate the security role from your user record. This step uses the same general syntax as the removal of a one-to-many association.  
    
    **Request:**
    
@@ -751,7 +751,7 @@ This section demonstrates how to associate and disassociate existing table rows.
   
 ## Section 5: Delete table rows
   
-1. Each element of the collection of row URLs is deleted. The first is a contact record for Rafel Shillo.  
+1. Delete each element in the collection of row URLs. The first element is a contact record for Rafel Shillo.  
    
    **Request:**
    
@@ -770,7 +770,7 @@ This section demonstrates how to associate and disassociate existing table rows.
    OData-Version: 4.0
    ```
    
-1. Subsequent iterations through the collection delete the remaining records.  
+1. Delete the remaining records in subsequent iterations through the collection.  
    
    **Request:** 
      
@@ -789,11 +789,13 @@ This section demonstrates how to associate and disassociate existing table rows.
   
 ### See also  
 
-[Use the Dataverse Web API](overview.md)<br />
-[Create a table row using the Web API](create-entity-web-api.md)<br />
-[Retrieve a table row using the Web API](retrieve-entity-using-web-api.md)<br />
-[Update and delete table rows using the Web API](update-delete-entities-using-web-api.md)<br />
-[Associate and disassociate table rows using the Web API](associate-disassociate-entities-using-web-api.md)<br />
-[Web API Basic Operations Sample (C#)](samples/webapiservice-basic-operations.md)<br />
+[Use the Dataverse Web API](overview.md)   
+[Create a table row using the Web API](create-entity-web-api.md)   
+[Retrieve a table row using the Web API](retrieve-entity-using-web-api.md)   
+[Update and delete table rows using the Web API](update-delete-entities-using-web-api.md)   
+[Associate and disassociate table rows using the Web API](associate-disassociate-entities-using-web-api.md)   
+[Web API Basic Operations Sample (C#)](samples/webapiservice-basic-operations.md)   
+[Web API Basic Operations Sample (PowerShell)](samples/basic-operations-powershell.md)   
+[Web API Basic Operations Sample (client-side JavaScript)](samples/basic-operations-client-side-javascript.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

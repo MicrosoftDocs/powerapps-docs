@@ -3,7 +3,7 @@ title: "Create your first component using Power Apps Component Framework in Micr
 description: "Learn how to implement code components using Power Apps component framework"
 author: anuitz
 ms.author: anuitz
-ms.date: 02/06/2023
+ms.date: 01/09/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 ms.subservice: pcf
@@ -13,30 +13,30 @@ contributors:
 
 # Create your first component
 
-In this tutorial, we demonstrate how to build a linear slider code component that enables users to change the numeric values using a visual slider instead of typing the values in the column.
+In this tutorial, you build a linear slider code component that users can use to change numeric values with a visual slider instead of typing the values in the column.
 
 :::image type="content" source="media/sample-linear-input-control-mda.png" alt-text="Linear input control in a model-driven app.":::
 
-The sample code for the completed linear slider code component is available here: [PowerApps-Samples/component-framework/LinearInputControl/](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/LinearInputControl)
+You can find the sample code for the completed linear slider code component at [PowerApps-Samples/component-framework/LinearInputControl/](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/LinearInputControl).
 
-The following steps are required to build a linear slider code component:
+To build a linear slider code component, complete the following steps:
 
 - [Create a new component project](#creating-a-new-component-project)
-- [Implementing manifest](#implementing-manifest)
+- [Implement the manifest](#implementing-manifest)
 - [Implement component logic using TypeScript](#implementing-component-logic)
 - [Add style to the code components](#adding-style-to-the-code-component)
 - [Build your code components](#build-your-code-components)
-- [Packaging code components](#packaging-your-code-components)
+- [Package your code components](#packaging-your-code-components)
 - [Add your code component to an app](#add-your-code-component-to-an-app)
 
 ## Prerequisites
 
-For this tutorial you need install the following components:
+For this tutorial, install the following components:
 
-1. [Visual Studio Code (VSCode)](https://code.visualstudio.com/Download) (Ensure the Add to PATH option is select)
-1. [node.js](https://nodejs.org/en/download/) (LTS version is recommended)
+1. [Visual Studio Code (VSCode)](https://code.visualstudio.com/Download) (Ensure the **Add to PATH** option is selected)
+1. [Node.js](https://nodejs.org/en/download/) (LTS version is recommended)
 1. [Microsoft Power Platform CLI](/powerapps/developer/data-platform/powerapps-cli#install-power-apps-cli) (Use either Power Platform Tools for Visual Studio Code or Power Platform CLI for Windows)
-1. .NET Build tools by installing one of the following: (At minimum select the workload `.NET build tools`.)
+1. .NET Build tools by installing one of the following options. At minimum, select the workload `.NET build tools`:
    - Visual Studio 2022
       - [Visual Studio 2022 for Windows & Mac](https://visualstudio.microsoft.com/downloads/). 
       - [Build Tools for Visual Studio 2022](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2022).
@@ -44,20 +44,20 @@ For this tutorial you need install the following components:
       - [Visual Studio 2019 downloads](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2019-and-other-products).
 
 > [!NOTE]
-> You may prefer to use the [.NET 6.x SDK](https://dotnet.microsoft.com/download/dotnet/6.0) instead of the Build Tools for Visual Studio. In this case, instead of using `msbuild` you would use `dotnet build`.
+> You might prefer to use the [.NET 6.x SDK](https://dotnet.microsoft.com/download/dotnet/6.0) instead of the Build Tools for Visual Studio. In this case, instead of using `msbuild`, use `dotnet build`.
 
 > [!TIP]
-> It is also recommended to install [git for source control](https://git-scm.com/downloads).
+> Install [git for source control](https://git-scm.com/downloads).
 
 ## Creating a new component project
 
-For the purpose of this tutorial we will start in a folder located at `C:\repos`, but you can use any folder you like. The folder should represent a place you want to check in your code.
+For this tutorial, start in a folder located at `C:\repos`, but you can use any folder you like. Choose a folder where you want to check in your code.
 
 
 1. Create a new folder named `LinearInput`.
-1. Open the `LinearInput` folder using Visual Studio Code.
+1. Open the `LinearInput` folder by using Visual Studio Code.
 
-   The quickest way to start is by using a command prompt window and navigate to your `LinearInput` folder and type `code .`.
+   The quickest way to start is by using a command prompt window. Navigate to your `LinearInput` folder and type `code .`.
 
    ```CLI
    c:\repos\LinearInput>code .
@@ -65,29 +65,29 @@ For the purpose of this tutorial we will start in a folder located at `C:\repos`
 
    This command opens your component project in Visual Studio Code.
 
-1. Open a new terminal inside Visual Studio Code using **Terminal** -> **New Terminal**.
-1. At the terminal prompt, create a new component project by passing basic parameters using the [pac pcf init](/power-platform/developer/cli/reference/pcf#pac-pcf-init) command.
+1. Open a new terminal inside Visual Studio Code by using **Terminal** -> **New Terminal**.
+1. At the terminal prompt, create a new component project by passing basic parameters by using the [pac pcf init](/power-platform/developer/cli/reference/pcf#pac-pcf-init) command.
    
    ```CLI
     pac pcf init --namespace SampleNamespace --name LinearInputControl --template field --run-npm-install
    ```
    
-1. The above command also runs the `npm install` command for you to setup the project build tools.
+1. The command also runs the `npm install` command to set up the project build tools.
    
    ```
    Running 'npm install' for you...
    ```
 
    > [!NOTE]
-   > If you receive the error `The term 'npm' is not recognized as the name of a cmdlet, function, script file, or operable program.`, make sure you have installed [node.js](https://nodejs.org/en/download/) (LTS version is recommended) and all other prerequisites.
+   > If you receive the error `The term 'npm' is not recognized as the name of a cmdlet, function, script file, or operable program.`, make sure you install [node.js](https://nodejs.org/en/download/) (LTS version is recommended) and all other prerequisites.
    
 ## Implementing manifest
 
-The control manifest is an XML file that contains the metadata of the code component. It also defines the behavior of the code component. In this tutorial, this manifest file is created under the `LinearInputControl` subfolder. When you open the `ControlManifest.Input.xml` file in Visual Studio Code, you'll notice that the manifest file is predefined with some properties. More information: [Manifest](manifest-schema-reference/manifest.md).
+The control manifest is an XML file that contains the metadata of the code component. It also defines the behavior of the code component. In this tutorial, you create this manifest file under the `LinearInputControl` subfolder. When you open the `ControlManifest.Input.xml` file in Visual Studio Code, you see that the manifest file is predefined with some properties. For more information, see [Manifest](manifest-schema-reference/manifest.md).
 
 The [control](manifest-schema-reference/control.md) node defines the namespace, version, and display name of the code component.
    
-The tooling has generated the [control](manifest-schema-reference/control.md) element that is a good starting point for your control.
+The tooling generates the [control](manifest-schema-reference/control.md) element. It provides a good starting point for your control.
 
 [!INCLUDE [cc_tip-format-xml](includes/cc_tip-format-xml.md)]
 
@@ -95,12 +95,12 @@ The tooling has generated the [control](manifest-schema-reference/control.md) el
 |---------|---------|
 |`namespace`|Namespace of the code component.|
 |`constructor`|Constructor of the code component.|
-|`version`|Version of the component. Whenever you update the component, you need to update the version to see the latest changes in the runtime.|
-|`display-name-key`|Name of the code component that is displayed on the UI.|
-|`description-key`|Description of the code component that is displayed on the UI.|
-|`control-type`|The code component type. This will be a `standard` control. |
+|`version`|Version of the component. Whenever you update the component, update the version to see the latest changes in the runtime.|
+|`display-name-key`|Name of the code component that displays on the UI.|
+|`description-key`|Description of the code component that displays on the UI.|
+|`control-type`|The code component type. This value is a `standard` control. |
 
-If you ignore the commented areas and format the document, this is the manifest that was generated for you:
+If you ignore the commented areas and format the document, you see the manifest that was generated for you:
 
 ```XML
 <?xml version="1.0" encoding="utf-8" ?>
@@ -137,7 +137,7 @@ From this starting point, make the following changes:
 
 Add the definition of a [type-group](manifest-schema-reference/type-group.md) element named `numbers` within the `control` element. This element specifies the component value and can contain whole, currency, floating point, or decimal values.
   
-Replace the `external-service-usage` element with the `type-group` since `external-service-usage` functionality isn't used by this  control.
+Replace the `external-service-usage` element with the `type-group` element since the `external-service-usage` functionality isn't used by this control.
 
 #### [Before](#tab/before)
 
@@ -195,19 +195,19 @@ Replace the `external-service-usage` element with the `type-group` since `extern
    
 ### Edit the property element
 
-Edit the generated `sampleProperty` [property](manifest-schema-reference/property.md) element within the `control` element. This element defines the properties of the code component like defining the data type of the column.
+Edit the generated `sampleProperty` [property](manifest-schema-reference/property.md) element within the `control` element. This element defines the properties of the code component, such as the data type of the column.
 
 |Attribute|Description|
 |---------|---------|
 |`name`|Name of the property.|
-|`display-name-key`|Display name of the property that is displayed on the UI.|
-|`description-key`|Description of the property that is displayed on the UI.|
-|`of-type-group`|Use the `of-type-group` attribute when you want refer to the name of a specific type group.<br /> Here, we are referring to the `type-group` named `numbers` created in the previous step.|
+|`display-name-key`|Display name of the property that appears on the UI.|
+|`description-key`|Description of the property that appears on the UI.|
+|`of-type-group`|Use the `of-type-group` attribute to refer to the name of a specific type group. In this case, refer to the `type-group` named `numbers` that you created in the previous step.|
 |`usage`|Has two properties, `bound` and `input`.<br /><br />- Bound properties are bound only to the value of the column.<br /><br />- Input properties are either bound to a column or allow a static value.|
 |`required`|Defines whether the property is required.|
 
 
-Edit the [property](manifest-schema-reference/property.md) node as shown here:
+Edit the [property](manifest-schema-reference/property.md) node as shown in the following code:
 
 ### [Before](#tab/before)
 
@@ -237,7 +237,7 @@ Edit the [property](manifest-schema-reference/property.md) node as shown here:
 
 The [resources](manifest-schema-reference/resources.md) node defines the visualization of the code component. It contains all the resources that build the visualization and styling of the code component. The [code](manifest-schema-reference/code.md) is specified as a child element under the resources element.
 
-The generated manifest already includes a definition of the [code element](manifest-schema-reference/code.md) with `path` and `order` attribute values set. We will use these. In the following [Adding style to the code component](#adding-style-to-the-code-component) section, we will add CSS styles for the control. To support that, let's edit the manifest to add them while we have it open.
+The generated manifest already includes a definition of the [code element](manifest-schema-reference/code.md) with `path` and `order` attribute values set. Use these values. In the following [Adding style to the code component](#adding-style-to-the-code-component) section, you add CSS styles for the control. To support that step, edit the manifest to add them while you have it open.
 
 Edit the [resources](manifest-schema-reference/resources.md) node to add the following [css element](manifest-schema-reference/css.md):
 
@@ -299,7 +299,7 @@ The completed manifest file should look like this:
 ```
 
 1. Save the changes to the `ControlManifest.Input.xml` file.
-1. Generate `ManifestDesignTypes.d.ts` file using the following command.
+1. Generate `ManifestDesignTypes.d.ts` file by using the following command.
    
    ```CLI
    npm run refreshTypes
@@ -337,7 +337,7 @@ The completed manifest file should look like this:
 
 ## Implementing component logic
 
-The next step after implementing the manifest file is to implement the component logic using TypeScript. The component logic should be implemented inside the `index.ts` file. When you open the `index.ts` file in the Visual Studio Code, you'll notice that the four essential functions ([init](reference/control/init.md), [updateView](reference/control/updateview.md) , [getOutputs](reference/control/getoutputs.md), and [destroy](reference/control/destroy.md)) are predefined. Now, let's implement the logic for the code component.
+After implementing the manifest file, implement the component logic by using TypeScript. Implement the component logic inside the `index.ts` file. When you open the `index.ts` file in Visual Studio Code, you see that the four essential functions ([init](reference/control/init.md), [updateView](reference/control/updateview.md), [getOutputs](reference/control/getoutputs.md), and [destroy](reference/control/destroy.md)) are predefined. Now, implement the logic for the code component.
 
 Open the `index.ts` file in the code editor of your choice and make the following changes:
 
@@ -675,18 +675,18 @@ public destroy(): void {
 }
 ```
    
-When you are finished, save the changes to the `index.ts` file
+When you're finished, save the changes to the `index.ts` file.
    
 ## Adding style to the code component
 
-Developers and app makers can define their styling to represent their code components visually using CSS. CSS allows the developers to describe the presentation of code components, including style, colors, layouts, and fonts. The linear input component's [init](reference/control/init.md) method creates an input element and sets the class attribute to `linearslider`. The style for the `linearslider` class is defined in a separate `CSS` file. Additional component resources like `CSS` files can be included with the code component to support further customizations.
+Developers and app makers can define their styling to represent their code components visually by using CSS. CSS allows developers to describe the presentation of code components, including style, colors, layouts, and fonts. The linear input component's [init](reference/control/init.md) method creates an input element and sets the class attribute to `linearslider`. The style for the `linearslider` class is defined in a separate CSS file. You can include additional component resources like CSS files with the code component to support further customizations.
 
 > [!IMPORTANT]
-> When you implement styling to your code components using CSS, ensure that the CSS is scoped to your control using the automatically generated CSS classes applied to the container `DIV` element for your component.
+> When you implement styling to your code components by using CSS, ensure that the CSS is scoped to your control by using the automatically generated CSS classes applied to the container `DIV` element for your component.
 >
-> If your CSS is scoped globally, it will likely break the existing styling of the form or screen where the code component is rendered.
+> If your CSS is scoped globally, it likely breaks the existing styling of the form or screen where the code component is rendered.
 >
-> If using a third-party CSS framework, use a version of that framework that is already namespaced or otherwise wrap that framework in a namespace manually either by hand or using a CSS preprocessor.
+> If you're using a third-party CSS framework, use a version of that framework that is already namespaced or otherwise wrap that framework in a namespace manually either by hand or by using a CSS preprocessor.
 
 1. Create a new `css` subfolder under the `LinearInputControl` folder. 
 1. Create a new `LinearInputControl.css` file inside the `css` subfolder. 
@@ -754,7 +754,7 @@ Developers and app makers can define their styling to represent their code compo
     ```
     
 1. Save the `LinearInputControl.css` file.
-1. Note that the `ControlManifest.Input.xml` file already includes the `css` resource file inside the resources element because that was completed in the [Implementing manifest](#implementing-manifest) section earlier.
+1. Note that the `ControlManifest.Input.xml` file already includes the `css` resource file inside the resources element because that step was completed in the [Implementing manifest](#implementing-manifest) section earlier.
    
     ```XML
    <resources>
@@ -768,19 +768,19 @@ Developers and app makers can define their styling to represent their code compo
 > [!NOTE]
 > Power Apps component framework uses [RESX web resources](../model-driven-apps/resx-web-resources.md) to manage the localized strings shown on any user interface. The resources to support localization are also registered in the `resources` node.
 >
-> This first tutorial does not include localization capability. Localization is included in other tutorials.
+> This first tutorial doesn't include localization capability. Localization is included in other tutorials.
 > 
-> See the [Localization API](sample-controls/localization-api-control.md) sample, to learn how to localize  code components using `resx` web resources.
+> To learn how to localize code components by using `resx` web resources, see the [Localization API](sample-controls/localization-api-control.md) sample.
 
 ## Build your code components
 
-After you finish adding manifest, component logic, and styling, build the code components using the command:
+After you finish adding the manifest, component logic, and styling, build the code components by using the following command:
 
 ```CLI
 npm run build
 ```
 
-The output should look something like this:
+The output should look similar to the following result:
 
 ```CLI
 > pcf-project@1.0.0 build
@@ -806,10 +806,10 @@ The build generates an updated TypeScript type declaration file under the `Linea
 The component is compiled into the `out/controls/LinearInputControl` folder. The build artifacts include:
 
 - `bundle.js` – Bundled component source code.
-- `ControlManifest.xml` – Actual component manifest file that is uploaded to the Microsoft Dataverse organization.
+- `ControlManifest.xml` – Actual component manifest file that you upload to the Microsoft Dataverse organization.
 
 > [!NOTE]
-> eslint rules may impact your build, depending on how they have been configured. If you receive an error during build:
+> eslint rules might affect your build, depending on how they're configured. If you receive an error during the build:
 > 
 > ```
 > [12:58:30 PM] [build]  Failed:
@@ -831,17 +831,17 @@ The component is compiled into the `out/controls/LinearInputControl` folder. The
 >     }
 > ```
 > 
-> With the eslint rules updated, your control should build cleanly.
+> After you update the eslint rules, your control should build without errors.
 
-## Debugging your code component
+## Debug your code component
 
-Once you're done implementing the code component logic, run the following command to start the debugging process. More information: [Debug code components](debugging-custom-controls.md)
+When you finish implementing the code component logic, run the following command to start the debugging process. For more information, see [Debug code components](debugging-custom-controls.md).
 
 ```CLI
 npm start watch
 ```
 
-The output should look something like this:
+The output should look similar to the following result:
 
 ```CLI
 > pcf-project@1.0.0 start
@@ -874,7 +874,7 @@ Starting control harness...
 
 ```
 
-And a browser should open to the PCF Control Sandbox so that you can see the control and test it.
+A browser also opens to the PCF Control Sandbox so that you can see the control and test it.
 
 :::image type="content" source="../model-driven-apps/clientapi/media/linear-input-control-pcf-control-sandbox.png" alt-text="Linear input control in PCF Control Sandbox":::
 
@@ -882,31 +882,31 @@ And a browser should open to the PCF Control Sandbox so that you can see the con
 
 Follow these steps to create and import a [solution](../../maker/data-platform/solutions-overview.md) file:
 
-1. Create a new folder named **Solutions** inside the **LinearInputControl** folder and navigate into the folder. 
+1. Create a new folder named **Solutions** inside the **LinearInputControl** folder and go to the new folder. 
 
    ```CLI
      mkdir Solutions
      cd Solutions
    ```
 
-1. Create a new solution project in the **LinearInputControl** folder using the [pac solution init](/power-platform/developer/cli/reference/solution#pac-solution-init) command:
+1. Create a new solution project in the **LinearInputControl** folder by using the [pac solution init](/power-platform/developer/cli/reference/solution#pac-solution-init) command:
 
    ```CLI
      pac solution init --publisher-name Samples --publisher-prefix samples 
    ```
 
    > [!NOTE]
-   > The [publisher-name](/power-platform/developer/cli/reference/solution#--publisher-name--pn) and [publisher-prefix](/power-platform/developer/cli/reference/solution#--publisher-prefix--pp) values must be the same as either an existing solution publisher, or a new one that you want to create in your target environment.
+   > The [publisher-name](/power-platform/developer/cli/reference/solution#--publisher-name--pn) and [publisher-prefix](/power-platform/developer/cli/reference/solution#--publisher-prefix--pp) values must match either an existing solution publisher or a new one that you want to create in your target environment.
    > 
-   > You can retrieve a list of current values using this query on your target environment:
+   > You can retrieve a list of current values by running this query on your target environment:
    >
    > `[Environment URI]/api/data/v9.2/publishers?$select=uniquename,customizationprefix`
    >
-   > More information: [Query data using the Web API](../data-platform/webapi/query/overview.md)
+   > For more information, see [Query data using the Web API](../data-platform/webapi/query/overview.md).
 
 
 
-   The output of the pac solution init command should look like this:
+   The output of the pac solution init command looks like this:
 
    ```CLI
    Dataverse solution project with name 'solutions' created successfully in: 'C:\repos\LinearInput\linearinputcontrol\solutions'
@@ -915,28 +915,28 @@ Follow these steps to create and import a [solution](../../maker/data-platform/s
    PS C:\repos\LinearInput\linearinputcontrol\solutions> 
    ```
 
-1. Once the new solution project is created, you need to refer to the location where the created component is located. You can add the reference by using the following command:
+1. After creating the new solution project, add a reference to the location of the created component. Use the following command:
    
     ```CLI
     pac solution add-reference --path ..\..\
     ```
    
     > [!NOTE]
-    > The path provided here is related to the current **Solutions** folder that was created underneath the **LinearInputControl** folder. You can also provide an absolute path.
+    > The path you provide is related to the current **Solutions** folder that you created under the **LinearInputControl** folder. You can also provide an absolute path.
    
-   The output of the command should look like this:
+   The output of the command looks like this:
    
    ```CLI
    Project reference successfully added to Dataverse solution project.
    ```
    
-1. To generate a zip file from your solution project, when inside the `cdsproj` solution project directory, using the following command:
+1. To generate a zip file from your solution project, when inside the `cdsproj` solution project directory, use the following command:
 
    ```CLI
    msbuild /t:restore
    ```
 
-   Or if you have installed the .NET 6 SDK:
+   Or, if you installed the .NET 6 SDK, use:
 
    ```CLI
    dotnet build
@@ -949,16 +949,16 @@ Follow these steps to create and import a [solution](../../maker/data-platform/s
    ```
 
    > [!NOTE]
-   > If you receive the error `Missing required tool: MSBuild.exe/dotnet.exe`. Add `MSBuild.exe/dotnet.exe` in Path environment variable or use `Developer Command Prompt for Visual Studio Code`. As mentioned in [Prerequisites](#prerequisites), you must install .NET build tools.
+   > If you receive the error `Missing required tool: MSBuild.exe/dotnet.exe`, add `MSBuild.exe/dotnet.exe` to the Path environment variable or use `Developer Command Prompt for Visual Studio Code`. As mentioned in [Prerequisites](#prerequisites), you must install .NET build tools.
    > [!TIP]
-   > You will see the message *Do not use the `eval` function or its functional equivalents*, when you build the solution file using the `msbuild` command and import it into Dataverse and run the solution checker.
-   > Re build the solution file using the command `msbuild/property:configuration=Release` and reimport the solution into Dataverse and run the solution checker. More information:  [Debug code components](debugging-custom-controls.md).
+   > You see the message *Do not use the `eval` function or its functional equivalents*, when you build the solution file by using the `msbuild` command and import it into Dataverse and run the solution checker.
+   > Rebuild the solution file by using the command `msbuild/property:configuration=Release`. Reimport the solution into Dataverse and run the solution checker. For more information, see [Debug code components](debugging-custom-controls.md).
 
 1. The generated solution zip file is located in the `Solution\bin\debug` folder.
-1. Manually [import the solution into Dataverse](../../maker/data-platform/import-update-export-solutions.md) using [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) once the zip file is ready or automatically using the [Microsoft Power Platform Build Tools](https://marketplace.visualstudio.com/items?itemName=microsoft-IsvExpTools.PowerPlatform-BuildTools).
+1. Manually [import the solution into Dataverse](../../maker/data-platform/import-update-export-solutions.md) by using [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) once the zip file is ready, or automatically by using the [Microsoft Power Platform Build Tools](https://marketplace.visualstudio.com/items?itemName=microsoft-IsvExpTools.PowerPlatform-BuildTools).
 
 > [!NOTE]
-> Manually publish the customizations if you are importing unmanaged solution.
+> Manually publish the customizations if you're importing unmanaged solution.
 
 ## Add your code component to an app
 

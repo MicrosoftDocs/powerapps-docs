@@ -5,7 +5,7 @@ author: NickWaggoner
 
 ms.topic: concept-article
 ms.reviewer: mkaur
-ms.date: 3/1/2025
+ms.date: 01/13/2026
 ms.subservice: canvas-maker
 ms.author: mkaur
 search.audienceType: 
@@ -22,10 +22,10 @@ ms.collection: get-started
 
 This article guides you through creating a list from SharePoint or Microsoft Lists, integrating that list into Power Apps, and customizing the list in your app.
 
-When you add data to an app, you can choose a SharePoint list or Microsoft Lists as a source. Alternatively, you can create an app based on a SharePoint list through the integrate menu in Microsoft Lists. Once your list is in your app, you can filter it and customize the list.
+When you add data to an app, you can choose a SharePoint list or Microsoft Lists as a source. Alternatively, you can create an app based on a SharePoint list through the **integrate** menu in Microsoft Lists. Once your list is in your app, you can filter it and customize the list.
 
 > [!NOTE]
-> When you create or view a list in SharePoint, you're automatically redirected to Microsoft Lists. The list can always be found in both Microsoft Lists and SharePoint. Learn more in [What is a list in Microsoft 365?](https://support.microsoft.com/en-us/office/what-is-a-list-in-microsoft-365-93262a88-20ad-4edc-8410-b6909b2f59a5)
+> When you create or view a list in SharePoint, you're automatically redirected to Microsoft Lists. You can always find the list in both Microsoft Lists and SharePoint. Learn more in [What is a list in Microsoft 365?](https://support.microsoft.com/en-us/office/what-is-a-list-in-microsoft-365-93262a88-20ad-4edc-8410-b6909b2f59a5)
 
 ## Prerequisites
 
@@ -42,7 +42,7 @@ You can create a new SharePoint list through the Microsoft Lists app in [Create 
 
 ## Integrate a list
 
-Once you have a list, you can integrate it into Power Apps or create an app based on a Sharepoint list or Microsoft Lists.
+Once you have a list, you can integrate it into Power Apps or create an app based on a SharePoint list or Microsoft Lists.
 
 ### Connect with a list in Power Apps
 
@@ -54,7 +54,7 @@ Learn more in [Connect to SharePoint from a canvas app](connections/connection-s
 
 ### Create an app based on a list
 
-When viewing a SharePoint list, you automatically go to Microsoft Lists where you can integrate a list with Power Apps:
+When you view a SharePoint list, you automatically go to Microsoft Lists where you can integrate a list with Power Apps:
 
 :::image type="content" source="media/sharepoint-integration/microsoft-lists-integrate-menu.png" alt-text="Screenshot that shows location of the integrate option of the top bar in Microsoft Lists. You can choose this menu to customize the form for a list in an app or create a new app based on the list." lightbox="media/sharepoint-integration/microsoft-lists-integrate-menu.png":::
 
@@ -62,13 +62,13 @@ Learn more in [Create a canvas app with data from Microsoft Lists](app-from-shar
 
 ## Customize a list or form
 
-When you import a list into Power Apps as a data source, it might be used to display as a form on a screen. You can customize what your list looks like in your app such as the formatting and behavior for the list.
+When you import a list into Power Apps as a data source, you can use it to display a form on a screen. You can customize the appearance of your list in your app, including the formatting and behavior for the list.
 
 Customization includes how the list displays the:
 
 - Addition or removal of fields
 - Control type and data type for the fields
-- Layout orientation and how many columns should show
+- Layout orientation and number of columns
 - Formatting like alignment, color, and borders
 - Interactive features such as **OnFailure** or **OnSuccess**
 
@@ -78,13 +78,13 @@ Learn more about form properties in [Understand SharePoint forms integration](sh
 
 ## Filter a list in Power Apps
 
-You can apply formulas to interface elements of your app such as filters. For a list, you can add a filter formula to a [vertical gallery](add-gallery.md) in your app screen by adding the formula to the formula bar of an *Items* property.
+You can apply formulas to interface elements of your app, such as filters. For a list, add a filter formula to a [vertical gallery](add-gallery.md) in your app screen by adding the formula to the formula bar of an *Items* property.
 
 Learn more in [Filter, Search, and LookUp functions](/power-platform/power-fx/reference/function-filter-lookup).
 
 ### Example of a search and filter function
 
-This example formula is put on a gallery for the *Items* property. The formula searches for the status in a column and filters for the *Active* status. The list then only shows the list items with an *Active* status.
+Put this example formula on a gallery for the *Items* property. The formula searches for the status in a column and filters for the *Active* status. The list then only shows the list items with an *Active* status.
 
 ```powerfx
 SortByColumns(Filter('Issue Tracking', 'Issue Status'.Value = "Active", StartsWith(Title, TextSearchBox1.Text)), "Title", If(SortDescending1, Descending, Ascending))

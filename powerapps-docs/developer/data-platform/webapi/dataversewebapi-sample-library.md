@@ -14,6 +14,9 @@ contributors:
 
 The [`DataverseWebAPI.js` sample library](#dataversewebapijs-sample-library-code) contains the implementation of the [`Client`](#client-class) and [`ChangeSet`](#changeset-class) classes for interacting with the Dataverse Web API in the [Web API Data operations Samples (Client-side JavaScript)](web-api-samples-client-side-javascript.md). This sample library demonstrates a set of methods to perform CRUD operations, batch requests, and other interactions with the Dataverse Web API.
 
+> [!div class="nextstepaction"]
+> [View this sample on Github](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/JS/SPASample/src/scripts/DataverseWebAPI.js)
+
 This library demonstrates:
 
 - Using configuration data passed to the library
