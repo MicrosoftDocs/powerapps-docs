@@ -182,27 +182,39 @@ Deletes a row from the specified table with the specified options.
 
 Set values for these required parameters.
 
-|Name|Type|Description|
-|---|---|---|
-|`tableName`|string|The logical name of the table to retrieve the row from.|
-|`options`|object|Options to control the data returned.|
+| Name | Type | Description |
+|------|------|-------------|
+| `tableName` | `string` | The logical name of the table to retrieve from |
+| `options` | `RetrieveRowOptions` | Options for retrieving the row |
+
+#### RetrieveRowOptions
+
+| Name | Type | Description |
+|------|------|-------------|
+| `id` | `string` | The ID (Guid) of the row to retrieve |
+| `select` | `string[]` | Array of column names to retrieve. If omitted, all columns are returned. (Optional) |
 
 ### Returns
 
 A [promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) containing the result of the operation. When the operation succeeds, an object containing the data of the record is returned.
 
 <!-- ### Remarks
-
 TODO: Add any special details to help customers succeed
-For example, how to set the ID of the row to retrieve. I don't see a parameter for it 
-
 -->
 
 ### Example
 
-TODO: Add an example showing this method being used.
-
 ```typescript
+// Retrieve an account with all columns
+const account = await dataApi.retrieveRow('account', {
+  id: '30dc51e9-947d-47d8-ad48-4fc48fba4a95',
+});
+
+// Retrieve specific columns only
+const contact = await dataApi.retrieveRow('contact', {
+  id: 'a1b2c3d4-e5f6-7890-abcd-ef1234567890',
+  select: ['firstname', 'lastname', '_parentcustomerid_value'],
+});
 ```
 
 ## `queryTable` method
