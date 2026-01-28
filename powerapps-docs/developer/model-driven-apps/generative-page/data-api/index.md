@@ -23,7 +23,7 @@ You can [view and edit the generated code to refine the output](../../../../make
 |[`createRow`](#createrow-method)|Creates a new row in the specified table.|
 |[`updateRow`](#updaterow-method)|Updates an existing row in the specified table.|
 |[`deleteRow`](#deleterow-method)|Deletes a row from the specified table.|
-|[`retrieveRow`](#retrieverow-method)|Deletes a row from the specified table with the specified options.|
+|[`retrieveRow`](#retrieverow-method)|Retrieves a row from the specified table with the specified options.|
 |[`queryTable`](#querytable-method)|Queries a table with the specified options.|
 |[`getChoices`](#getchoices-method)|Retrieves the choices for the specified choice column name.|
 
@@ -43,7 +43,7 @@ Set values for these required parameters.
 
 ### Returns
 
-A [promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) containing the result of the operation. When the operation succeeds, the result returned is the ID value of the created row.
+A [promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) containing the result of the operation. When the operation succeeds, the result is the ID (Guid) value of the created row.
 
 ### Example
 
@@ -91,7 +91,7 @@ Set values for these required parameters.
 |---|---|---|
 |`tableName`|string|The logical name of the table to update the row in.|
 |`rowId`|string|The ID of the row to update.|
-|`row`|Object|The row data to create.|
+|`row`|Object|The row data to update.|
 
 ### Returns
 
@@ -154,7 +154,7 @@ catch (error) {
 
 ## `retrieveRow` method
 
-Deletes a row from the specified table by using the specified options.
+Retrieves a row from the specified table by using the specified options.
 
 ### Parameters
 
@@ -174,7 +174,7 @@ Set values for these required parameters.
 
 ### Returns
 
-A [promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) containing the result of the operation. When the operation succeeds, an object containing the data of the record is returned.
+A [promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) containing the result of the operation. When the operation succeeds, an object containing the data of the record is returned, including all selected columns.
 
 ### Example
 
@@ -209,23 +209,43 @@ Set values for these required parameters.
 | Name | Type | Description |
 |------|------|-------------|
 | `select` | `string[]` |(Recommended) Array of column names to retrieve.  |
-| `filter` | `string` | (Optional) OData filter expression.  |
+| `filter` | `string` | (Optional) OData filter expression (for example, `statecode eq 0`).  |
 | `orderBy` | `string` | (Optional) OData orderby expression (for example, `name asc`, `createdon desc`).  |
 | `pageSize` | `number` | (Optional) Maximum number of rows to return per page.  |
 
 ### Returns
 
-A [promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) containing the result of the operation. When the operation succeeds, the promise returns an object containing a data table with the results.
+A [promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) containing the result of the operation. When the operation succeeds, the promise returns an object containing a data table with the results with these properties:
+
+| Name | Type | Description |
+|------|------|-------------|
+| `rows` | `Object[]` | Array of row data |
+| `hasMoreRows` | `boolean` | Indicates if there are more rows available |
+| `loadMoreRows` | `function` | Function to load the next page of results. (Optional) |
 
 ### Example
 
 ```typescript
+// Query tasks with options
 const result = await dataApi.queryTable("task", {
     select: ["activityid", "subject", "scheduledend", "prioritycode", "statecode"],
     orderBy: "scheduledend asc",
     pageSize: 50,
-    filter: "statecode eq 0" // Only active tasks
+    filter: "statecode eq 0"
 });
+
+// Query accounts with pagination
+const pagedAccounts = await dataApi.queryTable('account', {
+  select: ['name'],
+  pageSize: 50,
+});
+
+console.log(`Page 1: ${pagedAccounts.rows.length} accounts`);
+
+if (pagedAccounts.hasMoreRows && pagedAccounts.loadMoreRows) {
+  const nextPage = await pagedAccounts.loadMoreRows();
+  console.log(`Page 2: ${nextPage.rows.length} accounts`);
+}
 ```
 
 ### Remarks
@@ -243,7 +263,7 @@ This parameter is required.
 
 | Name | Type | Description |
 |------|------|-------------|
-| `enumName` | `string` | The name of the choice column in format `tablename-columnname` |
+| `enumName` | `string` | The name of the choice column in the format `tablename-columnname` |
 
 ### Returns
 
