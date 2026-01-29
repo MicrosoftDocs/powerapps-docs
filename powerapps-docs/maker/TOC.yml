@@ -245,7 +245,7 @@
     href: search.md      
   - name: Use Dynamics 365 App for Outlook
     href: ../user/use-outlook-app.md
-- name: Power Apps vibe experience (preview)
+- name: New vibe experience (preview)
   items:
   - name: Overview
     href:   ../vibe/overview.md
