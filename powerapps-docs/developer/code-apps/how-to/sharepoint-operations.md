@@ -31,36 +31,6 @@ The following scenarios are supported when connecting to SharePoint using the Po
 
 Before performing create, read, update, and delete (CRUD) operations in your code app, complete these setup steps.
 
-### Ensure Power Apps SDK initialization before data calls
-
-In your `App.tsx` file, implement logic that waits for the Power Apps SDK to fully initialize before performing any data operations. This approach prevents errors caused by uninitialized services or missing context.
-
-Use an asynchronous function or state management to confirm initialization before making API calls. For example:
-
-```typescript
-useEffect(() => { 
-// Define an async function to initialize the Power Apps SDK 
-const init = async () => { 
-      try { 
-            await initialize(); // Wait for SDK initialization 
-            setIsInitialized(true); // Mark the app as ready for data operations 
-      } catch (err) { 
-            setError('Failed to initialize Power Apps SDK'); // Handle initialization errors 
-            setLoading(false); // Stop any loading indicators 
-      } 
-};
-
-init(); // Call the initialization function when the component mounts 
-}, []); 
- 
-useEffect(() => { 
-// Prevent data operations until the SDK is fully initialized 
-if (!isInitialized) return; 
- 
-// Place your data reading logic here 
-}, []); 
-```
-
 ### Add your SharePoint data source
 
 Add your SharePoint data source by following the instructions in [Connect to data](connect-to-data.md).
@@ -113,12 +83,13 @@ const fetchOne = async (id: string) => {
 
 For the examples in the following steps, the example types from the model file are `ChoicesTest1`, `Choices1Value`, `personValue`, and `lookupValue`.
 
- 1. Map selected IDs to expanded objects  
-   
+1. Map selected IDs to expanded objects  
+
    > [!NOTE]
    > Generated models might include internal property names with `#` (for example: `Choices1#Id`) that are used for binding in forms but shouldn't be included in the payload sent to the SharePoint connector. When you update or create a row in your list, the SharePoint API expects you to provide the expanded object for referenced columns (author, editor, person/group columns, and so on) rather than just the IDs.
-   Refer to the [SharePoint API documentation](/sharepoint/dev/sp-add-ins/complete-basic-operations-using-sharepoint-rest-endpoints) for more information.
-   
+   >
+   > Refer to the [SharePoint API documentation](/sharepoint/dev/sp-add-ins/complete-basic-operations-using-sharepoint-rest-endpoints) for more information.
+
    ```typescript
    const choices1Obj = selectedChoices1Id 
    ? choices1Options.find(c => c.Id === selectedChoices1Id) 
@@ -130,11 +101,11 @@ For the examples in the following steps, the example types from the model file a
    ? lookupOptions.find(l => l.Id === selectedLookupId) 
    : undefined; 
    ```
-   
- 1. Build payload and create
-   
+
+1. Build payload and create
+
    Make sure to omit the properties containing `#`, include expanded objects for choice, lookups, and people, and add content type info if necessary. Use the generated model types to help build the payload.
-   
+
    ```typescript
    // Content type (example static sample; retrieve dynamically if needed) 
    const contentTypeId = "0x0100..."; // replace with your content type id 
@@ -151,7 +122,7 @@ For the examples in the following steps, the example types from the model file a
       "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedContentType",
       Id: contentTypeId, 
       Name: "Item" 
-   } 
+      } 
    } as Partial<Omit<ChoicesTest1, "ID">>; 
    
    // create 
@@ -160,7 +131,7 @@ For the examples in the following steps, the example types from the model file a
    // success 
    } 
    ```
-   
+
 ## Update records
 
 Use `update(id, payload)` from the generated service file. Provide the same expanded objects as you would when creating a record.

@@ -3,7 +3,7 @@ title: "How to: Get context data (preview)"
 description: "Use the getContext function to get context information about the app and signed-in user. This information enables apps to deliver personalized experiences and make informed decisions at runtime based on metadata."
 ms.author:  jordanchodak
 author: jordanchodakWork
-ms.date: 10/15/2025
+ms.date: 01/22/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
@@ -11,7 +11,7 @@ contributors:
 ---
 # How to: Get context data (preview)
 
-The `getContext` function retrieves contextual information about the app and the signed-in user. This information enables apps to deliver personalized experiences and make informed decisions at runtime based on metadata. The `getContext` function communicates with the web player to obtain context data. It is designed to be lightweight and focuses on metadata and authentication-related properties.
+The `getContext` function retrieves contextual information about the app and the signed-in user. This information enables apps to deliver personalized experiences and make informed decisions at runtime based on metadata. The `getContext` function communicates with the web player to obtain context data. The `getContext` function is lightweight and focuses on metadata and authentication-related properties.
 
 ## Why use context data?
 
@@ -19,7 +19,7 @@ The context data returned by the `getContext` function provides rich details abo
 
 - **Enhanced Telemetry and Debugging**: Parameters like `sessionId` allow you to correlate app sessions with platform telemetry, making it easier to troubleshoot issues. Access to identifiers such as [IAppContext.appId](#iappcontext) and [IUserContext.userPrincipalName](#iusercontext) helps track usage patterns and diagnose problems quickly.
 
-- **Personalized Experiences**: User context properties simplify personalization without requiring additional data calls. You can tailor app behavior based on user identity, delivering dynamic experiences for different roles or individuals.
+- **Personalized Experiences**: User context properties simplify personalization without requiring more data calls. You can tailor app behavior based on user identity, delivering dynamic experiences for different roles or individuals.
 
 - **Feature Control and Conditional Logic**: Parameters can act as feature gates or flags, enabling you to turn features on or off for specific users or environments. They can also be used to show different UI elements or workflows depending on the context.
 
@@ -27,18 +27,10 @@ The context data returned by the `getContext` function provides rich details abo
 
 ## Steps
 
-1. Import the `initialize` and `getContext` functions
+1. Import the `getContext` function
 
    ```typescript
-   import { initialize, getContext } from '@microsoft/power-apps/app'; 
-   ```
-
-1. Initialize
-
-   You must call and wait for the `initialize` function to complete before making any data calls to ensure that the SDK is fully initialized.
-
-   ```typescript
-   await initialize(); 
+   import { getContext } from '@microsoft/power-apps/app'; 
    ```
 
 1. Retrieve context
@@ -61,9 +53,9 @@ The context data returned by the `getContext` function provides rich details abo
 
 ## API Response
 
-The context returned implements the [IContext](#icontext) interface.
+The context returned implements the [`IContext`](#icontext) interface.
 
-### IContext
+### `IContext`
 
 The following table describes the properties available in the `IContext` interface:
 
@@ -92,7 +84,7 @@ The following table describes the properties available in the `IUserContext` int
 | `fullName` | string | The full name of the user playing the app |
 | `objectId` | string | The ID of the user playing the app |
 | `tenantId` | string | The ID of the tenant where the app lives |
-| `userPrincipalName` | string | The UPN of the user playing the app |
+| `userPrincipalName` | string | The user principal name (UPN) of the user playing the app |
 
 ### IHostContext
 
@@ -100,4 +92,4 @@ The following table describes the property available in the `IHostContext` inter
 
 |Property|Type|Description|
 |---|---|---|
-| `sessionId` | string | The ID of the current session. This changes every time the app is opened |
+| `sessionId` | string | The ID of the current session. This value changes every time the app is opened |

@@ -2,7 +2,7 @@
 title: "Web API Data operations Samples PowerShell"
 description: "This article provides a description of Web API samples that are implemented using PowerShell"
 ms.topic: sample
-ms.date: 07/16/2025
+ms.date: 01/27/2026
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: jdaly
@@ -23,9 +23,9 @@ The following samples use the patterns described here:
 | Sample| Sample Group| Description|
 |---|---|---|
 | [Web API Basic Operations Sample (PowerShell)](samples/basic-operations-powershell.md)| [Web API Basic Operations Sample](web-api-basic-operations-sample.md)| Demonstrates how to create, retrieve, update, delete, associate and disassociate Dataverse table rows (entity records).|
-|Not available yet| [Web API Query Data Sample](web-api-query-data-sample.md)| Demonstrates how to use OData v4 query syntax and functions and Dataverse query functions. Includes examples of working with predefined queries and using FetchXML to perform queries. |
-|Not available yet| [Web API Conditional Operations Sample](web-api-conditional-operations-sample.md) | Demonstrates how to perform conditional operations you specify with ETag criteria.|
-|Not available yet|[Web API Functions and Actions Sample](web-api-functions-actions-sample.md)| Demonstrates how to use bound and unbound functions and actions, including custom actions.|
+|[Web API Query Data Sample (PowerShell)](samples/query-data-powershell.md)| [Web API Query Data Sample](web-api-query-data-sample.md)| Demonstrates how to use OData v4 query syntax and functions and Dataverse query functions. Includes examples of working with predefined queries and using FetchXML to perform queries. |
+|[Web API Conditional Operations Sample (PowerShell)](samples/conditional-operations-powershell.md)| [Web API Conditional Operations Sample](web-api-conditional-operations-sample.md) | Demonstrates how to perform conditional operations you specify with ETag criteria.|
+|[Web API Functions and Actions Sample (PowerShell)](samples/functions-actions-powershell.md)|[Web API Functions and Actions Sample](web-api-functions-actions-sample.md)| Demonstrates how to use bound and unbound functions and actions, including custom actions.|
 |[Web API table schema operations sample (PowerShell)](samples/metadata-operations-powershell.md)|[Web API table schema operations sample](web-api-metadata-operations-sample.md)|Demonstrates how to perform selected operations that modify the Dataverse schema, or metadata.|
 
 

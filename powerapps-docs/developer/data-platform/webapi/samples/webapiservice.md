@@ -17,6 +17,9 @@ contributors:
 
 `WebAPIService` is a sample .NET 6.0 class library project that demonstrates several important capabilities that you should include when you use the Dataverse Web API.
 
+> [!div class="nextstepaction"]
+> [View this sample on Github](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/CSharp-NETx/WebAPIService)
+
 This library demonstrates:
 
 - Managing Dataverse [service protection limits](../../api-limits.md) with the .NET resilience and transient fault handling library [Polly](https://github.com/App-vNext/Polly).

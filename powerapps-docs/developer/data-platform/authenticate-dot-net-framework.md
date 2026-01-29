@@ -1,6 +1,6 @@
 ---
-title: "Authenticating .NET applications (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Provides an overview of .NET based application authentication with Microsoft Dataverse web services." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Authenticating .NET applications (Microsoft Dataverse) | Microsoft Docs"
+description: "Provides an overview of .NET based application authentication with Microsoft Dataverse web services." 
 ms.custom: ""
 ms.date: 01/06/2022
 ms.reviewer: "pehecke"
@@ -29,7 +29,7 @@ The `Xrm.Tooling` classes provide many benefits including:
 - Thread safety for actions performed in a multi-threaded environment.
 - Provides a common Windows Presentation Foundation (WPF) login control for a consistent sign-in experience from your Windows client applications.
 - Support for secure storage of the sign-in credentials and reuse of the stored credentials to automatically sign in after initial sign in.
-- Built-in diagnostic tracing and performance reporting of the actions performed, which you can configure based on your organization’s requirements.
+- Built-in diagnostic tracing and performance reporting of the actions performed, which you can configure based on your organization's requirements.
 - Support for X.509 certificate authentication.
 
 The `Xrm.Tooling` classes are optimized to use the <xref:Microsoft.Xrm.Sdk.IOrganizationService> interface methods.

@@ -4,7 +4,7 @@ description: Learn how to use Copilot chat to gain insights about the data in yo
 author: srihas
 ms.component: pa-user
 ms.topic: overview
-ms.date: 06/10/2025
+ms.date: 01/08/2026
 ms.update-cycle: 180-days
 ms.subservice: end-user
 ms.author: srihas
@@ -23,10 +23,18 @@ Copilot chat for model-driven apps in Power Apps is a next-generation AI assista
 
 > [!IMPORTANT]
 >
-> This feature is generally available in Dynamics 365 apps and is available as a preview feature in Power Apps.
+> - This feature is generally available in Dynamics 365 apps, but remains a preview feature in Power Apps.
 >
-> - Preview features aren't meant for production use and might have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
-> - An administrator must enable Copilot chat in your application before it becomes visible in your app. More information: [Add Copilot for app users in model-driven apps](../maker/model-driven-apps/add-ai-copilot.md)
+> - Preview features aren't meant for production use and might have restricted functionality These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2189520), and are available before an official release so that customers can get early access and provide feedback.
+
+
+> [!NOTE]
+>
+> Copilot chat in Power Apps is a preview feature that will be deprecated for model-driven apps in environments not [enabled for Dynamics 365 apps](/power-platform/admin/create-environment#create-an-environment-with-a-database), starting January 2026. We recommend switching to [Microsoft 365 Copilot chat](use-microsoft-365-copilot-model-driven-apps.md). During the transition period, makers can enable either one or both chat experiences. For more information, see [Deprecation of Copilot chat in model-driven apps](/power-platform/important-changes-coming#deprecation-of-copilot-chat-in-model-driven-apps)
+
+## Prerequisites
+
+An administrator must enable Copilot chat in your application before it becomes visible in your app. More information: [Add Copilot for app users in model-driven apps](../maker/model-driven-apps/add-ai-copilot.md).
 
 ## Copilot pane
 

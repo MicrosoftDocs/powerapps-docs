@@ -1,6 +1,6 @@
 ---
-title: "Use the Feedback table to manage feedback and ratings for records (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about the feedback table to obtain feedback and ratings for the records." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Use the Feedback table to manage feedback and ratings for records (Microsoft Dataverse) | Microsoft Docs"
+description: "Learn about the feedback table to obtain feedback and ratings for the records." 
 ms.custom: ""
 ms.date: 03/27/2021
 ms.reviewer: "pehecke"

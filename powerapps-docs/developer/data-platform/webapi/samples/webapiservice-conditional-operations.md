@@ -17,6 +17,9 @@ contributors:
 
 This .NET 6.0 sample demonstrates how to perform common data operations using the Dataverse Web API.
 
+> [!div class="nextstepaction"]
+> [View this sample on Github](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/CSharp-NETx/ConditionalOperations)
+
 This sample uses the common helper code in the [WebAPIService class library (C#)](webapiservice.md).
   
 > [!NOTE]
