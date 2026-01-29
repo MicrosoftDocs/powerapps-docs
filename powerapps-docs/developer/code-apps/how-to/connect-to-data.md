@@ -38,12 +38,6 @@ All connectors are officially supported except the ones listed in the following 
 - [Excel Online (Business)](/connectors/excelonlinebusiness/)
 - [Excel Online (OneDrive)](/connectors/excelonline/)
 
-### Connectors with known limitations
-
-- [Office 365 Groups](/connectors/office365groups/)
-- [Microsoft Teams](/connectors/teams/)
-- [Office 365 Outlook](/connectors/office365/)
-
 > [!IMPORTANT]
 > For the initial release, you can only configure code apps to use existing connections in [Power Apps](https://make.powerapps.com). You can't create new connections through PAC CLI commands. Support for creating new connections will be added in a future release.
 
