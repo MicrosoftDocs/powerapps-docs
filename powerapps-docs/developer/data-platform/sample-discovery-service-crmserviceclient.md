@@ -1,6 +1,6 @@
 ---
-title: "Sample: Use CrmServiceClient to access the Global Discovery Service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample code shows how to use discovery services" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Sample: Use CrmServiceClient to access the Global Discovery Service (Microsoft Dataverse) | Microsoft Docs"
+description: "This sample code shows how to use discovery services" 
 ms.date: 07/18/2022
 author: JimDaly
 ms.author: jdaly

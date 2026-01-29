@@ -2,7 +2,7 @@
 title: Web API navigation properties
 description: Learn about OData navigation property elements that are defined for EntityTypes in the Microsoft Dataverse Web API.
 ms.topic: how-to
-ms.date: 04/06/2022
+ms.date: 01/07/2026
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: jdaly
@@ -17,7 +17,7 @@ ms.custom: bap-template
 ---
 # Web API navigation properties
 
-In the [CSDL $metadata document](web-api-service-documents.md#csdl-metadata-document), each entity type that isn't abstract has `NavigationProperty` elements. `NavigationProperty` elements describe data that's related to the current entity type. When you retrieve a record, you can expand navigation properties to include related data.
+In the [CSDL $metadata document](web-api-service-documents.md#csdl-metadata-document), each entity type that isn't abstract has `NavigationProperty` elements. `NavigationProperty` elements describe data related to the current entity type. When you retrieve a record, you can expand navigation properties to include related data.
 
 The following table describes the attributes of `NavigationProperty` elements.
 
@@ -31,6 +31,8 @@ The following table describes the attributes of `NavigationProperty` elements.
 
 > [!IMPORTANT]
 > There are two types of navigation properties: [*single-valued*](#single-valued-navigation-properties) and [*collection-valued*](#collection-valued-navigation-properties). This distinction is important because the capabilities of each type of navigation property are different.
+> 
+> When constructing a query with OData, we don't refer to the one-to-many, many-to-one, or many-to-many relationships. The two types of navigation properties describe how to navigate these relationships.
 
 ## Single-valued navigation properties
 
@@ -48,7 +50,7 @@ When a navigation property `Type` refers to a single value, it represents a one-
 </NavigationProperty>
 ```
 
-This single-valued navigation property connects multiple `account` records to a single `systemuser` record. Each `systemuser` record has a collection-valued navigation property named `lk_accountbase_createdby` that connects it to the `account` records the user has created.
+This single-valued navigation property connects multiple `account` records to a single `systemuser` record. Each `systemuser` record has a collection-valued navigation property named `lk_accountbase_createdby` that connects it to the `account` records the user created.
 
 These values are stored in relationship definitions. You can access them using the SDK <xref:Microsoft.Xrm.Sdk.Metadata.OneToManyRelationshipMetadata> or the Web API <xref:Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata> entity type, as described in the following table.
 
@@ -70,7 +72,7 @@ In most cases, the `<name>` found in the lookup property matches the name of the
 
 When the single-valued navigation property is part of a multi-table, or polymorphic, lookup, a single lookup property is the `ReferentialConstraint` for more than one single-valued navigation property.
 
-An entity type may have something like the following combination, where a single `_customerid_value` lookup property supports  multiple single-valued navigation properties that represent a multi-table lookup. There is one single-valued navigation property for each type of table supported by the multi-table lookup.
+An entity type might have something like the following combination, where a single `_customerid_value` lookup property supports  multiple single-valued navigation properties that represent a multi-table lookup. There's one single-valued navigation property for each type of table supported by the multi-table lookup.
 
 ```xml
 <EntityType 
@@ -137,7 +139,7 @@ In the `systemuser` entity type, the collection-valued navigation property partn
     Partner="createdby" />
 ```
 
-### Many-to-many Relationships
+### Many-to-many relationships
 
 When the `Name` and the `Partner` of the collection-valued navigation property are the same, it represents a many-to-many relationship.
 

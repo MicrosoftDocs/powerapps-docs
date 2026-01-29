@@ -39,7 +39,7 @@
   items:
   - name: In a browser
     href: ../user/run-app-browser.md
-  - name: From AppSource
+  - name: From Marketplace
     href: ../user/app-source.md
   - name: Use canvas apps
     items:
@@ -59,6 +59,8 @@
       items:
       - name: AI in apps overview
         href: ../user/ai-in-apps.md
+      - name: Use Microsoft 365 Copilot chat (preview)
+        href: ../user/use-microsoft-365-copilot-model-driven-apps.md
       - name: Supervise agents using agent feed (preview)
         href: ../user/supervise-agents-with-agent-feed.md
       - name: Use suggested actions in the agent feed (preview)
@@ -255,7 +257,7 @@
     href: ./plan-designer/plan-designer.md  
   - name: Create a plan
     href: ./plan-designer/create-plan.md 
-  - name: Generate process diagrams (preview)
+  - name: Generate process diagrams
     href: ./plan-designer/process-diagram.md
   - name: Build a solution
     href: ./plan-designer/build-solution.md
@@ -509,12 +511,18 @@
               href: ./canvas-apps/controls/modern-controls/modern-controls-badge.md
             - name: Button
               href: ./canvas-apps/controls/modern-controls/modern-control-button.md
+            - name: Card (preview)
+              href: ./canvas-apps/controls/modern-controls/modern-control-card.md
             - name: Checkbox
               href: ./canvas-apps/controls/modern-controls/modern-control-checkbox.md
             - name: Combobox 
               href: ./canvas-apps/controls/modern-controls/modern-control-combobox.md
             - name: Date picker
               href: ./canvas-apps/controls/modern-controls/modern-controls-date-picker.md
+            - name: Header
+              href: ./canvas-apps/controls/modern-controls/modern-controls-header.md
+            - name: Info button
+              href: ./canvas-apps/controls/modern-controls/modern-control-info-button.md
             - name: Link
               href: ./canvas-apps/controls/modern-controls/modern-control-link.md
             - name: Number input
@@ -541,10 +549,6 @@
               href: ./canvas-apps/controls/modern-controls/modern-control-copilot-answer.md
             - name: Dropdown (preview)
               href: ./canvas-apps/controls/modern-controls/modern-control-dropdown.md
-            - name: Header
-              href: ./canvas-apps/controls/modern-controls/modern-controls-header.md
-            - name: Info button
-              href: ./canvas-apps/controls/modern-controls/modern-control-info-button.md
             - name: Stream video (preview)
               href: ./canvas-apps/controls/modern-controls/new-stream-video-control.md
             - name: Table (preview)
@@ -597,6 +601,8 @@
               href: ./canvas-apps/controls/control-export-import.md
             - name: Gallery
               href: ./canvas-apps/controls/control-gallery.md
+            - name: Grid container (preview)
+              href: ./canvas-apps/controls/control-grid-container.md
             - name: Horizontal container
               href: ./canvas-apps/controls/control-horizontal-container.md
             - name: HTML text
@@ -1802,7 +1808,11 @@
     - name: Copilot chat for apps
       href:
       items:
-      - name: Add Copilot chat to your app
+      - name: Add Microsoft 365 Copilot chat to your app (preview)
+        href: ./model-driven-apps/add-microsoft-365-copilot.md
+      - name:  Customize Microsoft 365 Copilot chat with an agent (preview) 
+        href: ./model-driven-apps/customize-microsoft-365-copilot-chat.md
+      - name: Add Copilot chat to your app 
         href: ./model-driven-apps/add-ai-copilot.md
       - name: Customize Copilot chat (preview)
         href:
@@ -1914,6 +1924,8 @@
       href: ../mobile/optimize-for-devices-controls.md
   - name: Configure mobile apps for offline use
     items:
+    - name: How offline first functionality works in Power Apps mobile
+      href: ../mobile/mobile-offline-works-overview.md
     - name: Mobile offline for canvas apps
       items:
       - name: Mobile offline for canvas apps overview
@@ -2436,6 +2448,8 @@
       href: ./data-platform/data-platform-mcp-vscode.md
     - name: Connect to Dataverse MCP with non-Microsoft clients
       href: ./data-platform/data-platform-mcp-other-clients.md
+    - name: Use preview tools in Dataverse MCP server
+      href: ./data-platform/data-platform-mcp-preview-tools.md
     - name: Connect to Dataverse with MCP FAQ
       href: ./data-platform/data-platform-mcp-faq.md
   - name: License requirements for tables

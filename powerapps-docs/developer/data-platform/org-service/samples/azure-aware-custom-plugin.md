@@ -1,6 +1,6 @@
 ---
-title: "Azure aware custom plug-in (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample plug-in can post the pipeline execution context to the Azure Service Bus." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Azure aware custom plug-in (Microsoft Dataverse) | Microsoft Docs"
+description: "This sample plug-in can post the pipeline execution context to the Azure Service Bus." 
 ms.date: 06/19/2023
 author: jaredha
 ms.author: jaredha

@@ -1,6 +1,6 @@
 ---
-title: "Query data using LINQ (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample provides many examples of Language-Integrated Query (LINQ) with data from Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Query data using LINQ (Microsoft Dataverse) | Microsoft Docs"
+description: "This sample provides many examples of Language-Integrated Query (LINQ) with data from Dataverse." 
 ms.custom: ""
 ms.date: 02/05/2020
 ms.reviewer: "pehecke"

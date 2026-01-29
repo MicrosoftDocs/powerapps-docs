@@ -17,7 +17,7 @@ This article explains how to set up and use the Microsoft Dataverse model contex
 
 ## Prerequisites
 
-- The Visual Studio Code GitHub Copilot MCP client must be allowed in the environment. More information: [Configure and manage the Dataverse MCP server for an environment](data-platform-mcp-disable.md#configure-and-manage-the-dataverse-mcp-server-for-an-environment)
+- The Visual Studio Code GitHub Copilot MCP client must be allowed in the environment. More information: [Configure and manage the Dataverse MCP server for an environment](data-platform-mcp-disable.md#configure-and-manage-the-dataverse-mcp-server)
 - Visual Studio Code installed with GitHub Copilot extension. More information: [GitHub Copilot extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot)
 
 ## Steps to connect to Dataverse MCP server in Visual Studio Code

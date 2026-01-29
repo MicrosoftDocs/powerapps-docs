@@ -1,6 +1,6 @@
 ---
-title: "Detect duplicate data using code (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Duplicate detection lets organizations set duplicate detection policies and create duplicate detection rules for business and custom tables." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Detect duplicate data using code (Microsoft Dataverse) | Microsoft Docs"
+description: "Duplicate detection lets organizations set duplicate detection policies and create duplicate detection rules for business and custom tables." 
 ms.custom: ""
 ms.date: 03/26/2021
 ms.reviewer: "pehecke"

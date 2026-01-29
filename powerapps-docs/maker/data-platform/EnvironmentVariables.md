@@ -6,7 +6,7 @@ author: caburk
 ms.subservice: dataverse-maker
 ms.author: caburk
 ms.reviewer: matp
-ms.date: 01/31/2025
+ms.date: 01/09/2026
 ms.topic: overview
 search.audienceType: 
   - maker
@@ -46,16 +46,16 @@ Environment variables can be created and modified within the modern solution int
    - **Display name**. Enter a name for the environment variable. 
    - **Name**. The unique name is automatically generated from the **Display name**, but you can change it. 
    - **Data Type**. Select from **Decimal number**, **Text**, **JSON**, **Two options**, **Data source**, or **Secret**.
-     >[!NOTE]
+
+     > [!NOTE]
      >
      > - If **Data source** is the selected type, you need to select the **connector**, a valid **connection** for the selected connector, and the **parameter type**. The connection isn't stored as part of the environment variable. The environment variable stores information not in the connection that is necessary to connect Power Apps to the right server and table. The connection is only used for retrieving available parameter values such as the SharePoint sites you have access to, or the lists associated with a site.
-          
      > - If **Secret** is the selected type, additional information to set up and configure Azure Key Vault is needed to allow Power Platform to access the secret.
    - **Current Value**. Also known as the value. This property is optional and is a part of the environment variable value table. A defined value is used even if a default value is also present. Remove the value from your solution if you don't want to use it in the next environment. The values are also separated into separate JSON files within the exported solution.zip file and can be edited offline. More information: [How do I remove a value from an environment variable?](#how-do-i-remove-a-value-from-an-environment-variable)
    - **Default Value**. This column is part of the environment variable definition table and isn't required. The default value is used if there's no current value. 
   
 
-      Separation of default value and current value allows you to service the definition and the default value separately from the value. For example, an application publisher might list their offer on AppSource with a default value. Then optionally, the customer can provide a new value. When the application publisher publishes updates to the application, the value set by the customer isn't overwritten.
+      Separation of default value and current value allows you to service the definition and the default value separately from the value. For example, an application publisher might list their offer on Marketplace with a default value. Then optionally, the customer can provide a new value. When the application publisher publishes updates to the application, the value set by the customer isn't overwritten.
 
       > [!div class="mx-imgBorder"] 
       > ![New environment variable.](media/new-environment-variable.png)

@@ -3,7 +3,7 @@ title: "How to: Connect your code app to Dataverse (preview)"
 description: "Learn how to connect your code app to Dataverse"
 ms.author:  jordanchodak
 author: jordanchodakWork
-ms.date: 10/07/2025
+ms.date: 01/22/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
@@ -39,6 +39,9 @@ This guide helps developers use the Power Apps SDK to connect their code app to 
 The following scenarios are supported when connecting to Dataverse using the Power Apps SDK:
 
 - Add Dataverse entities to code apps using the PAC CLI
+- Retrieve formatted values/display names for option sets
+- [Get metadata for Dataverse tables](get-table-metadata.md)
+- Lookups. Currently, you'll need to use the guidance to [associate with a single-valued navigation property](../../data-platform/webapi/associate-disassociate-entities-using-web-api.md#associate-with-a-single-valued-navigation-property) or [associate records on create](../../data-platform/webapi/create-entity-web-api.md#associate-table-rows-on-create) when working with lookups. A dedicated how-to guide is coming soon, and we're actively working to make lookups easier to use in code apps.
 - Perform CRUD operations:
 
   - Create
@@ -57,55 +60,24 @@ The following scenarios are supported when connecting to Dataverse using the Pow
 
 ## Set up your code app
 
-Before performing create, read, update, and delete (CRUD) operations in your code app, complete these two setup steps.
+Before performing create, read, update, and delete (CRUD) operations in your code app, import the required types and services.
 
-1. **Ensure Power Apps SDK initialization before data calls**
+When you add a data source, model and service files are automatically generated and placed in the `/generated/services/` folder.
+For example, if you add the built-in [Accounts](../../data-platform/reference/entities/account.md) table as a data source, the following files are created:
 
-   In your `App.tsx` file, implement logic that waits for the Power Apps SDK to fully initialize before performing any data operations. This prevents errors caused by uninitialized services or missing context.
+- `AccountsModel.ts` – Defines the data model for the Accounts table.
+- `AccountsService.ts` – Provides service methods for interacting with the Accounts data.
 
-   Use an asynchronous function or state management to confirm initialization before making API calls. For example:
+You can import and use them in your code like this:
 
-   ```typescript
-   useEffect(() => {
-   // Define an async function to initialize the Power Apps SDK
-   const init = async () => {
-         try {
-               await initialize(); // Wait for SDK initialization
-               setIsInitialized(true); // Mark the app as ready for data operations
-         } catch (err) {
-               setError('Failed to initialize Power Apps SDK'); // Handle initialization errors
-               setLoading(false); // Stop any loading indicators
-         }
-   };
-
-   init(); // Call the initialization function when the component mounts
-   }, []);
-
-   useEffect(() => {
-   // Prevent data operations until the SDK is fully initialized
-   if (!isInitialized) return;
-
-   // Place your data reading logic here
-   }, []);
-   ```
-
-1. **Import required types and services**
-
-   When you add a data source, model and service files are automatically generated and placed in the `/generated/services/` folder.
-   For example, if you add the built-in [Accounts](../../data-platform/reference/entities/account.md) table as a data source, the following files are created:
-
-   - `AccountsModel.ts` – Defines the data model for the Accounts table.
-
-   - `AccountsService.ts` – Provides service methods for interacting with the Accounts data.
-
-   You can import and use them in your code like this:
-
-   ```typescript
-   import { AccountsService } from './generated/services/AccountsService';
-   import type { Accounts } from './generated/models/AccountsModel';
-   ```
+```typescript
+import { AccountsService } from './generated/services/AccountsService';
+import type { Accounts } from './generated/models/AccountsModel';
+```
 
 ## Create records
+
+Use the generated model types and service methods to create new Dataverse records from your code app.
 
 1. **Create the record object using the generated model**
 
@@ -132,7 +104,7 @@ Before performing create, read, update, and delete (CRUD) operations in your cod
    };
    ```
 
-2. **Submit the record using the generated service**
+1. **Submit the record using the generated service**
 
    Use the functions in the generated service file to submit your record. For example, for the Accounts entity:
 
@@ -273,8 +245,7 @@ try {
 
 The following features aren't yet supported:
 
-- Retrieving formatted values/display names for option sets
-- Lookup fields (including polymorphic lookups)
+- Polymorphic lookups
 - Dataverse actions and functions
 - Deleting Dataverse datasources via PAC CLI
 - Schema definition (entity metadata) CRUD
