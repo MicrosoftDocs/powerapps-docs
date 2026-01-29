@@ -251,6 +251,8 @@
     href:   ../vibe/overview.md
   - name: Create apps, data, and plans using vibe 
     href: ../vibe/create-app-data-plan.md
+  - name: Released versions 
+    href: /power-platform/released-versions/new-powerapps
 - name: Plans  
   items:
   - name: Overview
