@@ -4,7 +4,7 @@ description: Discover the new AI-native Power Apps vibe code experience. Build a
 author: mduelae
 ms.author: mkaur
 ms.reviewer: mkaur
-ms.date: 01/29/2026
+ms.date: 01/30/2026
 ms.topic: concept-article
 ms.custom: CXT 
 ---
@@ -41,7 +41,7 @@ After watching the video, explore the detailed walkthrough in [Create apps, data
 
 ## Prerequisites 
 
-- An tenent admin must enable Copilot for the tenant. To enable Copilot, admins should:
+- A tenant admin must enable Copilot for the tenant. To enable Copilot, admins should:
   1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com).
   1. In the navigation pane, go to **Settings** to open the **Tenant settings**  page. 
   1. Set the toggle for **Copilot in Power Apps (preview)** to **On**.
@@ -49,11 +49,11 @@ After watching the video, explore the detailed walkthrough in [Create apps, data
   
   For more information, see [Tenant settings](/power-platform/admin/tenant-settings).
 - This capability isn't available in a default environment.
-- This capability is currently available only in the US, Australia, Asia, and India region, and only in English. For more information, see [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/en-US/availability-reports/?report=copilotfeaturereport).
+- This capability is currently available only in the US, Australia, Asia, and India regions, and only in English. For more information, see [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/en-US/availability-reports/?report=copilotfeaturereport).
 
 ### Troubleshooting connectivity issues
 
-If you're experiencing connection errors or cannot access environments:
+If you're experiencing connection errors or can't access environments:
 
 - **Verify environment region**: Ensure you have access to an environment located in the US, Australia, Asia, or India region. You can check your environment region in the [Power Platform admin center](https://admin.powerplatform.microsoft.com):
    1. Sign in to the Power Platform admin center
