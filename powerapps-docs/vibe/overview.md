@@ -34,20 +34,20 @@ Watch this video to see the vibe experience in action. The video demonstrates ho
 
 After watching the video, explore the detailed walkthrough in [Create apps, data, and plans together](create-app-data-plan.md) to understand the full development process.
 
-## Prerequisites 
-
 > [!IMPORTANT]
 >
 > - This feature is in preview.
 > - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2216214), and are available before an official release so that customers can get early access and provide feedback.
 
-- An admin must enable Copilot in the tenant and environment. To enable Copilot, admins should:
+## Prerequisites 
+
+- An tenent admin must enable Copilot for the tenant. To enable Copilot, admins should:
   1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com).
-  2. In the navigation pane, go to **Manage** > **Environments** and select the environment where you want to enable Copilot.
-  3. On the command bar, select **Settings**.
-  4. In **Settings** for the selected environment, select **Product** > **Features**.
-  5. In the **Features** section, set the value for **Enable new AI-powered Copilot features for people who make apps** to **On**.
-  6. Select **Save** to apply the changes.
+  1. In the navigation pane, go to **Settings** to open the **Tenant settings**  page. 
+  1. Set the toggle for **Copilot in Power Apps (preview)** to **On**.
+  1. Select **Save** to apply the changes.
+  
+  For more information, see [Tenant settings](/power-platform/admin/tenant-settings).
 - This capability isn't available in a default environment.
 - This capability is currently available only in the US, Australia, Asia, and India region, and only in English. For more information, see [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/en-US/availability-reports/?report=copilotfeaturereport).
 
