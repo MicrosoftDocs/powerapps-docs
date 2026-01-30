@@ -19,4 +19,4 @@ ms.collection:
 
 # Use Microsoft 365 Copilot chat in model-driven apps (preview)
 
-[!INCLUDE [m365-copilot](~/../shared-content-powerapps-m365/shared/dynamics365-core/use-microsoft-365-copilot-model-driven-apps.md)]
+[!INCLUDE [m365-copilot](~/../shared/dynamics365-core/use-microsoft-365-copilot-model-driven-apps.md)]

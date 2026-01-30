@@ -14,4 +14,4 @@ search.audienceType:
 ---
 # Supervise agents in model-driven apps with agent feed (preview)
 
-[!INCLUDE [supervise-with-agent-feed](~/../shared-content-powerapps-m365/shared/dynamics365-core/supervise-agents-with-agent-feed.md)]
+[!INCLUDE [supervise-with-agent-feed](~/../shared/dynamics365-core/supervise-agents-with-agent-feed.md)]
