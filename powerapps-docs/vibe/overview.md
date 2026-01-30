@@ -15,7 +15,7 @@ ms.custom: CXT
 
 The new Power Apps vibe experience is an AI-native platform that builds solutions to business problems, including requirements, data, and full apps with generated code. You can automate workflows, integrate data sources seamlessly, and accelerate app development without extensive coding knowledge.
 
-## Why choose Power Apps vibe experience?
+## Why choose Power Apps vibe?
 
 The vibe experience transforms how you build business applications by combining three key capabilities in a single, integrated workspace:
 
@@ -63,11 +63,11 @@ If you're experiencing connection errors or cannot access environments:
 For additional support with connectivity issues, contact [Power Platform support](https://powerapps.microsoft.com/support/).
 
 
-## Access the new Power Apps vibe experience
+## Access Power Apps vibe
 
 You can access the new vibe experience in one of two ways:
 
-- Go to [https://vibe.preview.powerapps.com](https://vibe.preview.powerapps.com/) and sign in to start using the new experience.
+- Go to [https://vibe.powerapps.com](https://vibe.preview.powerapps.com/) and sign in to start using the new experience.
 
 - Alternatively, sign in to [Power Apps](https://make.preview.powerapps.com/). At the top, select **Try new experience (Preview)** to enable it.
 

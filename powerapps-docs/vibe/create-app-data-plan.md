@@ -30,7 +30,7 @@ Key capabilities
 
 ## Create an app
 
-1. Sign in to  [Power Apps vibe](https://vibe.preview.powerapps.com/).
+1. Sign in to [Power Apps vibe](https://vibe.powerapps.com/).
 
 1. Enter your prompt in the text box, and then select **Enter**. Or, select **Start dictation** and use your voice to turn speech into text.
 
