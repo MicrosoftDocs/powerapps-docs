@@ -18,8 +18,8 @@ The new vibe experience in Power Apps combines plans, data models, and apps in a
 Key capabilities
 
 - **Design everything together**: Build apps, plans, and data models together in a single, cohesive process.
-- **Build faster with AI**: Quickly move from ideas to working prototypes by using conversational chat.
-- **Instant app creation**: Generate modern web apps directly from your requirements and data by using one click.
+- **Build faster with AI**: Quickly move from ideas to working prototypes with conversational chat.
+- **Instant app creation**: Generate modern web apps directly from your requirements and data with one click.
 
 
 > [!IMPORTANT]
@@ -30,7 +30,7 @@ Key capabilities
 
 ## Create an app
 
-1. Sign in to [Power Apps vibe](https://vibe.powerapps.com/).
+1. Sign in to [https://vibe.powerapps.com](https://vibe.powerapps.com/).
 
 1. Enter your prompt in the text box, and then select **Enter**. Or, select **Start dictation** and use your voice to turn speech into text.
 
