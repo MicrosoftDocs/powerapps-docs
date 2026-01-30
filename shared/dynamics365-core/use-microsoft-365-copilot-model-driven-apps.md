@@ -55,5 +55,5 @@ One of the benefits of @ mentioning an agent is that you can add or remove it fr
 
 ## Related information
 
-- [Add Microsoft 365 Copilot chat to model-driven apps](/power-apps/maker/model-driven-apps/add-microsoft-365-copilot.md)
-- [Customize Microsoft 365 Copilot chat in model-driven apps](/power-apps/maker/model-driven-apps/customize-microsoft-365-copilot-chat.md)
+- [Add Microsoft 365 Copilot chat to model-driven apps](/power-apps/maker/model-driven-apps/add-microsoft-365-copilot)
+- [Customize Microsoft 365 Copilot chat in model-driven apps](/power-apps/maker/model-driven-apps/customize-microsoft-365-copilot-chat)

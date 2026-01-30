@@ -4,7 +4,7 @@ description: Learn how to use Microsoft 365 Copilot chat to gain insights about 
 author: srihas
 ms.component: pa-user
 ms.topic: overview
-ms.date: 01/12/2026
+ms.date: 01/30/2026
 ms.update-cycle: 180-days
 ms.subservice: end-user
 ms.author: srihas
