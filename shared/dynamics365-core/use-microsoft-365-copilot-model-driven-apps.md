@@ -8,7 +8,7 @@
 
 ## Prerequisites
 
-An administrator must enable Microsoft 365 Copilot chat in your application before it becomes visible in your app. For more information, see [Add Microsoft 365 Copilot chat for app users in model-driven apps](../maker/model-driven-apps/add-microsoft-365-copilot.md).
+An administrator must enable Microsoft 365 Copilot chat in your application before it becomes visible in your app. For more information, see [Add Microsoft 365 Copilot chat for app users in model-driven apps](/power-apps/maker/model-driven-apps/add-microsoft-365-copilot).
 
 ## Copilot pane
 
@@ -16,7 +16,7 @@ After Microsoft 365 Copilot chat is enabled, access it through the Copilot butto
 
 :::image type="content" source="/power-apps/user/media/microsoft-365-copilot-button.png" alt-text="Screenshot that shows the Copilot button on a page.":::
 
-If both Microsoft 365 Copilot chat and [Copilot chat in model-driven apps](use-copilot-model-driven-apps.md) are enabled, you can access and try each option. The **Chat** option opens Microsoft 365 Copilot Chat, and the **App Skills** option opens [Copilot chat in model-driven apps](use-copilot-model-driven-apps.md). These terms align with Microsoft 365 apps for consistency.
+If both Microsoft 365 Copilot chat and [Copilot chat in model-driven apps](/power-apps/user/use-copilot-model-driven-apps) are enabled, you can access and try each option. The **Chat** option opens Microsoft 365 Copilot Chat, and the **App Skills** option opens [Copilot chat in model-driven apps](/power-apps/user/use-copilot-model-driven-apps). These terms align with Microsoft 365 apps for consistency.
 
 :::image type="content" source="/power-apps/user/media/copilot-chat-switcher.png" alt-text="Screenshot that shows the Copilot split button showcasing Chat and App Skills options on a page.":::
 
@@ -26,13 +26,13 @@ Expand or collapse the Microsoft 365 Copilot pane as needed.
 
 Microsoft 365 Copilot chat in model-driven apps answers questions about the Dataverse table data in the app.
 
-:::image type="content" source="/power-apps/user/media/microsoft-365-copilot-question-answer.png" alt-text="Screenshot that shows a question and response in Microsoft 365 Copilot." lightbox="media/microsoft-365-copilot-question-answer.png":::
+:::image type="content" source="/power-apps/user/media/microsoft-365-copilot-question-answer.png" alt-text="Screenshot that shows a question and response in Microsoft 365 Copilot." lightbox="/power-apps/user/media/microsoft-365-copilot-question-answer.png":::
 
 ## Microsoft 365 Copilot chat suggested questions
 
 To help you get started, Microsoft 365 Copilot chat suggests questions to ask. Many suggested questions have placeholders you replace with appropriate text.
 
-:::image type="content" source="/power-apps/user/media/microsoft-365-copilot-prompts.png" alt-text="Screenshot that shows suggested prompts that have placeholders." lightbox="media/microsoft-365-copilot-prompts.png":::
+:::image type="content" source="/power-apps/user/media/microsoft-365-copilot-prompts.png" alt-text="Screenshot that shows suggested prompts that have placeholders." lightbox="/power-apps/user/media/microsoft-365-copilot-prompts.png":::
 
 ## Use agents in Microsoft 365 Copilot
 
@@ -55,5 +55,5 @@ One of the benefits of @ mentioning an agent is that you can add or remove it fr
 
 ## Related information
 
-- [Add Microsoft 365 Copilot chat to model-driven apps](../maker/model-driven-apps/add-microsoft-365-copilot.md)
-- [Customize Microsoft 365 Copilot chat in model-driven apps](../maker/model-driven-apps/customize-microsoft-365-copilot-chat.md)
+- [Add Microsoft 365 Copilot chat to model-driven apps](/power-apps/maker/model-driven-apps/add-microsoft-365-copilot.md)
+- [Customize Microsoft 365 Copilot chat in model-driven apps](/power-apps/maker/model-driven-apps/customize-microsoft-365-copilot-chat.md)

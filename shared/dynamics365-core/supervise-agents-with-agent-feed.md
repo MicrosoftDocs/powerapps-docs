@@ -5,7 +5,7 @@ Agent feed in Power Apps lets business users easily manage and work with agents 
 ## Prerequisites
 
 - The agent feed shows when at least one agent is supervised in the app.
-- Learn how to [Add agents to an app](../maker/model-driven-apps/add-agents-to-app.md)
+- Learn how to [Add agents to an app](/power-apps/maker/model-driven-apps/add-agents-to-app)
 
 > [!IMPORTANT]
 >
@@ -20,7 +20,7 @@ Agent feed in Power Apps lets business users easily manage and work with agents 
 ## Use agent feed to supervise agents
 
 When you enable agent feed, it appears at the top of the site map in a model-driven app.
-   :::image type="content" source="/power-apps/user/media/agent-supervision/agent-feed-sitemap.png" alt-text="Agent feed sitemap" lightbox="media/agent-supervision/agent-feed-sitemap.png":::
+   :::image type="content" source="/power-apps/user/media/agent-supervision/agent-feed-sitemap.png" alt-text="Agent feed sitemap" lightbox="/power-apps/user/media/agent-supervision/agent-feed-sitemap.png":::
 
 You can view the feed in the side pane or expand it to full screen.
    :::image type="content" source="/power-apps/user/media/agent-supervision/agent-feed-expand.png" alt-text="Agent feed expand":::
@@ -97,5 +97,5 @@ For actions that use a Dataverse tool, users are provided with a direct link to 
 
 ## Related information
 
-[Add agents to an app](../maker/model-driven-apps/add-agents-to-app.md)     
-[Customize Copilot Chat](../maker/model-driven-apps/customize-copilot-chat.md)
+[Add agents to an app](/power-apps/maker/model-driven-apps/add-agents-to-app)     
+[Customize Copilot Chat](/power-apps/maker/model-driven-apps/customize-copilot-chat)
