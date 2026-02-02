@@ -1,18 +1,15 @@
 ---
 title: "Power Apps code apps architecture"
 description: "Power Apps code apps architecture during development and runtime"
-ms.author: alaug
-author: alaug
-ms.date: 09/14/2025
+ms.author: jordanchodak
+author: jordanchodakWork
+ms.date: 02/02/2026
 ms.reviewer: jdaly
 ms.topic: article
 contributors:
  - JimDaly
 ---
 # Code apps architecture
-
-> [!NOTE]
-> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
 Power Apps code app architecture consists of:
 

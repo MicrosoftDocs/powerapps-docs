@@ -3,7 +3,7 @@ title: "Quickstart: Create a code app from scratch"
 description: "Learn how to create a code app from scratch"
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 01/09/2026
+ms.date: 02/02/2026
 ms.reviewer: jdaly
 ms.topic: quickstart
 contributors:
@@ -12,9 +12,6 @@ contributors:
 # Quickstart: Create a code app from scratch
 
 This article shows how to set up a blank app from [Vite](https://vite.dev/) and turn it into a Power Apps code app. It covers configuring a TypeScript app by using the Power Apps SDK.
-
-> [!NOTE]
-> [!INCLUDE [cc-preview-features-definition](../../../includes/cc-preview-features-definition.md)]
 
 ## Prerequisites
 

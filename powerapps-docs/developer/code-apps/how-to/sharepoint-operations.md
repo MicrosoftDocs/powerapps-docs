@@ -1,9 +1,9 @@
 ---
 title: "How to: SharePoint operations"
 description: "Learn how to do SharePoint operations in code apps"
-ms.author:  jordanchodak
+ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 11/20/2025
+ms.date: 02/02/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:

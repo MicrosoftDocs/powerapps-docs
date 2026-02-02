@@ -1,9 +1,9 @@
 ---
 title: "How to: Get metadata for Dataverse tables"
 description: "Use the getMetadata function to retrieve metadata about Dataverse tables (entities) at runtime."
-ms.author:  jordanchodak
+ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 12/5/2025
+ms.date: 02/02/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:

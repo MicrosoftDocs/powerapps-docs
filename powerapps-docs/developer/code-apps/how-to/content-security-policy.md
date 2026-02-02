@@ -6,7 +6,7 @@ ms.author: hacahill
 ms.reviewer: jdaly
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 01/16/2026
+ms.date: 02/02/2026
 ---
 
 # How to: Configure Content Security Policy

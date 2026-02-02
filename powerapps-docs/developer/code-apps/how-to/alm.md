@@ -3,7 +3,7 @@ title: "How to: Application Lifecycle Management (ALM) for code apps"
 description: "Learn best practices for ALM with Power Apps code apps."
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 12/11/2025
+ms.date: 02/02/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:

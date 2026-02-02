@@ -3,16 +3,13 @@ title: "Power Apps code apps overview"
 description: "Learn to use Power Apps code apps"
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 01/09/2026
+ms.date: 02/02/2026
 ms.reviewer: jdaly
 ms.topic: overview
 contributors:
  - JimDaly
 ---
 # Power Apps code apps overview
-
-> [!NOTE]
-> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
 Power Apps empowers developers of all skill sets, including those building web apps in integrated developer environments (IDEs) like Visual Studio Code, to efficiently build and run business apps on a managed platform.
 

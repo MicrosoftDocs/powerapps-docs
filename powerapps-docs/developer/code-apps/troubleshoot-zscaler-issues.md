@@ -3,7 +3,7 @@ title: "Troubleshoot issues with Zscaler"
 description: "Use this guide when the pac code add-data-source command repeatedly fails behind a Zscaler (or similar SSL‑inspecting) proxy."
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 11/20/2025
+ms.date: 02/02/2026
 ms.reviewer: jdaly
 ms.topic: article
 contributors:

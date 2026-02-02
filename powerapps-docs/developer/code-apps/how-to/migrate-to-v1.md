@@ -3,7 +3,7 @@ title: "Power Apps SDK v1.0 Migration Guide"
 description: "This is the migration guide for v1.0 of the Power Apps SDK."
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 1/22/2025
+ms.date: 02/02/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:

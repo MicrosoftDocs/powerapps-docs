@@ -3,7 +3,7 @@ title: "How to: Set up Azure App Insights for your code app"
 description: "Learn how to set up Azure App Insights for your code app"
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 1/22/2026
+ms.date: 02/02/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 ---
