@@ -979,7 +979,9 @@
   items:
   - name: Client Scripting
     href: clientapi/reference.md
-  - name: Customization XML reference
+  - name: Generative pages API
+    href: generative-page/data-api/index.md
+  - name: Customization XML
     href: customization-xml-reference.md
   - name: Ribbon Schemas
     items:
