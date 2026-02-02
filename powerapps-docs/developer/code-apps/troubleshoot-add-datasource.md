@@ -1,15 +1,15 @@
 ---
-title: "Troubleshoot adding a data source (preview)"
+title: "Troubleshoot adding a data source"
 description: "Learn how to troubleshoot issues when errors occur while adding a datasource using the PAC CLI pac code add-data-source command."
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 11/12/2025
+ms.date: 02/02/2026
 ms.reviewer: jdaly
 ms.topic: article
 contributors:
  - JimDaly
 ---
-# Troubleshoot adding a data source (preview)
+# Troubleshoot adding a data source
 
 This article provides troubleshooting steps for when the PAC CLI (Power Apps Command Line Interface)  [pac code add-data-source](/power-platform/developer/cli/reference/code#pac-code-add-data-source) command fails.
 
