@@ -18,15 +18,15 @@ contributors:
 
 These sample applications on GitHub show how to perform bulk create and update operations using the Web API [CreateMultiple](xref:Microsoft.Dynamics.CRM.CreateMultiple), [UpdateMultiple](xref:Microsoft.Dynamics.CRM.UpdateMultiple) and [UpsertMultiple](xref:Microsoft.Dynamics.CRM.UpsertMultiple) actions. The messages for these actions are optimized to provide the most performant way to create or update records with Dataverse.
 
+> [!div class="nextstepaction"]
+> [View this sample on Github](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/CSharp-NETx/BulkOperations/README.md)
+
 This sample is a Visual Studio .NET 6.0 solution that contains:
 
 - Two projects that perform the same [CreateMultiple](xref:Microsoft.Dynamics.CRM.CreateMultiple) and [UpdateMultiple](xref:Microsoft.Dynamics.CRM.UpdateMultiple) operations in different ways so that you can compare the performance of each method.
 - One project that demonstrates using the [UpsertMultiple](xref:Microsoft.Dynamics.CRM.UpsertMultiple) action.
 
 See the README.md file in each sample for detailed instructions about how to run the sample and what it does.
-
-> [!div class="nextstepaction"]
-> [Web API Bulk Operations Sample](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/CSharp-NETx/BulkOperations/README.md)
 
 ### See Also
 

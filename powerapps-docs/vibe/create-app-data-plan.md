@@ -1,24 +1,24 @@
 ---
-title: "Create apps, data, and plans together"
-description: Learn how the new Power Apps vibe code experience simplifies app creation by generating plans, data models, and apps in parallel. Build apps smarter and faster.
+title: "Create apps, data, and plans together using Power Apps vibe"
+description: Learn how Power Apps vibe simplifies app creation by generating plans, data models, and apps in parallel. Build modern web apps faster with AI assistance.
 author: mduelae
 ms.author: mkaur
 ms.reviewer: mkaur
-ms.date: 1/9/2026
+ms.date: 01/29/2026
 ms.topic: concept-article
 ---
 
-# Create apps, data, and plans together (preview)
+# Create apps, data, and plans together using vibe (preview)
 
 
 [This article is prerelease documentation and is subject to change.]
 
-The new experience in Power Apps combines plans, data models, and apps in a single design surface. This integrated approach minimizes distractions and keeps you focused on building solutions efficiently.
+The new vibe experience in Power Apps combines plans, data models, and apps in a single design surface. This integrated approach minimizes distractions and keeps you focused on building solutions efficiently.
 
 Key capabilities
 
 - **Design everything together**: Build apps, plans, and data models together in a single, cohesive process.
-- **Build faster with AI**: Quickly move from ideas to working prototypes using conversational chat.
+- **Build faster with AI**: Quickly move from ideas to working prototypes with conversational chat.
 - **Instant app creation**: Generate modern web apps directly from your requirements and data with one click.
 
 
@@ -30,15 +30,15 @@ Key capabilities
 
 ## Create an app
 
-1. Sign in to [https://vibe.preview.powerapps.com](https://vibe.preview.powerapps.com/).
+1. Sign in to [https://vibe.powerapps.com](https://vibe.powerapps.com/).
 
-1. Enter your prompt in the text box, then select **Enter**.  
+1. Enter your prompt in the text box, and then select **Enter**. Or, select **Start dictation** and use your voice to turn speech into text.
 
-    :::image type="content" source="media/create-app-data-plan/power-apps-prompt-text-box.png" alt-text="Screenshot of Power Apps showing a prompt input box for the new experience." lightbox="media/create-app-data-plan/power-apps-prompt-text-box.png":::
+    :::image type="content" source="media/create-app-data-plan/power-apps-prompt-text-box.png" alt-text="Screenshot of Power Apps vibe showing a prompt input box for the new experience." lightbox="media/create-app-data-plan/power-apps-prompt-text-box.png":::
 
 1. Agents start working and assets load. You see the plan, data model, and app preview generate. 
  
-   :::image type="content" source="media/create-app-data-plan/powerapps-data-model-app-preview.png" alt-text="Screenshot of the Power Apps new workspace showing AI agents generating the plan, data model, and app preview simultaneously." lightbox="media/create-app-data-plan/powerapps-data-model-app-preview.png":::
+   :::image type="content" source="media/create-app-data-plan/powerapps-data-model-app-preview.png" alt-text="Screenshot of the Power Apps vibe workspace showing AI agents generating the plan, data model, and app preview simultaneously." lightbox="media/create-app-data-plan/powerapps-data-model-app-preview.png":::
 
 
 1. After the plan, data, and app generate, select **Save** in the upper-right corner. The first save stores the app, tables, and plan together in your selected solution, while your data remains in in-memory draft tables. This approach lets you iterate on the data model and app quickly without committing to a data source. When you publish the app, you select the data source.
@@ -60,7 +60,6 @@ Legend:
 1. **Preview**: View a live preview of the app.
 1. **Code**: Access and review the app’s code.
 1. **Split**: See both the code and the app preview side by side.
-1. **Download source**: Download the source files of the app.
 1. **Play**: Play and test the app.
 1. **Toggle inline edits**: Select any area in the app and edit its text directly.
 1. **Refresh preview**: Reload the app preview to see the latest changes.
@@ -72,36 +71,36 @@ When generation finishes, the visual preview appears in focus on the work surfac
 
 You can interact with the app directly, using the navigation items and buttons to see how they function and respond.
 
-To inspect the code, switch to **Code** view or **Split** view. Expand the **src** folder to see subfolders and files, then select any file to view the generated code.
+To inspect the code, switch to **Code** view or **Split** view. Expand the **src** folder to see subfolders and files, and select any file to view the generated code.
 
 When you modify the app, plan, or data, the agent analyzes your changes to see if updates are needed elsewhere in the solution. If so, the agent automatically applies updates and summarizes them in the chat.
 
-### Edit the app by using chat
+### Edit the app using chat
 
-Use the chat input on the work surface to ask questions or request changes to the generated app. For example: “What does this button do?” or “Change theme to blue.”
+Use the chat input on the work surface to ask questions or request changes to the generated app. For example: "What does this button do?" or "Change theme to blue."
 
 - If you ask a question, the agent provides an explanatory response.
 - If you request a change, the agent evaluates the request, outlines an implementation plan, and then applies it.
 - If the agent can't implement the change directly, you receive step-by-step guidance or instructions for retrying the request.
 
-### Edit the app by using inline actions
+### Edit the app using inline actions
 
 Use inline actions to edit the style of your app.
 
  1. Select the option to toggle inline edits.
- 1. Select the item you want to edit. The element is outlined and labeled with the corresponding code object so you know exactly what you’re editing.
+ 1. Select the item you want to edit. The element is outlined and labeled with the corresponding code object so you know exactly what you're editing.
     Depending on the element type, a properties pane or inline controls appear for typography, styling, or layout. Adjust values like font, color, or spacing directly in the pane. If multiple elements share the same style, a single change can apply across the group. For example, changing a button color inside a card updates all buttons in that card group.
  
     Inline edits update the associated code directly without an AI agent involved.
 
-    When you select an element, open inline chat and request a change like **Make this button primary blue**. The selected element’s context is passed automatically, so you don’t have to describe it in the prompt. This feature is equivalent to typing the same request in the main chat but faster.
+    When you select an element, open inline chat and request a change like **Make this button primary blue**. The selected element's context is passed automatically, so you don't have to describe it in the prompt. This feature is equivalent to typing the same request in the main chat but faster.
 
 1. When you're done, review the result in the visual preview. If needed, switch to **Code** view or **Split** view to inspect the generated files.
 
 
 ### Keyboard shortcuts for inline actions
 
-You can use quick keys to open and close inline edit actions while editing your app.
+Use quick keys to open and close inline edit actions while editing your app.
 
 - **Hold and release Alt** to toggle the inline edit gesture.
 - **Press Esc** to dismiss the inline edit gesture.
@@ -137,7 +136,7 @@ Select the area you want to change and select the **Edit** button or **Chat with
 
 #### Edit the data model 
 
-In the **Data model** area, select the **Chat with Copilot button** and enter your changes.
+In the **Data model** area, select the **Chat with Copilot** button and enter your changes.
  
 Or, select the ellipsis for the specific table you want to edit. You can select to view the data workspace, save the proposed tables, or chat with the agents to pass in specific context about the edit you're requesting.
 
@@ -145,7 +144,7 @@ Or, select the ellipsis for the specific table you want to edit. You can select 
 
 #### Edit technology
 
-In the **Technology** area, select the **Chat with Copilot button** and enter your changes. You can also add new technologies or chat with the agent with specific context for the change you're requesting.
+In the **Technology** area, select the **Chat with Copilot** button and enter your changes. You can also add new technologies or chat with the agent with specific context for the change you're requesting.
 
 Select the **Create** button to open Power Automate and create a new workflow.
 
@@ -177,11 +176,11 @@ The agent analyzes your requests and makes the necessary updates.
 
 Some actions might not be supported through agent chat. For more information, see the [limitations](create-app-data-plan.md#known-limitations) section in the article.
 
-### Edit data with inline actions
+### Edit data using inline actions
 
 Add new or existing tables, or make targeted changes to relationships, tables, and sample data directly within the data workspace.
 
-1. To edit, select the relationship line or the ellipsis (…) next to the table you want to modify.
+1. To edit, select the relationship line or the ellipsis (...) next to the table you want to modify.
 1. Select **Remove** to remove relationships or tables from the data model, or make specific edits as needed.
 
     :::image type="content" source="media/create-app-data-plan/edit-data-relationships.png" alt-text="Edit data relationships":::
@@ -197,7 +196,7 @@ Add new or existing tables, or make targeted changes to relationships, tables, a
 
 1. Select **Add relationship** in the command bar to add a new relationship between two tables.
 
-1. To edit a relationship, select the relationship line between two tables and select **Edit** from the dropdown menu. Here you can change the relationship type or add a lookup column. You can also perform advanced edits like changing the logical names used in the relationship.
+1. To edit a relationship, select the relationship line between two tables and select **Edit** from the dropdown menu. Change the relationship type or add a lookup column. You can also perform advanced edits like changing the logical names used in the relationship.
 
 1. Some relationship configurations currently aren't supported. For more information, see [Known limitations](create-app-data-plan.md#known-limitations).
 
@@ -229,7 +228,7 @@ Follow one of these steps to change the ownership type to **User**, **Team**, or
 
 ### Edit the data table properties
 
-1. Select the table you want to edit and then select **View data** in the command bar.
+1. Select the table you want to edit. Then, select **View data** in the command bar.
 1. Select **Properties** to update the table’s display name, plural name, description, and other details.
 
  :::image type="content" source="media/create-app-data-plan/edit-table-properties.png" alt-text="Edit table properties":::
@@ -241,18 +240,17 @@ Follow one of these steps to change the ownership type to **User**, **Team**, or
 The following [ALM](/power-platform/alm/overview-alm) features are supported: 
 
 - **Save**: AutoSave isn't currently available. To save your progress, select **Save** in the command bar at any time. This action saves all edits to every solution object in your preferred solution.
-- **Publish data**: To publish draft tables, select **Publish draft tables** from the data card’s context menu when you’re ready to make a table available for production. You can choose Dataverse as the target data source. Once published, any apps using these draft tables automatically update to use the published versions.
+- **Publish data**: To publish draft tables, select **Publish draft tables** from the data card’s context menu when you're ready to make a table available for production. You can choose Dataverse as the target data source. Once published, any apps using these draft tables automatically update to use the published versions.
 
-- **Publishing app**: When you’re ready to release your app for production, select **Publish** in the app’s command bar. If your app uses any draft tables, you're prompted to publish those tables as well.
+- **Publishing app**: When you're ready to release your app for production, select **Publish** in the app’s command bar. If your app uses any draft tables, you're prompted to publish those tables as well.
 
-- **Share the app**: To share your app with others, select **Share** and add the accounts of users you want to grant access to run the app.
-
+- **Share the app**: To share your app with others, select **Share** and add the accounts of users you want to grant access to run the app. You can also share apps with groups in Vibe if the group is Entra ID security-enabled. Distribution lists and non-security Microsoft 365 Groups aren't supported. Group sharing only works in production environments. Developer environments don't allow group-level permissions. Once these requirements are met, eligible groups appear in the share dialog.
 
 ## Choose a data source and publish
 
-1. When you’re ready to publish, on the top right select **Publish**.
+1. When you're ready to publish, select **Publish**.
 
-1. Select a data source to publish and store the draft tables in your app and then select **Publish**.
+1. Select a data source to publish and store the draft tables in your app. Then select **Publish**.
 
     :::image type="content" source="media/create-app-data-plan/save-and-select-data-source.png" alt-text="Select a data source":::
 
