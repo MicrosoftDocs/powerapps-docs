@@ -1,5 +1,5 @@
 ---
-title: "Power Apps code apps architecture (preview)"
+title: "Power Apps code apps architecture"
 description: "Power Apps code apps architecture during development and runtime"
 ms.author: alaug
 author: alaug
@@ -9,7 +9,7 @@ ms.topic: article
 contributors:
  - JimDaly
 ---
-# Code apps architecture (preview)
+# Code apps architecture
 
 > [!NOTE]
 > [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]

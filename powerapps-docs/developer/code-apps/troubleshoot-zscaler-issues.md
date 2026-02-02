@@ -1,5 +1,5 @@
 ---
-title: "Troubleshoot issues with Zscaler (preview)"
+title: "Troubleshoot issues with Zscaler"
 description: "Use this guide when the pac code add-data-source command repeatedly fails behind a Zscaler (or similar SSL‑inspecting) proxy."
 ms.author: jordanchodak
 author: jordanchodakWork
@@ -10,7 +10,7 @@ contributors:
 - JimDaly
 
 ---
-# Troubleshoot Zscaler-related issues (preview)
+# Troubleshoot Zscaler-related issues
 
 This article provides troubleshooting steps for when the PAC CLI (Power Apps Command Line Interface)  [pac code add-data-source](/power-platform/developer/cli/reference/code#pac-code-add-data-source) repeatedly fails behind a Zscaler or similar SSL-inspecting proxies.
 

@@ -1,5 +1,5 @@
 ---
-title: "How to: Connect your code app to data (preview)"
+title: "How to: Connect your code app to data"
 description: "Learn how to connect your code app to data"
 ms.author: jordanchodak
 author: jordanchodakWork
@@ -10,7 +10,7 @@ contributors:
  - JimDaly
  - alaug
 ---
-# How to: Connect your code app to data (preview)
+# How to: Connect your code app to data
 
 Code apps can connect to Power Platform connectors.
 

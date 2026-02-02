@@ -1,5 +1,5 @@
 ---
-title: "How to: Get context data (preview)"
+title: "How to: Get context data"
 description: "Use the getContext function to get context information about the app and signed-in user. This information enables apps to deliver personalized experiences and make informed decisions at runtime based on metadata."
 ms.author:  jordanchodak
 author: jordanchodakWork
@@ -9,7 +9,7 @@ ms.topic: how-to
 contributors:
 - JimDaly
 ---
-# How to: Get context data (preview)
+# How to: Get context data
 
 The `getContext` function retrieves contextual information about the app and the signed-in user. This information enables apps to deliver personalized experiences and make informed decisions at runtime based on metadata. The `getContext` function communicates with the web player to obtain context data. The `getContext` function is lightweight and focuses on metadata and authentication-related properties.
 

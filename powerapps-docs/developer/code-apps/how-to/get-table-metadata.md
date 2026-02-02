@@ -1,5 +1,5 @@
 ---
-title: "How to: Get metadata for Dataverse tables (preview)"
+title: "How to: Get metadata for Dataverse tables"
 description: "Use the getMetadata function to retrieve metadata about Dataverse tables (entities) at runtime."
 ms.author:  jordanchodak
 author: jordanchodakWork
@@ -10,7 +10,7 @@ contributors:
 - JimDaly
 ---
 
-# How to: Get metadata for Dataverse tables (preview)
+# How to: Get metadata for Dataverse tables
 
 The table metadata contains customizations applied to tables in Dataverse. Metadata also contains localized labels when your organization supports multiple languages. Using metadata in your code app means your app can adapt to customization or localization changes without having to change your code.
 

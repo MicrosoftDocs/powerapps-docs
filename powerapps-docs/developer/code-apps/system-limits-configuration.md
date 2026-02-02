@@ -1,5 +1,5 @@
 ---
-title: "System configuration (preview)"
+title: "System configuration"
 description: "Power Apps code apps system configuration"
 ms.author: alaug
 author: alaug
@@ -10,7 +10,7 @@ contributors:
  - JimDaly
 ---
 
-# System configuration (preview)
+# System configuration
 
 This article contains information on the configuration for Power Apps code apps.
 

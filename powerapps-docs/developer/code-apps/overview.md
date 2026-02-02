@@ -1,5 +1,5 @@
 ---
-title: "Power Apps code apps overview (preview)"
+title: "Power Apps code apps overview"
 description: "Learn to use Power Apps code apps"
 ms.author: jordanchodak
 author: jordanchodakWork
@@ -9,7 +9,7 @@ ms.topic: overview
 contributors:
  - JimDaly
 ---
-# Power Apps code apps overview (preview)
+# Power Apps code apps overview
 
 > [!NOTE]
 > [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
@@ -108,5 +108,5 @@ This table lists Power Platform management capabilities that work for code apps.
 
 ## Related information
 
-- [Code apps architecture (preview)](architecture.md)  
+- [Code apps architecture](architecture.md)
 - [System limits and configuration](system-limits-configuration.md)

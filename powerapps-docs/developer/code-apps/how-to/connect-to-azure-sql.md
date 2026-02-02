@@ -1,5 +1,5 @@
 ---
-title: "How to: Connect your code app to Azure SQL (preview)"
+title: "How to: Connect your code app to Azure SQL"
 description: "Learn how to connect your code app to Azure SQL"
 ms.author: alaug
 author: alaug
@@ -9,7 +9,7 @@ ms.topic: how-to
 contributors:
  - JimDaly
 ---
-# How to: Connect your code app to Azure SQL (preview)
+# How to: Connect your code app to Azure SQL
 
 This guide walks through how to set up an Azure SQL Database and connect it to a Power Apps code app using the Power SDK.
 

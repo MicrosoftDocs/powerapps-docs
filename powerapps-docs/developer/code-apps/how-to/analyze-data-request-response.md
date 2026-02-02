@@ -1,5 +1,5 @@
 ---
-title: "How to: Analyze data requests and responses (preview)"
+title: "How to: Analyze data requests and responses"
 description: "Learn how to filter network traces in browser dev tools to analyze code app data requests and responses with Power Apps code apps."
 ms.author: alaug
 author: alaug
@@ -9,7 +9,7 @@ ms.topic: how-to
 contributors:
  - JimDaly
 ---
-# How to: Analyze data requests and responses (preview)
+# How to: Analyze data requests and responses
 
 This article explains how to review code app data requests and responses in browser dev tools.
 
