@@ -63,20 +63,22 @@
         href: ../user/use-microsoft-365-copilot-model-driven-apps.md
       - name: Supervise agents using agent feed (preview)
         href: ../user/supervise-agents-with-agent-feed.md
-      - name: Use suggested actions in the agent feed (preview)
-        href: ../user/use-suggested-actions-in-the-agent-feed.md
       - name: Use form fill assistance
         href: ../user/form-filling-assistance.md
-      - name: Use row summary
-        href: ../user/record-summaries.md
-      - name: Use Copilot chat
-        href: ../user/use-copilot-model-driven-apps.md
       - name: Find data in a view (preview)
         href: ../user/find-data-with-ai.md
       - name: Visualize data in a view (preview)
         href: ../user/visualize-data-in-copilot.md
+      - name: Use row summary
+        href: ../user/record-summaries.md
+      - name: Use AI-generated timeline highlights
+        href: /power-apps/user/add-activities#use-timeline-highlights-powered-by-generative-ai
       - name: Use Copilot case summary in model-driven apps
-        href: ../user/copilot-case-summary.md       
+        href: ../user/copilot-case-summary.md 
+      - name: Use suggested actions in the agent feed (preview)
+        href: ../user/use-suggested-actions-in-the-agent-feed.md
+      - name: Use Copilot chat
+        href: ../user/use-copilot-model-driven-apps.md  
     - name: Navigation and basics
       items:
       - name: Basic navigation
