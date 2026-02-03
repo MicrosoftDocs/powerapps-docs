@@ -72,7 +72,7 @@
       - name: Use row summary
         href: ../user/record-summaries.md
       - name: Use AI-generated timeline highlights
-        href: /power-apps/user/use-timeline-highlights-powered-by-generative-ai.md
+        href: ../user/use-timeline-highlights-powered-by-generative-ai.md
       - name: Use Copilot case summary in model-driven apps
         href: ../user/copilot-case-summary.md 
       - name: Use suggested actions in the agent feed (preview)
