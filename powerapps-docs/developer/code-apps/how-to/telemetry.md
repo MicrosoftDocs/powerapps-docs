@@ -3,7 +3,7 @@ title: "How to: Manage telemetry settings for the Power Platform CLI code comman
 description: "Learn how to configure and manage telemetry settings for Power Platform CLI code commands."
 ms.author: pakempar
 author: pavankm
-ms.date: 12/11/2025
+ms.date: 02/02/2026
 ms.topic: how-to
 ---
 # How to: Manage telemetry settings for the Power Platform CLI code commands

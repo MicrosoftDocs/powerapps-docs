@@ -1,7 +1,7 @@
 items:
   - name: Power Apps code apps
     items:
-      - name: Power Apps code apps (preview)
+      - name: Power Apps code apps
         href: index.yml
       - name: Overview
         href: overview.md
