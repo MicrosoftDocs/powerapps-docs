@@ -143,10 +143,6 @@ To review RTL when building a custom page, you will need to go to the page setti
 
 :::image type="content" source="media/page-localization/right-left-preview.gif"alt-text="Power Apps Studio custom page right-to-left.":::
 
-## Known limitation for exporting solutions with resx files
-
-Resx files don't automatically get added when you export your solution and import it into a new environment.  This is a known limitation and will require you to upload your resx files into your new environment.  So, if you have a developer environment, and you export your solution and import into a production environment, you'll need to add your resx localization files into your production environment solution.
-
 ### See also
 
 [Create or edit model-driven app web resources to extend an app](create-edit-web-resources.md)
