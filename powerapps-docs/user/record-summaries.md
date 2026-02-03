@@ -29,7 +29,7 @@ The feature enhances user efficiency by delivering context-rich insights directl
 
 > [!IMPORTANT]
 > - This feature is in public preview for Dynamics 365 apps.
->   - Preview features aren’t meant for production use and might have restricted functionality.
+>   - Preview features aren't meant for production use and might have restricted functionality.
 >   - Preview features are available before an official release so that customers can get early access and provide feedback.
 
 ## Prerequisite
@@ -62,7 +62,7 @@ View the record summary from a form or a view when a [table is configured to dis
 
 Here are some actions you can take with summaries:
 
-- **Copy**: Select to copy the summary content directly to your clipboard for easy sharing or documentation. 
+- **Copy**: Select to copy the summary content directly to your clipboard for easy sharing or documentation. The summary is copied in Markdown format, so when you paste it into other applications, the formatting might not appear exactly as it does in the model-driven app.
 - **Feedback**: Use the thumbs up or thumbs down icons to rate the summary's usefulness. Your feedback helps improve future summaries so they better meet your expectations and needs.
 - **Refresh** (forms only): Select the **Refresh** button to regenerate the summary so it reflects the latest updates to the record.
 - **Expand/Collapse** (forms only): In forms, the insights bar is collapsed by default and shows a one-line peek of the summary. Expand the insights bar to see more details.
