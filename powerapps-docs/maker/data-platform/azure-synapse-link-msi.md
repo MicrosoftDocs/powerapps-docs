@@ -20,6 +20,7 @@ With managed identities, access to your storage account is restricted to request
 
 ## Before you start
 
+- Powershell 7.4 or above. Check your version on `$PSVersionTable`
 - Azure CLI is required on your local machine. [Download and install](https://aka.ms/InstallAzureCliWindows)
 - You need these two PowerShell modules. If you don't have them, open PowerShell and run these commands:
   - Azure Az PowerShell module: `Install-Module -Name Az`
