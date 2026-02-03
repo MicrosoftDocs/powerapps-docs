@@ -4,7 +4,7 @@ The highlights include a record's main activities, such as details about who you
 
 You can copy the timeline highlights by selecting **Copy**.
 
-![Timeline highlights view.](\powerapps-docs\user\media\view-timeline-highlights.png "Timeline highlights view")
+![Timeline highlights view.](/power-apps/user/media/view-timeline-highlights.png "Timeline highlights view")
 
 > [!IMPORTANT]
 > This feature is only available with Power Platform environments with Dataverse that have the **Enable Dynamics 365 apps** setting enabled.
