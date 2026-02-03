@@ -5,18 +5,22 @@ items:
         href: index.yml
       - name: Overview
         href: overview.md
-      - name: "Quickstart: Create a code app"
-        href: how-to/create-an-app-from-scratch.md
-      - name: Architecture
-        href: architecture.md
-      - name: System configuration
-        href: system-limits-configuration.md
-      - name: How-to guides
+      - name: Build
         items:
+          - name: "Quickstart: Create a code app"
+            href: how-to/create-an-app-from-scratch.md
+          - name: Architecture
+            href: architecture.md
+          - name: System configuration
+            href: system-limits-configuration.md
           - name: Connect to data
             href: how-to/connect-to-data.md
-          - name: Connect to Dataverse
-            href: how-to/connect-to-dataverse.md
+          - name: Dataverse
+            items:
+              - name: Connect to Dataverse
+                href: how-to/connect-to-dataverse.md
+              - name: Get Dataverse tables metadata
+                href: how-to/get-table-metadata.md
           - name: Connect to Azure SQL
             href: how-to/connect-to-azure-sql.md
           - name: SharePoint operations
@@ -27,16 +31,20 @@ items:
             href: how-to/analyze-data-request-response.md
           - name: Get context data
             href: how-to/retrieve-context.md
-          - name: Get Dataverse tables metadata
-            href: how-to/get-table-metadata.md
+      - name: Deploy
+        items:
           - name: Application lifecycle management (ALM)
             href: how-to/alm.md
-          - name: Configure Content Security Policy (CSP)
-            href: how-to/content-security-policy.md
+      - name: Monitor
+        items:
           - name: Manage PAC CLI code command telemetry
             href: how-to/telemetry.md
           - name: Set up Azure App Insights
             href: how-to/set-up-azure-app-insights.md
+      - name: Manage
+        items:
+          - name: Configure Content Security Policy (CSP)
+            href: how-to/content-security-policy.md
           - name: Migrate your code to v1.0
             href: how-to/migrate-to-v1.md
       - name: Troubleshoot
