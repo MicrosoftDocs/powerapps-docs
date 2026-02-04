@@ -2,10 +2,9 @@
 title: "View, compose and respond to email | MicrosoftDocs"
 description: How to view, compose and respond to email.
 author: shwetamurkute
-
 ms.component: pa-user
 ms.topic: article
-ms.date: 01/31/2026
+ms.date: 02/04/2026
 ms.subservice: end-user
 ms.author: smurkute
 ms.custom: ""
