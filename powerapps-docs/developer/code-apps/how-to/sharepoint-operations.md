@@ -1,15 +1,15 @@
 ---
-title: "How to: SharePoint operations (preview)"
+title: "How to: SharePoint operations"
 description: "Learn how to do SharePoint operations in code apps"
-ms.author:  jordanchodak
+ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 11/20/2025
+ms.date: 02/02/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
  - JimDaly
 ---
-# How to: SharePoint operations (preview)
+# How to: SharePoint operations
 
 Use the Power Apps SDK to connect your code app to SharePoint and use the generated models and services to perform CRUD (Create, Read, Update, Delete) operations on a SharePoint list.  
 

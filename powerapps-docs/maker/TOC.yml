@@ -63,20 +63,22 @@
         href: ../user/use-microsoft-365-copilot-model-driven-apps.md
       - name: Supervise agents using agent feed (preview)
         href: ../user/supervise-agents-with-agent-feed.md
-      - name: Use suggested actions in the agent feed (preview)
-        href: ../user/use-suggested-actions-in-the-agent-feed.md
       - name: Use form fill assistance
         href: ../user/form-filling-assistance.md
-      - name: Use row summary
-        href: ../user/record-summaries.md
-      - name: Use Copilot chat
-        href: ../user/use-copilot-model-driven-apps.md
       - name: Find data in a view (preview)
         href: ../user/find-data-with-ai.md
       - name: Visualize data in a view (preview)
         href: ../user/visualize-data-in-copilot.md
+      - name: Use row summary
+        href: ../user/record-summaries.md
+      - name: Use AI-generated timeline highlights
+        href: ../user/use-timeline-highlights-powered-by-generative-ai.md
       - name: Use Copilot case summary in model-driven apps
-        href: ../user/copilot-case-summary.md       
+        href: ../user/copilot-case-summary.md 
+      - name: Use suggested actions in the agent feed (preview)
+        href: ../user/use-suggested-actions-in-the-agent-feed.md
+      - name: Use Copilot chat
+        href: ../user/use-copilot-model-driven-apps.md  
     - name: Navigation and basics
       items:
       - name: Basic navigation
@@ -245,12 +247,14 @@
     href: search.md      
   - name: Use Dynamics 365 App for Outlook
     href: ../user/use-outlook-app.md
-- name: New experience (preview)
+- name: New vibe experience (preview)
   items:
   - name: Overview
     href:   ../vibe/overview.md
-  - name: Create apps, data, and plans together 
+  - name: Create apps, data, and plans using vibe 
     href: ../vibe/create-app-data-plan.md
+  - name: Released versions 
+    href: /power-platform/released-versions/new-powerapps
 - name: Plans  
   items:
   - name: Overview

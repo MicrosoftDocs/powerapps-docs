@@ -3,14 +3,14 @@ title: "How to: Application Lifecycle Management (ALM) for code apps"
 description: "Learn best practices for ALM with Power Apps code apps."
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 12/11/2025
+ms.date: 02/02/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
 - JimDaly
 ---
 
-# How to: Application Lifecycle Management (ALM) for code apps (preview)
+# How to: Application Lifecycle Management (ALM) for code apps
 
 Application Lifecycle Management (ALM) is the process of managing the lifecycle of an application from initial planning through development, deployment, and ongoing maintenance. ALM for code apps builds on the same principles used throughout the Power Platform, extending them to scenarios where custom code is part of the solution.
 
@@ -57,7 +57,7 @@ Once the app is in a solution, use Power Platform Pipelines to deploy across sta
 
 ## Using connection references in your code app
 
-Refer to the [Use connection references to add a data source](./connect-to-data.md#use-connection-references-to-add-a-data-source) section in the  How to: Connect your code app to data (preview) page for more information on using connection references in your code app.
+Refer to the [Use connection references to add a data source](./connect-to-data.md#use-connection-references-to-add-a-data-source) section in the  How to: Connect your code app to data page for more information on using connection references in your code app.
 
 
 ## Limitations
