@@ -5,7 +5,7 @@ author: yogeshgupta698
 
 ms.topic: reference
 ms.component: canvas
-ms.date: 7/10/2024
+ms.date: 02/04/2026
 ms.subservice: canvas-maker
 ms.author: yogupt
 
@@ -26,9 +26,36 @@ A control that the user can select to interact with the app.
 ## Description
 Use the modern button to set a button to be primary or secondary. Configure the **[OnSelect](../properties-core.md)** property of a **Button** control to run one or more formulas when the user selects the control. As a design pattern, we recommend always placing the primary button on the left, the secondary button to the right of it. The key properties for this control are **OnSelect** and **Text**.
 
+## Getting started with buttons
+
+### Adding and configuring a button
+1. In Power Apps Studio, select **Insert** > **Button** from the modern controls
+2. The button appears on your canvas with default text "Button"
+3. With the button selected, you can:
+   - **Change the text:** Type in the formula bar or use the **Text** property in the Properties pane
+   - **Add functionality:** Configure the **OnSelect** property to define what happens when clicked
+   - **Style the button:** Use **Appearance** and other style properties
+
+### Button editing experience
+Unlike Excel's developer mode, Power Apps provides a visual design interface:
+- **Properties pane:** Configure all button properties on the right side
+- **Formula bar:** Enter formulas at the top of the screen
+- **Canvas:** See changes immediately as you design
+- **Tree view:** Navigate between controls on the left side
+
+The button properties update in real-time as you make changes—no separate popup or developer mode is needed.
+
 ## General
 
-**[Text](../properties-core.md)** – Text that appears on a component.
+**[Text](../properties-core.md)** – Text that appears on the button. To change the button text, select the button and either:
+- Type directly in the formula bar at the top of the screen
+- Enter text in the **Text** field in the Properties pane on the right
+- Use a formula for dynamic text, such as `"Submit " & DataCardValue1.Text`
+
+Examples:
+- Static text: `"Save Changes"`
+- Dynamic text: `"Items: " & CountRows(Gallery1.AllItems)`
+- Conditional text: `If(EditMode, "Update", "Create")`
 
 **AccessibleLabel** – Label for screen readers.
 
@@ -65,12 +92,16 @@ The button control now includes subset of Fluent icons. The following properties
 
 ## Style and theme
 
-**Appearance** – A button can have its content and borders styled for greater emphasis or to be subtle. Below are the options available:
+**Appearance** – A button can have its content and borders styled for greater emphasis or to be subtle. This property accepts both static values and formulas that return text values. Below are the available options:
 * Primary: Emphasizes the button as a primary action.
 * Secondary: Gives emphasis to the button in such a way that it indicates a secondary action.
 * Outline: Removes background styling.
 * Subtle: Minimizes emphasis to blend into the background until hovered or focused.
 * Transparent: Removes background and border styling.
+
+You can use formulas to dynamically set the appearance based on app state. For example: `If(UserRole = "Admin", "Primary", "Secondary")` or `Switch(AppState, "Loading", "Subtle", "Error", "Outline", "Primary")`.
+
+For more information about using formulas with modern control properties, see [Modern controls overview](overview-modern-controls.md).
 
 **BasePaletteColor** - The color palette applied to a control. This impacts all surfaces of the control that render a theme color. If the value is null or zero, then the color is driven by selected Fluent theme.
 
@@ -88,11 +119,46 @@ The button control now includes subset of Fluent icons. The following properties
 
 **FontStrikethrough** - Whether a line appears through the text that appears on a control. 
 
+## Formula examples
+
+The modern button control supports formulas for many of its properties. Here are some common examples:
+
+**Dynamic appearance based on user role:**
+```
+If(User().Role = "Manager", "Primary", "Secondary")
+```
+
+**Conditional visibility:**
+```
+User().Department = "Sales"
+```
+
+**Context-aware text:**
+```
+If(IsBlank(SelectedItem), "Select Item", "Update Item")
+```
+
+For comprehensive information about Power Apps formulas, see [Formula reference](../../formula-reference.md).
+
 ## Additional properties
 
 **[AcceptsFocus](../properties-accessibility.md)** - Determines whether the control can receive focus when the user navigates through the app using the keyboard. 
 
-**[OnSelect](../properties-core.md)** – Actions to perform when the user selects a control.
+**[OnSelect](../properties-core.md)** – Actions to perform when the user selects the control. This is where you define what happens when someone clicks the button. To configure button actions:
+
+1. Select the button
+2. In the Properties pane, find the **OnSelect** property
+3. Enter your formula in the formula bar
+
+Common button actions include:
+- **Navigate to another screen:** `Navigate(Screen2, ScreenTransition.Slide)`
+- **Submit a form:** `SubmitForm(Form1); Navigate(SuccessScreen)`
+- **Save data:** `Patch(DataSource, Defaults(DataSource), {Name: TextInput1.Text})`
+- **Show a popup:** `Set(ShowPopup, true)`
+- **Reset a form:** `ResetForm(Form1)`
+- **Multiple actions:** `UpdateContext({Loading: true}); SubmitForm(Form1); Navigate(HomeScreen)`
+
+For more information about button actions, see [OnSelect property](../properties-core.md).
 
 
 
