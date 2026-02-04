@@ -19,3 +19,8 @@ contributors:
 # Use row summaries in model-driven apps
 
 [!INCLUDE [record-summaries](~/../shared/dynamics365-core/record-summaries.md)]
+
+### Related information
+
+[Manage feature settings](/power-platform/admin/settings-features)  
+[Configuring summaries for tables](/power-apps/maker/data-platform/configure-form-row-summary#create-a-row-summary)  
