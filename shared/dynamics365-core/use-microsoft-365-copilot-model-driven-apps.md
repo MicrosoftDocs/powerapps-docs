@@ -1,4 +1,4 @@
-[Microsoft 365 Copilot chat](/copilot/overview) for model-driven apps in Power Apps is a next-generation AI assistant that helps you gain insights into the data in your apps through conversations in natural language. Microsoft 365 Copilot chat boosts your productivity through AI-powered insights and navigation assistance.
+[Microsoft 365 Copilot chat](/copilot/overview) for apps is a next-generation AI assistant that helps you gain insights into the data in your apps through conversations in natural language. Microsoft 365 Copilot chat boosts your productivity through AI-powered insights and navigation assistance.
 
 > [!IMPORTANT]
 >
@@ -8,7 +8,7 @@
 
 ## Prerequisites
 
-An administrator must enable Microsoft 365 Copilot chat in your application before it becomes visible in your app. For more information, see [Add Microsoft 365 Copilot chat for app users in model-driven apps](/power-apps/maker/model-driven-apps/add-microsoft-365-copilot).
+An administrator must enable Microsoft 365 Copilot chat in your application before it becomes visible in your app. For more information, see [Add Microsoft 365 Copilot chat for app users](/power-apps/maker/model-driven-apps/add-microsoft-365-copilot).
 
 ## Copilot pane
 
@@ -16,7 +16,7 @@ After Microsoft 365 Copilot chat is enabled, access it through the Copilot butto
 
 :::image type="content" source="/power-apps/user/media/microsoft-365-copilot-button.png" alt-text="Screenshot that shows the Copilot button on a page.":::
 
-If both Microsoft 365 Copilot chat and [Copilot chat in model-driven apps](/power-apps/user/use-copilot-model-driven-apps) are enabled, you can access and try each option. The **Chat** option opens Microsoft 365 Copilot Chat, and the **App Skills** option opens [Copilot chat in model-driven apps](/power-apps/user/use-copilot-model-driven-apps). These terms align with Microsoft 365 apps for consistency.
+If both Microsoft 365 Copilot chat and [Copilot chat in apps](/power-apps/user/use-copilot-model-driven-apps) are enabled, you can access and try each option. The **Chat** option opens Microsoft 365 Copilot Chat, and the **App Skills** option opens [Copilot chat in apps](/power-apps/user/use-copilot-model-driven-apps). These terms align with Microsoft 365 apps for consistency.
 
 :::image type="content" source="/power-apps/user/media/copilot-chat-switcher.png" alt-text="Screenshot that shows the Copilot split button showcasing Chat and App Skills options on a page.":::
 
@@ -24,7 +24,7 @@ Expand or collapse the Microsoft 365 Copilot pane as needed.
 
 ## Use Microsoft 365 Copilot to ask questions
 
-Microsoft 365 Copilot chat in model-driven apps answers questions about the Dataverse table data in the app.
+Microsoft 365 Copilot chat in apps answers questions about the Dataverse table data in the app.
 
 :::image type="content" source="/power-apps/user/media/microsoft-365-copilot-question-answer.png" alt-text="Screenshot that shows a question and response in Microsoft 365 Copilot." lightbox="/power-apps/user/media/microsoft-365-copilot-question-answer.png":::
 
@@ -38,9 +38,9 @@ To help you get started, Microsoft 365 Copilot chat suggests questions to ask. M
 
 > [!IMPORTANT]
 >
-> When you explicitly select an agent in Microsoft 365 Copilot chat in model-driven apps, the agent no longer answers questions about the Dataverse table data in the app unless you explicitly configure your agent to do so. However, the agent uses information from the chat history. To get the side chat to answer questions about the Dataverse table data in the app again, you need to remove the explicit agent selection.
+> When you explicitly select an agent in Microsoft 365 Copilot chat in apps, the agent no longer answers questions about the Dataverse table data in the app unless you explicitly configure your agent to do so. However, the agent uses information from the chat history. To get the side chat to answer questions about the Dataverse table data in the app again, you need to remove the explicit agent selection.
 
-Microsoft 365 Copilot chat in model-driven apps lets you use any agent available in Microsoft 365 Copilot right from the side pane. Once an agent is available within Microsoft 365 Copilot, you can interact with your agent by either choosing it from the navigation panel or @ mentioning it. 
+Microsoft 365 Copilot chat in apps lets you use any agent available in Microsoft 365 Copilot right from the side pane. Once an agent is available within Microsoft 365 Copilot, you can interact with your agent by either choosing it from the navigation panel or @ mentioning it. 
 
 :::image type="content" source="/power-apps/user/media/microsoft-365-copilot-opened-navigation.png" alt-text="Screenshot that shows how to open the Microsoft 365 Copilot navigation panel with different agents displayed." lightbox="/power-apps/user/media/microsoft-365-copilot-opened-navigation.png":::
 
@@ -53,7 +53,3 @@ One of the benefits of @ mentioning an agent is that you can add or remove it fr
 - The model chooser option, which allows users to select different AI models or configurations in the standalone version, is not available.
 - Microsoft Copilot Studio agents published to Microsoft 365 Copilot through Copilot Studio channels don't have context passed from the app through Microsoft 365 Copilot chat to the agent.
 
-## Related information
-
-- [Add Microsoft 365 Copilot chat to model-driven apps](/power-apps/maker/model-driven-apps/add-microsoft-365-copilot)
-- [Customize Microsoft 365 Copilot chat in model-driven apps](/power-apps/maker/model-driven-apps/customize-microsoft-365-copilot-chat)

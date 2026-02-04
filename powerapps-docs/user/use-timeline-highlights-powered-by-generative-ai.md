@@ -11,3 +11,4 @@ ms.topic: concept-article
 # Use AI-generated timeline highlights
 
 [!INCLUDE [use-timeline-highlights](~/../shared/dynamics365-core/use-timeline-highlights-powered-by-generative-ai.md)]
+

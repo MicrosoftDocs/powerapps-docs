@@ -4,7 +4,7 @@ Copilot enables you to visualize the data in the view in the form of a chart to 
 
 ## Prerequisites
 
-- Copilot assistance is available for all model-driven apps on the web where the [modern, refreshed look](/power-apps/user/modern-fluent-design) is turned on.
+- Copilot assistance is available for all apps on the web where the [modern, refreshed look](/power-apps/user/modern-fluent-design) is turned on.
 - Your administrator must enable [Allow AI to generate charts to visualize the data in a view](/power-platform/admin/settings-features#natural-language-grid-and-view-search-preview) setting in Power Platform admin center.
 
 [!INCLUDE [file-name](~/../shared-content/shared/preview-includes/preview-note-pp.md)]
@@ -74,8 +74,3 @@ You use natural language prompts in the Copilot bar on the grid page to visualiz
 1. **Feedback**: Select **Thumbs up** or **Thumbs Down** to provide feedback about the feature.
 
 To provide feedback about the feature, select the thumbs up or down button on the chart pane, and provide detailed comments to help improve the feature.
-
-## Related information
-
-[Manage feature settings](/power-platform/admin/settings-features)  
-[Responsible AI FAQ about Copilot visualizations on a view](/power-apps/maker/common/faq-visualize-view)   

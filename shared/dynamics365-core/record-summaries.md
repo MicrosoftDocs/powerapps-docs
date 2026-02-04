@@ -1,4 +1,4 @@
-The **Row summary** feature in model-driven apps provides users with a concise, AI-generated overview of key details about a record. Summaries help users quickly understand essential information without manually scanning fields, related records, or activity timelines. You see summaries as a paragraph or bullet points, so they're easy to read.
+The **Row summary** feature in apps provides users with a concise, AI-generated overview of key details about a record. Summaries help users quickly understand essential information without manually scanning fields, related records, or activity timelines. You see summaries as a paragraph or bullet points, so they're easy to read.
 
 Summaries can be accessed in two ways:
 
@@ -14,7 +14,7 @@ The feature enhances user efficiency by delivering context-rich insights directl
 
 ## Prerequisite
 
-Each of the following settings must be turned on to see the row summaries for model-driven apps.
+Turn on each of the following settings to see the row summaries for apps.
 
 - Copilot is turned on for the tenant.
 - The [AI insight cards](/power-platform/admin/settings-features#ai-insight-cards-preview) toggle is turned on for the Power Platform environment. 
@@ -47,8 +47,3 @@ Here are some actions you can take with summaries:
 - **Refresh** (forms only): Select the **Refresh** button to regenerate the summary so it reflects the latest updates to the record.
 - **Expand/Collapse** (forms only): In forms, the insights bar is collapsed by default and shows a one-line peek of the summary. Expand the insights bar to see more details.
   :::image type="content" source="/power-apps/user/media/row_summary_collapsed.png" alt-text="Screenshot that shows a collapsed row summary." lightbox="/power-apps/user/media/row_summary_collapsed.png"::: 
-
-### Related information
-
-[Manage feature settings](/power-platform/admin/settings-features)  
-[Configuring summaries for tables](/power-apps/maker/data-platform/configure-form-row-summary#create-a-row-summary)  
