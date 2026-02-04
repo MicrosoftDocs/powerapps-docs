@@ -647,8 +647,6 @@
               href: ./canvas-apps/controls/control-shapes-icons.md
             - name: Slider
               href: ./canvas-apps/controls/control-slider.md
-            - name: Stream Video (retired)
-              href: ./canvas-apps/controls/control-stream-video.md
             - name: Label
               href: ./canvas-apps/controls/control-text-box.md
             - name: Text input
