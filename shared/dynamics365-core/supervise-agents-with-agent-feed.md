@@ -1,6 +1,6 @@
 [!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
-Agent feed in Power Apps lets business users easily manage and work with agents directly in their apps. It makes apps a central hub for human-agent collaboration by showing a complete activity feed of what agents do for them, wherever they are in the app. 
+Agent feed lets business users easily manage and work with agents directly in their apps. It makes apps a central hub for human-agent collaboration by showing a complete activity feed of what agents do for them, wherever they are in the app. 
 
 ## Prerequisites
 
@@ -15,11 +15,11 @@ Agent feed in Power Apps lets business users easily manage and work with agents 
 > - This feature is only available in the English language.
 
 > [!NOTE]
-> Currently, only the owner of an agent can view and supervise that agent’s data in a model-driven app. Support for sharing agent history with other users is a top priority and is in development.
+> Currently, only the owner of an agent can view and supervise that agent’s data in an app. Support for sharing agent history with other users is a top priority and is in development.
 
 ## Use agent feed to supervise agents
 
-When you enable agent feed, it appears at the top of the site map in a model-driven app.
+When you enable agent feed, it appears at the top of the site map in an app.
    :::image type="content" source="/power-apps/user/media/agent-supervision/agent-feed-sitemap.png" alt-text="Agent feed sitemap" lightbox="/power-apps/user/media/agent-supervision/agent-feed-sitemap.png":::
 
 You can view the feed in the side pane or expand it to full screen.
