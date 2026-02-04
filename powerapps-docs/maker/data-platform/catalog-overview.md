@@ -3,13 +3,14 @@ title: "Catalog in Power Platform"
 description: "Use the catalog in Power Platform to managed shared components and templates so that administrators, application makers, and developers within an organization can reuse each other's work."
 author: isaacwinoto
 ms.author: isaacwinoto
-ms.date: 09/10/2024
+ms.date: 02/04/2026
 ms.reviewer: matp
 ms.topic: overview
 ms.subservice: dataverse-maker
 contributors:
  - JimDaly
  - ChrisGarty
+ - armiantos
 ---
 # Catalog in Power Platform
 
