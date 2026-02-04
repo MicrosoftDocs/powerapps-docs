@@ -14,7 +14,7 @@ The feature enhances user efficiency by delivering context-rich insights directl
 
 ## Prerequisite
 
-Each of the following settings must be turned on to see the row summaries for model-driven apps.
+Turn on each of the following settings to see the row summaries for apps.
 
 - Copilot is turned on for the tenant.
 - The [AI insight cards](/power-platform/admin/settings-features#ai-insight-cards-preview) toggle is turned on for the Power Platform environment. 
