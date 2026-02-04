@@ -94,8 +94,3 @@ For actions that use a Dataverse tool, users are provided with a direct link to 
 
 > [!NOTE]
 > Direct links aren't currently supported for non-Dataverse tools.
-
-## Related information
-
-[Add agents to an app](/power-apps/maker/model-driven-apps/add-agents-to-app)     
-[Customize Copilot Chat](/power-apps/maker/model-driven-apps/customize-copilot-chat)
