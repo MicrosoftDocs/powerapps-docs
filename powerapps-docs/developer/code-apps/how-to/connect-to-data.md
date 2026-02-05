@@ -67,19 +67,19 @@ Use one of the following methods:
 
 #### Use PAC CLI
 
-Use the Power Apps CLI to list your available connections and retrieve their IDs by using the [pac connection list](/power-platform/developer/cli/reference/connection#pac-connection-list) command.
+Use the Power Apps CLI to list your available connections and get their IDs by using the [pac connection list](/power-platform/developer/cli/reference/connection#pac-connection-list) command.
 
-`pac connection list` displays a table of all your connections, including the **Connection ID** and **API Name**. The API name serves as the `appId` when you add a data source.
+`pac connection list` shows a table of all your connections, including the **Connection ID** and **API Name**. The API name acts as the `appId` when you add a data source.
 
 :::image type="content" source="media/pac-cli-connection-list.png" alt-text="PAC CLI list output showing Connection ID and API Name":::
 
 #### Use Power Apps URL
 
-You can also retrieve this information by using Power Apps. When you view the details of a connection, you can see the URL.
+You can also get this information by using Power Apps. When you view the details of a connection, you can see the URL.
 
 :::image type="content" source="media/powerapps-select-connection.png" alt-text="Select a connection in Power Apps to view its details":::
 
-The API name and connection ID appear in the URL:
+The API name and connection ID show up in the URL:
 
 :::image type="content" source="media/powerapps-connection-apiname-connectionid.png" alt-text="Connection details showing API name and Connection ID values":::
 
@@ -135,7 +135,7 @@ pac code add-data-source `
 
 #### Discover available datasets and tables
 
-Use PAC CLI [`pac code list`](/power-platform/developer/cli/reference/code#pac-code-list) commands to discover available datasets, tables, and stored procedures for your connections. This provides an easier alternative to manually retrieving metadata through browser developer tools.
+Use PAC CLI [`pac code list`](/power-platform/developer/cli/reference/code#pac-code-list) commands to discover available datasets, tables, and stored procedures for your connections. This method is easier than manually retrieving metadata through browser developer tools.
 
 **List datasets:**
 
@@ -172,11 +172,11 @@ pac code add-data-source -a "shared_sql" -c "aaaaaaaa000011112222bbbbbbbbbbbb" `
 ```
 
 > [!TIP]
-> Copy the exact **Name** values from the command output when using them with `add-data-source`. Names are case-sensitive and may contain special characters.
+> Copy the exact **Name** values from the command output when using them with `add-data-source`. Names are case-sensitive and might contain special characters.
 
 ### Add a SQL stored procedure as a data source
 
-From a command line, run the following command. Use the API name and connection ID that you collected previously.
+Run the following command from a command line. Use the API name and connection ID that you collected previously.
 
 ```powershell
 pac code add-data-source -a <apiId> -c <connectionId> -d <dataSourceName> -sp <storedProcedureName> 
@@ -196,7 +196,7 @@ pac code add-data-source `
 
 If needed, you can delete data sources after adding them.
 
-From a command line, run the following command. Use the API name and connection ID that you collected previously.
+Run the following command from a command line. Use the API name and connection ID that you collected previously.
 
 ```powershell
 pac code delete-data-source -a <apiName> -ds <dataSourceName> 
