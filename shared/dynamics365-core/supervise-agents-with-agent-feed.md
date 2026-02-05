@@ -24,7 +24,6 @@ To allow users to view agent's activity in the app, agent must be connected to P
 
 You can view the feed in the side pane or expand it to full screen.
    :::image type="content" source="/power-apps/user/media/agent-supervision/agent-feed-expand.png" alt-text="Agent feed expand":::
-   :::image type="content" source="/power-apps/user/media/agent-supervision/agent-feed-expanded.png" alt-text="Agent feed expanded":::
 
 The feed shows a list of agent tasks. Each item can includes:
 
