@@ -9884,7 +9884,8 @@
       "source_path": "powerapps-docs/user/use-suggested-actions-in-the-agent-feed.md",
       "redirect_url": "/power-apps/user/supervise-agents-with-agent-feed",
       "redirect_document_id": false
-    }  
+    },
+    {  
       "source_path": "powerapps-docs/developer/component-framework/publish-components-app-source.md",
       "redirect_url": "/power-apps/developer/component-framework/publish-components-marketplace",
       "redirect_document_id": false
