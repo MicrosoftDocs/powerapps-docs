@@ -38,8 +38,11 @@ Autonomous agents can be added to model-driven apps to help users get work done 
 > Currently, agent feed items in model‑driven apps are visible to all users who have access to the Agent Task table. To prevent unintended exposure, agents configured to various apps shouldn't log tasks targeted at specific users.
 
 ## Supervise an autonomous agent within the app
+The enhanced agent feed is powered by the automomous agents using Power Apps MCP Server. Power Apps MCP sever tools enable following two core human‑agent collaboration patterns:
+1. Autonomous Dataverse record creation and updates with Human‑in‑the‑Loop review.
+1. Agent requests for human assistance and logging tasks for human review.
 
-You can supervise elligible autonomous agents with any model‑driven app. We recommend adding agents to apps that contain functionality or data relevant to the agent’s intended purpose.
+In agent‑enabled apps, user focus shift from doing the work to supervising and prioritizing agent‑driven work. Agents help with automations and organize work, ensuring business experts remain involved in decision‑making and critical actions. You can supervise elligible autonomous agents with any model‑driven app. We recommend adding agents to apps that contain functionality or data relevant to the agent’s intended purpose.
 
 > [!NOTE]
 > To be eligible for addition to an app, an agent must be connected to Power Apps MCP Server or be in a published state. A maker can verify an agent's eligibility to be added to an app via the right-hand properties pane where the requirements for an agent to be added to an app are displayed. The **Add to app** button is disabled for any agents that don't meet the requirements to be eligible for addition.
