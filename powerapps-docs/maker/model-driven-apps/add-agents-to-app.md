@@ -1,13 +1,13 @@
 ---
 title: "Add agents to your model-driven app" 
 description: Learn how to add agents to your model-driven app in Power Apps.
-ms.date: 09/16/2025
+ms.date: 02/04/2026
 ms.reviewer: matp
 ms.topic: how-to
 author: adrianorth
 ms.subservice: mda-maker
 ms.author: aorth
-contributors: Jacob-Wilkinson
+contributors: Jacob-Wilkinson, HemantGaur
 ms.service: powerapps
 search.audienceType: 
   - maker
@@ -18,7 +18,7 @@ search.audienceType:
 
 Model-driven apps support the use of agents to enhance user productivity and automate tasks. There are two types of agents available in model-driven apps: 
 
-- *Autonomous agents*, created in Microsoft Copilot Studio, can be added to apps for supervised execution by users.
+- *Autonomous agents*, created in Microsoft Copilot Studio, operate across varying levels of autonomy and collaborate with users through Power Apps MCP Server, where agents generate actionable tasks that users can review or provide inputs to unblock agent and complete these HITL tasks.
 
 - *App assistant agents*, which can be created to provide custom topics, knowledge sources, and more within the model-driven app.
 
