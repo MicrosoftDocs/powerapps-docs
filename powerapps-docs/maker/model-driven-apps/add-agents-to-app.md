@@ -37,14 +37,41 @@ Autonomous agents can be added to model-driven apps to help users get work done 
 > [!IMPORTANT]
 > Currently, agent feed items in model‑driven apps are visible to all users who have access to the Agent Task table. To prevent unintended exposure, agents configured to various apps shouldn't log tasks targeted at specific users.
 
-## Add an autonomous agent to an app
+## Supervise an autonomous agent within the app
 
-You can add an agent to any model-driven app of your choosing. We recommend adding agents to model-driven apps that have related data. 
+You can supervise elligible autonomous agents with any model‑driven app. We recommend adding agents to apps that contain functionality or data relevant to the agent’s intended purpose.
 
 > [!NOTE]
-> To be eligible for addition to an app, an agent must be connected to Power Apps MCP server or be published. A maker can verify an agent's eligibility to be added to an app via the right-hand properties pane where the requirements for an agent to be added to an app are displayed. The **Add to app** button is disabled for any agents that don't meet the requirements to be eligible for addition.
+> To be eligible for addition to an app, an agent must be connected to Power Apps MCP Server or be in a published state. A maker can verify an agent's eligibility to be added to an app via the right-hand properties pane where the requirements for an agent to be added to an app are displayed. The **Add to app** button is disabled for any agents that don't meet the requirements to be eligible for addition.
 > :::image type="content" source="media/add-agents-to-app/app-designer-properties-pane.png" alt-text="App Designer Properties pane":::
 
+## Create an autonomous agent connected to Power Apps MCP server 
+The Model Context Protocol (MCP) is an open protocol that enables seamless integration between large language model (LLM) applications and external data sources and tools. Your agent can use the Power Apps MCP server to communicate with your Power Apps, providing right human-in-the-loop supervision or agentic workflows. To use the Power Apps MCP server, you need to enable and configure the MCP server with an agent. More information: Power Apps MCP server (new topic)
+
+1. Sign in to Power Apps, select **Apps**, and then select **Edit** for the app you want to modify.
+1. In the app designer, go to the **Agents** tab.
+1. Select **Create agent** and it will open the Microsoft Copilot studio in the new tab.
+    :::image type="content" source="media/add-agents-to-app/app-designer-create-agent.png" alt-text="App designer create agent":::
+1. Enter the name and description and scroll to tools and select **Add tool** button
+    :::image type="content" source="media/add-agents-to-app/copilot-studio-add-tool.png" alt-text="Add tool to agent":::
+1. Search for Power Apps MCP Server and select it
+    :::image type="content" source="media/add-agents-to-app/copilot-studio-power-apps-mcp-server.png" alt-text="Search Power apps MCP server":::
+1. Select **Add and configure** to connect agent to Power Apps MCP tools.
+    :::image type="content" source="media/add-agents-to-app/copilot-studio-confiure-power-apps-mcp-server.png" alt-text="Add and configure Power Apps MCP server":::
+1. You will see following three tools addded. See Power Apps MCP server for agent supervision (new topic) for details on these tools. You can selectively enable the tools needed by your agents using the enablement toggle.
+    :::image type="content" source="media/add-agents-to-app/copilot-studio-confiure-power-apps-mcp-tools.png" alt-text="Search Power apps MCP server":::
+1. Add a trigger for this autonoumous agent so that it is invoked when the trigger is fired. We have used creation of one of the app entities **Booking** for this example
+    :::image type="content" source="media/add-agents-to-app/copilot-studio-power-apps-agent-trigger.png" alt-text="Add trigger to automomous agent":::
+1. Now the agent is ready to use Power Apps MCP server tools. Folllwing impage shows how agent can add task for human review using natural language instructions. This internally will map tp log_for_review tool.
+    :::image type="content" source="media/add-agents-to-app/copilot-studio-power-apps-agent-instructions.png" alt-text="Add instructions to automomous agent":::
+1. When a new booking record is created, it triggers the agent which adds the review task in the agent feed **completed** tab.
+    :::image type="content" source="media/add-agents-to-app/copilot-studio-power-apps-agent-instructions-result.png" alt-text="Review task created by automomous agent":::
+
+Current limitations
+1.    Only model-driven Power Apps support agent supervision and feature is not available for Canvas Apps or Vibe Apps.
+1.    Power Apps MCP server is supported only via Microsoft Copilot Studio.
+
+## Add an autonomous agent to an app
 1. Sign in to Power Apps, select **Apps**, and then select **Edit** for the app you want to modify.
 1. In the app designer, go to the **Agents** tab.
 1. Under the **Agent feed** dropdown, the **In your environment** dropdown appears that lists all agents in your environment. Locate the agent you want to add.
