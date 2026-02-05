@@ -18,7 +18,7 @@ search.audienceType:
 
 Model-driven apps support the use of agents to enhance user productivity and automate tasks. There are two types of agents available in model-driven apps: 
 
-- *Autonomous agents*, created in Microsoft Copilot Studio, operate across varying levels of autonomy and collaborate with users through Power Apps MCP Server, where agents generate actionable tasks that users can review or provide inputs to unblock agent and complete these HITL tasks.
+- *Autonomous agents*, created in Microsoft Copilot Studio, collaborate with users through the new Power Apps MCP Server, allowing agents to generate actionable agent feed tasks for users to review results or step in with inputs to unblock and complete Human‑in‑the‑Loop flows.
 
 - *App assistant agents*, which can be created to provide custom topics, knowledge sources, and more within the model-driven app.
 
@@ -28,14 +28,14 @@ Model-driven apps support the use of agents to enhance user productivity and aut
 >
 > - This is a preview feature.
 > - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2216214), and are available before an official release so that customers can get early access and provide feedback.
-> - This feature is available only in the English language.
+> - This feature is available only in the English language and it replaces older Microsoft Copilot Studio activity based agent feed version
 
-Autonomous agents can be added to model-driven apps to assist users with task completion. When added to an app, these agents can be supervised by users, allowing them to validate completed tasks, intervene when errors occur, and complete tasks that the agent was unable to finish—all within the context of their regular workflows.
+Autonomous agents can be added to model-driven apps to help users get work done faster. Using Power Apps MCP Server, agents can post actionable tasks for user review, allowing human to validate results, step in when needed, and finish work the agent couldn’t complete—without leaving their app.
 
 [Learn more about how to supervise agents](../../user/supervise-agents-with-agent-feed.md)
 
 > [!IMPORTANT]
-> Currently, only the owner of an agent can view and supervise that agent's data in a model-driven app.
+> Currently, agent feed data in model‑driven apps is visible to all users with access to the Agent Task table. To prevent unintended exposure, agents configured for specific apps must not use the agent feed to log tasks targeted at specific users.
 
 ## Add an autonomous agent to an app
 
