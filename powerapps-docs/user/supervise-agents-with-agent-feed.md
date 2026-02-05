@@ -6,8 +6,8 @@ ms.reviewer: "smurkute"
 ms.topic: "how-to"
 author: "jacobwilkinson"
 ms.subservice: end-user
-ms.author: "jacwilkinson", HemantGaur
-contributors: 
+ms.author: "hemantg"
+contributors: "jacwilkinson"
 ms.service: "powerapps"
 search.audienceType: 
   - enduser
