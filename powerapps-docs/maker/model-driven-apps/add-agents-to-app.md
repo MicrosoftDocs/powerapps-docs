@@ -18,7 +18,7 @@ search.audienceType:
 
 Model-driven apps support the use of agents to enhance user productivity and automate tasks. There are two types of agents available in model-driven apps: 
 
-- *Autonomous agents*, created in Microsoft Copilot Studio, collaborate with users through the new Power Apps MCP Server, allowing agents to generate actionable agent feed tasks for users to review results or step in with inputs to unblock and complete Human‑in‑the‑Loop flows.
+- *Autonomous agents*, created in Microsoft Copilot Studio, collaborate with users through the new Power Apps model context protocol (MCP) server, allowing agents to generate actionable agent feed tasks for users to review results or step in with inputs to unblock and complete human‑in‑the‑loop flows.
 
 - *App assistant agents*, which can be created to provide custom topics, knowledge sources, and more within the model-driven app.
 
@@ -28,27 +28,27 @@ Model-driven apps support the use of agents to enhance user productivity and aut
 >
 > - This is a preview feature.
 > - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2216214), and are available before an official release so that customers can get early access and provide feedback.
-> - This feature is available only in the English language and it replaces older Microsoft Copilot Studio activity based agent feed version
+> - This feature is available only in the English language and it replaces the earlier Microsoft Copilot Studio activity-based agent feed.
 
-Autonomous agents can be added to model-driven apps to help users get work done faster. Using Power Apps MCP Server, agents can post actionable tasks for user review, allowing human to validate results, step in when needed, and finish work the agent couldn’t complete—without leaving their app.
+Autonomous agents can be added to model-driven apps to help users get work done faster. Using the Power Apps MCP server, agents can post actionable tasks for user review, allowing humans to validate results, step in when needed, and finish work the agent couldn’t complete—without leaving their app.
 
 [Learn more about how to supervise agents](../../user/supervise-agents-with-agent-feed.md)
 
 > [!IMPORTANT]
-> Currently, agent feed items in model‑driven apps are visible to all users who have access to the Agent Task table. To prevent unintended exposure, agents configured to various apps should not log tasks targeted at specific users.
+> Currently, agent feed items in model‑driven apps are visible to all users who have access to the Agent Task table. To prevent unintended exposure, agents configured to various apps shouldn't log tasks targeted at specific users.
 
 ## Add an autonomous agent to an app
 
 You can add an agent to any model-driven app of your choosing. We recommend adding agents to model-driven apps that have related data. 
 
 > [!NOTE]
-> To be eligible for addition to an app, an agent must be connected to Power Apps MCP Server or be published. A maker can verify an agent's eligibility to be added to an app via the right-hand properties pane where the requirements for an agent to be added to an app are displayed. The **Add to app** button is disabled for any agents that don't meet the requirements to be eligible for addition.
+> To be eligible for addition to an app, an agent must be connected to Power Apps MCP server or be published. A maker can verify an agent's eligibility to be added to an app via the right-hand properties pane where the requirements for an agent to be added to an app are displayed. The **Add to app** button is disabled for any agents that don't meet the requirements to be eligible for addition.
 > :::image type="content" source="media/add-agents-to-app/app-designer-properties-pane.png" alt-text="App Designer Properties pane":::
 
 1. Sign in to Power Apps, select **Apps**, and then select **Edit** for the app you want to modify.
 1. In the app designer, go to the **Agents** tab.
 1. Under the **Agent feed** dropdown, the **In your environment** dropdown appears that lists all agents in your environment. Locate the agent you want to add.
-1. Select **...** (more options) next to the agent, and then select **Add to app**.
+1. Select **...** (more options) next to the agent, and then select **Add to app**.<!--This should be Add to feed, right? -->
     :::image type="content" source="media/add-agents-to-app/app-designer-add-agent-to-app.png" alt-text="App designer add agent to app":::
 1. Verify agent feed is added to your app with all added agents by saving, publishing, and playing your app. Previewing agent feed in the app designer isn't currently supported.
 1. To view or edit the agent in Copilot Studio, select **Edit in Microsoft Copilot Studio**.
