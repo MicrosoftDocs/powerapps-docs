@@ -42,10 +42,8 @@ Autonomous agents can be added to model-driven apps to help users get work done 
 You can add an agent to any model-driven app of your choosing. We recommend adding agents to model-driven apps that have related data. 
 
 > [!NOTE]
-> To be eligible for addition to an app, an agent must be published. A maker can verify an agent's eligibility to be added to an app via the right-hand properties pane where the requirements for an agent to be added to an app are displayed. The **Add to app** button is disabled for any agents that don't meet the requirements to be eligible for addition.
+> To be eligible for addition to an app, an agent must be connected to Power Apps MCP Server or be published. A maker can verify an agent's eligibility to be added to an app via the right-hand properties pane where the requirements for an agent to be added to an app are displayed. The **Add to app** button is disabled for any agents that don't meet the requirements to be eligible for addition.
 > :::image type="content" source="media/add-agents-to-app/app-designer-properties-pane.png" alt-text="App Designer Properties pane":::
->
-> Up to 10 agents can be added to an app at a time.
 
 1. Sign in to Power Apps, select **Apps**, and then select **Edit** for the app you want to modify.
 1. In the app designer, go to the **Agents** tab.
@@ -62,8 +60,8 @@ You can add an agent to any model-driven app of your choosing. We recommend addi
 ## Remove an autonomous agent from an app
 
 1. In the app designer, go to the **Agents** tab.
-1. In the **In your app** dropdown, select **For supervision**.
-1. Locate the agent you want to remove, select **...**, and then select **Remove from app**.
+1. In the **Agent feed** dropdown, select **In your feed**.
+1. Locate the agent you want to remove, select **...**, and then select **Remove from feed**.
 
 > :::image type="content" source="media/add-agents-to-app/app-designer-remove-agent.png" alt-text="App designer remove agent from app":::
 
