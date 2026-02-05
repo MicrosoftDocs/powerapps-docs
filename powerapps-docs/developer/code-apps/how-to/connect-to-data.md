@@ -3,7 +3,7 @@ title: "How to: Connect your code app to data"
 description: "Learn how to connect your code app to data"
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 02/02/2026
+ms.date: 02/05/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
@@ -138,22 +138,26 @@ pac code add-data-source `
 Use PAC CLI [`pac code list`](/power-platform/developer/cli/reference/code#pac-code-list) commands to discover available datasets, tables, and stored procedures for your connections. This provides an easier alternative to manually retrieving metadata through browser developer tools.
 
 **List datasets:**
-```bash
+
+```powershell
 pac code list-datasets -a <apiId> -c <connectionId>
 ```
 
 **List tables:**
-```bash
+
+```powershell
 pac code list-tables -a <apiId> -c <connectionId> -d <datasetName>
 ```
 
 **List SQL stored procedures:**
-```bash
+
+```powershell
 pac code list-sql-stored-procedures -c <connectionId> -d <datasetName>
 ```
 
 **Example workflow for SQL Server:**
-```bash
+
+```powershell
 # Step 1: List available datasets
 pac code list-datasets -a "shared_sql" -c "aaaaaaaa000011112222bbbbbbbbbbbb"
 
@@ -166,7 +170,9 @@ pac code add-data-source -a "shared_sql" -c "aaaaaaaa000011112222bbbbbbbbbbbb" `
   -t "[dbo].[MobileDeviceInventory]" `
   -d "paconnectivitysql0425.database.windows.net,paruntimedb"
 ```
-> **Tip:** Copy the exact **Name** values from the command output when using them with `add-data-source`. Names are case-sensitive and may contain special characters.
+
+> [!TIP]
+> Copy the exact **Name** values from the command output when using them with `add-data-source`. Names are case-sensitive and may contain special characters.
 
 ### Add a SQL stored procedure as a data source
 
