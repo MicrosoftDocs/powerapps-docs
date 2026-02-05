@@ -44,6 +44,16 @@ The enhanced agent feed is powered by the automomous agents using Power Apps MCP
 
 In agent‑enabled apps, user focus shift from doing the work to supervising and prioritizing agent‑driven work. Agents help with automations and organize work, ensuring business experts remain involved in decision‑making and critical actions. You can supervise elligible autonomous agents with any model‑driven app. We recommend adding agents to apps that contain functionality or data relevant to the agent’s intended purpose.
 
+### Terminology
+| Term | Refers to |
+|------|-----------|
+| Agent | The customer’s custom autonomous agent |
+| Task/Agent Task |A single request for human assistance or human review within an agentic workflow |
+| Agent Feed | The system for surfacing Agent tasks to the user |
+| Agent Canvas | The UX surface where users provide the requested human input or see task details |
+| Power Apps MCP Server | The collection of tools available to agents for interacting with capabilities of the business app platform| 
+
+
 > [!NOTE]
 > To be eligible for addition to an app, an agent must be connected to Power Apps MCP Server or be in a published state. A maker can verify an agent's eligibility to be added to an app via the right-hand properties pane where the requirements for an agent to be added to an app are displayed. The **Add to app** button is disabled for any agents that don't meet the requirements to be eligible for addition.
 > :::image type="content" source="media/add-agents-to-app/app-designer-properties-pane.png" alt-text="App Designer Properties pane":::
