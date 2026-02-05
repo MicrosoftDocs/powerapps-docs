@@ -1,6 +1,6 @@
 ---
 title: Button modern control in Power Apps
-description: Learn about the details, properties, and examples of the button modern control in Power Apps.
+description: Discover how to use the button modern control in Power Apps. Learn properties, examples, and configuration steps to create interactive buttons for your apps.
 author: yogeshgupta698
 
 ms.topic: reference
@@ -24,10 +24,12 @@ contributors:
 A control that the user selects to interact with the app.
 
 ## Description
+
 Use the modern button to set a button as primary or secondary. Configure the **[OnSelect](../properties-core.md)** property of a **Button** control to run one or more formulas when the user selects the control. As a design pattern, always place the primary button on the left and the secondary button to the right of it. The key properties for this control are **OnSelect** and **Text**.
 
 
-## Adding and configuring a button
+## Add and configure a button
+
 1. In Power Apps Studio, select **Insert** > **Button** from the modern controls.
 1. The button appears on your canvas with default text "Button".
 1. With the button selected, you can:
@@ -36,11 +38,12 @@ Use the modern button to set a button as primary or secondary. Configure the **[
    - **Style the button:** Use **Appearance** and other style properties.
 
 ## Button editing experience
+
 Unlike Excel's developer mode, Power Apps provides a visual design interface:
-- **Properties pane:** Configure all button properties on the right side.
-- **Formula bar:** Enter formulas at the top of the screen.
-- **Canvas:** See changes immediately as you design.
-- **Tree view:** Navigate between controls on the left side.
+- **Properties pane**: Configure all button properties on the right side.
+- **Formula bar**: Enter formulas at the top of the screen.
+- **Canvas**: See changes immediately as you design.
+- **Tree view**: Navigate between controls on the left side.
 
 The button properties update in real time as you make changes. No separate popup or developer mode is needed.
 
