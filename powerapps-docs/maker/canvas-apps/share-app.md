@@ -139,7 +139,7 @@ You can still use the classic app sharing experience by selecting the classic sh
 
 1. At the bottom of the share panel, select **Share**.
 
-    Users can now run the app by using Power Apps Mobile on a mobile device or from AppSource on [Microsoft 365](https://www.office.com/apps) in a browser. Co-owners can edit and share the app in [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+    Users can now run the app by using Power Apps Mobile on a mobile device or from Marketplace on [Microsoft 365](https://www.office.com/apps) in a browser. Co-owners can edit and share the app in [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
     If you sent an email invitation, users can also run the app by selecting the link in the invitation email:
 

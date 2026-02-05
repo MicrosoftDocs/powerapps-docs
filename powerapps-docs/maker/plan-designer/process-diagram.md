@@ -4,7 +4,7 @@ description: Discover how to use plans to generate process diagrams that enhance
 author: szlo
 contributors: mduelae
 ms.topic: how-to
-ms.date: 08/6/2025
+ms.date: 01/12/2026
 ms.update-cycle: 180-days
 ms.author: mkaur
 ms.reviewer: mkaur
@@ -21,7 +21,7 @@ ms.custom:
 
 # Generate process diagrams
 
-Plans in Power Apps helps teams create and refine diagrams as part of the plan to clarify user interactions and build effective solutions. Process diagrams make workflows clearer, improve communication, and help teams work more efficiently, especially on complex projects.
+Transform complex workflows into clear, visual process diagrams with plans in Power Apps. Whether you're managing multi-step approvals or mapping customer journeys, these AI-generated diagrams help your team communicate better and work more efficiently on complex projects.
 
 Optionally, include images of existing process diagrams as additional resources during the creation experience to enhance clarity. But if you add predefined processes, Copilot might just replicate what you provide, which can limit creativity and cause duplication or misinterpretation.
 
@@ -41,18 +41,18 @@ Processes use a two level hierarchy.
 
 ## Understand a process
 
-A process has these types of nodes.
+Process diagrams use three main types of nodes to represent different workflow elements:
 
-1. **Events** 
-   - **Start**: Event that starts the process.
-   - **Intermediate**: Event that happens during the process before it continues.
-   - **End**: Event that signals the process is finished.
+1. **Events** control the flow of your proces:
+   - **Start**: Triggers the beginning of your workflow
+   - **Intermediate**: Marks a checkpoint during the process
+   - **End**: Indicates successful completion
 
-1. **Gateways**  
-   - **Exclusive**: At a decision point, the process takes only one path from the gateway.
-
-1. **Activities**
-   - **Task**: The main action a user or system takes to finish a user story.
+1. **Gateways** handle decision-making:
+   - **Exclusive**: Creates a single path based on conditions (if/then logic)
+   
+1. **Activities** represent actionable work:
+   - **Task**: Specific actions performed by users or systems
 
 ### Edit a process
 

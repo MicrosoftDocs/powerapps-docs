@@ -39,7 +39,7 @@ If you're not signed up for Power Apps, [sign up for free](https://make.powerapp
 Review the following privileges and supported devices to run Power Apps Mobile app:
 
 - [Required privileges](/dynamics365/mobile-app/set-up-dynamics-365-for-phones-and-dynamics-365-for-tablets#required-privileges)
-- [Supported platforms for running apps using the Power Apps mobile app](../limits-and-config.md#supported-platforms-for-running-apps-using-the-power-apps-mobile-app)
+- [Supported platforms for running apps using the Power Apps mobile app](../limits-and-config.md#supported-platforms-for-running-apps-by-using-the-power-apps-mobile-app).
 
 ## Sign in
 

@@ -2,7 +2,7 @@
 title: "Web API Conditional Operations Sample (Microsoft Dataverse)| Microsoft Docs"
 description: "This collection of samples demonstrate how to perform operations that are conditionally based upon the version of the table row contained on the Microsoft Dataverse server and/or currently maintained by the client."
 ms.topic: sample
-ms.date: 03/22/2025
+ms.date: 01/27/2026
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: jdaly
@@ -16,10 +16,11 @@ contributors:
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-This collection of samples demonstrate how to perform operations that are conditionally based upon the version of the table row contained on the Microsoft Dataverse server and/or currently maintained by the client. For more information, see [Perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md). This sample is implemented as a separate project for the following languages:  
+This collection of samples demonstrates how to perform operations that are conditional based upon the version of the table row contained on the Microsoft Dataverse server and the version currently maintained by the client. [Learn how to perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md). This sample is implemented as a separate project for the following languages:  
   
 - [Web API Conditional Operations Sample (C#)](samples/webapiservice-conditional-operations.md)
 - [Web API Conditional Operations Sample (Client-side JavaScript)](samples/conditional-operations-client-side-javascript.md)
+- [Web API Conditional Operations Sample (PowerShell)](samples/conditional-operations-powershell.md)
  
 The Dataverse Web API follows the conventions of the [OData v4.0](https://www.odata.org/documentation/) protocol, which uses [ETags](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752236) to implement resource version control. Web API conditional operations depend upon this versioning  mechanism.  
   
@@ -27,7 +28,7 @@ This article explains the structure and content of the samples at a higher, lang
   
 ## Demonstrates
 
-This sample is divided into three principal sections, listed in the following table.   Each section contains a set of related Web API operations which are discussed in greater detail in the associated conceptual section of the article [Perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md) .  
+This sample is divided into three principal sections, listed in the following table. Each section contains a set of related Web API operations that are discussed in greater detail in the associated conceptual section of the article [Perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md).  
   
 |Code section|Associated conceptual articles|  
 |------------------|----------------------------------|  
@@ -36,13 +37,13 @@ This sample is divided into three principal sections, listed in the following ta
 |[Section 2: Optimistic concurrency on delete and update](#section-2-optimistic-concurrency-on-delete-and-update)|[Apply optimistic concurrency](perform-conditional-operations-using-web-api.md#bkmk_Applyoptimisticconcurrency)<br />[Limit upsert operations](perform-conditional-operations-using-web-api.md#bkmk_limitUpsertOperations)|
 |[Section 3: Delete sample records](#section-3-delete-sample-records)|[Basic delete](update-delete-entities-using-web-api.md#basic-delete)<br />[Execute batch operations using the Web API](execute-batch-operations-using-web-api.md)|
   
-The following sections contain a brief discussion of the Dataverse Web API operations performed, the corresponding HTTP messages, and associated console output which is the same for each language implementation. For brevity, less pertinent HTTP headers are omitted. The URIs of the table rows vary with the base organization address and the ID of the row assigned by your Dataverse server.  
+The following sections contain a brief discussion of the Dataverse Web API operations performed, the corresponding HTTP messages, and associated console output, which is the same for each language implementation. For brevity, less pertinent HTTP headers are omitted. The URIs of the table rows vary with the base organization address and the ID of the row assigned by your Dataverse server.  
   
 <a name="bkmk_sampleData"></a>
    
 ## Section 0: Create sample records
 
-The sample creates the following table row before the principal code sections are executed.  
+Before running the main code sections, the sample creates the following table row.  
 
 **Request:**
 
@@ -101,9 +102,9 @@ Created and retrieved the initial account, shown below:
 
 ## Section 1: Conditional GET
 
-This section of the program demonstrates how to perform conditional retrievals in order to optimize network bandwidth and server processing while still maintaining the most current row state on the client. More information: [Conditional retrievals](perform-conditional-operations-using-web-api.md#bkmk_DetectIfChanged)  
+This section of the program demonstrates how to perform conditional retrievals to optimize network bandwidth and server processing while still maintaining the most current row state on the client. [Learn how to perform conditional retrievals](perform-conditional-operations-using-web-api.md#bkmk_DetectIfChanged)  
   
-1. Attempt to retrieve the account `Contoso Ltd.` only if it *doesn't* match the current version, identified by the initial ETag value that was returned when the account row was created. This condition is represented by the `If-None-Match` header.  
+1. Attempt to retrieve the account `Contoso Ltd.` only if it *doesn't* match the current version, identified by the initial ETag value that the operation returns when it creates the account row. The `If-None-Match` header represents this condition.  
   
    **Request:**
 
@@ -209,9 +210,9 @@ This section of the program demonstrates how to perform conditional retrievals i
   
 ## Section 2: Optimistic concurrency on delete and update
  
-This section of the program demonstrates how to perform conditional delete and update operations. The most common use for such operations is in implementing an optimistic concurrency approach to row processing in a multi-user environment. More information: [Apply optimistic concurrency](perform-conditional-operations-using-web-api.md#bkmk_Applyoptimisticconcurrency)  
+This section of the program demonstrates how to perform conditional delete and update operations. The most common use for such operations is in implementing an optimistic concurrency approach to row processing in a multi-user environment. [Learn how to apply optimistic concurrency](perform-conditional-operations-using-web-api.md#bkmk_Applyoptimisticconcurrency)  
   
-1. Attempt to delete original account if and only if it matches the original version (ETag value). The `If-Match` header represents this condition. This operation fails because the account row was updated in the previous section, so as a result, its version was updated on the server.  
+1. Attempt to delete original account if and only if it matches the original version (ETag value). The `If-Match` header represents this condition. This operation fails because the account row was updated in the previous section, so as a result, its version is updated on the server.  
   
    **Request:**
 
@@ -369,7 +370,7 @@ This section of the program demonstrates how to perform conditional delete and u
 
 ## Section 3: Delete sample records
 
-This section simply deletes the record created in [Section 0: Create sample records](#section-0-create-sample-records). It uses a `$batch` request.
+This section deletes the record that you created in [Section 0: Create sample records](#section-0-create-sample-records). It uses a `$batch` request.
 
 **Request:**
 
@@ -418,9 +419,10 @@ Deleting created records.
   
 ### See also
 
-[Use the Dataverse Web API](overview.md)<br />
-[Perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md)<br />
-[Web API Conditional Operations Sample (C#)](samples/webapiservice-conditional-operations.md)<br />
-[Web API Conditional Operations Sample (Client-side JavaScript)](samples/conditional-operations-client-side-javascript.md)
+[Use the Dataverse Web API](overview.md)   
+[Perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md)   
+[Web API Conditional Operations Sample (C#)](samples/webapiservice-conditional-operations.md)   
+[Web API Conditional Operations Sample (Client-side JavaScript)](samples/conditional-operations-client-side-javascript.md)   
+[Web API Conditional Operations Sample (PowerShell)](samples/conditional-operations-powershell.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

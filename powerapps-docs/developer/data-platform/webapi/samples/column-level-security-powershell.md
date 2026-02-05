@@ -1,7 +1,7 @@
 ---
 title: "Sample: Column-level security using Dataverse Web API (PowerShell)"
 description: "This sample shows how to work with column-level security using the Dataverse Web API with PowerShell."
-ms.date: 07/30/2025
+ms.date: 01/27/2026
 author: paulliew
 ms.subservice: dataverse-developer
 ms.author: paulliew
