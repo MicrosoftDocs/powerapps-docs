@@ -310,7 +310,9 @@ These relationships are one-to-many. Listed by **SchemaName**.
 
 - [attribute_dvfilesearchattribute](#BKMK_attribute_dvfilesearchattribute)
 - [attribute_dvtablesearchattribute](#BKMK_attribute_dvtablesearchattribute)
+- [attribute_sensitivitylabelattributemapping_AttributeId](#BKMK_attribute_sensitivitylabelattributemapping_AttributeId)
 - [attribute_solutioncomponentattrconfig](#BKMK_attribute_solutioncomponentattrconfig)
+- [attributeclusterconfig_extensionofrecordid_attribute](#BKMK_attributeclusterconfig_extensionofrecordid_attribute)
 - [emailaddressconfiguration_attribute_AttributeId](#BKMK_emailaddressconfiguration_attribute_AttributeId)
 - [referencedattribute_relationshipattribute](#BKMK_referencedattribute_relationshipattribute)
 - [referencingattribute_relationshipattribute](#BKMK_referencingattribute_relationshipattribute)
@@ -339,6 +341,18 @@ Many-To-One Relationship: [dvtablesearchattribute attribute_dvtablesearchattribu
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_attribute_sensitivitylabelattributemapping_AttributeId"></a> attribute_sensitivitylabelattributemapping_AttributeId
+
+Many-To-One Relationship: [sensitivitylabelattributemapping attribute_sensitivitylabelattributemapping_AttributeId](sensitivitylabelattributemapping.md#BKMK_attribute_sensitivitylabelattributemapping_AttributeId)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`sensitivitylabelattributemapping`|
+|ReferencingAttribute|`attributeid`|
+|ReferencedEntityNavigationPropertyName|`attribute_sensitivitylabelattributemapping_AttributeId`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 ### <a name="BKMK_attribute_solutioncomponentattrconfig"></a> attribute_solutioncomponentattrconfig
 
 Many-To-One Relationship: [solutioncomponentattributeconfiguration attribute_solutioncomponentattrconfig](solutioncomponentattributeconfiguration.md#BKMK_attribute_solutioncomponentattrconfig)
@@ -349,6 +363,18 @@ Many-To-One Relationship: [solutioncomponentattributeconfiguration attribute_sol
 |ReferencingAttribute|`attributeid`|
 |ReferencedEntityNavigationPropertyName|`attribute_solutioncomponentattrconfig`|
 |IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_attributeclusterconfig_extensionofrecordid_attribute"></a> attributeclusterconfig_extensionofrecordid_attribute
+
+Many-To-One Relationship: [attributeclusterconfig attributeclusterconfig_extensionofrecordid_attribute](attributeclusterconfig.md#BKMK_attributeclusterconfig_extensionofrecordid_attribute)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`attributeclusterconfig`|
+|ReferencingAttribute|`extensionofrecordid`|
+|ReferencedEntityNavigationPropertyName|`attributeclusterconfig_extensionofrecordid_attribute`|
+|IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_emailaddressconfiguration_attribute_AttributeId"></a> emailaddressconfiguration_attribute_AttributeId

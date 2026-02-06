@@ -2,7 +2,7 @@
 title: Web API query data sample
 description: Use this sample code to learn how to query data using the Dataverse Web API. These samples use C# and client-side JavaScript.
 ms.topic: sample
-ms.date: 04/14/2023
+ms.date: 01/27/2026
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: jdaly
@@ -14,18 +14,19 @@ contributors:
 
 # Web API query data sample
 
-Use this group of sample code to learn how to query data using the Microsoft Dataverse Web API. This sample is implemented as a separate project for the following languages:
+Use this group of sample code to learn how to query data by using the Microsoft Dataverse Web API. This sample is implemented as a separate project for the following languages:
 
 - [Query Data Sample (C#)](samples/webapiservice-query-data.md)
 - [Web API Query Data Sample (Client-side JavaScript)](samples/query-data-client-side-javascript.md)
+- [Web API Query Data Sample (PowerShell)](samples/query-data-powershell.md)
 
-This topic describes a common set of operations implemented by each sample in this group. This topic describes the HTTP requests and responses and text output that each sample in this group will perform without the language specific details. See the language specific descriptions and the individual samples for details about how this operations are performed.
+This topic describes a common set of operations that each sample in this group implements. It describes the HTTP requests and responses, and the text output that each sample in this group performs without the language-specific details. For details about how these operations are performed, see the language-specific descriptions and the individual samples.
 
 ## Demonstrates
 
-This sample is divided into the following principal sections, containing Web API query data operations which are discussed in greater detail in the associated conceptual topics.
+This sample is divided into the following principal sections, containing Web API query data operations that are discussed in greater detail in the associated conceptual topics.
 
-|Topic section|Associated topic(s)|
+|Topic section|Associated topics|
 |-------------------|---------------------------|
 |[Section 1: Select specific properties](#section-1-select-specific-properties)|[Retrieve specific properties](retrieve-entity-using-web-api.md#bkmk_requestProperties)<br /> [Formatted values](query/select-columns.md#formatted-values)|
 |[Section 2: Use query functions](#section-2-use-query-functions)|[Filter rows](query/filter-rows.md)<br />[Use OData query functions](query/filter-rows.md#use-odata-query-functions)<br />[Compose a query with functions](use-web-api-functions.md#bkmk_composeQueryWithFunctions)<br /> <xref:Microsoft.Dynamics.CRM.QueryFunctionIndex>|
@@ -38,15 +39,15 @@ This sample is divided into the following principal sections, containing Web API
 |[Section 9: Use predefined queries](#section-9-use-predefined-queries)|[Retrieve and execute predefined queries](retrieve-and-execute-predefined-queries.md)<br /> <xref:Microsoft.Dynamics.CRM.userquery?text=userquery EntityType><br /> <xref:Microsoft.Dynamics.CRM.savedquery?text=savedquery EntityType>|
 |[Section 10: Delete sample records](#section-10-delete-sample-records)|[Basic delete](update-delete-entities-using-web-api.md#basic-delete)<br />[Execute batch operations using the Web API](execute-batch-operations-using-web-api.md)|
 
-The following sections contain a brief discussion of the Dataverse Web API operations performed, along with the corresponding HTTP messages and associated console output.
+The following sections contain a brief discussion of the Dataverse Web API operations, along with the corresponding HTTP messages and associated console output.
 
 <a name="bkmk_sampleData"></a>
 
 ## Section 0: Create records to query
 
-The sample code creates a set of sample rows to query. The code deletes the data at the end unless you choose to keep it. You may get different results depending on existing data in your environment.
+The sample code creates a set of sample rows to query. The code deletes the data at the end unless you choose to keep it. You might get different results depending on existing data in your environment.
   
-The data is added using *deep insert* in a single `POST` request and matches the following structure:  
+The code adds the data by using *deep insert* in a single `POST` request. The data matches the following structure:  
   
 ```json  
 {
@@ -286,9 +287,9 @@ The data is added using *deep insert* in a single `POST` request and matches the
 
 Always include the `$select` query option in your queries. If you don't, the server returns all properties of each table row, which reduces performance. [Learn how to select columns](query/select-columns.md).
 
-This example demonstrates how to construct a basic query by selecting three properties of a [contact EntityType](xref:Microsoft.Dynamics.CRM.contact). The properties are `fullname`, `jobtitle`, `annualincome`. The section also illustrates the differences between [formatted](query/select-columns.md#formatted-values) and unformatted values as seen in the results of the contact's `annualincome` property.
+This example shows how to construct a basic query by selecting three properties of a [contact EntityType](xref:Microsoft.Dynamics.CRM.contact). The properties are `fullname`, `jobtitle`, and `annualincome`. The section also illustrates the differences between [formatted](query/select-columns.md#formatted-values) and unformatted values as seen in the results of the contact's `annualincome` property.
   
-In this example, we are requesting for a specific contact. In this case, it's the primary contact of the account, `Yvonne McKay (sample)`.  
+In this example, you request a specific contact. In this case, it's the primary contact of the account, `Yvonne McKay (sample)`.  
   
 **Request:**
 
@@ -338,15 +339,15 @@ Contact basic info:
   
 ## Section 2: Use query functions
  
-Use filter options to set criteria for the results you want. You can  build simple to complex filters using a combination of query functions, comparison operators, and logical operators. More information: [Filter rows](query/filter-rows.md)  
+Use filter options to set criteria for the results you want. You can  build simple to complex filters using a combination of query functions, comparison operators, and logical operators.  [Learn how to filter rows](query/filter-rows.md)  
   
 Query functions are functions you can use as a filter criteria in a query. These functions accept parameters and return a `Boolean` value.There are standard query functions and Dataverse specific query functions.  This sample illustrates how to create a query for each type.  
   
 ### Standard query functions
 
-Dataverse supports a subset of OData built-in query functions, specifically: `contains`, `endswith`, and `startswith`. For example, the `contains` standard query function allows you to filter for properties that match a string.  More information: [Use OData query functions](query/filter-rows.md#use-odata-query-functions)
+Dataverse supports a subset of OData built-in query functions, specifically: `contains`, `endswith`, and `startswith`. For example, the `contains` standard query function allows you to filter for properties that match a string. [Learn how to use OData query functions](query/filter-rows.md#use-odata-query-functions).
 
-In this operation, we are querying for all contacts with `fullname` containing the string `(sample)`.
+In this operation, query for all contacts with `fullname` containing the string `(sample)`.
   
 **Request:**
 
@@ -490,9 +491,9 @@ Contacts filtered by fullname containing '(sample)':
   
 ### Dataverse query functions
 
-Dataverse query functions provide a number of options to build queries that are relevant for Dataverse. For a complete list of these functions, refer to the <xref:Microsoft.Dynamics.CRM.QueryFunctionIndex>. More information: [Compose a query with functions](use-web-api-functions.md#bkmk_composeQueryWithFunctions)  
+Dataverse query functions provide many options to build queries that are relevant for Dataverse. For a complete list of these functions, see the <xref:Microsoft.Dynamics.CRM.QueryFunctionIndex>. [Learn how to compose a query with functions](use-web-api-functions.md#bkmk_composeQueryWithFunctions)  
   
-YDataverse query functions are similar to the standard query functions. The main difference is that when you use Dataverse query functions, you must provide the full name of the function, including the parameter name(s). For example, to get a list of contacts created in the last hour, you can build a query using the [LastXHours function](xref:Microsoft.Dynamics.CRM.LastXHours).  
+Dataverse query functions are similar to the standard query functions. The main difference is that when you use Dataverse query functions, you must provide the full name of the function, including the parameter names. For example, to get a list of contacts created in the last hour, you can build a query by using the [LastXHours function](xref:Microsoft.Dynamics.CRM.LastXHours).  
   
 **Request:**
 
@@ -638,7 +639,7 @@ Contacts that were created within the last 1hr:
 
 ### Use operators
 
-Use [comparison operators](query/filter-rows.md#comparison-operators) and [logical operators](query/filter-rows.md#logical-operators) (`eq`,`ne`,`gt`,`ge`,`lt`,`le`,`and`,`or`,`not`)  to further refine your results. In this example, we're requesting a list of all contacts where `fullname` contains `(sample)` and the annual income is greater than `55000`.  
+Use [comparison operators](query/filter-rows.md#comparison-operators) and [logical operators](query/filter-rows.md#logical-operators) (`eq`, `ne`, `gt`, `ge`, `lt`, `le`, `and`, `or`, `not`) to further refine your results. In this example, you're requesting a list of all contacts where `fullname` contains `(sample)` and the annual income is greater than `55000`.  
   
 **Request:**
 
@@ -745,9 +746,9 @@ Contacts with '(sample)' in name and income above $55,000:
    
 ### Set precedence
  
-Since all operators have the same precedence, use parentheses to establish the order in which query conditions are evaluated. Filters are applied from left to right. The order in which statements appear in the filter can affect the results.
+Because all operators have the same precedence, use parentheses to set the order in which query conditions are evaluated. Filters are applied from left to right. The order in which statements appear in the filter can affect the results.
   
-In this example, we're requesting a list of all contacts where `fullname` contains `(sample)`, `jobtitle` contains either `senior` or `manager`, and `annualincome` is greater than `55000`. To get the results we want, we must use parentheses to group the `jobtitle` filters. If we don't, the `or` operator has the same precedence as the `and` operators. The query in this example looks like this: `$filter=contains(fullname,'(sample)') and (contains(jobtitle,'senior') or contains(jobtitle,'manager')) and annualincome gt 55000`.
+In this example, you request a list of all contacts where `fullname` contains `(sample)`, `jobtitle` contains either `senior` or `manager`, and `annualincome` is greater than `55000`. To get the results you want, use parentheses to group the `jobtitle` filters. If you don't, the `or` operator has the same precedence as the `and` operators. The query in this example looks like this: `$filter=contains(fullname,'(sample)') and (contains(jobtitle,'senior') or contains(jobtitle,'manager')) and annualincome gt 55000`.
   
 **Request:**
 
@@ -831,7 +832,7 @@ Contacts with '(sample)' in name senior jobtitle or high income:
 
 ### Order results
 
-To sort results in ascending or descending order, use the `$orderby` filter option . In this example, we will query for all contacts with `fullname` containing `(sample)` and request the data in ascending order based on the `jobtitle` property value and then in  descending order based on the `annualincome` property value using this syntax: `$orderby=jobtitle asc, annualincome desc`. More information: [Order rows](query/order-rows.md)  
+To sort results in ascending or descending order, use the `$orderby` filter option. In this example, you query for all contacts with `fullname` containing `(sample)` and request the data in ascending order based on the `jobtitle` property value and then in  descending order based on the `annualincome` property value by using this syntax: `$orderby=jobtitle asc, annualincome desc`. [Learn how to order rows](query/order-rows.md).  
   
 **Request:**
 
@@ -977,9 +978,9 @@ Contacts ordered by jobtitle (Ascending) and annualincome (descending)
 
 ### Parameter alias
 
-Use [parameter aliases](query/overview.md#use-parameter-aliases-with-query-options) to more easily reuse parameters in your filters. You can use aliases in `$filter` and `$orderby` options. If the alias isn't assigned a value, it's assumed to be null.
+Use [parameter aliases](query/overview.md#use-parameter-aliases-with-query-options) to more easily reuse parameters in your filters. You can use aliases in `$filter` and `$orderby` options. If the alias doesn't have a value, it's null.
 
-You can also use parameter aliases when you [call functions](use-web-api-functions.md). For example, we can rewrite the query in the previous order results operation to use parameters and get the same output.
+You can also use parameter aliases when you [call functions](use-web-api-functions.md). For example, you can rewrite the query in the previous order results operation to use parameters and get the same output.
   
 **Request:**
 
@@ -1133,7 +1134,7 @@ To limit the number of results returned, [use the `$top` query option](query/ove
  
 ### Top results
 
-We can apply the `$top` query option to limit the basic query operation to the first five contacts with `fullname` containing `(sample)`. In this case, the request actually produces at least 10 results, but only the first 5 entries are returned in the response.  
+You can use the `$top` query option to limit the basic query operation to the first five contacts with `fullname` containing `(sample)`. In this case, the request actually produces at least 10 results, but the response returns only the first 5 entries.  
   
 **Request:**
 
@@ -1238,7 +1239,7 @@ Contacts top 5 results:
 
 ### Collection count
 
-If you just want the number of records in a collection, append `/$count` to the collection URL. The maximum value is 5,000 for standard tables, 500 for elastic tables.
+If you want the number of records in a collection, add `/$count` to the collection URL. The maximum value is 5,000 for standard tables and 500 for elastic tables.
 
 **Request:**
 
@@ -1269,9 +1270,9 @@ The contacts collection has 9 contacts.
 
 ### Result count
 
-You can get [the count of rows](query/count-rows.md) from a collection-valued property or a count of matched table rows in a filter. The count tells you the number of possible rows in your result. However, Dataverse returns a maximum count even if the result may have more. For standard tables the maximum count is 5,000, 500 for elastic tables.
+You can get [the count of rows](query/count-rows.md) from a collection-valued property or a count of matched table rows in a filter. The count shows the number of possible rows in your result. However, Dataverse returns a maximum count even if the result has more rows. For standard tables, the maximum count is 5,000, and for elastic tables, it's 500.
 
-In this example, we build a filter where `jobtitle` contains either `Senior` or `Manager` and we also request a `$count` of the result. The response contains the count in the `@odata.count` property along with the results of the query.
+In this example, you build a filter where `jobtitle` contains either `Senior` or `Manager` and you also request a `$count` of the result. The response contains the count in the `@odata.count` property along with the results of the query.
   
 **Request:**
 
@@ -1394,7 +1395,7 @@ Preference-Applied: odata.include-annotations="*"
 
 Some queries return a large number of rows, and it's easier to view them one page at a time. To [retrieve paginated results](query/page-results.md), use the `odata.maxpagesize` option instead of `$top`.
   
-In this example, we ask for a `$count` and set the `odata.maxpagesize` to `4`. This filter matches 10 contacts, but we're only retrieving 4 at a time. We also use the count and the max page size to figure out how many pages there are. The result of the first page is returned in this request.
+In this example, you ask for a `$count` and set the `odata.maxpagesize` to `4`. This filter matches 10 contacts, but you only retrieve 4 at a time. You also use the count and the max page size to figure out how many pages there are. The result of the first page is returned in this request.
   
 **Request:**
 
@@ -1583,11 +1584,11 @@ Page 2 of 3:
 
 ## Section 6: Expand results
 
-To retrieve information on associated table rows, use the `$expand` query option on navigation properties. More information: [Join Tables](query/join-tables.md)
+To get information on associated table rows, use the `$expand` query option on navigation properties. [Learn how to join Tables](query/join-tables.md).
   
 ### Expand on single-valued navigation property
 
-A single-valued navigation property represents a many-to-one relationship. In our sample data, the account has a relationship with a contact through the `primarycontactid` column, or attribute. In this relationship, the account can have only one primary contact. Using the [account EntityType](xref:Microsoft.Dynamics.CRM.account), we can create a query to get information about the account and expanded information about its primary contact.
+A single-valued navigation property represents a many-to-one relationship. In the sample data, the account has a relationship with a contact through the `primarycontactid` column, or attribute. In this relationship, the account can have only one primary contact. By using the [account EntityType](xref:Microsoft.Dynamics.CRM.account), you can create a query to get information about the account and expanded information about its primary contact.
   
 **Request:**
 
@@ -1639,9 +1640,9 @@ Account Contoso, Ltd. (sample) has the following primary contact person:
   
 ### Expand on partner property
 
-Each navigation property has a corresponding "partner" property. After an association is made, we can retrieve information through it. Which column we use depends on the base table we query.
+Each navigation property has a corresponding partner property. After you create an association, you can retrieve information through it. The base table you query determines which column you use.
 
-For example, in the previous operation, we created a query against the [account entity type](xref:Microsoft.Dynamics.CRM.account). We wanted to get more information about its primary contact, so we used the `primarycontactid` column, or attribute. If we look up the [account entity type](xref:Microsoft.Dynamics.CRM.account), in the [single-valued navigation properties](/power-apps/developer/data-platform/webapi/reference/account#single-valued-navigation-properties) section we find that the partner property of `primarycontactid` is the `account_primary_contact` collection-valued navigation property, which is found in the [contact entity type](xref:Microsoft.Dynamics.CRM.contact).
+For example, in the previous operation, you created a query against the [account entity type](xref:Microsoft.Dynamics.CRM.account). You wanted to get more information about its primary contact, so you used the `primarycontactid` column, or attribute. If you look up the [account entity type](xref:Microsoft.Dynamics.CRM.account), in the [single-valued navigation properties](/power-apps/developer/data-platform/webapi/reference/account#single-valued-navigation-properties) section you find that the partner property of `primarycontactid` is the `account_primary_contact` collection-valued navigation property, which is found in the [contact entity type](xref:Microsoft.Dynamics.CRM.contact).
 
 If you build a query against a contact, you can expand on the `account_primary_contact` column to get information about accounts where the contact is the primary contact. In the sample data, `Yvonne McKay (sample)` is the primary contact person for only one account. However, Yvonne can potentially be assigned to other accounts as the primary contact. Because the `account_primary_contact` property has a many-to-one relationship, the result is returned as an array of account rows.
   
@@ -1689,9 +1690,9 @@ Contact 'Yvonne McKay (sample)' is the primary contact for the following account
   
 ### Expand on collection-valued navigation property
 
-Collection-valued navigation properties support one-to-many or many-to-many relationships. For example, in our sample data, the account has a relationship with many contacts through the `contact_customer_accounts` column, or attribute.
+Collection-valued navigation properties support one-to-many or many-to-many relationships. For example, in the sample data, the account has a relationship with many contacts through the `contact_customer_accounts` column, or attribute.
 
-We can use the [account entity type](xref:Microsoft.Dynamics.CRM.account) in a query to get information about the account and expand information about its contacts. In this case, the `Contoso, Ltd. (sample)` is associated with nine other contacts through the `contact_customer_accounts` collection-valued navigation property.
+Use the [account entity type](xref:Microsoft.Dynamics.CRM.account) in a query to get information about the account and expand information about its contacts. In this case, the `Contoso, Ltd. (sample)` is associated with nine other contacts through the `contact_customer_accounts` collection-valued navigation property.
   
 **Request:**
 
@@ -2027,7 +2028,7 @@ Account 'Contoso, Ltd. (sample)' has the following tasks:
 
 ### Multi-level expands
 
-With single-valued navigation properties, you can use `$expand` to continue up multiple levels using only single-valued navigation properties. This query starts with `task` records and expands data from the `contact`, `account`, and `systemuser` tables using only single-valued navigation properties.
+By using single-valued navigation properties, you can use `$expand` to go through multiple levels. This query starts with `task` records and brings in data from the `contact`, `account`, and `systemuser` tables by using only single-valued navigation properties.
 
 **Request:**
 
@@ -2774,11 +2775,11 @@ Aggregated Annual Income information for Contoso contacts:
 
 ## Section 8: FetchXML queries
 
-Besides query filter operations, the Web API also supports [FetchXML queries](../fetchxml/overview.md). FetchXML provides an alternative way to define queries and more options for aggregation. All the query options we would normally define, such as `$select`, `$filter`, and `$orderby`, are defined in the XML.
+Besides query filter operations, the Web API also supports [FetchXML queries](../fetchxml/overview.md). FetchXML provides an alternative way to define queries and more options for aggregation. All the query options you normally define, such as `$select`, `$filter`, and `$orderby`, are defined in the XML.
 
 To use FetchXML, compose a string that represents the query. Make sure the query string conforms to the [FetchXml reference](../fetchxml/reference/index.md). Before you include the string in the URL, you must URL-encode it.
 
-In this example, we query for all contacts where `fullname` matches `(sample)`, and return the results in descending order by `fullname`.
+In this example, you query for all contacts where `fullname` matches `(sample)`, and return the results in descending order by `fullname`.
 
 This is the XML for the query:
   
@@ -2802,7 +2803,7 @@ This is the XML for the query:
 </fetch>  
 ```
 
-In this example, the query is sent using a `$batch` request. FetchXML queries can be long, so they can reach the limits for URLs that can be sent using `GET`. With a `$batch` operation, the URL is sent in the body of the request, where the limits are higher.
+In this example, you send the query by using a `$batch` request. FetchXML queries can be long, so they can reach the limits for URLs that you can send by using `GET`. By using a `$batch` operation, you send the URL in the body of the request, where the limits are higher.
   
 **Request:**
 
@@ -2968,9 +2969,9 @@ Contacts Fetched by fullname containing '(sample)':
   
 ### FetchXML pagination
 
-The way FetchXML handles paging is different from how a query filter handles it. In FetchXML, you can specify a `count` column that indicates how many results to return per page. In the same request, use the `page` column to specify the page number to return.
+FetchXML handles paging differently from a query filter. In FetchXML, you specify a `count` value that indicates how many results to return per page. In the same request, use the `page` value to specify the page number to return.
 
-The following operation requests page 2 from the previous FetchXML sample. Based on our sample data, we should have eight contacts in our result. Breaking down each page to four contacts per page, we should have two pages. Page 2 should contain only four contacts. If we then ask for page 3, the system returns zero results.
+The following operation requests page 2 from the previous FetchXML sample. Based on the sample data, you should see eight contacts in the result. Breaking down each page to four contacts per page, you have two pages. Page 2 contains only four contacts. If you then ask for page 3, the system returns zero results.
   
 ```xml  
 <fetch  distinct="false"
@@ -3087,13 +3088,13 @@ Contacts Fetched by fullname containing '(sample)' - Page 2:
  
 ## Section 9: Use predefined queries
 
-You can use the Web API to [retrieve and execute predefined queries](retrieve-and-execute-predefined-queries.md).
+Use the Web API to [retrieve and execute predefined queries](retrieve-and-execute-predefined-queries.md).
   
 ### Saved query
 
-In this operation, we request the `savedqueryid` GUID of the saved query named **Active Accounts**. Then we use the GUID and the `savedQuery` parameter to query for a list of active accounts.
+In this operation, you request the `savedqueryid` GUID of the saved query named **Active Accounts**. Then you use the GUID and the `savedQuery` parameter to query for a list of active accounts.
 
-First, we get the saved query's GUID.
+First, get the saved query's GUID.
   
 **Request:**
 
@@ -3123,7 +3124,7 @@ OData-Version: 4.0
 }
 ```
   
-Next, we use the `savedQuery` parameter to get the saved query's content.
+Next, use the `savedQuery` parameter to get the saved query's content.
   
 **Request:**
 
@@ -3215,9 +3216,9 @@ OData-Version: 4.0
 OData-EntityId: [Organization Uri]/api/data/v9.2/userqueries(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)
 ```
 
-This user query asks for any contacts where `fullname` contains `(sample)`, `jobtitle` contains `manager`, and `annualincome` is greater than `55000`. Our sample data has two contacts that match the query.
+This user query asks for any contacts where `fullname` contains `(sample)`, `jobtitle` contains `manager`, and `annualincome` is greater than `55000`. The sample data has two contacts that match the query.
 
-In the sample code, the `userqueryid` value is returned with the request that creates it. Normally, you'd need to query the system to retrieve it using a query like the following one:
+In the sample code, the request that creates the user query returns the `userqueryid` value. Normally, you need to query the system to retrieve it by using a query like the following one:
   
 **Request:**
   
@@ -3317,7 +3318,7 @@ Contacts Fetched by My User Query:
 
 ## Section 10: Delete sample records
 
-Use a `$batch` operation to delete all the records created in [Section 0: Create records to query](#section-0-create-records-to-query).
+Use a `$batch` operation to delete all the records that you created in [Section 0: Create records to query](#section-0-create-records-to-query).
 
 **Request:**
 
@@ -3526,7 +3527,8 @@ OData-Version: 4.0
 [Query Data using the Web API](query/overview.md)   
 [Retrieve and execute predefined queries](retrieve-and-execute-predefined-queries.md)   
 [Web API Query Data Sample (C#)](samples/webapiservice-query-data.md)   
-[Web API Query Data Sample (Client-side JavaScript)](samples/query-data-client-side-javascript.md)
+[Web API Query Data Sample (Client-side JavaScript)](samples/query-data-client-side-javascript.md)   
+[Web API Query Data Sample (PowerShell)](samples/query-data-powershell.md)
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

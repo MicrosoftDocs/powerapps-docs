@@ -11,7 +11,7 @@ metadata:
   ms.collection: collection
   author: mduelae
   ms.author: tapanm
-  ms.date: 10/1/2025
+  ms.date: 11/11/2025
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -61,8 +61,6 @@ landingContent:
 
           - text: Build apps through conversation with Copilot
             url: maker/canvas-apps/ai-conversations-create-app.md
-          - text: Edit your app with Copilot
-            url: maker/canvas-apps/ai-edit-app.md
           - text: Create a canvas app description with Copilot (preview)
             url: maker/canvas-apps/save-publish-app.md#create-an-app-description-with-copilot-preview
           - text: Create a model-driven app description with Copilot
@@ -105,12 +103,12 @@ landingContent:
       - linkListType: how-to-guide
         links:
 
-          - text: Add Copilot chat in model-driven apps
-            url: maker/model-driven-apps/add-ai-copilot.md
-          - text: Use Copilot chat in model-driven apps
-            url: user/use-copilot-model-driven-apps.md
-          - text: Customize Copilot chat using Copilot Studio (preview)
-            url: maker/model-driven-apps/customize-copilot-chat.md
+          - text: Add Microsoft 365 Copilot chat in model-driven apps (preview)
+            url: maker/model-driven-apps/add-microsoft-365-copilot.md
+          - text: Use Microsoft 365 Copilot chat in model-driven apps (preview)
+            url: user/use-microsoft-365-copilot-model-driven-apps.md
+          - text: Customize Microsoft 365 Copilot chat with an agent (preview)
+            url: maker/model-driven-apps/customize-microsoft-365-copilot-chat.md
 
   
   # Card

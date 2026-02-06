@@ -6,7 +6,7 @@ author: NickWaggoner
 ms.topic: concept-article
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 3/1/2025
+ms.date: 11/14/2025
 ms.subservice: canvas-maker
 ms.author: mkaur
 search.audienceType: 
@@ -19,12 +19,12 @@ contributors:
 
 # Understand SharePoint forms integration
 
-You can [customize a form for a SharePoint list](/sharepoint/dev/business-apps/power-apps/get-started/create-your-first-custom-form) when you integrate a list into Power Apps. In this article, you see how these forms work and how you can customize them.
+You can [customize a form for a SharePoint list](/sharepoint/dev/business-apps/power-apps/get-started/create-your-first-custom-form) when you integrate a list into Power Apps. In this article, you learn how these forms work and how you can customize them.
 
 When you customize a form for a list, you see the default generated form works for all operations, like creating, showing, or editing an item. This functionality uses generated formulas and the **SharePointIntegration** control.
 
 > [!NOTE]
-> When you create or view a list in SharePoint, you're automatically redirected to Microsoft Lists. The list can always be found in both Microsoft Lists and SharePoint. Learn more in [What is a list in Microsoft 365?](https://support.microsoft.com/en-us/office/what-is-a-list-in-microsoft-365-93262a88-20ad-4edc-8410-b6909b2f59a5)
+> When you create or view a list in SharePoint, you're automatically redirected to Microsoft Lists. You can always find the list in both Microsoft Lists and SharePoint. For more information, see [What is a list in Microsoft 365?](https://support.microsoft.com/en-us/office/what-is-a-list-in-microsoft-365-93262a88-20ad-4edc-8410-b6909b2f59a5)
 
 ## Understand the default generated form
 
@@ -47,7 +47,7 @@ The default generated form consists of the following controls and their correspo
     > [!TIP]
     > This formula pattern uses `... SharePointDatasourceName.Selected` and works for the **Item** property of a form. See the [Common issues with the SharePointIntegration object](#common-issues-with-the-sharepointintegration-object) for a formula pattern to set the value of a SharePoint record.
 
-- **OnSuccess**: Once the item is created or saved successfully, the form is reset and SharePoint hides the form.
+- **OnSuccess**: Once the item is created or saved successfully, the form resets and SharePoint hides the form.
 
   ```power-fx
   ResetForm(SharePointForm1); RequestHide()
@@ -67,7 +67,7 @@ The default generated form consists of the following controls and their correspo
 These defaults ensure that the form works when running within SharePoint. The defaults change the Power Apps form mode as the user interacts with it in SharePoint, and they ensure that the changes are submitted to SharePoint.
 
 > [!NOTE]
-> While you can manually copy a form from one environment to another, there is currently no automated method in Power Apps to copy a form from one environment to another.
+> While you can manually copy a form from one environment to another, there's currently no automated method in Power Apps to copy a form from one environment to another.
 
 ## Understand the SharePointIntegration control
 
@@ -76,7 +76,7 @@ The **SharePointIntegration** control communicates user actions between SharePoi
 :::image type="content" source="./media/sharepoint-form-integration/sharepointintegration-object.png" alt-text="Screenshot of a SharePoint integration object as seen in Power Apps.":::
 
 > [!NOTE]
-> You can access properties for the **SharePointIntegration** control only when the form is running in SharePoint, not when you're customizing the form in Power Apps Studio. These properties might not be available in **OnStart** or **OnVisible**.
+> You can access properties for the **SharePointIntegration** control only when the form runs in SharePoint, not when you're customizing the form in Power Apps Studio. These properties might not be available in **OnStart** or **OnVisible**.
 
 The **SharePointIntegration** control has these properties:
 
@@ -110,7 +110,7 @@ Consider these tactics when you customize forms:
 
 ## Common issues with the SharePointIntegration object
 
-- When the value of `SharepointIntegration.Selected` is set to a collection on the **OnView** property, it doesn't show the latest value. The recommended way to fix this problem is to use `SharepointIntegration.SelectedListItemID`, and then do a lookup on the table to get the selectedRecord.
+- When you set the value of `SharepointIntegration.Selected` to a collection on the **OnView** property, it doesn't show the latest value. To fix this problem, use `SharepointIntegration.SelectedListItemID`, and then do a lookup on the table to get the selectedRecord.
 
   For example, for **OnView** property:
 
@@ -129,9 +129,13 @@ Consider these tactics when you customize forms:
     ID=SharePointIntegration.SelectedListItemID ) );
     ```
 
-- Collection variables aren't reset on closing the Power Apps form and the state is persisted for the entire session. If there are any use-cases where the variables need to be reset, clear the variables in the **OnView** property of the `SharePointIntegration` object.
+- Collection variables aren't reset when you close the Power Apps form. The state persists for the entire session. If you need to reset the variables, clear them in the **OnView** property of the `SharePointIntegration` object.
 
 - Don't use imperative functions such as **Launch()** in the `SharePointIntegration` properties (such as **OnNew** and **OnView**). This use can cause unexpected behavior since the `SharePointIntegration` lifecycle events (such as selections changing) can trigger in the background even when the form isn't visible.
+- 
+
+## Understand user access to customized forms
+You can't manually share a SharePoint form customized with Power Apps. Instead, any user who has at least **Read** or **Restricted View** access to the linked SharePoint list inherits access to the form. Users who have only been given permissions to specific items in the list don't have access to the customized form.
 
 ### Related information
 

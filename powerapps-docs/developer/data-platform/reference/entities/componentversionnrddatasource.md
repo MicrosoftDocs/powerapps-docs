@@ -97,7 +97,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`component`|
 |RequiredLevel|ApplicationRequired|
 |Type|Lookup|
-|Targets|workflow|
+|Targets|desktopflowbinary, uxagentproject, uxagentprojectfile, workflow|
 
 ### <a name="BKMK_ComponentIdType"></a> ComponentIdType
 
@@ -415,7 +415,7 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |LogicalName|`owningbusinessunit`|
 |RequiredLevel|None|
 |Type|Lookup|
-|Targets|businessunit|
+|Targets||
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
 
@@ -491,6 +491,7 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 
 These relationships are many-to-one. Listed by **SchemaName**.
 
+- [desktopflowbinary_componentversionnrddatasourceset](#BKMK_desktopflowbinary_componentversionnrddatasourceset)
 - [ElasticFileAttachment_componentversionnrddatasource_Payload](#BKMK_ElasticFileAttachment_componentversionnrddatasource_Payload)
 - [lk_componentversionnrddatasource_createdby](#BKMK_lk_componentversionnrddatasource_createdby)
 - [lk_componentversionnrddatasource_createdonbehalfby](#BKMK_lk_componentversionnrddatasource_createdonbehalfby)
@@ -498,6 +499,19 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [lk_componentversionnrddatasource_modifiedonbehalfby](#BKMK_lk_componentversionnrddatasource_modifiedonbehalfby)
 - [nrd_restoreversions](#BKMK_nrd_restoreversions-many-to-one)
 - [workflow_componentversionnrddatasourceset](#BKMK_workflow_componentversionnrddatasourceset)
+
+### <a name="BKMK_desktopflowbinary_componentversionnrddatasourceset"></a> desktopflowbinary_componentversionnrddatasourceset
+
+One-To-Many Relationship: [desktopflowbinary desktopflowbinary_componentversionnrddatasourceset](desktopflowbinary.md#BKMK_desktopflowbinary_componentversionnrddatasourceset)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`desktopflowbinary`|
+|ReferencedAttribute|`desktopflowbinaryid`|
+|ReferencingAttribute|`component`|
+|ReferencingEntityNavigationPropertyName|`component_desktopflowbinary`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_ElasticFileAttachment_componentversionnrddatasource_Payload"></a> ElasticFileAttachment_componentversionnrddatasource_Payload
 

@@ -109,7 +109,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`objectid`|
 |RequiredLevel|None|
 |Type|Lookup|
-|Targets|activityfileattachment, activitypointer, approvalprocess, approvalstageintelligent, asyncoperation, botcomponent, canvasapp, cascadegrantrevokeaccessrecordstracker, deleteditemreference, desktopflowbinary, desktopflowmodule, email, exportedexcel, exportsolutionupload, flowmachineimageversion, flowsession, imagedescriptor, knowledgearticle, mailbox, msdyn_aibfeedbackloop, msdyn_aibfile, msdyn_aiconfiguration, msdyn_aidataprocessingevent, msdyn_aidocumenttemplate, msdyn_aievent, msdyn_aitestcasedocument, msdyn_analysisjob, msdyn_dataworkspace, msdyn_fileupload, msdyn_integratedsearchprovider, msdyn_kbattachment, msdyn_knowledgearticleimage, msdyn_mobileapp, msdyn_plan, msdyn_planartifact, msdyn_planattachment, msdyn_pminferredtask, msdyn_richtextfile, mspcat_catalogsubmissionfiles, mspcat_packagestore, package, packagehistory, pluginpackage, powerbidataset, powerbireport, powerpagecomponent, powerpagesitepublished, powerpagesscanreport, powerpagessourcefile, report, retaineddataexcel, revokeinheritedaccessrecordstracker, ribbonclientmetadata, searchcustomanalyzer, solution, stagesolutionupload, unstructuredfilesearchrecord, uxagentcomponentrevision, webresource, workflowbinary, workflowlog, workflowmetadata|
+|Targets|activityfileattachment, activitypointer, agentconversationmessagefile, approvalprocess, approvalstageintelligent, asyncoperation, botcomponent, canvasapp, cascadegrantrevokeaccessrecordstracker, deleteditemreference, desktopflowbinary, desktopflowmodule, email, exportedexcel, exportsolutionupload, flowmachineimageversion, flowsession, flowsessionbinary, imagedescriptor, knowledgearticle, mailbox, msdyn_aibfeedbackloop, msdyn_aibfile, msdyn_aiconfiguration, msdyn_aidataprocessingevent, msdyn_aidocumenttemplate, msdyn_aievent, msdyn_aioptimizationprivatedata, msdyn_aitestcasedocument, msdyn_analysisjob, msdyn_dataworkspace, msdyn_fileupload, msdyn_integratedsearchprovider, msdyn_kbattachment, msdyn_knowledgearticleimage, msdyn_mobileapp, msdyn_plan, msdyn_planartifact, msdyn_planattachment, msdyn_pminferredtask, msdyn_richtextfile, mspcat_catalogsubmissionfiles, mspcat_packagestore, package, packagehistory, pluginpackage, powerbidataset, powerbireport, powerpagecomponent, powerpagesitepublished, powerpagesscanreport, powerpagessourcefile, report, retaineddataexcel, revokeinheritedaccessrecordstracker, ribbonclientmetadata, searchcustomanalyzer, solution, stagesolutionupload, unstructuredfilesearchrecord, uxagentcomponentrevision, uxagentprojectfile, webresource, workflowbinary, workflowlog, workflowmetadata|
 
 ### <a name="BKMK_ObjectIdTypeCode"></a> ObjectIdTypeCode
 
@@ -314,6 +314,7 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [FileAttachment_Solution](#BKMK_FileAttachment_Solution)
 - [flowmachineimageversion_FileAttachments](#BKMK_flowmachineimageversion_FileAttachments)
 - [flowsession_FileAttachments](#BKMK_flowsession_FileAttachments)
+- [flowsessionbinary_FileAttachments](#BKMK_flowsessionbinary_FileAttachments)
 - [knowledgearticle_FileAttachments](#BKMK_knowledgearticle_FileAttachments)
 - [mailbox_FileAttachments](#BKMK_mailbox_FileAttachments)
 - [msdyn_aibfeedbackloop_FileAttachments](#BKMK_msdyn_aibfeedbackloop_FileAttachments)
@@ -322,6 +323,7 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [msdyn_aidataprocessingevent_FileAttachments](#BKMK_msdyn_aidataprocessingevent_FileAttachments)
 - [msdyn_aidocumenttemplate_FileAttachments](#BKMK_msdyn_aidocumenttemplate_FileAttachments)
 - [msdyn_aievent_FileAttachments](#BKMK_msdyn_aievent_FileAttachments)
+- [msdyn_aioptimizationprivatedata_FileAttachments](#BKMK_msdyn_aioptimizationprivatedata_FileAttachments)
 - [msdyn_aitestcasedocument_FileAttachments](#BKMK_msdyn_aitestcasedocument_FileAttachments)
 - [msdyn_analysisjob_FileAttachments](#BKMK_msdyn_analysisjob_FileAttachments)
 - [msdyn_fileupload_FileAttachments](#BKMK_msdyn_fileupload_FileAttachments)
@@ -547,6 +549,19 @@ One-To-Many Relationship: [flowsession flowsession_FileAttachments](flowsession.
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
+### <a name="BKMK_flowsessionbinary_FileAttachments"></a> flowsessionbinary_FileAttachments
+
+One-To-Many Relationship: [flowsessionbinary flowsessionbinary_FileAttachments](flowsessionbinary.md#BKMK_flowsessionbinary_FileAttachments)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`flowsessionbinary`|
+|ReferencedAttribute|`flowsessionbinaryid`|
+|ReferencingAttribute|`objectid`|
+|ReferencingEntityNavigationPropertyName|`objectid_flowsessionbinary`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
 ### <a name="BKMK_knowledgearticle_FileAttachments"></a> knowledgearticle_FileAttachments
 
 One-To-Many Relationship: [knowledgearticle knowledgearticle_FileAttachments](knowledgearticle.md#BKMK_knowledgearticle_FileAttachments)
@@ -648,6 +663,19 @@ One-To-Many Relationship: [msdyn_aievent msdyn_aievent_FileAttachments](msdyn_ai
 |ReferencedAttribute|`msdyn_aieventid`|
 |ReferencingAttribute|`objectid`|
 |ReferencingEntityNavigationPropertyName|`objectid_msdyn_aievent`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msdyn_aioptimizationprivatedata_FileAttachments"></a> msdyn_aioptimizationprivatedata_FileAttachments
+
+One-To-Many Relationship: [msdyn_aioptimizationprivatedata msdyn_aioptimizationprivatedata_FileAttachments](msdyn_aioptimizationprivatedata.md#BKMK_msdyn_aioptimizationprivatedata_FileAttachments)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msdyn_aioptimizationprivatedata`|
+|ReferencedAttribute|`msdyn_aioptimizationprivatedataid`|
+|ReferencingAttribute|`objectid`|
+|ReferencingEntityNavigationPropertyName|`objectid_msdyn_aioptimizationprivatedata`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
@@ -1057,6 +1085,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [FileAttachment_FlowSession_AdditionalContext](#BKMK_FileAttachment_FlowSession_AdditionalContext)
 - [FileAttachment_FlowSession_Inputs](#BKMK_FileAttachment_FlowSession_Inputs)
 - [FileAttachment_FlowSession_Outputs](#BKMK_FileAttachment_FlowSession_Outputs)
+- [FileAttachment_flowsessionbinary_Data](#BKMK_FileAttachment_flowsessionbinary_Data)
 - [FileAttachment_KnowledgeArticle_msdyn_contentstore](#BKMK_FileAttachment_KnowledgeArticle_msdyn_contentstore)
 - [FileAttachment_Mailbox_ExchangeSyncStateXmlFileRef](#BKMK_FileAttachment_Mailbox_ExchangeSyncStateXmlFileRef)
 - [FileAttachment_msdyn_AIBFeedbackLoop_msdyn_PredictionInput](#BKMK_FileAttachment_msdyn_AIBFeedbackLoop_msdyn_PredictionInput)
@@ -1067,6 +1096,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [FileAttachment_msdyn_aidocumenttemplate_msdyn_document](#BKMK_FileAttachment_msdyn_aidocumenttemplate_msdyn_document)
 - [FileAttachment_msdyn_AIEvent_msdyn_DataInfoFile](#BKMK_FileAttachment_msdyn_AIEvent_msdyn_DataInfoFile)
 - [FileAttachment_msdyn_AIEvent_msdyn_OutputFile](#BKMK_FileAttachment_msdyn_AIEvent_msdyn_OutputFile)
+- [FileAttachment_msdyn_AIOptimizationPrivateData_msdyn_Tests](#BKMK_FileAttachment_msdyn_AIOptimizationPrivateData_msdyn_Tests)
 - [FileAttachment_msdyn_AITestCaseDocument_msdyn_InputFile](#BKMK_FileAttachment_msdyn_AITestCaseDocument_msdyn_InputFile)
 - [FileAttachment_msdyn_analysisjob_msdyn_AnalysisJobsReport](#BKMK_FileAttachment_msdyn_analysisjob_msdyn_AnalysisJobsReport)
 - [FileAttachment_msdyn_FileUpload_msdyn_ErrorLog](#BKMK_FileAttachment_msdyn_FileUpload_msdyn_ErrorLog)
@@ -1098,6 +1128,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [FileAttachment_mspcat_PackageStore_mspcat_PackageFile](#BKMK_FileAttachment_mspcat_PackageStore_mspcat_PackageFile)
 - [FileAttachment_package_DeploymentLog](#BKMK_FileAttachment_package_DeploymentLog)
 - [FileAttachment_packagehistory_DeploymentLog](#BKMK_FileAttachment_packagehistory_DeploymentLog)
+- [FileAttachment_packagehistory_PackageFile](#BKMK_FileAttachment_packagehistory_PackageFile)
 - [FileAttachment_pluginpackage_FileId](#BKMK_FileAttachment_pluginpackage_FileId)
 - [FileAttachment_pluginpackage_Package](#BKMK_FileAttachment_pluginpackage_Package)
 - [FileAttachment_powerbidataset_Package](#BKMK_FileAttachment_powerbidataset_Package)
@@ -1409,6 +1440,18 @@ Many-To-One Relationship: [flowsession FileAttachment_FlowSession_Outputs](flows
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_FileAttachment_flowsessionbinary_Data"></a> FileAttachment_flowsessionbinary_Data
+
+Many-To-One Relationship: [flowsessionbinary FileAttachment_flowsessionbinary_Data](flowsessionbinary.md#BKMK_FileAttachment_flowsessionbinary_Data)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`flowsessionbinary`|
+|ReferencingAttribute|`data`|
+|ReferencedEntityNavigationPropertyName|`FileAttachment_flowsessionbinary_Data`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 ### <a name="BKMK_FileAttachment_KnowledgeArticle_msdyn_contentstore"></a> FileAttachment_KnowledgeArticle_msdyn_contentstore
 
 Many-To-One Relationship: [knowledgearticle FileAttachment_KnowledgeArticle_msdyn_contentstore](knowledgearticle.md#BKMK_FileAttachment_KnowledgeArticle_msdyn_contentstore)
@@ -1526,6 +1569,18 @@ Many-To-One Relationship: [msdyn_aievent FileAttachment_msdyn_AIEvent_msdyn_Outp
 |ReferencingEntity|`msdyn_aievent`|
 |ReferencingAttribute|`msdyn_outputfile`|
 |ReferencedEntityNavigationPropertyName|`FileAttachment_msdyn_AIEvent_msdyn_OutputFile`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_FileAttachment_msdyn_AIOptimizationPrivateData_msdyn_Tests"></a> FileAttachment_msdyn_AIOptimizationPrivateData_msdyn_Tests
+
+Many-To-One Relationship: [msdyn_aioptimizationprivatedata FileAttachment_msdyn_AIOptimizationPrivateData_msdyn_Tests](msdyn_aioptimizationprivatedata.md#BKMK_FileAttachment_msdyn_AIOptimizationPrivateData_msdyn_Tests)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_aioptimizationprivatedata`|
+|ReferencingAttribute|`msdyn_tests`|
+|ReferencedEntityNavigationPropertyName|`FileAttachment_msdyn_AIOptimizationPrivateData_msdyn_Tests`|
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
@@ -1898,6 +1953,18 @@ Many-To-One Relationship: [packagehistory FileAttachment_packagehistory_Deployme
 |ReferencingEntity|`packagehistory`|
 |ReferencingAttribute|`deploymentlog`|
 |ReferencedEntityNavigationPropertyName|`FileAttachment_packagehistory_DeploymentLog`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_FileAttachment_packagehistory_PackageFile"></a> FileAttachment_packagehistory_PackageFile
+
+Many-To-One Relationship: [packagehistory FileAttachment_packagehistory_PackageFile](packagehistory.md#BKMK_FileAttachment_packagehistory_PackageFile)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`packagehistory`|
+|ReferencingAttribute|`packagefile`|
+|ReferencedEntityNavigationPropertyName|`FileAttachment_packagehistory_PackageFile`|
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
