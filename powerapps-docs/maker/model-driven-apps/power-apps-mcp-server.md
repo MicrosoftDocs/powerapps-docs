@@ -47,7 +47,7 @@ The request assistance tool will create a Agent Feed task to reach out to a huma
 
 You can observe the **in progress** status for the agent run in the avtivity tab when viewing agent in Microsoft Copilot Studio. Once the user completes the activity from agent feed, control comples back to agent via callback and agent can complete the task. 
 
-:::image type="content" source="media/add-agents-to-app/copilot-studio-agent-inprogress.png" alt-text="In progress status in Copilot Studio":::
+:::image type="content" source="media/add-agents-to-app/copilot-studio-agent-in-progress.png" alt-text="In progress status in Copilot Studio":::
 
 ### Sample instruction
 

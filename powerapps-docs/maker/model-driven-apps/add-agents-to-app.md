@@ -72,12 +72,12 @@ MCP is an open protocol that enables seamless integration between large language
 1. Enter the name and description and scroll to tools and select **Add tool**.
     :::image type="content" source="media/add-agents-to-app/copilot-studio-add-tool.png" alt-text="Add tool to agent":::
 1. Search for **Power Apps MCP Server** and select it.
-    :::image type="content" source="media/add-agents-to-app/copilot-studio-power-apps-mcp-server.png" alt-text="Search Power apps MCP server":::
+   :::image type="content" source="media/add-agents-to-app/copilot-studio-power-apps-mcp-server.png" alt-text="Find and select Power apps MCP server":::
 1. Select **Add and configure** to connect the agent to Power Apps MCP tools.
-   :::image type="content" source="media/add-agents-to-app/copilot-studio-configure-power-apps-mcp-server.png" alt-text="Add and configure Power Apps MCP server"":::  
+   :::image type="content" source="media/add-agents-to-app/copilot-studio-configure-power-apps-mcp-server.png" alt-text="Add and configure Power Apps MCP server":::  
 
 1. Notice the following three tools addded. You can select to enable the tools you want for your agents. For information about these tools go to [Work with Power Apps MCP server](power-apps-mcp-server.md). 
-    :::image type="content" source="media/add-agents-to-app/copilot-studio-confiure-power-apps-mcp-tools.png" alt-text="Search Power apps MCP server":::
+   :::image type="content" source="media/add-agents-to-app/copilot-studio-configure-power-apps-mcp-tools.png" alt-text="Power apps MCP server tools available.":::
 1. Add a trigger for this autonoumous agent so that it is invoked when the trigger is fired. In this example, the trigger **When a row is added, modified, or deleted** is selected for the Dataverse **Booking** table.
     :::image type="content" source="media/add-agents-to-app/copilot-studio-power-apps-agent-trigger.png" alt-text="Add trigger to automomous agent":::
 
