@@ -10,6 +10,8 @@ search.audienceType:
 
 # Data Lake Workspace Permission (datalakeworkspacepermission) table/entity reference (Microsoft Dataverse)
 
+
+
 ## Messages
 
 The following table lists the messages for the Data Lake Workspace Permission (datalakeworkspacepermission) table.
@@ -262,7 +264,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**Application Id that is approved in AAD tenant id to access the Graph API.**|
+|Description|**Application Id that is white listed in AAD tenant id to access the Graph API.**|
 |DisplayName|**Whitelisted App ID**|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -282,6 +284,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|ApplicationRequired|
 |Type|Lookup|
 |Targets|datalakeworkspace|
+
 
 ## Read-only columns/attributes
 
@@ -640,6 +643,7 @@ One-To-Many Relationship: [organization organization_datalakeworkspacepermission
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
+
 ## One-to-Many relationships
 
 These relationships are one-to-many. Listed by **SchemaName**.
@@ -749,8 +753,10 @@ Many-To-One Relationship: [syncerror datalakeworkspacepermission_SyncErrors](syn
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+
+
 ### See also
 
 [Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
-[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)
+[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.datalakeworkspacepermission?displayProperty=fullName>

@@ -263,13 +263,14 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**Application Id that is approved in AAD Tenant ID to access the Graph API.**|
+|Description|**Application Id that is white listed in AAD Tenant ID to access the Graph API.**|
 |DisplayName|**Whitelisted App Id**|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`whitelistedappid`|
 |RequiredLevel|None|
 |Type|Uniqueidentifier|
+
 
 ## Read-only columns/attributes
 
@@ -650,6 +651,7 @@ One-To-Many Relationship: [organization organization_datalakeworkspace](organiza
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
+
 ## One-to-Many relationships
 
 These relationships are one-to-many. Listed by **SchemaName**.
@@ -772,8 +774,10 @@ Many-To-One Relationship: [datalakeworkspacepermission datalakeworkspace_workspa
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+
+
 ### See also
 
 [Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
-[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)
+[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.datalakeworkspace?displayProperty=fullName>

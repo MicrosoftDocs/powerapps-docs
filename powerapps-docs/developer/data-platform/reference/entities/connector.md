@@ -70,6 +70,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [CustomCodeBlobContent](#BKMK_CustomCodeBlobContent)
 - [Description](#BKMK_Description)
 - [DisplayName](#BKMK_DisplayName)
+- [ExtensionAssemblyId](#BKMK_ExtensionAssemblyId)
 - [IconBlob](#BKMK_IconBlob)
 - [IconBrandColor](#BKMK_IconBrandColor)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
@@ -248,6 +249,19 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|False|
 |MaxLength|200|
+
+### <a name="BKMK_ExtensionAssemblyId"></a> ExtensionAssemblyId
+
+|Property|Value|
+|---|---|
+|Description|**Unique identifier of the Extension assembly location containing the CustomCodeBlobContent.**|
+|DisplayName|**ExtensionAssemblyId**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`extensionassemblyid`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets||
 
 ### <a name="BKMK_IconBlob"></a> IconBlob
 

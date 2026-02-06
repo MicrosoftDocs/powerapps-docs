@@ -62,6 +62,7 @@ The following table lists selected properties for the msdyn_historicalcaseharves
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
+- [ModuleRunId](#BKMK_ModuleRunId)
 - [msdyn_articlescreated](#BKMK_msdyn_articlescreated)
 - [msdyn_batchprocessingcompletedon](#BKMK_msdyn_batchprocessingcompletedon)
 - [msdyn_batchsize](#BKMK_msdyn_batchsize)
@@ -91,6 +92,18 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Integer|
 |MaxValue|2147483647|
 |MinValue|-2147483648|
+
+### <a name="BKMK_ModuleRunId"></a> ModuleRunId
+
+|Property|Value|
+|---|---|
+|Description|**Unique identifier for data processing module run**|
+|DisplayName|**modulerunid**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`modulerunid`|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
 
 ### <a name="BKMK_msdyn_articlescreated"></a> msdyn_articlescreated
 
@@ -272,6 +285,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |---|---|
 |0|Label: **Created**<br />DefaultStatus: 1<br />InvariantName: `Created`|
 |1|Label: **Completed**<br />DefaultStatus: 2<br />InvariantName: `Completed`|
+|2|Label: **Stopped**<br />DefaultStatus: 4<br />InvariantName: `Stopped`|
 
 ### <a name="BKMK_statuscode"></a> statuscode
 
@@ -294,6 +308,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |1|Label: **Active**<br />State:0<br />TransitionData: None|
 |2|Label: **Success**<br />State:1<br />TransitionData: None|
 |3|Label: **Failed**<br />State:1<br />TransitionData: None|
+|4|Label: **Stopped**<br />State:2<br />TransitionData: None|
 
 ### <a name="BKMK_TimeZoneRuleVersionNumber"></a> TimeZoneRuleVersionNumber
 
