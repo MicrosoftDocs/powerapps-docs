@@ -331,6 +331,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |---|---|
 |0|**Customer**|
 |1|**Managed**|
+|2|**Shared**|
 
 ### <a name="BKMK_MaxManagedMachineCount"></a> MaxManagedMachineCount
 

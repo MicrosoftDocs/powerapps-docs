@@ -1553,15 +1553,19 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [business_unit_flowmachinenetwork](#BKMK_business_unit_flowmachinenetwork)
 - [business_unit_flowrun](#BKMK_business_unit_flowrun)
 - [business_unit_flowsession](#BKMK_business_unit_flowsession)
+- [business_unit_flowsessionbinary](#BKMK_business_unit_flowsessionbinary)
 - [business_unit_fxexpression](#BKMK_business_unit_fxexpression)
 - [business_unit_goal](#BKMK_business_unit_goal)
 - [business_unit_goalrollupquery](#BKMK_business_unit_goalrollupquery)
 - [business_unit_governanceconfiguration](#BKMK_business_unit_governanceconfiguration)
 - [business_unit_indexedtrait](#BKMK_business_unit_indexedtrait)
+- [business_unit_intelligentmemory](#BKMK_business_unit_intelligentmemory)
 - [business_unit_interactionforemail](#BKMK_business_unit_interactionforemail)
 - [business_unit_keyvaultreference](#BKMK_business_unit_keyvaultreference)
 - [business_unit_knowledgearticle](#BKMK_business_unit_knowledgearticle)
 - [business_unit_knowledgefaq](#BKMK_business_unit_knowledgefaq)
+- [business_unit_knowledgesourceconsumer](#BKMK_business_unit_knowledgesourceconsumer)
+- [business_unit_knowledgesourceprofile](#BKMK_business_unit_knowledgesourceprofile)
 - [business_unit_letter_activities](#BKMK_business_unit_letter_activities)
 - [business_unit_mailbox](#BKMK_business_unit_mailbox)
 - [business_unit_mailmergetemplates](#BKMK_business_unit_mailmergetemplates)
@@ -1573,6 +1577,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [business_unit_msdyn_aibfeedbackloop](#BKMK_business_unit_msdyn_aibfeedbackloop)
 - [business_unit_msdyn_aibfile](#BKMK_business_unit_msdyn_aibfile)
 - [business_unit_msdyn_aibfileattacheddata](#BKMK_business_unit_msdyn_aibfileattacheddata)
+- [business_unit_msdyn_aiconfigurationsearch](#BKMK_business_unit_msdyn_aiconfigurationsearch)
 - [business_unit_msdyn_aidataprocessingevent](#BKMK_business_unit_msdyn_aidataprocessingevent)
 - [business_unit_msdyn_aidocumenttemplate](#BKMK_business_unit_msdyn_aidocumenttemplate)
 - [business_unit_msdyn_aievaluationconfiguration](#BKMK_business_unit_msdyn_aievaluationconfiguration)
@@ -1584,6 +1589,8 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [business_unit_msdyn_aiodlabel](#BKMK_business_unit_msdyn_aiodlabel)
 - [business_unit_msdyn_aiodtrainingboundingbox](#BKMK_business_unit_msdyn_aiodtrainingboundingbox)
 - [business_unit_msdyn_aiodtrainingimage](#BKMK_business_unit_msdyn_aiodtrainingimage)
+- [business_unit_msdyn_aioptimization](#BKMK_business_unit_msdyn_aioptimization)
+- [business_unit_msdyn_aioptimizationprivatedata](#BKMK_business_unit_msdyn_aioptimizationprivatedata)
 - [business_unit_msdyn_aitemplate](#BKMK_business_unit_msdyn_aitemplate)
 - [business_unit_msdyn_aitestcase](#BKMK_business_unit_msdyn_aitestcase)
 - [business_unit_msdyn_aitestcasedocument](#BKMK_business_unit_msdyn_aitestcasedocument)
@@ -1625,9 +1632,11 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [business_unit_msdyn_historicalcaseharvestbatch](#BKMK_business_unit_msdyn_historicalcaseharvestbatch)
 - [business_unit_msdyn_historicalcaseharvestrun](#BKMK_business_unit_msdyn_historicalcaseharvestrun)
 - [business_unit_msdyn_integratedsearchprovider](#BKMK_business_unit_msdyn_integratedsearchprovider)
+- [business_unit_msdyn_interimupdateknowledgearticle](#BKMK_business_unit_msdyn_interimupdateknowledgearticle)
 - [business_unit_msdyn_kalanguagesetting](#BKMK_business_unit_msdyn_kalanguagesetting)
 - [business_unit_msdyn_kbattachment](#BKMK_business_unit_msdyn_kbattachment)
 - [business_unit_msdyn_kmfederatedsearchconfig](#BKMK_business_unit_msdyn_kmfederatedsearchconfig)
+- [business_unit_msdyn_knowledgearticlecustomentity](#BKMK_business_unit_msdyn_knowledgearticlecustomentity)
 - [business_unit_msdyn_knowledgearticleimage](#BKMK_business_unit_msdyn_knowledgearticleimage)
 - [business_unit_msdyn_knowledgearticletemplate](#BKMK_business_unit_msdyn_knowledgearticletemplate)
 - [business_unit_msdyn_knowledgeassetconfiguration](#BKMK_business_unit_msdyn_knowledgeassetconfiguration)
@@ -1649,6 +1658,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [business_unit_msdyn_pmprocessversion](#BKMK_business_unit_msdyn_pmprocessversion)
 - [business_unit_msdyn_pmrecording](#BKMK_business_unit_msdyn_pmrecording)
 - [business_unit_msdyn_pmsimulation](#BKMK_business_unit_msdyn_pmsimulation)
+- [business_unit_msdyn_pmtab](#BKMK_business_unit_msdyn_pmtab)
 - [business_unit_msdyn_pmtemplate](#BKMK_business_unit_msdyn_pmtemplate)
 - [business_unit_msdyn_pmview](#BKMK_business_unit_msdyn_pmview)
 - [business_unit_msdyn_qna](#BKMK_business_unit_msdyn_qna)
@@ -2737,6 +2747,18 @@ Many-To-One Relationship: [flowsession business_unit_flowsession](flowsession.md
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_business_unit_flowsessionbinary"></a> business_unit_flowsessionbinary
+
+Many-To-One Relationship: [flowsessionbinary business_unit_flowsessionbinary](flowsessionbinary.md#BKMK_business_unit_flowsessionbinary)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`flowsessionbinary`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencedEntityNavigationPropertyName|`business_unit_flowsessionbinary`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 ### <a name="BKMK_business_unit_fxexpression"></a> business_unit_fxexpression
 
 Many-To-One Relationship: [fxexpression business_unit_fxexpression](fxexpression.md#BKMK_business_unit_fxexpression)
@@ -2797,6 +2819,18 @@ Many-To-One Relationship: [indexedtrait business_unit_indexedtrait](indexedtrait
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_business_unit_intelligentmemory"></a> business_unit_intelligentmemory
+
+Many-To-One Relationship: [intelligentmemory business_unit_intelligentmemory](intelligentmemory.md#BKMK_business_unit_intelligentmemory)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`intelligentmemory`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencedEntityNavigationPropertyName|`business_unit_intelligentmemory`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 ### <a name="BKMK_business_unit_interactionforemail"></a> business_unit_interactionforemail
 
 Many-To-One Relationship: [interactionforemail business_unit_interactionforemail](interactionforemail.md#BKMK_business_unit_interactionforemail)
@@ -2842,6 +2876,30 @@ Many-To-One Relationship: [knowledgefaq business_unit_knowledgefaq](knowledgefaq
 |ReferencingEntity|`knowledgefaq`|
 |ReferencingAttribute|`owningbusinessunit`|
 |ReferencedEntityNavigationPropertyName|`business_unit_knowledgefaq`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_business_unit_knowledgesourceconsumer"></a> business_unit_knowledgesourceconsumer
+
+Many-To-One Relationship: [knowledgesourceconsumer business_unit_knowledgesourceconsumer](knowledgesourceconsumer.md#BKMK_business_unit_knowledgesourceconsumer)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`knowledgesourceconsumer`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencedEntityNavigationPropertyName|`business_unit_knowledgesourceconsumer`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_business_unit_knowledgesourceprofile"></a> business_unit_knowledgesourceprofile
+
+Many-To-One Relationship: [knowledgesourceprofile business_unit_knowledgesourceprofile](knowledgesourceprofile.md#BKMK_business_unit_knowledgesourceprofile)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`knowledgesourceprofile`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencedEntityNavigationPropertyName|`business_unit_knowledgesourceprofile`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
@@ -2977,6 +3035,18 @@ Many-To-One Relationship: [msdyn_aibfileattacheddata business_unit_msdyn_aibfile
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_business_unit_msdyn_aiconfigurationsearch"></a> business_unit_msdyn_aiconfigurationsearch
+
+Many-To-One Relationship: [msdyn_aiconfigurationsearch business_unit_msdyn_aiconfigurationsearch](msdyn_aiconfigurationsearch.md#BKMK_business_unit_msdyn_aiconfigurationsearch)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_aiconfigurationsearch`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencedEntityNavigationPropertyName|`business_unit_msdyn_aiconfigurationsearch`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 ### <a name="BKMK_business_unit_msdyn_aidataprocessingevent"></a> business_unit_msdyn_aidataprocessingevent
 
 Many-To-One Relationship: [msdyn_aidataprocessingevent business_unit_msdyn_aidataprocessingevent](msdyn_aidataprocessingevent.md#BKMK_business_unit_msdyn_aidataprocessingevent)
@@ -3106,6 +3176,30 @@ Many-To-One Relationship: [msdyn_aiodtrainingimage business_unit_msdyn_aiodtrain
 |ReferencingEntity|`msdyn_aiodtrainingimage`|
 |ReferencingAttribute|`owningbusinessunit`|
 |ReferencedEntityNavigationPropertyName|`business_unit_msdyn_aiodtrainingimage`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_business_unit_msdyn_aioptimization"></a> business_unit_msdyn_aioptimization
+
+Many-To-One Relationship: [msdyn_aioptimization business_unit_msdyn_aioptimization](msdyn_aioptimization.md#BKMK_business_unit_msdyn_aioptimization)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_aioptimization`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencedEntityNavigationPropertyName|`business_unit_msdyn_aioptimization`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_business_unit_msdyn_aioptimizationprivatedata"></a> business_unit_msdyn_aioptimizationprivatedata
+
+Many-To-One Relationship: [msdyn_aioptimizationprivatedata business_unit_msdyn_aioptimizationprivatedata](msdyn_aioptimizationprivatedata.md#BKMK_business_unit_msdyn_aioptimizationprivatedata)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_aioptimizationprivatedata`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencedEntityNavigationPropertyName|`business_unit_msdyn_aioptimizationprivatedata`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
@@ -3601,6 +3695,18 @@ Many-To-One Relationship: [msdyn_integratedsearchprovider business_unit_msdyn_in
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_business_unit_msdyn_interimupdateknowledgearticle"></a> business_unit_msdyn_interimupdateknowledgearticle
+
+Many-To-One Relationship: [msdyn_interimupdateknowledgearticle business_unit_msdyn_interimupdateknowledgearticle](msdyn_interimupdateknowledgearticle.md#BKMK_business_unit_msdyn_interimupdateknowledgearticle)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_interimupdateknowledgearticle`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencedEntityNavigationPropertyName|`business_unit_msdyn_interimupdateknowledgearticle`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 ### <a name="BKMK_business_unit_msdyn_kalanguagesetting"></a> business_unit_msdyn_kalanguagesetting
 
 Many-To-One Relationship: [msdyn_kalanguagesetting business_unit_msdyn_kalanguagesetting](msdyn_kalanguagesetting.md#BKMK_business_unit_msdyn_kalanguagesetting)
@@ -3634,6 +3740,18 @@ Many-To-One Relationship: [msdyn_kmfederatedsearchconfig business_unit_msdyn_kmf
 |ReferencingEntity|`msdyn_kmfederatedsearchconfig`|
 |ReferencingAttribute|`owningbusinessunit`|
 |ReferencedEntityNavigationPropertyName|`business_unit_msdyn_kmfederatedsearchconfig`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_business_unit_msdyn_knowledgearticlecustomentity"></a> business_unit_msdyn_knowledgearticlecustomentity
+
+Many-To-One Relationship: [msdyn_knowledgearticlecustomentity business_unit_msdyn_knowledgearticlecustomentity](msdyn_knowledgearticlecustomentity.md#BKMK_business_unit_msdyn_knowledgearticlecustomentity)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_knowledgearticlecustomentity`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencedEntityNavigationPropertyName|`business_unit_msdyn_knowledgearticlecustomentity`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
@@ -3886,6 +4004,18 @@ Many-To-One Relationship: [msdyn_pmsimulation business_unit_msdyn_pmsimulation](
 |ReferencingEntity|`msdyn_pmsimulation`|
 |ReferencingAttribute|`owningbusinessunit`|
 |ReferencedEntityNavigationPropertyName|`business_unit_msdyn_pmsimulation`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_business_unit_msdyn_pmtab"></a> business_unit_msdyn_pmtab
+
+Many-To-One Relationship: [msdyn_pmtab business_unit_msdyn_pmtab](msdyn_pmtab.md#BKMK_business_unit_msdyn_pmtab)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_pmtab`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencedEntityNavigationPropertyName|`business_unit_msdyn_pmtab`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 

@@ -55,12 +55,18 @@ items:
 - name: "AI Configuration"
   displayName: "msdyn_AIConfiguration entity"
   href: msdyn_aiconfiguration.md
+- name: "AI Configuration Search"
+  displayName: "msdyn_aiconfigurationsearch entity"
+  href: msdyn_aiconfigurationsearch.md
 - name: "AI Document Template"
   displayName: "msdyn_aidocumenttemplate entity"
   href: msdyn_aidocumenttemplate.md
 - name: "AI Evaluation Configuration"
   displayName: "msdyn_AIEvaluationConfiguration entity"
   href: msdyn_aievaluationconfiguration.md
+- name: "AI Evaluation Metric"
+  displayName: "msdyn_AIEvaluationMetric entity"
+  href: msdyn_aievaluationmetric.md
 - name: "AI Evaluation Run"
   displayName: "msdyn_AIEvaluationRun entity"
   href: msdyn_aievaluationrun.md
@@ -85,6 +91,12 @@ items:
 - name: "AI Object Detection Label"
   displayName: "msdyn_AIOdLabel entity"
   href: msdyn_aiodlabel.md
+- name: "AI Optimization"
+  displayName: "msdyn_AIOptimization entity"
+  href: msdyn_aioptimization.md
+- name: "AI Optimization Private Data"
+  displayName: "msdyn_AIOptimizationPrivateData entity"
+  href: msdyn_aioptimizationprivatedata.md
 - name: "AI Plugin Conversation Starter"
   displayName: "AIPluginConversationStarter entity"
   href: aipluginconversationstarter.md
@@ -151,6 +163,9 @@ items:
 - name: "AIPluginUserSetting"
   displayName: "AIPluginUserSetting entity"
   href: aipluginusersetting.md
+- name: "Allowed MCP Client"
+  displayName: "allowedmcpclient entity"
+  href: allowedmcpclient.md
 - name: "Analysis Component"
   displayName: "msdyn_analysiscomponent entity"
   href: msdyn_analysiscomponent.md
@@ -385,6 +400,12 @@ items:
 - name: "Comment"
   displayName: "PostComment entity"
   href: postcomment.md
+- name: "Component Changeset Payload"
+  displayName: "componentchangesetpayload entity"
+  href: componentchangesetpayload.md
+- name: "Component Changeset Version"
+  displayName: "componentchangesetversion entity"
+  href: componentchangesetversion.md
 - name: "Component Layer"
   displayName: "msdyn_componentlayer entity"
   href: msdyn_componentlayer.md
@@ -727,6 +748,9 @@ items:
 - name: "Flow Session"
   displayName: "flowsession entity"
   href: flowsession.md
+- name: "Flow Session Binary"
+  displayName: "flowsessionbinary entity"
+  href: flowsessionbinary.md
 - name: "Follow"
   displayName: "PostFollow entity"
   href: postfollow.md
@@ -757,6 +781,9 @@ items:
 - name: "Git Repository"
   displayName: "GitRepository entity"
   href: gitrepository.md
+- name: "Git Solution"
+  displayName: "GitSolution entity"
+  href: gitsolution.md
 - name: "Goal"
   displayName: "Goal entity"
   href: goal.md
@@ -802,9 +829,15 @@ items:
 - name: "Integrated search provider"
   displayName: "msdyn_integratedsearchprovider entity"
   href: msdyn_integratedsearchprovider.md
+- name: "IntelligentMemory"
+  displayName: "IntelligentMemory entity"
+  href: intelligentmemory.md
 - name: "Interaction for Email"
   displayName: "InteractionForEmail entity"
   href: interactionforemail.md
+- name: "Interim Update Knowledge Article"
+  displayName: "msdyn_interimupdateknowledgearticle entity"
+  href: msdyn_interimupdateknowledgearticle.md
 - name: "Invalid Dependency"
   displayName: "InvalidDependency entity"
   href: invaliddependency.md
@@ -823,6 +856,9 @@ items:
 - name: "Knowledge Article Attachment"
   displayName: "msdyn_kbattachment entity"
   href: msdyn_kbattachment.md
+- name: "Knowledge Article Custom Entity"
+  displayName: "msdyn_knowledgearticlecustomentity entity"
+  href: msdyn_knowledgearticlecustomentity.md
 - name: "Knowledge Article Image"
   displayName: "msdyn_knowledgearticleimage entity"
   href: msdyn_knowledgearticleimage.md
@@ -874,6 +910,12 @@ items:
 - name: "Knowledge search personal filter config"
   displayName: "msdyn_knowledgepersonalfilter entity"
   href: msdyn_knowledgepersonalfilter.md
+- name: "Knowledge Source Consumer"
+  displayName: "KnowledgeSourceConsumer entity"
+  href: knowledgesourceconsumer.md
+- name: "Knowledge Source Profile"
+  displayName: "KnowledgeSourceProfile entity"
+  href: knowledgesourceprofile.md
 - name: "Language"
   displayName: "LanguageLocale entity"
   href: languagelocale.md
@@ -1099,6 +1141,9 @@ items:
 - name: "PM Simulation"
   displayName: "msdyn_pmsimulation entity"
   href: msdyn_pmsimulation.md
+- name: "PM Tab"
+  displayName: "msdyn_pmtab entity"
+  href: msdyn_pmtab.md
 - name: "PM Template"
   displayName: "msdyn_pmtemplate entity"
   href: msdyn_pmtemplate.md
@@ -1219,6 +1264,12 @@ items:
 - name: "Publishing State Transition Rule"
   displayName: "mspp_publishingstatetransitionrule entity"
   href: mspp_publishingstatetransitionrule.md
+- name: "Purview Label Info"
+  displayName: "purviewlabelinfo entity"
+  href: purviewlabelinfo.md
+- name: "Purview Label Sync Cache"
+  displayName: "purviewlabelsynccache entity"
+  href: purviewlabelsynccache.md
 - name: "QnA"
   displayName: "msdyn_qna entity"
   href: msdyn_qna.md
@@ -1372,6 +1423,9 @@ items:
 - name: "Sensitivity Label"
   displayName: "sensitivitylabel entity"
   href: sensitivitylabel.md
+- name: "Sensitivity Label Attribute Mapping"
+  displayName: "sensitivitylabelattributemapping entity"
+  href: sensitivitylabelattributemapping.md
 - name: "Service Configuration"
   displayName: "msdyn_serviceconfiguration entity"
   href: msdyn_serviceconfiguration.md
@@ -1510,15 +1564,42 @@ items:
 - name: "Source Control Configuration"
   displayName: "SourceControlConfiguration entity"
   href: sourcecontrolconfiguration.md
+- name: "Staged attribute lookup value"
+  displayName: "StagedAttributeLookupValue entity"
+  href: stagedattributelookupvalue.md
+- name: "Staged attribute picklist value"
+  displayName: "StagedAttributePicklistValue entity"
+  href: stagedattributepicklistvalue.md
 - name: "Staged Entity"
   displayName: "StagedEntity entity"
   href: stagedentity.md
 - name: "Staged Entity Attribute"
   displayName: "StagedEntityAttribute entity"
   href: stagedentityattribute.md
+- name: "Staged entity relationship"
+  displayName: "StagedEntityRelationship entity"
+  href: stagedentityrelationship.md
+- name: "Staged entity relationship relationships"
+  displayName: "StagedEntityRelationshipRelationships entity"
+  href: stagedentityrelationshiprelationships.md
+- name: "Staged entity relationship role"
+  displayName: "StagedEntityRelationshipRole entity"
+  href: stagedentityrelationshiprole.md
 - name: "Staged Metadata Async Operation"
   displayName: "StagedMetadataAsyncOperation entity"
   href: stagedmetadataasyncoperation.md
+- name: "Staged optionset"
+  displayName: "StagedOptionSet entity"
+  href: stagedoptionset.md
+- name: "Staged relationship"
+  displayName: "StagedViewAttribute entity"
+  href: stagedviewattribute.md
+- name: "Staged relationship (StagedRelationship)"
+  displayName: "StagedRelationship entity"
+  href: stagedrelationship.md
+- name: "Staged relationship (StagedRelationshipExtraCondition)"
+  displayName: "StagedRelationshipExtraCondition entity"
+  href: stagedrelationshipextracondition.md
 - name: "Staged Source Control Component"
   displayName: "StagedSourceControlComponent entity"
   href: stagedsourcecontrolcomponent.md

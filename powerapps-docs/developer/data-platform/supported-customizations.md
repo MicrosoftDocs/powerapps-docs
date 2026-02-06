@@ -1,6 +1,6 @@
 ---
-title: "Supported customizations for Microsoft Dataverse" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how you can customize Microsoft Dataverse using available tools." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Supported customizations for Microsoft Dataverse"
+description: "Learn how you can customize Microsoft Dataverse using available tools." 
 ms.collection: get-started
 ms.date: 09/02/2022
 ms.reviewer: pehecke

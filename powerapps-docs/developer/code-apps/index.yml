@@ -1,11 +1,11 @@
 ### YamlMime:Landing
 
-title: Power Apps code apps (preview) documentation
+title: Power Apps code apps documentation
 summary: Power Apps code apps let developers bring Power Apps capabilities into custom web apps built in a code‑first IDE. You can develop locally and run the same app in Power Platform. Build with popular frameworks (React, Vue, and others) while keeping full control over your UI and logic.
 
 metadata:
-  title: Power Apps code apps (preview) documentation
-  description: Provides access to highlighted areas within the Power Apps code apps (preview) documentation
+  title: Power Apps code apps documentation
+  description: Provides access to highlighted areas within the Power Apps code apps documentation
   services: service
   ms.subservice: code-apps
   ms.topic: landing-page
@@ -24,23 +24,51 @@ landingContent:
         links:
           - text: Overview
             url: overview.md
-          - text: "Quickstart: Create your first code app"
-            url: quickstart.md
+          - text: "Quickstart: Create a code app"
+            url: how-to/create-an-app-from-scratch.md
   # Card
-  - title: How To
+  - title: How To Connect to Data
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: "Create an app from scratch"
-            url: how-to/create-an-app-from-scratch.md
           - text: "Connect to data"
             url: how-to/connect-to-data.md
           - text: "Connect to Dataverse"
             url: how-to/connect-to-dataverse.md
           - text: "Connect to Azure SQL"
             url: how-to/connect-to-azure-sql.md
+          - text: "SharePoint operations"
+            url: how-to/sharepoint-operations.md
           - text: "Create a Basic Asset Management API with Azure Functions"
             url: how-to/create-basic-asset-management-api-azure-functions.md
+          - text: "Get context data"
+            url: how-to/retrieve-context.md
+          - text: "Get Dataverse tables metadata"
+            url: how-to/get-table-metadata.md
+  # Card
+  - title: Advanced How-To Guides
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: "Analyze data requests and responses"
+            url: how-to/analyze-data-request-response.md
+          - text: "Application Lifecycle Management (ALM)"
+            url: how-to/alm.md
+          - text: "Set up Azure App Insights"
+            url: how-to/set-up-azure-app-insights.md
+          - text: "Migrate your code to v1.0"
+            url: how-to/migrate-to-v1.md
+
+    # Card
+  - title: Troubleshooting guides
+    linkLists:
+      - linkListType: tutorial
+        links:
+           - text: "Adding a data source"
+             url: troubleshoot-add-datasource.md
+           - text: "Zscaler issues"
+             url: troubleshoot-zscaler-issues.md
+    
     # Card
   - title: Architecture
     linkLists:

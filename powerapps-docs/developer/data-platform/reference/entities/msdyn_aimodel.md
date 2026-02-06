@@ -835,6 +835,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [msdyn_aimodel_PrincipalObjectAttributeAccesses](#BKMK_msdyn_aimodel_PrincipalObjectAttributeAccesses)
 - [msdyn_aimodel_ProcessSession](#BKMK_msdyn_aimodel_ProcessSession)
 - [msdyn_aimodel_SyncErrors](#BKMK_msdyn_aimodel_SyncErrors)
+- [msdyn_aioptimization_aimodelid_msdyn_aimodel](#BKMK_msdyn_aioptimization_aimodelid_msdyn_aimodel)
 - [msdyn_AIPluginOperation_AIModel](#BKMK_msdyn_AIPluginOperation_AIModel)
 
 ### <a name="BKMK_msdyn_AIBDatasetsContainer_msdyn_AIModelI"></a> msdyn_AIBDatasetsContainer_msdyn_AIModelI
@@ -968,6 +969,18 @@ Many-To-One Relationship: [syncerror msdyn_aimodel_SyncErrors](syncerror.md#BKMK
 |ReferencedEntityNavigationPropertyName|`msdyn_aimodel_SyncErrors`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_msdyn_aioptimization_aimodelid_msdyn_aimodel"></a> msdyn_aioptimization_aimodelid_msdyn_aimodel
+
+Many-To-One Relationship: [msdyn_aioptimization msdyn_aioptimization_aimodelid_msdyn_aimodel](msdyn_aioptimization.md#BKMK_msdyn_aioptimization_aimodelid_msdyn_aimodel)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_aioptimization`|
+|ReferencingAttribute|`msdyn_aimodelid`|
+|ReferencedEntityNavigationPropertyName|`msdyn_aioptimization_aimodelid_msdyn_aimodel`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_msdyn_AIPluginOperation_AIModel"></a> msdyn_AIPluginOperation_AIModel
 

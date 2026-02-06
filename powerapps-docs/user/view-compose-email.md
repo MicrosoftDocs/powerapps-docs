@@ -2,10 +2,9 @@
 title: "View, compose and respond to email | MicrosoftDocs"
 description: How to view, compose and respond to email.
 author: shwetamurkute
-
 ms.component: pa-user
 ms.topic: article
-ms.date: 05/10/2024
+ms.date: 02/04/2026
 ms.subservice: end-user
 ms.author: smurkute
 ms.custom: ""
@@ -26,8 +25,7 @@ Users can view, create, and send email faster with streamlined access that helps
    Legend
    1. Select **Activities**
    2. Select **All Activities** 
-   3. Under **Activity Type** select **Email**
-   4. Email list appears in the screen below
+   3. Under **Activity Type** select **Email**. The email list appears in the screen.
 
 ## Compose an email
 
@@ -49,10 +47,10 @@ Legend
 
 1. **From**. The name displayed in the **From** field is automatically populated based on the user who is currently signed in.
 2. **Expand**. The **Expand** ![Expand icon.](media\email-expand-icon.png "xpand email") icon allows you to compose your email in a full-screen view and minimize when done.
-3. **Rich text editor**. This tool bar helps you  format emails. The editor is displayed as a single line that can be expanded to view the full list of editing features by default. For more information, see [Use the rich text editor toolbar in email](email-rich-text-editor.md) and [Accessibility shortcuts for email](keyboard-shortcuts.md#email). **User Personalization**. The ![Set default.](media\personalization.png "personalization icon") icon allows you to set the default font and font size for your emails. Once set, the **Font** and **Font Size** display these values by default. 
+3. **Rich text editor**. This tool bar helps you format emails. The editor is displayed as a single line that can be expanded to view the full list of editing features by default. For more information, see [Use the rich text editor toolbar in email](email-rich-text-editor.md) and [Accessibility shortcuts for email](keyboard-shortcuts.md#email). **User Personalization**. The ![Set default.](media\personalization.png "personalization icon") icon allows you to set the default font and font size for your emails. Once set, the **Font** and **Font Size** display these values by default. 
 1.  **Body**. The body is where you compose and/or reply to an email.
 1. **Insert Signature**. Use this command to personalize your message.  
-1. **Insert Template**. This is used to apply an email template. <BR>
+1. **Insert Template**. This function is used to apply an email template. <BR>
 For more information, see [Insert an email template](insert-email-template.md).
 
    > [!Note]
@@ -64,10 +62,30 @@ For more information, see [Insert an email template](insert-email-template.md).
    > [!Note] 
    > After you save your email, you can use Attach file and New Attachments interchangeably.
 
-9.	**Send**. Select this icon ![Send email icon.](media\email-send-icon.png "Send email icon")  to **Send** your email when you are done.
+9.	**Send**. Select this icon ![Send email icon.](media\email-send-icon.png "Send email icon")  to **Send** your email.
 
     >[!Important]
     > - The **From** and **To** fields are automatically populated based on the user and the account and contact of the original record.
+
+## View email sentiment (preview)
+
+[!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
+
+When you get an incoming email from a customer, the customer sentiment card is displayed on the email form.
+
+When enabled by your system administrator, the customer sentiment card displays the following features:
+
+ - **Current sentiment**: The customer’s current sentiment. A sentiment intensity indicator in the corresponding colors is also displayed.
+ - **Sentiment timeline**: A visual representation that shows how the customer sentiment in the emails received changes across a period.   
+ The timeline displays indicators for up to six customer emails, including the current email. Customer service representatives can select historical sentiment and then select **View email**. The system shows the relevant email for that period and sentiment in a new tab.
+
+- The **Inbox** view also displays the sentiment with the sentiment intensity indicator.
+
+> [!Note]
+> For emails received before the feature is enabled, the system doesn’t display the sentiment.
+
+[!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/production-ready-preview-dynamics365.md)]
+
 
 ## Reply to an email
 The way you can reply to an email depends on where you are in your app. 
@@ -79,7 +97,7 @@ When enabled by your system administrator, the email option displays in the top 
 
 ## Enhanced recipient handling 
 
-Users can perform the following actions only if the administrator has added the [**Email Recipient control**](/dynamics365/customer-service/administer/add-enhanced-attachment-control#enable-recipient-control) component to an email form:
+Users can perform the following actions only if the administrator added the [**Email Recipient control**](/dynamics365/customer-service/administer/add-enhanced-attachment-control#enable-recipient-control) component to an email form:
 
  - Drag and drop recipient names across **To**, **CC**, and **BCC** fields.
  - View the recipient's email address along with their names.
@@ -92,7 +110,7 @@ Users can perform the following actions only if the administrator has added the 
    :::image type="content" source="media/recepient-handling.png" alt-text="Screenshot of runtime experience.":::
 
 ### Access email
-When accessing email, there are a couple of options you can use. 
+When you access email, there are a couple of options you can use. 
 
 -  **Option 1:**<BR>
    ![Respond to an email.](media\email-how-to-respond-to-an-email-1c.png "Respond to an email")
@@ -116,10 +134,11 @@ You can set the default font and font size for your email text. Perform the foll
   - In **User Personalization** specify the **Font** and **Font Size**. 
   - Select **Ok**. The application defaults the values specified in the Font and Font Size fields of the rich text editor toolbar.
   
-  If your administrator has set default font and font size, the application displays the set values in the Font and Font Size fields of the rich text editor toolbar.
+  If your administrator set a default font and font size, the application displays the set values in the Font and Font Size fields of the rich text editor toolbar.
   
 ## Reply to email in timeline
-When replying to emails in Timeline, the command bar in the top-right corner provides you with reply options. When you select an option, your email automatically is set and opens in that state ready for you to begin your message.  
+
+When you reply to an email in the timeline, the command bar in the top-right corner provides you with reply options. When you select an option, your email automatically is set and opens in that state ready for you to begin your message.  
 
 You can use the following command options when working with emails in the timeline.
 
@@ -131,5 +150,5 @@ You can use the following command options when working with emails in the timeli
 
 ## Download email
 
-Select **Download** to download emails as a .eml file. 
+Select **Download** to download emails as an .eml file. 
 
