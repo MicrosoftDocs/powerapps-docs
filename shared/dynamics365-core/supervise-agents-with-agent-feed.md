@@ -18,12 +18,12 @@ Agent feed enables human-agent collaboration in apps by surfacing agent-generate
 > Currently, all users who have access to the Agent Task table can see agent feed items in apps. To prevent unintended exposure, don't configure agents to log tasks targeted at specific users.
 
 ## Use agent feed to supervise agents
-The enhanced agent feed is powered by the automomous agents using Power Apps MCP Server. Power Apps MCP sever tools enable following two core human‑agent collaboration patterns:
+The enhanced agent feed is powered by the automomous agents using [Power Apps MCP server](/power-apps/maker/model-driven-apps/power-apps-mcp-server). Power Apps MCP server tools enable following two core human‑agent collaboration patterns:
 1. Autonomous Dataverse record creation and updates with Human‑in‑the‑Loop review.
 1. Agent requests for human assistance and logging tasks for human review.
-In agent‑enabled apps, user focus shift from doing the work to supervising and prioritizing agent‑driven work. Agents help with automations and organize work, ensuring business experts remain involved in decision‑making and critical actions.
+In agent‑enabled apps, user focus shifts from doing the work to supervising and prioritizing agent‑driven work. Agents help with automations and organize work, ensuring business experts remain involved in decision-making and critical actions.
 
-To allow users to view an agent's activity in the app, the agent must connect to Power Apps MCP Server. The agent feed appears at the top of the site map in an app.
+To allow users to view an agent's activity in the app, the agent must connect to [Power Apps MCP server](/power-apps/maker/model-driven-apps/power-apps-mcp-server). The agent feed appears at the top of the site map in an app.
    :::image type="content" source="/power-apps/user/media/agent-supervision/agent-feed-sitemap.png" alt-text="Agent feed sitemap" lightbox="/power-apps/user/media/agent-supervision/agent-feed-sitemap.png":::
 
 You can view the feed in the side pane or expand it to full screen.
@@ -51,7 +51,7 @@ View the agent feed in a side pane to support multitasking or expand it to full 
 
 ## Take action on agent activity
 
-You can take these actions on tasks under the **needs attention** tab in agent feed:
+Take these actions on tasks under the **needs attention** tab in agent feed:
 
 - **Complete**: Move a task from the **needs attention** section to **Completed** after completing the task the agent couldn't finish. This action is available for the agent tasks logged by using the **request_assistance** mcp tool.
 
@@ -70,23 +70,23 @@ You can take these actions on tasks under the **needs attention** tab in agent f
 
 - **Request_review tasks**: Tasks logged via request_review mcp tool don't have any actions for the users. They're informational tasks completed autonomously by agent and can be found in completed agent feed tab.
 
-     :::image type="content" source="/power-apps/user/media/agent-supervision/agent-feed-request-review.png" alt-text="Agent feed request review tasks":::
+ :::image type="content" source="/power-apps/user/media/agent-supervision/agent-feed-request-review.png" alt-text="Agent feed request review tasks":::
 
 
-## Navigation from Agent feed item 
+## Navigation from agent feed item 
 
 Agent feed tasks generated through the request_assistance or request_review MCP tools can reference a Dataverse record as a related navigation link in the agent description. This reference allows users to easily open and review associated data when interacting with the feed item.
 
-     :::image type="content" source="/power-apps/user/media/agent-supervision/agent-feed-navigate-to-record.png" alt-text="Agent feed record navigation button":::
+ :::image type="content" source="/power-apps/user/media/agent-supervision/agent-feed-navigate-to-record.png" alt-text="Agent feed record navigation button":::
 
-## Insights Panel 
-The out of the box Insights panel complements the agent feed by giving users a clear, aggregated view of how their agents and users collaborate over time. While the agent feed surfaces individual tasks and actions in the moment, the Insights chart provides a historical, high‑level representation of those interactions. This helps organizations understand the true patterns of human–agent collaboration, whether users are stepping in to provide missing context, guiding agents through a complex workflow, completing tasks directly, or monitoring agent activity. By visualizing these trends over time, organizations gain transparency into how their agentic workflows actually operate in practice, strengthening trust, identifying friction points, and revealing opportunities to improve system reliability and user experience.
+## Insights panel 
+The default insights panel complements the agent feed by giving users a clear, aggregated view of how their agents and users collaborate over time. While the agent feed surfaces individual tasks and actions in the moment, the Insights chart provides a historical, high‑level representation of those interactions. This representation helps organizations understand the true patterns of human–agent collaboration, whether users step in to provide missing context, guide agents through a complex workflow, complete tasks directly, or monitor agent activity. By visualizing these trends over time, organizations gain transparency into how their agentic workflows actually operate in practice, strengthening trust, identifying friction points, and revealing opportunities to improve system reliability and user experience.
 
-     :::image type="content" source="/power-apps/user/media/agent-supervision/agent-feed-insights.png" alt-text="Agent feed Insights":::
+ :::image type="content" source="/power-apps/user/media/agent-supervision/agent-feed-insights.png" alt-text="Agent feed Insights":::
 
-The Insights chart presents aggregated activity across the last 7, 14, or 30 days, giving customers a time‑based snapshot of collaboration between agents and users. Activity is categorized into two groups:
-1. Tasks completed by agents
-1. Tasks completed by users
-These at‑a‑glance aggregations offer a concise understanding of collaboration volume and balance over time, helping teams quickly assess how work is distributed across human and agent participants.
+The insights chart presents aggregated activity across the last 7, 14, or 30 days. It gives customers a time‑based snapshot of collaboration between agents and users. Activity is categorized into two groups:
+- Tasks completed by agents
+- Tasks completed by users
+These at‑a‑glance aggregations offer a concise understanding of collaboration volume and balance over time. They help teams quickly assess how work is distributed across human and agent participants.
 
 
