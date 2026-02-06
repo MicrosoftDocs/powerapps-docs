@@ -42,7 +42,7 @@ View the record summary from a form or a view when a [table is configured to dis
 
 Here are some actions you can take with summaries:
 
-- **Copy**: Select to copy the summary content directly to your clipboard for easy sharing or documentation. The summary copies in Markdown format, so when you paste it into other applications, the formatting might not appear exactly as it appears in the app.
+- **Copy**: Select to copy the summary content directly to your clipboard for easy sharing or documentation. The summary copies in markdown format, so when you paste it into other applications, the formatting might not appear exactly as it appears in the app.
 - **Feedback**: Use the thumbs up or thumbs down icons to rate the summary's usefulness. Your feedback helps improve future summaries so they better meet your expectations and needs.
 - **Refresh** (forms only): Select the **Refresh** button to regenerate the summary so it reflects the latest updates to the record.
 - **Expand/Collapse** (forms only): In forms, the insights bar is collapsed by default and shows a one-line peek of the summary. Expand the insights bar to see more details.
