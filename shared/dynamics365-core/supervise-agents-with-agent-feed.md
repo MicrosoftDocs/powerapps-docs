@@ -77,12 +77,12 @@ Take these actions on tasks under the **needs attention** tab in agent feed:
 
 Agent feed tasks generated through the request_assistance or request_review MCP tools can reference a Dataverse record as a related navigation link in the agent description. This reference allows users to easily open and review associated data when interacting with the feed item.
 
- :::image type="content" source="/power-apps/user/media/agent-supervision/agent-feed-navigate-to-record.png" alt-text="Agent feed record navigation button":::
+ :::image type="content" source="/power-apps/user/media/agent-supervision/agent-feed-navigate-to-record.png" alt-text="Agent feed record navigation button" lightbox="/power-apps/user/media/agent-supervision/agent-feed-navigate-to-record.png":::
 
 ## Insights panel 
 The default insights panel complements the agent feed by giving users a clear, aggregated view of how their agents and users collaborate over time. While the agent feed surfaces individual tasks and actions in the moment, the Insights chart provides a historical, high‑level representation of those interactions. This representation helps organizations understand the true patterns of human–agent collaboration, whether users step in to provide missing context, guide agents through a complex workflow, complete tasks directly, or monitor agent activity. By visualizing these trends over time, organizations gain transparency into how their agentic workflows actually operate in practice, strengthening trust, identifying friction points, and revealing opportunities to improve system reliability and user experience.
 
- :::image type="content" source="/power-apps/user/media/agent-supervision/agent-feed-insights.png" alt-text="Agent feed Insights":::
+ :::image type="content" source="/power-apps/user/media/agent-supervision/agent-feed-insights.png" alt-text="Agent feed Insights" lightbox="/power-apps/user/media/agent-supervision/agent-feed-insights.png":::
 
 The insights chart presents aggregated activity across the last 7, 14, or 30 days. It gives customers a time‑based snapshot of collaboration between agents and users. Activity is categorized into two groups:
 - Tasks completed by agents
