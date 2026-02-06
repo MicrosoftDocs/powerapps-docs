@@ -4,7 +4,7 @@ description: Learn how to install and run a canvas or model-driven app on a mobi
 author: Murugesh1985
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 06/24/2025
+ms.date: 02/06/2026
 ms.subservice: mobile
 ms.author: murugeshs
 ms.reviewer: smurkute
