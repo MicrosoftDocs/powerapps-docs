@@ -1,7 +1,7 @@
 ---
 title: Use row summaries in model-driven apps 
 description: Learn how to access and utilize AI-generated row summaries in main forms.
-ms.date: 11/18/2025
+ms.date: 01/30/2026
 ms.update-cycle: 180-days
 ms.topic: article
 ms.component: pa-user
@@ -67,8 +67,9 @@ Here are some actions you can take with summaries:
 - **Refresh** (forms only): Select the **Refresh** button to regenerate the summary so it reflects the latest updates to the record.
 - **Expand/Collapse** (forms only): In forms, the insights bar is collapsed by default and shows a one-line peek of the summary. Expand the insights bar to see more details.
   :::image type="content" source="media/row_summary_collapsed.png" alt-text="Screenshot that shows a collapsed row summary." lightbox="media/row_summary_collapsed.png"::: 
+[!INCLUDE [record-summaries](~/../shared/dynamics365-core/record-summaries.md)]
 
 ### Related information
 
 [Manage feature settings](/power-platform/admin/settings-features)  
-[Configuring summaries for tables](../maker/data-platform/configure-form-row-summary.md#create-a-row-summary)  
+[Configuring summaries for tables](/power-apps/maker/data-platform/configure-form-row-summary#create-a-row-summary)  
