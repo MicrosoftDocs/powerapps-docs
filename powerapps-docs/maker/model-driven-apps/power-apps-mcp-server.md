@@ -40,8 +40,6 @@ When the customer makes a booking from the portal this agent must log the detail
 
 :::image type="content" source="../data-platform/log-for-review-example.png" alt-text="Log for review example":::
 
-log_for_review_example.png
-
 ## request_assistance
 
 The request assistance tool will create a Agent Feed task to reach out to a human. This is an asynchronous operation and calling copilot studio agent will wait until the human completes the action. For details on completing the action feed acivity go to [Supervise agents in model-driven apps with agent feed (preview)](../../user/supervise-agents-with-agent-feed.md#supervise-agents-in-model-driven-apps-with-agent-feed-preview) 
@@ -50,15 +48,11 @@ You can observe the **in progress** status for the agent run in the avtivity tab
 
 :::image type="content" source="../data-platform/copilot-studio-agent-inprogress.png" alt-text="In progress status in Copilot Studio":::
 
-copilot-studio-agent-inprogress.png
-
 ### Sample instruction
 
 When this agent is triggered by the creation of a new support case, it should request human assistance. For the request assistance set the title by prefixing the value of issue1 with “Assistance needed: ”. In the task description includes the issue type, issue description, date reported, and the Resolved value as steps. Also include a navigation link to the Dataverse issue record.
 
 :::image type="content" source="../data-platform/request-assistance-with-nav-example.png" alt-text="Request user assistance example":::
-
-request_assistance_withNavexample.png
 
 ## invoke_data_entry 
 
