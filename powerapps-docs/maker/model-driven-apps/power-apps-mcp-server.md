@@ -27,15 +27,16 @@ Once connected to the Power Apps MCP Server, agent can choose from various tools
 
 | Tool | Description |
 |------|-------------|
-| log_for_review | Log completed activity for passive human oversight. |
-| request_assistance | Request assistance from a human user. |
-| invoke_data_entry | Create one or more records in a data source like Microsoft Dataverse, using contents from plain text or an email.|
+| [log_for_review](#log_for_review) | Log completed activity for passive human oversight. |
+| [request_assistance](#request_assistance) | Request assistance from a human user. |
+| [invoke_data_entry](#invoke_data_entry) | Create one or more records in a data source like Microsoft Dataverse, using contents from plain text or an email.|
 
 ## log_for_review
 
 Logs completed agent work to the agent feed for human review. This tool is intended for scenarios where an agent has sufficient information to act autonomously but needs human validation before the result is finalized or trusted. It is best suited for decisions that can be easily revised or rolled back. Besides Title and Description, you can also ask the tool to add a link to dataverse record. It could be the link to the record agent has creaated using DV MCP or one present in context like the record which triggered agent execution. These tasks are shown in the Agent feed's **completed tab**.
 
-**Sample instruction**
+### Sample instruction
+
 When the customer makes a booking from the portal this agent must log the details for human review. The review item title should be based on the booking reference number and must use the exact prefix “Review Web Booking: ”. In the review description, write a concise, natural‑language summary of the booking that includes main fields like Booking Reference, Booking Date, Seat Number, and Status, so a reviewer can quickly understand what was processed without opening the record. Ensure the description reads as a short paragraph and accurately reflects the current values from the booking record.
 
 :::image type="content" source="../data-platform/log-for-review-example.png" alt-text="Log for review example":::
