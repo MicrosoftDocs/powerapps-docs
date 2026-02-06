@@ -3,7 +3,7 @@ title: "How to: Connect your code app to data"
 description: "Learn how to connect your code app to data"
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 02/02/2026
+ms.date: 02/05/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
@@ -67,19 +67,19 @@ Use one of the following methods:
 
 #### Use PAC CLI
 
-Use the Power Apps CLI to list your available connections and retrieve their IDs by using the [pac connection list](/power-platform/developer/cli/reference/connection#pac-connection-list) command.
+Use the Power Apps CLI to list your available connections and get their IDs by using the [pac connection list](/power-platform/developer/cli/reference/connection#pac-connection-list) command.
 
-`pac connection list` displays a table of all your connections, including the **Connection ID** and **API Name**. The API name serves as the `appId` when you add a data source.
+`pac connection list` shows a table of all your connections, including the **Connection ID** and **API Name**. The API name acts as the `appId` when you add a data source.
 
 :::image type="content" source="media/pac-cli-connection-list.png" alt-text="PAC CLI list output showing Connection ID and API Name":::
 
 #### Use Power Apps URL
 
-You can also retrieve this information by using Power Apps. When you view the details of a connection, you can see the URL.
+You can also get this information by using Power Apps. When you view the details of a connection, you can see the URL.
 
 :::image type="content" source="media/powerapps-select-connection.png" alt-text="Select a connection in Power Apps to view its details":::
 
-The API name and connection ID appear in the URL:
+The API name and connection ID show up in the URL:
 
 :::image type="content" source="media/powerapps-connection-apiname-connectionid.png" alt-text="Connection details showing API name and Connection ID values":::
 
@@ -111,7 +111,7 @@ pac code add-data-source -a "shared_office365users" -c "aaaaaaaa000011112222bbbb
 
 SQL or SharePoint are examples of tabular data sources.
 
-Use the same PAC CLI [pac code add-data-source](/power-platform/developer/cli/reference/code#pac-code-add-data-source) command, but include a table ID and dataset name. The schema of your tabular data source specifies these values. If you don't already have these values, see [Retrieve a dataset name and table ID](#retrieve-a-dataset-name-and-table-id).
+Use the same PAC CLI [pac code add-data-source](/power-platform/developer/cli/reference/code#pac-code-add-data-source) command, but include a table ID and dataset name. The schema of your tabular data source specifies these values. If you don't already have these values, see [Discover available datasets and tables](#discover-available-datasets-and-tables).
 
 ```powershell
 pac code add-data-source -a <apiName> -c <connectionId> -t <tableId> -d <datasetName> 
@@ -133,29 +133,50 @@ pac code add-data-source `
 -d "paconnectivitysql0425.database.windows.net,paruntimedb" 
 ```
 
-#### Retrieve a dataset name and table ID
+#### Discover available datasets and tables
 
-> [!IMPORTANT]
-> The following steps to retrieve a dataset name and table ID are a temporary workaround. We plan to add an easier mechanism to get these values.
+Use PAC CLI [`pac code list`](/power-platform/developer/cli/reference/code#pac-code-list) commands to discover available datasets, tables, and stored procedures for your connections. This method is easier than manually retrieving metadata through browser developer tools.
 
-If you don't already have the table and dataset name, you can get them by running a canvas app and copying the values from the browser network inspector:
+**List datasets:**
 
-1. Create a new canvas app in Studio.
-1. Add the connection to the canvas app.
-1. Bind the connection to a gallery control.
-1. Publish and run the app.
-1. Open your browser's **Developer Tools**, go to the **Network** tab, and inspect requests made when the app loads. Check the "invoke" request, and go to its response.
-1. Find an Azure API Management (APIM) request with the connection ID, dataset name, and table ID, and copy those values.
+```powershell
+pac code list-datasets -a <apiId> -c <connectionId>
+```
 
-   Using this example data request URL through APIM, look for the `<Connection ID>`, `<Dataset name>`, and `<Table ID>` values in these places in the URL:
+**List tables:**
 
-   ```http
-   https[]()://{id value}.01.common.azure-apihub.net/apim/sharepointonline/<Connection ID>/datasets/<Dataset name>/tables/<Table ID>/items
-   ```
+```powershell
+pac code list-tables -a <apiId> -c <connectionId> -d <datasetName>
+```
+
+**List SQL stored procedures:**
+
+```powershell
+pac code list-sql-stored-procedures -c <connectionId> -d <datasetName>
+```
+
+**Example workflow for SQL Server:**
+
+```powershell
+# Step 1: List available datasets
+pac code list-datasets -a "shared_sql" -c "aaaaaaaa000011112222bbbbbbbbbbbb"
+
+# Step 2: List tables in the dataset
+pac code list-tables -a "shared_sql" -c "aaaaaaaa000011112222bbbbbbbbbbbb" `
+  -d "paconnectivitysql0425.database.windows.net,paruntimedb"
+
+# Step 3: Add the table to your code app
+pac code add-data-source -a "shared_sql" -c "aaaaaaaa000011112222bbbbbbbbbbbb" `
+  -t "[dbo].[MobileDeviceInventory]" `
+  -d "paconnectivitysql0425.database.windows.net,paruntimedb"
+```
+
+> [!TIP]
+> Copy the exact **Name** values from the command output when using them with `add-data-source`. Names are case-sensitive and might contain special characters.
 
 ### Add a SQL stored procedure as a data source
 
-From a command line, run the following command. Use the API name and connection ID that you collected previously.
+Run the following command from a command line. Use the API name and connection ID that you collected previously.
 
 ```powershell
 pac code add-data-source -a <apiId> -c <connectionId> -d <dataSourceName> -sp <storedProcedureName> 
@@ -175,7 +196,7 @@ pac code add-data-source `
 
 If needed, you can delete data sources after adding them.
 
-From a command line, run the following command. Use the API name and connection ID that you collected previously.
+Run the following command from a command line. Use the API name and connection ID that you collected previously.
 
 ```powershell
 pac code delete-data-source -a <apiName> -ds <dataSourceName> 

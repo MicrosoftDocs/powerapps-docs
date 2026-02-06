@@ -5,12 +5,12 @@ items:
         href: index.yml
       - name: Overview
         href: overview.md
+      - name: Architecture
+        href: architecture.md
       - name: Build
         items:
           - name: "Quickstart: Create a code app"
             href: how-to/create-an-app-from-scratch.md
-          - name: Architecture
-            href: architecture.md
           - name: System configuration
             href: system-limits-configuration.md
           - name: Connect to data
