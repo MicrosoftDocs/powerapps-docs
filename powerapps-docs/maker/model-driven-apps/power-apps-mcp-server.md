@@ -39,7 +39,7 @@ Logs completed agent work to the agent feed for human review. This tool is inten
 
 When the customer makes a booking from the portal this agent must log the details for human review. The review item title should be based on the booking reference number and must use the exact prefix “Review Web Booking: ”. In the review description, write a concise, natural‑language summary of the booking that includes main fields like Booking Reference, Booking Date, Seat Number, and Status, so a reviewer can quickly understand what was processed without opening the record. Ensure the description reads as a short paragraph and accurately reflects the current values from the booking record.
 
-:::image type="content" source="../data-platform/log-for-review-example.png" alt-text="Log for review example":::
+:::image type="content" source="media/add-agents-to-app/log-for-review-example.png" alt-text="Log for review example":::
 
 ## request_assistance
 
@@ -47,13 +47,13 @@ The request assistance tool will create a Agent Feed task to reach out to a huma
 
 You can observe the **in progress** status for the agent run in the avtivity tab when viewing agent in Microsoft Copilot Studio. Once the user completes the activity from agent feed, control comples back to agent via callback and agent can complete the task. 
 
-:::image type="content" source="../data-platform/copilot-studio-agent-inprogress.png" alt-text="In progress status in Copilot Studio":::
+:::image type="content" source="media/add-agents-to-app/copilot-studio-agent-inprogress.png" alt-text="In progress status in Copilot Studio":::
 
 ### Sample instruction
 
 When this agent is triggered by the creation of a new support case, it should request human assistance. For the request assistance set the title by prefixing the value of issue1 with “Assistance needed: ”. In the task description includes the issue type, issue description, date reported, and the Resolved value as steps. Also include a navigation link to the Dataverse issue record.
 
-:::image type="content" source="../data-platform/request-assistance-with-nav-example.png" alt-text="Request user assistance example":::
+:::image type="content" source="media/add-agents-to-app/request-assistance-with-nav-example.png" alt-text="Request user assistance example":::
 
 ## invoke_data_entry 
 
