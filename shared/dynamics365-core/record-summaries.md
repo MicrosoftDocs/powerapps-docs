@@ -27,7 +27,7 @@ Summaries are only currently supported in the English language.
 
 ### Accessing record summaries
 
-View the record summary from a form or a view when a [table is configured to display summaries](/power-apps/maker/data-platform/configure-form-row-summary.md#create-a-row-summary).
+View the record summary from a form or a view when a [table is configured to display summaries](/power-apps/maker/data-platform/configure-form-row-summary#create-a-row-summary).
 
 - **Forms**: When viewing a record in a main form, the summary appears in the insights bar at the top of the main form.
   :::image type="content" source="/power-apps/user/media/row_summary_expanded.png" alt-text="Screenshot that shows a row summary card in the insights bar on a form." lightbox="/power-apps/user/media/row_summary_expanded.png":::
