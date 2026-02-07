@@ -392,7 +392,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Integer|
 |MaxValue|2147483647|
-|MinValue|1|
+|MinValue|-1|
 
 ### <a name="BKMK_type"></a> type
 
@@ -431,6 +431,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |100000400|**CuaStartSession**|
 |100000401|**CuaReasoningStep**|
 |100000402|**CuaWaitOrCompleteSession**|
+|100000403|**CuaHumanInTheLoopRequest**|
 
 ### <a name="BKMK_workqueueid"></a> workqueueid
 

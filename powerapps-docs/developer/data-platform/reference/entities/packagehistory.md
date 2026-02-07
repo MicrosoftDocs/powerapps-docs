@@ -60,6 +60,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [DeploymentMessageId](#BKMK_DeploymentMessageId)
 - [ExecutionName](#BKMK_ExecutionName)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
+- [IsClusterOperation](#BKMK_IsClusterOperation)
 - [OperationId](#BKMK_OperationId)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [packagehistoryId](#BKMK_packagehistoryId)
@@ -206,6 +207,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Integer|
 |MaxValue|2147483647|
 |MinValue|-2147483648|
+
+### <a name="BKMK_IsClusterOperation"></a> IsClusterOperation
+
+|Property|Value|
+|---|---|
+|Description|**Indicates whether this package history record represents a cluster operation**|
+|DisplayName|**Cluster Operation**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`isclusteroperation`|
+|RequiredLevel|None|
+|Type|Boolean|
+|GlobalChoiceName|`packagehistories_isclusteroperation`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_OperationId"></a> OperationId
 
@@ -525,7 +542,6 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
 - [DeploymentLog](#BKMK_DeploymentLog)
 - [DeploymentLog_Name](#BKMK_DeploymentLog_Name)
-- [IsClusterOperation](#BKMK_IsClusterOperation)
 - [ModifiedBy](#BKMK_ModifiedBy)
 - [ModifiedOn](#BKMK_ModifiedOn)
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
@@ -606,22 +622,6 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |ImeMode|Disabled|
 |IsLocalizable|False|
 |MaxLength|200|
-
-### <a name="BKMK_IsClusterOperation"></a> IsClusterOperation
-
-|Property|Value|
-|---|---|
-|Description|**Indicates whether this package history record represents a cluster operation**|
-|DisplayName|**Cluster Operation**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`isclusteroperation`|
-|RequiredLevel|None|
-|Type|Boolean|
-|GlobalChoiceName|`packagehistories_isclusteroperation`|
-|DefaultValue|False|
-|True Label|Yes|
-|False Label|No|
 
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 

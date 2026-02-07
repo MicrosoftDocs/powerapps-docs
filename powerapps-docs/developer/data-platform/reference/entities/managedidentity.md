@@ -150,6 +150,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |---|---|
 |0|**App Registeration**|
 |1|**AgentId**|
+|2|**AgentIdentityBlueprint**|
+|3|**AgentUser**|
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
