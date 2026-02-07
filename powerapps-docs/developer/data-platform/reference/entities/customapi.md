@@ -964,6 +964,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [customapi_serviceplanmapping](#BKMK_customapi_serviceplanmapping)
 - [customapi_SyncErrors](#BKMK_customapi_SyncErrors)
 - [fabricaiskill_customapiid](#BKMK_fabricaiskill_customapiid)
+- [MCPTool_CustomAPI_CustomAPI](#BKMK_MCPTool_CustomAPI_CustomAPI)
 - [msdyn_customapi_msdyn_pmbusinessruleautomationconfig_CustomApiId](#BKMK_msdyn_customapi_msdyn_pmbusinessruleautomationconfig_CustomApiId)
 - [msdyn_formmapping_customapiid](#BKMK_msdyn_formmapping_customapiid)
 - [msdyn_knowledgeassetconfiguration_customapiid](#BKMK_msdyn_knowledgeassetconfiguration_customapiid)
@@ -1134,6 +1135,18 @@ Many-To-One Relationship: [fabricaiskill fabricaiskill_customapiid](fabricaiskil
 |ReferencingAttribute|`customapiid`|
 |ReferencedEntityNavigationPropertyName|`fabricaiskill_customapiid`|
 |IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_MCPTool_CustomAPI_CustomAPI"></a> MCPTool_CustomAPI_CustomAPI
+
+Many-To-One Relationship: [mcptool MCPTool_CustomAPI_CustomAPI](mcptool.md#BKMK_MCPTool_CustomAPI_CustomAPI)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`mcptool`|
+|ReferencingAttribute|`customapiid`|
+|ReferencedEntityNavigationPropertyName|`MCPTool_CustomAPI_CustomAPI`|
+|IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_msdyn_customapi_msdyn_pmbusinessruleautomationconfig_CustomApiId"></a> msdyn_customapi_msdyn_pmbusinessruleautomationconfig_CustomApiId
