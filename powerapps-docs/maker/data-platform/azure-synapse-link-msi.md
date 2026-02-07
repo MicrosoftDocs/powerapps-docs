@@ -26,7 +26,7 @@ With managed identities, access to your storage account is restricted to request
   - Azure Az.Resources PowerShell module: `Install-Module -Name Az.Resources`
   - Power Platform admin PowerShell module: `Install-Module -Name Microsoft.PowerApps.Administration.PowerShell`
   - 
-- Go to this [compressed folder file on GitHub](https://github.com/microsoft/PowerApps-Samples/blob/master/powershell/managed-identities/Common.zip). Then select **Download** to download it. Extract the compressed folder file to a computer in a location where you can run PowerShell commands. **All files and folders extracted from a compressed folder should be preserved in their original location.**
+- Download the [scripts from GitHub](https://github.com/microsoft/PowerPlatform-EnterprisePolicies/tree/main/Source/Identity).Kepp the files in a location where you can run PowerShell commands. **All files and folders downloaded should be preserved in their original location.**. Details of scripts usage are [avaialble in GitHub as well(https://github.com/microsoft/PowerApps-Samples/tree/master/powershell/managed-identities)]
 - We recommend that you create a new storage container under the same Azure resource group to onboard this feature.
 
 ## Enable enterprise policy for the selected Azure subscription
@@ -38,7 +38,7 @@ With managed identities, access to your storage account is restricted to request
 
 1. Open Azure CLI with run as administrator and sign into your Azure subscription using the command: `az login`  More information: [Sign in with Azure CLI](/cli/azure/authenticate-azure-cli)
 1. (Optional) if you have multiple Azure subscriptions, make sure to run `Update-AzConfig -DefaultSubscriptionForLogin { Azure subscription id }` to update your default subscription.
-1. Expand the compressed folder you downloaded as part of the [Before you start](#before-you-start) for this feature to a location where you can run PowerShell.
+1. Move the files you downloaded as part of the [Before you start](#before-you-start) for this feature to a location where you can run PowerShell.
 1. To enable the enterprise policy for the selected Azure subscription, run the PowerShell script **./SetupSubscriptionForPowerPlatform.ps1**.
    - Provide the Azure subscription ID.
 
