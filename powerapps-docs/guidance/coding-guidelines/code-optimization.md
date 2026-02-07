@@ -476,23 +476,23 @@ ClearCollect(FollowUpMeetingAttendees.ForAll(ForAll(Distinct(AttendeesList.Email
 
 ForAll + Patch can be one approach to Batch update the database. However, be careful in using the order of For All and Patch.
 
-Following function:
+The following Patch() inside a ForAll() loop creates multiple individual requests that execute one after another in sequence, which results in slow performance.
 
 ```powerappsfl
-Patch(SampleFoodSalesData, ForAll(colSampleFoodSales,
-    {
-        demoName:"fromCanvas2"
-    })
+ForAll( colSampleFoodSales, 
+    Patch( SampleFoodSalesData,
+        { demoName: "test" }
+    )
 );
 ```
 
-Performs better than:
+Instead of patching individual records inside a loop, pass the entire collection to Patch() in a single operation. These updates happen in parallel, significantly improve performance.
 
 ```powerappsfl
-ForAll(colSampleFoodSales, Patch(SampleFoodSalesData,
-    {
-        demoName:"test"
-    })
+Patch( SampleFoodSalesData,
+    ForAll( colSampleFoodSales,
+        { demoName: "fromCanvas2" }
+    )
 );
 ```
 
