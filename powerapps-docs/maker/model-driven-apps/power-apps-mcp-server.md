@@ -43,7 +43,7 @@ When the customer makes a booking from the portal this agent must log the detail
 
 ## request_assistance
 
-The request assistance tool will create a Agent Feed task to reach out to a human. This is an asynchronous operation and calling copilot studio agent will wait until the human completes the action. For details on completing the action feed acivity go to [Supervise agents in model-driven apps with agent feed (preview)](../../user/supervise-agents-with-agent-feed.md#supervise-agents-in-model-driven-apps-with-agent-feed-preview) 
+The request_assistance tool will create a Agent Feed task to reach out to a human. This is an asynchronous operation and calling copilot studio agent will wait until the human completes the action. For details on completing the action feed acivity go to [Supervise agents in model-driven apps with agent feed (preview)](../../user/supervise-agents-with-agent-feed.md#supervise-agents-in-model-driven-apps-with-agent-feed-preview) 
 
 You can observe the **in progress** status for the agent run in the avtivity tab when viewing agent in Microsoft Copilot Studio. Once the user completes the activity from agent feed, control comples back to agent via callback and agent can complete the task. 
 
@@ -56,5 +56,47 @@ When this agent is triggered by the creation of a new support case, it should re
 :::image type="content" source="media/add-agents-to-app/request-assistance-with-nav-example.png" alt-text="Request user assistance example":::
 
 ## invoke_data_entry 
+invoke_data_entry tool streamlines the creation of Dataverse records by extracting structured information from unstructured inputs such as emails, messages, or documents. When invoked from a Copilot Studio agent, it automatically analyzes incoming content, fills out the appropriate form with the extracted data, and presents the completed entry as a task in the Agent Feed for user review and approval. This enables fast, reliable data capture with minimal manual effort.
 
-<!-- Add content. -->
+### Sample instruction - shared email triggered agent 
+You are the Travel Idea generator agent. Your job is to process incoming emails and create Travel Idea records in Dataverse.
+When an email arrives:
+1. Determine if it contains travel-related information (either in the email body or attachments)
+2. Use the invoke_data_entry tool to create a Travel Idea record with the extracted information in the following columns:
+- cr3ea_title
+- cr3ea_description
+- cr3ea_triptype
+- cr3ea_customername
+- cr3ea_customeremail
+- cr3ea_customerphone
+- cr3ea_destinationcity
+- cr3ea_travelstart
+- cr3ea_travelend
+- cr3ea_numberoftravelers
+- cr3ea_budgetusd
+- cr3ea_specialrequests
+3. If information is missing, still create the record with available data - leave unknown fields empty
+
+   :::image type="content" source="/power-apps/user/media/agent-supervision/agent-feed-accept-complete.png" alt-text="Agent feed accept and complete button" lightbox="/power-apps/user/media/agent-supervision/agent-feed-accept-complete.png":::
+
+> [!NOTE]
+> When writing instructions for your agent, always reference Dataverse columns by their logical names as shown in the example above. Clear, direct instructions help the agent reliably create records from the input. You can view a column’s logical name by opening the table in make.powerapps.com, selecting Columns, and then opening the column to see its details.
+> invoke_data_entry tool supports .pdf, .xlsx, .docx, .jpeg, .jpg, .png, .gif and.bmp formats.
+> Invoke data entry tool can populate single line of text (None format), Whole number and Decimal Dataverse column type. 
+
+### How the invoke_data_entry tool works
+When you configure a Copilot Studio agent to use the Power Apps MCP server and enable the invoke_data_entry tool, the agent follows this process:
+1.	[An agent trigger](https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-triggers-about) fired based on you configured — such as an email arriving in a monitored mailbox or new document uploaded to Share Point.
+1.	The agent analyzes incoming content and your instructions to determine whether the invoke_data_entry tool should be usead.
+1.	If needed, the invoke_data_entry tool is invoked, passing the input content and the target Dataverse entity and entity columns to be predicted.
+1.	The tool processes the input, extracts relevant information, and populates a Dataverse form with suggested values for each mapped column.
+1.	A task appears in the Agent Feed, and selecting it opens the data‑entry review experience. The left panel shows the original input, and the right panel displays the form populated with suggested values.
+1.	The user can review the extracted values, make corrections if needed, and then save the record to Dataverse.
+
+### Provide feedback
+To provide feedback about the invoke_data_entry tool:
+1.	Open a task in the Agent Feed.
+1.	Select the feedback button in the task header.
+1.	Choose to give a compliment, report an issue, or make a suggestion.
+ToDo - add screenshot
+
