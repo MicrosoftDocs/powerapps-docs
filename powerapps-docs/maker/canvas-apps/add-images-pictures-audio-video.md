@@ -18,7 +18,7 @@ contributors:
 ---
 # Using multimedia files in canvas apps
 
-You can add images, audio and video files to a canvas app. Add video from streaming services such as [Microsoft Stream](/stream/), [Azure Media Services](/azure/media-services/), or 3rd party streaming services, such as YouTube. Or use input controls such as **Pen Input** to collect signatures.
+You can add images, audio and video files to a canvas app. Add video from streaming services such as [Microsoft Clipchamp](/clipchamp/), [Azure Media Services](/azure/media-services/), or 3rd party streaming services, such as YouTube. Or use input controls such as **Pen Input** to collect signatures.
 
 This article walks you through working with multimedia, streaming, and input control scenarios. The data source used in this article is an Excel file in OneDrive for Business.
 
@@ -92,9 +92,9 @@ For **Image** control, update the *Image* property with the image file name, wit
 
 1. [Share app](share-app.md) with others.
 
-## Add Microsoft Stream media
+## Add Microsoft Clipchamp media
 
-To learn how to add a Microsoft Stream video control, go to [Microsoft Stream video control example](controls/control-stream-video.md#example).
+To learn how to add a Microsoft Clipchamp video control, go to [Microsoft Clipchamp video control example](controls/modern-controls/new-stream-video-control.md).
 
 ## Add images from the cloud to your app
 
