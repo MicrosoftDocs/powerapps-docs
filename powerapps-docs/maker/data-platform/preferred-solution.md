@@ -22,7 +22,7 @@ By default, unless you're already in the context of an unmanaged solution when y
 
 There are a few reasons you *shouldn't* create your solution objects in either the Common Data Services Solution and the Default Solution:
 
-- There's no control over the separation of solution objects between makers. All objects can be viewed from the Default Solution and the Common Data Services Solution is the default solution so other makers can and likely are using it.
+- There's no control over the separation of solution objects between makers. All objects can be viewed from the Default Solution and the Common Data Services Solution is the default solution so other makers can (and likely do) use it.
 - The Default Solution can't be exported for import to other environments.
 - You can't change the solution publisher for the Default Solution. Additionally, since the solutions already exist, you can't change the solution publisher prefix for either system solutions. More information: [Solution publisher](create-solution.md#solution-publisher)
 
