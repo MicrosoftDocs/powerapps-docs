@@ -35,7 +35,7 @@ Autonomous agents can be added to model-driven apps to help users get work done 
 [Learn more about how to supervise agents](../../user/supervise-agents-with-agent-feed.md)
 
 > [!IMPORTANT]
-> Currently, agent feed items in model‑driven apps are visible to all users who have access to the Agent Task table. To prevent unintended exposure, agents configured to various apps shouldn't log tasks targeted at specific users.
+> Current limitation: Agent feed tasks are visible to all users with access to the app and who have been granted to Agents Task table, so agents should not be configured to log tasks targeted at specific users."
 
 ## Supervise an autonomous agent within the app
 
