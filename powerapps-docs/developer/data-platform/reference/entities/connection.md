@@ -661,11 +661,11 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |9600|**Goal**|
 |9930|**Knowledge Base Record**|
 |9953|**Knowledge Article**|
-|10408|**Invitation**|
-|10409|**Invite Redemption**|
-|10428|**Publishing State Transition Rule**|
-|10430|**Shortcut**|
-|10442|**Website**|
+|10420|**Invitation**|
+|10421|**Invite Redemption**|
+|10440|**Publishing State Transition Rule**|
+|10442|**Shortcut**|
+|10454|**Website**|
 
 ### <a name="BKMK_Record2ObjectTypeCode"></a> Record2ObjectTypeCode
 
@@ -706,11 +706,11 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |9600|**Goal**|
 |9930|**Knowledge Base Record**|
 |9953|**Knowledge Article**|
-|10408|**Invitation**|
-|10409|**Invite Redemption**|
-|10428|**Publishing State Transition Rule**|
-|10430|**Shortcut**|
-|10442|**Website**|
+|10420|**Invitation**|
+|10421|**Invite Redemption**|
+|10440|**Publishing State Transition Rule**|
+|10442|**Shortcut**|
+|10454|**Website**|
 
 ### <a name="BKMK_RelatedConnectionId"></a> RelatedConnectionId
 
