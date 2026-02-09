@@ -67,15 +67,24 @@ To configure the automatic download of files and images on sync, you need to [cr
 
 ### Configure on sync from within Power apps studio
 
-1. Sign in to Power Apps.
+1. Sign in to [Power Apps](https://make.powerapps.com).
+
 1. In the left navigation pane, select **Apps**.
+
 1. Select a canvas app, and then on the command bar, select **Edit** to open your app in editing mode in canvas app designer.
+
 1. Select **Settings > General**.
+
 1. Set the **Can be used offline** toggle to On.
-1. Under **Select offline mode and profile**, select **Edit selected profile** from the "...".
+
+1. Under **Select offline mode and profile**, select **Edit selected profile** from the "...".
+
 1. Find the table that has the file or image column you want to enable for offline, then select **Edit** from the **More actions** button. Proceed with adding [image and file columns](#add-image-and-file-columns-to-mobile-offline). 
+
 1. In the **Include these files and images** section, select the column where **Data Type** is set to **File** or **Image** (the columns are grouped by **Files** or **Images**).
+
 1. Select **Save**.
+
 1. Save and publish the app.
 
 ### Configure on sync from within Power Platform admin center (requires admin access)
