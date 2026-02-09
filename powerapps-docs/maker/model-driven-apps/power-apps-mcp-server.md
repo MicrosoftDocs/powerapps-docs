@@ -93,10 +93,4 @@ When you configure a Copilot Studio agent to use the Power Apps MCP server and e
 1.	A task appears in the Agent Feed, and selecting it opens the data‑entry review experience. The left panel shows the original input, and the right panel displays the form populated with suggested values.
 1.	The user can review the extracted values, make corrections if needed, and then save the record to Dataverse.
 
-### Provide feedback
-To provide feedback about the invoke_data_entry tool:
-1.	Open a task in the Agent Feed.
-1.	Select the feedback button in the task header.
-1.	Choose to give a compliment, report an issue, or make a suggestion.
-ToDo - add screenshot
 
