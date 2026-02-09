@@ -5,7 +5,7 @@ description: Learn how to configure files and images in offline canvas apps.
 author: trdehove
 ms.component: pa-user
 ms.topic: how-to
-ms.date: 10/23/2025
+ms.date: 02/09/2026
 ms.subservice: mobile
 ms.author: ritwikganni
 ms.custom: ""
@@ -65,13 +65,7 @@ The remainder of this article helps you configure on sync.
 
 To configure the automatic download of files and images on sync, you need to [create a custom, mobile offline profile](canvas-mobile-offline-setup.md#create-profiles-from-within-power-platform-admin-center-with-admin-rights). There are two ways to configure sync.
 
-### Configure on sync from within Power apps studio (preview)  
-
-> [!IMPORTANT]
->
-> - This is a preview feature.
-> - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2216214), and are available before an official release so that customers can get early access and provide feedback.
-> - This feature is in the process of rolling out and might not be available in your region yet.
+### Configure on sync from within Power apps studio
 
 1. Sign in to Power Apps.
 1. In the left navigation pane, select **Apps**.
@@ -79,34 +73,30 @@ To configure the automatic download of files and images on sync, you need to [cr
 1. Select **Settings > General**.
 1. Set the **Can be used offline** toggle to On.
 1. Under **Select offline mode and profile**, select **Edit selected profile** from the "...".
-1. Find the table that has the file or image column you want to enable for offline, then select **Edit** from the **More actions** button.
+1. Find the table that has the file or image column you want to enable for offline, then select **Edit** from the **More actions** button. Proceed with adding [image and file columns](#add-image-and-file-columns-to-mobile-offline). 
 1. In the **Include these files and images** section, select the column where **Data Type** is set to **File** or **Image** (the columns are grouped by **Files** or **Images**).
 1. Select **Save**.
 1. Save and publish the app.
 
-### Configure columns from within Power Platform admin center (requires admin access)
+### Configure on sync from within Power Platform admin center (requires admin access)
 
 You can add both the **Image Descriptor** and **FileAttachment** tables to your mobile offline profile by configuring the settings of your environment.
 
 1. Go to [Power Platform admin center](https://admin.powerplatform.microsoft.com) and sign-in as an admin.
 
 1. Select **Environments** from the navigation menu.
-
 1. Choose an environment and then select **Settings** on the menu bar.
-
 1. Expand **Users + permissions**, then select **Mobile configuration**.
-
-   :::image type="content" source="media/files-images-offline-canvas-apps/mobile-configuration.png" alt-text="Screenshot that shows where the mobile configuration setting is located in your environment settings.":::
-
 1. Select a mobile offline profile to edit it.
-
 1. In the **Data available offline** section, select **Add table**.
+1. Proceed with adding [image and file columns](#add-image-and-file-columns-to-mobile-offline).
 
-1. Proceed with adding [image columns](#add-image-columns-to-mobile-offline-with-image-descriptor) and [file columns](#add-file-columns-to-mobile-offline-with-fileattachment).
 
-#### Add image columns to mobile offline with image descriptor
+### Add image and file columns to mobile offline
 
-In your mobile configuration setting, you can add the **Image Descriptor** table to enable image downloads.
+To enable offline access for images and files, add the **Image Descriptor** and **FileAttachment** tables to your mobile offline profile.
+
+#### Add the Image Descriptor table
 
 1. Select **Image Descriptor** and then select **Next**.
 
@@ -120,9 +110,7 @@ In your mobile configuration setting, you can add the **Image Descriptor** table
   
 1. Select **Save**.
 
-#### Add file columns to mobile offline with FileAttachment
-
-In your mobile configuration setting, you can add a **FileAttachment** table to enable file downloads.
+#### Add the FileAttachment table
 
 1. Select **FileAttachment** and then select **Next**.
 
