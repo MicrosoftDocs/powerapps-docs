@@ -8,7 +8,7 @@ contributors: saviegas
 ms.service: powerapps
 ms.subservice: dataverse-maker
 ms.topic: how-to
-ms.date: 09/18/2025
+ms.date: 02/10/2026
 ms.custom: template-how-to
 ---
 # Link to Microsoft Fabric
@@ -85,7 +85,7 @@ Link to Microsoft Fabric from the Power Apps **Tables** area: Select **Analyze**
 
 > [!NOTE]
 >
-> The link visible in the user interface was formerly labeled as **Microsoft OneLake**. It is now labeled as **Link to Fabric**.
+> The link was labeled as **Microsoft OneLake** and is now labeled **Link to Fabric**.
 
 ## Manage link to Fabric
 
