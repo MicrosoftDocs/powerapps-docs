@@ -23,7 +23,7 @@ The Power Apps MCP server equips your agent with two types of app skills:
 
 :::image type="content" source="media/add-agents-to-app/power-apps-mcp-server.png" alt-text="Power Apps MCP server":::
 
-To use the enhanced agent feed capabiltities, enable and configure the Power Apps MCP server from the Microsoft Copilot Studio agent. Once configured, you can invoke Power Apps MCP server tools from agent instructions using natural language.
+The Power Apps MCP tools improve the more you use it. For example, when you make corrections to suggestions in the agent canvas, the data entry tool improves based on your corrections. To use the enhanced agent feed capabiltities, enable and configure the Power Apps MCP server from the Microsoft Copilot Studio agent. Once configured, you can invoke Power Apps MCP server tools from agent instructions using natural language.
 
 More information: [Create an autonomous agent connected to Power Apps MCP server](add-agents-to-app.md#create-an-autonomous-agent-connected-to-power-apps-mcp-server)
 
@@ -98,5 +98,4 @@ When you configure a Copilot Studio agent to use the Power Apps MCP server and e
 1.	The tool processes the input, extracts relevant information, and populates a Dataverse form with suggested values for each mapped column.
 1.	A task appears in the Agent Feed, and selecting it opens the data‑entry review experience. The left panel shows the original input, and the right panel displays the form populated with suggested values.
 1.	The user can review the extracted values, make corrections if needed, and then save the record to Dataverse.
-
 
