@@ -25,7 +25,7 @@ The invoke_data_entry tool can accept unstructured inputs, such as PDF or Excel 
 
 ## What is the invoke_data_entry tool’s intended use(s)?  
 
-The DEA <!--What's DEA? --> tool can take an unstructured input, such as PDF or Excel files, and create a Dataverse record based on its contents. This is a manual process today, but with the tool, customers can create an agent to automatically create a draft record. This draft can be reviewed in the agent feed, and once the user chooses to save, the record gets written to Dataverse.  
+The data entry agent (form fill) tool can take an unstructured input, such as PDF or Excel files, and create a Dataverse record based on its contents. This is a manual process today, but with the tool, customers can create an agent to automatically create a draft record. This draft can be reviewed in the agent feed, and once the user chooses to save, the record gets written to Dataverse.  
 
 ## How was the invoke_data_entry tool evaluated? What metrics are used to measure performance?  
 
