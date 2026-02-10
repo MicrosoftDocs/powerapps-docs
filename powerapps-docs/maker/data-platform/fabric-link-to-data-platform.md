@@ -82,8 +82,6 @@ Link to Microsoft Fabric from the Power Apps **Tables** area: Select **Analyze**
 > When the initial sync is complete, the system continuously refreshes updates in Dataverse in the lakehouse. It might take up to 60 minutes for the data to be refreshed especially during peak load periods.
 >
 > If you have more than 2,000 active Dataverse tables, Link to Fabric can fail with an error. Go to [Troubleshooting common issues](fabric-troubleshoot.md) for help with resolving issues.
-
-> [!NOTE]
 >
 > The link was labeled as **Microsoft OneLake** and is now labeled **Link to Fabric**.
 
