@@ -98,4 +98,7 @@ Browsers or devices can represent images in rich text differently. Some copy the
 ### When editing an app, Alt key doesn't allow interaction with the control
 In [Power Apps Studio](../power-apps-studio.md), pressing [Alt key for quick interaction](../keyboard-shortcuts.md#alternate-behavior) doesn't work. You can only interact with the rich text editor when [previewing the app](../power-apps-studio.md#preview).
 
+### Hyperlinks in rich text editor don’t open in view mode
+The rich text editor doesn’t support opening hyperlinks when an app is running in view mode. This behavior is a known limitation of the current rich text editor.
+
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
