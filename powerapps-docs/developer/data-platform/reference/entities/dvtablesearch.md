@@ -679,8 +679,6 @@ These relationships are many-to-one. Listed by **SchemaName**.
 
 - [business_unit_dvtablesearch](#BKMK_business_unit_dvtablesearch)
 - [ConnectionReference_DVTableSearch](#BKMK_ConnectionReference_DVTableSearch)
-- [knowledgesourceconsumer_dvtablesearch_knowledgesourceconsumerid](#BKMK_knowledgesourceconsumer_dvtablesearch_knowledgesourceconsumerid)
-- [knowledgesourceprofile_dvtablesearch_knowledgesourceprofileid](#BKMK_knowledgesourceprofile_dvtablesearch_knowledgesourceprofileid)
 - [lk_dvtablesearch_createdby](#BKMK_lk_dvtablesearch_createdby)
 - [lk_dvtablesearch_createdonbehalfby](#BKMK_lk_dvtablesearch_createdonbehalfby)
 - [lk_dvtablesearch_modifiedby](#BKMK_lk_dvtablesearch_modifiedby)
@@ -712,32 +710,6 @@ One-To-Many Relationship: [connectionreference ConnectionReference_DVTableSearch
 |ReferencedAttribute|`connectionreferenceid`|
 |ReferencingAttribute|`connectionreference`|
 |ReferencingEntityNavigationPropertyName|`ConnectionReference`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_knowledgesourceconsumer_dvtablesearch_knowledgesourceconsumerid"></a> knowledgesourceconsumer_dvtablesearch_knowledgesourceconsumerid
-
-One-To-Many Relationship: [knowledgesourceconsumer knowledgesourceconsumer_dvtablesearch_knowledgesourceconsumerid](knowledgesourceconsumer.md#BKMK_knowledgesourceconsumer_dvtablesearch_knowledgesourceconsumerid)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`knowledgesourceconsumer`|
-|ReferencedAttribute|`knowledgesourceconsumerid`|
-|ReferencingAttribute|`knowledgesourceconsumerid`|
-|ReferencingEntityNavigationPropertyName|`knowledgesourceconsumerid`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_knowledgesourceprofile_dvtablesearch_knowledgesourceprofileid"></a> knowledgesourceprofile_dvtablesearch_knowledgesourceprofileid
-
-One-To-Many Relationship: [knowledgesourceprofile knowledgesourceprofile_dvtablesearch_knowledgesourceprofileid](knowledgesourceprofile.md#BKMK_knowledgesourceprofile_dvtablesearch_knowledgesourceprofileid)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`knowledgesourceprofile`|
-|ReferencedAttribute|`knowledgesourceprofileid`|
-|ReferencingAttribute|`knowledgesourceprofileid`|
-|ReferencingEntityNavigationPropertyName|`knowledgesourceprofileid`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
@@ -848,7 +820,6 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [dvtablesearch_PrincipalObjectAttributeAccesses](#BKMK_dvtablesearch_PrincipalObjectAttributeAccesses)
 - [dvtablesearch_ProcessSession](#BKMK_dvtablesearch_ProcessSession)
 - [dvtablesearch_SyncErrors](#BKMK_dvtablesearch_SyncErrors)
-- [msdyn_dvtablesearch_msdyn_aiconfigurationsearch](#BKMK_msdyn_dvtablesearch_msdyn_aiconfigurationsearch)
 
 ### <a name="BKMK_AIPluginOperation_DVTableSearch_DVTableSe"></a> AIPluginOperation_DVTableSearch_DVTableSe
 
@@ -981,18 +952,6 @@ Many-To-One Relationship: [syncerror dvtablesearch_SyncErrors](syncerror.md#BKMK
 |ReferencedEntityNavigationPropertyName|`dvtablesearch_SyncErrors`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
-### <a name="BKMK_msdyn_dvtablesearch_msdyn_aiconfigurationsearch"></a> msdyn_dvtablesearch_msdyn_aiconfigurationsearch
-
-Many-To-One Relationship: [msdyn_aiconfigurationsearch msdyn_dvtablesearch_msdyn_aiconfigurationsearch](msdyn_aiconfigurationsearch.md#BKMK_msdyn_dvtablesearch_msdyn_aiconfigurationsearch)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`msdyn_aiconfigurationsearch`|
-|ReferencingAttribute|`msdyn_dvtablesearch`|
-|ReferencedEntityNavigationPropertyName|`msdyn_dvtablesearch_msdyn_aiconfigurationsearch`|
-|IsCustomizable|`False`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 
 ## Many-to-Many relationships

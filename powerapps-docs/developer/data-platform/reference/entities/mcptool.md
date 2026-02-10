@@ -1,6 +1,6 @@
 ---
-title: "AI Optimization (msdyn_AIOptimization) table/entity reference (Microsoft Dataverse)"
-description: "Includes schema information and supported messages for the AI Optimization (msdyn_AIOptimization) table/entity with Microsoft Dataverse."
+title: "MCPTool table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the MCPTool table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
@@ -8,52 +8,52 @@ search.audienceType:
   - developer
 ---
 
-# AI Optimization (msdyn_AIOptimization) table/entity reference (Microsoft Dataverse)
+# MCPTool table/entity reference (Microsoft Dataverse)
 
-
+MCPTools component
 
 ## Messages
 
-The following table lists the messages for the AI Optimization (msdyn_AIOptimization) table.
+The following table lists the messages for the MCPTool table.
 Messages represent operations that can be performed on the table. They may also be events.
 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
-| `Assign`<br />Event: True |`PATCH` /msdyn_aioptimizations(*msdyn_aioptimizationid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+| `Assign`<br />Event: True |`PATCH` /mcptools(*mcptoolid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
 | `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
-| `Create`<br />Event: True |`POST` /msdyn_aioptimizations<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `Create`<br />Event: True |`POST` /mcptools<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
-| `Delete`<br />Event: True |`DELETE` /msdyn_aioptimizations(*msdyn_aioptimizationid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Delete`<br />Event: True |`DELETE` /mcptools(*mcptoolid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
 | `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 | `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-| `Retrieve`<br />Event: True |`GET` /msdyn_aioptimizations(*msdyn_aioptimizationid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
-| `RetrieveMultiple`<br />Event: True |`GET` /msdyn_aioptimizations<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
+| `Retrieve`<br />Event: True |`GET` /mcptools(*mcptoolid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveMultiple`<br />Event: True |`GET` /mcptools<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 | `RetrievePrincipalAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 | `RetrieveSharedPrincipalsAndAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
 | `RevokeAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-| `SetState`<br />Event: True |`PATCH` /msdyn_aioptimizations(*msdyn_aioptimizationid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `statecode` and `statuscode` properties. |<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-| `Update`<br />Event: True |`PATCH` /msdyn_aioptimizations(*msdyn_aioptimizationid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
+| `SetState`<br />Event: True |`PATCH` /mcptools(*mcptoolid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `statecode` and `statuscode` properties. |<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+| `Update`<br />Event: True |`PATCH` /mcptools(*mcptoolid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
 | `UpdateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
-| `Upsert`<br />Event: False |`PATCH` /msdyn_aioptimizations(*msdyn_aioptimizationid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
+| `Upsert`<br />Event: False |`PATCH` /mcptools(*mcptoolid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
 | `UpsertMultiple`<br />Event: False |<xref:Microsoft.Dynamics.CRM.UpsertMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpsertMultipleRequest>|
 
 ## Properties
 
-The following table lists selected properties for the AI Optimization (msdyn_AIOptimization) table.
+The following table lists selected properties for the MCPTool table.
 
 |Property|Value|
 | --- | --- |
-| **DisplayName** | **AI Optimization** |
-| **DisplayCollectionName** | **AI Optimizations** |
-| **SchemaName** | `msdyn_AIOptimization` |
-| **CollectionSchemaName** | `msdyn_AIOptimizations` |
-| **EntitySetName** | `msdyn_aioptimizations`|
-| **LogicalName** | `msdyn_aioptimization` |
-| **LogicalCollectionName** | `msdyn_aioptimizations` |
-| **PrimaryIdAttribute** | `msdyn_aioptimizationid` |
-| **PrimaryNameAttribute** |`msdyn_aiobjectid` |
+| **DisplayName** | **MCPTool** |
+| **DisplayCollectionName** | **MCPTools** |
+| **SchemaName** | `MCPTool` |
+| **CollectionSchemaName** | `MCPTools` |
+| **EntitySetName** | `mcptools`|
+| **LogicalName** | `mcptool` |
+| **LogicalCollectionName** | `mcptools` |
+| **PrimaryIdAttribute** | `mcptoolid` |
+| **PrimaryNameAttribute** |`name` |
 | **TableType** | `Standard` |
 | **OwnershipType** | `UserOwned` |
 
@@ -61,30 +61,142 @@ The following table lists selected properties for the AI Optimization (msdyn_AIO
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
+- [Annotations](#BKMK_Annotations)
+- [BackendToolType](#BKMK_BackendToolType)
+- [ConnectorId](#BKMK_ConnectorId)
+- [CustomAPIId](#BKMK_CustomAPIId)
+- [Description](#BKMK_Description)
+- [HTTPMethod](#BKMK_HTTPMethod)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
-- [msdyn_AIModelId](#BKMK_msdyn_AIModelId)
-- [msdyn_AIObjectId](#BKMK_msdyn_AIObjectId)
-- [msdyn_AIOptimizationId](#BKMK_msdyn_AIOptimizationId)
-- [msdyn_AIOptimizationPrivateDataId](#BKMK_msdyn_AIOptimizationPrivateDataId)
-- [msdyn_CurrentIteration](#BKMK_msdyn_CurrentIteration)
-- [msdyn_CurrentPrompt](#BKMK_msdyn_CurrentPrompt)
-- [msdyn_CurrentScore](#BKMK_msdyn_CurrentScore)
-- [msdyn_EndDate](#BKMK_msdyn_EndDate)
-- [msdyn_EvaluationCriteria](#BKMK_msdyn_EvaluationCriteria)
-- [msdyn_Explanation](#BKMK_msdyn_Explanation)
-- [msdyn_ModelSettings](#BKMK_msdyn_ModelSettings)
-- [msdyn_OldScore](#BKMK_msdyn_OldScore)
-- [msdyn_PromptHistory](#BKMK_msdyn_PromptHistory)
-- [msdyn_RunStatus](#BKMK_msdyn_RunStatus)
-- [msdyn_StartDate](#BKMK_msdyn_StartDate)
-- [msdyn_TotalIterations](#BKMK_msdyn_TotalIterations)
+- [InputSchema](#BKMK_InputSchema)
+- [IsCustomizable](#BKMK_IsCustomizable)
+- [MCPServerId](#BKMK_MCPServerId)
+- [MCPToolId](#BKMK_MCPToolId)
+- [Name](#BKMK_Name)
+- [OperationId](#BKMK_OperationId)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
+- [RelativePath](#BKMK_RelativePath)
+- [SdkMessagePairId](#BKMK_SdkMessagePairId)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
+- [Title](#BKMK_Title)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
+
+### <a name="BKMK_Annotations"></a> Annotations
+
+|Property|Value|
+|---|---|
+|Description|**Annotations for the MCP Tool**|
+|DisplayName|**Annotations**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`annotations`|
+|RequiredLevel|None|
+|Type|Memo|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|4000|
+
+### <a name="BKMK_BackendToolType"></a> BackendToolType
+
+|Property|Value|
+|---|---|
+|Description|**Backend Tool Type**|
+|DisplayName|**BackendToolType**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`backendtooltype`|
+|RequiredLevel|SystemRequired|
+|Type|Picklist|
+|DefaultFormValue|-1|
+|GlobalChoiceName|`backendtooltype`|
+
+#### BackendToolType Choices/Options
+
+|Value|Label|
+|---|---|
+|0|**DataverseCustomAPI**|
+|1|**ConnectorAction**|
+|2|**Graph**|
+|3|**RemoteMCP**|
+|4|**RemoteAPI**|
+|5|**SdkMessagePair**|
+
+### <a name="BKMK_ConnectorId"></a> ConnectorId
+
+|Property|Value|
+|---|---|
+|Description|**Connector ID**|
+|DisplayName|**ConnectorId**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`connectorid`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
+
+### <a name="BKMK_CustomAPIId"></a> CustomAPIId
+
+|Property|Value|
+|---|---|
+|Description|**Reference to the Custom API**|
+|DisplayName|**Custom API**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`customapiid`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|customapi|
+
+### <a name="BKMK_Description"></a> Description
+
+|Property|Value|
+|---|---|
+|Description|**Description of the MCP Tool**|
+|DisplayName|**Description**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`description`|
+|RequiredLevel|None|
+|Type|Memo|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|4000|
+
+### <a name="BKMK_HTTPMethod"></a> HTTPMethod
+
+|Property|Value|
+|---|---|
+|Description|**HTTP Method**|
+|DisplayName|**HTTPMethod**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`httpmethod`|
+|RequiredLevel|SystemRequired|
+|Type|Picklist|
+|DefaultFormValue|-1|
+|GlobalChoiceName|`httpmethod`|
+
+#### HTTPMethod Choices/Options
+
+|Value|Label|
+|---|---|
+|0|**GET**|
+|1|**POST**|
+|2|**PUT**|
+|3|**PATCH**|
+|4|**DELETE**|
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
@@ -100,263 +212,93 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxValue|2147483647|
 |MinValue|-2147483648|
 
-### <a name="BKMK_msdyn_AIModelId"></a> msdyn_AIModelId
+### <a name="BKMK_InputSchema"></a> InputSchema
 
 |Property|Value|
 |---|---|
-|Description||
-|DisplayName|**AI Model Id**|
+|Description|**Input Schema of the MCP Tool**|
+|DisplayName|**InputSchema**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|`msdyn_aimodelid`|
+|LogicalName|`inputschema`|
 |RequiredLevel|None|
-|Type|Lookup|
-|Targets|msdyn_aimodel|
-
-### <a name="BKMK_msdyn_AIObjectId"></a> msdyn_AIObjectId
-
-|Property|Value|
-|---|---|
-|Description||
-|DisplayName|**AIObjectId**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`msdyn_aiobjectid`|
-|RequiredLevel|ApplicationRequired|
-|Type|String|
+|Type|Memo|
 |Format|Text|
 |FormatName|Text|
 |ImeMode|Auto|
 |IsLocalizable|False|
-|MaxLength|850|
+|MaxLength|50000|
 
-### <a name="BKMK_msdyn_AIOptimizationId"></a> msdyn_AIOptimizationId
+### <a name="BKMK_IsCustomizable"></a> IsCustomizable
+
+|Property|Value|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Is Customizable**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`iscustomizable`|
+|RequiredLevel|SystemRequired|
+|Type|ManagedProperty|
+
+### <a name="BKMK_MCPServerId"></a> MCPServerId
+
+|Property|Value|
+|---|---|
+|Description|**The associated MCP Server**|
+|DisplayName|**MCPServer**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`mcpserverid`|
+|RequiredLevel|SystemRequired|
+|Type|Lookup|
+|Targets|mcpserver|
+
+### <a name="BKMK_MCPToolId"></a> MCPToolId
 
 |Property|Value|
 |---|---|
 |Description|**Unique identifier for entity instances**|
-|DisplayName|**AI Optimization**|
+|DisplayName|**MCPToolId**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|`msdyn_aioptimizationid`|
+|LogicalName|`mcptoolid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
 
-### <a name="BKMK_msdyn_AIOptimizationPrivateDataId"></a> msdyn_AIOptimizationPrivateDataId
+### <a name="BKMK_Name"></a> Name
 
 |Property|Value|
 |---|---|
-|Description||
-|DisplayName|**AI Optimization Private Data Id**|
+|Description|**Name of the MCP Tool**|
+|DisplayName|**Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|`msdyn_aioptimizationprivatedataid`|
-|RequiredLevel|None|
-|Type|Lookup|
-|Targets|msdyn_aioptimizationprivatedata|
-
-### <a name="BKMK_msdyn_CurrentIteration"></a> msdyn_CurrentIteration
-
-|Property|Value|
-|---|---|
-|Description||
-|DisplayName|**Current Iteration**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`msdyn_currentiteration`|
-|RequiredLevel|ApplicationRequired|
-|Type|Integer|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
-
-### <a name="BKMK_msdyn_CurrentPrompt"></a> msdyn_CurrentPrompt
-
-|Property|Value|
-|---|---|
-|Description||
-|DisplayName|**Current Prompt**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`msdyn_currentprompt`|
-|RequiredLevel|ApplicationRequired|
+|LogicalName|`name`|
+|RequiredLevel|SystemRequired|
 |Type|String|
 |Format|Text|
 |FormatName|Text|
 |ImeMode|Auto|
 |IsLocalizable|False|
-|MaxLength|4000|
+|MaxLength|100|
 
-### <a name="BKMK_msdyn_CurrentScore"></a> msdyn_CurrentScore
-
-|Property|Value|
-|---|---|
-|Description||
-|DisplayName|**Current Score**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`msdyn_currentscore`|
-|RequiredLevel|None|
-|Type|Double|
-|ImeMode|Auto|
-|MaxValue|1000000000|
-|MinValue|0|
-|Precision|2|
-
-### <a name="BKMK_msdyn_EndDate"></a> msdyn_EndDate
+### <a name="BKMK_OperationId"></a> OperationId
 
 |Property|Value|
 |---|---|
-|Description||
-|DisplayName|**End Date**|
+|Description|**Operation Id of the associated MCP Tool.**|
+|DisplayName|**OperationId**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|`msdyn_enddate`|
-|RequiredLevel|None|
-|Type|DateTime|
-|CanChangeDateTimeBehavior|False|
-|DateTimeBehavior|UserLocal|
-|Format|DateAndTime|
-|ImeMode|Inactive|
-|SourceTypeMask|0|
-
-### <a name="BKMK_msdyn_EvaluationCriteria"></a> msdyn_EvaluationCriteria
-
-|Property|Value|
-|---|---|
-|Description||
-|DisplayName|**Evaluation Criteria**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`msdyn_evaluationcriteria`|
-|RequiredLevel|ApplicationRequired|
-|Type|Memo|
-|Format|Text|
-|FormatName|Text|
-|ImeMode|Auto|
-|IsLocalizable|False|
-|MaxLength|1048576|
-
-### <a name="BKMK_msdyn_Explanation"></a> msdyn_Explanation
-
-|Property|Value|
-|---|---|
-|Description||
-|DisplayName|**Explanation**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`msdyn_explanation`|
+|LogicalName|`operationid`|
 |RequiredLevel|None|
 |Type|String|
 |Format|Text|
 |FormatName|Text|
 |ImeMode|Auto|
 |IsLocalizable|False|
-|MaxLength|4000|
-
-### <a name="BKMK_msdyn_ModelSettings"></a> msdyn_ModelSettings
-
-|Property|Value|
-|---|---|
-|Description||
-|DisplayName|**Model Settings**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`msdyn_modelsettings`|
-|RequiredLevel|ApplicationRequired|
-|Type|Memo|
-|Format|Text|
-|FormatName|Text|
-|ImeMode|Auto|
-|IsLocalizable|False|
-|MaxLength|1048576|
-
-### <a name="BKMK_msdyn_OldScore"></a> msdyn_OldScore
-
-|Property|Value|
-|---|---|
-|Description||
-|DisplayName|**Old Score**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`msdyn_oldscore`|
-|RequiredLevel|None|
-|Type|Double|
-|ImeMode|Auto|
-|MaxValue|1000000000|
-|MinValue|0|
-|Precision|2|
-
-### <a name="BKMK_msdyn_PromptHistory"></a> msdyn_PromptHistory
-
-|Property|Value|
-|---|---|
-|Description||
-|DisplayName|**Prompt History**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`msdyn_prompthistory`|
-|RequiredLevel|ApplicationRequired|
-|Type|Memo|
-|Format|Text|
-|FormatName|Text|
-|ImeMode|Auto|
-|IsLocalizable|False|
-|MaxLength|1048576|
-
-### <a name="BKMK_msdyn_RunStatus"></a> msdyn_RunStatus
-
-|Property|Value|
-|---|---|
-|Description||
-|DisplayName|**RunStatus**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`msdyn_runstatus`|
-|RequiredLevel|ApplicationRequired|
-|Type|Picklist|
-|DefaultFormValue|-1|
-|GlobalChoiceName|`new_msdyn_aioptimization_msdyn_runstatus`|
-
-#### msdyn_RunStatus Choices/Options
-
-|Value|Label|
-|---|---|
-|0|**Creating**|
-|1|**Created**|
-|2|**Running**|
-|3|**Success**|
-|4|**Failed**|
-
-### <a name="BKMK_msdyn_StartDate"></a> msdyn_StartDate
-
-|Property|Value|
-|---|---|
-|Description||
-|DisplayName|**Start Date**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`msdyn_startdate`|
-|RequiredLevel|None|
-|Type|DateTime|
-|CanChangeDateTimeBehavior|False|
-|DateTimeBehavior|UserLocal|
-|Format|DateAndTime|
-|ImeMode|Inactive|
-|SourceTypeMask|0|
-
-### <a name="BKMK_msdyn_TotalIterations"></a> msdyn_TotalIterations
-
-|Property|Value|
-|---|---|
-|Description||
-|DisplayName|**Total Iterations**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`msdyn_totaliterations`|
-|RequiredLevel|ApplicationRequired|
-|Type|Integer|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|MaxLength|100|
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
@@ -400,11 +342,41 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|SystemRequired|
 |Type|EntityName|
 
+### <a name="BKMK_RelativePath"></a> RelativePath
+
+|Property|Value|
+|---|---|
+|Description|**Relative Path**|
+|DisplayName|**RelativePath**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`relativepath`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|500|
+
+### <a name="BKMK_SdkMessagePairId"></a> SdkMessagePairId
+
+|Property|Value|
+|---|---|
+|Description|**Reference to the SDK Message Pair API**|
+|DisplayName|**SDK Message Pair API**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`sdkmessagepairid`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets||
+
 ### <a name="BKMK_statecode"></a> statecode
 
 |Property|Value|
 |---|---|
-|Description|**Status of the AI Optimization**|
+|Description|**Status of the MCPTool**|
 |DisplayName|**Status**|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -412,7 +384,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|SystemRequired|
 |Type|State|
 |DefaultFormValue||
-|GlobalChoiceName|`msdyn_aioptimization_statecode`|
+|GlobalChoiceName|`mcptool_statecode`|
 
 #### statecode Choices/Options
 
@@ -425,7 +397,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**Reason for the status of the AI Optimization**|
+|Description|**Reason for the status of the MCPTool**|
 |DisplayName|**Status Reason**|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -433,7 +405,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Status|
 |DefaultFormValue||
-|GlobalChoiceName|`msdyn_aioptimization_statuscode`|
+|GlobalChoiceName|`mcptool_statuscode`|
 
 #### statuscode Choices/Options
 
@@ -456,6 +428,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxValue|2147483647|
 |MinValue|-1|
 
+### <a name="BKMK_Title"></a> Title
+
+|Property|Value|
+|---|---|
+|Description|**Title of the MCP Tool**|
+|DisplayName|**Title**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`title`|
+|RequiredLevel|SystemRequired|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
+
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
 
 |Property|Value|
@@ -475,18 +464,59 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 These columns/attributes return false for both **IsValidForCreate** and **IsValidForUpdate**. Listed by **SchemaName**.
 
+- [ComponentIdUnique](#BKMK_ComponentIdUnique)
+- [ComponentState](#BKMK_ComponentState)
 - [CreatedBy](#BKMK_CreatedBy)
 - [CreatedOn](#BKMK_CreatedOn)
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
+- [IsManaged](#BKMK_IsManaged)
 - [ModifiedBy](#BKMK_ModifiedBy)
 - [ModifiedOn](#BKMK_ModifiedOn)
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
+- [OverwriteTime](#BKMK_OverwriteTime)
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
+- [SolutionId](#BKMK_SolutionId)
+- [SupportingSolutionId](#BKMK_SupportingSolutionId)
 - [VersionNumber](#BKMK_VersionNumber)
+
+### <a name="BKMK_ComponentIdUnique"></a> ComponentIdUnique
+
+|Property|Value|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Row id unique**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`componentidunique`|
+|RequiredLevel|SystemRequired|
+|Type|Uniqueidentifier|
+
+### <a name="BKMK_ComponentState"></a> ComponentState
+
+|Property|Value|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Component State**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`componentstate`|
+|RequiredLevel|SystemRequired|
+|Type|Picklist|
+|DefaultFormValue||
+|GlobalChoiceName|`componentstate`|
+
+#### ComponentState Choices/Options
+
+|Value|Label|
+|---|---|
+|0|**Published**|
+|1|**Unpublished**|
+|2|**Deleted**|
+|3|**Deleted Unpublished**|
 
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
@@ -531,6 +561,22 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |Type|Lookup|
 |Targets|systemuser|
 
+### <a name="BKMK_IsManaged"></a> IsManaged
+
+|Property|Value|
+|---|---|
+|Description|**Indicates whether the solution component is part of a managed solution.**|
+|DisplayName|**Is Managed**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`ismanaged`|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+|GlobalChoiceName|`ismanaged`|
+|DefaultValue|False|
+|True Label|Managed|
+|False Label|Unmanaged|
+
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
 |Property|Value|
@@ -573,6 +619,23 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |RequiredLevel|None|
 |Type|Lookup|
 |Targets|systemuser|
+
+### <a name="BKMK_OverwriteTime"></a> OverwriteTime
+
+|Property|Value|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Record Overwrite Time**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`overwritetime`|
+|RequiredLevel|SystemRequired|
+|Type|DateTime|
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_OwnerIdName"></a> OwnerIdName
 
@@ -647,6 +710,30 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |Type|Lookup|
 |Targets|systemuser|
 
+### <a name="BKMK_SolutionId"></a> SolutionId
+
+|Property|Value|
+|---|---|
+|Description|**Unique identifier of the associated solution.**|
+|DisplayName|**Solution**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`solutionid`|
+|RequiredLevel|SystemRequired|
+|Type|Uniqueidentifier|
+
+### <a name="BKMK_SupportingSolutionId"></a> SupportingSolutionId
+
+|Property|Value|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Solution**|
+|IsValidForForm|False|
+|IsValidForRead|False|
+|LogicalName|`supportingsolutionid`|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
+
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
 |Property|Value|
@@ -665,20 +752,20 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 
 These relationships are many-to-one. Listed by **SchemaName**.
 
-- [business_unit_msdyn_aioptimization](#BKMK_business_unit_msdyn_aioptimization)
-- [lk_msdyn_aioptimization_createdby](#BKMK_lk_msdyn_aioptimization_createdby)
-- [lk_msdyn_aioptimization_createdonbehalfby](#BKMK_lk_msdyn_aioptimization_createdonbehalfby)
-- [lk_msdyn_aioptimization_modifiedby](#BKMK_lk_msdyn_aioptimization_modifiedby)
-- [lk_msdyn_aioptimization_modifiedonbehalfby](#BKMK_lk_msdyn_aioptimization_modifiedonbehalfby)
-- [msdyn_aioptimization_aimodelid_msdyn_aimodel](#BKMK_msdyn_aioptimization_aimodelid_msdyn_aimodel)
-- [msdyn_aioptimizationprivatedata_msdyn_aioptimization](#BKMK_msdyn_aioptimizationprivatedata_msdyn_aioptimization)
-- [owner_msdyn_aioptimization](#BKMK_owner_msdyn_aioptimization)
-- [team_msdyn_aioptimization](#BKMK_team_msdyn_aioptimization)
-- [user_msdyn_aioptimization](#BKMK_user_msdyn_aioptimization)
+- [business_unit_mcptool](#BKMK_business_unit_mcptool)
+- [lk_mcptool_createdby](#BKMK_lk_mcptool_createdby)
+- [lk_mcptool_createdonbehalfby](#BKMK_lk_mcptool_createdonbehalfby)
+- [lk_mcptool_modifiedby](#BKMK_lk_mcptool_modifiedby)
+- [lk_mcptool_modifiedonbehalfby](#BKMK_lk_mcptool_modifiedonbehalfby)
+- [MCPTool_CustomAPI_CustomAPI](#BKMK_MCPTool_CustomAPI_CustomAPI)
+- [MCPTool_MCPServer_MCPServer](#BKMK_MCPTool_MCPServer_MCPServer)
+- [owner_mcptool](#BKMK_owner_mcptool)
+- [team_mcptool](#BKMK_team_mcptool)
+- [user_mcptool](#BKMK_user_mcptool)
 
-### <a name="BKMK_business_unit_msdyn_aioptimization"></a> business_unit_msdyn_aioptimization
+### <a name="BKMK_business_unit_mcptool"></a> business_unit_mcptool
 
-One-To-Many Relationship: [businessunit business_unit_msdyn_aioptimization](businessunit.md#BKMK_business_unit_msdyn_aioptimization)
+One-To-Many Relationship: [businessunit business_unit_mcptool](businessunit.md#BKMK_business_unit_mcptool)
 
 |Property|Value|
 |---|---|
@@ -689,9 +776,9 @@ One-To-Many Relationship: [businessunit business_unit_msdyn_aioptimization](busi
 |IsHierarchical||
 |CascadeConfiguration|Archive: `Restrict`<br />Assign: `NoCascade`<br />Delete: `Restrict`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_lk_msdyn_aioptimization_createdby"></a> lk_msdyn_aioptimization_createdby
+### <a name="BKMK_lk_mcptool_createdby"></a> lk_mcptool_createdby
 
-One-To-Many Relationship: [systemuser lk_msdyn_aioptimization_createdby](systemuser.md#BKMK_lk_msdyn_aioptimization_createdby)
+One-To-Many Relationship: [systemuser lk_mcptool_createdby](systemuser.md#BKMK_lk_mcptool_createdby)
 
 |Property|Value|
 |---|---|
@@ -702,9 +789,9 @@ One-To-Many Relationship: [systemuser lk_msdyn_aioptimization_createdby](systemu
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_lk_msdyn_aioptimization_createdonbehalfby"></a> lk_msdyn_aioptimization_createdonbehalfby
+### <a name="BKMK_lk_mcptool_createdonbehalfby"></a> lk_mcptool_createdonbehalfby
 
-One-To-Many Relationship: [systemuser lk_msdyn_aioptimization_createdonbehalfby](systemuser.md#BKMK_lk_msdyn_aioptimization_createdonbehalfby)
+One-To-Many Relationship: [systemuser lk_mcptool_createdonbehalfby](systemuser.md#BKMK_lk_mcptool_createdonbehalfby)
 
 |Property|Value|
 |---|---|
@@ -715,9 +802,9 @@ One-To-Many Relationship: [systemuser lk_msdyn_aioptimization_createdonbehalfby]
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_lk_msdyn_aioptimization_modifiedby"></a> lk_msdyn_aioptimization_modifiedby
+### <a name="BKMK_lk_mcptool_modifiedby"></a> lk_mcptool_modifiedby
 
-One-To-Many Relationship: [systemuser lk_msdyn_aioptimization_modifiedby](systemuser.md#BKMK_lk_msdyn_aioptimization_modifiedby)
+One-To-Many Relationship: [systemuser lk_mcptool_modifiedby](systemuser.md#BKMK_lk_mcptool_modifiedby)
 
 |Property|Value|
 |---|---|
@@ -728,9 +815,9 @@ One-To-Many Relationship: [systemuser lk_msdyn_aioptimization_modifiedby](system
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_lk_msdyn_aioptimization_modifiedonbehalfby"></a> lk_msdyn_aioptimization_modifiedonbehalfby
+### <a name="BKMK_lk_mcptool_modifiedonbehalfby"></a> lk_mcptool_modifiedonbehalfby
 
-One-To-Many Relationship: [systemuser lk_msdyn_aioptimization_modifiedonbehalfby](systemuser.md#BKMK_lk_msdyn_aioptimization_modifiedonbehalfby)
+One-To-Many Relationship: [systemuser lk_mcptool_modifiedonbehalfby](systemuser.md#BKMK_lk_mcptool_modifiedonbehalfby)
 
 |Property|Value|
 |---|---|
@@ -741,35 +828,35 @@ One-To-Many Relationship: [systemuser lk_msdyn_aioptimization_modifiedonbehalfby
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_msdyn_aioptimization_aimodelid_msdyn_aimodel"></a> msdyn_aioptimization_aimodelid_msdyn_aimodel
+### <a name="BKMK_MCPTool_CustomAPI_CustomAPI"></a> MCPTool_CustomAPI_CustomAPI
 
-One-To-Many Relationship: [msdyn_aimodel msdyn_aioptimization_aimodelid_msdyn_aimodel](msdyn_aimodel.md#BKMK_msdyn_aioptimization_aimodelid_msdyn_aimodel)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`msdyn_aimodel`|
-|ReferencedAttribute|`msdyn_aimodelid`|
-|ReferencingAttribute|`msdyn_aimodelid`|
-|ReferencingEntityNavigationPropertyName|`msdyn_AIModelId`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `Cascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `Cascade`<br />RollupView: `NoCascade`<br />Share: `Cascade`<br />Unshare: `Cascade`|
-
-### <a name="BKMK_msdyn_aioptimizationprivatedata_msdyn_aioptimization"></a> msdyn_aioptimizationprivatedata_msdyn_aioptimization
-
-One-To-Many Relationship: [msdyn_aioptimizationprivatedata msdyn_aioptimizationprivatedata_msdyn_aioptimization](msdyn_aioptimizationprivatedata.md#BKMK_msdyn_aioptimizationprivatedata_msdyn_aioptimization)
+One-To-Many Relationship: [customapi MCPTool_CustomAPI_CustomAPI](customapi.md#BKMK_MCPTool_CustomAPI_CustomAPI)
 
 |Property|Value|
 |---|---|
-|ReferencedEntity|`msdyn_aioptimizationprivatedata`|
-|ReferencedAttribute|`msdyn_aioptimizationprivatedataid`|
-|ReferencingAttribute|`msdyn_aioptimizationprivatedataid`|
-|ReferencingEntityNavigationPropertyName|`msdyn_AIOptimizationPrivateDataId`|
+|ReferencedEntity|`customapi`|
+|ReferencedAttribute|`customapiid`|
+|ReferencingAttribute|`customapiid`|
+|ReferencingEntityNavigationPropertyName|`CustomAPI`|
 |IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+|CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_owner_msdyn_aioptimization"></a> owner_msdyn_aioptimization
+### <a name="BKMK_MCPTool_MCPServer_MCPServer"></a> MCPTool_MCPServer_MCPServer
 
-One-To-Many Relationship: [owner owner_msdyn_aioptimization](owner.md#BKMK_owner_msdyn_aioptimization)
+One-To-Many Relationship: [mcpserver MCPTool_MCPServer_MCPServer](mcpserver.md#BKMK_MCPTool_MCPServer_MCPServer)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`mcpserver`|
+|ReferencedAttribute|`mcpserverid`|
+|ReferencingAttribute|`mcpserverid`|
+|ReferencingEntityNavigationPropertyName|`MCPServer`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `Cascade`<br />RollupView: `NoCascade`<br />Share: `Cascade`<br />Unshare: `Cascade`|
+
+### <a name="BKMK_owner_mcptool"></a> owner_mcptool
+
+One-To-Many Relationship: [owner owner_mcptool](owner.md#BKMK_owner_mcptool)
 
 |Property|Value|
 |---|---|
@@ -780,9 +867,9 @@ One-To-Many Relationship: [owner owner_msdyn_aioptimization](owner.md#BKMK_owner
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_team_msdyn_aioptimization"></a> team_msdyn_aioptimization
+### <a name="BKMK_team_mcptool"></a> team_mcptool
 
-One-To-Many Relationship: [team team_msdyn_aioptimization](team.md#BKMK_team_msdyn_aioptimization)
+One-To-Many Relationship: [team team_mcptool](team.md#BKMK_team_mcptool)
 
 |Property|Value|
 |---|---|
@@ -793,9 +880,9 @@ One-To-Many Relationship: [team team_msdyn_aioptimization](team.md#BKMK_team_msd
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_user_msdyn_aioptimization"></a> user_msdyn_aioptimization
+### <a name="BKMK_user_mcptool"></a> user_mcptool
 
-One-To-Many Relationship: [systemuser user_msdyn_aioptimization](systemuser.md#BKMK_user_msdyn_aioptimization)
+One-To-Many Relationship: [systemuser user_mcptool](systemuser.md#BKMK_user_mcptool)
 
 |Property|Value|
 |---|---|
@@ -811,108 +898,82 @@ One-To-Many Relationship: [systemuser user_msdyn_aioptimization](systemuser.md#B
 
 These relationships are one-to-many. Listed by **SchemaName**.
 
-- [msdyn_aioptimization_AsyncOperations](#BKMK_msdyn_aioptimization_AsyncOperations)
-- [msdyn_aioptimization_BulkDeleteFailures](#BKMK_msdyn_aioptimization_BulkDeleteFailures)
-- [msdyn_aioptimization_DuplicateBaseRecord](#BKMK_msdyn_aioptimization_DuplicateBaseRecord)
-- [msdyn_aioptimization_DuplicateMatchingRecord](#BKMK_msdyn_aioptimization_DuplicateMatchingRecord)
-- [msdyn_aioptimization_MailboxTrackingFolders](#BKMK_msdyn_aioptimization_MailboxTrackingFolders)
-- [msdyn_aioptimization_PrincipalObjectAttributeAccesses](#BKMK_msdyn_aioptimization_PrincipalObjectAttributeAccesses)
-- [msdyn_aioptimization_ProcessSession](#BKMK_msdyn_aioptimization_ProcessSession)
-- [msdyn_aioptimization_SyncErrors](#BKMK_msdyn_aioptimization_SyncErrors)
+- [mcptool_AsyncOperations](#BKMK_mcptool_AsyncOperations)
+- [mcptool_BulkDeleteFailures](#BKMK_mcptool_BulkDeleteFailures)
+- [mcptool_MailboxTrackingFolders](#BKMK_mcptool_MailboxTrackingFolders)
+- [mcptool_PrincipalObjectAttributeAccesses](#BKMK_mcptool_PrincipalObjectAttributeAccesses)
+- [mcptool_ProcessSession](#BKMK_mcptool_ProcessSession)
+- [mcptool_SyncErrors](#BKMK_mcptool_SyncErrors)
 
-### <a name="BKMK_msdyn_aioptimization_AsyncOperations"></a> msdyn_aioptimization_AsyncOperations
+### <a name="BKMK_mcptool_AsyncOperations"></a> mcptool_AsyncOperations
 
-Many-To-One Relationship: [asyncoperation msdyn_aioptimization_AsyncOperations](asyncoperation.md#BKMK_msdyn_aioptimization_AsyncOperations)
+Many-To-One Relationship: [asyncoperation mcptool_AsyncOperations](asyncoperation.md#BKMK_mcptool_AsyncOperations)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`asyncoperation`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`msdyn_aioptimization_AsyncOperations`|
+|ReferencedEntityNavigationPropertyName|`mcptool_AsyncOperations`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_msdyn_aioptimization_BulkDeleteFailures"></a> msdyn_aioptimization_BulkDeleteFailures
+### <a name="BKMK_mcptool_BulkDeleteFailures"></a> mcptool_BulkDeleteFailures
 
-Many-To-One Relationship: [bulkdeletefailure msdyn_aioptimization_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msdyn_aioptimization_BulkDeleteFailures)
+Many-To-One Relationship: [bulkdeletefailure mcptool_BulkDeleteFailures](bulkdeletefailure.md#BKMK_mcptool_BulkDeleteFailures)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`bulkdeletefailure`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`msdyn_aioptimization_BulkDeleteFailures`|
+|ReferencedEntityNavigationPropertyName|`mcptool_BulkDeleteFailures`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_msdyn_aioptimization_DuplicateBaseRecord"></a> msdyn_aioptimization_DuplicateBaseRecord
+### <a name="BKMK_mcptool_MailboxTrackingFolders"></a> mcptool_MailboxTrackingFolders
 
-Many-To-One Relationship: [duplicaterecord msdyn_aioptimization_DuplicateBaseRecord](duplicaterecord.md#BKMK_msdyn_aioptimization_DuplicateBaseRecord)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`duplicaterecord`|
-|ReferencingAttribute|`baserecordid`|
-|ReferencedEntityNavigationPropertyName|`msdyn_aioptimization_DuplicateBaseRecord`|
-|IsCustomizable|`True`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
-### <a name="BKMK_msdyn_aioptimization_DuplicateMatchingRecord"></a> msdyn_aioptimization_DuplicateMatchingRecord
-
-Many-To-One Relationship: [duplicaterecord msdyn_aioptimization_DuplicateMatchingRecord](duplicaterecord.md#BKMK_msdyn_aioptimization_DuplicateMatchingRecord)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`duplicaterecord`|
-|ReferencingAttribute|`duplicaterecordid`|
-|ReferencedEntityNavigationPropertyName|`msdyn_aioptimization_DuplicateMatchingRecord`|
-|IsCustomizable|`True`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
-### <a name="BKMK_msdyn_aioptimization_MailboxTrackingFolders"></a> msdyn_aioptimization_MailboxTrackingFolders
-
-Many-To-One Relationship: [mailboxtrackingfolder msdyn_aioptimization_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_msdyn_aioptimization_MailboxTrackingFolders)
+Many-To-One Relationship: [mailboxtrackingfolder mcptool_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_mcptool_MailboxTrackingFolders)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`mailboxtrackingfolder`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`msdyn_aioptimization_MailboxTrackingFolders`|
+|ReferencedEntityNavigationPropertyName|`mcptool_MailboxTrackingFolders`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_msdyn_aioptimization_PrincipalObjectAttributeAccesses"></a> msdyn_aioptimization_PrincipalObjectAttributeAccesses
+### <a name="BKMK_mcptool_PrincipalObjectAttributeAccesses"></a> mcptool_PrincipalObjectAttributeAccesses
 
-Many-To-One Relationship: [principalobjectattributeaccess msdyn_aioptimization_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_msdyn_aioptimization_PrincipalObjectAttributeAccesses)
+Many-To-One Relationship: [principalobjectattributeaccess mcptool_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_mcptool_PrincipalObjectAttributeAccesses)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`principalobjectattributeaccess`|
 |ReferencingAttribute|`objectid`|
-|ReferencedEntityNavigationPropertyName|`msdyn_aioptimization_PrincipalObjectAttributeAccesses`|
+|ReferencedEntityNavigationPropertyName|`mcptool_PrincipalObjectAttributeAccesses`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_msdyn_aioptimization_ProcessSession"></a> msdyn_aioptimization_ProcessSession
+### <a name="BKMK_mcptool_ProcessSession"></a> mcptool_ProcessSession
 
-Many-To-One Relationship: [processsession msdyn_aioptimization_ProcessSession](processsession.md#BKMK_msdyn_aioptimization_ProcessSession)
+Many-To-One Relationship: [processsession mcptool_ProcessSession](processsession.md#BKMK_mcptool_ProcessSession)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`processsession`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`msdyn_aioptimization_ProcessSession`|
+|ReferencedEntityNavigationPropertyName|`mcptool_ProcessSession`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_msdyn_aioptimization_SyncErrors"></a> msdyn_aioptimization_SyncErrors
+### <a name="BKMK_mcptool_SyncErrors"></a> mcptool_SyncErrors
 
-Many-To-One Relationship: [syncerror msdyn_aioptimization_SyncErrors](syncerror.md#BKMK_msdyn_aioptimization_SyncErrors)
+Many-To-One Relationship: [syncerror mcptool_SyncErrors](syncerror.md#BKMK_mcptool_SyncErrors)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`syncerror`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`msdyn_aioptimization_SyncErrors`|
+|ReferencedEntityNavigationPropertyName|`mcptool_SyncErrors`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 

@@ -1,13 +1,13 @@
 ---
-title: "How to: Set up Azure App Insights for your code app (preview)"
+title: "How to: Set up Azure App Insights for your code app"
 description: "Learn how to set up Azure App Insights for your code app"
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 1/22/2026
+ms.date: 02/02/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 ---
-# How to: Set up Azure App Insights for your code app (preview)
+# How to: Set up Azure App Insights for your code app
 
 Azure Application Insights is a telemetry and monitoring service that helps you collect and analyze detailed telemetry from your applications. When you integrate it with Power Apps code apps, you can capture metrics such as session load performance and network request summaries. This integration gives you deeper visibility into how your app behaves in real‑world conditions. For more information, see the [Application Insights OpenTelemetry observability overview](/azure/azure-monitor/app/app-insights-overview).
 

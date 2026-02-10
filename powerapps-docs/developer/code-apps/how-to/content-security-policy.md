@@ -1,15 +1,15 @@
 ---
-title: "How to: Configure Content Security Policy (preview)"
+title: "How to: Configure Content Security Policy"
 description: "Learn how to configure Content Security Policy for code apps"
 author: EvanCahill
 ms.author: hacahill
 ms.reviewer: jdaly
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 01/16/2026
+ms.date: 02/02/2026
 ---
 
-# How to: Configure Content Security Policy (preview)
+# How to: Configure Content Security Policy
 
 This article explains how to configure [Content Security Policy](https://developer.mozilla.org/docs/Web/HTTP/CSP) (CSP) for code apps.
 You can set up the individual CSP directives, choose whether to enforce CSP or use reporting only, and specify where to send reports.

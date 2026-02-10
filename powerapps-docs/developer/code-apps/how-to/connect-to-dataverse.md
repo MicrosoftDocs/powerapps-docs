@@ -1,20 +1,17 @@
 ---
-title: "How to: Connect your code app to Dataverse (preview)"
+title: "How to: Connect your code app to Dataverse"
 description: "Learn how to connect your code app to Dataverse"
-ms.author:  jordanchodak
+ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 01/22/2026
+ms.date: 02/02/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
  - JimDaly
 ---
-# How to: Connect your code app to Dataverse (preview)
+# How to: Connect your code app to Dataverse
 
 This guide helps developers use the Power Apps SDK to connect their code app to Microsoft Dataverse.
-
-> [!NOTE]
-> [!INCLUDE [cc-preview-features-definition](../../../includes/cc-preview-features-definition.md)]
 
 ## Prerequisites
 
