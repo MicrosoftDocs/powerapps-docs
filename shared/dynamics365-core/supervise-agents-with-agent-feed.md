@@ -18,7 +18,7 @@ Agent feed enables human-agent collaboration in apps by surfacing agent-generate
 > Currently, all users who have access to the Agent Task table can see agent feed items in apps. To prevent unintended exposure, don't configure agents to log tasks targeted at specific users.
 
 ## Use agent feed to supervise agents
-The enhanced agent feed is powered by the automomous agents using [Power Apps MCP server](/power-apps/maker/model-driven-apps/power-apps-mcp-server). Power Apps MCP server tools enable following two core human‑agent collaboration patterns:
+The enhanced agent feed is powered by the autonomous  agents using [Power Apps MCP server](/power-apps/maker/model-driven-apps/power-apps-mcp-server). Power Apps MCP server tools enable following two core human‑agent collaboration patterns:
 1. Autonomous Dataverse record creation and updates with Human‑in‑the‑Loop review.
 1. Agent requests for human assistance and logging tasks for human review.
 In agent‑enabled apps, user focus shifts from doing the work to supervising and prioritizing agent‑driven work. Agents help with automations and organize work, ensuring business experts remain involved in decision-making and critical actions.
