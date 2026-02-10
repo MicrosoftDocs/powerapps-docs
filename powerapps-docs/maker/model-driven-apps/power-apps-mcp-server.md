@@ -15,6 +15,13 @@ search.audienceType:
 
 The model context protocol (MCP) is an open protocol that enables seamless integration between large language model (LLM) applications and external data sources and tools. Your agent can use the Power Apps MCP server to communicate with your Power Apps, providing right human-in-the-loop supervision or agentic workflows.
 
+> [!IMPORTANT]
+>
+> - This is a preview feature.
+> - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2216214), and are available before an official release so that customers can get early access and provide feedback.
+> - This feature is available only in the English language and it replaces the earlier Microsoft Copilot Studio activity-based agent feed.
+> - For information about how AI is used with this feature, go to [FAQ about Power Apps MCP server invoke_data_entry tool](../common/faq-power-apps-mcp-server-invoke-data-entry.md).
+
 The Power Apps MCP server equips your agent with two types of app skills:
 
 - Automate repetitive app tasks:

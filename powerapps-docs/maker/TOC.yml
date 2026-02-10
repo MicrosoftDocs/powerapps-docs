@@ -2583,3 +2583,5 @@
     href: ./common/faq-agent-api-component.md
   - name: FAQ about generative pages in model-driven apps
     href: ./common/faq-generative-pages-model-driven.md
+  - name: FAQ about Power Apps MCP server invoke_data_entry tool
+    href: ./common/faq-power-apps-mcp-invoke-data-entry.md

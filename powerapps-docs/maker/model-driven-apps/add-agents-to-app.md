@@ -4,9 +4,9 @@ description: Learn how to add agents to your model-driven app in Power Apps.
 ms.date: 02/10/2026
 ms.reviewer: matp
 ms.topic: how-to
-author: adrianorth
+author: HemantGaur
 ms.subservice: mda-maker
-ms.author: aorth
+ms.author: hemantg
 contributors: Jacob-Wilkinson, HemantGaur
 ms.service: powerapps
 search.audienceType: 
@@ -29,6 +29,7 @@ Model-driven apps support the use of agents to enhance user productivity and aut
 > - This is a preview feature.
 > - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2216214), and are available before an official release so that customers can get early access and provide feedback.
 > - This feature is available only in the English language and it replaces the earlier Microsoft Copilot Studio activity-based agent feed.
+> - For information about how AI is used with this feature, go to [FAQ about Power Apps MCP server invoke_data_entry tool](../common/faq-power-apps-mcp-server-invoke-data-entry.md).
 
 Autonomous agents can be added to model-driven apps to help users get work done faster. Using the Power Apps MCP server, agents can post actionable tasks for user review, allowing humans to validate results, step in when needed, and finish work the agent couldn’t complete—without leaving their app.
 
