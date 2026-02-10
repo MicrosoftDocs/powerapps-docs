@@ -323,7 +323,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Integer|
 |MaxValue|2147483647|
-|MinValue|1|
+|MinValue|-1|
 
 ### <a name="BKMK_value"></a> value
 
