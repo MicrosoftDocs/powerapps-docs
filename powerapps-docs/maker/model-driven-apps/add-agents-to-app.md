@@ -39,7 +39,7 @@ Autonomous agents can be added to model-driven apps to help users get work done 
 
 ## Supervise an autonomous agent within the app
 
-The enhanced agent feed is powered by the automomous agents using the Power Apps model context protocol (MCP) server. Power Apps MCP sever tools enable following two core human‑agent collaboration patterns:
+The enhanced agent feed is powered by the autonomous agents using the Power Apps model context protocol (MCP) server. Power Apps MCP sever tools enable following two core human‑agent collaboration patterns:
 
 - Autonomous Dataverse record creation and updates with human‑in‑the‑loop review.
 - Agent requests for human assistance and logging tasks for human review.
