@@ -66,6 +66,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [DVTableSearchAttributeId](#BKMK_DVTableSearchAttributeId)
 - [dvtablesearchentity](#BKMK_dvtablesearchentity)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
+- [IsAttributeEnabledForVectorSearch](#BKMK_IsAttributeEnabledForVectorSearch)
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [IsRetrievable](#BKMK_IsRetrievable)
 - [IsSearchable](#BKMK_IsSearchable)
@@ -146,6 +147,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Integer|
 |MaxValue|2147483647|
 |MinValue|-2147483648|
+
+### <a name="BKMK_IsAttributeEnabledForVectorSearch"></a> IsAttributeEnabledForVectorSearch
+
+|Property|Value|
+|---|---|
+|Description||
+|DisplayName|**Is Attribute Enabled for Vector Search**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`isattributeenabledforvectorsearch`|
+|RequiredLevel|None|
+|Type|Boolean|
+|GlobalChoiceName|`dvtablesearchattribute_isattributeenabledforvectorsearch`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_IsCustomizable"></a> IsCustomizable
 

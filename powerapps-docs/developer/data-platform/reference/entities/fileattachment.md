@@ -323,7 +323,6 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [msdyn_aidataprocessingevent_FileAttachments](#BKMK_msdyn_aidataprocessingevent_FileAttachments)
 - [msdyn_aidocumenttemplate_FileAttachments](#BKMK_msdyn_aidocumenttemplate_FileAttachments)
 - [msdyn_aievent_FileAttachments](#BKMK_msdyn_aievent_FileAttachments)
-- [msdyn_aioptimizationprivatedata_FileAttachments](#BKMK_msdyn_aioptimizationprivatedata_FileAttachments)
 - [msdyn_aitestcasedocument_FileAttachments](#BKMK_msdyn_aitestcasedocument_FileAttachments)
 - [msdyn_analysisjob_FileAttachments](#BKMK_msdyn_analysisjob_FileAttachments)
 - [msdyn_fileupload_FileAttachments](#BKMK_msdyn_fileupload_FileAttachments)
@@ -663,19 +662,6 @@ One-To-Many Relationship: [msdyn_aievent msdyn_aievent_FileAttachments](msdyn_ai
 |ReferencedAttribute|`msdyn_aieventid`|
 |ReferencingAttribute|`objectid`|
 |ReferencingEntityNavigationPropertyName|`objectid_msdyn_aievent`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_msdyn_aioptimizationprivatedata_FileAttachments"></a> msdyn_aioptimizationprivatedata_FileAttachments
-
-One-To-Many Relationship: [msdyn_aioptimizationprivatedata msdyn_aioptimizationprivatedata_FileAttachments](msdyn_aioptimizationprivatedata.md#BKMK_msdyn_aioptimizationprivatedata_FileAttachments)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`msdyn_aioptimizationprivatedata`|
-|ReferencedAttribute|`msdyn_aioptimizationprivatedataid`|
-|ReferencingAttribute|`objectid`|
-|ReferencingEntityNavigationPropertyName|`objectid_msdyn_aioptimizationprivatedata`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
@@ -1096,7 +1082,6 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [FileAttachment_msdyn_aidocumenttemplate_msdyn_document](#BKMK_FileAttachment_msdyn_aidocumenttemplate_msdyn_document)
 - [FileAttachment_msdyn_AIEvent_msdyn_DataInfoFile](#BKMK_FileAttachment_msdyn_AIEvent_msdyn_DataInfoFile)
 - [FileAttachment_msdyn_AIEvent_msdyn_OutputFile](#BKMK_FileAttachment_msdyn_AIEvent_msdyn_OutputFile)
-- [FileAttachment_msdyn_AIOptimizationPrivateData_msdyn_Tests](#BKMK_FileAttachment_msdyn_AIOptimizationPrivateData_msdyn_Tests)
 - [FileAttachment_msdyn_AITestCaseDocument_msdyn_InputFile](#BKMK_FileAttachment_msdyn_AITestCaseDocument_msdyn_InputFile)
 - [FileAttachment_msdyn_analysisjob_msdyn_AnalysisJobsReport](#BKMK_FileAttachment_msdyn_analysisjob_msdyn_AnalysisJobsReport)
 - [FileAttachment_msdyn_FileUpload_msdyn_ErrorLog](#BKMK_FileAttachment_msdyn_FileUpload_msdyn_ErrorLog)
@@ -1569,18 +1554,6 @@ Many-To-One Relationship: [msdyn_aievent FileAttachment_msdyn_AIEvent_msdyn_Outp
 |ReferencingEntity|`msdyn_aievent`|
 |ReferencingAttribute|`msdyn_outputfile`|
 |ReferencedEntityNavigationPropertyName|`FileAttachment_msdyn_AIEvent_msdyn_OutputFile`|
-|IsCustomizable|`False`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
-### <a name="BKMK_FileAttachment_msdyn_AIOptimizationPrivateData_msdyn_Tests"></a> FileAttachment_msdyn_AIOptimizationPrivateData_msdyn_Tests
-
-Many-To-One Relationship: [msdyn_aioptimizationprivatedata FileAttachment_msdyn_AIOptimizationPrivateData_msdyn_Tests](msdyn_aioptimizationprivatedata.md#BKMK_FileAttachment_msdyn_AIOptimizationPrivateData_msdyn_Tests)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`msdyn_aioptimizationprivatedata`|
-|ReferencingAttribute|`msdyn_tests`|
-|ReferencedEntityNavigationPropertyName|`FileAttachment_msdyn_AIOptimizationPrivateData_msdyn_Tests`|
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
