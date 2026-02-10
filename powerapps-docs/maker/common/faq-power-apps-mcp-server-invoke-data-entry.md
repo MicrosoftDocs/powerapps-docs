@@ -21,11 +21,11 @@ Create your own AI agent that utilizes the Power Apps MCP server’s invoke_data
 
 ## What can the invoke_data_entry tool do?
 
-The invoke_data_entry tool can accept unstructured inputs, such as PDFs or Excel files, parse them, and identify how to fill in Dataverse forms from these unstructured inputs in order to create a record. These are presented as suggestions for users to review in agent feed, where users can choose to save them to Dataverse. At this time, no records get automatically created in Dataverse.  
+The invoke_data_entry tool can accept unstructured inputs, such as PDF or Excel files, parse them, and identify how to fill in Dataverse forms from these unstructured inputs in order to create a record. These are presented as suggestions for users to review in agent feed, where users can choose to save them to Dataverse. At this time, no records get automatically created in Dataverse.  
 
 ## What is the invoke_data_entry tool’s intended use(s)?  
 
-The DEA <!--What's DEA? --> tool can take an unstructured input, such as PDFs or Excel files, and create a Dataverse record based on its contents. This is a manual process today, but with the tool, customers can create an agent to automatically create a draft record. This draft can be reviewed in the agent feed, and once the user chooses to save, the record gets written to Dataverse.  
+The DEA <!--What's DEA? --> tool can take an unstructured input, such as PDF or Excel files, and create a Dataverse record based on its contents. This is a manual process today, but with the tool, customers can create an agent to automatically create a draft record. This draft can be reviewed in the agent feed, and once the user chooses to save, the record gets written to Dataverse.  
 
 ## How was the invoke_data_entry tool evaluated? What metrics are used to measure performance?  
 
