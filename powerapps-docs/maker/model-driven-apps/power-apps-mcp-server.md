@@ -20,8 +20,8 @@ The Power Apps MCP server equips your agent with two types of app skills:
 1. **Automate repetitive app tasks:** The Power Apps MCP server enables agents to use advanced app skills developed in Power Apps. For example, the data‑entry agent capabilities previously available as an on‑demand AI feature are now accessible to any agent through Power Apps MCP server. To use them, you create your agent, configure the MCP tool, and direct it to unstructured content so it can generate Dataverse records with human review and approval through the enhanced Agent Feed.
 
 1. **Supervise agent activity:** The Power Apps MCP server also provides specialized tools to business users to supervise any agent activity in the agent feed. Agents can now handoff control to humans for review, assistance, and steering with the MCP tools. These tools provide makers with much more control over the tasks they want to publish to the agent feed and when they need agent-human handoff.
-   
-Power-Apps-MCP-server.png
+
+:::image type="content" source="media/add-agents-to-app/power-apps-mcp-server.png" alt-text="Power Apps MCP server":::
 
 To use the enhanced agent feed capabiltities, enable and configure the Power Apps MCP server from the Microsoft Copilot Studio agent. Once configured, you can invoke Power Apps MCP server tools from agent instructions using natural language.
 
