@@ -1,7 +1,7 @@
 ---
 title: "Add agents to your model-driven app" 
 description: Learn how to add agents to your model-driven app in Power Apps.
-ms.date: 02/04/2026
+ms.date: 02/10/2026
 ms.reviewer: matp
 ms.topic: how-to
 author: adrianorth
@@ -34,26 +34,26 @@ Autonomous agents can be added to model-driven apps to help users get work done 
 
 [Learn more about how to supervise agents](../../user/supervise-agents-with-agent-feed.md)
 
-> [!IMPORTANT]
-> Current limitation: Agent feed tasks are visible to all users with access to the app and who have been granted to Agents Task table, so agents should not be configured to log tasks targeted at specific users."
+> [!WARNING]
+> There's a current limitation where agent feed tasks are visible to all users with access to the app and who have been granted to the Agents Task table. Agents should not be configured to log tasks targeted at specific users.
 
 ## Supervise an autonomous agent within the app
 
-The enhanced agent feed is powered by the autonomous agents using the Power Apps model context protocol (MCP) server. Power Apps MCP sever tools enable following two core human‑agent collaboration patterns:
+The enhanced agent feed is powered by the autonomous agents using the Power Apps MCP server. Power Apps MCP sever tools enable these two core human‑agent collaboration patterns:
 
-- Autonomous Dataverse record creation and updates with human‑in‑the‑loop review.
+- Autonomous Microsoft Dataverse record creation and updates with human‑in‑the‑loop review.
 - Agent requests for human assistance and logging tasks for human review.
 
-In agent‑enabled apps, user focus shift from doing the work to supervising and prioritizing agent‑driven work. Agents help with automations and organize work, ensuring business experts remain involved in decision‑making and critical actions. You can supervise elligible autonomous agents with any model‑driven app. We recommend adding agents to apps that contain functionality or data relevant to the agent’s intended purpose.
+In agent‑enabled apps, user focus shifts from doing the work to supervise and prioritize agent‑driven work. Agents help with automation and organization of work, ensuring business experts remain involved in decision‑making and critical actions. You can supervise elligible autonomous agents with any model‑driven app. We recommend adding agents to apps that contain functionality or data relevant to the agent’s intended purpose.
 
 ### Terminology
 
 | Term | Description |
 |------|-----------|
 | Agent | The customer’s custom autonomous agent. |
-| Task/Agent Task |A single request for human assistance or human review within an agentic workflow. |
-| Agent Feed | The system for surfacing agent tasks to the user. |
-| Agent Canvas | The UX surface where users provide the requested human input or observe task details. |
+| Task/Agent task |A single request for human assistance or human review within an agentic workflow. |
+| Agent feed | The system for surfacing agent tasks to the user. |
+| Agent canvas | The UX surface where users provide the requested human input or observe task details. |
 | Power Apps MCP server | The collection of tools available to agents for interacting with capabilities of the business app platform. | 
 
 > [!NOTE]
@@ -63,7 +63,7 @@ In agent‑enabled apps, user focus shift from doing the work to supervising and
 
 ## Create an autonomous agent connected to Power Apps MCP server
 
-MCP is an open protocol that enables seamless integration between large language model (LLM) applications and external data sources and tools. Your agent can use the Power Apps MCP server to communicate with your Power Apps, providing right human-in-the-loop supervision or agentic workflows. To use the Power Apps MCP server, you need to enable and configure the MCP server with an agent. More information: Power Apps MCP server (new topic)
+MCP is an open protocol that enables seamless integration between large language model (LLM) applications and external data sources and tools. Your agent can use the Power Apps MCP server to communicate with your apps in Power Apps, providing right human-in-the-loop supervision or agentic workflows. To use the Power Apps MCP server, you need to enable and configure the MCP server with an agent. More information: [Work with Power Apps MCP server](power-apps-mcp-server.md)
 
 1. Sign in to Power Apps, select **Apps**, and then select **Edit** for the app you want to modify.
 1. In the app designer, go to the **Agents** tab on the left navigation pane.
@@ -86,7 +86,7 @@ The agent is ready to use the Power Apps MCP server tools. This image shows how 
 
 :::image type="content" source="media/add-agents-to-app/copilot-studio-power-apps-agent-instructions.png" alt-text="Instructions read: When the agent is triggered, create a task for human review. Use the Booking Reference as the review item title with Review Booking":::
 
-When a new booking record is created, it triggers the agent which adds the review task in the agent feed **Completed** tab.
+When a new booking record is created, it triggers the agent, which adds the review task in the agent feed **Completed** tab.
 
 :::image type="content" source="media/add-agents-to-app/copilot-studio-power-apps-agent-instructions-result.png" alt-text="Review task created by automomous agent":::
 
