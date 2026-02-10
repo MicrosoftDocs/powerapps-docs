@@ -29,7 +29,7 @@ More information: [Create an autonomous agent connected to Power Apps MCP server
 
 ## List of tools
 
-Once connected to the Power Apps MCP Server, agent can choose from various tools in the Power Platform environment.
+Once connected to the Power Apps MCP Server, agent can choose from various tools in the Power Platform environment. These tools can generate agent feed items that render different user experiences, such as a side‑by‑side view for data entry agents or direct navigation to a record for request_for_assistance scenarios. 
 
 | Tool | Description |
 |------|-------------|
