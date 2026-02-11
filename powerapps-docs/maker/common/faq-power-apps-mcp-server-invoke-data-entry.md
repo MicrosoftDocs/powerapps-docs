@@ -1,6 +1,6 @@
 ---
-title: FAQ about Power Apps MCP server invoke_data_entry tool in Power Apps
-description: This FAQ provides information about the AI technology used in the Power Apps MCP server invoke_data_entry tool with key considerations and details about how AI is used, how it was tested and evaluated, and any specific limitations.
+title: FAQ about Power Apps MCP Server invoke_data_entry tool in Power Apps
+description: This FAQ provides information about the AI technology used in the Power Apps MCP Server invoke_data_entry tool with key considerations and details about how AI is used, how it was tested and evaluated, and any specific limitations.
 ms.date: 02/10/2026
 ms.custom: 
   - responsible-ai-faqs
@@ -13,11 +13,11 @@ ms.collection:
 ---
 # FAQ about Power Apps MCP server invoke_data_entry tool
 
-These frequently asked questions (FAQ) describe the AI impact of Power Apps MCP server invoke_data_entry tool in Power Apps.
+These frequently asked questions (FAQ) describe the AI impact of Power Apps MCP Server invoke_data_entry tool in Power Apps.
 
 ## What is the invoke_data_entry tool in Power Apps MCP?  
 
-Create your own AI agent that utilizes the Power Apps MCP server’s invoke_data_entry tool to create records in Dataverse. This tool accepts various formats of unstructured input, such as PDF or Excel files, and creates draft records in Microsoft Dataverse based on the inputs. You can review and edit these draft records using the agent feed, and save to Dataverse once ready.
+Create your own AI agent that utilizes the Power Apps MCP Server’s invoke_data_entry tool to create records in Dataverse. This tool accepts various formats of unstructured input, such as PDF or Excel files, and creates draft records in Microsoft Dataverse based on the inputs. You can review and edit these draft records using the agent feed, and save to Dataverse once ready.
 
 ## What can the invoke_data_entry tool do?
 
