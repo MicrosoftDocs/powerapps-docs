@@ -345,7 +345,7 @@ This function depends on [Get-Column](https://github.com/microsoft/PowerApps-Sam
 
 By default, when you secure a column, only people who have the system administrator security role can read or set the value. A system administrator can provide other users access to secured columns in two ways:
 
-- [Manage access using field security profiles](#manage-access-using-field-security-profiles): Use field security profiles to give access to column data for all records to groups.
+- [Manage access by using field security profiles](#manage-access-by-using-field-security-profiles): Use field security profiles to give access to column data for all records to groups.
 - [Share data in secured fields](#share-data-in-secured-fields): Use field sharing to give a specific principal or team access to data in a secure column for a specific record.
 
 ### Manage access by using field security profiles
