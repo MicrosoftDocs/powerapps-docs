@@ -1,6 +1,6 @@
 ---
-title: "Work with Power Apps MCP server" 
-description: Learn about the tools available with the Power Apps MCP server.
+title: "Work with Power Apps MCP Server" 
+description: Learn about the tools available with the Power Apps MCP Server.
 ms.date: 02/10/2026
 ms.reviewer: matp
 ms.topic: how-to
@@ -11,31 +11,31 @@ ms.service: powerapps
 search.audienceType: 
   - maker
 ---
-# Work with Power Apps MCP server
+# Work with Power Apps MCP Server
 
-The model context protocol (MCP) is an open protocol that enables seamless integration between large language model (LLM) applications and external data sources and tools. Your agent can use the Power Apps MCP server to communicate with your Power Apps, providing right human-in-the-loop supervision or agentic workflows.
+The model context protocol (MCP) is an open protocol that enables seamless integration between large language model (LLM) applications and external data sources and tools. Your agent can use the Power Apps MCP Server to communicate with your Power Apps, providing right human-in-the-loop supervision or agentic workflows.
 
 > [!IMPORTANT]
 >
 > - This is a preview feature.
 > - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2216214), and are available before an official release so that customers can get early access and provide feedback.
 > - This feature is available only in the English language and it replaces the earlier Microsoft Copilot Studio activity-based agent feed.
-> - For information about how AI is used with this feature, go to [FAQ about Power Apps MCP server invoke_data_entry tool](../common/faq-power-apps-mcp-server-invoke-data-entry.md).
+> - For information about how AI is used with this feature, go to [FAQ about Power Apps MCP Server invoke_data_entry tool](../common/faq-power-apps-mcp-server-invoke-data-entry.md).
 
-The Power Apps MCP server equips your agent with two types of app skills:
+The Power Apps MCP Server equips your agent with two types of app skills:
 
 - Automate repetitive app tasks:
 
-   The Power Apps MCP server enables agents to use advanced app skills developed in Power Apps. For example, the data‑entry agent capabilities previously available as an on‑demand AI feature are now accessible to any agent through Power Apps MCP server. To use them, you create your agent, configure the MCP tool, and direct it to unstructured content so it can generate Dataverse records with human review and approval through the enhanced agent feed.
+   The Power Apps MCP Server enables agents to use advanced app skills developed in Power Apps. For example, the data‑entry agent capabilities previously available as an on‑demand AI feature are now accessible to any agent through Power Apps MCP server. To use them, you create your agent, configure the MCP tool, and direct it to unstructured content so it can generate Dataverse records with human review and approval through the enhanced agent feed.
 - Supervise agent activity:
 
-   The Power Apps MCP server also provides specialized tools to business users to supervise any agent activity in the agent feed. Agents can now handoff control to humans for review, assistance, and steering with the MCP tools. These tools provide makers with much more control over the tasks they want to publish to the agent feed and when they need agent-human handoff.
+   The Power Apps MCP Server also provides specialized tools to business users to supervise any agent activity in the agent feed. Agents can now handoff control to humans for review, assistance, and steering with the MCP tools. These tools provide makers with much more control over the tasks they want to publish to the agent feed and when they need agent-human handoff.
 
 :::image type="content" source="media/add-agents-to-app/power-apps-mcp-server.png" alt-text="Power Apps MCP server" lightbox="media/add-agents-to-app/power-apps-mcp-server.png":::
 
-The Power Apps MCP tools improve the more you use them. For example, when you make corrections to suggestions in the agent canvas, the data entry tool improves based on your corrections. To use the enhanced agent feed capabiltities, enable and configure the Power Apps MCP server from the Microsoft Copilot Studio agent. Once configured, you can invoke Power Apps MCP server tools from agent instructions using natural language.
+The Power Apps MCP tools improve the more you use them. For example, when you make corrections to suggestions in the agent canvas, the data entry tool improves based on your corrections. To use the enhanced agent feed capabiltities, enable and configure the Power Apps MCP Server from the Microsoft Copilot Studio agent. Once configured, you can invoke Power Apps MCP Server tools from agent instructions using natural language.
 
-More information: [Create an autonomous agent connected to Power Apps MCP server](add-agents-to-app.md#create-an-autonomous-agent-connected-to-power-apps-mcp-server)
+More information: [Create an autonomous agent connected to Power Apps MCP Server](add-agents-to-app.md#create-an-autonomous-agent-connected-to-power-apps-mcp-server)
 
 ## List of tools
 
@@ -108,7 +108,7 @@ When an email arrives:
 
 ### How the invoke_data_entry tool works
 
-When you configure a Copilot Studio agent to use the Power Apps MCP server and enable the `invoke_data_entry` tool, the agent follows this process:
+When you configure a Copilot Studio agent to use the Power Apps MCP Server and enable the `invoke_data_entry` tool, the agent follows this process:
 
 1. [An agent trigger](/microsoft-copilot-studio/authoring-triggers-about) is fired based on your configuration — such as an email arriving in a monitored mailbox or new document uploaded to SharePoint.
 1. The agent analyzes incoming content and your instructions to determine whether the `invoke_data_entry` tool should be used.
