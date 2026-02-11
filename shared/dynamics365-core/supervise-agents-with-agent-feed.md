@@ -1,96 +1,92 @@
 [!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
-Agent feed lets business users easily manage and work with agents directly in their apps. It makes apps a central hub for human-agent collaboration by showing a complete activity feed of what agents do for them, wherever they are in the app. 
+Agent feed enables human-agent collaboration in apps by surfacing agent-generated, actionable tasks that users can review, validate, and complete. By using agent feed, apps act as a collaboration surface where users supervise and interact with agent work through a unified, task-based feed.
 
 ## Prerequisites
 
 - The agent feed shows when at least one agent is supervised in the app.
-- Learn how to [Add agents to an app](/power-apps/maker/model-driven-apps/add-agents-to-app)
+- Learn how to [Add agents to an app](/power-apps/maker/model-driven-apps/add-agents-to-app).
 
 > [!IMPORTANT]
 >
 > - This is a preview feature.
 > - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2216214), and are available before an official release so that customers can get early access and provide feedback.
 > - This feature is being gradually rolled out across regions and might not be available yet in your region.
-> - This feature is only available in the English language.
+> - This feature is only available in English language and replaces older Microsoft Copilot Studio activity-based agent feed version.
 
 > [!NOTE]
-> Currently, only the owner of an agent can view and supervise that agent’s data in an app. Support for sharing agent history with other users is a top priority and is in development.
+> Currently, all users who have access to the Agent Task table can see agent feed items in apps. To prevent unintended exposure, don't configure agents to log tasks targeted at specific users.
 
 ## Use agent feed to supervise agents
+The enhanced agent feed is powered by the autonomous  agents using [Power Apps MCP server](/power-apps/maker/model-driven-apps/power-apps-mcp-server). Power Apps MCP server tools enable following two core human‑agent collaboration patterns:
+1. Autonomous Dataverse record creation and updates with Human‑in‑the‑Loop review.
+1. Agent requests for human assistance and logging tasks for human review.
+In agent‑enabled apps, user focus shifts from doing the work to supervising and prioritizing agent‑driven work. Agents help with automations and organize work, ensuring business experts remain involved in decision-making and critical actions.
 
-When you enable agent feed, it appears at the top of the site map in an app.
+To allow users to view an agent's activity in the app, the agent must connect to [Power Apps MCP server](/power-apps/maker/model-driven-apps/power-apps-mcp-server). The agent feed appears at the top of the site map in an app.
    :::image type="content" source="/power-apps/user/media/agent-supervision/agent-feed-sitemap.png" alt-text="Agent feed sitemap" lightbox="/power-apps/user/media/agent-supervision/agent-feed-sitemap.png":::
 
 You can view the feed in the side pane or expand it to full screen.
-   :::image type="content" source="/power-apps/user/media/agent-supervision/agent-feed-expand.png" alt-text="Agent feed expand":::
-   :::image type="content" source="/power-apps/user/media/agent-supervision/agent-feed-collapse.png" alt-text="Agent feed collapse":::
+   :::image type="content" source="/power-apps/user/media/agent-supervision/agent-feed-expand.png" alt-text="Agent feed expand" lightbox="/power-apps/user/media/agent-supervision/agent-feed-expand.png":::
 
-The feed shows a list of agent activity. Each item includes:
+The feed shows a list of agent tasks. Each item can include:
 
-1. The last step taken by the agent
-1. A timestamp of the most recent activity
+1. Title of the task
+1. Description of the tasks with optional steps
 1. The agent's name and icon
-   :::image type="content" source="/power-apps/user/media/agent-supervision/agent-feed-card-map.png" alt-text="Agent feed card map":::
-
-> [!NOTE]
-> You can only supervise up to ten agents at a time in the feed.
+1. A timestamp of when the task was logged
+   :::image type="content" source="/power-apps/user/media/agent-supervision/agent-feed-card-map.png" alt-text="Agent feed card map" lightbox="/power-apps/user/media/agent-supervision/agent-feed-card-map.png":::
 
 Activity is grouped into two sections:
 
-- **To-do**: Shows actions that need your attention, like those that failed, completed with errors, or are waiting for input.
-- **Other**: Shows all other action types, including those completed by the agent or user, dismissed actions, and those still in progress.
+- **Needs Attention**: Shows tasks that are waiting for your input or need your attention. These tasks are logged by using the `request_assistance` or `invoke_data_entry` MCP tools.
+- **Completed**: Displays all other agent feed tasks, including tasks the user completed and tasks the agent completed that are logged for review by using the `request_review` MCP tool.
 
-By default, 25 actions load in each section. Select **See more** at the bottom of a section to load 25 more actions. Refreshing the feed resets the view to the first 25 actions in each section. The sections are sorted chronologically by the last modification of each action.
+By default, each section loads 20 agent tasks and lazy loading is enabled as you scroll. The sections are sorted chronologically by the last modification date of each action.
 
-Select an action to open a detailed view that includes:
+You can filter the feed by agents. 
+ :::image type="content" source="/power-apps/user/media/agent-supervision/agent-feed-filters.png" alt-text="Agent feed filters" lightbox="/power-apps/user/media/agent-supervision/agent-feed-filters.png":::
 
-1. An AI-generated summary of the agent's actions
-1. Error details for actions that need assistance
-1. A step-by-step activity map of the agent's execution
-   :::image type="content" source="/power-apps/user/media/agent-supervision/agent-feed-details-pane-map.png" alt-text="Agent feed details map":::
-
-The activity map starts with the trigger that initiates the action and continues through each step the agent takes. These steps can include tools, connectors, articles, or knowledge sources set up by the agent’s creator. This view is similar to the Activity view in Copilot Studio and gives a clear visualization of the agent’s logic and behavior.
-
-You can filter the feed by agent or by status. Available status filters include:
-
-|Filter|Description|
-|-----|------|
-|**Needs assistance**|The action failed, completed with errors, or is waiting for user input.|
-|**Completed by user**|The action previously needed assistance but was marked complete by the user.|
-|**Completed by agent**|The action was completed successfully by the agent.|
-|**Dismissed**|The action was dismissed by the user after being flagged as needing assistance.|
-|**In progress**|The action is currently being executed by the agent.|
-
-View agent feed in a side pane to support multitasking or expand it to full screen for focused review.
+View the agent feed in a side pane to support multitasking or expand it to full screen for focused review.
 
 ## Take action on agent activity
 
-> [!NOTE]
-> The actions you take on agent actions only change their status. You need to manually take over the agent action and fix it as needed. We're developing more robust human-in-the-loop capabilities.
+Take these actions on tasks under the **needs attention** tab in agent feed:
 
-You can take these actions on activity in the feed:
-
-- **Mark as complete**: Move an action from the **To-do** section to **Other** after completing the task the agent couldn't finish.
+- **Complete**: Move a task from the **needs attention** section to **Completed** after completing the task the agent couldn't finish. This action is available for the agent tasks logged by using the **request_assistance** mcp tool.
 
    :::image type="content" source="/power-apps/user/media/agent-supervision/agent-feed-mark-complete.png" alt-text="Agent feed mark as complete button":::
 
-- **Dismiss**: Remove an action from the **To-do** section if it's no longer relevant. You see this option only when you hover over an agent action in the feed.
+- **Accept and complete**: Move a data entry task from the **Needs attention** section to **Completed** after reviewing and accepting the data entry suggestions from **invoke_data_entry** mcp tool. The **Accept and complete** button is available inside the agent pane associated with the agent feed task.
 
-   :::image type="content" source="/power-apps/user/media/agent-supervision/agent-feed-dismiss.png" alt-text="Agent feed dismiss button":::
+   :::image type="content" source="/power-apps/user/media/agent-supervision/agent-feed-accept-complete.png" alt-text="Agent feed accept and complete button" lightbox="/power-apps/user/media/agent-supervision/agent-feed-accept-complete.png":::
 
-- **Undo**: Revert a previous mark-as-complete or dismiss action if you did it by mistake. You see this option only when you hover over an agent action in the feed.
-
-   :::image type="content" source="/power-apps/user/media/agent-supervision/agent-feed-undo.png" alt-text="Agent feed undo button":::
-
-> [!NOTE]
-> All actions can be performed either from the main screen in the feed or from the details page of a specific action. 
-
-## Navigation
-
-For actions that use a Dataverse tool, users are provided with a direct link to the most relevant Dataverse record or entity. This allows users to quickly access and review related data, making it easier to follow up or take further action as needed.
-
-:::image type="content" source="/power-apps/user/media/agent-supervision/agent-feed-navigate-to-record.png" alt-text="Agent feed record navigation button":::
+- **Dismiss**: Remove a data entry task logged via  **invoke_data_entry** mcp tool from the **Needs attention** section if it's no longer relevant. The **Dismiss** button is available inside the agent pane associated with the agent feed task.
+  
+   :::image type="content" source="/power-apps/user/media/agent-supervision/agent-feed-dismiss.png" alt-text="Agent feed dismiss button" lightbox="/power-apps/user/media/agent-supervision/agent-feed-dismiss.png":::
 
 > [!NOTE]
-> Direct links aren't currently supported for non-Dataverse tools.
+> You can perform all actions either from the main screen in the feed or from the details page of a specific action.
+
+- **Request_review tasks**: Tasks logged via request_review mcp tool don't have any actions for the users. They're informational tasks completed autonomously by agent and can be found in completed agent feed tab.
+
+ :::image type="content" source="/power-apps/user/media/agent-supervision/agent-feed-request-review.png" alt-text="Agent feed request review tasks":::
+
+
+## Navigation from agent feed item 
+
+Agent feed tasks generated through the request_assistance or request_review MCP tools can reference a Dataverse record as a related navigation link in the agent description. This reference allows users to easily open and review associated data when interacting with the feed item.
+
+ :::image type="content" source="/power-apps/user/media/agent-supervision/agent-feed-navigate-to-record.png" alt-text="Agent feed record navigation button" lightbox="/power-apps/user/media/agent-supervision/agent-feed-navigate-to-record.png":::
+
+## Insights panel 
+The default insights panel complements the agent feed by giving users a clear, aggregated view of how their agents and users collaborate over time. While the agent feed surfaces individual tasks and actions in the moment, the Insights chart provides a historical, high‑level representation of those interactions. This representation helps organizations understand the true patterns of human–agent collaboration, whether users step in to provide missing context, guide agents through a complex workflow, complete tasks directly, or monitor agent activity. By visualizing these trends over time, organizations gain transparency into how their agentic workflows actually operate in practice, strengthening trust, identifying friction points, and revealing opportunities to improve system reliability and user experience.
+
+ :::image type="content" source="/power-apps/user/media/agent-supervision/agent-feed-insights.png" alt-text="Agent feed Insights" lightbox="/power-apps/user/media/agent-supervision/agent-feed-insights.png":::
+
+The insights chart presents aggregated activity across the last 7, 14, or 30 days. It gives customers a time‑based snapshot of collaboration between agents and users. Activity is categorized into two groups:
+- Tasks completed by agents
+- Tasks completed by users
+These at‑a‑glance aggregations offer a concise understanding of collaboration volume and balance over time. They help teams quickly assess how work is distributed across human and agent participants.
+
+
