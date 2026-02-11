@@ -2,8 +2,8 @@
 title: " Validate and set record state (Microsoft Dataverse) | Microsoft Docs"
 description: "This sample showcases how to validate a change of state of a table and set state." 
 ms.date: 04/06/2022
-author: mkannapiran
-ms.author: kamanick
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: pehecke
 ms.topic: sample
 search.audienceType:

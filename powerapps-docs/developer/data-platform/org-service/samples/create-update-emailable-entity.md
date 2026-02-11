@@ -2,8 +2,8 @@
 title: " Create and update an emailable table (Microsoft Dataverse) | Microsoft Docs"
 description: "This sample showcases how to create and update emailable table." 
 ms.date: 04/03/2022
-author: mkannapiran
-ms.author: kamanick
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 ms.topic: sample
 search.audienceType:
