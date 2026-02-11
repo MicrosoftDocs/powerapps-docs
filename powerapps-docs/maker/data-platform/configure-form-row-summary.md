@@ -1,7 +1,7 @@
 ---
 title: "Configure a row summary for a model-driven app"
 description: "Learn how to configure a row summary for a model-driven app forms and views that uses AI to let your users view key information about a record."
-ms.date: 01/09/2026
+ms.date: 02/11/2026
 ms.update-cycle: 180-days
 ms.subservice: dataverse-maker
 ms.topic: how-to
@@ -21,7 +21,7 @@ Write a custom prompt to specify which columns should be included in a Copilot�
 
 Records are often comprised of dozens of fields spread across multiple tables, views, forms, tabs, and sections, making it time‑consuming for users to locate and understand the information that matters most. By highlighting key fields and insights in an at‑a‑glance summary, makers can help users quickly orient themselves, regardless of where they encounter the record.
 
-<!-- Pretty sure this isn't supported now...leaving this while I double check. The customizable record summary can also include hyperlinks to related information, making it easy to navigate deeper or share concise, meaningful summaries with colleagues using collaboration tools like Microsoft Teams. -->
+<!-- PM verifying this functionality: The customizable record summary can also include hyperlinks to related information, making it easy to navigate deeper or share concise, meaningful summaries with colleagues using collaboration tools like Microsoft Teams. -->
 
 :::image type="content" source="media/ai-row-summary-runtime.png" alt-text="Row summary on a main form":::
 
@@ -48,14 +48,14 @@ Row summaries can be configured for most tables and appear on main forms and vie
 1. Sign in to Power Apps (make.powerapps.com) select **Tables** on the left navigation pane, and then open the table where you want to configure a row summary. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Under **Customizations**, select **Row summary**.
    - If **Row summary** is disabled, hover over the words to find out the reason. For example, the table must have at least one row of data for the summary option to be enabled.   
-1. In the **Prompt** box, add the columns that you want included in the summary by selecting **Add** or by typing */*. You can also specify formatting for the summary, such as make it a bulleted list or a paragraph, as well as how to ensure the summary is generated in the user's preferred language. See [Write a good prompt for the row summary](#write-a-good-prompt-for-the-row-summary) for more information. 
+1. In the **Prompt** box, add the columns that you want included in the summary by selecting **Add** or by typing */*. You can also specify formatting for the summary, such as make it a bulleted list or a paragraph, as well as how to ensure the summary is generated in the user's preferred language. More information: [Write a good prompt for the row summary](#write-a-good-prompt-for-the-row-summary) 
    :::image type="content" source="media/row-summary-main-form-example.png" alt-text="Columns added for main form summary " lightbox="media/row-summary-main-form-example.png":::
 1. Select **Test prompt** to display a preview of the summary.
    The most recently edited row in the table is used to generate a test response.
 1. Once you're satisfied with the columns and response from the test, select **Apply to main forms**.
 
 > [!IMPORTANT]
-> Any user who needs to view summaries configured through the Customer Service app must be assigned the `prvReadLanguageLocale` privilege through a security role.
+> Any user who needs to view summaries configured through the Dynamics 365 Customer Service app must be assigned the `prvReadLanguageLocale` privilege through a security role.
 
 ## Determine which main forms include a row summary
 
@@ -70,11 +70,11 @@ Writing a custom prompt gives you the ability to instruct the AI model to perfor
 
 - Provide a list of the columns you want to include in the summary. Alternatively, you might wish to provide a list of columns that you want to exclude from the summary.
 - Specify any formatting preferences, such as write the summary as a bulleted list.
-- Include the appropriate input and instruction if your users work in multiple languages and you want the summary to respect the user’s preferred language; otherwise, the summary will be generated in the language of the summary prompt itself, regardless of the user’s language settings. To configure this, 
-    - Include the **LanguageCode** input in the prompt. 
-    - Add the instruction to the prompt: **"You must respond in language \<LanguageCode\>."**
-    - If Copilot doesn't support the user's language, the summary will be generated in English.
-    - This language instruction is added by default for newly configured summaries, but must be **manually added for any pre-existing summaries** that were created before this behavior was introduced.  
+- Include the appropriate input and instruction if your users work in multiple languages and you want the summary to respect the user’s preferred language; otherwise, the summary will be generated in the language of the summary prompt itself, regardless of the user’s language settings. To configure:
+   - Include the **LanguageCode** input in the prompt.
+   - Add the instruction to the prompt: **"You must respond in language \<LanguageCode\>."**
+   - If Copilot doesn't support the user's language, the summary is generated in English.
+   - This language instruction is added by default for newly configured summaries, but must be *manually added for any pre-existing summaries* that were created before this behavior was introduced.  
 - For information about how to craft effective prompts, download the [AI Builder prompt engineering guide](https://aka.ms/promptguide).
 
 ### Prompt example for a row summary
@@ -111,10 +111,10 @@ To edit a row summary, open the table, and then under **Customizations** select 
    :::image type="content" source="media/hide-form-row-summary.png" alt-text="Hide all main form row summaries":::
 
 > [!NOTE]
-> If you're trying to hide the default summary for Case, Lead, and Opportunity, which are provided via the Dynamics 365 Customer Service and Dynamics 365 Sales applications, go to the following articles to learn more about options for configuring and/or disabling these summaries:
+> If you're trying to hide the default summary for case, lead, and opportunity, which are provided via the Dynamics 365 Customer Service and Dynamics 365 Sales applications, go to these articles to learn more about options for configuring and/or disabling these summaries:
 >
 > - Case: [Customer Service summary](/dynamics365/customer-service/administer/copilot-map-custom-fields)
-> - Lead and Opportunity: [Sales summary](/dynamics365/sales/copilot-summarize-records) features.
+> - Lead and opportunity: [Sales summary](/dynamics365/sales/copilot-summarize-records) features.
 
 ## Adding summaries to solutions
 
