@@ -109,10 +109,10 @@ When a new booking record is created, it triggers the agent, which adds the revi
 1. In the app designer, go to the **Agents** tab.
 1. Under the **Agent feed** dropdown, the **In your environment** dropdown appears that lists all agents in your environment. Locate the agent you want to add.
 1. Select **...** (more options) next to the agent, and then select **Add to feed**.
-    :::image type="content" source="media/add-agents-to-app/app-designer-add-agent-to-app.png" alt-text="App designer add agent to app":::
+   :::image type="content" source="media/add-agents-to-app/app-designer-add-agent-to-app.png" alt-text="App designer add agent to app":::
 1. Verify agent feed is added to your app with all added agents by saving, publishing, and playing your app. Previewing agent feed in the app designer isn't currently supported.
 1. To view or edit the agent in Copilot Studio, select **Edit in Microsoft Copilot Studio**.
-   :::image type="content" source="media/add-agents-to-app/app-designer-edit-in-copilot-studio.png" alt-text="App Designer edit in Copilot Studio":::
+  :::image type="content" source="media/add-agents-to-app/app-designer-edit-in-copilot-studio.png" alt-text="App Designer edit in Copilot Studio":::
 
 > [!IMPORTANT]
 > Use the **Create agent** button to open Copilot Studio for agent creation. Note that even if the agent is created through a link inside the app designer, the maker must ensure it meets all requirements to be added to the app.
@@ -123,7 +123,7 @@ When a new booking record is created, it triggers the agent, which adds the revi
 1. In the **Agent feed** dropdown, select **In your feed**.
 1. Locate the agent you want to remove, select **...**, and then select **Remove from feed**.
 
-> :::image type="content" source="media/add-agents-to-app/app-designer-remove-agent.png" alt-text="App designer remove agent from app":::
+   :::image type="content" source="media/add-agents-to-app/app-designer-remove-agent.png" alt-text="App designer remove agent from app":::
 
 > [!NOTE]
 > Removing an agent from an app doesn't remove the agent from the environment.
