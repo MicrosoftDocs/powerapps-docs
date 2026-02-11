@@ -22,11 +22,11 @@ The model context protocol (MCP) is an open protocol that enables seamless integ
 > - This feature is available only in the English language and it replaces the earlier Microsoft Copilot Studio activity-based agent feed.
 > - For information about how AI is used with this feature, go to [FAQ about Power Apps MCP Server invoke_data_entry tool](../common/faq-power-apps-mcp-server-invoke-data-entry.md).
 
-The Power Apps MCP Server equips your agent with two types of app skills:
+The Power Apps MCP Server equips your agent with two types of capabilities:
 
 - Automate repetitive app tasks:
 
-   The Power Apps MCP Server enables agents to use advanced app skills developed in Power Apps. For example, the data‑entry agent capabilities previously available as an on‑demand AI feature are now accessible to any agent through Power Apps MCP server. To use them, you create your agent, configure the MCP tool, and direct it to unstructured content so it can generate Dataverse records with human review and approval through the enhanced agent feed.
+   The Power Apps MCP Server enables agents to use advanced app tools developed in Power Apps. For example, the data‑entry agent capabilities previously available as an on‑demand AI feature are now accessible to any agent through Power Apps MCP server. To use them, you create your agent, configure the MCP tool, and direct it to unstructured content so it can generate Dataverse records with human review and approval through the enhanced agent feed.
 - Supervise agent activity:
 
    The Power Apps MCP Server also provides specialized tools to business users to supervise any agent activity in the agent feed. Agents can now handoff control to humans for review, assistance, and steering with the MCP tools. These tools provide makers with much more control over the tasks they want to publish to the agent feed and when they need agent-human handoff.
