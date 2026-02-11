@@ -22,7 +22,7 @@ contributors:
 Two broad categories of changes to the table definition system are associated with the introduction of virtual tables (also known as virtual entities) in Microsoft Dataverse:
 
 - Addition of a new assembly, namespaces, classes, and other types to support development of custom virtual table data providers
-- Changes to the core platform, including a few additional properties to support external data source mapping, and modification of behaviors of existing table and column properties that reflect the limitations of the initial implementation of this feature
+- Changes to the core platform, including a few other properties to support external data source mapping, and modification of behaviors of existing table and column properties that reflect the limitations of the initial implementation of this feature
 
 ## Dynamics 365 Data SDK assembly
 
@@ -34,7 +34,7 @@ The Dynamics 365 Data SDK assembly, `Microsoft.Xrm.Sdk.Data.dll`, contains types
 |<xref:Microsoft.Xrm.Sdk.Data.CodeGen>|Contains classes and interfaces that support dynamic reflection, type matching, and code generation.  Mainly used by the internal provider engine.|
 |<xref:Microsoft.Xrm.Sdk.Data.Converters>|A set of classes to convert standard XRM types to their corresponding .NET fundamental types|
 |<xref:Microsoft.Xrm.Sdk.Data.Exceptions>|A set of exception classes that represent errors that can occur during runtime value resolution.  All are derived from Microsoft.Xrm.Sdk.SdkExceptionBase.|
-|<xref:Microsoft.Xrm.Sdk.Data.Expressions>|Classes to assist in implementing the supported query transformations, such as FILTER, JOIN, and ORDER.|
+|<xref:Microsoft.Xrm.Sdk.Data.Expressions>|Classes to help implementing the supported query transformations, such as FILTER, JOIN, and ORDER.|
 |<xref:Microsoft.Xrm.Sdk.Data.Mappings>|Classes and interfaces that build the mapping from virtual table definition types to external types.|
 |Microsoft.Xrm.Sdk.Data.Visitors|Classes that implement the [visitor pattern](https://en.wikipedia.org/wiki/Visitor_pattern) to perform specific operations on the **QueryExpression** parameter passed to the data provider during **RetrieveMultiple** requests. Provides specific support for both generic query and LINQ-baseed processing. These classes are derived from Microsoft.Xrm.Sdk.Query.QueryExpressionVisitorBase.|
 
@@ -66,7 +66,7 @@ Two new properties were added to the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeM
 |<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.ExternalName>|Name of the type in the external data source|
 |<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.IsDataSourceSecret>|Indicates whether the field contains sensitive information|
 
-The `ExternalName` property was also added to the <xref:Microsoft.Xrm.Sdk.Metadata.OptionMetadata> and <xref:Microsoft.Xrm.Sdk.Metadata.OptionSetMetadata> classes. These external names assist in the external data source mapping, by specifying the name of the associated type in the external data source. These properties are only used for virtual tables. For a built-in or standard custom entity type, these external names must be `null`.
+The `ExternalName` property was also added to the <xref:Microsoft.Xrm.Sdk.Metadata.OptionMetadata> and <xref:Microsoft.Xrm.Sdk.Metadata.OptionSetMetadata> classes. These external names help the external data source mapping, by specifying the name of the associated type in the external data source. These properties are only used for virtual tables. For a built-in or standard custom entity type, these external names must be `null`.
 
 
 ### Virtual table creation
@@ -79,7 +79,7 @@ The approach to programmatically creating a virtual table type differs slightly 
 When you register a plugin, you create two new tables, [EntityDataProvider](../reference/entities/entitydataprovider.md) and optionally `EntityDataSource`. Their respective IDs, `entitydataproviderid` and `entitydatasourceid`, represent these required GUIDs. (Otherwise, developers rarely need to access these custom types directly.) Note that DataSource contains the property `entitydataproviderid` that must match the corresponding DataProvider type or a runtime exception is thrown.
 
 > [!WARNING]
-> Standard (non-virtual) tables must have the values of their associated `DataProviderId` and `DataSourceId` set to their default values (`null`), otherwise a runtime exception is thrown.  Once created, you can't convert from a non-virtual type to a virtual type, or the reverse. 
+> Standard (nonvirtual) tables must have the values of their associated `DataProviderId` and `DataSourceId` set to their default values (`null`), otherwise a runtime exception is thrown.  Once created, you can't convert from a nonvirtual type to a virtual type, or the reverse. 
 
 ### Table definition property behavior changes
 
@@ -95,7 +95,7 @@ The following table details how the behavior of standard [EntityMetadata propert
 |CanBePrimaryEntityInRelationship|valid||
 |CanBeRelatedEntityInRelationship|valid||
 |CanChangeHierarchicalRelationship|_invalid_|Always false, hierarchical relationships aren't supported.|
-|CanChangeTrackingBeEnabled|_invalid_|Always false, change tracking and auditing values aren't supported.|
+|CanChangeTrackingBeEnabled|_invalid_|Always false, change tracking, and auditing values aren't supported.|
 |CanCreateAttributes|valid||
 |CanCreateCharts|_invalid_|Always false|
 |CanCreateForms|valid||
