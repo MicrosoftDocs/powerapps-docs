@@ -58,7 +58,7 @@ In agent‑enabled apps, user focus shifts from doing the work to supervise and 
 | Power Apps MCP server | The collection of tools available to agents for interacting with capabilities of the business app platform. | 
 
 > [!NOTE]
-> To be eligible for addition to an app, an agent must be connected to Power Apps MCP server or be in a published state. A maker can verify an agent's eligibility to be added to an app via the right-hand properties pane where the requirements for an agent to be added to an app are displayed. The **Add to app** <!--Isn't the button named Add to feed? --> button is disabled for any agents that don't meet the requirements to be eligible for addition.
+> To be eligible for addition to an app, an agent must be connected to Power Apps MCP server or be in a published state. A maker can verify an agent's eligibility to be added to an app via the right-hand properties pane where the requirements for an agent to be added to an app are displayed. The **Add to feed** button is disabled for any agents that don't meet the requirements to be eligible for addition.
 
 :::image type="content" source="media/add-agents-to-app/app-designer-properties-pane.png" alt-text="App Designer Properties pane":::
 
@@ -101,7 +101,7 @@ When a new booking record is created, it triggers the agent, which adds the revi
 1. Sign in to Power Apps, select **Apps**, and then select **Edit** for the app you want to modify.
 1. In the app designer, go to the **Agents** tab.
 1. Under the **Agent feed** dropdown, the **In your environment** dropdown appears that lists all agents in your environment. Locate the agent you want to add.
-1. Select **...** (more options) next to the agent, and then select **Add to app**.<!--This should be Add to feed, right? -->
+1. Select **...** (more options) next to the agent, and then select **Add to feed**.
     :::image type="content" source="media/add-agents-to-app/app-designer-add-agent-to-app.png" alt-text="App designer add agent to app":::
 1. Verify agent feed is added to your app with all added agents by saving, publishing, and playing your app. Previewing agent feed in the app designer isn't currently supported.
 1. To view or edit the agent in Copilot Studio, select **Edit in Microsoft Copilot Studio**.
