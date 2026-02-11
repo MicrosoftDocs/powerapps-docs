@@ -125,7 +125,7 @@ Row summaries are solution-aware and can be added to a solution to facilitate mo
 1. Select the rows corresponding to the tables you created summaries for, and then select **Add**. 
 
 > [!IMPORTANT]
-> - Don't add AI Skill Config table rows with an owner of *System* to your solutions. These don't correspond to row summaries you have created and might cause solution import to fail.  
+> Don't add AI Skill Config table rows with an owner of *System* to your solutions. These don't correspond to row summaries you have created and might cause solution import to fail.  
 
 ## Related information
 
