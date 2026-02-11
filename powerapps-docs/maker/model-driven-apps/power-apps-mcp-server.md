@@ -105,6 +105,7 @@ When an email arrives:
 > - When you write instructions for your agent, always reference Dataverse columns by their logical names as shown in the sample instruction. Clear, direct instructions help the agent reliably create records from the input. You can view a column’s logical name by opening the table in make.powerapps.com, select **Columns**, and then open the column to view the details.
 > - `invoke_data_entry` tool supports .pdf, .xlsx, .docx, .jpeg, .jpg, .png, .gif and.bmp formats.
 > - `invoke_data_entry` tool can populate single line of text (None format), Whole number and Decimal column types.
+> - Ensure that the user has permission to create records for the target table.
 
 ### How the invoke_data_entry tool works
 
