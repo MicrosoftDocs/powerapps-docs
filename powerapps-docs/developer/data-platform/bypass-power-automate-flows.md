@@ -1,7 +1,7 @@
 ---
 title: "Bypass Power Automate Flows" 
 description: "Make data changes that don't trigger Power Automate flows." 
-ms.date: 07/01/2024
+ms.date: 02/11/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 author: MsSQLGirl
@@ -15,30 +15,30 @@ contributors:
   - LearningEveryday1
   - NHelgren
 ---
-# Bypass Power Automate Flows
+# Bypass Power Automate flows
 
-Power Automate flows can respond to Dataverse events using the [When a row is added, modified, or deleted](/power-automate/dataverse/create-update-delete-trigger) or [When an action is performed](/power-automate/dataverse/action-trigger) triggers. When these events occur, Dataverse creates system jobs to execute these flows.
+Power Automate flows can respond to Dataverse events by using the [When a row is added, modified, or deleted](/power-automate/dataverse/create-update-delete-trigger) or [When an action is performed](/power-automate/dataverse/action-trigger) triggers. When these events occur, Dataverse creates system jobs to execute these flows.
 
-When a program or plug-in performs bulk operations, a large number of system jobs might be created. A large number of system jobs can cause performance issues for Dataverse. You can choose to bypass creating these system jobs in your program or plug-in by using the `SuppressCallbackRegistrationExpanderJob` optional parameter.
+When a program or plug-in performs bulk operations, the program or plug-in might create a large number of system jobs. A large number of system jobs can cause performance problems for Dataverse. You can choose to bypass creating these system jobs in your program or plug-in by using the `SuppressCallbackRegistrationExpanderJob` optional parameter.
 
-The [CallbackRegistration table](reference/entities/callbackregistration.md) manages flow triggers, and there's an internal operation called *expander* that creates the system jobs.
+The [CallbackRegistration table](reference/entities/callbackregistration.md) manages flow triggers. An internal operation called *expander* creates the system jobs.
 
 > [!NOTE]
-> When this option is used, the flow owners will not receive a notification that their flow logic was bypassed.
+> When you use this option, flow owners don't receive a notification that their flow logic was bypassed.
 
-## When to bypass Power Automate Flows
+## When to bypass Power Automate flows
 
 > [!IMPORTANT]
-> Don't use the `SuppressCallbackRegistrationExpanderJob` optional parameter unless you know that the performance issues you are experiencing are because of a large number of specific system jobs that are created.
+> Don't use the `SuppressCallbackRegistrationExpanderJob` optional parameter unless you know that the performance problems you're experiencing are because of a large number of specific system jobs that the parameter suppresses.
 
-People add flows for business reasons and they shouldn't be bypassed without careful consideration. Be sure to consider these [Mitigation strategies](#mitigation-strategies).
+People add flows for business reasons. Don't bypass flows without careful consideration. Be sure to consider these [Mitigation strategies](#mitigation-strategies).
 
 
 ### Will `SuppressCallbackRegistrationExpanderJob` help you?
 
-Use this option only if you see performance issues after bulk operations occur and you have a large number of  **CallbackRegistration Expander Operation** system jobs with a [StatusCode](reference/entities/asyncoperation.md#BKMK_StatusCode) set to `0` : **Waiting for Resources**.
+Use this option only if you see performance problems after bulk operations and you have a large number of **CallbackRegistration Expander Operation** system jobs with a [StatusCode](reference/entities/asyncoperation.md#BKMK_StatusCode) set to `0` : **Waiting for Resources**.
 
-You can use the following queries to get information about the status of these jobs.
+Use the following queries to get information about the status of these jobs.
 
 If the total count is greater than 50,000, these queries return the following error.
 
@@ -48,9 +48,9 @@ If the total count is greater than 50,000, these queries return the following er
 > Message: `The maximum record limit is exceeded. Reduce the number of records.`
 
 > [!NOTE]
-> If the queries do not return an error, the number of queued jobs is not likely to be the issue. Typically, the number of queued jobs exceeds 50,000 records before performance issues will occur.
+> If the queries don't return an error, the number of queued jobs isn't likely to be the problem. Typically, performance problems occur before the number of queued jobs exceeds 50,000.
 
-The following examples output the number of **CallbackRegistration Expander Operation** system jobs by the state code. The `operationtype` value for this kind of system job is `79`.
+The following examples show the number of **CallbackRegistration Expander Operation** system jobs by the state code. The `operationtype` value for this kind of system job is `79`.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -146,7 +146,7 @@ How you bypass flows depends on whether you're using the SDK for .NET or Web API
 > [!NOTE]
 > For data operations initiated within plug-ins, you must use the SDK for .NET.
 
-The following examples create an account record that don't trigger Power Automate.
+The following examples create an account record that doesn't trigger Power Automate.
 
 ### [SDK for .NET](#tab/sdk)
 
@@ -187,21 +187,21 @@ MSCRM.SuppressCallbackRegistrationExpanderJob: true
 
 ## Mitigation strategies
 
-Flow owners expect their logic to be executed. Flow owners aren't notified that their logic was bypassed when you use this option. It's important to communicate to flow owners that the logic wasn't applied so that they know when and why their logic wasn't applied. They can then determine whether or how to apply their logic.
+Flow owners expect their logic to be executed. They aren't notified that their logic was bypassed when you use this option. It's important to communicate to flow owners that the logic wasn't applied so that they know when and why their logic wasn't applied. They can then determine whether or how to apply their logic.
 
-People can create child flows that contain logic that is invoked by multiple triggers, even manually. If the logic is contained within a child flow, it might be triggered by other means later. More information [Create child flows](/power-automate/create-child-flows)
+People can create child flows that contain logic that's invoked by multiple triggers, even manually. If the logic is contained within a child flow, it might be triggered by other means later. For more information, see [Create child flows](/power-automate/create-child-flows).
 
-### Identify flows that will be bypassed
+### Identify flows that the update bypasses
 
-You might not be able to identify exactly which flows will be bypassed. You can query the [CallbackRegistration table](reference/entities/callbackregistration.md) table to assess how much impact there will be and who to contact about their flows not running. The following table describes some `CallbackRegistration` table columns that are useful;
+You might not be able to identify exactly which flows the update bypasses. You can query the [CallbackRegistration table](reference/entities/callbackregistration.md) to assess how much impact there is and who to contact about their flows not running. The following table describes some `CallbackRegistration` table columns that are useful.
 
 
 |Column|Description|
 |---------|---------|
-|`name`|If this value is a GUID value, it should match the `flowid` value and you should be able to view the flow definition in a URL with this value by adding it to this URL: `https://make.powerautomate.com/environments/<environmentid>/flows/<flowid>/details`.|
-|`message`|When the flow uses the **When a row is added, modified, or deleted** trigger, it might subscribe to all the combinations of `Create`, `Update`, and `Delete` operations with these options:<br />- 1: Added<br />- 2: Deleted<br />- 3: Modified<br />- 4: Added or Modified<br />- 5: Added or Deleted<br />- 6: Modified or Deleted<br />- 7: Added or Modified or Deleted|
+|`name`|If this value is a GUID value, it matches the `flowid` value. You can view the flow definition in a URL with this value by adding it to this URL: `https://make.powerautomate.com/environments/<environmentid>/flows/<flowid>/details`.|
+|`message`|When the flow uses the **When a row is added, modified, or deleted** trigger, it might subscribe to all the combinations of `Create`, `Update`, and `Delete` operations by using these options:<br />- 1: Added<br />- 2: Deleted<br />- 3: Modified<br />- 4: Added or Modified<br />- 5: Added or Deleted<br />- 6: Modified or Deleted<br />- 7: Added or Modified or Deleted|
 |`sdkmessage`|When the flow uses the **When an action is performed** trigger, this column contains the name of the message.|
-|`scope`|Flows only apply to the scope specified by the user as defined using these options:<br />- 1: User<br />- 2: BusinessUnit<br />- 3: ParentChildBusinessUnit<br />- 4: Organization|
+|`scope`|Flows only apply to the scope specified by the user as defined by using these options:<br />- 1: User<br />- 2: BusinessUnit<br />- 3: ParentChildBusinessUnit<br />- 4: Organization|
 |`ownerid`|The owner of the callback registration and the flow.|
 |`softdeletestatus`|Whether the flow is deleted. `0` isn't deleted. `1` is deleted.|
 
@@ -322,13 +322,13 @@ Preference-Applied: odata.include-annotations="OData.Community.Display.V1.Format
 
 ## Frequently asked questions about bypassing Power Automate flows (FAQ)
 
-Following are frequently asked questions about using the `SuppressCallbackRegistrationExpanderJob` optional parameter to bypass Power Automate flows.
+The following questions and answers address using the `SuppressCallbackRegistrationExpanderJob` optional parameter to bypass Power Automate flows.
 
 ### Do users need a special privilege?
 
 No. Unlike [options to bypass custom Dataverse logic](bypass-custom-business-logic.md), no special privilege is required.
 
-### If my client application uses this optional parameter, will any operations performed by plug-ins registered against the operation also apply it?
+### If my client application uses this optional parameter, do plug-ins registered against the operation also apply it?
 
 No. The parameter isn't passed through to any operations performed by plug-ins that are registered for the events that occur because of requests from your client application. If you want to bypass flows for operations performed by plug-ins, you must use the `SuppressCallbackRegistrationExpanderJob` optional parameter in your plug-in code.
 

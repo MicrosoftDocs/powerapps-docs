@@ -1,7 +1,7 @@
 ---
 title: Column-level security with code
 description: "Learn how developers use code to secure data for specific columns or fields in a table so that only specified users and teams can view or set the values."
-ms.date: 07/29/2025
+ms.date: 02/11/2026
 ms.reviewer: jdaly
 ms.topic: article
 author: paulliew
@@ -10,24 +10,24 @@ ms.author: paulliew
 search.audienceType: 
   - developer
 ---
-# Column-level security with code
+# Column-level security by using code
 
-Column-level security is applied for columns that contain sensitive information. Passwords, bank account numbers, government ID, telephone numbers, or email addresses can be secured at the column level.
+Apply column-level security to columns that contain sensitive information. Secure passwords, bank account numbers, government IDs, telephone numbers, or email addresses at the column level.
 
-This article explains how developers can work with column-level security capabilities using code and the Dataverse SDK for .NET or Web API. You don't need to write code to use this feature. [Learn how to configure column-level security to control access](/power-platform/admin/field-level-security). Developers should also understand how to configure column-level security using [Power Apps](https://powerapps.microsoft.com/).
+This article explains how developers can work with column-level security capabilities by using code and the Dataverse SDK for .NET or Web API. You don't need to write code to use this feature. [Learn how to configure column-level security to control access](/power-platform/admin/field-level-security). Developers should also understand how to configure column-level security by using [Power Apps](https://powerapps.microsoft.com/).
 
 ## Discover which columns are secured
 
 Detect which columns are secured by retrieving the definition of the column and examining the boolean [AttributeMetadata.IsSecured property](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.issecured). 
 
-There are two ways to discover which columns are secured with code. These ways are described in the following two sections:
+Two methods exist to discover which columns are secured by using code. The following sections describe these methods:
 
 - [Retrieve column data filtered on IsSecured](#retrieve-column-data-filtered-on-issecured)
 - [Retrieve FieldSecurityProfile for System Administrator role](#retrieve-fieldsecurityprofile-for-system-administrator-role)
 
 ### Retrieve column data filtered on IsSecured
 
-This method queries the organization's metadata to identify columns marked with the `IsSecured` property set to `true`. Everyone has access to view this data. [Learn how to Query schema definitions](query-schema-definitions.md)
+This method queries the organization's metadata to identify columns marked with the `IsSecured` property set to `true`. Everyone has access to view this data. [Learn how to Query schema definitions](query-schema-definitions.md).
 
 The resulting CSV file contains two columns: **Table** and **Column**, representing the schema names  of the tables and their secured
 columns, respectively.
@@ -89,7 +89,7 @@ OData-Version: 4.0
 **Response**:
 
 > [!NOTE]
-> The data represented in this response was edited to remove null property values returned in the `EntityMetadata` property and it only returns a single representative secured column. In reality, the total amount of data returned is large depending on the number of tables in your environment.
+> The data represented in this response removes null property values from the `EntityMetadata` property and it only returns a single representative secured column. In reality, the total amount of data returned is large depending on the number of tables in your environment.
 
 This example shows how the [Account.OpenDeals column](/dynamics365/developer/reference/entities/account#BKMK_OpenDeals) is one of the secured columns.
 
@@ -182,9 +182,9 @@ Preference-Applied: odata.include-annotations="*"
 
 ---
 
-## Discover which columns can be secured
+## Discover which columns you can secure
 
-You can't secure every column. When you [enable column security](/power-platform/admin/field-level-security#enable-column-security) using [Power Apps](https://make.powerapps.com/), the **Enable column security** checkbox is disabled for certain fields. You don't need to manually check each column to find out if you can secure it. Write a query to retrieve which columns you can secure.
+You can't secure every column. When you [enable column security](/power-platform/admin/field-level-security#enable-column-security) by using [Power Apps](https://make.powerapps.com), the **Enable column security** checkbox is disabled for certain fields. You don't need to manually check each column to find out if you can secure it. Write a query to retrieve which columns you can secure.
 
 Three boolean [AttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata) properties control whether you can secure any column:
 
@@ -192,9 +192,9 @@ Three boolean [AttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.attribu
 - [CanBeSecuredForRead](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.canbesecuredforread)
 - [CanBeSecuredForUpdate](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.canbesecuredforupdate)
 
-When all of these properties are false, the column can't be secured. Some columns might only be secured for one or two of the three operations: `Create`, `Read`, and `Update`.
+When all of these properties are false, you can't secure the column. Some columns might only be secured for one or two of the three operations: `Create`, `Read`, and `Update`.
 
-The following queries return this data so you can discover which columns in your environment can be secured:
+The following queries return this data so you can discover which columns in your environment you can secure:
 
 ### [SDK for .NET](#tab/sdk)
 
@@ -204,7 +204,7 @@ This static `DumpColumnSecurityInfo` method retrieves metadata about entity attr
 
 ### [Web API](#tab/webapi)
 
-This JSON represents the [EntityQueryExpression](/power-apps/developer/data-platform/webapi/reference/entityqueryexpression) data used with the `Query` parameter with the [RetrieveMetadataChanges Function](/power-apps/developer/data-platform/webapi/reference/retrievemetadatachanges) to return data about whether columns can be secured using the [AttributeMetadata](/power-apps/developer/data-platform/webapi/reference/attributemetadata)`.IsSecured` property.
+This JSON represents the [EntityQueryExpression](/power-apps/developer/data-platform/webapi/reference/entityqueryexpression) data used with the `Query` parameter and the [RetrieveMetadataChanges Function](/power-apps/developer/data-platform/webapi/reference/retrievemetadatachanges) to return data about whether columns can be secured by using the [AttributeMetadata](/power-apps/developer/data-platform/webapi/reference/attributemetadata)`.IsSecured` property.
 
 ```json
 {
@@ -268,9 +268,9 @@ OData-Version: 4.0
 **Response**:
 
 > [!NOTE]
-> The data in this response is edited to remove null property values returned in the `EntityMetadata` property and it only returns a single representative column from one table. In reality, the total amount of data returned is large depending on the number of tables and columns in your environment.
+> The data in this response is edited to remove null property values returned in the `EntityMetadata` property. It only returns a single representative column from one table. In reality, the total amount of data returned is large depending on the number of tables and columns in your environment.
 
-This example shows the requested properties of the [Account.AccountCategoryCode column](/power-apps/developer/data-platform/reference/entities/account#BKMK_AccountCategoryCode) is one of the secured columns.
+This example shows the requested properties of the [Account.AccountCategoryCode column](/power-apps/developer/data-platform/reference/entities/account#BKMK_AccountCategoryCode) as one of the secured columns.
 
 ```http
 HTTP/1.1 200 OK
@@ -318,12 +318,12 @@ OData-Version: 4.0
 
 ## Secure a column with code
 
-It's easiest to [Secure a column](/power-platform/admin/field-level-security#enable-column-securit) using [Power Apps](https://make.powerapps.com/). If you need to automate securing a column, use code to update the column definition to set the [AttributeMetadata.IsSecured property](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.issecured) property as shown in the following examples:
+It's easiest to [Secure a column](/power-platform/admin/field-level-security#enable-column-securit) by using [Power Apps](https://make.powerapps.com/). If you need to automate securing a column, use code to update the column definition to set the [AttributeMetadata.IsSecured property](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.issecured) as shown in the following examples:
 
 
 ### [SDK for .NET](#tab/sdk)
 
-This static `SetColumnIsSecured` method retrieves the current definition of the specified column and updates its security status only if the provided value differs from the current value. If the column is already set to the specified security status, no update request is sent.
+This static `SetColumnIsSecured` method retrieves the current definition of the specified column and updates its security status only if the provided value differs from the current value. If the column is already set to the specified security status, the method doesn't send an update request.
 
 :::code language="csharp" source="~/../PowerApps-Samples/dataverse/orgsvc/CSharp-NETCore/ColumnLevelSecurity/Examples.cs" id="SetColumnIsSecured":::
 
@@ -331,7 +331,7 @@ This static `SetColumnIsSecured` method retrieves the current definition of the 
 
 ### [Web API](#tab/webapi)
 
-The following `Set-ColumnIsSecured-Example` PowerShell function retrieves the current definition of the specified column and updates its security status only if the provided value differs from the current value. If the column is already set to the specified security status, no update request is sent.
+The following `Set-ColumnIsSecured-Example` PowerShell function retrieves the current definition of the specified column and updates its security status only if the provided value differs from the current value. If the column is already set to the specified security status, the function doesn't send an update request.
 
 This function depends on [Get-Column](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/PS/README.md#get-column-function) and [Update-Column](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/PS/README.md#update-column-function) functions defined by the [Dataverse Web API PowerShell Helper functions](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/PS/README.md) used by other PowerShell samples.
 
@@ -343,16 +343,16 @@ This function depends on [Get-Column](https://github.com/microsoft/PowerApps-Sam
 
 ## Provide access to secured columns
 
-By default, when a column is secured, only people who have the system administrator security role can read or set the value. A system administrator can provide other users access to secured columns in two ways:
+By default, when you secure a column, only people who have the system administrator security role can read or set the value. A system administrator can provide other users access to secured columns in two ways:
 
 - [Manage access using field security profiles](#manage-access-using-field-security-profiles): Use field security profiles to give access to column data for all records to groups.
 - [Share data in secured fields](#share-data-in-secured-fields): Use field sharing to give a specific principal or team access to data in a secure column for a specific record.
 
-### Manage access using field security profiles
+### Manage access by using field security profiles
 
-This approach is the most common when you have different groups of users who require different levels of access. See the [Column-level security example](/power-platform/admin/column-level-security-example) that describes how to secure fields for different users using the Power Platform admin center.
+Use this approach when you have different groups of users who need different levels of access. For an example, see the [Column-level security example](/power-platform/admin/column-level-security-example) that describes how to secure fields for different users by using the Power Platform admin center.
 
-To do this using code, create [Field Security Profile (FieldSecurityProfile)](reference/entities/fieldsecurityprofile.md) records that associate principals (users and teams) with [Field Permission (FieldPermission)](reference/entities/fieldpermission.md) records that control which data operations can be performed on that column for any record.
+To manage access by using code, create [Field Security Profile (FieldSecurityProfile)](reference/entities/fieldsecurityprofile.md) records that associate principals (users and teams) with [Field Permission (FieldPermission)](reference/entities/fieldpermission.md) records. These records control which data operations can be performed on that column for any record.
 
 <!-- 
 Mermaid markdown used to generate ERD after installing:
@@ -658,7 +658,7 @@ https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid -->
 
 #### Secured Masking Rule columns
 
-The [Secured Masking Rule (MaskingRule)](reference/entities/maskingrule.md) table has these write-able columns:
+The [Secured Masking Rule (MaskingRule)](reference/entities/maskingrule.md) table has these writable columns:
 
 |Column|Type|Description|
 |---|---|---|
@@ -678,7 +678,7 @@ The [Secured Masking Rule (MaskingRule)](reference/entities/maskingrule.md) tabl
 
 #### Secured Masking Column columns
 
-The [Secured Masking Column (AttributeMaskingRule)](reference/entities/attributemaskingrule.md) table has these write-able columns:
+The [Secured Masking Column (AttributeMaskingRule)](reference/entities/attributemaskingrule.md) table has these writable columns:
 
 |Column|Type|Description|
 |---|---|---|
@@ -691,15 +691,15 @@ The [Secured Masking Column (AttributeMaskingRule)](reference/entities/attribute
 
 ### Retrieve unmasked data
 
-When a [Field Permission (FieldPermission)](reference/entities/fieldpermission.md) record `CanRead` column is **Allowed**, you can set the `CanReadUnmasked` choice column when the column has an [Secured Masking Column (AttributeMaskingRule)](reference/entities/attributemaskingrule.md) record associated with it.
+When a [Field Permission (FieldPermission)](reference/entities/fieldpermission.md) record `CanRead` column is **Allowed**, you can set the `CanReadUnmasked` choice column if the column has an associated [Secured Masking Column (AttributeMaskingRule)](reference/entities/attributemaskingrule.md) record.
 
 The `CanReadUnmasked` column supports the following options defined by the `field_security_permission_readunmasked` global choice.
 
 |Value|Label|Description|
 |---|---|---|
-|0|**Not Allowed**|The default value. If there isn't an `AttributeMaskingRule` for the column, you can't set any other value.|
-|1|**One Record**|Unmasked data can be returned using the a `Retrieve` operation only.|
-|3|**All Records**|Unmasked data can be returned using the a `Retrieve` and `RetrieveMultiple` operations.|
+|0|**Not Allowed**|The default value. If there's no `AttributeMaskingRule` for the column, you can't set any other value.|
+|1|**One Record**|Unmasked data can be returned by using a `Retrieve` operation only.|
+|3|**All Records**|Unmasked data can be returned by using `Retrieve` and `RetrieveMultiple` operations.|
 
 
 #### Retrieve unmasked data example
