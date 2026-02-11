@@ -37,13 +37,13 @@ Autonomous agents can be added to model-driven apps to help users get work done 
 
 > [!WARNING]
 > Agent feed and associated supervision capabilities are visible only to System Administarator and Customizer roles by default. To enable other users to see agent feed you can create a new role with organization level read on following entities.
-- Agent Hub Goal(agenthubgoal)
-- Agent Hub Insight(agenthubinsight)
-- Agent Hub Metric(agenthubmetric)
-- Agent Memory(agentmemory)
-- Agent Task(agenttask)
-- Agentic Scenario(agenticscenario)
-- Copilot(bot)
+> - Agent Hub Goal(agenthubgoal)
+> - Agent Hub Insight(agenthubinsight)
+> - Agent Hub Metric(agenthubmetric)
+> - Agent Memory(agentmemory)
+> - Agent Task(agenttask)
+> - Agentic Scenario(agenticscenario)
+> - Copilot(bot)
 
 ## Supervise an autonomous agent within the app
 
