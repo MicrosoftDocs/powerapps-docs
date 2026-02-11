@@ -2,8 +2,8 @@
 title: Configure table relationship cascading behavior (Microsoft Dataverse) | Microsoft Docs
 description: Configure cascading behaviors for a one-to-many relationship in Microsoft Dataverse to preserve data integrity and automate business processes.
 suite: powerapps
-author: mkannapiran
-ms.author: kamanick
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 ms.topic: how-to
 ms.date: 09/05/2023

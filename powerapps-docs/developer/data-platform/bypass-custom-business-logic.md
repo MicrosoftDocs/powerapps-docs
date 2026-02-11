@@ -68,7 +68,7 @@ The following table describes when to use the parameter values with `BypassBusin
 ### Requirements to use the `BypassBusinessLogicExecution` optional parameter
 
 - You must send the requests by using the `BypassBusinessLogicExecution` [optional parameter](optional-parameters.md).
-- The user sending the requests must have the `prvBypassCustomBusinessLogic` privilege. By default, only users with the system administrator security role have this privilege. [Learn how to add the the `prvBypassCustomBusinessLogic` privilege to another role](#adding-the-required-privileges-to-another-role)
+- The user sending the requests must have the `prvBypassCustomBusinessLogic` privilege. By default, only users with the system administrator security role have this privilege. [Learn how to add the the `prvBypassCustomBusinessLogic` privilege to another role](#add-the-required-privileges-to-another-role)
 
 ### How do I use the `BypassBusinessLogicExecution` optional parameter?
 

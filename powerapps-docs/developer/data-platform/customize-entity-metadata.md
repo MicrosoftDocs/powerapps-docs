@@ -4,8 +4,8 @@ description: "By defining or changing the table definitions, you can control the
 ms.date: 09/04/2022
 ms.reviewer: pehecke
 ms.topic: article
-author: mkannapiran
-ms.author: kamanick
+author: MsSQLGirl
+ms.author: jukoesma
 ms.subservice: dataverse-developer
 search.audienceType: 
   - developer

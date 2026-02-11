@@ -2,8 +2,8 @@
 title: "Sample: Query schema definitions and detect changes (Microsoft Dataverse) | Microsoft Docs"
 description: "This sample shows how to query schema definitions and detect definitions changes over time so you can maintain a persistent cache."
 ms.date: 10/24/2022
-author: mkannapiran
-ms.author: kamanick
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 ms.topic: sample
 search.audienceType:

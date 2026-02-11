@@ -2,8 +2,8 @@
 title: "Work with table definitions using the SDK for .NET (Microsoft Dataverse) | Microsoft Docs"
 description: "Describes how to programmatically access and modify table and column definitions using the SDK for .NET"
 ms.date: 04/03/2022
-author: mkannapiran
-ms.author: kamanick
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 ms.topic: "article"
 search.audienceType: 

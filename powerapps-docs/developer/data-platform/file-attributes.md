@@ -4,8 +4,8 @@ description: "Learn about how to create, retrieve, update and delete file column
 ms.date: 01/17/2024
 ms.reviewer: jdaly
 ms.topic: how-to
-author: mkannapiran
-ms.author: kamanick
+author: MsSQLGirl
+ms.author: jukoesma
 ms.subservice: dataverse-developer
 search.audienceType: 
   - developer

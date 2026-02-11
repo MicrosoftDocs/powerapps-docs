@@ -2,8 +2,8 @@
 title: "API considerations of virtual tables (Microsoft Dataverse) | Microsoft Docs"
 description: "Describes API considerations of virtual tables"
 ms.date: 04/01/2022
-author: mkannapiran
-ms.author: kamanick
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: pehecke
 ms.topic: article
 applies_to: 

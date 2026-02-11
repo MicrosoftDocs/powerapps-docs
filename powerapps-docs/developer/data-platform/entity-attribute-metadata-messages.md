@@ -4,8 +4,8 @@ description: "About the messages used to edit table column definitions, also kno
 ms.date: 06/15/2022
 ms.reviewer: jdaly
 ms.topic: article
-author: mkannapiran
-ms.author: kamanick
+author: MsSQLGirl
+ms.author: jukoesma
 ms.subservice: dataverse-developer
 search.audienceType: 
   - developer
