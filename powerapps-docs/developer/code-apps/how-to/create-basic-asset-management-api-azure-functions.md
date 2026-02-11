@@ -1,20 +1,17 @@
 ---
-title: "How to: Create a basic asset management API with Azure Functions (preview)"
+title: "How to: Create a basic asset management API with Azure Functions"
 description: "Learn how to create a basic asset management API with Azure Functions"
-ms.author: alaug
-author: alaug
-ms.date: 09/10/2025
+ms.author: jordanchodak
+author: jordanchodakWork
+ms.date: 02/02/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
  - JimDaly
 ---
-# How to: Create a basic asset management API with Azure Functions (preview)
+# How to: Create a basic asset management API with Azure Functions
 
 This article walks you through creating a basic mock API for an asset management application using Azure Functions. The API exposes a single operation to return a list of assets. You'll also learn how to create a custom connector in Power Platform using API Management.
-
-> [!NOTE]
-> [!INCLUDE [cc-preview-features-definition](../../../includes/cc-preview-features-definition.md)]
 
 This basic API provides a mock asset list and is ready for integration with Power Platform using a custom connector via API Management.
 

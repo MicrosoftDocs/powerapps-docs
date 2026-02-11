@@ -7,7 +7,7 @@ ms.topic: how-to
 ms.custom: canvas
 ms.collection: get-started
 ms.reviewer: 
-ms.date: 3/13/2025
+ms.date: 01/13/2026
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
@@ -18,7 +18,7 @@ contributors:
 
 # Create a canvas app from a template
 
-Creating a canvas app using templates in Power Apps is a streamlined and efficient way to develop applications tailored to your needs. With templates, you can quickly create a mobile app with three screens or choose from various templates designed for real-world scenarios with fictitious data. These templates come with prebuilt layouts, controls, and sample data, allowing you to focus on customizing the app to meet your specific requirements.
+Creating a canvas app by using templates in Power Apps is a streamlined and efficient way to develop applications tailored to your needs. By using templates, you can quickly create a mobile app with three screens or choose from various templates designed for real-world scenarios with fictitious data. These templates come with prebuilt layouts, controls, and sample data, so you can focus on customizing the app to meet your specific requirements.
 
 
 ## Create a three-screen mobile app
@@ -30,7 +30,7 @@ Creating a canvas app using templates in Power Apps is a streamlined and efficie
       - **From Excel**
       - **From SQL**
 
-1. Select the data that will appear in your app. When ready, select **Create app**.
+1. Select the data that appears in your app. When ready, select **Create app**.
 
 1. The app opens in [Power Apps Studio](power-apps-studio.md), where you can customize it.
 
@@ -46,7 +46,7 @@ Creating a canvas app using templates in Power Apps is a streamlined and efficie
 
 1. Select a template from the list of **other app templates**.
 
-1. Update the **App name**, then select **Next**.
+1. Update the **App name**, and then select **Next**.
 
 1. Select **Make my own app** to connect the app to data storage, such as OneDrive.
 

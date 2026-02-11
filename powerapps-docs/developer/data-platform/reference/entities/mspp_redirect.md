@@ -204,7 +204,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |FormatName|Text|
 |ImeMode|Auto|
 |IsLocalizable|False|
-|MaxLength|100|
+|MaxLength|400|
 
 ### <a name="BKMK_mspp_sitemarkerid"></a> mspp_sitemarkerid
 

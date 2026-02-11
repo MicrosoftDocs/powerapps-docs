@@ -1,21 +1,18 @@
 ---
-title: "System configuration (preview)"
+title: "System configuration"
 description: "Power Apps code apps system configuration"
-ms.author: alaug
-author: alaug
-ms.date: 09/10/2025
+ms.author: jordanchodak
+author: jordanchodakWork
+ms.date: 02/02/2026
 ms.reviewer: jdaly
 ms.topic: article
 contributors:
  - JimDaly
 ---
 
-# System configuration (preview)
+# System configuration
 
 This article contains information on the configuration for Power Apps code apps.
-
-> [!NOTE]
-> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
 ## Hosted app code
 

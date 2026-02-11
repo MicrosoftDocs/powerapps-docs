@@ -54,7 +54,7 @@ Creating a canvas app is easy. With Power Apps, you can find or create your app 
 - [From data in a SharePoint List](canvas-apps/app-from-sharepoint.md)
 - [From Excel data](canvas-apps/get-started-create-from-blank.md)
 - [From a blank canvas](canvas-apps/create-blank-app.md)
-- [Via AppSource](../user/app-source.md)
+- [Via Marketplace](../user/app-source.md)
 
 
 In addition to creating apps in Power Apps, you can also create apps directly within Microsoft Teams by using Power Apps. For more information, see [Create apps in Microsoft Teams by using Power Apps](/powerapps/teams/create-apps-overview).

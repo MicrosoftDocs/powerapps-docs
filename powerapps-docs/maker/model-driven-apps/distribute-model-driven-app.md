@@ -47,7 +47,7 @@ In order to distribute an app, you create a solution so that the app can be pack
 
 ## Export a solution
 
-To distribute an app so it can be imported into other environments or made available on [Microsoft AppSource](https://appsource.microsoft.com/), export the solution to a zip file. Then, the zip file that contains the app and components can be imported into other environments.
+To distribute an app so it can be imported into other environments or made available on [Microsoft Marketplace](https://marketplace.microsoft.com/), export the solution to a zip file. Then, the zip file that contains the app and components can be imported into other environments.
 
 1. Select **Solutions** on the left navigation pane of Power Apps. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 2. Open the solution required, and then on the toolbar select **Export**.

@@ -77,6 +77,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
+- [ProcessStartedOn](#BKMK_ProcessStartedOn)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
@@ -330,6 +331,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|SystemRequired|
 |Type|EntityName|
 
+### <a name="BKMK_ProcessStartedOn"></a> ProcessStartedOn
+
+|Property|Value|
+|---|---|
+|Description|**Date and time when the batch run process was started.**|
+|DisplayName|**Process Started On**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`processstartedon`|
+|RequiredLevel|None|
+|Type|DateTime|
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
+
 ### <a name="BKMK_statecode"></a> statecode
 
 |Property|Value|
@@ -351,6 +369,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |0|Label: **InProgress**<br />DefaultStatus: 1<br />InvariantName: `InProgress`|
 |1|Label: **Completed**<br />DefaultStatus: 4<br />InvariantName: `Completed`|
 |2|Label: **Failed**<br />DefaultStatus: 5<br />InvariantName: `Failed`|
+|3|Label: **InQueue**<br />DefaultStatus: 7<br />InvariantName: `InQueue`|
+|4|Label: **Stopped**<br />DefaultStatus: 10<br />InvariantName: `Stopped`|
 
 ### <a name="BKMK_statuscode"></a> statuscode
 
@@ -376,6 +396,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |4|Label: **Completed**<br />State:1<br />TransitionData: None|
 |5|Label: **CaseIdentificationFailed**<br />State:2<br />TransitionData: None|
 |6|Label: **CTandEACcheckFailed**<br />State:2<br />TransitionData: None|
+|7|Label: **Ready**<br />State:3<br />TransitionData: None|
+|8|Label: **CaseIndentificationInProgress**<br />State:3<br />TransitionData: None|
+|9|Label: **CaseIdentificationCompleted**<br />State:3<br />TransitionData: None|
+|10|Label: **Stopped**<br />State:4<br />TransitionData: None|
 
 ### <a name="BKMK_TimeZoneRuleVersionNumber"></a> TimeZoneRuleVersionNumber
 

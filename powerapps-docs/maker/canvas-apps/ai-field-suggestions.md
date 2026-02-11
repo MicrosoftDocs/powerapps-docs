@@ -3,7 +3,7 @@ title: Use field suggestions by Copilot
 description: Learn how to use field suggestions by Copilot, an AI feature in Microsoft Power Apps, to select the best fields to display when you link a data source to a control in a canvas app.
 author: norliu
 ms.author: norliu
-ms.date: 5/28/2025
+ms.date: 01/21/2026
 ms.update-cycle: 180-days
 ms.topic: article
 ms.reviewer: mkaur

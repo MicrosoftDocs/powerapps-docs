@@ -7,7 +7,7 @@ ms.topic: how-to
 ms.custom: canvas
 ms.collection: get-started
 ms.reviewer: 
-ms.date: 6/17/2025
+ms.date: 01/13/2026
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
@@ -21,7 +21,7 @@ contributors:
 
 # Create a canvas app with data from a list
 
-This article explains how to create a canvas app using data from Microsoft Lists or SharePoint. By following this method, you can build an app from a list and customize it to efficiently manage your data.
+In a few minutes, you'll have a fully functional app that connects to your Microsoft Lists or SharePoint data. This step-by-step guide shows you exactly how to build and customize a canvas app to manage your data efficiently, with no coding required.
 
 You can also [connect to on-premises SharePoint lists](connections/connection-sharepoint-online.md#create-a-sharepoint-connection) through a data gateway.
 
@@ -30,7 +30,7 @@ You can create an app by using a list in SharePoint or Lists in two ways:
 - Sign in to Power Apps and then [create an app by connecting to list in SharePoint from Power Apps.](app-from-sharepoint.md#use-a-list-in-sharepoint-or-lists-to-create-an-app)
 - [Create an app directly from a list in SharePoint or Lists.](app-from-sharepoint.md#create-an-app-directly-from-a-list-in-sharepoint-or-lists)
 
-When the app is created, Power Apps Studio opens and shows an app with three screens:
+When you create the app, Power Apps Studio opens and shows an app with three screens:
 
 - **Browse screen**: Scroll through all items in the list.
 - **Details screen**: Show all information about a single item in the list.
@@ -49,9 +49,9 @@ Use SharePoint and Power Apps with a [subscription](https://www.microsoft.com/li
 
 ## Create a list
 
-Before you create an app from a list, you need to [create a list](https://support.microsoft.com/office/create-a-list-0d397414-d95f-41eb-addd-5e6eff41b083).
+Before you create an app from a list, [create a list](https://support.microsoft.com/office/create-a-list-0d397414-d95f-41eb-addd-5e6eff41b083).
 
-For this example, lets create a list to track device orders for your company and include the following columns with sample data:
+For this example, create a list to track device orders for your company. Include the following columns with sample data:
 
 1. Employee name
 1. Device type
@@ -64,7 +64,7 @@ For this example, lets create a list to track device orders for your company and
 
 ## Use a list in SharePoint or Lists to create an app
 
-Now lets use the list that we created to build an app from the list.
+Now, use the list that you created to build an app from the list.
 
 1. Sign in to [Power Apps](https://make.powerapps.com/).
 
@@ -74,9 +74,9 @@ Now lets use the list that we created to build an app from the list.
 
 1. Enter the SharePoint URL, and then select **Connect**. Or, select a recent site.
  
-1. Select a list or select the [sample list](app-from-sharepoint.md#create-a-list) we created earlier, and then select **Create app**.
+1. Select a list or select the [sample list](app-from-sharepoint.md#create-a-list) you created earlier, and then select **Create app**.
 
-   The app opens in Power Apps Studio, where you design, build, and manage the app. Learn more in [Understand Power Apps Studio](power-apps-studio.md).
+   The app opens in Power Apps Studio, where you design, build, and manage the app. For more information, see [Understand Power Apps Studio](power-apps-studio.md).
 
 1. Select the **Preview the app** icon to see how the app works.
 

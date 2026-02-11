@@ -17,7 +17,8 @@ contributors:
 
 This sample shows how to retrieve and detect changes in table definitions using the [RetrieveMetadataChanges Action](xref:Microsoft.Dynamics.CRM.RetrieveMetadataChanges). 
 
-You can view the sample at [PowerApps-Samples/dataverse/webapi/C#-NETCore/Schema/RetrieveMetadataChanges/](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/CSharp-NETx/RetrieveMetadataChanges)
+> [!div class="nextstepaction"]
+> [View this sample on Github](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/CSharp-NETx/RetrieveMetadataChanges)
 
 See these articles for explanation of functionality:
 

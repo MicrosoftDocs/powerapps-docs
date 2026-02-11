@@ -55,6 +55,7 @@ The following table lists selected properties for the Source Control Configurati
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
+- [GitProvider](#BKMK_GitProvider)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [Name](#BKMK_Name)
 - [OrganizationName](#BKMK_OrganizationName)
@@ -64,6 +65,27 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [RepositoryName](#BKMK_RepositoryName)
 - [SourceControlConfigurationId](#BKMK_SourceControlConfigurationId)
 - [TTLInSeconds](#BKMK_TTLInSeconds)
+
+### <a name="BKMK_GitProvider"></a> GitProvider
+
+|Property|Value|
+|---|---|
+|Description|**Describes the git provider for source control integration.**|
+|DisplayName|**Git Provider**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`gitprovider`|
+|RequiredLevel|SystemRequired|
+|Type|Picklist|
+|DefaultFormValue|0|
+|GlobalChoiceName|`sourcecontrolconfiguration_gitprovider`|
+
+#### GitProvider Choices/Options
+
+|Value|Label|
+|---|---|
+|0|**Azure DevOps**|
+|1|**GitHub**|
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
@@ -156,7 +178,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`projectname`|
-|RequiredLevel|ApplicationRequired|
+|RequiredLevel|None|
 |Type|String|
 |Format|Text|
 |FormatName|Text|

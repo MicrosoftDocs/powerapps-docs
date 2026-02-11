@@ -3,7 +3,7 @@ title: "navigateTo (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the navigateTo method.
 author: sriharibs-msft
 ms.author: srihas
-ms.date: 03/12/2022
+ms.date: 01/12/2026
 ms.reviewer: jdaly
 ms.topic: reference
 search.audienceType: 
@@ -20,20 +20,24 @@ contributors:
 
 ## Syntax
 
+Use the following syntax to call `Xrm.Navigation.navigateTo()`.
+
 `Xrm.Navigation.navigateTo(pageInput,navigationOptions).then(successCallback,errorCallback);`
 
 ## Parameters
 
+The method accepts the following parameters.
+
 | Name | Type | Required | Description |
 | --- | --- | --- | --- |
 | [pageInput](#pageinput-parameter) | Object | Yes | Input about the page to navigate to. See [pageInput parameter](#pageinput-parameter) |
-| [navigationOptions](#navigationoptions-parameter) | Object | No | Options for navigating to a page: whether to open inline or in a dialog. If you don't specify this parameter, page is opened inline by default. |
+| [navigationOptions](#navigationoptions-parameter) | Object | No | Options for navigating to a page: whether to open inline or in a dialog. If you don't specify this parameter, the method opens the page inline by default. |
 | `successCallback` | function | No | A function to execute on successful navigation to the page when navigating inline and on closing the dialog when navigating to a dialog. |
 | `errorCallback` | Function | No | A function to execute when the operation fails. |
 
-### pageInput parameter
+### `pageInput` parameter
 
-The object definition changes depending on the type of page to navigate to: [entity list](#entity-list), [entity record](#entity-record), [dashboard](#dashboard), [HTML web resource](#html-web-resource), or [custom page](#custom-page). 
+The object definition changes depending on the type of page to navigate to: [entity list](#entity-list), [entity record](#entity-record), [dashboard](#dashboard), [HTML web resource](#html-web-resource), [custom page](#custom-page), or [generative page](#generative-page).
 
 #### Entity list
 
@@ -43,7 +47,7 @@ The entity list object contains the following values.
 | --- | --- | --- |
 | `pageType` | String | Specify `entitylist`. |
 | `entityName` | String | The logical name of the table to load in the list control. |
-| `viewId` | String | (Optional) The ID of the view to load. If you don't specify it, navigates to the default main view for the table. |
+| `viewId` | String | (Optional) The ID of the view to load. If you don't specify it, the app navigates to the default main view for the table. |
 | `viewType` | String | (Optional) Type of view to load. Specify `savedquery` or `userquery`. |
 
 #### Entity record
@@ -54,14 +58,14 @@ The entity record object contains the following values.
 | --- | --- | --- |
 | `pageType` | String | Specify `entityrecord`. |
 | `entityName` | String | Logical name of the table to display the form for. |
-| `entityId` | String | (Optional) ID of the table record to display the form for. If you don't specify this value, the form will be opened in create mode. |
-| `createFromEntity` | Lookup | (Optional) Designates a record that will provide default values based on mapped column values. The lookup object has the following String properties: entityType, id, and name (optional). |
-| `data` | Object | (Optional) A dictionary object that passes extra parameters to the form. <p/> The parameters can be table columns with default values that are set on new forms (see [Set column values using parameters passed to a form](/powerapps/developer/model-driven-apps/set-field-values-using-parameters-passed-form)), or custom parameters that are accessed on the form using `formContext.data.attributes` (see [Configure a form to accept custom querystring parameters](/powerapps/developer/model-driven-apps/configure-form-accept-custom-querystring-parameters), and [formContext.data](/powerapps/developer/model-driven-apps/clientapi/reference/formcontext-data)). Invalid parameters will cause an error. |
-| `formId` | String | (Optional) ID of the form instance to be displayed. |
+| `entityId` | String | (Optional) ID of the table record to display the form for. If you don't specify this value, the form opens in create mode. |
+| `createFromEntity` | Lookup | (Optional) Designates a record that provides default values based on mapped column values. The lookup object has the following String properties: entityType, id, and name (optional). |
+| `data` | Object | (Optional) A dictionary object that passes extra parameters to the form. <p/> The parameters can be table columns with default values that are set on new forms (see [Set column values using parameters passed to a form](/powerapps/developer/model-driven-apps/set-field-values-using-parameters-passed-form)), or custom parameters that are accessed on the form using `formContext.data.attributes` (see [Configure a form to accept custom querystring parameters](/powerapps/developer/model-driven-apps/configure-form-accept-custom-querystring-parameters), and [formContext.data](/powerapps/developer/model-driven-apps/clientapi/reference/formcontext-data)). Invalid parameters cause an error. |
+| `formId` | String | (Optional) ID of the form instance to display. |
 | `isCrossEntityNavigate` | Boolean | (Optional) Indicates whether the form is navigated to from a different table using cross-table business process flow. |
 | `isOfflineSyncError` | Boolean | (Optional) Indicates whether there are any offline sync errors. |
-| `processId` | String | (Optional) ID of the business process to be displayed on the form. |
-| `processInstanceId` |  String | (Optional) ID of the business process instance to be displayed on the form. |
+| `processId` | String | (Optional) ID of the business process to display on the form. |
+| `processInstanceId` |  String | (Optional) ID of the business process instance to display on the form. |
 | `relationship` | Object | (Optional) Define a relationship object to display the related records on the form. See [relationship](#relationship-object).|
 | `selectedStageId` | String | (Optional) ID of the selected stage in business process instance. |
 | `tabName` | String | (Optional) Sets the focus on the tab of the form. |
@@ -80,14 +84,18 @@ The relationship object, used in the [Entity record](#entity-record), contains t
 
 #### Dashboard
 
+Use this object as the `pageInput` parameter when you want to open a [dashboard](../../../../../maker/model-driven-apps/create-edit-dashboards.md).
+
 The dashboard object contains the following values.
 
 | Name | Type | Description |
 | --- | --- | --- |
 | `pageType` | String | Specify `dashboard`. |
-| `dashboardId` | String | The ID of the dashboard to load. If you don't specify the ID, navigates to the default dashboard. |
+| `dashboardId` | String | The ID of the dashboard to load. If you don't specify the ID, the app navigates to the default dashboard. |
 
 #### HTML web resource
+
+Use this object as the `pageInput` parameter when you want to open an [HTML web resource](../../../../../maker/model-driven-apps/create-edit-web-resources.md).
 
 The HTML web resource object contains the following values.
 
@@ -99,7 +107,9 @@ The HTML web resource object contains the following values.
 
 #### Custom page
 
-The Custom page object contains the following values.
+Use this object as the `pageInput` parameter when you want to open a [custom page](../../../../../maker/model-driven-apps/model-app-page-overview.md).
+
+The custom page object contains the following values.
 
 | Name | Type | Description |
 | --- | --- | --- |
@@ -108,24 +118,40 @@ The Custom page object contains the following values.
 | `entityName` | String | (Optional) The logical name of the table to be made available in the custom page via `Param("entityName")`. |
 | `recordId` | String | (Optional) ID of the table record to be made available in the custom page via `Param("recordId")`. |
 
-### navigationOptions parameter
+#### Generative page
 
-The navigationOptions object contains the following values.
+Use this object as the `pageInput` parameter when you want to open a [generative page](../../../../../maker/model-driven-apps/generative-pages.md).
+
+The generative page object contains the following values.
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `target` | Number | Specify `1` to open the page inline; `2` to open the page in a dialog.<br /> Also, rest of the values (width, height, and position) are valid only if you have specified 2 in this value (open page in a dialog).<br />**Note**: Entity lists can only be opened inline; entity records and web resources can be opened either inline or in a dialog. |
+| `pageType` | String | Specify `generative`. |
+| `pageId` | String | The ID of the generative page to open. |
+
+> [!NOTE]
+> Navigating to a generative page by using `navigateTo` currently **doesn't support passing initialization or contextual data** (such as table name, record ID, or custom parameters). The generative page opens without context.
+
+
+
+### `navigationOptions` parameter
+
+The `navigationOptions` object contains the following values.
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `target` | Number | Specify `1` to open the page inline. Specify `2` to open the page in a dialog.<br /> Also, rest of the values (width, height, and position) are valid only if you specify `2` in this value (open page in a dialog).<br />**Note**: You can only open entity lists inline. You can open entity records, web resources, and generative pages either inline or in a dialog. |
 | `width` | Number or Object | (Optional) The width of dialog. To specify the width in pixels, just type a numeric value. To specify the width in percentage, specify an object of type SizeValue with the following properties:<br />- `value`: The numerical value of type Number.<br />- `unit`: The unit of measurement of type String. Specify `%` or `px`. Default value is `px`.|
-| `height` | Number or Object | (Optional) The height of dialog. To specify the height in pixels, just type a numeric value. To specify the width in percentage, specify an object of type SizeValue with the following properties:<br />- value: The numerical value of type Number.<br />- unit: The unit of measurement of type String. Specify `%` or `px`. Default value is `px`.|
+| `height` | Number or Object | (Optional) The height of dialog. To specify the height in pixels, just type a numeric value. To specify the width in percentage, specify an object of type SizeValue with the following properties:<br />- value: The numerical value of type Number.<br />- `unit`: The unit of measurement of type String. Specify `%` or `px`. Default value is `px`.|
 | `position` | Number | (Optional) Specify `1` to open the dialog in center; `2` to open the dialog on the far side. Default is `1` (center). |
 | `title` | String | (Optional) The dialog title on top of the center or side dialog. |
 
-## Return Value
+## Return value
 
-Returns a promise. The value passed when the promise resolves is dependent on the target:
+Returns a promise. The value passed when the promise resolves depends on the target:
 
-- *inline*: Promise resolves right away, and does not return any value.
-- *dialog*: Promise resolves when the dialog is closed. An object is passed only if the `pageType` = `entityRecord` and you opened the form in create mode. The object has a `savedEntityReference` array with the following properties to identify the table record created:
+- *inline*: Promise resolves right away, and doesn't return any value.
+- *dialog*: Promise resolves when the dialog closes. An object is passed only if the `pageType` = `entityRecord` and you opened the form in create mode. The object has a `savedEntityReference` array with the following properties to identify the table record created:
 
    - **entityType**: The logical name of the table.
    - **id**: A string representation of a GUID value for the record.
@@ -133,7 +159,11 @@ Returns a promise. The value passed when the promise resolves is dependent on th
 
 ## Example
 
+The following examples demonstrate navigating to different page types inline and in a dialog.
+
 ### Example 1: Open account list
+
+Opens the main account list inline.
 
 ```javascript
 var pageInput = {
@@ -151,6 +181,8 @@ Xrm.Navigation.navigateTo(pageInput).then(
 ```
 
 ### Example 2: Open an existing account record within a dialog
+
+Opens an existing account form inside a dialog.
 
 ```javascript
 var pageInput = {
@@ -176,6 +208,8 @@ Xrm.Navigation.navigateTo(pageInput, navigationOptions).then(
 
 ### Example 3: Open an account form in the create mode within a dialog
 
+Opens an account form in create mode within a dialog and returns the created record reference when saved.
+
 ```javascript
 var pageInput = {
     pageType: "entityrecord",
@@ -200,6 +234,8 @@ Xrm.Navigation.navigateTo(pageInput, navigationOptions).then(
 ```
 
 ### Example 4: Open an HTML web resource in a dialog
+
+Opens an HTML web resource in a dialog.
 
 ```javascript
 var pageInput = {
