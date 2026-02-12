@@ -1,7 +1,7 @@
 ---
 title: "Code interpreter PCF component sample"
 description: "Learn how to use code interpreter enabled prompts from a PCF component in a model-driven application."
-ms.date: 09/22/2025
+ms.date: 02/11/2026
 ms.reviewer: jdaly
 ms.topic: article
 author: rapraj
@@ -16,7 +16,7 @@ contributors:
 ---
 # Code interpreter PCF component sample
 
-This sample shows how to generate content using a prompt defined by Copilot Studio or AI Hub.
+This sample shows how to generate content by using a prompt defined by Copilot Studio or AI Hub.
 
 This sample is a Power Apps Component Framework (PCF) control that integrates with code interpreter enabled prompts to render interactive HTML/JavaScript data visuals or generate previews and downloads for PDF, Word, PowerPoint, and Excel files.
 
@@ -51,7 +51,7 @@ This prompt specifies an interactive chart that returns a `mimetype` value of `t
 :::image type="content" source="media/code-interpreter-interactive-row-summary-chart-prompt.png" alt-text="Example interactive row summary chart prompt":::
 
 > [!TIP]
-> If you **Test** this prompt, use one of the example GUID values from the first prompt and set it as the **Sample data** for the **RecordId** parameter.
+> To **Test** this prompt, use one of the example GUID values from the first prompt and set it as the **Sample data** for the **RecordId** parameter.
 >
 > :::image type="content" source="media/code-interpreter-set-recordid.png" alt-text="Setting sample data for the recordid parameter":::
 
@@ -68,13 +68,13 @@ This prompt specifies a preview and direct download for a generated PDF file.
 :::image type="content" source="media/code-interpreter-sales-proposal-prompt.png" alt-text="The code interpreter PCF component sample showing generated sales proposal document":::
 
 > [!TIP]
-> If you **Test** this prompt, use one of the example GUID values from the first prompt and set it as the **Sample data** for the **RecordId** parameter.
+> To **Test** this prompt, use one of the example GUID values from the first prompt and set it as the **Sample data** for the **RecordId** parameter.
 
-If you **Test** this prompt, you can preview results in the **Model response**. The control renders a different experience within the form:
+When you **Test** this prompt, you can preview results in the **Model response**. The control renders a different experience within the form:
 
 :::image type="content" source="media/code-interpreter-sales-proposal.png" alt-text="The code interpreter PCF component sample showing generated PDF sales proposal document":::
 
-Generated `.docx`, `.pptx` and `.xlsx` files are also supported, but the sample PCF control currently doesn't support `.pptx`.
+The generated `.docx`, `.pptx`, and `.xlsx` files are also supported, but the sample PCF control currently doesn't support `.pptx`.
 
 ### App: sample_example app
 
