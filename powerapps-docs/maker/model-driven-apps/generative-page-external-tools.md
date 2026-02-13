@@ -46,47 +46,30 @@ Before you start, ensure you have the following:
 
 - **AI code generation tool**: Claude Code CLI or another AI code generation tool that supports custom instructions and workflows
 - **Power Apps environment**: A Power Platform environment with a model-driven app to deploy pages to
-- **PAC CLI**: Microsoft Power Platform CLI (PAC CLI) authenticated to your Dataverse environment
-  - [Install Power Platform CLI](/power-platform/developer/cli/introduction)
-- **.NET SDK**: .NET 10 SDK or .NET Framework 4.8
-  - [Download .NET 10.0 SDK](https://dotnet.microsoft.com/download/dotnet/10.0)
-- **Node.js**: Node.js runtime environment
-  - [Download Node.js](https://nodejs.org/)
+- **PAC CLI**: Microsoft Power Platform CLI (PAC CLI) installed and authenticated to your Dataverse environment
+  - [Install Power Platform CLI](/power-platform/developer/cli/introduction?tabs=windows#install-microsoft-power-platform-cli)
+  - [Authenticate Power Platform CLI](/power-platform/developer/cli/reference/auth)
 
 > [!NOTE]
 > Your Power Platform environment must be located in the US region. Generative pages are not available in other regions yet.
 
 ## Setup
 
-### Step 1: Install and authenticate PAC CLI
+### Install and authenticate PAC CLI
 
-If you haven't already installed and authenticated PAC CLI, follow these steps:
+If you haven't already installed and authenticated PAC CLI:
 
-1. Install the Microsoft Power Platform CLI. More information: [Install Power Platform CLI](/power-platform/developer/cli/introduction)
+1. Install the Microsoft Power Platform CLI following the instructions at [Install Power Platform CLI](/power-platform/developer/cli/introduction?tabs=windows#install-microsoft-power-platform-cli).
 
-2. Authenticate PAC CLI to your Power Apps environment:
+2. Authenticate PAC CLI to your Power Apps environment following the instructions at [pac auth](/power-platform/developer/cli/reference/auth).
 
-   ```bash
-   # Create a new authentication profile using environment URL
-   pac auth create --environment https://your-org.crm.dynamics.com
+### Set up the generative page skill for Claude Code
 
-   # Or use environment GUID
-   pac auth create --environment 00000000-0000-0000-0000-000000000000
+If you're using Claude Code, install the generative page skill from the marketplace:
 
-   # Verify authentication
-   pac auth list
-   ```
-
-> [!TIP]
-> You can have multiple authentication profiles for connecting to different environments. Use `pac auth select` to switch between them.
-
-### Step 2: Set up the generative page skill (for Claude Code)
-
-If you're using Claude Code, you need to configure the generative page skill:
-
-1. Create a new project folder for working with generative pages on your local machine
-2. Download the `genux-skill.zip` file (provided by your Microsoft contact) and extract it to your project folder
-3. Open Claude Code from your project folder
+1. Follow the skill installation instructions similar to those described in the [Power Platform Skills repository](https://github.com/microsoft/power-platform-skills/blob/main/README.md)
+2. Install the **genpage-skill** from the marketplace
+3. Once installed, you can invoke the skill in your Claude Code conversations
 
 The generative page skill should be automatically detected when you ask Claude Code to create or edit a generative page. If the skill isn't detected, you can manually invoke it:
 
@@ -94,20 +77,26 @@ The generative page skill should be automatically detected when you ask Claude C
 /genpage <instruction>
 ```
 
+> [!TIP]
+> For GitHub integration with generative pages, a dedicated GitHub skill may also be available in the marketplace to streamline workflows involving version control and collaboration.
+
 ### Using other AI code generation tools
 
-If you're using a tool other than Claude Code, ensure your tool has access to the generative page skill resources, including:
+If you're using a tool other than Claude Code, ensure your tool has access to the generative page skill resources from the public GitHub repository. Your AI tool should read the following context:
 
 - Component library and API documentation
 - Sample generative page code
 - PAC CLI command reference
 - Workflow instructions for creating and deploying generative pages
 
-Your AI tool should read all context from the generative page skill folder (resources, samples, and skill documentation) to understand:
+This context helps your AI tool understand:
 
 - How to structure generative page code
 - Which data APIs to use
 - The workflow and commands needed to deploy changes to your environment
+
+> [!NOTE]
+> The skill resources are hosted in a public GitHub repository. Consult the repository documentation for information on accessing and using these resources with your preferred AI tool.
 
 ## Create a new generative page
 
@@ -115,7 +104,7 @@ Follow this workflow when building a new page from scratch.
 
 ### Step 1: Start a conversation with your AI tool
 
-Open your AI code generation tool from your project folder and describe what you want to create.
+Open your AI code generation tool and describe what you want to create.
 
 **Example prompts:**
 
@@ -239,7 +228,7 @@ If the PAC CLI deployment command fails:
 
 1. Verify you're authenticated to the correct environment (`pac auth list`)
 2. Check that you have the necessary permissions to create or update generative pages
-3. Ensure the PAC CLI version includes generative page commands
+3. Ensure the PAC CLI version supports generative page commands
 4. Copy the error message and ask your AI tool to diagnose and resolve the issue
 
 ## Best practices
@@ -257,7 +246,7 @@ If the PAC CLI deployment command fails:
 
 The limitations for generative pages created with AI code generation tools are the same as those for generative pages created in the Power Apps maker portal:
 
-- Your page can connect to only Dataverse tables (up to six for a single page)
+- Your page can connect to only Dataverse tables
 - Only US English is supported
 - Collaboration isn't supported—ensure only one maker is working on a generative page at a time
 - Only specific data types are supported (Choice, Currency, Customer, Date and Time, Date Only, Decimal Number, Floating Point Number, Image, Lookup, Multiline Text, Status, Status Reason, Text, Whole Number, Yes/No, Unique Identifier)
