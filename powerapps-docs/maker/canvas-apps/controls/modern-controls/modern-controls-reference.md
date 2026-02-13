@@ -45,6 +45,8 @@ Configure the behavior of a modern control by setting one of its properties. Eac
 
 **[Header (preview)](modern-controls-header.md)** – A control that creates a modern app header.
 
+**Icon (preview)** – A non-interactive graphical element used to communicate meaning without text.
+
 **[Info button (preview)](modern-control-info-button.md)** – Use this control to provide additional information to users.
 
 **[Link](modern-control-link.md)** – Open hyperlinks in new tab.
@@ -61,7 +63,7 @@ Configure the behavior of a modern control by setting one of its properties. Eac
 
 **[Stream (preview)](new-stream-video-control.md)** - A control that lets you add Steam videos in your app.
 
-**[Table](modern-control-table.md)** – A control that shows a set of data in a tabular or list format.
+**[Table (preview)](modern-control-table.md)** – A control that shows a set of data in a tabular or list format.
 
 **[Tabs or tab list](modern-control-tabs-or-tabs-list.md)** – Select a tab to move screens or take action on app.
 
@@ -70,6 +72,8 @@ Configure the behavior of a modern control by setting one of its properties. Eac
 **[Text input](modern-control-text-input.md)** – A box in which the user can type text, numbers, and other data.
 
 **[Toggle](modern-control-toggle.md)** – A control that the user can turn on or off by moving the handle.
+
+**Toolbar (preview)** – A command bar that organizes primary and secondary commands for interacting with page content.
 
 
 ### See also
