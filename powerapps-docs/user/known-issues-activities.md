@@ -22,9 +22,7 @@ Learn about known issues that may occur with activities in model-driven apps.
 
 - The process that checks for conflicts for the people and resources on an appointment is triggered only when a valid Dynamics 365 solution is installed on the environment, as this requires a few scheduling-related tables to be a part of the environment. Appointments created in an environment without a relevant Dynamics 365 solution installed have an **Open** status, rather than the **Scheduled** status. For more information on the scheduling tables and the license required, see [Restricted tables for create, update, and delete operations](../maker/data-platform/data-platform-restricted-entities.md#restricted-tables-for-create-update-and-delete-operations).
 
-- When using the calendar control view for appointments and navigating through time periods (such as moving from Day to Week view or using the navigation arrows), clicking **Edit filters** and then **Apply** may result in duplicate Start Time and End Time filter conditions. This duplication causes appointments to not display in the view.
-
-  To resolve this issue, click **Edit filters**, manually remove one set of the duplicated Start Time and End Time filters, and then click **Apply**.
+- When using the calendar control view for appointments and navigating through time periods (such as moving from Day to Week view or using the navigation arrows), clicking **Edit filters** and then **Apply** may result in duplicate Start Time and End Time filter conditions. This duplication causes appointments to not display in the view. To resolve this issue, click **Edit filters**, manually remove one set of the duplicated Start Time and End Time filters, and then click **Apply**. Alternatively, continue to work in the grid view instead of the calendar view. 
 
 - Error message `Unable to find one-to-many relationship, entity: [entity name], referencing entity: activityparty`
 
