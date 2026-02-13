@@ -63,40 +63,30 @@ If you haven't already installed and authenticated PAC CLI:
 
 2. Authenticate PAC CLI to your Power Apps environment following the instructions at [pac auth](/power-platform/developer/cli/reference/auth).
 
-### Set up the generative page skill for Claude Code
+### Enable generative pages in external tools
 
-If you're using Claude Code, install the generative page skill from the marketplace:
+#### Claude Code
 
-1. Follow the skill installation instructions similar to those described in the [Power Platform Skills repository](https://github.com/microsoft/power-platform-skills/blob/main/README.md)
-2. Install the **genpage-skill** from the marketplace
-3. Once installed, you can invoke the skill in your Claude Code conversations
+To use generative pages with Claude Code, install the genpage plugin from the marketplace:
 
-The generative page skill should be automatically detected when you ask Claude Code to create or edit a generative page. If the skill isn't detected, you can manually invoke it:
+1. Add the Power Platform plugin marketplace: `/plugin marketplace add microsoft/power-platform-claude-plugins`
+2. Install the genpage plugin: `/plugin install genpage@power-platform-claude-plugins`
 
-```
-/genpage <instruction>
-```
+Once installed, the plugin is automatically available when you ask Claude Code to create or edit generative pages.
 
-> [!TIP]
-> For GitHub integration with generative pages, a dedicated GitHub skill may also be available in the marketplace to streamline workflows involving version control and collaboration.
+#### GitHub Copilot
 
-### Using other AI code generation tools
+To use generative pages with GitHub Copilot, install the genpage extension:
 
-If you're using a tool other than Claude Code, ensure your tool has access to the generative page skill resources from the public GitHub repository. Your AI tool should read the following context:
+1. Open the Extensions view in your editor
+2. Search for "Power Platform Generative Pages"
+3. Install the extension
 
-- Component library and API documentation
-- Sample generative page code
-- PAC CLI command reference
-- Workflow instructions for creating and deploying generative pages
+Once installed, the extension provides context and capabilities for building generative pages with GitHub Copilot.
 
-This context helps your AI tool understand:
+#### Other external tools
 
-- How to structure generative page code
-- Which data APIs to use
-- The workflow and commands needed to deploy changes to your environment
-
-> [!NOTE]
-> The skill resources are hosted in a public GitHub repository. Consult the repository documentation for information on accessing and using these resources with your preferred AI tool.
+For other AI code generation tools, ensure your tool has access to the generative page resources from the public GitHub repository. The repository includes component documentation, sample code, PAC CLI command reference, and workflow instructions. Consult the repository documentation for information on accessing and using these resources with your preferred tool.
 
 ## Create a new generative page
 
