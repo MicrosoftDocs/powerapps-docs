@@ -121,18 +121,23 @@ Use the following steps to provision Application Insights, install the SDK, conn
       - Right-click on the app and select **Inspect**
    3. Go to the **Console** tab.
    4. Clear the console and select **Errors only** from the dropdown. This step isn't required, but it makes identifying the relevant errors easier.
+      
+      :::image type="content" source="media/error-only.png" alt-text="How to set the console to errors only":::
+      
    5. Look for errors with the message: `Connecting to 'https:...' violates the following Content Security Policy directive`.
+      
+      :::image type="content" source="media/csp-violations.png" alt-text="See the expected CSP violations":::
+      
    6. Note the URLs shown in these error messages. These are the sources that need to be added to your CSP configuration.
 
    **Add sources to CSP settings**
 
    1. Go to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
-   2. Select **Environments** and choose your environment.
-   3. Go to **Settings** > **Product** > **Privacy + Security** > **Content Security Policy**. If you do not see the option for **Settings**, this is because your environment does not have Dataverse, and you must instead follow the instructions to [Configure CSP by using REST API](/Configure CSP by using REST API).
-   4. In the **App** section, disable **Use default connect-src**.
-   5. Add the sources you identified in the previous steps to the allowed list.
-   6. Select **Save**.
-   7. Wait for the settings to be applied. CSP changes can take several minutes to propagate.
+   2. Follow the instructions in [Configure Content Security Policy](/power-apps/developer/code-apps/how-to/content-security-policy) to add the sources you identified in the previous steps to the allowed list for `connect-src`. See the example below.
+
+      :::image type="content" source="media/csp-sources.png" alt-text="Example CSP sources":::
+      
+   3. Wait for the settings to be applied. CSP changes can take several minutes to propagate.
 
    > [!TIP]
    > After updating CSP settings, refresh your app and check the console again to verify that the CSP violations are resolved and telemetry is being sent successfully.
