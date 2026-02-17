@@ -13,8 +13,8 @@ Azure Application Insights is a telemetry and monitoring service that helps you 
 
 > [!NOTE]
 > This article shows **one example** of how to initialize and configure telemetry for your app. You can follow the same pattern to integrate any monitoring tool, not just Application Insights.
->
-> Azure Application Insights complements [Power Platform Monitor](/power-platform/admin/monitoring/monitor-power-apps) by providing granular logs and custom events. However, it only captures telemetry after the app successfully loads. Startup failures - including problems caused by blocked files or failed initialization - don't appear here and only show up in Monitor.
+
+Azure Application Insights complements [Power Platform Monitor](/power-platform/admin/monitoring/monitor-power-apps) by providing granular logs and custom events. However, it only captures telemetry after the app successfully loads. Startup failures - including problems caused by blocked files or failed initialization - don't appear here and only show up in Monitor.
 
 ## Prerequisites
 
@@ -106,6 +106,36 @@ Use the following steps to provision Application Insights, install the SDK, conn
 
    > [!NOTE]
    > This is just an example. You must implement `logMetric` so that metrics are sent to your monitoring tool of choice, not necessarily App Insights. The platform simply delivers metric payloads. Your implementation determines how they are handled.
+
+
+5. Configure Content Security Policy (CSP)
+
+   If Content Security Policy (CSP) is enabled in your environment, sending telemetry events to Application Insights might be blocked. You need to add the App Insights endpoints to your environment's CSP settings.
+
+   **Identify the required sources**
+   
+   1. Open your app with Application Insights configured.
+   2. Open the browser DevTools by doing one of the following:
+      - Press **F12**
+      - Press **Ctrl+Shift+I**
+      - Right-click on the app and select **Inspect**
+   3. Go to the **Console** tab.
+   4. Clear the console and select **Errors only** from the dropdown. This step isn't required, but it makes identifying the relevant errors easier.
+   5. Look for errors with the message: `Connecting to 'https:...' violates the following Content Security Policy directive`.
+   6. Note the URLs shown in these error messages. These are the sources that need to be added to your CSP configuration.
+
+   **Add sources to CSP settings**
+
+   1. Go to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
+   2. Select **Environments** and choose your environment.
+   3. Go to **Settings** > **Product** > **Privacy + Security** > **Content Security Policy**. If you do not see the option for **Settings**, this is because your environment does not have Dataverse, and you must instead follow the instructions to [Configure CSP by using REST API](/Configure CSP by using REST API).
+   4. In the **App** section, disable **Use default connect-src**.
+   5. Add the sources you identified in the previous steps to the allowed list.
+   6. Select **Save**.
+   7. Wait for the settings to be applied. CSP changes can take several minutes to propagate.
+
+   > [!TIP]
+   > After updating CSP settings, refresh your app and check the console again to verify that the CSP violations are resolved and telemetry is being sent successfully.
 
 1. View logs in Azure portal
 
