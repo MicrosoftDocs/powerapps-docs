@@ -95,7 +95,7 @@ Once installed, the extension provides context and capabilities for building gen
 
 #### Other external tools
 
-For other AI code generation tools, ensure your tool has access to the generative page resources from the public GitHub repository. The repository includes component documentation, sample code, PAC CLI command reference, and workflow instructions. Consult the repository documentation for information on accessing and using these resources with your preferred tool.
+For other AI code generation tools, ensure your tool has access to the generative page resources from the [Power Platform skills](https://github.com/microsoft/power-platform-skills/tree/main/plugins/power-apps) GitHub repository. The power-apps folder includes component documentation, sample code, PAC CLI command reference, and workflow instructions. Consult the repository [readme](https://github.com/microsoft/power-platform-skills/blob/main/README.md) for information on accessing and using these resources with your preferred tool.
 
 ## Create a new generative page
 
