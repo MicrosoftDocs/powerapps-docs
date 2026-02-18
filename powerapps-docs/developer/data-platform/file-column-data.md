@@ -4,8 +4,8 @@ description: "Learn about uploading, downloading, and deleting data in file colu
 ms.date: 03/29/2024
 ms.reviewer: jdaly
 ms.topic: how-to
-author: mkannapiran
-ms.author: kamanick
+author: MsSQLGirl
+ms.author: jukoesma
 ms.subservice: dataverse-developer
 search.audienceType: 
   - developer

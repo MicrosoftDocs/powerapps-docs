@@ -1,7 +1,7 @@
 ---
 title: Use bulk operation messages
 description: Learn how to use special APIs to perform operations on multiple rows of data in a Microsoft Dataverse table. 
-ms.date: 07/07/2025
+ms.date: 02/11/2026
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: jdaly
@@ -16,7 +16,7 @@ ms.custom: bap-template
 
 # Use bulk operation messages
 
-To get the best performance when you run operations on multiple rows of a Microsoft Dataverse table, use one of the following bulk operation messages:
+To get the best performance when running operations on multiple rows of a Microsoft Dataverse table, use one of the following bulk operation messages:
 
 - [`CreateMultiple`](#createmultiple): Creates multiple records of the same type in a single request.
 - [`UpdateMultiple`](#updatemultiple): Updates multiple records of the same type in a single request.
@@ -24,7 +24,7 @@ To get the best performance when you run operations on multiple rows of a Micros
 - [`DeleteMultiple`](#deletemultiple): For elastic tables only. Deletes multiple records of the same type in a single request.
 
 > [!NOTE]
-> For guidance about options when performing bulk operations, such when to use these APIs compared to batch APIs like `ExecuteMultiple`, see [Optimize performance for bulk operations](optimize-performance-create-update.md).
+> For guidance about options when performing bulk operations, such as when to use these APIs compared to batch APIs like `ExecuteMultiple`, see [Optimize performance for bulk operations](optimize-performance-create-update.md).
 
 ## Examples
 
@@ -135,7 +135,7 @@ OData-Version: 4.0
 
 Updates multiple records of the same type in a single request.
 
-Just like when you update individual records, the data you send with `UpdateMultiple` must contain only the values you're changing. Learn how to [update records with SDK for .NET](org-service/entity-operations-update-delete.md) and [update records with the Web API](webapi/update-delete-entities-using-web-api.md#basic-update).
+Just like when you update individual records, the data you send by using `UpdateMultiple` must contain only the values you're changing. For more information, see [update records with SDK for .NET](org-service/entity-operations-update-delete.md) and [update records with the Web API](webapi/update-delete-entities-using-web-api.md#basic-update).
 
 
 ##### [SDK for .NET](#tab/sdk)
@@ -173,7 +173,7 @@ Uses the [UpdateMultiple action](xref:Microsoft.Dynamics.CRM.UpdateMultiple).
 > [!IMPORTANT]
 > You must set the `@odata.type` property for each item in the `Targets` parameter.
 > 
-> Using alternate keys with Web API and UpdateMultiple is not supported.
+> Using alternate keys with Web API and UpdateMultiple isn't supported.
 
 This example is for a table with the logical name `sample_example` and the entity set name `sample_examples`.
 
@@ -220,11 +220,11 @@ OData-Version: 4.0
 
 #### Duplicate records in UpdateMultiple Targets parameter
 
-Multiple records with the same primary key or alternate key values in the payload are not supported with `UpdateMultiple`. When more than one record in the `Targets` parameter is uniquely identified by a primary or alternate key, the operation is performed on the first record only. Any subsequent records with the same key value(s) in the payload are ignored. [This behavior is different from `UpsertMultiple`](#duplicate-records-in-upsertmultiple-targets-parameter).
+`UpdateMultiple` doesn't support multiple records with the same primary key or alternate key values in the payload. When more than one record in the `Targets` parameter is uniquely identified by a primary or alternate key, the operation is performed on the first record only. The operation ignores any subsequent records with the same key values in the payload. [This behavior is different from `UpsertMultiple`](#duplicate-records-in-upsertmultiple-targets-parameter).
 
 ### UpsertMultiple
 
-Use `Upsert` to integrate data with external sources when you don't know whether the table exists in Dataverse or not. `Upsert` operations frequently depend on alternate keys to identify records. Use `UpsertMultiple` to perform `Upsert` operations in bulk.
+Use `Upsert` to integrate data with external sources when you don't know whether the table exists in Dataverse. `Upsert` operations frequently depend on alternate keys to identify records. Use `UpsertMultiple` to perform `Upsert` operations in bulk.
 
 ##### [SDK for .NET](#tab/sdk)
 
@@ -302,7 +302,7 @@ Whether a record is created or updated in this example depends on whether record
 
 #### SDK examples
 
-Within [Sample: SDK for .NET Use bulk operations](org-service/samples/create-update-multiple.md), look for the [UpsertMultiple project](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/CSharp-NETCore/BulkOperations/UpsertMultiple/README.md)
+Within [Sample: SDK for .NET Use bulk operations](org-service/samples/create-update-multiple.md), look for the [UpsertMultiple project](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/CSharp-NETCore/BulkOperations/UpsertMultiple/README.md).
 
 ##### [Web API](#tab/webapi)
 
@@ -311,11 +311,11 @@ Uses the [UpsertMultiple action](xref:Microsoft.Dynamics.CRM.UpsertMultiple).
 > [!IMPORTANT]
 > 
 > - You must set the `@odata.type` property for each item in the `Targets` parameter.
-> - The `UpsertMultiple` action returns `204 NoContent`. The `UpsertMultipleResponse` complex type is not returned.
+> - The `UpsertMultiple` action returns `204 NoContent`. The `UpsertMultipleResponse` complex type isn't returned.
 
 The following example shows using the `UpsertMultiple` action with a standard table named `sample_example`.
-These requests identify the records using an alternate key defined using a column named `sample_keyattribute`. 
-The `@odata.id` annotation identifies the record with a relative URL as described in [Use an alternate key to reference a record](use-alternate-key-reference-record.md)
+These requests identify the records using an alternate key defined by a column named `sample_keyattribute`. 
+The `@odata.id` annotation identifies the record with a relative URL as described in [Use an alternate key to reference a record](use-alternate-key-reference-record.md).
 
 **Request**
 
@@ -366,13 +366,13 @@ OData-Version: 4.0
 
 #### Availability
 
-`UpsertMultiple` is available for tables that support `CreateMultiple` and `UpdateMultiple`. This includes all elastic tables. The queries found in [Availability with standard tables](bulk-operations.md#availability-with-standard-tables) will not return results for `UpsertMultiple`, but you can use them to detect whether a table supports both `CreateMultiple` and `UpdateMultiple`.
+`UpsertMultiple` is available for tables that support `CreateMultiple` and `UpdateMultiple`. This support includes all elastic tables. The queries found in [Availability with standard tables](bulk-operations.md#availability-with-standard-tables) don't return results for `UpsertMultiple`, but you can use them to detect whether a table supports both `CreateMultiple` and `UpdateMultiple`.
 
-These queries will not return results for the `UpsertMultiple` message. A table that supports both `CreateMultiple` and `UpdateMultiple` will support `UpsertMultiple`.
+These queries don't return results for the `UpsertMultiple` message. A table that supports both `CreateMultiple` and `UpdateMultiple` supports `UpsertMultiple`.
 
 #### Duplicate records in UpsertMultiple Targets parameter
 
-Multiple records with the same primary key or alternate key values in the payload are not supported with `UpsertMultiple`. When more than one record in the `Targets` parameter is uniquely identified by a primary or alternate key, `UpsertMultiple` will return an error. [This behavior is different from `UpdateMultiple`](#duplicate-records-in-updatemultiple-targets-parameter).
+`UpsertMultiple` doesn't support multiple records with the same primary key or alternate key values in the payload. When more than one record in the `Targets` parameter is uniquely identified by a primary or alternate key, `UpsertMultiple` returns an error. [This behavior is different from `UpdateMultiple`](#duplicate-records-in-updatemultiple-targets-parameter).
 
 ### DeleteMultiple
 
@@ -380,9 +380,9 @@ Delete multiple rows of data in elastic tables with a single request.
 
 ##### [SDK for .NET](#tab/sdk)
 
-You must use the [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) because the [SDK for .NET](org-service/overview.md) doesn't have a `DeleteMultipleRequest` class. Learn how to [use messages with the SDK for .NET](org-service/use-messages.md).
+Use the [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) because the [SDK for .NET](org-service/overview.md) doesn't have a `DeleteMultipleRequest` class. For more information, see [use messages with the SDK for .NET](org-service/use-messages.md).
 
-The following `DeleteMultipleExample` static method uses the `DeleteMultiple` message with the [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) to delete multiple rows from the `contoso_SensorData` elastic table using the alternate key to include the `partitionid` to uniquely identify the rows.
+The following `DeleteMultipleExample` static method uses the `DeleteMultiple` message with the [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) to delete multiple rows from the `contoso_SensorData` elastic table by using the alternate key to include the `partitionid` to uniquely identify the rows.
 
 ```csharp
 public static void DeleteMultipleExample(IOrganizationService service)
@@ -420,7 +420,7 @@ public static void DeleteMultipleExample(IOrganizationService service)
 
 ##### [Web API](#tab/webapi)
 
-The following example shows how to use the [DeleteMultiple action](xref:Microsoft.Dynamics.CRM.DeleteMultiple) to delete multiple rows from the `contoso_SensorData` elastic table including the `partitionid` to uniquely identify the rows.
+The following example shows how to use the [DeleteMultiple action](xref:Microsoft.Dynamics.CRM.DeleteMultiple) to delete multiple rows from the `contoso_SensorData` elastic table by including the `partitionid` to uniquely identify the rows.
 
 **Request:**
 
@@ -478,16 +478,16 @@ You can find sample code on GitHub in [github.com/microsoft/PowerApps-Samples](h
 
 ## Standard and elastic table usage
 
-Both standard and elastic tables benefit from a significant performance boost when you use bulk operation messages, but you need to use them differently. The following table summarizes the differences.
+Both standard and elastic tables get a significant performance boost when you use bulk operation messages, but you need to use them differently. The following table summarizes the differences.
 
 |Difference|Standard|Elastic|
 | --------- | --------- | --------- |
-| [Number of records](#number-of-records) | Operations are more efficient with a larger number of records. There's no limit on the number of records, but there are message size and time limits. We recommend sending 100 - 1000 records at a time.| We recommend sending 100 records at a time. |
+| [Number of records](#number-of-records) | Operations are more efficient with a larger number of records. There's no limit on the number of records, but there are message size and time limits. Send 100 to 1,000 records at a time.| Send 100 records at a time. |
 | [On Error behavior](#on-error-behavior) | All operations roll back on error. | Partial success is possible. |
 | [Availability](#availability) | Not all standard tables support these messages. | Messages are available for all elastic tables. |
 | [DeleteMultiple](#deletemultiple) | Not available. Use the SDK [BulkDeleteRequest class](xref:Microsoft.Crm.Sdk.Messages.BulkDeleteRequest) or the Web API [BulkDelete action](xref:Microsoft.Dynamics.CRM.BulkDelete) instead. [Learn how to delete data in bulk](delete-data-bulk.md). | Use the SDK [DeleteMultipleRequest Class](/dotnet/api/microsoft.xrm.sdk.messages.deletemultiplerequest) or Web API [DeleteMultiple Action](/power-apps/developer/data-platform/webapi/reference/deletemultiple)|
 
-Standard and elastic table usage is different because standard tables use Azure SQL and support transactions. Elastic tables use Azure Cosmos DB, which doesn't support transactions but is able to handle large amounts of data at high levels of throughput with low latency. The following sections provide more details. [Learn more about bulk operations on elastic tables](use-elastic-tables.md#bulk-operations-with-elastic-tables).
+Standard and elastic table usage is different because standard tables use Azure SQL and support transactions. Elastic tables use Azure Cosmos DB, which doesn't support transactions but handles large amounts of data at high levels of throughput with low latency. The following sections provide more details. [Learn more about bulk operations on elastic tables](use-elastic-tables.md#bulk-operations-with-elastic-tables).
 
 ### Number of records
 
@@ -498,25 +498,25 @@ The number of records that you should include with each request depends on wheth
 
 #### Number of records with standard tables
 
-Bulk operations on standard tables are optimized to perform on multiple rows in a single transaction. Operations become more efficient, and performance increases overall, as the number of operations per request increases. This optimization also allows for any plug-in steps that are registered for the bulk operation to be more efficient. Each time a plug-in is invoked for a single operation, some milliseconds are required to invoke the plug-in class containing the logic. When a plug-in is registered for a bulk operation message, the class is invoked once and can process all the operations more efficiently. [Learn how to write plug-ins for CreateMultiple and UpdateMultiple](write-plugin-multiple-operation.md).
+Bulk operations on standard tables are optimized to perform on multiple rows in a single transaction. Operations become more efficient, and performance increases overall, as the number of operations per request increases. This optimization also makes any plug-in steps that are registered for the bulk operation more efficient. Each time a plug-in is invoked for a single operation, the process requires some milliseconds to invoke the plug-in class containing the logic. When you register a plug-in for a bulk operation message, the class is invoked once and can process all the operations more efficiently. [Learn how to write plug-ins for CreateMultiple and UpdateMultiple](write-plugin-multiple-operation.md).
 
-This performance benefit gives you an incentive to send the largest number of records you can in each request. However, as the number of records increases, the size of the request increases, too, and the request takes longer to process. Eventually, you'll encounter [message size and time limits](#message-size-and-time-limits). If you hit these limits, the entire operation fails. There's no set limit on the number of records you can send. You may need to experiment to find the best number. Generally, we expect that 100 - 1,000 records per request is a reasonable place to start if the size of the record data is small and there are no plug-ins. The kinds of errors you may encounter can usually be addressed by sending fewer records with each request. We recommend that you include the ability to configure the number of entities sent so that you can adapt by sending fewer.
+This performance benefit encourages you to send the largest number of records you can in each request. However, as the number of records increases, the size of the request increases, too, and the request takes longer to process. Eventually, you encounter [message size and time limits](#message-size-and-time-limits). If you hit these limits, the entire operation fails. There's no set limit on the number of records you can send. You might need to experiment to find the best number. Generally, 100 to 1,000 records per request is a reasonable place to start if the size of the record data is small and there are no plug-ins. The kinds of errors you might encounter can usually be addressed by sending fewer records with each request. Include the ability to configure the number of entities sent so that you can adapt by sending fewer.
 
 #### Number of records with elastic tables
 
-Because there's no transaction with elastic tables, there's no performance benefit in trying to send a large number of records per request. We recommend that you send 100 operations per request and send requests in parallel to achieve maximum throughput.
+Because there's no transaction with elastic tables, there's no performance benefit in trying to send a large number of records per request. Send 100 operations per request and send requests in parallel to achieve maximum throughput.
 
-### On Error behavior
+### On error behavior
 
 The behavior when errors occur depends on whether you're using standard tables or elastic tables.
 
-#### On Error behavior with standard tables
+#### On error behavior with standard tables
 
-Any error that occurs in a bulk operation with a standard table causes the entire operation to roll back. You should only use bulk operations on standard tables when you have a high degree of confidence that all the operations will succeed. You may want to use the SDK [ExecuteMultipleRequest class](xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest) or Web API `$batch` to allow the set of operations to roll back if the bulk operation fails. If the success rate for your initial attempts is low, this strategy results in worse performance. Only use this fallback strategy when you expect most operations to succeed.
+Any error that occurs in a bulk operation with a standard table causes the entire operation to roll back. Only use bulk operations on standard tables when you have a high degree of confidence that all the operations will succeed. To allow the set of operations to roll back if the bulk operation fails, consider using the SDK [ExecuteMultipleRequest class](xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest) or Web API `$batch`. If the success rate for your initial attempts is low, this strategy results in worse performance. Only use this fallback strategy when you expect most operations to succeed.
 
-#### On Error behavior with elastic tables
+#### On error behavior with elastic tables
 
-With elastic tables, a bulk operation may partially succeed. You can use the error details to identify which records failed.
+With elastic tables, a bulk operation can partially succeed. You can use the error details to identify which records failed.
 
 ##### [SDK for .NET](#tab/sdk)
 
@@ -538,7 +538,7 @@ public class BulkApiErrorDetail
 
 ##### [Web API](#tab/webapi)
 
-When you use the Web API to perform a bulk operation on an elastic table, you need to pass the `Prefer` header with value `odata.include-annotations=*` or `odata.include-annotations=Microsoft.PowerApps.CDS.ErrorDetails.*`, which gives the status of each record. [Learn how to include more details with errors](webapi/compose-http-requests-handle-errors.md#include-more-details-with-errors).
+When you use the Web API to perform a bulk operation on an elastic table, you need to pass the `Prefer` header with value `odata.include-annotations=*` or `odata.include-annotations=Microsoft.PowerApps.CDS.ErrorDetails.*`. This header gives the status of each record. [Learn how to include more details with errors](webapi/compose-http-requests-handle-errors.md#include-more-details-with-errors).
 
 ---
 
@@ -548,7 +548,7 @@ Bulk operation message availability depends on whether you're using standard tab
 
 #### Availability with standard tables
 
-You can use the `CreateMultiple` and `UpdateMultiple` bulk operation messages with custom standard tables and many common standard tables, but not all. You should test whether individual standard tables support these messages. The following examples show you how to do that.
+You can use the `CreateMultiple` and `UpdateMultiple` bulk operation messages with custom standard tables and many common standard tables, but not all. Test whether individual standard tables support these messages. The following examples show you how to do that.
 
 ##### [SDK for .NET](#tab/sdk)
 
@@ -616,7 +616,7 @@ GET [Organization Uri]/api/data/v9.2/sdkmessagefilters?$select=sdkmessagefilteri
 Content-Type: application/json
 ```
 
-If the table supports the message, an `sdkmessagefilterid` value is returned. Otherwise, the value is an empty array.
+If the table supports the message, the response includes an `sdkmessagefilterid` value. Otherwise, the response returns an empty array.
 
 **Response:**
 
@@ -640,20 +640,20 @@ OData-Version: 4.0
 
 ## Message pipelines merged
 
-Each of the bulk operation messages has a corresponding message that operates on individual rows: `Create`, `Update` and `Delete`. These messages have existed for a long time, and many organizations have customized logic that depends on the events that occur when these messages are used.
+Each bulk operation message has a corresponding message that operates on individual rows: `Create`, `Update`, and `Delete`. These messages have existed for a long time, and many organizations have customized logic that depends on the events that occur when these messages are used.
 
-A key requirement of the bulk operation messages is that organizations must not be required to maintain custom logic in two places. To have the same custom logic and maintain it in one place, we've *merged* the message processing pipelines for these messages. What does this mean?
+A key requirement of the bulk operation messages is that organizations shouldn't maintain custom logic in two places. To have the same custom logic and maintain it in one place, Dataverse *merges* the message processing pipelines for these messages. What does this merge mean?
 
-- When a bulk operation message is used, the respective `Create` and `Update` event occurs for each [Entity](xref:Microsoft.Xrm.Sdk.Entity) instance in the `Targets` parameter. Any plug-ins or other event handlers for the corresponding individual events continue to work as they always have. You don't need to write new plug-ins to manage events raised by these messages.
+- When you use a bulk operation message, the respective `Create` and `Update` event occurs for each [Entity](xref:Microsoft.Xrm.Sdk.Entity) instance in the `Targets` parameter. Any plug-ins or other event handlers for the corresponding individual events continue to work as they always have. You don't need to write new plug-ins to manage events raised by these messages.
 
-- When a single operation message is used, the respective bulk operation event occurs with an [EntityCollection](xref:Microsoft.Xrm.Sdk.EntityCollection) containing a *single* [Entity](xref:Microsoft.Xrm.Sdk.Entity) instance passed in the `Targets` parameter.  You can move any logic that responds to single operation events to the more efficient bulk operation events and the logic is applied for both individual and multiple operations.
+- When you use a single operation message, the respective bulk operation event occurs with an [EntityCollection](xref:Microsoft.Xrm.Sdk.EntityCollection) containing a *single* [Entity](xref:Microsoft.Xrm.Sdk.Entity) instance passed in the `Targets` parameter.  You can move any logic that responds to single operation events to the more efficient bulk operation events and the logic is applied for both individual and multiple operations.
 
-Before the introduction of bulk operation messages, all custom logic was on the single operation messages. That logic must continue to be applied when client applications use the bulk operation messages. For tables used with high-volume bulk operations, we recommend that you begin to move any synchronous logic from single message events to bulk operation events. If you're introducing new logic, use the bulk operation events rather than the single operation events.
+Before the introduction of bulk operation messages, all custom logic was on the single operation messages. That logic continues to be applied when client applications use the bulk operation messages. For tables used with high-volume bulk operations, move any synchronous logic from single message events to bulk operation events. If you're introducing new logic, use the bulk operation events rather than the single operation events.
 
 > [!CAUTION]
-> With this design, duplicate logic can potentially be applied on both the single and multiple versions of events. Dataverse doesn't try to prevent this because we can't know your intent.
+> With this design, duplicate logic can potentially be applied on both the single and multiple versions of events. Dataverse doesn't try to prevent this because it can't know your intent.
 >
-> It's your responsibility to make sure that the same logic applied for the single version of events is migrated to the multiple version of the event *and removed* from the single version of the event. Otherwise, the logic will be applied twice.
+> It's your responsibility to make sure that the same logic applied for the single version of events is migrated to the multiple version of the event *and removed* from the single version of the event. Otherwise, the logic applies twice.
 
 [Learn how to write plug-ins for CreateMultiple and UpdateMultiple](write-plugin-multiple-operation.md).
 
@@ -663,17 +663,17 @@ Keep the following limitations in mind when you use bulk operation messages.
 
 ### Message size and time limits
 
-With standard tables, there's a performance incentive to send more records with each request. However, the number of records you can send is limited by the size of the payload and the amount of time required to process the operation.
+For standard tables, you get better performance when you send more records with each request. However, the size of the payload and the time it takes to process the operation limit the number of records you can send.
 
 #### Message size limits
 
-When you have a plug-in registered for any message, you may encounter the ["Message size exceeded when sending context to Sandbox"](/troubleshoot/power-platform/power-apps/dataverse/dataverse-plug-ins-errors#error-message-size-exceeded-when-sending-context-to-sandbox) error when the total size of the request exceeds 116.85 MB. With bulk operation messages, you're more likely to hit this limit as you send larger payloads.
+If you register a plug-in for any message, you might encounter the ["Message size exceeded when sending context to Sandbox"](/troubleshoot/power-platform/power-apps/dataverse/dataverse-plug-ins-errors#error-message-size-exceeded-when-sending-context-to-sandbox) error when the total size of the request exceeds 116.85 MB. When you use bulk operation messages, you can more easily reach this limit because you send larger payloads.
 
-This error doesn't occur if there's no plug-in registered for the event. To avoid the error, disable any plugins or send your request with the [`BypassCustomPluginExecution` optional parameter](bypass-custom-business-logic.md#).
+This error doesn't occur if you don't register a plug-in for the event. To avoid the error, disable any plugins or send your request by using the [`BypassCustomPluginExecution` optional parameter](bypass-custom-business-logic.md#).
 
 #### Time limits
 
-If you're using the Dataverse [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient), you may encounter this error:
+If you use the Dataverse [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient), you might encounter this error:
 
 ```
 The request channel timed out attempting to send after 00:04:00. 
@@ -681,20 +681,20 @@ Increase the timeout value passed to the call to Request or increase the SendTim
 The time allotted to this operation may have been a portion of a longer timeout.
 ```
 
-The default timeout set using ServiceClient is 4 minutes, which is long for any synchronous operation. You can change this value using the static [ServiceClient.MaxConnectionTimeout](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.MaxConnectionTimeout) property. The default timeout using [CrmServiceClient](xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient) is 2 minutes.
+The default timeout set by using ServiceClient is four minutes, which is long for any synchronous operation. You can change this value by using the static [ServiceClient.MaxConnectionTimeout](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.MaxConnectionTimeout) property. The default timeout by using [CrmServiceClient](xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient) is two minutes.
 
 > [!NOTE]
-> Before you increase the time limits, you should consider reducing the number of records that are passed in the `Targets` parameter.
+> Before you increase the time limits, consider reducing the number of records that you pass in the `Targets` parameter.
 
 ### Not supported for use in plug-ins
 
-At this time, we don't support using bulk operation messages in plug-in code. More information: [Don't use batch request types in plug-ins and workflow activities](best-practices/business-logic/avoid-batch-requests-plugin.md).
+Currently, Dataverse doesn't support using bulk operation messages in plug-in code. For more information, see [Don't use batch request types in plug-ins and workflow activities](best-practices/business-logic/avoid-batch-requests-plugin.md).
 
 However, you *should* write plug-ins for the `CreateMultiple` and `UpdateMultiple` messages as described in [Write plug-ins for CreateMultiple and UpdateMultiple](write-plugin-multiple-operation.md).
 
 ## Troubleshooting common errors
 
-If you encounter errors while using bulk operations, please refer to the following articles:
+If you encounter errors while using bulk operations, see the following articles:
 
 - [Troubleshoot Dataverse bulk operation errors](/troubleshoot/power-platform/power-apps/dataverse/bulk-operation-errors)
 - [Troubleshoot Dataverse client errors](/troubleshoot/power-platform/power-apps/dataverse/client-errors)
@@ -705,11 +705,11 @@ If you don't find an answer in this article to questions you have about using bu
 
 ### Will Retrieve and RetrieveMultiple logic be merged?
 
-We don't plan to change `Retrieve` and `RetrieveMultiple` message behavior. These have been separate messages for many years and developers have always needed to maintain logic for them separately. Attempting to merge the message pipeline for them would be highly problematic. Also, we discourage applying custom logic for these messages due to the [impact they can have on performance](best-practices/business-logic/limit-registration-plugins-retrieve-retrievemultiple.md).
+Microsoft doesn't plan to change `Retrieve` and `RetrieveMultiple` message behavior. These messages have been separate messages for many years, and developers always need to maintain logic for them separately. Attempting to merge the message pipeline for them would be highly problematic. Also, avoid applying custom logic for these messages due to the [impact they can have on performance](best-practices/business-logic/limit-registration-plugins-retrieve-retrievemultiple.md).
 
 ### How are API limits applied?
 
-There are two types of API limits. The bulk operation messages don't provide any way to bypass either type.
+Two types of API limits apply. The bulk operation messages don't provide any way to bypass either type.
 
 #### Service protection limits
 
