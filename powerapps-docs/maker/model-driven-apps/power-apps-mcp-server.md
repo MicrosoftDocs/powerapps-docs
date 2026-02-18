@@ -126,7 +126,7 @@ To provide feedback about the invoke_data_entry tool:
 1.	Select the feedback button in the task header.
 1.	Choose to give a compliment, report an issue, or make a suggestion.
 
-:::image type="content" source="media/add-agents-to-app/agent-feed-feedback.png"" alt-text="Agent feed feedback button":::
+:::image type="content" source="media/add-agents-to-app/agent-feed-feedback.png" alt-text="Agent feed feedback button":::
 
 
 
