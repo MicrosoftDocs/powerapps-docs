@@ -30,7 +30,7 @@ The control adapts its layout to the sections a maker chooses to configure, enab
 
 **Direction** – Determines whether the card layout is vertical or horizontal
 
-**Title** – Header title text displayed at the top of the card  
+**Title** – Header title text displayed on the card  
 
 **Subtitle** – Supplemental text displayed under or beside the title in the header 
 

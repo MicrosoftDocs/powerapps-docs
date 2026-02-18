@@ -2,8 +2,8 @@
 title: "Customize choices (Microsoft Dataverse) | Microsoft Docs"
 description: "Describes how to work with global and local choices (option sets) in code." 
 ms.date: 01/09/2023
-author: mkannapiran
-ms.author: kamanick
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 ms.topic: how-to
 search.audienceType:
