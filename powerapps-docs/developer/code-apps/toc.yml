@@ -5,6 +5,10 @@ items:
         href: index.yml
       - name: Overview
         href: overview.md
+      - name: What's new?
+        items:
+          - name: Quickstart with npm CLI
+            href: how-to/quickstart-npm-cli.md
       - name: Architecture
         href: architecture.md
       - name: Build
