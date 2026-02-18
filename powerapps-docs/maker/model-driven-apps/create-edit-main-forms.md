@@ -1,8 +1,8 @@
 ---
-title: "Create or edit model-driven app main forms in Power Apps | MicrosoftDocs"
+title: "Create or edit model-driven app main forms in Power Apps"
 description: "Learn how to create or edit a main form"
 ms.custom: ""
-ms.date: 05/23/2018
+ms.date: 02/12/2026
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -25,7 +25,7 @@ This article describes how to create or edit a main form for a table.
 
 When a new form is created for a table, its form type is **Main**. When the new form opens, it is identical to the form named **Information**. Columns, sections, tabs, navigation, and properties associated with the form can be edited and the form can then be saved.
 
-Each main form is composed of one or more tabs. Each tab can have one or more sections. Each section contains one or more columns, also called form fields. Forms can be cloned to provide a simpler starting point for form development. To clone a form, open the form you want to copy in the form editor, on the command bar select the down arrow next to **Save**, select **Save As**, enter the name for the new form, and then select **Save**.
+Each main form is composed of one or more tabs. Each tab can have one or more sections. Each section contains one or more columns, also called form fields. Forms can be cloned to provide a simpler starting point for form development. To clone a form, open the form you want to copy in the form editor, on the command bar select **Save a copy**, enter a **Display Name** and optionally a **Description**, and then select **Save**.
 
 > [!NOTE]
 > Make sure that you have the System Administrator or System Customizer security role or equivalent permissions within your environment to perform this task.
@@ -36,11 +36,9 @@ Each main form is composed of one or more tabs. Each tab can have one or more se
 
 2. Select **Tables** on the left navigation pane, select the table you want, and then select the **Forms** area. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 
-3. To create a new main form, on the toolbar select **Add form** > **Main Form**.  
-    \-OR-
-    To edit an existing main form, select any form with the **Type** of **Main**.
+3. To create a new main form, on the toolbar select **Newform** > **Main form** > **Create**.  
   
-4.  Change the form design in any of the following ways, as needed:
+4. Change the form design in any of the following ways, as needed:
     - [Add a column to or remove a column from a form](Add-move-or-delete-fields-on-form.md)
     - [Add a section to or remove a section from a form](add-move-or-delete-sections-on-form.md)
     - [Add a tab to or remove a tab from a form](add-move-or-delete-tabs-on-form.md)
@@ -48,17 +46,15 @@ Each main form is composed of one or more tabs. Each tab can have one or more se
     - [Edit form headers](form-designer-header-properties.md)
     - Edit form footers
     
-5.  Edit the properties for parts of the form, as needed:
+5. Edit the properties for parts of the form, as needed:
     
     - [Edit form properties](create-and-edit-forms.md#form-properties)
     - [Edit form column properties](Add-move-or-delete-fields-on-form.md#configure-column-properties-on-a-form)  
     - [Edit tab properties](add-move-or-delete-tabs-on-form.md#configure-tabs-on-a-form)
     - [Edit section properties](add-move-or-delete-sections-on-form.md)
 
-6.    When finished editing the form, select **Save** > **Save As**, enter a name for the form, and then select **OK**.
+6. When you finish editing the form and are ready to make it available in apps, select **Save and publish**.
 
-7.    When your customizations are complete, these can be [published](model-driven-app-glossary.md#publish): select **Publish**.
- 
 ### Next steps
 
 [Create and edit a main form walkthrough](create-and-edit-a-model-driven-form.md)

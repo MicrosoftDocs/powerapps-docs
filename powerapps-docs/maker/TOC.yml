@@ -1803,10 +1803,11 @@
       items:
       - name: Add agents overview
         href: ./model-driven-apps/add-agents-to-app.md
+        items:
+        - name: Work with Power Apps MCP Server
+          href: ./model-driven-apps/power-apps-mcp-server.md
       - name: Add an app assistant agent
         href: ./model-driven-apps/add-app-assistant-agent.md
-    - name: Configure suggested actions (preview)
-      href: ./model-driven-apps/configure-suggested-actions.md
     - name: Copilot chat for apps
       href:
       items:
@@ -2582,3 +2583,5 @@
     href: ./common/faq-agent-api-component.md
   - name: FAQ about generative pages in model-driven apps
     href: ./common/faq-generative-pages-model-driven.md
+  - name: FAQ about Power Apps MCP Server invoke_data_entry tool
+    href: ./common/faq-power-apps-mcp-server-invoke-data-entry.md
