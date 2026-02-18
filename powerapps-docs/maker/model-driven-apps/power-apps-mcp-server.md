@@ -122,9 +122,9 @@ When you configure a Copilot Studio agent to use the Power Apps MCP Server and e
 
 To provide feedback about the invoke_data_entry tool:
 
-1.	Open a invoke_data_entry task in the Agent Feed.
-1.	Select the feedback button in the task header.
-1.	Choose to give a compliment, report an issue, or make a suggestion.
+1. Open a invoke_data_entry task in the agent feed.
+1. Select the feedback button in the task header.
+1. Choose to give a compliment, report an issue, or make a suggestion.
 
 :::image type="content" source="media/add-agents-to-app/agent-feed-feedback.png" alt-text="Agent feed feedback button":::
 
