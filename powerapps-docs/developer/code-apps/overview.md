@@ -3,7 +3,7 @@ title: "Power Apps code apps overview"
 description: "Learn to use Power Apps code apps"
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 02/04/2026
+ms.date: 02/18/2026
 ms.reviewer: jdaly
 ms.topic: overview
 contributors:
@@ -33,10 +33,12 @@ Code apps require several developer tools like Visual Studio Code, git, dotnet, 
 
 Use these tools while creating code apps:
 
-- [Visual Studio Code](https://code.visualstudio.com/)
+- Your IDE of choice. For example, [Visual Studio Code](https://code.visualstudio.com/)
 - [Node.js](https://nodejs.org/) (LTS version)
-- [Git](https://git-scm.com/)
 - [Power Apps CLI](/power-platform/developer/cli/introduction)
+
+> [!NOTE]
+> The newest version of the [Power Apps SDK](https://www.npmjs.com/package/@microsoft/power-apps?activeTab=readme) includes a new npm CLI currently in Public Preview. This update decouples code apps from the Power Platform CLI - [`pac code`](/power-platform/developer/cli/reference/code) commands will eventually be deprecated. For more information about the new CLI and to try it out, see (link what's new article here).
 
 ### Enable code apps on a Power Platform environment
 
