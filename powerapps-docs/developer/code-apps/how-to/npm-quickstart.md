@@ -1,6 +1,6 @@
 ---
-title: "How to: Quickstart with npm CLI"
-description: "Create a Power Apps code app using the new npm CLI."
+title: "How to: Quickstart with npm CLI (preview)"
+description: "Create a Power Apps code app using the new npm CLI. (preview)"
 ms.author: jordanchodak
 author: jordanchodakWork
 ms.date: 02/18/2026
@@ -10,11 +10,11 @@ contributors:
  - JimDaly
 ---
 
-# Quickstart: Create a code app from scratch with the new npm CLI
+# Quickstart: Create a code app from scratch with the new npm CLI (preview)
 
 Here we use the new npm CLI (Public Preview) included starting with v1.0.4 of the [Power Apps SDK](https://www.npmjs.com/package/@microsoft/power-apps?activeTab=readme)
 
-This article shows you how to set up a blank app from Vite and convert it into a Power Apps code app using the Power Apps SDK with TypeScript configuration.
+This article shows you how to install the Power Apps SDK, set up a blank app from Vite, and convert it into a Power Apps code app.
 
 ## Prerequisites
 
