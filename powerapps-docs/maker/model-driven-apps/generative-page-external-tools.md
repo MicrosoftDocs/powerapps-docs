@@ -49,6 +49,8 @@ Before you start, ensure you have the following:
 - **PAC CLI**: Microsoft Power Platform CLI (PAC CLI) installed and authenticated to your Dataverse environment
   - [Install Power Platform CLI](/power-platform/developer/cli/introduction?tabs=windows#install-microsoft-power-platform-cli)
   - [Authenticate Power Platform CLI](/power-platform/developer/cli/reference/auth)
+- **Node.js**: Node.js runtime environment (required for code transpilation)
+  - [Download Node.js](https://nodejs.org/)
 
 > [!NOTE]
 > Your Power Platform environment must be located in the US region. Generative pages are not available in other regions yet.
@@ -67,22 +69,23 @@ If you haven't already installed and authenticated PAC CLI:
 
 #### Claude Code
 
-To use generative pages with Claude Code, install the genpage plugin from the marketplace:
+To use generative pages with Claude Code, install the Power Apps plugin from the Power Platform Skills marketplace:
 
-1. Add the Power Platform plugin marketplace: `/plugin marketplace add microsoft/power-platform-claude-plugins`
-2. Install the genpage plugin: `/plugin install genpage@power-platform-claude-plugins`
+1. Add the Power Platform Skills marketplace: `/plugin marketplace add microsoft/power-platform-skills`
+2. Install the Power Apps plugin: `/plugin install power-apps@power-platform-skills`
 
-Once installed, the plugin is automatically available when you ask Claude Code to create or edit generative pages.
+You can install the plugin with different scopes (global, local, or user). Depending on the scope, you need to be in the correct directory for Claude Code to use the plugin.
+
+> [!NOTE]
+> After installation, you may need to restart Claude Code for it to detect the plugin.
+
+Once installed, you can use the plugin by either:
+- Running the `/genpage` command explicitly
+- Simply describing the page you want to create (Claude Code automatically detects and uses the plugin)
 
 #### GitHub Copilot
 
-To use generative pages with GitHub Copilot, install the genpage extension:
-
-1. Open the Extensions view in your editor
-2. Search for "Power Platform Generative Pages"
-3. Install the extension
-
-Once installed, the extension provides context and capabilities for building generative pages with GitHub Copilot.
+To use generative pages with GitHub Copilot, refer to the [Power Platform Skills repository](https://github.com/microsoft/power-platform-skills) for the latest installation instructions and requirements.
 
 #### Other external tools
 
