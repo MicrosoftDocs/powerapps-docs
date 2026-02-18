@@ -135,7 +135,7 @@ Use the following steps to provision Application Insights, install the SDK, conn
    1. Go to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
    1. Follow the instructions in [Configure Content Security Policy](/power-apps/developer/code-apps/how-to/content-security-policy) to add the sources you identified in the previous steps to the allowed list for `connect-src`. See the example in the following section.
 
-      :::image type="content" source="../media/csp-sources.png" alt-text="Example CSP sources":::
+      :::image type="content" source="../media/csp-sources.png" alt-text="Example CSP sources" lightbox="../media/csp-sources.png":::
       
    1. Wait for the settings to be applied. CSP changes can take several minutes to propagate.
 
