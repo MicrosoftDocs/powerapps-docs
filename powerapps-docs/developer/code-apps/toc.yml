@@ -16,7 +16,7 @@ items:
           - name: Connect to data
             href: how-to/connect-to-data.md
           - name: Connect to Copilot Studio
-            href: connect-to-copilot-studio.md
+            href: how-to/connect-to-copilot-studio.md
           - name: Dataverse
             items:
               - name: Connect to Dataverse

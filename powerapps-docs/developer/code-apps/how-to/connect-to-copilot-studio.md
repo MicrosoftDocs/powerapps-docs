@@ -8,12 +8,8 @@ ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
  - JimDaly
-
 ---
-
 # How to: Connect your code app to Microsoft Copilot Studio agents
-
-## Overview
 
 Microsoft Copilot Studio agents bring AI-powered capabilities to your code apps. This article shows you how to add the Microsoft Copilot Studio connector to your code app and invoke agents to process user input and return intelligent responses.
 
@@ -41,7 +37,7 @@ If you don't have an existing connection, you must create one through the Power 
 
 ## Add the Microsoft Copilot Studio connector
 
-Once you have a Microsoft Copilot Studio connection created, use the PAC CLI to add it to your code app:
+After creating a Microsoft Copilot Studio connection, use the PAC CLI to add it to your code app:
 
 ```bash
 pac code add-data-source -a "shared_microsoftcopilotstudio" -c <connectionId>
@@ -53,18 +49,18 @@ This command automatically:
 
 ## Publish and get your agent name
 
-Before you can invoke an agent from your code app, you need to publish it and obtain its name.
+Before you can invoke an agent from your code app, you need to publish it and get its name.
 
 ### Publish your agent
 
 1. Open your agent in [Copilot Studio](https://copilotstudio.microsoft.com)
-2. Select **Publish** to publish your agent
+1. Select **Publish** to publish your agent
 
 ### Get your agent name
 
-1. In Copilot Studio, navigate to **Channels**
-2. Select **Web app**
-3. View the connection string to find your agent name
+1. In Copilot Studio, go to **Channels**.
+1. Select **Web app**.
+1. View the connection string to find your agent name.
 
 The URL format is:
 ```
@@ -80,7 +76,7 @@ https://{id}.environment.api.powerplatform.com/copilotstudio/dataverse-backed/au
 
 ### Use the ExecuteCopilotAsyncV2 operation
 
-The recommended way to invoke agents from code apps is using the **ExecuteCopilotAsyncV2** operation. This operation returns agent responses synchronously and is the same endpoint used by Power Automate's "Execute Agent and wait" action.
+Use the **ExecuteCopilotAsyncV2** operation to invoke agents from code apps. This operation returns agent responses synchronously. It's the same endpoint that Power Automate uses for the "Execute Agent and wait" action.
 
 **API path:** `/proactivecopilot/executeAsyncV2`
 
@@ -107,7 +103,7 @@ const response = await CopilotStudioService.ExecuteCopilotAsyncV2({
 | Parameter | Required | Type | Description |
 |-----------|----------|------|-------------|
 | `message` | Yes | string | The prompt or data to send to the agent. Can be a JSON string for structured data. |
-| `notificationUrl` | Yes | string | Placeholder URL (use `"https://notificationurlplaceholder"`). Required by the API but not used in synchronous mode. |
+| `notificationUrl` | Yes | string | Placeholder URL (use `"https://notificationurlplaceholder"`). The API requires this URL but doesn't use it in synchronous mode. |
 | `agentName` | Yes | string | The name of your published Copilot Studio agent. |
 
 ### Response structure
@@ -162,22 +158,22 @@ if (response.data.responses && response.data.responses.length > 0) {
 
 ## Troubleshooting
 
-### Common issues
+### Common problems
 
-**Issue:** Agent response is not returned
+**Problem:** Agent doesn't return a response.
 
-**Solution:** Ensure you're using the `ExecuteCopilotAsyncV2` operation (`/proactivecopilot/executeAsyncV2`). Other endpoints have known limitations:
-- `ExecuteCopilot` (`/execute`) - Only returns ConversationId, not the response (fire-and-forget)
-- `ExecuteCopilotAsync` (`/executeAsync`) - May return 502 "Cannot read server response" errors
+**Solution:** Make sure you're using the `ExecuteCopilotAsyncV2` operation (`/proactivecopilot/executeAsyncV2`). Other endpoints have known limitations:
+- `ExecuteCopilot` (`/execute`) - Only returns `ConversationId`, not the response (fire-and-forget).
+- `ExecuteCopilotAsync` (`/executeAsync`) - Might return 502 "Cannot read server response" errors.
 
-**Issue:** Property casing errors in response
+**Problem:** Property casing errors in response.
 
-**Solution:** Response property casing may vary between implementations. Check for all variations:
+**Solution:** Response property casing might vary between implementations. Check for all variations:
 - `conversationId`
 - `ConversationId`
 - `conversationID`
 
-Use optional chaining or check for multiple casing variations:
+Use optional chaining or check for multiple casing variations.
 
 ```typescript
 const convId = response.data.conversationId ??
@@ -185,13 +181,13 @@ const convId = response.data.conversationId ??
                response.data.conversationID;
 ```
 
-**Issue:** Agent returns empty or unexpected responses
+**Problem:** Agent returns empty or unexpected responses.
 
 **Solution:** Verify that:
-1. Your agent is published in Copilot Studio
-2. The agent name is correct and matches the published agent
-3. The message format matches what your agent expects
-4. Your agent has topics configured to handle the input
+1. You published your agent in Copilot Studio.
+1. The agent name is correct and matches the published agent.
+1. The message format matches what your agent expects.
+1. Your agent has topics configured to handle the input.
 
 
 ## See also
