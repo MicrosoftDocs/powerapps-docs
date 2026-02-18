@@ -20,6 +20,9 @@ This article shows how to set up a blank app from [Vite](https://vite.dev/) and 
 - [Power Platform CLI](/power-platform/developer/cli/introduction?tabs=windows)
 - [Git](https://git-scm.com/)
 
+> [!NOTE]
+> The newest version of the [Power Apps SDK](https://www.npmjs.com/package/@microsoft/power-apps?activeTab=readme) includes a new npm CLI currently in Public Preview. This update decouples code apps from the Power Platform CLI - [`pac code`](/power-platform/developer/cli/reference/code) commands will eventually be deprecated. For more information about the new CLI and to try it out, see [Quickstart with the new npm CLI](/power-apps/developer/code-apps/npm-quickstart).
+
 ## Steps
 
 1. Open a new terminal and enter:
