@@ -6,7 +6,7 @@ ms.topic: how-to
 ms.custom: canvas
 ms.collection: get-started
 ms.reviewer: 
-ms.date: 01/13/2026
+ms.date: 02/18/2026
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
@@ -16,38 +16,44 @@ contributors:
 ---
 # Create a canvas app based on Excel data
 
-You can use Excel data in several ways to create a canvas app.
+This article shows you how to create a canvas app using Excel data as your data source. Whether you have existing Excel spreadsheets with business data or want to leverage Excel's familiar structure, Power Apps provides flexible options to transform your data into powerful applications.
 
-In Excel, format your data as a table rather than just a range of cells. This formatting makes it easier for Power Apps to read and interact with the data. To format your data as a table, select your data and select **Insert** > **Table** in Excel. This formatting ensures that Power Apps can recognize and use the data effectively. For more information, see [Formatted as a table in Excel](https://support.office.com/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664).
+You'll learn three different approaches to work with Excel data:
 
-To create an app using Excel data, select one of the following options in [Power Apps](https://make.powerapps.com).
+Upload Excel files to create Dataverse tables for enhanced data management and security
+Connect to external Excel files stored in cloud services for quick app creation
+Start with a blank canvas app and add Excel data for complete customization control
+Before you begin, ensure your Excel data is properly formatted. This preparation step helps Power Apps read and interact with your data more effectively. For more information, see [Formatted as a table in Excel](https://support.office.com/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664).
 
-| Create options using Excel | Benefits | Navigation |
+
+To create an app by using Excel data, select one of the following options in [Power Apps](https://make.powerapps.com).
+
+| Create options by using Excel | Benefits | Navigation |
 |---|---|---|
 | [Upload an Excel or .CSV file to Power Apps](#upload-an-excel-or-csv-file-to-power-apps) | Uploaded Excel data generates a Dataverse table. With Dataverse's standard and custom tables, you can securely store your data in the cloud. These tables enable you to define your organization's data in a way that is tailored to your business needs, making it easier to use within your apps. | Select **Start with Data** > **Upload file**. |
 | [Connect to an external Excel file and use it to create a canvas app](#connect-to-an-external-excel-file-from-power-apps). Your data stays where it is. | Using the Excel connector in Power Apps provides a straightforward and fast method to create and deploy apps with data stored in Excel. It's especially advantageous for makers that already use Excel and want to enhance its functionality with minimal effort. Makers benefit from cloud access, easy data manipulation, rapid prototyping, and no need for a complex database setup. | Select **Start with Data** > **Excel Online (Business)**. |
-| [Create a blank canvas app and then add Excel data](#create-a-blank-canvas-app-and-add-excel-data) | You have complete flexibility, control, and customization. It allows you to design an app that meets your exact specifications without being limited by predesigned templates, providing greater creative freedom and adaptability to suit your unique needs. | On the left navigation pane, select **Create** > **Start with a blank canvas**. |
+| [Create a blank canvas app and then add Excel data](#create-a-blank-canvas-app-and-add-excel-data) | You have complete flexibility, control, and customization. It allows you to design an app that meets your exact specifications without being limited by predesigned templates, providing greater creative freedom and adaptability to suit your unique needs. | On the left navigation pane, select **Create** > **Create from blank**. Then select the app size. |
 
 ## Upload an Excel or CSV file to Power Apps
 
-When you upload your Excel data to Power Apps, it doesn't just stay as an Excel file. Instead, it gets converted into a Dataverse table. This conversion lets your data be more easily integrated and managed within Power Apps, offering more powerful features compared to using Excel alone. More information: [Why use Dataverse?](../data-platform/data-platform-intro.md#why-use-dataverse)
+When you upload your Excel data to Power Apps, it doesn't just stay as an Excel file. Instead, Power Apps converts it into a Dataverse table. This conversion makes it easier to integrate and manage your data within Power Apps, and you get more powerful features compared to using Excel alone. For more information, see [Why use Dataverse?](../data-platform/data-platform-intro.md#why-use-dataverse)
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
 1. On the home screen, select **Start with data**.
 
-1. On the **Create an app** page under **Start with data**, select **Upload file**.
+1. On the **Create an app** page, select **Upload file**.
 
-1. Select **Select from device** and navigate to the location where your Excel file is saved, and upload it.
+1. Select **Select from device** and go to the location where your Excel file is saved. Select the file to upload it.
 
    > [!NOTE]
    > The maximum file size limit is 5 GB.
 
-1. When the table is created, select a column name or the table name to edit the properties to suit your needs. If there are values in cells that are incompatible with the selected data type when changing column data types, those values are removed when the table is generated. More information: [Create and edit tables using Power Apps](../data-platform/create-edit-entities-portal.md#create-new-tables)
+1. When Power Apps creates the table, select a column name or the table name to edit the properties to suit your needs. If you change column data types and there are values in cells that don't match the selected data type, Power Apps removes those values when it generates the table. For more information, see [Create and edit tables using Power Apps](../data-platform/create-edit-entities-portal.md#create-new-tables).
 
 1. Select **Row ownership** and choose how you want to manage row ownership.
 
-1. When you're done, select **Save and open app**. The system uploads the first 20 rows of data so you can start reviewing the data in your app. The remaining data is uploaded in the background.
+1. When you're done, select **Save and open app**. Power Apps uploads the first 20 rows of data so you can start reviewing the data in your app. The system uploads the remaining data in the background.
 
 ### Known issues
 
@@ -57,15 +63,15 @@ When you upload your Excel data to Power Apps, it doesn't just stay as an Excel 
 
 Store the Excel file in a cloud storage service like Dropbox, Google Drive, OneDrive, or OneDrive for Business because Power Apps can only connect to Excel files that are stored in the cloud.
 
-Power Apps has an Excel connector that allows you to access your Excel data. The [Excel Online (Business)](/connectors/excelonlinebusiness/) connector offers flexibility by accessing a wide variety of cloud-based file storage services.
+Power Apps has an Excel connector that you can use to access your Excel data. The [Excel Online (Business)](/connectors/excelonlinebusiness/) connector offers flexibility by accessing a wide variety of cloud-based file storage services.
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
 1. On the home screen, select **Start with data**.
 
-1. On the **Create an app** page under **Start with data**, select **Excel Online (Business)**.
+1. On the **Create an app**, select **Excel Online (Business)**.
 
-1. Only one connection is shown at a time. To select a different connection, select the **...** button to switch connections or add a new connection.
+1. Only one connection appears at a time. To select a different connection, select the **...** button to switch connections or add a new connection.
 
 1. Enter the file location and select the table.
 
@@ -75,7 +81,7 @@ For more information about how to share Excel data, see [Sharing Excel tables](c
 
 ## Create a blank canvas app and add Excel data
 
-Create a blank canvas app and then use Excel data that's [formatted as a table](https://support.office.com/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664) as the source of the app's information.
+Create a blank app and then use Excel data that's [formatted as a table](https://support.office.com/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664) as the source of the app's information.
 
 Follow the example below to create an app with two screens where users can view (browse) the data from an Excel file on one screen, and on another screen, they can interact with (add, modify, or remove) that data. The data interaction features, such as creating, updating, and deleting records, are built into the second screen of the app.
 
@@ -94,7 +100,7 @@ Follow the example below to create an app with two screens where users can view 
 
 1. [Format the table in Excel](https://support.office.com/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664) and name it **Schedule** so that Power Apps can parse the information.
 
-1. Save the file under the name **eventsignup.xlsx**, close it, and then upload it to a [cloud-storage account](connections/cloud-storage-blob-connections.md) such as OneDrive.
+1. Save the file as **eventsignup.xlsx**, close it, and then upload it to a [cloud-storage account](connections/cloud-storage-blob-connections.md) such as OneDrive.
 
 > [!IMPORTANT]
 > You can use your own Excel file and review this example for general concepts only. However, the data in the Excel file must be [formatted as a table](https://support.office.com/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664).
@@ -103,7 +109,7 @@ Follow the example below to create an app with two screens where users can view 
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
-1. On the left navigation pane, select **Create** > **Start with a blank canvas**.
+1. On the left navigation pane, select **Create** > **Start from blank**.
 
 1. Select the **Phone size** layout.
 
@@ -120,7 +126,7 @@ Follow the example below to create an app with two screens where users can view 
 
 1. Under **Choose an Excel file**, find and then select the **eventsignup.xlsx** that you saved earlier.
 
-1. Under **Choose a table**, select the checkbox for **Schedule**, and then select **Connect**.
+1. Under **Choose a table**, select the check box for **Schedule**, and then select **Connect**.
 
 1. In the upper-right corner of the **Data** pane, close it by selecting the close icon (**X**).
 
