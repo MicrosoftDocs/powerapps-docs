@@ -16,61 +16,62 @@ contributors:
 ---
 # Create a canvas app based on Excel data
 
-You can use Excel data in several ways to create a canvas app. 
+You can use Excel data in several ways to create a canvas app.
 
 In Excel, format your data as a table rather than just a range of cells. This formatting makes it easier for Power Apps to read and interact with the data. To format your data as a table, select your data and select **Insert** > **Table** in Excel. This formatting ensures that Power Apps can recognize and use the data effectively. For more information, see [Formatted as a table in Excel](https://support.office.com/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664).
 
-To create an app using Excel data, select one of the following options in [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+To create an app using Excel data, select one of the following options in [Power Apps](https://make.powerapps.com).
 
-|Create options using Excel  |Benefits | Navigation  |
-|---------|---------|---------|
-|[Import an external Excel or .CSV file to Power Apps](get-started-create-from-blank.md#import-an-external-excel-file) |  Uploaded Excel data generates a Dataverse table. With Dataverse's standard and custom tables, you can securely store your data in the cloud. These tables enable you to define your organization's data in a way that is tailored to your business needs, making it easier to use within your apps.| Select **Start with Data** > **Create new tables** > **Import an Excel file or .CSV** option.      | 
-| [Connect to an external Excel file and use it to create a canvas app](get-started-create-from-blank.md#connect-to-an-external-excel-file-from-power-apps). Your data stay where it is. |  Using the Excel connector in Power Apps provides a straightforward, and fast method to create and deploy apps with data stored in Excel. It's especially advantageous for makers that already use Excel and want to enhance its functionality with minimal effort. Makers benefit from cloud access, easy data manipulation, rapid prototyping, and no need for a complex database setup. | Select **Start with Data** > **Connect external data** >  **From Excel**.   |
-|[Create a blank canvas app and then add Excel data](get-started-create-from-blank.md#create-a-blank-canvas-app-and-add-excel-data)   | You have complete flexibility, control, and customization. It allows you to design an app that meets your exact specifications without being limited by predesigned templates, providing greater creative freedom and adaptability to suit your unique needs  |  On the left navigation pane, select **Create** > **Start with a blank canvas**.       |
+| Create options using Excel | Benefits | Navigation |
+|---|---|---|
+| [Upload an Excel or .CSV file to Power Apps](#upload-an-excel-or-csv-file-to-power-apps) | Uploaded Excel data generates a Dataverse table. With Dataverse's standard and custom tables, you can securely store your data in the cloud. These tables enable you to define your organization's data in a way that is tailored to your business needs, making it easier to use within your apps. | Select **Start with Data** > **Upload file**. |
+| [Connect to an external Excel file and use it to create a canvas app](#connect-to-an-external-excel-file-from-power-apps). Your data stays where it is. | Using the Excel connector in Power Apps provides a straightforward and fast method to create and deploy apps with data stored in Excel. It's especially advantageous for makers that already use Excel and want to enhance its functionality with minimal effort. Makers benefit from cloud access, easy data manipulation, rapid prototyping, and no need for a complex database setup. | Select **Start with Data** > **Excel Online (Business)**. |
+| [Create a blank canvas app and then add Excel data](#create-a-blank-canvas-app-and-add-excel-data) | You have complete flexibility, control, and customization. It allows you to design an app that meets your exact specifications without being limited by predesigned templates, providing greater creative freedom and adaptability to suit your unique needs. | On the left navigation pane, select **Create** > **Start with a blank canvas**. |
 
+## Upload an Excel or CSV file to Power Apps
 
-## Import an external Excel file
+When you upload your Excel data to Power Apps, it doesn't just stay as an Excel file. Instead, it gets converted into a Dataverse table. This conversion lets your data be more easily integrated and managed within Power Apps, offering more powerful features compared to using Excel alone. More information: [Why use Dataverse?](../data-platform/data-platform-intro.md#why-use-dataverse)
 
-When you import your Excel data to Power Apps, it doesn't just stay as an Excel file. Instead, it gets converted into a Dataverse table. This conversion lets your data be more easily integrated and managed within Power Apps, offering more powerful features compared to using Excel alone. More information: [Why use Dataverse?](../data-platform/data-platform-intro.md#why-use-dataverse)
+1. Sign in to [Power Apps](https://make.powerapps.com).
 
-1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. Select **Start with Data** > **Create new tables** > **Import an Excel file or .CSV**.
+1. On the home screen, select **Start with data**.
+
+1. On the **Create an app** page under **Start with data**, select **Upload file**.
+
 1. Select **Select from device** and navigate to the location where your Excel file is saved, and upload it.
 
-    The maximum file size limit is 5 GB.
+   > [!NOTE]
+   > The maximum file size limit is 5 GB.
 
 1. When the table is created, select a column name or the table name to edit the properties to suit your needs. If there are values in cells that are incompatible with the selected data type when changing column data types, those values are removed when the table is generated. More information: [Create and edit tables using Power Apps](../data-platform/create-edit-entities-portal.md#create-new-tables)
-1. Select **Row ownership** and choose how you want to manage row ownership. 
+
+1. Select **Row ownership** and choose how you want to manage row ownership.
+
 1. When you're done, select **Save and open app**. The system uploads the first 20 rows of data so you can start reviewing the data in your app. The remaining data is uploaded in the background.
 
 ### Known issues
 
 - The current data upload process doesn't take into account the environment data format setting.
 
-
 ## Connect to an external Excel file from Power Apps
 
 Store the Excel file in a cloud storage service like Dropbox, Google Drive, OneDrive, or OneDrive for Business because Power Apps can only connect to Excel files that are stored in the cloud.
 
-Power Apps has an Excel connector that allows you to access your Excel data. There are two versions available:
+Power Apps has an Excel connector that allows you to access your Excel data. The [Excel Online (Business)](/connectors/excelonlinebusiness/) connector offers flexibility by accessing a wide variety of cloud-based file storage services.
 
-- The older version connects to Excel files stored in specific locations, such as OneDrive for Business. 
+1. Sign in to [Power Apps](https://make.powerapps.com).
 
-- Use the newer version, called [Excel Online (Business)](/connectors/excelonlinebusiness/), which offers greater flexibility by accessing a wider variety of cloud-based file storage services.
+1. On the home screen, select **Start with data**.
 
-1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. Depending on how you want to create your app, from the home screen, select one of the following options:
-   - To create a single-page gallery app with a responsive layout, choose either:
-     - **Start with data** > **Connect to external data** > **From Excel**.
-     - **Start with page design** > **Gallery connected to external data** > **From Excel**.
-   - To create a three screen mobile app, select **Start with an app template** > **From Excel**.
-1. Only one connection is shown at a time. To select a different connection, select the **...** button to switch connection or add a new connection.
+1. On the **Create an app** page under **Start with data**, select **Excel Online (Business)**.
+
+1. Only one connection is shown at a time. To select a different connection, select the **...** button to switch connections or add a new connection.
+
 1. Enter the file location and select the table.
+
 1. When you're done, select **Create app**.
 
-
 For more information about how to share Excel data, see [Sharing Excel tables](connections/cloud-storage-blob-connections.md#sharing-excel-tables).
-
 
 ## Create a blank canvas app and add Excel data
 
@@ -82,14 +83,14 @@ Follow the example below to create an app with two screens where users can view 
 
 1. Copy this data and paste it into an Excel file.
 
-    | StartDay | StartTime | Volunteer | Backup |
-    | --- | --- | --- | --- |
-    | Saturday |10am-noon |Vasquez |Kumashiro |
-    | Saturday |noon-2pm |Ice |Singhal |
-    | Saturday |2pm-4pm |Myk |Mueller |
-    | Sunday |10am-noon |Li |Adams |
-    | Sunday | noon-2pm |Singh |Morgan |
-    | Sunday | 2pm-4pm |Batye |Nguyen |
+   | StartDay | StartTime | Volunteer | Backup |
+   |---|---|---|---|
+   | Saturday | 10am-noon | Vasquez | Kumashiro |
+   | Saturday | noon-2pm | Ice | Singhal |
+   | Saturday | 2pm-4pm | Myk | Mueller |
+   | Sunday | 10am-noon | Li | Adams |
+   | Sunday | noon-2pm | Singh | Morgan |
+   | Sunday | 2pm-4pm | Batye | Nguyen |
 
 1. [Format the table in Excel](https://support.office.com/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664) and name it **Schedule** so that Power Apps can parse the information.
 
@@ -106,62 +107,55 @@ Follow the example below to create an app with two screens where users can view 
 
 1. Select the **Phone size** layout.
 
-    The app opens in [Power Apps Studio](power-apps-studio.md) where you can add data and start building the app.
+   The app opens in [Power Apps Studio](power-apps-studio.md) where you can add data and start building the app.
 
 1. In the middle of the screen, select **Connect to data**.
 
 1. In the **Data** pane, select **Add data**. Select the connection for your cloud-storage account if it appears. Otherwise, follow these steps to add a connection such as OneDrive:
 
-1. In the search box, enter **OneDrive** and select it.
-1. Select **Add a connection**.
-1. On the connection pane, select **Connect**.
-1. If prompted, provide your credentials for that account.
+   1. In the search box, enter **OneDrive** and select it.
+   1. Select **Add a connection**.
+   1. On the connection pane, select **Connect**.
+   1. If prompted, provide your credentials for that account.
 
 1. Under **Choose an Excel file**, find and then select the **eventsignup.xlsx** that you saved earlier.
 
 1. Under **Choose a table**, select the checkbox for **Schedule**, and then select **Connect**.
 
-1. In the upper-right corner of the **Data** pane, close it by selecting the close icon (X).
+1. In the upper-right corner of the **Data** pane, close it by selecting the close icon (**X**).
 
 ### Create the view screen
 
 1. On the command bar, select **New screen** > **List**.
 
-    A screen is added with several default controls, such as a search box and a **[Gallery](controls/control-gallery.md)** control. The gallery covers the entire screen under the search box.
+   A screen is added with several default controls, such as a search box and a **Gallery** control. The gallery covers the entire screen under the search box.
 
-1. At the top of the new screen, select the **[Title]** [Label](controls/control-text-box.md) and rename it to **View records**.
-
-     ![Change title bar for view records.](./media/get-started-create-from-blank/change-title-bar.png)
+1. At the top of the new screen, select the **[Title]** label control and rename it to **View records**.
 
 1. In the **Tree view**, select **BrowseGallery1**.
 
-    ![Add a list screen.](./media/get-started-create-from-blank/select-gallery.png)
-
 1. In the gallery's **Properties** pane, set the **Layout** to **Title, subtitle, and body**.
-
-    ![Open the layout menu.](./media/get-started-create-from-blank/select-layout.png)
 
 1. In the formula bar, replace **CustomGallerySample** with **Schedule**, and replace both instances of **SampleText** with **Volunteer**.
 
 1. On the right edge of the formula bar, select the **Expand formula bar** down arrow, and then select **Format text**.
 
-    The formula matches this example:
+   The formula matches this example:
 
-    ```power-fx
-    SortByColumns(
-        Search(
-            Schedule,
-            TextSearchBox1.Text,
-            "Volunteer"
-        ),
-        "Volunteer",
-        If(
-            SortDescending1,
-            SortOrder.Descending,
-            SortOrder.Ascending
-        )
-    )
-    ```
+   ```powerfx
+   SortByColumns(
+       Search(
+           Schedule,
+           TextSearchBox1.Text,
+           "Volunteer"
+       ),
+       "Volunteer",
+       If(
+           SortDescending1,
+           SortOrder.Descending,
+           SortOrder.Ascending
+       )
+   )
 
 1. In the **Properties** pane, select **Edit** next to the **Fields** label.
 
