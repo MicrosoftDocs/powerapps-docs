@@ -85,7 +85,13 @@ Once installed, you can use the plugin by either:
 
 #### GitHub Copilot
 
-To use generative pages with GitHub Copilot, refer to the [Power Platform Skills repository](https://github.com/microsoft/power-platform-skills) for the latest installation instructions and requirements.
+To use generative pages with GitHub Copilot, install the genpage extension:
+
+1. Open the Extensions view in your editor
+2. Search for "Power Platform Generative Pages"
+3. Install the extension
+
+Once installed, the extension provides context and capabilities for building generative pages with GitHub Copilot.
 
 #### Other external tools
 
