@@ -38,7 +38,7 @@ Use these tools while creating code apps:
 - [Power Apps CLI](/power-platform/developer/cli/introduction)
 
 > [!NOTE]
-> The newest version of the [Power Apps SDK](https://www.npmjs.com/package/@microsoft/power-apps?activeTab=readme) includes a new npm CLI currently in Public Preview. This update decouples code apps from the Power Platform CLI - [`pac code`](/power-platform/developer/cli/reference/code) commands will eventually be deprecated. For more information about the new CLI and to try it out, see [Quickstart with the new npm CLI](/power-apps/developer/code-apps/npm-quickstart).
+> The newest version of the [Power Apps SDK](https://www.npmjs.com/package/@microsoft/power-apps?activeTab=readme) includes a new npm CLI currently in Public Preview. Code apps now use the Power Apps SDK CLI directly instead of the Power Platform CLI's [`pac code`](/power-platform/developer/cli/reference/code) commands, which will be deprecated in a future release. Learn more about the new commands and try them out in [What's new in the Power Apps SDK](link-to-whats-new-article).
 
 ### Enable code apps on a Power Platform environment
 
