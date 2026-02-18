@@ -24,57 +24,75 @@ landingContent:
         links:
           - text: Overview
             url: overview.md
+      - linkListType: quickstart
+        links:
           - text: "Quickstart: Create a code app"
             url: how-to/create-an-app-from-scratch.md
-  # Card
-  - title: How To Connect to Data
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: "Connect to data"
-            url: how-to/connect-to-data.md
-          - text: "Connect to Dataverse"
-            url: how-to/connect-to-dataverse.md
-          - text: "Connect to Azure SQL"
-            url: how-to/connect-to-azure-sql.md
-          - text: "SharePoint operations"
-            url: how-to/sharepoint-operations.md
-          - text: "Create a Basic Asset Management API with Azure Functions"
-            url: how-to/create-basic-asset-management-api-azure-functions.md
-          - text: "Get context data"
-            url: how-to/retrieve-context.md
-          - text: "Get Dataverse tables metadata"
-            url: how-to/get-table-metadata.md
-  # Card
-  - title: Advanced How-To Guides
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: "Analyze data requests and responses"
-            url: how-to/analyze-data-request-response.md
-          - text: "Application Lifecycle Management (ALM)"
-            url: how-to/alm.md
-          - text: "Set up Azure App Insights"
-            url: how-to/set-up-azure-app-insights.md
-          - text: "Migrate your code to v1.0"
-            url: how-to/migrate-to-v1.md
-
-    # Card
-  - title: Troubleshooting guides
-    linkLists:
-      - linkListType: tutorial
-        links:
-           - text: "Adding a data source"
-             url: troubleshoot-add-datasource.md
-           - text: "Zscaler issues"
-             url: troubleshoot-zscaler-issues.md
-    
-    # Card
-  - title: Architecture
-    linkLists:
       - linkListType: architecture
         links:
-          - text: Code apps Architecture
+          - text: Architecture
             url: architecture.md
-          - text: System limits and configuration
+
+  # Card
+  - title: Build
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: System configuration
             url: system-limits-configuration.md
+      - linkListType: how-to-guide
+        links:
+          - text: Connect to data
+            url: how-to/connect-to-data.md
+          - text: Connect to Dataverse
+            url: how-to/connect-to-dataverse.md
+          - text: Get Dataverse tables metadata
+            url: how-to/get-table-metadata.md
+          - text: Connect to Azure SQL
+            url: how-to/connect-to-azure-sql.md
+          - text: SharePoint operations
+            url: how-to/sharepoint-operations.md
+          - text: Create a basic asset management API with Azure Functions
+            url: how-to/create-basic-asset-management-api-azure-functions.md
+          - text: Analyze data requests and responses
+            url: how-to/analyze-data-request-response.md
+          - text: Get context data
+            url: how-to/retrieve-context.md
+
+  # Card
+  - title: Deploy
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Application lifecycle management (ALM)
+            url: how-to/alm.md
+
+  # Card
+  - title: Monitor
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Manage PAC CLI code command telemetry
+            url: how-to/telemetry.md
+          - text: Set up Azure App Insights
+            url: how-to/set-up-azure-app-insights.md
+
+  # Card
+  - title: Manage
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Configure Content Security Policy (CSP)
+            url: how-to/content-security-policy.md
+          - text: Migrate your code to v1.0
+            url: how-to/migrate-to-v1.md
+
+  # Card
+  - title: Troubleshoot
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Adding a data source
+            url: troubleshoot-add-datasource.md
+          - text: Zscaler issues
+            url: troubleshoot-zscaler-issues.md

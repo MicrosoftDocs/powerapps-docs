@@ -2,8 +2,8 @@
 title: "Sample: Dump table definitions to a file (Microsoft Dataverse) | Microsoft Docs"
 description: "This sample shows how to write out all the table definitions to an XML file." 
 ms.date: 04/03/2022
-author: mkannapiran
-ms.author: kamanick
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 ms.topic: sample
 search.audienceType:

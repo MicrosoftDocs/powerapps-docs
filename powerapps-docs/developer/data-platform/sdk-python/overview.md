@@ -3,7 +3,7 @@ title: "Dataverse SDK for Python overview (preview)"
 description: "Use Dataverse to store and access data for use in data science and analyses."
 ms.author: paulliew
 author: paulliew
-ms.date: 12/08/2025
+ms.date: 2/17/2026
 ms.reviewer: phecke
 ms.topic: overview
 contributors:
@@ -72,3 +72,4 @@ Here are a few known limitations of the current (preview) release.
 
 - [SDK for Python source](https://github.com/microsoft/PowerPlatform-DataverseClient-Python)
 - [Blog: Introducing the Dataverse SDK for Python](https://www.microsoft.com/power-platform/blog/2025/12/03/dataverse-sdk-python/)
+- [Analyze and automate business data with Dataverse SDK for Python](/power-platform/architecture/reference-architectures/dataverse-sdk-for-python)
