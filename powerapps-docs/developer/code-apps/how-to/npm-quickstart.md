@@ -12,7 +12,7 @@ contributors:
 
 # Quickstart: Create a code app from scratch with the new npm CLI (preview)
 
-Here we use the new npm CLI (Public Preview) included starting with v1.0.4 of the [Power Apps SDK](https://www.npmjs.com/package/@microsoft/power-apps?activeTab=readme)
+The newest version of the [Power Apps SDK](https://www.npmjs.com/package/@microsoft/power-apps?activeTab=readme) includes a new npm CLI currently in Public Preview. Code apps now use the Power Apps SDK CLI directly instead of the Power Platform CLI's [`pac code`](/power-platform/developer/cli/reference/code) commands, which will be deprecated in a future release.
 
 This article shows you how to install the Power Apps SDK, set up a blank app from Vite, and convert it into a Power Apps code app.
 
