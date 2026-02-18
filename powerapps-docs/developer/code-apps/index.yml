@@ -34,6 +34,14 @@ landingContent:
             url: architecture.md
 
   # Card
+  - title: What's new?
+    linkLists:
+      - linkListType: whats-new
+        links:
+          - text: Quickstart with npm CLI
+            url: how-to/quickstart-npm-cli.md
+
+  # Card
   - title: Build
     linkLists:
       - linkListType: concept
@@ -44,6 +52,8 @@ landingContent:
         links:
           - text: Connect to data
             url: how-to/connect-to-data.md
+          - text: Connect to Copilot Studio
+            url: connect-to-copilot-studio.md
           - text: Connect to Dataverse
             url: how-to/connect-to-dataverse.md
           - text: Get Dataverse tables metadata
