@@ -1,6 +1,6 @@
 ---
 title: Get started with Power Apps| MicrosoftDocs
-description: Learn how to navigate the Power Apps home page, create apps, manage environments, and access key features. Start building your first Power Apps application today.
+description: Learn how to navigate the Power Apps home page, create apps, manage environments, and access key features. Get started with Power Apps today to build your first application.
 ms.custom: 
 ms.date: 02/19/2026
 ms.update-cycle: 180-days
@@ -21,9 +21,10 @@ ms.collection:
 
 # Get started with Power Apps
 
-The [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) home page offers various options for creating your own apps, opening apps that you or others created, and performing related tasks. These tasks range from the most simple, such as identifying the licenses that give you access, to more advanced capabilities like creating custom connections to specific data sources.
+Get started with Power Apps to build your first app quickly and efficiently. The Power Apps home page is your starting point for creating apps, managing existing ones, and accessing powerful features that streamline your workflow.
 
-If your organization enables AI, the home page also includes [Copilot](ai-overview.md) features.
+**What you'll accomplish:** By the end of this article, you'll learn how to navigate the interface, create your first app, and access Copilot AI features to accelerate development.
+
 
 Select the appropriate tab in the following section to learn more.
 
@@ -36,13 +37,19 @@ Legend:
 1. [Search](#2--search)
 1. [Environment information and settings](#3--environment-information-and-settings)
 1. [Build apps](#4--build-apps)
-1. [View and it plans](#5---view-and-edit-plans)
+1. [View and edit plans](#5---view-and-edit-plans)
 1. [View and edit apps](#6--view-and-edit-apps)
 
 
 > [!NOTE]
 >
 > Try the new Power Apps experience—an AI-native solution designed to simplify app creation. Effortlessly automate workflows, connect data sources, and speed up development, all without needing advanced coding skills. For more information, see [Overview of the New Power Apps experience (preview)](vibe/overview.md).
+
+### Quick start options
+
+- **New to Power Apps?** Start with our [5-minute canvas app tutorial](create-blank-app.md)
+- **Have existing data?** [Create an app from SharePoint](app-from-sharepoint.md) or [Excel](get-started-create-from-blank.md)
+- **Need help choosing?** Review [which app type is right for you](../../index.yml)
 
 ## 1 – Left navigation pane
 
@@ -106,7 +113,7 @@ From the left navigation pane, select **Power Platform** to access Power Platfor
 - Discover new app templates
 - Access help documentation
 
-**Quick tip:** Start typing in the search bar, then select the banner icon next to your app to open or edit it.
+**Quick tip:** Start typing in the search bar, and then select the banner icon next to your app to open or edit it.
 
 ## 3 – Environment information and settings
 
@@ -127,7 +134,7 @@ Select the bell icon to see notifications. The notification center stores notifi
 
 ### Settings
 
-Select the gear icon to perform tasks such as connecting to data sources, identifying your Power Apps licenses, and opening the page where you can perform administrative tasks.
+Select the gear icon to perform tasks such as connecting to data sources, identify your Power Apps licenses, and open the page where you can perform administrative tasks.
 
 - **Admin center**: Opens another window and goes to the Power Platform admin center.
 - **Plans(s)**: View your licenses. For more information, see [Licensing overview](/power-platform/admin/pricing-billing-skus).
@@ -149,18 +156,18 @@ In the header, select the question mark icon to find more information about [Pow
 > [!div class="mx-imgBorder"]
 > ![List of model-driven apps with an ellipsis menu open.](media/intro-maker-portal/help-icon.png)
 
-Find links to documentation, Power Apps training on Microsoft Learn, the Power Apps Community where you can share information with users in other organizations, and the Power Apps blog where the newest features are announced.
+You find links to documentation, Power Apps training on Microsoft Learn, the Power Apps Community where you can share information with users in other organizations, and the Power Apps blog where the newest features are announced.
 
 
 ## 4 – Build apps
 
 **Ready to build your first app?** Choose the option that best fits your needs:
 
-- **Start with a design**: Pick a layout or start with blank canvas app and design your app.
-- **Start with data**: Create a new table in Datavers, or connect to an existing datasourse such as, Dataverse, SharePoint, Excel, SQL, or upload a file.
-- **Start with a plan**: Use [plans](../plan-designer/plan-designer.md) to describle your business problem and generate apps, table, and more.
+- **[Start with a design →](create-blank-app.md)**: Pick a layout or start with blank canvas app and design your app.
+- **[Start with data →](data-platform-create-app-scratch.md)**: Create a new table in Dataverse, or connect to an existing datasource, such as Dataverse, SharePoint, Excel, SQL, or upload a file.
+- **[Start with a plan →](../plan-designer/plan-designer.md)**: Use plans to describe your business problem and generate apps, tables, and more.
 
-You can aslo create app using the **Create** menu on the left navigaion pane. Review the following articles, to learn more about creating apps:
+You can also create app using the **Create** menu on the left navigation pane. Review the following articles, to learn more about creating apps:
 
 - [Create a blank canvas app from scratch](create-blank-app.md).
 - [Create a canvas app using Microsoft Dataverse](data-platform-create-app-scratch.md)
@@ -190,5 +197,11 @@ Select a plan to [view and edit a plan](../plan-designer/create-plan.md#view-and
 
 ## 6 – View and edit apps
 
-Select an app to view and edit an app. You can also, use the **Apps** menu in the left navigation pane, find the apps that you own or apps that are shared with you. You can also filter and sort apps quickly to find the app you're looking for. Hover over the app name to **Edit**, **Play**, or select **Commands** to perform various actions such as share the app, view app details, and access app settings.
+**Manage your apps effectively:**
+
+- **Access your apps:** Use the **Apps** menu in the left navigation pane to find apps you own or apps shared with you
+- **Find apps quickly:** Filter and sort apps to locate what you need
+- **Take action:** Hover over any app name to **Edit**, **Play**, or access **Commands** for sharing, viewing details, and settings
+
+**Ready to customize?** [Learn advanced app editing techniques →](../../index.yml)
 
