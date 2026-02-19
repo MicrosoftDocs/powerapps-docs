@@ -2,7 +2,7 @@
 title: Get started with Power Apps| MicrosoftDocs
 description: Learn how to navigate the Power Apps home page, create apps, manage environments, and access key features. Start building your first Power Apps application today.
 ms.custom: 
-ms.date: 01/12/2026
+ms.date: 02/19/2026
 ms.update-cycle: 180-days
 ms.reviewer: mkaur
 ms.topic: overview
@@ -23,7 +23,7 @@ ms.collection:
 
 The [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) home page offers various options for creating your own apps, opening apps that you or others created, and performing related tasks. These tasks range from the most simple, such as identifying the licenses that give you access, to more advanced capabilities like creating custom connections to specific data sources.
 
-If your organization enables AI, the home page also includes the new [Copilot](ai-overview.md) features.
+If your organization enables AI, the home page also includes [Copilot](ai-overview.md) features.
 
 Select the appropriate tab in the following section to learn more.
 
@@ -35,10 +35,14 @@ Legend:
 1. [Left navigation pane](#1--left-navigation-pane)
 1. [Search](#2--search)
 1. [Environment information and settings](#3--environment-information-and-settings)
-1. [Create a plan](#4---create-a-plan)
-1. [Plans](#6--build-apps)
-1. [Build Apps](#6--build-apps)
+1. [Build apps](#4--build-apps)
+1. [View and it plans](#5---view-and-edit-plans)
+1. [View and edit apps](#6--view-and-edit-apps)
 
+
+> [!NOTE]
+>
+> Try the new Power Apps experience—an AI-native solution designed to simplify app creation. Effortlessly automate workflows, connect data sources, and speed up development, all without needing advanced coding skills. For more information, see [Overview of the New Power Apps experience (preview)](vibe/overview.md).
 
 ## 1 – Left navigation pane
 
@@ -148,35 +152,24 @@ In the header, select the question mark icon to find more information about [Pow
 Find links to documentation, Power Apps training on Microsoft Learn, the Power Apps Community where you can share information with users in other organizations, and the Power Apps blog where the newest features are announced.
 
 
-## 4 - Create a plan
-
-Use Plan designer to create user roles, data tables, and apps that address your business needs. For more information, see [Create a plan using Plan designer](../plan-designer/create-plan.md).
-
-## 5 – View and edit your plans
-
-Use the **Plans** menu in the left navigation pane to [access and edit your plans](../plan-designer/create-plan.md#view-and-edit-plans).
-
-
-## 6 – Build apps
+## 4 – Build apps
 
 **Ready to build your first app?** Choose the option that best fits your needs:
 
-**For beginners:** Start with Copilot or use a template
-**For specific data:** Connect to Excel or Dataverse  
-**For custom solutions:** Start with a blank canvas
+- **Start with a design**: Pick a layout or start with blank canvas app and design your app.
+- **Start with data**: Create a new table in Datavers, or connect to an existing datasourse such as, Dataverse, SharePoint, Excel, SQL, or upload a file.
+- **Start with a plan**: Use [plans](../plan-designer/plan-designer.md) to describle your business problem and generate apps, table, and more.
 
-To create an app, select **Create** and then choose from these options:
+You can aslo create app using the **Create** menu on the left navigaion pane. Review the following articles, to learn more about creating apps:
 
-- **Start with Copilot**: [Build apps through conversation](ai-conversations-create-app.md).
-- **Start with data**: [Create a canvas app using Microsoft Dataverse](data-platform-create-app-scratch.md) or [Create a canvas app based on Excel data](get-started-create-from-blank.md).
-- **Start with a blank app**: [Create a blank canvas app from scratch](create-blank-app.md).
-- **Start with a page design**: Select the type of app you want to create. Use the **Filter** option in the top-right to narrow templates by app type or features like offline use, responsive design, or embedding into other Microsoft 365 products. For more information, see [Overview of creating apps in Power Apps](../index.md).
-- **Start with an app template**: Choose from app templates, including data-centered templates for mobile apps. For more information, see [Create a canvas app from a template](get-started-test-drive.md).
+- [Create a blank canvas app from scratch](create-blank-app.md).
+- [Create a canvas app using Microsoft Dataverse](data-platform-create-app-scratch.md)
+- [create a canvas app based on Excel data](get-started-create-from-blank.md).
+- [Create a canvas app with data from a list](app-from-sharepoint.md)
 
   > [!NOTE]
   >  If you're trying to create an app by using Dataverse but the option is unavailable, review the [permissions table](#permissions-for-dataverse) in this article.
 
-- **Apps**: On the **Home** page, find the apps that you own or apps that are shared with you. You can also filter and sort apps quickly to find the app you're looking for. Hover over the app name to **Edit**, **Play**, or select **Commands** to perform various actions such as share the app, view app details, and access app settings.
 
 ### Permissions for Dataverse
 
@@ -190,4 +183,12 @@ To create an app, select **Create** and then choose from these options:
 | No |No | Yes | Switch to another environment using the environment picker | 
 | No|No| No | Contact your admin |
 
+
+## 5 - View and edit plans
+
+Select a plan to [view and edit a plan](../plan-designer/create-plan.md#view-and-edit-plans). You can also, use the **Plans** menu in the left navigation pane to access your plans.
+
+## 6 – View and edit apps
+
+Select an app to view and edit an app. You can also, use the **Apps** menu in the left navigation pane, find the apps that you own or apps that are shared with you. You can also filter and sort apps quickly to find the app you're looking for. Hover over the app name to **Edit**, **Play**, or select **Commands** to perform various actions such as share the app, view app details, and access app settings.
 
