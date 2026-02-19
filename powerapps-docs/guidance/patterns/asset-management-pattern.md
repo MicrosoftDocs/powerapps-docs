@@ -11,9 +11,8 @@ ms.author: kathyos
 ms.reviewer: kathyos
 
 ---
-# Pattern: Asset management
 
-<!--![Collage of asset management app screenshots.](media/asset-management-collage.jpg "Collage of asset management app screenshots")-->
+# Pattern: Asset management
 
 Power Apps provides a great platform for managing your company's physical
 assets.
@@ -174,8 +173,7 @@ possible. Power Apps made the development process quick and easy."
 
 ### Virgin Atlantic
 
-[Read the whole story
-here](https://powerapps.microsoft.com/blog/virgin-atlantic-drives-agile-wins-for-mobile-workforce-with-the-power-platform/)
+[Read the whole story.](https://www.microsoft.com/power-platform/blog/power-apps/virgin-atlantic-drives-agile-wins-for-mobile-workforce-with-the-power-platform/)
 
 Virgin Atlantic needed to hand out iPads to 3000 cabin crew members. A Power
 Apps app was created by the IT Asset Management team to scan the barcode of the

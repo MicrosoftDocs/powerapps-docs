@@ -87,7 +87,7 @@ IsMatch(TextInput1\_2.Text, "(?!^\[0-9\]\\\*$)(?!^\[a-zA-Z\]\\\*$)(\[a-zA-Z0-9\]
 
 ## Optimize app OnStart
 
-The `OnStart` property for cavas apps plays a crucial role in defining actions that occur when the app is launched. This property allows app developers to execute global initialization tasks, set up variables, and perform actions that should happen only once during the app's startup process. Understanding and effectively utilizing the `OnStart` property is essential for creating responsive and efficient canvas apps.
+The `OnStart` property for canvas apps plays a crucial role in defining actions that occur when the app is launched. This property allows app developers to execute global initialization tasks, set up variables, and perform actions that should happen only once during the app's startup process. Understanding and effectively utilizing the `OnStart` property is essential for creating responsive and efficient canvas apps.
 
 A recommended approach is to streamline the `App.OnStart` function by migrating variable setups to named formulas. Named formulas, especially those configured early in the app lifecycle, prove to be advantageous. These formulas handle the initialization of variables based on data calls, providing a cleaner and more organized structure for your code. More details [Build large and complex canvas apps - Power Apps | Microsoft Learn](/power-apps/maker/canvas-apps/working-with-large-apps#split-up-long-formulas).
 
@@ -118,7 +118,7 @@ Refer to <https://Power Apps.microsoft.com/en-us/blog/app-startscreen-a-new-decl
 
 > [!WARNING]
 > Avoid dependencies between `StartScreen` and `OnStart`. Referencing a named formula that in turn references a global variable may cause a race condition in which `StartScreen` isn't applied correctly. 
-**Note**: we shouldn't have dependencies between StartScreen and OnStart. We block referencing global variables in StartScreen, but we can reference a named formula, that in turn references a global variable, and that may cause a race condition in which the StartScreen isn't applied correctly.
+**Note**: We shouldn't have dependencies between `StartScreen` and `OnStart`. We block referencing global variables in `StartScreen`, but we can reference a named formula, which in turn references a global variable, and that might cause a race condition in which the `StartScreen` isn't applied correctly.
 
 ### Named formulas
 
