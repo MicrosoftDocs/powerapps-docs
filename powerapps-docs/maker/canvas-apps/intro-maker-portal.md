@@ -42,7 +42,7 @@ Legend:
 
 > [!NOTE]
 >
-> Try the new Power Apps experience—an AI-native solution designed to simplify app creation. Effortlessly automate workflows, connect data sources, and speed up development, all without needing advanced coding skills. For more information, see [Overview of the New Power Apps experience (preview)](vibe/overview.md).
+> Try the new Power Apps experience—an AI-native solution designed to simplify app creation. Effortlessly automate workflows, connect data sources, and speed up development, all without needing advanced coding skills. For more information, see [Overview of the New Power Apps experience (preview)](../../vibe/overview.md).
 
 ### Quick start options
 
