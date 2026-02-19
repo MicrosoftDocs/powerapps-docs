@@ -81,7 +81,7 @@ To configure the automatic download of files and images on sync, you need to [cr
 
 1. Select the table that has file or image column that you want to enable for offline.
 
-1. In the table details pane that appears, under **Related rows + Files and Images**, select the file and image column that you want to configure on sync.
+1. In the table details pane that appears, under the section **Related rows + Files and Images**, select the file and image column that you want to configure on sync.
 
 1. Go back and select **Save**.
 
