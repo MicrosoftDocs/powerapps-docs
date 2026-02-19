@@ -74,8 +74,6 @@ If you don't have an existing table, you can create one directly from the **Star
    - Use **Copilot** to describe your tables, columns, rows, and relationships, and it generates them for you.
    - Import data from Excel or .CSV files, or SharePoint lists by selecting **Import data** in the Copilot pane.
 
-    :::image type="content" source="media/data-platform-create-app/create-new-tables.png" alt-text="Screenshot of the Create new tables designer with Copilot pane open.":::
-
 1. When you finish defining your tables, select **Save and exit** to generate the app.
 
 ## Add a Dataverse table in a blank app
@@ -209,7 +207,7 @@ To help you understand how to create an app with data from Dataverse, start by c
 
 ## See also
 
-- [Vibe coding in Power Apps (preview)](vibe-coding.md)
+- [Overview of the new Power Apps vibe experience (preview)](../../vibe/overview.md)
 - [Customize a gallery](customize-layout-sharepoint.md)
 - [Create a column](../data-platform/create-edit-field-portal.md#create-a-column)
 
