@@ -1,0 +1,150 @@
+---
+title: Info button modern control in canvas apps - Power Apps
+description: Learn about the details, properties, and examples of the Info button modern control in Power Apps.
+author: yogeshgupta698
+ms.topic: reference
+ms.custom: canvas
+ms.date: 02/18/2026
+ms.subservice: canvas-maker
+ms.author: yogupt
+ms.reviewer: mkaur
+search.audienceType:
+  - maker
+---
+
+# Info button modern control in canvas apps
+
+An interactive information icon that displays detailed content in a flyout when clicked or hovered.
+
+## Description
+
+Use the **Info button** control to provide contextual help, tooltips, or additional information without cluttering your app interface. The control displays as an information icon that, when interacted with, shows a content flyout with rich text or formatted information. Key properties for this control are **Content**, **IconColor**, and **OnSelect**.
+
+> [!NOTE]
+> This article describes the Info button modern control. For information about migrating from the previous version, see [Migrate to the Info button modern control](info-button-migration.md).
+
+## General
+
+**Content** – The information text displayed in the flyout when the user clicks or hovers over the info button icon. Supports plain text and formatted content.
+
+**Visible** – Whether the control appears or is hidden. Use a Power Fx formula to show or hide the control based on app state.
+
+## Behavior
+
+**OnSelect** – How the app responds when the user clicks the info button. Use this to trigger additional actions beyond showing the flyout, such as logging analytics or updating variables.
+
+**DisplayMode** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**). In **View** mode, the icon is shown but the flyout cannot be opened.
+
+## Size and position
+
+**X** – Distance between the left edge of the control and the left edge of its parent container (screen if no parent container).
+
+**Y** – Distance between the top edge of the control and the top edge of its parent container (screen if no parent container).
+
+**Width** – Distance between the control's left and right edges. Default is **32**.
+
+**Height** – Distance between the control's top and bottom edges. Default is **32**.
+
+**PaddingTop** – Distance between the icon and the top edge of the control.
+
+**PaddingBottom** – Distance between the icon and the bottom edge of the control.
+
+**PaddingLeft** – Distance between the icon and the left edge of the control.
+
+**PaddingRight** – Distance between the icon and the right edge of the control.
+
+## Style and theme
+
+**BasePaletteColor** – The base color used by the theme to generate the control's color palette. Changes this property to apply a different theme color to the control.
+
+**Font** – The name of the font family used for text in the flyout content.
+
+**Size** – The font size of text in the flyout, in points. Default is **15**.
+
+**Color** – The color of text in the flyout content.
+
+**FontWeight** – The weight (thickness) of text in the flyout. Accepts `FontWeight` enum values:
+
+| Value | Description |
+|-------|-------------|
+| `FontWeight.Bold` | Bold text |
+| `FontWeight.Semibold` | Semibold text |
+| `FontWeight.Normal` | Normal weight (default) |
+| `FontWeight.Lighter` | Lighter weight |
+
+**Italic** – Whether the text in the flyout appears in italic style.
+
+**Underline** – Whether a line appears under the text in the flyout.
+
+**Strikethrough** – Whether a line appears through the middle of the text in the flyout.
+
+**IconColor** – The color of the information icon button itself. Use this to match your app's theme or draw attention to important information.
+
+## Accessibility
+
+**AccessibleLabel** – A label for screen readers to announce what the info button provides information about. Should describe the purpose or topic of the information, not just "info button".
+
+**ContentLanguage** – The language used for the flyout content. Inherits from app settings if not specified.
+
+## Example
+
+The following YAML example shows contextual help buttons for form fields with conditional styling and tooltip content:
+
+```yaml
+- EmailInfoButton:
+    Control: ModernInformationButton@1.0.0
+    Properties:
+      Content: ="We'll use this email to send you order confirmations and account notifications. Your email is never shared with third parties."
+      IconColor: =Color.Blue
+      AccessibleLabel: ="Email address information"
+      X: =200
+      Y: =100
+      Width: =28
+      Height: =28
+
+- PasswordInfoButton:
+    Control: ModernInformationButton@1.0.0
+    Properties:
+      Content: ="Password requirements: At least 8 characters, one uppercase letter, one number, and one special character (!@#$%)"
+      IconColor: =Color.Orange
+      AccessibleLabel: ="Password requirements"
+      X: =200
+      Y: =150
+      Width: =28
+      Height: =28
+
+- GeneralInfoButton:
+    Control: ModernInformationButton@1.0.0
+    Properties:
+      Content: ="Click the info icon to view additional details and helpful tips."
+      IconColor: =Color.Gray
+      Size: =14
+      X: =200
+      Y: =200
+      Width: =28
+      Height: =28
+```
+
+## What's new in this version
+
+This new Info button modern control includes the following improvements:
+
+- **Content expansion fixed**: The information flyout background now properly expands to fit all content. Previously, long text could be clipped or overflow the flyout.
+- **Improved reliability**: Resolved intermittent crashes that occurred when clicking the info button in certain scenarios.
+- **Simplified properties**: Streamlined property organization with most styling properties now in the **Design** section for better discoverability.
+- **AcceptsFocus removed**: The **AcceptsFocus** property has been removed. The control automatically manages focus behavior for accessibility.
+- **Consistent styling**: Font and color properties now consistently apply to both the icon and flyout content.
+
+## Best practices
+
+- **Keep content concise**: While the flyout can display lengthy text, aim for 2-3 short sentences for better user experience.
+- **Use accessible labels**: Always provide descriptive **AccessibleLabel** text that explains what information the button provides.
+- **Strategic placement**: Position info buttons next to form fields, labels, or unfamiliar terms where users might need clarification.
+- **Consistent iconcolor**: Use consistent colors across your app to help users recognize info buttons quickly.
+- **Mobile considerations**: Ensure info buttons are large enough to tap easily on mobile devices (minimum 32x32 pixels).
+
+## See also
+
+- [Migrate to the Info button modern control](info-button-migration.md)
+- [Modern controls overview](overview-modern-controls.md)
+- [Size and location properties](../properties-size-location.md)
