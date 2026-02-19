@@ -2,7 +2,7 @@
 title: "Create an Azure Synapse Link for Dataverse with your Azure Synapse Workspace | MicrosoftDocs"
 description: "Learn how to export table data to Azure Synapse Analytics in Power Apps."
 ms.custom: ""
-ms.date: 11/06/2025
+ms.date: 02/18/2026
 ms.reviewer: "Mattp123"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -158,10 +158,12 @@ If you deleted the file system when unlinking, follow the steps above to relink 
 After creating an Azure Synapse Link, two versions of the table data will be synchronized in Azure Synapse Analytics and/or Azure Data Lake Storage Gen2 in your Azure subscription by default to ensure you can reliably consume updated data in the lake at any given time:
 
 - Near real-time data: Provides a copy of data synchronized from Dataverse via Azure Synapse Link in an efficient manner by detecting what data has changed since it was initially extracted or last synchronized.
-- Snapshot data: Provides a read-only copy of near real-time data that is updated at regular intervals (in this case every hour).  
+- Snapshot data: Provides a read-only copy of near real-time data that is updated at regular intervals (in this case every hour).
 
 > [!NOTE]
-> To create read-only snapshot data, ensure that the **Permitted scope for copy operations** setting is configured to **From any storage account**. More information: [Configure the permitted scope for copy operations]( /azure/storage/common/security-restrict-copy-operations?tabs=portal#configure-the-permitted-scope-for-copy-operations-preview)
+>
+> - Near real-time sync performance depends on several factors including the initial data load size, data churn rate, and the volume of changes. In situations with high transaction volumes, such as processes in Finance and Operations apps generating millions of records in a short time, or processes like the master planning feature included with Dynamics 365 Supply Chain Management that delete and re-create large volumes of records. Synapse Link must synchronize all changes including deletes. In these high-volume scenarios, data availability in near real-time can't be guaranteed.  
+> - To create read-only snapshot data, ensure that the **Permitted scope for copy operations** setting is configured to **From any storage account**. More information: [Configure the permitted scope for copy operations]( /azure/storage/common/security-restrict-copy-operations?tabs=portal#configure-the-permitted-scope-for-copy-operations-preview)
 
 1. Select the desired Azure Synapse Link, and then select the **Go to Azure Synapse Analytics workspace** from the top panel.
 1. Expand **Lake Databases** from the left panel, select **dataverse**-*environmentName*-*organizationUniqueName*, and then expand **Tables**.
