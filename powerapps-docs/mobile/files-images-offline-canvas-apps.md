@@ -5,7 +5,7 @@ description: Learn how to configure files and images in offline canvas apps.
 author: trdehove
 ms.component: pa-user
 ms.topic: how-to
-ms.date: 02/18/2026
+ms.date: 02/19/2026
 ms.subservice: mobile
 ms.author: ritwikganni
 ms.custom: ""
@@ -77,7 +77,7 @@ To configure the automatic download of files and images on sync, you need to [cr
 
 1. Set the **Can be used offline** toggle to On.
 
-1. Under **Select offline mode and profile**, select **Edit selected profile** from the "...".
+1. Under **Select offline profile**, select **Edit selected profile** from the "...".
 
 1. Select the table that has file or image column that you want to enable for offline.
 
