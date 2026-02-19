@@ -1,8 +1,9 @@
 ---
-title: Handling errors in Power Apps
+title: Error handling in Power Apps
 description: Discover best practices for error handling in Power Apps, including validation, patching, and custom error messages.
-ms.date: 07/15/2025
-ms.topic: concept-article
+#customer intent: As a Power Apps user, I want to understand how to handle validation errors so that I can ensure accurate user input in my app.
+ms.date: 02/18/2026
+ms.topic: best-practice
 ms.subservice: guidance
 ms.service: powerapps
 author: robstand
@@ -15,11 +16,14 @@ ms.custom:
 
 # Error handling
 
-Power Fx includes a preview feature that enables formula-level error handling. By default, this feature is turned on in Settings.
+Power Fx includes a feature that enables formula-level error handling. By default, this feature is turned on in Settings.
 
-:::image type="content" source="media/image28.png" alt-text="Screenshot of Upcoming features in Settings showing Formula-level error management set to On.":::
+This setting provides access to formulas like `IfError`, `IsError`, `Error`, and `IsBlankorError`. These functions help you detect errors, provide alternative values, or take specific actions based on the error.
+Learn more in the [Power Fx documentation](/power-platform/power-fx/reference/function-iferror).
 
-This setting provides access to formulas like `IfError`, `IsError`, `Error`, and `IsBlankorError`. These functions allow you to detect errors, provide alternative values, or take specific actions based on the error.
+> [!NOTE]
+>
+> If an app has disabled the **Formula-level error management** feature under **Settings** > **Updates** > **Retired**, these functions will not work correctly.
 
 ## Validation error handling
 
@@ -92,9 +96,9 @@ Navigate('Success Screen');
 Notify("Error: the invoice could not be created", NotificationType.Error);
 ```
 
-### Custom error message with OnError property
+### Custom error message with the OnError property
 
-The Power Apps `OnError` property lets you capture all unhandled errors in your app. The `OnError` property gives you the ability to execute an expression that runs every time an error isn't handled by the app (such as storing it in a variable or using a function such as `IfError` to replace it with some other value). To use the [`OnError` property](/power-platform/power-fx/reference/object-app#onerror-property), you need to add it to the app that you want to apply it to. Then, you can specify the error message that you want to display by writing a formula in the `OnError` property box.
+The Power Apps `OnError` property lets you capture all unhandled errors in your app. The `OnError` property gives you the ability to execute an expression that runs every time an error isn't handled by the app (such as storing it in a variable or using a function such as `IfError` to replace it with some other value). To use the [`OnError` property](/power-platform/power-fx/reference/object-app#onerror-property), add it to the app that you want to apply it to. Then, specify the error message that you want to display by writing a formula in the `OnError` property box.
 
 It's important to note that `App.OnError` can't replace the error in the same way that `IfError` can. At the point that `App.OnError` is executed, the error has already happened, and the result has propagated through other formulas. `App.OnError` only controls how the error is reported to the end user and provides a hook for the maker to log the error if desired.
 
@@ -115,7 +119,7 @@ Notify(
 
 ## Related information
 
-[Power Fx error handling](/power-platform/power-fx/error-handling)
+- [Power Fx error handling](/power-platform/power-fx/error-handling)
 
 ## Next step
 

@@ -2,7 +2,7 @@
 title: Power Apps code optimization
 description: Learn about how to optimize code in Power Apps.
 ms.date: 06/19/2025
-ms.topic: concept-article
+ms.topic: best-practice
 ms.subservice: guidance
 ms.service: powerapps
 author: robstand
