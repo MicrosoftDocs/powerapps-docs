@@ -1,20 +1,19 @@
 ---
-title: "Power Apps patterns: Real-world stories | Microsoft Docs"
-description: See real-world examples of how customers have used Power Apps in a wide variety of common scenarios.
+title: "Power Apps patterns: Real-world stories"
+description: Explore real-world Power Apps success stories and learn how organizations solve business challenges with proven patterns and practical solutions.
+#customer intent: As a business leader, I want to explore real-world examples of Power Apps usage so that I can identify solutions for my organization's challenges.
 author: kathyos
-
 ms.topic: concept-article
 ms.custom: guidance
-ms.date: 09/24/2024
+ms.date: 02/20/2026
 ms.subservice: guidance
 ms.author: kathyos
-ms.reviewer: kathyos
-
+ms.reviewer: jhaskett-msft
 ---
 
 # Power Apps patterns: Real-world stories
 
-These real-world stories show how enterprise customers are using Microsoft Power Platform and the patterns that successful makers have used to bring these solutions to life.
+Discover how organizations across industries solve real business challenges with Power Apps. These stories highlight proven patterns and practical approaches that successful makers use to build effective solutions.
 
 See also: [Pattern: Approval](approval-pattern.md) | [Pattern: Asset management](asset-management-pattern.md) | [Pattern: Calculation](calculator-pattern.md) | [Pattern: Communication](communication-pattern.md) | [Pattern: Inspection](inspection-pattern.md) | [Pattern: Project management](project-management-pattern.md)
 
@@ -26,7 +25,7 @@ See also: [Pattern: Approval](approval-pattern.md) | [Pattern: Asset management]
 
 - [Prolific app maker ignites low-code revolution at Schlumberger](https://www.microsoft.com/en-us/power-platform/blog/power-apps/schlumberger/) (career promotion evaluation app)
 
-- [Teaming up to house America: Fannie Mae empowers a workplace culture to deliver more with Microsoft 365](https://customers.microsoft.com/en-us/story/1551283378331954333-fannie-mae-banking-capital-markets-microsoft-purview-data-loss-prevention) (request processing)
+- [Teaming up to House America: Fannie Mae empowers a workplace culture to deliver more with Microsoft 365](https://customers.microsoft.com/story/1551283378331954333-fannie-mae-banking-capital-markets-microsoft-purview-data-loss-prevention) (request processing)
 
 - [Microsoft transforms sales planning process using the Power Platform](https://www.microsoft.com/en-us/power-platform/blog/power-apps/microsoft-account-planning/) (sales planning)
 
@@ -38,5 +37,8 @@ See also: [Pattern: Approval](approval-pattern.md) | [Pattern: Asset management]
 
 - [Kelly Roofing uses Power Apps to capture photos at work sites](https://www.microsoft.com/en-us/power-platform/blog/power-apps/kellyroofing/) (construction crew scheduling)
 
+## Related information
+
+- [Real-world case studies](/power-platform/guidance/case-studies/)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
