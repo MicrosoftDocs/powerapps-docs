@@ -6,9 +6,9 @@ ms.reviewer: matp
 ms.topic: "how-to"
 applies_to: 
   - "powerapps"
-author: Milindav
+author: anibakore-msft
 ms.subservice: dataverse-maker
-ms.author: Milindav
+ms.author: banirud
 search.audienceType: 
   - maker
 ms.custom: bap-template
@@ -125,11 +125,11 @@ As described in the email, the trusted services function that allows Azure Synap
 
 If you decide to transition your Synapse workspace to private links as described in the email, complete the following steps to ensure Azure Synapse Link for Dataverse continues to work as expected:
 
-1. **Create a Synapse workspace with a managed virtual network.** A managed virtual network isolates your Synapse workspace and is required to use managed private endpoints. Follow the steps in [Azure Synapse Analytics managed virtual network](https://learn.microsoft.com/azure/synapse-analytics/security/synapse-workspace-managed-vnet).
+1. Create a Synapse workspace with a managed virtual network. A managed virtual network isolates your Synapse workspace and is required to use managed private endpoints. Follow the steps in [Azure Synapse Analytics managed virtual network](/azure/synapse-analytics/security/synapse-workspace-managed-vnet).
 
-2. **Create a managed private endpoint for your storage account (ADLS Gen 2).** This replaces the trusted services firewall exception with a private, secure connection. Follow the steps in [Create a managed private endpoint to your data source](https://learn.microsoft.com/azure/synapse-analytics/security/how-to-create-managed-private-endpoints).
+2. Create a managed private endpoint for your storage account (ADLS Gen 2). This replaces the trusted services firewall exception with a private, secure connection. Follow the steps in [Create a managed private endpoint to your data source](/azure/synapse-analytics/security/how-to-create-managed-private-endpoints).
 
-3. **Enable the following network settings:**
+3. Enable these network settings:
    - On the **storage account**: enable **Allow Azure services and resources to access this storage account** (under **Networking** > **Firewalls and virtual networks**).
    - On the **Synapse workspace**: enable **Allow Azure services and resources to access this workspace** (under **Networking**).
 
