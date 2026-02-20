@@ -19,7 +19,7 @@ applies_to:
 
 # Create and edit generative pages with AI code generation tools
 
-This article describes how to use AI code generation tools, such as Claude Code, to create and edit generative pages for model-driven apps in Power Apps. This approach enables you to integrate advanced code generation capabilities directly into your development workflow, allowing you to create new generative pages or iterate on existing ones using natural language instructions.
+This article describes how to use AI code generation tools, such as GitHub Copilot CLI and Claude Code, to create and edit generative pages for model-driven apps in Power Apps. This approach allows you to integrate advanced code generation capabilities directly into your development workflow, allowing you to create new generative pages or iterate on existing ones using natural language instructions.
 
 ## Overview
 
@@ -35,67 +35,83 @@ Using AI code generation tools with generative pages provides an alternative dev
 ### How it works
 
 1. You describe what you want to build in natural language (for example, "Create a generative page dashboard showing top accounts by revenue")
-2. The AI code generation tool asks clarifying questions about your requirements
+2. The AI code generation tool uses installed generative page skills or other context about generative pages to ask clarifying questions about your requirements
 3. The tool generates production-ready TypeScript/React code for your generative page
-4. The tool deploys the code to your environment using PAC CLI commands
+4. The tool deploys the code to your environment using [generative page PAC CLI commands](https://learn.microsoft.com/en-us/power-platform/developer/cli/reference/model)
 5. Your generative page appears in your model-driven app
 
 ## Prerequisites
 
-Before you start, ensure you have the following:
+Before you start, ensure you have the required software and permissions: 
 
-- **AI code generation tool**: Claude Code CLI or another AI code generation tool that supports custom instructions and workflows
+### Software requirements
+
+| Component | Minimum version | More information |
+|-----------|-----------------|------------------|
+| Node.js | 18.0 or later | [Download Node.js](https://nodejs.org/) |
+| Power Platform CLI (PAC CLI) | Latest | [Install PAC CLI](/power-platform/developer/cli/introduction?tabs=windows#install-microsoft-power-platform-cli) |
+| GitHub Copilot CLI or Claude Code or another code generation tool | Latest | [GitHub Copilot CLI](https://github.com/features/copilot/cli/) or [Claude Code](https://claude.ai/code) |
+
+You also need:
+- An **authenticated PAC CLI session** connected to your target environment. 
+    - See [Authenticate Power Platform CLI](/power-platform/developer/cli/reference/auth) for more details on getting connected.
 - **Power Apps environment**: A Power Platform environment with a model-driven app to deploy pages to
-- **PAC CLI**: Microsoft Power Platform CLI (PAC CLI) installed and authenticated to your Dataverse environment
-  - [Install Power Platform CLI](/power-platform/developer/cli/introduction?tabs=windows#install-microsoft-power-platform-cli)
-  - [Authenticate Power Platform CLI](/power-platform/developer/cli/reference/auth)
-- **Node.js**: Node.js runtime environment (required for code transpilation)
-  - [Download Node.js](https://nodejs.org/)
 
 > [!NOTE]
-> Your Power Platform environment must be located in the US region. Generative pages are not available in other regions yet.
+> Your Power Platform environment must be located in the US region. This capability will be coming to other regions soon.
 
-## Setup
+### Install the plugin
 
-### Install and authenticate PAC CLI
+#### Quick installation of all Power Platform plugins
 
-If you haven't already installed and authenticated PAC CLI:
+Run the installer to set up all Power Platform plugins
 
-1. Install the Microsoft Power Platform CLI following the instructions at [Install Power Platform CLI](/power-platform/developer/cli/introduction?tabs=windows#install-microsoft-power-platform-cli).
+```powershell
+# Windows (PowerShell):
+iwr https://raw.githubusercontent.com/microsoft/power-platform-skills/main/scripts/install.js -OutFile install.js; node install.js; del install.js
 
-2. Authenticate PAC CLI to your Power Apps environment following the instructions at [pac auth](/power-platform/developer/cli/reference/auth).
+# Mac OS/Linux/Windows (cmd):
+curl -fsSL https://raw.githubusercontent.com/microsoft/power-platform-skills/main/scripts/install.js | node
+```
 
-### Enable generative pages in external tools
+The installer automatically:
+- Detects available tools (Claude Code, GitHub Copilot CLI)
+- Registers the plugin marketplace and installs all plugins  
+- Enables auto-update so plugins stay current
 
-#### Claude Code
+After installation, restart your AI tool if needed.
 
-To use generative pages with Claude Code, install the Power Apps plugin from the Power Platform Skills marketplace:
+
+### Install only the generative page plugin
+
+To install only the generative page plugin for GitHub Copilot CLI or Claude Code:
 
 1. Add the Power Platform Skills marketplace: `/plugin marketplace add microsoft/power-platform-skills`
 2. Install the Power Apps plugin: `/plugin install power-apps@power-platform-skills`
 
-You can install the plugin with different scopes (global, local, or user). Depending on the scope, you need to be in the correct directory for Claude Code to use the plugin.
-
-> [!NOTE]
-> After installation, you may need to restart Claude Code for it to detect the plugin.
+> [!NOTE] 
+> For Claude, you can install the plugin with different scopes (global, local, or user). Depending on the scope, you need to be in the correct directory for Claude Code to use the plugin. See [Extend Claude with skills](https://code.claude.com/docs/en/skills#share-skills)
 
 Once installed, you can use the plugin by either:
 - Running the `/genpage` command explicitly
-- Simply describing the page you want to create (Claude Code automatically detects and uses the plugin)
+- Simply describing the page you want to create (the tool should automatically detect and use the plugin)
 
-#### GitHub Copilot
+> [!TIP]
+> Turn on auto-update to automatically receive updates to the marketplace and skills. Use the `/plugin` command, navigate to **Marketplaces**, choose the marketplace, and turn on auto-update.
 
-To use generative pages with GitHub Copilot, install the genpage extension:
+### Using other AI code generation tools
 
-1. Open the Extensions view in your editor
-2. Search for "Power Platform Generative Pages"
-3. Install the extension
+For other AI code generation tools, ensure your tool has access to the generative page resources from the [Power Platform skills](https://github.com/microsoft/power-platform-skills/tree/main/plugins/power-apps) GitHub repository. The power-apps folder includes component documentation, sample code, PAC CLI command reference, and workflow instructions necessary to create code adhering to generative page requirements. Consult the repository [readme](https://github.com/microsoft/power-platform-skills/blob/main/README.md) for information on accessing and using these resources with your preferred tool.
 
-Once installed, the extension provides context and capabilities for building generative pages with GitHub Copilot.
+## Skills overview
 
-#### Other external tools
+The Power Apps plugin provides the following skill for working with generative pages:
 
-For other AI code generation tools, ensure your tool has access to the generative page resources from the [Power Platform skills](https://github.com/microsoft/power-platform-skills/tree/main/plugins/power-apps) GitHub repository. The power-apps folder includes component documentation, sample code, PAC CLI command reference, and workflow instructions. Consult the repository [readme](https://github.com/microsoft/power-platform-skills/blob/main/README.md) for information on accessing and using these resources with your preferred tool.
+| Skill | Command | Description | 
+|-------|-------------|---------|
+| Generative Pages |  `/genpage` | Create code for generative pages (for creation or editing scenarios) |
+
+This skill enables you to describe what you want to build and have the AI tool generate complete TypeScript/React code for your generative page, then deploy it directly to your Power Apps environment.
 
 ## Create a new generative page
 
@@ -175,12 +191,10 @@ The AI tool then:
 
 The limitations for generative pages created with AI code generation tools are the same as those for generative pages created in the Power Apps maker portal:
 
-- Your page can connect to only Dataverse tables
-- Only US English is supported
+- Your page can connect to only Dataverse tables. 
+- Only US English is supported. Support for other languages and regions is coming soon.
 - Collaboration isn't supported—ensure only one maker is working on a generative page at a time
 - Only specific data types are supported (Choice, Currency, Customer, Date and Time, Date Only, Decimal Number, Floating Point Number, Image, Lookup, Multiline Text, Status, Status Reason, Text, Whole Number, Yes/No, Unique Identifier)
-
-More information: [Generative pages limitations](/power-apps/maker/model-driven-apps/generative-pages#limitations)
 
 ## Related content
 
