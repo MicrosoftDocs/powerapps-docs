@@ -127,9 +127,13 @@ If you decide to transition your Synapse workspace to private links as described
 
 1. **Create a Synapse workspace with a managed virtual network.** A managed virtual network isolates your Synapse workspace and is required to use managed private endpoints. Follow the steps in [Azure Synapse Analytics managed virtual network](https://learn.microsoft.com/azure/synapse-analytics/security/synapse-workspace-managed-vnet).
 
-1. **Create a managed private endpoint for your storage account (ADLS Gen 2).** This replaces the trusted services firewall exception with a private, secure connection. Follow the steps in [Create a managed private endpoint to your data source](https://learn.microsoft.com/azure/synapse-analytics/security/how-to-create-managed-private-endpoints).
+2. **Create a managed private endpoint for your storage account (ADLS Gen 2).** This replaces the trusted services firewall exception with a private, secure connection. Follow the steps in [Create a managed private endpoint to your data source](https://learn.microsoft.com/azure/synapse-analytics/security/how-to-create-managed-private-endpoints).
 
-1. **Enable the "Allow Azure services and resources to access this storage account" setting** on both the Synapse workspace and the storage account. This network setting must be enabled at both levels for Azure Synapse Link to connect successfully.
+3. **Enable the following network settings:**
+   - On the **storage account**: enable **Allow Azure services and resources to access this storage account** (under **Networking** > **Firewalls and virtual networks**).
+   - On the **Synapse workspace**: enable **Allow Azure services and resources to access this workspace** (under **Networking**).
+
+   Both settings must be enabled for Azure Synapse Link to connect successfully.
 
 After completing these steps, your Synapse workspace connects to the storage account through a private endpoint instead of the trusted services firewall exception.
 
