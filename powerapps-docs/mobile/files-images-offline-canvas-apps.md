@@ -57,7 +57,7 @@ If you want to keep this default, then you don't need to proceed with this artic
 
 ### Download files and images on sync
 
-When files and images are configured to download **on sync**, they're downloaded during the offline sync when the device is connected. The user can access the content without connectivity and is notified when the download of the files and images is completed. **On sync** is recommended if you don't need to download a large number of files or images.
+When files and images are configured to download **on sync**, they download during the offline sync when the device is connected to internet. After the download is complete, users can access this content from the device's local storage, even when the device is offline. Users are notified when the download of files and images is complete. Use download on sync when you only need to make a limited number of files or images available offline.
 
 The remainder of this article helps you configure on sync.
 
@@ -105,4 +105,4 @@ You can add both the **Image Descriptor** and **FileAttachment** tables to your 
    1. Under **Choose the rows that you want to make available offline**, select **Related rows only**.
    1. Expand **Relationships** and select **Column name: My column name** for each column where **Data type** is set to **File**. In this example we add **Column name: MyFile** from the **DemoTable3** table.
     _Don't_ select **Column name: Regarding.**.
-   1. Select **Save**.
+   1. Select **Save**.  
