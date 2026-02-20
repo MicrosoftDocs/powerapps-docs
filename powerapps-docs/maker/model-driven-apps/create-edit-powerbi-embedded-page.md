@@ -24,6 +24,9 @@ Read more about relevant Power BI licenses at [Power BI pricing](https://powerbi
 
 To learn more about Power BI reports and dashboards, go to [Create reports and dashboards in Power BI](/power-bi/create-reports/).
 
+> [!IMPORTANT]
+> The the Power BI report control is retired on July 31, 2024. We recommend removing all Power BI report controls from your model-driven apps and use Power BI embedded system dashboard embedding instead. More information: [Create or edit a Power BI embedded system dashboard](create-edit-powerbi-embedded-page.md)
+
 ## Create a system dashboard with Power BI embedded
 
 This procedure shows you how to set up a Power BI embedded page for a single environment connected to a Power BI workspace.
@@ -85,3 +88,4 @@ When a solution with a Power BI embedded component will be moved to other enviro
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
+
