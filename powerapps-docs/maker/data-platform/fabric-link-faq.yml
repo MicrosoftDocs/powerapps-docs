@@ -87,8 +87,10 @@ sections:
         1. In Fabric workspace settings, go to **Outbound networking**.
         2. Enable **Block outbound public access**.
         3. Under **Data connection rules (preview)**, select **+ Add new cloud connection rule**.
-        4. Add a **Dataverse** connection rule and set it to **Blocked**.
-        5. Under **Exceptions**, add your Dataverse org URL (for example, `orgXXXXXXXX.crm.dynamics.com`) as an allowed endpoint.
+        4. Add a **Dataverse** connection rule. You have two options:
+           - **(Recommended)** Set it to **Blocked**, then under **Exceptions**, add only your specific Dataverse org URL (for example, `orgXXXXXXXX.crm.dynamics.com`) as an allowed endpoint. This limits access to your org URL only.
+           - Set it to **Allowed** to permit connections to all Dataverse endpoints.
+        5. If you chose **Blocked** in the previous step, under **Exceptions**, confirm your Dataverse org URL is listed as an allowed endpoint.
         6. Select **Save**.
 
         :::image type="content" source="media/fabric/fabric-outbound-networking-settings.png" alt-text="Fabric workspace Outbound networking settings with Data connection rules configured for Dataverse." lightbox="media/fabric/fabric-outbound-networking-settings.png":::
