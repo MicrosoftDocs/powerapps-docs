@@ -8,7 +8,7 @@ items:
       - name: What's new?
         items:
           - name: Quickstart with npm CLI
-            href: how-to/quickstart-npm-cli.md
+            href: how-to/npm-quickstart.md
       - name: Architecture
         href: architecture.md
       - name: Build
