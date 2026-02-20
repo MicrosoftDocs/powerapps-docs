@@ -337,7 +337,7 @@ The DelayOutput setting, when set to true, registers user input after a half-sec
 
 For example, for a Gallery whose Items are Filtered depending on what the user enters in the TextInput control:
 
-- With DelayOutput set to false, which is the default, the gallery is filtered as soon as any text is typed. If you have a gallery with lots of items, reloading the gallery with changes right away slows down performance. It's better to wait a little. This is practical when you're using the TextInput for a search string (see [Search](https://PowerApps.microsoft.com/en-us/tutorials/function-filter-lookup/) or the new StartsWith functions).
+- With DelayOutput set to false, which is the default, the gallery is filtered as soon as any text is typed. If you have a gallery with lots of items, reloading the gallery with changes right away slows down performance. It's better to wait a little. This is practical when you're using the TextInput for a search string or the new StartsWith functions.
 
 - With DelayOutput set to true, there's a short delay before the changes are detected. This gives you time to finish typing. The delay works well with the TextInput.OnChange property. If you have actions tied to changes, you don't want them triggered until you've finished typing in the field.
 
