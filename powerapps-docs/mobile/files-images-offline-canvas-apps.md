@@ -5,7 +5,7 @@ description: Learn how to configure files and images in offline canvas apps.
 author: trdehove
 ms.component: pa-user
 ms.topic: how-to
-ms.date: 02/19/2026
+ms.date: 02/20/2026
 ms.subservice: mobile
 ms.author: ritwikganni
 ms.custom: ""
@@ -95,24 +95,14 @@ You can add both the **Image Descriptor** and **FileAttachment** tables to your 
 1. Expand **Users + permissions**, then select **Mobile configuration**.
 1. Select a mobile offline profile to edit it.
 1. In the **Data available offline** section, select **Add table**.
-1. Proceed with adding [image and file columns](#add-image-and-file-columns-to-mobile-offline).
-
-
-#### Add image and file columns to mobile offline
-
-To enable offline access for images and files, add the **Image Descriptor** and **FileAttachment** tables to your mobile offline profile.
-
-To add the Image Descriptor table, follow these steps:
-
-1. Select **Image Descriptor** and then select **Next**.
-1. Under **Choose the rows that you want to make available offline**, select **Related rows only**.
-1. Expand **Relationships** and select **Column name: Display name** for each column where **Data type** is set to **Image**. In this example, we select the unnamed column names from the **DemoTable1** and **DemoTable3** tables.
-1. Select **Save**.
-
-To add the FileAttachment table, follow these steps:
-
-1. Select **FileAttachment** and then select **Next**.
-1. Under **Choose the rows that you want to make available offline**, select **Related rows only**.
-1. Expand **Relationships** and select **Column name: My column name** for each column where **Data type** is set to **File**. In this example we add **Column name: MyFile** from the **DemoTable3** table.
-   _Don't_ select **Column name: Regarding.**.
-1. Select **Save**.
+1. To enable offline access for images and files, add the **Image Descriptor** and **FileAttachment** tables to your mobile offline profile. To add the Image Descriptor table, follow these steps:
+   1. Select **Image Descriptor** and then select **Next**.
+   1. Under **Choose the rows that you want to make available offline**, select **Related rows only**.
+   1. Expand **Relationships** and select **Column name: Display name** for each column where **Data type** is set to **Image**. In this example, we select the unnamed column names from the **DemoTable1** and **DemoTable3** tables.
+   1. Select **Save**.
+1. To add the FileAttachment table, follow these steps:
+   1. Select **FileAttachment** and then select **Next**.
+   1. Under **Choose the rows that you want to make available offline**, select **Related rows only**.
+   1. Expand **Relationships** and select **Column name: My column name** for each column where **Data type** is set to **File**. In this example we add **Column name: MyFile** from the **DemoTable3** table.
+    _Don't_ select **Column name: Regarding.**.
+   1. Select **Save**.
