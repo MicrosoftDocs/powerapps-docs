@@ -94,7 +94,7 @@ You can add both the **Image Descriptor** and **FileAttachment** tables to your 
 1. Choose an environment and then select **Settings** on the menu bar.
 1. Expand **Users + permissions**, then select **Mobile configuration**.
 1. Select a mobile offline profile to edit it.
-1. In the **Data available offline** section, select **Add table**.
+1. In the **Data available offline** section, select **Add the table that contains the images or files**.
 1. To enable offline access for images and files, add the **Image Descriptor** and **FileAttachment** tables to your mobile offline profile. To add the Image Descriptor table, follow these steps:
    1. Select **Image Descriptor** and then select **Next**.
    1. Under **Choose the rows that you want to make available offline**, select **Related rows only**.
