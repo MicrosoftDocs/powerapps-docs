@@ -1,5 +1,5 @@
 ---
-title: Complete Guide to building custom business applications
+title: Complete guide to building canvas applications
 description: Learn to build custom canvas apps in Power Apps without coding. Create business applications that connect to data sources, work across devices, and streamline workflows. Start building today.
 author: mduelae
 
@@ -34,7 +34,7 @@ This overview helps you understand how to get started building canvas apps and g
 
 ## Build an app
 
-The following articles can help you build apps in different scenarios using Copilot:
+The following articles provide guidance on building apps:
 
 - [Create a plan](../plan-designer/create-plan.md)
 - [Create a blank canvas app from scratch](create-blank-app.md) 
