@@ -19,7 +19,11 @@ This article discusses using Structured Query Language (SQL) queries with the Da
 You can also access the SQL endpoint by using the Dataverse Web API, so code written in languages other than Python can access it.
 
 > [!IMPORTANT]
-> The SQL support is limited to read-only queries. Complex joins, subqueries, and certain SQL functions may not be supported.
+> The SQL support is limited to read-only queries. Complex joins, subqueries, and certain SQL functions may not be supported. The SQL query must follow the supported subset:
+>
+> - WHERE can only be a boolean expression tree where leaves are binary operators ( =, >, like, etc.) with one of the arguments being a direct column reference and another is a constant
+> - TOP only allows an integer literal
+> - ORDERBY can only reference columns and does not allow any complex expressions
 
 ## Query data with Python
 
@@ -69,11 +73,13 @@ for page in client.query.get(
 
 ## SQL query with the Dataverse Web API
 
-There is a new `?sql` parameter that can be used in a Dataverse Web API message. The format of the call is shown in the next example where the query is on the "accounts" table.
+A `?sql` query option can be used in a Dataverse Web API message. The format of the message is shown in the next example where the query is on the "accounts" entity set.
 
 ```odata
 [organization-root]/api/data/v9.2/accounts?sql=SELECT name FROM account AS a WHERE a.name LIKE "Fourth Coffee"
 ```
+
+The call returns a list of result row dictionaries. An empty list is returned if no rows match.
 
 ## Related information
 
