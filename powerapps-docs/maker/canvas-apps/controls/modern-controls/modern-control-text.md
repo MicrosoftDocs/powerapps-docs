@@ -39,9 +39,9 @@ Key properties for this control are **Text**, **Size**, and **Color**.
 
 ## Size and position
 
-**[X](../properties-size-location)** – Distance between the left edge of the control and the left edge of its parent container (screen if no parent container).
+**[X](../properties-size-location.md)** – Distance between the left edge of the control and the left edge of its parent container (screen if no parent container).
 
-**[Y](../properties-size-location)** – Distance between the top edge of the control and the top edge of its parent container (screen if no parent container).
+**[Y](../properties-size-location.md)** – Distance between the top edge of the control and the top edge of its parent container (screen if no parent container).
 
 **Width** – Distance between the control's left and right edges.
 
