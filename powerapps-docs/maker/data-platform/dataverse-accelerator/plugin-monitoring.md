@@ -6,7 +6,7 @@ ms.author: demora
 ms.reviewer: matp
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 05/13/2024
+ms.date: 02/23/2026
 ms.custom: template-how-to
 ms.subservice: dataverse-maker
 contributors:
@@ -16,6 +16,9 @@ contributors:
 # Monitor and troubleshoot Dataverse plug-in runs (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
+
+> [!IMPORTANT]
+> The Dataverse accelerator, monitor plug-ins, and API playground features are deprioritized and aren't be delivered as features. For information about preview feature availability, go to [Power Apps preview program](../../powerapps-preview-program.md).
 
 Use tracing to troubleshoot low-code and pro code plug-ins. Tracing helps makers by recording run-time information as an aid in diagnosing the cause of failures, or for general validation of certain states during development.
 
