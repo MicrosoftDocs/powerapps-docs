@@ -26,7 +26,7 @@ Key benefits of updating:
 - New styling capabilities and flexibility
 - Better accessibility and IntelliSense support
 
-**Before you begin**: Review the update article for each control in your app and update any affected formulas before upgrading to the new version.
+**Before you begin**: Before upgrading to the new version, review the article for any controls you’ve used in your app and update any impacted formulas.
 
 ## Identifying controls that need updates
 
