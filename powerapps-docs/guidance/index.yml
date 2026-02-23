@@ -12,7 +12,7 @@ metadata:
   ms.collection: collection
   author: tapanm-msft
   ms.author: tapanm
-  ms.date: 02/18/2026
+  ms.date: 02/23/2026
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -36,35 +36,11 @@ landingContent:
           - text: Monitoring and testing
             url: coding-guidelines/monitoring-testing.md
   
-  # Card
-  - title: Power Apps patterns
-    linkLists:
-       - linkListType: concept
-         links:
-          - text: Overview
-            url: patterns/overview.md
-          - text: "Pattern: Approval"
-            url: patterns/approval-pattern.md
-          - text: "Pattern: Asset management"
-            url: patterns/asset-management-pattern.md
-          - text: "Pattern: Calculation"
-            url: patterns/calculator-pattern.md
-          - text: "Pattern: Communication"
-            url: patterns/communication-pattern.md
-          - text: "Pattern: Inspection"
-            url: patterns/inspection-pattern.md
-          - text: "Pattern: Project management"
-            url: patterns/project-management-pattern.md
-          - text: More patterns
-            url: patterns/more-patterns.md
-  
   # Card 
   - title: Planning a Power Apps project
     linkLists:
        - linkListType: overview
-         links:
-          - text: Introduction
-            url: planning/introduction.md       
+         links:     
           - text: Plan
             url: planning/planning-phase.md
           - text: Design

@@ -18,28 +18,8 @@
       href: coding-guidelines/error-handling.md
     - name: Monitoring and testing
       href: coding-guidelines/monitoring-testing.md
-  - name: Power Apps patterns
-    items:
-    - name: Patterns overview
-      href: patterns/overview.md
-    - name: Approval pattern
-      href: patterns/approval-pattern.md
-    - name: Asset management/resource booking pattern
-      href: patterns/asset-management-pattern.md  
-    - name: Calculation/transformation pattern
-      href: patterns/calculator-pattern.md
-    - name: Communication/announcement pattern
-      href: patterns/communication-pattern.md
-    - name: Inspection/audit pattern
-      href: patterns/inspection-pattern.md
-    - name: Project management pattern
-      href: patterns/project-management-pattern.md
-    - name: More patterns
-      href: patterns/more-patterns.md
   - name: Planning a Power Apps project
     items:
-    - name: Introduction
-      href: planning/introduction.md
     - name: Differences between Power Apps and traditional app development approaches
       href: planning/app-development-approaches.md
     - name: Planning phase
