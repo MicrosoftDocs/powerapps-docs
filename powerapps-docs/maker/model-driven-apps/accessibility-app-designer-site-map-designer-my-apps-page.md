@@ -5,7 +5,7 @@ keywords: App designer; site map designer
 author: Mattp123
 ms.subservice: mda-maker
 ms.author: matp
-ms.date: 05/20/2019
+ms.date: 02/19/2026
 ms.topic: concept-article
 applies_to: 
   - Dynamics 365 (online)
@@ -24,7 +24,7 @@ This article describes shortcuts and accessibility in the classic app and site m
 >
 > We recommend that you transition to use the modern designers to create and edit your model-driven apps and components.
 
-Microsoft is committed to making its products and services easier for everyone. For more information, see, [Microsoft accessibility](https://www.microsoft.com/enable/default.aspx)  
+Microsoft is committed to making its products and services easier for everyone. For more information, go to, [Microsoft accessibility](https://www.microsoft.com/enable/default.aspx)  
 
 This article describes the accessibility features for app makers available with model-driven-apps.
 
@@ -79,7 +79,7 @@ This article itemizes the keyboard shortcuts for Power Apps.
 |Move horizontally to the previous tile.|Left Arrow|  
 |Expand a collapsible control.|Right Arrow  or Enter or Spacebar|  
 |Collapse an expanded collapsible control.|Left Arrow  or Enter or Spacebar|  
-|Perform an action such as selecting an option from radio   buttons, clicking a link, or selecting a check box.|Spacebar|  
+|Perform an action such as selecting an option from radio   buttons, selecting a link, or selecting a check box.|Spacebar|  
 |Activate a command bar action, or confirm a component   add.|Enter|  
 |Close an alert, dialog box, or menu, or cancel.|Esc|  
   
@@ -106,7 +106,7 @@ These popular screen readers running on the web browsers indicated here work wit
 - [Safari accessibility features](https://www.apple.com/accessibility/)  <br />
 - [Google Chrome accessibility technical documentation](https://sites.google.com/a/chromium.org/dev/developers/design-documents/accessibility)
 
-## See also
+## Related articles
 
 [Use keyboard shortcuts for app users in Power Apps](../../user/keyboard-shortcuts.md)
 

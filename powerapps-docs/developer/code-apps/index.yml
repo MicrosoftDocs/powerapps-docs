@@ -52,6 +52,8 @@ landingContent:
         links:
           - text: Connect to data
             url: how-to/connect-to-data.md
+          - text: Connect to Copilot Studio
+            url: how-to/connect-to-copilot-studio.md
           - text: Connect to Dataverse
             url: how-to/connect-to-dataverse.md
           - text: Get Dataverse tables metadata

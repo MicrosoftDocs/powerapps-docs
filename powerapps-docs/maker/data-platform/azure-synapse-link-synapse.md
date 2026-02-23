@@ -34,7 +34,9 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 
 ## Prerequisites
 
-- Dataverse: You must have the Dataverse **system administrator** security role. Additionally, tables you want to export via Azure Synapse Link must have the **Track changes** property enabled. More information: [Advanced options](create-edit-entities-portal.md#advanced-options)
+- Dataverse: You must have the Dataverse **system administrator** security role. 
+- The tables you want to export via Azure Synapse Link must have the **Track changes** property enabled. More information: [Advanced options](create-edit-entities-portal.md#advanced-options)
+- The Azure Synapse Workspace that you link with can't have data exfiltration protection enabled. More information: [Create a workspace with data exfiltration protection enabled](/azure/synapse-analytics/security/how-to-create-a-workspace-with-data-exfiltration-protection)
 
 ### Azure Data Lake Storage Gen2 requirements
 
