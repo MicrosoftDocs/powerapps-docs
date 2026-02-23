@@ -511,10 +511,8 @@
               href: ./canvas-apps/controls/copilot-rename-controls.md
             - name: Limitations of modern controls
               href: ./canvas-apps/controls/modern-controls/limitations-modern-controls.md
-            - name: Migration overview
-              href: ./canvas-apps/controls/modern-controls/modern-control-migration-overview.md
-            - name: Enum reference
-              href: ./canvas-apps/controls/modern-controls/modern-control-new-enums-reference.md
+            - name: Recent modern control updates
+              href: ./canvas-apps/controls/modern-controls/modern-control-updates-2026.md
             - name: Badge
               href: ./canvas-apps/controls/modern-controls/modern-controls-badge.md
             - name: Button
@@ -524,67 +522,31 @@
             - name: Checkbox
               href: ./canvas-apps/controls/modern-controls/modern-control-checkbox.md
             - name: Combobox
-              items:
-              - name: Reference
-                href: ./canvas-apps/controls/modern-controls/modern-control-combo-box-reference.md
-              - name: Migration guide
-                href: ./canvas-apps/controls/modern-controls/modern-control-combo-box-migration.md
+              href: ./canvas-apps/controls/modern-controls/modern-control-combobox.md
             - name: Date picker
-              items:
-              - name: Reference
-                href: ./canvas-apps/controls/modern-controls/modern-control-date-picker-reference.md
-              - name: Migration guide
-                href: ./canvas-apps/controls/modern-controls/modern-control-date-picker-migration.md
+              href: ./canvas-apps/controls/modern-controls/modern-control-date-picker.md
             - name: Header
               href: ./canvas-apps/controls/modern-controls/modern-controls-header.md
             - name: Info button
-              items:
-              - name: Reference
-                href: ./canvas-apps/controls/modern-controls/modern-control-info-button-reference.md
-              - name: Migration guide
-                href: ./canvas-apps/controls/modern-controls/modern-control-info-button-migration.md
+              href: ./canvas-apps/controls/modern-controls/modern-control-info-button.md
             - name: Link
-              items:
-              - name: Reference
-                href: ./canvas-apps/controls/modern-controls/modern-control-link-reference.md
-              - name: Migration guide
-                href: ./canvas-apps/controls/modern-controls/modern-control-link-migration.md
+              href: ./canvas-apps/controls/modern-controls/modern-control-link.md
             - name: Number input
-              items:
-              - name: Reference
-                href: ./canvas-apps/controls/modern-controls/modern-control-number-input-reference.md
-              - name: Migration guide
-                href: ./canvas-apps/controls/modern-controls/modern-control-number-input-migration.md
+              href: ./canvas-apps/controls/modern-controls/modern-control-number-input.md
             - name: Progress bar
               href: ./canvas-apps/controls/modern-controls/modern-control-progress-bar.md
             - name: Radio group
-              items:
-              - name: Reference
-                href: ./canvas-apps/controls/modern-controls/modern-control-radio-reference.md
-              - name: Migration guide
-                href: ./canvas-apps/controls/modern-controls/modern-control-radio-migration.md
+              href: ./canvas-apps/controls/modern-controls/modern-controls-radio-group.md
             - name: Slider
               href: ./canvas-apps/controls/modern-controls/modern-control-slider.md
             - name: Spinner
               href: ./canvas-apps/controls/modern-controls/modern-control-spinner.md
             - name: Tab list
-              items:
-              - name: Reference
-                href: ./canvas-apps/controls/modern-controls/modern-control-tab-list-reference.md
-              - name: Migration guide
-                href: ./canvas-apps/controls/modern-controls/modern-control-tab-list-migration.md
+              href: ./canvas-apps/controls/modern-controls/modern-control-tabs-or-tabs-list.md
             - name: Text
-              items:
-              - name: Reference
-                href: ./canvas-apps/controls/modern-controls/modern-control-text-reference.md
-              - name: Migration guide
-                href: ./canvas-apps/controls/modern-controls/modern-control-text-migration.md
+              href: ./canvas-apps/controls/modern-controls/modern-control-text.md
             - name: Text input
-              items:
-              - name: Reference
-                href: ./canvas-apps/controls/modern-controls/modern-control-text-input-reference.md
-              - name: Migration guide
-                href: ./canvas-apps/controls/modern-controls/modern-control-text-input-migration.md
+              href: ./canvas-apps/controls/modern-controls/modern-control-text-input.md
             - name: Toggle
               href: ./canvas-apps/controls/modern-controls/modern-control-toggle.md
             - name: Avatar

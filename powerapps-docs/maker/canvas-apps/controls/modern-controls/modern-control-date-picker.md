@@ -20,9 +20,6 @@ A calendar-based date selection control with flexible formatting and localizatio
 
 Use the **Date picker** control to let users select a date from a visual calendar interface. The control supports multiple date formats, timezone handling, and customizable date ranges. Key properties for this control are **SelectedDate**, **Format**, and **DateTimeZone**.
 
-> [!NOTE]
-> This article describes the updated Date picker modern control. For information about migrating from the earlier earlier version, see [Migrate to the Date picker modern control](date-picker-migration.md).
-
 ## General
 
 **Placeholder** – Hint text that appears when no date is selected. Default is **"Select a date"**.
@@ -208,11 +205,32 @@ The following YAML example shows date picker controls for selecting dates:
       Height: =32
 ```
 
-## What's new in this version
+## Updates to Date picker starting Feb 2026
 
-This updated version of the Date picker modern control includes the following improvements:
+This updated version of the Date picker modern control includes the following improvements and changes.
 
-- **DisplayMode.View properly enforced**: In **View** mode, the control is now properly read-only and the calendar cannot be opened. In the earlier version, this was a bug where the picker was still editable in View mode.
+### Property renames
+
+The following properties have been renamed. Update any formulas in your app that reference the old names.
+
+| Previous property | New property |
+|-------------------|--------------|
+| `FontColor` | `Color` |
+| `FontSize` | `Size` |
+| `FontItalic` | `Italic` |
+| `FontStrikethrough` | `Strikethrough` |
+| `FontUnderline` | `Underline` |
+| `BorderRadius` | `RadiusTopLeft`, `RadiusTopRight`, `RadiusBottomLeft`, `RadiusBottomRight` |
+
+### Removed properties
+
+| Removed property | Notes |
+|------------------|-------|
+| `Required` | Use `ValidationState` instead to control validation styling. |
+
+### Bug fixes and improvements
+
+- **DisplayMode.View properly enforced**: In **View** mode, the control is now properly read-only and the calendar cannot be opened. Previously, the picker was still editable in View mode.
 - **Format property fully honored**: All format values are now properly applied. Previously, certain format values were ignored until another change was made.
 - **DateTimeZone respected**: The **DateTimeZone** property now correctly applies to date display and storage. Previously, this property value was sometimes ignored.
 - **Blank value handling**: When the control is in **View** mode with a blank value, it no longer incorrectly shows a previous value.
@@ -227,10 +245,8 @@ This updated version of the Date picker modern control includes the following im
 
 - The calendar icon does not scale with font size in the current version.
 - On mobile devices, the control shows the Fluent calendar view instead of the native mobile date picker.
-- Locale-aware text entry with custom formats is not yet supported.
 
 ## See also
 
-- [Migrate to the Date picker modern control](date-picker-migration.md)
 - [Modern controls overview](overview-modern-controls.md)
 - [Size and location properties](../properties-size-location.md)
