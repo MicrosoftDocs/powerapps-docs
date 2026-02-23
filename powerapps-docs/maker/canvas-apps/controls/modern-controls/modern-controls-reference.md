@@ -29,7 +29,7 @@ Configure the behavior of a modern control by setting one of its properties. Eac
 
 **[Button](modern-control-button.md)** – Interact with the app by clicking or tapping.
 
-**[Card](modern-control-card.md)** - Cards help makers create clean, responsive object summaries such as contact tiles, document previews, or product listings in either horizontal or vertical orientation.
+**[Card (preview)](modern-control-card.md)** - Cards help makers create clean, responsive object summaries such as contact tiles, document previews, or product listings in either horizontal or vertical orientation.
 
 **[Checkbox](modern-control-checkbox.md)** - Select or clear an option to specify **true** or **false**.
 
