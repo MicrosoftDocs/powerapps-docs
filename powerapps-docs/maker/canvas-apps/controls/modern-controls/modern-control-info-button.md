@@ -102,7 +102,7 @@ The following YAML example shows contextual help buttons for form fields with co
 - PasswordInfoButton:
     Control: ModernInformationButton@1.0.0
     Properties:
-      Content: ="Password requirements: At least 8 characters, one uppercase letter, one number, and one special character (!@#$%)"
+      Content: '="Password requirements: At least 8 characters, one uppercase letter, one number, and one special character (!@#$%)"'
       IconColor: =Color.Orange
       AccessibleLabel: ="Password requirements"
       X: =200

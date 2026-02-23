@@ -180,8 +180,6 @@ The following YAML example shows date picker controls for selecting dates:
     Control: ModernDatePicker@1.0.0
     Properties:
       Placeholder: ="Select start date"
-      Format: =DatePickerFormat.LongAbbreviated
-      DateTimeZone: =DateTimeZone.Local
       DefaultDate: =Today()
       StartDate: =Today()
       EndDate: =Today() + 365
@@ -196,7 +194,6 @@ The following YAML example shows date picker controls for selecting dates:
     Properties:
       Placeholder: ="Select end date"
       Format: =DatePickerFormat.Short
-      DateTimeZone: =DateTimeZone.Local
       DefaultDate: =Today() + 7
       StartOfWeek: =StartOfWeek.Monday
       X: =340

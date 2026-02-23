@@ -147,6 +147,7 @@ The following YAML example shows combo box controls with single and multi-select
     Control: ModernCombobox@1.0.0
     Properties:
       Items: =["Engineering", "Sales", "Marketing", "Support"]
+      ItemDisplayText: =ThisItem.Value
       InputTextPlaceholder: ="Select a department..."
       SelectMultiple: =false
       IsSearchable: =true
@@ -160,6 +161,7 @@ The following YAML example shows combo box controls with single and multi-select
     Control: ModernCombobox@1.0.0
     Properties:
       Items: =["Alice Smith", "Bob Johnson", "Carol Williams", "David Brown"]
+      ItemDisplayText: =ThisItem.Value
       InputTextPlaceholder: ="Select team members..."
       SelectMultiple: =true
       IsSearchable: =true

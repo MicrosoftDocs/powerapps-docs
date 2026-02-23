@@ -130,7 +130,7 @@ The following YAML example shows a clickable label with styling that can be used
 - StatusLabel:
     Control: ModernText@1.0.0
     Properties:
-      Text: ="Status: Active"
+      Text: '="Status: Active"'
       X: =40
       Y: =120
       Width: =200

@@ -134,7 +134,7 @@ The following YAML example shows link controls with different styling options:
     Control: ModernLink@1.0.0
     Properties:
       Text: ="View Documentation"
-      Url: ="https://docs.microsoft.com/powerapps"
+      URL: ="https://docs.microsoft.com/powerapps"
       Type: =LinkAppearance.Default
       Size: =16
       FontWeight: =FontWeight.Semibold
@@ -147,7 +147,7 @@ The following YAML example shows link controls with different styling options:
     Control: ModernLink@1.0.0
     Properties:
       Text: ="Contact Support"
-      Url: ="https://support.microsoft.com"
+      URL: ="https://support.microsoft.com"
       Type: =LinkAppearance.Subtle
       Size: =14
       X: =40
@@ -159,7 +159,7 @@ The following YAML example shows link controls with different styling options:
     Control: ModernLink@1.0.0
     Properties:
       Text: ="Terms and Conditions"
-      Url: ="https://company.com/terms"
+      URL: ="https://company.com/terms"
       Type: =LinkAppearance.Subtle
       Size: =12
       Wrap: =false

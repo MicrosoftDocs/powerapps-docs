@@ -40,7 +40,7 @@ Use the **Text Input** control to capture text input from users with flexible fo
 
 | Value | Description |
 |-------|-------------|
-| `TextInputType.Text` | Standard single-line text input (default) |
+| `TextInputType.SingleLine` | Standard single-line text input (default) |
 | `TextInputType.Multiline` | Multi-line text area that allows line breaks |
 | `TextInputType.Password` | Password field that masks characters as *** |
 | `TextInputType.Search` | Search input with appropriate styling |
@@ -159,7 +159,7 @@ The following YAML example shows text input controls with various input types:
     Control: ModernTextInput@1.0.0
     Properties:
       Placeholder: ="Enter your full name"
-      Type: =TextInputType.Text
+      Type: =TextInputType.SingleLine
       TriggerOutput: =TriggerOutput.Keypress
       Required: =true
       Appearance: =Appearance.FilledDarker
@@ -173,7 +173,7 @@ The following YAML example shows text input controls with various input types:
     Control: ModernTextInput@1.0.0
     Properties:
       Placeholder: ="you@company.com"
-      Type: =TextInputType.Text
+      Type: =TextInputType.SingleLine
       TriggerOutput: =TriggerOutput.Keypress
       MaxLength: =100
       Required: =true

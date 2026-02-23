@@ -140,8 +140,6 @@ The following YAML example shows radio button controls with different option set
     Properties:
       Items: =["Standard (5-7 days)", "Express (2-3 days)", "Overnight"]
       Layout: =Layout.Vertical
-      RadioSize: =20
-      RadioSelectionFill: =Color.Blue
       AccessibleLabel: ="Select shipping method"
       X: =40
       Y: =100
@@ -163,8 +161,6 @@ The following YAML example shows radio button controls with different option set
     Properties:
       Items: =["Credit Card", "Debit Card", "PayPal", "Bank Transfer"]
       Layout: =Layout.Vertical
-      LineHeight: =40
-      HoverColor: =Color.Blue
       AccessibleLabel: ="Select payment method"
       X: =40
       Y: =350
