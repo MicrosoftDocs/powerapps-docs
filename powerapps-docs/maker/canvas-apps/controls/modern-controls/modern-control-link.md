@@ -4,7 +4,7 @@ description: Learn about the details, properties, and examples of the Link moder
 author: yogeshgupta698
 ms.topic: reference
 ms.custom: canvas
-ms.date: 02/18/2026
+ms.date: 02/23/2026
 ms.subservice: canvas-maker
 ms.author: yogupt
 ms.reviewer: mkaur
@@ -18,21 +18,31 @@ A clickable hyperlink control that navigates users to web URLs or triggers custo
 
 ## Description
 
-Use the **Link** control to create clickable hyperlinks in your canvas app. The control supports navigation to external websites, formatted text display, and customizable styling to match your app's design. Key properties for this control are **Text**, **Url**, and **Type**.
+The **Link** modern control creates clickable hyperlinks that can navigate to external websites or trigger custom actions in your canvas app. Use this control to provide users with quick access to related resources, documentation, or external services while maintaining a consistent visual design with your app's theme.
+
+Key benefits:
+
+- Navigate to external URLs with built-in security validation
+- Customize appearance with multiple styling options
+- Support for text wrapping and responsive design
+- Full accessibility compliance with screen reader support
+- Seamless integration with Power Apps theming system
+
+Key properties for this control are **Text**, **Url**, and **Type**.
 
 ## General
 
 **Text** – The display text shown for the hyperlink. This is the text users see and click on. Can be different from the actual URL.
 
-**Url** – The web address to navigate to when the link is clicked. Must be a valid URL using `http://`, `https://`, or other safe protocols. URLs using `javascript:` or other unsafe schemes are blocked for security.
+**Url** – The web address to go to when the link is clicked. Must be a valid URL that uses `http://`, `https://`, or other safe protocols. For security, the control blocks URLs that use `javascript:` or other unsafe schemes.
 
 **Visible** – Whether the control appears or is hidden. Use a Power Fx formula to show or hide the control based on app state.
 
 ## Behavior
 
-**Wrap** – Whether the text wraps to the next line when it exceeds the control width. When `true`, text wraps to multiple lines. When `false`, text is clipped or continues on a single line. Default is **true**.
+**Wrap** – Whether the text wraps to the next line when it goes beyond the control width. When `true`, text wraps to multiple lines. When `false`, text is clipped or continues on a single line. Default is **true**.
 
-**DisplayMode** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**). In **Edit** mode, the link is clickable. In **View** mode, it displays as text without being clickable.
+**DisplayMode** – Whether the control accepts user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**). In **Edit** mode, the link is clickable. In **View** mode, it displays as text without being clickable.
 
 ## Size and position
 
@@ -80,9 +90,9 @@ Use the **Link** control to create clickable hyperlinks in your canvas app. The 
 | `LinkAppearance.Default` | Standard link appearance with theme color (default) |
 | `LinkAppearance.Subtle` | Subtle appearance with lighter styling |
 
-**BasePaletteColor** – The base color used by the theme to generate the control's color palette. Changes this property to apply a different theme color to the control.
+**BasePaletteColor** – The base color the theme uses to generate the control's color palette. Change this property to apply a different theme color to the control.
 
-**Font** – The name of the font family in which text appears.
+**Font** – The name of the font family for the text.
 
 **Size** – The font size of the text, in points. Default is **15**.
 
@@ -121,9 +131,9 @@ Use the **Link** control to create clickable hyperlinks in your canvas app. The 
 
 ## Accessibility
 
-**AccessibleLabel** – A label for screen readers to announce what the link leads to. Should describe the destination or purpose of the link, not just "link".
+**AccessibleLabel** – A label for screen readers to announce what the link leads to. Use a description of the destination or purpose of the link, not just "link".
 
-**ContentLanguage** – The language used for the link text. Inherits from app settings if not specified.
+**ContentLanguage** – The language used for the link text. Inherits from app settings if you don't specify it.
 
 ## Example
 
@@ -175,7 +185,7 @@ This updated version of the Link modern control includes the following improveme
 
 ### Property renames
 
-The following properties have been renamed. Update any formulas in your app that reference the old names.
+The following properties are renamed. Update any formulas in your app that reference the old names.
 
 | Previous property | New property |
 |-------------------|--------------|
@@ -195,7 +205,7 @@ The following properties have been renamed. Update any formulas in your app that
 
 ### Bug fixes and improvements
 
-- **Wrap behavior fixed**: The **Wrap** property now correctly controls text wrapping. Previously, changing this property did not update the text display.
+- **Wrap behavior fixed**: The **Wrap** property now correctly controls text wrapping. Previously, changing this property didn't update the text display.
 - **Simplified property organization**: Properties are now logically organized into **Data** and **Design** sections for better discoverability.
 - **Default padding**: All padding properties now default to **5** pixels for consistent spacing.
 

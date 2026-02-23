@@ -4,7 +4,7 @@ description: Learn about the details, properties, and examples of the Text moder
 author: yogeshgupta698
 ms.topic: reference
 ms.custom: canvas
-ms.date: 02/17/2026
+ms.date: 02/23/2026
 ms.subservice: canvas-maker
 ms.author: yogupt
 ms.reviewer: mkaur
@@ -14,11 +14,16 @@ search.audienceType:
 
 # Text modern control in canvas apps
 
-Display text and labels on your app screen.
+Use this control to display text and labels on your app screen.
 
 ## Description
 
-Use the **Text** control to display static content, dynamic values, messages, and labels in your canvas app. The control supports rich formatting options including font styling, alignment, and auto-sizing to fit content. Key properties for this control are **Text**, **Size**, and **Color**.
+The **Text** modern control displays static or dynamic text content in your canvas app. Use it for labels, headings, messages, and any text that doesn't require user input.
+
+This versatile control offers rich formatting options, including font styling, colors, alignment, and automatic sizing. You can display static text strings or dynamic content using Power Fx formulas. The control also supports user interaction through the **OnSelect** event, making it useful for clickable labels and interactive text elements.
+
+
+Key properties for this control are **Text**, **Size**, and **Color**.
 
 ## General
 
@@ -28,7 +33,7 @@ Use the **Text** control to display static content, dynamic values, messages, an
 
 ## Behavior
 
-**OnSelect** – How the app responds when the user selects (clicks or taps) the Text control. The control is accessible: **OnSelect** also triggers when the user presses Enter or Space while the control has keyboard focus.
+**OnSelect** – How the app responds when the user selects  the Text control. The control is accessible: **OnSelect** also triggers when the user presses Enter or Space while the control has keyboard focus.
 
 **Wrap** – Whether the text wraps to the next line when it exceeds the control width. When set to `false`, text is clipped at the control boundary.
 
@@ -42,7 +47,7 @@ Use the **Text** control to display static content, dynamic values, messages, an
 
 **Height** – Distance between the control's top and bottom edges.
 
-**AutoHeight** – Whether the control automatically increases its height when the text content exceeds the visible area. When **Visible** is `false`, the **Height** output property does not update as text changes.
+**AutoHeight** – Whether the control automatically increases its height when the text content exceeds the visible area. When **Visible** is `false`, the **Height** output property doesn't update as text changes.
 
 **Align** – The horizontal alignment of text within the control. Accepts `Align` enum values:
 
@@ -63,9 +68,9 @@ Use the **Text** control to display static content, dynamic values, messages, an
 
 ## Style and theme
 
-**Font** – The name of the font family in which text appears.
+**Font** – The name of the font family for the text.
 
-**Size** – The font size of the text, in points. Default is **15**.
+**Size** – The font size of the text, in points. The default is **15**.
 
 **Color** – The color of the text in the control.
 
@@ -110,7 +115,7 @@ Use the **Text** control to display static content, dynamic values, messages, an
 
 ## Example
 
-The following YAML example shows a clickable label with styling that can be used for headings or interactive text elements:
+The following YAML example shows a clickable label with styling that you can use for headings or interactive text elements:
 
 ```yaml
 - TitleLabel:
@@ -154,7 +159,7 @@ This updated version of the Text modern control includes the following improveme
 
 ### Property renames
 
-The following properties have been renamed. Update any formulas in your app that reference the old names.
+The following properties are renamed. Update any formulas in your app that reference the old names.
 
 | Previous property | New property |
 |-------------------|--------------|
@@ -177,9 +182,9 @@ The following properties have been renamed. Update any formulas in your app that
 - **OnSelect event**: The control now supports an **OnSelect** event, making it possible to trigger actions when a user clicks or taps the text. This event is fully accessible and also responds to keyboard input (Enter or Space).
 - **Vertical alignment default**: The default **VerticalAlign** is now `VerticalAlign.Middle` for better visual balance.
 - **Auto height improvements**: Fixed scroll bar appearing in portrait mode and auto height not recalculating when the control is hidden.
-- **Text scaling**: Fixed an issue where the text control did not scale correctly within containers.
+- **Text scaling**: Fixed an issue where the text control didn't scale correctly within containers.
 - **Updated command bar**: The authoring command bar and right-click menu now show Font, Font size, Alignment, Font color, and Background color for quick access.
-- **Mobile-optimized defaults**: When adding the control in a mobile layout, defaults are automatically adjusted (font size 15, padding 5, width 150, height 32).
+- **Mobile-optimized defaults**: When adding the control in a mobile layout, the app automatically adjusts the defaults (font size 15, padding 5, width 150, height 32).
 
 ## See also
 

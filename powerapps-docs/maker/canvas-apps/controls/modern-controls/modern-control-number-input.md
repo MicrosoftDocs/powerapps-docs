@@ -4,7 +4,7 @@ description: Learn about the details, properties, and examples of the Number Inp
 author: yogeshgupta698
 ms.topic: reference
 ms.custom: canvas
-ms.date: 02/18/2026
+ms.date: 02/23/2026
 ms.subservice: canvas-maker
 ms.author: yogupt
 ms.reviewer: mkaur
@@ -14,31 +14,44 @@ search.audienceType:
 
 # Number Input modern control in canvas apps
 
-A numeric input field with increment/decrement buttons, validation, and decimal precision control.
+A numeric input field with increment and decrement buttons, validation, and decimal precision control.
 
 ## Description
 
-Use the **Number Input** control to capture numeric values from users with built-in validation and step controls. The control provides increment and decrement buttons, enforces min/max boundaries, and supports configurable decimal precision for precise numeric data entry. Key properties for this control are **Value**, **Min**, **Max**, **Step**, and **Precision**.
+The **Number Input** control is a modern control in Power Apps that lets users enter numeric values with built-in validation, increment/decrement buttons, and configurable precision settings. This control provides a user-friendly interface for numeric data entry while automatically enforcing data integrity through minimum and maximum value constraints.
+
+Use this control when you need to collect numbers from users, such as quantities, prices, percentages, or measurements. The control includes step buttons for easy value adjustment, supports decimal precision control, and provides visual validation feedback to ensure data quality.
+
+Key capabilities:
+
+- Input validation with customizable min/max boundaries
+- Increment and decrement buttons with configurable step values
+- Decimal precision control from integers to three decimal places
+- Built-in accessibility features and screen reader support
+- Responsive design that adapts to different screen sizes
+
+
+Key properties for this control are **Value**, **Min**, **Max**, **Step**, and **Precision**.
 
 ## General
 
-**Default** – The initial value displayed when the control first loads. Use this to set a default numeric value before user interaction.
+**Default** – The initial value displayed when the control first loads. Use this value to set a default numeric value before user interaction.
 
-**Value** – The current numeric value in the control. This is the output property you reference in formulas to get the user's entered number.
+**Value** – The current numeric value in the control. This value is the output property you reference in formulas to get the user's entered number.
 
-**HintText** – Placeholder text displayed in the input field when it's empty. Use this to guide users on what value to enter.
+**HintText** – Placeholder text displayed in the input field when it's empty. Use this text to guide users on what value to enter.
 
 **Visible** – Whether the control appears or is hidden. Use a Power Fx formula to show or hide the control based on app state.
 
 ## Behavior
 
-**OnChange** – How the app responds when the user changes the value. This event fires when the user moves focus away from the control (on blur) or clicks the increment/decrement step buttons, not on every keystroke.
+**OnChange** – How the app responds when the user changes the value. This event fires when the user moves focus away from the control (on blur) or clicks the increment or decrement step buttons, not on every keystroke.
 
-**Min** – The minimum allowed value. Users cannot enter or step below this number. The control shows a validation error if the user attempts to enter a value below the minimum.
+**Min** – The minimum allowed value. Users can't enter or step below this number. The control shows a validation error if the user attempts to enter a value below the minimum.
 
-**Max** – The maximum allowed value. Users cannot enter or step above this number. The control shows a validation error if the user attempts to enter a value above the maximum.
+**Max** – The maximum allowed value. Users can't enter or step above this number. The control shows a validation error if the user attempts to enter a value above the maximum.
 
-**Step** – The increment or decrement amount when users click the step up/down buttons. Default is **1**.
+**Step** – The increment or decrement amount when users click the step up or down buttons. Default is **1**.
 
 **Precision** – The number of decimal places to display and allow. Accepts `DecimalPrecision` enum values:
 
@@ -57,7 +70,7 @@ Use the **Number Input** control to capture numeric values from users with built
 | `ValidationState.None` | No validation styling (default) |
 | `ValidationState.Error` | Shows error styling (red border) |
 
-**DisplayMode** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**). In **View** mode, the value is shown but cannot be edited.
+**DisplayMode** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**). In **View** mode, the value is shown but can't be edited.
 
 ## Size and position
 
@@ -95,9 +108,9 @@ Use the **Number Input** control to capture numeric values from users with built
 | `Appearance.FilledDarker` | Darker filled background (default) |
 | `Appearance.Outline` | Outlined border with transparent background |
 
-**BasePaletteColor** – The base color used by the theme to generate the control's color palette. Changes this property to apply a different theme color to the control.
+**BasePaletteColor** – The base color that the theme uses to generate the control's color palette. Change this property to apply a different theme color to the control.
 
-**Font** – The name of the font family in which text appears.
+**Font** – The name of the font family for the text.
 
 **Size** – The font size of the text, in points.
 
@@ -121,9 +134,9 @@ Use the **Number Input** control to capture numeric values from users with built
 
 ## Accessibility
 
-**AccessibleLabel** – A label for screen readers to announce what the input field is for. Should describe the type of numeric data expected (e.g., "Product quantity" or "Age in years").
+**AccessibleLabel** – A label for screen readers to announce what the input field is for. Describe the type of numeric data expected, such as "Product quantity" or "Age in years".
 
-**ContentLanguage** – The language used for the input text. Inherits from app settings if not specified.
+**ContentLanguage** – The language used for the input text. If you don't specify this property, the app settings provide the value.
 
 ## Example
 
@@ -184,7 +197,7 @@ This updated version of the Number Input modern control includes the following i
 
 ### Property renames
 
-The following properties have been renamed. Update any formulas in your app that reference the old names.
+The following properties are renamed. Update any formulas in your app that reference the old names.
 
 | Previous property | New property |
 |-------------------|--------------|
@@ -203,31 +216,31 @@ The following properties have been renamed. Update any formulas in your app that
 
 ### Bug fixes and improvements
 
-- **OnChange optimization**: The **OnChange** event now fires on focus out (when the user leaves the field) and when clicking step buttons, not on every keystroke. This improves performance and reduces unnecessary formula evaluations.
+- **OnChange optimization**: The **OnChange** event now fires on focus out (when the user leaves the field) and when clicking step buttons, not on every keystroke. This change improves performance and reduces unnecessary formula evaluations.
 - **Default value**: The **Default** property allows you to set an initial value when the control loads, separate from the **Value** property.
 - **HintText support**: New **HintText** property provides placeholder text to guide users.
-- **Color property added**: The **Color** property for text color is now available. This was missing in the previous version.
+- **Color property added**: The **Color** property for text color is now available. This property was missing in the previous version.
 - **Fill property added**: The **Fill** property for background color is now available for better styling control.
 - **Font property added**: The **Font** property allows you to change the font family.
-- **Race condition fixed**: Resolved an issue where entering a new value and immediately submitting a form would record the previous value instead of the new one.
+- **Race condition fixed**: Resolved an issue where entering a new value and immediately submitting a form recorded the previous value instead of the new one.
 - **Value overflow fixed**: Numbers no longer overflow or display incorrectly at high values.
-- **Min/Max validation improved**: The control now properly validates that Min cannot exceed Max.
+- **Min/Max validation improved**: The control now properly validates that Min can't exceed Max.
 - **Simplified properties**: Properties are now logically organized into **Data** and **Design** sections for better discoverability.
 
 ## Best practices
 
 - **Set reasonable boundaries**: Always define **Min** and **Max** values to prevent invalid data entry.
-- **Match precision to data**: Use **Precision** to match your data requirements (integers for quantities, two decimals for currency, etc.).
-- **Appropriate step values**: Set **Step** to meaningful increments (e.g., 5 for ages, 0.01 for currency, 10 for large numbers).
-- **Clear hints**: Use **HintText** to show the expected format or example values (e.g., "0.00" for currency).
+- **Match precision to data**: Use **Precision** to match your data requirements (integers for quantities, two decimals for currency, and so on).
+- **Appropriate step values**: Set **Step** to meaningful increments (for example, 5 for ages, 0.01 for currency, 10 for large numbers).
+- **Clear hints**: Use **HintText** to show the expected format or example values (for example, "0.00" for currency).
 - **Validate input**: Use **ValidationState** to provide visual feedback when values are out of acceptable ranges.
 - **Accessible labels**: Always provide descriptive **AccessibleLabel** text that explains what numeric value is expected.
 - **OnChange efficiency**: Since **OnChange** fires on blur and step clicks (not every keystroke), it's safe to use for calculations or data updates without performance concerns.
 
 ## Limitations
 
-- Currency symbols are not directly supported in the control. Display currency formatting using separate Text controls.
-- Step buttons may not scale proportionally with control size in all scenarios.
+- The control doesn't directly support currency symbols. Use separate Text controls to display currency formatting.
+- Step buttons might not scale proportionally with control size in all scenarios.
 
 ## See also
 

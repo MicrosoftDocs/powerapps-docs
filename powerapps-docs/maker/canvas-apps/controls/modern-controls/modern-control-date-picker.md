@@ -4,7 +4,7 @@ description: Learn about the details, properties, and examples of the Date picke
 author: yogeshgupta698
 ms.topic: reference
 ms.custom: canvas
-ms.date: 02/18/2026
+ms.date: 02/23/2026
 ms.subservice: canvas-maker
 ms.author: yogupt
 ms.reviewer: mkaur
@@ -14,17 +14,30 @@ search.audienceType:
 
 # Date picker modern control in canvas apps
 
-A calendar-based date selection control with flexible formatting and localization options.
+The **Date picker** modern control provides an intuitive calendar interface for date selection in canvas apps. This control combines visual calendar navigation with flexible formatting options to create a seamless date input experience for users.
 
 ## Description
 
-Use the **Date picker** control to let users select a date from a visual calendar interface. The control supports multiple date formats, timezone handling, and customizable date ranges. Key properties for this control are **SelectedDate**, **Format**, and **DateTimeZone**.
+Use this control when you need users to select specific dates, such as appointment scheduling, event planning, or filtering data by date ranges. The control supports customizable date formats, timezone handling, and date range restrictions to meet diverse application requirements.
+
+Key capabilities include:
+
+- Visual calendar interface with month and year navigation
+- Flexible date formatting using predefined formats or custom patterns
+- Date range validation to restrict selectable dates
+- Timezone support for local or UTC display
+- Accessibility features for screen readers and keyboard navigation
+
+The control outputs the selected date through the SelectedDate property, which you can use in formulas throughout your app.
+
+
+Key properties for this control are **SelectedDate**, **Format**, and **DateTimeZone**.
 
 ## General
 
 **Placeholder** – Hint text that appears when no date is selected. Default is **"Select a date"**.
 
-**DefaultDate** – The initial date selected in the control before the user makes a change. Use this to set a default date when the picker first loads.
+**DefaultDate** – The initial date selected in the control before the user makes a change. Use this property to set a default date when the picker first loads.
 
 **Format** – The display format for the selected date. Accepts `DatePickerFormat` enum values or a custom format string:
 
@@ -63,15 +76,15 @@ Use custom format strings when you need a specific date representation not avail
 
 **OnChange** – How the app responds when the user selects a different date. This event fires when the date selection changes.
 
-**DisplayMode** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**). In **View** mode, the selected date is shown but the calendar cannot be opened.
+**DisplayMode** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**). In **View** mode, the selected date is shown but the calendar can't be opened.
 
-**IsEditable** – Whether the user can type a date directly into the input field or must use the calendar picker. When `false`, users must click the calendar icon to select a date. Default is **false**.
+**IsEditable** – Whether the user can type a date directly into the input field or must use the calendar picker. When `false`, users must select the calendar icon to choose a date. Default is **false**.
 
 ## Date range
 
-**StartDate** – The earliest date that can be selected in the calendar. Dates before this are disabled. Default is **Date(1900, 1, 1)**.
+**StartDate** – The earliest date that can be selected in the calendar. Dates before this date are disabled. Default is **Date(1900, 1, 1)**.
 
-**EndDate** – The latest date that can be selected in the calendar. Dates after this are disabled. Default is **Date(Year(Today())+100, 12, 31)**.
+**EndDate** – The latest date that can be selected in the calendar. Dates after this date are disabled. Default is **Date(Year(Today())+100, 12, 31)**.
 
 **StartOfWeek** – The day that appears as the first column in the calendar view. Accepts `StartOfWeek` enum values:
 
@@ -87,7 +100,7 @@ Use custom format strings when you need a specific date representation not avail
 
 ## Data
 
-**SelectedDate** – (Output) The date currently selected by the user. Returns a date value that can be used in formulas. Returns `Blank()` if no date is selected.
+**SelectedDate** – (Output) The date currently selected by the user. Returns a date value that you can use in formulas. Returns `Blank()` if no date is selected.
 
 ## Validation
 
@@ -126,7 +139,7 @@ Use custom format strings when you need a specific date representation not avail
 | `Appearance.FilledDarker` | Filled with darker background (default) |
 | `Appearance.Outline` | Outline style with border |
 
-**BasePaletteColor** – The base color used by the theme to generate the control's color palette. Changes this property to apply a different theme color to the control.
+**BasePaletteColor** – The base color used by the theme to generate the control's color palette. Change this property to apply a different theme color to the control.
 
 **Font** – The name of the font family in which text appears.
 
@@ -167,9 +180,9 @@ Use custom format strings when you need a specific date representation not avail
 
 ## Accessibility
 
-**AccessibleLabel** – A label for screen readers to announce what the control is for. Should describe the purpose of the date picker, not the current selection.
+**AccessibleLabel** – A label for screen readers to announce what the control is for. It should describe the purpose of the date picker, not the current selection.
 
-**ContentLanguage** – The language used for formatting dates and calendar display. Inherits from app settings if not specified.
+**ContentLanguage** – The language used for formatting dates and calendar display. The app settings provide the value if you don't specify it.
 
 ## Example
 
@@ -208,7 +221,7 @@ This updated version of the Date picker modern control includes the following im
 
 ### Property renames
 
-The following properties have been renamed. Update any formulas in your app that reference the old names.
+The following properties are renamed. Update any formulas in your app that reference the old names.
 
 | Previous property | New property |
 |-------------------|--------------|
@@ -227,12 +240,12 @@ The following properties have been renamed. Update any formulas in your app that
 
 ### Bug fixes and improvements
 
-- **DisplayMode.View properly enforced**: In **View** mode, the control is now properly read-only and the calendar cannot be opened. Previously, the picker was still editable in View mode.
+- **DisplayMode.View properly enforced**: In **View** mode, the control is now properly read-only and the calendar can't be opened. Previously, the picker was still editable in View mode.
 - **Format property fully honored**: All format values are now properly applied. Previously, certain format values were ignored until another change was made.
 - **DateTimeZone respected**: The **DateTimeZone** property now correctly applies to date display and storage. Previously, this property value was sometimes ignored.
 - **Blank value handling**: When the control is in **View** mode with a blank value, it no longer incorrectly shows a previous value.
 - **Mobile calendar improvements**: Calendar flyout is now properly sized for mobile devices, with optimized defaults (width 560, height 64, font size 24).
-- **Month/Year flyout positioning**: Fixed issue where the month/year selector would go off-screen on smaller displays.
+- **Month/Year flyout positioning**: Fixed issue where the month/year selector went off-screen on smaller displays.
 - **Gallery and data card stability**: Resolved crashes that occurred when adding the date picker to galleries or data cards.
 - **Color palette inheritance**: The calendar flyout now properly respects the **BasePaletteColor** override.
 - **Command bar integration**: The authoring command bar and right-click menu now show Font, Font Size, Font color, and Background color for quick access.
@@ -240,7 +253,7 @@ The following properties have been renamed. Update any formulas in your app that
 
 ## Limitations
 
-- The calendar icon does not scale with font size in the current version.
+- The calendar icon doesn't scale with font size in the current version.
 - On mobile devices, the control shows the Fluent calendar view instead of the native mobile date picker.
 
 ## See also

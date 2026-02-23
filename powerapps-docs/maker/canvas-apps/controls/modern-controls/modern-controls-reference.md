@@ -6,7 +6,7 @@ author: yogeshgupta698
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: mkaur-msft
-ms.date: 05/22/2024
+ms.date: 02/23/2026
 ms.subservice: canvas-maker
 ms.author: yogupt
 search.audienceType:
@@ -18,7 +18,11 @@ contributors:
 
 # Modern controls and properties in canvas apps
 
-Configure the behavior of a modern control by setting one of its properties. Each type of control has a different set of properties.
+Modern controls in Power Apps provide an enhanced user experience with updated styling, improved accessibility, and better performance compared to classic controls. These controls follow Microsoft's Fluent Design System and offer a consistent, professional appearance across your canvas apps.
+
+This reference guide covers the available modern controls and their properties. Each control serves a specific purpose—from basic interactions like buttons and text inputs to advanced features like Copilot integration and data visualization. Use these controls to build intuitive, accessible applications that align with modern design standards.
+
+Before implementing modern controls in your app, review the overview of modern controls to understand key concepts and best practices.
 
 
 ## Modern controls
@@ -33,7 +37,7 @@ Configure the behavior of a modern control by setting one of its properties. Eac
 
 **[Checkbox](modern-control-checkbox.md)** - Select or clear an option to specify **true** or **false**.
 
-**[Combobox](modern-control-combobox.md)** - A control that allows users to make selections from provided choices and supports search and multiple selections.
+**[Combobox](modern-control-combobox.md)** - A control that users can use to make selections from provided choices and supports search and multiple selections.
 
 **[Copilot answer (preview)](modern-control-copilot-answer.md)** - A control that makers can use to add predefined questions that end users can use to get generated answers.
 
@@ -53,7 +57,7 @@ Configure the behavior of a modern control by setting one of its properties. Eac
 
 **[Radio group](modern-controls-radio-group.md)** – An input control that shows multiple options, of which users can select only one at a time.
 
-**[Spinner](modern-control-spinner.md)** – Displays state in motion, for exmaple, loading a page or table.
+**[Spinner](modern-control-spinner.md)** – Displays state in motion, for example, loading a page or table.
 
 **[Slider](modern-control-slider.md)** - A control with which the user can specify a value by dragging a handle.
 

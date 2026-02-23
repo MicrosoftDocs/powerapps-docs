@@ -4,7 +4,7 @@ description: Learn about the details, properties, and examples of the Info butto
 author: yogeshgupta698
 ms.topic: reference
 ms.custom: canvas
-ms.date: 02/18/2026
+ms.date: 02/23/2026
 ms.subservice: canvas-maker
 ms.author: yogupt
 ms.reviewer: mkaur
@@ -18,7 +18,18 @@ An interactive information icon that displays detailed content in a flyout when 
 
 ## Description
 
-Use the **Info button** control to provide contextual help, tooltips, or additional information without cluttering your app interface. The control displays as an information icon that, when interacted with, shows a content flyout with rich text or formatted information. Key properties for this control are **Content**, **IconColor**, and **OnSelect**.
+The **Info button** control provides contextual help and additional information in your canvas apps. When users select or hover over this interactive information icon, it displays detailed content in a flyout panel without disrupting their workflow.
+
+Use this control to:
+
+- Provide contextual help for form fields and complex features
+- Display tooltips with additional guidance
+- Offer explanatory content without cluttering your app interface
+- Enhance user experience with on-demand information
+
+The **Info button** appears as a standard information icon and supports rich text content, customizable styling, and accessibility features.This modern control integrates seamlessly with your app's design system through theme-based colors and flexible positioning options.
+
+Key properties for this control are **Content**, **IconColor**, and **OnSelect**.
 
 ## General
 
@@ -28,19 +39,19 @@ Use the **Info button** control to provide contextual help, tooltips, or additio
 
 ## Behavior
 
-**OnSelect** – How the app responds when the user clicks the info button. Use this to trigger additional actions beyond showing the flyout, such as logging analytics or updating variables.
+**OnSelect** – How the app responds when the user clicks the info button. Use this property to trigger extra actions beyond showing the flyout, such as logging analytics or updating variables.
 
-**DisplayMode** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**). In **View** mode, the icon is shown but the flyout cannot be opened.
+**DisplayMode** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**). In **View** mode, the icon is shown but the flyout can't be opened.
 
 ## Size and position
 
-**X** – Distance between the left edge of the control and the left edge of its parent container (screen if no parent container).
+**X** – Distance between the left edge of the control and the left edge of its parent container. If there's no parent container, the screen acts as the parent.
 
-**Y** – Distance between the top edge of the control and the top edge of its parent container (screen if no parent container).
+**Y** – Distance between the top edge of the control and the top edge of its parent container. If there's no parent container, the screen acts as the parent.
 
-**Width** – Distance between the control's left and right edges. Default is **32**.
+**Width** – Distance between the control's left and right edges. The default value is **32**.
 
-**Height** – Distance between the control's top and bottom edges. Default is **32**.
+**Height** – Distance between the control's top and bottom edges. The default value is **32**.
 
 **PaddingTop** – Distance between the icon and the top edge of the control.
 
@@ -52,11 +63,11 @@ Use the **Info button** control to provide contextual help, tooltips, or additio
 
 ## Style and theme
 
-**BasePaletteColor** – The base color used by the theme to generate the control's color palette. Changes this property to apply a different theme color to the control.
+**BasePaletteColor** – The base color that the theme uses to generate the control's color palette. Change this property to apply a different theme color to the control.
 
 **Font** – The name of the font family used for text in the flyout content.
 
-**Size** – The font size of text in the flyout, in points. Default is **15**.
+**Size** – The font size of text in the flyout, in points. The default is **15**.
 
 **Color** – The color of text in the flyout content.
 
@@ -75,13 +86,13 @@ Use the **Info button** control to provide contextual help, tooltips, or additio
 
 **Strikethrough** – Whether a line appears through the middle of the text in the flyout.
 
-**IconColor** – The color of the information icon button itself. Use this to match your app's theme or draw attention to important information.
+**IconColor** – The color of the information icon button itself. Use this value to match your app's theme or draw attention to important information.
 
 ## Accessibility
 
-**AccessibleLabel** – A label for screen readers to announce what the info button provides information about. Should describe the purpose or topic of the information, not just "info button".
+**AccessibleLabel** – A label for screen readers to announce what the info button provides information about. It should describe the purpose or topic of the information, not just "info button".
 
-**ContentLanguage** – The language used for the flyout content. Inherits from app settings if not specified.
+**ContentLanguage** – The language used for the flyout content. If you don't specify this property, the app settings provide the language.
 
 ## Example
 
@@ -128,7 +139,7 @@ This updated version of the Info button modern control includes the following im
 
 ### Property renames
 
-The following properties have been renamed. Update any formulas in your app that reference the old names.
+The following properties are renamed. Update any formulas in your app that reference the old names.
 
 | Previous property | New property |
 |-------------------|--------------|
@@ -147,13 +158,13 @@ The following properties have been renamed. Update any formulas in your app that
 ### Bug fixes and improvements
 
 - **Content expansion fixed**: The information flyout background now properly expands to fit all content. Previously, long text could be clipped or overflow the flyout.
-- **Improved reliability**: Resolved intermittent crashes that occurred when clicking the info button in certain scenarios.
+- **Improved reliability**: Resolved intermittent crashes that occurred when you clicked the info button in certain scenarios.
 - **Simplified properties**: Streamlined property organization with most styling properties now in the **Design** section for better discoverability.
 - **Consistent styling**: Font and color properties now consistently apply to both the icon and flyout content.
 
 ## Best practices
 
-- **Keep content concise**: While the flyout can display lengthy text, aim for 2-3 short sentences for better user experience.
+- **Keep content concise**: While the flyout can display lengthy text, aim for two to three short sentences for better user experience.
 - **Use accessible labels**: Always provide descriptive **AccessibleLabel** text that explains what information the button provides.
 - **Strategic placement**: Position info buttons next to form fields, labels, or unfamiliar terms where users might need clarification.
 - **Consistent iconcolor**: Use consistent colors across your app to help users recognize info buttons quickly.

@@ -4,7 +4,7 @@ description: Learn about the details, properties, and examples of the Tab List m
 author: yogeshgupta698
 ms.topic: reference
 ms.custom: canvas
-ms.date: 02/18/2026
+ms.date: 02/23/2026
 ms.subservice: canvas-maker
 ms.author: yogupt
 ms.reviewer: mkaur
@@ -14,11 +14,26 @@ search.audienceType:
 
 # Tab List modern control in canvas apps
 
-A tabbed navigation control that allows users to switch between different content sections by clicking tab headers.
+A tabbed navigation control that users can use to switch between different content sections by clicking tab headers.
 
 ## Description
 
-Use the **Tab List** control to create tabbed interfaces where users can switch between different views or content sections. The control displays clickable tab headers that users can select to navigate between sections. Use this control in combination with conditional visibility on other controls to show/hide content based on the selected tab. Key properties for this control are **Items**, **Default**, **Selected**, and **Appearance**.
+The **Tab List**  modern control enables you to create intuitive tabbed navigation interfaces in canvas apps. Users can switch between different content sections by selecting tab headers, making it ideal for organizing related information or features within a single screen.
+
+This control serves as a navigation component that you combine with other controls to build comprehensive tabbed experiences. When users select a tab, you can use conditional visibility to show or hide content sections accordingly. The **Tab List** control offers flexible styling options and accessibility features to ensure your tabbed interfaces work effectively for all users.
+
+Key capabilities:
+
+- Display multiple clickable tab headers from a data source
+- Support various visual styles including transparent, subtle, underline, and filled appearances
+- Provide keyboard navigation and screen reader support
+- Enable responsive alignment and sizing options
+- Trigger events when users interact with tabs
+
+Use the **Tab List** control when you need to organize content into logical sections that users can navigate independently, such as product details, dashboard views, or settings categories.
+
+
+Key properties for this control are **Items**, **Default**, **Selected**, and **Appearance**.
 
 ## General
 
@@ -26,17 +41,17 @@ Use the **Tab List** control to create tabbed interfaces where users can switch 
 
 **Default** – The tab that is selected by default when the control first loads. Must match an item from the **Items** source.
 
-**Selected** – The currently selected tab (output property). Use this in formulas to reference which tab the user has chosen and to control visibility of content sections.
+**Selected** – The currently selected tab (output property). Use this in formulas to reference which tab the user chooses and to control visibility of content sections.
 
 **Visible** – Whether the control appears or is hidden. Use a Power Fx formula to show or hide the control based on app state.
 
 ## Behavior
 
-**OnChange** – How the app responds when the user clicks a different tab. This event fires every time the selected tab changes. Use this to update variables, load data, or track navigation.
+**OnChange** – How the app responds when the user clicks a different tab. This event fires every time the selected tab changes. Use this value to update variables, load data, or track navigation.
 
-**OnSelect** – How the app responds when the user clicks any tab (including the currently selected one). Use this for additional interactions beyond navigation.
+**OnSelect** – How the app responds when the user clicks any tab (including the currently selected one). Use this value for additional interactions beyond navigation.
 
-**DisplayMode** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**). In **View** mode, tabs are displayed but cannot be clicked.
+**DisplayMode** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**). In **View** mode, tabs are displayed but can't be clicked.
 
 ## Size and position
 
@@ -48,17 +63,17 @@ Use the **Tab List** control to create tabbed interfaces where users can switch 
 | `Align.Center` | Centers text horizontally (default) |
 | `Align.Right` | Aligns text to the right edge |
 
-**Alignment** – The alignment/positioning of the entire tab list. Accepts `TabListAlignment` enum values:
+**Alignment** – The alignment and positioning of the entire tab list. Accepts `TabListAlignment` enum values:
 
 | Value | Description |
 |-------|-------------|
-| `TabListAlignment.Start` | Aligns tabs to the left/start edge |
+| `TabListAlignment.Start` | Aligns tabs to the left or start edge |
 | `TabListAlignment.Center` | Centers the tab list (default) |
-| `TabListAlignment.End` | Aligns tabs to the right/end edge |
+| `TabListAlignment.End` | Aligns tabs to the right or end edge |
 
-**X** – Distance between the left edge of the control and the left edge of its parent container (screen if no parent container).
+**X** – Distance between the left edge of the control and the left edge of its parent container. If the control has no parent container, the screen acts as the parent container.
 
-**Y** – Distance between the top edge of the control and the top edge of its parent container (screen if no parent container).
+**Y** – Distance between the top edge of the control and the top edge of its parent container. If the control has no parent container, the screen acts as the parent container.
 
 **Width** – Distance between the control's left and right edges. Default is **300**.
 
@@ -83,7 +98,7 @@ Use the **Tab List** control to create tabbed interfaces where users can switch 
 | `TabListAppearance.Underline` | Tabs with underline indicator for selection |
 | `TabListAppearance.Filled` | Filled tab buttons with solid backgrounds |
 
-**Font** – The name of the font family in which tab text appears.
+**Font** – The name of the font family for the tab text.
 
 **Size** – The font size of the tab text, in points.
 
@@ -120,9 +135,9 @@ Use the **Tab List** control to create tabbed interfaces where users can switch 
 
 ## Accessibility
 
-**AccessibleLabel** – A label for screen readers to announce what the tab list represents. Should describe the category or sections being navigated (e.g., "Product information sections" or "Report views").
+**AccessibleLabel** – A label for screen readers to announce what the tab list represents. It should describe the category or sections being navigated (for example, "Product information sections" or "Report views").
 
-**ContentLanguage** – The language used for the tab text. Inherits from app settings if not specified.
+**ContentLanguage** – The language used for the tab text. If you don't specify this property, the app settings provide the value.
 
 ## Example
 
@@ -180,7 +195,7 @@ This updated version of the Tab List modern control includes the following impro
 
 ### Property renames
 
-The following properties have been renamed. Update any formulas in your app that reference the old names.
+The following properties are renamed. Update any formulas in your app that reference the old names.
 
 | Previous property | New property |
 |-------------------|--------------|
@@ -193,19 +208,19 @@ The following properties have been renamed. Update any formulas in your app that
 
 ### Bug fixes and improvements
 
-- **Appearance property**: New **Appearance** property with four visual styles (**Transparent**, **Subtle**, **Underline**, **Filled**) gives you more design flexibility for tabbed interfaces.
-- **Item order preserved**: Tabs now display in the exact order specified in the **Items** property. Previously, tabs were sometimes reordered unexpectedly.
-- **Items refresh fixed**: Updating the **Items** property now automatically refreshes the tab list. Previously, changes to Items didn't always trigger a visual update.
-- **Default property**: New **Default** property allows you to specify which tab is selected when the control loads.
-- **Alignment control**: New **Alignment** property controls the positioning of the entire tab list (start, center, end).
+- **Appearance property**: The new **Appearance** property with four visual styles (**Transparent**, **Subtle**, **Underline**, **Filled**) gives you more design flexibility for tabbed interfaces.
+- **Item order preserved**: Tabs now display in the exact order specified in the **Items** property. Previously, the control sometimes reordered tabs unexpectedly.
+- **Items refresh fixed**: Updating the **Items** property now automatically refreshes the tab list. Previously, changes to **Items** didn't always trigger a visual update.
+- **Default property**: The new **Default** property allows you to specify which tab is selected when the control loads.
+- **Alignment control**: The new **Alignment** property controls the positioning of the entire tab list (start, center, end).
 - **Improved tab sizing**: Tab buttons now size more consistently and responsively.
 
 ## Best practices
 
-- **Clear tab labels**: Use short, descriptive labels for tabs (1-2 words). Avoid long phrases that make tabs too wide.
-- **Reasonable tab count**: Use 2-7 tabs for optimal usability. For more sections, consider alternative navigation patterns like a tree view or menu.
+- **Clear tab labels**: Use short, descriptive labels for tabs (one or two words). Avoid long phrases that make tabs too wide.
+- **Reasonable tab count**: Use two to seven tabs for optimal usability. For more sections, consider alternative navigation patterns like a tree view or menu.
 - **Default selection**: Always set a **Default** value to ensure a tab is selected when the control loads.
-- **Conditional visibility**: Use the **Selected** output property to control visibility of content sections:
+- **Conditional visibility**: Use the **Selected** output property to control visibility of content sections.
   ```
   ContentSection.Visible = TabList1.Selected.Value = "Overview"
   ```
@@ -216,8 +231,8 @@ The following properties have been renamed. Update any formulas in your app that
 ## Limitations
 
 - The Tab List control provides navigation only - you must manually control content visibility using the **Selected** property.
-- Very small or very large width and height values may not be fully respected by the control.
-- Tab buttons do not automatically scroll horizontally if there are too many tabs to fit the width.
+- Very small or very large width and height values might not be fully respected by the control.
+- Tab buttons don't automatically scroll horizontally if there are too many tabs to fit the width.
 
 ## See also
 

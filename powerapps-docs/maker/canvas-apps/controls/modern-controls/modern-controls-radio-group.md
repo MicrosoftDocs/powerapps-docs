@@ -4,7 +4,7 @@ description: Learn about the details, properties, and examples of the Radio mode
 author: yogeshgupta698
 ms.topic: reference
 ms.custom: canvas
-ms.date: 02/18/2026
+ms.date: 02/23/2026
 ms.subservice: canvas-maker
 ms.author: yogupt
 ms.reviewer: mkaur
@@ -14,11 +14,17 @@ search.audienceType:
 
 # Radio modern control in canvas apps
 
-A group of mutually exclusive radio button options that allows users to select one item from a list.
+A group of mutually exclusive radio button options that users can use to select one item from a list.
 
 ## Description
 
-Use the **Radio** control to present users with mutually exclusive options where only one choice can be selected at a time. The control displays a list of options with radio button indicators, automatically handling selection state and deselection of other options. Key properties for this control are **Items**, **ItemDisplayText**, **Default**, and **Selected**.
+The **Radio** modern control provides a user-friendly way to present mutually exclusive options in your canvas apps. Users can select exactly one option from a group of choices, making it ideal for scenarios like selecting shipping methods, rating satisfaction, or choosing payment types.
+
+This control automatically manages the selection state—when a user selects one option, any previously selected option is automatically deselected. The Radio control supports both vertical and horizontal layouts, customizable styling, and comprehensive accessibility features to ensure your apps work for all users.
+
+Use the **Radio** control when you need users to make a single choice from 2-7 clearly defined options. For larger option sets, consider using a [Combo Box](modern-control-combobox.md) control instead.
+
+Key properties for this control are **Items**, **ItemDisplayText**, **Default**, and **Selected**.
 
 ## General
 
@@ -26,9 +32,9 @@ Use the **Radio** control to present users with mutually exclusive options where
 
 **ItemDisplayText** – The formula that determines what text displays for each radio button option. Use `ThisItem` to reference the current item from **Items**. For example, `ThisItem.Title` or `ThisItem.OptionName`.
 
-**Default** – The item that is selected by default when the control first loads. Must match an item from the **Items** source.
+**Default** – The item that the control selects by default when it first loads. Must match an item from the **Items** source.
 
-**Selected** – The currently selected item (output property). Use this in formulas to reference which option the user has chosen.
+**Selected** – The currently selected item (output property). Use this in formulas to reference which option the user chooses.
 
 **Visible** – Whether the control appears or is hidden. Use a Power Fx formula to show or hide the control based on app state.
 
@@ -43,11 +49,11 @@ Use the **Radio** control to present users with mutually exclusive options where
 | `Layout.Vertical` | Stacks options vertically (default) |
 | `Layout.Horizontal` | Arranges options horizontally in a row |
 
-**Required** – Whether the user must select an option before submitting a form. When `true`, the control shows validation styling if no selection has been made.
+**Required** – Whether the user must select an option before submitting a form. When `true`, the control shows validation styling if no selection exists.
 
-**TriggerOutput** – Forces the control to output its current selected value. Use this when you need to manually trigger value updates.
+**TriggerOutput** – Forces the control to output its current selected value. Use this value when you need to manually trigger value updates.
 
-**DisplayMode** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**). In **View** mode, the selected option is displayed with a read-only appearance (not grayed out like **Disabled**).
+**DisplayMode** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**). In **View** mode, the selected option appears with a read-only appearance (not grayed out like **Disabled**).
 
 ## Size and position
 
@@ -71,7 +77,7 @@ Use the **Radio** control to present users with mutually exclusive options where
 
 ## Style and theme
 
-**BasePaletteColor** – The base color used by the theme to generate the control's color palette. Changes this property to apply a different theme color to the control.
+**BasePaletteColor** – The base color that the theme uses to generate the control's color palette. Change this property to apply a different theme color to the control.
 
 **Font** – The name of the font family in which option text appears.
 
@@ -126,7 +132,7 @@ Use the **Radio** control to present users with mutually exclusive options where
 
 ## Accessibility
 
-**AccessibleLabel** – A label for screen readers to announce what the radio group represents. Should describe the category or question being answered (e.g., "Shipping method" or "Payment type").
+**AccessibleLabel** – A label for screen readers to announce what the radio group represents. It should describe the category or question being answered (for example, "Shipping method" or "Payment type").
 
 **ContentLanguage** – The language used for the option text. Inherits from app settings if not specified.
 
@@ -173,7 +179,7 @@ This updated version of the Radio modern control includes the following improvem
 
 ### Property renames
 
-The following properties have been renamed. Update any formulas in your app that reference the old names.
+The following properties are renamed. Update any formulas in your app that reference the old names.
 
 | Previous property | New property |
 |-------------------|--------------|
@@ -186,8 +192,8 @@ The following properties have been renamed. Update any formulas in your app that
 
 ### Bug fixes and improvements
 
-- **Item order preserved**: The order of items in the **Items** property is now respected and displayed in the same sequence. Previously, items were sometimes reordered unexpectedly.
-- **View mode appearance**: When **DisplayMode** is set to **View**, the control now displays a proper read-only appearance instead of appearing disabled or grayed out.
+- **Item order preserved**: The control now respects the order of items in the **Items** property and displays them in the same sequence. Previously, the control sometimes reordered items unexpectedly.
+- **View mode appearance**: When you set **DisplayMode** to **View**, the control displays a proper read-only appearance instead of appearing disabled or grayed out.
 - **OnChange reliability**: The **OnChange** event now fires immediately and reliably on every selection change.
 - **Gallery selection fixed**: Radio buttons inside galleries now respond correctly to single clicks. Previously, a double-click was sometimes required.
 - **Scrolling support**: Long lists of radio options now scroll properly instead of being cut off.
@@ -202,15 +208,15 @@ The following properties have been renamed. Update any formulas in your app that
 - **Clear option text**: Use **ItemDisplayText** to provide clear, descriptive labels for each option. Avoid abbreviations or jargon.
 - **Reasonable option count**: Radio buttons work best with 2-7 options. For more options, consider using a Combo Box control instead.
 - **Default selection**: Always set a **Default** value to guide users toward the most common or recommended choice.
-- **Accessible labels**: Provide descriptive **AccessibleLabel** text that explains what the user is choosing between (e.g., "Select your preferred contact method").
+- **Accessible labels**: Provide descriptive **AccessibleLabel** text that explains what the user is choosing between (for example, "Select your preferred contact method").
 - **Visual feedback**: Use **HoverColor** and **PressedColor** to provide clear visual feedback for user interactions.
 - **Layout consideration**: Use **Layout.Vertical** for most cases. Only use **Layout.Horizontal** when you have short option labels and limited options (2-4).
 
 
 ## Limitations
 
-- The control height automatically adjusts to fit all options and cannot be manually constrained to a specific height with scrolling (items will scroll if needed).
-- Very small or very large width and height values may not be fully respected by the control.
+- The control height automatically adjusts to fit all options and you can't manually constrain it to a specific height with scrolling (items scroll if needed).
+- Very small or very large width and height values might not be fully respected by the control.
 
 ## See also
 

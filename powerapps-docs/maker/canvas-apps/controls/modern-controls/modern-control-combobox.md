@@ -4,7 +4,7 @@ description: Learn about the details, properties, and examples of the Combo box 
 author: yogeshgupta698
 ms.topic: reference
 ms.custom: canvas
-ms.date: 02/18/2026
+ms.date: 02/23/2026
 ms.subservice: canvas-maker
 ms.author: yogupt
 ms.reviewer: mkaur
@@ -14,11 +14,13 @@ search.audienceType:
 
 # Combo box modern control in canvas apps
 
-A searchable, multi-select dropdown control for selecting one or more items from a list.
+A searchable, multiselect dropdown control for selecting one or more items from a list.
 
 ## Description
 
-Use the **Combo box** control to let users search and select items from a large list of options. The control supports single or multiple selection, type-ahead search, and custom item display formulas. Key properties for this control are **Items**, **DefaultSelectedItems**, and **SelectMultiple**.
+The **Combo box** modern control provides a flexible, searchable dropdown interface that enables users to select one or more items from a list of options. This control combines the functionality of a traditional dropdown with advanced search capabilities, making it ideal for scenarios where users need to choose from large datasets or multiple selections.
+
+Key properties for this control are **Items**, **DefaultSelectedItems**, and **SelectMultiple**.
 
 ## General
 
@@ -26,7 +28,7 @@ Use the **Combo box** control to let users search and select items from a large 
 
 **ItemDisplayText** – A formula that determines what text to display for each item in the dropdown list. Use `ThisItem` to reference the current item. Example: `ThisItem.DisplayName` or `ThisItem.Value1`.
 
-**DefaultSelectedItems** – The initial item(s) selected in the control before the user makes a change. Must be a table of records from the **Items** data source.
+**DefaultSelectedItems** – The initial items selected in the control before the user makes a change. Must be a table of records from the **Items** data source.
 
 **InputTextPlaceholder** – Hint text that appears in the input field when no items are selected. Default is **"Find items"**.
 
@@ -44,7 +46,7 @@ Use the **Combo box** control to let users search and select items from a large 
 
 **AllowSearching** – (Display property) A toggle that controls whether search is enabled. Maps to the **IsSearchable** property.
 
-**DisplayMode** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**). In **View** mode, the selection is shown but cannot be changed.
+**DisplayMode** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**). In **View** mode, the selection is shown but can't be changed.
 
 **DelayOutput** – When set to `true`, delays the **OnChange** event until the user clicks outside the control or presses Enter. When `false`, **OnChange** fires immediately on each selection. Default is **false**.
 
@@ -140,7 +142,7 @@ Default is `Appearance.FilledDarker`.
 
 ## Example
 
-The following YAML example shows combo box controls with single and multi-select modes:
+The following YAML example shows combo box controls with single and multiselect modes:
 
 ```yaml
 - DepartmentComboBox:
@@ -174,7 +176,7 @@ The following YAML example shows combo box controls with single and multi-select
 
 ## Accessibility
 
-**AccessibleLabel** – A label for screen readers to announce what the control is for. Should describe the purpose of the combo box, not the current selection.
+**AccessibleLabel** – A label for screen readers to announce what the control is for. Describe the purpose of the combo box, not the current selection.
 
 **TabIndex** – The tab order of the control relative to other controls. Controls with lower **TabIndex** values receive focus before controls with higher values.
 
@@ -184,7 +186,7 @@ This updated version of the Combo box modern control includes the following impr
 
 ### Property renames
 
-The following properties have been renamed. Update any formulas in your app that reference the old names.
+The following properties are renamed. Update any formulas in your app that reference the old names.
 
 | Previous property | New property |
 |-------------------|--------------|
@@ -221,13 +223,13 @@ The following properties now require typed enum syntax instead of plain string v
 
 ### Other improvements
 
-- **Improved data handling**: Better support for Dataverse Many-to-One relationships and increased item limit handling (previously limited to ~800 items).
+- **Improved data handling**: Better support for Dataverse many-to-one relationships and increased item limit handling (previously limited to about 800 items).
 - **Mobile-optimized defaults**: When adding the control in a mobile layout, defaults are automatically adjusted (font size 24, width 560, height 64).
 
 ## Limitations
 
-- The control is optimized for lists with up to several thousand items. For very large datasets (10,000+ items), consider using server-side filtering with the **SearchText** output property.
-- Chevron and checkbox icons do not scale with font size in the current version.
+- The control works best with lists that have up to several thousand items. For very large datasets (more than 10,000 items), consider using server-side filtering by using the **SearchText** output property.
+- In the current version, chevron and checkbox icons don't scale with font size.
 
 ## See also
 
