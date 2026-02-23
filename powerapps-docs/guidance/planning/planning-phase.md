@@ -1,48 +1,39 @@
 ---
-title: Planning a Power Apps project - planning phase overview | Microsoft Docs
-description: Planning is the most important part of the app-making process. This article introduces a set of articles that walk you through the planning process step by step.
+title: Planning a Power Apps project - Planning phase overview
+description: Discover the essential steps for planning a Power Apps project. From defining goals to optimizing workflows, ensure your app meets real business needs.
+#customer intent: As a Power Apps user, I want to identify the business problem to solve so that I can ensure the app addresses real needs.
 author: TGrounds
-
 ms.topic: overview
 ms.custom: guidance
-ms.date: 12/05/2020
+ms.date: 02/23/2026
 ms.subservice: guidance
 ms.author: thground
-ms.reviewer: kathyos
-
+ms.reviewer: jhaskett-msft
 ---
 
 # Planning phase
 
-Planning is the most important part of the app-making process. When planning,
-you should consider the following:
+Effective planning is essential to app success. Start by identifying the problem you're solving, who will use the app, and what goals it needs to meet. This focus helps you create a solution that addresses real business needs rather than building an app without clear purpose.
 
-- **What problem** will the app solve?
+> [!TIP]
+> Power Apps is a copilot-first development tool. Learn how to plan and create business solutions using natural language and relevant images, like business process flows or screenshots, in [Overview of plans](../../maker/plan-designer/plan-designer.md).
 
-- **Who** will use this app?
-
-- **What goals** and objectives will it meet for users?
-
-Knowing the answers helps you stay on track when you design the app. It's easy to fall into the trap of *making the app* as the objective, rather than
-*solving the issue*.
-
-In this section, you'll learn about:
+In this section, you learn about:
 
 - [Identifying the business problem to solve (the use case)](identifying-business-problem-to-solve.md)
 
-- [Deeply understanding the business process](understanding-current-business-process.md)
+- [Understanding the business process](understanding-current-business-process.md)
 
 - [Optimizing the business process with your solution](optimizing-business-process.md)
 
-- [Deciding whether it's worthwhile to automate the process](worth-automating-process.md)
+- [Deciding whether automating the process is worthwhile](worth-automating-process.md)
 
 - [Creating a project plan](defining-app-project-objective.md)
 
 > [!NOTE]
-> The planning information covered here is also applicable for Power Automate users who are planning to automate their processes or tasks. You can find detailed information about planning a Power Automate project in the Power Automate guidance documentation: [Planning a Power Automate Project](/power-automate/guidance/planning/introduction)
+> The planning information in this article also applies to Power Automate users who plan to automate their processes or tasks. Review the corresponding planning guidance in [Planning a Power Automate project](/power-automate/guidance/planning/introduction).
 
 > [!div class="nextstepaction"]
 > [Next step: Identifying the business problem to solve](identifying-business-problem-to-solve.md)
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
