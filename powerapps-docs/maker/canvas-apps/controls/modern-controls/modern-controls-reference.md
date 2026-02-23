@@ -16,16 +16,14 @@ contributors:
   - yogeshgupta698
 ---
 
-# Modern controls and properties in canvas apps (preview)
-
-[This article is pre-release document and is subject to change.]
+# Modern controls and properties in canvas apps
 
 Configure the behavior of a modern control by setting one of its properties. Each type of control has a different set of properties.
 
 
 ## Modern controls
 
-**[Avatar (preview)](modern-control-avatar.md)** – A control that shows a graphic representation of a user, team, or entity.
+**[Avatar](modern-control-avatar.md)** – A control that shows a graphic representation of a user, team, or entity.
 
 **[Badge](modern-controls-badge.md)** – A badge is a visual decoration for UI elements.
 
@@ -43,9 +41,9 @@ Configure the behavior of a modern control by setting one of its properties. Eac
 
 **[Dropdown (preview)](modern-control-dropdown.md)** – Select a value from the list of items.
 
-**[Header (preview)](modern-controls-header.md)** – A control that creates a modern app header.
+**[Header](modern-controls-header.md)** – A control that creates a modern app header.
 
-**[Info button (preview)](modern-control-info-button.md)** – Use this control to provide additional information to users.
+**[Info button](modern-control-info-button.md)** – Use this control to provide additional information to users.
 
 **[Link](modern-control-link.md)** – Open hyperlinks in new tab.
 
@@ -61,7 +59,7 @@ Configure the behavior of a modern control by setting one of its properties. Eac
 
 **[Stream (preview)](new-stream-video-control.md)** - A control that lets you add Steam videos in your app.
 
-**[Table](modern-control-table.md)** – A control that shows a set of data in a tabular or list format.
+**[Table (preview)](modern-control-table.md)** – A control that shows a set of data in a tabular or list format.
 
 **[Tabs or tab list](modern-control-tabs-or-tabs-list.md)** – Select a tab to move screens or take action on app.
 
