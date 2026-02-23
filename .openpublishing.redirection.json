@@ -9894,6 +9894,51 @@
       "source_path": "powerapps-docs/maker/canvas-apps/controls/control-stream-video.md",
       "redirect_url": "/powerapps-docs/maker/canvas-apps/controls/modern-controls/new-stream-video-control",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/patterns/approval-pattern.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/patterns/asset-management-pattern.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/patterns/calculator-pattern.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/patterns/communication-pattern.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/patterns/inspection-pattern.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/patterns/more-patterns.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/patterns/overview.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/patterns/project-management-pattern.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/introduction.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
     }
   ]
 }
