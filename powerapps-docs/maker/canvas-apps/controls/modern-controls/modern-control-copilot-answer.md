@@ -23,7 +23,7 @@ contributors:
 A control that makers can use to add predefined questions that end users can use to get generated answers.
 
 > [!IMPORTANT]
-> Starting February 2, 2026, adding a Copilot answer control to new canvas apps will be discontinued. Existing apps with this control will remain functional for a limited time but will eventually no longer be supported. [Microsoft 365 Copilot Chat in canvas apps](https://releaseplans.microsoft.com/?app=Power+Apps&planID=d8f2152f-1e0e-f111-8407-7ced8d183a37) is the new the recommended solution for natural language interactions in canvas apps apps. To ensure a smooth transition and prevent any disruption when Copilot answer control is retired, we recommend that you migrate to Microsoft 365 Copilot chat as soon as it becomes available in your environment.
+> Starting February 2, 2026, adding a Copilot answer control to new canvas apps will be discontinued. Existing apps with this control will remain functional for a limited time but will eventually no longer be supported. [Microsoft 365 Copilot Chat in canvas apps](https://releaseplans.microsoft.com/?app=Power+Apps&planID=d8f2152f-1e0e-f111-8407-7ced8d183a37) is the new the recommended solution for natural language interactions in canvas apps. To ensure a smooth transition and prevent any disruption, we recommend that you migrate to Microsoft 365 Copilot chat as soon as it becomes available in your environment.
 
 > [!NOTE]
 > - This is a preview feature.
