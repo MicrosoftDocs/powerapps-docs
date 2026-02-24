@@ -9939,6 +9939,12 @@
       "source_path": "powerapps-docs/guidance/planning/introduction.md",
       "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/controls/modern-controls/limitations-modern-controls.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/controls/modern-controls/modern-controls-reference",
+      "redirect_document_id": false
     }
   ]
 }
+
