@@ -50,11 +50,11 @@ Before you start, ensure you have the required software and permissions describe
 | Power Platform CLI (PAC CLI) | Latest | [Install PAC CLI](/power-platform/developer/cli/introduction?tabs=windows#install-microsoft-power-platform-cli) |
 | GitHub Copilot CLI, Claude Code, or other code generation tool | Latest | [GitHub Copilot CLI](https://github.com/features/copilot/cli/) or [Claude Code](https://claude.ai/code) |
 
-You also need:
+### Additional requirements
 
+- A Power Platform environment with a model-driven app to deploy pages.
 - An *authenticated PAC CLI session* connected to your target environment.
    - Go to [Authenticate Power Platform CLI](/power-platform/developer/cli/reference/auth) for more details on getting connected.
-- Power Apps environment: A Power Platform environment with a model-driven app to deploy pages.
 
 > [!NOTE]
 > Your Power Platform environment must be located in the US region. This capability is coming to other regions soon.
