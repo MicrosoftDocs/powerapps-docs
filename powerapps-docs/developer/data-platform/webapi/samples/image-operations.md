@@ -2,8 +2,8 @@
 title: "Sample: Image Operations using Dataverse Web API (Microsoft Dataverse) | Microsoft Learn"
 description: "This sample demonstrates how to perform operations with image columns using the Dataverse Web API."
 ms.date: 01/11/2023
-author: mkannapiran
-ms.author: kamanick
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType:
   - developer

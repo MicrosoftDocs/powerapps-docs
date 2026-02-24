@@ -113,6 +113,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [BlockedAttachments](#BKMK_BlockedAttachments)
 - [BlockedMimeTypes](#BKMK_BlockedMimeTypes)
 - [BlockTranscriptRecordingForCopilotStudio](#BKMK_BlockTranscriptRecordingForCopilotStudio)
+- [BlockUrlsInResponsesForCopilotStudio](#BKMK_BlockUrlsInResponsesForCopilotStudio)
 - [BoundDashboardDefaultCardExpanded](#BKMK_BoundDashboardDefaultCardExpanded)
 - [BulkOperationPrefix](#BKMK_BulkOperationPrefix)
 - [BusinessCardOptions](#BKMK_BusinessCardOptions)
@@ -268,6 +269,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [IsContextualEmailEnabled](#BKMK_IsContextualEmailEnabled)
 - [IsContextualHelpEnabled](#BKMK_IsContextualHelpEnabled)
 - [IsCopilotFeedbackEnabled](#BKMK_IsCopilotFeedbackEnabled)
+- [IsCuaOnHmgV2Enabled](#BKMK_IsCuaOnHmgV2Enabled)
 - [IsCustomControlsInCanvasAppsEnabled](#BKMK_IsCustomControlsInCanvasAppsEnabled)
 - [IsDefaultCountryCodeCheckEnabled](#BKMK_IsDefaultCountryCodeCheckEnabled)
 - [IsDelegateAccessEnabled](#BKMK_IsDelegateAccessEnabled)
@@ -1573,6 +1575,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|`blocktranscriptrecordingforcopilotstudio`|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+|GlobalChoiceName|`organization_featureenabled`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
+
+### <a name="BKMK_BlockUrlsInResponsesForCopilotStudio"></a> BlockUrlsInResponsesForCopilotStudio
+
+|Property|Value|
+|---|---|
+|Description|**Enable this feature to block URLs and images in Copilot Studio and agent responses for an individual environment. URLs will be replaced with placeholders.**|
+|DisplayName|**Block URLs and images in Copilot Studio responses**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`blockurlsinresponsesforcopilotstudio`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 |GlobalChoiceName|`organization_featureenabled`|
@@ -4105,6 +4123,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Boolean|
 |GlobalChoiceName|`organization_featureenabled`|
 |DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
+
+### <a name="BKMK_IsCuaOnHmgV2Enabled"></a> IsCuaOnHmgV2Enabled
+
+|Property|Value|
+|---|---|
+|Description|**Indicates whether CUA on Hosted Groups V2 feature is enabled in this organization.**|
+|DisplayName|**Enable CUA on Hosted Groups v2 feature for this organization**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`iscuaonhmgv2enabled`|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+|GlobalChoiceName|`organization_featureenabled`|
+|DefaultValue|True|
 |True Label|Yes|
 |False Label|No|
 
@@ -8826,7 +8860,6 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [organization_privilegesremovalsetting](#BKMK_organization_privilegesremovalsetting)
 - [organization_publisher](#BKMK_organization_publisher)
 - [organization_purviewlabelinfo](#BKMK_organization_purviewlabelinfo)
-- [organization_purviewlabelsynccache](#BKMK_organization_purviewlabelsynccache)
 - [organization_queueitems](#BKMK_organization_queueitems)
 - [organization_queues](#BKMK_organization_queues)
 - [organization_recommendeddocument](#BKMK_organization_recommendeddocument)
@@ -9973,18 +10006,6 @@ Many-To-One Relationship: [purviewlabelinfo organization_purviewlabelinfo](purvi
 |ReferencingEntity|`purviewlabelinfo`|
 |ReferencingAttribute|`organizationid`|
 |ReferencedEntityNavigationPropertyName|`organization_purviewlabelinfo`|
-|IsCustomizable|`True`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
-### <a name="BKMK_organization_purviewlabelsynccache"></a> organization_purviewlabelsynccache
-
-Many-To-One Relationship: [purviewlabelsynccache organization_purviewlabelsynccache](purviewlabelsynccache.md#BKMK_organization_purviewlabelsynccache)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`purviewlabelsynccache`|
-|ReferencingAttribute|`organizationid`|
-|ReferencedEntityNavigationPropertyName|`organization_purviewlabelsynccache`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 

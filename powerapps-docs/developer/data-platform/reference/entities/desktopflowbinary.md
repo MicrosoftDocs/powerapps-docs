@@ -847,7 +847,6 @@ These relationships are one-to-many. Listed by **SchemaName**.
 
 - [desktopflowbinary_AsyncOperations](#BKMK_desktopflowbinary_AsyncOperations)
 - [desktopflowbinary_BulkDeleteFailures](#BKMK_desktopflowbinary_BulkDeleteFailures)
-- [desktopflowbinary_componentchangesetversions](#BKMK_desktopflowbinary_componentchangesetversions)
 - [desktopflowbinary_componentversionnrddatasourceset](#BKMK_desktopflowbinary_componentversionnrddatasourceset)
 - [desktopflowbinary_componentversions](#BKMK_desktopflowbinary_componentversions)
 - [desktopflowbinary_FileAttachments](#BKMK_desktopflowbinary_FileAttachments)
@@ -877,18 +876,6 @@ Many-To-One Relationship: [bulkdeletefailure desktopflowbinary_BulkDeleteFailure
 |ReferencingEntity|`bulkdeletefailure`|
 |ReferencingAttribute|`regardingobjectid`|
 |ReferencedEntityNavigationPropertyName|`desktopflowbinary_BulkDeleteFailures`|
-|IsCustomizable|`True`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
-### <a name="BKMK_desktopflowbinary_componentchangesetversions"></a> desktopflowbinary_componentchangesetversions
-
-Many-To-One Relationship: [componentchangesetversion desktopflowbinary_componentchangesetversions](componentchangesetversion.md#BKMK_desktopflowbinary_componentchangesetversions)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`componentchangesetversion`|
-|ReferencingAttribute|`component`|
-|ReferencedEntityNavigationPropertyName|`componentchangesetversions`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 

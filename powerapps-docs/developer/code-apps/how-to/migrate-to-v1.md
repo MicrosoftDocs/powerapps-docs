@@ -1,15 +1,15 @@
 ---
-title: "Power Apps SDK v1.0 Migration Guide (preview)"
+title: "Power Apps SDK v1.0 Migration Guide"
 description: "This is the migration guide for v1.0 of the Power Apps SDK."
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 1/22/2025
+ms.date: 02/02/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
  - JimDaly
 ---
-# Power Apps SDK v1.0 Migration Guide (preview)
+# Power Apps SDK v1.0 Migration Guide
 
 As code apps approach general availability, we're improving the SDK and releasing version 1.0. These improvements include breaking changes from SDK version 0.3.21.
 
@@ -67,4 +67,4 @@ A new `setConfig` API is available from [@microsoft/power-apps](https://www.npmj
 
 Supported config options include:
 
-**Logger**: Supply a logger with a `logMetric` function. This `logMetric` function logs session and network metrics to the telemetry or monitoring service of your choice. For more information, see [How to: Set up Azure App Insights for your code app (preview)](set-up-azure-app-insights.md).
+**Logger**: Supply a logger with a `logMetric` function. This `logMetric` function logs session and network metrics to the telemetry or monitoring service of your choice. For more information, see [How to: Set up Azure App Insights for your code app](set-up-azure-app-insights.md).

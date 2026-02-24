@@ -2,8 +2,8 @@
 title: "Retrieve published metadata | MicrosoftDocs"
 description: "Retrieving unpublished metadata not only adds overhead to processing the request itself, performing more slowly, it could also return metadata that the requestor doesn't expect."
 suite: powerapps
-author: mkannapiran
-ms.author: kamanick
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 ms.topic: how-to
 ms.date: 1/15/2019

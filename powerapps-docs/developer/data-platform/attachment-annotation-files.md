@@ -1,11 +1,11 @@
 ---
 title: Use file data with Attachment and Note records
 description: Learn how to work with file data in the Attachments and Notes tables in Microsoft Dataverse
-ms.date: 02/02/2023
+ms.date: 02/11/2026
 ms.reviewer: jdaly
 ms.topic: how-to
-author: mkannapiran
-ms.author: kamanick
+author: MsSQLGirl
+ms.author: jukoesma
 ms.subservice: dataverse-developer
 search.audienceType: 
   - developer
@@ -21,30 +21,30 @@ ms.custom: bap-template
 - File name data is stored in the `FileName` column.
 - MIME type data is stored in the `MimeType` column.
 
-Because `FileName`, `MimeType`, `ActivityMimeAttachment.Body`, and `Annotation.DocumentBody` are part of the data for the attachment or note record, you should update these three columns together with any other values.
+Because `FileName`, `MimeType`, `ActivityMimeAttachment.Body`, and `Annotation.DocumentBody` are part of the data for the attachment or note record, update these three columns together with any other values.
 
-You can directly get and set the values of the `activitymimeattachment.body` and `annotation.documentbody` columns as Base64-encoded strings. Setting these values should be fine as long as the files aren't too large, for example under 4 MB. By default the maximum size is 5 MB. You can configure these columns to accept files as large as 128 MB. When you have increased the maximum file size and are working with larger files, you should use messages provided to break the files into smaller chunks when uploading or downloading files. For information about retrieving or changing the file size limits, see [File size limits](#file-size-limits).
+You can directly get and set the values of the `activitymimeattachment.body` and `annotation.documentbody` columns as Base64-encoded strings. Setting these values should be fine as long as the files aren't too large, for example under 4 MB. By default the maximum size is 5 MB. You can configure these columns to accept files as large as 128 MB. When you increase the maximum file size and work with larger files, use messages provided to break the files into smaller chunks when uploading or downloading files. For information about retrieving or changing the file size limits, see [File size limits](#file-size-limits).
 
 ## Attachment files
 
-An attachment is a file that is associated with an [email](reference/entities/email.md) activity, either directly or through an [Email Template (Template)](reference/entities/template.md). Multiple attachments can be associated with the activity or template. You can reuse attachment files by setting the `activitymimeattachment.attachmentid` value to refer to another existing attachment rather than by setting the `body`, `filename`, and `mimetype` properties.
+An attachment is a file that is associated with an [email](reference/entities/email.md) activity, either directly or through an [Email Template (Template)](reference/entities/template.md). You can associate multiple attachments with the activity or template. You can reuse attachment files by setting the `activitymimeattachment.attachmentid` value to refer to another existing attachment rather than by setting the `body`, `filename`, and `mimetype` properties.
 
 ## Other Dataverse tables named attachment
 
-[Attachment (ActivityMimeAttachment)](reference/entities/activitymimeattachment.md) shouldn't be confused with [activityfileattachment](reference/entities/activityfileattachment.md), which supports files associated with the [Post](reference/entities/post.md) table.
+Don't confuse [Attachment (ActivityMimeAttachment)](reference/entities/activitymimeattachment.md) with [activityfileattachment](reference/entities/activityfileattachment.md), which supports files associated with the [Post](reference/entities/post.md) table.
 
-Within the Dataverse schema, there's also a public table with the name `Attachment`, which is exposed in the Web API as [attachment EntityType](xref:Microsoft.Dynamics.CRM.attachment). This table can be queried and it reflects data in the `ActivityMimeAttachment` table. But it doesn't support create, retrieve, update, or delete operations. This table doesn't appear within the [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) designer.
+Within the Dataverse schema, there's also a public table with the name `Attachment`, which is exposed in the Web API as [attachment EntityType](xref:Microsoft.Dynamics.CRM.attachment). You can query this table and it reflects data in the `ActivityMimeAttachment` table. But it doesn't support create, retrieve, update, or delete operations. This table doesn't appear within the [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) designer.
 
 ### Upload attachment files
 
 Use the `InitializeAttachmentBlocksUpload`, `UploadBlock`, and `CommitAttachmentBlocksUpload` messages to upload large files for attachments.
 
 > [!IMPORTANT]
-> You can only use these messages to create a new attachment. It you try to use them to update an existing attachment you'll get an error that the record already exists.
+> You can only use these messages to create a new attachment. If you try to use them to update an existing attachment, you get an error that the record already exists.
 
 #### [SDK for .NET](#tab/sdk)
 
-The following static `UploadAttachment` method shows how to create an attachment with a file using the <xref:Microsoft.Crm.Sdk.Messages.InitializeAttachmentBlocksUploadRequest>, <xref:Microsoft.Crm.Sdk.Messages.UploadBlockRequest>, and <xref:Microsoft.Crm.Sdk.Messages.CommitAttachmentBlocksUploadRequest> classes to return a <xref:Microsoft.Dynamics.CRM.CommitAttachmentBlocksUploadResponse> with `ActivityMimeAttachmentId` and `FileSizeInBytes` properties.
+The following static `UploadAttachment` method shows how to create an attachment with a file by using the <xref:Microsoft.Crm.Sdk.Messages.InitializeAttachmentBlocksUploadRequest>, <xref:Microsoft.Crm.Sdk.Messages.UploadBlockRequest>, and <xref:Microsoft.Crm.Sdk.Messages.CommitAttachmentBlocksUploadRequest> classes to return a <xref:Microsoft.Dynamics.CRM.CommitAttachmentBlocksUploadResponse> with `ActivityMimeAttachmentId` and `FileSizeInBytes` properties.
 
 ```csharp
 static CommitAttachmentBlocksUploadResponse UploadAttachment(
@@ -149,7 +149,7 @@ static CommitAttachmentBlocksUploadResponse UploadAttachment(
 }
 ```
 
-More information:
+For more information, see:
 
 - [Use the SDK for .NET](org-service/overview.md)
 - [IOrganizationService.Execute Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
@@ -199,7 +199,7 @@ OData-Version: 4.0
 }
 ```
 
-You must then break up the file into blocks of 4 MB or less and send each block using the [UploadBlock Action](xref:Microsoft.Dynamics.CRM.UploadBlock) with the following properties:
+You must then break up the file into blocks of 4 MB or less and send each block by using the [UploadBlock Action](xref:Microsoft.Dynamics.CRM.UploadBlock) with the following properties:
 
 
 |Property|Description|
@@ -236,7 +236,7 @@ HTTP/1.1 204 NoContent
 OData-Version: 4.0
 ```
 
-After you have sent all the parts of the file, use the [CommitAttachmentBlocksUpload action](xref:Microsoft.Dynamics.CRM.CommitAttachmentBlocksUpload) to complete the upload using these properties:
+After you send all the parts of the file, use the [CommitAttachmentBlocksUpload action](xref:Microsoft.Dynamics.CRM.CommitAttachmentBlocksUpload) to complete the upload by using these properties:
 
 |Property|Description|
 |---------|---------|
@@ -297,11 +297,11 @@ OData-Version: 4.0
 
 ### Download attachment files
 
-You can download an attachment file in a single operation using the Web API or in chunks using the SDK or Web API.
+You can download an attachment file in a single operation by using the Web API or in chunks by using the SDK or Web API.
 
-#### Download attachment files in a single operation using the Web API
+#### Download attachment files in a single operation by using the Web API
 
-Using the Web API, you can download an attachment file in a single operation.
+By using the Web API, you can download an attachment file in a single operation.
 
 Unlike retrieving file columns, this method doesn't provide information about file size, file name, or MIME type.
 
@@ -325,7 +325,7 @@ Content-Type: text/plain
 <Base64 string content removed for brevity>
 ```
 
-More information:
+For more information, see:
 
 - [Download a file in a single request using Web API](file-column-data.md#download-a-file-in-a-single-request-using-web-api)
 - [Retrieve the raw value of a property](webapi/retrieve-entity-using-web-api.md#retrieve-the-raw-value-of-a-property)
@@ -343,7 +343,7 @@ After you download all the blocks, join them to create the entire downloaded fil
 
 #### [SDK for .NET](#tab/sdk)
 
-The following static `DownloadAttachment` method shows how to download an attachment using the SDK with the [InitializeAttachmentBlocksDownloadRequest](xref:Microsoft.Crm.Sdk.Messages.InitializeAttachmentBlocksDownloadRequest) and [DownloadBlockRequest](xref:Microsoft.Crm.Sdk.Messages.DownloadBlockRequest) classes. This function returns the `byte[]` data and the name of the file.
+The following static `DownloadAttachment` method shows how to download an attachment by using the SDK with the [InitializeAttachmentBlocksDownloadRequest](xref:Microsoft.Crm.Sdk.Messages.InitializeAttachmentBlocksDownloadRequest) and [DownloadBlockRequest](xref:Microsoft.Crm.Sdk.Messages.DownloadBlockRequest) classes. This function returns the `byte[]` data and the name of the file.
 
 ```csharp
 static (byte[] bytes, string fileName) DownloadAttachment(
@@ -409,7 +409,7 @@ static (byte[] bytes, string fileName) DownloadAttachment(
 }
 ```
 
-More information:
+For more information, see:
 
 - [Use the SDK for .NET](org-service/overview.md)
 - [IOrganizationService.Execute Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
@@ -459,7 +459,7 @@ The response is a [InitializeAttachmentBlocksDownloadResponse complex type](xref
 - `FileSizeInBytes`: The size of the file
 - `FileContinuationToken`: The file continuation token to use in subsequent requests
 
-Based on the size of the file and the size of the block you download, send more requests using the [DownloadBlock Action](xref:Microsoft.Dynamics.CRM.DownloadBlock) as shown in the following example.
+Based on the size of the file and the size of the block you want to download, send more requests by using the [DownloadBlock Action](xref:Microsoft.Dynamics.CRM.DownloadBlock). The following example shows how to use this action.
 
 **Request:**
 
@@ -493,26 +493,26 @@ OData-Version: 4.0
 }
 ```
 
-More information: [Use Web API actions](webapi/use-web-api-actions.md)
+For more information, see [Use Web API actions](webapi/use-web-api-actions.md).
 
 ---
 
 ## Annotation files
 
-A note is a record associated with a table row that contains text and may have a single file attached. Only tables with [EntityMetadata.HasNotes](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.HasNotes) set to true may have notes associated with them.
+A note is a record associated with a table row that contains text and can have one attached file. Only tables with [EntityMetadata.HasNotes](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.HasNotes) set to true support associated notes.
 
 
 ### Upload annotation files
 
 Use the `InitializeAnnotationBlocksUpload`, `UploadBlock`, and `CommitAnnotationBlocksUpload` messages to upload files for notes.
 
-The annotation you pass as the `Target` parameter for these messages must have an `annotationid` value. This is how you can update existing annotation records.
+The annotation you pass as the `Target` parameter for these messages must have an `annotationid` value. This value is how you update existing annotation records.
 
-Normally, it's best to let Dataverse generate the unique identifier values when creating new records, but that isn't possible with these messages. To create a new annotation with these messages, you must generate a new `Guid` value to set as the `annotationid` value rather than let Dataverse generate the value.
+Normally, you let Dataverse generate the unique identifier values when creating new records, but you can't do that with these messages. To create a new annotation by using these messages, generate a new `Guid` value to set as the `annotationid` value instead of letting Dataverse generate the value.
 
 #### [SDK for .NET](#tab/sdk)
 
-The following static `UploadNote` method shows how to create or update a note with a file using the <xref:Microsoft.Crm.Sdk.Messages.InitializeAnnotationBlocksUploadRequest>, <xref:Microsoft.Crm.Sdk.Messages.UploadBlockRequest>, and <xref:Microsoft.Crm.Sdk.Messages.CommitAnnotationBlocksUploadRequest> classes. It returns a <xref:Microsoft.Dynamics.CRM.CommitAnnotationBlocksUploadResponse> with `AnnotationId` and `FileSizeInBytes` properties.
+The following static `UploadNote` method shows how to create or update a note with a file by using the <xref:Microsoft.Crm.Sdk.Messages.InitializeAnnotationBlocksUploadRequest>, <xref:Microsoft.Crm.Sdk.Messages.UploadBlockRequest>, and <xref:Microsoft.Crm.Sdk.Messages.CommitAnnotationBlocksUploadRequest> classes. It returns a <xref:Microsoft.Dynamics.CRM.CommitAnnotationBlocksUploadResponse> with `AnnotationId` and `FileSizeInBytes` properties.
 
 ```csharp
 static CommitAnnotationBlocksUploadResponse UploadNote(
@@ -622,7 +622,7 @@ static CommitAnnotationBlocksUploadResponse UploadNote(
 }
 ```
 
-More information:
+For more information, see:
 
 - [Use the SDK for .NET](org-service/overview.md)
 - [IOrganizationService.Execute Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
@@ -672,13 +672,13 @@ OData-Version: 4.0
 }
 ```
 
-Break up the file into blocks of 4 MB or less and send each block using the [UploadBlock action](xref:Microsoft.Dynamics.CRM.UploadBlock) with the following properties:
+Break up the file into blocks of 4 MB or less and send each block by using the [UploadBlock action](xref:Microsoft.Dynamics.CRM.UploadBlock) with the following properties:
 
 
 |Property|Description:  |
 |---------|---------|
 |`BlockId`|A valid Base64-encoded string value that identifies the block. Before encoding, the string must be less than or equal to 64 bytes in size.<br />The `BlockId` value must be the same size for each block.|
-|`BlockData`|A Base64-encoded string containing the byte[] less than 4 MB in size representing the portion of the file being sent.|
+|`BlockData`|A Base64-encoded string containing the byte[] that's less than 4 MB in size representing the portion of the file being sent.|
 |`FileContinuationToken`|The value of the `InitializeAttachmentBlocksUploadResponse.FileContinuationToken`|
 
 
@@ -709,7 +709,7 @@ HTTP/1.1 204 NoContent
 OData-Version: 4.0
 ```
 
-After all the parts of the file have been sent, use the [CommitAnnotationBlocksUpload Action](xref:Microsoft.Dynamics.CRM.CommitAnnotationBlocksUpload) to complete the upload using these properties:
+After you send all the parts of the file, use the [CommitAnnotationBlocksUpload Action](xref:Microsoft.Dynamics.CRM.CommitAnnotationBlocksUpload) to complete the upload by using these properties:
 
 |Property|Description:  |
 |---------|---------|
@@ -768,11 +768,11 @@ OData-Version: 4.0
 
 ### Download annotation files
 
-You can download a Note file in a single operation using the Web API, or in chunks using the SDK or Web API.
+You can download a Note file in a single step by using the Web API, or in chunks by using the SDK or Web API.
 
-#### Download Annotation files in a single operation using the Web API
+#### Download annotation files in a single step by using the Web API
 
-Using the Web API, you can download a Note file in a single operation:
+By using the Web API, you can download a Note file in a single step:
 
 Unlike retrieving file columns, this method doesn't provide information about file size, file name, or MIME type.
 
@@ -796,7 +796,7 @@ Content-Type: text/plain
 <Base64 string content removed for brevity>
 ```
 
-More information:
+For more information, see:
 
 - [Download a file in a single request using Web API](file-column-data.md#download-a-file-in-a-single-request-using-web-api)
 - [Retrieve the raw value of a property](webapi/retrieve-entity-using-web-api.md#retrieve-the-raw-value-of-a-property)
@@ -807,14 +807,14 @@ To retrieve the file in chunks, use the following messages with either the SDK o
 
 |Message|Description|
 |---------|---------|
-|`InitializeAnnotationBlocksDownload`|Specifies the Note record that you want to download a file from. It returns the file size in bytes and a *file continuation token* that you can use to download the file in blocks using the `DownloadBlock` message.|
+|`InitializeAnnotationBlocksDownload`|Specifies the Note record that you want to download a file from. It returns the file size in bytes and a *file continuation token* that you can use to download the file in blocks by using the `DownloadBlock` message.|
 |`DownloadBlock`|Requests the size of the block, the offset value, and the file continuation token.|
 
 After you download all the blocks, join them to create the entire downloaded file.
 
 #### [SDK for .NET](#tab/sdk)
 
-The following static `DownloadNote` method shows how to download a note using the SDK with the [InitializeAnnotationBlocksDownloadRequest](xref:Microsoft.Crm.Sdk.Messages.InitializeAnnotationBlocksDownloadRequest) and [DownloadBlockRequest](xref:Microsoft.Crm.Sdk.Messages.DownloadBlockRequest) classes. This function returns the `byte[]` data and the name of the file.
+The following static `DownloadNote` method shows how to download a note by using the SDK with the [InitializeAnnotationBlocksDownloadRequest](xref:Microsoft.Crm.Sdk.Messages.InitializeAnnotationBlocksDownloadRequest) and [DownloadBlockRequest](xref:Microsoft.Crm.Sdk.Messages.DownloadBlockRequest) classes. This function returns the `byte[]` data and the name of the file.
 
 ```csharp
 static (byte[] bytes, string fileName) DownloadNote(
@@ -878,7 +878,7 @@ return (fileBytes.ToArray(), fileName);
 }
 ```
 
-More information:
+For more information, see:
 
 - [Use the SDK for .NET](org-service/overview.md)
 - [IOrganizationService.Execute Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
@@ -928,7 +928,7 @@ The response is a [InitializeAnnotationBlocksDownloadResponse complex type](xref
 - `FileSizeInBytes`: The size of the file
 - `FileContinuationToken`: The file continuation token to use in subsequent requests
 
-Based on the size of the file and the size of the block you download, send more requests using the [DownloadBlock action](xref:Microsoft.Dynamics.CRM.DownloadBlock) as shown in the following example.
+Based on the size of the file and the size of the block you want to download, send more requests by using the [DownloadBlock action](xref:Microsoft.Dynamics.CRM.DownloadBlock). The following example shows how to use this action.
 
 **Request:**
 
@@ -962,7 +962,7 @@ OData-Version: 4.0
 }
 ```
 
-More information: [Use Web API actions](webapi/use-web-api-actions.md)
+For more information, see [Use Web API actions](webapi/use-web-api-actions.md).
 
 ---
 
@@ -970,9 +970,9 @@ More information: [Use Web API actions](webapi/use-web-api-actions.md)
 
 The [Organization.MaxUploadFileSize](reference/entities/organization.md#BKMK_MaxUploadFileSize) column specifies the maximum allowed size of a file in bytes for an attachment and note, and other kinds of data, such as web resource files used for model-driven apps. The maximum upload file size limit applies to the size of the file in Base64 encoding. A Base64 encoding produces a string that is larger than the original `byte[]` file data.
 
-The default size is 5 MB (5,242,880 bytes) and the maximum value is 128 MB (131072000 bytes) and can be set in the email settings for the environment. More information: [Manage email settings](/power-platform/admin/settings-email)
+The default size is 5 MB (5,242,880 bytes) and the maximum value is 128 MB (131,072,000 bytes). You can set this value in the email settings for the environment. For more information, see [Manage email settings](/power-platform/admin/settings-email).
 
-If you try to upload a file that's too large, you get the following error:
+If you try to upload a file that's too large, you get the following error message:
 
 > Name: `unManagedidsattachmentinvalidfilesize`<br />
 > Code: `0x80044a02`<br />
@@ -985,7 +985,7 @@ You can retrieve the maximum upload file size in a couple of ways.
 
 # [SDK for .NET](#tab/sdk)
 
-Use a static method like the following `GetMaxUploadFileSize` to get the value.
+Use a static method like the following `GetMaxUploadFileSize` method to get the value.
 
 ```csharp
 public static int GetMaxUploadFileSize(IOrganizationService service) {
@@ -1001,7 +1001,7 @@ public static int GetMaxUploadFileSize(IOrganizationService service) {
 }
 ```
 
-More information:
+For more information, see:
 
 - [Use the SDK for .NET](org-service/overview.md)
 - [IOrganizationService.RetrieveMultiple Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple%2A)
@@ -1010,7 +1010,7 @@ More information:
 
 # [Web API](#tab/webapi)
 
-Return the single row from the [Organization entity type](xref:Microsoft.Xrm.Sdk.Organization) with the `maxuploadfilesize` property.
+Returns the single row from the [Organization entity type](xref:Microsoft.Xrm.Sdk.Organization) with the `maxuploadfilesize` property.
 
 **Request:**
 
@@ -1040,13 +1040,13 @@ OData-Version: 4.0
 }
 ```
 
-More information: [Query data using the Web API](webapi/query/overview.md)
+For more information, see [Query data using the Web API](webapi/query/overview.md).
 
 ---
 
 ### Change max upload file size
 
-You can set the `organization.maxuploadfilesize` value in a couple of ways.
+Set the `organization.maxuploadfilesize` value in a couple of ways.
 
 # [SDK for .NET](#tab/sdk)
 
@@ -1077,7 +1077,7 @@ public static void SetMaxUploadFileSize(
 }
 ```
 
-More information:
+For more information, see:
 
 - [Use the SDK for .NET](org-service/overview.md)
 - [IOrganizationService.RetrieveMultiple Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple%2A)
@@ -1086,7 +1086,7 @@ More information:
 
 # [Web API](#tab/webapi)
 
-The [Organization entity type](xref:Microsoft.Xrm.Sdk.Organization) contains a single row. After you retrieve it, use the `organizationid` returned to update the row. The <xref:Microsoft.Dynamics.CRM.WhoAmIResponse> also includes this value.
+The [Organization entity type](xref:Microsoft.Xrm.Sdk.Organization) contains a single row. After you retrieve it, use the returned `organizationid` value to update the row. The <xref:Microsoft.Dynamics.CRM.WhoAmIResponse> also includes this value.
 
 **Request:**
 

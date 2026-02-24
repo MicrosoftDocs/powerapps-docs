@@ -2,8 +2,8 @@
 title: "Sample: Retrieve valid status transitions (Microsoft Dataverse) | Microsoft Docs"
 description: "This sample shows how to retrieve valid state transitions." 
 ms.date: 04/03/2022
-author: mkannapiran
-ms.author: kamanick
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 ms.topic: sample
 search.audienceType:

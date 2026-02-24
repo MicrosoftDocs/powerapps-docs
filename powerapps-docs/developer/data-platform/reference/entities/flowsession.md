@@ -87,6 +87,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
 - [ParentCloudFlowRunSequenceId](#BKMK_ParentCloudFlowRunSequenceId)
+- [ParentDesktopFlowRunGuid](#BKMK_ParentDesktopFlowRunGuid)
 - [ParentDesktopFlowRunId](#BKMK_ParentDesktopFlowRunId)
 - [ParentWorkflowId](#BKMK_ParentWorkflowId)
 - [ProcessVersion](#BKMK_ProcessVersion)
@@ -485,6 +486,18 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|False|
 |MaxLength|1000|
+
+### <a name="BKMK_ParentDesktopFlowRunGuid"></a> ParentDesktopFlowRunGuid
+
+|Property|Value|
+|---|---|
+|Description|**The run id of the parent desktop flow run, only used when the Desktop Flow was run by a desktop flow. Used instead of Parent Desktop Flow Run Id when the field is available. Same purpose but keeping only the guid instead of doing a lookup.**|
+|DisplayName|**Parent Desktop Flow Run Id Guid**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`parentdesktopflowrunguid`|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
 
 ### <a name="BKMK_ParentDesktopFlowRunId"></a> ParentDesktopFlowRunId
 
