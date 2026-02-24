@@ -26,7 +26,7 @@ Plans in Power Apps is a copilot-first development tool that lets you quickly cr
 ## Prerequisites
 
 > [!IMPORTANT]
-> Plans is available only in the Government Community Cloud (GCC). For more information, see [Plans in Sovereign Clouds](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fgithub.com%2FDougBell303%2FSLG-Business-Applications%2Fblob%2Fmain%2Fwhite-papers%2FPlan-Designer-disclaimer.md&data=05%7C02%7Cnorliu%40microsoft.com%7C01e076eb72e24bedf93008de67ed3115%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C639062465958558357%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=BUNOqQrQ6Leh%2B6JRZalaSaeC%2FU%2Bx1rLpdaUVc%2BYZBsk%3D&reserved=0)
+> For Government Community Cloud users, plans is supported only in the Government Community Cloud (GCC). For more information, see [Plans in Sovereign Clouds](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fgithub.com%2FDougBell303%2FSLG-Business-Applications%2Fblob%2Fmain%2Fwhite-papers%2FPlan-Designer-disclaimer.md&data=05%7C02%7Cnorliu%40microsoft.com%7C01e076eb72e24bedf93008de67ed3115%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C639062465958558357%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=BUNOqQrQ6Leh%2B6JRZalaSaeC%2FU%2Bx1rLpdaUVc%2BYZBsk%3D&reserved=0)
 
 To use plans in Power Apps, follow these steps:
 
@@ -43,8 +43,6 @@ To use plans in Power Apps, follow these steps:
 
 
 **3. Who can access plans?**
-
-Plans [generally available](/power-platform/admin/general-availability-deployment) and enabled by default. It can't be turned off except through Microsoft Support. A tenant administrator must [contact Support](/power-platform/admin/get-help-support) to request that it be turned off.
 
 The following security roles can see the entry point for plans on the Power Apps home page:
 
@@ -72,7 +70,7 @@ The following security roles can see the entry point for plans on the Power Apps
 
 ## Availability
 
-Plans is generally available. Check if the feature is available in your region. Learn more in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/availability-reports/?report=copilotfeaturereport).
+Plans is [generally available](/power-platform/admin/general-availability-deployment) and enabled by default. Check if the feature is available in your region. Learn more in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/availability-reports/?report=copilotfeaturereport).
 
 
 
