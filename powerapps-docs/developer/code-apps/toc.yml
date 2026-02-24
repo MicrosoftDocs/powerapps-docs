@@ -10,7 +10,7 @@ items:
       - name: What's new?
         items:
           - name: Quickstart with npm CLI
-            href: how-to/quickstart-npm-cli.md
+            href: how-to/npm-quickstart.md
       - name: Build
         items:
           - name: "Quickstart: Create a code app"
@@ -20,7 +20,7 @@ items:
           - name: Connect to data
             href: how-to/connect-to-data.md
           - name: Connect to Copilot Studio
-            href: connect-to-copilot-studio.md
+            href: how-to/connect-to-copilot-studio.md
           - name: Dataverse
             items:
               - name: Connect to Dataverse
