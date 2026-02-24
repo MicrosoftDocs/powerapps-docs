@@ -4,7 +4,7 @@ description: Learn how to use plans, an AI-powered tool in Power Platform, to cr
 author: szlo
 contributors:
 ms.topic: how-to
-ms.date: 02/18/2026
+ms.date: 02/24/2026
 ms.update-cycle: 180-days
 ms.author: mkaur
 ms.reviewer: mkaur
@@ -32,20 +32,19 @@ To use plans in Power Apps, follow these steps:
 
 **1. Environment requirements** 
 
-1. **Dataverse Database Required:** Make sure your environment includes a [Microsoft Dataverse database](/power-platform/admin/create-database).
-1. **Copilot Features Enabled:** Plans availability is controlled through the general Copilot preview settings in the Power Platform Admin Center. There is no dedicated setting specifically for plan designer.
+1. **Dataverse database required:** Make sure your environment includes a [Microsoft Dataverse database](/power-platform/admin/create-database).
+1. **Copilot features enabled:** Plans is [generally available](/power-platform/admin/general-availability-deployment) and enabled by default. It can't be turned off except through Microsoft Support. A tenant administrator must [contact Support](/power-platform/admin/get-help-support) to request that it be turned off.
 1. **Environment must be in an eligible locale**
 
-**2. What If You Don’t Meet the Prerequisites?**
+**2. What if you don’t meet the prerequisites?**
 
 1. **Developer Environment Option**: If your current environment doesn’t meet the requirements but you can use developer environments, you're automatically routed to your own developer environment. There, you have permission to create Dataverse tables. Learn more in [Create a developer environment](/power-platform/developer/create-developer-environment).
 1. **No Developer Environment Available:** If you can’t use or create a developer environment, you won’t be able to create plans in your current environment. In this case, switch to an environment where you have permission to create tables and start building your plan there.
 
-**3. Admin Controls**
 
-Plans availability is managed through the Power Platform Admin Center's Copilot preview settings. There is no separate toggle specifically for plan designer. When Copilot features are enabled for the tenant, plans becomes available to eligible users in supported environments.
+**3. Who can access plans?**
 
-**4. Who Can Access plans?**
+Plans [generally available](/power-platform/admin/general-availability-deployment) and enabled by default. It can't be turned off except through Microsoft Support. A tenant administrator must [contact Support](/power-platform/admin/get-help-support) to request that it be turned off.
 
 The following security roles can see the entry point for plans on the Power Apps home page:
 
