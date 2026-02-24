@@ -5,12 +5,12 @@ items:
         href: index.yml
       - name: Overview
         href: overview.md
+      - name: Architecture
+        href: architecture.md
       - name: What's new?
         items:
           - name: Quickstart with npm CLI
-            href: how-to/npm-quickstart.md
-      - name: Architecture
-        href: architecture.md
+            href: how-to/quickstart-npm-cli.md
       - name: Build
         items:
           - name: "Quickstart: Create a code app"
@@ -20,7 +20,7 @@ items:
           - name: Connect to data
             href: how-to/connect-to-data.md
           - name: Connect to Copilot Studio
-            href: how-to/connect-to-copilot-studio.md
+            href: connect-to-copilot-studio.md
           - name: Dataverse
             items:
               - name: Connect to Dataverse
