@@ -26,7 +26,7 @@ Plans in Power Apps is a copilot-first development tool that lets you quickly cr
 ## Prerequisites
 
 > [!IMPORTANT]
-> Plans is not available in government cloud environments (GCC, GCC High, DoD). Government cloud users should use alternative Power Platform development approaches.
+> Plans is available only in the Government Community Cloud (GCC). For more information, see [Plans in Sovereign Clouds](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fgithub.com%2FDougBell303%2FSLG-Business-Applications%2Fblob%2Fmain%2Fwhite-papers%2FPlan-Designer-disclaimer.md&data=05%7C02%7Cnorliu%40microsoft.com%7C01e076eb72e24bedf93008de67ed3115%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C639062465958558357%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=BUNOqQrQ6Leh%2B6JRZalaSaeC%2FU%2Bx1rLpdaUVc%2BYZBsk%3D&reserved=0)
 
 To use plans in Power Apps, follow these steps:
 
