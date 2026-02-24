@@ -133,9 +133,9 @@ The following YAML example shows contextual help buttons for form fields with co
       Height: =28
 ```
 
-## Updates to Info button starting Feb 2026
+## Recent updates
 
-This updated version of the Info button modern control includes the following improvements and changes.
+The updated version of the **Info button** modern control includes improvements and behavior change.
 
 ### Property renames
 

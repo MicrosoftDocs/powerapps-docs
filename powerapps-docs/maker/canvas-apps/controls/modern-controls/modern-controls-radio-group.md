@@ -173,13 +173,14 @@ The following YAML example shows radio button controls with different option set
       Width: =320
 ```
 
-## Updates to Radio starting Feb 2026
+## Recent updates
 
-This updated version of the Radio modern control includes the following improvements and changes.
+The updated version of the **Radio** modern control includes improvements and behavior change.
 
 ### Property renames
 
-The following properties are renamed. Update any formulas in your app that reference the old names.
+The following properties are renamed. Update any formulas in your app that reference the old property names.
+
 
 | Previous property | New property |
 |-------------------|--------------|

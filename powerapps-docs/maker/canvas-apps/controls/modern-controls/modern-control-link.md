@@ -179,13 +179,13 @@ The following YAML example shows link controls with different styling options:
       Height: =32
 ```
 
-## Updates to Link starting Feb 2026
+## Recent updates
 
-This updated version of the Link modern control includes the following improvements and changes.
+The updated version of the **Link** modern control includes improvements and behavior change.
 
 ### Property renames
 
-The following properties are renamed. Update any formulas in your app that reference the old names.
+The following properties are renamed. Update any formulas in your app that reference the old property names.
 
 | Previous property | New property |
 |-------------------|--------------|

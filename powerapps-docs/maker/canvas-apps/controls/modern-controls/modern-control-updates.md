@@ -12,10 +12,9 @@ search.audienceType:
   - maker
 ---
 
-# Updates to modern controls in canvas apps (Starting Feb 2026)
+# Updates to modern controls in canvas apps
 
-
-Modern controls in Power Apps canvas apps receive regular quality updates that improve performance, fix bugs, and add new features. Starting February 2026, significant updates are available for nine modern controls including Text, Number Input, Date Picker, and others.
+Modern controls in Power Apps canvas apps receive regular quality updates that improve performance, fix bugs, and add new features. Starting February 2026, significant updates are available for modern controls including Text, Number Input, Date Picker, and others.
 
 These updates include property renames, behavioral changes, and new enum patterns that may require formula updates in your existing apps. When you open apps with previous versions of these controls, you'll see update notifications with links to detailed migration guidance.
 
@@ -47,21 +46,21 @@ When you open an app that uses the previous version of a modern control, you see
 > [!NOTE]
 > The **Update** button might not be available for all controls immediately. When available, it appears alongside the **Learn more** link in the control notification.
 
-## Which controls are updated?
+## Controls with available updates
 
 | Control | Update guide | Key changes |
 |---------|----------------|-------------|
-| Text | [Updates to Text control](modern-control-text.md#updates-to-text-starting-feb-2026) | Nine property renames, enum values, new OnSelect event, DisplayMode removed |
-| Number Input | [Updates to Number Input](modern-control-number-input.md#updates-to-number-input-starting-feb-2026) | OnChange on blur plus step clicks, TriggerOutput removed, new styling properties |
-| Date Picker | [Updates to Date Picker](modern-control-date-picker.md#updates-to-date-picker-starting-feb-2026) | View mode fixed, format honored, DateTimeZone respected, gallery crash fixed |
-| Text Input | [Updates to Text Input](modern-control-text-input.md#updates-to-text-input-starting-feb-2026) | OnChange on focus out only, TriggerOutput default = Keypress, View mode truly read-only |
-| Tab List | [Updates to Tab List](modern-control-tabs-or-tabs-list.md#updates-to-tab-list-starting-feb-2026) | New Appearance property, item order preserved, Items auto-refresh |
-| Combo Box | [Updates to Combo Box](modern-control-combobox.md#updates-to-combo-box-starting-feb-2026) | SelectMultiple default = true, toggle to unselect, OnChange fires on every selection |
-| Radio | [Updates to Radio](modern-controls-radio-group.md#updates-to-radio-starting-feb-2026) | Item order preserved, View mode read-only (not disabled), new styling properties |
-| Link | [Updates to Link](modern-control-link.md#updates-to-link-starting-feb-2026) | URL security validation (XSS protection), FontWeight fix, Wrap fix |
-| Info Button | [Updates to Info Button](modern-control-info-button.md#updates-to-info-button-starting-feb-2026) | Content flyout expansion fixed, click reliability improved, AcceptsFocus removed |
+| Text | [Updates to Text control](modern-control-text.md#recent-updates) | Nine property renames, enum values, new OnSelect event, DisplayMode removed |
+| Number Input | [Updates to Number Input](modern-control-number-input.md#recent-updates) | OnChange on blur plus step clicks, TriggerOutput removed, new styling properties |
+| Date Picker | [Updates to Date Picker](modern-control-date-picker.md#recent-updates) | View mode fixed, format honored, DateTimeZone respected, gallery crash fixed |
+| Text Input | [Updates to Text Input](modern-control-text-input.md#recent-updates) | OnChange on focus out only, TriggerOutput default = Keypress, View mode truly read-only |
+| Tab List | [Updates to Tab List](modern-control-tabs-or-tabs-list.md#recent-updates) | New Appearance property, item order preserved, Items auto-refresh |
+| Combo Box | [Updates to Combo Box](modern-control-combobox.md#recent-updates) | SelectMultiple default = true, toggle to unselect, OnChange fires on every selection |
+| Radio | [Updates to Radio](modern-controls-radio-group.md#recent-updates) | Item order preserved, View mode read-only (not disabled), new styling properties |
+| Link | [Updates to Link](modern-control-link.md#recent-updates) | URL security validation (XSS protection), FontWeight fix, Wrap fix |
+| Info Button | [Updates to Info Button](modern-control-info-button.md#recent-updates) | Content flyout expansion fixed, click reliability improved, AcceptsFocus removed |
 
-## Common changes across all controls
+## Property changes across modern controls
 
 ### Property renames
 

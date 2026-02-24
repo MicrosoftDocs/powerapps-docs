@@ -153,13 +153,14 @@ The following YAML example shows a clickable label with styling that you can use
       OnSelect: =Set(varLabelClicked, true)
 ```
 
-## Updates to Text starting Feb 2026
+## Recent updates
 
-This updated version of the Text modern control includes the following improvements and changes.
+The updated version of the **Text** modern control includes improvements and behavior change.
 
 ### Property renames
 
-The following properties are renamed. Update any formulas in your app that reference the old names.
+The following properties are renamed. Update any formulas in your app that reference the old property names.
+
 
 | Previous property | New property |
 |-------------------|--------------|

@@ -215,13 +215,13 @@ The following YAML example shows date picker controls for selecting dates:
       Height: =32
 ```
 
-## Updates to Date picker starting Feb 2026
+## Recent updates
 
-This updated version of the Date picker modern control includes the following improvements and changes.
+The updated version of the **Date picker** modern control includes improvements and behavior change.
 
 ### Property renames
 
-The following properties are renamed. Update any formulas in your app that reference the old names.
+The following properties are renamed. Update any formulas in your app that reference the old property names.
 
 | Previous property | New property |
 |-------------------|--------------|

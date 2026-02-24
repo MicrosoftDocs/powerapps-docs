@@ -226,13 +226,14 @@ The following YAML example shows text input controls with various input types:
       Height: =32
 ```
 
-## Updates to Text Input starting Feb 2026
+## Recent updates
 
-This updated version of the Text Input modern control includes the following improvements and changes.
+The updated version of the **Text input** modern control includes improvements and behavior change.
 
 ### Property renames
 
-The following properties have been renamed. Update any formulas in your app that reference the old names.
+The following properties are renamed. Update any formulas in your app that reference the old property names.
+
 
 | Previous property | New property |
 |-------------------|--------------|

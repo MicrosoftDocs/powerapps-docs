@@ -191,13 +191,13 @@ The following YAML example shows a product quantity selector with inventory vali
       Height: =32
 ```
 
-## Updates to Number Input starting Feb 2026
+## Recent updates
 
-This updated version of the Number Input modern control includes the following improvements and changes.
+The updated version of the **Number input** modern control includes improvements and behavior change.
 
 ### Property renames
 
-The following properties are renamed. Update any formulas in your app that reference the old names.
+The following properties are renamed. Update any formulas in your app that reference the old property names.
 
 | Previous property | New property |
 |-------------------|--------------|

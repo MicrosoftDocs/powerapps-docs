@@ -180,13 +180,13 @@ The following YAML example shows combo box controls with single and multiselect 
 
 **TabIndex** – The tab order of the control relative to other controls. Controls with lower **TabIndex** values receive focus before controls with higher values.
 
-## Updates to Combo box starting Feb 2026
+## Recent updates
 
-This updated version of the Combo box modern control includes the following improvements and changes.
+The updated version of the **Combo box** modern control includes improvements and behavior change.
 
 ### Property renames
 
-The following properties are renamed. Update any formulas in your app that reference the old names.
+The following properties are renamed. Update any formulas in your app that reference the old property names.
 
 | Previous property | New property |
 |-------------------|--------------|
