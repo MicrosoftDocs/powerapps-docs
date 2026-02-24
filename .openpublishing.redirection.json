@@ -9894,6 +9894,12 @@
       "source_path": "powerapps-docs/maker/canvas-apps/controls/control-stream-video.md",
       "redirect_url": "/powerapps-docs/maker/canvas-apps/controls/modern-controls/new-stream-video-control",
       "redirect_document_id": false
+    },
+    {
+    "source_path": "powerapps-docs/maker/canvas-apps/controls/modern-controls/limitations-modern-controls.md",
+    "redirect_url": "/power-apps/maker/canvas-apps/controls/modern-controls/modern-controls-reference",
+    "redirect_document_id": false
     }
   ]
 }
+
