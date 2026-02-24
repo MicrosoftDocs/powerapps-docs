@@ -12,7 +12,7 @@ search.audienceType:
   - maker
 ---
 
-# Updates to modern controls in canvas apps
+# Recent updates to modern controls in canvas apps
 
 This article provides an overview of recent updates to modern controls in canvas apps. These updates are available starting February 2026, include property renames, performance improvements, and new features for controls like Text, Number Input, Date Picker, and others.
 
