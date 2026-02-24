@@ -1,74 +1,193 @@
 ---
-title: Text modern control in Power Apps
-description: Learn about the details, properties, and examples of the text modern control in Power Apps.
+title: Text modern control in canvas apps - Power Apps
+description: Learn about the details, properties, and examples of the Text modern control in Power Apps.
 author: yogeshgupta698
-
 ms.topic: reference
-ms.component: canvas
-ms.date: 1/15/2025
+ms.custom: canvas
+ms.date: 02/23/2026
 ms.subservice: canvas-maker
 ms.author: yogupt
-
 ms.reviewer: mkaur
-search.audienceType: 
+search.audienceType:
   - maker
-contributors:
-  - clromano
-  - mduelae
-  - yogeshgupta698
-  - noazarur-microsoft
-  
 ---
-# Text modern control in Power Apps
 
-Display text on the app. This control can also be used as a label for fields.
+# Text modern control in canvas apps
+
+Use this control to display text and labels on your app screen.
 
 ## Description
-Use this versatile **Text** control to display text, messages, and information on the app. The key properties for this control are **Text**, **Size**, and **FontColor**.
+
+The **Text** modern control displays static or dynamic text content in your canvas app. Use it for labels, headings, messages, and any text that doesn't require user input.
+
+This versatile control offers rich formatting options, including font styling, colors, alignment, and automatic sizing. You can display static text strings or dynamic content using Power Fx formulas. The control also supports user interaction through the **OnSelect** event, making it useful for clickable labels and interactive text elements.
+
+
+Key properties for this control are **Text**, **Size**, and **Color**.
 
 ## General
 
-**Text** – Text to display on canvas.
+**Text** – The text string to display on the canvas. Supports any text or Power Fx formula that evaluates to a string.
 
-**Visible** - Whether a control appears or is hidden. 
+**Visible** – Whether the control appears or is hidden. Use a Power Fx formula to show or hide the control based on app state.
 
 ## Behavior
 
-**Wrap** - Wraps the text in the object.
+**OnSelect** – How the app responds when the user selects  the Text control. The control is accessible: **OnSelect** also triggers when the user presses Enter or Space while the control has keyboard focus.
+
+**Wrap** – Whether the text wraps to the next line when it exceeds the control width. When set to `false`, text is clipped at the control boundary.
 
 ## Size and position
 
-**Align** –The location of text in relation to the horizontal center of its component.
+**[X](../properties-size-location.md)** – Distance between the left edge of the control and the left edge of its parent container (screen if no parent container).
 
-**VerticalAlign** - The location of text on a control in relation to the vertical center of that control. 
+**[Y](../properties-size-location.md)** – Distance between the top edge of the control and the top edge of its parent container (screen if no parent container).
 
-**AutoHeight** - Whether a label automatically increases its height if its text contains more characters than the control can show at one time. If the control is not visible, then the output property Height will not be updated as the text changes.
+**Width** – Distance between the control's left and right edges.
 
-**[X](../properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
+**Height** – Distance between the control's top and bottom edges.
 
-**[Y](../properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
+**AutoHeight** – Whether the control automatically increases its height when the text content exceeds the visible area. When **Visible** is `false`, the **Height** output property doesn't update as text changes.
 
-**Width** - The distance between a control's left and right edges. 
+**Align** – The horizontal alignment of text within the control. Accepts `Align` enum values:
 
-**Height** - The distance between a control's top and bottom edges. 
+| Value | Description |
+|-------|-------------|
+| `Align.Left` | Aligns text to the left edge |
+| `Align.Center` | Centers text horizontally |
+| `Align.Right` | Aligns text to the right edge |
+| `Align.Justify` | Stretches text to fill the full width |
+
+**VerticalAlign** – The vertical alignment of text within the control. Accepts `VerticalAlign` enum values:
+
+| Value | Description |
+|-------|-------------|
+| `VerticalAlign.Top` | Aligns text to the top |
+| `VerticalAlign.Middle` | Centers text vertically (default) |
+| `VerticalAlign.Bottom` | Aligns text to the bottom |
 
 ## Style and theme
 
-**Font** – The name of the family of fonts in which text appears. 
+**Font** – The name of the font family for the text.
 
-**Size** – The font size of the text that appears on a control. 
+**Size** – The font size of the text, in points. The default is **15**.
 
-**FontColor** - The color of the text in a control. 
+**Color** – The color of the text in the control.
 
-**Weight** - The weight of the text in a control: **Bold**, **Semibold**, **Regular**, or **Medium**. 
+**FontWeight** – The weight (thickness) of the text. Accepts `FontWeight` enum values:
 
-**FontItalic** - Whether the text in a control is italic. 
+| Value | Description |
+|-------|-------------|
+| `FontWeight.Bold` | Bold text |
+| `FontWeight.Semibold` | Semibold text |
+| `FontWeight.Normal` | Normal weight (default) |
+| `FontWeight.Lighter` | Lighter weight |
 
-**FontUnderline** - Whether a line appears under the text that appears on a control. 
+**Italic** – Whether the text appears in italic style.
 
-**FontStrikethrough** - Whether a line appears through the text on a control. 
+**Underline** – Whether a line appears under the text.
 
-## Additional properties
+**Strikethrough** – Whether a line appears through the middle of the text.
 
-**DisplayMode** – Whether the control allows user input (Edit), displays data (View), or is disabled (Disabled).
+**Fill** – The background fill color of the control.
 
+**BorderColor** – The color of the control's border.
+
+**BorderStyle** – The style of the control's border. Accepts `BorderStyle` enum values: `BorderStyle.Solid`, `BorderStyle.Dashed`, `BorderStyle.Dotted`, or `BorderStyle.None`.
+
+**BorderThickness** – The thickness of the control's border in pixels.
+
+**PaddingTop** – Distance between the text and the top edge of the control.
+
+**PaddingBottom** – Distance between the text and the bottom edge of the control.
+
+**PaddingLeft** – Distance between the text and the left edge of the control.
+
+**PaddingRight** – Distance between the text and the right edge of the control.
+
+**RadiusTopLeft** – The corner radius for the top-left corner of the control.
+
+**RadiusTopRight** – The corner radius for the top-right corner of the control.
+
+**RadiusBottomLeft** – The corner radius for the bottom-left corner of the control.
+
+**RadiusBottomRight** – The corner radius for the bottom-right corner of the control.
+
+## Example
+
+The following YAML example shows a clickable label with styling that you can use for headings or interactive text elements:
+
+```yaml
+- TitleLabel:
+    Control: ModernText@1.0.0
+    Properties:
+      Text: ="Welcome to Power Apps"
+      X: =40
+      Y: =40
+      Width: =300
+      Height: =50
+      Size: =24
+      FontWeight: =FontWeight.Bold
+      Color: =RGBA(0, 120, 212, 1)
+      Align: =Align.Center
+      VerticalAlign: =VerticalAlign.Middle
+
+- StatusLabel:
+    Control: ModernText@1.0.0
+    Properties:
+      Text: '="Status: Active"'
+      X: =40
+      Y: =120
+      Width: =200
+      Height: =40
+      Size: =16
+      FontWeight: =FontWeight.Semibold
+      Color: =Color.Green
+      Fill: =RGBA(0, 255, 0, 0.1)
+      BorderColor: =Color.Green
+      BorderThickness: =2
+      RadiusTopLeft: =8
+      RadiusTopRight: =8
+      RadiusBottomLeft: =8
+      RadiusBottomRight: =8
+      OnSelect: =Set(varLabelClicked, true)
+```
+
+## Recent updates
+
+The updated version of the **Text** modern control includes improvements and behavior change.
+
+### Property renames
+
+The following properties are renamed. Update any formulas in your app that reference the old property names.
+
+
+| Previous property | New property |
+|-------------------|--------------|
+| `FontColor` | `Color` |
+| `FontSize` | `Size` |
+| `FontItalic` | `Italic` |
+| `FontStrikethrough` | `Strikethrough` |
+| `FontUnderline` | `Underline` |
+| `Weight` | `FontWeight` |
+| `BorderRadius` | `RadiusTopLeft`, `RadiusTopRight`, `RadiusBottomLeft`, `RadiusBottomRight` |
+
+### Removed properties
+
+| Removed property | Notes |
+|------------------|-------|
+| `DisplayMode` | Removed from the property panel. The property still exists for backward compatibility but has no effect. The Text control is display-only; use the **OnSelect** event for interactive behavior. |
+
+### Bug fixes and improvements
+
+- **OnSelect event**: The control now supports an **OnSelect** event, making it possible to trigger actions when a user clicks or taps the text. This event is fully accessible and also responds to keyboard input (Enter or Space).
+- **Vertical alignment default**: The default **VerticalAlign** is now `VerticalAlign.Middle` for better visual balance.
+- **Auto height improvements**: Fixed scroll bar appearing in portrait mode and auto height not recalculating when the control is hidden.
+- **Text scaling**: Fixed an issue where the text control didn't scale correctly within containers.
+- **Updated command bar**: The authoring command bar and right-click menu now show Font, Font size, Alignment, Font color, and Background color for quick access.
+- **Mobile-optimized defaults**: When adding the control in a mobile layout, the app automatically adjusts the defaults (font size 15, padding 5, width 150, height 32).
+
+## See also
+
+- [Modern controls overview](overview-modern-controls.md)
+- [Size and location properties](../properties-size-location.md)
