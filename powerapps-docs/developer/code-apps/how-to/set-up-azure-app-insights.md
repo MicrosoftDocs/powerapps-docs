@@ -1,20 +1,20 @@
 ---
-title: "How to: Set up Azure App Insights for your code app (preview)"
+title: "How to: Set up Azure App Insights for your code app"
 description: "Learn how to set up Azure App Insights for your code app"
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 1/22/2026
+ms.date: 02/18/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 ---
-# How to: Set up Azure App Insights for your code app (preview)
+# How to: Set up Azure App Insights for your code app
 
 Azure Application Insights is a telemetry and monitoring service that helps you collect and analyze detailed telemetry from your applications. When you integrate it with Power Apps code apps, you can capture metrics such as session load performance and network request summaries. This integration gives you deeper visibility into how your app behaves in real‑world conditions. For more information, see the [Application Insights OpenTelemetry observability overview](/azure/azure-monitor/app/app-insights-overview).
 
 > [!NOTE]
 > This article shows **one example** of how to initialize and configure telemetry for your app. You can follow the same pattern to integrate any monitoring tool, not just Application Insights.
->
-> Azure Application Insights complements [Power Platform Monitor](/power-platform/admin/monitoring/monitor-power-apps) by providing granular logs and custom events. However, it only captures telemetry after the app successfully loads. Startup failures - including problems caused by blocked files or failed initialization - don't appear here and only show up in Monitor.
+
+Azure Application Insights complements [Power Platform Monitor](/power-platform/admin/monitoring/monitor-power-apps) by providing granular logs and custom events. However, it only captures telemetry after the app successfully loads. Startup failures - including problems caused by blocked files or failed initialization - don't appear here and only show up in Monitor.
 
 ## Prerequisites
 
@@ -37,7 +37,7 @@ Use the following steps to provision Application Insights, install the SDK, conn
 
    Add the npm package to your code app project:
 
-   ```
+   ```bash
    npm install @microsoft/applicationinsights-web 
    ```
 
@@ -51,9 +51,9 @@ Use the following steps to provision Application Insights, install the SDK, conn
    
    const initializeAppInsights = () => { 
    const appInsights = new ApplicationInsights({ 
-      config: { 
-         connectionString: 'InstrumentationKey=<YOUR_KEY>;IngestionEndpoint=<YOUR_ENDPOINT>' 
-      } 
+    config: { 
+     connectionString: 'InstrumentationKey=<YOUR_KEY>;IngestionEndpoint=<YOUR_ENDPOINT>' 
+    } 
    }); 
    appInsights.loadAppInsights(); 
    appInsights.trackPageView(); // Optional: Tracks page view 
@@ -98,7 +98,7 @@ Use the following steps to provision Application Insights, install the SDK, conn
       } 
       ```
 
-   You can import `ILogger` from: [@microsoft/power-apps/telemetry](https://www.npmjs.com/package/@microsoft/power-apps/telemetry).
+   You can import `ILogger` from: [@microsoft/power-apps](https://www.npmjs.com/package/@microsoft/power-apps).
 
    ```typescript
    import type { ILogger } from '@microsoft/power-apps/telemetry' 
@@ -107,10 +107,45 @@ Use the following steps to provision Application Insights, install the SDK, conn
    > [!NOTE]
    > This is just an example. You must implement `logMetric` so that metrics are sent to your monitoring tool of choice, not necessarily App Insights. The platform simply delivers metric payloads. Your implementation determines how they are handled.
 
+
+1. Configure Content Security Policy (CSP)
+
+   If Content Security Policy (CSP) is enabled in your environment, sending telemetry events to Application Insights might be blocked. You need to add the App Insights endpoints to your environment's CSP settings.
+
+   **Identify the required sources**
+   
+   1. Open your app with Application Insights configured.
+   1. Open the browser DevTools by doing one of the following:
+      - Press <kbd>F12</kbd>
+      - Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd>
+      - Right-click on the app and select **Inspect**
+   1. Go to the **Console** tab.
+   1. Clear the console and select **Errors only** from the dropdown. This step isn't required, but it makes identifying the relevant errors easier.
+      
+      :::image type="content" source="../media/errors-only.png" alt-text="How to set the console to errors only":::
+      
+   1. Look for errors with the message: `Connecting to 'https:...' violates the following Content Security Policy directive`.
+      
+      :::image type="content" source="../media/csp-violation.png" alt-text="See the expected CSP violations" lightbox="../media/csp-violation.png":::
+      
+   1. Note the URLs shown in these error messages. These URLs are the sources that you need to add to your CSP configuration.
+
+   **Add sources to CSP settings**
+
+   1. Go to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
+   1. Follow the instructions in [Configure Content Security Policy](/power-apps/developer/code-apps/how-to/content-security-policy) to add the sources you identified in the previous steps to the allowed list for `connect-src`. See the example in the following section.
+
+      :::image type="content" source="../media/csp-sources.png" alt-text="Example CSP sources":::
+      
+   1. Wait for the settings to be applied. CSP changes can take several minutes to propagate.
+
+   > [!TIP]
+   > After updating CSP settings, refresh your app and check the console again to verify that the CSP violations are resolved and telemetry is being sent successfully.
+
 1. View logs in Azure portal
 
-   - Open your Application Insights resource. 
-   - Go to **Monitoring > Logs**. 
+   - Open your Application Insights resource.
+   - Go to **Monitoring > Logs**.
    - Query the `customEvents` table to see session summaries and network requests.
 
    The SDK currently provides two built‑in metric types:
@@ -134,7 +169,7 @@ Use the following steps to provision Application Insights, install the SDK, conn
 
 1. (Optional) Log custom events
 
-   You can log more telemetry (beyond default metrics) by calling your monitoring tool's own APIs at the desired points in your app. For more advanced scenarios, refer to the official [Application Insights documentation](/azure/azure-monitor/app/app-insights-overview) for guidance. You should avoid logging sensitive or unnecessary data and always follow your organization's compliance guidelines.
+   You can log more telemetry (beyond default metrics) by calling your monitoring tool's own APIs at the desired points in your app. For more advanced scenarios, refer to the official [Application Insights documentation](/azure/azure-monitor/app/app-insights-overview) for guidance. Avoid logging sensitive or unnecessary data and always follow your organization's compliance guidelines.
 
 ## Sample queries
 

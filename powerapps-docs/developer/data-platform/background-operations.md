@@ -2,7 +2,7 @@
 title: Background operations (preview)
 description: Learn how to use background operations to send Dataverse requests invoked as custom APIs asynchronously.
 ms.collection: get-started
-ms.date: 08/11/2025
+ms.date: 02/11/2026
 ms.topic: how-to
 ms.subservice: dataverse-developer
 author: MsSQLGirl
@@ -33,9 +33,9 @@ You can retrieve the result of a background operation in either of two ways:
 - [Poll the background operations table](#poll-the-background-operations-table).
 - [Poll the status monitor resource](#poll-the-status-monitor-resource).
 
-To run a request in the background, the operation must be defined as a custom API. Learn how to [create and use custom APIs](custom-api.md) and [retrieve data about custom APIs](custom-api-tables.md#retrieve-data-about-custom-apis).
+To run a request in the background, define the operation as a custom API. For more information, see [create and use custom APIs](custom-api.md) and [retrieve data about custom APIs](custom-api-tables.md#retrieve-data-about-custom-apis).
 
-Custom APIs use plug-ins to perform data operations. Like all Dataverse plug-ins, these plug-ins have a two-minute execution time-out. Sending the request asynchronously doesn't provide more execution time.
+Custom APIs use plug-ins to perform data operations. Like all Dataverse plug-ins, these plug-ins have a two-minute execution timeout. Sending the request asynchronously doesn't provide more execution time.
 
 ## Required privileges
 
@@ -48,9 +48,9 @@ To perform a background operation, the initiating user must have read and write 
 
 ## Request asynchronous processing
 
-You can run asynchronous requests in the background using either the SDK for .NET or the Dataverse Web API.
+You can run asynchronous requests in the background by using either the SDK for .NET or the Dataverse Web API.
 
-Examples in this article use a custom API named `sample_ExportDataUsingFetchXmlToAnnotation`. This custom API is described in [Sample: ExportDataUsingFetchXmlToAnnotation custom API](org-service/samples/export-data-fetchxml-annotation-custom-api-sample.md).
+The examples in this article use a custom API named `sample_ExportDataUsingFetchXmlToAnnotation`. For more information about this custom API, see [Sample: ExportDataUsingFetchXmlToAnnotation custom API](org-service/samples/export-data-fetchxml-annotation-custom-api-sample.md).
 
 ### [SDK for .NET](#tab/sdk)
 
@@ -62,7 +62,7 @@ The following table describes the input parameters for the `ExecuteBackgroundOpe
 
 |Name|Type|Description|
 |---------|---------|---------|
-|`Request`|[OrganizationRequest](xref:Microsoft.Xrm.Sdk.OrganizationRequest)|(Required) Contains the request you want to have processed asynchronously. The Dataverse message for the request must be implemented as a custom API.|
+|`Request`|[OrganizationRequest](xref:Microsoft.Xrm.Sdk.OrganizationRequest)|(Required) Contains the request you want to process asynchronously. The Dataverse message for the request must be implemented as a custom API.|
 |[`CallbackUri`](#request-a-callback)|string| (Optional) Dataverse sends a POST HTTP request to this URL when the operation is completed.|
 
 The following table describes the output parameters for the `ExecuteBackgroundOperation` message.
@@ -173,7 +173,7 @@ When you send a request to be processed in the background, the response includes
   - [Send a DELETE request to the status monitor resource](#send-a-delete-request-to-the-status-monitor-resource).
 
    > [!IMPORTANT]
-   > The status monitor resource is not the Web API `backgroundoperation` EntityType resource.
+   > The status monitor resource isn't the Web API `backgroundoperation` EntityType resource.
    >
    > |URL|Example|
    > |---------|---------|
@@ -182,7 +182,7 @@ When you send a request to be processed in the background, the response includes
 
    The status monitor resource isn't part of the Dataverse Web API. Notice that the URL doesn't contain `/data/v9.2/`. The status monitor resource supports only GET and DELETE operations and doesn't have the same behaviors as the Web API `backgroundoperation` EntityType resource.
 
-Querying the background operations table or status monitor resource to check on requests is commonly known as *status polling*. We recommend that you avoid excessive polling because it can negatively affect performance. If needed, we suggest polling at an interval of one minute or more.
+Querying the background operations table or status monitor resource to check on requests is commonly known as *status polling*. Avoid excessive polling because it can negatively affect performance. If needed, poll at an interval of one minute or more.
 
 ## Background operations table
 
@@ -305,7 +305,7 @@ Error Code:  -2147187707
 Error Message:  Access is denied.
 ```
 
-If the platform produces the error, it has an integer value that corresponds to one of the codes listed in the [Web service error codes](reference/web-service-error-codes.md). If the platform doesn't produce the error, its value is set to zero.
+If the platform produces the error, it has an integer value that corresponds to one of the codes listed in the [Web service error codes](reference/web-service-error-codes.md). If the platform doesn't produce the error, set its value to zero.
 
 **Id not found:**
 
@@ -365,9 +365,9 @@ Preference-Applied: odata.include-annotations="OData.Community.Display.V1.Format
 
 ### Poll the status monitor resource
 
-You can poll the status monitor resource with a GET request, which returns the status of the background operation. If the operation is complete, it provides the output of the custom API. If there was an error during execution, you receive an error message and code.
+You can poll the status monitor resource by using a GET request. This request returns the status of the background operation. If the operation is complete, it provides the output of the custom API. If an error occurs during execution, you receive an error message and code.
 
-Send a request to the status monitor resource URL that was returned with the `Location` response header of the original request.
+Send a request to the status monitor resource URL that the original request returns in the `Location` response header.
 
 **Request:**
 
@@ -393,9 +393,9 @@ Content-Type: application/json
 }
 ```
 
-`backgroundOperationErrorCode` and `backgroundOperationErrorMessage` values are included only when an error occurs. Output parameters are included only when the operation completes successfully.
+The response includes `backgroundOperationErrorCode` and `backgroundOperationErrorMessage` values only when an error occurs. It includes output parameters only when the operation completes successfully.
 
-Labels aren't available with the status monitor resource.
+The status monitor resource doesn't provide labels.
 
 ## Receive notification of result
 
@@ -403,7 +403,7 @@ To get a notification when a background operation completes, you can either [inc
 
 ### Request a callback
 
-You can specify a URL in your request to receive a callback when the operation is completed. Dataverse uses this URL to send a POST request with the following payload:
+You can specify a URL in your request to receive a callback when the operation finishes. Dataverse uses this URL to send a POST request with the following payload:
 
 ```json
 {
@@ -418,17 +418,17 @@ You can specify a URL in your request to receive a callback when the operation i
 
 `backgroundOperationErrorCode` and `backgroundOperationErrorMessage` are included only when an error occurs.
 
-The callback payload doesn't include any output parameters. The site that receives the callback must send an authenticated GET request using the status monitor resource URL to get results.
+The callback payload doesn't include any output parameters. The site that receives the callback must send an authenticated GET request by using the status monitor resource URL to get results.
 
-If the URL requires authentication, it must be a self-sufficient [shared access signature (SAS)](/azure/storage/common/storage-sas-overview) URL. It isn't possible to include any more headers to include API keys or tokens for authentication.
+If the URL requires authentication, it must be a self-sufficient [shared access signature (SAS)](/azure/storage/common/storage-sas-overview) URL. You can't include any more headers to include API keys or tokens for authentication.
 
-You may want to use a site like [webhook.site](https://webhook.site/) to test the callback URL.
+To test the callback URL, consider using a site like [webhook.site](https://webhook.site/).
 
-How you request a callback depends on whether you're using the SDK or the Web API. The following examples send a request using a webhook to [webhook.site](https://webhook.site/) for testing.
+How you request a callback depends on whether you're using the SDK or the Web API. The following examples send a request by using a webhook to [webhook.site](https://webhook.site/) for testing.
 
 #### [SDK for .NET](#tab/sdk)
 
-With the SDK, set the `ExecuteBackgroundOperation.CallbackUri` parameter to the URL to send the request.
+By using the SDK, set the `ExecuteBackgroundOperation.CallbackUri` parameter to the URL to send the request.
 
 ```csharp
 static void SendRequestAsynchronouslyWithCallback(IOrganizationService service)
@@ -468,7 +468,7 @@ static void SendRequestAsynchronouslyWithCallback(IOrganizationService service)
 
 #### [Web API](#tab/webapi)
 
-With the Web API, set the `Prefer` request header with this value: `Prefer: respond-async, odata.callback; url="<url>"`
+By using the Web API, set the `Prefer` request header with this value: `Prefer: respond-async, odata.callback; url="<url>"`
 
 **Request:**
 
@@ -506,9 +506,9 @@ location: [Organization URI]/api/backgroundoperation/<backgroundoperationid valu
 
 ### Subscribe to the OnBackgroundOperationComplete event
 
-Another way to receive a notification when a background operation completes is to register a step on the `OnBackgroundOperationComplete` message. This message is a custom API that only allows asynchronous step registrations. It's an example of the type of messages created using a custom API to represent [business events](business-events.md).
+You can get a notification when a background operation finishes by registering a step on the `OnBackgroundOperationComplete` message. This message is a custom API that only supports asynchronous step registrations. It's an example of the type of messages created using a custom API to represent [business events](business-events.md).
 
-As the name suggests, the OnBackgroundOperationComplete event occurs each time a background operation completes. When you register an asynchronous step on this event, you can perform any type of logic you want in a plug-in or forward the data to Azure services or a webhook. Learn more:
+As the name suggests, the OnBackgroundOperationComplete event occurs each time a background operation completes. When you register an asynchronous step on this event, you can perform any type of logic you want in a plug-in or forward the data to Azure services or a webhook. For more information, see:
 
 - [Register a plug-in](register-plug-in.md)
 - [Azure integration](azure-integration.md)
@@ -521,9 +521,9 @@ Input parameters:
 
 |Name|Type|Description|
 |---------|---------|---------|
-|`PayloadType`|Integer|What type of response is sent to the callback URI when the background operation is complete; always zero for background operations<br/><br/>This field is internal and shouldn't be updated.|
+|`PayloadType`|Integer|Type of response sent to the callback URI when the background operation finishes. Always zero for background operations.<br/><br/>This field is internal and shouldn't be updated.|
 |`LocationUrl`|String|Location URL|
-|`BackgroundOperationId`|Guid|The ID of the background operation|
+|`BackgroundOperationId`|Guid|ID of the background operation|
 
 Output parameters:
 
@@ -533,16 +533,16 @@ Output parameters:
 |`BackgroundOperationStateCode`|Integer|Background operation state code|
 |`BackgroundOperationStatusCode`|Integer|Background operation status code|
 
-Configure the `OnBackgroundOperationComplete` message as shown in the instructions to [register a plug-in](register-plug-in.md). Make sure you set the message name as `OnBackgroundOperationComplete`. Set **Auto Delete** to `true` so that the [System Job (AsyncOperation)](reference/entities/asyncoperation.md) record is automatically removed.
+Configure the `OnBackgroundOperationComplete` message as shown in the instructions to [register a plug-in](register-plug-in.md). Set the message name as `OnBackgroundOperationComplete`. Set **Auto Delete** to `true` so that the [System Job (AsyncOperation)](reference/entities/asyncoperation.md) record is automatically removed.
 
 ## Cancel background operations
 
-You can cancel a background operation that you initiated if it hasn't started.
+You can cancel a background operation that you initiated if it didn't start.
 
-- If the operation hasn't started, Dataverse doesn't execute it.
-- If the operation has started, Dataverse doesn't stop it.
+- If the operation didn't start, Dataverse doesn't execute it.
+- If the operation started, Dataverse doesn't stop it.
 - If an error occurs during execution of a background operation you canceled, Dataverse doesn't retry it.
-- If the operation has already completed, you get the following error: `Canceling background operation is not allowed after it is in terminal state.`
+- If the operation already completed, you get the following error: `Canceling background operation is not allowed after it is in terminal state.`
 
 You can cancel a background operation in either of two ways:
 
@@ -629,4 +629,4 @@ HTTP/1.1 200 Ok
 
 ## Retries
 
-If an error occurs during execution of the request, it's retried up to three times. These retries use an [exponential backoff strategy](https://wikipedia.org/wiki/Exponential_backoff).
+If an error occurs during execution of the request, the system retries up to three times. These retries use an [exponential backoff strategy](https://wikipedia.org/wiki/Exponential_backoff).

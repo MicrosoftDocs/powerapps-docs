@@ -2,8 +2,8 @@
 title: "Sample: Work with columns (Microsoft Dataverse) | Microsoft Docs"
 description: "This sample shows how to work with columns" 
 ms.date: 04/06/2022
-author: mkannapiran
-ms.author: kamanick
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: pehecke
 ms.topic: sample
 search.audienceType:

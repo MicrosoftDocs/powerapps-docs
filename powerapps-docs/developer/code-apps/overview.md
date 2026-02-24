@@ -1,18 +1,15 @@
 ---
-title: "Power Apps code apps overview (preview)"
+title: "Power Apps code apps overview"
 description: "Learn to use Power Apps code apps"
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 01/09/2026
+ms.date: 02/18/2026
 ms.reviewer: jdaly
 ms.topic: overview
 contributors:
  - JimDaly
 ---
-# Power Apps code apps overview (preview)
-
-> [!NOTE]
-> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+# Power Apps code apps overview
 
 Power Apps empowers developers of all skill sets, including those building web apps in integrated developer environments (IDEs) like Visual Studio Code, to efficiently build and run business apps on a managed platform.
 
@@ -36,10 +33,12 @@ Code apps require several developer tools like Visual Studio Code, git, dotnet, 
 
 Use these tools while creating code apps:
 
-- [Visual Studio Code](https://code.visualstudio.com/)
+- Your IDE of choice. For example, [Visual Studio Code](https://code.visualstudio.com/)
 - [Node.js](https://nodejs.org/) (LTS version)
-- [Git](https://git-scm.com/)
 - [Power Apps CLI](/power-platform/developer/cli/introduction)
+
+> [!NOTE]
+> Starting with [Power Apps SDK](https://www.npmjs.com/package/@microsoft/power-apps?activeTab=readme) v1.0.4 and higher, the SDK includes an npm-based CLI for code apps. This new CLI reduces prerequisites for building code apps and will replace the Power Platform CLI's [`pac code`](/power-platform/developer/cli/reference/code) commands, which will be deprecated in a future release. To learn more about the new commands and get started, see [Quickstart with new npm CLI](how-to/npm-quickstart.md).
 
 ### Enable code apps on a Power Platform environment
 
@@ -82,10 +81,8 @@ Check the **Closed** tab in **Issues** to see how other customers solved problem
 
 ## Limitations
 
-- Code apps can invoke APIs outside of Power Platform connectors. Code apps don't yet support [Content Security Policy](/power-platform/admin/content-security-policy) (CSP).
 - Code apps don't yet support [Storage Shared Access Signature (SAS) IP restriction](/power-platform/admin/security/data-storage#advanced-security-features ).
 - Code apps don't support [Power Platform Git integration](/power-platform/alm/git-integration/overview).
-- Code apps don't have a Power Platform native integration with Azure Application Insights. Azure Application Insights can be added as it would be to a generic web app but it doesn't include information recognized in the platform layer, such as app open events (to measure success or failure).
 - Code apps aren't supported in the Power Apps mobile app or Power Apps for Windows.
 - Code apps don't yet support Power BI data integration (PowerBIIntegration function), but can be embedded in Power BI Reports using [Power Apps Visual](/power-apps/maker/canvas-apps/powerapps-custom-visual).
 - Code apps don't support [SharePoint forms integration](/power-apps/maker/canvas-apps/sharepoint-form-integration).
@@ -108,5 +105,5 @@ This table lists Power Platform management capabilities that work for code apps.
 
 ## Related information
 
-- [Code apps architecture (preview)](architecture.md)  
+- [Code apps architecture](architecture.md)
 - [System limits and configuration](system-limits-configuration.md)

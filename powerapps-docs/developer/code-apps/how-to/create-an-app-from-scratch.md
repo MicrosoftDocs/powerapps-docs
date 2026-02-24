@@ -1,20 +1,17 @@
 ---
-title: "Quickstart: Create a code app from scratch (preview)"
+title: "Quickstart: Create a code app from scratch"
 description: "Learn how to create a code app from scratch"
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 01/09/2026
+ms.date: 02/23/2026
 ms.reviewer: jdaly
 ms.topic: quickstart
 contributors:
  - JimDaly
 ---
-# Quickstart: Create a code app from scratch (preview)
+# Quickstart: Create a code app from scratch
 
 This article shows how to set up a blank app from [Vite](https://vite.dev/) and turn it into a Power Apps code app. It covers configuring a TypeScript app by using the Power Apps SDK.
-
-> [!NOTE]
-> [!INCLUDE [cc-preview-features-definition](../../../includes/cc-preview-features-definition.md)]
 
 ## Prerequisites
 
@@ -22,6 +19,9 @@ This article shows how to set up a blank app from [Vite](https://vite.dev/) and 
 - [Node.js](https://nodejs.org/) Long term support (LTS) version
 - [Power Platform CLI](/power-platform/developer/cli/introduction?tabs=windows)
 - [Git](https://git-scm.com/)
+
+> [!NOTE]
+> Starting with [Power Apps SDK](https://www.npmjs.com/package/@microsoft/power-apps?activeTab=readme) v1.0.4 and higher, the SDK includes an npm-based CLI for code apps. This new CLI reduces prerequisites for building code apps and will replace the Power Platform CLI's [`pac code`](/power-platform/developer/cli/reference/code) commands, which will be deprecated in a future release. To learn more about the new commands and get started, see [Quickstart with new npm CLI](npm-quickstart.md).
 
 ## Steps
 

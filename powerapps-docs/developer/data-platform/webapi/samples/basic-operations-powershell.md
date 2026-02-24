@@ -15,6 +15,9 @@ contributors:
 
 This PowerShell version 7.4.0 sample demonstrates how to perform common data operations using the Dataverse Web API and Visual Studio Code. This sample implements the Dataverse operations and console output detailed in [Web API Basic Operations Sample](../web-api-basic-operations-sample.md).
 
+> [!div class="nextstepaction"]
+> [View this sample on Github](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/PS/BasicOperations)
+
 This sample uses the [Dataverse Web API PowerShell Helper functions](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/PS/README.md) to manage authentication and provide reusable functions to perform common operations. These scripts are referenced using [dot sourcing](/powershell/module/microsoft.powershell.core/about/about_scripts#script-scope-and-dot-sourcing) with the following lines:
 
 ```powershell

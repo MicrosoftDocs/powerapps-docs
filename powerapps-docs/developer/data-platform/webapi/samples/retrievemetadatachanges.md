@@ -2,8 +2,8 @@
 title: "Web API Query schema definitions and detect changes sample (C#)"
 description: "This sample demonstrates the use of the RetrieveMetadataChanges Function using the Dataverse Web API to query schema definitions and detect changes so that you can create a persistent cache."
 ms.date: 10/12/2022
-author: mkannapiran
-ms.author: kamanick
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
@@ -17,7 +17,8 @@ contributors:
 
 This sample shows how to retrieve and detect changes in table definitions using the [RetrieveMetadataChanges Action](xref:Microsoft.Dynamics.CRM.RetrieveMetadataChanges). 
 
-You can view the sample at [PowerApps-Samples/dataverse/webapi/C#-NETCore/Schema/RetrieveMetadataChanges/](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/CSharp-NETx/RetrieveMetadataChanges)
+> [!div class="nextstepaction"]
+> [View this sample on Github](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/CSharp-NETx/RetrieveMetadataChanges)
 
 See these articles for explanation of functionality:
 

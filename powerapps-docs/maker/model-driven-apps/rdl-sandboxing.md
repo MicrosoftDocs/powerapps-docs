@@ -1,10 +1,9 @@
 ---
-title: "RDL sandboxing  | MicrosoftDocs"
+title: "RDL sandboxing"
 description: Learn about RDL sandboxing that may affect SSRS reports in Power Apps.
 ms.custom: 
-ms.date: 09/30/2017
+ms.date: 02/12/2026
 ms.reviewer: 
-
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,21 +21,19 @@ search.audienceType:
 ---
 # RDL sandboxing 
 
-In Microsoft Dataverse, reports run in the sandbox mode. This is done by enabling Report Definition Language (RDL) Sandboxing in SQL Server Reporting Services. The RDL Sandboxing lets you detect and restrict the usage of specific types of resources. As a result, certain features in Power Apps model-driven apps may not be available.  
+In Microsoft Dataverse, classic reports run in the sandbox mode. This is done by enabling Report Definition Language (RDL) Sandboxing in SQL Server Reporting Services. The RDL Sandboxing lets you detect and restrict the usage of specific types of resources. As a result, certain features in Power Apps model-driven apps might not be available.  
   
 The current RDL Sandboxing configuration settings in Dataverse are described in the following sections in this article.  
-    
-<a name="BKMK_Max"></a>   
+
 ## Limits of the array result length and string result length
 
-The maximum number of items allowed in an array return value for an RDL expression is 2048000. The maximum number of items allowed in a string return value for an RDL expression is 2048000. This enables you to include images and logos with sizes up to 1500 KB, which will be stored in a database with Base64 encoding.  
+The maximum number of items allowed in an array return value for an RDL expression is 2,048,000. The maximum number of items allowed in a string return value for an RDL expression is 2,048,000. This enables you to include images and logos with sizes up to 1,500 KB, which are stored in a database with Base64 encoding.  
   
- The MaxResourceSize is set to 2000. This lets you include external images in a report up to 1500 KB in size. More information: [TechNet: Add an External Image (Report Builder and SSRS)](/sql/reporting-services/report-design/add-an-external-image-report-builder-and-ssrs)  
+ The `MaxResourceSize` is set to 2,000. This lets you include external images in a report up to 1,500 KB in size. More information: [TechNet: Add an External Image (Report Builder and SSRS)](/sql/reporting-services/report-design/add-an-external-image-report-builder-and-ssrs)  
   
-<a name="BKMK_Allowed"></a>   
 ## Allowed types and denied members
 
- The RDL Sandboxing feature enables you to create a list of approved types and a list of denied members. The list of approved types is called an allowlist. The list of denied members that are not permitted in the RDL expressions is called a blocklist.  
+ The RDL Sandboxing feature enables you to create a list of approved types and a list of denied members. The list of approved types is called an allowlist. The list of denied members that aren't permitted in the RDL expressions is called a blocklist.  
   
  The following table contains a list of allowed types and denied members available in sandbox mode in Dataverse.  
   

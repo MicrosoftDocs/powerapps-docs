@@ -1,20 +1,17 @@
 ---
-title: "How to: Analyze data requests and responses (preview)"
+title: "How to: Analyze data requests and responses"
 description: "Learn how to filter network traces in browser dev tools to analyze code app data requests and responses with Power Apps code apps."
-ms.author: alaug
-author: alaug
-ms.date: 09/17/2025
+ms.author: jordanchodak
+author: jordanchodakWork
+ms.date: 02/02/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
  - JimDaly
 ---
-# How to: Analyze data requests and responses (preview)
+# How to: Analyze data requests and responses
 
 This article explains how to review code app data requests and responses in browser dev tools.
-
-> [!NOTE]
-> [!INCLUDE [cc-preview-features-definition](../../../includes/cc-preview-features-definition.md)]
 
 Browser developer tools (DevTools) are built-in tools in modern web browsers that let you inspect network traffic, view console logs, debug JavaScript, and examine HTML/CSS. You can open DevTools by pressing <kbd>F12</kbd> or <kbd>Ctrl+Shift+I</kbd>, or by right-clicking a page element and choosing **Inspect** (on macOS use <kbd>Command+Option+I</kbd>). For detailed guidance, review the browser documentation:
 

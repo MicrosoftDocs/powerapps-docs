@@ -1,5 +1,5 @@
 ---
-title: Define data for your model-driven app in Power Apps | MicrosoftDocs
+title: Define data for your model-driven app in Power Apps
 description: "Understand how to define data for your model-driven app"
 Keywords: data, table, columns, relationship, attributes, model-driven app
 ms.collection: get-started
@@ -10,8 +10,7 @@ applies_to:
   - "powerapps"
 ms.subservice: mda-maker
 ms.author: matp
-ms.date: 06/27/2018
-
+ms.date: 02/12/2026
 ms.topic: article
 search.audienceType: 
   - maker
@@ -19,23 +18,23 @@ search.audienceType:
 
 # Define data for your model-driven app
 
-Model-driven apps behave according to the nature of the data model that underpins them. This manifests itself to app users through [views](model-driven-app-glossary.md#view) of data housed within [tables](model-driven-app-glossary.md#table) and the [forms](model-driven-app-glossary.md#form) used to enter data into [records](model-driven-app-glossary.md#record) based on those tables.
+Model-driven apps behave according to the nature of the data model that underpins them. App users observe and interact through [views](model-driven-app-glossary.md#view) of data housed within [tables](model-driven-app-glossary.md#table) and the [forms](model-driven-app-glossary.md#form) used to enter data into [records](model-driven-app-glossary.md#record) based on those tables.
 
 In addition to editing table views and forms, [charts](model-driven-app-glossary.md#chart) and [dashboards](model-driven-app-glossary.md#dashboard) are also defined at the level of the table.
 
-Finally, [business rules](model-driven-app-glossary.md#business-rule) allow organizations to ensure consistent business logic is applied to table records.
+Finally, [business rules](model-driven-app-glossary.md#business-rule) ensure consistent business logic is applied to table records.
 
-While it is possible to create a table without a business rule, chart or dashboard, it is not possible to design a meaningful one without a view or a form.
+While it is possible to create a table without a business rule, chart, or dashboard, it isn't possible to design a meaningful table without a view or a form.
 
-Finally, while [business process flows](model-driven-app-glossary.md#business-process-flow) are highly relevant to tables and the app user experience, they are not authored at the level of the table. Business process flows are created and managed using Power Automate.
+Finally, while [business process flows](model-driven-app-glossary.md#business-process-flow) are highly relevant to tables and the app user experience, they aren't authored at the level of the table. Business process flows can be created and managed in Power Apps (make.powerapps.com).
 
-The process of designing an app using the [app designer](model-driven-app-glossary.md#app-designer) in most instances comes **after** the data model has been prepared. However, an iterative approach is possible using the platform.
+The process of designing an app using the [app designer](model-driven-app-glossary.md#app-designer) in most instances comes *after* the data model is prepared. However, an iterative approach is possible using the platform.
 
 ## How to define a data model
 
 The data model for a model-driven app is defined in [Microsoft Dataverse](../data-platform/data-platform-intro.md). Power Apps model-driven apps can only be defined using Dataverse.
 
-The apps data-model is defined using the following components: *table*, *column*, and *relationship*.  Once these have been created, then the forms and views can be developed further to meet the needs of the organization.
+The apps data-model is defined using the components: *table*, *column*, and *relationship*.  Once these are created, then the forms and views can be developed further to meet the needs of the organization.
 
 For detailed information about working with these components in Dataverse to define data for your model-driven app, go to the following articles:
 
