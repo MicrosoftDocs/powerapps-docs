@@ -14,9 +14,9 @@ search.audienceType:
 
 # Updates to modern controls in canvas apps
 
-Modern controls in Power Apps canvas apps receive regular quality updates that improve performance, fix bugs, and add new features. Starting February 2026, significant updates are available for modern controls including Text, Number Input, Date Picker, and others.
+This article provides an overview of recent updates to modern controls in canvas apps. These updates are available starting February 2026, include property renames, performance improvements, and new features for controls like Text, Number Input, Date Picker, and others.
 
-These updates include property renames, behavioral changes, and new enum patterns that may require formula updates in your existing apps. When you open apps with previous versions of these controls, you'll see update notifications with links to detailed migration guidance.
+These updates may require formula updates in your existing apps. Property names have changed, enum patterns are now required instead of string values, and some control behaviors have been modified. Before updating controls in your apps, review the help article for each control you use and update any affected formulas.
 
 Key benefits of updating:
 
@@ -25,7 +25,6 @@ Key benefits of updating:
 - New styling capabilities and flexibility
 - Better accessibility and IntelliSense support
 
-**Before you begin**: Before upgrading to the new version, review the article for any controls you’ve used in your app and update any impacted formulas.
 
 ## Identifying controls that need updates
 
