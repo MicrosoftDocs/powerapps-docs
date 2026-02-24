@@ -1516,8 +1516,13 @@
             href: ./model-driven-apps/model-app-page-issues.md
           - name: Use live monitor to troubleshoot custom pages
             href: ./model-driven-apps/monitor-page-checker.md
-        - name: Create a generative page
-          href: ./model-driven-apps/generative-pages.md
+        - name: Work with generative pages
+          href: 
+          items: 
+          - name: Create a generative page
+            href: ./model-driven-apps/generative-pages.md
+          - name: Create generative pages with AI code generation tools
+            href: ./model-driven-apps/generative-page-external-tools.md
         - name: Create, add, or remove forms and views
           href: ./model-driven-apps/create-add-remove-forms-views-dashboards.md
       - name: Work with views

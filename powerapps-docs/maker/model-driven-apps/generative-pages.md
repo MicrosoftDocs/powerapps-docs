@@ -5,7 +5,7 @@ author: jasongre
 ms.subservice: mda-maker
 ms.author: jasongre
 ms.reviewer: matp
-ms.date: 01/05/2025
+ms.date: 02/24/2026
 ms.topic: how-to
 applies_to:
   - PowerApps
@@ -25,15 +25,12 @@ After you describe the page, the system then processes your requirements and spe
 
 You can create generative pages using two approaches:
 
-- **Power Apps maker portal** (described in this article): Create and iterate on generative pages directly in the browser using a conversational UI experience
-- **AI code generation tools**: Use external tools like Claude Code to develop generative pages locally with a code-first approach and CLI-based deployment
-
-> [!TIP]
-> For developers who prefer working with local development tools and direct access to TypeScript/React code, see [Create and edit generative pages with AI code generation tools](generative-page-external-tools.md).
+- Power Apps (make.powerapps.com): As described in this article, makers can create and iterate on generative pages directly in the browser using a conversational UI experience
+- AI code generation tools: Developers who prefer working with local development tools and direct access to TypeScript and React code can use external tools like Claude Code to develop generative pages locally with a code-first approach and CLI-based deployment. More information: [Create and edit generative pages with AI code generation tools](generative-page-external-tools.md)
 
 ## Prerequisites
 
-- The Power Platform environment must be located in the US region. This feature is not available in other regions yet.
+- The Power Platform environment must be located in the US region. This feature isn't currently available in other regions yet.
 
 ## Create a generative page in model-driven apps
 
@@ -107,7 +104,7 @@ After generating your page, you have several options to refine and finalize it:
 Generative pages are solution-aware and can be added to a solution (via an app) to facilitate moving between environments. To add a generative page to a solution, do the following:
 
 > [!IMPORTANT]
-> If your generative page was created during the preview phase, you must load the generative page in the model app designer to initiate a one-time migration to the new solution-aware data model. When the page loads in the designer, you'll see an "Upgrading your page" progress message. Don't close the window until migration completes.
+> If your generative page was created during the preview phase, you must load the generative page in the model app designer to initiate a one-time migration to the new solution-aware data model. When the page loads in the designer, you observe an "Upgrading your page" progress message. Don't close the window until migration completes.
 
 1. Add the app containing your generative pages to a solution
     - In Power Apps, select **Solutions** on the left navigation pane, and open the desired solution.
@@ -115,7 +112,7 @@ Generative pages are solution-aware and can be added to a solution (via an app) 
     - Select the app that contains the generative pages.
 2. **Export the solution** (as managed or unmanaged)
     - Ensure the app sitemap is included in the solution. If not, it should be requested during dependency checks.
-    - Generative pages (shown as **UX Agent Project** rows) will also be requested based on their dependency on the sitemap.
+    - Generative pages (shown as **UX Agent Project** rows) are also requested based on their dependency on the sitemap.
 
 > [!NOTE]
 >
