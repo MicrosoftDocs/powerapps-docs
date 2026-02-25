@@ -4,7 +4,7 @@ description: Overview of recent updates to modern controls in Power Apps canvas 
 author: yogeshgupta698
 ms.topic: overview
 ms.custom: canvas
-ms.date: 02/23/2026
+ms.date: 02/25/2026
 ms.subservice: canvas-maker
 ms.author: yogupt
 ms.reviewer: mkaur
@@ -33,7 +33,9 @@ When you open an app that uses the previous version of a modern control, you see
 - A message indicating this is the previous version of the control
 - A **Learn more** link that directs you to the update documentation for that control
 - An **Update** button (when available) that upgrades the control to the new version
-
+ 
+    :::image type="content" source="media/modern-controls-updates-1.png" alt-text="Screenshot of how to update modern controls"::::
+ 
 **Before updating a control:**
 1. Select the **Learn more** link to read the update guide for that specific control.
 1. Review the enum changes, property renames, and behavioral differences.
