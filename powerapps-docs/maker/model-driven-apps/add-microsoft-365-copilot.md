@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.subservice: mda-maker
 ms.author: yogupt
 ms.reviewer: matp
-ms.date: 02/06/2026
+ms.date: 02/25/2026
 ms.update-cycle: 180-days
 ms.topic: how-to
 applies_to: 
@@ -25,6 +25,8 @@ ms.collection: bap-ai-copilot
 
 Microsoft 365 Copilot chat makes it easier for users to work with model-driven apps by offering AI-powered insights through natural language conversations. With this feature, users can quickly find information, navigate apps more easily, and get help to boost their productivity.
 App makers can enable Microsoft 365 Copilot chat to give users access to conversational AI that understands app data and provides helpful, contextual answers. Users can ask questions about their Microsoft Dataverse table data in plain language and receive immediate, relevant responses.
+
+> [!VIDEO [https://learn-video.azurefd.net/vod/player?id=843f065d-4ee4-4006-b09b-e97da24b7393]
 
 This article shows you how to enable and configure Microsoft 365 Copilot chat for your model-driven apps, both at the environment level and for individual apps.
 
