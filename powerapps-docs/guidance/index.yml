@@ -12,7 +12,7 @@ metadata:
   ms.collection: collection
   author: tapanm-msft
   ms.author: tapanm
-  ms.date: 02/23/2026
+  ms.date: 02/25/2026
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -36,22 +36,6 @@ landingContent:
           - text: Monitoring and testing
             url: coding-guidelines/monitoring-testing.md
   
-  # Card 
-  - title: Planning a Power Apps project
-    linkLists:
-       - linkListType: overview
-         links:     
-          - text: Plan
-            url: planning/planning-phase.md
-          - text: Design
-            url: planning/designing-phase.md
-          - text: Make
-            url: planning/making-phase.md
-          - text: Test
-            url: planning/testing-phase.md
-          - text: Deploy and refine
-            url: planning/discoverability.md
-
   # Card
   - title: "Collaborative app development"
     linkLists:
