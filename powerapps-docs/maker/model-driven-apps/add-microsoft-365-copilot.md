@@ -17,6 +17,7 @@ contributors:
   - makolomi
   - marianaraujo
 ms.collection: bap-ai-copilot
+ms.custom: CXT
 ---
 
 # Add Microsoft 365 Copilot chat for app users in model-driven apps (preview)
