@@ -34,7 +34,7 @@ When you open an app that uses the previous version of a modern control, you see
 - A **Learn more** link that directs you to the update documentation for that control
 - An **Update** button (when available) that upgrades the control to the new version
  
-    :::image type="content" source="modern-controls-updates-1.png" alt-text="Screenshot of how to update a modern control":::
+    :::image type="content" source="media/modern-controls-updates-1.png" alt-text="Screenshot of how to update modern controls"::::
  
 **Before updating a control:**
 1. Select the **Learn more** link to read the update guide for that specific control.
