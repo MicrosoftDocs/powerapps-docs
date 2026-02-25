@@ -1,10 +1,9 @@
 ---
-title: "Pass the current record as data context with an embedded canvas app | MicrosoftDocs"
-description: Learn how to pass the current record as data context in an embedded canvas app
+title: "Pass the current record as data context with an embedded canvas app"
+description: Learn how to pass the current record as data context in an embedded canvas app.
 ms.custom: ""
-ms.date: 07/29/2021
+ms.date: 02/20/2026
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -24,10 +23,10 @@ search.audienceType:
 # Pass the current record as data context to an embedded canvas app
 
 > [!IMPORTANT]
-> Canvas apps embedded on model-driven forms are now out of preview and generally available. The steps listed below are outdated and applicable only to the public preview release of canvas apps embedded on model-driven forms.
->  For the updated list of steps for the latest release, please see: [Add an embedded canvas app on a model-driven form](embedded-canvas-app-add-classic-designer.md)
+> Canvas apps embedded on model-driven forms are generally available. The steps listed below are outdated and applicable only to the public preview release of canvas apps embedded on model-driven forms.
+> For the updated list of steps for the latest release, go to: [Add an embedded canvas app on a model-driven form](embedded-canvas-app-add-classic-designer.md)
 
-This topic explains how to add an embedded canvas app and pass the current (main form) record as a data context to the embedded canvas app.
+This article explains how to add an embedded canvas app and pass the current (main form) record as a data context to the embedded canvas app.
 
 Imagine that you want to add an embedded canvas app on an account main form and pass the current account record to the embedded canvas app. To do this, follow these steps: 
 
