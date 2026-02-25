@@ -21,11 +21,11 @@ With managed identities, access to your storage account is restricted to request
 ## Before you start
 
 - Azure CLI is required on your local machine. [Download and install](https://aka.ms/InstallAzureCliWindows)
-- You need these two PowerShell modules. If you don't have them, open PowerShell and run these commands:
+- You need the following PowerShell modules. If you don't have them, open PowerShell and run these commands:
   - Azure Az PowerShell module: `Install-Module -Name Az`
   - Azure Az.Resources PowerShell module: `Install-Module -Name Az.Resources`
   - Power Platform admin PowerShell module: `Install-Module -Name Microsoft.PowerApps.Administration.PowerShell`
-- Get the PowerShell scripts from the [PowerApps-Samples repository on GitHub](https://github.com/microsoft/PowerApps-Samples). Select **Code** > **Download ZIP** and extract the archive to a location where you can run PowerShell commands, or clone the repository: `git clone https://github.com/microsoft/PowerApps-Samples.git`. Scripts are organized in subfolders under `powershell/managed-identities/Source`. Run each script from its specific subfolder—for example, `Source\Identity`.
+- Clone the [PowerApps-Samples repository on GitHub](https://github.com/microsoft/PowerApps-Samples) to a location where you can run PowerShell commands: `git clone https://github.com/microsoft/PowerApps-Samples.git`. Scripts are organized in subfolders under `powershell/managed-identities/Source`. Run each script from its specific subfolder—for example, `Source\Identity`.
 - We recommend that you create a new storage container under the same Azure resource group to onboard this feature.
 
 > [!IMPORTANT]
@@ -40,7 +40,7 @@ With managed identities, access to your storage account is restricted to request
 
 1. Open Azure CLI with run as administrator and sign into your Azure subscription using the command: `az login`  More information: [Sign in with Azure CLI](/cli/azure/authenticate-azure-cli)
 1. (Optional) if you have multiple Azure subscriptions, make sure to run `Update-AzConfig -DefaultSubscriptionForLogin { Azure subscription id }` to update your default subscription.
-1. In PowerShell, change to the subfolder that contains **SetupSubscriptionForPowerPlatform.ps1** within the repository you cloned or extracted as part of [Before you start](#before-you-start).
+1. In PowerShell, change to the `Source` folder within the repository you cloned as part of [Before you start](#before-you-start).
 1. To enable the enterprise policy for the selected Azure subscription, run the PowerShell script **./SetupSubscriptionForPowerPlatform.ps1**.
    - Provide the Azure subscription ID.
 
@@ -162,9 +162,9 @@ Only the Dynamics 365 and Power Platform admins who were granted the reader role
    1. Sign into the [Power Platform admin center](https://admin.powerplatform.microsoft.com).
    1. Select **Manage** > **Environments**, and then open your environment.
    1. In the **Details** section, copy the **Environment ID**.
-   1. From the `Source\Identity` subfolder, run this PowerShell script: `./NewIdentity.ps1`
-   1. Provide the Dataverse environment ID. 
-   1. Provide the **ResourceId**. <br />
+1. From the `Source\Identity` subfolder, run this PowerShell script: `./NewIdentity.ps1`
+   - Provide the Dataverse environment ID.
+   - Provide the **ResourceId**. <br />
    **StatusCode = 202** indicates the link was successfully created.
 1. Sign into the [Power Platform admin center](https://admin.powerplatform.microsoft.com).
 1. Select **Manage** > **Environments**, and then open the environment you specified earlier.
@@ -221,7 +221,7 @@ When you create the link, Azure Synapse Link for Dataverse gets details about th
 > To make the **Use managed identity** command available in Power Apps, you need to finish the above setup to connect the enterprise policy to your Dataverse environment. More information: [Connect enterprise policy to Dataverse environment](#connect-enterprise-policy-to-dataverse-environment)
 
 1. Go to an existing Synapse Link profile from Power Apps (make.powerapps.com).
-2. Select **Use managed identity**, and then confirm.
+1. Select **Use managed identity**, and then confirm.
    :::image type="content" source="media/use-managed-identity-cmd.png" alt-text="Use managed identity command in Power Apps":::
 
 ## Troubleshooting
