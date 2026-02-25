@@ -14,7 +14,6 @@ contributors:
   - -szlo
 ai-usage: ai-assisted
 ms.custom:
-  - ai-gen-diyeditor
   - canvas
   - CXT
 ---
