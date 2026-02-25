@@ -15,11 +15,11 @@ ms.custom:
 
 # Error handling
 
-Power Fx includes a preview feature that enables formula-level error handling. By default, this feature is turned on in Settings.
+Power Fx includes a feature that enables formula-level error handling. By default, this feature is turned on for all apps, but in older apps it may be disabled in Settings. We don't recommend having that feature disabled.
 
 :::image type="content" source="media/image28.png" alt-text="Screenshot of Upcoming features in Settings showing Formula-level error management set to On.":::
 
-This setting provides access to formulas like `IfError`, `IsError`, `Error`, and `IsBlankorError`. These functions allow you to detect errors, provide alternative values, or take specific actions based on the error.
+This setting provides access to formulas like `IfError`, `IsError`, `Error`, and `IsBlankorError`. These functions allow you to detect errors, provide alternative values, or take specific actions based on the error. This setting also allows null / blank values to be written to data sources - with this feature disabled, errors are returned as blank values.
 
 ## Validation error handling
 
