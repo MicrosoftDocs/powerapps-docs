@@ -6,7 +6,7 @@ ms.author: jasonhuang
 ms.reviewer: matp
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 09/24/2024
+ms.date: 02/25/2026
 ms.custom: template-how-to 
 ms.subservice: dataverse-maker
 ---
@@ -21,13 +21,15 @@ With managed identities, access to your storage account is restricted to request
 ## Before you start
 
 - Azure CLI is required on your local machine. [Download and install](https://aka.ms/InstallAzureCliWindows)
-- You need these two PowerShell modules. If you don't have them, open PowerShell and run these commands:
+- You need the following PowerShell modules. If you don't have them, open PowerShell and run these commands:
   - Azure Az PowerShell module: `Install-Module -Name Az`
   - Azure Az.Resources PowerShell module: `Install-Module -Name Az.Resources`
   - Power Platform admin PowerShell module: `Install-Module -Name Microsoft.PowerApps.Administration.PowerShell`
-  - 
-- Go to this [compressed folder file on GitHub](https://github.com/microsoft/PowerApps-Samples/blob/master/powershell/managed-identities/Common.zip). Then select **Download** to download it. Extract the compressed folder file to a computer in a location where you can run PowerShell commands. **All files and folders extracted from a compressed folder should be preserved in their original location.**
+- Clone the [PowerApps-Samples repository on GitHub](https://github.com/microsoft/PowerApps-Samples) to a location where you can run PowerShell commands: `git clone https://github.com/microsoft/PowerApps-Samples.git`. Scripts are organized in subfolders under `powershell/managed-identities/Source`. Run each script from its specific subfolder—for example, `Source\Identity`.
 - We recommend that you create a new storage container under the same Azure resource group to onboard this feature.
+
+> [!IMPORTANT]
+> Don't move scripts out of their folders. Scripts rely on relative paths and shared files in the repository structure.
 
 ## Enable enterprise policy for the selected Azure subscription
 
@@ -38,7 +40,7 @@ With managed identities, access to your storage account is restricted to request
 
 1. Open Azure CLI with run as administrator and sign into your Azure subscription using the command: `az login`  More information: [Sign in with Azure CLI](/cli/azure/authenticate-azure-cli)
 1. (Optional) if you have multiple Azure subscriptions, make sure to run `Update-AzConfig -DefaultSubscriptionForLogin { Azure subscription id }` to update your default subscription.
-1. Expand the compressed folder you downloaded as part of the [Before you start](#before-you-start) for this feature to a location where you can run PowerShell.
+1. In PowerShell, change to the `Source` folder within the repository you cloned as part of [Before you start](#before-you-start).
 1. To enable the enterprise policy for the selected Azure subscription, run the PowerShell script **./SetupSubscriptionForPowerPlatform.ps1**.
    - Provide the Azure subscription ID.
 
@@ -48,7 +50,12 @@ With managed identities, access to your storage account is restricted to request
 > You must have **Azure resource group Owner** role access to complete this task.
 > Obtain your Azure **Subscription ID**, **Location**, and **Resource group** name, from the overview page for the Azure resource group.
 
-1. Create the enterprise policy. Run PowerShell script `./CreateIdentityEnterprisePolicy.ps1`
+1. In PowerShell, change to the `Source\Identity` subfolder and run the script to create the enterprise policy:
+
+   ```powershell
+   cd <path-to-repo>\powershell\managed-identities\Source\Identity
+   .\CreateIdentityEnterprisePolicy.ps1
+   ```
 
    - Provide the Azure subscription ID.
    - Provide the Azure resource group name.
@@ -155,9 +162,9 @@ Only the Dynamics 365 and Power Platform admins who were granted the reader role
    1. Sign into the [Power Platform admin center](https://admin.powerplatform.microsoft.com).
    1. Select **Manage** > **Environments**, and then open your environment.
    1. In the **Details** section, copy the **Environment ID**.
-   1. To link to the Dataverse environment, run this PowerShell script: `./NewIdentity.ps1`
-   1. Provide the Dataverse environment ID. 
-   1. Provide the **ResourceId**. <br />
+1. From the `Source\Identity` subfolder, run this PowerShell script: `./NewIdentity.ps1`
+   - Provide the Dataverse environment ID.
+   - Provide the **ResourceId**. <br />
    **StatusCode = 202** indicates the link was successfully created.
 1. Sign into the [Power Platform admin center](https://admin.powerplatform.microsoft.com).
 1. Select **Manage** > **Environments**, and then open the environment you specified earlier.
@@ -214,7 +221,7 @@ When you create the link, Azure Synapse Link for Dataverse gets details about th
 > To make the **Use managed identity** command available in Power Apps, you need to finish the above setup to connect the enterprise policy to your Dataverse environment. More information: [Connect enterprise policy to Dataverse environment](#connect-enterprise-policy-to-dataverse-environment)
 
 1. Go to an existing Synapse Link profile from Power Apps (make.powerapps.com).
-2. Select **Use managed identity**, and then confirm.
+1. Select **Use managed identity**, and then confirm.
    :::image type="content" source="media/use-managed-identity-cmd.png" alt-text="Use managed identity command in Power Apps":::
 
 ## Troubleshooting
@@ -223,9 +230,9 @@ If you receive 403 errors during the link creation:
 
 - Managed identities take extra time to grant transient permission during initial sync. Give it some time and try the operation again later.
 - Make sure the linked storage doesn't have the existing Dataverse container(**dataverse-environmentName-organizationUniqueName**) from the same environment.
-- You can identify the linked enterprise policy and `policyArmId` by running the PowerShell script `./GetIdentityEnterprisePolicyforEnvironment.ps1` with the Azure **Subscription ID** and **Resource group** name.
-- You can unlink the enterprise policy by running the PowerShell script `./RevertIdentity.ps1` with the Dataverse environment ID and `policyArmId`.
-- You can remove the enterprise policy by running the PowerShell script **.\RemoveIdentityEnterprisePolicy.ps1 with policyArmId**.
+- You can identify the linked enterprise policy and `policyArmId` by running the PowerShell script `./GetIdentityEnterprisePolicyforEnvironment.ps1` from the `Source\Identity` subfolder, with the Azure **Subscription ID** and **Resource group** name.
+- You can unlink the enterprise policy by running the PowerShell script `./RevertIdentity.ps1` from the `Source\Identity` subfolder, with the Dataverse environment ID and `policyArmId`.
+- You can remove the enterprise policy by running the PowerShell script **.\RemoveIdentityEnterprisePolicy.ps1** from the `Source\Identity` subfolder, with `policyArmId`.
 
 ## Known limitation
 
