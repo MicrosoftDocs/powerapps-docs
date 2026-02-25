@@ -16,6 +16,7 @@ ai-usage: ai-assisted
 ms.custom:
   - ai-gen-diyeditor
   - canvas
+  - CXT
 ---
 
 # Understand coauthoring and copresence in canvas apps
