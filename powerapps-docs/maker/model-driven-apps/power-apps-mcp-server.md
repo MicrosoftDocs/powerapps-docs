@@ -33,7 +33,7 @@ The Power Apps MCP Server equips your agent with two types of capabilities:
 
 :::image type="content" source="media/add-agents-to-app/power-apps-mcp-server.png" alt-text="Power Apps MCP server" lightbox="media/add-agents-to-app/power-apps-mcp-server.png":::
 
-The Power Apps MCP tools improve the more you use them. For example, when you make corrections to suggestions in the agent canvas, the data entry tool improves based on your corrections. To use the enhanced agent feed capabiltities, enable and configure the Power Apps MCP Server from the Microsoft Copilot Studio agent. Once configured, you can invoke Power Apps MCP Server tools from agent instructions using natural language.
+The Power Apps MCP tools improve the more you use them. For example, when you make corrections to suggestions in the agent canvas, the data entry tool improves based on your corrections. To use the enhanced agent feed capabilities, enable and configure the Power Apps MCP Server from the Microsoft Copilot Studio agent. Once configured, you can invoke Power Apps MCP Server tools from agent instructions using natural language.
 
 More information: [Create an autonomous agent connected to Power Apps MCP Server](add-agents-to-app.md#create-an-autonomous-agent-connected-to-power-apps-mcp-server)
 
@@ -49,7 +49,7 @@ Once connected to the Power Apps MCP Server, the agent can choose from various t
 
 ## log_for_review
 
-Records completed agent work to the agent feed for human review. The `log_for-review` tool is intended for scenarios where an agent has sufficient information to act autonomously but needs human validation before the result is finalized or trusted. It is best suited for decisions that can be easily revised or rolled back. Besides title and description, you can also ask the tool to add a link to the Dataverse record. It could be the link to the record the agent created using the Dataverse MCP server or a record link present in context like the record that triggered the agent execution. These tasks are shown in the agent feed's **Completed** tab.
+Records completed agent work to the agent feed for human review. The `log_for_review` tool is intended for scenarios where an agent has sufficient information to act autonomously but needs human validation before the result is finalized or trusted. It is best suited for decisions that can be easily revised or rolled back. Besides title and description, you can also ask the tool to add a link to the Dataverse record. It could be the link to the record the agent created using the Dataverse MCP server or a record link present in context like the record that triggered the agent execution. These tasks are shown in the agent feed's **Completed** tab.
 
 ### Sample instruction
 
@@ -59,9 +59,9 @@ When the customer makes a booking from the portal this agent must log the detail
 
 ## request_assistance
 
-The `request_assistance` tool creates an agent feed task to reach out to a human. This is an asynchronous operation that calls the Microsoft Copilot Studio agent that waits until the human completes the action. For details on completing the action feed acivity, go to [Supervise agents in model-driven apps with agent feed (preview)](../../user/supervise-agents-with-agent-feed.md#supervise-agents-in-model-driven-apps-with-agent-feed-preview) 
+The `request_assistance` tool creates an agent feed task to reach out to a human. This is an asynchronous operation that calls the Microsoft Copilot Studio agent that waits until the human completes the action. For details on completing the action feed activity, go to [Supervise agents in model-driven apps with agent feed (preview)](../../user/supervise-agents-with-agent-feed.md#supervise-agents-in-model-driven-apps-with-agent-feed-preview) 
 
-You can observe the **In progress** status for the agent run in the activity tab when viewing the agent in Copilot Studio. Once the user completes the activity from agent feed, control comples back to agent via callback and agent can complete the task. 
+You can observe the **In progress** status for the agent run in the activity tab when viewing the agent in Copilot Studio. Once the user completes the activity from agent feed, control comes back to agent via callback and agent can complete the task. 
 
 :::image type="content" source="media/add-agents-to-app/copilot-studio-agent-in-progress.png" alt-text="In progress status in Copilot Studio":::
 
