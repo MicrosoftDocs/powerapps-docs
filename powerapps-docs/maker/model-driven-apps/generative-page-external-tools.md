@@ -106,7 +106,7 @@ Once installed, you can use the plugin by either:
 
 ### Using other AI code generation tools
 
-For other AI code generation tools, ensure your tool has access to the generative page resources from the [Power Platform skills](https://github.com/microsoft/power-platform-skills/tree/main/plugins/power-apps) GitHub repository. The model-apps plugin folder includes component documentation, sample code, PAC CLI command reference, and workflow instructions necessary to create code adhering to generative page requirements. Consult the repository [readme](https://github.com/microsoft/power-platform-skills/blob/main/README.md) for information on accessing and using these resources with your preferred tool.
+For other AI code generation tools, ensure your tool has access to the generative page resources from the [Power Platform skills](https://github.com/microsoft/power-platform-skills/tree/main/plugins/model-apps) GitHub repository. The model-apps plugin folder includes component documentation, sample code, PAC CLI command reference, and workflow instructions necessary to create code adhering to generative page requirements. Consult the repository [readme](https://github.com/microsoft/power-platform-skills/blob/main/plugins/model-apps/README.md) for information on accessing and using these resources with your preferred tool.
 
 ## Skills overview
 
