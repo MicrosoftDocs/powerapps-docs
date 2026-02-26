@@ -21,7 +21,7 @@ Monitor in Power Apps offers insights and recommendations to enhance app perform
 
 ## Prerequisites
 
-To use this feature, your administrator must enable certain analytics and monitoring settings in the Power Platform Admin Center. For more information, see [Monitoring experiences for makers](/power-platform/admin/monitoring/monitoring-overview#monitoring-experiences-for-makers).
+To use this feature, your administrator must enable certain analytics and monitoring settings in the Power Platform Admin Center. For more information, see [Monitoring experiences for makers](/power-platform/admin/monitoring/monitoring-overview#monitoring-experiences-for-makers). Also, when you log into Power Apps Monitor and have selected an environment, ensure that you are a member of that environment with an assigned role, like Basic User. Otherwise, you cannot access Monitor. 
 
 ## Open and pin Monitor
 
