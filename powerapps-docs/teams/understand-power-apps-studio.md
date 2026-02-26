@@ -477,7 +477,7 @@ Select **Media** to add images, video, or audio files to your app. Adding media 
 
 :::image type="content" source="media/studio-media.png" alt-text="Media.":::
 
-If you want to reference more media, consider using [audio and video controls with URLs](../maker/canvas-apps/add-images-pictures-audio-video.md#add-images-audio-or-video-using-the-controls),
+If you want to reference more media, consider using [audio and video controls with URLs](../maker/canvas-apps/add-images-pictures-audio-video.md#add-images-audio-or-video-by-using-the-controls),
 using media from [Azure Media Services](../maker/canvas-apps/add-images-pictures-audio-video.md#add-media-from-azure-media-services).
 More information: [Using multimedia files in Power Apps](../maker/canvas-apps/add-images-pictures-audio-video.md)
 

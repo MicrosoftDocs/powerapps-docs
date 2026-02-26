@@ -359,7 +359,7 @@ Select **Media** to add images, video, or audio files to your app. Adding media 
 > - Each file uploaded to the app as media must be 64 MB or smaller.
 > - The size of all media files uploaded to an app can't exceed 200 MB.
 
-If you want to reference more media, consider using [audio and video controls with URLs](add-images-pictures-audio-video.md#add-images-audio-or-video-using-the-controls), media from [Azure Media Services](add-images-pictures-audio-video.md#add-media-from-azure-media-services).
+If you want to reference more media, consider using [audio and video controls with URLs](add-images-pictures-audio-video.md#add-images-audio-or-video-by-using-the-controls), media from [Azure Media Services](add-images-pictures-audio-video.md#add-media-from-azure-media-services).
 
 For more information, see [Using multimedia files in Power Apps](add-images-pictures-audio-video.md).
 
