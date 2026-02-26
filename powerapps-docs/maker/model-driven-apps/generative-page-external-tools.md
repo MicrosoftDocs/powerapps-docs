@@ -17,9 +17,16 @@ applies_to:
 - PowerApps
 ---
 
-# Create and edit generative pages with AI code generation tools
-<!-- Is this feature GA or in public preview? -->
+# Create and edit generative pages with AI code generation tools (preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
 This article describes how to use AI code generation tools, such as GitHub Copilot CLI and Claude Code, to create and edit generative pages for model-driven apps in Power Apps. This approach allows you to integrate advanced code generation capabilities directly into your development workflow, allowing you to create new generative pages or iterate on existing ones using natural language instructions.
+
+> [!IMPORTANT]
+>
+> - This is a preview feature.
+> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
 Using AI code generation tools with generative pages provides an alternative development approach that complements the UI-based experience in Power Apps (make.powerapps.com). This code-first approach is designed for developers and technical makers who prefer working with local development tools and CLI-based workflows.
 
@@ -61,13 +68,13 @@ Before you start, ensure you have the required software and permissions describe
 
 ### Install the plugin
 
-Run the installer to set up all Power Platform plugins.
-<!--Run both these commands in PowerShell? If not this needs to be separated into two code blocks. -->
-```powershell
-# Windows (PowerShell):
-iwr https://raw.githubusercontent.com/microsoft/power-platform-skills/main/scripts/install.js -OutFile install.js; node install.js; del install.js
+Run the installer to set up all Power Platform plugins in either PowerShell or a Windows command window.
 
-# Mac OS/Linux/Windows (cmd):
+```powershell
+iwr https://raw.githubusercontent.com/microsoft/power-platform-skills/main/scripts/install.js -OutFile install.js; node install.js; del install.js
+```
+
+```dos
 curl -fsSL https://raw.githubusercontent.com/microsoft/power-platform-skills/main/scripts/install.js | node
 ```
 
@@ -99,7 +106,7 @@ Once installed, you can use the plugin by either:
 
 ### Using other AI code generation tools
 
-For other AI code generation tools, ensure your tool has access to the generative page resources from the [Power Platform skills](https://github.com/microsoft/power-platform-skills/tree/main/plugins/power-apps) GitHub repository. The power-apps folder includes component documentation, sample code, PAC CLI command reference, and workflow instructions necessary to create code adhering to generative page requirements. Consult the repository [readme](https://github.com/microsoft/power-platform-skills/blob/main/README.md) for information on accessing and using these resources with your preferred tool.
+For other AI code generation tools, ensure your tool has access to the generative page resources from the [Power Platform skills](https://github.com/microsoft/power-platform-skills/tree/main/plugins/power-apps) GitHub repository. The model-apps plugin folder includes component documentation, sample code, PAC CLI command reference, and workflow instructions necessary to create code adhering to generative page requirements. Consult the repository [readme](https://github.com/microsoft/power-platform-skills/blob/main/README.md) for information on accessing and using these resources with your preferred tool.
 
 ## Skills overview
 
