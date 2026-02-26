@@ -55,6 +55,10 @@ The following scenarios are supported when connecting to Dataverse using the Pow
 
 - Paging support
 
+> [!TIP]
+> Looking for a complete working example? The [Dataverse sample code app](https://github.com/microsoft/PowerAppsCodeApps/tree/main/samples/Dataverse) demonstrates all the patterns covered in this article — CRUD operations, lookup fields, and generated services — in a ready-to-run
+React/TypeScript app you can explore and extend.
+
 ## Set up your code app
 
 Before performing create, read, update, and delete (CRUD) operations in your code app, import the required types and services.
