@@ -5,25 +5,32 @@ author: jasongre
 ms.subservice: mda-maker
 ms.author: jasongre
 ms.reviewer: matp
-ms.date: 01/05/2025
+ms.date: 02/24/2026
 ms.topic: how-to
-applies_to: 
+applies_to:
   - PowerApps
-search.audienceType: 
+search.audienceType:
   - maker
-ms.collection: 
-  - bap-ai-copilot 
+ms.collection:
+  - bap-ai-copilot
 ---
 
 # Generate a page using natural language
 
-Use natural language to build a *generative page* that's created using AI. Generative pages are an AI-driven experience designed to simplify, accelerate, and improve your app design process in model-driven apps. By interacting with the app agent, you create fully functional pages in your model-driven apps by describing what you need in natural language and specifying which Microsoft Dataverse tables to reference. You can even attach an image of what you’d like the page to look like.
+Use natural language to build a *generative page* that's created using AI. Generative pages are an AI-driven experience designed to simplify, accelerate, and improve your app design process in model-driven apps. By interacting with the app agent, you create fully functional pages in your model-driven apps by describing what you need in natural language and specifying which Microsoft Dataverse tables to reference. You can even attach an image of what you'd like the page to look like.
 
 After you describe the page, the system then processes your requirements and specifications and intelligently generates React code that covers both the front-end user experience by selecting the right components and determining the best layout, and the corresponding business logic. Through an interactive, conversational experience, you can refine the page design in real time, adjusting elements, layout, and functionality to perfectly match your vision.
 
+## Development approaches
+
+You can create generative pages using two approaches:
+
+- Power Apps (make.powerapps.com): As described in this article, makers can create and iterate on generative pages directly in the browser using a conversational UI experience
+- AI code generation tools: Developers who prefer working with local development tools and direct access to TypeScript and React code can use external tools like Claude Code to develop generative pages locally with a code-first approach and CLI-based deployment. More information: [Create and edit generative pages with AI code generation tools](generative-page-external-tools.md)
+
 ## Prerequisites
 
-- The Power Platform environment must be located in the US region. This feature is not available in other regions yet.
+- The Power Platform environment must be located in the US region. This feature isn't currently available in other regions yet.
 
 ## Create a generative page in model-driven apps
 
@@ -39,13 +46,13 @@ After you describe the page, the system then processes your requirements and spe
 1. Optionally upload one or more images to guide the UI of your generated page by selecting **Add data** > **Attach image**. This can be a rough napkin sketch or a higher resolution image. The image can represent the structure or layout of the entire page you want to create or it can be visuals for a certain section or component you want to mimic.
 
    > [!NOTE]
-   > If you want the generated page to display a particular image, instead of attaching the image to the prompt, you can (1) include the image in a referenced Datatable table and have the agent retrieve the image from there, (2) host the image publicly and give the agent the URL, or (3) add the image as a web resource and give the agent the URL for the web resource.  
-   
+   > If you want the generated page to display a particular image, instead of attaching the image to the prompt, you can (1) include the image in a referenced Datatable table and have the agent retrieve the image from there, (2) host the image publicly and give the agent the URL, or (3) add the image as a web resource and give the agent the URL for the web resource.
+
 1. Optionally enable or disable the **Include images** (preview) tool to allow the agent to utilize images from a curated, safe library of 25,000 stock images to support use cases like default/placeholder images, decorative backgrounds, static content blocks, and richer empty or error states.
    :::image type="content" source="media/generative-page/generative-page-include-image-tool.png" alt-text="Include image tool to add an image from a library of stock images":::
-1. Optionally choose the AI model you want to use to generate the page. 
+1. Optionally choose the AI model you want to use to generate the page.
     :::image type="content" source="media/generative-page/choose-model-generative-page.png" alt-text="Choose the AI model you want to use to generate your page" lightbox="media/generative-page/choose-model-generative-page.png":::
-    
+
 1. When you're finished describing the page, select **Generate page**.
 
 The agent begins a multi-step build process that you can observe in real time:
@@ -70,11 +77,11 @@ After generating your page, you have several options to refine and finalize it:
 
     -  Iteratively chat with the app agent to fix errors, adjust layout, or add functionality.
     -  Manually edit the code by selecting **Edit** on the Code tab. After making some edits, you can select **Save** to commit your changes as a new iteration, or **Cancel** to discard your changes.
-   
+
    [Learn about the dataApi object methods used for data operations](../../developer/model-driven-apps/generative-page/data-api/index.md)
 
 1. **Compare iterations**
-    After completing two or more iterations with the agent, you can select **Compare** on the Code tab to view a code diff between the current and previous iteration.  
+    After completing two or more iterations with the agent, you can select **Compare** on the Code tab to view a code diff between the current and previous iteration.
 
    > [!NOTE]
    > This capability is currently only available starting with the second iteration in the current session.
@@ -83,10 +90,10 @@ After generating your page, you have several options to refine and finalize it:
     In the chat experience, select **Attach** > **Add screenshot** to include a screenshot of the current preview with your next interaction with the app agent. A screenshot is useful for helping to adjust the visuals of the page. You can alternatively attach other images to help refine the visuals of the entire page or a particular piece of the page.
 
 1.  **Check for accessibility issues (new)**
-    After each iteration of code generation, the **Accessibility assistant** at the bottom of the screen scans the generated code assessing it with respect to accessibility. You can see a high level status update directly on screen and can choose to open the detailed results in a panel. Select **Auto fix** to pass any violations directly to the agent for it to try to automatically resolve. 
+    After each iteration of code generation, the **Accessibility assistant** at the bottom of the screen scans the generated code assessing it with respect to accessibility. You can see a high level status update directly on screen and can choose to open the detailed results in a panel. Select **Auto fix** to pass any violations directly to the agent for it to try to automatically resolve.
 
 1. **Save and publish**
-    In the command bar, select **Save** to avoid losing progress on your page.  
+    In the command bar, select **Save** to avoid losing progress on your page.
     When you're satisfied with your page, select **Save and Publish** to publish all pending changes for the app, including any generative pages.
 
 > [!IMPORTANT]
@@ -95,18 +102,18 @@ After generating your page, you have several options to refine and finalize it:
 ## Adding generative pages to solutions
 
 Generative pages are solution-aware and can be added to a solution (via an app) to facilitate moving between environments. To add a generative page to a solution, do the following:
- 
+
 > [!IMPORTANT]
-> If your generative page was created during the preview phase, you must load the generative page in the model app designer to initiate a one-time migration to the new solution-aware data model. When the page loads in the designer, you'll see an "Upgrading your page" progress message. Don't close the window until migration completes.
+> If your generative page was created during the preview phase, you must load the generative page in the model app designer to initiate a one-time migration to the new solution-aware data model. When the page loads in the designer, you observe an "Upgrading your page" progress message. Don't close the window until migration completes.
 
 1. Add the app containing your generative pages to a solution
     - In Power Apps, select **Solutions** on the left navigation pane, and open the desired solution.
     - Select **Add existing > App > Model-driven app**.
     - Select the app that contains the generative pages.
 2. **Export the solution** (as managed or unmanaged)
-    - Ensure the app sitemap is included in the solution. If not, it should be requested during dependency checks.  
-    - Generative pages (shown as **UX Agent Project** rows) will also be requested based on their dependency on the sitemap.
-      
+    - Ensure the app sitemap is included in the solution. If not, it should be requested during dependency checks.
+    - Generative pages (shown as **UX Agent Project** rows) are also requested based on their dependency on the sitemap.
+
 > [!NOTE]
 >
 > Check these items if no generative pages are requested during dependency checks:
@@ -114,7 +121,7 @@ Generative pages are solution-aware and can be added to a solution (via an app) 
 > - Pages created during preview will only appear if they've been migrated. Load them in the designer to trigger migration.
 > - If the sitemap is included in the solution and your generative pages have been migrated, try making a minor change to the sitemap, such as reordering or renaming a page, republishing the app, and then trying the export again.
 
-After export, you can import the app and generative pages into another environment. When opened in the designer in the target environment, only the first prompt and published code are available. The full agent conversation doesn't transfer with the page.  
+After export, you can import the app and generative pages into another environment. When opened in the designer in the target environment, only the first prompt and published code are available. The full agent conversation doesn't transfer with the page.
 
 ## Limitations
 
@@ -144,13 +151,13 @@ These are the current limitations of generative pages:
 
 ## Frequently asked questions
 
-### Can I start designing my app in Plan Designer and then use generative pages? 
+### Can I start designing my app in Plan Designer and then use generative pages?
 
 Yes, while there's currently no direct integration between plans and generative pages, you can use plans to define your tables and apps, and then switch to the model-driven app designer to create any desired generative pages.
 
-### Are there any additional fees or credits needed to use generative pages? 
+### Are there any additional fees or credits needed to use generative pages?
 
-No, the maker experience for generative pages (and plans) don't require any additional AI or message credits. 
+No, the maker experience for generative pages (and plans) don't require any additional AI or message credits.
 
 ### What kind of images work best for guiding the UI generation?
 
@@ -158,11 +165,11 @@ It depends on your goal. If you know exactly how you want the final page to look
 
 ### Can I use generative pages with canvas apps or other app types?
 
-No, generative pages are currently only supported in model-driven apps.  
+No, generative pages are currently only supported in model-driven apps.
 
 ### Is there a way to reuse or clone a generative page across environments?
 
-Yes, generative pages are solution-aware elements that can be moved across environments.  Only the last published version of the code and the first prompt are maintained with the solution; the full revision history remains on the original environment.  
+Yes, generative pages are solution-aware elements that can be moved across environments.  Only the last published version of the code and the first prompt are maintained with the solution; the full revision history remains on the original environment.
 
 ### Can I edit the generated code manually?
 
@@ -178,9 +185,10 @@ The best way to give feedback on generative pages is to use the thumbs up/down b
 
 ### What if I don't see generative pages enabled in my environment?
 
-Confirm that your environment is in the US region. 
+Confirm that your environment is in the US region.
 
 ## Related articles
 
--  [FAQ about generative pages in model-driven apps](../common/faq-generative-pages-model-driven.md)
--  [Legal terms](https://go.microsoft.com/fwlink/?linkid=2173149)
+- [Create and edit generative pages with AI code generation tools](generative-page-external-tools.md)
+- [FAQ about generative pages in model-driven apps](../common/faq-generative-pages-model-driven.md)
+- [Legal terms](https://go.microsoft.com/fwlink/?linkid=2173149)
