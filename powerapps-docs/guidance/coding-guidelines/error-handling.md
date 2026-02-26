@@ -18,8 +18,8 @@ ms.custom:
 Power Fx includes a feature that enables formula-level error handling. By default, this feature is turned on for all apps, but in older apps, app **Settings** might disable it. Don't disable this feature.
 
 1. You can check by opening a canvas app for editing.
-1. Go to **Settings** > **Updates** > **Redired** tab.
-1. Make sure **Disable formula-level managent** is turned off.
+1. Go to **Settings** > **Updates** > **Retired** tab.
+1. Make sure **Disable formula-level management** is turned off.
 
 
 When this setting is enabled, you can use formulas like `IfError`, `IsError`, `Error`, and `IsBlankorError`. These functions help you detect errors, provide alternative values, or take specific actions based on the error. When you turn on this setting, you can write null or blank values to data sources. When you turn off this feature, errors are returned as blank values.
