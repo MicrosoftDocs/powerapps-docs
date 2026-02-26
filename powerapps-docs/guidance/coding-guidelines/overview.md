@@ -2,12 +2,11 @@
 title: Power Apps coding guidelines
 description: Learn best practices and coding guidelines for developing Power Apps that are consistent, performant, and maintainable.
 #customer intent: As a Power Apps developer, I want to understand coding guidelines so that I can create maintainable and high-quality apps.
-ms.date: 02/18/2026
+ms.date: 02/26/2026
 ms.topic: overview
-ms.subservice: guidance
-ms.service: powerapps
 author: robstand
 ms.author: rachaudh
+ms.reviewer: jhaskett-msft
 ---
 
 # Power Apps coding guidelines

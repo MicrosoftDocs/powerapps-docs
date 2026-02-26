@@ -3,10 +3,9 @@ title: Testing and monitoring in Power Apps
 description: Learn about testing and monitoring your Power Apps.
 ms.date: 06/12/2024
 ms.topic: best-practice
-ms.subservice: guidance
-ms.service: powerapps
 author: robstand
 ms.author: rachaudh
+ms.reviewer: jhaskett-msft
 ---
 
 # Monitoring and testing

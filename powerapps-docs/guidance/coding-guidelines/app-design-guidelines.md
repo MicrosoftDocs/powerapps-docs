@@ -2,12 +2,11 @@
 title: Power Apps application design guidelines
 description: Discover best practices for designing user-friendly Power Apps. Learn about modern controls, form design, gallery optimization, and reusable components to create impactful business solutions.
 #customer intent: As a Power Apps user, I want to learn best practices for designing modern controls so that I can create visually appealing and accessible applications.
-ms.date: 02/18/2026
+ms.date: 02/26/2026
 ms.topic: best-practice
-ms.subservice: guidance
-ms.service: powerapps
 author: robstand
 ms.author: rachaudh
+ms.reviewer: jhaskett-msft
 ---
 
 # App design guidelines

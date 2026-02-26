@@ -2,12 +2,11 @@
 title: Code readability best practices
 description: Learn how to improve Power Apps code readability with best practices for naming conventions, comments, and formatting.
 #customer intent: As a Power Apps user, I want to understand naming conventions for controls and variables so that I can improve code readability and maintainability.
-ms.date: 02/18/2026
+ms.date: 02/26/2026
 ms.topic: best-practice
-ms.subservice: guidance
-ms.service: powerapps
 author: robstand
 ms.author: rachaudh
+ms.reviewer: jhaskett-msft
 ---
 
 # Code readability

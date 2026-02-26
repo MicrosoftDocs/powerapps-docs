@@ -2,12 +2,11 @@
 title: Error handling in Power Apps
 description: Discover best practices for error handling in Power Apps, including validation, patching, and custom error messages.
 #customer intent: As a Power Apps user, I want to understand how to handle validation errors so that I can ensure accurate user input in my app.
-ms.date: 02/18/2026
+ms.date: 02/26/2026
 ms.topic: best-practice
-ms.subservice: guidance
-ms.service: powerapps
 author: robstand
 ms.author: rstand
+ms.reviewer: jhaskett-msft
 ms.custom:
   - ai-gen-docs-bap
   - ai-gen-description
