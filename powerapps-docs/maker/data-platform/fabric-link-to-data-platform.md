@@ -8,7 +8,7 @@ contributors: saviegas
 ms.service: powerapps
 ms.subservice: dataverse-maker
 ms.topic: how-to
-ms.date: 09/18/2025
+ms.date: 02/10/2026
 ms.custom: template-how-to
 ---
 # Link to Microsoft Fabric
@@ -82,6 +82,8 @@ Link to Microsoft Fabric from the Power Apps **Tables** area: Select **Analyze**
 > When the initial sync is complete, the system continuously refreshes updates in Dataverse in the lakehouse. It might take up to 60 minutes for the data to be refreshed especially during peak load periods.
 >
 > If you have more than 2,000 active Dataverse tables, Link to Fabric can fail with an error. Go to [Troubleshooting common issues](fabric-troubleshoot.md) for help with resolving issues.
+>
+> The link was labeled as **Microsoft OneLake** and is now labeled **Link to Fabric**.
 
 ## Manage link to Fabric
 
@@ -89,7 +91,7 @@ This section describes how to add or remove tables linked to Fabric, configure t
 
 ### Add or remove tables linked to Fabric
 
-Admins can manage tables linked to OneLake from the **Azure Synapse Link for Dataverse** page. If this environment is linked to Fabric, you see a link called **Microsoft OneLake**.
+Admins can manage tables linked to Fabric from the **Azure Synapse Link for Dataverse** page. If this environment is linked to Fabric, you see a link called **Link to Fabric**.
 
 #### Add tables to Fabric
 
@@ -97,7 +99,7 @@ Admins can manage tables linked to OneLake from the **Azure Synapse Link for Dat
    > [!NOTE]
    > This feature is enabled by default on all environments. Power Platform admins can disable this feature in the Power Platform admin center. More information: [Environment settings: Microsoft Fabric](/power-platform/admin/settings-features?tabs=new#microsoft-fabric)
 
-2. Select **Azure Synapse Link** from the left navigation pane, and then select **Microsoft OneLake**.
+2. Select **Azure Synapse Link** from the left navigation pane, and then select **Link to Fabric**.
 3. Open Fabric by selecting **View in Microsoft Fabric**.
 4. Add more table links to Fabric by selecting **Manage tables**.
 5. When you add a table, the system performs an initial sync and indexes the data. When the initial sync is completed, a shortcut to OneLake is created. View the status of tables by selecting **Manage tables**. Use the **Refresh Fabric tables** option to add the newly enabled table in Fabric. You might need to review the report and downstream data flows to see that they aren't impacted by the change.
@@ -110,7 +112,7 @@ Admins can manage tables linked to OneLake from the **Azure Synapse Link for Dat
 8. You can also **Unlink**, which removes the Fabric link to your Dataverse environment. When unlinking, the Fabric lakehouse is also removed.
 
 > [!NOTE]
-> If you've installed Dynamics 365 apps such as Customer Insights, the tables required for the app are also included in the **Microsoft OneLake** link.
+> If you've installed Dynamics 365 apps such as Customer Insights, the tables required for the app are also included in the **Link to Fabric** link.
 
 #### Remove tables from Fabric
 

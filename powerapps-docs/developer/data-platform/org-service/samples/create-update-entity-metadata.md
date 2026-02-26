@@ -2,8 +2,8 @@
 title: "Sample: Create and update table definitions  (Microsoft Dataverse) | Microsoft Docs"
 description: "This sample shows how to create and update table definitions." 
 ms.date: 04/03/2022
-author: mkannapiran
-ms.author: kamanick
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 ms.topic: sample
 search.audienceType:

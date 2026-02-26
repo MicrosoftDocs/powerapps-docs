@@ -7,6 +7,10 @@ items:
         href: overview.md
       - name: Architecture
         href: architecture.md
+      - name: What's new?
+        items:
+          - name: Quickstart with npm CLI
+            href: how-to/npm-quickstart.md
       - name: Build
         items:
           - name: "Quickstart: Create a code app"
@@ -15,6 +19,8 @@ items:
             href: system-limits-configuration.md
           - name: Connect to data
             href: how-to/connect-to-data.md
+          - name: Connect to Copilot Studio
+            href: how-to/connect-to-copilot-studio.md
           - name: Dataverse
             items:
               - name: Connect to Dataverse

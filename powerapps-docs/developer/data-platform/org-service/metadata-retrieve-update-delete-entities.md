@@ -2,8 +2,8 @@
 title: "Retrieve, update, and delete tables (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn how to retrieve, update, and delete tables."
 ms.date: 04/03/2022
-author: mkannapiran
-ms.author: kamanick
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 ms.topic: "article"
 search.audienceType: 

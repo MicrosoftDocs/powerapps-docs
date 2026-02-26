@@ -2,8 +2,8 @@
 title: "Insert, update, delete, and order global choices (Microsoft Dataverse) | Microsoft Docs"
 description: "Code samples to show how to insert, update, delete, and order global choices." 
 ms.date: 04/03/2022
-author: mkannapiran
-ms.author: kamanick
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 ms.topic: "article"
 search.audienceType: 

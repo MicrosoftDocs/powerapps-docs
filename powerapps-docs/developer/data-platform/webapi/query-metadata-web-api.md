@@ -5,8 +5,8 @@ ms.date: 03/01/2023
 ms.topic: how-to
 applies_to: 
   - "Dynamics 365 (online)"
-author: mkannapiran
-ms.author: kamanick
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: pehecke
 search.audienceType: 
   - developer

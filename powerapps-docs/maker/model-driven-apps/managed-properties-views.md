@@ -1,8 +1,8 @@
 ---
-title: "Model-driven app managed properties for views with Power Apps | MicrosoftDocs"
+title: "Model-driven app managed properties for views with Power Apps"
 description: "Learn how to set managed properties for a view"
 ms.custom: ""
-ms.date: 06/12/2018
+ms.date: 02/12/2026
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -21,23 +21,19 @@ search.audienceType:
 ---
 # Model-driven app managed properties for views
 
-<a name="BKMK_ManagedProperties"></a>   
- 
-If a custom public view has been created for a table in Power Apps and is included in a managed solution, there is the option to limit the ability of anyone who is installing the solution from customizing the view.
+When you create a custom public view for a table in Power Apps that's included in a managed solution, there's the option to limit the ability of anyone who is installing the solution from customizing the view.
 
-Additionally, there are high-level options that can be applied to the table that apply to all views.
+Additionally, there are high-level options that you can set on the table that apply to all views.
   
-By default, most views have their **Customizable** managed property set to true so that people can customize them. Unless there is a good reason to change this, we recommend you allow people to customize views in the table.  
+By default, most views have their **Customizable** managed property set to true so that people can customize them. Unless there's a good reason to change this, we recommend you allow people to customize views in the table.  
   
 ## Set managed properties for all views  
 
-1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-2.  Select **Solutions**, and then open the solution you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+2. Select **Solutions**, and then open the solution you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 
-3. Select the table you want. Select **...**, and then select **Managed properties** on the command bar.
-
-   :::image type="content" source="media/table-managed-properties-navigation.png" alt-text="Selecting managed properties":::
+3. Open the table you want. Select **Advanced**, and then select **Managed properties** on the command bar.
 
 4. There are a range of options relevant to the current table to either prevent any customizations or to prevent the creation of new views.
 
@@ -46,7 +42,7 @@ By default, most views have their **Customizable** managed property set to true 
 5. Make any necessary changes and when finished, select **Done**.  
   
 > [!NOTE]
-> The setting does not take effect until the solution is exported from the development environment and imported as a managed solution into a new environment.
+> The setting doesn't take effect until the solution is exported from the development environment and imported as a managed solution into another environment.
 
 ## Set managed properties for a view (classic)
 
