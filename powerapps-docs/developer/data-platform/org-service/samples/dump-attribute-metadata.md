@@ -2,8 +2,8 @@
 title: "Sample: Dump column definitions to a file (Microsoft Dataverse) | Microsoft Docs"
 description: "This sample showcases how to dump column definitions to a file." 
 ms.date: 04/03/2022
-author: mkannapiran
-ms.author: kamanick
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 ms.topic: sample
 search.audienceType:

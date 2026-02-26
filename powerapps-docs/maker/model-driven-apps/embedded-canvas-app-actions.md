@@ -1,8 +1,8 @@
 ---
-title: "Perform actions on the host model-driven form from within an embedded canvas app | MicrosoftDocs"
+title: "Perform actions on the host model-driven form from within an embedded canvas app"
 description: Learn how to perform predefined actions in an embedded canvas app
 ms.custom: ""
-ms.date: 06/25/2019
+ms.date: 02/19/2026
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -22,32 +22,36 @@ search.audienceType:
 ---
 # Perform predefined actions on the host model-driven form from within an embedded canvas app
 
-Embedded canvas apps provide the ability to perform predefined actions on the host model-driven form. These actions enable makers to navigate, refresh and save the host model-driven form. Using these actions, an embedded canvas app can act as a more integral part of the model-driven form and the model-driven app.  
+Embedded canvas apps provide the ability to perform predefined actions on the host model-driven form. These actions enable makers to navigate, refresh and save the host model-driven form. Using these actions, an embedded canvas app can act as a more integral part of the model-driven form and the model-driven app.
 
-The **ModelDrivenFormIntegration** object now includes the following new methods to enable makers to perform actions on the host model-driven form.  
+The **ModelDrivenFormIntegration** object includes the following new methods to enable makers to perform actions on the host model-driven form.  
+
+> [!IMPORTANT]
+> To be able to interact with the `ModelDrivenFormIntegration` control, the canvas app must be *created* by selecting **Customize** on the **Canvas app** control properties for the model-driven form using the classic form designer. More information: [Embed a canvas app using the classic experience](embedded-canvas-app-add-classic-designer.md#embed-a-canvas-app-using-the-classic-experience)
   
 ### NavigateToMainForm(entityName, mainFormName, recordId)
-Navigates the host model-driven form to a main form and displays the specified row.  
+
+Navigates the host model-driven form to a main form and displays the specified row.
+
 * **entityName** - A required string parameter that specifies the parent table of the main form.  
 * **formName** - A required string parameter that specifies the name of the main form to navigate to.  
 * **recordId** - A required string parameter, that specifies the ID of the row to display in the main form.  
- 
-Calling the NavigateToMainForm method can show the following error messages.
+
+Calling the NavigateToMainForm method can return the following error messages.
   
 | Error message | Troubleshooting guidance |
 |:--------------|:-------------------------|
 |**Table not found: *[EntityName]*** | Please check the value of the *entityName* parameter and ensure it is a valid table name and that the user has access to it. |
 |**Form not found: *[FormName]*** | Please check the value of the *mainFormName* parameter and ensure it is a valid main form name and that the user has access to it. |
 |**There was a problem loading the row.** | Please check the value of the *recordId* parameter and ensure it is a valid row ID and that the user has access to it. |
-  
-  
+
 ### NavigateToView(entityName, viewName)
 
 Navigates the host model-driven form to a view.  
 * **entityName** - A required string parameter that specifies the parent table of the view.  
 * **viewName** - A required string parameter that specifies the name of the main form to navigate to.  
- 
-Calling the NavigateToView method can show the following error messages.
+
+Calling the NavigateToView method can return the following error messages.
   
 | Error message | Troubleshooting guidance |
 |:--------------|:-------------------------|
@@ -59,32 +63,32 @@ Calling the NavigateToView method can show the following error messages.
 Opens the default quick create form for a table.  
 * **entityName** - A required string parameter that specifies the parent table of the quick create form.  
  
-Calling the OpenQuickCreateForm method can show the following error messages.
+Calling the OpenQuickCreateForm method can return the following error messages.
   
 | Error message | Troubleshooting guidance |
 |:--------------|:-------------------------|
 |**Table not found: *[EntityName]*** | Please check the value of the *entityName* parameter and ensure it is a valid table name and that the user has access to it. |
   
-  
-### RefreshForm(showPrompt)  
+### RefreshForm(showPrompt)
+
 Refreshes the data on the host model-driven form.  
 * **showPrompt** - A required boolean parameter that indicates if a confirmation prompt should be displayed to the user before saving any unsaved data on the host model-driven form. Values should be "true" or "false".
  
-Calling the RefreshForm method can show the following error messages.
+Calling the RefreshForm method can return the following error messages.
   
 | Error message | Troubleshooting guidance |
 |:--------------|:-------------------------|
 |**Please use "true" or "false" as the parameter value.** | Please check the value of the *showPrompt* parameter and ensure that it is either "true" or "false". |
   
-  
-### SaveForm()  
+### SaveForm()
+
 Saves the data on the host model-driven form.  
 
-
 > [!NOTE]
-> If you do not see the IntelliSense for the methods to perform predefined actions in embedded canvas apps that were created prior to the functionality being made available; save, close and re-open the app. 
+> If you don't observe the IntelliSense for the methods to perform predefined actions in embedded canvas apps that were created prior to the functionality being made available; save, close and re-open the app. 
 
-## See also
+## Related articles
+
 [Embed a canvas app on a model-driven form](embed-canvas-app-in-form.md) <br />
 [Add an embedded canvas app on a model-driven form](embedded-canvas-app-add-classic-designer.md) <br />
 [Edit a canvas app embedded on a model-driven form](embedded-canvas-app-edit-classic-designer.md) <br />

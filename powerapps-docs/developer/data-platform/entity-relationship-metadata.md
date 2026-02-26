@@ -1,8 +1,8 @@
 ---
 title: Table relationship definitions | Microsoft Docs
 description: Learn about the relationship definitions used in Microsoft Dataverse.
-author: mkannapiran
-ms.author: kamanick
+author: MsSQLGirl
+ms.author: jukoesma
 ms.date: 03/11/2021
 suite: powerapps
 ms.topic: article

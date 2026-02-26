@@ -509,8 +509,8 @@
               href: ./canvas-apps/controls/modern-controls/modern-controls-reference.md
             - name:  Rename controls with Copilot (preview) 
               href: ./canvas-apps/controls/copilot-rename-controls.md
-            - name: Limitations of modern controls
-              href: ./canvas-apps/controls/modern-controls/limitations-modern-controls.md
+            - name: Recent updates
+              href: ./canvas-apps/controls/modern-controls/modern-control-updates.md
             - name: Badge
               href: ./canvas-apps/controls/modern-controls/modern-controls-badge.md
             - name: Button
@@ -519,10 +519,10 @@
               href: ./canvas-apps/controls/modern-controls/modern-control-card.md
             - name: Checkbox
               href: ./canvas-apps/controls/modern-controls/modern-control-checkbox.md
-            - name: Combobox 
+            - name: Combobox
               href: ./canvas-apps/controls/modern-controls/modern-control-combobox.md
             - name: Date picker
-              href: ./canvas-apps/controls/modern-controls/modern-controls-date-picker.md
+              href: ./canvas-apps/controls/modern-controls/modern-control-date-picker.md
             - name: Header
               href: ./canvas-apps/controls/modern-controls/modern-controls-header.md
             - name: Info button
@@ -539,9 +539,9 @@
               href: ./canvas-apps/controls/modern-controls/modern-control-slider.md
             - name: Spinner
               href: ./canvas-apps/controls/modern-controls/modern-control-spinner.md
-            - name: Tabs or tab list
+            - name: Tab list
               href: ./canvas-apps/controls/modern-controls/modern-control-tabs-or-tabs-list.md
-            - name: Text 
+            - name: Text
               href: ./canvas-apps/controls/modern-controls/modern-control-text.md
             - name: Text input
               href: ./canvas-apps/controls/modern-controls/modern-control-text-input.md
@@ -1516,8 +1516,13 @@
             href: ./model-driven-apps/model-app-page-issues.md
           - name: Use live monitor to troubleshoot custom pages
             href: ./model-driven-apps/monitor-page-checker.md
-        - name: Create a generative page
-          href: ./model-driven-apps/generative-pages.md
+        - name: Work with generative pages
+          href: 
+          items: 
+          - name: Create a generative page
+            href: ./model-driven-apps/generative-pages.md
+          - name: Create generative pages with AI code generation tools (preview)
+            href: ./model-driven-apps/generative-page-external-tools.md
         - name: Create, add, or remove forms and views
           href: ./model-driven-apps/create-add-remove-forms-views-dashboards.md
       - name: Work with views
@@ -1803,10 +1808,11 @@
       items:
       - name: Add agents overview
         href: ./model-driven-apps/add-agents-to-app.md
+        items:
+        - name: Work with Power Apps MCP Server
+          href: ./model-driven-apps/power-apps-mcp-server.md
       - name: Add an app assistant agent
         href: ./model-driven-apps/add-app-assistant-agent.md
-    - name: Configure suggested actions (preview)
-      href: ./model-driven-apps/configure-suggested-actions.md
     - name: Copilot chat for apps
       href:
       items:
@@ -2582,3 +2588,5 @@
     href: ./common/faq-agent-api-component.md
   - name: FAQ about generative pages in model-driven apps
     href: ./common/faq-generative-pages-model-driven.md
+  - name: FAQ about Power Apps MCP Server invoke_data_entry tool
+    href: ./common/faq-power-apps-mcp-server-invoke-data-entry.md
