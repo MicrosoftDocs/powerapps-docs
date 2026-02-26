@@ -182,7 +182,7 @@ Named formulas in the `App.Formulas` property provide a more flexible and declar
 
 ### User defined functions
 
-With [User defined functions in Power Apps Studio](/power-platform/power-fx/reference/object-app#user-defined-functions), you can create your own custom functions.
+[User defined functions in Power Apps Studio](/power-platform/power-fx/reference/object-app#user-defined-functions) enable you to create your own custom functions.
 
 Define a formula under `App.Formulas` as follows:
 
