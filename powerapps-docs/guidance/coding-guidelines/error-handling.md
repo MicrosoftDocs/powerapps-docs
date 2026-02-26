@@ -15,7 +15,7 @@ ms.custom:
 
 # Error handling
 
-Power Fx includes a feature that enables formula-level error handling. By default, this feature is turned on for all apps, but in older apps, app **Settings** might disable it. Don't disable this feature.
+Power Fx supports formula-level error handling. This feature is turned on by default for all new apps. However, some older apps might have it turned off in app **Settings**. We recommend keeping this feature turned on.
 
 1. You can check by opening a canvas app for editing.
 1. Go to **Settings** > **Updates** > **Retired** tab.
