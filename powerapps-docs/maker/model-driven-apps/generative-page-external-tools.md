@@ -91,7 +91,7 @@ After installation, restart your AI tool if needed.
 To install only the generative page plugin for GitHub Copilot CLI or Claude Code:
 
 1. Add the Power Platform Skills marketplace plugin: `/plugin marketplace add microsoft/power-platform-skills`
-2. Install the Power Apps plugin: `/plugin install power-apps@power-platform-skills`
+2. Install the Power Apps plugin: `/plugin install model-apps@power-platform-skills`
 
 > [!NOTE]
 > For Claude Code, you can install the plugin with different scopes, such as global, local, or user. Depending on the scope, you need to be in the correct directory for Claude Code to use the plugin. Go to [Extend Claude with skills](https://code.claude.com/docs/en/skills#share-skills)
