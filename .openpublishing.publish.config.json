@@ -129,7 +129,7 @@
     },
    {
       "ConceptualTOC": "powerapps-docs/developer/code-apps/toc.yml",
-      "ReferenceTOCUrl": "/javascript/api/powerapps-sdk-node-ref-toc/toc.json"
+      "ReferenceTOCUrl": "/javascript/api/powerapps-sdk-docs-javascript/toc.json?view=powerapps-js-latest"
     }
   ],
   "need_generate_intellisense": false
