@@ -3,7 +3,7 @@ title: "How to: Quickstart with npm CLI (preview)"
 description: "Create a Power Apps code app using the new npm CLI. (preview)"
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 02/23/2026
+ms.date: 02/24/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:

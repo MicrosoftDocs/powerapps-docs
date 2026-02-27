@@ -1,7 +1,7 @@
 ---
 title: Handling errors in Power Apps
 description: Discover best practices for error handling in Power Apps, including validation, patching, and custom error messages.
-ms.date: 07/15/2025
+ms.date: 02/25/2026
 ms.topic: concept-article
 ms.subservice: guidance
 ms.service: powerapps
@@ -15,11 +15,14 @@ ms.custom:
 
 # Error handling
 
-Power Fx includes a preview feature that enables formula-level error handling. By default, this feature is turned on in Settings.
+Power Fx supports formula-level error handling. This feature is turned on by default for all new apps. However, some older apps might have it turned off in app **Settings**. We recommend keeping this feature turned on.
 
-:::image type="content" source="media/image28.png" alt-text="Screenshot of Upcoming features in Settings showing Formula-level error management set to On.":::
+1. You can check by opening a canvas app for editing.
+1. Go to **Settings** > **Updates** > **Retired** tab.
+1. Make sure **Disable formula-level management** is turned off.
 
-This setting provides access to formulas like `IfError`, `IsError`, `Error`, and `IsBlankorError`. These functions allow you to detect errors, provide alternative values, or take specific actions based on the error.
+
+When this setting is enabled, you can use formulas like `IfError`, `IsError`, `Error`, and `IsBlankorError`. These functions help you detect errors, provide alternative values, or take specific actions based on the error. When you turn on this setting, you can write null or blank values to data sources. When you turn off this feature, errors are returned as blank values.
 
 ## Validation error handling
 
@@ -55,7 +58,7 @@ UpdateContext(
 )
 ```
 
-You can detect errors with `IsError` and replace or suppress them with `IfError`.
+You can detect errors by using `IsError` and replace or suppress them by using `IfError`.
 
 ```powerappsfl
 IfError(result, Notify("There was an issue saving data" , NotificationType.Error));
@@ -79,7 +82,7 @@ If(
 
 ### Forms error handling
 
-When you use Forms to submit data with the `SubmitForm` function, use the Form control property `OnFailure` to notify users of error messages.
+When you use Forms to submit data by using the `SubmitForm` function, use the Form control property `OnFailure` to notify users of error messages.
 
 ```powerappsfl
 // OnSelect property of the form's submit button
@@ -92,11 +95,11 @@ Navigate('Success Screen');
 Notify("Error: the invoice could not be created", NotificationType.Error);
 ```
 
-### Custom error message with OnError property
+### Custom error message by using the OnError property
 
-The Power Apps `OnError` property lets you capture all unhandled errors in your app. The `OnError` property gives you the ability to execute an expression that runs every time an error isn't handled by the app (such as storing it in a variable or using a function such as `IfError` to replace it with some other value). To use the [`OnError` property](/power-platform/power-fx/reference/object-app#onerror-property), you need to add it to the app that you want to apply it to. Then, you can specify the error message that you want to display by writing a formula in the `OnError` property box.
+The Power Apps `OnError` property captures all unhandled errors in your app. By using the `OnError` property, you can run an expression every time the app encounters an unhandled error. For example, you can store the error in a variable or use a function like `IfError` to replace the error with another value. To use the [`OnError` property](/power-platform/power-fx/reference/object-app#onerror-property), add it to the app where you want to handle errors. Then, write a formula in the `OnError` property box to specify the error message you want to display.
 
-It's important to note that `App.OnError` can't replace the error in the same way that `IfError` can. At the point that `App.OnError` is executed, the error has already happened, and the result has propagated through other formulas. `App.OnError` only controls how the error is reported to the end user and provides a hook for the maker to log the error if desired.
+`App.OnError` can't replace the error like `IfError` can. When `App.OnError` runs, the error already happened and the result already went through other formulas. `App.OnError` only controls how the error is reported to the end user. It also provides a way for the maker to log the error if they want.
 
 This code on `App.OnError` can help locate the source of the error:
 
