@@ -20,7 +20,6 @@ ms.collection: bap-ai-copilot
 ms.custom:
   - CXT
 ---
-
 # Add Microsoft 365 Copilot chat for app users in model-driven apps (preview)
 
 [This article is prerelease documentation and is subject to change.]
@@ -45,7 +44,7 @@ When enabled, users can open Microsoft 365 Copilot chat in their model-driven ap
 
 - To use Microsoft 365 Copilot chat with Power Apps, Dataverse Search must be set to **Default** or **On** for the environment. More information: [Know what this means for generative AI experiences](/power-platform/admin/configure-relevance-search-organization#what-dataverse-search-means-for-generative-ai-enabled-experiences)
 
-> NOTE!
+> [!NOTE]
 >
 > Microsoft 365 Copilot chat for model‑driven apps relies on Dataverse Search indexes. Enabling this feature might increase your environment’s Dataverse capacity consumption. More information: [What actions can makers or admins take to manage Dataverse Search efficiently?](/power-apps/user/relevance-search-benefits?branch=main&branchFallbackFrom=pr-en-us-11552#what-actions-can-makers-or-admins-take-to-manage-dataverse-search-efficiently)
 >
