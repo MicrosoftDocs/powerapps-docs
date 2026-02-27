@@ -2,7 +2,7 @@
 title: "Power Apps grid control in Power Apps"
 description: "A control for use with Power Apps that lets users view, open, and edit records from a view or subgrid in model-driven apps."
 ms.custom: ""
-ms.date: 02/13/2026
+ms.date: 02/24/2026
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -135,6 +135,8 @@ To work around this, you can display a custom card by configuring the table to u
 - Column grouping isn't supported when paging on the grid is enabled.
 - If the dataset displayed in the grid contains duplicate rows, the duplicates might not display in the grid. This can lead to the reported record count showing more records than are actually in the grid, or more records appearing when exporting the data to Excel or viewing the data in legacy Advanced Find. This behavior applies to all grid controls, not just the Power Apps grid control.
 - If a user has read-only privileges to the main list and then navigates through a form to a subgrid representing an entity to which they have write privileges, the subgrid still won't allow the user to make changes as access is determined first by the main entity, then by the related entity.
+- When using the Power Apps grid control in editable mode, lookup field cell customization options aren't supported.
+- When the Power Apps grid control is configured as read-only at the table level but editable for a subset of views, events might not fire uniformly across the different configuration states.
 
 ### Related articles
 
