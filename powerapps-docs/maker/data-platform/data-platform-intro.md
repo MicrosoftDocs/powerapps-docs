@@ -51,7 +51,7 @@ Responding to customer feedback and data from user research, effective November 
 
 ## Dynamics 365 and Dataverse
 
-Dynamics 365 applications&mdash;such as Dynamics 365 Sales, Dynamics 365 Customer Service, or Dynamics 365 Talent&mdash;also use Dataverse to store and secure the data they use. This enables you to build apps by using Power Apps and Dataverse directly against your core business data, which is already used within Dynamics 365, without the need for integration.
+Dynamics 365 applications&mdash;such as Dynamics 365 Sales, Dynamics 365 Customer Service, or Dynamics 365 Human Resources&mdash;also use Dataverse to store and secure the data they use. This enables you to build apps by using Power Apps and Dataverse directly against your core business data, which is already used within Dynamics 365, without the need for integration.
 
 - **Build apps against your Dynamics 365 data** &ndash; Build apps quickly against your business data within Power Apps or by using the extensible platform that lets pro developers programmatically interact with data and metadata, apply business logic, create custom connectors, and integrate with external data.
 
