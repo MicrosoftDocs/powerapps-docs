@@ -2,7 +2,7 @@
 title: "How Dataverse SQL Differs from Transact-SQL | Microsoft Docs"
 description: "Learn the subset of the Transact-SQL language supported by the Dataverse SQL endpoint." 
 ms.custom: ""
-ms.date: 10/09/2024
+ms.date: 02/27/2026
 ms.reviewer: "pehecke"
 
 ms.topic: "article"
@@ -40,7 +40,7 @@ More information: [Data types (Transact-SQL)](/sql/t-sql/data-types/data-types-t
 - :::no-loc text="real":::
 - :::no-loc text="smalldatetime":::
 - :::no-loc text="smallint":::
-- :::no-loc text="":::smallmoney
+- :::no-loc text="smallmoney":::
 - :::no-loc text="tinyint":::
 - :::no-loc text="uniqueidentifier":::
 - [varchar*](/sql/t-sql/data-types/char-and-varchar-transact-sql#varchar---n--max--)
