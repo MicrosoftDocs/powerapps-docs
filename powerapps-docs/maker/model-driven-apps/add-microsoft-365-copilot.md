@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.subservice: mda-maker
 ms.author: yogupt
 ms.reviewer: matp
-ms.date: 02/06/2026
+ms.date: 02/25/2026
 ms.update-cycle: 180-days
 ms.topic: how-to
 applies_to: 
@@ -17,14 +17,17 @@ contributors:
   - makolomi
   - marianaraujo
 ms.collection: bap-ai-copilot
+ms.custom:
+  - CXT
 ---
-
 # Add Microsoft 365 Copilot chat for app users in model-driven apps (preview)
 
 [This article is prerelease documentation and is subject to change.]
 
 Microsoft 365 Copilot chat makes it easier for users to work with model-driven apps by offering AI-powered insights through natural language conversations. With this feature, users can quickly find information, navigate apps more easily, and get help to boost their productivity.
 App makers can enable Microsoft 365 Copilot chat to give users access to conversational AI that understands app data and provides helpful, contextual answers. Users can ask questions about their Microsoft Dataverse table data in plain language and receive immediate, relevant responses.
+
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=843f065d-4ee4-4006-b09b-e97da24b7393]
 
 This article shows you how to enable and configure Microsoft 365 Copilot chat for your model-driven apps, both at the environment level and for individual apps.
 
@@ -41,7 +44,7 @@ When enabled, users can open Microsoft 365 Copilot chat in their model-driven ap
 
 - To use Microsoft 365 Copilot chat with Power Apps, Dataverse Search must be set to **Default** or **On** for the environment. More information: [Know what this means for generative AI experiences](/power-platform/admin/configure-relevance-search-organization#what-dataverse-search-means-for-generative-ai-enabled-experiences)
 
-> NOTE!
+> [!NOTE]
 >
 > Microsoft 365 Copilot chat for model‑driven apps relies on Dataverse Search indexes. Enabling this feature might increase your environment’s Dataverse capacity consumption. More information: [What actions can makers or admins take to manage Dataverse Search efficiently?](/power-apps/user/relevance-search-benefits?branch=main&branchFallbackFrom=pr-en-us-11552#what-actions-can-makers-or-admins-take-to-manage-dataverse-search-efficiently)
 >

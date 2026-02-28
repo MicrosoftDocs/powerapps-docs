@@ -10,7 +10,7 @@ metadata:
   ms.topic: hub-page # Required
   author: tapanm-msft #Required; your GitHub user alias, with correct capitalization.
   ms.author: tapanm #Required; microsoft alias of author; optional team alias.
-  ms.date: 09/19/2025 #Required; mm/dd/yyyy format.
+  ms.date: 02/26/2026
   ms.custom: bap-template
   hide_bc: true
 
@@ -100,10 +100,8 @@ additionalContent:
               url: teams/create-apps-overview.md
         - title: Best practices guidance
           links:
-            - text: Understand Power Apps patterns
-              url: guidance/patterns/overview.md
-            - text: Plan a Power Apps project
-              url: guidance/planning/introduction.md
+            - text: Power Apps coding guidelines
+              url: guidance/coding-guidelines/overview.md
             - text: Collaborate and co-develop apps
               url: guidance/co-develop/overview.md
     - title: Administer and extend
