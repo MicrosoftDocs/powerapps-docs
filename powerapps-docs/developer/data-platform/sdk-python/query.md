@@ -74,4 +74,4 @@ The web API call returns a standard OData JSON response, where the records are c
 
 - [Getting started (preview)](get-started.md)
 - [Use the Microsoft Dataverse Web API](../webapi/overview.md)
-- [Use SQL to query data](../dataverse-sql-query)
+- [Use SQL to query data](../dataverse-sql-query.md)
