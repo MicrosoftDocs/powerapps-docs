@@ -98,6 +98,10 @@ You can use the data source designer in the Excel add-on to adjust the columns a
 
 If you encounter an issue that isn't described here, contact us via the [support pages](https://powerapps.microsoft.com/support/).
 
+#Add-in support for GCC
+The add-in is currently not supported in the Government Community Cloud (GCC), GCC High or US Department of Defense (US DoD) regions.
+For more information, refer to [Dynamics 365 Customer Service and Dynamics 365 US Government availability](/dynamics365/customer-service/implement/government-availability).
+
 ### Office Store add-in download disabling
 
 If Office Store add-in downloading has been disabled for your organization, you might receive the following error message when you open the Excel worksheet after selecting the Edit data in Excel command. 
