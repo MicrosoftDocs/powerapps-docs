@@ -23,7 +23,7 @@ contributors:
 Steps to populate the Application Insights instrumentation key for the environment:
 	1. Retrieve the Instrumentation Key (GUID) from the Application Insights resource.
 	2. Run the following command using the PAC CLI:
-pac env update-settings --name "telemetryinstrumentationkey" --value "<Application Insights Instrumentation Key GUID>"
+pac env update-settings --name "telemetryinstrumentationkey" --value "[Application Insights Instrumentation Key GUID]"
 
 > More information: [Analyze model-driven apps and Microsoft Dataverse telemetry with Application Insights](/power-platform/admin/analyze-telemetry)<p/>
 > There's presently no support of `ILogger` within a plug-in profiling/debug session of the Plug-in Registration tool or the Power Platform Tools extension for Visual Studio.
