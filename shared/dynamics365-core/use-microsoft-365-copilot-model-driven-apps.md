@@ -29,12 +29,12 @@ Microsoft 365 Copilot chat in apps answers questions about the Dataverse table d
 
 ## Share your feedback
 
-Help us improve Copilot responses by using the feedback controls on each response. You can provide feedback for every response:
+Help us improve Copilot responses by using the feedback controls on each response. Provide feedback for every response:
 
 - If a response is high quality and helpful, select the thumbs up button.
 - If a response is incorrect, incomplete, or not helpful, select the thumbs down button.
 
-When you provide feedback, share as much information as possible (for example, what you expected to see, what was missing or incorrect, and any relevant context). The more detail you share, the better we can understand your feedback and continuously improve responses.
+When you provide feedback, share as much information as possible. For example, include what you expected to see, what was missing or incorrect, and any relevant context. The more detail you share, the better we can understand your feedback and continuously improve responses.
 
 :::image type="content" source="/power-apps/user/media/microsoft-365-copilot-feedback.png" alt-text="Screenshot of Microsoft 365 Copilot chat in a model-driven app, highlighting the thumbs up and thumbs down feedback buttons for a response." lightbox="/power-apps/user/media/microsoft-365-copilot-feedback.png":::
 
