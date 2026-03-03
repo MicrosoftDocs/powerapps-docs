@@ -50,6 +50,16 @@ The new workspace uses a single, unified chat that keeps context as you switch b
 
 :::image type="content" source="media/create-app-data-plan/plan-data-app-menu-options.png" alt-text="view plan, data, and app ":::
 
+A list of next best actions appears above the chat input to suggest relevant next steps.
+
+:::image type="content" source="media/create-app-data-plan/next-action-suggestions.png" alt-text="Suggested next actions":::
+
+If you submit a request and then want to cancel it, select the Stop button.
+
+:::image type="content" source="media/create-app-data-plan/cancel-chat.png" alt-text="Select the stop button to cancel the chat":::
+
+## Focus area
+
 Each focus area displays its specific tools above the work surface. For instance, when you select the **App** focus area, you see these options:
 
 :::image type="content" source="media/create-app-data-plan/app-menu-options.png" alt-text="Menu option in the App area":::
@@ -60,9 +70,10 @@ Legend:
 1. **Preview**: View a live preview of the app.
 1. **Code**: Access and review the app’s code.
 1. **Split**: See both the code and the app preview side by side.
-1. **Play**: Play and test the app.
 1. **Toggle inline edits**: Select any area in the app and edit its text directly.
 1. **Refresh preview**: Reload the app preview to see the latest changes.
+1. **Select preview screen size**: Choose **Desktop**, **Tablet**, or **Mobile** to see how your app renders across screen sizes and orientations.
+1. **Play**: Run the app to test behavior and interactions. Use the drop-down to show a QR code, then scan it to open the app on your mobile device in a browser.
 
 
 ## Edit the generated app
@@ -152,7 +163,7 @@ Select the **Create** button to open Power Automate and create a new workflow.
 
 ## Edit the generated data model
 
-Select **Data** and review and refine your data. The data view displays all proposed tables, their relationships, and sample data. It helps you understand the schema and how the generated app uses the data. The tables are currently in-memory only and aren't published to any data source. You can modify them until they meet your business needs. For more information, see [Create and edit tables using Power Apps](../maker/data-platform/create-edit-entities-portal.md).
+Select **Data** and review and refine your data. The data view displays all proposed tables, their relationships, and sample data. It helps you understand the schema and how the generated app uses the data. The tables are currently in memory only and aren't published to any data source. You can modify them until they meet your business needs. For more information, see [Create and edit tables using Power Apps](../maker/data-platform/create-edit-entities-portal.md).
 
 
 
@@ -260,7 +271,7 @@ The new Power Apps experience has the following limitations:
 
 - You can't access or edit apps created in the new authoring experience outside of the new authoring experience.
 - If you export an app and edit it outside the new authoring experience (for example, in VS Code), redeploying via PAC CLI creates a new app, and it disconnects from the original plan.
-- Currently, you can only have one app per plan; multiple apps within a single plan are temporarily not enabled.
+- Currently, you can only have one app per plan; multiple apps within a single plan aren't supported.
 - You can't open pre-existing plans in the new experience.
 - Canvas and model-driven apps aren't supported; you can't recommend, open, or edit these app types in the new authoring experience.
 - Existing tables aren't automatically recommended during data model proposal; you can manually add existing tables to your plan.
