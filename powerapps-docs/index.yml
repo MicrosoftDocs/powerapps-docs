@@ -58,7 +58,7 @@ additionalContent:
               url: maker/canvas-apps/index.yml
             - text: Create a model-driven app
               url: maker/model-driven-apps/index.yml
-            - text: Create a code app (preview)
+            - text: Create a code app
               url: developer/code-apps/index.yml
         - title: AI copilot capabilities
           links:
