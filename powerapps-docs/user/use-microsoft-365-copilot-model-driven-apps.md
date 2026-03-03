@@ -1,13 +1,13 @@
 ---
 title: Use Microsoft 365 Copilot chat in model-driven apps (preview)
 description: Learn how to use Microsoft 365 Copilot chat to gain insights about the data in your model-driven apps.
-author: srihas
+author: devkeydet
 ms.component: pa-user
 ms.topic: overview
-ms.date: 02/09/2026
+ms.date: 03/03/2026
 ms.update-cycle: 180-days
 ms.subservice: end-user
-ms.author: srihas
+ms.author: marcsc
 ms.custom: ""
 ms.reviewer: smurkute
 ms.assetid: 
