@@ -43,7 +43,7 @@ People with the system administrator security role can use the settings to overr
 
 After you enable custom Help at the global level, system customizers can override the global Help URL for a table in the table definition.
 
-1. Sign in to [Power Apps](make.powerapps.com).
+1. Sign in to [Power Apps](https://make.powerapps.com).
 1. Go to **Tables**, and then open the table you want.
 1. Select **Properties**, and expand **Advanced options**.
 1. In the **For this table** area, in the **Help URL** box enter the URL of your custom Help page.

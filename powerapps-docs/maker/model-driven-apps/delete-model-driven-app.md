@@ -28,7 +28,7 @@ The process for removing an app is straightforward. However, dependencies can be
 
 > [!IMPORTANT]
 >
-> - If a model-driven app or site map is installed as part of a managed solution, see [Delete a model-driven app that was installed as part of a managed solution](#delete-a-model-driven-app-that-was-installed-as-part-of-a-managed-solution) for information about how to delete it.
+> - If a model-driven app or site map is installed as part of a managed solution, see [Delete a model-driven app that was installed as part of a managed solution](#delete-a-model-driven-app-that-you-installed-as-part-of-a-managed-solution) for information about how to delete it.
 > - Model-driven apps from Microsoft, such as Dynamics 365 Sales, Dynamics 365 Customer Service, and Dynamics 365 Field Service can’t be deleted. You can hide these apps from users by removing the security roles that are assigned to the app. Notice that these apps are visible to users with environment maker, system administrator, and system customizer security roles or any user with create privileges on the Model-driven App table.
 
 ## Delete or remove an unmanaged app in your environment
