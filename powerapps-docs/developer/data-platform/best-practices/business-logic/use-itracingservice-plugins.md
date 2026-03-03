@@ -1,19 +1,20 @@
 ---
-title: "Use ITracingService in Plug-ins | MicrosoftDocs"
+title: "Use ITracingService in Plug-ins"
 description: "Debugging and/or troubleshooting plug-in issues or behaviors are complicated without rich and insightful logging or tracing."
 suite: powerapps
-author: jowells
-ms.author: jowells
-ms.reviewer: jdaly
+author: sakaralems
+ms.author: sakarale
+ms.reviewer: pehecke
 ms.topic: article
-ms.date: 12/12/2018
+ms.date: 03/02/2026
 ms.subservice: dataverse-developer
-
 search.audienceType: 
   - developer
+contributors:
+ - JimDaly
+ - phecke
 ---
-# Use ITracingService in Plug-ins
-
+# Use ITracingService in plug-ins
 
 
 **Category**: Maintainability, Supportability
@@ -24,16 +25,16 @@ search.audienceType:
 
 ## Symptoms
 
-Debugging and/or troubleshooting plug-in issues or behaviors are complicated without rich and insightful logging or tracing.
+Debugging and troubleshooting plug-in problems or behaviors is difficult without rich and insightful logging or tracing.
 
 <a name='guidance'></a>
 
 ## Guidance
 
-The <xref:Microsoft.Xrm.Sdk.ITracingService> interface assists developers by recording run-time custom information as an aid in diagnosing the cause of code failures or unexpected behavior in plug-ins. Before writing to the tracing service, you must first extract the tracing service object from the passed execution context. Afterwards, simply add [Trace](/dotnet/api/microsoft.xrm.sdk.itracingservice.trace) calls to your custom code where appropriate passing any relevant diagnostic information in that method call.
+The <xref:Microsoft.Xrm.Sdk.ITracingService> interface helps developers by recording run-time custom information. This information aids in diagnosing the cause of code failures or unexpected behavior in plug-ins. Before writing to the tracing service, first extract the tracing service object from the passed execution context. Then, add [Trace](/dotnet/api/microsoft.xrm.sdk.itracingservice.trace) calls to your custom code where appropriate. Pass any relevant diagnostic information in that method call.
 
 > [!NOTE]
-> Trace logging using `ITracingService` interface works only when the plug-in is registered in Sandbox mode and you must enable trace logging to get run-time data. For more information see: [Tracing and logging](../../logging-tracing.md)
+> Trace logging by using the `ITracingService` interface works only when the plug-in is registered in sandbox mode. You must enable trace logging to get run-time data. For more information, see [Tracing and logging](../../logging-tracing.md).
 
 ```csharp
 //Extract the tracing service for use in debugging sandboxed plug-ins.
@@ -68,7 +69,7 @@ if (context.InputParameters.Contains("Target") &&
 
 ## Additional information
 
-Tracing is especially useful to troubleshoot registered custom code as it is the only supported troubleshooting method for that scenario. Tracing is supported for `sandboxed` (partial trust) and full trust registered custom code and during synchronous or asynchronous execution. Tracing isn't supported for custom code that executes in Microsoft Dynamics 365 for Outlook or other mobile client.
+Tracing is especially useful for troubleshooting registered custom code, as it's the only supported troubleshooting method for that scenario. Tracing supports `sandboxed` (partial trust) registered custom code during synchronous or asynchronous execution.
 
 <a name='seealso'></a>
 
