@@ -50,11 +50,11 @@ The new workspace uses a single, unified chat that keeps context as you switch b
 
 :::image type="content" source="media/create-app-data-plan/plan-data-app-menu-options.png" alt-text="view plan, data, and app ":::
 
-A list of next best actions appears above the chat input to suggest relevant next steps.
+A list of next actions appears above the chat area to suggest relevant next steps.
 
 :::image type="content" source="media/create-app-data-plan/next-action-suggestions.png" alt-text="Suggested next actions":::
 
-If you submit a request and then want to cancel it, select the Stop button.
+If you submit a request and then decide to cancel it, select the stop button.
 
 :::image type="content" source="media/create-app-data-plan/cancel-chat.png" alt-text="Select the stop button to cancel the chat":::
 
@@ -100,7 +100,7 @@ Use inline actions to edit the style of your app.
 
  1. Select the option to toggle inline edits.
  1. Select the item you want to edit. The element is outlined and labeled with the corresponding code object so you know exactly what you're editing.
-    Depending on the element type, a properties pane or inline controls appear for typography, styling, or layout. Adjust values like font, color, or spacing directly in the pane. If multiple elements share the same style, a single change can apply across the group. For example, changing a button color inside a card updates all buttons in that card group.
+    Depending on the element type, a properties pane or inline controls appear for typography, styling, or lay out. Adjust values like font, color, or spacing directly in the pane. If multiple elements share the same style, a single change can apply across the group. For example, changing a button color inside a card updates all buttons in that card group.
  
     Inline edits update the associated code directly without an AI agent involved.
 
@@ -182,7 +182,7 @@ Legend
 
 Use the chat to ask questions or request changes to the proposed fields, tables, and relationships.
 
-You can also ask for additional sample data to enrich your dataset for the app.
+You can also ask for more sample data to enrich your dataset for the app.
 The agent analyzes your requests and makes the necessary updates.
 
 Some actions might not be supported through agent chat. For more information, see the [limitations](create-app-data-plan.md#known-limitations) section in the article.
@@ -255,7 +255,7 @@ The following [ALM](/power-platform/alm/overview-alm) features are supported:
 
 - **Publishing app**: When you're ready to release your app for production, select **Publish** in the app’s command bar. If your app uses any draft tables, you're prompted to publish those tables as well.
 
-- **Share the app**: To share your app with others, select **Share** and add the accounts of users you want to grant access to run the app. You can also share apps with groups in Vibe if the group is Entra ID security-enabled. Distribution lists and non-security Microsoft 365 Groups aren't supported. Group sharing only works in production environments. Developer environments don't allow group-level permissions. Once these requirements are met, eligible groups appear in the share dialog.
+- **Share the app**: To share your app with others, select **Share** and add the accounts of users you want to grant access to run the app. You can also share apps with groups in Vibe if the group is Microsoft Entra ID security-enabled. Distribution lists and nonsecurity Microsoft 365 Groups aren't supported. Group sharing only works in production environments. Developer environments don't allow group-level permissions. Once these requirements are met, eligible groups appear in the share dialog.
 
 ## Choose a data source and publish
 
@@ -272,7 +272,7 @@ The new Power Apps experience has the following limitations:
 - You can't access or edit apps created in the new authoring experience outside of the new authoring experience.
 - If you export an app and edit it outside the new authoring experience (for example, in VS Code), redeploying via PAC CLI creates a new app, and it disconnects from the original plan.
 - Currently, you can only have one app per plan; multiple apps within a single plan aren't supported.
-- You can't open pre-existing plans in the new experience.
+- You can't open preexisting plans in the new experience.
 - Canvas and model-driven apps aren't supported; you can't recommend, open, or edit these app types in the new authoring experience.
 - Existing tables aren't automatically recommended during data model proposal; you can manually add existing tables to your plan.
 - Editing existing Dataverse tables via chat isn't currently supported; you can make changes to these tables through the data editor manually.
