@@ -14,22 +14,22 @@ contributors:
 
 # Multi-table lookups
 
-Multi-table lookup type columns, sometimes called *polymorphic lookups*, allow a user to use a specific table that has
+By using multi-table lookup type columns, sometimes called *polymorphic lookups*, you can use a specific table that has
 multiple one-to-many (1:N) relationships to other tables in the environment. A single lookup
 type column can refer to multiple other tables. A lookup value submitted to the
-multi-table type column is matched to a record in any of the related
-tables. Multi-table lookups can be created with both local tables and virtual tables as referenced tables.
+multi-table type column matches a record in any of the related
+tables. You can create multi-table lookups with both local tables and virtual tables as referenced tables.
 
-Multi-table types are currently built into Microsoft Dataverse as static types like
-Customer, which connects to [Account](../reference/entities/account.md) and [Contact](../reference/entities/contact.md) tables. Multi-table lookups gives users the power to define any other multi-table lookups they might need.
+Microsoft Dataverse currently includes multi-table types as static types like
+Customer, which connects to [Account](../reference/entities/account.md) and [Contact](../reference/entities/contact.md) tables. By using multi-table lookups, you can define any other multi-table lookups you need.
 
 > [!NOTE]
-> At this time users can create and modify custom multi-table lookups via the SDK or Web APIs.
+> You can create and modify custom multi-table lookups via the SDK for .NET or Dataverse Web API.
 > Interactive user interface support will be coming in a future release.
 
-## Retrieving data about related tables
+## Retrieve data about related tables
 
-There are two ways to retrieve information related tables with a lookup column, including multi-table lookups: expand the single-valued navigation property, or retrieve the lookup property.
+To retrieve information about related tables with a lookup column, including multi-table lookups, use one of the following methods: expand the single-valued navigation property, or retrieve the lookup property.
 
 ### Expand the single-valued navigation property
 
@@ -43,17 +43,17 @@ When you query the table, use the `$expand` query option to include the related 
 
 ### Retrieve the lookup property
 
-Each lookup column has a corresponding [lookup property](web-api-navigation-properties.md#lookup-properties) that you can retrieve with the `$select` query option. These properties follow the naming convention `_<name>_value` where `<name>` is the logical name of the lookup column. The value of the lookup property is the unique identifier for the related record, if any.
+Each lookup column has a corresponding [lookup property](web-api-navigation-properties.md#lookup-properties) that you can retrieve by using the `$select` query option. These properties follow the naming convention: `_<name>_value`. `<name>` is the logical name of the lookup column. The value of the lookup property is the unique identifier for the related record, if any.
 
-For a multi-table lookup, the unique ID isn't valuable unless you know which table it applies to. When you retrieve data from any lookup column, you can apply certain OData annotation preferences. These are especially useful with a multi-table lookup because they provide more data from the related record and information about which table the data comes from.
+For a multi-table lookup, the unique ID isn't valuable unless you know which table it applies to. When you retrieve data from any lookup column, you can apply the following OData annotation preferences. These preference options are especially useful with a multi-table lookup because they provide more data from the related record and information about which table the data comes from.
 
-|Annotation  |Description  |
+| Annotation | Description |
 |---------|---------|
-|`OData.Community.Display.V1.FormattedValue`|Returns the primary name column value for the related record.|
-|`Microsoft.Dynamics.CRM.associatednavigationproperty`|Returns the name of the single-valued navigation property that supports this relationship.|
-|`Microsoft.Dynamics.CRM.lookuplogicalname`|Returns the logical name of the related table|
+| `OData.Community.Display.V1.FormattedValue` | Returns the primary name column value for the related record. |
+| `Microsoft.Dynamics.CRM.associatednavigationproperty` | Returns the name of the single-valued navigation property that supports this relationship. |
+| `Microsoft.Dynamics.CRM.lookuplogicalname` | Returns the logical name of the related table. |
 
-[Learn more about retrieving lookup property data](query/select-columns.md#lookup-property-data)
+[Learn more about retrieving lookup property data](query/select-columns.md#lookup-property-data).
 
 
 
@@ -61,14 +61,21 @@ For a multi-table lookup, the unique ID isn't valuable unless you know which tab
 
 Let's say you're hosting media for users in a library. You have many different
 media objects. Many of them have the same name but are in different formats like
-Books, Audio, and Video. Creating a multi-table lookup with the schema name `sample_MediaPolymorphicLookup`
-that has 1:N relationships to `sample_Book`, `sample_Audio`, and `sample_Video` 
-support a `sample_Media` table that provides quick identifications of
-records stored in specific tables.
+books, audio, and video.
+
+In this example, there are three tables to support each specific kind of media:
+
+- `sample_Book`
+- `sample_Audio`
+- `sample_Video`
+
+The `sample_Media` table has a multi-table lookup with the schema name `sample_MediaPolymorphicLookup`. You can set the lookup column to refer to records in any of the specific media tables.
+
+
 
 ### `sample_Book` table
 
-`sample_Book` is the first of the three related tables. This simple query retrieves the two records found here.
+The `sample_Book` table is the first of the three related tables. This simple query retrieves the two records found in this table.
 
 ```http
 GET [Organization URI]/api/data/v9.2/sample_books?$select=sample_name,sample_callnumber
@@ -77,7 +84,7 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0
 Accept: application/json
 ```
-This is the JSON body of the response:
+This example shows the JSON body of the response:
 
 ```json
 {
@@ -101,7 +108,7 @@ This is the JSON body of the response:
 
 ### `sample_Audio` table
 
-`sample_Audio` is the second of the three related tables. This simple query retrieves the two records found here.
+The `sample_Audio` table is the second of the three related tables. This simple query retrieves the two records found in this table.
 
 ```http
 GET [Organization URI]/api/data/v9.2/sample_audios?$select=sample_name,sample_audioformat
@@ -111,7 +118,7 @@ OData-Version: 4.0
 Accept: application/json
 ```
 
-This is the JSON body of the response:
+This example shows the JSON body of the response:
 
 ```json
 {
@@ -135,7 +142,7 @@ This is the JSON body of the response:
 
 ### `sample_Video` table
 
-`sample_Video` is the third of the three related tables. This simple query retrieves the two records found here.
+The `sample_Video` table is the third of the three related tables. This simple query retrieves the two records found in this table.
 
 ```http
 GET [Organization URI]/api/data/v9.2/sample_videos?$select=sample_name,sample_videoformat
@@ -145,7 +152,7 @@ OData-Version: 4.0
 Accept: application/json
 ```
 
-This is the JSON body of the response:
+This example shows the JSON body of the response:
 
 ```json
 {
@@ -184,10 +191,10 @@ For the purpose of this demonstration, this table contains only four records tha
 
 Using the `sample_Media` table, this example query:
 
-- Selects the `_sample_mediapolymorphiclookup_value` lookup property in the `$select` query option for the `sample_mediapolymorphiclookup` lookup column. With the `OData.Community.Display.V1.FormattedValue`, `Microsoft.Dynamics.CRM.associatednavigationproperty`, and `Microsoft.Dynamics.CRM.lookuplogicalname` `odata.include-annotations` preferences applied, these values are returned with each record.
+- Selects the `_sample_mediapolymorphiclookup_value` lookup property in the `$select` query option for the `sample_mediapolymorphiclookup` lookup column. By using the `OData.Community.Display.V1.FormattedValue`, `Microsoft.Dynamics.CRM.associatednavigationproperty`, and `Microsoft.Dynamics.CRM.lookuplogicalname` `odata.include-annotations` preferences, you get these values with each record.
 - Expands three single-valued navigation properties, one for each related table. For each expanded navigation property, the primary name column (`sample_name`) is selected as well as the respective custom column value: `sample_callnumber`, `sample_audioformat`, `sample_videoformat`.
 
-These operations demonstrate how the table records are related via the `sample_MediaPolymorphicLookup` lookup column.
+These operations demonstrate how the table records are related through the `sample_MediaPolymorphicLookup` lookup column.
 
 **Request**
 
@@ -203,7 +210,7 @@ Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue,Mic
 
 **Response**
 
-With these query options and preference headers set, the body of the response contains the following JSON:
+When you set these query options and preference headers, the body of the response contains the following JSON:
 
 ```json
 {
@@ -275,9 +282,9 @@ With these query options and preference headers set, the body of the response co
 }
 ```
 
-### Setting a multi-table lookup column
+## Setting a multi-table lookup column
 
-Updating a record to set a polymorphic lookup column is exactly as described in [Associate with a single-valued navigation property](associate-disassociate-entities-using-web-api.md#associate-with-a-single-valued-navigation-property). You need to pay special attention to use the correct single-valued navigation property name. These names are case sensitive.
+Updating a record to set a polymorphic lookup column is exactly as described in [Associate with a single-valued navigation property](associate-disassociate-entities-using-web-api.md#associate-with-a-single-valued-navigation-property). Use the correct single-valued navigation property name. These names are case sensitive.
 
 **Request**
 
@@ -304,12 +311,12 @@ OData-EntityId: [Organization Uri]/api/data/v9.2/sample_medias(00000000-0000-000
 ```
 
 
-### Create a multi-table lookup column
+## Create a multi-table lookup column
 
 > [!NOTE]
 > While this example shows how to use the Dataverse Web API, you can also use the SDK for .NET with the <xref:Microsoft.Crm.Sdk.Messages.CreatePolymorphicLookupAttributeRequest> and <xref:Microsoft.Crm.Sdk.Messages.CreatePolymorphicLookupAttributeResponse> classes.
 
-Use the [CreatePolymorphicLookupAttribute action](xref:Microsoft.Dynamics.CRM.CreatePolymorphicLookupAttribute) to create a multi-table lookup. This example creates the column as part of a solution with the unique name `polymorphiclookupexamplesolution` using the [MSCRM.SolutionUniqueName optional parameter](../optional-parameters.md#associate-a-solution-component-with-a-solution).
+Use the [CreatePolymorphicLookupAttribute action](xref:Microsoft.Dynamics.CRM.CreatePolymorphicLookupAttribute) to create a multi-table lookup. This example creates the column as part of a solution with the unique name `polymorphiclookupexamplesolution` by using the [MSCRM.SolutionUniqueName optional parameter](../optional-parameters.md#associate-a-solution-component-with-a-solution).
 
 **Request**
 
@@ -405,17 +412,17 @@ The following JSON is an example of the [CreatePolymorphicLookupAttributeRespons
 ```
 
 
-### Add relationship to existing polymorphic lookup
+## Add relationship to existing multi-table lookup column
 
-Adding a relationship to an existing multi-table lookup column with the Web API is similar to creating any new one-to-many relationship. [Learn how to create a one-to-many relationship using the Web API](create-update-entity-relationships-using-web-api.md#create-a-one-to-many-relationship). The difference is that the [OneToManyRelationshipMetadata](/power-apps/developer/data-platform/webapi/reference/onetomanyrelationshipmetadata)`.Lookup` property must have a `SchemaName` value that matches the polymorphic lookup column.
-
-
-### Remove a relationship from an existing polymorphic lookup
-
-Removing a relationship to an existing multi-table lookup column with the Web API is the same as deleting any one-to-many relationship. Send a `DELETE` request to the `RelationshipDefinitions` using the value of the [OneToManyRelationshipMetadata](/power-apps/developer/data-platform/webapi/reference/onetomanyrelationshipmetadata)`.MetadataId` property as the key.
+Adding a relationship to an existing multi-table lookup column by using the Web API is similar to creating any new one-to-many relationship. [Learn how to create a one-to-many relationship using the Web API](create-update-entity-relationships-using-web-api.md#create-a-one-to-many-relationship). The difference is that the [OneToManyRelationshipMetadata](/power-apps/developer/data-platform/webapi/reference/onetomanyrelationshipmetadata)`.Lookup` property must have a `SchemaName` value that matches the polymorphic lookup column.
 
 
-### See Also
+## Remove a relationship from an existing multi-table lookup column
+
+Removing a relationship to an existing multi-table lookup column by using the Web API is the same as deleting any one-to-many relationship. Send a `DELETE` request to the `RelationshipDefinitions` endpoint by using the value of the [OneToManyRelationshipMetadata](/power-apps/developer/data-platform/webapi/reference/onetomanyrelationshipmetadata)`.MetadataId` property as the key.
+
+
+### See also
 
 [Use the Web API with table definitions](use-web-api-metadata.md)  
 [Create and update table relationships](create-update-entity-relationships-using-web-api.md)  
