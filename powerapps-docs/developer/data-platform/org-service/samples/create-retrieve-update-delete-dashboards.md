@@ -1,7 +1,7 @@
 ---
 title: "Create, retrieve, update, and delete dashboards (Microsoft Dataverse) | Microsoft Docs"
 description: "This sample showcases how to create, retrieve, update, and delete an user-owned dashboards." 
-ms.date: 04/03/2022
+ms.date: 03/04/2026
 author: mspilde
 ms.author: mspilde
 ms.reviewer: jdaly
@@ -15,7 +15,7 @@ contributors:
 
 # Sample: Create, retrieve, update, and delete a dashboard
 
-This sample shows how to create, retrieve, update, and delete an user-owned dashboard using the following methods:
+This sample shows how to create, retrieve, update, and delete a user-owned dashboard by using the following methods:
 
 - [IOrganizationService.Create](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.create)
 - [IOrganizationService.Retrieve](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.retrieve)
@@ -31,11 +31,11 @@ This sample shows how to create, retrieve, update, and delete an user-owned dash
 
 ## What this sample does
 
-The `IOrganizationService` message is intended to be used in a scenario where it contains data that provides programmatic access to the metadata and data for an organization.
+Use the `IOrganizationService` interface in a scenario where it contains data that provides programmatic access to the metadata and data for an organization.
 
 ## How this sample works
 
-In order to simulate the scenario described in [What this sample does](#what-this-sample-does), the sample will do the following:
+To simulate the scenario described in [What this sample does](#what-this-sample-does), the sample performs the following steps:
 
 ### Setup
 
@@ -43,13 +43,13 @@ Checks for the current version of the org.
 
 ### Demonstrate
 
-1. The `mySavedQuery` method grabs the default public view for opportunities.
-2. The `visualizationQuery` method retrieves the visualizations out of the system. This sample assumes that you have the **Top opportunities**.
-3. The `dashboard` method sets the dashboard and specifies the FormXml.
-4. The `chartPicker` method enables the chart picker on the chart.
+1. The `mySavedQuery` method gets the default public view for opportunities.
+1. The `visualizationQuery` method gets the visualizations from the system. This sample assumes that you have the **Top opportunities** visualization.
+1. The `dashboard` method sets the dashboard and specifies the FormXml.
+1. The `chartPicker` method enables the chart picker on the chart.
 
 ### Clean up
 
-Display an option to delete the records created in the [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
+Display an option to delete the records you created in the [Setup](#setup) section. The deletion is optional in case you want to examine the tables and data that the sample created. You can manually delete the records to achieve the same result.
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]
