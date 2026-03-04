@@ -20,25 +20,25 @@ Learn how to retrieve, update, and delete a table definition. This article uses 
 
 ## Retrieve and update a table  
 
-The following static sample `DemonstrateRetrieveUpdateTable` method retrieves a table definition by using the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityRequest> message. It then updates the table to disable mail merge by setting the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsMailMergeEnabled> property to `false`, and sets <xref:Microsoft.Xrm.Sdk.Messages.UpdateEntityRequest.HasNotes> to `true` in the <xref:Microsoft.Xrm.Sdk.Messages.UpdateEntityRequest> to specify that the table should include a relationship to the `Annotation` table for the purpose of displaying notes.  
+The following static `DemonstrateRetrieveUpdateTable` sample method retrieves a table definition by using the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityRequest> class. It then updates the table to disable mail merge by setting the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsMailMergeEnabled> property to `false`, and sets <xref:Microsoft.Xrm.Sdk.Messages.UpdateEntityRequest.HasNotes> to `true` in the <xref:Microsoft.Xrm.Sdk.Messages.UpdateEntityRequest> to specify that the table should include a relationship to the `Annotation` table for the purpose of displaying notes.  
   
 ```csharp
 static void DemonstrateRetrieveUpdateTable(IOrganizationService service, string LogicalName)
 {
-    RetrieveEntityRequest retrieveBankAccountEntityRequest = new RetrieveEntityRequest
+    RetrieveEntityRequest request = new RetrieveEntityRequest
     {
         EntityFilters = EntityFilters.Entity,
         LogicalName = LogicalName
     };
-    RetrieveEntityResponse retrieveBankAccountEntityResponse = (RetrieveEntityResponse)service.Execute(retrieveBankAccountEntityRequest);
-    EntityMetadata BankAccountEntity = retrieveBankAccountEntityResponse.EntityMetadata;
+    RetrieveEntityResponse response = (RetrieveEntityResponse)service.Execute(request);
+    EntityMetadata table = response.EntityMetadata;
 
     // Disable Mail merge
-    BankAccountEntity.IsMailMergeEnabled = new BooleanManagedProperty(false);
+    table.IsMailMergeEnabled = new BooleanManagedProperty(false);
     // Enable Notes
     UpdateEntityRequest updateBankAccountRequest = new UpdateEntityRequest
     {
-        Entity = BankAccountEntity,
+        Entity = table,
         HasNotes = true
     };
 
@@ -53,7 +53,7 @@ static void DemonstrateRetrieveUpdateTable(IOrganizationService service, string 
 
 ## Delete a custom table
 
-The following static `DeleteTable` sample method uses the <xref:Microsoft.Xrm.Sdk.Messages.DeleteEntityRequest> message to delete the table definition with the logical name specified by the `_customEntityName` variable.  
+The following static `DeleteTable` sample method uses the <xref:Microsoft.Xrm.Sdk.Messages.DeleteEntityRequest> class to delete the table definition with the logical name specified by the `_customEntityName` variable.  
   
 ```csharp
 static void DeleteTable(IOrganizationService service, string LogicalName)
