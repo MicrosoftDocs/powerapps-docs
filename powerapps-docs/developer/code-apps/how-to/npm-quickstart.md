@@ -50,7 +50,6 @@ Install the project dependencies and the Power Apps SDK:
 
 ```bash
 npm install
-npm install @microsoft/power-apps
 ```
 
 Initialize your code app. You can either provide options directly or use interactive prompts:
@@ -74,7 +73,7 @@ When you run the `init` command, the CLI authenticates you automatically. Sign i
 Run the code app locally for development:
 
 ```bash
-npx power-apps run
+npm run dev
 ```
 
 This starts a local development server. Open the URL labeled **Local Play**.
