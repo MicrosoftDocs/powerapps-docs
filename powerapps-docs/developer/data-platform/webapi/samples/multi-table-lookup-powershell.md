@@ -152,4 +152,4 @@ By default, this sample deletes all the records it creates. If you want to view 
 [Web API Samples](../web-api-samples.md)   
 [Web API table schema operations sample (PowerShell)](metadata-operations-powershell.md)
 
-[!INCLUDE[footer-include](../../../../includes/footer-include.md)]
+[!INCLUDE [footer-banner](../../../../includes/footer-banner.md)]
