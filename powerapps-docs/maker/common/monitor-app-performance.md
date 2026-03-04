@@ -5,7 +5,7 @@ author: dalajogun
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 11/13/2025
+ms.date: 3/4/2026
 ms.subservice: canvas-maker
 ms.author: damialajogun
 search.audienceType: 
@@ -21,7 +21,7 @@ Monitor in Power Apps offers insights and recommendations to enhance app perform
 
 ## Prerequisites
 
-To use this feature, your administrator must enable certain analytics and monitoring settings in the Power Platform Admin Center. For more information, see [Monitoring experiences for makers](/power-platform/admin/monitoring/monitoring-overview#monitoring-experiences-for-makers). Also, when you log into Power Apps Monitor and have selected an environment, ensure that you are a member of that environment with an assigned role, like Basic User. Otherwise, you cannot access Monitor. 
+To use this feature, your administrator must enable certain analytics and monitoring settings in the Power Platform Admin Center. For more information, see [Monitoring experiences for makers](/power-platform/admin/monitoring/monitoring-overview#monitoring-experiences-for-makers). When you sign in to Power Apps and open Monitor, make sure you’ve selected the correct environment and that you’re a member of that environment with an assigned role (for example, Basic User). Otherwise, you won’t be able to access Monitor.
 
 ## Open and pin Monitor
 
