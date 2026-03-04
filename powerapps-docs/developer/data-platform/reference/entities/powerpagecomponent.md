@@ -254,6 +254,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |32|**Shortcut**|
 |33|**Cloud Flow**|
 |34|**UX Component**|
+|35|**Server Logic**|
 
 ### <a name="BKMK_powerpagesiteid"></a> powerpagesiteid
 

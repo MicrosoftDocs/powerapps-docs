@@ -3,7 +3,7 @@ title: "Troubleshoot form issues in model-driven apps (model-driven apps)"
 description: "Learn about how to resolve the common issues on model-driven apps forms."
 author: MitiJ
 ms.author: mijosh
-ms.date: 04/02/2025
+ms.date: 10/10/2025
 ms.reviewer: jdaly
 ms.subservice: troubleshoot
 ms.topic: troubleshooting-general
@@ -23,9 +23,9 @@ This article has information to help fix some of the common issues you might enc
 >
 > - The tools described in this article are designed for troubleshooting purposes; they aren't meant to be used in day-to-day production scenarios, even though you can use them for troubleshooting issues in production environments.
 > - These troubleshooting tools only affect the current user session unless otherwise noted (for example, when a browser tab accesses the model-driven app). They don't change system customizations or affect any other users or sessions. After the current session is closed, the effect is no longer applied.
-> - Most of the tools are available in all the production environments. Some of them mentioned in the article might not have been deployed to your organization yet; new tools are added periodically.
-> - Tools listed in this article are written in a scenario-driven way. You can use them independently to troubleshoot different types of issues. 
-> - [Use URL parameters to disable various form components](#use-url-parameters-to-disable-various-form-components) and [View registered form event handlers and libraries in Monitor](#view-registered-form-event-handlers-and-libraries-in-monitor) are critical and fundamental tools you'll frequently use to troubleshoot many scenarios. 
+> - Most of the tools are available in all the production environments. Some of them mentioned in the article might not be deployed to your organization yet; new tools are added periodically.
+> - Tools listed in this article are written in a scenario-driven way. You can use them independently to troubleshoot different types of issues.
+> - [Use URL parameters to disable various form components](#use-url-parameters-to-disable-various-form-components) and [View registered form event handlers and libraries in Monitor](#view-registered-form-event-handlers-and-libraries-in-monitor) are critical and fundamental tools you'll frequently use to troubleshoot many scenarios.
 > - For more information on how to use Monitor, see [Use Monitor to troubleshoot model-driven app form behavior](../../maker/model-driven-apps/monitor-form-checker.md)
 
 ## Use URL parameters to disable various form components
@@ -42,15 +42,15 @@ When you're troubleshooting issues with forms, you need to use the URL parameter
 
 - **DisableFormHandlers**  
 
-   Disables all the form handlers. If you use the **DisableFormHandlers=true** flag, it disables the following event handlers: [OnLoad](./clientapi/reference/events/form-onload.md), [OnSave](./clientapi/reference/events/form-onsave.md), business rule, [OnChange](./clientapi/reference/events/attribute-onchange.md), and [TabStateChange](./clientapi/reference/events/tabstatechange.md). 
- 
-   To learn more about obtaining event or library indices for granular controls, see [View registered form event handlers and libraries in monitor](#view-registered-form-event-handlers-and-libraries-in-monitor). 
+   Disables all the form handlers. If you use the **DisableFormHandlers=true** flag, it disables the following event handlers: [OnLoad](./clientapi/reference/events/form-onload.md), [OnSave](./clientapi/reference/events/form-onsave.md), business rule, [OnChange](./clientapi/reference/events/attribute-onchange.md), and [TabStateChange](./clientapi/reference/events/tabstatechange.md).
+
+   To learn more about obtaining event or library indices for granular controls, see [View registered form event handlers and libraries in monitor](#view-registered-form-event-handlers-and-libraries-in-monitor).
 
    ```http
    https://myorg.crm.dynamics.crm/main.aspx?appid=00000000-0000-0000-0000-000000000000&pagetype=entityrecord&id=00000000-0000-0000-0000-000000000000**&flags=DisableFormHandlers=true
    ```
 
-    - **&flags=DisableFormHandlers=*eventName***  
+  - **&flags=DisableFormHandlers=*eventName***  
 
        Disables the form handler by specifying the event name, for example, ****DisableFormHandlers=onload**.
 
@@ -58,11 +58,11 @@ When you're troubleshooting issues with forms, you need to use the URL parameter
        https://myorg.crm.dynamics.crm/main.aspx?appid=00000000-0000-0000-0000-000000000000&pagetype=entityrecord&id=00000000-0000-0000-0000-000000000000**&flags=DisableFormHandlers=true
        ```
 
-    - **&flags=DisableFormHandlers=*eventName_index***
+  - **&flags=DisableFormHandlers=*eventName_index***
 
       Disables the event handler at the specified index for any supported event name. For example, `DisableFormHandlers=true_0` disables all the event handlers at index 0. `DisableFormHandlers=onload_2` disables the [OnLoad](./clientapi/reference/events/form-onload.md) event handler at index 2.
 
-    - **&flags=DisableFormHandlers=*eventName_startIndex_endIndex***
+  - **&flags=DisableFormHandlers=*eventName_startIndex_endIndex***
 
       Disables all the event handlers within the given range by specifying `startIndex` and `endIndex` values (both are included). For example, `DisableFormHandlers=true_0_2` disables all the event handlers of index 0, 1, and 2. `DisableFormHandlers=onload_2_5` disables the [OnLoad](./clientapi/reference/events/form-onload.md) event handler of index 2, 3, 4, and 5. If you have more event handlers, you can use this approach to narrow down problematic handlers quickly.  
   
@@ -74,14 +74,13 @@ When you're troubleshooting issues with forms, you need to use the URL parameter
     > - After you perform the above action and refresh the form, you'll see different message with additional information, as shown in the following image:  
     > ![Business rules individual control](media/businessrule-individual-control.png "Business rules individual control")
 
-  
 - **DisableFormLibraries**  
 
    Disables form libraries and prevents the libraries from being loaded. To learn more about obtaining event or library indices for granular controls, see [View registered form event handlers and libraries in monitor](#view-registered-form-event-handlers-and-libraries-in-monitor) . The usage is similar to `DisableFormHandlers`, except it doesn't take an event name as the value.
- 
-    - **&flags=DisableFormLibraries=true**: Disable all the form libraries. 
-    - **&flags=DisableFormLibraries=*index***: Disable form libraries at the specified index. 
-    - **&flags=DisableFormLibraries=*startIndex_endIndex***: Disable form libraries in the range of startIndex and endIndex (both included). 
+
+  - **&flags=DisableFormLibraries=true**: Disable all the form libraries.
+  - **&flags=DisableFormLibraries=*index***: Disable form libraries at the specified index.
+  - **&flags=DisableFormLibraries=*startIndex_endIndex***: Disable form libraries in the range of startIndex and endIndex (both included).
 
 - **DisableWebResourceControls**  
 
@@ -93,10 +92,10 @@ When you're troubleshooting issues with forms, you need to use the URL parameter
 
   > [!div class="mx-imgBorder"]
   > ![Disable web resource](media/disable-web-resource-control.png "Disable web resource")
-    
+
 - **DisableFormControl**  
-    
-  Disables a form control. Specify the control name to disable the control. If you see that the issue goes away with **&flags=DisableWebResourceControls=true**, and there's more than one web resource control on the form, you can use this flag to further identify the control that's causing the issue.   
+
+  Disables a form control. Specify the control name to disable the control. If you see that the issue goes away with **&flags=DisableWebResourceControls=true**, and there's more than one web resource control on the form, you can use this flag to further identify the control that's causing the issue.
 
   ```http
   https://myorg.crm.dynamics.crm/main.aspx?appid=00000000-0000-0000-0000-000000000000&pagetype=entityrecord&id=00000000-0000-0000-0000-000000000000**&flags=DisableFormControl=controlname
@@ -109,8 +108,8 @@ When you're troubleshooting issues with forms, you need to use the URL parameter
   ```http
   https://myorg.crm.dynamics.crm/main.aspx?appid=00000000-0000-0000-0000-000000000000&pagetype=entityrecord&id=00000000-0000-0000-0000-000000000000**&flags=DisableBusinessProcessFlow=true
   ```
-   
-- **navbar** 
+
+- **navbar**
   This isn't a **flag** parameter; instead, use **navbar=off** in the URL.
 
 You can also add multiple URL parameters separated with a comma (**,**).
@@ -121,12 +120,12 @@ https://myorg.crm.dynamics.crm/main.aspx?appid=00000000-0000-0000-0000-000000000
 
 > [!NOTE]
 > The difference between **DisableFormHandlers** and **DisableFormLibraries** are:
+>
 > - The **DisableFormHandlers** flag disables form handlers regardless of the containing form libraries. In contrast, the **DisableFormLibraries** flag disables the form libraries (web resources) regardless of the functions (event handlers) included in the libraries. Simply put, **DisableFormLibraries** makes sure the specified JavaScript web resource files aren't loaded.
 > - The **DisableFormHandlers** flag doesn't prevent the containing form library from being loaded. Thus it doesn't stop the JavaScript code present in the library but not registered as an event handler from being executed. For example, if a form library `new_myscript.js` is written in the following way (not recommended practice):  
 > - You should start with **DisableFormHandlers** to see if the issue goes away, and if not, you can try **DisableFormLibraries**. Disabling any script always involves some risks of potentially breaking your form scenarios. However, the latter tend to have more side effects because of the disablement of the entire JavaScript files.
 > ![Difference between DisableFormHandlers and DisableFormLibraries](media/difference-between-disableformhandlers-disableformlibraries.png "Difference between DisableFormHandlers and DisableFormLibraries")
 > - Assuming the `myOnloadHandler` is registered as an `OnLoad` event handler, the `DisableFormHandlers=true` flag only prevents the second alert, whereas the `DisableFormLibraries=true` flag prevents both alerts.
-
 
 ## View registered form event handlers and libraries in monitor
 
@@ -139,7 +138,6 @@ You need the `eventIndex` and `libraryIndex` parameter values when using the **D
 
 > [!div class="mx-imgBorder"]
 > ![Form events OnLoad](media/form-events-onload.png "Form events OnLoad")
-
 
 ## Unexpected behaviors when loading a form
 
@@ -157,7 +155,7 @@ If the unexpected behavior stops occurring after you disabled the form handler, 
 
 ## Saving in progress error message
 
-Sometimes when you save a form, you see a **Saving in Progress** error message. 
+Sometimes when you save a form, you see a **Saving in Progress** error message.
 
 This error occurs when the form [OnSave](./clientapi/reference/events/form-onsave.md) event is triggered before the previous [OnSave](./clientapi/reference/events/form-onsave.md) event completes. This behavior isn't supported, and the error appears by design because calling the `OnSave` event before the previous `OnSave` event is complete causes recursive save loops with unintended consequences.
 
@@ -169,7 +167,6 @@ In [Monitor](../../maker/model-driven-apps/monitor-form-checker.md), the `FormEv
 
 > [!div class="mx-imgBorder"]
 > ![Save in progress error](media/save-in-progress-error.png "Save in progress error")
-
 
 Follow up with the script owner to further troubleshoot the issue.
 
@@ -231,13 +228,12 @@ There are many possible reasons for a form to freeze, load slowly, or throw a "W
 
 ### How to troubleshoot
 
-Determine if the issue reproduces without involving forms. If it does, then there's a broader issue that should be investigated out of the form's context. Actual ownership of the problem depends on the particular details case by case. 
+Determine if the issue reproduces without involving forms. If it does, then there's a broader issue that should be investigated out of the form's context. Actual ownership of the problem depends on the particular details case by case.
 
 - If you believe this issue only occurs on forms, see [Use URL parameters to disable various form components](#use-url-parameters-to-disable-various-form-components) to narrow down the component that's causing the issue.
 - If you identify that certain form libraries/script files caused the issue, follow up with the owner who made these customizations to find out the root cause of the issue.
-- If you identify that web resource controls cause the issue with the **DisableWebResourceControls** flag, then you can use the `DisableFormControl` flag to disable each one-by-one until the problem is longer reproduced. The last disabled control that doesn't reproduce the issue is the one that is causing the issue. Follow up with the owner of the control to further troubleshoot the issue.
+- If you identify that web resource controls cause the issue with the **DisableWebResourceControls** flag, then you can use the `DisableFormControl` flag to disable each one-by-one until the problem is longer reproduced. The last disabled control that doesn't reproduce the issue is the one that's causing the issue. Follow up with the owner of the control to further troubleshoot the issue.
 - If you identify that the issue is caused by the command bar/ribbon with the **DisableFormCommandbar** flag, it means this isn't an issue with the form but an issue with the command bar. Use [Command Checker](https://www.microsoft.com/en-us/power-platform/blog/power-apps/introducing-command-checker-for-model-app-ribbons) to troubleshoot individual commands and identify which one is causing the issue.
-
 
 ## A business rule or custom script isn't working
 
@@ -248,13 +244,12 @@ This issue occurs if a business rule or custom script that used to work in the l
 One of the reasons that the business rule or script isn't working in Unified Interface is that the controls that are part of them don't exist in Unified Interface.
 Composite controls exist in the web client, but in Unified Interface composite control is broken down into parts and is stored differently. For example, if the column `fullname` is part of the business rule or custom script, columns `firstname`, `middlename`, or `lastname` should be used instead.
 
-Once you launch form checker, you're able to see more details in the `CompositeControl` operation including the composite control that is causing the problem, the columns that can be used in the business rule or custom script instead and a full call stack (the call stack is modified for demonstration purposes).
+Once you launch form checker, you're able to see more details in the `CompositeControl` operation including the composite control that's causing the problem, the columns that can be used in the business rule or custom script instead and a full call stack (the call stack is modified for demonstration purposes).
 
 > [!div class="mx-imgBorder"]
 > ![Custom script not working](media/custom-script-error.png "Custom script not working")
 
 Follow up with the corresponding owner of the business rule or custom script to change the control suggested by the form checker.
-
 
 ## Related menu item doesn't appear in Related tab
 
@@ -281,7 +276,6 @@ The **Related** menu doesn't show related tables from certain relationships crea
 The [AssociatedMenuConfiguration.IsCustomizable property](xref:Microsoft.Xrm.Sdk.Metadata.AssociatedMenuConfiguration.IsCustomizable) indicates whether the relationship can be customized. The easiest way to check is by [querying the relationship using Web API](../data-platform/webapi/query-metadata-web-api.md#querying-relationship-metadata) to view the [AssociatedMenuConfiguration complex type](xref:Microsoft.Dynamics.CRM.AssociatedMenuConfiguration) data.
 
 Suppose you want to check whether the relationship between the [Business Unit](../data-platform/reference/entities/businessunit.md) and [Goal](../data-platform/reference/entities/goal.md) tables is customizable. The `SchemaName` of this relationship is [business_unit_goal](../data-platform/reference/entities/businessunit.md#BKMK_business_unit_goal). Enter this URL in your browser:
-
 
 ```http
 GET [Organization URI]/api/data/v9.2/RelationshipDefinitions(SchemaName='business_unit_goal')/Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata?$select=AssociatedMenuConfiguration
@@ -332,7 +326,6 @@ Tables created with the modern designer don't have this issue. They're always en
 > [!NOTE]
 > Certain system tables can't be enabled for Unified Client. For example, **Process Session** can't be used in model-driven apps.
 
-
 ## Audit History doesn't appear in Related tab
 
 **Audit History** isn't in the Related menu.
@@ -346,7 +339,6 @@ Audit history isn't supported in these cases:
 - Mobile apps
 - Offline mode
 - Dynamics for Outlook
-
 
 ## Unexpected related menu item appears in related tab
 
@@ -444,7 +436,7 @@ If no forms are available to the user, then the [the fallback form](../../maker/
 
 ## Why a control is disabled/enabled or visible/hidden
 
-There are many possible reasons why a control might be disabled or hidden when the form is loaded. 
+There are many possible reasons why a control might be disabled or hidden when the form is loaded.
 
 ### How to troubleshoot
 
@@ -478,7 +470,7 @@ Finally, if the control passes all the above checks, the record state determines
 > The difference between `FormControls` and `ControlStateChange` is that the `FormControls` operation reflects the initial control state when the form is loaded, while the `ControlStateChange`operation reflects the state change at any time on the form, whether it's during form load, in OnChange or OnSave events after the form is loaded.
 
 > [!IMPORTANT]
-> A control's disabled and hidden state can change multiple times when a form is first loaded. To know the reason why a control is hidden or disabled, make sure to check the **last** operation logged in the monitor. For example, if there are no `ControlStateChange.visible/ControlStateChange.hidden` operations for the control being investigated, the value and reasoning will be in the `FormControls` operation. Otherwise, it is the value and reason in the **last** `ControlStateChange.visible/ControlStateChange.hidden` operation. You can order logs by timestamp to search for the last operation. 
+> A control's disabled and hidden state can change multiple times when a form is first loaded. To know the reason why a control is hidden or disabled, make sure to check the **last** operation logged in the monitor. For example, if there are no `ControlStateChange.visible/ControlStateChange.hidden` operations for the control being investigated, the value and reasoning will be in the `FormControls` operation. Otherwise, it's the value and reason in the **last** `ControlStateChange.visible/ControlStateChange.hidden` operation. You can order logs by timestamp to search for the last operation.
 
 ## Why a control has a certain value on form load
 
@@ -486,7 +478,7 @@ A control might not have a specific value on form load as the user expected.
 
 ### How to troubleshoot
 
-There are many possible reasons why control can have a value when a form loads. The `ControlDefaultValue` operation in [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) explains the source of the default values. 
+There are many possible reasons why control can have a value when a form loads. The `ControlDefaultValue` operation in [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) explains the source of the default values.
 
 > [!div class="mx-imgBorder"]
 > ![Default control value](media/control-default-value.png "Default control value")
@@ -510,7 +502,6 @@ Verify where the value is coming from and take action based on the following tab
 | Relationship column mapping | Check the relationship configuration and update the column mapping. |
 | Value passed by page input data passed via URL | Check the API that opens the specific form with the issue, it's passing the value. |
 
-
 ## Why a tab or section is visible or hidden
 
 There are many possible reasons why a tab or section might be hidden or visible.
@@ -523,7 +514,6 @@ The `TabStateChange` or `SectionStateChange` operations in [Monitor](../../maker
 > ![Tab section](media/tab-section-visible.png "Tab section")
 
 Follow up according to the suggestion in the state reason or the owner of the web resource/business rules to change or fix the behavior.
-
 
 ## Unexpected dialogs or navigation
 
@@ -557,19 +547,17 @@ You can use [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) to 
 
 You need to follow up with the table owner who has disabled quick create through table definitions (metadata).
 
-
 ## Table doesn't appear in the quick create menu flyout
 
-When opening the global quick create menu flyout, not all tables are available. There are few reasons why the tables are filtered in this list:
+When opening the global quick create menu, not all tables are available. Some possible reasons:
 
-- There's no quick create form available for the table.
-- Table isn't enabled for quick create form.
-- Table isn't enabled for the new Unified Interface.
-- Table is read-only in Unified Interface.
-- Table's mobile client visibility can't be modified.
-- Table isn't part of the app module.
-- User doesn't have a create privilege on the table.
-- The create privilege isn't supported for the table.
+- Table isn't enabled for quick create. [Check if the table supports quick create and that it's enabled](../../maker/model-driven-apps/create-edit-quick-create-forms.md#tables-with-quick-create-forms).
+- Table isn't added to the app. [Ensure all required components are added to an app](/troubleshoot/power-platform/power-apps/create-and-use-apps/isolate-model-app-issues#ensure-all-required-components-are-added-to-an-app).
+- No quick create form is available for the table. [Create a quick create form](../../maker/model-driven-apps/create-edit-quick-create-forms.md#create-a-quick-create-form).
+- Table is read-only.
+- User doesn't have permission to access the quick create form. Check if the user has appropriate security roles.
+- User doesn't have create privilege for the table.
+- Table doesn't support create privilege.
 
 ### How to troubleshoot
 
@@ -588,7 +576,7 @@ See the following examples to understand the reasons for filtering. Based on the
 
 ## Unexpected unsaved changes message
 
-When working on forms, you get the *unsaved changes* message on the form footer when you navigate from the current form or save the form without any changes. 
+When working on forms, you get the *unsaved changes* message on the form footer when you navigate from the current form or save the form without any changes.
 
 ### How to troubleshoot
 
@@ -608,7 +596,7 @@ Verify where the change is coming from and if the behavior is expected or not. I
 
 ## Business required column doesn't block saving
 
-Business required columns are a usability feature that help prevent users from saving a record with an empty value in that column. In model-driven apps and Power Pages, the following scenarios don't block saving a record when a required column has an empty value:
+Business required columns is a usability feature that helps prevent users from saving a record with an empty value in that column. In model-driven apps and Power Pages, the following scenarios don't block saving a record when a required column has an empty value:
 
 - The column is hidden from the form, either because of [column properties](../../maker/model-driven-apps/add-move-or-delete-fields-on-form.md#configure-column-properties-on-a-form) or a client-side script using the [control.setVisible Client API](clientapi/reference/controls/setVisible.md) .
 - The column is on a hidden form tab or section.
@@ -616,7 +604,6 @@ Business required columns are a usability feature that help prevent users from s
 - The user isn't using model-driven apps or Power Pages to create the record. Client applications using Dataverse APIs aren't blocked from saving records when column [AttributeMetadata.RequirementLevel](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.requiredlevel) is set to [AttributeRequiredLevel.ApplicationRequired](/dotnet/api/microsoft.xrm.sdk.metadata.attributerequiredlevel). [Learn more about column requirement level](../data-platform/entity-attribute-metadata.md#column-requirement-level)
 
 When you need to enforce data integrity, you should use [entity business rules](../../maker/data-platform/data-platform-create-business-rule.md) and other server-side validation instead, such as [synchronous plug-ins](../data-platform/plug-ins.md).
-
 
 ### How to troubleshoot
 
@@ -634,7 +621,7 @@ The following image is another example that `jobtitle` is a business required co
 
 ### Follow up
 
-Most times, the behavior is by design, and the `RequiredFieldValidation` operation explains why this column behaves in a certain way in form save operation. If the required column validation is skipped on a column because the control is disabled or hidden, as the first example illustrated, see the form checker suggestions for further analysis. 
+Most times, the behavior is by design, and the `RequiredFieldValidation` operation explains why this column behaves in a certain way in form save operation. If the required column validation is skipped on a column because the control is disabled or hidden, as the first example illustrated, see the form checker suggestions for further analysis.
 
 This might lead to another troubleshooting scenario such as [Why a control is disabled/enabled or visible/hidden](#why-a-control-is-disabledenabled-or-visiblehidden).
 
@@ -651,7 +638,7 @@ For example:
 1. User opens the lookup field, `parentaccountid`, on the form and selects the button to create a new account.
 1. New account form opens, with the `primarycontactid` field automatically set to **Robin Danielsen**.
 
-If the `primarycontactid` field is [secured](/power-platform/admin/field-level-security) and the user doesn't have permissions to edit it, they'll get an error when they try to save the new account. They can clear the field before saving it. However, if that field isn't on the form, they can't clear it. A workaround is to create the account from the account page instead of from a contact form.
+If the `primarycontactid` field is [secured](/power-platform/admin/field-level-security) and the user doesn't have permissions to edit it, they get an error when they try to save the new account. They can clear the field before saving it. However, if that field isn't on the form, they can't clear it. A workaround is to create the account from the account page instead of from a contact form.
 
 ## Some columns aren't displayed on the merge dialog
 
@@ -665,6 +652,5 @@ In this example, `parentcustomerid` column on the contact form isn't supported i
 
 > [!div class="mx-imgBorder"]
 > ![Merge dialog load](media/merge-dialog-load.png "Merge dialog load")
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

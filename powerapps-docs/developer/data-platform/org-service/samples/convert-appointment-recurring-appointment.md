@@ -1,6 +1,6 @@
 ---
-title: "Sample: Convert an appointment to a recurring appointment (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample shows how to convert an appointment to a recurring appointment series" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Sample: Convert an appointment to a recurring appointment (Microsoft Dataverse) | Microsoft Docs"
+description: "This sample shows how to convert an appointment to a recurring appointment series" 
 ms.date: 04/03/2022
 author: JimDaly #TODO: No Owner
 ms.author: jdaly

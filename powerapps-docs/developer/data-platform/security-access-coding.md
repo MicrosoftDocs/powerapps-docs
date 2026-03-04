@@ -1,6 +1,6 @@
 ---
-title: "Verifying access in code (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how to use the security related APIs to verify user access to a record." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Verifying access in code (Microsoft Dataverse) | Microsoft Docs"
+description: "Learn how to use the security related APIs to verify user access to a record." 
 ms.date: 06/05/2023
 ms.reviewer: pehecke
 ms.topic: concept-article

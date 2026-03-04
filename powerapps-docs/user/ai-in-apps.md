@@ -1,12 +1,12 @@
 ---
 title: AI features overview
 description: Learn how to incorporate AI into your model-driven apps
-ms.date: 06/30/2025
+ms.date: 12/08/2025
 ms.reviewer: smurkute
 ms.topic: "how-to"
 author: anuitz
 ms.subservice: end-user
-ms.author: anuitz
+ms.author: smurkute
 contributors: 
 ms.service: powerapps
 search.audienceType: 
@@ -21,7 +21,7 @@ AI features in apps combine model-driven apps with intelligent automation and as
 
 ## Prerequisites
 
-Copilot needs to be [enabled for your tenant and environment](../maker/canvas-apps/ai-overview.md#disable-copilot-in-power-apps), and apps need to have the [new look](modern-fluent-design.md) turned on. AI features also have their own [enablement settings](/power-platform/admin/settings-features).
+Copilot needs to be [enabled for your tenant and environment](../maker/canvas-apps/ai-overview.md#enable-or-disable-copilot-features), and apps need to have the [new look](modern-fluent-design.md) turned on. AI features also have their own [enablement settings](/power-platform/admin/settings-features).
 
 ## Agent supervision
 
@@ -29,8 +29,6 @@ Agent feed helps business users manage and work with agents directly in their ap
 
 - [Add agents to be supervised in app](../maker/model-driven-apps/add-agents-to-app.md)
 - [Supervise agents in app](supervise-agents-with-agent-feed.md)
-- [Configure suggested actions in model-driven apps](../maker/model-driven-apps/configure-suggested-actions.md)
-- [Use suggested actions in the agent feed](use-suggested-actions-in-the-agent-feed.md)
 
 ## Agent assistance
 
@@ -54,6 +52,8 @@ Built-in agents help you enter, explore, and summarize data faster and better.
 
 **Chat agent**
 
+- [Chat with Microsoft 365 Copilot](use-microsoft-365-copilot-model-driven-apps.md)
+- [Customize Microsoft 365 Copilot chat](../maker/model-driven-apps/customize-microsoft-365-copilot-chat.md)
 - [Chat with Copilot](use-copilot-model-driven-apps.md)
 - [Customize Copilot chat](../maker/model-driven-apps/customize-copilot-chat.md)
 

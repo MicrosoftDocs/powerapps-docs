@@ -1,6 +1,6 @@
 ---
-title: "Calendar tables (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Read how you can store data for customer service calendars and holiday schedules using calendar tables." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Calendar tables (Microsoft Dataverse) | Microsoft Docs"
+description: "Read how you can store data for customer service calendars and holiday schedules using calendar tables." 
 ms.date: 05/04/2021
 ms.reviewer: pehecke
 ms.topic: article

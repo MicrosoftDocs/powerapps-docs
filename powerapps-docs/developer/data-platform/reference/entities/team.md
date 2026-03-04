@@ -921,6 +921,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [team_flowmachinenetwork](#BKMK_team_flowmachinenetwork)
 - [team_flowrun](#BKMK_team_flowrun)
 - [team_flowsession](#BKMK_team_flowsession)
+- [team_flowsessionbinary](#BKMK_team_flowsessionbinary)
 - [team_fxexpression](#BKMK_team_fxexpression)
 - [team_goal](#BKMK_team_goal)
 - [team_goal_goalowner](#BKMK_team_goal_goalowner)
@@ -940,6 +941,8 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [team_mailbox](#BKMK_team_mailbox)
 - [team_mailboxtrackingfolder](#BKMK_team_mailboxtrackingfolder)
 - [team_managedidentity](#BKMK_team_managedidentity)
+- [team_mcpserver](#BKMK_team_mcpserver)
+- [team_mcptool](#BKMK_team_mcptool)
 - [team_msdyn_aibdataset](#BKMK_team_msdyn_aibdataset)
 - [team_msdyn_aibdatasetfile](#BKMK_team_msdyn_aibdatasetfile)
 - [team_msdyn_aibdatasetrecord](#BKMK_team_msdyn_aibdatasetrecord)
@@ -1023,6 +1026,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [team_msdyn_pmprocessversion](#BKMK_team_msdyn_pmprocessversion)
 - [team_msdyn_pmrecording](#BKMK_team_msdyn_pmrecording)
 - [team_msdyn_pmsimulation](#BKMK_team_msdyn_pmsimulation)
+- [team_msdyn_pmtab](#BKMK_team_msdyn_pmtab)
 - [team_msdyn_pmtemplate](#BKMK_team_msdyn_pmtemplate)
 - [team_msdyn_pmview](#BKMK_team_msdyn_pmview)
 - [team_msdyn_qna](#BKMK_team_msdyn_qna)
@@ -2148,6 +2152,18 @@ Many-To-One Relationship: [flowsession team_flowsession](flowsession.md#BKMK_tea
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_team_flowsessionbinary"></a> team_flowsessionbinary
+
+Many-To-One Relationship: [flowsessionbinary team_flowsessionbinary](flowsessionbinary.md#BKMK_team_flowsessionbinary)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`flowsessionbinary`|
+|ReferencingAttribute|`owningteam`|
+|ReferencedEntityNavigationPropertyName|`team_flowsessionbinary`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 ### <a name="BKMK_team_fxexpression"></a> team_fxexpression
 
 Many-To-One Relationship: [fxexpression team_fxexpression](fxexpression.md#BKMK_team_fxexpression)
@@ -2373,6 +2389,30 @@ Many-To-One Relationship: [managedidentity team_managedidentity](managedidentity
 |ReferencingEntity|`managedidentity`|
 |ReferencingAttribute|`owningteam`|
 |ReferencedEntityNavigationPropertyName|`team_managedidentity`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_team_mcpserver"></a> team_mcpserver
+
+Many-To-One Relationship: [mcpserver team_mcpserver](mcpserver.md#BKMK_team_mcpserver)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`mcpserver`|
+|ReferencingAttribute|`owningteam`|
+|ReferencedEntityNavigationPropertyName|`team_mcpserver`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_team_mcptool"></a> team_mcptool
+
+Many-To-One Relationship: [mcptool team_mcptool](mcptool.md#BKMK_team_mcptool)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`mcptool`|
+|ReferencingAttribute|`owningteam`|
+|ReferencedEntityNavigationPropertyName|`team_mcptool`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
@@ -3370,6 +3410,18 @@ Many-To-One Relationship: [msdyn_pmsimulation team_msdyn_pmsimulation](msdyn_pms
 |ReferencingAttribute|`owningteam`|
 |ReferencedEntityNavigationPropertyName|`team_msdyn_pmsimulation`|
 |IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_team_msdyn_pmtab"></a> team_msdyn_pmtab
+
+Many-To-One Relationship: [msdyn_pmtab team_msdyn_pmtab](msdyn_pmtab.md#BKMK_team_msdyn_pmtab)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_pmtab`|
+|ReferencingAttribute|`owningteam`|
+|ReferencedEntityNavigationPropertyName|`team_msdyn_pmtab`|
+|IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_team_msdyn_pmtemplate"></a> team_msdyn_pmtemplate

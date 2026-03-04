@@ -1,6 +1,6 @@
 ---
-title: "Email activity tables (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "The email activity in lets you track and manage email communications with customers." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Email activity tables (Microsoft Dataverse) | Microsoft Docs"
+description: "The email activity in lets you track and manage email communications with customers." 
 ms.date: 11/10/2023
 ms.reviewer: pehecke
 ms.topic: how-to

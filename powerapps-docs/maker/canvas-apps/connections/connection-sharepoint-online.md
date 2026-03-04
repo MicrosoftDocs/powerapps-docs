@@ -115,8 +115,8 @@ The following Power Apps operations, for a given data type, may be delegated to 
 | `Lookup`                | Yes     | Yes          | Yes     | Yes         | Yes         |
 | `Sort`                  | Yes     | Yes          | Yes     | Yes         | No          |
 | `SortByColumns`         | Yes     | Yes          | Yes     | Yes         | No          |
-| `StartsWith`            | -       | Yes          | -       | -           | Yes         |
-| `UpdateIf/RemoveIf` [5] | Yes     | No           | -       | -           | No          |
+| `StartsWith`            | -       | Yes          | -       | -           | Yes [5]     |
+| `UpdateIf/RemoveIf` [6] | Yes     | No           | -       | -           | No          |
 
 ### Notes
 
@@ -140,7 +140,8 @@ The following Power Apps operations, for a given data type, may be delegated to 
 2. SharePoint supports delegation of complex types by deferring the decision for delegation to the subfield involved. Check the type of the subfield being used on the complex type and then check this table for delegation capabilities.  Only Email and DisplayName are delegable in the Person data type.
 3. SharePoint ID fields are shown as a number field in Power Apps. However, the underlying type is actually Text. SharePoint only supports the equal ('=') operation for delegation on an ID field. Relational operations such as `<, <=,<>, >, >=` won't work on a SharePoint ID field.
 4. A formula such as Filter(..., IsBlank(CustomerId)) won't delegate to SharePoint. However, that formula is semantically close to Filter(..., CustomerId = Blank()), will delegate to SharePoint. These formulas aren't equivalent because the second formula won't treat the empty string ("") as empty. However, the second formula might work for your purposes. On SharePoint, this approach works for the 'equals' operator ("=") but not the operator for 'not equals' ("<>").
-5. UpdateIf and RemoveIf work locally but simulate delegation to a limit of 500/2000 records. They successively bring down records beyond the non-delegation 500/2000 record limit. Records that meet the If condition are collected. Generally, a maximum of 500/2000 records are collected separately and then changed per execution. However, more records may be updated if the existing local data cache is large as the function may have access to more records for evaluation.
+5. SharePoint does not support delegation of StartsWith on subfields of Choice or Lookup complex types.
+6. UpdateIf and RemoveIf work locally but simulate delegation to a limit of 500/2000 records. They successively bring down records beyond the non-delegation 500/2000 record limit. Records that meet the If condition are collected. Generally, a maximum of 500/2000 records are collected separately and then changed per execution. However, more records may be updated if the existing local data cache is large as the function may have access to more records for evaluation.
 
   
 

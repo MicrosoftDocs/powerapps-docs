@@ -4,10 +4,11 @@ metadata:
   description: Get answers to frequently asked questions about long term retention with Dataverse.
   author: Mattp123
   ms.search.keywords: 
-  ms.date: 04/11/2025
+  ms.date: 10/29/2025
   ms.author: matp
   ms.reviewer: 
-  contributors: gned
+  contributors: 
+  - neerajat
   ms.topic: faq
   ms.subservice: dataverse-maker
 title: Dataverse long term data retention FAQ
@@ -115,4 +116,7 @@ sections:
      answer: |
         You can schedule multiple retention policies, however only one policy is executed at a time.  
 
+   - question: How do I ensure there's no data loss during long-term retention?
+     answer: |
+         Prior to retention, a process validates that all data has been securely stored in the data lake. Only records that have been successfully reconciled are deleted from the live database. This validation helps maintain data integrity.
                               

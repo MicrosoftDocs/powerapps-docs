@@ -4,7 +4,7 @@ description: Learn how to view user access to a row.
 author: paulliew
 ms.component: pa-user
 ms.topic: how-to
-ms.date: 09/09/2024
+ms.date: 01/08/2026
 ms.subservice: end-user
 ms.author: paulliew
 ms.custom: ""

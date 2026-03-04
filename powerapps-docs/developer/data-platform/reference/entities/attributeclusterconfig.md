@@ -90,7 +90,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`extensionofrecordid`|
 |RequiredLevel|SystemRequired|
 |Type|Lookup|
-|Targets||
+|Targets|attribute|
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
@@ -310,7 +310,7 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**Date and time when the record was created.**|
+|Description|**Shows the date and time when the record was created.**|
 |DisplayName|**Created On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -484,11 +484,25 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 
 These relationships are many-to-one. Listed by **SchemaName**.
 
+- [attributeclusterconfig_extensionofrecordid_attribute](#BKMK_attributeclusterconfig_extensionofrecordid_attribute)
 - [lk_attributeclusterconfig_createdby](#BKMK_lk_attributeclusterconfig_createdby)
 - [lk_attributeclusterconfig_createdonbehalfby](#BKMK_lk_attributeclusterconfig_createdonbehalfby)
 - [lk_attributeclusterconfig_modifiedby](#BKMK_lk_attributeclusterconfig_modifiedby)
 - [lk_attributeclusterconfig_modifiedonbehalfby](#BKMK_lk_attributeclusterconfig_modifiedonbehalfby)
 - [organization_attributeclusterconfig](#BKMK_organization_attributeclusterconfig)
+
+### <a name="BKMK_attributeclusterconfig_extensionofrecordid_attribute"></a> attributeclusterconfig_extensionofrecordid_attribute
+
+One-To-Many Relationship: [attribute attributeclusterconfig_extensionofrecordid_attribute](attribute.md#BKMK_attributeclusterconfig_extensionofrecordid_attribute)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`attribute`|
+|ReferencedAttribute|`attributeid`|
+|ReferencingAttribute|`extensionofrecordid`|
+|ReferencingEntityNavigationPropertyName|`Attribute`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_lk_attributeclusterconfig_createdby"></a> lk_attributeclusterconfig_createdby
 

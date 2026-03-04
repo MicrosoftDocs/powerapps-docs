@@ -1,6 +1,6 @@
 ---
-title: "Sample: Update a connection role (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample showcases how to update a connection role" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Sample: Update a connection role (Microsoft Dataverse) | Microsoft Docs"
+description: "This sample showcases how to update a connection role" 
 ms.date: 04/03/2022
 author: JimDaly #TODO: No Owner
 ms.author: jdaly

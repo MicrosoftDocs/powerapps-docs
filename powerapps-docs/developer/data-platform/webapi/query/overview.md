@@ -1,7 +1,7 @@
 ---
 title: Use OData to query data
 description: Learn to compose a query using OData with Microsoft Dataverse Web API
-ms.date: 05/28/2025
+ms.date: 01/09/2026
 ms.topic: how-to
 author: MsSQLGirl
 ms.author: jukoesma
@@ -15,7 +15,7 @@ contributors:
 ---
 # Use OData to query data
 
-Every query begins with a collection of entities. Entity collections can be:
+Every query starts with a collection of entities. Entity collections include:
 
 - [EntitySet resources](#entityset-resources): One of the Web API `EntitySet` collections.
 - [Filtered collections](#filtered-collections): A set of entities returned by a [collection-valued navigation property](../web-api-navigation-properties.md#collection-valued-navigation-properties) for a specific record.
@@ -76,28 +76,28 @@ GET [Organization URI]/api/data/v9.2/accounts
 
 ## Filtered collections
 
-You can query any collection of entities represented by a collection-valued navigation property of a specified record. For example, if you want to retrieve data from the [account entity type](xref:Microsoft.Dynamics.CRM.account) where a specific user is the [OwningUser](../../reference/entities/account.md#BKMK_OwningUser), you can use the `user_accounts` collection-valued navigation property from the specified [systemuser](xref:Microsoft.Dynamics.CRM.systemuser) record.
+You can query any collection of entities that a collection-valued navigation property represents for a specified record. For example, if you want to retrieve data from the [account entity type](xref:Microsoft.Dynamics.CRM.account) where a specific user is the [OwningUser](../../reference/entities/account.md#BKMK_OwningUser), use the `user_accounts` collection-valued navigation property from the specified [systemuser](xref:Microsoft.Dynamics.CRM.systemuser) record.
 
 
 ```http
 GET [Organization URI]/api/data/v9.2/systemusers(<systemuserid value>)/user_accounts?$select=name
 ```
 
-To locate the name of the collection-valued navigation property:
+To find the name of the collection-valued navigation property:
 
-- For any Dataverse tables and relationships, you can check the <xref:Microsoft.Dynamics.CRM.EntityTypeIndex?displayProperty=fullName>
-- For any custom tables or relationships, look for the [collection-valued navigation properties](../web-api-navigation-properties.md#collection-valued-navigation-properties) within the [$metadata service document](../web-api-service-documents.md#csdl-metadata-document)
+- For any Dataverse tables and relationships, check the <xref:Microsoft.Dynamics.CRM.EntityTypeIndex?displayProperty=fullName>.
+- For any custom tables or relationships, look for the [collection-valued navigation properties](../web-api-navigation-properties.md#collection-valued-navigation-properties) within the [$metadata service document](../web-api-service-documents.md#csdl-metadata-document).
 
-## Retrieve Data
+## Retrieve data
 
 To retrieve data from a collection, send a `GET` request to the collection resource. The following example shows retrieving data from the [account entity type](/power-apps/developer/data-platform/webapi/reference/account).
 
 This example also demonstrates:
 
-- Limiting the columns returned using `$select`. [Learn more about selecting columns](select-columns.md)
-- Ordering results using `$orderby`. [Learn more about ordering columns](order-rows.md)
-- Limiting the rows returned using `$top`. [Learn about limiting the number of rows](#limit-the-number-of-rows)
-- Showing formatted values using the request header: `Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"`. [Learn about formatted values](select-columns.md#formatted-values)
+- Limiting the columns returned by using `$select`. [Learn more about selecting columns](select-columns.md).
+- Ordering results by using `$orderby`. [Learn more about ordering columns](order-rows.md).
+- Limiting the rows returned by using `$top`. [Learn about limiting the number of rows](#limit-the-number-of-rows).
+- Showing formatted values by using the request header: `Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"`. [Learn about formatted values](select-columns.md#formatted-values).
 
 **Request:**
 
@@ -135,7 +135,7 @@ Preference-Applied: odata.include-annotations="OData.Community.Display.V1.Format
 
 ## Refine your query
 
-After you select the table to start your query with, refine the query to get the data you need. The following articles explain how to complete your query.
+After you select the table to start your query, refine the query to get the data you need. The following articles explain how to complete your query.
 
 |Article|Task|
 |---------|---------|
@@ -146,7 +146,7 @@ After you select the table to start your query with, refine the query to get the
 |[Page results](page-results.md)|Specify how many rows of data to return with each request.|
 |[Aggregate data](aggregate-data.md)|How to group and aggregate the data returned.|
 |[Count number of rows](count-rows.md)|How to get a count of the number of rows returned.|
-|[Performance optimizations](optimize-performance.md)|How to optimize performance|
+|[Performance optimizations](optimize-performance.md)|How to optimize performance.|
 
 ## OData query options
 
@@ -155,18 +155,18 @@ Use these options to change the results returned from a collection. The followin
 |Option|Use to|More information|
 |---------|---------|---------|
 |`$select`|Request a specific set of properties for each entity or complex type.|[Select columns](select-columns.md)|
-|`$expand`|Specify the related resources to be included in line with retrieved resources. |[Join tables](join-tables.md)|
+|`$expand`|Specify the related resources to include in line with retrieved resources. |[Join tables](join-tables.md)|
 |`$orderby`|Request resources in a particular order. |[Order rows](order-rows.md)|
 |`$filter`|Filter a collection of resources. |[Filter rows](filter-rows.md)|
 |`$apply`|Aggregate and group your data. |[Aggregate data](aggregate-data.md)|
-|`$top`|Specify the number of items in the queried collection to be included in the result. |[Limit the number of rows](#limit-the-number-of-rows)|
-|`$count`|Request a count of the matching resources included with the resources in the response. |[Count number of rows](count-rows.md)|
+|`$top`|Specify the number of items in the queried collection to include in the result. |[Limit the number of rows](#limit-the-number-of-rows)|
+|`$count`|Request a count of the matching resources to include with the resources in the response. |[Count number of rows](count-rows.md)|
 
 To apply multiple options, separate query options from the resource path with a question mark (`?`). Separate each option after the first with an ampersand (`&`). Option names are case-sensitive.
 
 ### Use parameter aliases with query options
 
-You can use parameter aliases for `$filter` and `$orderby` query options, but not inside the `$expand` option. Parameter aliases allow you to use the same value multiple times in a request. If the alias isn't assigned a value, it is null.
+You can use parameter aliases for `$filter` and `$orderby` query options, but not inside the `$expand` option. Parameter aliases allow you to use the same value multiple times in a request. If the alias doesn't have an assigned value, it's null.
 
 Without parameter aliases:
 
@@ -188,25 +188,25 @@ You can also use parameter aliases when using functions. [Learn to use Web API f
 
 ### Unsupported OData query options
 
-The Dataverse Web API doesn't support the following [OData query options](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part2-url-conventions/odata-v4.0-errata03-os-part2-url-conventions-complete.html#_Toc453752356): `$skip`,`$search`,`$format`.
+The Dataverse Web API doesn't support the following [OData query options](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part2-url-conventions/odata-v4.0-errata03-os-part2-url-conventions-complete.html#_Toc453752356): `$skip`, `$search`, and `$format`.
 
 ### URL length limitations
 
-The length of a URL in a `GET` request [is limited to 32 KB (32,768 characters)](../compose-http-requests-handle-errors.md#maximum-url-length). Including many complex OData query options as a parameter in the URL can reach the limit. You can execute a `$batch` operation using a `POST` request as a way to move the OData query options out of the URL and into the body of the request where the limit is twice as long. Sending a `GET` request within a `$batch` allows for URLs up to 64 KB (65,536 characters) in length. [Learn more about batch operations using the Web API](../execute-batch-operations-using-web-api.md).
+The length of a URL in a `GET` request [is limited to 32 KB (32,768 characters)](../compose-http-requests-handle-errors.md#maximum-url-length). Including many complex OData query options as a parameter in the URL can reach the limit. You can execute a `$batch` operation by using a `POST` request as a way to move the OData query options out of the URL and into the body of the request where the limit is twice as long. By sending a `GET` request within a `$batch`, you can use URLs up to 64 KB (65,536 characters) in length. [Learn more about batch operations using the Web API](../execute-batch-operations-using-web-api.md).
 
 ## Limit the number of rows
 
-To limit the number of rows returned, use the `$top` OData query option. Without this limit, Dataverse returns up to 5,000 standard table rows, 500 elastic table rows.
+To limit the number of rows returned, use the `$top` OData query option. Without this limit, Dataverse returns up to 5,000 standard table rows and 500 elastic table rows.
 
-Alternatively, specify a number of records to return using paging. Don't use `$top` when you request pages of data. [Learn how to request paged results](page-results.md)
+Alternatively, specify a number of records to return by using paging. Don't use `$top` when you request pages of data. [Learn how to request paged results](page-results.md).
 
 ## Limitations
 
-There are some things that you can do using FetchXml that OData doesn't support.
+There are some things that you can do by using FetchXml that OData doesn't support.
 
-- You can't [join tables without any relationship](../../fetchxml/join-tables.md#no-relationship). OData only allows using the `$expand` query option to join tables using navigation properties that are part of the relationships in the data model.
+- You can't [join tables without any relationship](../../fetchxml/join-tables.md#no-relationship). OData only allows using the `$expand` query option to join tables by using navigation properties that are part of the relationships in the data model.
 - [You can't use nested $expand with N:N relationships](join-tables.md#nested-expand-with-nn-relationships).
-- [Aggregation limitations](aggregate-data.md#odata-aggregation-limitations) lists the following limitations for aggregations using OData:
+- [Aggregation limitations](aggregate-data.md#odata-aggregation-limitations) lists the following limitations for aggregations by using OData:
 
   - [Get distinct number with CountColumn](aggregate-data.md#get-distinct-number-with-countcolumn)
   - [Time zone when grouping by date](aggregate-data.md#time-zone-when-grouping-by-date)
@@ -222,11 +222,11 @@ There are some things that you can do using FetchXml that OData doesn't support.
 ## Community tools
 
 > [!NOTE]
-> Tools created by the community aren't supported by Microsoft. If you have questions or issues with community tools, contact the publisher of the tool.
+> Microsoft doesn't support tools created by the community. If you have questions or problems with community tools, contact the publisher of the tool.
 
-The [Dataverse REST Builder](https://github.com/GuidoPreite/DRB) is an open source project that provides a user interface that helps you do many things using the Dataverse Web API, including composing queries.
+The [Dataverse REST Builder](https://github.com/GuidoPreite/DRB) is an open source project that provides a user interface that helps you do many things by using the Dataverse Web API, including composing queries.
 
-The [XrmToolBox](../../community-tools.md#xrmtoolbox) [FetchXMLBuilder](https://fetchxmlbuilder.com/) is a free tool to compose and test FetchXml requests, but it also generates code for OData queries using the same designer experience.
+The [XrmToolBox](../../community-tools.md#xrmtoolbox) [FetchXMLBuilder](https://fetchxmlbuilder.com/) is a free tool to compose and test FetchXml requests, but it also generates code for OData queries by using the same designer experience.
 
 
 ## OData version 4.0 features
@@ -236,10 +236,10 @@ The Dataverse Web API is an OData version 4.0 service. These sections of the ODa
 - [OData Version 4.0. Part 1: Protocol Plus Errata 03 11.2 Requesting Data](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752283)
 - [OData Version 4.0. Part 2: URL Conventions Plus Errata 03 5 Query Options](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part2-url-conventions/odata-v4.0-errata03-os-part2-url-conventions-complete.html#_Toc453752356)
 
-This article and the other articles in this section describe the parts of the 4.0 OData specification implemented by the Dataverse Web API and how you can use it to retrieve business data from Dataverse.
+This article and the other articles in this section describe the parts of the 4.0 OData specification that the Dataverse Web API implements and how you can use it to retrieve business data from Dataverse.
 
 > [!NOTE]
-> The OData version 4.01 is the latest version. It includes enhancements and more features not available in version 4.0, and therefore not currently available in the Dataverse Web API.
+> OData version 4.01 is the latest version. It includes enhancements and more features that aren't available in version 4.0, and therefore aren't currently available in the Dataverse Web API.
 
 ## Next steps
 

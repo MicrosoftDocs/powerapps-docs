@@ -1,8 +1,8 @@
 ---
 title: Get started with Power Apps| MicrosoftDocs
-description: How to navigate the Power Apps home page. 
+description: Learn how to navigate the Power Apps home page, create apps, manage environments, and access key features. Get started with Power Apps today to build your first application.
 ms.custom: 
-ms.date: 5/29/2025
+ms.date: 02/19/2026
 ms.update-cycle: 180-days
 ms.reviewer: mkaur
 ms.topic: overview
@@ -14,18 +14,18 @@ search.audienceType:
 contributors:
   - mduelae
   - alaug
-  - Mattp123
 ms.collection: 
     - bap-ai-copilot
 ---
 
 # Get started with Power Apps
 
-The [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) home page offers you various options for creating your own apps, opening apps that you or others have created, and performing related tasks. These tasks range from the most simple, such as identifying the license or licenses that give you access, to more advanced capabilities like creating custom connections to specific data sources.
+Get started with Power Apps to build your first app quickly and efficiently. The Power Apps home page is your starting point for creating apps, managing existing ones, and accessing powerful features that streamline your workflow.
 
-If your organization has AI enabled then it also includes the new [Copilot](ai-overview.md) features.
+**What you'll accomplish:** By the end of this article, you'll learn how to navigate the interface, create your first app, and access Copilot AI features to accelerate development.
 
-Select the appropriate tab below to know more.
+
+Select the appropriate tab in the following section to learn more.
 
 :::image type="content" source="media/intro-maker-portal/homepage-new-look.png" alt-text="Screenshot of Power Apps home page." lightbox="media/intro-maker-portal/homepage-new-look.png":::
 
@@ -35,26 +35,36 @@ Legend:
 1. [Left navigation pane](#1--left-navigation-pane)
 1. [Search](#2--search)
 1. [Environment information and settings](#3--environment-information-and-settings)
-1. [Create a plan](#4---create-a-plan)
-1. [Plans](#6--build-apps)
-1. [Build Apps](#6--build-apps)
+1. [Build apps](#4--build-apps)
+1. [View and edit plans](#5---view-and-edit-plans)
+1. [View and edit apps](#6--view-and-edit-apps)
 
+
+> [!NOTE]
+>
+> Try the new Power Apps experience—an AI-native solution designed to simplify app creation. Effortlessly automate workflows, connect data sources, and speed up development, all without needing advanced coding skills. For more information, see [Overview of the New Power Apps experience (preview)](../../vibe/overview.md).
+
+### Quick start options
+
+- **New to Power Apps?** Start with our [5-minute canvas app tutorial](create-blank-app.md)
+- **Have existing data?** [Create an app from SharePoint](app-from-sharepoint.md) or [Excel](get-started-create-from-blank.md)
+- **Need help choosing?** Review [which app type is right for you](../../index.yml)
 
 ## 1 – Left navigation pane
 
-Find what you need with the left navigation pane. When you sign in to [Power Apps home page](https://make.powerapps.com) the left navigation pane shows the following menu items:
+**Your main control center.** When you sign in to the [Power Apps home page](https://make.powerapps.com), the left navigation pane gives you quick access to everything you need. Here's what each option does:
 
 :::image type="content" source="media/intro-maker-portal/default-nav-1.png" alt-text="Screenshot of Power Apps home page navigation pane." lightbox="media/intro-maker-portal/default-nav-1.png":::
 
 Legend:
 
 1. **Home**: Takes you to the Power Apps home page.
-1. **Create**: Create apps as such as [canvas apps](/powerapps/maker/canvas-apps/), [model-driven apps](/powerapps/maker/model-driven-apps/), [chatbots](/powerapps/chatbots), and [AI models](/powerapps/use-ai-builder).
+1. **Create**: Create apps such as [canvas apps](/powerapps/maker/canvas-apps/), [model-driven apps](/powerapps/maker/model-driven-apps/), [chatbots](/powerapps/chatbots), and [AI models](/powerapps/use-ai-builder).
 1. **Learn**: The [learn hub](../common/learn-hub.md) lets you explore documents, training material, get help from the Power Apps community, and other resources that help you to create and build Power Apps.
-1. **Plans**: View and edit your plans. More information: [Overview of Plan designer](../plan-designer/plan-designer.md).
-1. **Apps**: If you've created an app or someone else has created one and shared it with you, you can play or edit it. You can also filter the list of apps based on criteria such as whether you opened it recently.
-1. **AI hub**: Create and use AI models that optimize your business processes. More information: [Overview of AI Builder](/ai-builder/overview).
-1. **Your most used pages such as Tables, Connections, Flows**: When you first sign in the top three pages that you use most are pinned to the left navigation pane. Use the **More** option to unpin any of these pages and pin something else.
+1. **Plans**: View and edit your plans. For more information, see [Overview of Plan designer](../plan-designer/plan-designer.md).
+1. **Apps**: If you created an app or someone else created one and shared it with you, you can play or edit it. You can also filter the list of apps based on criteria such as whether you opened it recently.
+1. **AI hub**: Create and use AI models that optimize your business processes. For more information, see [Overview of AI Builder](/ai-builder/overview).
+1. **Your most used pages such as Tables, Connections, Flows**: When you first sign in, the top three pages that you use most are pinned to the left navigation pane. Use the **More** option to unpin any of these pages and pin something else.
 1. **More**: Pin your most used items to the left navigation such as tables, flows, and more.
 1. **Power Platform**: Explore other Power Platform products or service.
 
@@ -69,7 +79,7 @@ To pin or unpin a page from the left navigation pane, select **More**, and then 
 > [!div class="mx-imgBorder"]
 > ![Pin or unpin an item.](media/intro-maker-portal/pin-3.png "Pin an item")
 
-You can also unpin and item by selecting the more button and then select **Unpin**.
+You can also unpin an item by selecting the more button and then select **Unpin**.
 
 > [!div class="mx-imgBorder"]
 > ![Unpin a page.](media/intro-maker-portal/unpin-page.png "Unpin a page")
@@ -97,9 +107,12 @@ From the left navigation pane, select **Power Platform** to access Power Platfor
 
 ## 2 – Search
 
-Use the **Search** to find apps, create apps, or find help documentation.
+**Find anything fast.** The search bar helps you:
+- Locate your apps by typing any part of the name
+- Discover new app templates
+- Access help documentation
 
-To find your app, start typing one or more characters in the search bar. When you find the app you want, select the banner icon to play or edit the app.
+**Quick tip:** Start typing in the search bar, and then select the banner icon next to your app to open or edit it.
 
 ## 3 – Environment information and settings
 
@@ -107,25 +120,25 @@ View your environment information and settings.
 
 ### Choose an environment
 
-For best results, start by ensuring that the home page is set to the right environment. More information [Choose an environment](sign-in-to-power-apps.md#choose-an-environment).
+For best results, start by ensuring that the home page is set to the right environment. For more information, see [Choose an environment](sign-in-to-power-apps.md#choose-an-environment).
 
 > [!div class="mx-imgBorder"]
 > ![Environment switcher.](media/intro-maker-portal/environment-switcher.png)
 
-Environments can be managed using [Power Platform admin center](/power-platform/admin/environments-overview#manage-environments-in-the-power-platform-admin-center).
+Manage environments by using [Power Platform admin center](/power-platform/admin/environments-overview#manage-environments-in-the-power-platform-admin-center).
 
 ### Notifications
 
-To see notifications select the bell icon. Notifications are stored in the notification center until you dismiss them or when they expire.
+Select the bell icon to see notifications. The notification center stores notifications until you dismiss them or when they expire.
 
 ### Settings
 
-Select the gear icon to perform tasks such as connecting to data sources, identify your Power Apps license or licenses, and open the page where you can perform administrative tasks.
+Select the gear icon to perform tasks such as connecting to data sources, identify your Power Apps licenses, and open the page where you can perform administrative tasks.
 
-- **Admin center**: Opens another windows and goes to the Power Platform admin center.
-- **Plans(s)**: View your licenses. More information: [Licensing overview](/power-platform/admin/pricing-billing-skus)
-- **Advanced settings**: Manage your admin settings. More information: [Manage Microsoft Dataverse settings](/power-platform/admin/admin-settings#environment-settings-are-moving).
-- **Session details**: View your Power Apps session details such as session ID, tenant ID, environment ID and more.
+- **Admin center**: Opens another window and goes to the Power Platform admin center.
+- **Plans(s)**: View your licenses. For more information, see [Licensing overview](/power-platform/admin/pricing-billing-skus).
+- **Advanced settings**: Manage your admin settings. For more information, see [Manage Microsoft Dataverse settings](/power-platform/admin/admin-settings#environment-settings-are-moving).
+- **Session details**: View your Power Apps session details such as session ID, tenant ID, environment ID, and more.
 - **Developer resources**: Access developer resources.
 - **Power Apps settings**: View or update your language and time settings, notifications, or access directories.
 - **Themes**: From the list of themes, select a theme for your organization.
@@ -137,42 +150,36 @@ Select the gear icon to perform tasks such as connecting to data sources, identi
 
 ### Help
 
-In the header, select the question mark icon to find more information about [Power Apps](../../index.yml)
+In the header, select the question mark icon to find more information about [Power Apps](../../index.yml).
 
 > [!div class="mx-imgBorder"]
 > ![List of model-driven apps with an ellipsis menu open.](media/intro-maker-portal/help-icon.png)
 
-Find links to documentation, Power Apps training on Microsoft Learn, the Power Apps Community where you can share information with users in other organizations, and the Power Apps blog where the newest features are announced.
+You find links to documentation, Power Apps training on Microsoft Learn, the Power Apps Community where you can share information with users in other organizations, and the Power Apps blog where the newest features are announced.
 
 
-## 4 - Create a plan
+## 4 – Build apps
 
-Use Plan designer to create user roles, data tables, and apps that address your business needs. Learn more in [Create a plan using Plan designer](../plan-designer/create-plan.md).
+**Ready to build your first app?** Choose the option that best fits your needs:
 
-## 5 – View and edit your plans
+- **[Start with a design →](create-blank-app.md)**: Pick a layout or start with blank canvas app and design your app.
+- **[Start with data →](data-platform-create-app-scratch.md)**: Create a new table in Dataverse, or connect to an existing datasource, such as Dataverse, SharePoint, Excel, SQL, or upload a file.
+- **[Start with a plan →](../plan-designer/plan-designer.md)**: Use plans to describe your business problem and generate apps, tables, and more.
 
-Use the **Plans** menu in the left navigation pane to [access and edit your plans](../plan-designer/create-plan.md#view-and-edit-plans).
+You can also create app using the **Create** menu on the left navigation pane. Review the following articles, to learn more about creating apps:
 
-## 6 – Build apps
-
-Build apps that provide rich business logic and workflow capabilities to transform manual business operations into digital, automated processes.
-
-To create an app, select **Create** and then choose from the following options:
-
-- **Start with Copilot**: [Build apps through conversation](ai-conversations-create-app.md)
-- **Start with data**: [Create a canvas app using Microsoft Dataverse](data-platform-create-app-scratch.md) or [Create a canvas app based on Excel data](get-started-create-from-blank.md)
-- **Start with a blank app**: [Create a blank canvas app from scratch](create-blank-app.md)
-- **Start with a page design**: Select the type of app you want to create. Use the **Filter** option in the top-right to narrow templates by app type or features like offline use, responsive design, or embedding into other Microsoft 365 products. More information: [Overview of creating apps in Power Apps](../index.md).
-- **Start with an app template**: Choose from app templates, including data-centered templates for mobile apps. More information: [Create a canvas app from a template](get-started-test-drive.md).
+- [Create a blank canvas app from scratch](create-blank-app.md).
+- [Create a canvas app using Microsoft Dataverse](data-platform-create-app-scratch.md)
+- [create a canvas app based on Excel data](get-started-create-from-blank.md).
+- [Create a canvas app with data from a list](app-from-sharepoint.md)
 
   > [!NOTE]
-  >  If you're trying to create an app using Dataverse but the option is unavailable, then review the [permissions table](#permissions-for-dataverse) below.
+  >  If you're trying to create an app by using Dataverse but the option is unavailable, review the [permissions table](#permissions-for-dataverse) in this article.
 
-- **Apps**: On the **Home** page, find the apps that you own or apps that are shared with you. You also have the option to filter and sort apps quickly to find the app you're looking for. Hover over the app name to **Edit**, **Play, or select **Commands** to perform various actions such as share the app, view app details, and access app settings.
 
 ### Permissions for Dataverse
 
-The table summarizes scenarios and outcomes when creating apps that require Microsoft Dataverse.
+**Can't create a Dataverse app?** This table shows what happens based on your permissions and helps you understand your next steps.
 
 
 | **Maker has access to a developer environment** | **Maker has permission to create a developer environment** |  **Maker has access to another Dataverse environment with required permissions** | **Action** | 
@@ -182,4 +189,18 @@ The table summarizes scenarios and outcomes when creating apps that require Micr
 | No |No | Yes | Switch to another environment using the environment picker | 
 | No|No| No | Contact your admin |
 
+
+## 5 - View and edit plans
+
+Select a plan to [view and edit a plan](../plan-designer/create-plan.md#view-and-edit-plans). You can also, use the **Plans** menu in the left navigation pane to access your plans.
+
+## 6 – View and edit apps
+
+**Manage your apps effectively:**
+
+- **Access your apps:** Use the **Apps** menu in the left navigation pane to find apps you own or apps shared with you
+- **Find apps quickly:** Filter and sort apps to locate what you need
+- **Take action:** Hover over any app name to **Edit**, **Play**, or access **Commands** for sharing, viewing details, and settings
+
+**Ready to customize?** [Learn advanced app editing techniques →](../../index.yml)
 

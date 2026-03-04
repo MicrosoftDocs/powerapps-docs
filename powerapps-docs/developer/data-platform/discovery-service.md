@@ -1,5 +1,5 @@
 ---
-title: "Discover user organizations (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Discover user organizations (Microsoft Dataverse) | Microsoft Docs"
 description: "Your client application may connect to multiple Dataverse environments. Use the Global Discovery Service to find which environments the user of your application can access."
 ms.date: 03/14/2024
 ms.reviewer: pehecke

@@ -2,8 +2,8 @@
 title: Column definitions | Microsoft Docs
 description: Learn about column definitions use in Microsoft Dataverse.
 suite: powerapps
-author: mkannapiran
-ms.author: kamanick
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 ms.topic: article
 ms.date: 12/12/2023

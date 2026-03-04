@@ -1,15 +1,11 @@
 ---
-title: "Common issues and resolutions for solution checker | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
-description: " A list of common issues and resolutions within solution checker"
-keywords: ""
+title: "Common issues and resolutions for solution checker | Microsoft Docs"
+description: "A list of common issues and resolutions within solution checker"
 ms.date: 06/12/2023
-ms.custom:
-  - ""
 ms.topic: article
-ms.assetid: caa4e3f2-9700-49b8-87ed-8a68e8878b02
-author: jowells1 # GitHub ID
+author: jowells1
 ms.subservice: dataverse-maker
-ms.author: jowells # MSFT alias of Microsoft employees only
+ms.author: jowells
 ms.reviewer: matp
 robots: noindex,nofollow
 search.audienceType: 

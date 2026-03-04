@@ -69,6 +69,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [msdyn_Description](#BKMK_msdyn_Description)
 - [msdyn_ExpectedOutput](#BKMK_msdyn_ExpectedOutput)
 - [msdyn_Name](#BKMK_msdyn_Name)
+- [msdyn_Source](#BKMK_msdyn_Source)
 - [msdyn_TestCaseState](#BKMK_msdyn_TestCaseState)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
@@ -189,6 +190,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForRead|True|
 |LogicalName|`msdyn_name`|
 |RequiredLevel|SystemRequired|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|200|
+
+### <a name="BKMK_msdyn_Source"></a> msdyn_Source
+
+|Property|Value|
+|---|---|
+|Description|**The source of the test case.**|
+|DisplayName|**Source**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_source`|
+|RequiredLevel|None|
 |Type|String|
 |Format|Text|
 |FormatName|Text|

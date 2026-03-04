@@ -2,7 +2,7 @@
 title: "Power Apps grid control in Power Apps"
 description: "A control for use with Power Apps that lets users view, open, and edit records from a view or subgrid in model-driven apps."
 ms.custom: ""
-ms.date: 08/26/2025
+ms.date: 02/24/2026
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -85,6 +85,8 @@ When you configure the Power Apps grid control for a table, all views for that t
     - The **Reflow behavior** property determines whether the grid components render always in a tabular fashion (**Grid only**), always as a list (**List only**), or switches between tabular and list depending on the available width (**Reflow**). The default value is **Reflow**.
     - The **Show avatar** property determines if the avatar is shown while the grid is in a list view. This avatar is typically represented as a colored icon with text showing the first letters of the row value. The default value is **Yes**.
     - The **Number of columns for list view** property allows you to define the number of columns to render while the grid is in list view. The default number of columns for a list is 3, the maximum number of columns is 10.
+    - The **Enable banded rows for list view** property applies alternating color band to rows in the list view to improve record differentiation. The default value is **No**.
+    - The **Show column labels for list view** property displays column labels before values in a list view. The default value is **No**. 
     - The **Child  items** property is used to configure the nested grid capability, which allows users to expand rows to see related records in a subgrid. To set this up, you specify the **Entity** where the related records come from and the **View** that defines the filters, sorts, and columns to show in the subgrid. The default value is no nested grid configured.
         - The **Child items parent ID** property is also needed to configure a nested grid and specifies the column (and relationship) to use to link the parent and child tables together.
         - The **Disable editing in child items grid** property provides some control over the editability of the nested grid. By default, the nested grid inherits the editability of the parent grid, but this property can be used to suppress editing in the nested grid when the parent grid is editable. The default value is **No**.  
@@ -133,6 +135,8 @@ To work around this, you can display a custom card by configuring the table to u
 - Column grouping isn't supported when paging on the grid is enabled.
 - If the dataset displayed in the grid contains duplicate rows, the duplicates might not display in the grid. This can lead to the reported record count showing more records than are actually in the grid, or more records appearing when exporting the data to Excel or viewing the data in legacy Advanced Find. This behavior applies to all grid controls, not just the Power Apps grid control.
 - If a user has read-only privileges to the main list and then navigates through a form to a subgrid representing an entity to which they have write privileges, the subgrid still won't allow the user to make changes as access is determined first by the main entity, then by the related entity.
+- When using the Power Apps grid control in editable mode, lookup field cell customization options aren't supported.
+- When the Power Apps grid control is configured as read-only at the table level but editable for a subset of views, events might not fire uniformly across the different configuration states.
 
 ### Related articles
 

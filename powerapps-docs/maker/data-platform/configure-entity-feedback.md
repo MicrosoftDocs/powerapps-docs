@@ -106,10 +106,8 @@ For example, you can provide a running total of all feedback records created for
 The form in an app now displays a running total of all feedback records submitted for the record.
 :::image type="content" source="media/rollup-column-example.png" alt-text="Rollup column displaying the total feedback count for the record":::
 
-More information: [Define rollup columns that aggregate values](define-rollup-fields.md)
-  
 ### See also
 
-[Star rating control](../model-driven-apps/additional-controls-for-dynamics-365-for-phones-and-tablets.md#star-rating)
+[Define rollup columns that aggregate values](define-rollup-fields.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

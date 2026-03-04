@@ -1,14 +1,14 @@
 ---
 title: Work with Dataverse formula column data types
 description: Learn how to create and use decimal, whole number, float, and choice data types in formula columns.
-author: sanjeevgoyalmsft
+author: paulliew
 reviewer: mattp123
 ms.topic: how-to
 ms.custom: 
-ms.date: 01/06/2025
+ms.date: 01/09/2026
 ms.update-cycle: 180-days
 ms.subservice: dataverse-maker
-ms.author: dikamath
+ms.author: paulliew
 ms.reviewer: matp
 ms.collection: bap-ai-copilot
 ai-usage: ai-assisted

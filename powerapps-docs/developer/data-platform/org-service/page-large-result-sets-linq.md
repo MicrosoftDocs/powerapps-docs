@@ -1,6 +1,6 @@
 ---
-title: "Page large result sets with LINQ (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Read how you can page the results of a large .NET Language-Integrated Query (LINQ) query by using the Take and Skip operators." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Page large result sets with LINQ (Microsoft Dataverse) | Microsoft Docs"
+description: "Read how you can page the results of a large .NET Language-Integrated Query (LINQ) query by using the Take and Skip operators." 
 ms.date: 04/03/2022
 author: MsSQLGirl
 ms.author: jukoesma

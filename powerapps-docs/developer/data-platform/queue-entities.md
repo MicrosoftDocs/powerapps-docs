@@ -1,5 +1,5 @@
 ---
-title: "Queue tables (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Queue tables (Microsoft Dataverse) | Microsoft Docs"
 description: "Queues in Power Apps are instrumental in organizing, prioritizing, and monitoring the progress of your work." 
 ms.custom: ""
 ms.date: 05/04/2021

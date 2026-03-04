@@ -235,22 +235,36 @@ The following example returns the number of related accounts in a column named `
 
 ### Per query limit
 
-Even with the default limit for aggregate queries applied, the query might take some time to complete. You can use the `aggregatelimit` attribute in a query to apply a custom lower limit that returns the `AggregateQueryRecordLimit exceeded` error if the results are higher than your custom limit.
+Even with the default limit for aggregate queries applied, the query might take some time to complete. You can use the `aggregatelimit` attribute in a query to apply a custom lower limit.
 
-In this example, the custom maximum rows limit is 10:
+If the `aggregatelimit` attribute is specified, then the query also doesn't return an `AggregateQueryRecordLimit exceeded` error if the limit is reached, and instead the query aggregates over at most `limit + 1` arbitrary rows from the data.
+
+The per query limit can't exceed the default aggregate limit.
+
+#### Example
+
+In this example, the custom maximum rows limit is 5:
 
 ```xml
 <fetch aggregate='true'
-   aggregatelimit = '10'>
-   <entity name='opportunity'>
+   aggregatelimit = '5'>
+   <entity name='account'>
       <attribute name='name'
-         alias='opportunity_count'
+         alias='account_count'
          aggregate='count' />
    </entity>
 </fetch>
 ```
 
-The per query limit can't exceed default aggregate limit.
+The results are a single row aggregating up to six of the records:
+
+```text
+ -----------------
+ | account_count |
+ -----------------
+ | 6             |
+ -----------------
+```
 
 ## Next steps
 

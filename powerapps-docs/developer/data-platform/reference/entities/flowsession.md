@@ -87,6 +87,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
 - [ParentCloudFlowRunSequenceId](#BKMK_ParentCloudFlowRunSequenceId)
+- [ParentDesktopFlowRunGuid](#BKMK_ParentDesktopFlowRunGuid)
 - [ParentDesktopFlowRunId](#BKMK_ParentDesktopFlowRunId)
 - [ParentWorkflowId](#BKMK_ParentWorkflowId)
 - [ProcessVersion](#BKMK_ProcessVersion)
@@ -486,6 +487,18 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsLocalizable|False|
 |MaxLength|1000|
 
+### <a name="BKMK_ParentDesktopFlowRunGuid"></a> ParentDesktopFlowRunGuid
+
+|Property|Value|
+|---|---|
+|Description|**The run id of the parent desktop flow run, only used when the Desktop Flow was run by a desktop flow. Used instead of Parent Desktop Flow Run Id when the field is available. Same purpose but keeping only the guid instead of doing a lookup.**|
+|DisplayName|**Parent Desktop Flow Run Id Guid**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`parentdesktopflowrunguid`|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
+
 ### <a name="BKMK_ParentDesktopFlowRunId"></a> ParentDesktopFlowRunId
 
 |Property|Value|
@@ -824,6 +837,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |1|**DesktopFlow**|
 |2|**Local**|
 |3|**RunDesktopFlowDataverseApi**|
+|4|**Cua**|
 
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
 
@@ -1353,6 +1367,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [flowsession_flowlog_flowsessionid](#BKMK_flowsession_flowlog_flowsessionid)
 - [flowsession_flowlog_parentobjectid](#BKMK_flowsession_flowlog_parentobjectid)
 - [flowsession_flowsession_parentdesktopflowrunid](#BKMK_flowsession_flowsession_parentdesktopflowrunid-one-to-many)
+- [flowsession_flowsessionbinary_FlowSessionId](#BKMK_flowsession_flowsessionbinary_FlowSessionId)
 - [flowsession_MailboxTrackingFolders](#BKMK_flowsession_MailboxTrackingFolders)
 - [flowsession_PrincipalObjectAttributeAccesses](#BKMK_flowsession_PrincipalObjectAttributeAccesses)
 - [flowsession_SyncErrors](#BKMK_flowsession_SyncErrors)
@@ -1441,6 +1456,18 @@ Many-To-One Relationship: [flowsession flowsession_flowsession_parentdesktopflow
 |ReferencingAttribute|`parentdesktopflowrunid`|
 |ReferencedEntityNavigationPropertyName|`flowsession_flowsession_parentdesktopflowrunid`|
 |IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_flowsession_flowsessionbinary_FlowSessionId"></a> flowsession_flowsessionbinary_FlowSessionId
+
+Many-To-One Relationship: [flowsessionbinary flowsession_flowsessionbinary_FlowSessionId](flowsessionbinary.md#BKMK_flowsession_flowsessionbinary_FlowSessionId)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`flowsessionbinary`|
+|ReferencingAttribute|`flowsessionid`|
+|ReferencedEntityNavigationPropertyName|`flowsession_flowsessionbinary_flowsessionid`|
+|IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_flowsession_MailboxTrackingFolders"></a> flowsession_MailboxTrackingFolders

@@ -214,6 +214,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [owner_flowmachinenetwork](#BKMK_owner_flowmachinenetwork)
 - [owner_flowrun](#BKMK_owner_flowrun)
 - [owner_flowsession](#BKMK_owner_flowsession)
+- [owner_flowsessionbinary](#BKMK_owner_flowsessionbinary)
 - [owner_fxexpression](#BKMK_owner_fxexpression)
 - [owner_goal](#BKMK_owner_goal)
 - [owner_goalrollupquery](#BKMK_owner_goalrollupquery)
@@ -233,6 +234,8 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [owner_mailboxtrackingfolder](#BKMK_owner_mailboxtrackingfolder)
 - [owner_mailmergetemplates](#BKMK_owner_mailmergetemplates)
 - [owner_managedidentity](#BKMK_owner_managedidentity)
+- [owner_mcpserver](#BKMK_owner_mcpserver)
+- [owner_mcptool](#BKMK_owner_mcptool)
 - [owner_msdyn_aibdataset](#BKMK_owner_msdyn_aibdataset)
 - [owner_msdyn_aibdatasetfile](#BKMK_owner_msdyn_aibdatasetfile)
 - [owner_msdyn_aibdatasetrecord](#BKMK_owner_msdyn_aibdatasetrecord)
@@ -316,6 +319,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [owner_msdyn_pmprocessversion](#BKMK_owner_msdyn_pmprocessversion)
 - [owner_msdyn_pmrecording](#BKMK_owner_msdyn_pmrecording)
 - [owner_msdyn_pmsimulation](#BKMK_owner_msdyn_pmsimulation)
+- [owner_msdyn_pmtab](#BKMK_owner_msdyn_pmtab)
 - [owner_msdyn_pmtemplate](#BKMK_owner_msdyn_pmtemplate)
 - [owner_msdyn_pmview](#BKMK_owner_msdyn_pmview)
 - [owner_msdyn_qna](#BKMK_owner_msdyn_qna)
@@ -1405,6 +1409,18 @@ Many-To-One Relationship: [flowsession owner_flowsession](flowsession.md#BKMK_ow
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_owner_flowsessionbinary"></a> owner_flowsessionbinary
+
+Many-To-One Relationship: [flowsessionbinary owner_flowsessionbinary](flowsessionbinary.md#BKMK_owner_flowsessionbinary)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`flowsessionbinary`|
+|ReferencingAttribute|`ownerid`|
+|ReferencedEntityNavigationPropertyName|`owner_flowsessionbinary`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 ### <a name="BKMK_owner_fxexpression"></a> owner_fxexpression
 
 Many-To-One Relationship: [fxexpression owner_fxexpression](fxexpression.md#BKMK_owner_fxexpression)
@@ -1630,6 +1646,30 @@ Many-To-One Relationship: [managedidentity owner_managedidentity](managedidentit
 |ReferencingEntity|`managedidentity`|
 |ReferencingAttribute|`ownerid`|
 |ReferencedEntityNavigationPropertyName|`owner_managedidentity`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_owner_mcpserver"></a> owner_mcpserver
+
+Many-To-One Relationship: [mcpserver owner_mcpserver](mcpserver.md#BKMK_owner_mcpserver)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`mcpserver`|
+|ReferencingAttribute|`ownerid`|
+|ReferencedEntityNavigationPropertyName|`owner_mcpserver`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_owner_mcptool"></a> owner_mcptool
+
+Many-To-One Relationship: [mcptool owner_mcptool](mcptool.md#BKMK_owner_mcptool)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`mcptool`|
+|ReferencingAttribute|`ownerid`|
+|ReferencedEntityNavigationPropertyName|`owner_mcptool`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
@@ -2627,6 +2667,18 @@ Many-To-One Relationship: [msdyn_pmsimulation owner_msdyn_pmsimulation](msdyn_pm
 |ReferencingAttribute|`ownerid`|
 |ReferencedEntityNavigationPropertyName|`owner_msdyn_pmsimulation`|
 |IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_owner_msdyn_pmtab"></a> owner_msdyn_pmtab
+
+Many-To-One Relationship: [msdyn_pmtab owner_msdyn_pmtab](msdyn_pmtab.md#BKMK_owner_msdyn_pmtab)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_pmtab`|
+|ReferencingAttribute|`ownerid`|
+|ReferencedEntityNavigationPropertyName|`owner_msdyn_pmtab`|
+|IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_owner_msdyn_pmtemplate"></a> owner_msdyn_pmtemplate

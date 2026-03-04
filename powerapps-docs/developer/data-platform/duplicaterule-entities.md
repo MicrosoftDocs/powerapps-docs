@@ -1,6 +1,6 @@
 ---
-title: "Duplicate rule tables (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Read about tables containing data that define duplicate detection rules." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Duplicate rule tables (Microsoft Dataverse) | Microsoft Docs"
+description: "Read about tables containing data that define duplicate detection rules." 
 ms.date: 10/05/2023
 ms.reviewer: pehecke
 ms.topic: article

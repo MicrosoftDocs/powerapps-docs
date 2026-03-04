@@ -1,8 +1,8 @@
 ---
-title: "ModelDrivenFormIntegration control properties and actions | MicrosoftDocs"
+title: "ModelDrivenFormIntegration control properties and actions"
 description: Learn about ModelDrivenFormIntegration control properties and actions
 ms.custom: ""
-ms.date: 03/29/2024
+ms.date: 11/17/2024
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -22,10 +22,15 @@ search.audienceType:
 ---
 # ModelDrivenFormIntegration control properties and actions
 
-Canvas apps embedded on model-driven forms contain a special control named **ModelDrivenFormIntegration**. This control is responsible for 
-bringing contextual data from the host model-driven form to the embedded canvas app.  
+Canvas apps embedded on model-driven forms contain a special control named **ModelDrivenFormIntegration**. This control is responsible for
+bringing contextual data from the host model-driven form to the embedded canvas app.
 
-This topic explains the properties and actions available on the ModelDrivenFormIntegration control.
+> [!IMPORTANT]
+> To be able to interact with the `ModelDrivenFormIntegration` control, the canvas app must be *created* by selecting **Customize** on the **Canvas app** control properties for the model-driven form using the classic form designer. More information: [Embed a canvas app using the classic experience](embedded-canvas-app-add-classic-designer.md#embed-a-canvas-app-using-the-classic-experience)
+
+This article explains the properties and actions available on the `ModelDrivenFormIntegration` control. This control is available to customize in Power Apps Studio when you create the canvas app using the Canvas app control properties UI in the classic form designer.
+
+mod:::image type="content" source="media/embedded-canvas-app/modeldrivenformintegration-control.png" alt-text="Modeldrivenformintegration control in Power Apps Studio":::
 
 | Property or action | Description |
 |:--------------|:-------------------------|
@@ -39,15 +44,16 @@ This topic explains the properties and actions available on the ModelDrivenFormI
 |**OpenQuickCreateForm** | Opens the default quick create form for an table.  <br />See [Perform predefined actions on the host form](embedded-canvas-app-actions.md#openquickcreateformentityname) for details.  |
 |**Data** | Read-only property used by the framework to send some key data from the host model-driven form to the embedded canvas app.  <br /> Do not use this property. Use Item to access the row from the host model-driven form.  |
 
+## ModelDrivenFormIntegration control data is not available on app start
+
+The `ModelDrivenFormIntegration.Item` property isn't guaranteed to be populated with data when the app starts. The app should either be designed to wait for this data using an expression like `!IsBlank(ModelDrivenFormIntegration.Item)`, or the app should explicitly retrieve the record using an expression like `LookUp(Accounts, Account = GUID(First(ModelDrivenFormIntegration.Data).ItemId))`.
+
 ## See also
+
 [Embed a canvas app on a model-driven form](embed-canvas-app-in-form.md) <br />
 [Add an embedded canvas app on a model-driven form](embedded-canvas-app-add-classic-designer.md) <br />
-[Edit a canvas app embedded on a model-driven form](embedded-canvas-app-edit-classic-designer.md) <br />
-[Customize the screen size and orientation of a canvas app embedded on a model-driven form](embedded-canvas-app-customize-screen.md) <br />
 [Perform predefined actions on the host form from within an embedded canvas app](embedded-canvas-app-actions.md) <br />
 [Share an embedded canvas app](share-embedded-canvas-app.md) <br />
 [Guidelines on working with embedded canvas apps](embedded-canvas-app-guidelines.md) <br />
-[Migrating embedded canvas apps on model-driven forms created using the public preview release to latest](embedded-canvas-app-migrate-from-preview.md) <br />
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

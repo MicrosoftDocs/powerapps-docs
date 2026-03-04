@@ -2,7 +2,7 @@
 title: Use elastic tables using code
 description: Learn how to perform data operations on Dataverse elastic tables using code.
 ms.topic: how-to
-ms.date: 12/16/2024
+ms.date: 09/23/2025
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: jdaly
@@ -69,7 +69,6 @@ var request = new RetrieveRequest
 ```
 
 [Learn more about using optional parameters](optional-parameters.md).
-
 
 #### [Web API](#tab/webapi)
 
@@ -272,7 +271,6 @@ OData-EntityId: [Organization URI]/api/data/v9.2/sensordata(00aa00aa-bb11-cc22-d
 
 Use the `x-ms-session-token` value that is returned with the `MSCRM.SessionToken` request header to retrieve the latest version of a record. [Learn more about sending the session token](#sending-the-session-token).
 
-
 > [!NOTE]
 > *Deep insert* is not supported with elastic tables. Each related record needs to be created independently. [Only standard tables support deep insert](webapi/create-entity-web-api.md#create-related-table-rows-in-one-operation).
 
@@ -381,7 +379,6 @@ There are two different ways to compose a request to retrieve a record by using 
 
 This example uses the [RetrieveRequest class](xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest). The `Target` property is set to an [EntityReference](xref:Microsoft.Xrm.Sdk.EntityReference) that is created by using the constructor that accepts a [KeyAttributeCollection](xref:Microsoft.Xrm.Sdk.KeyAttributeCollection) to use the `KeyForNoSqlEntityWithPKPartitionId` alternate key. [Learn more about using the EntityReference class with alternate keys](use-alternate-key-reference-record.md#using-the-entityreference-class).
 
-
 ```csharp
 public static void RetrieveExampleAlternateKey(IOrganizationService service, Guid sensorDataId, string deviceId) {
 
@@ -465,13 +462,12 @@ When you query the rows of an elastic table, you get the best performance if you
 
 > [!NOTE]
 > When you use this approach, the parameter must use the name `partitionId` (with a capital *I*) instead of `partitionid` (in all lowercase letters).
-> 
+>
 > When you specify a filter this way, you don't have to specify the filter criteria on `partitionid` in your query in the usual manner (that is, by using FetchXML `condition`, [QueryExpression](xref:Microsoft.Xrm.Sdk.Query.QueryExpression) [ConditionExpression](xref:Microsoft.Xrm.Sdk.Query.ConditionExpression), or Web API `$filter`).
-> 
+>
 > Specifying a filter on the `partitionid` value in the usual manner doesn't have the same performance benefits as specifying it through the `partitionId` parameter as shown in the following examples.
 
 These examples retrieve the first 500 rows in the `contoso_SensorData` table that belong to the logical partition where `partitionid` = `'deviceid-001'`.
-
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -539,7 +535,7 @@ OData-Version: 4.0
 
 > [!NOTE]
 > The default page size for elastic tables is 500 rows. For standard tables, the default size is 5,000. Learn more about paging:
-> 
+>
 > - [Page results using FetchXml](fetchxml/page-results.md)
 > - [Page results using QueryExpression](org-service/queryexpression/page-results.md)
 > - [Page results using OData](webapi/query/page-results.md)
@@ -699,7 +695,7 @@ You can also use the `partitionId` parameter:
 
 When a table record refers to an elastic table record where the `partitionid` column value is null, you can associate a record in that table to a elastic table record just like standard records. Refer [SDK for .NET](org-service/entity-operations-associate-disassociate.md), or [the Web API](webapi/associate-disassociate-entities-using-web-api.md).
 
-When a table record refers to an elastic table record which has `partitionid` column value set, you must include the `partitionid` column value of the elastic table record when you set the lookup column of the referencing table. You can do this by including the value as an alternate key. 
+When a table record refers to an elastic table record which has `partitionid` column value set, you must include the `partitionid` column value of the elastic table record when you set the lookup column of the referencing table. You can do this by including the value as an alternate key.
 
 As described in [Partitionid value column on referencing table](create-elastic-tables.md#partitionid-value-column-on-referencing-table), when a one-to-many relationship is created and the elastic table is the *referenced* table, a string column and a lookup column is created on the *referencing* table. The string column stores the `partitionid` value of the referenced elastic table record.
 
@@ -709,7 +705,6 @@ You can set both the lookup and the string column values with their respective v
 - Setting the two column values together in one update
 
 How you do this depends on whether you are using the SDK for .NET or Web API
-
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -810,7 +805,6 @@ public static void AssociateMultipleElasticTableExample(
 }
 ```
 
-
 #### [Web API](#tab/webapi)
 
 This example uses the alternate key style to associate a row of the `contoso_SensorData` table with `contoso_sensordataid` = `490c3c40-e8d1-ee11-9079-000d3a993550` and `partitionid` = `'DEVICE-123'` to account record with `accountid` value of `2ada33e7-ef8b-ee11-8179-000d3a9933c9`.
@@ -877,13 +871,13 @@ You can use the `CreateMultiple` message with either the SDK for .NET or Web API
 This example uses the [CreateMultipleRequest class](xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest) to create multiple rows in the `contoso_SensorData` elastic table.
 
 ```csharp
-public static Guid CreateMultiple(IOrganizationService service)
+public static Guid[] CreateMultiple(IOrganizationService service)
 {
     string tableLogicalName = "contoso_sensordata";
 
-    List<Microsoft.Xrm.Sdk.Entity> entityList = new List<Microsoft.Xrm.Sdk.Entity>
-    {      
-        new Microsoft.Xrm.Sdk.Entity(tableLogicalName)
+    List<Microsoft.Xrm.Sdk.Entity> entityList =
+    [
+        new (tableLogicalName)
         {
             Attributes =
             {
@@ -895,7 +889,7 @@ public static Guid CreateMultiple(IOrganizationService service)
                 { "ttlinseconds", 86400 }
             }
         },
-        new Microsoft.Xrm.Sdk.Entity(tableLogicalName)
+        new (tableLogicalName)
         {
             Attributes =
             {
@@ -906,8 +900,8 @@ public static Guid CreateMultiple(IOrganizationService service)
                 { "partitionid", "deviceid-002" },
                 { "ttlinseconds", 86400 }
             }
-        }
-        new Microsoft.Xrm.Sdk.Entity(tableLogicalName)
+        },
+        new (tableLogicalName)
         {
             Attributes =
             {
@@ -919,7 +913,7 @@ public static Guid CreateMultiple(IOrganizationService service)
                 { "ttlinseconds", 86400 }
             }
         }
-    };
+    ];
 
     // Create an EntityCollection populated with the list of entities.
     EntityCollection entities = new(entityList)
@@ -932,7 +926,9 @@ public static Guid CreateMultiple(IOrganizationService service)
     {
         Targets = entities,
     };
-    return service.Execute(request);
+
+    var createMultipleResponse = (CreateMultipleResponse)service.Execute(createMultipleRequest);
+    return createMultipleResponse.Ids;
 }
 ```
 
@@ -1005,13 +1001,13 @@ You can use the `UpdateMultiple` message with either the SDK for .NET or Web API
 This example uses the [UpdateMultipleRequest class](xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest) to update multiple rows of the `contoso_SensorData` elastic table. These updates set the `contoso_value` column.
 
 ```csharp
-public static Guid UpdateMultiple(IOrganizationService service)
+public static void UpdateMultiple(IOrganizationService service)
 {
     string tableLogicalName = "contoso_sensordata";
 
-    List<Microsoft.Xrm.Sdk.Entity> entityList = new List<Microsoft.Xrm.Sdk.Entity>
-    {
-        new Microsoft.Xrm.Sdk.Entity(tableLogicalName)
+    List<Microsoft.Xrm.Sdk.Entity> entityList =
+    [
+        new(tableLogicalName, new Guid("6114ca58-0928-ee11-9965-6045bd5cd155"))
         {
             Attributes =
             {
@@ -1019,23 +1015,23 @@ public static Guid UpdateMultiple(IOrganizationService service)
                 { "partitionid", "deviceid-001" }
             }
         },
-        new Microsoft.Xrm.Sdk.Entity(tableLogicalName)
+        new(tableLogicalName, new Guid("6214ca58-0928-ee11-9965-6045bd5cd155"))
         {
             Attributes =
             {
                 { "contoso_value", "15" },
                 { "partitionid", "deviceid-002" }
             }
-        }
-        new Microsoft.Xrm.Sdk.Entity(tableLogicalName)
-        {
+        },
+        new(tableLogicalName, new Guid("6314ca58-0928-ee11-9965-6045bd5cd155"))
+        {               
             Attributes =
             {
                 { "contoso_value", "25" },
                 { "partitionid", "deviceid-002" }
             }
         }
-    };
+    ];
 
     // Create an EntityCollection populated with the list of entities.
     EntityCollection entities = new(entityList)
@@ -1048,7 +1044,8 @@ public static Guid UpdateMultiple(IOrganizationService service)
     {
         Targets = entities,
     };
-    return service.Execute(request);
+
+    service.Execute(updateMultipleRequest);
 }
 ```
 
@@ -1106,7 +1103,6 @@ You can use the `DeleteMultiple` message with either the SDK for .NET or Web API
 
 #### [SDK for .NET](#tab/sdk)
 
-
 The following `DeleteMultipleExample` static method uses the `DeleteMultiple` message with the [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) to delete multiple rows from the `contoso_SensorData` elastic table. The alternate key is used to include the `partitionid` value to uniquely identify the rows.
 
 > [!NOTE]
@@ -1135,11 +1131,9 @@ public static void DeleteMultipleExample(IOrganizationService service)
         }
     };
 
-    OrganizationRequest request = new(requestName:"DeleteMultiple")
+    DeleteMultipleRequest request = new()
     {
-        Parameters = {
-            {"Targets", new EntityReferenceCollection(entityReferences)}
-        }
+        Targets = new EntityReferenceCollection(entityReferences)
     };
 
     service.Execute(request);

@@ -68,6 +68,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [RecordCount](#BKMK_RecordCount)
 - [SchemaModifiedOn](#BKMK_SchemaModifiedOn)
+- [SourceRecordCount](#BKMK_SourceRecordCount)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
 - [SynapseDatabaseName](#BKMK_SynapseDatabaseName)
@@ -296,6 +297,20 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Format|DateAndTime|
 |ImeMode|Auto|
 |SourceTypeMask|0|
+
+### <a name="BKMK_SourceRecordCount"></a> SourceRecordCount
+
+|Property|Value|
+|---|---|
+|Description|**Source Record Count**|
+|DisplayName|**SourceRecordCount**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`sourcerecordcount`|
+|RequiredLevel|None|
+|Type|BigInt|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
 
 ### <a name="BKMK_statecode"></a> statecode
 

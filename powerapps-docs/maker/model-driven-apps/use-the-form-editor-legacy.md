@@ -89,15 +89,7 @@ Use the **Navigation Link** button in the **Control** group of the **Insert** ta
 |Name|**Required**: Text to display as a label.|  
 |Icon|Use a 32x32 pixel web resource. Use a PNG image with a transparent background is recommended.|  
 |Web Resource|Specify a web resource to display in the main pane of the form.|  
-|External URL|Specify the URL of a page to display in the main pane of the form.|  
-
-<a name="BKMK_PrivacyNotices"></a>   
-
-## Privacy notices
-
- [!INCLUDE[cc_privacy_crm_website_preview_control](../../includes/cc-privacy-crm-website-preview-control.md)]    
-  
- [!INCLUDE[cc_privacy_multimedia_control](../../includes/cc-privacy-multimedia-control.md)]  
+|External URL|Specify the URL of a page to display in the main pane of the form.|
 
 ## See also
 

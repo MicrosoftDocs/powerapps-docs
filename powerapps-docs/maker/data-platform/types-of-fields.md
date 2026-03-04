@@ -1,7 +1,7 @@
 ---
 title: "Column data types in Microsoft Dataverse | MicrosoftDocs"
 description: "Understand the different column data types available for your app"
-ms.date: 07/11/2025
+ms.date: 01/09/2026
 ms.topic: article
 author: "Mattp123"
 ms.subservice: dataverse-maker

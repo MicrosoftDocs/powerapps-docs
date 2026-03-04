@@ -200,7 +200,7 @@ Offline-first mode provides the best experience for users in no and low network 
 If it's important for users to access data that's not downloaded to their devices, you can activate the **Online mode** toggle that's visible to users in the Device status page. When users use the **Online mode** toggle, they can access data that's not synchronized to the local device. The toggle can be activated only when the device is connected to a network. 
 
 1. On the command bar, select **Settings**.
-1. Select the **Upcoming** tab. 
+1. Select the **Features** tab. 
 1. Set the **Allow users to work in online mode** option to **On** to let users choose if they want to use the app in online mode when connected to a network.
 
 ## Supported capabilities 

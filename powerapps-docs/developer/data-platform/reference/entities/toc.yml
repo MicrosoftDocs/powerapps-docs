@@ -151,6 +151,9 @@ items:
 - name: "AIPluginUserSetting"
   displayName: "AIPluginUserSetting entity"
   href: aipluginusersetting.md
+- name: "Allowed MCP Client"
+  displayName: "allowedmcpclient entity"
+  href: allowedmcpclient.md
 - name: "Analysis Component"
   displayName: "msdyn_analysiscomponent entity"
   href: msdyn_analysiscomponent.md
@@ -727,6 +730,9 @@ items:
 - name: "Flow Session"
   displayName: "flowsession entity"
   href: flowsession.md
+- name: "Flow Session Binary"
+  displayName: "flowsessionbinary entity"
+  href: flowsessionbinary.md
 - name: "Follow"
   displayName: "PostFollow entity"
   href: postfollow.md
@@ -916,6 +922,12 @@ items:
 - name: "Managed Property"
   displayName: "ManagedProperty entity"
   href: managedproperty.md
+- name: "MCPServer"
+  displayName: "MCPServer entity"
+  href: mcpserver.md
+- name: "MCPTool"
+  displayName: "MCPTool entity"
+  href: mcptool.md
 - name: "MetadataForArchival"
   displayName: "MetadataForArchival entity"
   href: metadataforarchival.md
@@ -1099,6 +1111,9 @@ items:
 - name: "PM Simulation"
   displayName: "msdyn_pmsimulation entity"
   href: msdyn_pmsimulation.md
+- name: "PM Tab"
+  displayName: "msdyn_pmtab entity"
+  href: msdyn_pmtab.md
 - name: "PM Template"
   displayName: "msdyn_pmtemplate entity"
   href: msdyn_pmtemplate.md
@@ -1219,6 +1234,9 @@ items:
 - name: "Publishing State Transition Rule"
   displayName: "mspp_publishingstatetransitionrule entity"
   href: mspp_publishingstatetransitionrule.md
+- name: "Purview Label Info"
+  displayName: "purviewlabelinfo entity"
+  href: purviewlabelinfo.md
 - name: "QnA"
   displayName: "msdyn_qna entity"
   href: msdyn_qna.md
@@ -1372,6 +1390,9 @@ items:
 - name: "Sensitivity Label"
   displayName: "sensitivitylabel entity"
   href: sensitivitylabel.md
+- name: "Sensitivity Label Attribute Mapping"
+  displayName: "sensitivitylabelattributemapping entity"
+  href: sensitivitylabelattributemapping.md
 - name: "Service Configuration"
   displayName: "msdyn_serviceconfiguration entity"
   href: msdyn_serviceconfiguration.md

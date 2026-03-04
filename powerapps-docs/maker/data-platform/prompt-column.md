@@ -2,7 +2,7 @@
 title: "Prompt columns in Microsoft Dataverse"
 description: "Understand how to create, manage, and use prompt columns with Power Apps and Dataverse."
 keywords: ""
-ms.date: 07/10/2025
+ms.date: 01/09/2026
 ms.custom: 
 ms.topic: article
 applies_to: 

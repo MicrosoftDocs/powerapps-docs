@@ -1,53 +1,108 @@
 ### YamlMime:Landing
 
-title: Power Apps code apps (Preview) documentation
-summary: Power Apps code apps let developers bring Power Apps capabilities into custom web apps built in a code‑first IDE. You can develop locally and run the same app in Power Platform. Build with popular frameworks (React, Vue, etc.) while keeping full control over your UI and logic.
+title: Power Apps code apps documentation
+summary: Power Apps code apps let developers bring Power Apps capabilities into custom web apps built in a code‑first IDE. You can develop locally and run the same app in Power Platform. Build with popular frameworks (React, Vue, and others) while keeping full control over your UI and logic.
 
 metadata:
-  title: Power Apps code apps (Preview) documentation
-  description: Provides access to highlighted areas within the Power Apps code apps (Preview) documentation
+  title: Power Apps code apps documentation
+  description: Provides access to highlighted areas within the Power Apps code apps documentation
   services: service
   ms.subservice: code-apps
   ms.topic: landing-page
   ms.collection: collection
   author: JimDaly
   ms.author: jdaly
-  ms.date: 09/03/2025 
+  ms.date: 09/22/2025
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
 landingContent:
-
-  # Card 
+  # Card
   - title: Get started
     linkLists:
-       - linkListType: overview
-         links:
+      - linkListType: overview
+        links:
           - text: Overview
             url: overview.md
-          - text: "Quickstart: Create your first code app"
-            url: quickstart.md
-  # Card 
-  - title: How To
-    linkLists:
-       - linkListType: how-to-guide
-         links:
-          - text: "Create an app from scratch"
+      - linkListType: quickstart
+        links:
+          - text: "Quickstart: Create a code app"
             url: how-to/create-an-app-from-scratch.md
-          - text: "Connect to data"
-            url: how-to/connect-to-data.md
-          - text: "Connect to Dataverse"
-            url: how-to/connect-to-dataverse.md
-          - text: "Connect to Azure SQL"
-            url: how-to/connect-to-azure-sql.md
-          - text: "Create a Basic Asset Management API with Azure Functions"
-            url: how-to/create-basic-asset-management-api-azure-functions.md            
-    # Card 
-  - title: Architecture
-    linkLists:
-       - linkListType: architecture
-         links:
-          - text: Code apps Architecture
+      - linkListType: architecture
+        links:
+          - text: Architecture
             url: architecture.md
-          - text: System limits and configuration
+
+  # Card
+  - title: What's new?
+    linkLists:
+      - linkListType: whats-new
+        links:
+          - text: Quickstart with npm CLI
+            url: how-to/npm-quickstart.md
+
+  # Card
+  - title: Build
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: System configuration
             url: system-limits-configuration.md
+      - linkListType: how-to-guide
+        links:
+          - text: Connect to data
+            url: how-to/connect-to-data.md
+          - text: Connect to Copilot Studio
+            url: how-to/connect-to-copilot-studio.md
+          - text: Connect to Dataverse
+            url: how-to/connect-to-dataverse.md
+          - text: Get Dataverse tables metadata
+            url: how-to/get-table-metadata.md
+          - text: Connect to Azure SQL
+            url: how-to/connect-to-azure-sql.md
+          - text: SharePoint operations
+            url: how-to/sharepoint-operations.md
+          - text: Create a basic asset management API with Azure Functions
+            url: how-to/create-basic-asset-management-api-azure-functions.md
+          - text: Analyze data requests and responses
+            url: how-to/analyze-data-request-response.md
+          - text: Get context data
+            url: how-to/retrieve-context.md
+
+  # Card
+  - title: Deploy
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Application lifecycle management (ALM)
+            url: how-to/alm.md
+
+  # Card
+  - title: Monitor
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Manage PAC CLI code command telemetry
+            url: how-to/telemetry.md
+          - text: Set up Azure App Insights
+            url: how-to/set-up-azure-app-insights.md
+
+  # Card
+  - title: Manage
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Configure Content Security Policy (CSP)
+            url: how-to/content-security-policy.md
+          - text: Migrate your code to v1.0
+            url: how-to/migrate-to-v1.md
+
+  # Card
+  - title: Troubleshoot
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Adding a data source
+            url: troubleshoot-add-datasource.md
+          - text: Zscaler issues
+            url: troubleshoot-zscaler-issues.md

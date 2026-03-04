@@ -5,7 +5,7 @@ Keywords: command bar, command designer
 author: caburk
 ms.author: caburk
 ms.reviewer: matp
-ms.date: 03/11/2025
+ms.date: 01/09/2026
 ms.topic: how-to
 ms.subservice: mda-maker
 search.audienceType: 

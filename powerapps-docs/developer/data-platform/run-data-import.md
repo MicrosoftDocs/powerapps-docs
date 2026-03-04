@@ -1,6 +1,6 @@
 ---
-title: "Run data import (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Data importation runs directly on the Dynamics 365 server, and requires three asynchronous jobs for parsing, map-guided transformation, and uploading." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Run data import (Microsoft Dataverse) | Microsoft Docs"
+description: "Data importation runs directly on the Dynamics 365 server, and requires three asynchronous jobs for parsing, map-guided transformation, and uploading." 
 ms.date: 03/15/2021
 ms.reviewer: pehecke
 ms.topic: article

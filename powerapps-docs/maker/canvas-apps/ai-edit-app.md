@@ -7,7 +7,7 @@ ms.collection:
     - bap-ai-copilot
     - get started
 ms.reviewer: 
-ms.date: 5/27/2025
+ms.date: 11/10/2025
 ms.update-cycle: 180-days
 ms.subservice: canvas-maker
 ms.author: mkaur
@@ -24,6 +24,9 @@ ai-usage: ai-assisted
 # Edit your app with Copilot in Power Apps Studio (preview)
 
 [!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
+
+> [!IMPORTANT]
+> Starting January 6, 2026, this feature will be removed. To continue creating apps with Copilot, use [Plans](../plan-designer/plan-designer.md).
 
 Edit your apps without writing code or designing screens. With Copilot in Power Apps, you can use natural language to describe the changes you want to make, and AI does the rest.
 

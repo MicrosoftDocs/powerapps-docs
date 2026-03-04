@@ -4,8 +4,8 @@ description: "Learn about uploading, downloading, and deleting data in image col
 ms.date: 02/04/2023
 ms.reviewer: jdaly
 ms.topic: how-to
-author: mkannapiran
-ms.author: kamanick
+author: MsSQLGirl
+ms.author: jukoesma
 ms.subservice: dataverse-developer
 search.audienceType: 
   - developer

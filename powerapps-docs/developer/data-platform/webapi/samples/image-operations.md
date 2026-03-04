@@ -2,8 +2,8 @@
 title: "Sample: Image Operations using Dataverse Web API (Microsoft Dataverse) | Microsoft Learn"
 description: "This sample demonstrates how to perform operations with image columns using the Dataverse Web API."
 ms.date: 01/11/2023
-author: mkannapiran
-ms.author: kamanick
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType:
   - developer
@@ -14,6 +14,9 @@ contributors:
 # Sample: Image Operations using Dataverse Web API 
 
 This .NET 6.0 sample demonstrates how to perform operations with image columns using the Dataverse Web API.
+
+> [!div class="nextstepaction"]
+> [View this sample on Github](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/CSharp-NETx/ImageOperations)
 
 This sample uses the common helper code in the [WebAPIService class library (C#)](webapiservice.md).
 

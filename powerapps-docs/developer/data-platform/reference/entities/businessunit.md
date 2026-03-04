@@ -1553,6 +1553,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [business_unit_flowmachinenetwork](#BKMK_business_unit_flowmachinenetwork)
 - [business_unit_flowrun](#BKMK_business_unit_flowrun)
 - [business_unit_flowsession](#BKMK_business_unit_flowsession)
+- [business_unit_flowsessionbinary](#BKMK_business_unit_flowsessionbinary)
 - [business_unit_fxexpression](#BKMK_business_unit_fxexpression)
 - [business_unit_goal](#BKMK_business_unit_goal)
 - [business_unit_goalrollupquery](#BKMK_business_unit_goalrollupquery)
@@ -1566,6 +1567,8 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [business_unit_mailbox](#BKMK_business_unit_mailbox)
 - [business_unit_mailmergetemplates](#BKMK_business_unit_mailmergetemplates)
 - [business_unit_managedidentity](#BKMK_business_unit_managedidentity)
+- [business_unit_mcpserver](#BKMK_business_unit_mcpserver)
+- [business_unit_mcptool](#BKMK_business_unit_mcptool)
 - [business_unit_msdyn_aibdataset](#BKMK_business_unit_msdyn_aibdataset)
 - [business_unit_msdyn_aibdatasetfile](#BKMK_business_unit_msdyn_aibdatasetfile)
 - [business_unit_msdyn_aibdatasetrecord](#BKMK_business_unit_msdyn_aibdatasetrecord)
@@ -1649,6 +1652,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [business_unit_msdyn_pmprocessversion](#BKMK_business_unit_msdyn_pmprocessversion)
 - [business_unit_msdyn_pmrecording](#BKMK_business_unit_msdyn_pmrecording)
 - [business_unit_msdyn_pmsimulation](#BKMK_business_unit_msdyn_pmsimulation)
+- [business_unit_msdyn_pmtab](#BKMK_business_unit_msdyn_pmtab)
 - [business_unit_msdyn_pmtemplate](#BKMK_business_unit_msdyn_pmtemplate)
 - [business_unit_msdyn_pmview](#BKMK_business_unit_msdyn_pmview)
 - [business_unit_msdyn_qna](#BKMK_business_unit_msdyn_qna)
@@ -2737,6 +2741,18 @@ Many-To-One Relationship: [flowsession business_unit_flowsession](flowsession.md
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_business_unit_flowsessionbinary"></a> business_unit_flowsessionbinary
+
+Many-To-One Relationship: [flowsessionbinary business_unit_flowsessionbinary](flowsessionbinary.md#BKMK_business_unit_flowsessionbinary)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`flowsessionbinary`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencedEntityNavigationPropertyName|`business_unit_flowsessionbinary`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 ### <a name="BKMK_business_unit_fxexpression"></a> business_unit_fxexpression
 
 Many-To-One Relationship: [fxexpression business_unit_fxexpression](fxexpression.md#BKMK_business_unit_fxexpression)
@@ -2890,6 +2906,30 @@ Many-To-One Relationship: [managedidentity business_unit_managedidentity](manage
 |ReferencingEntity|`managedidentity`|
 |ReferencingAttribute|`owningbusinessunit`|
 |ReferencedEntityNavigationPropertyName|`business_unit_managedidentity`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_business_unit_mcpserver"></a> business_unit_mcpserver
+
+Many-To-One Relationship: [mcpserver business_unit_mcpserver](mcpserver.md#BKMK_business_unit_mcpserver)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`mcpserver`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencedEntityNavigationPropertyName|`business_unit_mcpserver`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_business_unit_mcptool"></a> business_unit_mcptool
+
+Many-To-One Relationship: [mcptool business_unit_mcptool](mcptool.md#BKMK_business_unit_mcptool)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`mcptool`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencedEntityNavigationPropertyName|`business_unit_mcptool`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
@@ -3886,6 +3926,18 @@ Many-To-One Relationship: [msdyn_pmsimulation business_unit_msdyn_pmsimulation](
 |ReferencingEntity|`msdyn_pmsimulation`|
 |ReferencingAttribute|`owningbusinessunit`|
 |ReferencedEntityNavigationPropertyName|`business_unit_msdyn_pmsimulation`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_business_unit_msdyn_pmtab"></a> business_unit_msdyn_pmtab
+
+Many-To-One Relationship: [msdyn_pmtab business_unit_msdyn_pmtab](msdyn_pmtab.md#BKMK_business_unit_msdyn_pmtab)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_pmtab`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencedEntityNavigationPropertyName|`business_unit_msdyn_pmtab`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 

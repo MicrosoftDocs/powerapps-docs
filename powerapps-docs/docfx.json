@@ -1,140 +1,138 @@
 {
-  "build": {
-    "content": [
-      {
-        "files": [
-          "**/*.md",
-          "**/*.yml"
-        ],
-        "exclude": [
-          "**/obj/**",
-          "**/includes/**",
-          "README.md",
-          "LICENSE",
-          "LICENSE-CODE",
-          "ThirdPartyNotices"
-        ]
-      }
-    ],
-    "resource": [
-      {
-        "files": [
-          "**/*.png",
-          "**/*.jpg",
-          "**/*.gif",
-          "**/*.svg",
-          "**/includes/media/**"
-        ],
-        "exclude": [
-          "**/obj/**",
-          "**/includes/*.md"
-        ]
-      }
-    ],
-    "overwrite": [],
-    "externalReference": [],
-    "globalMetadata": {
-      "uhfHeaderId": "MSDocsHeader-MSPowerApps",
-      "contributors_to_exclude": [
-        "buck1ey",
-        "bishalgoswami",
-        "kathleenmcgrath",
-        "marycc",
-        "tinaburden",
-        "almostdunh",
-        "AshleyWoodruff",
-        "kimberleybrown",
-        "nathlaroche"
+   "build": {
+      "content": [
+         {
+            "files": [
+               "**/*.md",
+               "**/*.yml"
+            ],
+            "exclude": [
+               "**/obj/**",
+               "**/includes/**",
+               "README.md",
+               "LICENSE",
+               "LICENSE-CODE",
+               "ThirdPartyNotices"
+            ]
+         }
       ],
-      "breadcrumb_path": "breadcrumb/toc.yml",
-      "ms.suite": "office",
-      "titleSuffix": "Power Apps",
-      "feedback_system": "Standard",
-      "feedback_product_url": "https://ideas.powerapps.com",
-      "recommendations": true
-    },
-    "fileMetadata": {
-      "bilingual_type": {
-        "**/*": "hover over",
-        "maker/data-platform/**/*": "",
-        "maker/model-driven-apps/**/*": "",
-        "maker/TOC.yml": "",
-        "maker/dev-community-plan.md": "",
-        "maker/index.md": "",
-        "developer/control-framework/TOC.yml": "",
-        "maker/signup-for-powerapps.md": ""
+      "resource": [
+         {
+            "files": [
+               "**/*.png",
+               "**/*.jpg",
+               "**/*.gif",
+               "**/*.svg",
+               "**/includes/media/**"
+            ],
+            "exclude": [
+               "**/obj/**",
+               "**/includes/*.md"
+            ]
+         }
+      ],
+      "overwrite": [],
+      "externalReference": [],
+      "globalMetadata": {
+         "uhfHeaderId": "MSDocsHeader-MSPowerApps",
+         "contributors_to_exclude": [
+            "buck1ey",
+            "bishalgoswami",
+            "kathleenmcgrath",
+            "marycc",
+            "tinaburden",
+            "almostdunh",
+            "AshleyWoodruff",
+            "kimberleybrown",
+            "nathlaroche"
+         ],
+         "breadcrumb_path": "breadcrumb/toc.yml",
+         "ms.suite": "office",
+         "titleSuffix": "Power Apps",
+         "feedback_system": "Standard",
+         "feedback_product_url": "https://ideas.powerapps.com",
+         "recommendations": true
       },
-      "featureFlags": {
-        "**/*.md": [
-          "show_learn_banner"
-        ]
+      "fileMetadata": {
+         "bilingual_type": {
+            "**/*": "hover over",
+            "maker/data-platform/**/*": "",
+            "maker/model-driven-apps/**/*": "",
+            "maker/TOC.yml": "",
+            "maker/dev-community-plan.md": "",
+            "maker/index.md": "",
+            "developer/control-framework/TOC.yml": "",
+            "maker/signup-for-powerapps.md": ""
+         },
+         "featureFlags": {
+            "**/*.md": [
+               "show_learn_banner"
+            ]
+         },
+         "learn_banner_products": {
+            "**/*.md": [
+               "powerapps"
+            ]
+         },
+         "searchScope": {
+            "**.*": [
+               "Power Apps"
+            ]
+         },
+         "ms.topic": {
+            "developer/**/*.md": "overview",
+            "developer/data-platform/webapi/samples/*.md": "sample"
+         },
+         "ms.service": {
+            "**.*": "powerapps"
+         },
+         "ms.subservice": {
+            "developer/data-platform/**/*.md": "dataverse-developer",
+            "developer/model-driven-apps/**/*.md": "mda-developer",
+            "developer/component-framework/**/*.md": "pcf",
+            "developer/code-apps/**/*.md": "code-apps",
+            "maker/portals/**/*.md": "portals",
+            "maker/model-driven-apps/**/*.md": "mda-maker",
+            "maker/canvas/**/*.md": "canvas-maker",
+            "maker/data-platform/**/*.md": "dataverse-maker",
+            "maker/common/**/*.md": "common",
+            "teams/**/*.md": "teams",
+            "user/**/*.md": "end-user",
+            "mobile/**/*.md": "mobile",
+            "sample-apps/**/*.md": "sample-apps",
+            "guidance/**/*.md": "guidance"
+         },
+         "search.app": {
+            "**.*": [
+               "PowerApps",
+               "powerapps-docs"
+            ],
+            "developer/data-platform/**/*.md": [
+               "PowerApps",
+               "powerapps-docs",
+               "dataverse-docs"
+            ],
+            "maker/data-platform/**/*.md": [
+               "PowerApps",
+               "powerapps-docs",
+               "dataverse-docs"
+            ],
+            "teams/**/*.md": [
+               "PowerApps",
+               "powerapps-docs",
+               "teams-docs"
+            ],
+            "maker/portals/**/*.md": [
+               "PowerApps",
+               "powerpages-docs"
+            ]
+         },
+         "ms.date": {
+            "developer/data-platform/reference/entities/*.md": "10/31/2025"
+         }
       },
-      "learn_banner_products": {
-        "**/*.md": [
-          "powerapps"
-        ]
-      },
-      "searchScope": {
-        "**.*": [
-          "Power Platform",
-          "Power Apps"
-        ]
-      },
-      "ms.topic": {
-        "developer/**/*.md": "overview",
-        "developer/data-platform/webapi/samples/*.md": "sample"
-      },
-      "ms.service": {
-        "**.*": "powerapps"
-      },
-      "ms.subservice": {
-        "developer/data-platform/**/*.md": "dataverse-developer",
-        "developer/model-driven-apps/**/*.md": "mda-developer",
-        "developer/component-framework/**/*.md": "pcf",
-        "developer/code-apps/**/*.md": "code-apps",
-        "maker/portals/**/*.md": "portals",
-        "maker/model-driven-apps/**/*.md": "mda-maker",
-        "maker/canvas/**/*.md": "canvas-maker",
-        "maker/data-platform/**/*.md": "dataverse-maker",
-        "maker/common/**/*.md": "common",
-        "teams/**/*.md": "teams",
-        "user/**/*.md": "end-user",
-        "mobile/**/*.md": "mobile",
-        "sample-apps/**/*.md": "sample-apps",
-        "guidance/**/*.md": "guidance"
-      },
-      "search.app": {
-        "**.*": [
-          "PowerApps",
-          "powerapps-docs"
-        ],
-        "developer/data-platform/**/*.md": [
-          "PowerApps",
-          "powerapps-docs",
-          "dataverse-docs"
-        ],
-        "maker/data-platform/**/*.md": [
-          "PowerApps",
-          "powerapps-docs",
-          "dataverse-docs"
-        ],
-        "teams/**/*.md": [
-          "PowerApps",
-          "powerapps-docs",
-          "teams-docs"
-        ],
-        "maker/portals/**/*.md": [
-          "PowerApps",
-          "powerpages-docs"
-        ]
-      },
-      "ms.date": {
-        "developer/data-platform/reference/entities/*.md": "08/28/2025"
-      }
-    },
-    "template": [],
-    "dest": "powerapps-docs",
-    "markdownEngineName": "markdig"
-  }
+      "template": [],
+      "dest": "powerapps-docs",
+      "markdownEngineName": "markdig"
+   }
 }
-

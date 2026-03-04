@@ -39,7 +39,7 @@ A label shows data that you specify as a literal string of text, which appears e
 
 **[Align](properties-text.md)** – The location of text in relation to the horizontal center of its control.
 
-**AutoHeight** – Whether a label automatically increases its **[Height](properties-size-location.md)** property if its **[Text](properties-core.md)** property contains more characters than the control can show at one time.
+**AutoHeight** – Whether a label automatically increases its **[Height](properties-size-location.md)** property if its **[Text](properties-core.md)** property contains more characters than the control can show at one time. If the control is not visible, then the output property Height will not be updated as the text changes.
 
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
 

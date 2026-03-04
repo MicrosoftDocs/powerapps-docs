@@ -2,7 +2,7 @@
 title: Use a connection reference in a solution with Microsoft Dataverse
 description: Learn how to create a connection reference.
 ms.custom: ""
-ms.date: 04/23/2024
+ms.date: 01/09/2026
 ms.reviewer: angieandrews
 ms.topic: how-to
 author: ChrisGarty

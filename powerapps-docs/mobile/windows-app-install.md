@@ -4,7 +4,7 @@ description: Install Power Apps for Windows.
 author: RitGan
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 06/10/2025
+ms.date: 01/08/2026
 ms.subservice: mobile
 ms.author: ritwikganni
 ms.custom: ""

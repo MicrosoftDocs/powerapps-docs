@@ -106,7 +106,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |FormatName|Text|
 |ImeMode|Auto|
 |IsLocalizable|False|
-|MaxLength|2000|
+|MaxLength|1048576|
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 

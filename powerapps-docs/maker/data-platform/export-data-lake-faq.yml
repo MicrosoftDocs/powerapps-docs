@@ -4,10 +4,12 @@ metadata:
   description: Get answers to frequently asked questions about Power Apps Azure Synapse Link for Dataverse.
   author: sabinn-msft
   ms.search.keywords: 
-  ms.date: 05/06/2024
+  ms.date: 12/01/2025
   ms.author: sabinn
   ms.reviewer: matp
-  contributors: JasonHQX
+  contributors: 
+  - JasonHQX
+  - anibakore-msft
   ms.topic: faq
   ms.subservice: dataverse-maker
 title: Azure Synapse Link for Dataverse FAQ
@@ -22,7 +24,7 @@ sections:
         > To drop stale and stagnant data in the data lake without breaking the Azure Synapse Link, consider using the feature [Query and analyze the incremental updates](azure-synapse-incremental-updates.md)
    - question: How can I access my table relationships?
      answer: |
-        To access many-to-many relationships, the relationship is available as a table to select from the **Add tables** page for a new link and from the **Manage tables** for a pre-existing link.
+        To access many-to-many relationships, the relationship is available as a table to select from the **Add tables** page for a new link and from the **Manage tables** for a preexisting link.
         > [!NOTE]
         > All relationships data is in Append-only mode by default when written in CSV format.
    - question: How can I get estimated costs before adding Azure Synapse Link?
@@ -85,7 +87,7 @@ sections:
         In append only mode, you should identify the latest version of record with the same ID using `VersionNumber` and `SinkModifiedOn` then apply `isDeleted=0` on the latest version.
    - question: Why do I see duplicated version numbers when I export data using append only mode?   
      answer: |
-         For append only mode, if Azure Synapse Link for Dataverse doesn't get an acknowledgment from the Azure data lake that the data has been committed due to any reason such as network delays, Azure Synapse Link will retry in those scenarios and commit the data again. The downstream consumption should be made resilient to this scenario by filtering data using `SinkModifiedOn`.     
+         For append only mode, if Azure Synapse Link for Dataverse doesn't get an acknowledgment from the Azure data lake that the data has been committed due to any reason such as network delays, Azure Synapse Link retries in those scenarios and commit the data again. The downstream consumption should be made resilient to this scenario by filtering data using `SinkModifiedOn`.     
    - question: Why am I seeing differences in Sinkmodifiedon and Modifiedon columns?   
      answer: |
          It's expected. `Modifiedon` is the datetime that record being changed in Dataverse; `Sinkmodifiedon` is the date and time that record is modified in the data lake.  
@@ -95,6 +97,14 @@ sections:
         - Attachment
         - Calendar
         - Calendarrule
+
+        Certain Dataverse tables, such as postcomment, postregarding, postlike, post, and postrole, aren't available for customers to enable synchronization through Azure Synapse Link.
+        
+        In some cases, these tables might appear when [Dataverse long term retention](data-retention-overview.md) is enabled. If that happens, a subset or all records from these tables might be exported. This is expected behavior for long term retention scenarios.
+        
+        > [!IMPORTANT]
+        > - These tables shouldn't be selected for synchronization.
+        > - Their presence doesn't indicate full support for incremental sync.
 
         > [!NOTE]
         > You can add the audit table for export using Azure Synapse Link for Dataverse. However, the export of the audit table is only supported with [Delta Lake profiles](/power-apps/maker/data-platform/azure-synapse-link-delta-lake).
@@ -122,7 +132,7 @@ sections:
         Azure Synapse Link for Dataverse is designed for analytics purposes. We recommend customers use long-term-retention for archive purposes. More information: [Dataverse long term data retention overview](/power-apps/maker/data-platform/data-retention-overview)
    - question: Why don't I see any data changes in the data lake when records have been deleted in Dataverse?
      answer: |
-        For any direct SQL call to remove a record, the Azure Synapse Link for Dataverse service doesn't trigger because BPO.Delete isn't being called. For a sample feature go to [How to clean up inherited access](/troubleshoot/power-platform/dataverse/user-permissions/cleanup-inherited-access).
+        For any direct SQL call to remove a record, the Azure Synapse Link for Dataverse service doesn't trigger because BPO.Delete isn't being called. For a sample feature, go to [How to clean up inherited access](/troubleshoot/power-platform/dataverse/user-permissions/cleanup-inherited-access).
 additionalContent: |
 
   ## See also

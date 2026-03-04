@@ -2,7 +2,7 @@
 title: "Create a solution in Power Apps"
 description: "Learn how to create a solution in Power Apps"
 ms.custom: ""
-ms.date: 08/04/2025
+ms.date: 01/09/2026
 ms.reviewer: ""
 ms.topic: "how-to"
 author: "Mattp123"

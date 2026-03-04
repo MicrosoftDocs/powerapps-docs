@@ -1,7 +1,7 @@
 ---
 title: "CustomAPI tables (Microsoft Dataverse) | Microsoft Docs"
 description: "Describes the tables and column values to use when creating custom APIs."
-ms.date: 02/24/2023
+ms.date: 01/09/2026
 ms.reviewer: jdaly
 ms.topic: article
 author: MsSQLGirl
@@ -282,7 +282,7 @@ The following table includes selected columns of a custom API table that you can
 |**custom API**<br />`CustomAPIId`<br />`customapiid`|Unique Identifier<br />Guid|Unique Identifier for custom API instances<br />**Cannot be changed after it is saved.**|
 |**Description**<br />`Description`<br />`description`|Text<br />String|Localized description for this custom API. Use this value when the message is visible in an app. For example, as a [ToolTip](https://wikipedia.org/wiki/Tooltip).|
 |**Display Name**<br />`DisplayName`<br />`displayname`|Text<br />String|Localized display name for this custom API. Use this value when the message is visible in an app.|
-|**Execute Privilege Name**<br />`ExecutePrivilegeName`<br />`executeprivilegename`|Text<br />String|(Optional) Name of the privilege that allows execution of the custom API. See: [Secure your custom API with a privilege](custom-api.md#secure-your-custom-api-with-a-privilege)|
+|**Execute Privilege Name**<br />`ExecutePrivilegeName`<br />`executeprivilegename`|Text<br />String|(Optional) Name of the privilege that allows execution of the custom API. See: [Secure your custom API by requiring a privilege](custom-api.md#secure-your-custom-api-by-requiring-a-privilege)|
 |**Is Customizable**<br />`IsCustomizable`<br />`iscustomizable`|ManagedProperty|Whether the custom API can be customized or deleted when part of a managed solution.|
 |**Is Function**<br />`IsFunction`<br />`isfunction`|Yes/No<br />Boolean|<ul> <li>**Value**: 0 **Label**: No</li> <li>**Value**: 1 **Label**: Yes</li> </ul>See [When to create a Function](custom-api.md#when-to-create-a-function)<br />**Cannot be changed after it is saved.**|
 |**Is Private**<br />`IsPrivate`<br />`isprivate`|Yes/No<br />Boolean|<ul> <li>**Value**: 0 **Label**: No </li> <li>**Value**: 1 **Label**: Yes</li></ul>See [When to make your custom API private](custom-api.md#when-to-make-your-custom-api-private)|

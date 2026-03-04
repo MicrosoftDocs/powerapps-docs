@@ -1,6 +1,6 @@
 ---
-title: "Specify time zone settings for a user (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about using the UserSettings table to specify time zone settings for a user. The following columns are exposed for the UserSettings table related to time zone. All time zone columns in the UserSettings table are of Integer data type." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Specify time zone settings for a user (Microsoft Dataverse) | Microsoft Docs"
+description: "Learn about using the UserSettings table to specify time zone settings for a user. The following columns are exposed for the UserSettings table related to time zone. All time zone columns in the UserSettings table are of Integer data type." 
 ms.custom: ""
 ms.date: 03/25/2021
 ms.reviewer: "pehecke"

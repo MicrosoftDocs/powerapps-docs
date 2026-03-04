@@ -2,8 +2,8 @@
 title: "Create and update column definitions using the Web API"
 description: "Learn about creating and updating Dataverse table column definitions using the Web API."
 ms.date: 12/12/2023
-author: mkannapiran
-ms.author: kamanick
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType: 
   - developer

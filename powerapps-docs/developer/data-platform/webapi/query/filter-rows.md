@@ -1,7 +1,7 @@
 ---
 title: Filter rows using OData
 description: Learn how to use OData to filter rows when you retrieve data from Microsoft Dataverse Web API.
-ms.date: 05/28/2025
+ms.date: 01/06/2026
 ms.topic: how-to
 author: MsSQLGirl
 ms.author: jukoesma
@@ -13,12 +13,11 @@ contributors:
   - JimDaly
   - JosinaJoy
 ---
-# Filter rows using OData
+# Filter rows by using OData
 
+Use the `$filter` [OData query option](overview.md#odata-query-options) to filter a collection of resources.
 
-Use the `$filter` [query option](overview.md#odata-query-options) to filter a collection of resources.
-
-Dataverse evaluates each resource in the collection using the expression set for `$filter`. Only records where the expression evaluates to `true` are returned in the response. Records aren't returned if the expression evaluates to `false` or `null`, or if the user doesn't have read access to the record.
+Dataverse evaluates each resource in the collection by using the expression set for `$filter`. The response includes only records where the expression evaluates to `true`. Records aren't included if the expression evaluates to `false` or `null`, or if the user doesn't have read access to the record.
 
 The following table describes the operators and functions you can use in `$filter` expressions.
 
@@ -28,7 +27,7 @@ The following table describes the operators and functions you can use in `$filte
 |**Comparison operators**|Use the `eq`,`ne`,`gt`,`ge`,`lt`, and `le` operators to compare a property and a value.|[Comparison operators](#comparison-operators)|
 |**Logical operators**|Use `and`, `or`, and `not` to create more complex expressions. |[Logical operators](#logical-operators)|
 |**Grouping operators**|Use parentheses: `()`, to specify the precedence to evaluate a complex expression. |[Grouping operators](#grouping-operators)|
-|**OData query functions**|Evaluate string values using `contains`, `endswith`, and `startswith` functions. |[Use OData query functions](#use-odata-query-functions)|
+|**OData query functions**|Evaluate string values by using `contains`, `endswith`, and `startswith` functions. |[Use OData query functions](#use-odata-query-functions)|
 |**Dataverse query functions**|Use more than 60 specialized functions designed for business applications. |[Dataverse query functions](#dataverse-query-functions)|
 |**Lambda expressions**|Create expressions based on values of related collections. |[Filter using values of related collections](#filter-using-values-of-related-collections)|
 
@@ -47,7 +46,7 @@ The following table describes the operators you can use to compare a property an
 
 ### Column comparison
 
-You can use comparison operators to compare property values in the same row. Only comparison operators can be used to compare values in the same row, and the column types must match. For example, the following query returns any contacts where `firstname` equals `lastname`:
+You can use comparison operators to compare property values in the same row. You can only use comparison operators to compare values in the same row, and the column types must match. For example, the following query returns any contacts where `firstname` equals `lastname`:
 
 ```http
 GET [Organization URI]/api/data/v9.2/contacts?$select=fullname&$filter=firstname eq lastname
@@ -65,7 +64,7 @@ The following table describes the logical operators you can use to create more c
 
 ## Grouping operators
 
-Use parentheses `()` with logical operators to specify the precedence to evaluate a complex expression; for example:
+Use parentheses `()` with logical operators to specify the precedence for evaluating a complex expression. For example:
 
 `$filter=(contains(name,'sample') or contains(name,'test')) and revenue gt 5000`
 
@@ -90,28 +89,28 @@ The <xref:Microsoft.Dynamics.CRM.QueryFunctionIndex?displayProperty=fullName> ha
 
 You must use the function's *fully qualified name* and append the [Service namespace](../web-api-service-documents.md#service-namespace) (`Microsoft.Dynamics.CRM`) to the name of the function.
 
-Each function has a `PropertyName` parameter that specifies the property to be evaluated. The function may have more parameters, such as `PropertyValue`, `PropertyValues`, or `PropertyValue1` and `PropertyValue2`. When these parameters exist, you must supply a value, or values, to compare to the `PropertyName` parameter.
+Each function has a `PropertyName` parameter that specifies the property to evaluate. The function might have more parameters, such as `PropertyValue`, `PropertyValues`, or `PropertyValue1` and `PropertyValue2`. When these parameters exist, supply a value or values to compare to the `PropertyName` parameter.
 
-The following example shows uses the [Between function](xref:Microsoft.Dynamics.CRM.Between) to search for accounts with between 5 and 2,000 employees.  
+The following example shows how to use the [Between function](xref:Microsoft.Dynamics.CRM.Between) to search for accounts with between 5 and 2,000 employees.  
   
-```http 
+```http
 GET [Organization URI]/api/data/v9.2/accounts?$select=name,numberofemployees
 &$filter=Microsoft.Dynamics.CRM.Between(PropertyName='numberofemployees',PropertyValues=["5","2000"])  
 ```  
 
-## Filter using string values
+## Filter by using string values
 
-Keep the following points in mind when you filter on string values:
+Keep the following points in mind when you filter by using string values:
 
-- All filters using string values are case insensitive.
-- You must URL encode special characters in filter criteria. More information: [URL encode special characters](#url-encode-special-characters)
-- You may use wildcard characters, but avoid using them incorrectly. More information: [Use wildcard characters](#use-wildcard-characters)
-- You can use OData query functions: `contains`, `startswith`, and `endswith`. More information: [Use OData query functions](#use-odata-query-functions)
-- You must manage single quotes when you use filters that accept an array of string values. More information: [Manage single quotes](#manage-single-quotes)
+- All filters that use string values are case insensitive.
+- You must URL encode special characters in filter criteria. For more information, see [URL encode special characters](#url-encode-special-characters).
+- You can use wildcard characters, but avoid using them incorrectly. For more information, see [Use wildcard characters](#use-wildcard-characters).
+- You can use OData query functions: `contains`, `startswith`, and `endswith`. For more information, see [Use OData query functions](#use-odata-query-functions).
+- You must manage single quotes when you use filters that accept an array of string values. For more information, see [Manage single quotes](#manage-single-quotes).
 
 ### URL encode special characters
 
-If the string you are using as a value in a filter function includes a special character, you need to URL encode it. For example, if you use this function: `contains(name,'+123')`, it will not work because `+` is a character that can't be included in a URL. If you URL encode the string, it will become `contains(name,'%2B123')` and you will get results where the column value contains `+123`.
+If the string you use as a value in a filter function includes a special character, you need to URL encode it. For example, if you use this function: `contains(name,'+123')`, it doesn't work because `+` is a character that can't be included in a URL. If you URL encode the string, it becomes `contains(name,'%2B123')` and you get results where the column value contains `+123`.
 
 The following table shows the URL encoded values for common special characters.
 
@@ -131,20 +130,20 @@ The following table shows the URL encoded values for common special characters.
 
 ### Use wildcard characters
 
-When composing filters using strings, you can apply the following wildcard characters:
+When you compose filters by using strings, you can use the following wildcard characters:
 
 |Characters  |Description  |T-SQL documentation and examples  |
 |---|---|---|
-|`% ` |Matches any string of zero or more characters. This wildcard character can be used as either a prefix or a suffix.|[Percent character (Wildcard - Character(s) to Match) (Transact-SQL)](/sql/t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql)|
+|`% ` |Matches any string of zero or more characters. Use this wildcard character as either a prefix or a suffix.|[Percent character (Wildcard - Character(s) to Match) (Transact-SQL)](/sql/t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql)|
 |`_`  |Use the underscore character to match any single character in a string comparison operation that involves pattern matching.|[_ (Wildcard - Match One Character) (Transact-SQL)](/sql/t-sql/language-elements/wildcard-match-one-character-transact-sql)|
-|`[]` |Matches any single character within the specified range or set that is specified between brackets.|[[ ] (Wildcard - Character(s) to Match) (Transact-SQL)](/sql/t-sql/language-elements/wildcard-character-s-to-match-transact-sql)|
-|`[^]`|Matches any single character that isn't within the range or set specified between the square brackets.|[[^] (Wildcard - Character(s) Not to Match) (Transact-SQL)](/sql/t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql)|
+|`[]` |Matches any single character within the specified range or set that you specify between brackets.|[[ ] (Wildcard - Character(s) to Match) (Transact-SQL)](/sql/t-sql/language-elements/wildcard-character-s-to-match-transact-sql)|
+|`[^]`|Matches any single character that isn't within the range or set that you specify between the square brackets.|[[^] (Wildcard - Character(s) Not to Match) (Transact-SQL)](/sql/t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql)|
 
-More information: [Use wildcard characters in conditions for string values](../../wildcard-characters.md)
+For more information, see [Use wildcard characters in conditions for string values](../../wildcard-characters.md).
 
-#### Leading wildcards not supported
+#### Leading wildcards aren't supported
 
-It's important not to use leading wild cards because they aren't supported. Queries that use these anti-patterns introduce performance problems because the queries can't be optimized. Here are some examples of leading wildcards:
+Don't use leading wild cards because they're not supported. Queries that use these anti-patterns introduce performance problems because the queries can't be optimized. Here are some examples of leading wildcards:
 
 ```
 startswith(name,'%value')
@@ -163,11 +162,11 @@ The following table describes the OData query functions you can use to filter on
 |`endswith`|`$filter=endswith(name,'Inc.')`|  
 |`startswith`|`$filter=startswith(name,'a')`|
 
-You can use these functions with the logical operator `not` to negate the result.
+Use these functions with the logical operator `not` to negate the result.
 
 ### Manage single quotes
 
-Some filters accept an array of string values, such as the [In Query function](xref:Microsoft.Dynamics.CRM.In). When you specify values in these filters that contain single quote, or apostrophe, characters, such as `O'Brian` or `Men's clothes`, you must use double quotes around the values; for example:
+Some filters accept an array of string values, such as the [In Query function](xref:Microsoft.Dynamics.CRM.In). When you specify values in these filters that contain single quote, or apostrophe, characters, such as `O'Brian` or `Men's clothes`, use double quotes around the values; for example:
 
 ```http
 GET [Organization URI]/api/data/v9.2/contacts?$select=fullname
@@ -248,7 +247,7 @@ Preference-Applied: odata.include-annotations="OData.Community.Display.V1.Format
 
 You can also compare values further up the hierarchy of [single-valued navigation properties](../web-api-navigation-properties.md#single-valued-navigation-properties).
 
-The following example returns the first account where the contact record represents the `primarycontactid`, where 'System Administrator' created the record, using `primarycontactid/createdby/fullname` in the `$filter`.
+The following example returns the first account where the contact record represents the `primarycontactid`, where 'System Administrator' created the record, by using `primarycontactid/createdby/fullname` in the `$filter`.
 
 **Request:**
 
@@ -367,7 +366,7 @@ OData-Version: 4.0
 
 ## Condition limits
 
-You can include no more than 500 total conditions in a query. Otherwise, you see this error:
+You can include up to 500 total conditions in a query. Otherwise, you see this error message:
 
 > Name: `TooManyConditionsInQuery`<br />
 > Code: `0x8004430C`<br />

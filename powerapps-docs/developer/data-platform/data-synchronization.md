@@ -1,6 +1,6 @@
 ---
-title: "Data Synchronization (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about synchronizing Dataverse data with external systems." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Data Synchronization (Microsoft Dataverse) | Microsoft Docs"
+description: "Learn about synchronizing Dataverse data with external systems." 
 ms.date: 08/25/2022
 ms.reviewer: pehecke
 ms.topic: article

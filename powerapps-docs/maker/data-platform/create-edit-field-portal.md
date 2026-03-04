@@ -2,7 +2,7 @@
 title: "Create and edit columns in Dataverse using Power Apps"
 description: Learn how to create and edit table columns with Power Apps.
 ms.custom: ""
-ms.date: 08/12/2025
+ms.date: 01/09/2026
 ms.reviewer: ""
 ms.topic: "how-to"
 ms.subservice: dataverse-maker

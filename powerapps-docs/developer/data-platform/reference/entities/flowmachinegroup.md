@@ -79,6 +79,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [KeyExpiryGracePeriod](#BKMK_KeyExpiryGracePeriod)
 - [KeyValidityPeriod](#BKMK_KeyValidityPeriod)
 - [LastRunDate](#BKMK_LastRunDate)
+- [ManagedVersion](#BKMK_ManagedVersion)
 - [ManagementType](#BKMK_ManagementType)
 - [MaxManagedMachineCount](#BKMK_MaxManagedMachineCount)
 - [name](#BKMK_name)
@@ -311,6 +312,27 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |SourceTypeMask|0|
 
+### <a name="BKMK_ManagedVersion"></a> ManagedVersion
+
+|Property|Value|
+|---|---|
+|Description|**Managed Version.**|
+|DisplayName|**Managed Version**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`managedversion`|
+|RequiredLevel|None|
+|Type|Picklist|
+|DefaultFormValue||
+|GlobalChoiceName|`flowmachinegroup_managedversion`|
+
+#### ManagedVersion Choices/Options
+
+|Value|Label|
+|---|---|
+|1|**V1**|
+|2|**V2**|
+
 ### <a name="BKMK_ManagementType"></a> ManagementType
 
 |Property|Value|
@@ -331,6 +353,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |---|---|
 |0|**Customer**|
 |1|**Managed**|
+|2|**Shared**|
 
 ### <a name="BKMK_MaxManagedMachineCount"></a> MaxManagedMachineCount
 

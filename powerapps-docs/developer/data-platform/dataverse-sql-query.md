@@ -1,7 +1,7 @@
 ---
-title: "Use SQL to query data (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how to query Microsoft Dataverse table data using SQL." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 05/27/2025
+title: "Use SQL to query data (Microsoft Dataverse) | Microsoft Docs"
+description: "Learn how to query Microsoft Dataverse table data using SQL." 
+ms.date: 01/07/2026
 ms.reviewer: "pehecke"
 ms.topic: how-to
 author: "pnghub" # GitHub ID
@@ -15,9 +15,6 @@ search.audienceType:
 
 The Microsoft Dataverse business layer provides a Tabular Data Stream (TDS) endpoint that emulates a SQL data connection. The SQL connection provides read-only access to the table data of the target Dataverse environment allowing you to execute SQL queries against the Dataverse data tables. No custom views of the data are provided. The Dataverse endpoint SQL connection uses the Dataverse security model for data access. Data can be obtained for all Dataverse tables to which a user has access.
 
-> [!NOTE]
-> Only the SQL data connection through SQL Server Management Studio and .NET libraries is in preview. Power BI is generally available.
-
 ## Prerequisites
 
 The **Enable TDS endpoint** setting must be enabled in your environment. That setting is enabled by default. More information: [Manage feature settings](/power-platform/admin/settings-features)
@@ -28,7 +25,7 @@ To prevent data exfiltration, turn on the [user level access control for TDS end
 
 TDS (SQL) endpoint applications support for Power BI and SQL Server Management Studio is described next.
 
-### SQL Server Management Studio (Preview)
+### SQL Server Management Studio 
 
 You can also use [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) (SSMS) version 18.12.1 or later with the Dataverse endpoint SQL connection. Examples of using SSMS with the SQL data connection are shown in the figure.
 
@@ -187,8 +184,8 @@ If the connection is successful a line "TcpTestSucceeded : True" is returned.
 
 In some cases, traffic can be blocked directly at the IP level. To validate the IP address is also working, take the IP address returned from the above domain test connection and replace the ComputerName parameter value with the IP address.
 
-3. Take the address returned from the above command as "RemoteAddress"
-4. Run the Test-NetConnection -ComputerName \<RemoteAddress> -port 1433
+1. Take the address returned from the above command as "RemoteAddress"
+2. Run the Test-NetConnection -ComputerName \<RemoteAddress> -port 1433
   
 This command should return "TcpTestSucceeded : True"
 

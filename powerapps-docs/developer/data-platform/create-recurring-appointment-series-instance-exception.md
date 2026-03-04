@@ -1,6 +1,6 @@
 ---
-title: "Create a recurring appointment series, instance, or exception (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Programmatically create a recurring appointment master (series),  individual recurring appointment instances, exceptions to those instances, or convert an appointment to a recurring appointment." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Create a recurring appointment series, instance, or exception (Microsoft Dataverse) | Microsoft Docs"
+description: "Programmatically create a recurring appointment master (series),  individual recurring appointment instances, exceptions to those instances, or convert an appointment to a recurring appointment." 
 ms.custom: ""
 ms.date: 03/26/2021
 ms.reviewer: "pehecke"

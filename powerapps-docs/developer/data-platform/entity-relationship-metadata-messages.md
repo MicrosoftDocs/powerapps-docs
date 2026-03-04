@@ -1,6 +1,6 @@
 ---
-title: "Table relationship definitions messages (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "The article describes the messages that you can use to create, retrieve, update, and delete relationships using Web API and SDK for .NET." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Table relationship definitions messages (Microsoft Dataverse) | Microsoft Docs"
+description: "The article describes the messages that you can use to create, retrieve, update, and delete relationships using Web API and SDK for .NET." 
 ms.custom: ""
 ms.date: 03/11/2021
 ms.reviewer: "pehecke"

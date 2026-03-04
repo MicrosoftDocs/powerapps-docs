@@ -1,6 +1,6 @@
 ---
-title: "BusinessUnit table (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "An organization in Microsoft Dataverse, such as a holding company or a corporation, is made up of business units." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "BusinessUnit table (Microsoft Dataverse) | Microsoft Docs"
+description: "An organization in Microsoft Dataverse, such as a holding company or a corporation, is made up of business units." 
 ms.custom: ""
 ms.date: 03/27/2021
 ms.reviewer: "pehecke"

@@ -1,12 +1,12 @@
 ---
-title: "Create a custom API using the plug-in registration tool (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Create a custom API using the plug-in registration tool" # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 09/27/2022
+title: "Create a custom API using the plug-in registration tool (Microsoft Dataverse) | Microsoft Docs"
+description: "Create a custom API using the plug-in registration tool"
+ms.date: 01/09/2026
 ms.reviewer: jdaly
 ms.topic: article
-author: marcelbf # GitHub ID
+author: "marcelbf"
 ms.subservice: dataverse-developer
-ms.author: marcelbf # MSFT alias of Microsoft employees only
+ms.author: "marcelbf # MSFT alias of Microsoft employees only"
 search.audienceType: 
   - developer
 contributors:
@@ -42,7 +42,7 @@ Use the information in the table below to create the Custom API. For more detail
 |**Allowed Custom Processing Step Type**|Which types of processing steps you will allow. More Information: [Select a Custom Processing Step Type](custom-api.md#select-a-custom-processing-step-type)|**No**|
 |**Binding Type**|What kind of entity binding. More Information: [Select a Binding Type](custom-api.md#select-a-binding-type)|**No**|
 |**Bound Entity Logical Name**|If you select **Binding Type** **Entity** or **EntityCollection** you should enter the logical name of the table representing that type.|**No**|
-|**Execute Privilege Name**|The name of a privilege that will control whether someone can use the API. This must be a valid [Name](reference/entities/privilege.md#BKMK_Name) value from the [Privilege](reference/entities/privilege.md) table. More information: [Secure your custom API with a privilege](custom-api.md#secure-your-custom-api-with-a-privilege) |Yes|
+|**Execute Privilege Name**|The name of a privilege that will control whether someone can use the API. This must be a valid [Name](reference/entities/privilege.md#BKMK_Name) value from the [Privilege](reference/entities/privilege.md) table. More information: [Secure your custom API by requiring a privilege](custom-api.md#secure-your-custom-api-by-requiring-a-privilege)|Yes|
 |**Function**|Whether to create a Function. More Information: [When to create a Function](custom-api.md#when-to-create-a-function)|**No**|
 |**Private**|Whether the custom API should be private. More Information: [When to make your custom API private](custom-api.md#when-to-make-your-custom-api-private)|Yes|
 

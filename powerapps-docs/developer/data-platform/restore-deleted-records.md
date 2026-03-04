@@ -2,8 +2,8 @@
 title: Restore deleted records with code (preview)
 description: Learn how to configure tables to enable a recycle bin so that you can restore records deleted within a specified time period. 
 ms.date: 09/04/2024
-author: adkuppa
-ms.author: adkuppa
+author: rijoshi1
+ms.author: rijoshi
 ms.reviewer: jdaly
 ms.topic: how-to
 ms.subservice: dataverse-developer

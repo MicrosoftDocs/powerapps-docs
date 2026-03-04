@@ -1,6 +1,6 @@
 ---
-title: "Run duplicate detection (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Execute duplicate detection for a specific record, table type, or during create or update operations." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Run duplicate detection (Microsoft Dataverse) | Microsoft Docs"
+description: "Execute duplicate detection for a specific record, table type, or during create or update operations." 
 ms.custom: ""
 ms.date: 03/26/2021
 ms.reviewer: "pehecke"

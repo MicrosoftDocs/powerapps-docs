@@ -2,7 +2,7 @@
 title: "About table relationships for Microsoft Dataverse | MicrosoftDocs"
 description: Learn about table relationships in Microsoft Dataverse
 ms.collection: get-started
-ms.date: 09/18/2024
+ms.date: 01/09/2026
 ms.topic: "overview"
 applies_to: 
   - "Dynamics 365 (online)"

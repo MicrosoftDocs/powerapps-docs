@@ -63,6 +63,7 @@ The following table lists selected properties for the credential table.
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [certificate](#BKMK_certificate)
+- [connectionreference](#BKMK_connectionreference)
 - [connectiontype](#BKMK_connectiontype)
 - [credentialId](#BKMK_credentialId)
 - [credentials](#BKMK_credentials)
@@ -76,6 +77,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [groupmapping](#BKMK_groupmapping)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsCustomizable](#BKMK_IsCustomizable)
+- [logincontext](#BKMK_logincontext)
 - [name](#BKMK_name)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
@@ -101,6 +103,19 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Lookup|
 |Targets|environmentvariabledefinition|
 
+### <a name="BKMK_connectionreference"></a> connectionreference
+
+|Property|Value|
+|---|---|
+|Description|**Reference to a connection containing credentials**|
+|DisplayName|**Connection Reference**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`connectionreference`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|connectionreference|
+
 ### <a name="BKMK_connectiontype"></a> connectiontype
 
 |Property|Value|
@@ -125,6 +140,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |4|**CyberArkIdentity**|
 |5|**CertificateBasedAuthentication**|
 |6|**MachineMapping**|
+|7|**ConnectionReference**|
 
 ### <a name="BKMK_credentialId"></a> credentialId
 
@@ -305,6 +321,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|SystemRequired|
 |Type|ManagedProperty|
 
+### <a name="BKMK_logincontext"></a> logincontext
+
+|Property|Value|
+|---|---|
+|Description|**The login context in which the credential should be used.**|
+|DisplayName|**Login context**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`logincontext`|
+|RequiredLevel|None|
+|Type|Memo|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100000|
+
 ### <a name="BKMK_name"></a> name
 
 |Property|Value|
@@ -437,7 +470,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description||
+|Description|**Types of allowed usage for the credential.**|
 |DisplayName|**Usage Type**|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -454,6 +487,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |280920000|**Connection**|
 |280920001|**DesktopScript**|
 |280920002|**Network**|
+|280920003|**Cua**|
 
 ### <a name="BKMK_username"></a> username
 
@@ -776,6 +810,7 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 These relationships are many-to-one. Listed by **SchemaName**.
 
 - [business_unit_credential](#BKMK_business_unit_credential)
+- [credential_connectionreference](#BKMK_credential_connectionreference)
 - [credential_credential_defaultcredential](#BKMK_credential_credential_defaultcredential-many-to-one)
 - [environmentvariabledefinition_credential_certificate](#BKMK_environmentvariabledefinition_credential_certificate)
 - [environmentvariabledefinition_credential_cyberarkobject](#BKMK_environmentvariabledefinition_credential_cyberarkobject)
@@ -803,6 +838,19 @@ One-To-Many Relationship: [businessunit business_unit_credential](businessunit.m
 |ReferencingEntityNavigationPropertyName|`owningbusinessunit`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `Restrict`<br />Assign: `NoCascade`<br />Delete: `Restrict`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_credential_connectionreference"></a> credential_connectionreference
+
+One-To-Many Relationship: [connectionreference credential_connectionreference](connectionreference.md#BKMK_credential_connectionreference)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`connectionreference`|
+|ReferencedAttribute|`connectionreferenceid`|
+|ReferencingAttribute|`connectionreference`|
+|ReferencingEntityNavigationPropertyName|`connectionreference`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_credential_credential_defaultcredential-many-to-one"></a> credential_credential_defaultcredential
 

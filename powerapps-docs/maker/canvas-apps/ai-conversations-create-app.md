@@ -7,7 +7,7 @@ ms.collection:
   - bap-ai-copilot
   - get started
 ms.reviewer:
-ms.date: 8/26/2025
+ms.date: 01/12/2026
 ms.update-cycle: 180-days
 ms.subservice: canvas-maker
 ms.author: tapanm
@@ -25,39 +25,45 @@ ms.custom:
 ai-usage: ai-assisted
 ---
 
-# Build apps through conversation with Copilot 
+# Build apps through conversation with Copilot
 
-Create apps without writing code or designing screens. With Copilot in Power Apps, you use natural language to describe what you want your app to do, and AI does the rest.
+Create apps without writing code or designing screens. By using Copilot in Power Apps, you use natural language to describe what you want your app to do, and AI does the rest.
 
-Copilot is a feature in Power Apps that helps you build apps with AI assistance. Access Copilot from the Power Apps home screen. Enter the type of information you want to collect, track, or show in your app, and Copilot generates one or more Microsoft Dataverse tables that you use to build your canvas app.
+Copilot is a feature in Power Apps that helps you build apps with AI assistance. From the Power Apps home screen, select **Start with data**, and then select **Create new data** to open the table editor with Copilot. Enter the type of information you want to collect, track, or show in your app, and Copilot generates one or more Microsoft Dataverse tables that you use to build your canvas app.
+
 
 ## Prerequisites
 
 - Check the prerequisites and region availability in [Copilot in Power Apps overview (preview)](ai-overview.md).
-- Depending on where your environment is hosted, you might need to enable data movement across regions. Learn more in [Copilots and generative AI features that are available when you enable data movement across regions](/power-platform/admin/geographical-availability-copilot#copilots-and-generative-ai-features-that-are-available-when-you-enable-data-movement-across-regions).
-- Add a Dataverse database to your environment. Learn more in [Add a Microsoft Dataverse database](/power-platform/admin/create-database).
-- Check if this feature is available in your region. Learn more in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/en-US/availability-reports/?report=copilotfeaturereport).
+- Depending on where your environment is hosted, you might need to enable data movement across regions. For more information, see [Copilots and generative AI features that are available when you enable data movement across regions](/power-platform/admin/geographical-availability-copilot#copilots-and-generative-ai-features-that-are-available-when-you-enable-data-movement-across-regions).
+You need access to a Microsoft Dataverse database in your environment to use this feature. For more information, see [Add a Microsoft Dataverse database](/power-platform/admin/create-database).
+- Check if this feature is available in your region. For more information, see [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/en-US/availability-reports/?report=copilotfeaturereport).
 - Assign the system customizer security role in the environment.
 
-## Create an app with Copilot
+## Create an app by using Copilot
 
 Let's create an app to track housekeeping tasks for a hotel so you can see how Copilot works.
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
-1. On the left navigation pane, select **Create** > **Start with Copilot**.
+1. On the home screen, select **Start with data**.
 
-1. Enter your prompt in the text box, like the example prompt below.
+1. Select **Create new data**.
+
+   The **Create new tables** workspace opens with a blank table and the Copilot panel on the right side.
+
+1. In the Copilot panel text box, enter your prompt, like the example prompt in the following section.
 
     ```copilot-prompt
-    Hotel housekeeping
+    Create tables to track hotel housekeeping tasks including room numbers, task types, staff assignments, and task status
     ```
-1. Select table options, like multiple tables or one table, and then select **Generate**.
- 
+
+1. Select **Submit** or press **Enter**.
+
 Copilot creates one or more Dataverse tables with data that includes typical hotel housekeeping tasks.
 
 > [!IMPORTANT]
-> If you don't have the right permissions or access to Dataverse in the environment you're working in, an alert asks you to create the app in your own environment. Make sure the table and app can be created in your environment to continue. If you don't have a personal developer environment, a new one is created for you automatically. Learn more in [Get your developer environment (preview)](../maker-create-environment.md).
+> If you don't have the right permissions or access to Dataverse in the environment you're working in, an alert asks you to create the app in your own environment. Make sure you can create the table and app in your environment to continue. If you don't have a personal developer environment, a new one is created for you automatically. For more information, see [Get your developer environment (preview)](../maker-create-environment.md).
 
 ## Review the table
 
@@ -65,24 +71,33 @@ Copilot generates tables and relationships based on your description. Review the
 
 ### Review the tables for your app
 
-Copilot shows you the tables and relationships it generates based on your description.
+Copilot shows you the tables and relationships it generates based on your description in the **Create new tables** workspace.
 
-:::image type="content" source="media/artificial-intelligence/data-workspace-copilot.png" alt-text="Screenshot of Dataverse tables and relationships for a hotel housekeeping app, with numbered annotations.":::
+:::image type="content" source="media/artificial-intelligence/data-workspace-copilot.png" alt-text="Screenshot of the Create new tables workspace showing Dataverse tables and the Copilot panel.":::
 
-Legend:
+The workspace includes the following options:
 
-1. **Edit**: Edit or create more tables. Learn more in [Create and edit tables](../data-platform/create-edit-entities-portal.md).
-
-1. **Copilot text box**: [Ask Copilot to modify the table](#use-copilot-to-make-changes) or create more tables for you.
-
-1. **View prompt**: See examples of what you can ask Copilot to do.
-
-1. **Save and open app**: Save your tables and create your app. To start over, select **Back**.
-
+| Option | Description |
+|---|---|
+| 1. **Back** | Return to the previous screen. |
+| 2. **New table** | Add a new table to your workspace. |
+| 3. **Existing table** | Add an existing Dataverse table. |
+| 4. **View data** | View the data in your tables. |
+| 5. **Create relationships** | Create relationships between tables. |
+| 6. **Remove** | Remove a table from the workspace. |
+| 7. **Save and exit** | Save your tables and create your app. |
+| 8. **Copilot panel** | Ask Copilot to create tables, import data, or make changes using natural language. |
+| 9. **View prompts** | See examples of what you can ask Copilot to do. |
 
 ## Use Copilot to make changes
 
 To change something, enter a brief description of the change in the Copilot panel. Copilot makes the change for you.
+
+The Copilot panel provides three options to help you get started:
+
+- **Create**: Describe tables, columns, rows, and relationships and they'll be generated for you.
+- **Import data**: Create tables from Excel or .CSV files, or SharePoint lists.
+- **Change**: Describe the changes you'd like to make.
 
 For example, ask Copilot to add columns to track cleaning start and end time.
 
@@ -92,7 +107,7 @@ For example, ask Copilot to add columns to track cleaning start and end time.
 
 1. Continue editing the table as needed. For example, add room status, change room types, or set a priority level for each room.
 
-1. When you're ready to create your app, select **Save and open app**.
+1. When you're ready to create your app, select **Save and exit**.
 
 ## Related information
 

@@ -81,6 +81,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [msdyn_compliancestatecode](#BKMK_msdyn_compliancestatecode)
 - [msdyn_creationmode](#BKMK_msdyn_creationmode)
 - [msdyn_externalreferenceid](#BKMK_msdyn_externalreferenceid)
+- [msdyn_harvestsourceentity](#BKMK_msdyn_harvestsourceentity)
 - [msdyn_ingestedarticleurl](#BKMK_msdyn_ingestedarticleurl)
 - [msdyn_integratedsearchproviderid](#BKMK_msdyn_integratedsearchproviderid)
 - [msdyn_iscontentsyncedtostore](#BKMK_msdyn_iscontentsyncedtostore)
@@ -461,6 +462,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|False|
 |MaxLength|450|
+
+### <a name="BKMK_msdyn_harvestsourceentity"></a> msdyn_harvestsourceentity
+
+|Property|Value|
+|---|---|
+|Description||
+|DisplayName|**Knowledge Harvest Source Entity**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_harvestsourceentity`|
+|RequiredLevel|None|
+|Type|Memo|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1048576|
 
 ### <a name="BKMK_msdyn_ingestedarticleurl"></a> msdyn_ingestedarticleurl
 

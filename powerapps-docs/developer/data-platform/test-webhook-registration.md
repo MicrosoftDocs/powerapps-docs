@@ -1,6 +1,6 @@
 ---
-title: "Test WebHook registration with request logging site (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Use a request logging site to examine the contextual data passed with a WebHook." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Test WebHook registration with request logging site (Microsoft Dataverse) | Microsoft Docs"
+description: "Use a request logging site to examine the contextual data passed with a WebHook." 
 ms.date: 03/22/2022
 ms.reviewer: "pehecke"
 ms.topic: how-to

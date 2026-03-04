@@ -70,6 +70,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [KnowledgeConfig](#BKMK_KnowledgeConfig)
+- [knowledgesourceconsumerid](#BKMK_knowledgesourceconsumerid)
+- [knowledgesourceprofileid](#BKMK_knowledgesourceprofileid)
 - [Name](#BKMK_Name)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
@@ -205,6 +207,32 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|False|
 |MaxLength|1073741823|
+
+### <a name="BKMK_knowledgesourceconsumerid"></a> knowledgesourceconsumerid
+
+|Property|Value|
+|---|---|
+|Description|**Lookup to KnowledgeSourceConsumer**|
+|DisplayName||
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`knowledgesourceconsumerid`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|knowledgesourceconsumer|
+
+### <a name="BKMK_knowledgesourceprofileid"></a> knowledgesourceprofileid
+
+|Property|Value|
+|---|---|
+|Description|**Lookup to KnowledgeSourceProfile**|
+|DisplayName||
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`knowledgesourceprofileid`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|knowledgesourceprofile|
 
 ### <a name="BKMK_Name"></a> Name
 

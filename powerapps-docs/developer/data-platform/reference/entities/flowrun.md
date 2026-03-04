@@ -303,6 +303,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |---|---|
 |0|**PowerAutomateFlow**|
 |1|**CopilotStudioFlow**|
+|2|**M365CopilotAgentFlow**|
 
 ### <a name="BKMK_name"></a> name
 

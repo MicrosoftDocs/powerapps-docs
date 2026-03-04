@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/developer/code-apps/quickstart.md",
+      "redirect_url": "how-to/create-an-app-from-scratch",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/developer/data-platform/data-export-service.md",
       "redirect_url": "https://aka.ms/DESDeprecationBlog",
       "redirect_document_id": "false"
@@ -9834,6 +9839,302 @@
       "source_path": "powerapps-docs/cards/make-a-card/variables/variables.md",
       "redirect_url": "/power-apps/",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/express-design.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/get-started-test-drive",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/app-from-image.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/get-started-test-drive",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/figma/common-errors.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/get-started-test-drive",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/figma/create-app-from-figma.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/get-started-test-drive",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/figma/design-using-kit.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/get-started-test-drive",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/figma/overview.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/get-started-test-drive",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/figma/supported-components.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/get-started-test-drive",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/model-driven-apps/configure-suggested-actions.md",
+      "redirect_url": "/power-apps/maker/model-driven-apps/add-agents-to-app",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/user/use-suggested-actions-in-the-agent-feed.md",
+      "redirect_url": "/power-apps/user/supervise-agents-with-agent-feed",
+      "redirect_document_id": false
+    },
+    {  
+      "source_path": "powerapps-docs/developer/component-framework/publish-components-app-source.md",
+      "redirect_url": "/power-apps/developer/component-framework/publish-components-marketplace",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/controls/control-stream-video.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/controls/modern-controls/new-stream-video-control",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/patterns/approval-pattern.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/patterns/asset-management-pattern.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/patterns/calculator-pattern.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/patterns/communication-pattern.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/patterns/inspection-pattern.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/patterns/more-patterns.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/patterns/overview.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/patterns/project-management-pattern.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/introduction.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/controls/modern-controls/limitations-modern-controls.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/controls/modern-controls/modern-controls-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/app-development-approaches.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/app-tasks.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/app-type.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/create-edit-data.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/data-modeling.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/decisions-approvals.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/defining-app-project-objective.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/defining-business-value.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/defining-project-schedule.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/defining-project-scope.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/designing-phase.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/discoverability.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/enterprise-systems.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/example-expense-reporting.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/feedback-telemetry.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/gaining-support.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/identifying-business-problem-to-solve.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/identifying-project-members.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/identifying-risks.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/logic.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/making-phase.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/measuring-success.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/next-task.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/optimizing-business-process.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/planning-phase.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/prioritizing-features.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/project-tasks-owners.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/security.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/sketching.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/testing-phase.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/understanding-current-business-process.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/visually-map-process.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/what-activities.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/what-data-needed.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/what-is-task.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/where-is-data.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/who-is-doing-work.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/worth-automating-process.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
     }
   ]
 }
+

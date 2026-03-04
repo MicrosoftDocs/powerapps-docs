@@ -1,6 +1,6 @@
 ---
-title: "Create client applications (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Introduces the concepts required to create custom client applications that connect to Microsoft Dataverse using code." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Create client applications (Microsoft Dataverse) | Microsoft Docs"
+description: "Introduces the concepts required to create custom client applications that connect to Microsoft Dataverse using code." 
 ms.custom: ""
 ms.date: 03/23/2021
 ms.reviewer: "pehecke"

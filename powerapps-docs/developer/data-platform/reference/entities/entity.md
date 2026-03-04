@@ -449,6 +449,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [entity_appaction_ContextEntity](#BKMK_entity_appaction_ContextEntity)
 - [entity_appactionrule_ContextEntity](#BKMK_entity_appactionrule_ContextEntity)
 - [entity_entityanalyticsconfig](#BKMK_entity_entityanalyticsconfig)
+- [entity_sensitivitylabelattributemapping_EntityId](#BKMK_entity_sensitivitylabelattributemapping_EntityId)
 - [entity_serviceplanmapping](#BKMK_entity_serviceplanmapping)
 - [entity_solutioncomponentbatchconfiguration_PrimaryEntity](#BKMK_entity_solutioncomponentbatchconfiguration_PrimaryEntity)
 - [entity_solutioncomponentbatchconfiguration_RelatedEntity](#BKMK_entity_solutioncomponentbatchconfiguration_RelatedEntity)
@@ -555,6 +556,18 @@ Many-To-One Relationship: [entityanalyticsconfig entity_entityanalyticsconfig](e
 |ReferencingEntity|`entityanalyticsconfig`|
 |ReferencingAttribute|`parententityid`|
 |ReferencedEntityNavigationPropertyName|`entity_entityanalyticsconfig`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_entity_sensitivitylabelattributemapping_EntityId"></a> entity_sensitivitylabelattributemapping_EntityId
+
+Many-To-One Relationship: [sensitivitylabelattributemapping entity_sensitivitylabelattributemapping_EntityId](sensitivitylabelattributemapping.md#BKMK_entity_sensitivitylabelattributemapping_EntityId)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`sensitivitylabelattributemapping`|
+|ReferencingAttribute|`entityid`|
+|ReferencedEntityNavigationPropertyName|`entity_sensitivitylabelattributemapping_EntityId`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 

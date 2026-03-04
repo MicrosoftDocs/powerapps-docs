@@ -856,6 +856,7 @@ One-To-Many Relationship: [systemuser user_msdyn_pmview](systemuser.md#BKMK_user
 These relationships are one-to-many. Listed by **SchemaName**.
 
 - [msdyn_pmsimulation_pmviewid_msdyn_pmview](#BKMK_msdyn_pmsimulation_pmviewid_msdyn_pmview)
+- [msdyn_pmtab_pmviewid_msdyn_pmview](#BKMK_msdyn_pmtab_pmviewid_msdyn_pmview)
 - [msdyn_pmview_AsyncOperations](#BKMK_msdyn_pmview_AsyncOperations)
 - [msdyn_pmview_BulkDeleteFailures](#BKMK_msdyn_pmview_BulkDeleteFailures)
 - [msdyn_pmview_DuplicateBaseRecord](#BKMK_msdyn_pmview_DuplicateBaseRecord)
@@ -876,6 +877,18 @@ Many-To-One Relationship: [msdyn_pmsimulation msdyn_pmsimulation_pmviewid_msdyn_
 |ReferencingAttribute|`msdyn_pmviewid`|
 |ReferencedEntityNavigationPropertyName|`msdyn_pmsimulation_pmviewid_msdyn_pmview`|
 |IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_msdyn_pmtab_pmviewid_msdyn_pmview"></a> msdyn_pmtab_pmviewid_msdyn_pmview
+
+Many-To-One Relationship: [msdyn_pmtab msdyn_pmtab_pmviewid_msdyn_pmview](msdyn_pmtab.md#BKMK_msdyn_pmtab_pmviewid_msdyn_pmview)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_pmtab`|
+|ReferencingAttribute|`msdyn_pmviewid`|
+|ReferencedEntityNavigationPropertyName|`msdyn_pmtab_pmviewid_msdyn_pmview`|
+|IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_msdyn_pmview_AsyncOperations"></a> msdyn_pmview_AsyncOperations
