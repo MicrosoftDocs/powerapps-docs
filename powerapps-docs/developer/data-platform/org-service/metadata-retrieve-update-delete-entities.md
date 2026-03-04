@@ -53,7 +53,7 @@ static void DemonstrateRetrieveUpdateTable(IOrganizationService service, string 
 
 ## Delete a custom table
 
-The following static `DeleteTable` sample method uses the <xref:Microsoft.Xrm.Sdk.Messages.DeleteEntityRequest> class to delete the table definition with the logical name specified by the `_customEntityName` variable.  
+The following static `DeleteTable` sample method uses the <xref:Microsoft.Xrm.Sdk.Messages.DeleteEntityRequest> class to delete the table definition with the specified logical name.
   
 ```csharp
 static void DeleteTable(IOrganizationService service, string LogicalName)
