@@ -15,12 +15,12 @@ contributors:
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
-This PowerShell sample demonstrates how to create and use multi-table lookup columns, sometimes called *polymorphic lookups*, using the Dataverse Web API.
+This PowerShell sample demonstrates how to create and use multi-table lookup columns, sometimes called *polymorphic lookups*, by using the Dataverse Web API.
 
 > [!div class="nextstepaction"]
 > [View this sample on GitHub](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/PS/PolymorphicLookup)
 
-This sample demonstrates the operations described in [Use multi-table lookup columns](../multitable-lookup.md) and uses the [Dataverse Web API PowerShell Helper functions](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/PS/README.md) to manage authentication and provide reusable functions to perform common operations. These scripts are referenced using [dot sourcing](/powershell/module/microsoft.powershell.core/about/about_scripts#script-scope-and-dot-sourcing) with the following lines:
+This sample demonstrates the operations described in [Use multi-table lookup columns](../multitable-lookup.md) and uses the [Dataverse Web API PowerShell Helper functions](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/PS/README.md) to manage authentication and provide reusable functions to perform common operations. The sample references these scripts by using [dot sourcing](/powershell/module/microsoft.powershell.core/about/about_scripts#script-scope-and-dot-sourcing).
 
 ```powershell
 . $PSScriptRoot\..\Core.ps1
@@ -30,7 +30,7 @@ This sample demonstrates the operations described in [Use multi-table lookup col
 ```
 
 > [!NOTE]
-> This sample should work with Windows, Linux, and macOS, but has only been tested on Windows.
+> This sample should work with Windows, Linux, and macOS, but the author only tested it on Windows.
 
 ## Prerequisites
 
@@ -46,14 +46,14 @@ These articles have the same prerequisites.
 ## How to run this sample
 
 1. Clone or download the [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples) repository.
-1. Open the `/dataverse/webapi/PS/PolymorphicLookup/PolymorphicLookupSample.ps1` file using Visual Studio Code.
-1. Edit this line to use the URL of the environment you want to connect to:
+1. Open the `/dataverse/webapi/PS/PolymorphicLookup/PolymorphicLookupSample.ps1` file by using Visual Studio Code.
+1. Edit the following line to use the URL of the environment you want to connect to:
 
    `Connect 'https://yourorg.crm.dynamics.com/' # change this`
 
 1. (Optional) Set the `$deleteCreatedRecords` variable to `$false` if you don't want to delete the records this sample creates.
 1. Press <kbd>F5</kbd> to run the sample.
-1. The first time you run the sample a browser window opens. In the browser window, enter or select the credentials you want to use to authenticate.
+1. The first time you run the sample, a browser window opens. In the browser window, enter or select the credentials you want to use to authenticate.
 
 To connect as a different user, run the [Disconnect-AzAccount command](/powershell/module/az.accounts/disconnect-azaccount) and try again.
 
@@ -63,7 +63,7 @@ The code for this sample is at: [PowerApps-Samples/dataverse/webapi/PS/Polymorph
 
 ## Demonstrates
 
-This sample has 9 sections:
+This sample has nine sections:
 
 ### Section 0: Create Publisher and Solution
 
@@ -75,8 +75,8 @@ Operations:
 1. Create the solution if it doesn't already exist by sending a `POST` request to `/solutions`.
 
 > [!NOTE]
-> All solution components created in this sample will be associated to the solution so that they can be exported. For operations without a named message, this association is created using the `MSCRM.SolutionUniqueName` request header set to the solution unique name.
-> All names of solution components are prefixed using the publisher customization prefix.
+> You can export all solution components created in this sample by associating them to the solution. For operations without a named message, set the `MSCRM.SolutionUniqueName` request header to the solution unique name to create this association.
+> Prefix all names of solution components by using the publisher customization prefix.
 
 ### Section 1: Create Referenced Tables
 
@@ -90,7 +90,7 @@ These three tables serve as the *referenced tables* that the polymorphic lookup 
 
 ### Section 2: Create Referencing Table
 
-Operations: Create a `sample_Media` table by sending a `POST` request to `/EntityDefinitions`, if it doesn't already exist. This table includes a primary `sample_name` attribute and will host the polymorphic lookup column.
+Operations: Create a `sample_Media` table by sending a `POST` request to `/EntityDefinitions`, if it doesn't already exist. This table includes a primary `sample_name` attribute and hosts the polymorphic lookup column.
 
 The `sample_Media` table serves as the *referencing table* — the table that contains the multi-table lookup column.
 
@@ -98,8 +98,8 @@ The `sample_Media` table serves as the *referencing table* — the table that co
 
 Operations:
 
-1. Create a `sample_MediaPolymorphicLookup` lookup column on the `sample_Media` table along with one-to-many relationships to each of the three referenced tables (`sample_Book`, `sample_Audio`, and `sample_Video`) using the [CreatePolymorphicLookupAttribute action](xref:Microsoft.Dynamics.CRM.CreatePolymorphicLookupAttribute). This single action creates the attribute and all three relationships at once.
-1. Retrieve the `ReferencingEntityNavigationPropertyName` for each of the three relationships (`sample_media_sample_book`, `sample_media_sample_audio`, `sample_media_sample_video`) by sending `GET` requests to `/RelationshipDefinitions`. These navigation property names are needed to associate records using `@odata.bind` syntax.
+1. Create a `sample_MediaPolymorphicLookup` lookup column on the `sample_Media` table along with one-to-many relationships to each of the three referenced tables (`sample_Book`, `sample_Audio`, and `sample_Video`) by using the [CreatePolymorphicLookupAttribute action](xref:Microsoft.Dynamics.CRM.CreatePolymorphicLookupAttribute). This single action creates the attribute and all three relationships at once.
+1. Retrieve the `ReferencingEntityNavigationPropertyName` for each of the three relationships (`sample_media_sample_book`, `sample_media_sample_audio`, `sample_media_sample_video`) by sending `GET` requests to `/RelationshipDefinitions`. You need these navigation property names to associate records by using `@odata.bind` syntax.
 
 ### Section 4: Create Sample Data Records
 
@@ -121,13 +121,13 @@ Operations:
 
 ### Section 6: Export Managed Solution
 
-Operations: Export the solution created in [Section 0: Create Publisher and Solution](#section-0-create-publisher-and-solution) as a managed solution package using the [ExportSolution action](xref:Microsoft.Dynamics.CRM.ExportSolution). The exported `.zip` file is saved locally for use in Section 8.
+Operations: Export the solution that you created in [Section 0: Create Publisher and Solution](#section-0-create-publisher-and-solution) as a managed solution package by using the [ExportSolution action](xref:Microsoft.Dynamics.CRM.ExportSolution). Save the exported `.zip` file locally for use in Section 8.
 
 ### Section 7: Delete Sample Tables and Solution
 
 Operations:
 
-1. Delete the `sample_Media` table by sending a `DELETE` request to `/EntityDefinitions`. The referencing table must be deleted before the referenced tables.
+1. Delete the `sample_Media` table by sending a `DELETE` request to `/EntityDefinitions`. You must delete the referencing table before the referenced tables.
 1. Delete the `sample_Book`, `sample_Audio`, and `sample_Video` tables by sending `DELETE` requests to `/EntityDefinitions`.
 1. Query the unmanaged solution by sending a `GET` request to `/solutions` filtered by unique name.
 1. Delete the unmanaged solution by sending a `DELETE` request to `/solutions(<solutionid>)`.
@@ -136,20 +136,20 @@ Operations:
 
 Operations:
 
-1. Import the managed solution exported in [Section 6: Export Managed Solution](#section-6-export-managed-solution) using the [ImportSolution action](xref:Microsoft.Dynamics.CRM.ImportSolution).
+1. Import the managed solution exported in [Section 6: Export Managed Solution](#section-6-export-managed-solution) by using the [ImportSolution action](xref:Microsoft.Dynamics.CRM.ImportSolution).
 1. Query the imported solution by sending a `GET` request to `/solutions` filtered by unique name.
 1. Delete the imported managed solution by sending a `DELETE` request to `/solutions(<solutionid>)`.
 
 ## Clean up
 
-By default this sample deletes all the records created in it. If you want to view created records after the sample is completed, change the `$deleteCreatedRecords` variable to `$false` and you will be prompted to decide if you want to delete the records.
+By default, this sample deletes all the records it creates. If you want to view the created records after the sample finishes, change the `$deleteCreatedRecords` variable to `$false`. You are then prompted to decide if you want to delete the records.
 
 ### See also
 
-[Use multi-table lookup columns](../multitable-lookup.md)<br />
-[Use the Dataverse Web API](../overview.md)<br />
-[Use the Web API with table definitions](../use-web-api-metadata.md)<br />
-[Web API Samples](../web-api-samples.md)<br />
+[Use multi-table lookup columns](../multitable-lookup.md)   
+[Use the Dataverse Web API](../overview.md)   
+[Use the Web API with table definitions](../use-web-api-metadata.md)   
+[Web API Samples](../web-api-samples.md)   
 [Web API table schema operations sample (PowerShell)](metadata-operations-powershell.md)
 
 [!INCLUDE[footer-include](../../../../includes/footer-include.md)]
