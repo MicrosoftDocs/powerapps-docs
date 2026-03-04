@@ -26,6 +26,8 @@ Customer, which connects to [Account](../reference/entities/account.md) and [Con
 > [!NOTE]
 > You can create and modify custom multi-table lookups through the SDK for .NET or Dataverse Web API.
 > Interactive user interface support will be available in a future release.
+> 
+> [Sample: Web API multi-table lookup sample (PowerShell)](samples/multi-table-lookup-powershell.md) contains the sample code that demonstrates the [Example](#example) presented in this article.
 
 ## Retrieve data about related tables
 
@@ -444,6 +446,7 @@ Removing a relationship from an existing multi-table lookup column by using the 
 
 ### See also
 
+[Sample: Web API multi-table lookup sample (PowerShell)](samples/multi-table-lookup-powershell.md)   
 [Use the Web API with table definitions](use-web-api-metadata.md)  
 [Create and update table relationships](create-update-entity-relationships-using-web-api.md)  
 [Query table definitions using the Web API](query-metadata-web-api.md)  
