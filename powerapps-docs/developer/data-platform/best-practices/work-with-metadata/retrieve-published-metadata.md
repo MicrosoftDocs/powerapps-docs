@@ -6,7 +6,7 @@ author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: jdaly
 ms.topic: how-to
-ms.date: 1/15/2019
+ms.date: 03/02/2026
 ms.subservice: dataverse-developer
 search.audienceType: 
   - developer
@@ -21,7 +21,7 @@ search.audienceType:
 
 ## Symptoms
 
-Retrieving unpublished metadata could result in:
+Retrieving unpublished metadata can cause:
 
 - Slower performance
 - User confusion
@@ -30,11 +30,11 @@ Retrieving unpublished metadata could result in:
 
 ## Guidance
 
-It isn't common to retrieve unpublished customizations and rarely would you have the need to retrieve those customizations.
+It's uncommon to retrieve unpublished customizations and you rarely need to retrieve those customizations.
 
-An example of when you would need to retrieve unpublished customizations is if you want to create an application to edit customizable metadata. For instance, if you were to create a custom metadata editor, you must retrieve any unpublished definitions of those items. If a developer defines some changes but doesn't publish them, your application must be able to retrieve them to ensure the developer is retrieving the latest developed customizations. Failure to do so could result in the loss of unpublished customizations.
+You might need to retrieve unpublished customizations if you want to create an application to edit customizable metadata. For example, if you create a custom metadata editor, you must retrieve any unpublished definitions of those items. If a developer defines some changes but doesn't publish them, your application must be able to retrieve them to ensure the developer is retrieving the latest developed customizations. Failure to do so could result in the loss of unpublished customizations.
 
-However, if you aren't creating an editor or don't have an explicit need for retrieving unpublished definitions, then only retrieve definitions that are published. The following examples show how to retrieve published customizations:
+However, if you're not creating an editor or don't have an explicit need for retrieving unpublished definitions, then only retrieve definitions that are published. The following examples show how to retrieve published customizations:
 
 ### Default behavior
 
@@ -52,7 +52,7 @@ public RetrieveAllEntitiesAttributesResponse GetAllEntitiesImplicit(IOrganizatio
 
 ### Explicitly controlling the behavior
 
-Explicitly setting the `RetrieveAsIfPublished` property to retrieve only published customizations
+Explicitly set the `RetrieveAsIfPublished` property to retrieve only published customizations.
 
 ```csharp
 public RetrieveAllEntitiesAttributesResponse GetAllEntitiesExplicit(IOrganizationService service)
@@ -71,7 +71,7 @@ public RetrieveAllEntitiesAttributesResponse GetAllEntitiesExplicit(IOrganizatio
 
 ## Problematic patterns
 
-The following operations allow for retrieving unpublished metadata through the `RetrieveAsIfPublished` parameter:
+The following operations can retrieve unpublished metadata through the `RetrieveAsIfPublished` parameter:
 
 - <xref:Microsoft.Xrm.Sdk.Messages.RetrieveAllEntitiesRequest>
 - <xref:Microsoft.Xrm.Sdk.Messages.RetrieveAllOptionSetsRequest>
@@ -81,10 +81,10 @@ The following operations allow for retrieving unpublished metadata through the `
 - <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRelationshipRequest>
 - <xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityKeyRequest>
 
-Examples of retrieving unpublished customizations are documented below:
+The following examples show how to retrieve unpublished customizations:
 
 > [!WARNING]
-> These scenarios should be avoided.
+> Avoid these scenarios.
 
 ```csharp
 public RetrieveEntityKeyResponse GetEntityKey(IOrganizationService service, string entityName, string keyName)
@@ -125,7 +125,7 @@ public RetrieveEntityAttributesResponse GetEntity(IOrganizationService service, 
 
 ## Web API functions
 
-This guidance applies to the following Web API functions as well:
+This guidance also applies to the following Web API functions:
 
 - <xref href="Microsoft.Dynamics.CRM.RetrieveAllEntities?text=RetrieveAllEntities Function" />
 - <xref href="Microsoft.Dynamics.CRM.RetrieveEntity?text=RetrieveEntity Function" />
@@ -134,17 +134,17 @@ This guidance applies to the following Web API functions as well:
 
 ## Additional information
 
-The Dynamics 365 service allows for retrieval of certain metadata that is published or unpublished. Ever since Dynamics CRM 2011, published metadata is returned, by default, from the application's in-memory metadata cache unless the developer explicitly assigns the `RetrieveAsIfPublished` property value to `true`.
+The Dynamics 365 service allows retrieval of certain metadata that is published or unpublished. Since Dynamics CRM 2011, the application's in-memory metadata cache returns published metadata by default, unless you explicitly set the `RetrieveAsIfPublished` property to `true`.
 
-Retrieving unpublished metadata not only adds overhead to processing the request itself, performing more slowly, it could also return metadata that the requestor doesn't expect. For example, retrieving unpublished optionset metadata could return a label value that isn't visible in the user interface, causing confusion to the end-user.
+Retrieving unpublished metadata adds overhead to processing the request, so it performs more slowly. It can also return metadata that the requestor doesn't expect. For example, retrieving unpublished optionset metadata can return a label value that isn't visible in the user interface, causing confusion for the end-user.
 
 <a name='seealso'></a>
 
 ### See also
 
-<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityRequest>.<xref href="Microsoft.Xrm.Sdk.Messages.RetrieveEntityRequest.RetrieveAsIfPublished?text=RetrieveAsIfPublished Property" /><br />
-[Work with metadata using the SDK for .NET](../../org-service/work-with-metadata.md)<br />
-[Use the Web API with metadata](../../webapi/use-web-api-metadata.md)<br />
+[RetrieveEntityRequest.RetrieveAsIfPublished Property](xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityRequest.RetrieveAsIfPublished)   
+[Work with metadata using the SDK for .NET](../../org-service/work-with-metadata.md)   
+[Use the Web API with metadata](../../webapi/use-web-api-metadata.md)   
 [Publish customizations](../../../model-driven-apps/publish-customizations.md#retrieving-unpublished-metadata)
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

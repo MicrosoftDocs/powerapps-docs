@@ -3,7 +3,7 @@ title: "How to: Quickstart with npm CLI (preview)"
 description: "Create a Power Apps code app using the new npm CLI. (preview)"
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 02/24/2026
+ms.date: 03/04/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
@@ -50,7 +50,6 @@ Install the project dependencies and the Power Apps SDK:
 
 ```bash
 npm install
-npm install @microsoft/power-apps
 ```
 
 Initialize your code app. You can either provide options directly or use interactive prompts:
@@ -74,7 +73,7 @@ When you run the `init` command, the CLI authenticates you automatically. Sign i
 Run the code app locally for development:
 
 ```bash
-npx power-apps run
+npm run dev
 ```
 
 This starts a local development server. Open the URL labeled **Local Play**.
