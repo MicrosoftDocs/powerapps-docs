@@ -40,9 +40,9 @@ For a multi-table lookup, the unique ID isn't valuable unless you know which tab
 
 | Annotation | Description |
 |---------|---------|
-| `OData.Community.Display.V1.FormattedValue` | Returns the primary name column value for the related record. |
-| `Microsoft.Dynamics.CRM.associatednavigationproperty` | Returns the name of the single-valued navigation property that supports this relationship. |
-| `Microsoft.Dynamics.CRM.lookuplogicalname` | Returns the logical name of the related table. |
+| `OData.Community.Display.V1.FormattedValue` | Returns the primary name column value for the record currently set in this column. |
+| `Microsoft.Dynamics.CRM.associatednavigationproperty` | Returns the name of the single-valued navigation property that supports the record currently set in this column. |
+| `Microsoft.Dynamics.CRM.lookuplogicalname` | Returns the logical name of the table for the record currently set in this column. |
 
 > [!NOTE]
 > Use lookup properties to retrieve the formatted value and supporting metadata needed to expand the single-valued navigation property to get more information.
@@ -69,12 +69,11 @@ books, audio, and video.
 
 In this example, three tables support each specific kind of media:
 
-- `sample_Book`
-- `sample_Audio`
-- `sample_Video`
+- `sample_Book` includes `sample_name` and `sample_callnumber` columns.
+- `sample_Audio` includes `sample_name` and `sample_audioformat` columns.
+- `sample_Video` includes `sample_name` and `sample_videoformat` columns.
 
-The `sample_Media` table has a multi-table lookup with the schema name `sample_MediaPolymorphicLookup`. You can set the lookup column to refer to records in any of the specific media tables.
-
+The `sample_Media` table has a multi-table lookup with the schema name `sample_MediaPolymorphicLookup`. You can set the lookup column to refer to records in any of the three specific media tables.
 
 
 ### `sample_Book` table
@@ -198,19 +197,32 @@ Using the `sample_Media` table, this example query:
 - Selects the `_sample_mediapolymorphiclookup_value` lookup property in the `$select` query option for the `sample_mediapolymorphiclookup` lookup column. By using the `OData.Community.Display.V1.FormattedValue`, `Microsoft.Dynamics.CRM.associatednavigationproperty`, and `Microsoft.Dynamics.CRM.lookuplogicalname` `odata.include-annotations` preferences, you get these values with each record.
 - Expands three single-valued navigation properties, one for each related table. For each expanded navigation property, the primary name column (`sample_name`) is selected as well as the respective custom column value: `sample_callnumber`, `sample_audioformat`, `sample_videoformat`.
 
+> [!NOTE]
+> Only one of the three expanded single-valued navigation might have data. All three will be null if the lookup column isn't set.
+
 These operations demonstrate how the table records are related through the `sample_MediaPolymorphicLookup` lookup column.
 
 **Request**
 
 ```http
-GET [Organization URI]/api/data/v9.2/sample_medias?$select=sample_name,_sample_mediapolymorphiclookup_value&
-$expand=sample_MediaPolymorphicLookup_sample_book($select=sample_name,sample_callnumber),sample_MediaPolymorphicLookup_sample_audio($select=sample_name,sample_audioformat),sample_MediaPolymorphicLookup_sample_video($select=sample_name,sample_videoformat)
+GET [Organization URI]
+/api/data/v9.2/sample_medias
+?$select=sample_name,_sample_mediapolymorphiclookup_value
+&$expand=sample_MediaPolymorphicLookup_sample_book(
+    $select=sample_name,sample_callnumber),
+sample_MediaPolymorphicLookup_sample_audio(
+    $select=sample_name,sample_audioformat),
+sample_MediaPolymorphicLookup_sample_video(
+    $select=sample_name,sample_videoformat)
 Content-Type: application/json; charset=utf-8
 OData-MaxVersion: 4.0
 OData-Version: 4.0
 Accept: application/json
 Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue,Microsoft.Dynamics.CRM.associatednavigationproperty,Microsoft.Dynamics.CRM.lookuplogicalname"
 ```
+
+> [!NOTE]
+> For readability, the URL is shown across multiple lines. When making the request, remove all line breaks and whitespace so the URL is a single continuous string.
 
 **Response**
 
@@ -230,7 +242,8 @@ When you set these query options and preference headers, the body of the respons
          "_sample_mediapolymorphiclookup_value": "00000000-0000-0000-0000-000000000001",
          "sample_MediaPolymorphicLookup_sample_book": {
             "sample_bookid": "00000000-0000-0000-0000-000000000001",
-            "sample_name": "Content1"
+            "sample_name": "Content1",
+            "sample_callnumber": "ww-3452"
          },
          "sample_MediaPolymorphicLookup_sample_audio": null,
          "sample_MediaPolymorphicLookup_sample_video": null
@@ -246,8 +259,8 @@ When you set these query options and preference headers, the body of the respons
          "sample_MediaPolymorphicLookup_sample_book": null,
          "sample_MediaPolymorphicLookup_sample_audio": {
             "sample_audioid": "00000000-0000-0000-0000-000000000002",
-            "sample_audioformat": "mp4",
-            "sample_name": "Content1"
+            "sample_name": "Content1",
+            "sample_audioformat": "mp4"
          },
          "sample_MediaPolymorphicLookup_sample_video": null
       },
@@ -261,9 +274,10 @@ When you set these query options and preference headers, the body of the respons
          "_sample_mediapolymorphiclookup_value": "00000000-0000-0000-0000-000000000003",
          "sample_MediaPolymorphicLookup_sample_book": null,
          "sample_MediaPolymorphicLookup_sample_audio": null,
-         "sample_MediaPolymorphicLookup_sample_video": {
+         "sample_MediaPolymorphicLookup_sample_video": {            
+            "sample_videoid": "00000000-0000-0000-0000-000000000003",
             "sample_name": "Content3",
-            "sample_videoid": "00000000-0000-0000-0000-000000000003"
+            "sample_videoformat": "wmv"
          }
       },
       {
@@ -277,8 +291,8 @@ When you set these query options and preference headers, the body of the respons
          "sample_MediaPolymorphicLookup_sample_book": null,
          "sample_MediaPolymorphicLookup_sample_audio": {
             "sample_audioid": "00000000-0000-0000-0000-000000000004",
-            "sample_audioformat": "wma",
-            "sample_name": "Content3"
+            "sample_name": "Content3",
+            "sample_audioformat": "wma"
          },
          "sample_MediaPolymorphicLookup_sample_video": null
       }
@@ -289,6 +303,8 @@ When you set these query options and preference headers, the body of the respons
 ## Setting a multi-table lookup column
 
 Updating a record to set a polymorphic lookup column is exactly as described in [Associate with a single-valued navigation property](associate-disassociate-entities-using-web-api.md#associate-with-a-single-valued-navigation-property). Use the correct single-valued navigation property name. These names are case sensitive.
+
+This example shows [updating a value](update-delete-entities-using-web-api.md#basic-update) using `PATCH`.
 
 **Request**
 
@@ -318,7 +334,7 @@ OData-EntityId: [Organization Uri]/api/data/v9.2/sample_medias(00000000-0000-000
 ## Create a multi-table lookup column
 
 > [!NOTE]
-> While this example shows how to use the Dataverse Web API, you can also use the SDK for .NET with the <xref:Microsoft.Crm.Sdk.Messages.CreatePolymorphicLookupAttributeRequest> and <xref:Microsoft.Crm.Sdk.Messages.CreatePolymorphicLookupAttributeResponse> classes.
+> The following example shows how to use the Dataverse Web API. You can also use the SDK for .NET with the <xref:Microsoft.Crm.Sdk.Messages.CreatePolymorphicLookupAttributeRequest> and <xref:Microsoft.Crm.Sdk.Messages.CreatePolymorphicLookupAttributeResponse> classes.
 
 Use the [CreatePolymorphicLookupAttribute action](xref:Microsoft.Dynamics.CRM.CreatePolymorphicLookupAttribute) to create a multi-table lookup. This example creates the column as part of a solution with the unique name `polymorphiclookupexamplesolution` by using the [MSCRM.SolutionUniqueName optional parameter](../optional-parameters.md#associate-a-solution-component-with-a-solution).
 
@@ -418,7 +434,7 @@ The following JSON is an example of the [CreatePolymorphicLookupAttributeRespons
 
 ## Add relationship to existing multi-table lookup column
 
-Adding a relationship to an existing multi-table lookup column by using the Web API is similar to creating any new one-to-many relationship. [Learn how to create a one-to-many relationship using the Web API](create-update-entity-relationships-using-web-api.md#create-a-one-to-many-relationship). The difference is that the [OneToManyRelationshipMetadata](/power-apps/developer/data-platform/webapi/reference/onetomanyrelationshipmetadata)`.Lookup` property must have a `SchemaName` value that matches the polymorphic lookup column.
+Adding a relationship to an existing multi-table lookup column by using the Web API is similar to creating any new one-to-many relationship. [Learn how to create a one-to-many relationship using the Web API](create-update-entity-relationships-using-web-api.md#create-a-one-to-many-relationship). The difference is that the [OneToManyRelationshipMetadata](/power-apps/developer/data-platform/webapi/reference/onetomanyrelationshipmetadata)`.Lookup` property must have a `SchemaName` value that matches the existing polymorphic lookup column.
 
 
 ## Remove a relationship from an existing multi-table lookup column
