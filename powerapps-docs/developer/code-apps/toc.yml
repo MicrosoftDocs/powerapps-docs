@@ -1,5 +1,6 @@
 items:
   - name: Power Apps code apps
+    expanded: true
     items:
       - name: Power Apps code apps
         href: index.yml
