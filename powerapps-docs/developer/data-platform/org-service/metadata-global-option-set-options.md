@@ -147,6 +147,6 @@ var updateOptionList =
 //      x => x.Label.LocalizedLabels[0].Label).ToList();
 OrderOptions(service, _globalOptionSetName, updateOptionList)
 
-``
+```
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
