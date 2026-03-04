@@ -20,25 +20,16 @@ type column can refer to multiple other tables. A lookup value submitted to the
 multi-table type column matches a record in any of the related
 tables. You can create multi-table lookups with both local tables and virtual tables as referenced tables.
 
-Microsoft Dataverse currently includes multi-table types as static types like
+Microsoft Dataverse currently includes multi-table types as static types, such as
 Customer, which connects to [Account](../reference/entities/account.md) and [Contact](../reference/entities/contact.md) tables. By using multi-table lookups, you can define any other multi-table lookups you need.
 
 > [!NOTE]
-> You can create and modify custom multi-table lookups via the SDK for .NET or Dataverse Web API.
-> Interactive user interface support will be coming in a future release.
+> You can create and modify custom multi-table lookups through the SDK for .NET or Dataverse Web API.
+> Interactive user interface support will be available in a future release.
 
 ## Retrieve data about related tables
 
-To retrieve information about related tables with a lookup column, including multi-table lookups, use one of the following methods: expand the single-valued navigation property, or retrieve the lookup property.
-
-### Expand the single-valued navigation property
-
-When you create a multi-table lookup, each table requires a separate one-to-many relationship. Each relationship adds a distinct single-valued navigation property.
-
-> [!IMPORTANT]
-> The name of this single-valued navigation property is stored in the [OneToManyRelationshipMetadata.ReferencingEntityNavigationPropertyName](xref:Microsoft.Xrm.Sdk.Metadata.OneToManyRelationshipMetadata.ReferencingEntityNavigationPropertyName) property.  You can also discover this name by downloading and reviewing the CSDL $metadata document. [Learn how to identify these single-value navigation properties in the $metadata service document](web-api-navigation-properties.md#multi-table-lookups).
-
-When you query the table, use the `$expand` query option to include the related table. [Learn more about joining related tables using OData `$expand` query option](query/join-tables.md).
+To retrieve information about related tables with a lookup column, including multi-table lookups, use one of the following methods: retrieve the lookup property or expand the single-valued navigation property.
 
 
 ### Retrieve the lookup property
@@ -53,17 +44,30 @@ For a multi-table lookup, the unique ID isn't valuable unless you know which tab
 | `Microsoft.Dynamics.CRM.associatednavigationproperty` | Returns the name of the single-valued navigation property that supports this relationship. |
 | `Microsoft.Dynamics.CRM.lookuplogicalname` | Returns the logical name of the related table. |
 
+> [!NOTE]
+> Use lookup properties to retrieve the formatted value and supporting metadata needed to expand the single-valued navigation property to get more information.
+
 [Learn more about retrieving lookup property data](query/select-columns.md#lookup-property-data).
 
+### Expand the single-valued navigation property
 
+When you create a multi-table lookup, each table requires a separate one-to-many relationship. Each relationship adds a distinct single-valued navigation property.
 
-## Examples
+The name of this single-valued navigation property is stored in the [OneToManyRelationshipMetadata.ReferencingEntityNavigationPropertyName](xref:Microsoft.Xrm.Sdk.Metadata.OneToManyRelationshipMetadata.ReferencingEntityNavigationPropertyName) property. A common error is when people try to guess the value of this case-sensitive property. There are three ways to definitively determine the correct name of this navigation property:
 
-Let's say you're hosting media for users in a library. You have many different
+- Retrieve the relationship metadata. [Learn more about options to retrieve Dataverse schema definitions](../query-schema-definitions.md#evaluate-other-options-to-retrieve-schema-definitions).
+- Download and review the CSDL $metadata document. [Learn how to identify these single-value navigation properties in the $metadata service document](web-api-navigation-properties.md#multi-table-lookups).
+- [Retrieve the lookup property](#retrieve-the-lookup-property) and include the `Microsoft.Dynamics.CRM.associatednavigationproperty` OData annotation preferences.
+
+When you query the table, use the `$expand` query option with the single-valued navigation property to include the related table. [Learn more about joining related tables using OData `$expand` query option](query/join-tables.md).
+
+## Example
+
+Suppose you're hosting media for users in a library. You have many different
 media objects. Many of them have the same name but are in different formats like
 books, audio, and video.
 
-In this example, there are three tables to support each specific kind of media:
+In this example, three tables support each specific kind of media:
 
 - `sample_Book`
 - `sample_Audio`
@@ -108,7 +112,7 @@ This example shows the JSON body of the response:
 
 ### `sample_Audio` table
 
-The `sample_Audio` table is the second of the three related tables. This simple query retrieves the two records found in this table.
+The `sample_Audio` table is the second of the three related tables. This simple query retrieves the two records in this table.
 
 ```http
 GET [Organization URI]/api/data/v9.2/sample_audios?$select=sample_name,sample_audioformat
@@ -142,7 +146,7 @@ This example shows the JSON body of the response:
 
 ### `sample_Video` table
 
-The `sample_Video` table is the third of the three related tables. This simple query retrieves the two records found in this table.
+The `sample_Video` table is the third of the three related tables. This simple query retrieves the two records in this table.
 
 ```http
 GET [Organization URI]/api/data/v9.2/sample_videos?$select=sample_name,sample_videoformat
@@ -419,7 +423,7 @@ Adding a relationship to an existing multi-table lookup column by using the Web 
 
 ## Remove a relationship from an existing multi-table lookup column
 
-Removing a relationship to an existing multi-table lookup column by using the Web API is the same as deleting any one-to-many relationship. Send a `DELETE` request to the `RelationshipDefinitions` endpoint by using the value of the [OneToManyRelationshipMetadata](/power-apps/developer/data-platform/webapi/reference/onetomanyrelationshipmetadata)`.MetadataId` property as the key.
+Removing a relationship from an existing multi-table lookup column by using the Web API is the same as deleting any one-to-many relationship. Send a `DELETE` request to the `RelationshipDefinitions` endpoint by using the value of the [OneToManyRelationshipMetadata](/power-apps/developer/data-platform/webapi/reference/onetomanyrelationshipmetadata)`.MetadataId` property as the key.
 
 
 ### See also
