@@ -2,8 +2,8 @@
 title: "Create, retrieve, update, and delete dashboards (Microsoft Dataverse) | Microsoft Docs"
 description: "This sample showcases how to create, retrieve, update, and delete an user-owned dashboards." 
 ms.date: 03/04/2026
-author: mspilde
-ms.author: mspilde
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 ms.topic: sample
 search.audienceType:
