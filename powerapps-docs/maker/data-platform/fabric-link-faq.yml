@@ -45,6 +45,9 @@ sections:
         
         > [!IMPORTANT]
         > Removing a table doesn't delete the table in Dataverse; it only removes the OneLake shortcut and stops data sync.
+   - question: Are elastic tables supported for Fabric link?
+     answer: |
+        Yes, elastic tables are supported by Link to Fabric. Ensure that change tracking is enabled for elastic tables in Dataverse for the sync to happen.
    - question: Are Finance and Operations tables supported?
      answer: |
         If your environment is linked to a Dynamics 365 finance and operations environment, the add tables option enables you to include tables from finance and operations apps. Finance and operations apps tables aren't autoselected when creating the initial Fabric link.
