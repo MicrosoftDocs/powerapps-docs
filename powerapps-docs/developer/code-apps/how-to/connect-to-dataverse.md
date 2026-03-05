@@ -3,7 +3,7 @@ title: "How to: Connect your code app to Dataverse"
 description: "Learn how to connect your code app to Dataverse"
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 02/02/2026
+ms.date: 03/05/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
@@ -11,7 +11,7 @@ contributors:
 ---
 # How to: Connect your code app to Dataverse
 
-This guide helps developers use the Power Apps SDK to connect their code app to Microsoft Dataverse.
+This guide helps developers use the Power Apps client library for code apps to connect their code app to Microsoft Dataverse.
 
 ## Prerequisites
 
@@ -33,7 +33,7 @@ This guide helps developers use the Power Apps SDK to connect their code app to 
 
 ## Supported scenarios
 
-The following scenarios are supported when connecting to Dataverse using the Power Apps SDK:
+The following scenarios are supported when connecting to Dataverse using the Power Apps client library for code apps:
 
 - Add Dataverse entities to code apps using the PAC CLI
 - Retrieve formatted values/display names for option sets

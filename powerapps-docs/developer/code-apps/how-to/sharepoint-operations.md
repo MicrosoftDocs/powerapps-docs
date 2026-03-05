@@ -3,7 +3,7 @@ title: "How to: SharePoint operations"
 description: "Learn how to do SharePoint operations in code apps"
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 02/02/2026
+ms.date: 03/05/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
@@ -11,7 +11,7 @@ contributors:
 ---
 # How to: SharePoint operations
 
-Use the Power Apps SDK to connect your code app to SharePoint and use the generated models and services to perform CRUD (Create, Read, Update, Delete) operations on a SharePoint list.  
+Use the Power Apps client library for code apps to connect your code app to SharePoint and use the generated models and services to perform CRUD (Create, Read, Update, Delete) operations on a SharePoint list.  
 
 ## Prerequisites
 
@@ -21,7 +21,7 @@ Use the Power Apps SDK to connect your code app to SharePoint and use the genera
 
 ## Supported scenarios
 
-The following scenarios are supported when connecting to SharePoint using the Power Apps SDK:
+The following scenarios are supported when connecting to SharePoint using the Power Apps client library for code apps:
 
 - Add SharePoint lists as data sources by using the PAC CLI
 - Perform CRUD operations on a SharePoint list
@@ -172,4 +172,4 @@ const selectOpts = options.map(o => ({ id: o.Id, label: o.Value }));
 
 ## Unsupported scenarios
 
-The Power Apps SDK and the PAC CLI allow CRUD operations on SharePoint lists, but don't support Document Processing APIs or actions like item synchronization or permission changes. You can add these features by creating a custom service file for your code app.
+The Power Apps client library for code apps and the PAC CLI allow CRUD operations on SharePoint lists, but don't support Document Processing APIs or actions like item synchronization or permission changes. You can add these features by creating a custom service file for your code app.

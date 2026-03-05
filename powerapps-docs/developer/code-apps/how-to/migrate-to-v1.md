@@ -1,15 +1,15 @@
 ---
-title: "Power Apps SDK v1.0 Migration Guide"
-description: "This is the migration guide for v1.0 of the Power Apps SDK."
+title: "Power Apps client library for code apps v1.0 Migration Guide"
+description: "This is the migration guide for v1.0 of the Power Apps client library for code apps."
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 02/02/2026
+ms.date: 03/05/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
  - JimDaly
 ---
-# Power Apps SDK v1.0 Migration Guide
+# Power Apps client library for code apps v1.0 Migration Guide
 
 As code apps approach general availability, we're improving the SDK and releasing version 1.0. These improvements include breaking changes from SDK version 0.3.21.
 
@@ -35,13 +35,13 @@ Remove code like the following example that invokes the `initialize` function an
 
 ```typescript
 useEffect(() => {
-// Define an async function to initialize the Power Apps SDK
+// Define an async function to initialize the Power Apps client library for code apps
 const init = async () => {
       try {
             await initialize(); // Wait for SDK initialization
             setIsInitialized(true); // Mark the app as ready for data operations
       } catch (err) {
-            setError('Failed to initialize Power Apps SDK'); // Handle initialization errors
+            setError('Failed to initialize Power Apps client library for code apps'); // Handle initialization errors
             setLoading(false); // Stop any loading indicators
       }
 };
