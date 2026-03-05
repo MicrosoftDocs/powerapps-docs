@@ -2,8 +2,8 @@
 title: "Set Timeout when making external calls in a plug-in | MicrosoftDocs"
 description: "Limit the time period that external calls expect a response within plug-ins"
 ms.date: 06/20/2025
-author: MsSQLGirl
-ms.author: jukoesma
+author: sakaralems
+ms.author: sakarale
 ms.reviewer: pehecke
 suite: powerapps
 ms.topic: how-to

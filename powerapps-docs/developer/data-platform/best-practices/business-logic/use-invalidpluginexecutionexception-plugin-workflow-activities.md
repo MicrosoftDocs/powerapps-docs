@@ -2,8 +2,8 @@
 title: "Use InvalidPluginExecutionException in plug-ins and workflow activities | MicrosoftDocs"
 description: "Use InvalidPluginExecutionException when raising errors within the context of a plug-in or workflow activity."
 ms.date: 06/20/2025
-author: MsSQLGirl
-ms.author: jukoesma
+author: sakaralems
+ms.author: sakarale
 ms.reviewer: pehecke
 suite: powerapps
 ms.topic: article
