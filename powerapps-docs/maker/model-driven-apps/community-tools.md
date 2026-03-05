@@ -1,10 +1,9 @@
 ---
-title: "Community tools for model-driven apps | MicrosoftDocs"
+title: "Community tools for model-driven apps"
 description: "Learn more about community tools available related to model-driven apps."
 ms.custom: ""
-ms.date: 03/05/2020
+ms.date: 03/03/2026
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -20,7 +19,6 @@ ms.author: "matp"
 search.audienceType: 
   - maker
 ---
-
 # Community tools
 
 [Easy Translator](https://www.xrmtoolbox.com/plugins/MsCrmTools.Translator/) is a tool that XrmToolBox community developed. Use Easy Translator to export and import translations with contextual information.

@@ -3,7 +3,7 @@ title: "How to: Connect your code app to Dataverse"
 description: "Learn how to connect your code app to Dataverse"
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 02/02/2026
+ms.date: 03/05/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
@@ -11,11 +11,11 @@ contributors:
 ---
 # How to: Connect your code app to Dataverse
 
-This guide helps developers use the Power Apps SDK to connect their code app to Microsoft Dataverse.
+This guide helps developers use the [Power Apps client library for code apps](https://www.npmjs.com/package/@microsoft/power-apps) to connect their code app to Microsoft Dataverse.
 
 ## Prerequisites
 
-- Power Apps code apps SDK [@microsoft/power-apps - npm package](https://www.npmjs.com/package/@microsoft/power-apps)
+- Power Apps client library for code apps
 - Power Apps CLI (PAC CLI) version 1.46 or later
 - An environment with Dataverse enabled
 - [You must be connected to the environment using PAC CLI](/power-platform/developer/cli/introduction#manage-auth-profiles)
@@ -33,7 +33,7 @@ This guide helps developers use the Power Apps SDK to connect their code app to 
 
 ## Supported scenarios
 
-The following scenarios are supported when connecting to Dataverse using the Power Apps SDK:
+The following scenarios are supported when connecting to Dataverse using the [Power Apps client library for code apps](https://www.npmjs.com/package/@microsoft/power-apps):
 
 - Add Dataverse entities to code apps using the PAC CLI
 - Retrieve formatted values/display names for option sets
@@ -54,6 +54,10 @@ The following scenarios are supported when connecting to Dataverse using the Pow
   - `Top` queries
 
 - Paging support
+
+> [!TIP]
+> Looking for a complete working example? The [Dataverse sample code app](https://github.com/microsoft/PowerAppsCodeApps/tree/main/samples/Dataverse) demonstrates all the patterns covered in this article — CRUD operations, lookup fields, and generated services — in a ready-to-run
+React/TypeScript app you can explore and extend.
 
 ## Set up your code app
 

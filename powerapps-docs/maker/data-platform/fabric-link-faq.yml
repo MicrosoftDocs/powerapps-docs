@@ -81,6 +81,35 @@ sections:
    - question: How often is data refreshed in Fabric?
      answer: |
         When the initial sync is complete, the system continuously refreshes updates in Dataverse in the lakehouse. Incremental updates typically take up to one hour to appear, though actual timing depends on table size, number of updates and transactions happening in the environment, number of tables, row count, and system load periods.
+- name: Networking and security
+  questions:
+   - question: Does Fabric link work when outbound public access is blocked in the Fabric workspace?
+     answer: |
+        Yes, Fabric link can work when outbound public access is blocked in your Fabric workspace, but you must allowlist the Dataverse organization URL in **Data connection rules**. To do this:
+
+        1. In Fabric workspace settings, go to **Outbound networking**.
+        2. Enable **Block outbound public access**.
+        3. Under **Data connection rules (preview)**, select **+ Add new cloud connection rule**.
+        4. Add a **Dataverse** connection rule. You have two options:
+           - **(Recommended)** Set it to **Blocked**, then under **Exceptions**, add only your specific Dataverse organization URL (for example, `orgXXXXXXXX.crm.dynamics.com`) as an allowed endpoint. This limits access to your organization URL only.
+           - Set it to **Allowed** to permit connections to all Dataverse endpoints.
+        5. If you chose **Blocked** in the previous step, under **Exceptions**, confirm your Dataverse organization URL is listed as an allowed endpoint.
+        6. Select **Save**.
+
+        :::image type="content" source="media/fabric/fabric-outbound-networking-settings.png" alt-text="Fabric workspace outbound networking settings with data connection rules configured for Dataverse." lightbox="media/fabric/fabric-outbound-networking-settings.png":::
+
+        > [!NOTE]
+        > Support for private endpoints isn't available for Dataverse yet. The Dataverse connection must be allowlisted as an exception in the data connection rules to allow Fabric link to function.
+   - question: Does Fabric link work when inbound private link is enabled in the Fabric workspace?
+     answer: |
+        Customers can create private links for the Fabric workspace to connect to it privately for other integrations. However, for Dataverse Fabric link to work, public access must be enabled for all networks. Both settings can be active at the same time:
+
+        1. In Fabric workspace settings, go to **Inbound networking**.
+        2. Under **Workspace connection settings**, select **Allow all connections to this workspace (including private links)**.
+
+        :::image type="content" source="media/fabric/fabric-inbound-networking-settings.png" alt-text="Fabric workspace Inbound networking settings with Allow all connections to this workspace selected." lightbox="media/fabric/fabric-inbound-networking-settings.png":::
+
+        This setting allows public access alongside private link connections, which is required for Fabric link to connect to Dataverse. Restricting inbound access to selected networks or workspace-level private links only prevent Fabric link from working.
 - name: Limitations and Errors
   questions:
    - question: What are the limits for Fabric Link?

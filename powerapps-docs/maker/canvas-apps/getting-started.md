@@ -1,13 +1,13 @@
 ---
-title: Overview of building canvas apps
-description: Get an introduction to designing and building canvas apps in Power Apps so that users can manage line-of-business data in a browser or on mobile devices.
+title: Complete guide to building canvas applications
+description: Learn to build custom canvas apps in Power Apps without coding. Create business applications that connect to data sources, work across devices, and streamline workflows. Start building today.
 author: mduelae
 
 ms.topic: concept-article
 ms.custom: canvas
 ms.collection: get-started
 ms.reviewer: 
-ms.date: 01/24/2025
+ms.date: 02/19/2026
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
@@ -19,27 +19,30 @@ contributors:
 ---
 # What are canvas apps?
 
+Canvas apps are custom business applications you can create in Microsoft Power Apps without writing code. Think of a canvas as a blank design surface where you can drag and drop components to build exactly the user interface you need. Whether you're creating a simple data entry form or a complex business workflow, canvas apps give you the flexibility to design solutions that work the way your business works.
 
-Canvas apps in Power Apps let you build business apps without coding. Power Apps gives you a blank canvas where you drag components to design a user interface in any layout you want. Use Excel-like expressions to specify logic and work with data. Build apps that use business data from a [wide variety of Microsoft and third-party sources](connections-list.md). Share your app so users run it in a browser or on a mobile device, and embed your app so they run it in SharePoint, Power BI, or Teams.
+With canvas apps, you can:
 
-Create apps with Copilot in Power Apps by describing what you want the app to do in natural language, and AI handles the rest.
+- Connect to [data from hundreds of sources](connections-list.md). , including Microsoft 365, Dataverse, SharePoint, and other data sources
+- Create responsive designs that work seamlessly across browsers and mobile devices
+- Use AI-powered Copilot to build apps through natural language conversations
+- Share your apps securely within your organization
+- Embed apps directly in SharePoint, Power BI, and Microsoft Teams
+
+This overview helps you understand how to get started building canvas apps and guide you through the key concepts for creating effective business solutions.
 
 
 ## Build an app
 
-The following articles can help you build apps in different scenarios using Copilot:
+The following articles provide guidance on building apps:
 
-- [Use the Plan designer (preview)](../plan-designer/plan-designer.md)
+- [Create a plan](../plan-designer/create-plan.md)
+- [Create a blank canvas app from scratch](create-blank-app.md) 
 - [Build apps through conversation with Copilot](ai-conversations-create-app.md)
-- [Edit your app with Copilot in Power Apps Studio (preview)](ai-edit-app.md)
+- [Create a canvas app using Microsoft Dataverse](data-platform-create-app-scratch.md)
+- [Create a canvas app with data from a list](app-from-sharepoint.md)
+- [Create a canvas app based on Excel data](get-started-create-from-blank.md)
 
-You can also automatically generate an app from one of these sources:
-
-- [A sample app](open-and-run-a-sample-app.md)
-- [A template](get-started-test-drive.md)
-- [Dataverse](data-platform-create-app.md)
-- [SharePoint](app-from-sharepoint.md)
-- [Excel](get-started-create-from-data.md)
 
 For more information on where makers can create apps, see [Get started with Power Apps](intro-maker-portal.md).
 

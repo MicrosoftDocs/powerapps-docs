@@ -3,7 +3,7 @@ title: "How to: Get metadata for Dataverse tables"
 description: "Use the getMetadata function to retrieve metadata about Dataverse tables (entities) at runtime."
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 02/02/2026
+ms.date: 03/05/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
@@ -27,7 +27,7 @@ AccountsService.getMetadata(
 ```
 
 > [!NOTE]
-> You must follow the steps in [Set up your code app](connect-to-dataverse.md#set-up-your-code-app) in [Connect to Dataverse](connect-to-dataverse.md) to initialize the Power SDK and import the service file before calling `getMetadata`.
+> You must follow the steps in [Set up your code app](connect-to-dataverse.md#set-up-your-code-app) in [Connect to Dataverse](connect-to-dataverse.md) to initialize the [Power Apps client library for code apps](https://www.npmjs.com/package/@microsoft/power-apps) and import the service file before calling `getMetadata`.
 
 
 ## GetEntityMetadataOptions parameter

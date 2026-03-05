@@ -1,7 +1,7 @@
 ---
 title: "Sample: Convert queries between Fetch and QueryExpression"
 description: This sample shows how to convert queries between FetchXML and QueryExpression
-ms.date: 04/03/2022
+ms.date: 03/04/2026
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: jdaly
@@ -33,19 +33,19 @@ The `QueryExpression` and `fetchExpression` messages are intended to be used in 
 
 ## How this sample works
 
-In order to simulate the scenario described in [What this sample does](#what-this-sample-does), the sample does the following operations:
+To simulate the scenario described in [What this sample does](#what-this-sample-does), the sample performs the following operations:
 
 ### Setup
 
 1. Checks for the current version of the org.
-1. The `CreateRequireRecords` method creates an account and two contact records that are used by the sample.
+1. The `CreateRequireRecords` method creates an account and two contact records that the sample uses.
 1. The `QueryExpression` builds a [QueryExpression](xref:Microsoft.Xrm.Sdk.Query.QueryExpression) to convert into FetchXML.
 1. The `DoFetchXmlToQueryExpressionConversion` class creates a Fetch query to convert into a [QueryExpression](xref:Microsoft.Xrm.Sdk.Query.QueryExpression).
 1. The `conversionRequest` method converts the generated [QueryExpression](xref:Microsoft.Xrm.Sdk.Query.QueryExpression) into FetchXML and vice versa.
-1. Use the converted query to with a `RetrieveMultiple` request.
+1. Use the converted query with a `RetrieveMultiple` request.
 
 ### Clean up
 
-Display an option to delete the records created in the [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
+Displays an option to delete the records created in the [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

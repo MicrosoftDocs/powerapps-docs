@@ -4,8 +4,8 @@ description: "Use Dataverse search autocomplete to provide autocompletion of inp
 ms.date: 10/20/2023
 ms.reviewer: jdaly
 ms.topic: article
-author: seanwat-msft
-ms.author: seanwat
+author: JasonHQX
+ms.author: jasonhuang
 search.audienceType: 
   - developer
 search.app: 
