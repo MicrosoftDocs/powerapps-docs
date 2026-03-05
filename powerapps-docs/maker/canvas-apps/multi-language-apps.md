@@ -19,22 +19,15 @@ contributors:
 
 In this article, you'll learn how to create a multi-language app with localized experience. With this method, you can use canvas app components and make translations available in an app using a uniform formula syntax.
 
-> [!IMPORTANT]
-> The method described in this article use components for canvas apps which is in public preview. For more information, see [Create a component for canvas apps](create-component.md)
-
 ## Create a translation component
 
 When working with a multi-language app, the first step is to create a reusable component for translation. In this component, you'll store a table that acts as the dictionary of all translations you'll need. An output property will be used to provide output strings from this dictionary table based on the language of the user running the app that uses this component.
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
-1. On the left pane, select **Apps**.
+1. Go into your App and find the component action next to the screens.
 
-1. Under **Apps**, select **Component libraries (preview)**.
-
-    ![Select Component libraries (preview).](media/multi-language-apps/apps-component-libraries.png "Select Component libraries (preview)")
-
-1. Select **+ New component library (preview)**.
+<img width="356" height="420" alt="image" src="https://github.com/user-attachments/assets/bb518cd6-56c1-498f-99e3-080a6648f257" />
 
 1. Enter a name, such as "Translation components", and select **Create** to open the component in Power Apps Studio.
 
