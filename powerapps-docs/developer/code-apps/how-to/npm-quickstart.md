@@ -3,7 +3,7 @@ title: "How to: Quickstart with npm CLI (preview)"
 description: "Create a Power Apps code app using the new npm CLI. (preview)"
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 03/04/2026
+ms.date: 03/05/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
@@ -11,9 +11,9 @@ contributors:
 ---
 # Quickstart: Create a code app from scratch by using the new npm CLI (preview)
 
-Starting with [Power Apps SDK](https://www.npmjs.com/package/@microsoft/power-apps?activeTab=readme) version 1.0.4, the SDK includes an npm-based CLI for code apps. This new CLI reduces prerequisites for building code apps and replaces the Power Platform CLI's [`pac code`](/power-platform/developer/cli/reference/code) commands, which are deprecated in a future release.
+Starting with [Power Apps client library for code apps](https://www.npmjs.com/package/@microsoft/power-apps?activeTab=readme) version 1.0.4, the client library includes an npm-based CLI for code apps. This new CLI reduces prerequisites for building code apps and replaces the Power Platform CLI's [`pac code`](/power-platform/developer/cli/reference/code) commands, which are deprecated in a future release.
 
-This article shows you how to install the Power Apps SDK, set up a blank app from Vite, and convert it into a Power Apps code app by using the new npm-based CLI commands.
+This article shows you how to install the Power Apps client library for code apps, set up a blank app from Vite, and convert it into a Power Apps code app by using the new npm-based CLI commands.
 
 ## Prerequisites
 
@@ -46,7 +46,7 @@ Learn more about the [degit](https://www.npmjs.com/package/degit) command.
 
 ## Step 2: Install dependencies and initialize the code app
 
-Install the project dependencies and the Power Apps SDK:
+Install the project dependencies and the Power Apps client library for code apps:
 
 ```bash
 npm install
