@@ -11,11 +11,11 @@ contributors:
 ---
 # How to: Connect your code app to Dataverse
 
-This guide helps developers use the Power Apps client library for code apps to connect their code app to Microsoft Dataverse.
+This guide helps developers use the [Power Apps client library for code apps](https://www.npmjs.com/package/@microsoft/power-apps) to connect their code app to Microsoft Dataverse.
 
 ## Prerequisites
 
-- Power Apps code apps SDK [@microsoft/power-apps - npm package](https://www.npmjs.com/package/@microsoft/power-apps)
+- Power Apps client library for code apps
 - Power Apps CLI (PAC CLI) version 1.46 or later
 - An environment with Dataverse enabled
 - [You must be connected to the environment using PAC CLI](/power-platform/developer/cli/introduction#manage-auth-profiles)
@@ -33,7 +33,7 @@ This guide helps developers use the Power Apps client library for code apps to c
 
 ## Supported scenarios
 
-The following scenarios are supported when connecting to Dataverse using the Power Apps client library for code apps:
+The following scenarios are supported when connecting to Dataverse using the [Power Apps client library for code apps](https://www.npmjs.com/package/@microsoft/power-apps):
 
 - Add Dataverse entities to code apps using the PAC CLI
 - Retrieve formatted values/display names for option sets

@@ -11,15 +11,15 @@ contributors:
 ---
 # Power Apps client library for code apps v1.0 Migration Guide
 
-As code apps approach general availability, we're improving the SDK and releasing version 1.0. These improvements include breaking changes from SDK version 0.3.21.
+As code apps approach general availability, we're improving the [Power Apps client library for code apps](https://www.npmjs.com/package/@microsoft/power-apps) and releasing version 1.0. These improvements include breaking changes from version 0.3.21.
 
 ## Initialization isn't required
 
-The SDK version 1.0 and later remove the `initialize` function. Apps must no longer import or call `initialize`. You can now make data calls, retrieve context, and interact with the platform directly without waiting on SDK initialization.
+The Power Apps client library for code apps version 1.0 and later remove the `initialize` function. Apps must no longer import or call `initialize`. You can now make data calls, retrieve context, and interact with the platform directly without waiting on Power Apps client library for code apps initialization.
 
 ### Changes required
 
-Review and apply the following changes to migrate existing code apps from SDK v0.3.21 to v1.0.
+Review and apply the following changes to migrate existing code apps from Power Apps client library for code apps v0.3.21 to v1.0.
 
 #### Remove imports of `initialize` function
 
@@ -29,7 +29,7 @@ Remove code like the following import statement, which is typically found at the
 import { initialize } from '@microsoft/power-apps
 ```
 
-#### Remove logic that waits on SDK initialization events
+#### Remove logic that waits on client library initialization events
 
 Remove code like the following example that invokes the `initialize` function and sets initialization state flags.
 
@@ -38,7 +38,7 @@ useEffect(() => {
 // Define an async function to initialize the Power Apps client library for code apps
 const init = async () => {
       try {
-            await initialize(); // Wait for SDK initialization
+            await initialize(); // Wait for client library initialization
             setIsInitialized(true); // Mark the app as ready for data operations
       } catch (err) {
             setError('Failed to initialize Power Apps client library for code apps'); // Handle initialization errors
@@ -50,7 +50,7 @@ init(); // Call the initialization function when the component mounts
 }, []);
 
 useEffect(() => {
-// Prevent data operations until the SDK is fully initialized
+// Prevent data operations until the client library is fully initialized
 if (!isInitialized) return;
 
 // Place your data reading logic here
@@ -59,7 +59,7 @@ if (!isInitialized) return;
 
 #### Remove initialization state flags
 
-Remove code that checks initialization state flags, such as `isInitialized`, before using SDK methods.
+Remove code that checks initialization state flags, such as `isInitialized`, before using client library methods.
 
 ## New `setConfig` API
 

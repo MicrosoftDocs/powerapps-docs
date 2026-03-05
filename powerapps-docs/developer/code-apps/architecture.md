@@ -13,14 +13,14 @@ contributors:
 
 Power Apps code app architecture consists of:
 
-- The Power Apps client library for code apps, sometimes called the 'Power Apps SDK'
+- The [Power Apps client library for code apps](https://www.npmjs.com/package/@microsoft/power-apps), sometimes called the 'Power Apps SDK'
 - Generated models/services for connectors
 - The `power.config.json` configuration file
 - The Power Apps host
 
 Understanding how these parts collaborate through development, publishing, and runtime execution make you more successful. Learn about:
 
-- The role of each layer (your code vs. SDK vs. host)
+- The role of each layer (your code vs. Power Apps client library for code apps vs. host)
 - How models/services are generated and consumed when you add or remove connectors
 - What is packaged and published with [`pac code push`](/power-platform/developer/cli/reference/code#pac-code-push)
 

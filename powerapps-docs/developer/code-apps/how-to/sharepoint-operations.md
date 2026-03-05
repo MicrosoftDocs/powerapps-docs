@@ -11,11 +11,11 @@ contributors:
 ---
 # How to: SharePoint operations
 
-Use the Power Apps client library for code apps to connect your code app to SharePoint and use the generated models and services to perform CRUD (Create, Read, Update, Delete) operations on a SharePoint list.  
+Use the [Power Apps client library for code apps](https://www.npmjs.com/package/@microsoft/power-apps) to connect your code app to SharePoint and use the generated models and services to perform CRUD (Create, Read, Update, Delete) operations on a SharePoint list.  
 
 ## Prerequisites
 
-- Power Apps code apps SDK [@microsoft/power-apps - npm package](https://www.npmjs.com/package/@microsoft/power-apps)
+- [Power Apps client library for code apps](https://www.npmjs.com/package/@microsoft/power-apps)
 - [Power Apps CLI (PAC CLI)](/power-platform/developer/cli/introduction) version 1.50 or later
 - [You must be connected to the environment using PAC CLI](/power-platform/developer/cli/introduction#manage-auth-profiles)
 
