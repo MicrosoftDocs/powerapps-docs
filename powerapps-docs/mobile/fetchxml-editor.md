@@ -12,7 +12,9 @@ ms.topic: feature-guide
 
 [!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
-By using the **FetchXML editor** in Power Apps, you can define offline data filters with Dataverse's native FetchXML query language. It provides makers advanced control beyond the visual expression builder, enabling more precise offline queries, performance optimizations for syncing large datasets, and easier maintainability of filter definitions as plain-text XML.
+FetchXML is Dataverse's native query language that lets makers write data filters as XML code, similar to writing a formula, but more powerful. It lets makers optimize their complex profiles for better performance and avoid sync timeouts on large tables (100K+ records).
+
+This feature is best suited for advanced makers and developers who are comfortable working with XML and need more control than the visual filter builder provides.
 
 > [!IMPORTANT]
 >
@@ -71,6 +73,7 @@ You access the FetchXML editor through the offline profile configuration experie
 1. In the offline profile editor, add or select the table whose data you want to filter for offline use.
 1. Under **Filter**, choose **Custom** or **Related rows**, and then select **Edit filter**.
 1. In the filter editor, scroll down and select **View/Edit FetchXML** to open the FetchXML code editor.
+    :::image type="content" source="media/fetchxml-editor.png" alt-text="Screenshot showing fetchXML code editor.":::
 1. Modify the existing FetchXML query or paste a new one. The editor automatically validates syntax and structure as you edit, checking for:
 
     - A required `<fetch>` root element with at least one `<entity>` element
