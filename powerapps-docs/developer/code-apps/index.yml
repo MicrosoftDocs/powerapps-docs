@@ -68,6 +68,8 @@ landingContent:
             url: how-to/analyze-data-request-response.md
           - text: Get context data
             url: how-to/retrieve-context.md
+          - text: Embed in an iframe
+            url: how-to/embed-in-iframe.md
 
   # Card
   - title: Deploy
