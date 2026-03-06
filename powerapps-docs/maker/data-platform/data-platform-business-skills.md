@@ -1,12 +1,12 @@
 ---
 title: "Create and use business skills?" 
 description: Learn how to enable Microsoft Dataverse intelligence to bring business data understanding to AI agents and Copilot.
-ms.date: 09/03/2025
+ms.date: 03/06/2026
 ms.reviewer: matp
 ms.topic: how-to
-author: adrianorth
-ms.subservice: mda-maker
-ms.author: aorth
+author: prithvi-khosla
+ms.subservice: dataverse-maker
+ms.author: pkhosla
 ms.service: powerapps
 search.audienceType: 
   - maker
