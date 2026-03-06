@@ -1,13 +1,11 @@
 ---
-title: "How to: Embed in an iframe"
-description: "Learn how to embed your code app in an iframe."
+title: "How to: Embed a Code App in an Iframe"
+description: "Learn how to embed a code app in an iframe within an external host like a model-driven app or custom website. Update Content Security Policy frame-ancestors to allow framing."
 ms.author: jordanchodak
 author: jordanchodakWork
 ms.date: 03/6/2026
-ms.reviewer:
+ms.reviewer: jdaly
 ms.topic: how-to
-contributors:
-
 ---
 
 # Embed a code app in an iframe
@@ -15,8 +13,8 @@ contributors:
 This article explains how to embed a code app in an iframe within an external host, such as a model-driven app web resource, a custom website, or another service that supports iframes. Because code apps enforce Content Security Policy (CSP) by default, you must update the `frame-ancestors` directive to allow your host to load the app.
 
 > [!NOTE]
-> - Only Power Apps users within the same tenant can access an embedded code app. Sharing the iframe URL with users outside your tenant isn't supported.
-> - Embedding code apps in any native desktop application isn't supported, which includes Android and iOS. This excludes first-party integrations such as Power Apps in Teams. 
+> - Only Power Apps users within the same tenant can access an embedded code app. You can't share the iframe URL with users outside your tenant.
+> - You can't embed code apps in any native desktop application, which includes Android and iOS. This limitation excludes first-party integrations such as Power Apps in Teams.
 
 ## Prerequisites
 
@@ -35,7 +33,7 @@ You can find the full URL by opening the app in Power Apps and copying the addre
 
 ## Add the iframe to your host
 
-After you have the code app URL, add an `<iframe>` element to the HTML of your host. Substitute your app URL for the `src` value and set the width and height as appropriate for your layout.
+After you get the code app URL, add a `<iframe>` element to the HTML of your host. Substitute your app URL for the `src` value and set the width and height as appropriate for your layout.
 
 ```html
 <iframe
@@ -54,7 +52,7 @@ After you have the code app URL, add an `<iframe>` element to the HTML of your h
 
 ## Configure CSP to allow framing
 
-By default, code apps are configured with the following `frame-ancestors` directive, which restricts which origins can load the app in a frame:
+By default, code apps use the following `frame-ancestors` directive, which restricts which origins can load the app in a frame:
 
 ```
 frame-ancestors 'self' https://*.powerapps.com
@@ -66,20 +64,20 @@ If you embed a code app in any host outside of `https://*.powerapps.com`—such 
 Refused to frame 'https://<environment>.powerplatformusercontent.com/' because it violates the following Content Security Policy directive: "frame-ancestors 'self' https://*.powerapps.com"
 ```
 
-To resolve this, add your host origin to the `frame-ancestors` directive for the environment. For example:
+To resolve this issue, add your host origin to the `frame-ancestors` directive for the environment. For example:
 
 - For a Dynamics 365 or model-driven app: `https://<your-org>.crm.dynamics.com`
 - For a custom domain: `https://contoso.com`
 
 > [!IMPORTANT]
-> Custom values are merged with the default `frame-ancestors` value. After you save, the effective directive is:
+> Custom values merge with the default `frame-ancestors` value. After you save, the effective directive is:
 > ```
 > frame-ancestors 'self' https://*.powerapps.com https://<your-org>.crm.dynamics.com
 > ```
 
-For instructions on how to update the `frame-ancestors` directive using the Power Platform admin center or the REST API, see [Configure Content Security Policy](how-to/content-security-policy.md).
+For instructions on how to update the `frame-ancestors` directive by using the Power Platform admin center or the REST API, see [Configure Content Security Policy](content-security-policy.md).
 
 ## Related articles
 
-- [Configure Content Security Policy](how-to/content-security-policy.md)
-- [Architecture](architecture.md)
+[Configure Content Security Policy](content-security-policy.md)   
+[Architecture](../architecture.md)
