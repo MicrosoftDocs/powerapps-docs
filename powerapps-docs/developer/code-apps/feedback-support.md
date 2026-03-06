@@ -22,4 +22,4 @@ If you face issues with:
 
 ## Related information
 
-- [Power Apps code apps limitations](https://learn.microsoft.com/power-apps/developer/code-apps/overview#limitations)
+[Power Apps code apps limitations](overview.md#limitations)
