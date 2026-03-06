@@ -1,22 +1,26 @@
 ---
-title: Query data using SQL (preview)
-description: Learn how to query Dataverse data from Python code using SQL.
+title: Query data (preview)
+description: Learn how to query Dataverse data using the SDK for Python.
 ms.author: paulliew
 author: paulliew
-ms.date: 02/27/2026
+ms.date: 03/06/2026
 ms.reviewer: phecke
 ms.topic: concept-article
 contributors:
  - phecke
 ---
 
-# Query data using SQL (preview)
+# Query data (preview)
 
 [!INCLUDE [preview-banner](../../../../shared/preview-includes/preview-banner.md)]
 
-This article discusses using Structured Query Language (SQL) queries with the Dataverse SDK for Python. The SQL endpoint of the Dataverse web service provides a read-only interface to a limited set of SQL `SELECT` commands. This article describes what `SELECT` query options are available. Python developers should read [Getting started (preview)](get-started.md) first before continuing with this article.
+This article describes several methods for querying Dataverse data using the SDK for Python. You can query data using Structured Query Language (SQL), OData, and the Dataverse Web API.
 
-You can also access the SQL endpoint by using the Dataverse Web API, so code written in languages other than Python can access it.
+Python developers should first learn about the SDK for Python by reading [Getting started (preview)](get-started.md) before continuing with this article.
+
+## Query data using SQL
+
+The SQL endpoint of the Dataverse web service provides a read-only interface to a limited set of SQL `SELECT` commands. This article describes what `SELECT` query options are available. You can also access the SQL endpoint by using the Dataverse Web API, so code written in languages other than Python can access it.
 
 > [!IMPORTANT]
 > The SQL support is limited to read-only queries. Complex joins, subqueries, and certain SQL functions may not be supported. The SQL query must follow the supported subset:
@@ -24,14 +28,6 @@ You can also access the SQL endpoint by using the Dataverse Web API, so code wri
 > - WHERE can only be a boolean expression tree where leaves are binary operators ( =, >, like, etc.) with one of the arguments being a direct column reference and another is a constant
 > - TOP only allows an integer literal
 > - ORDERBY can only reference columns and does not allow any complex expressions
-
-## Query data with Python
-
-When writing your SQL statements, follow these guidelines.
-
-- For the `filter` parameter, use exact lowercase logical names for column names (for example, "statecode eq 0", not "StateCode eq 0").
-- For the `expand` parameter, use case-sensitive navigation property names that match the exact server names.
-- The `select` statement and `orderby` parameter are case-insensitive and automatically converted to lowercase.
 
 The following example code demonstrates a SQL query in Python.
 
@@ -46,7 +42,41 @@ for record in results:
 
 This call returns a list of result row dictionaries. An empty list is returned when no rows match.
 
-## Query data with the Dataverse Web API
+## Query data using OData
+
+You can use the SDK for Python `client.records` APIs to issue OData queries for data.
+
+```python
+# OData query with paging
+# Note: filter and expand parameters are case sensitive
+for page in client.records.get(
+    "account",
+    select=["accountid", "name"],  # select is case-insensitive (automatically lowercased)
+    filter="statecode eq 0",       # filter must use lowercase logical names (not transformed)
+    top=100,
+):
+    for record in page:
+        print(record["name"])
+
+# Query with navigation property expansion (case-sensitive!)
+for page in client.records.get(
+    "account",
+    select=["name"],
+    expand=["primarycontactid"],  # Navigation property names are case-sensitive
+    filter="statecode eq 0",      # Column names must be lowercase logical names
+):
+    for account in page:
+        contact = account.get("primarycontactid", {})
+        print(f"{account['name']} - Contact: {contact.get('fullname', 'N/A')}")
+```
+
+When writing your OData calls, follow these guidelines.
+
+- For the `filter` parameter, use exact lowercase logical names for column names (for example, "statecode eq 0", not "StateCode eq 0").
+- For the `expand` parameter, use case-sensitive navigation property names that match the exact server names.
+- The `select` statement and `orderby` parameter are case-insensitive and automatically converted to lowercase.
+
+## Query data using the Dataverse Web API
 
 A `?sql` query option can be used in a Dataverse Web API call. The format of the message is shown in the next example where the query is on the "accounts" entity set.
 
@@ -54,7 +84,7 @@ A `?sql` query option can be used in a Dataverse Web API call. The format of the
 [organization-root]/api/data/v9.2/accounts?sql=SELECT name FROM account AS a WHERE a.name LIKE "Fourth Coffee"
 ```
 
-The web API call returns a standard OData JSON response, where the records are contained within the value array of the response body, for example:
+The Web API call returns a standard OData JSON response, where the records are contained within the value array of the response body, for example:
 
 ```json
 {

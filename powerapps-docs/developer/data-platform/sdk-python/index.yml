@@ -39,6 +39,8 @@ landingContent:
         links:
           - text: "Work with data"
             url: work-data.md
+          - text: "Query data"
+            url: query.md
 
   # Card
   - title: Reference
@@ -46,6 +48,6 @@ landingContent:
       - linkListType: reference
         links:
           - text: Table (entity) reference
-            url:  xref:Microsoft.Dynamics.CRM.EntityTypeIndex
+            url: xref:Microsoft.Dynamics.CRM.EntityTypeIndex
           - text: SDK package reference
             url: /python/api/dataverse-sdk-docs-python/dataverse-overview?view=dataverse-sdk-python-latest
