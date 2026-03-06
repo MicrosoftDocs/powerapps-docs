@@ -53,7 +53,7 @@ You can create business skills in two ways:
    1. Provide your business process information.  
    1. The business skill is saved in the environment you used to connect to the MCP server.  
 
-Manually create skills in Power Apps:
+Manually create skills in Power Apps: <!-- Is this the same as one of the two mentioned above or is a third option to create a business skill? We need to explain? -->
 
 1. Go to [Power Apps](https://make.powerapps.com) and then go to **Tables**.  
 1. Select **All** in the **Tables** list and search for **Business Skills**. This table stores all your skills in your environment.  
