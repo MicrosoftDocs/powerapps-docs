@@ -4,7 +4,7 @@ description: Discover the new AI-native Power Apps vibe code experience. Build a
 author: mduelae
 ms.author: mkaur
 ms.reviewer: mkaur
-ms.date: 01/30/2026
+ms.date: 03/04/2026
 ms.topic: concept-article
 ms.custom: CXT 
 ---
@@ -56,9 +56,9 @@ After watching the video, explore the detailed walkthrough in [Create apps, data
 If you're experiencing connection errors or can't access environments:
 
 - **Verify environment region**: Ensure you have access to an environment located in the US, Australia, Asia, or India region. You can check your environment region in the [Power Platform admin center](https://admin.powerplatform.microsoft.com):
-   1. Sign in to the Power Platform admin center
-   1. In the navigation pane, select **Manage** > **Environments**
-   1. Locate the **Region** column to see where your environments are hosted
+   1. Sign in to the Power Platform admin center.
+   1. In the navigation pane, select **Manage** > **Environments**.
+   1. Locate the **Region** column to see where your environments are hosted.
 
 For additional support with connectivity issues, contact [Power Platform support](https://powerapps.microsoft.com/support/).
 
@@ -103,6 +103,8 @@ Legend:
 1. **Enter prompt**: Type a description of what you want to build.
 
 1. **Enhance prompt**: (Optional) Use this button to add more detail to your prompt before generating your app.
+
+1. **Start dictation**: Start speech to text and speak into a microphone to convert your voice into text.
 
 1. **Suggestions**: Want to experiment? Select one of the suggestions to explore the new app-building experience.
 

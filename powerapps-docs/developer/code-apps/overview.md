@@ -3,7 +3,7 @@ title: "Power Apps code apps overview"
 description: "Learn to use Power Apps code apps"
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 02/18/2026
+ms.date: 03/05/2026
 ms.reviewer: jdaly
 ms.topic: overview
 contributors:
@@ -38,7 +38,7 @@ Use these tools while creating code apps:
 - [Power Apps CLI](/power-platform/developer/cli/introduction)
 
 > [!NOTE]
-> Starting with [Power Apps SDK](https://www.npmjs.com/package/@microsoft/power-apps?activeTab=readme) v1.0.4 and higher, the SDK includes an npm-based CLI for code apps. This new CLI reduces prerequisites for building code apps and will replace the Power Platform CLI's [`pac code`](/power-platform/developer/cli/reference/code) commands, which will be deprecated in a future release. To learn more about the new commands and get started, see [Quickstart with new npm CLI](how-to/npm-quickstart.md).
+> Starting with [Power Apps client library for code apps](https://www.npmjs.com/package/@microsoft/power-apps?activeTab=readme) v1.0.4 and higher, the client library includes an npm-based CLI for code apps. This new CLI reduces prerequisites for building code apps and will replace the Power Platform CLI's [`pac code`](/power-platform/developer/cli/reference/code) commands, which will be deprecated in a future release. To learn more about the new commands and get started, see [Quickstart with new npm CLI](how-to/npm-quickstart.md).
 
 ### Enable code apps on a Power Platform environment
 
@@ -70,7 +70,9 @@ Browse [sample projects](https://github.com/microsoft/PowerAppsCodeApps/tree/mai
 
 ### Submit new issues
 
-If you encounter a bug or need help, [open a new issue in the repository](https://github.com/microsoft/PowerAppsCodeApps/issues). Provide clear details about your scenario, steps to reproduce, and any error messages. For bugs, use the template provided in the issue creation experience to ensure all necessary information is captured. This template helps the team and community respond quickly and effectively.
+You want to share feedback or seek guidance, [open a new issue in the repository](https://github.com/microsoft/PowerAppsCodeApps/issues).
+
+For support or to report a bug, use your standard channel for Microsoft support. [Learn about how to submit feedback and get support](feedback-support.md).
 
 > [!TIP]
 > If you find an existing issue or enhancement that applies to you, upvote or comment on it to signal its priority to the product team.
@@ -107,3 +109,4 @@ This table lists Power Platform management capabilities that work for code apps.
 
 - [Code apps architecture](architecture.md)
 - [System limits and configuration](system-limits-configuration.md)
+- [Feedback and support](feedback-support.md)
