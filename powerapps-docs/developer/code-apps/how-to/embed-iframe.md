@@ -7,7 +7,6 @@ ms.date: 03/6/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 ---
-
 # Embed a code app in an iframe
 
 This article explains how to embed a code app in an iframe within an external host, such as a model-driven app web resource, a custom website, or another service that supports iframes. Because code apps enforce Content Security Policy (CSP) by default, you must update the `frame-ancestors` directive to allow your host to load the app.
