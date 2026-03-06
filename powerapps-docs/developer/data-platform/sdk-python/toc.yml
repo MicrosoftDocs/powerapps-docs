@@ -11,7 +11,7 @@ items:
         href: get-started.md
       - name: Working with data
         href: work-data.md
-      - name: Query data
+      - name: Querying data
         href: query.md
       - name: Python Package Reference
         href: /python/api/dataverse-sdk-docs-python/dataverse-overview?view=dataverse-sdk-python-latest&preserve-view=true

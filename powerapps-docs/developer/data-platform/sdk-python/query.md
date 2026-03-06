@@ -1,5 +1,5 @@
 ---
-title: Query data (preview)
+title: Querying data (preview)
 description: Learn how to query Dataverse data using the SDK for Python.
 ms.author: paulliew
 author: paulliew
@@ -10,7 +10,7 @@ contributors:
  - phecke
 ---
 
-# Query data (preview)
+# Querying data (preview)
 
 [!INCLUDE [preview-banner](../../../../shared/preview-includes/preview-banner.md)]
 

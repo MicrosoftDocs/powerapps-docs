@@ -39,7 +39,7 @@ landingContent:
         links:
           - text: "Work with data"
             url: work-data.md
-          - text: "Query data"
+          - text: "Querying data"
             url: query.md
 
   # Card
