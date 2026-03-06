@@ -38,7 +38,7 @@ items:
           - name: Get context data
             href: how-to/retrieve-context.md
           - name: Embed in an iframe
-            href: how-to/embed-in-iframe.md
+            href: how-to/embed-iframe.md
       - name: Deploy
         items:
           - name: Application lifecycle management (ALM)
