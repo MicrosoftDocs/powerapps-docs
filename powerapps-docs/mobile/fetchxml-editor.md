@@ -8,7 +8,7 @@ ms.date: 03/06/2026
 ms.topic: feature-guide
 ---
 
-# FetchXML editor for offline profiles overview (preview)
+# FetchXML editor for offline profiles (preview)
 
 [!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
