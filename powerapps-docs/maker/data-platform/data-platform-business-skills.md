@@ -43,17 +43,17 @@ With Dataverse intelligence, you can define reusable business context that agent
 
 ## Create a business skill
 
-You can create business skills in two ways: 
+You can create business skills in the following two ways:
 
-- Use the Dataverse MCP server (preview) to create skills. More information: [Configure the Dataverse MCP server for an environment](data-platform-mcp-disable.md)
-- The Dataverse MCP server (preview) has new tools to create skills. To create  a business skill using the tools:
+### Use the Dataverse MCP server (preview) to create skills 
+The Dataverse MCP server (preview) has new tools to create skills. To create  a business skill using the tools:
 
    1. Add Dataverse MCP server Preview as a tool to any agent in Microsoft Copilot Studio or connect to it from coding agents in Visual Studio Code or non-Microsoft clients.
    1. Start by asking your agent to create a new skill and define its purpose.
    1. Provide your business process information.  
    1. The business skill is saved in the environment you used to connect to the MCP server.  
 
-Manually create skills in Power Apps: <!-- Is this the same as one of the two mentioned above or is a third option to create a business skill? We need to explain? -->
+### Manually create skills in Power Apps <!-- Is this the same as one of the two mentioned above or is a third option to create a business skill? We need to explain? -->
 
 1. Go to [Power Apps](https://make.powerapps.com) and then go to **Tables**.  
 1. Select **All** in the **Tables** list and search for **Business Skills**. This table stores all your skills in your environment.  
