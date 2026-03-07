@@ -2452,7 +2452,7 @@
       href: ./data-platform/data-platform-mcp-disable.md      
     - name: Connect to Dataverse MCP with Copilot Studio
       href: ./data-platform/data-platform-mcp-copilot-studio.md
-    - name: Connect to Dataverse MCP with Visual Studio Code
+    - name: Connect to Dataverse MCP with Visual Studio Code and Copilot CLI
       href: ./data-platform/data-platform-mcp-vscode.md
     - name: Connect to Dataverse MCP with non-Microsoft clients
       href: ./data-platform/data-platform-mcp-other-clients.md
