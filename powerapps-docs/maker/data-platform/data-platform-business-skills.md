@@ -67,7 +67,7 @@ You can now use this app to manage and create skills manually.
 > - This app appears with all your other apps in the environment.  
 > - All skills are active by default. [Deactivate a skill](#deactivate-a-skill)
 
-### Deactivate a skill
+## Deactivate a skill
 
 To prevent a skill from being used in agents until you have finalized them, select **Deactivate** on the command bar. Deactivate doesn't delete the skill, but prevents agents from seeing it until you activate it.
 
