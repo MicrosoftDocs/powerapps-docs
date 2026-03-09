@@ -15,15 +15,14 @@ search.audienceType:
 
 [!INCLUDE [preview-banner](../../../shared/preview-includes/preview-banner.md)]
 
-Business skills are natural-language instructions that capture how your organization gets work done. Business skills represent your business processes, policies, and domain knowledge in a format that agents can understand and follow. Each skill describes how to complete a specific type of work—the steps involved, the information required, and the business rules that apply.
-
 This article explains how to create business skills that agents can use to complete work according to your organization's processes. You'll learn how to enable the required features, author skill content, test skills with agents, and manage skills across environments.
 
 [!INCLUDE [cc-preview-features-definition](../../../shared/preview-includes/preview-note-pp.md)]
 
 ## Prerequisites
 
-- The environment must be enabled and configured for Dataverse MCP server preview. Business skills are only available for use with the preview version of Dataverse MCP server. - - The environment where you create and use business skills must be a Managed Environment.More information: [Use preview tools and upcoming features in Dataverse MCP server](data-platform-mcp-preview-tools.md)
+- The environment must be enabled and configured for Dataverse MCP server preview. Business skills are only available for use with the preview version of Dataverse MCP server.
+- The environment where you create and use business skills must be a Managed Environment.More information: [Use preview tools and upcoming features in Dataverse MCP server](data-platform-mcp-preview-tools.md)
 - The environment must be enabled for [Dataverse intelligence](data-platform-intelligence.md).
 
 ## Create a business skill
@@ -57,7 +56,7 @@ You can now use this app to manage and create skills manually.
 
 After you create business skills in your environment, AI agents can use them to understand and run business processes. Access skills through the Dataverse MCP server preview.
 
-- To start using business skills, connect to the Dataverse MCP server preview in Microsoft Copilot Studio or from agent mode in Visual Studio Code or non-Microsoft clients.    
+- To start using business skills, connect to the Dataverse MCP server preview in Microsoft Copilot Studio or from agent mode in Visual Studio Code or non-Microsoft clients.
 - Try asking your agent, "Show me all business skills in this environment." The agent retrieves a list of all the skills in your connected environment by using the Dataverse MCP server.  
 - Start testing by asking your agent a relevant scenario that matches your skill’s intended use case. For example, if you created a skill for logging call transcripts into Dataverse, provide a sample transcript to your agent and ask it to log the transcript information in Dataverse.
   > [!NOTE]
@@ -100,44 +99,35 @@ To add a skill to a solution:
 - Test with real scenarios—Validate behavior before sharing broadly.
 - A well-structured business skill should include: 
    - Description:
-
-     What the skill does and when to use it.
-     
-     Specific trigger phrases. For example, "Use when user asks about order status or mentions shipment tracking".
-
+      - What the skill does and when to use it.
+      - Specific trigger phrases. For example, "Use when user asks about order status or mentions shipment tracking".
    - Step-by-step instructions:
-
-     Numbered steps in the process sequence.
-
-     What happens at each stage and how to validate before moving to the next step.
-
+      - Numbered steps in the process sequence.
+      - What happens at each stage and how to validate before moving to the next step.
    - Examples:
-
-     Concrete examples showing expected inputs and outputs for common scenarios.
-
+      - Concrete examples showing expected inputs and outputs for common scenarios.
    - Troubleshooting:
-
-     Common errors with causes and solutions.
-
-     Recovery steps for failures.
-
+       - Common errors with causes and solutions.
+       - Recovery steps for failures.
    - Input and output specifications:
-
-     Required vs optional parameters with expected formats.
-
-    Output fields and success criteria.
-
-    Required tools for successful execution of skill.
+      - Required vs optional parameters with expected formats.
+      - Output fields and success criteria.
+      - Required tools for successful execution of skill.
 
 ## Sample Business skills for getting started 
 
-To help you get started, sample business skills are available here: Link to repo.  <!-- What is the link for this?-->
+To help you get started, sample business skills are available here: [Business skills repo on GitHub](https://aka.ms/DVBusinessSkillRepo)  
 
 This open source GitHub repository also has a downloadable solution. Install the solution in your environment to explore working examples and use them as templates for your own skills. Refer to the ReadMe file located in the repository for more instructions  how you start using these sample skills.  
 
 ## Deactivate a skill
 
-To prevent a skill from being used in agents until you have finalized them, select **Deactivate** on the command bar. Deactivate doesn't delete the skill, but prevents agents from seeing it until you activate it.
+To prevent a skill from being used in agents until you have finalized them, do this:
+
+1. Go to the **Skill Management** app you built earlier.
+1. Select a skill and select **Deactivate** on the command bar.
+
+Deactivate doesn't delete the skill but prevents agents from seeing it until you activate it.
 
 ## Next steps
 

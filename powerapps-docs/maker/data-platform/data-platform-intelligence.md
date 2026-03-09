@@ -29,11 +29,6 @@ With Dataverse intelligence, you can define reusable business context that agent
 
 ## Enable Dataverse intelligence
 
-To enable Dataverse intelligence, you need the following requirements:
-
-- Power Platform administrator role to access Dataverse intelligence environment settings.
-- To use this feature, the environment must be a [Managed Environment](/power-platform/admin/managed-environment-overview).
-
 1. Go to [Power Platform admin center](https://admin.powerplatform.microsoft.com/). Select **Manage** >**Environments**.
 1. Open the environment where you want to turn on the Dataverse MCP server, and then select **Settings** > **Product** > **Features**.  
 1. Scroll down to locate **Dataverse intelligence**.  

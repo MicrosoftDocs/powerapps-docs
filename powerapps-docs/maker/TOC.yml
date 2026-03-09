@@ -2460,7 +2460,7 @@
       href: ./data-platform/data-platform-mcp-preview-tools.md
     - name: Connect to Dataverse with MCP FAQ
       href: ./data-platform/data-platform-mcp-faq.md
-    - name: Dataverse intelligence
+    - name: Dataverse intelligence (preview)
       items:
       - name: Overview of Dataverse intelligence
         href: ./data-platform/data-platform-intelligence.md
