@@ -1,0 +1,13 @@
+{
+  "source_repo": "MicrosoftDocs/powerapps-docs-pr",
+  "includes_path": "shared/dynamics365-core",
+  "downstream_repos": [
+  { "repo": "nathlaroche/industry-solutions-pr", "reviewer": "reviewer" }
+  ],
+  "base_branch": "main",
+  "date_field": "ms.date",
+  "date_format": "%m/%d/%Y",
+  "pr_labels": [],
+  "pr_title_prefix": "Automated run: Cascade include changes",
+  "smart_descriptions": true
+}
