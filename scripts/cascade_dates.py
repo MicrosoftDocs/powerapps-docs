@@ -515,6 +515,67 @@ def main():
         for f in item.get("updated", []):
             print(f"       {f}")
 
+    # Write markdown summary for PR comment and GitHub Actions step summary
+    write_summary_markdown(summary, include_files, pr_number, source_repo)
+
+
+def write_summary_markdown(
+    summary: list[dict],
+    include_files: list[str],
+    pr_number: str,
+    source_repo: str,
+) -> None:
+    """Write a markdown summary file for use as a PR comment and Actions step summary."""
+    created = [item for item in summary if item.get("pr_url")]
+    skipped = [item for item in summary if "skipped" in item.get("status", "")]
+    no_match = [item for item in summary if "no matching" in item.get("status", "") or "no ms.date" in item.get("status", "")]
+    errors = [item for item in summary if "error" in item.get("status", "")]
+
+    lines: list[str] = []
+    lines.append("## 🔄 Cascade include changes — summary\n")
+
+    if created:
+        lines.append(f"**{len(created)} PR(s) created:**\n")
+        lines.append("| Repo | Scope | PR | Files updated |")
+        lines.append("|---|---|---|---|")
+        for item in created:
+            repo = item["repo"]
+            scope = item.get("scope", "")
+            pr_url = item["pr_url"]
+            file_count = len(item.get("updated", []))
+            scope_display = f"`{scope}`" if scope else "—"
+            lines.append(f"| {repo} | {scope_display} | [Open]({pr_url}) | {file_count} |")
+        lines.append("")
+
+    if skipped:
+        lines.append(f"**Skipped** (PR already exists): {', '.join(s['repo'] for s in skipped)}\n")
+
+    if no_match:
+        labels = [f"{item['repo']}" + (f" ({item['scope']})" if item.get('scope') else "") for item in no_match]
+        lines.append(f"**No matching topics:** {', '.join(labels)}\n")
+
+    if errors:
+        lines.append("**⚠️ Errors:**\n")
+        for item in errors:
+            lines.append(f"- {item['repo']}: {item['status']}")
+        lines.append("")
+
+    lines.append(f"**Changed includes:** {', '.join(f'`{f}`' for f in include_files)}\n")
+    lines.append(f"cc @nathlaroche")
+
+    md = "\n".join(lines)
+
+    # Write to file for the workflow PR comment step
+    summary_path = Path(os.environ.get("GITHUB_WORKSPACE", ".")) / "cascade-summary.md"
+    summary_path.write_text(md, encoding="utf-8")
+    print(f"\nSummary written to {summary_path}")
+
+    # Also write to GITHUB_STEP_SUMMARY if available (shows in Actions UI)
+    step_summary_path = os.environ.get("GITHUB_STEP_SUMMARY")
+    if step_summary_path:
+        with open(step_summary_path, "a", encoding="utf-8") as f:
+            f.write(md + "\n")
+
 
 if __name__ == "__main__":
     main()

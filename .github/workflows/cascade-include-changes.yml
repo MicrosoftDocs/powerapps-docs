@@ -69,3 +69,12 @@ jobs:
           PR_NUMBER: ${{ github.event_name == 'workflow_dispatch' && inputs.pr_number || github.event.pull_request.number }}
           PR_URL: ${{ github.event_name == 'workflow_dispatch' && '' || github.event.pull_request.html_url }}
         run: python scripts/cascade_dates.py
+
+      - name: Post summary comment on source PR
+        if: github.event_name == 'pull_request' && success()
+        run: |
+          gh pr comment "${{ github.event.pull_request.number }}" \
+            --repo "${{ github.repository }}" \
+            --body-file cascade-summary.md
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
