@@ -70,7 +70,9 @@ Browse [sample projects](https://github.com/microsoft/PowerAppsCodeApps/tree/mai
 
 ### Submit new issues
 
-If you encounter a bug or need help, [open a new issue in the repository](https://github.com/microsoft/PowerAppsCodeApps/issues). Provide clear details about your scenario, steps to reproduce, and any error messages. For bugs, use the template provided in the issue creation experience to ensure all necessary information is captured. This template helps the team and community respond quickly and effectively.
+You want to share feedback or seek guidance, [open a new issue in the repository](https://github.com/microsoft/PowerAppsCodeApps/issues).
+
+For support or to report a bug, use your standard channel for Microsoft support. [Learn about how to submit feedback and get support](feedback-support.md).
 
 > [!TIP]
 > If you find an existing issue or enhancement that applies to you, upvote or comment on it to signal its priority to the product team.
@@ -107,3 +109,4 @@ This table lists Power Platform management capabilities that work for code apps.
 
 - [Code apps architecture](architecture.md)
 - [System limits and configuration](system-limits-configuration.md)
+- [Feedback and support](feedback-support.md)

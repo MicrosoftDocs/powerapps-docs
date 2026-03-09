@@ -12,7 +12,7 @@ metadata:
   ms.collection: collection
   author: JimDaly
   ms.author: jdaly
-  ms.date: 09/22/2025
+  ms.date: 03/6/2026
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -68,6 +68,8 @@ landingContent:
             url: how-to/analyze-data-request-response.md
           - text: Get context data
             url: how-to/retrieve-context.md
+          - text: Embed in an iframe
+            url: how-to/embed-iframe.md
 
   # Card
   - title: Deploy
