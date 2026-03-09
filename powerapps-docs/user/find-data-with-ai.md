@@ -1,7 +1,7 @@
 ---
 title: Find data in a view with AI (preview)
 description: Learn how to find, filter, and sort data in a view using AI
-ms.date: 06/30/2025
+ms.date: 03/09/2026
 ms.reviewer: smurkute
 ms.topic: "how-to"
 author: clromano
