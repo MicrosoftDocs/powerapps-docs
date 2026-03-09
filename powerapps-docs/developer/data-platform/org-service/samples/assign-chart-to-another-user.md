@@ -1,9 +1,9 @@
 ---
 title: " Assign chart to another user (Microsoft Dataverse) | Microsoft Docs"
 description: "This sample showcases how to assign a user-owned visualization to another user " 
-ms.date: 04/03/2022
-author: mspilde
-ms.author: mspilde
+ms.date: 03/04/2026
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 ms.topic: sample
 search.audienceType:
@@ -15,19 +15,19 @@ contributors:
 
 # Assign a chart to another user
 
-This sample shows how to assign a user-owned visualization to another using the [AssignRequest](/dotnet/api/microsoft.crm.sdk.messages.assignrequest) message.
+This sample shows how to assign a user-owned visualization to another user by using the [AssignRequest](/dotnet/api/microsoft.crm.sdk.messages.assignrequest) class.
 
 > [!div class="nextstepaction"]
 > [SDK for .NET: Assign a chart to another user sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/AssignChartToAnotherUser)
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
-This sample requires an additional user that isn't available in your system. Create the required user manually in **Microsoft 365** in order to run the sample without any errors. For this sample create a user profile **as is** shown below.
+This sample requires an additional user that isn't available in your system. Create the required user manually in **Microsoft 365** to run the sample without any errors. For this sample, create a user profile **as is** shown below.
 
 **First Name**: Kevin<br/>
 **Last Name**: Cook<br/>
 **Security Role**: Sales Manager<br/>
-**UserName**: kcook@yourorg.onmicrosoft.com<br/>
+**UserName**: `kcook@yourorg.onmicrosoft.com`<br/>
 
 ## How to run this sample
 
@@ -35,11 +35,11 @@ This sample requires an additional user that isn't available in your system. Cre
 
 ## What this sample does
 
-The [AssignRequest](/dotnet/api/microsoft.crm.sdk.messages.assignrequest) message is intended to be used in a scenario where it contains the data that is needed to assign the specified record to a new owner (user or team) by changing the OwnerId column of the record.
+Use the [AssignRequest](/dotnet/api/microsoft.crm.sdk.messages.assignrequest) class to assign the specified record to a new owner (user or team). The operation changes the `OwnerId` column of the record.
 
 ## How this sample works
 
-In order to simulate the scenario described in [What this sample does](#what-this-sample-does), the sample will do the following:
+To simulate the scenario described in [What this sample does](#what-this-sample-does), the sample performs the following steps:
 
 ### Setup
 
@@ -49,10 +49,10 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Demonstrate
 
-The `AssignRequest` method assigns the visualization or chart to the newly created user.
+The `AssignRequest` method assigns the visualization or chart to the new user.
 
 ### Clean up
 
-Display an option to delete the sample data in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
+Display an option to delete the sample data in [Setup](#setup). You can choose whether to delete this data. If you want to examine the tables and data created by the sample, you don't need to delete it. You can also manually delete the records.
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

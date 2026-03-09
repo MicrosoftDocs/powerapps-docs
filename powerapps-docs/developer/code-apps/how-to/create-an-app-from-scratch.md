@@ -3,7 +3,7 @@ title: "Quickstart: Create a code app from scratch"
 description: "Learn how to create a code app from scratch"
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 02/23/2026
+ms.date: 03/05/2026
 ms.reviewer: jdaly
 ms.topic: quickstart
 contributors:
@@ -11,7 +11,7 @@ contributors:
 ---
 # Quickstart: Create a code app from scratch
 
-This article shows how to set up a blank app from [Vite](https://vite.dev/) and turn it into a Power Apps code app. It covers configuring a TypeScript app by using the Power Apps SDK.
+This article shows how to set up a blank app from [Vite](https://vite.dev/) and turn it into a Power Apps code app. It covers configuring a TypeScript app by using the Power Apps client library for code apps.
 
 ## Prerequisites
 
@@ -21,7 +21,7 @@ This article shows how to set up a blank app from [Vite](https://vite.dev/) and 
 - [Git](https://git-scm.com/)
 
 > [!NOTE]
-> Starting with [Power Apps SDK](https://www.npmjs.com/package/@microsoft/power-apps?activeTab=readme) v1.0.4 and higher, the SDK includes an npm-based CLI for code apps. This new CLI reduces prerequisites for building code apps and will replace the Power Platform CLI's [`pac code`](/power-platform/developer/cli/reference/code) commands, which will be deprecated in a future release. To learn more about the new commands and get started, see [Quickstart with new npm CLI](npm-quickstart.md).
+> Starting with [Power Apps client library for code apps](https://www.npmjs.com/package/@microsoft/power-apps?activeTab=readme) v1.0.4 and higher, the client library for code apps includes an npm-based CLI for code apps. This new CLI reduces prerequisites for building code apps and will replace the Power Platform CLI's [`pac code`](/power-platform/developer/cli/reference/code) commands, which will be deprecated in a future release. To learn more about the new commands and get started, see [Quickstart with new npm CLI](npm-quickstart.md).
 
 ## Steps
 
@@ -41,7 +41,7 @@ This article shows how to set up a blank app from [Vite](https://vite.dev/) and 
 
    Sign in by using your Power Platform account when prompted. All Power Platform apps, flows, and agents publish to an environment. The PAC CLI's [auth command](/power-platform/developer/cli/reference/auth) prompts you to authenticate by using your Microsoft Entra identity and ensures the code app you add connections to and publish to Power Platform go in the specified environment.
 
-1. Install the Power Apps SDK and initialize your code app by using:
+1. Install the Power Apps client library for code apps and initialize your code app by using:
    
 
    ```bash

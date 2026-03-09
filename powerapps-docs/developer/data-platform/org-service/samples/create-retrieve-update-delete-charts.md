@@ -1,9 +1,9 @@
 ---
 title: "Sample: Create, retrieve, update, and delete charts ( Microsoft Dataverse) | Microsoft Docs"
 description: "This sample showcases how to create, retrieve, update, and delete an user-owned visualizations." 
-ms.date: 04/03/2022
-author: mspilde
-ms.author: mspilde
+ms.date: 03/04/2026
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 ms.topic: sample
 search.audienceType:
@@ -33,7 +33,7 @@ This sample shows how to create, retrieve, update, and delete an user-owned visu
 
 ## What this sample does
 
-The `IOrganizationService` message is intended to be used in a scenario where it contains data that provides programmatic access to the metadata and data for an organization.
+The `IOrganizationService` interface is intended to be used in a scenario where it contains data that provides programmatic access to the metadata and data for an organization.
 
 ## How this sample works
 
@@ -47,10 +47,10 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Demonstrate
 
 1. The `presentationXml` method sets the presentation XML string.
-2. The `dataXml` method sets the data XML string.
-3. The `newUserOwnedVisualization` method creates the visualization record.
-4. The `retrievedOrgOwnedVisualization` method retrieves the visualization.
-5. The `newDataXml` method updates the name and the data description string.
+1. The `dataXml` method sets the data XML string.
+1. The `newUserOwnedVisualization` method creates the visualization record.
+1. The `retrievedOrgOwnedVisualization` method retrieves the visualization.
+1. The `newDataXml` method updates the name and the data description string.
 
 ### Clean up
 

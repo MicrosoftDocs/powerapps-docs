@@ -1,7 +1,7 @@
 ---
 title: "Sample: Associate security role to a team (Microsoft Dataverse) | Microsoft Docs"
 description: "This sample showcases how to assign a security role to a team " 
-ms.date: 04/03/2022
+ms.date: 03/04/2026
 author: paulliew
 ms.author: paulliew
 ms.reviewer: jdaly
@@ -15,7 +15,11 @@ contributors:
 
 # Sample: Associate security role to a team
 
-This sample shows how to assign a security role to a team by using the [AssignRequest](/dotnet/api/microsoft.crm.sdk.messages.assignrequest) message. Note that this example does not take into consideration that a team or user can only be assigned a role from its business unit. The role to be assigned is the first from the collection that is returned by the RetrieveMultiple method. If that record is from a business unit that is different from the requesting team, the assignment fails.
+This sample shows how to assign a security role to a team by using the [AssignRequest](/dotnet/api/microsoft.crm.sdk.messages.assignrequest) class.
+
+> [!NOTE]
+> This example doesn't take into consideration that a team or user can only be assigned a role from its business unit. The role to assign is the first one from the collection that the `RetrieveMultiple` method returns. If that record is from a business unit that differs from the requesting team, the assignment fails.
+
 
 > [!div class="nextstepaction"]
 > [SDK for .NET: Associate security role to a team sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/AssociateSecurityRoleToTeam)
@@ -28,24 +32,24 @@ This sample shows how to assign a security role to a team by using the [AssignRe
 
 ## What this sample does
 
-The [AssignRequest](/dotnet/api/microsoft.crm.sdk.messages.assignrequest) message is intended to be used in a scenario where it contains data that is needed to assign the specified record to a new owner (user or team) by changing the OwnerId column of the record.
+Use the [AssignRequest](/dotnet/api/microsoft.crm.sdk.messages.assignrequest) class when you want to assign a specified record to a new owner (user or team) by changing the `OwnerId` column of the record.
 
 ## How this sample works
 
-In order to simulate the scenario described in [What this sample does](#what-this-sample-does), the sample will do the following:
+To simulate the scenario described in [What this sample does](#what-this-sample-does), the sample performs the following steps:
 
 ### Setup
 
 1. Checks for the current version of the org.
-2. The `CreateRequiredRecords` method creates the records required by the sample.
+1. The `CreateRequiredRecords` method creates the records required by the sample.
 
 ### Demonstrate
 
 1. The `query` method retrieves a role from Microsoft Dataverse.
-2. The `Associate` message assigns the role to a team.
+1. The `Associate` method assigns the role to a team.
 
 ### Clean up
 
-Display an option to delete the sample data in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
+[Setup](#setup) displays an option to delete the sample data. You can choose not to delete the sample data if you want to examine the tables and data that the sample creates. You can also manually delete the records.
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

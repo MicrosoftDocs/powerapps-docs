@@ -1,10 +1,9 @@
 ---
-title: "Using the tree view in the form designer | MicrosoftDocs"
+title: "Using the tree view in the form designer"
 description: Work with the tree view control in the form designer.
 ms.custom: ""
-ms.date: 08/26/2019
+ms.date: 03/02/2026
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -20,17 +19,15 @@ tags:
 search.audienceType: 
   - maker
 ---
-
 # Using the tree view in the form designer
 
-The **Tree View** pane displays a visual hierarchy of the components on the form. The icons in the tree view help an app maker to quickly identify the type of properties of the column, section, tab, or component.
+The **Tree view** pane displays a visual hierarchy of the components on the form. The icons in the tree view help an app maker to quickly identify the type of properties of the column, section, tab, or component.
 
-Use the tree view to select columns and other components present on the form. The tree view is helpful when you want to select hidden elements that are not visible on the form preview.
+Use the tree view to select columns and other components present on the form. The tree view is helpful when you want to select hidden elements that aren't visible on the form preview.
 
-You can expand or collapse nodes in the tree view to see or hide the elements within a node. When you select an element in the tree view, it becomes highlighted in the form preview, and the property pane displays the properties for the element.
+You can expand or collapse nodes in the tree view to show or hide the elements within a node. When you select an element in the tree view, it becomes highlighted in the form preview, and the property pane displays the properties for the element.
 
-> [!div class="mx-imgBorder"]
-> ![Tree view.](media/FormDesignerTreeView.png "Tree view")
+:::image type="content" source="media/FormDesignerTreeView.png" alt-text="Tree view.":::
 
 ## Open the tree view
 

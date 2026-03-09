@@ -2,14 +2,17 @@
 title: "Don't duplicate plug-in step registration | MicrosoftDocs"
 description: "Duplicate plug-in step registration causes the plug-in to fire multiple times on the same message/event."
 suite: powerapps
-author: jowells
-ms.author: jowells
-ms.reviewer: jdaly
+author: sakaralems
+ms.author: sakarale
+ms.reviewer: pehecke
 ms.topic: article
-ms.date: 1/15/2019
+ms.date: 03/02/2026
 ms.subservice: dataverse-developer
 search.audienceType: 
   - developer
+contributors:
+ - JimDaly
+ - phecke
 ---
 # Don't duplicate plug-in step registration
 
@@ -21,10 +24,10 @@ search.audienceType:
 
 ## Symptoms
 
-Duplicate plug-in step registration causes the plug-in to fire multiple times on the same message/event. Duplicate plug-in step registration could lead to:
+If you register a plug-in step more than once, the plug-in runs multiple times for the same message or event. Duplicate plug-in step registration can cause problems such as:
 
-- Delayed processing of asynchronous jobs when registered as an asynchronous execution mode.
-- Degraded user performance experience when registered as a synchronous execution mode. Experiences include:
+- Delayed processing of asynchronous jobs when you register the step as an asynchronous execution mode.
+- Degraded user performance experience when you register the step as a synchronous execution mode. Experiences include:
    
    - Unresponsive model-driven apps
    - Slow client interactions
@@ -34,26 +37,26 @@ Duplicate plug-in step registration causes the plug-in to fire multiple times on
 
 ## Guidance
 
-Ensure you're updating existing plug-in registration steps rather than deleting and re-creating them. Additionally, only create and update plug-in registration steps in a supported manner.
+Make sure you update existing plug-in registration steps instead of deleting and re-creating them. Also, create and update plug-in registration steps only in supported ways.
 
 <a name='problem'></a>
 
 ## Problematic patterns
 
 > [!WARNING]
-> These patterns should be avoided.
+> Avoid these patterns.
 
-Deleting and recreating a step in the source instance (test, dev, preprod) creates a duplicate step being registered in the target environment if that step was registered before.
+If you delete and recreate a step in the source instance (test, dev, preprod), you register a duplicate step in the target environment if the step was previously registered.
 
 ![Duplicate Plug-in Step Registration.](../media/duplicate-plugin-registration-step.png)
 
-Manually creating the `SDKMessageProcessingSteps` with a new GUID or updating the existing GUID within the `customizations.xml` file results in a duplicate step being registered. These types of tasks are unsupported as outlined in [When to edit the customizations file](/power-platform/alm/when-edit-customization-file).
+If you manually create the `SDKMessageProcessingSteps` with a new GUID or update the existing GUID in the `customizations.xml` file, you register a duplicate step. These types of tasks are unsupported as outlined in [When to edit the customizations file](/power-platform/alm/when-edit-customization-file).
 
 <a name='additional'></a>
 
 ## Additional information
 
-Duplicate plug-in step registration could cause SQL deadlocking when the events are registered on an update message. When issuing an update on a record, SQL creates a row lock on that record. If another transaction tries to update that same record, it has to wait until the lock is released before it's able to make the update. If a timeout occurs, the transaction is rolled back and the update isn't committed to the SQL database.
+Duplicate plug-in step registration can cause SQL deadlocking when you register the events on an update message. When you issue an update on a record, SQL creates a row lock on that record. If another transaction tries to update that same record, it waits until the lock is released before it can make the update. If a timeout occurs, the transaction rolls back and the update isn't committed to the SQL database.
 
 <a name='seealso'></a>
 

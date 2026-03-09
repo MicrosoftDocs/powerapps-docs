@@ -6,7 +6,7 @@ contributors: mduelae
 ms.custom:
   - responsible-ai-faqs
 ms.topic: faq
-ms.date: 11/17/2025
+ms.date: 03/04/2026
 ms.update-cycle: 180-days
 ms.author: norliu
 ms.reviewer: mkaur
@@ -40,6 +40,7 @@ We evaluate the feature both qualitatively and quantitatively. To check quality,
 - This capability is powered by Azure OpenAI Service.
 - This capability can be subject to usage limits or capacity throttling.
 - This feature lets you use a maximum input size of 4,000 tokens, including both text and images (about 3,000 words if your input only has text).
+- The[Power Apps vibe experience](../../vibe/create-app-data-plan.md) is onlyavailable in English.
   
 ## What operational factors and settings allow for effective and responsible use of plans?
 

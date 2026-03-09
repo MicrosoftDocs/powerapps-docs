@@ -1,12 +1,12 @@
 ---
-title: Handling errors in Power Apps
+title: Error handling in Power Apps
 description: Discover best practices for error handling in Power Apps, including validation, patching, and custom error messages.
-ms.date: 02/25/2026
-ms.topic: concept-article
-ms.subservice: guidance
-ms.service: powerapps
+#customer intent: As a Power Apps user, I want to understand how to handle validation errors so that I can ensure accurate user input in my app.
+ms.date: 02/26/2026
+ms.topic: best-practice
 author: robstand
 ms.author: rstand
+ms.reviewer: jhaskett-msft
 ms.custom:
   - ai-gen-docs-bap
   - ai-gen-description
@@ -15,12 +15,13 @@ ms.custom:
 
 # Error handling
 
-Power Fx includes a feature that enables formula-level error handling. By default, this feature is turned on for all apps, but in older apps, app **Settings** might disable it. Don't disable this feature.
+Power Fx supports formula-level error handling. This feature is turned on by default for all new apps. However, some older apps might have it turned off in app **Settings**. We recommend keeping this feature turned on.
 
-1. You can check by opening a canvas app for editing.
-1. Go to **Settings** > **Updates** > **Redired** tab.
-1. Make sure **Disable formula-level managent** is turned off.
+To check if this feature is turned on:
 
+1. Open a canvas app for editing.
+1. Go to the **Settings** > **Updates** > **Retired** tab.
+1. Make sure **Disable formula-level management** is turned off.
 
 When this setting is enabled, you can use formulas like `IfError`, `IsError`, `Error`, and `IsBlankorError`. These functions help you detect errors, provide alternative values, or take specific actions based on the error. When you turn on this setting, you can write null or blank values to data sources. When you turn off this feature, errors are returned as blank values.
 
@@ -118,7 +119,7 @@ Notify(
 
 ## Related information
 
-[Power Fx error handling](/power-platform/power-fx/error-handling)
+- [Power Fx error handling](/power-platform/power-fx/error-handling)
 
 ## Next step
 
