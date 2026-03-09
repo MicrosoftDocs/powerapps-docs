@@ -13,7 +13,7 @@ search.audienceType:
 ---
 # What is Dataverse intelligence?
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../../../../../repos/powerapps-docs-pr/powerapps-docs/includes/cc-beta-prerelease-disclaimer.md)]
+[!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
 Microsoft Dataverse intelligence extends Work IQ to bring business data understanding to AI agents and Microsoft Copilot. Work IQ helps agents understand work artifacts like files, meetings, and messages. Dataverse intelligence builds on this foundation by enabling agents to understand and act on your business data.
 

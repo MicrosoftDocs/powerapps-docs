@@ -13,7 +13,7 @@ search.audienceType:
 ---
 # Create and use business skills
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../../../../../repos/powerapps-docs-pr/powerapps-docs/includes/cc-beta-prerelease-disclaimer.md)]
+[!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
 Business skills are natural-language instructions that capture how your organization gets work done. Business skills represent your business processes, policies, and domain knowledge in a format that agents can understand and follow. Each skill describes how to complete a specific type of work—the steps involved, the information required, and the business rules that apply.
 
