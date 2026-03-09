@@ -19,10 +19,7 @@ Business skills are natural-language instructions that capture how your organiza
 
 This article explains how to create business skills that agents can use to complete work according to your organization's processes. You'll learn how to enable the required features, author skill content, test skills with agents, and manage skills across environments.
 
-> [!IMPORTANT]
->
-> - This is a preview feature.
-> - [!INCLUDE [cc-preview-features-definition](../../../../../../repos/powerapps-docs-pr/powerapps-docs/includes/cc-preview-features-definition.md)]
+[!INCLUDE [cc-preview-features-definition](../../../shared/preview-includes/preview-note-pp.md)]
 
 ## Prerequisites
 

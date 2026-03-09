@@ -19,10 +19,7 @@ Microsoft Dataverse intelligence extends Work IQ to bring business data understa
 
 With Dataverse intelligence, you can define reusable business context that agents use to understand what your data means, follow your organization's processes when taking actions, and read and update Dataverse records reliably. This business context is shared across agents, so you define it once and use it everywhere.
 
-> [!IMPORTANT]
->
-> - This is a preview feature.
-> - [!INCLUDE [cc-preview-features-definition](../../../../../../repos/powerapps-docs-pr/powerapps-docs/includes/cc-preview-features-definition.md)]
+[!INCLUDE [cc-preview-features-definition](../../../shared/preview-includes/preview-note-pp.md)]
 
 ## Prerequistes
 

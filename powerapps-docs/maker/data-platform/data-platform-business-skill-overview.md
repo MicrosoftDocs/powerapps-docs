@@ -19,11 +19,10 @@ Business skills are natural-language instructions that capture how your organiza
 
 Agents discover and use business skills as needed at runtime to complete tasks according to your organization's processes. When multiple agents use the same skill, they follow the same process, ensuring consistent behavior across your organization.
 
+[!INCLUDE [cc-preview-features-definition](../../../shared/preview-includes/preview-note-pp.md)]
+
 > [!IMPORTANT]
->
-> - This is a preview feature.
-> - [!INCLUDE [cc-preview-features-definition](../../../../../../repos/powerapps-docs-pr/powerapps-docs/includes/cc-preview-features-definition.md)]
-> - Business skills are not executable code. They contain natural-language instructions that guide agent behavior, similar to how you might document a process for a new employee.
+> Business skills are not executable code. They contain natural-language instructions that guide agent behavior, similar to how you might document a process for a new employee.
 
 Key capabilities include: 
 
