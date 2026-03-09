@@ -126,6 +126,10 @@
     {
       "ConceptualTOC": "powerapps-docs/developer/data-platform/virtual-entities/toc.yml",
       "ReferenceTOCUrl": "/dotnet/api/ce-9-virtualentity/toc.json"
+    },
+   {
+      "ConceptualTOC": "powerapps-docs/developer/code-apps/toc.yml",
+      "ReferenceTOCUrl": "/javascript/api/powerapps-sdk-node-ref-toc/toc.json?view=powerapps-js-latest"
     }
   ],
   "need_generate_intellisense": false
