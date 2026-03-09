@@ -30,7 +30,7 @@ Each file column has a supporting read-only string column that contains the name
 
 When you create a file column for a table, you also create a new one-to-many relationship between that table and the `FileAttachment` table. The name of the relationship is `{table logical name}_FileAttachments`. For example, if the file column is part of the account table, the relationship name is `account_FileAttachments`.
 
-You can use this relationship to return more data about the file column and any other file columns for the table. For more information, see [Retrieve additional information about files for a record](#retrieve-additional-information-about-files-for-a-record).
+You can use this relationship to return more data about the file column and any other file columns for the table. For more information, see  [Retrieve additional information about files for a record](#retrieve-extra-information-about-files-for-a-record)
 
 ## Behavior when retrieving
 
