@@ -1,0 +1,71 @@
+name: Cascade Include Changes
+
+on:
+  # Automatic: fires when a PR that touches the includes folder is merged into main.
+  pull_request:
+    types: [closed]
+    branches:
+      - live
+    paths:
+      - "shared/dynamics365-core/**"
+
+  # Manual: trigger from the Actions tab to test without merging a real PR.
+  workflow_dispatch:
+    inputs:
+      changed_files:
+        description: >
+          Space-separated list of include file paths to simulate, e.g.
+          "shared/dynamics365-core/file-a.md shared/dynamics365-core/file-b.md"
+        required: true
+        type: string
+      pr_number:
+        description: "Fake PR number to use in branch names and PR body (e.g. 999)"
+        required: true
+        default: "test-1"
+        type: string
+
+jobs:
+  cascade:
+    # For pull_request events: only run when the PR was actually merged.
+    # For workflow_dispatch: always run.
+    if: github.event_name == 'workflow_dispatch' || github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source repo
+        uses: actions/checkout@v4
+
+      # For automatic runs: fetch the file list from the merged PR.
+      # For manual runs: use the value typed into the dispatch form.
+      - name: Resolve changed include files
+        id: changed
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            FILES="${{ inputs.changed_files }}"
+            echo "Manual run — using provided file list: $FILES"
+          else
+            FILES=$(gh pr view "${{ github.event.pull_request.number }}" \
+              --json files \
+              --jq '[.files[].path] | join(" ")')
+            echo "PR merge — fetched file list: $FILES"
+          fi
+          echo "files=$FILES" >> "$GITHUB_OUTPUT"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # No third-party deps needed — script uses stdlib only.
+
+      - name: Cascade include changes to downstream repos
+        env:
+          # CASCADE_PAT must be a classic PAT with repo scope, stored as a
+          # repository secret in the source (includes) repo.
+          GITHUB_TOKEN: ${{ secrets.CASCADE_PAT }}
+          CHANGED_FILES: ${{ steps.changed.outputs.files }}
+          PR_NUMBER: ${{ github.event_name == 'workflow_dispatch' && inputs.pr_number || github.event.pull_request.number }}
+          PR_URL: ${{ github.event_name == 'workflow_dispatch' && '' || github.event.pull_request.html_url }}
+        run: python scripts/cascade_dates.py
