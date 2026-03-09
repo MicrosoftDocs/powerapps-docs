@@ -329,7 +329,6 @@ Accept: application/json
 ```http
 HTTP/1.1 204 NoContent
 OData-Version: 4.0
-OData-EntityId: [Organization Uri]/api/data/v9.2/sample_medias(00000000-0000-0000-0000-000000000007)
 ```
 
 
