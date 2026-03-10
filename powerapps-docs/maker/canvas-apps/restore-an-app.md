@@ -6,7 +6,7 @@ author: emcoope-msft
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 10/14/2024
+ms.date: 3/10/2026
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
