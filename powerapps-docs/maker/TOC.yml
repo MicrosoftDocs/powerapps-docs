@@ -1934,6 +1934,8 @@
     items:
     - name: How offline first functionality works in Power Apps mobile
       href: ../mobile/mobile-offline-works-overview.md
+    - name: FetchXML editor for offline profiles overview (preview)
+      href: ../mobile/fetchxml-editor.md
     - name: Mobile offline for canvas apps
       items:
       - name: Mobile offline for canvas apps overview
