@@ -4,7 +4,7 @@ description: Learn how the FetchXML Editor in Power Apps helps you create advanc
 author: Murugesh1985
 ms.author: murugeshs
 ms.reviewer: smurkute
-ms.date: 03/06/2026
+ms.date: 03/10/2026
 ms.topic: feature-guide
 ---
 
