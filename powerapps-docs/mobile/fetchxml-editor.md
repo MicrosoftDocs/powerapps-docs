@@ -14,7 +14,7 @@ ms.topic: feature-guide
 
 FetchXML is Dataverse's native query language that lets makers write data filters as XML code, similar to writing a formula, but more powerful. It lets makers optimize their complex profiles for better performance and avoid sync timeouts on large tables (100K+ records).
 
-This feature is best suited for advanced makers and developers who are comfortable working with XML and need more control than the visual filter builder provides.
+This feature is best suited for advanced makers and developers who are comfortable working with XML and need more control than what the visual filter builder provides.
 
 > [!IMPORTANT]
 >
