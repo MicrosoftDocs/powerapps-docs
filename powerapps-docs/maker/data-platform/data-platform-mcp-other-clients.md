@@ -2,7 +2,7 @@
 title: Connect to Dataverse with model context protocol in non-Microsoft clients
 description: Learn how to connect to Dataverse using the Model Context Protocol (MCP) server in non-Microsoft clients such as Claude desktop or Claude Code. Follow step-by-step instructions to connect using the npm local proxy or the remote endpoint with a custom Entra app.
 #customer intent: As a Power Apps maker, I want to connect to Dataverse using the Model Context Protocol server so that I can choose from different MCP clients that can interact with my data through natural language queries.
-author: ShefaaliP
+author: seanwat-msft
 ms.author: spatankar
 ms.reviewer: matp
 ms.date: 03/07/2026

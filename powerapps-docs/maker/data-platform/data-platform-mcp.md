@@ -4,11 +4,13 @@ description: Step-by-step instructions for setup, connect, and use Microsoft Dat
 author: ShefaaliP
 ms.component: cds
 ms.topic: how-to
-ms.date: 11/17/2025
+ms.date: 03/10/2026
 ms.subservice: dataverse-maker
 ms.author: spatankar
 ms. reviewer: matp
-contributors: MsSQLGirl
+contributors: 
+- MsSQLGirl
+- seanwat-msft
 search.audienceType: 
   - maker
 ---

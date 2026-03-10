@@ -1,7 +1,7 @@
 ---
 title: Connect to Dataverse with model context protocol FAQ
 description: Frequently asked questions about using Microsoft Dataverse with a model context protocol server. 
-author: ShefaaliP
+author: seanwat-msft
 ms.component: cds
 ms.topic: how-to
 ms.date: 03/07/2026
