@@ -3,7 +3,7 @@ title: "How to: Create a basic asset management API with Azure Functions"
 description: "Learn how to create a basic asset management API with Azure Functions"
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 02/02/2026
+ms.date: 03/05/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
@@ -112,6 +112,6 @@ module.exports = async function (context, req) {
 
 ## Next steps
 
-- Create a new code app using this custom connector with **Power Apps SDK**
+- Create a new code app using this custom connector with **Power Apps client library for code apps**
 - Expand the API with more operations as needed. Don't forget to update the connector with the new operations when you do.
 - Secure your API if you move beyond development/testing.
