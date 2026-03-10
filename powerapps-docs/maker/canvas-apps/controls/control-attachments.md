@@ -8,7 +8,7 @@ ms.date: 12/16/2025
 ms.subservice: canvas-maker
 ms.author: yogupt
 ms.reviewer: mkaur
-search.audienceType: 
+search.audienceType:
   - maker
 contributors:
   - mduelae
@@ -37,8 +37,10 @@ The attachment control has these limitations:
 1. The Power Apps mobile app doesn't support capturing videos directly from the camera or selecting videos from the photo library when using the **Attachments** control. To add a video, users must use the **Browse** option.
    - **On Android**: The **Browse** option displays all file types, including videos, letting you to select and attach your video files.
    - **On iOS**: The **Browse** option only shows files stored in the Files app. If your video isn't already saved there, you need to move it to the Files app before you attach it.
-   
-   If a video doesn't appear as an option to attach, first save the video to your device’s Files app and then try again.
+
+   If a video doesn't appear as an option to attach, first save the video to your device's Files app and then try again.
+
+1. Uploading and viewing attachments is not supported when running canvas apps in Microsoft Teams on Android or iOS mobile devices.
 
 ## Key properties
 **[Items](properties-core.md)** – The **Attachment** column of the list or Dataverse table. [Collections](../create-update-collection.md) and [Tables](../working-with-tables.md) are not supported.
@@ -144,7 +146,7 @@ The attachment control has these limitations:
 
 3. Select **Data Source** in the Properties tab in the options panel on the right and then select the list you connected to.
 
-4. Select **Edit fields** in *Fields* section and select **Add field**. 
+4. Select **Edit fields** in *Fields* section and select **Add field**.
 
 5. Select the **Attachments** field and select **Add**.
 
@@ -181,5 +183,3 @@ The following properties must be present:
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
-
-
