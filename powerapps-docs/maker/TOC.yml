@@ -2462,6 +2462,16 @@
       href: ./data-platform/data-platform-mcp-preview-tools.md
     - name: Connect to Dataverse with MCP FAQ
       href: ./data-platform/data-platform-mcp-faq.md
+    - name: Dataverse intelligence (preview)
+      items:
+      - name: Overview of Dataverse intelligence
+        href: ./data-platform/data-platform-intelligence.md
+      - name: Business skills with Dataverse intelligence
+        items:
+        - name: Business skills overview
+          href: ./data-platform/data-platform-business-skill-overview.md
+        - name: Create and use business skills
+          href: ./data-platform/data-platform-business-skills.md
   - name: License requirements for tables
     href: ./data-platform/data-platform-entity-licenses.md
     items:
