@@ -2,7 +2,7 @@
 title: Connect Dataverse MCP with GitHub Copilot in Visual Studio Code and Copilot CLI
 description: Learn how to connect to Dataverse using the Model Context Protocol (MCP) server in Visual Studio Code GitHub Copilot and GitHub Copilot CLI. Follow step-by-step instructions to enable seamless data interaction.
 #customer intent: As a Power Apps maker, I want to connect to Dataverse using the Model Context Protocol server so that I can choose from different MCP clients that can interact with my data through natural language queries.
-author: - seanwat-msft
+author: seanwat-msft
 ms.author: spatankar
 ms.reviewer: matp
 ms.date: 03/09/2026
