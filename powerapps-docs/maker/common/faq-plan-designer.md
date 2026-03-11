@@ -32,15 +32,15 @@ The plan also serves as documentation that users can refer to later.
 
 ## How was plans evaluated? What metrics are used to measure performance?
 
-We evaluate the feature both qualitatively and quantitatively. To check quality, we conduct user studies with makers to get feedback on their experiences, thoughts about the feature's quality, and suggestions for improvement. Also, monitor telemetry data to track the number of makers who try the feature, the feature's success rate, and the ratio of positive to negative feedback. Before releasing the feature, run extensive testing to check its functionality. If you find any issues with the generated content, provide feedback. Microsoft uses your feedback to improve products and services. Your organization's IT admins can access your feedback data for management purposes. For more information, read the [Privacy Statement](https://go.microsoft.com/fwlink/?linkid=2182930%22%20%5Ct%20%22_blank).
+We evaluate the feature both qualitatively and quantitatively. To check quality, we conduct user studies with makers to get feedback on their experiences, thoughts about the feature's quality, and suggestions for improvement. Also, monitor telemetry data to track the number of makers who try the feature, the feature's success rate, and the ratio of positive to negative feedback. Before releasing the feature, run extensive testing to check its functionality. If you find any issues with the generated content, provide feedback. Microsoft uses your feedback to improve products and services. Your organization's IT admins can access your feedback data for management purposes. For more information, read the [Privacy Statement](https://www.microsoft.com/en-us/privacy/privacystatement).
 
-## What are the limitations of plans? How can users minimize the impact of system or product name’s limitations when using the system?
+## What are the limitations of plans? How can users minimize the impact of plan’s limitations when using the system?
 
 - To use this capability, you need a Microsoft Dataverse database in your environment.
 - This capability is powered by Azure OpenAI Service.
 - This capability can be subject to usage limits or capacity throttling.
 - This feature lets you use a maximum input size of 4,000 tokens, including both text and images (about 3,000 words if your input only has text).
-- The[Power Apps vibe experience](../../vibe/create-app-data-plan.md) is onlyavailable in English.
+- The [Power Apps vibe experience](../../vibe/create-app-data-plan.md) is only available in English.
   
 ## What operational factors and settings allow for effective and responsible use of plans?
 
