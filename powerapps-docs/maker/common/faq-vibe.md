@@ -32,7 +32,7 @@ Power Apps vibe is intended to support makers who want to quickly prototype, exp
 
 Power Apps vibe is evaluated using a combination of qualitative and quantitative methods. Evaluation includes user studies with makers to assess the quality of generated outputs, usability of the experience, and how effectively Power Apps vibe supports app creation workflows. Feedback from these studies helps identify strengths, gaps, and opportunities for improvement.
 
-In addition to qualitative feedback, telemetry data is monitored to understand how makers use Power Apps vibe in practice. This data includes metrics such as feature usage, completion and success rates, and the ratio of positive to negative feedback signals. Before release, Power Apps vibe undergoes extensive functional testing to validate reliability and behavior across supported scenarios. For more information, see the [Privacy Statement](https://www.microsoft.com/en-us/privacy/privacystatement).
+In addition to qualitative feedback, telemetry data is monitored to understand how makers use Power Apps vibe in practice. This data includes metrics such as feature usage, completion and success rates, and the ratio of positive to negative feedback signals. Before release, Power Apps vibe undergoes extensive functional testing to validate reliability and behavior across supported scenarios. For more information, see the [Privacy Statement](/privacy/privacystatement).
 
 ## What are the limitations of Power Apps vibe? How can users minimize the impact of Power Apps vibe’s limitations when using the system?
 
@@ -74,6 +74,9 @@ Effective and responsible use of Power Apps vibe depends on how makers configure
 - Select the thumbs up or thumbs down in the chat pane to provide feedback on a specific action. 
 - Select the **Give feedback** icon in the command bar to provide general feedback, report an issue, or share suggestions. 
 
-### See also
-[Overview of new Power Apps vibe experience](https://learn.microsoft.com/en-us/power-apps/vibe/overview)
+## See also
+
+[Create apps, data, and plans together using vibe (preview)](../../vibe/create-app-data-plan.md)
+
+
 
