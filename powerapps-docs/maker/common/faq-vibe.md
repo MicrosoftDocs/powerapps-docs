@@ -32,7 +32,7 @@ Power Apps vibe is intended to support makers who want to quickly prototype, exp
 
 Power Apps vibe is evaluated using a combination of qualitative and quantitative methods. Evaluation includes user studies with makers to assess the quality of generated outputs, usability of the experience, and how effectively Power Apps vibe supports app creation workflows. Feedback from these studies helps identify strengths, gaps, and opportunities for improvement.
 
-In addition to qualitative feedback, telemetry data is monitored to understand how makers use Power Apps vibe in practice. This data includes metrics such as feature usage, completion and success rates, and the ratio of positive to negative feedback signals. Before release, Power Apps vibe undergoes extensive functional testing to validate reliability and behavior across supported scenarios. For more information, see the [Privacy Statement](https://go.microsoft.com/fwlink/?linkid=2182930%22%20%5Ct%20%22_blank).
+In addition to qualitative feedback, telemetry data is monitored to understand how makers use Power Apps vibe in practice. This data includes metrics such as feature usage, completion and success rates, and the ratio of positive to negative feedback signals. Before release, Power Apps vibe undergoes extensive functional testing to validate reliability and behavior across supported scenarios. For more information, see the [Privacy Statement](https://www.microsoft.com/en-us/privacy/privacystatement).
 
 ## What are the limitations of Power Apps vibe? How can users minimize the impact of Power Apps vibe’s limitations when using the system?
 
