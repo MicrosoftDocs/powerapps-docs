@@ -9,6 +9,9 @@
 
 An administrator must enable Microsoft 365 Copilot in your application before it becomes visible in your app. For more information, see [Add Microsoft 365 Copilot for app users](/power-apps/maker/model-driven-apps/add-microsoft-365-copilot).
 
+> [!NOTE]
+> To use the Microsoft 365 Copilot feature in your app, you must have both a Power Apps premium license and a Microsoft 365 Copilot license.
+
 ## Copilot pane
 
 After Microsoft 365 Copilot is enabled, access it through the Copilot button near the upper-right corner of the page.
