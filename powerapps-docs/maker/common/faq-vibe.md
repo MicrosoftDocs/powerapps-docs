@@ -14,7 +14,7 @@ ms.collection:
     - bap-ai-copilot
 ---
 
-# FAQ for the Power Apps vibe experience (preview)
+# FAQ for Power Apps vibe experience (preview)
 
 ## What is Power Apps vibe?
 
