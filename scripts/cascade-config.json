@@ -1,0 +1,24 @@
+{
+  "source_repo": "MicrosoftDocs/powerapps-docs-pr",
+  "includes_path": "shared/dynamics365-core",
+  "downstream_repos": [
+  {
+  "repo": "MicrosoftDocs/dynamics-365-customer-engagement-pr",
+  "docsets": [
+    { "path": "ce/customer-service", "reviewer": "neeranelli" },
+    { "path": "ce/sales",            "reviewer": "lavanyakr01" },
+    { "path": "ce/field-service",    "reviewer": "puneetsingh" }
+    ]
+  },
+  { "repo": "MicrosoftDocs/dynamics-365-project-operations-pr", "reviewer": "johnmichalak" },
+  { "repo": "MicrosoftDocs/customer-insights-pr", "reviewer": "alfergus" },
+  { "repo": "MicrosoftDocs/Dynamics-365-Operations", "reviewer": "twheeloc" },
+  { "repo": "MicrosoftDocs/industry-solutions-pr", "reviewer": "lsuresh" }
+  ],
+  "base_branch": "main",
+  "date_field": "ms.date",
+  "date_format": "%m/%d/%Y",
+  "pr_labels": [],
+  "pr_title_prefix": "Automated run: Cascade include changes",
+  "smart_descriptions": true
+}

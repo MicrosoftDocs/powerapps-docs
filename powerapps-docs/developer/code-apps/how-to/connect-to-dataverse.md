@@ -56,8 +56,7 @@ The following scenarios are supported when connecting to Dataverse using the [Po
 - Paging support
 
 > [!TIP]
-> Looking for a complete working example? The [Dataverse sample code app](https://github.com/microsoft/PowerAppsCodeApps/tree/main/samples/Dataverse) demonstrates all the patterns covered in this article — CRUD operations, lookup fields, and generated services — in a ready-to-run
-React/TypeScript app you can explore and extend.
+> Looking for a complete working example? The [Dataverse demo app](https://github.com/microsoft/PowerAppsCodeApps/tree/main/samples/Dataverse) demonstrates all the patterns covered in this article — CRUD operations, lookup fields, and generated services — in a React/TypeScript app you can explore and extend. To run the app yourself, follow the setup instructions in [PowerAppsCodeApps/samples/Dataverse/DEVELOPMENT.md](https://github.com/microsoft/PowerAppsCodeApps/blob/main/samples/Dataverse/DEVELOPMENT.md) to configure it for your environment.
 
 ## Set up your code app
 

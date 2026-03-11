@@ -329,7 +329,6 @@ Accept: application/json
 ```http
 HTTP/1.1 204 NoContent
 OData-Version: 4.0
-OData-EntityId: [Organization Uri]/api/data/v9.2/sample_medias(00000000-0000-0000-0000-000000000007)
 ```
 
 
@@ -338,7 +337,7 @@ OData-EntityId: [Organization Uri]/api/data/v9.2/sample_medias(00000000-0000-000
 > [!NOTE]
 > The following example shows how to use the Dataverse Web API. You can also use the SDK for .NET with the <xref:Microsoft.Crm.Sdk.Messages.CreatePolymorphicLookupAttributeRequest> and <xref:Microsoft.Crm.Sdk.Messages.CreatePolymorphicLookupAttributeResponse> classes.
 
-Use the [CreatePolymorphicLookupAttribute action](xref:Microsoft.Dynamics.CRM.CreatePolymorphicLookupAttribute) to create a multi-table lookup. This example creates the column as part of a solution with the unique name `polymorphiclookupexamplesolution` by using the [MSCRM.SolutionUniqueName optional parameter](../optional-parameters.md#associate-a-solution-component-with-a-solution).
+Use the [CreatePolymorphicLookupAttribute action](xref:Microsoft.Dynamics.CRM.CreatePolymorphicLookupAttribute) to create a multi-table lookup. This example creates the column as part of a solution with the unique name `polymorphiclookupexamplesolution` by using the `SolutionUniqueName` parameter.
 
 **Request**
 
@@ -348,7 +347,6 @@ Consistency: Strong
 Accept: application/json
 OData-MaxVersion: 4.0
 Authorization: Bearer [REDACTED]
-MSCRM.SolutionUniqueName: polymorphiclookupexamplesolution
 OData-Version: 4.0
 
 {
@@ -412,13 +410,20 @@ OData-Version: 4.0
       "@odata.type": "Microsoft.Dynamics.CRM.Label"
     },
     "@odata.type": "Microsoft.Dynamics.CRM.ComplexLookupAttributeMetadata"
-  }
+  },
+ "SolutionUniqueName": "polymorphiclookupexamplesolution"
 }
 ```
 
-The following JSON is an example of the [CreatePolymorphicLookupAttributeResponse ComplexType](xref:Microsoft.Dynamics.CRM.CreatePolymorphicLookupAttributeResponse). It contains the ID of the polymorphic attribute and all the relationships created.
+The following response contains an example of the [CreatePolymorphicLookupAttributeResponse ComplexType](xref:Microsoft.Dynamics.CRM.CreatePolymorphicLookupAttributeResponse). It contains the ID of the polymorphic attribute and all the relationships created.
 
-```json
+**Response**
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; odata.metadata=minimal
+OData-Version: 4.0
+
 {
     "@odata.context":
       "http://<organization URL>/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.CreatePolymorphicLookupAttributeResponse",
