@@ -285,3 +285,7 @@ The new Power Apps experience has the following limitations:
 
 - **Feedback on the overall experience**: Select **Give feedback** in the command bar to share your thoughts about the overall experience. Choose a feedback category and enter your comments in the provided field.
  :::image type="content" source="media/create-app-data-plan/give-feedback.png" alt-text="Provide feedback":::
+
+## See also
+
+[FAQ for the Power Apps vibe experience (preview)](../maker/common/faq-vibe.md)
