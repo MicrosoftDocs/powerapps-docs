@@ -4,11 +4,11 @@ description: Learn about the details, properties and examples of the attachments
 author: yogeshgupta698
 ms.topic: reference
 ms.custom: canvas
-ms.date: 12/16/2025
+ms.date: 03/10/2026
 ms.subservice: canvas-maker
 ms.author: yogupt
 ms.reviewer: mkaur
-search.audienceType: 
+search.audienceType:
   - maker
 contributors:
   - mduelae
@@ -17,35 +17,38 @@ contributors:
 
 # Attachments control in Power Apps
 
-A control that allows users to download files to their device, as well as upload and delete files from a list created using Microsoft Lists, or a Microsoft Dataverse table.
+A control that users can use to download files to their device, and upload and delete files from a list created by using Microsoft Lists or a Microsoft Dataverse table.
 
 ## Description
-An **Attachments** control lets you open, add, and delete files from a list or a Dataverse table.
+
+By using an **Attachments** control, you can open, add, and delete files from a list or a Dataverse table.
 
 ## Limitations
 
 The attachment control has these limitations:
 
-1. The attachment control only supports lists and Dataverse tables as the data sources. Expressions that transform these data sources into Tables, for example, with the **ForAll** function, are not supported.
+1. The attachment control only supports lists and Dataverse tables as data sources. It doesn't support expressions that transform these data sources into tables, such as with the **ForAll** function.
 
-1. Upload and delete functionality work only inside a form. The Attachment control appears disabled when in Edit mode and not inside a form. To save file additions and deletions, the app user must save the form. Because of this limitation, the Attachment control isn't available from the **Insert** tab but appears in the form when the Attachment form field is enabled in a SharePoint or Dataverse form.
+1. The upload and delete functionality works only inside a form. The attachment control appears disabled when in **Edit** mode and not inside a form. To save file additions and deletions, the app user must save the form. Because of this limitation, the attachment control isn't available from the **Insert** tab but appears in the form when the attachment form field is enabled in a SharePoint or Dataverse form.
 
-1. Attachments control on a web browser lets you select multiple files, and allows use of drag and drop functionality. However, when using attachments control on [Power Apps Mobile](https://powerapps.microsoft.com/downloads/), you can only add files one at a time.
+1. The attachments control on a web browser lets you select multiple files and use drag and drop functionality. However, when you use the attachments control on [Power Apps Mobile](https://powerapps.microsoft.com/downloads/), you can only add files one at a time.
 
-1. Files stored in OneDrive or any other cloud storage may not be attached correctly. Try downloading these files to the device before attaching them using the device's file picker.
+1. You might not be able to attach files stored in OneDrive or any other cloud storage. Try downloading these files to the device before attaching them by using the device's file picker.
 
 1. The Power Apps mobile app doesn't support capturing videos directly from the camera or selecting videos from the photo library when using the **Attachments** control. To add a video, users must use the **Browse** option.
-   - **On Android**: The **Browse** option displays all file types, including videos, letting you to select and attach your video files.
-   - **On iOS**: The **Browse** option only shows files stored in the Files app. If your video isn't already saved there, you need to move it to the Files app before you attach it.
-   
-   If a video doesn't appear as an option to attach, first save the video to your device’s Files app and then try again.
+   - **On Android**: The **Browse** option displays all file types, including videos, so you can select and attach your video files.
+   - **On iOS**: The **Browse** option only shows files stored in the **Files** app. If your video isn't already saved there, you need to move it to the **Files** app before you attach it.
+
+   If a video doesn't appear as an option to attach, first save the video to your device's **Files** app and then try again.
+
+1. Uploading and viewing attachments isn't supported when running canvas apps in Microsoft Teams on Android or iOS mobile devices.
 
 ## Key properties
-**[Items](properties-core.md)** – The **Attachment** column of the list or Dataverse table. [Collections](../create-update-collection.md) and [Tables](../working-with-tables.md) are not supported.
+**[Items](properties-core.md)** – The **Attachment** column of the list or Dataverse table. [Collections](../create-update-collection.md) and [Tables](../working-with-tables.md) aren't supported.
 
-**MaxAttachments** – The maximum number of files the control will accept.
+**MaxAttachments** – The maximum number of files the control accepts.
 
-**MaxAttachmentSize** – The maximum allowed file size in MB of each new attachment. 1 MB here is 1,000,000 bytes (10<sup>6</sup> B) or 1,000 KB.
+**MaxAttachmentSize** – The maximum allowed file size in MB for each new attachment. 1 MB here is 1,000,000 bytes (10<sup>6</sup> B) or 1,000 KB.
 
 **OnAddFile** – Actions to perform when the user adds a new file attachment.
 
@@ -116,7 +119,7 @@ The attachment control has these limitations:
 
 **[PressedFill](properties-color-border.md)** – The background color of a control when the user selects that control.
 
-**Reset** – Reverts all changes to the attachments control returning to the previously saved state.
+**Reset** – Reverts all changes to the attachments control and returns to the previously saved state.
 
 **[Size](properties-text.md)** – The font size of the text that appears on a control.
 
@@ -144,18 +147,18 @@ The attachment control has these limitations:
 
 3. Select **Data Source** in the Properties tab in the options panel on the right and then select the list you connected to.
 
-4. Select **Edit fields** in *Fields* section and select **Add field**. 
+4. Select **Edit fields** in the *Fields* section and select **Add field**.
 
 5. Select the **Attachments** field and select **Add**.
 
-    The Attachments field associated with the list will appear in the form.
+    The Attachments field associated with the list appears in the form.
 
 [Learn how to add and configure a control](../add-configure-controls.md)
 
 
 ## Accessibility guidelines
 ### Color contrast
-There must be adequate color contrast between:
+Ensure there's adequate color contrast between:
 * **ItemColor** and **ItemFill**
 * **ItemHoverColor** and **ItemHoverFill**
 * **ItemPressedColor** and **ItemPressedFill**
@@ -169,17 +172,15 @@ There must be adequate color contrast between:
 This requirement is in addition to the [standard color contrast requirements](../accessible-apps-color.md).
 
 ### Screen reader support
-The following properties must be present:
+Include the following properties:
 * **[AccessibleLabel](properties-accessibility.md)**
 * **AddAttachmentsText**
 * **MaxAttachmentsText**
 * **NoAttachmentsText**
 
 ### Keyboard support
-* **[TabIndex](properties-accessibility.md)** must be zero or greater so that keyboard users can navigate to it.
+* Use **[TabIndex](properties-accessibility.md)** with a value of zero or greater so that keyboard users can navigate to it.
 * Focus indicators must be clearly visible. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this clarity.
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
-
-
