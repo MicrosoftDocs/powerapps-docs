@@ -24,7 +24,7 @@ ms.collection:
 [!INCLUDE [responsible-ai-features](../../includes/responsible-ai-features.md)]
 
 - [Overview of the new Power Apps vibe experience (preview)](../../vibe/overview.md)
-- [FAQ for the Power Apps vibe experience (preview)](faq-vibe.md)
+- [FAQ for Power Apps vibe experience (preview)](faq-vibe.md)
 - [Build apps through conversation](../canvas-apps/ai-conversations-create-app.md)
 - [FAQ about building apps through conversation](faqs-build-apps-conversation.md)
 - [Create app description for canvas apps with Copilot (preview)](../canvas-apps/save-publish-app.md#create-an-app-description-with-copilot-preview)
