@@ -4,7 +4,7 @@ description: Frequently asked questions about using Microsoft Dataverse with a m
 author: seanwat-msft
 ms.component: cds
 ms.topic: how-to
-ms.date: 03/07/2026
+ms.date: 03/10/2026
 ms.subservice: dataverse-maker
 ms.author: spatankar
 ms. reviewer: matp
@@ -37,6 +37,9 @@ Starting December 15, 2025, Dataverse MCP tools are charged when accessed by AI 
 ## Can I use the Dataverse MCP server with multiple environments?
 
 Yes. Each Dataverse environment can have its own MCP server configuration. You can connect to multiple environments by configuring separate MCP server entries in your client, each pointing to a different environment URL.
+
+> [!TIP]
+> If you use Microsoft Copilot Studio, you can use the MCP onboarding wizard to connect your agent to Dataverse MCP servers across multiple environments. The wizard guides you through server configuration and authentication setup. More information: [Connect your agent to an existing MCP server](/microsoft-copilot-studio/mcp-add-existing-server-to-agent)
 
 ## What should I do if a Dataverse MCP tool returns an error?
 
