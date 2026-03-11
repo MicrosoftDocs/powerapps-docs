@@ -43,6 +43,8 @@ This query uses *application/x-www-form-urlencoded* and will also work:
 
 `SELECT+name+FROM+account+AS+a+WHERE+a.name+LIKE+%27Fourth+Coffee%27`
 
+[Learn more about url encoding](#example)
+
 
 **Response**
 
@@ -68,3 +70,14 @@ Preference-Applied: odata.include-annotations="*"
    ]
 }
 ```
+
+## URL encoding
+
+Whenever you pass a value with a query parameter in a URL, it should be URL encoded. SQL queries contain spaces, and spaces aren't valid in a URL, so they must be replaces with either `%20` or `+`.
+
+Many frameworks will do this for you automatically.  For example PowerShell [Invoke-RestMethod command](/powershell/module/microsoft.powershell.utility/invoke-restmethod) will  automatically encode the `Uri` parameter value.
+
+Otherwise, [just like with FetchXml](../../fetchxml/retrieve-data.md?tabs=webapi), you should encode any query parameter value, especially when it originates with user input. 
+
+- In JavaScript, you use the [encodeURIComponent function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent).
+- In .NET, you can use the [System.NET.WebUtility.UrlEncode(String) method](xref:System.Net.WebUtility.UrlEncode(System.String))
