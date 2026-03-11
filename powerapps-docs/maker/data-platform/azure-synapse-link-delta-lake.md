@@ -7,7 +7,7 @@ ms.reviewer: matp
 ms.service: powerapps
 ms.topic: how-to
 ms.subservice: dataverse-maker
-ms.date: 05/13/2025
+ms.date: 03/11/2026
 ms.custom: template-how-to
 ---
 # Export Dataverse data in Delta Lake format
@@ -155,9 +155,8 @@ To ensure that your existing Synapse Link profiles continue to process data, upg
 5. Select **Update** to complete the upgrade.
 
 > [!NOTE]
->
-> - The Spark pool upgrade occurs only when a new Delta lake conversion Spark job is triggered. Ensure you have at least one data change after selecting **Update**.
-> - You can delete the older Spark pool after verifying that Delta conversion jobs use the new pool.
+> - The Spark pool upgrade occurs only when a new Delta Lake conversion Spark job is triggered. Ensure you have at least one data change after selecting **Update**.
+> - After selecting **Update**, the upgrade process can take up to 48 hours to complete due to the cache. During this time, the old Spark pool continues to be used for Delta Lake conversion until the upgrade is fully applied in the backend. Don't delete the old Spark pool until you have confirmed that the new Spark pool is being used for Delta Lake conversion jobs. If the new Spark pool isn't used for Delta Lake conversion after two days, contact [Microsoft to get support](/power-platform/admin/get-help-support).
 
 ## Related articles
 
