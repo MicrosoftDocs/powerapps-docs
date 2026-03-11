@@ -110,4 +110,5 @@ Legend:
 
 ## Next steps
 
- [Create apps, data, and plans together (preview)](create-app-data-plan.md)
+- [Create apps, data, and plans together (preview)](create-app-data-plan.md)
+- [FAQ for the Power Apps vibe experience (preview)](../maker/common/faq-vibe.md)
