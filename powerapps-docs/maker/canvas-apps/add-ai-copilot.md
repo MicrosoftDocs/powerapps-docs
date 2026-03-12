@@ -29,7 +29,7 @@ The Copilot control is an AI assistant that you can add to your canvas apps. By 
 
 > [!IMPORTANT]
 >
-> Starting February 2, 2026, you can't add the Copilot control to new canvas apps. Existing apps with this control will remain functional for a limited time but will eventually no longer be supported. [Microsoft 365 Copilot Chat in canvas apps](https://releaseplans.microsoft.com/?app=Power+Apps&planID=d8f2152f-1e0e-f111-8407-7ced8d183a37) is the new the recommended solution for natural language interactions in canvas apps. To ensure a smooth transition and prevent any disruption, we recommend that you migrate to Microsoft 365 Copilot chat as soon as it becomes available in your environment.
+> Starting February 2, 2026, you can't add the Copilot control to new canvas apps. Existing apps with this control will remain functional for a limited time but will eventually no longer be supported. [Microsoft 365 Copilot in canvas apps](https://releaseplans.microsoft.com/?app=Power+Apps&planID=d8f2152f-1e0e-f111-8407-7ced8d183a37) is the new the recommended solution for natural language interactions in canvas apps. To ensure a smooth transition and prevent any disruption, we recommend that you migrate to Microsoft 365 Copilot as soon as it becomes available in your environment.
 
 
 > [!NOTE]
