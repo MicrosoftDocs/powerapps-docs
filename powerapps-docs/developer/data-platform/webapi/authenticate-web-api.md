@@ -21,7 +21,9 @@ The code you write to manage authentication when using the Web API depends on th
 
 You don't need to create your own app registration by using this method. You can use the Azure AD application to request an access token.
 
-Use the [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount) command to launch an interactive browser sign-in or initiate a device code flow. After you sign in, use the Az PowerShell module [Get-AzAccessToken](/powershell/module/az.accounts/get-azaccesstoken) command to request an access token for your Dataverse organization URI resource.
+Use the [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount) command to launch an interactive browser sign-in or initiate a device code flow. `Connect-AzAccount` also supports certificate-based auth, but this requires a registered application.
+
+After you sign in, use the Az PowerShell module [Get-AzAccessToken](/powershell/module/az.accounts/get-azaccesstoken) command to request an access token for your Dataverse organization URI resource.
 
 [Learn how to connect to Dataverse using PowerShell](quick-start-ps.md).
   
