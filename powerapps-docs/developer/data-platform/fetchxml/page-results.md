@@ -206,9 +206,14 @@ By using the Web API, you can request a paging cookie as an annotation. Use eith
 
 ```
 Prefer: odata.include-annotations="Microsoft.Dynamics.CRM.fetchxmlpagingcookie,Microsoft.Dynamics.CRM.morerecords"
-   OR for all annotations: 
+```
+
+OR for all annotations:
+
+```
 Prefer: odata.include-annotations="*"
 ```
+
 
 The result returns these annotations:
 
