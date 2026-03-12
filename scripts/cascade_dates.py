@@ -338,6 +338,11 @@ def main():
     pr_number = os.environ.get("PR_NUMBER", "unknown")
     pr_url    = os.environ.get("PR_URL", "")
 
+    # Handle case where a full URL was provided as the PR number
+    if "/" in pr_number:
+        pr_url = pr_url or pr_number
+        pr_number = pr_number.rstrip("/").split("/")[-1]
+
     includes_path   = config["includes_path"]
     downstream_repos = config["downstream_repos"]
     base_branch     = config["base_branch"]
