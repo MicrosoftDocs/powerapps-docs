@@ -1,7 +1,7 @@
 ---
 title: FAQ about using AI responsibly in Power Apps
 description: Find FAQ about how to use copilot AI responsibly with Power Apps to build apps through conversation, generate app descriptions, edit apps, and more.
-ms.date: 06/18/2025
+ms.date: 03/11/2026
 ms.update-cycle: 180-days
 ms.custom:
   - responsible-ai-faqs
@@ -23,6 +23,8 @@ ms.collection:
 
 [!INCLUDE [responsible-ai-features](../../includes/responsible-ai-features.md)]
 
+- [Overview of the new Power Apps vibe experience (preview)](../../vibe/overview.md)
+- [FAQ for Power Apps vibe experience (preview)](faq-vibe.md)
 - [Build apps through conversation](../canvas-apps/ai-conversations-create-app.md)
 - [FAQ about building apps through conversation](faqs-build-apps-conversation.md)
 - [Create app description for canvas apps with Copilot (preview)](../canvas-apps/save-publish-app.md#create-an-app-description-with-copilot-preview)

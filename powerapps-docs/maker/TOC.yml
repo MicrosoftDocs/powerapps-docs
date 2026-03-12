@@ -2562,6 +2562,8 @@
   items:
   - name: Overview
     href: ./common/responsible-ai-overview.md
+  - name: FAQ about Power Apps vibe
+    href: ./common/faq-vibe.md
   - name: FAQ about building apps through conversation
     href: ./common/faqs-build-apps-conversation.md
   - name: FAQ about generating app descriptions with Copilot
