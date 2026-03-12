@@ -1,11 +1,11 @@
 ---
-title: Page results using FetchXml
-description: Learn how to use FetchXml to page results when you retrieve data from Microsoft Dataverse.
-ms.date: 12/04/2024
-ms.reviewer: jdaly
-ms.topic: how-to
+title: Page Results Using FetchXml
+description: Learn how to use FetchXml to page results when you retrieve data from Microsoft Dataverse. Explore simple paging and paging cookies for efficient data retrieval.
 author: MsSQLGirl
 ms.author: jukoesma
+ms.date: 03/12/2026
+ms.reviewer: jdaly
+ms.topic: how-to
 ms.subservice: dataverse-developer
 search.audienceType: 
   - developer
@@ -17,44 +17,44 @@ contributors:
  - DonaldlaGithub
  - tdashworth
 ---
-# Page results using FetchXml
+# Page results using FetchXML
 
-You can specify a limit on the number of rows retrieved for each request by setting a page size. Using paging, you can retrieve consecutive pages of data representing all the records that match the criteria of a query in a performant manner.
+You can limit the number of rows retrieved for each request by setting a page size. By using paging, you can retrieve consecutive pages of data, so you efficiently get all the records that match the criteria of a query.
 
-The default and maximum page size is 5,000 for standard tables, 500 for elastic tables. If you don't set a page size, Dataverse will return either 5,000 or 500 rows of data at a time, depending on the type of table. To get more rows, you must send additional requests.
+The default and maximum page size is 5,000 for standard tables and 500 for elastic tables. If you don't set a page size, Dataverse returns either 5,000 or 500 rows of data at a time, depending on the type of table. To get more rows, you must send additional requests.
 
 > [!NOTE]
 >
-> - Don't use the [fetch element](reference/fetch.md) `top` attribute with paging. These different methods of limiting the results of a query are not compatible.
-> - Ordering plays an important part in getting consistent paging results. [Learn more about ordering and paging](order-rows.md#ordering-and-paging)
+> - Don't use the [fetch element](reference/fetch.md) `top` attribute with paging. These different methods of limiting the results of a query aren't compatible.
+> - Ordering plays an important part in getting consistent paging results. [Learn more about ordering and paging](order-rows.md#ordering-and-paging).
 
-## Paging models
+## FetchXml paging models
 
-Dataverse has two paging models: *simple* and using *paging cookies*:
+FetchXml has two paging models: *simple* and *paging cookies*:
 
 :::row:::
    :::column span="":::
       **Simple**
 
       - Uses only the [fetch element](reference/fetch.md) `count` and `page` attributes
-      - Suitable for small data sets only
-      - Can't return a data set larger than 50,000 records
-      - Performance reduced as the number of rows increases
+      - Suitable for small datasets only
+      - Can't return a dataset larger than 50,000 records
+      - Performance reduces as the number of rows increases
    :::column-end:::
    :::column span="":::
       **Paging cookies**
 
       - Uses the [fetch element](reference/fetch.md) `count`, `page`, and `paging-cookie` attributes
       - Set the `paging-cookie` attribute value to the value returned with previous page
-      - Recommended for all data set sizes
-      - [Some queries do not allow for paging cookies](#queries-that-dont-support-paging-cookies)
+      - Recommended for all dataset sizes
+      - [Some queries don't support paging cookies](#queries-that-dont-support-paging-cookies)
       - [Learn more about using paging cookies](#paging-cookies)
    :::column-end:::
 :::row-end:::
 
 ## Simple paging
 
-You can request to the first page by setting the [fetch element](reference/fetch.md) `page` attribute to 1 and the `count` attribute to the page size before sending the request:
+Request the first page by setting the [fetch element](reference/fetch.md) `page` attribute to 1 and the `count` attribute to the page size before sending the request:
 
 ```xml
 <fetch count='3' page='1'>
@@ -78,31 +78,31 @@ To get the next three records, increment the `page` value and send another reque
 </fetch>
 ```
 
-With simple paging, sometimes called *legacy paging*, Dataverse retrieves all the results of the query up to the current page, selects the number of records needed for the page and then ignores the rest. This allows for quickly paging backward and forward though the data or skipping to a specific page. However the total number of records is limited to 50,000 and there can be performance issues for complex queries and arbitrarily sorted distinct query results.
+By using simple paging, sometimes called *legacy paging*, Dataverse retrieves all the results of the query up to the current page. It selects the number of records needed for the page and then ignores the rest. This method makes it easy to page backward and forward through the data or skip to a specific page. However, the total number of records is limited to 50,000. Also, complex queries and arbitrarily sorted distinct query results can cause performance problems.
 
-Simple paging works well for small data sets, but as the number of rows in the data set increases, performance suffers. The total number of rows that can be retrieved using simple paging is 50,000. For best performance in all cases, we recommend consistently using paging cookies.
+Simple paging works well for small data sets. But as the number of rows in the data set increases, performance suffers. The total number of rows that you can retrieve by using simple paging is 50,000. For best performance in all cases, use paging cookies consistently.
 
 ## Paging cookies
 
-When there are more rows to retrieve after requesting the first page, Dataverse [*usually*](#queries-that-dont-support-paging-cookies) returns a paging cookie to be used on the following requests for the next pages.
+When there are more rows to retrieve after requesting the first page, Dataverse [*usually*](#queries-that-dont-support-paging-cookies) returns a paging cookie to use in the following requests for the next pages.
 
-The paging cookie contains data about the first and last record in the results and helps Dataverse retrieve the next row of data as quickly as possible and should be used when provided. You shouldn't modify the data in the paging cookie, just set the value to the [fetch element](reference/fetch.md) `paging-cookie` attribute and increment the `page` attribute value for subsequent requests.
+The paging cookie contains data about the first and last record in the results. It helps Dataverse retrieve the next row of data as quickly as possible. Use the paging cookie when it's available. Don't modify the data in the paging cookie. Set the value to the [fetch element](reference/fetch.md) `paging-cookie` attribute and increment the `page` attribute value for subsequent requests.
 
 ### Queries that don't support paging cookies
 
-Some queries do not support paging cookies. When paging cookies aren't supported by a query, no paging cookie value is returned with the result. For example, queries sorted using a `link-entity` attribute may not support paging cookies.
+Some queries don't support paging cookies. When a query doesn't support paging cookies, the query doesn't return a paging cookie value with the result. For example, queries sorted by using a `link-entity` attribute might not support paging cookies.
 
 When Dataverse doesn't return a paging cookie, the paging model falls back to simple paging, with all the limitations that come with it.
 
 ## Paging cookie examples
 
-How you use paging cookies depends on whether you are using the SDK for .NET or Web API.
+How you use paging cookies depends on whether you're using the SDK for .NET or Web API.
 
 ### [SDK for .NET](#tab/sdk)
 
-The following `RetrieveAll` static method will return all records that match the FetchXml query, sending multiple requests if the number of records exceeds the page size.
+The following `RetrieveAll` static method returns all records that match the FetchXML query. It sends multiple requests if the number of records exceeds the page size.
 
-After each request, the method checks the [EntityCollection.MoreRecords property](xref:Microsoft.Xrm.Sdk.EntityCollection.MoreRecords) to determine if more records match the criteria. If there are more records, the method sets the value of the returned [EntityCollection.PagingCookie property](xref:Microsoft.Xrm.Sdk.EntityCollection.PagingCookie) to the `paging-cookie` attribute of the [fetch element](reference/fetch.md) and sends another request.
+After each request, the method checks the [EntityCollection.MoreRecords property](xref:Microsoft.Xrm.Sdk.EntityCollection.MoreRecords) to see if more records match the criteria. If there are more records, the method sets the value of the returned [EntityCollection.PagingCookie property](xref:Microsoft.Xrm.Sdk.EntityCollection.PagingCookie) to the `paging-cookie` attribute of the [fetch element](reference/fetch.md) and sends another request.
 
 ```csharp
 /// <summary>
@@ -149,10 +149,10 @@ static EntityCollection RetrieveAll(IOrganizationService service, string fetchXm
 }
 ```
 
-You can adapt the [Quick Start: Execute an SDK for .NET request (C#)](../org-service/quick-start-org-service-console-app.md)  sample to test FetchXml queries with the following steps:
+To test FetchXML queries, adapt the sample in [Quick Start: Execute an SDK for .NET request (C#)](../org-service/quick-start-org-service-console-app.md) by using the following steps:
 
 1. Add the `RetrieveAll` static method to the `Program` class.
-1. Modify the `Main` method as shown below:
+1. Modify the `Main` method as shown in the following code:
 
 ```csharp
 static void Main(string[] args)
@@ -195,14 +195,14 @@ static void Main(string[] args)
 ```
 
 > [!NOTE]
-> This query will return ALL records that match the criteria. Make sure you include filter elements to limit the results.
+> This query returns all records that match the criteria. Make sure you include filter elements to limit the results.
 
 Read the following important information about using a connection string in application code.
 [!INCLUDE [cc-connection-string](../includes/cc-connection-string.md)]
 
 ### [Web API](#tab/webapi)
 
-With the Web API you must request a paging cookie as an annotation. Use either of these request headers:
+By using the Web API, you can request a paging cookie as an annotation. Use either of these request headers:
 
 ```
 Prefer: odata.include-annotations="Microsoft.Dynamics.CRM.fetchxmlpagingcookie,Microsoft.Dynamics.CRM.morerecords"
@@ -210,12 +210,12 @@ Prefer: odata.include-annotations="Microsoft.Dynamics.CRM.fetchxmlpagingcookie,M
 Prefer: odata.include-annotations="*"
 ```
 
-And these annotations will be returned with the result:
+The result returns these annotations:
 
 - `@Microsoft.Dynamics.CRM.fetchxmlpagingcookie`
 - `@Microsoft.Dynamics.CRM.morerecords`
 
-The following series of FetchXML requests show the use of paging cookies. This example uses a small `count` value (3) for brevity.
+The following series of FetchXML requests show the use of paging cookies. For brevity, this example uses a small `count` value (3).
 
 ```xml
 <fetch count='3' page='1'>
@@ -228,7 +228,7 @@ The following series of FetchXML requests show the use of paging cookies. This e
 </fetch>
 ```
 
-### First Page
+### First page
 
 Send the first page with the `page` value set to `'1'`.
 
@@ -238,7 +238,7 @@ Use this request header:
 Prefer: odata.include-annotations="Microsoft.Dynamics.CRM.fetchxmlpagingcookie,Microsoft.Dynamics.CRM.morerecords"
 ```
 
-To make sure the paging cookie and more records annotations in the response are returned.
+To make sure the response includes the paging cookie and more records annotations.
 
 **Request:**
 
@@ -293,7 +293,7 @@ In the response, the `@Microsoft.Dynamics.CRM.morerecords` annotation value indi
 
 The `@Microsoft.Dynamics.CRM.fetchxmlpagingcookie` annotation value provides the paging information about the record returned. The `@Microsoft.Dynamics.CRM.fetchxmlpagingcookie` value is an XML element. You need to use the `pagingcookie` attribute value of that element in the next request.
 
-The `pagingcookie` attribute value is URL-encoded *twice*. Although you don't need to check this, the decoded and formatted value in this example looks like this:
+The `pagingcookie` attribute value is URL-encoded *twice*. Although you don't need to check this value, the decoded and formatted value in this example looks like this:
 
 ```xml
 <cookie page="1">
@@ -304,18 +304,18 @@ The `pagingcookie` attribute value is URL-encoded *twice*. Although you don't ne
 </cookie>
 ```
 
-### Following Pages
+### Following pages
 
-In all subsequent requests where the previous page `@Microsoft.Dynamics.CRM.morerecords` annotation value is `true`, you need to:
+In all subsequent requests where the previous page has the `@Microsoft.Dynamics.CRM.morerecords` annotation value of `true`, you need to:
 
 1. Increment the `fetch` element `page` attribute value.
 1. URL-decode the `pagingcookie` attribute value twice.
 1. XML-encode the decoded `pagingcookie` attribute value and set it as the value of a `paging-cookie` attribute on the `fetch` element.
 
     > [!NOTE]
-    > Whether you must explicitly XML-encode the value may depend on the technology you use. In .NET, it might be done for you when you set the XML value to an attribute of another XML element.
+    > Whether you must explicitly XML-encode the value might depend on the technology you use. In .NET, it might be done for you when you set the XML value to an attribute of another XML element.
 
-1. URL Encode the entire FetchXml value as you did in the first request.
+1. URL-encode the entire FetchXML value as you did in the first request.
 
 In the following request, the FetchXML looks like this before it's URL-encoded:
 
@@ -378,9 +378,9 @@ Preference-Applied: odata.include-annotations="Microsoft.Dynamics.CRM.fetchxmlpa
 }
 ```
 
-### Last Page
+### Last page
 
-On the final page, the `@Microsoft.Dynamics.CRM.morerecords` and `@Microsoft.Dynamics.CRM.fetchxmlpagingcookie` annotations aren't included in the response.
+On the final page, the response doesn't include the `@Microsoft.Dynamics.CRM.morerecords` and `@Microsoft.Dynamics.CRM.fetchxmlpagingcookie` annotations.
 
 **Request:**
 
@@ -415,7 +415,7 @@ OData-Version: 4.0
 
 ### Web API paging example
 
-When using C# with [HttpClient](xref:System.Net.Http.HttpClient), the following `RetrieveAll` static method will return all records that match the FetchXml query, sending multiple requests if the number of records exceeds the page size.
+When you use C# with [HttpClient](xref:System.Net.Http.HttpClient), the following `RetrieveAll` static method returns all records that match the FetchXml query. It sends multiple requests if the number of records exceeds the page size.
 
 ```csharp
 /// <summary>
@@ -522,10 +522,10 @@ static async Task<List<JsonObject>> RetrieveAll(HttpClient client,
 }
 ```
 
-You can adapt the [Quick Start: Web API sample (C#)](../webapi/quick-start-console-app-csharp.md) sample to test FetchXml queries with the following steps:
+You can adapt the [Quick Start: Web API sample (C#)](../webapi/quick-start-console-app-csharp.md) sample to test FetchXml queries by using the following steps:
 
 1. Add the `RetrieveAll` static method to the `Program` class.
-1. Modify the `Main` method and replace the content of the `Web API call` region as shown below:
+1. Modify the `Main` method and replace the content of the `Web API call` region as shown in the following code sample:
 
 ```csharp
 #region Web API call
@@ -550,7 +550,7 @@ Console.WriteLine($"Success: {records.Count}");
 ```
 
 > [!IMPORTANT]
-> This query will return ALL records that match the criteria. Make sure you include filter elements to limit the results.
+> This query returns all records that match the criteria. Make sure you include filter elements to limit the results.
 >
 > The `entitySetName` parameter must be the [entity set name](../webapi/web-api-service-documents.md#entity-set-name) for the same table specified in the FetchXml [entity element](reference/entity.md) `name` attribute.
 
