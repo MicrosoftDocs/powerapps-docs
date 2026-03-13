@@ -96,7 +96,7 @@ GET [Organization URI]/api/data/v9.2/accounts(_primarycontactid_value=00000000-0
 
 ## Retrieve records in storage partitions
 
-When you [retrieve a record in an elastic table](../use-elastic-tables.md#retrieve-a-record-in-elastic-table) that's stored in a partition, be sure to specify the partition key.
+When you [retrieve a record in an elastic table](../use-elastic-tables.md#retrieve-a-record-in-an-elastic-table) that's stored in a partition, be sure to specify the partition key.
 
 ## Retrieve a single property value
 
