@@ -14,7 +14,7 @@ contributors:
 
 [!INCLUDE [preview-banner](../../../../shared/preview-includes/preview-banner.md)]
 
-This article describes available methods for querying Dataverse data using the SDK for Python. You can query data using Structured Query Language (SQL) and OData based APIs. <!--, and the Dataverse Web API.-->
+This article describes available methods for querying Dataverse data using the SDK for Python. You can query data using Structured Query Language (SQL) and OData based APIs.
 
 Python developers should first learn about the SDK for Python by reading [Getting started (preview)](get-started.md) before continuing with this article.
 
