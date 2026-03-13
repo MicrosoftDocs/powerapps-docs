@@ -2,7 +2,7 @@
 title: "Quick Start: Web API sample (C#) (Microsoft Dataverse)| Microsoft Docs"
 description: "Walks you through creating a program to authenticate with the Microsoft Dataverse Server and then call a Web API function."
 ms.topic: quickstart
-ms.date: 06/22/2023
+ms.date: 03/13/2026
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: jdaly
@@ -12,20 +12,20 @@ contributors:
   - JimDaly
 ---
 
-# Quick Start: Web API sample (C#)
+# Quick start: Web API sample (C#)
 
-In this quick start, you create a console application to connect to your Microsoft Dataverse environment and invoke the Web API [WhoAmI Function](xref:Microsoft.Dynamics.CRM.WhoAmI). This function retrieves information about the logged on Dataverse user. Once you understand the basic functionality described here, you can move onto other Web API operations such as create, retrieve, update, and deletion of Dataverse table rows.
+In this quick start, you create a console application that connects to your Microsoft Dataverse environment and invokes the Web API [WhoAmI function](xref:Microsoft.Dynamics.CRM.WhoAmI). This function retrieves information about the signed-in Dataverse user. Once you understand the basic functionality described here, you can explore other Web API operations such as creating, retrieving, updating, and deleting Dataverse table rows.
 
 This program authenticates and uses an <xref:System.Net.Http.HttpClient> to send a `GET` request to the [WhoAmI Function](xref:Microsoft.Dynamics.CRM.WhoAmI). The response is a [WhoAmIResponse ComplexType](xref:Microsoft.Dynamics.CRM.WhoAmIResponse). The program display the `UserId` property value obtained from the response.
 
 > [!NOTE]
 > This is a very simple example to show how to get connected with a minimum of code. 
 
-You can find the complete Visual Studio solution for this .NET 6 project in the [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples) repo under `dataverse/webapi/`[C#-NETx/QuickStart](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/CSharp-NETx/QuickStart). There's also a .NET Framework version of the sample under `dataverse/webapi/`[C#/QuickStart](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/CSharp/QuickStart).
+You can find the complete Visual Studio solution for this .NET 10 project in the [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples) repo under `dataverse/webapi/`[C#-NETx/QuickStart](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/CSharp-NETx/QuickStart).
 
 ## Prerequisites
 
-- Visual Studio 2022 or later
+- Visual Studio 2026 or later
 - Internet connection
 - Valid user account for a Dataverse environment
 - Url to the Dataverse environment you want to connect with
@@ -36,7 +36,7 @@ You can find the complete Visual Studio solution for this .NET 6 project in the 
 
 ## Create Visual Studio project
 
-1. Launch Visual Studio 2022 and select **Create a new project**.
+1. Launch Visual Studio 2026 and select **Create a new project**.
 
    :::image type="content" source="media/quickstart-vs-new-project.png" alt-text="Create a new project":::
 
@@ -46,11 +46,11 @@ You can find the complete Visual Studio solution for this .NET 6 project in the 
 
 1. Configure the project by setting a **Location** and **Project name**.
 
-   :::image type="content" source="media/quickstart-configure-.net-6-project.png" alt-text="Configure the project":::
+   :::image type="content" source="media/quickstart-configure-.net-10-project.png" alt-text="Configure the project":::
 
-1. Configure the project by selecting **.NET 6.0 (Long Term Support)** and **Do not use top-level statements**. Then select **Create**.
+1. Configure the project by selecting **.NET 10.0 (Long Term Support)** and **Do not use top-level statements**. Then select **Create**.
 
-   :::image type="content" source="media/quickstart-configure-.net-6-project-additional-information.png" alt-text="Additional Information dialog.":::
+   :::image type="content" source="media/quickstart-configure-.net-10-project-additional-information.png" alt-text="Additional Information dialog.":::
 
 1. In **Solution Explorer**, right-click the project you created and select **Manage NuGet Packages...** in the context menu. [NuGet](https://www.nuget.org/) allows you to bring required assemblies into your project.
 
@@ -59,7 +59,7 @@ You can find the complete Visual Studio solution for this .NET 6 project in the 
    :::image type="content" source="media/quickstart-nuget-package-install-light-theme.png" alt-text="Install the (MSAL) authentication package" lightbox="media/quickstart-nuget-package-install-light-theme.png":::
 
    > [!NOTE]
-   > You are prompted to accept the license terms before installing. Select **I Accept** in the **License Acceptance** dialog.
+   > You're prompted to accept the license terms before installing. Select **I Accept** in the **License Acceptance** dialog.
 
 ## Edit Program.cs
 
@@ -179,12 +179,12 @@ Follow these next steps to add code for the main program.
    }
    ```
 
-2. Right below the TODO comment in the above code, replace the `resource` variable value with the actual URL of your Dataverse test environment. To find the URL value for your test environment, follow these steps:
+2. Right below the TODO comment in the preceding code, replace the `resource` variable value with the actual URL of your Dataverse test environment. To find the URL value for your test environment, follow these steps:
 
-   1. Navigate your browser to [Power Apps](https://make.powerapps.com).
+   1. Go to [Power Apps](https://make.powerapps.com).
    1. Select the environments icon (to the right of the search field), and choose a test environment.
    1. Select the settings icon ![Settings button.](media/settings-icon.png) and choose **Developer resources**.
-   1. Copy the Web API endpoint URL from "https:" through ".com" leaving off the trailing `/api/data/v9.2`.
+   1. Copy the Web API endpoint URL from `https:` through `.com` without the trailing `/api/data/v9.2`.
    1. Replace the resource string value in the program code with that endpoint URL value. For example:<p/>
       `string resource = "https://contoso.api.crm.dynamics.com";`
 
@@ -194,32 +194,32 @@ Follow these next steps to add code for the main program.
 
    A browser window opens and prompts you to pick an account. Choose the account that you use to access your Dataverse environment. If that account doesn't appear in the list, select **Use another account**.
 
-   Once the account is selected, enter your password and select **Sign in**.
+   Once you select the account, enter your password and select **Sign in**.
 
 1. Look at the console application window. The output should look something like this:
 
    ```
    Your user ID is 22cc22cc-dd33-ee44-ff55-66aa66aa66aa
    
-   C:\Projects\webapi-quickstart\bin\Debug\net6.0\webapi-quickstart.exe (process 21524) exited with code 0.
+   C:\Projects\webapi-quickstart\bin\Debug\net10.0\webapi-quickstart.exe (process 21524) exited with code 0.
    To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.
    Press any key to close this window . . .
    ```
 
 ### Congratulations!
 
-You have successfully connected to the Web API.
+You connected to the Web API.
 
-This quick start sample shows a simple approach to create a Visual Studio project without any exception handling or method to refresh the access token. This is enough to verify you can connect, and try different operations.
+This quickstart sample shows a simple approach to create a Visual Studio project without any exception handling or method to refresh the access token. This approach is enough to verify you can connect and try different operations.
 
-For a more complete example that demonstrates recommended design patterns, review the [WebAPIService class library (C#)](samples/webapiservice.md). This is the project we use for our [Web API Data operations Samples (C#)](web-api-samples-csharp.md). It demonstrates:
+For a more complete example that demonstrates recommended design patterns, see the [WebAPIService class library (C#)](samples/webapiservice.md). This project is used for the [Web API Data operations Samples (C#)](web-api-samples-csharp.md). It demonstrates:
 
 - Managing Dataverse [service protection API limits](../api-limits.md) with the .NET resilience and transient fault handling library [Polly](https://github.com/App-vNext/Polly).
-- Managing an [HttpClient](/dotnet/api/system.net.http.httpclient) in .NET using [IHttpClientFactory](/dotnet/api/system.net.http.ihttpclientfactory).
+- Managing an [HttpClient](/dotnet/api/system.net.http.httpclient) in .NET by using [IHttpClientFactory](/dotnet/api/system.net.http.ihttpclientfactory).
 - Using configuration data to manage the behavior of the client.
 - Managing errors returned by Dataverse Web API.
 - A pattern of code reuse by:
-  - Creating classes that inherit from [HttpRequestMessage](/dotnet/api/system.net.http.httprequestmessage?view=net-6.0&preserve-view=true) and [HttpResponseMessage](/dotnet/api/system.net.http.httpresponsemessage?view=net-6.0&preserve-view=true).
+  - Creating classes that inherit from [HttpRequestMessage](/dotnet/api/system.net.http.httprequestmessage?view=net-10.0&preserve-view=true) and [HttpResponseMessage](/dotnet/api/system.net.http.httpresponsemessage?view=net-10.0&preserve-view=true).
   - Methods that use those classes.
   - A modular pattern for adding new capabilities as needed.
 
