@@ -1,7 +1,7 @@
 ---
-title: "Authenticate to Microsoft Dataverse with the Web API (Dataverse)| Microsoft Docs"
-description: "Learn about the different ways to manage authentication when using the Web API"
-ms.date: 04/06/2022
+title: "Authenticate to Microsoft Dataverse with the Web API"
+description: "Learn how to authenticate to Microsoft Dataverse with the Web API using OAuth, PowerShell, JavaScript web resources, and MSAL.js for single-page applications."
+ms.date: 03/12/2026
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: jdaly
@@ -14,13 +14,26 @@ contributors:
 
 You must use OAuth as described in [Use OAuth with Dataverse](../authenticate-oauth.md).
 
-The code you write to manage authentication when using the Web API depends on the type of deployment and where your code is.  
+The code you write to manage authentication when using the Web API depends on the type of deployment and where your code is.
+
+
+## Use the Az PowerShell module Azure application
+
+You don't need to create your own app registration by using this method. You can use the Azure AD application to request an access token.
+
+Use the [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount) command to launch an interactive browser sign-in or initiate a device code flow. `Connect-AzAccount` also supports certificate-based auth, but this requires a registered application.
+
+After you sign in, use the Az PowerShell module [Get-AzAccessToken](/powershell/module/az.accounts/get-azaccesstoken) command to request an access token for your Dataverse organization URI resource.
+
+[Learn how to connect to Dataverse using PowerShell](quick-start-ps.md).
   
-## Authenticate with JavaScript in web resources
+## Authenticate by using JavaScript in web resources
 
-When you use the Web API with JavaScript within HTML web resources, form scripts, or ribbon commands you don't need to include any code for authentication. In each of these cases the user is already authenticated by the application and authentication is managed by the application.  
+When you use the Web API with JavaScript within HTML web resources, form scripts, or ribbon commands, you don't need to include any code for authentication. In each of these cases, the application already authenticates the user and manages authentication.  
 
-If you're creating a single page application (SPA) using JavaScript you can use the msal.js library as described in [Use OAuth with Cross-Origin Resource Sharing  to connect a Single Page Application](../oauth-cross-origin-resource-sharing-connect-single-page-application.md).  
+## Use the Microsoft Authentication Library for JavaScript
+
+If you're creating a single-page application (SPA) by using JavaScript, you can use the [Microsoft Authentication Library for JavaScript (MSAL.js)](/entra/msal/javascript/) as described in [Use OAuth with Cross-Origin Resource Sharing  to connect a Single Page Application](../oauth-cross-origin-resource-sharing-connect-single-page-application.md).  
   
 ### See also
  
