@@ -5,7 +5,7 @@ author: shwetamurkute
 
 ms.component: pa-user
 ms.topic: how-to
-ms.date: 10/15/2019
+ms.date: 03/13/2026
 ms.subservice: end-user
 ms.author: smurkute
 ms.custom: ""
@@ -79,7 +79,5 @@ Create rich, interactive reports and real-time visualizations with [!INCLUDE[pn_
 ## Privacy notice  
 [!INCLUDE[cc_privacy_powerbi_tiles_dashboards](../includes/cc-privacy-powerbi-tiles-dashboards.md)]
   
-
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
