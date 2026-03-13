@@ -123,7 +123,7 @@ OData-Version: 4.0
 
 More information:
 
-- [Query table definitions using the Web API > Retrieving attributes](webapi/query-metadata-web-api.md#retrieving-attributes)
+- [Query table definitions using the Web API > Retrieve attributes](webapi/query-metadata-web-api.md#retrieve-attributes)
 - [ImageAttributeMetadata EntityType](xref:Microsoft.Dynamics.CRM.ImageAttributeMetadata)
 
 ---

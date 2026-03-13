@@ -6,7 +6,7 @@ author: emcoope-msft
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 10/14/2024
+ms.date: 3/10/2026
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
@@ -41,7 +41,6 @@ This article shows you how to restore a canvas app to a previous version that wa
 1. Select **Restore** and confirm your changes by selecting **Restore** again.
 
     > [!NOTE]
-    > - Only the app owner can restore a version of an app. To set a user as the owner of an app, use the [Power Apps cmdlets for administrators](/power-platform/admin/powerapps-powershell).
     > - For apps older than 6 months, this action will repackage the app with the oldest version available. Functionality may have changed from the original packaging of the app
 
     New version is created.
