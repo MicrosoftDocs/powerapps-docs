@@ -3,7 +3,7 @@ title: Querying data (preview)
 description: Learn how to query Dataverse data using the SDK for Python.
 ms.author: paulliew
 author: paulliew
-ms.date: 03/06/2026
+ms.date: 03/13/2026
 ms.reviewer: phecke
 ms.topic: concept-article
 contributors:
@@ -14,7 +14,7 @@ contributors:
 
 [!INCLUDE [preview-banner](../../../../shared/preview-includes/preview-banner.md)]
 
-This article describes several methods for querying Dataverse data using the SDK for Python. You can query data using Structured Query Language (SQL), OData, and the Dataverse Web API.
+This article describes available methods for querying Dataverse data using the SDK for Python. You can query data using Structured Query Language (SQL) and OData based APIs. <!--, and the Dataverse Web API.-->
 
 Python developers should first learn about the SDK for Python by reading [Getting started (preview)](get-started.md) before continuing with this article.
 
@@ -75,25 +75,6 @@ When writing your OData calls, follow these guidelines.
 - For the `filter` parameter, use exact lowercase logical names for column names (for example, "statecode eq 0", not "StateCode eq 0").
 - For the `expand` parameter, use case-sensitive navigation property names that match the exact server names.
 - The `select` statement and `orderby` parameter are case-insensitive and automatically converted to lowercase.
-
-## Query data using the Dataverse Web API
-
-A `?sql` query option can be used in a Dataverse Web API call. The format of the message is shown in the next example where the query is on the "accounts" entity set.
-
-```odata
-[organization-root]/api/data/v9.2/accounts?sql=SELECT name FROM account AS a WHERE a.name LIKE "Fourth Coffee"
-```
-
-The Web API call returns a standard OData JSON response, where the records are contained within the value array of the response body, for example:
-
-```json
-{
-  "value": [
-    {"accountid": "...", "name": "..."},
-    {"accountid": "...", "name": "..."}
-  ]
-}
-```
 
 ## Related information
 
