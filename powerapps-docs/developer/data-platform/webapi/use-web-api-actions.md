@@ -87,14 +87,14 @@ When you invoke a bound function, include the full name of the function, includi
 
 ### Actions bound to a table
 
-The following example shows the definition of the <xref:Microsoft.Dynamics.CRM.AddToQueue> action in the CSDL as an action bound to an entity:
+The following example shows the definition of the <xref:Microsoft.Dynamics.CRM.AddToQueue> action and <xref:Microsoft.Dynamics.CRM.AddToQueueResponse> complex type in the CSDL as an action bound to an entity:
 
 ```xml
- <ComplexType Name="AddToQueueResponse">
+<ComplexType Name="AddToQueueResponse">
      <Property Name="QueueItemId" 
         Type="Edm.Guid" 
         Nullable="false" />
- </ComplexType>
+</ComplexType>
  <Action Name="AddToQueue" 
     IsBound="true">
   <Parameter Name="entity" 
@@ -112,7 +112,9 @@ The following example shows the definition of the <xref:Microsoft.Dynamics.CRM.A
 </Action>
 ```
 
-This entity bound action is equivalent to the <xref:Microsoft.Crm.Sdk.Messages.AddToQueueRequest> used by the SDK for .NET. In the Web API, this action is bound to the <xref:Microsoft.Dynamics.CRM.queue> entity type that represents the <xref:Microsoft.Crm.Sdk.Messages.AddToQueueRequest>.<xref:Microsoft.Crm.Sdk.Messages.AddToQueueRequest.DestinationQueueId> property. This action accepts several more parameters and returns a <xref:Microsoft.Dynamics.CRM.AddToQueueResponse> complex type corresponding to the <xref:Microsoft.Crm.Sdk.Messages.AddToQueueResponse> returned by the SDK for .NET. When an action returns a complex type, the definition of the complex type appears directly above the action in the CSDL.
+This entity bound action is equivalent to the <xref:Microsoft.Crm.Sdk.Messages.AddToQueueRequest> used by the SDK for .NET. In the Web API, this action is bound to the <xref:Microsoft.Dynamics.CRM.queue> entity type that represents the <xref:Microsoft.Crm.Sdk.Messages.AddToQueueRequest>.<xref:Microsoft.Crm.Sdk.Messages.AddToQueueRequest.DestinationQueueId> property. 
+
+This action accepts several more parameters and returns a <xref:Microsoft.Dynamics.CRM.AddToQueueResponse> complex type corresponding to the <xref:Microsoft.Crm.Sdk.Messages.AddToQueueResponse> returned by the SDK for .NET. When an action returns a complex type, the definition of the complex type appears directly above the action in the CSDL.
 
 You must invoke an action bound to an entity by using a URI to set the first parameter value. You can't set it as a named parameter value.
 

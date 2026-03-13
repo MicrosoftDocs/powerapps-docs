@@ -32,7 +32,9 @@ Use the [link-entity element](reference/link-entity.md) to describe the data fro
 | `alias` | Represents the name of the related table in the results. |
 | `intersect` | Indicates that the `link-entity` is used to join tables and doesn't return any columns.|
 
-For example, the following query returns up to five records from the [account](../reference/entities/account.md) and [contact](../reference/entities/contact.md) tables based on the [PrimaryContactId lookup column](../reference/entities/account.md#BKMK_PrimaryContactId) in the account record:
+## Basic example
+
+The following query returns up to five records from the [account](../reference/entities/account.md) and [contact](../reference/entities/contact.md) tables based on the [PrimaryContactId lookup column](../reference/entities/account.md#BKMK_PrimaryContactId) in the account record:
 
 ```xml
 <fetch top='5'>
@@ -85,7 +87,7 @@ Within the `link-entity` element, you can add child elements just like on the pa
 
 ## Many-to-one relationships
 
-The previous example shows a many-to-one relationship where many account records can refer to one contact record. You define this information in the [Account account_primary_contact many-to-one relationship](../reference/entities/account.md#BKMK_account_primary_contact), which has the following values:
+The [basic example](#basic-example) shows a many-to-one relationship where many account records can refer to one contact record. You define this information in the [Account account_primary_contact many-to-one relationship](../reference/entities/account.md#BKMK_account_primary_contact), which has the following values:
 
 
 |Property|Value|Comment|
@@ -99,7 +101,7 @@ The previous example shows a many-to-one relationship where many account records
 
 ### Retrieve relationship information
 
-If you use the [XrmToolBox](../community-tools.md#xrmtoolbox) [FetchXML Builder](https://fetchxmlbuilder.com/), you can see how this tool allows you to select the relationship to set the appropriate `name`, `from`, and `to` attribute values.
+If you use tools like [XrmToolBox](../community-tools.md#xrmtoolbox) [FetchXML Builder](https://fetchxmlbuilder.com/) or [Power Platform ToolBox](https://www.powerplatformtoolbox.com/) [FetchXML Studio](https://www.powerplatformtoolbox.com/tools/e64db554-5dc9-4cc5-a712-832307d00777), you can see how these tools allow you to select the relationship to set the appropriate `name`, `from`, and `to` attribute values.
 
 You can also use other tools and APIs to look up relationship data for the appropriate `name`, `from`, and `to` attribute values. To learn how to retrieve this data, see:
 

@@ -11,15 +11,11 @@ search.audienceType:
 contributors:
   - JimDaly
 ---
-
 # Quick start: Web API sample (C#)
 
-In this quick start, you create a console application that connects to your Microsoft Dataverse environment and invokes the Web API [WhoAmI function](xref:Microsoft.Dynamics.CRM.WhoAmI). This function retrieves information about the signed-in Dataverse user. Once you understand the basic functionality described here, you can explore other Web API operations such as creating, retrieving, updating, and deleting Dataverse table rows.
+In this quick start, you create a console application that connects to your Microsoft Dataverse environment and invokes a simple function. Once you understand the basic functionality described here, you can explore other Web API operations such as creating, retrieving, updating, and deleting Dataverse table rows.
 
-This program authenticates and uses an <xref:System.Net.Http.HttpClient> to send a `GET` request to the [WhoAmI Function](xref:Microsoft.Dynamics.CRM.WhoAmI). The response is a [WhoAmIResponse ComplexType](xref:Microsoft.Dynamics.CRM.WhoAmIResponse). The program display the `UserId` property value obtained from the response.
-
-> [!NOTE]
-> This is a very simple example to show how to get connected with a minimum of code. 
+This program authenticates and uses an <xref:System.Net.Http.HttpClient> to send a `GET` request to the [WhoAmI Function](xref:Microsoft.Dynamics.CRM.WhoAmI). This function retrieves information about the signed-in Dataverse user. The response is a [WhoAmIResponse ComplexType](xref:Microsoft.Dynamics.CRM.WhoAmIResponse). The program display the `UserId` property value obtained from the response.
 
 You can find the complete Visual Studio solution for this .NET 10 project in the [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples) repo under `dataverse/webapi/`[C#-NETx/QuickStart](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/CSharp-NETx/QuickStart).
 
@@ -190,7 +186,7 @@ Follow these next steps to add code for the main program.
 
 ## Run the program
 
-1. Press F5 to build and run the program.
+1. Press <kbd>F5</kbd> to build and run the program.
 
    A browser window opens and prompts you to pick an account. Choose the account that you use to access your Dataverse environment. If that account doesn't appear in the list, select **Use another account**.
 
@@ -201,7 +197,7 @@ Follow these next steps to add code for the main program.
    ```
    Your user ID is 22cc22cc-dd33-ee44-ff55-66aa66aa66aa
    
-   C:\Projects\webapi-quickstart\bin\Debug\net10.0\webapi-quickstart.exe (process 21524) exited with code 0.
+   C:\projects\webapi-quickstart\bin\Debug\net10.0\webapi-quickstart.exe (process 21524) exited with code 0.
    To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.
    Press any key to close this window . . .
    ```
@@ -212,7 +208,9 @@ You connected to the Web API.
 
 This quickstart sample shows a simple approach to create a Visual Studio project without any exception handling or method to refresh the access token. This approach is enough to verify you can connect and try different operations.
 
-For a more complete example that demonstrates recommended design patterns, see the [WebAPIService class library (C#)](samples/webapiservice.md). This project is used for the [Web API Data operations Samples (C#)](web-api-samples-csharp.md). It demonstrates:
+## .NET sample code
+
+For a more complete example that demonstrates recommended design patterns, see the [WebAPIService class library (C#)](samples/webapiservice.md). It demonstrates:
 
 - Managing Dataverse [service protection API limits](../api-limits.md) with the .NET resilience and transient fault handling library [Polly](https://github.com/App-vNext/Polly).
 - Managing an [HttpClient](/dotnet/api/system.net.http.httpclient) in .NET by using [IHttpClientFactory](/dotnet/api/system.net.http.ihttpclientfactory).
@@ -222,8 +220,11 @@ For a more complete example that demonstrates recommended design patterns, see t
   - Creating classes that inherit from [HttpRequestMessage](/dotnet/api/system.net.http.httprequestmessage?view=net-10.0&preserve-view=true) and [HttpResponseMessage](/dotnet/api/system.net.http.httpresponsemessage?view=net-10.0&preserve-view=true).
   - Methods that use those classes.
   - A modular pattern for adding new capabilities as needed.
+`
+The [Web API Data operations Samples (C#)](web-api-samples-csharp.md) use the `WebAPIService` class library.
 
 ## Next steps
+
 
 Try creating a web application.
 
@@ -235,6 +236,12 @@ Learn more about Dataverse Web API capabilities by understanding the service doc
 
 > [!div class="nextstepaction"]
 > [Web API types and operations](web-api-types-operations.md)
+
+
+Learn more about Dataverse Web API capabilities by running and studying sample code.
+
+> [!div class="nextstepaction"]
+> [Web API Data operations Samples (C#)](web-api-samples-csharp.md)
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

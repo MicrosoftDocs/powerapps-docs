@@ -19,22 +19,27 @@ You can use many API client tools to authenticate to Microsoft Dataverse environ
 
 This article has two goals:
 
-1. Demonstrate a strategy to authenticate and connect to Dataverse by using the [Insomnia API client](https://insomnia.rest/) with a Microsoft Entra application (client) ID provided by Microsoft that's preapproved for all Dataverse environments. This strategy means you don't need to register an application to get started using the Dataverse Web API.
+1. Demonstrate a strategy to authenticate and connect to Dataverse by using the [Insomnia API client](https://insomnia.rest/) with a Microsoft Entra application (client) ID provided by Microsoft that's pre-approved for all Dataverse environments. By using this strategy, you don't need to register an application to get started using the Dataverse Web API.
 1. Introduce you to some basic data operations you can perform by using the Dataverse Web API in the context of the Insomnia API client. By using this approach, you can use Insomnia to continue to experiment and learn about the Dataverse Web API.
+
+> [!NOTE]
+> The instructions in this article represent the experience provided by Insomnia when this article was written. The user experience probably changes over time and this article might not represent the current experience. The article updates only when changes occur that fundamentally break the steps described here. [Learn more in the Insomnia documentation](https://docs.insomnia.rest/insomnia/get-started).
 
 ## Privacy
 
-Requests you send by using client API tools contain information that could be sensitive. Many developers don't want to have this information uploaded to a cloud service.
+Requests you send by using client API tools contain information that could be sensitive. Many developers don't want to upload this information to a cloud service.
 
 The [Insomnia local Scratch Pad](https://docs.insomnia.rest/insomnia/scratchpad) doesn't require that you create an account and doesn't store information about requests you send. The instructions provided here describe how to use Insomnia local Scratch Pad only. You can choose to create an account and use all the Insomnia features if you wish. If you want a version that has no options to create an account and is focused on privacy, see [Insomnium](https://github.com/ArchGPT/insomnium).
 
-> [!NOTE]
-> You can also use PowerShell with Visual Studio Code to authenticate with Dataverse Web API as an alternative to Insomnia or other API clients. [Get started using Web API with PowerShell and Visual Studio Code](quick-start-ps.md). This method:
->
-> - Uses the Azure AD app registration so you don't need to provide an application (client) ID.
-> - Doesn't send any information about your requests anywhere.
->
-> The instructions in this article represent the experience provided by Insomnia when this article was written. The user experience probably changes over time and this article might not represent the current experience. The article updates only when changes occur that fundamentally break the steps described here. [Learn more in the Insomnia documentation](https://docs.insomnia.rest/insomnia/get-started).
+## Other options
+
+You can also use PowerShell with Visual Studio Code to authenticate with Dataverse Web API as an alternative. [Get started using Web API with PowerShell and Visual Studio Code](quick-start-ps.md).
+
+PowerShell with Visual Studio Code:
+
+- Uses the Azure AD app registration so you don't need to provide an application (client) ID.
+- Doesn't send any information about your requests anywhere.
+- Is the starting point for a [comprehensive series of Web API samples you can run](web-api-samples-powershell.md).
 
 ## Install Insomnia
 
@@ -43,7 +48,7 @@ See the [Insomnia documentation for steps to install Insomnia](https://docs.inso
 For Windows, the installer is an executable file that you download and run. When the installation finishes, you might see different options. These options shouldn't interfere with the instructions in this article, but they might change. When this article was written, the installer presents these options:
 
 - For the option to enable features to sync data with the cloud, choose **Keep storing locally in Local Vault**.
-- For the option to create an account, choose **Use the local Scratch Pad**. [Learn more about Insomnia Scratch Pad](https://docs.insomnia.rest/insomnia/scratchpad)
+- For the option to create an account, choose **Use the local Scratch Pad**. [Learn more about Insomnia Scratch Pad](https://docs.insomnia.rest/insomnia/scratchpad).
 
    :::image type="content" source="media/welcome-to-insomnia.png" alt-text="The welcome to insomnia dialog including the Use the local Scratch Pad option.":::
 
@@ -51,7 +56,7 @@ For Windows, the installer is an executable file that you download and run. When
 
 Use Insomnia environments to store [environment variables](https://docs.insomnia.rest/insomnia/environment-variables). Environment variables are a JSON object containing key-value pairs of data that you can reference for many purposes.
 
-The *[base environment](https://docs.insomnia.rest/insomnia/environment-variables#base-environment)* is assigned to every workspace and you can access the variables within it throughout the workspace.
+You assign the *[base environment](https://docs.insomnia.rest/insomnia/environment-variables#base-environment)* to every workspace. You can access the variables within it throughout the workspace.
 
 1. After you open Insomnia, select the gear icon :::image type="icon" source="media/insomnia-gear-icon.png" border="false"::: next to the base environment to open the **Manage Environments** dialog. Or use the <kbd>Ctrl + E</kbd> keyboard shortcut.
 1. Copy the following JSON:
@@ -384,7 +389,7 @@ By using Insomnia, you can define multiple requests that you can reuse. An easy 
 
 ## Retrieve a record
 
-After you create an account record and get the primary key field value, you can use that value to retrieve the record. Start by duplicating the **Retrieve Accounts** request.
+After you create an account record and get the primary key field value, use that value to retrieve the record. Start by duplicating the **Retrieve Accounts** request.
 
 1. Duplicate the **Retrieve Accounts** request.
 1. Name it **Retrieve account**.
