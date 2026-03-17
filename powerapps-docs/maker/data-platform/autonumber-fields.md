@@ -84,6 +84,9 @@ Autonumber columns have a default seed value of 1000, but you may set a custom s
 
 9. Select **Done**.
 
+> [!NOTE]
+>Autonumber column is only supported in the entity designer in Modern Maker Portal in Power Apps.
+
 ## See also
 
  [Create and edit columns for Microsoft Dataverse using Power Apps portal](create-edit-field-portal.md)
