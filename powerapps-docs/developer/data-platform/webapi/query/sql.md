@@ -25,11 +25,9 @@ FROM account AS a
 WHERE a.name LIKE 'Fourth Coffee'
 ```
 
-Set the URL encoded value of the query to the `sql` query option to an [entityset resource ](overview.md#entityset-resources) that matches the base table of your query.
+Set the URL encoded value of the query to the `sql` query option to an [entityset resource](overview.md#entityset-resources) that matches the base table of your query. In this case, the entity set name is `accounts`.
 
 **Request**
-
-This example uses *percent-encoding* for the SQL query since spaces aren't allowed in a URL:
 
 ```http
 GET [Organization URI]/api/data/v9.2/accounts?sql=SELECT%20name%20%0D%0AFROM%20account%20AS%20a%20%0D%0AWHERE%20a.name%20LIKE%20'Fourth%20Coffee' HTTP/1.1
@@ -40,10 +38,11 @@ Prefer: odata.include-annotations="*"
 Accept: application/json
 ```
 
-
 **Response**
 
-The response is exactly what you get with the equivalent OData query: `accounts?$select=name&$filter=contains(name,'Fourth Coffee')`
+The response is exactly what you get with the equivalent OData query:
+
+`/accounts?$select=name&$filter=contains(name,'Fourth Coffee')`
 
 ```http
 HTTP/1.1 200 OK
