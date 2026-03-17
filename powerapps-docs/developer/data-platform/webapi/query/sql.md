@@ -93,6 +93,20 @@ SELECT a.name AS account_name, a.telephone1 AS phone
 FROM account AS a
 ```
 
+The records returned will look like this example:
+
+```json
+{
+   "@odata.etag": "W/\"174033617\"",
+   "accountid": "667ec6df-4a22-f111-8342-0022482aa3a2",
+   "account_name@OData.Community.Display.V1.AttributeName": "name",
+   "account_name": "Wide World Importers",
+   "phone@OData.Community.Display.V1.AttributeName": "telephone1",
+   "phone": "(555) 100-0006"
+}
+```
+
+
 ## Join tables
 
 Use `INNER JOIN` or `LEFT JOIN` to combine rows from two or more tables. Join on a related column, typically a primary key to a foreign key.
