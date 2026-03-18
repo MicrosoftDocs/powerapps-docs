@@ -40,7 +40,7 @@ Accept: application/json
 
 **Response**
 
-The response is exactly what you get with the equivalent OData query:
+The response is similar to what you get with the equivalent OData query:
 
 `/accounts?$select=name&$filter=contains(name,'Fourth Coffee')`
 
@@ -67,10 +67,10 @@ Preference-Applied: odata.include-annotations="*"
 
 ## Select columns
 
-List specific column names in the `SELECT` clause, separated by commas. You can use table aliases to qualify column references and column aliases to rename output fields.
+List specific column names in the `SELECT` clause, separated by commas. Use table aliases to qualify column references and use column aliases to rename output fields.
 
 > [!IMPORTANT]
-> `SELECT *` is not supported. You must explicitly name each column you want to retrieve.
+> `SELECT *` isn't supported. You must explicitly name each column you want to retrieve.
 
 The following example selects three columns from the `account` table using a table alias:
 
@@ -79,12 +79,7 @@ SELECT a.name, a.telephone1, a.websiteurl
 FROM account AS a
 ```
 
-Use `DISTINCT` to return unique values:
 
-```sql
-SELECT DISTINCT a.address1_city
-FROM account AS a
-```
 
 Use column aliases to rename output fields:
 
@@ -93,7 +88,7 @@ SELECT a.name AS account_name, a.telephone1 AS phone
 FROM account AS a
 ```
 
-The records returned will look like this example:
+The returned records look like this example:
 
 ```json
 {
@@ -112,7 +107,7 @@ The records returned will look like this example:
 Use `INNER JOIN` or `LEFT JOIN` to combine rows from two or more tables. Join on a related column, typically a primary key to a foreign key.
 
 > [!NOTE]
-> `RIGHT JOIN`, `FULL OUTER JOIN`, and `CROSS JOIN` are not supported.
+> `RIGHT JOIN`, `FULL OUTER JOIN`, and `CROSS JOIN` aren't supported.
 
 The following example returns accounts and their related contacts using an inner join:
 
@@ -152,7 +147,7 @@ INNER JOIN account AS parent ON child.parentaccountid = parent.accountid
 Use `ORDER BY` to sort results by one or more columns. Specify `ASC` (ascending, the default) or `DESC` (descending).
 
 > [!NOTE]
-> `ORDER BY` can only reference column names. Expressions like `ORDER BY LEN(name)` are not supported.
+> `ORDER BY` can only reference column names. Expressions like `ORDER BY LEN(name)` aren't supported.
 
 The following example returns accounts sorted by name:
 
@@ -169,6 +164,157 @@ SELECT TOP 10 name, createdon
 FROM account
 ORDER BY name ASC, createdon DESC
 ```
+
+## Filter rows
+
+Use a `WHERE` clause to filter rows by one or more conditions. The `WHERE` clause must compare a column to a literal value.
+
+> [!IMPORTANT]
+> Expressions, functions, and subqueries aren't supported in `WHERE` clauses. The comparison must be between a column and a literal value.
+
+### Comparison operators
+
+The following comparison operators are supported: `=`, `!=`, `<>`, `<`, `>`, `<=`, `>=`.
+
+```sql
+SELECT name, statecode
+FROM account
+WHERE statecode = 0
+```
+
+Use `!=` or `<>` to exclude rows:
+
+```sql
+SELECT name, statecode
+FROM account
+WHERE statecode <> 1
+```
+
+Use `<`, `>`, `<=`, or `>=` for range comparisons:
+
+```sql
+SELECT name
+FROM account
+WHERE name > 'M'
+ORDER BY name
+```
+
+### Logical operators
+
+Combine conditions with `AND` and `OR`. Use parentheses to control evaluation order:
+
+```sql
+SELECT name, telephone1
+FROM account
+WHERE statecode = 0 AND telephone1 IS NOT NULL
+```
+
+```sql
+SELECT name
+FROM account
+WHERE (name = 'Contoso' OR name = 'Fabrikam')
+```
+
+```sql
+SELECT name, telephone1
+FROM account
+WHERE (statecode = 0 OR statecode = 1) AND telephone1 IS NOT NULL
+```
+
+### LIKE patterns
+
+Use `LIKE` to match string patterns. The supported wildcards are:
+
+| Wildcard | Description | Example |
+| --- | --- | --- |
+| `%` | Matches any sequence of characters | `'Fourth%'` matches `Fourth Coffee` |
+| `_` | Matches any single character | `'_ontoso'` matches `Contoso` |
+| `[%]` | Matches a literal percent sign | `'[%]off'` matches `50%off` |
+
+```sql
+SELECT name FROM account WHERE name LIKE 'Fourth%'
+```
+
+Use `NOT LIKE` to exclude matching rows:
+
+```sql
+SELECT name FROM account WHERE name NOT LIKE '%test%'
+```
+
+> [!TIP]
+> Avoid leading wildcards (`LIKE '%value'`) when possible—they require a full table scan and hurt performance. A trailing wildcard (`LIKE 'value%'`) can use an index. To learn more, see [Avoid leading wildcards in LIKE patterns](#avoid-leading-wildcards-in-like-patterns).
+
+### IN and NOT IN
+
+Use `IN` to match any value in a list:
+
+```sql
+SELECT name
+FROM account
+WHERE name IN ('Contoso', 'Fabrikam', 'Fourth Coffee')
+```
+
+Use `NOT IN` to exclude values:
+
+```sql
+SELECT name
+FROM account
+WHERE name NOT IN ('Contoso', 'Fabrikam')
+```
+
+### BETWEEN
+
+Use `BETWEEN` to filter rows within an inclusive range:
+
+```sql
+SELECT name
+FROM account
+WHERE name BETWEEN 'A' AND 'B'
+```
+
+### IS NULL and IS NOT NULL
+
+Use `IS NULL` to find rows where a column has no value, and `IS NOT NULL` to find rows where a column has a value:
+
+```sql
+SELECT name
+FROM account
+WHERE telephone1 IS NULL
+```
+
+```sql
+SELECT name, telephone1
+FROM account
+WHERE telephone1 IS NOT NULL
+```
+
+> [!NOTE]
+> Don't use `= NULL` to test for null values. Use `IS NULL` instead. The expression `WHERE name = NULL` doesn't return the expected results.
+
+### DISTINCT
+
+Use `DISTINCT` to return unique values:
+
+```sql
+SELECT DISTINCT a.address1_city
+FROM account AS a
+```
+
+Combine `DISTINCT` with `TOP` to limit unique results:
+
+```sql
+SELECT DISTINCT TOP 5 address1_city
+FROM account
+```
+
+### Unsupported WHERE clause features
+
+The following features aren't supported in `WHERE` clauses:
+
+- Subqueries: `WHERE accountid IN (SELECT accountid FROM account)` isn't supported.
+- `EXISTS` and `NOT EXISTS`: These operators return an error.
+- Literal-to-literal comparisons: `WHERE 1=1` and `WHERE 1=0` aren't supported.
+- Expressions and functions: The comparison must be between a column and a literal value.
 
 ## Page results
 
@@ -212,7 +358,7 @@ ORDER BY accountid
 Use aggregate functions with `GROUP BY` to summarize data. The supported aggregate functions are `COUNT`, `SUM`, `AVG`, `MIN`, and `MAX`.
 
 > [!NOTE]
-> `HAVING` is not supported. Filter data using a `WHERE` clause before aggregating.
+> `HAVING` isn't supported. Filter data by using a `WHERE` clause before aggregating.
 
 The following example groups contacts by their parent account and counts them:
 
@@ -302,7 +448,7 @@ SELECT name FROM account WHERE name LIKE 'Fourth%'
 
 ### Filter on indexed columns
 
-Filtering on primary keys and other indexed columns is faster than filtering on unindexed fields:
+Filtering on primary keys and other indexed columns is faster than filtering on unindexed fields.
 
 ```sql
 SELECT name, telephone1
@@ -312,4 +458,4 @@ WHERE accountid = '00000000-0000-0000-0000-000000000000'
 
 ### Limit JOIN depth
 
-While multi-table joins are supported, each additional join increases query cost. Limit joins to what is necessary for your query.
+Multi-table joins are supported, but each additional join increases query cost. Limit joins to what you need for your query.
