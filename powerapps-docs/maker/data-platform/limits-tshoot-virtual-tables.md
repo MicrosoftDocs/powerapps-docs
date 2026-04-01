@@ -95,6 +95,7 @@ The following are limitations for each data source.
    - Managed metadata
    - Location: coordinates
    - Attachment
+   - Lookup
 - SharePoint specific columns that are shown in the virtual table:
    - **Compliance Asset ID** is an internal column from SharePoint for tracking purposes. It can be ignored.
    - **ID** is the external primary key from SharePoint. It's read-only and can be ignored.
