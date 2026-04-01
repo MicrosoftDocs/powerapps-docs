@@ -59,7 +59,7 @@ Business skills help makers and users interpret data, improve processes, and mak
 
 ## Next steps
 
-[Dataverse data in Microsoft 365 Copilot](data-platform-data-m365-copilot.md)
+[Dataverse data in Microsoft 365 Copilot](data-platform-data-copilot.md)
 
 [Business skills overview](data-platform-business-skill-overview.md)
 
