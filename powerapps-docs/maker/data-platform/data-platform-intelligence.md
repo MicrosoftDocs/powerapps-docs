@@ -22,6 +22,16 @@ With Dataverse intelligence, you can define reusable business context that agent
 
 [!INCLUDE [cc-preview-features-definition](../../../shared/preview-includes/preview-note-pp.md)]
 
+## Dataverse data in Microsoft 365 Copilot
+
+Microsoft 365 Copilot can use Dataverse data to help users find information and take action with natural language across Microsoft 365 experiences.
+
+Dataverse table data from Power Apps (model-driven and canvas apps) can be searched and reasoned over in Microsoft 365 Copilot. Copilot can find relevant rows and related records, interpret table relationships, and summarize or answer questions based on your data.
+
+## Business skills
+
+Business skills help makers and users interpret data, improve processes, and make decisions. Intelligence experiences can support key skills like problem framing, requirements discovery, communicating insights, and iterating with stakeholders.
+
 ## Prerequisites
 
 - Microsoft 365 admin role (AI administrator, Global administrator) to access Microsoft 365 admin center Copilot settings. More information: [Enable Microsoft 365 admin center Copilot Dataverse settings](#enable-microsoft-365-admin-center-copilot-dataverse-settings-preview)
@@ -48,6 +58,8 @@ With Dataverse intelligence, you can define reusable business context that agent
 1. Select **Save** to save the setting changes.
 
 ## Next steps
+
+[Dataverse data in Microsoft 365 Copilot](data-platform-data-m365-copilot.md)
 
 [Business skills overview](data-platform-business-skill-overview.md)
 
