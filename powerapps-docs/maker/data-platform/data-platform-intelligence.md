@@ -26,11 +26,11 @@ With Dataverse intelligence, you can define reusable business context that agent
 
 Microsoft 365 Copilot can use Dataverse data to help users find information and take action with natural language across Microsoft 365 experiences.
 
-Dataverse table data from Power Apps (model-driven and canvas apps) can be searched and reasoned over in Microsoft 365 Copilot. Copilot can find relevant rows and related records, interpret table relationships, and summarize or answer questions based on your data.
+Dataverse table data from Power Apps (model-driven and canvas apps) can be searched and reasoned over in Microsoft 365 Copilot. Copilot can find relevant rows and related records, interpret table relationships, and summarize or answer questions based on your data. More information: [Dataverse data in Microsoft 365 Copilot](data-platform-data-copilot.md)
 
 ## Business skills
 
-Business skills help makers and users interpret data, improve processes, and make decisions. Intelligence experiences can support key skills like problem framing, requirements discovery, communicating insights, and iterating with stakeholders.
+Business skills help makers and users interpret data, improve processes, and make decisions. Intelligence experiences can support key skills like problem framing, requirements discovery, communicating insights, and iterating with stakeholders. More information: [Business skills overview](data-platform-business-skill-overview.md)
 
 ## Prerequisites
 
