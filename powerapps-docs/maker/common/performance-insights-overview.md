@@ -22,6 +22,9 @@ Performance insights are a self-service tool for enterprise app makers that anal
 
 ## How to access? 
 
+> [!IMPORTANT]
+> Performance Insights is currently in Preview and is only available for the region of North America.
+
 1. Sign in to [Power Apps](https://make.powerapps.com). 
 
 1. On the left navigation pane, select **Apps**, and then select a model-driven app.
