@@ -1,55 +1,56 @@
 items:
   - name: Power Apps code apps
-    expanded: true
     items:
       - name: Power Apps code apps
         href: index.yml
-      - name: Overview
-        href: overview.md
-      - name: Architecture
-        href: architecture.md
+      - name: Get started
+        items:
+          - name: Overview
+            href: overview.md
+          - name: "Quickstart: Create a code app"
+            href: how-to/create-an-app-from-scratch.md
+          - name: Architecture
+            href: architecture.md
+          - name: System configuration
+            href: system-limits-configuration.md
       - name: What's new?
         items:
           - name: Quickstart with npm CLI
             href: how-to/npm-quickstart.md
-      - name: Build
+      - name: Connect to data
         items:
-          - name: "Quickstart: Create a code app"
-            href: how-to/create-an-app-from-scratch.md
-          - name: System configuration
-            href: system-limits-configuration.md
-          - name: Connect to data
-            href: how-to/connect-to-data.md
-          - name: Connect to Copilot Studio
-            href: how-to/connect-to-copilot-studio.md
-          - name: Dataverse
-            items:
-              - name: Connect to Dataverse
-                href: how-to/connect-to-dataverse.md
-              - name: Get Dataverse tables metadata
-                href: how-to/get-table-metadata.md
-          - name: Connect to Azure SQL
-            href: how-to/connect-to-azure-sql.md
-          - name: SharePoint operations
-            href: how-to/sharepoint-operations.md
-          - name: Create a basic asset management API with Azure Functions
-            href: how-to/create-basic-asset-management-api-azure-functions.md
-          - name: Analyze data requests and responses
-            href: how-to/analyze-data-request-response.md
-          - name: Get context data
-            href: how-to/retrieve-context.md
-          - name: Embed in an iframe
-            href: how-to/embed-iframe.md
-      - name: Deploy
+        - name: Connect to data
+          href: how-to/connect-to-data.md
+        - name: Connect to Dataverse
+          href: how-to/connect-to-dataverse.md
+        - name: Connect to Azure SQL
+          href: how-to/connect-to-azure-sql.md
+        - name: SharePoint operations
+          href: how-to/sharepoint-operations.md
+        - name: Connect to Copilot Studio
+          href: how-to/connect-to-copilot-studio.md
+        - name: Get Dataverse tables metadata
+          href: how-to/get-table-metadata.md
+      - name: Develop
         items:
-          - name: Application lifecycle management (ALM)
-            href: how-to/alm.md
-      - name: Monitor
+        - name: Analyze data requests and responses
+          href: how-to/analyze-data-request-response.md
+        - name: Create a basic asset management API with Azure Functions
+          href: how-to/create-basic-asset-management-api-azure-functions.md
+        - name: Embed in an iframe
+          href: how-to/embed-iframe.md
+        - name: Use environment variables
+          href: how-to/use-environment-variables.md
+        - name: Get context data
+          href: how-to/retrieve-context.md
+      - name: Deploy & Monitor
         items:
-          - name: Manage PAC CLI code command telemetry
-            href: how-to/telemetry.md
-          - name: Set up Azure App Insights
-            href: how-to/set-up-azure-app-insights.md
+        - name: Application lifecycle management (ALM)
+          href: how-to/alm.md
+        - name: Manage PAC CLI code command telemetry
+          href: how-to/telemetry.md
+        - name: Set up Azure App Insights
+          href: how-to/set-up-azure-app-insights.md
       - name: Manage
         items:
           - name: Configure Content Security Policy (CSP)
@@ -58,9 +59,12 @@ items:
             href: how-to/migrate-to-v1.md
       - name: Troubleshoot
         items:
-          - name: Feedback and support
-            href: feedback-support.md
-          - name: Adding a data source
-            href: troubleshoot-add-datasource.md
-          - name: Zscaler issues
-            href: troubleshoot-zscaler-issues.md
+        - name: Analyze data requests and responses
+          href: how-to/analyze-data-request-response.md
+        - name: Feedback and support
+          href: feedback-support.md
+        - name: Adding a data source
+          href: troubleshoot-add-datasource.md
+        - name: Zscaler issues
+          href: troubleshoot-zscaler-issues.md
+

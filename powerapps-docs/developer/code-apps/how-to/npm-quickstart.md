@@ -63,7 +63,7 @@ npx power-apps init
 **Option B: Pass options directly:**
 
 ```bash
-npx power-apps init --displayName "App From Scratch" --environmentId <Your environment ID>
+npx power-apps init --display-name "App From Scratch" --environment-id <Your environment ID>
 ```
 
 When you run the `init` command, the CLI authenticates you automatically. Sign in by using your Power Platform account when prompted.

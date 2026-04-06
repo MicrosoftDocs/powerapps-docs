@@ -1,6 +1,36 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/samples/convert-fax-task.md",
+      "redirect_url": "../../activity-entities",
+      "redirect_document_id": "false"
+    },   
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/samples/assign-chart-to-another-user.md",
+      "redirect_url": "../../../model-driven-apps/customize-visualizations-dashboards",
+      "redirect_document_id": "false"
+    }, 
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/samples/assign-dashboard-to-another-user.md",
+      "redirect_url": "../../../model-driven-apps/customize-visualizations-dashboards",
+      "redirect_document_id": "false"
+    }, 
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/samples/create-retrieve-update-delete-charts.md",
+      "redirect_url": "../../../model-driven-apps/customize-visualizations-dashboards",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/samples/create-retrieve-update-delete-dashboards.md",
+      "redirect_url": "../../../model-driven-apps/customize-visualizations-dashboards",
+      "redirect_document_id": "false"
+    }, 
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/samples/retrieve-charts-attached-to-entity.md",
+      "redirect_url": "../../../model-driven-apps/customize-visualizations-dashboards",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/developer/code-apps/quickstart.md",
       "redirect_url": "how-to/create-an-app-from-scratch",
       "redirect_document_id": "false"

@@ -674,7 +674,7 @@ If you have this kind of custom business logic, then Dataverse doesn't know abou
 
 ## Tables not currently supported for Recycle Bin
 
-The query described in [Detect which tables don't have recycle bin enabled](#detect-which-tables-dont-have-recycle-bin-enabled) was used to generate [this list](/power-platform/admin/restore-deleted-table-records#tables-not-currently-supported-for-recycle-bin) in August of 2024.
+The query described in [Detect which tables don't have recycle bin enabled](#detect-which-tables-dont-have-recycle-bin-enabled) was used to generate [this list](/power-platform/admin/restore-deleted-table-records#tables-that-the-deleted-records-feature-doesnt-support) in August of 2024.
 
 
 

@@ -1,11 +1,11 @@
 ---
 title: Code signing process for AAB files
 description: Learn how to manually code sign in Android App Bundle (AAB) files and convert them to APKs for debugging, including required tools and step-by-step commands.
-author: komala2019
+author: Murugesh1985
 contributors:
 ms.topic: how-to
 ms.date: 06/05/2025
-ms.author: koagarwa
+ms.author: murugeshs
 ms.reviewer: smurkute
 ms.subservice: canvas-maker
 ms.custom: canvas

@@ -4,7 +4,7 @@ description: Introduction to Microsoft Dataverse, tables, server-side logic, sec
 author: mattp123
 ms.topic: overview
 ms.collection: get-started
-ms.date: 01/09/2026
+ms.date: 03/31/2026
 ms.reviewer: matp
 ms.subservice: dataverse-maker
 ms.author: matp
@@ -51,7 +51,7 @@ Responding to customer feedback and data from user research, effective November 
 
 ## Dynamics 365 and Dataverse
 
-Dynamics 365 applications&mdash;such as Dynamics 365 Sales, Dynamics 365 Customer Service, or Dynamics 365 Talent&mdash;also use Dataverse to store and secure the data they use. This enables you to build apps by using Power Apps and Dataverse directly against your core business data, which is already used within Dynamics 365, without the need for integration.
+Dynamics 365 applications&mdash;such as Dynamics 365 Sales, Dynamics 365 Customer Service, or Dynamics 365 Human Resources&mdash;also use Dataverse to store and secure the data they use. This enables you to build apps by using Power Apps and Dataverse directly against your core business data, which is already used within Dynamics 365, without the need for integration.
 
 - **Build apps against your Dynamics 365 data** &ndash; Build apps quickly against your business data within Power Apps or by using the extensible platform that lets pro developers programmatically interact with data and metadata, apply business logic, create custom connectors, and integrate with external data.
 

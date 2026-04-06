@@ -2,7 +2,7 @@
 title: Manage model-driven app settings in the Power Apps app designer
 description: Learn how to manage the settings for your app using the app designer
 keywords: ""
-ms.date: 12/15/2025
+ms.date: 04/02/2026
 ms.custom: 
 ms.topic: how-to
 applies_to:
@@ -20,6 +20,7 @@ search.audienceType:
 contributors:
 - chmoncay
 - jasongre
+- clromano 
 ---
 # Manage model-driven app settings in the app designer
 
@@ -55,10 +56,20 @@ Here are a few of the features available to app makers:
 - **In app notifications**. When enabled, the app polls for new in-app notifications and displays them. More information: [Send in-app notifications within model-driven apps](../../developer/model-driven-apps/clientapi/send-in-app-notifications.md)
 - **Lock tabs at the top of forms on mobile and tablets**. When enabled, tabs remain visible at the top of a form while users scroll through the data on the form. More information: [Lock tabs at the top of forms](../../mobile/use-custom-model-driven-app-on-mobile.md#lock-tabs-at-the-top-of-forms)
 - **Mobile commanding improvements**. When enabled, optimizes the command bar for phone and tablet providing easy access to contextual commands to users helping increase productivity and satisfaction. More information: [Mobile commanding improvements](../../mobile/use-custom-model-driven-app-on-mobile.md#mobile-commanding-improvements)
-- **Offline setup from the app designer**. [Enable your app for offline use](../../mobile/setup-mobile-offline.md#enable-your-app-for-offline-use)
+- **Enable offline classic**. [Enable mobile offline classoc](/power-apps/mobile/setup-mobile-offline#enable-mobile-offline-classic)
 - **Tablet optimization for command bar**. When enabled, replaces the native command bar at the bottom of the screen with the web command bar located at the top of the screen on tablets. More information: [Tablet optimization for command bar](../../mobile/use-custom-model-driven-app-on-mobile.md#tablet-optimization-for-command-bar)
-- **Try the new look**. Enabled by default, this feature determines whether end users see the modern refresh app experience or the classic look. This setting is hidden and ignored with the **2026 Wave 1** release when the new look becomes mandatory. More information: [Modern, refreshed look for model-driven apps](../../user/modern-fluent-design.md)
+- **New look for model-driven apps**. Enabled by default, this feature determines whether end users see the modern refresh app experience or the classic look. This setting is hidden and ignored with the **2026 Wave 1** release when the new look becomes mandatory. More information: [Modern, refreshed look for model-driven apps](../../user/modern-fluent-design.md)
 - **Form fill assist toolbar**. When enabled, the form fill assist toolbar is visible at the top of a form, providing easy access to Copilot form fill assistance capabilities like smart paste and files. For more information about AI form fill assistance environment settings, go to [AI form fill assistance](/power-platform/admin/settings-features#ai-form-fill-assistance). For more information about using this feature, go to [Use Copilot's form fill assistance feature in model-driven apps](../../user/form-filling-assistance.md).
+
+## Navigation
+
+Controls navigation features for the app.
+
+- **Home**. Displays a link to the home page for the model-driven app.
+- **Recent**. Displays the list of links for the model-driven app that were recently visited.
+- **Pinned**. Pin items from the **Recent** list to locate them easily.
+- **Enable collapsibile groups**. Disabled by default. Allows groups to be collapsed or expanded. More information: [Create a group](app-navigation.md#create-a-group)
+- **Enable Areas**. Disabled by default. Areas can contain multiple groups. For apps with multiple areas, a user must  select the area switch located at the bottom left in the app to change to a different area. [Add a new area](app-navigation.md#add-a-new-area)
 
 ## Upcoming 
 
@@ -69,7 +80,27 @@ The **Upcoming** tab displays preview features currently available:
 > [!IMPORTANT]
 > [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
-- **Choose the offline mode to apply to your app**. When enabled, users can continue working in the model-driven app when offline. More information: [Mobile offline overview (preview)](../../mobile/mobile-offline-overview.md)
+- **Microsoft 365 Copilot in model-driven apps**. Microsoft 365 Copilot chat makes it easier for users to work with model-driven apps by offering AI-powered insights through natural language conversations. With this feature, users can quickly find information, navigate apps more easily, and get help to boost their productivity. More information: [Add Microsoft 365 Copilot chat for app users in model-driven apps (preview)](add-microsoft-365-copilot.md)
+- **Enable your app in Microsoft 365 Copilot**. Power Apps in Copilot lets users interact with your Power Apps model-driven app directly from Copilot. When a user talks to the agent, it can surface your app's data as interactive widgets — a grid for browsing records and a form for viewing, editing, or creating them — all without leaving the Copilot experience. The feature works by generating a declarative agent from your app. More information: [Set up Power Apps in Copilot](#set-up-power-apps-in-copilot)
+
+### Set up Power Apps in Copilot
+
+#### Prerequisites
+
+- A model-driven app. Currently, this feature is only available with model-driven apps.
+- Microsoft 365 Copilot license. Required for both the maker deploying the agent and end users interacting with it.
+- Permission to upload custom apps in Microsoft Teams. Your Microsoft 365 admin might need to enable this. Check your Teams admin settings if the upload option is not visible.
+
+#### Steps to set up Power Apps in Copilot
+
+1. Under **Enable your app in Microsoft 365 Copilot**, select **Download app package**.
+1. Upload the compressed file that is named similar to `declarative-agent-app name.zip` from Microsoft Teams or Microsoft 365 Agents:
+
+   - Teams: Upload for personal use as a custom app in Teams. More information [Upload your app in Teams]( /microsoftteams/platform/concepts/deploy-and-publish/apps-upload)
+   - Microsoft 365 Agents: Publish the package for a team or group from the Microsoft 365 admin center. More information: [Publish agents](/microsoft-365/admin/manage/agent-registry?view=o365-worldwide&preserve-view=true#publish-agents)
+  
+> [!NOTE]
+> You can customize the declarative agent included in the app package at you own discretion. To reduce the possibility of unexpected behavior when using AI agents, use caution when you customize the declarative agent code. More information: [Declarative Agents for Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/overview-declarative-agent#building-declarative-agents)
 
 ## Known limitations
 

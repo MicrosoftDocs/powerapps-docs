@@ -4,7 +4,7 @@ description: Learn how to use AI code generation tools like Claude Code to creat
 author: jasongre
 ms.author: jasongre
 ms.reviewer: matp
-ms.date: 03/19/2026
+ms.date: 03/31/2026
 ms.topic: how-to
 ms.service: powerapps
 ms.subservice: mda-maker
@@ -17,16 +17,9 @@ applies_to:
 - PowerApps
 ---
 
-# Create and edit generative pages with AI code generation tools (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Create and edit generative pages with AI code generation tools
 
 This article describes how to use AI code generation tools, such as GitHub Copilot CLI and Claude Code, to create and edit generative pages for model-driven apps in Power Apps. This approach allows you to integrate advanced code generation capabilities directly into your development workflow, allowing you to create new generative pages or iterate on existing ones using natural language instructions.
-
-> [!IMPORTANT]
->
-> - This is a preview feature.
-> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
 Using AI code generation tools with generative pages provides an alternative development approach that complements the UI-based experience in Power Apps (make.powerapps.com). This code-first approach is designed for developers and technical makers who prefer working with local development tools and CLI-based workflows.
 
@@ -64,7 +57,7 @@ Before you start, ensure you have the required software and permissions describe
    - Go to [Authenticate Power Platform CLI](/power-platform/developer/cli/reference/auth) for more details on getting connected.
 
 > [!NOTE]
-> Your Power Platform environment must be located in the US region. This capability is coming to other regions soon.
+> This capability is available worldwide in public clouds.
 
 ### Install the plugin
 
