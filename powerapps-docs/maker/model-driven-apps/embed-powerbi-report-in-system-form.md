@@ -1,7 +1,7 @@
 ---
-title: "Embed a Power BI report in a model-driven app main form | MicrosoftDocs"
-description: Learn how to embed a Power BI report in a model-driven app form
-ms.date: 01/21/2025
+title: "Embed a Power BI report in a model-driven app main form"
+description: Learn how to embed a Power BI report in a model-driven app form with Power Apps
+ms.date: 04/03/2026
 ms.topic: "how-to"
 author: "sriharibs-msft"
 ms.subservice: mda-maker
@@ -14,7 +14,7 @@ search.audienceType:
 # Embed a Power BI report in a model-driven app main form
 
 You can use Power BI reports in Power Apps model-driven apps to bring rich reporting and analytics to your main forms and empower your users to accomplish more. This unlocks the power to aggregate data across systems, and tailor it down to the context of a single record.
- 
+
 ## Prerequisites
 
 Embedding Power BI content is an optional feature and is disabled on all environments by default. You must enable it before you can embed Power BI content. More information: [Enable Power BI visualizations in the organization](/power-platform/admin/use-power-bi#embed--visualizations-on-personal-dashboards).
@@ -127,9 +127,8 @@ You can create more complex filter expressions by looking at examples from [Cons
 
 ## Known issues and limitations
 
-- This integration is available only in the Unified Interface client, on supported web browsers and mobile devices.
-- Opening this form in the Power Apps form designer won't show the control in a meaningful way. This is because the control is customized outside of the form designer.
-- Users will be authenticated into Power BI automatically with their Power Apps username and password. If a Power BI account with matching credentials doesn’t exist, a sign-in prompt is displayed as illustrated here. 
+- Opening this form in the Power Apps form designer doesn't show the control in a meaningful way. This is because the control is customized outside of the form designer.
+- Users are authenticated into Power BI automatically with their Power Apps username and password. If a Power BI account with matching credentials doesn’t exist, a sign-in prompt is displayed as illustrated here. 
 
    > [!div class="mx-imgBorder"] 
    > ![Power BI sign in prompt.](media/embed-powerbi/embed-powerbi-report-in-system-form-auth-1.png "Power BI sign in prompt")
@@ -143,7 +142,7 @@ You can create more complex filter expressions by looking at examples from [Cons
    > ![User that is signed in doesn't have appropriate permission.](media/embed-powerbi/embed-powerbi-report-in-system-form-auth-3.png "User that is signed in doesn't have appropriate permission")
 
 - The view of the report data shown inside Power Apps is the same as Power BI, and Power Apps security roles and privileges don't affect the data that is displayed. Hence, the data is essentially the same as what the creator of the Power BI dataset would see. To apply data access restrictions similar to Power Apps security roles and teams, use [Row-level security (RLS) with Power BI](/power-bi/service-admin-rls).
-- If the form doesn’t show the Power BI report after importing the solution and publishing customizations, open it in the model-driven form editor and save it, so that the form JSON is regenerated.
+- If the form doesn’t show the Power BI report after importing the solution and publishing customizations, open it in the model-driven form designer and save it, so that the form JSON is regenerated.
 - Embedding a Power BI tile on a form is only supported without contextual filtering.
 - Embedding a Power BI report doesn't support cross-tenant references. For example, trying to embed a Power BI report belonging to the Contoso tenant in a model-driven app belonging to the Fabrikam tenant isn't currently supported, even if the report being embedded has been shared with users in the Fabrikam tenant via Power BI.
 - Pinned reports as part of Power BI dashboards aren't meant to be interactive. If you want to have interactive Power BI reports, embed them directly instead of pinning them to a dashboard.

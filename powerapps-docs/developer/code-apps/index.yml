@@ -40,6 +40,8 @@ landingContent:
         links:
           - text: Quickstart with npm CLI
             url: how-to/npm-quickstart.md
+          - text: Add a Dataverse action or function
+            url: how-to/add-dataverse-action-function.md
 
   # Card
   - title: Configure & Setup

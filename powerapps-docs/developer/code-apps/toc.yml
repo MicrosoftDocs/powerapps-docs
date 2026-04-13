@@ -17,6 +17,8 @@ items:
         items:
           - name: Quickstart with npm CLI
             href: how-to/npm-quickstart.md
+          - name: Add a Dataverse Action or Function
+            href: how-to/add-dataverse-action-function.md
       - name: Connect to data
         items:
         - name: Connect to data

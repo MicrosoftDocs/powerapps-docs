@@ -7,7 +7,7 @@ ms.collection:
   - bap-ai-copilot
   - get started
 ms.reviewer:
-ms.date: 01/12/2026
+ms.date: 04/10/2026
 ms.update-cycle: 180-days
 ms.subservice: canvas-maker
 ms.author: tapanm
@@ -85,7 +85,7 @@ The workspace includes the following options:
 | 4. **View data** | View the data in your tables. |
 | 5. **Create relationships** | Create relationships between tables. |
 | 6. **Remove** | Remove a table from the workspace. |
-| 7. **Save and exit** | Save your tables and create your app. |
+| 7. **Save and open app** | Creates draft tables and relationships, then opens your app for editing. |
 | 8. **Copilot panel** | Ask Copilot to create tables, import data, or make changes using natural language. |
 | 9. **View prompts** | See examples of what you can ask Copilot to do. |
 

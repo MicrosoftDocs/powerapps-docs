@@ -123,7 +123,7 @@ def find_referencing_topics(
 def update_ms_date(file_path: str, new_date: str) -> bool:
     """
     Replace the ms.date value in a file's YAML frontmatter.
-    Returns True if the field was found and updated.
+    Returns True if the field was found and the content actually changed.
     """
     path = Path(file_path)
     content = path.read_text(encoding="utf-8", errors="replace")
@@ -135,7 +135,7 @@ def update_ms_date(file_path: str, new_date: str) -> bool:
         flags=re.MULTILINE,
     )
 
-    if count == 0:
+    if count == 0 or new_content == content:
         return False
 
     path.write_text(new_content, encoding="utf-8")
@@ -335,8 +335,18 @@ def main():
         print("Error: GITHUB_TOKEN or CASCADE_PAT environment variable is required.")
         sys.exit(1)
 
-    pr_number = os.environ.get("PR_NUMBER", "unknown")
-    pr_url    = os.environ.get("PR_URL", "")
+    pr_number_raw = os.environ.get("PR_NUMBER", "unknown")
+    pr_url        = os.environ.get("PR_URL", "")
+
+    # If the user passed a full URL (e.g. https://github.com/.../pull/11914)
+    # as the PR number, extract just the numeric part and populate pr_url.
+    url_match = re.match(r"(https?://github\.com/.+/pull/(\d+))$", pr_number_raw)
+    if url_match:
+        if not pr_url:
+            pr_url = url_match.group(1)
+        pr_number = url_match.group(2)
+    else:
+        pr_number = pr_number_raw
 
     includes_path   = config["includes_path"]
     downstream_repos = config["downstream_repos"]

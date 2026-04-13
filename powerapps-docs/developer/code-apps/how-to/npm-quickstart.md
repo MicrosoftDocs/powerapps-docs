@@ -23,13 +23,14 @@ This article shows you how to install the Power Apps client library for code app
 
 ## Commands
 
-The code apps npm CLI has three commands:
+The code apps npm CLI has four commands:
 
 |Command|Description|
 |---------|---------|
 |`init`|Initialize your code app.|
 |`run`|Starts a local development server.|
 |`push`|Publishes a new version of the code app to your environment.|
+|`find-dataverse-api`|See [How to: Add a Dataverse action or function to your code app](add-dataverse-action-function.md)|
 
 Learn how to use these commands by following the steps in this article.
 

@@ -281,6 +281,8 @@
     items:
     - name: Create a blank canvas app
       href: ./canvas-apps/create-blank-app.md
+    - name: Create a canvas app with AI code generation tools (preview)
+      href: ./canvas-apps/create-canvas-external-tools.md
     - name: Create an app using Copilot
       items:
       - name: Create an app from conversations
@@ -1253,8 +1255,6 @@
         href: ./common/wrap/code-sign-aab-file.md
       - name: Azure key vault for wrap
         href: ./common/wrap/create-key-vault-for-code-signing.md
-      - name: Set up push notification for wrap apps
-        href: ./common/wrap/push-notifications-for-wrap.md
       - name: Use deep links with wrapped mobile apps
         href: ./common/wrap/wrap-deep-links.md
       - name: Benefits and limitations of wrap
@@ -1525,6 +1525,8 @@
             href: ./model-driven-apps/generative-pages.md
           - name: Create generative pages with AI code generation tools
             href: ./model-driven-apps/generative-page-external-tools.md
+          - name: Navigating to and from a generative page
+            href: ../developer/model-driven-apps/clientapi/navigate-to-generative-page-examples.md
         - name: Create, add, or remove forms and views
           href: ./model-driven-apps/create-add-remove-forms-views-dashboards.md
       - name: Work with views

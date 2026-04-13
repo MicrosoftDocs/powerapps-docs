@@ -17,9 +17,9 @@ The Power Apps community creates tools!
 > [!IMPORTANT]
 > Microsoft doesn't support tools created by the community. If you have questions or problems with community tools, contact the publisher of the tool.
 
-## Power Platform Toolbox
+## Power Platform ToolBox
 
-The [Power Platform Toolbox](https://www.powerplatformtoolbox.com/) provides access to tools created by the community, like [XrmToolBox](https://www.xrmtoolbox.com/) has for many years. The difference is that Power Platform Toolbox supports platforms other than Windows.
+The [Power Platform ToolBox](https://www.powerplatformtoolbox.com/) provides access to tools created by the community, like [XrmToolBox](https://www.xrmtoolbox.com/) has for many years. The difference is that Power Platform ToolBox supports platforms other than Windows.
 
 This table provides a selection of available tools.
 
