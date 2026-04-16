@@ -4,7 +4,7 @@ description: How to view, compose and respond to email.
 author: shwetamurkute
 ms.component: pa-user
 ms.topic: article
-ms.date: 02/04/2026
+ms.date: 04/17/2026
 ms.subservice: end-user
 ms.author: smurkute
 ms.custom: ""
@@ -67,13 +67,11 @@ For more information, see [Insert an email template](insert-email-template.md).
     >[!Important]
     > - The **From** and **To** fields are automatically populated based on the user and the account and contact of the original record.
 
-## View email sentiment (preview)
+## View email sentiment
 
-[!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
+After an administrator enables and configures email sentiment analysis, the customer sentiment card is displayed for incoming customer emails that meet the configured criteria.
 
-When you get an incoming email from a customer, the customer sentiment card is displayed on the email form.
-
-When enabled by your system administrator, the customer sentiment card displays the following features:
+The customer sentiment card displays the following features:
 
  - **Current sentiment**: The customer’s current sentiment. A sentiment intensity indicator in the corresponding colors is also displayed.
  - **Sentiment timeline**: A visual representation that shows how the customer sentiment in the emails received changes across a period.   
@@ -83,9 +81,6 @@ When enabled by your system administrator, the customer sentiment card displays 
 
 > [!Note]
 > For emails received before the feature is enabled, the system doesn’t display the sentiment.
-
-[!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/production-ready-preview-dynamics365.md)]
-
 
 ## Reply to an email
 The way you can reply to an email depends on where you are in your app. 
