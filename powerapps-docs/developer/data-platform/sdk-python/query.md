@@ -1,22 +1,20 @@
 ---
-title: Querying data (preview)
+title: Querying data
 description: Learn how to query Dataverse data using the SDK for Python.
 ms.author: paulliew
 author: paulliew
-ms.date: 03/13/2026
+ms.date: 04/21/2026
 ms.reviewer: phecke
 ms.topic: concept-article
 contributors:
  - phecke
 ---
 
-# Querying data (preview)
-
-[!INCLUDE [preview-banner](../../../../shared/preview-includes/preview-banner.md)]
+# Querying data
 
 This article describes available methods for querying Dataverse data using the SDK for Python. You can query data using Structured Query Language (SQL) and OData based APIs.
 
-Python developers should first learn about the SDK for Python by reading [Getting started (preview)](get-started.md) before continuing with this article.
+Python developers should first learn about the SDK for Python by reading [Getting started](get-started.md) before continuing with this article.
 
 ## Query data using SQL
 
@@ -83,6 +81,6 @@ When writing your OData calls, follow these guidelines.
 
 ## See also
 
-- [Getting started (preview)](get-started.md)
+- [Getting started](get-started.md)
 - [Use the Microsoft Dataverse Web API](../webapi/overview.md)
 - [Use SQL to query data](../dataverse-sql-query.md)

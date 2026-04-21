@@ -1,18 +1,16 @@
 ---
-title: "Getting started (preview)"
+title: "Getting started"
 description: "Get started using the Dataverse SDK for Python."
 ms.author: paulliew
 author: paulliew
-ms.date: 11/17/2025
+ms.date: 04/21/2026
 ms.reviewer: phecke
 ms.topic: quickstart-sdk
 contributors:
  - phecke
 ---
 
-# Getting started (preview)
-
-[!INCLUDE [preview-banner](../../../../shared/preview-includes/preview-banner.md)]
+# Getting started
 
 In this article, we describe how to set up your Python environment to access Dataverse through the Dataverse SDK for Python. We then show some simple coding examples to get you started.
 
@@ -20,6 +18,7 @@ In this article, we describe how to set up your Python environment to access Dat
 
 - Read/write access to a Dataverse environment. A [trial environment](/power-platform/admin/create-environment) can be used.
 - An activated Python 3.10+ environment.
+- Pandas version 2.0.0+.
 - Network access to [pypi.org](https://pypi.org) to obtain the SDK packages.
 
 ## Install the SDK and dependencies
@@ -52,8 +51,8 @@ Before you leave this page, take note that you can't work with Dataverse effecti
 
 ## Next steps
 
-- [Working with data (preview)](work-data.md)
-- [Quick guide to Dataverse (preview)](quick-guide-dataverse.md)
+- [Working with data](work-data.md)
+- [Quick guide to Dataverse](quick-guide-dataverse.md)
 
 ## Related information
 

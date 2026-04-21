@@ -1,21 +1,19 @@
 ---
-title: "Working with data (preview)"
+title: "Working with data"
 description: "Learn common scenarios for working with Dataverse data,
     and how to go about writing Python code for those scenarios."
 ms.author: paulliew
 author: paulliew
-ms.date: 11/17/2025
+ms.date: 04/21/2026
 ms.reviewer: phecke
 ms.topic: example-scenario
 contributors:
  - phecke
 ---
 
-# Working with data (preview)
+# Working with data
 
-[!INCLUDE [preview-banner](../../../../shared/preview-includes/preview-banner.md)]
-
-In this article, we demonstrate some example code that uses the SDK to work with Dataverse data and metadata. Be sure you read [Getting started (preview)](get-started.md) first before continuing with this article.
+In this article, we demonstrate some example code that uses the SDK to work with Dataverse data and metadata. Be sure you read [Getting started](get-started.md) first before continuing with this article.
 
 ## Basic operations
 
@@ -246,5 +244,5 @@ Additional information about working with custom table metadata:
 
 ## See also
 
-- [Getting started (preview)](get-started.md)
-- [Quick guide to Dataverse (preview)](quick-guide-dataverse.md)
+- [Getting started](get-started.md)
+- [Quick guide to Dataverse](quick-guide-dataverse.md)

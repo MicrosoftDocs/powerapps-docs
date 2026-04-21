@@ -1,7 +1,7 @@
 items:
   - name: Dataverse SDK for Python
     items:
-      - name: Dataverse SDK for Python (preview)
+      - name: Dataverse SDK for Python
         href: index.yml
       - name: Overview
         href: overview.md

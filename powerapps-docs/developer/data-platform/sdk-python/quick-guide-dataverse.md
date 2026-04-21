@@ -1,18 +1,16 @@
 ---
-title: "Quick guide to Dataverse (preview)"
+title: "Quick guide to Dataverse"
 description: "Learn some key concepts of Dataverse that every programmer needs to know for success."
 ms.author: paulliew
 author: paulliew
-ms.date: 01/06/2026
+ms.date: 04/21/2026
 ms.reviewer: phecke
 ms.topic: concept-article
 contributors:
  - phecke
 ---
 
-# Quick guide to Dataverse (preview)
-
-[!INCLUDE [preview-banner](../../../../shared/preview-includes/preview-banner.md)]
+# Quick guide to Dataverse
 
 In this article, we explore some key concepts about Dataverse that Python (and other non-.NET) programmers should know in order to be successful when working with Dataverse. We also provide links to more detailed information. Dataverse capabilities are extensive, however, you can explore these other capabilities at your own pace should you choose to do so.
 
