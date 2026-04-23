@@ -1,0 +1,1 @@
+Sends a prompt string to the Microsoft 365 Copilot side panel.
