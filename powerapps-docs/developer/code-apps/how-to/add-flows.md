@@ -59,13 +59,13 @@ Copy the **Flow ID** value for the flow you want to add.
 Run the following command, replacing `<flow-id>` with the value from the previous step:
 
 ```bash
-npx power-apps add-flow --flowId <flow-id>
+npx power-apps add-flow --flow-id <flow-id>
 ```
 
 **Example:**
 
 ```bash
-npx power-apps add-flow --flowId a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1
+npx power-apps add-flow --flow-id a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1
 ```
 
 When the command succeeds, the CLI confirms the flow was added:
@@ -166,7 +166,7 @@ The `result` object has the following shape:
 If the flow's definition changes - for example, its author adds a new parameter or updates connection references - re-run `add-flow` with the same flow ID to pick up the latest definition and regenerate the service files:
 
 ```bash
-npx power-apps add-flow --flowId a1b2c3d4-e5f6-7890-abcd-ef1234567890
+npx power-apps add-flow --flow-id a1b2c3d4-e5f6-7890-abcd-ef1234567890
 ```
 
 The command matches the flow by its `workflowEntityId` and reuses the existing UUID in `power.config.json`, so no manual cleanup is required.

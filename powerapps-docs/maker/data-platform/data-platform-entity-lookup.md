@@ -1,12 +1,12 @@
 ---
-title: Create a relationship between tables by using a lookup column | Microsoft Docs
+title: Create a relationship between tables by using a lookup column
 description: Step-by-step instructions for how to create a relationship between tables in Power Apps by using a lookup column.
 author: lancedMicrosoft
 ms.component: cds
 ms.topic: how-to
-ms.date: 09/19/2024
+ms.date: 04/21/2026
 ms.subservice: dataverse-maker
-ms.author: lanced
+ms.author: matp
 search.audienceType: 
   - maker
 ---
@@ -28,49 +28,45 @@ Additionally, you can set advanced cascading behaviors on many-to-one and one-to
 
 To add a lookup relation to a table, create a relation under the **Relationships** area and specify the table with which you want to create a relationship.
 
-1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), on the left navigation pane select **Tables**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. In [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), on the left navigation pane select **Tables**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 
-1. Select an existing table, or [Create a new table](data-platform-create-entity.md)
+1. Select an existing table, or [Create a new table](data-platform-create-entity.md), and then select **Relationships**.
 
-1. Select the **Relationships** area.
-
-1. Select **Add relationship**, and then select a relationship type, such as **Many-to-one**.
+1. Select **New relationship**, and then select a relationship type, such as **Many-to-one**.
 
 1. On the right pane, select a **Related** table for the **Current** table, and then select **Done**.
 
     > [!div class="mx-imgBorder"] 
     > ![Many to one relationship example.](./media/data-platform-cds-newrelationship/manytoone-2.png "Many to one relationship example")
 
-1. Select **Save table**.
+1. Select **Done**.
 
     > [!div class="mx-imgBorder"] 
     > ![Many to One Relationship.](./media/data-platform-cds-newrelationship/manytoone-3.png "Many to One Relationship") 
 
-## Add a One-to-many relationship
+## Add a one-to-many relationship
 
-To add a One-to-many relationship, create a relation under the **Relationships** area and specify the table with which you want to create a relationship.
+To add a one-to-many relationship, create a relation under the **Relationships** area and specify the table with which you want to create a relationship.
 
-1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Tables** in the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. In [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Tables** in the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 
-2. Select an existing table, or [Create a new table](data-platform-create-entity.md)
+1. Select an existing table, or [Create a new table](data-platform-create-entity.md), and then select **Relationships**.
 
-3. Select the **Relationships** area.
-
-4. Select the down arrow to the right of **Add relationship**, and then select **One-to-many**.
+1. Select the down arrow to the right of **Add relationship**, and then select **One-to-many**.
     > [!div class="mx-imgBorder"] 
     > ![One to Many Relationship.](./media/data-platform-cds-newrelationship/onetomany-1.png "One to Many Relationship")
 
-5. Select a table. Notice the **Look up** columns will be shown on the **Current** table, they'll default with the tables name (in this example Teacher) but you can change them if needed. Select **Done** to add the relationship to your table.
+1. Select a table. Notice the **Look up** columns will be shown on the **Current** table, they'll default with the tables name (in this example Teacher) but you can change them if needed. Select **Done** to add the relationship to your table.
 
     > [!NOTE]
     > In the case of a One-to-many relationships, the Look up column will be created on the related table, not the table you currently have selected. If you need the lookup on the current table, create a Many-to-one relationship.
 
     :::image type="content" source="media/data-platform-cds-newrelationship/one-to-many-example.png" alt-text="One to many example.":::
-6. Select **Save table**.
+1. Select **Done**.
 
-## Add a Many-to-many relationship
+## Add a many-to-many relationship
 
-To add a Many-to-many relationship, create a relation under the **Relationships** area and specify the table with which you want to create a relationship.
+To add a many-to-many relationship, create a relation under the **Relationships** area and specify the table with which you want to create a relationship.
 
 1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Tables** in the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 
@@ -80,7 +76,7 @@ To add a Many-to-many relationship, create a relation under the **Relationships*
 
 4. Select  **Add relationship** and then select **Many-to-many**. This opens a panel for you to choose the table you want to create a relationship to. Select the table from the **Related table** drop-down.
 
-5. After selecting a table, the names for the relationship and relationship table will appear. They'll default with the names of the tables combined, but you can change them if needed.
+5. After selecting a table, the names for the relationship and relationship table appear. They default to the names of the tables combined, but you can change them if needed.
 
     > [!div class="mx-imgBorder"] 
     > ![Many to Many Relationship.](./media/data-platform-cds-newrelationship/manytomany-1.png "Many to Many Relationship")
@@ -99,9 +95,9 @@ On the other hand, you might decide that you don't want  actions to cascade down
 
 As you model your business data by creating custom tables or when using existing Common Data Model tables, consider the behavior you require and the implications for the entire hierarchy of related tables and choose between one of the following standard behaviors:
 
-* **Referential, Remove Link:** In a referential relationship between two tables, you can navigate to any related rows, but actions taken on one won't affect the other. For example, if you have a one-to-many relationship between teachers and classes, deleting a teacher will have no impact on the related class.
+* **Referential, Remove Link:** In a referential relationship between two tables, you can navigate to any related rows, but actions taken on one table don't affect the other. For example, if you have a one-to-many relationship between teachers and classes, deleting a teacher has no impact on the related class.
 
-* **Referential, Restrict Delete:** In a referential, restrict delete relationship between two tables, you can navigate to any related rows. Actions taken on the parent row won't be applied to the child row, but the parent row can't be deleted while the child row exists. This is useful if you don't want child rows to become orphaned. This forces the user to delete all of the children before deleting the parent.
+* **Referential, Restrict Delete:** In a referential, restrict delete relationship between two tables, you can navigate to any related rows. Actions taken on the parent row don't affect the child row, but the parent row can't be deleted while the child row exists. This behavior is useful if you don't want child rows to become orphaned. This restriction forces the user to delete all of the children before deleting the parent.
 
     > [!div class="mx-imgBorder"] 
     > ![Referential, Restrict Delete.](./media/data-platform-cds-newrelationship/advanced-3.png "Referential, Restrict Delete")
@@ -114,7 +110,6 @@ As you model your business data by creating custom tables or when using existing
     > ![Custom behavior.](./media/data-platform-cds-newrelationship/advanced-2.png "Custom behavior")
 
 For more information on defaults and custom behaviors: [Configure table relationship behavior](./create-edit-entity-relationships.md#table-relationship-behavior).
-
 
 ## Use a lookup column in an app
 
