@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.subservice: mda-maker
 ms.author: yogupt
 ms.reviewer: matp
-ms.date: 02/25/2026
+ms.date: 04/23/2026
 ms.update-cycle: 180-days
 ms.topic: how-to
 applies_to: 
@@ -70,9 +70,6 @@ Makers can enable or disable Microsoft 365 Copilot for a specific model-driven a
 1. Select **Settings** in the command bar.
 1. On the left, select **Features**.
 1. To enable Microsoft 365 Copilot, set **M365 Copilot in model-driven apps** to **On**. To disable it, set the option to **Off**.
-   > [!NOTE]
-   > This feature is being gradually rolled out across regions and might not be available yet under **Features** in your region. If you do not see **M365 Copilot in model-driven apps** under **Features**, check under **Upcoming**.
-
     :::image type="content" source="media/microsoft-365-chat-model-driven-apps/microsoft-365-copilot-app-setting.png" alt-text="Screenshot that shows how to turn Microsoft 365 Copilot on or off in a model-driven app.":::
 
 1. Select **Save** and then publish the app for the changes to take effect.
