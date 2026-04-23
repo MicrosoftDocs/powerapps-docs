@@ -26,6 +26,8 @@ There are three kinds of tables you would commonly use in Dataverse: system, cus
 
 To interactively [create or modify a table](../../../maker/data-platform/create-edit-entities-portal.md?tabs=excel), use the [Power Platform admin center](/power-platform/admin/) (PPAC). To programmatically create or modify a table, you modify table metadata. The SDK for Python includes functions (for example `create_table`, `delete_table`) that easily enable you to work with table metadata.
 
+Dataverse table rows, also known as records, are represented as Python dictionaries with column schema names.
+
 More information: [Web API EntityType Reference](xref:Microsoft.Dynamics.CRM.EntityTypeIndex), [Use the Web API with table definitions](../../data-platform/webapi/use-web-api-metadata.md)
 
 ### Messages
@@ -49,6 +51,13 @@ Here we cover some ways to customize and extend Dataverse.
 Dataverse supports customizable and custom tables. A customizable table is an existing table that ships with Dataverse that can be modified, for example to add or delete columns, change the table name, etc.
 
 Custom tables are tables that you (or a third party) create. As stated earlier in this article, the SDK provides Python functions enabling you to create and delete custom tables.
+
+> [!IMPORTANT]
+> Custom tables and columns require a customization prefix value to be included for all operations (for example, "new_MyTestTable", not "MyTestTable").
+>
+> Always use table schema names ("account", "new_MyTestTable") and column schema names ("name", "new_MyTestColumn") in SDK API calls.
+>
+> More information: [Table definitions in Microsoft Dataverse](/power-apps/developer/data-platform/entity-metadata)
 
 ### Extensions
 

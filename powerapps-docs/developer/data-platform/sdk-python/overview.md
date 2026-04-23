@@ -39,17 +39,19 @@ The following list describes key features of the Dataverse SDK for Python.
 
 ### Data operations
 
-- CRUD operations: support for create, retrieve, update, and delete data operations by using a single request.
-- Bulk operations: specify multiple operations in a single web service call. This feature uses Dataverse's native CreateMultiple, UpdateMultiple, UpsertMultiple, and BulkDelete Web API operations for maximum performance and transactional integrity.
-- Automatic retries: handle networking problems that might occur for operations that fail due to temporary problems, such as API throttling or service unavailability.
-- Data retrievals: supports OData options and paging, plus single or multiple "gets" in one call (as needed).
-- Direct-SQL queries: supports simple read-only "SELECT" statements with paging.
-- Fluent QueryBuilder: support for type-safe query construction with method chaining, composable filter expressions, and automatic OData generation.
-- Relationship management: create one-to-many and many-to-many relationships between tables with full metadata control.
-- [Pandas](https://pandas.pydata.org/) Dataframes: client wrappers are provided for all CRUD operations where [DataFrames](https://pandas.pydata.org/pandas-docs/stable/reference/frame.html) and [Series](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.html) data types are returned to the caller.
-- File operations: upload files to a Dataverse [file column](../../../maker/data-platform/types-of-fields.md#file-columns) with automatic chunking for large files.
-- Batch operations: send multiple CRUD, table metadata, and SQL query operations in a single HTTP request with optional transactional changesets.
-- OptionSet/enum handling: the SDK automatically maps OptionSet columns in an API call to enumeration values.
+| Feature | Description |
+|---|---|
+| CRUD operations | Support for create, retrieve, update, and delete data operations by using a single request. |
+| Bulk operations | Specify multiple operations in a single web service call. This feature uses Dataverse's native CreateMultiple, UpdateMultiple, UpsertMultiple, and BulkDelete Web API operations for maximum performance and transactional integrity. |
+| Automatic retries | Handle networking problems that might occur for operations that fail due to temporary problems, such as API throttling or service unavailability. |
+| Data retrievals | Supports OData options and paging, plus single or multiple "gets" in one call (as needed). |
+| Direct-SQL queries | Supports simple read-only "SELECT" statements with paging. |
+| Fluent QueryBuilder | Support for type-safe query construction with method chaining, composable filter expressions, and automatic OData generation. |
+| Relationship management | Create one-to-many and many-to-many relationships between tables with full metadata control. |
+| [Pandas](https://pandas.pydata.org/) Dataframes | Client wrappers are provided for all CRUD operations where [DataFrames](https://pandas.pydata.org/pandas-docs/stable/reference/frame.html) and [Series](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.html) data types are returned to the caller. |
+| File operations | Upload files to a Dataverse [file column](../../../maker/data-platform/types-of-fields.md#file-columns) with automatic chunking for large files. |
+| Batch operations | Send multiple CRUD, table metadata, and SQL query operations in a single HTTP request with optional transactional changesets. |
+| OptionSet/enum handling | The SDK automatically maps OptionSet columns in an API call to enumeration values. |
 
 ### Metadata operations on tables
 
@@ -69,6 +71,19 @@ Here are a few known limitations of the current release.
 - Minimal retry policy support is in the SDK. Currently, only network errors are retried. Our code examples include another backoff for transient Dataverse consistency.
 - SQL JOINs are currently not supported, and there's limited support for a WHERE/TOP/ORDER BY clause.
 -->
+
+## Concepts
+
+The SDK provides a simple, pythonic interface for Dataverse operations.
+
+| Concept | Description |
+|---------|-------------|
+| **DataverseClient** | Main client entry point. |
+| **Context Manager** | Use `with DataverseClient(...) as client:` for automatic cleanup and HTTP connection pooling |
+| **Namespaces** | Operations are organized into `client.records` (CRUD & OData queries), `client.query` (QueryBuilder & SQL), `client.tables` (metadata), `client.files` (file uploads), and `client.batch` (batch requests) |
+| **Records** | Dataverse table rows (records) are represented as Python dictionaries with column schema names |
+| **Schema names** | Use table schema names (`"account"`, `"new_MyTestTable"`) and column schema names (`"name"`, `"new_MyTestColumn"`). More information: [Table definitions in Microsoft Dataverse](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/entity-metadata) |
+| **Customization prefix values** | Custom tables and columns require a customization prefix value to be included for all operations (e.g., `"new_MyTestTable"`, not `"MyTestTable"`). More information: [Table definitions in Microsoft Dataverse](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/entity-metadata) |
 
 ## Licensing
 

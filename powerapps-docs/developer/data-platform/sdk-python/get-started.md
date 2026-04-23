@@ -58,9 +58,9 @@ The skills work with both the Claude Code CLI and the Visual Studio Code extensi
 
 ## Connect to Dataverse
 
-The SDK client requires any Azure Identity [TokenCredential](/dotnet/api/azure.core.tokencredential) implementation for OAuth authentication with Dataverse.
+The SDK [client](/python/api/powerplatform-dataverse-client/powerplatform.dataverse.client.dataverseclient) requires any Azure Identity [TokenCredential](/dotnet/api/azure.core.tokencredential) implementation for OAuth authentication with Dataverse.
 
-This code example imports the client and configuration types from the SDK packages and establishes a connection to your Dataverse environment. Be sure to change `myorg` in the URL to the correct name of your environment.
+This code example imports the Dataverse client and Azure Identity types and establishes a connection to your Dataverse environment. Be sure to change `myorg` in the URL to the correct name of your environment.
 
 ```python
 from azure.identity import (
@@ -79,18 +79,31 @@ credential = InteractiveBrowserCredential()  # Browser authentication
 # credential = ClientSecretCredential(tenant_id, client_id, client_secret)
 # credential = CertificateCredential(tenant_id, client_id, cert_path)
 
-client = DataverseClient("https://yourorg.crm.dynamics.com", credential)
+client = DataverseClient("https://myorg.crm.dynamics.com", credential)
 ```
 
 You can customize the connection by using optional HTTP tunable settings to handle connection timeouts, retries, and more. Access these settings via the [DataverseConfig](/python/api/powerplatform-dataverse-client/powerplatform.dataverse.core.config.dataverseconfig) class.
 
 Now that you have an established client connection to a Dataverse environment, you can start using the SDK to work with business data, table metadata, and more. The next article covers some examples of these operations.
 
-For more information, see [](/power-apps/developer/data-platform/authenticate-oauth).
+For more information, see [Use OAuth with Dataverse](/power-apps/developer/data-platform/authenticate-oauth).
+
+## Namespaces
+
+The [PowerPlatform.Dataverse.operations](/python/api/powerplatform-dataverse-client/powerplatform.dataverse.operations) package contains modules that organize SDK operations into logical groups as described below.
+
+| -- Name -- | Description --|
+| ---        | ---           |
+|client.records| Create, update, delete, and get records (single or paginated queries)|
+|client.query|Query and search operations|
+|client.tables|Table and column metadata management|
+|client.files|File upload operations|
+
+Examples of using these operations are described in the [Querying data](query.md) and [Working with data](work-data.md) articles.
 
 ## Next steps
 
-Before you leave this page, make sure you have some knowledge of Dataverse. You can't work with Dataverse effectively without it. The second article provides a quick guide that teaches you the basics:
+Before you leave this page, make sure you have some knowledge of Dataverse. You can't work with Dataverse effectively without it. The second article listed here provides a quick guide that teaches you Dataverse basics:
 
 - [Working with data](work-data.md)
 - [Quick guide to Dataverse](quick-guide-dataverse.md)
