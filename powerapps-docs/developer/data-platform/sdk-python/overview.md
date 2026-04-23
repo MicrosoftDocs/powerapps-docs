@@ -72,19 +72,6 @@ Here are a few known limitations of the current release.
 - SQL JOINs are currently not supported, and there's limited support for a WHERE/TOP/ORDER BY clause.
 -->
 
-## Concepts
-
-The SDK provides a simple, pythonic interface for Dataverse operations.
-
-| Concept | Description |
-|---------|-------------|
-| **DataverseClient** | Main client entry point. |
-| **Context Manager** | Use `with DataverseClient(...) as client:` for automatic cleanup and HTTP connection pooling |
-| **Namespaces** | Operations are organized into `client.records` (CRUD & OData queries), `client.query` (QueryBuilder & SQL), `client.tables` (metadata), `client.files` (file uploads), and `client.batch` (batch requests) |
-| **Records** | Dataverse table rows (records) are represented as Python dictionaries with column schema names |
-| **Schema names** | Use table schema names (`"account"`, `"new_MyTestTable"`) and column schema names (`"name"`, `"new_MyTestColumn"`). More information: [Table definitions in Microsoft Dataverse](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/entity-metadata) |
-| **Customization prefix values** | Custom tables and columns require a customization prefix value to be included for all operations (e.g., `"new_MyTestTable"`, not `"MyTestTable"`). More information: [Table definitions in Microsoft Dataverse](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/entity-metadata) |
-
 ## Licensing
 
 The SDK for Python is published under open-source licensing.
