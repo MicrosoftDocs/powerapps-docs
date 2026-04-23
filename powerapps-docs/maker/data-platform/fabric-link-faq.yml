@@ -25,9 +25,9 @@ sections:
         When you unlink, the Fabric lakehouse is removed along with all shortcuts to your Dataverse tables.
 - name: Table support and limitations  
   questions:
-   - question: Which Dataverse tables are automatically linked to Fabric?
+   - question: Which Dataverse tables are selected by default when linking to Fabric?
      answer: |
-        All Dataverse tables where the **Track changes** property is enabled are linked to Fabric.
+        During the initial **Link to Fabric** setup, the **Select Entities** step shows all Dataverse tables where the **Track changes** property is enabled. By default, all these tables are selected. You can unselect any tables you don't want to sync before completing the wizard. Only selected tables are linked to Fabric and consume storage, so you can optimize costs by excluding tables you don't need. You can change your selection anytime after setup by using **Manage Tables**.
    - question: Which Dataverse tables aren't supported for Fabric link?
      answer: |
         Any table that doesn't have change tracking enabled isn't supported. Additionally, certain Dataverse tables, such as postcomment, postregarding, postlike, post, and postrole, aren't available for customers to enable synchronization through Fabric link.

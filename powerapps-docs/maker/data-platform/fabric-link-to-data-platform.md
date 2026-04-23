@@ -71,8 +71,13 @@ Link to Microsoft Fabric from the Power Apps **Tables** area: Select **Analyze**
      Provide your credentials and save the connection. To change credentials later, select **Switch account** and provide new credentials.
 
 6. You can expect to see shortcuts to all your tables within the selected workspace. If you don't see workspaces, ask the system to create a workspace. Go to [Troubleshooting common issues](fabric-troubleshoot.md) if you don't see the desired workspace.
-7. All Dataverse tables where the **Track changes** property is enabled are linked to Fabric. If this environment is linked to finance and operations apps, you can add finance and operations tables later using the **Manage tables** option. More information: [Manage link to Fabric](#manage-link-to-fabric).
-8. When you're done, select **Create** in the wizard to create the workspace, create shortcuts, and to perform the initialization for the first time.
+7. Next, in the **Select Entities** step, choose the tables you want to sync to Fabric. By default, all Dataverse tables where the **Track changes** property is enabled are selected. Unselect any tables you don't want to sync. Only selected tables consume storage in Fabric, so you can optimize costs by excluding tables you don't need.
+
+   :::image type="content" source="media/fabric/fabric-link-select-entities.png" alt-text="Screenshot of the Select Entities step in the Link to Fabric wizard showing Dataverse tables with checkboxes to include or exclude from sync." lightbox="media/fabric/fabric-link-select-entities.png":::
+
+   > [!NOTE]
+   > You can change this selection anytime after setup by selecting the link and choosing **Manage Tables** from the ribbon. More information: [Add or remove tables linked to Fabric](#add-or-remove-tables-linked-to-fabric)
+8. Review your selections in the **Review & Create** step. When you're done, select **Create** to create the workspace, create shortcuts, and to perform the initialization for the first time.
 9. When complete, Fabric lakehouse opens in a separate browser tab.
 
 > [!NOTE]
@@ -141,6 +146,7 @@ After confirmation:
 
 > [!IMPORTANT]
 >
+> - Some system tables and tables required by Microsoft add-ins can't be removed. More information: [Are there system tables that are automatically synchronized and can't be unlinked?](fabric-link-faq.yml#are-there-system-tables-that-are-automatically-synchronized-and-cant-be-unlinked)
 > - Removing a table doesn't delete the table in Dataverse; it only removes the OneLake shortcut and stops data sync.
 > - If you need to add tables later, repeat the same steps and check the tables you want to include. More information: [Manage link to Fabric](#manage-link-to-fabric).
 
