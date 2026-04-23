@@ -81,26 +81,6 @@ The **Upcoming** tab displays preview features currently available:
 > [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
 - **Microsoft 365 Copilot in model-driven apps**. Microsoft 365 Copilot chat makes it easier for users to work with model-driven apps by offering AI-powered insights through natural language conversations. With this feature, users can quickly find information, navigate apps more easily, and get help to boost their productivity. More information: [Add Microsoft 365 Copilot chat for app users in model-driven apps (preview)](add-microsoft-365-copilot.md)
-- **Enable your app in Microsoft 365 Copilot**. Power Apps in Copilot lets users interact with your Power Apps model-driven app directly from Copilot. When a user talks to the agent, it can surface your app's data as interactive widgets — a grid for browsing records and a form for viewing, editing, or creating them — all without leaving the Copilot experience. The feature works by generating a declarative agent from your app. More information: [Set up Power Apps in Copilot](#set-up-power-apps-in-copilot)
-
-### Set up Power Apps in Copilot
-
-#### Prerequisites
-
-- A model-driven app. Currently, this feature is only available with model-driven apps.
-- Microsoft 365 Copilot license. Required for both the maker deploying the agent and end users interacting with it.
-- Permission to upload custom apps in Microsoft Teams. Your Microsoft 365 admin might need to enable this. Check your Teams admin settings if the upload option is not visible.
-
-#### Steps to set up Power Apps in Copilot
-
-1. Under **Enable your app in Microsoft 365 Copilot**, select **Download app package**.
-1. Upload the compressed file that is named similar to `declarative-agent-app name.zip` from Microsoft Teams or Microsoft 365 Agents:
-
-   - Teams: Upload for personal use as a custom app in Teams. More information [Upload your app in Teams]( /microsoftteams/platform/concepts/deploy-and-publish/apps-upload)
-   - Microsoft 365 Agents: Publish the package for a team or group from the Microsoft 365 admin center. More information: [Publish agents](/microsoft-365/admin/manage/agent-registry?view=o365-worldwide&preserve-view=true#publish-agents)
-  
-> [!NOTE]
-> You can customize the declarative agent included in the app package at you own discretion. To reduce the possibility of unexpected behavior when using AI agents, use caution when you customize the declarative agent code. More information: [Declarative Agents for Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/overview-declarative-agent#building-declarative-agents)
 
 ## Known limitations
 

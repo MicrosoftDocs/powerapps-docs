@@ -1539,6 +1539,12 @@
             href: ../developer/model-driven-apps/clientapi/navigate-to-generative-page-examples.md
         - name: Create, add, or remove forms and views
           href: ./model-driven-apps/create-add-remove-forms-views-dashboards.md
+        - name: Enable your app in Copilot (preview)
+          items:
+          - name: Enable your app and custom tools in Copilot
+            href: ./model-driven-apps/enable-your-app-copilot.md
+          - name: Generate MCP app widgets
+            href: ./model-driven-apps/generate-mcp-app-widgets.md
       - name: Work with views
         href:
         items:

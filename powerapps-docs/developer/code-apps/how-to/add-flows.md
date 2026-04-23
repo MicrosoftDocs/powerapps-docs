@@ -5,7 +5,7 @@ description: Learn how to discover, add, invoke, and remove Power Automate cloud
 author: eschavez
 ms.author: eschavez
 ms.reviewer: jdaly
-ms.date: 04/20/2026
+ms.date: 04/22/2026
 ms.topic: how-to
 ---
 # Add Power Automate flows to a code app (preview)
@@ -13,7 +13,7 @@ ms.topic: how-to
 This article shows you how to discover, add, invoke, and remove Power Automate cloud flows from a Power Apps code app by using the npm CLI.
 
 > [!IMPORTANT]
-> Only **Manual** flows that use the **PowerApps trigger** are supported. You can't add flows with other trigger types to a code app. These unsupported trigger types include scheduled, automated, or instant flows with non-PowerApps triggers.
+> Only flows that use the **Power Apps trigger** are supported. You can't add flows with other trigger types to a code app. These unsupported trigger types include scheduled, automated, or instant flows with non-Power Apps triggers.
 
 ## Prerequisites
 
