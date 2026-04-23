@@ -563,6 +563,8 @@
               href: ./canvas-apps/controls/modern-controls/modern-control-avatar.md
             - name: Copilot answer (preview)
               href: ./canvas-apps/controls/modern-controls/modern-control-copilot-answer.md
+            - name: Data Grid (preview)
+              href: ./canvas-apps/controls/modern-controls/modern-control-data-grid.md
             - name: Dropdown (preview)
               href: ./canvas-apps/controls/modern-controls/modern-control-dropdown.md
             - name: Stream video (preview)
