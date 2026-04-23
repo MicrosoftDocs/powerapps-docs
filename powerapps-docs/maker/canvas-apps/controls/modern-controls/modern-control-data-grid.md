@@ -106,26 +106,32 @@ The Data Grid uses **Data Grid Column** sub-controls to define how each column a
 
 ## Example
 
-The following YAML example shows a searchable, sortable grid with multi-row selection and a label that reports how many rows are selected:
+The following YAML example shows a searchable grid with two text columns:
 
 ```yaml
-- ContactGrid:
-    Control: ModernDataGrid@1.0.0
+- DataGrid2:
+    Control: ModernDataGrid@1.1.0
     Properties:
-      Items: =Table({Name: "Alice Contoso", Department: "Sales"}, {Name: "Bob Fabrikam", Department: "Engineering"}, {Name: "Carol Northwind", Department: "Marketing"})
+      Items: |-
+        =Table({Name: "Alice Contoso", Department: "Sales"}, {Name: "Bob Fabrikam", Department: "Engineering"}, {Name: "Carol Northwind", Department: "Marketing"})
       Searchable: =true
-      Sortable: =true
-      SelectMultiple: =true
-      ShowSelector: =true
-      ShowHeaders: =true
-      Width: =800
-      Height: =480
-
-- SelectionLabel:
-    Control: ModernText@1.0.0
-    Properties:
-      Text: ="Selected: " & CountRows(ContactGrid.SelectedItems) & " rows"
-      Size: =14
+      X: =40
+      Y: =40
+    Children:
+      - Department_Column1:
+          Control: ModernDataGridColumn@1.1.0
+          Variant: Textual
+          IsLocked: true
+          Properties:
+            FieldDisplayName: ="Department"
+            Text: =ThisItem.Department
+      - Name_Column1:
+          Control: ModernDataGridColumn@1.1.0
+          Variant: Textual
+          IsLocked: true
+          Properties:
+            FieldDisplayName: ="Name"
+            Text: =ThisItem.Name
 ```
 
 ## See also
