@@ -1,12 +1,12 @@
 ---
 title: Understand canvas-app forms
-description: Learn about how to add a form to a canvas app so that you can collect and display information from a data source.
+description: Learn how to add Display form and Edit form controls to a canvas app to view, edit, create, and delete records from a data source.
 author: gregli-msft
 
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 04/27/2016
+ms.date: 04/23/2026
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -29,7 +29,7 @@ Put each control on a different screen to make them easier to distinguish:
 
 ![Browse, viewing, and editing records across three screens.](./media/working-with-forms/three-screens.png)
 
-As this topic describes, combine these controls with formulas to create the overall user experience.
+As this article describes, combine these controls with formulas to create the overall user experience.
 
 ## Prerequisites
 
@@ -142,12 +142,12 @@ In the right-hand pane, you can show or hide each card, rearrange them, or confi
 By understanding how Power Apps generates an app, you can build one yourself that uses the same building blocks and formulas discussed earlier in this topic.
 
 ## Identify test data
-To get the most from this topic, start with a data source with which you can experiment. It should contain test data that you can read and update without concern.
+To get the most from this article, start with a data source with which you can experiment. It should contain test data that you can read and update without concern.
 
 > [!NOTE]
 > If you use a list created using Microsoft Lists, a SharePoint library, or an Excel table that contains column names with spaces as your data source, Power Apps will replace the spaces with **"\_x0020\_"**. For example, **"Column Name"** in SharePoint or Excel will appear as **"Column_x0020_Name"** in Power Apps when displayed in the data layout or used in a formula.
 
-To follow the rest of this topic exactly, create a list named "Ice Cream" that contains this data:
+To follow the rest of this article exactly, create a list named "Ice Cream" that contains this data:
 
 ![Ice cream list.](./media/working-with-forms/sharepointlist-icecream.png)
 
@@ -222,7 +222,7 @@ Now, let's return to the **[Gallery](controls/control-gallery.md)** control and 
    
     ![Display form for Ice Cream data source with back button with Navigate update.](./media/working-with-forms/gallery-icecream-nav-new.png)
 
-3. Press F5, and then select an arrow in the gallery to show the details for an item.
+3. Select the play button (or press F5), and then select an arrow in the gallery to show the details for an item.
 
 4. Select the **[Back](functions/function-navigate.md)** button to return to the gallery of products, and then press Esc.
 
@@ -268,7 +268,7 @@ To add navigation to and from this screen:
    
     ![Text property updated.](./media/working-with-forms/viewform-icecream-edit.png)
 
-You've built a basic app with three screens for viewing and entering data.  To try it out, show the gallery screen, and then press F5 (or select the forward arrow "Preview" button near the upper-left corner of the screen). The pink dot indicates where the user clicks or taps the screen at each step.
+You've built a basic app with three screens for viewing and entering data. To try it out, show the gallery screen, and then select the play button (or press F5 on your keyboard). The pink dot indicates where the user selects the screen at each step.
 
 ![Try out the ice cream app.](./media/working-with-forms/try-icecream.png)
 
@@ -371,6 +371,45 @@ On a tablet, you can browse, display, and edit/create on two or even one screen.
 If the user is working on the same screen, you need to be careful that the user can't change the selection in the **[Gallery](controls/control-gallery.md)** and potentially lose edits in the **[Edit form](controls/control-form-detail.md)** control.  To keep the user from selecting a different record when changes to another record haven't been saved yet, set the **[Disabled](controls/properties-core.md)** property of the gallery to this formula:<br>
 **EditForm.Unsaved**
 
+## Troubleshoot common form issues
 
+### SubmitForm doesn't save changes
+
+If **[SubmitForm](functions/function-form.md)** runs but changes aren't saved, check the following:
+
+- **Validation errors**: The form's **Error** property contains an error message when submission fails. Add a **[Label](controls/control-text-box.md)** control and set its **[Text](controls/properties-core.md)** property to **Form1.Error** to surface the error to the user.
+- **Missing required fields**: If the data source marks fields as required, the form won't submit until those fields have values. Check the **[DataSourceInfo](functions/function-datasourceinfo.md)** function or validate fields with **[Validate](functions/function-validate.md)**.
+- **Permissions**: Make sure the signed-in user has write access to the data source (for example, the SharePoint list or Dataverse table).
+- **Data source connection**: If the app lost its connection, **[SubmitForm](functions/function-form.md)** can't reach the data source. Use the **[Connection](functions/signals.md)** signal to check connectivity and display a message to the user.
+
+### Gallery doesn't show new or updated records after saving
+
+After **[SubmitForm](functions/function-form.md)** succeeds, the form's data source is automatically refreshed. However, if the gallery is connected to a different variable or filtered view, it may not immediately reflect the change. Use the **[Refresh](functions/function-refresh.md)** function in the form's **[OnSuccess](controls/control-form-detail.md)** formula to force the gallery to reload:
+
+```power-fx
+SubmitForm(Form1);
+Refresh(MyDataSource)
+```
+
+### Form shows data from the wrong record
+
+The form's **[Item](controls/control-form-detail.md)** property controls which record is displayed. Make sure it's set to the **Selected** property of your gallery (for example, `Gallery1.Selected`). If it's set to a static record or a variable, the form may show stale data.
+
+### Form fields are empty after switching records in the gallery
+
+If the form's **[Item](controls/control-form-detail.md)** property is correctly set to `Gallery1.Selected` and fields still appear empty, make sure the form is in **Edit** mode, not **New** mode. Calling **[NewForm](functions/function-form.md)** switches the form to **New** mode and clears all fields. Call **[EditForm](functions/function-form.md)** to return the form to **Edit** mode before navigating to the edit screen.
+
+### Column names show _x0020_ in the form
+
+If your SharePoint list or Excel table has column names with spaces, Power Apps encodes those spaces as `_x0020_` in formulas. This is expected. Rename the column in your data source to remove the spaces, or continue using the encoded name in your formulas.
+
+## Related information
+
+- [Display form and Edit form controls reference](controls/control-form-detail.md)
+- [SubmitForm, EditForm, NewForm, ResetForm functions](functions/function-form.md)
+- [Understand data sources for canvas apps](working-with-data-sources.md)
+- [Add a gallery control to a canvas app](add-gallery.md)
+- [Add and configure controls in canvas apps](add-configure-controls.md)
+- [Understand variables in canvas apps](working-with-variables.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
