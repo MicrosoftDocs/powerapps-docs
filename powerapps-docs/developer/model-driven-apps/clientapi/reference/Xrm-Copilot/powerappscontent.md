@@ -22,7 +22,7 @@ An interface that describes the context data passed to the [updateContext](updat
 | Name| Type| Description|
 |---|---|---|
 | `schemaVersion`| `string`| Version of the content schema.|
-| `appType`| `"ModelApp" \| "CanvasApp" \| "CodeApp"`| Type of the Power Apps application.|
+| `appType`| `ModelApp` \| `CanvasApp` \| `CodeApp`| Type of the Power Apps application.|
 | `appId`| `string`| Unique identifier of the app.|
 | `orgId`| `string`| Unique identifier of the organization.|
 | `geo`| `string`| Geographic region of the environment.|
