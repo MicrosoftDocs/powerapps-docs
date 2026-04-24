@@ -45,6 +45,8 @@ To use the in-app notification feature, you need to enable the **In-app notifica
 
 1. Select **Publish** on the model-driven app.
 
+> [!NOTE]
+> In-app notifications trigger for @mentions in notes. @mentions in posts on the timeline don’t trigger notifications. Use @mentions in notes to receive notifications.
 
 ## Send basic in-app notifications
 
