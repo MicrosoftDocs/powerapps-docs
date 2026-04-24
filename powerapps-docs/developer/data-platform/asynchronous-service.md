@@ -1,7 +1,7 @@
 ---
 title: "Asynchronous service (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn about the asynchronous service that manages system jobs."
-ms.date: 01/05/2024
+ms.date: 04/24/2026
 ms.reviewer: pehecke
 ms.topic: article
 author: swylezol
@@ -68,6 +68,7 @@ You can perform the following operations to manage system jobs using the [AsyncO
 > - [StateCode](reference/entities/asyncoperation.md#BKMK_StateCode)
 > - [StatusCode](reference/entities/asyncoperation.md#BKMK_StatusCode)
 > - [PostPoneUntil](reference/entities/asyncoperation.md#BKMK_PostponeUntil)
+> 
 > These columns allow users with the appropriate entity-level
 > Write privilege on `AsyncOperation` to manage the lifecycle of system jobs
 > (cancel, pause, resume, and postpone).
