@@ -31,27 +31,27 @@ A system job can be dependent on another system job so that it will begin only a
 
 ### Security considerations for system jobs
 
-The `AsyncOperation` (system job) table has a layered permission model:
+The `AsyncOperation` (system job) table has a layered permission model as described below.
 
-- **Entity-level privileges**: Users with the Write privilege on
+- **Entity-level privileges**: Users with the Write privilege (prvWrite) on
   `AsyncOperation` can update the supported lifecycle columns (`StateCode`,
   `StatusCode`, `PostPoneUntil`) to manage system jobs. This is the intended
   mechanism for canceling, pausing, resuming, or postponing jobs.
 
 - **Platform-level protection for internal columns**: Columns that contain
-  internal execution data (such as the serialized job payload) are protected
+  internal execution data, such as the serialized job payload, are protected
   by additional server-side authorization checks that are enforced independently
   of entity-level privileges. These protections prevent unauthorized modification
-  of job execution data, even by users who have Write access to the
+  of job execution data even by users who have Write access to the
   `AsyncOperation` table.
 
-- **Read access**: Users with the Read privilege on `AsyncOperation` can
+- **Read access**: Users with the Read privilege (prvRead) on `AsyncOperation` can
   retrieve system job records, including metadata such as job name, status,
   and timestamps. This is by design to allow users to monitor job progress
   and status.
 
 This layered model ensures that users can manage the lifecycle of their system
-jobs (an intended and supported operation) while internal execution data remains
+jobs, an intended and supported operation, while internal execution data remains
 protected by the platform.
 
 ## Managing system jobs
@@ -70,15 +70,13 @@ You can perform the following operations to manage system jobs using the [AsyncO
 > - [PostPoneUntil](reference/entities/asyncoperation.md#BKMK_PostponeUntil)
 > 
 > These columns allow users with the appropriate entity-level
-> Write privilege on `AsyncOperation` to manage the lifecycle of system jobs
+> Write privilege (prvWrite)  on `AsyncOperation` to manage the lifecycle of system jobs
 > (cancel, pause, resume, and postpone).
 > Other columns in the `AsyncOperation` table, including internal execution data,
 > are subject to additional platform-level authorization checks and cannot be
-> modified through standard update operations, even if the table schema indicates
+> modified through standard update operations even if the table schema indicates
 > they are writable. The schema-level write attribute reflects internal platform
 > capabilities, not end-user permissions.
-
-
 
 ## Retrieve system jobs
 
