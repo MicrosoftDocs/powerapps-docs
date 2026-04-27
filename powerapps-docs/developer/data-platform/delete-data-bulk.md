@@ -1,7 +1,7 @@
 ---
 title: Delete Data in Bulk to Reduce Storage Use
 description: Learn how to delete data in bulk to remove stale records, improve data quality, and manage storage consumption. Use bulk delete jobs to get started.
-ms.date: 03/31/2026
+ms.date: 04/24/2026
 ms.topic: how-to
 author: MsSQLGirl
 ms.subservice: dataverse-developer
