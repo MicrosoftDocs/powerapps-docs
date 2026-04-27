@@ -41,9 +41,6 @@ Select the app to open it. The Metadata Browser loads all the table definitions 
 
 The table list is the main view. It uses a split layout with two panes separated by a draggable divider.
 
-<!-- Screenshot: The table list showing the left pane (table grid) and right pane (property grid) with a table selected. -->
-
-
 :::image type="content" source="media/browse-your-metadata/table-list.png" alt-text="Screenshot of Metadata Browser in Power Apps with tables grid on the left and selected table properties on the right.":::
 
 ### Left pane: table list
