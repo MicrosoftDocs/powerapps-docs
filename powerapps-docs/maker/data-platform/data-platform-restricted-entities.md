@@ -3,7 +3,7 @@ title: Restricted tables requiring Dynamics 365 licenses | Microsoft Docs
 description: A list of restricted tables in Microsoft Dataverse that require Dynamics 365 licenses.
 author: mattp123
 ms.topic: article
-ms.date: 05/16/2022
+ms.date: 04/27/2026
 ms.subservice: dataverse-maker
 ms.author: matp
 search.audienceType: 
@@ -16,11 +16,12 @@ App makers, who are building custom apps, can use all of the Microsoft Dataverse
 
 However, a smaller set of tables tied to Dynamics 365 apps (Dynamics 365 Sales, Customer Service, Field Service, Marketing, or Project Service Automation) require canvas and model-driven app users to have a license for the corresponding Dynamics 365 app if they need to create, update, or delete rows within the tables. These are referred to as restricted tables.
 
-Tables may be restricted to a Dynamics 365 app license for the following reasons:
+Tables might be restricted to a Dynamics 365 app license for the following reasons:
+
 * The table is used to store and maintain product-specific configuration data that should typically be not used outside of the application.
 * The table is accompanied by advanced logic that creates and maintains data in a specific way when used within a Dynamics 365 product.
 
-If an app or flow only reads information from a table, a Dynamics 365 app license is not required and an appropriate Power Apps or Power Automate license is all that's needed.
+If an app or flow only reads information from a table, a Dynamics 365 app license isn't required and an appropriate Power Apps or Power Automate license is all that's needed.
 
 ## Restricted tables for create, update, and delete operations
 
@@ -49,7 +50,7 @@ Goal | goal | Dynamics 365 for Sales Professional, <br>**or** Dynamics 365 for S
 Inventory Journal |msdyn_inventoryjournal |Dynamics 365 for Field Service<br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
 Invoice Process |msdyn_bpf_d8f9dc7f099f44db9d641dd81fbd470d |Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
 Journey | journey | Dynamics 365 for Marketing <br> **or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
-Knowledge article | knowledgearticle | Dynamics 365 for Customer Service, Enterprise edition <br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
+Knowledge article | `knowledgearticle` | Dynamics 365 for Customer Service, Enterprise edition <br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
 Organizational Unit |msdyn_organizationalunit |Dynamics 365 for Field Service <br> **or** Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
 Product Inventory |msdyn_productinventory |Dynamics 365 for Field Service<br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
 Project Parameter|msdyn_projectparameter |Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
@@ -61,10 +62,10 @@ Purchase Order Business Process | msdyn_bpf_2c5fe86acc8b414b8322ae571000c799|Dyn
 Resource Assignment Detail (Deprecated)|msdyn_resourceassignmentdetail |Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
 Resource Assignment|msdyn_resourceassignment |Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
 Resource Restriction (Deprecated) |msdyn_workorderresourcerestriction | Dynamics 365 for Field Service<br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
-Routing rule set | routingrule | Dynamics 365 for Customer Service, Enterprise edition <br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
+Routing rule set | `routingrule` | Dynamics 365 for Customer Service, Enterprise edition <br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
 Schedule Board Setting |msdyn_scheduleboardsetting |Dynamics 365 for Field Service <br> **or** Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
 Scheduling Parameter |msdyn_schedulingparameter |Dynamics 365 for Field Service <br> **or** Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
-SLA| sla | Dynamics 365 for Customer Service Professional edition <br>**or** Dynamics 365 for Customer Service Enterprise edition <br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
+SLA| `sla` | Dynamics 365 for Customer Service Professional edition <br>**or** Dynamics 365 for Customer Service Enterprise edition <br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
 System User Scheduler Setting |msdyn_systemuserschedulersetting|Dynamics 365 for Field Service <br> **or** Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
 Transaction Connection|msdyn_transactionconnection |Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
 Transaction Origin|msdyn_transactionorigin |Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
@@ -74,9 +75,9 @@ Work Order<sup>2</sup> |msdyn_workorder |Dynamics 365 for Field Service<br>**or*
 Work Order Details Generation Queue (Deprecated)|msdyn_workorderdetailsgenerationqueue |Dynamics 365 for Field Service<br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
 
 [1] *Case table actions permitted with only Power Apps, Power Automate, Power Pages or Microsoft Copilot Studio license:*  
-Power Apps, Power Automate, or Copilot Studio  licensed users can ‘create’ cases; can ‘read’, ‘update’ and ‘delete’ self-created cases to enable scenarios including employee self-service and case creation on behalf of customers. Power Apps, Power Automate, or Copilot Studio licensed users can only perform ‘read’ operation on cases created by other users. They cannot ‘update’, ‘resolve’, ‘route’, ‘close’,‘delete’,‘assign’,‘duplicate’, ‘merge’, ‘create child cases’ or perform any other custom operation on cases created by others. Users can't act as a customer service agent, can't manage cases.
+Power Apps, Power Automate, or Copilot Studio  licensed users can ‘create’ cases; can ‘read’, ‘update’ and ‘delete’ self-created cases to enable scenarios including employee self-service and case creation on behalf of customers. Power Apps, Power Automate, or Copilot Studio licensed users can only perform ‘read’ operation on cases created by other users. They can't ‘update’, ‘resolve’, ‘route’, ‘close’,‘delete’,‘assign’,‘duplicate’, ‘merge’, ‘create child cases’ or perform any other custom operation on cases created by others. Users can't act as a customer service agent, can't manage cases.
 
-[2] *Work Order table requires Dynamics 365 for Field Service license in most scenarios except for users self-reporting issues (for example, an employee reporting a facilities issue) in which case creating, reading, updating, and deleting work orders is permitted with the Power Apps or Power Pages license. Users cannot complete/close work orders or act in a manner similar to that of performing or completing service.*
+[2] *Work Order table requires Dynamics 365 for Field Service license in most scenarios except for users self-reporting issues (for example, an employee reporting a facilities issue) in which case creating, reading, updating, and deleting work orders is permitted with the Power Apps or Power Pages license. Users can't complete/close work orders or act in a manner similar to that of performing or completing service.*
 
 
 ## Licensing
