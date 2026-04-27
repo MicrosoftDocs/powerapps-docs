@@ -27,7 +27,7 @@ sections:
   questions:
    - question: Which Dataverse tables are selected by default when linking to Fabric?
      answer: |
-        During the initial **Link to Fabric** setup, the **Select Entities** step shows all Dataverse tables where the **Track changes** property is enabled. By default, all these tables are selected. You can unselect any tables you don't want to sync before completing the wizard. Only selected tables are linked to Fabric and consume storage, so you can optimize costs by excluding tables you don't need. You can change your selection anytime after setup by using **Manage Tables**.
+        During the initial **Link to Fabric** setup, the **Select Entities** step shows all Dataverse tables where the **Track changes** property is enabled. By default, all these tables are selected. You can clear any tables you don't want to sync before completing the wizard. Only selected tables are linked to Fabric and consume storage, so you can optimize costs by excluding tables you don't need. You can change your selection anytime after setup by using **Manage Tables**.
    - question: Which Dataverse tables aren't supported for Fabric link?
      answer: |
         Any table that doesn't have change tracking enabled isn't supported. Additionally, certain Dataverse tables, such as postcomment, postregarding, postlike, post, and postrole, aren't available for customers to enable synchronization through Fabric link.
@@ -78,12 +78,12 @@ sections:
    - question: How often is data refreshed in Fabric?
      answer: |
         When the initial sync is complete, the system continuously refreshes updates in Dataverse in the lakehouse. Incremental updates typically take up to one hour to appear, though actual timing depends on table size, number of updates and transactions happening in the environment, number of tables, row count, and system load periods.
-   - question: Why am I seeing differences in SinkModifiedOn and ModifiedOn columns?
+   - question: Why am I seeing differences in `SinkModifiedOn` and `ModifiedOn` columns?
      answer: |
         This is expected behavior. `ModifiedOn` is the date and time a record was last changed in Dataverse, while `SinkModifiedOn` is the date and time the record was written to the Dataverse data lake from where Fabric shortcuts point to. `SinkModifiedOn` is typically later than `ModifiedOn`, and the difference depends on factors such as batch size, system load, and the number of records being processed.
 
         > [!IMPORTANT]
-        > In the case of long-running transactions in finance and operations apps, a record may be synchronized multiple times to ensure no data loss. In this scenario, `SinkModifiedOn` reflects the last synchronization time, not the first. For example, if a record is synced 10 times within an hour, `SinkModifiedOn` shows the time of the 10th sync even though the data was available from the first sync itself. Use caution when building latency reports based on the difference between `SinkModifiedOn` and `ModifiedOn`, as it can give a misleading impression of actual data availability.
+        > In the case of long-running transactions in finance and operations apps, a record might be synchronized multiple times to ensure no data loss. In this scenario, `SinkModifiedOn` reflects the last synchronization time, not the first. For example, if a record is synced 10 times within an hour, `SinkModifiedOn` shows the time of the 10th sync even though the data was available from the first sync itself. Use caution when building latency reports based on the difference between `SinkModifiedOn` and `ModifiedOn`, as it can give a misleading impression of actual data availability.
 - name: Limitations and Errors
   questions:
    - question: What are the limits for Fabric Link?
