@@ -118,6 +118,10 @@ When you select **Before**, you are saying that you want the logic in the real-t
 ### Using the Stop Workflow action with real-time workflows  
 
 When you apply a **Stop Workflow** action in a real-time workflow, you have the option to specify a status condition that can be either **Succeeded** or **Canceled**. When you set the status to canceled, you prevent the operation. An error message containing the text from the stop action status message will be displayed to the user with the heading **Business Process Error**.  
+
+### Configuring who will run the real-time workflow
+
+In the workflow designer you can also set who the workflow should run as to either "The owner of the workflow" or "The user who made changes to the record". To change the owner of the record to another user, open the Administration tab in the workflow editor and use the lookup to select a new owner for the workflow. You will need to have the System Administrator or System Customizer security role or a role containing the prvChangeOwnerIdOfWorkflow privilege to change the owner of the workflow.
   
 ## Next steps
 
