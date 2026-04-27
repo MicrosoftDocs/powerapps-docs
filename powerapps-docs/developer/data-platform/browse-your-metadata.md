@@ -12,9 +12,10 @@ search.audienceType:
 ---
 # Browse table definitions in your environment
 
-Use the metadata browser to view table definitions and properties for all tables in your Dataverse environment. Download the managed solution to get started: [MetadataBrowser_4_0_0_0_managed.zip](https://go.microsoft.com/fwlink/?linkid=2362044&clcid=0x9)
+Use the metadata browser to view table definitions and properties for all tables in your Dataverse environment. 
 
-[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
+> [!div class="nextstepaction"]
+> [ Download the MetadataBrowser_4_0_0_0_managed.zip managed solution to get started](https://go.microsoft.com/fwlink/?linkid=2362044&clcid=0x9)
 
 ## Import the solution
 
