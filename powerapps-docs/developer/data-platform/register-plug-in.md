@@ -184,7 +184,7 @@ Similarly, you should note that removing the assembly from the solution won't re
 
 ### Set user impersonation for a step
 
-With the [Plug-in Registration tool](#about-the-plug-in-registration-tool) running and logged into the target Dataverse environment, you can proceed to set or change a plug-in step registration. In this section, we will discuss changing the user on whos behalf the plug-in will perform its operations. Meaning, the effective user that is performing the data operations initiated by the plug-in. By default, the calling user (the user that invoked an operation in Dataverse) is the owner of said operations. However a different user can be specified in the step registration. You will need to have the System Administrator or System Customizer security role to perform this operation.
+With the [Plug-in Registration tool](#about-the-plug-in-registration-tool) running and logged into the target Dataverse environment, you can proceed to set or change a plug-in step registration. In this section, we will discuss changing the user on whos behalf the plug-in will perform its operations. Meaning, the effective user that is performing the data operations initiated by the plug-in. By default, the calling user (the user that invoked an operation in Dataverse) is the owner of said operations. However a different user can be specified in the step registration. You will need to have the System Administrator or System Customizer security role or a role containing the prvSetImpersonatingUserIdOnSdkMessageProcessingStep privilege to perform this operation.
 
 To set the user context of a plug-in step:
 
