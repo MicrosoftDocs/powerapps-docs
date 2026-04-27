@@ -1,7 +1,7 @@
 ---
-title: "Understand the execution context (Microsoft Dataverse) | Microsoft Docs" 
-description: "Learn about the data that is passed to your plug-in when it is executed." 
-ms.date: 04/03/2022
+title: "Understand execution context in Dataverse" 
+description: "Learn how to access and use execution context data in your Dataverse plug-ins and custom workflow activities. Understand InputParameters, OutputParameters, and shared variables." 
+ms.date: 03/31/2026
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: pehecke
@@ -20,9 +20,9 @@ contributors:
 
 The **Event Execution Pipeline** passes registered plug-ins a wealth of data about the current operation being processed and your custom code's execution environment. The following sections describe the data that is passed to your plug-in or custom workflow activity.
 
-## For plug-ins
+## Access execution context for plug-ins
 
-With plug-ins you can access this data in your code by setting a variable that implements the <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext> interface:
+With plug-ins, access this data in your code by setting a variable that implements the <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext> interface:
 
 ```csharp
 // Obtain the execution context from the service provider.  
@@ -30,13 +30,13 @@ IPluginExecutionContext context = (IPluginExecutionContext)
     serviceProvider.GetService(typeof(IPluginExecutionContext));
 ```
 
-This <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext> provides some information about the <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext.Stage> that the plug-in is registered for as well as information about the <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext.ParentContext>.
+This <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext> provides some information about the <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext.Stage> that the plug-in is registered for, as well as information about the <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext.ParentContext>.
 
 More information: [ParentContext](#parentcontext)
 
-## For Custom Workflow Activities
+## Access execution context for custom workflow activities
 
-With custom workflow activities you can access this data in your code by setting a variable that implements the <xref:Microsoft.Xrm.Sdk.Workflow.IWorkflowContext> interface:
+With custom workflow activities, access this data in your code by setting a variable that implements the <xref:Microsoft.Xrm.Sdk.Workflow.IWorkflowContext> interface:
 
 ```csharp
 // Obtain the execution context using the GetExtension method.  
@@ -59,31 +59,31 @@ This <xref:Microsoft.Xrm.Sdk.Workflow.IWorkflowContext> provides some informatio
 
 The `ParentContext` provides information about any operation that triggers the plug-in or custom workflow activity to run.
 
-Except for specific documented cases, you should avoid taking a dependency on values that you find in the `ParentContext` to apply your business logic. The specific order in which operations occur is not guaranteed and may change over time.
+Except for specific documented cases, avoid taking a dependency on values that you find in the `ParentContext` to apply your business logic. The specific order in which operations occur isn't guaranteed and might change over time.
 
-If you do choose to take a dependency on values found in the `ParentContext`, you should take steps to ensure that your code is resilient to adapt to potential changes. You should test the logic regularly to verify that the conditions you depend on remain in effect over time.
+If you choose to take a dependency on values found in the `ParentContext`, take steps to ensure that your code is resilient to adapt to potential changes. Test the logic regularly to verify that the conditions you depend on remain in effect over time.
 
 ## ExecutionContext
 
-The rest of the information available is provided by the <xref:Microsoft.Xrm.Sdk.IExecutionContext> interface that the <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext> and <xref:Microsoft.Xrm.Sdk.Workflow.IWorkflowContext> classes implement.
+The <xref:Microsoft.Xrm.Sdk.IExecutionContext> interface provides the rest of the information. The <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext> and <xref:Microsoft.Xrm.Sdk.Workflow.IWorkflowContext> classes implement this interface.
 
-For plug-ins, all the properties of this execution context class provide useful information you may need to access in your code.
+For plug-ins, all the properties of this execution context class provide useful information you might need to access in your code.
 
 > [!NOTE]
-> For custom workflow activities, these properties are generally not used.
+> For custom workflow activities, you generally don't use these properties.
 
-Two of the most important are the <xref:Microsoft.Xrm.Sdk.IExecutionContext.InputParameters> and <xref:Microsoft.Xrm.Sdk.IExecutionContext.OutputParameters> properties.
+Two of the most important properties are the <xref:Microsoft.Xrm.Sdk.IExecutionContext.InputParameters> and <xref:Microsoft.Xrm.Sdk.IExecutionContext.OutputParameters> properties.
 
 Other frequently used properties are <xref:Microsoft.Xrm.Sdk.IExecutionContext.SharedVariables>, <xref:Microsoft.Xrm.Sdk.IExecutionContext.PreEntityImages>, and <xref:Microsoft.Xrm.Sdk.IExecutionContext.PostEntityImages>.
 
 > [!TIP]
-> A good way to visualize the data that is passed into the execution context is to install the Plug-in Profiler solution that is available as part of the Plug-in Registration tool. The profiler will capture the context information as well as information that allows for replaying event locally so you can debug. Within the Plug-in Registration tool, you can download an XML document with all the data from the event that triggered the workflow. More information: [View plug-in profile data](debug-plug-in.md#view-plug-in-profile-data)
+> A good way to visualize the data that is passed into the execution context is to install the Plug-in Profiler solution that's available as part of the Plug-in Registration tool. The profiler captures the context information as well as information that allows for replaying event locally so you can debug. Within the Plug-in Registration tool, you can download an XML document with all the data from the event that triggered the workflow. For more information, see [View plug-in profile data](debug-plug-in.md#view-plug-in-profile-data).
 
 ## ParameterCollections
 
-All the properties of the execution context are read-only. But the `InputParameters`, `OutputParameters`, and `SharedVariables` are <xref:Microsoft.Xrm.Sdk.ParameterCollection> values. You can manipulate the values of the items in these collections to change the behavior of the operation, depending on the stage in the event execution pipeline your plug-in is registered for.
+All the properties of the execution context are read-only. But the `InputParameters`, `OutputParameters`, and `SharedVariables` are <xref:Microsoft.Xrm.Sdk.ParameterCollection> values. You can change the behavior of the operation by modifying the values of the items in these collections, depending on the stage in the event execution pipeline your plug-in is registered for.
 
-The <xref:Microsoft.Xrm.Sdk.ParameterCollection> values are defined as <xref:System.Collections.Generic.KeyValuePair> structures. In order to access a property you will need to know the name of the property that is exposed by the message. For example, to access the <xref:Microsoft.Xrm.Sdk.Entity> property that is passed as part of the <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest>, you need to know that the name of that property is `Target`. Then you can access this value using code like this:
+The <xref:Microsoft.Xrm.Sdk.ParameterCollection> values are defined as <xref:System.Collections.Generic.KeyValuePair> structures. To access a property, you need to know the name of the property that the message exposes. For example, to access the <xref:Microsoft.Xrm.Sdk.Entity> property that's passed as part of the <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest>, you need to know that the name of that property is `Target`. Then you can access this value by using code like this:
 
 ```csharp
 var entity = (Entity)context.InputParameters["Target"];
@@ -95,15 +95,15 @@ Use the <xref:Microsoft.Xrm.Sdk.Messages> and <xref:Microsoft.Crm.Sdk.Messages> 
 
 The `InputParameters` represent the value of the <xref:Microsoft.Xrm.Sdk.OrganizationRequest>.<xref:Microsoft.Xrm.Sdk.OrganizationRequest.Parameters> property that represents the operation coming in from the web services.
 
-As described in [Use messages with the SDK for .NET](org-service/use-messages.md), all operations that occur in the system are ultimately instances of the `OrganizationRequest` class being processed by the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method.
+As described in [Use messages with the SDK for .NET](org-service/use-messages.md), all operations that occur in the system are ultimately instances of the `OrganizationRequest` class that the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method processes.
 
-As described in [Event Framework](event-framework.md), operations go through a series of stages and you can register your plug-in on stages that occur before the data is written to the database. Within the **PreValidation** and **PreOperation** stages, you can read and change the values of the `InputParameters` so that you can control the expected outcome of the data operation.
+As described in [Event Framework](event-framework.md), operations go through a series of stages. You can register your plug-in on stages that occur before the data is written to the database. Within the **PreValidation** and **PreOperation** stages, you can read and change the values of the `InputParameters` so that you can control the expected outcome of the data operation.
 
-If you find that the values in the `InputParameters` collection represent a condition that you cannot allow, you can throw an <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException> (preferably in the **PreValidation** stage) that will cancel the operation and display an error to the user with a synchronous plug-in, or log the error if the plug-in is asynchronous. More information: [Cancelling an operation](handle-exceptions.md#cancelling-an-operation)
+If you find that the values in the `InputParameters` collection represent a condition that you can't allow, throw an <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException> (preferably in the **PreValidation** stage) that cancels the operation and displays an error to the user by using a synchronous plug-in, or logs the error if the plug-in is asynchronous. For more information, see [Cancelling an operation](handle-exceptions.md#cancelling-an-operation).
 
 ## OutputParameters
 
-The `OutputParameters` represent the value of the <xref:Microsoft.Xrm.Sdk.OrganizationResponse>.<xref:Microsoft.Xrm.Sdk.OrganizationResponse.Results> property that represents the return value of the operation. Each of the message response classes that are derived from <xref:Microsoft.Xrm.Sdk.OrganizationResponse> contain specific properties. To access these properties you must use the key value that is *usually* the same as the name of the properties in the response class. However, this is not always true. The following table lists the message response class properties that have keys different from the name of the properties.
+The `OutputParameters` represent the value of the <xref:Microsoft.Xrm.Sdk.OrganizationResponse>.<xref:Microsoft.Xrm.Sdk.OrganizationResponse.Results> property that represents the return value of the operation. Each of the message response classes that are derived from <xref:Microsoft.Xrm.Sdk.OrganizationResponse> contain specific properties. To access these properties, use the key value that is *usually* the same as the name of the properties in the response class. However, this isn't always true. The following table lists the message response class properties that have keys different from the name of the properties.
 
 |Response Class  |Property  |Key Value  |
 |---------|---------|---------|
@@ -124,14 +124,13 @@ The `OutputParameters` represent the value of the <xref:Microsoft.Xrm.Sdk.Organi
 |<xref:Microsoft.Crm.Sdk.Messages.RetrieveUnpublishedMultipleResponse>|<xref:Microsoft.Crm.Sdk.Messages.RetrieveUnpublishedMultipleResponse.EntityCollection>|`BusinessEntityCollection`|
 |<xref:Microsoft.Crm.Sdk.Messages.RetrieveUserQueuesResponse>|<xref:Microsoft.Crm.Sdk.Messages.RetrieveUserQueuesResponse.EntityCollection>|`BusinessEntityCollection`|
 
-
-The `OutputParameters` are not populated until after the database transaction, so they are only available for plug-ins registered in the **PostOperation** stage. If you want to change the values returned by the operation, you can modify them within the `OutputParameters`.
+The system doesn't populate the `OutputParameters` until after the database transaction, so they're only available for plug-ins registered in the **PostOperation** stage. If you want to change the values returned by the operation, you can modify them within the `OutputParameters`.
 
 ## Shared variables
 
-The <xref:Microsoft.Xrm.Sdk.IExecutionContext.SharedVariables> property allows for including data that can be passed from the API or a plug-in to a step that occurs later in the execution pipeline. Because this is a <xref:Microsoft.Xrm.Sdk.ParameterCollection> value, plug-ins can add, read, or modify properties to share data with subsequent steps.
+Use the <xref:Microsoft.Xrm.Sdk.IExecutionContext.SharedVariables> property to pass data from the API or a plug-in to a step that occurs later in the execution pipeline. Because this property is a <xref:Microsoft.Xrm.Sdk.ParameterCollection> value, plug-ins can add, read, or modify properties to share data with subsequent steps.
 
-The following example shows how a `PrimaryContact` value can be passed from a plug-in registered for a **PreOperation** step to a **PostOperation** step.
+The following example shows how to pass a `PrimaryContact` value from a plug-in registered for a **PreOperation** step to a **PostOperation** step.
 
 ```csharp
 public class PreOperation : IPlugin
@@ -175,22 +174,22 @@ public class PostOperation : IPlugin
 ```
 
 > [!IMPORTANT]
-> Any type of data added to the shared variables collection must be serializable otherwise the server will not know how to serialize the data and plug-in execution will fail.  
+> You must add serializable data to the shared variables collection. Otherwise, the server doesn't know how to serialize the data and plug-in execution fails.  
 
 > [!NOTE]
 > For a plug-in registered for the **PreOperation** or **PostOperation** stages to access the shared variables from a plug-in registered for the  **PreValidation** stage that executes on **Create**, **Update**, **Delete**, or by a <xref:Microsoft.Crm.Sdk.Messages.RetrieveExchangeRateRequest>, you must access the <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext.ParentContext>.**SharedVariables** collection. For all other cases, <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext>.**SharedVariables** contains the collection.
 
-### Passing a Shared Variable from the API
+### Passing a shared variable from the API
 
-If you need to introduce a shared variable when you call an API, use the keyword `tag` from either the Web API or the SDK for .NET to pass a string value.
+To introduce a shared variable when you call an API, use the keyword `tag` from either the Web API or the SDK for .NET to pass a string value.
 
-This value will be accessible in the Shared Variable collection using the `tag` key. Once set, this value cannot be changed, it is immutable.
+You can access this value in the Shared Variable collection by using the `tag` key. Once set, you can't change this value.
 
-More information: [Add a shared variable to the plugin execution context](optional-parameters.md#add-a-shared-variable-to-the-plugin-execution-context).
+For more information, see [Add a shared variable to the plugin execution context](optional-parameters.md#add-a-shared-variable-to-the-plugin-execution-context).
 
 ## Entity images
 
-When you register a step for a plug-in that includes a table as one of the parameters, you have the option to specify that a copy of the table data be included as *snapshot* or image using the <xref:Microsoft.Xrm.Sdk.IExecutionContext.PreEntityImages> and/or <xref:Microsoft.Xrm.Sdk.IExecutionContext.PostEntityImages> properties.
+When you register a step for a plug-in that includes a table as one of the parameters, you can specify that a copy of the table data be included as a *snapshot* or image by using the <xref:Microsoft.Xrm.Sdk.IExecutionContext.PreEntityImages> and <xref:Microsoft.Xrm.Sdk.IExecutionContext.PostEntityImages> properties.
 
 This data provides a comparison point for table data as it flows through the event pipeline. Using these images provides much better performance than including code in a plug-in to retrieve a table just to compare the attribute values.
 
@@ -209,6 +208,5 @@ More information:
 
 [Event Framework](event-framework.md)  
 [Write a plug-in](write-plug-in.md)
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

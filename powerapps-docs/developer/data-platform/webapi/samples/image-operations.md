@@ -176,7 +176,7 @@ The code uses the static `DownloadImageWithActions` method, which encapsulates t
 
 #### Download with Chunks
 
-The code uses the static `DownloadImageWithChunks` method, which demonstrates how to download images as described in [Download the file in chunks using Web API](../../file-column-data.md#download-the-file-in-chunks-using-web-api).
+The code uses the static `DownloadImageWithChunks` method, which demonstrates how to download images as described in [Download the file in chunks using Web API](../../file-column-data.md#download-the-file-in-chunks-by-using-web-api).
 
 > [!NOTE]
 > These operations don't fail when there's no full-sized image to download, they simply return `204 No Content`.

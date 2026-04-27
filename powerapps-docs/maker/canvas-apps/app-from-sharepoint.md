@@ -7,7 +7,7 @@ ms.topic: how-to
 ms.custom: canvas
 ms.collection: get-started
 ms.reviewer: 
-ms.date: 01/13/2026
+ms.date: 02/18/2026
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
@@ -21,13 +21,13 @@ contributors:
 
 # Create a canvas app with data from a list
 
-In a few minutes, you'll have a fully functional app that connects to your Microsoft Lists or SharePoint data. This step-by-step guide shows you exactly how to build and customize a canvas app to manage your data efficiently, with no coding required.
+Transform your Microsoft Lists or SharePoint data into a powerful mobile and web app in minutes—no coding required. This article shows you how to create a fully functional canvas app that connects directly to your existing lists, giving you and your team an intuitive way to view, edit, and manage data on any device.
 
 You can also [connect to on-premises SharePoint lists](connections/connection-sharepoint-online.md#create-a-sharepoint-connection) through a data gateway.
 
 You can create an app by using a list in SharePoint or Lists in two ways:
 
-- Sign in to Power Apps and then [create an app by connecting to list in SharePoint from Power Apps.](app-from-sharepoint.md#use-a-list-in-sharepoint-or-lists-to-create-an-app)
+- Sign in to Power Apps and then [create an app by connecting to a list in SharePoint from Power Apps.](app-from-sharepoint.md#use-a-list-in-sharepoint-or-lists-to-create-an-app)
 - [Create an app directly from a list in SharePoint or Lists.](app-from-sharepoint.md#create-an-app-directly-from-a-list-in-sharepoint-or-lists)
 
 When you create the app, Power Apps Studio opens and shows an app with three screens:
@@ -41,7 +41,6 @@ Watch this video to learn how to create a canvas app from a list.
 
 > [!NOTE]
 > When you create or view a list in SharePoint, you're automatically redirected to Microsoft Lists. The list is always available in both Microsoft Lists and SharePoint. Learn more in [What is a list in Microsoft 365?](https://support.microsoft.com/en-us/office/what-is-a-list-in-microsoft-365-93262a88-20ad-4edc-8410-b6909b2f59a5)
-
 
 ## Prerequisites
 
@@ -68,12 +67,12 @@ Now, use the list that you created to build an app from the list.
 
 1. Sign in to [Power Apps](https://make.powerapps.com/).
 
-1. In the left navigation pane, select **Create** > **Start with a page design** > **Gallery connected to external data**.
+1. From the home screen, select **Start with data**.
 
-1. Select **From SharePoint**.
+1. On the **Create an app** page, select **SharePoint**.
 
 1. Enter the SharePoint URL, and then select **Connect**. Or, select a recent site.
- 
+
 1. Select a list or select the [sample list](app-from-sharepoint.md#create-a-list) you created earlier, and then select **Create app**.
 
    The app opens in Power Apps Studio, where you design, build, and manage the app. For more information, see [Understand Power Apps Studio](power-apps-studio.md).
@@ -86,11 +85,12 @@ Now, use the list that you created to build an app from the list.
 
 ## Create an app directly from a list in SharePoint or Lists
 
- Before you create the app, make sure you [create a list](app-from-sharepoint.md#create-a-list).
+Before you create the app, make sure you [create a list](app-from-sharepoint.md#create-a-list).
 
 1. Sign in to SharePoint: `https://yourorganizationname.sharepoint.com`
 
 1. Open a list in either SharePoint or Lists. If you open the list from SharePoint, you're taken to Lists to view the list.
+
 1. Select **Integrate** > **Power Apps** > **Create an app**.
 
     :::image type="content" source="./media/app-from-sharepoint/generate-new-app.png" alt-text="Screenshot of the Integrate menu in Lists, showing the option to create an app in Power Apps.":::

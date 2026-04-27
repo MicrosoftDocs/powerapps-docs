@@ -25,7 +25,7 @@ To prevent data exfiltration, turn on the [user level access control for TDS end
 
 TDS (SQL) endpoint applications support for Power BI and SQL Server Management Studio is described next.
 
-### SQL Server Management Studio 
+### SQL Server Management Studio
 
 You can also use [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) (SSMS) version 18.12.1 or later with the Dataverse endpoint SQL connection. Examples of using SSMS with the SQL data connection are shown in the figure.
 

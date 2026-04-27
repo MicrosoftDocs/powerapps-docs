@@ -1,7 +1,7 @@
 ---
-title: Count rows using OData
-description: Learn how to use OData to count rows from Microsoft Dataverse tables using Dataverse Web API.
-ms.date: 07/11/2024
+title: "Count rows by using OData"
+description: "Learn how to use OData $count query option to count rows from Microsoft Dataverse tables using the Web API. Includes examples and best practices for counting entities."
+ms.date: 03/27/2026
 ms.topic: how-to
 author: MsSQLGirl
 ms.author: jukoesma
@@ -13,9 +13,9 @@ contributors:
   - JimDaly
   - JosinaJoy
 ---
-# Count rows using OData
+# Count rows by using OData
 
-Use the `$count=true` query option to include a count of entities that match the filter criteria, up to 5,000 for standard tables, 500 for elastic.
+Use the `$count=true` query option to include a count of entities that match the filter criteria, up to 5,000 for standard tables, and 500 for elastic tables.
 
 **Request:**
 
@@ -45,13 +45,13 @@ OData-Version: 4.0
 }
 ```
 
-The response `@odata.count` annotation contains the number of rows, up to 5,000 for standard tables, 500 for elastic tables, that matches the filter criteria irrespective of the page size requested.
+The response `@odata.count` annotation contains the number of rows, up to 5,000 for standard tables and 500 for elastic tables, that match the filter criteria regardless of the page size requested.
   
 > [!NOTE]
-> If you want to retrieve a snapshot within the past 24 hours of the total number of rows for a table beyond 5,000 for standard tables, 500 for elastic tables, use the [RetrieveTotalRecordCount function](xref:Microsoft.Dynamics.CRM.RetrieveTotalRecordCount).
+> To retrieve a snapshot within the past 24 hours of the total number of rows for a table beyond 5,000 for standard tables and 500 for elastic tables, use the [RetrieveTotalRecordCount function](xref:Microsoft.Dynamics.CRM.RetrieveTotalRecordCount).
   
 
-If the count value is equal to the limit for the type of table you are using, and you want to know whether the count is exactly at that number or greater than that number, you can add the [Prefer request header](https://www.rfc-editor.org/rfc/rfc7240) to send the [odata.include-annotations preference](http://docs.oasis-open.org/odata/odata/v4.0/os/part1-protocol/odata-v4.0-os-part1-protocol.html#_Toc372793628) for these annotations:
+If the count value equals the limit for the type of table you're using, and you want to know whether the count is exactly that number or greater than that number, add the [Prefer request header](https://www.rfc-editor.org/rfc/rfc7240) to send the [odata.include-annotations preference](http://docs.oasis-open.org/odata/odata/v4.0/os/part1-protocol/odata-v4.0-os-part1-protocol.html#_Toc372793628) for these annotations:
 
  - `Microsoft.Dynamics.CRM.totalrecordcount`
  - `Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded`
@@ -66,7 +66,7 @@ This header adds the following annotations to the result:
 - `@Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded`
 
 
-When used with the `$count=true` query option and there are more than 5,000 standard records, the following values are returned:
+When you use this header with the `$count=true` query option and there are more than 5,000 standard records, the following values are returned:
 
 ```
 "@odata.count": 5000,

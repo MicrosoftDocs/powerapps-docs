@@ -1,12 +1,12 @@
 ---
-title: "Command bar customization limitations | MicrosoftDocs"
-description: "Discover the modern commanding limitations."
+title: "Command bar customization limitations"
+description: "Discover the modern commanding limitations with model-driven apps in Power Apps."
 Keywords: command bar, command designer
 author: caburk
 ms.author: caburk
 ms.reviewer: matp
 contributors: aansu
-ms.date: 02/19/2025
+ms.date: 04/06/2026
 ms.subservice: mda-maker
 ms.topic: how-to
 search.audienceType: 
@@ -14,23 +14,25 @@ search.audienceType:
 ---
 # Modern commanding known limitations
 
-## Power Fx and Command component libraries limitations
+This article describes the known limitations with modern commanding for model-driven apps.
 
-Power Fx shares certain infrastructure with custom pages and canvas apps. Relevant [limitations of custom pages](model-app-page-issues.md) are also applicable to commands.
+## Power Fx and command component libraries limitations
+
+Power Fx shares certain infrastructure with custom pages and canvas apps. Relevant [limitations of custom pages](model-app-page-issues.md) also apply to commands.
 
 - Not all Power Fx functions are currently supported for commands.
 - Microsoft Dataverse is currently the only supported data source when using Power Fx with commands. However, custom pages can be used for connecting to external data.
--	To add additional tables, open the command component library from command designer. Or you may reopen command designer by selecting a different table in app designer.
--	When you write Power Fx formulas in the command designer, intellisense may sometimes provide recommendations for unsupported functions. It may not show an error for unsupported functions within command designer or the associated command component library.
--	Commands and the command component library created from one app can't be added to different apps. However, you can copy the command and paste it within another app or command bar location.
--	Not all out-of-the-box or custom visibility rules from classic commands are currently supported in Power Fx. Classic visibility is supported without using Power Fx. This is needed to migrate classic commands to modern and classic rule formats but won't be exposed in command designer. However, classic visibility is exposed within solution files and Dataverse.
--	To delete command component libraries, you must delete the app. Alternatively, you can delete the associated record within the model-driven app element table, then delete the component library. The model-driven app element record exists in Dataverse but isn't exposed in solutions. More information: [Delete a Model-Driven App Element record](#delete-a-model-driven-app-element-record)
-- PowerFx based commands aren't supported and won't run within the Dynamics 365 app for Outlook or a model-driven app that's hosted within a Portal.
-- Metadata changes for attributes might not reflect in the Power Fx expression. To update the metadata, open the component library using command bar actions in command designer. In Power Apps Studio for canvas apps select **Data sources**, select the data source, and then refresh. This updates the metadata for the component library.
+- To add additional tables, open the command component library from command designer. Or you can reopen command designer by selecting a different table in app designer.
+- When you write Power Fx formulas in the command designer, IntelliSense might sometimes provide recommendations for unsupported functions. It might not show an error for unsupported functions within command designer or the associated command component library.
+- Commands and the command component library created from one app can't be added to different apps. However, you can copy the command and paste it within another app or command bar location.
+- Not all out-of-the-box or custom visibility rules from classic commands are currently supported in Power Fx. Classic visibility is supported without using Power Fx. This is needed to migrate classic commands to modern and classic rule formats but won't be exposed in command designer. However, classic visibility is exposed within solution files and Dataverse.
+- To delete command component libraries, you must delete the app. Alternatively, you can delete the associated record within the model-driven app element table, then delete the component library. The model-driven app element record exists in Dataverse but isn't exposed in solutions. More information: [Delete a Model-Driven App Element record](#delete-a-model-driven-app-element-record)
+- Power Fx based commands aren't supported and won't run within the Dynamics 365 app for Outlook or a model-driven app that's hosted within a Portal.
+- Metadata changes for attributes might not reflect in the Power Fx expression. To update the metadata, open the component library using command bar actions in command designer. In Power Apps Studio for canvas apps select **Data sources**, select the data source, and then refresh. This action updates the metadata for the component library.
 
 ## Command designer limitations
 
-- Pre-existing classic commands can't be customized within the command designer until they're migrated to the modern infrastructure. This includes the out-of-the-box commands, which will be migrated incrementally over time. You may continue to use other mechanisms and third-party tools for customizing classic commands.
+- Pre-existing classic commands can't be customized within the command designer until they're migrated to the modern infrastructure. This includes the out-of-the-box commands, which will be migrated incrementally over time. You can continue to use other mechanisms and third-party tools for customizing classic commands.
 - Dynamically populated buttons aren't supported. We recommend creating them declaratively.
 - Global application header and dashboard command bars aren't currently supported in command designer. These are customized infrequently. Share feedback if you find this valuable to prioritize.
 - A single Power Fx component library is supported. The command designer might display the error message: "Unable to initialize component manager. There are multiple component libraries associated with your app." This error occurs when an app has multiple duplicate component libraries associated with it, which currently isn't supported with model-driven apps. To resolve this limitation, remove the additional `AppElement` entries for the app. Do this by removing the multiple library dependencies with the app, ensuring that only one `AppElement` entry exists.
@@ -39,9 +41,9 @@ Power Fx shares certain infrastructure with custom pages and canvas apps. Releva
 ## Delete a model-driven app element record
 
 > [!WARNING] 
-> If the app includes Power Fx-based commands, they will no longer work after you delete the app's model-driven app element table record.
+> If the app includes Power Fx-based commands, they stop working after you delete the app's model-driven app element table record.
 
-Using the **Model-driven App Elements** table, do the following:
+Using the **Model-driven App Elements** table, complete the following steps:
 
 1. Create a flow to get a list of rows. More information: [Get a list of rows](/power-automate/dataverse/list-rows#get-a-list-of-rows)
    :::image type="content" source="media/list-rows-flow.png" alt-text="List model-driven app element Dataverse table rows using a flow":::

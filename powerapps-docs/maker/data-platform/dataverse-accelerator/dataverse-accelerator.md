@@ -6,7 +6,7 @@ ms.author: demora
 ms.reviewer: matp
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 04/01/2025
+ms.date: 02/23/2026
 ms.custom: template-how-to
 ms.subservice: dataverse-maker
 contributors:
@@ -15,6 +15,9 @@ contributors:
 # Get preview features early with the Dataverse accelerator (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
+
+> [!IMPORTANT]
+> The Dataverse accelerator, monitor plug-ins, and API playground features are deprioritized and aren't be delivered as features. For information about preview feature availability, go to [Power Apps preview program](../../powerapps-preview-program.md).
 
 The Microsoft Dataverse accelerator is a model-driven application that provides access to select preview features and tooling related to Dataverse development. The featured set of capabilities include early prototype experiences that represent backlog features scheduled to be in the native platform and tools for enriching Dataverse development for makers, delivered in a convenient and accessible web application built with low-code.
 

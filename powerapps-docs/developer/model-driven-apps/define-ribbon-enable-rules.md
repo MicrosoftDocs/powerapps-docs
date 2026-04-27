@@ -1,9 +1,9 @@
 ---
-title: "Define ribbon enable rules (model-driven apps)"
-description: "Learn about defining specific rules to control when the ribbon elements are enabled during configuration of ribbon elements."
+title: "Define ribbon enable rules for model-driven apps"
+description: "Learn how to define enable rules that control when ribbon elements are enabled in model-driven apps. Configure ribbon behavior with specific rule types."
 author: clromano
 ms.author: clromano
-ms.date: 05/24/2022
+ms.date: 03/27/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 ms.subservice: mda-developer
@@ -18,20 +18,20 @@ contributors:
 
 [!INCLUDE [cc-modern-commanding](../data-platform/includes/cc-modern-commanding.md)]
 
-When configuring ribbon elements, you can define specific rules to control when the ribbon elements are enabled. The `<EnableRule>` element is used as follows:  
+When you configure ribbon elements, you can define specific rules to control when the ribbon elements are enabled. Use the `<EnableRule>` element as follows:  
 
-- Use the `/RuleDefinitions/EnableRules/EnableRule` element to define rules controlling when the ribbon element should be enabled.  
+- Use the `/RuleDefinitions/EnableRules/EnableRule` element to define rules that control when the ribbon element is enabled.  
 - Use the `/CommandDefinitions/CommandDefinition/EnableRules/EnableRule` element to associate specific enable rules to a command definition.  
 
 ## What does enabled mean?  
 
-With the command bar, commands that are disabled are hidden. With the ribbon, commands that are disabled are visible but do not respond to events.  
+With the command bar, commands that are disabled are hidden. With the ribbon, commands that are disabled are visible but don't respond to events.  
 
 ## Control when ribbon elements are enabled  
 
-Enable rules are intended to be reused. By defining them with rule definitions, you can use the same enable rule for many command definitions. When more than one enable rule is defined for a command definition, all of the enable rules must evaluate as true for the ribbon element to be enabled.  
+Enable rules are intended to be reused. By defining them with rule definitions, you can use the same enable rule for many command definitions. When you define more than one enable rule for a command definition, all of the enable rules must evaluate as true for the ribbon element to be enabled.  
 
- All Enable rules provide an optional parameter to specify whether the default value of the rule is true or false and an optional `InvertResult` parameter to allow for returning a negative result when the item being tested returns true.  
+ All enable rules provide an optional parameter to specify whether the default value of the rule is true or false and an optional `InvertResult` parameter to allow for returning a negative result when the item being tested returns true.  
 
  The `/RuleDefinitions/EnableRules/EnableRule` element supports the following types of rules:  
 
@@ -48,11 +48,11 @@ Enable rules are intended to be reused. By defining them with rule definitions, 
 |-----------|------------------------------------------------|
 | `Modern`  |   The command bar is presented using [!INCLUDE[pn_moca_full](../../includes/pn-moca-full.md)].        |
 | `Refresh` |   The command bar is presented using the updated user interface.                                                      |
-| `Legacy`  | The ribbon is presented in forms for tables that were not updated or in a list view in [!INCLUDE[pn_crm_for_outlook_full](../../includes/pn-crm-for-outlook-full.md)]. |
+| `Legacy`  | The ribbon is presented in forms for tables that weren't updated or in a list view in [!INCLUDE[pn_crm_for_outlook_full](../../includes/pn-crm-for-outlook-full.md)]. |
 
 ### Crm Client Type Rule
 
-Uses the  `<CrmClientTypeRule>` element to allow definition of rules depending on the type of client used. Type options are as follows:  
+Uses the  `<CrmClientTypeRule>` element to define rules depending on the type of client used. Type options are as follows:  
 
 - `Web`  
 - `Outlook`  
@@ -81,12 +81,12 @@ function EnableRule()
 ```
 
 > [!NOTE]
-> Custom rules that do not return a value quickly can affect the performance of the ribbon. If you have to perform logic that might take some time to complete (for example, a network request), use the following strategy to make your custom rule asynchronous.
+> Custom rules that don't return a value quickly can affect the performance of the ribbon. If you need to perform logic that might take some time to complete (for example, a network request), use the following strategy to make your custom rule asynchronous.
 
- Unified Interface rules support returning a Promise rather than boolean for asynchronous rule evaluation. If the promise does not resolve within 10 seconds, the rule will resolve with a false value.
+ Unified Interface rules support returning a Promise rather than boolean for asynchronous rule evaluation. If the promise doesn't resolve within 10 seconds, the rule resolves with a false value.
 
  > [!NOTE]
- >  Promises-based rules will only work on Unified Interface, so they cannot be used if classic Web Client is still being used.
+ >  Promises-based rules only work on Unified Interface, so you can't use them if classic Web Client is still being used.
 
  ```JavaScript
 // Old synchronous style
@@ -126,9 +126,9 @@ function EnableRule() {
 
 ### Entity Rule
 
- Uses the `<EntityRule>` element. `EntityRule` allow for evaluation of the current table. This is useful when you define custom actions that apply to the table template instead of for specific tables. For example, you may want to add a ribbon element to all tables except for several specific tables. It is easier to define the custom action for the table template that applies to all tables and then use an `EntityRule` to filter out those that should be excluded.  
+ Uses the `<EntityRule>` element. `EntityRule` evaluates the current table. This evaluation is useful when you define custom actions that apply to the table template instead of specific tables. For example, you might want to add a ribbon element to all tables except for several specific tables. It's easier to define the custom action for the table template that applies to all tables and then use an `EntityRule` to filter out those that should be excluded.  
 
- The `EntityRule` also includes an optional context parameter to specify whether the table is being displayed in the form or a list (HomePageGrid). The optional `AppliesTo` parameter can be set to `PrimaryEntity` or `SelectedEntity` to distinguish whether the table is being displayed in a subgrid.  
+ The `EntityRule` element also includes an optional context parameter to specify whether the table is being displayed in the form or a list (HomePageGrid). The optional `AppliesTo` parameter can be set to `PrimaryEntity` or `SelectedEntity` to distinguish whether the table is being displayed in a subgrid.  
 
 ### Form State Rule
 
@@ -150,7 +150,7 @@ Uses the `<FormStateRule>` element. Use the `FormState` rule to determine the cu
 
 ### Outlook Version Rule
 
- Uses the `<OutlookVersionRule>` element. Use this to enable a ribbon element for a specific version of [!INCLUDE[pn_MS_Outlook_Full](../../includes/pn-ms-outlook-full.md)] as follows:  
+ Uses the `<OutlookVersionRule>` element. Use this rule to enable a ribbon element for a specific version of [!INCLUDE[pn_MS_Outlook_Full](../../includes/pn-ms-outlook-full.md)] as follows:  
 
 - `2003`  
 - `2007`  

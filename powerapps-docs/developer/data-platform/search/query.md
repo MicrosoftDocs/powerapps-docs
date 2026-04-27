@@ -1,11 +1,11 @@
 ---
-title: "Dataverse Search query (Microsoft Dataverse) | Microsoft Docs"
-description: "Use Dataverse search query to return search results across multiple tables."
-ms.date: 10/20/2023
+title: "Search Dataverse records with query API"
+description: "Learn how to use the Dataverse search query API to retrieve search results across multiple tables with filters, facets, and sorting options."
+ms.date: 03/26/2026
 ms.reviewer: jdaly
 ms.topic: article
-author: seanwat-msft
-ms.author: seanwat
+author: JasonHQX
+ms.author: jasonhuang
 search.audienceType: 
   - developer
 search.app: 
@@ -15,11 +15,11 @@ contributors:
  - JimDaly
  - jeromeblouinms
 ---
-# Dataverse Search query
+# Dataverse search query
 
 The query operation returns search results based on a search term.
 
-In addition to a search term, the results returned can be influenced by passing values for the following parameters:
+In addition to a search term, you can influence the results by passing values for the following parameters:
 
 
 |Name  |Type  |Description  |More information|
@@ -36,14 +36,14 @@ In addition to a search term, the results returned can be influenced by passing 
 
 ## Parameters
 
-This section includes details about the parameters introduced in the table above.
+This section includes details about the parameters introduced in the preceding table.
 
 ### `search` parameter
 
 **Type**: string<br />
-**Optional**: false
+**Required**: true
 
-The search parameter contains the text to search. It's the only required parameter. Search term must be at least one character long and has a 100 character limit.
+The search parameter contains the text to search. It's the only required parameter. The search term must be at least one character long and has a 100 character limit.
 
 #### Simple Search syntax
 
@@ -53,15 +53,15 @@ By default, the search parameter supports simple search syntax as described in t
 |---|---|
 | Boolean operators | AND operator; denoted by `+`<br/>OR operator; denoted by `|`<br/>NOT operator; denoted by `-` |
 | Precedence operators | A search term `hotel+(wifi | luxury)` searches for results containing the term `hotel` and either `wifi` or `luxury` (or both). |
-| Wildcards            | Trailing wildcard are supported. For example, `Alp*` searches for "alpine". |
+| Wildcards            | Trailing wildcards are supported. For example, `Alp*` searches for "alpine". |
 | Exact matches        | A query enclosed in quotation marks `" "`.|
 
 > [!NOTE]
-> In order to use any search operators as part of the search text, escape the character by prefixing it with a single backslash (`\`). Special characters that require escaping include the following: `+ - & | ! ( ) { } [ ] ^ " ~ * ? : \ /`.
+> To use any search operators as part of the search text, escape the character by prefixing it with a single backslash (`\`). Special characters that require escaping include the following: `+ - & | ! ( ) { } [ ] ^ " ~ * ? : \ /`.
 
 For example, an escaped phone number might look like this: `\+1\(800\)555\-1234`.
 
-Using the [`options` parameter](#options-parameter), you can enable [Lucerne Query Syntax](#lucerne-query-syntax) that enables different operators.
+By using the [`options` parameter](#options-parameter), you can enable [Lucerne Query Syntax](#lucerne-query-syntax) that enables different operators.
 
 ### `count` parameter
 
@@ -75,7 +75,7 @@ Whether to return the total record count. If you don't set this parameter, the `
 **Type**: string<br />
 **Optional**: true
 
-By default all the tables enabled for search are searched unless you specify a subset using the `entities` parameter. 
+By default, the search includes all tables enabled for search. To search a specific subset, use the `entities` parameter. 
 
 When you set an entity, you can also specify which columns you want to return and which columns to search. You can also include filter criteria for the table.
 
@@ -88,13 +88,13 @@ Use this type to compose the array of tables to pass to the `entities` parameter
 |Field Name|Type  |Description  |
 |---------|---------|---------|
 |`name`|string|Required. Logical name of the table. Specifies scope of the query.|
-|`selectColumns`|string[]|Optional. List of columns that needs to be projected when table documents are returned in response. If empty, only the table primary name is returned.  |
+|`selectColumns`|string[]|Optional. List of columns to project when table documents are returned in the response. If empty, only the table primary name is returned.  |
 |`searchColumns`|string[]|Optional. List of columns to scope the query on.  If empty, only the table primary name is searched on.|
 |`filter`|string|Optional. Filters applied on the entity. |
 
 #### Example
 
-The following is an example of some JSON data that uses the schema described above.
+The following example shows some JSON data that uses the preceding schema.
 
 ```json
 [
@@ -113,7 +113,7 @@ The following is an example of some JSON data that uses the schema described abo
 ]
 ```
 
-To use this data, you must escape the string and pass it as the value of the `entities` parameter in the body of the request:
+To use this data, escape the string and pass it as the value of the `entities` parameter in the body of the request:
 
 ```json
 {
@@ -133,7 +133,7 @@ The facet parameter is optional.  The string might contain parameters to customi
 
 #### Facet definition
 
-Facets are defined as an array of strings, for example:
+Define facets as an array of strings, for example:
 
 ```
 [
@@ -145,20 +145,20 @@ Facets are defined as an array of strings, for example:
 ]
 ```
 
-Each item in the array represents a different way to group the data returned by the query. For each property returned, you can specify appropriate faceting using the values in the following table:
+Each item in the array represents a different way to group the data returned by the query. For each property returned, specify appropriate faceting using the values in the following table:
 
 
 |Facet Type|Description|
 |---------|---------|
-|`count`|The maximum number of facet terms. The default is 10. There's no upper limit|
-|`sort` |Can be set to `count`, `-count`, `value`, `-value`. Use `count` to sort descending by `count`. Use `-count` to sort ascending by `count`. Use `value` to sort ascending by `value`. Use `-value` to sort descending by `value`.|
+|`count`|The maximum number of facet terms. The default is 10. There's no upper limit.|
+|`sort` |Set to `count`, `-count`, `value`, or `-value`. Use `count` to sort descending by `count`. Use `-count` to sort ascending by `count`. Use `value` to sort ascending by `value`. Use `-value` to sort descending by `value`.|
 |`values`|Set to pipe-delimited numeric or `Edm.DateTimeOffset` values specifying a dynamic set of facet entry values. The values must be listed in sequential, ascending order to get the expected results.|
 |`interval`|An integer interval greater than zero for numbers, or minute, hour, day, week, month, quarter, year for date time values.|
-|`timeoffset`|Set to (`[+-]hh:mm`, `[+-]hhmm`, or `[+-]hh`). If used, the `timeoffset` parameter must be combined with the interval option, and only when applied to a field of type `Edm.DateTimeOffset`. The value specifies the UTC time offset to account for in setting time boundaries.|
+|`timeoffset`|Set to (`[+-]hh:mm`, `[+-]hhmm`, or `[+-]hh`). If used, combine the `timeoffset` parameter with the interval option, and only when applied to a field of type `Edm.DateTimeOffset`. The value specifies the UTC time offset to account for in setting time boundaries.|
 
 
 > [!NOTE]
-> `count` and `sort` can be combined in the same facet specification, but they cannot be combined with `interval` or `values`, and `interval` and `values` cannot be combined together.
+> You can combine `count` and `sort` in the same facet specification, but you can't combine them with `interval` or `values`. You also can't combine `interval` and `values` together.
 
 Set the `facets` value with an escaped string containing the definition of the facets.
 
@@ -169,7 +169,7 @@ Set the `facets` value with an escaped string containing the definition of the f
 }
 ```
 
-More information:
+For more information, see:
 
 - [Azure Cognitive Search: Add faceted navigation to a search app](/azure/search/search-faceted-navigation)
 - [Azure Cognitive Search REST API > Search Documents > Query Parameters](/rest/api/searchservice/search-documents#query-parameters)
@@ -179,9 +179,9 @@ More information:
 **Type**: string<br />
 **Optional**: true
 
-Filters limit the scope of the search results returned. Use filters to exclude unwanted results. This is a top level filter that helps filter common columns across multiple entities like `createdon` or `modifiedon` etc.
+Filters limit the scope of the search results. Use filters to exclude unwanted results. This top-level filter helps filter common columns across multiple entities like `createdon` or `modifiedon`.
 
-Apply filters using this syntax: `<attribute logical name> <filter>` where the table logical name specifies the entity the filter should be applied to.
+Apply filters by using this syntax: `<attribute logical name> <filter>`. The table logical name specifies the entity the filter applies to.
 
 Filters use the following query operators:
 
@@ -207,7 +207,7 @@ Filters use the following query operators:
 **Type**: string<br />
 **Optional**: true
 
-Options are settings configured to search a search term. Set the `options` value to a serialized `Dictionary<string, string>` of these options, such as `"{'querytype': 'lucene', 'searchmode': 'all', 'besteffortsearchenabled': 'true', 'grouprankingenabled': 'true'}"`.
+Options are settings you configure to search a search term. Set the `options` value to a serialized `Dictionary<string, string>` of these options, such as `"{'querytype': 'lucene', 'searchmode': 'all', 'besteffortsearchenabled': 'true', 'grouprankingenabled': 'true'}"`.
 
 The following table lists the options:
 
@@ -251,32 +251,32 @@ If the query request includes a filter for a specific table type, `orderby` can 
 **Type**: int<br />
 **Optional**: true
 
-You can use these parameters together with the [count parameter](#count-parameter) to create a paged experience.
+Use these parameters together with the [count parameter](#count-parameter) to create a paged experience.
 
-By default, up to 50 results are returned at a time. You can use `top` to raise it as high as 100, but more commonly you'll use `top` to specify a smaller result set, such as 10, and then use `skip` to bypass previously returned results when the user moves to the next page.
+By default, up to 50 results are returned at a time. Use `top` to raise it as high as 100, but more commonly use `top` to specify a smaller result set, such as 10, and then use `skip` to bypass previously returned results when the user moves to the next page.
 
 ## Response
 
 The response from the query operation is an escaped string that includes JSON data.
 
-The unescaped response contains JSON using the following properties.
+The unescaped response contains JSON that uses the following properties.
 
 
 |Name|Type|Description|
 |---------|---------|---------|
 |`Error`|[ErrorDetail](#errordetail)|Provides error information from Azure Cognitive search.|
 |`Value`|[`QueryResult`](#queryresult)`[]`|A collection of matching records.|
-|`Facets`|`Dictionary<string,` [FacetResult](#facetresult)`[]>`|If facets were requested in the query, a dictionary of facet values.|
+|`Facets`|`Dictionary<string,` [FacetResult](#facetresult)`[]>`|If the query requests facets, a dictionary of facet values.|
 |`QueryContext` |[QueryContext](#querycontext)|This property is used for backend search. It's included for future feature releases and isn't currently used.|
-|`Count`|long| If `"Count": true` is included in the body of the request, the count of all documents that match the search, ignoring top and skip|
+|`Count`|long| If the request body includes `"Count": true`, the count of all documents that match the search, ignoring top and skip.|
 
-### Response Types
+### Response types
 
 This section describes the types returned with the response.
 
 #### ErrorDetail
 
-The Azure Cognitive search error returned as part of the response.
+The Azure Cognitive Search error returned as part of the response.
 
 |Name|Type|Description|
 |---------|---------|---------|
@@ -328,7 +328,7 @@ The following examples show how to use the query operation. These examples perfo
 
 ### [SDK for .NET](#tab/sdk)
 
-This example is from the [SDK for .NET search operations sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp-NETCore/Search) on GitHub. The static `OutputSearchQuery` method accepts a value for the [search parameter](#search-parameter).
+This example comes from the [SDK for .NET search operations sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp-NETCore/Search) on GitHub. The static `OutputSearchQuery` method accepts a value for the [search parameter](#search-parameter).
 
 ```csharp
 /// <summary>
@@ -404,13 +404,13 @@ static void OutputSearchQuery(IOrganizationService service, string searchTerm)
 
 #### Output
 
-When you invoke the `OutputSearchQuery` method with an authenticated instance of the [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient) class with the `searchTerm` set to "Contoso":
+When you invoke the `OutputSearchQuery` method with an authenticated instance of the [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient) class and set the `searchTerm` to "Contoso":
 
 ```csharp
 OutputSearchQuery(service: serviceClient, searchTerm: "Contoso");
 ```
 
-The output looks something like the following:
+The output looks similar to the following:
 
 ```console
 OutputSearchQuery START
@@ -439,11 +439,11 @@ The `OutputSearchQuery` method depends on the following supporting classes to se
 
 ##### searchqueryRequest and searchqueryResponse classes
 
-These classes are generated using Power Platform CLI [pac modelbuilder build](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build) command as described in [Generate early-bound classes for the SDK for .NET](../org-service/generate-early-bound-classes.md).
+Generate these classes by using Power Platform CLI [pac modelbuilder build](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build) command as described in [Generate early-bound classes for the SDK for .NET](../org-service/generate-early-bound-classes.md).
 
 ##### SearchEntity class
 
-Used to compose [SearchEntity type](#searchentity-type) data.
+Use this class to compose [SearchEntity type](#searchentity-type) data.
 
 ```csharp
 public sealed class SearchEntity
@@ -478,7 +478,7 @@ public sealed class SearchEntity
 
 ##### SearchQueryResults class
 
-Use to deserialize JSON data from the `searchqueryResponse.response` string property.
+Use this class to deserialize JSON data from the `searchqueryResponse.response` string property.
 
 ```csharp
 public sealed class SearchQueryResults
@@ -512,7 +512,7 @@ public sealed class SearchQueryResults
 
 ##### ErrorDetail class
 
-Used to deserialize the [ErrorDetail](#errordetail) data.
+Use this class to deserialize the [ErrorDetail](#errordetail) data.
 
 ```csharp
 public sealed class ErrorDetail
@@ -539,7 +539,7 @@ public sealed class ErrorDetail
 
 ##### QueryResult class
 
-Used to deserialize the [QueryResult](#queryresult) data.
+Use this class to deserialize the [QueryResult](#queryresult) data.
 
 ```csharp
 public sealed class QueryResult
@@ -576,7 +576,7 @@ public sealed class QueryResult
 
 ##### FacetResult class
 
-Used to deserialize the [FacetResult](#facetresult) data.
+Use this class to deserialize the [FacetResult](#facetresult) data.
 
 ```csharp
 public sealed class FacetResult
@@ -642,7 +642,7 @@ public enum FacetType
 
 ##### QueryContext class
 
-Used to deserialize the [QueryContext](#querycontext) data.
+Use this class to deserialize the [QueryContext](#querycontext) data.
 
 ```csharp
 public sealed class QueryContext
@@ -778,7 +778,7 @@ The formatted JSON value for the string `response` property looks like this:
 
 #### [Search 2.0 endpoint](#tab/search)
 
-The request parameters and the response from the `search/v2.0/query` endpoint is the same as the Web API. Only the URL is different.
+The request parameters and the response from the `search/v2.0/query` endpoint are the same as the Web API. Only the URL is different.
 
 **Request URL**
 

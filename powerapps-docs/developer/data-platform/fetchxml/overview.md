@@ -1,7 +1,7 @@
 ---
-title: Use FetchXml to query data
-description: Learn to compose a query using FetchXml, a proprietary XML based language that is used in Microsoft Dataverse to retrieve data.
-ms.date: 03/05/2024
+title: Query Data Using FetchXML in Dataverse
+description: Learn how to compose and refine queries using FetchXML in Microsoft Dataverse to retrieve data. Explore filtering, joining, paging, and performance tips.
+ms.date: 03/09/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 author: MsSQLGirl
@@ -16,16 +16,16 @@ contributors:
  - apahwa-lab
  - DonaldlaGithub
 ---
-# Query data using FetchXml
+# Query Data Using FetchXML in Dataverse
 
-FetchXml is a proprietary XML based query language used to retrieve data from Dataverse. See [FetchXml reference](reference/index.md) for the elements used to retrieve data.
+FetchXML is a proprietary XML-based query language used to retrieve data from Dataverse. See [FetchXml reference](reference/index.md) for the elements used to retrieve data.
 
 > [!NOTE]
-> FetchXml is also used to define views for model-driven apps and some reporting capabilities. Elements and attributes for those use cases are not included here. [Learn more about customizing model-driven app views with code](../../model-driven-apps/customize-entity-views.md).
+> You can also use FetchXML to define views for model-driven apps and some reporting capabilities. This article doesn't include elements and attributes for those use cases. [Learn more about customizing model-driven app views with code](../../model-driven-apps/customize-entity-views.md).
 
-## Compose a query
+## Compose a FetchXML query
 
-All queries are based on a single table. The root element is [fetch](reference/fetch.md). Use the [entity element](reference/entity.md) to select the table the query retrieves data from. The following example represents a simple FetchXml query:
+All queries are based on a single table. The root element is [fetch](reference/fetch.md). Use the [entity element](reference/entity.md) to select the table the query retrieves data from. The following example represents a simple FetchXML query:
 
 ```xml
 <fetch top='5'>
@@ -39,7 +39,7 @@ This query returns the [Name column](../reference/entities/account.md#BKMK_Name)
 
 ## Limit the number of rows
 
-To limit the number of rows returned, use the [fetch element](reference/fetch.md) `top` attribute. Without the `top` attribute, Dataverse returns up to 5,000 standard tables rows, 500 elastic tables rows.
+To limit the number of rows returned, use the [fetch element](reference/fetch.md) `top` attribute. Without the `top` attribute, Dataverse returns up to 5,000 standard tables rows and 500 elastic tables rows.
 
 Alternatively, specify a number of records to return using *paging*. Don't use the `top` attribute when you request pages of data. [Learn how to request paged results](page-results.md)
 
@@ -53,9 +53,9 @@ If you use the `distinct` attribute, you must add at least one [order element](r
 
 When you use the `distinct` attribute, the results returned don't include primary key values for each record because they represent an aggregation of all the distinct values.
 
-## Retrieve Data
+## Retrieve data with FetchXML
 
-To get results from your query, you need to send your request to Dataverse. [Learn to retrieve data from Dataverse using FetchXml](retrieve-data.md)
+To get results from your query, send your request to Dataverse. [Learn to retrieve data from Dataverse using FetchXml](retrieve-data.md).
 
 
 ## Refine your query
@@ -63,7 +63,7 @@ To get results from your query, you need to send your request to Dataverse. [Lea
 After you select the table to start your query with, refine the query to get the data you need. The following articles explain how to complete your query.
 
 
-|Article|Task|
+| Article | Task |
 |---------|---------|
 |[Select columns](select-columns.md)|Specify which columns of data to return.|
 |[Join tables](join-tables.md)|Specify which related tables to return in the results.|
@@ -72,18 +72,21 @@ After you select the table to start your query with, refine the query to get the
 |[Page results](page-results.md)|Specify how many rows of data to return with each request.|
 |[Aggregate data](aggregate-data.md)|How to group and aggregate the data returned.|
 |[Count number of rows](count-rows.md)|How to get a count of the number of rows returned.|
-|[Performance optimizations](optimize-performance.md)|How to optimize performance|
+|[Performance optimizations](optimize-performance.md)|How to optimize performance.|
 
 ## Community tools
 
-The [XrmToolbox](../community-tools.md#xrmtoolbox) [FetchXmlBuilder](https://fetchxmlbuilder.com/) is a free tool to compose and test FetchXml requests.
+There are free tools to compose and test FetchXML requests:
+
+- [XrmToolbox](../community-tools.md#xrmtoolbox) [FetchXmlBuilder](https://fetchxmlbuilder.com/)
+- [Power Platform Toolbox](https://www.powerplatformtoolbox.com/) [FetchXML Studio](https://www.powerplatformtoolbox.com/tools/e64db554-5dc9-4cc5-a712-832307d00777)
 
 > [!NOTE]
-> Tools created by the community are not supported by Microsoft. If you have questions or issues with community tools, contact the publisher of the tool.
+> Microsoft doesn't support tools created by the community. If you have questions or problems with community tools, contact the publisher of the tool.
 
-## Use FetchXml as a message parameter
+## Use FetchXML as a message parameter
 
-You also use FetchXml as a parameter for Dataverse operations such as the following messages:
+You can also use FetchXML as a parameter for Dataverse operations such as the following messages:
 
 |Message Name|SDK for .NET Request class|Web API Operation|
 |---------|---------|---------|
@@ -102,9 +105,9 @@ Learn how to select columns.
 > [!div class="nextstepaction"]
 > [Select columns](select-columns.md)
 
-Learn how to retrieve data with FetchXml.
+Learn how to retrieve data by using FetchXML.
 
 > [!div class="nextstepaction"]
-> [Retrieve data with FetchXml](retrieve-data.md)
+> [Retrieve data with FetchXml](retrieve-data.md).
 
 [!INCLUDE [footer-banner](../../../includes/footer-banner.md)]

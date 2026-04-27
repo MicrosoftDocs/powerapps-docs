@@ -36,7 +36,7 @@ The following table describes the attributes of `NavigationProperty` elements.
 
 ## Single-valued navigation properties
 
-When a navigation property `Type` refers to a single value, it represents a one-to-many relationship that creates a reference to another table record. This relationship is commonly called a *lookup*. The following example is the `account` table `createdby` navigation property:
+When a navigation property `Type` refers to a single value, it represents a many-to-one relationship that creates a reference to another table record. This relationship is commonly called a *lookup*. The following example is the `account` table `createdby` navigation property:
 
 ```xml
 <NavigationProperty 
@@ -113,7 +113,7 @@ In these cases, setting the value of any of the single-valued navigation propert
 
 ## Collection-valued navigation properties
 
-When a navigation property `Type` refers to a collection value, it represents a many-to-one or many-to-many relationship. The following example is the account entity `Account_Tasks` navigation property:
+When a navigation property `Type` refers to a collection value, it represents a one-to-many or many-to-many relationship. The following example is the account entity `Account_Tasks` navigation property:
 
 ```xml
 <NavigationProperty 
@@ -127,9 +127,9 @@ This navigation property connects an `account` record to many `task` records. Ea
 
 The way you work with collection-valued navigation properties using OData is the same regardless of whether the relationship is one-to-many or many-to-many. Both are considered collections and you interact with them the same way.
 
-### Many-to-one relationships
+### One-to-many relationships
 
-A many-to-one relationship is the mirror image of the one-to-many relationship. It has a partner single-valued navigation property. In the earlier [single-valued navigation properties](#single-valued-navigation-properties) example, we looked at the `createdby` single-valued navigation property for the `account` entity type.
+A one-to-many relationship is the mirror image of the many-to-one relationship. It has a partner single-valued navigation property. In the earlier [single-valued navigation properties](#single-valued-navigation-properties) example, we looked at the `createdby` single-valued navigation property for the `account` entity type.
 
 In the `systemuser` entity type, the collection-valued navigation property partner named `lk_accountbase_createdby` exists.
 

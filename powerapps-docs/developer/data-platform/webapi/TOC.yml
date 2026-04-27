@@ -116,11 +116,15 @@
     href: create-update-entity-relationships-using-web-api.md
   - name: Use multi-table lookup columns
     href: multitable-lookup.md
+  - name: multi-table lookup sample
+    href: samples/multi-table-lookup-powershell.md
   - name: Work with choices (option sets)
     href: create-update-optionsets.md
-  - name: Web API table schema operations sample
+  - name: HTTP sample
     href: web-api-metadata-operations-sample.md
-  - name: Web API table schema operations sample (C#)
+  - name: PowerShell sample
+    href: samples/metadata-operations-powershell.md
+  - name: C# sample
     href: samples/webapiservice-metadata-operations.md
 - name: Use Insomnia with Web API
   href: insomnia.md

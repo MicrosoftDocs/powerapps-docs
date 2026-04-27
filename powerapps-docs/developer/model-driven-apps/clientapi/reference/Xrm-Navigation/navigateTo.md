@@ -1,15 +1,15 @@
 ---
 title: "navigateTo (Client API reference) in model-driven apps"
-description: Includes description and supported parameters for the navigateTo method.
+description: "Learn how to use Xrm.Navigation.navigateTo to open entity records, lists, dashboards, and custom pages in model-driven apps. See syntax, parameters, and examples."
 author: sriharibs-msft
 ms.author: srihas
-ms.date: 01/12/2026
+ms.date: 04/09/2026
 ms.reviewer: jdaly
 ms.topic: reference
 search.audienceType: 
   - developer
 contributors:
-  - JimDaly
+  - jasongre
 ---
 # navigateTo (Client API reference)
 
@@ -122,17 +122,19 @@ The custom page object contains the following values.
 
 Use this object as the `pageInput` parameter when you want to open a [generative page](../../../../../maker/model-driven-apps/generative-pages.md).
 
+To use `recordId`, `entityName`, or `data`, the target generative page must be [set up to accept input parameters](../../../../../maker/model-driven-apps/generative-pages.md#set-up-a-page-to-accept-input-parameters).
+
 The generative page object contains the following values.
 
 | Name | Type | Description |
 | --- | --- | --- |
 | `pageType` | String | Specify `generative`. |
 | `pageId` | String | The ID of the generative page to open. |
+| `recordId` | String | (Optional) The GUID of a record to pass to the page. |
+| `entityName` | String | (Optional) The logical name of the Dataverse table corresponding to the `recordId`. |
+| `data` | Object | (Optional) A JSON object containing additional custom parameters to pass to the page. |
 
-> [!NOTE]
-> Navigating to a generative page by using `navigateTo` currently **doesn't support passing initialization or contextual data** (such as table name, record ID, or custom parameters). The generative page opens without context.
-
-
+[See examples showing how to navigate to and from a generative page using client API](../../navigate-to-generative-page-examples.md)
 
 ### `navigationOptions` parameter
 
@@ -140,9 +142,9 @@ The `navigationOptions` object contains the following values.
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `target` | Number | Specify `1` to open the page inline. Specify `2` to open the page in a dialog.<br /> Also, rest of the values (width, height, and position) are valid only if you specify `2` in this value (open page in a dialog).<br />**Note**: You can only open entity lists inline. You can open entity records, web resources, and generative pages either inline or in a dialog. |
-| `width` | Number or Object | (Optional) The width of dialog. To specify the width in pixels, just type a numeric value. To specify the width in percentage, specify an object of type SizeValue with the following properties:<br />- `value`: The numerical value of type Number.<br />- `unit`: The unit of measurement of type String. Specify `%` or `px`. Default value is `px`.|
-| `height` | Number or Object | (Optional) The height of dialog. To specify the height in pixels, just type a numeric value. To specify the width in percentage, specify an object of type SizeValue with the following properties:<br />- value: The numerical value of type Number.<br />- `unit`: The unit of measurement of type String. Specify `%` or `px`. Default value is `px`.|
+| `target` | Number | Specify `1` to open the page inline. Specify `2` to open the page in a dialog.<br /> Also, the rest of the values (width, height, and position) are valid only if you specify `2` in this value (open page in a dialog).<br />**Note**: You can only open entity lists inline. You can open entity records, web resources, and generative pages either inline or in a dialog. |
+| `width` | Number or Object | (Optional) The width of dialog. To specify the width in pixels, type a numeric value. To specify the width in percentage, specify an object of type SizeValue with the following properties:<br />- `value`: The numerical value of type Number.<br />- `unit`: The unit of measurement of type String. Specify `%` or `px`. Default value is `px`.|
+| `height` | Number or Object | (Optional) The height of dialog. To specify the height in pixels, type a numeric value. To specify the width in percentage, specify an object of type SizeValue with the following properties:<br />- value: The numerical value of type Number.<br />- `unit`: The unit of measurement of type String. Specify `%` or `px`. Default value is `px`.|
 | `position` | Number | (Optional) Specify `1` to open the dialog in center; `2` to open the dialog on the far side. Default is `1` (center). |
 | `title` | String | (Optional) The dialog title on top of the center or side dialog. |
 
@@ -258,9 +260,36 @@ Xrm.Navigation.navigateTo(pageInput, navigationOptions).then(
 );
 ```
 
+### Example 5: Open a generative page with input parameters in a dialog
+
+Opens a generative page as a centered dialog, passing a record ID, entity name, and custom data parameters. The generative page must be [set up to accept these parameters](../../../../../maker/model-driven-apps/generative-pages.md#set-up-a-page-to-accept-input-parameters).
+
+```javascript
+var pageInput = {
+    pageType: "generative",
+    pageId: "<genPageID>", // replace with the ID of your generative page
+    recordId: "00aa00aa-bb11-cc22-dd33-44ee44ee44ee", // replace with actual record GUID
+    entityName: "account",
+    data: { status: "active", category: "premium" }
+};
+var navigationOptions = {
+    target: 2,
+    height: {value: 80, unit: "%"},
+    width: {value: 70, unit: "%"},
+    position: 1
+};
+Xrm.Navigation.navigateTo(pageInput, navigationOptions).then(
+    function success() {
+            // Run code on success
+    },
+    function error() {
+            // Handle errors
+    }
+);
+```
+
 ### Related articles
 
 [Xrm.Navigation](../xrm-navigation.md)   
+[Navigate to and from a generative page](../../navigate-to-generative-page-examples.md)   
 [Navigating to and from a custom page (preview)](../../navigate-to-custom-page-examples.md)
-
-[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

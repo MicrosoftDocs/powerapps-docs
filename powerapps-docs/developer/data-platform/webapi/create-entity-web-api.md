@@ -1,7 +1,7 @@
 ---
 title: Create a table row using the Web API
-description: Learn how to use the Web API to send a POST request to create a table row in Microsoft Dataverse.
-ms.date: 12/16/2024
+description: Learn how to use the Web API to send a POST request to create table rows in Microsoft Dataverse, including deep insert and associating rows on create.
+ms.date: 03/09/2026
 ms.service: powerapps
 ms.topic: how-to
 author: MsSQLGirl
@@ -17,16 +17,16 @@ contributors:
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-Use a `POST` request to send data to create a table row (entity record). You can create multiple related table rows in a single operation using *deep insert*. You also need to know how to set values to associate a new table row to existing tables using the `@odata.bind` annotation.  
+Send a `POST` request to the Web API entityset resource to create a table row (entity record) in Microsoft Dataverse. You can create multiple related table rows in a single operation by using *deep insert*. You also need to know how to set values to associate a new table row with existing tables by using the `@odata.bind` annotation.
 
 > [!NOTE]
-> For information about how to create and update the table (entity) definitions using the Web API, see [Create and update table definitions using the Web API](create-update-entity-definitions-using-web-api.md).
+> For information about how to create and update the table (entity) definitions by using the Web API, see [Create and update table definitions using the Web API](create-update-entity-definitions-using-web-api.md).
 
 <a name="bkmk_basicCreate"></a>
 
 ## Basic create
 
- This example creates an new account entity record. `accounts` is the entity set name for the [account EntityType](xref:Microsoft.Dynamics.CRM.account). The response `OData-EntityId` header contains the URI of the created entity.
+ This example creates a new account entity record. `accounts` is the entity set name for the [account EntityType](xref:Microsoft.Dynamics.CRM.account). The response `OData-EntityId` header contains the URI of the created entity.
 
  **Request:**
 
@@ -58,40 +58,40 @@ OData-EntityId: [Organization URI]/api/data/v9.2/accounts(00aa00aa-bb11-cc22-dd3
 
 ```
 
-To create an record you must identify the valid [entity set name](web-api-service-documents.md#entity-set-name), property names, and types. 
+To create a record, you must identify the valid [entity set name](web-api-service-documents.md#entity-set-name), property names, and types. 
 
 > [!NOTE]
 > In [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), when viewing a list of tables, select **Advanced** > **Tools**. Select **Copy set name** to copy the entity set name for the table.
 > 
-> You can also select **API link to table data** to view the top 10 rows of data in your browser. This works best when you have a browser extension like [JSON formatter](https://microsoftedge.microsoft.com/addons/search/JSON%20formatter) installed that will format the JSON text data returned.
+> You can also select **API link to table data** to view the top 10 rows of data in your browser. This feature works best when you have a browser extension like [JSON formatter](https://microsoftedge.microsoft.com/addons/search/JSON%20formatter) installed that formats the JSON text data returned.
 >
-> The entity set name isn't always the same as the collection name or plural name of the table. It is stored a separate property called `EntitySetName`.
+> The entity set name isn't always the same as the collection name or plural name of the table. It's stored in a separate property called `EntitySetName`.
 > 
-> When you create a new table row, you can't insert a non-primary image at the same time. For a non-primary image to be added, the row must already exist. [Learn more about primary images](../image-column-data.md#primary-images)
+> When you create a new table row, you can't insert a non-primary image at the same time. To add a non-primary image, the row must already exist. [Learn more about primary images](../image-column-data.md#primary-images).
 
-For all system tables and attributes (table columns), you can find this information in the article for that entity in the [Web API Entity Type Reference](xref:Microsoft.Dynamics.CRM.EntityTypeIndex). For custom tables or columns, refer to the definition of that table in the [CSDL $metadata document](web-api-service-documents.md#csdl-metadata-document). More information: [Web API EntityTypes](web-api-entitytypes.md)
+For all system tables and attributes (table columns), you can find this information in the article for that entity in the [Web API Entity Type Reference](xref:Microsoft.Dynamics.CRM.EntityTypeIndex). For custom tables or columns, refer to the definition of that table in the [CSDL $metadata document](web-api-service-documents.md#csdl-metadata-document). More information: [Web API EntityTypes](web-api-entitytypes.md).
 
 ### Setting the primary key value
 
-Each table has a unique identifier primary key column which you can specify when creating a row. In most cases you should allow the system to set this for you because the values generated by the system are optimized for best performance.
+Each table has a unique identifier primary key column that you can specify when creating a row. In most cases, you should allow the system to set this value for you because the values generated by the system are optimized for best performance.
 
 Dataverse stores primary key data in telemetry to help maintain the service. If you specify customized primary key values, don't use sensitive information in those values.
 
-With elastic tables, you can create records with duplicate primary key values and different `partitionid` values. However, this pattern is not compatible with model-driven or canvas Power Apps. [Learn about setting the primary key value with elastic tables](../use-elastic-tables.md#setting-the-primary-key-value)
+By using elastic tables, you can create records with duplicate primary key values and different `partitionid` values. However, this pattern isn't compatible with model-driven or canvas Power Apps. [Learn about setting the primary key value with elastic tables](../use-elastic-tables.md#setting-the-primary-key-value).
 
 <a name="bkmk_createWithDataReturned"></a>
 
 ## Create with data returned
 
-You can compose your `POST` request so that data from the created record is returned with a status of `201 (Created)`. To get this result, you must use the `return=representation` preference in the request headers.
+You can compose your `POST` request so that it returns data from the created record with a status of `201 (Created)`. To get this result, you must use the `return=representation` preference in the request headers.
 
-To control which properties are returned, append the `$select` query option to the URL to the entity set. You may also use `$expand` to return related entities.
+To control which properties are returned, append the `$select` query option to the URL for the entity set. You can also use `$expand` to return related entities.
 
-Nested `$expand` on collection-valued navigation properties will not return data when used with the `return=representation` preference. More information: [Nested $expand on collection-valued navigation properties](query/join-tables.md#nested-expand-on-collection-valued-navigation-properties)
+Nested `$expand` on collection-valued navigation properties doesn't return data when used with the `return=representation` preference. For more information, see [Nested $expand on collection-valued navigation properties](query/join-tables.md#nested-expand-on-collection-valued-navigation-properties).
 
-When an entity is created in this way, the `OData-EntityId` header containing the URI to the created record isn't returned.
+When you create an entity by using this method, the `OData-EntityId` header containing the URI to the created record isn't returned.
 
-This example creates a new account entity and returns the requested data in the response.
+The following example creates a new account entity and returns the requested data in the response.
 
 **Request:**
 
@@ -141,9 +141,9 @@ OData-Version: 4.0
 
 ## Create multiple records in a single request
 
-The fastest way to create multiple records of the same type in a single request is to use the [CreateMultiple action](xref:Microsoft.Dynamics.CRM.CreateMultiple). At the time of this writing the [CreateMultiple action](xref:Microsoft.Dynamics.CRM.CreateMultiple). Not all standard tables support this action, but all elastic tables do.
+To quickly create multiple records of the same type in a single request, use the [CreateMultiple action](xref:Microsoft.Dynamics.CRM.CreateMultiple). At the time of this writing, [CreateMultiple action](xref:Microsoft.Dynamics.CRM.CreateMultiple) isn't supported by all standard tables, but all elastic tables support it.
 
-More information:
+For more information, see:
 
 - [Bulk Operation messages](../bulk-operations.md)
 - [Sample: SDK for .NET Use bulk operations](samples/create-update-multiple.md)
@@ -153,17 +153,17 @@ More information:
 
 ## Create related table rows in one operation
 
- With standard tables, you can create entities related to each other by defining them as navigation properties values. This pattern is known as *deep insert*. This approach has two advantages. It's more efficient, because it replaces replacing multiple simpler creation and association operations with one combined *atomic* operation. An atomic operation succeeds or fails entirely.
+ By using standard tables, you can create entities that relate to each other by defining them as navigation property values. This pattern is known as *deep insert*. This approach has two advantages. It's more efficient because it replaces multiple simpler creation and association operations with one combined *atomic* operation. An atomic operation succeeds or fails entirely.
 
- As with a basic create, the response `OData-EntityId` header contains the URI of the created entity. The URIs for the related entities created aren't returned. You can get the primary key values of the records if you use the `Prefer: return=representation` header so it returns the values of the created record. [Learn more about creating records with data returned](#create-with-data-returned)
+ As with a basic create, the response `OData-EntityId` header contains the URI of the created entity. The URIs for the related entities created aren't returned. You can get the primary key values of the records by using the `Prefer: return=representation` header so it returns the values of the created record. [Learn more about creating records with data returned](#create-with-data-returned).
 
  For example, the following request body posted to the `accounts` entity set creates a total of four records in the context of creating an account.
 
-- A contact is created with `firstname` and `lastname` values because it's defined as an object property of the single-valued navigation property named `primarycontactid`.
+- A contact is created with `firstname` and `lastname` values because you define it as an object property of the single-valued navigation property named `primarycontactid`.
 
-- An opportunity related to the account is created because it's defined as an object in an array that's set to the value of a collection-valued navigation property named `opportunity_customer_accounts`.
+- An opportunity related to the account is created because you define it as an object in an array that's set to the value of a collection-valued navigation property named `opportunity_customer_accounts`.
 
-- A task related to the opportunity is created because it's defined an object in an array that's set to the value of a collection-valued navigation property named `Opportunity_Tasks`.
+- A task related to the opportunity is created because you define it as an object in an array that's set to the value of a collection-valued navigation property named `Opportunity_Tasks`.
 
 **Request:**
 
@@ -209,11 +209,11 @@ OData-EntityId: [Organization URI]/api/data/v9.2/accounts(11bb11bb-cc22-dd33-ee4
 
 ## Associate table rows on create
 
- To associate new records with existing records when they're created, use the `@odata.bind` annotation to set the value of navigation properties.
+ To associate new records with existing records when you create them, use the `@odata.bind` annotation to set the value of navigation properties.
 
  The following request body posted to the `accounts` entity set creates an account associated with an existing contact with the `contactid` value of `00000000-0000-0000-0000-000000000001` and two existing tasks with `activityid` values of `00000000-0000-0000-0000-000000000002` and `00000000-0000-0000-0000-000000000003`.
 
-This request is using the `Prefer: return=representation` header so it returns the values of the created record. More information: [Create with data returned](#create-with-data-returned)
+This request uses the `Prefer: return=representation` header so it returns the values of the created record. For more information, see [Create with data returned](#create-with-data-returned).
 
 **Request:**
 
@@ -277,13 +277,13 @@ Preference-Applied: return=representation
 
 ## Check for duplicate records
 
-By default, duplicate detection is suppressed when you're creating records. To enable duplicate detection, include the `MSCRM.SuppressDuplicateDetection: false` header with your `POST` request to enable duplicate detection. Duplicate detection only applies when the following conditions are true:
+By default, the system suppresses duplicate detection when you create records. To enable duplicate detection, include the `MSCRM.SuppressDuplicateDetection: false` header with your `POST` request. Duplicate detection only applies when the following conditions are true:
 
 - The organization has enabled duplicate detection.
 - The entity is enabled for duplicate detection.
 - Active duplicate detection rules are applied.
 
-More information:
+For more information, see:
 
 - [Detect duplicate data using code](../detect-duplicate-data-with-code.md)
 - [Detect duplicate data using Web API](manage-duplicate-detection-create-update.md#bkmk_create)
@@ -305,11 +305,11 @@ GET [Organization URI]/api/data/v9.2/entitymaps?
 $select=sourceentityname,targetentityname&$orderby=sourceentityname
 ```
 
-Creating a new record from another record is a two-step process. First, use the [InitializeFrom function](xref:Microsoft.Dynamics.CRM.InitializeFrom) to return property values mapped from the original record. Then, combine the response data returned in the [InitializeFrom function](xref:Microsoft.Dynamics.CRM.InitializeFrom) with any changes you want to make and then `POST` the data to create the record.
+Creating a new record from another record is a two-step process. First, use the [InitializeFrom function](xref:Microsoft.Dynamics.CRM.InitializeFrom) to return property values mapped from the original record. Then, combine the response data returned in the [InitializeFrom function](xref:Microsoft.Dynamics.CRM.InitializeFrom) with any changes you want to make, and `POST` the data to create the record.
 
-The following example shows how to create an account record using the values of an existing account record with `accountid` value equal to `00000000-0000-0000-0000-000000000001`.
+The following example shows how to create an account record by using the values of an existing account record with an `accountid` value equal to `00000000-0000-0000-0000-000000000001`.
 
-### Step 1: Get the data with InitializeFrom
+### Step 1: Get the data by using InitializeFrom
 
 **Request:**
 
@@ -340,9 +340,9 @@ Accept: application/json
 
 ### Step 2: Create the new record
 
-The response received from `InitializeFrom` function consists of values of mapped columns between the source table and target table and the GUID of the parent record. The column mapping between tables that have a relationship is different for different tables and is customizable, so the response from `InitializeFrom` function request will vary for different organizations.
+The response you receive from `InitializeFrom` includes values of mapped columns between the source table and target table, and the GUID of the parent record. Column mapping between tables that have a relationship differs for different tables and organizations, so the response from `InitializeFrom` varies.
 
-Other property values can also be set and/or modified for the new record by adding them in the JSON request body, as shown in the following example:
+You can set or modify other property values for the new record by adding them in the JSON request body, as shown in the following example:
 
 ```http
 POST [Organization URI]/api/data/v9.2/accounts
@@ -368,9 +368,9 @@ Accept: application/json
 
 ## Create documents in storage partitions
 
-If you're creating large numbers of records for elastic tables, you can create the entities in storage partitions to speed up access to those entity records.
+If you create large numbers of records for elastic tables, create the entities in storage partitions to speed up access to those entity records.
 
-[Learn about creating records in an elastic table](../use-elastic-tables.md#create-a-record-in-an-elastic-table)
+[Learn about creating records in an elastic table](../use-elastic-tables.md#create-a-record-in-an-elastic-table).
 
 ### See also
 

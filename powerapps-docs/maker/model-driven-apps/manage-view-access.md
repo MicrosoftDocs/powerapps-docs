@@ -1,8 +1,8 @@
 ---
 title: "Manage access to public system views"
-description: "Learn how to managed access with security roles to public system views for model-driven apps in Microsoft Power Apps"
+description: "Learn how to managed access with security roles to public system views for model-driven apps in Power Apps"
 ms.custom: ""
-ms.date: 08/21/2025
+ms.date: 04/06/2026
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -19,11 +19,11 @@ search.audienceType:
 ---
 # Manage access to public system views 
 
-Admins can manage views that users can access in model-driven apps with security roles. When a user plays a model-driven app, the user only has access to the system views that apply to the security roles that they're assigned to.
+Admins can manage the views that users can access in model-driven apps by using security roles. When a user plays a model-driven app, they only have access to the system views that apply to the security roles they're assigned.
 
 System views are special views that model-driven apps depend on, which exist for system tables or are automatically created when you create custom tables. These views have specific purposes and some additional capabilities. By default, all system views are for **everyone**. When a Power Platform admin manages a view with a security role, only the users who are assigned with the selected security role are able to see the view in the view selector. The other system views aren't filtered from the view selector dropdown list. Users can still access all the views when they navigate to the **Manage and share views** option.
 
-After a Power Platform admin turns on the manage table list views feature, users can set their own default view from the list of views that the admin manages and their own personal views from the Manage and share views option in a model-driven app.
+After a Power Platform admin turns on the manage table list views feature, users can set their own default view from the list of views that the admin manages and their own personal views from the **Manage and share views** option in a model-driven app.
 
 :::image type="content" source="media/manage-share-views.png" alt-text="Manage and share views feature in a model-driven app":::
 
@@ -68,7 +68,10 @@ Examples of public views:
 1. You manage public views with security roles. If you need to create new security roles, go to [Security roles and privileges](/power-platform/admin/security-roles-privileges) for more information about security roles.
 1. Create a solution and add the tables and their corresponding views that you manage.
 1. Export the solution.
-1. Import the solution into your production environment. Inform your users that their system views are now filtered based on their security role assignment.
+1. Import the solution into your production environment. 
+
+> [!TIP]
+> Inform your users that their system views are now filtered based on their security role assignment.
 
 ## Manage public views with security roles
 
@@ -80,7 +83,7 @@ All system views can be managed with security roles. Once they’re managed, use
 ### Manage system views with security roles
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
-1. On the left navigation pane, select **Solutions**, and then open the solution that has the table with the view you want to manage. If the item isn’t in the side panel pane, select …More and then select the item you want.
+1. On the left navigation pane, select **Solutions**, and then open the solution that has the table with the view you want to manage. If the item isn't in the side panel, select **...More** and then select the item you want.
 1. Open a table, such as the account table, and then select the **Views** area.
 1. Select the nondefault public view that you want, and then on the command bar, select **View settings**.
 1. Select the **Specific security roles** option.
@@ -91,7 +94,7 @@ All system views can be managed with security roles. Once they’re managed, use
 > [!NOTE]
 > When you make changes to the 'EnableRoleBasedSystemViews' and **View settings**:
 >
-> 1. Setting the OrganizationSettingsEditor tool `EnableRoleBasedSystemViews' property to **true** is effective immediately.
+> 1. Setting the OrganizationSettingsEditor tool `EnableRoleBasedSystemViews` property to **true** is effective immediately.
 > 2. Setting a view with security roles is effective immediately after you select **Save and publish**.
 > 3. Changing a view setting from 'Specify security role' to 'Everyone' can take up to 24 hours to be effective or until the user signs out and back in.
 >

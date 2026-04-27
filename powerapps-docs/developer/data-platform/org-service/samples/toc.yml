@@ -1,8 +1,6 @@
 items:
   - name: Activities
     items:
-      - name: "Convert a fax to a task"
-        href: convert-fax-task.md
       - name: "Create an email using a template"
         href: create-email-template.md
       - name: "Create, retrieve, update, and delete an email attachment"
@@ -87,18 +85,6 @@ items:
     items:
       - name: Synchronize data with external systems using change tracking
         href: synchronize-data-external-systems-using-change-tracking.md
-  - name: Charts & dashboards
-    items:
-      - name: Assign chart to another user
-        href: assign-chart-to-another-user.md
-      - name: Assign a user-owned dashboard to another user
-        href: assign-dashboard-to-another-user.md
-      - name: Create, retrieve, update and delete a dashboard
-        href: create-retrieve-update-delete-dashboards.md
-      - name: Create, retrieve, update and delete chart
-        href: create-retrieve-update-delete-charts.md
-      - name: Retrieve all charts attached to a table
-        href: retrieve-charts-attached-to-entity.md
   - name: Connections
     items:
       - name: Create a connection
