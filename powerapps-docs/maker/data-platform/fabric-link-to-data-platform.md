@@ -146,7 +146,7 @@ After confirmation:
 
 > [!IMPORTANT]
 >
-> - Some system tables and tables required by Microsoft add-ins can't be removed. More information: [Are there system tables that are automatically synchronized and can't be unlinked?](fabric-link-faq.yml#are-there-system-tables-that-are-automatically-synchronized-and-cant-be-unlinked)
+> - Some system tables and tables required by Microsoft add-ins can't be removed. More information: [Are there system tables that are automatically synchronized and can't be unlinked?](fabric-link-faq.yml#are-there-system-tables-that-are-automatically-synchronized-and-can-t-be-unlinked)
 > - Removing a table doesn't delete the table in Dataverse; it only removes the OneLake shortcut and stops data sync.
 > - If you need to add tables later, repeat the same steps and check the tables you want to include. More information: [Manage link to Fabric](#manage-link-to-fabric).
 
