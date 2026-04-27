@@ -17,7 +17,7 @@ contributors:
 [!INCLUDE[./includes/openForm-description.md](./includes/openForm-description.md)]
 
 > [!NOTE]
-> To open a main form as a dialog, use the [navigateTo](navigateTo.md) method instead. More information: [Open main form in a dialog using client API](../../../customize-entity-forms.md#open-main-form-in-a-dialog-using-client-api)
+> To open a main form as a dialog, use the [navigateTo](navigateTo.md) method instead. More information: [Open main form in a dialog using client API](../../../customize-entity-forms.md#open-main-form-in-a-dialog-by-using-client-api)
 
 ## Syntax
 
@@ -28,8 +28,8 @@ contributors:
 |Name|Type|Required|Description|
 |---|---|---|---|
 |`entityFormOptions`|Object|Yes|Form options for opening the form. See [entityFormOptions object](#entityformoptions-object)|
-|`formParameters`|Object|No|A dictionary object that passes extra parameters to the form. Invalid parameters will cause an error.<br /><br />For information about passing parameters to a form, see [Set column values using parameters passed to a form](../../../set-field-values-using-parameters-passed-form.md) and [Configure a form to accept custom querystring parameters](../../../configure-form-accept-custom-querystring-parameters.md).|
-|`successCallback`|Function|No|A function to execute when the record is saved in the quick create form.This function is passed an object as a parameter. The object has a `savedEntityReference` array with the following properties to identify the record(s) displayed or created:<br /> - `entityType`: The logical name of the table.<br /> - `id`: A string representation of a GUID value for the record.<br /> - `name`: The primary column value of the record displayed or created.<br /><br />**NOTE**: <br /> - The `successCallback` function is not executed when you open a form for an existing or new record.<br /> - The `successCallback` function is executed only when you save a record in a quick create form that was opened using the openForm method.|
+|`formParameters`|Object|No|A dictionary object that passes extra parameters to the form. Invalid parameters cause an error.<br /><br />For information about passing parameters to a form, see [Set column values using parameters passed to a form](../../../set-field-values-using-parameters-passed-form.md) and [Configure a form to accept custom querystring parameters](../../../configure-form-accept-custom-querystring-parameters.md).|
+|`successCallback`|Function|No|A function to execute when the record is saved in the quick create form. This function accepts an object as a parameter. The object has a `savedEntityReference` array with the following properties to identify the records displayed or created:<br /> - `entityType`: The logical name of the table.<br /> - `id`: A string representation of a GUID value for the record.<br /> - `name`: The primary column value of the record displayed or created.<br /><br />**NOTE**: <br /> - The `successCallback` function isn't executed when you open a form for an existing or new record.<br /> - The `successCallback` function is executed only when you save a record in a quick create form that was opened using the openForm method.|
 |`errorCallback`|Function|No|A function to execute when the operation fails.|
 
 
@@ -43,15 +43,15 @@ The object contains the following values:
 |`entityName`|String|Yes|Logical name of the table to display the form for.|
 |`entityId`|String|No|ID of the table record to display the form for.|
 |`formId`|String|No|ID of the form instance to be displayed.|
-|`cmdbar`|Bool|No| Indicates whether to display the command bar. If you do not specify this parameter, the command bar is displayed by default. Requires passing `openInNewWindow` parameter as true.|
-|`createFromEntity`|Lookup|No|Designates a record that will provide default values based on mapped column values. The lookup object has the following String properties: `entityType`, `id`, and `name` (optional).|
-|`openInNewWindow`|Bool|No|Indicates whether to display form in a new window or a new tab. If you specify `true` and do not specify values for height or width, the form will display in a new tab. Opening a form in a new window or a new tab makes the rendering of the form slow compared to opening the form on the same tab; consider opening a form in the main form dialog instead. This property is currently not supported for Quick Create forms, as they can not be opened in a new window or tab.|
+|`cmdbar`|Bool|No| Indicates whether to display the command bar. If you don't specify this parameter, the command bar is displayed by default. Requires passing `openInNewWindow` parameter as true.|
+|`createFromEntity`|Lookup|No|Designates a record that provides default values based on mapped column values. The lookup object has the following String properties: `entityType`, `id`, and `name` (optional).|
+|`openInNewWindow`|Bool|No|Indicates whether to display form in a new window or a new tab. If you specify `true` and don't specify values for height or width, the form displays in a new tab. Opening a form in a new window or a new tab makes the rendering of the form slow compared to opening the form on the same tab; consider opening a form in the main form dialog instead. This property is currently not supported for Quick Create forms, as they cannot be opened in a new window or tab.|
 |`height`|Number|No|Height of the form window to be displayed in pixels. Requires passing `openInNewWindow` parameter as true.|
 |`width`|Number|No|Width of the form window to be displayed in pixels. Requires passing `openInNewWindow` parameter as true.|
-|`navbar`|String|No|Controls whether the navigation bar is displayed and whether application navigation is available using the areas and subareas defined in the sitemap. Valid values are: `on`, `off`, or `entity`. Requires passing openInNewWindow parameter as true.<br />- `on`: The navigation bar is displayed. This is the default behavior if the navbar parameter is not used.<br />- `off`: The navigation bar is not displayed. People can navigate using other user interface elements or the back and forward buttons.<br />- `entity`: On a form, only the navigation options for related tables are available. After navigating to a related table, a back button is displayed in the navigation bar to allow returning to the original record.|
+|`navbar`|String|No|Controls whether the navigation bar is displayed and whether application navigation is available using the areas and subareas defined in the sitemap. Valid values are: `on`, `off`, or `entity`. Requires passing openInNewWindow parameter as true.<br />- `on`: The navigation bar is displayed. This is the default behavior if the navbar parameter isn't used.<br />- `off`: The navigation bar isn't displayed. People can navigate using other user interface elements or the back and forward buttons.<br />- `entity`: On a form, only the navigation options for related tables are available. After navigating to a related table, a back button is displayed in the navigation bar to allow returning to the original record.|
 |`relationship`|Object|No|Define a relationship object to display the related records on the form. See [relationship object](#relationship-object)|
 |`selectedStageId`|String|No|ID of the selected stage in business process instance.|
-|`useQuickCreateForm`|Bool|No| Indicates whether to open a quick create form. The table must have the **Allow Quick Create** option enabled for the quick create form to be displayed and you must also add the table and the quick create form to your app. If you do not specify the value of `useQuickCreateForm`, the default will be set to `false`.|
+|`useQuickCreateForm`|Bool|No| Indicates whether to open a quick create form. The table must have the **Allow Quick Create** option enabled for the quick create form to be displayed and you must also add the table and the quick create form to your app. If you don't specify the value of `useQuickCreateForm`, the default is set to `false`.|
 
 ### relationship object
 
@@ -128,7 +128,7 @@ Xrm.Navigation.openForm(entityFormOptions, formParameters).then(
 
 ### Example 3: Open a form for new record (complex lookup)
 
-The following sample code opens a activity form with some pre-populated values (including a complex lookup) to create a new record:
+The following sample code opens an activity form with some pre-populated values (including a complex lookup) to create a new record:
 
 ```JavaScript
 var entityFormOptions = {};

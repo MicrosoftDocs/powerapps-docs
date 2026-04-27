@@ -1,7 +1,7 @@
 ---
 title: "Insert, update, delete, and order global choices (Microsoft Dataverse) | Microsoft Docs"
 description: "Code samples to show how to insert, update, delete, and order global choices." 
-ms.date: 04/03/2022
+ms.date: 03/04/2026
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: jdaly
@@ -20,88 +20,123 @@ These code samples show you how to insert, update, delete, and order global choi
 
 ## Insert a new choice
 
- The following code sample shows how to add a new choice to global choices by using
+ The following static `InsertOptionValue` method shows how to add a new choice to global choices by using
  <xref:Microsoft.Xrm.Sdk.Messages.InsertOptionValueRequest>:  
   
 ```csharp
-// Use InsertOptionValueRequest to insert a new option into a 
-// global option set.
-InsertOptionValueRequest insertOptionValueRequest =
-    new InsertOptionValueRequest
+static int InsertOptionValue(
+    IOrganizationService service,
+    string globalOptionSetName,
+    Label value)
+{
+    var request = new InsertOptionValueRequest
     {
-        OptionSetName = _globalOptionSetName,
-        Label = new Label("New Picklist Label", _languageCode)
+        OptionSetName = globalOptionSetName,
+        Label = value
     };
 
-// Execute the request and store the newly inserted option value 
-// for cleanup, used in the later part of this sample.
-_insertedOptionValue = ((InsertOptionValueResponse)_serviceProxy.Execute(
-    insertOptionValueRequest)).NewOptionValue;
+    int newOptionValue = ((InsertOptionValueResponse)service.Execute(request)).NewOptionValue;
 
-//Publish the OptionSet
-PublishXmlRequest pxReq2 = new PublishXmlRequest { ParameterXml = String.Format("<importexportxml><optionsets><optionset>{0}</optionset></optionsets></importexportxml>", _globalOptionSetName) };
-_serviceProxy.Execute(pxReq2);
+    // Publish the OptionSet
+    service.Execute(new PublishXmlRequest
+    {
+        ParameterXml = string.Format(
+            "<importexportxml><optionsets><optionset>{0}</optionset></optionsets></importexportxml>",
+            globalOptionSetName)
+    });
+
+    return newOptionValue;
+}
 ```
   
 <a name="BKMK_UpdateAnOption"></a>
 
 ## Update a choice
 
- The following code sample shows how to update a choice in global choices by using
- <xref:Microsoft.Xrm.Sdk.Messages.UpdateOptionValueRequest>:  
-  
+ The following static `UpdateOptionValue` method shows how to update a choice in global choices by using
+ <xref:Microsoft.Xrm.Sdk.Messages.UpdateOptionValueRequest>:
+
 ```csharp
-// In order to change labels on option set values (or delete) option set
-// values, you must use UpdateOptionValueRequest 
-// (or DeleteOptionValueRequest).
-UpdateOptionValueRequest updateOptionValueRequest =
-    new UpdateOptionValueRequest
+static void UpdateOptionValue(
+    IOrganizationService service,
+    string globalOptionSetName,
+    int value,
+    Label label)
+{
+    service.Execute(new UpdateOptionValueRequest
     {
-        OptionSetName = _globalOptionSetName,
-        // Update the second option value.
-        Value = optionList[1].Value.Value,
-        Label = new Label("Updated Option 1", _languageCode)
-    };
+        OptionSetName = globalOptionSetName,
+        Value = value,
+        Label = label
+    });
 
-_serviceProxy.Execute(updateOptionValueRequest);
-
-//Publish the OptionSet
-PublishXmlRequest pxReq3 = new PublishXmlRequest { ParameterXml = String.Format("<importexportxml><optionsets><optionset>{0}</optionset></optionsets></importexportxml>", _globalOptionSetName) };
-_serviceProxy.Execute(pxReq3);
+    // Publish the OptionSet
+    service.Execute(new PublishXmlRequest
+    {
+        ParameterXml = string.Format(
+            "<importexportxml><optionsets><optionset>{0}</optionset></optionsets></importexportxml>",
+            globalOptionSetName)
+    });
+}
 ```
   
 <a name="BKMK_DeleteAnOption"></a>
 
 ## Delete a choice
 
- The following sample shows how to delete a choice in global choies by using 
- <xref:Microsoft.Xrm.Sdk.Messages.DeleteOptionValueRequest>:  
-  
-```csharp
-// Use the DeleteOptionValueRequest message 
-// to remove the newly inserted label.
-DeleteOptionValueRequest deleteOptionValueRequest =
-    new DeleteOptionValueRequest
-{
-    OptionSetName = _globalOptionSetName,
-    Value = _insertedOptionValue
-};
+ The following static `DeleteOptionValue` method shows how to delete a choice in global choices by using
+ <xref:Microsoft.Xrm.Sdk.Messages.DeleteOptionValueRequest>:
 
-// Execute the request.
-_serviceProxy.Execute(deleteOptionValueRequest);
+```csharp
+static void DeleteOptionValue(
+    IOrganizationService service,
+    string globalOptionSetName,
+    int value)
+{
+    service.Execute(new DeleteOptionValueRequest
+    {
+        OptionSetName = globalOptionSetName,
+        Value = value
+    });
+}
 ```  
   
 <a name="BKMK_OrderOptions"></a>
 
 ## Order of choices
   
- The following sample shows how to set the order of choices in global choices by using
- <xref:Microsoft.Xrm.Sdk.Messages.OrderOptionRequest>:  
-  
+ The following static `OrderOptions` method shows how to set the order of choices in global choices by using
+ <xref:Microsoft.Xrm.Sdk.Messages.OrderOptionRequest>:
+
+```csharp
+static void OrderOptions(
+    IOrganizationService service,
+    string globalOptionSetName,
+    IEnumerable<OptionMetadata> updateOptionList)
+{
+    service.Execute(new OrderOptionRequest
+    {
+        OptionSetName = globalOptionSetName,
+        // Use Select linq function to get only values in an array from the option list.
+        Values = updateOptionList.Select(x => x.Value.Value).ToArray()
+    });
+
+    // Publish the OptionSet
+    service.Execute(new PublishXmlRequest
+    {
+        ParameterXml = string.Format(
+            "<importexportxml><optionsets><optionset>{0}</optionset></optionsets></importexportxml>",
+            globalOptionSetName)
+    });
+}
+```
+
+The following example shows using the static `OrderOptions` method to order a set of options based on the text of the label.
+
 ```csharp
 // Change the order of the original option's list.
 // Use the OrderBy (OrderByDescending) linq function to sort options in  
-// ascending (descending) order according to label text.
+// ascending order according to label text.
 // For ascending order use this:
 var updateOptionList =
     optionList.OrderBy(x => x.Label.LocalizedLabels[0].Label).ToList();
@@ -110,23 +145,8 @@ var updateOptionList =
 // var updateOptionList =
 //      optionList.OrderByDescending(
 //      x => x.Label.LocalizedLabels[0].Label).ToList();
+OrderOptions(service, _globalOptionSetName, updateOptionList)
 
-// Create the request.
-OrderOptionRequest orderOptionRequest = new OrderOptionRequest
-{
-    // Set the properties for the request.
-    OptionSetName = _globalOptionSetName,
-    // Set the changed order using Select linq function 
-    // to get only values in an array from the changed option list.
-    Values = updateOptionList.Select(x => x.Value.Value).ToArray()
-};
-
-// Execute the request
-_serviceProxy.Execute(orderOptionRequest);
-
-//Publish the OptionSet
-PublishXmlRequest pxReq4 = new PublishXmlRequest { ParameterXml = String.Format("<importexportxml><optionsets><optionset>{0}</optionset></optionsets></importexportxml>", _globalOptionSetName) };
-_serviceProxy.Execute(pxReq4);
 ```
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

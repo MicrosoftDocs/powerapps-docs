@@ -273,7 +273,7 @@ To verify, go to the [Power Apps portal](https://make.powerapps.com/?utm_source=
 
 The **Related** menu doesn't show related tables from certain relationships created by Dataverse. These relationships are marked as noncustomizable.
 
-The [AssociatedMenuConfiguration.IsCustomizable property](xref:Microsoft.Xrm.Sdk.Metadata.AssociatedMenuConfiguration.IsCustomizable) indicates whether the relationship can be customized. The easiest way to check is by [querying the relationship using Web API](../data-platform/webapi/query-metadata-web-api.md#querying-relationship-metadata) to view the [AssociatedMenuConfiguration complex type](xref:Microsoft.Dynamics.CRM.AssociatedMenuConfiguration) data.
+The [AssociatedMenuConfiguration.IsCustomizable property](xref:Microsoft.Xrm.Sdk.Metadata.AssociatedMenuConfiguration.IsCustomizable) indicates whether the relationship can be customized. The easiest way to check is by [querying the relationship using Web API](../data-platform/webapi/query-metadata-web-api.md#query-relationship-metadata) to view the [AssociatedMenuConfiguration complex type](xref:Microsoft.Dynamics.CRM.AssociatedMenuConfiguration) data.
 
 Suppose you want to check whether the relationship between the [Business Unit](../data-platform/reference/entities/businessunit.md) and [Goal](../data-platform/reference/entities/goal.md) tables is customizable. The `SchemaName` of this relationship is [business_unit_goal](../data-platform/reference/entities/businessunit.md#BKMK_business_unit_goal). Enter this URL in your browser:
 

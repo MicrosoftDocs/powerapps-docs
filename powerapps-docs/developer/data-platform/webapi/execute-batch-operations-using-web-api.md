@@ -1,7 +1,7 @@
 ---
-title: "Execute batch operations using the Web API (Microsoft Dataverse)| Microsoft Docs"
-description: "Batch operation lets you group multiple operations in a single HTTP request. Read how to execute batch operations using the Web API"
-ms.date: 11/17/2023
+title: "Execute Batch Operations Using the Web API"
+description: "Learn how to execute batch operations using the Web API to group multiple requests into a single HTTP call in Microsoft Dataverse. Get started with examples and code."
+ms.date: 03/09/2026
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: jdaly
@@ -11,35 +11,35 @@ contributors:
   - JimDaly
 ---
 
-# Execute batch operations using the Web API
+# Execute batch operations by using the Web API
 
-You can group multiple operations into a single HTTP request using a batch operation. These operations are performed sequentially in the order they're specified. The order of the responses match the order of the requests in the batch operation.
+You can group multiple operations into a single HTTP request by using a batch operation. Dataverse performs these operations sequentially in the order you specify. The order of the responses matches the order of the requests in the batch operation.
 
-The format to send `$batch` requests is defined in this section of the OData specification: [11.7 Batch Requests](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752313). The content in this article summarizes the specification requirements and provides Dataverse specific information and examples.
+The format for sending `$batch` requests is defined in [11.7 Batch Requests](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752313) in the OData specification. This article summarizes the specification requirements and provides Dataverse-specific information and examples.
   
 <a name="bkmk_Whentousebatchrequests"></a>
 
 ## When to use batch requests
 
-Batch requests provide two capabilities that can be used together:
+Batch requests provide two capabilities that you can use together:
 
 - You can send requests for multiple operations with a single HTTP request.
 
-   - Batch requests can contain up to 1000 individual requests and can't contain other batch requests.
-   - Web API `$batch` requests are equivalent to the `ExecuteMultiple` message available in the SDK for .NET. More information: [Execute multiple requests using the SDK for .NET](../org-service/execute-multiple-requests.md).
+   - Batch requests can contain up to 1,000 individual requests and can't contain other batch requests.
+   - Web API `$batch` requests are equivalent to the `ExecuteMultiple` message available in the SDK for .NET. For more information, see [Execute multiple requests using the SDK for .NET](../org-service/execute-multiple-requests.md).
 
-- You can group requests for operations together so that they're included as a single transaction using [Change sets](#change-sets).
+- You can group requests for operations together so that they're included as a single transaction by using [Change sets](#change-sets).
 
-   - You may want to create, update, or delete a set of related records in a way that guarantees that all the operations succeed or fail as a group.
-   - Web API `$batch` requests using change sets are equivalent to the `ExecuteTransaction` message available in the SDK for .NET. More information: [Execute messages in a single database transaction](../org-service/use-executetransaction.md)
+   - You might want to create, update, or delete a set of related records in a way that guarantees that all the operations succeed or fail as a group.
+   - Web API `$batch` requests by using change sets are equivalent to the `ExecuteTransaction` message available in the SDK for .NET. For more information, see [Execute messages in a single database transaction](../org-service/use-executetransaction.md).
    
    > [!NOTE]
-   > Remember that associated entities can be created in a single operation more easily than using a batch request. More information:  [Create related table rows in one operation](create-entity-web-api.md#create-related-table-rows-in-one-operation)
+   > You can create associated entities in a single operation more easily than by using a batch request. For more information, see [Create related table rows in one operation](create-entity-web-api.md#create-related-table-rows-in-one-operation).
 
 
-Batch requests are also sometimes used to sent `GET` requests where the length of the URL may exceed the [maximum allowed URL length](compose-http-requests-handle-errors.md#maximum-url-length). People use batch requests because the URL for the request is included in the body of the message where a URL up to 64 KB (65,536 characters) is allowed. Sending complex queries using FetchXml can result in long URLs. More information: [Use FetchXML within a batch request](../fetchxml/retrieve-data.md#use-fetchxml-within-a-batch-request).
+People sometimes use batch requests to send `GET` requests when the length of the URL might exceed the [maximum allowed URL length](compose-http-requests-handle-errors.md#maximum-url-length). By using batch requests, you include the URL for the request in the body of the message where a URL up to 64 KB (65,536 characters) is allowed. Sending complex queries by using FetchXml can result in long URLs. For more information, see [Use FetchXML within a batch request](../fetchxml/retrieve-data.md#use-fetchxml-within-a-batch-request).
 
-Compared to other operations that can be performed using the Web API, batch requests are more difficult to compose. The raw request and response bodies are essentially a text document that must match specific requirements. To access the data in a response, you need to parse the text in the response or locate a helper library to access the data in the response. See [.NET helper methods](#net-helper-methods).
+Compared to other operations that you can perform by using the Web API, batch requests are more difficult to compose. The raw request and response bodies are essentially a text document that must match specific requirements. To access the data in a response, you need to parse the text in the response or locate a helper library to access the data in the response. See [.NET helper methods](#net-helper-methods).
 
   
 <a name="bkmk_BatchRequests"></a>
@@ -48,7 +48,7 @@ Compared to other operations that can be performed using the Web API, batch requ
 
 Use a `POST` request to submit a batch operation that contains multiple requests.
   
-The `POST` request containing the batch must have a [Content-Type](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Type) header with a value set to `multipart/mixed` with a `boundary` set to include the identifier of the batch using this pattern:  
+The `POST` request containing the batch must have a [Content-Type](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Type) header with a value set to `multipart/mixed` with a `boundary` set to include the identifier of the batch by using this pattern:  
   
 ```
 POST [Organization Uri]/api/data/v9.2/$batch HTTP/1.1
@@ -59,9 +59,9 @@ Accept: application/json
 Content-Type: multipart/mixed; boundary="batch_<unique identifier>"
 ```  
   
-The unique identifier doesn't need to be a GUID, but should be unique.
+The unique identifier doesn't need to be a GUID, but it should be unique.
 
-Each item within the batch must be preceded by the batch identifier with a `Content-Type` and [Content-Transfer-Encoding](https://www.w3.org/Protocols/rfc1341/5_Content-Transfer-Encoding.html) header like the following example:  
+Each item within the batch must be preceded by the batch identifier with a `Content-Type` and [Content-Transfer-Encoding](https://www.w3.org/Protocols/rfc1341/5_Content-Transfer-Encoding.html) header, as shown in the following example:  
   
 ```  
 --batch_<unique identifier>
@@ -70,19 +70,19 @@ Content-Transfer-Encoding: binary
 ```  
 
 > [!IMPORTANT]
-> Only payload items with a batch identifier matching the batch identifier sent in the `Content-Type` header will be executed. If no payload item uses the `Content-Type` batch identifier, the batch request will succeed without executing any payload item.
+> Only payload items with a batch identifier that matches the batch identifier sent in the `Content-Type` header are executed. If no payload item uses the `Content-Type` batch identifier, the batch request succeeds without executing any payload item.
 > 
-> You must include any other [HTTP headers](compose-http-requests-handle-errors.md#http-headers) for each item in the batch to control the behavior for that request. Headers applied to the `$batch` operation will not be applied to each item. For example, if you include a `GET` request and want to [request annotations](compose-http-requests-handle-errors.md#request-annotations), you must add the appropriate `Prefer: odata.include-annotations="*"` header to each item.
+> You must include any other [HTTP headers](compose-http-requests-handle-errors.md#http-headers) for each item in the batch to control the behavior for that request. Headers applied to the `$batch` operation don't apply to each item. For example, if you include a `GET` request and want to [request annotations](compose-http-requests-handle-errors.md#request-annotations), you must add the appropriate `Prefer: odata.include-annotations="*"` header to each item.
 
-The end of the batch request must contain a termination indicator like the following example:  
+The end of the batch request must contain a termination indicator, as shown in the following example:  
   
 ```  
 --batch_<unique identifier>--
 ```
 
 > [!NOTE]
-> The HTTP protocol requires all line endings in $batch request payloads be [CRLF](https://developer.mozilla.org/docs/Glossary/CRLF).
-> Other line endings may cause deserialization errors. For example: `System.ArgumentException: Stream was not readable.`. If you cannot use CRLF, you can add two non-CRLF line endings at the end of the request payload to resolve most deserialization errors.
+> The HTTP protocol requires all line endings in $batch request payloads to be [CRLF](https://developer.mozilla.org/docs/Glossary/CRLF).
+> Other line endings might cause deserialization errors. For example: `System.ArgumentException: Stream was not readable.`. If you can't use CRLF, you can add two non-CRLF line endings at the end of the request payload to resolve most deserialization errors.
 
 The following example is a batch request without change sets. This example:
 - Creates three task records associated with an account with `accountid` equal to `00000000-0000-0000-0000-000000000001`.
@@ -144,7 +144,7 @@ GET /api/data/v9.2/accounts(00000000-0000-0000-0000-000000000001)/Account_Tasks?
 
 ## Batch responses
 
-When successful, the batch response returns HTTP Status `200 OK`, and each item in the response is separated by a `Guid` unique identifier value that isn't the same as the batch request value.
+When successful, the batch response returns HTTP status `200 OK`. Each item in the response is separated by a `Guid` unique identifier value that isn't the same as the batch request value.
 
 ```http
 --batchresponse_<unique identifier>
@@ -152,13 +152,13 @@ Content-Type: application/http
 Content-Transfer-Encoding: binary
 ```
 
-The end of the batch response contains a termination indicator like the following example:  
+The end of the batch response contains a termination indicator, as shown in the following example:  
   
 ```http
 --batchresponse_<unique identifier>--
 ```
 
-The following example is the response to the previous batch request example.
+The following example shows the response to the previous batch request example.
 
 **Response:**
 
@@ -233,19 +233,19 @@ OData-Version: 4.0
 
 ## Change sets
 
-In addition to individual requests, a batch request can include change sets. When multiple operations are contained in a change set, all the operations are considered *atomic*. An atomic operation means that if any one of the operations fails, any completed operations are rolled back.
+In addition to individual requests, a batch request can include change sets. When multiple operations are contained in a change set, all the operations are considered *atomic*. An atomic operation means that if any one of the operations fails, the batch request rolls back any completed operations.
 
 > [!NOTE]
-> `GET` request are not allowed within change sets. A `GET` operation should not change data, therefore they don't belong within a change set.
+> `GET` requests aren't allowed within change sets. A `GET` operation doesn't change data, so it doesn't belong within a change set.
 
 
-Like a batch request, change sets must have a `Content-Type` header with value set to `multipart/mixed` with a `boundary` set to include the identifier of the change set using this pattern:  
+Like a batch request, change sets must have a `Content-Type` header with value set to `multipart/mixed` with a `boundary` set to include the identifier of the change set by using this pattern:  
   
 ```
 Content-Type: multipart/mixed; boundary="changeset_<unique identifier>"
 ```  
   
-The unique identifier doesn't need to be a GUID, but should be unique. Each item within the change set must be preceded by the change set identifier with a `Content-Type` and `Content-Transfer-Encoding` header like the following example:  
+The unique identifier doesn't need to be a GUID, but it should be unique. Each item within the change set must be preceded by the change set identifier with a `Content-Type` and `Content-Transfer-Encoding` header like the following example:  
   
 ```  
 --changeset_<unique identifier>
@@ -253,7 +253,7 @@ Content-Type: application/http
 Content-Transfer-Encoding: binary
 ```  
   
-Change sets can also include a `Content-ID` header with a unique value. This value, when prefixed with `$`, represents a variable that contains the Uri for any entity created in that operation. For example, when you set the value of `1`, you can refer to that entity using `$1` later in your change set. More information: [Reference URIs in an operation](#reference-uris-in-an-operation)
+Change sets can also include a `Content-ID` header with a unique value. This value, when prefixed with `, represents a variable that contains the URI for any entity created in that operation. For example, when you set the value of `1`, you can refer to that entity by using `$1` later in your change set. To learn more, see [Reference URIs in an operation](#reference-uris-in-an-operation).
   
 The end of the change set must contain a termination indicator like the following example:  
   
@@ -263,7 +263,7 @@ The end of the change set must contain a termination indicator like the followin
 
 The following example shows the use of a change set to:
 - Group the creation of three tasks associated with an account with `accountid` value `00000000-0000-0000-0000-000000000001`.
-- Retrieve the accounts created using a GET request outside of the changeset.
+- Retrieve the accounts created by using a `GET` request outside of the change set.
 
 **Request:**
 
@@ -404,13 +404,13 @@ OData-Version: 4.0
 
 ### Reference URIs in an operation
 
-Within changesets you can use `$parameter` such as `$1`, `$2`, etc. to reference URIs returned for new entities created earlier in the same changeset. For more information, see the OData v4.0 specification: [11.7.3.1 Referencing Requests in a Change Set](http://docs.oasis-open.org/odata/odata/v4.0/os/part1-protocol/odata-v4.0-os-part1-protocol.html#_Toc372793752).
+Within changesets, you can use `$parameter` such as `$1`, `$2`, and so on to reference URIs returned for new entities created earlier in the same changeset. For more information, see the OData v4.0 specification: [11.7.3.1 Referencing Requests in a Change Set](http://docs.oasis-open.org/odata/odata/v4.0/os/part1-protocol/odata-v4.0-os-part1-protocol.html#_Toc372793752).
 
-This section shows various examples on how `$parameter` can be used in the request body of a batch operation to reference URIs.
+This section shows various examples of how to use `$parameter` in the request body of a batch operation to reference URIs.
 
 #### Reference URIs in request body
 
-The below example shows how two URI references can be used in a single operation.
+The following example shows how to use two URI references in a single operation.
 
 **Request:**
 
@@ -510,7 +510,7 @@ OData-EntityId: [Organization URI]/api/data/v9.2/accounts(11bb11bb-cc22-dd33-ee4
 
 #### Reference URI in request URL
 
-The example given below shows how you can reference a URI using `$1` in the URL of a subsequent request.
+The following example shows how to reference a URI by using `$1` in the URL of a subsequent request.
 
 **Request:**
 
@@ -586,9 +586,9 @@ OData-Version: 4.0
 --batchresponse_2cb48f48-39a8-41ea-aa52-132fa8ab3c2d--
 ```
 
-#### Reference URIs in URL and request body using @odata.id
+#### Reference URIs in URL and request body by using @odata.id
 
-The following example shows how to link a Contact entity record to an Account entity record. The URI of Account entity record is referenced as `$1` and URI of Contact entity record is referenced as `$2`.
+The following example shows how to link a Contact entity record to an Account entity record. The URI of the Account entity record is referenced as `$1` and the URI of the Contact entity record is referenced as `$2`.
 
 **Request:**
 
@@ -679,7 +679,7 @@ OData-Version: 4.0
 
 #### Reference URIs in URL and navigation properties
 
-The following example shows how to use the Organization URI of a Contact record and link it to an Account record using the `primarycontactid` single-valued navigation property. The URI of the Account entity record is referenced as `$1` and the URI of Contact entity record is referenced as `$2` in the `PATCH` request.
+The following example shows how to use the Organization URI of a Contact record and link it to an Account record by using the `primarycontactid` single-valued navigation property. The URI of the Account entity record is referenced as `$1` and the URI of the Contact entity record is referenced as `$2` in the `PATCH` request.
 
 **Request:**
 
@@ -774,7 +774,7 @@ OData-EntityId: [Organization URI]/api/data/v9.2/accounts(55ff55ff-aa66-bb77-cc8
 ```
 
 > [!NOTE]
-> Referencing a `Content-ID` before it has been declared in the request body will return the error **HTTP 400** Bad request.
+> Referencing a `Content-ID` before it appears in the request body returns the error **HTTP 400** Bad request.
 >
 > The following example shows a request body that can cause this error.
 > 
@@ -825,9 +825,9 @@ OData-EntityId: [Organization URI]/api/data/v9.2/accounts(55ff55ff-aa66-bb77-cc8
 
 ## Handling errors
 
-When an error occurs for a request within a batch, the error for that request is returned for the batch request, and more requests aren't processed.
+When an error occurs for a request within a batch, the batch request returns the error for that request and doesn't process any more requests.
 
-You can use the `Prefer: odata.continue-on-error` request header to specify that more requests be processed when errors occur. The batch request returns `200 OK` and individual response errors are returned in the batch response body.
+If you add the `Prefer: odata.continue-on-error` request header, you can specify that the server processes more requests when errors occur. The batch request returns `200 OK`, and individual response errors are included in the batch response body.
 
 More information: [OData Specification: 8.2.8.3 Preference odata.continue-on-error](https://docs.oasis-open.org/odata/odata/v4.0/errata02/os/complete/part1-protocol/odata-v4.0-errata02-os-part1-protocol-complete.html#_Toc406398236)
 
@@ -910,7 +910,7 @@ OData-Version: 4.0
 
 ```
 
-When the `Prefer: odata.continue-on-error` request header is applied to the batch request, the batch request succeeds with a status of `200 OK` and the failure of the first request is returned as part of the body.
+When you add the `Prefer: odata.continue-on-error` request header to the batch request, the batch request succeeds with a status of `200 OK` and the failure of the first request is returned as part of the body.
 
 **Request:**
 
@@ -1006,12 +1006,12 @@ OData-EntityId: [Organization Uri]/api/data/v9.2/tasks(11bb11bb-cc22-dd33-ee44-5
 
 ## .NET helper methods
 
-The [WebAPIService class library (C#)](samples/webapiservice.md) is a sample helper class library project used for Web API samples written in .NET. It demonstrates one way that common patterns used with Web API can be reused.
+The [WebAPIService class library (C#)](samples/webapiservice.md) is a sample helper class library project for Web API samples written in .NET. It demonstrates one way to reuse common patterns used with Web API.
 
 > [!NOTE]
-> This sample library is a helper that is used by all the Dataverse C# Web API samples, but it is not an SDK. It is tested only to confirm that the samples that use it run successfully. This sample code is provided 'as-is' with no warranty for reuse.
+> This sample library is a helper that's used by all the Dataverse C# Web API samples, but it's not an SDK. It's tested only to confirm that the samples that use it run successfully. This sample code is provided "as-is" with no warranty for reuse.
 
-This library includes classes for creating batch requests and processing responses. For example, variations on following code were used to generate many of the HTTP request and response examples in this article.
+This library includes classes for creating batch requests and processing responses. For example, variations on the following code were used to generate many of the HTTP request and response examples in this article.
 
 ```csharp
 using PowerApps.Samples;
@@ -1070,7 +1070,7 @@ Task created at: tasks(6843adfa-4a94-ed11-aad1-000d3a9933c9)
 Task created at: tasks(6943adfa-4a94-ed11-aad1-000d3a9933c9)
 ```
 
-Within this library, there are some methods that you may find useful in your .NET code.
+Within this library, you might find some methods useful for your .NET code.
 
 More information:
 
@@ -1079,7 +1079,7 @@ More information:
 
 ### .NET HttpRequestMessage to HttpMessageContent example
 
-In .NET, you must send batch requests as <xref:System.Net.Http.MultipartContent> that is a collection of <xref:System.Net.Http.HttpContent>. `HttpMessageContent` inherits from `HttpContent`. The [WebAPIService class library (C#)](samples/webapiservice.md) [BatchRequest class](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/CSharp-NETx/WebAPIService/Batch/BatchRequest.cs) uses the following private static `ToMessageContent` method to convert <xref:System.Net.Http.HttpRequestMessage> to `HttpMessageContent` that can be added to `MultipartContent`.
+In .NET, you must send batch requests as <xref:System.Net.Http.MultipartContent>, which is a collection of [HttpContent](xref:System.Net.Http.HttpContent). `HttpMessageContent` inherits from `HttpContent`. The [WebAPIService class library (C#)](samples/webapiservice.md) [BatchRequest class](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/CSharp-NETx/WebAPIService/Batch/BatchRequest.cs) uses the following private static `ToMessageContent` method to convert <xref:System.Net.Http.HttpRequestMessage> to `HttpMessageContent` that you can add to `MultipartContent`.
 
 ```csharp
 /// <summary>
@@ -1120,7 +1120,7 @@ private HttpMessageContent ToMessageContent(HttpRequestMessage request)
 
 ### .NET Parse batch response example
 
-The [WebAPIService class library (C#)](samples/webapiservice.md) [BatchResponse class](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/CSharp-NETx/WebAPIService/Batch/BatchResponse.cs) uses the following private static `ParseMultipartContent` method to parse the body of a batch response into a `List` of [HttpResponseMessage](xref:System.Net.Http.HttpResponseMessage) that can be processed like individual responses.
+The [WebAPIService class library (C#)](samples/webapiservice.md) [BatchResponse class](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/CSharp-NETx/WebAPIService/Batch/BatchResponse.cs) uses the following private static `ParseMultipartContent` method to parse the body of a batch response into a `List` of [HttpResponseMessage](xref:System.Net.Http.HttpResponseMessage) that you can process like individual responses.
 
 ```csharp
 /// <summary>

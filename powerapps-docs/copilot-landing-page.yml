@@ -103,11 +103,11 @@ landingContent:
       - linkListType: how-to-guide
         links:
 
-          - text: Add Microsoft 365 Copilot chat in model-driven apps (preview)
+          - text: Add Microsoft 365 Copilot in model-driven apps (preview)
             url: maker/model-driven-apps/add-microsoft-365-copilot.md
-          - text: Use Microsoft 365 Copilot chat in model-driven apps (preview)
+          - text: Use Microsoft 365 Copilot in model-driven apps (preview)
             url: user/use-microsoft-365-copilot-model-driven-apps.md
-          - text: Customize Microsoft 365 Copilot chat with an agent (preview)
+          - text: Customize Microsoft 365 Copilot with an agent (preview)
             url: maker/model-driven-apps/customize-microsoft-365-copilot-chat.md
 
   
@@ -120,8 +120,8 @@ landingContent:
 
           - text: Get assistance filling forms
             url: user/form-filling-assistance.md
-          - text: Use smart paste (preview)
-            url: user/form-filling-assistance.md#use-smart-paste-preview
+          - text: Use smart paste
+            url: user/form-filling-assistance.md#use-smart-paste
           - text: Use Copilot in the email rich text editor
             url: maker/model-driven-apps/use-copilot-email-assist.md
 
@@ -132,9 +132,9 @@ landingContent:
       - linkListType: how-to-guide
         links:
 
-          - text: Explore data in a view (preview)
+          - text: Explore data in a view
             url: user/find-data-with-ai.md
-          - text: Visualize data in a view (preview)
+          - text: Visualize data in a view
             url: user/visualize-data-in-copilot.md
           - text: See row summaries in a form and view
             url: user/record-summaries.md

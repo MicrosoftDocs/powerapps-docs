@@ -1,7 +1,7 @@
 ---
-title: Page results using OData
-description: Learn how to use OData to page results when you retrieve data from Microsoft Dataverse Web API.
-ms.date: 07/11/2024
+title: "Page results using OData from Microsoft Dataverse Web API"
+description: "Learn how to use OData paging to control and retrieve data results from Microsoft Dataverse Web API efficiently. Follow step-by-step examples to implement pagination."
+ms.date: 03/27/2026
 ms.topic: how-to
 author: MsSQLGirl
 ms.author: jukoesma
@@ -15,10 +15,10 @@ contributors:
 ---
 # Page results using OData
 
-Use the `Prefer: odata.maxpagesize` request header to control the number of records returned. If you don't specify a number, up to 5,000 table rows might be returned for each request. With both standard and elastic tables you can specify a max page size up to 5,000. Max page size requests larger than 5,000 are ignored for both standard and elastic tables.
+Use OData paging with the `Prefer: odata.maxpagesize` request header to control the number of records returned from Microsoft Dataverse Web API. If you don't specify a number, each request might return up to 5,000 table rows. For both standard and elastic tables, you can specify a max page size up to 5,000. The service ignores max page size requests larger than 5,000 for both standard and elastic tables.
 
 > [!NOTE]
-> Dataverse doesn't support the `$skip` query option, so you can't use the combination of `$top` and `$skip` for paging. [Learn about using the $top query option to limit the number of rows](overview.md#limit-the-number-of-rows)
+> Dataverse doesn't support the `$skip` query option, so you can't use the combination of `$top` and `$skip` for paging. [Learn about using the $top query option to limit the number of rows](overview.md#limit-the-number-of-rows).
 
 The following example returns just the first two contact records:
 
@@ -96,9 +96,9 @@ Preference-Applied: odata.maxpagesize=2
 
 You should cache the results returned, or the `@odata.nextLink` URL value, and use it to return to previous pages.
 
-Don't change the `@odata.nextLink` URL value or append any query options to it. For every subsequent request for more pages, you should use the same `odata.maxpagesize` preference value used in the original request. You can continue paging through the data until no `@odata.nextLink` annotation is included in the results.
+Don't change the `@odata.nextLink` URL value or append any query options to it. For every subsequent request for more pages, use the same `odata.maxpagesize` preference value used in the original request. You can continue paging through the data until no `@odata.nextLink` annotation is included in the results.
 
-In the earlier examples, encoded information was set as the value of the `$skiptoken` parameter in the `@odata.nextLink` URL value. The server sets this encoded information to control paging. You shouldn't modify the encoded information or encode it further. Use the URL value provided to retrieve the next page.
+In the earlier examples, the value of the `$skiptoken` parameter in the `@odata.nextLink` URL value contains encoded information. The server sets this encoded information to control paging. Don't modify the encoded information or encode it further. Use the URL value provided to retrieve the next page.
 
 ## Don't use the $top query option while paging records
 

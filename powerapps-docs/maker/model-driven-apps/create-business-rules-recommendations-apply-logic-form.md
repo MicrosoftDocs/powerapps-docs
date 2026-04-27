@@ -1,8 +1,8 @@
 ---
-title: "Create model-driven app business rules and recommendations | MicrosoftDocs"
-description: Learn how to create a business rule for a specific form in Power Apps
+title: "Create model-driven app business rules and recommendations"
+description: Learn how to create a business rule for a specific form in Power Apps.
 ms.custom: ""
-ms.date: 09/10/2024
+ms.date: 04/16/2026
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -24,46 +24,44 @@ search.audienceType:
 ---
 # Create business rules to apply logic in a model-driven app form
 
-Very often it's necessary to add in business logic to ensure that columns in a model-driven app are shown, hidden, or set with the correct values.
+Often, you need to add business logic to ensure that columns in a model-driven app are shown, hidden, or set with the correct values.
 
 This article shows how to create [business rules](model-driven-app-glossary.md#business-rule) and recommendations to apply form logic in a model-driven app without writing JavaScript code or creating plug-ins. Business rules provide a simple interface to implement and maintain fast-changing and commonly used rules. They can be applied to main and quick create forms. Business rules work in model-driven apps, legacy web apps, Dynamics 365 for tablets, and Dynamics 365 for Outlook (online or offline mode).
 
 By combining conditions and actions, the following actions are possible with business rules:  
   
--   Set column values  
-  
--   Clear column values  
-  
--   Set column requirement levels  
-  
--   Show or hide columns  
-  
--   Enable or disable columns  
-  
--   Validate data and show error messages  
-  
--   Create business recommendations based on business intelligence.  
+|Action|Description|Applies to|
+|-|-|-|
+|Set Field Value|Sets a value of a table column. You can set the value to a hard-coded value, to the value of another column, or with a simple formula. You can also clear the value of the field.|All scopes|
+|Set Default Value|Sets the value of a column but only when the column has no value (null).|All scopes|
+|Show Error Message|Prevents the save of the row. In model-driven app form, the error message is displayed within the form; for server-side, the error message is passed back to the calling process.|All scopes|
+|Lock/Unlock|Lock changes the column's property to read-only. Unlock enables the user to change the value of the column.|Model-driven app|
+|Set Visibility|Setting to No hides the column on the form. Setting to Yes displays the column on the form|Model-driven app|
+|Set Business Required|Sets the requirement level of the column on the form to Business Required or Not Business Required (Optional). Setting the column to Business Required shows a red asterisk next to the column's label and prevents the rows from being saved if the column's value is empty.|Model-driven app|
+|Recommendation|Shows a light bulb icon next to the column's label. When the icon is selected, the user is prompted. If prompt is accepted, the rule can set field values.|Model-driven app|
 
 > [!NOTE]
 > To define a business rule for a table so that it applies to all forms, see [Create a business rule for a table](../data-platform/data-platform-create-business-rule.md).
 >
-> Business rules don’t work with multi-select choices.
+> Business rules don't work with multiselect choices.
+>
+> Actions that only apply to model-driven apps are ignored when the rule is run server-side.
   
 ## View, edit, or create a business rule in Power Apps
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
-1. Select **Solutions** on the left navigation pane, open the solution you want, and then open or add the table you want.
-1. Select **New**, and then under **Customizations**, select **Business rule**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Select **Solutions** on the left navigation pane, open the solution you want, and then open or add the table you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Select **New**, and then under **Customizations**, select **Business rule**.
 
 The business rules designer opens. Next step: [Set the business rule properties](#set-the-business-rule-properties)
 
 ## View, edit, or create a business rule in form designer
 
-1. On form designer left navigation pane, select **Business rules**.
+1. On the form designer left navigation pane, select **Business rules**.
 
 1. Select from these options: 
    - By default, only active business rules for the form are displayed. Clear **Show only active business rules** to view deactivated business rules for the form.
-   - To create a business rule, select **New business rule**.
+   - Select **New business rule** to create a business rule.
    - Select the business rule to view properties and edit the business rule.
    :::image type="content" source="media/business-rule-properties.png" alt-text="Business rule properties.":::
 
@@ -75,9 +73,9 @@ When the business rule designer window opens for a new rule, a single condition 
 
 Enter or select the following properties from the business rule command bar.
 
-1. **Business rule name**: By default, the rule is named *New business rule*. We recommend you enter a meaningful name for the business rule.
+1. **Business rule name**: By default, the rule is named *New business rule*. Enter a meaningful name for the business rule.
 1. **Description**: Optionally, add a description.  
-1. **Scope**: The scope of the business rule determines which forms the business rule will be applied. You set the scope, according to these options:  
+1. **Scope**: The scope of the business rule determines which forms the business rule is applied. You set the scope, according to these options:  
   
     :::row:::
      :::row-end:::
@@ -131,17 +129,17 @@ Enter or select the following properties from the business rule command bar.
   
         ![Add a new rule to a condition.](media/add-new-rule-condition.png "Add a new rule to a condition")  
   
-    4. Once finished setting properties for the condition, select **Apply**.  
+    1. When you finish setting properties for the condition, select **Apply**.  
   
 2. **Add actions.** To add an action:  
   
-    1.  Drag one of the action components from the **Components** tab to a plus sign next to **Condition** component. Drag the action to a plus sign next to a check mark if you want the business rule to take that action when the condition is met, or to a plus sign next to an  x if you want the business rule to take that action if the condition isn't met.  
+    1. Drag one of the action components from the **Components** tab to a plus sign next to **Condition** component. Drag the action to a plus sign next to a check mark if you want the business rule to take that action when the condition is met, or to a plus sign next to an  x if you want the business rule to take that action if the condition isn't met.  
   
         ![Drag an action to a business rule.](media/drag-an-action-business-rule.png "Drag an action to a business rule")  
   
-    2.  To set properties for the action, select the **Action** component in the designer window, and then set the properties in the **Properties** tab.  
+    2. To set properties for the action, select the **Action** component in the designer window, and then set the properties in the **Properties** tab.  
   
-    3.  When finished setting properties, select **Apply**.  
+    1. When you finish setting properties, select **Apply**.  
   
 3. **Add a business recommendation.** To add a business recommendation:  
   
@@ -152,15 +150,15 @@ Enter or select the following properties from the business rule command bar.
     3. To add more actions to the recommendation, drag them from the **Components** tab, and then set properties for each action in the **Properties** tab.  
   
        > [!NOTE]
-       >  When you create a recommendation, a single action is added by default. To see all the actions in a recommendation, select **Details** on the **Recommendation** component.  
+       > When you create a recommendation, a single action is added by default. To see all the actions in a recommendation, select **Details** on the **Recommendation** component.  
   
-    4. When you're finished setting properties, select **Apply**.  
+    1. When you finish setting properties, select **Apply**.  
   
 4. To validate the business rule, select **Validate** on the action bar.  
   
 5. To save the business rule, select **Save** on the action bar.  
   
-6. To activate the business rule, select it in the Solution Explorer window, and then select **Activate**. It isn't possible to activate the business rule from the designer window.  
+1. To activate the business rule, select it in the Solution Explorer window, and then select **Activate**. You can't activate the business rule from the designer window.  
   
 > [!TIP]
 > Here are a few tips to keep in mind as you work on business rules in the designer window:  
@@ -193,26 +191,26 @@ Entity scoped business rules won't fire on an editable grid when the editable gr
 
 A business rule might not execute because the column referenced in the business rule isn't included with the form.
 
-1. Open solution explorer. Expand the table that you want, and then select **Forms**. 
+1. Go to the **Solutions** area in Power Apps and then open the solution you want. Expand the table that you want, and then select **Forms**. 
 1. Open the form, and then on the form designer ribbon select **Business Rules**.
 1. In the form designer, open the business rule.
 1. In the business rule designer, select each condition and action to verify all the columns referenced in each condition and action. 
 
    > [!div class="mx-imgBorder"] 
-   > ![Field referenced in business rule exists in table.](media/business-rule-field.png "Field referenced in business rule exists in table")
+   > ![Column referenced in business rule exists in table.](media/business-rule-field.png "Column referenced in business rule exists in table")
 
 1. Verify that each column referenced in the business rule is also included on the form. If not, add the missing column to the form.
 
    > [!div class="mx-imgBorder"] 
    > ![Account name column on form.](media/account-name-on-form.png "Account name column on form")
 
-A business rule might also not execute because a column referenced in the business rule is a composite column. The constituent columns of the composite column can be used instead.
+A business rule might also not execute because a column referenced in the business rule is a composite column. Use the constituent columns of the composite column instead.
 
 ### Unsupported column types
 
 Columns of type unique identifier and rollup columns aren't supported with business rules.
 
-There are a few special columns which support localizable values, such as the **Name** column for the **Product** table that's included with Dynamics 365 for Sales apps. Columns that support localizable values aren't supported with business rules.
+A few special columns support localizable values, such as the **Name** column for the **Product** table that's included with Dynamics 365 for Sales apps. Columns that support localizable values aren't supported with business rules.
 
 ## Frequently asked questions (FAQ)
 

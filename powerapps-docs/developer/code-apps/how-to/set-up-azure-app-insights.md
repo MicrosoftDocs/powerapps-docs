@@ -3,7 +3,7 @@ title: "How to: Set up Azure App Insights for your code app"
 description: "Learn how to set up Azure App Insights for your code app"
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 02/18/2026
+ms.date: 03/05/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 ---
@@ -24,7 +24,7 @@ Azure Application Insights complements [Power Platform Monitor](/power-platform/
 
 ## Steps
 
-Use the following steps to provision Application Insights, install the SDK, connect telemetry in your Power Apps code app, and verify data in Azure. This short guide walks you through end-to-end setup so you can start capturing performance and network metrics quickly.
+Use the following steps to provision Application Insights, install the [Power Apps client library for code apps](https://www.npmjs.com/package/@microsoft/power-apps), connect telemetry in your Power Apps code app, and verify data in Azure. This short guide walks you through end-to-end setup so you can start capturing performance and network metrics quickly.
 
 
 1. Create an Application Insights resource
@@ -148,7 +148,7 @@ Use the following steps to provision Application Insights, install the SDK, conn
    - Go to **Monitoring > Logs**.
    - Query the `customEvents` table to see session summaries and network requests.
 
-   The SDK currently provides two built‑in metric types:
+   The Power Apps client library for code apps currently provides two built‑in metric types:
 
    ```typescript
    type SessionLoadSummaryMetricData = { 

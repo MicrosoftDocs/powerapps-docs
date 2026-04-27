@@ -12,7 +12,7 @@ metadata:
   ms.collection: collection
   author: JimDaly
   ms.author: jdaly
-  ms.date: 09/22/2025
+  ms.date: 03/6/2026
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -34,7 +34,19 @@ landingContent:
             url: architecture.md
 
   # Card
-  - title: Build
+  - title: What's new?
+    linkLists:
+      - linkListType: whats-new
+        links:
+          - text: Quickstart with npm CLI
+            url: how-to/npm-quickstart.md
+          - text: Add a Dataverse action or function
+            url: how-to/add-dataverse-action-function.md
+          - text: Add flows
+            url: how-to/add-flows.md
+
+  # Card
+  - title: Configure & Setup
     linkLists:
       - linkListType: concept
         links:
@@ -42,30 +54,42 @@ landingContent:
             url: system-limits-configuration.md
       - linkListType: how-to-guide
         links:
+          - text: Use environment variables
+            url: how-to/use-environment-variables.md
+          - text: Get context data
+            url: how-to/retrieve-context.md
+          - text: Add flows
+            url: how-to/add-flows.md
+
+  # Card
+  - title: Connect to Data
+    linkLists:
+      - linkListType: how-to-guide
+        links:
           - text: Connect to data
             url: how-to/connect-to-data.md
-          - text: Connect to Copilot Studio
-            url: how-to/connect-to-copilot-studio.md
           - text: Connect to Dataverse
             url: how-to/connect-to-dataverse.md
-          - text: Get Dataverse tables metadata
-            url: how-to/get-table-metadata.md
           - text: Connect to Azure SQL
             url: how-to/connect-to-azure-sql.md
           - text: SharePoint operations
             url: how-to/sharepoint-operations.md
-          - text: Create a basic asset management API with Azure Functions
-            url: how-to/create-basic-asset-management-api-azure-functions.md
-          - text: Analyze data requests and responses
-            url: how-to/analyze-data-request-response.md
-          - text: Get context data
-            url: how-to/retrieve-context.md
+          - text: Connect to Copilot Studio
+            url: how-to/connect-to-copilot-studio.md
+          - text: Get Dataverse tables metadata
+            url: how-to/get-table-metadata.md
 
   # Card
-  - title: Deploy
+  - title: Develop & Deploy
     linkLists:
       - linkListType: how-to-guide
         links:
+          - text: Analyze data requests and responses
+            url: how-to/analyze-data-request-response.md
+          - text: Create a basic asset management API with Azure Functions
+            url: how-to/create-basic-asset-management-api-azure-functions.md
+          - text: Embed in an iframe
+            url: how-to/embed-iframe.md
           - text: Application lifecycle management (ALM)
             url: how-to/alm.md
 

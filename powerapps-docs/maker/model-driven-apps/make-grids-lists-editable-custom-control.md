@@ -2,7 +2,7 @@
 title: "Make model-driven app views and grids editable using the editable grid control"
 description: "Learn how to use the editable grid control to make views and grids editable in Power Apps."
 ms.custom: ""
-ms.date: 09/19/2024
+ms.date: 02/27/2026
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -16,10 +16,14 @@ caps.latest.revision: 8
 author: "Mattp123"
 ms.subservice: mda-maker
 ms.author: "matp"
+contributors: sriharibs-msft
 search.audienceType: 
   - maker
 ---
 # Make model-driven app views editable using the editable grid control
+
+> [!IMPORTANT]
+> The Editable Grid control is deprecated. Use the [Power Apps grid control](the-power-apps-grid-control.md) instead. More information: [Deprecation of Editable Grid and Power Apps Read-Only Grid controls](/power-platform/important-changes-coming#deprecation-of-editable-grid-and-power-apps-read-only-grid-controls)
 
 By default, users can't enter data directly using the read-only view control for views and subgrids on forms. Users select the row in the grid to open a form, edit the data, and then save, which requires multiple steps. With editable grids, users can do rich in-line editing directly from views and subgrids whether they're using a web app or tablet. This editing experience isn't available on phones.
   

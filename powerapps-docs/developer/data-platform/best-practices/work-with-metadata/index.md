@@ -1,27 +1,27 @@
 ---
-title: "Developers: Best practices and guidance while working with table definitions in Microsoft Dataverse | Microsoft Docs"
+title: "Best practices and guidance for working with table definitions in Dataverse"
 description: Best practices and guidance while working with table definitions for developers of the Microsoft Dataverse in Power Apps.
 suite: powerapps
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: jdaly
 ms.topic: best-practice
-ms.date: 03/24/2021
+ms.date: 03/02/2026
 ms.subservice: dataverse-developer
 search.audienceType: 
   - developer
 ---
 
-# Best practices and guidance while working with table definitions in Dataverse
+# Best practices and guidance for working with table definitions in Dataverse
 
-This list below contains all of the guidance and best practices regarding interacting and working with table definitions in Dataverse.
+The following list contains guidance and best practices for interacting and working with table definitions in Dataverse.
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
 
-|Best Practice  |Description  |
+|Best practice  |Description  |
 |---------|---------|
-|[Retrieve published definitions](retrieve-published-metadata.md)     |Retrieving unpublished definitions not only will add overhead to processing the request itself, performing more slowly, it could also return definitions that the requestor does not expect.         |
+|[Retrieve published definitions](retrieve-published-metadata.md)|Retrieving unpublished definitions adds overhead to processing the request. It makes the operation slower. It can also return definitions that you don't expect.         |
 
 ### See Also
 

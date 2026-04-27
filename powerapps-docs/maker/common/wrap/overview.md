@@ -1,13 +1,13 @@
 ---
 title: Overview of wrap
 description: Learn about the wrap functionality in Power Apps.
-author: komala2019
+author: Murugesh1985
 ms.topic: concept-article
 ms.custom: canvas
 ms.reviewer: smurkute
 ms.date: 02/04/2025
 ms.subservice: canvas-maker
-ms.author: koagarwa
+ms.author: murugeshs
 search.audienceType: 
   - maker
 contributors:
@@ -110,7 +110,7 @@ Wrap supports customization of the mobile app bootstrap experience to match your
 
 :::image type="content" source="media/wrap-intro/wrap-branding.png" alt-text="Branding in wrap." border="false":::
 
-Branding customization options are available when building your wrap project. More information: [Configure branding](wrap-how-to.md#5-configure-branding)
+Branding customization options are available when building your wrap project. Learn more in [Configure branding](wrap-how-to.md#6-configure-branding)
 
 ---
 

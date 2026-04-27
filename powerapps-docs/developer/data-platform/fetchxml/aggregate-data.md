@@ -1,7 +1,7 @@
 ---
-title: Aggregate data using FetchXml
-description: Learn how to use FetchXml to retrieve aggregated data from Microsoft Dataverse.
-ms.date: 02/29/2024
+title: Aggregate Data Using FetchXml
+description: Learn how to use FetchXml to aggregate data in Microsoft Dataverse with grouping, sum, average, min, max, and count functions. Start building aggregate queries today.
+ms.date: 03/09/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 author: MsSQLGirl
@@ -16,27 +16,27 @@ contributors:
  - apahwa-lab
  - DonaldlaGithub
 ---
-# Aggregate data using FetchXml
+# Aggregate data using FetchXML
 
-FetchXML includes grouping and aggregation features that let you calculate sum, average, min, max, and count across multiple rows of data.
+Use FetchXML to aggregate data in Microsoft Dataverse by calculating sum, average, min, max, and count across multiple rows. FetchXML grouping and aggregation features let you summarize large datasets efficiently so you can build meaningful reports and analytics.
 
 To return an aggregate value, you must:
 
-- Set the [fetch element](reference/fetch.md) `aggregate` attribute to true.
+- Set the [fetch element](reference/fetch.md) `aggregate` attribute to `true`.
 - Set the `alias` attribute for each [attribute element](reference/attribute.md).
 - Set the `aggregate` attribute for each [attribute element](reference/attribute.md) to one of these aggregate functions:
 
    [!INCLUDE [aggregate-function-table](reference/includes/aggregate-function-table.md)]
 
-Note the following points:
+Consider the following points:
 
-- Null values aren't considered when calculating aggregate values.
-- You can use data from tables joined using the [link-entity element](reference/link-entity.md).
+- The calculation of aggregate values excludes null values.
+- You can use data from tables joined by using the [link-entity element](reference/link-entity.md).
 - You can [apply filters](filter-rows.md) to limit the results as with any query.
 
 ## Example
 
-Let's say you have 10 account records with the following data:
+Suppose you have 10 account records with the following data:
 
 |Number of Employees|Name|Address 1 City|Created On|
 |---------|---------|---------|---------|
@@ -90,7 +90,7 @@ The results are a single row:
 
 ## Distinct column values
 
-When using the `countcolumn` aggregate function, you can set the `distinct` attribute to return a count of unique values for the column.
+When you use the `countcolumn` aggregate function, set the `distinct` attribute to return a count of unique values for the column.
 
 ```xml
 <attribute name='numberofemployees' 
@@ -99,13 +99,13 @@ When using the `countcolumn` aggregate function, you can set the `distinct` attr
    distinct='true' />
 ```
 
-When set for the previous query, the results return 8 rather than 9 because two rows in the data set have 2,900 as the number of employees value.
+When you set this attribute for the previous query, the results return 8 rather than 9 because two rows in the data set have 2,900 as the number of employees value.
 
 ## Grouping
 
-Group the results of an aggregate query by adding an [attribute element](reference/attribute.md) with the `groupby` attribute rather than the `aggregate` attribute. When grouping, you should specify an [order element](reference/order.md) with an `alias` value set to the `alias` of the group.
+Group the results of an aggregate query by adding an [attribute element](reference/attribute.md) with the `groupby` attribute rather than the `aggregate` attribute. When grouping, specify an [order element](reference/order.md) with an `alias` value set to the `alias` of the group.
 
-For example the following query returns the sum of employees, and count by city:
+For example, the following query returns the sum of employees and count by city:
 
 ```xml
 <fetch aggregate='true'>
@@ -124,7 +124,7 @@ For example the following query returns the sum of employees, and count by city:
 </fetch>
 ```
 
-The query groups the results by City value, combining the results for the three rows where city is 'Redmond'.
+The query groups the results by City value, combining the results for the three rows where city is `Redmond`.
 
 | Total  | Count | City        |
 |--------|-------|-------------|
@@ -140,11 +140,11 @@ The query groups the results by City value, combining the results for the three 
 
 ### Grouping by parts of a date
 
-You can select which part of the date to use when grouping by date. Set [attribute element](reference/attribute.md) `dategrouping` attribute to one of the following values:
+You can select which part of the date to use when grouping by date. Set the [attribute element](reference/attribute.md) `dategrouping` attribute to one of the following values:
 
 [!INCLUDE [dategrouping-table](reference/includes/dategrouping-table.md)]
 
-By default date groupings use the user's time zone. Set the [attribute element](reference/attribute.md) `usertimezone` attribute to `"false"` to specify that the UTC time zone be used instead.
+By default, date groupings use the user's time zone. Set the [attribute element](reference/attribute.md) `usertimezone` attribute to `"false"` to specify that the UTC time zone be used instead.
 
 The following query groups account records showing number of employees by when the records were created:
 
@@ -237,7 +237,7 @@ The following example returns the number of related accounts in a column named `
 
 Even with the default limit for aggregate queries applied, the query might take some time to complete. You can use the `aggregatelimit` attribute in a query to apply a custom lower limit.
 
-If the `aggregatelimit` attribute is specified, then the query also doesn't return an `AggregateQueryRecordLimit exceeded` error if the limit is reached, and instead the query aggregates over at most `limit + 1` arbitrary rows from the data.
+If you specify the `aggregatelimit` attribute, the query doesn't return an `AggregateQueryRecordLimit exceeded` error if the limit is reached. Instead, the query aggregates over at most `limit + 1` arbitrary rows from the data.
 
 The per query limit can't exceed the default aggregate limit.
 
@@ -271,6 +271,6 @@ The results are a single row aggregating up to six of the records:
 Learn how to count rows.
 
 > [!div class="nextstepaction"]
-> [Count rows](count-rows.md)
+> [Count rows](count-rows.md).
 
 [!INCLUDE [footer-banner](../../../includes/footer-banner.md)]

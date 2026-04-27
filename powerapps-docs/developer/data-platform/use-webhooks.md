@@ -1,8 +1,8 @@
 ---
-title: Use Webhooks to create external handlers for server events
-description: Learn how to send data about events that occur on the server to a web application using Webhooks.
+title: Use Webhooks to Create External Handlers for Server Events
+description: Learn how to use Webhooks to send Dataverse server events to your web application, parse request data, and build external handlers.
 ms.collection: get-started
-ms.date: 08/28/2023
+ms.date: 03/31/2026
 ms.reviewer: pehecke
 ms.topic: article
 author: swylezol
@@ -14,80 +14,76 @@ contributors:
   - PHecke
   - JimDaly
 ---
-# Use Webhooks to create external handlers for server events
+# Use webhooks to create external handlers for server events
 
-With Microsoft Dataverse, you can send data about events that occur on the server to a web application using webhooks. Webhooks is a lightweight HTTP pattern for connecting Web APIs and services with a publish/subscribe model. Webhook senders notify receivers about events by making requests to receiver endpoints with some information about the events.
+Use webhooks to send Microsoft Dataverse server events to an external web application. This article explains the request data Dataverse sends and how webhooks help you build external handlers for server events.
 
-Webhooks enable developers and ISV's to integrate Dataverse data with their own custom code hosted on external services. By using the WebHook model, you can secure your endpoint by using authentication header or query string parameter keys. This is simpler than the SAS authentication model that you may currently use for Azure Service Bus integration.
+By using webhooks, developers and ISVs can integrate Dataverse data with their own custom code hosted on external services. By using the webhook model, you can secure your endpoint by using authentication header or query string parameter keys. This approach is simpler than the SAS authentication model that you might currently use for Azure Service Bus integration.
 
-When deciding between the WebHook model and the Azure Service Bus integration, here are some items to keep in mind:
+When deciding between the webhook model and the Azure Service Bus integration, keep these points in mind:
 
-- Azure Service Bus works for high scale processing, and provides a full queueing mechanism if Dataverse is pushing many events.
+- Azure Service Bus works for high scale processing, and provides a full queuing mechanism if Dataverse is pushing many events.
 - Webhooks can only scale to the point at which your hosted web service can handle the messages.
-- Webhooks enables synchronous and asynchronous steps. Azure Service Bus only allows for asynchronous steps.
+- Webhooks enable synchronous and asynchronous steps. Azure Service Bus only allows for asynchronous steps.
 - Webhooks send POST requests with JSON payload and can be consumed by any programming language or web application hosted anywhere.
-- Both Webhooks and Azure Service Bus can be invoked from a plug-in or custom workflow activity.
+- Both webhooks and Azure Service Bus can be invoked from a plug-in or custom workflow activity.
 
+## Get started
 
-## Get Started
+Using webhooks involves three parts:
 
-There are three parts to using Webhooks:
-
-- Creating or configuring a service to consume WebHook requests.
-- Registering WebHook step on the Dataverse service, or
-- Invoking a WebHook from a plug-in or custom workflow activity.
+- Creating or configuring a service to consume webhook requests.
+- Registering webhook step on the Dataverse service.
+- Invoking a webhook from a plug-in or custom workflow activity.
 
 ### Start by registering a test WebHook
 
-In order to understand how to create and configure a service to consume a WebHook request from Dataverse, it is valuable to start by understanding how to register a WebHook. More information: [Register a WebHook](register-web-hook.md)
+To understand how to create and configure a service to consume a WebHook request from Dataverse, start by learning how to register a WebHook. For more information, see [Register a WebHook](register-web-hook.md).
 
-When you have registered an example WebHook you can use a request logging site to examine the contextual data that will be passed. More information: [Test WebHook registration with request logging site](test-WebHook-registration.md)
+After you register an example WebHook, use a request logging site to examine the contextual data that's passed. For more information, see [Test WebHook registration with request logging site](test-WebHook-registration.md).
 
 > [!TIP]
-> Completing the steps to register a test WebHook and examining the contextual data that is passed will help make the rest of the information in this topic easier to understand. Complete these steps and return to this topic.
+> Completing the steps to register a test WebHook and examining the contextual data that is passed makes the rest of the information in this topic easier to understand. Complete these steps and return to this topic.
 
 <a name="create-or-configure"></a>
 
 ## Create or configure a service to consume WebHook requests
 
-Webhooks are simply a pattern that can be applied using a wide range of technologies. There are no required frameworks, platforms, or programming languages you must use. Use the skills and knowledge you have to deliver the appropriate solution.
+Webhooks are simply a pattern that you can apply using a wide range of technologies. There are no required frameworks, platforms, or programming languages you must use. Use the skills and knowledge you have to deliver the appropriate solution.
 
-[Azure Functions](https://azure.microsoft.com/services/functions/) provide an excellent way to deliver a solution using Webhooks, but it is not a requirement. This section will not provide guidance towards a specific solution but will instead describe the data that will be passed to your service that will enable your service to add value.
+[Azure Functions](https://azure.microsoft.com/services/functions/) provide an excellent way to deliver a solution using Webhooks, but it's not a requirement. This section doesn't provide guidance toward a specific solution. Instead, it describes the data that Dataverse passes to your service that enables your service to add value.
 
 As demonstrated in [Test WebHook registration with request logging site](test-WebHook-registration.md), you can register a test WebHook step and use the request logging site to capture the specific kinds of data that your application can process.
 
 ### Data passed to the service
 
-There are three types of data in the request: Query String, Header Data, and Request Body.
+The request includes three types of data: query string, header data, and request body.
 
-#### Query String
+#### Query string
 
-The only kind of data that will be passed as a query string may be the authentication values passed if the WebHook is configured to use the **WebhookKey** or **HttpQueryString** options as described in [Authentication options](register-web-hook.md#authentication-options). 
+The only data you pass as a query string are the authentication values if you configure the WebHook to use the **WebhookKey** or **HttpQueryString** options, as described in [Authentication options](register-web-hook.md#authentication-options).
 
-#### Header Data
+#### Header data
 
-If you choose the **HttpHeader** authentication option, you will need to use the key/value pairs that your service will require.
+If you choose the **HttpHeader** authentication option, use the key/value pairs that your service requires.
 
-Other data you can expect to find passed to your service is in the table below:
-
+You can expect your service to receive the following data:
 
 |Key|Value Description|
 |---------|---------|
 |`x-ms-dynamics-organization`|The domain name of the environment sending the request|
 |`x-ms-dynamics-entity-name`|The logical name of the table passed in the execution context data.|
 |`x-ms-dynamics-request-name`|The name of the event that the WebHook step was registered for.|
-|`x-ms-correlation-request-id`|Unique identifier for tracking any type of extension. This property is used by the platform for infinite loop prevention. In most cases, this property can be ignored. This value may be used when working with technical support because it can be used to query telemetry to understand what occurred during the entire operation.
-|`x-ms-dynamics-msg-size-exceeded`|Sent only when the HTTP payload size exceeds the 256KB.|
+|`x-ms-correlation-request-id`|Unique identifier for tracking any type of extension. The platform uses this property for infinite loop prevention. In most cases, you can ignore this property. When working with technical support, this value can be used to query telemetry to understand what occurred during the entire operation.
+|`x-ms-dynamics-msg-size-exceeded`|Sent only when the HTTP payload size exceeds 256 KB.|
 
+#### Request body
 
-#### Request Body
+The body contains a string that represents the JSON value of an instance of the <xref:Microsoft.Xrm.Sdk.RemoteExecutionContext> class. This is the same data that is passed to Azure Service Bus integrations.
 
-The body will contain string that represents the JSON value of an instance of the <xref:Microsoft.Xrm.Sdk.RemoteExecutionContext> class. This is the same data that is passed to Azure Service Bus integrations. 
+The service you create must parse this data to extract the relevant items of information for your service to provide its function. How you choose to parse this data depends on the technology you're using and your preferences.
 
-The service you create must parse this data to extract the relevant items of information for your service to provide its function. How you choose to parse this data depends on the technology you are using and your preferences.
-
-The following is an example of the serialized JSON data passed for a step registered with the following properties:
-
+The following example shows the serialized JSON data passed for a step registered with the following properties:
 
 |Property|Description|
 |---------|---------|
@@ -311,27 +307,29 @@ The following is an example of the serialized JSON data passed for a step regist
     "UserId": "11bb11bb-cc22-dd33-ee44-55ff55ff55ff"
 }
 ```
+
 > [!IMPORTANT]
-> When the size of the entire HTTP payload exceeds 256KB, the `x-ms-dynamics-msg-size-exceeded` header will be included and the following <xref:Microsoft.Xrm.Sdk.RemoteExecutionContext> properties will be removed:
+> When the size of the entire HTTP payload exceeds 256 KB, the `x-ms-dynamics-msg-size-exceeded` header is included and the following <xref:Microsoft.Xrm.Sdk.RemoteExecutionContext> properties are removed:
 >
 > - <xref:Microsoft.Xrm.Sdk.RemoteExecutionContext.ParentContext>
 > - <xref:Microsoft.Xrm.Sdk.RemoteExecutionContext.InputParameters>
 > - <xref:Microsoft.Xrm.Sdk.RemoteExecutionContext.PreEntityImages>
 > - <xref:Microsoft.Xrm.Sdk.RemoteExecutionContext.PostEntityImages>
 >
->Some operations do not include these properties.
+>Some operations don't include these properties.
 
 ## Invoke a WebHook from a plug-in or workflow activity
 
-Because a WebHook is a kind of service endpoint you can also invoke it without registering a step with a plug-in or workflow activity in the same way you can for an Azure Service Bus endpoint.  You need to provide the [ServiceEndpointId](reference/entities/serviceendpoint.md#BKMK_ServiceEndpointId) to the <xref:Microsoft.Xrm.Sdk.IServiceEndpointNotificationService> interface. See the following Azure Service Bus samples for more information: 
+Because a WebHook is a kind of service endpoint, you can invoke it without registering a step by using a plug-in or workflow activity. This approach works the same way as it does for an Azure Service Bus endpoint. You need to provide the [ServiceEndpointId](reference/entities/serviceendpoint.md#BKMK_ServiceEndpointId) to the <xref:Microsoft.Xrm.Sdk.IServiceEndpointNotificationService> interface. For more information, see the following Azure Service Bus samples:
+
 - [Sample: Azure aware custom plug-in](org-service/samples/azure-aware-custom-plugin.md)
 - [Sample: Azure aware custom workflow activity](org-service/samples/azure-aware-custom-workflow-activity.md)
 
 ## Troubleshoot WebHook registrations
 
-Webhooks are relatively simple. The service will send the request and evaluate the response. The system cannot parse any data returned with the body of the response, it will only look at the response `StatusCode` value.
+Webhooks are relatively simple. The service sends the request and evaluates the response. The system can't parse any data returned with the body of the response. It only looks at the response `StatusCode` value.
 
-The timeout is 60 seconds. Generally, if no response is returned before the timeout period or if the response `StatusCode` value is not within the `2xx` range to indicate success it will fail. The exception is when the error returned is in the following table:
+The timeout is 60 seconds. Generally, if no response is returned before the timeout period or if the response `StatusCode` value isn't within the `2xx` range to indicate success, the operation fails. The exception is when the error returned is in the following table:
 
 |StatusCode|Description|
 |-|-|
@@ -339,20 +337,21 @@ The timeout is 60 seconds. Generally, if no response is returned before the time
 |`503`|Service Unavailable|
 |`504`|Gateway Timeout|
 
-These errors indicate a networking issue that might be resolved with another attempt. The WebHook service will make one more attempt only when these error codes are returned.
+These errors indicate a networking issue that might be resolved with another attempt. The WebHook service makes one more attempt only when these error codes are returned.
 
 ### Asynchronous Webhooks
 
-If your web hook is registered to run asynchronously, you can examine the System Job for details on the error. More information: [Query failed asynchronous jobs for a given step](register-web-hook.md#query-failed-asynchronous-jobs-for-a-given-step)
+If you register your web hook to run asynchronously, you can examine the System Job for details on the error. For more information, see [Query failed asynchronous jobs for a given step](register-web-hook.md#query-failed-asynchronous-jobs-for-a-given-step).
 
-### Synchronous Webhooks
+### Synchronous webhooks
 
 [!INCLUDE [synchronous-WebHook-error](includes/synchronous-WebHook-error.md)]
 
 > [!NOTE]
-> Any webhook registered for a synchronous step will send the execution context data to the configured endpoint immediately. If an error occurs after the request was sent, the data operation will rollback but the request sent to the configured endpoint cannot be recalled.
+> When you register a webhook for a synchronous step, it sends the execution context data to the configured endpoint immediately. If an error occurs after the request is sent, the data operation rolls back but the request sent to the configured endpoint can't be recalled.
 
 ## Next steps
+
 [Register a WebHook](register-web-hook.md)<br />
 [Test WebHook registration with request logging site](test-WebHook-registration.md)
 

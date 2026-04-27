@@ -2,7 +2,7 @@
 title: "Create a view of your Azure Synapse Link for Dataverse data | MicrosoftDocs"
 description: "Learn how to create a view of your exported Dataverse table data"
 ms.custom: ""
-ms.date: 10/31/2024
+ms.date: 02/23/2026
 ms.reviewer: "Mattp123"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -18,6 +18,7 @@ search.audienceType:
 contributors: 
  - "sama-zaki"
  - "saviegas"
+ - "rwestMSFT"
 ---
 # Create a view of your Azure Synapse Link for Dataverse data
 
@@ -64,8 +65,7 @@ This section describes the prerequisites necessary to create a view of your Data
 
 ## Use a view of your Dataverse data
 
-You can use views in your queries the same way you use views in SQL Server queries.
-The view will be created and accessible under views folder in **SQL Server Management Studio (SSMS)** or **Azure Data Studio**
+You can use views in your queries the same way you use views in SQL Server queries. The view is created and available under the **Views** folder in SQL Server Management Studio (SSMS).
 
 > [!IMPORTANT]
 > Custom database objects created by a customer within the Azure Synapse Link database are deleted once the unlink is completed.

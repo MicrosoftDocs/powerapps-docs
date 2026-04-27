@@ -1,8 +1,8 @@
 ---
-title: "Create or edit model-driven app dashboards | MicrosoftDocs"
-description: Learn how to create and edit dashboards for model-driven apps
+title: "Create or edit model-driven app dashboards"
+description: Learn how to create and edit dashboards for model-driven apps in Power Apps
 ms.custom: ""
-ms.date: 12/19/2024
+ms.date: 04/03/2026
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -32,15 +32,15 @@ An admin or customizer creates or customizes system dashboards that, when publis
 
 Dashboards can be standard or interactive.
 
-**Standard** dashboards support adding one or more unrelated components such as charts or lists.
+*Standard* dashboards support adding one or more unrelated components such as charts or lists.
 
-**Interactive** dashboards provide the capability for users to act on a particular row directly from the dashboard. This article focuses on standard system dashboards. For information about interactive dashboards, see [Configure model-driven app interactive experience dashboards](configure-interactive-experience-dashboards.md).
+*Interactive* dashboards provide the capability for users to act on a particular row directly from the dashboard. This article focuses on standard system dashboards. For information about interactive dashboards, see [Configure model-driven app interactive experience dashboards](configure-interactive-experience-dashboards.md).
   
 ## Create a new standard dashboard  
   
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
   
-1. Select **Solutions** on the left navigation pane, and then open the required solution. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Select **Solutions** in the left navigation pane, and then open the unmanaged solution you want or create a new one. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 
 1. On the toolbar select **New**, select **Dashboard**, and then choose one of the following layouts:
 
@@ -52,19 +52,16 @@ Dashboards can be standard or interactive.
   
     :::image type="content" source="media/create-new-dashboard-layouts.png" alt-text="{alt-text}":::
 
-1. In the **Dashboard: New** page, enter a name for the dashboard.
+1. If you select Power BI embedded, go to [Create or edit a Power BI embedded system dashboard](create-edit-powerbi-embedded-page.md). Otherwise, in the **Dashboard: New** page, enter a name for the dashboard.
 
-1. Select one of the component areas and then select the icon for a chart or a list.  
+1. In one of the component sections, select the icon for a chart or a list.  
   
      Up to six components can be included in a dashboard.  
   
-1. For example, to add a chart, select the chart icon on the tile of the dashboard canvas where the chart needs to appear. Then, in the **Add Component** dialog, select values for **Row Type**, **View**, and **Chart**. Then select **Add** to add the chart to the dashboard. For information about how to create a chart, see [Create a model-driven app system chart](create-edit-system-chart.md).
+1. For example, to add a chart, select the chart icon on the tile of the dashboard canvas where the chart needs to appear. Then, in the **Add Component** dialog, select values for **Record Type**, **View**, and **Chart**. Then select **Add** to add the chart to the dashboard. For information about how to create a chart, see [Create a model-driven app system chart](create-edit-system-chart.md).
 :::image type="content" source="media/add-dashboard-component-dialog.png" alt-text="Add dashboard component dialog":::  
 
-   > [!NOTE]
-   > The **Enable for mobile** option on the **Dashboard Properties** dialog only works with the legacy web client. The property has no effect on the Unified Interface where all dashboards are available on mobile and browser.  
-
-1. When finished adding components to the dashboard, select **Save** and then **Close**.  
+1. When you finish adding components to the dashboard, select **Save** and then **Close**.  
 
 1. On the solution toolbar, select **Publish**.
   
@@ -72,7 +69,7 @@ Dashboards can be standard or interactive.
   
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-1. Select **Solutions** on the left navigation pane, and then open the required solution. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Select **Solutions** in the left navigation pane, and then open the solution you need. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 
 1. In the list of solution components, open the dashboard, select one of the component areas, and then on the toolbar select **Edit Component**.  
   
@@ -80,10 +77,7 @@ Dashboards can be standard or interactive.
   
      For more information about setting dashboard component properties, see [Set properties for a chart or list included in a dashboard](set-properties-chart-list-included-dashboard.md).  
 
-     > [!NOTE]
-     > The *Available on phone** option on the **Set Properties** dialog **Availability** section only works with the legacy web client. The property has no effect on the Unified Interface where all dashboards are available on mobile and browser. 
-  
-1. When the changes are complete select **Save** and then select **Close**.
+1. When the changes are complete, select **Save** and then select **Close**.
 
 1. On the solution toolbar, select **Publish**.
 

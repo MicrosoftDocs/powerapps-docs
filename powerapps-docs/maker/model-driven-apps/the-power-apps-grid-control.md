@@ -2,7 +2,7 @@
 title: "Power Apps grid control in Power Apps"
 description: "A control for use with Power Apps that lets users view, open, and edit records from a view or subgrid in model-driven apps."
 ms.custom: ""
-ms.date: 02/13/2026
+ms.date: 04/07/2026
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -49,7 +49,7 @@ When you configure the Power Apps grid control for a table, all views for that t
 1. In the **Add control** dialog box, select **Power Apps grid control**, and then select **Add**.
     :::image type="content" source="media/add-the-power-apps-grid-control.png" alt-text="Add Power Apps grid control to a table":::
 1. [Configure the Power Apps grid control](#configure-the-power-apps-grid-control)
-1. After configuring the Power Apps grid control to meet your needs, select Save on the command bar to save your changes. When you're ready to make the changes available to app users, select Publish on the command bar.
+1. After configuring the Power Apps grid control to meet your needs, select **Save** on the command bar to save your changes. When you're ready to make the changes available to app users, select **Publish** on the command bar.
 
 ## Add the Power Apps grid control to a subgrid using classic solution explorer
 
@@ -72,14 +72,14 @@ When you configure the Power Apps grid control for a table, all views for that t
     - The **Enable sorting** property determines if sorting options are available to users in the grid column header dropdowns. The default value is **Yes**.
     - The **Enable grouping** property determines if grouping options are available to users in the grid column header dropdowns. The default value is **No**.
     - The **Enable aggregation** property determines if aggregation options (sum, minimum, maximum, average) are available to users in numeric columns of the grid. The default value is **No**.
-    - The **Allow column reordering** property controls whether users can reorder columns from directly within the grid. This includes drag-and-drop of the column headers or using **Move left** and **Move right** actions from the column header dropdowns. The default value is **No**.
+    - The **Allow column reordering** property controls whether users can reorder columns from directly within the grid. This control includes drag-and-drop of the column headers or using **Move left** and **Move right** actions from the column header dropdowns. The default value is **No**.
     - The **Enable multiselect** property determines whether users can select multiple rows in the grid simultaneously or just a single row. The default value is **Yes**.
     - The **Allow range selection** property controls whether users can select a subset of the grid and copy that data to another application like Excel. The default value is **Yes**.
     - The **Enable jump bar** property can be used to display an alphabetic list at the bottom of views or subgrids. The default value is **No**. Below is a screenshot of the jump bar enabled for a subgrid in a model-driven app. 
        :::image type="content" source="media/jump-bar-in-view.png" alt-text="Jump bar enabled and displayed in the view for an app":::
-    - The **Enable pagination** property can be used to decide between modern data browsing (infinite scroll) and paging buttons. The default value is **No**. Select **Yes** to disable infinite scrolling and surface paging buttons. Note that the **Select all** action isn't available currently when using infinite scroll, but users can still perform range selection
+    - The **Enable pagination** property can be used to decide between modern data browsing (infinite scroll) and paging buttons. The default value is **No**. Select **Yes** to disable infinite scrolling and surface paging buttons. Note that the **Select all** action isn't currently available when using infinite scroll, but users can still perform range selection.
     - The **Enable OptionSet colors** property can be used to increase the visual appeal of choice columns by showing each value with its configured background color. The default value is **No**. Be sure to verify the configured color for each choice column to ensure readability and accessibility before enabling this property for a table.
-    - The **Show row status icons** property controls whether users see status icons (invalid, save in progress, saving, etc.) at the beginning of a grid row during the editing experience. The default value is **Yes**.
+    - The **Show row status icons** property controls whether users see status icons (invalid, save in progress, saving, and so on) at the beginning of a grid row during the editing experience. The default value is **Yes**.
     - The **Show data type icons** property determines whether column headers display an icon corresponding to the data type next to the column name. The default value is **No**.
     - The **Navigation types allowed** property determines which lookup controls in the grid render as hyperlinks. The default value is **All**. Select **Primary only** to suppress hyperlinks on all lookup fields except the primary column for the selected entity, or **None** to suppress all hyperlinks in the grid.
     - The **Reflow behavior** property determines whether the grid components render always in a tabular fashion (**Grid only**), always as a list (**List only**), or switches between tabular and list depending on the available width (**Reflow**). The default value is **Reflow**.
@@ -87,7 +87,7 @@ When you configure the Power Apps grid control for a table, all views for that t
     - The **Number of columns for list view** property allows you to define the number of columns to render while the grid is in list view. The default number of columns for a list is 3, the maximum number of columns is 10.
     - The **Enable banded rows for list view** property applies alternating color band to rows in the list view to improve record differentiation. The default value is **No**.
     - The **Show column labels for list view** property displays column labels before values in a list view. The default value is **No**. 
-    - The **Child  items** property is used to configure the nested grid capability, which allows users to expand rows to see related records in a subgrid. To set this up, you specify the **Entity** where the related records come from and the **View** that defines the filters, sorts, and columns to show in the subgrid. The default value is no nested grid configured.
+    - The **Child  items** property is used to configure the nested grid capability, which allows users to expand rows to see related records in a subgrid. To set up this property, specify the **Entity** where the related records come from and the **View** that defines the filters, sorts, and columns to show in the subgrid. The default value is no nested grid configured.
         - The **Child items parent ID** property is also needed to configure a nested grid and specifies the column (and relationship) to use to link the parent and child tables together.
         - The **Disable editing in child items grid** property provides some control over the editability of the nested grid. By default, the nested grid inherits the editability of the parent grid, but this property can be used to suppress editing in the nested grid when the parent grid is editable. The default value is **No**.  
     -  The **Customizer control** property allows the maker to link to a single customizer Power Apps component framework control with definitions for changing the visuals or interactions for one or more columns in the grid or the empty grid visual.
@@ -101,16 +101,16 @@ For information about how to customize the Power Apps grid control using extensi
 
 ### Limitations with card form lists
 
-When a view or subgrid is narrow it changes into a card list format that is better for small screens, such as mobile devices. The Power Apps grid control displays the following behavior in a card list:
+When a view or subgrid is narrow, it changes into a card list format that's better for small screens, such as mobile devices. The Power Apps grid control displays the following behavior in a card list:
 
 - Sort isn't currently available in a card list view. To work around this limitation, create views with the sort order you want.
 - **Select all** and **Clear all** aren't available in a card list view.
 - The jump bar isn't available in a card list view. To work around this limitation, select **Search** to filter records. Type the desired letter, and then press Enter.
-- Images on a record in the list don't display in a card list view. This includes table icons, web resource images, custom images, and conditional images. The only image displayed for a record in the list are the initials of the record.
+- Images on a record in the list don't display in a card list view. This limitation includes table icons, web resource images, custom images, and conditional images. The only image displayed for a record in the list are the initials of the record.
 - There are no icons for context menu commands in a card list view.
 - When there are no records, some lists have a prompt to create a new item. This button isn't displayed in a card list view that uses the Power Apps read-only grid control.
 
-#### The list view doesn’t display custom cards for the table
+#### The list view doesn't display custom cards for the table
 
 To work around this, you can display a custom card by configuring the table to use the card form of the legacy read-only grid control.
 
@@ -135,6 +135,8 @@ To work around this, you can display a custom card by configuring the table to u
 - Column grouping isn't supported when paging on the grid is enabled.
 - If the dataset displayed in the grid contains duplicate rows, the duplicates might not display in the grid. This can lead to the reported record count showing more records than are actually in the grid, or more records appearing when exporting the data to Excel or viewing the data in legacy Advanced Find. This behavior applies to all grid controls, not just the Power Apps grid control.
 - If a user has read-only privileges to the main list and then navigates through a form to a subgrid representing an entity to which they have write privileges, the subgrid still won't allow the user to make changes as access is determined first by the main entity, then by the related entity.
+- When using the Power Apps grid control in editable mode, lookup field cell customization options aren't supported.
+- When the Power Apps grid control is configured as read-only at the table level but editable for a subset of views, events might not fire uniformly across the different configuration states.
 
 ### Related articles
 

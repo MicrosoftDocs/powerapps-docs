@@ -342,7 +342,7 @@ Grid.displayName = 'Grid';
 
 ### Grid design notes
 
-This section includes commons on the design of the `Grid.tsx` component.
+This section includes comments on the design of the `Grid.tsx` component.
 
 #### It is a functional component
 

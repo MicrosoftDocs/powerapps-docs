@@ -1,8 +1,8 @@
 ---
-title: Compose HTTP requests and handle errors
-description: Learn about the HTTP methods and headers that form a part of HTTP requests for the Web API and how to identify and handle errors returned in the response.
+title: Compose HTTP Requests and Handle Errors
+description: Learn how to compose HTTP requests with the correct methods and headers for the Dataverse Web API, and handle errors in the response.
 ms.topic: how-to
-ms.date: 08/29/2024
+ms.date: 03/09/2026
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: jdaly
@@ -23,12 +23,12 @@ You interact with the Web API by composing and sending HTTP requests. You need t
 
 To find the Web API URL for your environment:
 
-1. Sign into [Power Apps](https://make.powerapps.com/), and then select your environment in the upper-right corner.
+1. Sign in to [Power Apps](https://make.powerapps.com/), and then select your environment in the upper-right corner.
 1. Select the **Settings** button in the upper-right corner, and then select **Developer resources**.
 
-   :::image type="content" source="../media/dev-resources-menu.png" alt-text="Developer resources menu":::
+   :::image type="content" source="../media/dev-resources-menu.png" alt-text="Screenshot of the Developer resources menu in Power Apps settings.":::
 
-   From here, you can copy the value for the **Web API endpoint**. More information: [View developer resources](../view-download-developer-resources.md)
+   From here, you can copy the value for the **Web API endpoint**. For more information, see [View developer resources](../view-download-developer-resources.md).
 
 
 The following table describes the parts of the URL:
@@ -36,37 +36,37 @@ The following table describes the parts of the URL:
 |Part|Description|
 |--|--|
 |Protocol| `https://`|
-|Environment Name|The unique name that applies to your environment. If your company name is *Contoso*, then it may be `contoso`.|
-|Region|Your environment is usually in a data center that is close to you geographically. For North America, it's `crm`. For South America `crm2`, For Japan `crm7`. For the complete list, see [Datacenter regions](/power-platform/admin/new-datacenter-regions)|
-|Base URL|This is usually `dynamics.com.`, but some data centers use different values. See [Datacenter regions](/power-platform/admin/new-datacenter-regions).|
+|Environment Name|The unique name that applies to your environment. If your company name is *Contoso*, then it might be `contoso`.|
+|Region|Your environment is usually in a data center that is close to you geographically. For North America, it's `crm`. For South America `crm2`. For Japan `crm7`. For the complete list, see [Datacenter regions](/power-platform/admin/new-datacenter-regions).|
+|Base URL|This value is usually `dynamics.com.`, but some data centers use different values. See [Datacenter regions](/power-platform/admin/new-datacenter-regions).|
 |Web API path|The path to the web API is `/api/data/`.|
 |Version|The version is expressed this way: `v[Major_version].[Minor_version][PatchVersion]/`. The current version is `v9.2`.|
 |Resource|The `EntitySetName` of the table, or the name of the function or action you want to use.|
 
 The URL you use is made up of these parts:
 
-Protocol + Environment Name + Region + Base URL + Web API path + Version + Resource.
+*Protocol* + *Environment Name* + *Region* + *Base URL* + *Web API path* + *Version* + *Resource*.
 
 ### Maximum URL length
 
-The maximum length of URL accepted by is 32 KB (32768 characters). This should be adequate for most kinds of request except certain `GET` operations which require very long string query parameters, such as queries using FetchXml. If you send requests inside the body of a `$batch` request, you can send requests with URLs up to 64 KB (65,536 characters). [Learn more about sending FetchXml within a $batch request](../fetchxml/retrieve-data.md#use-fetchxml-within-a-batch-request).
+The maximum length of URL accepted by is 32 KB (32,768 characters). This length is adequate for most kinds of requests, except certain `GET` operations that require very long string query parameters, such as queries using FetchXml. If you send requests inside the body of a `$batch` request, you can send requests with URLs up to 64 KB (65,536 characters). [Learn more about sending FetchXml within a $batch request](../fetchxml/retrieve-data.md#use-fetchxml-within-a-batch-request).
 
 ### Maximum OData segment length
 
-The maximum length of any individual segment in an OData request cannot be longer than 260 characters. If a single segment of the OData request is more than 260 characters in length, then this can result in `400 Bad Request - Invalid URL`. The segment is the 'Resource' part of the url as described above and includes all characters needed to describe the endpoint and any inline parameters.
+The maximum length of any individual segment in an OData request is 260 characters. If a single segment of the OData request is more than 260 characters in length, the request returns `400 Bad Request - Invalid URL`. The segment is the 'Resource' part of the URL and includes all characters needed to describe the endpoint and any inline parameters.
 
-For example, if the request is  `api/data/v9.2/MyApi(MyParameter='longvalue')`, `MyApi(MyParameter='longvalue')` is the segment that cannot exceed 260 characters. We recommend that you always use parameter aliases with OData functions. For example, composing your function as `/api/data/v9.2/MyApi(MyParameter=@alias)?@alias='longvalue'` shortens the segment to just `MyApi(MyParameter=@alias)`. [Learn more about using parameter aliases with Web API functions](use-web-api-functions.md#passing-parameters-to-a-function)
+For example, if the request is `api/data/v9.2/MyApi(MyParameter='longvalue')`, `MyApi(MyParameter='longvalue')` is the segment that can't exceed 260 characters. Always use parameter aliases with OData functions. For example, composing your function as `/api/data/v9.2/MyApi(MyParameter=@alias)?@alias='longvalue'` shortens the segment to just `MyApi(MyParameter=@alias)`. [Learn more about using parameter aliases with Web API functions](use-web-api-functions.md#passing-parameters-to-a-function).
 
 <a name="version_compatiblity"></a>
 
 ### Version compatibility
 
-This release introduces capabilities that aren't available in previous versions. Subsequent minor versions may provide more capabilities that won't be retroactively added to earlier minor versions. Your code written for v9.0 will continue to work in future versions when you reference v9.0 in your URL.
+This release introduces capabilities that previous versions don't support. Subsequent minor versions might provide more capabilities that earlier minor versions don't support. Your code written for v9.0 continues to work in future versions when you reference v9.0 in your URL.
 
-As new capabilities are introduced, they may conflict with earlier versions. These breaking changes are necessary to allow the service to become better. Most of the time, capabilities will remain the same between versions but you shouldn't assume they will.
+As new capabilities are introduced, they might conflict with earlier versions. These breaking changes are necessary to improve the service. Most of the time, capabilities remain the same between versions but don't assume they do.
 
 > [!NOTE]
-> Unlike the v8.x minor releases, new capabilities or other changes added to future versions won't be applied to earlier versions.
+> Unlike the v8.x minor releases, future versions don't apply new capabilities or other changes to earlier versions.
 > Pay attention to the version of the service you use and test your code if you change the version used.
 
 <a name="bkmk_methods"></a>
@@ -77,7 +77,7 @@ The following table lists the HTTP methods you can use with the Dataverse Web AP
   
 |Method|Usage|
 |------------|-----------|
-|`GET`|Use when retrieving data, including calling functions. The expected Status Code for a successful retrieve is `200 OK`.|
+|`GET`|Use when retrieving data, including calling functions. The expected status code for a successful retrieve is `200 OK`.|
 |`POST`|Use when creating entities or calling actions.|
 |`PATCH`|Use when updating entities or performing upsert operations.|
 |`DELETE`|Use when deleting entities or individual properties of entities.|
@@ -96,11 +96,11 @@ OData-Version: 4.0
 If-None-Match: null
 ```  
 
-Although the OData protocol allows for both JSON and ATOM format, the Web API only supports JSON. Every request should include the `Accept` header value of `application/json`, even when no response body is expected. Any error returned in the response is returned as JSON. While your code should work even if this header isn't included, we recommend including it as a best practice  
+Although the OData protocol allows for both JSON and ATOM format, the Web API only supports JSON. Every request should include the `Accept` header value of `application/json`, even when no response body is expected. The Web API returns any error in the response as JSON. While your code should work even if this header isn't included, include it as a best practice.  
   
-The current OData version is 4.0, but future versions may allow for new capabilities. To ensure that there's no ambiguity about the OData version that will be applied to your code in the future, you should always include an explicit statement of the current OData version and the maximum version to apply in your code. Use both `OData-Version` and `OData-MaxVersion` headers set to a value of `4.0`.  
+The current OData version is 4.0, but future versions might introduce new capabilities. To ensure that there's no ambiguity about the OData version that applies to your code, always include an explicit statement of the current OData version and the maximum version. Use both `OData-Version` and `OData-MaxVersion` headers set to a value of `4.0`.  
  
-Queries that expand collection-valued navigation properties may return cached data for those properties that don't reflect recent changes. Include `If-None-Match: null` header in the request body to override browser caching of Web API request. More information: [Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests 3.2 : If-None-Match](https://tools.ietf.org/html/rfc7232#section-3.2).
+Queries that expand collection-valued navigation properties might return cached data for those properties that don't reflect recent changes. Include `If-None-Match: null` header in the request body to override browser caching of Web API request. For more information, see [Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests 3.2 : If-None-Match](https://tools.ietf.org/html/rfc7232#section-3.2).
 
 Every request that includes JSON data in the request body must include a `Content-Type` header with a value of `application/json`.  
   
@@ -110,57 +110,57 @@ Content-Type: application/json
   
 You can use other headers to enable specific capabilities.  
 
-### Prefer Headers
+### Prefer headers
 
-You can use the [Prefer](https://www.rfc-editor.org/rfc/rfc7240) header with the values below to specify preferences.
+Use the [Prefer](https://www.rfc-editor.org/rfc/rfc7240) header with the following values to specify preferences.
 
 
 |Prefer value |Description |
 |---------|---------|
-|`return=representation`|Use this preference to return data on create (`POST`) or update (`PATCH`) operations for entities. When this preference is applied to a `POST` request, a successful response has status `201 Created` . For a `PATCH` request, a successful response has a status `200 OK.` Without this preference applied, both operations return status `204 No Content` to reflect that no data is returned in the body of the response by default. More information: [Create with data returned](create-entity-web-api.md#create-with-data-returned) & [Update with data returned](update-delete-entities-using-web-api.md#update-with-data-returned)|
+|`return=representation`|Use this preference to return data on create (`POST`) or update (`PATCH`) operations for entities. When you apply this preference to a `POST` request, a successful response has status `201 Created` . For a `PATCH` request, a successful response has a status `200 OK.` Without this preference, both operations return status `204 No Content` to reflect that the response body contains no data. More information: [Create with data returned](create-entity-web-api.md#create-with-data-returned) & [Update with data returned](update-delete-entities-using-web-api.md#update-with-data-returned)|
 |`odata.include-annotations`|See [Request annotations](#request-annotations)|
 |`odata.maxpagesize`|Use this preference to specify how many pages you want to return in a query. More information: [Page results](query/page-results.md) |
-|`odata.track-changes`|The change tracking feature allows you to keep the data synchronized in an efficient manner by detecting what data has changed since the data was initially extracted or last synchronized. More information: [Use change tracking to synchronize data with external systems](../use-change-tracking-synchronize-data-external-systems.md)|
+|`odata.track-changes`|The change tracking feature keeps the data synchronized in an efficient manner by detecting what data changed since the data was initially extracted or last synchronized. More information: [Use change tracking to synchronize data with external systems](../use-change-tracking-synchronize-data-external-systems.md)|
 |`respond-async`|Specifies that the request should be processed asynchronously. More information: [Background operations (preview)](../background-operations.md)|
 
 > [!NOTE]
-> Multiple Prefer headers can be specified using comma-separated values; for example:
+> You can specify multiple `Prefer` headers by using comma-separated values. For example:
 > `Prefer: respond-async,odata.include-annotations="*"`
 
 
 #### Request annotations
 
-You can request different OData annotation data to be returned with the results using the `Prefer: odata.include-annotations` request header. You can choose to return all annotations, or specify specific annotations. The following table describes the annotations Dataverse Web API supports:
+You can request different OData annotation data to be returned with the results by using the `Prefer: odata.include-annotations` request header. You can choose to return all annotations or specify specific annotations. The following table describes the annotations Dataverse Web API supports:
 
 
 |Annotation|Description|
 |---------|---------|
 |`OData.Community.Display.V1.FormattedValue`| Returns formatted string values you can use in your application. More information: [Formatted values](query/select-columns.md#formatted-values)|
-|`Microsoft.Dynamics.CRM.associatednavigationproperty`<br />`Microsoft.Dynamics.CRM.lookuplogicalname`|Returns information about related lookup columns. More information:  [Lookup property data](query/select-columns.md#lookup-property-data)|
-|`Microsoft.Dynamics.CRM.totalrecordcount`<br />`Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded`|When you use the `$count` query option the `@odata.count` annotation tells the number of records, but only 5,000 standard table records records can be returned at a time. For elastic tables the page size limit is 500. Request the `Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded` to get a boolean value that will tell you if the total number of records matching the query exceeds the maximum page size limit for the type of table you are using.  More information: [Count number of rows](query/count-rows.md) |
-|`Microsoft.Dynamics.CRM.globalmetadataversion`|This annotation is returned on the request and you can cache it in your application. The value changes when any schema change occurs, indicating that you may need to refresh any schema data that your application has cached. More information: [Cache Schema data](../cache-schema-data.md)|
+|`Microsoft.Dynamics.CRM.associatednavigationproperty`<br />`Microsoft.Dynamics.CRM.lookuplogicalname`|Returns information about related lookup columns. More information:  [Lookup property data](query/select-columns.md#lookup-property-data) and [Multi-table lookups](multitable-lookup.md)|
+|`Microsoft.Dynamics.CRM.totalrecordcount`<br />`Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded`|When you use the `$count` query option, the `@odata.count` annotation tells the number of records, but only 5,000 standard table records can be returned at a time. For elastic tables, the page size limit is 500. Request the `Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded` annotation to get a boolean value that indicates if the total number of records matching the query exceeds the maximum page size limit for the type of table you're using.  More information: [Count number of rows](query/count-rows.md) |
+|`Microsoft.Dynamics.CRM.globalmetadataversion`|You can cache this annotation in your application. The value changes when any schema change occurs, indicating that you might need to refresh any schema data that your application cached. More information: [Cache Schema data](../cache-schema-data.md)|
 |`Microsoft.PowerApps.CDS.ErrorDetails.OperationStatus`<br />`Microsoft.PowerApps.CDS.ErrorDetails.SubErrorCode`<br />`Microsoft.PowerApps.CDS.HelpLink`<br />`Microsoft.PowerApps.CDS.TraceText`<br />`Microsoft.PowerApps.CDS.InnerError.Message`|These annotations provide more details when errors are returned. More information: [Include more details with errors](#include-more-details-with-errors)|
 
-If you want only specific annotations, you can request them as comma-separated values. You can also use the '`*`' character as a wildcard.  For example, the following `Prefer` request header only includes the formatted values and any additional error detail annotations:
+To request specific annotations, include them as comma-separated values. You can also use the '`*`' character as a wildcard. For example, the following `Prefer` request header includes only the formatted values and any additional error detail annotations:
 
 ```
 Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue,Microsoft.PowerApps.CDS.ErrorDetails*"
 ```
 
 > [!TIP]
-> It's common to simply use the `Prefer: odata.include-annotations="*"` request header to return all annotations.
+> To return all annotations, use the `Prefer: odata.include-annotations="*"` request header.
 
 ### Other headers
 
 |Header|Value|Description|
 |---------|---------|---------|
-|`CallerObjectId`|User Microsoft Entra ID Object ID|Use this header to impersonate another user when the caller has the privileges to do so. Set the value to the Microsoft Entra ID Object ID of the user to impersonate. This data is in the [User (SystemUser) table/entity](../reference/entities/systemuser.md) [AzureActiveDirectoryObjectId](../reference/entities/systemuser.md#BKMK_AzureActiveDirectoryObjectId) attribute (column). More information: [Impersonate another user using the Web API](impersonate-another-user-web-api.md)|
-|`If-Match`|`Etag` value<br /> or `*`|Use this header to apply optimistic concurrency to ensure that you don't overwrite changes that someone else applied on the server since you retrieved a record. More information: [Apply optimistic concurrency](perform-conditional-operations-using-web-api.md#bkmk_Applyoptimisticconcurrency) and [If-Match](https://tools.ietf.org/html/rfc7232#section-3.1)<br /> You can also use this header with `*` to prevent a `PATCH` operation from creating a record. More information: [Prevent create in upsert](perform-conditional-operations-using-web-api.md#prevent-create-in-upsert)|
-|`If-None-Match`|`null`<br /> or `*`|This header should be used in all requests with a value of `null` as described in [HTTP headers](#http-headers), but it can also be used to prevent a `POST` operation from performing an update. More information: [Prevent update in upsert](perform-conditional-operations-using-web-api.md#prevent-update-in-upsert) and [If-None-Match](https://tools.ietf.org/html/rfc7232#section-3.2)|
-|`MSCRM.SolutionUniqueName`|solution unique name|Use this header when you want to create a solution component and have it associated with an unmanaged solution. More information: [Create and update table definitions using the Web API](create-update-entity-definitions-using-web-api.md)|
-|`MSCRM.SuppressDuplicateDetection`|`false` |Use this header with the value `false` to enable duplicate detection when creating or updating a record. More information: [Check for Duplicate records](create-entity-web-api.md#check-for-duplicate-records)|
-|`MSCRM.BypassCustomPluginExecution`|`true`|Use this header when you want to by-pass custom plug-in code and the caller has the `prvBypassCustomPlugins` privilege. More information: [Bypass Custom Business Logic](../bypass-custom-business-logic.md)|
-|`Consistency`|`Strong`|Use this header when you must have the most recent version of a cached item. Cached items include metadata definitions, labels, user permissions, and team permissions. For example, if you apply a change to some metadata definition, label, or permission and you have code that must use the latest definition within 30 seconds of the change, use this header to ensure you get the latest version. Using this header incurs a small performance penalty, so it shouldn't be used all the time.|
+| `CallerObjectId` | User Microsoft Entra ID Object ID | Use this header to impersonate another user when the caller has the privileges to do so. Set the value to the Microsoft Entra ID Object ID of the user to impersonate. This data is in the [User (SystemUser) table/entity](../reference/entities/systemuser.md) [AzureActiveDirectoryObjectId](../reference/entities/systemuser.md#BKMK_AzureActiveDirectoryObjectId) attribute (column). More information: [Impersonate another user using the Web API](impersonate-another-user-web-api.md). |
+| `If-Match` | `Etag` value<br /> or `*` | Use this header to apply optimistic concurrency to ensure that you don't overwrite changes that someone else applied on the server since you retrieved a record. More information: [Apply optimistic concurrency](perform-conditional-operations-using-web-api.md#bkmk_Applyoptimisticconcurrency) and [If-Match](https://tools.ietf.org/html/rfc7232#section-3.1).<br /> You can also use this header with `*` to prevent a `PATCH` operation from creating a record. More information: [Prevent create in upsert](perform-conditional-operations-using-web-api.md#prevent-create-in-upsert). |
+| `If-None-Match` | `null`<br /> or `*` | This header should be used in all requests with a value of `null` as described in [HTTP headers](#http-headers), but it can also be used to prevent a `POST` operation from performing an update. More information: [Prevent update in upsert](perform-conditional-operations-using-web-api.md#prevent-update-in-upsert) and [If-None-Match](https://tools.ietf.org/html/rfc7232#section-3.2). |
+| `MSCRM.SolutionUniqueName` | solution unique name | Use this header when you want to create a solution component and have it associated with an unmanaged solution. More information: [Create and update table definitions using the Web API](create-update-entity-definitions-using-web-api.md). |
+| `MSCRM.SuppressDuplicateDetection` | `false` | Use this header with the value `false` to enable duplicate detection when creating or updating a record. More information: [Check for Duplicate records](create-entity-web-api.md#check-for-duplicate-records). |
+| `MSCRM.BypassCustomPluginExecution` | `true` | Use this header when you want to bypass custom plug-in code and the caller has the `prvBypassCustomPlugins` privilege. More information: [Bypass Custom Business Logic](../bypass-custom-business-logic.md). |
+| `Consistency` | `Strong` | Use this header when you must have the most recent version of a cached item. Cached items include metadata definitions, labels, user permissions, and team permissions. For example, if you apply a change to some metadata definition, label, or permission and you have code that must use the latest definition within 30 seconds of the change, use this header to ensure you get the latest version. Using this header incurs a small performance penalty, so don't use it all the time. |
 
 When you execute batch operations, you must apply many different headers in the request and with each part sent in the body. More information: [Execute batch operations using the Web API](execute-batch-operations-using-web-api.md).
   
@@ -191,7 +191,7 @@ When you execute batch operations, you must apply many different headers in the 
 
 ## Parse errors from the response
 
-Details about errors are included as JSON in the response in the following format.  
+The response includes details about errors as JSON in the following format.  
   
 ```json  
 {  
@@ -204,9 +204,9 @@ Details about errors are included as JSON in the response in the following forma
 
 ### Include more details with errors
 
-Some errors can include more details using *annotations*. When a request includes the `Prefer: odata.include-annotations="*"` header, the response includes all the annotations that contain more details about errors and a URL that may direct you to specific guidance for the error.
+Some errors include more details through *annotations*. When a request includes the `Prefer: odata.include-annotations="*"` header, the response includes all the annotations that contain more details about errors and a URL that might direct you to specific guidance for the error.
 
-Some of these details can be set by developers writing plug-ins. For example, let's say you have a plug-in that throws an error using the [InvalidPluginExecutionException(OperationStatus, Int32, String)](/dotnet/api/microsoft.xrm.sdk.invalidpluginexecutionexception.-ctor#Microsoft_Xrm_Sdk_InvalidPluginExecutionException__ctor_Microsoft_Xrm_Sdk_OperationStatus_System_Int32_System_String_) constructor. This constructor allows you to pass an OperationStatus value, a custom integer error code, and an error message.
+Developers writing plug-ins can set some of these details. For example, suppose you have a plug-in that throws an error by using the [InvalidPluginExecutionException(OperationStatus, Int32, String)](xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException.%23ctor(Microsoft.Xrm.Sdk.OperationStatus,System.Int32,System.String)) constructor. This constructor accepts an `OperationStatus` value, a custom integer error code, and an error message.
 
 A simple plug-in might look like this:
 
@@ -239,7 +239,7 @@ namespace MyNamespace
 }
 ```
 
-When this plug-in is registered on the Create message of an account entity, and the request to create an account includes the `odata.include-annotations="*"` preference, the request and response look like the following example:
+When you register this plug-in on the Create message of an account entity, and the request to create an account includes the `odata.include-annotations="*"` preference, the request and response look like the following example:
 
 **Request:**
 
@@ -277,21 +277,21 @@ The following table describes the annotation in the response.
 |---------|---------|
 |`@Microsoft.PowerApps.CDS.ErrorDetails.OperationStatus`<br/>The value of the <xref:Microsoft.Xrm.Sdk.OperationStatus> set by the [InvalidPluginExecutionException(OperationStatus, Int32, String)](/dotnet/api/microsoft.xrm.sdk.invalidpluginexecutionexception.-ctor#Microsoft_Xrm_Sdk_InvalidPluginExecutionException__ctor_Microsoft_Xrm_Sdk_OperationStatus_System_Int32_System_String_) constructor.|`1`|
 |`@Microsoft.PowerApps.CDS.ErrorDetails.SubErrorCode`<br/>The value of the `SubErrorCode` set by the [InvalidPluginExecutionException(OperationStatus, Int32, String)](/dotnet/api/microsoft.xrm.sdk.invalidpluginexecutionexception.-ctor#Microsoft_Xrm_Sdk_InvalidPluginExecutionException__ctor_Microsoft_Xrm_Sdk_OperationStatus_System_Int32_System_String_) constructor.|`12345`|
-|`@Microsoft.PowerApps.CDS.HelpLink`<br/>A URL that contains information about the error that *may* redirect you to guidance about how to address the error.|`http://go.microsoft.com/fwlink/?LinkID=398563&error=Microsoft.Crm.CrmException%3a80040265&client=platform`|
-|`@Microsoft.PowerApps.CDS.TraceText`<br/>Content written to the plug-in trace log using the [ITracingService.Trace(String, Object[]) Method](/dotnet/api/microsoft.xrm.sdk.itracingservice.trace). This annotation includes the stacktrace for the plug-in because the plug-in author logged it.|`[MyNamespace: MyNamespace.MyClass ]`<br/>`[52e2dbb9-85d3-ea11-a812-000d3a122b89: MyNamespace.MyClass :Create of account]`<br/><br/>`Entering MyClass plug-in.`<br/>`StackTrace:`<br/>`  at MyNamespace.MyClass.Execute(IServiceProvider serviceProvider)`|
+|`@Microsoft.PowerApps.CDS.HelpLink`<br/>A URL that contains information about the error and *might* redirect you to guidance about how to address the error.|`http://go.microsoft.com/fwlink/?LinkID=398563&error=Microsoft.Crm.CrmException%3a80040265&client=platform`|
+|`@Microsoft.PowerApps.CDS.TraceText`<br/>Content written to the plug-in trace log by using the [ITracingService.Trace(String, Object[]) Method](/dotnet/api/microsoft.xrm.sdk.itracingservice.trace). This annotation includes the stack trace for the plug-in because the plug-in author logged it.|`[MyNamespace: MyNamespace.MyClass ]`<br/>`[52e2dbb9-85d3-ea11-a812-000d3a122b89: MyNamespace.MyClass :Create of account]`<br/><br/>`Entering MyClass plug-in.`<br/>`StackTrace:`<br/>`  at MyNamespace.MyClass.Execute(IServiceProvider serviceProvider)`|
 |`@Microsoft.PowerApps.CDS.InnerError.Message`<br/>The error message found in the InnerError for the exception. This message should be the same as the error message except in certain special cases that are for internal use only.|`Example Error Message.`|
 
 > [!NOTE]
-> The `@Microsoft.PowerApps.CDS.HelpLink` isn't guaranteed to provide guidance for every error. Guidance *may* be provided proactively but most commonly it's provided reactively based on how frequently the link is used. Use the link. If it doesn't provide guidance, your use of the link helps us track that people need more guidance about the error. We can then prioritize including guidance to the errors that people need most. The resources that the link may direct you to may be documentation, links to community resources, or external sites.
+> The `@Microsoft.PowerApps.CDS.HelpLink` isn't guaranteed to provide guidance for every error. Guidance *might* be provided proactively but most commonly it's provided reactively based on how frequently the link is used. Use the link. If it doesn't provide guidance, your use of the link helps the product team track that people need more guidance about the error. The team can then prioritize including guidance to the errors that people need most. The resources that the link might direct you to might be documentation, links to community resources, or external sites.
 
-If you don't want to receive all annotations in the response, you can specify which annotations you want to have returned. Rather than using `Prefer: odata.include-annotations="*"`, you can use the following value to receive only formatted values for operations that retrieve data and the help link if an error occurs:
+If you don't want to receive all annotations in the response, you can specify which annotations you want returned. Rather than using `Prefer: odata.include-annotations="*"`, use the following value to receive only formatted values for operations that retrieve data and the help link if an error occurs:
 `Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue,Microsoft.PowerApps.CDS.HelpLink"`.
 
 More information: [Request annotations](#request-annotations)
 
 ## Add a shared variable from the Web API
 
-You can set a string value that is available to plug-ins within the ExecutionContext in the `SharedVariables` collection. More information:
+You can set a string value that's available to plug-ins within the `ExecutionContext` in the `SharedVariables` collection. For more information, see:
 
 - [Add a shared variable to the plugin execution context](../optional-parameters.md#add-a-shared-variable-to-the-plugin-execution-context)
 - [Shared variables](../understand-the-data-context.md#shared-variables)
@@ -309,6 +309,6 @@ You can set a string value that is available to plug-ins within the ExecutionCon
 [Use Web API actions](use-web-api-actions.md)   
 [Execute batch operations using the Web API](execute-batch-operations-using-web-api.md)   
 [Impersonate another user using the Web API](impersonate-another-user-web-api.md)   
-[Perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md)
+[Perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md).
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

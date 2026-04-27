@@ -6,7 +6,7 @@ author: mduelae
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 05/16/2025
+ms.date: 02/18/2026
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
@@ -17,45 +17,79 @@ contributors:
 ---
 # Create a canvas app using Microsoft Dataverse
 
-Create a canvas app to manage data stored in Dataverse, using either built-in standard tables, custom tables created by your organization, or both.
+Microsoft Dataverse provides a secure, cloud-based platform for storing and managing business data. With Power Apps, you can create canvas apps that connect directly to Dataverse to display, edit, and manage your organization's data without complex data connections.
 
-When building an app from Dataverse, you don't need to create a connection from Power Apps, unlike with data sources such as SharePoint, Dynamics 365, or Excel. All you need to do is specify the tables you want to display or manage in the app.
+This article shows you how to build canvas apps using Dataverse tables. You'll learn three different approaches: generating apps from existing data, creating new tables and apps together, and building custom apps from scratch. Whether you're working with standard tables or custom organizational data, these methods help you create functional business apps quickly.
+
 
 ## Prerequisites
 
 - [Switch to an environment](intro-maker-portal.md#choose-an-environment) where a database is created with sample data. If you have an appropriate license, you can [create an environment](/power-platform/admin/create-environment) to meet this need.
-- Ensure you have the [Environment Maker](/power-platform/admin/database-security#predefined-security-roles) security role, either directly or through a Dataverse team that is part of the **AAD Security Group** category. Custom security roles are not currently supported for Canvas App maker scenarios.
+- Ensure you have the [Environment Maker](/power-platform/admin/database-security#predefined-security-roles) security role, either directly or through a Dataverse team that is part of the **AAD Security Group** category. Custom security roles aren't currently supported for Canvas App maker scenarios.
 
 ## Create an app
 
-
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+
 1. From the home screen, choose one of the following options based on how you want to create your app using Dataverse:
 
-    |Create options using Dataverse  |Benefits  |Navigation  |
-    |---------|---------|---------|
-    |A single-page gallery app   |   Use your existing business data in Dataverse and create a lightweight responsive app.   |1. Choose one of the following options:   <br><br>  - **Start with data** > **Select an existing table**.  <br> <br>  - **Start with a page design** > **Gallery connected to table**.<br><br> 2. Select a table and select **Create app**.   |
-    |Three screen mobile app     |   Utilize your existing data in Dataverse and create an app using a template with three screens, offering options to browse, view details, create, and edit.     | **Start with an app template** > **From Dataverse**. Then, select a table > **Create app**.    |
-    |Blank app that uses data from Dataverse     |      Use your existing business data in Dataverse to tailor your app with flexibility, free from the limitations of predesigned templates.   |        In the left navigation pane, select **Create** > **Start with blank canvas** > **Phone size**.  |
+    | Create options using Dataverse | Benefits | Navigation |
+    |---|---|---|
+    | A single-page gallery app | Use your existing business data in Dataverse and create a lightweight responsive app. | Select **Start with data** > **Dataverse**. Select a table and select **Create app**. |
+    | Create new data and build an app | Set up structured tables in Dataverse to organize data and build secure, scalable apps. | Select **Start with data** > **Create new data**. Use the table designer or Copilot to create tables, then select **Save and exit**. |
+    | Blank app that uses data from Dataverse | Use your existing business data in Dataverse to tailor your app with flexibility, free from the limitations of predesigned templates. | In the left navigation pane, select **Create** > **Start with blank canvas** > **Phone size**. |
 
+    > [!NOTE]
+    > The Power Apps home screen now surfaces a **vibe.powerapps.com** prompt, introducing a new experience that brings together generative design, AI agents, and plan-driven workflows. You can try this experience to go from idea to a working app faster.
 
 1. The app is created and [Power Apps Studio](power-apps-studio.md) opens, where you continue building the app.
 
+## Start with data using Dataverse
+
+The **Start with data** experience lets you quickly connect to an existing Dataverse table and generate a canvas app. You can also create new tables directly from this experience.
+
+### Connect to an existing Dataverse table
+
+1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+
+1. From the home screen, select **Start with data**.
+
+1. On the **Create an app** page, select **Dataverse**.
+
+1. Select an existing Dataverse table and select **Create app**.
+
+Power Apps Studio opens with a gallery app connected to your selected table.
+
+### Create new data
+
+If you don't have an existing table, you can create one directly from the **Start with data** experience.
+
+1. From the home screen, select **Start with data**.
+
+1. Select **Create new data**.
+
+1. In the **Create new tables** designer, you can:
+   - Add a new table by selecting **+ New table**.
+   - Add an existing table by selecting **+ Existing table**.
+   - Use **Copilot** to describe your tables, columns, rows, and relationships, and it generates them for you.
+   - Import data from Excel or .CSV files, or SharePoint lists by selecting **Import data** in the Copilot pane.
+
+1. When you finish defining your tables, select **Save and exit** to generate the app.
 
 ## Add a Dataverse table in a blank app
 
-To help you understand how to create an app with data from Dataverse, let's start by creating a blank app and then adding data from Dataverse.
+To help you understand how to create an app with data from Dataverse, start by creating a blank app and then adding data from Dataverse.
 
-1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
+1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 1. In the left navigation pane, select **Create** > **Start with blank canvas** > **Phone size**.
 
-1. When Power App Studio opens, go to the [app authoring menu](power-apps-studio.md#5--app-authoring-menu) and select **Data**.
+1. When Power Apps Studio opens, go to the [app authoring menu](power-apps-studio.md#5--app-authoring-menu) and select **Data**.
 
    > [!NOTE]
-   > If this is your first time connecting to Dataverse, you'll be prompted to create a connection. Select **Create** to establish the connection.
+   > If this is your first time connecting to Dataverse, you're prompted to create a connection. Select **Create** to establish the connection.
 
-1. Select **Add data** and enter **Accounts** in the search box, and select it.
+1. Select **Add data**, enter **Accounts** in the search box, and select it.
 
 1. Close the **Data** pane by selecting the close icon in the upper right corner.
 
@@ -71,8 +105,8 @@ To help you understand how to create an app with data from Dataverse, let's star
 
     This formula specifies that:
 
-   - The gallery should show data from the **Accounts** table.
-   - The data should be sorted in ascending order until a user selects the sort button to toggle the sort order.
+   - The gallery shows data from the **Accounts** table.
+   - The data is sorted in ascending order until a user selects the sort button to toggle the sort order.
    - If a user types or pastes one or more characters into the search bar (**TextSearchBox1**), the list shows only those accounts for which the **name** field contains the characters that the user specified.
 
      You can use [these and many other functions](formula-reference.md) to specify how your app appears and behaves.
@@ -80,7 +114,8 @@ To help you understand how to create an app with data from Dataverse, let's star
      ![Set the gallery's Items property.](./media/data-platform-create-app-scratch/gallery-items.png)
 
 1. In the gallery's **Properties** pane, set the **Layout** to **Title**.
-1. Edit the **Title** text property and rename it to **Browse**. More information: [Customize a gallery](customize-layout-sharepoint.md)
+
+1. Edit the **Title** text property and rename it to **Browse**. For more information, see [Customize a gallery](customize-layout-sharepoint.md).
 
     ![Browse screen.](./media/data-platform-create-app-scratch/final-browse.png)
 
@@ -94,7 +129,7 @@ To help you understand how to create an app with data from Dataverse, let's star
 
 ### Add a form screen
 
-1. Repeat the first step of the previous procedure, except add a **Form** screen instead of a **List** screen.
+1. Repeat the first step of the previous procedure, but add a **Form** screen instead of a **List** screen.
 
 1. Set the form's **DataSource** property to **Accounts** and its **Item** property to **BrowseGallery.Selected** as the **Advanced** tab of the right-hand pane shows.
 
@@ -110,7 +145,7 @@ To help you understand how to create an app with data from Dataverse, let's star
     - **Annual Revenue**
 
     > [!NOTE]
-    > Outside of this scenario, you can create a custom field by selecting **New field**, providing the required information, and then selecting **Done**. More information: [Create a column](../data-platform/create-edit-field-portal.md#create-a-column).<br><br>![Select and add a column.](media/data-platform-create-app-scratch/choose-or-add-fields.png "Select and add a column")
+    > Outside of this scenario, you can create a custom field by selecting **New field**, providing the required information, and then selecting **Done**. For more information, see [Create a column](../data-platform/create-edit-field-portal.md#create-a-column).<br><br>![Select and add a column.](media/data-platform-create-app-scratch/choose-or-add-fields.png "Select and add a column")
 
 1. Select **Add**.
 
@@ -164,11 +199,17 @@ To help you understand how to create an app with data from Dataverse, let's star
 
 ### Test the app
 
-1. On the actions menu, select ![Preview button.](media/studio/preview-button.png) **Preview the app**. More information: [Preview an app](preview-app.md)
+1. On the actions menu, select ![Preview button.](media/studio/preview-button.png) **Preview the app**. For more information, see [Preview an app](preview-app.md).
 
 1. Toggle the list between ascending and descending sort orders, and filter the list by one or more characters in the account name.
+
 1. Add an account, edit the account that you added, start to update the account, but cancel your changes, and then delete the account.
 
+## See also
+
+- [Overview of the new Power Apps vibe experience (preview)](../../vibe/overview.md)
+- [Customize a gallery](customize-layout-sharepoint.md)
+- [Create a column](../data-platform/create-edit-field-portal.md#create-a-column)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

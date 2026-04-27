@@ -1,42 +1,42 @@
 ---
 title: Create a blank canvas app from scratch
-description: Create an app from scratch and then add your data.
-author: franklanmsft
+description: Learn how to create a blank canvas app from scratch in Power Apps. Build custom business apps with controls, data connections, and business logic tailored to your needs.
+author: shivanichander
 
 ms.topic: quickstart
 ms.custom: canvas
 ms.collection: get-started
-ms.reviewer: 
-ms.date: 05/16/2025
+ms.reviewer: mkaur
+ms.date: 02/11/2026
 ms.subservice: canvas-maker
-ms.author: tapanm
+ms.author: shivchan
 search.audienceType: 
   - maker
 contributors:
   - mduelae
-  - franklanmsft
+  - shivchan
 ---
 
 # Create a blank canvas app from scratch
 
-In Power Apps, create a blank canvas app that you can customize further and add a data source. 
+Power Apps canvas apps give you the flexibility to design custom business apps tailored to your specific needs. When you create a blank canvas app, you start with an empty design surface that you can customize with controls, data connections, and business logic.
 
 
 ## Prerequisites
 
-Ensure you have the [Environment Maker](/power-platform/admin/database-security#predefined-security-roles) security role, either directly or through a Microsoft Dataverse team that is part of the **AAD Security Group** category. Custom security roles are not currently supported for Canvas App maker scenarios.
+Ensure you have the [Environment Maker](/power-platform/admin/database-security#predefined-security-roles) security role, either directly or through a Microsoft Dataverse team that is part of the **AAD Security Group** category. Custom security roles aren't currently supported for Canvas App maker scenarios.
 
 ## Create a blank canvas app
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
-1. In the left navigation pane, select **Create** > **Start with a blank canvas**.
+1. In the left navigation pane, select **Create** > **Start from blank**.
 
 1. Choose an app size (format) such as responsive, tablet, or phone.
 
-Once created, the app opens in [Power Apps Studio](power-apps-studio.md) where you can start building and customizing it.
+When you create the app, it opens in [Power Apps Studio](power-apps-studio.md) where you can start building and customizing it.
 
-## Next steps:
+## Next steps
 
 Configure the app's functionality and, depending on your business scenario, add the necessary connections and data sources.
 
