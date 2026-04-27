@@ -1,8 +1,8 @@
 ---
-title: "Privileges required for customizing apps build on Dataverse | MicrosoftDocs"
-description: Understand the privileges required to apps built on Dataverse
+title: "Privileges required for customizing apps build on Dataverse"
+description: Understand the privileges required to apps built on Microsoft Dataverse.
 ms.custom: ""
-ms.date: 08/19/2025
+ms.date: 04/06/2026
 ms.reviewer: "matp"
 ms.topic: article
 ms.subservice: mda-maker
@@ -13,7 +13,7 @@ search.audienceType:
 ---
 # Privileges required for Dataverse customization
 
-App users can personalize the system and even share some of their customizations with others, but only users with the correct privileges can apply changes for everyone.  
+App users can personalize the system and even share some of their customizations with others. Only users with the correct privileges can apply changes for everyone.  
   
 > [!NOTE]
 >
@@ -22,7 +22,7 @@ App users can personalize the system and even share some of their customizations
 
 ## System administrator and system customizer security roles
 
-Anyone who customizes have at least the system customizer security role associated with their account. This security role gives you the permission you need to customize in Microsoft Dataverse.  
+Anyone who customizes the system needs at least the system customizer security role associated with their account. This security role gives you the permission you need to customize in Microsoft Dataverse.  
   
 |System administrator|System customizer|  
 |--------------------------|-----------------------|  
@@ -37,16 +37,16 @@ For information about how a Power Platform admin can add a security role to a us
   
 ## Delegate customization tasks  
 
-You might want to delegate some tasks to trusted people so that they can apply changes they need. Keep in mind that anyone can have multiple security roles associated with their user account and that privileges and access rights granted by security roles is based on the *least restrictive* level of permissions.  
+You might want to delegate some tasks to trusted people so that they can apply changes they need. Keep in mind that anyone can have multiple security roles associated with their user account and that privileges and access rights granted by security roles are based on the *least restrictive* level of permissions.  
   
- This means that you can give the system customizer security role to someone who already has another security role, perhaps a sales manager. This access lets them customize the system in addition to other privileges they already have. You don’t need to edit the security role they already have, and you can remove the system customizer security role from the person’s user account when you want.  
+This means that you can give the system customizer security role to someone who already has another security role, perhaps a sales manager. This access lets them customize the system in addition to other privileges they already have. You don’t need to edit the security role they already have, and you can remove the system customizer security role from the person’s user account when you want.  
   
 ## Test customizations without customization privileges
 
-You should always test any customizations you make with a user account that doesn’t have customization privileges. This way you can make sure that people without the system administrator or system customizer security roles are able to use your customizations. To do this effectively, you need access to two user accounts: One account with the system administrator security role and another that has the security roles that represent the people who will be using the customizations.  
+Always test customizations by using a user account that doesn't have customization privileges. This approach ensures that people without the system administrator or system customizer security roles can use your customizations. To test effectively, you need access to two user accounts: one account with the system administrator security role and another account that has the security roles representing the people who use the customizations.  
   
 > [!IMPORTANT]
-> Don’t attempt to remove your system administrator security role if you have only one user account. The system warns you if you try, but if you proceed you could find that you aren’t be able to get it back. Most security roles don’t allow editing of a user’s security roles.  
+> Don't attempt to remove your system administrator security role if you have only one user account. The system warns you if you try, but if you proceed, you might not be able to get it back. Most security roles don't allow editing of a user's security roles.  
   
 ## Next steps
 

@@ -4,7 +4,7 @@ metadata:
   description: Get answers to frequently asked questions about Power Apps Azure Synapse Link for Dataverse.
   author: sabinn-msft
   ms.search.keywords: 
-  ms.date: 12/01/2025
+  ms.date: 04/24/2026
   ms.author: sabinn
   ms.reviewer: matp
   contributors: 
@@ -88,9 +88,12 @@ sections:
    - question: Why do I see duplicated version numbers when I export data using append only mode?   
      answer: |
          For append only mode, if Azure Synapse Link for Dataverse doesn't get an acknowledgment from the Azure data lake that the data has been committed due to any reason such as network delays, Azure Synapse Link retries in those scenarios and commit the data again. The downstream consumption should be made resilient to this scenario by filtering data using `SinkModifiedOn`.     
-   - question: Why am I seeing differences in Sinkmodifiedon and Modifiedon columns?   
+   - question: Why am I seeing differences in SinkModifiedOn and ModifiedOn columns?
      answer: |
-         It's expected. `Modifiedon` is the datetime that record being changed in Dataverse; `Sinkmodifiedon` is the date and time that record is modified in the data lake.  
+         This is expected behavior. `ModifiedOn` is the date and time a record was last changed in Dataverse, while `SinkModifiedOn` is the date and time the record was written to the data lake. `SinkModifiedOn` is typically later than `ModifiedOn`, and the difference depends on factors such as batch size, system load, and the number of records being processed.
+
+         > [!IMPORTANT]
+         > In the case of long-running transactions in finance and operations apps, a record might be synchronized multiple times to ensure no data loss. In this scenario, `SinkModifiedOn` reflects the last synchronization time, not the first. For example, if a record is synced 10 times within an hour, `SinkModifiedOn` shows the time of the 10th sync even though the data was available in the lake from the first sync itself. Use caution when building latency reports based on the difference between `SinkModifiedOn` and `ModifiedOn`, as it can give a misleading impression of actual data availability.
    - question: Which Dataverse tables aren't supported for export?
      answer: |
         Any table that doesn't have change tracking enabled isn't supported in addition to following system tables:

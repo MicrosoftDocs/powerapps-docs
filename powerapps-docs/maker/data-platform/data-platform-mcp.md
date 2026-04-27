@@ -4,7 +4,7 @@ description: Step-by-step instructions for setup, connect, and use Microsoft Dat
 author: ShefaaliP
 ms.component: cds
 ms.topic: how-to
-ms.date: 03/10/2026
+ms.date: 03/30/2026
 ms.subservice: dataverse-maker
 ms.author: spatankar
 ms. reviewer: matp
@@ -19,6 +19,18 @@ search.audienceType:
 The Model Context Protocol (MCP) is an open protocol that enables seamless integration between large language model (LLM) applications and external data sources and tools. Microsoft Dataverse can act as an MCP server, providing intelligent access to tables and records to various MCP clients like Copilot Studio agents, Visual Studio (VS) Code GitHub Copilot, GitHub Copilot CLI, Claude desktop, Claude Code, and many others. This integration standardizes and streamlines the interaction between AI models and Dataverse data, making it more efficient and effective for developers to apply Dataverse's rich data capabilities within their AI-driven applications.
 
 To use Dataverse as an MCP server, you need to enable and configure the MCP server and allowed clients for your Power Platform environment. Once configured, you can connect to the Dataverse MCP server using different MCP clients. More information: [Configure the Dataverse MCP server for an environment](data-platform-mcp-disable.md)
+
+### Dataverse MCP server URL
+
+The Dataverse MCP remote server URL follows this format:
+
+`https://{dataverseOrgName}.crm.dynamics.com/api/mcp`
+
+For example, if your Dataverse organization name is `contoso`, the MCP server URL is:
+
+`https://contoso.crm.dynamics.com/api/mcp`
+
+## Connect to a Dataverse MCP server
 
 There are multiple ways to connect to a Dataverse MCP server:
 

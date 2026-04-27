@@ -6,7 +6,7 @@ ms.author: hacahill
 ms.reviewer: jdaly
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 02/02/2026
+ms.date: 04/07/2026
 ---
 
 # How to: Configure Content Security Policy
@@ -44,6 +44,9 @@ If the default value is `'none'`, your custom values replace the default value.
 If your environment has a Dataverse instance, you can configure the CSP settings in the [Power Platform admin center](#configure-csp-by-using-power-platform-admin-center).
 Otherwise, see the instructions for configuring CSP by using the [REST API](#configure-csp-by-using-rest-api).
 
+> [!NOTE]
+> For management at scale, you can configure this setting for multiple environments at once by using [environment groups and rules](/power-platform/admin/environment-groups).
+
 ## Prerequisites
 
 - You must be an administrator of the environment to configure CSP settings.
@@ -75,13 +78,13 @@ For more information about reporting, see the [reporting documentation](https://
 Use the **Configure directives** section to control the value of individual directives.
 If you leave the defaults toggled on, you use the default values specified earlier.
 If you turn off the toggle, you can add custom values for the directive.
-Custom values are merged with the default values for the directive.
+Custom values merge with the default values for the directive.
 If you turn off a toggle and leave the Source list blank, you disable the directive.
 
 The following example shows three different directives with different configurations:
 
 - `frame-ancestors` is enabled and set to use its default value. The resulting directive value is: `'self' https://*.powerapps.com`
-- `script-src` is enabled and adds another source, which is merged with the default value. The resulting directive value is: `script-src 'self' https://contoso.com`
+- `script-src` is enabled and adds another source, which merges with the default value. The resulting directive value is: `script-src 'self' https://contoso.com`
 - `img-src` is disabled. The directive is omitted from the policy.
 
 :::image type="content" source="media/content-security-policy-directive-settings.png" alt-text="Screenshot of CSP directives configured in different states":::

@@ -3,7 +3,7 @@ title: "How to: Connect your code app to Dataverse"
 description: "Learn how to connect your code app to Dataverse"
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 03/05/2026
+ms.date: 04/07/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
@@ -23,7 +23,7 @@ This guide helps developers use the [Power Apps client library for code apps](ht
 ## Steps
 
 1. Ensure you're connected to your environment using PAC CLI.
-1. Use the [pac code add-data-source](/power-platform/developer/cli/reference/code#pac-code-add-data-source) command to add Dataverse as a data source to your code app
+1. Use the [pac code add-data-source](/power-platform/developer/cli/reference/code#pac-code-add-data-source) command to add Dataverse as a data source to your code app.
 
    ```powershell
    pac code add-data-source -a dataverse -t <table-logical-name>
@@ -33,12 +33,13 @@ This guide helps developers use the [Power Apps client library for code apps](ht
 
 ## Supported scenarios
 
-The following scenarios are supported when connecting to Dataverse using the [Power Apps client library for code apps](https://www.npmjs.com/package/@microsoft/power-apps):
+The [Power Apps client library for code apps](https://www.npmjs.com/package/@microsoft/power-apps) supports the following scenarios when you connect to Dataverse:
 
-- Add Dataverse entities to code apps using the PAC CLI
-- Retrieve formatted values/display names for option sets
-- [Get metadata for Dataverse tables](get-table-metadata.md)
-- Lookups. Currently, you'll need to use the guidance to [associate with a single-valued navigation property](../../data-platform/webapi/associate-disassociate-entities-using-web-api.md#associate-with-a-single-valued-navigation-property) or [associate records on create](../../data-platform/webapi/create-entity-web-api.md#associate-table-rows-on-create) when working with lookups. A dedicated how-to guide is coming soon, and we're actively working to make lookups easier to use in code apps.
+- Add Dataverse entities to code apps.
+- Retrieve formatted values (labels) for option sets option values.
+- [Get metadata for Dataverse tables](get-table-metadata.md).
+- Work with lookups. Currently, you need to use the guidance to [associate with a single-valued navigation property](../../data-platform/webapi/associate-disassociate-entities-using-web-api.md#associate-with-a-single-valued-navigation-property) or [associate records on create](../../data-platform/webapi/create-entity-web-api.md#associate-table-rows-on-create) when working with lookups. A dedicated how-to guide is coming soon. The Power Apps team is actively working to make lookups easier to use in code apps.
+- Image and file upload and download (preview). When you add Dataverse as a data source by using the [npm-based cli](/power-apps/developer/code-apps/how-to/npm-quickstart), the generated functions are part of `src/generated/services`.
 - Perform CRUD operations:
 
   - Create
@@ -53,22 +54,22 @@ The following scenarios are supported when connecting to Dataverse using the [Po
   - `Sort`
   - `Top` queries
 
-- Paging support
+- Paging support.
 
 > [!TIP]
-> Looking for a complete working example? The [Dataverse demo app](https://github.com/microsoft/PowerAppsCodeApps/tree/main/samples/Dataverse) demonstrates all the patterns covered in this article — CRUD operations, lookup fields, and generated services — in a React/TypeScript app you can explore and extend. To run the app yourself, follow the setup instructions in [PowerAppsCodeApps/samples/Dataverse/DEVELOPMENT.md](https://github.com/microsoft/PowerAppsCodeApps/blob/main/samples/Dataverse/DEVELOPMENT.md) to configure it for your environment.
+> Looking for a complete working example? The [Dataverse demo app](https://github.com/microsoft/PowerAppsCodeApps/tree/main/samples/Dataverse) demonstrates all the patterns covered in this article - CRUD operations, lookup fields, image and file upload and download, and generated services - in a React/TypeScript app you can explore and extend. To run the app yourself, follow the setup instructions in [PowerAppsCodeApps/samples/Dataverse/DEVELOPMENT.md](https://github.com/microsoft/PowerAppsCodeApps/blob/main/samples/Dataverse/DEVELOPMENT.md) to configure it for your environment.
 
 ## Set up your code app
 
 Before performing create, read, update, and delete (CRUD) operations in your code app, import the required types and services.
 
-When you add a data source, model and service files are automatically generated and placed in the `/generated/services/` folder.
+When you add a data source, the system automatically generates model and service files and places them in the `/generated/services/` folder.
 For example, if you add the built-in [Accounts](../../data-platform/reference/entities/account.md) table as a data source, the following files are created:
 
 - `AccountsModel.ts` – Defines the data model for the Accounts table.
 - `AccountsService.ts` – Provides service methods for interacting with the Accounts data.
 
-You can import and use them in your code like this:
+You can import and use these files in your code like this:
 
 ```typescript
 import { AccountsService } from './generated/services/AccountsService';
@@ -81,10 +82,10 @@ Use the generated model types and service methods to create new Dataverse record
 
 1. **Create the record object using the generated model**
 
-   The generated models reflect the schema of your Dataverse table and should be used to create record objects.
+   The generated models reflect the schema of your Dataverse table. Use them to create record objects.
 
    > [!NOTE]
-   > When creating a record, exclude system-managed or read-only columns such as primary keys and ownership fields. [Browse table definitions in your environment](../../data-platform/browse-your-metadata.md) describes a tool you can use to understand which columns are read-only. For example, in the [Accounts table](../../data-platform/reference/entities/account.md), don't include the following fields:
+   > When creating a record, exclude system-managed or read-only columns such as primary keys and ownership fields. To understand which columns are read-only, see [Browse table definitions in your environment](../../data-platform/browse-your-metadata.md). For example, in the [Accounts table](../../data-platform/reference/entities/account.md), don't include the following fields:
    >
    > - accountid
    > - ownerid
@@ -92,7 +93,7 @@ Use the generated model types and service methods to create new Dataverse record
    > - owneridtype
    > - owneridyominame
 
-   Form a record with only the fields you wish to populate. For example, for the Accounts entity:
+   Form a record with only the fields you want to populate. For example, for the Accounts entity:
 
    ```typescript
 
@@ -174,7 +175,7 @@ interface IGetAllOptions {
 ```
 
 > [!IMPORTANT]
-> Always limit the number of columns you're retrieving with the `select` parameter.
+> Always limit the number of columns you retrieve by using the `select` parameter.
 
 Here's an example with multiple options:
 
@@ -205,7 +206,7 @@ To update a record, you need:
 1. The changes you want to make.
 
 > [!IMPORTANT]
-> When you update a record, only include the properties you're changing in the request. Simply setting some changed properties of a record that you previously retrieved and including that data in your request updates all properties even though their values didn't change. False updates like these can trigger business logic that expects the values changed, or can corrupt auditing data to indicate that someone changed data that didn't change.
+> When you update a record, only include the properties you're changing in the request. If you set some changed properties of a record that you previously retrieved and include that data in your request, you update all properties even though their values didn't change. False updates like these can trigger business logic that expects the values changed, or can corrupt auditing data to indicate that someone changed data that didn't change.
 
 This example updates the `name` and `telephone1` properties of the account record:
 
@@ -246,8 +247,7 @@ try {
 The following features aren't yet supported:
 
 - Polymorphic lookups
-- Dataverse actions and functions
-- Deleting Dataverse datasources via PAC CLI
+- Deleting Dataverse datasources through PAC CLI
 - Schema definition (entity metadata) CRUD
 - FetchXML support
 - Alternate key support

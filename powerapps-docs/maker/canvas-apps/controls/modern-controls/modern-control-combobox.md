@@ -4,7 +4,7 @@ description: Learn about the details, properties, and examples of the Combo box 
 author: yogeshgupta698
 ms.topic: reference
 ms.custom: canvas
-ms.date: 02/23/2026
+ms.date: 04/15/2026
 ms.subservice: canvas-maker
 ms.author: yogupt
 ms.reviewer: mkaur
@@ -48,7 +48,7 @@ Key properties for this control are **Items**, **DefaultSelectedItems**, and **S
 
 **DisplayMode** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**). In **View** mode, the selection is shown but can't be changed.
 
-**DelayOutput** – When set to `true`, delays the **OnChange** event until the user clicks outside the control or presses Enter. When `false`, **OnChange** fires immediately on each selection. Default is **false**.
+**DelayOutput** – When set to `true`, delays updates to the **SearchText** output property until the user pauses typing. When `false`, **SearchText** updates immediately on each keystroke. This property does not affect when **OnChange** fires — **OnChange** fires immediately on every selection and deselection regardless of this setting. Default is **false**.
 
 ## Data
 
@@ -57,6 +57,11 @@ Key properties for this control are **Items**, **DefaultSelectedItems**, and **S
 **Selected** – (Output) When **SelectMultiple** is `false`, returns the single selected item as a record. When **SelectMultiple** is `true`, returns the first selected item.
 
 **SearchText** – (Output) The current text typed by the user in the search box. Use this to create custom filtering logic or to track search behavior.
+
+
+> [!NOTE]
+> Output properties such as **SelectedItems** in a Combo box control return a table of the currently selected records and can’t be set directly. Instead, other controls and formulas use this property to access the current selection. For example, reference `ComboBoxName.SelectedItems` in a label, gallery, or formula to work with the selected records.
+
 
 **MultiValueDelimiter** – The separator character used when displaying multiple selected items in the input field. Default is **", "** (comma and space).
 
@@ -210,7 +215,7 @@ The following properties now require typed enum syntax instead of plain string v
 
 - **SelectMultiple defaults to true**: The **SelectMultiple** property now defaults to `true`. If your app requires single selection, explicitly set `SelectMultiple = false`.
 - **Toggle selection behavior**: Clicking a selected item now unselects it, making it easier to remove selections without clearing the entire list.
-- **Immediate OnChange firing**: The **OnChange** event now fires immediately on every selection or deselection, enabling real-time filtering and dependent dropdowns. Set `DelayOutput = true` if you need the previous delayed behavior.
+- **Immediate OnChange firing**: The **OnChange** event now fires immediately on every selection or deselection, enabling real-time filtering and dependent dropdowns. Note: **DelayOutput** controls when **SearchText** updates — it does not affect **OnChange** timing.
 - **Search text clears on selection**: When an item is selected, the search text automatically clears.
 - **Reset() includes SearchText**: The `Reset()` function now clears both the selection and the search text.
 

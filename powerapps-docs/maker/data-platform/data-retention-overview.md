@@ -6,9 +6,11 @@ ms.subservice: dataverse-maker
 author: pnghub
 ms.author: matp
 ms.reviewer: matp
-contributors: neerajatmsft
+contributors: 
+- neerajatmsft
+- rijoshi
 ms.topic: overview
-ms.date: 07/16/2025
+ms.date: 04/10/2026
 ms.custom: template-overview
 ---
 # Dataverse long term data retention overview
@@ -35,12 +37,12 @@ Consider the business application data lifecycle in three stages. First active d
 |2. Inactive data     | Data is immutable and read-only. <br />  Is stored in long term retention.  <br /> Has limited access. Retained for compliance, audit, and legal discovery.      |
 |3. Deleted data   |  Permanently deleted. Data lifecycle is completed.        |
 
-Dataverse delivers native platform support for long term retention of data. It allows organizations to get immediate and ongoing benefits:
+Dataverse delivers native platform support for long-term retention of data. It helps your organization get immediate and ongoing benefits:
 
 - Securely retain the historical application data long term for audit, legal, and regulatory requirements.
 - Access the read-only data for limited inquiry purposes.
 - Reduce database capacity consumed and save money on inactive data.
-- Avoid IT investments required to build and maintain custom solutions for long term retention of historical application data.
+- Avoid IT investments required to build and maintain custom solutions for long-term retention of historical application data.
 
 ## How it works
 
@@ -123,7 +125,15 @@ Dataverse retention policies are solution aware. Dataverse retention policies ad
 
 When you include your retention policies in a solution, their definitions become portable, making it easier to move them from one environment to another, saving time required to create the retention policy. For example, you first develop a solution containing a retention policy in a development or sandbox environment. You then move that retention policy to a preproduction environment to test and validate that the solution works well and is ready for production. After testing is completed, the admin imports the solution into the production environment.
 
+To add a retention policy to a solution, go to the Power Apps (make.powerapps.com), create or open a solution, and then follow these steps:
+
+1. Select **Add existing** > **More** > **Other** > **Data Life Cycle Config** (display name renamed from RetentionConfig to Data Life Cycle Config to support both retention and deletion scenarios).
+2. Select one or more retention policies to add to the solution.
+
+The **Data Life Cycle Config** supports addition of both archival and deletion policies in a solution.
+
 > [!NOTE]
+>
 > - The data retained by retention policies isn't portable as part of solutions, only the retention policy definitions are. You must run the retention policy in an environment to retain the data in Dataverse long term storage.
 > - Only retention policies created in Power Platform environments can be solution-aware.
 > - When long term retention, is enabled through a solution import process, the related child tables aren't automatically enabled.

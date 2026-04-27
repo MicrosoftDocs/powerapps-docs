@@ -1,13 +1,13 @@
 ---
 title: How to set up Azure Key Vault for code signing in wrap wizard
 description: Step-by-step guide to configure Azure Key Vault and automate code signing for native mobile apps in wrap wizard.
-author: komala2019
+author: Murugesh1985
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: smurkute
 ms.date: 08/18/2025
 ms.subservice: canvas-maker
-ms.author: koagarwa
+ms.author: murugeshs
 search.audienceType: 
   - maker
 contributors:

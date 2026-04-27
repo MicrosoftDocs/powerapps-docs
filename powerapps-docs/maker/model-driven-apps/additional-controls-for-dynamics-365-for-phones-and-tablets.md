@@ -2,7 +2,7 @@
 title: "List of controls available for model-driven apps | MicrosoftDocs"
 description: "A list of controls available for use with Power Apps model-driven apps for web, phones, and tablets"
 ms.custom: ""
-ms.date: 09/25/2025
+ms.date: 04/07/2026
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -37,8 +37,8 @@ To use these controls in the form designer:
 
 1. In the right properties pane, select **+ Component** to display the available controls, and then select the control you want.  
   
-    > [!NOTE]
-    >  Different controls are available depending on the column or grid type. For example, star rating controls are only available for whole number columns.
+   > [!NOTE]
+   >  Different controls are available depending on the column or grid type. For example, star rating controls are only available for whole number columns.
   
 1. Select the devices (web, tablet, and phone) you want the control to appear on.  
   
@@ -46,12 +46,13 @@ To use these controls in the form designer:
   
 1. Select **Done** when you’re done configuring the control.  
   
-Following are descriptions for each control you can use on forms.  
+The following descriptions explain each control you can use on forms.  
 
 ## Grid controls
 
-Grid controls can be configured at the following levels: 
-- Table. When a grid control is configured for a table, all views for the table will use the grid control. More information: [Configure a grid control for a table](#configure-a-grid-control-for-a-table)
+Grid controls can be configured at the following levels:
+
+- Table. When you configure a grid control for a table, all views for the table use the grid control. For more information, see [Configure a grid control for a table](#configure-a-grid-control-for-a-table).
 - Form. Subgrids added to a form use a grid control to control the behavior of the subgrid.
 
 ### Subgrid
@@ -101,7 +102,7 @@ Requires Dynamics 365 Customer Service app. Add a Knowledge Base Search control 
 
 ### Quick view
 
-The quick view control displays data from a row that is selected in a lookup on the form. The data displayed in the control is defined using a quick view form. The data displayed is not editable, but when the primary column is included in the quick view form, it becomes a link to open the related row. More information: [Model-driven app quick view control properties](quick-view-control-properties-legacy.md)
+The quick view control displays data from a row that you select in a lookup on the form. You define the data displayed in the control by using a quick view form. The data displayed isn't editable, but when the primary column is included in the quick view form, it becomes a link to open the related row. For more information, see [Model-driven app quick view control properties](quick-view-control-properties-legacy.md).
 
 ### Timeline control
 
@@ -142,7 +143,7 @@ Provide a timeline of recent, relevant news articles and Twitter tweets for an a
 
 ### Checkbox
 
-Let's the user to choose between binary values by checking or clearing a check box. It can be configured with yes/no choice columns.
+Use the checkbox control to let users choose between two values by checking or clearing a check box. Configure it by using yes/no choice columns.
 :::image type="content" source="media/checkbox-control.png" alt-text="Checkbox control at runtime on a main form.":::
 
 ### Option set
@@ -158,7 +159,6 @@ Use the pen input control to capture written input such as signatures. The pen i
   
 > [!IMPORTANT]
 > The minimum recommended **Maximum Length** specified for the column this control maps to is 15000.  
->  
 
 |Property|Description|  
 |--------------|-----------------|  
