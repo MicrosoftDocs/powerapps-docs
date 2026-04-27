@@ -12,8 +12,6 @@ search.audienceType:
 
 # Restricted tables requiring Dynamics 365 licenses
 
-
-
 App makers, who are building custom apps, can use all of the Microsoft Dataverse tables available within [Common Data Model](/common-data-model/) to create apps and flows for users who have any version of Power Apps and Power Automate license.  
 
 However, a smaller set of tables tied to Dynamics 365 apps (Dynamics 365 Sales, Customer Service, Field Service, Marketing, or Project Service Automation) require canvas and model-driven app users to have a license for the corresponding Dynamics 365 app if they need to create, update, or delete rows within the tables. These are referred to as restricted tables.
