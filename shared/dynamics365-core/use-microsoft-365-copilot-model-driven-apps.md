@@ -1,10 +1,5 @@
 [Microsoft 365 Copilot](/copilot/overview) for apps is a next-generation AI assistant that helps you gain insights into the data in your apps through conversations in natural language. Microsoft 365 Copilot boosts your productivity through AI-powered insights and navigation assistance.
 
-> [!IMPORTANT]
->
-> - This feature is in preview.  
-> - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2189520), and are available before an official release so that customers can get early access and provide feedback.
-
 ## Prerequisites
 
 An administrator must enable Microsoft 365 Copilot in your application before it becomes visible in your app. For more information, see [Add Microsoft 365 Copilot for app users](/power-apps/maker/model-driven-apps/add-microsoft-365-copilot).
@@ -63,6 +58,6 @@ One of the benefits of @ mentioning an agent is that you can add or remove it fr
 
 ## Limitations
 
-- The model chooser option, which allows users to select different AI models or configurations in the standalone version, is not available.
-- Microsoft Copilot Studio agents published to Microsoft 365 Copilot through Copilot Studio channels don't have context passed from the app through Microsoft 365 Copilot to the agent.
-
+- Microsoft 365 Copilot for model-driven apps allows users to view data by using read-only operations. This capability means that users can only view data that matches their queries and can't make any changes. To make changes, customization with an agent is required.
+- Microsoft 365 Copilot for model-driven apps isn't available in the Power Apps mobile app.
+- As this feature is being gradually deployed, certain settings in the Power Platform Admin Center might not be accessible yet, depending on the geographic location of your tenant.

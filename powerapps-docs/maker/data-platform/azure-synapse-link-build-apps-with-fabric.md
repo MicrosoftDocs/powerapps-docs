@@ -1,27 +1,27 @@
 ---
 title: Build apps and take action with insights from Microsoft Fabric
 description: Build apps and drive action by creating virtual tables in Microsoft Dataverse with insights from Microsoft Fabric.
-author: MilindaV2
-ms.author: Milindav
+author: anibakore-msft
+ms.author: banirud
 ms.reviewer: matp
 ms.service: powerapps
 ms.subservice: dataverse-maker
 ms.topic: how-to
-ms.date: 03/10/2025
+ms.date: 04/09/2026
 ms.custom: template-how-to
 ---
-# Build apps and automations, drive action with insights from Microsoft Fabric 
+# Build apps and automations, and drive action with insights from Microsoft Fabric 
 
-Link to Microsoft Fabric feature in Microsoft Dataverse enables extending your data and insights in Dynamics 365 and Power Apps in Fabric. Bring your own data into Fabric and combine, reshape, and aggregate data with data from Dataverse. Use Fabric tools such as SQL, Spark, and dataflows to work with your data within Fabric. For example:
+Link to Microsoft Fabric in Microsoft Dataverse enables extending your data and insights in Dynamics 365 and Power Apps in Fabric. Bring your own data into Fabric and combine, reshape, and aggregate data with data from Dataverse. Use Fabric tools such as SQL, Spark, and dataflows to work with your data within Fabric. For example:
 
 - Combine financial data from Dynamics 365 with financial data from other systems to derive consolidated insights.
-- Merge historical data ingested into OneLake from legacy systems with current business data from Dynamics 365 and Dataverse.
+- Merge historical data ingested into Microsoft OneLake from legacy systems with current business data from Dynamics 365 and Dataverse.
 - Combine weblogs and telemetry data from your website with product and order details from Dynamics 365.
-- Apply machine learning and detect anomalies and exceptions within your data.
+- Apply machine learning to detect anomalies and exceptions within your data.
 
-Insights aren't complete unless you can drive action and business processes. Bring insights you found in Fabric to build apps, drive business processes with Power Automate without data copy, no-ETL, or non-Microsoft integration tools.
+Insights aren't complete unless you can drive action and business processes. Bring insights you found in Fabric to build apps, drive business processes with Power Automate without data copy, no-ETL (extract, transform, load), or non-Microsoft integration tools.
 
-With Dataverse virtual tables sourced with Fabric, your low-code app builders connect to data in Microsoft OneLake and build Power Apps and drive business actions. Additionally, with Power Pages, low-code makers can build external facing websites and drive action from OneLake insights with partners, suppliers, and customers.
+With Dataverse virtual tables sourced with Fabric, your low-code app builders connect to data in OneLake and build Power Apps and drive business actions. Additionally, with Power Pages, low-code makers can build external facing websites and drive action from OneLake insights with partners, suppliers, and customers.
 
 ![Virtual table with insights from Microsoft Fabric](media/Fabric/Fabric_to_App_GIF_demo.gif)
 
@@ -51,10 +51,8 @@ Follow these steps to create a virtual table using Fabric data.
 7. If you selected the **Configure table and column names that will be used in Dataverse** checkbox, you're shown the table and column properties and you can modify them here. When you're done modifying them select **Next**.
 8. Verify that the field chosen for **primary key field** is a unique field. You might need to verify the default field selected by the system as the primary key.
 
-> [!NOTE]
->
-> While the table you selected from Fabric Lakehouse might not have a primary key defined, you need to select a field that is unique to continue. If you don't select a unique field, the table might not show all the records. While the wizard selects a field based on metadata available, the selection might not be accurate.
-
+   > [!NOTE]
+   > While the table you selected from Fabric Lakehouse might not have a primary key defined, you need to select a field that is unique to continue. If you don't select a unique field, the table might not show all the records. While the wizard selects a field based on metadata available, the selection might not be accurate.
 
 9. Review the information shown, and then select **Finish**.
 
@@ -62,7 +60,7 @@ A new Dataverse virtual table is created with data from Fabric.
 
 ## Building apps and taking action with insights
 
-You can build an app with the virtual table sourced with Fabric data in Power Apps (make.powerapps.com). From the Home page, select **Start with data** > **Select an existing table**, select the virtual table created earlier, and then select **Create app**. Provide a name for your app and build the app by following the wizard.
+You can build an app with the virtual table sourced with Fabric data in Power Apps (make.powerapps.com). From the **Home** page, select **Start with data** > **Select an existing table**, select the virtual table created earlier, and then select **Create app**. Provide a name for your app and build the app by following the wizard.
 
 > [!NOTE]
 >

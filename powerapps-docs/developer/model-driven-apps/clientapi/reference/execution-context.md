@@ -1,9 +1,9 @@
 ---
-title: "Execution context (Client API reference)"
-description: Includes description and supported parameters for the executionContext method.
+title: "Client API Execution Context Methods Reference"
+description: "Master Client API execution context methods including getDepth, getEventArgs, getEventSource, and getFormContext for effective event handling in Dynamics 365."
 author: sriharibs-msft
 ms.author: srihas
-ms.date: 03/12/2022
+ms.date: 03/27/2026
 ms.reviewer: jdaly
 ms.topic: article
 applies_to: 
@@ -13,19 +13,19 @@ search.audienceType:
 contributors:
   - JimDaly
 ---
-# Execution context (Client API reference)
+# Client API execution context methods reference
 
-The execution context defines the event context in which your code executes. More information: [Client API execution context](../clientapi-execution-context.md).
+The execution context defines the event context in which your code runs. For more information, see [Client API execution context](../clientapi-execution-context.md).
 
 The execution context object provides the following methods.
 
-|Method |Description |
+| Method | Description |
 |---|---|
-|[getDepth](executioncontext/getDepth.md)|Returns a value that indicates the order in which this handler is executed.|
+|[getDepth](executioncontext/getDepth.md)|Returns a value that indicates the order in which this handler runs.|
 |[getEventArgs](executioncontext/getEventArgs.md)|Returns an object with methods to manage this handler.|
 |[getEventSource](executioncontext/getEventSource.md)|Returns a reference to the object that the event occurred on.|
 |[getFormContext](executioncontext/getFormContext.md)|Returns a reference to the form or an item on the form depending on where the method was called.|
-|[getSharedVariable](executioncontext/getSharedVariable.md)|Retrieves a variable set using the [setSharedVariable](executioncontext/setSharedVariable.md) method.|
+|[getSharedVariable](executioncontext/getSharedVariable.md)|Retrieves a variable set by using the [setSharedVariable](executioncontext/setSharedVariable.md) method.|
 |[setSharedVariable](executioncontext/setSharedVariable.md)|Sets the value of a variable to be used by a handler after the current handler completes.|
 
 ### Related articles

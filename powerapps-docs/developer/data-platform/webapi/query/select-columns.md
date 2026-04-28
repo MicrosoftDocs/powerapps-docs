@@ -1,7 +1,7 @@
 ---
-title: Select columns using OData
-description: Learn how to use OData to select columns when you retrieve data from Microsoft Dataverse Web API.
-ms.date: 07/11/2024
+title: Select Columns Using OData
+description: Learn how to use OData to select columns when you retrieve data from Microsoft Dataverse Web API. Optimize query performance by selecting only the columns you need.
+ms.date: 03/13/2026
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: jdaly
@@ -12,12 +12,13 @@ contributors:
   - JimDaly
   - JosinaJoy
 ---
-# Select columns using OData
+# Select columns by using OData
 
 > [!IMPORTANT]
-> When you query data, it's important to limit the amount of data returned to optimize performance. Only select the columns with data that you need.
+> When you query data, limit the amount of data returned to optimize performance. Only select the columns with data that you need.
 
-Use the `$select` [query option](overview.md#odata-query-options) to choose which columns to return with your query. In OData, every column is represented as a [*property*](../web-api-properties.md). If you don't include a `$select` query option, all properties are returned.
+When you select columns using OData in Dataverse Web API queries, use the `$select` [query option](overview.md#odata-query-options) to choose which columns to return. In OData, every column is represented as a [*property*](../web-api-properties.md). If you don't include a `$select` query option, the query returns all properties, which can reduce performance.
+
 
 The following example requests the `name` and `revenue` properties from the first row of the `accounts` EntitySet resource:
 
@@ -51,37 +52,38 @@ OData-Version: 4.0
 }
 ```
 
-The primary key property is always returned so you don't need to include it in your `$select`. In this example, `accountid` is the primary key.
+The primary key property is always returned, so you don't need to include it in your `$select`. In this example, `accountid` is the primary key.
 
-Other property values may also be included in the response. In this case, the `_transactioncurrencyid_value` [lookup property](../web-api-properties.md#lookup-properties) for the related [Currency (TransactionCurrency)  table/entity reference](../../reference/entities/transactioncurrency.md) is included because `revenue` is a currency property.
+You might see other property values included in the response. In this case, the `_transactioncurrencyid_value` [lookup property](../web-api-properties.md#lookup-properties) for the related [Currency (TransactionCurrency)  table/entity reference](../../reference/entities/transactioncurrency.md) is included because `revenue` is a currency property.
 
-### Which properties are available?
+## Which properties are available?
 
-All the available properties for an entity are found in the [$metadata service document](../web-api-service-documents.md#csdl-metadata-document). More information: [Web API Properties](../web-api-properties.md)
-
-The entity types included with Dataverse are described in the <xref:Microsoft.Dynamics.CRM.EntityTypeIndex>.
+You can find all the available properties for an entity in the [$metadata service document](../web-api-service-documents.md#csdl-metadata-document). For more information, see [Web API Properties](../web-api-properties.md).
 
 > [!TIP]
-> The easiest way to quickly discover which properties are available is to send a request using the `$top` query option with a value of `1` without using `$select`.
+> To quickly discover which properties are available, send a request by using the `$top` query option with a value of `1` without using `$select`.
+> For example `GET [Organization URI]/api/data/v9.2/accounts?$top=1`
 
-### Formatted values
+The <xref:Microsoft.Dynamics.CRM.EntityTypeIndex> describes the entity types included with Dataverse.
 
-Formatted values are string values generated on the server that you can use in your application. Formatted values include:
+## Formatted values
+
+The server generates formatted values as string values that you can use in your application. Formatted values include:
 
 - The localized labels for choice, choices, yes/no, status, and status reason columns
 - The primary name value for lookup and owner properties
 - Currency values with currency symbols
 - Formatted date values in the user's time zone
 
-To include formatted values in your results, use the [Prefer request header](https://www.rfc-editor.org/rfc/rfc7240) to send the [odata.include-annotations preference](http://docs.oasis-open.org/odata/odata/v4.0/os/part1-protocol/odata-v4.0-os-part1-protocol.html#_Toc372793628)
+To include formatted values in your results, use the [Prefer request header](https://www.rfc-editor.org/rfc/rfc7240) to send the [odata.include-annotations preference](http://docs.oasis-open.org/odata/odata/v4.0/os/part1-protocol/odata-v4.0-os-part1-protocol.html#_Toc372793628).
 
 ```
 Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
 ```
 
-Formatted values are one of several annotations you can request. Use `Prefer: odata.include-annotations="*"` to include all annotations. More information: [Request annotations](../compose-http-requests-handle-errors.md#request-annotations)
+Formatted values are one of several annotations you can request. Use `Prefer: odata.include-annotations="*"` to include all annotations. For more information, see [Request annotations](../compose-http-requests-handle-errors.md#request-annotations).
 
-The formatted value is returned with the record with an annotation that follows this convention:
+The formatted value is returned with the record by using an annotation that follows this convention:
 
 ```
 <property name>@OData.Community.Display.V1.FormattedValue
@@ -142,11 +144,11 @@ Preference-Applied: odata.include-annotations="OData.Community.Display.V1.Format
 }
 ```
 
-### Lookup property data
+## Lookup property data
 
-When a [lookup property](../web-api-properties.md#lookup-properties) represents a multi-table, or polymorphic, relationship, you need to request specific annotations to determine which table contains the related data.
+When a [lookup property](../web-api-properties.md#lookup-properties) represents [a multi-table (or polymorphic relationship)](../multitable-lookup.md), you need to request specific annotations to determine which table contains the related data.
 
-For example, many tables have records that users or teams may own. Ownership data is stored in a lookup column named `ownerid`. This column is a single-valued navigation property in OData. You could use `$expand` to create a join to get this value, but you can't use `$select`. However, you can use `$select` to get the corresponding `_ownerid_value` lookup property.
+For example, many tables have records that users or teams own. The system stores ownership data in a lookup column named `ownerid`. This column is a single-valued navigation property in OData. You can use `$expand` to create a join to get this value, but you can't use `$select`. However, you can use `$select` to get the corresponding `_ownerid_value` lookup property.
 
 When you include the `_ownerid_value` lookup property with your `$select`, it returns a GUID value. This value doesn't tell you whether the owner of the record is a user or a team. You need to request annotations to get this data.
 
@@ -157,7 +159,7 @@ Prefer: odata.include-annotations="Microsoft.Dynamics.CRM.associatednavigationpr
 ```
 
 > [!TIP]
-> Or you can use `Prefer: odata.include-annotations="*"` to include all annotations. More information: [Request annotations](../compose-http-requests-handle-errors.md#request-annotations)
+> Or use `Prefer: odata.include-annotations="*"` to include all annotations. For more information, see [Request annotations](../compose-http-requests-handle-errors.md#request-annotations).
 
 
 **Request:**
@@ -204,13 +206,13 @@ Preference-Applied: odata.include-annotations="Microsoft.Dynamics.CRM.associated
 ```
 
 - `<lookup property name>@Microsoft.Dynamics.CRM.lookuplogicalname` is the logical name of the related table.
-- `<lookup property name>@Microsoft.Dynamics.CRM.associatednavigationproperty` is the name of the corresponding single-valued navigation property. You can use `$expand` using this value in another request to get more data from the related record.
+- `<lookup property name>@Microsoft.Dynamics.CRM.associatednavigationproperty` is the name of the corresponding single-valued navigation property. You can use `$expand` by using this value in another request to get more data from the related record.
 
-### Column aliases
+## Column aliases
 
 For Web API, [use fetchxml to specify customized aliases for columns](../../fetchxml/select-columns.md?tabs=webapi#column-aliases).
 
-There is currently no way to specify column aliases using Dataverse Web API using OData. OData 4.0 doesn't include the [$compute system query option introduced in OData 4.01](https://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part2-url-conventions.html#_Toc31361047) that is required to provide this capability.
+Currently, you can't specify column aliases by using Dataverse Web API with OData. OData 4.0 doesn't include the [$compute system query option introduced in OData 4.01](https://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part2-url-conventions.html#_Toc31361047) that's required to provide this capability.
 
 
 ## Next steps

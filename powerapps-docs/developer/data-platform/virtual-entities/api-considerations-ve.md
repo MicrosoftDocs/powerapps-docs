@@ -1,7 +1,7 @@
 ---
 title: "API considerations of virtual tables (Microsoft Dataverse) | Microsoft Docs"
 description: "Describes API considerations of virtual tables"
-ms.date: 02/11/2026
+ms.date: 03/20/2026
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: pehecke
@@ -38,7 +38,7 @@ The Dynamics 365 Data SDK assembly, `Microsoft.Xrm.Sdk.Data.dll`, contains types
 |<xref:Microsoft.Xrm.Sdk.Data.Mappings>|Classes and interfaces that build the mapping from virtual table definition types to external types.|
 |Microsoft.Xrm.Sdk.Data.Visitors|Classes that implement the [visitor pattern](https://en.wikipedia.org/wiki/Visitor_pattern) to perform specific operations on the **QueryExpression** parameter passed to the data provider during **RetrieveMultiple** requests. Provides specific support for both generic query and LINQ-baseed processing. These classes are derived from Microsoft.Xrm.Sdk.Query.QueryExpressionVisitorBase.|
 
-Distribute this assembly as a NuGet package: [Microsoft.CrmSdk.Data](https://www.nuget.org/packages/Microsoft.CrmSdk.Data/).
+These namespaces are in the assembly included in this NuGet package: [Microsoft.CrmSdk.Data](https://www.nuget.org/packages/Microsoft.CrmSdk.Data/).
 
 ## Changes to the core platform
 

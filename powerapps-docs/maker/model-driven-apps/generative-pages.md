@@ -5,7 +5,7 @@ author: jasongre
 ms.subservice: mda-maker
 ms.author: jasongre
 ms.reviewer: matp
-ms.date: 02/24/2026
+ms.date: 04/20/2026
 ms.topic: how-to
 applies_to:
   - PowerApps
@@ -25,12 +25,12 @@ After you describe the page, the system then processes your requirements and spe
 
 You can create generative pages using two approaches:
 
-- Power Apps (make.powerapps.com): As described in this article, makers can create and iterate on generative pages directly in the browser using a conversational UI experience
-- AI code generation tools: Developers who prefer working with local development tools and direct access to TypeScript and React code can use external tools like Claude Code to develop generative pages locally with a code-first approach and CLI-based deployment. More information: [Create and edit generative pages with AI code generation tools](generative-page-external-tools.md)
+- Power Apps (make.powerapps.com): As described in this article, makers can create and iterate on generative pages directly in the browser by using a conversational UI experience. Available in the United States, Great Britain, Australia, and Singapore.
+- AI code generation tools: Developers who prefer working with local development tools and direct access to TypeScript and React code can use external tools like Claude Code to develop generative pages locally with a code-first approach and CLI-based deployment. Available worldwide on public clouds. More information: [Create and edit generative pages with AI code generation tools](generative-page-external-tools.md)
 
 ## Prerequisites
 
-- The Power Platform environment must be located in the US region. This feature isn't currently available in other regions yet.
+- The Power Platform environment must be located in one of the following regions: United States, Great Britain, Australia, or Singapore.
 
 ## Create a generative page in model-driven apps
 
@@ -39,7 +39,7 @@ You can create generative pages using two approaches:
 1. In the app designer, select **Add a page** > **Describe a page**.
 
    A full-page generative page experience opens.
-1. In the textbox, type a description of the type of page you want to create. The description should include functional requirements and optionally any UX specifications. For example, you could enter *Build a page showing Account records as a gallery of cards using a modern look and feel. Include name, entityimage on the top, and website, email, phone number. Make the gallery scrollable by using data from the Account table*.
+1. In the text box, type a description of the type of page you want to create. Include functional requirements and optionally any UX specifications. For example, you could enter *Build a page showing Account records as a gallery of cards using a modern look and feel. Include name, entityimage on the top, and website, email, phone number. Make the gallery scrollable by using data from the Account table*. If you want the page to support multiple languages, follow the guidance in [Localize a generative page](#localize-a-generative-page).
 1. Add tables and images as appropriate by selecting **Add data** > **Add table**. You can link up to six Dataverse tables. In the screenshot, the account table is added.
    :::image type="content" source="media/generative-page/add-table-generative-page.png" alt-text="Add a table to the generative page" lightbox="media/generative-page/add-table-generative-page.png":::
 
@@ -53,9 +53,12 @@ You can create generative pages using two approaches:
 1. Optionally choose the AI model you want to use to generate the page.
     :::image type="content" source="media/generative-page/choose-model-generative-page.png" alt-text="Choose the AI model you want to use to generate your page" lightbox="media/generative-page/choose-model-generative-page.png":::
 
+   > [!NOTE]
+   > GPT-4.1 is currently the only available model for generative pages.
+
 1. When you're finished describing the page, select **Generate page**.
 
-The agent begins a multi-step build process that you can observe in real time:
+The agent begins a multistep build process that you can observe in real time:
 - **Thought streaming**: The agent first outlines its interpretation of your prompt, listing requirements, assumptions, and an execution plan.
 - **Code generation**: Next, it writes the underlying code for your page based on the plan.
 - **Transpilation**: The generated code is then transpiled to ensure compatibility and proper rendering.
@@ -99,6 +102,58 @@ After generating your page, you have several options to refine and finalize it:
 > [!IMPORTANT]
 > While the agent makes a best-effort attempt to generate complete, production-ready code, including considerations for accessibility and security best practices, you're ultimately responsible for validating the code. Ensure the generated code meets your organization's standards and compliance requirements.
 
+## Common tasks with generative pages
+
+This section covers common scenarios and tasks when working with generative pages in your model-driven apps.
+
+### Set up a page to accept input parameters
+
+Generative pages can accept the input parameters `recordId`, `entityName`, and `data` enabling them to receive contextual data when navigated to. To configure a page to accept parameters, describe what the page should accept in your prompt and the agent wires up the initialization code automatically. For example:
+
+```
+Set up the page to accept an account recordId. When the page loads, use these to fetch and display the corresponding account details.
+```
+
+```
+Configure this page to accept a data parameter containing a custom filter object. Use it to filter the displayed records when the page loads.
+```
+
+### Navigate to a generative page
+
+You can navigate to a generative page programmatically using `Xrm.Navigation.navigateTo`, passing input parameters if the target page is set up to receive them. For examples and full API details, see [Navigate to and from a generative page using Client API](../../developer/model-driven-apps/clientapi/navigate-to-generative-page-examples.md).
+
+### Use specific images in a page
+
+There are three approaches to using specific images in your generative pages.
+
+#### Store images in a Dataverse table
+
+Include the image in a Dataverse table that's referenced by your generative page, and instruct the agent to retrieve the image from there. When creating your page, tell the agent how to get the right image from your table. 
+
+```
+Build a product catalog page showing products from the Product table. Display the product image from the ProductImage column, along with the name, description, and price.
+```
+
+#### Host images externally and reference by URL
+
+Host your images on an external server or content delivery network (CDN) and provide the agent with the URL to the image:
+
+```
+Display the company logo using this URL: https://example.com/images/logo.png at the top of the page.
+```
+
+#### Add images as web resources
+
+Upload the image as a web resource in your solution and reference it by its web resource URL:
+
+1. Add the image as a web resource in your solution.
+1. Note the web resource name (for example, `new_/images/banner.png`).
+1. Reference it in your prompt or code using the web resource URL format described here:
+
+```
+Use the banner image from web resource new_/images/banner.png as the page header background.
+```
+
 ## Adding generative pages to solutions
 
 Generative pages are solution-aware and can be added to a solution (via an app) to facilitate moving between environments. To add a generative page to a solution, do the following:
@@ -123,13 +178,27 @@ Generative pages are solution-aware and can be added to a solution (via an app) 
 
 After export, you can import the app and generative pages into another environment. When opened in the designer in the target environment, only the first prompt and published code are available. The full agent conversation doesn't transfer with the page.
 
+## Localize a generative page
+
+To localize a generative page, ensure your prompt covers the follow items:
+
+- Specify your languages. Tell the agent which languages you want the page to support, ideally language name and LCID.  
+- Request translated text. Ask the agent to create a translation dictionary for all user-visible labels and text in the page for each language.
+- Enable RTL support. If your environment includes an RTL language like Arabic or Hebrew, ask the agent to implement the appropriate right-to-left layout support.
+- Use regional formatting. Ask the agent to format dates, numbers, and currency using each user's preferences from their Dataverse user settings, rather than using hardcoded formats or locale codes.
+
+For detailed implementation guidance and code patterns, go to the [localization instructions](https://github.com/microsoft/power-platform-skills/blob/main/plugins/model-apps/references/genpage-rules-reference.md#localization) in the Power Platform Skills repository.
+
+> [!NOTE]
+> The sitemap entry for a generative page isn't localized by default. Sitemap localization needs to be handled separately in the app designer.
+
 ## Limitations
 
 These are the current limitations of generative pages:
 
 - Your page can connect to only Dataverse tables (up to 6 for a single page). No other data sources can be used.
 - Your prompt can have a maximum of 50,000 characters.
-- Only US English is supported.
+- When you create generative pages through in Power Apps (make.powerapps.com), only US English is a supported prompting language.
 - Collaboration isn't supported. Ensure only one maker is working on a generative page at a time to avoid unintended conflicts.
 - Only these data types are supported:
     - Choice
@@ -185,7 +254,7 @@ The best way to give feedback on generative pages is to use the thumbs up/down b
 
 ### What if I don't see generative pages enabled in my environment?
 
-Confirm that your environment is in the US region.
+Confirm that your environment is in one of the supported regions for the Power Apps maker studio experience: United States, Great Britain, Australia, or Singapore. If your region isn't listed, you can still create and edit generative pages using AI code generation tools, which are available worldwide on public clouds. More information: [Create and edit generative pages with AI code generation tools](generative-page-external-tools.md)
 
 ## Related articles
 

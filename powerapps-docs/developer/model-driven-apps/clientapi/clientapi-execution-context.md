@@ -1,9 +1,9 @@
 ---
 title: "Client API execution context in model-driven apps"
-description: "Learn about the model-driven application client API execution context"
+description: "Learn how to use the client API execution context in model-driven apps to handle events and manage form interactions"
 author: sriharibs-msft
 ms.author: srihas
-ms.date: 08/23/2024
+ms.date: 03/27/2026
 ms.reviewer: jdaly
 ms.topic: article
 ms.subservice: mda-developer
@@ -17,11 +17,11 @@ contributors:
 ---
 # Client API execution context
 
-The execution context defines the event context in which your code executes. The execution context is passed when an event occurs on a form or grid. Use it in your event handler to perform various tasks such as determine [formContext](clientapi-form-context.md) or [gridContext](clientapi-grid-context.md), or manage the save event.
+The execution context defines the event context in which your code runs. The system passes the execution context when an event occurs on a form or grid. Use it in your event handler to perform various tasks such as determining the [formContext](clientapi-form-context.md) or [gridContext](clientapi-grid-context.md), or managing the save event.
 
-The execution context is passed in one of the following ways:
+You can pass the execution context in the following ways:
 
-- **Defining event handlers using UI**: The execution context is an *optional* parameter that can be passed to a JavaScript library function through an event handler. Use the **Pass execution context as first parameter** option in the **Handler Properties** dialog while specify the name of the function to pass the event execution context. The execution context is the first parameter passed to a function.
+- **Defining event handlers using the UI**: The execution context is an *optional* parameter that you can pass to a JavaScript library function through an event handler. Use the **Pass execution context as first parameter** option in the **Handler Properties** dialog while specifying the name of the function to pass the event execution context. The execution context is the first parameter passed to a function.
 
    ### [Legacy](#tab/pass-execution-context-legacy)
 
@@ -33,13 +33,13 @@ The execution context is passed in one of the following ways:
 
    ---
 
-- **Defining event handlers using code**: The execution context is automatically passed as the first parameter to functions set using code. For a list of methods that can be used to define event handlers in code, see [Add or remove functions to events using code](events-forms-grids.md#add-or-remove-event-handler-function-to-event-using-code).
+- **Defining event handlers using code**: The system automatically passes the execution context as the first parameter to functions set by using code. For a list of methods that you can use to define event handlers in code, see [Add or remove functions to events using code](events-forms-grids.md#add-or-remove-event-handler-function-to-event-using-code).
 
-The execution context object provides many methods to further work with the context. More information: [Execution context (Client API reference)](reference/execution-context.md)
+The execution context object provides methods to work with the context. For more information, see [Client API execution context methods reference](reference/execution-context.md).
 
 ## Using context objects asynchronously
 
-The context passed to an event is only guaranteed to perform as expected during the event. When you keep a reference to a context after the event ends, actions might occur that cause context methods to behave in an unexpected fashion.
+The context that the system passes to an event is only guaranteed to perform as expected during the event. When you keep a reference to a context after the event ends, actions might occur that cause context methods to behave in an unexpected fashion.
 
 For example, if your event handler dispatches an async action that takes an extended amount of time while you're holding on to a reference to the execution context, the end user might navigate away from the current page by the time the promise resolves and you invoke the context method. This situation might cause methods like `formContext.getAttribute(<name>).getValue()` to return `null`, even though at the time the original event handler executed, the attribute had a value.
 
