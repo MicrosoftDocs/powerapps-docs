@@ -2,7 +2,7 @@
 title: "Configure real-time workflow stages and steps in Power Apps | MicrosoftDocs"
 description: "Learn how to configure real-time workflow steps"
 ms.custom: ""
-ms.date: 07/30/2020
+ms.date: 04/28/2026
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -12,6 +12,7 @@ ms.assetid: 0b47dfd5-76db-464f-90c0-c64a0173dcdd
 caps.latest.revision: 18
 ms.subservice: dataverse-maker
 ms.author: "matp"
+contributors: legunter
 search.audienceType: 
   - flowmaker
   - enduser
@@ -119,9 +120,9 @@ When you select **Before**, you are saying that you want the logic in the real-t
 
 When you apply a **Stop Workflow** action in a real-time workflow, you have the option to specify a status condition that can be either **Succeeded** or **Canceled**. When you set the status to canceled, you prevent the operation. An error message containing the text from the stop action status message will be displayed to the user with the heading **Business Process Error**.  
 
-### Configuring who will run the real-time workflow
+### Configuring who runs the real-time workflow
 
-In the workflow designer you can also set who the workflow should run as to either "The owner of the workflow" or "The user who made changes to the record". To change the owner of the record to another user, open the Administration tab in the workflow editor and use the lookup to select a new owner for the workflow. You will need to have the System Administrator or System Customizer security role or a role containing the prvChangeOwnerIdOfWorkflow privilege to change the owner of the workflow.
+In the workflow designer you can set who the workflow should run as to either "The owner of the workflow" or "The user who made changes to the record." To change the owner of the record to another user, open the **Administration** tab in the workflow editor and use the lookup to select a new owner for the workflow. You need the System Administrator or System Customizer security role or a role containing the `prvChangeOwnerIdOfWorkflow` privilege to change the owner of the workflow.
   
 ## Next steps
 
