@@ -12,7 +12,9 @@ search.audienceType:
   - maker
 ---
 
-# Data Grid modern control in canvas apps
+# Data Grid modern control in canvas apps (preview)
+
+[This article is pre-release document and is subject to change.]
 
 Display records from a data source in a scrollable, sortable, and searchable grid.
 
