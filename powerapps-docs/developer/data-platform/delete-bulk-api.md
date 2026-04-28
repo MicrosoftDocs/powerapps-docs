@@ -1,8 +1,8 @@
 ---
-title: Write code to bulk delete data
-description: Learn how to delete data in bulk using SDK and Web APIs.
-#customer intent: Write code to perform bulk deletion of data.
-ms.date: 04/24/2026
+title: Bulk delete control options
+description: Learn how to control deletion of bulk data using code.
+#customer intent: Write code to control bulk deletion of data.
+ms.date: 04/28/2026
 author: phecke
 ms.author: pehecke
 ms.reviewer: pehecke
@@ -58,9 +58,11 @@ The following are preserved when performing fast delete:
 
 ## Code examples
 
+### Use the Options parameter
+
 The following examples demonstrate how to use the `Options` parameter with the `BulkDelete` action or request.
 
-### [Web API](#tab/webapi)
+#### [Web API](#tab/webapi)
 
 Use the `Options` property in the request body of the `BulkDelete` action. The `Options` object is a `BulkDeleteOptions` complex type.
 
@@ -104,7 +106,7 @@ Content-Type: application/json
 }
 ```
 
-#### Options parameter values
+##### Options parameter values
 
 | Scenario | CanRecoverDeletedRecords | RunJobForSandbox | Effect |
 | -- | -- | -- | -- |
@@ -112,7 +114,7 @@ Content-Type: application/json
 | Skip recycle bin|  false | false or omitted | Records go through standard pipeline. Recycle bin is bypassed for this job.|
 | Sandbox fast delete | false | true | Bypasses SDK pipeline and recycle bin. Maximum throughput.|
 
-### [SDK for .NET](#tab/sdk)
+#### [SDK for .NET](#tab/sdk)
 
 Use the `BulkDeleteRequest` class and set the `Options` parameter in the request's `Parameters` collection. The value is a `BulkDeleteOptions` object from the Microsoft.Xrm.Sdk namespace.
 
@@ -158,14 +160,16 @@ The `BulkDeleteOptions` class is available in the Microsoft.Xrm.Sdk namespace. E
 
 ---
 
-Example: Disable Recycle Bin for Faster Deletion
-To permanently delete records without storing them in the recycle bin:
+### Disable the recycle bin for faster deletion
 
-⚠️  Warning
-Records deleted with CanRecoverDeletedRecords set to false cannot be recovered. Verify your query criteria carefully before running the job.
+Permanently delete records without storing them in the recycle bin.
 
-Web API:
-HTTP
+> [!WARNING]
+> Records deleted with CanRecoverDeletedRecords set to false cannot be recovered. Verify your query criteria carefully before running the job.
+
+#### [Web API](#tab/webapi)
+
+```http
 POST [Organization Uri]/api/data/v9.2/BulkDelete HTTP/1.1
 Content-Type: application/json
 
@@ -190,9 +194,11 @@ Content-Type: application/json
         "CanRecoverDeletedRecords": false
     }
 }
+```
 
-SDK for .NET:
-C#
+#### [SDK for .NET](#tab/sdk)
+
+```csharp
 static Guid BulkDeleteSkipRecycleBin(IOrganizationService service)
 {
     var request = new BulkDeleteRequest
@@ -223,15 +229,20 @@ static Guid BulkDeleteSkipRecycleBin(IOrganizationService service)
         (BulkDeleteResponse)service.Execute(request);
     return response.JobId;
 }
+```
 
-Example: Sandbox Fast Delete for Maximum Throughput
-To use the high-performance sandbox delete mode for maximum throughput:
+---
 
-⛔  Important
-Sandbox fast delete bypasses all plugins, workflows, and the recycle bin. Records are permanently and irrecoverably deleted. Custom business logic registered on the Delete message will not execute. Only use this option when no critical business logic depends on delete-time events.
+### Sandbox fast delete for maximum throughput
 
-Web API:
-HTTP
+Learn how to use high-performance sandbox delete mode for maximum throughput.
+
+> [!IMPORTANT]
+> Sandbox fast delete bypasses all plugins, workflows, and the recycle bin. Records are permanently and irrecoverably deleted. Custom business logic registered on the Delete message will not execute. Only use this option when no critical business logic depends on delete-time events.
+
+#### [Web API](#tab/webapi)
+
+```http
 POST [Organization Uri]/api/data/v9.2/BulkDelete HTTP/1.1
 Content-Type: application/json
 
@@ -257,9 +268,11 @@ Content-Type: application/json
         "RunJobForSandbox": true
     }
 }
+```
 
-SDK for .NET:
-C#
+#### [SDK for .NET](#tab/sdk)
+
+```csharp
 static Guid BulkDeleteSandboxFastDelete(IOrganizationService service)
 {
     var request = new BulkDeleteRequest
@@ -291,10 +304,14 @@ static Guid BulkDeleteSandboxFastDelete(IOrganizationService service)
         (BulkDeleteResponse)service.Execute(request);
     return response.JobId;
 }
+```
 
-See also[JD2.1]
-• BulkDelete Action reference  <https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/reference/bulkdelete>
-• Delete data in bulk  <https://learn.microsoft.com/en-us/power-apps/developer/data-platform/delete-data-bulk>
-• Restore deleted records  <https://learn.microsoft.com/en-us/power-apps/developer/data-platform/restore-deleted-records>
-• Use Web API actions  <https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/use-web-api-actions>
-• BulkDeleteOperation table reference  <https://learn.microsoft.com/en-us/power-apps/developer/data-platform/reference/entities/bulkdeleteoperation>
+---
+
+### See also
+
+- [BulkDelete Action reference](webapi/reference/bulkdelete.md)
+- [Delete data in bulk](delete-data-bulk.md)
+- [Restore deleted records](restore-deleted-records.md)
+- [Use Web API actions](webapi/use-web-api-actions.md)
+- [BulkDeleteOperation table reference](reference/entities/bulkdeleteoperation)
