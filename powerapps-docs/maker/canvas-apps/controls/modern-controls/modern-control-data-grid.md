@@ -1,10 +1,10 @@
 ---
 title: Data Grid modern control in canvas apps - Power Apps
-description: Learn about the details, properties, and examples of the Data Grid modern control in Power Apps.
+description: Learn how to use the Data Grid modern control in canvas apps to display, search, sort, and select records efficiently. Start building today.
 author: yogeshgupta698
 ms.topic: reference
 ms.custom: canvas
-ms.date: 04/23/2026
+ms.date: 04/28/2026
 ms.subservice: canvas-maker
 ms.author: yogupt
 ms.reviewer: mkaur
@@ -18,10 +18,10 @@ Display records from a data source in a scrollable, sortable, and searchable gri
 
 ## Description
 
-The **Data Grid** modern control displays records in a column-and-row layout built on Fluent UI. It supports virtual scrolling for large datasets, optional search filtering, sortable columns, and selectable rows. Columns are configured as sub-controls and support multiple types including text, number, phone, email, URL, and button. Use it when you need a high-performance, data-dense view of tabular data with built-in interaction. Key properties for this control are **Items**, **Searchable**, **Sortable**, and **SelectMultiple**.
+The **Data Grid** modern control displays records in a column-and-row layout built on Fluent UI. It supports virtual scrolling for large datasets, optional search filtering, sortable columns, and selectable rows. You configure columns as subcontrols, and they support multiple types including text, number, phone, email, URL, and button. Use this control when you need a high-performance, data-dense view of tabular data with built-in interaction. Key properties for this control are **Items**, **Searchable**, **Sortable**, and **SelectMultiple**.
 
 > [!NOTE]
-> The **Data Grid** control is a new control separate from the existing **Table** control. It is not a replacement for the **Table** control.
+> The **Data Grid** control is a new control separate from the existing **Table** control. It's not a replacement for the **Table** control.
 
 ## General
 
@@ -31,15 +31,15 @@ The **Data Grid** modern control displays records in a column-and-row layout bui
 
 ## Behavior
 
-**Searchable** – Whether a search bar appears above the grid. When **true**, users can type to filter visible rows; the current search string is exposed via the **SearchText** output property. Default is **false**.
+**Searchable** – Whether a search bar appears above the grid. When **true**, users can type to filter visible rows. The current search string is exposed through the **SearchText** output property. The default value is **false**.
 
-**Sortable** – Whether users can sort by a column by selecting its header. Default is **false**.
+**Sortable** – Whether users can sort by a column by selecting its header. The default value is **false**.
 
-**SelectMultiple** – Whether users can select more than one row at a time. Default is **false**.
+**SelectMultiple** – Whether users can select more than one row at a time. The default value is **false**.
 
-**ShowHeaders** – Whether column header labels appear at the top of the grid. Default is **true**.
+**ShowHeaders** – Whether column header labels appear at the top of the grid. The default value is **true**.
 
-**ShowSelector** – Whether a checkbox appears at the start of each row for row selection. Default is **false**.
+**ShowSelector** – Whether a checkbox appears at the start of each row for row selection. The default value is **false**.
 
 **Required** – Whether the user must select at least one row.
 
@@ -51,17 +51,17 @@ The **Data Grid** modern control displays records in a column-and-row layout bui
 
 **[Y](../properties-size-location.md)** – Distance between the top edge of the control and the top edge of its parent container (screen if no parent container).
 
-**Width** – Distance between the control's left and right edges. Default is **792**.
+**Width** – Distance between the control's left and right edges. The default value is **792**.
 
-**Height** – Distance between the control's top and bottom edges. Default is **475**.
+**Height** – Distance between the control's top and bottom edges. The default value is **475**.
 
 ## Style and theme
 
-**BasePaletteColor** – The base color used by the theme to generate the control's color palette.
+**BasePaletteColor** – The base color that the theme uses to generate the control's color palette.
 
 **Font** – The font family used for the grid text.
 
-**Size** – The font size of the grid text, in points. Default is **14**.
+**Size** – The font size of the grid text, in points. The default is **14**.
 
 **Color** – The color of the grid text.
 
@@ -69,13 +69,13 @@ The **Data Grid** modern control displays records in a column-and-row layout bui
 
 **Selected** – The most recently selected row, returned as a record.
 
-**SelectedItems** – All currently selected rows, returned as a table. Use this when **SelectMultiple** is **true**.
+**SelectedItems** – All currently selected rows, returned as a table. Use this property when **SelectMultiple** is **true**.
 
-**SearchText** – The current value the user has typed in the search bar. Only available when **Searchable** is **true**.
+**SearchText** – The current value the user types in the search bar. This property is only available when **Searchable** is **true**.
 
 ## Configuring columns
 
-The Data Grid uses **Data Grid Column** sub-controls to define how each column appears and what data it shows. Columns are added when you connect a data source and configure fields in the authoring panel. Column properties are locked by default — select a column and choose **Unlock** to customize it.
+The Data Grid uses **Data Grid Column** sub-controls to define how each column appears and what data it shows. You add columns when you connect a data source and configure fields in the authoring panel. Columns are locked by default. Select a column and choose **Unlock** to customize it.
 
 ### Column properties
 
