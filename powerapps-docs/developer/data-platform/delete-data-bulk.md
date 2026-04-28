@@ -21,7 +21,7 @@ The bulk deletion feature in Microsoft Dataverse helps you maintain data quality
 - Stale data
 - Data that's no longer relevant to the business
 - Unneeded test or sample data
-- Data that was incorrectly imported from other systems
+- Data that were incorrectly imported from other systems
   
 You can perform the following operations:  
   

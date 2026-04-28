@@ -11,37 +11,37 @@ ms.subservice: dataverse-developer
 
 # Bulk delete control options
 
-The `Options` parameter on the `BulkDelete` action allows you to control how the bulk delete job processes records. You can use it to:
+The `Options` parameter on the `BulkDelete` action or message allows you to control how the bulk delete job processes table rows (records). You can use the parameter to:
 
-- Disable the recycle bin for bulk-deleted records, which improves performance by skipping the overhead of storing deleted records for recovery.
-- Enable sandbox fast delete mode, which bypasses the standard SDK pipeline (plugins, workflows, recycle bin) to achieve significantly higher deletion throughput.
+- Disable the recycle bin for bulk-deleted records. Disabling the recycle bin improves performance by skipping the overhead of storing deleted records for recovery.
+- Enable sandbox fast delete mode to bypass the standard SDK pipeline (plug-ins, workflows, recycle bin). Fast delete achieves higher deletion throughput.
 
 The `Options` parameter accepts a `BulkDeleteOptions` object with the following properties.
 
 | Property | Type | Default | Description |
 |---|---|---|---|
-| CanRecoverDeletedRecords | Boolean | null (recycle bin enabled) | When set to false, records deleted by the bulk delete job are permanently removed and cannot be recovered from the recycle bin. |
+| CanRecoverDeletedRecords | Boolean | null (recycle bin enabled) | When set to false, records deleted by the bulk delete job are permanently removed and can't be recovered from the recycle bin. |
 | RunJobForSandbox | Boolean | null (standard pipeline) | When set to true, the bulk delete job uses the high-performance sandbox delete mode, bypassing plugins, workflows, and the recycle bin. |
 
 ## Control recycle bin behavior
 
-By default, when the recycle bin is enabled for your environment, all records deleted by a bulk delete job are stored in the recycle bin before deletion. This allows administrators to recover accidentally deleted records, but adds significant I/O overhead for each deleted record.
-To disable the recycle bin for a bulk delete job, set `CanRecoverDeletedRecords` to false in the `Options` parameter. This can approximately double the deletion throughput by eliminating the overhead of:
+By default, when the recycle bin is enabled for your environment, all records deleted by a bulk delete job are stored in the recycle bin before deletion. The recycle bin allows administrators to recover accidentally deleted records, but adds significant I/O overhead for each deleted record.
+To disable the recycle bin for a bulk delete job, set `CanRecoverDeletedRecords` to `false` in the `Options` parameter. This setting can approximately double the deletion throughput by eliminating the overhead of:
 
 - Creating DeletedItemReference records
 - Copying record data to recycle bin storage tables
 - Updating restore data blobs for each deleted record
 
 > [!WARNING]
-> When `CanRecoverDeletedRecords` is set to false, deleted records are permanently removed and cannot be recovered from the recycle bin. This action is irreversible. Ensure that you have verified the query criteria and have appropriate backups before running a bulk delete job with this option. This setting only affects the current bulk delete job; it does not change the environment-level recycle bin configuration.
+> When `CanRecoverDeletedRecords` is set to false, deleted records are permanently removed and can't be recovered from the recycle bin. This action is irreversible. Ensure that you verified the query criteria and have appropriate backups before running a bulk delete job with this option. This setting only affects the current bulk delete job; it doesn't change the environment-level recycle bin configuration.
 
 ## Sandbox fast delete
 
-For scenarios that require maximum deletion throughput, you can enable sandbox fast delete mode by setting `RunJobForSandbox` to `true`. In this mode, the bulk delete job bypasses the standard SDK pipeline entirely and uses direct cascade engine deletion, achieving significantly higher throughput.
+For scenarios that require maximum deletion throughput, you can enable sandbox fast delete mode by setting `RunJobForSandbox` to `true`. In this mode, the bulk delete job bypasses the standard SDK pipeline entirely and uses direct cascade engine deletion, achieving higher throughput.
 
 When sandbox fast delete is enabled, the following are skipped:
 
-- Pre-operation and post-operation plugin execution
+- Preoperation and post-operation plugin execution
 - Synchronous and asynchronous workflow triggers
 - Recycle bin storage (records are permanently deleted)
 - Custom business logic registered on the Delete message
@@ -54,21 +54,21 @@ The following are preserved when performing fast delete:
 - Sync change tracking for downstream replication
 
 > [!IMPORTANT]
-> Sandbox fast delete mode bypasses the entire SDK plugin pipeline. Any custom plugins, workflows, or business logic registered on the Delete message will NOT execute for records deleted in this mode. This includes audit plugins, integration plugins, and any custom validation logic. Additionally, records deleted in sandbox mode cannot be recovered from the recycle bin. Use this option only when you are certain that no critical business logic depends on delete-time plugin execution, and that permanent, irrecoverable deletion is acceptable.
+> Sandbox fast delete mode bypasses the entire SDK plugin pipeline. Any custom plugins, workflows, or business logic registered on the Delete message do NOT execute for records deleted in this mode. Included are audit plugins, integration plugins, and any custom validation logic. Additionally, records deleted in sandbox mode can't be recovered from the recycle bin. Use this option only when you're certain that no critical business logic depends on delete-time plugin execution, and that permanent, irrecoverable deletion is acceptable.
 
 ## Code examples
 
 ### Use the Options parameter
 
-The following examples demonstrate how to use the `Options` parameter with the `BulkDelete` action or request.
+The following examples demonstrate how to use the `Options` parameter with the `BulkDelete` action or message request.
 
 #### [Web API](#tab/webapi)
 
 Use the `Options` property in the request body of the `BulkDelete` action. The `Options` object is a `BulkDeleteOptions` complex type.
 
-```http
-Request:
+**Request:**
 
+```http
 POST [Organization Uri]/api/data/v9.2/BulkDelete HTTP/1.1
 Content-Type: application/json
 
@@ -94,9 +94,11 @@ Content-Type: application/json
         "RunJobForSandbox": false
     }
 }
+```
 
-Response:
-HTTP
+**Response:**
+
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -156,7 +158,7 @@ static Guid BulkDeleteWithOptions(IOrganizationService service)
 }
 ```
 
-The `BulkDeleteOptions` class is available in the Microsoft.Xrm.Sdk namespace. Ensure you are using the latest version of the SDK assemblies.
+The `BulkDeleteOptions` class is available in the Microsoft.Xrm.Sdk namespace. Ensure you're using the recent version of the SDK assemblies.
 
 ---
 
@@ -165,7 +167,7 @@ The `BulkDeleteOptions` class is available in the Microsoft.Xrm.Sdk namespace. E
 Permanently delete records without storing them in the recycle bin.
 
 > [!WARNING]
-> Records deleted with CanRecoverDeletedRecords set to false cannot be recovered. Verify your query criteria carefully before running the job.
+> Records deleted with CanRecoverDeletedRecords set to false can't be recovered. Verify your query criteria carefully before running the job.
 
 #### [Web API](#tab/webapi)
 
@@ -238,7 +240,7 @@ static Guid BulkDeleteSkipRecycleBin(IOrganizationService service)
 Learn how to use high-performance sandbox delete mode for maximum throughput.
 
 > [!IMPORTANT]
-> Sandbox fast delete bypasses all plugins, workflows, and the recycle bin. Records are permanently and irrecoverably deleted. Custom business logic registered on the Delete message will not execute. Only use this option when no critical business logic depends on delete-time events.
+> Sandbox fast delete bypasses all plugins, workflows, and the recycle bin. Records are permanently and irrecoverably deleted. Custom business logic registered on the Delete message doesn't execute. Only use this option when no critical business logic depends on delete-time events.
 
 #### [Web API](#tab/webapi)
 
@@ -310,8 +312,8 @@ static Guid BulkDeleteSandboxFastDelete(IOrganizationService service)
 
 ### See also
 
-- [BulkDelete Action reference](webapi/reference/bulkdelete.md)
+- [BulkDelete Action reference](/power-apps/developer/data-platform/webapi/reference/bulkdelete)
 - [Delete data in bulk](delete-data-bulk.md)
 - [Restore deleted records](restore-deleted-records.md)
-- [Use Web API actions](webapi/use-web-api-actions.md)
-- [BulkDeleteOperation table reference](reference/entities/bulkdeleteoperation)
+- [Use Web API actions](./webapi/use-web-api-actions.md)
+- [BulkDeleteOperation table reference](./reference/entities/bulkdeleteoperation.md)
