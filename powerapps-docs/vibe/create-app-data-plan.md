@@ -49,6 +49,22 @@ Key capabilities
     
 1. The first save stores the app, tables, and plan together in your selected solution, while your data remains in draft tables (in memory). If you don't see a **Save** button in the top right of the screen, your app is autosaved automatically. 
 
+## Add work content
+You can enrich your app-building experience by attaching **work content** directly to your prompt. This enables you to ground your app generation in real business context—making outputs more accurate, relevant, and tailored to your needs. 
+1. Enter a prompt describing what you want to build
+2. Select the + (Add work content) option
+3. Choose from:
+    - Files (Word or Excel)
+    - Emails
+    - Chats
+4. Attach one or more relevant work content
+5. Submit your prompt
+
+Known Limitations
+1. Encrypted or protected files are not supported. Note that your company policy may force encryption of files
+2. Content size and complexity may impact results
+3. Supported content types is limited to: Word (.docx), Excel (.xlsx), Emails, and Chats
+4. Real-time updates are not supported (attachments are analyzed at the time of generation only)
 
 ## Review and refine your generated app and data model
 
