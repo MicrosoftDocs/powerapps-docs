@@ -88,7 +88,7 @@ sections:
    - question: Why do I see duplicated version numbers when I export data using append only mode?   
      answer: |
          For append only mode, if Azure Synapse Link for Dataverse doesn't get an acknowledgment from the Azure data lake that the data has been committed due to any reason such as network delays, Azure Synapse Link retries in those scenarios and commit the data again. The downstream consumption should be made resilient to this scenario by filtering data using `SinkModifiedOn`.     
-   - question: Why am I seeing differences in SinkModifiedOn and ModifiedOn columns?
+   - question: Why am I seeing differences in `SinkModifiedOn` and `ModifiedOn` columns?
      answer: |
          This is expected behavior. `ModifiedOn` is the date and time a record was last changed in Dataverse, while `SinkModifiedOn` is the date and time the record was written to the data lake. `SinkModifiedOn` is typically later than `ModifiedOn`, and the difference depends on factors such as batch size, system load, and the number of records being processed.
 
