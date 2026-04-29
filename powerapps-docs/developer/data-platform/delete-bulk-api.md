@@ -23,7 +23,7 @@ The `Options` parameter accepts a `BulkDeleteOptions` object with the following 
 | Property | Type | Default | Description |
 |---|---|---|---|
 | CanRecoverDeletedRecords | Boolean | null (recycle bin enabled) | When set to false, records deleted by the bulk delete job are permanently removed and can't be recovered from the recycle bin. |
-| RunJobForSandbox | Boolean | null (standard pipeline) | When set to true, the bulk delete job uses the high-performance sandbox delete mode, bypassing plugins, workflows, and the recycle bin. |
+| RunJobForSandbox | Boolean | null (standard pipeline) | When set to true, the bulk delete job uses the high-performance sandbox delete mode, bypassing plug-ins, workflows, and the recycle bin. |
 
 ### Example: Options parameter
 
@@ -145,9 +145,6 @@ To disable the recycle bin for a bulk delete job, set `CanRecoverDeletedRecords`
 
 Permanently delete records without storing them in the recycle bin.
 
-> [!WARNING]
-> Records deleted with CanRecoverDeletedRecords set to false can't be recovered. Verify your query criteria carefully before running the job.
-
 #### [Web API](#tab/webapi)
 
 ```http
@@ -220,7 +217,7 @@ For scenarios that require maximum deletion throughput, you can enable sandbox f
 
 When sandbox fast delete is enabled, the following are skipped:
 
-- Preoperation and post-operation plugin execution
+- Preoperation and post-operation plug-in execution
 - Synchronous and asynchronous workflow triggers
 - Recycle bin storage (records are permanently deleted)
 - Custom business logic registered on the Delete message
@@ -233,14 +230,11 @@ The following are preserved when performing fast delete:
 - Sync change tracking for downstream replication
 
 > [!IMPORTANT]
-> Sandbox fast delete mode bypasses the entire SDK plugin pipeline. Any custom plugins, workflows, or business logic registered on the Delete message do NOT execute for records deleted in this mode. Included are audit plugins, integration plugins, and any custom validation logic. Additionally, records deleted in sandbox mode can't be recovered from the recycle bin. Use this option only when you're certain that no critical business logic depends on delete-time plugin execution, and that permanent, irrecoverable deletion is acceptable.
+> Sandbox fast delete mode bypasses the entire SDK plug-in pipeline. Any custom plug-ins, workflows, or business logic registered on the Delete message do NOT execute for records deleted in this mode. Included are audit plug-ins, integration plug-ins, and any custom validation logic. Additionally, records deleted in sandbox mode can't be recovered from the recycle bin. Use this option only when you're certain that no critical business logic depends on delete-time plug-in execution, and that permanent, irrecoverable deletion is acceptable.
 
 ### Example: Sandbox fast delete
 
 Learn how to use high-performance sandbox delete mode for maximum throughput.
-
-> [!IMPORTANT]
-> Sandbox fast delete bypasses all plugins, workflows, and the recycle bin. Records are permanently and irrecoverably deleted. Custom business logic registered on the Delete message doesn't execute. Only use this option when no critical business logic depends on delete-time events.
 
 #### [Web API](#tab/webapi)
 
@@ -295,7 +289,7 @@ static Guid BulkDeleteSandboxFastDelete(IOrganizationService service)
         CCRecipients = Array.Empty<Guid>()
     };
 
-    // Enable sandbox fast delete (bypasses plugins & recycle bin)
+    // Enable sandbox fast delete (bypasses plug-ins & recycle bin)
     request["Options"] = new BulkDeleteOptions
     {
         CanRecoverDeletedRecords = false,
