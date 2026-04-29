@@ -55,9 +55,9 @@ You can perform a bulk deletion on all tables that support the `Delete` message.
   
 If the delete action on a specific table type triggers a plug-in or a workflow (process), the bulk delete job triggers the plug-in or workflow every time it deletes a table record of that type.
 
-## Control bulk delete using options
+## Control bulk delete processing
 
-The `Options` parameter on the `BulkDelete` action or message allows you to control how the bulk delete job processes table rows (records). You can use the parameter to:
+The `Options` parameter on the `BulkDelete` action or message request allows you to control how the bulk delete job processes table rows (records). You can use the parameter to:
 
 - Disable the recycle bin for bulk-deleted records. Disabling the recycle bin improves performance by skipping the overhead of storing deleted records for recovery.
 - Enable sandbox fast delete mode to bypass the standard SDK pipeline (plug-ins, workflows, recycle bin). Fast delete achieves higher deletion throughput.
@@ -77,7 +77,7 @@ The following examples demonstrate how to use the `Options` parameter with the `
 
 ##### [Web API](#tab/webapi)
 
-Use the `Options` property in the request body of the `BulkDelete` action. The `Options` object is a `BulkDeleteOptions` complex type.
+Use the `Options` property in the request body of the [BulkDelete action](xref:Microsoft.Dynamics.CRM.BulkDelete). The `Options` object is a `BulkDeleteOptions` complex type.
 
 **Request:**
 
@@ -131,7 +131,7 @@ Content-Type: application/json
 
 ##### [SDK for .NET](#tab/sdk)
 
-Use the `BulkDeleteRequest` class and set the `Options` parameter in the request's `Parameters` collection. The value is a `BulkDeleteOptions` object from the Microsoft.Xrm.Sdk namespace.
+Use the [BulkDeleteRequest class](xref:Microsoft.Crm.Sdk.Messages.BulkDeleteRequest) and set the `Options` parameter in the request's `Parameters` collection. The value is a `BulkDeleteOptions` object from the Microsoft.Xrm.Sdk namespace.
 
 ```csharp
 using Microsoft.Crm.Sdk.Messages;
@@ -484,7 +484,11 @@ Look at the following SDK for .NET samples for the bulk delete feature:
 
 ### See also
 
-[Long-term data retention](long-term-retention.md)  
-[BulkDeleteOperation Table](reference/entities/bulkdeleteoperation.md)
+- [Long-term data retention](long-term-retention.md)  
+- [BulkDelete Action reference](/power-apps/developer/data-platform/webapi/reference/bulkdelete)
+- [Delete data in bulk](delete-data-bulk.md)
+- [Restore deleted records](restore-deleted-records.md)
+- [Use Web API actions](./webapi/use-web-api-actions.md)
+- [BulkDeleteOperation table reference](./reference/entities/bulkdeleteoperation.md)
 
 [!INCLUDE [footer-include](../../includes/footer-banner.md)]
