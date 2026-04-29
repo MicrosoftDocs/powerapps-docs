@@ -1,12 +1,12 @@
 ---
-title: "Use data source environment variables in canvas apps | MicrosoftDocs"
-description: "Use environment variables to store data sources in canvas apps."
+title: "Use data source environment variables in canvas apps"
+description: "Use environment variables to store data sources in canvas apps with Power Apps."
 Keywords: environment variables, variables, canvas app, app, configuration data
 author: caburk
 ms.subservice: dataverse-maker
 ms.author: caburk
 ms.reviewer: matp
-ms.date: 01/31/2025
+ms.date: 04/27/2026
 ms.topic: how-to
 search.audienceType: 
   - maker
@@ -16,7 +16,7 @@ contributors:
 ---
 # Use data source environment variables in canvas apps
 
-In this article, you'll learn about using data source environment variables in canvas apps. You can either use pre-existing data source environment variables, or create data source environment variables automatically when connecting to data.
+In this article, you learn about using data source environment variables in canvas apps. You can either use pre-existing data source environment variables, or create data source environment variables automatically when connecting to data.
 
 ## Use pre-existing data source environment variables
 
@@ -31,15 +31,15 @@ Environment variables can be reused across other apps and even different types o
 > [!IMPORTANT]
 >
 > - If an environment variable from a different solution is selected, a dependency will exist on the solution containing the environment variable. Therefore, be sure to either: 
-> - Add the environment variable to your current solution prior to exporting. 
-> - Ensure the solution containing the environment variable is imported to the destination environment before your current solution is imported.
+>   - Add the environment variable to your current solution prior to exporting. 
+>   - Ensure the solution containing the environment variable is imported to the destination environment before your current solution is imported.
 
 ## Automatically create data source environment variables when connecting to data
 
-This option provides simplicity and ensures environment variables will always be used for data sources, such as SharePoint Online. However, some customers prefer to provide their own schema names and therefore should create them from solutions.
+This option provides simplicity and ensures environment variables are always used for data sources, such as SharePoint Online. However, some customers prefer to provide their own schema names and therefore should create them from solutions.
 
 > [!NOTE]
-> Pre-existing canvas apps will not automatically use data source environment variables. Remove the data source from the app and add them back using the above steps to upgrade these apps to use environment variables. 
+> Pre-existing canvas apps don't automatically use data source environment variables. Remove the data source from the app and add them back using the above steps to upgrade these apps to use environment variables. 
 
 1. Edit or create a canvas app from your solution.
 1. Select **Settings** > **General** and enable the setting to **Automatically create environment variables when adding data sources**.
@@ -47,7 +47,7 @@ This option provides simplicity and ensures environment variables will always be
 1. Select a SharePoint **site**, one or more **lists**, and then **Connect**.
 
     > [!NOTE]
-    > To prevent creation of duplicate environment variables, you'll be prompted to use the existing environment variable when duplicates are identified. You can clear the option to use the existing environment variable if creation of a duplicate is desired. 
+    > To prevent creation of duplicate environment variables, you're prompted to use the existing environment variable when duplicates are identified. You can clear the option to use the existing environment variable if creation of a duplicate is desired. 
 
 1. Select **Save**. 
 

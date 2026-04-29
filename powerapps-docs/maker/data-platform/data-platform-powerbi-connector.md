@@ -4,7 +4,7 @@ description: Connect to your Microsoft Dataverse data from Power BI Desktop usin
 author: Mattp123
 ms.component: cds
 ms.topic: how-to
-ms.date: 10/15/2024
+ms.date: 04/27/2026
 ms.subservice: dataverse-maker
 ms.author: matp
 search.audienceType: 
