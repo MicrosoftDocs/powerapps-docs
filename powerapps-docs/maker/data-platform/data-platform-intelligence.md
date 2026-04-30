@@ -1,7 +1,7 @@
 ---
 title: "What is Dataverse intelligence?" 
 description: Learn how to use Microsoft Dataverse intelligence to bring business data understanding to AI agents and Copilot.
-ms.date: 03/30/2026
+ms.date: 04/30/2026
 ms.reviewer: matp
 ms.topic: how-to
 author: prithvi-khosla
