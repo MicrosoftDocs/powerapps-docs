@@ -533,6 +533,8 @@
               href: ./canvas-apps/controls/modern-controls/modern-control-combobox.md
             - name: Date picker
               href: ./canvas-apps/controls/modern-controls/modern-control-date-picker.md
+            - name: Dropdown
+              href: ./canvas-apps/controls/modern-controls/modern-control-dropdown.md
             - name: Header
               href: ./canvas-apps/controls/modern-controls/modern-controls-header.md
             - name: Icon
@@ -563,6 +565,8 @@
               href: ./canvas-apps/controls/modern-controls/modern-control-avatar.md
             - name: Copilot answer (preview)
               href: ./canvas-apps/controls/modern-controls/modern-control-copilot-answer.md
+            - name: Data Grid (preview)
+              href: ./canvas-apps/controls/modern-controls/modern-control-data-grid.md
             - name: Dropdown (preview)
               href: ./canvas-apps/controls/modern-controls/modern-control-dropdown.md
             - name: Stream video (preview)

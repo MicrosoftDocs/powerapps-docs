@@ -24,15 +24,15 @@ This article explains how to set up and use the Microsoft Dataverse model contex
 
 ### Steps to connect to Dataverse MCP server in Visual Studio Code
 
-1. Open Visual Studio Code. Select **View** > **Command Palette** (Ctrl+Shift+P), type **MCP: Add Server** and press **Enter**.  
-
-1. Select **HTTP or Server Sent Events** and then press **Enter**.  
+1. Open Visual Studio Code. Select **View** > **Command Palette** (Ctrl+Shift+P), type **MCP: Add Server**, and then select **HTTP or Server Sent Events**.  
 
 1. Paste your instance URL, such as `https://contoso.crm.dynamics.com/`, append */api/mcp* to it, and press Enter. You can get the instance URL at make.powerapps.com > **Settings** (gear icon) > **Session details** > **Instance url**.
    :::image type="content" source="media/data-platform-mcp-vsc/data-platform-mcp-github-org-url.png" alt-text="Organization URL with appendix.":::
 
    This step generates the MCP server configuration in Visual Studio Code.  
    
+1. Type a MCP server name or press Enter to accept the default name.
+1. Choose **Global** or **workspace**.
 1. Press **Ctrl+Alt+I** and ensure that agent mode is selected.
    :::image type="content" source="media/data-platform-mcp-vsc/vscode-agent-mode.png" alt-text="Agent mode in Visual Studio Code GitHub Copilot":::
 
