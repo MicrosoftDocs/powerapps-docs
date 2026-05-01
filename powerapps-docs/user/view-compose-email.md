@@ -4,7 +4,7 @@ description: How to view, compose and respond to email.
 author: shwetamurkute
 ms.component: pa-user
 ms.topic: article
-ms.date: 04/17/2026
+ms.date: 05/01/2026
 ms.subservice: end-user
 ms.author: smurkute
 ms.custom: ""
@@ -16,8 +16,7 @@ search.audienceType:
 
 # View, compose and respond to email
 
-Users can view, create, and send email faster with streamlined access that helps users compose, reply, and send emails using rich text editing and drag-and-drop attachment features and functionalities to embed images in emails.
-
+Users can more quickly view, create, and send emails with streamlined access. Rich text editing and drag-and-drop attachments help them compose and reply to messages.
 
 ## Access and view emails
 
