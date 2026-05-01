@@ -4,7 +4,7 @@ description: How to use keyboard shortcuts
 author: shwetamurkute
 ms.component: pa-user
 ms.topic: how-to
-ms.date: 04/12/2023
+ms.date: 05/01/2026
 ms.contributors:
 - yingchin
 ms.subservice: end-user
@@ -26,11 +26,10 @@ Keyboard shortcuts give you an alternate way to do common tasks instead of using
 ## Global shortcuts 
 
 |Type | Shortcut key | Description |
-|----------------------|-------------------------|-----------------------------|
+|----------------------|-------------------------|-----------------------------| 
 | General | F2 | Activates the flyouts including toast notifcations. |
 | Landmark | Ctrl+F6 | Navigates you through the landmarks of a page in clockwise order. Remembers the last selected item in each landmark and will navigate to that last item. |
-| Landmark | Ctrl+F6+Shift | Navigates you through the landmarks of a page in counter clockwise order. Remembers the last selected item in each landmark and will navigate to that last item. |
-| General | Ctrl+[  or Ctrl+Shift+[ | Set the focus on first focusable element of the main page| 
+| Landmark | Ctrl+Shift+F6 | Navigates you through the landmarks of a page in counter clockwise order. Remembers the last selected item in each landmark and will navigate to that last item. |
 
 ## Form shortcuts
 
@@ -38,7 +37,7 @@ Keyboard shortcuts give you an alternate way to do common tasks instead of using
 
 
 |Task  | Unified Interface |
-|---------|---------|
+|---------|---------| 
 |Complete the command for the active option or button|  Enter|
 |Cancel a command, or close a selected list or dialog box| Esc|
 |Save| Ctrl+S |
@@ -58,7 +57,7 @@ Keyboard shortcuts give you an alternate way to do common tasks instead of using
 ## Form navigation shortcuts
 
 |Task | Unified Interface |
-|---------|---------|
+|---------|---------| 
 |Move to the next option, option group, or column|Tab|
 |Move to the previous option, option group, or column| Shift+Tab |
 |Move between options in an open list, or between options in a group of options|Arrow keys|
@@ -71,8 +70,7 @@ Keyboard shortcuts give you an alternate way to do common tasks instead of using
 The following table outlines a list of accessibility shortcuts available when using email. You can access this list while composing email by pressing **Alt+0**.
 
 |Type | Shortcut key | Description |
-|----------------------|-------------------------|-----------------------------|
-| General | Alt+F11 | Toggle full-screen view. |
+|----------------------|-------------------------|-----------------------------| 
 | Tab navigation | Alt+Ctrl+0 | Go to the editor toolbar. |
 | Tab navigation | Alt+1 | Go to the rich-text editor. |
 | Tab navigation | Alt+2 | Go to the HTML editor. |
@@ -94,7 +92,7 @@ The following table outlines a list of accessibility shortcuts available when us
 If your administrator has enabled editable grids (views), you can edit data directly in a grid (view). The following table lists the keyboard shortcuts:
 
 |Task  | Unified Interface|
-|---------|---------|
+|---------|---------| 
 |When the focus is on a column header, sort by column | Spacebar to drop down list and then down arrow to select an action, followed by Enter |
 |When the focus is on a column header, open filter dialog | Spacebar to drop down list and then down arrow to select the **Filter by** option, followed by Enter |
 |When the focus is on the cells, move to the next column |  Right arrow (→) key  | 
@@ -122,7 +120,7 @@ If your administrator has enabled editable grids (views), you can edit data dire
 Interactive dashboards enable new functionality, such as filtering, sorting, and quick actions. 
 
 |Task             |Unified Interface  |
-|---------|---------|
+|---------|---------| 
 |Activate a dashboard element (simulate left-click)| Enter **Or** Spacebar |
 |Move to the next element  | Tab | 
 |Move to the previous element  | Shift+Tab  | 
@@ -130,14 +128,12 @@ Interactive dashboards enable new functionality, such as filtering, sorting, and
 |Move to the previous item within a dashboard element  | Up (↑) arrow key | 
 |Close a menu | Escape |
 |Select a check box or radio button | Spacebar |
-|Modify the date range filter | Ctrl+Alt+D |
-|Show the visual filter pane | Ctrl+Alt+V |
 |Move to the global command bar | Ctrl+Alt+A | 
 
 ### Global filter shortcuts
 
 |Task             |Unified Interface  |
-|---------|---------|
+|---------|---------| 
 |Open a menu | Enter **Or** Spacebar **Or** Down (↓) arrow key |
 |Activate a button | Enter **Or** Spacebar |
 |Move to the next element | Tab |
@@ -154,8 +150,7 @@ Interactive dashboards enable new functionality, such as filtering, sorting, and
 ### Dashboard stream control shortcuts
 
 |Task             |Unified Interface  |
-|---------|---------|
-|Move to the first command on the active dashboard stream's command bar | Ctrl+Alt+Q | 
+|---------|---------| 
 |Move to the next element | Tab |
 |Move to the previous element | Shift+Tab |
 |Activate a button | Enter **Or** Spacebar |
@@ -174,7 +169,7 @@ Interactive dashboards enable new functionality, such as filtering, sorting, and
 ### Chart shortcuts
 
 |Task             |Unified Interface  |
-|---------|---------|
+|---------|---------| 
 |Move to the first element in a chart | Tab |
 |Move to the next data point | Right (→) arrow key **OR** Down (↓) arrow key|
 |Move to the previous data point | Left (←) arrow key **OR**  Up (↑) arrow key|
@@ -185,7 +180,7 @@ Interactive dashboards enable new functionality, such as filtering, sorting, and
 ### Date-Time control shortcuts
 
 |Task             |Unified Interface  |
-|---------|---------|
+|---------|---------| 
 |Open the date picker flyout | Enter **Or** Spacebar **Or** Down (↓) arrow key |
 |Activate the option and close the flyout | Enter **Or** Spacebar |
 |Move to the next item | Down (↓) arrow key |
@@ -201,7 +196,7 @@ Interactive dashboards enable new functionality, such as filtering, sorting, and
 ### Search results shortcuts
 
 |Task             |Unified Interface  |
-|---------|---------|
+|---------|---------| 
 |Move to the next search result | Up (↑) arrow key |
 |Move to the previous search result | Down (↓) arrow key |
 |Move to the list of available views | Right (→) arrow key |
@@ -214,13 +209,16 @@ If you use a screen reader, follow these steps to access any of the submenus tha
 
 1. Navigate between the menu options using standard link navigation.
 2. Activate the link by selecting Enter or the space key as you usually would. A list of submenus will be displayed.
-3. To access these submenu options, use the assistive technology (AT) shortcut key to navigate to the next button. For example, if you use the NVDA screen reader, you would use the “b” shortcut key (NVDA+b). To navigate through all the options, select the key repeatedly.
+3. To access these submenu options, use the assistive technology (AT) shortcut key to navigate to the next button. For example, if you use the NVDA screen reader, you would use the "b" shortcut key (NVDA+b). To navigate through all the options, select the key repeatedly.
+
+> [!NOTE]
+> **For JAWS users:** JAWS native keyboard shortcuts for ARIA landmark navigation (**R** for next region, **Shift+R** for previous region) are handled by JAWS itself and work independently of Power Apps keyboard shortcuts. To navigate landmarks within the app using built-in shortcuts, use **Ctrl+F6** (next landmark) and **Ctrl+Shift+F6** (previous landmark).
 
 > [!IMPORTANT]
 > Several areas in the user interface (UI) have auto-collapse built in for menus. This includes the Navigation Bar and Form Navigation. Both expand when selected, but after 30 seconds of inactivity, the items collapse.
 
 ## Navigating through stages of a process
-If you’re in a row—for example, a lead—this section shows you the keyboard shortcuts to navigate through the different stages in the sales process to qualify the lead, and how to make selections in those stages. For example, if you want to move easily from the Qualify stage through to the Close stage, try these keyboard actions:
+If you're in a row—for example, a lead—this section shows you the keyboard shortcuts to navigate through the different stages in the sales process to qualify the lead, and how to make selections in those stages. For example, if you want to move easily from the Qualify stage through to the Close stage, try these keyboard actions:
 - After you select a stage, get to the columns by selecting the Down (↓) arrow.
 - If a stage is collapsed, select Enter to expand it.
 
