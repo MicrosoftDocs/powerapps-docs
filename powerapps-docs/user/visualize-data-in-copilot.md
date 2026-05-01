@@ -1,7 +1,7 @@
 ---
 title: Visualize data in a view with AI
 description: Learn how to visualize your data in a view using AI in Power Apps.
-ms.date: 04/14/2026
+ms.date: 04/21/2026
 ms.update-cycle: 180-days
 ms.topic: how-to
 ms.subservice: end-user

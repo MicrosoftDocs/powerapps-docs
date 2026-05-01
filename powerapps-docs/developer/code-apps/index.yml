@@ -42,6 +42,8 @@ landingContent:
             url: how-to/npm-quickstart.md
           - text: Add a Dataverse action or function
             url: how-to/add-dataverse-action-function.md
+          - text: Add flows
+            url: how-to/add-flows.md
 
   # Card
   - title: Configure & Setup
@@ -56,6 +58,8 @@ landingContent:
             url: how-to/use-environment-variables.md
           - text: Get context data
             url: how-to/retrieve-context.md
+          - text: Add flows
+            url: how-to/add-flows.md
 
   # Card
   - title: Connect to Data

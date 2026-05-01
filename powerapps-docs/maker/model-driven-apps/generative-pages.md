@@ -5,7 +5,7 @@ author: jasongre
 ms.subservice: mda-maker
 ms.author: jasongre
 ms.reviewer: matp
-ms.date: 04/10/2026
+ms.date: 04/20/2026
 ms.topic: how-to
 applies_to:
   - PowerApps
@@ -25,12 +25,12 @@ After you describe the page, the system then processes your requirements and spe
 
 You can create generative pages using two approaches:
 
-- Power Apps (make.powerapps.com): As described in this article, makers can create and iterate on generative pages directly in the browser by using a conversational UI experience.
-- AI code generation tools: Developers who prefer working with local development tools and direct access to TypeScript and React code can use external tools like Claude Code to develop generative pages locally with a code-first approach and CLI-based deployment. More information: [Create and edit generative pages with AI code generation tools](generative-page-external-tools.md)
+- Power Apps (make.powerapps.com): As described in this article, makers can create and iterate on generative pages directly in the browser by using a conversational UI experience. Available in the United States, Great Britain, Australia, and Singapore.
+- AI code generation tools: Developers who prefer working with local development tools and direct access to TypeScript and React code can use external tools like Claude Code to develop generative pages locally with a code-first approach and CLI-based deployment. Available worldwide on public clouds. More information: [Create and edit generative pages with AI code generation tools](generative-page-external-tools.md)
 
 ## Prerequisites
 
-- The Power Platform environment must be located in the US region. This feature isn't currently available in other regions yet.
+- The Power Platform environment must be located in one of the following regions: United States, Great Britain, Australia, or Singapore.
 
 ## Create a generative page in model-driven apps
 
@@ -52,6 +52,9 @@ You can create generative pages using two approaches:
    :::image type="content" source="media/generative-page/generative-page-include-image-tool.png" alt-text="Include image tool to add an image from a library of stock images":::
 1. Optionally choose the AI model you want to use to generate the page.
     :::image type="content" source="media/generative-page/choose-model-generative-page.png" alt-text="Choose the AI model you want to use to generate your page" lightbox="media/generative-page/choose-model-generative-page.png":::
+
+   > [!NOTE]
+   > GPT-4.1 is currently the only available model for generative pages.
 
 1. When you're finished describing the page, select **Generate page**.
 
@@ -251,7 +254,7 @@ The best way to give feedback on generative pages is to use the thumbs up/down b
 
 ### What if I don't see generative pages enabled in my environment?
 
-Confirm that your environment is in the US region.
+Confirm that your environment is in one of the supported regions for the Power Apps maker studio experience: United States, Great Britain, Australia, or Singapore. If your region isn't listed, you can still create and edit generative pages using AI code generation tools, which are available worldwide on public clouds. More information: [Create and edit generative pages with AI code generation tools](generative-page-external-tools.md)
 
 ## Related articles
 

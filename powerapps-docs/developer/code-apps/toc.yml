@@ -19,6 +19,8 @@ items:
             href: how-to/npm-quickstart.md
           - name: Add a Dataverse Action or Function
             href: how-to/add-dataverse-action-function.md
+          - name: Add flows
+            href: how-to/add-flows.md
       - name: Connect to data
         items:
         - name: Connect to data
@@ -45,6 +47,8 @@ items:
           href: how-to/use-environment-variables.md
         - name: Get context data
           href: how-to/retrieve-context.md
+        - name: Add flows
+          href: how-to/add-flows.md
       - name: Deploy & Monitor
         items:
         - name: Application lifecycle management (ALM)

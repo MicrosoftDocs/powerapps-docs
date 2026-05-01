@@ -11,8 +11,8 @@ Use smart grid natural language search to ask data-related questions in natural 
 
 Natural language grid and view search requires specific user licenses based on the product. If the user doesn't have the license, the feature is hidden. This license enforcement will gradually rollout following the feature's general availability.
 
-- **Power Apps model driven app**: The user must have a Power Apps premium license. For details, see the [Power Platform License Guide](https://go.microsoft.com/fwlink/?linkid=2085130).
-- **Dynamics 365 model driven app**: The user must have a Dynamics 365 enterprise or premium license as outlined in [Dynamics 365 License Guide](https://go.microsoft.com/fwlink/?LinkId=866544).
+- **Power Apps model-driven app**: The user must have a Power Apps premium license. For details, see the [Power Platform License Guide](https://go.microsoft.com/fwlink/?linkid=2085130).
+- **Dynamics 365 model-driven app**: The user must have a Dynamics 365 enterprise or premium license as outlined in [Dynamics 365 License Guide](https://go.microsoft.com/fwlink/?LinkId=866544).
 
 Usage might be subject to service limits or throttling. Microsoft reserves the right to update the limits.
 
@@ -24,7 +24,7 @@ The primary admin control for **Natural Language Grid and View Search** is movin
 
 ## Explore data with agents in Microsoft 365 Copilot (preview)
 
-[!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
+[!INCLUDE [preview-banner-section](~/../shared-content/shared/preview-includes/preview-banner-section.md)]
 
 With Microsoft 365 Copilot you have the ability to bring app-based experiences to agents, the app experience can also use the AI assisted search in the grid view. 
 

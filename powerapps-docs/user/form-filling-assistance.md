@@ -1,7 +1,7 @@
 ---
 title: Use AI form fill assistance in model-driven apps 
 description: Learn how to use AI-generated optional suggestions for fields in a form.
-ms.date: 04/14/2026
+ms.date: 04/21/2026
 ms.update-cycle: 180-days
 ms.custom: 
   - responsible-ai-faqs
