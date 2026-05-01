@@ -69,9 +69,11 @@ For more information, see [Insert an email template](insert-email-template.md).
 
 ## View email sentiment
 
-After an administrator enables and configures email sentiment analysis, the customer sentiment card is displayed for incoming customer emails that meet the configured criteria.
+After an administrator enables and configures email sentiment analysis, and ensures that the email form includes the **Sentiment** field, the customer sentiment card is displayed for incoming customer emails that meet the configured criteria.
 
 The customer sentiment card displays the following features:
+
+:::image type="content" source="media/email-sentiment-timeline.png" alt-text="Customer sentiment card showing sentiment timeline across emails.":::
 
  - **Current sentiment**: The customer’s current sentiment. A sentiment intensity indicator in the corresponding colors is also displayed.
  - **Sentiment timeline**: A visual representation that shows how the customer sentiment in the emails received changes across a period.   
