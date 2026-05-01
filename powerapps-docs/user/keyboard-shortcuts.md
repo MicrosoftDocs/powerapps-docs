@@ -211,9 +211,6 @@ If you use a screen reader, follow these steps to access any of the submenus tha
 2. Activate the link by selecting Enter or the space key as you usually would. A list of submenus will be displayed.
 3. To access these submenu options, use the assistive technology (AT) shortcut key to navigate to the next button. For example, if you use the NVDA screen reader, you would use the "b" shortcut key (NVDA+b). To navigate through all the options, select the key repeatedly.
 
-> [!NOTE]
-> **For JAWS users:** JAWS native keyboard shortcuts for ARIA landmark navigation (**R** for next region, **Shift+R** for previous region) are handled by JAWS itself and work independently of Power Apps keyboard shortcuts. To navigate landmarks within the app using built-in shortcuts, use **Ctrl+F6** (next landmark) and **Ctrl+Shift+F6** (previous landmark).
-
 > [!IMPORTANT]
 > Several areas in the user interface (UI) have auto-collapse built in for menus. This includes the Navigation Bar and Form Navigation. Both expand when selected, but after 30 seconds of inactivity, the items collapse.
 
