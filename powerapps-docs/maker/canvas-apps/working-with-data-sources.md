@@ -6,7 +6,7 @@ author: gregli-msft
 ms.topic: concept-article
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 04/23/2026
+ms.date: 05/4/2026
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -134,11 +134,11 @@ You don't want to bring those millions of customers into your app, and then choo
 Many, but not all, functions that you can use to choose records can be *delegated*, which means that they're run inside the cloud service. Learn more in [Delegation](delegation-overview.md).
 
 > [!IMPORTANT]
-> By default, Power Apps retrieves only the first **500 records** from a data source. Administrators can raise this limit to a maximum of **2,000 records** in app settings. If your data source contains more records and your formula isn't fully delegable, a yellow delegation warning triangle appears in Power Apps Studio. When you see this warning, your app may not return all matching records at runtime. To avoid data loss in large data sets, use delegable functions such as **[Filter](functions/function-filter-lookup.md)** and **[Sort](functions/function-sort.md)** with supported data sources, or consider using Microsoft Dataverse, which has broader delegation support.
+> By default, Power Apps retrieves only the first **500 records** from a data source. You can raise this limit to a maximum of **2,000 records** in app settings. If your data source contains more records and your formula isn't fully delegable, a yellow delegation warning triangle appears in Power Apps Studio. When you see this warning, your app may not return all matching records at runtime. To avoid data loss in large data sets, use delegable functions such as **[Filter](functions/function-filter-lookup.md)** and **[Sort](functions/function-sort.md)** with supported data sources, or consider using Microsoft Dataverse, which has broader delegation support.
 
 #### Identify and resolve delegation warnings
 
-A delegation warning appears in the formula bar as a yellow triangle when Power Apps can't push a formula operation to the data source. To check whether a formula is delegable:
+A delegation warning often appears in the formula bar as a yellow triangle when Power Apps can't push a formula operation to the data source, but not every nondelegable case shows this warning. To check whether a formula is delegable:
 
 1. Select the control or formula that processes your data source.
 2. Look for a yellow triangle icon in Power Apps Studio.
@@ -148,6 +148,7 @@ To resolve delegation issues:
 - Replace non-delegable functions (such as **Search** for text columns in SharePoint) with delegable alternatives where possible.
 - Switch to Microsoft Dataverse as your data source for the broadest delegation support.
 - Use server-side views (for SharePoint) or stored procedures (for SQL) to pre-filter data.
+- To troubleshoot delegation issues that aren’t flagged, use Live Monitor under **Advanced tools** to inspect the queries Power Apps sends and the data returned from each data source. For more information, see [Debugging canvas apps with Live monitor](../monitor-canvasapps.md).
 
 ## Collections
 
