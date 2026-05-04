@@ -25,6 +25,9 @@ This article provides detailed instructions about how to enable, manage, configu
 
 By default, Dataverse MCP server is enabled for Copilot Studio. To enable non-Microsoft MCP clients, such as Visual Studio GitHub Copilot and Claude, follow these steps:
 
+> [!NOTE]
+> MCP allowlisting applies only to the /api/mcp agent entrypoint. MCP‑named Custom APIs are regular Dataverse APIs and are not restricted by this setting.
+
 1. Go to [Power Platform admin center](https://admin.powerplatform.microsoft.com/). Select **Manage** > **Environments**.
 1. Select the **Environment Name** where you want to turn on the Dataverse MCP server, and then select **Settings**. Under **Settings**, select **Product** > **Features**. Scroll down to locate **Dataverse Model Context Protocol** and make sure **Allow MCP clients to interact with Dataverse MCP server** is turned on.
 1. Select **Advanced Settings**.
