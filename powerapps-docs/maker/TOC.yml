@@ -2159,7 +2159,7 @@
       href: ./data-platform/create-edit-global-option-sets.md
     - name: Autonumber columns
       href: ./data-platform/autonumber-fields.md
-    - name: Prompt columns (preview)
+    - name: Prompt columns
       href: ./data-platform/prompt-column.md
     - name: Work with Power Fx formula columns
       items:
