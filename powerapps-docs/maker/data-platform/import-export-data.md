@@ -9,9 +9,9 @@ ms.tgt_pltfrm: ""
 ms.topic: concept-article
 applies_to: 
   - "powerapps"
-author: "olegovanesyan"
+author: "crlsdietrich "
 ms.subservice: dataverse-maker
-ms.author: "olegov"
+ms.author: "cdietric"
 search.audienceType: 
   - maker
 ---
