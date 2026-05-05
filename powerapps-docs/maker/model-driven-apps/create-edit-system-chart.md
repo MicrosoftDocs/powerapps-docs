@@ -42,13 +42,13 @@ In this article you learn how to create a system chart. System charts are organi
    - To configure additional options to display the chart, such as multiple series, stack items, display only top items, see [Additional chart configuration](#additional-chart-configuration).
 1. Select **Next**. 
 1. Select a column for the category The category determines the horizontal axis for the chart, such as account name in this example. Select **Apply**.
-   :::image type="content" source="media/create-edit-system-chart/chart-for-number-employees.png" alt-text="Account number of employees chart":::
+   :::image type="content" source="media/create-edit-system-chart/chart-for-number-employees.png" alt-text="Account number of employees chart" lightbox="media/create-edit-system-chart/chart-for-number-employees.png":::
 1. To save the chart, in the chart designer, select **Save**.
 1. Select **Publish** to make the chart available to others.
 
 ## Edit a chart
 
-1. Sign in to [Power Apps](make.powerapps.com), and then on the left navigation pane, select **Solutions**. 
+1. Sign in to [Power Apps](https://make.powerapps.com), and then on the left navigation pane, select **Solutions**. 
 1. Open the solution that has the table that includes the chart you want to edit, open the table, and then select **Charts** under **Data experiences**.
 1. In the list of charts, open the chart that you want to edit.
 1. Make the changes you want for the chart in the chart designer. More information: [Create a chart](#create-a-chart) and [Additional chart configuration](#additional-chart-configuration)
