@@ -9,7 +9,7 @@ ms.tgt_pltfrm: ""
 ms.topic: concept-article
 applies_to: 
   - "powerapps"
-author: "crlsdietrich "
+author: "crlsdietrich"
 ms.subservice: dataverse-maker
 ms.author: "cdietric"
 search.audienceType: 
