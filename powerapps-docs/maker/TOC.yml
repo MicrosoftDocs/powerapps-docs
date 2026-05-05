@@ -1810,7 +1810,7 @@
         href: ./model-driven-apps/reporting-overview.md
       - name: Apply data visualizations in an app
         items:
-        - name: Create a system chart
+        - name: Create a system chart (preview)
           href: ./model-driven-apps/create-edit-system-chart.md
         - name: Create or edit dashboards
           href: ./model-driven-apps/create-edit-dashboards.md

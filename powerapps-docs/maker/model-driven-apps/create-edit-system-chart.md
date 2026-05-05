@@ -12,31 +12,35 @@ applies_to:
   - "PowerApps"
 author: "Hillaryyaory-microsoft"
 ms.subservice: mda-maker
-ms.author: "hillaryyaor"
+ms.author: "hillaryyaory"
 ms.reviewer: matp
 contributors: anshuman-ms
 search.audienceType: 
   - maker
 ---
-# Create or edit a model-driven app system chart
+# Create or edit a model-driven app system chart (preview)
+
+[!INCLUDE [cc-preview-features-definition](../../../shared/preview-includes/preview-banner.md)]
 
 In this article you learn how to create a system chart. System charts are organization-owned charts, which makes them available to anyone with access to read the data running the app. System charts can't be assigned or shared with specific app users.
+
+[!INCLUDE [cc-preview-features-definition](../../../shared/preview-includes/preview-note-pp.md)]
 
 > [!NOTE]
 > Model-driven apps not configured to display **All** charts for a table need newly created charts selected for the table within the app designer. More information: [Add table assets](add-edit-app-components.md#add-table-assets)
 
 ## Create a chart
 
-1. Sign in to [Power Apps](make.powerapps.com), and then on the left navigation pane, select **Solutions**. 
+1. Sign in to [Power Apps](https://make.powerapps.com), and then on the left navigation pane, select **Solutions**. 
 1. Open the solution that has the table that requires a chart, open the table, and then select **Charts** under **Data experiences**.
 1. Select **New chart**.
 1. Specify the type of chart, and how the data is displayed in the chart.
 1. The chart designer opens. In the dialog choose from the following legend entries: 
    - In the **Column** dropdown list, select a column, such as *Number of Employees*. The column determines the vertial axis for the chart.
-   - In the **Aggregate** dropdown list dialog, select aggregate value type, such as Average. <!--What do the different options do? -->
+   - In the **Aggregate** dropdown list dialog, select the option by which you want to group the column you selected for the **Column**, such as *Sum* in this example. For non-numeric fields, you can select only Count: All or Count: Non-empty. For numeric fields, you can select one of the these aggregation options: Count: All, Count: Non-empty, Average, Max, Min, or Sum. NULL values aren't considered when calculating minimum, maximum, or average values. However, zero (0) values are included. <!--What do these do? -->
    - In the **Chart type** dropdown list, select a type of chart to display, such as Column, Bar, Pie, or Donut.
-   - Optionally, set minimum and maxium values. <!-- What does this do?-->
-1. Select **Next**.
+   - To configure additional options to display the chart, such as multiple series, stack items, display only top items, see [Additional chart configuration](#additional-chart-configuration).
+1. Select **Next**. 
 1. Select a column for the category The category determines the horizontal axis for the chart, such as account name in this example. Select **Apply**.
    :::image type="content" source="media/create-edit-system-chart/chart-for-number-employees.png" alt-text="Account number of employees chart":::
 1. To save the chart, in the chart designer, select **Save**.
@@ -47,7 +51,19 @@ In this article you learn how to create a system chart. System charts are organi
 1. Sign in to [Power Apps](make.powerapps.com), and then on the left navigation pane, select **Solutions**. 
 1. Open the solution that has the table that includes the chart you want to edit, open the table, and then select **Charts** under **Data experiences**.
 1. In the list of charts, open the chart that you want to edit.
-1. Make the changes you want for the chart in the chart designer. More information: [Create a chart](#create-a-chart)
+1. Make the changes you want for the chart in the chart designer. More information: [Create a chart](#create-a-chart) and [Additional chart configuration](#additional-chart-configuration)
+
+## Additional chart configuration
+
+There are several different ways to display a chart.
+
+- To create a chart with multiple series, select **Add a series**, select another column to display on the series axis, and then select an aggregate option for that series. 
+- To change the chart type for a series, select the series, select the Current chart type icon for that series, and then select a chart type. 
+- To stack items in a chart, select the chart type, and then select **Stacked** or **100% Stacked**. You can stack items only in a bar, column, or an area chart.
+- To display only top items on the chart, select the **Set minimum and maximum values**, then select *Top* or *Bottom* in the  **Top/Bottom** list and **Count** numeric value. <!-- What do these options do for the data displayed?-->
+- To display a different horizontal category, from the list under **Horizontal (Category)**, select the column to display.
+- To create a comparison chart with multiple categories, select **Add a category**, and then select another column to display on the category axis. You can add up to two category items and one series item to a comparison chart.
+- For columns that are of the `datetime` type, select the option by which you want to group the field you selected as the category. The chart is named based on the columns you chose for the series and category axes. 
 
 ## Switch to classic experience
 
