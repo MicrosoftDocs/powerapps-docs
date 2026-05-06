@@ -1,7 +1,7 @@
 ---
 title: Delete Data in Bulk to Reduce Storage Use
 description: Learn how to delete data in bulk to remove stale records, improve data quality, and manage storage consumption. Use bulk delete jobs to get started.
-ms.date: 04/28/2026
+ms.date: 05/06/2026
 ms.topic: how-to
 author: MsSQLGirl
 ms.subservice: dataverse-developer
@@ -57,10 +57,13 @@ If the delete action on a specific table type triggers a plug-in or a workflow (
 
 ## Control bulk delete processing
 
-The `Options` parameter on the `BulkDelete` action or message request allows you to control how the bulk delete job processes table rows (records). You can use the parameter to:
+The `Options` parameter on the `BulkDelete` [action](/power-apps/developer/data-platform/webapi/reference/bulkdelete) or [message request](/dotnet/api/microsoft.crm.sdk.messages.bulkdeleterequest) allows you to control how the bulk delete job processes table rows (records). You can use the parameter to:
 
 - Disable the recycle bin for bulk-deleted records. Disabling the recycle bin improves performance by skipping the overhead of storing deleted records for recovery.
 - Enable sandbox fast delete mode to bypass the standard SDK pipeline (plug-ins, workflows, recycle bin). Fast delete achieves higher deletion throughput.
+
+> [!WARNING]
+> Do not execute the examples shown in this article as written. Modify the example code as appropriate for your development environment. Some of these examples delete all accounts, which is not something you may want to do.
 
 ### Use the Options parameter
 
@@ -70,6 +73,9 @@ The `Options` parameter accepts a `BulkDeleteOptions` object with the following 
 |---|---|---|---|
 | CanRecoverDeletedRecords | Boolean | null (recycle bin enabled) | When set to false, records deleted by the bulk delete job are permanently removed and can't be recovered from the recycle bin. |
 | RunJobForSandbox | Boolean | null (standard pipeline) | When set to true, the bulk delete job uses the high-performance sandbox delete mode, bypassing plug-ins, workflows, and the recycle bin. |
+
+> [!IMPORTANT]
+> The Dataverse SDK for .NET NuGet package containing the [BulkDeleteRequest](/dotnet/api/microsoft.crm.sdk.messages.bulkdeleterequest) class has not yet been updated to include the new `Options` property. Until that package is updated, you can access the new property using a generic [OrganizationRequest](/dotnet/api/microsoft.xrm.sdk.organizationrequest) class and specifying the "bulkdelete" request name with an "options" parameter.
 
 #### Example: Options parameter
 
