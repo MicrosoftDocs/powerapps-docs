@@ -71,8 +71,8 @@ The `Options` parameter accepts a `BulkDeleteOptions` object with the following 
 
 | Property | Type | Default | Description |
 |---|---|---|---|
-| CanRecoverDeletedRecords | Boolean | null (recycle bin enabled) | When set to false, records deleted by the bulk delete job are permanently removed and can't be recovered from the recycle bin. |
-| RunJobForSandbox | Boolean | null (standard pipeline) | When set to true, the bulk delete job uses the high-performance sandbox delete mode, bypassing plug-ins, workflows, and the recycle bin. |
+| `CanRecoverDeletedRecords` | Boolean | null (recycle bin enabled) | When set to false, records deleted by the bulk delete job are permanently removed and can't be recovered from the recycle bin. |
+| `RunJobForSandbox` | Boolean | null (standard pipeline) | When set to true, the bulk delete job uses the high-performance sandbox delete mode, bypassing plug-ins, workflows, and the recycle bin. |
 
 > [!IMPORTANT]
 > The Dataverse SDK for .NET NuGet package containing the [BulkDeleteRequest](/dotnet/api/microsoft.crm.sdk.messages.bulkdeleterequest) class has not yet been updated to include the new `Options` property. Until that package is updated, you can access the new property using a generic [OrganizationRequest](/dotnet/api/microsoft.xrm.sdk.organizationrequest) class and specifying the "bulkdelete" request name with an "options" parameter.
@@ -83,12 +83,15 @@ The following examples demonstrate how to use the `Options` parameter with the `
 
 ##### [Web API](#tab/webapi)
 
-Use the `Options` property in the request body of the [BulkDelete action](xref:Microsoft.Dynamics.CRM.BulkDelete). The `Options` object is a `BulkDeleteOptions` complex type.
+Use the `Options` property in the request body of the [BulkDelete action](xref:Microsoft.Dynamics.CRM.BulkDelete). The `Options` parameter is a [BulkDeleteOptions complex type](xref:Microsoft.Dynamics.CRM.BulkDeleteOptions).
 
 **Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.2/BulkDelete HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+Accept: application/json
 Content-Type: application/json
 
 {
@@ -119,7 +122,7 @@ Content-Type: application/json
 
 ```http
 HTTP/1.1 200 OK
-Content-Type: application/json
+OData-Version: 4.0
 
 {
     "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.BulkDeleteResponse",
@@ -201,6 +204,9 @@ Permanently delete records without storing them in the recycle bin.
 
 ```http
 POST [Organization Uri]/api/data/v9.2/BulkDelete HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+Accept: application/json
 Content-Type: application/json
 
 {
@@ -292,6 +298,9 @@ Learn how to use high-performance sandbox delete mode for maximum throughput.
 
 ```http
 POST [Organization Uri]/api/data/v9.2/BulkDelete HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+Accept: application/json
 Content-Type: application/json
 
 {
@@ -438,6 +447,11 @@ Set the <xref:Microsoft.Dynamics.CRM.QueryExpression> `DataSource` property to `
 
 ```http
 POST [Organization Uri]/api/data/v9.2/BulkDelete HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+Accept: application/json
+Content-Type: application/json
+
 {
     "QuerySet": 
     [
