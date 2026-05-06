@@ -37,7 +37,7 @@ In this article you learn how to create a system chart. System charts are organi
 1. Specify the type of chart, and how the data is displayed in the chart.
 1. The chart designer opens. In the dialog choose from the following legend entries: 
    - In the **Column** dropdown list, select a column, such as *Number of Employees*. The column determines the vertial axis for the chart.
-   - In the **Aggregate** dropdown list dialog, select the option by which you want to group the column you selected for the **Column**, such as *Sum* in this example. For non-numeric fields, you can select only Count: All or Count: Non-empty. For numeric fields, you can select one of the these aggregation options: Count: All, Count: Non-empty, Average, Max, Min, or Sum. NULL values aren't considered when calculating minimum, maximum, or average values. However, zero (0) values are included. <!--What do these do? -->
+   - In the **Aggregate** dropdown list dialog, select the option by which you want to group the column you selected for the **Column**, such as *Sum* in this example. For non-numeric fields, you can select only Count: All or Count: Non-empty. For numeric fields, you can select one of the these aggregation options: Count: All, Count: Non-empty, Average, Max, Min, or Sum. NULL values aren't considered when calculating minimum, maximum, or average values. However, zero (0) values are included. More information: [Additional chart configuration](#additional-chart-configuration)
    - In the **Chart type** dropdown list, select a type of chart to display, such as Column, Bar, Pie, or Donut.
    - To configure additional options to display the chart, such as multiple series, stack items, display only top items, see [Additional chart configuration](#additional-chart-configuration).
 1. Select **Next**. 
@@ -57,13 +57,14 @@ In this article you learn how to create a system chart. System charts are organi
 
 There are several different ways to display a chart.
 
+- To determine how data is summarized in the chart, select the appropriate **Aggregate** option. **Count** shows the number of records, **Sum** shows the total, **Average** shows the average, **Max** shows the highest value, and **Min** shows the lowest value. For example to get total revenue per account select max, or average deal size select average, or smallest deal size select min.
 - To create a chart with multiple series, select **Add a series**, select another column to display on the series axis, and then select an aggregate option for that series. 
 - To change the chart type for a series, select the series, select the Current chart type icon for that series, and then select a chart type. 
 - To stack items in a chart, select the chart type, and then select **Stacked** or **100% Stacked**. You can stack items only in a bar, column, or an area chart.
-- To display only top items on the chart, select the **Set minimum and maximum values**, then select *Top* or *Bottom* in the  **Top/Bottom** list and **Count** numeric value. <!-- What do these options do for the data displayed?-->
+- To display only top items on the chart, you can optionally select the **Set minimum and maximum values**, then select *Top* or *Bottom* in the  **Top/Bottom** list and then select the **Count** numeric value. Top/Bottom rules filter the chart to show only the highest or lowest results based on the selected aggregation. For example, selecting *Bottom = 1* with *Sum* of revenue displays only the single account with the lowest total revenue (even when other record column values go up significantly beyond that amount).
 - To display a different horizontal category, from the list under **Horizontal (Category)**, select the column to display.
 - To create a comparison chart with multiple categories, select **Add a category**, and then select another column to display on the category axis. You can add up to two category items and one series item to a comparison chart.
-- For columns that are of the `datetime` type, select the option by which you want to group the field you selected as the category. The chart is named based on the columns you chose for the series and category axes. 
+- For columns that are of the `datetime` type, select the option by which you want to group the field you selected as the category. The chart is named based on the columns you chose for the series and category axes.
 
 ## Switch to classic experience
 
