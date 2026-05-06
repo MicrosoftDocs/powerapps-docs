@@ -36,7 +36,7 @@ In this article you learn how to create a system chart. System charts are organi
 1. Select **New chart**.
 1. Specify the type of chart, and how the data is displayed in the chart.
 1. The chart designer opens. In the dialog choose from the following legend entries: 
-   - In the **Column** dropdown list, select a column, such as *Number of Employees*. The column determines the vertial axis for the chart.
+   - In the **Column** dropdown list, select a column, such as *Number of Employees*. The column determines the vertical axis for the chart.
    - In the **Aggregate** dropdown list dialog, select the option by which you want to group the column you selected for the **Column**, such as *Sum* in this example. For non-numeric fields, you can select only Count: All or Count: Non-empty. For numeric fields, you can select one of the these aggregation options: Count: All, Count: Non-empty, Average, Max, Min, or Sum. NULL values aren't considered when calculating minimum, maximum, or average values. However, zero (0) values are included. More information: [Additional chart configuration](#additional-chart-configuration)
    - In the **Chart type** dropdown list, select a type of chart to display, such as Column, Bar, Pie, or Donut.
    - To configure additional options to display the chart, such as multiple series, stack items, display only top items, see [Additional chart configuration](#additional-chart-configuration).
@@ -78,7 +78,7 @@ While working in the modern chart designer, select **Switch to Classic** on the 
 
    - In the **Select Column** dropdowns:
       - In the **Legend Entries (Series)** dropdown list select a column, such as **Number of Employees**.
-      - In the **Horizonal (Category) Axis** dropdown list select a column, such as **Account Name**.
+      - In the **Horizontal (Category) Axis** dropdown list select a column, such as **Account Name**.
       - Make additional changes as needed.
 
    :::image type="content" source="media/add-and-customize-visualizations-in-model-driven apps/add-and-customize-visualizations-in-model-driven-apps-3.png" alt-text="Description to identify the purpose of the system chart you create.":::
