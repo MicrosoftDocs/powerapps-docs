@@ -79,6 +79,7 @@ While working in the modern chart designer, select **Switch to Classic** on the 
    - In the **Select Column** dropdowns:
       - In the **Legend Entries (Series)** dropdown list select a column, such as **Number of Employees**.
       - In the **Horizonal (Category) Axis** dropdown list select a column, such as **Account Name**.
+      - Make additional changes as needed.
 
    :::image type="content" source="media/add-and-customize-visualizations-in-model-driven apps/add-and-customize-visualizations-in-model-driven-apps-3.png" alt-text="Description to identify the purpose of the system chart you create.":::
 
