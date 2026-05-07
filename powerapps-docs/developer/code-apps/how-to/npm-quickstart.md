@@ -23,13 +23,14 @@ This article shows you how to install the Power Apps client library for code app
 
 ## Commands
 
-The code apps npm CLI has three commands:
+The code apps npm CLI has four commands:
 
 |Command|Description|
 |---------|---------|
 |`init`|Initialize your code app.|
 |`run`|Starts a local development server.|
 |`push`|Publishes a new version of the code app to your environment.|
+|`find-dataverse-api`|See [How to: Add a Dataverse action or function to your code app](add-dataverse-action-function.md)|
 
 Learn how to use these commands by following the steps in this article.
 
@@ -63,7 +64,7 @@ npx power-apps init
 **Option B: Pass options directly:**
 
 ```bash
-npx power-apps init --displayName "App From Scratch" --environmentId <Your environment ID>
+npx power-apps init --display-name "App From Scratch" --environment-id <Your environment ID>
 ```
 
 When you run the `init` command, the CLI authenticates you automatically. Sign in by using your Power Platform account when prompted.

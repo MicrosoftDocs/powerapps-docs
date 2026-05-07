@@ -3,7 +3,7 @@ title: "Power Apps code apps overview"
 description: "Learn to use Power Apps code apps"
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 03/05/2026
+ms.date: 04/07/2026
 ms.reviewer: jdaly
 ms.topic: overview
 contributors:
@@ -56,9 +56,12 @@ Admins can enable code apps by setting an environment option. Power Platform adm
 
 1. Select **Save** in the settings experience.
 
-### License end-users with Power Apps Premium
+> [!NOTE]
+> For management at scale, you can configure this setting for multiple environments at once by using [environment groups and rules](/power-platform/admin/environment-groups).
 
-End-users that run code apps need a [Power Apps Premium license](https://www.microsoft.com/power-platform/products/power-apps/pricing).
+### License end users with Power Apps Premium
+
+End users that run code apps need a [Power Apps Premium license](https://www.microsoft.com/power-platform/products/power-apps/pricing).
 
 ## Explore samples and report issues
 
@@ -70,7 +73,7 @@ Browse [sample projects](https://github.com/microsoft/PowerAppsCodeApps/tree/mai
 
 ### Submit new issues
 
-You want to share feedback or seek guidance, [open a new issue in the repository](https://github.com/microsoft/PowerAppsCodeApps/issues).
+To share feedback or seek guidance, [open a new issue in the repository](https://github.com/microsoft/PowerAppsCodeApps/issues).
 
 For support or to report a bug, use your standard channel for Microsoft support. [Learn about how to submit feedback and get support](feedback-support.md).
 

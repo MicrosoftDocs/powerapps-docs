@@ -1,7 +1,7 @@
 ---
-title: "Use image column data (Microsoft Dataverse) | Microsoft Docs"
-description: "Learn about uploading, downloading, and deleting data in image columns." 
-ms.date: 02/04/2023
+title: "Use image column data in Microsoft Dataverse"
+description: "Learn how to upload, download, and delete image data in Microsoft Dataverse image columns with code examples and API guidance." 
+ms.date: 03/26/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 author: MsSQLGirl
@@ -12,10 +12,9 @@ search.audienceType:
 contributors:
  - JimDaly
 ---
-# Use image column data
+# Use image column data in Microsoft Dataverse
 
-You can store image data in Dataverse using image columns or file columns. You can use many of the APIs for file columns with image columns.
-Image columns have some special behaviors and limitations to support displaying images within applications.
+You can store image data in Microsoft Dataverse using image columns or file columns. Image columns in Dataverse have special behaviors and limitations designed to support displaying images within applications, and you can use many of the same APIs for file columns with image columns.
 
 The following table introduces some of the differences between image and file columns.
 
@@ -32,16 +31,16 @@ The following table introduces some of the differences between image and file co
 
 ## Maximum image size
 
-Just like file columns, you can specify the maximum size of data stored in an image column using the `MaxSizeInKb` property. However the maximum allowed size is 30 MB.
+Just like file columns, you can specify the maximum size of data stored in an image column by using the `MaxSizeInKb` property. However, the maximum allowed size is 30 MB.
 
-If you try to upload a file that is too large, you'll get the following error:
+If you try to upload a file that's too large, you get the following error message:
 
 > Name: `ProcessImageFailure`<br />
 > Code: `0x80072553`<br />
 > Number: `-2147015341`<br />
 > Message: `Error occured when processing image. Reason: File size is too big. MaxSize: 0 MB, Uploaded filesize: 0 MB.`
 
-You can use the following examples to check the maximum file size:
+To check the maximum file size, use the following examples:
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -132,14 +131,14 @@ More information:
 
 Image columns store the following binary image types:
 
-|File Format|MIME type|File extension(s)|
+|File Format|MIME type|File extensions|
 |---------|---------|---------|
 |Graphics Interchange Format|`image/gif`|`.gif`|
 |Joint Photographic Expert Group image|`image/jpeg`|`.jpg`, `.jpeg`|
 |Bitmap file|`image/bmp`|`.bmp`|
 |Portable Network Graphics|`image/png`|`.png`|
 
-If you try to save a file that isn't one of these types, you'll get the following error:
+If you try to save a file that isn't one of these types, you get the following error message:
 
 > Name: `ProcessImageFailure`<br />
 > Code: `0x80072553`<br />
@@ -148,17 +147,17 @@ If you try to save a file that isn't one of these types, you'll get the followin
 
 ## Full-size and thumbnail-sized images
 
-When an image column value is set, Dataverse will automatically generate a thumbnail-sized image that is suitable for use as an icon in an application.
+When you set an image column value, Dataverse automatically generates a thumbnail-sized image that's suitable for use as an icon in an application.
 
-If the image column is configured to store a full-sized image, a file up to the configured `MaxSizeInKb` can be saved and downloaded separately from the thumbnail-sized image. The [ImageAttributeMetadata.CanStoreFullImage property](xref:Microsoft.Xrm.Sdk.Metadata.ImageAttributeMetadata.CanStoreFullImage) controls whether an image column will store a full-sized image.
+If you configure the image column to store a full-sized image, you can save and download a file up to the configured `MaxSizeInKb` separately from the thumbnail-sized image. The [ImageAttributeMetadata.CanStoreFullImage property](xref:Microsoft.Xrm.Sdk.Metadata.ImageAttributeMetadata.CanStoreFullImage) controls whether an image column stores a full-sized image.
 
 ### Detect which image columns support full-sized images
 
-You can query the [Image Attribute Configuration (AttributeImageConfig)  table](reference/entities/attributeimageconfig.md) to retrieve a list of image columns that support full-sized images using the `parententitylogicalname`, `attributelogicalname`, and `canstorefullimage` column values.
+You can query the [Image Attribute Configuration (AttributeImageConfig) table](reference/entities/attributeimageconfig.md) to retrieve a list of image columns that support full-sized images by using the `parententitylogicalname`, `attributelogicalname`, and `canstorefullimage` column values.
 
 # [SDK for .NET](#tab/sdk)
 
-The static `PrintFullSizedImageColumns` method will write the names of the table and image columns that can store full-sized images.
+The static `PrintFullSizedImageColumns` method writes the names of the table and image columns that can store full-sized images.
 
 ```csharp
 static void PrintFullSizedImageColumns(IOrganizationService service)
@@ -194,7 +193,7 @@ account.sample_sampleimage
 
 # [Web API](#tab/webapi)
 
-This request will return the names of the table and image columns that can store full-sized images.
+This request returns the names of the table and image columns that can store full-sized images.
 
 **Request:**
 
@@ -230,14 +229,14 @@ OData-Version: 4.0
 
 ---
 
-You can also query schema definitions to return columns where [ImageAttributeMetadata.CanStoreFullImage property](xref:Microsoft.Xrm.Sdk.Metadata.ImageAttributeMetadata.CanStoreFullImage) is true. More information: [Query schema definitions](query-schema-definitions.md)
+You can also query schema definitions to return columns where the [ImageAttributeMetadata.CanStoreFullImage property](xref:Microsoft.Xrm.Sdk.Metadata.ImageAttributeMetadata.CanStoreFullImage) is true. For more information, see [Query schema definitions](query-schema-definitions.md).
 
 ### Resize rules for thumbnail-sized images
 
-To generate a thumbnail-sized image, Dataverse will crop and resize the image to a square shape according to the following rules:
+To generate a thumbnail-sized image, Dataverse crops and resizes the image to a square shape according to the following rules:
   
-- Images with at least one side larger than 144 pixels are cropped on center to 144x144.  
-- Images with both sides smaller than 144 are cropped square to their smallest side.  
+- If at least one side of the image is larger than 144 pixels, Dataverse crops the image on center to 144x144 pixels.  
+- If both sides of the image are smaller than 144 pixels, Dataverse crops the image square to the smallest side.  
   
 The following table shows two examples.  
   
@@ -246,19 +245,19 @@ The following table shows two examples.
 |:::image type="content" source="media/crm-itpro-cust-imagebeforeresize.png" alt-text="Image before resize":::<br /><br /> 300x428|:::image type="content" source="media/crm-itpro-cust-imageafterresize.jpg" alt-text="image after resize":::<br /><br /> 144x144|  
 |:::image type="content" source="media/crm-itpro-cust-imagebeforeresizeexample2.png" alt-text="smaller image resize before":::<br /><br /> 91x130|:::image type="content" source="media/crm-itpro-cust-imageafterresizeexample2.jpg" alt-text="smaller image resize after":::<br /><br /> 91x91|
 
-## Primary Images
+## Primary images
 
-Each table can have multiple image columns, but only one image column can be defined as the *primary image*. Only the primary image can be set with a create operation. More information: [Only primary images can be set for create](#only-primary-images-can-be-set-for-create)
+Each table can have multiple image columns, but you can only define one image column as the *primary image*. You can only set the primary image by using a create operation. For more information, see [Set only primary images for create operation](#set-only-primary-images-for-create-operation).
 
 The [ImageAttributeMetadata.IsPrimaryImage property](xref:Microsoft.Xrm.Sdk.Metadata.ImageAttributeMetadata.IsPrimaryImage) controls which image column represents the primary image for the table.
 
 The [EntityMetadata.PrimaryImageAttribute property](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.PrimaryImageAttribute) returns the logical name of the image column that is the current primary image for the table.
 
-You can also query the [Entity Image Configuration (EntityImageConfig)  table](reference/entities/entityimageconfig.md) to determine which image columns represent the current primary image using the `parententitylogicalname` and `primaryimageattribute` column values.
+You can also query the [Entity Image Configuration (EntityImageConfig) table](reference/entities/entityimageconfig.md) to determine which image columns represent the current primary image by using the `parententitylogicalname` and `primaryimageattribute` column values.
 
 # [SDK for .NET](#tab/sdk)
 
-The static `PrintPrimaryImageColumns` method below will write the table and image column names of all primary image columns.
+The static `PrintPrimaryImageColumns` method in the following example writes the table and image column names for all primary image columns.
 
 ```csharp
 static void PrintPrimaryImageColumns(IOrganizationService service)
@@ -286,7 +285,7 @@ More information: [Build queries with QueryExpression](org-service/queryexpressi
 
 # [Web API](#tab/webapi)
 
-The request below will return the table and image column names of all primary image columns.
+The following request returns the table and image column names for all primary image columns.
 
 **Request:**
 
@@ -336,29 +335,29 @@ Each image column has the following companion columns, but none of them appear w
 
 The image ID and time stamp column values don't have any use cases except that they're used to within the URL string column value.
 
-When the column for a record contains data, the download URL will be a relative URL using the following format:
+When the column for a record contains data, the download URL is a relative URL that uses the following format:
 
 `/Image/download.aspx?Entity=<entity logical name>&Attribute=<image column logical name>&Id=<image id value>&Timestamp=<time stamp value>`
 
-You can append this value to the organization URI to construct a URL that can be used to download the thumbnail-sized image file. For example:
+You can append this value to the organization URI to construct a URL that you can use to download the thumbnail-sized image file. For example:
 
 `https://yourorg.crm.dynamics.com/Image/download.aspx?Entity=account&Attribute=sample_imagecolumn&Id=7a4814f9-b0b8-ea11-a812-000d3a122b89&Timestamp=637388308718090885`
 
 ### URL to download full-sized image
 
-If the image column is configured to store full-sized images, you can append `&Full=true` to the URL and the link will download the full-sized image. For example:
+If the image column is configured to store full-sized images, you can append `&Full=true` to the URL and the link downloads the full-sized image. For example:
 
 `https://yourorg.crm.dynamics.com/Image/download.aspx?Entity=account&Attribute=sample_imagecolumn&Id=7a4814f9-b0b8-ea11-a812-000d3a122b89&Timestamp=637388308718090885&Full=true`
 
-If the column isn't configured to store full-sized images, no data will be returned.
+If the column isn't configured to store full-sized images, the request returns no data.
 
 ## Use image data with records
 
-When you're working with records, how you work with image data depends on whether you're using the SDK or Web API.
+When you work with records, how you handle image data depends on whether you're using the SDK or Web API.
 
 # [SDK for .NET](#tab/sdk)
 
-The following static `RetrieveAndUpdateImageColumn` method retrieves a `byte[]` image value from a column, saves it locally and uploads a new image.
+The following static `RetrieveAndUpdateImageColumn` method retrieves a `byte[]` image value from a column, saves it locally, and uploads a new image.
 
 ```csharp
 static void RetrieveAndUpdateImageColumn(
@@ -393,7 +392,7 @@ static void RetrieveAndUpdateImageColumn(
 ```
 
 > [!NOTE]
-> Image columns are not included if you set the [ColumnSet.AllColumns property](xref:Microsoft.Xrm.Sdk.Query.ColumnSet.AllColumns) to true. For performance reasons you must explicitly specify that you want to retrieve image data.
+> If you set the [ColumnSet.AllColumns property](xref:Microsoft.Xrm.Sdk.Query.ColumnSet.AllColumns) to true, the query doesn't include image columns. For performance reasons, you must explicitly specify that you want to retrieve image data.
 
 More information:
 
@@ -403,7 +402,7 @@ More information:
 
 # [Web API](#tab/webapi)
 
-With Web API, the property values are base 64 encoded string values representing the `byte[]` data.
+By using Web API, you work with property values as base 64 encoded string values that represent the `byte[]` data.
 
 This request returns an image column named `sample_imagecolumn` with an account record:
 
@@ -459,9 +458,9 @@ OData-Version: 4.0
 OData-EntityId: [Organization Uri]/api/data/v9.2/accounts(<accountid>)
 ```
 
-Some libraries you may use to serialize and deserialize JSON, such as [JSON.NET](https://www.newtonsoft.com/json), will automatically convert these encoded string values to `byte[]` so you might not even notice that the transport protocol is using base 64 strings.
+Some libraries you use to serialize and deserialize JSON, such as [JSON.NET](https://www.newtonsoft.com/json), automatically convert these encoded string values to `byte[]`. You might not even notice that the transport protocol is using base 64 strings.
 
-For more information, about base 64 encoded strings see:
+For more information about base 64 encoded strings, see:
  - [Base64 - MDN Web Docs Glossary](https://developer.mozilla.org/docs/Glossary/Base64)
  - [Base64 to Image Converter](https://codebeautify.org/base64-to-image-converter)
  - [Image to Base64 Converter](https://codebeautify.org/image-to-base64-converter)
@@ -472,35 +471,35 @@ More information:
 
 ---
 
-### Only primary images can be set for create
+### Set only primary images for create operation
 
-When you create a record, you can only set the value of the current primary image column. If you try to set the value of any other image column, you'll get this error:
+When you create a record, set only the value of the current primary image column. If you try to set the value of any other image column, you get this error message:
 
-> Name: `CannotUploadNonPrimaryImageAttributeOnCreate`<br />
-> Code: `0x80090487`<br />
-> Number: `-2146892665`<br />
+> Name: `CannotUploadNonPrimaryImageAttributeOnCreate`   
+> Code: `0x80090487`   
+> Number: `-2146892665`   
 > Message: `Non-primary image attribute <image column logical name> of entity <table logical name> is not allowed to upload during Create operation.`
 
-More information: [Primary Images](#primary-images)
+For more information, see [Primary Images](#primary-images).
 
-### Only thumbnail images can be retrieved
+### Retrieve only thumbnail images
 
-The image data you access via record properties will always be the thumbnail-sized images. To access full-sized images, you must download them. More information: [Download images](#download-images)
+The image data you access through record properties is always the thumbnail-sized images. To access full-sized images, you must download them. For more information, see [Download images](#download-images).
 
 
 ## Upload images
 
-Use the same APIs you use to upload files to upload images individually. More information: [Upload Files](file-column-data.md#upload-files)
+To upload images, use the same APIs you use to upload files. For more information, see [Upload Files](file-column-data.md#upload-files).
 
 ## Download images
 
-Use the same APIs you use to download files to download images, but be aware of the following differences.
+To download images, use the same APIs you use to download files. Be aware of the following differences.
 
 ### Using Dataverse messages
 
-If you use the `InitializeFileBlocksDownload` and `DownloadBlock` messages, the full-sized image will always be downloaded if the image column supports them. You can't download the thumbnail-sized image using this method. More information: [Use Dataverse messages to download a file](file-column-data.md#use-dataverse-messages-to-download-a-file)
+If you use the `InitializeFileBlocksDownload` and `DownloadBlock` messages, you always download the full-sized image if the image column supports it. You can't download the thumbnail-sized image by using this method. For more information, see [Use Dataverse messages to download a file](file-column-data.md#use-dataverse-messages-to-download-a-file).
 
-If the image column doesn't support full-sized images, or if the [ImageAttributeMetadata.CanStoreFullImage property](xref:Microsoft.Xrm.Sdk.Metadata.ImageAttributeMetadata.CanStoreFullImage) was false when the image was uploaded, the following error is returned:
+If the image column doesn't support full-sized images, or if the [ImageAttributeMetadata.CanStoreFullImage property](xref:Microsoft.Xrm.Sdk.Metadata.ImageAttributeMetadata.CanStoreFullImage) is false when you upload the image, the following error is returned:
 
 > Name: `ObjectDoesNotExist`<br />
 > Code: `0x80040217`<br />
@@ -509,11 +508,11 @@ If the image column doesn't support full-sized images, or if the [ImageAttribute
 
 ### Using Web API
 
-When you download images using the Web API without using the Dataverse messages, the thumbnail-sized image will be downloaded by default. To download the full-sized image, you must append this parameter to the URL: `?size=full`.
+When you download images by using the Web API without using the Dataverse messages, you download the thumbnail-sized image by default. To download the full-sized image, append this parameter to the URL: `?size=full`.
 
-If the image column doesn't support full-sized images, or if the [ImageAttributeMetadata.CanStoreFullImage property](xref:Microsoft.Xrm.Sdk.Metadata.ImageAttributeMetadata.CanStoreFullImage) was false when the image was uploaded, the response will return `204 No Content`.
+If the image column doesn't support full-sized images, or if the [ImageAttributeMetadata.CanStoreFullImage property](xref:Microsoft.Xrm.Sdk.Metadata.ImageAttributeMetadata.CanStoreFullImage) is false when you upload the image, the response returns `204 No Content`.
 
-More information: [Download Files](file-column-data.md#download-files)
+For more information, see [Download Files](file-column-data.md#download-files).
 
 ## Delete images
 
@@ -521,11 +520,11 @@ You can delete images by setting the image column value for the record to null a
 
 # [SDK for .NET](#tab/sdk)
 
-Simply set the value of the image attribute to null and update the entity. More information: [Basic update](org-service/entity-operations-update-delete.md#basic-update)
+Set the value of the image attribute to null and update the entity. For more information, see [Basic update](org-service/entity-operations-update-delete.md#basic-update).
 
 # [Web API](#tab/webapi)
 
-There are three different ways to delete an image column value using Web API.
+You can delete an image column value by using Web API in three different ways.
 
 ### Use PATCH and set the image column value to null
 
@@ -555,7 +554,7 @@ OData-Version: 4.0
 OData-EntityId: [Organization Uri]/api/data/v9.2/accounts(<accountid>)
 ```
 
-More information: [Basic update](webapi/update-delete-entities-using-web-api.md#basic-update)
+For more information, see [Basic update](webapi/update-delete-entities-using-web-api.md#basic-update).
 
 ### Use PUT and set the image column value to null
 
@@ -580,7 +579,7 @@ HTTP/1.1 204 NoContent
 OData-Version: 4.0
 ```
 
-More information: [Update a single property value](webapi/update-delete-entities-using-web-api.md#update-a-single-property-value)
+For more information, see [Update a single property value](webapi/update-delete-entities-using-web-api.md#update-a-single-property-value).
 
 
 ### Use DELETE with the resource URL referencing the image column

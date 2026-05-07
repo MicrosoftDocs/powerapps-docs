@@ -213,7 +213,7 @@ When an image is uploaded, it is resized as a "thumbnail" image to a maximum siz
    - **Primary Image**. Image columns that are set as the primary image are displayed in the upper right corner of the form. You can have only one primary image for each table.
    - **Enable column security**. Use to control access for specific columns. More information: [Field-level security to control access](/power-platform/admin/field-level-security)
    - **Enable auditing**. Enables the logging of changes that are made to table records and user access so you can review the activity later. More information: [Administrators Guide: Manage Dataverse auditing](/power-platform/admin/manage-dataverse-auditing)
-   - **Sortable in interactive experience dashboard**. Specifies the column will be used to configure interactive dashboards. More information: [Configure filter columns, and security roles for interactive dashboards](../model-driven-apps/configure-interactive-experience-dashboards.md#configure-filter-columns-and-security-roles-for-the-interactive-dashboards)
+   - **Sortable in interactive experience dashboard**. Specifies the column will be used to configure interactive dashboards. More information: [Configure filter columns, and security roles for interactive dashboards](../model-driven-apps/configure-interactive-experience-dashboards.md#configure-filter-columns-and-security-roles-for-interactive-dashboards)
    - **Maximum image size**. Default value is 10,240 KB. The minimum size is 1 KB and the maximum is 30,720 KB.
 
 1. Select **Save table**.

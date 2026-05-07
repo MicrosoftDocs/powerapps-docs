@@ -1,7 +1,7 @@
 ---
 title: "Use multi-table lookup columns"
 description: "Learn how to use a single lookup type column to refer to data in multiple other tables. This type of column is sometimes called a polymorphic lookup."
-ms.date: 03/02/2026
+ms.date: 03/26/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 author: MsSQLGirl
@@ -26,6 +26,8 @@ Customer, which connects to [Account](../reference/entities/account.md) and [Con
 > [!NOTE]
 > You can create and modify custom multi-table lookups through the SDK for .NET or Dataverse Web API.
 > Interactive user interface support will be available in a future release.
+> 
+> If you don't want to write code, try using the [Power Platform Toolbox](https://www.powerplatformtoolbox.com/) [Polymorphic Lookups](https://www.powerplatformtoolbox.com/tools/fad82c74-54a2-4973-a707-ab0fafb9cce9) tool. Learn more about [Community tools for Microsoft Dataverse](../community-tools.md)
 > 
 > [Sample: Web API multi-table lookup sample (PowerShell)](samples/multi-table-lookup-powershell.md) contains the sample code that demonstrates the [Example](#example) presented in this article.
 

@@ -1,12 +1,12 @@
 ---
-title: Create a business rule in Microsoft Dataverse | Microsoft Docs
+title: Create a business rule in Microsoft Dataverse
 description: Step-by-step instructions for how to create a business rule in Microsoft Dataverse.
 author: lancedMicrosoft
 ms.component: cds
 ms.topic: how-to
-ms.date: 10/22/2024
+ms.date: 04/21/2026
 ms.subservice: dataverse-maker
-ms.author: lanced
+ms.author: matp
 ms.reviewer: matp
 contributors: abhijananddv
 search.audienceType: 
@@ -35,11 +35,11 @@ By combining conditions and actions, you can do any of the following with busine
   
 ## Differences between canvas and model-driven apps
 
-Forms in model-driven apps can use all actions available on business rules, however not all business rule actions are available for canvas apps at this time. The following actions are **not** available on canvas apps:
+Forms in model-driven apps can use all actions available on business rules, however not all business rule actions are available for canvas apps at this time. The following actions are *not* available on canvas apps:
 
 * Show or hide columns  
 * Enable or disable columns  
-* Create business recommendations based on business intelligence.  
+* Create business recommendations based on business intelligence
 
 ## Column type support with business rules
 
@@ -52,7 +52,7 @@ Business rules work with most column types including text, number, choice, date,
 ## Create a business rule
   
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), on the left navigation pane, and select **Tables**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
-1. Open the table you want to create the business rule for (for example, open the **Account** table), and then select the **Business Rules** tab.  
+1. Open the table you want to create the business rule for (for example, open the **Account** table), and then select **Business rules**.  
 1. Select **Add business rule**.  
   
     The business rule designer window opens with a single condition already created for you. Every rule starts with a condition. The business rule takes one or more actions based on that condition.  
@@ -168,7 +168,8 @@ New or existing business rules on a table can cause performance degradation when
 
 ### Is your business rule not firing for a form?
 
-A business rule might not execute because the field referenced in the business rule isn't included with the form. 
+A business rule might not execute because the field referenced in the business rule isn't included with the form.
+
 1. Open [solution explorer](../model-driven-apps/advanced-navigation.md#solution-explorer). Expand the entity that you want and then select **Forms**. 
 1. Open the form that you want and then on the form designer ribbon select **Business Rules**. 
 1. In the form designer, open the business rule. 
@@ -186,7 +187,7 @@ A business rule might not execute because the field referenced in the business r
 
 When you configure business rules with `DateOnly` columns, the dates are in the UTC time zone by default, irrespective of the user's set time zone. This can lead to unexpected results if you're expecting `DateOnly` values to align with local time settings.
 
-**Suggested Handling:** Time Zone Independent setting - To make the `DateOnly` columns independent of time zones and display dates in parity with what was configured in the business rule, UTC for example, you can enable the Time Zone Independent setting. For more information about configuring date handling settings, go to [Specify the behavior of a date and time column](../../developer/data-platform/behavior-format-date-time-attribute.md#specify-the-behavior-of-a-date-and-time-column).
+Suggested handling: Time Zone Independent setting - To make the `DateOnly` columns independent of time zones and display dates in parity with what was configured in the business rule, UTC for example, you can enable the Time Zone Independent setting. For more information about configuring date handling settings, go to [Specify the behavior of a date and time column](../../developer/data-platform/behavior-format-date-time-attribute.md#specify-the-behavior-of-a-date-and-time-column).
 
 ## Frequently asked questions (FAQ)
 

@@ -9,19 +9,18 @@ on:
     paths:
       - "shared/dynamics365-core/**"
 
-  # Manual: trigger from the Actions tab to test without merging a real PR.
+  # Manual: re-run a cascade when the automatic trigger fails or needs to be retried.
   workflow_dispatch:
     inputs:
       changed_files:
         description: >
-          Space-separated list of include file paths to simulate, e.g.
+          Space-separated list of include file paths, e.g.
           "shared/dynamics365-core/file-a.md shared/dynamics365-core/file-b.md"
         required: true
         type: string
       pr_number:
-        description: "Fake PR number to use in branch names and PR body (e.g. 999)"
+        description: "Source PR number or URL (e.g. 11830 or https://github.com/.../pull/11830)"
         required: true
-        default: "test-1"
         type: string
 
 jobs:
@@ -33,7 +32,7 @@ jobs:
 
     steps:
       - name: Checkout source repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       # For automatic runs: fetch the file list from the merged PR.
       # For manual runs: use the value typed into the dispatch form.
@@ -51,10 +50,10 @@ jobs:
           fi
           echo "files=$FILES" >> "$GITHUB_OUTPUT"
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.CASCADE_PAT }}
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.11"
 
@@ -77,4 +76,4 @@ jobs:
             --repo "${{ github.repository }}" \
             --body-file cascade-summary.md
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.CASCADE_PAT }}

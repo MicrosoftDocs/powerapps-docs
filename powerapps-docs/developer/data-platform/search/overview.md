@@ -1,7 +1,7 @@
 ---
-title: "Search for Dataverse records (Microsoft Dataverse) | Microsoft Docs"
-description: "Use Dataverse search to return search results across multiple tables and provide suggestions and autocompletion experiences in apps." 
-ms.date: 10/20/2023
+title: "Search for Dataverse records"
+description: "Learn how to use Dataverse search APIs to return fast search results across multiple tables and provide suggestions and autocompletion in your apps." 
+ms.date: 03/26/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 author: JasonHQX
@@ -20,16 +20,16 @@ contributors:
 Dataverse search delivers fast and comprehensive search results across multiple tables, in a single list, sorted by relevance. It also provides capabilities to support suggestions and autocompletion experiences in apps.
 
 > [!NOTE]
-> This documentation for developers will describe how to programmatically interact with the Dataverse Search APIs.
+> This documentation for developers describes how to programmatically interact with the Dataverse Search APIs.
 > 
-> See the following topics for information about the user experience and how to configure Dataverse Search for your environment:
+> For information about the user experience and how to configure Dataverse Search for your environment, see the following topics:
 > 
 > - [What is Dataverse search?](../../../user/relevance-search-benefits.md)
 > - [Configure Dataverse search for your environment](/power-platform/admin/configure-relevance-search-organization)
 
 ## How to use
 
-Developers can use the search APIs three different ways:
+Developers can use the search APIs in three different ways:
 
 - The Dataverse SDK for .NET
 - The Web API `/api/data/v9.x` endpoint
@@ -37,22 +37,22 @@ Developers can use the search APIs three different ways:
 
 ### [SDK for .NET](#tab/sdk)
 
-Search operations are defined as Dataverse messages using [Custom APIs](../custom-api.md). For .NET projects, you can use the SDK for .NET.
+Search operations are defined as Dataverse messages using [Custom APIs](../custom-api.md). For .NET projects, use the SDK for .NET.
 
-There are currently no classes included in the SDK to use these operations. For .NET Framework projects, you can use the Power Platform CLI [pac modelbuilder build](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build) to generate `*Request` and `*Response` classes for these messages just as you would for any custom action.
+Currently, the SDK doesn't include classes to use these operations. For .NET Framework projects, use the Power Platform CLI [pac modelbuilder build](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build) to generate `*Request` and `*Response` classes for these messages, just as you would for any custom action.
 
 You can also use the [OrganizationRequest](xref:Microsoft.Xrm.Sdk.OrganizationRequest) and [OrganizationResponse](xref:Microsoft.Xrm.Sdk.OrganizationResponse) classes.
 
-More information:
+For more information, see:
 
 - [Generate early-bound classes for the SDK for .NET](../org-service/generate-early-bound-classes.md)
 - [Use messages with the SDK for .NET](../org-service/use-messages.md)
 
 ### [Web API](#tab/webapi)
 
-Search operations exposed with Web API are OData actions or functions described in the [CSDL $metadata document](../webapi/web-api-service-documents.md#csdl-metadata-document).
+Search operations that Web API exposes are OData actions or functions described in the [CSDL $metadata document](../webapi/web-api-service-documents.md#csdl-metadata-document).
 
-More information:
+For more information, see:
 
 - [Use Web API actions](../webapi/use-web-api-actions.md)
 - [Use Web API functions](../webapi/use-web-api-functions.md)
@@ -61,7 +61,7 @@ More information:
 
 The native search 2.0 endpoint isn't an OData service and has no service document. The native search 2.0 endpoint accepts the same parameters and returns the same responses as the corresponding Web API Actions and functions.
 
-The [Dataverse legacy search](legacy.md) using `/api/search/v1.0/` hasn't been deprecated and continues to be supported.
+The [Dataverse legacy search](legacy.md) using `/api/search/v1.0/` isn't deprecated and continues to be supported.
 
 ---
 
@@ -73,10 +73,10 @@ Search provides three operations to support a user interface that enables search
 |SDK Message Name<br />Web API Action<br />Search 2.0 Endpoint|Description|
 |---------|---------|
 |`searchquery`<br />[searchquery Action](xref:Microsoft.Dynamics.CRM.searchquery)<br />`/api/search/v2.0/query`| Returns a search results page. <br /> See [Dataverse Search query](query.md)|
-|`searchsuggest`<br />[searchsuggest Action](xref:Microsoft.Dynamics.CRM.searchsuggest)<br />`/api/search/v2.0/suggest`|Provide suggestions as the user enters text into a form field. <br /> See [Dataverse Search suggest](suggest.md)|
-|`searchautocomplete`<br />[searchautocomplete Action](xref:Microsoft.Dynamics.CRM.searchautocomplete)<br />`/api/search/v2.0/autocomplete`| Provide autocompletion of input as the user enters text into a form field.<br /> See [Dataverse Search autocomplete](autocomplete.md)|
+|`searchsuggest`<br />[searchsuggest Action](xref:Microsoft.Dynamics.CRM.searchsuggest)<br />`/api/search/v2.0/suggest`|Provides suggestions as the user enters text into a form field. <br /> See [Dataverse Search suggest](suggest.md)|
+|`searchautocomplete`<br />[searchautocomplete Action](xref:Microsoft.Dynamics.CRM.searchautocomplete)<br />`/api/search/v2.0/autocomplete`| Provides autocompletion of input as the user enters text into a form field.<br /> See [Dataverse Search autocomplete](autocomplete.md)|
 
-There are also two operations you can use to understand whether search is enabled and how it's configured.
+Two operations help you understand whether search is enabled and how it's configured.
 
 |SDK Message Name<br />Web API Function<br />Search 2.0 Endpoint|Description|
 |---------|---------|
@@ -85,23 +85,23 @@ There are also two operations you can use to understand whether search is enable
 
 ## Use Insomnia with Dataverse search
 
-If you have used Insomnia with Dataverse Web API, you know how useful it's to try using the APIs. We have some instructions about setting up a Insomnia environment to authenticate with the Dataverse Web API here: [Use Insomnia with Dataverse Web API](../webapi/insomnia.md)
+If you use Insomnia with Dataverse Web API, you know how useful it is to try using the APIs. For instructions about setting up an Insomnia environment to authenticate with the Dataverse Web API, see [Use Insomnia with Dataverse Web API](../webapi/insomnia.md).
 
-You can use the same instructions with the search operations using Web API functions and actions. If you want to use the native search 2.0 endpoint, change these two environment variables:
+You can use the same instructions with the search operations that use Web API functions and actions. If you want to use the native search 2.0 endpoint, change these two environment variables:
 
-|Variable|Web API Value|Search 2.0 Endpoint value|
+| Variable | Web API Value | Search 2.0 Endpoint value |
 |---------|---------|---------|
-|`version`|`9.2`|`2.0`|
-|`webapiurl`|`{{url}}/api/data/v{{version}}/`|`{{url}}/api/search/v{{version}}/`|
+| `version` | `9.2` | `2.0` |
+| `webapiurl` | `{{url}}/api/data/v{{version}}/` | `{{url}}/api/search/v{{version}}/` |
 
 
 ## Detect if search is enabled
 
-Dataverse search is enabled by default for production environments, but it's an opt-out feature so it could be turned off even in a production environment. If you're using an environment other than a production environment, an administrator must enable it. [Learn how to enable search in the admin center](/power-platform/admin/configure-relevance-search-organization#enable-dataverse-search).
+Dataverse search is enabled by default for production environments, but it's an opt-out feature so you can turn it off even in a production environment. If you're using an environment other than a production environment, an administrator must enable it. [Learn how to enable search in the admin center](/power-platform/admin/configure-relevance-search-organization#enable-dataverse-search).
 
-### Error when search not enabled
+### Error when search isn't enabled
 
-If you use the query, suggest, or autocomplete operations when the environment isn't enabled you'll get these errors:
+If you use the query, suggest, or autocomplete operations when the environment isn't enabled, you get these errors:
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -132,7 +132,7 @@ You can detect whether the search service is enabled by checking the settings in
 
 ### Check Organization table
 
-The [Organization table](../reference/entities/organization.md) contains a single row of data that controls how the organization is configured. The [IsExternalSearchIndexEnabled](../reference/entities/organization.md#BKMK_IsExternalSearchIndexEnabled) boolean column tells you whether search is enabled for the organization.
+The [Organization table](../reference/entities/organization.md) contains a single row of data that controls how the organization is configured. The [IsExternalSearchIndexEnabled](../reference/entities/organization.md#BKMK_IsExternalSearchIndexEnabled) boolean column indicates whether search is enabled for the organization.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -195,15 +195,15 @@ You must use the SDK for .NET or Web API to check this setting.
 
 ## Enable tables and columns for search
 
-Which tables and columns are enabled for search is controlled by data in Dataverse.
+Data in Dataverse controls which tables and columns are enabled for search.
 
-### Enable Tables
+### Enable tables
 
-Only those tables where the [EntityMetadata.CanEnableSyncToExternalSearchIndex.Value property](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.CanEnableSyncToExternalSearchIndex) and [EntityMetadata.ChangeTrackingEnabled property](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.ChangeTrackingEnabled) are true can be enabled for Dataverse search. If the `CanEnableSyncToExternalSearchIndex.CanBeChanged` value is false, you can't change the value. More information: [Managed properties](/power-platform/alm/managed-properties-alm)
+You can enable only those tables for Dataverse search where the [EntityMetadata.CanEnableSyncToExternalSearchIndex.Value property](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.CanEnableSyncToExternalSearchIndex) and [EntityMetadata.ChangeTrackingEnabled property](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.ChangeTrackingEnabled) are true. If the `CanEnableSyncToExternalSearchIndex.CanBeChanged` value is false, you can't change the value. For more information, see [Managed properties](/power-platform/alm/managed-properties-alm).
 
 To enable a table for Dataverse Search, set the [EntityMetadata.SyncToExternalSearchIndex property](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.SyncToExternalSearchIndex) to `true`.
 
-You can check the values for a table with the SDK or Web API using the table logical name. Replace `account` in the following queries  with the logical name of the table you want to check.
+Check the values for a table by using the SDK or Web API with the table logical name. Replace `account` in the following queries with the logical name of the table you want to check.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -239,7 +239,7 @@ CanEnableSyncToExternalSearchIndex: True
 SyncToExternalSearchIndex: True
 ```
 
-More information:
+For more information, see:
 
 - [Query schema definitions](../query-schema-definitions.md)
 - [Retrieve, update, and delete tables](../org-service/metadata-retrieve-update-delete-entities.md)
@@ -276,7 +276,7 @@ OData-Version: 4.0
 }
 ```
 
-More information:
+For more information, see:
 
 - [Query table definitions using the Web API](../webapi/query-metadata-web-api.md)
 - [Query schema definitions](../query-schema-definitions.md)
@@ -288,25 +288,25 @@ You must use the SDK for .NET or Web API to check this setting.
 
 ---
 
-More information:
+For more information, see:
 
 - [Select tables for Dataverse search](/power-platform/admin/configure-relevance-search-organization#select-tables-for-dataverse-search)
 - [Set managed properties for Dataverse search](/power-platform/admin/configure-relevance-search-organization#set-managed-properties-for-dataverse-search)
 
-### Enable Columns
+### Enable columns
 
-The columns that are searchable for the table are determined by whether they're included in the Quick Find view for each table. You can query the definition of the view in the [View (SavedQuery) table](../reference/entities/savedquery.md) and update it programmatically.
+The columns that are searchable for the table depend on whether they're included in the Quick Find view for each table. You can query the definition of the view in the [View (SavedQuery) table](../reference/entities/savedquery.md) and update it programmatically.
 
-More information:
+For more information, see:
 
 - [Select searchable fields and filters for each table](/power-platform/admin/configure-relevance-search-organization#select-searchable-fields-and-filters-for-each-table)
 - [Customize views](../../model-driven-apps/customize-entity-views.md)
 
-## Service Protection Limits
+## Service protection limits
 
-The common Dataverse [Service protection API limits](../api-limits.md) will never be approached because Dataverse search applies a lower limit. The way you manage them is the same.
+Dataverse search enforces lower limits, so you don't reach the common Dataverse [Service protection API limits](../api-limits.md). You manage these limits in the same way.
 
-Dataverse search allows a user to send one request per second, and each organization is limited to 150 requests per minute. If you exceed this limit, a [429 Too Many Requests](https://developer.mozilla.org/docs/Web/HTTP/Status/429) error is returned. If a `429` error is returned, you should wait until the period defined in the `Retry-After` response header value has passed before sending more requests. The value represents the number of seconds to wait.
+Dataverse search allows a user to send one request per second, and each organization is limited to 150 requests per minute. If you exceed this limit, the API returns a [429 Too Many Requests](https://developer.mozilla.org/docs/Web/HTTP/Status/429) error. If the API returns a `429` error, wait until the period defined in the `Retry-After` response header value before sending more requests. The value represents the number of seconds to wait.
 
 
 ### See also

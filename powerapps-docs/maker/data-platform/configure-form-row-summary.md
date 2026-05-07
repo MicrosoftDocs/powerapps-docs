@@ -13,9 +13,7 @@ ms.collection: bap-ai-copilot
 ms.custom: ignite-2024
 ms.service: powerapps
 ---
-# Configure a row summary for a model-driven app (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Configure a row summary for a model-driven app
 
 Write a custom prompt to specify which columns should be included in a Copilot‑generated row summary. These summaries appear in a consistent, dedicated experience, either surfaced in a collapsible summary bar at the top of a main form or accessed directly for individual rows from views, giving users quick access to the most important information for a record.
 
@@ -24,11 +22,6 @@ Records are often comprised of dozens of fields spread across multiple tables, v
 <!-- PM verifying this functionality: The customizable record summary can also include hyperlinks to related information, making it easy to navigate deeper or share concise, meaningful summaries with colleagues using collaboration tools like Microsoft Teams. -->
 
 :::image type="content" source="media/ai-row-summary-runtime.png" alt-text="Row summary on a main form":::
-
-> [!IMPORTANT]
->
-> - This is a preview feature.
-> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
 ## Prerequisite for configuring a row summary
 
@@ -43,7 +36,7 @@ Row summaries can be configured for most tables and appear on main forms and vie
 > [!NOTE]
 >
 > - When you configure the row summary, it applies to all views and main forms for the table.
-> - Some Dynamics 365 apps tables, such as Case, Lead, and Opportunity, provide their own summaries via the Dynamics 365 Customer Service and Dynamics 365 Sales applications. To avoid conflicts, the row summary feature isn't available for these tables. You can find more information about the summaries for these tables and the options for configuring or disabling these summaries by reading about the [Customer Service summary](/dynamics365/customer-service/administer/copilot-map-custom-fields) and [Sales summary](\/dynamics365/sales/copilot-summarize-records) features. These out-of-the-box summaries are currently only accessible from main forms (not views).  
+> - Some Dynamics 365 apps tables, such as Case, Lead, and Opportunity, provide their own summaries via the Dynamics 365 Customer Service and Dynamics 365 Sales applications. To avoid conflicts, the row summary feature isn't available for these tables. You can find more information about the summaries for these tables and the options for configuring or disabling these summaries by reading about the [Customer Service summary](/dynamics365/customer-service/administer/copilot-map-custom-fields) and [Sales summary](\\/dynamics365/sales/copilot-summarize-records) features. These out-of-the-box summaries are currently only accessible from main forms (not views).  
 
 1. Sign in to Power Apps (make.powerapps.com) select **Tables** on the left navigation pane, and then open the table where you want to configure a row summary. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Under **Customizations**, select **Row summary**.
@@ -70,7 +63,7 @@ Writing a custom prompt gives you the ability to instruct the AI model to perfor
 
 - Provide a list of the columns you want to include in the summary. Alternatively, you might wish to provide a list of columns that you want to exclude from the summary.
 - Specify any formatting preferences, such as write the summary as a bulleted list.
-- Include the appropriate input and instruction if your users work in multiple languages and you want the summary to respect the user’s preferred language; otherwise, the summary will be generated in the language of the summary prompt itself, regardless of the user’s language settings. To configure:
+- Include the appropriate input and instruction if your users work in multiple languages and you want the summary to respect the user's preferred language; otherwise, the summary will be generated in the language of the summary prompt itself, regardless of the user's language settings. To configure:
    - Include the **LanguageCode** input in the prompt.
    - Add the instruction to the prompt: **"You must respond in language \<LanguageCode\>."**
    - If Copilot doesn't support the user's language, the summary is generated in English.
@@ -81,7 +74,7 @@ Writing a custom prompt gives you the ability to instruct the AI model to perfor
 
 Here are examples to use when building a row summary prompt.
 
-*Summarize Account record in a way that is easy to understand for a sales manager. Make sure to include all important information, including main ideas and important details, while keeping the order of the content logical. Remove any repetitive elements to make the summary as concise as possible without losing the original text’s integrity. If the original text is too short to condense, present it as the summary.*
+*Summarize Account record in a way that is easy to understand for a sales manager. Make sure to include all important information, including main ideas and important details, while keeping the order of the content logical. Remove any repetitive elements to make the summary as concise as possible without losing the original text's integrity. If the original text is too short to condense, present it as the summary.*
 
 *Don't include the title in the summary. Create the summary in two paragraphs. For the first paragraph, use the instructions under the header Data. For the second paragraph, use the data under the header Activity. Leave a blank line between the two paragraphs. Don't include the titles Data & Activity in the paragraphs.*
 

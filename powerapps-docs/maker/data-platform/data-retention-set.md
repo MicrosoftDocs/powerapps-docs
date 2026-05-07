@@ -30,11 +30,11 @@ Before you set up a retention policy, enable the parent (root) table for long te
 > However, there's an exception to this related child tables behavior when long term retention is enabled through a solution import process. In this case, the related child tables aren't automatically enabled.
 
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), go to **Tables**, and then open the table you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
-1. Select **Properties** on the command bar, expand **Advanced options**, and then select **Enable long term retention**.
+1. Select **Properties** next to the **Table properties** area, expand **Advanced options**, and then select **Enable long term retention**.
    :::image type="content" source="media/data-retention-table-property.png" alt-text="Long term data retention table property":::
 1. Select **Save**.
 
-The parent root and any child tables will be available for policy setup in about 15-30 minutes after you save the table. The larger the number of child tables, the longer it  takes to complete the process.
+The parent root and any child tables are available for policy setup in about 15-30 minutes after you save the table. The larger the number of child tables, the longer it takes to complete the process.
 
 ### Determine Dataverse views for policy criteria
 
@@ -54,10 +54,9 @@ When the data retention policy is run, rows from the parent table and all child 
 Power Platform administrators set up retention policies.
 
 > [!IMPORTANT]
+>
 > - Once data is retained as long term (inactive) data, it can't be moved back to the active data store.
->
-> - When a retention policy is run, the process makes API requests in Microsoft Power Platform. These requests are counted towards the existing API requests available with your plan. More information: [Requests limits and allocations](/power-platform/admin/api-request-limits-allocations)
->
+> - When a retention policy  runs, the process makes API requests in Microsoft Power Platform. These requests are counted towards the existing API requests available with your plan. More information: [Requests limits and allocations](/power-platform/admin/api-request-limits-allocations)
 > - To complete this task you must have the Power Platform administrator role.
 
 1. [Enable a table for long term retention](#enable-a-table-for-long-term-retention).
@@ -76,12 +75,12 @@ Now you can view and manage the policy. More information: [Manage data retention
 
 > [!IMPORTANT]
 >
-> - The retention policy will not start for environments that have [administration mode](/power-platform/admin/admin-mode) enabled.
+> - The retention policy doesn't start for environments that have [administration mode](/power-platform/admin/admin-mode) enabled.
 > - All parent and associated child activities, emails, attachments are retained as a set when you set up a policy on a parent table. This is similar to bulk delete policies. For example, an explicit retention policy can't be set for Activity Pointer, Activity Party, and Attachment tables. Long term retention policies can't be set for those tables where bulk delete isn't supported.
-> - The parent table and all related rows from child tables, of the parent, will be marked and stored in Dataverse long term storage.
-> - Logic associated with an existing delete action of any table (parent and children) will always be executed during the policy run.
-> - A policy run will take from 72-96 hours irrespective of the data volume. Data retention policies are given a low priority by the platform. Dataverse will always run the retention process in the background to avoid any impact on other platform services, such as apps and flows.
-> - Consider a situation where two policies (Policy1 and Policy2) run on separate parent tables that have common child tables. Policy1 begins running prior to Policy2. If the status for Policy1 hasn't progressed beyond **Pending reconciliation**, then Policy2 status will remain at **Pending delete** status until Policy1 progresses from **Pending reconciliation** to **Pending delete**. This behavior occurs to prevent deletes on any common records from common tables in the two policies.
+> - The parent table and all related rows from child tables, of the parent, are marked and stored in Dataverse long term storage.
+> - Logic associated with an existing delete action of any table (parent and children) are always executed during the policy run.
+> - A policy run takes from 72-96 hours irrespective of the data volume. Data retention policies are given a low priority by the platform. Dataverse always runs the retention process in the background to avoid any impact on other platform services, such as apps and flows.
+> - Consider a situation where two policies (Policy1 and Policy2) run on separate parent tables that have common child tables. Policy1 begins running prior to Policy2. If the status for Policy1 hasn't progressed beyond **Pending reconciliation**, then Policy2 status remains at **Pending delete** status until Policy1 progresses from **Pending reconciliation** to **Pending delete**. This behavior occurs to prevent deletes on any common records from common tables in the two policies.
 
 ## Known issue
 

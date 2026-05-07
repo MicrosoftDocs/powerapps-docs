@@ -1,7 +1,7 @@
 ---
-title: Aggregate data using OData
-description: Learn how to use OData to retrieve aggregated data from Microsoft Dataverse Web API.
-ms.date: 07/11/2024
+title: "Aggregate data using OData: Query Microsoft Dataverse"
+description: Learn how to use OData $apply query option to aggregate and group data from Microsoft Dataverse Web API. Includes examples for sum, count, average, and groupby operations.
+ms.date: 03/26/2026
 ms.topic: how-to
 author: MsSQLGirl
 ms.author: jukoesma
@@ -13,22 +13,22 @@ contributors:
   - JimDaly
   - JosinaJoy
 ---
-# Aggregate data using OData
+# Aggregate data by using OData
 
-Use the `$apply` option to aggregate and group your data.
+Use the OData `$apply` option to aggregate and group your data in Microsoft Dataverse. This query option enables you to perform calculations like sum, count, average, and grouping operations on collections of up to 50,000 records.
 
-The aggregate functions are limited to a collection of 50,000 records.  Further information around using aggregate functionality with Dataverse can be found here: [Aggregate data using FetchXml](../../fetchxml/aggregate-data.md).
+The aggregate functions work with a collection of up to 50,000 records. For more information about using aggregate functionality with Dataverse, see [Aggregate data using FetchXml](../../fetchxml/aggregate-data.md).
 
-You can find more information about OData data aggregation here: [OData extension for data aggregation version 4.0](https://docs.oasis-open.org/odata/odata-data-aggregation-ext/v4.0/cs01/odata-data-aggregation-ext-v4.0-cs01.html). Dataverse supports only a subset of these aggregate methods.
+For more information about OData data aggregation, see [OData extension for data aggregation version 4.0](https://docs.oasis-open.org/odata/odata-data-aggregation-ext/v4.0/cs01/odata-data-aggregation-ext-v4.0-cs01.html). Dataverse supports only a subset of these aggregate methods.
 
 > [!NOTE]
-> - `groupby` with datetime values is not supported.
+> - `groupby` with datetime values isn't supported.
 > 
-> - `$orderby` with aggregate values is not supported. This will return the error: `The query node SingleValueOpenPropertyAccess is not supported`.
+> - `$orderby` with aggregate values isn't supported. This limitation returns the error: `The query node SingleValueOpenPropertyAccess is not supported`.
 
 ## Examples
 
-Following are some examples:
+The following examples show how to use aggregate functions:
 
 - [List of unique statuses in the query](#list-of-unique-statuses-in-the-query)
 - [Count by status values](#count-by-status-values)
@@ -273,7 +273,7 @@ Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
 
 ## Distinct column values
 
-OData doesn't have a `$distinct` query option to restrict results to unique values. Instead, use the `$apply` system query option with the `groupby` transformation. This returns distinct values for each property.
+OData doesn't have a `$distinct` query option to restrict results to unique values. Instead, use the `$apply` system query option with the `groupby` transformation. This method returns distinct values for each property.
 
 **Request:**
 
@@ -320,25 +320,25 @@ Preference-Applied: odata.include-annotations="OData.Community.Display.V1.Format
 
 ## OData aggregation limitations
 
-This section describes capabilities that are available using aggregation with FetchXml that are not currently available using OData.
+This section describes capabilities that are available by using aggregation with FetchXml that aren't currently available by using OData.
 
 ### Get distinct number with CountColumn
 
-You can't get a distinct number of values using [CountColumn](xref:Microsoft.Xrm.Sdk.Query.XrmAggregateType.CountColumn) with OData. [Learn about distinct column values using FetchXml](../../fetchxml/aggregate-data.md#distinct-column-values)
+You can't get a distinct number of values by using [CountColumn](xref:Microsoft.Xrm.Sdk.Query.XrmAggregateType.CountColumn) with OData. [Learn about distinct column values using FetchXml](../../fetchxml/aggregate-data.md#distinct-column-values).
 
 
 ### Time zone when grouping by date
 
-Grouping by parts of a date always uses UTC time and there is no way to specify that the user's time zone should be used instead [available in FetchXml](../../fetchxml/aggregate-data.md#grouping-by-parts-of-a-date)
+Grouping by parts of a date always uses UTC time and there's no way to specify that the user's time zone should be used instead. [Learn about grouping by parts of a date in FetchXml](../../fetchxml/aggregate-data.md#grouping-by-parts-of-a-date).
 
 
 ### Row aggregate
 
-When a table has a [hierarchical relationship defined](../../../../maker/data-platform/query-visualize-hierarchical-data.md), you can't return a row aggregate on the lookup column for the hierarchical relationship. [Learn about row aggregates using FetchXml](../../fetchxml/aggregate-data.md#row-aggregate)
+When a table has a [hierarchical relationship defined](../../../../maker/data-platform/query-visualize-hierarchical-data.md), you can't return a row aggregate on the lookup column for the hierarchical relationship. [Learn about row aggregates using FetchXml](../../fetchxml/aggregate-data.md#row-aggregate).
 
 ### Per query limit
 
-There is no way to specify a configurable aggregate limit. [Learn about per query limits using FetchXml](../../fetchxml/aggregate-data.md#per-query-limit)
+You can't specify a configurable aggregate limit. [Learn about per query limits using FetchXml](../../fetchxml/aggregate-data.md#per-query-limit).
 
 
 [!INCLUDE [cc-query-aggregation-limitations](../../includes/cc-query-aggregation-limitations.md)]

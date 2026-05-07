@@ -1,10 +1,10 @@
 ---
 title: AI features overview
 description: Learn how to incorporate AI into your model-driven apps
-ms.date: 12/08/2025
+ms.date: 04/06/2026
 ms.reviewer: smurkute
 ms.topic: "how-to"
-author: anuitz
+author: aorth
 ms.subservice: end-user
 ms.author: smurkute
 contributors: 
@@ -30,30 +30,30 @@ Agent feed helps business users manage and work with agents directly in their ap
 - [Add agents to be supervised in app](../maker/model-driven-apps/add-agents-to-app.md)
 - [Supervise agents in app](supervise-agents-with-agent-feed.md)
 
-## Agent assistance
+## AI in apps
 
-Built-in agents help you enter, explore, and summarize data faster and better.
+Built-in skills help you enter, explore, and summarize data faster and better.
 
-**Data entry agent**
+**Data entry**
 
 - [Get assistance filling forms](form-filling-assistance.md)
-- [Smart paste into forms](form-filling-assistance.md#use-smart-paste-preview)
+- [Smart paste into forms](form-filling-assistance.md#use-smart-paste)
 - [Draft richer text](../maker/model-driven-apps/use-copilot-email-assist.md)
 
-**Data exploration agent**
+**Data exploration**
 
 - [Explore data in a view](find-data-with-ai.md)
 - [Generate data visuals for a view](visualize-data-in-copilot.md)
 
-**Summary agent**
+**Summary**
 
 - [Create custom row summaries](../maker/data-platform/configure-form-row-summary.md#create-a-row-summary)
 - [See row summaries in a form and view](record-summaries.md)
 
-**Chat agent**
+**Copilot in apps**
 
-- [Chat with Microsoft 365 Copilot](use-microsoft-365-copilot-model-driven-apps.md)
-- [Customize Microsoft 365 Copilot chat](../maker/model-driven-apps/customize-microsoft-365-copilot-chat.md)
+- [Microsoft 365 Copilot in model-driven apps](use-microsoft-365-copilot-model-driven-apps.md)
+- [Customize Microsoft 365 Copilot in model-driven apps](../maker/model-driven-apps/customize-microsoft-365-copilot-chat.md)
 - [Chat with Copilot](use-copilot-model-driven-apps.md)
 - [Customize Copilot chat](../maker/model-driven-apps/customize-copilot-chat.md)
 
