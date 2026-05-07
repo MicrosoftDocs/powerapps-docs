@@ -91,6 +91,7 @@ Check the **Closed** tab in **Issues** to see how other customers solved problem
 - Code apps aren't supported in the Power Apps mobile app or Power Apps for Windows.
 - Code apps don't yet support Power BI data integration (PowerBIIntegration function), but can be embedded in Power BI Reports using [Power Apps Visual](/power-apps/maker/canvas-apps/powerapps-custom-visual).
 - Code apps don't support [SharePoint forms integration](/power-apps/maker/canvas-apps/sharepoint-form-integration).
+- Service Principals (SPN) cannot create or become owners of code apps.
 
 ## Managed platform capability support
 
