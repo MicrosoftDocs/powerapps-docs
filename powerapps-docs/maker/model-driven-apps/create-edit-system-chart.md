@@ -38,7 +38,7 @@ In this article you learn how to create a system chart. System charts are organi
 1. The chart designer opens. In the dialog choose from the following legend entries: 
    - In the **Column** dropdown list, select a column, such as *Number of Employees*. The column determines the vertical axis for the chart.
    - In the **Aggregate** dropdown list dialog, select the option by which you want to group the column you selected for the **Column**, such as *Sum* in this example. For non-numeric fields, you can select only Count: All or Count: Non-empty. For numeric fields, you can select one of the these aggregation options: Count: All, Count: Non-empty, Average, Max, Min, or Sum. NULL values aren't considered when calculating minimum, maximum, or average values. However, zero (0) values are included. More information: [Additional chart configuration](#additional-chart-configuration)
-   - In the **Chart type** dropdown list, select a type of chart to display, such as Column, Bar, Pie, or Donut.
+   - In the **Chart type** dropdown list, select a type of chart to display, such as Column, Bar, Pie, or Doughnut.
    - To configure additional options to display the chart, such as multiple series, stack items, display only top items, see [Additional chart configuration](#additional-chart-configuration).
 1. Select **Next**. 
 1. Select a column for the category The category determines the horizontal axis for the chart, such as account name in this example. Select **Apply**.
