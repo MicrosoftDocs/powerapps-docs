@@ -66,10 +66,6 @@ There are several different ways to display a chart.
 - To create a comparison chart with multiple categories, select **Add a category**, and then select another column to display on the category axis. You can add up to two category items and one series item to a comparison chart.
 - For columns that are of the `datetime` type, select the option by which you want to group the field you selected as the category. The chart is named based on the columns you chose for the series and category axes.
 
-## Switch to classic experience
-
-While in the chart designer, select **Switch to Classic** to open the chart in the classic chart designer. More information: [Edit a chart using the classic experience](#edit-a-chart-using-the-classic-experience)
-
 ## Export and import a chart
 
 You can export a chart and import the chart into another environment or the same environment to serve as a backup. The export chart command only includes the chart configuration and doesn't include any table, columns, views, or records.
@@ -91,9 +87,11 @@ The chart is saved in XML format in your browser folder.
 
 The imported chart loads in the chart designer.
 
-## Edit a chart using the classic experience
+## Switch to classic experience
 
-While working in the modern chart designer, select **Switch to Classic** on the command bar.
+While in the chart designer, select **Switch to Classic** to open the chart in the classic chart designer.
+
+### Edit a chart using the classic experience
 
 1. Edit the chart, such as specifying the type of chart, and how the data is displayed in the chart.
 
