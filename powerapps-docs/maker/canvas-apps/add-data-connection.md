@@ -1,12 +1,12 @@
 ---
 title: Add data connections to canvas apps
-description: Learn about how to add a data connection in an existing canvas app.
+description: Learn how to add a data connection to an existing canvas app or to an app that you're building from scratch.
 author: lancedMicrosoft
 
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 01/27/2022
+ms.date: 05/11/2025
 ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
@@ -19,42 +19,58 @@ contributors:
 
 In Power Apps, add a data connection to an existing canvas app or to an app that you're building from scratch. Your app can connect to SharePoint, Microsoft Dataverse, Salesforce, OneDrive, or [many other data sources](connections-list.md).
 
-Your [next step](#next-steps) after this article is to display and manage data from that data source in your app, as in these examples:
+After you add a connection, your next step is to display and manage data from that data source in your app, as in these examples:
 
-* Connect to OneDrive, and manage data in an Excel workbook in your app.
-* Connect to Twilio, and send an SMS message from your app.
-* Connect to Dataverse, and update a table from your app.
-* Connect to SQL Server, and update a table from your app.
+- Connect to OneDrive, and manage data in an Excel workbook in your app.
+- Connect to Twilio, and send an SMS message from your app.
+- Connect to Microsoft Dataverse, and update a table from your app.
+- Connect to SQL Server, and update a table from your app.
 
 ## Prerequisites
 
 [Sign up](../signup-for-powerapps.md) for Power Apps, and then [sign in](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) by providing the same credentials that you used to sign up.
 
-## Add data source
+## Add a data source
 
-1. Create a [blank canvas app](create-blank-app.md).
-1. From the [app authoring menu](power-apps-studio.md#5--app-authoring-menu) in Power Apps Studio, select **Data** > **Add data**.
-1. Expand **Connectors**, and if the list of connections includes the one that you want, select it to add it to the app. Otherwise, skip to the next step. To connect to a table in Microsoft Dataverse instead, choose a table from the list of tables.
-1. To create a new connection, search for or select a connector such as SharePoint.
-1. Select **Add a connection** to both create the connection and add it to your app.
+1. Create a [blank canvas app](create-blank-app.md) or open an existing canvas app for editing.
+1. In Power Apps Studio, select **Data** from the [app authoring menu](power-apps-studio.md#5--app-authoring-menu) on the left pane.
+1. Select **Add data** at the top of the **Data** pane.
+1. In the search box, type the name of the connector or data source you want&mdash;for example, **SharePoint** or **Dataverse**.
+1. Select the connector from the results list.
+   - If you already have a configured connection for that connector, select it to add it to your app.
+   - If no existing connection appears, select **Add a connection** to create a new one.
 
-    Some connectors, such as **Office 365 Outlook**, require no additional steps, and you can show data from them immediately. Other connectors prompt you to provide credentials, specify a particular set of data, or perform other steps. For example, [SharePoint](connections/connection-sharepoint-online.md) and [SQL Server](connections/sql-connection-overview.md) require additional information before you can use them. With [Dataverse](connections/connection-common-data-service.md), you can change the environment before you select a table.
+> [!NOTE]
+> When you connect to **Microsoft Dataverse**, you can select the environment from the drop-down list before choosing a table. By default, the connection uses your current working environment.
+
+Some connectors, such as **Office 365 Outlook**, require no additional steps and you can show data from them immediately. Other connectors, such as [SharePoint](connections/connection-sharepoint-online.md) and [SQL Server](connections/sql-connection-overview.md), prompt you for additional information&mdash;like a site URL or server name&mdash;before the connection is complete.
+
+> [!TIP]
+> Not sure which connector to use? Browse the full list at [Connectors overview](connections-list.md). You can also describe your scenario to [Copilot in Power Apps](ai-overview.md) and it can suggest an appropriate data source.
 
 ## Identify or change a data source
-If you're updating an app, you might need to identify or change the source of data that appears in a gallery, a form, or another control. For example, you might need to identify a data source as you update an app that someone else created or that you created long ago.
 
-1. Select the control, such as a gallery, for which you want to identify or change the data source.
+If you're updating an app, you might need to identify or change the source of data that appears in a gallery, a form, or another control. For example, you might need to locate a data source in an app that someone else created or that you built long ago.
 
-    The name of the data source appears on the **Properties** tab of the right-hand pane.
+1. Select the control&mdash;such as a gallery or form&mdash;for which you want to identify or change the data source.
+1. On the **Properties** tab of the right-hand pane, find the **Data source** or **Items** property. The name of the current data source appears there.
+1. To change the data source, select the drop-down next to the data source name, or edit the **Items** property directly in the formula bar.
+1. Select or create a different data source as needed.
 
-1. To show more information about the data source or to change it, select the down arrow next to its name.
+> [!NOTE]
+> If the expected data source is missing from the **Data** pane, the connection might have expired or been revoked. Select **Add data** again, search for the connector, and re-authenticate to restore it.
 
-    More information about the current data source appears, and you can select or create another source.
+## Troubleshooting tips
+
+- **Connection not appearing**: Refresh the **Data** pane by closing and reopening it, or sign out and sign back in to Power Apps to refresh your available connections.
+- **Authentication errors**: Some connectors&mdash;for example, SQL Server&mdash;require credentials or an on-premises data gateway. Confirm that your gateway is running and your credentials are valid.
+- **Dataverse table not found**: Confirm that you're connected to the correct environment. You can switch environments from the Power Apps home page before opening the app.
 
 ## Next steps
 
-* To show and update data in a source such as Excel, SharePoint, Dataverse, or SQL Server, [add a gallery](add-gallery.md), and [add a form](add-form.md).
-* For data in other sources, use connector-specific functions such as those for [Office 365 Outlook](connections/connection-office365-outlook.md), [Twitter](connections/connection-twitter.md), and [Microsoft Translator](connections/connection-microsoft-translator.md).
+- To show and update data from a source such as SharePoint, Dataverse, or SQL Server, [add a gallery](add-gallery.md) and [add a form](add-form.md).
+- For connector-specific functions such as sending email or translating text, review the [Connectors overview](connections-list.md).
+- To learn about working with data sources in formulas, see [Working with data sources](working-with-data-sources.md).
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
