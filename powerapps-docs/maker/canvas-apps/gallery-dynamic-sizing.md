@@ -1,12 +1,12 @@
 ---
-title: Show items of different heights in canvas apps gallery
-description: Add and configure a flexible height gallery to automatically fit the amount of content in each item of the gallery.
+title: Show items of different heights in a canvas app gallery
+description: Add and configure a Flexible height gallery to automatically fit the amount of content in each item of the gallery.
 author: fikaradz
 
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 01/27/2022
+ms.date: 05/11/2025
 ms.subservice: canvas-maker
 ms.author: fikaradz
 search.audienceType: 
@@ -15,87 +15,106 @@ contributors:
   - mduelae
   - fikaradz
 ---
-# Show items of different heights in canvas apps gallery
-If different items in your data set contain different amounts of data in the same field, you can completely show items that contain more data without adding empty space after items that contain less data. Add and configure a **Flexible height** gallery control so that you can:
+# Show items of different heights in a canvas app gallery
 
-* Configure **Label** controls to expand or shrink based on their contents.
-* Position each control so that it automatically appears just under the control above it.
+If different items in your data set contain different amounts of data in the same field, you can display items that contain more data without adding extra empty space after items with less data. Add and configure a **Flexible height** gallery control so that you can:
 
-In this tutorial, you show data about flooring products in a **Flexible height** gallery control. The image of each product appears 5 pixels below the overview, whether the overview contains five lines of text or two lines.
+- Configure **Label** controls to expand or shrink based on their contents.
+- Position each control so that it automatically appears just below the control above it.
+
+In this article, you show data about flooring products in a **Flexible height** gallery control. The image of each product appears 5 pixels below the overview text, whether that overview is two lines or five.
 
 ![Dynamic app.](./media/gallery-dynamic-sizing/dynamic-app.png)
 
-**Suggested reading**
-
-If you've never added controls to a gallery, follow the steps in [Show a list of items](add-gallery.md) before you proceed in this topic.
+> [!NOTE]
+> If you've never added controls to a gallery, complete the steps in [Show a list of items in a gallery](add-gallery.md) before you proceed.
 
 ## Add data to a blank app
-1. Download [this Excel file](https://download.microsoft.com/download/5/7/f/57fc6c55-6bb0-479b-a5c5-98fa08ee9efd/FlooringEstimates.xlsx), which contains names, overviews, and links to images of flooring products.
+
+1. Download [this Excel file](https://download.microsoft.com/download/5/7/f/57fc6c55-6bb0-479b-a5c5-98fa08ee9efd/FlooringEstimates.xlsx), which contains names, overviews, and image links for flooring products.
 
     ![Flooring products.](./media/gallery-dynamic-sizing/flooring-products.png)
 
-1. Upload the Excel file to a cloud-storage account such as OneDrive, Dropbox, or Google Drive.
+1. Upload the Excel file to a cloud-storage account such as OneDrive, SharePoint, Dropbox, or Google Drive.
 
 1. Create a [blank app](create-blank-app.md) with **Phone** layout.
 
 1. Add a connection to the **FlooringEstimates** table in the Excel file.
 
-    For more information, see [Add a connection](add-data-connection.md).
+    For more information, see [Add a data connection](add-data-connection.md).
 
 ## Add data to a gallery
-1. On the **Insert** tab, click or tap **Gallery**, and then click or tap **Flexible height**.
+
+1. On the **Insert** tab, select **Gallery** > **Flexible height**.
 
     ![Add gallery.](./media/gallery-dynamic-sizing/add-flexible.png)
-2. Resize the gallery to take up the entire screen.
 
-3. Set the gallery's **[Items](controls/properties-core.md)** property to **FlooringEstimates**.
+1. Resize the gallery to fill the entire screen.
+
+1. Set the gallery's **[Items](controls/properties-core.md)** property to **FlooringEstimates**.
 
 ## Show the product names
-1. In the upper-left corner of the gallery, click or tap the pencil icon to select the gallery template.
+
+1. In the upper-left corner of the gallery, select the pencil icon to enter template editing mode.
 
     ![Pencil icon.](./media/gallery-dynamic-sizing/edit-template.png)
 
-2. With the gallery template selected, add a **[Label](controls/control-text-box.md)** control to it.
+1. With the gallery template selected, add a **[Label](controls/control-text-box.md)** control.
 
-3. Set the **Text** property of the **Label** control to this expression:<br>
-   **ThisItem.Name**
+1. Set the **Text** property of the **Label** control to:
+   ```power-fx
+   ThisItem.Name
+   ```
 
     ![Add label.](./media/gallery-dynamic-sizing/add-text-box.png)
 
 ## Show the product overviews
-1. With the gallery template selected, add another **Label** control, and move it below the first **Label** control.  
 
-2. Set the **Text** property of the second **Label** control to this expression:<br> **ThisItem.Overview**
+1. With the gallery template selected, add a second **Label** control and move it below the first.
 
-3. With the second **Label** control selected, click or tap the name-tag icon on the **Content** tab, and rename the control to **OverviewText**.
+1. Set the **Text** property of the second **Label** to:
+   ```power-fx
+   ThisItem.Overview
+   ```
+
+1. With the second **Label** selected, rename it to **OverviewText** using the name-tag icon on the **Content** tab.
 
     ![Rename label.](./media/gallery-dynamic-sizing/rename-text-box.png)
 
-4. Set the **AutoHeight** property of the **OverviewText** box to **true**.
+1. Set the **AutoHeight** property of **OverviewText** to **true**.
 
-    This step ensures that the box will grow or shrink to fit its contents.
+   > [!TIP]
+   > Setting **AutoHeight** to **true** on a label causes it to grow or shrink to fit its content. This is the key to making the flexible height gallery work correctly—without it, all items render at the same fixed height.
 
-      ![Text auto height.](./media/gallery-dynamic-sizing/autoheight-text.png)
+    ![Text auto height.](./media/gallery-dynamic-sizing/autoheight-text.png)
 
 ## Show the product images
-1. Resize the template so that it's twice as tall as it was.
 
-    You can add controls to the template more easily as you build the app, and this change won't affect how the app looks when it runs.
+1. Make the template taller by dragging its bottom edge down to roughly double its current height.
 
-2. With the gallery template selected, add an **[Image](controls/control-image.md)** control, and move it below the **OverviewText** box.
+   You can add controls to the template more easily as you build the app. This change doesn't affect how the app looks when it runs.
 
-3. Ensure that the **Image** property of the **Image** control is set to this expression:<br>
-    **ThisItem.Image**
+1. With the gallery template selected, add an **[Image](controls/control-image.md)** control and position it below the **OverviewText** label.
 
-4. Set the **[Y](controls/properties-core.md)** property of the **Image** control based on the position and the size of the **OverviewText** box, as in this expression:
-   <br>**OverviewText.Y + OverviewText.Height + 5**
+1. Confirm that the **Image** property of the **Image** control is set to:
+   ```power-fx
+   ThisItem.Image
+   ```
+
+1. Set the **[Y](controls/properties-core.md)** property of the **Image** control to position it dynamically below the overview text:
+   ```power-fx
+   OverviewText.Y + OverviewText.Height + 5
+   ```
 
     ![Final app.](./media/gallery-dynamic-sizing/final-app.png)
 
-Apply the same concept if you want to add more controls: set each control's **Y** property based on the **Y** and **Height** properties of the control above it.
+   Apply the same concept for any additional controls: set each control's **Y** property based on the **Y** and **Height** of the control immediately above it.
 
 ## Next steps
-Learn more about how to work with a [gallery](working-with-forms.md) control and [formulas](working-with-formulas.md).
+
+- [Add and configure a gallery control](add-gallery.md)
+- [Best practices for working with galleries](gallery-best-practice.md)
+- [Get started with formulas in canvas apps](working-with-formulas.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
