@@ -68,9 +68,30 @@ There are several different ways to display a chart.
 
 ## Switch to classic experience
 
-You can open the chart in the classic chart designer.
+While in the chart designer, select **Switch to Classic** to open the chart in the classic chart designer. More information: [Edit a chart using the classic experience](#edit-a-chart-using-the-classic-experience)
 
-### Edit a chart using the classic experience
+## Export and import a chart
+
+You can export a chart and import the chart into another environment or the same environment to serve as a backup. The export chart command only includes the chart configuration and doesn't include any table, columns, views, or records.
+
+> [!IMPORTANT]
+> When you import a chart into another environment the target environment must have the table, columns, and views required by the chart. For example, you can import the number of employees by account name example chart used in this article into another Dataverse environment because it only includes the standard views and columns included with the account table.
+
+### Export a chart
+
+While in the chart designer, select **Export chart** on the command bar.
+
+The chart is saved in XML format in your browser folder.
+
+### Import a chart
+
+1. While in the chart designer, select **Import chart** on the command bar.
+1. Select **Choose File**, browse to and select the XML file that is the chart you want, and then select **Open**.
+1. Select **Import**.
+
+The imported chart loads in the chart designer.
+
+## Edit a chart using the classic experience
 
 While working in the modern chart designer, select **Switch to Classic** on the command bar.
 
