@@ -77,7 +77,7 @@ You can export a chart and import the chart into another environment or the same
 
 While in the chart designer, select **Export chart** on the command bar.
 
-The chart is saved in XML format in your browser folder.
+The chart is saved in XML format in your browser's download folder.
 
 ### Import a chart
 
