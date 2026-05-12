@@ -57,7 +57,7 @@ If the delete action on a specific table type triggers a plug-in or a workflow (
 
 ## Control bulk delete processing (preview)
 
-[!INCLUDE [preview-banner-section](../../../../shared/preview-includes/preview-banner-section.md)]
+[!INCLUDE [preview-banner-section](../../../shared/preview-includes/preview-banner-section.md)]
 
 [!INCLUDE [preview-note-pp](../../../shared/preview-includes/preview-note-pp.md)]
 
