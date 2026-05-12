@@ -1,9 +1,0 @@
-{
-	"servers": {
-		"matts-dev-env-mcp": {
-			"url": "https://mattsdevenvironment.crm.dynamics.com/",
-			"type": "http"
-		}
-	},
-	"inputs": []
-}
