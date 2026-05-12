@@ -107,7 +107,7 @@ In this example, a formula for the **[Color](controls/properties-color-border.md
 
 `If( Value(Label1.Text) < 0, Color.Red, Color.Black )`
 
-:::image type="content" source="./media/working-with-formulas/recalc-color.png" alt-text="Animation of conditional formatting.":::
+:::image type="content" source="./media/working-with-formulas/recalc-color.png" alt-text="Animation of conditional formatting." lightbox="media/working-with-formulas/recalc-color.png":::
 
 ## Change a color based on user input
 
