@@ -2,7 +2,6 @@
 title: Best practices for using the Gallery control in canvas apps
 description: Learn best practices and recommendations for configuring gallery controls correctly in canvas apps to avoid unexpected behavior and improve performance.
 author: tahoon-ms
-
 ms.topic: best-practice
 ms.custom: canvas
 ms.reviewer: mkaur
