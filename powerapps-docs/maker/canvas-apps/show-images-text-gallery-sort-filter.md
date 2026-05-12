@@ -6,7 +6,7 @@ author: yogeshgupta698
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 05/11/2025
+ms.date: 05/12/2025
 ms.subservice: canvas-maker
 ms.author: yogupt
 search.audienceType: 
@@ -49,7 +49,7 @@ In Power Apps, use a gallery to show several related items, much like a product 
    > [!NOTE]
    > This article uses a small inline collection so you can follow along without external data. For production scenarios, connect to a real data source such as [SharePoint](connections/connection-sharepoint-online.md) or [Microsoft Dataverse](connections/connection-common-data-service.md).
 
-1. On the **Insert** tab, select **Gallery** > **Horizontal**.
+1. On the **Insert** tab, select **Layout** > **Horizontal gallery**.
 
 1. In the right-hand pane, select a layout that shows a title and subtitle.
 
@@ -79,9 +79,9 @@ The label now shows the number of units in stock for each product.
 
 1. On the **Insert** tab, select **Shapes** > **Rectangle**. A solid rectangle appears in each gallery item.
 
-1. On the **Properties** pane, set **Fill** to **No fill**.
+1. On the **Properties** pane, set **Color** to **No fill** (transparent).
 
-1. Set the **Border style** to **Solid** and the **Border thickness** to **3**.
+1. Under **Border**, set the style dropdown to **Solid** and the thickness value to **3**.
 
 1. Resize the rectangle to surround the gallery item contents.
 
