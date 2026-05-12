@@ -8,7 +8,7 @@ ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 05/11/2025
 ms.subservice: canvas-maker
-ms.author: lanced
+ms.author: mkaur
 search.audienceType: 
   - maker
 contributors:
@@ -52,7 +52,7 @@ Some connectors, such as **Office 365 Outlook**, require no additional steps and
 
 If you're updating an app, you might need to identify or change the source of data that appears in a gallery, a form, or another control. For example, you might need to locate a data source in an app that someone else created or that you built long ago.
 
-1. Select the control&mdash;such as a gallery or form&mdash;for which you want to identify or change the data source.
+1. Select the control, such as a gallery or form that you want to identify or change the data source.
 1. On the **Properties** tab of the right-hand pane, find the **Data source** or **Items** property. The name of the current data source appears there.
 1. To change the data source, select the drop-down next to the data source name, or edit the **Items** property directly in the formula bar.
 1. Select or create a different data source as needed.
@@ -63,7 +63,7 @@ If you're updating an app, you might need to identify or change the source of da
 ## Troubleshooting tips
 
 - **Connection not appearing**: Refresh the **Data** pane by closing and reopening it, or sign out and sign back in to Power Apps to refresh your available connections.
-- **Authentication errors**: Some connectors&mdash;for example, SQL Server&mdash;require credentials or an on-premises data gateway. Confirm that your gateway is running and your credentials are valid.
+- **Authentication errors**: Some connectors for example, SQL Server require credentials or an on-premises data gateway. Confirm that your gateway is running and your credentials are valid.
 - **Dataverse table not found**: Confirm that you're connected to the correct environment. You can switch environments from the Power Apps home page before opening the app.
 
 ## Next steps
