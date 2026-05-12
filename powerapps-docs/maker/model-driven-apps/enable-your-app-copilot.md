@@ -5,7 +5,7 @@ description: Learn how to enable your app in Microsoft 365 Copilot to create app
 author: Mattp123
 ms.author: hemantg
 ms.reviewer: matp
-ms.date: 04/16/2026
+ms.date: 05/06/2026
 ms.topic: how-to
 ms.service: powerapps
 ms.subservice: mda-maker
@@ -58,8 +58,9 @@ Additionally, [intelligent forms](https://aka.ms/appskills/form) can be used to 
 
 In addition to the built-in tools available within the app’s declarative agent, its functionality can be extended by incorporating custom tools and widgets. A prompt builder–based designer can be used to integrate custom MCP tools and interactive UI components into the app’s declarative agent. For example, in the Zava Airlines app, a custom tool can be added to display the flight map alongside the flight timeline as a Gantt chart in a side-by-side view.
 
-> [!NOTE]
-> Custom tools and UX is based on Microsoft 365 Copilot extensibility for declarative agents. More information: [Microsoft 365 Copilot Extensibility and Supported capabilities](/microsoft-365/copilot/extensibility/declarative-agent-ui-widgets)
+> [!IMPORTANT]
+> - If you encounter the error message while creating a custom tool: “This feature has been disabled,” it indicates that the AI prompts environment setting isn't enabled. For more information, see [AI prompts environment setting](/power-platform/admin/settings-features#ai-prompts).
+> - Custom tools and UX is based on Microsoft 365 Copilot extensibility for declarative agents. More information: [Microsoft 365 Copilot Extensibility and Supported capabilities](/microsoft-365/copilot/extensibility/declarative-agent-ui-widgets)
 
 1. Select **Create custom tool** under the **Tools** section of the **App MCP** tab.
 1. Provide a clear, descriptive **name** and **description** for the tool, as Microsoft 365 Copilot uses this information to determine when to invoke it.
