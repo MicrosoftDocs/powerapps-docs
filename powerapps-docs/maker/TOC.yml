@@ -621,7 +621,7 @@
               href: ./canvas-apps/controls/control-export-import.md
             - name: Gallery
               href: ./canvas-apps/controls/control-gallery.md
-            - name: Grid container (preview)
+            - name: Grid container
               href: ./canvas-apps/controls/control-grid-container.md
             - name: Horizontal container
               href: ./canvas-apps/controls/control-horizontal-container.md
