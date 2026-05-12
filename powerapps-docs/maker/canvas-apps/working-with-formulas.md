@@ -70,7 +70,7 @@ In Excel, you can enter a specific piece of data, such as the number **42** or t
 
 1. Set the value of the **[Text](controls/properties-core.md)** property to **"Hello World"** by typing that string, surrounded by double quotes, into the formula bar:
 
-    :::image type="content" source="media/working-with-formulas/label-hello-world.png" alt-text="Using the label Hello World.":::
+    :::image type="content" source="media/working-with-formulas/label-hello-world.png" alt-text="Using the label Hello World." lightbox="media/working-with-formulas/label-hello-world.png":::
 
     The label reflects this new value as you type it. The screen might show yellow exclamation-point icons while you type. These icons indicate errors, but they go away when you finish entering a valid value. For example, a string without double quotation marks on both ends isn't valid.
 
@@ -83,11 +83,11 @@ In Excel, you can enter a specific piece of data, such as the number **42** or t
 
    While you type, the formula bar helps you by showing the description and the expected arguments for this function. As with the final double quotation mark in **"Hello World"**, the screen shows a red cross, showing an error, until you type the final parenthesis of this formula.
 
-    :::image type="content" source="media/working-with-formulas/label-sum-partial.png" alt-text="Using the label - typing the partial function without a closing parenthesis shows errors.":::
+    :::image type="content" source="media/working-with-formulas/label-sum-partial.png" alt-text="Using the label - typing the partial function without a closing parenthesis shows errors." lightbox="media/working-with-formulas/label-sum-partial.png":::
 
     Completed formula with the final parenthesis added:
 
-    :::image type="content" source="media/working-with-formulas/label-sum.png" alt-text="Using the complete formula Sum(1,2,3).":::
+    :::image type="content" source="media/working-with-formulas/label-sum.png" alt-text="Using the complete formula Sum(1,2,3)." lightbox="media/working-with-formulas/label-sum.png":::
 
 ## Change a value based on input
 
@@ -97,7 +97,7 @@ In Excel, you type **=A1+A2** into a cell to show the sum of whatever values cel
 
 In Power Apps, you can achieve a similar result by adding controls to a screen and setting their properties. This example shows a text label named **Text1** and two **[Text input](controls/control-text-input.md)** controls, named **TextInput1** and **TextInput2**. Add a formula to the **Text1** control so that when you enter a number into **TextInput1** and **TextInput2**, the values are added together and displayed in **Text1**.
 
-:::image type="content" source="./media/working-with-formulas/recalc1.png" alt-text="Screenshot of Power Apps recalculating the sum of two numbers.":::
+:::image type="content" source="./media/working-with-formulas/recalc1.png" alt-text="Screenshot of Power Apps recalculating the sum of two numbers." lightbox="./media/working-with-formulas/recalc1.png":::
 
 Regardless of what numbers you type in the text-input controls, the text label always shows the sum of those numbers because its **[Text](controls/properties-core.md)** property is set to this formula: `TextInput1.Text + TextInput2.Text`.
 
@@ -117,13 +117,13 @@ In this example, let users change the background color of the screen by adjustin
 
 1. Remove the controls from the previous procedures, or create a blank app as you did previously, and add three slider controls to it. Search for **Slider** in the search box of the **Insert** pane, then select **Slider** to add a slider to the canvas. Repeat to add three sliders.
 
-    :::image type="content" source="media/working-with-formulas/insert-slider.png" alt-text="Insert a slider control.":::
+    :::image type="content" source="media/working-with-formulas/insert-slider.png" alt-text="Insert a slider control." lightbox="media/working-with-formulas/insert-slider.png":::
 
 1. Arrange the sliders so they don't overlap, add three labels, and configure the labels to show **Red**, **Green**, and **Blue** text.
 
 1. Set the **Max** property of each slider to **255** (the default is 100), which is the maximum value of a color component for the **[RGBA](functions/function-colors.md)** function.
 
-   :::image type="content" source="media/working-with-formulas/three-sliders.png" alt-text="Screenshot that shows the sliders and labels arrangement, including the Max property set to 255.":::
+   :::image type="content" source="media/working-with-formulas/three-sliders.png" alt-text="Screenshot that shows the sliders and labels arrangement, including the Max property set to 255." lightbox="media/working-with-formulas/three-sliders.png":::
 
 1. Select the screen to deselect any control, and then set the screen's **[Fill](controls/properties-color-border.md)** property to this formula: **RGBA( Slider1.Value, Slider2.Value, Slider3.Value, 1 )**. Your screen turns dark gray, reflecting the sliders' current positions.
 
@@ -131,7 +131,7 @@ In this example, let users change the background color of the screen by adjustin
 
 1. Select **Preview** (F5) and adjust the sliders to see how each one changes the background color of the screen.
 
-    :::image type="content" source="media/working-with-formulas/three-sliders-partial-rgba.png" alt-text="Screenshot that shows the color of the screen when you adjust the sliders.":::
+    :::image type="content" source="media/working-with-formulas/three-sliders-partial-rgba.png" alt-text="Screenshot that shows the color of the screen when you adjust the sliders." lightbox="media/working-with-formulas/three-sliders-partial-rgba.png":::
 
     As each slider changes, the **[RGBA](functions/function-colors.md)** formula is recalculated and the screen color updates immediately.
 
@@ -150,7 +150,7 @@ You can take more than one action in a behavior formula by separating functions 
 
 The properties list shows properties alphabetically, but you can also view all the properties of a control organized by category. Select a control—for example, **Text1**—and then select the **Advanced** tab in the **Properties** pane to see a full categorized list of properties for that control.
 
-:::image type="content" source="media/working-with-formulas/advanced-open.png" alt-text="Advanced view.":::
+:::image type="content" source="media/working-with-formulas/advanced-open.png" alt-text="Advanced view." lightbox="media/working-with-formulas/advanced-open.png":::
 
 You can edit formulas directly within this view. Use the property search box to quickly find and change a property's behavior or appearance.
 
@@ -158,7 +158,7 @@ You can edit formulas directly within this view. Use the property search box to 
 
 As you type a formula in the formula bar, different syntax elements appear in different colors to improve readability and help you understand long formulas. Here's the color code list in Power Apps.
 
-:::image type="content" source="./media/working-with-formulas/syntax-highlighting.png" alt-text="Screenshot that shows a table list of syntax highlighting.":::
+:::image type="content" source="./media/working-with-formulas/syntax-highlighting.png" alt-text="Screenshot that shows a table list of syntax highlighting." lightbox="./media/working-with-formulas/syntax-highlighting.png":::
 
 ### Related information
 
