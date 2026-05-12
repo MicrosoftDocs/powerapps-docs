@@ -64,9 +64,9 @@ In Excel, you can enter a specific piece of data, such as the number **42** or t
     1. *Formula*: The formula to be calculated for this property, made up of [values, operators, and functions](formula-reference.md). As you type, IntelliSense helps you with recommendations for formula, syntax, and errors.
     1. *Selected control*: In the formula bar, you can see and edit properties for the selected control or for the screen if no controls are selected.
 
-1. Add a **[Label](controls/control-text-box.md)** control to the screen.
+1. Add a **[Text](controls/control-text-box.md)** control to the screen.
 
-    When you add a label, the property list automatically shows the **[Text](controls/properties-core.md)** property, which drives what the control shows. By default, the value of this property is **"Text"**.  
+    When you add a text label, the property list automatically shows the **[Text](controls/properties-core.md)** property, which drives what the control shows. By default, the value of this property is **"Text"**.  
 
 1. Set the value of the **[Text](controls/properties-core.md)** property to **"Hello World"** by typing that string, surrounded by double quotes, into the formula bar:
 
@@ -95,11 +95,11 @@ In Excel, you type **=A1+A2** into a cell to show the sum of whatever values cel
 
 ![Animation of Excel recalculating the sum of two numbers.](./media/working-with-formulas/excel-recalc.gif)
 
-In Power Apps, you can achieve a similar result by adding controls to a screen and setting their properties. This example shows a label control named **Label1** and two **[Text input](controls/control-text-input.md)** controls, named **TextInput1** and **TextInput2**. Add a formula to the **Label1** control so that when you enter a number into **TextInput1** and **TextInput2**, the values are added together and displayed in **Label1**.
+In Power Apps, you can achieve a similar result by adding controls to a screen and setting their properties. This example shows a text label named **Text1** and two **[Text input](controls/control-text-input.md)** controls, named **TextInput1** and **TextInput2**. Add a formula to the **Text1** control so that when you enter a number into **TextInput1** and **TextInput2**, the values are added together and displayed in **Text1**.
 
 :::image type="content" source="./media/working-with-formulas/recalc1.png" alt-text="Screenshot of Power Apps recalculating the sum of two numbers.":::
 
-Regardless of what numbers you type in the text-input controls, the label always shows the sum of those numbers because its **[Text](controls/properties-core.md)** property is set to this formula: `TextInput1.Text + TextInput2.Text`.
+Regardless of what numbers you type in the text-input controls, the text label always shows the sum of those numbers because its **[Text](controls/properties-core.md)** property is set to this formula: `TextInput1.Text + TextInput2.Text`.
 
 In Excel, you can use conditional-formatting formulas to show, for example, negative values in red. In Power Apps, you can use formulas to determine not only the primary value of a control but also properties such as color.
 
@@ -115,7 +115,7 @@ You can configure your app with formulas so that users can change your app's app
 
 In this example, let users change the background color of the screen by adjusting sliders.
 
-1. Remove the controls from the previous procedures, or create a blank app as you did previously, and add three slider controls to it. Search for **Slider** in the search box of the **Insert** pane. To add the sliders, drag and drop the control to the canvas.
+1. Remove the controls from the previous procedures, or create a blank app as you did previously, and add three slider controls to it. Search for **Slider** in the search box of the **Insert** pane, then select **Slider** to add a slider to the canvas. Repeat to add three sliders.
 
     :::image type="content" source="media/working-with-formulas/insert-slider.png" alt-text="Insert a slider control.":::
 
@@ -148,7 +148,7 @@ You can take more than one action in a behavior formula by separating functions 
 
 ## View a list of properties by category
 
-The properties list shows properties alphabetically, but you can also view all the properties of a control organized by category. Select a control—for example, **Label1**—and then select the **Advanced** tab in the **Properties** pane to see a full categorized list of properties for that control.
+The properties list shows properties alphabetically, but you can also view all the properties of a control organized by category. Select a control—for example, **Text1**—and then select the **Advanced** tab in the **Properties** pane to see a full categorized list of properties for that control.
 
 :::image type="content" source="media/working-with-formulas/advanced-open.png" alt-text="Advanced view.":::
 
