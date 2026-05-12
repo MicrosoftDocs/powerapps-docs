@@ -1,19 +1,18 @@
 ---
 title: Show items of different heights in a canvas app gallery
 description: Add and configure a Flexible height gallery to automatically fit the amount of content in each item of the gallery.
-author: fikaradz
-
+author: yogeshgupta698
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 05/11/2025
 ms.subservice: canvas-maker
-ms.author: fikaradz
+ms.author: yogupt
 search.audienceType: 
   - maker
 contributors:
   - mduelae
-  - fikaradz
+  - yogeshgupta698
 ---
 # Show items of different heights in a canvas app gallery
 
@@ -32,8 +31,6 @@ In this article, you show data about flooring products in a **Flexible height** 
 ## Add data to a blank app
 
 1. Download [this Excel file](https://download.microsoft.com/download/5/7/f/57fc6c55-6bb0-479b-a5c5-98fa08ee9efd/FlooringEstimates.xlsx), which contains names, overviews, and image links for flooring products.
-
-    ![Flooring products.](./media/gallery-dynamic-sizing/flooring-products.png)
 
 1. Upload the Excel file to a cloud-storage account such as OneDrive, SharePoint, Dropbox, or Google Drive.
 
@@ -57,36 +54,30 @@ In this article, you show data about flooring products in a **Flexible height** 
 
 1. In the upper-left corner of the gallery, select the pencil icon to enter template editing mode.
 
-    ![Pencil icon.](./media/gallery-dynamic-sizing/edit-template.png)
-
 1. With the gallery template selected, add a **[Label](controls/control-text-box.md)** control.
 
 1. Set the **Text** property of the **Label** control to:
-   ```power-fx
+
+   ```powerapps-dot
    ThisItem.Name
    ```
-
-    ![Add label.](./media/gallery-dynamic-sizing/add-text-box.png)
 
 ## Show the product overviews
 
 1. With the gallery template selected, add a second **Label** control and move it below the first.
 
 1. Set the **Text** property of the second **Label** to:
-   ```power-fx
+
+   ```powerapps-dot
    ThisItem.Overview
    ```
 
 1. With the second **Label** selected, rename it to **OverviewText** using the name-tag icon on the **Content** tab.
 
-    ![Rename label.](./media/gallery-dynamic-sizing/rename-text-box.png)
-
 1. Set the **AutoHeight** property of **OverviewText** to **true**.
 
    > [!TIP]
    > Setting **AutoHeight** to **true** on a label causes it to grow or shrink to fit its content. This is the key to making the flexible height gallery work correctly—without it, all items render at the same fixed height.
-
-    ![Text auto height.](./media/gallery-dynamic-sizing/autoheight-text.png)
 
 ## Show the product images
 
@@ -97,12 +88,14 @@ In this article, you show data about flooring products in a **Flexible height** 
 1. With the gallery template selected, add an **[Image](controls/control-image.md)** control and position it below the **OverviewText** label.
 
 1. Confirm that the **Image** property of the **Image** control is set to:
-   ```power-fx
+
+   ```powerapps-dot
    ThisItem.Image
    ```
 
 1. Set the **[Y](controls/properties-core.md)** property of the **Image** control to position it dynamically below the overview text:
-   ```power-fx
+
+   ```powerapps-dot
    OverviewText.Y + OverviewText.Height + 5
    ```
 
