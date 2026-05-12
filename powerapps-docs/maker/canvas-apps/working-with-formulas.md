@@ -93,7 +93,7 @@ In Excel, you can enter a specific piece of data, such as the number **42** or t
 
 In Excel, you type **=A1+A2** into a cell to show the sum of whatever values cells **A1** and **A2** contain. If either or both of those values change, the cell that contains the formula automatically shows the updated result.
 
-![Animation of Excel recalculating the sum of two numbers.](./media/working-with-formulas/excel-recalc.gif)
+:::image type="content" source="./media/working-with-formulas/excel-recalc.gif" alt-text="Animation of Excel recalculating the sum of two numbers.":::
 
 In Power Apps, you can achieve a similar result by adding controls to a screen and setting their properties. This example shows a text label named **Text1** and two **[Text input](controls/control-text-input.md)** controls, named **TextInput1** and **TextInput2**. Add a formula to the **Text1** control so that when you enter a number into **TextInput1** and **TextInput2**, the values are added together and displayed in **Text1**.
 
@@ -107,7 +107,7 @@ In this example, a formula for the **[Color](controls/properties-color-border.md
 
 `If( Value(Label1.Text) < 0, Color.Red, Color.Black )`
 
-![Animation of conditional formatting.](./media/working-with-formulas/recalc-color.png)
+:::image type="content" source="./media/working-with-formulas/recalc-color.png" alt-text="Animation of conditional formatting.":::
 
 ## Change a color based on user input
 
@@ -131,7 +131,7 @@ In this example, let users change the background color of the screen by adjustin
 
 1. Select **Preview** (F5) and adjust the sliders to see how each one changes the background color of the screen.
 
-    :::image type="content" source="media/working-with-formulas/three-sliders-partial-rgba.png" alt-text="Screenshot that shows the color of the screen when you adjust the sliders." lightbox="media/working-with-formulas/three-sliders-partial-rgba.png":::
+    :::image type="content" source="media/working-with-formulas/three-sliders-partial-rgba.png" alt-text="Screenshot that shows the color of the screen when you adjust the sliders.":::
 
     As each slider changes, the **[RGBA](functions/function-colors.md)** formula is recalculated and the screen color updates immediately.
 
@@ -158,7 +158,9 @@ You can edit formulas directly within this view. Use the property search box to 
 
 As you type a formula in the formula bar, different syntax elements appear in different colors to improve readability and help you understand long formulas. Here's the color code list in Power Apps.
 
-:::image type="content" source="./media/working-with-formulas/syntax-highlighting.png" alt-text="Screenshot that shows a table list of syntax highlighting." lightbox="./media/working-with-formulas/syntax-highlighting.png":::
+:::image type="content" source="./media/working-with-formulas/syntax-highlighting.png" alt-text="Screenshot that shows a table list of syntax highlighting.":::
+
+
 
 ### Related information
 
