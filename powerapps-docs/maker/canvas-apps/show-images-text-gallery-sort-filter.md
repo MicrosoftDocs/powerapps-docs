@@ -13,7 +13,6 @@ search.audienceType:
   - maker
 contributors:
   - mduelae
-  
 ---
 # Show, sort, and filter data in a canvas app gallery
 
