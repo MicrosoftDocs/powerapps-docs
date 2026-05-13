@@ -35,7 +35,7 @@ After you add a connection, your next step is to display and manage data from th
 1. Create a [blank canvas app](create-blank-app.md) or open an existing canvas app for editing.
 1. In Power Apps Studio, select **Data** from the [app authoring menu](power-apps-studio.md#5--app-authoring-menu) on the left pane.
 1. Select **Add data** at the top of the **Data** pane.
-1. In the search box, type the name of the connector or data source you want&mdash;for example, **SharePoint** or **Dataverse**.
+1. In the search box, type the name of the connector or data source you want for example, **SharePoint** or **Dataverse**.
 1. Select the connector from the results list.
    - If you already have a configured connection for that connector, select it to add it to your app.
    - If no existing connection appears, select **Add a connection** to create a new one.
