@@ -55,7 +55,11 @@ You can perform a bulk deletion on all tables that support the `Delete` message.
   
 If the delete action on a specific table type triggers a plug-in or a workflow (process), the bulk delete job triggers the plug-in or workflow every time it deletes a table record of that type.
 
-## Control bulk delete processing
+## Control bulk delete processing (preview)
+
+[!INCLUDE [preview-banner-section](../../../shared/preview-includes/preview-banner-section.md)]
+
+[!INCLUDE [preview-note-pp](../../../shared/preview-includes/preview-note-pp.md)]
 
 The `Options` parameter on the `BulkDelete` [action](/power-apps/developer/data-platform/webapi/reference/bulkdelete) or [message request](/dotnet/api/microsoft.crm.sdk.messages.bulkdeleterequest) allows you to control how the bulk delete job processes table rows (records). You can use the parameter to:
 
