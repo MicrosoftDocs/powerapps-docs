@@ -1,7 +1,7 @@
 ---
 title: Delete Data in Bulk to Reduce Storage Use
 description: Learn how to delete data in bulk to remove stale records, improve data quality, and manage storage consumption. Use bulk delete jobs to get started.
-ms.date: 05/06/2026
+ms.date: 05/12/2026
 ms.topic: how-to
 author: MsSQLGirl
 ms.subservice: dataverse-developer
@@ -59,7 +59,7 @@ If the delete action on a specific table type triggers a plug-in or a workflow (
 
 [!INCLUDE [preview-banner-section](../../../shared/preview-includes/preview-banner-section.md)]
 
-[!INCLUDE [preview-note-pp](../../../shared/preview-includes/preview-note-pp.md)]
+[!INCLUDE [production-ready-preview-powerplatform](../../../shared/preview-includes/production-ready-preview-powerplatform.md)]
 
 The `Options` parameter on the `BulkDelete` [action](/power-apps/developer/data-platform/webapi/reference/bulkdelete) or [message request](/dotnet/api/microsoft.crm.sdk.messages.bulkdeleterequest) allows you to control how the bulk delete job processes table rows (records). You can use the parameter to:
 
