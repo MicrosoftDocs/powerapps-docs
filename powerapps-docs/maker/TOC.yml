@@ -533,6 +533,8 @@
               href: ./canvas-apps/controls/modern-controls/modern-control-combobox.md
             - name: Date picker
               href: ./canvas-apps/controls/modern-controls/modern-control-date-picker.md
+            - name: Dropdown
+              href: ./canvas-apps/controls/modern-controls/modern-control-dropdown.md
             - name: Header
               href: ./canvas-apps/controls/modern-controls/modern-controls-header.md
             - name: Icon
@@ -563,6 +565,8 @@
               href: ./canvas-apps/controls/modern-controls/modern-control-avatar.md
             - name: Copilot answer (preview)
               href: ./canvas-apps/controls/modern-controls/modern-control-copilot-answer.md
+            - name: Data Grid (preview)
+              href: ./canvas-apps/controls/modern-controls/modern-control-data-grid.md
             - name: Dropdown (preview)
               href: ./canvas-apps/controls/modern-controls/modern-control-dropdown.md
             - name: Stream video (preview)
@@ -617,7 +621,7 @@
               href: ./canvas-apps/controls/control-export-import.md
             - name: Gallery
               href: ./canvas-apps/controls/control-gallery.md
-            - name: Grid container (preview)
+            - name: Grid container
               href: ./canvas-apps/controls/control-grid-container.md
             - name: Horizontal container
               href: ./canvas-apps/controls/control-horizontal-container.md
@@ -1806,7 +1810,7 @@
         href: ./model-driven-apps/reporting-overview.md
       - name: Apply data visualizations in an app
         items:
-        - name: Create a system chart
+        - name: Create a system chart (preview)
           href: ./model-driven-apps/create-edit-system-chart.md
         - name: Create or edit dashboards
           href: ./model-driven-apps/create-edit-dashboards.md
@@ -2155,7 +2159,7 @@
       href: ./data-platform/create-edit-global-option-sets.md
     - name: Autonumber columns
       href: ./data-platform/autonumber-fields.md
-    - name: Prompt columns (preview)
+    - name: Prompt columns
       href: ./data-platform/prompt-column.md
     - name: Work with Power Fx formula columns
       items:

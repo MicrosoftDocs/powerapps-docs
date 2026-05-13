@@ -1,18 +1,13 @@
 ---
-title: Add and configure the timeline control in Power Apps | MicrosoftDocs
-description: "Learn how to add and configure the timeline control to use in a model-driven app."
-ms.custom: ""
-ms.date: 04/15/2026
-ms.reviewer: "matp"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "how-to"
-author: "lalexms"
+title: Add and configure the timeline control in Power Apps
+description: Learn how to add and configure the timeline control in model-driven apps to display activities, notes, posts, and other records on a form.
+ms.date: 04/24/2026
+author: lalexms
+ms.author: laalexan
+ms.reviewer: matp
+ms.topic: how-to
+ms.service: powerapps
 ms.subservice: mda-maker
-ms.author: "laalexan"
-tags: 
-search.audienceType: 
-  - maker
 ---
 
 # Set up the timeline control
@@ -505,9 +500,9 @@ To enable @mentions in notes and posts, follow the instructions provided in this
 > [!IMPORTANT]
 > The @mentions feature doesn't work with Power Platform environments that were created with the **Enable Dynamics 365 apps** option set to **No**. Learn more in [Create an environment with a database](/power-platform/admin/create-environment#create-an-environment-with-a-database).
 > <br><br>
-> Users must have the Read privilege for the **msdyn_postconfig** entity, and the Share privilege for the entity for which they use @mentions (for example, account, contact, case, and so forth).
+> Users must have the Read privilege for the **msdyn_postconfig** entity, and the Share privilege for the entity for which they use @mentions (for example, account, contact, case, and so forth).<br><br>
+> In-app notifications aren't supported for @mentions in posts on the timeline. Notifications are triggered only for @mentions in notes. If you need users to receive notifications, use @mentions in notes instead of posts.
 
-<!-- 
 ## Configure dashboard timelines
 
 Timelines can be configured and put on a dashboard. However, the configuration available for timeline applied to a dashboard is limited to the functionality provided by the legacy designer experience. The new form designer experience on dashboards isn't available. 
@@ -629,7 +624,7 @@ Copilot must be turned on in the [settings of the model-driven app](../canvas-ap
 
 You can enable timeline highlights at the app level or form level, depending on whether you want to enable it for all entities/tables in an app or only for a specific form.
 
-**To enable timeline highlights at the app level:**
+To enable timeline highlights at the app level, perform the following steps:
 
 1. Go to [Power Apps](https://make.powerapps.com/environments/).
 1. Select **Apps** and then select the app for which you want to enable the feature. For example, Sales Hub app. 
@@ -663,6 +658,12 @@ There's a limit of 15 different tables that can be associated with a timeline. E
 ### When you create a note in a timeline, the character string "$&" is converted to "{3}amp;"
 
 This issue is a configuration problem with the rich text editor control. To resolve this issue, add `"removePlugins": "stickystyles" ` to your rich text editor config file. Learn more in [Rich text editor properties](rich-text-editor-control.md#rich-text-editor-properties).
+
+### Images in WebP format aren't displayed in the timeline
+
+Images in WebP format don't display in timeline records. Use a supported image format such as JPEG or PNG.
+
+Timeline records that contain unsupported image formats might not show inline images.
 
 ### Related information
 

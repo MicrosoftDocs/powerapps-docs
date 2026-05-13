@@ -6,7 +6,7 @@ author: yogeshgupta698
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: mkaur-msft
-ms.date: 02/23/2026
+ms.date: 04/28/2026
 ms.subservice: canvas-maker
 ms.author: yogupt
 search.audienceType:
@@ -20,7 +20,7 @@ contributors:
 
 Modern controls in Power Apps provide an enhanced user experience with updated styling, improved accessibility, and better performance compared to classic controls. These controls follow Microsoft's Fluent Design System and offer a consistent, professional appearance across your canvas apps.
 
-This reference guide covers the available modern controls and their properties. Each control serves a specific purpose—from basic interactions like buttons and text inputs to advanced features like Copilot integration and data visualization. Use these controls to build intuitive, accessible applications that align with modern design standards.
+This reference guide covers the available modern controls and their properties. Each control serves a specific purpose - from basic interactions like buttons and text inputs to advanced features like Copilot integration and data visualization. Use these controls to build intuitive, accessible applications that align with modern design standards.
 
 Before implementing modern controls in your app, review the overview of modern controls to understand key concepts and best practices.
 
@@ -40,6 +40,8 @@ Before implementing modern controls in your app, review the overview of modern c
 **[Combobox](modern-control-combobox.md)** - A control that users can use to make selections from provided choices and supports search and multiple selections.
 
 **[Copilot answer (preview)](modern-control-copilot-answer.md)** - A control that makers can use to add predefined questions that end users can use to get generated answers.
+
+**[Data Grid (preview)](modern-control-data-grid.md)** - A control that displays records from a data source in a scrollable, sortable, and searchable grid.
 
 **[Date picker](modern-controls-date-picker.md)** - A control that the user can select to specify a date.
 
