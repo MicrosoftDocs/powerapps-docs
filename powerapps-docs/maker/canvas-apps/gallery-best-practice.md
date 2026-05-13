@@ -5,7 +5,7 @@ author: tahoon-ms
 ms.topic: best-practice
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 05/11/2025
+ms.date: 05/13/2025
 ms.subservice: canvas-maker
 ms.author: tahoon
 search.audienceType: 
@@ -95,7 +95,7 @@ Setting `Gallery.Items` to a variable or the output of a [Canvas component](crea
 
 has a schema with a text column `A` and a number column `B`.
 
-Most of the time, the **Gallery** can infer the schema from the data source and expressions used in the app. However, if the **Items** property is set to the output of a **Canvas component** or **[Import](controls/control-export-import.md)** control, the **Gallery** can't determine its schema at load time&mdash;the output table might not be available yet, and the schema might change. The **Gallery** won't render any items when it doesn't know its schema.
+Most of the time, the **Gallery** can infer the schema from the data source and expressions used in the app. However, if the **Items** property is set to the output of a **Canvas component** or **[Import](controls/control-export-import.md)** control, the **Gallery** can't determine its schema at load time so the output table might not be available yet, and the schema might change. The **Gallery** won't render any items when it doesn't know its schema.
 
 The same issue can occur when **Items** is set to a variable that isn't initialized when the app loads.
 
