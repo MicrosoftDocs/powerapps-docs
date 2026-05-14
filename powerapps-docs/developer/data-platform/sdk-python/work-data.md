@@ -4,7 +4,7 @@ description: "Learn common scenarios for working with Dataverse data,
     and how to go about writing Python code for those scenarios."
 ms.author: paulliew
 author: paulliew
-ms.date: 04/21/2026
+ms.date: 05/13/2026
 ms.reviewer: phecke
 ms.topic: example-scenario
 contributors:
@@ -23,40 +23,83 @@ Here's some example code that operates on the account table.
 from azure.identity import InteractiveBrowserCredential
 from PowerPlatform.Dataverse.client import DataverseClient
 
+# Replace <myorg> with the name of a valid environment.
 base_url = "https://<myorg>.crm.dynamics.com"
 client = DataverseClient(base_url=base_url, credential=InteractiveBrowserCredential())
 
-# Create an account and set some properties (returns list[str] of new GUIDs)
-account_id = client.create("account", {"name": "Acme, Inc.", "telephone1": "555-0100"})[0]
+# Create a record
+account_id = client.records.create("account", {"name": "Contoso Ltd"})
 
-# Read an account 
-account = client.get("account", account_id)
+# Read a record
+account = client.records.retrieve("account", account_id)
+print(account["name"])
 
-# Update an account (returns None)
-client.update("account", account_id, {"telephone1": "555-0199"})
+# Read with expand fetches a related record in the same HTTP request
+account = client.records.retrieve(
+    "account", account_id,
+    select=["name"],
+    expand=["primarycontactid"],
+)
+contact = (account.get("primarycontactid") or {})
+print(contact.get("fullname"))
 
-# Delete an account
-client.delete("account", account_id)
+# Update a record
+client.records.update("account", account_id, {"telephone1": "555-0199"})
+
+# Delete a record
+client.records.delete("account", account_id)
+```
+
+### Context Manager
+
+The Context Manager manages automatic cleanup and HTTP connection pooling. Make use of the Context Manager using the following syntax.
+
+```python
+with DataverseClient("https://<myorg>.crm.dynamics.com", credential) as client:
+```
+
+Here is some working code that demonstrates Context Manager usage.
+
+```python
+from azure.identity import InteractiveBrowserCredential
+from PowerPlatform.Dataverse.client import DataverseClient
+
+# Connect to Dataverse
+credential = InteractiveBrowserCredential()
+
+with DataverseClient("https://<myorg>.crm.dynamics.com", credential) as client:
+
+    # Create a contact
+    contact_id = client.records.create("contact", {"firstname": "John", "lastname": "Doe"})
+
+    # Read the contact back
+    contact = client.records.retrieve("contact", contact_id, select=["firstname", "lastname"])
+    print(f"Created: {contact['firstname']} {contact['lastname']}")
+
+    # Clean up
+    client.records.delete("contact", contact_id)
+
+# Session closed, caches cleared automatically
 ```
 
 ## Bulk operations
 
-Here we show a couple of examples that do bulk updates.
+Here are a couple examples that perform bulk operations.
 
 ```python
-# Bulk update (broadcast) – apply same patch to several IDs
-ids = client.create("account", [
-    {"name": "Contoso"},
-    {"name": "Fabrikam"},
-])
-client.update("account", ids, {"telephone1": "555-0200"})  # broadcast patch
+# Bulk create
+payloads = [
+    {"name": "Company A"},
+    {"name": "Company B"},
+    {"name": "Company C"}
+]
+ids = client.records.create("account", payloads)
 
-# Bulk update (1:1) – list of patches matches list of IDs
-client.update("account", ids, [
-    {"telephone1": "555-1200"},
-    {"telephone1": "555-1300"},
-])
-print({"multi_update": "ok"})
+# Bulk update (broadcast same change to all)
+client.records.update("account", ids, {"industry": "Technology"})
+
+# Bulk delete
+client.records.delete("account", ids, use_bulk_delete=True)
 ```
 
 Here we show an example that creates multiple accounts. Pass a list of payloads to `create(logical_name, payloads)` to invoke the collection-bound `Microsoft.Dynamics.CRM.CreateMultiple` action. The method returns `list[str]` of created record IDs.
@@ -68,7 +111,7 @@ payloads = [
     {"name": "Fabrikam"},
     {"name": "Northwind"},
 ]
-ids = client.create("account", payloads)
+ids = client.records.create("account", payloads)
 assert isinstance(ids, list) and all(isinstance(x, str) for x in ids)
 print({"created_ids": ids})
 ```
@@ -82,6 +125,61 @@ Additional information about bulk operations:
 - Response includes only IDs - the SDK returns those GUID strings.
 - Single-record create returns a one-element list of GUIDs.
 - Metadata lookup for `@odata.type` is performed once per entity set (cached in-memory).
+
+## Batch operations
+
+## Upsert (create and update)
+
+A common data sequence is to first check if a table row exists. If the row exists, then update it; otherwise create the row. This sequence can be made more efficient using a single API call of the Upsert operation.
+
+More information: [Use Upsert to Create or Update a record](../use-upsert-insert-update-record.md)
+
+> [!IMPORTANT]
+> The table must have an alternate key configured in Dataverse for the columns used in alternate_key. Alternate keys are defined in the table's metadata via the Power Apps maker portal or a Dataverse API call. Without a configured alternate key, upsert requests will be rejected by Dataverse with a 400 error.
+
+Use `client.records.upsert()` to create or update records identified by alternate keys. When the key matches an existing record it is updated; otherwise the record is created. A single item uses a PATCH request while multiple items use the `UpsertMultiple` bulk action.
+
+```python
+from PowerPlatform.Dataverse.models.upsert import UpsertItem
+
+# Upsert a single record
+client.records.upsert("account", [
+    UpsertItem(
+        alternate_key={"accountnumber": "ACC-001"},
+        record={"name": "Contoso Ltd", "telephone1": "555-0100"},
+    )
+])
+
+# Upsert multiple records (uses UpsertMultiple bulk action)
+client.records.upsert("account", [
+    UpsertItem(
+        alternate_key={"accountnumber": "ACC-001"},
+        record={"name": "Contoso Ltd"},
+    ),
+    UpsertItem(
+        alternate_key={"accountnumber": "ACC-002"},
+        record={"name": "Fabrikam Inc"},
+    ),
+])
+
+# Composite alternate key (multiple columns identify the record)
+client.records.upsert("account", [
+    UpsertItem(
+        alternate_key={"accountnumber": "ACC-001", "address1_postalcode": "98052"},
+        record={"name": "Contoso Ltd"},
+    )
+])
+
+# Plain dict syntax (no import needed)
+client.records.upsert("account", [
+    {
+        "alternate_key": {"accountnumber": "ACC-001"},
+        "record": {"name": "Contoso Ltd"},
+    }
+])
+```
+
+## DataFrames
 
 ## File upload
 

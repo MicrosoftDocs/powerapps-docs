@@ -3,7 +3,7 @@ title: "Getting started"
 description: "Get started using the Dataverse SDK for Python."
 ms.author: paulliew
 author: paulliew
-ms.date: 04/21/2026
+ms.date: 05/13/2026
 ms.reviewer: phecke
 ms.topic: quickstart-sdk
 contributors:
@@ -30,7 +30,7 @@ From a terminal window, run the following command. This command installs the lat
 pip install PowerPlatform-Dataverse-Client
 ```
 
-Run the following command to install the SDK from the project's GitHub source instead of from the package.
+Run the following command to install the SDK from the project's GitHub source instead of from the package. Install the client from the PyPi package or from the source, but not both.
 
 ```python
 git clone <https://github.com/microsoft/PowerPlatform-DataverseClient-Python.git>
@@ -60,7 +60,7 @@ The skills work with both the Claude Code CLI and the Visual Studio Code extensi
 
 The SDK [client](/python/api/powerplatform-dataverse-client/powerplatform.dataverse.client.dataverseclient) requires any Azure Identity [TokenCredential](/dotnet/api/azure.core.tokencredential) implementation for OAuth authentication with Dataverse.
 
-This code example imports the Dataverse client and Azure Identity types and establishes a connection to your Dataverse environment. Be sure to change `myorg` in the URL to the correct name of your environment.
+This code example imports the Dataverse client and Azure Identity types and establishes a connection to a Dataverse environment. Be sure to change `myorg` in the URL to the correct name of your environment.
 
 ```python
 from azure.identity import (
@@ -92,12 +92,12 @@ For more information, see [Use OAuth with Dataverse](/power-apps/developer/data-
 
 The [PowerPlatform.Dataverse.operations](/python/api/powerplatform-dataverse-client/powerplatform.dataverse.operations) package contains modules that organize SDK operations into logical groups as described below.
 
-| -- Name -- | Description --|
-| ---        | ---           |
-|client.records| Create, update, delete, and get records (single or paginated queries)|
-|client.query|Query and search operations|
-|client.tables|Table and column metadata management|
-|client.files|File upload operations|
+| Name           | Description                                                           |
+|----------------|--------------------------------------------------------------------   |
+| client.records | Create, update, delete, and get records (single or paginated queries) |
+| client.query   | Query and search operations                                           |
+| client.tables  | Table and column metadata management                                  |
+| client.files   | File upload operations                                                |
 
 Examples of using these operations are described in the [Querying data](query.md) and [Working with data](work-data.md) articles.
 

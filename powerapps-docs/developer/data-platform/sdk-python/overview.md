@@ -3,7 +3,7 @@ title: "Dataverse SDK for Python overview"
 description: "Use Dataverse to store and access data for use in data science and analyses."
 ms.author: paulliew
 author: paulliew
-ms.date: 04/21/2026
+ms.date: 05/13/2026
 ms.reviewer: phecke
 ms.topic: overview
 contributors:
@@ -51,30 +51,23 @@ The following list describes key features of the Dataverse SDK for Python.
 | [Pandas](https://pandas.pydata.org/) Dataframes | Client wrappers are provided for all CRUD operations where [DataFrames](https://pandas.pydata.org/pandas-docs/stable/reference/frame.html) and [Series](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.html) data types are returned to the caller. |
 | File operations | Upload files to a Dataverse [file column](../../../maker/data-platform/types-of-fields.md#file-columns) with automatic chunking for large files. |
 | Batch operations | Send multiple CRUD, table metadata, and SQL query operations in a single HTTP request with optional transactional changesets. |
-| OptionSet/enum handling | The SDK automatically maps OptionSet columns in an API call to enumeration values. |
+| OptionSet/enum handling | The SDK automatically maps Dataverse OptionSet columns in an API call to enumeration values. |
+| Context Manager | Manages automatic cleanup and HTTP connection pooling. |
 
 ### Metadata operations on tables
 
-- The SDK supports create, update, and delete (CUD) of custom tables and columns,  optional solution association, plus retrieve and list table definitions.
+The SDK supports create, update, and delete (CUD) of custom tables and columns,  optional solution association, plus retrieve and list table definitions.
 
 ### Error handling and logging
+
+The SDK supports enhanced error handling and logging.
 
 - Error handling: structured exception hierarchy with detailed error context and retry guidance.
 - HTTP diagnostics logging: opt-in file-based logging of all HTTP requests and responses with automatic redaction of sensitive headers, such as authorization.
 
-<!-- ## Limitations
-
-Here are a few known limitations of the current release.
-
-- General purpose OData batching, upsert, and association operations aren't supported.
-- Dataverse DeleteMultiple functionality isn't yet available from the Python SDK.
-- Minimal retry policy support is in the SDK. Currently, only network errors are retried. Our code examples include another backoff for transient Dataverse consistency.
-- SQL JOINs are currently not supported, and there's limited support for a WHERE/TOP/ORDER BY clause.
--->
-
 ## Licensing
 
-The SDK for Python is published under open-source licensing.
+The SDK for Python is published under open-source [licensing](https://github.com/microsoft/PowerPlatform-DataverseClient-Python/blob/main/LICENSE).
 
 ## Related information
 
