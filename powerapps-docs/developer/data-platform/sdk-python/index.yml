@@ -16,7 +16,7 @@ metadata:
   ms.collection: collection
   author: phecke
   ms.author: pehecke
-  ms.date: 04/21/2026
+  ms.date: 05/14/2026
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -45,6 +45,10 @@ landingContent:
             url: work-data.md
           - text: "Querying data"
             url: query.md
+          - text: "Use metadata to customize tables and columns"
+            url: metadata.md
+          - text: "Relationship management"
+            url: relationships.md
 
   # Card
   - title: Reference
