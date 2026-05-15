@@ -4,7 +4,7 @@ description: Step-by-step instructions for setup, connect, and use Microsoft Dat
 author: ShefaaliP
 ms.component: cds
 ms.topic: how-to
-ms.date: 03/30/2026
+ms.date: 05/13/2026
 ms.subservice: dataverse-maker
 ms.author: spatankar
 ms. reviewer: matp
@@ -40,26 +40,33 @@ There are multiple ways to connect to a Dataverse MCP server:
 
 ## List of tools
 
-Once connected to the Dataverse MCP Server, you can choose from various tools in the Power Platform environment.
+Once connected to the Dataverse MCP Server, you can choose from the following tools in the Power Platform environment.
 
-| Tool | Description |
-|------|-------------|
-| create_record | Inserts a new row into a Dataverse table and returns the GUID. |
-| describe_table | Retrieves the T-SQL schema of a specified table. |
-| list_tables | Lists all tables in the Dataverse environment. |
-| read_query | Executes SELECT queries to fetch data from Dataverse. |
-| update_record | Updates an existing row in a Dataverse table. |
-| Create Table | Creates a new table with a specified schema. |
-| Update Table | Modifies schema or metadata of an existing table. |
-| Delete Table | Deletes a table from Dataverse. |
-| Delete Record | Deletes a row from a Dataverse table. |
-| Search | Searches through keywords over Dataverse for specific record. |
-| Fetch | Retrieves full content of record in Dataverse using entity name and ID. |
+| Tool | Description | Billing |
+|------|-------------|---------|
+| `search_data` | Search structured and unstructured data. | Premium |
+| `search` | Search table schemas and business skills by keyword. | Non-Premium |
+| `create_record` | Inserts a new row into a Dataverse table and returns the GUID. | Non-Premium |
+| `update_record` | Updates an existing row in a Dataverse table. | Non-Premium |
+| `delete_record` | Delete a row, only after explicit user approval. | Non-Premium |
+| `create_table` | Creates a new table with a specified schema. | Non-Premium |
+| `update_table` | Modifies schema or metadata of an existing table. | Non-Premium |
+| `delete_table` | Deletes a table from Dataverse, only after explicit user approval. | Non-Premium |
+| `read_query` | Run supported Dataverse SQL `SELECT` queries. | Non-Premium |
+| `describe` | Get details from search results for tables, records, schemas, skills, and apps. | Non-Premium |
+| `upsert_skill` | Add or update a Dataverse skill/playbook. | Non-Premium |
+| `delete_skill` | Delete a Dataverse skill/playbook by name. | Non-Premium |
+| `init_file_upload` | Generate a SAS URL for file upload. | Non-Premium |
+| `commit_file_upload` | Commit a file upload. | Non-Premium |
+| `file_download` | Generate a SAS URL for file download. | Non-Premium |
+
+> [!IMPORTANT]
+> The Dataverse MCP server tool surface has changed. The following tools were removed and their functionality replaced by the tools in the preceding table: `describe_table`, `list_tables`, and `fetch` (replaced by `describe`); and the previous `search` tool that searched Dataverse data (renamed to `search_data`). The current `search` tool searches metadata. If you maintain allow or deny lists in your MCP client by tool name, review your configuration so that the new tool names reflect your intended permissions. More information: [Connect to Dataverse with model context protocol FAQ](data-platform-mcp-faq.md)
 
 > [!NOTE]
 > Starting December 15, 2025 Dataverse MCP tools are charged when accessed by AI agents created outside of Microsoft Copilot Studio. If you have Dynamics 365 Premium licenses (such as Dynamics 365 Sales Premium, Finance Premium, Supply Chain Premium, and Customer Service Premium) or a Microsoft 365 Copilot User Subscription License (USL), you aren't charged for accessing Dynamics 365 data, even when that data is accessed from outside Microsoft Copilot Studio.
 
-The Search tool is billed at the same Copilot Credit rate as Tenant graph grounding, while all other tools follow the Text and generative AI tools (basic) per 10 response Copilot credit rate. For information about Copilot billing, go to [Billing rates and management](/microsoft-copilot-studio/requirements-messages-management).
+The `search_data` tool is billed at the same Copilot Credit rate as Tenant graph grounding. All other tools, including the metadata `search` tool, follow the Text and generative AI tools (basic) per 10 response Copilot credit rate. For information about Copilot billing, go to [Billing rates and management](/microsoft-copilot-studio/requirements-messages-management).
 
 ## Next steps
 

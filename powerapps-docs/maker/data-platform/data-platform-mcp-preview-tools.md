@@ -5,14 +5,17 @@ description: Explore Dataverse MCP server preview tools to test new features, va
 author: ShefaaliP
 ms.author: spatankar
 ms.reviewer: matp
-ms.date: 01/06/2026
+ms.date: 05/13/2026
 ms.topic: how-to
 ---
 # Use preview tools and upcoming features in Dataverse MCP server
 
 To help customers experiment with new capabilities and provide early feedback, the Microsoft Dataverse model context protocol (MCP) server includes preview tools that enable upcoming features before they're generally available (GA).
 
-This article explains what preview tools are, what to expect when you use them, and how administrators can turn on the the preview features for Dataverse MCP server setting from the Power Platform admin center to access the latest Dataverse MCP server enhancements.
+This article explains what preview tools are, what to expect when you use them, and how administrators can turn on the preview features for Dataverse MCP server setting from the Power Platform admin center to access the latest Dataverse MCP server enhancements.
+
+> [!NOTE]
+> Preview tools are *in addition to* the generally available tools on `/api/mcp`. You don't need to enable preview to use the standard Dataverse MCP server tool surface. For the list of generally available tools, go to [Connect to Dataverse with Model Context Protocol](data-platform-mcp.md#list-of-tools).
 
 ## What are preview tools?
 
