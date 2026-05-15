@@ -9,7 +9,7 @@ ms.reviewer: pehecke
 
 # Relationship management
 
-Create relationships between tables using the relationship APIs.
+Create relationships between tables by using the relationship APIs.
 
 ```python
 from PowerPlatform.Dataverse.models.relationship import (
@@ -66,7 +66,7 @@ for rel in account_rels:
 client.tables.delete_relationship(result['relationship_id'])
 ```
 
-For simpler scenarios, use the convenience method:
+For simpler scenarios, use the convenience method.
 
 ```python
 # Quick way to create a lookup field with sensible defaults

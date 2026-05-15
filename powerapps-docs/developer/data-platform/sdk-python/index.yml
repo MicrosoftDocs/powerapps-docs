@@ -45,7 +45,7 @@ landingContent:
             url: work-data.md
           - text: "Querying data"
             url: query.md
-          - text: "Use metadata to customize tables and columns"
+          - text: "Customize tables and columns"
             url: metadata.md
           - text: "Relationship management"
             url: relationships.md

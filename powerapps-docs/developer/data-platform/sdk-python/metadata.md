@@ -10,9 +10,9 @@ ms.topic:
 
 # Customize tables and columns
 
-The SDK supports create, update, and delete (CUD) of [custom tables](quick-guide-dataverse.md#tables) and columns,  optional solution association, plus retrieve and list table definitions.
+The SDK supports create, update, and delete (CUD) operations for [custom tables](quick-guide-dataverse.md#tables) and columns, optional solution association, plus retrieve and list table definitions.
 
-Let's take a look at example code for working with a custom table.
+Let's look at example code for working with a custom table.
 
 ```python
 # Support enumerations with labels in different languages
@@ -61,15 +61,15 @@ client.delete(logical, rec_id)          # delete record
 client.delete_table("SampleItem")       # delete table (friendly name or explicit schema new_SampleItem)
 ```
 
-Additional information about working with custom table metadata:
+For more information about working with custom table metadata:
 
 - `create` always returns a list of GUIDs (length=1 for single input).
 - `update` and `delete` return `None` for both single and multiple interfaces.
-- Passing a list of payloads to `create` triggers a bulk create and returns list[str] of IDs.
+- Passing a list of payloads to `create` triggers a bulk create and returns `list[str]` of IDs.
 - `get` supports single record retrieval with record ID or paging through result sets (prefer select to limit columns).
-- For CRUD methods that take a record ID, pass the GUID string (36-char hyphenated). Parentheses around the GUID are accepted but not required.
+- For CRUD methods that take a record ID, pass the GUID string (36-character hyphenated). Parentheses around the GUID are accepted but not required.
 <!-- TODO: Move this to the SQL article when written-->
-- SQL queries are executed directly against the entity set endpoints using the `?sql=` parameter. Supported subset only (single SELECT, optional WHERE/TOP/ORDER BY, alias). Unsupported constructs are rejected by the service.
+- SQL queries are executed directly against the entity set endpoints by using the `?sql=` parameter. Supported subset only (single SELECT, optional WHERE/TOP/ORDER BY, alias). The service rejects unsupported constructs.
 
 ## Related information
 

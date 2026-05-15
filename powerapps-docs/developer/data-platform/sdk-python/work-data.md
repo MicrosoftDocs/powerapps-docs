@@ -1,7 +1,6 @@
 ---
-title: "Working with data"
-description: "Learn common scenarios for working with Dataverse data,
-    and how to go about writing Python code for those scenarios."
+title: "Work with Dataverse Data Using Python SDK"
+description: "Learn common scenarios for working with Dataverse data using the Python SDK, including CRUD, bulk operations, upserts, and batching. Start coding today."
 ms.author: paulliew
 author: paulliew
 ms.date: 05/13/2026
@@ -11,9 +10,9 @@ contributors:
  - phecke
 ---
 
-# Working with data
+# Work with Dataverse data using the Python SDK
 
-In this article, we demonstrate some example code that uses the SDK to work with Dataverse data and metadata. Be sure you read [Getting started](get-started.md) first before continuing with this article.
+This article demonstrates example code that uses the SDK to work with Dataverse data and metadata. Before continuing, be sure to read [Getting started](get-started.md).
 
 ## Basic operations
 
@@ -50,15 +49,15 @@ client.records.update("account", account_id, {"telephone1": "555-0199"})
 client.records.delete("account", account_id)
 ```
 
-### Context Manager
+### Context manager
 
-The Context Manager manages automatic cleanup and HTTP connection pooling. Make use of the Context Manager using the following syntax.
+The Context Manager handles automatic cleanup and HTTP connection pooling. Use the following syntax to take advantage of the Context Manager.
 
 ```python
 with DataverseClient("https://<myorg>.crm.dynamics.com", credential) as client:
 ```
 
-Here is some working code that demonstrates Context Manager usage.
+The following working code demonstrates how to use the Context Manager.
 
 ```python
 from azure.identity import InteractiveBrowserCredential
@@ -84,7 +83,7 @@ with DataverseClient("https://<myorg>.crm.dynamics.com", credential) as client:
 
 ## Bulk operations
 
-Here are a couple examples that perform bulk operations.
+Here are a couple of examples that perform bulk operations.
 
 ```python
 # Bulk create
@@ -102,7 +101,7 @@ client.records.update("account", ids, {"industry": "Technology"})
 client.records.delete("account", ids, use_bulk_delete=True)
 ```
 
-Here we show an example that creates multiple accounts. Pass a list of payloads to `create(logical_name, payloads)` to invoke the collection-bound `Microsoft.Dynamics.CRM.CreateMultiple` action. The method returns `list[str]` of created record IDs.
+The following example creates multiple accounts. Pass a list of payloads to `create(logical_name, payloads)` to invoke the collection-bound `Microsoft.Dynamics.CRM.CreateMultiple` action. The method returns `list[str]` of created record IDs.
 
 ```python
 # Bulk create accounts (returns list of GUIDs)
@@ -116,26 +115,26 @@ assert isinstance(ids, list) and all(isinstance(x, str) for x in ids)
 print({"created_ids": ids})
 ```
 
-Additional information about bulk operations:
+For more information about bulk operations:
 
 - Returns `None` (same as single update) to keep semantics consistent.
-- Broadcast vs per-record determined by whether the `changes` parameter is a dictionary or list.
-- Primary key attribute is injected automatically when constructing [UpdateMultiple action](xref:Microsoft.Dynamics.CRM.UpdateMultiple) targets.
-- If any payload omits @odata.type, it's stamped automatically (cached logical name lookup).
-- Response includes only IDs - the SDK returns those GUID strings.
+- Broadcast versus per-record is determined by whether the `changes` parameter is a dictionary or list.
+- The primary key attribute is injected automatically when constructing [UpdateMultiple action](xref:Microsoft.Dynamics.CRM.UpdateMultiple) targets.
+- If any payload omits @odata.type, the SDK stamps it automatically (cached logical name lookup).
+- The response includes only IDs - the SDK returns those GUID strings.
 - Single-record create returns a one-element list of GUIDs.
 - Metadata lookup for `@odata.type` is performed once per entity set (cached in-memory).
 
 ## Upsert (create and update)
 
-A common data access sequence is to first check if a table row exists. If the row exists, then update it; otherwise create the row. This sequence can be made more efficient using a single API call of the Upsert operation.
+A common data access sequence is to first check if a table row exists. If the row exists, update it. Otherwise, create the row. You can make this sequence more efficient by using a single API call of the Upsert operation.
 
-More information: [Use Upsert to Create or Update a record](../use-upsert-insert-update-record.md)
+For more information, see [Use Upsert to Create or Update a record](../use-upsert-insert-update-record.md).
 
 > [!IMPORTANT]
-> The table must have an alternate key configured in Dataverse for the columns used in alternate_key. Alternate keys are defined in the table's metadata via the Power Apps maker portal or a Dataverse API call. Without a configured alternate key, upsert requests will be rejected by Dataverse with a 400 error.
+> The table must have an alternate key configured in Dataverse for the columns used in `alternate_key`. Define alternate keys in the table's metadata via the Power Apps maker portal or a Dataverse API call. Without a configured alternate key, Dataverse rejects upsert requests with a 400 error.
 
-Use `client.records.upsert()` to create or update records identified by alternate keys. When the key matches an existing record it is updated; otherwise the record is created. A single item uses a PATCH request while multiple items use the `UpsertMultiple` bulk action.
+Use `client.records.upsert()` to create or update records identified by alternate keys. When the key matches an existing record, the method updates the record. Otherwise, it creates the record. A single item uses a PATCH request while multiple items use the `UpsertMultiple` bulk action.
 
 ```python
 from PowerPlatform.Dataverse.models.upsert import UpsertItem
@@ -179,10 +178,10 @@ client.records.upsert("account", [
 
 ## DataFrames
 
-The SDK provides pandas wrappers for all CRUD operations via the `client.dataframe` namespace, using DataFrames and Series for input and output.
+The SDK provides pandas wrappers for all CRUD operations through the `client.dataframe` namespace. These wrappers use DataFrames and Series for input and output.
 
 > [!NOTE]
-> `client.dataframe.get()` is deprecated. Use the GA patterns shown below instead.
+> `client.dataframe.get()` is deprecated. Use the GA patterns shown in the following sections.
 
 ```python
 import pandas as pd
@@ -229,9 +228,9 @@ df = client.dataframe.sql(
 )
 ```
 
-## Retrieve multiple with paging
+## Retrieve multiple records with paging
 
-Use the `get` function to stream results page-by-page. You can cap total results with `$top` and hint the per-page size with the `page_size` parameter. The SDK internally sets the OData prefer header `odata.maxpagesize`.
+Use the `retrieve` function to stream results page-by-page. You can limit the total results with `$top` and suggest the per-page size with the `page_size` parameter. The SDK internally sets the OData prefer header `odata.maxpagesize`.
 
 ```python
 pages = client.records.retrieve(
@@ -261,17 +260,17 @@ Here's a list of supported parameters where all are optional except `logical_nam
 - page_size: int | None — Per-page hint using Prefer: odata.maxpagesize=\<N\> (not guaranteed; last page may be smaller).
 
 <!-- TODO: This info should be in the package reference once written -->
-Here's a list of return values & semantics.
+Here's a list of return values and semantics.
 
-- `$select`, `$filter`, `$orderby`, `$expand`, `$top` map directly to corresponding OData query options on the first request.
-- `$top` caps total rows; the service may partition those rows across multiple pages.
-- page_size (`Prefer: odata.maxpagesize`) is a hint; the server decides actual page boundaries.
-- Returns a generator yielding nonempty pages (list[dict]). Empty pages are skipped.
+- `$select`, `$filter`, `$orderby`, `$expand`, and `$top` map directly to corresponding OData query options on the first request.
+- `$top` caps total rows; the service might partition those rows across multiple pages.
+- `page_size` (`Prefer: odata.maxpagesize`) is a hint; the server decides actual page boundaries.
+- Returns a generator that yields nonempty pages (list[dict]). The generator skips empty pages.
 - Each yielded list corresponds to a value page from the Web API.
-- Iteration stops when no @odata.nextLink remains (or when `$top` satisfied server-side).
-- The generator doesn't materialize all results; pages are fetched lazily.
+- Iteration stops when no @odata.nextLink remains (or when `$top` satisfies server-side).
+- The generator doesn't materialize all results; it fetches pages lazily.
 
-Let's see an example with all supported parameters plus expected response.
+Here's an example with all supported parameters plus the expected response.
 
 ```python
 pages = client.records.retrieve(
@@ -303,9 +302,9 @@ for page in pages:  # page is list[dict]
   print({"page_size": len(page)})
 ```
 
-## File upload
+## Upload files to Dataverse
 
-Here are a couple examples of uploading a file named 'test.pdf' to the [File column](../../..//maker/data-platform/types-of-fields.md#file-columns) named "sample_filecolumn" of an account record. The first example is for a file size less than 128 MB, while the second example is for a file size over 128 MB.
+Here are two examples of uploading a file named `test.pdf` to the [File column](../../..//maker/data-platform/types-of-fields.md#file-columns) named `sample_filecolumn` of an account record. The first example is for a file size less than 128 MB, and the second example is for a file size over 128 MB.
 
 ```python
 client.upload_file('account', record_id, 'sample_filecolumn', 'test.pdf')
@@ -313,13 +312,13 @@ client.upload_file('account', record_id, 'sample_filecolumn', 'test.pdf', mode='
 ```
 
 > [!TIP]
-> If the file column doesn't exist, it will be created automatically.
+> If the file column doesn't exist, the SDK creates it automatically.
 
 Additional information about file uploads:
 
-- `upload_file` picks one of the three methods to use based on the file size. If the file size is less than 128 MB the SDK uses `upload_file_small`, otherwise, the SDK uses `upload_file_chunk`
-- `upload_file_small` makes a single Web API call and only supports file size < 128 MB.
-- `upload_file_chunk` uses PATCH with Content-Range to upload the file (more aligned with HTTP standard compared to Dataverse messages). It consists of two stages - 1. PATCH request to get the headers used for actual upload, and 2. Actual upload in chunks. The function uses OData `x-ms-chunk-size` returned in the first stage to determine chunk size (normally 4 MB), and then uses `Content-Range` and `Content-Length` as metadata for the upload. The total number of Web API calls is the number of chunks +
+- `upload_file` picks one of three methods to use based on the file size. If the file size is less than 128 MB, the SDK uses `upload_file_small`. Otherwise, the SDK uses `upload_file_chunk`.
+- `upload_file_small` makes a single Web API call and only supports file sizes less than 128 MB.
+- `upload_file_chunk` uses PATCH with Content-Range to upload the file. This method is more aligned with the HTTP standard compared to Dataverse messages. It consists of two stages: 1. PATCH request to get the headers used for the actual upload, and 2. Actual upload in chunks. The function uses OData `x-ms-chunk-size` returned in the first stage to determine chunk size (normally 4 MB), and then uses `Content-Range` and `Content-Length` as metadata for the upload. The total number of Web API calls is the number of chunks plus one.
 
 ## Batch operations
 
