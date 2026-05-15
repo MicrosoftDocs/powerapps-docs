@@ -6,7 +6,7 @@ ms.author: nhelgren
 ms.service: powerapps
 ms.subservice: dataverse-maker
 ms.topic: how-to
-ms.date: 01/04/2023
+ms.date: 05/15/2026
 ms.custom: template-concept
 ---
 # Setting up a virtual table relationship
@@ -19,7 +19,7 @@ Virtual tables are  enabled for relationships. You can set up 1:N, N:1, and cust
 For instance, you can't set up a relationship between a virtual table created using the OData virtual table provider and a virtual table created using the virtual connector provider.
 
 > [!NOTE]
-  > It is not possible to create a relationship where the vitual table is on the 1 side of a 1:N relationship. This is because virtual tables are just metadata representations of the source table. WHen you create a relationship, additioanl supporting cvolumsn are added to the 1 side of the relationship. Dataverse does not have the ability to create new columns in source systems. 
+> It's not possible to create a relationship where the vitual table is on the 1 side of a 1:N (one-to-many) relationship. This is because virtual tables are just metadata representations of the source table. When you create a relationship, additioanl supporting cvolumsn are added to the *1* side of the relationship. Dataverse doesn't have the ability to create new columns in source systems.
 
 
 ## Defining relationships in virtual tables
