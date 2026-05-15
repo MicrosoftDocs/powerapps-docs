@@ -55,7 +55,7 @@ You can perform a bulk deletion on all tables that support the `Delete` message.
   
 If the delete action on a specific table type triggers a plug-in or a workflow (process), the bulk delete job triggers the plug-in or workflow every time it deletes a table record of that type.
 
-## Control bulk delete processing (preview)
+## Control bulk delete processing
 
 [!INCLUDE [preview-banner-section](../../../shared/preview-includes/preview-banner-section.md)]
 
