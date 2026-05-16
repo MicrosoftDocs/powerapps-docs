@@ -6,7 +6,7 @@ ms.author: nhelgren
 ms.service: powerapps
 ms.subservice: dataverse-maker
 ms.topic: troubleshooting-general
-ms.date: 04/10/2026
+ms.date: 05/15/2026
 ms.custom: template-how-to
 contributors: 
   - psimolin
@@ -46,6 +46,7 @@ The following list describes known limitations for virtual tables created by usi
 - Dataverse virtual tables can display values in fields that exceed the normal maximum values of Dataverse. This behavior occurs because the values being presented aren't stored locally. For example, the Dataverse integer maximum value is 100,000,000,000, but it could retrieve and display 9,000,000,000,000 from SharePoint. However, if the user attempts to edit the number to a size larger than the max accepted size in Dataverse, an error is provided indicating the record can't be saved because it exceeds the maximum size.
 - Import and export functionality of table data isn't supported for virtual tables.
 - Queries against virtual tables that use negative filter operators, such as Does Not Equal or Does Not Contain, might result in incorrect paging behavior beyond the first page. There's currently no supported workaround. Avoid using negative filters.
+- A virtual table can't be on the *1* side of a 1:N (one-to-many) relationship. This is because virtual tables are metadata representations of the source table. When you create a relationship, additional supporting columns are added to the 1 side of the 1:N relationship. Dataverse doesn't have the ability to create new columns in source systems.
 
 ## Limitations for each data source
 
