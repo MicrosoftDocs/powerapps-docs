@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.subservice: canvas-maker
 ms.author: marcsc
 ms.reviewer: mkaur
-ms.date: 04/22/2026
+ms.date: 05/18/2026
 ms.update-cycle: 180-days
 ms.topic: how-to
 applies_to: 
