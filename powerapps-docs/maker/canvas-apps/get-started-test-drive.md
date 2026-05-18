@@ -1,13 +1,13 @@
 ---
-title: Create a canvas app from a template
-description: Step-by-step instructions for creating a canvas app automatically based on a Power Apps template.
+title: Take a guided tour of Power Apps
+description: Learn how to open a sample app in Power Apps, explore how it works, and become familiar with the canvas app building experience.
 author: mduelae
 
-ms.topic: how-to
+ms.topic: quickstart
 ms.custom: canvas
 ms.collection: get-started
 ms.reviewer: 
-ms.date: 01/13/2026
+ms.date: 05/18/2026
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
@@ -16,53 +16,45 @@ contributors:
   - mduelae
 ---
 
-# Create a canvas app from a template
+# Take a guided tour of Power Apps
 
-Creating a canvas app by using templates in Power Apps is a streamlined and efficient way to develop applications tailored to your needs. By using templates, you can quickly create a mobile app with three screens or choose from various templates designed for real-world scenarios with fictitious data. These templates come with prebuilt layouts, controls, and sample data, so you can focus on customizing the app to meet your specific requirements.
+If you're new to Power Apps, opening a sample app is one of the fastest ways to learn. A sample app helps you see how screens, controls, formulas, and data sources work together before you build your own app.
 
-
-## Create a three-screen mobile app
-
-1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. From the home screen, select the **Start with an app template** tile.
-1. If your data is stored in [Dataverse](data-platform-create-app-scratch.md), select **From Dataverse**. Or choose from one of the external data sources:
-      - **From SharePoint**
-      - **From Excel**
-      - **From SQL**
-
-1. Select the data that appears in your app. When ready, select **Create app**.
-
-1. The app opens in [Power Apps Studio](power-apps-studio.md), where you can customize it.
-
-1. Preview the app by pressing F5 or selecting the play button near the upper-right corner.
-
-1. When ready, [save and publish](save-publish-app.md) the app.
-
-## Use other templates to create an app
+## Open a sample app
 
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. In the left navigation pane, select **Create**.
+1. Scroll to the **Explore Power Apps** section.
+1. Select a sample app.
+1. Review the sample details, and then select **Open**.
 
-1. On the home screen, select the **Start from template** tile.
+The sample app opens in [Power Apps Studio](power-apps-studio.md), where you can inspect the controls, formulas, and data setup.
 
-1. Select a template from the list of **other app templates**.
+## What to explore in the sample
 
-1. Update the **App name**, and then select **Next**.
+As you review the sample app, focus on these areas:
 
-1. Select **Make my own app** to connect the app to data storage, such as OneDrive.
+- **Tree view** - See how the app is organized into screens and controls.
+- **Properties pane** - Check how each control is configured.
+- **Formula bar** - Review the Power Fx formulas that define behavior.
+- **Data pane** - See which data sources the app uses.
+- **Preview** - Run the app and test the user experience.
 
-    :::image type="content" source="media/open-and-run-a-sample-app/make-my-own-app.png" alt-text="Make my own app.":::
+## Try these tasks
 
-1. After you select or connect to storage from the available choices, select **Done**.
+1. Select different screens in **Tree view** to understand the app structure.
+1. Select controls such as galleries, forms, and buttons to inspect their properties and formulas.
+1. Open the **Data** pane to review the data sources behind the app.
+1. Select **Preview** or press <kbd>F5</kbd> to run the app.
+1. Test navigation, record browsing, search, or other actions that the sample supports.
+1. Close Preview and return to Studio to continue exploring.
 
-The app opens in [Power Apps Studio](power-apps-studio.md) where you can customize it.
+## Next steps
 
-1. Preview the app by pressing F5 or selecting the play button near the upper-right corner.
+After you explore a sample app, continue with these articles:
 
-When you're ready, [save and publish](save-publish-app.md) the app.
-
-
-### See also
-
-[Share a canvas app](share-app.md)
+- [Create a blank canvas app from scratch](create-blank-app.md)
+- [Create a canvas app using Dataverse](data-platform-create-app-scratch.md)
+- [Create a canvas app based on Excel data](get-started-create-from-blank.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
