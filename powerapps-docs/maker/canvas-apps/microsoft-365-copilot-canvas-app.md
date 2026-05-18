@@ -43,6 +43,7 @@ When enabled, users can open Microsoft 365 Copilot in their canvas app by select
 To use Microsoft 365 Copilot in canvas apps, make sure the following prerequisites are met:
 
 - You must have access to an [early release cycle environment](/power-platform/admin/early-release) to use this feature.
+- You must enable the feature using [https://make.preview.powerapps.com/](https://make.preview.powerapps.com/).
 - Your tenant must be set to allow **Dataverse data available in Microsoft 365 Copilot**. For more information, see [Enable Microsoft 365 admin center Copilot Dataverse settings](../data-platform/data-platform-intelligence.md#enable-microsoft-365-admin-center-copilot-dataverse-settings).
 - Dataverse Search must be set to **Default** or **On** for the environment. For more information, see [Understand what this means for generative AI experiences](/power-platform/admin/configure-relevance-search-organization#what-dataverse-search-means-for-generative-ai-enabled-experiences).
 - To use the Microsoft 365 Copilot feature in your app, users must have a Microsoft 365 Copilot license.
@@ -70,7 +71,7 @@ Power Platform administrators can set up and configure the Microsoft 365 Copilot
 
 Makers can enable or disable Microsoft 365 Copilot for a specific canvas app.
 
-1. Sign in to [Power Apps](https://make.powerapps.com).
+1. Sign in to [Power Apps](https://make.preview.powerapps.com).
 1. Open a canvas app for editing.
 1. Select **Settings** in the command bar.
 1. On the left, select **General**.
