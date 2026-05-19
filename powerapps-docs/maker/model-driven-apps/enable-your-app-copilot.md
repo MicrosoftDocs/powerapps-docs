@@ -79,6 +79,7 @@ In addition to the built-in tools available within the app’s declarative agent
 
 > [!NOTE]
 > You can issue ['-developer on' command](/microsoft-365/copilot/extensibility/debugging-agents-copilot-studio) to Microsoft 365 Copilot to see agent debug info and tools invoked.
+> For troubleshooting common issues, see [Troubleshoot MCP apps in Microsoft 365 Copilot](/microsoft-365/copilot/extensibility/plugin-mcp-apps-troubleshooting)
 
 ### Dynamic tool chaining
 
