@@ -4,7 +4,7 @@ description: Learn how to use AI code generation tools such as GitHub Copilot CL
 author: shivanichander
 ms.author: shivchan
 ms.reviewer: mduelae
-ms.date: 05/18/2026
+ms.date: 05/19/2026
 ms.topic: how-to
 ms.service: powerapps
 ms.subservice: canvas-maker
