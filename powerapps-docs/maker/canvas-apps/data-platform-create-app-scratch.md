@@ -85,23 +85,20 @@ If you want to understand the building blocks of a Dataverse app, start with a b
    > [!NOTE]
    > If this is your first time connecting to Dataverse, Power Apps prompts you to create a connection. Select **Create** to continue.
 
-1. Select **Add data**, enter **Accounts** in the search box, and then select it.
-1. Close the **Data** pane by selecting the close icon in the upper-right corner.
+1. Select **Add data**, enter **Accounts** in the search box, and then select it. And close the **Data** pane by selecting the close icon in the upper-right corner.
 
-   :::image type="content" source="./media/data-platform-create-app-scratch/close-data.png" alt-text="Screenshot of the close data pane." lightbox="./media/data-platform-create-app-scratch/close-data.png":::
+   :::image type="content" source="./media/data-platform-create-app-scratch/add-and-close-data.png" alt-text="Screenshot of the close data pane." lightbox="./media/data-platform-create-app-scratch/add-and-close-data.png":::
 
 ### Add a list screen
 
 1. On the command bar, select **New screen** > **List**.
 1. In the left navigation bar, select **BrowseGallery1**, and then set the **Items** property to this formula:
 
-   `SortByColumns(Search(Accounts, TextSearchBox1.Text, "name"), "name", If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))`
+   `SortByColumns(Search(CustomGallerySample, TextSearchBox1.Text, SampleText), "SampleText", If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))`
 
    This formula does the following:
 
-   - Shows data from the **Accounts** table.
-   - Sorts the list in ascending order until a user selects the sort button to switch the sort order.
-   - Filters the list when a user types one or more characters into **TextSearchBox1**.
+    This expression searches the CustomGallerySample table for records where the SampleText column contains the text entered in TextSearchBox1, then sorts the filtered results by the SampleText column in descending order if SortDescending1 is true, otherwise in ascending order.
 
    You can use [these and many other functions](formula-reference.md) to control how your app looks and behaves.
 
@@ -110,13 +107,13 @@ If you want to understand the building blocks of a Dataverse app, start with a b
 1. In the gallery's **Properties** pane, set **Layout** to **Title**.
 1. Edit the **Title** text property and rename it to **Browse**. For more information, see [Customize a gallery](customize-layout-sharepoint.md).
 
-   :::image type="content" source="./media/data-platform-create-app-scratch/final-browse.png" alt-text="Screenshot of the Browse screen showing a list of accounts." lightbox="./media/data-platform-create-app-scratch/final-browse.png":::
+   :::image type="content" source="./media/data-platform-create-app-scratch/rename-browse.png" alt-text="Screenshot of the Browse screen showing a list of accounts." lightbox="./media/data-platform-create-app-scratch/rename-browse.png":::
 
 1. In the left app authoring pane, hover over **Screen1**, select the ellipsis icon (...), and then select **Delete**.
 1. In the left app authoring pane, hover over **Screen2**, select the ellipsis icon (...), and then select **Rename**.
 1. Type or paste **BrowseScreen**, and then rename the gallery in that screen to **BrowseGallery**.
 
-   :::image type="content" source="./media/data-platform-create-app-scratch/rename-browse.png" alt-text="Screenshot of the renamed BrowseScreen and BrowseGallery in the tree view." lightbox="./media/data-platform-create-app-scratch/rename-browse.png":::
+   :::image type="content" source="./media/data-platform-create-app-scratch/rename-screens.png" alt-text="Screenshot of the renamed BrowseScreen and BrowseGallery in the tree view." lightbox="./media/data-platform-create-app-scratch/rename-screens.png":::
 
 ### Add a form screen
 
