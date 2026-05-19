@@ -6,7 +6,7 @@ ms.topic: how-to
 ms.custom: canvas
 ms.collection: get-started
 ms.reviewer: 
-ms.date: 05/18/2026
+ms.date: 05/19/2026
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
@@ -257,10 +257,7 @@ For more information about these and other functions, see the [formula reference
 
 ### Test the app
 
-1. Select **ViewScreen**, and then preview the app by pressing <kbd>F5</kbd> or selecting **Preview**.
-
-   ![Open Preview mode.](./media/get-started-create-from-blank/open-preview.png)
-
+1. Select **ViewScreen**, and then preview play button to **Preview the app**.
 1. Type one or more letters in the search box to filter the list by volunteer name.
 1. Select the sort icon one or more times to sort the data in ascending or descending order by volunteer name.
 1. Add a record.
