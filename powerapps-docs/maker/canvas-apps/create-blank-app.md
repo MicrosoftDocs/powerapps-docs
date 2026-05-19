@@ -7,7 +7,7 @@ ms.topic: quickstart
 ms.custom: canvas
 ms.collection: get-started
 ms.reviewer: mkaur
-ms.date: 05/18/2026
+ms.date: 05/19/2026
 ms.subservice: canvas-maker
 ms.author: shivchan
 search.audienceType: 
@@ -31,8 +31,8 @@ Before you start, make sure that:
 ## Create a blank canvas app
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
-1. In the left navigation pane, select **Create** > **Start from blank**.
-1. Choose the app size that fits your scenario, such as **Responsive**, **Tablet**, or **Phone**.
+1. In the left navigation pane, select **Create**, and then select **Create from blank**.
+1. In the **Start with a blank canvas** dialog, choose the app size that fits your scenario: **Responsive**, **Tablet size**, or **Phone size**.
 1. If prompted, enter an app name, and then select **Create**.
 
 Power Apps opens the app in [Power Apps Studio](power-apps-studio.md), where you can start building and customizing it.
@@ -41,16 +41,11 @@ Power Apps opens the app in [Power Apps Studio](power-apps-studio.md), where you
 
 After the app opens, continue with these common tasks:
 
-1. Save the app to the cloud.
-1. Add one or more data connections.
-1. Insert controls such as galleries, forms, buttons, and text inputs.
-1. Add formulas and screens to support your business process.
-1. Preview, test, and publish the app.
+1. [Save the app to the cloud](save-publish-app.md).
+1. [Add one or more data connections](add-data-connection.md).
+1. [Insert controls such as galleries, forms, buttons, and text inputs](add-configure-controls.md).
+1. [Add formulas](working-with-formulas.md) and [screens](add-screen-context-variables.md) to support your business process.
+1. [Preview, test, and publish the app](preview-app.md).
 
-Use these articles to continue building:
-
-- [Add a connection](add-data-connection.md)
-- [Add and configure controls](add-configure-controls.md)
-- [Save and publish an app](save-publish-app.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
