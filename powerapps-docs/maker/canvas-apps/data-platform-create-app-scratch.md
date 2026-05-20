@@ -6,7 +6,7 @@ author: mduelae
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 05/18/2026
+ms.date: 05/20/2026
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
@@ -77,7 +77,8 @@ If you don't already have a table, create one directly from the **Start with dat
 If you want to understand the building blocks of a Dataverse app, start with a blank app and add the data source yourself.
 
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. In the left navigation pane, select **Create** > **Create from blank** > **Phone size**.
+1. In the left navigation pane, select **Create** > **Create from blank**.
+1. Select an app size.
 1. When Power Apps Studio opens, go to the [app authoring menu](power-apps-studio.md#5--app-authoring-menu) and select **Data**.
 
    > [!NOTE]
