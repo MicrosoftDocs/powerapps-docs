@@ -43,8 +43,6 @@ Before you start:
    | Create new data and build an app | Create structured tables in Dataverse so you can build secure and scalable apps around new business data. | Select **Start with data** > **Create new data**. Use the table designer or Copilot to create tables, and then select **Save and exit**. |
    | Blank app that uses data from Dataverse | Start with a blank app when you want full control over the layout, screens, and controls. | In the left navigation pane, select **Create** > **Create from blank** > **Phone size**. |
 
-   > [!NOTE]
-   > The Power Apps home page now includes a **vibe.powerapps.com** prompt that introduces an experience for generative design, AI agents, and plan-driven workflows. You can try this experience to move from idea to a working app faster.
 
 1. Power Apps creates the app and opens [Power Apps Studio](power-apps-studio.md), where you can continue building.
 
