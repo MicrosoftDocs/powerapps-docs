@@ -10164,6 +10164,11 @@
       "source_path": "powerapps-docs/guidance/planning/worth-automating-process.md",
       "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/get-started-test-drive.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/create-blank-app",
+      "redirect_document_id": false
     }
   ]
 }
