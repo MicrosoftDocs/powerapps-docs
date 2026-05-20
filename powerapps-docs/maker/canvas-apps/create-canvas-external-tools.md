@@ -58,7 +58,7 @@ Before you start, make sure that you have the required software and permissions.
 ### Additional requirements
 
 - A Power Platform environment and permission to create or edit a canvas app.
-- Power Apps Studio open with **coauthoring** enabled for the app that you want to create or edit.
+- Power Apps Studio open with **[coauthoring](copresence-power-apps-studio.md)** enabled for the app that you want to create or edit.
   - To enable coauthoring, open your app in Power Apps Studio, go to **Settings** > **Updates**, and turn on **Coauthoring**.
 
 ## Install the canvas apps plugin
