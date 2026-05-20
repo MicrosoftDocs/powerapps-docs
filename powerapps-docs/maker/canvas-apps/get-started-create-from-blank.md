@@ -60,7 +60,7 @@ Power Apps uploads the first 20 rows so that you can start reviewing the app rig
 
 Store the Excel file in a cloud storage service such as Dropbox, Google Drive, OneDrive, or OneDrive for Business. Power Apps can connect only to Excel files that are stored in the cloud.
 
-Power Apps includes an Excel connector that lets you access Excel data. The [Excel Online (Business)](/connectors/excelonlinebusiness/) connector provides a fast way to create and deploy apps that use data stored in Excel.
+Power Apps includes an Excel connector that you can use to access Excel data. The [Excel Online (Business)](/connectors/excelonlinebusiness/) connector provides a fast way to create and deploy apps that use data stored in Excel.
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 1. On the home screen, select **Start with data**.
@@ -69,7 +69,7 @@ Power Apps includes an Excel connector that lets you access Excel data. The [Exc
 1. Enter the file location, and then select the table.
 1. Select **Create app**.
 
-For more information about how to share Excel data, see [Sharing Excel tables](connections/cloud-storage-blob-connections.md#sharing-excel-tables).
+To learn more about sharing Excel data, see [Sharing Excel tables](connections/cloud-storage-blob-connections.md#sharing-excel-tables).
 
 ## Create a blank canvas app and add Excel data
 
@@ -257,7 +257,7 @@ For more information about these and other functions, see the [formula reference
 
 ### Test the app
 
-1. Select **ViewScreen**, and then preview play button to **Preview the app**.
+1. Select **ViewScreen**, and then select the preview play button to **Preview the app**.
 1. Type one or more letters in the search box to filter the list by volunteer name.
 1. Select the sort icon one or more times to sort the data in ascending or descending order by volunteer name.
 1. Add a record.
