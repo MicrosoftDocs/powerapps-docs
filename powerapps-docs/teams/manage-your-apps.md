@@ -5,8 +5,7 @@ author: chmoncay
 ms.author: chmoncay
 ms.topic: how-to
 ms.custom: 
-ms.collection:
-  - ai-assisted
+ai-usage: ai-assisted
 ms.date: 05/20/2026
 ms.subservice: teams
 ms.reviewer: mkaur
