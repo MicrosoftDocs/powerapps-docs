@@ -39,7 +39,7 @@ To use Microsoft 365 Copilot in canvas apps, make sure the following prerequisit
 - Your tenant must be set to allow **Dataverse data available in Microsoft 365 Copilot**. For more information, see [Enable Microsoft 365 admin center Copilot Dataverse settings](../data-platform/data-platform-intelligence.md#enable-microsoft-365-admin-center-copilot-dataverse-settings).
 - Dataverse Search must be set to **Default** or **On** for the environment. Fore more information, see [Understand what this means for generative AI experiences](/power-platform/admin/configure-relevance-search-organization#what-dataverse-search-means-for-generative-ai-enabled-experiences).
 - To use the Microsoft 365 Copilot feature in a Power Apps app, users must have both a Power Apps premium license and a Microsoft 365 Copilot license.  
-- To use the Microsoft 365 Copilot feature in Dynamics 365 app, users only need a Dynamics 365 Enterprise or Premium license.  However, to get the full capabilities of Work IQ, beyond Dataverse grounding, a Microsoft 365 Copilot license is required.
+- To use the Microsoft 365 Copilot feature in a Dynamics 365 app, users must have a Dynamics 365 Enterprise or Premium license.  However, to get the full capabilities of Work IQ, beyond Dataverse grounding, a Microsoft 365 Copilot license is required.
 
 > [!NOTE]
 >
