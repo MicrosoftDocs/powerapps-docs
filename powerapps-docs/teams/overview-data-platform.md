@@ -3,8 +3,7 @@ title: Microsoft Dataverse for Teams overview | Microsoft Docs
 description: Provides the benefits of Dataverse for Teams.
 author: NHelgren
 ms.topic: overview
-ms.collection:
-  - ai-assisted
+ai-usage: ai-assisted
 ms.date: 05/20/2026
 ms.subservice: teams
 ms.author: nhelgren
