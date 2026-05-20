@@ -86,8 +86,7 @@ If you want to understand the building blocks of a Dataverse app, start with a b
 
 1. Select **Add data**, enter **Accounts** in the search box, and then select it. And close the **Data** pane by selecting the close icon in the upper-right corner.
 
-   :::image type="content" source="./media/data-platform-create-app-scratch/add-and-close-data.png" alt-text="Screenshot of the close data pane." lightbox="./media/data-platform-create-app-scratch/add-and-close-data.png":::
-
+   :::image type="content" source="./media/data-platform-create-app-scratch/add-and-close-data.png" alt-text="Screenshot of the close data pane.":::
 ### Add a list screen
 
 1. On the command bar, select **New screen** > **List**.
@@ -106,14 +105,13 @@ If you want to understand the building blocks of a Dataverse app, start with a b
 1. In the gallery's **Properties** pane, set **Layout** to **Title**.
 1. Edit the **Title** text property and rename it to **Browse**. For more information, see [Customize a gallery](customize-layout-sharepoint.md).
 
-   :::image type="content" source="./media/data-platform-create-app-scratch/rename-browse.png" alt-text="Screenshot of the Browse screen showing a list of accounts." lightbox="./media/data-platform-create-app-scratch/rename-browse.png":::
+   :::image type="content" source="./media/data-platform-create-app-scratch/rename-browse.png" alt-text="Screenshot of the Browse screen showing a list of accounts.":::
 
 1. In the left app authoring pane, hover over **Screen1**, select the ellipsis icon (...), and then select **Delete**.
 1. In the left app authoring pane, hover over **Screen2**, select the ellipsis icon (...), and then select **Rename**.
 1. Type or paste **BrowseScreen**, and then rename the gallery in that screen to **BrowseGallery**.
 
-   :::image type="content" source="./media/data-platform-create-app-scratch/rename-screens.png" alt-text="Screenshot of the renamed BrowseScreen and BrowseGallery in the tree view." lightbox="./media/data-platform-create-app-scratch/rename-screens.png":::
-
+   :::image type="content" source="./media/data-platform-create-app-scratch/rename-screens.png" alt-text="Screenshot of the renamed BrowseScreen and BrowseGallery in the tree view.":::
 ### Add a form screen
 
 1. Repeat the first step in the previous procedure, but add a **Form** screen instead of a **List** screen.
@@ -131,13 +129,13 @@ If you want to understand the building blocks of a Dataverse app, start with a b
    > [!NOTE]
    > Outside of this scenario, you can create a custom field by selecting **New field**, entering the required information, and then selecting **Done**. For more information, see [Create a column](../data-platform/create-edit-field-portal.md#create-a-column).
 
-   :::image type="content" source="./media/data-platform-create-app-scratch/choose-or-add-fields.png" alt-text="Screenshot of the Choose a field pane with the New field option highlighted." lightbox="./media/data-platform-create-app-scratch/choose-or-add-fields.png":::
+   :::image type="content" source="./media/data-platform-create-app-scratch/choose-or-add-fields.png" alt-text="Screenshot of the Choose a field pane with the New field option highlighted.":::
 
 1. Set the title bar's **Text** property to show **Create/Edit**.
 
    The screen reflects your changes.
 
-   :::image type="content" source="./media/data-platform-create-app-scratch/field-list.png" alt-text="Screenshot of the Create/Edit form screen showing the configured fields." lightbox="./media/data-platform-create-app-scratch/field-list.png":::
+   :::image type="content" source="./media/data-platform-create-app-scratch/field-list.png" alt-text="Screenshot of the Create/Edit form screen showing the configured fields.":::
 
 1. Rename this screen **FormScreen**.
 
@@ -147,38 +145,40 @@ If you want to understand the building blocks of a Dataverse app, start with a b
 
    `Refresh(Accounts)`
 
-   :::image type="content" source="./media/data-platform-create-app-scratch/refresh-icon.png" alt-text="Screenshot of the refresh icon." lightbox="./media/data-platform-create-app-scratch/refresh-icon.png":::
+   :::image type="content" source="./media/data-platform-create-app-scratch/refresh-icon.png" alt-text="Screenshot of the refresh icon.":::
+
+
 
 1. Set the **OnSelect** property of the plus icon to this formula:
 
    `NewForm(EditForm1); Navigate(FormScreen, ScreenTransition.None)`
 
-   :::image type="content" source="./media/data-platform-create-app-scratch/plus-icon.png" alt-text="Screenshot of the plus add icon." lightbox="./media/data-platform-create-app-scratch/plus-icon.png":::
+   :::image type="content" source="./media/data-platform-create-app-scratch/plus-icon.png" alt-text="Screenshot of the plus add icon.":::
 
 1. Set the **OnSelect** property of the first arrow that points to the right to this formula:
 
    `EditForm(EditForm1); Navigate(FormScreen, ScreenTransition.None)`
 
-   :::image type="content" source="./media/data-platform-create-app-scratch/next-icon.png" alt-text="Screenshot of the next arrow icon." lightbox="./media/data-platform-create-app-scratch/next-icon.png":::
+   :::image type="content" source="./media/data-platform-create-app-scratch/next-icon.png" alt-text="Screenshot of the next arrow icon.":::
 
 1. On **FormScreen**, set the **OnSelect** property of the cancel icon to this formula:
 
    `ResetForm(EditForm1);Navigate(BrowseScreen, ScreenTransition.None)`
 
-   :::image type="content" source="./media/data-platform-create-app-scratch/cancel-icon.png" alt-text="Screenshot of the cancel icon." lightbox="./media/data-platform-create-app-scratch/cancel-icon.png":::
+   :::image type="content" source="./media/data-platform-create-app-scratch/cancel-icon.png" alt-text="Screenshot of the cancel icon.":::
 
 1. Set the **OnSelect** property of the checkmark icon to this formula:
 
    `SubmitForm(EditForm1); Navigate(BrowseScreen, ScreenTransition.None)`
 
-   :::image type="content" source="./media/data-platform-create-app-scratch/checkmark-icon.png" alt-text="Screenshot of the checkmark icon." lightbox="./media/data-platform-create-app-scratch/checkmark-icon.png":::
+   :::image type="content" source="./media/data-platform-create-app-scratch/checkmark-icon.png" alt-text="Screenshot of the checkmark icon.":::
 
 1. On the **Insert** tab, select **Icons**, and then select the **Trash** icon.
 1. Set the **Trash** icon's **Color** property to **White** and its **OnSelect** property to this formula:
 
    `Remove(Accounts, BrowseGallery.Selected); Navigate(BrowseScreen, ScreenTransition.None)`
 
-   :::image type="content" source="./media/data-platform-create-app-scratch/trash-icon.png" alt-text="Screenshot of the trash delete icon." lightbox="./media/data-platform-create-app-scratch/trash-icon.png":::
+   :::image type="content" source="./media/data-platform-create-app-scratch/trash-icon.png" alt-text="Screenshot of the trash delete icon.":::
 
 ### Test the app
 
@@ -188,7 +188,6 @@ If you want to understand the building blocks of a Dataverse app, start with a b
 
 ## See also
 
-- [Overview of the new Power Apps vibe experience (preview)](../../vibe/overview.md)
 - [Customize a gallery](customize-layout-sharepoint.md)
 - [Create a column](../data-platform/create-edit-field-portal.md#create-a-column)
 
