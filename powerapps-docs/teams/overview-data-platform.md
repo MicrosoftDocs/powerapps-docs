@@ -3,7 +3,9 @@ title: Microsoft Dataverse for Teams overview | Microsoft Docs
 description: Provides the benefits of Dataverse for Teams.
 author: NHelgren
 ms.topic: overview
-ms.date: 09/22/2020
+ms.collection:
+  - ai-assisted
+ms.date: 05/20/2026
 ms.subservice: teams
 ms.author: nhelgren
 ms.reviewer: matp
@@ -36,7 +38,7 @@ Some of the benefits of Dataverse for Teams include:
 
 - The capability to be upgraded to Dataverse.
 
-See also: [Dataverse for Teams FAQs](data-platform-faqs.md)
+For the latest licensing, capacity, and request-limit guidance, see [Dataverse for Teams FAQs](data-platform-faqs.md) and [About the Dataverse for Teams environment](/power-platform/admin/about-teams-environment).
 
 ## Tables in Dataverse for Teams
 
@@ -64,7 +66,8 @@ You can administer and manage Dataverse for Teams environment using the Power Pl
 [How are Dataverse for Teams and Dataverse different?](data-platform-compare.md) <br />
 [Create tables](create-table.md)<br/>
 [Work with table relationships](relationships-table.md)<br/>
-[Dataverse for Teams FAQs](data-platform-faqs.md)
+[Dataverse for Teams FAQs](data-platform-faqs.md)<br/>
+[Overview of creating apps in Teams](create-apps-overview.md)
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
