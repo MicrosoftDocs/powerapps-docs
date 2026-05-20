@@ -4,7 +4,9 @@ description: Explains how to create a Dataverse for Teams table.
 author: NHelgren
 ms.topic: how-to
 ms.custom: 
-ms.date: 07/01/2024
+ms.collection:
+  - ai-assisted
+ms.date: 05/20/2026
 ms.subservice: teams
 ms.author: nhelgren
 ms.reviewer: matp
@@ -14,6 +16,11 @@ contributors:
 # Create tables in Microsoft Teams
 
 In Teams, data is defined by *tables*. To create a table, you must be a member of a team.
+
+> [!NOTE]
+> The Teams experience changes frequently. If the current Teams UI or screenshots in this article don't match what you see, use the option names and overall flow as your guide.
+
+If you need to work with existing data after the table is created, see [Edit table data in Excel and publish it back to Dataverse for Teams](edit-data-in-excel.md) and [Dataverse for Teams FAQs](data-platform-faqs.md#how-do-users-import-data-into-tables-in-dataverse-for-teams).
 
 ## Types of tables
 
@@ -57,6 +64,8 @@ Watch this video for a quick overview about how to create a table in Dataverse f
 ### See also
 
 [Edit or delete a table](edit-delete-table.md)
+[Overview of Microsoft Dataverse for Teams](overview-data-platform.md)
+[Dataverse for Teams FAQs](data-platform-faqs.md)
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
