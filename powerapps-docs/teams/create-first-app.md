@@ -4,9 +4,8 @@ description: Learn how to create your first app in Teams.
 author: mduelae
 
 ms.topic: how-to
-ms.collection:
-  - get-started
-  - ai-assisted
+ms.collection: get-started
+ai-usage: ai-assisted
 ms.date: 05/20/2026
 ms.subservice: teams
 ms.author: saperlmu
