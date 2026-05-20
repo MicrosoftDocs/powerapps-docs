@@ -6,7 +6,7 @@ ms.author: chmoncay
 ms.topic: overview
 ms.date: 05/20/2026
 ms.subservice: teams
-ms.collection: ai-assisted
+ai-usage: ai-assisted
 ms.reviewer: mkaur
 contributors:
   - mduelae
