@@ -97,7 +97,7 @@ If you want to understand the building blocks of a Dataverse app, start with a b
 
    This formula does the following:
 
-    This expression searches the CustomGallerySample table for records where the SampleText column contains the text entered in TextSearchBox1, then sorts the filtered results by the SampleText column in descending order if SortDescending1 is true, otherwise in ascending order.
+    This expression filters the CustomGallerySample table for records whose SampleText column contains the text entered in TextSearchBox1. It then sorts the filtered results by the SampleText column in descending order when SortDescending1 is true; otherwise, it sorts them in ascending order.
 
    You can use [these and many other functions](formula-reference.md) to control how your app looks and behaves.
 
