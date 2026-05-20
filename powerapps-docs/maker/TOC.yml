@@ -313,8 +313,6 @@
           href: ./canvas-apps/customize-list-form.md  
       - name: From Excel
         href: ./canvas-apps/get-started-create-from-blank.md
-    - name: Create an app from a template
-      href: ./canvas-apps/get-started-test-drive.md
   - name: Design and build an app
     items:
       - name: Design and build an app
