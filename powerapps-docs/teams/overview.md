@@ -4,8 +4,7 @@ description: Provides an overview of using Power Apps with Microsoft Teams.
 author: mduelae
 
 ms.topic: overview
-ms.collection:
-  - ai-assisted
+ai-usage: ai-assisted
 
 ms.date: 05/20/2026
 ms.subservice: teams
