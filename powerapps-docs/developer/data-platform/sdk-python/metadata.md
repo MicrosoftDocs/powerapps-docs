@@ -5,7 +5,7 @@ author: phecke
 ms.author: pehecke
 ms.reviewer: pehecke
 ms.date: 05/14/2026
-ms.topic: 
+ms.topic: concept-article
 ---
 
 # Customize tables and columns

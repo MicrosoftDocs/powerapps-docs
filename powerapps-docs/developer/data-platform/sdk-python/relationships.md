@@ -5,6 +5,7 @@ ms.date: 05/14/2026
 author: phecke
 ms.author: pehecke
 ms.reviewer: pehecke
+ms.topic: concept-article
 ---
 
 # Relationship management
