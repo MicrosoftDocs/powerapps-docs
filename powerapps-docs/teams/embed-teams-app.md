@@ -4,9 +4,8 @@ description: You can embed an app created in Power Apps in Microsoft Teams to sh
 author: msftsamperl
 ms.topic: how-to
 ms.custom: canvas
-ms.collection:
-  - get-started
-  - ai-assisted
+ms.collection: get-started
+ai-usage: ai-assisted
 ms.reviewer: mkaur
 ms.date: 05/20/2026
 ms.subservice: teams
