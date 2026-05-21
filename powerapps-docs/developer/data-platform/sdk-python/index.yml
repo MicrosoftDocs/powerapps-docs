@@ -43,11 +43,11 @@ landingContent:
         links:
           - text: "Work with data"
             url: work-data.md
-          - text: "Querying data"
+          - text: "Query data"
             url: query.md
           - text: "Customize tables and columns"
             url: metadata.md
-          - text: "Relationship management"
+          - text: "Manage table relationships"
             url: relationships.md
 
   # Card

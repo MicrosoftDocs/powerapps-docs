@@ -9,13 +9,13 @@ items:
         href: quick-guide-dataverse.md
       - name: Getting started
         href: get-started.md
-      - name: Working with data
+      - name: Work with data
         href: work-data.md
-      - name: Querying data
+      - name: Query data
         href: query.md
       - name: Customize tables and columns
         href: metadata.md
-      - name: Relationship management
+      - name: Manage table relationships
         href: relationships.md
       - name: Python Package Reference
         href: /python/api/dataverse-sdk-docs-python/dataverse-overview?view=dataverse-sdk-python-latest&preserve-view=true

@@ -1,16 +1,18 @@
 ---
 title: Relationship management
 description: Learn how to create relationships between tables.
-ms.date: 05/14/2026
+ms.date: 05/20/2026
 author: phecke
 ms.author: pehecke
 ms.reviewer: pehecke
 ms.topic: concept-article
 ---
 
-# Relationship management
+# Manage table relationships
 
-Create relationships between tables by using the relationship APIs.
+Table relationships in Microsoft Dataverse define the ways that table rows can be associated with rows from other tables or the same table. There are two types of table relationships: one-to-many, and many-to-many. You can create create relationships between tables by using the relationship APIs as demonstrated below.
+
+More information: [Microsoft Dataverse table relationships](../../../maker/data-platform/create-edit-entity-relationships.md)
 
 ```python
 from PowerPlatform.Dataverse.models.relationship import (

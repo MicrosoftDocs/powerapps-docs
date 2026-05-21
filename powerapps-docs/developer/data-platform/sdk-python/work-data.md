@@ -3,7 +3,7 @@ title: "Work with Dataverse Data Using Python SDK"
 description: "Learn common scenarios for working with Dataverse data using the Python SDK, including CRUD, bulk operations, upserts, and batching. Start coding today."
 ms.author: paulliew
 author: paulliew
-ms.date: 05/13/2026
+ms.date: 05/20/2026
 ms.reviewer: phecke
 ms.topic: example-scenario
 contributors:
@@ -178,7 +178,7 @@ client.records.upsert("account", [
 
 ## DataFrames
 
-The SDK provides pandas wrappers for all CRUD operations through the `client.dataframe` namespace. These wrappers use DataFrames and Series for input and output.
+The SDK provides pandas wrappers for all CRUD operations through the `client.dataframe` namespace. These wrappers use pandas' DataFrame and Series APIs for input and output.
 
 > [!NOTE]
 > `client.dataframe.get()` is deprecated. Use the GA patterns shown in the following sections.
@@ -304,21 +304,20 @@ for page in pages:  # page is list[dict]
 
 ## Upload files to Dataverse
 
-Here are two examples of uploading a file named `test.pdf` to the [File column](../../..//maker/data-platform/types-of-fields.md#file-columns) named `sample_filecolumn` of an account record. The first example is for a file size less than 128 MB, and the second example is for a file size over 128 MB.
+Here is an example of uploading a file named `document.pdf` to the [File column](../../../maker/data-platform/types-of-fields.md#file-columns) named `new_Document` of an account record. The SDK for Python automatically handles file "chunking" for files greater than 128 MB in size.
 
 ```python
-client.upload_file('account', record_id, 'sample_filecolumn', 'test.pdf')
-client.upload_file('account', record_id, 'sample_filecolumn', 'test.pdf', mode='chunk', if_none_match=True)
+# Upload a file to a record
+client.files.upload(
+    "account",
+    account_id,
+    "new_Document",
+    "/path/to/document.pdf",
+)
 ```
 
 > [!TIP]
 > If the file column doesn't exist, the SDK creates it automatically.
-
-Additional information about file uploads:
-
-- `upload_file` picks one of three methods to use based on the file size. If the file size is less than 128 MB, the SDK uses `upload_file_small`. Otherwise, the SDK uses `upload_file_chunk`.
-- `upload_file_small` makes a single Web API call and only supports file sizes less than 128 MB.
-- `upload_file_chunk` uses PATCH with Content-Range to upload the file. This method is more aligned with the HTTP standard compared to Dataverse messages. It consists of two stages: 1. PATCH request to get the headers used for the actual upload, and 2. Actual upload in chunks. The function uses OData `x-ms-chunk-size` returned in the first stage to determine chunk size (normally 4 MB), and then uses `Content-Range` and `Content-Length` as metadata for the upload. The total number of Web API calls is the number of chunks plus one.
 
 ## Batch operations
 
@@ -415,10 +414,12 @@ batch.dataframe.delete("account", pd.Series([id1, id2]))
 result = batch.execute()
 ```
 
-For a complete batvh example see [examples/advanced/batch.py](https://github.com/microsoft/PowerPlatform-DataverseClient-Python/blob/main/examples/advanced/batch.py).
+For a complete batch example see [examples/advanced/batch.py](https://github.com/microsoft/PowerPlatform-DataverseClient-Python/blob/main/examples/advanced/batch.py).
 
 ## Related information
 
+- [Customize tables and columns](metadata.md)
+- [Query data](query.md)
 - [SDK for Python code examples](https://github.com/microsoft/PowerPlatform-DataverseClient-Python/tree/main/examples)
 - [SDK for Python README](https://github.com/microsoft/PowerPlatform-DataverseClient-Python/blob/main/README.md)
 

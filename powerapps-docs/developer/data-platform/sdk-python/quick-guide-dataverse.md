@@ -24,7 +24,7 @@ Data is stored in tables, which are organized into rows and columns. Messages ar
 
 There are three kinds of tables you would commonly use in Dataverse: system, customizable, and custom. System tables, also known as out-of-box tables, can't be changed and support the basic functionality of Dataverse. Customizable and custom tables can be interactively or programmatically modified by the user if that person has the appropriate permissions to do so.
 
-To interactively [create or modify a table](../../../maker/data-platform/create-edit-entities-portal.md?tabs=excel), use the [Power Platform admin center](/power-platform/admin/) (PPAC). To programmatically create or modify a table, you modify table metadata. The SDK for Python includes functions (for example `create_table`, `delete_table`) that easily enable you to work with table metadata.
+To interactively [create or modify a table](../../../maker/data-platform/create-edit-entities-portal.md?tabs=excel), use the [Power Platform admin center](/power-platform/admin/) (PPAC). To programmatically create or modify a table, you modify table metadata. The SDK for Python includes functions (in `client.tables`) that easily enable you to work with table metadata.
 
 Dataverse table rows, also known as records, are represented as Python dictionaries with column schema names.
 

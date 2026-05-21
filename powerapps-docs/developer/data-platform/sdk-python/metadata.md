@@ -4,7 +4,7 @@ description: Learn how to customize Dataverse tables and columns definitions usi
 author: phecke
 ms.author: pehecke
 ms.reviewer: pehecke
-ms.date: 05/14/2026
+ms.date: 05/20/2026
 ms.topic: concept-article
 ---
 
@@ -15,51 +15,59 @@ The SDK supports create, update, and delete (CUD) operations for [custom tables]
 Let's look at example code for working with a custom table.
 
 ```python
-# Support enumerations with labels in different languages
-class Status(IntEnum):
-    Active = 1
-    Inactive = 2
-    Archived = 5
-    __labels__ = {
-        1033: {
-            "Active": "Active",
-            "Inactive": "Inactive",
-            "Archived": "Archived",
-        },
-        1036: {
-            "Active": "Actif",
-            "Inactive": "Inactif",
-            "Archived": "Archivé",
-        }
-    }
+# Create a custom table, including the customization prefix value in the schema names for the table and columns.
+table_info = client.tables.create("new_Product", {
+    "new_Code": "string",
+    "new_Description": "memo",
+    "new_Price": "decimal",
+    "new_Active": "bool"
+})
 
-# Create a simple custom table and a few columns
-info = client.create_table(
-    "SampleItem",  # friendly name; defaults to SchemaName new_SampleItem
-    {
-        "code": "string",
-        "count": "int",
-        "amount": "decimal",
-        "when": "datetime",
-        "active": "bool",
-        "status": Status,
+# Create with custom primary column name and solution assignment
+table_info = client.tables.create(
+    "new_Product",
+    columns={
+        "new_Code": "string",
+        "new_Price": "decimal"
     },
+    solution="MyPublisher",  # Optional: add to specific solution
+    primary_column="new_ProductName",  # Optional: custom primary column (default is "{customization prefix value}_Name")
 )
 
-logical = info["entity_logical_name"]  # for example, "new_sampleitem"
+# Get table information
+info = client.tables.get("new_Product")
+print(f"Logical name: {info['table_logical_name']}")
+print(f"Entity set: {info['entity_set_name']}")
 
-# Create a record in the new table
-# Set your publisher prefix (used when creating the table). If you used the default, it's "new".
-prefix = "new"
-name_attr = f"{prefix}_name"
-id_attr = f"{logical}id"
+# List all tables
+tables = client.tables.list()
+for table in tables:
+    print(table)
 
-rec_id = client.create(logical, {name_attr: "Sample A"})[0]
+# Add columns to existing table (columns must include customization prefix value)
+client.tables.add_columns("new_Product", {"new_Category": "string"})
+
+# Remove columns
+client.tables.remove_columns("new_Product", ["new_Category"])
+
+# List all columns (attributes) for a table to discover schema
+columns = client.tables.list_columns("account")
+for col in columns:
+    print(f"{col['LogicalName']} ({col.get('AttributeType')})")
+
+# List only specific properties
+columns = client.tables.list_columns(
+    "account",
+    select=["LogicalName", "SchemaName", "AttributeType"],
+    filter="AttributeType eq 'String'",
+)
 
 # Clean up
-client.delete(logical, rec_id)          # delete record
-client.delete_table("SampleItem")       # delete table (friendly name or explicit schema new_SampleItem)
+client.tables.delete("new_Product")
 ```
+
+> [!IMPORTANT]
+> All custom column names must include the customization prefix value (for example, "new_"). This ensures explicit, predictable naming and aligns with Dataverse metadata requirements.
 
 For more information about working with custom table metadata:
 
@@ -68,11 +76,10 @@ For more information about working with custom table metadata:
 - Passing a list of payloads to `create` triggers a bulk create and returns `list[str]` of IDs.
 - `get` supports single record retrieval with record ID or paging through result sets (prefer select to limit columns).
 - For CRUD methods that take a record ID, pass the GUID string (36-character hyphenated). Parentheses around the GUID are accepted but not required.
-<!-- TODO: Move this to the SQL article when written-->
-- SQL queries are executed directly against the entity set endpoints by using the `?sql=` parameter. Supported subset only (single SELECT, optional WHERE/TOP/ORDER BY, alias). The service rejects unsupported constructs.
 
 ## Related information
 
+- [Tables](quick-guide-dataverse.md#tables)
 - [SDK for Python code examples](https://github.com/microsoft/PowerPlatform-DataverseClient-Python/tree/main/examples)
 - [SDK for Python README](https://github.com/microsoft/PowerPlatform-DataverseClient-Python/blob/main/README.md)
 
