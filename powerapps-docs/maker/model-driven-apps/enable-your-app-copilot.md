@@ -5,7 +5,7 @@ description: Learn how to enable your app in Microsoft 365 Copilot to create app
 author: Mattp123
 ms.author: hemantg
 ms.reviewer: matp
-ms.date: 05/06/2026
+ms.date: 05/21/2026
 ms.topic: how-to
 ms.service: powerapps
 ms.subservice: mda-maker
