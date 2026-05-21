@@ -26,7 +26,16 @@ With Dataverse intelligence, you can define reusable business context that agent
 
 Microsoft 365 Copilot can use Dataverse data to help users find information and take action with natural language across Microsoft 365 experiences.
 
-Dataverse table data from Power Apps (model-driven and canvas apps) can be searched and reasoned over in Microsoft 365 Copilot. Copilot can find relevant rows and related records, interpret table relationships, and summarize or answer questions based on your data. More information: [Dataverse data in Microsoft 365 Copilot](data-platform-data-copilot.md)
+Dataverse table data from Power Apps (model-driven) can be searched and reasoned over in Microsoft 365 Copilot. Copilot can find relevant rows and related records, interpret table relationships, and summarize or answer questions based on your data. More information: [Dataverse data in Microsoft 365 Copilot](data-platform-data-copilot.md)
+
+## Prerequisites
+
+- Microsoft 365 admin role (AI administrator, Global administrator) to access Microsoft 365 admin center Copilot settings. More information: [Enable Microsoft 365 admin center Copilot Dataverse settings](#enable-microsoft-365-admin-center-copilot-dataverse-settings-preview)
+- Power Platform administrator role to access Copilot environment settings. More information: [Enable Copilot](https://learn.microsoft.com/power-platform/admin/settings-features#copilot-preview).
+- Power Platform administrator role to access Dataverse Search environment settings. More information: [Enable Dataverse search](https://learn.microsoft.com/power-platform/admin/settings-features#search).
+- Power Platform administrator role to access Dataverse intelligence environment settings. More information: [Enable Dataverse intelligence: Allow data availability in Microsoft 365 Copilot](https://learn.microsoft.com/power-platform/admin/settings-features#dataverse-intelligence-preview).
+- Power Platform administrator role to access the Power Apps application settings. More information: [Enable Microsoft 365 Copilot in a model-driven app](https://learn.microsoft.com/power-apps/maker/model-driven-apps/add-microsoft-365-copilot#enable-microsoft-365-copilot-in-a-model-driven-app).
+
 
 ## Business skills
 
@@ -34,8 +43,6 @@ Business skills help makers and users interpret data, improve processes, and mak
 
 ## Prerequisites
 
-- Microsoft 365 admin role (AI administrator, Global administrator) to access Microsoft 365 admin center Copilot settings. More information: [Enable Microsoft 365 admin center Copilot Dataverse settings](#enable-microsoft-365-admin-center-copilot-dataverse-settings-preview)
-- Power Platform administrator role to access Dataverse intelligence environment settings. More information: [Enable Dataverse intelligence](#enable-dataverse-intelligence-preview)
 - The environment where you use Dataverse intelligence must be a Managed Environment.
 - The environment must be enabled and configured for Dataverse MCP server preview. Business skills are only available for use with the preview version of Dataverse MCP server. More information: [Use preview tools and upcoming features in Dataverse MCP server](data-platform-mcp-preview-tools.md)
 
@@ -47,15 +54,6 @@ Business skills help makers and users interpret data, improve processes, and mak
 1. Select **Specific groups** and enter the list of Entra security groups. 
 1. Select **Save** to save the setting changes.
 
-## Enable Dataverse intelligence (preview)
-
-1. Go to [Power Platform admin center](https://admin.powerplatform.microsoft.com/). Select **Manage** >**Environments**.
-1. Open the environment where you want to turn on the Dataverse MCP server, and then select **Settings** > **Product** > **Features**.  
-1. Scroll down to locate **Dataverse intelligence**.
-   - Turn on **Allow data availability in M365 copilot**, and/or...
-   - Turn on **Enable Dataverse intelligence (Work IQ) for agents and AI experiences**. 
-1. Make sure **Allow MCP clients to interact with Dataverse MCP server (Preview version)** is enabled. If it's not, enable it.
-1. Select **Save** to save the setting changes.
 
 ## Next steps
 
