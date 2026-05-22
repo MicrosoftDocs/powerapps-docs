@@ -313,8 +313,6 @@
           href: ./canvas-apps/customize-list-form.md  
       - name: From Excel
         href: ./canvas-apps/get-started-create-from-blank.md
-    - name: Create an app from a template
-      href: ./canvas-apps/get-started-test-drive.md
   - name: Design and build an app
     items:
       - name: Design and build an app
@@ -621,7 +619,7 @@
               href: ./canvas-apps/controls/control-export-import.md
             - name: Gallery
               href: ./canvas-apps/controls/control-gallery.md
-            - name: Grid container (preview)
+            - name: Grid container
               href: ./canvas-apps/controls/control-grid-container.md
             - name: Horizontal container
               href: ./canvas-apps/controls/control-horizontal-container.md
@@ -1810,7 +1808,7 @@
         href: ./model-driven-apps/reporting-overview.md
       - name: Apply data visualizations in an app
         items:
-        - name: Create a system chart
+        - name: Create a system chart (preview)
           href: ./model-driven-apps/create-edit-system-chart.md
         - name: Create or edit dashboards
           href: ./model-driven-apps/create-edit-dashboards.md
@@ -1910,14 +1908,8 @@
       href: ./model-driven-apps/distribute-model-driven-app.md
     - name: Enable customizable help
       href: ./model-driven-apps/use-customizable-help.md
-  - name: App performance insights
-    items:
-    - name: Performance insights overview
-      href: ./common/performance-insights-overview.md
-    - name: Understand performance insights
-      href: ./common/performance-insights-categories.md
-    - name:  Use Monitor to get insights and recommendations
-      href: common/monitor-app-performance.md
+  - name: Use Monitor to get insights and recommendations
+    href: common/monitor-app-performance.md
   - name: App ratings (preview)
     href: ./common/app-ratings.md
   - name: FAQ about model-driven apps
@@ -2159,7 +2151,7 @@
       href: ./data-platform/create-edit-global-option-sets.md
     - name: Autonumber columns
       href: ./data-platform/autonumber-fields.md
-    - name: Prompt columns (preview)
+    - name: Prompt columns
       href: ./data-platform/prompt-column.md
     - name: Work with Power Fx formula columns
       items:

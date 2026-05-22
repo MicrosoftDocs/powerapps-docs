@@ -1,12 +1,12 @@
 ---
 title: Understand data sources for canvas apps
-description: Learn about working with connections and data sources for canvas apps.
+description: Learn about connections, data source types, delegation limits, error handling, and collections for canvas apps.
 author: gregli-msft
 
 ms.topic: concept-article
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 03/08/2017
+ms.date: 05/4/2026
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -20,7 +20,7 @@ contributors:
 
 In Power Apps, most canvas apps use external information stored in cloud services called **Data Sources**. A common example is a table in an Excel file stored in OneDrive. Apps access these data sources by using **Connections**.
 
-This article discusses the different kinds of data sources and how to work with table data sources.
+This article discusses the different kinds of data sources and how to work with table data sources, including how to handle delegation, error handling, and common issues.
 
 It's easy to create an app that does basic reading and writing to a data source. But sometimes you want more control over how data flows in and out of your app. This article describes how the **[Patch](functions/function-patch.md)**, **[DataSourceInfo](functions/function-datasourceinfo.md)**, **[Validate](functions/function-validate.md)**, and **[Errors](functions/function-errors.md)** functions provide more control.
 
@@ -133,6 +133,23 @@ You don't want to bring those millions of customers into your app, and then choo
 
 Many, but not all, functions that you can use to choose records can be *delegated*, which means that they're run inside the cloud service. Learn more in [Delegation](delegation-overview.md).
 
+> [!IMPORTANT]
+> By default, Power Apps retrieves only the first **500 records** from a data source. You can raise this limit to a maximum of **2,000 records** in app settings. If your data source contains more records and your formula isn't fully delegable, a yellow delegation warning triangle appears in Power Apps Studio. When you see this warning, your app may not return all matching records at runtime. To avoid data loss in large data sets, use delegable functions such as **[Filter](functions/function-filter-lookup.md)** and **[Sort](functions/function-sort.md)** with supported data sources, or consider using Microsoft Dataverse, which has broader delegation support.
+
+#### Identify and resolve delegation warnings
+
+A delegation warning often appears in the formula bar as a yellow triangle when Power Apps can't push a formula operation to the data source, but not every nondelegable case shows this warning. To check whether a formula is delegable:
+
+1. Select the control or formula that processes your data source.
+2. Look for a yellow triangle icon in Power Apps Studio.
+3. Hover over the triangle to read the delegation warning message.
+
+To resolve delegation issues:
+- Replace non-delegable functions (such as **Search** for text columns in SharePoint) with delegable alternatives where possible.
+- Switch to Microsoft Dataverse as your data source for the broadest delegation support.
+- Use server-side views (for SharePoint) or stored procedures (for SQL) to pre-filter data.
+- To troubleshoot delegation issues that aren’t flagged, use Live Monitor under **Advanced tools** to inspect the queries Power Apps sends and the data returned from each data source. For more information, see [Debugging canvas apps with Live monitor](../monitor-canvasapps.md).
+
 ## Collections
 
 Collections are a special type of data source. They're local to the app and not backed by a connection to a service in the cloud. Therefore, the information can't be shared across devices for the same user or between users.
@@ -148,5 +165,37 @@ Collections operate like any other data source, with a few exceptions:
 For more information on working with a collection as a data source, see [create and update a collection](create-update-collection.md).
 
 Collections are commonly used to hold global state for the app. See [working with variables](working-with-variables.md) for the options available for managing state.
+
+## Troubleshoot common data source issues
+
+### My gallery only shows 500 records
+
+By default, Power Apps retrieves only the first 500 records from a data source. If your gallery appears to be missing records, you likely have a delegation issue. Check for a yellow triangle warning on your gallery's **Items** formula, and make sure the filter formula you're using is delegable for your data source. See [Working with large data sources](#working-with-large-data-sources) for resolution steps.
+
+### Column names show _x0020_ in my formulas
+
+If your SharePoint list or Excel table has column names with spaces (for example, **My Column**), Power Apps replaces spaces with `_x0020_` in formulas (for example, `MyTable.My_x0020_Column`). This is expected behavior. Rename the column in the source data to remove spaces, or continue using the encoded name in your formulas.
+
+### Data source changes aren't appearing in my app
+
+If the underlying data changed externally (for example, a record was added in SharePoint), your app doesn't automatically detect changes while it's running. Use the **[Refresh](functions/function-refresh.md)** function to force the app to reload the current data. For example, add a button with `OnSelect = Refresh(MyDataSource)`.
+
+### When should I use Patch instead of SubmitForm?
+
+Use **[SubmitForm](functions/function-form.md)** when you have an **Edit form** control—it handles validation, field mapping, and error display automatically. Use **[Patch](functions/function-patch.md)** when you need to:
+
+- Update a record without a form control.
+- Update only specific fields without affecting others.
+- Write to multiple data sources in one operation.
+- Build a completely custom save experience.
+
+## Related information
+
+- [Delegation overview for canvas apps](delegation-overview.md)
+- [Delegable data sources and functions in canvas apps](delegation-list.md)
+- [Understand canvas-app forms](working-with-forms.md)
+- [Working with tables in canvas apps](working-with-tables.md)
+- [Working with variables in canvas apps](working-with-variables.md)
+- [Create and update a collection in canvas apps](create-update-collection.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
