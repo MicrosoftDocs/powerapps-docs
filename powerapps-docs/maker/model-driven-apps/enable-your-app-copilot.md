@@ -5,7 +5,7 @@ description: Learn how to enable your app in Microsoft 365 Copilot to create app
 author: Mattp123
 ms.author: hemantg
 ms.reviewer: matp
-ms.date: 05/06/2026
+ms.date: 05/21/2026
 ms.topic: how-to
 ms.service: powerapps
 ms.subservice: mda-maker
@@ -79,6 +79,7 @@ In addition to the built-in tools available within the app’s declarative agent
 
 > [!NOTE]
 > You can issue ['-developer on' command](/microsoft-365/copilot/extensibility/debugging-agents-copilot-studio) to Microsoft 365 Copilot to see agent debug info and tools invoked.
+> For troubleshooting common issues, see [Troubleshoot MCP apps in Microsoft 365 Copilot](/microsoft-365/copilot/extensibility/plugin-mcp-apps-troubleshooting)
 
 ### Dynamic tool chaining
 

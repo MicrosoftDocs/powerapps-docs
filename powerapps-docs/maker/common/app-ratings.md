@@ -91,9 +91,8 @@ App ratings also display a comparison across different browsers. The feature can
 
 With the public preview release, the app ratings provides the following direct links to take actions to improve your app:
 1. **[Solution Checker](../data-platform/use-powerapps-checker.md)** – This link takes you to a list of solutions to run solution checker if applicable. Notice that makers or admins must manually identify the solution and run solution checker to identify issues.
-2. **[Performance Insights](performance-insights-overview.md)** – This tool provides direct insights on the respective app’s performance and what makers can do to improve the app performance issues.
-3. **[Monitor](../model-driven-apps/monitor-page-checker.md)** – This tool helps makers troubleshoot and diagnose issues with live monitoring of a user’s session.
-4. **Usability** – This action redirects to documentation of best Power Apps provided recommendations on design and patterns.
+1. **[Monitor](../model-driven-apps/monitor-page-checker.md)** – This tool helps makers troubleshoot and diagnose issues with live monitoring of a user’s session.
+1. **Usability** – This action redirects to documentation of best Power Apps provided recommendations on design and patterns.
 
 ## How the feedback data is stored
 
