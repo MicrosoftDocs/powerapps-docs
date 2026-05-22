@@ -4,7 +4,8 @@ description: Learn the components inside Power Apps Studio in Teams.
 author: jessicaszelo
 ms.topic: how-to
 ms.custom: 
-ms.date: 07/7/2022
+ai-usage: ai-assisted
+ms.date: 05/20/2026
 ms.subservice: teams
 ms.author: szlo
 ms.reviewer: mkaur
@@ -17,6 +18,9 @@ contributors:
 
 When you create a canvas app by using any method, you're taken to the canvas app
 builder called Power Apps Studio. You can use Power Apps Studio to design, build, and manage your canvas app.
+
+> [!NOTE]
+> The Teams experience changes frequently. If the current Teams UI or screenshots in this article don't match what you see, use the option names and overall flow as your guide.
 
 ## Overview of Power Apps Studio
 
@@ -507,7 +511,9 @@ authoring a canvas app has no impact on the aspect ratio configured for the app 
 ### See also
 
 [Use the Fluent UI controls](use-the-fluent-ui-controls.md)  
-[Overview of the Power Apps app](overview-of-the-power-apps-app.md)
+[Overview of the Power Apps app](overview-of-the-power-apps-app.md)  
+[Manage your apps in Teams](manage-your-apps.md)  
+[Create tables in Microsoft Teams](create-table.md)
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
