@@ -1,7 +1,7 @@
 ---
 title: "What is Dataverse intelligence?" 
 description: Learn how to use Microsoft Dataverse intelligence to bring business data understanding to AI agents and Copilot.
-ms.date: 04/30/2026
+ms.date: 05/22/2026
 ms.reviewer: matp
 ms.topic: how-to
 author: prithvi-khosla
@@ -46,7 +46,7 @@ Business skills help makers and users interpret data, improve processes, and mak
 - The environment where you use Dataverse intelligence must be a Managed Environment.
 - The environment must be enabled and configured for Dataverse MCP server preview. Business skills are only available for use with the preview version of Dataverse MCP server. More information: [Use preview tools and upcoming features in Dataverse MCP server](data-platform-mcp-preview-tools.md)
 
-## Enable Microsoft 365 admin center Copilot Dataverse settings (preview)
+## Enable Microsoft 365 admin center Copilot Dataverse settings
 
 1. Go to [Microsoft 365 admin center](https://admin.cloud.microsoft/?#/homepage). Select **Copilot** >**Settings**.
 1. Locate and select **Dataverse data available in Microsoft 365 Copilot**.

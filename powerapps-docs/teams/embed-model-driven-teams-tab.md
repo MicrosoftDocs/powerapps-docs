@@ -1,10 +1,10 @@
 ---
-title: Embed a model-driven app as tab app (preview)
+title: Embed a model-driven app as tab app (preview - retiring May 2026)
 description: "Embed a model-driven app as tab app"
 author: mattp123
 ms.component: pa-user
 ms.topic: how-to
-ms.date: 12/10/2024
+ms.date: 03/31/2026
 ms.subservice: teams
 ms.author: matp
 ms.custom: ""
@@ -16,19 +16,19 @@ contributors: sriharibs-msft
 
 # Embed a model-driven app as tab app in Teams (preview)
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
-
-You can customize the Teams experience by adding Power Apps model-driven apps to your channels in Teams using the **Power Apps** tab. 
+You can customize the Teams experience by adding Power Apps model-driven apps to your channels in Teams using the **Power Apps** tab.
 
 > [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
+>
+> - This feature is deprioritized and will not be delivered. 
+> - New model-driven apps can no longer be added to Teams.
+> - Model-driven apps that are embedded in Teams will continue to function until May 1, 2026. After that date, these apps will no longer work within the Teams experience. Users can continue to use these apps through a web browser or other supported clients.
 > - Running model-driven apps on the Microsoft Teams mobile app is currently not supported.
 > - Opening or downloading file attachments in a model-driven app when the app is embedded in Teams as a tab isn't supported.
 
 ## Embed a model-driven app
 
-1. In Microsoft Teams, select a team, and a channel under that team. In this example, it's the **General** channel under the **Business Development** team.
+1. In Microsoft Teams, select a team, and a channel under that team. In this example, it's the **General** channel under the **Business Development** team.
 
    :::image type="content" source="media/teams-general-channel.png" alt-text="Select a channel, such as the General channel.":::
 

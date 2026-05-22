@@ -1,8 +1,8 @@
 ---
-title: "Configure header properties in the form designer | MicrosoftDocs"
-description: Learn how to configure form header properties for a model-driven app
+title: "Configure header properties in the form designer"
+description: Learn how to configure form header properties for a model-driven app in Power Apps
 ms.custom: ""
-ms.date: 01/06/2025
+ms.date: 04/03/2026
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -31,7 +31,7 @@ Most controls that can't be displayed in form header can be displayed in the [fo
 
 The form header flyout displays when a user selects the chevron located to the right of the form header, which can display more information otherwise hidden in the form header. The header flyout enables users to edit column values.
 
-:::image type="content" source="media/form-header-flyout.png" alt-text="Form header flyout for the account main form that is displaying a control not viewable from the form header.":::
+:::image type="content" source="media/form-header-flyout.png" alt-text="Form header flyout for the account main form that's displaying a control not viewable from the form header.":::
 
 The header flyout displays all header columns including the four columns that are directly displayed in the header. By default, the header flyout is available for display, but makers can hide it if needed.
 
@@ -45,19 +45,21 @@ To show or hide the header flyout for a model-driven form, follow these steps:
 1. In the command bar, select **Save** to save the form, or select **Publish** to save and make your changes visible to users.
 
 > [!NOTE]
+>
 > - Use the new form designer. The classic form designer doesn't provide the ability to show or hide the header flyout.
-> - An image for a table will be displayed in the header only if the **Primary Image** attribute is defined for the table and the form property **Show image in the form** is enabled. More information: [Image columns](../data-platform/types-of-fields.md#image-columns). <br />
-    Developers can specify an image for a table by using the [EntityMetadata.PrimaryImageAttribute](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata.primaryimageattribute) attribute.
+> - An image for a table is displayed in the header only when the **Primary Image** attribute is defined for the table and the form property **Show image in the form** is enabled. More information: [Image columns](../data-platform/types-of-fields.md#image-columns).
+> - Developers can specify an image for a table by using the [EntityMetadata.PrimaryImageAttribute](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata.primaryimageattribute) attribute.
 
 ## High-density header
 
-Model-driven app forms use a high-density form header to ensure that key information is always visible to users. High-density headers also make sure the row title never truncates and long row titles are displayed using multiple lines. Similarly, the high-density header also ensures that up to four column values are directly visible in the header and never truncated or hidden.  
+Model-driven app forms use a high-density form header to ensure that key information is always visible to users. High-density headers also make sure the record title never truncates and long record titles are displayed using multiple lines. Similarly, the high-density header also ensures that up to four column values are directly visible in the header and never truncated or hidden.  
 
-To ensure that key information is always visible, the framework displays up to four read-only column values and users can't directly edit the column values in the header. Visualizations such as custom components or web resources won't render on the header, but will be available in the flyout.
+To ensure that key information is always visible, the framework displays up to four read-only column values and users can't directly edit the column values in the header. Visualizations such as custom components or web resources don't render on the header, but are available in the flyout.
 
 ## Controls that can be displayed on the form header
 
 Columns set to these controls can be displayed in the main body of a high-density header:
+
 - `checkbox`
 - `datetime`
 - `decimal`
@@ -101,7 +103,7 @@ The message helps increase awareness about the high-density header and its benef
 
 This message is displayed in the form designer when a form is using high-density header with the header flyout visible.  
   
-High-density header displays read-only values of the first four columns in the header. When makers add a column in the header in the top four positions, it causes an existing column that was directly displayed in the header to become extended and visible only in the header flyout.      
+High-density header displays read-only values of the first four columns in the header. When makers add a column in the header in the top four positions, it causes an existing column that was directly displayed in the header to become extended and visible only in the header flyout.
 
 The message informs the maker of the change and confirms whether to proceed with the action.
 
@@ -109,7 +111,7 @@ The message informs the maker of the change and confirms whether to proceed with
 
 This message is displayed in the form designer when a form is using high-density header with the header flyout hidden.  
   
-High-density header displays read-only values of up to four columns in the header. Because the header flyout is hidden, users will be unable to see the additional columns.  
+High-density header displays read-only values of up to four columns in the header. Because the header flyout is hidden, users are unable to see the additional columns.  
 
 The message informs the maker that there are already four columns in the header and prevents adding additional columns in the header that users won't be able to see.
 
@@ -117,7 +119,7 @@ The message informs the maker that there are already four columns in the header 
 
 This message is displayed in the form designer when a form is using high-density header with the header flyout hidden.  
   
-High-density header displays read-only values of columns in the header. Because the header flyout is hidden, users will be unable to see any custom components associated with the columns in the header.  
+High-density header displays read-only values of columns in the header. Because the header flyout is hidden, users are unable to see any custom components associated with the columns in the header.  
 
 The message informs the maker that they're trying to add a column with an associated custom component to the header and they must remove the custom component before adding the column to the header. This is because users won't be able to see the custom component in the header.
 
@@ -141,9 +143,9 @@ The message informs the maker that they're trying to move a column from the form
 
 This message is displayed in the classic form designer when a maker opens a main form for editing and it's configured to use high-density header.  
   
-The classic form designer doesn't provide a WYSIWYG authoring experience. It also doesn't detect and prevent or warn makers about the implications of changes they make to the form header. For example, when you edit a form that is using high-density header with the header flyout hidden, the classic form designer won't prevent makers from adding more than four columns to the header even though these columns won't be available to users.  
+The classic form designer doesn't provide a WYSIWYG authoring experience. It also doesn't detect and prevent or warn makers about the implications of changes they make to the form header. For example, when you edit a form that's using high-density header with the header flyout hidden, the classic form designer won't prevent makers from adding more than four columns to the header even though these columns won't be available to users.  
   
-The message informs the maker that when editing a form that is using high-density header, they should use the new form designer. This helps ensure the maker is aware of the impact of their changes to the form header.
+The message informs the maker that when editing a form that's using high-density header, they should use the new form designer. This helps ensure the maker is aware of the impact of their changes to the form header.
 
 ## See also
 

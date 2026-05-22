@@ -186,6 +186,7 @@ The following properties are renamed. Update any formulas in your app that refer
 - **Text scaling**: Fixed an issue where the text control didn't scale correctly within containers.
 - **Updated command bar**: The authoring command bar and right-click menu now show Font, Font size, Alignment, Font color, and Background color for quick access.
 - **Mobile-optimized defaults**: When adding the control in a mobile layout, the app automatically adjusts the defaults (font size 15, padding 5, width 150, height 32).
+- **Inline text editing**: Double-click the Text control on the canvas to edit its text directly inline, without navigating to the formula bar or properties panel.
 
 ## See also
 

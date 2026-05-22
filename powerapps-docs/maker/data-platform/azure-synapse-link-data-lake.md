@@ -1,7 +1,7 @@
 ---
 title: "Create an Azure Synapse Link for Dataverse with Azure Data Lake in Power Apps"
 description: "Learn how to export table data to Azure Data Lake Storage Gen2 in Power Apps."
-ms.date: 08/18/2025
+ms.date: 04/09/2026
 ms.reviewer: "Mattp123"
 ms.topic: "how-to"
 applies_to: 
@@ -45,7 +45,7 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 ## Connect Dataverse to Azure Data Lake Storage Gen2
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select your preferred environment.
-1. On the left navigation pane, select **Azure Synapse Link**. If **Azure Synapse Link** isn't visible in the side panel pane, select **…More** and select **Discover all**. **Azure Synapse Link** is in the **Data Management** section.
+1. On the left navigation pane, select **Azure Synapse Link**. If **Azure Synapse Link** isn't visible in the side panel, select **…More** and select **Discover all**. **Azure Synapse Link** is in the **Data Management** section.
 1. On the command bar, select **+ New link to data lake**.
 1. Select the **Subscription**, **Resource group**, and **Storage account**. Ensure that storage account meets the requirements specified in the [Prerequisites](#prerequisites) section. Select **Next**.
 
@@ -56,12 +56,12 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 
    ![Select tables for export.](media/export-data-lake-select-entity.png "Select tables for export")
 
-You can follow the steps in this article to create a link from one environment to multiple Azure data lakes in your Azure subscription. Similarly, you could create a link from multiple environments to the same Azure Data Lake, all within the same tenant.
+You can follow the steps in this article to create a link from one environment to multiple Azure data lakes in your Azure subscription. Similarly, you can create a link from multiple environments to the same Azure Data Lake, all within the same tenant.
 
 > [!NOTE]
 > The Azure Synapse Link for Dataverse service is seamlessly integrated into the Power Platform as an out-of-the-box feature. It meets the security and governance standards set for the Power Platform data storage and governance. More information: [Data storage and governance](/power-platform/admin/security/data-storage)
 > 
-> The data exported by Azure Synapse Link service is encrypted at transit using Transport Layer Security(TLS) 1.2 or higher and encrypted at rest in Azure Data Lake Storage Gen2. Additionally, transient data in the blob storage is also encrypted at rest. Encryption in Azure Data Lake Storage Gen2 helps you protect your data, implement enterprise security policies, and meet regulatory compliance requirements. More information: [Azure Data Encryption-at-Rest]( /azure/security/fundamentals/encryption-atrest)
+> The data exported by Azure Synapse Link service is encrypted in transit by using Transport Layer Security (TLS) 1.2 or higher and encrypted at rest in Azure Data Lake Storage Gen2. Additionally, transient data in the blob storage is also encrypted at rest. Encryption in Azure Data Lake Storage Gen2 helps you protect your data, implement enterprise security policies, and meet regulatory compliance requirements. For more information, see [Azure Data Encryption-at-Rest]( /azure/security/fundamentals/encryption-atrest).
 >
 
 ## Manage table data to the data lake
@@ -86,7 +86,7 @@ After you set up the Azure Synapse Link, you can monitor the Azure Synapse Link 
 
 ## Unlinking an Azure Synapse Link
 
-1. Select the desired Azure Synapse Link to unlink.
+1. Select the Azure Synapse Link to unlink.
 
 2. Select **Unlink data lake** from the command bar.
 
@@ -96,7 +96,7 @@ After you set up the Azure Synapse Link, you can monitor the Azure Synapse Link 
 
 ## Relinking an Azure Synapse Link
 
-If you deleted the file system when unlinking, follow the steps above to relink the same data lake. If you didn't delete the file system when unlinking, you must clear the data to relink:
+If you deleted the file system when unlinking, follow the preceding steps to relink the same data lake. If you didn't delete the file system when unlinking, you must clear the data to relink:
 
 1. Go to the Azure Data Lake.
 
@@ -117,7 +117,7 @@ A folder that includes snapshot comma-delimited (CSV format) files is displayed 
    
 ## Link a Synapse workspace to an existing Azure Synapse Link profile with data lake only
 
-1. In web browsers address bar, append `?athena.updateLake=true` to the web address that ends with **exporttodatalake**.
+1. In a web browser's address bar, append `?athena.updateLake=true` to the web address that ends with **exporttodatalake**.
 
 2. Select an existing profile from the Azure Synapse Link area, and then select extended option.
 
@@ -139,8 +139,9 @@ Here's an example of an Account.csv partitioned file and snapshot folder in the 
 Changes in Dataverse are continuously pushed to the corresponding CSV files by using the trickle feed engine. This is the T2 interval, where another snapshot is taken. *table*-T2.csv&mdash;for example, Accounts-T2.csv or Contacts-T2.csv (assuming there are changes for the table) &mdash;and model.json are updated to the new snapshot files. Any new person who views snapshot data from T2 onward is directed to the newer snapshot files. This way, the original snapshot viewer can continue to work on the older snapshot T1 files while newer viewers can read the latest updates. This is useful in scenarios that have longer-running downstream processes.
 
 > [!NOTE]
-> A new snapshot file is created only if there's a data update.
-> Only the latest five snapshot files are retained. Stagnant data is automatically removed from your Azure Data Lake Storage Gen 2 account.
+>
+> - A new snapshot file is created only when there's a data update.
+> - Only the latest five snapshot files are retained. Stagnant data is automatically removed from your Azure Data Lake Storage Gen 2 account.
 
 Here's an example of the model.json file, which always points to the latest time-stamped account snapshot file.
 

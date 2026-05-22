@@ -2,7 +2,7 @@
 title: "Create model-driven app business rules and recommendations"
 description: Learn how to create a business rule for a specific form in Power Apps.
 ms.custom: ""
-ms.date: 03/30/2026
+ms.date: 04/16/2026
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -30,18 +30,22 @@ This article shows how to create [business rules](model-driven-app-glossary.md#b
 
 By combining conditions and actions, the following actions are possible with business rules:  
   
-- Set column values  
-- Clear column values  
-- Set column requirement levels  
-- Show or hide columns  
-- Enable or disable columns  
-- Validate data and show error messages  
-- Create business recommendations based on business intelligence
+|Action|Description|Applies to|
+|-|-|-|
+|Set Field Value|Sets a value of a table column. You can set the value to a hard-coded value, to the value of another column, or with a simple formula. You can also clear the value of the field.|All scopes|
+|Set Default Value|Sets the value of a column but only when the column has no value (null).|All scopes|
+|Show Error Message|Prevents the save of the row. In model-driven app form, the error message is displayed within the form; for server-side, the error message is passed back to the calling process.|All scopes|
+|Lock/Unlock|Lock changes the column's property to read-only. Unlock enables the user to change the value of the column.|Model-driven app|
+|Set Visibility|Setting to No hides the column on the form. Setting to Yes displays the column on the form|Model-driven app|
+|Set Business Required|Sets the requirement level of the column on the form to Business Required or Not Business Required (Optional). Setting the column to Business Required shows a red asterisk next to the column's label and prevents the rows from being saved if the column's value is empty.|Model-driven app|
+|Recommendation|Shows a light bulb icon next to the column's label. When the icon is selected, the user is prompted. If prompt is accepted, the rule can set field values.|Model-driven app|
 
 > [!NOTE]
 > To define a business rule for a table so that it applies to all forms, see [Create a business rule for a table](../data-platform/data-platform-create-business-rule.md).
 >
 > Business rules don't work with multiselect choices.
+>
+> Actions that only apply to model-driven apps are ignored when the rule is run server-side.
   
 ## View, edit, or create a business rule in Power Apps
 

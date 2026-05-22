@@ -1,6 +1,6 @@
 ---
-title: Customize Microsoft 365 Copilot in model-driven apps (preview)
-description: Learn how to customize Microsoft 365 Copilot with declarative agents, custom engine agents, and Copilot Studio agents in Power Apps model-driven apps.
+title: Customize Microsoft 365 Copilot in Power Apps
+description: Learn how to customize Microsoft 365 Copilot with declarative agents, custom engine agents, and Copilot Studio agents in Power Apps.
 author: Mattp123
 ms.service: powerapps
 ms.subservice: mda-maker
@@ -20,18 +20,11 @@ contributors:
 ms.collection: bap-ai-copilot
 ai-usage: ai-assisted
 ---
-# Customize Microsoft 365 Copilot with an agent (preview)
+# Customize Microsoft 365 Copilot with an agent
 
-Microsoft 365 Copilot in model-driven apps enables users to interact with custom agents that extend Copilot's capabilities beyond standard functionality. By customizing agents, you can create tailored experiences that address your organization's specific business processes and data requirements. For more information, see [Use agents in Microsoft 365 Copilot](../../user/use-microsoft-365-copilot-model-driven-apps.md#use-agents-in-microsoft-365-copilot)
+Microsoft 365 Copilot in Power Apps enables users to interact with custom agents that extend Copilot's capabilities beyond standard functionality. By customizing agents, you can create tailored experiences that address your organization's specific business processes and data requirements. For more information, see [Use agents in Microsoft 365 Copilot](../../user/use-microsoft-365-copilot-model-driven-apps.md#use-agents-in-microsoft-365-copilot)
 
-This article describes the different types of agents you can build and integrate with Microsoft 365 Copilot in model-driven apps. You'll learn about the capabilities and use cases for each agent type, helping you choose the right approach for your customization needs.
-
-> [!IMPORTANT]
->
-> - This feature is in preview.  
-> - Preview features aren't meant for production use and might have restricted functionality These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2189520), and are available before an official release so that customers can get early access and provide feedback.
-> - This feature is in the process of rolling out and might not be available in your region yet.
-
+This article describes the different types of agents you can build and integrate with Microsoft 365 Copilot in Power Apps. You'll learn about the capabilities and use cases for each agent type, helping you choose the right approach for your customization needs.
 
 You can customize agents in several ways to fit your organization's needs.
 
@@ -48,14 +41,13 @@ Use the following information to find the best solution for your organization:
 - Use [Microsoft Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio) to [connect and configure an agent for Teams and Microsoft 365](/microsoft-copilot-studio/publication-add-bot-to-microsoft-teams), making it available in Microsoft 365 Copilot.
 - Review guidance on how to [Choose between Microsoft 365 Copilot and Copilot Studio to build your agent](/microsoft-365-copilot/extensibility/copilot-studio-experience).
 
-> [!NOTE]
-> When you select an agent in Microsoft 365 Copilot in a model-driven app, the agent doesn't answer Dataverse data questions unless you configure it to do so. It does use information from your chat history that might have information about your data. To allow questions about your Dataverse data, remove the selected agent.
-
 ## Limitation
 
-- Microsoft Copilot Studio agents published to Microsoft 365 Copilot through Copilot Studio channels don't have context passed from the app through Microsoft 365 Copilot to the agent.
+- Agents you author can’t yet use in‑app user context to optimize their responses.
 
 ## Related information
 
-- [Add Microsoft 365 Copilot for app users in model-driven apps (preview)](add-microsoft-365-copilot.md)
+- [Add Microsoft 365 Copilot for app users in model-driven apps](add-microsoft-365-copilot.md)
 - [Use Microsoft 365 Copilot in model-driven apps](../../user/use-microsoft-365-copilot-model-driven-apps.md)
+- [Add Microsoft 365 Copilot for app users in canvas apps (preview)](../../maker/canvas-apps/microsoft-365-copilot-canvas-app.md)
+- [Use Microsoft 365 Copilot in canvas apps (preview)](../../user//use-microsoft-365-copilot-canvas-apps.md)

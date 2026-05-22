@@ -16,21 +16,36 @@ Required environment variables:
   PR_URL         - source PR URL (set by workflow)
 """
 
+import argparse
 import json
 import os
 import re
 import subprocess
 import sys
 import tempfile
+import urllib.parse
 import urllib.request
 import urllib.error
 from datetime import datetime, timezone
 from pathlib import Path
 
 
-def load_config() -> dict:
-    config_path = Path(__file__).parent / "cascade-config.json"
-    with open(config_path, encoding="utf-8") as f:
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description="Cascade include file date changes to downstream repos.")
+    parser.add_argument(
+        "--config",
+        default=str(Path(__file__).parent / "cascade-config.json"),
+        help="Path to config JSON file (default: scripts/cascade-config.json)",
+    )
+    return parser.parse_args()
+
+
+def load_config(config_path: str) -> dict:
+    path = Path(config_path)
+    if not path.exists():
+        print(f"Error: config file not found: {path}")
+        sys.exit(1)
+    with open(path, encoding="utf-8") as f:
         return json.load(f)
 
 
@@ -55,6 +70,89 @@ def get_changed_include_files(includes_path: str) -> list[str]:
         print(f"No .md files changed under '{includes_path}'.")
 
     return include_files
+
+
+def github_api_get(url: str, token: str) -> dict | list | None:
+    """Make a GET request to the GitHub REST API. Returns parsed JSON or None on failure."""
+    req = urllib.request.Request(url, headers={
+        "Authorization": f"Bearer {token}",
+        "Accept": "application/vnd.github+json",
+        "X-GitHub-Api-Version": "2022-11-28",
+    })
+    try:
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            return json.loads(resp.read().decode("utf-8"))
+    except (urllib.error.URLError, urllib.error.HTTPError, json.JSONDecodeError, OSError) as exc:
+        print(f"  Note: GitHub API call failed ({url}): {exc}")
+        return None
+
+
+def find_source_prs(
+    include_files: list[str],
+    source_repo: str,
+    token: str,
+) -> dict[str, dict]:
+    """
+    For each changed include file, find the most recent branch→main PR that
+    introduced the change, using the GitHub REST API (no local git needed).
+
+    Returns a dict keyed by PR number (str):
+      { "123": {"url": "https://...", "title": "...", "files": ["shared/.../a.md", ...]} }
+
+    Files where the lookup fails are collected under the key "unknown".
+    """
+    source_prs: dict[str, dict] = {}
+    unresolved: list[str] = []
+
+    for filepath in include_files:
+        encoded_path = urllib.parse.quote(filepath, safe="")
+        commits_url = (
+            f"https://api.github.com/repos/{source_repo}/commits"
+            f"?sha=main&path={encoded_path}&per_page=1"
+        )
+        commits = github_api_get(commits_url, token)
+        if not commits or not isinstance(commits, list) or len(commits) == 0:
+            print(f"  Could not find commit for {filepath}")
+            unresolved.append(filepath)
+            continue
+
+        commit_sha = commits[0]["sha"]
+
+        # Map commit → PR(s)
+        pulls_url = f"https://api.github.com/repos/{source_repo}/commits/{commit_sha}/pulls"
+        pulls = github_api_get(pulls_url, token)
+        if not pulls or not isinstance(pulls, list):
+            print(f"  Could not find PR for commit {commit_sha[:8]} ({filepath})")
+            unresolved.append(filepath)
+            continue
+
+        # Prefer PRs merged into main
+        main_prs = [p for p in pulls if p.get("base", {}).get("ref") == "main" and p.get("merged_at")]
+        if not main_prs:
+            main_prs = [p for p in pulls if p.get("merged_at")]
+
+        if not main_prs:
+            print(f"  No merged PR found for commit {commit_sha[:8]} ({filepath})")
+            unresolved.append(filepath)
+            continue
+
+        # Pick the most recently merged one as a tie-breaker
+        pr = sorted(main_prs, key=lambda p: p.get("merged_at", ""), reverse=True)[0]
+        pr_num = str(pr["number"])
+
+        if pr_num not in source_prs:
+            source_prs[pr_num] = {
+                "url": pr.get("html_url", ""),
+                "title": pr.get("title", ""),
+                "files": [],
+            }
+        source_prs[pr_num]["files"].append(filepath)
+        print(f"  {filepath} → PR #{pr_num}")
+
+    if unresolved:
+        source_prs["unknown"] = {"url": "", "title": "", "files": unresolved}
+
+    return source_prs
 
 
 def run(args: list[str], cwd: str = None, check: bool = True) -> subprocess.CompletedProcess:
@@ -123,7 +221,7 @@ def find_referencing_topics(
 def update_ms_date(file_path: str, new_date: str) -> bool:
     """
     Replace the ms.date value in a file's YAML frontmatter.
-    Returns True if the field was found and updated.
+    Returns True if the field was found and the content actually changed.
     """
     path = Path(file_path)
     content = path.read_text(encoding="utf-8", errors="replace")
@@ -135,7 +233,7 @@ def update_ms_date(file_path: str, new_date: str) -> bool:
         flags=re.MULTILINE,
     )
 
-    if count == 0:
+    if count == 0 or new_content == content:
         return False
 
     path.write_text(new_content, encoding="utf-8")
@@ -328,15 +426,31 @@ def generate_smart_description(
 
 
 def main():
-    config = load_config()
+    args = parse_args()
+    config = load_config(args.config)
 
     token = os.environ.get("GITHUB_TOKEN") or os.environ.get("CASCADE_PAT")
     if not token:
         print("Error: GITHUB_TOKEN or CASCADE_PAT environment variable is required.")
         sys.exit(1)
 
-    pr_number = os.environ.get("PR_NUMBER", "unknown")
-    pr_url    = os.environ.get("PR_URL", "")
+    pr_number_raw = os.environ.get("PR_NUMBER", "unknown")
+    pr_url        = os.environ.get("PR_URL", "")
+
+    # If the user passed a full URL (e.g. https://github.com/.../pull/11914)
+    # as the PR number, extract just the numeric part and populate pr_url.
+    url_match = re.match(r"(https?://github\.com/.+/pull/(\d+))$", pr_number_raw)
+    if url_match:
+        if not pr_url:
+            pr_url = url_match.group(1)
+        pr_number = url_match.group(2)
+    else:
+        pr_number = pr_number_raw
+
+    # Handle case where a full URL was provided as the PR number
+    if "/" in pr_number:
+        pr_url = pr_url or pr_number
+        pr_number = pr_number.rstrip("/").split("/")[-1]
 
     includes_path   = config["includes_path"]
     downstream_repos = config["downstream_repos"]
@@ -364,20 +478,50 @@ def main():
             return f"- [{f}]({url})\n"
         return f"- `{f}`\n"
 
-    source_pr_line = (
-        f"**Source PR:** [#{pr_number}]({pr_url})\n\n" if pr_url
-        else f"**Source PR:** [#{pr_number}](https://github.com/{source_repo}/pull/{pr_number})\n\n" if source_repo and pr_number.isdigit()
-        else f"**Source PR:** #{pr_number}\n\n"
-    )
+    # --- Trace branch→main source PRs for each changed include file ---
+    print("\nTracing source PRs for changed include files...")
+    source_prs = find_source_prs(include_files, source_repo, token) if source_repo else {}
+
+    # Build the "published via" line (the main→live PR that triggered this run)
+    published_via_line = ""
+    if pr_url:
+        published_via_line = f"**Published via:** [#{pr_number}]({pr_url}) (main → live)\n\n"
+    elif source_repo and pr_number.isdigit():
+        published_via_line = f"**Published via:** [#{pr_number}](https://github.com/{source_repo}/pull/{pr_number}) (main → live)\n\n"
+    else:
+        published_via_line = f"**Published via:** #{pr_number}\n\n"
+
+    # Build the "source PRs" section — grouped by PR with files listed
+    real_source_prs = {k: v for k, v in source_prs.items() if k != "unknown"}
+    unknown_files = source_prs.get("unknown", {}).get("files", [])
+
+    if real_source_prs:
+        source_prs_lines = "**Source PRs (view changes):**\n"
+        for spr_num, spr_info in sorted(real_source_prs.items(), key=lambda x: x[0]):
+            pr_link = f"[#{spr_num}]({spr_info['url']})" if spr_info["url"] else f"#{spr_num}"
+            file_list = ", ".join(f"`{Path(f).name}`" for f in spr_info["files"])
+            source_prs_lines += f"- {pr_link} — {file_list}\n"
+        if unknown_files:
+            file_list = ", ".join(f"`{Path(f).name}`" for f in unknown_files)
+            source_prs_lines += f"- *(could not trace)* — {file_list}\n"
+        source_prs_lines += "\n"
+    else:
+        # Fallback: no source PRs found, use the triggering PR as before
+        source_prs_lines = (
+            f"**Source PR:** [#{pr_number}]({pr_url})\n\n" if pr_url
+            else f"**Source PR:** [#{pr_number}](https://github.com/{source_repo}/pull/{pr_number})\n\n" if source_repo and pr_number.isdigit()
+            else f"**Source PR:** #{pr_number}\n\n"
+        )
 
     pr_body = (
         "## Cascading include file changes\n\n"
         "This PR updates `ms.date` in all topics that reference the changed include(s) "
         "to force a rebuild, ensuring the latest include content is pulled in and the "
         "topic dates accurately reflect this update.\n\n"
-        + source_pr_line
+        + source_prs_lines
+        + published_via_line
         + "**Changed include files:**\n"
-        + "".join(include_link(f) for f in include_files) 
+        + "".join(include_link(f) for f in include_files)
         + f"\nTopics referencing these files now have `ms.date` set to `{today}`.\n\n"
         "Please approve and merge to update content on Learn.\n\n"
         "---\n*Generated by cascade-include-changes workflow*"
@@ -386,7 +530,19 @@ def main():
     # --- Smart description (optional, uses GitHub Models API) ---
     smart_desc_enabled = config.get("smart_descriptions", False)
 
-    diff_text = get_include_diff(pr_number, source_repo, token) if smart_desc_enabled else ""
+    # Use the branch→main source PR(s) for the diff when available — the diff
+    # is more focused than the batched main→live PR.
+    diff_text = ""
+    if smart_desc_enabled and real_source_prs:
+        diff_parts = []
+        for spr_num in sorted(real_source_prs.keys()):
+            part = get_include_diff(spr_num, source_repo, token)
+            if part:
+                diff_parts.append(part)
+        diff_text = "\n".join(diff_parts)
+    elif smart_desc_enabled:
+        # Fallback: use the main→live PR diff
+        diff_text = get_include_diff(pr_number, source_repo, token)
     smart_desc = generate_smart_description(diff_text, include_files, token)
     if smart_desc:
         pr_body = smart_desc + pr_body

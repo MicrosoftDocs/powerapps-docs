@@ -4,9 +4,12 @@ description: Discover the new AI-native Power Apps vibe code experience. Build a
 author: mduelae
 ms.author: mkaur
 ms.reviewer: mkaur
-ms.date: 03/04/2026
+ms.date: 04/16/2026
 ms.topic: concept-article
-ms.custom: CXT 
+ms.custom: 
+ - CXT
+ - vibe
+
 ---
 
 #  Overview of the new Power Apps vibe experience (preview)
@@ -47,6 +50,8 @@ After watching the video, explore the detailed walkthrough in [Create apps, data
   1. Set the toggle for **Copilot in Power Apps (preview)** to **On**.
   1. Select **Save** to apply the changes.
   
+- **Optional but recommended**: For higher quality apps, enable **Anthropic models** by going to [Power Platform Admin Center](https://admin.powerplatform.microsoft.com) > **Environments** > **[Name of Environment]** > **Settings** > **Features** > **Enable External Models**.
+  
   For more information, see [Tenant settings](/power-platform/admin/tenant-settings).
 - This capability isn't available in a default environment.
 - This capability is currently available only in the US, Australia, Asia, and India regions, and only in English. For more information, see [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/en-US/availability-reports/?report=copilotfeaturereport).
@@ -86,7 +91,6 @@ The left navigation shows the following items:
 Legend:
 
 1. **Home**: Returns you to the main landing page.
-1. **Plans**: Access and manage your plans.
 1. **Apps**: Open, play, or edit apps you created or that others shared with you.
 1. **Profile**: Access the environment picker, session details, notifications, and settings.
 
@@ -102,7 +106,9 @@ Legend:
 
 1. **Enter prompt**: Type a description of what you want to build.
 
-1. **Enhance prompt**: (Optional) Use this button to add more detail to your prompt before generating your app.
+1. **Plan**: Use this mode to review and discuss a plan with agenta before making changes.
+
+1. **Enhance prompt** (Optional): Add more detail to your prompt before generating your app.
 
 1. **Start dictation**: Start speech to text and speak into a microphone to convert your voice into text.
 

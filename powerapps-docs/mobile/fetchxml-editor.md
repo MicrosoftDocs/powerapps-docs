@@ -12,7 +12,7 @@ ms.topic: feature-guide
 
 [!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
-FetchXML is Dataverse's native query language that lets makers write data filters as XML code, similar to writing a formula, but more powerful. Use the  FetchXML editor to optimize complex profiles for better performance and avoid sync timeouts on large tables (100K+ records).
+[FetchXML](../developer/data-platform/fetchxml/overview.md) is Dataverse's native query language that lets makers write data filters as XML code, similar to writing a formula, but more powerful. Use the FetchXML editor to optimize complex profiles for better performance and avoid sync timeouts on large tables (100K+ records).
 
 This feature is best suited for advanced makers and developers who are comfortable working with XML and need more control than what the visual filter builder provides.
 
@@ -27,221 +27,176 @@ This feature is best suited for advanced makers and developers who are comfortab
 The FetchXML editor offers several advantages over the visual expression builder for defining offline data filters.
 
 - **Support for hierarchical conditions**:
-The FetchXML editor supports building complex, hierarchical conditions such as `under`, `eq-or-under`, `above`, and `eq-or-above` on hierarchy-enabled lookups. 
+
+  The FetchXML editor supports building complex, hierarchical conditions such as `under`, `eq-or-under`, `above`, and `eq-or-above` on hierarchy-enabled lookups. [Learn more about querying hierarchical data](../developer/data-platform/query-hierarchical-data.md)
 
   ```xml
-   <fetch latematerialize="true"> 
-     <entity name="account"> 
-       <filter type="and"> 
-            <condition attribute="statecode" operator="eq" value="0" /> 
-       </filter> 
-         <link-entity name="businessunit" from="businessunitid" to="owningbusinessunit" link-type="any"> 
-           <filter type="and"> <condition attribute="businessunitid" operator="eq-or-under" value="{YOUR-PARENT-BU-GUID}" /> 
-           </filter> 
-         </link-entity> 
-     </entity> 
-    </fetch>
+   <fetch>
+    <entity
+      name="account">
+     <filter
+         type="and">
+         <condition
+         attribute="statecode"
+         operator="eq"
+         value="0" />
+     </filter>
+     <link-entity
+         name="businessunit"
+         from="businessunitid"
+         to="owningbusinessunit"
+         link-type="any">
+         <filter
+         type="and">
+         <condition
+            attribute="businessunitid"
+            operator="eq-or-under"
+            value="{YOUR-PARENT-BU-GUID}" />
+         </filter>
+    </link-entity>
+   </entity>
+  </fetch>
   ```
  
 - **Support for checks against unrelated tables**:
-The FetchXML editor lets you link to other tables even if they don’t have a direct relationship with the primary entity, provided you specify valid **from** and **to** attributes. This capability is especially useful in complex offline scenarios where multiple entities share a common foreign key but aren't directly related.
 
-```xml
-<fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false" latematerialize="true" options="DisableRowGoal, EnableOptimizerHotfixes"> 
-      <entity name="cr57f_producttranslation"> 
+  The FetchXML editor lets you link to other tables even if they don't have a direct relationship with the primary table, provided you specify valid **from** and **to** attributes. This capability is especially useful in complex offline scenarios where multiple entities share a common foreign key but aren't directly related.
 
-            <filter type="and"> 
-
-                  <link-entity name="cr57f_userlanguagepreference" from="cr57f_language_id" to="cr57f_language_id" link-type="any"> 
-
-                        <filter type="and"> 
-
-                            <condition attribute="cr57f_user_id" operator="eq" value="user_002"/> 
-
-                        </filter> 
-
-                  </link-entity> 
-
-            </filter> 
-
-      </entity> 
-
-</fetch> 
-``` 
+   ```xml
+   <fetch
+      distinct="false"
+      latematerialize="true"
+      options="DisableRowGoal, EnableOptimizerHotfixes">
+   <entity
+      name="cr57f_producttranslation">
+      <filter
+         type="and">
+         <link-entity
+         name="cr57f_userlanguagepreference"
+         from="cr57f_language_id"
+         to="cr57f_language_id"
+         link-type="any">
+         <filter
+            type="and">
+            <condition
+               attribute="cr57f_user_id"
+               operator="eq"
+               value="user_002" />
+         </filter>
+         </link-entity>
+     </filter>
+    </entity>
+   </fetch>
+   ``` 
 
 - **Query optimization support by using late materialization and query hints**:
-The editor exposes advanced optimization controls directly on the `<fetch>` element, including:
- - ⁠`latematerialize="true"`:  By using `latematerialize="true"`, you optimize query performance by narrowing down matching records before retrieving all their column data. This attribute reduces the load when syncing large tables during offline sync.
+
+  The editor exposes advanced optimization controls directly on the `<fetch>` element, including:
+
+ - ⁠`latematerialize="true"`:  By using `latematerialize="true"`, you optimize query performance by narrowing down matching records before retrieving all their column data. This attribute reduces the load when syncing large tables during offline sync. [Learn more about using late materialize](../developer/data-platform/fetchxml/optimize-performance.md#late-materialize-query)
 
     ```xml
-    <fetch version="1.0" mapping="logical"
-           distinct="false"
-    
-           latematerialize="true"
-    
-           options="OptimizeForUnknown,ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS">
-    
-      <entity name="msdyn_workorder">
-    
-        <filter type="and">
-    
-          <condition attribute="statecode" operator="eq" value="0" />
-    
-          <condition attribute="msdyn_systemstatus" operator="in">
-    
-            <value>690970000</value>
-    
-            <value>690970001</value>
-    
-          </condition>
-    
-        </filter>
-    
-        <!-- Booking chain -->
-    
-        <link-entity name="bookableresourcebooking"
-    
-                     from="msdyn_workorder"
-    
-                     to="msdyn_workorderid"
-    
-                     link-type="any">
-    
-          <filter type="and">
-    
-            <condition attribute="statecode" operator="eq" value="0" />
-    
-            <filter type="or">
-    
-              <condition attribute="starttime" operator="today" />
-    
-              <condition attribute="starttime" operator="next-seven-days" />
-    
+   <fetch
+      distinct="false"
+      latematerialize="true"
+      options="OptimizeForUnknown,ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS">
+   <entity
+      name="msdyn_workorder">
+      <filter
+         type="and">
+         <condition
+         attribute="statecode"
+         operator="eq"
+         value="0" />
+         <condition
+         attribute="msdyn_systemstatus"
+         operator="in">
+         <value>690970000</value>
+         <value>690970001</value>
+         </condition>
+      </filter>
+      <!-- Booking chain -->
+      <link-entity
+         name="bookableresourcebooking"
+         from="msdyn_workorder"
+         to="msdyn_workorderid"
+         link-type="any">
+         <filter
+         type="and">
+         <condition
+            attribute="statecode"
+            operator="eq"
+            value="0" />
+         <filter
+            type="or">
+            <condition
+               attribute="starttime"
+               operator="today" />
+            <condition
+               attribute="starttime"
+               operator="next-seven-days" />
+         </filter>
+         </filter>
+         <link-entity
+            name="bookingstatus"
+            from="bookingstatusid"
+            to="bookingstatus"
+            link-type="any">
+            <filter
+               type="and">
+               <condition
+                  attribute="statecode"
+                  operator="eq"
+                  value="0" />
             </filter>
-    
-          </filter>
-    
-          <link-entity name="bookingstatus"
-    
-                       from="bookingstatusid"
-    
-                       to="bookingstatus"
-    
-                       link-type="any">
-    
-            <filter type="and">
-    
-              <condition attribute="statecode" operator="eq" value="0" />
-    
+         </link-entity>
+         <link-entity
+            name="bookableresource"
+            from="bookableresourceid"
+            to="resource"
+            link-type="any">
+            <filter
+               type="and">
+               <condition
+                  attribute="userid"
+                  operator="eq-userid" />
             </filter>
-    
-          </link-entity> 
-    
-          <link-entity name="bookableresource"
-    
-                       from="bookableresourceid"
-    
-                       to="resource"
-    
-                       link-type="any">
-    
-            <filter type="and">
-    
-              <condition attribute="userid" operator="eq-userid" />
-    
-            </filter>
-    
-          </link-entity>
-    
-        </link-entity>
-    
-        <!-- Customer asset -->
-    
-        <link-entity name="msdyn_customerasset"
-    
-                     from="msdyn_customerassetid"
-    
-                     to="msdyn_customerasset"
-    
-                     link-type="any">
-    
-          <filter type="and">
-    
-            <condition attribute="statecode" operator="eq" value="0" />
-    
-          </filter>
-    
-          <!-- Account -->
-    
-          <link-entity name="account"
-    
-                       from="accountid"
-    
-                       to="msdyn_account"
-    
-                       link-type="any">
-    
-            <filter type="and">
-    
-              <condition attribute="statecode" operator="eq" value="0" />
-    
-            </filter>
-    
-          </link-entity>
-    
-        </link-entity>
-    
-      </entity>
-    
-    </fetch>
+         </link-entity>
+      </link-entity>
+      <!-- Customer asset -->
+      <link-entity
+            name="msdyn_customerasset"
+            from="msdyn_customerassetid"
+            to="msdyn_customerasset"
+            link-type="any">
+         <filter
+         type="and">
+         <condition
+            attribute="statecode"
+            operator="eq"
+            value="0" />
+         </filter>
+         <!-- Account -->
+         <link-entity
+            name="account"
+            from="accountid"
+            to="msdyn_account"
+            link-type="any">
+         <filter
+            type="and">
+            <condition
+               attribute="statecode"
+               operator="eq"
+               value="0" />
+       </filter>
+      </link-entity>
+     </link-entity>
+    </entity>
+   </fetch>
     ```
     
-  - The `options` attribute passes SQL Server query hints, such as `OptimizeForUnknown`, `ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS`, or `NO_PERFORMANCE_SPOOL`. These options improve execution plans for frequently running or deeply nested queries.
+  - The `options` attribute passes SQL Server query hints. [Learn more about using these options](../developer/data-platform/fetchxml/reference/fetch.md#options)
 
-    ```xml
-    <fetch version="1.0"
-           mapping="logical"
-    
-           distinct="false"
-    
-           options="OptimizeForUnknown">
-    
-      <entity name="bookableresourcebooking">
-    
-        <filter type="and">
-    
-          <condition attribute="statecode" operator="eq" value="0" />
-    
-          <filter type="or">
-    
-            <condition attribute="starttime" operator="today" />
-    
-            <condition attribute="starttime" operator="next-seven-days" />
-    
-          </filter>
-    
-        </filter>
-    
-        <link-entity name="bookableresource"
-    
-                     from="bookableresourceid"
-    
-                     to="resource"
-    
-                     link-type="any">
-    
-          <filter type="and">
-    
-            <condition attribute="userid" operator="eq-userid" />
-    
-          </filter>
-    
-        </link-entity>
-    
-      </entity>
-    
-    </fetch>
-    ```
 
 ## How the FetchXML editor works
 
@@ -254,12 +209,12 @@ You access the FetchXML editor through the offline profile configuration experie
     :::image type="content" source="media/fetchxml-editor.png" alt-text="Screenshot of the FetchXML code editor in the offline profile filter editor.":::
 1. Modify the existing FetchXML query or paste a new one. The editor automatically validates syntax and structure as you edit, checking for:
 
-    - A required `<fetch>` root element with at least one `<entity>` element
+    - A required [`<fetch>`](../developer/data-platform/fetchxml/reference/fetch.md) root element with at least one [`<entity>`](../developer/data-platform/fetchxml/reference/entity.md) element
     - Only supported FetchXML tags
     - Elements placed inside the correct parent elements
     - A maximum of 500 filter clauses
 
-   If the editor detects an issue, such as a missing required element or an unsupported `<link-entity>` usage, it shows a clear error message so you can fix it before saving.
+   If the editor detects an issue, such as a missing required element or an unsupported [`<link-entity>`](../developer/data-platform/fetchxml/reference/link-entity.md) usage, it shows a clear error message so you can fix it before saving.
 
 1. After your FetchXML query is valid, select **Apply** to convert the filter, and then **Save** the offline profile.
 
@@ -280,10 +235,10 @@ After saving, the offline profile uses your custom FetchXML filter for data sync
 
 ## Limitations
 
-- Queries must start with a `<fetch>` root element and include at least one `<entity>` element.
+- Queries must start with a [`<fetch>`](../developer/data-platform/fetchxml/reference/fetch.md) root element and include at least one [`<entity>`](../developer/component-framework/reference/entity.md) element.
 - Only supported FetchXML elements are allowed. Unknown or unsupported tags trigger validation errors.
 - Elements must follow proper parent-child nesting rules.
-- `<link-entity>` inside `<filter>` must use `link-type="any"` or `link-type="not any"`. Inner and outer joins aren't supported.
-- FetchXML `<attribute>` tags aren't used for column selection in offline sync. Use the **Filter Columns** option instead.
+- [`<link-entity>`](../developer/data-platform/fetchxml/reference/link-entity.md) inside [`<filter>`](../developer/data-platform/fetchxml/reference/filter.md) must use `link-type="any"` or `link-type="not any"`. Inner and outer joins aren't supported.
+- FetchXML [`<attribute>`](../developer/data-platform/fetchxml/reference/attribute.md) tags aren't used for column selection in offline sync. Use the **Filter Columns** option instead.
 - Explicit pagination attributes like `page` and `count` are ignored in offline profiles.
 - Queries are limited to a maximum of 500 filter clauses.
