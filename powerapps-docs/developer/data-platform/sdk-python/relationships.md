@@ -10,7 +10,7 @@ ms.topic: concept-article
 
 # Manage table relationships
 
-Table relationships in Microsoft Dataverse define the ways that table rows can be associated with rows from other tables or the same table. There are two types of table relationships: one-to-many, and many-to-many. You can create create relationships between tables by using the relationship APIs as demonstrated below.
+Table relationships in Microsoft Dataverse define the ways that table rows can be associated with rows from other tables or the same table. There are two types of table relationships: one-to-many, and many-to-many. You can create relationships between tables by using the relationship APIs as demonstrated in the following section.
 
 More information: [Microsoft Dataverse table relationships](../../../maker/data-platform/create-edit-entity-relationships.md)
 

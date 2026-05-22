@@ -67,7 +67,7 @@ client.tables.delete("new_Product")
 ```
 
 > [!IMPORTANT]
-> All custom column names must include the customization prefix value (for example, "new_"). This ensures explicit, predictable naming and aligns with Dataverse metadata requirements.
+> All custom column names must include the customization prefix value (for example, "new_"). This requirement ensures explicit, predictable naming and aligns with Dataverse metadata requirements.
 
 For more information about working with custom table metadata:
 

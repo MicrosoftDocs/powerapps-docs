@@ -90,7 +90,7 @@ For more information, see [Use OAuth with Dataverse](/power-apps/developer/data-
 
 ## Namespaces
 
-The [PowerPlatform.Dataverse.operations](/python/api/powerplatform-dataverse-client/powerplatform.dataverse.operations) package contains modules that organize SDK operations into logical groups as described below.
+The [PowerPlatform.Dataverse.operations](/python/api/powerplatform-dataverse-client/powerplatform.dataverse.operations) package contains modules that organize SDK operations into logical groups as described in the following table.
 
 | Name           | Description                                                           |
 |----------------|--------------------------------------------------------------------   |
@@ -99,7 +99,7 @@ The [PowerPlatform.Dataverse.operations](/python/api/powerplatform-dataverse-cli
 | client.tables  | Table and column metadata management                                  |
 | client.files   | File upload operations                                                |
 
-Examples of using these operations are described in the [Querying data](query.md) and [Working with data](work-data.md) articles.
+For examples of using these operations, see the [Querying data](query.md) and [Working with data](work-data.md) articles.
 
 ## Next steps
 

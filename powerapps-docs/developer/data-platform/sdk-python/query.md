@@ -12,13 +12,13 @@ contributors:
 
 # Query data
 
-This article describes available methods for querying Dataverse data using the SDK for Python. You can query data using Structured Query Language (SQL) and OData based APIs.
+This article describes available methods for querying Dataverse data by using the SDK for Python. You can query data by using Structured Query Language (SQL) and OData-based APIs.
 
 Python developers should first learn about the SDK for Python by reading [Getting started](get-started.md) before continuing with this article.
 
 ## QueryBuilder
 
-QueryBuilder is the recommended way to query records. It provides a fluent, type-safe interface that generates correct OData queries automatically. There is no need to remember OData filter syntax.
+QueryBuilder is the recommended way to query records. It provides a fluent, type-safe interface that generates correct OData queries automatically. You don't need to remember OData filter syntax.
 
 ```python
 # Fluent query builder (recommended)
@@ -35,7 +35,7 @@ for record in (client.query.builder("account")
     print(f"{record['name']}: {record['revenue']}")
 ```
 
-QueryBuilder handles value formatting, column name casing, and OData syntax automatically. Filter expressions are built with `col()` and standard Python operators.
+QueryBuilder handles value formatting, column name casing, and OData syntax automatically. Build filter expressions with `col()` and standard Python operators.
 
 ```python
 # Get results as a pandas DataFrame (consolidates all pages)
@@ -83,7 +83,7 @@ for record in (client.query.builder("account")
 
 ### Formatted values and annotations
 
-Here we demonstrate how to request localized labels, currency symbols, and display names.
+This example demonstrates how to request localized labels, currency symbols, and display names.
 
 ```python
 # Get formatted values (choice labels, currency, lookup names) — via query builder
@@ -115,7 +115,7 @@ if record:
 
 ### Expand navigation properties
 
-Use nested expand with options to expand navigation properties by using `$select`, `$filter`, `$orderby`, and `$top.
+Use nested expand with options to expand navigation properties by using `$select`, `$filter`, `$orderby`, and `$top`.
 
 ```python
 from PowerPlatform.Dataverse.models.query_builder import ExpandOption
@@ -134,7 +134,7 @@ for record in (client.query.builder("account")
 
 ### Paging
 
-Use `execute_pages()` for streaming large result sets with full builder options (filtering, sorting, formatted values). Use `records.list()` and `records.list_pages()` as simpler shortcuts for string-based OData filter queries.
+Use `execute_pages()` to stream large result sets with full builder options, such as filtering, sorting, and formatted values. For simpler string-based OData filter queries, use `records.list()` and `records.list_pages()` as shortcuts.
 
 ```python
 # Preferred: query.builder().execute_pages() — stream one page at a time, memory stays flat
@@ -176,7 +176,7 @@ for page_num, page in enumerate(
 > [!NOTE]
 > Both `execute(by_page=True)` and `execute(by_page=False)` are deprecated and emit a `UserWarning`. Replace them with `execute_pages()` (streaming) or plain `execute()` (eager). `QueryBuilder.to_dataframe()` is also deprecated - use `.execute().to_dataframe()` instead.
 >
-> The migration tool rewrites all of these calls automatically. Install the migration tool with `pip install PowerPlatform-Dataverse-Client[migration]` and run `dataverse-migrate path/to/your/scripts/`. Alternately, execute `python -m PowerPlatform.Dataverse.migration.migrate_v0_to_v1` for development checkouts.
+> The migration tool rewrites all of these calls automatically. Install the migration tool by running `pip install PowerPlatform-Dataverse-Client[migration]` and run `dataverse-migrate path/to/your/scripts/`. Alternately, execute `python -m PowerPlatform.Dataverse.migration.migrate_v0_to_v1` for development checkouts.
 
 ### Record count
 

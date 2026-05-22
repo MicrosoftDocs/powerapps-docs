@@ -10,7 +10,7 @@ contributors:
  - phecke
 ---
 
-# Work with Dataverse data using the Python SDK
+# Work with Dataverse data by using the Python SDK
 
 This article demonstrates example code that uses the SDK to work with Dataverse data and metadata. Before continuing, be sure to read [Getting started](get-started.md).
 
@@ -304,7 +304,7 @@ for page in pages:  # page is list[dict]
 
 ## Upload files to Dataverse
 
-Here is an example of uploading a file named `document.pdf` to the [File column](../../../maker/data-platform/types-of-fields.md#file-columns) named `new_Document` of an account record. The SDK for Python automatically handles file "chunking" for files greater than 128 MB in size.
+The following example shows how to upload a file named `document.pdf` to the [File column](../../../maker/data-platform/types-of-fields.md#file-columns) named `new_Document` of an account record. The SDK for Python automatically handles file chunking for files larger than 128 MB.
 
 ```python
 # Upload a file to a record
@@ -414,7 +414,7 @@ batch.dataframe.delete("account", pd.Series([id1, id2]))
 result = batch.execute()
 ```
 
-For a complete batch example see [examples/advanced/batch.py](https://github.com/microsoft/PowerPlatform-DataverseClient-Python/blob/main/examples/advanced/batch.py).
+For a complete batch example, see [examples/advanced/batch.py](https://github.com/microsoft/PowerPlatform-DataverseClient-Python/blob/main/examples/advanced/batch.py).
 
 ## Related information
 
