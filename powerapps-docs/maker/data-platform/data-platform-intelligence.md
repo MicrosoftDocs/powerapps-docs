@@ -12,7 +12,7 @@ ms.service: powerapps
 search.audienceType: 
   - maker
 ---
-# What is Dataverse intelligence?
+# What is Dataverse intelligence? (preview)
 
 [!INCLUDE [preview-banner](../../../shared/preview-includes/preview-banner.md)]
 
@@ -39,9 +39,17 @@ Dataverse table data from Power Apps (model-driven) can be searched and reasoned
 - Enable the **Allow data availability in M365 Copilot**
   > Power Platform administrator role to access Dataverse intelligence environment settings. More information: [Enable Dataverse intelligence: Allow data availability in Microsoft 365 Copilot](/power-platform/admin/settings-features#dataverse-intelligence-preview).
 - Enable **Search for records in Microsoft 365 apps**
-   > Power Platform administrator role to access Search for records in Microsoft 365 apps environment settings. More information: [Enable Search for records in Microsoft 365 apps](https://learn.microsoft.com/en-us/power-platform/admin/settings-features#search).
+   > Power Platform administrator role to access Search for records in Microsoft 365 apps environment settings. More information: [Enable Search for records in Microsoft 365 apps](/power-platform/admin/settings-features#search).
 - Enable the Power Apps application settings to allow searching for tables related to the application.
   > Power Platform administrator role to access the Power Apps application settings. More information: [Enable Microsoft 365 Copilot in a model-driven app](/power-apps/maker/model-driven-apps/add-microsoft-365-copilot#enable-microsoft-365-copilot-in-a-model-driven-app).
+
+#### Enable Microsoft 365 admin center Copilot Dataverse settings
+
+1. Go to [Microsoft 365 admin center](https://admin.cloud.microsoft/?#/homepage). Select **Copilot** >**Settings**.
+1. Locate and select **Dataverse data available in Microsoft 365 Copilot**.
+1. Select **All users**, or
+1. Select **Specific groups** and enter the list of Entra security groups. 
+1. Select **Save** to save the setting changes.
 
 ## Business skills
 
@@ -51,14 +59,6 @@ Business skills help makers and users interpret data, improve processes, and mak
 
 - The environment where you use Dataverse intelligence must be a Managed Environment.
 - The environment must be enabled and configured for Dataverse MCP server preview. Business skills are only available for use with the preview version of Dataverse MCP server. More information: [Use preview tools and upcoming features in Dataverse MCP server](data-platform-mcp-preview-tools.md)
-
-## Enable Microsoft 365 admin center Copilot Dataverse settings
-
-1. Go to [Microsoft 365 admin center](https://admin.cloud.microsoft/?#/homepage). Select **Copilot** >**Settings**.
-1. Locate and select **Dataverse data available in Microsoft 365 Copilot**.
-1. Select **All users**, or
-1. Select **Specific groups** and enter the list of Entra security groups. 
-1. Select **Save** to save the setting changes.
 
 ## Next steps
 
