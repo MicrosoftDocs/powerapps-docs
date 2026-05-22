@@ -21,7 +21,12 @@ These are the supported experiences with Microsoft 365 Copilot and Dataverse:
 - Microsoft 365 Copilot Chat (main chat): Ask questions across Dataverse data, summarize records, and identify trends using natural language.
 - Power Apps (sidecar): Get help while working in model-driven or canvas apps. For example, find records, understand related data, and summarize what matters.
 - Outlook: Draft and review customer emails with relevant Dataverse context, such as account details and open items.
+   > [!NOTE]
+   > During Public preview, set the **Allow actions/Default mode** Copilot setting to **Default mode** to query Dataverse data.
 - Microsoft Word: Turn Dataverse data into structured content like customer briefs, status updates, and summaries.
+   > [!NOTE]
+   > During Public preview, set the **Allow editing/Chat only** Copilot setting to **Chat only** to query Dataverse data.
+- Microsoft Teams: Include detailed business data in preparing meeting agenda and retrieve realtime business data during meeting.
 
 ## How it works
 
