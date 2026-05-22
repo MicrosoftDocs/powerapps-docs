@@ -28,20 +28,19 @@ Microsoft 365 Copilot can use Dataverse data to help users find information and 
 
 Dataverse table data from Power Apps (model-driven) can be searched and reasoned over in Microsoft 365 Copilot. Copilot can find relevant rows and related records, interpret table relationships, and summarize or answer questions based on your data. More information: [Dataverse data in Microsoft 365 Copilot](data-platform-data-copilot.md)
 
-## Prerequisites
+### Dataverse data in Microsoft 365 Copilot prerequisites
 
-- Microsoft 365 admin role (AI administrator, Global administrator) to access Microsoft 365 admin center Copilot settings. More information: [Enable Microsoft 365 admin center Copilot Dataverse settings](#enable-microsoft-365-admin-center-copilot-dataverse-settings-preview)
-- Power Platform administrator role to access Copilot environment settings. More information: [Enable Copilot](https://learn.microsoft.com/power-platform/admin/settings-features#copilot-preview).
-- Power Platform administrator role to access Dataverse Search environment settings. More information: [Enable Dataverse search](https://learn.microsoft.com/power-platform/admin/settings-features#search).
-- Power Platform administrator role to access Dataverse intelligence environment settings. More information: [Enable Dataverse intelligence: Allow data availability in Microsoft 365 Copilot](https://learn.microsoft.com/power-platform/admin/settings-features#dataverse-intelligence-preview).
-- Power Platform administrator role to access the Power Apps application settings. More information: [Enable Microsoft 365 Copilot in a model-driven app](https://learn.microsoft.com/power-apps/maker/model-driven-apps/add-microsoft-365-copilot#enable-microsoft-365-copilot-in-a-model-driven-app).
-
+- Microsoft 365 admin role (AI administrator or Global administrator) to access Microsoft 365 admin center Copilot settings. More information: [Enable Microsoft 365 admin center Copilot Dataverse settings](#enable-microsoft-365-admin-center-copilot-dataverse-settings)
+- Power Platform administrator role to access Copilot environment settings. More information: [Enable Copilot](/power-platform/admin/settings-features#copilot-preview).
+- Power Platform administrator role to access Dataverse Search environment settings. More information: [Enable Dataverse search](/power-platform/admin/settings-features#search).
+- Power Platform administrator role to access Dataverse intelligence environment settings. More information: [Enable Dataverse intelligence: Allow data availability in Microsoft 365 Copilot](/power-platform/admin/settings-features#dataverse-intelligence-preview).
+- Power Platform administrator role to access the Power Apps application settings. More information: [Enable Microsoft 365 Copilot in a model-driven app](/power-apps/maker/model-driven-apps/add-microsoft-365-copilot#enable-microsoft-365-copilot-in-a-model-driven-app).
 
 ## Business skills
 
 Business skills help makers and users interpret data, improve processes, and make decisions. Intelligence experiences can support key skills like problem framing, requirements discovery, communicating insights, and iterating with stakeholders. More information: [Business skills overview](data-platform-business-skill-overview.md)
 
-## Prerequisites
+### Business skills prerequisites
 
 - The environment where you use Dataverse intelligence must be a Managed Environment.
 - The environment must be enabled and configured for Dataverse MCP server preview. Business skills are only available for use with the preview version of Dataverse MCP server. More information: [Use preview tools and upcoming features in Dataverse MCP server](data-platform-mcp-preview-tools.md)
@@ -53,7 +52,6 @@ Business skills help makers and users interpret data, improve processes, and mak
 1. Select **All users**, or
 1. Select **Specific groups** and enter the list of Entra security groups. 
 1. Select **Save** to save the setting changes.
-
 
 ## Next steps
 

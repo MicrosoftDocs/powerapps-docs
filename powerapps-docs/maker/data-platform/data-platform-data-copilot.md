@@ -5,7 +5,7 @@ description: Understand how Microsoft Copilot searches and reasons over Microsof
 author: paulliew
 ms.author: paulliew
 ms.reviewer: matp
-ms.date: 04/30/2026
+ms.date: 05/22/2026
 ms.topic: concept-article
 ms.service: power-platform
 ms.subservice: dataverse
