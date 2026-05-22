@@ -5,7 +5,8 @@ author: chmoncay
 ms.author: chmoncay
 ms.topic: how-to
 ms.custom: 
-ms.date: 09/22/2020
+ai-usage: ai-assisted
+ms.date: 05/20/2026
 ms.subservice: teams
 ms.reviewer: mkaur
 contributors:
@@ -16,6 +17,9 @@ contributors:
 # Manage your apps in Teams
 
 To manage an app, select **Apps** from the solution explorer. Then select the app that you want to manage, or select **Commands** (**…**) next to the app name, and then select commands from the drop-down menu.
+
+> [!NOTE]
+> The Teams experience changes frequently. If the current Teams UI or screenshots in this article don't match what you see, use the option names and overall flow as your guide.
 
 ![Select apps.](media/manage-apps-1.png "Select apps")
 
@@ -28,7 +32,7 @@ Select **Edit** to edit the app in Power Apps Studio. More information: [Edit a 
 
 ## Add to Teams
 
-Allows you to download the app, and then upload to Teams. To learn how to add an app to Teams, go to [Embed a canvas app in Teams](embed-teams-app.md).
+Allows you to download the app and then add it to Teams. For the current end-to-end experience, see [Embed a canvas app as personal app in Teams](embed-teams-app.md) and [Publish your app in Teams](publish-and-share-apps.md).
 
 ![Add to Teams.](media/embed-app-teams.png "Add to Teams")
 
@@ -95,7 +99,7 @@ To rename an app:
 
 1. Select **Save**.
 
-More information: [Edit app editor](understand-power-apps-studio.md?branch=teams-preview#app-name-editor)
+More information: [Edit app editor](understand-power-apps-studio.md#app-name-editor)
 
 ## Change app icon and description
 
@@ -109,11 +113,13 @@ To change the app icon and description:
 
 1. Select **Save**.
 
-More information: [Change app settings](understand-power-apps-studio.md?branch=teams-preview#settings)
+More information: [Change app settings](understand-power-apps-studio.md#settings)
 
 ### See also
 
 [Publish and share your apps](publish-and-share-apps.md)
+[Set permission and share apps with colleagues](set-perms-and-share.md)
+[Embed a canvas app as personal app in Teams](embed-teams-app.md)
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
