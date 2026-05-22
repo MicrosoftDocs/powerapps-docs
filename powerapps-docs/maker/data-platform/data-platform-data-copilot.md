@@ -26,7 +26,7 @@ These are the supported experiences with Microsoft 365 Copilot and Dataverse:
 - Microsoft Word: Turn Dataverse data into structured content like customer briefs, status updates, and summaries.
    > [!NOTE]
    > During Public preview, set the **Allow editing/Chat only** Copilot setting to **Chat only** to query Dataverse data.
-- Microsoft Teams: Include detailed business data in preparing meeting agenda and retrieve realtime business data during meeting.
+- Microsoft Teams: Include detailed business data in preparing meeting agenda and retrieve real-time business data during meeting.
 
 ## How it works
 
@@ -53,7 +53,7 @@ At a high level, here's how Dataverse data in Microsoft 365 Copilot works:
 
 ## Considerations
 
-- Copilot returns only Dataverse data that you are authorized to access.
+- Copilot returns only Dataverse data that you're authorized to access.
 - Results depend on data quality and how tables and relationships are modeled.
 - Use clear, specific prompts such as table or entity names, timeframes, and status values to get more precise answers.
 
