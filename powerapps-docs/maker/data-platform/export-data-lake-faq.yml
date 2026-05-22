@@ -140,7 +140,11 @@ sections:
    - question: Why do I get a type conversion error for timestamp columns when reading Parquet files in Apache Spark 3.5 or later?
      answer: |
         In both bring your own lake (profiles and managed data lake) profiles, timestamps in Parquet files are stored in INT64 format. You might encounter errors in downstream pipelines, such as Azure Synapse pipeline copy operations, when reading these Parquet files through Apache Spark 3.5 or later. This behavior occurs because INT96 is no longer the default mode for timestamps in Spark 3.5.
-        You might see an error similar to: `TypeConversionNotSupportedDataTypes, Exception occurred when converting value "1774478519775185" for column name 'SinkCreatedOn' from type 'Int64'`
+        
+        You might see an error similar to: 
+        
+        `TypeConversionNotSupportedDataTypes, Exception occurred when converting value "1774478519775185" for column name 'SinkCreatedOn' from type 'Int64'`
+        
         To mitigate this issue, add a SQL function in your destination SQL database to convert the timestamp values from INT64 to the appropriate datetime format. Or, update your downstream pipelines to use INT64 format.
 additionalContent: |
 
