@@ -36,9 +36,15 @@ At a high level, here's how Dataverse data in Microsoft 365 Copilot works:
 
 - “Show me my highest-priority open cases.”
 - “Summarize this account’s recent activity and open items.”
-- “Which opportunities are at risk this month, and why?”
-- “Draft a customer update email based on the latest case status.”
-- “Create a one-page customer brief for this account.”
+- "Case details for case <XYZ>"
+- "How many open leads do I own?"
+- "List all campaigns for the current fiscal year"
+- "What are some recent cases for customer <XYZ>?"
+- "What contracts and entitlements does the <XYZ> account have?"
+- "Which quotes are active?"
+- "Show me active cases waiting for details"
+- "My active invoices"
+- "How many opportunities are closing next month?"
 
 ## Considerations
 
