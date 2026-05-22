@@ -10169,6 +10169,16 @@
       "source_path": "powerapps-docs/maker/canvas-apps/get-started-test-drive.md",
       "redirect_url": "/power-apps/maker/canvas-apps/create-blank-app",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/common/performance-insights-overview.md",
+      "redirect_url": "/power-apps/maker/common/monitor-app-performance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/common/performance-insights-categories.md",
+      "redirect_url": "/power-apps/maker/common/monitor-app-performance",
+      "redirect_document_id": false
     }
   ]
 }

@@ -5,8 +5,9 @@ author: msftsamperl
 ms.topic: how-to
 ms.custom: canvas
 ms.collection: get-started
+ai-usage: ai-assisted
 ms.reviewer: mkaur
-ms.date: 08/19/2025
+ms.date: 05/20/2026
 ms.subservice: teams
 ms.author: mabolan
 search.audienceType: 
@@ -19,6 +20,9 @@ contributors:
 # Embed a canvas app as personal app in Teams
 
 You can share an app you've created by embedding it directly into Microsoft Teams. When completed, users can select **+** to add your app to any of **your** team channels or conversations in the team you are in. The app appears as a tile under **Tabs for your team**.
+
+> [!NOTE]
+> The Teams experience changes frequently. If the current Teams UI or screenshots in this article don't match what you see, use the option names and overall flow as your guide.
 
 > [!NOTE]
 > Team custom app policies must be set to allow uploading custom apps. If you are unable to embed your app in Teams, check with your administrator to see if they've setup [custom app settings](/MicrosoftTeams/teams-custom-app-policies-and-settings#custom-app-policy-and-settings).
@@ -146,6 +150,8 @@ You can optionally preload your app within Teams to increase performance. For mo
 ### See also
 
 [Welcome to Microsoft Teams](/MicrosoftTeams/teams-overview)
+[Manage your apps in Teams](manage-your-apps.md)
+[Publish your app in Teams](publish-and-share-apps.md)
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
