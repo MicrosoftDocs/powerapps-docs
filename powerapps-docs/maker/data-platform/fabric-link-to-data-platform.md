@@ -120,6 +120,24 @@ Existing Fabric Link profiles continue to use the previous sync engine. To move 
 > [!IMPORTANT]
 > Low-latency sync writes timestamp columns as **INT64**. The **INT96** timestamp format used by the previous Fabric Link sync engine isn't supported. Review any downstream dependencies (queries, pipelines, semantic models, external readers) that explicitly handle INT96 timestamps and update them to read INT64.
 
+### Prerequisites for finance and operations apps
+
+If you're running finance and operations apps, your environment must be on a supported build before low-latency sync works. The following table lists the minimum required builds by app version.
+
+| Finance and operations version | Minimum platform build | Minimum application build |
+|---|---|---|
+| 10.0.45 | 7.0.7690.155 | 10.0.2345.229 |
+| 10.0.46 | 7.0.7778.118 | 10.0.2428.181 |
+| 10.0.47 | 7.0.7858.101 | 10.0.2527.116 |
+| 10.0.48 | 7.0.7996.39 | 10.0.2645.35 |
+
+To check your build, in your finance and operations environment, go to **Help & Support** > **About** to see your current platform and application build numbers.
+
+If your build is below the minimum listed for your app version, apply the latest quality update for your version before setting up low-latency sync.
+
+> [!NOTE]
+> If you're not sure which app version you're on, contact your system administrator or Microsoft support team.
+
 ## Manage link to Fabric
 
 This section describes how to add or remove tables linked to Fabric, configure the link to use workspace identity, and share the data connection with other users.
