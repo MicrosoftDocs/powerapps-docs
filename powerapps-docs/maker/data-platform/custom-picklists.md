@@ -4,9 +4,9 @@ description: Step-by-step instructions for how to create a choice in Power Apps.
 author: lancedMicrosoft
 ms.component: cds
 ms.topic: how-to
-ms.date: 06/02/2025
+ms.date: 04/21/2026
 ms.subservice: dataverse-maker
-ms.author: lanced
+ms.author: matp
 search.audienceType: 
   - maker
 ---
@@ -14,13 +14,13 @@ search.audienceType:
 
 Choice columns allow you to include dropdown lists of fixed values to a user within your app to ensure data consistency. Choice columns were formerly referred to as option sets and are sometimes called picklists. Similar to tables, there are both standard choices or makers have the ability to create custom choice columns to use in apps.
 
-Choices can be created while working from a solution in powerapps.com or on a table form in the form designer.
+Choices can be created while working from a solution in Power Apps (make.powerapps.com) or on a table form in the form designer.
 
 Choice columns can be single selection only (choice) or can allow multi-selection (choices). The following screenshot shows a multi-select choices column in a model-driven app.
 
 :::image type="content" source="media/data-platform-cds-newoptionset/multi-select-choice.png" alt-text="A multi-select choices column displayed on a model-driven app main form":::
 
-Choices are either global or local. You can define a choice to use a set of options defined elsewhere (globally) which can be made available to other choice columns, or define a set of options only available within the choice column (locally). More information: [Create and edit choice columns overview](create-edit-global-option-sets.md)
+Choices are either global or local. You can define a choice to use a set of options defined elsewhere (globally), which can be made available to other choice columns, or define a set of options only available within the choice column (locally). More information: [Create and edit choice columns overview](create-edit-global-option-sets.md)
 
 ## Create a global choice within a solution
 
@@ -31,14 +31,14 @@ Choices are either global or local. You can define a choice to use a set of opti
    - In the **Label** field, enter the label you want displayed for the choice option.
    - The **Value** number represents a unique value for the option and isn't displayed in the choice column in an app. Notice there's a number generated for each **Value** automatically. We recommend that you not change this. Having a unique **Value** helps ensure that the value will be different from other option values that might be defined in other solutions and imported into your environment.
    - Select the color picker to the left of the **Label** if you want a color to appear for the option in model-driven app charts.
-   - **Additional properties**.
+   - Select the three vertical dots > **Additional properties** to set the following properties:
       - **Description**. Add a description for the option.
       - **External value**. This value is used for virtual tables to map a value in an external data source with this option.
       - **Hidden**. Hide the option from the choice column at runtime in apps. For more information about the limitations of this property, go to [Choice hidden property limitations](#choice-hidden-property-limitations).
       > [!CAUTION]
       > The Hidden property should never be used as a secure way to prevent users from viewing or editing column values. These properties only apply to app components such as model-driven app forms and views but don't have an effect on a user's data privileges. When a column is hidden, users can still access column data in other ways, such as by making Web API calls. To secure columns, use [column-level security to control access](/power-platform/admin/field-level-security).
 1. Select **New choice** to create another option for the choice.
-1. Repeat the previous step to until you have the options you want for the choice.
+1. Repeat the previous step until you have the options you want for the choice.
 1. Expand **Advanced options** to display additional properties: 
    - **Name**. Unique name of the global choice including the solution publisher prefix.
    - **External type name**. This value is used for virtual tables to map a value in an external data source with this choice.
@@ -64,7 +64,7 @@ Create a local choice column for a table that can be used in forms and views wit
 - **Description**. Enter an optional description of the choice column.
 - **Data type**. Select **Choice** > **Choice**. Select **Choice** > **Yes/No** if you want a two option single select choice field.
 - **Behavior**. Select calculated to enable the column to be included in calculated columns to automate manual calculations.
-- **Required**. Setting this to **Business required** makes it so a record can't be saved without data in this column.
+- **Required**. Set this value to **Business required** to make it so a record can't be saved without data in this column.
 - **Searchable**. When selected, this column appears in Advanced Find and is available when customizing views.
 - **Selecting multiple choices is allowed**. Select this option if you want to create a choice where the user can select more than one option (multi-select).
 - **Sync with global choice?**
@@ -77,7 +77,7 @@ Create a local choice column for a table that can be used in forms and views wit
    - Select the color picker to the left of the **Label** if you want a color to appear for the option in model-driven app charts.
 - **Default choice**. Select one of the options you created as the default choice.
 - **Schema name**. This is the unique name used by the system and is automatically generated based on the display name and solution publisher prefix. After a new choice column is saved, you can't change this.
-- **Enable column security**. Select this to allow for securing the data in the column beyond the security defined for the table.
+- **Enable column security**. Select this option to secure the data in the column beyond the security defined for the table.
 - **Enable auditing.** If auditing has been enabled in the environment, this column can be included in change tracking.
 - **Appears in dashboard's global filter**. Select this option to allow column to be available as a filter in interactive dashboards.
 - **Sortable**. Select this option to allow sorting of this column when used in interactive dashboards.
@@ -86,7 +86,7 @@ Select **Save**.
 
 Now the local choice column appears in the form and view designers to add for the table.
 
-## Create and edit global choices using solution explorer
+## Create and edit global choices using the classic solution explorer
 
 For information about how to create and edit global choices using the classic solution explorer, go to [Create or edit a global option set (on-premises)](/dynamics365/customerengagement/on-premises/customize/create-edit-global-option-sets).
 

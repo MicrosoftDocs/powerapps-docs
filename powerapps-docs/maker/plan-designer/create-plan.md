@@ -4,7 +4,7 @@ description: Use plans to create business solutions with AI-powered experiences.
 author: mduelae
 contributors:
 ms.topic: how-to
-ms.date: 10/10/2025
+ms.date: 02/18/2026
 ms.update-cycle: 180-days
 ms.author: szlo
 ms.reviewer: mkaur
@@ -23,9 +23,11 @@ Use [plans](plan-designer.md) to create user roles, data tables, and apps that a
 
 This article uses a sample scenario to show how plans works by building a solution for managing paid time off (PTO) requests for employees and managers.
 
-1. Access plans from the Power Apps home page. Sign in to [Power Apps](https://make.powerapps.com/).
+1. Sign in to [Power Apps](https://make.powerapps.com/).
+1. On the Home screen, select **Start with a plan**
+1. Select **Create a plan**
 
-1. Enter your prompt in the text box, like the example. Add context such as process diagrams, data models, or screenshots of legacy apps. When you're done, select **Enter**.
+1. Enter your prompt in the text box, like the example. Add context such as process diagrams, data models, or screenshots of legacy apps. When you're done, select **Generate**.
 
     ```copilot-prompt
     Employees need to log vacation days, and managers need to approve them.
@@ -208,7 +210,7 @@ Legend:
 1. **Create a plan**: Create a new plan.
 1. **Your plans**: View your plans.
 1. **Edit**: Edit the selected plan.
-1. **Edit or Delete**: Edit or delete the selected plan.
+1. **Edit, share, or Delete**: Edit, share, or delete the selected plan.
 
 ## Next steps
 

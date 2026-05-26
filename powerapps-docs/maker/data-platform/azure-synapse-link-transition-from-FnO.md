@@ -1,14 +1,14 @@
 ---
 title: Transition from legacy data integration services to Fabric link and Azure Synapse Link for Dataverse
 description: Learn how to transition from Export to Data Lake, BYOD, and data export service to link to Microsoft Fabric and Azure Synapse Link for Microsoft Dataverse.
-ms.date: 04/30/2025
+ms.date: 03/30/2026
 ms.reviewer: matp 
 ms.topic: "how-to"
 applies_to: 
   - "powerapps"
-author: Milindav2
+author: anibakore-msft
 ms.subservice: dataverse-maker
-ms.author: Milindav
+ms.author: banirud
 search.audienceType: 
   - maker
 ms.custom: bap-template
@@ -171,7 +171,7 @@ Fabric not only simplifies your data integration architecture, but also reduces 
 
 If you upgrade to Azure Synapse Link and continue to export data, your data is saved in Delta or Parquet format, which can reduce the steps in your own data pipelines for operational reporting.
 
-Consider the time taken to refresh an operational report, such as inventory analysis or month-end financial analysis. These reports might require data aggregation of millions of rows of data from multiple tables in Dynamics 365 Finance. Using Export to Data Lake service, CSV data is exported within 10 minutes. This data might need to be imported into a Power BI report to provide better response times. Power BI refresh can be performed up to 24 times a day (every 30 minutes). Depending on how the report is designed, refresh can take several minutes to complete refresh. Using this approach, users can see data within 60 minutes of an update. These timelines are indicative. Actual sync time depends on factors such as the initial data load size, data churn rate, and the volume of changes.
+Consider the time taken to refresh an operational report, such as inventory analysis or month-end financial analysis. These reports might require data aggregation of millions of rows of data from multiple tables in Dynamics 365 Finance. Using Export to Data Lake service, CSV data is exported within 10 minutes. This data might need to be imported into a Power BI report to provide better response times. Power BI refresh can be performed up to 24 times a day (every 30 minutes). Depending on how the report is designed, refresh can take several minutes to complete refresh. Using this approach, users can see data within 60 minutes of an update. These timelines are indicative. Actual sync time depends on factors such as the initial data load size, data churn rate, and the volume of change.
 
 ![Data staleness with Export to Data Lake](media/Fabric/before-data-staleness.png)
 
@@ -179,7 +179,7 @@ Operational reports that source data using Fabric link can leverage Direct Lake 
 
 ![Data staleness after Fabric link](media/Fabric/after-data-staleness.png)
 
-The Fabric link service updates data in Dataverse OneLake within the hour as of this point in time. Dataverse triggers data update jobs every 15 minutes and depending on the volume of data changes, you might see updated Parquet files within 15 to 45 minutes. These timelines are indicative. Actual sync time depends on several factors including the initial data load size, data churn rate, and the volume of changes. In situations with high transaction volumes, such as processes in Finance and Operations apps generating millions of records in a short time, or processes like the master planning feature included with Dynamics 365 Supply Chain Management that delete and re-create large volumes of records, Synapse Link must synchronize all changes including deletes. In these high-volume scenarios, data availability within the indicated timeframes can't be guaranteed.
+The Fabric link service updates data in Dataverse OneLake within the hour as of this point in time. Dataverse triggers data update jobs every 15 minutes and depending on the volume of data changes, you might see updated Parquet files within 15 to 45 minutes. These timelines are indicative. Actual sync time depends on several factors including the initial data load size, data churn rate, and the volume of changes. In situations with high transaction volumes, such as processes in Dynamics 365 finance and operations apps generating millions of records in a short time, or processes like the master planning feature included with Dynamics 365 Supply Chain Management that delete and re-create large volumes of records, Synapse Link must synchronize all changes including deletes. In these high-volume scenarios, data availability within the indicated timeframes can't be guaranteed.
 
 If you're consuming incremental data feeds from Dynamics 365 with Export to Data Lake service for near-real time data integration scenarios (example 3). Upgrade to Azure Synapse Link enables you to run the same data pipelines.
 

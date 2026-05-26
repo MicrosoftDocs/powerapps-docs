@@ -1,0 +1,2 @@
+> [!NOTE]
+> Some terminology for Power Automate and Microsoft Copilot Studio is changing starting April 2026. Flow and agent flow are now called *workflow*. We're currently updating the documentation to align with the new terminology, and the changes will be published soon.

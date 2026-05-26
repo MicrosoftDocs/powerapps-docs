@@ -4,9 +4,12 @@ description: Discover the new AI-native Power Apps vibe code experience. Build a
 author: mduelae
 ms.author: mkaur
 ms.reviewer: mkaur
-ms.date: 01/30/2026
+ms.date: 04/16/2026
 ms.topic: concept-article
-ms.custom: CXT 
+ms.custom: 
+ - CXT
+ - vibe
+
 ---
 
 #  Overview of the new Power Apps vibe experience (preview)
@@ -47,6 +50,8 @@ After watching the video, explore the detailed walkthrough in [Create apps, data
   1. Set the toggle for **Copilot in Power Apps (preview)** to **On**.
   1. Select **Save** to apply the changes.
   
+- **Optional but recommended**: For higher quality apps, enable **Anthropic models** by going to [Power Platform Admin Center](https://admin.powerplatform.microsoft.com) > **Environments** > **[Name of Environment]** > **Settings** > **Features** > **Enable External Models**.
+  
   For more information, see [Tenant settings](/power-platform/admin/tenant-settings).
 - This capability isn't available in a default environment.
 - This capability is currently available only in the US, Australia, Asia, and India regions, and only in English. For more information, see [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/en-US/availability-reports/?report=copilotfeaturereport).
@@ -56,9 +61,9 @@ After watching the video, explore the detailed walkthrough in [Create apps, data
 If you're experiencing connection errors or can't access environments:
 
 - **Verify environment region**: Ensure you have access to an environment located in the US, Australia, Asia, or India region. You can check your environment region in the [Power Platform admin center](https://admin.powerplatform.microsoft.com):
-   1. Sign in to the Power Platform admin center
-   1. In the navigation pane, select **Manage** > **Environments**
-   1. Locate the **Region** column to see where your environments are hosted
+   1. Sign in to the Power Platform admin center.
+   1. In the navigation pane, select **Manage** > **Environments**.
+   1. Locate the **Region** column to see where your environments are hosted.
 
 For additional support with connectivity issues, contact [Power Platform support](https://powerapps.microsoft.com/support/).
 
@@ -86,7 +91,6 @@ The left navigation shows the following items:
 Legend:
 
 1. **Home**: Returns you to the main landing page.
-1. **Plans**: Access and manage your plans.
 1. **Apps**: Open, play, or edit apps you created or that others shared with you.
 1. **Profile**: Access the environment picker, session details, notifications, and settings.
 
@@ -102,10 +106,15 @@ Legend:
 
 1. **Enter prompt**: Type a description of what you want to build.
 
-1. **Enhance prompt**: (Optional) Use this button to add more detail to your prompt before generating your app.
+1. **Plan**: Use this mode to review and discuss a plan with agenta before making changes.
+
+1. **Enhance prompt** (Optional): Add more detail to your prompt before generating your app.
+
+1. **Start dictation**: Start speech to text and speak into a microphone to convert your voice into text.
 
 1. **Suggestions**: Want to experiment? Select one of the suggestions to explore the new app-building experience.
 
 ## Next steps
 
- [Create apps, data, and plans together (preview)](create-app-data-plan.md)
+- [Create apps, data, and plans together (preview)](create-app-data-plan.md)
+- [FAQ for the Power Apps vibe experience (preview)](../maker/common/faq-vibe.md)

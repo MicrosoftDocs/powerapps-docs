@@ -8,7 +8,7 @@ contributors: saviegas
 ms.service: powerapps
 ms.subservice: dataverse-maker
 ms.topic: how-to
-ms.date: 05/26/2026
+ms.date: 04/27/2026
 ms.custom: template-how-to
 ---
 # Link to Microsoft Fabric
@@ -71,7 +71,7 @@ Link to Microsoft Fabric from the Power Apps **Tables** area: Select **Analyze**
      Provide your credentials and save the connection. To change credentials later, select **Switch account** and provide new credentials.
 
 6. You can expect to see shortcuts to all your tables within the selected workspace. If you don't see workspaces, ask the system to create a workspace. Go to [Troubleshooting common issues](fabric-troubleshoot.md) if you don't see the desired workspace.
-7. Next, in the **Select Entities** step, choose the tables you want to sync to Fabric. By default, all Dataverse tables where the **Track changes** property is enabled are selected. Unselect any tables you don't want to sync. Only selected tables consume storage in Fabric, so you can optimize costs by excluding tables you don't need.
+7. Next, in the **Select Entities** step, choose the tables you want to sync to Fabric. By default, all Dataverse tables where the **Track changes** property is enabled are selected. Clear any tables you don't want to sync. Only selected tables consume storage in Fabric, so you can optimize costs by excluding tables you don't need.
 
    :::image type="content" source="media/fabric/fabric-link-select-entities.png" alt-text="Screenshot of the Select Entities step in the Link to Fabric wizard showing Dataverse tables with checkboxes to include or exclude from sync." lightbox="media/fabric/fabric-link-select-entities.png":::
 
@@ -192,7 +192,7 @@ After confirmation:
 
 > [!IMPORTANT]
 >
-> - Some system tables and tables required by Microsoft add-ins can't be removed. More information: [Are there system tables that are automatically synchronized and can't be unlinked?](fabric-link-faq.yml#are-there-system-tables-that-are-automatically-synchronized-and-cant-be-unlinked)
+> - Some system tables and tables required by Microsoft add-ins can't be removed. More information: [Are there system tables that are automatically synchronized and can't be unlinked?](fabric-link-faq.yml#are-there-system-tables-that-are-automatically-synchronized-and-can-t-be-unlinked)
 > - Removing a table doesn't delete the table in Dataverse; it only removes the OneLake shortcut and stops data sync.
 > - If you need to add tables later, repeat the same steps and check the tables you want to include. More information: [Manage link to Fabric](#manage-link-to-fabric).
 

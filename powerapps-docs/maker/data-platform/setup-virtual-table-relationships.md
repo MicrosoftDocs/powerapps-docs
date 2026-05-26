@@ -6,7 +6,7 @@ ms.author: nhelgren
 ms.service: powerapps
 ms.subservice: dataverse-maker
 ms.topic: how-to
-ms.date: 01/04/2023
+ms.date: 05/15/2026
 ms.custom: template-concept
 ---
 # Setting up a virtual table relationship
@@ -18,13 +18,17 @@ Virtual tables are  enabled for relationships. You can set up 1:N, N:1, and cust
 
 For instance, you can't set up a relationship between a virtual table created using the OData virtual table provider and a virtual table created using the virtual connector provider.
 
+> [!NOTE]
+> It's not possible to create a relationship where the virtual table is on the 1 side of a 1:N (one-to-many) relationship. This is because virtual tables are metadata representations of the source table. When you create a relationship, additional supporting columns are added to the *1* side of the relationship. Dataverse doesn't have the ability to create new columns in source systems.
+
+
 ## Defining relationships in virtual tables
 
-Virtual tables created using the virtual connector provider automatically creates all the columns that are represented in the external source table. This will also include columns on which relationships are defined. However, the relationship definition won't be automatically created. You'll have to define this relationship in Dataverse manually.
+Virtual tables created using the virtual connector provider automatically creates all the columns that are represented in the external source table. This will also include columns on which relationships are defined. However, the relationship definition won't be automatically created. You have to define this relationship in Dataverse manually.
 
 The following example creates an N:1 relationship between a virtual table (**Service Request**) and a native table (**Account**). The column used to set up the relationship is **AccountId**. This column is the primary key in the account table and is a foreign key in the service request table.
 
-A representation of the **Service Request** virtual table is shown below. You'll notice that the **AccountId** column, which is the column used for relationship in the external source, is of type **Multiple Line of Text**. You need to have this column represented as a **Lookup** type to create a relationship.
+A representation of the **Service Request** virtual table is shown here. You'll notice that the **AccountId** column, which is the column used for relationship in the external source, is of type **Multiple Line of Text**. You need to have this column represented as a **Lookup** type to create a relationship.
 
 :::image type="content" source="media/ve-create-columns.png" alt-text="Create columns in virtual table":::
 

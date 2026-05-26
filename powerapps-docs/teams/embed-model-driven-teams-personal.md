@@ -1,12 +1,12 @@
 ---
-title: Embed a model-driven app as a personal app (preview)
+title: Embed a model-driven app as a personal app (preview - retiring May 2026)
 description: You can embed a model-driven app created in Power Apps in Microsoft Teams to share it.
 author: aorth
 ms.topic: how-to
 ms.custom: model
 ms.collection: get-started
 ms.reviewer: matp
-ms.date: 11/13/2024
+ms.date: 03/31/2026
 ms.subservice: teams
 ms.author: aorth
 search.audienceType: 
@@ -20,8 +20,10 @@ contributors:
 You can share an app you've created by embedding it directly into Microsoft Teams. When completed, users can select **+** to add your app to any of **your** team channels or conversations in the team you are in. The app appears as a tile under **Tabs for your team**.
 
 > [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
+>
+> - This feature is deprioritized and will not be delivered. 
+> - New model-driven apps can no longer be added to Teams.
+> - Model-driven apps that are embedded in Teams will continue to function until May 1, 2026. After that date, these apps will no longer work within the Teams experience. Users can continue to use these apps through a web browser or other supported clients.
 
 ## Prerequisites
 

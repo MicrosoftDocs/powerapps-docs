@@ -227,7 +227,7 @@ More information: [Query schema definitions](query-schema-definitions.md)
 
 # [Web API](#tab/webapi)
 
-This request returns all the image column definitions for the account table. The filtering is provided by specifying `/Microsoft.Dynamics.CRM.ImageAttributeMetadata` in the URL. More information: [Retrieving attributes](webapi/query-metadata-web-api.md#retrieving-attributes)
+This request returns all the image column definitions for the account table. The filtering is provided by specifying `/Microsoft.Dynamics.CRM.ImageAttributeMetadata` in the URL. More information: [Retrieving attributes](webapi/query-metadata-web-api.md#retrieve-attributes)
 
 **Request:**
 

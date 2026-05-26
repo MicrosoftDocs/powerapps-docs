@@ -2,7 +2,7 @@
 title: "How Dataverse SQL Differs from Transact-SQL | Microsoft Docs"
 description: "Learn the subset of the Transact-SQL language supported by the Dataverse SQL endpoint." 
 ms.custom: ""
-ms.date: 10/09/2024
+ms.date: 02/27/2026
 ms.reviewer: "pehecke"
 
 ms.topic: "article"
@@ -19,53 +19,53 @@ This article describes the differences between Dataverse SQL and Transact-SQL. D
 
 ## Data types
 
-In an SQL database, each column, local variable, expression, and parameter has a related data type. A data type is an attribute that specifies the type of data that the object can hold: integer data, character data, monetary data, date and time data, binary strings, and so on.
+In a SQL database, each column, local variable, expression, and parameter has a related data type. A data type is an attribute that specifies the type of data that the object can hold: integer data, character data, monetary data, date and time data, binary strings, and so on.
 
 More information: [Data types (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql)
 
 ### [Supported](#tab/supported)
 
-- bigint
-- bit
-- char
-- datetime
-- decimal
-- float
-- int
-- money
-- nchar
-- numeric
+- :::no-loc text="bigint":::
+- :::no-loc text="bit":::
+- :::no-loc text="char":::
+- :::no-loc text="datetime":::
+- :::no-loc text="decimal":::
+- :::no-loc text="float":::
+- :::no-loc text="int":::
+- :::no-loc text="money":::
+- :::no-loc text="nchar":::
+- :::no-loc text="numeric":::
 - [nvarchar*](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql#nvarchar---n--max--)
-- nvarchar(max) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# multi-line text
-- real
-- smalldatetime
-- smallint
-- smallmoney
-- tinyint
-- uniqueidentifier
+- :::no-loc text="nvarchar(max) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# multi-line text":::
+- :::no-loc text="real":::
+- :::no-loc text="smalldatetime":::
+- :::no-loc text="smallint":::
+- :::no-loc text="smallmoney":::
+- :::no-loc text="tinyint":::
+- :::no-loc text="uniqueidentifier":::
 - [varchar*](/sql/t-sql/data-types/char-and-varchar-transact-sql#varchar---n--max--)
-- picklist
-- lookup
-- primarykey
-- customer
-- owner
-- state
-- status
+- :::no-loc text="picklist":::
+- :::no-loc text="lookup":::
+- :::no-loc text="primarykey":::
+- :::no-loc text="customer":::
+- :::no-loc text="owner":::
+- :::no-loc text="state":::
+- :::no-loc text="status":::
 
 ### [Not supported](#tab/not-supported)
 
-- binary
-- image
-- sql_variant
-- timestamp
-- varbinary
-- virtual
-- partylist
-- HierarchyId
-- managedproperty
-- file
-- xml
-- multiselectpicklist
+- :::no-loc text="binary":::
+- :::no-loc text="image":::
+- :::no-loc text="sql_variant":::
+- :::no-loc text="timestamp":::
+- :::no-loc text="varbinary":::
+- :::no-loc text="virtual":::
+- :::no-loc text="partylist":::
+- :::no-loc text="HierarchyId":::
+- :::no-loc text="managedproperty":::
+- :::no-loc text="file":::
+- :::no-loc text="xml":::
+- :::no-loc text="multiselectpicklist":::
 
 ---
 

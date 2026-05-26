@@ -1,8 +1,8 @@
 ---
-title: "Create and design model-driven app forms"
-description: "Overview of model-driven forms in Power Apps"
+title: "Create and design model-driven app forms in Power Apps"
+description: "Overview of how to create model-driven forms in Power Apps"
 ms.collection: get-started
-ms.date: 01/17/2024
+ms.date: 03/12/2026
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -84,7 +84,7 @@ There are a couple of reasons you might not be able to delete a form.
 |Reason  |Work around  |
 |---------|---------|
 | Every table requires at least one main form and it's the only main form for the table.   |  Create a new main form for the table. Then delete the main form you tried earlier. More information: [Create a form](create-and-edit-forms.md#create-a-form)   |
-| Every table requires one designated fallback form and it's the only fallback form.   | Create a new form for the table and set as the fallback. Or designate another existing form as the fallback form. Then delete the form you tried earlier. More information: [Set the fallback form for a table](control-access-forms.md#set-the-fallback-form-for-a-table)     |
+| Every table requires one designated fallback form and it's the only fallback form.   | Create a new form for the table and set it as the fallback. Or designate another existing form as the fallback form. Then delete the form you tried earlier. More information: [Set the fallback form for a table](control-access-forms.md#set-the-fallback-form-for-a-table)     |
 
 ## Controlling the display of a form within an app
 
@@ -209,7 +209,7 @@ There are still a number of tables, referred to here as classic tables, that ret
 
 ## Main form dialogs
 
-With the client API, you can use main form dialogs so users can open a related row table on a parent or base form without navigating away from the form. More information: [Open main form in a dialog using client API](../../developer/model-driven-apps/customize-entity-forms.md#open-main-form-in-a-dialog-using-client-api)
+With the client API, you can use main form dialogs so users can open a related row table on a parent or base form without navigating away from the form. More information: [Open main form in a dialog using client API](../../developer/model-driven-apps/customize-entity-forms.md#open-main-form-in-a-dialog-by-using-client-api)
 
 ## Next steps
 
