@@ -124,8 +124,6 @@ landingContent:
         links:
           - text: Planning a Power Apps project
             url: ../../guidance/planning/introduction.md
-          - text: Performance monitoring
-            url: ../../maker/common/performance-insights-categories.md
           - text: Designing productive forms
             url: design-productive-forms.md
           - text: Optimize forms for performance

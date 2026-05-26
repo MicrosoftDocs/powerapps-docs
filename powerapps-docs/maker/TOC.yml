@@ -313,8 +313,6 @@
           href: ./canvas-apps/customize-list-form.md  
       - name: From Excel
         href: ./canvas-apps/get-started-create-from-blank.md
-    - name: Create an app from a template
-      href: ./canvas-apps/get-started-test-drive.md
   - name: Design and build an app
     items:
       - name: Design and build an app
@@ -1910,14 +1908,8 @@
       href: ./model-driven-apps/distribute-model-driven-app.md
     - name: Enable customizable help
       href: ./model-driven-apps/use-customizable-help.md
-  - name: App performance insights
-    items:
-    - name: Performance insights overview
-      href: ./common/performance-insights-overview.md
-    - name: Understand performance insights
-      href: ./common/performance-insights-categories.md
-    - name:  Use Monitor to get insights and recommendations
-      href: common/monitor-app-performance.md
+  - name: Use Monitor to get insights and recommendations
+    href: common/monitor-app-performance.md
   - name: App ratings (preview)
     href: ./common/app-ratings.md
   - name: FAQ about model-driven apps
