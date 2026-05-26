@@ -8,7 +8,7 @@ contributors: saviegas
 ms.service: powerapps
 ms.subservice: dataverse-maker
 ms.topic: how-to
-ms.date: 04/30/2026
+ms.date: 05/26/2026
 ms.custom: template-how-to
 ---
 # Link to Microsoft Fabric
@@ -98,7 +98,7 @@ Benefits:
 
 - Faster initial sync.
 - Faster delta sync for incremental changes.
-- Higher throughput for finance and operations apps tables, up to 1M+ records per hour per table. Actual sync times depend on initial load, data churn, table sizes, and number of columns.
+- Higher throughput for finance and operations apps tables, up to 1M or more records per hour per table. Actual sync times depend on initial load, data churn, table sizes, and number of columns.
 
 Low-latency sync rolls out by station and is enabled automatically. There's no separate opt-in. Once your station is enabled, new Link to Fabric setups use the new engine through the same setup experience.
 
@@ -106,19 +106,17 @@ To confirm a profile is running on low-latency sync, select **Azure Synapse Link
 
 :::image type="content" source="media/Fabric/low-latency-sync-page.jpg" alt-text="Azure Synapse Link page showing the Low-latency mode flag on a Fabric link profile." lightbox="media/Fabric/low-latency-sync-page.jpg":::
 
-Existing Fabric Link profiles continue to use the previous sync engine. To move an existing profile to low-latency sync after it's available in your station, unlink the profile and relink it.
+Existing Fabric link profiles continue to use the previous sync engine. To move an existing profile to low-latency sync after it's available in your station, unlink the profile and relink it.
 
 > [!NOTE]
 > Unlinking and relinking triggers a full initial sync for all configured tables.
 
 > [!IMPORTANT]
-> If you perform analytics on live and retained data together, note the following before you unlink and relink:
 >
-> - The newly established Fabric Link includes **live data only**. Retained data that was previously available through the link isn't carried over, because the new link starts a fresh sync from the live store.
-> - Archival and existing long-term retention jobs are unaffected. They continue to run as configured, and any new retained data going forward remains available for analytics through the standard retained data access paths.
-
-> [!IMPORTANT]
-> Low-latency sync writes timestamp columns as **INT64**. The **INT96** timestamp format used by the previous Fabric Link sync engine isn't supported. Review any downstream dependencies (queries, pipelines, semantic models, external readers) that explicitly handle INT96 timestamps and update them to read INT64.
+> - If you perform analytics on live and retained data together, note the following behaviors before you unlink and relink:
+   > - The newly established Fabric link includes *live data only*. Retained data that was previously available through the link isn't carried over, because the new link starts a fresh sync from the live store.
+   > - Archival and existing long-term retention jobs are unaffected. They continue to run as configured, and any new retained data going forward remains available for analytics through the standard retained data access paths.
+> - Low-latency sync writes timestamp columns as **INT64**. The **INT96** timestamp format used by the previous Fabric link sync engine isn't supported. Review any downstream dependencies such as queries, pipelines, semantic models, or external readers that explicitly handle INT96 timestamps and update them to read INT64.
 
 ### Prerequisites for finance and operations apps
 
