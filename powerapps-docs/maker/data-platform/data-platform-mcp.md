@@ -4,13 +4,14 @@ description: Step-by-step instructions for setup, connect, and use Microsoft Dat
 author: ShefaaliP
 ms.component: cds
 ms.topic: how-to
-ms.date: 05/13/2026
+ms.date: 05/26/2026
 ms.subservice: dataverse-maker
 ms.author: spatankar
 ms. reviewer: matp
 contributors: 
 - MsSQLGirl
 - seanwat-msft
+- kewear
 search.audienceType: 
   - maker
 ---
@@ -61,7 +62,7 @@ Once connected to the Dataverse MCP Server, you can choose from the following to
 | `file_download` | Generate a SAS URL for file download. | Non-Premium |
 
 > [!IMPORTANT]
-> The Dataverse MCP server tool surface has changed. The following tools were removed and their functionality replaced by the tools in the preceding table: `describe_table`, `list_tables`, and `fetch` (replaced by `describe`); and the previous `search` tool that searched Dataverse data (renamed to `search_data`). The current `search` tool searches metadata. If you maintain allow or deny lists in your MCP client by tool name, review your configuration so that the new tool names reflect your intended permissions. More information: [Connect to Dataverse with model context protocol FAQ](data-platform-mcp-faq.md)
+> The Dataverse MCP server tool surface is changed. The following tools were removed and their functionality replaced by the tools in the preceding table: `describe_table`, `list_tables`, and `fetch` (replaced by `describe`); and the previous `search` tool that searched Dataverse data (renamed to `search_data`). The current `search` tool searches metadata. If you maintain allow or deny lists in your MCP client by tool name, review your configuration so that the new tool names reflect your intended permissions. More information: [Connect to Dataverse with model context protocol FAQ](data-platform-mcp-faq.md)
 
 > [!NOTE]
 > Starting December 15, 2025 Dataverse MCP tools are charged when accessed by AI agents created outside of Microsoft Copilot Studio. If you have Dynamics 365 Premium licenses (such as Dynamics 365 Sales Premium, Finance Premium, Supply Chain Premium, and Customer Service Premium) or a Microsoft 365 Copilot User Subscription License (USL), you aren't charged for accessing Dynamics 365 data, even when that data is accessed from outside Microsoft Copilot Studio.

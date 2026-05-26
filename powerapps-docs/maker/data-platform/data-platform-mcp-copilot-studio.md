@@ -5,8 +5,9 @@ description: Learn how to connect to Dataverse using the Model Context Protocol 
 author: ShefaaliP
 ms.author: spatankar
 ms.reviewer: matp
-ms.date: 05/13/2026
+ms.date: 05/26/2026
 ms.topic: how-to
+contributor: kewear
 ms.collection: bap-ai-copilot
 ms.subservice: dataverse-maker
 ---

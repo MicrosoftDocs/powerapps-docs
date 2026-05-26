@@ -4,10 +4,11 @@ description: Frequently asked questions about using Microsoft Dataverse with a m
 author: seanwat-msft
 ms.component: cds
 ms.topic: how-to
-ms.date: 05/13/2026
+ms.date: 05/26/2026
 ms.subservice: dataverse-maker
 ms.author: spatankar
 ms. reviewer: matp
+contributor: kewear
 search.audienceType: 
   - maker
 ---
@@ -20,7 +21,6 @@ This article provides answers to frequently asked questions about using Microsof
 Verify that the Dataverse environment URL in your MCP client configuration is correct. Go to [Power Apps](https://make.powerapps.com), select the correct environment, and then select **Settings** (gear icon) > **Session details** to confirm your instance URL.
 
 Also verify that the MCP client you’re using is enabled in the Power Platform admin center. More information: [Configure and manage the Dataverse MCP server for an environment](data-platform-mcp-disable.md#configure-and-manage-the-dataverse-mcp-server)
-
 
 ## Which MCP tools are available and what do they do?
 
@@ -47,7 +47,7 @@ If a tool returns an error, try rephrasing your prompt and submitting it again. 
 
 ## What happened to the `execute`, `describe_table`, `list_tables`, and `fetch` tools?
 
-The Dataverse MCP server tool surface was updated. The previous `execute`, `describe_table`, `list_tables`, and `fetch` tools were removed and their functionality is now provided by other tools:
+The Dataverse MCP server tool surface is updated. The previous `execute`, `describe_table`, `list_tables`, and `fetch` tools are removed and their functionality is now provided by other tools:
 
 | Removed tool | Replacement |
 |---|---|
@@ -68,7 +68,7 @@ The `search_data` tool is only available when Dataverse search is enabled for yo
 
 ## Why do I see different tools on the /api/mcp and /api/mcp_preview endpoints?
 
-The `/api/mcp` endpoint provides the generally available set of Dataverse MCP tools. The `/api/mcp_preview` endpoint includes additional preview tools that are being evaluated before general availability. Preview tools might change or be removed without notice. To access the preview tools, an administrator must enable the preview features setting in the Power Platform admin center. More information: [Use preview tools and upcoming features in Dataverse MCP server](data-platform-mcp-preview-tools.md)
+The `/api/mcp` endpoint provides the generally available set of Dataverse MCP tools. The `/api/mcp_preview` endpoint includes additional preview tools that are evaluated before general availability. Preview tools might change or be removed without notice. To access the preview tools, an administrator must enable the preview features setting in the Power Platform admin center. More information: [Use preview tools and upcoming features in Dataverse MCP server](data-platform-mcp-preview-tools.md)
 
 ## How do I enable debug logging for the local proxy?
 
