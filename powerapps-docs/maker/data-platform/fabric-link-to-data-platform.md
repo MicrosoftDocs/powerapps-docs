@@ -90,6 +90,52 @@ Link to Microsoft Fabric from the Power Apps **Tables** area: Select **Analyze**
 >
 > The link was labeled as **Microsoft OneLake** and is now labeled **Link to Fabric**.
 
+## Low-latency sync
+
+Low-latency sync is a faster sync engine for Link to Fabric. It writes data directly from the Dataverse database to Delta Parquet, removing the intermediate CSV step used by the previous pipeline.
+
+Benefits:
+
+- Faster initial sync.
+- Faster delta sync for incremental changes.
+- Higher throughput for finance and operations apps tables, up to 1M or more records per hour per table. Actual sync times depend on initial load, data churn, table sizes, and number of columns.
+
+Low-latency sync rolls out by station and is enabled automatically. There's no separate opt-in. Once your station is enabled, new Link to Fabric setups use the new engine through the same setup experience.
+
+To confirm a profile is running on low-latency sync, select **Azure Synapse Link** from the left navigation. If you see the **Low-latency mode** flag on your Fabric link in the link list, low-latency sync is enabled for that profile.
+
+:::image type="content" source="media/Fabric/low-latency-sync-page.jpg" alt-text="Azure Synapse Link page showing the Low-latency mode flag on a Fabric link profile." lightbox="media/Fabric/low-latency-sync-page.jpg":::
+
+Existing Fabric link profiles continue to use the previous sync engine. To move an existing profile to low-latency sync after it's available in your station, unlink the profile and relink it.
+
+> [!NOTE]
+> Unlinking and relinking triggers a full initial sync for all configured tables.
+
+> [!IMPORTANT]
+>
+> - If you perform analytics on live and retained data together, note the following behaviors before you unlink and relink:
+>    - The newly established Fabric link includes *live data only*. Retained data that was previously available through the link isn't carried over, because the new link starts a fresh sync from the live store.
+>    - Archival and existing long-term retention jobs are unaffected. They continue to run as configured, and any new retained data going forward remains available for analytics through the standard retained data access paths.
+> - Low-latency sync writes timestamp columns as **INT64**. The **INT96** timestamp format used by the previous Fabric link sync engine isn't supported. Review any downstream dependencies such as queries, pipelines, semantic models, or external readers that explicitly handle INT96 timestamps and update them to read INT64.
+
+### Prerequisites for finance and operations apps
+
+If you're running finance and operations apps, your environment must be on a supported build before low-latency sync works. The following table lists the minimum required builds by app version.
+
+| Finance and operations version | Minimum platform build | Minimum application build |
+|---|---|---|
+| 10.0.45 | 7.0.7690.155 | 10.0.2345.229 |
+| 10.0.46 | 7.0.7778.118 | 10.0.2428.181 |
+| 10.0.47 | 7.0.7858.101 | 10.0.2527.116 |
+| 10.0.48 | 7.0.7996.39 | 10.0.2645.35 |
+
+To check your build, in your finance and operations environment, go to **Help & Support** > **About** to see your current platform and application build numbers.
+
+If your build is below the minimum listed for your app version, apply the latest quality update for your version before setting up low-latency sync.
+
+> [!NOTE]
+> If you're not sure which app version you're on, contact your system administrator or Microsoft support team.
+
 ## Manage link to Fabric
 
 This section describes how to add or remove tables linked to Fabric, configure the link to use workspace identity, and share the data connection with other users.
