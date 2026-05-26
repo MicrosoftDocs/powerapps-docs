@@ -5,7 +5,8 @@ author: msftsamperl
 
 ms.topic: article
 ms.collection: get-started
-ms.date: 01/19/2023
+ai-usage: ai-assisted
+ms.date: 05/20/2026
 ms.subservice: teams
 ms.author: saperlmu
 ms.reviewer: mkaur
@@ -123,6 +124,12 @@ Updates to the sample app templates are published immediately. If you already ha
 ## Sample app templates FAQs
 
 For Frequently Asked Questions about sample app templates, go to [Sample app templates FAQs](sample-apps-faqs.md).
+
+## See also
+
+[Customize sample app templates](customize-sample-apps.md)
+[Manage your apps in Teams](manage-your-apps.md)
+[Overview of the Power Apps app](overview-of-the-power-apps-app.md)
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

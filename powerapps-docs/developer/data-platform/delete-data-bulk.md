@@ -1,7 +1,7 @@
 ---
 title: Delete Data in Bulk to Reduce Storage Use
 description: Learn how to delete data in bulk to remove stale records, improve data quality, and manage storage consumption. Use bulk delete jobs to get started.
-ms.date: 05/06/2026
+ms.date: 05/19/2026
 ms.topic: how-to
 author: MsSQLGirl
 ms.subservice: dataverse-developer
@@ -55,15 +55,19 @@ You can perform a bulk deletion on all tables that support the `Delete` message.
   
 If the delete action on a specific table type triggers a plug-in or a workflow (process), the bulk delete job triggers the plug-in or workflow every time it deletes a table record of that type.
 
-## Control bulk delete processing
+## Control bulk delete processing (preview)
 
-The `Options` parameter on the `BulkDelete` [action](/power-apps/developer/data-platform/webapi/reference/bulkdelete) or [message request](/dotnet/api/microsoft.crm.sdk.messages.bulkdeleterequest) allows you to control how the bulk delete job processes table rows (records). You can use the parameter to:
+[!INCLUDE [preview-banner-section](../../../shared/preview-includes/preview-banner-section.md)]
+
+[!INCLUDE [production-ready-preview-powerplatform](../../../shared/preview-includes/production-ready-preview-powerplatform.md)]
+
+The `Options` parameter on the `BulkDelete` [action](/power-apps/developer/data-platform/webapi/reference/bulkdelete) allows you to control how the bulk delete job processes table rows (records). You can use the parameter to:
 
 - Disable the recycle bin for bulk-deleted records. Disabling the recycle bin improves performance by skipping the overhead of storing deleted records for recovery.
 - Enable sandbox fast delete mode to bypass the standard SDK pipeline (plug-ins, workflows, recycle bin). Fast delete achieves higher deletion throughput.
 
-> [!WARNING]
-> Do not execute the examples shown in this article as written. Modify the example code as appropriate for your development environment. Some of these examples delete all accounts, which is not something you may want to do.
+> [!NOTE]
+> Support for the ability to use the new Options parameter with the SDK for .NET to control bulk delete processing is planned for a future release.
 
 ### Use the Options parameter
 
@@ -74,14 +78,12 @@ The `Options` parameter accepts a `BulkDeleteOptions` object with the following 
 | `CanRecoverDeletedRecords` | Boolean | null (recycle bin enabled) | When set to false, records deleted by the bulk delete job are permanently removed and can't be recovered from the recycle bin. |
 | `RunJobForSandbox` | Boolean | null (standard pipeline) | When set to true, the bulk delete job uses the high-performance sandbox delete mode, bypassing plug-ins, workflows, and the recycle bin. |
 
-> [!IMPORTANT]
-> The Dataverse SDK for .NET NuGet package containing the [BulkDeleteRequest](/dotnet/api/microsoft.crm.sdk.messages.bulkdeleterequest) class has not yet been updated to include the new `Options` property. Until that package is updated, you can access the new property using a generic [OrganizationRequest](/dotnet/api/microsoft.xrm.sdk.organizationrequest) class and specifying the "bulkdelete" request name with an "options" parameter.
+> [!WARNING]
+> Do not execute the examples shown in this article as written. Modify the example code as appropriate for your development environment. Some of these examples delete all accounts, which is not something you may want to do.
 
 #### Example: Options parameter
 
-The following examples demonstrate how to use the `Options` parameter with the `BulkDelete` action or message request.
-
-##### [Web API](#tab/webapi)
+The following examples demonstrate how to use the `Options` parameter with the `BulkDelete` action.
 
 Use the `Options` property in the request body of the [BulkDelete action](xref:Microsoft.Dynamics.CRM.BulkDelete). The `Options` parameter is a [BulkDeleteOptions complex type](xref:Microsoft.Dynamics.CRM.BulkDeleteOptions).
 
@@ -130,59 +132,13 @@ OData-Version: 4.0
 }
 ```
 
-###### Options parameter values
+##### Options parameter values
 
 | Scenario | CanRecoverDeletedRecords | RunJobForSandbox | Effect |
 | -- | -- | -- | -- |
 | Default (standard delete) | true or omitted | false or omitted | Records go through standard pipeline. Deleted records stored in recycle bin if enabled.|
 | Skip recycle bin|  false | false or omitted | Records go through standard pipeline. Recycle bin is bypassed for this job.|
 | Sandbox fast delete | false | true | Bypasses SDK pipeline and recycle bin. Maximum throughput.|
-
-##### [SDK for .NET](#tab/sdk)
-
-Use the [BulkDeleteRequest class](xref:Microsoft.Crm.Sdk.Messages.BulkDeleteRequest) and set the `Options` parameter in the request's `Parameters` collection. The value is a `BulkDeleteOptions` object from the Microsoft.Xrm.Sdk namespace.
-
-```csharp
-using Microsoft.Crm.Sdk.Messages;
-using Microsoft.Xrm.Sdk;
-using Microsoft.Xrm.Sdk.Query;
-
-static Guid BulkDeleteWithOptions(IOrganizationService service)
-{
-    var request = new BulkDeleteRequest
-    {
-        JobName = "Delete all accounts",
-        QuerySet = new QueryExpression[]
-        {
-            new QueryExpression
-            {
-                EntityName = "account",
-                ColumnSet = new ColumnSet(true)
-            }
-        },
-        StartDateTime = DateTime.UtcNow,
-        RecurrencePattern = string.Empty,
-        SendEmailNotification = false,
-        ToRecipients = Array.Empty<Guid>(),
-        CCRecipients = Array.Empty<Guid>()
-    };
-
-    // Set bulk delete options
-    request["Options"] = new BulkDeleteOptions
-    {
-        CanRecoverDeletedRecords = true,
-        RunJobForSandbox = false
-    };
-
-    BulkDeleteResponse response =
-        (BulkDeleteResponse)service.Execute(request);
-    return response.JobId;
-}
-```
-
-The `BulkDeleteOptions` class is available in the Microsoft.Xrm.Sdk namespace. Ensure you're using the recent version of the SDK assemblies.
-
----
 
 ### Control recycle bin behavior
 
@@ -199,8 +155,6 @@ To disable the recycle bin for a bulk delete job, set `CanRecoverDeletedRecords`
 #### Example: Disable the recycle bin for faster deletion
 
 Permanently delete records without storing them in the recycle bin.
-
-##### [Web API](#tab/webapi)
 
 ```http
 POST [Organization Uri]/api/data/v9.2/BulkDelete HTTP/1.1
@@ -232,43 +186,6 @@ Content-Type: application/json
 }
 ```
 
-##### [SDK for .NET](#tab/sdk)
-
-```csharp
-static Guid BulkDeleteSkipRecycleBin(IOrganizationService service)
-{
-    var request = new BulkDeleteRequest
-    {
-        JobName = "Delete accounts - skip recycle bin",
-        QuerySet = new QueryExpression[]
-        {
-            new QueryExpression
-            {
-                EntityName = "account",
-                ColumnSet = new ColumnSet(true)
-            }
-        },
-        StartDateTime = DateTime.UtcNow,
-        RecurrencePattern = string.Empty,
-        SendEmailNotification = false,
-        ToRecipients = Array.Empty<Guid>(),
-        CCRecipients = Array.Empty<Guid>()
-    };
-
-    // Disable recycle bin for this job
-    request["Options"] = new BulkDeleteOptions
-    {
-        CanRecoverDeletedRecords = false
-    };
-
-    BulkDeleteResponse response =
-        (BulkDeleteResponse)service.Execute(request);
-    return response.JobId;
-}
-```
-
----
-
 ### Sandbox fast delete
 
 For scenarios that require maximum deletion throughput, you can enable sandbox fast delete mode by setting `RunJobForSandbox` to `true`. In this mode, the bulk delete job bypasses the standard SDK pipeline entirely and uses direct cascade engine deletion, achieving higher throughput.
@@ -288,13 +205,11 @@ The following are preserved when performing fast delete:
 - Sync change tracking for downstream replication
 
 > [!IMPORTANT]
-> Sandbox fast delete mode bypasses the entire SDK plug-in pipeline. Any custom plug-ins, workflows, or business logic registered on the Delete message do NOT execute for records deleted in this mode. Included are audit plug-ins, integration plug-ins, and any custom validation logic. Additionally, records deleted in sandbox mode can't be recovered from the recycle bin. Use this option only when you're certain that no critical business logic depends on delete-time plug-in execution, and that permanent, irrecoverable deletion is acceptable.
+> Sandbox fast delete mode bypasses the entire Event Framework plug-in pipeline. Any custom plug-ins, workflows, or business logic registered on the Delete message do NOT execute for records deleted in this mode. Included are audit plug-ins, integration plug-ins, and any custom validation logic. Additionally, records deleted in sandbox mode can't be recovered from the recycle bin. Use this option only when you're certain that no critical business logic depends on delete-time plug-in execution, and that permanent, irrecoverable deletion is acceptable.
 
 #### Example: Sandbox fast delete
 
 Learn how to use high-performance sandbox delete mode for maximum throughput.
-
-##### [Web API](#tab/webapi)
 
 ```http
 POST [Organization Uri]/api/data/v9.2/BulkDelete HTTP/1.1
@@ -327,119 +242,9 @@ Content-Type: application/json
 }
 ```
 
-##### [SDK for .NET](#tab/sdk)
-
-```csharp
-static Guid BulkDeleteSandboxFastDelete(IOrganizationService service)
-{
-    var request = new BulkDeleteRequest
-    {
-        JobName = "Delete accounts - sandbox fast delete",
-        QuerySet = new QueryExpression[]
-        {
-            new QueryExpression
-            {
-                EntityName = "account",
-                ColumnSet = new ColumnSet(true)
-            }
-        },
-        StartDateTime = DateTime.UtcNow,
-        RecurrencePattern = string.Empty,
-        SendEmailNotification = false,
-        ToRecipients = Array.Empty<Guid>(),
-        CCRecipients = Array.Empty<Guid>()
-    };
-
-    // Enable sandbox fast delete (bypasses plug-ins & recycle bin)
-    request["Options"] = new BulkDeleteOptions
-    {
-        CanRecoverDeletedRecords = false,
-        RunJobForSandbox = true
-    };
-
-    BulkDeleteResponse response =
-        (BulkDeleteResponse)service.Execute(request);
-    return response.JobId;
-}
-```
-
----
-
 ## Long-term retained data
 
 Bulk deletion is also available for long-term retained data. Run a bulk delete as you normally would, but set the query's `DataSource` field to *retained*.
-
-### [SDK for .NET](#tab/sdk)
-
-By using the SDK, you can use either <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> or the [FetchXmlToQueryExpressionRequest class](xref:Microsoft.Crm.Sdk.Messages.FetchXmlToQueryExpressionRequest) with [IOrganizationService.Execute](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A) to convert FetchXml to a <xref:Microsoft.Xrm.Sdk.Query.QueryExpression>.
-
-#### QueryExpression
-
-Use the [QueryExpression.DataSource property](xref:Microsoft.Xrm.Sdk.Query.QueryExpression.DataSource) to indicate the query is for retained rows only. Set the value to `retained` to bulk-delete retained data.
-
-```csharp
-static Guid BulkDeleteRetainedAccountsExample(IOrganizationService service)
-{
-    var request = new BulkDeleteRequest
-    {
-        JobName = "Bulk Delete Retained Accounts"
-    };
-
-    // Create query and add additional filters as needed
-    QueryExpression query = new QueryExpression
-    {
-        EntityName = "account",
-        DataSource = "retained"
-    };
-
-    request.QuerySet = new QueryExpression[]{query};
-
-    request.StartDateTime = DateTime.Now;
-    request.RecurrencePattern = string.Empty;
-    request.SendEmailNotification = false;
-    request.ToRecipients = Array.Empty<Guid>();
-    request.CCRecipients = Array.Empty<Guid>();
-
-    BulkDeleteResponse response = (BulkDeleteResponse)service.Execute(request);
-    return response.JobId;
-}
-```
-
-#### FetchXML
-
-Add the `datasource='retained'` attribute to the `fetch` element to indicate the query is for retained rows only.
-
-```csharp
-static Guid BulkDeleteRetainedAccountsFetchXmlExample(IOrganizationService service) {
-            
-    var convertRequest = new FetchXmlToQueryExpressionRequest
-    {
-        FetchXml = @"
-        <fetch datasource='retained'>
-            <entity name='account'>
-        </entity>
-        </fetch>"
-    };
-
-    FetchXmlToQueryExpressionResponse convertResponse = (FetchXmlToQueryExpressionResponse)service.Execute(convertRequest);
-
-    var request = new BulkDeleteRequest
-    { JobName = "Bulk Delete Retained Accounts" };
-
-    request.QuerySet = new QueryExpression[]{convertResponse.Query};
-
-    request.StartDateTime = DateTime.Now;
-    request.RecurrencePattern = string.Empty;
-    request.SendEmailNotification = false;
-    request.ToRecipients = Array.Empty<Guid>();
-    request.CCRecipients = Array.Empty<Guid>();
-           
-    BulkDeleteResponse response = (BulkDeleteResponse)service.Execute(request);
-    return response.JobId;
-}
-```
-
-### [Web API](#tab/webapi)
 
 Set the <xref:Microsoft.Dynamics.CRM.QueryExpression> `DataSource` property to `retained` in a Web API [BulkDelete action](xref:Microsoft.Dynamics.CRM.BulkDelete) to indicate the query is for retained rows only.
 
@@ -490,10 +295,6 @@ HTTP/1.1 200 OK
     "JobId": "3093d67f-21f0-ed11-8b48-6045bdd92a32"
 }
 ```
-
-[Learn more about Web API actions](webapi/use-web-api-actions.md).
-
----
 
 ## Samples
 
