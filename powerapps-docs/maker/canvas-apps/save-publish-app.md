@@ -21,7 +21,7 @@ ms.collection:
 
 # Save and publish canvas apps
 
-Saving and publishing are two different actions:
+Saving and publishing an app are two different actions:
 
 - **Save** stores your latest changes so you and other app editors can keep working on them. Saving doesn't change what end users see.
 - **Publish** makes your saved changes available to everyone the app is shared with.
