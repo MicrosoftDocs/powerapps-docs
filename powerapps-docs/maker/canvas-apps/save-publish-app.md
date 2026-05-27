@@ -103,7 +103,7 @@ The **Live** version is published for everyone the app is shared with. Only user
 
 :::image type="content" source="media/save-publish-app/publish-portal.png" alt-text="Screenshot of where different versions of the app are located and how to publish a specific version." lightbox="media/save-publish-app/publish-portal.png":::
 
-To publish the most recent version, select the publish icon :::image type="icon" source="media/save-publish-app/publish-icon.png"::: while editing your app.
+To publish the most recent version, select the publish icon :::image type="icon" source="media/save-publish-app/publish-icon.png" alt-text="publish icon"::: while editing your app.
 
 > [!NOTE]
 >
