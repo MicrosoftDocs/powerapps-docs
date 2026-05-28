@@ -1,0 +1,62 @@
+---
+title: Dataverse data in Microsoft 365 Copilot
+description: Understand how Microsoft Copilot searches and reasons over Microsoft Dataverse table data used by model-driven and canvas apps in Power Apps.
+#customer intent: Learn about how Microsoft Copilot searches and reasons over Microsoft Dataverse table data.
+author: paulliew
+ms.author: paulliew
+ms.reviewer: matp
+ms.date: 05/22/2026
+ms.topic: concept-article
+ms.service: power-platform
+ms.subservice: dataverse
+---
+# Dataverse data in Microsoft 365 Copilot
+
+Microsoft Dataverse is the data platform for Power Apps. Microsoft 365 Copilot can search and reason over Dataverse table data used by model-driven and canvas apps.
+
+When you store your business data in Dataverse tables, Microsoft 365 Copilot can retrieve relevant rows and related records to answer questions or summarize information in natural language.
+
+These are the supported experiences with Microsoft 365 Copilot and Dataverse:
+
+- Microsoft 365 Copilot Chat (main chat): Ask questions across Dataverse data, summarize records, and identify trends using natural language.
+- Power Apps (sidecar): Get help while working in model-driven or canvas apps. For example, find records, understand related data, and summarize what matters.
+- Outlook: Draft and review customer emails with relevant Dataverse context, such as account details and open items.
+   > [!NOTE]
+   > During Public preview, set the **Allow actions/Default mode** Copilot setting to **Default mode** to query Dataverse data.
+- Microsoft Word: Turn Dataverse data into structured content like customer briefs, status updates, and summaries.
+   > [!NOTE]
+   > During Public preview, set the **Allow editing/Chat only** Copilot setting to **Chat only** to query Dataverse data.
+- Microsoft Teams: Include detailed business data in preparing meeting agenda and retrieve real-time business data during meeting.
+
+## How it works
+
+At a high level, here's how Dataverse data in Microsoft 365 Copilot works:
+
+1. You ask Copilot a question in a supported Microsoft 365 experience.
+1. Copilot searches the Dataverse tables you have access to.
+1. Copilot uses table relationships to bring in relevant related records, such as lookup columns.
+1. Copilot returns a response grounded in Dataverse data, such as a summary, list, or explanation.
+
+## Example prompts
+
+- “Show me my highest-priority open cases.”
+- “Summarize this account’s recent activity and open items.”
+- "Case details for case &lt;c*ase name*&gt;"
+- "How many open leads do I own?"
+- "List all campaigns for the current fiscal year"
+- "What are some recent cases for customer &lt;*customer name*&gt;"
+- "What contracts and entitlements does the &lt;*account name*&gt; account have?"
+- "Which quotes are active?"
+- "Show me active cases waiting for details"
+- "My active invoices"
+- "How many opportunities are closing next month?"
+
+## Considerations
+
+- Copilot returns only Dataverse data that you're authorized to access.
+- Results depend on data quality and how tables and relationships are modeled.
+- Use clear, specific prompts such as table or entity names, timeframes, and status values to get more precise answers.
+
+## Related articles
+
+[What is Dataverse intelligence?](/power-apps/maker/data-platform/data-platform-intelligence)

@@ -6,18 +6,18 @@ ms.author: matp
 ms.service: powerapps
 ms.subservice: dataverse-maker
 ms.topic: how-to
-ms.date: 08/02/2024
+ms.date: 05/08/2026
 ms.custom: template-how-to
 ---
 # Low-code plug-ins Power Fx (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Low-code plug-ins can add business logic to your apps using the Power Fx expression language and directly integrate with Dataverse business data and external data through Power Platform connectors. With low-code plug-ins, you can quickly build rich workflows without any code.
+Low-code plug-ins can add business logic to your apps by using the Power Fx expression language. They directly integrate with Dataverse business data and external data through Power Platform connectors. By using low-code plug-ins, you can quickly build rich workflows without writing any code.
 
 > [!IMPORTANT]
 >
->- Instant low-code plug-ins are deprioritized and aren't being delivered as a feature. Instant low-code plug-ins are replaced with functions. More information: [Functions in Microsoft Dataverse (preview)](functions-overview.md)
+> - Instant low-code plug-ins are deprioritized and aren't being delivered as a feature. Instant low-code plug-ins are replaced with functions. More information: [Functions in Microsoft Dataverse (preview)](functions-overview.md)
 > - This is an preview feature.
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
@@ -30,9 +30,9 @@ Low-code plug-ins support many of the Power Fx operators, variables, and formula
 
 The following table lists the Power Fx formulas that work but have limitations or don’t work but have an alternative for use with low-code plug-ins.
 
-|Power Fx formula  |Supported in plug-ins?  | Limitation or work around   |
+|Power Fx formula  |Supported in plug-ins?  | Limitation or workaround   |
 |---------|---------|---------|
-|Collect     | Yes        | Requires the variable to exist and the variable type to match what you’re trying to set it to.    |
+|Collect     | Yes        | Requires the variable to exist and the variable type to match what you're trying to set.    |
 |Defaults     |  No       | Use Collect instead. For example, instead of *Patch(account, Defaults(account), {“Account Name”: “Example Account”})* use `Collect(account, {“Account Name”: “Example Account”})`.    |
 
 ## Power Fx formulas supported

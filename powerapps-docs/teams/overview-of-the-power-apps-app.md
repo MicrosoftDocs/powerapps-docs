@@ -4,8 +4,9 @@ description: Learn about the Power Apps app in Microsoft Teams.
 author: chmoncay
 ms.author: chmoncay
 ms.topic: overview
-ms.date: 01/13/2026
+ms.date: 05/20/2026
 ms.subservice: teams
+ai-usage: ai-assisted
 ms.reviewer: mkaur
 contributors:
   - mduelae
@@ -18,6 +19,9 @@ Use the Power Apps app to create and manage apps across the available environmen
 
 > [!NOTE]
 > If **Power Apps** doesn't appear on the left pane, you can [install](install-personal-app.md) it. After you install the app, you need to [create your first app](create-first-app.md) to create an environment. For more information, see [About Teams environments](/power-platform/admin/about-teams-environment).
+
+> [!IMPORTANT]
+> The Teams interface updates regularly. If specific options or tabs mentioned here don't match what you see, look for similar functionality in the current Teams interface. The core features described here remain available.
 
 ![Power Apps app.](media/power-apps-overview-app.png "Power Apps app")
 
@@ -136,7 +140,7 @@ useful information that you can share with others when investigating an issue or
 - **Timestamp**: Date and time in Coordinated Universal Time (UTC).
 - **Session ID**: Unique GUID representing the current Power Apps session.
 - **Tenant ID**: Tenant ID of Teams and Power Apps.
-- **Object ID**: Object ID of the user account in Azure Active Directory.
+- **Object ID**: Object ID of the user account in Microsoft Entra ID.
 - **Build name**: Build and version details of the Power Apps app.
 - **Resource ID**: ID of the resource.
 - **Unique name**: Unique name of the Dataverse organization.
@@ -163,13 +167,15 @@ When you create canvas apps by using Power Apps from the Teams interface, you ne
 | [Component](../maker/canvas-apps/create-component.md)                           | Reusable combinations of controls that you can define, save, and use for new apps.                                                                                     |
 | [Save an app](../maker/canvas-apps/save-publish-app.md)  | Saving an app for the first time, or saving new changes to an app.                                                                                                                                           |
 | [Publish an app](../maker/canvas-apps/save-publish-app.md)       | Making an app available to the app store for general consumption.                                                                                                                                            |
-| [Versions](../maker/canvas-apps/save-publish-app.md#identify-the-live-version)  | Each time you save an app, you create a new version that you can [restore](../maker/canvas-apps/restore-an-app.md). |
+| [Versions](../maker/canvas-apps/save-publish-app.md#identify-and-manage-app-versions)  | Each time you save an app, you create a new version that you can [restore](../maker/canvas-apps/restore-an-app.md). |
 | [Share an app](../maker/canvas-apps/share-app.md)                               | Allowing users or groups to use the app, as consumers or co-owners.                                                                                                                                          |
 
 ### See also
 
 [Understand Power Apps Studio](understand-power-apps-studio.md)  
-[Create your first app](create-first-app.md)
+[Create your first app](create-first-app.md)  
+[Manage your apps](manage-your-apps.md)  
+[Set permissions and share apps with colleagues](set-perms-and-share.md)
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
