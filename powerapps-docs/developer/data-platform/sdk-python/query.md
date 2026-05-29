@@ -3,7 +3,7 @@ title: Query data
 description: Learn how to query Dataverse data using the SDK for Python.
 ms.author: kewear
 author: kewear
-ms.date: 05/21/2026
+ms.date: 05/28/2026
 ms.reviewer: phecke
 ms.topic: concept-article
 contributors:

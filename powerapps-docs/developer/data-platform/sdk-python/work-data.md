@@ -3,7 +3,7 @@ title: "Work with Dataverse Data Using Python SDK"
 description: "Learn common scenarios for working with Dataverse data using the Python SDK, including CRUD, bulk operations, upserts, and batching. Start coding today."
 ms.author: kewear
 author: kewear
-ms.date: 05/20/2026
+ms.date: 05/28/2026
 ms.reviewer: phecke
 ms.topic: example-scenario
 contributors:

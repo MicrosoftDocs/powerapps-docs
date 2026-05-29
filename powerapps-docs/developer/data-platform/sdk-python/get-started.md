@@ -3,7 +3,7 @@ title: "Getting started"
 description: "Get started using the Dataverse SDK for Python."
 ms.author: kewear
 author: kewear
-ms.date: 05/13/2026
+ms.date: 05/28/2026
 ms.reviewer: phecke
 ms.topic: quickstart-sdk
 contributors:

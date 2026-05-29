@@ -3,7 +3,7 @@ title: "Quick guide to Dataverse"
 description: "Learn some key concepts of Dataverse that every programmer needs to know for success."
 ms.author: kewear
 author: kewear
-ms.date: 04/21/2026
+ms.date: 05/28/2026
 ms.reviewer: phecke
 ms.topic: concept-article
 contributors:

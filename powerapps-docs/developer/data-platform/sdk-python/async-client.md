@@ -120,3 +120,13 @@ result = await batch.execute()
 ```
 
 For async equivalents of all `DataverseClient` sync examples, see [examples/aio/](https://github.com/microsoft/PowerPlatform-DataverseClient-Python/tree/main/examples/aio).
+
+## Related information
+
+- [SDK for Python code examples](https://github.com/microsoft/PowerPlatform-DataverseClient-Python/tree/main/examples)
+- [SDK for Python README](https://github.com/microsoft/PowerPlatform-DataverseClient-Python/blob/main/README.md)
+
+## See also
+
+- [Getting started](get-started.md)
+- [Quick guide to Dataverse](quick-guide-dataverse.md)

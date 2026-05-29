@@ -4,7 +4,7 @@ description: Learn how to customize Dataverse tables and columns definitions usi
 author: kewear
 ms.author: kewear
 ms.reviewer: pehecke
-ms.date: 05/20/2026
+ms.date: 05/28/2026
 ms.topic: concept-article
 ---
 

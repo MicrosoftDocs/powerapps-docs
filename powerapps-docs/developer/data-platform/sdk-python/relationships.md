@@ -1,7 +1,7 @@
 ---
 title: Relationship management
 description: Learn how to create relationships between tables.
-ms.date: 05/20/2026
+ms.date: 05/28/2026
 author: kewear
 ms.author: kewear
 ms.reviewer: pehecke

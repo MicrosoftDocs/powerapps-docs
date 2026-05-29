@@ -3,7 +3,7 @@ title: "Dataverse SDK for Python overview"
 description: "Use Dataverse to store and access data for use in data science and analyses."
 ms.author: kewear
 author: kewear
-ms.date: 05/13/2026
+ms.date: 05/28/2026
 ms.reviewer: phecke
 ms.topic: overview
 contributors:
@@ -40,7 +40,7 @@ The following list describes key features of the Dataverse SDK for Python.
 ### Data operations
 
 | Feature | Description |
-|---|---|
+| --- | --- |
 | CRUD operations | Support for create, retrieve, update, and delete data operations by using a single request. |
 | Bulk operations | Specify multiple operations in a single web service call. This feature uses Dataverse's native CreateMultiple, UpdateMultiple, UpsertMultiple, and BulkDelete Web API operations for maximum performance and transactional integrity. |
 | Automatic retries | Handle networking problems that might occur for operations that fail due to temporary problems, such as API throttling or service unavailability. |
