@@ -2,8 +2,8 @@
 title: Relationship management
 description: Learn how to create relationships between tables.
 ms.date: 05/20/2026
-author: phecke
-ms.author: pehecke
+author: kewear
+ms.author: kewear
 ms.reviewer: pehecke
 ms.topic: concept-article
 ---
@@ -15,12 +15,14 @@ Table relationships in Microsoft Dataverse define the ways that table rows can b
 More information: [Microsoft Dataverse table relationships](../../../maker/data-platform/create-edit-entity-relationships.md)
 
 ```python
-from PowerPlatform.Dataverse.models.relationship import (
+from PowerPlatform.Dataverse.models import (
+    CascadeConfiguration,
+    Label,
+    LocalizedLabel,
     LookupAttributeMetadata,
-    OneToManyRelationshipMetadata,
     ManyToManyRelationshipMetadata,
+    OneToManyRelationshipMetadata,
 )
-from PowerPlatform.Dataverse.models.labels import Label, LocalizedLabel
 
 # Create a one-to-many relationship: Department (1) -> Employee (N)
 # This adds a "Department" lookup field to the Employee table
@@ -37,7 +39,7 @@ relationship = OneToManyRelationshipMetadata(
 )
 
 result = client.tables.create_one_to_many_relationship(lookup, relationship)
-print(f"Created lookup field: {result['lookup_schema_name']}")
+print(f"Created lookup field: {result.lookup_schema_name}")
 
 # Create a many-to-many relationship: Employee (N) <-> Project (N)
 # Employees work on multiple projects; projects have multiple team members
@@ -48,25 +50,25 @@ m2m_relationship = ManyToManyRelationshipMetadata(
 )
 
 result = client.tables.create_many_to_many_relationship(m2m_relationship)
-print(f"Created M:N relationship: {result['relationship_schema_name']}")
+print(f"Created M:N relationship: {result.relationship_schema_name}")
 
 # Query relationship metadata
 rel = client.tables.get_relationship("new_Department_Employee")
 if rel:
-    print(f"Found: {rel['SchemaName']}")
+    print(f"Found: {rel.relationship_schema_name}")
 
 # List all relationships
 rels = client.tables.list_relationships()
 for rel in rels:
-    print(f"{rel['SchemaName']} ({rel.get('@odata.type')})")
+    print(f"{rel['SchemaName']} ({rel.get('RelationshipType')})")
 
 # List relationships for a specific table (one-to-many + many-to-one + many-to-many)
 account_rels = client.tables.list_table_relationships("account")
 for rel in account_rels:
-    print(f"{rel['SchemaName']} -> {rel.get('@odata.type')}")
+    print(f"{rel['SchemaName']} -> {rel.get('RelationshipType')}")
 
 # Delete a relationship
-client.tables.delete_relationship(result['relationship_id'])
+client.tables.delete_relationship(result.relationship_id)
 ```
 
 For simpler scenarios, use the convenience method.

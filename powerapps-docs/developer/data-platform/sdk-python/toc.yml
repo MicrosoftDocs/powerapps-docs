@@ -17,5 +17,7 @@ items:
         href: metadata.md
       - name: Manage table relationships
         href: relationships.md
+      - name: Asynchronous client operations
+        href: async-client.md
       - name: Python Package Reference
         href: /python/api/dataverse-sdk-docs-python/dataverse-overview?view=dataverse-sdk-python-latest&preserve-view=true

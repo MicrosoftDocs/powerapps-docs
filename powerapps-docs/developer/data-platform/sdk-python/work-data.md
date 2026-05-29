@@ -1,8 +1,8 @@
 ---
 title: "Work with Dataverse Data Using Python SDK"
 description: "Learn common scenarios for working with Dataverse data using the Python SDK, including CRUD, bulk operations, upserts, and batching. Start coding today."
-ms.author: paulliew
-author: paulliew
+ms.author: kewear
+author: kewear
 ms.date: 05/20/2026
 ms.reviewer: phecke
 ms.topic: example-scenario
@@ -198,9 +198,6 @@ print(f"Found {len(df)} accounts")
 # Limit results with top for large tables
 df = client.query.builder("account").select("name").top(100).execute().to_dataframe()
 
-# Fetch a single record as a one-row DataFrame
-df = client.records.retrieve("account", account_id, select=["name"]).to_dataframe()
-
 # Create records from a DataFrame (returns a Series of GUIDs)
 new_accounts = pd.DataFrame([
     {"name": "Contoso", "telephone1": "555-0100"},
@@ -226,80 +223,6 @@ df = client.dataframe.sql(
     "JOIN contact c ON a.accountid = c.parentcustomerid "
     "GROUP BY a.name"
 )
-```
-
-## Retrieve multiple records with paging
-
-Use the `retrieve` function to stream results page-by-page. You can limit the total results with `$top` and suggest the per-page size with the `page_size` parameter. The SDK internally sets the OData prefer header `odata.maxpagesize`.
-
-```python
-pages = client.records.retrieve(
-    "account",
-    select=["accountid", "name", "createdon"],
-    orderby=["name asc"],
-    top=10,          # stop after 10 total rows (optional)
-    page_size=3,     # ask for ~3 per page (optional)
-)
-
-total = 0
-for page in pages: # each page is a list[dict]
-    print({"page_size": len(page), "sample": page[:2]})
-    total += len(page)
-print({"total_rows": total})
-```
-
-<!-- TODO This info should be in the package reference once written -->
-Here's a list of supported parameters where all are optional except `logical_name`.
-
-- logical_name: str — Logical (singular) name, for example, "account".
-- select: list[str] | None — Columns -> $select (comma joined).
-- filter: str | None — OData $filter expression (for example, contains(name,'Acme') and statecode eq 0).
-- orderby: list[str] | None — Sort expressions -> $orderby (comma joined).
-- top: int | None — Global cap via $top (applied on first request; service enforces across pages).
-- expand: list[str] | None — Navigation expansions -> $expand; pass raw clauses (e.g., primarycontactid($select=fullname,emailaddress1)).
-- page_size: int | None — Per-page hint using Prefer: odata.maxpagesize=\<N\> (not guaranteed; last page may be smaller).
-
-<!-- TODO: This info should be in the package reference once written -->
-Here's a list of return values and semantics.
-
-- `$select`, `$filter`, `$orderby`, `$expand`, and `$top` map directly to corresponding OData query options on the first request.
-- `$top` caps total rows; the service might partition those rows across multiple pages.
-- `page_size` (`Prefer: odata.maxpagesize`) is a hint; the server decides actual page boundaries.
-- Returns a generator that yields nonempty pages (list[dict]). The generator skips empty pages.
-- Each yielded list corresponds to a value page from the Web API.
-- Iteration stops when no @odata.nextLink remains (or when `$top` satisfies server-side).
-- The generator doesn't materialize all results; it fetches pages lazily.
-
-Here's an example with all supported parameters plus the expected response.
-
-```python
-pages = client.records.retrieve(
-  "account",
-  select=["accountid", "name", "createdon", "primarycontactid"],
-  filter="contains(name,'Acme') and statecode eq 0",
-  orderby=["name asc", "createdon desc"],
-  top=5,
-  expand=["primarycontactid($select=fullname,emailaddress1)"],
-  page_size=2,
-)
-
-for page in pages:  # page is list[dict]
-# Expected page shape (illustrative)
-# [
-# {
-# "accountid": "00000000-0000-0000-0000-000000000001"
-# "name": "Acme West"
-# "createdon": "2025-08-01T12:34:56Z"
-# "primarycontactid": {
-# "contactid": "00000000-0000-0000-0000-0000000000aa"
-# "fullname": "Jane Doe"
-# "emailaddress1": "<jane@acme.com>"
-# }
-# "@odata.etag": "W/\"123456\""
-# }
-#
-# ]
-  print({"page_size": len(page)})
 ```
 
 ## Upload files to Dataverse

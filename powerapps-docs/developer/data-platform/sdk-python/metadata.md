@@ -1,8 +1,8 @@
 ---
 title: Use metadata to customize tables and columns
 description: Learn how to customize Dataverse tables and columns definitions using metadata.
-author: phecke
-ms.author: pehecke
+author: kewear
+ms.author: kewear
 ms.reviewer: pehecke
 ms.date: 05/20/2026
 ms.topic: concept-article
@@ -53,7 +53,7 @@ client.tables.remove_columns("new_Product", ["new_Category"])
 # List all columns (attributes) for a table to discover schema
 columns = client.tables.list_columns("account")
 for col in columns:
-    print(f"{col['LogicalName']} ({col.get('AttributeType')})")
+    print(f"{col['name']} ({col.get('AttributeType')})")
 
 # List only specific properties
 columns = client.tables.list_columns(

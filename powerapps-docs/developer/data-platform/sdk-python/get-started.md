@@ -1,8 +1,8 @@
 ---
 title: "Getting started"
 description: "Get started using the Dataverse SDK for Python."
-ms.author: paulliew
-author: paulliew
+ms.author: kewear
+author: kewear
 ms.date: 05/13/2026
 ms.reviewer: phecke
 ms.topic: quickstart-sdk
@@ -92,18 +92,18 @@ For more information, see [Use OAuth with Dataverse](/power-apps/developer/data-
 
 The [PowerPlatform.Dataverse.operations](/python/api/powerplatform-dataverse-client/powerplatform.dataverse.operations) package contains modules that organize SDK operations into logical groups as described in the following table.
 
-| Name           | Description                                                           |
-|----------------|--------------------------------------------------------------------   |
-| client.records | Create, update, delete, and get records (single or paginated queries) |
-| client.query   | Query and search operations                                           |
-| client.tables  | Table and column metadata management                                  |
-| client.files   | File upload operations                                                |
+| Name             | Description                                                           |
+|----------------  |--------------------------------------------------------------------   |
+| client.records   | Create, update, delete, and get records (single or paginated queries) |
+| client.query     | Query and search operations                                           |
+| client.tables    | Table and column metadata management                                  |
+| client.files     | File upload operations                                                |
+| client.dataframe | Pandas DataFrame support                                              |
+| client.batch     | Batch operations                                                      |
 
 For examples of using these operations, see the [Querying data](query.md) and [Working with data](work-data.md) articles.
 
 ## Next steps
-
-Before you leave this page, make sure you have some knowledge of Dataverse. You can't work with Dataverse effectively without it. The second article listed here provides a quick guide that teaches you Dataverse basics:
 
 - [Working with data](work-data.md)
 - [Quick guide to Dataverse](quick-guide-dataverse.md)

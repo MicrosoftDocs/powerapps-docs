@@ -1,10 +1,7 @@
 ### YamlMime:Landing
 
 title: "Dataverse SDK for Python documentation"
-summary: Enables data scientists and developers to create, access, and manager
-  Dataverse business data using Python programming. The Dataverse SDK for Python
-  implements common Python programming paradigms and best practices, provides a
-  more natural Python interface to Dataverse.
+summary: "Enables data scientists and developers to create, access, and manage Dataverse business data using Python programming. The Dataverse SDK for Python implements common Python programming paradigms and best practices, provides a more natural Python interface to Dataverse."
 
 metadata:
   title: Dataverse SDK for Python documentation
@@ -49,6 +46,8 @@ landingContent:
             url: metadata.md
           - text: "Manage table relationships"
             url: relationships.md
+          - text: "Asynchronous client operations"
+            url: async-client.md
 
   # Card
   - title: Reference
