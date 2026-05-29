@@ -5,7 +5,7 @@ description: Understand how Microsoft Copilot searches and reasons over Microsof
 author: paulliew
 ms.author: paulliew
 ms.reviewer: matp
-ms.date: 05/22/2026
+ms.date: 05/29/2026
 ms.topic: concept-article
 ms.service: power-platform
 ms.subservice: dataverse
@@ -18,7 +18,7 @@ When you store your business data in Dataverse tables, Microsoft 365 Copilot can
 
 These are the supported experiences with Microsoft 365 Copilot and Dataverse:
 
-- Microsoft 365 Copilot Chat (main chat): Ask questions across Dataverse data, summarize records, and identify trends using natural language.
+- Microsoft 365 Copilot Chat: Ask questions across Dataverse data, summarize records, and identify trends using natural language.
 - Power Apps (sidecar): Get help while working in model-driven or canvas apps. For example, find records, understand related data, and summarize what matters.
 - Outlook: Draft and review customer emails with relevant Dataverse context, such as account details and open items.
    > [!NOTE]
