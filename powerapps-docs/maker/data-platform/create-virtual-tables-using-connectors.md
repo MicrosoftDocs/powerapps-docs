@@ -1,7 +1,7 @@
 ---
 title: "Create virtual tables using virtual connectors in Microsoft Dataverse"
 description: "Learn how to create virtual tables using virtual connectors in Microsoft Dataverse."
-ms.date: 04/17/2026
+ms.date: 05/07/2026
 ms.reviewer: matp
 ms.topic: how-to
 author: mkannapiran
@@ -166,14 +166,7 @@ For Oracle connections, you must provide a server, authentication type, username
 
 Server should be provided in **Server:Port/SID**-format. Notice that the server name or IP-address needs to be accessible from the [on-premises data gateway](/data-integration/gateway/service-gateway-onprem).
 
-# [Snowflake (preview)](#tab/snowflake)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
-> [!IMPORTANT]
->
-> - This is a preview feature.
-> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+# [Snowflake](#tab/snowflake)
 
 - **Authentication type**. Ensures Snowflake is accessed only by those with approved permission. Select **Service principal (Microsoft Entra ID application)** for this option.
 - **Snowflake SaaS URL**. The URL associated with the Snowflake account for which virtual tables are to be created. For example, `organization.account.snowflakecomputing.com`. Don't add *https* to the URL.

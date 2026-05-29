@@ -7,7 +7,7 @@ ms.reviewer: matp
 ms.service: powerapps
 ms.subservice: dataverse-maker
 ms.topic: how-to
-ms.date: 07/07/2025
+ms.date: 04/27/2026
 ms.custom: template-how-to
 ---
 # Troubleshooting common issues with link to Fabric
