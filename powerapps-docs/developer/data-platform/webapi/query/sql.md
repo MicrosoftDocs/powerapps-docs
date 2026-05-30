@@ -12,6 +12,7 @@ search.audienceType:
 contributors: 
   - saurabhrb
   - JimDaly
+  - dmitmikh
 ---
 # Use SQL to query data by using the Dataverse Web API (preview)
 
@@ -104,6 +105,8 @@ The returned records look like this example:
 }
 ```
 
+> [!NOTE]
+> Selecting literal values, expressions and functions other than aggregates is not supported. Do not use `SELECT 'abc', 1+2 AS IntValue, DATEADD(day, -3, a.modifiedon), a.name FROM account a`.
 
 ## Join tables
 
@@ -170,10 +173,10 @@ ORDER BY name ASC, createdon DESC
 
 ## Filter rows
 
-Use a `WHERE` clause to filter rows by one or more conditions. The `WHERE` clause must compare a column to a literal value.
+Use a `WHERE` clause to filter rows by one or more conditions. The `WHERE` clause must compare a column to a constant value.
 
 > [!IMPORTANT]
-> Expressions, functions, and subqueries aren't supported in `WHERE` clauses. The comparison must be between a column and a literal value.
+> Expressions and subqueries aren't supported in `WHERE` clauses. The comparison must be between a column and a literal value, or a [supported function](#using-dateadd-and-getutcdate-functions).
 
 ### Comparison operators
 
@@ -304,6 +307,38 @@ SELECT DISTINCT a.address1_city
 FROM account AS a
 ```
 
+### Using DATEADD and GETUTCDATE functions
+> [!NOTE]
+> Functions must be applied to a literal value or another supported function. Applying functions to column values is not supported.
+
+Use the `DATEADD` function to return rows for a constant date range:
+
+```sql
+-- Do not pass column values to functions
+-- SELECT a.name
+-- FROM account a
+-- WHERE DATEADD(day, 3, a.createdon) >= '2023-01-01 17:00:00' (not supported)
+
+SELECT a.name
+FROM account a
+WHERE a.createdon >= DATEADD(day, -3, '2023-01-01 17:00:00')
+```
+
+Use the `GETUTCDATE` function to make the range relative to the current time:
+```sql
+-- Do not pass column values to functions
+-- SELECT a.name
+-- FROM account a
+-- WHERE DATEADD(day, 3, a.createdon) >= GETUTCDATE() (not supported)
+
+SELECT a.name
+FROM account a
+WHERE a.createdon >= DATEADD(day, -3, GETUTCDATE())
+```
+
+> [!NOTE]
+> These functions are only supported in `WHERE` and `ON` clause conditions. Function calls in `SELECT`, `ORDER BY` and `GROUP BY` clauses are not supported.
+
 ### Unsupported WHERE clause features
 
 The following features aren't supported in `WHERE` clauses:
@@ -311,7 +346,9 @@ The following features aren't supported in `WHERE` clauses:
 - Subqueries: `WHERE accountid IN (SELECT accountid FROM account)` isn't supported.
 - `EXISTS` and `NOT EXISTS`: These operators return an error.
 - Literal-to-literal comparisons: `WHERE 1=1` and `WHERE 1=0` aren't supported.
-- Expressions and functions: The comparison must be between a column and a literal value.
+- Expressions: `SELECT ... FROM account a WHERE a.revenue > 500.0 + 125.0` isn't supported.
+- Functions applied to column values: `WHERE DATEADD(day, 3, a.createdon) >= GETUTCDATE()` isn't supported.
+- Functions not listed in this document.
 
 ## Page results
 
