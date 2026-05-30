@@ -148,6 +148,43 @@ FROM account AS child
 INNER JOIN account AS parent ON child.parentaccountid = parent.accountid
 ```
 
+### Additional ON filters
+`JOIN ... ON` clause must use an `=` operator between columns from the two tables. Any additional filters must be combined with this equality condition using the `AND` operator and must be applied to the joined table.
+
+```sql
+-- Not supported, must join on columns from the two tables
+-- SELECT a.name, c.fullname, c.emailaddress1
+-- FROM account AS a
+-- INNER JOIN contact AS c ON c.emailaddress1 LIKE 'B%'
+
+-- Not supported, must use "="
+-- SELECT a.name, c.fullname, c.emailaddress1
+-- FROM account AS a
+-- INNER JOIN contact AS c ON a.accountid <> c.parentcustomerid
+
+-- Not supported, must combine additional filters using AND
+-- SELECT a.name, c.fullname, c.emailaddress1
+-- FROM account AS a
+-- INNER JOIN contact AS c ON a.accountid = c.parentcustomerid OR c.emailaddress1 LIKE 'B%'
+
+-- Not supported, additional filters must be on the joined table
+-- SELECT a.name, c.fullname, c.emailaddress1
+-- FROM account AS a
+-- INNER JOIN contact AS c ON a.accountid = c.parentcustomerid AND a.name LIKE 'A%'
+
+SELECT a.name, c.fullname, c.emailaddress1
+FROM account AS a
+INNER JOIN contact AS c ON a.accountid = c.parentcustomerid AND c.fullname LIKE 'A%'
+```
+
+You can combine additional conditions with each other using a nested `OR` operator as long as the whole additional filter is combined with the column equality using `AND`:
+
+```sql
+SELECT a.name, c.fullname, c.emailaddress1
+FROM account AS a
+INNER JOIN contact AS c ON a.accountid = c.parentcustomerid AND (c.fullname LIKE 'A%' OR c.emailaddress1 LIKE 'B%')
+```
+
 ## Order rows
 
 Use `ORDER BY` to sort results by one or more columns. Specify `ASC` (ascending, the default) or `DESC` (descending).
