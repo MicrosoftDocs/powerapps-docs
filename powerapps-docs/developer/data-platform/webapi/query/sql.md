@@ -17,6 +17,9 @@ contributors:
 
 You can use Structured Query Language (SQL) to query data from Microsoft Dataverse by using the Web API. Pass SQL `SELECT` commands through the `sql` query option, using the entity set name of the table you want to query.
 
+> [!NOTE]
+> Each command must contain a single `SELECT` statement. Other T-SQL statements like `DECLARE`, `INSERT`, `DELETE` or `ALTER TABLE` are not supported. Commands with multiple results sets like `SELECT name FROM account; SELECT fullname FROM contact` are also not supported
+
 To use a SQL query like this:
 
 ```sql
@@ -128,7 +131,7 @@ LEFT JOIN contact AS c ON a.accountid = c.parentcustomerid
 You can join more than two tables. The following example joins accounts, contacts, and opportunities:
 
 ```sql
-SELECT TOP 10 a.name, c.fullname, o.name AS opportunity_name
+SELECT a.name, c.fullname, o.name AS opportunity_name
 FROM account AS a
 INNER JOIN contact AS c ON a.accountid = c.parentcustomerid
 INNER JOIN opportunity AS o ON a.accountid = o.customerid
@@ -152,7 +155,7 @@ Use `ORDER BY` to sort results by one or more columns. Specify `ASC` (ascending,
 The following example returns accounts sorted by name:
 
 ```sql
-SELECT TOP 10 name, telephone1
+SELECT name, telephone1
 FROM account
 ORDER BY name ASC
 ```
@@ -160,7 +163,7 @@ ORDER BY name ASC
 Sort by multiple columns:
 
 ```sql
-SELECT TOP 10 name, createdon
+SELECT name, createdon
 FROM account
 ORDER BY name ASC, createdon DESC
 ```
@@ -242,7 +245,8 @@ SELECT name FROM account WHERE name NOT LIKE '%test%'
 ```
 
 > [!TIP]
-> Avoid leading wildcards (`LIKE '%value'`) when possible—they require a full table scan and hurt performance. A trailing wildcard (`LIKE 'value%'`) can use an index. To learn more, see [Avoid leading wildcards in LIKE patterns](#avoid-leading-wildcards-in-like-patterns).
+> Avoid leading wildcards (`LIKE '%value'`) when possible—they require a full table scan and hurt performance. A trailing wildcard (`LIKE 'value%'`) can use an index. To learn more, see [
+Avoid leading wild cards in filter conditions](../../query-antipatterns.md#PerformanceLeadingWildCard).
 
 ### IN and NOT IN
 
@@ -300,13 +304,6 @@ SELECT DISTINCT a.address1_city
 FROM account AS a
 ```
 
-Combine `DISTINCT` with `TOP` to limit unique results:
-
-```sql
-SELECT DISTINCT TOP 5 address1_city
-FROM account
-```
-
 ### Unsupported WHERE clause features
 
 The following features aren't supported in `WHERE` clauses:
@@ -318,36 +315,15 @@ The following features aren't supported in `WHERE` clauses:
 
 ## Page results
 
-Use `TOP` with an integer literal to limit the number of rows returned. The maximum value for `TOP` is 5,000.
+Use OData paging with the `Prefer: odata.maxpagesize` request header and the `@odata.nextLink` annotation. [Learn more about paging](./page-results.md).
 
-```sql
-SELECT TOP 10 name, telephone1, websiteurl
-FROM account
-ORDER BY name
-```
-
-Use `OFFSET ... FETCH` with `ORDER BY` to implement keyset pagination:
-
-```sql
-SELECT name, accountid
-FROM account
-ORDER BY name
-OFFSET 0 ROWS FETCH NEXT 25 ROWS ONLY
-```
-
-To retrieve the next page, advance the `OFFSET` value:
-
-```sql
-SELECT name, accountid
-FROM account
-ORDER BY name
-OFFSET 25 ROWS FETCH NEXT 25 ROWS ONLY
-```
+> [!NOTE]
+> `TOP` and `OFFSET ... FETCH` are not supported in queries. Use `Prefer: odata.maxpagesize` to limit the number of records.
 
 Alternatively, use a cursor-based approach by filtering on the last seen ID from the previous page:
 
 ```sql
-SELECT TOP 25 name, accountid
+SELECT name, accountid
 FROM account
 WHERE accountid > '00000000-0000-0000-0000-000000000000'
 ORDER BY accountid
@@ -411,15 +387,9 @@ GROUP BY a.name
 
 Follow these guidelines to write efficient SQL queries against Dataverse.
 
-### Always use `TOP` or `OFFSET FETCH`
+### Avoid query anti-patterns
 
-Queries without a row limit can return large result sets that degrade performance. Always include `TOP` or `OFFSET ... FETCH NEXT`:
-
-```sql
-SELECT TOP 100 name, telephone1
-FROM account
-ORDER BY name
-```
+For guidance about general things to avoid when composing Dataverse queries, see [Query anti-patterns](../../query-antipatterns.md).
 
 ### Select only the columns you need
 
@@ -432,18 +402,6 @@ Selecting fewer columns reduces the amount of data transferred. Avoid requesting
 -- Select only needed columns
 SELECT name, telephone1
 FROM account
-```
-
-### Avoid leading wildcards in LIKE patterns
-
-A leading wildcard (`%value`) forces a full table scan. Use a trailing wildcard or an exact match when possible:
-
-```sql
--- Slower: leading wildcard causes a full scan
-SELECT name FROM account WHERE name LIKE '%Coffee'
-
--- Faster: trailing wildcard can use an index
-SELECT name FROM account WHERE name LIKE 'Fourth%'
 ```
 
 ### Filter on indexed columns
