@@ -398,7 +398,8 @@ FROM account
 > [!NOTE]
 > Grouping by functions, including by parts of date like `GROUP BY MONTH(a.createdon)`, is not supported.
 
-#[!INCLUDE [cc-query-aggregation-limitations](../../includes/cc-query-aggregation-limitations.md)]
+### Limitations
+[!INCLUDE [cc-query-aggregation-limitations-no-header](../../includes/cc-query-aggregation-limitations-no-header.md)]
 
 ## Count rows
 
