@@ -346,7 +346,8 @@ The following features aren't supported in `WHERE` clauses:
 - Subqueries: `WHERE accountid IN (SELECT accountid FROM account)` isn't supported.
 - `EXISTS` and `NOT EXISTS`: These operators return an error.
 - Literal-to-literal comparisons: `WHERE 1=1` and `WHERE 1=0` aren't supported.
-- Expressions: `SELECT ... FROM account a WHERE a.revenue > 500.0 + 125.0` isn't supported.
+- Column-to-column comparisons: `WHERE a.modifiedon > a.createdon` isn't supported.
+- Expressions: `WHERE a.revenue > 500.0 + 125.0` isn't supported.
 - Functions applied to column values: `WHERE DATEADD(day, 3, a.createdon) >= GETUTCDATE()` isn't supported.
 - Functions not listed in this document.
 
@@ -393,6 +394,12 @@ SELECT COUNT(*) AS total_accounts,
        MAX(revenue) AS max_revenue
 FROM account
 ```
+
+> [!NOTE]
+> Grouping by functions, including by parts of date like `GROUP BY MONTH(a.createdon)`, is not supported.
+
+### Limitations
+[!INCLUDE [cc-query-aggregation-limitations](../../includes/cc-query-aggregation-limitations.md)]
 
 ## Count rows
 
