@@ -7,7 +7,7 @@ ms.topic: how-to
 ms.date: 05/26/2026
 ms.subservice: dataverse-maker
 ms.author: spatankar
-ms. reviewer: matp
+ms.reviewer: matp
 contributor: kewear
 search.audienceType: 
   - maker

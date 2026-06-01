@@ -7,7 +7,7 @@ ms.topic: how-to
 ms.date: 05/26/2026
 ms.subservice: dataverse-maker
 ms.author: spatankar
-ms. reviewer: matp
+ms.reviewer: matp
 contributors: 
 - MsSQLGirl
 - seanwat-msft
@@ -55,8 +55,6 @@ Once connected to the Dataverse MCP Server, you can choose from the following to
 | `delete_table` | Deletes a table from Dataverse, only after explicit user approval. | Non-Premium |
 | `read_query` | Run supported Dataverse SQL `SELECT` queries. | Non-Premium |
 | `describe` | Get details from search results for tables, records, schemas, skills, and apps. | Non-Premium |
-| `upsert_skill` | Add or update a Dataverse skill/playbook. | Non-Premium |
-| `delete_skill` | Delete a Dataverse skill/playbook by name. | Non-Premium |
 | `init_file_upload` | Generate a SAS URL for file upload. | Non-Premium |
 | `commit_file_upload` | Commit a file upload. | Non-Premium |
 | `file_download` | Generate a SAS URL for file download. | Non-Premium |
