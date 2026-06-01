@@ -192,4 +192,6 @@ When you play the app, the app header looks like the following image. You might 
 [Classic theming](create-themes-organization-branding.md)
 
 [Modern refreshed look](../../user/modern-fluent-design.md)
+
+[Style components with modern theming](../../developer/component-framework/fluent-modern-theming.md)
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

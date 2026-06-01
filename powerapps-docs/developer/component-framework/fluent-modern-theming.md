@@ -1,5 +1,5 @@
 ---
-title: "Style components with modern theming (preview) | Microsoft Docs"
+title: "Style components with modern theming | Microsoft Docs"
 description: You can style your components based on the modern theme used in the app."
 keywords: "Component Framework, code components, Power Apps controls"
 author: jasongre
@@ -16,9 +16,7 @@ contributors:
   - JimDaly
 ---
 
-# Style components with modern theming (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Style components with modern theming
 
 Developers need to be able to style their components so they look like the rest of the application they're included in. They can do this when modern theming is in effect for either a canvas app (via the [Modern controls and themes](../../maker/canvas-apps/controls/modern-controls/overview-modern-controls.md) feature) or model-driven app (through the [new refreshed look](../../user/modern-fluent-design.md)). Use modern theming, which is based on [Fluent UI React v9](https://react.fluentui.dev/), to style your component. This approach is recommended to get the best performance and theming experience for your component.
 

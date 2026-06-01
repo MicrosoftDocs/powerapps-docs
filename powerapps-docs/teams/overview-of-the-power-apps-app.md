@@ -167,7 +167,7 @@ When you create canvas apps by using Power Apps from the Teams interface, you ne
 | [Component](../maker/canvas-apps/create-component.md)                           | Reusable combinations of controls that you can define, save, and use for new apps.                                                                                     |
 | [Save an app](../maker/canvas-apps/save-publish-app.md)  | Saving an app for the first time, or saving new changes to an app.                                                                                                                                           |
 | [Publish an app](../maker/canvas-apps/save-publish-app.md)       | Making an app available to the app store for general consumption.                                                                                                                                            |
-| [Versions](../maker/canvas-apps/save-publish-app.md#identify-the-live-version)  | Each time you save an app, you create a new version that you can [restore](../maker/canvas-apps/restore-an-app.md). |
+| [Versions](../maker/canvas-apps/save-publish-app.md#identify-and-manage-app-versions)  | Each time you save an app, you create a new version that you can [restore](../maker/canvas-apps/restore-an-app.md). |
 | [Share an app](../maker/canvas-apps/share-app.md)                               | Allowing users or groups to use the app, as consumers or co-owners.                                                                                                                                          |
 
 ### See also
