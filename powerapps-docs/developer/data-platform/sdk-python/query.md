@@ -255,9 +255,9 @@ client.records.create("contact", {"firstname": "Jane", **bind})
 
 ## Query data using SQL
 
-The SQL endpoint of the Dataverse web service provides a read-only interface to a limited set of SQL `SELECT` commands. Support for SQL JOINs, aggregates, GROUP BY, DISTINCT, and OFFSET FETCH pagination is provided.
+Dataverse provides a read-only interface to a limited set of SQL `SELECT` commands. Support for SQL JOINs, aggregates, GROUP BY, DISTINCT, and OFFSET FETCH pagination is provided.
 
-You can also access the SQL endpoint using the Dataverse Web API `?sql=` parameter so code written in languages other than Python can access Dataverse data. [Learn more about using SQL with the Dataverse Web API](../webapi/query/sql.md)
+You can also access the SQL query capability using the Dataverse Web API's `?sql=` parameter so code written in languages other than Python can access Dataverse data. For more information see [Use SQL to Query Data With the Dataverse Web API](../webapi/query/sql.md).
 
 > [!IMPORTANT]
 > The SQL support is limited to read-only queries. Complex joins, subqueries, and certain SQL functions may not be supported. The SQL query must follow the supported subset:
