@@ -4,7 +4,7 @@ metadata:
   description: Get answers to frequently asked questions about Power Apps Azure Synapse Link for Dataverse.
   author: sabinn-msft
   ms.search.keywords: 
-  ms.date: 05/15/2026
+  ms.date: 06/01/2026
   ms.author: sabinn
   ms.reviewer: matp
   contributors: 
@@ -139,7 +139,7 @@ sections:
         For any direct SQL call to remove a record, the Azure Synapse Link for Dataverse service doesn't trigger because BPO.Delete isn't being called. For a sample feature, go to [How to clean up inherited access](/troubleshoot/power-platform/dataverse/user-permissions/cleanup-inherited-access).
    - question: Why do I get a type conversion error for timestamp columns when reading Parquet files in Apache Spark 3.5 or later?
      answer: |
-        In both bring your own lake (profiles and managed data lake) profiles, timestamps in Parquet files are stored in INT64 format. You might encounter errors in downstream pipelines, such as Azure Synapse pipeline copy operations, when reading these Parquet files through Apache Spark 3.5 or later. This behavior occurs because INT96 is no longer the default mode for timestamps in Spark 3.5.
+        In both bring your own lake and managed data lake profiles, timestamps in Parquet files are stored in INT64 format. You might encounter errors in downstream pipelines, such as Azure Synapse pipeline copy operations, when reading these Parquet files through Apache Spark 3.5 or later. This behavior occurs because INT96 is no longer the default mode for timestamps in Spark 3.5.
         
         You might see an error similar to: 
         
