@@ -172,6 +172,7 @@ INNER JOIN account AS parent ON child.parentaccountid = parent.accountid
 -- FROM account AS a
 -- INNER JOIN contact AS c ON a.accountid = c.parentcustomerid AND a.name LIKE 'A%'
 
+-- This example works because it has a filter on the joined contact table fullname column:
 SELECT a.name, c.fullname, c.emailaddress1
 FROM account AS a
 INNER JOIN contact AS c ON a.accountid = c.parentcustomerid AND c.fullname LIKE 'A%'
@@ -182,7 +183,9 @@ You can combine additional conditions with each other using a nested `OR` operat
 ```sql
 SELECT a.name, c.fullname, c.emailaddress1
 FROM account AS a
-INNER JOIN contact AS c ON a.accountid = c.parentcustomerid AND (c.fullname LIKE 'A%' OR c.emailaddress1 LIKE 'B%')
+INNER JOIN contact AS c
+   ON a.accountid = c.parentcustomerid
+   AND (c.fullname LIKE 'A%' OR c.emailaddress1 LIKE 'B%')
 ```
 
 ## Order rows
@@ -380,12 +383,12 @@ WHERE a.createdon >= DATEADD(day, -3, GETUTCDATE())
 
 The `WHERE` clause doesn't support the following features:
 
-- Subqueries: It doesn't support `WHERE accountid IN (SELECT accountid FROM account)`.
+- Subqueries: `WHERE accountid IN (SELECT accountid FROM account)`.
 - `EXISTS` and `NOT EXISTS`: These operators return an error.
-- Literal-to-literal comparisons: It doesn't support `WHERE 1=1` and `WHERE 1=0`.
-- Column-to-column comparisons: It doesn't support `WHERE a.modifiedon > a.createdon`.
-- Expressions: It doesn't support `WHERE a.revenue > 500.0 + 125.0`.
-- Functions applied to column values: It doesn't support `WHERE DATEADD(day, 3, a.createdon) >= GETUTCDATE()`.
+- Literal-to-literal comparisons:  `WHERE 1=1` and `WHERE 1=0`.
+- Column-to-column comparisons:  `WHERE a.modifiedon > a.createdon`.
+- Expressions:  `WHERE a.revenue > 500.0 + 125.0`.
+- Functions applied to column values: `WHERE DATEADD(day, 3, a.createdon) >= GETUTCDATE()`.
 - Functions not listed in this document.
 
 ## Page results
@@ -435,7 +438,7 @@ FROM account
 > [!NOTE]
 > Grouping by functions, including by parts of date like `GROUP BY MONTH(a.createdon)`, isn't supported.
 
-### Limitations
+### Aggregate query record limits
 
 [!INCLUDE [cc-query-aggregation-limitations](../../includes/cc-query-aggregation-limitations.md)]
 
