@@ -1,5 +1,5 @@
 ---
-title: Use SQL to Query Data With the Dataverse Web API (Preview)
+title: Use SQL to Query Data With the Dataverse Web API
 description: Learn how to use SQL to query data with the Microsoft Dataverse Web API. Retrieve table data using SQL SELECT commands passed via the sql query option.
 ms.date: 06/01/2026
 ms.topic: how-to
@@ -14,7 +14,7 @@ contributors:
   - JimDaly
   - dmitmikh
 ---
-# Use SQL to query data by using the Dataverse Web API (preview)
+# Use SQL to query data by using the Dataverse Web API
 
 You can use Structured Query Language (SQL) to query data from Microsoft Dataverse by using the Web API. Pass SQL `SELECT` commands through the `sql` query option, using the entity set name of the table you want to query.
 
