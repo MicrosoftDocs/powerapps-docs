@@ -1,7 +1,7 @@
 ---
 title: "Use SQL to query data (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn how to query Microsoft Dataverse table data using SQL." 
-ms.date: 01/07/2026
+ms.date: 06/01/2026
 ms.reviewer: "pehecke"
 ms.topic: how-to
 author: "pnghub" # GitHub ID
@@ -217,9 +217,10 @@ Allowlisting hostnames isn't sufficient when connecting to Dataverse TDS because
 
 ### See also
 
-[How Dataverse SQL differs from Transact-SQL](./how-dataverse-sql-differs-from-transact-sql.md)
-[Get started with virtual tables (entities)](./virtual-entities/get-started-ve.md)  
-[Query data using FetchXml](fetchxml/overview.md)
-[Service Protection API Limits](api-limits.md)
+- [How Dataverse SQL differs from Transact-SQL](./how-dataverse-sql-differs-from-transact-sql.md)
+- [Use SQL to query data by using the Dataverse Web API](../webapi/query/sql.md)
+- [Get started with virtual tables (entities)](./virtual-entities/get-started-ve.md)  
+- [Query data using FetchXml](fetchxml/overview.md)
+- [Service Protection API Limits](api-limits.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
