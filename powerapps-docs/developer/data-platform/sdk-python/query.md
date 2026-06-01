@@ -3,7 +3,7 @@ title: Query data
 description: Learn how to query Dataverse data using the SDK for Python.
 ms.author: kewear
 author: kewear
-ms.date: 05/28/2026
+ms.date: 06/01/2026
 ms.reviewer: phecke
 ms.topic: concept-article
 contributors:
@@ -257,7 +257,7 @@ client.records.create("contact", {"firstname": "Jane", **bind})
 
 The SQL endpoint of the Dataverse web service provides a read-only interface to a limited set of SQL `SELECT` commands. Support for SQL JOINs, aggregates, GROUP BY, DISTINCT, and OFFSET FETCH pagination is provided.
 
-You can also access the SQL endpoint using the Dataverse Web API `?sql=` parameter so code written in languages other than Python can access Dataverse data.
+You can also access the SQL endpoint using the Dataverse Web API `?sql=` parameter so code written in languages other than Python can access Dataverse data. [Learn more about using SQL with the Dataverse Web API](../webapi/query/sql.md)
 
 > [!IMPORTANT]
 > The SQL support is limited to read-only queries. Complex joins, subqueries, and certain SQL functions may not be supported. The SQL query must follow the supported subset:
