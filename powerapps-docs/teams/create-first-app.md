@@ -5,7 +5,8 @@ author: mduelae
 
 ms.topic: how-to
 ms.collection: get-started
-ms.date: 01/13/2026
+ai-usage: ai-assisted
+ms.date: 05/20/2026
 ms.subservice: teams
 ms.author: saperlmu
 ms.reviewer: mkaur-msft
@@ -18,6 +19,15 @@ contributors:
 # Create your first app in Microsoft Teams
 
 You can create, edit, and delete [canvas apps](../maker/canvas-apps/getting-started.md) in Teams. If you're creating an app by using Power Apps in a Teams team for the first time, you also create a new Dataverse for Teams environment. For more information, see [About the Dataverse for Teams environment](/power-platform/admin/about-teams-environment).
+
+## Prerequisites
+
+- A [Microsoft Teams license](/microsoftteams/get-clients) (included with most Microsoft 365 plans).
+- Power Apps for Teams doesn't require a standalone Power Apps license. The capability is included with your Teams license for apps that use Dataverse for Teams.
+- You must be a member of the team where you want to create the app.
+
+> [!NOTE]
+> The Teams user interface updates regularly. If the screenshots or steps in this article don't exactly match what you see, look for similar options in the current interface. The core workflow remains the same.
 
 Creating an app in Microsoft Teams is a quick and easy three-step process.
 
@@ -343,8 +353,8 @@ Team names aren't always unique. It's possible for more than one
 team in Teams to share the same display name. For example, there might be
 more than one team with the name "Inspection" in a tenant. However, the
 Microsoft 365 Group associated with each team has a different *ObjectId* in
-Azure Active Directory (Azure AD), even when the team names are the same. The *ObjectId* in
-Azure AD for a Microsoft 365 Group is the same as the *GroupId* in
+Microsoft Entra ID, even when the team names are the same. The *ObjectId* in
+Microsoft Entra ID for a Microsoft 365 Group is the same as the *GroupId* in
 Teams for the associated team.
 
 To find the **GroupId** (ObjectID in Azure AD) of a team:
@@ -366,9 +376,32 @@ to get the *GroupID* value.
 
     `https://teams.microsoft.com/l/channel/19%3a06f038959c9f4387a35f5d776484cff2%40thread.tacv2/General?groupId=40b7e373-a788-4e29-a590-5a86db7550e3&tenantId=00000000-0000-0000-0000-0000000000000000`
 
-1. Now that you have the correct team's **GroupID** (ObjectID in Azure AD), use the instructions in
+1. Now that you have the correct team's **GroupID** (ObjectID in Microsoft Entra ID), use the instructions in
 [Share an app with Microsoft 365 Groups](../maker/canvas-apps/share-app.md#share-an-app-with-microsoft-365-groups)
 to enable security for the team's Microsoft 365 Group.
+
+## Troubleshooting
+
+### App publish fails with status code 400
+
+If you receive a "Request failed with status code 400" error when publishing your app to Teams:
+
+1. Ensure the team's Microsoft 365 Group is security-enabled. See [Additional considerations for Microsoft 365 Group](#additional-considerations-for-microsoft-365-group).
+1. Check that you have the correct permissions within the team (owner or member).
+1. Try signing out of Teams and signing back in, then attempt publishing again.
+
+### App doesn't appear in Teams after publishing
+
+If your published app doesn't appear in the Teams app store or the **Built by your colleagues** section:
+
+1. Allow up to 24 hours for the app to propagate across Teams.
+1. Sign out and sign back in to Teams to clear the cache.
+1. If using Teams web, refresh the browser.
+1. Verify that [custom app policies](/microsoftteams/teams-custom-app-policies-and-settings) in your organization allow uploaded apps.
+
+### How to delete an app
+
+To delete an app you no longer need, see [Delete an app](manage-your-apps.md#delete-an-app).
 
 ## Next steps
 
