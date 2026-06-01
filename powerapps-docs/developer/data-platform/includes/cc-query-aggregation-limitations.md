@@ -1,5 +1,3 @@
-## Limitations
-
 Queries that return aggregate values are limited to 50,000 records. This limit helps maintain system performance and reliability. If the filter criteria in your query returns more than 50,000 records, you get the following error:
 
 > Number: `-2147164125`  
