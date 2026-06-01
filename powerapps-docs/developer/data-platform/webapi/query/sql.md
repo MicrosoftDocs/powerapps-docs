@@ -1,7 +1,7 @@
 ---
 title: Use SQL to Query Data With the Dataverse Web API (Preview)
 description: Learn how to use SQL to query data with the Microsoft Dataverse Web API. Retrieve table data using SQL SELECT commands passed via the sql query option.
-ms.date: 03/17/2026
+ms.date: 06/01/2026
 ms.topic: how-to
 author: paulliew
 ms.author: paulliew
@@ -436,7 +436,8 @@ FROM account
 > Grouping by functions, including by parts of date like `GROUP BY MONTH(a.createdon)`, is not supported.
 
 ### Limitations
-[!INCLUDE [cc-query-aggregation-limitations-no-header](../../includes/cc-query-aggregation-limitations-no-header.md)]
+
+[!INCLUDE [cc-query-aggregation-limitations](../../includes/cc-query-aggregation-limitations.md)]
 
 ## Count rows
 
