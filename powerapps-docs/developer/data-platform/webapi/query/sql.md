@@ -19,7 +19,7 @@ contributors:
 You can use Structured Query Language (SQL) to query data from Microsoft Dataverse by using the Web API. Pass SQL `SELECT` commands through the `sql` query option, using the entity set name of the table you want to query.
 
 > [!NOTE]
-> Each command must contain a single `SELECT` statement. Other T-SQL statements like `DECLARE`, `INSERT`, `DELETE` or `ALTER TABLE` are not supported. Commands with multiple results sets like `SELECT name FROM account; SELECT fullname FROM contact` are also not supported.
+> Each command must contain a single `SELECT` statement. Other T-SQL statements like `DECLARE`, `INSERT`, `DELETE`, or `ALTER TABLE` aren't supported. Commands with multiple result sets like `SELECT name FROM account; SELECT fullname FROM contact` aren't supported.
 
 To use a SQL query like this:
 
@@ -106,7 +106,7 @@ The returned records look like this example:
 ```
 
 > [!NOTE]
-> Selecting literal values, expressions and functions other than aggregates is not supported. Do not use `SELECT 'abc', 1+2 AS IntValue, DATEADD(day, -3, a.modifiedon), a.name FROM account a`.
+> Selecting literal values, expressions, and functions other than aggregates isn't supported. Don't use `SELECT 'abc', 1+2 AS IntValue, DATEADD(day, -3, a.modifiedon), a.name FROM account a`.
 
 ## Join tables
 
@@ -217,7 +217,7 @@ Use a `WHERE` clause to filter rows by one or more conditions. The `WHERE` claus
 
 ### Comparison operators
 
-The following comparison operators are supported: `=`, `!=`, `<>`, `<`, `>`, `<=`, `>=`.
+The supported comparison operators are: `=`, `!=`, `<>`, `<`, `>`, `<=`, and `>=`.
 
 ```sql
 SELECT name, statecode
@@ -225,7 +225,7 @@ FROM account
 WHERE statecode = 0
 ```
 
-Use `!=` or `<>` to exclude rows:
+Use `!=` or `<>` to exclude rows.
 
 ```sql
 SELECT name, statecode
@@ -233,7 +233,7 @@ FROM account
 WHERE statecode <> 1
 ```
 
-Use `<`, `>`, `<=`, or `>=` for range comparisons:
+Use `<`, `>`, `<=`, or `>=` for range comparisons.
 
 ```sql
 SELECT name
@@ -244,7 +244,7 @@ ORDER BY name
 
 ### Logical operators
 
-Combine conditions with `AND` and `OR`. Use parentheses to control evaluation order:
+Combine conditions by using `AND` and `OR`. Use parentheses to control evaluation order.
 
 ```sql
 SELECT name, telephone1
@@ -308,7 +308,7 @@ WHERE name NOT IN ('Contoso', 'Fabrikam')
 
 ### BETWEEN
 
-Use `BETWEEN` to filter rows within an inclusive range:
+Use `BETWEEN` to filter rows within an inclusive range.
 
 ```sql
 SELECT name
@@ -318,7 +318,7 @@ WHERE name BETWEEN 'A' AND 'B'
 
 ### IS NULL and IS NOT NULL
 
-Use `IS NULL` to find rows where a column has no value, and `IS NOT NULL` to find rows where a column has a value:
+Use `IS NULL` to find rows where a column has no value, and use `IS NOT NULL` to find rows where a column has a value.
 
 ```sql
 SELECT name
@@ -337,7 +337,7 @@ WHERE telephone1 IS NOT NULL
 
 ### DISTINCT
 
-Use `DISTINCT` to return unique values:
+Use `DISTINCT` to return unique values.
 
 ```sql
 SELECT DISTINCT a.address1_city
@@ -346,7 +346,7 @@ FROM account AS a
 
 ### Using DATEADD and GETUTCDATE functions
 > [!NOTE]
-> Functions must be applied to a literal value or another supported function. Applying functions to column values is not supported.
+> You must apply functions to a literal value or another supported function. You can't apply functions to column values.
 
 Use the `DATEADD` function to return rows for a constant date range:
 
@@ -374,18 +374,18 @@ WHERE a.createdon >= DATEADD(day, -3, GETUTCDATE())
 ```
 
 > [!NOTE]
-> These functions are only supported in `WHERE` and `ON` clause conditions. Function calls in `SELECT`, `ORDER BY` and `GROUP BY` clauses are not supported.
+> The `WHERE` and `ON` clause conditions support these functions. The `SELECT`, `ORDER BY`, and `GROUP BY` clauses don't support function calls.
 
 ### Unsupported WHERE clause features
 
-The following features aren't supported in `WHERE` clauses:
+The `WHERE` clause doesn't support the following features:
 
-- Subqueries: `WHERE accountid IN (SELECT accountid FROM account)` isn't supported.
+- Subqueries: It doesn't support `WHERE accountid IN (SELECT accountid FROM account)`.
 - `EXISTS` and `NOT EXISTS`: These operators return an error.
-- Literal-to-literal comparisons: `WHERE 1=1` and `WHERE 1=0` aren't supported.
-- Column-to-column comparisons: `WHERE a.modifiedon > a.createdon` isn't supported.
-- Expressions: `WHERE a.revenue > 500.0 + 125.0` isn't supported.
-- Functions applied to column values: `WHERE DATEADD(day, 3, a.createdon) >= GETUTCDATE()` isn't supported.
+- Literal-to-literal comparisons: It doesn't support `WHERE 1=1` and `WHERE 1=0`.
+- Column-to-column comparisons: It doesn't support `WHERE a.modifiedon > a.createdon`.
+- Expressions: It doesn't support `WHERE a.revenue > 500.0 + 125.0`.
+- Functions applied to column values: It doesn't support `WHERE DATEADD(day, 3, a.createdon) >= GETUTCDATE()`.
 - Functions not listed in this document.
 
 ## Page results
@@ -393,7 +393,7 @@ The following features aren't supported in `WHERE` clauses:
 Use OData paging with the `Prefer: odata.maxpagesize` request header and the `@odata.nextLink` annotation. [Learn more about paging](./page-results.md).
 
 > [!NOTE]
-> `TOP` and `OFFSET ... FETCH` are not supported in queries. Use `Prefer: odata.maxpagesize` to limit the number of records.
+> `TOP` and `OFFSET ... FETCH` aren't supported in queries. Use `Prefer: odata.maxpagesize` to limit the number of records.
 
 Alternatively, use a cursor-based approach by filtering on the last seen ID from the previous page:
 
@@ -433,7 +433,7 @@ FROM account
 ```
 
 > [!NOTE]
-> Grouping by functions, including by parts of date like `GROUP BY MONTH(a.createdon)`, is not supported.
+> Grouping by functions, including by parts of date like `GROUP BY MONTH(a.createdon)`, isn't supported.
 
 ### Limitations
 
@@ -498,4 +498,4 @@ WHERE accountid = '00000000-0000-0000-0000-000000000000'
 
 ### Limit JOIN depth
 
-Multi-table joins are supported, but each additional join increases query cost. Limit joins to what you need for your query.
+You can use multitable joins, but each extra join raises the query cost. Limit joins to what you need for your query.
