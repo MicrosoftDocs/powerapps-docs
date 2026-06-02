@@ -51,7 +51,7 @@ If you're using our [PowerShell module](https://www.powershellgallery.com/packag
 
 ### SDK for Python
 
-If you are working with Python, we recommend using our [SDK for Python](./sdk-python/overview.md). The SDK enables data scientists and developers to create, access, and manager Dataverse business data using Python programming. The Dataverse SDK for Python implements common Python programming paradigms and best practices, provides a more natural Python interface to Dataverse, and supports community contributions.
+If you are working with Python, we recommend using our [SDK for Python](./sdk-python/overview.md). The SDK enables data scientists and developers to create, access, and manage Dataverse business data using Python programming. The Dataverse SDK for Python implements common Python programming paradigms and best practices, provides a more natural Python interface to Dataverse, and supports community contributions.
 
 More information: [Getting started](./sdk-python/get-started.md)
 
