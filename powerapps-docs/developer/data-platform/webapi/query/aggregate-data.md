@@ -340,6 +340,7 @@ When a table has a [hierarchical relationship defined](../../../../maker/data-pl
 
 You can't specify a configurable aggregate limit. [Learn about per query limits using FetchXml](../../fetchxml/aggregate-data.md#per-query-limit).
 
+### Aggregate query record limit error
 
 [!INCLUDE [cc-query-aggregation-limitations](../../includes/cc-query-aggregation-limitations.md)]
 
