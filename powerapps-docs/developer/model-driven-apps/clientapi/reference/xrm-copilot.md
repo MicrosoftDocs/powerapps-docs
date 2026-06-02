@@ -24,6 +24,7 @@ contributors:
 |[addDefaultActionHandlers](Xrm-Copilot/adddefaultactionhandlers.md)|[!INCLUDE [adddefaultactionhandlers-description](Xrm-Copilot/includes/adddefaultactionhandlers-description.md)]|
 |[executeEvent](Xrm-Copilot/executeevent.md)|[!INCLUDE [executeevent-description](Xrm-Copilot/includes/executeevent-description.md)]|
 |[executePrompt](Xrm-Copilot/executeprompt.md)|[!INCLUDE [executeprompt-description](Xrm-Copilot/includes/executeprompt-description.md)]|
+|[getCurrentAgent](Xrm-Copilot/getcurrentagent.md)|[!INCLUDE [getCurrentAgent-description](Xrm-Copilot/includes/getCurrentAgent-description.md)]|
 |[isM365CopilotEnabled](Xrm-Copilot/ism365copilotenabled.md)|[!INCLUDE [ism365copilotenabled-description](Xrm-Copilot/includes/ism365copilotenabled-description.md)]|
 |[openM365CopilotPanel](Xrm-Copilot/openm365copilotpanel.md)|[!INCLUDE [openm365copilotpanel-description](Xrm-Copilot/includes/openm365copilotpanel-description.md)]|
 |[removeActionHandler](Xrm-Copilot/removeactionhandler.md)|[!INCLUDE [removeactionhandler-description](Xrm-Copilot/includes/removeactionhandler-description.md)]|
