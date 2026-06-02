@@ -51,8 +51,10 @@ Key capabilities
 
 ## Add work content
 You can enrich your app-building experience by attaching **work content** directly to your prompt. This enables you to ground your app generation in real business context, making outputs more accurate, relevant, and tailored to your needs. 
+
    
-:::image type="content" source="media/create-app-data-plan/add-work-content.png" alt-text="Screenshot of selecting the add work content option." lightbox="media/create-app-data-plan/add-work-content":::
+:::image type="content" source="media/create-app-data-plan/add-work-content.png" alt-text="Screenshot of selecting the add work content option." lightbox="media/create-app-data-plan/add-work-content.png":::
+
 1. Enter a prompt describing what you want to build
 2. Select the + (Add work content) option
 3. Choose from:
