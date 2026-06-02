@@ -67,6 +67,7 @@ Known Limitations
 2. Content size and complexity may impact results
 3. Supported content types is limited to: Word (.docx), Excel (.xlsx), Emails, and Chats
 4. Real-time updates are not supported (attachments are analyzed at the time of generation only)
+5. A Copilot license is required to use this feature
 
 ## Review and refine your generated app and data model
 
