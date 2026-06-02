@@ -55,7 +55,7 @@ You can improve app generation by attaching **work content** to your prompt. Thi
 :::image type="content" source="media/create-app-data-plan/add-work-content.png" alt-text="Screenshot of selecting the add work content option." lightbox="media/create-app-data-plan/add-work-content.png":::
 
 1. Enter a prompt that describes the app you want to build.
-2. Select **+ (Add work content**.
+2. Select **+ Add work content**.
 3. Choose the content you want to attach:
     - Files (Word or Excel)
     - Emails
