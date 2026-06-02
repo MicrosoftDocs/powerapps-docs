@@ -56,7 +56,7 @@ Use advanced find to search for rows and then reassign them to someone else. For
    
 1. Use the [advanced find search](advanced-find.md) to find rows that you want to assign to someone else. For example, to look for active row types that are **Challenges**, in **Look for:** enter **Challenges** and status equals **Active**. Then select **Apply** to run the query.
 
-1. Select the rows that you want to assign and then select **Assign**
+1. Select the rows that you want to assign and then select **Assign**.
 
  1. In the assign dialog box, select the **Assign to** column and choose one of the following options:
  
@@ -121,7 +121,7 @@ Use advanced find to search for rows and then reassign them to someone else. For
  1. Select the name from the list.
  
      
- 1. On the share dialog box, select the type of permissions the user or team has for the row. When you're done, select **Share**   
+ 1. On the share dialog box, select the type of permissions the user or team has for the row. When you're done, select **Share**.   
  
      > [!div class="mx-imgBorder"]
      > ![Select the type of permissions.](media/share-6.png "Select the type of permissions")
