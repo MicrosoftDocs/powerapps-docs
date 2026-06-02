@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.subservice: mda-maker
 ms.author: yogupt
 ms.reviewer: matp
-ms.date: 04/23/2026
+ms.date: 06/02/2026
 ms.update-cycle: 180-days
 ms.topic: how-to
 applies_to: 
@@ -16,6 +16,7 @@ search.audienceType:
 contributors:
   - makolomi
   - marianaraujo
+  - devkeydet
 ms.collection: bap-ai-copilot
 ms.custom:
   - CXT
@@ -36,6 +37,7 @@ When enabled, users can open Microsoft 365 Copilot in their model-driven app by 
 ## Prerequisites
 
 To use Microsoft 365 Copilot in canvas apps, make sure the following prerequisites are met:
+
 - Your tenant must be set to allow **Dataverse data available in Microsoft 365 Copilot**. For more information, see [Enable Microsoft 365 admin center Copilot Dataverse settings](../data-platform/data-platform-intelligence.md#enable-microsoft-365-admin-center-copilot-dataverse-settings).
 - Dataverse Search must be set to **Default** or **On** for the environment. Fore more information, see [Understand what this means for generative AI experiences](/power-platform/admin/configure-relevance-search-organization#what-dataverse-search-means-for-generative-ai-enabled-experiences).
 - To use the Microsoft 365 Copilot feature in a Power Apps app, users must have both a Power Apps premium license and a Microsoft 365 Copilot license.  
@@ -75,19 +77,19 @@ Makers can enable or disable Microsoft 365 Copilot for a specific model-driven a
 
 1. Select **Save** and then publish the app for the changes to take effect.
 
-## Default enable Microsoft 365 Copilot in all model-driven apps in an environment
+## Enable Microsoft 365 Copilot for all model-driven apps in an environment
 
-Makers can enable Microsoft 365 Copilot for all model-driven apps in an environment.
+Makers can enable Microsoft 365 Copilot as the default for all model-driven apps in an environment.
 
-1. Sign in to [Power Apps](https://make.powerapps.com).
-1. On the left, select **Solutions**.
-1. Select the Solution named **Default Solution** in Solutions list.
-1. On the left, select **Objects**
-1. In the **Objects** list, select **Settings** -> **Setting environment values**.
+1. Sign in to [Power Apps](https://make.powerapps.com), and then on the left pane, select **Solutions**.
+1. Open the solution named **Default Solution** in the **Solutions** list.
+1. On the left pane, select **Objects**
+1. In the left **Objects** pane, expand **Settings**, and then select **Setting environment values**.
 1. Select **Enable M365 Copilot in model-driven apps**
-1. Under **Setting environment value**, select **Add existing value** if one does not already exist and ensure the value is set to **2**
-    :::image type="content" source="media/microsoft-365-chat-model-driven-apps/microsoft-365-copilot-setting-environment-value.png" alt-text="Screenshot that shows how to turn Microsoft 365 Copilot on in all model-driven apps in an environment.":::
-1. Select **Save** and then publish customization for the changes to take effect.
+1. Under **Setting environment values**, select **Add existing value**, if a value doesn't already exist, and then set the value to *2*.
+    :::image type="content" source="media/microsoft-365-chat-model-driven-apps/microsoft-365-copilot-setting-environment-value.png" alt-text="Screenshot that shows how to turn Microsoft 365 Copilot on in all model-driven apps in an environment." lightbox="media/microsoft-365-chat-model-driven-apps/microsoft-365-copilot-setting-environment-value.png":::
+1. Select **Save**.
+1. Select **Publish** for the change to take effect.
 
 ## Microsoft 365 Copilot vs. Copilot chat
 
