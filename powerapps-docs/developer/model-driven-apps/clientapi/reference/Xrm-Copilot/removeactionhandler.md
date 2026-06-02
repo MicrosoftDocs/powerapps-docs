@@ -43,10 +43,10 @@ Only the specific function reference passed is removed. Other handlers for the s
 ```javascript
 const handler = async (data) => { /* ... */ };
 
-await Xrm.Copilot.addActionHandler("MS.PA.CopilotChat.OpenRecord", handler);
+await Xrm.Copilot.addActionHandler("My.Namespace.MyActionMessage", handler);
 
 // Later, when no longer needed:
-await Xrm.Copilot.removeActionHandler("MS.PA.CopilotChat.OpenRecord", handler);
+await Xrm.Copilot.removeActionHandler("My.Namespace.MyActionMessage", handler);
 ```
 
 ### Related articles

@@ -1,1 +1,1 @@
-Sends a prompt string to the Microsoft 365 Copilot side panel.
+Sends a prompt to the Microsoft 365 Copilot side panel, causing Copilot to process and respond on behalf of the user.

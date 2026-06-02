@@ -56,7 +56,7 @@ const handler = async ({ entity, recordId }) => {
     await pane.navigate({ pageType: "entityrecord", entityName: entity, entityId: recordId });
 };
 
-await Xrm.Copilot.addActionHandler("MS.PA.CopilotChat.OpenRecord", handler);
+await Xrm.Copilot.addActionHandler("My.Namespace.MyActionMessage", handler);
 ```
 
 ### Related articles
