@@ -1,5 +1,5 @@
 ---
-title: "removeActionHandler (Client API reference) in model-driven apps (preview)"
+title: "removeActionHandler (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the removeActionHandler method.
 author: devkeydet
 ms.author: marcsc
@@ -13,7 +13,7 @@ contributors:
   - JimDaly
 ---
 
-# removeActionHandler (Client API reference) (preview)
+# removeActionHandler (Client API reference)
 
 [!INCLUDE[./includes/removeactionhandler-description.md](./includes/removeactionhandler-description.md)]
 

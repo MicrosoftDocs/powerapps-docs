@@ -31,8 +31,6 @@ contributors:
 |[sendPromptToM365Copilot](Xrm-Copilot/sendprompttom365copilot.md)|[!INCLUDE [sendprompttom365copilot-description](Xrm-Copilot/includes/sendprompttom365copilot-description.md)]|
 |[updateContext](Xrm-Copilot/updatecontext.md)|[!INCLUDE [updatecontext-description](Xrm-Copilot/includes/updatecontext-description.md)]|
 
-
-
 ### Related articles
 
 [MCSResponse](Xrm-Copilot/mcsresponse.md)  

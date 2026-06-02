@@ -1,5 +1,5 @@
 ---
-title: "removeDefaultActionHandlers (Client API reference) in model-driven apps (preview)"
+title: "removeDefaultActionHandlers (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the removeDefaultActionHandlers method.
 author: devkeydet
 ms.author: marcsc

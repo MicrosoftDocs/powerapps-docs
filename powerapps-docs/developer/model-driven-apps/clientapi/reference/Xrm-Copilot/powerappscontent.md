@@ -1,5 +1,5 @@
 ---
-title: PowerAppsContent Interface (Client API reference) (preview)
+title: PowerAppsContent Interface (Client API reference)
 description: The interface that describes the context data passed to the Xrm.Copilot.updateContext method.
 author: devkeydet
 ms.author: marcsc
@@ -11,9 +11,7 @@ contributors:
   - JimDaly
 ---
 
-# PowerAppsContent Interface (Client API reference) (preview)
-
-[!INCLUDE [preview-note-pp](~/../shared-content/shared/preview-includes/preview-note-pp.md)]
+# PowerAppsContent Interface (Client API reference)
 
 An interface that describes the context data passed to the [updateContext](updatecontext.md) method. All properties are optional.
 

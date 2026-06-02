@@ -1,5 +1,5 @@
 ---
-title: "addActionHandler (Client API reference) in model-driven apps (preview)"
+title: "addActionHandler (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the addActionHandler method.
 author: devkeydet
 ms.author: marcsc

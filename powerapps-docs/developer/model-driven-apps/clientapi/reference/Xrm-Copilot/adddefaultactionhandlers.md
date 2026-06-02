@@ -1,5 +1,5 @@
 ---
-title: "addDefaultActionHandlers (Client API reference) in model-driven apps (preview)"
+title: "addDefaultActionHandlers (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the addDefaultActionHandlers method.
 author: devkeydet
 ms.author: marcsc
