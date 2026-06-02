@@ -86,6 +86,7 @@ Makers can enable Microsoft 365 Copilot for all model-driven apps in an environm
 1. In the **Objects** list, select **Settings** -> **Setting environment values**.
 1. Select **Enable M365 Copilot in model-driven apps**
 1. Under **Setting environment value**, select **Add existing value** if one does not already exist and ensure the value is set to **2**
+    :::image type="content" source="media/microsoft-365-chat-model-driven-apps/microsoft-365-copilot-setting-environment-value.png" alt-text="Screenshot that shows how to turn Microsoft 365 Copilot on in all model-driven apps in an environment.":::
 1. Select **Save** and then publish customization for the changes to take effect.
 
 ## Microsoft 365 Copilot vs. Copilot chat
