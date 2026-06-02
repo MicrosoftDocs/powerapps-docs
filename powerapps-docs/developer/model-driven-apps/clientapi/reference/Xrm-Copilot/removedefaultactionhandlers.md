@@ -13,9 +13,7 @@ contributors:
   - JimDaly
 ---
 
-# removeDefaultActionHandlers (Client API reference) (preview)
-
-[!INCLUDE [preview-note-pp](~/../shared-content/shared/preview-includes/preview-note-pp.md)]
+# removeDefaultActionHandlers (Client API reference)
 
 [!INCLUDE[./includes/removedefaultactionhandlers-description.md](./includes/removedefaultactionhandlers-description.md)]
 

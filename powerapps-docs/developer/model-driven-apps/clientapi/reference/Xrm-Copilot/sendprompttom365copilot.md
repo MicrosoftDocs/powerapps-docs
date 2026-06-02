@@ -13,9 +13,7 @@ contributors:
   - JimDaly
 ---
 
-# sendPromptToM365Copilot (Client API reference) (preview)
-
-[!INCLUDE [preview-note-pp](~/../shared-content/shared/preview-includes/preview-note-pp.md)]
+# sendPromptToM365Copilot (Client API reference)
 
 [!INCLUDE[./includes/sendprompttom365copilot-description.md](./includes/sendprompttom365copilot-description.md)]
 

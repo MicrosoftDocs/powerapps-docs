@@ -13,9 +13,7 @@ contributors:
   - JimDaly
 ---
 
-# addActionHandler (Client API reference) (preview)
-
-[!INCLUDE [preview-note-pp](~/../shared-content/shared/preview-includes/preview-note-pp.md)]
+# addActionHandler (Client API reference)
 
 [!INCLUDE[./includes/addactionhandler-description.md](./includes/addactionhandler-description.md)]
 

@@ -13,9 +13,7 @@ contributors:
   - JimDaly
 ---
 
-# isM365CopilotEnabled (Client API reference) (preview)
-
-[!INCLUDE [preview-note-pp](~/../shared-content/shared/preview-includes/preview-note-pp.md)]
+# isM365CopilotEnabled (Client API reference)
 
 [!INCLUDE[./includes/ism365copilotenabled-description.md](./includes/ism365copilotenabled-description.md)]
 

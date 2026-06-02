@@ -13,9 +13,7 @@ contributors:
   - JimDaly
 ---
 
-# updateContext (Client API reference) (preview)
-
-[!INCLUDE [preview-note-pp](~/../shared-content/shared/preview-includes/preview-note-pp.md)]
+# updateContext (Client API reference)
 
 [!INCLUDE[./includes/updatecontext-description.md](./includes/updatecontext-description.md)]
 

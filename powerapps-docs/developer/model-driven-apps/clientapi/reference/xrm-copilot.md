@@ -14,9 +14,7 @@ contributors:
   - JimDaly
 ---
 
-# Xrm.Copilot (Client API reference) (preview)
-
-[!INCLUDE [preview-note-pp](~/../shared-content/shared/preview-includes/preview-note-pp.md)]
+# Xrm.Copilot (Client API reference)
 
 [!INCLUDE [xrm-copilot-description](Xrm-Copilot/includes/xrm-copilot-description.md)]
 

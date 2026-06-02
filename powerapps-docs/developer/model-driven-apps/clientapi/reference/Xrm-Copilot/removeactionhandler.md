@@ -15,8 +15,6 @@ contributors:
 
 # removeActionHandler (Client API reference) (preview)
 
-[!INCLUDE [preview-note-pp](~/../shared-content/shared/preview-includes/preview-note-pp.md)]
-
 [!INCLUDE[./includes/removeactionhandler-description.md](./includes/removeactionhandler-description.md)]
 
 ## Syntax
