@@ -15,7 +15,7 @@ contributors:
 
 # removeDefaultActionHandlers (Client API reference)
 
-[!INCLUDE[./includes/removedefaultactionhandlers-description.md](./includes/removedefaultactionhandlers-description.md)]
+[!INCLUDE[removedefaultactionhandlers-description](includes/removedefaultactionhandlers-description.md)]
 
 ## Syntax
 

@@ -15,7 +15,7 @@ contributors:
 
 # removeActionHandler (Client API reference)
 
-[!INCLUDE[./includes/removeactionhandler-description.md](./includes/removeactionhandler-description.md)]
+[!INCLUDE[removeactionhandler-description](includes/removeactionhandler-description.md)]
 
 ## Syntax
 

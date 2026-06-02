@@ -15,7 +15,7 @@ contributors:
 
 # updateContext (Client API reference)
 
-[!INCLUDE[./includes/updatecontext-description.md](./includes/updatecontext-description.md)]
+[!INCLUDE[updatecontext-description](includes/updatecontext-description.md)]
 
 ## Syntax
 

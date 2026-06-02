@@ -15,7 +15,7 @@ contributors:
 
 # isM365CopilotEnabled (Client API reference)
 
-[!INCLUDE[./includes/ism365copilotenabled-description.md](./includes/ism365copilotenabled-description.md)]
+[!INCLUDE[ism365copilotenabled-description](includes/ism365copilotenabled-description.md)]
 
 ## Syntax
 

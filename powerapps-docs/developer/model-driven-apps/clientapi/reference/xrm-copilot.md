@@ -18,6 +18,8 @@ contributors:
 
 [!INCLUDE [xrm-copilot-description](Xrm-Copilot/includes/xrm-copilot-description.md)]
 
+## Methods
+
 | Method| Description|
 | --- | --- |
 |[addActionHandler](Xrm-Copilot/addactionhandler.md)|[!INCLUDE [addactionhandler-description](Xrm-Copilot/includes/addactionhandler-description.md)]|
@@ -32,11 +34,18 @@ contributors:
 |[sendPromptToM365Copilot](Xrm-Copilot/sendprompttom365copilot.md)|[!INCLUDE [sendprompttom365copilot-description](Xrm-Copilot/includes/sendprompttom365copilot-description.md)]|
 |[updateContext](Xrm-Copilot/updatecontext.md)|[!INCLUDE [updatecontext-description](Xrm-Copilot/includes/updatecontext-description.md)]|
 
+## Interfaces
+
+| Interface | Description|
+| --- | --- |
+|[M365CopilotAgent](Xrm-Copilot/m365copilotagent.md)|[!INCLUDE [m365copilotagent-description](Xrm-Copilot/includes/m365copilotagent-description.md)]|
+|[M365CopilotAgentMode](Xrm-Copilot/m365copilotagentmode.md)|[!INCLUDE [m365copilotagentmode-description](Xrm-Copilot/includes/m365copilotagentmode-description.md)]|
+|[MCSResponse](Xrm-Copilot/mcsresponse.md)|[!INCLUDE [mcsresponse-description](Xrm-Copilot/includes/mcsresponse-description.md)]|
+|[PowerAppsContent](Xrm-Copilot/powerappscontent.md)|[!INCLUDE [powerappscontent-description](Xrm-Copilot/includes/powerappscontent-description.md)]|
+|[SendPromptToM365CopilotOptions](Xrm-Copilot/sendprompttom365copilotoptions.md)|[!INCLUDE [sendprompttom365copilotoptions-description](Xrm-Copilot/includes/sendprompttom365copilotoptions-description.md)]|
+
 ### Related articles
 
-[MCSResponse](Xrm-Copilot/mcsresponse.md)  
-[PowerAppsContent](Xrm-Copilot/powerappscontent.md)  
-[SendPromptToM365CopilotOptions](Xrm-Copilot/sendprompttom365copilotoptions.md)  
 [Client API Xrm object](../clientapi-xrm.md)
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

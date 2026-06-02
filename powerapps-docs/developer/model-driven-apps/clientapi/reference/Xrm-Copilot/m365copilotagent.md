@@ -13,7 +13,7 @@ contributors:
 
 # M365CopilotAgent Interface (Client API reference)
 
-Describes the currently active Microsoft 365 Copilot agent — returned by [getCurrentAgent](getcurrentagent.md).
+[!INCLUDE [m365copilotagent-description](includes/m365copilotagent-description.md)]
 
 ## Properties
 

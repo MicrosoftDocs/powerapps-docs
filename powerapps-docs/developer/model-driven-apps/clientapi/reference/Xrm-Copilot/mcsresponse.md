@@ -15,7 +15,7 @@ contributors:
 
 [!INCLUDE [preview-note-pp](~/../shared-content/shared/preview-includes/preview-note-pp.md)]
 
-An interface that describes the data returned by the [executeEvent](executeevent.md) and [executePrompt](executeprompt.md) methods.
+[!INCLUDE [mcsresponse-description](includes/mcsresponse-description.md)]
 
 <!-- The information below may be identical to the MCSResponse used in Xrm Client API
 Try to re-use this content with an include if possible -->

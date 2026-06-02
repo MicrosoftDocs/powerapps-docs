@@ -3,7 +3,7 @@ title: "addDefaultActionHandlers (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the addDefaultActionHandlers method.
 author: devkeydet
 ms.author: marcsc
-ms.date: 04/23/2026
+ms.date: 06/02/2026
 ms.reviewer: jdaly
 ms.topic: reference
 applies_to: "Dynamics 365 (online)"
@@ -15,7 +15,7 @@ contributors:
 
 # addDefaultActionHandlers (Client API reference)
 
-[!INCLUDE[./includes/adddefaultactionhandlers-description.md](./includes/adddefaultactionhandlers-description.md)]
+[!INCLUDE[adddefaultactionhandlers-description](includes/adddefaultactionhandlers-description.md)]
 
 ## Syntax
 
@@ -35,7 +35,7 @@ Type: `Promise<void>`
 
 ## Remarks
 
-Does nothing if Microsoft 365 Copilot is not enabled.
+Does nothing if Microsoft 365 Copilot isn't enabled.
 
 ## Example
 

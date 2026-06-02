@@ -765,6 +765,8 @@
         href: clientapi/reference/Xrm-Copilot/executeevent.md
       - name: executePrompt
         href: clientapi/reference/Xrm-Copilot/executeprompt.md
+      - name: getCurrentAgent
+        href: clientapi/reference/Xrm-Copilot/getcurrentagent.md
       - name: isM365CopilotEnabled
         href: clientapi/reference/Xrm-Copilot/ism365copilotenabled.md
       - name: openM365CopilotPanel
@@ -777,6 +779,10 @@
         href: clientapi/reference/Xrm-Copilot/sendprompttom365copilot.md
       - name: updateContext
         href: clientapi/reference/Xrm-Copilot/updatecontext.md
+      - name: M365CopilotAgent
+        href: clientapi/reference/Xrm-Copilot/m365copilotagent.md
+      - name: M365CopilotAgentMode
+        href: clientapi/reference/Xrm-Copilot/m365copilotagentmode.md
       - name: MCSResponse
         href: clientapi/reference/Xrm-Copilot/mcsresponse.md
       - name: PowerAppsContent

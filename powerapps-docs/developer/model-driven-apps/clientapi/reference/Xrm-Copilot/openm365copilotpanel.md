@@ -15,7 +15,7 @@ contributors:
 
 # openM365CopilotPanel (Client API reference)
 
-[!INCLUDE[./includes/openm365copilotpanel-description.md](./includes/openm365copilotpanel-description.md)]
+[!INCLUDE[openm365copilotpanel-description](includes/openm365copilotpanel-description.md)]
 
 ## Syntax
 

@@ -17,7 +17,7 @@ contributors:
 
 [!INCLUDE [preview-note-pp](~/../shared-content/shared/preview-includes/preview-note-pp.md)]
 
-[!INCLUDE[./includes/executeprompt-description.md](./includes/executeprompt-description.md)]
+[!INCLUDE[executeprompt-description](includes/executeprompt-description.md)]
 
 ## Syntax
 

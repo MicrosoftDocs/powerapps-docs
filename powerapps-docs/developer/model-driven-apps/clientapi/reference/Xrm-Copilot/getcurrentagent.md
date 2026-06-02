@@ -3,7 +3,7 @@ title: "getCurrentAgent (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the getCurrentAgent method.
 author: devkeydet
 ms.author: marcsc
-ms.date: 04/23/2026
+ms.date: 06/02/2026
 ms.reviewer: jdaly
 ms.topic: reference
 applies_to: "Dynamics 365 (online)"
@@ -15,7 +15,7 @@ contributors:
 
 # getCurrentAgent (Client API reference)
 
-[!INCLUDE[./includes/getcurrentagent-description.md](./includes/getcurrentagent-description.md)]
+[!INCLUDE[getcurrentagent-description](includes/getcurrentagent-description.md)]
 
 ## Syntax
 

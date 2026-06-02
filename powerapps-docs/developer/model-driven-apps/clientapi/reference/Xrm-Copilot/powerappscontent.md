@@ -13,7 +13,7 @@ contributors:
 
 # PowerAppsContent Interface (Client API reference)
 
-An interface that describes the context data passed to the [updateContext](updatecontext.md) method. All properties are optional.
+[!INCLUDE [powerappscontent-description](includes/powerappscontent-description.md)]
 
 ## Properties
 

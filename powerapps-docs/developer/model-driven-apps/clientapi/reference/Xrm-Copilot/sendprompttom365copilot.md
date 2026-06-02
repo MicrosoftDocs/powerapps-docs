@@ -15,7 +15,7 @@ contributors:
 
 # sendPromptToM365Copilot (Client API reference)
 
-[!INCLUDE[./includes/sendprompttom365copilot-description.md](./includes/sendprompttom365copilot-description.md)]
+[!INCLUDE[sendprompttom365copilot-description](includes/sendprompttom365copilot-description.md)]
 
 ## Syntax
 

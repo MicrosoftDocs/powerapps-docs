@@ -13,7 +13,7 @@ contributors:
 
 # M365CopilotAgentMode Interface (Client API reference)
 
-Describes how a Microsoft 365 Copilot agent is being referenced.
+[!INCLUDE [m365copilotagentmode-description](includes/m365copilotagentmode-description.md)]
 
 ## Properties
 
