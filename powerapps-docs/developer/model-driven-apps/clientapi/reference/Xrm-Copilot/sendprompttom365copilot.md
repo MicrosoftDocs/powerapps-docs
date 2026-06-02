@@ -26,7 +26,7 @@ contributors:
 | Parameter Name| Type| Required | Description|
 | --- | --- | --- | --- |
 | `promptText` | string | Yes | The prompt text to send to the Microsoft 365 Copilot side panel.|
-| `options` | [SendPromptToM365CopilotOptions](sendprompttom365copilotoptions.md) | No | Additional options, such as a target GPT ID or auto-submit behavior.|
+| `options` | [SendPromptToM365CopilotOptions](sendprompttom365copilotoptions.md) | No | More options, such as a target GPT ID or auto-submit behavior.|
 | `successCallback` | Function | Yes | A function to call when the operation succeeds.|
 | `errorCallback`   | Function | Yes | A function to call when the operation fails.|
 
