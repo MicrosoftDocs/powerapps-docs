@@ -64,7 +64,7 @@ Power Platform administrators can set up and configure the Microsoft 365 Copilot
 
 1. Select **On** and then select **Save** to enable Microsoft 365 Copilot for your canvas apps in the selected environment group or environment.
 
-## Enable Microsoft 365 Copilot in a model-driven app
+## Enable Microsoft 365 Copilot in a single model-driven app
 
 Makers can enable or disable Microsoft 365 Copilot for a specific model-driven app.
 
