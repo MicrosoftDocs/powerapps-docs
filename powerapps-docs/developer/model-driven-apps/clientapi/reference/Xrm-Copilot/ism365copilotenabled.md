@@ -3,7 +3,7 @@ title: "isM365CopilotEnabled (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the isM365CopilotEnabled method.
 author: devkeydet
 ms.author: marcsc
-ms.date: 04/23/2026
+ms.date: 06/02/2026
 ms.reviewer: jdaly
 ms.topic: reference
 applies_to: "Dynamics 365 (online)"
@@ -36,7 +36,7 @@ Returns `true` if Microsoft 365 Copilot is enabled in the current environment; `
 
 ## Remarks
 
-Enablement is determined by a ranked sequence of checks: a feature control kill switch, three parallel eligibility checks (license, environment setting, and Dataverse indexing status), an optional app-level setting override, and a gradual rollout flag. The result is cached for 30 minutes; concurrent calls are deduplicated.
+Enablement is determined by a ranked sequence of checks: a feature control kill switch, three parallel eligibility checks (license, environment setting, and Dataverse indexing status), an optional app-level setting override, and a gradual rollout flag. The result is cached for 30 minutes, and concurrent calls are deduplicated.
 
 All other Microsoft 365 Copilot methods check this value before executing and complete without action if it returns `false`.
 

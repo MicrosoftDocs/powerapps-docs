@@ -3,7 +3,7 @@ title: "removeActionHandler (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the removeActionHandler method.
 author: devkeydet
 ms.author: marcsc
-ms.date: 04/23/2026
+ms.date: 06/02/2026
 ms.reviewer: jdaly
 ms.topic: reference
 applies_to: "Dynamics 365 (online)"
@@ -36,7 +36,7 @@ Type: `Promise<void>`
 
 ## Remarks
 
-Only the specific function reference passed is removed. Other handlers for the same `actionId` are unaffected. Does nothing if Microsoft 365 Copilot is not enabled.
+The method removes only the specific function reference you pass. It doesn't affect other handlers for the same `actionId`. If Microsoft 365 Copilot isn't enabled, the method does nothing.
 
 ## Example
 
@@ -51,7 +51,7 @@ await Xrm.Copilot.removeActionHandler("My.Namespace.MyActionMessage", handler);
 
 ### Related articles
 
-[addActionHandler](addactionhandler.md)  
+[addActionHandler](addactionhandler.md)   
 [Xrm.Copilot (Client API reference)](../xrm-copilot.md)
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

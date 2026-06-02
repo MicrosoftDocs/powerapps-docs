@@ -11,7 +11,7 @@ contributors:
   - JimDaly
 ---
 
-# SendPromptToM365CopilotOptions Interface (Client API reference)
+# SendPromptToM365CopilotOptions interface (Client API reference)
 
 [!INCLUDE [sendprompttom365copilotoptions-description](includes/sendprompttom365copilotoptions-description.md)]
 
@@ -20,4 +20,11 @@ contributors:
 | Name| Type| Description|
 |---|---|---|
 | `gptId`| `string`| ID of a specific M365 Copilot agent to target. If omitted, the prompt is sent to the default Copilot experience.|
-| `autoSubmit`| `boolean`| When `false`, the prompt text is placed in the Copilot input box but not submitted, allowing the user to review or edit it first. Defaults to `true`.|
+| `autoSubmit`| `boolean`| When `false`, the prompt text is placed in the Copilot input box but not submitted, so the user can review or edit it first. Defaults to `true`.|
+
+### Related articles
+
+[sendPromptToM365Copilot method](sendprompttom365copilot.md)   
+[Xrm.Copilot (Client API reference)](../xrm-copilot.md)
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

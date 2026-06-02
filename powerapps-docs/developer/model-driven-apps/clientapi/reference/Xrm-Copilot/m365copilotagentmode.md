@@ -3,7 +3,7 @@ title: M365CopilotAgentMode Interface (Client API reference)
 description: The interface that describes the M365CopilotAgentMode inside the response for the Xrm.Copilot.getCurrentAgent method.
 author: devkeydet
 ms.author: marcsc
-ms.date: 04/23/2026
+ms.date: 06/02/2026
 ms.reviewer: jdaly
 ms.topic: reference
 ms.subservice: pcf
@@ -21,3 +21,10 @@ contributors:
 |---|---|
 | `"agentPage"` | The user is on the agent's home page. |
 | `"mentioned"` | The agent is the @-mention target for the next turn. |
+
+### Related articles
+
+[M365CopilotAgent interface](m365copilotagent.md)   
+[Xrm.Copilot (Client API reference)](../xrm-copilot.md)
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

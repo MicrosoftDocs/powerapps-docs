@@ -61,7 +61,7 @@ await Xrm.Copilot.addActionHandler("My.Namespace.MyActionMessage", handler);
 
 ### Related articles
 
-[removeActionHandler](removeactionhandler.md)  
+[removeActionHandler method](removeactionhandler.md)  
 [Xrm.Copilot (Client API reference)](../xrm-copilot.md)
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

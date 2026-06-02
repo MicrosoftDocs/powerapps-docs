@@ -30,11 +30,11 @@ contributors:
 
 ## Return Value
 
-Type: `Promise<M365CopilotAgent | undefined>` — Resolves to an [M365CopilotAgent](m365copilotagent.md) object describing the active agent, or `undefined` if the agent state has not been determined yet.
+Type: `Promise<M365CopilotAgent | undefined>` — Resolves to an [M365CopilotAgent](m365copilotagent.md) object describing the active agent, or `undefined` if the agent state isn't determined yet.
 
 ## Remarks
 
-Does nothing if Microsoft 365 Copilot is not enabled.
+Does nothing if Microsoft 365 Copilot isn't enabled.
 
 The returned object's `agentId` and `mode` properties are paired:
 - `agentId` is a non-null string and `mode` is `"agentPage"` or `"mentioned"`: an agent is active.
@@ -55,6 +55,7 @@ if (agent && agent.agentId) {
 
 ### Related articles
 
+[M365CopilotAgent interface](m365copilotagent.md)   
 [Xrm.Copilot (Client API reference)](../xrm-copilot.md)
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

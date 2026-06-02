@@ -3,7 +3,7 @@ title: "sendPromptToM365Copilot (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the sendPromptToM365Copilot method.
 author: devkeydet
 ms.author: marcsc
-ms.date: 04/23/2026
+ms.date: 06/02/2026
 ms.reviewer: jdaly
 ms.topic: reference
 applies_to: "Dynamics 365 (online)"
@@ -36,7 +36,7 @@ Type: `Promise<void>`
 
 ## Remarks
 
-Does nothing if Microsoft 365 Copilot is not enabled.
+Does nothing if Microsoft 365 Copilot isn't enabled.
 
 ## Example
 

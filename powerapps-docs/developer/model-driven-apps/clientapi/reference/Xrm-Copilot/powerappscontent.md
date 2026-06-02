@@ -3,7 +3,7 @@ title: PowerAppsContent Interface (Client API reference)
 description: The interface that describes the context data passed to the Xrm.Copilot.updateContext method.
 author: devkeydet
 ms.author: marcsc
-ms.date: 04/23/2026
+ms.date: 06/02/2026
 ms.reviewer: jdaly
 ms.topic: reference
 ms.subservice: pcf
@@ -31,3 +31,10 @@ contributors:
 | `telemetryContext`| `{ clientSessionId?: string; clientRequestId?: string }`| Telemetry correlation identifiers.|
 | `selectedRecords`| `{ selectedContents: ISelectedRecordContents[] }`| Records currently selected by the user.|
 | `messageAnnotationAppContext`| `string`| App context annotation for message rendering.|
+
+### Related articles
+
+[updateContext method](updatecontext.md)   
+[Xrm.Copilot (Client API reference)](../xrm-copilot.md)
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]
