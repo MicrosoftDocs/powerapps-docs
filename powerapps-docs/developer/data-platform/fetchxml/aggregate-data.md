@@ -231,6 +231,8 @@ The following example returns the number of related accounts in a column named `
 </fetch>
 ```
 
+### Aggregate query record limit error
+
 [!INCLUDE [cc-query-aggregation-limitations](../includes/cc-query-aggregation-limitations.md)]
 
 ### Per query limit
