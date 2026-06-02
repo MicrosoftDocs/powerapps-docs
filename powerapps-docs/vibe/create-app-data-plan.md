@@ -4,7 +4,7 @@ description: Learn how Power Apps vibe simplifies app creation by generating pla
 author: mduelae
 ms.author: mkaur
 ms.reviewer: mkaur
-ms.date: 01/29/2026
+ms.date: 06/2/2026
 ms.topic: concept-article
 ms.custom: vibe
 ---
@@ -50,9 +50,9 @@ Key capabilities
 1. The first save stores the app, tables, and plan together in your selected solution, while your data remains in draft tables (in memory). If you don't see a **Save** button in the top right of the screen, your app is autosaved automatically. 
 
 ## Add work content
-You can enrich your app-building experience by attaching **work content** directly to your prompt. This enables you to ground your app generation in real business context—making outputs more accurate, relevant, and tailored to your needs. 
+You can enrich your app-building experience by attaching **work content** directly to your prompt. This enables you to ground your app generation in real business context, making outputs more accurate, relevant, and tailored to your needs. 
    
-:::image type="content" source="media/create-app-data-plan/add-work-content.png" alt-text="Screenshot of prompt input box where you enter a description to create an app." lightbox="media/create-app-data-plan/add-work-content":::
+:::image type="content" source="media/create-app-data-plan/add-work-content.png" alt-text="Screenshot of selecting the add work content option." lightbox="media/create-app-data-plan/add-work-content":::
 1. Enter a prompt describing what you want to build
 2. Select the + (Add work content) option
 3. Choose from:
