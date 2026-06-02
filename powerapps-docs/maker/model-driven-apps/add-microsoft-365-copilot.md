@@ -75,6 +75,19 @@ Makers can enable or disable Microsoft 365 Copilot for a specific model-driven a
 
 1. Select **Save** and then publish the app for the changes to take effect.
 
+## Default enable Microsoft 365 Copilot in all model-driven apps in an environment
+
+Makers can enable Microsoft 365 Copilot for all model-driven apps in an environment.
+
+1. Sign in to [Power Apps](https://make.powerapps.com).
+1. On the left, select **Solutions**.
+1. Select the Solution named **Default Solution** in Solutions list.
+1. On the left, select **Objects**
+1. In the **Objects** list, select **Settings** -> **Setting environment values**.
+1. Select **Enable M365 Copilot in model-driven apps**
+1. Under **Setting environment value**, select **Add existing value** if one does not already exist and ensure the value is set to **2**
+1. Select **Save** and then publish customization for the changes to take effect.
+
 ## Microsoft 365 Copilot vs. Copilot chat
 
  Microsoft 365 Copilot is gradually replacing [Copilot chat in model-driven apps](add-ai-copilot.md).
