@@ -43,21 +43,21 @@ There are multiple ways to connect to a Dataverse MCP server:
 
 Once connected to the Dataverse MCP Server, you can choose from the following tools in the Power Platform environment.
 
-| Tool | Description | Billing |
-|------|-------------|---------|
-| `search_data` | Search structured and unstructured data. | Premium |
-| `search` | Search table schemas and business skills by keyword. | Non-Premium |
-| `create_record` | Inserts a new row into a Dataverse table and returns the GUID. | Non-Premium |
-| `update_record` | Updates an existing row in a Dataverse table. | Non-Premium |
-| `delete_record` | Delete a row, only after explicit user approval. | Non-Premium |
-| `create_table` | Creates a new table with a specified schema. | Non-Premium |
-| `update_table` | Modifies schema or metadata of an existing table. | Non-Premium |
-| `delete_table` | Deletes a table from Dataverse, only after explicit user approval. | Non-Premium |
-| `read_query` | Run supported Dataverse SQL `SELECT` queries. | Non-Premium |
-| `describe` | Get details from search results for tables, records, schemas, skills, and apps. | Non-Premium |
-| `init_file_upload` | Generate a SAS URL for file upload. | Non-Premium |
-| `commit_file_upload` | Commit a file upload. | Non-Premium |
-| `file_download` | Generate a SAS URL for file download. | Non-Premium |
+| Tool | Description |
+|------|-------------|
+| `search_data` | Search structured and unstructured data. |
+| `search` | Search table schemas and business skills by keyword. |
+| `create_record` | Inserts a new row into a Dataverse table and returns the GUID. |
+| `update_record` | Updates an existing row in a Dataverse table. |
+| `delete_record` | Delete a row, only after explicit user approval. |
+| `create_table` | Creates a new table with a specified schema. |
+| `update_table` | Modifies schema or metadata of an existing table. |
+| `delete_table` | Deletes a table from Dataverse, only after explicit user approval. |
+| `read_query` | Run supported Dataverse SQL `SELECT` queries. |
+| `describe` | Get details from search results for tables, records, schemas, skills, and apps. |
+| `init_file_upload` | Generate a SAS URL for file upload. |
+| `commit_file_upload` | Commit a file upload. |
+| `file_download` | Generate a SAS URL for file download. |
 
 > [!IMPORTANT]
 > The Dataverse MCP server tool surface is changed. The following tools were removed and their functionality replaced by the tools in the preceding table: `describe_table`, `list_tables`, and `fetch` (replaced by `describe`); and the previous `search` tool that searched Dataverse data (renamed to `search_data`). The current `search` tool searches metadata. If you maintain allow or deny lists in your MCP client by tool name, review your configuration so that the new tool names reflect your intended permissions. More information: [Connect to Dataverse with model context protocol FAQ](data-platform-mcp-faq.md)
