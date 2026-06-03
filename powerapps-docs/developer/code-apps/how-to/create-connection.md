@@ -3,7 +3,7 @@ title: "How to: Create a connection from the CLI (preview)"
 description: "Use the npx power-apps create-connection command to create a connector connection from the command line. (preview)"
 ms.author: eschavez
 author: eschavez
-ms.date: 06/02/2026
+ms.date: 06/03/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 ---
@@ -58,5 +58,5 @@ On success, the command prints the new connection's ID. You can then reference t
 
 ## Limitations
 
-- **Only non-interactive SSO connection creation is supported.** The `create-connection` command succeeds only for connectors whose single authentication type is SSO-eligible — typically Microsoft Entra ID (Azure AD) based connectors such as Office 365 Outlook, SharePoint, OneDrive for Business, and Microsoft Teams.
-- **Connectors that require user-supplied credentials or configuration are not supported.** Examples include SQL Server with SQL authentication, custom connectors that require API keys, and any connector that exposes multiple authentication methods for the user to choose from. To create those connections, use the [Power Apps maker portal](https://make.powerapps.com) instead.
+- **Only non-interactive SSO connection creation is supported.** The `create-connection` command succeeds only for connectors whose single authentication type is SSO-eligible - typically Microsoft Entra ID based connectors such as Office 365 Outlook, SharePoint, OneDrive for Business, and Microsoft Teams.
+- **Connectors that require user-supplied credentials or configuration aren't supported.** Examples include SQL Server with SQL authentication, custom connectors that require API keys, and any connector that exposes multiple authentication methods for the user to choose from. To create those connections, use the [Power Apps maker portal](https://make.powerapps.com) instead.
