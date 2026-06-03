@@ -45,20 +45,19 @@ Yes. Each Dataverse environment can have its own MCP server configuration. You c
 
 If a tool returns an error, try rephrasing your prompt and submitting it again. Use more specific language to describe what you want to accomplish. If the error persists, verify that you have the appropriate Dataverse permissions for the operation you’re attempting.
 
-## What happened to the `execute`, `describe_table`, `list_tables`, and `fetch` tools?
+## What happened to the `describe_table`, `list_tables`, and `fetch` tools?
 
-The Dataverse MCP server tool surface is updated. The previous `execute`, `describe_table`, `list_tables`, and `fetch` tools are removed and their functionality is now provided by other tools:
+The Dataverse MCP server tool surface has been updated. The previous `describe_table`, `list_tables`, and `fetch` tools are removed and their functionality is now provided by other tools:
 
 | Removed tool | Replacement |
 |---|---|
-| `execute` | The individual mutating tools: `create_record`, `update_record`, `delete_record`, `create_table`, `update_table`, and `delete_table`. |
 | `describe_table` | `describe` |
 | `list_tables` | `describe` |
 | `fetch` | `describe` |
 
 The previous `search` tool that searched Dataverse data was also renamed to `search_data`. The current `search` tool searches Dataverse metadata to help agents find relevant tables and apps.
 
-If your MCP client maintains allow or deny lists by tool name, review and update your configuration so that the new tool names reflect your intended permissions. For example, if you previously denied `execute` to block mutating actions, configure your client to deny the specific mutating tools you don't want agents to use (such as `delete_table` or `delete_record`). If you previously denied `describe_table`, `list_tables`, or `fetch`, your client falls back to its default behavior for the unified `describe` tool unless you explicitly configure it.
+If your MCP client maintains allow or deny lists by tool name, review and update your configuration so that the new tool names reflect your intended permissions. 
 
 For the full list of tools, go to [Connect to Dataverse with Model Context Protocol](data-platform-mcp.md#list-of-tools).
 
