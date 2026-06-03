@@ -55,6 +55,8 @@ Once connected to the Dataverse MCP Server, you can choose from the following to
 | `delete_table` | Deletes a table from Dataverse, only after explicit user approval. |
 | `read_query` | Run supported Dataverse SQL `SELECT` queries. |
 | `describe` | Get details from search results for tables, records, schemas, skills, and apps. |
+| `upsert_skill` | Add or update a Dataverse skill/playbook. | 
+| `delete_skill` | Delete a Dataverse skill/playbook by name. | 
 | `init_file_upload` | Generate a SAS URL for file upload. |
 | `commit_file_upload` | Commit a file upload. |
 | `file_download` | Generate a SAS URL for file download. |
