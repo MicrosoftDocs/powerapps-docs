@@ -4,7 +4,7 @@ metadata:
   description: Get answers to frequently asked questions about Power Apps Azure Synapse Link for Dataverse.
   author: sabinn-msft
   ms.search.keywords: 
-  ms.date: 06/01/2026
+  ms.date: 06/02/2026
   ms.author: sabinn
   ms.reviewer: matp
   contributors: 
@@ -92,7 +92,9 @@ sections:
    - question: Why am I seeing differences in `SinkModifiedOn` and `ModifiedOn` columns?
      answer: |
          This is expected behavior. `ModifiedOn` is the date and time a record was last changed in Dataverse, while `SinkModifiedOn` is the date and time the record was written to the data lake. `SinkModifiedOn` is typically later than `ModifiedOn`, and the difference depends on factors such as batch size, system load, and the number of records being processed.
-
+         
+         For tables exported in Delta Lake format or in append-only/incremental CSV mode, `SinkCreatedOn` and `SinkModifiedOn` reflect the same write time. For this reason, the difference between `SinkCreatedOn` and `CreatedOn` in these modes isn't a reliable indicator of sync delay and shouldn't be interpreted as such.
+         
          > [!IMPORTANT]
          > In the case of long-running transactions in finance and operations apps, a record might be synchronized multiple times to ensure no data loss. In this scenario, `SinkModifiedOn` reflects the last synchronization time, not the first. For example, if a record is synced 10 times within an hour, `SinkModifiedOn` shows the time of the 10th sync even though the data was available in the lake from the first sync itself. Use caution when building latency reports based on the difference between `SinkModifiedOn` and `ModifiedOn`, as it can give a misleading impression of actual data availability.
    - question: Which Dataverse tables aren't supported for export?
@@ -112,6 +114,11 @@ sections:
 
         > [!NOTE]
         > You can add the audit table for export using Azure Synapse Link for Dataverse. However, the export of the audit table is only supported with [Delta Lake profiles](/power-apps/maker/data-platform/azure-synapse-link-delta-lake).
+   - question: Why don't I see all of my notes (annotation records) in the data lake?
+     answer: |
+         Azure Synapse Link doesn't sync file content stored on the `annotation` (Notes) table. On a note record, the file attached to the note is held in the `documentbody` column, and that file content isn't synced to the data lake. This is a by-design behavior. As a result:
+         - `annotation` records that have a value in the `documentbody` column (notes with a file attachment) aren't exported to the data lake.
+         - `annotation` records with no value in `documentbody` (notes without a file attachment) are synced as expected.
    - question: I'm using export to delta lake feature, can I stop the Apache Spark job or change the execution time?
      answer: |
         The Delta Lake conversion job is triggered when there was a data change in the configured time interval. There's no option to stop or pause the Apache Spark pool. However, you can modify the time interval after the link creation under Manage tables > Advanced Time interval.
