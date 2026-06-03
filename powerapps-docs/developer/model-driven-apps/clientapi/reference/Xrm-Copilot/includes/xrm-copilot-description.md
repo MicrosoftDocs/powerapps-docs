@@ -1,1 +1,1 @@
-Provides methods to execute registered Microsoft Copilot Studio Topics.
+Provides methods for interacting with M365 Copilot in model-driven Power Apps, including preview APIs for executing registered Microsoft Copilot Studio topics.

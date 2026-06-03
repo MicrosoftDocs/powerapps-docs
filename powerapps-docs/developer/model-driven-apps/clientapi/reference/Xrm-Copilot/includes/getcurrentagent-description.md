@@ -1,0 +1,1 @@
+Returns the currently active Microsoft 365 Copilot agent, or undefined if the agent state is not yet known.
