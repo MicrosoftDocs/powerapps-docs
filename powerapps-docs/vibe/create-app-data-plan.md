@@ -4,7 +4,7 @@ description: Learn how Power Apps vibe simplifies app creation by generating pla
 author: mduelae
 ms.author: mkaur
 ms.reviewer: mkaur
-ms.date: 01/29/2026
+ms.date: 06/2/2026
 ms.topic: concept-article
 ms.custom: vibe
 ---
@@ -48,6 +48,30 @@ Key capabilities
 1. The agent starts working and loads assets. When it's finished, you have a generated app, data model (if applicable), and a plan (if applicable). You can then make any necessary edits.
     
 1. The first save stores the app, tables, and plan together in your selected solution, while your data remains in draft tables (in memory). If you don't see a **Save** button in the top right of the screen, your app is autosaved automatically. 
+
+## Add work content
+You can improve app generation by attaching **work content** to your prompt. This gives Copilot more business context so it can generate results that are more relevant and accurate.
+   
+:::image type="content" source="media/create-app-data-plan/add-work-content.png" alt-text="Screenshot of selecting the add work content option." lightbox="media/create-app-data-plan/add-work-content.png":::
+
+1. Enter a prompt that describes the app you want to build.
+2. Select **+ Add work content**.
+3. Choose the content you want to attach:
+    - Files (Word or Excel)
+    - Emails
+    - Chats
+4. Attach one or more relevant items.
+5. Submit your prompt.
+
+### Known Limitations
+
+Keep these limitations in mind when you use work content:
+
+1. You need a Copilot license to use this feature.
+2. Encrypted or protected files aren't supported. Your organization's policies might automatically encrypt some files.
+3. Large or complex content can affect the quality of results.
+4. Supported content types are limited to Word (.docx), Excel (.xlsx), emails, and chats.
+5. Attached content is analyzed only when you generate the app. Real-time updates aren't supported.
 
 
 ## Review and refine your generated app and data model
