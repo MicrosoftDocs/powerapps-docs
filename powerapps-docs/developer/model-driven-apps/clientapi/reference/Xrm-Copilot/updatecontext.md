@@ -37,7 +37,7 @@ Type: `Promise<void>`
 
 ## Remarks
 
-The API automatically merges base context fields (`appId`, `appType`, `orgId`, `geo`, `schemaVersion`). You don't need to provide these fields. The API does nothing if Microsoft 365 Copilot isn't enabled.
+The API automatically merges base context fields (`appId`, `appType`, `orgId`, `geo`, `schemaVersion`). You don't need to provide these fields. The API does nothing if Microsoft 365 Copilot isn't enabled. Agents you author can’t yet use context to optimize their responses.
 
 ## Example
 
