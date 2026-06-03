@@ -1,0 +1,1 @@
+Describes the optional parameters passed to the [sendPromptToM365Copilot](../sendprompttom365copilot.md) method.

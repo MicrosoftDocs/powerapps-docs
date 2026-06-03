@@ -3,7 +3,7 @@ title: "executePrompt (Client API reference) in model-driven apps (preview)"
 description: Includes description and supported parameters for the executePrompt method.
 author: adrianorth
 ms.author: aorth
-ms.date: 06/16/2025
+ms.date: 06/02/2026
 ms.reviewer: jdaly
 ms.topic: reference
 applies_to: "Dynamics 365 (online)"
@@ -17,7 +17,7 @@ contributors:
 
 [!INCLUDE [preview-note-pp](~/../shared-content/shared/preview-includes/preview-note-pp.md)]
 
-[!INCLUDE[./includes/executeprompt-description.md](./includes/executeprompt-description.md)]
+[!INCLUDE[executeprompt-description](includes/executeprompt-description.md)]
 
 ## Syntax
 
@@ -33,7 +33,7 @@ contributors:
 
 ## Return Value
 
-An array of [MCSResponse](mcsresponse.md)
+An array of [MCSResponse](mcsresponse.md).
 
 ## Example
 
@@ -45,7 +45,7 @@ const response = await Xrm.Copilot.executePrompt("hello");
 
 ### Response
 
-This is an example of the response that may be returned.
+This response is an example of what the service might return.
 
 ```json
 [
