@@ -1,7 +1,7 @@
 ---
 title: "Why choose Microsoft Dataverse? | MicrosoftDocs"
 description: Understand how Microsoft Dataverse can help your business become more agile.
-ms.date: 04/11/2023
+ms.date: 05/21/2026
 ms.reviewer: "Mattp123"
 ms.topic: overview
 author: "mmercuri"
@@ -11,10 +11,7 @@ ms.author: "matp"
 
 # Why choose Microsoft Dataverse?
 
-Data is at the center of everything a business does today and powers the
-insights that can drive what it should do tomorrow. To thrive and grow,
-businesses need to capture, analyze, predict, present, and report data and do it
-all with a high level of agility.
+Data is at the center of everything a business does today and powers the insights that can drive what it should do tomorrow. To thrive and grow, businesses need to capture, analyze, predict, present, and report data and do it all with a high level of agility.
 
 Building out the data infrastructure to enable business insight can be both time consuming and expensive. The data originates from a variety of devices, applications, systems, services, and software as a service (SaaS). This large and growing number of sources often consists of multiple data technologies that store different types of data, expose different APIs, and use a mixture of security models. The developers needed to create these technologies can be expensive and hard to find. Developers often must have a deep understanding of how to deploy, configure, manage, and integrate these different data technologies.
 
@@ -78,7 +75,7 @@ Dataverse uses Microsoft Entra identity and access management mechanisms to help
 
 Dataverse uses role-based security to group together a collection of privileges. These security roles can be associated directly with users, or they can be associated with Dataverse teams and business units.
 
-In Dataverse, individual rows can be shared on a one-by-one basis with another user. Because row-level control of access isn't adequate for some business scenarios, Dataverse has a column-level security feature to allow more granular control of security at the column level.
+In Dataverse, you can share individual rows on a one-by-one basis with another user. Because row-level control of access isn't adequate for some business scenarios, Dataverse has a column-level security feature to allow more granular control of security at the column level.
 
 Dataverse also includes two security models that can be used for hierarchies: the *manager* hierarchy and the *position* hierarchy. With the manager hierarchy, a manager must be within the same business unit as the report, or in the parent business unit of the report's business unit, to have access to the report's data. The position hierarchy allows data access across business units.
 
@@ -160,7 +157,7 @@ Dataverse provides two types of backups: automatic backups, referred to as *syst
 
 System backups back up all environments. They take place automatically and continuously. The underlying technology used is Azure SQL Database. For more information about Azure SQL automated backups, see [Automated backups](/azure/sql-database/sql-database-automated-backups). 
 
-System backups for production environments that have been created with a database and have one or more Dynamics 365 applications installed are retained for 28 days.<!--What does "for up to" mean here? Does the retention period vary?--> System backups for production environments that don't have Dynamics 365 applications deployed in them are retained for seven days. System backups for sandbox environments are retained for seven days.
+System backups for production environments that have been created with a database and have one or more Dynamics 365 applications installed are retained for 28 days. System backups for production environments that don't have Dynamics 365 applications deployed in them are retained for seven days. System backups for sandbox environments are retained for seven days.
 
 ### Manual backups
 
@@ -171,7 +168,7 @@ Both sandbox and production environments can be manually backed up. Sandbox back
 There's no limit to the number of manual backups that can be made, and manual backups don't count against storage limits.
 
 > [!NOTE]
-> Both system and manual backups may only be restored to an environment in the same region in which it was backed up.
+> Both system and manual backups can only be restored to an environment in the same region in which it was backed up.
 
 More information: [Back up and restore environments](/power-platform/admin/backup-restore-environments)
 

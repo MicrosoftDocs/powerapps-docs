@@ -1,7 +1,7 @@
 ---
-title: "Set a preferred solution | MicrosoftDocs"
+title: "Set a preferred solution"
 description: "Set your preferred solution in Power Apps."
-ms.date: 04/09/2025
+ms.date: 05/20/2026
 ms.topic: how-to
 author: Mattp123
 ms.subservice: dataverse-maker
@@ -16,7 +16,7 @@ ms.custom:
 ---
 # Set the preferred solution
 
-By default, unless you're already in the context of an unmanaged solution when you create an object, all solution objects are stored in the solution named Common Data Services Default Solution. For most situations, you don't want to create your solution objects in either of the two Dataverse system solutions, which are the Common Data Services Solution and the Default Solution. This article explains why using the system solutions is discouraged and provides step-by-step instructions to set and manage your preferred solution.
+By default, unless you're already in the context of an unmanaged solution when you create an object, all solution objects are stored in the solution named Common Data Services Default Solution. For most situations, you don't want to create your solution objects in either of the two Dataverse system solutions, which are the *Common Data Services Default Solution* and the *Default Solution*. This article explains why using the system solutions is discouraged and provides step-by-step instructions to set and manage your preferred solution.
 
 ## Why not create your objects in the system solutions?
 

@@ -36,7 +36,7 @@ contributors:
 |Name|Required?|Description|
 |---------|---------|---------|
 |`aggregate`|No|Boolean value to specify that the query returns aggregate values. [Learn about aggregating data](../aggregate-data.md)|
-|`aggregatelimit`|No|Set a limit below the standard 50,000  record aggregate limit. [Learn about aggregate limits](../aggregate-data.md#limitations) |
+|`aggregatelimit`|No|Set a limit below the standard 50,000  record aggregate limit. [Learn about aggregate limits](../aggregate-data.md#aggregate-query-record-limit-error)|
 |`count`|No|Positive integer value to specify the number of records to return in a page. [Learn about paging results](../page-results.md) |
 |`datasource`|No|When using Dataverse long term data retention, set `datasource` to `'retained'` to indicate the query is for retained rows only. [Learn more about Dataverse long term data retention](../../../../maker/data-platform/data-retention-overview.md)|
 |`distinct`|No|Boolean value to specify that duplicate rows not be included in the results. [Learn more about returning distinct results](../overview.md#return-distinct-results)|

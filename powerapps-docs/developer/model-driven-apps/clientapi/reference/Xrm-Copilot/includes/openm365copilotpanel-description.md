@@ -1,0 +1,1 @@
+Opens the Microsoft 365 Copilot side panel.
