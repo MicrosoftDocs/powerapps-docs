@@ -44,6 +44,8 @@ landingContent:
             url: how-to/add-dataverse-action-function.md
           - text: Add flows
             url: how-to/add-flows.md
+          - text: Create a connection from the CLI
+            url: how-to/create-connection.md
 
   # Card
   - title: Configure & Setup

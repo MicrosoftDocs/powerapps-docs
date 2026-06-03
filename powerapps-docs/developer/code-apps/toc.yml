@@ -21,6 +21,8 @@ items:
             href: how-to/add-dataverse-action-function.md
           - name: Add flows
             href: how-to/add-flows.md
+          - name: Create a connection from the CLI
+            href: how-to/create-connection.md
       - name: Connect to data
         items:
         - name: Connect to data
