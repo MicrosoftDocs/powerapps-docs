@@ -3,7 +3,7 @@ title: "How to: Add a Dataverse action or function to your code app"
 description: "Learn how to add Dataverse actions and functions to a Power Apps code app using the CLI"
 ms.author: pakempar
 author: pavankm
-ms.date: 04/07/2026
+ms.date: 06/04/2026
 ms.topic: how-to
 ms.reviewer:
  - JimDaly
@@ -20,9 +20,9 @@ to a Power Apps code app by using the `find-dataverse-api` and `add-dataverse-ap
 
 ## Prerequisites
 
-- A Power Apps code app initialized with `npx power-apps init`
+- A Power Apps code app initialized with `power-apps init`
 - `@microsoft/power-apps` version `1.1.1` or later in your `package.json`
-- Authenticated CLI session (`npx power-apps` prompts if needed)
+- Authenticated CLI session (`power-apps` prompts if needed)
 - Access to the Dataverse environment containing the operation you want to use
 
 ## Step 1: Discover available operations
@@ -30,7 +30,7 @@ to a Power Apps code app by using the `find-dataverse-api` and `add-dataverse-ap
 Use `find-dataverse-api` to search for operations in your environment by name:
 
 ```bash
-npx power-apps find-dataverse-api --search "WhoAmI"
+power-apps find-dataverse-api --search "WhoAmI"
 ```
 
 The output lists matching operations with their kind (Action or Function), parameters, binding
@@ -52,7 +52,7 @@ Total: 1 operation(s)
 You can also search for actions. For example, to find the `AddToQueue` action:
 
 ```bash
-npx power-apps find-dataverse-api --search "AddToQueue"
+power-apps find-dataverse-api --search "AddToQueue"
 ```
 
 ```
@@ -76,7 +76,7 @@ Total: 1 operation(s)
 To get the raw JSON (useful for scripting and for coding agents), add `--json`:
 
 ```bash
-npx power-apps find-dataverse-api --search "WhoAmI" --json
+power-apps find-dataverse-api --search "WhoAmI" --json
 ```
 
 The search is a case-insensitive substring match on the operation name.
@@ -86,9 +86,9 @@ The search is a case-insensitive substring match on the operation name.
 After you find the operation name, run the following command:
 
 ```bash
-npx power-apps add-dataverse-api --api-name WhoAmI
+power-apps add-dataverse-api --api-name WhoAmI
 # or using the short alias:
-npx power-apps add-dataverse-api -n WhoAmI
+power-apps add-dataverse-api -n WhoAmI
 ```
 
 The command:
@@ -107,7 +107,7 @@ On success, you see:
 
 ```
 Dataverse API 'WhoAmI' added successfully.
-Hint: Run 'npx power-apps run' to test locally, or 'npx power-apps push' to deploy.
+Hint: Run 'power-apps run' to test locally, or 'power-apps push' to deploy.
 ```
 
 ## Step 3: Use the generated service in your app code
