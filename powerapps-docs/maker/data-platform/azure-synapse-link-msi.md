@@ -29,7 +29,9 @@ With managed identities, access to your storage account is restricted to request
 - We recommend that you create a new storage container under the same Azure resource group to onboard this feature.
 
 > [!IMPORTANT]
-> Don't move scripts out of their folders. Scripts rely on relative paths and shared files in the repository structure.
+>
+> - The managed identity for Azure method of connecting Dataverse to an Azure Storage Account and Synapse Workspace is currently unavailable for customers in national clouds, such as Government Community Cloud (GCC), GCC High, and China.
+> - Don't move scripts out of their folders. Scripts rely on relative paths and shared files in the repository structure.
 
 ## Enable enterprise policy for the selected Azure subscription
 
