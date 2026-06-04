@@ -6,8 +6,8 @@ An administrator must enable Microsoft 365 Copilot in your application before it
 
 > [!NOTE]
 >
-> - To use the Microsoft 365 Copilot feature in a Power Apps, users must have both a Power Apps premium license and a Microsoft 365 Copilot license.
-> - To use the Microsoft 365 Copilot feature in a Dynamics 365 app, users must have a Dynamics 365 Enterprise or Premium license. However, to get the full capabilities of Work IQ, beyond Dataverse grounding, a Microsoft 365 Copilot license is required.
+> - To use the Microsoft 365 Copilot feature in a Power Apps app, users must have both a Power Apps premium license and a Microsoft 365 Copilot license. For more information about licensing, see [Power Platform licensing guide](https://go.microsoft.com/fwlink/?linkid=2085130).
+> - To use the Microsoft 365 Copilot feature in a Dynamics 365 app, users must have a Dynamics 365 Enterprise or Premium license. However, to get the full capabilities of Work IQ, beyond Dataverse grounding, a Microsoft 365 Copilot license is required. For more information about licensing, see [Dynamics 365 licensing guide](    https://go.microsoft.com/fwlink/?LinkId=866544).
 
 
 ## Copilot pane
