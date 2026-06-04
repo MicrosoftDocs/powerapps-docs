@@ -3,7 +3,7 @@ title: "How to: Quickstart with npm CLI (preview)"
 description: "Create a Power Apps code app using the new npm CLI. (preview)"
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 03/05/2026
+ms.date: 06/04/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
@@ -50,6 +50,7 @@ Learn more about the [degit](https://www.npmjs.com/package/degit) command.
 Install the project dependencies and the Power Apps client library for code apps:
 
 ```bash
+npm install -g @microsoft/power-apps
 npm install
 ```
 
