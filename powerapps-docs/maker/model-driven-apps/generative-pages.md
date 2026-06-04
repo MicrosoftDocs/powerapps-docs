@@ -36,9 +36,12 @@ You can create generative pages using two approaches:
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 1. Open a model-driven app for editing.
-1. In the app designer, select **Add a page** > **Describe a page**.
+1. In the app designer, select **Add a page** > **Generative page**.
 
-   A full-page generative page experience opens.
+   A dialog opens. To create a new page, select **Describe a page**. A full-page generative page experience opens.
+
+   > [!NOTE]
+   > The same dialog also lists existing generative pages in your environment that you can add to this app. By default the list is filtered to **Published** pages; switch the filter to **All** if you don't see the page you're looking for.
 1. In the text box, type a description of the type of page you want to create. Include functional requirements and optionally any UX specifications. For example, you could enter *Build a page showing Account records as a gallery of cards using a modern look and feel. Include name, entityimage on the top, and website, email, phone number. Make the gallery scrollable by using data from the Account table*. If you want the page to support multiple languages, follow the guidance in [Localize a generative page](#localize-a-generative-page).
 1. Add tables and images as appropriate by selecting **Add data** > **Add table**. You can link up to six Dataverse tables. In the screenshot, the account table is added.
    :::image type="content" source="media/generative-page/add-table-generative-page.png" alt-text="Add a table to the generative page" lightbox="media/generative-page/add-table-generative-page.png":::
