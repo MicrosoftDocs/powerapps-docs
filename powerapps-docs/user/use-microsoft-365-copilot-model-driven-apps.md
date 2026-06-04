@@ -21,6 +21,7 @@ ms.collection:
 
 [!INCLUDE [m365-copilot](~/../shared/dynamics365-core/use-microsoft-365-copilot-model-driven-apps.md)]
 
+
 ## Related information
 
 - [Add Microsoft 365 Copilot to model-driven apps](/power-apps/maker/model-driven-apps/add-microsoft-365-copilot)
