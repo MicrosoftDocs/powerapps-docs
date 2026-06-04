@@ -2,7 +2,7 @@
 title: "Import solutions in Power Platform"
 description: "Learn how to import a solution in Power Platform"
 ms.custom: ""
-ms.date: 09/05/2025
+ms.date: 05/08/2026
 ms.reviewer: ""
 ms.topic: how-to
 author: "Mattp123"
@@ -23,15 +23,15 @@ Solutions are packages of customizations that can be exported from one environme
 
 > [!NOTE]
 >
-> - The create privilege is required to import a component. Although, the System Customizer security role has create privilege on most components that are commonly imported, by default it doesn't have create privilege on the **Plug-In Assembly** table. The System Administrator security role has this privilege.
-> - When you import a managed solution, all component changes will be brought into the environment in a published state. However, when you import an unmanaged solution, the changes are imported in a draft state so you must publish them to make them active. 
+> - You need the create privilege to import a component. Although the System Customizer security role has create privilege on most components that you commonly import, by default it doesn't have create privilege on the **Plug-In Assembly** table. The System Administrator security role has this privilege.
+> - When you import a managed solution, all component changes are brought into the environment in a published state. However, when you import an unmanaged solution, the changes are imported in a draft state so you must publish them to make them active. 
 > - To implement healthy application lifecycle management (ALM) in your organization, consider using a source control system to store and collaborate on your solutions, and automate the solution import process. More information: [ALM basics](/power-platform/alm/basics-alm) in the Power Platform ALM guide.
 > - The maximum size of a solution file is 95 MB.
 
 When you import an **unmanaged** solution:
 
 - You add all the components of that solution into your environment and can't delete the components by deleting the solution. Deleting the unmanaged solution deletes only the solution container.
-- That contains customized components, the existing customizations to the component will be overwritten after the unmanaged solution import. You can’t undo this.
+- If the solution contains customized components, the existing customizations to the component are overwritten after the unmanaged solution import. You can't undo this action.
 
 To import a solution:
 
@@ -50,7 +50,7 @@ To import a solution:
 
 1. If your solution contains [connection references](create-connection-reference.md), you're prompted to select the connections you want. If a connection doesn't already exist, create a new one. Select **Next**.
 
-1. If your solution contains [environment variables](EnvironmentVariables.md), you'll be prompted to enter values. You won't see this screen if value(s) are already present in your solution or the target environment. 
+1. If your solution contains [environment variables](EnvironmentVariables.md), you're prompted to enter values. You won't see this screen if values are already present in your solution or the target environment. 
 
 1. If missing dependencies are detected in the target environment, a list of the dependencies is presented. In environments where the required package version is available for import in the target environment, a link to resolve the dependency is presented. Selecting the link takes you to the Power Platform admin center where you can install the application update. After the application update is completed, you can start the solution import again.
 
@@ -58,14 +58,14 @@ To import a solution:
 
 Your solution imports in the background and might take a few moments.  
   
-If you have imported any changes that require publishing, you must publish customizations before they're available.
+If you import any changes that require publishing, you must publish customizations before they're available.
   
-If the import isn’t successful, you'll see a notification on the solutions page showing any errors or warnings that were captured. Select **Download Log File** to capture details about what caused the import to fail. The most common cause for an import to fail is that the solution didn't contain some required components.  
+If the import isn't successful, you see a notification on the solutions page showing any errors or warnings that were captured. Select **Download Log File** to capture details about what caused the import to fail. The most common cause for an import to fail is that the solution didn't contain some required components.  
 
-When you download the log file, you'll find an XML file that you can open using Office Excel to view the contents.
+When you download the log file, you find an XML file that you can open by using Office Excel to view the contents.
 
 > [!NOTE]
-> You can view the details of all solution operations including solution import with the [solution history](solution-history.md) feature. To view these operations, select **See history** on the solutions page.
+> You can view the details of all solution operations, including solution import, by using the [solution history](solution-history.md) feature. To view these operations, select **See history** on the solutions page.
 
 
 ## Troubleshooting solution import

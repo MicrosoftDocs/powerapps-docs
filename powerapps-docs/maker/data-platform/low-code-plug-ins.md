@@ -6,7 +6,7 @@ ms.author: matp
 ms.service: powerapps
 ms.subservice: dataverse-maker
 ms.topic: how-to
-ms.date: 11/13/2024
+ms.date: 05/08/2026
 ms.custom: template-how-to
 contributors:
 - denise-msft
@@ -15,13 +15,13 @@ contributors:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Microsoft Dataverse offers a powerful solution for achieving more efficient data architecture and reducing client-side workload through low-code plug-ins. These plug-ins are reusable, real-time workflows that execute a specific set of commands within Dataverse, running server-side and triggered by personalized event handlers.
+Microsoft Dataverse offers a powerful solution for achieving more efficient data architecture and reducing client-side workload through low-code plug-ins. These plug-ins are reusable, real-time workflows that execute a specific set of commands within Dataverse. They run server-side and trigger by personalized event handlers.
 
 > [!IMPORTANT]
 >
 > - Instant low-code plug-ins are deprioritized and aren't being delivered as a feature. Instant low-code plug-ins are replaced with functions. More information: [Functions in Microsoft Dataverse (preview)](functions-overview.md)
 > - This is a preview feature.
-> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+> - Preview features aren’t meant for production use and might have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
 Traditionally, plug-ins were created as custom classes compiled into a .NET Framework assembly, which were then uploaded and registered within Dataverse. However, with the introduction of low-code plug-ins, users can create these event handlers with minimal or no coding required, and without the need for manual registration.
 
@@ -31,7 +31,7 @@ Low-code plug-ins are stored within a Dataverse database and can be seamlessly i
 
 Defining server-side business logic offers several benefits, including:
 
-- Increased security. Since server-side logic executes on the server, it can help prevent unauthorized access to sensitive data or processes.
+- Increased security. Since server-side logic executes on the server, it helps prevent unauthorized access to sensitive data or processes.
 - Improved performance. By executing on the server, business logic can reduce the amount of data that needs to be transferred between the client and server, resulting in faster processing times.
 - Consistency and reliability. Server-side logic ensures that business rules are consistently applied across all clients, reducing the risk of errors or inconsistencies.
 - Easier maintenance and upgrades. By centralizing business logic on the server, it becomes easier to maintain and update, as changes can be made in one place rather than having to update multiple clients.

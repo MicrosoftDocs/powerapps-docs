@@ -3,7 +3,7 @@ title: MCSResponse Interface (Client API reference) (preview)
 description: The interface that describes the properties of contains data returned by the Xrm.Copilot.executeEvent and Xrm.Copilot.executePrompt methods.
 author: adrianorth
 ms.author: aorth
-ms.date: 06/16/2025
+ms.date: 06/02/2026
 ms.reviewer: jdaly
 ms.topic: reference
 ms.subservice: pcf
@@ -15,22 +15,22 @@ contributors:
 
 [!INCLUDE [preview-note-pp](~/../shared-content/shared/preview-includes/preview-note-pp.md)]
 
-An interface that describes the data returned by the [executeEvent](executeevent.md) and [executePrompt](executeprompt.md) methods.
+[!INCLUDE [mcsresponse-description](includes/mcsresponse-description.md)]
 
-<!-- The information below may be identical to the MCSResponse used in Xrm Client API
+<!-- The information below might be identical to the MCSResponse used in Xrm Client API
 Try to re-use this content with an include if possible -->
 
 ## Properties
 
-The following table describes the `MCSResponse` properties. Only the `type` property will always be present.
+The following table describes the `MCSResponse` properties. Only the `type` property is always present.
 
 
 | Name| Type| Description|
 |---|---|---|
 | `type`| `string`| **Required.** The type of the response.|
 | `id`| `string`|  Unique identifier for the response.|
-| `locale`| `string`|  Locale information (e.g., language or region).|
-| `replyToId`| `string`|  ID of the message this is replying to.|
+| `locale`| `string`|  Locale information, such as language or region.|
+| `replyToId`| `string`|  ID of the message this response is replying to.|
 | `timestamp`| `string`|  Timestamp of the response.|
 | `speak`| `string`|  Text to be spoken by a speech synthesizer.|
 | `text`| `string`|  Text content of the response.|
@@ -48,3 +48,12 @@ The following table describes the `MCSResponse` properties. Only the `type` prop
 |---|---|---|
 | `content`| `unknown` |  **Required.** The content of the attachment. |
 | `contentType`| `string` |  Describes the type of content. |
+
+### Related articles
+
+[executeEvent method (preview)](executeevent.md)   
+[executePrompt method (preview)](executeprompt.md)   
+[Xrm.Copilot (Client API reference)](../xrm-copilot.md)
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

@@ -1,5 +1,6 @@
 
-Users can quickly find, filter, and sort their data by using natural language, so they don't need to use complicated advanced filters. If your administrator turns on **Natural Language Grid and View Search**, you see the natural language search box.
+Users can find, filter, and sort their data quickly with natural language, bypassing complicated advanced filters. If your administrator has turned on **Natural Language Grid and View Search**, then the natural language search box will be visible.  For more information on how to enable **Natural Language Grid and View Search**, refer to [Manage feature settings](/power-platform/admin/settings-features#natural-language-grid-and-view-search-preview).
+
 
 ## Natural language search in apps
 

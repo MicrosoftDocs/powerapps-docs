@@ -21,7 +21,7 @@ contributors:
 
 # Create a canvas app with data from a list
 
-Transform your Microsoft Lists or SharePoint data into a powerful mobile and web app in minutes—no coding required. This article shows you how to create a fully functional canvas app that connects directly to your existing lists, giving you and your team an intuitive way to view, edit, and manage data on any device.
+Transform your Microsoft Lists or SharePoint data into a powerful mobile and web app in minutes with no coding required. This article shows you how to create a fully functional canvas app that connects directly to your existing lists, giving you and your team an intuitive way to view, edit, and manage data on any device.
 
 You can also [connect to on-premises SharePoint lists](connections/connection-sharepoint-online.md#create-a-sharepoint-connection) through a data gateway.
 
