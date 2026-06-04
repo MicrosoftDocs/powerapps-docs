@@ -5,7 +5,7 @@ author: jasongre
 ms.subservice: mda-maker
 ms.author: jasongre
 ms.reviewer: matp
-ms.date: 04/20/2026
+ms.date: 06/04/2026
 ms.topic: how-to
 applies_to:
   - PowerApps
@@ -36,7 +36,7 @@ You can create generative pages using two approaches:
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 1. Open a model-driven app for editing.
-1. In the app designer, select **Add a page** > **Generative page**.
+1. In the app designer, select **Add page** > **Generative page**.
 
    A dialog opens. To create a new page, select **Describe a page**. A full-page generative page experience opens.
 
