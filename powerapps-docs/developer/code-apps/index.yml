@@ -12,7 +12,7 @@ metadata:
   ms.collection: collection
   author: JimDaly
   ms.author: jdaly
-  ms.date: 03/6/2026
+  ms.date: 06/03/2026
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -42,6 +42,10 @@ landingContent:
             url: how-to/npm-quickstart.md
           - text: Add a Dataverse action or function
             url: how-to/add-dataverse-action-function.md
+          - text: Add flows
+            url: how-to/add-flows.md
+          - text: Create a connection from the CLI
+            url: how-to/create-connection.md
 
   # Card
   - title: Configure & Setup
@@ -56,6 +60,8 @@ landingContent:
             url: how-to/use-environment-variables.md
           - text: Get context data
             url: how-to/retrieve-context.md
+          - text: Add flows
+            url: how-to/add-flows.md
 
   # Card
   - title: Connect to Data

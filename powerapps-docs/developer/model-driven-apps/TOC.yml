@@ -13,7 +13,7 @@
       href: use-iframe-and-web-resource-controls-on-a-form.md
   - name: Customize views
     href: customize-entity-views.md
-  - name: Open apps, forms, views, dialogs, and reports with a URL
+  - name: Open apps, forms, views, and reports with a URL
     href: open-forms-views-dialogs-reports-url.md
     items:
     - name: Set column values using parameters passed to a form
@@ -757,12 +757,38 @@
     - name: Xrm.Copilot
       href: clientapi/reference/xrm-copilot.md
       items:
+      - name: addActionHandler
+        href: clientapi/reference/Xrm-Copilot/addactionhandler.md
+      - name: addDefaultActionHandlers
+        href: clientapi/reference/Xrm-Copilot/adddefaultactionhandlers.md
       - name: executeEvent
         href: clientapi/reference/Xrm-Copilot/executeevent.md
       - name: executePrompt
         href: clientapi/reference/Xrm-Copilot/executeprompt.md
+      - name: getCurrentAgent
+        href: clientapi/reference/Xrm-Copilot/getcurrentagent.md
+      - name: isM365CopilotEnabled
+        href: clientapi/reference/Xrm-Copilot/ism365copilotenabled.md
+      - name: openM365CopilotPanel
+        href: clientapi/reference/Xrm-Copilot/openm365copilotpanel.md
+      - name: removeActionHandler
+        href: clientapi/reference/Xrm-Copilot/removeactionhandler.md
+      - name: removeDefaultActionHandlers
+        href: clientapi/reference/Xrm-Copilot/removedefaultactionhandlers.md
+      - name: sendPromptToM365Copilot
+        href: clientapi/reference/Xrm-Copilot/sendprompttom365copilot.md
+      - name: updateContext
+        href: clientapi/reference/Xrm-Copilot/updatecontext.md
+      - name: M365CopilotAgent
+        href: clientapi/reference/Xrm-Copilot/m365copilotagent.md
+      - name: M365CopilotAgentMode
+        href: clientapi/reference/Xrm-Copilot/m365copilotagentmode.md
       - name: MCSResponse
         href: clientapi/reference/Xrm-Copilot/mcsresponse.md
+      - name: PowerAppsContent
+        href: clientapi/reference/Xrm-Copilot/powerappscontent.md
+      - name: SendPromptToM365CopilotOptions
+        href: clientapi/reference/Xrm-Copilot/sendprompttom365copilotoptions.md
     - name: Xrm.Device
       href: clientapi/reference/xrm-device.md
       items:

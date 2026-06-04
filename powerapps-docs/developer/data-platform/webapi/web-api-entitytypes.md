@@ -83,7 +83,7 @@ For business data, there are two more abstract entity types that inherit from `c
 |`principal`|`systemuser` and `team` entity types inherit from the `principal` entity type. Principal provides only the `ownerid` property, which every user-owned table has. This inheritance is what allows for user-owned records to be assigned to either a user or a team. <br /><br />  The `ownerid` property is the primary key for both `systemuser` and `team` EntityTypes.|
 |`activitypointer`|Any table that is configured as an activity inherits from the `activitypointer` entity type. This type provides common properties found in entity types such as: `appointment`, `email`, `fax`, `letter`, `phonecall`, and `task`. You can also create a custom table that represents an activity. These common properties make it possible to retrieve a list of activities of different types using these common properties<br /> <br /> The `activityid` property is the primary key for all entity types that inherit from `activitypointer`.|
 
-When working with table definitions, there another hierarchy of inheritance. <xref:Microsoft.Dynamics.CRM.MetadataBase> entity type inherits from the abstract `crmmodelbaseentity` to provide common `MetadataId` and `HasChanged` properties. More information: [Use the Web API with table definitions](use-web-api-metadata.md).
+When working with table definitions, there's another hierarchy of inheritance. <xref:Microsoft.Dynamics.CRM.MetadataBase> entity type inherits from the abstract `crmmodelbaseentity` to provide common `MetadataId` and `HasChanged` properties. More information: [Use the Web API with table definitions](use-web-api-metadata.md).
 
 ## Alternate Keys
 

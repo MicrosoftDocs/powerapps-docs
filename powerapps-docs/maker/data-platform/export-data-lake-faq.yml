@@ -4,12 +4,13 @@ metadata:
   description: Get answers to frequently asked questions about Power Apps Azure Synapse Link for Dataverse.
   author: sabinn-msft
   ms.search.keywords: 
-  ms.date: 12/01/2025
+  ms.date: 06/02/2026
   ms.author: sabinn
   ms.reviewer: matp
   contributors: 
   - JasonHQX
   - anibakore-msft
+  - VinayMancha02
   ms.topic: faq
   ms.subservice: dataverse-maker
 title: Azure Synapse Link for Dataverse FAQ
@@ -88,9 +89,14 @@ sections:
    - question: Why do I see duplicated version numbers when I export data using append only mode?   
      answer: |
          For append only mode, if Azure Synapse Link for Dataverse doesn't get an acknowledgment from the Azure data lake that the data has been committed due to any reason such as network delays, Azure Synapse Link retries in those scenarios and commit the data again. The downstream consumption should be made resilient to this scenario by filtering data using `SinkModifiedOn`.     
-   - question: Why am I seeing differences in Sinkmodifiedon and Modifiedon columns?   
+   - question: Why am I seeing differences in `SinkModifiedOn` and `ModifiedOn` columns?
      answer: |
-         It's expected. `Modifiedon` is the datetime that record being changed in Dataverse; `Sinkmodifiedon` is the date and time that record is modified in the data lake.  
+         This is expected behavior. `ModifiedOn` is the date and time a record was last changed in Dataverse, while `SinkModifiedOn` is the date and time the record was written to the data lake. `SinkModifiedOn` is typically later than `ModifiedOn`, and the difference depends on factors such as batch size, system load, and the number of records being processed.
+         
+         For tables exported in Delta Lake format or in append-only/incremental CSV mode, `SinkCreatedOn` and `SinkModifiedOn` reflect the same write time. For this reason, the difference between `SinkCreatedOn` and `CreatedOn` in these modes isn't a reliable indicator of sync delay and shouldn't be interpreted as such.
+         
+         > [!IMPORTANT]
+         > In the case of long-running transactions in finance and operations apps, a record might be synchronized multiple times to ensure no data loss. In this scenario, `SinkModifiedOn` reflects the last synchronization time, not the first. For example, if a record is synced 10 times within an hour, `SinkModifiedOn` shows the time of the 10th sync even though the data was available in the lake from the first sync itself. Use caution when building latency reports based on the difference between `SinkModifiedOn` and `ModifiedOn`, as it can give a misleading impression of actual data availability.
    - question: Which Dataverse tables aren't supported for export?
      answer: |
         Any table that doesn't have change tracking enabled isn't supported in addition to following system tables:
@@ -108,6 +114,11 @@ sections:
 
         > [!NOTE]
         > You can add the audit table for export using Azure Synapse Link for Dataverse. However, the export of the audit table is only supported with [Delta Lake profiles](/power-apps/maker/data-platform/azure-synapse-link-delta-lake).
+   - question: Why don't I see all of my notes (annotation records) in the data lake?
+     answer: |
+         Azure Synapse Link doesn't sync file content stored on the `annotation` (Notes) table. On a note record, the file attached to the note is held in the `documentbody` column, and that file content isn't synced to the data lake. This is a by-design behavior. As a result:
+         - `annotation` records that have a value in the `documentbody` column (notes with a file attachment) aren't exported to the data lake.
+         - `annotation` records with no value in `documentbody` (notes without a file attachment) are synced as expected.
    - question: I'm using export to delta lake feature, can I stop the Apache Spark job or change the execution time?
      answer: |
         The Delta Lake conversion job is triggered when there was a data change in the configured time interval. There's no option to stop or pause the Apache Spark pool. However, you can modify the time interval after the link creation under Manage tables > Advanced Time interval.
@@ -133,6 +144,15 @@ sections:
    - question: Why don't I see any data changes in the data lake when records have been deleted in Dataverse?
      answer: |
         For any direct SQL call to remove a record, the Azure Synapse Link for Dataverse service doesn't trigger because BPO.Delete isn't being called. For a sample feature, go to [How to clean up inherited access](/troubleshoot/power-platform/dataverse/user-permissions/cleanup-inherited-access).
+   - question: Why do I get a type conversion error for timestamp columns when reading Parquet files in Apache Spark 3.5 or later?
+     answer: |
+        In both bring your own lake and managed data lake profiles, timestamps in Parquet files are stored in INT64 format. You might encounter errors in downstream pipelines, such as Azure Synapse pipeline copy operations, when reading these Parquet files through Apache Spark 3.5 or later. This behavior occurs because INT96 is no longer the default mode for timestamps in Spark 3.5.
+        
+        You might see an error similar to: 
+        
+        `TypeConversionNotSupportedDataTypes, Exception occurred when converting value "1774478519775185" for column name 'SinkCreatedOn' from type 'Int64'`
+        
+        To mitigate this issue, add a SQL function in your destination SQL database to convert the timestamp values from INT64 to the appropriate datetime format. Or, update your downstream pipelines to use INT64 format.
 additionalContent: |
 
   ## See also

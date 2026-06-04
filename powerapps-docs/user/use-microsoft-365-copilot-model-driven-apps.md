@@ -1,10 +1,10 @@
 ---
-title: Use Microsoft 365 Copilot in model-driven apps (preview)
+title: Use Microsoft 365 Copilot in model-driven apps
 description: Learn how to use Microsoft 365 Copilot to gain insights about the data in your model-driven apps.
 author: devkeydet
 ms.component: pa-user
 ms.topic: overview
-ms.date: 03/11/2026
+ms.date: 05/27/2026
 ms.update-cycle: 180-days
 ms.subservice: end-user
 ms.author: marcsc
@@ -17,7 +17,7 @@ ms.collection:
     - bap-ai-copilot 
 ---
 
-# Use Microsoft 365 Copilot in model-driven apps (preview)
+# Use Microsoft 365 Copilot in model-driven apps
 
 [!INCLUDE [m365-copilot](~/../shared/dynamics365-core/use-microsoft-365-copilot-model-driven-apps.md)]
 

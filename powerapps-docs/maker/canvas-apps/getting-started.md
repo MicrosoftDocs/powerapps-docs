@@ -7,7 +7,7 @@ ms.topic: concept-article
 ms.custom: canvas
 ms.collection: get-started
 ms.reviewer: 
-ms.date: 02/19/2026
+ms.date: 04/15/2026
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
@@ -23,7 +23,7 @@ Canvas apps are custom business applications you can create in Microsoft Power A
 
 With canvas apps, you can:
 
-- Connect to [data from hundreds of sources](connections-list.md). , including Microsoft 365, Dataverse, SharePoint, and other data sources
+- Connect to [data from hundreds of sources](connections-list.md), including Microsoft 365, Dataverse, SharePoint, and other data sources
 - Create responsive designs that work seamlessly across browsers and mobile devices
 - Use AI-powered Copilot to build apps through natural language conversations
 - Share your apps securely within your organization
@@ -52,22 +52,53 @@ After you generate and customize an app automatically, create an app from scratc
 
 If you're new to Power Apps and want to turn your ideas into a working solution, start with [Planning a Power Apps project](../../guidance/planning/introduction.md).
 
-> [!NOTE]
-> - If you don't have a license for Power Apps, you can [sign up for free](../signup-for-powerapps.md).
-> - If you don't have an organization account or aren't part of a tenant or organization account, you can establish a developer's account through the [Microsoft Developer Program](https://developer.microsoft.com/en-us/microsoft-365/dev-program).
+## Connect to data
+
+Canvas apps can connect to a wide variety of data sources. Choose the data source that best fits your scenario:
+
+- **[Microsoft Dataverse](data-platform-create-app-scratch.md)** &ndash; Use Dataverse as your primary data store for business applications with built-in security, logic, and data management.
+- **[SharePoint](app-from-sharepoint.md)** &ndash; Build apps on top of SharePoint lists to extend your existing collaboration workflows.
+- **[Excel](get-started-create-from-blank.md)** &ndash; Create apps based on Excel workbooks stored in cloud storage like OneDrive or SharePoint.
+- **[SQL Server and Azure SQL](/power-apps/maker/canvas-apps/connections/connection-azure-sqldatabase)** &ndash; Connect directly to SQL databases for enterprise data scenarios.
+- **[Other connectors](connections-list.md)** &ndash; Browse hundreds of available connectors for services like Dynamics 365, Salesforce, and more.
+
+For guidance on linking Power Apps data to Microsoft Fabric, see [Configure your environment and link to Microsoft Fabric](/power-apps/maker/data-platform/fabric-link-to-data-platform).
 
 ## Share and run an app
+
 When you finish the app and save it to the cloud, [share it with others](share-app.md) in your organization. Specify which users or groups can run the app, and whether they can also customize and share it with more people in the organization.
 
 Run your own apps, and any apps shared with you, on Windows, in a [web browser](../../user/run-app-browser.md), or on an [iOS or Android device](/powerapps/mobile/run-powerapps-on-mobile).
 
+## Licensing and trials
+
+To get started with Power Apps, you need the right license for your scenario:
+
+- **Free trial** &ndash; If you don't have a license for Power Apps, you can [sign up for a free trial](../signup-for-powerapps.md). Trial licenses provide access to most Power Apps features for a limited time.
+- **Trial extension** &ndash; If your trial is expiring, contact your admin or visit the [Power Platform admin center](https://admin.powerplatform.microsoft.com/) to explore extension options.
+- **Developer environment** &ndash; If you don't have an organization account, establish a developer's account through the [Microsoft Developer Program](https://developer.microsoft.com/en-us/microsoft-365/dev-program).
+- **Licensing overview** &ndash; For detailed plan comparisons, see the [Power Apps pricing page](https://powerapps.microsoft.com/pricing/).
+
+## Troubleshoot common issues
+
+If you encounter issues while building or running canvas apps, the following resources can help:
+
+- **[Known issues for canvas apps](/power-apps/maker/canvas-apps/common-issues-and-resolutions)** &ndash; Solutions for common errors and known limitations.
+- **[Performance optimization](/power-apps/maker/canvas-apps/performance-tips)** &ndash; Tips for improving app load times and responsiveness, including slow site performance.
+- **[Formula reference](/power-platform/power-fx/formula-reference-canvas-apps)** &ndash; Complete reference for Power Fx formulas and functions used in canvas apps.
+- **[Coding guidelines](../../guidance/coding-guidelines/overview.md)** &ndash; Best practices for maintaining clean, performant canvas app code.
+- **[Dataverse troubleshooting](/troubleshoot/power-platform/dataverse/welcome-dataverse)** &ndash; Resolve issues with Dataverse connections, including mailbox configuration and solution imports.
+
+If your issue isn't resolved through documentation, you can [create a support request](/power-platform/admin/get-help-support) through the Power Platform admin center.
+
 ## Learn more
+
 - Want to turn your ideas into an app? Start with [Planning a Power Apps project](../../guidance/planning/introduction.md).
 - Explore step-by-step, conceptual, and reference articles in the navigation pane on the left.
 - Check out the [webinars and video gallery](https://powerusers.microsoft.com/t5/Webinars-and-Video-Gallery/bd-p/VideoGallery?featured=yes) to learn how to use Power Apps features and functions.
 
-
 ## Share your experience
+
 * Read and post in the [Power Apps Community](https://aka.ms/powerapps-community), where anyone who uses Power Apps can post a question for others to answer. Before you post a question, search the community to see if your question is already answered.
 * Submit an idea to improve Power Apps in the [Power Apps Ideas Forum](https://ideas.powerapps.com/).
 * If you're a Power Apps admin for your organization, open a support ticket in the [Power Platform admin center](https://admin.powerplatform.microsoft.com/support).

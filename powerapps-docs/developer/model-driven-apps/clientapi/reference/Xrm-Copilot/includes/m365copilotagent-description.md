@@ -1,0 +1,1 @@
+Describes the currently active Microsoft 365 Copilot agent — returned by [getCurrentAgent](../getcurrentagent.md).

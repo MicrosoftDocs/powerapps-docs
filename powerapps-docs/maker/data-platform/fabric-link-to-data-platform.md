@@ -8,7 +8,7 @@ contributors: saviegas
 ms.service: powerapps
 ms.subservice: dataverse-maker
 ms.topic: how-to
-ms.date: 02/10/2026
+ms.date: 04/27/2026
 ms.custom: template-how-to
 ---
 # Link to Microsoft Fabric
@@ -71,8 +71,13 @@ Link to Microsoft Fabric from the Power Apps **Tables** area: Select **Analyze**
      Provide your credentials and save the connection. To change credentials later, select **Switch account** and provide new credentials.
 
 6. You can expect to see shortcuts to all your tables within the selected workspace. If you don't see workspaces, ask the system to create a workspace. Go to [Troubleshooting common issues](fabric-troubleshoot.md) if you don't see the desired workspace.
-7. All Dataverse tables where the **Track changes** property is enabled are linked to Fabric. If this environment is linked to finance and operations apps, you can add finance and operations tables later using the **Manage tables** option. More information: [Manage link to Fabric](#manage-link-to-fabric).
-8. When you're done, select **Create** in the wizard to create the workspace, create shortcuts, and to perform the initialization for the first time.
+7. Next, in the **Select Entities** step, choose the tables you want to sync to Fabric. By default, all Dataverse tables where the **Track changes** property is enabled are selected. Clear any tables you don't want to sync. Only selected tables consume storage in Fabric, so you can optimize costs by excluding tables you don't need.
+
+   :::image type="content" source="media/fabric/fabric-link-select-entities.png" alt-text="Screenshot of the Select Entities step in the Link to Fabric wizard showing Dataverse tables with checkboxes to include or exclude from sync." lightbox="media/fabric/fabric-link-select-entities.png":::
+
+   > [!NOTE]
+   > You can change this selection anytime after setup by selecting the link and choosing **Manage Tables** from the ribbon. More information: [Add or remove tables linked to Fabric](#add-or-remove-tables-linked-to-fabric)
+8. Review your selections in the **Review & Create** step. When you're done, select **Create** to create the workspace, create shortcuts, and to perform the initialization for the first time.
 9. When complete, Fabric lakehouse opens in a separate browser tab.
 
 > [!NOTE]
@@ -84,6 +89,52 @@ Link to Microsoft Fabric from the Power Apps **Tables** area: Select **Analyze**
 > If you have more than 2,000 active Dataverse tables, Link to Fabric can fail with an error. Go to [Troubleshooting common issues](fabric-troubleshoot.md) for help with resolving issues.
 >
 > The link was labeled as **Microsoft OneLake** and is now labeled **Link to Fabric**.
+
+## Low-latency sync
+
+Low-latency sync is a faster sync engine for Link to Fabric. It writes data directly from the Dataverse database to Delta Parquet, removing the intermediate CSV step used by the previous pipeline.
+
+Benefits:
+
+- Faster initial sync.
+- Faster delta sync for incremental changes.
+- Higher throughput for finance and operations apps tables, up to 1M or more records per hour per table. Actual sync times depend on initial load, data churn, table sizes, and number of columns.
+
+Low-latency sync rolls out by station and is enabled automatically. There's no separate opt-in. Once your station is enabled, new Link to Fabric setups use the new engine through the same setup experience.
+
+To confirm a profile is running on low-latency sync, select **Azure Synapse Link** from the left navigation. If you see the **Low-latency mode** flag on your Fabric link in the link list, low-latency sync is enabled for that profile.
+
+:::image type="content" source="media/Fabric/low-latency-sync-page.jpg" alt-text="Azure Synapse Link page showing the Low-latency mode flag on a Fabric link profile." lightbox="media/Fabric/low-latency-sync-page.jpg":::
+
+Existing Fabric link profiles continue to use the previous sync engine. To move an existing profile to low-latency sync after it's available in your station, unlink the profile and relink it.
+
+> [!NOTE]
+> Unlinking and relinking triggers a full initial sync for all configured tables.
+
+> [!IMPORTANT]
+>
+> - If you perform analytics on live and retained data together, note the following behaviors before you unlink and relink:
+>    - The newly established Fabric link includes *live data only*. Retained data that was previously available through the link isn't carried over, because the new link starts a fresh sync from the live store.
+>    - Archival and existing long-term retention jobs are unaffected. They continue to run as configured, and any new retained data going forward remains available for analytics through the standard retained data access paths.
+> - Low-latency sync writes timestamp columns as **INT64**. The **INT96** timestamp format used by the previous Fabric link sync engine isn't supported. Review any downstream dependencies such as queries, pipelines, semantic models, or external readers that explicitly handle INT96 timestamps and update them to read INT64.
+
+### Prerequisites for finance and operations apps
+
+If you're running finance and operations apps, your environment must be on a supported build before low-latency sync works. The following table lists the minimum required builds by app version.
+
+| Finance and operations version | Minimum platform build | Minimum application build |
+|---|---|---|
+| 10.0.45 | 7.0.7690.155 | 10.0.2345.229 |
+| 10.0.46 | 7.0.7778.118 | 10.0.2428.181 |
+| 10.0.47 | 7.0.7858.101 | 10.0.2527.116 |
+| 10.0.48 | 7.0.7996.39 | 10.0.2645.35 |
+
+To check your build, in your finance and operations environment, go to **Help & Support** > **About** to see your current platform and application build numbers.
+
+If your build is below the minimum listed for your app version, apply the latest quality update for your version before setting up low-latency sync.
+
+> [!NOTE]
+> If you're not sure which app version you're on, contact your system administrator or Microsoft support team.
 
 ## Manage link to Fabric
 
@@ -141,6 +192,7 @@ After confirmation:
 
 > [!IMPORTANT]
 >
+> - Some system tables and tables required by Microsoft add-ins can't be removed. More information: [Are there system tables that are automatically synchronized and can't be unlinked?](fabric-link-faq.yml#are-there-system-tables-that-are-automatically-synchronized-and-can-t-be-unlinked)
 > - Removing a table doesn't delete the table in Dataverse; it only removes the OneLake shortcut and stops data sync.
 > - If you need to add tables later, repeat the same steps and check the tables you want to include. More information: [Manage link to Fabric](#manage-link-to-fabric).
 
