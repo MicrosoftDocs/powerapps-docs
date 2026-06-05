@@ -6,7 +6,7 @@ author: ShefaaliP
 ms.author: spatankar
 ms.reviewer: matp
 contributor: kewear
-ms.date: 05/26/2026
+ms.date: 06/05/2026
 ms.topic: how-to
 ---
 # Use preview tools and upcoming features in Dataverse MCP server

@@ -6,12 +6,11 @@ author: seanwat-msft
 ms.author: spatankar
 ms.reviewer: matp
 contributor: kewear
-ms.date: 05/26/2026
+ms.date: 06/05/2026
 ms.topic: how-to
 ms.collection: bap-ai-copilot
 ms.subservice: dataverse-maker
 ---
-
 # Connect to Dataverse with model context protocol in non-Microsoft clients
 
 You can connect to Microsoft Dataverse using a non-Microsoft model context protocol (MCP) client, such as Claude desktop or Claude Code. There are two approaches for connecting non-Microsoft clients to a Dataverse MCP server:

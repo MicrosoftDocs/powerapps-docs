@@ -4,7 +4,7 @@ description: Frequently asked questions about using Microsoft Dataverse with a m
 author: seanwat-msft
 ms.component: cds
 ms.topic: how-to
-ms.date: 05/26/2026
+ms.date: 06/05/2026
 ms.subservice: dataverse-maker
 ms.author: spatankar
 ms.reviewer: matp
@@ -47,7 +47,7 @@ If a tool returns an error, try rephrasing your prompt and submitting it again. 
 
 ## What happened to the `describe_table`, `list_tables`, and `fetch` tools?
 
-The Dataverse MCP server tool surface has been updated. The previous `describe_table`, `list_tables`, and `fetch` tools are removed and their functionality is now provided by other tools:
+The Dataverse MCP server tool surface is updated. The previous `describe_table`, `list_tables`, and `fetch` tools are removed and their functionality is provided by other tools:
 
 | Removed tool | Replacement |
 |---|---|
@@ -55,7 +55,7 @@ The Dataverse MCP server tool surface has been updated. The previous `describe_t
 | `list_tables` | `describe` |
 | `fetch` | `describe` |
 
-The previous `search` tool that searched Dataverse data was also renamed to `search_data`. The current `search` tool searches Dataverse metadata to help agents find relevant tables and apps.
+The previous `search` tool that searched Dataverse data was renamed to `search_data`. The current `search` tool searches Dataverse metadata to help agents find relevant tables and apps.
 
 If your MCP client maintains allow or deny lists by tool name, review and update your configuration so that the new tool names reflect your intended permissions. 
 
