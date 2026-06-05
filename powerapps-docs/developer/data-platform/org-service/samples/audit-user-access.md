@@ -1,7 +1,7 @@
 ---
 title: "Sample: Audit user access (Microsoft Dataverse) | Microsoft Docs"
 description: "This sample shows how to audit user access" 
-ms.date: 04/03/2022
+ms.date: 03/04/2026
 author: paulliew
 ms.author: paulliew
 ms.reviewer: jdaly
@@ -26,11 +26,11 @@ This sample code shows how to audit user access.
 
 ## What this sample does
 
-This sample first enables user access auditing with the logged on user's organization. Next, it creates and modifies an account table so that audit records are generated.
+This sample first enables user access auditing with the signed-in user's organization. Next, it creates and modifies an account table so that audit records are generated.
 
 ## How this sample works
 
-In order to simulate the scenario described in [What this sample does](#what-this-sample-does), the sample will do the following:
+To simulate the scenario described in [What this sample does](#what-this-sample-does), the sample performs the following steps:
 
 ### Setup
 
@@ -39,13 +39,13 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Demonstrate
 
-1. Gets the organization's ID from the system user record and retrieves organization record.
-2. Enables auditing on the organization, including auditing for user access.
-3. Makes an update request to the account table to be tracked by auditing.
-4. set the organization and account auditing flags back to old values and retrieve them if they were actually changed.
+1. Get the organization's ID from the system user record and retrieve the organization record.
+1. Enable auditing on the organization, including auditing for user access.
+1. Make an update request to the account table to be tracked by auditing.
+1. Set the organization and account auditing flags back to old values and retrieve them if you changed them.
 
 ### Clean up
 
-Display an option to delete the records created during [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
+Display an option to delete the records you created during [Setup](#setup). You can choose not to delete these records if you want to examine the tables and data that the sample created. You can also manually delete the records.
 
-[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]
+[!INCLUDE[footer-banner](../../../../includes/footer-banner.md)]

@@ -3,7 +3,7 @@ title: "How to: Connect your code app to data"
 description: "Learn how to connect your code app to data"
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 02/05/2026
+ms.date: 06/03/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
@@ -36,7 +36,7 @@ All connectors are officially supported except the ones listed in the following 
 - [Excel Online (OneDrive)](/connectors/excelonline/)
 
 > [!IMPORTANT]
-> For the initial release, you can only configure code apps to use existing connections in [Power Apps](https://make.powerapps.com). You can't create new connections through PAC CLI commands. Support for creating new connections will be added in a future release.
+> You can now create connections directly from the CLI rather than through the Power Apps maker portal. See [Create a connection from the CLI (preview)](create-connection.md).
 
 ### Launch the Power Apps Connections page
 
@@ -117,7 +117,7 @@ Use the same PAC CLI [pac code add-data-source](/power-platform/developer/cli/re
 pac code add-data-source -a <apiName> -c <connectionId> -t <tableId> -d <datasetName> 
 ```
 
-For example:
+#### SQL example
 
 ```powershell
 pac code add-data-source `
@@ -131,6 +131,18 @@ pac code add-data-source `
 -c "aaaaaaaa000011112222bbbbbbbbbbbb" `
 -t "[dbo].[EmployeeInformation]" `
 -d "paconnectivitysql0425.database.windows.net,paruntimedb" 
+```
+
+#### SharePoint example
+
+For SharePoint, `-t` is the **List** name and `-d` is the SharePoint site:
+
+```powershell
+pac code add-data-source `
+-a "shared_sharepointonline" `
+-c "aaaaaaaa000011112222bbbbbbbbbbbb" `
+-t "Travel%20Request" `
+-d "https://contoso.sharepoint.com/sites/TravelPolicies"
 ```
 
 #### Discover available datasets and tables

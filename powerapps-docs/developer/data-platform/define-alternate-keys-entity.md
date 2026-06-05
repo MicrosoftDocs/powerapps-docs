@@ -1,7 +1,7 @@
 ---
 title: "Work with alternate keys (Microsoft Dataverse) | Microsoft Docs"
-description: "The topic explains about how to create alternate keys for a table. Alternate keys can be created programmatically or by using the customization tools" 
-ms.date: 09/23/2024
+description: "Learn how to create alternate keys in Dataverse to match external system IDs, improve integration reliability, and start implementing key-based operations." 
+ms.date: 03/30/2026
 ms.reviewer: pehecke
 ms.topic: how-to
 author: MsSQLGirl
@@ -12,7 +12,7 @@ search.audienceType:
 ---
 # Work with alternate keys
 
-All Microsoft Dataverse table rows have a unique identifier formatted as a GUID. These identifiers are the primary key for each table. When you need to integrate with an external data store, you might be able to add a column to the external database tables to contain a reference to a row's unique identifier in Dataverse. However, sometimes you can't modify the external database. With alternate keys, you can now define a column in a Dataverse table to correspond to a unique identifier (or unique combination of columns) used by the external data store. This alternate key can be used to uniquely identify a row in Dataverse in place of the primary key. You must be able to define which columns represent a unique identity for your rows. Once you identify the columns that are unique to the table, you can declare them as alternate keys through the customization user interface (UI) or in the code. This topic provides information about defining alternate keys in the data model.  
+Alternate keys in Microsoft Dataverse let you uniquely identify table rows by using business columns instead of only a GUID primary key. These identifiers are the primary key for each table. When you need to integrate with an external data store, you might be able to add a column to the external database tables to contain a reference to a row's unique identifier in Dataverse. However, sometimes you can't modify the external database. By using alternate keys, you can define a column in a Dataverse table to correspond to a unique identifier (or unique combination of columns) used by the external data store. This alternate key can uniquely identify a row in Dataverse in place of the primary key. You must be able to define which columns represent a unique identity for your rows. Once you identify the columns that are unique to the table, you can declare them as alternate keys through the customization user interface (UI) or in the code. This article provides information about defining alternate keys in the data model.  
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
@@ -20,15 +20,15 @@ All Microsoft Dataverse table rows have a unique identifier formatted as a GUID.
 
 ## Create alternate keys  
 
-You can create alternate keys programmatically or by using the customizations tools. For more information about using the customization tools, see [Define alternate keys using Power Apps](../../maker/data-platform/define-alternate-keys-portal.md).
+You can create alternate keys programmatically or by using the customization tools. For more information about using the customization tools, see [Define alternate keys using Power Apps](../../maker/data-platform/define-alternate-keys-portal.md).
 
-To define alternate keys programmatically, you first have to create an object of type <xref:Microsoft.Xrm.Sdk.Metadata.EntityKeyMetadata> (or use <xref href="Microsoft.Dynamics.CRM.EntityKeyMetadata?text=EntityKeyMetadata EntityType" /> if working with Web API). This class contains the key columns. Once the key columns are set, you can use `CreateEntityKey` to create the keys for a table. This message takes the table name and `EntityKeyMetadata` values as input to create the key.  
+To define alternate keys programmatically, first create an object of type <xref:Microsoft.Xrm.Sdk.Metadata.EntityKeyMetadata> (or use <xref href="Microsoft.Dynamics.CRM.EntityKeyMetadata?text=EntityKeyMetadata EntityType" /> if working with Web API). This class contains the key columns. After you set the key columns, use `CreateEntityKey` to create the keys for a table. This message takes the table name and `EntityKeyMetadata` values as input to create the key.  
 
-You should be aware of the following constraints when creating alternate keys:  
+Be aware of the following constraints when creating alternate keys:  
 
 - **Valid columns in key table definitions**  
 
-   Only columns of the following types can be included in alternate key table definitions:  
+   Only include columns of the following types in alternate key table definitions:  
 
   |      Column Type      |    Display Name     |
   |--------------------------|---------------------|
@@ -43,25 +43,25 @@ You should be aware of the following constraints when creating alternate keys:
 
 - **Valid key size**  
 
-   When a key is created, the system validates the key, including that the total key size doesn't violate SQL-based index constraints like 900 bytes per key and 16 columns per key. If the key size doesn't meet the constraints, an error message is displayed.  
+   When you create a key, the system validates the key, including that the total key size doesn't violate SQL-based index constraints like 900 bytes per key and 16 columns per key. If the key size doesn't meet the constraints, an error message is displayed.  
 
 - **Maximum number of alternate key table definitions for a table**  
 
-   There can be a maximum of ten (10) alternate key table definitions for a table in a Dataverse instance.  
+   A table in a Dataverse instance can have up to ten alternate key table definitions.  
 
 - **Unicode characters in key value**
 
-  If the data within a column that is used in an alternate key contains one of the following characters `/`,`<`,`>`,`*`,`%`,`&`,`:`,`\\`,`?`,`+` then retrieve (`GET`), update or upsert (`PATCH`) actions won't work.  If you only need uniqueness, then this approach works, but if you need to use these keys as part of data integration then it's best to create the key on columns that won't have data with those characters.
+    If the data within a column used in an alternate key contains one of the following characters `/`,`<`,`>`,`*`,`%`,`&`,`:`,`\\`,`?`,`+`, then retrieve (`GET`), update, or upsert (`PATCH`) actions don't work. If you only need uniqueness, this approach works, but if you need to use these keys as part of data integration, it's best to create the key on columns that don't have data with those characters.
   
 - **Not supported in virtual tables**
 
-  Alternate keys aren't supported in virtual tables because we can't enforce uniqueness when the data is on another system. More information: [Get started with virtual tables (entities)](virtual-entities/get-started-ve.md)
+  Alternate keys aren't supported in virtual tables because the system can't enforce uniqueness when the data is on another system. For more information, see [Get started with virtual tables (entities)](virtual-entities/get-started-ve.md).
 
 <a name="BKMK_crud"></a>
 
 ## Retrieve and delete alternate keys  
 
-If you need to retrieve or delete alternate keys, you can use the customization UI to do this, without writing any code. However, the SDK provides the following two messages to programmatically retrieve and delete alternate keys.  
+To retrieve or delete alternate keys, use the customization UI. You don't need to write any code. However, the SDK provides the following two messages to programmatically retrieve and delete alternate keys:  
 
 |Message request class|Description|  
 |---------------------------|-----------------|  
@@ -110,16 +110,16 @@ Some examples returned by this request:
 
 ## Monitor index creation for alternate keys  
 
-Alternate keys use database indexes to enforce uniqueness and optimize lookup performance. If there are lots of existing records in a table, index creation can be a lengthy process. You can increase the responsiveness of the customization UI and solution import by doing the index creation as a background process. The `EntityKeyMetadata.AsyncJob` property (<xref href="Microsoft.Dynamics.CRM.EntityKeyMetadata?text=EntityKeyMetadata EntityType" /> or <xref:Microsoft.Xrm.Sdk.Metadata.EntityKeyMetadata>) refers to the asynchronous job that is doing the index creation. The `EntityKeyMetadata.EntityKeyIndexStatus` property specifies the status of the key as its index creation job progresses. The status could be any of the following:  
+Alternate keys use database indexes to enforce uniqueness and optimize lookup performance. If a table has many existing records, creating an index can take a long time. To make the customization UI and solution import more responsive, create the index in a background process. The `EntityKeyMetadata.AsyncJob` property (<xref href="Microsoft.Dynamics.CRM.EntityKeyMetadata?text=EntityKeyMetadata EntityType" /> or <xref:Microsoft.Xrm.Sdk.Metadata.EntityKeyMetadata>) refers to the asynchronous job that creates the index. The `EntityKeyMetadata.EntityKeyIndexStatus` property specifies the status of the key as its index creation job progresses. The status can be any of the following values:  
 
 - Pending  
 - In Progress  
 - Active  
 - Failed  
 
-When an alternate key is created using the API, if the index creation fails, you can drill into details about the cause of the failure, correct the problems, and reactivate the key request using the `ReactivateEntityKey` (<xref href="Microsoft.Dynamics.CRM.ReactivateEntityKey?text=ReactivateEntityKey Action" /> or <xref:Microsoft.Xrm.Sdk.Messages.ReactivateEntityKeyRequest> message).  
+When you create an alternate key by using the API and the index creation fails, you can view details about the cause of the failure, correct the problems, and reactivate the key request by using the `ReactivateEntityKey` (<xref href="Microsoft.Dynamics.CRM.ReactivateEntityKey?text=ReactivateEntityKey Action" /> or <xref:Microsoft.Xrm.Sdk.Messages.ReactivateEntityKeyRequest> message).  
 
-If the alternate key is deleted while an index creation job is still pending or in progress, the job is cancelled and the index is deleted.  
+If you delete the alternate key while an index creation job is still pending or in progress, the job is canceled and the index is deleted.  
 
 ### See also
 

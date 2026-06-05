@@ -2,7 +2,7 @@
 title: "Supported functions in Microsoft Dataverse"
 description: "Find out what Power Fx operators, variables, and formulas are supported with Dataverse"
 ms.custom: ""
-ms.date: 02/03/2025
+ms.date: 04/27/2026
 ms.reviewer: "Mattp123"
 ms.suite: ""
 ms.tgt_pltfrm: ""

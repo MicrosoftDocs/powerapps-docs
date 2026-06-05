@@ -4,7 +4,7 @@ description: Use solution checker to analyze Microsoft Dataverse customizations 
 author: Mattp123
 ms.component: cds
 ms.topic: how-to
-ms.date: 06/18/2025
+ms.date: 05/21/2026
 ms.subservice: dataverse-maker
 ms.author: matp
 ai-usage: ai-assisted
@@ -183,7 +183,7 @@ The following table lists the component type, rule description, severity, and ca
 | Canvas App  | [app-reduce-screen-controls](/powerapps/maker/canvas-apps/performance-tips#limit-the-number-of-controls)  | Limit the number of app controls for improved performance.  |  Medium  | Performance |
 | Canvas App  | [app-include-accessible-label](https://www.w3.org/WAI/tutorials/forms/labels/)  | Use explicit labels to improve app accessibility. |  Medium  | Accessibility |
 | Canvas App  | [app-include-alternative-input](https://www.w3.org/WAI/tips/developing/#ensure-that-all-interactive-elements-are-keyboard-accessible)  | Ensure all interactive elements are accessible to alternative inputs.  |  Medium  | Accessibility |
-| Canvas App  | [app-avoid-autostart](https://digital.gov/2014/06/30/508-accessible-videos-use-a-508-compliant-video-player/)  | Avoid using autostart on players within an app.  |  Medium  | Accessibility |
+| Canvas App  | app-avoid-autostart  | Avoid using autostart on players within an app.  |  Medium  | Accessibility |
 | Desktop flow  | [desktopflow-avoid-unsafe-password](/power-automate/desktop-flows/static-analysis#unsafe-password-security)  | Passwords are managed insecurely in the flow. |  High  | Security |
 | Desktop flow | [desktopflow-avoid-subflow-recursion](/power-automate/desktop-flows/static-analysis#recursion-between-two-subflows)  | Recursive calls detected between subflows, potentially causing an infinite loop. |  Medium  | Design |
 | Desktop flow  | [desktopflow-avoid-infinite-loop](/power-automate/desktop-flows/static-analysis#infinite-loop)  | Infinite loop detected in the flow, potentially causing it to run indefinitely. |  Medium  | Design |

@@ -1,7 +1,7 @@
 ---
-title: Use PowerShell and Visual Studio Code with the Dataverse Web API
-description: Describes how to use PowerShell and Visual Studio Code to create reusable PowerShell functions to interactively test using the Dataverse Web API
-ms.date: 10/30/2024
+title: "Use PowerShell and Visual Studio Code with the Dataverse Web API"
+description: Learn how to use PowerShell and Visual Studio Code to create reusable functions for testing the Dataverse Web API interactively.
+ms.date: 03/27/2026
 author: JimDaly
 ms.author: jdaly
 ms.reviewer: jdaly
@@ -11,37 +11,37 @@ search.audienceType:
 
 # Use PowerShell and Visual Studio Code with the Dataverse Web API
 
-This article expands on the [Quick Start Web API with PowerShell](quick-start-ps.md) article to describe advanced capabilities using PowerShell and Visual Studio Code with the Dataverse Web API to:
+This article shows you how to use PowerShell and Visual Studio Code with the Dataverse Web API for advanced capabilities. You'll learn to create reusable functions, handle exceptions, and manage service protection limits.
 
 - [Create reusable functions](#create-reusable-functions)
 - [Handle exceptions](#handle-exceptions)
 - [Manage Dataverse service protection limits](#manage-dataverse-service-protection-limits)
-- [Debug using Fiddler](#debug-using-fiddler)
+- [Debug by using Fiddler](#debug-by-using-fiddler)
 - [Download the Dataverse Web API CSDL $metadata document](#download-the-dataverse-web-api-csdl-metadata-document)
 
 > [!NOTE]
-> The instructions in this article should work for Windows, Linux, and macOS, but these steps have only been tested on Windows. If changes are needed, let us know by using the **Feedback** section at the bottom of this article.
+> The instructions in this article should work for Windows, Linux, and macOS, but these steps are only tested on Windows. If changes are needed, use the **Feedback** section at the bottom of this article.
 
 ## Prerequisites
 
-The content of this article has the same prerequisites as the [Quick Start Web API with PowerShell](quick-start-ps.md) article.
+This article has the same prerequisites as the [Quick Start Web API with PowerShell](quick-start-ps.md) article.
 
 [!INCLUDE [cc-visual-studio-code-powershell-prerequisites](../includes/cc-visual-studio-code-powershell-prerequisites.md)]
 
 ## Create reusable functions
 
-[Quick Start Web API with PowerShell](quick-start-ps.md) introduced how to authenticate and call the [WhoAmI function](xref:Microsoft.Dynamics.CRM.WhoAmI) with Visual Studio Code. This approach might be all you need to for an ad-hoc test of one or more operations. However, as your scripts become more complex, you might find yourself typing the same code again and again.
+[Quick Start Web API with PowerShell](quick-start-ps.md) introduced how to authenticate and call the [WhoAmI function](xref:Microsoft.Dynamics.CRM.WhoAmI) with Visual Studio Code. This approach might be all you need for an ad-hoc test of one or more operations. However, as your scripts become more complex, you might find yourself typing the same code again and again.
 
-In this section, we start creating a set of reusable functions in separate files that we can access using *[dot sourcing](/powershell/module/microsoft.powershell.core/about/about_scripts#script-scope-and-dot-sourcing)*. Use dot sourcing to load a file containing PowerShell scripts that can contain functions and variables that become part of the local script scope.
+In this section, you start creating a set of reusable functions in separate files that you can access by using *[dot sourcing](/powershell/module/microsoft.powershell.core/about/about_scripts#script-scope-and-dot-sourcing)*. Use dot sourcing to load a file containing PowerShell scripts that can contain functions and variables that become part of the local script scope.
 
 > [!TIP]
-> You can find fully documented definitions of these functions and more in our [GitHub PowerApps-Samples repo](https://github.com/microsoft/PowerApps-Samples/) at [PowerApps-Samples/dataverse/webapi/PS/](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/PS)
+> You can find fully documented definitions of these functions and more in the [GitHub PowerApps-Samples repo](https://github.com/microsoft/PowerApps-Samples/) at [PowerApps-Samples/dataverse/webapi/PS/](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/PS)
 
 ### Create a Connect function
 
-Let's put the code to authenticate to Dataverse in a function called `Connect` inside a file named `Core.ps1` so we can reuse it in a single line of code.
+Put the code to authenticate to Dataverse in a function called `Connect` inside a file named `Core.ps1` so you can reuse it in a single line of code.
 
-1. Create a folder. In this example, we create a folder in `C:\scripts`.
+1. Create a folder. In this example, create a folder in `C:\scripts`.
 1. [Open the scripts folder within Visual Studio Code](https://code.visualstudio.com/docs/editor/workspaces).
 1. Create a text file in the scripts folder named `Core.ps1`.
 1. Copy and paste the following `Connect` function into the `Core.ps1` file.
@@ -83,7 +83,7 @@ Let's put the code to authenticate to Dataverse in a function called `Connect` i
    ```
 
    > [!NOTE]
-   > The script adds the `baseURI` and `baseHeaders` variables to the global context using the `$global` [scope modifier](/powershell/module/microsoft.powershell.core/about/about_scopes#scope-modifiers) so that they are available to other scripts in the same session.
+   > The script adds the `baseURI` and `baseHeaders` variables to the global context by using the `$global` [scope modifier](/powershell/module/microsoft.powershell.core/about/about_scopes#scope-modifiers) so that other scripts in the same session can use them.
 
 1. Create another text file in Visual Studio Code named `test.ps1` in your `scripts` folder.
 1. Copy and paste the following script into the `test.ps1` file:
@@ -117,7 +117,7 @@ Let's put the code to authenticate to Dataverse in a function called `Connect` i
 
 ### Create a WhoAmI function
 
-Let's put the code to invoke the [WhoAmI function](xref:Microsoft.Dynamics.CRM.WhoAmI) in a function called `Get-WhoAmI` inside a file named `CommonFunctions.ps1` so we  can type just 11 characters rather than 100 each time you want to use the [WhoAmI function](xref:Microsoft.Dynamics.CRM.WhoAmI)
+Put the code to invoke the [WhoAmI function](xref:Microsoft.Dynamics.CRM.WhoAmI) in a function called `Get-WhoAmI` inside a file named `CommonFunctions.ps1`. This way, you only need to type 11 characters instead of 100 each time you want to use the [WhoAmI function](xref:Microsoft.Dynamics.CRM.WhoAmI).
 
 1. Create a new text file named `CommonFunctions.ps1` in your `scripts` folder.
 1. Copy and paste the following function definition in the `CommonFunctions.ps1`.
@@ -158,10 +158,10 @@ Let's put the code to invoke the [WhoAmI function](xref:Microsoft.Dynamics.CRM.W
 
 ### Create table operations functions
 
-Let's put functions to perform common table operations a file named `TableOperations.ps1` so we can reuse them.
+Put functions that perform common table operations in a file named `TableOperations.ps1` so you can reuse them.
 
 1. Create a new text file named `TableOperations.ps1` in your `scripts` folder.
-1. Copy and paste the following function definitions in the `TableOperations.ps1`.
+1. Copy and paste the following function definitions into `TableOperations.ps1`.
 
    ```powershell
    function Get-Records {
@@ -396,7 +396,7 @@ Let's put functions to perform common table operations a file named `TableOperat
 
 ## Handle exceptions
 
-So far in this article you copied and pasted code provided for you. But when you start writing and using your own functions, you can encounter errors. When these errors occur, they might be from Dataverse or your script.
+So far in this article, you copied and pasted code provided for you. But when you start writing and using your own functions, you can encounter errors. When these errors occur, they might come from Dataverse or your script.
 
 Add a helper function that can help detect the source of the errors and extract relevant details from errors returned by Dataverse.
 
@@ -430,7 +430,7 @@ Add a helper function that can help detect the source of the errors and extract 
 
    The `Invoke-DataverseCommands` function uses the [Invoke-Command cmdlet](/powershell/module/microsoft.powershell.core/invoke-command) to process a set of commands within a [try/catch block](/powershell/module/microsoft.powershell.core/about/about_try_catch_finally). Any errors returned from Dataverse are <xref:Microsoft.PowerShell.Commands.HttpResponseException> errors, so the first `catch` block writes a `An error occurred calling Dataverse:` message to the terminal with the JSON error data.
 
-   The JSON data in `$_.ErrorDetails.Message` contains some escaped unicode characters. For example: `\u0026` instead of `&` and  `\u0027` instead of `'`. This function includes some code that replaces those characters with the unescaped characters so that they exactly match errors you see elsewhere.
+   The JSON data in `$_.ErrorDetails.Message` contains some escaped Unicode characters. For example: `\u0026` instead of `&` and  `\u0027` instead of `'`. This function includes some code that replaces those characters with the unescaped characters so that they exactly match errors you see elsewhere.
 
    Otherwise, the errors are written back to the terminal window with a message: `An error occurred in the script:`
 
@@ -502,17 +502,17 @@ Add a helper function that can help detect the source of the errors and extract 
 
 ## Manage Dataverse service protection limits
 
-[Dataverse Service protection API limits](../api-limits.md) help ensure that Dataverse provides consistent availability and performance. When client applications make extraordinary demands on server resources using the Web API, Dataverse returns [429 Too Many Requests](https://developer.mozilla.org/docs/Web/HTTP/Status/429) errors and client applications must pause operations for the duration specified in the [Retry-After header](https://developer.mozilla.org/docs/Web/HTTP/Headers/Retry-After).
+[Dataverse Service protection API limits](../api-limits.md) help ensure that Dataverse provides consistent availability and performance. When client applications make extraordinary demands on server resources by using the Web API, Dataverse returns [429 Too Many Requests](https://developer.mozilla.org/docs/Web/HTTP/Status/429) errors. Client applications must pause operations for the duration specified in the [Retry-After header](https://developer.mozilla.org/docs/Web/HTTP/Headers/Retry-After).
 
-The PowerShell [Invoke-RestMethod cmdlet](/powershell/module/microsoft.powershell.utility/invoke-restmethod) [MaximumRetryCount parameter](/powershell/module/microsoft.powershell.utility/invoke-restmethod#-maximumretrycount) specifies how many times PowerShell retries a request when a failure code is between 400 and 599, inclusive or 304 is received. This means PowerShell retries Dataverse service protection 429 errors when you include a value for this parameter. The `MaximumRetryCount` parameter can be used with the [RetryIntervalSec](/powershell/module/microsoft.powershell.utility/invoke-restmethod#-retryintervalsec) to specify the number of seconds to wait. The default is 5 seconds. If the error response includes a `Retry-After` header for a 429 error, as Dataverse service protection errors do, that value is used instead.
+The PowerShell [Invoke-RestMethod cmdlet](/powershell/module/microsoft.powershell.utility/invoke-restmethod) [MaximumRetryCount parameter](/powershell/module/microsoft.powershell.utility/invoke-restmethod#-maximumretrycount) specifies how many times PowerShell retries a request when it receives a failure code between 400 and 599, inclusive, or a 304. This parameter means PowerShell retries Dataverse service protection 429 errors when you include a value for it. Use the `MaximumRetryCount` parameter with the [RetryIntervalSec](/powershell/module/microsoft.powershell.utility/invoke-restmethod#-retryintervalsec) to specify the number of seconds to wait. The default is 5 seconds. If the error response includes a `Retry-After` header for a 429 error, as Dataverse service protection errors do, that value is used instead.
 
-You might never encounter a service protection limit error while you're learning how to use the Dataverse Web API with PowerShell. However, scripts you write might send a large number of requests that produce errors, so learn how you can best manage them using PowerShell.
+You might never encounter a service protection limit error while you're learning how to use the Dataverse Web API with PowerShell. However, scripts you write might send a large number of requests that produce errors, so learn how you can best manage them by using PowerShell.
 
-If you add the `MaximumRetryCount` parameter to every Dataverse call using `Invoke-RestMethod`, PowerShell retries a broad range of errors. Retrying every error makes your scripts slow, especially when developing and testing. You would need to wait 10 to 15 seconds each time an error occurs, depending on how many retries you specify. An alternative approach is to encapsulate the `Invoke-RestMethod` in your own method that manages retries for specific errors.
+If you add the `MaximumRetryCount` parameter to every Dataverse call by using `Invoke-RestMethod`, PowerShell retries a broad range of errors. Retrying every error makes your scripts slow, especially when developing and testing. You need to wait 10 to 15 seconds each time an error occurs, depending on how many retries you specify. An alternative approach is to encapsulate the `Invoke-RestMethod` in your own method that manages retries for specific errors.
 
-The following `Invoke-ResilientRestMethod` function takes a `request` hashtable object as a mandatory parameter and a boolean `returnHeader` flag to indicate whether or not to return the response header. When `$returnHeader` is true, it sends the request using the `Invoke-RestMethod` command with the [ResponseHeadersVariable](/powershell/module/microsoft.powershell.utility/invoke-restmethod#-responseheadersvariable) parameter to capture the headers returned. The function uses [Out-Null](/powershell/module/microsoft.powershell.core/out-null) so the output that represents the empty response body isn't returned with the function. Otherwise, the function sends the request using `Invoke-RestMethod` with the `request` object and returns the response body.
+The following `Invoke-ResilientRestMethod` function takes a `request` hashtable object as a mandatory parameter and a boolean `returnHeader` flag to indicate whether or not to return the response header. When `$returnHeader` is true, it sends the request by using the `Invoke-RestMethod` command with the [ResponseHeadersVariable](/powershell/module/microsoft.powershell.utility/invoke-restmethod#-responseheadersvariable) parameter to capture the headers returned. The function uses [Out-Null](/powershell/module/microsoft.powershell.core/out-null) so the output that represents the empty response body isn't returned by the function. Otherwise, the function sends the request by using `Invoke-RestMethod` with the `request` object and returns the response body.
 
-If the `Invoke-RestMethod` fails with a 429 error, it checks if the `request` object has a `MaximumRetryCount` property. If the function succeeds, it creates a `MaximumRetryCount` property set to `3`. The `Invoke-RestMethod` is then retried using the request object and the `Retry-After` response header value. If the `returnHeader` flag is true, it returns the response header. If the `Invoke-RestMethod` fails with any other error, it rethrows the exception.
+If the `Invoke-RestMethod` fails with a 429 error, it checks if the `request` object has a `MaximumRetryCount` property. If the function succeeds, it creates a `MaximumRetryCount` property set to `3`. The `Invoke-RestMethod` is then retried by using the request object and the `Retry-After` response header value. If the `returnHeader` flag is true, it returns the response header. If the `Invoke-RestMethod` fails with any other error, it rethrows the exception.
 
 ```powershell
 function Invoke-ResilientRestMethod {
@@ -623,9 +623,9 @@ function Get-Record {
 
 The only difference is that you pass the hashtable (`$RetrieveRequest`) to the method instead of using splatting (`@RetrieveRequest`). Otherwise, you get a script error: `A parameter cannot be found that matches parameter name 'Headers'.`
 
-## Debug using Fiddler
+## Debug by using Fiddler
 
-[Fiddler](https://www.telerik.com/fiddler) is a web debugging proxy used to view HTTP traffic on your computer. Viewing this data is useful when debugging scripts. By default, HTTP requests and responses sent using [Invoke-RestMethod cmdlet](/powershell/module/microsoft.powershell.utility/invoke-restmethod) aren't visible when you use Fiddler.
+[Fiddler](https://www.telerik.com/fiddler) is a web debugging proxy you can use to view HTTP traffic on your computer. Viewing this data is useful when debugging scripts. By default, Fiddler doesn't show HTTP requests and responses that you send by using the [Invoke-RestMethod cmdlet](/powershell/module/microsoft.powershell.utility/invoke-restmethod).
 
 To view HTTP traffic in Fiddler, set the `Invoke-RestMethod` [Proxy parameter](/powershell/module/microsoft.powershell.utility/invoke-restmethod#-proxy) to the URL configured as the Fiddler proxy on your local computer. By default, the URL is `http://127.0.0.1:8888`. Your URL might be different.
 
@@ -700,7 +700,7 @@ $debug = $true
 $proxyUrl = 'http://127.0.0.1:8888'
 ```
 
-Within your centralized function, you can set the `-Proxy` parameter with splatting and use the `$request` hash table only when debugging with Fiddler.
+Within your centralized function, you can set the `-Proxy` parameter with splatting and use the `$request` hash table only when debugging by using Fiddler.
 
 ```powershell
 function Invoke-ResilientRestMethod {

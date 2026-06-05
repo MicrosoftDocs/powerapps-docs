@@ -1,11 +1,11 @@
 ---
-title: Model-driven app glossary of terms | Microsoft Docs
-description: Simple descriptions of commonly used terms when building model-driven apps
+title: Model-driven app glossary of terms
+description: Simple descriptions of commonly used terms when building model-driven apps with Power Apps
 ms.collection: get-started
 author: Mattp123
 ms.topic: overview
 ms.component: model
-ms.date: 01/21/2025
+ms.date: 04/03/2026
 ms.subservice: mda-maker
 ms.author: matp
 ms.reviewer: matp
@@ -42,7 +42,7 @@ Use it to configure the navigation [site map](#site-map), [tables](#table), [for
 
 ## App navigation experience
 
-The way in which [areas](#area), [groups](#group), and [subarea](#subarea) are presented in a model-driven app. It's also known as the [site map](../model-driven-apps/model-driven-app-glossary.md#site-map)
+The way in which [areas](#area), [groups](#group), [subarea](#subarea), and [pages](#page) are presented in a model-driven app. It's also known as the [site map](../model-driven-apps/model-driven-app-glossary.md#site-map)
 
 ## Application lifecycle management
 
@@ -52,7 +52,7 @@ The way in which we manage the lifecycle of an application from conception to en
 
 ## Area
 
- A part of the [model-driven app navigation experience](../../maker/model-driven-apps/app-navigation.md), apps can have multiple groups and groups can have multiple subareas.  The subarea contains the tables relevant to the application. For apps with more than one area, a switch control is displayed in the lower left navigation pane.
+A part of the [model-driven app navigation experience](../../maker/model-driven-apps/app-navigation.md), apps can have multiple groups and groups can have multiple subareas.  The subarea contains the tables relevant to the application. For apps with more than one area, a switch control is displayed in the lower left navigation pane.
 
 [App navigation in model-driven apps](app-navigation.md)
 

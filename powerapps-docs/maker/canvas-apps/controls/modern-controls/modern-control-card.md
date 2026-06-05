@@ -5,7 +5,7 @@ author: yogeshgupta698
 
 ms.topic: reference
 ms.component: canvas
-ms.date: 01/21/2026
+ms.date: 03/19/2026
 ms.subservice: canvas-maker
 ms.author: yogupt
 
@@ -18,7 +18,7 @@ contributors:
      
 ---
 
-# Card modern control (preview)
+# Card modern control
 
 Cards help makers create clean, responsive object summaries such as contact tiles, document previews, or product listings in either horizontal or vertical orientation.
 

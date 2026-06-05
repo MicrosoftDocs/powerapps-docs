@@ -16,3 +16,6 @@
       - name: Dataverse
         tocHref: /power-apps/maker/data-platform/
         topicHref: /power-apps/maker/data-platform/
+      - name: Guidance
+        tocHref: /power-apps/guidance/
+        topicHref: /power-apps/guidance/

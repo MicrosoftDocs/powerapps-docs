@@ -1,11 +1,11 @@
 ---
 title: Connect to Dataverse with model context protocol in non-Microsoft clients
-description: Learn how to connect to Dataverse using the Model Context Protocol (MCP) server in non-Microsoft clients. Follow step-by-step instructions to enable seamless data interaction.
+description: Learn how to connect to Dataverse using the Model Context Protocol (MCP) server in non-Microsoft clients such as Claude desktop or Claude Code. Follow step-by-step instructions to connect using the npm local proxy or the remote endpoint with a custom Entra app.
 #customer intent: As a Power Apps maker, I want to connect to Dataverse using the Model Context Protocol server so that I can choose from different MCP clients that can interact with my data through natural language queries.
-author: ShefaaliP
+author: seanwat-msft
 ms.author: spatankar
 ms.reviewer: matp
-ms.date: 11/10/2025
+ms.date: 03/07/2026
 ms.topic: how-to
 ms.collection: bap-ai-copilot
 ms.subservice: dataverse-maker
@@ -13,119 +13,166 @@ ms.subservice: dataverse-maker
 
 # Connect to Dataverse with model context protocol in non-Microsoft clients
 
-Connect to Microsoft Dataverse using a non-Microsoft model context protocol (MCP) client. This example describes how to connect using Claude.
+You can connect to Microsoft Dataverse using a non-Microsoft model context protocol (MCP) client, such as Claude desktop or Claude Code. There are two approaches for connecting non-Microsoft clients to a Dataverse MCP server:
+
+- **Local proxy**: Use the `@microsoft/dataverse` npm package to run a local proxy that connects to the Dataverse MCP server on your behalf.
+- **Remote endpoint**: Connect directly to the Dataverse MCP server remote endpoint (`/api/mcp`) by registering a custom Microsoft Entra app.
 
 ## Prerequisites
 
-These are the prerequisites for using a Dataverse MCP server with Claude.
+- The Dataverse MCP server must be enabled for the environment. More information: [Configure and manage the Dataverse MCP server for an environment](data-platform-mcp-disable.md#configure-and-manage-the-dataverse-mcp-server)
+- For the local proxy approach: [Node.js](https://nodejs.org/) (version 18 or later) installed on your machine.
+- For the remote endpoint approach: Access to register an application in [Microsoft Entra ID](/entra/identity-platform/quickstart-register-app).
 
-- Enable the Dataverse MCP server for the environment through PPAC settings. More information: [Configure and manage the Dataverse MCP server for an environment](data-platform-mcp-disable.md#configure-and-manage-the-dataverse-mcp-server)
-- A Dataverse connection for the MCP configuration.
-- Install the Dataverse MCP server local proxy.
-- The tenant ID of your Dataverse environment.
+## Connect using the local proxy
+
+The `@microsoft/dataverse` npm package provides a local proxy that handles authentication and communication with the Dataverse MCP server. This approach is recommended for most non-Microsoft MCP clients that can run local MCP servers.
+
+### Grant tenant admin consent
+
+A tenant administrator must grant admin consent for the Dataverse CLI app before users can authenticate. Navigate to the following URL in a browser, replacing `{your-tenant-id}` with your Microsoft Entra tenant ID:
+
+`https://login.microsoftonline.com/{your-tenant-id}/adminconsent?client_id=0c412cc3-0dd6-449b-987f-05b053db9457`
+
+Sign in with a tenant administrator account and accept the permissions prompt. This step only needs to be completed once per tenant.
+
+### Enable the Dataverse CLI client in the Power Platform admin center
+
+Before you can connect using the local proxy, the **Dataverse CLI** client must be enabled as an allowed MCP client in your environment.
+
+1. Go to [Power Platform admin center](https://admin.powerplatform.microsoft.com/). Select **Manage** > **Environments**.
+1. Select the environment where you want to enable the client, and then select **Settings**.
+1. Under **Settings**, select **Product** > **Features**. Scroll down to locate **Dataverse Model Context Protocol** and select **Advanced Settings**.
+1. Locate the **Dataverse CLI** client (app ID `0c412cc3-0dd6-449b-987f-05b053db9457`) and set **Is Enabled** to **Yes**.
+1. Select **Save & Close**.
 
 > [!NOTE]
-> Only Claude desktop is currently supported.
+> If the **Dataverse CLI** entry doesn't appear in the list of available clients, you can add it manually. Create a new client entry with any name and specify the app ID `0c412cc3-0dd6-449b-987f-05b053db9457`, and then enable it.
 
-## Create a Dataverse connection for the MCP configuration
+### Install the local proxy
 
-1. Go to Power Automate. If necessary, change to the correct environment by selecting it from the top right. 
-1. Select **Connections** on the left navigation pane, and then select **+ New connection** on the command bar.
-1. Type Dataverse in the search box, and then select the **Microsoft Dataverse** connector.
-1. Complete the instructions on your screen.
+You can install the `@microsoft/dataverse` package globally or run it directly with `npx`.
 
-   Make a note of the user name in the connection **Name**, this should be the same name that you used to create the environment earlier.
+To install globally, run the following command in a terminal:
 
-1. Select the connection to open it. Paste this URL when you're prompted.
-   `https://make.preprod.powerautomate.com/environments/fb6637eb-601d-e9d2-b7f0-1613fca29e7e/connections?apiName=shared_commondataserviceforapps&connectionName=64244f45b6f045299463becb30bcd9b8`
+```bash
+npm install -g @microsoft/dataverse
+```
 
+Alternatively, you can use `npx` to run the proxy without installing it globally:
 
-## Install the Dataverse MCP server local proxy
+```bash
+npx @microsoft/dataverse mcp https://yourorg.crm.dynamics.com
+```
 
-These steps install the Dataverse MCP server local proxy that is used by the MCP client, such as Claude desktop or VS Code GitHub Copilot.
+> [!TIP]
+> To connect to the preview endpoint (`/api/mcp_preview`) instead of the generally available endpoint (`/api/mcp`), add the `--preview` parameter to the command. For example: `npx @microsoft/dataverse mcp https://yourorg.crm.dynamics.com --preview`. The preview endpoint must be enabled in your environment. More information: [Use preview tools and upcoming features in Dataverse MCP server](data-platform-mcp-preview-tools.md)
 
-1. Install the .NET SDK 8.0 either from download or with this PowerShell command.
+### Configure the local proxy in Claude desktop
 
-   `winget install Microsoft.DotNet.SDK.8`
-1. In a Windows terminal window, run this command to install the Microsoft `PowerPlatform.Dataverse.MCP` local proxy.
+This section describes how to configure the Dataverse MCP server local proxy in Claude desktop. If you haven't already done so, [download and install Claude desktop](https://claude.ai/download).
 
-   `dotnet tool install --global --add-source https://api.nuget.org/v3/index.json Microsoft.PowerPlatform.Dataverse.MCP`
+1. Open Claude desktop and go to **File** > **Settings** > **Developer**.
+1. Select **Edit Config** to open the `claude_desktop_config.json` file.
+1. Add the following JSON snippet to the file. Replace `<friendly name>` with a name you can easily remember (for example, *MyDataverseMCPServer*) and replace `<your org URL>` with your Dataverse environment URL (for example, `https://contoso.crm.dynamics.com`).
 
-## Get the tenant ID of your Dataverse environment
-
-When you configure the Dataverse MCP server for either Claude Desktop or VS Code GitHub, you need to provide the `TenantID` value.
-
-Here’s one way to get tenant ID details:
-
-1. Go to [Power Apps](https://make.powerapps.com).
-1. Select **Settings** (gear icon) on the top right, and then select **Session details**.
-1. Copy the value of the **Tenant ID** from the **Power Apps session details** to the Windows clipboard. Make a note of this GUID because it's used in the configuration steps later.
-
-## Configure and use the Dataverse MCP server in Claude
-
-Claude AI is a large language model (LLM) and chatbot developed by Anthropic. It excels at natural language processing and is multimodal, meaning it can process text, audio, and visual inputs. Claude can answer questions, summarize documents, generate text, and even create diagrams, animations, and code.
-
-### Download Claude desktop
-
-If you haven't already done so, [download and install Claude desktop](https://claude.ai/download).
-
-After you have Claude desktop installed, you can find and launch Claude from your desktop.
-
-### Configure Dataverse MCP server in Claude desktop
-
-1. Open Claude desktop and go to **File** > **Settings**.
-1. If you haven't configured any MCP servers for Claude desktop previously, you observe a **Settings** dialog. Select **Edit Config**.
-1.	The Claude desktop files displays. Open the `claude_desktop_config.json` file with your favorite JSON editor.
-1. Replace &lt;connection URL&gt; and &lt;Tenant Id&gt; with your [connection URL](#create-a-dataverse-connection-for-the-mcp-configuration) and [tenant ID](#get-the-tenant-id-of-your-dataverse-environment) and paste the JSON snippet into the appropriate section of the file.
-   More information: [Create a Dataverse connection for the MCP configuration](#create-a-dataverse-connection-for-the-mcp-configuration) and [Get the tenant ID of your Dataverse environment](#get-the-tenant-id-of-your-dataverse-environment)
-
-   Use a &lt;friendly name&gt; for your Dataverse MCP server that you can easily remember, for example: *MyDataverseMCPServer*.
-
-```json
-{
+   ```json
+   {
      "mcpServers": {
-    "<friendly name>": {
-      "command": "Microsoft.PowerPlatform.Dataverse.MCP",
-      "args": [
-        "--ConnectionUrl",
-        "<URL for Dataverse connection>",
-        "--MCPServerName",
-        "DataverseMCPServer",
-        "--TenantId",
-        "<Tenant Id GUID>",
-        "--EnableHttpLogging",
-        "true",
-        "--EnableMsalLogging",
-        "false",
-        "--Debug",
-        "false",
-        "--BackendProtocol",
-        "HTTP"
+       "<friendly name>": {
+         "command": "npx",
+         "args": [
+           "-y",
+           "@microsoft/dataverse",
+           "mcp",
+           "<your org URL>"
          ]
        }
      }
    }
+   ```
+
+1. Save the file.
+
+#### Verify the connection in Claude desktop
+
+1. Exit Claude desktop by selecting **File** > **Exit**, and then reopen it to apply the changes.
+1. Sign in with your credentials when prompted to authenticate to your Dataverse environment.
+1. Select **Search and tools** to verify that the Dataverse MCP server and its tools are available. You should see the friendly name you configured (for example, *MyDataverseMCPServer*).
+1. Select the MCP server name to view the list of tools that are supported by the server.
+
+> [!TIP]
+> You can enable and disable individual tools for each MCP server registered with Claude desktop. This gives you control over which tools are available for use.
+
+### Configure the local proxy in Claude Code
+
+This section describes how to configure the Dataverse MCP server local proxy in Claude Code. If you haven't already done so, [download and install Claude Code](https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview).
+
+Run the following command to add the Dataverse MCP server. Replace `https://yourorg.crm.dynamics.com` with your Dataverse environment URL.
+
+```bash
+claude mcp add dataverse -t stdio -- npx -y @microsoft/dataverse mcp https://yourorg.crm.dynamics.com
 ```
 
-5. Save this file and go back to Claude desktop.
- 
-### Verify and interact with the connection in Claude desktop
+### Verify and interact with the connection in Claude Code
 
-1. Restart Claude desktop and ensure that the changes take effect. Select **File** > **Exit**.
-1. Open Claude desktop now that the Dataverse MCP server configuration is completed from the previous step. You need to use your credentials to sign in to your Dataverse environment.
-1. Verify that you can view the Dataverse MCP server and the tools by selecting **Search and tools**. You should be able to observe your friendly name of Dataverse MCP server, *MyDataverseMCPServer* for example.
-   :::image type="content" source="media/data-platform-mcp/claude-connected-data-platform.png" alt-text="Verify Claude desktop connection with Dataverse":::
-1. Selecting the MCP server (*MyDataverseMCPServer*) allows you to view the list of tools, supported by that MCP server.
+1. Restart Claude Code to apply the changes.
+1. Sign in with your credentials when prompted to authenticate to your Dataverse environment.
+1. Verify that the Dataverse MCP server and its tools are available. You should see the friendly name you configured (for example, *MyDataverseMCPServer*).
+1. Select the MCP server name to view the list of tools that are supported by the server.
 
-> [!TIP]
-> You can enable and disable individual tools for each MCP server registered with Claude. This gives you control over what tools to use.
-
-#### Interact with Dataverse MCP server in Claude desktop
-
-If you have data in the Dataverse environment, you can start testing your setup by asking *list tables in Dataverse*, *describe table account*, or *how many accounts do I have*, and so on. More information: [Add and remove sample data](/power-platform/admin/add-remove-sample-data)
+If you have data in the Dataverse environment, you can test the setup by asking *list tables in Dataverse*, *describe table account*, or *how many accounts do I have*. More information: [Add and remove sample data](/power-platform/admin/add-remove-sample-data)
 
 > [!TIP]
-> If you have other MCP servers registered with Claude, it’s best to add in Dataverse in your prompt to be specific about which MCP server you’d like to use.
+> If you have other MCP servers registered with Claude Code, include *Dataverse* in your prompt to specify which MCP server to use.
+
+## Connect using the remote endpoint
+
+You can connect non-Microsoft MCP clients directly to the Dataverse MCP server remote endpoint without using a local proxy. This approach requires you to register a custom application in Microsoft Entra ID and add its client ID to the allowed clients list in the Power Platform admin center.
+
+### Register a custom Microsoft Entra app
+
+Register an application in Microsoft Entra ID to use for authentication when connecting to the Dataverse MCP server. For general information about app registration, go to [Register an application with the Microsoft identity platform](/entra/identity-platform/quickstart-register-app).
+
+Follow these steps to register an app for use with the Dataverse MCP server:
+
+1. Sign in to the [Microsoft Entra admin center](https://entra.microsoft.com/).
+1. Go to **Identity** > **Applications** > **App registrations**, and then select **New registration**.
+1. Enter a name for your application (for example, *Dataverse MCP Client*), configure the supported account types for your scenario, and then select **Register**.
+1. On the **Overview** page, note the **Application (client) ID**. You need this value to configure the allowed client in the Power Platform admin center and to configure your MCP client.
+
+### Configure API permissions for the Dataverse MCP server
+
+After you register the app, you must grant it permissions to access the Dataverse MCP server.
+
+1. In the app registration, select **API permissions** from the left navigation pane.
+1. Select **Add a permission**.
+1. Select **Microsoft APIs**, and then select **Dynamics CRM**.
+1. Select the **mcp.tools** permission, and then select **Add permissions**.
+
+> [!NOTE]
+> The authentication flow used by the Entra app depends on the MCP client you're using. Refer to your MCP client's documentation for the supported authentication methods.
+
+### Add the custom app to the allowed clients list
+
+After you register the Entra app, add its client ID to the list of allowed MCP clients for your environment.
+
+1. Go to [Power Platform admin center](https://admin.powerplatform.microsoft.com/). Select **Manage** > **Environments**.
+1. Select the environment where you want to allow the client, and then select **Settings**.
+1. Under **Settings**, select **Product** > **Features**. Scroll down to locate **Dataverse Model Context Protocol** and select **Advanced Settings**.
+1. Add a new client entry. Enter a name for the client and specify the **Application (client) ID** from your Entra app registration.
+1. Set **Is Enabled** to **Yes**.
+1. Select **Save & Close**.
+
+### Connect to the remote endpoint
+
+Configure your MCP client to connect to the Dataverse MCP server at the following URL:
+
+`https://<your org URL>/api/mcp`
+
+For example: `https://contoso.crm.dynamics.com/api/mcp`
+
+Use the **Application (client) ID** from your Entra app registration for authentication. Refer to your MCP client's documentation for specific configuration steps.
 
 ## Related articles
 

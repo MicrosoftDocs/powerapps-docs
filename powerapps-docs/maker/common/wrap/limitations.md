@@ -1,13 +1,13 @@
 ---
 title: Advantages and limitations of Wrap
 description: Learn about advantages and limitations of Wrap
-author: komala2019
+author: Murugesh1985
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: smurkute
 ms.date: 02/04/2025
 ms.subservice: canvas-maker
-ms.author: koagarwa
+ms.author: murugeshs
 search.audienceType: 
   - maker
 ---

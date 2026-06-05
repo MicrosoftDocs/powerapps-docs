@@ -1,9 +1,9 @@
 ---
 title: "Creating side panes by using a client API in model-driven apps" 
-description: Learn how to create side panes in model-driven apps by using a client API.
+description: "Learn how to create and manage side panes in model-driven apps using client APIs. Discover how to display views, records, and web resources with examples."
 author: sriharibs-msft
 ms.author: srihas
-ms.date: 01/27/2023
+ms.date: 03/27/2026
 ms.reviewer: jdaly
 ms.subservice: mda-developer
 ms.topic: concept-article
@@ -69,9 +69,9 @@ Xrm.App.sidePanes.createPane({
 > [!div class="mx-imgBorder"] 
 > ![Screenshot showing a Products table with a list of products that can be reserved.](../media/app-side-panes-example-2.png "Example 2")
 
-### Showing a table row
+### Show a table row
 
-This example shows how to display a row in the side pane. A reservation row is opened in a side pane where the default header is hidden and the width is customized to 600 pixels.
+This example shows how to display a row in the side pane. The reservation row opens in a side pane where the default header is hidden and the width is set to 600 pixels.
 
 ```javascript
 Xrm.App.sidePanes.createPane({
@@ -92,9 +92,9 @@ Xrm.App.sidePanes.createPane({
 > [!div class="mx-imgBorder"] 
 > ![Screenshot showing an Active Reservations list opened to an individual record.](../media/app-side-panes-opening-record.png "Open record")
 
-### Showing a web resource
+### Show a web resource
 
-This example shows how to display a webresource in the side pane. A custom html page is opened in a side pane where the default header is visible & close button is hidden.
+This example shows how to display a web resource in the side pane. A custom HTML page opens in a side pane where the default header is visible and the close button is hidden.
 
 ```javascript
 Xrm.App.sidePanes.createPane({
@@ -140,9 +140,9 @@ In addition to creating side panes and showing rows or views within the side pan
 
 ### Use with Xrm.App.panels.loadPanel
 
-The [Xrm.Panels.loadPanel](reference/Xrm-Panel/loadPanel.md) API is being replaced with [Xrm.App.sidePanes.createPane](reference/Xrm-App/Xrm-App-sidePanes/createPane.md) because the former only supports a single pane while the latter supports multiple panes. To enable transitioning from `loadPanel` to `createPane`, the two can work together with some limitations. If only `loadPanel` is used within a model-driven app, then the experience remains the same. However if both `loadPanel` and `createPane` are used, the first limitation is that a placeholder icon is shown for the `loadPanel`. The second limitation is that when the user switches from the `loadPanel` to the `createPane`, the `loadPanel` content is unloaded to save memory and is reloaded on switch back without the state. This tab switch behavior is the same used within the multi-session app mode to manage the memory used by the app. Most page types restore correctly however when an external site or web resource is opened the state isn't restored.
+The [Xrm.Panels.loadPanel](reference/Xrm-Panel/loadPanel.md) API is being replaced by [Xrm.App.sidePanes.createPane](reference/Xrm-App/Xrm-App-sidePanes/createPane.md) because the former only supports a single pane while the latter supports multiple panes. To enable transitioning from `loadPanel` to `createPane`, the two APIs can work together with some limitations. If you use only `loadPanel` within a model-driven app, the experience remains the same. However, if you use both `loadPanel` and `createPane`, the first limitation is that a placeholder icon appears for the `loadPanel`. The second limitation is that when the user switches from the `loadPanel` to the `createPane`, the app unloads the `loadPanel` content to save memory and reloads it on switch back without the state. This tab switch behavior is the same behavior used within the multi-session app mode to manage the memory used by the app. Most page types restore correctly. However, when an external site or web resource is opened, the state isn't restored.
 
-By switching to use `createPane`, both limitations can be avoided by providing an icon and by enabling `alwaysRender`. The `alwaysRender` keeps the pane content when the user switches but does take more memory so should be used sparingly.
+By switching to use `createPane`, you can avoid both limitations by providing an icon and by enabling `alwaysRender`. The `alwaysRender` keeps the pane content when the user switches but does take more memory so use it sparingly.
 
 ### Related articles
 

@@ -5,7 +5,7 @@ keywords: App designer; site map designer; my apps
 author: Mattp123
 ms.subservice: mda-maker
 ms.author: matp
-ms.date: 01/28/2025
+ms.date: 04/06/2026
 ms.topic: how-to
 applies_to: 
   - PowerApps
@@ -16,23 +16,21 @@ search.audienceType:
 ---
 # Steps to building a model-driven app
 
-This page describes the steps associated with building a model-driven app in Power Apps.
-
-## Steps to building and sharing a model driven app
+This article describes the steps for building a model-driven app in Power Apps.
 
 At a fundamental level, model-driven app making consists of the following stages.
 
 |Stage|Purpose|
 |-----|-------|
 |Modeling business data| To ensure that the data is constructed in the correct way to address the business problem.
-|Defining business processes| To help users to update the tables and complete their work efficiently and accurately.
-| Composing the app|To create the app and select the tables, and elements of tables relevant to the app.
+|Defining business processes| To help users update the relevant tables and complete their work efficiently and accurately.
+| Composing the app|To create the app and select tables, and elements of tables, that are relevant to the app.
 |Configuring security roles| To ensure that app users can only interact with data relevant to their roles.
 |Sharing the app|App distribution.
 
-Each stage requires a range of [editors](model-driven-designers.md) to ensure that the application can be created, whether the app maker is updating the data model, or going through the process of composing the app.
+Each stage requires a range of [designers and editors](model-driven-designers.md) to ensure that the application can be created, whether the app maker is updating the data model or going through the process of composing the app.
 
-While it might seem strange to have multiple editors, these reflect the various technologies that have been brought to bear within Microsoft Dataverse. Often makers move seamlessly through the editors to construct the app.
+While it might seem strange to have multiple designers or editors, these tools reflect the various technologies that have been brought to bear within Microsoft Dataverse. Often makers move seamlessly through the editors to construct the app.
 
 For a simple walk-through of building a first app, go to [building a first model-driven app](build-first-model-driven-app.md).
 
@@ -47,28 +45,26 @@ To model business data, you determine what data your app needs and how that data
 
 ## Defining business processes
 
-Defining and enforcing consistent business processes is an important aspect of model-driven app design. However, it should be noted that it's possible to create a model-driven app without a business process configured around it.
+Defining and enforcing consistent business processes is an important aspect of model-driven app design. However, you can create a model-driven app without a business process configured around it.
 
-Nevertheless, consistent processes help make sure your app users focus on their work and not on remembering to perform a set of manual steps. These processes can be simple or complex and can contain operations on multiple tables.
+Consistent processes help ensure your app users focus on their work and not on remembering to perform a set of manual steps. These processes can be simple or complex and can contain operations on multiple tables.
 
 The screenshot here illustrates the impact of having a business process flow in place.
 
 :::image type="content" source="../../user/media/business-process.png" alt-text="Sample model-driven app with business process flow" lightbox="../../user/media/business-process.png":::
 
-Business process flows are created and configured using Power Automate.  
+Business process flows are created and configured using the business process flow designer.  
 
 More information: [Business process flows overview](/power-automate/business-process-flows-overview) and [Apply business logic with Microsoft Dataverse](../data-platform/processes.md).
 
 ## Composing the model-driven app
 
-After you create a data model and define business processes where necessary, the app can be built.
+After you create a data model and define business processes where necessary, you can build the app.
 
-This is done by building an app using the modern editors.
+This is done by building an app using the modern designers and editors.
 
-With the modern editors (also known as designers), makers can see the effects of the changes that they make while designing, whereas with the legacy interfaces there was a level of abstraction between the final user experience and the design experience.
-More information:
-
-[Learn how to build a modern app](build-first-model-driven-app.md)
+With the modern designers and editors, makers can see the effects of the changes that they make while designing, whereas with the legacy interfaces there was a level of abstraction between the final user experience and the design experience.
+More information: [Learn how to build a modern app](build-first-model-driven-app.md)
 
 When you build an app, a [site map](model-driven-app-glossary.md#site-map) is created, defining the navigation experience for users. With the modern app designer, this is a part of the app design process.
 

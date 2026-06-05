@@ -49,7 +49,7 @@ You can download the sample component from [PowerApps-Samples/component-framewor
 [Download sample components](https://github.com/microsoft/PowerApps-Samples/blob/master/component-framework/README.md)   
 [How to use the sample components](../use-sample-components.md)   
 [Power Apps component framework API reference](../reference/index.md)   
-[Style components with modern theming (Preview)](../../component-framework/fluent-modern-theming.md)   
+[Style components with modern theming](../../component-framework/fluent-modern-theming.md)   
 [Theming reference](../reference/theming.md)   
 [Use modern themes in canvas apps (preview)](../../../maker/canvas-apps/controls/modern-controls/modern-theming.md)   
 [Overview of modern controls and themes in canvas apps](../../../maker/canvas-apps/controls/modern-controls/overview-modern-controls.md)   

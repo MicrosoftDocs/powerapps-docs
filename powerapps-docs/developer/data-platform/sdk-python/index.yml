@@ -1,18 +1,19 @@
 ### YamlMime:Landing
 
-title: "Dataverse SDK for Python (preview) documentation"
-summary: Enables data scientists and developers to create, access, and manager Dataverse business data using Python programming. The Dataverse SDK for Python implements common Python programming paradigms and best practices, provides a more natural Python interface to Dataverse.
+title: "Dataverse SDK for Python documentation"
+summary: "Enables data scientists and developers to create, access, and manage Dataverse business data using Python programming. The Dataverse SDK for Python implements common Python programming paradigms and best practices, provides a more natural Python interface to Dataverse."
 
 metadata:
-  title: Dataverse SDK for Python (preview) documentation
-  description: Provides access to highlighted areas within the Dataverse SDK for Python (preview) documentation
+  title: Dataverse SDK for Python documentation
+  description: Provides access to highlighted areas within the Dataverse SDK for
+    Python documentation
   ms.service: powerapps
   ms.subservice: dataverse-developer
   ms.topic: landing-page
   ms.collection: collection
   author: phecke
   ms.author: pehecke
-  ms.date: 10/20/2025
+  ms.date: 05/28/2026
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -39,6 +40,14 @@ landingContent:
         links:
           - text: "Work with data"
             url: work-data.md
+          - text: "Query data"
+            url: query.md
+          - text: "Customize tables and columns"
+            url: metadata.md
+          - text: "Manage table relationships"
+            url: relationships.md
+          - text: "Asynchronous client operations"
+            url: async-client.md
 
   # Card
   - title: Reference
@@ -46,6 +55,6 @@ landingContent:
       - linkListType: reference
         links:
           - text: Table (entity) reference
-            url:  xref:Microsoft.Dynamics.CRM.EntityTypeIndex
+            url: xref:Microsoft.Dynamics.CRM.EntityTypeIndex
           - text: SDK package reference
             url: /python/api/dataverse-sdk-docs-python/dataverse-overview?view=dataverse-sdk-python-latest

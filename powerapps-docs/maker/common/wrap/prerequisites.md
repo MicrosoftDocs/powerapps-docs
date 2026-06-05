@@ -1,13 +1,13 @@
 ---
 title: System requirements and prerequisites for Wrap
 description: Learn about system requirements and other prerequisites for wrap.
-author: komala2019
+author: Murugesh1985
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: smurkute
 ms.date: 07/09/2025
 ms.subservice: canvas-maker
-ms.author: koagarwa
+ms.author: murugeshs
 search.audienceType: 
   - maker
 ---

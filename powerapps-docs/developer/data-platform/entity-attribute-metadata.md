@@ -221,7 +221,7 @@ The Web API provides a RESTful style for querying choice values. You can retriev
 
 With the Web API, you can also use the [RetrieveMetadataChanges Function](xref:Microsoft.Dynamics.CRM.RetrieveMetadataChanges).
 
-More information: [Query table definitions using the Web API > Retrieving attributes](webapi/query-metadata-web-api.md#retrieving-attributes)
+More information: [Query table definitions using the Web API > Retrieve attributes](webapi/query-metadata-web-api.md#retrieve-attributes)
 
 ## Column mapping
 

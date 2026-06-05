@@ -1,7 +1,7 @@
 ---
 title: "Work with data using code in Microsoft Dataverse (PowerApps) | Microsoft Docs" 
 description: "Microsoft Dataverse provides web services and APIs that you can use to interact with your data."
-ms.date: 11/18/2025
+ms.date: 03/30/2026
 ms.reviewer: pehecke
 ms.topic: article
 author: MsSQLGirl
@@ -51,7 +51,7 @@ If you're using our [PowerShell module](https://www.powershellgallery.com/packag
 
 ### SDK for Python
 
-If you are working with Python, we recommend using our [SDK for Python](./sdk-python/overview.md). The SDK enables data scientists and developers to create, access, and manager Dataverse business data using Python programming. The Dataverse SDK for Python implements common Python programming paradigms and best practices, provides a more natural Python interface to Dataverse, and supports community contributions.
+If you are working with Python, we recommend using our [SDK for Python](./sdk-python/overview.md). The SDK enables data scientists and developers to create, access, and manage Dataverse business data using Python programming. The Dataverse SDK for Python implements common Python programming paradigms and best practices, provides a more natural Python interface to Dataverse, and supports community contributions.
 
 More information: [Getting started](./sdk-python/get-started.md)
 
@@ -75,7 +75,7 @@ Search has a native endpoint and there are Dataverse messages that you can use f
 
 The [Power Query Dataverse connector](/power-query/connectors/dataverse) uses the Dataverse Tabular Data Stream (TDS) endpoint to retrieve data using [Dataverse SQL](how-dataverse-sql-differs-from-transact-sql.md), a subset of Transact-SQL.
 
-[Retrieving data using SQL Management Studio (SSMS)](dataverse-sql-query.md#sql-server-management-studio-preview) is a preview feature.
+[Retrieving data using SQL Management Studio (SSMS)](dataverse-sql-query.md#sql-server-management-studio) is a preview feature.
 
 [Learn to use SQL to query data](dataverse-sql-query.md)
 

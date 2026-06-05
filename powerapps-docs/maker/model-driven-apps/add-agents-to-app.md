@@ -1,7 +1,7 @@
 ---
 title: "Add agents to your model-driven app" 
 description: Learn how to add agents to your model-driven app in Power Apps.
-ms.date: 02/10/2026
+ms.date: 04/02/2026
 ms.reviewer: matp
 ms.topic: how-to
 author: HemantGaur
@@ -15,6 +15,10 @@ search.audienceType:
 # Add agents to your model-driven app (preview)
 
 [!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
+
+> [!IMPORTANT]
+>
+> Starting May 1st, 2026, agent feed only supports agents that use the Power Apps MCP Server to create tasks. Ensure your agents are properly onboarded to the [Power Apps MCP server](power-apps-mcp-server.md) by then to continue using the agent feed. If your agents don't use the Power Apps MCP Server, the agent feed doesn't appear in you model-driven app. More information: [Onboard your agent feed to use the Power Apps MCP server](power-apps-mcp-server.md#onboard-your-agent-to-use-the-power-apps-mcp-server)
 
 Model-driven apps support the use of agents to enhance user productivity and automate tasks. There are two types of agents available in model-driven apps: 
 
@@ -80,18 +84,19 @@ MCP is an open protocol that enables seamless integration between large language
 1. Search for **Power Apps MCP Server** and select it.
    :::image type="content" source="media/add-agents-to-app/copilot-studio-power-apps-mcp-server.png" alt-text="Find and select Power apps MCP server":::
 1. Select **Add and configure** to connect the agent to Power Apps MCP tools.
-   :::image type="content" source="media/add-agents-to-app/copilot-studio-configure-power-apps-mcp-server.png" alt-text="Add and configure Power Apps MCP server":::  
-
+   :::image type="content" source="media/add-agents-to-app/copilot-studio-configure-power-apps-mcp-server.png" alt-text="Add and configure Power Apps MCP server":::
+1. In the details section, change the **Credentials to use** field to *Maker-provided credentials* to enable the MCP Server to initialize autonomously via a trigger. Go to [Control maker-provided credentials for authentication](/microsoft-copilot-studio/configure-no-maker-authentication#scope-of-enforcement-and-experience) for more details if this option is disabled.
+   :::image type="content" source="media/add-agents-to-app/copilot-studio-configure-maker-credentials.png" alt-text="Credentials to use for Power Apps MCP server":::  
 1. Notice the tools available to use with your agent. You can select to enable the tools you want. For information about these tools go to [Work with Power Apps MCP server](power-apps-mcp-server.md). 
    :::image type="content" source="media/add-agents-to-app/copilot-studio-configure-power-apps-mcp-tools.png" alt-text="Power apps MCP server tools available.":::
 1. Add a trigger for this autonoumous agent so that it is invoked when the trigger is fired. In this example, the trigger **When a row is added, modified, or deleted** is selected for the Dataverse **Booking** table.
     :::image type="content" source="media/add-agents-to-app/copilot-studio-power-apps-agent-trigger.png" alt-text="Add trigger to automomous agent":::
 
-The agent is ready to use the Power Apps MCP server tools. This image shows how the agent can add a task for human review using natural language instructions. Internally, the task invoked maps to the Power Apps MCP server `tp log_for_review` tool.
+The agent is ready to use the Power Apps MCP server tools. This image shows how the agent can add a task for human review using natural language instructions. Internally, the task invoked maps to the Power Apps MCP server `log_for_review` tool.
 
 :::image type="content" source="media/add-agents-to-app/copilot-studio-power-apps-agent-instructions.png" alt-text="Instructions read: When the agent is triggered, create a task for human review. Use the Booking Reference as the review item title with Review Booking":::
 
-When a new booking record is created, it triggers the agent, which adds the review task in the agent feed **Completed** tab.
+When a new booking record is created, it triggers the agent, which adds the review task in the agent feed **Completed** tab. Note that all tasks created by the `log_for_review` tool are created as "Completed" items intended for passive supervision of agent activity.
 
 :::image type="content" source="media/add-agents-to-app/copilot-studio-power-apps-agent-instructions-result.png" alt-text="Review task created by automomous agent":::
 

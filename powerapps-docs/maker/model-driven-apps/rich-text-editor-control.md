@@ -1,7 +1,7 @@
 ---
 title: Add the rich text editor control to a model-driven app
 description: Learn how to add and customize the rich text editor control in Power Apps model-driven apps to create and edit formatted text.
-ms.date: 09/25/2025
+ms.date: 04/07/2026
 ms.update-cycle: 180-days
 ms.topic: how-to
 ms.author: saperlmu
@@ -56,7 +56,7 @@ The modern text editor is designed to align with the familiar and intuitive inte
 
 ### Add the rich text editor control to a text column
 
-You can also create a column for a table that uses the rich text editor control. The following steps show you how to create a text column that can later be added to a form for a model-driven app.
+You can also create a column for a table that uses the rich text editor control. The following steps show you how to create a text column that you can later add to a form for a model-driven app.
 
 1. Sign in to [Power Apps](https://make.powerapps.com/).
 1. In the left navigation pane, select **Solutions**.
@@ -76,17 +76,17 @@ Power Apps allows you to change the properties of the rich text editor control t
 
 ### Levels of customization
 
-Up to three levels, or layers, of configuration can be applied to customize the rich text editor:
+You can apply up to three levels, or layers, of configuration to customize the rich text editor:
 
 1. At the most fundamental level, every instance of the control takes its configuration from the file `RTEGlobalConfiguration_Readonly.json`. The file is read-only, so you can't change these properties directly.
    
-    > [!Note]
-    > RTEGlobalConfiguration.json doesn't apply to email, knowledge articles, email templates, and signatures.
+    > [!NOTE]
+    > `RTEGlobalConfiguration.json` doesn't apply to email, knowledge articles, email templates, and signatures.
     
 1. At the next level, every instance of the control takes its configuration from the properties in the file `RTEGlobalConfiguration.json`, if any are present. This configuration is layered on top of the previous one, so the properties in this file *replace* the same named properties in the read-only file.
 1. Finally, at the highest level, a specific instance of the control takes its configuration from a specific configuration file, if one exists. This configuration is layered on top of the previous one, so the properties in this file *replace* the same named properties in the two lower-level files.
 
-We have to add a slight qualification here. The system doesn't replace *all* properties with those in a higher-level configuration. The `extraPlugins` properties are merged to allow the use of a wide range of external and out-of-the-box plug-ins in the default configuration. That lets you activate and deactivate plug-ins as needed in the configuration file for specific instances of the control.
+The system doesn't replace *all* properties with those in a higher-level configuration. The `extraPlugins` properties merge to allow the use of a wide range of external and out-of-the-box plug-ins in the default configuration. This merge operation lets you activate and deactivate plug-ins as needed in the configuration file for specific instances of the control.
 
 ### Customize a specific instance of the rich text editor
 
@@ -94,7 +94,7 @@ We have to add a slight qualification here. The system doesn't replace *all* pro
 
     The file `RTEGlobalConfiguration.json` contains the rich text editor's default, or global, configuration. If you're customizing the control in, say, a contact form, you might name the file something like `RTEContactFormConfiguration.json`.
 
-2. Copy and paste the following code snippet in the file:
+1. Copy and paste the following code snippet into the file:
 
 ```JSONCopy
 {
@@ -276,7 +276,7 @@ Set these [`defaultSupportedProps` properties](#defaultsupportedprops) in your [
 
 ### Make the Enter key insert a new line instead of a paragraph block
 
-By default, pressing the Enter key creates a paragraph block with the **\<p>** HTML tag. HTML uses paragraph blocks to group information, like paragraphs in a Word document. Browsers can format the **\<p>** tag slightly different, so for visual consistency, you might want to use the new line or line break tag **\<br\\>**  tag instead.
+By default, pressing the Enter key creates a paragraph block with the **\<p>** HTML tag. HTML uses paragraph blocks to group information, like paragraphs in a Word document. Browsers can format the **\<p>** tag slightly differently, so for visual consistency, you might want to use the new line or line break tag **\<br\\>** tag instead.
 
 Set this [`defaultSupportedProps` property](#defaultsupportedprops) in your [configuration file](#levels-of-customization). Follow this value with a comma (`,`) unless it's the last property in the file.
 
@@ -361,7 +361,7 @@ Set these [`defaultSupportedProps` properties](#defaultsupportedprops) in your [
 
 ### Fix the height of the editor at 500 pixels
 
-Set these [`defaultSupportedProps` properties](#defaultsupportedprops) in your [configuration file](#levels-of-customization). Each value except the last one must be followed by a comma.
+Set these [`defaultSupportedProps` properties](#defaultsupportedprops) in your [configuration file](#levels-of-customization). Each value, except the last one, must be followed by a comma.
 
 ```json
 "removePlugins": [ "autogrow" ],
@@ -457,8 +457,8 @@ When using the rich text editor, consider the limitations listed in this section
 Rich text editor limitations include the following:
 
 - You can't use rich text editor content from any external sources like Microsoft Word, Excel, and so forth.
-- The following file types for attachments are supported out of the box: .aac, .avi, .csv, .doc, .docx, .gif, .html, .jpeg, .mid, .midi, .mp3, .mp4, .mpeg, .msg, .pdf, .png, .ppt, .pptx, .svg, .txt, .vsd, .wav, .xls, .xlsm, and .xlsx. You can configure the allowed extensions for your environment in your advanced settings by going to **Administration** > **General** > **Set blocked file extensions for attachments** and removing the extensions you want to allow.
-- Non-Microsoft plugins aren't supported.
+- The rich text editor supports the following file types for attachments: .aac, .avi, .csv, .doc, .docx, .gif, .html, .jpeg, .mid, .midi, .mp3, .mp4, .mpeg, .msg, .pdf, .png, .ppt, .pptx, .svg, .txt, .vsd, .wav, .xls, .xlsm, and .xlsx. You can configure the allowed extensions for your environment in your advanced settings by going to **Administration** > **General** > **Set blocked file extensions for attachments** and removing the extensions you want to allow.
+- The rich text editor doesn't support non-Microsoft plugins.
 
 Email templates and signatures:
 
@@ -512,7 +512,7 @@ The following HTML attributes are either no longer supported or are replaced by 
 
 ## Frequently asked questions
 
-### Why are typed characters slow to display?
+### Why do typed characters display slowly?
 
 If you have a lot of content in the editor, the response time can increase. Keep the content to 1 MB or less for the best performance. Spelling or grammar checks can also slow the typing performance.
 
@@ -541,7 +541,7 @@ window.top.addEventListener('rteEditorReady', (event) => {
     }
 }, { once: true });
 ```
-In this example, the event listener is automatically removed after the rteEditorReady event is triggered. This ensures the listener runs only once, helping to prevent memory leaks and unnecessary resource usage.
+In this example, the event listener is automatically removed after the `rteEditorReady` event triggers. This approach ensures the listener runs only once, helping to prevent memory leaks and unnecessary resource usage.
 
 ### Why can't I upload an image? Why does the image preview fail to load?
 
@@ -549,7 +549,7 @@ If the image file name, including the path, is long, the file might fail to uplo
 
 ### Why do I see HTML in my text?
 
-If the rich text editor control is used in a column that isn't formatted for rich text, the content appears in the underlying HTML instead of as formatted text.
+If you use the rich text editor control in a column that isn't formatted for rich text, the content appears in the underlying HTML instead of as formatted text.
 
 ### What's the size limit of HTML content?
 
@@ -559,11 +559,11 @@ For the best performance, keep your HTML content to 1 MB or less. At larger size
 
 To resolve this issue, make sure the [format of the column is set to **Rich text**](#add-the-rich-text-editor-control-to-a-text-column).
 
-### I’ve exceeded the character limit but there are fewer characters than the limit. Why?
+### I exceeded the character limit but there are fewer characters than the limit. Why?
 
 The database stores the entire HTML formatting, not just the characters, which takes up extra space.
 
-### Why am I not seeing the modern rich text editor?
+### Why don't I see the modern rich text editor?
 
 The modern rich text editor control is part of the **New look for model-driven apps** and doesn’t appear unless the [app setting](app-properties.md) is turned on. Without the setting enabled, you might see an older version of the editor.
 

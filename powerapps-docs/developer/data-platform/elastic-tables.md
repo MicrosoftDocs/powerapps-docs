@@ -1,6 +1,6 @@
 ---
-title: Elastic tables for developers
-description: This article provides information to developers about Dataverse elastic tables and how to use elastic tables using code.
+title: "Elastic Tables for Developers"
+description: Learn how to use Dataverse elastic tables for horizontal scaling and high throughput. Includes code examples and best practices for developers.
 ms.topic: article
 ms.date: 12/04/2023
 author: MsSQLGirl
@@ -13,9 +13,9 @@ contributors:
 
 # Elastic tables for developers
 
-Dataverse elastic tables are powered by Azure Cosmos DB. They automatically scale horizontally to handle large amounts of data and high levels of throughput with low latency. Elastic tables are suitable for applications that have unpredictable, spiky, or rapidly growing workloads.
+Dataverse elastic tables use Azure Cosmos DB. They automatically scale horizontally to handle large amounts of data and high levels of throughput with low latency. Elastic tables work well for applications that have unpredictable, spiky, or rapidly growing workloads.
 
-This article focuses on information that developers need to know about using elastic tables. For more information about the capabilities of elastic tables and what is supported, go to [Create and edit elastic tables](../../maker/data-platform/create-edit-elastic-tables.md).
+This article focuses on information that developers need to know about using elastic tables. For more information about the capabilities of elastic tables and what is supported, see [Create and edit elastic tables](../../maker/data-platform/create-edit-elastic-tables.md).
 
 ## When to use elastic tables
 
@@ -35,7 +35,7 @@ Use standard tables in these situations:
 
 A combination of elastic and standard tables might be appropriate for your data and your application.
 
-For more information about differences in the modeling of elastic tables, go to:
+For more information about differences in the modeling of elastic tables, see:
 
 - [Adding columns](create-elastic-tables.md#adding-columns)
 - [Alternate keys](create-elastic-tables.md#alternate-keys)
@@ -48,25 +48,25 @@ Elastic tables use Azure Cosmos DB partitioning to scale individual tables to me
 Azure Cosmos DB ensures that the rows in a table are divided into distinct subsets, based on the value of the `partitionid` column for each row. These subsets are called [logical partitions](/azure/cosmos-db/partitioning-overview#logical-partitions).
 
 > [!IMPORTANT]
-> To get the best performance that is available with elastic tables, you must choose and consistently apply a partitioning strategy. If you don't set a `partitionid` value for each row, the value will remain null, and you won't be able to change it later.
+> To get the best performance that is available with elastic tables, choose and consistently apply a partitioning strategy. If you don't set a `partitionid` value for each row, the value remains null, and you can't change it later.
 > 
 > If you use a custom `partitionid` value, the primary key value doesn't have a unique constraint. In other words, you can create multiple records that have the same primary key but different `partitionid` values. It's important to understand that unique references for elastic tables are a combination of the primary key and the `partitionid` value.
 
 ### Choosing a partitionid value
 
-The `partitionid` value that you should use depends on the nature of your data. A logical partition in an elastic table consists of a set of rows that have the same `partitionid` value. For example, in a table that contains data about different products, you can use the product category as the `partitionid` value for the table. In this case, groups of items that have specific values for the product category, such as `Clothing`, `Books`, `Electronic Appliances`, and `Pet supplies`, form distinct logical partitions.
+The `partitionid` value that you use depends on the nature of your data. A logical partition in an elastic table consists of a set of rows that have the same `partitionid` value. For example, in a table that contains data about different products, you can use the product category as the `partitionid` value for the table. In this case, groups of items that have specific values for the product category, such as `Clothing`, `Books`, `Electronic Appliances`, and `Pet supplies`, form distinct logical partitions.
 
-Dataverse transparently and automatically manages logical partitions that are associated with a table. There is no limit on the number of logical partitions that you can have in a table. In addition, there is no risk that a logical partition will be deleted if its underlying rows are deleted.
+Dataverse transparently and automatically manages logical partitions that are associated with a table. There's no limit on the number of logical partitions that you can have in a table. In addition, there's no risk that a logical partition is deleted if its underlying rows are deleted.
 
 For all elastic tables, the `partitionid` column should meet these criteria:
 
-- The values in it don't change. After a row is created that has a `partitionid` value, you can't change it.
-- It has a high cardinality value. In other words, the property should have a wide range of possible values. Each logical partition can store 20 gigabytes (GB) of data. Therefore, by choosing a `partitionid` value that has a wide range of possible values, you ensure that the table can scale without reaching limits for any specific logical partition.
+- The values don't change. After you create a row that has a `partitionid` value, you can't change it.
+- It has a high cardinality value. In other words, the property has a wide range of possible values. Each logical partition can store 20 gigabytes (GB) of data. Therefore, by choosing a `partitionid` value that has a wide range of possible values, you ensure that the table can scale without reaching limits for any specific logical partition.
 - It spreads data as evenly as possible among all logical partitions.
 - No values are larger than 1,024 bytes.
 - No values contain slashes (/), angle brackets (<, \>), asterisks (\*), percent signs (%), ampersands (&), colons (:), backslashes (\\), question marks (?), or plus signs (\+). These characters aren't supported for alternate keys.
 
-If a `partitionid` value isn't specified for a row, Dataverse uses the primary key value as the default `partitionid` value. For write-heavy tables of any size, or for cases where rows are mostly retrieved by using the primary key, the primary key is a great choice for the `partitionid` column.
+If you don't specify a `partitionid` value for a row, Dataverse uses the primary key value as the default `partitionid` value. For write-heavy tables of any size, or for cases where rows are mostly retrieved by using the primary key, the primary key is a great choice for the `partitionid` column.
 
 ## Consistency level
 
@@ -87,15 +87,15 @@ If you retrieve a record without a session token, the recently applied changes m
 
 Elastic tables don't support multi-record transactions. For a single request execution, multiple write operations that occur during the same synchronous plug-in stage or during different synchronous plug-in stages aren't transactional with each other.
 
-For example, you have a synchronous plug-in step that is registered on the `PostOperation` stage of the `Create` message on an elastic table. In this case, an error that occurs in the plug-in does **not** roll back the record that is created in Dataverse. You should always avoid intentionally canceling any operation by throwing [InvalidPluginExecutionException](xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException) in the `PreOperation` or `PostOperation` synchronous stage. If the error is thrown after the `Main` operation, the request returns an error, but the data operation succeeds. Any write operations that are started in the `PreOperation` stage succeed.
+For example, you register a synchronous plug-in step on the `PostOperation` stage of the `Create` message on an elastic table. In this case, an error that occurs in the plug-in doesn't roll back the record that is created in Dataverse. Always avoid intentionally canceling any operation by throwing [InvalidPluginExecutionException](xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException) in the `PreOperation` or `PostOperation` synchronous stage. If the error is thrown after the `Main` operation, the request returns an error, but the data operation succeeds. Any write operations that are started in the `PreOperation` stage succeed.
 
-However, you should always apply validation rules in a plug-in that is registered for the `PreValidation` synchronous stage. Validation is the purpose of this stage. Even when you use elastic tables, the request returns an error, and the data operation won't begin. [Learn more about the event execution pipeline](event-framework.md#event-execution-pipeline).
+However, always apply validation rules in a plug-in that you register for the `PreValidation` synchronous stage. Validation is the purpose of this stage. Even when you use elastic tables, the request returns an error, and the data operation doesn't begin. [Learn more about the event execution pipeline](event-framework.md#event-execution-pipeline).
 
-Elastic tables also don't support grouping requests in a single database transaction that uses the SDK [ExecuteTransactionRequest class](xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest) or in a Web API `$batch` operation changeset. Currently, these operations succeed but aren't atomic. In the future, an error will be thrown. 
+Elastic tables also don't support grouping requests in a single database transaction that uses the SDK [ExecuteTransactionRequest class](xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest) or in a Web API `$batch` operation changeset. Currently, these operations succeed but aren't atomic. In the future, these operations throw an error. 
 
-Elastic tables don't support *deep insert* as standard tables do. You will get this error: `Cannot create related entities. Create has to be called individually for each entity.`
+Elastic tables don't support *deep insert* as standard tables do. You get this error: `Cannot create related entities. Create has to be called individually for each entity.`
 
-To learn more about multi-record transactions, go to:
+To learn more about multirecord transactions, see:
 
 - [Execute messages in a single database transaction](org-service/use-executetransaction.md)
 - [Change sets](webapi/execute-batch-operations-using-web-api.md#change-sets)
@@ -107,15 +107,15 @@ To learn more about multi-record transactions, go to:
 
 Dataverse automatically includes a **Time to live** integer column with elastic tables. This column has the schema name `TTLInSeconds` and the logical name `ttlinseconds`.
 
-When a value is set in this column, it defines the amount of time, in seconds, before the row expires and is automatically deleted from database. If no value is set, the record persists indefinitely, just like standard tables.
+When you set a value in this column, it defines the amount of time, in seconds, before the row expires and is automatically deleted from database. If you don't set a value, the record persists indefinitely, just like standard tables.
 
 ## Scenario
 
 The examples in related articles use this scenario.
 
-Contoso operates a large number of Internet of Things (IoT) devices that the company has deployed all across the world. Contoso must store and query large amounts of sensor data that is emitted from the IoT devices so that it can monitor their health and gather other insights.
+Contoso operates a large number of Internet of Things (IoT) devices that the company deploys all across the world. Contoso must store and query large amounts of sensor data that the IoT devices emit so that it can monitor their health and gather other insights.
 
-To store and query the large volume of IoT data, Contoso creates an elastic table that is named `contoso_SensorData`. It uses a string column that is named `contoso_DeviceId` as the `partitionid` value for each row that corresponds to a device. Because each `contoso_DeviceId` value is unique to a device, and Contoso performs queries mostly in context of a given `contoso_DeviceId` value, it serves as a good partition strategy for the whole dataset.
+To store and query the large volume of IoT data, Contoso creates an elastic table named `contoso_SensorData`. It uses a string column named `contoso_DeviceId` as the `partitionid` value for each row that corresponds to a device. Because each `contoso_DeviceId` value is unique to a device, and Contoso performs queries mostly in the context of a given `contoso_DeviceId` value, it serves as a good partition strategy for the whole dataset.
 
 Related articles:
 
