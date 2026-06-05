@@ -124,10 +124,9 @@ If you're running finance and operations apps, your environment must be on a sup
 
 | Finance and operations version | Minimum platform build | Minimum application build |
 |---|---|---|
-| 10.0.45 | 7.0.7690.155 | 10.0.2345.229 |
-| 10.0.46 | 7.0.7778.118 | 10.0.2428.181 |
-| 10.0.47 | 7.0.7858.101 | 10.0.2527.116 |
-| 10.0.48 | 7.0.7996.39 | 10.0.2645.35 |
+| 10.0.46 | 7.0.7778.126 | 10.0.2428.196 |
+| 10.0.47 | 7.0.7858.115 | 10.0.2527.135 |
+| 10.0.48 | 7.0.7996.48 | 10.0.2645.55 |
 
 To check your build, in your finance and operations environment, go to **Help & Support** > **About** to see your current platform and application build numbers.
 
