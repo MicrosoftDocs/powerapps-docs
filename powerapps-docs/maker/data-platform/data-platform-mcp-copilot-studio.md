@@ -5,8 +5,9 @@ description: Learn how to connect to Dataverse using the Model Context Protocol 
 author: ShefaaliP
 ms.author: spatankar
 ms.reviewer: matp
-ms.date: 11/10/2025
+ms.date: 06/05/2026
 ms.topic: how-to
+contributor: kewear
 ms.collection: bap-ai-copilot
 ms.subservice: dataverse-maker
 ---
@@ -31,7 +32,7 @@ This article explains how to set up and use the Microsoft Dataverse model contex
 
 The individual tools available on this MCP server can be viewed and modified by selecting **...** > **Edit** next to the **Dataverse MCP Server** tool.
 
-You can now interact with the Dataverse MCP Server tool in the **Test your agent** chat pane. Try commands like "list tables in Dataverse," "describe table account," or "how many accounts do I have." :::image type="content" source="media/data-platform-mcp-copilot-studio/mcp-copilot-studio.png" alt-text="Screenshot of Dataverse MCP in Copilot Studio.":::
+You can now interact with the Dataverse MCP Server tool in the **Test your agent** chat pane. Try commands like "show me the tables in Dataverse," "describe the account table," or "how many accounts do I have." :::image type="content" source="media/data-platform-mcp-copilot-studio/mcp-copilot-studio.png" alt-text="Screenshot of Dataverse MCP in Copilot Studio.":::
 
 ## Related articles
 

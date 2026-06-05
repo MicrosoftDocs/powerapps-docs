@@ -4,11 +4,13 @@ description: Step-by-step instructions about how to enable or disable a Microsof
 author: ShefaaliP
 ms.component: cds
 ms.topic: how-to
-ms.date: 05/04/2026
+ms.date: 06/05/2026
 ms.subservice: dataverse-maker
 ms.author: spatankar
-ms. reviewer: matp
-contributor: virajmalkar
+ms.reviewer: matp
+contributor: 
+- virajmalkar
+- kewear
 search.audienceType: 
   - maker
 ---
@@ -19,7 +21,7 @@ This article provides detailed instructions about how to enable, manage, configu
 ## Prerequisites
 
 - Power Platform administrator role in order to access Dataverse MCP server environment settings, enable allowed MCP clients, create or edit an environment group, and change connector policies.
-- The steps described in this article require that the environment is a Managed Environment.
+- The environment must be a Managed Environment if you want to manage the Dataverse MCP server through [Advanced connector policies](/power-platform/admin/advanced-connector-policies).
 - By default, the Microsoft Copilot Studio client for Dataverse MCP is enabled for all environments. You must enable the additional clients in the Power Platform admin center before you can connect to the client.
 
 ## Configure and manage the Dataverse MCP server
@@ -74,7 +76,7 @@ When writing instructions for a Dataverse MCP server agent, consider the followi
 
    - Retrieve or filter records using the read_query tool.
    - Create or update records with `create_record` and `update_record`.
-   - Explore table schema with `describe_table`.
+   - Explore table schema with `describe`.
 
    Phrase these as actionable instructions, such as "Use the read_query tool to fetch records when the user asks for data retrieval."
 1. Add workflow guidance.
@@ -111,8 +113,8 @@ Act as an autonomous agent responsible for interacting with the Microsoft Datave
 Your objective is to respond to tasks provided by the user. First execute each step of the provided task workflow using your MCP tools. Check if you have achieved your objective after each tool call. If you have not achieved your objective then continue to execute the next step in the task workflow. Do not ask for user intervention,if you have to run an operation externally in case dataverse doesnt support that operation. you are allowed to run it without user confirmation. Also do not ask confirmation for delete table or delete record operation, you can delete.
 
 ## MCP tool selection instructions
- - Whenever you have to use logical table name, call the list_tables tools to get that logical table name.
- - Whenever you have to use column/attribute name, call the describe_table tool to get the column/attribute name.
+ - Whenever you have to use logical table name, call the describe tool to get that logical table name.
+ - Whenever you have to use column/attribute name, call the describe tool to get the column/attribute name.
 
 ## MCP tool usage instructions
 
