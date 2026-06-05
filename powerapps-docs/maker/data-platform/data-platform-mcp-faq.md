@@ -4,10 +4,11 @@ description: Frequently asked questions about using Microsoft Dataverse with a m
 author: seanwat-msft
 ms.component: cds
 ms.topic: how-to
-ms.date: 03/10/2026
+ms.date: 06/05/2026
 ms.subservice: dataverse-maker
 ms.author: spatankar
-ms. reviewer: matp
+ms.reviewer: matp
+contributor: kewear
 search.audienceType: 
   - maker
 ---
@@ -21,10 +22,9 @@ Verify that the Dataverse environment URL in your MCP client configuration is co
 
 Also verify that the MCP client you’re using is enabled in the Power Platform admin center. More information: [Configure and manage the Dataverse MCP server for an environment](data-platform-mcp-disable.md#configure-and-manage-the-dataverse-mcp-server)
 
-
 ## Which MCP tools are available and what do they do?
 
-The Dataverse MCP server provides tools for common data operations such as querying records, creating and updating rows, describing table schemas, and listing tables. For the full list of tools and descriptions, go to [Connect to Dataverse with Model Context Protocol](data-platform-mcp.md#list-of-tools).
+The Dataverse MCP server provides tools for common data operations such as querying records, creating and updating rows, and describing table schemas. For the full list of tools and descriptions, go to [Connect to Dataverse with Model Context Protocol](data-platform-mcp.md#list-of-tools).
 
 ## Can I restrict which tables or records are accessible through the MCP server?
 
@@ -45,13 +45,29 @@ Yes. Each Dataverse environment can have its own MCP server configuration. You c
 
 If a tool returns an error, try rephrasing your prompt and submitting it again. Use more specific language to describe what you want to accomplish. If the error persists, verify that you have the appropriate Dataverse permissions for the operation you’re attempting.
 
-## Why don’t I see the Search tool in the Dataverse MCP server?
+## What happened to the `describe_table`, `list_tables`, and `fetch` tools?
 
-The Search tool is only available when Dataverse search is enabled for your environment. If Dataverse search isn’t turned on, the Search tool doesn’t appear in the list of available MCP tools. To enable Dataverse search, go to [Configure Dataverse search for your environment](/power-platform/admin/configure-relevance-search-organization).
+The Dataverse MCP server tool surface is updated. The previous `describe_table`, `list_tables`, and `fetch` tools are removed and their functionality is provided by other tools:
+
+| Removed tool | Replacement |
+|---|---|
+| `describe_table` | `describe` |
+| `list_tables` | `describe` |
+| `fetch` | `describe` |
+
+The previous `search` tool that searched Dataverse data was renamed to `search_data`. The current `search` tool searches Dataverse metadata to help agents find relevant tables and apps.
+
+If your MCP client maintains allow or deny lists by tool name, review and update your configuration so that the new tool names reflect your intended permissions. 
+
+For the full list of tools, go to [Connect to Dataverse with Model Context Protocol](data-platform-mcp.md#list-of-tools).
+
+## Why don't I see the `search_data` tool in the Dataverse MCP server?
+
+The `search_data` tool is only available when Dataverse search is enabled for your environment. If Dataverse search isn't turned on, the `search_data` tool doesn't appear in the list of available MCP tools. To enable Dataverse search, go to [Configure Dataverse search for your environment](/power-platform/admin/configure-relevance-search-organization).
 
 ## Why do I see different tools on the /api/mcp and /api/mcp_preview endpoints?
 
-The /api/mcp endpoint provides the generally available set of Dataverse MCP tools, while the /api/mcp_preview endpoint includes additional preview tools that are being evaluated before general availability. Preview tools might change or be removed without notice. To access the preview tools, an administrator must enable the preview features setting in the Power Platform admin center. More information: [Use preview tools and upcoming features in Dataverse MCP server](data-platform-mcp-preview-tools.md)
+The `/api/mcp` endpoint provides the generally available set of Dataverse MCP tools. The `/api/mcp_preview` endpoint includes additional preview tools that are evaluated before general availability. Preview tools might change or be removed without notice. To access the preview tools, an administrator must enable the preview features setting in the Power Platform admin center. More information: [Use preview tools and upcoming features in Dataverse MCP server](data-platform-mcp-preview-tools.md)
 
 ## How do I enable debug logging for the local proxy?
 

@@ -5,12 +5,12 @@ description: Learn how to connect to Dataverse using the Model Context Protocol 
 author: seanwat-msft
 ms.author: spatankar
 ms.reviewer: matp
-ms.date: 03/07/2026
+contributor: kewear
+ms.date: 06/05/2026
 ms.topic: how-to
 ms.collection: bap-ai-copilot
 ms.subservice: dataverse-maker
 ---
-
 # Connect to Dataverse with model context protocol in non-Microsoft clients
 
 You can connect to Microsoft Dataverse using a non-Microsoft model context protocol (MCP) client, such as Claude desktop or Claude Code. There are two approaches for connecting non-Microsoft clients to a Dataverse MCP server:
@@ -121,7 +121,7 @@ claude mcp add dataverse -t stdio -- npx -y @microsoft/dataverse mcp https://you
 1. Verify that the Dataverse MCP server and its tools are available. You should see the friendly name you configured (for example, *MyDataverseMCPServer*).
 1. Select the MCP server name to view the list of tools that are supported by the server.
 
-If you have data in the Dataverse environment, you can test the setup by asking *list tables in Dataverse*, *describe table account*, or *how many accounts do I have*. More information: [Add and remove sample data](/power-platform/admin/add-remove-sample-data)
+If you have data in the Dataverse environment, you can test the setup by asking *show me the tables in Dataverse*, *describe the account table*, or *how many accounts do I have*. More information: [Add and remove sample data](/power-platform/admin/add-remove-sample-data)
 
 > [!TIP]
 > If you have other MCP servers registered with Claude Code, include *Dataverse* in your prompt to specify which MCP server to use.
