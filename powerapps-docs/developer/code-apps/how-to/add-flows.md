@@ -5,7 +5,7 @@ description: Learn how to discover, add, invoke, and remove Power Automate cloud
 author: eschavez
 ms.author: eschavez
 ms.reviewer: jdaly
-ms.date: 04/22/2026
+ms.date: 06/4/2026
 ms.topic: how-to
 ---
 # Add Power Automate flows to a code app (preview)
@@ -22,14 +22,14 @@ This article shows you how to discover, add, invoke, and remove Power Automate c
 - The [`@microsoft/power-apps`](https://www.npmjs.com/package/@microsoft/power-apps) npm package version **1.1.1** or later.
 
 > [!NOTE]
-> Flow commands are only available in the npm-based CLI (`npx power-apps`). They're **not** available in the Power Platform CLI (`pac code`) commands.
+> Flow commands are only available in the npm-based CLI (`power-apps`). They're **not** available in the Power Platform CLI (`pac code`) commands.
 
 ## Step 1: List available flows
 
 Run the following command to list all solution-aware flows in your current environment:
 
 ```bash
-npx power-apps list-flows
+power-apps list-flows
 ```
 
 The command outputs a table of available flows:
@@ -49,7 +49,7 @@ Total flows: 2
 To filter results by name, use the `--search` option:
 
 ```bash
-npx power-apps list-flows --search approval
+power-apps list-flows --search approval
 ```
 
 Copy the **Flow ID** value for the flow you want to add.
@@ -59,13 +59,13 @@ Copy the **Flow ID** value for the flow you want to add.
 Run the following command, replacing `<flow-id>` with the value from the previous step:
 
 ```bash
-npx power-apps add-flow --flow-id <flow-id>
+power-apps add-flow --flow-id <flow-id>
 ```
 
 **Example:**
 
 ```bash
-npx power-apps add-flow --flow-id a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1
+power-apps add-flow --flow-id a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1
 ```
 
 When the command succeeds, the CLI confirms the flow was added:
@@ -166,7 +166,7 @@ The `result` object has the following shape:
 If the flow's definition changes - for example, its author adds a new parameter or updates connection references - re-run `add-flow` with the same flow ID to pick up the latest definition and regenerate the service files:
 
 ```bash
-npx power-apps add-flow --flow-id a1b2c3d4-e5f6-7890-abcd-ef1234567890
+power-apps add-flow --flow-id a1b2c3d4-e5f6-7890-abcd-ef1234567890
 ```
 
 The command matches the flow by its `workflowEntityId` and reuses the existing UUID in `power.config.json`, so no manual cleanup is required.
@@ -178,13 +178,13 @@ To remove a flow from your code app, use `remove-flow`. You can identify the flo
 **By data source name:**
 
 ```bash
-npx power-apps remove-flow --flow-name ApprovalWorkflow
+power-apps remove-flow --flow-name ApprovalWorkflow
 ```
 
 **By flow ID:**
 
 ```bash
-npx power-apps remove-flow --flow-id a1b2c3d4-e5f6-7890-abcd-ef1234567890
+power-apps remove-flow --flow-id a1b2c3d4-e5f6-7890-abcd-ef1234567890
 ```
 
 The command:
@@ -198,7 +198,7 @@ After adding flows and verifying the app locally with `npm run dev`, build and d
 
 ```bash
 npm run build
-npx power-apps push
+power-apps push
 ```
 
 ## Limitations and considerations
