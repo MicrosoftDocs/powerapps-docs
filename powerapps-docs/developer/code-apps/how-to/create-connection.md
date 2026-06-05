@@ -11,7 +11,7 @@ ms.topic: how-to
 
 Starting with [Power Apps client library for code apps](https://www.npmjs.com/package/@microsoft/power-apps?activeTab=readme) version 1.1.9, the new npm-based CLI includes a `create-connection` command. Use this command to create a connection for a connector directly from the command line, without leaving your terminal or opening the Power Apps maker portal.
 
-The connection is created in the Power Platform environment that your code app is currently targeting (the environment set in `power.config.json` when you ran `npx power-apps init`).
+The connection is created in the Power Platform environment that your code app is currently targeting (the environment set in `power.config.json` when you ran `power-apps init`).
 
 ## Prerequisites
 
@@ -23,7 +23,7 @@ The connection is created in the Power Platform environment that your code app i
 Run the command from the root of your code app project:
 
 ```bash
-npx power-apps create-connection --api-id <connectorId> [--display-name <name>] [--json]
+power-apps create-connection --api-id <connectorId> [--display-name <name>] [--json]
 ```
 
 ### Options
@@ -39,19 +39,19 @@ npx power-apps create-connection --api-id <connectorId> [--display-name <name>] 
 Create an Office 365 connection:
 
 ```bash
-npx power-apps create-connection --api-id shared_office365
+power-apps create-connection --api-id shared_office365
 ```
 
 Create a Teams connection with a custom display name:
 
 ```bash
-npx power-apps create-connection --api-id shared_teams --display-name "My Teams"
+power-apps create-connection --api-id shared_teams --display-name "My Teams"
 ```
 
 Create a connection and emit JSON output (useful in scripts and CI):
 
 ```bash
-npx power-apps create-connection --api-id shared_office365 --json
+power-apps create-connection --api-id shared_office365 --json
 ```
 
 On success, the command prints the new connection's ID. You can then reference that connection ID when adding the connector as a data source to your code app.

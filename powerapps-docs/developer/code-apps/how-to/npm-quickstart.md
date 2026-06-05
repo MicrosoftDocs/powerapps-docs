@@ -3,7 +3,7 @@ title: "How to: Quickstart with npm CLI (preview)"
 description: "Create a Power Apps code app using the new npm CLI. (preview)"
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 03/05/2026
+ms.date: 06/04/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
@@ -50,6 +50,7 @@ Learn more about the [degit](https://www.npmjs.com/package/degit) command.
 Install the project dependencies and the Power Apps client library for code apps:
 
 ```bash
+npm install -g @microsoft/power-apps
 npm install
 ```
 
@@ -58,13 +59,13 @@ Initialize your code app. You can either provide options directly or use interac
 **Option A: Interactive mode** (the CLI prompts you for required information):
 
 ```bash
-npx power-apps init
+power-apps init
 ```
 
 **Option B: Pass options directly:**
 
 ```bash
-npx power-apps init --display-name "App From Scratch" --environment-id <Your environment ID>
+power-apps init --display-name "App From Scratch" --environment-id <Your environment ID>
 ```
 
 When you run the `init` command, the CLI authenticates you automatically. Sign in by using your Power Platform account when prompted.
@@ -100,13 +101,13 @@ Build your app and push it to your Power Apps environment:
 
 ```bash
 npm run build
-npx power-apps push
+power-apps push
 ```
 
 **Command details:**
 
 - `npm run build` - Runs scripts from `package.json`. Executes `tsc -b && vite build`.
-- `npx power-apps push` - Publishes a new version of the code app to your environment.
+- `power-apps push` - Publishes a new version of the code app to your environment.
 
 When the command finishes successfully, it returns a Power Apps URL to run the app.
 
