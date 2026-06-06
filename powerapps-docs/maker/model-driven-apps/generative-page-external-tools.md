@@ -4,7 +4,7 @@ description: Learn how to use AI code generation tools like Claude Code to creat
 author: jasongre
 ms.author: jasongre
 ms.reviewer: matp
-ms.date: 04/10/2026
+ms.date: 06/05/2026
 ms.topic: how-to
 ms.service: powerapps
 ms.subservice: mda-maker
@@ -25,18 +25,21 @@ Using AI code generation tools with generative pages provides an alternative dev
 
 ## What you can do with code generation tools
 
-- *Create new generative pages* using plain-language requirements
+- *Create one or more generative pages* in a single run from plain-language requirements
+- *Create the supporting Microsoft Dataverse tables* your pages need, or reuse existing ones, including sample data for new tables
+- *Place artifacts into a new or existing app and solution*, including creating an app or solution on the fly
 - *Update existing generative pages* by requesting changes or enhancements through your AI tool
 - *Deploy directly* to your Power Apps environment using PAC CLI commands
-- *Work locally* with your preferred IDE and development tools
+- *Work locally* with your preferred IDE and development tools, with `npm install` and IntelliSense support for the generated code
 
 ### How it works
 
 1. You describe what you want to build in natural language, for example, "Create a generative page dashboard showing top accounts by revenue."
-2. The AI code generation tool uses installed generative page skills or other context about generative pages to ask clarifying questions about your requirements.
-3. The tool generates production-ready TypeScript and React code for your generative page.
-4. The tool deploys the code to your environment using [generative page PAC CLI commands](/power-platform/developer/cli/reference/model).
-5. Your generative page appears in your model-driven app.
+2. A planner agent analyzes your request and proposes a plan. The plan might include one or more pages, the Dataverse tables the pages need (new or existing), and the app and solution where the artifacts live. The planner then delegates to specialized agents  to build what the plan describes. For example, a table builder and a page builder.
+3. You review and adjust the plan before building. You can change the number of pages, swap or add tables, target a different app, or place the artifacts in a different solution.
+4. The agents generate production-ready TypeScript and React code for your page or pages, along with supporting files for local development.
+5. The tool deploys the artifacts to your environment using [generative page PAC CLI commands](/power-platform/developer/cli/reference/model), and optionally runs a verify-in-browser step that exercises the page with generated tests.
+6. Your generative page appears in your model-driven app.
 
 ## Prerequisites
 
@@ -113,21 +116,24 @@ This skill enables you to describe what you want to build and have the AI tool g
 
 ## Create a new generative page
 
-Follow this workflow when building a new page from scratch.
+Follow this workflow when building a new page or set of pages from scratch.
 
-1. Start a conversation with your AI tool. Describe what you want to create, including what data you want to include (which Dataverse tables or whether to create sample mock data). Be as specific as you want—the more vague you are with the request, the more details the agent tries to fill in itself. You can also attach or provide an image or other materials to help guide the visuals, theming, and layout. For example:
+1. *Start a conversation with your AI tool.* Describe what you want to create. Be as specific or as open-ended as you want — the more vague the request, the more the agent fills in itself. You can also attach an image or other materials to guide visuals, theming, and layout. For example:
    - "Create a generative page dashboard showing our top 10 accounts by revenue using the Account table"
-   - "Build a generative page form for creating and editing contact records with sample data"
+   - "Build two pages for managing my volunteer signups — one to browse open shifts and one to confirm a signup — using sample data"
    - "Make a generative page for displaying incident reports on a map using the Incident table"
-   - "Create a generative page for a sales pipeline visualization with opportunities using the modern blue theme"
 
-2. Answer clarifying questions. The AI tool asks questions to understand your requirements. Be specific about business needs and data requirements, identify mobile requirements early, and mention any specific UI components or layout preferences.
+1. **Choose create or edit if asked.** If the planner agent isn't sure whether you want a new page or to update an existing one, it asks. To follow this workflow, choose to create a new page. For editing, go to [Edit an existing generative page](#edit-an-existing-generative-page).
 
-3. Review the implementation plan. The AI tool presents a plan describing the components to be built, Dataverse tables and columns to be used, key features and interactions, and data retrieval approach. Confirm the plan meets your requirements or request changes.
+1. *Answer questions about what to build.* The planner might ask what kind of page you want, offering a few examples and accepting a custom description, such as what data to use, layout, what information to display, interactions, and so on. Be specific about business needs and data requirements, identify mobile requirements early, and mention any UI components or layout preferences. The planner might also ask clarifying questions such as whether to use Dataverse tables or hard-coded sample data, and whether to add the page to an existing app or create a new app.
 
-4. Review code and deploy. The AI tool generates complete TypeScript code. Ask the tool to publish or deploy your page when you're ready, optionally specifying a sitemap name (the tool generates a meaningful name by default).
+1. *Review and adjust the plan.* The planner presents a plan that includes the page or pages it intends to build, the Dataverse tables to use or create (with the columns it plans to use), the app to host the page (new or existing), and the solution where the artifacts live. Iterate with the agent to adjust anything you want changed &mdash; for example, the number of pages, which tables are used or created, the target app, or the target solution. Confirm the plan when it matches your intent.
 
-5. Test and iterate. Open your model-driven app in Power Apps and navigate to the new page using the sitemap. If you need to make changes, return to your AI tool and describe the updates using natural language.
+1. *Let the agents build and deploy.* The specialized agents generate the page or pages, supporting tables, and code, then deploy to your environment.
+
+1. *Optionally verify in browser.* After the build, the agent might offer to run a verify-in-browser step that runs automatically generated Playwright tests against the page to confirm it loads and functions correctly. Use this to catch obvious issues before testing manually.
+
+1. **Test and iterate.** Open your model-driven app in Power Apps and navigate to the new page. If you need to make changes, return to your AI tool and describe the updates in natural language.
 
 > [!NOTE]
 > You can change the name or position of the generative page in the sitemap at any time from the model-driven app designer.
@@ -145,6 +151,15 @@ Use this workflow to update a page that already exists in your environment.
    - "Update the form to include the new custom field for pet temperament"
 
 1. Review, publish, test, and iterate. The AI tool generates updated TypeScript code based on your requested changes. Follow the same review, publish, and test process described in the "Create a new generative page" section. Continue iterating with natural language instructions until the page meets your requirements.
+
+## Local development files
+
+When the AI tool generates a page, it also writes two supporting files to your local workspace to make reviewing and iterating on the code easier:
+
+- **`package.json`** &mdash; declares the runtime and development dependencies the generated page compiles against. Run `npm install` after generation to install these dependencies.
+- **`genpage.d.ts`** &mdash; ambient TypeScript declarations for objects that aren't installed via npm, such as `dataApi` and `pageInput`.
+
+With both files in place and `npm install` complete, your editor's IntelliSense, such as in VS Code, works against the generated code, so you can review or hand-edit the page without seeing red squiggles for unresolved types.
 
 ## Set up a page to accept input parameters
 

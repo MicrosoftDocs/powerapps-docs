@@ -1,7 +1,7 @@
 ---
 title: "What is Dataverse intelligence?" 
 description: Learn how to use Microsoft Dataverse intelligence to bring business data understanding to AI agents and Copilot.
-ms.date: 05/22/2026
+ms.date: 06/03/2026
 ms.reviewer: matp
 ms.topic: how-to
 author: prithvi-khosla
@@ -58,7 +58,7 @@ Business skills help makers and users interpret data, improve processes, and mak
 ### Business skills prerequisites
 
 - The environment where you use Dataverse intelligence must be a Managed Environment.
-- The environment must be enabled and configured for Dataverse MCP server preview. Business skills are only available for use with the preview version of Dataverse MCP server. More information: [Use preview tools and upcoming features in Dataverse MCP server](data-platform-mcp-preview-tools.md)
+- The environment must be enabled and configured for Dataverse MCP server. More information: [Configure the Dataverse MCP server for an environment](data-platform-mcp-disable.md)
 
 ## Next steps
 

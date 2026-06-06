@@ -1,7 +1,7 @@
 ---
 title: "Create and use business skills" 
 description: Learn how to enable Microsoft Dataverse intelligence to bring business data understanding to AI agents and Copilot.
-ms.date: 04/15/2026
+ms.date: 06/03/2026
 ms.reviewer: matp
 ms.topic: how-to
 author: prithvi-khosla
@@ -21,8 +21,8 @@ This article explains how to create and manage business skills that ground agent
 
 ## Prerequisites
 
-- The environment must be enabled and configured for Dataverse MCP server preview. Business skills are only available for use with the preview version of Dataverse MCP server.
-- The environment where you create and use business skills must be a Managed Environment. More information: [Use preview tools and upcoming features in Dataverse MCP server](data-platform-mcp-preview-tools.md)
+- The environment must be enabled and configured for Dataverse MCP server. More information: [Configure the Dataverse MCP server for an environment](data-platform-mcp-disable.md)
+- The environment where you create and use business skills must be a Managed Environment.
 - The environment must be enabled for [Dataverse intelligence](data-platform-intelligence.md).
 
 ## Open the business skills page
@@ -49,6 +49,9 @@ The **Business skills** page is the central hub for managing all business proces
 > [!NOTE]
 > All skills are active by default. [Deactivate a skill](#deactivate-a-skill)
 
+> [!NOTE]
+> When using business skills with an agent in Microsoft Copilot Studio, only text-based resource files are supported. The agent can only read the first 20 KB of data from a text-based resource file.
+
 ### Upload a business skill
 
 You can quickly create a business skill by uploading existing skills.
@@ -64,14 +67,23 @@ You can quickly create a business skill by uploading existing skills.
 1. Update the **Name**, **Description**, **Instructions**, or **Resources** as needed.
 1. Select **Save**. 
 
-### Create or update skills using the Dataverse MCP server (preview)
+### Create or update skills using the Dataverse MCP server
 
-You can also create and update skills through an agent connected to the Dataverse MCP server (preview):
+You can also create and update skills through an agent connected to the Dataverse MCP server:
 
-1. Add Dataverse MCP server (preview) as a tool to any agent in Microsoft Copilot Studio or connect to it from coding agents in Visual Studio Code or non-Microsoft clients.
+1. Add Dataverse MCP server as a tool to any agent in Microsoft Copilot Studio or connect to it from agents in Visual Studio Code or non-Microsoft clients.
 1. Ask your agent to create a new skill or update an existing one.
 1. Provide your business process information.
 1. The business skill is saved in the environment you used to connect to the MCP server.
+
+The following Dataverse MCP server tools support business skill management:
+
+| Tool | Description |
+|------|-------------|
+| `upsert_skill` | Creates a new business skill or updates an existing one. |
+| `delete_skill` | Deletes an existing business skill from the environment. |
+| `search` | Searches table schemas, business skills, and apps by keyword. |
+| `describe` | Gets details from search results for tables, records, schemas, skills, and apps. |
 
 ### Share a business skill
 
@@ -115,13 +127,14 @@ To permanently remove a business skill:
 
 ## Use business skills
 
-After you create business skills in your environment, AI agents can use them to understand and run business processes. Access skills through the Dataverse MCP server (preview).
+After you create business skills in your environment, AI agents can use them to understand and run business processes. Access skills through the Dataverse MCP server.
 
-- To start using business skills, connect to the Dataverse MCP server (preview) in Microsoft Copilot Studio or from agent mode in Visual Studio Code or non-Microsoft clients.
+- To start using business skills, connect to the Dataverse MCP server in Microsoft Copilot Studio or from agent mode in Visual Studio Code or non-Microsoft clients.
 - Try asking your agent, "Show me all business skills in this environment." The agent retrieves a list of all the skills in your connected environment by using the Dataverse MCP server.
 - Start testing by asking your agent a relevant scenario that matches your skill's intended use case. For example, if you created a skill for logging call transcripts into Dataverse, provide a sample transcript to your agent and ask it to log the transcript information in Dataverse.
   > [!TIP]
   > If your agent doesn't automatically fetch skill details, try adding "Using business skills" before your actual prompt. For example, "Using business skills log this transcript in Dataverse."
+  > If you are building agents in Microsoft Copilot Studio, remember to add instructions in your agent to use business skills. For example, "First look for any relevant business skills using Dataverse MCP Server, and follow process instructions accordingly."
 - Remember to add any other relevant tools, including MCP servers and connectors, that the agent needs access to for successfully executing your business processes defined in skills.
 - Confirm your intended actions were successful and continue to iterate on the skill instructions based on results.
 
