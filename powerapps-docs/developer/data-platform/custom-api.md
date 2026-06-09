@@ -119,6 +119,24 @@ You can more easily test `GET` requests by using your browser alone, but there's
 > - You can't use a Function when you select the **Enabled for Workflow** option. See [Use a custom API in a workflow](#use-a-custom-api-in-a-workflow).
 > - Currently, the [Microsoft Dataverse Connector](/connectors/commondataserviceforapps/) only enables performing actions. If you need the operation to be performed by using Power Automate, you should create your custom API as an Action.
 
+### Special characters limitation
+
+Because a Function uses an HTTP `GET` request that passes all parameter values in the URL, string parameter values that contain certain special characters aren't currently supported. The following characters aren't supported in the string parameters of a custom API Function:
+
+`/`,`<`,`>`,`*`,`%`,`&`,`:`,`\\`,`?`,`+`
+
+When a string parameter value contains one of these characters, the request fails with one of the following errors:
+
+- `400 Bad Request`
+- `404 Not found`
+
+This is a limitation of the OData parser, similar to the one documented for alternate keys. For more information, see [Retrieve record using an alternate key](webapi/retrieve-entity-using-web-api.md#retrieve-record-using-an-alternate-key).
+
+If your custom API must accept string parameters that can contain these special characters, create an *Action* instead of a *Function*. An Action uses an HTTP `POST` request that passes parameter values in the request body, which supports these characters.
+
+> [!IMPORTANT]
+> Decide whether to create a Function or an Action early in your design. You can't change a Function to an Action after you create the custom API.
+
 [Learn to use Web API functions](webapi/use-web-api-functions.md)
 
 ## When to make your custom API private
