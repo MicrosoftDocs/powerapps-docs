@@ -1,11 +1,11 @@
 ---
-title: Model-driven app common column properties in Power Apps | MicrosoftDocs
+title: Model-driven app common column properties in Power Apps
 description: Understand how to view the common column properties for a main form.
 Keywords: Main form; Common column properties; Dynamics 365
 author: Mattp123
 ms.subservice: mda-maker
 ms.author: matp
-ms.date: 02/25/2020
+ms.date: 03/03/2026
 ms.topic: article
 applies_to: 
   - "Dynamics 365 (online)"
@@ -17,13 +17,11 @@ search.audienceType:
 ---
 # Model-driven app common column properties
 
-Common properties of table columns for a model-driven app can be viewed using the Power Apps portal or the Power Apps solution explorer. The Power Apps portal provides an easy way to create and edit table columns with Microsoft Dataverse.
+Common properties of table columns for a model-driven app can be viewed using Power Apps (make.powerapps.com). Power Apps provides an easy way to create and edit table columns with Microsoft Dataverse.
 
-The portal enables configuring the most common options, but certain options can only be set using solution explorer.
+In addition to configuring aspects of the Dataverse column, such as its type and whether or not it's required, it's possible to configure aspects of how the column is used in the context of a [form](model-driven-app-glossary.md#form).  This approach allows for different forms to permit users to have different interactions with the data column.
 
-In addition to configuring aspects of the Dataverse column, such as its type and whether or not it is required, it is possible to configure aspects of how the column is used in the context of a [form](model-driven-app-glossary.md#form).  This approach allows for different forms to permit users to have different interactions with the data column.
-
-## Common column properties in Power Apps portal
+## Common column properties in Power Apps
 
 1. From Power Apps [make.powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Tables**, and then select the table that has the columns you want to view. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 
@@ -39,19 +37,19 @@ The following table describes the common properties of columns. Certain types of
 
  |Property|Description|
  |--|--|
- |**Display Name**|The text to be displayed for the column in the user interface.|
- |**Name**|The unique name across your environment. A name will be generated based on the display name that has been entered. However, this can be edited before saving. Once a column is created the name can't be changed as it may be referenced in your applications or code. The name will have the customization prefix for the **Dataverse Default Publisher** prepended to it.|
- |**Data type**|Controls how values are stored as well as how they are formatted in some applications. Once a column is saved, it is not possible to change the data type except for converting text columns to autonumber columns.|
+ |**Display Name**|The text to display for the column in the user interface.|
+ |**Name**|The unique name across your environment. Power Apps generates a name based on the display name that you enter. However, you can edit this name before saving. Once you create a column, you can't change the name as your applications or code might reference it. The **Dataverse Default Publisher** customization prefix is prepended to the name.|
+ |**Data type**|Controls how values are stored and how they're formatted in some applications. Once you save a column, you can't change the data type except for converting text columns to autonumber columns.|
  |**Required**| A row can't be saved without data in this column. |
  |**Searchable**| This column appears in Advanced Find and is available when customizing views. |
  |**Calculated or Rollup**| Use to automate manual calculations. Use values, dates, or text.|
  |**Advanced Options**| Add a description, and specify a maximum length and IME mode for the column.
 
-There are many different types of columns, but it is only possible to create some of them. For more information about all types of columns, see [Types of columns and column data types](../data-platform/types-of-fields.md).
+There are many different types of columns, but you can only create some of them. For more information about all types of columns, see [Types of columns and column data types](../data-platform/types-of-fields.md).
 
-## Common column properties in solution explorer
+## Common column properties in solution explorer (classic)
 
-In addition to using Power Apps (make.powerapps.com), columns can also be reviewed using the solution explorer.
+In addition to using Power Apps (make.powerapps.com), you can also review columns by using the solution explorer.
 
 [!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../includes/cc_navigate-solution-from-powerapps-portal.md)]
 
@@ -69,7 +67,7 @@ To update the column, follow these steps.
 1. Select **...** on the command bar, and then select **Switch to classic**.
 
     > [!Note]
-    > In the solution explorer tables are known as entities and columns are known as fields.
+    > In the solution explorer, tables are known as entities and columns are known as fields.
 
 1. Select the column that you want.
 1. Select **Change properties** from the command bar, or double-click the column.
@@ -106,7 +104,7 @@ In some scenarios, it is desirable to render a data column within a form field i
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
 2. On the left navigation pane, select **Tables**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
-   > [!Note]
+   > [!NOTE]
    > Customizations to a table should take place within a [solution](../model-driven-apps/model-driven-app-glossary.md#solution). To update a form within a solution, first navigate to your **Solution**, open the **Table**, and then select the **Forms** area.
 
 3. Select a table, such as the account table, and then select the **Forms** area.

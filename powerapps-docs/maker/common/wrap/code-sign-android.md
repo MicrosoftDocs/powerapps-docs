@@ -1,13 +1,13 @@
 ---
 title: Code sign for Android
 description: Learn how to code sign for Android for Power Apps wrap.
-author: komala2019
+author: Murugesh1985
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: smurkute
 ms.date: 03/12/2025
 ms.subservice: canvas-maker
-ms.author: koagarwa
+ms.author: murugeshs
 search.audienceType: 
   - maker
 contributors:
@@ -43,7 +43,7 @@ You need:
 ## Generate key and signature hash
 
 > [!NOTE]
-> Skip to [Manual signing](#manual-signing-of-apk-package-not-for-kv-signing) if you already generated keys and the signature hash when you created the [app registration](wrap-how-to.md#4-register-your-app).
+> Skip to [Manual signing](#manual-signing-of-apk-package-not-for-kv-signing) if you already generated keys and the signature hash when you created the [app registration](wrap-how-to.md#5-register-your-app).
 
 ### Set up environment variables
 

@@ -165,9 +165,10 @@ By default this sample will delete all the records created in it. If you want to
 
 ### See also
 
-[Use the Dataverse Web API](../overview.md)<br />
-[Use the Web API with table definitions](../use-web-api-metadata.md)<br />
-[Web API Samples](../web-api-samples.md)<br />
-[Web API Basic Operations Sample (PowerShell)](basic-operations-powershell.md)
+[Use the Dataverse Web API](../overview.md)   
+[Use the Web API with table definitions](../use-web-api-metadata.md)   
+[Web API Samples](../web-api-samples.md)   
+[Web API Basic Operations Sample (PowerShell)](basic-operations-powershell.md)   
+[Web API multi-table lookup sample (PowerShell)](multi-table-lookup-powershell.md)
 
-[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]
+[!INCLUDE[footer-banner](../../../../includes/footer-banner.md)]

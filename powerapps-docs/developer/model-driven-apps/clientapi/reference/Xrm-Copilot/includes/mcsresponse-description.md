@@ -1,0 +1,1 @@
+Describes the data returned by the [executeEvent](../executeevent.md) and [executePrompt](../executeprompt.md) methods.

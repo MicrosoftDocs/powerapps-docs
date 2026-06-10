@@ -26,88 +26,88 @@ Timers can, for example, determine how long a control appears or change other pr
 
 
 ## Key properties
-**Duration** – How long a timer runs in milliseconds. The maximum is 24 hours expressed in milliseconds. Default is 60 seconds.
+**`Duration`** – How long a timer runs in milliseconds. The maximum is 24 hours expressed in milliseconds. Default is 60 seconds.
 
-**OnTimerEnd** – Actions to perform when a timer finishes running.
+**`OnTimerEnd`** – Actions to perform when a timer finishes running.
 
-**Repeat** – Whether a timer automatically restarts when it finishes running.
+**`Repeat`** – Whether a timer automatically restarts when it finishes running.
 
 ## Additional properties
-**[Align](properties-text.md)** – The location of text in relation to the horizontal center of its control.
+**[`Align`](properties-text.md)** – The location of text in relation to the horizontal center of its control.
 
-**AutoPause** – Whether the timer control automatically pauses if the user navigates to a different screen.
+**`AutoPause`** – Whether the timer control automatically pauses if the user navigates to a different screen.
 
-**AutoStart** – Whether the timer control automatically starts to play when the user navigates to the screen that contains that control.
+**`AutoStart`** – Whether the timer control automatically starts to play when the user navigates to the screen that contains that control.
 
-**[BorderColor](properties-color-border.md)** – The color of a control's border.
+**[`BorderColor`](properties-color-border.md)** – The color of a control's border.
 
-**[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
+**[`BorderStyle`](properties-color-border.md)** – Whether a control's border is **`Solid`**, **`Dashed`**, **`Dotted`**, or **`None`**.
 
-**[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
+**[`BorderThickness`](properties-color-border.md)** – The thickness of a control's border.
 
-**[Color](properties-color-border.md)** – The color of text in a control.
+**[`Color`](properties-color-border.md)** – The color of text in a control.
 
-**[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
+**[`DisplayMode`](properties-core.md)** – Whether the control allows user input (**`Edit`**), only displays data (**`View`**), or is disabled (**`Disabled`**).
 
-**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[DisplayMode](properties-core.md)** property is set to **Disabled**.
+**[`DisabledBorderColor`](properties-color-border.md)** – The color of a control's border if the control's **[`DisplayMode`](properties-core.md)** property is set to **`Disabled`**.
 
-**[DisabledColor](properties-color-border.md)** – The color of text in a control if its **[DisplayMode](properties-core.md)** property is set to **Disabled**.
+**[`DisabledColor`](properties-color-border.md)** – The color of text in a control if its **[`DisplayMode`](properties-core.md)** property is set to **`Disabled`**.
 
-**[DisabledFill](properties-color-border.md)** – The background color of a control if its **[DisplayMode](properties-core.md)** property is set to **Disabled**.
+**[`DisabledFill`](properties-color-border.md)** – The background color of a control if its **[`DisplayMode`](properties-core.md)** property is set to **`Disabled`**.
 
-**[Fill](properties-color-border.md)** – The background color of a control.
+**[`Fill`](properties-color-border.md)** – The background color of a control.
 
-**[FocusedBorderColor](properties-color-border.md)** – The color of a control's border when the control is focused.
+**[`FocusedBorderColor`](properties-color-border.md)** – The color of a control's border when the control is focused.
 
-**[FocusedBorderThickness](properties-color-border.md)** – The thickness of a control's border when the control is focused.
+**[`FocusedBorderThickness`](properties-color-border.md)** – The thickness of a control's border when the control is focused.
 
-**[Font](properties-text.md)** – The name of the family of fonts in which text appears.
+**[`Font`](properties-text.md)** – The name of the family of fonts in which text appears.
 
-**[FontWeight](properties-text.md)** – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.
+**[`FontWeight`](properties-text.md)** – The weight of the text in a control: **`Bold`**, **`Semibold`**, **`Normal`**, or **`Lighter`**.
 
-**[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
+**[`Height`](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
-**[HoverBorderColor](properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.
+**[`HoverBorderColor`](properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.
 
-**[HoverColor](properties-color-border.md)** – The color of the text in a control when the user keeps the mouse pointer on it.
+**[`HoverColor`](properties-color-border.md)** – The color of the text in a control when the user keeps the mouse pointer on it.
 
-**[HoverFill](properties-color-border.md)** – The background color of a control when the user keeps the mouse pointer on it.
+**[`HoverFill`](properties-color-border.md)** – The background color of a control when the user keeps the mouse pointer on it.
 
-**[Italic](properties-text.md)** – Whether the text in a control is italic.
+**[`Italic`](properties-text.md)** – Whether the text in a control is italic.
 
-**[OnSelect](properties-core.md)** – Actions to perform when the user taps or clicks a control.
+**[`OnSelect`](properties-core.md)** – Actions to perform when the user taps or clicks a control.
 
-**OnTimerStart** – Actions to perform when a timer starts to run.
+**`OnTimerStart`** – Actions to perform when a timer starts to run.
 
-**[PressedBorderColor](properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.
+**[`PressedBorderColor`](properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.
 
-**[PressedColor](properties-color-border.md)** – The color of text in a control when the user taps or clicks that control.
+**[`PressedColor`](properties-color-border.md)** – The color of text in a control when the user taps or clicks that control.
 
-**[PressedFill](properties-color-border.md)** – The background color of a control when the user taps or clicks that control.
+**[`PressedFill`](properties-color-border.md)** – The background color of a control when the user taps or clicks that control.
 
-**[Reset](properties-core.md)** – Whether a control reverts to its default value.
+**[`Reset`](properties-core.md)** – Whether a control reverts to its default value.
 
-**[Size](properties-text.md)** – The font size of the text that appears on a control.
+**[`Size`](properties-text.md)** – The font size of the text that appears on a control.
 
-**Start** – Whether the timer starts.
+**`Start`** – Whether the timer starts.
 
-**[Strikethrough](properties-text.md)** – Whether a line appears through the text that appears on a control.
+**[`Strikethrough`](properties-text.md)** – Whether a line appears through the text that appears on a control.
 
-**[TabIndex](properties-accessibility.md)** – Keyboard navigation order in relation to other controls.
+**[`TabIndex`](properties-accessibility.md)** – Keyboard navigation order in relation to other controls.
 
-**[Text](properties-core.md)** – Text that appears on a control or that the user types into a control.
+**[`Text`](properties-core.md)** – Text that appears on a control or that the user types into a control.
 
-**[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
+**[`Tooltip`](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
-**[Underline](properties-text.md)** – Whether a line appears under the text that appears on a control.
+**[`Underline`](properties-text.md)** – Whether a line appears under the text that appears on a control.
 
-**[Visible](properties-core.md)** – Whether a control appears or is hidden.
+**[`Visible`](properties-core.md)** – Whether a control appears or is hidden.
 
-**[Width](properties-size-location.md)** – The distance between a control's left and right edges.
+**[`Width`](properties-size-location.md)** – The distance between a control's left and right edges.
 
-**[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
+**[`X`](properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
 
-**[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
+**[`Y`](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
 ## Related functions
 [**Refresh**( *DataSource* )](../functions/function-refresh.md)
@@ -130,9 +130,9 @@ Timers can, for example, determine how long a control appears or change other pr
 1. Add a timer, and name it **FadeIn**.
 
     Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
-2. Set the timer's **Duration** property to **5000**, its **Repeat** property to **true**, and its **[Text](properties-core.md)** property to **Toggle animation**.
-3. (optional) Make the timer easier to read by setting its **[Height](properties-size-location.md)** property to **160**, its **[Width](properties-size-location.md)** property to **600**, and its **[Size](properties-text.md)** property to **60**.
-4. Add a label, set its **[Text](properties-core.md)** property to show **Welcome!** and set its **[Color](properties-color-border.md)** property to this formula:
+2. Set the timer's **`Duration`** property to **5000**, its **`Repeat`** property to **true**, and its **[`Text`](properties-core.md)** property to **Toggle animation**.
+3. (optional) Make the timer easier to read by setting its **[`Height`](properties-size-location.md)** property to **160**, its **[`Width`](properties-size-location.md)** property to **600**, and its **[`Size`](properties-text.md)** property to **60**.
+4. Add a label, set its **[`Text`](properties-core.md)** property to show **Welcome!** and set its **[`Color`](properties-color-border.md)** property to this formula:
    <br>**ColorFade(Color.BlueViolet, FadeIn.Value/5000)**
 
     Want more information about the **[ColorFade](../functions/function-colors.md)** function or [other functions](../formula-reference.md)?
@@ -163,10 +163,10 @@ Some scenarios are exempt from these requirements. Learn more in the [WCAG 2.0 g
     > [!NOTE]
     > If the timer is visible and running, screen readers will announce the elapsed time every five seconds.
 
-* Don't use the **[Text](properties-core.md)** property of a control for time-sensitive and important information. Screen readers won't announce changes to **[Text](properties-core.md)**.
+* Don't use the **[`Text`](properties-core.md)** property of a control for time-sensitive and important information. Screen readers won't announce changes to **[`Text`](properties-core.md)**.
 * For interactive timers:
-    * **[Text](properties-core.md)** must be present.
-    * Consider adding a **[Label](control-text-box.md)** control to show the elapsed time. Use the timer's **[Text](properties-core.md)** property to instruct the user to start or stop the timer.
+    * **[`Text`](properties-core.md)** must be present.
+    * Consider adding a **[`Label`](control-text-box.md)** control to show the elapsed time. Use the timer's **[`Text`](properties-core.md)** property to instruct the user to start or stop the timer.
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

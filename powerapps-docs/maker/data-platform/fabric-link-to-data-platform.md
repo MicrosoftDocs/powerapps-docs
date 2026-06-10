@@ -8,7 +8,7 @@ contributors: saviegas
 ms.service: powerapps
 ms.subservice: dataverse-maker
 ms.topic: how-to
-ms.date: 04/30/2026
+ms.date: 04/27/2026
 ms.custom: template-how-to
 ---
 # Link to Microsoft Fabric
@@ -71,7 +71,7 @@ Link to Microsoft Fabric from the Power Apps **Tables** area: Select **Analyze**
      Provide your credentials and save the connection. To change credentials later, select **Switch account** and provide new credentials.
 
 6. You can expect to see shortcuts to all your tables within the selected workspace. If you don't see workspaces, ask the system to create a workspace. Go to [Troubleshooting common issues](fabric-troubleshoot.md) if you don't see the desired workspace.
-7. Next, in the **Select Entities** step, choose the tables you want to sync to Fabric. By default, all Dataverse tables where the **Track changes** property is enabled are selected. Unselect any tables you don't want to sync. Only selected tables consume storage in Fabric, so you can optimize costs by excluding tables you don't need.
+7. Next, in the **Select Entities** step, choose the tables you want to sync to Fabric. By default, all Dataverse tables where the **Track changes** property is enabled are selected. Clear any tables you don't want to sync. Only selected tables consume storage in Fabric, so you can optimize costs by excluding tables you don't need.
 
    :::image type="content" source="media/fabric/fabric-link-select-entities.png" alt-text="Screenshot of the Select Entities step in the Link to Fabric wizard showing Dataverse tables with checkboxes to include or exclude from sync." lightbox="media/fabric/fabric-link-select-entities.png":::
 
@@ -101,7 +101,7 @@ Benefits:
 
 - Faster initial sync.
 - Faster delta sync for incremental changes.
-- Higher throughput for finance and operations apps tables, up to 1M+ records per hour per table. Actual sync times depend on initial load, data churn, table sizes, and number of columns.
+- Higher throughput for finance and operations apps tables, up to 1M or more records per hour per table. Actual sync times depend on initial load, data churn, table sizes, and number of columns.
 
 Low-latency sync rolls out by station and is enabled automatically. There's no separate opt-in. Once your station is enabled, new Link to Fabric setups use the new engine through the same setup experience.
 
@@ -109,19 +109,17 @@ To confirm a profile is running on low-latency sync, select **Azure Synapse Link
 
 :::image type="content" source="media/Fabric/low-latency-sync-page.jpg" alt-text="Azure Synapse Link page showing the Low-latency mode flag on a Fabric link profile." lightbox="media/Fabric/low-latency-sync-page.jpg":::
 
-Existing Fabric Link profiles continue to use the previous sync engine. To move an existing profile to low-latency sync after it's available in your station, unlink the profile and relink it.
+Existing Fabric link profiles continue to use the previous sync engine. To move an existing profile to low-latency sync after it's available in your station, unlink the profile and relink it.
 
 > [!NOTE]
 > Unlinking and relinking triggers a full initial sync for all configured tables.
 
 > [!IMPORTANT]
-> If you perform analytics on live and retained data together, note the following before you unlink and relink:
 >
-> - The newly established Fabric Link includes **live data only**. Retained data that was previously available through the link isn't carried over, because the new link starts a fresh sync from the live store.
-> - Archival and existing long-term retention jobs are unaffected. They continue to run as configured, and any new retained data going forward remains available for analytics through the standard retained data access paths.
-
-> [!IMPORTANT]
-> Low-latency sync writes timestamp columns as **INT64**. The **INT96** timestamp format used by the previous Fabric Link sync engine isn't supported. Review any downstream dependencies (queries, pipelines, semantic models, external readers) that explicitly handle INT96 timestamps and update them to read INT64.
+> - If you perform analytics on live and retained data together, note the following behaviors before you unlink and relink:
+>    - The newly established Fabric link includes *live data only*. Retained data that was previously available through the link isn't carried over, because the new link starts a fresh sync from the live store.
+>    - Archival and existing long-term retention jobs are unaffected. They continue to run as configured, and any new retained data going forward remains available for analytics through the standard retained data access paths.
+> - Low-latency sync writes timestamp columns as **INT64**. The **INT96** timestamp format used by the previous Fabric link sync engine isn't supported. Review any downstream dependencies such as queries, pipelines, semantic models, or external readers that explicitly handle INT96 timestamps and update them to read INT64.
 
 ### Prerequisites for finance and operations apps
 
@@ -196,7 +194,7 @@ After confirmation:
 
 > [!IMPORTANT]
 >
-> - Some system tables and tables required by Microsoft add-ins can't be removed. More information: [Are there system tables that are automatically synchronized and can't be unlinked?](fabric-link-faq.yml#are-there-system-tables-that-are-automatically-synchronized-and-cant-be-unlinked)
+> - Some system tables and tables required by Microsoft add-ins can't be removed. More information: [Are there system tables that are automatically synchronized and can't be unlinked?](fabric-link-faq.yml#are-there-system-tables-that-are-automatically-synchronized-and-can-t-be-unlinked)
 > - Removing a table doesn't delete the table in Dataverse; it only removes the OneLake shortcut and stops data sync.
 > - If you need to add tables later, repeat the same steps and check the tables you want to include. More information: [Manage link to Fabric](#manage-link-to-fabric).
 

@@ -3,7 +3,7 @@ title: "How to: Connect your code app to Azure SQL"
 description: "Learn how to connect your code app to Azure SQL"
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 02/02/2026
+ms.date: 03/05/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
@@ -11,13 +11,13 @@ contributors:
 ---
 # How to: Connect your code app to Azure SQL
 
-This guide walks through how to set up an Azure SQL Database and connect it to a Power Apps code app using the Power SDK.
+This guide walks through how to set up an Azure SQL Database and connect it to a Power Apps code app using the [Power Apps client library for code apps](https://www.npmjs.com/package/@microsoft/power-apps).
 
 This guide covers:
 
 - Provisioning an Azure SQL Server and database
 - Creating SQL tables and stored procedures
-- Connecting a Power Apps code app using the Power SDK
+- Connecting a Power Apps code app using the Power Apps client library for code apps
 
 ## Prerequisites
 
@@ -682,7 +682,7 @@ If you have not yet, create and/or initialize your code app using the instructio
 
    In the command window that opens up, open the app link provided:
 
-   :::image type="content" source="media/sql-testapp.png" alt-text="Power SDK server console with app URL and status":::
+   :::image type="content" source="media/sql-testapp.png" alt-text="Client library for code apps console with app URL and status":::
 
 1. When the app opens, you should see a consent dialog, select **Allow**.
 
@@ -793,7 +793,7 @@ You might experience these issues when using Node.js and npm.
 1. **Use Alternative Port:**
 
    - To use a different port, update `vite.config.ts`
-   - Update Power SDK configuration accordingly
+   - Update Power Apps client library for code apps configuration accordingly
 
 #### Package Installation Failures
 

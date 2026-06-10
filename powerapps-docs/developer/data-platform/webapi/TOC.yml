@@ -45,7 +45,7 @@
     href: perform-operations-web-api.md
   - name: Compose HTTP requests and handle errors
     href: compose-http-requests-handle-errors.md
-  - name: Query Data with Web API
+  - name: Use OData to query data
     items:
     - name: Overview
       displayName: OData
@@ -76,6 +76,10 @@
       href: query/optimize-performance.md
     - name: Retrieve and execute predefined queries
       href: retrieve-and-execute-predefined-queries.md
+  - name: Use FetchXml to query data
+    href: ../fetchxml/overview.md
+  - name: Use SQL to query data
+    href: query/sql.md
   - name: Create a table row
     href: create-entity-web-api.md
   - name: Retrieve a table row
@@ -116,11 +120,15 @@
     href: create-update-entity-relationships-using-web-api.md
   - name: Use multi-table lookup columns
     href: multitable-lookup.md
+  - name: multi-table lookup sample
+    href: samples/multi-table-lookup-powershell.md
   - name: Work with choices (option sets)
     href: create-update-optionsets.md
-  - name: Web API table schema operations sample
+  - name: HTTP sample
     href: web-api-metadata-operations-sample.md
-  - name: Web API table schema operations sample (C#)
+  - name: PowerShell sample
+    href: samples/metadata-operations-powershell.md
+  - name: C# sample
     href: samples/webapiservice-metadata-operations.md
 - name: Use Insomnia with Web API
   href: insomnia.md

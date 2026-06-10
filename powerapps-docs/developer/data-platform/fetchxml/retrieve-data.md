@@ -1,7 +1,7 @@
 ---
-title: Use FetchXml to retrieve data
-description: Learn how to use the Dataverse SDK for .NET or Web API to send a request to retrieve data using FetchXml
-ms.date: 01/26/2025
+title: "Use FetchXML to retrieve data from Dataverse"
+description: "Learn how to retrieve data from Dataverse using FetchXML with the SDK for .NET or Web API. Includes code examples and best practices."
+ms.date: 03/26/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 author: MsSQLGirl
@@ -16,19 +16,20 @@ contributors:
  - apahwa-lab
  - DonaldlaGithub
 ---
-# Use FetchXml to retrieve data
+# Use FetchXML to retrieve data
 
-You can use FetchXml to retrieve data using either the SDK for .NET or Web API. With Power Automate, you can retrieve data using the Web API using the [Fetch Xml Query parameter of the List Rows command](/power-automate/dataverse/list-rows#fetch-xml-query). With PAC CLI, use the [pac env fetch](/power-platform/developer/cli/reference/env#pac-env-fetch) command.
+You can use FetchXml to retrieve data from Dataverse by using either the SDK for .NET or Web API. By using Power Automate, you can retrieve data through the Web API by using the [Fetch Xml Query parameter of the List Rows command](/power-automate/dataverse/list-rows#fetch-xml-query). By using PAC CLI, use the [pac env fetch](/power-platform/developer/cli/reference/env#pac-env-fetch) command.
 
-You may also want to use [Community tools](overview.md#community-tools), like the [FetchXML Builder](https://fetchxmlbuilder.com/) in the [XrmToolBox](../community-tools.md#xrmtoolbox).
+You might also want to use [Community tools](overview.md#community-tools), like [
+FetchXML Studio](https://www.powerplatformtoolbox.com/tools/e64db554-5dc9-4cc5-a712-832307d00777) in the [Power Platform ToolBox](https://www.powerplatformtoolbox.com/) for [FetchXML Builder](https://fetchxmlbuilder.com/) in the [XrmToolBox](../community-tools.md#xrmtoolbox).
 
-How you retrieve data depends on whether you are using the [SDK for .NET](../org-service/overview.md) or [Dataverse Web API](../webapi/overview.md).
+How you retrieve data depends on whether you're using the [SDK for .NET](../org-service/overview.md) or [Dataverse Web API](../webapi/overview.md).
 
 ## [SDK for .NET](#tab/sdk)
 
 Use the [FetchExpression class](xref:Microsoft.Xrm.Sdk.Query.FetchExpression) to hold the FetchXml query as a string. `FetchExpression` is derived from the common [QueryBase class](xref:Microsoft.Xrm.Sdk.Query.QueryBase) type, so you can use it when that type is a method parameter or class property.
 
-You should use the [IOrganizationService.RetrieveMultiple method](xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple%2A) for most cases.
+Use the [IOrganizationService.RetrieveMultiple method](xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple%2A) for most cases.
 
 ```csharp
 static EntityCollection RetrieveMultipleExample(IOrganizationService service, string fetchXml)
@@ -37,7 +38,7 @@ static EntityCollection RetrieveMultipleExample(IOrganizationService service, st
 }
 ```
 
-You can also use the [RetrieveMultipleRequest class](xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest) with the [IOrganizationService.Execute method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A), but there are few scenarios where this is necessary.
+You can also use the [RetrieveMultipleRequest class](xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest) with the [IOrganizationService.Execute method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A), but there are few scenarios where this approach is necessary.
 
 ```csharp
 static EntityCollection RetrieveMultipleRequestExample(IOrganizationService service, string fetchXml)
@@ -58,12 +59,12 @@ static EntityCollection RetrieveMultipleRequestExample(IOrganizationService serv
 
 ## [Web API](#tab/webapi)
 
-Pass your FetchXml query as a URL-encoded string value to the entity set collection using the `fetchXml` query parameter.
+Pass your FetchXml query as a URL-encoded string value to the entity set collection by using the `fetchXml` query parameter.
 
 > [!NOTE]
-> Unlike queries that use the OData syntax, FetchXML queries sent using Web API don't return properties with null values. [Learn more about this behavior](#null-column-values-are-not-returned)
+> Unlike queries that use the OData syntax, FetchXML queries sent using Web API don't return properties with null values. [Learn more about this behavior](#null-column-values-arent-returned)
 
-For example, if you want to retrieve data from the [account entity set](xref:Microsoft.Dynamics.CRM.account), you will compose a fetchXml query setting the [entity element](reference/entity.md) `name` parameter to the `account`.
+For example, if you want to retrieve data from the [account entity set](xref:Microsoft.Dynamics.CRM.account), compose a fetchXml query that sets the [entity element](reference/entity.md) `name` parameter to `account`.
 
 ```xml
 <fetch top='5'>
@@ -75,8 +76,8 @@ For example, if you want to retrieve data from the [account entity set](xref:Mic
 
 Then, URL-encode the value.  Most programming languages include a function to URL-encode a string.
 
-- In JavaScript, you use the [encodeURI function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent).
-- In .NET, you can use the [System.NET.WebUtility.UrlEncode(String) method](xref:System.Net.WebUtility.UrlEncode(System.String))
+- In JavaScript, use the [encodeURI function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent).
+- In .NET, use the [System.NET.WebUtility.UrlEncode(String) method](xref:System.Net.WebUtility.UrlEncode(System.String)).
 
 > [!TIP]
 > The [XrmToolBox](../community-tools.md#xrmtoolbox) tool [FetchXML Builder](https://fetchxmlbuilder.com/) provides an option to escape the fetchxml.
@@ -139,7 +140,7 @@ OData-Version: 4.0
 
 ## Use FetchXML within a batch request
 
-The length of a URL in a `GET` request [is limited to 32 KB (32,768 characters)](../webapi/compose-http-requests-handle-errors.md#maximum-url-length). Including FetchXML as a parameter in the URL can reach the limit. You can execute a `$batch` operation using a `POST` request as a way to move the FetchXML out of the URL and into the body of the request where the limit doesn't apply. Sending a `GET` request within a `$batch` allows for URLs up to 64 KB (65,536 characters) in length. More than with a normal `GET` request, but it isn't unlimited. More information: [Execute batch operations using the Web API](../webapi/execute-batch-operations-using-web-api.md).
+The length of a URL in a `GET` request [is limited to 32 KB (32,768 characters)](../webapi/compose-http-requests-handle-errors.md#maximum-url-length). Including FetchXML as a parameter in the URL can reach this limit. You can execute a `$batch` operation by using a `POST` request to move the FetchXML out of the URL and into the body of the request where the limit doesn't apply. Sending a `GET` request within a `$batch` allows for URLs up to 64 KB (65,536 characters) in length. This limit is higher than with a normal `GET` request, but it isn't unlimited. For more information, see [Execute batch operations using the Web API](../webapi/execute-batch-operations-using-web-api.md).
 
 
 [Quick Start: Web API sample (C#)](../webapi/quick-start-console-app-csharp.md)   
@@ -147,11 +148,11 @@ The length of a URL in a `GET` request [is limited to 32 KB (32,768 characters)]
 
 ---
 
-## Null column values are not returned
+## Null column values aren't returned
 
-When a table column contains a null value, or if the column wasn't requested, the record returned won't include the value. There isn't a key to access it or a value to return. The absence of the attribute indicates that it's null. This is the behavior using the SDK for .NET. [Learn more about this behavior](../org-service/entity-operations-query-data.md#null-column-values-are-not-returned)
+When a table column contains a null value, or if the column wasn't requested, the record returned doesn't include the value. There's no key to access it or value to return. The absence of the attribute indicates that it's null. This behavior occurs when using the SDK for .NET. [Learn more about this behavior](../org-service/entity-operations-query-data.md#null-column-values-are-not-returned).
 
-Columns that are not valid for read always return null values. The definition of these columns have the [AttributeMetadata.IsValidForRead](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.isvalidforread) property set to false.
+Columns that aren't valid for read always return null values. These columns have the [AttributeMetadata.IsValidForRead](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.isvalidforread) property set to false.
 
 ## Next steps
 
@@ -160,7 +161,7 @@ Learn how to select columns.
 > [!div class="nextstepaction"]
 > [Select columns](select-columns.md)
 
-Try some sample code
+Try some sample code.
 
 > [!div class="nextstepaction"]
 > [FetchXml Sample code](sample.md)

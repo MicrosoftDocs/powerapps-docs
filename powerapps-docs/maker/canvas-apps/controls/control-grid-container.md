@@ -5,7 +5,7 @@ author: shivanichander
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 12/16/2025
+ms.date: 04/27/2026
 ms.subservice: canvas-maker
 ms.author: shivchan
 search.audienceType: 
@@ -15,20 +15,12 @@ contributors:
   - shivchan
 
 ---
-# Grid container control in Power Apps (preview)
+# Grid container control in Power Apps
 
-[This article is a pre-release document and is subject to change.]
 
 The **Grid container** control gives you a way to **layout child components in a grid pattern**. You get precise control over where each component goes in terms of rows and columns.
 
 This container works like CSS-style grids. You define the **rows and columns** and set the exact position for each child component using its properties.
-
-> [!IMPORTANT]
->
-> - This feature is in preview.  
-> - Preview features aren't meant for production use and might have restricted functionality These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2189520), and are available before an official release so that customers can get early access and provide feedback.
-> - This feature is in the process of rolling out and might not be available in your region yet.
-
 
 ## Description
 

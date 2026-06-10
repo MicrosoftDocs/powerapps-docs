@@ -1,8 +1,8 @@
 ---
-title: "Assign model-driven app form order in Power Apps | MicrosoftDocs"
+title: "Assign model-driven app form order in Power Apps"
 description: "Learn how to assign the default form in your app"
 ms.custom: ""
-ms.date: 03/07/2019
+ms.date: 02/19/2026
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -22,15 +22,15 @@ search.audienceType:
 ---
 # Assign model-driven app form order
 
- When there are multiple main, quick create, quick view, or card forms for a table, a form order can be assigned. The form order determines which of the available forms will be shown by default.
+When there are multiple main, quick create, quick view, or card forms for a table, a form order can be assigned. The form order determines which of the available forms are shown by default.
 
- The available main forms can be further controlled by assigning [security roles](../model-driven-apps/model-driven-app-glossary.md#security-role) to the form. More information: [Control access to forms](control-access-forms.md)  
+The available main forms can be further controlled by assigning [security roles](../model-driven-apps/model-driven-app-glossary.md#security-role) to the form. More information: [Control access to forms](control-access-forms.md)  
   
- It is not possible to assign security roles to quick create, quick view, or card forms, so the only form that will be used by everyone is the one at the top of the form order.  
+It isn't possible to assign security roles to quick create, quick view, or card forms, so the only form that is used by everyone is the one at the top of the form order.  
 
 ## Set the form order
 
-1. Sign into Power Apps, select **Solutions**, open the solution required, select a **Tables** on the left navigation pane, and then select the **Forms** area. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Sign into Power Apps, select **Solutions**, open the solution you want, select a table on the left navigation pane, and then select the **Forms** area. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 2. Next to the main form you want to configure the fallback form for, select **...**, and then select **Form settings**.
 3. In the left navigation on the **Form settings** page, select **Form order**.
 4. Select the form set that is required, such as **Main Form**, **Quick Create Form**, **Quick View Form**, or **Card Form**.
@@ -40,20 +40,20 @@ search.audienceType:
 ## Using the classic editor to assign the form order
 
 > [!NOTE]
-> To set form order using the new experience, see [Set the form order](control-access-forms.md#set-the-form-order).
+> To set form order using the new experience, go to [Set the form order](control-access-forms.md#set-the-form-order).
 
-1.  Open the [solution explorer](advanced-navigation.md#solution-explorer), expand the table that you want, and then select **Forms**.  
+1. Open the [solution explorer](advanced-navigation.md#solution-explorer), expand the table that you want, and then select **Forms**.  
   
-2.  In the form list toolbar, select **Form Order**.  
+2. In the form list toolbar, select **Form Order**.  
 
      > [!div class="mx-imgBorder"] 
      > ![Form order toolbar command.](media/form-order.png)
   
-3.  Choose either **Main Form Set**, **Quick Create Form Set**, **Quick View Form Set**, or **Card Form Set** depending on the type of forms you want to work with. More information: [Type of forms](types-forms.md). 
+3. Choose either **Main Form Set**, **Quick Create Form Set**, **Quick View Form Set**, or **Card Form Set** depending on the type of forms you want to work with. More information: [Type of forms](types-forms.md). 
   
-4.  The **Form Order** dialog is a simple list where a selected form can be moved up or down in the form order.  
+4. The **Form Order** dialog is a simple list where a selected form can be moved up or down in the form order.  
   
-5.  After the order has been set, select **OK** to close the dialog.  
+5. After the order has been set, select **OK** to close the dialog.  
 
 ## Next steps
 

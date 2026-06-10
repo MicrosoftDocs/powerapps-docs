@@ -17,6 +17,9 @@ search.audienceType:
 ---
 # Power Apps read-only grid control
 
+> [!IMPORTANT]
+> The Read-only Grid control is deprecated. Use the [Power Apps grid control](the-power-apps-grid-control.md) instead. More information: [Deprecation of Editable Grid and Power Apps Read-Only Grid controls](/power-platform/important-changes-coming#deprecation-of-editable-grid-and-power-apps-read-only-grid-controls)
+
 The Power Apps read-only grid control lets users view and open records from views and subgrids. The control supports the latest Microsoft accessibility standards and is built to be performant and easily extensible for the future. The Power Apps read-only grid control also aligns with the latest Microsoft design guidance for fonts, sizing, and styling.
 
 > [!NOTE] 
@@ -37,7 +40,6 @@ When you configure the Power Apps read-only grid control for a table, *all* view
 1. Open [solution explorer](advanced-navigation.md#solution-explorer).
 1. Expand **Entities**, in the list of tables, open the table you want, select the **Controls** tab, and then select **Add Control**.
 1. In the **Add Control** dialog box, select **Power Apps Read-only Grid**, and then select **Add**.
-   :::image type="content" source="media/add-power-apps-grid-control.png" alt-text="Add the Power Apps read-only grid control to a table":::
 
 ### Configure the Power Apps read-only grid control
 

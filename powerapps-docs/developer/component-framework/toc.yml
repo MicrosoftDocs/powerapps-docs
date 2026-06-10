@@ -14,7 +14,7 @@ items:
         href: /power-pages/configure/component-framework
       - name: "React controls & platform libraries"
         href: react-controls-platform-libraries.md
-      - name: "Style components with modern theming (preview)"
+      - name: Style components with modern theming
         href: fluent-modern-theming.md
       - name: Dependent libraries (preview)
         href: dependent-libraries.md

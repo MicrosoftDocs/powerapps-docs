@@ -1,0 +1,1 @@
+Removes a previously registered custom handler for a Microsoft 365 Copilot action.

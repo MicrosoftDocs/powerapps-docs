@@ -2,14 +2,17 @@
 title: "Include filtering attributes with plug-in registration | MicrosoftDocs"
 description: "If no filtering attributes are set for a plug-in registration step, then the plug-in executes every time an update message occurs for that event."
 suite: powerapps
-author: jowells
-ms.author: jowells
-ms.reviewer: jdaly
+author: sakaralems
+ms.author: sakarale
+ms.reviewer: pehecke
 ms.topic: article
 ms.date: 11/26/2024
 ms.subservice: dataverse-developer
 search.audienceType: 
   - developer
+contributors:
+ - JimDaly
+ - phecke
 ---
 # Include filtering attributes with plug-in registration
 

@@ -1,7 +1,7 @@
 ---
 title: Create new data columns in Dataverse
-description: Learn about columns and how to add new columns for enhanced data capture in your apps.
-ms.date: 09/09/2025
+description: Learn about Microsoft Dataverse columns and how to add new columns for enhanced data capture in your apps.
+ms.date: 04/27/2026
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""

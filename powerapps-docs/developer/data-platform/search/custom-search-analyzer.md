@@ -4,8 +4,8 @@ description: "You can tailor the search results you get from Dataverse search by
 ms.date: 03/28/2025
 ms.reviewer: jdaly
 ms.topic: how-to
-author: seanwat-msft
-ms.author: seanwat
+author: JasonHQX
+ms.author: jasonhuang
 search.audienceType: 
   - developer
 search.app: 
