@@ -92,6 +92,16 @@ sections:
    - question: What are the limits for Fabric Link?
      answer: |
         If you have more than 2,000 active Dataverse tables, Link to Fabric can fail with an error.
+   - question: Are there per-record size limits when using Link to Fabric?
+     answer: |
+        Yes. Link to Fabric reads rows through Dataverse, so every Dataverse per-record limit applies to sync. The most common limit is the 200 MiB cap on the uncompressed size of a single record returned by the server.
+
+        This limit typically applies to tables that store large free-form content or binary data. For example:
+        - `email` holds the full message body.
+        - `activitypointer` holds long descriptions.
+        - `activitymimeattachment` holds inline and attached files.
+
+        This is a Dataverse platform limit and can't be raised on request. The service doesn't truncate or modify customer data. To resolve, reduce the oversized record in Dataverse by deleting it, clearing the large field, or moving the content out of Dataverse.
    - question: Can I link existing Azure Synapse Link profiles to Fabric?
      answer: |
         You can link your existing Azure Synapse Link for Dataverse profiles with Fabric if you select the **Enable Parquet/Delta lake** option. However:

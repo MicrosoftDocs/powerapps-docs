@@ -90,6 +90,9 @@ Link to Microsoft Fabric from the Power Apps **Tables** area: Select **Analyze**
 >
 > The link was labeled as **Microsoft OneLake** and is now labeled **Link to Fabric**.
 
+> [!IMPORTANT]
+> The lakehouse created by Link to Fabric currently follows the naming pattern `<environmentname>_<internalprofile>_<workspace>_<uniquevalue>` (for example, the `internalprofile` portion appears as `CDS2` or `CDS3`). Don't take a dependency on this lakehouse name in your downstream code, queries, or pipelines. The name format is subject to change without notice, and the historical significance of the `CDS2` or `CDS3` segment no longer applies and is likely to be dropped in the future. Reference the lakehouse through stable identifiers (such as the workspace and lakehouse ID) instead of parsing the display name.
+
 ## Low-latency sync
 
 Low-latency sync is a faster sync engine for Link to Fabric. It writes data directly from the Dataverse database to Delta Parquet, removing the intermediate CSV step used by the previous pipeline.
