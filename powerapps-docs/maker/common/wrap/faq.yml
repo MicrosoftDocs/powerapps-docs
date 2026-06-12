@@ -2,14 +2,15 @@
 metadata:
   title: Frequently asked questions for wrap
   description: Frequently asked questions for wrap.
-  author: komala2019
+  author: shwetamurkute
   ms.topic: faq
   ms.custom: 
-  ms.date: 01/27/2025
-  ms.author: murugeshs
+  ms.date: 06/12/2026
+  ms.author: ruchidixit
   ms.reviewer: smurkute
   contributors:
     - mduelae
+    - shwetamurkute
 title: Frequently asked questions for wrap
 summary: |
   Frequently asked questions about the **wrap** feature are listed below.
@@ -179,6 +180,103 @@ sections:
           4. Share the link with your client.
           5. Install the APK on Android and the IPA on iOS.
           6. Open the weblink and enter the external IDs to sign in.
+
+      - question: |
+          How do I view and download my app binaries from Dataverse after wrapping my app?
+        answer: |
+          When you configure Power Apps Wrap to use Dataverse storage, your build binaries (APK, AAB, and IPA files) are stored as file attachments in the `msdyn_powerappswrapbuild` table in your environment. You can access the attachments in three ways, depending on your scenario.
+
+           1. **Using the View builds page (recommended)**:
+
+              The simplest way to download a build is directly from the Power Apps Wrap interface:
+
+                1. Open your wrap project and select **View builds**.
+                2. Locate the build you want in the list.
+                3. Select **Download** next to the build. 
+ 
+
+           2. **Querying builds with the Dataverse Web API**
+
+               For automation, CI/CD pipelines, or custom portals, you can query the `msdyn_powerappswrapbuild` table using OData against your environment's Web API endpoint: `https://{your-environment}.crm.dynamics.com/api/data/v9.2/`.
+               The calling user or application user must have *Read* privileges on the `msdyn_powerappswrapbuild` table. 
+             - Retrieve all builds, newest first: 
+               `GET /msdyn_powerappswrapbuilds?$select=msdyn_powerappswrapbuildid,name,msdyn_buildid,msdyn_platformtype,msdyn_apptype,createdon&$orderby=createdon desc`
+             - Retrieve builds for a specific mobile app: 
+               `GET /msdyn_powerappswrapbuilds?$filter=_msdyn_mobileappid_value eq{mobileAppId}&$orderby=createdon desc`
+             - Filter by artifact type (APK, AAB, or IPA): 
+               `GET /msdyn_powerappswrapbuilds?$filter=msdyn_apptype eq 'APK'`
+             - Filter by build ID: 
+               `GET /msdyn_powerappswrapbuilds?$filter=msdyn_buildid eq '{buildId}'`
+             - Retrieve a single build by alternate key: 
+               `GET /msdyn_powerappswrapbuilds(msdyn_buildid='{buildId}', msdyn_mobileappid={mobileAppId})`
+
+           3. **Downloading artifacts programmatically using a SAS URL**
+          
+                The actual binary files aren't returned in OData query results — they're stored as file column data. To download a binary programmatically, call the standard Dataverse [GetFileSasUrl](/power-apps/developer/data-platform/getfilesasurl) message to generate a time-limited download URL, then fetch the file from that URL. 
+            
+                **Key things to know:** 
+                    
+                    - The SAS URL is valid for one hour from the time it's generated. 
+                  
+                    - The URL provides anonymous access — anyone with the URL can download the file during the valid window, so generate URLs on demand rather than storing them. 
+                  
+                    - The user or application user calling GetFileSasUrl must have Read access to the wrap build record. 
+                  
+                    - GetFileSasUrl isn't supported in environments using self-managed database encryption keys (BYOK). If your environment uses BYOK, migrate to customer-managed keys (CMK) first.              
+        
+                Web API request: 
+      
+                  POST [Organization URI]/api/data/v9.2/GetFileSasUrl            
+                    Content-Type: application/json 
+                    Accept: application/json  
+                  {
+                    "Target": 
+                      { 
+                        "@odata.type": "Microsoft.Dynamics.CRM.msdyn_powerappswrapbuild",             
+                        "msdyn_powerappswrapbuildid": "{recordId}"        
+                      }, 
+                    "FileAttributeName": "msdyn_artifact" 
+                    } 
+              
+                Response: 
+              
+                  { 
+                
+                    "FileName": "build-2026-05-17.apk", 
+                
+                    "FileSizeInBytes": 24576000, 
+                
+                    "MimeType": "application/vnd.android.package-archive", 
+                
+                    "SasUrl": "https://{storageaccount}.blob.core.windows.net/{container}/{blob}?sv=..." 
+                
+                  } 
+                
+                SDK for .NET example: 
+                
+                  using Microsoft.Xrm.Sdk; 
+                
+                  using Microsoft.Crm.Sdk.Messages; 
+                
+                
+                
+                  var request = new GetFileSasUrlRequest 
+                
+                    { 
+                
+                      Target = new EntityReference("msdyn_powerappswrapbuild", recordId), 
+                
+                      FileAttributeName = "msdyn_artifact" 
+                
+                    }; 
+                
+                
+                
+                  var response = (GetFileSasUrlResponse)orgService.Execute(request); 
+                
+                  var sasUrl = response.Result.SasUrl; 
+                
+                  var fileName = response.Result.FileName; 
 
       - question: |
           See also
