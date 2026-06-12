@@ -1,17 +1,19 @@
 ---
 title: Customize and build your mobile app using the wrap wizard
 description: Learn about the steps to build and customize your mobile app using wrap wizard.
-author: Murugesh1985
+author: shwetamurkute
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: smurkute
-ms.date: 03/20/2026
+ms.date: 06/12/2026
 ms.subservice: canvas-maker
-ms.author: smurkute
+ms.author: ruchidixit
 search.audienceType: 
   - maker
 contributors:
   - mkaur
+  - Murugesh1985
+  - shwetamurkute
 ---
 
 # Wrap wizard: Step-by-step guide to building your native mobile app
@@ -108,13 +110,42 @@ Follow these steps to configure, build, sign, and distribute a custom-branded na
 
 ### 4. Manage output
 
-To upload your build to Azure blob storage, you need an Azure blob storage account and container. If you don't have one, create one.
-   1. On **Manage output**, select **Configure** to add your key vault, storage account, and container information.
-   1. In the **Configure keyvault** side panel, select the key vault that stores access credentials to your Azure blob storage, and then select **Next**.
-      :::image type="content" source="media/how-to-v2/manage-output-screen-configure-keyvault.png" alt-text="Screenshot that shows keyvault selected in manage output step" lightbox="media/how-to-v2/manage-output-screen-configure-keyvault.png":::
-   1. In the **Configure storage** screen, select the storage name and container name, and then enter the name of the secret that contains access to the storage. To create a new secret, follow the instructions in the "How to create a secret" section on the same screen.
-      :::image type="content" source="media/how-to-v2/manage-output-screen-configure-storage.png" alt-text="Screenshot that shows options for configuring storage in manage output step" lightbox="media/how-to-v2/manage-output-screen-configure-storage.png":::
-   1. Select **Finish**.
+Configure where your app binaries (APK and IPA files) will be stored. Choose one of the following options based on your storage and access requirements. 
+  :::image type="content" source="media/how-to-v2/manage-output-dataverse-storage.png" alt-text="Screenshot that shows options for storage like Dataverse and Azure Blob Storage" lightbox="media/how-to-v2/manage-output-dataverse-storage.png":::
+
+#### Dataverse (Recommended)
+
+Dataverse storage is the simpler option and is recommended for testing and evaluation of deployments. 
+
+When you select Dataverse, build binaries are automatically stored in the `msdyn_PowerAppsWrapBuild` table in your current environment. Builds count against your Dataverse storage capacity.
+
+#### Azure Blob Storage 
+
+Azure Blob Storage requires setup. 
+
+##### Prerequisites 
+
+Before you configure Azure Blob Storage, make sure you have: 
+
+- An Azure Blob Storage account and container. If you don't have them, learn how to [create a storage account](/azure/storage/common/storage-account-create?tabs=azure-portal). 
+
+- An Azure Key Vault that contains the access credentials for your storage account. If you don't have one, learn how to [create a key vault](create-key-vault-for-code-signing.md). 
+
+- Sufficient permissions to read secrets from the key vault. 
+
+##### Configure Azure Blob Storage 
+
+To configure Azure blob storage follow these steps:
+
+1. On the **Manage output** page, select **Configure**. 
+ :::image type="content" source="media/how-to-v2/manage-output-screen-configure-keyvault.png" alt-text="Screenshot that shows key vault selected in manage output step" lightbox="media/how-to-v2/manage-output-screen-configure-keyvault.png":::
+1. In the **Configure keyvault** side panel, select the key vault that stores your Azure blob storage credentials, and then select **Next**.
+1. Enter the following details:  
+     - **Storage account name**: The name of your Azure Blob Storage account.
+     - **Container name**: The container where build artifacts will be uploaded. 
+1. Select **Save**. 
+
+After you save, the configuration is applied to subsequent builds. To verify, run a build and confirm that the APK or IPA file appears in your specified container. 
 
 ### 5. Register your app
 

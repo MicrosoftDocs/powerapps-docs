@@ -180,7 +180,7 @@ sections:
           4. Share the link with your client.
           5. Install the APK on Android and the IPA on iOS.
           6. Open the weblink and enter the external IDs to sign in.
-
+          
       - question: |
           How do I view and download my app binaries from Dataverse after wrapping my app?
         answer: |
