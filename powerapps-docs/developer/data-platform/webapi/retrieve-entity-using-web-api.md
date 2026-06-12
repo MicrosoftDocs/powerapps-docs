@@ -2,7 +2,7 @@
 title: Retrieve a table row using the Web API
 description: "Compose a GET request to retrieve a table row using the Dataverse Web API. See examples for selecting properties, alternate keys, and navigation properties."
 ms.topic: how-to
-ms.date: 03/12/2026
+ms.date: 06/11/2026
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: jdaly
@@ -78,13 +78,19 @@ If you request a property that's part of a composite attribute for an address, y
 
 If an entity has an alternate key defined, you can use it instead of the unique identifier to retrieve, update, or delete the entity. By default, no alternate keys are configured for entities. Alternate keys are available only if your organization or a solution adds them.
 
-Alternate key values with the following characters `/`,`<`,`>`,`*`,`%`,`&`,`:`,`\\`,`?`,`+` aren't currently supported.
-
 For example, if the `Contact` entity has an alternate key definition that includes both the `firstname` and `emailaddress1` properties, you can retrieve the contact using a query with data provided for those keys:
 
 ```http
 GET [Organization URI]/api/data/v9.2/contacts(firstname='Joe',emailaddress1='abc@example.com')
 ```
+
+See [Use an alternate key to reference a record](../use-alternate-key-reference-record.md) for more information.
+
+### Alternate keys with special character values
+
+[!INCLUDE [cc-filter-workaround-alternate-key](../includes/cc-filter-workaround-alternate-key.md)]
+
+### Alternate keys using lookup columns
 
 If the alternate key definition contains a lookup type field (for example, the `primarycontactid` property for the `account` entity), you can retrieve the `account` using the [Lookup properties](web-api-properties.md#lookup-properties), as in the following example:
 
