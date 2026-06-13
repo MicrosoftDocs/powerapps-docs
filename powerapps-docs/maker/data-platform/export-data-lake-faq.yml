@@ -4,7 +4,7 @@ metadata:
   description: Get answers to frequently asked questions about Power Apps Azure Synapse Link for Dataverse.
   author: sabinn-msft
   ms.search.keywords: 
-  ms.date: 06/02/2026
+  ms.date: 06/10/2026
   ms.author: sabinn
   ms.reviewer: matp
   contributors: 
@@ -138,6 +138,16 @@ sections:
    - question: Why do I see the error message - can't bulk load because the file is incomplete or couldn't be read (CSV file only)?
      answer: |
         Dataverse data can continuously change through creating, updating, and deleting transactions. This error is caused by the underlying file being changed when you read data from it. So, for tables with continuous changes, change your consumption pipeline to use snapshot data (partitioned tables) to consume. More information: [Troubleshoot serverless SQL pool](/azure/synapse-analytics/sql/resources-self-help-sql-on-demand?tabs=x80070002#cant-bulk-load-because-the-file-couldnt-be-opened)
+   - question: Are there per-record size limits when using Azure Synapse Link?
+     answer: |
+        Yes. Azure Synapse Link reads rows through Dataverse, so every Dataverse per-record limit applies to sync. The most common limit is the 200 MiB cap on the uncompressed size of a single record returned by the server.
+
+        This limit typically applies to tables that store large free-form content or binary data. For example:
+        - `email` holds the full message body.
+        - `activitypointer` holds long descriptions.
+        - `activitymimeattachment` holds inline and attached files.
+
+        This is a Dataverse platform limit and can't be raised on request. The service doesn't truncate or modify customer data. To resolve, reduce the oversized record in Dataverse by deleting it, clearing the large field, or moving the content out of Dataverse.
    - question: How can I use Azure Synapse Link to archive critical data?
      answer: |
         Azure Synapse Link for Dataverse is designed for analytics purposes. We recommend customers use long-term-retention for archive purposes. More information: [Dataverse long term data retention overview](/power-apps/maker/data-platform/data-retention-overview)

@@ -1,12 +1,12 @@
 ---
 title: Install the Power Apps mobile app
 description: Learn how to install and run a canvas or model-driven app on a mobile device.
-author: Murugesh1985
+author: shwetamurkute
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 02/06/2026
+ms.date: 06/12/2026
 ms.subservice: mobile
-ms.author: murugeshs
+ms.author: ruchidixit
 ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
@@ -16,6 +16,7 @@ searchScope:
 ms.collection: get-started
 contributors:
 - makolomi
+- Murugesh1985
 ms.contributors:
 - devangpandya
 ---
@@ -73,17 +74,20 @@ The **Home** is the default screen when you sign in. It shows the apps that you 
 
 If you don't have any apps, then when you sign in, you will land on the **All apps** screen. The list of apps is organized in alphabetical order. Type in an app name in the search bar to find an app.
 
-![Filter and find apps.](media/app-list-2.png "Filter and find apps")  
-
 1. **Settings**: Access app settings and sign out.
-2. **Search**: Use the search to search for apps. When you run a search, it will only search for apps that are on the screen you're on.
-3. **Favorites** (canvas apps only): Displays canvas apps that you have pinned to favorites.
-4. **Recent apps**: Displays both model-driven and canvas apps that you have recently used.
-5. **Home**: Displays favorite apps and recently accessed apps sorted by open date.
-6. **All apps**: Displays all canvas apps and model-driven apps to which you have access, including apps you created and apps that others shared with you.
-7. **More** (canvas apps only): Displays featured and sample apps.
-8. **Details**: View information about the app including run the app, add a shortcut for the app, and add the app to favorites.
-9. **Sort apps**: You can short by the app name or modified date. </li> 
+1. **Search**: Search for apps. When you run a search, the system searches for apps that are on the screen only.
+1. **Favorites** (canvas apps only): Displays canvas apps that you have pinned to favorites.
+1. **Recent apps**: Displays both model-driven and canvas apps that you have recently used.
+1. **Home**: Displays favorite apps, recently accessed and recommended apps sorted by open date.
+1. **All apps**: Displays all canvas apps and model-driven apps to which you have access, including apps you created and apps that others shared with you.
+1. **Featured apps** (canvas apps only): Displays featured apps.
+1. **More** (canvas apps only): Displays sample apps.
+1. **Details**: View information about the app including run the app, add a shortcut for the app, and add the app to favorites.
+    ![Filter and find apps.](media/filter-apps-options.png "Filter and find apps")
+1. **Recommended apps**: Displays recommended apps based on groups associated with your organization.
+    ![Recommended apps option.](media/filter-apps-recommended-option.png "Recommended apps option")
+1. **Sort apps**: Sort by the app name or modified date. 
+    ![Sort apps option.](media/filter-apps-sort-option.png "Sort apps option")
   
 ## Add to favorites
 

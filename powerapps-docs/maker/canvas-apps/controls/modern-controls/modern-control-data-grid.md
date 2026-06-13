@@ -4,7 +4,7 @@ description: Learn about the details, properties, and examples of the Data Grid 
 author: yogeshgupta698
 ms.topic: reference
 ms.custom: canvas
-ms.date: 04/23/2026
+ms.date: 06/12/2026
 ms.subservice: canvas-maker
 ms.author: yogupt
 ms.reviewer: mkaur
@@ -20,15 +20,17 @@ Display records from a data source in a scrollable, sortable, and searchable gri
 
 ## Description
 
-The **Data Grid** modern control displays records in a column-and-row layout built on Fluent UI. It supports optional search filtering, sortable columns, and selectable rows. Columns are configured as sub-controls and support multiple types including text, number, phone, email, URL, and button. Use it when you need a high-performance, data-dense view of tabular data with built-in interaction. Key properties for this control are **Items**, **Searchable**, **Sortable**, and **SelectMultiple**.
+The **Data Grid** modern control displays records in a column-and-row layout built on Fluent UI. It supports optional search filtering, sortable columns, and selectable rows. The control supports **row virtualization**, enabling smooth scrolling through large datasets with more than 2,000 records. Columns are configured as sub-controls and support multiple types including text, number, phone, email, URL, and button. Use it when you need a high-performance, data-dense view of tabular data with built-in interaction. Key properties for this control are **Items**, **Searchable**, **Sortable**, and **SelectMultiple**.
 
 > [!NOTE]
 > The **Data Grid** control is a new control separate from the existing **Table** control. It is not a replacement for the **Table** control.
 
+> [!NOTE]
+> If text wrapping is enabled at the column level, row virtualization is disabled. To take advantage of virtualization for large datasets, keep text wrapping turned off on your columns.
+
 ## Limitations
 
 - **Attachment column not supported**: Attachment-type columns from Dataverse are not currently supported and do not render in the grid.
-- **Row virtualization not yet available**: Virtual scrolling for large datasets is not available in this release. It is planned and will be available in the coming weeks.
 
 ## General
 

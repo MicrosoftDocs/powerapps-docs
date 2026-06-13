@@ -1,9 +1,10 @@
 ---
-title: "Create and use custom APIs (Microsoft Dataverse) | Microsoft Docs"
-description: "Custom API is a code-first way to define custom messages for Microsoft Dataverse"
-author: MsSQLGirl
-ms.author: jukoesma
-ms.date: 01/09/2026
+title: Create and use custom APIs (Microsoft Dataverse) | Microsoft Docs
+description: Custom API is a code-first way to define custom messages for Microsoft Dataverse
+#customer intent: As a developer, I want to create custom APIs in Dataverse, so that I can consolidate one or more operations into a single message that I and other developers can call from code or Power Automate.
+author: kewear
+ms.author: kewear
+ms.date: 06/11/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 ms.subservice: dataverse-developer
@@ -106,7 +107,7 @@ More information:
  - [Actions bound to a table collection](webapi/use-web-api-actions.md#actions-bound-to-a-table-collection)
  - [Bound functions](webapi/use-web-api-functions.md#bound-functions)
 
-## When to create a Function
+## When to create a function
 
 The custom API **Is Function** property controls whether the custom API is a *Function* or *Action*. In OData, a Function is an operation you call by using an HTTP `GET` request. It returns data without making any changes. By using a `GET` request, you pass all the parameters in the URL when you invoke the function.
 
@@ -118,6 +119,7 @@ You can more easily test `GET` requests by using your browser alone, but there's
 >    - If you try to use an invalid function, you get a `404 Not found` error similar to this:<br />`{"error":{"code":"0x8006088a","message":"Resource not found for the segment 'your_function_name'."}}`
 > - You can't use a Function when you select the **Enabled for Workflow** option. See [Use a custom API in a workflow](#use-a-custom-api-in-a-workflow).
 > - Currently, the [Microsoft Dataverse Connector](/connectors/commondataserviceforapps/) only enables performing actions. If you need the operation to be performed by using Power Automate, you should create your custom API as an Action.
+> - If your function has string parameters whose values might contain special characters (`/`,`<`,`>`,`*`,`%`,`&`,`:`,`\`,`?`,`+`), callers must use parameter aliases instead of inline literals. Inline values fail with HTTP `400` because these characters are rejected by the URL path parser. For example, use `your_function(Name=@p)?@p='M%26M'` instead of `your_function(Name='M%26M')`. [Learn more about passing parameters to a function](webapi/use-web-api-functions.md#passing-parameters-to-a-function)
 
 ### Special characters limitation
 
@@ -503,9 +505,9 @@ A: While custom API has an **Execute Privilege Name** (`ExecutePrivilegeName`) p
 
 A: You can't. Although these records have the common **Status** and **Status Reason** columns found on most Microsoft Dataverse tables, setting the values for these columns has no impact on the availability of the custom API, the request parameters, or the response properties.
 
-### Q: How can I use my private messages if they aren't included in the Web API $metadata service document?
+### Q: How can I use my private messages if the Web API $metadata service document doesn't include them?
 
-A: Your private messages work regardless of whether they're advertised in the Web API [CSDL $metadata document](webapi/web-api-service-documents.md#csdl-metadata-document) or not. While you develop your solution, set the `IsPrivate` value to `false`. You can refer to the `$metadata` listing and use code generation tools that depend on this data. However, set the `CustomAPI.IsPrivate` value to `true` before you ship your solution for others to use. If you later decide that you wish to support other applications to use the message, you can change the `CustomAPI.IsPrivate` value to `false`.
+A: Your private messages work regardless of whether the Web API [CSDL $metadata document](webapi/web-api-service-documents.md#csdl-metadata-document) advertises them. While you develop your solution, set the `IsPrivate` value to `false`. You can refer to the `$metadata` listing and use code generation tools that depend on this data. However, set the `CustomAPI.IsPrivate` value to `true` before you ship your solution for others to use. If you later decide that you wish to support other applications to use the message, you can change the `CustomAPI.IsPrivate` value to `false`.
 
 More information:
 

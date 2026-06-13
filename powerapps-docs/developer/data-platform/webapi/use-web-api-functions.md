@@ -1,10 +1,11 @@
 ---
-title: "Use Microsoft Dataverse Web API functions"
-description: "Learn how to use Web API functions with Microsoft Dataverse. Discover how to pass parameters, use bound and unbound functions, and compose queries to retrieve data efficiently."
+title: Use Microsoft Dataverse Web API functions
+description: Learn how to use Web API functions with Microsoft Dataverse. Discover how to pass parameters, use bound and unbound functions, and compose queries to retrieve data efficiently.
+#customer intent: As a developer, I want to call Dataverse Web API functions, so that I can perform reusable operations like retrieving data without side effects.
 ms.topic: how-to
-ms.date: 03/27/2026
-author: MsSQLGirl
-ms.author: jukoesma
+ms.date: 06/11/2026
+author: kewear
+ms.author: kewear
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
@@ -34,10 +35,10 @@ For example, when you use the <xref:Microsoft.Dynamics.CRM.GetTimeZoneCodeByLoca
 GET/GetTimeZoneCodeByLocalizedName(LocalizedStandardName='Pacific Standard Time',LocaleId=1033)  
 ```  
   
-However, a couple of issues can cause requests to fail unless you send these requests by using parameter aliases:
+However, the following issues can cause requests to fail unless you send these requests by using parameter aliases:
 
 - You get a `400 Bad Request - Invalid URL` error if you exceed the [Maximum OData segment length](compose-http-requests-handle-errors.md#maximum-odata-segment-length).
-- There's an issue using DateTimeOffset values with the inline syntax, as explained in the following article: [DateTimeOffset as query parameter #204](https://github.com/OData/WebApi/issues/204).
+- Parameter values that contain reserved or special characters (`/`,`<`,`>`,`*`,`%`,`&`,`:`,`\`,`?`,`+`) fail with HTTP `400` or `404` errors when passed inline. String or DateTimeOffset values may contain these values. These characters are structurally significant in a URL path segment, and the server rejects them. Using parameter aliases moves the value into the query string where these characters are handled correctly.
   
 Avoid these issues by passing the values in by using parameter aliases, as shown in the following code sample:
   
