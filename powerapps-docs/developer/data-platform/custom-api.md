@@ -120,52 +120,7 @@ You can more easily test `GET` requests by using your browser alone, but there's
 > - You can't use a Function when you select the **Enabled for Workflow** option. See [Use a custom API in a workflow](#use-a-custom-api-in-a-workflow).
 > - Currently, the [Microsoft Dataverse Connector](/connectors/commondataserviceforapps/) only enables performing actions. If you need the operation to be performed by using Power Automate, you should create your custom API as an Action.
 > - If your function has string parameters whose values might contain special characters (`/`,`<`,`>`,`*`,`%`,`&`,`:`,`\`,`?`,`+`), callers must use parameter aliases instead of inline literals. Inline values fail with HTTP `400` because these characters are rejected by the URL path parser. For example, use `your_function(Name=@p)?@p='M%26M'` instead of `your_function(Name='M%26M')`. [Learn more about passing parameters to a function](webapi/use-web-api-functions.md#passing-parameters-to-a-function)
-
-### Special characters limitation
-
-Because a Function uses an HTTP `GET` request that passes all parameter values in the URL, string parameter values that contain certain OData-reserved characters require special handling. The following characters aren't supported when you pass them directly in the string parameters of a custom API Function:
-
-`/`,`<`,`>`,`*`,`%`,`&`,`:`,`\\`,`?`,`+`
-
-When you pass one of these characters as a direct, inline parameter value, the request fails with one of the following errors:
-
-- `400 Bad Request`
-- `404 Not found`
-
-For example, passing the value `M&M` inline causes a `400 Bad Request` error:
-
-```http
-GET [Organization URI]/api/data/v9.2/sample_FindThing(Name='M&M')
-```
-
-This is a limitation of the IIS/OData parser, similar to the one documented for alternate keys. For more information, see [Retrieve record using an alternate key](webapi/retrieve-entity-using-web-api.md#retrieve-record-using-an-alternate-key).
-
-#### Workaround: use parameter aliases with URL-encoded values
-
-You can pass these special characters to a Function by using *parameter aliases* and URL-encoding the values. Dataverse decodes the values before they reach your plug-in, so your code receives the original, unencoded value.
-
-In the following example, the `name` parameter value `M&M` is passed by using the `@p2` alias, with the ampersand (`&`) encoded as `%26`:
-
-```http
-GET [Organization URI]/api/data/v9.2/sample_FindThing(searchKey=@p1,name=@p2)?@p1=''&@p2='M%26M'
-```
-
-The plug-in receives the decoded value: `name = "M&M"`.
-
-Encode each reserved character using its percent-encoded equivalent, for example:
-
-| Character | Encoded value |
-|-----------|---------------|
-| `&` (ampersand) | `%26` |
-| `/` (slash) | `%2F` |
-| `+` (plus) | `%2B` |
-
-#### Alternative: use an Action
-
-If your custom API must accept string parameters that can contain these special characters, you can create an *Action* instead of a *Function*. An Action uses an HTTP `POST` request that passes parameter values in the request body, which supports these characters without requiring URL encoding.
-
-> [!IMPORTANT]
-> Decide whether to create a Function or an Action early in your design. You can't change a Function to an Action after you create the custom API.
+> - To avoid the special-character handling that functions require, consider creating your custom API as an Action instead. An Action uses an HTTP `POST` request that passes parameter values in the request body, so string values that contain special characters need no parameter aliases or URL encoding. Because you can't change whether a custom API is a Function or an Action after you create it, decide which one you need early in your design.
 
 [Learn to use Web API functions](webapi/use-web-api-functions.md)
 
