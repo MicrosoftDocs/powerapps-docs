@@ -412,7 +412,7 @@
           - name: Add Microsoft 365 Copilot to canvas apps (preview)
             href: ./canvas-apps/microsoft-365-copilot-canvas-app.md 
           - name: Customize Microsoft 365 Copilot with an agent (preview)  
-            href: ./model-driven-apps/customize-microsoft-365-copilot-chat.md  
+            href: ./canvas-apps/customize-microsoft-365-copilot-chat.md
           - name: Add a Copilot control (preview)
             href: ./canvas-apps/add-ai-copilot.md
           - name: Add a custom Copilot (preview)
