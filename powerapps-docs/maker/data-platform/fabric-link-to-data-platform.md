@@ -116,9 +116,10 @@ Existing Fabric link profiles continue to use the previous sync engine. To move 
 
 > [!IMPORTANT]
 >
-> - If you perform analytics on live and retained data together, note the following behaviors before you unlink and relink:
->    - The newly established Fabric link includes *live data only*. Retained data that was previously available through the link isn't carried over, because the new link starts a fresh sync from the live store.
->    - Archival and existing long-term retention jobs are unaffected. They continue to run as configured, and any new retained data going forward remains available for analytics through the standard retained data access paths.
+> - If you use long-term retention and currently see live and retained data together through Fabric shortcuts, note the following before you unlink and relink for low-latency sync:
+>    - After you relink, the shortcuts include **live data only**. Retained data is no longer surfaced through the shortcuts for the tables you relinked, so reporting on retained data through Fabric isn't available for those tables.
+>    - Long-term retention itself isn't affected. Retention jobs continue to run as configured, and your retained data is preserved. Only the shortcut-based reporting view of retained data is impacted.
+>    - We're working on migrating retained data to the low-latency sync format. Once that migration completes, your previously retained data starts appearing through the relinked profile alongside live data, with no further action required from you.
 > - Low-latency sync writes timestamp columns as **INT64**. The **INT96** timestamp format used by the previous Fabric link sync engine isn't supported. Review any downstream dependencies such as queries, pipelines, semantic models, or external readers that explicitly handle INT96 timestamps and update them to read INT64.
 
 ### Prerequisites for finance and operations apps
