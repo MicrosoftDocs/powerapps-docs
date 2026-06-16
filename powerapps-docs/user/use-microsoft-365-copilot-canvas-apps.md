@@ -4,7 +4,7 @@ description: Learn how to use Microsoft 365 Copilot to gain insights about the d
 author: devkeydet
 ms.component: pa-user
 ms.topic: overview
-ms.date: 04/15/2026
+ms.date: 06/12/2026
 ms.update-cycle: 180-days
 ms.subservice: end-user
 ms.author: marcsc
@@ -25,15 +25,15 @@ ms.collection:
 >
 > - This feature is in preview.  
 > - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2189520). They're available before an official release so that customers can get early access and provide feedback.
-> -  This feature is in the process of rolling out and might not be available in your region yet.
+> - This feature is in the process of rolling out and might not be available in your region yet.
 
 ## Prerequisites
 
-An administrator must enable Microsoft 365 Copilot in your application before it becomes visible in your app. For more information, see [Add Microsoft 365 Copilot for app users](/power-apps/maker/canvas-apps/microsoft-365-copilot-canvas-app).
+A maker must enable Microsoft 365 Copilot in your application before it becomes visible in your app. For more information, see [Add Microsoft 365 Copilot for app users](/power-apps/maker/canvas-apps/microsoft-365-copilot-canvas-app).
 
 > [!NOTE]
+>
 > - To use the Microsoft 365 Copilot feature in your app, you must have a Microsoft 365 Copilot license.
-> - You must have access to an [early release cycle environment](/power-platform/admin/early-release) to use this feature.
 
 ## Copilot pane
 
@@ -85,9 +85,9 @@ One of the benefits of @ mentioning an agent is that you can add or remove it fr
 - If your canvas app connects to a SharePoint list through an environment variable, Microsoft 365 Copilot responses will not reference data from that SharePoint list.
 - Microsoft 365 Copilot for canvas apps allows users to view data by using read-only operations. This capability means that users can only view data that matches their queries and can't make any changes. To make changes, customization with an agent is required.
 - Microsoft 365 Copilot for canvas apps isn't available in the Power Apps mobile app.
-- As this feature is being gradually deployed, certain settings in the Power Platform Admin Center might not be accessible yet, depending on the geographic location of your tenant.
 
 ## Related information
 
-- [Customize Microsoft 365 Copilot with an agent](../maker/model-driven-apps/customize-microsoft-365-copilot-chat.md)
 - [Add Microsoft 365 Copilot for app users in canvas apps (preview)](../maker/canvas-apps/microsoft-365-copilot-canvas-app.md)
+- [Customize Microsoft 365 Copilot with an agent in canvas apps (preview)](../maker/canvas-apps/customize-microsoft-365-copilot-chat.md)
+
