@@ -106,9 +106,11 @@ During the transition period, makers can enable either one or both chat experien
 
 - Microsoft 365 Copilot for model-driven apps allows users to view data by using read-only operations. This capability means that users can only view data that matches their queries and can't make any changes. To make changes, customization with an agent is required.
 - Microsoft 365 Copilot for model-driven apps isn't available in the Power Apps mobile app.
-- As this feature is being gradually deployed, certain settings in the Power Platform Admin Center might not be accessible yet, depending on the geographic location of your tenant.
 
 ## Related information
 
-- [Customize Microsoft 365 Copilot with an agent (preview)](customize-microsoft-365-copilot-chat.md)
 - [Use Microsoft 365 Copilot in model-driven apps](../../user/use-microsoft-365-copilot-model-driven-apps.md)
+- [Customize Microsoft 365 Copilot with an agent in model-driven apps](../model-driven-apps/customize-microsoft-365-copilot-chat.md)
+- [Add Microsoft 365 Copilot for app users in canvas apps (preview)](../../maker/canvas-apps/microsoft-365-copilot-canvas-app.md)
+- [Use Microsoft 365 Copilot in canvas apps (preview)](../../user/use-microsoft-365-copilot-canvas-apps.md)
+- [Customize Microsoft 365 Copilot with an agent in canvas apps (preview)](../canvas-apps/customize-microsoft-365-copilot-chat.md)

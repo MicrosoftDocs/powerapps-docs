@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.subservice: canvas-maker
 ms.author: marcsc
 ms.reviewer: mkaur
-ms.date: 05/18/2026
+ms.date: 06/09/2026
 ms.update-cycle: 180-days
 ms.topic: how-to
 applies_to: 
@@ -42,7 +42,6 @@ When enabled, users can open Microsoft 365 Copilot in their canvas app by select
 
 To use Microsoft 365 Copilot in canvas apps, make sure the following prerequisites are met:
 
-- You must have access to an [early release cycle environment](/power-platform/admin/early-release) to use this feature.
 - You must enable the feature using [https://make.preview.powerapps.com/](https://make.preview.powerapps.com/).
 - Your tenant must be set to allow **Dataverse data available in Microsoft 365 Copilot**. For more information, see [Enable Microsoft 365 admin center Copilot Dataverse settings](../data-platform/data-platform-intelligence.md#enable-microsoft-365-admin-center-copilot-dataverse-settings).
 - Dataverse Search must be set to **Default** or **On** for the environment. For more information, see [Understand what this means for generative AI experiences](/power-platform/admin/configure-relevance-search-organization#what-dataverse-search-means-for-generative-ai-enabled-experiences).
@@ -93,9 +92,11 @@ Makers can enable or disable Microsoft 365 Copilot for a specific canvas app.
 - If your canvas app connects to a SharePoint list through an environment variable, Microsoft 365 Copilot won't reference data from that SharePoint list.
 - Microsoft 365 Copilot for canvas apps allows users to view data by using read-only operations. This capability means that users can only view data that matches their queries and can't make any changes. To make changes, customization with an agent is required.
 - Microsoft 365 Copilot for canvas apps isn't available in the Power Apps mobile app.
-- As this feature is being gradually deployed, certain settings in the Power Platform Admin Center might not be accessible yet, depending on the geographic location of your tenant.
 
 ## Related information
 
-- [Customize Microsoft 365 Copilot with an agent](../model-driven-apps/customize-microsoft-365-copilot-chat.md)
-- [Use Microsoft 365 Copilot in canvas apps](../../user/use-microsoft-365-copilot-canvas-apps.md)
+- [Use Microsoft 365 Copilot in canvas apps (preview)](../../user/use-microsoft-365-copilot-canvas-apps.md)
+- [Customize Microsoft 365 Copilot with an agent in canvas apps (preview)](../canvas-apps/customize-microsoft-365-copilot-chat.md)
+- [Add Microsoft 365 Copilot to model-driven apps](/power-apps/maker/model-driven-apps/add-microsoft-365-copilot)
+- [Use Microsoft 365 Copilot in model-driven apps](../../user/use-microsoft-365-copilot-model-driven-apps.md)
+- [Customize Microsoft 365 Copilot in model-driven apps](/power-apps/maker/model-driven-apps/customize-microsoft-365-copilot-chat)

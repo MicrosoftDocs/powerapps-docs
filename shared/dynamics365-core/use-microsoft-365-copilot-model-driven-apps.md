@@ -62,8 +62,13 @@ One of the benefits of @ mentioning an agent is that you can add or remove it fr
 
 :::image type="content" source="/power-apps/user/media/microsoft-365-copilot-at-mention.png" alt-text="Screenshot that shows how to @ mention agents in Microsoft 365 Copilot.":::
 
+## Navigate to model-driven form using citations
+
+When results have citations, select the citation result in the side pane to navigate to the model-driven form.
+
+:::image type="content" source="/power-apps/user/media/microsoft-365-copilot-citation-nav.png" alt-text="Screenshot that shows a model-driven form that was navigated to after clicking a citation link.":::
+
 ## Limitations
 
 - Microsoft 365 Copilot for model-driven apps allows users to view data by using read-only operations. This capability means that users can only view data that matches their queries and can't make any changes. To make changes, customization with an agent is required.
 - Microsoft 365 Copilot for model-driven apps isn't available in the Power Apps mobile app.
-- As this feature is being gradually deployed, certain settings in the Power Platform Admin Center might not be accessible yet, depending on the geographic location of your tenant.
