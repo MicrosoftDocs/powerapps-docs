@@ -2,14 +2,15 @@
 
 title: Mobile offline limitations for canvas apps
 description: Learn about the limitations for canvas apps that use mobile offline.
-author: Murugesh1985
+author: shwetamurkute
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 07/16/2025
+ms.date: 06/17/2026
 ms.subservice: mobile
-ms.author: murugeshs
+ms.author: ruchidixit
 ms.reviewer: smurkute
 ms.assetid: 
+contributors: shwetamurkute
 search.audienceType: 
   - enduser
 searchScope:
@@ -18,7 +19,7 @@ searchScope:
 
 # Mobile offline limitations for canvas apps
 
-Before you set up the mobile app in offline mode, be sure to read through the following limitations. We recommend that you also review [Best practices for developing an app for offline use](best-practices-offline.md) and [Optimize the offline profile](mobile-offline-guidelines.md).
+Before you set up the mobile app in offline mode, review the following limitations. Also, see [Best practices for developing an app for offline use](best-practices-offline.md) and [Optimize the offline profile](mobile-offline-guidelines.md).
 
 ## Capabilities not supported in offline-enabled apps
 
@@ -27,7 +28,6 @@ Before you set up the mobile app in offline mode, be sure to read through the fo
 | Canvas app types|The offline-first feature works for standalone canvas apps only. It doesn't work for embedded canvas apps, custom pages, or canvas apps in Teams.|
 |Connectors|Non-Dataverse connectors, like SharePoint, aren't supported in offline mode.|
 |Dataverse table types| Virtual tables and elastic tables aren't supported in offline mode.|
-|Shared offline profile| If the same, offline profile is used in a canvas app and in a model-driven app, it creates two, separate local databases. |
 | Power Automate flows| Power Automate flows aren't supported in offline mode.| 
 
 > [!NOTE]
@@ -51,7 +51,7 @@ Before you set up the mobile app in offline mode, be sure to read through the fo
 |Area |Description|  
 |-------------|---------|  
 |Relationship defined for each table|A maximum of 15 relationships is allowed. There's a maximum of one many-to-many (M:M) or one-to-many (1:M) relationships within the 15 relationships. If any custom tables demand this scenario, then revisit the data model. No circular references or self-references are supported.|
-|Images and files|Images and files are subject to the same limitations as any other table. Because of implicitly defined relationships, an offline profile can only contain up to 14 image columns, across all entities.|
+|Images and files|Images and files have the same limitations as any other table. Because of implicitly defined relationships, an offline profile can only contain up to 14 image columns, across all entities.|
 |Auto-generated offline profile| The auto-generated offline profile doesn't handle filters. As a result, for each table used in the app, it downloads *all* rows to which the user has permissions.|
 
 ### See also
