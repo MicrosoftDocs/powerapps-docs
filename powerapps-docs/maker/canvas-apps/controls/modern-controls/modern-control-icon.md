@@ -4,7 +4,7 @@ description: Learn about the details, properties, and examples of the Icon moder
 author: yogeshgupta698
 ms.topic: reference
 ms.custom: canvas
-ms.date: 04/15/2026
+ms.date: 06/12/2026
 ms.subservice: canvas-maker
 ms.author: yogupt
 ms.reviewer: mkaur
@@ -18,7 +18,7 @@ Displays a Fluent icon that can optionally respond to user interaction.
 
 ## Description
 
-The **Icon** modern control displays a Fluent icon from the [Fluent icon library](https://developer.microsoft.com/en-us/fluentui#/styles/web/icons). You can use it in two ways:
+The **Icon** modern control displays a Fluent icon from a library of approximately **180 icons**, matching parity with the classic icon set. You can use it in two ways:
 
 - **Decorative** – Display a static icon as a visual indicator (for example, a status badge or label prefix). Leave the **OnSelect** property empty.
 - **Interactive** – Respond to user input. Set the **OnSelect** property to a formula, and the control automatically renders with button semantics so it works with keyboard navigation and screen readers.
@@ -177,6 +177,7 @@ The updated version of the **Icon** modern control includes the following improv
 
 ### Bug fixes and improvements
 
+- **Expanded icon set**: The icon library has been expanded from approximately 56 icons to **180 icons**, matching parity with the classic icon set. Classic Icon.* enum values are now automatically mapped to their Fluent equivalents.
 - **OnSelect support**: The icon now triggers actions when selected. When you set `OnSelect` to an active formula, the control renders with button semantics, making it fully accessible via keyboard and screen readers.
 - **AccessibleLabel**: New property for screen readers - especially important for interactive icons where the glyph alone doesn't convey meaning.
 - **Updated enum**: `IconStyle` now uses a typed Power Fx enum (`IconStyle.Outline`, `IconStyle.Filled`) instead of a plain string, improving IntelliSense and reducing formula errors.
@@ -195,3 +196,4 @@ The updated version of the **Icon** modern control includes the following improv
 
 - [Modern controls overview](overview-modern-controls.md)
 - [Size and location properties](../properties-size-location.md)
+

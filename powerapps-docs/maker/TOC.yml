@@ -547,6 +547,8 @@
               href: ./canvas-apps/controls/modern-controls/modern-control-progress-bar.md
             - name: Radio group
               href: ./canvas-apps/controls/modern-controls/modern-controls-radio-group.md
+            - name: Rating
+              href: ./canvas-apps/controls/modern-controls/modern-control-rating.md
             - name: Slider
               href: ./canvas-apps/controls/modern-controls/modern-control-slider.md
             - name: Spinner
@@ -2624,3 +2626,4 @@
     href: ./common/faq-generative-pages-model-driven.md
   - name: FAQ about Power Apps MCP Server invoke_data_entry tool
     href: ./common/faq-power-apps-mcp-server-invoke-data-entry.md
+
