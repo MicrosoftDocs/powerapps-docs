@@ -211,6 +211,16 @@ FROM account
 ORDER BY name ASC, createdon DESC
 ```
 
+Sort by joined columns:
+
+```sql
+SELECT a.name, c.fullname
+FROM account AS a
+LEFT JOIN contact AS c ON a.accountid = c.parentcustomerid
+ORDER BY c.fullname, a.name DESC
+```
+
+
 ## Filter rows
 
 Use a `WHERE` clause to filter rows by one or more conditions. The `WHERE` clause must compare a column to a constant value.
