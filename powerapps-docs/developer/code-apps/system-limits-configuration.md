@@ -16,7 +16,7 @@ This article contains information on the configuration for Power Apps code apps.
 
 ## Hosted app code
 
-When a code app is published to Power Platform using [pac code push](/power-platform/developer/cli/reference/code#pac-code-push), the code is hosted on a publicly accessible endpoint. Sensitive user or organizational data shouldn't be stored in the app. Store this kind of data in a data source so the content is retrieved after end-users playing the app go through authentication and authorization checks.
+When you publish a code app to Power Platform by using [pac code push](/power-platform/developer/cli/reference/code#pac-code-push), the compiled app assets are hosted on a publicly accessible endpoint. Don't store sensitive user or organizational data in the app. Store this kind of data in a data source so the content is retrieved after end-users playing the app go through authentication and authorization checks.
 
 ## Hide the Power Apps header when playing an app
 
