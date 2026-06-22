@@ -3,7 +3,7 @@ title: "Power Apps code apps overview"
 description: "Learn to use Power Apps code apps"
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 05/29/2026
+ms.date: 06/22/2026
 ms.reviewer: jdaly
 ms.topic: overview
 contributors:
@@ -86,12 +86,12 @@ Check the **Closed** tab in **Issues** to see how other customers solved problem
 
 ## Limitations
 
-- Code apps don't yet support [Storage Shared Access Signature (SAS) IP restriction](/power-platform/admin/security/data-storage#advanced-security-features ).
+- Code apps don't use [Storage Shared Access Signature (SAS) IP restriction](/power-platform/admin/security/data-storage#advanced-security-features), so the SAS IP Binding and Firewall environment setting doesn't apply to them. The compiled app assets are served from a publicly accessible endpoint that doesn't support IP-based restrictions today. To restrict access by IP, use [Conditional Access – block access by location](/entra/identity/conditional-access/policy-block-by-location#create-a-conditional-access-policy), since code apps authenticate with Microsoft Entra ID.
 - Code apps don't support [Power Platform Git integration](/power-platform/alm/git-integration/overview).
 - Code apps aren't supported in Power Apps for Windows.
 - Code apps don't yet support Power BI data integration (PowerBIIntegration function), but can be embedded in Power BI Reports using [Power Apps Visual](/power-apps/maker/canvas-apps/powerapps-custom-visual).
 - Code apps don't support [SharePoint forms integration](/power-apps/maker/canvas-apps/sharepoint-form-integration).
-- Service Principals (SPN) cannot create or become owners of code apps.
+- Service Principals (SPN) can't create or become owners of code apps.
 
 ## Managed platform capability support
 
