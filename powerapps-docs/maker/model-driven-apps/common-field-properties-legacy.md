@@ -41,7 +41,7 @@ The following table describes the common properties of columns. Certain types of
  |**Name**|The unique name across your environment. Power Apps generates a name based on the display name that you enter. However, you can edit this name before saving. Once you create a column, you can't change the name as your applications or code might reference it. The **Dataverse Default Publisher** customization prefix is prepended to the name.|
  |**Data type**|Controls how values are stored and how they're formatted in some applications. Once you save a column, you can't change the data type except for converting text columns to autonumber columns.|
  |**Required**| A row can't be saved without data in this column. |
- |**Searchable**| This column appears in Advanced Find and is available when customizing views. |
+ |**Searchable**| This column appears in Advanced Find and is available when customizing views. De-selecting this will reduce the number of options shown to people using Edit filter panel to customize views |
  |**Calculated or Rollup**| Use to automate manual calculations. Use values, dates, or text.|
  |**Advanced Options**| Add a description, and specify a maximum length and IME mode for the column.
 
