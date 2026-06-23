@@ -1,8 +1,8 @@
 ---
-title: Configure a lookup component on a form | MicrosoftDocs"
-description: Learn how to create a lookup for a form
+title: Configure a lookup component on a form"
+description: Learn how to create a lookup for a form with Power Apps
 ms.custom: ""
-ms.date: 08/05/2022
+ms.date: 06/22/2026
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -25,7 +25,7 @@ Lookups help a user choose records from a **related** table. A lookup component 
 
 For example, using a lookup component, you can open an account record that relates to a sales invoice record.
 
-:::image type="content" source="../../user/media/automatically-populate-matching-records.png" alt-text="Using a lookup column":::
+:::image type="content" source="media/form-designer-add-configure-lookup/lookup-matching-records.png" alt-text="Example of a lookup column for a teacher table":::
 
 [Learn more about the lookup field user experience](../../user/lookup-field.md)
 
@@ -33,7 +33,8 @@ For example, using a lookup component, you can open an account record that relat
 
 Makers configure a lookup component using the form designer.
 
-These are the properties available to configure when using a lookup component on a form using the form designer.
+1. While working in the form designer, select **New table** column. For **Data type**, select **Lookup** > **Lookup**.
+1. Save the column to edit the properties. These properties are available to configure when using a lookup component on a form by using the form designer.
 
 |Area  |Name  |Description  |
 |---------|---------|---------|
@@ -55,7 +56,19 @@ These are the properties available to configure when using a lookup component on
 | **Filtering**  | **Relationship to current table** | This dropdown list defines the relationship from the table of the related row you want to filter by to the target lookup's table. <br /><br />The possible relationship combinations will be listed in the table following this one.  |
 | **Filtering**  | **Relationship to this lookup’s table**  | This dropdown list defines the relationship from the table of the related row you want to filter by to the target lookup's table. <br /><br />For the possible relationship combinations, go to [Table relationships available for a lookup column](#possible-relationship-combinations-for-a-lookup-column).   |
 | **Filtering**  | **Allow users to turn off filter**  | When this is enabled, users will have the option to turn off the filter you define here.  |
-| **Components**  | **+Component** | Configure a control for the lookup column, such as the form component control.  |
+| **Components**  | **+Component** | Configure a control for the lookup column: <br/>- **[Form]( /power-apps/maker/model-driven-apps/form-component-control)**. Add the form component control that lets users edit related table records from the main form where the control resides. <br/> - Additional [lookup controls](#lookup-controls). Add additional functionality to the lookup column.
+  |
+
+### Lookup controls
+
+There are a few lookup controls available with a lookup column. You might need to select **+ Component** > **Get more components** > **Add** to make the control available for your form.
+
+- **Lookup (default)**. The default control when you create a lookup column. This control appears in the **Components** section when you add one of the other lookup controls. Select client type Web, Mobile, or Tablet. No other properties are available to configure. Add one of the following controls for extended functionality.
+- **Lookup Control** (simple). Allows makers to disable the clickthrough behavior on the lookup column by disabling the **Lookup clickthrough** value. By default, lookup values in forms appear as hyperlinks, allowing users to open related records by selecting them so you might want to prevent users from navigating away from the current form.
+- **Drawer Lookup Control**. This control is optimized for mobile and tablet and offers fewer clicks and a modern bottom sheet. It also allows makers to disable the clickthrough behavior on lookup fields by disabling the **Lookup clickthrough** value.
+- **Look-up Control** (classic). This control has these two properties:
+   - **Related Virtual Entity**. If there's a related table for the lookup that's a virtual table, you can bind to table column and add a static value.
+   - **Virtual Entity Lookup View Id**. Add an identifier for the virtual table lookup view.
 
 ## Possible relationship combinations for a lookup column
 
