@@ -1,7 +1,7 @@
 ---
 title: Specialized columns using code
 description: "Learn about common elements and characteristics that formula, calculated, rollup, and prompt columns use. Learn how to retrieve a calculated rollup column value immediately, and about the SourceTypeMasks enumeration." 
-ms.date: 07/23/2025
+ms.date: 06/23/2026
 ms.reviewer: jdaly
 ms.topic: article
 author: MsSQLGirl
@@ -19,10 +19,10 @@ contributors:
 
 This article focuses on how these columns are defined in the column definitions and APIs to interact with rollup columns. We don't support defining the formulas with code. You need to use [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to set the formulas for the respective type of column. Learn how:
 
-- [Work with formula columns (preview)](../../maker/data-platform/formula-columns.md)
+- [Work with formula columns](../../maker/data-platform/formula-columns.md)
 - [Define calculated columns to automate calculations](../../maker/data-platform/define-calculated-fields.md)
 - [Define rollup columns that aggregate values](../../maker/data-platform/define-rollup-fields.md)
-- [Prompt columns (preview)](../../maker/data-platform/prompt-column.md)
+- [Prompt columns](../../maker/data-platform/prompt-column.md)
   
 <a name="BKMK_CommonElements"></a>
 
@@ -197,6 +197,6 @@ The `SourceTypeMask` property for those columns that support calculated and roll
 [Define calculated columns](../../maker/data-platform/define-calculated-fields.md)   
 [Define rollup columns](../../maker/data-platform/define-rollup-fields.md)   
 [Sample: Rollup records related to a specific record](org-service/samples/rollup-records-related-to-specificed-record.md)   
-[Prompt columns (preview)](../../maker/data-platform/prompt-column.md)
+[Prompt columns](../../maker/data-platform/prompt-column.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
