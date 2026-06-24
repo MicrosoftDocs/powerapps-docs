@@ -20,7 +20,11 @@ ms.contributors:
 
 Collaborate effortlessly by mentioning your coworkers in Notes on the timeline.
 
-The administrator must enable the [**@mention people when in rich text editor to add and notify user settings**](/power-platform/admin/settings-collaboration#end-user-experiences) in Power Platform admin center and [enable in-app notifications](../developer/model-driven-apps/clientapi/send-in-app-notifications.md?tabs=clientapi#enable-the-in-app-notification-feature) for the app for this capability to be available. 
+To use this capability, the following requirements must be met:
+- The administrator must enable the [**@mention people when in rich text editor to add and notify user settings**](/power-platform/admin/settings-collaboration#end-user-experiences) in Power Platform admin center.
+- [enable in-app notifications](../developer/model-driven-apps/clientapi/send-in-app-notifications.md?tabs=clientapi#enable-the-in-app-notification-feature) for the app.
+- **Dynamics 365 apps must be enabled at the time the environment is provisioned**. This option must be selected during Dataverse database creation (**Enable Dynamics 365 apps = Yes**). If Dynamics 365 apps are not enabled during environment provisioning, this capability can’t be enabled later for that environment. For more information, see [Some important considerations when creating a new environment](https://learn.microsoft.com/en-us/power-platform/admin/create-environment#some-important-considerations-when-creating-a-new-environment
+
 
 > [!Important]
 > Users must have the Read privilege for the **msdyn_postconfig** entity, as well as the Share privilege for the entity for which they use @mentions (for example, account, contact, case, and so forth).
