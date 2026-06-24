@@ -9,6 +9,8 @@ items:
             href: overview.md
           - name: "Quickstart: Create a code app"
             href: how-to/create-an-app-from-scratch.md
+          - name: "Quickstart: Create a code app with GitHub Copilot"
+            href: how-to/quickstart-github-copilot.md 
           - name: Architecture
             href: architecture.md
           - name: System configuration
