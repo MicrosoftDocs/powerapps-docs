@@ -6,7 +6,7 @@ author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: jdaly
 ms.topic: article
-ms.date: 12/12/2023
+ms.date: 06/23/2026
 ms.subservice: dataverse-developer
 search.audienceType:
   - developer
@@ -128,7 +128,7 @@ More information:
 
 - [Define rollup columns that aggregate values](../../maker/data-platform/define-rollup-fields.md)
 - [Define calculated columns to automate calculations](../../maker/data-platform/define-calculated-fields.md)
-- [Prompt columns (preview)](../../maker/data-platform/prompt-column.md)
+- [Prompt columns](../../maker/data-platform/prompt-column.md)
 - [Specialized columns using code](specialized-columns.md)
 
 ## Column format
