@@ -2,7 +2,7 @@
 title: "Access external web services (Microsoft Dataverse) | MicrosoftDocs"
 description: "Learn how to access a web service from a custom plug-in or workflow activity."
 ms.custom: ""
-ms.date: 06/10/2025
+ms.date: 06/24/2026
 ms.reviewer: pehecke
 ms.topic: article
 author: MsSQLGirl
@@ -15,7 +15,7 @@ contributors:
 ---
 # Access external web services
 
-Plug-ins and custom workflow activities can access the network through the HTTP and HTTPS protocols. This capability provides support for accessing popular web services like social sites, news feeds, web services, and more. The following web access restrictions apply to this sandbox capability.  
+Plug-ins and custom workflow activities can access the network through the HTTP and HTTPS protocols. This capability provides support for accessing popular web services like social sites, news feeds, web services, Azure resources, and more. The following web access restrictions apply to this sandbox capability.  
   
 - Your server must have the current [TLS and cipher suites](/power-platform/admin/onpremises-server-cipher-tls-requirements).
 - Only the HTTP and HTTPS protocols are allowed.
@@ -84,6 +84,10 @@ public void Execute(IServiceProvider serviceProvider)
 ```
 
 More information: [Sample: Web access from a plug-in](org-service/samples/web-access-plugin.md)
+
+## Use a managed identity when accessing Azure resources
+
+Dataverse plug-ins or plug-in packages can connect to Azure resources without managing credentials. To learn more about setting up a Power Platform managed identity for use with plug-ins, see [Set up Power Platform managed identity for Dataverse plug-ins or plug-in packages](/power-platform/admin/set-up-managed-identity).
 
 ## Best practices
 
