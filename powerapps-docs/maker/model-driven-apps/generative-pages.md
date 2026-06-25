@@ -5,7 +5,7 @@ author: jasongre
 ms.subservice: mda-maker
 ms.author: jasongre
 ms.reviewer: matp
-ms.date: 06/04/2026
+ms.date: 06/25/2026
 ms.topic: how-to
 applies_to:
   - PowerApps
@@ -43,6 +43,9 @@ You can create generative pages using two approaches:
    > [!NOTE]
    > The same dialog also lists existing generative pages in your environment that you can add to this app. By default the list is filtered to **Published** pages; switch the filter to **All** if you don't see the page you're looking for.
 1. In the text box, type a description of the type of page you want to create. Include functional requirements and optionally any UX specifications. For example, you could enter *Build a page showing Account records as a gallery of cards using a modern look and feel. Include name, entityimage on the top, and website, email, phone number. Make the gallery scrollable by using data from the Account table*. If you want the page to support multiple languages, follow the guidance in [Localize a generative page](#localize-a-generative-page).
+
+   > [!TIP]
+   > Not sure where to start? The [Intelligent Apps Catalog](https://github.com/microsoft/apps-agents-workshop/tree/main/Inteligent%20Apps%20Templates/Intelligent%20Apps%20Catalog) includes a Prompt Catalog with pre-built prompt templates and reference images for common page patterns (galleries, Kanban boards, dashboards, and more) that you can use as a starting point.
 1. Add tables and images as appropriate by selecting **Add data** > **Add table**. You can link up to six Dataverse tables. In the screenshot, the account table is added.
    :::image type="content" source="media/generative-page/add-table-generative-page.png" alt-text="Add a table to the generative page" lightbox="media/generative-page/add-table-generative-page.png":::
 
@@ -57,7 +60,10 @@ You can create generative pages using two approaches:
     :::image type="content" source="media/generative-page/choose-model-generative-page.png" alt-text="Choose the AI model you want to use to generate your page" lightbox="media/generative-page/choose-model-generative-page.png":::
 
    > [!NOTE]
-   > GPT-4.1 is currently the only available model for generative pages.
+   > GPT-4.1 is currently the only available model in the Power Apps maker experience for generative pages.
+
+   > [!TIP]
+   > Want to use the latest AI models? You can do so by creating and editing generative pages with [AI code generation tools](generative-page-external-tools.md), which give you access to newer frontier models.
 
 1. When you're finished describing the page, select **Generate page**.
 
@@ -121,13 +127,13 @@ Set up the page to accept an account recordId. When the page loads, use these to
 Configure this page to accept a data parameter containing a custom filter object. Use it to filter the displayed records when the page loads.
 ```
 
-### Navigate to a generative page
+### Go to a generative page
 
 You can navigate to a generative page programmatically using `Xrm.Navigation.navigateTo`, passing input parameters if the target page is set up to receive them. For examples and full API details, see [Navigate to and from a generative page using Client API](../../developer/model-driven-apps/clientapi/navigate-to-generative-page-examples.md).
 
 ### Use specific images in a page
 
-There are three approaches to using specific images in your generative pages.
+Use one of these three approaches to use specific images in your generative pages.
 
 #### Store images in a Dataverse table
 
@@ -263,4 +269,6 @@ Confirm that your environment is in one of the supported regions for the Power A
 
 - [Create and edit generative pages with AI code generation tools](generative-page-external-tools.md)
 - [FAQ about generative pages in model-driven apps](../common/faq-generative-pages-model-driven.md)
+- [Intelligent Apps Catalog (prompt templates for generative pages)](https://github.com/microsoft/apps-agents-workshop/tree/main/Inteligent%20Apps%20Templates/Intelligent%20Apps%20Catalog)
 - [Legal terms](https://go.microsoft.com/fwlink/?linkid=2173149)
+
