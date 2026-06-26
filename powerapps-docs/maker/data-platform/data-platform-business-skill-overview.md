@@ -1,7 +1,7 @@
 ---
 title: "Business skills overview" 
 description: Learn about business skills in Microsoft Dataverse to bring business data understanding to AI agents and Copilot.
-ms.date: 03/06/2026
+ms.date: 06/24/2026
 ms.reviewer: matp
 ms.topic: how-to
 author: prithvi-khosla
@@ -13,13 +13,9 @@ search.audienceType:
 ---
 # Business skills overview
 
-[!INCLUDE [preview-banner](../../../shared/preview-includes/preview-banner.md)]
-
 Business skills are natural-language instructions that capture how your organization gets work done. They represent your business processes, policies, and domain knowledge in a format that agents can understand and follow. Each skill describes how to complete a specific type of work—the steps involved, the information required, and the business rules that apply.
 
 Agents discover and use business skills as needed at runtime to complete tasks according to your organization's processes. When multiple agents use the same skill, they follow the same process, ensuring consistent behavior across your organization.
-
-[!INCLUDE [cc-preview-features-definition](../../../shared/preview-includes/preview-note-pp.md)]
 
 > [!IMPORTANT]
 > Business skills are not executable code. They contain natural-language instructions that guide agent behavior, similar to how you might document a process for a new employee.

@@ -16,7 +16,7 @@ search.audienceType:
 
 [!INCLUDE [preview-banner](../../../shared/preview-includes/preview-banner.md)]
 
-Microsoft Dataverse intelligence extends Work IQ to bring business data understanding to AI agents and Microsoft Copilot. Work IQ helps agents understand work artifacts like files, meetings, and messages. Dataverse intelligence builds on this foundation by enabling agents to understand and act on your business data.
+Microsoft Dataverse intelligence brings business data understanding to AI agents and Microsoft Copilot. Work IQ helps agents understand work artifacts like files, meetings, and messages. Dataverse intelligence builds on this foundation by enabling agents to understand and act on your business data.
 
 With Dataverse intelligence, you can define reusable business context that agents use to understand what your data means, follow your organization's processes when taking actions, and read and update Dataverse records reliably. This business context is shared across agents, so you define it once and use it everywhere.
 
@@ -57,7 +57,6 @@ Business skills help makers and users interpret data, improve processes, and mak
 
 ### Business skills prerequisites
 
-- The environment where you use Dataverse intelligence must be a Managed Environment.
 - The environment must be enabled and configured for Dataverse MCP server. More information: [Configure the Dataverse MCP server for an environment](data-platform-mcp-disable.md)
 
 ## Next steps
