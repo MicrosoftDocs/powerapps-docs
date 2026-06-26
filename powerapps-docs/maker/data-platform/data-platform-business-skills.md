@@ -1,7 +1,7 @@
 ---
 title: "Create and use business skills" 
 description: Learn how to enable Microsoft Dataverse intelligence to bring business data understanding to AI agents and Copilot.
-ms.date: 06/03/2026
+ms.date: 06/24/2026
 ms.reviewer: matp
 ms.topic: how-to
 author: prithvi-khosla
@@ -13,22 +13,16 @@ search.audienceType:
 ---
 # Create and use business skills
 
-[!INCLUDE [preview-banner](../../../shared/preview-includes/preview-banner.md)]
-
 This article explains how to create and manage business skills that ground agents in your organization's processes. You'll learn how to enable the required features, author skill content, test skills with agents, and manage skills across environments.
-
-[!INCLUDE [cc-preview-features-definition](../../../shared/preview-includes/preview-note-pp.md)]
 
 ## Prerequisites
 
 - The environment must be enabled and configured for Dataverse MCP server. More information: [Configure the Dataverse MCP server for an environment](data-platform-mcp-disable.md)
-- The environment where you create and use business skills must be a Managed Environment.
-- The environment must be enabled for [Dataverse intelligence](data-platform-intelligence.md).
 
 ## Open the business skills page
 
 1. Go to [Power Apps](https://make.powerapps.com).
-1. In the left navigation pane, select **More**, and then select **Business skills (preview)**.
+1. In the left navigation pane, select **More**, and then select **Business skills**.
 
 > [!TIP]
 > Pin the **Business skills** page to the left navigation pane for quick access.
