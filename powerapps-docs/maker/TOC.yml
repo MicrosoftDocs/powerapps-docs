@@ -2492,8 +2492,22 @@
         href: ./data-platform/data-platform-business-skill-overview.md
       - name: Create and use business skills
         href: ./data-platform/data-platform-business-skills.md
+    - name: Dataverse semantic model (preview)
+      items:   
+      - name: Overview 
+        href: ./data-platform/semantic-model-overview.md
+      - name: Manage and use 
+        items:   
+        - name: Fine-tune semantic model signals
+          href: ./data-platform/fine-tune-semantic-model-signals.md 
+        - name: Manage semantic model glossary entries
+          href: ./data-platform/manage-semantic-model-glossary.md
+        - name: Regenerate the semantic model
+          href: ./data-platform/regenerate-semantic-model.md
+      - name: Dataverse semantic model FAQ
+        href: ./data-platform/semantic-model-faq.md  
   - name: License requirements for tables
-    href: ./data-platform/data-platform-entity-licenses.md
+    href: ./data-platform/semantic-model-faq.md
     items:
     - name: Complex tables and licensing
       href: ./data-platform/data-platform-complex-entities.md
