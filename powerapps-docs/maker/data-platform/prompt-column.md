@@ -2,7 +2,7 @@
 title: "Prompt columns in Microsoft Dataverse"
 description: "Understand how to create, manage, and use prompt columns with Power Apps and Dataverse."
 keywords: ""
-ms.date: 05/04/2026
+ms.date: 06/29/2026
 ms.custom: 
 ms.topic: article
 applies_to: 
@@ -183,6 +183,8 @@ This example demonstrates a prompt column named *testSummary* and its correspond
 | 0 | NotStarted | Record created. AI analysis hasn't started yet. |
 | 1 | InProgress | The prompt AI analysis is currently in-progress. Details column shows start Date and Time.|
 | 2 | Completed | Prompt execution completed successfully. Details column shows last successful Date and Time.|
+| 2000 | Completed | Prompt column completed but didn't execute because the record didn't meet the configured filter conditions. |
+| 2001 | Completed | Prompt column completed but didn't execute because none of the input columns referenced by the prompt were updated. |
 | 3 | Failed | The prompt AI generation failed. Detail column shows error details in the last execution.|
 
 ### Disable AI generation for a prompt column
@@ -228,7 +230,7 @@ Prompt columns are triggered automatically on record updates; however, on‑dema
 
 **Why didn't the prompt column execute?**
 
-Common scenarios where the prompt does not execute, no error is surfaced, and execution is skipped
+Common scenarios where the prompt doesn't execute, no error is surfaced, and execution is skipped:  
 
 - AI Prompt feature is disabled. More information: [Prerequisites](#prerequisites)
 - Prompt column execution is disabled. More information: [Disable AI generation for a prompt column](#disable-ai-generation-for-a-prompt-column)
