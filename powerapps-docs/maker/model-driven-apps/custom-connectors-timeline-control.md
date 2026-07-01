@@ -1,8 +1,8 @@
 ---
-title: Use custom connectors with the timeline in Power Apps | MicrosoftDocs
-description: "Learn how to use custom connectors to bring your own data, such as records, to the timeline in Power Apps."
+title: Use custom connectors with the timeline in Power Apps
+description: Learn how to use custom connectors to bring your own data, such as records, to the timeline in Power Apps.
 ms.custom: ""
-ms.date: 01/13/2023
+ms.date: 06/30/2026
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
