@@ -275,6 +275,9 @@ Use these messages to retrieve privileges by privilege ID or name. They include 
 |`RetrieveUserSetOfPrivilegesByIds`|[RetrieveUserSetOfPrivilegesByIds Function](xref:Microsoft.Dynamics.CRM.RetrieveUserSetOfPrivilegesByIds)<br/>[RetrieveUserSetOfPrivilegesByIdsRequest Class](xref:Microsoft.Crm.Sdk.Messages.RetrieveUserSetOfPrivilegesByIdsRequest)|
 |`RetrieveUserSetOfPrivilegesByNames`|[RetrieveUserSetOfPrivilegesByNames Function](xref:Microsoft.Dynamics.CRM.RetrieveUserSetOfPrivilegesByNames)<br/>[RetrieveUserSetOfPrivilegesByNamesRequest Class](xref:Microsoft.Crm.Sdk.Messages.RetrieveUserSetOfPrivilegesByNamesRequest)|
 
+> [!NOTE]
+> Prefer the messages in the preceding table when you need to know a user's effective privilege depth. The [RetrieveUserPrivileges Function](xref:Microsoft.Dynamics.CRM.RetrieveUserPrivileges) ([RetrieveUserPrivilegesRequest Class](xref:Microsoft.Crm.Sdk.Messages.RetrieveUserPrivilegesRequest)) only returns the **Basic** (user-level) depth for privileges that the user inherits through their team membership, regardless of the actual depth granted by the team's security roles.
+
 ### Example: Check whether a user has a privilege
 
 The following examples show the use of the `RetrieveUserPrivilegeByPrivilegeName` message. This message retrieves the list of privileges for a system user (user) from all direct roles associated with the system user and from all indirect roles associated with teams in which the system user is a member of based on the specified privilege name.
