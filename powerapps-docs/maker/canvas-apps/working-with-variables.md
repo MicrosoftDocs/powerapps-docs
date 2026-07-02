@@ -297,15 +297,18 @@ Create an adding machine by using a collection:
 
     **Clear( PaperTape )**
 
-    ![OnSelect property of the Clear but1. To run the adding machine, select <kbd>F5</kbd> to open Preview, enter numbers in the text input control, and select buttons.
+    ![OnSelect property of the Clear but1.](media/working-with-variables/papertape-2.png)
+5. To display the running total of the adding app, **[Label](controls/control-text-box.md)** control and set its **[Text](controls/properties-core.md)** property to this formula:
 
-    ![Screenshot of the Text input control showing a value, and the label showing the running total.](media/working-with-variables/papertape-run-1.png)label.](media/working-with-variables/papertape-3.png)
+    **Sum( PaperTape, Value )**
 
+    ![Text property of the Label](media/working-with-variables/papertape-3.png)
+   
 6. To run the adding machine, press F5 to open Preview, enter numbers in the text-input control, and select buttons.
 
-    ![The Text input control shows a value, and the label show the running total.](media/working-with-variables/papertape-run-1.png)
+   ![Screenshot of the Text input control showing a value, and the label showing the running total.](media/working-with-variables/papertape-run-1.png)
 
-1. To return to the default workspace, select <kbd>Esc</kbd>.
+7. To return to the default workspace, select <kbd>Esc</kbd>.
 
 8. To display the paper tape, insert a **Data table** control, and set its **[Items](controls/properties1. To see the values in your collection, do one of the following:
 
@@ -317,7 +320,7 @@ Create an adding machine by using a collection:
     
    - If you're using the classic versionof Power Apps Studio, select **Collections** on the **File** menu.
 
-1. To store and get your collection, add two more button controls, and set their **Text** properties to **Load** and **Save**. Set the **OnSelect** property of the **Load** button to this formula:
+9. To store and get your collection, add two more button controls, and set their **Text** properties to **Load** and **Save**. Set the **OnSelect** property of the **Load** button to this formula:
 
      **Clear( PaperTape ); LoadData( PaperTape, "StoredPaperTape", true )**
 
@@ -325,13 +328,13 @@ Create an adding machine by using a collection:
 
      ![OnSelect property of the Load button.](media/working-with-variables/papertape-5.png)
 
-11. Set the **OnSelect** property of the **Save** button to this formula:
+10. Set the **OnSelect** property of the **Save** button to this formula:
 
      **SaveData( PaperTape, "StoredPaperTape" )**
 
      ![OnSelect* property of the Save button.](media/working-with-variables/papertape-6.png)
 
-1. Preview again by selecting <kbd>F5</kbd>, enter numbers in the text input control, and select buttons. Select the **Save** button. Close and reload the app, and select the **Load** button to reload your collection.
+11. Preview again by selecting <kbd>F5</kbd>, enter numbers in the text input control, and select buttons. Select the **Save** button. Close and reload the app, and select the **Load** button to reload your collection.
 
 > [!NOTE]
 > **SaveData** and **LoadData** functions work in Power Apps Mobile but not Power Apps Studio or the web player for Power Apps.
