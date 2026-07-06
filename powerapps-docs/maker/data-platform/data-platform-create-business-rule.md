@@ -4,11 +4,13 @@ description: Step-by-step instructions for how to create a business rule in Micr
 author: lancedMicrosoft
 ms.component: cds
 ms.topic: how-to
-ms.date: 04/21/2026
+ms.date: 07/06/2026
 ms.subservice: dataverse-maker
 ms.author: matp
 ms.reviewer: matp
-contributors: abhijananddv
+contributors: 
+- abhijananddv
+- legunter
 search.audienceType: 
   - maker
 ---
@@ -26,12 +28,16 @@ You can create business rules and recommendations to apply logic and validations
 By combining conditions and actions, you can do any of the following with business rules:  
   
 * Set column values  
-* Clear column values  
-* Set column requirement levels  
-* Show or hide columns  
-* Enable or disable columns  
-* Validate data and show error messages  
-* Create business recommendations based on business intelligence.  
+* Clear column values
+* Set default values
+* Validate data and show error messages
+
+> [!NOTE]
+> The following actions only apply to form scope business rules. See [Create business rules to apply logic in a model-driven app form](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md).
+> * Set column requirement levels  
+> * Show or hide columns  
+> * Enable or disable columns  
+> * Create business recommendations based on business intelligence.  
   
 ## Differences between canvas and model-driven apps
 
