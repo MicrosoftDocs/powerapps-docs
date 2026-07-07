@@ -3,7 +3,7 @@ title: Modern, refreshed look for model-driven apps
 description: Learn about the updated user interface that makes model-driven apps easier to use.
 author: sriharibs-msft
 ms.topic: overview
-ms.date: 03/24/2026
+ms.date: 07/07/2026
 ms.service: powerapps
 ms.subservice: end-user
 ms.author: srihas
@@ -21,16 +21,23 @@ contributors:
 
 # Modern, refreshed look for model-driven apps
 
-Model-driven apps have updated styling including fonts, colors, borders, and shadows that align with the latest [Microsoft Fluent design system](https://react.fluentui.dev/?path=/docs/concepts-introduction--page). The updated look makes model-driven apps easier to use so that users can accomplish their goals quickly and efficiently. The Fluent design system provides consistency, quality, and Microsoft-wide platform coherence. It also provides a solid foundation for extensibility and allows support for dark mode in the future.
+Model-driven apps are modernized in waves. Each wave updates styling, layout, and behavior to align with the latest [Microsoft Fluent design system](https://react.fluentui.dev/?path=/docs/concepts-introduction--page) — making apps easier to use so people can accomplish their goals more quickly. The Fluent design system provides consistency, quality, and Microsoft-wide platform coherence. It also provides a solid foundation for extensibility and future capabilities like dark mode.
 
 > [!IMPORTANT]
-> With the **2026 Wave 1** release, all users must use the **New Look**. Makers can't switch a model-driven app back to the classic look. This requirement doesn't include the **Header and navigation refresh (preview)**.    
->
-> The **New look** toggle was removed for users with the **2025 Wave 1** release. 
+> With the **2026 Wave 1** release, all users must use the **New Look** (Wave 1 of the modernization arc). Makers can't switch a model-driven app back to the classic look. This requirement doesn't include the **Header and navigation refresh (preview)** (Wave 2).
 
-## What's included in the modern, refreshed look
+## Modernization waves at a glance
 
-Here's what you can expect in the modern, refreshed experience:
+| Wave | What it includes | Availability |
+|------|------------------|--------------|
+| **Wave 1 — The New Look** | Updated styling in forms, views, dashboards, dialogs, and controls; the floating command bar; the Power Apps grid; new field control styling | Generally available. Mandatory as of 2026 Wave 1. |
+| **Wave 2 — Header and navigation refresh** | Modern app header, streamlined sitemap, condensed page headers, and updated command bar behavior | Public preview |
+
+Future waves continue to build on this foundation.
+
+## Wave 1: The New Look
+
+Here's what you can expect in the New Look experience:
 
 - Updated styling in form, view, and dashboard pages, which includes the use of drop shadows and brighter background colors to create an elevated or _floating_ appearance. The floating appearance helps to visually separate sections and focuses attention on primary content.
 - New Fluent-based controls in forms, business process flows, and dialogs. Dialogs now resize height automatically based on the content.
@@ -39,7 +46,7 @@ Here's what you can expect in the modern, refreshed experience:
 
 ### Command bar
 
-The _floating_ command bar aligns with the Microsoft 365 experience, with consistent spacing, rounded corners, and elevation. Notice how the command bar is in a separate section at the top of the page in the following example.
+The _floating_ command bar aligns with the Microsoft 365 experience, with consistent spacing, rounded corners, and elevation. In the following example, the command bar is in a separate section at the top of the page.
 
 :::image type="content" source="media/modern-command-bar.png" alt-text="Floating command bar":::
 
@@ -87,7 +94,7 @@ If you customize the chart colors, the new look overrides your custom colors. To
 <Chart CustomColorOverride="true">
 ```
 
-## Header and navigation refresh (preview)
+## Wave 2: Header and navigation refresh (preview)
 
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
@@ -122,7 +129,9 @@ The modern, refreshed look for model-driven apps has some limitations:
 
 ### Modern, refreshed look outside of browser
 
-The mobile app and mail app don't support the modern, refreshed look. They aren't part of the preview or general availability.
+The mail app supports the modern, refreshed look. It's on by default for environments on the [monthly channel](../maker/model-driven-apps/channel-overview.md) as part of the February 2026 release, and will be enabled on the semi-annual channel with the October 2026 update.
+
+The mobile app also supports the modern, refreshed look. Admins can enable it by adding the **Mobile modern experience** setting to a solution and updating the value for the environment or for individual apps (2 = on). To learn more about app settings, see [Manage model-driven app settings in the app designer](../maker/model-driven-apps/app-properties.md).
 
 ### Switching themes or enabling dark mode
 
@@ -130,7 +139,7 @@ Switching themes or enabling dark mode isn't supported at this time.
 
 ### Honoring classic theming
 
-With the modern, refreshed look, Power Apps is no longer honoring [classic theme customizations](../maker/model-driven-apps/create-themes-organization-branding.md). You can, however, override the colors for the app header to match your organization branding with the modern, refreshed look. Learn more in [Change the color of the app header](#3-can-i-change-the-color-of-the-app-header). Other theme customization options for the modern, refreshed look aren't available yet.  
+With the modern, refreshed look, Power Apps no longer honors [classic theme customizations](../maker/model-driven-apps/create-themes-organization-branding.md). You can, however, override the colors for the app header to match your organization branding with the modern, refreshed look. Learn more in [Change the color of the app header](#3-can-i-change-the-color-of-the-app-header). Other theme customization options for the modern, refreshed look aren't available yet.  
 
 ### Custom icons
 
@@ -154,11 +163,11 @@ You can change the color of the app header to match your organization while usin
 
 #### Can I turn on Header and navigation refresh without turning on the New look?
  
-No, you need to turn on [New look](#whats-included-in-the-modern-refreshed-look) in addition to turning on Header and navigation refresh to see the refreshed header and navigation experience in the app.
+No, you need to turn on [New look](#wave-1-the-new-look) in addition to turning on Header and navigation refresh to see the refreshed header and navigation experience in the app.
 
 #### How do I enable the Header and navigation refresh for existing apps? 
 
-The feature is available as an opt-in capability for existing apps. You can enable it through the [app setting](#header-and-navigation-refresh-preview).
+The feature is available as an opt-in capability for existing apps. You can enable it through the [app setting](#wave-2-header-and-navigation-refresh-preview).
 
 #### Why don't I see the Help icon in the global command bar in the app header? 
 
@@ -170,26 +179,26 @@ The side pane switcher becomes available only when there are two or more side pa
 
 #### Why does the sitemap of an app generated by the [Plan designer](/power-apps/maker/plan-designer/plan-designer) look different from existing apps' sitemap?
 
-Apps generated by the [Plan designer](/power-apps/maker/plan-designer/plan-designer) will have a streamlined sitemap. Home, Recent, Pinned and sitemap groups are turned off by default for a simplified flat list of navigation options in the sitemap.
+Apps generated by the [Plan designer](/power-apps/maker/plan-designer/plan-designer) have a streamlined sitemap. Home, Recent, Pinned, and sitemap groups are turned off by default for a simplified flat list of navigation options in the sitemap.
 
 ## Revert to the classic look
 
 > [!NOTE]
-> With the **2026 Wave 1** release, the **New Look** is mandatory for all users. Makers will no longer be able to switch a model-driven app to the classic look.
+> Starting with the **2026 Wave 1** release, the **New Look** is mandatory for all users. Makers can no longer switch a model-driven app to the classic look.
 
-While end users have not been able to switch themselves back to the classic look since the **2025 Wave 1** release, admins can still turn off the new look for all users by updating the **New look for model driven apps** app setting. 
+Admins can turn off the New Look for all users by updating the **New look for model driven apps** app setting. 
 
 1. Open <https://make.powerapps.com/>.
-2. Under **Solutions**, open an existing solution with one or more model-driven apps.
-3. Select **Add Existing** > **More** > **Setting**.
-4. Search for **New look**.
-5. Select **New look for model driven apps**.
-6. Select **Add** to add it to the solution.
-7. Select **New look for model driven apps** from the solution explorer.
-8. Update **Setting Environment Value** to **No**.
-9. Add the **apps to the solution** for which you want to turn off new look.
-10. Update the **value of the apps** to **No**.
-11. Select **Save**.
-12. Publish all customizations.
+1. Under **Solutions**, open an existing solution with one or more model-driven apps.
+1. Select **Add Existing** > **More** > **Setting**.
+1. Search for **New look**.
+1. Select **New look for model driven apps**.
+1. Select **Add** to add it to the solution.
+1. Select **New look for model driven apps** from the solution explorer.
+1. Update **Setting Environment Value** to **No**.
+1. Add the **apps to the solution** for which you want to turn off new look.
+1. Update the **value of the apps** to **No**.
+1. Select **Save**.
+1. Publish all customizations.
 
 To learn more about this and other app settings, see [Manage model-driven app settings in the app designer](../maker/model-driven-apps/app-properties.md).
