@@ -2,7 +2,7 @@
 title: "Use modern themes in Power Apps"
 description: Learn how to change the colors and font of apps including the app header in model-driven apps with the modern look in Power Apps.
 ms.custom: ""
-ms.date: 04/06/2026
+ms.date: 07/07/2026
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -145,7 +145,9 @@ After you select your colors and create the web resource, follow these steps to 
 1. On the right **Edit Custom theme definition** properties pane, select **New environment value** under **Setting environment value** and enter the unique name of your web resource you created earlier (observe the **Name** column in the solution for the unique name). Remove the double quotes and make sure to add the publisher prefix for the web resource. For example, the name might appear as *contoso_green-custom-theme* as in this example.
    :::image type="content" source="media/environment-setting-theme.png" alt-text="Environment setting for a theme with web resource unique name contoso_green-custom-theme." lightbox="media/environment-setting-theme.png":::
 1. Select **Save**.
-1. Select **Settings** on the left **Objects** pane, and then select **Publish all customizations** on the command bar. (This command appears when no components in the solution are selected).
+1. Expand **Settings** on the left **Objects** pane, select **Setting definitions**, and then select **Publish all customizations** on the command bar. (This command appears when no components in the solution are selected).
+
+Wait for the customization publish to complete. Then, open a model-driven app in the environment to display the theme.
 
 Custom model-driven app using the extended green theme sample.
 :::image type="content" source="media/custom-green-theme-extended.png" alt-text="Custom model-driven app using custom green theme extended with great vibes font.":::
