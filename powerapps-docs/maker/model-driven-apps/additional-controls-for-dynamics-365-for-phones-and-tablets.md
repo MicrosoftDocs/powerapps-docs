@@ -44,7 +44,7 @@ To use these controls in the form designer:
   
 1. Configure the values for each property.  
   
-1. Select **Done** when you’re done configuring the control.  
+1. Select **Done** when you're done configuring the control.  
   
 The following descriptions explain each control you can use on forms.  
 
@@ -190,11 +190,11 @@ Some components aren't displayed in the default **Components** list in the form 
 
 ### Form component
 
-The form component control lets users edit information of a related table record directly from another table’s form. More information: [Edit related table records directly from another table’s main form](form-component-control.md)
+The form component control enables users to edit information for a related table record directly from another table's form. For more information, see [Edit related table records directly from another table's main form](form-component-control.md).
 
 ### Collaboration controls
 
-Collaboration controls give you the power to simplify your user’s workflow collaboration. Build model-driven apps that allow users to work with approvals, files, meetings, notes, and tasks from Microsoft 365 and Microsoft Teams without switching the context from app to app. More information: [Collaboration controls](/microsoftteams/platform/samples/collaboration-control)
+Collaboration controls simplify your user's workflow collaboration. Build model-driven apps that allow users to work with approvals, files, meetings, notes, and tasks from Microsoft 365 and Microsoft Teams without switching the context from app to app. For more information, see [Collaboration controls](/microsoftteams/platform/samples/collaboration-control).
 
 ## Legacy controls
 
