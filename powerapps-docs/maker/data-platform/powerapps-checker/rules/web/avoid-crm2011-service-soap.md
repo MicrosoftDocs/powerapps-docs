@@ -1,7 +1,7 @@
 ---
 title: avoid-crm2011-service-soap Power Apps checker reference | Microsoft Docs
 description: Power Apps checker rule reference for avoid-crm2011-service-soap.
-author: ecarrleemsft
+author: tylerol
 ms.topic: reference
 ms.date: 07/18/2022
 ms.service: "powerapps"

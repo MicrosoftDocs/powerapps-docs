@@ -1,7 +1,7 @@
 ---
 title: avoid-2011-api Power Apps checker reference | Microsoft Docs
 description: Power Apps checker rule reference for avoid-2011-api.
-author: ecarrleemsft
+author: tylerol
 ms.topic: reference
 ms.date: 07/18/2022
 ms.service: "powerapps"
