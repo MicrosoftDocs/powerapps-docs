@@ -1,7 +1,7 @@
 ---
 title: avoid-window-top Power Apps checker reference | Microsoft Docs
 description: Power Apps checker rule reference for avoid-window-top.
-author: ecarrleemsft
+author: tylerol
 ms.topic: reference
 ms.date: 07/18/2022
 ms.service: "powerapps"

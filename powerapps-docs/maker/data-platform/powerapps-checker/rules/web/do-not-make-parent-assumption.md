@@ -1,7 +1,7 @@
 ---
 title: do-not-make-parent-assumption Power Apps checker reference | Microsoft Docs
 description: Power Apps checker rule reference for do-not-make-parent-assumption.
-author: ecarrleemsft
+author: tylerol
 ms.topic: reference
 ms.date: 07/18/2022
 ms.service: "powerapps"
