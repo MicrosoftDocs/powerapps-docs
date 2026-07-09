@@ -4,13 +4,14 @@ metadata:
   description: Get answers to frequently asked questions about Power Apps Azure Synapse Link for Dataverse.
   author: sabinn-msft
   ms.search.keywords: 
-  ms.date: 06/10/2026
+  ms.date: 07/08/2026
   ms.author: sabinn
   ms.reviewer: matp
   contributors: 
   - JasonHQX
   - anibakore-msft
   - VinayMancha02
+  - NatuvaHiranmai
   ms.topic: faq
   ms.subservice: dataverse-maker
 title: Azure Synapse Link for Dataverse FAQ
@@ -127,7 +128,7 @@ sections:
         Lookup columns are made up of an ID and a value. Lookup values only change on the root table. To better reflect the value of a lookup column, we recommend joining with the original root table to get the latest value.
    - question: Does Azure Synapse Link support calculated columns?
      answer: |
-        In Dataverse, calculated columns keep only the formula information and the real value depends on the base table column. So calculated columns are only supported when all columns are located within the same exported table.    
+          In Dataverse, calculated columns store only the formula definition, and the actual value is derived from the underlying columns. Therefore, calculated columns are supported only when all referenced columns are located within the same exported table. Azure Synapse Link synchronizes data based on Dataverse change tracking. During incremental synchronization, a record is re-exported only when its version changes. If a calculated column value changes without a corresponding version change to the record, the updated value isn't synchronized to the data lake until the record is updated and its version changes. For example, if a calculated column evaluates to `NULL` during the initial synchronization, `NULL` is written to the data lake. If the inputs used by the calculation change later but the record version doesn't change, Azure Synapse Link won't detect the recalculated value and the data lake continues to show `NULL`. Once the record is updated and its version changes, Azure Synapse Link re-exports the record with the latest calculated column value.
    - question: Which Dataverse tables use append only mode by default?
      answer: |
         All tables that don't have a createdOn field is synced using append only mode by default. This includes relationship tables and the ActivityParty table.
