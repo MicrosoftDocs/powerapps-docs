@@ -1227,8 +1227,8 @@
             href: ./canvas-apps/test-studio-classic-pipeline-editor.md
           - name: Configure pipeline using YAML
             href: ./canvas-apps/test-studio-yaml-pipeline.md
-      - name: "Test Canvas apps with Test Engine (preview)"
-        href: /power-platform/test-engine/canvas-application
+      - name: Test canvas apps with Playwright
+        href: /power-platform/developer/playwright-samples/canvas-application
   - name: How-to guides
     items:
     - name: Create a canvas app connected to Dataverse from scratch
@@ -1887,8 +1887,8 @@
       href: ./model-driven-apps/delete-model-driven-app.md
     - name: Run an app
       href: ./model-driven-apps/run-model-driven-app.md
-  - name: Test an app using Test Engine
-    href: /power-platform/test-engine/model-driven-application
+  - name: Test model-driven apps with Playwright
+    href: /power-platform/developer/playwright-samples/model-driven-application
   - name: Teams integration
     items:
     - name: Embed a model-driven app as tab app
@@ -2238,8 +2238,6 @@
           href: ./data-platform/configure-actions.md
         - name: Invoke custom process actions from a real-time workflow
           href: ./data-platform/invoke-custom-actions-workflow-dialog.md
-  - name: Test extensions with Test Engine
-    href: /power-platform/test-engine/dataverse
   - name: Work with solutions
     items:
       - name: Solutions overview

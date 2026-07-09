@@ -72,17 +72,17 @@
     },
     {
       "source_path": "powerapps-docs/developer/test-engine/overview.md",
-      "redirect_url": "/power-platform/test-engine/overview",
+      "redirect_url": "/power-platform/important-changes-coming#deprecation-of-test-engine",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/developer/test-engine/powerfx.md",
-      "redirect_url": "/power-platform/test-engine/powerfx",
+      "redirect_url": "/power-platform/important-changes-coming#deprecation-of-test-engine",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/developer/test-engine/yaml.md",
-      "redirect_url": "/power-platform/test-engine/yaml",
+      "redirect_url": "/power-platform/important-changes-coming#deprecation-of-test-engine",
       "redirect_document_id": "false"
     },
     {
