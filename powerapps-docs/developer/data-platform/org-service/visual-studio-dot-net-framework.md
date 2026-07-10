@@ -1,8 +1,8 @@
 ---
-title: Visual Studio and the .NET Framework
+title: Visual Studio and the .NET platform
 description: "Learn about managed code development tools and requirements."
 ms.collection: get-started
-ms.date: 08/08/2025
+ms.date: 07/06/2026
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: pehecke
@@ -14,22 +14,14 @@ contributors:
  - phecke
 ---
 
-# Visual Studio and the .NET Framework
+# Visual Studio and the .NET platform
 
-The Microsoft Dataverse SDK assemblies are built using .NET Framework 4.6.2. You can use Visual Studio to build your managed code applications using .NET Framework 4.6.2 or later.
+Microsoft Dataverse SDK assemblies support both .NET Framework and .NET Core code development. You can use Visual Studio, Visual Studio Code, or other tools to build your .NET managed code application, plug-in, or custom workflow activity.
 
-Plug-ins and custom workflow assemblies should use .NET Framework 4.6.2. While assemblies built using later versions should generally work, if they use any features introduced after 4.6.2 an error will occur.
-
-> [!IMPORTANT]
-> You should build any custom client applications using Microsoft .NET Framework 4.6.2 or later.
-> Only applications using Transport Level Security (TLS) 1.2 or better security are allowed to connect with Dataverse. TLS 1.2 is not the default protocol used by .NET Framework 4.5.2, but it is in .NET Framework 4.6.2.
->
-> More information: <https://cloudblogs.microsoft.com/dynamics365/bdm/2017/09/28/updates-coming-to-dynamics-365-customer-engagement-connection-security/>
->
 > [!TIP]
-> When installing .NET Framework 4.6.2 on your development computer, be sure to install the developer pack and not just the run-time. This will enable the 4.6.2 Framework to be chosen in the **New Project** dialog box of Visual Studio and in the target framework drop-down menu of the project's properties.  
+> When you install .NET Framework on your development computer, be sure to install the Developer Pack and not just the run-time. For .NET Core, be sure to install the SDK. This installation enables you to choose the desired framework or SDK in the **New Project** dialog box of Visual Studio and in the target drop-down menu of the project's properties.  
 
-You can use a Visual Studio Community edition for development. However, use of extensions isn't supported in the Express edition so you won't be able to install useful extensions in that version of Visual Studio.
+You can use a Visual Studio Community edition for development. However, the Express edition doesn't support use of extensions, so you can't install available extensions in that version of Visual Studio.
 
 More information: [Support for .NET Framework versions](../supported-customizations.md#support-for-net-framework-versions)
 
@@ -37,6 +29,5 @@ For a complete statement of supported and unsupported development, see [Supporte
 
 ## See Also
 
-[Developer tools and resources](../developer-tools.md)
-
-[!INCLUDE[footer-include](../../../includes/footer-banner.md)]
+-[Developer tools and resources](../developer-tools.md)
+-[!INCLUDE[footer-include](../../../includes/footer-banner.md)]
