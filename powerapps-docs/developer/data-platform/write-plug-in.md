@@ -1,7 +1,7 @@
 ---
 title: "Write a plug-in (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn how to write custom code to be executed in response to data processing events."
-ms.date: 01/07/2026
+ms.date: 07/02/2026
 ms.reviewer: pehecke
 ms.topic: how-to
 author: MsSQLGirl
@@ -30,7 +30,7 @@ You can create [plug-ins](plug-ins.md) by using one of the following methods:
 
 ## IPlugin interface
 
-A plug-in is a compiled class within an assembly built to target .NET Framework 4.6.2. Each class in a plug-in project that is registered on an [event pipeline step](event-framework.md) must implement the <xref:Microsoft.Xrm.Sdk.IPlugin> interface, which defines a single <xref:Microsoft.Xrm.Sdk.IPlugin.Execute%2A?displayProperty=nameWithType> method.
+A plug-in is a compiled class within an assembly that targets .NET Framework. Each class in a plug-in project that is registered on an [event pipeline step](event-framework.md) must implement the <xref:Microsoft.Xrm.Sdk.IPlugin> interface, which defines a single <xref:Microsoft.Xrm.Sdk.IPlugin.Execute%2A?displayProperty=nameWithType> method.
 
 ```csharp
 public class MyPlugin : IPlugin
@@ -53,7 +53,7 @@ More information: [Services you can use in your code](#services-you-can-use-in-y
 
 There are some exceptions to the statement about adding properties or methods in the note above. For example, you can have a property that represents a constant and you can have methods that are called from the `Execute` method. The important thing is that you never store any service instance or context data as a property in your class. These values change with every invocation and you don't want that data to be cached and applied to subsequent invocations.
 
-More information: [Develop IPlugin implementations as stateless](best-practices/business-logic/develop-iplugin-implementations-stateless.md)
+More information: [Develop IPlugin implementations as stateless](best-practices/business-logic/develop-iplugin-implementations-stateless.md), [Supported customizations for Dataverse](supported-customizations.md#support-for-net-framework-versions)
 
 ### Pass configuration data to your plug-in
 

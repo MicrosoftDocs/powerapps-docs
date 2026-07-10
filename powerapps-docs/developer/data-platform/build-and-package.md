@@ -1,7 +1,7 @@
 ---
 title: Build and package plug-in code
 description: "Learn how to build and package plug-in code for Microsoft Dataverse. Understand assembly constraints, dependent assembly limitations, and NuGet packaging. Get started today."
-ms.date: 03/30/2026
+ms.date: 07/02/2026
 ms.topic: how-to
 author: MsSQLGirl
 ms.author: jukoesma
@@ -27,12 +27,9 @@ This article describes the constraints and limitations you need to know when bui
 
 When you build a plug-in project, keep the following output assembly constraints in mind.
 
-### Use .NET Framework 4.6.2
+### Target .NET Framework
 
-Plug-in and custom workflow activity assembly projects must target .NET Framework 4.6.2.
-
-> [!NOTE]
-> Official Microsoft [support](/lifecycle/products/microsoft-net-framework) for .NET Framework 4.6.2 ends on January 12, 2027. Microsoft plans to introduce Dataverse plug-in support for the .NET Framework 4.8 runtime sometime during the fourth quarter of 2026.
+Plug-in and custom workflow activity assembly projects must target .NET Framework. For more information, see [Support for .NET Framework versions](supported-customizations.md#support-for-net-framework-versions).
 
 ### Limit assemblies to 16 MB
 
@@ -44,7 +41,7 @@ If you don't use the [dependent assemblies](#dependent-assemblies) capability, y
 
 ### NuGet CoreAssemblies are in the sandbox
 
-If you add the `Microsoft.CrmSdk.CoreAssemblies` [NuGet](https://www.nuget.org) package to your project, the required Dataverse assembly references are added. However, the assemblies themselves aren't uploaded with your plug-in assembly. They already exist in the server's sandbox runtime where your code executes.
+If you add the [Microsoft.CrmSdk.CoreAssemblies](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreAssemblies) or [Microsoft.PowerPlatform.Dataverse.Client](https://www.nuget.org/packages/Microsoft.PowerPlatform.Dataverse.Client) package to your project, you add the required Dataverse assembly references. However, the assemblies themselves aren't uploaded with your plug-in assembly. They already exist in the server's sandbox runtime where your code executes.
 
 ## Dependent assemblies
 
@@ -122,7 +119,7 @@ When you create a plug-in project by using one of the tools, such as the Power P
 
 If you're adding another project to the Visual Studio solution, such as a class library project, create an SDK style project by following these steps:
 
-1. In Visual Studio, add the new project to your solution using a .NET or .NET Standard template. Do not target .NET Framework.
+1. In Visual Studio, add the new project to your solution using a .NET or .NET Standard template. Don't target .NET Framework.
 1. Edit the project file by right-clicking on the project name in Solution Explorer and selecting **Edit project file**, or open the project's .csproj file in a separate editor.
 1. You should see the line `<Project Sdk="Microsoft.NET.Sdk">` in the project file. Change the TargetFramework property to be `<TargetFramework>net462</TargetFramework>` and save the file.
 1. Verify your solution builds, and you're done.

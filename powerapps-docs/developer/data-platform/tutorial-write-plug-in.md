@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Write and register a plug-in (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn how to write plug-in code and then register the compiled assembly and step with Dataverse." 
-ms.date: 01/07/2026
+ms.date: 07/02/2026
 ms.reviewer: "pehecke"
 ms.topic: tutorial
 author: MsSQLGirl
@@ -48,9 +48,9 @@ Another alternative is to use the Power Platform Tools extension as described he
 
 ### Create a Visual Studio project for the plug-in
 
-1. Open Visual Studio and open a new **Class Library (.NET Framework)** project using **.NET Framework 4.6.2**
+1. In Visual Studio, open a new **Class Library (.NET Framework)** project targeting a [supported framework version](supported-customizations.md#support-for-net-framework-versions).
 
-    ![Open a new class library (.NET Framework) project using .NET Framework 4.6.2.](media/tutorial-write-plug-in-create-visual-studio-project.png)
+    ![Open a new class library (.NET Framework) project using .NET Framework.](media/tutorial-write-plug-in-create-visual-studio-project.png)
 
     The name used for the project is also the name of the assembly. This tutorial uses the name `BasicPlugin`.
 1. In **Solution Explorer**, right-click the project and select **Manage NuGet Packages…** from the context menu.

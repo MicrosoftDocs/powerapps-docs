@@ -4,78 +4,78 @@
   href: overview.md
 - name: Get started
   items:
-  - name: 'Quickstart: Execute service request'
-    href: quick-start-org-service-console-app.md
-  - name: Late and Early-bound programming
-    href: early-bound-programming.md
-  - name: IOrganizationService Interface
-    href: iorganizationservice-interface.md
-  - name: OrganizationServiceContext
-    href: organizationservicecontext.md
-  - name: Create a client app
-    items:
-    - name: Subscribe to SDK assembly updates using NuGet
-      href: subscribe-sdk-assembly-updates-using-nuget.md
-    - name: Visual Studio and the .NET Framework
-      href: visual-studio-dot-net-framework.md
-    - name: Use XRM Tooling
-      href: ../xrm-tooling/build-windows-client-applications-xrm-tools.md
+    - name: "Quickstart: Execute service request"
+      href: quick-start-org-service-console-app.md
+    - name: Late and Early-bound programming
+      href: early-bound-programming.md
+    - name: IOrganizationService Interface
+      href: iorganizationservice-interface.md
+    - name: OrganizationServiceContext
+      href: organizationservicecontext.md
+    - name: Create a client app
+      items:
+        - name: Subscribe to SDK assembly updates using NuGet
+          href: subscribe-sdk-assembly-updates-using-nuget.md
+        - name: Visual Studio and the .NET platform
+          href: visual-studio-dot-net-framework.md
+        - name: Use XRM Tooling
+          href: ../xrm-tooling/build-windows-client-applications-xrm-tools.md
 - name: Table  operations
   href: entity-operations.md
   items:
-  - name: Query Data
-    href: entity-operations-query-data.md
-    items:
-    - name: Query data using QueryExpression
-      href: queryexpression/overview.md
+    - name: Query Data
+      href: entity-operations-query-data.md
       items:
-      - name: Select columns
-        displayName: Select columns using QueryExpression
-        href: queryexpression/select-columns.md
-      - name: Join tables
-        displayName: Join tables using QueryExpression
-        href: queryexpression/join-tables.md
-      - name: Order rows
-        displayName: Order rows using QueryExpression
-        href: queryexpression/order-rows.md
-      - name: Filter rows
-        displayName: Filter rows using QueryExpression
-        href: queryexpression/filter-rows.md
-      - name: Page results
-        displayName: Page results using QueryExpression
-        href: queryexpression/page-results.md
-      - name: Aggregate data
-        displayName: Aggregate data using QueryExpression
-        href: queryexpression/aggregate-data.md
-      - name: Count rows
-        displayName: Count rows using QueryExpression
-        href: queryexpression/count-rows.md
-      - name: Optimize performance
-        displayName: Optimize performance using QueryExpression
-        href: queryexpression/optimize-performance.md
-      - name: Sample code
-        displayName: QueryExpression, Sample code
-        href: queryexpression/sample.md
-    - name: Use the QueryByAttribute class
-      href: use-querybyattribute-class.md
-  - name: Create table rows
-    href: entity-operations-create.md
-  - name: Retrieve a table row
-    href: entity-operations-retrieve.md
-  - name: Update and delete table rows
-    href: entity-operations-update-delete.md
-  - name: Associate and disassociate table rows
-    href: entity-operations-associate-disassociate.md
+        - name: Query data using QueryExpression
+          href: queryexpression/overview.md
+          items:
+            - name: Select columns
+              displayName: Select columns using QueryExpression
+              href: queryexpression/select-columns.md
+            - name: Join tables
+              displayName: Join tables using QueryExpression
+              href: queryexpression/join-tables.md
+            - name: Order rows
+              displayName: Order rows using QueryExpression
+              href: queryexpression/order-rows.md
+            - name: Filter rows
+              displayName: Filter rows using QueryExpression
+              href: queryexpression/filter-rows.md
+            - name: Page results
+              displayName: Page results using QueryExpression
+              href: queryexpression/page-results.md
+            - name: Aggregate data
+              displayName: Aggregate data using QueryExpression
+              href: queryexpression/aggregate-data.md
+            - name: Count rows
+              displayName: Count rows using QueryExpression
+              href: queryexpression/count-rows.md
+            - name: Optimize performance
+              displayName: Optimize performance using QueryExpression
+              href: queryexpression/optimize-performance.md
+            - name: Sample code
+              displayName: QueryExpression, Sample code
+              href: queryexpression/sample.md
+        - name: Use the QueryByAttribute class
+          href: use-querybyattribute-class.md
+    - name: Create table rows
+      href: entity-operations-create.md
+    - name: Retrieve a table row
+      href: entity-operations-retrieve.md
+    - name: Update and delete table rows
+      href: entity-operations-update-delete.md
+    - name: Associate and disassociate table rows
+      href: entity-operations-associate-disassociate.md
 - name: Use messages
   href: use-messages.md
 - name: Special Operations
   items:
-  - name: Use ExecuteAsync
-    href: use-executeAsync.md
-  - name: Use ExecuteTransaction
-    href: use-executetransaction.md
-  - name: Execute Multiple requests
-    href: execute-multiple-requests.md
+    - name: Use ExecuteAsync
+      href: use-executeAsync.md
+    - name: Use ExecuteTransaction
+      href: use-executetransaction.md
+    - name: Execute Multiple requests
+      href: execute-multiple-requests.md
 - name: Use OrganizationServiceContext
   items: # We may need a topic here about CRUD?
     - name: Build queries with LINQ (.NET language-integrated query)
@@ -97,31 +97,31 @@
 - name: Work with table definitions (metadata)
   href: work-with-metadata.md
   items:
-  - name: Create custom tables
-    href: create-custom-entity.md
-  - name: Work with column definitions
-    href: metadata-attributemetadata.md  
-  - name: Insert, update, delete, and order global choices
-    href: metadata-global-option-set-options.md
-  - name: Customize choices
-    href: metadata-option-sets.md
-  - name: Create and retrieve table relationships
-    href: metadata-relationshipmetadata.md
-  - name: Retrieve and detect changes to definitions
-    href: metadata-retrieve-detect-changes.md
-  - name: Retrieve, update, and delete tables
-    href: metadata-retrieve-update-delete-entities.md 
-  - name: Create a table row to send email activities
-    href: create-update-entity-emailed.md
+    - name: Create custom tables
+      href: create-custom-entity.md
+    - name: Work with column definitions
+      href: metadata-attributemetadata.md
+    - name: Insert, update, delete, and order global choices
+      href: metadata-global-option-set-options.md
+    - name: Customize choices
+      href: metadata-option-sets.md
+    - name: Create and retrieve table relationships
+      href: metadata-relationshipmetadata.md
+    - name: Retrieve and detect changes to definitions
+      href: metadata-retrieve-detect-changes.md
+    - name: Retrieve, update, and delete tables
+      href: metadata-retrieve-update-delete-entities.md
+    - name: Create a table row to send email activities
+      href: create-update-entity-emailed.md
 - name: Import data
   href: ../import-data.md #Topic is for both Web API and SDK for .NET
 - name: Sample data
   href: ../sample-data.md #Topic is for both Web API and SDK for .NET
 - name: Coding practices
   items:
-  - name: Handle exceptions in your code
-    href: handle-exceptions-code.md
-  - name: Web service error codes
-    href: ../reference/web-service-error-codes.md 
+    - name: Handle exceptions in your code
+      href: handle-exceptions-code.md
+    - name: Web service error codes
+      href: ../reference/web-service-error-codes.md
 - name: Samples
   href: samples/toc.yml

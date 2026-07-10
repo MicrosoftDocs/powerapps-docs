@@ -2,7 +2,7 @@
 title: "Supported customizations for Microsoft Dataverse"
 description: "Learn how you can customize Microsoft Dataverse using available tools." 
 ms.collection: get-started
-ms.date: 09/02/2022
+ms.date: 07/02/2026
 ms.reviewer: pehecke
 ms.topic: article
 author: shmcarth # GitHub ID
@@ -79,15 +79,23 @@ The ability to create custom workflow activities (assemblies) to be called from 
 
 ## Support for .NET Framework versions
 
-The following describes the support considerations for custom code written the Microsoft .NET Framework 4.6.2.
+The following describes the support considerations for custom code targeting Microsoft's .NET Framework.
 
-- Any web service client created by using the Microsoft .NET Framework 4.6.2 or higher that calls the web services is fully supported in Dataverse.
+- Any web service client created by using the Microsoft .NET Framework 4.6.2 or higher that calls the Dataverse web services is fully supported.
+- Any .NET assembly project that targets Microsoft .NET Framework 4.6.2 or later, for use in Dataverse as a plug-in assembly or as a custom workflow activity assembly, is supported.
 
-    > [!IMPORTANT]
-    > You should build any custom client applications using Microsoft .NET Framework 4.6.2 or later. Only applications using Transport Level Security (TLS) 1.2 or better security will be allowed to connect. TLS 1.2 is not the default protocol used by .NET Framework 4.5.2, but it is in .NET Framework 4.6.2.
+You can view the latest list of supported .NET Framework build targets in Dataverse's [Microsoft.PowerPlatform.Dataverse.Client](https://www.nuget.org/packages/Microsoft.PowerPlatform.Dataverse.Client#supportedframeworks-body-tab) or [Microsoft.CrmSdk.CoreAssemblies](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreAssemblies/#supportedframeworks-body-tab) NuGet packages.
 
+> [!TIP]
+> To take advantage of improved security and other enhancements, new code projects should target .NET Framework 4.8 or later.
 
-- Any .NET assembly that is created with the Microsoft .NET Framework 4.6.2 for use in Dataverse as a plug-in assembly or as a custom workflow activity is supported.
+## Support for .NET Core versions
+
+The following list describes the support considerations for custom code that targets Microsoft's .NET Core.
+
+- Any web service client created by using the Microsoft .NET Core 8 or higher that calls the Dataverse web services is fully supported.
+
+You can view the latest list of supported .NET Core build targets in the [Microsoft.PowerPlatform.Dataverse.Client](https://www.nuget.org/packages/Microsoft.PowerPlatform.Dataverse.Client#supportedframeworks-body-tab) NuGet package.
 
 ## Unsupported customizations
 
@@ -113,6 +121,8 @@ The following is a list of unsupported action types that are frequently asked ab
 - Plug-in and workflow assemblies must contain all the necessary logic within the respective DLL. Plugins may reference some core .NET assemblies. However, we do not support dependencies on .NET assemblies that interact with low-level Windows APIs, such as the graphics design interface. Previously, Dynamics 365 allowed for assemblies to refer to these interfaces, but to adhere to our security standards, changes to this behavior are required.
 
 - Creating a plug-in assembly for a standard Dataverse assembly (Microsoft.Crm.*.dll) or performing an update or delete of a platform created `pluginassembly` is not supported.
+
+- Registering and executing plug-ins or custom workflow activities from assemblies that build target any version of .NET Core.
 
 - Editing a solutions file to edit any solution components other than ribbons, forms, SiteMap, or saved queries is not supported. For more information, see [When to edit the customizations file](/power-platform/alm/when-edit-customization-file). Defining new solution components by editing the solutions file is not supported. Editing web resource files exported with a solution is not supported. Except for the steps documented in [Maintain managed solutions](/power-platform/alm/maintain-managed-solutions), editing the contents of a managed solution is not supported.
 

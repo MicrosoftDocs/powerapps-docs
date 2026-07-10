@@ -1,7 +1,7 @@
 ---
 title: "Create Workflow Extensions for Microsoft Dataverse"
 description: "Learn how to create and register custom workflow extensions in Microsoft Dataverse. Add custom activities to workflows, actions, and dialogs with step-by-step guidance." 
-ms.date: 03/27/2026
+ms.date: 07/06/2026
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: jdaly
@@ -133,19 +133,20 @@ For more information, see:
 
 ## Technology used
 
-You can register an assembly built by using the [.NET Framework Activity library](/dotnet/framework/windows-workflow-foundation/net-framework-4-5-built-in-activity-library) that defines custom activities. These activities appear within the web application editor and are invoked when the process runs.
+Register an assembly built by using the [.NET Framework Activity library](/dotnet/framework/windows-workflow-foundation/net-framework-4-5-built-in-activity-library) that defines custom activities. These activities appear within the web application editor and are invoked when the process runs.
 
-Custom workflow activities require creating a .NET Framework assembly that includes one or more classes derived from the abstract [CodeActivity Class](/dotnet/api/system.activities.codeactivity?view=netframework-4.6.2&preserve-view=true). This class provides the [Execute(CodeActivityContext) Method](/dotnet/api/system.activities.codeactivity.execute?view=netframework-4.6.2&preserve-view=true) that the Dataverse platform calls when the activity runs. Each class in your assembly defines a specific activity.
+Custom workflow activities require creating a .NET Framework assembly that includes one or more classes derived from the abstract [CodeActivity Class](/dotnet/api/system.activities.codeactivity). This class provides the [Execute(CodeActivityContext) Method](/dotnet/api/system.activities.codeactivity.execute) that the Dataverse platform calls when the activity runs. Each class in your assembly defines a specific activity.
 
-Workflow activities should define input and output parameters that are visible in the process designer. These parameters enable someone to pass data into the workflow activity and receive the processed output. When you write the class, add properties for these parameters and annotate them with [.NET attributes](/dotnet/standard/attributes/index) to provide the metadata that Dataverse uses to expose your custom workflow activity with any parameters in the designer.
+Workflow activities should define input and output parameters that the process designer can display. These parameters enable someone to pass data into the workflow activity and receive the processed output. When you write the class, add properties for these parameters and annotate them with [.NET attributes](/dotnet/standard/attributes/index) to provide the metadata that Dataverse uses to expose your custom workflow activity with any parameters in the designer.
 
 ## Create a custom workflow activity assembly
 
 These steps describe how to create a custom workflow activity by using Visual Studio. For a complete step-by-step example, see [Tutorial: Create workflow extension](tutorial-create-workflow-extension.md).
 
-1. Create a Class Library project that targets .NET Framework 4.6.2.
+1. Create a Class Library project that targets .NET Framework.
     > [!IMPORTANT]
-    > While assemblies built by using later versions should generally work, an error occurs if they use any features introduced after 4.6.2.
+    > Use a build target of a [supported .NET Framework](../supported-customizations.md#support-for-net-framework-versions).
+
 1. Install the [Microsoft.CrmSdk.Workflow](https://www.nuget.org/packages/Microsoft.CrmSdk.Workflow/) NuGet package.
 
     This package includes the [Microsoft.CrmSdk.CoreAssemblies](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreAssemblies/) package.
@@ -170,7 +171,7 @@ These steps describe how to create a custom workflow activity by using Visual St
 
     For more information, see [Add parameters](#add-parameters).
 
-1. Make your class derive from the [CodeActivity Class](/dotnet/api/system.activities.codeactivity?view=netframework-4.6.2&preserve-view=true) and implement the [Execute(CodeActivityContext) Method](/dotnet/api/system.activities.codeactivity.execute?view=netframework-4.6.2&preserve-view=true) that contains the operations your activity performs.
+1. Make your class derive from the [CodeActivity Class](/dotnet/api/system.activities.codeactivity) and implement the [Execute(CodeActivityContext) Method](/dotnet/api/system.activities.codeactivity.execute) that contains the operations your activity performs.
 
     For more information, see [Add your code to the Execute method](#add-your-code-to-the-execute-method).
 
@@ -301,7 +302,7 @@ public InArgument<OptionSetValue> IndustryCode { get; set; }
 
 ## Add your code to the Execute method
 
-The logic you include in the [CodeActivity.Execute(CodeActivityContext) Method](/dotnet/api/system.activities.codeactivity.execute?view=netframework-4.6.2&preserve-view=true) method defines what your workflow activity does.
+The logic you include in the [CodeActivity.Execute(CodeActivityContext) Method](/dotnet/api/system.activities.codeactivity.execute) defines what your workflow activity does.
 
 > [!IMPORTANT]
 > Write the code in the `Execute` method to be stateless. Don't use global or member variables to pass data from one invocation to the next.
@@ -309,7 +310,7 @@ The logic you include in the [CodeActivity.Execute(CodeActivityContext) Method](
 
 ### Reference parameters
 
-To reference parameters you define for your class, use the [Argument.Get](/dotnet/api/system.activities.argument.get?view=netframework-4.6.2&preserve-view=true) or [Argument.Set(ActivityContext, Object)](/dotnet/api/system.activities.argument.set?view=netframework-4.6.2&preserve-view=true) methods. These methods require the [CodeActivityContext](/dotnet/api/system.activities.codeactivitycontext) instance that's passed to the `Execute` method. The following example shows how to access the value of an input parameter and set the value of an output parameter.
+To reference parameters you define for your class, use the [Argument.Get](/dotnet/api/system.activities.argument.get) or [Argument.Set(ActivityContext, Object)](/dotnet/api/system.activities.argument.set) methods. These methods require the [CodeActivityContext](/dotnet/api/system.activities.codeactivitycontext) instance that's passed to the `Execute` method. The following example shows how to access the value of an input parameter and set the value of an output parameter.
 
 ```csharp
 using Microsoft.Xrm.Sdk.Workflow;
