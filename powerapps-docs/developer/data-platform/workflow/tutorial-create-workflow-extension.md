@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Create workflow extension (Microsoft Dataverse) | Microsoft Docs"
 description: "This tutorial will show you the process to extend the workflow designer to add custom activities and logic using a workflow assembly" 
-ms.date: 04/06/2022
+ms.date: 07/02/2026
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: jdaly
@@ -84,7 +84,7 @@ This project will create a simple workflow assembly that will increment an decim
     > Choose a Project name that makes sense for your project. In this example we will use `SampleWorkflowActivity`.
 
 1. Click **Create**.
-1. In the **Solution Explorer**, right-click on the project select **Properties**. On the **Application** tab, verify that  **.NET Framework 4.6.2** is set as the target framework.
+1. In **Solution Explorer**, right-click on the project and select **Properties**. On the **Application** tab, verify that a [supported framework version](../supported-customizations.md#support-for-net-framework-versions) is set as the target framework.
 
     ![set project properties.](media/tutorial-create-workflow-activity-workflow-project.png)
 
