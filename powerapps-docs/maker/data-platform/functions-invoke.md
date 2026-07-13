@@ -34,8 +34,12 @@ You can invoke functions in Dataverse from a canvas app, a custom page in a mode
 1. Paste and save the copied formula to a text editor, Notepad, or somewhere you can easily refer to.
 1. In Power Apps Studio:
    1. Create or edit a canvas app or custom page in Power Apps Studio.
-   1. On the left navigation pane, under the **Data Sources** tab, select **Add data**, and search for the **Environment** option from the Dataverse connector, and select it. 
-   1. Insert the following components onto the canvas:
+   1. On the left navigation pane, under the **Data Sources** tab, select **Add data**, and search for the **Environment** table from the Dataverse connector, and select it.
+  
+> [!NOTE]
+> In case the **Environment** table is not available for selection, create a new app in the same environment to trigger its creation.
+
+   5. Insert the following components onto the canvas:
       - Add input controls that correspond with each parameter's data type, such as number input.
       - Add a button to call the function.
       - Add an output control that corresponds with your parameter's data type, such as number input.
