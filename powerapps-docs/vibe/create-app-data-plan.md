@@ -4,7 +4,7 @@ description: Learn how Power Apps vibe simplifies app creation by generating pla
 author: mduelae
 ms.author: mkaur
 ms.reviewer: mkaur
-ms.date: 06/2/2026
+ms.date: 07/13/2026
 ms.topic: concept-article
 ms.custom: vibe
 ---
@@ -272,6 +272,8 @@ The new Power Apps experience has the following limitations:
 - Existing tables aren't automatically recommended during data model proposal; you can manually add existing tables to your plan.
 - Editing existing Dataverse tables via chat isn't currently supported; you can make changes to these tables through the data editor manually.
 - Direct code edits in **Code** view or **Split** view aren't supported; you can't modify code directly in these views.
+- Coauthoring, which allows multiple makers to edit an app at the same time, isn’t supported in Power Apps vibe.
+- When you share an app, the user it’s shared with can only play the app. 
 
 
 ## Share your feedback 
