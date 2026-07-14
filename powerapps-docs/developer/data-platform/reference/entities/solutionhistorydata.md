@@ -1,7 +1,7 @@
 ---
 title: "SolutionHistoryData table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the SolutionHistoryData table/entity with Microsoft Dataverse."
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
@@ -44,6 +44,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 - [ActivityId](#BKMK_ActivityId)
 - [CorrelationId](#BKMK_CorrelationId)
+- [Description](#BKMK_Description)
 - [EndTime](#BKMK_EndTime)
 - [ErrorCode](#BKMK_ErrorCode)
 - [ExceptionMessage](#BKMK_ExceptionMessage)
@@ -88,6 +89,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`correlationid`|
 |RequiredLevel|None|
 |Type|Uniqueidentifier|
+
+### <a name="BKMK_Description"></a> Description
+
+|Property|Value|
+|---|---|
+|Description|**Comments associated with solution installation**|
+|DisplayName|**Description**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`description`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1073741823|
 
 ### <a name="BKMK_EndTime"></a> EndTime
 

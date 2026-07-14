@@ -2,7 +2,7 @@
 title: Use the View in MR control in Power Apps
 description: View 3D models and 2D images in the real world with augmented reality features in Power Apps.
 author: anuitz
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mduelae
 ms.date: 07/05/2022

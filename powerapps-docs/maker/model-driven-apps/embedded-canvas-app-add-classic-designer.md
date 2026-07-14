@@ -2,15 +2,15 @@
 title: "Add an embedded canvas app on a model-driven app form"
 description: Learn how to embed a canvas app into a model-driven app form in Power Apps.
 ms.custom: ""
-ms.date: 01/17/2025
+ms.date: 11/17/2025
 ms.reviewer: "matp"
 ms.topic: "how-to"
 applies_to: 
   - "Dynamics 365 (online)"
   - "PowerApps"
-author: "matthewbolanos"
+author: "shivanichander"
 ms.subservice: mda-maker
-ms.author: "mabolan"
+ms.author: "shivchan"
 tags: 
   - "Power Apps maker portal impact"
 search.audienceType: 
@@ -22,8 +22,11 @@ This article explains how to embed a [canvas app](model-driven-app-glossary.md#c
 
 Two methods of integration are described in this article. First, using the modern Unified Interface experience, and second, using the classic experience.  
 
-> [!NOTE]
-> There is a third and more recent method of embedding canvas apps inside a modern app, which uses custom pages for better integration with the canvas app. [Overview of custom pages for model-driven apps](model-app-page-overview.md).
+> [!IMPORTANT]
+>
+> - There is a third and more recent method of embedding canvas apps inside a modern app, which uses custom pages for better integration with the canvas app. More information: [Overview of custom pages for model-driven apps](model-app-page-overview.md).
+> - Both the modern form and classic form designers allow you to add an existing canvas app to embed in a model-driven form. However, currently only the classic form designer allows you to create a new canvas app to embed. More information: [Embed a canvas app using the classic experience](#embed-a-canvas-app-using-the-classic-experience)
+> - To enable access to form data through the `ModelDrivenFormIntegration` control, the embedded canvas app *must be created using the classic form designer*. Apps *added* through the modern or classic experience don't currently support this integration. For more information about how to create a canvas app to embed on a model-driven form using the classic form designer go to [Embed a canvas app using the classic experience](#embed-a-canvas-app-using-the-classic-experience). For more information about the `ModelDrivenFormIntegration` control go to [ModelDrivenFormIntegration control properties and actions](embedded-canvas-app-properties-actions.md).
 
 :::image type="content" source="media/embedded-canvas-app.png" alt-text="Example of an embedded canvas app on a model-driven app main form.":::
 
@@ -93,7 +96,7 @@ The canvas app control looks for the canvas app first by using the *unique* name
 8. On the **Controls** tab, select **Add Control**.
 9. On the **Add Control** dialog box, in the list of available controls, select **Canvas app** and then select **Add**.
 10. On the **Column Properties** dialog box, in the list of controls select **Canvas app**, and then select the **Web** option.
-11. In the section below the controls list, the lists of properties available to the canvas app control are displayed.
+11. If you want to create a new canvas app, go to the next step. To add an existing canvas app, in the section below the controls list, the lists of properties available to the canvas app control are displayed.
     - The **Table name** property specifies the table that provides the data to your embedded canvas app. It is set to the table that contains the column you added in an earlier step.
          - Notice that, even though this property appears changeable, changing it has no effect on the embedded canvas app. It's meant only to serve as a reference for you.
     - The **App Name** property specifies the name of the canvas app to embed. The model-driven form looks for the canvas app with the specified name in the current environment. If a canvas app with that name can't be found in the environment, the canvas app control uses the App ID to load the canvas app. Enter the App Name for an existing canvas app.

@@ -2,8 +2,8 @@
 title: "Web API Query Data sample (C#) (Microsoft Dataverse)| Microsoft Docs"
 description: "This sample demonstrates how to query data of Microsoft Dataverse entity instances, using the Dataverse Web API along with the WebApiService class."
 ms.date: 03/28/2023
-author: MicroSri
-ms.author: sriknair
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType:
   - developer
@@ -15,8 +15,11 @@ contributors:
 
 This .NET 6.0 sample demonstrates how to perform common data operations using the Dataverse Web API.
 
+> [!div class="nextstepaction"]
+> [View this sample on Github](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/CSharp-NETx/QueryData)
+
 This sample uses the common helper code in the [WebAPIService class library (C#)](webapiservice.md).
-  
+
 > [!NOTE]
 > This sample implements the Dataverse operations and console output detailed in [Web API Query Data Sample](../web-api-query-data-sample.md)  and uses the common C# constructs described in [Web API Samples (C#)](../web-api-samples-csharp.md).
 

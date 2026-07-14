@@ -4,10 +4,10 @@ description: Learn about how to embed canvas apps in websites and other services
 author: gregli-msft
 
 ms.subservice: canvas-developer
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 01/31/2022
+ms.date: 03/11/2025
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -24,7 +24,7 @@ In this topic, we'll show you how to set parameters for app embedding; then we'l
 
 > [!NOTE]
 > - Only Power Apps users in the same tenant can access the embedded app.
-> - Embedding canvas apps in a native desktop application isn't supported. This excludes first-party integrations such as Power Apps in Teams).
+> - Embedding canvas apps in any native desktop application isn't supported, which includes Andrioid and iOS. This excludes first-party integrations such as Power Apps in Teams.
 
 You can also integrate canvas apps into SharePoint Online without using an iframe. More information: [Use the Power Apps web part](https://support.office.com/article/use-the-powerapps-web-part-6285f05e-e441-408a-99d7-aa688195cd1c).
 

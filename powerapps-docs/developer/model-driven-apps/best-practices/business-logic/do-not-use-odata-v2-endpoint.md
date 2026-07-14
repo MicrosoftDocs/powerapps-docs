@@ -2,8 +2,8 @@
 title: Do not use the OData v2.0 endpoint
 description: Learn about the requirement to upgrade your code to use the Web API OData v4.0 endpoint rather than the deprecated OData v2.0 endpoint.
 suite: powerapps
-author: MicroSri
-ms.author: sriknair
+author: MsSQLGirl
+ms.author: jukoesma
 ms.date: 04/12/2023
 ms.reviewer: jdaly
 ms.topic: how-to
@@ -74,7 +74,7 @@ The Organization Data Service supports both JSON and ATOM, an XML-based format u
 
 The Organization Data Service will only return 50 records at a time and doesn't provide a way to specify max page size.
 
-The Web API allows you to set a max page size and will return up to 5000 records. More information: [Page results](../../../data-platform/webapi/query/page-results.md)
+The Web API allows you to set a max page size and will return up to 5,000 records. More information: [Page results](../../../data-platform/webapi/query/page-results.md)
 
 ### Legacy documentation
 

@@ -43,7 +43,7 @@ The `getOutputs` method simply returns the currently selected set of values back
 
 
 
-### Related topics
+### Related articles
 
 [Download sample components](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework)<br/>
 [How to use the sample components](../use-sample-components.md)<br/>

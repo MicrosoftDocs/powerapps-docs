@@ -4,9 +4,9 @@ description: "The account and contact tables are essential for identifying and m
 ms.date: 05/17/2024
 ms.reviewer: jdaly
 ms.topic: article
-author: mkannapiran
+author: MsSQLGirl
 ms.subservice: dataverse-developer
-ms.author: kamanick
+ms.author: jukoesma
 search.audienceType:
   - developer
 contributors:

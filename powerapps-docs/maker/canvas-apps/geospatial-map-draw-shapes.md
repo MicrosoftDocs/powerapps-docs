@@ -3,7 +3,7 @@ title: Draw and insert shapes on maps
 description: Allow canvas app users to draw shapes on a map, or insert predefined shapes and display their measurements, in Power Apps.
 author: anuitz
 ms.service: powerapps
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas, ce06122020
 ms.reviewer: mduelae
 ms.date: 3/3/2022

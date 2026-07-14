@@ -2,7 +2,7 @@
 title: "Testing tools for client-side development (Microsoft Dataverse)"
 description: "Learn about testing frameworks for client-side development."
 ms.date: 04/01/2022
-ms.topic: article
+ms.topic: concept-article
 author: pvillads
 ms.author: pvillads
 ms.subservice: mda-developer

@@ -1,7 +1,7 @@
 ---
 title: "Copilot (bot) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Copilot (bot) table/entity with Microsoft Dataverse."
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
@@ -251,7 +251,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**Used to visually identify your bot in channels and services. Represented in a base64 encoded string. Must be in PNG format, and no larger than 30K in size. This value can be changed at any time.**|
+|Description|**Used to visually identify your bot in channels and services. Represented in a base64 encoded string. Must be in PNG format, and no larger than 100KB in size. This value can be changed at any time.**|
 |DisplayName|**Icon (Base64)**|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -262,7 +262,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |FormatName|Text|
 |ImeMode|Auto|
 |IsLocalizable|False|
-|MaxLength|51200|
+|MaxLength|102400|
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
@@ -334,6 +334,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |1081|**Hindi**|
 |2052|**Chinese (Simplified)**|
 |2057|**English (United Kingdom)**|
+|2070|**Portuguese (Portugal)**|
 |3081|**English (Australia)**|
 |3084|**French (Canada)**|
 |21514|**Spanish (United States)**|
@@ -584,6 +585,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |1081|**Hindi**|
 |2052|**Chinese (Simplified)**|
 |2057|**English (United Kingdom)**|
+|2070|**Portuguese (Portugal)**|
 |3081|**English (Australia)**|
 |3084|**French (Canada)**|
 |21514|**Spanish (United States)**|

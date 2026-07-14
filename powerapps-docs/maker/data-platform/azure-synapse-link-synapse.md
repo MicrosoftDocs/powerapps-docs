@@ -2,17 +2,16 @@
 title: "Create an Azure Synapse Link for Dataverse with your Azure Synapse Workspace | MicrosoftDocs"
 description: "Learn how to export table data to Azure Synapse Analytics in Power Apps."
 ms.custom: ""
-ms.date: 10/28/2024
+ms.date: 02/18/2026
 ms.reviewer: "Mattp123"
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
 applies_to: 
   - "powerapps"
-author: "sabinn-msft"
-ms.assetid: 
+author: "anibakore-msft"
 ms.subservice: dataverse-maker
-ms.author: "matp"
+ms.author: "banirud"
 search.audienceType: 
   - maker
 contributors:
@@ -35,9 +34,32 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 
 ## Prerequisites
 
-- Dataverse: You must have the Dataverse **system administrator** security role. Additionally, tables you want to export via Azure Synapse Link must have the **Track changes** property enabled. More information: [Advanced options](create-edit-entities-portal.md#advanced-options)
+- Dataverse: You must have the Dataverse **system administrator** security role. 
+- The tables you want to export via Azure Synapse Link must have the **Track changes** property enabled. More information: [Advanced options](create-edit-entities-portal.md#advanced-options)
+- The Azure Synapse Workspace that you link with can't have data exfiltration protection enabled. More information: [Create a workspace with data exfiltration protection enabled](/azure/synapse-analytics/security/how-to-create-a-workspace-with-data-exfiltration-protection)
 
-- Azure Data Lake Storage Gen2: You must have an Azure Data Lake Storage Gen2 account and **Owner** and **Storage Blob Data Contributor** role access. Your storage account must enable **Hierarchical namespace** for both initial setup and delta sync. **Allow storage account key access** is required only for the initial setup.  
+### Azure Data Lake Storage Gen2 requirements
+
+You must have an Azure Data Lake Storage Gen2 account and the following roles:
+
+- **Owner**
+- **Storage Blob Data Contributor**
+- **Storage Blob Data Owner**
+
+**Owner role requirement:**
+The Owner role is required because adding the managed identity of the Azure Synapse Link service to the storage account is a privileged operation. This managed identity enables the service to perform synchronization from Dataverse to Synapse. Currently, the Owner role is required and custom roles with similar privileges aren't supported for this step.
+
+**Privileges for managed identity:**
+
+- **Owner and Storage Account Contributor:** Required only during first-time setup to create the filesystem in the storage account and are assigned on the storage account. After the setup, these privileges can be removed without impacting sync operations.
+- **Storage Blob Data Contributor:** Required for normal blob operations during regular sync.
+- **Storage Blob Data Owner:** Currently required for managing both data and access permissions in scenarios involving Azure Data Lake Storage Gen2.
+
+Your storage account must enable **Hierarchical namespace** for both initial setup and delta sync.
+
+**Allow storage account key access** is required only for the initial setup because the service uses Shared Key authorization to perform privileged operations such as creating the filesystem and establishing the link before switching to managed identity authentication. After setup, key-based access is no longer needed.
+
+Your storage account must have [permitted scope for copy operations](/azure/storage/common/security-restrict-copy-operations?tabs=portal#configure-the-permitted-scope-for-copy-operations-preview) set to **From any storage account**.
 
 - Synapse workspace: You must have a Synapse workspace and the **Synapse Administrator** role access within the Synapse Studio. The Synapse workspace must be in the same region as your Azure Data Lake Storage Gen2 account. The storage account must be added as a linked service within the Synapse Studio. To create a Synapse workspace, go to [Creating a Synapse workspace](/azure/synapse-analytics/get-started-create-workspace).
 
@@ -63,7 +85,7 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
     > [!NOTE]
     > As part of linking the environment to a data lake, you grant the Azure Synapse Link service access to your storage account. Ensure that you followed the [prerequisites](#prerequisites) of creating and configuring the Azure data lake storage account, and granting yourself an owner role on the storage account. Additionally, you grant the Power Platform Dataflows service access to your storage account. More information: [Self-service data prep with dataflows](self-service-data-prep-with-dataflows.md).  
 
-1. Add the tables you want to export, and then select **Save**. Only tables with change tracking enabled can be exported. More information: [Enable change tracking](/dynamics365/customer-engagement/admin/enable-change-tracking-control-data-synchronization).
+1. Choose the tables you want to export either by selecting them one by one or by entering a comma separated list of tables in the search box, and then select **Save**. Only tables with the Track changes property enabled can be exported. More information: [Advanced options](/power-apps/maker/data-platform/create-edit-entities-portal?tabs=excel#advanced-options).
 
     ![Add tables.](media/add-tables.png "Add tables")
 
@@ -136,10 +158,12 @@ If you deleted the file system when unlinking, follow the steps above to relink 
 After creating an Azure Synapse Link, two versions of the table data will be synchronized in Azure Synapse Analytics and/or Azure Data Lake Storage Gen2 in your Azure subscription by default to ensure you can reliably consume updated data in the lake at any given time:
 
 - Near real-time data: Provides a copy of data synchronized from Dataverse via Azure Synapse Link in an efficient manner by detecting what data has changed since it was initially extracted or last synchronized.
-- Snapshot data: Provides a read-only copy of near real-time data that is updated at regular intervals (in this case every hour).  
+- Snapshot data: Provides a read-only copy of near real-time data that is updated at regular intervals (in this case every hour).
 
 > [!NOTE]
-> To create read-only snapshot data, ensure that the **Permitted scope for copy operations** setting is configured to **From any storage account**. More information: [Configure the permitted scope for copy operations]( /azure/storage/common/security-restrict-copy-operations?tabs=portal#configure-the-permitted-scope-for-copy-operations-preview)
+>
+> - Near real-time sync performance depends on several factors including the initial data load size, data churn rate, and the volume of changes. In situations with high transaction volumes, such as processes in Finance and Operations apps generating millions of records in a short time, or processes like the master planning feature included with Dynamics 365 Supply Chain Management that delete and re-create large volumes of records. Synapse Link must synchronize all changes including deletes. In these high-volume scenarios, data availability in near real-time can't be guaranteed.  
+> - To create read-only snapshot data, ensure that the **Permitted scope for copy operations** setting is configured to **From any storage account**. More information: [Configure the permitted scope for copy operations]( /azure/storage/common/security-restrict-copy-operations?tabs=portal#configure-the-permitted-scope-for-copy-operations-preview)
 
 1. Select the desired Azure Synapse Link, and then select the **Go to Azure Synapse Analytics workspace** from the top panel.
 1. Expand **Lake Databases** from the left panel, select **dataverse**-*environmentName*-*organizationUniqueName*, and then expand **Tables**.

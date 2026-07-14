@@ -2,7 +2,7 @@
 title: Use the Search pane
 description: Learn how to use the Search pane inside Power Apps Studio to find text.
 author: TashasEv
-ms.topic: conceptual
+ms.topic: article
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 06/29/2022

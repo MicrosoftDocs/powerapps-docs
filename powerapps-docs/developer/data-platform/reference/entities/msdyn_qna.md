@@ -1,7 +1,7 @@
 ---
 title: "QnA (msdyn_qna) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the QnA (msdyn_qna) table/entity with Microsoft Dataverse."
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
@@ -527,7 +527,7 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`owningbusinessunit`|
-|RequiredLevel|SystemRequired|
+|RequiredLevel|None|
 |Type|Lookup|
 |Targets|businessunit|
 
@@ -804,4 +804,4 @@ Many-To-One Relationship: [syncerror msdyn_qna_SyncErrors](syncerror.md#BKMK_msd
 
 [Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
-
+<xref:Microsoft.Dynamics.CRM.msdyn_qna?displayProperty=fullName>

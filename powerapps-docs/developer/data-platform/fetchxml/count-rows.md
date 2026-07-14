@@ -4,9 +4,9 @@ description: Learn how to use FetchXml to count rows from Microsoft Dataverse ta
 ms.date: 02/29/2024
 ms.reviewer: jdaly
 ms.topic: how-to
-author: pnghub
+author: MsSQLGirl
+ms.author: jukoesma
 ms.subservice: dataverse-developer
-ms.author: gned
 search.audienceType: 
   - developer
 contributors:
@@ -18,7 +18,7 @@ contributors:
 ---
 # Count rows using FetchXml
 
-Use the [fetch element](reference/fetch.md) boolean `returntotalrecordcount` attribute to specify that the result include a count of all the records that meet the filter criteria, up to 5000. Use this when retrieving paged results to estimate the total number of pages to display.
+Use the [fetch element](reference/fetch.md) boolean `returntotalrecordcount` attribute to specify that the result include a count of all the records that meet the filter criteria, up to 5,000. Use this when retrieving paged results to estimate the total number of pages to display.
 
 You can't apply the [fetch element](reference/fetch.md) `top` attribute together with `returntotalrecordcount`.
 
@@ -31,7 +31,7 @@ When the `returntotalrecordcount` attribute value is `true`, the <xref:Microsoft
 
 |Property|Description|
 |---------|---------|
-|<xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCount>|The total number of records up to 5000; otherwise the value is -1.|
+|<xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCount>|The total number of records up to 5,000; otherwise the value is -1.|
 |<xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCountLimitExceeded>|`true` if the results of the query exceeds the total record count; otherwise, `false`.|
 
 
@@ -40,7 +40,7 @@ When the `returntotalrecordcount` attribute value is `true`, the <xref:Microsoft
 
 Setting the `returntotalrecordcount` attribute value to `true` has the same result as setting the OData `$count` query option. You can append `&$count=true` to your FetchXml query to get the same results. [Learn more about the OData $count query option](../webapi/query/count-rows.md).
 
-When you set the `returntotalrecordcount` attribute (or use the `$count` query option) the data returned includes the `@odata.count` annotation with the total number of records that match the filter criteria, up to 5000.
+When you set the `returntotalrecordcount` attribute (or use the `$count` query option) the data returned includes the `@odata.count` annotation with the total number of records that match the filter criteria, up to 5,000 for standard tables, 500 for elastic tables.
 
 If you include either of these request headers:
 
@@ -54,16 +54,16 @@ The following annotations will be returned:
 
 |Property|Description|
 |---------|---------|
-|`@Microsoft.Dynamics.CRM.totalrecordcount`|The total number of records up to 5000; otherwise the value is -1. The value is the same as the `@odata.count` annotation.|
+|`@Microsoft.Dynamics.CRM.totalrecordcount`|The total number of records up to 5,000; otherwise the value is -1. The value is the same as the `@odata.count` annotation.|
 |`@Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded`|`true` if the results of the query exceeds the total record count; otherwise, `false`.|
 
 ---
 
-The (<xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCountLimitExceeded> or `@Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded`) value is useful when you need to calculate how many more paged requests you need to send to get all the results when (<xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCount> or `@Microsoft.Dynamics.CRM.totalrecordcount`) equals 5000. 
+The (<xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCountLimitExceeded> or `@Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded`) value is useful when you need to calculate how many more paged requests you need to send to get all the results when (<xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCount> or `@Microsoft.Dynamics.CRM.totalrecordcount`) equals the maximum page size for the type of table you are working with.
 
-If your page size is less than the maximum and (<xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCount> or `@Microsoft.Dynamics.CRM.totalrecordcount`) is equal to or less than 5000, you can calculate how many more paged requests you must send to get all the records.
+If your page size is less than the maximum and (<xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCount> or `@Microsoft.Dynamics.CRM.totalrecordcount`) is equal to or less than the maximum, you can calculate how many more paged requests you must send to get all the records.
 
-When (<xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCountLimitExceeded> or `@Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded`) is `true` and (<xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCount> or `@Microsoft.Dynamics.CRM.totalrecordcount`) equals 5000, you can't perform this calculation.
+When (<xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCountLimitExceeded> or `@Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded`) is `true` and (<xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCount> or `@Microsoft.Dynamics.CRM.totalrecordcount`) equals the maximum, you can't perform this calculation.
 
 
 > [!TIP]

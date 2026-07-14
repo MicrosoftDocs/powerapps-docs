@@ -1,11 +1,11 @@
 ---
-title: "Run duplicate detection (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Execute duplicate detection for a specific record, table type, or during create or update operations." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Run duplicate detection (Microsoft Dataverse) | Microsoft Docs"
+description: "Execute duplicate detection for a specific record, table type, or during create or update operations." 
 ms.custom: ""
 ms.date: 03/26/2021
 ms.reviewer: "pehecke"
 
-ms.topic: "article"
+ms.topic: how-to
 author: "mayadumesh" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -68,7 +68,7 @@ OData-Version: 4.0
 
 Submit an asynchronous duplicate detection job that runs in the background. The duplicates are detected according to the published duplicate rules for the table type. The detected duplicates are stored as `DuplicateRecord` records in Dynamics 365. 
 
-A maximum of 5000 duplicates are returned by the duplicate detection job.
+A maximum of 5,000 duplicates are returned by the duplicate detection job.
 
 ### Options
 

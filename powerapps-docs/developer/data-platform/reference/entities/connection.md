@@ -1,7 +1,7 @@
 ---
 title: "Connection table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Connection table/entity with Microsoft Dataverse."
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
@@ -661,11 +661,11 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |9600|**Goal**|
 |9930|**Knowledge Base Record**|
 |9953|**Knowledge Article**|
-|10331|**Invitation**|
-|10332|**Invite Redemption**|
-|10351|**Publishing State Transition Rule**|
-|10353|**Shortcut**|
-|10365|**Website**|
+|10420|**Invitation**|
+|10421|**Invite Redemption**|
+|10440|**Publishing State Transition Rule**|
+|10442|**Shortcut**|
+|10454|**Website**|
 
 ### <a name="BKMK_Record2ObjectTypeCode"></a> Record2ObjectTypeCode
 
@@ -706,11 +706,11 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |9600|**Goal**|
 |9930|**Knowledge Base Record**|
 |9953|**Knowledge Article**|
-|10331|**Invitation**|
-|10332|**Invite Redemption**|
-|10351|**Publishing State Transition Rule**|
-|10353|**Shortcut**|
-|10365|**Website**|
+|10420|**Invitation**|
+|10421|**Invite Redemption**|
+|10440|**Publishing State Transition Rule**|
+|10442|**Shortcut**|
+|10454|**Website**|
 
 ### <a name="BKMK_RelatedConnectionId"></a> RelatedConnectionId
 

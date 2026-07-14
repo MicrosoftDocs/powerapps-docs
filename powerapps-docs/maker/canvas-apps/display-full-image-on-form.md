@@ -5,7 +5,7 @@ keywords: ""
 ms.date: 11/09/2020
 
 ms.custom: 
-ms.topic: article
+ms.topic: how-to
 applies_to: 
   - "powerapps"
 author: "Mattp123"

@@ -3,14 +3,15 @@ title: Important upcoming changes (deprecations) in canvas apps
 description: Learn about the important changes including deprecation coming soon to canvas apps.
 author: mduelae
 
-ms.topic: conceptual
+ms.topic: article
 ms.custom: 
-ms.date: 08/29/2024
+ms.date: 01/09/2026
 ms.subservice: canvas-maker
 ms.author: tapanm
 ms.reviewer: mkaur-msft
 contributors:
     - mduelae
+    - shwetamurkute
 ---
 
 # Important upcoming changes (deprecations) in canvas apps
@@ -21,6 +22,10 @@ Makers, developers, and IT professionals can use this information to prepare for
 
 > [!IMPORTANT]
 > "Deprecated" means we intend to remove the feature or capability from a future major release. The feature or capability will continue to work and is fully supported until it is officially removed. This deprecation notification can span a few months or years. After removal, the feature or capability no longer work. This notice is to allow you sufficient time to plan and update your code before the feature or capability is removed.
+
+## Enhanced deep link creation requirement
+
+Starting May 1, 2026, for canvas apps, all deep links for Power Apps mobile must include the environment ID as a required parameter. Existing deep links without these parameters will stop working after the deprecation date. You also need to create new shortcuts. Update your links now to avoid disruptions. Old links have slower performance until support ends. Learn more in [Use deep links with the Power Apps mobile app](/power-apps/mobile/mobile-deep-links).
 
 ## Deprecated endpoints
 

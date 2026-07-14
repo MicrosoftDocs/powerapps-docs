@@ -1263,7 +1263,7 @@
           "TenantApplicationIdentities"
         ],
         "summary": "Retrieves all Tenant Application Identities for a tenant. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
-        "description": "For a list of region-specific service URLs, see [Service URL](/dynamics365/customer-engagement/developer/online-management-api/get-started-online-management-api.#service-url)",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
         "operationId": "GetTenantApplicationIdentities",
         "consumes": [],
         "produces": [

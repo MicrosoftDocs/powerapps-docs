@@ -31,7 +31,7 @@ You can access form settings from the **Forms** area in Power Apps or command ba
   
 Different people in your organization might interact with the same data in different ways. Managers might depend on being able to quickly scan information in a row and service people might require a form that streamlines data entry. You can accommodate different requirements by assigning forms to the security roles that different groups of people belong to.  
   
-When you have more than one main or other form type defined for a table, you can select which forms users are able to use based on their security roles. Because each table must be able to display a form for any user, at least one form must be designated as a ”fallback” form – a form visible to users whose security roles don't have any forms explicitly assigned to them.  
+When you have more than one main or other form type defined for a table, you can select which forms users are able to use based on their security roles. Because each table must be able to display a form for any user, at least one form must be designated as a "fallback" form – a form visible to users whose security roles don't have any forms explicitly assigned to them.  
   
 > [!NOTE]
 >
@@ -70,7 +70,7 @@ To set the form order using solution explorer, see [Assign model-driven app form
 
 ## Set the fallback form for a table
 
-Setting the fallback form for a table is important to ensure that if a user doesn't have any assigned security roles or there are no assigned security roles for a main form type there's always a “default” form that shows for that table. Fallback forms are only available with main forms and don't apply to quick create, quick view, and card forms.
+Setting the fallback form for a table is important to ensure that if a user doesn't have any assigned security roles or there are no assigned security roles for a main form type there's always a "default" form that shows for that table. Fallback forms are only available with main forms and don't apply to quick create, quick view, and card forms.
 
 There are a few different strategies to consider when you manage the fallback form for a table.  
   
@@ -84,7 +84,7 @@ If you're using role-based forms because you want to restrict the information pe
   
 ### Create a generic form
 
-If you use role-based forms to provide a customized experience based on a user’s role, you can set your least specialized form as the fallback form and configure it to display for everyone. Then, create customized forms for specific security roles and configure those forms to only display for security roles that require them. Don't enable these forms for fallback. Finally, in the **Form settings** configure the **Form order** to specify which forms to display ranking them from most exclusive to least exclusive. Your fallback form is at the bottom of the list. This strategy causes people seeing the form that has been customized for their role as the default form, yet they can use the form selector to select the most common form if they want. Whatever form they select remains their default form until they select a different form.  
+If you use role-based forms to provide a customized experience based on a user's role, you can set your least specialized form as the fallback form and configure it to display for everyone. Then, create customized forms for specific security roles and configure those forms to only display for security roles that require them. Don't enable these forms for fallback. Finally, in the **Form settings** configure the **Form order** to specify which forms to display ranking them from most exclusive to least exclusive. Your fallback form is at the bottom of the list. This strategy causes people seeing the form that has been customized for their role as the default form, yet they can use the form selector to select the most common form if they want. Whatever form they select remains their default form until they select a different form.  
   
 1. Sign into Power Apps, select **Solutions**, open the solution you want, select a table, and then select the **Forms** area. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 2. Select the main form you want to configure the fallback form for, and then on the command bar select **Form settings**.
@@ -97,10 +97,10 @@ If you use role-based forms to provide a customized experience based on a user�
 
 ## Use form scripting
 
-The Client API form context (formContext) provides a reference to the form or to an item on the form, such as, a quick view control or a row in an editable grid, against which the current code is executed. More information: [Client API form context](/dynamics365/customer-engagement/developer/clientapi/clientapi-form-context)
+The Client API form context (formContext) provides a reference to the form or to an item on the form, such as, a quick view control or a row in an editable grid, against which the current code is executed. More information: [Client API form context](../../developer/model-driven-apps/clientapi/clientapi-form-context.md)
 
 > [!IMPORTANT]
-> The Xrm.Page object is [deprecated](/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming#some-client-apis-are-deprecated), and you should use the [getFormContext](../../developer/model-driven-apps/clientapi/reference/executioncontext/getformcontext.md) method of the passed in execution context object to return reference to the appropriate form or an item on the form.
+> The Xrm.Page object is [deprecated](/power-platform/important-changes-coming#some-client-apis-are-deprecated), and you should use the [getFormContext](../../developer/model-driven-apps/clientapi/reference/executioncontext/getformcontext.md) method of the passed in execution context object to return reference to the appropriate form or an item on the form.
 
 ### See also  
 

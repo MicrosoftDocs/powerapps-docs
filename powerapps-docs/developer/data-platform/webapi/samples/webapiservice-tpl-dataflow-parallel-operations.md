@@ -2,8 +2,8 @@
 title: "Web API Parallel Operations with TPL Dataflow components Sample (C#) (Microsoft Dataverse)| Microsoft Docs"
 description: "This sample demonstrates using Task Parallel Library (TPL) dataflow components with asynchronous requests."
 ms.date: 09/02/2022
-author: MicroSri
-ms.author: sriknair
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
@@ -17,6 +17,9 @@ contributors:
 
 
 This .NET 6.0 sample demonstrates how to perform parallel data operations using the Dataverse Web API with Task Parallel Library (TPL) Dataflow components. More information: [Dataflow (Task Parallel Library)](/dotnet/standard/parallel-programming/dataflow-task-parallel-library).
+
+> [!div class="nextstepaction"]
+> [View this sample on Github](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/CSharp-NETx/TPLDataFlowParallelOperations)
 
 This sample uses the common helper code in the [WebAPIService class library (C#)](webapiservice.md).
 

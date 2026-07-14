@@ -1,11 +1,10 @@
 ---
-title: "Sample: Image Operations using Dataverse Web API (Microsoft Dataverse) | Microsoft Learn" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample demonstrates how to perform operations with image columns using the Dataverse Web API." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Sample: Image Operations using Dataverse Web API (Microsoft Dataverse) | Microsoft Learn"
+description: "This sample demonstrates how to perform operations with image columns using the Dataverse Web API."
 ms.date: 01/11/2023
-author: mkannapiran
-ms.author: kamanick
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
-ms.topic: sample
 search.audienceType:
   - developer
 contributors:
@@ -15,6 +14,9 @@ contributors:
 # Sample: Image Operations using Dataverse Web API 
 
 This .NET 6.0 sample demonstrates how to perform operations with image columns using the Dataverse Web API.
+
+> [!div class="nextstepaction"]
+> [View this sample on Github](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/CSharp-NETx/ImageOperations)
 
 This sample uses the common helper code in the [WebAPIService class library (C#)](webapiservice.md).
 
@@ -174,7 +176,7 @@ The code uses the static `DownloadImageWithActions` method, which encapsulates t
 
 #### Download with Chunks
 
-The code uses the static `DownloadImageWithChunks` method, which demonstrates how to download images as described in [Download the file in chunks using Web API](../../file-column-data.md#download-the-file-in-chunks-using-web-api).
+The code uses the static `DownloadImageWithChunks` method, which demonstrates how to download images as described in [Download the file in chunks using Web API](../../file-column-data.md#download-the-file-in-chunks-by-using-web-api).
 
 > [!NOTE]
 > These operations don't fail when there's no full-sized image to download, they simply return `204 No Content`.

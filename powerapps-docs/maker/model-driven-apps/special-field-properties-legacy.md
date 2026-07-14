@@ -1,6 +1,6 @@
 ---
-title: Model-driven app special column properties for main forms in Power Apps | MicrosoftDocs
-description: Understand the special column properties for main forms
+title: Model-driven app special column properties for main forms in Power Apps
+description: Understand the special column properties for main forms.
 Keywords: Main forms; Special column properties; Dynamics 365
 author: Mattp123
 applies_to: 
@@ -9,7 +9,7 @@ applies_to:
   - "powerapps"
 ms.subservice: mda-maker
 ms.author: matp
-ms.date: 06/06/2018
+ms.date: 02/12/2026
 ms.topic: overview
 ms.assetid: 6ad7e43c-b6a1-48c4-9dfb-ed830142a841
 search.audienceType: 
@@ -24,8 +24,6 @@ search.audienceType:
 > [!NOTE]
 > This article describes properties for the classic experience. For information about lookup column properties in the modern for designer, go to [Configure a lookup component on a form](form-designer-add-configure-lookup.md).
   
-<a name="BKMK_LookupFieldProperties"></a>  
-
 ## Lookup column properties  
   
 > [!NOTE]
@@ -52,10 +50,9 @@ search.audienceType:
 |N:N|N:1|No|
 |N:N|N:N|No|
   
-<a name="BKMK_TwoOptionProperties"></a>   
-
 ### Yes/No column properties  
- On the formatting tab, Yes/No columns have the following formatting choices:  
+
+On the formatting tab, Yes/No columns have the following formatting choices:  
   
 - **Two radio buttons**: Two labeled controls with labels. Only one may be selected.  
   

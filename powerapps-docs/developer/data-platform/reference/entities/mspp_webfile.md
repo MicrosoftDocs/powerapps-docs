@@ -1,7 +1,7 @@
 ---
 title: "Web File (mspp_webfile) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Web File (mspp_webfile) table/entity with Microsoft Dataverse."
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 

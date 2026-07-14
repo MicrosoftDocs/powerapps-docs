@@ -1,14 +1,12 @@
 ---
-title: "Customize table and column mappings in Power Apps (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about mapping columns between tables that have a relationship in Power Apps. This lets you set default values for a record that is created in the context of another record." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 03/11/2021
-ms.reviewer: "pehecke"
-
-ms.topic: "article"
-author: "mayadumesh" # GitHub ID
+title: Customize table and column mappings
+description: "Learn about mapping columns between tables that have a relationship in Power Apps. This lets you set default values for a record that is created in the context of another record."
+ms.date: 08/11/2025
+ms.reviewer: pehecke
+ms.topic: article
+author: MsSQLGirl
 ms.subservice: dataverse-developer
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
+ms.author: jukoesma # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 ---
@@ -79,7 +77,7 @@ For more information see [Create a new record from another record](webapi/create
 
 ```xml
 
-<fetch version='1.0' mapping='logical' distinct='false'>
+<fetch>
    <entity name='entitymap'>
       <attribute name='sourceentityname'/>
       <attribute name='targetentityname'/>

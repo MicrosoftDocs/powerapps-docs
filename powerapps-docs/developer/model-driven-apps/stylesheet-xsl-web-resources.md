@@ -1,5 +1,5 @@
 ---
-title: "Stylesheet (XSL) web resources  (model-driven apps)"
+title: "Stylesheet (XSL) web resources"
 description: "Learn about using Stylesheet (XSL) Web resources to transform XML data."
 author: anushikhas96
 ms.author: anushisharma
@@ -15,8 +15,6 @@ contributors:
 ---
 
 # Stylesheet (XSL) web resources
-
-<!-- https://learn.microsoft.com/dynamics365/customer-engagement/developer/stylesheet-xsl-web-resources -->
 
 Use Stylesheet (XSL) Web resources to transform XML data.
 

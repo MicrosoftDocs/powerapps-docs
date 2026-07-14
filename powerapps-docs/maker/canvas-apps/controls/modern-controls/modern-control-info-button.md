@@ -1,79 +1,176 @@
 ---
-title: Information button modern control in Power Apps
-description: Learn about the details, properties, and examples of the information button modern control in Power Apps.
+title: Info button modern control in canvas apps - Power Apps
+description: Learn about the details, properties, and examples of the Info button modern control in Power Apps.
 author: yogeshgupta698
-
 ms.topic: reference
-ms.component: canvas
-ms.date: 3/23/2023
+ms.custom: canvas
+ms.date: 02/23/2026
 ms.subservice: canvas-maker
 ms.author: yogupt
-
-
 ms.reviewer: mkaur
-search.audienceType: 
+search.audienceType:
   - maker
-contributors:
-  - mduelae
-  - yogeshgupta698
-  - noazarur-microsoft
-  
 ---
-# Info button modern control in Power Apps (preview)
 
-[This article is pre-release document and is subject to change.]
+# Info button modern control in canvas apps
 
-Use **Info button** control to provide additional information to users.
+An interactive information icon that displays detailed content in a flyout when clicked or hovered.
 
 ## Description
-**Info button** control enables developers to provide help and guidance to app users in an accessible way. The key properties for this control are **Content**, **Icon Siz**e, and **OnSelec**.
 
-## General 
+The **Info button** control provides contextual help and additional information in your canvas apps. When users select or hover over this interactive information icon, it displays detailed content in a flyout panel without disrupting their workflow.
 
-**Content** – Content to be displayed when users interact with the control.
+Use this control to:
 
-**AccessibleLabel** – Label for screen readers.
+- Provide contextual help for form fields and complex features
+- Display tooltips with additional guidance
+- Offer explanatory content without cluttering your app interface
+- Enhance user experience with on-demand information
 
-**Visible** - Whether a control appears or is hidden. 
+The **Info button** appears as a standard information icon and supports rich text content, customizable styling, and accessibility features.This modern control integrates seamlessly with your app's design system through theme-based colors and flexible positioning options.
+
+Key properties for this control are **Content**, **IconColor**, and **OnSelect**.
+
+## General
+
+**Content** – The information text displayed in the flyout when the user clicks or hovers over the info button icon. Supports plain text and formatted content.
+
+**Visible** – Whether the control appears or is hidden. Use a Power Fx formula to show or hide the control based on app state.
+
+## Behavior
+
+**OnSelect** – How the app responds when the user clicks the info button. Use this property to trigger extra actions beyond showing the flyout, such as logging analytics or updating variables.
+
+**DisplayMode** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**). In **View** mode, the icon is shown but the flyout can't be opened.
 
 ## Size and position
 
-**IconSize** - Whether the information icon is small, medium, or large.
+**X** – Distance between the left edge of the control and the left edge of its parent container. If there's no parent container, the screen acts as the parent.
 
-**[X](../properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
+**Y** – Distance between the top edge of the control and the top edge of its parent container. If there's no parent container, the screen acts as the parent.
 
-**[Y](../properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
+**Width** – Distance between the control's left and right edges. The default value is **32**.
 
-**Width** - The distance between a control's left and right edges. 
+**Height** – Distance between the control's top and bottom edges. The default value is **32**.
 
-**Height** - The distance between a control's top and bottom edges. 
+**PaddingTop** – Distance between the icon and the top edge of the control.
+
+**PaddingBottom** – Distance between the icon and the bottom edge of the control.
+
+**PaddingLeft** – Distance between the icon and the left edge of the control.
+
+**PaddingRight** – Distance between the icon and the right edge of the control.
 
 ## Style and theme
- 
-**BasePaletteColor** - The color palette applied to a control. This impacts all surfaces of the control that render a theme color. 
 
-**Font** - The name of the family of fonts in which text appears. 
+**BasePaletteColor** – The base color that the theme uses to generate the control's color palette. Change this property to apply a different theme color to the control.
 
-**FontSize** - The font size of the text that appears on a control. If the value is null or zero, then the font size is driven by selected Fluent theme. 
+**Font** – The name of the font family used for text in the flyout content.
 
-**FontColor** - The color of text in a control. 
+**Size** – The font size of text in the flyout, in points. The default is **15**.
 
-**FontWeight** - The weight of the text in a control: **Bold**, **Lighter**, **Normal**, or **Semibold**. 
+**Color** – The color of text in the flyout content.
 
-**FontItalic** - Whether the text in a control is italic. 
+**FontWeight** – The weight (thickness) of text in the flyout. Accepts `FontWeight` enum values:
 
-**FontUnderline** - Whether a line appears under the text that appears on a control. 
+| Value | Description |
+|-------|-------------|
+| `FontWeight.Bold` | Bold text |
+| `FontWeight.Semibold` | Semibold text |
+| `FontWeight.Normal` | Normal weight (default) |
+| `FontWeight.Lighter` | Lighter weight |
 
-**FontStrikethrough** - Whether a line appears through the text that appears on a control. 
+**Italic** – Whether the text in the flyout appears in italic style.
 
-## Additional properties
+**Underline** – Whether a line appears under the text in the flyout.
 
-**DisplayMode** – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled).
+**Strikethrough** – Whether a line appears through the middle of the text in the flyout.
 
-**[AcceptsFocus](../properties-accessibility.md)** - Determines whether the control can receive focus when the user navigates through the app using the keyboard. 
+**IconColor** – The color of the information icon button itself. Use this value to match your app's theme or draw attention to important information.
 
-**OnSelect** - Actions to perform when the user selects a control.  
+## Accessibility
 
+**AccessibleLabel** – A label for screen readers to announce what the info button provides information about. It should describe the purpose or topic of the information, not just "info button".
 
+**ContentLanguage** – The language used for the flyout content. If you don't specify this property, the app settings provide the language.
 
+## Example
 
+The following YAML example shows contextual help buttons for form fields with conditional styling and tooltip content:
+
+```yaml
+- EmailInfoButton:
+    Control: ModernInformationButton@1.0.0
+    Properties:
+      Content: ="We'll use this email to send you order confirmations and account notifications. Your email is never shared with third parties."
+      IconColor: =Color.Blue
+      AccessibleLabel: ="Email address information"
+      X: =200
+      Y: =100
+      Width: =28
+      Height: =28
+
+- PasswordInfoButton:
+    Control: ModernInformationButton@1.0.0
+    Properties:
+      Content: '="Password requirements: At least 8 characters, one uppercase letter, one number, and one special character (!@#$%)"'
+      IconColor: =Color.Orange
+      AccessibleLabel: ="Password requirements"
+      X: =200
+      Y: =150
+      Width: =28
+      Height: =28
+
+- GeneralInfoButton:
+    Control: ModernInformationButton@1.0.0
+    Properties:
+      Content: ="Click the info icon to view additional details and helpful tips."
+      IconColor: =Color.Gray
+      Size: =14
+      X: =200
+      Y: =200
+      Width: =28
+      Height: =28
+```
+
+## Recent updates
+
+The updated version of the **Info button** modern control includes improvements and behavior change.
+
+### Property renames
+
+The following properties are renamed. Update any formulas in your app that reference the old names.
+
+| Previous property | New property |
+|-------------------|--------------|
+| `FontColor` | `Color` |
+| `FontSize` | `Size` |
+| `FontItalic` | `Italic` |
+| `FontStrikethrough` | `Strikethrough` |
+| `FontUnderline` | `Underline` |
+
+### Removed properties
+
+| Removed property | Notes |
+|------------------|-------|
+| `AcceptsFocus` | Removed. The control now automatically manages focus behavior for accessibility. |
+
+### Bug fixes and improvements
+
+- **Content expansion fixed**: The information flyout background now properly expands to fit all content. Previously, long text could be clipped or overflow the flyout.
+- **Improved reliability**: Resolved intermittent crashes that occurred when you clicked the info button in certain scenarios.
+- **Simplified properties**: Streamlined property organization with most styling properties now in the **Design** section for better discoverability.
+- **Consistent styling**: Font and color properties now consistently apply to both the icon and flyout content.
+
+## Best practices
+
+- **Keep content concise**: While the flyout can display lengthy text, aim for two to three short sentences for better user experience.
+- **Use accessible labels**: Always provide descriptive **AccessibleLabel** text that explains what information the button provides.
+- **Strategic placement**: Position info buttons next to form fields, labels, or unfamiliar terms where users might need clarification.
+- **Consistent iconcolor**: Use consistent colors across your app to help users recognize info buttons quickly.
+- **Mobile considerations**: Ensure info buttons are large enough to tap easily on mobile devices (minimum 32x32 pixels).
+
+## See also
+
+- [Modern controls overview](overview-modern-controls.md)
+- [Size and location properties](../properties-size-location.md)

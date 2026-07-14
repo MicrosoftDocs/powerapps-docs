@@ -1,24 +1,24 @@
 ---
-title: "Query and analyze the incremental updates | MicrosoftDocs"
+title: Query and analyze the incremental updates with Azure Synapse Link for Dataverse
 description: "Learn how to query and analyze the incremental updates made to Microsoft Dataverse data during a user-specified time interval with Power Apps and Azure Synapse Analytics"
 ms.custom: ""
-ms.date: 10/28/2024
+ms.date: 04/29/2025
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
 applies_to: 
   - "powerapps"
-author: "JasonHQX"
+author: "MilindaV2"
 ms.assetid: 
 ms.subservice: dataverse-maker
-ms.author: "jasonhuang"
+ms.author: "milindav"
 search.audienceType: 
   - maker
 ---
-# Query and analyze the incremental updates
+# Query and analyze the incremental updates with Azure Synapse Link for Dataverse
 
-Microsoft Dataverse data (including data from Dynamics 365 apps and finance and operations) can continuously change through create, update, and delete transactions. With the incremental update option, you can build incremental data pipelines that apply these changes to downstream systems and databases. Synapse Link for Dataverse exports incremental data in time stamped folders that contain data changes within user-specified time intervals.
+Microsoft Dataverse data (including data from Dynamics 365 apps and finance and operations) can continuously change through create, update, and delete transactions. With the incremental update option, you can build incremental data pipelines that apply these changes to downstream systems and databases. Azure Synapse Link for Dataverse exports incremental data in time stamped folders that contain data changes within user-specified time intervals.
 
 You can leverage incremental update feature for several scenarios:
 
@@ -29,7 +29,7 @@ You can leverage incremental update feature for several scenarios:
 Azure Synapse Link for Dataverse also provides the option to export and maintain a replica of tables in your Azure Data Lake (Gen 2) storage. You can configure Azure Synapse Link to export incremental data in addition to exporting a replica of tables. Each configuration (known as a "Synapse Link profile") can export either tables or incremental data. While you can create multiple profiles, you can't configure both tables and incremental updates within the same profile.
 
 > [!IMPORTANT]
-> An initial time stamped folder is created when you enable this feature with a copy of your data. Subsequent timestamp and table folders are created only when there is a data update during the user-specified time interval.
+> An initial time stamped folder is created when you enable this feature with a copy of your data. Subsequent timestamp and table folders are created only when there's a data update during the user-specified time interval.
 >
 > Once you create a Synapse Link profile with the incremental update feature, the configuration applies to all selected tables within the Synapse Link profile.
 >
@@ -57,15 +57,15 @@ This guide assumes that you have already met the prerequisites to create an Azur
    :::image type="content" source="media/azure-synapse-add-tables-settings.png" alt-text="Add tables settings":::
 
 > [!NOTE]
-> The minimum time interval is 5 minutes. That means the incremental update folder is created every five minutes and contain the changes that occurred within the time interval. This setting is also configurable after the link creation via **Manage tables**. Maximum time interval is 1140 minutes (or 24 hours).
+> The minimum time interval is 5 minutes. That means the incremental update folder is created every five minutes and contain the changes that occurred within the time interval. This setting is also configurable after the link creation via **Manage tables**. Maximum time interval is 1,140 minutes (or 24 hours).
 >
-> Ensure **Connect to your Azure Synapse workspace Azure Synapse workspace** is not checked in the first page of setup.
+> Ensure **Connect to your Azure Synapse workspace Azure Synapse workspace** isn't checked in the first page of setup.
 >
-> Incremental data in time stamped folders are stored as comma separated value text files (CSV files). You can't use the Delta conversioon feature for incremental data and obtain incremental files in a Delta parquet format.  
+> Incremental data in time stamped folders are stored as comma separated value text files (CSV files). You can't use the Delta conversion feature for incremental data and obtain incremental files in a Delta parquet format.  
 
 ## View incremental folder at Microsoft Azure Storage
 
-When you create a Synapse Link profile with incremental data, the system makes an initial copy of all tables and stores it in the first incremental update folder. Once the initial copy is created, the system creates subsequent update folders with changed data. If there are no changes in any of the tables selected, you will not see incremental data folders.
+When you create a Synapse Link profile with incremental data, the system makes an initial copy of all tables and stores it in the first incremental update folder. Once the initial copy is created, the system creates subsequent update folders with changed data. If there are no changes in any of the tables selected, you won't see incremental data folders.
 
 To see incremental data folders in the storage account:
 
@@ -83,14 +83,15 @@ To see incremental data folders in the storage account:
 
 You can copy incremental data into an Azure SQL Database or a data warehouse using data integration tools such as Azure Data Factory or Azure Synapse Analytics pipelines. We provide a sample data pipeline that can be used for this purpose. For more information:[Copy Dataverse data into Azure SQL](azure-synapse-link-pipelines.md).
 
-If you're a Dynamics 365 finance and oerations apps customer transitioning from the change feeds feature you can use [Data integration sample tools provided in GitHub](https://github.com/microsoft/Dynamics-365-FastTrack-Implementation-Assets/tree/master/Analytics/DataverseLink/DataIntegration) to update existing data pipelines used with the change feeds feature.
+If you're a Dynamics 365 finance and operations apps customer transitioning from the change feeds feature you can use [Data integration sample tools provided in GitHub](https://github.com/microsoft/Dynamics-365-FastTrack-Implementation-Assets/tree/master/Analytics/DataverseLink/DataIntegration) to update existing data pipelines used with the change feeds feature.
 
 You can also build your own data pipeline to consume incremental data. However, you need to consider the following best practices when designing your own pipeline:
 
 - **Consume data from previous time stamped folders only**: This way, you can avoid read-write conflicts with the Synapse Link service, which might be continuously updating data in the current folder. You can find the current folder by viewing the **Changelog/changelog.info** file. This file is a read-only file which contains a single row with the folder name that is currently updated. You shouldn't update this file as it can cause system instability.
 - You can view the **model.json** file located within each time stamped folder to read metadata such as column names for the data contained in table folders. Notice that each model.json file in the folder located within  time stamped folders contain metadata for all the tables, not just the tables contained within the time stamped folder.
 - Avoid using other log files such as the Synapse.log file. This file is used for internal purposes and might not reflect accurate data.
-- Consider deleting obsolete incremental folders from your Azure Data lake after you have finished processing. At present, Synapse Link maintains a lease on these files in Azure Storage to recover from any failures. The system might release the lease after some time.
+- Consider deleting obsolete incremental folders from your Azure Data lake after you have finished processing. At present, Synapse Link maintains a lease on these files in Azure Storage to recover from any failures. The system might release the lease after some time. You should only delete incremental folders that are *older than 24 hours* to avoid any conflicts with system operation.
+- You shouldn't modify or delete the "current folder" that is the folder contained in the **Changelog/changelog.info** file. If you change this file, the system pauses processing data. 
 
 :::image type="content" source="media/Synapse-Link-storage-change-Log-folder.png" alt-text="Incremental folders in Azure Data lake storage created by Synapse Link":::
 

@@ -26,6 +26,9 @@ Controls that show data as graphs with x- and y-axes.
 
 **NumberOfSeries** – How many columns of data are reflected in a column or line chart.
 
+> [!NOTE]
+> A maximum of 9 series can be displayed
+
 ## Additional chart properties
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
 

@@ -1,7 +1,7 @@
 ---
 title: "Form Step (mspp_webformstep) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Form Step (mspp_webformstep) table/entity with Microsoft Dataverse."
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
@@ -201,7 +201,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**The accept attribute specifies the MIME types of files that the server accepts through file upload. To specify more than one value, separate the values with a comma (e.g. audio/*,video/*,image/*).**|
+|Description|**The accept attribute specifies the MIME types of files that the server accepts through file upload. To specify more than one value, separate the values with a comma (e.g. audio/\*,video/\*,image/\*).**|
 |DisplayName|**Accept**|
 |IsValidForForm|True|
 |IsValidForRead|True|

@@ -5,7 +5,7 @@ suite: powerapps
 author: MitiJ
 ms.author: mijosh
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: how-to
 ms.date: 02/20/2018
 ms.subservice: mda-developer
 search.audienceType: 

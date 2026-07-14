@@ -2,8 +2,8 @@
 title: "Web API table schema operations sample (PowerShell) (Microsoft Dataverse)| Microsoft Docs"
 description: "This sample demonstrates how to perform operations that change the Dataverse data structures using the Web API with PowerShell."
 ms.date: 05/14/2024
-author: mkannapiran
-ms.author: kamanick
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
@@ -16,6 +16,9 @@ contributors:
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
 This PowerShell sample demonstrates how to perform operations that create and modify table, column, and relationship definitions using the Dataverse Web API.
+
+> [!div class="nextstepaction"]
+> [View this sample on Github](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/PS/MetadataOperations)
   
 This sample implements the Dataverse operations and console output detailed in [Web API table schema operations sample](../web-api-metadata-operations-sample.md) and uses the [Dataverse Web API PowerShell Helper functions](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/PS/README.md) to manage authentication and provide reusable functions to perform common operations. These scripts are referenced using [dot sourcing](/powershell/module/microsoft.powershell.core/about/about_scripts#script-scope-and-dot-sourcing) with the following lines:
 
@@ -162,9 +165,10 @@ By default this sample will delete all the records created in it. If you want to
 
 ### See also
 
-[Use the Dataverse Web API](../overview.md)<br />
-[Use the Web API with table definitions](../use-web-api-metadata.md)<br />
-[Web API Samples](../web-api-samples.md)<br />
-[Web API Basic Operations Sample (PowerShell)](basic-operations-powershell.md)
+[Use the Dataverse Web API](../overview.md)   
+[Use the Web API with table definitions](../use-web-api-metadata.md)   
+[Web API Samples](../web-api-samples.md)   
+[Web API Basic Operations Sample (PowerShell)](basic-operations-powershell.md)   
+[Web API multi-table lookup sample (PowerShell)](multi-table-lookup-powershell.md)
 
-[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]
+[!INCLUDE[footer-banner](../../../../includes/footer-banner.md)]

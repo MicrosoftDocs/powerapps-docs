@@ -1,12 +1,12 @@
 ---
-title: "Update a solution | MicrosoftDocs"
+title: "Update a solution"
 description: "Learn how to update or upgrade a solution in Power Apps"
 ms.custom: ""
-ms.date: 08/30/2023
+ms.date: 05/20/2026
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: upgrade-and-migration-article
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -28,7 +28,7 @@ There are times when you need to update an existing managed solution. To update 
 
     > [!div class="mx-imgBorder"] 
     > ![Update solution version.](media/update-solution-version.png)
-3. [Apply the upgrade or update in the target environment](#apply-the-upgrade-or-update-in-the-target-environment)
+3. [Apply the upgrade or update in the target environment](#apply-the-upgrade-or-update-in-the-target-environment).
 
 ## Apply the upgrade or update in the target environment
 
@@ -47,20 +47,20 @@ The procedure to import the updated solution is similar to installing a new mana
         This is the default option and upgrades your solution to the latest version and rolls up all previous patches in one step.  Any components associated to the previous solution version that aren't in the newer solution version will be deleted. This option ensures that your resulting configuration state is consistent with the importing solution including removal of components that are no longer part of the solution.
         
    - **Stage for Upgrade**
-        This option upgrades your solution to the higher version, but defers the deletion of the previous version and any related patches until you apply a solution upgrade later.  This option should only be selected if you want to have both the old and new solutions installed in the system concurrently so that you can do some data migration before you complete the solution upgrade. Applying the upgrade deletes the old solution and any components that aren't included in the new solution.
+        This option upgrades your solution to the higher version, but defers the deletion of the previous version and any related patches until you apply a solution upgrade later. Select this option only if you want to have both the old and new solutions installed in the system concurrently so that you can do some data migration before you complete the solution upgrade. Applying the upgrade deletes the old solution and any components that aren't included in the new solution.
         
    - **Update**
         This option replaces your solution with this version. Components that aren't in the newer solution won't be deleted and remains in the system. Be aware that the source and destination environment may differ if components were deleted in the source environment. This option has the best performance by typically finishing in less time than the upgrade methods.
         
 8. Decide whether to enable the following option for post import actions:
    - **Enable plug-in steps and flows included in the solution**  
-        Selecting this option will enable plug-ins and Power Automate flows that are included in the solution.
+        Selecting this option enables plug-ins and Power Automate flows that are included in the solution.
         
 9. Select **Import**.  
 
    :::image type="content" source="media/import-solution-pane.png" alt-text="Import solution information and options.":::
 
-10. You may need to wait a few moments while the solution import completes. If it's successful, you can view the results and select **Close**.  
+10. You might need to wait a few moments while the solution import completes. If it's successful, you can view the results and select **Close**.  
 
    Managed customizations are always imported in a published state, so there's no need to publish customizations after import in this scenario.
 
@@ -81,20 +81,19 @@ There might be occasions when you want to remove a managed component from an env
 - Upgrade the solution (recommended). In the development environment where the managed solution originated, update the solution so that it no longer includes the component. In other words, remove the component such as a column, chart, or form from the solution and then export it as managed. Then, when you import the managed solution into the target environment, choose the **Solution action** as **Upgrade**. This action removes the component (if there aren't any other components that depend on it in the target environment).
 - Delete the managed solution. This action removes all components in the solution. In the environment where the managed solution was imported, delete the managed solution that includes the managed component. You can do this from the **Solutions** area of Power Apps.
    > [!WARNING]
-   > Deleting a managed solution deletes ALL the components that are in the managed solution as well as any related data. Always use caution before deleting a managed solution.
-
+   > Deleting a managed solution deletes *all* the components in the managed solution as well as any related data. Always use caution before deleting a managed solution.
 
 ## Overwrite customizations option
 
 The option to overwrite customizations is available with the classic import experience, when using the Microsoft Power Platform CLI [pac solution import](/power-platform/developer/cli/reference/solution#--force-overwrite--f) command, or by using the `OverwriteUnmanagedCustomizations` option with the `ImportSolution` or `ImportSolutionAsync` messages. More information: [ImportSolutionRequest class](xref:Microsoft.Crm.Sdk.Messages.ImportSolutionRequest.OverwriteUnmanagedCustomizations), [ImportSolution action](xref:Microsoft.Dynamics.CRM.ImportSolution), or [ImportSolutionAsync action](xref:Microsoft.Dynamics.CRM.ImportSolutionAsync).
 
-
 > [!IMPORTANT]
-> Selecting the **Overwrite Customizations (not recommended)**  option will overwrite or remove any unmanaged customizations previously performed on components included in this solution. This option does not affect components that support merge behavior (forms, sitemap, ribbon, app modules).  Components that have other managed solutions on top of the existing solution you are replacing do also still remain on top and are not affected by this option.  
+> Selecting the **Overwrite Customizations (not recommended)**  option overwrites or removes any unmanaged customizations previously performed on components included in this solution. This option doesn't affect components that support merge behavior (forms, sitemap, ribbon, app modules). Components that have other managed solutions on top of the existing solution you're replacing aren't affected by this option.  
 
 ### See also
+
 [Layering within a managed solution](/power-platform/alm/solution-layers-alm#layering-within-a-managed-solution)
-[Add solution components](create-solution.md#add-solution-components) <br />
+[Add solution components](create-solution.md#add-or-remove-solution-objects) <br />
 [Create solution patches](/power-platform/alm/update-solutions-alm#create-solution-patches) <br />
 [For developers: Cloning, patching, and upgrading](/power-platform/alm/solution-api#cloning-patching-and-upgrading)
 

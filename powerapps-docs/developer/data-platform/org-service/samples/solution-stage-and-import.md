@@ -1,5 +1,5 @@
 ---
-title: "Sample: Solution staging with asynchronous import (Microsoft Dataverse) | Microsoft Docs"
+title: "Sample: Solution staging with asynchronous import"
 description: "Demonstrates how to stage and asynchronously import a solution."
 ms.date: 04/05/2022
 author: phecke
@@ -11,8 +11,6 @@ search.audienceType:
 ---
 
 # Sample: Solution staging with asynchronous import
-
-<!-- https://learn.microsoft.com/dynamics365/customer-engagement/developer/sample-work-solutions -->
 
 This sample shows how to perform the following actions with solutions:
 

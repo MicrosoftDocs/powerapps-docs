@@ -1,12 +1,12 @@
 ---
-title: "Tutorial: Write and register a plug-in (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how to write plug-in code and then register the compiled assembly and step with Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 12/18/2024
+title: "Tutorial: Write and register a plug-in (Microsoft Dataverse) | Microsoft Docs"
+description: "Learn how to write plug-in code and then register the compiled assembly and step with Dataverse." 
+ms.date: 07/02/2026
 ms.reviewer: "pehecke"
-ms.topic: "article"
-author: MicroSri
+ms.topic: tutorial
+author: MsSQLGirl
 ms.subservice: dataverse-developer
-ms.author: sriknair
+ms.author: jukoesma
 search.audienceType: 
   - developer
 contributors:
@@ -48,9 +48,9 @@ Another alternative is to use the Power Platform Tools extension as described he
 
 ### Create a Visual Studio project for the plug-in
 
-1. Open Visual Studio and open a new **Class Library (.NET Framework)** project using **.NET Framework 4.6.2**
+1. In Visual Studio, open a new **Class Library (.NET Framework)** project targeting a [supported framework version](supported-customizations.md#support-for-net-framework-versions).
 
-    ![Open a new class library (.NET Framework) project using .NET Framework 4.6.2.](media/tutorial-write-plug-in-create-visual-studio-project.png)
+    ![Open a new class library (.NET Framework) project using .NET Framework.](media/tutorial-write-plug-in-create-visual-studio-project.png)
 
     The name used for the project is also the name of the assembly. This tutorial uses the name `BasicPlugin`.
 1. In **Solution Explorer**, right-click the project and select **Manage NuGet Packages…** from the context menu.
@@ -65,7 +65,7 @@ Another alternative is to use the Power Platform Tools extension as described he
 
     > [!NOTE]
     > Adding the `Microsoft.CrmSdk.CoreAssemblies` NuGet package will include these assemblies in the build folder for your assembly, but you will not upload these assemblies with the assembly that includes your logic. These assemblies are already present in the sandbox runtime.
-    > 
+    >
     > Ensure only assemblies referenced directly by your project or through NuGet dependency chains are located in your build folder. You cannot include other assemblies when you register the assembly with your logic. You cannot assume that the assemblies other than those included in the  `Microsoft.CrmSdk.CoreAssemblies` NuGet package will be present on the server and compatible with your code.
 
 1. In **Solution Explorer**, right-click the `Class1.cs` file and choose **Rename** in the context menu.
@@ -231,7 +231,7 @@ To register a plug-in, you'll need the Plug-in Registration tool.
 1. For Microsoft 365 users, verify that the **isolation mode** is set to **sandbox** and the **location** to store the assembly is **Database**.
 
     > [!NOTE]
-    > Other options for **isolation mode** and **location** apply to on-premises Dynamics 365 deployments. For the location, you can specify the D365 server's database, the server's local storage (disk), or the server's Global Assembly Cache. For more information, see [Plug-in storage](/dynamics365/customer-engagement/developer/register-deploy-plugins#plug-in-storage).
+    > Other options for **isolation mode** and **location** apply to on-premises Dynamics 365 deployments. For the location, you can specify the D365 server's database, the server's local storage (disk), or the server's Global Assembly Cache. For more information, see [Plug-in storage](/dynamics365/customer-engagement/developer/register-deploy-plugins#plug-in-storage). <!-- This is only relevant for on-premises -->
 
 1. Click **Register Selected Plug-ins**.
 1. You'll see a **Registered Plug-ins** confirmation dialog.

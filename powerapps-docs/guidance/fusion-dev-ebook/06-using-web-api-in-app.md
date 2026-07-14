@@ -3,7 +3,7 @@ title: "6: Using the Web API in the app  | Microsoft Docs"
 description: "Learn about how to use the Web API that you created in Azure in your app"
 author: spboyer
 
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: ebook
 ms.date: 04/26/2021
 ms.subservice: guidance
@@ -136,7 +136,7 @@ The first task is to create a custom connector that's used by the app to communi
 
 The prototype app used Excel workbooks for the data sources. Now that the custom connector for the Web API is available, Maria performs the following steps to add the connector to the app:
 
-1.  Sign in to [Power Apps](http://make.powerapps.com).
+1.  Sign in to [Power Apps](https://make.powerapps.com).
 
 2.  On the left pane, expand **Data**, and select **Custom Connectors**. The **field-engineer-api** custom connector should be listed. Select **Create connection**.
 
@@ -464,7 +464,7 @@ Working with Kiana, Preeti configures a new instance of the Azure Cognitive Sear
 
 Kiana can now create a custom connector that Power Apps uses to send search requests to the search service. Kiana does this using Power Apps Studio, as follows:
 
-1.  Sign in to [Power Apps](http://make.powerapps.com).
+1.  Sign in to [Power Apps](https://make.powerapps.com).
 
 2.  On the left pane, expand **Data**, and select **Custom Connectors**. On the right pane, select **+ New custom connector**, and then select **Create from blank**:
 

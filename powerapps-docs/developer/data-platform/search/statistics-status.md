@@ -4,8 +4,8 @@ description: "Use Dataverse search statistics and status apis retrieve data abou
 ms.date: 10/20/2023
 ms.reviewer: jdaly
 ms.topic: article
-author: mspilde
-ms.author: mspilde
+author: JasonHQX
+ms.author: jasonhuang
 search.audienceType: 
   - developer
 search.app: 
@@ -13,6 +13,7 @@ search.app:
   - D365CE
 contributors:
  - JimDaly
+ - jeromeblouinms
 ---
 # Dataverse Search statistics and status
 

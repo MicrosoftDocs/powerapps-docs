@@ -2,10 +2,11 @@
 title: View long term retained data in Microsoft Dataverse
 description: Learn how to access ready only data that is in long term storage. 
 author: pnghub
-ms.author: gned
+ms.author: matp
 ms.reviewer: matp
 contributors: manasdalai
 ms.service: powerapps
+ms.subservice: dataverse-maker
 ms.topic: how-to
 ms.date: 06/27/2024
 ms.custom: template-how-to
@@ -70,7 +71,7 @@ To do this, link your Dataverse environment to Fabric. More information: [Link y
 
 When your long term retention policy is run successfully, you can access the active and inactive Dataverse data. The [limitations applied to retrieval of retained data](#limitations-for-retrieval-of-retained-data) don't apply to this mode of access.
 
-You can explore the data with SQL endpoint and query Dataverse data with SQL and generate views in Fabric. You can also create Power BI reports. More information: [Work with Dataverse data and generate Power BI reports](azure-synapse-link-view-in-fabric.md#work-with-dataverse-data-and-generate-power-bi-reports)
+You can explore the data with SQL endpoint and query Dataverse data with SQL and generate views in Fabric. You can also create Power BI reports. More information: [Work with Dataverse data and generate Power BI reports](fabric-work-data-and-power-bi.md)
 
 The Dataverse table column `msft_datastate` can be used to filter the data with the SQL `WHERE` clause:
 

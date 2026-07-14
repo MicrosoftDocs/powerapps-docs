@@ -3,7 +3,7 @@ title: "1: What is the fusion development approach? | Microsoft Docs"
 description: "Learn more about the fusion development approach to app building in Power Apps."
 author: spboyer
 
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: ebook
 ms.date: 04/26/2021
 ms.subservice: guidance
@@ -32,7 +32,7 @@ A common use case for a custom connector is to enable an app to access other sys
 ![Web API with custom connector.](media/image3.png)
 
 > [!NOTE]
-> Other parts of Microsoft Power Platform can benefit from a similar approach. For example, a citizen developer might implement business logic in a low-code manner through Power Automate and robotic process automation, then use Web APIs to integrate other services into this logic. You can also build chatbots by using Power Virtual Agents that combine AI capabilities with data and services exposed through web APIs.
+> Other parts of Microsoft Power Platform can benefit from a similar approach. For example, a citizen developer might implement business logic in a low-code manner through Power Automate and robotic process automation, then use Web APIs to integrate other services into this logic. You can also build chatbots by using Microsoft Copilot Studio that combine AI capabilities with data and services exposed through web APIs.
 
 Fusion development with Power Apps is about combining the worlds of the citizen developer, the professional developer, and the other parties instrumental in building and using applications to further the objectives of the business. A citizen developer can express the business need quickly by building an app, and work with a professional developer to "fill in the gaps." Users can provide feedback on missing functionality and any changes required. The whole process is highly iterative, perhaps more so than many other agile processes, with the velocity of possibly several iterations a day.
 
@@ -40,8 +40,6 @@ Fusion development with Power Apps is about combining the worlds of the citizen 
 > Gartner describes *digital fusion teams* as "distributed and multidisciplinary digital business teams that blend technology and other types of domain expertise. At least 84% of companies and 59% of government entities have fusion teams." (Source: 2019 Gartner Digital Business Teams Survey)
 
 ![Fusion development process.](media/image4.png)
-
-For a detailed introduction to the fusion development process and how it can accelerate development times, go to [Citizen developers use Microsoft Power Apps to build an intelligent launch assistant](https://aka.ms/AAbvfzj).
 
 > [!div class="step-by-step"]
 > [Previous](prereqs-setup.md)

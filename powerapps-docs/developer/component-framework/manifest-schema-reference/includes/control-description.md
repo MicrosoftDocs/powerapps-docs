@@ -1,1 +1,1 @@
-Defines the component's namespace, version and display information.
+Defines the component's namespace, version, and display information.

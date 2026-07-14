@@ -4,7 +4,7 @@ description: Use the rich text editor toolbar in email
 author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: article
 ms.date: 10/03/2022
 ms.subservice: end-user
 ms.author: smurkute

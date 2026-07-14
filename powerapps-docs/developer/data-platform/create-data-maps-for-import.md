@@ -1,6 +1,6 @@
 ---
-title: "Create data maps for import (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Data maps are required to import data, and contain mappings between the data contained in the source file and the respective table columns." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Create data maps for import (Microsoft Dataverse) | Microsoft Docs"
+description: "Data maps are required to import data, and contain mappings between the data contained in the source file and the respective table columns." 
 ms.date: 08/03/2022
 ms.reviewer: pehecke
 ms.topic: article

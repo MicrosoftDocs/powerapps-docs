@@ -1,7 +1,7 @@
 ---
 title: "Client API Reference for model-driven apps "
 description: "The topic provides client API reference for model-driven apps."
-ms.date: 05/13/2024
+ms.date: 06/16/2025
 author: sriharibs-msft
 ms.author: srihas
 ms.reviewer: jdaly
@@ -47,6 +47,7 @@ The topics under this section are organized as follows:
 - Finally provides reference for namespaces in the **Xrm** object model.
 
    - [Xrm.App](reference/xrm-app.md)
+   - [Xrm.Copilot](reference/xrm-copilot.md)
    - [Xrm.Device](reference/xrm-device.md)
    - [Xrm.Encoding](reference/xrm-encoding.md)
    - [Xrm.Navigation](reference/xrm-navigation.md)

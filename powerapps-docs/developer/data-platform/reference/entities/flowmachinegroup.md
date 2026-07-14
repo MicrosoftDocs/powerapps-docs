@@ -1,7 +1,7 @@
 ---
 title: "Flow Machine Group (flowmachinegroup) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Flow Machine Group (flowmachinegroup) table/entity with Microsoft Dataverse."
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
@@ -67,6 +67,7 @@ The following table lists selected properties for the Flow Machine Group (flowma
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [Description](#BKMK_Description)
+- [DisconnectionPlannedOn](#BKMK_DisconnectionPlannedOn)
 - [DomainSetting](#BKMK_DomainSetting)
 - [FlowGroupType](#BKMK_FlowGroupType)
 - [flowmachineimage](#BKMK_flowmachineimage)
@@ -77,6 +78,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [KeyCreationDate](#BKMK_KeyCreationDate)
 - [KeyExpiryGracePeriod](#BKMK_KeyExpiryGracePeriod)
 - [KeyValidityPeriod](#BKMK_KeyValidityPeriod)
+- [LastRunDate](#BKMK_LastRunDate)
+- [ManagedVersion](#BKMK_ManagedVersion)
 - [ManagementType](#BKMK_ManagementType)
 - [MaxManagedMachineCount](#BKMK_MaxManagedMachineCount)
 - [name](#BKMK_name)
@@ -97,6 +100,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [trytoreusewindowssession](#BKMK_trytoreusewindowssession)
+- [UsageType](#BKMK_UsageType)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 
 ### <a name="BKMK_Description"></a> Description
@@ -115,6 +119,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|False|
 |MaxLength|2000|
+
+### <a name="BKMK_DisconnectionPlannedOn"></a> DisconnectionPlannedOn
+
+|Property|Value|
+|---|---|
+|Description|**If set, the date on which the machines of the group will be disconnected.**|
+|DisplayName|**Disconnection planned on**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`disconnectionplannedon`|
+|RequiredLevel|None|
+|Type|DateTime|
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Auto|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_DomainSetting"></a> DomainSetting
 
@@ -274,6 +295,44 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxValue|2628000|
 |MinValue|129600|
 
+### <a name="BKMK_LastRunDate"></a> LastRunDate
+
+|Property|Value|
+|---|---|
+|Description|**Last date at which a run has targeted the group.**|
+|DisplayName|**Last run date**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`lastrundate`|
+|RequiredLevel|None|
+|Type|DateTime|
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Auto|
+|SourceTypeMask|0|
+
+### <a name="BKMK_ManagedVersion"></a> ManagedVersion
+
+|Property|Value|
+|---|---|
+|Description|**Managed Version.**|
+|DisplayName|**Managed Version**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`managedversion`|
+|RequiredLevel|None|
+|Type|Picklist|
+|DefaultFormValue||
+|GlobalChoiceName|`flowmachinegroup_managedversion`|
+
+#### ManagedVersion Choices/Options
+
+|Value|Label|
+|---|---|
+|1|**V1**|
+|2|**V2**|
+
 ### <a name="BKMK_ManagementType"></a> ManagementType
 
 |Property|Value|
@@ -294,6 +353,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |---|---|
 |0|**Customer**|
 |1|**Managed**|
+|2|**Shared**|
 
 ### <a name="BKMK_MaxManagedMachineCount"></a> MaxManagedMachineCount
 
@@ -617,6 +677,28 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |DefaultValue|False|
 |True Label|Yes|
 |False Label|No|
+
+### <a name="BKMK_UsageType"></a> UsageType
+
+|Property|Value|
+|---|---|
+|Description|**Flow Machine Group Usage Type.**|
+|DisplayName|**Flow Machine Group Usage Type**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`usagetype`|
+|RequiredLevel|SystemRequired|
+|Type|Picklist|
+|DefaultFormValue|0|
+|GlobalChoiceName|`flowmachinegroup_usagetype`|
+
+#### UsageType Choices/Options
+
+|Value|Label|
+|---|---|
+|0|**RpaOnly**|
+|1|**CuaOnly**|
+|2|**RpaAndCua**|
 
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
 

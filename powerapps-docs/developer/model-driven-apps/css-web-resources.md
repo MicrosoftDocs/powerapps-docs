@@ -48,7 +48,6 @@ With CSS web resources, you can manage the appearance of webpage web resources b
  [Using JavaScript web resources](script-jscript-web-resources.md)   
  [Using Data (XML) web resources](data-xml-web-resources.md)   
  [Using Image (JPG, PNG, GIF) web resources](image-web-resources.md)   
- [Using Silverlight (XAP) web resources](/dynamics365/customer-engagement/developer/silverlight-xap-web-resources)  
  [Using Stylesheet (XSL) web resources](stylesheet-xsl-web-resources.md)   
  [WebResource table](../data-platform/reference/entities/webresource.md)
 

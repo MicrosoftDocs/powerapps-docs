@@ -1,7 +1,7 @@
 ---
 title: "Flow Run (flowrun) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Flow Run (flowrun) table/entity with Microsoft Dataverse."
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
@@ -57,6 +57,11 @@ The following table lists selected properties for the Flow Run (flowrun) table.
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
+- [CallingProductResourceId](#BKMK_CallingProductResourceId)
+- [CallingProductRunId](#BKMK_CallingProductRunId)
+- [CallingProductType](#BKMK_CallingProductType)
+- [ClientTrackingId](#BKMK_ClientTrackingId)
+- [ConversationId](#BKMK_ConversationId)
 - [DurationInMs](#BKMK_DurationInMs)
 - [EndTime](#BKMK_EndTime)
 - [ErrorCode](#BKMK_ErrorCode)
@@ -64,6 +69,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [flowrunId](#BKMK_flowrunId)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsPrimary](#BKMK_IsPrimary)
+- [ModernFlowType](#BKMK_ModernFlowType)
 - [name](#BKMK_name)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
@@ -79,6 +85,91 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 - [Workflow](#BKMK_Workflow)
 - [WorkflowId](#BKMK_WorkflowId)
+
+### <a name="BKMK_CallingProductResourceId"></a> CallingProductResourceId
+
+|Property|Value|
+|---|---|
+|Description|**The resource id of the caller**|
+|DisplayName|**Calling product resource id**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`callingproductresourceid`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|255|
+
+### <a name="BKMK_CallingProductRunId"></a> CallingProductRunId
+
+|Property|Value|
+|---|---|
+|Description|**The run id of the caller**|
+|DisplayName|**Calling product run id**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`callingproductrunid`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|255|
+
+### <a name="BKMK_CallingProductType"></a> CallingProductType
+
+|Property|Value|
+|---|---|
+|Description|**The type of the product that triggered the run**|
+|DisplayName|**Calling product type**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`callingproducttype`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|255|
+
+### <a name="BKMK_ClientTrackingId"></a> ClientTrackingId
+
+|Property|Value|
+|---|---|
+|Description|**The client tracking id of the run**|
+|DisplayName|**Client Tracking Id**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`clienttrackingid`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|255|
+
+### <a name="BKMK_ConversationId"></a> ConversationId
+
+|Property|Value|
+|---|---|
+|Description|**Copilot Studio Conversation id**|
+|DisplayName|**Conversation id**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`conversationid`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|2048|
 
 ### <a name="BKMK_DurationInMs"></a> DurationInMs
 
@@ -191,6 +282,28 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |---|---|
 |0|**false**|
 |1|**true**|
+
+### <a name="BKMK_ModernFlowType"></a> ModernFlowType
+
+|Property|Value|
+|---|---|
+|Description|**Type of the Power Automate Cloud Flow.**|
+|DisplayName|**Power Automate Cloud Flow Type**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`modernflowtype`|
+|RequiredLevel|None|
+|Type|Picklist|
+|DefaultFormValue|0|
+|GlobalChoiceName|`flowrun_modernflowtype`|
+
+#### ModernFlowType Choices/Options
+
+|Value|Label|
+|---|---|
+|0|**PowerAutomateFlow**|
+|1|**CopilotStudioFlow**|
+|2|**M365CopilotAgentFlow**|
 
 ### <a name="BKMK_name"></a> name
 

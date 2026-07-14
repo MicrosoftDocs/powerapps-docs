@@ -3,7 +3,7 @@ title: Create or update bulk records in Power Apps
 description: Learn how to update or create bulk records in canvas apps.
 author: denise-msft
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 6/18/2021

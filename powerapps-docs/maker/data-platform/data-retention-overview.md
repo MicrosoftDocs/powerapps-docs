@@ -2,12 +2,15 @@
 title: Dataverse long term data retention overview
 description: Overview of long term retention for data in Microsoft Dataverse 
 ms.service: powerapps
+ms.subservice: dataverse-maker
 author: pnghub
-ms.author: gned
+ms.author: matp
 ms.reviewer: matp
-contributors: neerajatmsft
+contributors: 
+- neerajatmsft
+- rijoshi
 ms.topic: overview
-ms.date: 10/22/2024
+ms.date: 04/10/2026
 ms.custom: template-overview
 ---
 # Dataverse long term data retention overview
@@ -34,12 +37,12 @@ Consider the business application data lifecycle in three stages. First active d
 |2. Inactive data     | Data is immutable and read-only. <br />  Is stored in long term retention.  <br /> Has limited access. Retained for compliance, audit, and legal discovery.      |
 |3. Deleted data   |  Permanently deleted. Data lifecycle is completed.        |
 
-Dataverse delivers native platform support for long term retention of data. It allows organizations to get immediate and ongoing benefits:
+Dataverse delivers native platform support for long-term retention of data. It helps your organization get immediate and ongoing benefits:
 
 - Securely retain the historical application data long term for audit, legal, and regulatory requirements.
 - Access the read-only data for limited inquiry purposes.
 - Reduce database capacity consumed and save money on inactive data.
-- Avoid IT investments required to build and maintain custom solutions for long term retention of historical application data.
+- Avoid IT investments required to build and maintain custom solutions for long-term retention of historical application data.
 
 ## How it works
 
@@ -81,7 +84,7 @@ With Dataverse long term retention, data is never moved out of Dataverse. The re
    - *Table*, such as **Case**<sup>1</sup> or **Contact**.
    - *Table-Retained*, such as **Case-Retained** and **Contact-Retained**.
 
-   <sup>1</sup> The case table requires a Dynamics 365 app, such as Dynamics 365 Service.
+   <sup>1</sup> The case table requires a Dynamics 365 app, such as Dynamics 365 Customer Service.
 
 - File capacity details reported:
   - If there are associated file attachments retained long term, the file capacity reflects the sum of the live and retained data. There will be no reduction or savings observed with file capacity after running a retention policy, which involved file attachments.  
@@ -107,7 +110,7 @@ Dataverse long term retention requires no additional storage purchases and it do
 For example:
 
 - Suppose the database capacity consumed by Contoso is 1,000 GB today and the scheduled long term retention policy was run and retains 200 GB of data with Dataverse long term retention.
-- With an average compression of at lease 50%, the retained data size is 100 GB, a savings of 50% compared to when the data was in the active state.
+- With an average compression of at least 50%, the retained data size is 100 GB, a savings of 50% compared to when the data was in the active state.
 - This implies Contoso now has 800 GB of active data and 100 GB of inactive data in Dataverse.
 - In this scenario, the [storage capacity reports](#storage-capacity-reports) display the database usage as 900 GB (800 GB + 100 GB).
 
@@ -122,7 +125,15 @@ Dataverse retention policies are solution aware. Dataverse retention policies ad
 
 When you include your retention policies in a solution, their definitions become portable, making it easier to move them from one environment to another, saving time required to create the retention policy. For example, you first develop a solution containing a retention policy in a development or sandbox environment. You then move that retention policy to a preproduction environment to test and validate that the solution works well and is ready for production. After testing is completed, the admin imports the solution into the production environment.
 
+To add a retention policy to a solution, go to the Power Apps (make.powerapps.com), create or open a solution, and then follow these steps:
+
+1. Select **Add existing** > **More** > **Other** > **Data Life Cycle Config** (display name renamed from RetentionConfig to Data Life Cycle Config to support both retention and deletion scenarios).
+2. Select one or more retention policies to add to the solution.
+
+The **Data Life Cycle Config** supports addition of both archival and deletion policies in a solution.
+
 > [!NOTE]
+>
 > - The data retained by retention policies isn't portable as part of solutions, only the retention policy definitions are. You must run the retention policy in an environment to retain the data in Dataverse long term storage.
 > - Only retention policies created in Power Platform environments can be solution-aware.
 > - When long term retention, is enabled through a solution import process, the related child tables aren't automatically enabled.

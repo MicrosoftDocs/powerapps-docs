@@ -4,7 +4,7 @@ description: Troubleshoot problems with data not displaying in a report
 author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: troubleshooting-general
 ms.date: 06/27/2019
 ms.subservice: end-user
 ms.author: smurkute

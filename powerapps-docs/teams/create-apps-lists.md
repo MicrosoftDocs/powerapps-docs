@@ -2,7 +2,7 @@
 title: Create an app from a list in Microsoft Teams
 description: Learn about how to create an app from a list in Microsoft Teams
 author: Steven-Jia
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: 
 ms.date: 03/23/2022
 ms.subservice: teams

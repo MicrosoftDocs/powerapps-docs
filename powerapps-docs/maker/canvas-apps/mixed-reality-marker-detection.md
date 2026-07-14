@@ -3,7 +3,7 @@ title: Use marker detection with mixed-reality controls
 description: How to use the marker detection feature of the View in MR and View shape in MR mixed-reality controls in a canvas app.
 author: anuitz
 ms.service: powerapps
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: anuitz
 ms.date: 06/08/2022

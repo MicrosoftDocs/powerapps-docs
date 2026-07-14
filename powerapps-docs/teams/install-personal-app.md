@@ -3,7 +3,7 @@ title: Install the Power Apps personal app in Teams| Microsoft Docs
 description: Learn about installing the Power Apps app in Teams.
 author: mduelae
 
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.collection: get-started
 ms.date: 03/26/2021
 ms.subservice: teams

@@ -1,7 +1,7 @@
 ---
 title: "SharePoint Managed Identity (SharePointManagedIdentity) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the SharePoint Managed Identity (SharePointManagedIdentity) table/entity with Microsoft Dataverse."
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
@@ -657,4 +657,4 @@ Many-To-One Relationship: [syncerror sharepointmanagedidentity_SyncErrors](synce
 
 [Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
-
+<xref:Microsoft.Dynamics.CRM.sharepointmanagedidentity?displayProperty=fullName>

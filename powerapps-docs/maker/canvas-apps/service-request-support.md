@@ -3,7 +3,7 @@ title: Create an effective support request
 description: Learn how to write a clear Power Apps support request so Microsoft support can help you quickly.
 author: tahoon
 ms.subservice: troubleshoot
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: 
 ms.date: 7/2/2024

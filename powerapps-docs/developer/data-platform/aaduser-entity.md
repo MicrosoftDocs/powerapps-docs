@@ -1,14 +1,13 @@
 ---
-title: "Azure Active Directory user (AADUser) table (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "An Azure Active Directory user virtual table in Microsoft Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
+title: "Azure Active Directory user (AADUser) table (Microsoft Dataverse) | Microsoft Docs"
+description: "An Azure Active Directory user virtual table in Microsoft Dataverse."
 ms.date: 04/20/2022
 ms.reviewer: "pehecke"
 ms.topic: "article"
-author: "NHelgren" # GitHub ID
+author: "NHelgren" 
 ms.service: powerapps
 ms.subservice: dataverse-developer
-ms.author: "nhelgren" # MSFT alias of Microsoft employees only
+ms.author: "nhelgren"
 search.audienceType: 
   - developer
 ---

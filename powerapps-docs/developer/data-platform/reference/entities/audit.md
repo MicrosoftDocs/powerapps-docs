@@ -1,7 +1,7 @@
 ---
 title: "Auditing (Audit) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Auditing (Audit) table/entity with Microsoft Dataverse."
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
@@ -222,6 +222,9 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |120|**Restore**|
 |121|**ApplicationBasedAccessDenied**|
 |122|**ApplicationBasedAccessAllowed**|
+|123|**Create - AI assisted**|
+|124|**Update - AI assisted**|
+|125|**Read Unmasked**|
 
 ### <a name="BKMK_AttributeMask"></a> AttributeMask
 

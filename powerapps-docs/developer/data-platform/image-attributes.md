@@ -3,9 +3,9 @@ title: "Work with image column definitions using code"
 description: "Learn about how to create, retrieve, update and delete image column definitions using code." 
 ms.date: 01/17/2024
 ms.reviewer: jdaly
-ms.topic: article
-author: mkannapiran
-ms.author: kamanick
+ms.topic: how-to
+author: MsSQLGirl
+ms.author: jukoesma
 ms.subservice: dataverse-developer
 search.audienceType: 
   - developer
@@ -227,7 +227,7 @@ More information: [Query schema definitions](query-schema-definitions.md)
 
 # [Web API](#tab/webapi)
 
-This request returns all the image column definitions for the account table. The filtering is provided by specifying `/Microsoft.Dynamics.CRM.ImageAttributeMetadata` in the URL. More information: [Retrieving attributes](webapi/query-metadata-web-api.md#retrieving-attributes)
+This request returns all the image column definitions for the account table. The filtering is provided by specifying `/Microsoft.Dynamics.CRM.ImageAttributeMetadata` in the URL. More information: [Retrieving attributes](webapi/query-metadata-web-api.md#retrieve-attributes)
 
 **Request:**
 

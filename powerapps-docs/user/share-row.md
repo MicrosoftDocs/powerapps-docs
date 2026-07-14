@@ -4,7 +4,7 @@ description: How to share a row with a user or team.
 author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 10/27/2021
 ms.subservice: end-user
 ms.author: smurkute

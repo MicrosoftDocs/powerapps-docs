@@ -5,7 +5,7 @@ ms.date: 12/04/2024
 author: MattB-msft
 ms.author: mbarbour
 ms.reviewer: pehecke
-ms.topic: article
+ms.topic: how-to
 applies_to: 
   - "Dynamics 365 (online)"
 search.audienceType: 
@@ -74,7 +74,7 @@ CrmServiceClient svc = new CrmServiceClient(connectionstring);
 if (svc != null && svc.IsReady)  
 {   
     string fetchXML =   
-        @"<fetch version='1.0' output-format='xml-platform' mapping='logical' distinct='false' returntotalrecordcount='true' >  
+        @"<fetch returntotalrecordcount='true' >  
             <entity name='account'>  
               <attribute name='accountid' />  
             </entity>  

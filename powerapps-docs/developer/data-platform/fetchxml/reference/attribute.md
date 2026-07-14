@@ -1,8 +1,8 @@
 ---
 title: attribute element
-description: Use this element to specify which columns in the containing entity or link-entity element should be returned.
-author: pnghub
-ms.author: gned
+description: Use this element to specify which columns in the containing entity or link-entity element to return.
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 ms.date: 07/12/2024
 ms.topic: reference

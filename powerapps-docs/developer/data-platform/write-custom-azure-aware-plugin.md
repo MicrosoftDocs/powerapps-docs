@@ -1,9 +1,9 @@
 ---
 title: "Write a custom Azure-aware plug-in (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn how to write plug-in code that can post a message or the execution context of the current database transaction to the Azure Service Bus."
-ms.date: 07/19/2024
-author: MicroSri
-ms.author: sriknair
+ms.date: 06/08/2026
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: pehecke
 ms.topic: article
 ms.subservice: dataverse-developer
@@ -115,7 +115,7 @@ In your plug-in code, you can update the writeable data in the context before in
 
 ## Plug-in registration
 
-There are a few restrictions when you register an Azure-aware custom plug-in. The plug-in must be registered to execute in the sandbox. Sandbox registration limits the plug-in to calling <xref:Microsoft.Xrm.Sdk.IOrganizationService> methods, Azure solution methods, or accessing a network using a web client. No other external access, such as access to a local file system, is allowed.  
+There are a few restrictions when you register an Azure-aware custom plug-in. The plug-in must be registered to execute in the sandbox. Sandbox registration limits the plug-in to calling <xref:Microsoft.Xrm.Sdk.IOrganizationService> methods, Azure solution methods, or accessing a network using a web client.  
   
 For a plug-in registered to execute in asynchronous mode, the order of plug-in execution compared to other asynchronous plug-ins isn't guaranteed. In addition, asynchronous plug-ins always execute after the Dataverse core operation.  
   

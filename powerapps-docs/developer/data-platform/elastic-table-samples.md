@@ -3,8 +3,8 @@ title: Elastic table sample code
 description: Learn about the sample code that is available on GitHub for Dataverse elastic table operations and the ExecuteCosmosSqlQuery message.
 ms.topic: article
 ms.date: 12/04/2023
-author: pnghub
-ms.author: gned
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 contributors:
  - sumantb-msft
@@ -23,6 +23,9 @@ The following sample applications on GitHub show how to use code to work with el
 - Use the `ExecuteCosmosSqlQuery` message.
 - Use the `DeleteMultiple` message with the [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) to delete elastic table records in bulk.
 
+> [!NOTE]
+> The [DeleteMultipleRequest Class](/dotnet/api/microsoft.xrm.sdk.messages.deletemultiplerequest) is now available to use.
+
 > [!div class="nextstepaction"]
 > [SDK for .NET elastic tables sample](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/CSharp-NETCore/ElasticTableOperations/README.md)
 
@@ -33,7 +36,7 @@ The following sample applications on GitHub show how to use code to work with el
 - Use the [CreateMultiple action](xref:Microsoft.Dynamics.CRM.CreateMultiple) to create elastic table records.
 - Use the [UpdateMultiple action](xref:Microsoft.Dynamics.CRM.UpdateMultiple) to set JSON data for a column.
 - Use the [ExecuteCosmosSqlQuery function](xref:Microsoft.Dynamics.CRM.ExecuteCosmosSqlQuery) to query JSON data in columns.
-- Use the `DeleteMultiple` action to delete elastic table records in bulk.<!--TODO Add link -->
+- Use the [DeleteMultiple action](xref:Microsoft.Dynamics.CRM.DeleteMultiple) to delete elastic table records in bulk.
 
 > [!div class="nextstepaction"]
 > [Web API elastic tables sample](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/CSharp-NETx/ElasticTableOperations/README.md)

@@ -1,9 +1,10 @@
 ---
 title: "Web API  Data operations  Samples (C#) (Microsoft Dataverse)| Microsoft Docs"
 description: "This article provides a description of various Web API samples that are implemented using C#"
+ms.topic: sample
 ms.date: 09/03/2022
-author: MicroSri
-ms.author: sriknair
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType:
   - developer

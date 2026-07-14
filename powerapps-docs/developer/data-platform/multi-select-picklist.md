@@ -1,11 +1,11 @@
 ---
-title: "Choices columns (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about choices columns that allow storing multiple choices in a single column." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 01/09/2023
+title: Choices columns
+description: "Learn about choices columns that allow storing multiple choices in a single column."
+ms.date: 08/11/2025
 ms.reviewer: jdaly
 ms.topic: article
-author: mkannapiran
-ms.author: kamanick
+author: MsSQLGirl
+ms.author: jukoesma
 ms.subservice: dataverse-developer
 search.audienceType: 
   - developer
@@ -14,14 +14,14 @@ contributors:
 ---
 # Choices columns
 
-Customizers can define a column that allows selection of multiple options. The <xref:Microsoft.Xrm.Sdk.Metadata.MultiSelectPicklistAttributeMetadata> class defines a column type that inherits from the <xref:Microsoft.Xrm.Sdk.Metadata.EnumAttributeMetadata> class. Just like the <xref:Microsoft.Xrm.Sdk.Metadata.PicklistAttributeMetadata> class, this column includes an <xref:Microsoft.Xrm.Sdk.Metadata.OptionSetMetadata.Options?text=OptionSetMetadata.Options> property that contains the valid options for the column. The difference is that the values you get or set are an <xref:Microsoft.Xrm.Sdk.OptionSetValueCollection> type that contains an array of integers representing the selected options. Formatted values for this column are a semi-colon separated string containing the labels of the selected options.
+Customizers can define a column that allows selection of multiple options. The <xref:Microsoft.Xrm.Sdk.Metadata.MultiSelectPicklistAttributeMetadata> class defines a column type that inherits from the <xref:Microsoft.Xrm.Sdk.Metadata.EnumAttributeMetadata> class. Just like the <xref:Microsoft.Xrm.Sdk.Metadata.PicklistAttributeMetadata> class, this column includes an [OptionSetMetadata.Options](xref:Microsoft.Xrm.Sdk.Metadata.OptionSetMetadata.Options) property that contains the valid options for the column. The difference is that the values you get or set are an <xref:Microsoft.Xrm.Sdk.OptionSetValueCollection> type that contains an array of integers representing the selected options. Formatted values for this column are a semi-colon separated string containing the labels of the selected options.
 
 > [!NOTE]
-> Only the publisher of a managed solution can import changes that delete an option from a global option set. This includes Microsoft published solutions such as the out of box global option sets. In order to make a change to the option sets, an Upgrade must be made to the solution that added the option set. More information: [Upgrade or update a solution](../../maker/data-platform/update-solutions.md). Users can manually delete an option in their environment if they are unable to modify the solution or contact the solution publisher, but this must be done on every environment manually.
+> Only the publisher of a managed solution can import changes that delete an option from a global option set. This behavior includes Microsoft published solutions such as the out of box global option sets. In order to make a change to the option sets, an upgrade must be made to the solution that added the option set. [Learn about upgrading or updating a solution](../../maker/data-platform/update-solutions.md). Users can manually delete an option in their environment if they're unable to modify the solution or contact the solution publisher, but this must be done on every environment manually.
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
-With the Web API, this column is defined using the <xref:Microsoft.Dynamics.CRM.MultiSelectPicklistAttributeMetadata?text=MultiSelectPicklistAttributeMetadata EntityType>.
+With the Web API, this column is defined using the [MultiSelectPicklistAttributeMetadata EntityType](xref:Microsoft.Dynamics.CRM.MultiSelectPicklistAttributeMetadata).
 
 Just like choices columns, there's technically no upper limit on the number of options that can be defined. Usability considerations should be applied as the limiting factor. However only 150 options can be selected for a single column. Also, a default value can't be set.
 
@@ -93,7 +93,7 @@ service.Create(contact);
 
 ## Query data from choices
 
-Two new condition operators have been added to support querying values in choices:
+Two condition operators support querying values in choices:
 
 |Web API|FetchXml|<xref:Microsoft.Xrm.Sdk.Query.ConditionOperator>|
 |---------|---------|---------|
@@ -101,7 +101,7 @@ Two new condition operators have been added to support querying values in choice
 |<xref:Microsoft.Dynamics.CRM.DoesNotContainValues>|`not-contain-values`|<xref:Microsoft.Xrm.Sdk.Query.ConditionOperator.DoesNotContainValues>|
 
 > [!NOTE]
-> These operators depend on full-text indexing to be applied on the database tables that store the multiple values. There is some latentcy after new records are created and the full-text index takes effect. You may need to wait several seconds after new records are created before filters using these operators can evaluate the values.
+> These operators depend on full-text indexing to be applied on the database tables that store the multiple values. There's some latency after new records are created and the full-text index takes effect. You might need to wait several seconds after new records are created before filters using these operators can evaluate the values.
 
 Other existing condition operators that can be used with this type of column include the following:
 
@@ -252,7 +252,7 @@ The following code shows the use of FetchXml with Web API and SDK for .NET.
 This example shows the use of the `not-contain-values` operator in the following `FetchXml` query using the Web API.
 
 ```xml
-<fetch distinct='false' no-lock='false' mapping='logical'>
+<fetch>
     <entity name='contact'>
         <attribute name='fullname' />
         <attribute name='sample_outdooractivities' />
@@ -316,12 +316,12 @@ Preference-Applied: odata.include-annotations="OData.Community.Display.V1.Format
 
 #### [SDK for .NET](#tab/sdk)
 
-This sample shows the use of the `not-contain-values` using <xref:Microsoft.Dynamics.CRM.FetchExpression> using <xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple%2A?text=IOrganizationService.RetrieveMultiple>.
+This sample shows the use of the `not-contain-values` using <xref:Microsoft.Dynamics.CRM.FetchExpression> using [IOrganizationService.RetrieveMultiple](xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple%2A).
 
 ```csharp
 //Retrieving contacts who do not like hiking:
 //Using Fetch Expression
-string fetchXml = @"<fetch distinct='false' no-lock='false' mapping='logical'>
+string fetchXml = @"<fetch>
                      <entity name='contact'>
                       <attribute name='fullname' />
                       <attribute name='sample_outdooractivities' />
@@ -358,9 +358,9 @@ foreach (Contact contact in nonHikers.Entities)
 
 ## Create choices with code
 
-The easiest way to create choices is to use the column editor in the customization tools. More information: [How to create and edit columns](../../maker/data-platform/create-edit-fields.md)
+The easiest way to create choices is to use the column editor in the customization tools. [Learn how to create and edit columns](../../maker/data-platform/create-edit-fields.md)
 
-But if you need to automate creation of this kind of column you can use C# code like the following with the SDK for .NET that creates choices to allow choices of outdoor activities to the `contact` table. More information: [Create columns](org-service/metadata-attributemetadata.md#create-columns)
+If you need to automate creation of this kind of column, you can use the following C# code with the SDK for .NET that creates choices to allow choices of outdoor activities to the `contact` table. [Learn more about creating columns](org-service/metadata-attributemetadata.md#create-columns)
 
 ```csharp
 private const int _languageCode = 1033; //English

@@ -1,11 +1,11 @@
 ---
-title: Canvas component properties (preview)
+title: Canvas component properties
 description: Using properties in canvas components.
 author: jorisdg
 ms.subservice: canvas-developer
-ms.topic: article
-ms.date: 01/07/2025
-ms.author: jorisde
+ms.topic: how-to
+ms.date: 06/6/2025
+ms.author: mamali
 ms.reviewer: mkaur
 search.audienceType:
   - maker
@@ -13,26 +13,24 @@ search.app:
   - PowerApps
 contributors:
   - jorisdg
+  - mamali
 ---
-# Canvas component properties (preview)
+# Canvas component properties
 
-[Canvas components](./create-component.md) allow makers to create different types of properties to relay values or logic between the component and the app that is hosting the component. Properties are an essential part of creating interactive and reusable components.
+[Canvas components](./create-component.md) let makers create different types of properties to pass values or logic between the component and the app that hosts the component. Properties are essential for building interactive, reusable components.
 
-> [!IMPORTANT]
-> - This is a preview feature.
-> - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2189520), and are available before an official release so that customers can get early access and provide feedback.
 
 ## Prerequisites
 
-Before you can use this feature, it needs to be turned on in your app settings.
+This feature is on by default for new apps. For existing apps, you need to turn it on in your app settings.
 
 1. Open your [canvas app for editing](edit-app.md) in Power Apps Studio. On the command bar, select **Settings** > **Updates**.
 
-1. On the **Preview** tab, find and turn on the **Enhanced component properties** settings.
+1. On the **New** tab, find and turn on the **Enhanced component properties** setting.
 
 ## Types of properties
 
-There are four types of properties available to makers:
+There are four types of properties available to makers.
 
 1. [Data properties](component-properties.md#data-property): Data properties pertain to data, like a color or text value. A **Data** property can be set to be **Input** or **Output**, which indicates if the component provides data to the app (**Output**) or the app provides data to the component (**Input**). **Data** properties are the only properties that participate in app data flow.
 2. [Function properties](component-properties.md#function-property): Function properties are related to logic, such as performing a calculation based on specific parameters or altering text. A **Function** property can be set to be **Input** or **Output**, which indicates if the component provides a function the app can call (**Output**), or the app provides a function the component can call (**Input**). **Function** properties do not participate in an app's data flow, and cannot use component or app variables.
@@ -42,7 +40,7 @@ There are four types of properties available to makers:
 
 ### Data property
 
-A data property's usage is easy to imagine. Standard controls in apps typically have several data properties, to set default values, text color, size, etc. Let's look at a simple example where we wish to make properties of a control within the component available to the hosting app. In this example, our component is named `Component1`. We will put a slider control in inside our component. We will have an **Input** property to specify the color from the consuming app, and an **Output** property where the component can tell the app what the current value of the slider is. The following example assumes your component contains a **Slider** control named `Slider`.
+A data property's usage is easy to imagine. Standard controls in apps typically have several data properties, to set default values, text color, size, etc. Let's look at a simple example where you want to make properties of a control within the component available to the hosting app. In this example, the component is named `Component1`. Put a slider control inside the component. Add an **Input** property to specify the color from the consuming app, and an **Output** property so the component can tell the app the current value of the slider. This example assumes the component has a **Slider** control named `Slider`.
 
 1. In the property pane of the component, select **New custom property**.
 2. On the **New custom property** pane, enter display name `Slider Color`.
@@ -50,11 +48,11 @@ A data property's usage is easy to imagine. Standard controls in apps typically 
 4. Finally, from the **Data type** dropdown, select **Color**.
 5. Click **Create**.
 
-Next, select the `Slider1` **Slider** control. Find its **ValueFill** property and in the formula bar, enter `Component1.SliderColor`. `Component1` refers to the name of our component, and `SliderColor` is the name of the property we added previously.
+Next, select the `Slider1` **Slider** control. Find its **ValueFill** property and in the formula bar, enter `Component1.SliderColor`. `Component1` is the name of the component, and `SliderColor` is the name of the property you added.
 
-Now our component has a `SliderColor` property which can be set in the consuming app, to pass a color into the component to set the slider's **ValueFill** property.
+Now the component has a `SliderColor` property that can be set in the consuming app to pass a color into the component and set the slider's **ValueFill** property.
 
-We also wish to provide the value of the slider to the consuming app. To accomplish this, we will add an **Output** property.
+You might also want to provide the value of the slider to the consuming app. To do this, add an **Output** property.
 
 1. In the property pane of the component, select **New custom property**.
 2. On the **New custom property** pane, enter display name `Slider Value`.
@@ -62,36 +60,36 @@ We also wish to provide the value of the slider to the consuming app. To accompl
 4. Finally, from the **Data type** dropdown, select **Number**.
 5. Click **Create**.
 
-When a **Data** property is **Output**, the component provides the value to the consuming app. To set the formula for this, we need to set the new `SliderValue` property in the component to the **Value** property of the slider.
+When a **Data** property is **Output**, the component provides the value to the consuming app. To set the formula, set the new `SliderValue` property in the component to the **Value** property of the slider.
 
 1. In the property pane of the component, click on the `Slider Value` property.
 2. In the formula bar, replace the default value of `100` with the following formula: `Slider1.Value`.
 
-Now our component's `SliderValue` property will reflect the value of the slider inside the component, which can then be read from the consuming app.
+Now the component's `SliderValue` property reflects the value of the slider inside the component, which the consuming app can read.
 
 ### Function property
 
-A function property contains an expression that returns a value. Typically, the function takes some arguments which it uses to calculate or determine the value to return.
+A function property contains an expression that returns a value. Typically, the function takes arguments that it uses to calculate the value to return.
 
 > [!NOTE]
 > Function properties currently cannot access variables or component values and properties, and cannot trigger data flow. Any required values have to be passed in as arguments.
 
 An **Output** function is a simple way to create a custom function for Power Apps. The component defines an **Output** function with an expression that takes some arguments and returns a value. This function can then be used in an app using the component's name (say `Component1`) by calling `Component1.MyFunction(arg1, arg2)`.
 
-An **Input** function is a way for a consuming app to provide logic to a component, similar to a function pointer or callback function. For example, your component may be dealing with people's names and have an input function with arguments `firstname` and `lastname` and respects a string back. The app could define the function expression to return `$"{firstname} {lastname}"` or it could choose to define an expression for `$"{lastname}, {firstname}"`. The component can just call the function the app maker has provided, and use the returned string.
+An **Input** function lets a consuming app provide logic to a component, similar to a function pointer or callback function. For example, if the component works with people's names, it can have an input function with arguments `firstname` and `lastname` and expects a string back. The app can define the function expression to return `$"{firstname} {lastname}"` or `$"{lastname}, {firstname}"`. The component calls the function the app maker provides and uses the returned string.
 
 ### Action property
 
-Action properties are similar to function properties of type **Output**, but they allow side-effect formulas, and expression chaining. A component could have an action property named `AddRecord` that allows the app to add a record to a collection inside the component, or a `Reset` action that clears variables or collections inside the component.
+Action properties are similar to function properties of type **Output**, but they allow side-effect formulas and expression chaining. A component can have an action property named `AddRecord` that lets the app add a record to a collection inside the component, or a `Reset` action that clears variables or collections inside the component.
 
-In the example of the slider examples used for the **Data property** earlier, we can introduce an action property called `ResetValue` to set the slider back to its default value. We can use the formula `Reset( Slider1 )` for this. Now, instances of our component in the app can call `Component1.ResetValue()` to set the slider back to the default value.
+In the earlier slider example for the **Data property**, you can add an action property called `ResetValue` to set the slider back to its default value. Use the formula `Reset( Slider1 )` for this. Now, instances of the component in the app can call `Component1.ResetValue()` to set the slider back to the default value.
 
 ### Event property
 
-There are many common **Event**-type properties, effectively input behavior function properties, in standard controls. **OnSelect** on the button control is the most obvious example. A component could define any number of event properties, and call these events like a function. For example, a component that has a button control could have an event property named `OnButtonClicked`. In the button control's **OnSelect** the component can call its `Component1.OnButtonClicked()` property. A consuming app can then define its own logic for this property, to act when the button inside the component is pressed.
+Many standard controls have common **Event**-type properties, which are input behavior function properties. **OnSelect** on the button control is a common example. A component can define event properties and call these events like a function. For example, a component with a button control can have an event property named `OnButtonClicked`. In the button control's **OnSelect**, the component can call its `Component1.OnButtonClicked()` property. A consuming app can define its own logic for this property to act when the button inside the component is pressed.
 
 ## Default values for properties or arguments
 
-Default values can provide a default value for an argument or property in case none is set. This doesn't makes sense for some types of properties. However, in some cases they can be used to provide an expected schema for a record. By providing a default record, a record type is established as the expected schema.
+Default values give an argument or property a value if none is set. This doesn't make sense for some types of properties. In some cases, you can use default values to show the expected schema for a record. By providing a default record, you set the record type as the expected schema.
 
-For example, an **Action** property named `AddRecord` accepts a record to be added to a local collection. To provide the schema of the expected record, a maker has to add a default value for this `AddRecord` property's argument.
+For example, an **Action** property named `AddRecord` takes a record to add to a local collection. To show the schema of the expected record, add a default value for the `AddRecord` property's argument.

@@ -2,9 +2,10 @@
 title: Understand Power Apps Studio in Dataverse for a Teams environment | Microsoft Docs
 description: Learn the components inside Power Apps Studio in Teams.
 author: jessicaszelo
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: 
-ms.date: 07/7/2022
+ai-usage: ai-assisted
+ms.date: 05/20/2026
 ms.subservice: teams
 ms.author: szlo
 ms.reviewer: mkaur
@@ -17,6 +18,9 @@ contributors:
 
 When you create a canvas app by using any method, you're taken to the canvas app
 builder called Power Apps Studio. You can use Power Apps Studio to design, build, and manage your canvas app.
+
+> [!NOTE]
+> The Teams experience changes frequently. If the current Teams UI or screenshots in this article don't match what you see, use the option names and overall flow as your guide.
 
 ## Overview of Power Apps Studio
 
@@ -477,9 +481,8 @@ Select **Media** to add images, video, or audio files to your app. Adding media 
 
 :::image type="content" source="media/studio-media.png" alt-text="Media.":::
 
-If you want to reference more media, consider using [audio and video controls with URLs](../maker/canvas-apps/add-images-pictures-audio-video.md#add-images-audio-or-video-using-the-controls),
-using media from [Azure Media Services](../maker/canvas-apps/add-images-pictures-audio-video.md#add-media-from-azure-media-services),
-or from [Microsoft Stream](../maker/canvas-apps/controls/control-stream-video.md#example).
+If you want to reference more media, consider using [audio and video controls with URLs](../maker/canvas-apps/add-images-pictures-audio-video.md#add-images-audio-or-video-by-using-the-controls),
+using media from [Azure Media Services](../maker/canvas-apps/add-images-pictures-audio-video.md#add-media-from-azure-media-services).
 More information: [Using multimedia files in Power Apps](../maker/canvas-apps/add-images-pictures-audio-video.md)
 
 ## 9 – Canvas/screen
@@ -508,7 +511,9 @@ authoring a canvas app has no impact on the aspect ratio configured for the app 
 ### See also
 
 [Use the Fluent UI controls](use-the-fluent-ui-controls.md)  
-[Overview of the Power Apps app](overview-of-the-power-apps-app.md)
+[Overview of the Power Apps app](overview-of-the-power-apps-app.md)  
+[Manage your apps in Teams](manage-your-apps.md)  
+[Create tables in Microsoft Teams](create-table.md)
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

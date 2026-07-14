@@ -1,7 +1,7 @@
 ---
 title: "ElasticFileAttachment table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the ElasticFileAttachment table/entity with Microsoft Dataverse."
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
@@ -138,7 +138,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`objectid`|
 |RequiredLevel|None|
 |Type|Lookup|
-|Targets|componentversionnrddatasource, sourcecontrolcomponentpayload|
+|Targets|componentchangesetpayload, componentversionnrddatasource, sourcecontrolcomponentpayload|
 
 ### <a name="BKMK_ObjectIdTypeCode"></a> ObjectIdTypeCode
 
@@ -353,7 +353,7 @@ One-To-Many Relationship: [componentversionnrddatasource componentversionnrddata
 |ReferencedEntity|`componentversionnrddatasource`|
 |ReferencedAttribute|`componentversionnrddatasourceid`|
 |ReferencingAttribute|`objectid`|
-|ReferencingEntityNavigationPropertyName|`objectid`|
+|ReferencingEntityNavigationPropertyName|`objectid_componentversionnrddatasource`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 

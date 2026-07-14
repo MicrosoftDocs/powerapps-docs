@@ -5,7 +5,7 @@ ms.date: 01/30/2023
 author: MicroSri
 ms.author: sriknair
 ms.reviewer: jdaly
-ms.topic: "conceptual"
+ms.topic: concept-article
 search.audienceType: 
   - developer
 contributors: 

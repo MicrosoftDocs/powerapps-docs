@@ -1,13 +1,13 @@
 ---
 title: "Convert an email to a template in model-driven apps | MicrosoftDocs"
 description: How to convert an email to a template
-author: shwetamurkute
+author: paulliew
 
 ms.component: pa-user
-ms.topic: conceptual
-ms.date: 6/30/2021
+ms.topic: how-to
+ms.date: 02/12/2025
 ms.subservice: end-user
-ms.author: smurkute
+ms.author: paulliew
 ms.custom: ""
 ms.reviewer: smurkute
 ms.assetid: 
@@ -32,11 +32,10 @@ The following window will display with a list you can customize.
 
 Legend 
    1. **Template name**. Assign your email template a detailed name you want to save for future use.
-   2. **Permission level**. You can share the template you create with your **Organization** or as  **Individual** for personal use.
+   2. **Permission level**. Select from **Organization** or **Individual**. More information: [Permission level for email templates](email-template-create.md#permission-level-for-email-templates)
    3. **Category**. The default for this field is set to **User**.
    4. **Language**. You can display your installed language packs in this field. **Language** also helps to categorize your templates. 
    5. **Convert**. Once an email is formatted, you can convert it to an email template.
-
 
 ## View an email template
 

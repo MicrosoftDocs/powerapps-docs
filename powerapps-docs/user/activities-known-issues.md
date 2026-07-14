@@ -4,7 +4,7 @@ description: Email FAQs and known issues.
 author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: faq
 ms.date: 06/30/2021
 ms.subservice: end-user
 ms.author: smurkute

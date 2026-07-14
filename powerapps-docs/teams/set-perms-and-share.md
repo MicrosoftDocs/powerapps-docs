@@ -1,13 +1,14 @@
 ---
 title: Set permission and share your app using Power Apps in Teams | Microsoft Docs
 description: Learn how to share your apps and set table permissions using Power Apps in Teams.
-author: matthewbolanos
+author: mduelae
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: 
-ms.date: 07/18/2022
+ai-usage: ai-assisted
+ms.date: 05/20/2026
 ms.subservice: teams
-ms.author: mabolan
+ms.author: mkaur
 ms.reviewer: mkaur
 contributors:
   - mduelae
@@ -16,6 +17,9 @@ contributors:
 # Set permission and share apps with colleagues
 
 After collaboration with your team to build an app, as an owner of the team, you can share the app and its underlying data with other colleagues within your company that don't belong to your development team.
+
+> [!NOTE]
+> The Teams experience changes frequently. If the current Teams UI or screenshots in this article don't match what you see, use the option names and overall flow as your guide.
 
 To share an app:
 
@@ -47,6 +51,8 @@ By default, the **Colleagues with access** role has no access to the data inside
 - **Reference** – Provides a read-only view of data for end users.
 
 - **Private** ­– Allows end users to only view and edit their own data.
+
+Use **Full access** or **Collaborate** when colleagues need to edit data, and use **Reference** when they only need read-only access.
 
 > [!NOTE]
 > You can also use this experience to alter the default access rights for
@@ -81,6 +87,9 @@ To set the permissions of a table:
 
 1. Repeat the above steps for the remaining tables in your app.
 
+> [!IMPORTANT]
+> When using **Share app with Colleagues in the Microsoft Teams app store** and the security group doesn't exist in the Dataverse organization, the Teams app will be created and assigned the **Basic User** role. 
+
 ## Assign the colleagues with access role to a security group and share the app
 
 After you’ve completed setting the permissions to all your tables, you’re now
@@ -89,7 +98,7 @@ ready to share the app with an existing security group.
 > [!NOTE]
 > - You can share an app to a single security group.
 > - If you want to share the app to a Microsoft 365 group, it must be [security enabled](../maker/canvas-apps/share-app.md#share-an-app-with-microsoft-365-groups).
-> - The security group's membership type must be **Assigned**. More information: [Group membership types in Azure Active Directory](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal#membership-types)
+> - The security group's membership type must be **Assigned**. More information: [Group membership types in Microsoft Entra ID](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal#membership-types)
 > - Your Power Apps administrator may have applied the limit to the maximum size of the security group. By default, this limit is 10,000 members. More information: [List tenant settings (preview) - powerPlatform.teamsIntegration.shareWithColleaguesUserLimit](/power-platform/admin/list-tenantsettings), [Set-TenantSettings](/powershell/module/microsoft.powerapps.administration.powershell/set-tenantsettings)
 
 To share an app:
@@ -126,3 +135,5 @@ If you're a tenant administrator, you can go one step forward and pin the apps f
 ### See also
 
 [Publish your app in Teams](publish-and-share-apps.md)
+[Manage your apps in Teams](manage-your-apps.md)
+[Set table permissions in Dataverse for Teams](dataverse-for-teams-table-permissions.md)

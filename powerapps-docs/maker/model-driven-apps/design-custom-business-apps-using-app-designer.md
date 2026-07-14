@@ -1,10 +1,9 @@
 ---
-title: "Design model-driven apps by using the app designer | MicrosoftDocs"
+title: "Design model-driven apps by using the app designer"
 description: Learn how to design model-driven apps
 ms.collection: get-started
-ms.date: 06/27/2018
+ms.date: 02/12/2026
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: get-started
@@ -24,12 +23,12 @@ search.audienceType:
 
 # Design model-driven apps using the classic app designer
 
-With Power Apps, model-driven apps are comprised of components such as [tables](model-driven-app-glossary.md#table), [forms](model-driven-app-glossary.md#form), [views](model-driven-app-glossary.md#view), [dashboards](model-driven-app-glossary.md#dashboard) and [business process flows](model-driven-app-glossary.md#business-process-flow).  
+With Power Apps, model-driven apps are comprised of components such as [tables](model-driven-app-glossary.md#table), [forms](model-driven-app-glossary.md#form), [views](model-driven-app-glossary.md#view), [dashboards](model-driven-app-glossary.md#dashboard), and [business process flows](model-driven-app-glossary.md#business-process-flow).  
 
-As the model-driven apps have evolved so too have the ways in which the various elements are edited.  This article describes the method of creating an app using the classic app designer.
+As model-driven apps have evolved so too have the ways in which the various elements are edited.  This article describes the method of creating an app using the classic app designer.
 
-> [!TIP]
-> Use the modern app designer to build your apps. More information: [Create a model-driven app using the app designer](create-model-driven-app.md)
+> [!IMPORTANT]
+> This article describes how to use the classic app designer. Use the modern app designer to build your apps. More information: [Create a model-driven app using the app designer](create-model-driven-app.md)
   
 The [app designer](model-driven-app-glossary.md#app-designer) helps all these components to be brought together quickly. Its tile-based information structure and simplified interface make the process of building an app much easier, and apps that are specific to business roles and functions can be brought together without having to write any code.  
   

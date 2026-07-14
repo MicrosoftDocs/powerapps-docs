@@ -1,8 +1,8 @@
 ---
 title: condition operator values
 description: Use these values in a condition element operator attribute to specify how to evaluate the condition.
-author: pnghub
-ms.author: gned
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 ms.date: 03/08/2024
 ms.topic: reference

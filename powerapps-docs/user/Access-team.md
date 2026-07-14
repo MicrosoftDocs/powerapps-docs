@@ -4,7 +4,7 @@ description: How to share records using Access Team
 author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 12/11/2018
 ms.subservice: end-user
 ms.author: smurkute

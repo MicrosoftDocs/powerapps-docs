@@ -3,7 +3,7 @@ title: Map input fields of a component
 description: Learn about how to map input fields of a component to the table or record.
 author: jorisdg
 ms.subservice: canvas-developer
-ms.topic: article
+ms.topic: how-to
 ms.date: 06/01/2022
 ms.author: jorisde
 ms.reviewer: mkaur

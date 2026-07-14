@@ -5,8 +5,9 @@ author: denise-msft
 ms.author: demora
 ms.reviewer: matp
 ms.service: powerapps
+ms.subservice: dataverse-maker
 ms.topic: how-to
-ms.date: 06/06/2024
+ms.date: 02/23/2026
 ms.custom: template-how-to
 contributors:
 - sriknair
@@ -15,6 +16,9 @@ contributors:
 # Explore and test Dataverse in the Web API playground (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
+
+> [!IMPORTANT]
+> The Dataverse accelerator, monitor plug-ins, and API playground features are deprioritized and aren't be delivered as features. For information about preview feature availability, go to [Power Apps preview program](../../powerapps-preview-program.md).
 
 The API playground is a preauthenticated software testing tool that helps makers quickly and conveniently interact with the [Microsoft Dataverse Web API](/power-apps/developer/data-platform/webapi/overview).
 
@@ -134,7 +138,7 @@ The tool uses the authentication token of the logged in user that is required to
 
 ### Is the API playground feature available in all environments?
 
-The feature is delivered through the Dataverse accelerator and is available in all environments that have the app installed. The app is automatically installed in all new environments, but can also be installed in older environments by following the [install instructions](dataverse-accelerator.md#install-the-dataverse-accelerator).
+The feature is delivered through the Dataverse accelerator and is available in all environments that have the app installed. The app is automatically installed in all new environments, but can also be installed in older environments by following the [install instructions](dataverse-accelerator.md#install-or-update-the-dataverse-accelerator).
 
 ## See also
 

@@ -1,6 +1,6 @@
 ---
 title: "Object Output Component Sample| Microsoft Docs"
-description: "Learn how you can use the object outout APIs."
+description: "Learn how you can use the object output APIs."
 author: anuitz
 ms.author: anuitz
 ms.date: 06/07/2023
@@ -13,7 +13,7 @@ contributors:
 
 # Object Output Component
 
-[This article is pre-release documentation and is subject to change.]
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
 This sample component shows how to use object type output properties. This component generates a static object and output via a property which then can be accessed in a canvas app or via client APIs in a model form.
 
@@ -56,7 +56,7 @@ We also need to create a property dependency between these two properties.
 </property-dependencies>
 ```
 
-In the index.ts file we need to add [getOutputSchema](../reference/control/getoutputschema.md) method to provide the output object schema. When the control is added to a Canvas App, the platform will call to this method prior to control initialization to receive the output object(s) schema(s).
+In the index.ts file, we need to add [getOutputSchema](../reference/control/getoutputschema.md) method to provide the output object schema. When the control is added to a Canvas App, the platform calls to this method before control initialization to receive the output object(s) schema(s).
 
 ```typescript
 public async getOutputSchema(context: ComponentFramework.Context<IInputs>): Promise<Record<string, unknown>> {
@@ -76,7 +76,7 @@ public getOutputs(): IOutputs {
 }
 ```
 
-The `onLoadData` method will be called when the **Load Data** button is pressed to load the data to the output object and notify the platform about the output changes. This will trigger onChange behavior in the Canvas App for the control or [OnOutputChange](../../model-driven-apps/clientapi/reference/events/onoutputchange.md) event for client APIs.
+The `onLoadData` method is called when the **Load Data** button is pressed to load the data to the output object and notify the platform about the output changes. This triggers onChange behavior in the Canvas App for the control or [OnOutputChange](../../model-driven-apps/clientapi/reference/events/onoutputchange.md) event for client APIs.
 
 ```typescript
 private onLoadData = async () => {
@@ -86,7 +86,7 @@ private onLoadData = async () => {
 }
 ```
 
-### Related topics
+### Related articles
 
 [onOutputChange Event](../../model-driven-apps/clientapi/reference/events/onoutputchange.md)  
 [StandardControl.getOutputSchema](../reference/control/getoutputschema.md)  

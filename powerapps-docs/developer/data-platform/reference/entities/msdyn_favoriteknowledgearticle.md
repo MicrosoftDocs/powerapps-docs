@@ -1,7 +1,7 @@
 ---
 title: "Favorite knowledge article (msdyn_favoriteknowledgearticle) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Favorite knowledge article (msdyn_favoriteknowledgearticle) table/entity with Microsoft Dataverse."
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
@@ -522,7 +522,7 @@ One-To-Many Relationship: [knowledgearticle msdyn_knowledgearticle_favoriteknowl
 |ReferencingAttribute|`msdyn_knowledgearticleid`|
 |ReferencingEntityNavigationPropertyName|`msdyn_knowledgearticleid`|
 |IsHierarchical||
-|CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+|CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_owner_msdyn_favoriteknowledgearticle"></a> owner_msdyn_favoriteknowledgearticle
 

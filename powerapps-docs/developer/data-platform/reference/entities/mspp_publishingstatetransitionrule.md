@@ -1,7 +1,7 @@
 ---
 title: "Publishing State Transition Rule (mspp_publishingstatetransitionrule) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Publishing State Transition Rule (mspp_publishingstatetransitionrule) table/entity with Microsoft Dataverse."
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 

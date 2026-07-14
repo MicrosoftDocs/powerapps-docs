@@ -3,8 +3,8 @@ title: Long-term data retention
 description: Learn how to use retention policies to transfer data from your Microsoft Dataverse transactional database to a managed data lake for cost-efficient long-term storage.
 ms.date: 12/12/2024
 ms.topic: how-to
-author: pnghub
-ms.author: gned
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: pehecke
 ms.subservice: dataverse-developer
 search.audienceType: 

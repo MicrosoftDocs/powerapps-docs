@@ -3,7 +3,7 @@ title: Register a WebHook
 description: Learn how to register a WebHook using the Plug-in Registration tool.
 ms.date: 03/22/2022
 ms.reviewer: pehecke
-ms.topic: article
+ms.topic: how-to
 author: swylezol
 ms.subservice: dataverse-developer
 ms.author: swylezol

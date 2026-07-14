@@ -3,7 +3,7 @@ title: Collaborative troubleshooting using Live monitor
 description: Learn about collaborative troubleshooting using Live monitor with features such as inviting a user or connecting a user to monitor.
 author: mattgon
 ms.subservice: troubleshoot
-ms.topic: conceptual
+ms.topic: troubleshooting-general
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 11/14/2024

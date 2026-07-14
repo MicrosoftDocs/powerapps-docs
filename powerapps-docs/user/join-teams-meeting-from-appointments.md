@@ -4,7 +4,7 @@ description: Create and join a Teams meeting from an appointment
 author: shwetamurkute
 ms.service: powerapps
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 10/25/2022
 ms.subservice: end-user
 ms.author: smurkute

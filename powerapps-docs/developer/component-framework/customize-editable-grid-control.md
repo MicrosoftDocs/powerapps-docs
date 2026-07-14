@@ -6,7 +6,7 @@ author: clromano
 ms.author: clromano
 ms.date: 07/25/2022
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: how-to
 ms.subservice: pcf
 contributors:
  - JimDaly
@@ -61,7 +61,7 @@ The template control is included in the [PowerApps-Samples](https://github.com/m
    ```
 
    > [!NOTE]
-   > If the function returns null or undefined, then the grid will use the internal renderer/editor for the targeted cells.
+   > If the function returns null or undefined, then the grid uses the internal renderer/editor for the targeted cells.
     
 1. After defining your custom cell renderers and editors, **package** the grid customizer control and **import** it to your Power Apps environment. Alternatively, you can use the [pac pcf push](/power-platform/developer/cli/reference/pcf#pac-pcf-push) command.
 1. After publishing the grid customizer control, open the **Customize the system** panel from the **Settings > Customizations** menu.

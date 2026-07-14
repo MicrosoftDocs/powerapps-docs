@@ -1,9 +1,9 @@
 ---
-title: "Sample: Web access from a plug-in (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how to write a plug-in that can access resources on the World Wide Web." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Sample: Web access from a plug-in (Microsoft Dataverse) | Microsoft Docs"
+description: "Learn how to write a plug-in that can access resources on the World Wide Web." 
 ms.date: 01/24/2025
-author: MicroSri
-ms.author: sriknair
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: pehecke
 ms.topic: sample
 search.audienceType:

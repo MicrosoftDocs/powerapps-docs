@@ -1,6 +1,96 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/samples/convert-fax-task.md",
+      "redirect_url": "../../activity-entities",
+      "redirect_document_id": "false"
+    },   
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/samples/assign-chart-to-another-user.md",
+      "redirect_url": "../../../model-driven-apps/customize-visualizations-dashboards",
+      "redirect_document_id": "false"
+    }, 
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/samples/assign-dashboard-to-another-user.md",
+      "redirect_url": "../../../model-driven-apps/customize-visualizations-dashboards",
+      "redirect_document_id": "false"
+    }, 
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/samples/create-retrieve-update-delete-charts.md",
+      "redirect_url": "../../../model-driven-apps/customize-visualizations-dashboards",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/samples/create-retrieve-update-delete-dashboards.md",
+      "redirect_url": "../../../model-driven-apps/customize-visualizations-dashboards",
+      "redirect_document_id": "false"
+    }, 
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/samples/retrieve-charts-attached-to-entity.md",
+      "redirect_url": "../../../model-driven-apps/customize-visualizations-dashboards",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/code-apps/quickstart.md",
+      "redirect_url": "how-to/create-an-app-from-scratch",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/data-export-service.md",
+      "redirect_url": "https://aka.ms/DESDeprecationBlog",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/samples/enable-field-security-entity.md",
+      "redirect_url": "column-level-security",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/samples/retrieve-field-permissions.md",
+      "redirect_url": "column-level-security",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/samples/retrieve-field-sharing-records.md",
+      "redirect_url": "column-level-security",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/field-security-entities.md",
+      "redirect_url": "column-level-security",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/calculated-rollup-attributes.md",
+      "redirect_url": "specialized-columns.md",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/deletemultiple.md",
+      "redirect_url": "bulk-operations#deletemultiple",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/test-engine/overview.md",
+      "redirect_url": "/power-platform/important-changes-coming#deprecation-of-test-engine",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/test-engine/powerfx.md",
+      "redirect_url": "/power-platform/important-changes-coming#deprecation-of-test-engine",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/test-engine/yaml.md",
+      "redirect_url": "/power-platform/important-changes-coming#deprecation-of-test-engine",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/quick-start-register-configure-simplespa-application-msal-js.md",
+      "redirect_url": "webapi/quick-start-js-spa",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/developer/data-platform/webapi/query-data-web-api.md",
       "redirect_url": "query/overview",
       "redirect_document_id": "false"
@@ -4102,7 +4192,7 @@
     },
     {
       "source_path": "powerapps-docs/developer/common-data-service/field-security-entities.md",
-      "redirect_url": "../data-platform/field-security-entities",
+      "redirect_url": "../data-platform/column-level-security",
       "redirect_document_id": false
     },
     {
@@ -5022,7 +5112,12 @@
     },
     {
       "source_path": "powerapps-docs/developer/common-data-service/org-service/samples/assign-record-to-new-owner.md",
-      "redirect_url": "../../../data-platform/org-service/samples/assign-record-to-new-owner",
+      "redirect_url": "../../../data-platform/org-service/samples/assign-records-to-team",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/samples/assign-record-to-new-owner.md",
+      "redirect_url": "./assign-records-to-team",
       "redirect_document_id": false
     },
     {
@@ -8932,7 +9027,7 @@
     },
     {
       "source_path": "powerapps-docs/maker/canvas-apps/working-with-dynamic-schema.md",
-      "redirect_url": "/power-apps/maker/canvas-apps/untyped-and-dynamic-objects#converting-formulas-that-return-untyped-objects-that-previously-returned-boolean",
+      "redirect_url": "/power-apps/maker/canvas-apps/untyped-and-dynamic-objects#converting-formulas-that-return-dynamic-values-that-previously-returned-boolean",
       "redirect_document_id": false
     },
     {
@@ -9146,6 +9241,16 @@
       "redirect_document_id": "false"
     },
     {
+      "source_path": "powerapps-docs/user/cs-template-options.md",
+      "redirect_url": "/power-apps/user/email-template-create",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/user/cs-email-template-builder.md",
+      "redirect_url": "/power-apps/user/email-template-create",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/maker/portals/control-portal-creation.md",
       "redirect_url": "/power-pages/admin/control-site-creation",
       "redirect_document_id": "false"
@@ -9306,9 +9411,775 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "powerapps-docs/maker/canvas-apps/customize-list-form.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/sharepoint-list-integration-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/sharepoint-scenario-alerts-flow.md",
+      "redirect_url": "/power-bi/collaborate-share/service-flow-integration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/sharepoint-scenario-approval-flow.md",
+      "redirect_url": "/power-automate/create-approval-response-options",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/sharepoint-scenario-build-app.md",
+      "redirect_url": "/powerapps-docs/maker/index",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/sharepoint-scenario-build-report.md",
+      "redirect_url": "/power-bi/create-reports/service-quick-create-sharepoint-list",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/sharepoint-scenario-embed-report.md",
+      "redirect_url": "/power-bi/collaborate-share/service-embed-report-spo",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/sharepoint-scenario-generate-app.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/sharepoint-list-integration-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/sharepoint-scenario-intro.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/sharepoint-list-integration-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/sharepoint-scenario-publish-report.md",
+      "redirect_url": "/power-bi/paginated-reports/paginated-reports-save-to-power-bi-service",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/sharepoint-scenario-setup.md",
+      "redirect_url": "/powerapps-docs/maker/canvas-apps/app-from-sharepoint",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/sharepoint-scenario-summary.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/sharepoint-list-integration-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/sharepoint/scenarios-choice-to-lookup.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/sharepoint-list-integration-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/sharepoint/scenarios-customize-view-based-on-column-status.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/sharepoint-list-integration-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/sharepoint/scenarios-filter-search-list.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/sharepoint-list-integration-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/sharepoint/scenarios-intro.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/sharepoint-list-integration-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/sharepoint/scenarios-lookup-list-permissions.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/sharepoint-list-integration-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/sharepoint/scenarios-sharepoint-form-from-scratch.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/sharepoint-list-integration-overview",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "powerapps-docs/webinars.md",
       "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/model-driven-apps/powerbi-control.md",
+      "redirect_url": "/power-apps/maker/model-driven-apps/create-edit-powerbi-embedded-page",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/common/maker-matching.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/ai-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/data-platform-create-app.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/get-started-create-from-blank",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/get-started-create-from-data.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/get-started-create-from-blank",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/connections/connection-excel.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/get-started-create-from-blank",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/how-to-excel-tips.md",
+      "redirect_url": "https://support.microsoft.com/en-us/office/create-and-format-tables-e81aa349-b006-4f8a-9806-5af9df0ac664",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/sample-crisis-communication-app.md",
+      "redirect_url": "https://learn.microsoft.com",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/sample-apps/emergency-response/overview.md",
+      "redirect_url": "https://learn.microsoft.com",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/sample-apps/emergency-response/use.md",
+      "redirect_url": "https://learn.microsoft.com",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/sample-apps/emergency-response/configure-data-reporting.md",
+      "redirect_url": "https://learn.microsoft.com",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/sample-apps/emergency-response/deploy-configure.md",
+      "redirect_url": "https://learn.microsoft.com",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/sample-apps/emergency-response-data-transfer.md",
+      "redirect_url": "https://learn.microsoft.com",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/sample-apps/regional-emergency-response/deploy.md",
+      "redirect_url": "https://learn.microsoft.com",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/sample-apps/regional-emergency-response/upgrade.md",
+      "redirect_url": "https://learn.microsoft.com",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/sample-apps/regional-emergency-response/overview.md",
+      "redirect_url": "https://learn.microsoft.com",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/sample-apps/regional-emergency-response/configure.md",
+      "redirect_url": "https://learn.microsoft.com",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/sample-apps/regional-emergency-response/portals-admin-reporting.md",
+      "redirect_url": "https://learn.microsoft.com",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/sample-apps/regional-emergency-response/portals-user.md",
+      "redirect_url": "https://learn.microsoft.com",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/sample-apps/crisis-financial-impact-tracker/deploy-solution.md",
+      "redirect_url": "https://learn.microsoft.com",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/sample-apps/crisis-financial-impact-tracker/overview.md",
+      "redirect_url": "https://learn.microsoft.com",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/sample-apps/crisis-financial-impact-tracker/configure-dashboards.md",
+      "redirect_url": "https://learn.microsoft.com",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/sample-apps/crisis-financial-impact-tracker/use-mobile-app.md",
+      "redirect_url": "https://learn.microsoft.com",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/sample-apps/crisis-financial-impact-tracker/configure-data.md",
+      "redirect_url": "https://learn.microsoft.com",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/transform-infopath.md",
+      "redirect_url": "/power-apps/maker/canvas-apps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/chatbots.md",
+      "redirect_url": "/microsoft-copilot-studio/authoring-first-bot",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/common/virtual-agent.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/ai-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/power-apps-ideas-train-examples.md",
+      "redirect_url": "../../../power-apps/maker/canvas-apps/power-apps-ideas-transform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/common/build-ai-plugin-for-copilot.md",
+      "redirect_url": "../../../microsoft-copilot-studio/microsoft-copilot-extend-action-connector",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/common/ai-plugin.md",
+      "redirect_url": "../../../microsoft-copilot-studio/microsoft-copilot-extend-action-connector",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/use-ai-builder.md",
+      "redirect_url": "../ai-builder/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/user/smartGrid.md",
+      "redirect_url": "../../power-apps/maker/model-driven-apps/power-apps-grid-control",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/user/well-written-input-text-copilot.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/common/faq-draft-with-copilot.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/common-performance-issue-resolutions.md",
+      "redirect_url": "../../../power-apps/maker/canvas-apps/create-performant-apps-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/model-driven-apps/build-app-three-steps.md",
+      "redirect_url": "../../../power-apps/maker/model-driven-apps/build-first-model-driven-app",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/monitor-app-performance.md",
+      "redirect_url": "../../power-apps/maker/common/monitor-app-performance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/card-requirements.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/overview.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/make-a-card/ui-elements/data-binding.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/make-a-card/ui-elements/controls.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/make-a-card/ui-elements/use-buttons.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/make-a-card/designer-overview.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/send-a-card/send-card-with-flow.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/send-a-card/send-card-in-teams.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/tutorials/dataverse-card.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/tutorials/hello-world-card.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/tutorials/simple-shopping-list.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/controls/button.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/controls/modern-controls/modern-controls-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/controls/button-set.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/controls/modern-controls/modern-controls-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/controls/check-box.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/controls/modern-controls/modern-controls-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/controls/column.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/controls/modern-controls/modern-controls-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/controls/column-set.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/controls/modern-controls/modern-controls-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/controls/container.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/controls/modern-controls/modern-controls-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/controls/control-reference.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/controls/modern-controls/modern-controls-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/controls/date-picker.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/controls/modern-controls/modern-controls-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/controls/drop-down.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/controls/modern-controls/modern-controls-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/controls/fact-set.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/controls/modern-controls/modern-controls-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/controls/image.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/controls/modern-controls/modern-controls-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/controls/image-set.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/controls/modern-controls/modern-controls-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/controls/media.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/controls/modern-controls/modern-controls-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/controls/number-input.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/controls/modern-controls/modern-controls-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/controls/table.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/controls/modern-controls/modern-controls-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/controls/text-input.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/controls/modern-controls/modern-controls-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/controls/text-label.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/controls/modern-controls/modern-controls-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/controls/time-picker.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/controls/modern-controls/modern-controls-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/manage-cards/data-loss-prevention.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/manage-cards/delete-cards.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/manage-cards/manage-access.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/manage-cards/manage-cards.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/make-a-card/connectors/connector-intro.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/make-a-card/power-fx/intro-to-pfx.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/make-a-card/screens/use-screens.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/make-a-card/testing/debugging-cards.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/make-a-card/variables/variables.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/express-design.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/get-started-test-drive",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/app-from-image.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/get-started-test-drive",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/figma/common-errors.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/get-started-test-drive",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/figma/create-app-from-figma.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/get-started-test-drive",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/figma/design-using-kit.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/get-started-test-drive",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/figma/overview.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/get-started-test-drive",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/figma/supported-components.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/get-started-test-drive",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/model-driven-apps/configure-suggested-actions.md",
+      "redirect_url": "/power-apps/maker/model-driven-apps/add-agents-to-app",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/user/use-suggested-actions-in-the-agent-feed.md",
+      "redirect_url": "/power-apps/user/supervise-agents-with-agent-feed",
+      "redirect_document_id": false
+    },
+    {  
+      "source_path": "powerapps-docs/developer/component-framework/publish-components-app-source.md",
+      "redirect_url": "/power-apps/developer/component-framework/publish-components-marketplace",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/controls/control-stream-video.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/controls/modern-controls/new-stream-video-control",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/patterns/approval-pattern.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/patterns/asset-management-pattern.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/patterns/calculator-pattern.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/patterns/communication-pattern.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/patterns/inspection-pattern.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/patterns/more-patterns.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/patterns/overview.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/patterns/project-management-pattern.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/introduction.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/controls/modern-controls/limitations-modern-controls.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/controls/modern-controls/modern-controls-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/app-development-approaches.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/app-tasks.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/app-type.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/create-edit-data.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/data-modeling.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/decisions-approvals.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/defining-app-project-objective.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/defining-business-value.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/defining-project-schedule.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/defining-project-scope.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/designing-phase.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/discoverability.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/enterprise-systems.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/example-expense-reporting.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/feedback-telemetry.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/gaining-support.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/identifying-business-problem-to-solve.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/identifying-project-members.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/identifying-risks.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/logic.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/making-phase.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/measuring-success.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/next-task.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/optimizing-business-process.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/planning-phase.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/prioritizing-features.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/project-tasks-owners.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/security.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/sketching.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/testing-phase.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/understanding-current-business-process.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/visually-map-process.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/what-activities.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/what-data-needed.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/what-is-task.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/where-is-data.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/who-is-doing-work.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/guidance/planning/worth-automating-process.md",
+      "redirect_url": "/power-apps/maker/plan-designer/plan-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/get-started-test-drive.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/create-blank-app",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/common/performance-insights-overview.md",
+      "redirect_url": "/power-apps/maker/common/monitor-app-performance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/common/performance-insights-categories.md",
+      "redirect_url": "/power-apps/maker/common/monitor-app-performance",
       "redirect_document_id": false
     }
   ]
 }
+

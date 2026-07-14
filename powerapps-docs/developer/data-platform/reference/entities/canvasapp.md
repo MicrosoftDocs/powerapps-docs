@@ -1,7 +1,7 @@
 ---
 title: "Canvas App (CanvasApp) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Canvas App (CanvasApp) table/entity with Microsoft Dataverse."
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
@@ -331,6 +331,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |1|**App Component Library**|
 |2|**Custom Canvas Page**|
 |3|**Unified App**|
+|4|**Code App**|
+|5|**Mobile App**|
 
 ### <a name="BKMK_CdsDependencies"></a> CdsDependencies
 

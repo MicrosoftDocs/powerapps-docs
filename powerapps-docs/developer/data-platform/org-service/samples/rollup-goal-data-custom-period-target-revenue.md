@@ -1,6 +1,6 @@
 ---
-title: "Sample: Rollup goal data for a custom period against the target avenue (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample shows how to roll up goal data for a custom period against the target revenue" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Sample: Rollup goal data for a custom period against the target revenue"
+description: "This sample shows how to roll up goal data for a custom period against the target revenue"
 ms.date: 04/03/2022
 author: JimDaly #TODO: No Owner
 ms.author: jdaly
@@ -11,8 +11,6 @@ search.audienceType:
 ---
 
 # Sample: Rollup goal data for a custom period against the target revenue
-
-<!-- https://learn.microsoft.com/dynamics365/customer-engagement/developer/sample-rollup-goal-data-custom-period-target-revenue -->
 
 This sample shows how to roll up goal data for a custom period against the target revenue.
 

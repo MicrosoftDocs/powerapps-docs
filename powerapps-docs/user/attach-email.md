@@ -4,7 +4,7 @@ description: Learn how to attach a file to email.
 author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: article
 ms.date: 02/01/2024
 ms.subservice: end-user
 ms.author: smurkute

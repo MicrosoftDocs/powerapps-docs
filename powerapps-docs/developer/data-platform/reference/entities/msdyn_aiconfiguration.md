@@ -1,7 +1,7 @@
 ---
 title: "AI Configuration (msdyn_AIConfiguration) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the AI Configuration (msdyn_AIConfiguration) table/entity with Microsoft Dataverse."
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
@@ -785,7 +785,7 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |Property|Value|
 |---|---|
 |Description|**This is a file type attribute to store Ai builder Model.**|
-|DisplayName|**msdyn_Model**|
+|DisplayName|**msdyn\_Model**|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`msdyn_model`|
@@ -1047,7 +1047,7 @@ One-To-Many Relationship: [msdyn_aimodel msdyn_aimodel_msdyn_aiconfiguration](ms
 |ReferencingAttribute|`msdyn_aimodelid`|
 |ReferencingEntityNavigationPropertyName|`msdyn_AIModelId`|
 |IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `Cascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_msdyn_createdfromconfiguration_msdyn_toconfiguration-many-to-one"></a> msdyn_createdfromconfiguration_msdyn_toconfiguration
 
@@ -1072,6 +1072,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [msdyn_aiconfiguration_FileAttachments](#BKMK_msdyn_aiconfiguration_FileAttachments)
 - [msdyn_aiconfiguration_MailboxTrackingFolders](#BKMK_msdyn_aiconfiguration_MailboxTrackingFolders)
 - [msdyn_aiconfiguration_msdyn_aiconfiguration](#BKMK_msdyn_aiconfiguration_msdyn_aiconfiguration-one-to-many)
+- [msdyn_aiconfiguration_msdyn_aievent](#BKMK_msdyn_aiconfiguration_msdyn_aievent)
 - [msdyn_aiconfiguration_msdyn_aiodtrainingimage](#BKMK_msdyn_aiconfiguration_msdyn_aiodtrainingimage)
 - [msdyn_aiconfiguration_PrincipalObjectAttributeAccesses](#BKMK_msdyn_aiconfiguration_PrincipalObjectAttributeAccesses)
 - [msdyn_aiconfiguration_ProcessSession](#BKMK_msdyn_aiconfiguration_ProcessSession)
@@ -1136,6 +1137,18 @@ Many-To-One Relationship: [msdyn_aiconfiguration msdyn_aiconfiguration_msdyn_aic
 |ReferencingEntity|`msdyn_aiconfiguration`|
 |ReferencingAttribute|`msdyn_trainedmodelaiconfigurationpareid`|
 |ReferencedEntityNavigationPropertyName|`msdyn_aiconfiguration_msdyn_aiconfiguration`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_msdyn_aiconfiguration_msdyn_aievent"></a> msdyn_aiconfiguration_msdyn_aievent
+
+Many-To-One Relationship: [msdyn_aievent msdyn_aiconfiguration_msdyn_aievent](msdyn_aievent.md#BKMK_msdyn_aiconfiguration_msdyn_aievent)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_aievent`|
+|ReferencingAttribute|`msdyn_aiconfigurationid`|
+|ReferencedEntityNavigationPropertyName|`msdyn_aiconfiguration_msdyn_aievent`|
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
@@ -1215,6 +1228,22 @@ Many-To-One Relationship: [msdyn_aifptrainingdocument msdyn_msdyn_aiconfiguratio
 ## Many-to-Many relationships
 
 These relationships are many-to-many. Listed by **SchemaName**.
+
+- [msdyn_aidocumenttemplate_msdyn_aiconfig](#BKMK_msdyn_aidocumenttemplate_msdyn_aiconfig)
+- [msdyn_aiodlabel_msdyn_aiconfiguration](#BKMK_msdyn_aiodlabel_msdyn_aiconfiguration)
+
+### <a name="BKMK_msdyn_aidocumenttemplate_msdyn_aiconfig"></a> msdyn_aidocumenttemplate_msdyn_aiconfig
+
+See [msdyn_aidocumenttemplate msdyn_aidocumenttemplate_msdyn_aiconfig Many-To-Many Relationship](msdyn_aidocumenttemplate.md#BKMK_msdyn_aidocumenttemplate_msdyn_aiconfig)
+
+|Property|Value|
+|---|---|
+|IntersectEntityName|`msdyn_aiconfiguration_documenttemplate`|
+|IsCustomizable|False|
+|SchemaName|`msdyn_aidocumenttemplate_msdyn_aiconfig`|
+|IntersectAttribute|`msdyn_aiconfigurationid`|
+|NavigationPropertyName|`msdyn_aidocumenttemplate_msdyn_aiconfig`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_msdyn_aiodlabel_msdyn_aiconfiguration"></a> msdyn_aiodlabel_msdyn_aiconfiguration
 

@@ -1,7 +1,7 @@
 ---
 title: "Flow Log (flowlog) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Flow Log (flowlog) table/entity with Microsoft Dataverse."
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
@@ -60,13 +60,17 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [cloudflowrunidPId](#BKMK_cloudflowrunidPId)
 - [data](#BKMK_data)
 - [desktopflowid](#BKMK_desktopflowid)
+- [Duration](#BKMK_Duration)
 - [flowlogId](#BKMK_flowlogId)
 - [flowmachinegroupid](#BKMK_flowmachinegroupid)
 - [flowmachineid](#BKMK_flowmachineid)
 - [flowsessionid](#BKMK_flowsessionid)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
+- [InputsLocalizedNames](#BKMK_InputsLocalizedNames)
 - [level](#BKMK_level)
+- [LogIndex](#BKMK_LogIndex)
 - [Name](#BKMK_Name)
+- [OutputsLocalizedNames](#BKMK_OutputsLocalizedNames)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [parentobjectid](#BKMK_parentobjectid)
 - [parentobjectidIdType](#BKMK_parentobjectidIdType)
@@ -149,6 +153,20 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Lookup|
 |Targets|workflow|
 
+### <a name="BKMK_Duration"></a> Duration
+
+|Property|Value|
+|---|---|
+|Description|**Duration of the action in millisecond.**|
+|DisplayName|**Duration**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`duration`|
+|RequiredLevel|None|
+|Type|BigInt|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
+
 ### <a name="BKMK_flowlogId"></a> flowlogId
 
 |Property|Value|
@@ -214,6 +232,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxValue|2147483647|
 |MinValue|-2147483648|
 
+### <a name="BKMK_InputsLocalizedNames"></a> InputsLocalizedNames
+
+|Property|Value|
+|---|---|
+|Description|**Array of the names of the inputs.**|
+|DisplayName|**InputsLocalizedNames**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`inputslocalizednames`|
+|RequiredLevel|None|
+|Type|Memo|
+|Format|Text|
+|FormatName|Json|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100000|
+
 ### <a name="BKMK_level"></a> level
 
 |Property|Value|
@@ -238,6 +273,20 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |100000003|**Warning**|
 |100000004|**Error**|
 
+### <a name="BKMK_LogIndex"></a> LogIndex
+
+|Property|Value|
+|---|---|
+|Description|**Index of the log within the flow excution**|
+|DisplayName|**LogIndex**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`logindex`|
+|RequiredLevel|None|
+|Type|BigInt|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
+
 ### <a name="BKMK_Name"></a> Name
 
 |Property|Value|
@@ -254,6 +303,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|False|
 |MaxLength|100|
+
+### <a name="BKMK_OutputsLocalizedNames"></a> OutputsLocalizedNames
+
+|Property|Value|
+|---|---|
+|Description|**Array of the names of the outputs.**|
+|DisplayName|**OutputsLocalizedNames**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`outputslocalizednames`|
+|RequiredLevel|None|
+|Type|Memo|
+|Format|Text|
+|FormatName|Json|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100000|
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
@@ -326,7 +392,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Integer|
 |MaxValue|2147483647|
-|MinValue|1|
+|MinValue|-1|
 
 ### <a name="BKMK_type"></a> type
 
@@ -360,6 +426,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |100000201|**WorkqueueProcessorLog**|
 |100000300|**DesktopFlowOrchestrationRepairSessionMismatchRequest**|
 |100000301|**DesktopFlowOrchestrationRepairSessionMismatchResponse**|
+|100000310|**DesktopFlowOrchestrationRepairWindowsIdentityIncorrectRequest**|
+|100000311|**DesktopFlowOrchestrationRepairWindowsIdentityIncorrectResponse**|
+|100000400|**CuaStartSession**|
+|100000401|**CuaReasoningStep**|
+|100000402|**CuaWaitOrCompleteSession**|
+|100000403|**CuaHumanInTheLoopRequest**|
 
 ### <a name="BKMK_workqueueid"></a> workqueueid
 

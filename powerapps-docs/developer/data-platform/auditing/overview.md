@@ -1,7 +1,7 @@
 ---
-title: Auditing overview
-description: Learn how to programmatically use the auditing capability of Microsoft Dataverse to record data changes over time for use in analysis and reporting.
-ms.date: 06/02/2022
+title: Microsoft Dataverse Auditing Overview for Developers
+description: Learn how to programmatically use Microsoft Dataverse auditing to record and retrieve data changes. Configure audit settings, access audit history, and manage audit data for compliance and reporting.
+ms.date: 03/27/2026
 ms.topic: overview
 ms.subservice: dataverse-developer
 author: paulliew
@@ -20,9 +20,9 @@ ms.custom: bap-template
 Microsoft Dataverse provides capabilities to meet the external and internal auditing, compliance, security, and governance policies that are common to many enterprises. Dataverse logs both user access and changes that are made to records. You can use the auditing tables and APIs to create client applications or programmatically interact with auditing data.
 
 > [!NOTE]
-> Refer to [Administrator's Guide: Manage Dataverse auditing](/power-platform/admin/manage-dataverse-auditing) for a complete description of auditing concepts and capabilities, how it's exposed in apps, and tasks for administrators. The tables and APIs described here support client applications used by administrators and can be used by developers for integration projects. This content doesn't describe all auditing concepts and capabilities.
+> For a complete description of auditing concepts and capabilities, how auditing is exposed in apps, and tasks for administrators, see [Administrator's Guide: Manage Dataverse auditing](/power-platform/admin/manage-dataverse-auditing). The tables and APIs described in this article support client applications used by administrators and can be used by developers for integration projects. This article doesn't describe all auditing concepts and capabilities.
 
-You can use Dataverse tables and APIs to:
+Use Dataverse tables and APIs to:
 
 - Retrieve and change organization settings for auditing.
 - Detect which tables and columns are enabled for auditing.
@@ -34,10 +34,10 @@ You can use Dataverse tables and APIs to:
 
 Properties of the [Organization table](../reference/entities/organization.md) control how auditing is enabled for an environment. Retrieve column values to determine:
 
-- Whether auditing is enabled for the environment
-- The number of days to retain audit log records
-- Whether user access logging is enabled
-- How often user access is logged
+- Whether auditing is enabled for the environment.
+- The number of days to retain audit log records.
+- Whether user access logging is enabled.
+- How often user access is logged.
 
 If you have the System Administrator or System Customizer role, you can configure organization settings to change the auditing behavior.
 
@@ -45,9 +45,9 @@ If you have the System Administrator or System Customizer role, you can configur
 
 ## Table and column settings
 
-When auditing is enabled for the organization, audit data is recorded in the tables that are enabled for auditing whenever data changes.
+When you enable auditing for the organization, the system records audit data in the tables that you enable for auditing whenever data changes.
 
-When auditing is enabled for a table, the columns that are enabled for auditing are included in the audit data.
+When you enable auditing for a table, include the columns that you enable for auditing in the audit data.
 
 Use Dataverse APIs to query table and column definitions to determine which tables and columns are enabled for auditing.
 
@@ -57,7 +57,7 @@ If you have the System Administrator or System Customizer role, you can configur
 
 ## Retrieve audit history
 
-Audit history data is stored in the [Auditing (Audit) table](../reference/entities/audit.md). Use the following messages to retrieve audit history data:
+The system stores audit history data in the [Auditing (Audit) table](../reference/entities/audit.md). Use the following messages to retrieve audit history data:
 
 |Message|Description|
 |---------|---------|
@@ -69,12 +69,12 @@ Audit history data is stored in the [Auditing (Audit) table](../reference/entiti
 
 ## Delete audit data
 
-You may need to delete audit data to comply with a customer's request to delete their history or to free up log capacity space. You can't directly delete records in the [Auditing (Audit) table](../reference/entities/audit.md). Instead, Dataverse provides the following messages to delete audit history data:
+To comply with a customer's request to delete their history or to free up log capacity space, you might need to delete audit data. You can't directly delete records in the [Auditing (Audit) table](../reference/entities/audit.md). Instead, Dataverse provides the following messages to delete audit history data:
 
 |Message|Description|
 |---------|---------|
 |`DeleteRecordChangeHistory`|Deletes all the change history for a particular record.|
-|`BulkDelete`|Asynchronously deletes records identified by a query. This message can be used to delete large numbers of audit records without blocking other activities.|
+|`BulkDelete`|Asynchronously deletes records identified by a query. Use this message to delete large numbers of audit records without blocking other activities.|
 |`DeleteAuditData`|For customers using customer-managed encryption keys, this message deletes all audit data records up to a specified end date.|
 
 **More information**: [Delete audit data](delete-audit-data.md)

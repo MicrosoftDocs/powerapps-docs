@@ -1,7 +1,7 @@
 ---
 title: "connector table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the connector table/entity with Microsoft Dataverse."
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
@@ -70,9 +70,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [CustomCodeBlobContent](#BKMK_CustomCodeBlobContent)
 - [Description](#BKMK_Description)
 - [DisplayName](#BKMK_DisplayName)
+- [ExtensionAssemblyId](#BKMK_ExtensionAssemblyId)
 - [IconBlob](#BKMK_IconBlob)
 - [IconBrandColor](#BKMK_IconBrandColor)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
+- [Interfaces](#BKMK_Interfaces)
 - [IntroducedVersion](#BKMK_IntroducedVersion)
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [Name](#BKMK_Name)
@@ -248,6 +250,19 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsLocalizable|False|
 |MaxLength|200|
 
+### <a name="BKMK_ExtensionAssemblyId"></a> ExtensionAssemblyId
+
+|Property|Value|
+|---|---|
+|Description|**Unique identifier of the Extension assembly location containing the CustomCodeBlobContent.**|
+|DisplayName|**ExtensionAssemblyId**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`extensionassemblyid`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets||
+
 ### <a name="BKMK_IconBlob"></a> IconBlob
 
 |Property|Value|
@@ -295,6 +310,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Integer|
 |MaxValue|2147483647|
 |MinValue|-2147483648|
+
+### <a name="BKMK_Interfaces"></a> Interfaces
+
+|Property|Value|
+|---|---|
+|Description|**Interfaces of the Connector**|
+|DisplayName|**Interfaces**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`interfaces`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|4000|
 
 ### <a name="BKMK_IntroducedVersion"></a> IntroducedVersion
 

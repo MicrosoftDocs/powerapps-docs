@@ -1,26 +1,33 @@
-﻿---
-title: Handling errors in Power Apps
-description: Learn about best practices for error handling in Power Apps
-ms.date: 06/12/2024
-ms.topic: conceptual
-ms.subservice: guidance
-ms.service: power-platform
+---
+title: Error handling in Power Apps
+description: Discover best practices for error handling in Power Apps, including validation, patching, and custom error messages.
+#customer intent: As a Power Apps user, I want to understand how to handle validation errors so that I can ensure accurate user input in my app.
+ms.date: 02/26/2026
+ms.topic: best-practice
 author: robstand
 ms.author: rstand
-manager: 
+ms.reviewer: jhaskett-msft
+ms.custom:
+  - ai-gen-docs-bap
+  - ai-gen-description
+  - ai-seo-date:07/15/2025
 ---
 
 # Error handling
 
-Power Fx language has a new preview feature to enable Formula level error handling. This is by default turned On in the Settings.
+Power Fx supports formula-level error handling. This feature is turned on by default for all new apps. However, some older apps might have it turned off in app **Settings**. We recommend keeping this feature turned on.
 
-![A screenshot of Upcoming features in Settings showing Formula-level error management is set to On](media/image28.png)
+To check if this feature is turned on:
 
-This setting gives access to formulas like `IfError`, `IsError`, `Error`, and `IsBlankorError`. These functions allow you to detect errors, provide alternative values, or take specific actions based on the encountered error.
+1. Open a canvas app for editing.
+1. Go to the **Settings** > **Updates** > **Retired** tab.
+1. Make sure **Disable formula-level management** is turned off.
 
-## Validation Error Handling
+When this setting is enabled, you can use formulas like `IfError`, `IsError`, `Error`, and `IsBlankorError`. These functions help you detect errors, provide alternative values, or take specific actions based on the error. When you turn on this setting, you can write null or blank values to data sources. When you turn off this feature, errors are returned as blank values.
 
-Above functions can help with validating inputs such as incorrect format or required fields. Use `If` statements or functions like `IsBlank` and `IsError` to validate user input. Provide clear error messages and prevent further processing until the input is corrected.
+## Validation error handling
+
+These functions help validate inputs like incorrect formats or required fields. Use `If` statements or functions like `IsBlank` and `IsError` to validate user input. Provide clear error messages and prevent further processing until the input is corrected.
 
 ```powerappsfl
 If( IsBlank(TextInput.Text),
@@ -30,9 +37,9 @@ If( IsBlank(TextInput.Text),
 )
 ```
 
-## Patch Function Error Handling
+## Patch function error handling
 
-Similar to the previous example, `Error` functions can help catch errors while patching data to data source. `Patch` function reports errors in 2 ways.
+Similar to the previous example, `Error` functions help catch errors while patching data to a data source. The `Patch` function reports errors in two ways.
 
 It can return an error value as the result of the operations.
 
@@ -52,7 +59,7 @@ UpdateContext(
 )
 ```
 
-Errors can be detected with `IsError` and replaced or suppressed with `IfError`
+You can detect errors by using `IsError` and replace or suppress them by using `IfError`.
 
 ```powerappsfl
 IfError(result, Notify("There was an issue saving data" , NotificationType.Error));
@@ -74,9 +81,9 @@ If(
 )
 ```
 
-### Forms Error Handling
+### Forms error handling
 
-When using Forms to submit data via `SubmitForm` function, using Form control property `OnFailure` to notify the error message.
+When you use Forms to submit data by using the `SubmitForm` function, use the Form control property `OnFailure` to notify users of error messages.
 
 ```powerappsfl
 // OnSelect property of the form's submit button
@@ -89,11 +96,11 @@ Navigate('Success Screen');
 Notify("Error: the invoice could not be created", NotificationType.Error);
 ```
 
-### Custom Error Message with OnError Property
+### Custom error message by using the OnError property
 
-Power Apps `OnError` is a property on your app which lets you capture all your unhandled errors. The `OnError` property gives you the ability to execute an expression that runs every time an error is not handled by the app (such as storing it in a variable or using a function such as `IfError` to replace it with some other value). To use the [`OnError` property](/power-platform/power-fx/reference/object-app#onerror-property), you need to add it to the app that you want to apply it to. Then, you can specify the error message that you want to display by writing a formula in the `OnError` property box.
+The Power Apps `OnError` property captures all unhandled errors in your app. By using the `OnError` property, you can run an expression every time the app encounters an unhandled error. For example, you can store the error in a variable or use a function like `IfError` to replace the error with another value. To use the [`OnError` property](/power-platform/power-fx/reference/object-app#onerror-property), add it to the app where you want to handle errors. Then, write a formula in the `OnError` property box to specify the error message you want to display.
 
-It's important to note that `App.OnError` can't replace the error in the same way that `IfError` can. At the point that `App.OnError` is executed, the error has already happened, and the result has propagated through other formulas. `App.OnError` only controls how the error is reported to the end user and provides a hook for the maker to log the error if desired.
+`App.OnError` can't replace the error like `IfError` can. When `App.OnError` runs, the error already happened and the result already went through other formulas. `App.OnError` only controls how the error is reported to the end user. It also provides a way for the maker to log the error if they want.
 
 This code on `App.OnError` can help locate the source of the error:
 
@@ -109,6 +116,11 @@ Notify(
     NotificationType.Error
 )
 ```
+
+## Related information
+
+- [Power Fx error handling](/power-platform/power-fx/error-handling)
+
 ## Next step
 
 > [!div class="nextstepaction"]

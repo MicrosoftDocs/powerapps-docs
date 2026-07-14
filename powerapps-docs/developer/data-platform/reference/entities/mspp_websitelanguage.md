@@ -1,7 +1,7 @@
 ---
 title: "Website Language (mspp_websitelanguage) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Website Language (mspp_websitelanguage) table/entity with Microsoft Dataverse."
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
@@ -283,7 +283,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**This attribute is used only in Power Pages Management App, and only for UI purpose. It's value is mapped to mspp_systemlanguage.**|
+|Description|**This attribute is used only in Power Pages Management App, and only for UI purpose. It's value is mapped to mspp\_systemlanguage.**|
 |DisplayName|**Power Pages Language**|
 |IsValidForForm|True|
 |IsValidForRead|True|

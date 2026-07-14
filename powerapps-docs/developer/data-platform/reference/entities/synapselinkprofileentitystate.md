@@ -1,7 +1,7 @@
 ---
 title: "Synapse Link Profile Entity State (synapselinkprofileentitystate) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Synapse Link Profile Entity State (synapselinkprofileentitystate) table/entity with Microsoft Dataverse."
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
@@ -73,10 +73,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [LastSyncedMetadataTime](#BKMK_LastSyncedMetadataTime)
 - [LastSyncedMetadataVersion](#BKMK_LastSyncedMetadataVersion)
 - [MetadataState](#BKMK_MetadataState)
+- [MinSyncedDataVersion](#BKMK_MinSyncedDataVersion)
 - [name](#BKMK_name)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [profile](#BKMK_profile)
 - [profileentity](#BKMK_profileentity)
+- [SourceRecordCount](#BKMK_SourceRecordCount)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
 - [synapselinkprofileentitystateId](#BKMK_synapselinkprofileentitystateId)
@@ -148,7 +150,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |FormatName|Text|
 |ImeMode|Auto|
 |IsLocalizable|False|
-|MaxLength|64|
+|MaxLength|128|
 
 ### <a name="BKMK_EntitySource"></a> EntitySource
 
@@ -407,6 +409,20 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |8|**Created**|
 |16|**Failure**|
 
+### <a name="BKMK_MinSyncedDataVersion"></a> MinSyncedDataVersion
+
+|Property|Value|
+|---|---|
+|Description|**Last Synced Minimum Data Version**|
+|DisplayName|**MinSyncVersion**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`minsynceddataversion`|
+|RequiredLevel|None|
+|Type|BigInt|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
+
 ### <a name="BKMK_name"></a> name
 
 |Property|Value|
@@ -466,6 +482,20 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|SystemRequired|
 |Type|Lookup|
 |Targets|synapselinkprofileentity|
+
+### <a name="BKMK_SourceRecordCount"></a> SourceRecordCount
+
+|Property|Value|
+|---|---|
+|Description|**Source Record count**|
+|DisplayName|**SourceRecordCount**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`sourcerecordcount`|
+|RequiredLevel|None|
+|Type|BigInt|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
 
 ### <a name="BKMK_statecode"></a> statecode
 

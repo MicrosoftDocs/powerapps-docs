@@ -7,7 +7,7 @@ ms.author: caburk
 ms.reviewer: matp
 ms.date: 11/15/2022
 ms.subservice: mda-maker
-ms.topic: article
+ms.topic: how-to
 search.audienceType: 
   - maker
   - developer

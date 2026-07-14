@@ -1,6 +1,6 @@
 ---
-title: "Sample: Validate and execute saved query (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample shows how to validate and execute a saved query." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Sample: Validate and execute a saved query"
+description: "This sample shows how to validate and execute a saved query."
 ms.date: 04/03/2022
 author: JimDaly #TODO: No Owner
 ms.author: jdaly
@@ -14,10 +14,6 @@ contributors:
 ---
 
 # Sample: Validate and execute a saved query
-
-<!-- Needs supporting conceptual topic
-https://learn.microsoft.com/dynamics365/customer-engagement/developer/org-service/sample-validate-execute-saved-query
--->
 
 This sample shows how to use the [IOrganizationService.ValidateSavedQueryRequest](/dotnet/api/microsoft.crm.sdk.messages.validatesavedqueryrequest) message to validate a FetchXML query, and then use the [IOrganizationService.ExecuteByIdSavedQueryRequest](/dotnet/api/microsoft.crm.sdk.messages.executebyidsavedqueryrequest) message to execute the query.
 

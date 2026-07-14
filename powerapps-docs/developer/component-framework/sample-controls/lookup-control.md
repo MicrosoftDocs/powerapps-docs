@@ -41,7 +41,7 @@ You'll notice that each of the `Lookup Objects` buttons have the same `onClick` 
 In `getOutputs`, the component sends back the newly selected record to consume and update. In `updateView`, the component uses the raw value of both lookup properties to display the currently selected lookups for both bound properties.
 
 
-### Related topics
+### Related articles
 
 [Download sample components](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework)<br/>
 [How to use the sample components](../use-sample-components.md)<br/>

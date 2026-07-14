@@ -1,10 +1,10 @@
 ---
 title: "Query anti-patterns (Microsoft Dataverse)"
 description: "Read about patterns to avoid when constructing queries to retrieve data from Dataverse."
-ms.date: 01/06/2025
-ms.topic: article
-author: pnghub
-ms.author: gned
+ms.date: 09/10/2025
+ms.topic: how-to
+author: manasmams
+ms.author: manasma
 ms.reviewer: jdaly
 ms.subservice: dataverse-developer
 search.audienceType: 
@@ -74,7 +74,7 @@ Dataverse [heavily throttles](query-throttling.md) leading wild card queries tha
 > Name: `DataEngineLeadingWildcardQueryThrottling`<br />
 > Code: `0x80048644`<br />
 > Number: `-2147187132`<br />
-> Message: `This query cannot be executed because it conflicts with Query Throttling; the query uses a leading wildcard value in a filter condition, which will cause the query to be throttled more aggressively.`
+> Message: `This query cannot be executed because it conflicts with Query Throttling; the query uses a leading wildcard value in a filter condition, which will cause the query to be throttled more aggressively.`<br />or <br /> `This query is throttled as it negatively impacts the database health; the query uses a leading wildcard value in a filter condition, which will cause the query to be throttled more aggressively.`
 
 If you find yourself using leading wild card queries, look into these options:
 
@@ -90,13 +90,13 @@ As described in [Use wildcard characters in conditions for string values](wildca
 
 Dataverse heavily throttles queries with search strings that start with these other leading wildcard special characters.
 
-### Hyphen character
+### Hyphen and apostrophe (single quote) characters
 
-Database collation unicode sorting rules make some search strings that start with a hyphen ('-') perform like leading wildcard searches. Search strings that start with a hyphen can't take advantage of database indexes if the search string doesn't contain a nonwildcard character before the occurrence of the '%' character in the string. For example, `-%` and `-%234` can't efficiently use database indexes, while `-234%` can. Dataverse heavily throttles inefficient search strings that start with hyphens. To understand more about the database collation unicode sorting rules for hyphens, see [SQL Server collations](/sql/relational-databases/collations/collation-and-unicode-support#SQL-collations).
+Database collation unicode sorting rules make some search strings that start with a hyphen (`-`) or an apostrophe (`'`) perform like leading wildcard searches. Search strings that start with a hyphen or apostrophe can't take advantage of database indexes if the search string doesn't contain a nonwildcard character before the occurrence of the '%' character in the string. For example, `-%`, `-%234`, `'%`, and `'%751` can't efficiently use database indexes, while `-234%` and `'751%` can. Dataverse heavily throttles inefficient search strings that start with hyphens or apostrophes. To understand more about the database collation unicode sorting rules for hyphens and apostrophes, see [SQL Server collations](/sql/relational-databases/collations/collation-and-unicode-support#SQL-collations).
 
 ## <a name="FilteringOnCalculatedColumns"></a> Avoid using formula or calculated columns in filter conditions
 
-[Formula and calculated column](calculated-rollup-attributes.md#formula-and-calculated-columns) values are calculated in real-time when they're retrieved. Queries that use filters on these columns force Dataverse to calculate the value for each possible record that can be returned so the filter can be applied. Queries are slower because Dataverse can't improve the performance of these queries using SQL.
+[Formula and calculated column](specialized-columns.md#formula-and-calculated-columns) values are calculated in real-time when they're retrieved. Queries that use filters on these columns force Dataverse to calculate the value for each possible record that can be returned so the filter can be applied. Queries are slower because Dataverse can't improve the performance of these queries using SQL.
 
 When queries time out and this pattern is detected, Dataverse returns a unique error to help identify which queries are using this pattern:
 
@@ -110,7 +110,7 @@ Dataverse [heavily throttles](query-throttling.md) queries that have filters on 
 > Name: `DataEngineComputedColumnQueryThrottling`<br />
 > Code: `0x80048744`<br />
 > Number: `-2147186876`<br />
-> Message: `This query cannot be executed because it conflicts with Query Throttling; the query uses a computed column in a filter condition, which will cause the query to be throttled more aggressively.`
+> Message: `This query cannot be executed because it conflicts with Query Throttling; the query uses a computed column in a filter condition, which will cause the query to be throttled more aggressively.`<br />or <br /> `This query is throttled as it negatively impacts the database health; the query uses a computed column in a filter condition, which will cause the query to be throttled more aggressively.`
 
 ## <a name="OrderOnEnumAttribute"></a> Avoid ordering by choice columns
 

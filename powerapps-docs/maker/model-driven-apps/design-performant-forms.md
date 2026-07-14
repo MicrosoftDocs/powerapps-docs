@@ -1,18 +1,17 @@
 ---
-title: "Design forms for performance in model-driven apps | MicrosoftDocs"
-description: Learn how to customize forms for performance for your model-driven apps.
+title: "Design forms for performance in model-driven apps"
+description: Learn how to customize forms for performance for your model-driven apps with Power Apps.
 ms.custom: ""
-ms.date: 11/19/2021
+ms.date: 05/19/2026
 ms.reviewer: "Mattp123"
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "conceptual"
+ms.topic: how-to
 applies_to: 
   - "PowerApps"
-author: "mspilde"
+author: "Mattp123"
 ms.subservice: mda-maker
-ms.author: "mspilde"
+ms.author: "matp"
 search.audienceType: 
   - maker
 ---
@@ -218,6 +217,7 @@ Don't use the [console API methods]( https://developer.mozilla.org/en-US/docs/We
 #### Avoid memory leaks
 
 Memory leaks in your code can lead to slower performance over time and eventually cause your app to crash. Memory leaks occur when the application fails to release memory when no longer needed. With all customizations and code components on your form, you should:
+
 - Thoroughly consider and test scenarios for anything responsible for cleaning up memory, like classes responsible for managing lifecycle of objects.
 - Cleanup all event listeners and subscriptions, especially if it’s on the `window` object.
 - Cleanup all timers like `setInterval`.
@@ -230,10 +230,6 @@ For more information on fixing memory problems, go to [this Edge developer docum
 ## Tools you can use to help make apps performant
 
 This section describes the tools that can help you understand performance issues and offer recommendations about how to optimize your customizations in model-driven apps.
-
-### Performance insights
-
-Performance insights is a self-service tool for enterprise app makers that analyzes runtime telemetry data and provides a prioritized list of recommendations to help improve the performance of model-driven apps. This feature provides a daily set of analytic insights related to the performance of a Power Apps model-driven or customer engagement app, such as Dynamics 365 Sales or Dynamics 365 Service, with recommendations and actionable items. Enterprise app makers can view detailed performance insights at an app-level in Power Apps. More information: [What are performance insights? (preview)](../common/performance-insights-overview.md)
 
 ### Solution checker
 

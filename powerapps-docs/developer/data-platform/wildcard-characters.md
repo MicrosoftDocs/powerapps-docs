@@ -3,7 +3,7 @@ title: Use wildcard characters in conditions for string values
 description: Learn how to use wildcard characters in query conditions that use string values.
 ms.date: 06/04/2024
 ms.reviewer: jdaly
-ms.topic: conceptual
+ms.topic: article
 author: mayadumesh
 ms.author: mayadu
 ms.subservice: dataverse-developer

@@ -4,9 +4,9 @@ description: Learn how to use QueryExpression to order rows when you retrieve da
 ms.date: 05/12/2024
 ms.reviewer: jdaly
 ms.topic: how-to
-author: pnghub
+author: MsSQLGirl
 ms.subservice: dataverse-developer
-ms.author: gned
+ms.author: jukoesma
 search.audienceType: 
   - developer
 contributors:

@@ -2,7 +2,7 @@
 title: Use the Measuring Camera control in Power Apps
 description: Digitally measure distances, areas, and freeform shapes in the real world with augmented reality features in Power Apps.
 author: anuitz
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.date: 3/4/2022
 ms.reviewer: mkaur

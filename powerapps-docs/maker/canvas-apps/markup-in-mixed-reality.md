@@ -2,7 +2,7 @@
 title: Use the Markup in MR control in Power Apps
 description: Paint lines in 3D or draw 3D arrows with augmented reality features in Power Apps.
 author: anuitz
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.date: 4/26/2022
 ms.reviewer: mduelae

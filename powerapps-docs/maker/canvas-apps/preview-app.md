@@ -3,7 +3,7 @@ title: Preview your canvas apps
 description: Preview your app in Power Apps Studio to see how the app will look for your app users.
 author: tashaev
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 05/18/2023

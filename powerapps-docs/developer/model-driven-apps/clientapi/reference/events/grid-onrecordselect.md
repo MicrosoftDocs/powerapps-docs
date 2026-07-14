@@ -48,8 +48,8 @@ More information: [Create or edit model-driven app web resources](../../../../..
 
 Follow these steps to enable the **Power Apps grid control** as the main grid (table view) or within a model-driven form subgrid:
 
-- [Use as main grid](../../../../../maker/model-driven-apps/the-power-apps-grid-control.md#add-the-power-apps-grid-control-to-views-for-a-table)
-- [Use as subgrid](../../../../../maker/model-driven-apps/the-power-apps-grid-control.md#add-the-power-apps-grid-control-to-a-subgrid-on-a-form)
+- [Use as main grid](../../../../../maker/model-driven-apps/the-power-apps-grid-control.md#add-the-power-apps-grid-control-to-views-using-classic-solution-explorer)
+- [Use as subgrid](../../../../../maker/model-driven-apps/the-power-apps-grid-control.md#add-the-power-apps-grid-control-to-a-subgrid-using-classic-solution-explorer)
 
 ### Step 3: Register the custom behavior on OnRecordSelect Event
 

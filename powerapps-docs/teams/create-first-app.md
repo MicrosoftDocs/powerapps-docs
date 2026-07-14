@@ -3,9 +3,10 @@ title: Create your first app in Teams | Microsoft Docs
 description: Learn how to create your first app in Teams. 
 author: mduelae
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: get-started
-ms.date: 08/05/2021
+ai-usage: ai-assisted
+ms.date: 05/20/2026
 ms.subservice: teams
 ms.author: saperlmu
 ms.reviewer: mkaur-msft
@@ -17,9 +18,18 @@ contributors:
 
 # Create your first app in Microsoft Teams
 
-You can create, edit, and delete [canvas apps](../maker/canvas-apps/getting-started.md) in Teams. If you're creating an app by using Power Apps in a Teams team for the first time, a new Dataverse for Teams environment will be created for you. More information: [About the Dataverse for Teams environment](/power-platform/admin/about-teams-environment)
+You can create, edit, and delete [canvas apps](../maker/canvas-apps/getting-started.md) in Teams. If you're creating an app by using Power Apps in a Teams team for the first time, you also create a new Dataverse for Teams environment. For more information, see [About the Dataverse for Teams environment](/power-platform/admin/about-teams-environment).
 
-Creating an app in Microsoft Teams is a quick and easy 3-step process.
+## Prerequisites
+
+- A [Microsoft Teams license](/microsoftteams/get-clients) (included with most Microsoft 365 plans).
+- Power Apps for Teams doesn't require a standalone Power Apps license. The capability is included with your Teams license for apps that use Dataverse for Teams.
+- You must be a member of the team where you want to create the app.
+
+> [!NOTE]
+> The Teams user interface updates regularly. If the screenshots or steps in this article don't exactly match what you see, look for similar options in the current interface. The core workflow remains the same.
+
+Creating an app in Microsoft Teams is a quick and easy three-step process.
 
 1. [Create your app](#create-your-app)
 1. [Create your first table](#create-your-first-table)
@@ -48,50 +58,50 @@ After installing the Power Apps app template:
 
     ![Power Apps.](media/power-apps.png "Power Apps")
 
-1. You'll be prompted to select a team where you want to create the app. This is where the app will live. Team members can't see the app until you publish the app. You will also have an opportunity to share the app with colleagues within your company that are not part of the Team. More information: [Set permission and share apps with colleagues](set-perms-and-share.md)
+1. Select a team where you want to create the app. This is where the app lives. Team members can't see the app until you publish the app. You can also share the app with colleagues within your company that are not part of the team. For more information, see [Set permission and share apps with colleagues](set-perms-and-share.md).
 
     ![Select a team to create the app.](media/select-a-team-for-this-app.png "Select a team to create the app")
 
-    If this is the first app being created in the selected team, a new Dataverse for Teams environment will be created for the selected team. You'll see a message about this when you select the team. More information: [About the Dataverse for Teams environment](/power-platform/admin/about-teams-environment)
+    If this is the first app you're creating in the selected team, a new Dataverse for Teams environment is created for the selected team. You see a message about this when you select the team. For more information, see [About the Dataverse for Teams environment](/power-platform/admin/about-teams-environment).
 
     ![Creating the first app in a team.](media/select-a-team-for-this-app-environment.png "Creating the first app in a team")
 
-1. Select **Create**. You'll see a confirmation about the Dataverse for Teams environment being created, which might take some time. You'll be notified when the environment is available for you to create your first app with an email and a Teams notification.
+1. Select **Create**. You see a confirmation about the Dataverse for Teams environment being created, which might take some time. You're notified when the environment is available for you to create your first app by using an email and a Teams notification.
 
     ![First app in a team.](media/create-app-4.png "First app in a team")
 
     > [!NOTE]
-    > Environment creation will fail if the Teams team that you selected has *Hiddenmembership* enabled. If this happens, try creating the app in a different team. More information: [Hidden membership groups](known-issues-limitations.md#hidden-membership-groups)
+    > Environment creation fails if the Teams team that you selected has *Hiddenmembership* enabled. If this happens, try creating the app in a different team. For more information, see [Hidden membership groups](known-issues-limitations.md#hidden-membership-groups).
 
 1. Enter an app name, and then select **Save**.
 
     ![Name your app.](media/name-your-app.png "Name your app")
 
     > [!TIP]
-    > An app template is included with the app by default, so that you can get started with creating your table and using the app. More information: [Understand Power Apps Studio](understand-power-apps-studio.md)
+    > An app template is included with the app by default, so that you can get started with creating your table and using the app. For more information, see [Understand Power Apps Studio](understand-power-apps-studio.md).
 
 ## Create your first table
 
-Data for apps built in Teams lives in Dataverse for Teams environments as tables. Like other data experiences, you can add additional columns to track different attributes of each record before filling up the table with multiple rows of data.
+Data for apps built in Teams lives in Dataverse for Teams environments as tables. Like other data experiences, you can add extra columns to track different attributes of each record before filling the table with multiple rows of data.
 
 > [!TIP]
-> To learn about Dataverse for Teams tables in detail, go to [Overview of Dataverse for Teams](overview-data-platform.md).
+> For more information about Dataverse for Teams tables, see [Overview of Dataverse for Teams](overview-data-platform.md).
 
-To get started creating your first table:
+To create your first table:
 
 1. Select **With data**.
 
     ![Select With data](media/start-with-data.png "Select With data")
 
-1. Select **Create new table**.
+1. Select **Create new table** > **Start with blank table**.
 
     ![Create your first table.](media/create-first-table.png "Create your first table")
 
-1. In the **Create a table** dialog box, type a meaningful name for your
+1. In the **Create a table** dialog box, select **Edit table properties** and type a meaningful name for your
 new table that describes this dataset, and then select
-**Create**.
+**Save**.
 
-1. After the table is created, you can add columns of different types, add rows, and
+1. After the table is created, add columns of different types, add rows, and
 work with data in the visual editor.
 
    ![Visual editor.](media/table-designer-1.png "Visual editor")
@@ -100,7 +110,7 @@ work with data in the visual editor.
 
 To add a new column to track new data:
 
-1. Select **Add column.**  
+1. Select **New column.**  
 
 1. Enter a name that best describes your new column.
 
@@ -112,23 +122,21 @@ To add a new column to track new data:
 
 1. If required, change **Advanced options** for the selected column type.
 
-1. Select **Create**.
+1. Select **Save**.
 
 1. Repeat the previous steps to add the rest of the data columns.
 
 ### Add rows to the table
 
-To add rows, select the empty row and start typing additional data, or
-select **Add row**.
+Select **Add row** to add rows.
 
-![Add rows.](media/add-rows.png "Add rows")
 
 #### Paste the copied data into the table
 
 You can paste up to **50 rows** of data into a table. To create new rows from the copied data, add empty rows in the table first. Adding new empty rows ensures pasting data from clipboard doesn't accidentally overwrite your existing data.
 
 > [!CAUTION]
-> Paste operations are automatically saved, and there's no undo option. Use caution when pasting data over existing rows since this action will overwrite your existing data in the table.
+> Paste operations are automatically saved, and there's no undo option. Use caution when pasting data over existing rows since this action overwrites your existing data in the table.
 
 To paste the data from clipboard into the table:
 
@@ -139,14 +147,10 @@ To paste the data from clipboard into the table:
 
     ![Insert row above.](media/insert-row.png "Insert row above")
 
-    To add rows at the top instead, select **Add row**.
-
-    ![Add row.](media/add-row.png "Add row")
-
-1. Repeat the above step to add more empty rows, as needed.
+1. Repeat the preceding step to add more empty rows, as needed.
 
     > [!TIP]
-    > If you're unsure of how many rows do you need, create additional empty rows before pasting data. Extra empty rows can be deleted later.
+    > If you're unsure of how many rows you need, create additional empty rows before pasting data. You can delete extra empty rows later.
 
 1. Select the top-left cell from the newly created rows.
 
@@ -166,7 +170,7 @@ To paste the data from clipboard into the table:
     ![Delete extra row.](media/delete-extra-row.png "Delete extra row")
 
     > [!TIP]
-    > To delete multiple rows that are together, select the top row, and press the **Shift** key on the keyboard. Keeping the key pressed, select the last row in the chunk of the rows that you want to delete. And then, select **Delete X record(s)**.
+    > To delete multiple rows that are together, select the top row, and press the **Shift** key on the keyboard. Keep the key pressed, select the last row in the chunk of the rows that you want to delete. Then, select **Delete X record(s)**.
 
     ![Delete multiple rows.](media/delete-multiple-records.png "Delete multiple rows")
 
@@ -174,18 +178,18 @@ Changes to the table are automatically saved. However, check for errors, and fix
 
 ## Customize and publish your app
 
-After you close the table, the app template that was added to the app screen by default is automatically refreshed to use the new table.
+When you close the table, the app template that you added to the app screen by default automatically refreshes to use the new table.
 
 > [!NOTE]
-> If you add additional data sources, such as a new table, or if you reopened the app, refer to [Manually connect data to the app](#manually-connect-data-to-the-app) to manually refresh the app with the new data.
+> To add new data sources, such as a new table, or to reopen the app, see [Manually connect data to the app](#manually-connect-data-to-the-app) for steps to manually refresh the app with the new data.
 
 ![Updated app template.](media/updated-gallery.png "Updated app template")
 
-Depending on the number of fields you added to your table, the app template might need updates to the form and the gallery.
+Depending on the number of fields you add to your table, you might need to update the form and the gallery in the app template.
 
 ### Manually connect data to the app
 
-The gallery and the edit form components on the screen automatically refresh with the data only for the first data source. If you add additional data sources, such as a new table, or if you reopened the app, you'll have to manually connect the data to the template gallery and form.
+The gallery and the edit form components on the screen automatically refresh with the data only for the first data source. If you add extra data sources, such as a new table, or if you reopen the app, you need to manually connect the data to the template gallery and form.
 
 > [!TIP]
 > Skip these steps if the app screen is already connected to the table that you created.
@@ -217,11 +221,11 @@ To manually connect to the new data:
     Remove(Recipes, selectedRecord); If(IsEmpty(Errors(Recipes, selectedRecord)),UpdateContext( {itemSelected:false, editMode:false, newMode:false, deleteMode:false}); Set(CurrentItem,First(Recipes)););
     ```
 
-1. Repeat the earlier step to fix any additional formula errors.
+1. Repeat the earlier step to fix any extra formula errors.
 
 ### Update background color for the selected gallery record
 
-The gallery shows records created earlier. However, the background color needs to change for a record when selected from the gallery to show the selection.
+The gallery shows records you created earlier. However, you need to change the background color for a record when you select it from the gallery to show the selection.
 
 To update the selected item background color:
 
@@ -229,17 +233,15 @@ To update the selected item background color:
 
     ![Select the gallery for background fill.](media/select-gallery.png "Select the gallery for background fill")
 
-2. Select *TemplateFill* property from the property drop-down on the top-left.
+1. Select *TemplateFill* property from the property drop-down on the top-left.
 
     ![Select TemplateFill property.](media/select-templatefill.png "Select TemplateFill property")
 
-3. Update the *TemplateFill* property value in the formula bar to the following formula:
+1. Update the *TemplateFill* property value in the formula bar to the following formula:
 
     ```power-fx
     If(ThisItem.IsSelected, RGBA(0,0,0,.05), RGBA(0,0,0,0))
     ```
-
-    ![Update TemplateFill property.](media/templatefill-property.png "Update TemplateFill property")
 
 ### Update fields on the form
 
@@ -269,13 +271,13 @@ The template shows two fields inside the form by default. To add more fields to 
 
 1. Close the fields pane.
 
-Adding, removing, and reordering fields automatically updates the form.
+When you add, remove, or reorder fields, the form updates automatically.
 
 ![Updated form.](media/form-updated.png "Updated form")
 
 ### Update fields in the gallery
 
-The gallery on the default app template might need updates to reflect the fields from the table you created.
+You might need to update the gallery on the default app template to reflect the fields from the table you created.
 
 ![Default gallery.](media/gallery-fields.png "Default gallery")
 
@@ -283,15 +285,13 @@ To update the fields in the gallery:
 
 1. Select **Edit fields** from the property pane on the right.
 
-    ![Edit fields for the gallery.](media/edit-gallery-fields.png "Edit fields for the gallery")
-
 1. Select the drop-down menu for a gallery component (such as image, title, or subtitle) and change the selection to the field you want.
 
     ![Edit selected field.](media/gallery-fields-change.png "Edit selected field")
 
 1. Close the data pane.
 
-The gallery is updated with the selected changes.
+The gallery updates with the selected changes.
 
 ![Updated gallery.](media/gallery-fields-updated.png "Updated gallery")
 
@@ -312,7 +312,7 @@ Verify all the changes you made to the app.
 ![Verify all changes.](media/app-changes.png "Verify all changes")
 
 > [!TIP]
-> For better responsiveness, the [data cards](../maker/canvas-apps/working-with-cards.md) by default have [**Width fit**](../maker/canvas-apps/controls/properties-size-location.md#size) property set to *On*. If you want to resize the data cards manually, select the data cards and then set the **Width fit** property to *Off* first.
+> For better responsiveness, the [data cards](../maker/canvas-apps/working-with-cards.md) by default have the [**Width fit**](../maker/canvas-apps/controls/properties-size-location.md#size) property set to *On*. If you want to resize the data cards manually, select the data cards and then set the **Width fit** property to *Off*.
 
 ![Data card - width fit property.](media/data-card-width-fit.png "Data card - width fit property")
 
@@ -340,12 +340,12 @@ detail.
 
 ## Additional considerations for Microsoft 365 Group
 
-When you select **Create** to create an app in the selected team, Power Apps automatically enables the selected team's Microsoft 365 Group for security. However, if the group can't be enabled for security, you'll see the following error: 
+When you select **Create** to create an app in the selected team, Power Apps automatically enables the selected team's Microsoft 365 Group for security. However, if the group can't be enabled for security, you see the following error: 
 
 `The request failed with error: 'Insufficient privileges to complete the operation.' The tracking Id is '[xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx]'`.
 
 To fix this issue, manually update the Microsoft 365 Group setting *SecurityEnabled* from
-*False* to *True* by using PowerShell. For detailed steps, see [Share an app with Microsoft 365 Groups](../maker/canvas-apps/share-app.md#share-an-app-with-microsoft-365-groups). More information: [Microsoft 365 Groups and Microsoft Teams](/microsoftteams/office-365-groups)
+*False* to *True* by using PowerShell. For detailed steps, see [Share an app with Microsoft 365 Groups](../maker/canvas-apps/share-app.md#share-an-app-with-microsoft-365-groups). For more information, see [Microsoft 365 Groups and Microsoft Teams](/microsoftteams/office-365-groups).
 
 ### Enabling security for teams with same names
 
@@ -353,8 +353,8 @@ Team names aren't always unique. It's possible for more than one
 team in Teams to share the same display name. For example, there might be
 more than one team with the name "Inspection" in a tenant. However, the
 Microsoft 365 Group associated with each team has a different *ObjectId* in
-Azure Active Directory (Azure AD), even when the team names are the same. The *ObjectId* in
-Azure AD for a Microsoft 365 Group is the same as the *GroupId* in
+Microsoft Entra ID, even when the team names are the same. The *ObjectId* in
+Microsoft Entra ID for a Microsoft 365 Group is the same as the *GroupId* in
 Teams for the associated team.
 
 To find the **GroupId** (ObjectID in Azure AD) of a team:
@@ -376,9 +376,32 @@ to get the *GroupID* value.
 
     `https://teams.microsoft.com/l/channel/19%3a06f038959c9f4387a35f5d776484cff2%40thread.tacv2/General?groupId=40b7e373-a788-4e29-a590-5a86db7550e3&tenantId=00000000-0000-0000-0000-0000000000000000`
 
-1. Now that you have the correct team's **GroupID** (ObjectID in Azure AD), use the instructions in
+1. Now that you have the correct team's **GroupID** (ObjectID in Microsoft Entra ID), use the instructions in
 [Share an app with Microsoft 365 Groups](../maker/canvas-apps/share-app.md#share-an-app-with-microsoft-365-groups)
 to enable security for the team's Microsoft 365 Group.
+
+## Troubleshooting
+
+### App publish fails with status code 400
+
+If you receive a "Request failed with status code 400" error when publishing your app to Teams:
+
+1. Ensure the team's Microsoft 365 Group is security-enabled. See [Additional considerations for Microsoft 365 Group](#additional-considerations-for-microsoft-365-group).
+1. Check that you have the correct permissions within the team (owner or member).
+1. Try signing out of Teams and signing back in, then attempt publishing again.
+
+### App doesn't appear in Teams after publishing
+
+If your published app doesn't appear in the Teams app store or the **Built by your colleagues** section:
+
+1. Allow up to 24 hours for the app to propagate across Teams.
+1. Sign out and sign back in to Teams to clear the cache.
+1. If using Teams web, refresh the browser.
+1. Verify that [custom app policies](/microsoftteams/teams-custom-app-policies-and-settings) in your organization allow uploaded apps.
+
+### How to delete an app
+
+To delete an app you no longer need, see [Delete an app](manage-your-apps.md#delete-an-app).
 
 ## Next steps
 

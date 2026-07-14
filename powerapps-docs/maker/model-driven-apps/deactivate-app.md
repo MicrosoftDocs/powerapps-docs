@@ -1,12 +1,12 @@
 ---
-title: Hide a model-driven app  | MicrosoftDocs
-description: Find out how to hide a model-driven app from users with Power Apps
+title: Hide a model-driven app
+description: Find out how to hide a model-driven app from users with Power Apps.
 Keywords: 
 author: matp
 ms.subservice: mda-maker
 ms.author: ansja
 ms.reviewer: matp
-ms.date: 08/17/2022
+ms.date: 07/15/2025
 ms.topic: how-to
 applies_to: 
   - "powerapps"
@@ -29,8 +29,10 @@ Turn off a model-driven app to hide it from users who otherwise would be able to
 The **Status** of the app appears as **Off** from the solution's **Objects** view.
 
 > [!NOTE]
+>
 > - Apps that are turned off are still visible to other users from the **Apps** area of Power Apps.
 > - While a model-driven app is in a turned off state, it can't be played or shared from make.powerapps.com, however direct links to the app will continue to work.
+> - Managed model-driven apps can't be turned off.
 
 ## Turn on a model-driven app
 

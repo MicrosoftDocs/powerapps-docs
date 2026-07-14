@@ -60,7 +60,7 @@ export const cellRendererOverrides: CellRendererOverrides = {
 }
 ```
 
-### Related topics
+### Related articles
 
 [Customize the editable grid control (Preview)](../customize-editable-grid-control.md)<br/>
 [Download sample components](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework)<br/>

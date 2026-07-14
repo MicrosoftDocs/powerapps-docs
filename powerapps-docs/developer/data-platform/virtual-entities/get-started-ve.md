@@ -1,11 +1,11 @@
 ---
 title: "Get started with virtual tables (entities) (Microsoft Dataverse) | Microsoft Docs"
 description: "Virtual tables enable integration of data residing in external systems with Microsoft Dataverse."
-ms.date: 08/08/2024
-author: mkannapiran
-ms.author: kamanick
+ms.date: 01/07/2026
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: pehecke
-ms.topic: conceptual
+ms.topic: get-started
 ms.collection: get-started
 applies_to: 
   - "Dynamics 365 (online)"
@@ -37,7 +37,7 @@ A data provider is a particular type of Dataverse plug-in, which is registered a
 The following data providers ship with Dataverse:
 
 - An [OData v4](https://www.odata.org/documentation/) provider is included with the service and is installed by default. This provider supports create, read (retrieve, retrieve multiple), update and delete (CRUD) operations.
-- An [Azure Cosmos DB](/azure/cosmos-db) (formerly *Microsoft Document DB*) provider is available from [AppSource](https://appsource.microsoft.com).
+- An [Azure Cosmos DB](/azure/cosmos-db) (formerly *Microsoft Document DB*) provider is available from [Marketplace](https://marketplace.microsoft.com).
 
 If a data provider can't be found for your external data source, you can develop a *custom virtual table data provider*. More information: [Virtual table data providers](custom-ve-data-providers.md)
 
@@ -70,6 +70,7 @@ The following are limitations of virtual tables that should be considered.
 - A virtual table can't represent an activity and don't support business process flows.
 - Once created, a virtual table can't be changed to be a standard (nonvirtual) table.  The reverse is also true whereas a standard table can't be converted into a virtual table.
 - Selecting attributes in Retrieve and RetrieveMultiple queries won't be applied since all attributes are returned
+- Reduce and limit including virtual table lookup columns in your grid view. It can take a while to read the virtual table lookup columns.
 
 For more information about how these limitations are reflected in the Dataverse API, see [API considerations of virtual tables](api-considerations-ve.md).
 

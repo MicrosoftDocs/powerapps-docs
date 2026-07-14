@@ -75,7 +75,7 @@ For more details on the types of expressions supported and examples, see [Define
 
 1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Tables** in the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Open a table.
-1. In the list of columns for the table that you selected, selectp a column, and then follow one of these steps:
+1. In the list of columns for the table that you selected, select a column, and then follow one of these steps:
    
    * Change one or more properties of the column.
    * Delete the column by clicking or tapping the ellipsis (...) near the right edge of the column, and then clicking or tapping **Delete**.

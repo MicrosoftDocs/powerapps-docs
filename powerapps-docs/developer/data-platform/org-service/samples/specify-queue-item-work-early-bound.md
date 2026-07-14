@@ -1,6 +1,6 @@
 ---
-title: "Sample: Specify a queue item to work on (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample shows how to specify a user who will work on a queue item" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Sample: Specify a queue item to work on (Microsoft Dataverse) | Microsoft Docs"
+description: "This sample shows how to specify a user who will work on a queue item" 
 ms.date: 04/03/2022
 author: JimDaly #TODO: No Owner
 ms.author: jdaly

@@ -5,7 +5,7 @@ author: anuitz
 ms.author: anuitz
 ms.date: 12/04/2024
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: how-to
 ms.subservice: pcf
 contributors:
  - JimDaly

@@ -1,7 +1,7 @@
 ---
 title: "Flow Machine Image (flowmachineimage) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Flow Machine Image (flowmachineimage) table/entity with Microsoft Dataverse."
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
@@ -88,7 +88,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`deprecationdate`|
 |RequiredLevel|None|
 |Type|DateTime|
-|CanChangeDateTimeBehavior|True|
+|CanChangeDateTimeBehavior|False|
 |DateTimeBehavior|UserLocal|
 |Format|DateAndTime|
 |ImeMode|Auto|
@@ -122,7 +122,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`endofsupportdate`|
 |RequiredLevel|None|
 |Type|DateTime|
-|CanChangeDateTimeBehavior|True|
+|CanChangeDateTimeBehavior|False|
 |DateTimeBehavior|UserLocal|
 |Format|DateAndTime|
 |ImeMode|Auto|

@@ -42,13 +42,14 @@ There are three different ways that command data can be displayed.
   
  To perform more actions on the list of records displayed in a subgrid, select the option to open a view of the grid.  
   
- For more information about the behavior of subgrid controls and how they can be customized, see [Subgrid ribbons](/dynamics365/customer-engagement/developer/customize-dev/ribbons-available-microsoft-dynamics-365#BKMK_SubGridRibbons).  
+ For more information about the behavior of subgrid controls and how they can be customized, see [Subgrid ribbons](ribbons-available.md#subgrid-ribbons).  
 
 
 <a name="BKMK_CRMForTablets"></a>   
 
 ### Dynamics 365 for tablets  
- Dynamics 365 for tablets presents commands in a manner optimized for touch experiences. Commands appear in the command bar at the bottom right of the screen in order from right to left.  
+
+Dynamics 365 for tablets presents commands in a manner optimized for touch experiences. Commands appear in the command bar at the bottom right of the screen in order from right to left.  
   
  ![Account form commands for Dynamics 365 for tablets.](media/customization-nobile-app-account-form-command.PNG "Account form commands for Dynamics 365 for tablets")  
   
@@ -63,10 +64,11 @@ There are three different ways that command data can be displayed.
   
 <a name="BKMK_CommandData"></a>   
 
-## Command data  
- Despite these different presentations, the data that defines the commands for tables is consistent regardless of how the commands are presented. It contains definitions for tabs and groups with scaling, but the visible parts of these containers for controls are only displayed in the classic user interface.  
-  
- In both the updated user experience and Dynamics 365 for tablets, tabs and groups still act as containers for controls, but there is no visual indication of these containers and scaling is not applied.  
+## Command data
+
+Despite these different presentations, the data that defines the commands for tables is consistent regardless of how the commands are presented. It contains definitions for tabs and groups with scaling, but the visible parts of these containers for controls are only displayed in the classic user interface.  
+
+In both the updated user experience and Dynamics 365 for tablets, tabs and groups still act as containers for controls, but there is no visual indication of these containers and scaling is not applied.  
   
 <a name="BKMK_FilteringCommands"></a>   
 

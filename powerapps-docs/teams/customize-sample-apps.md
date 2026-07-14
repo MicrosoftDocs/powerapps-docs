@@ -3,7 +3,7 @@ title: Customize sample app templates  | Microsoft Docs
 description: Learn how to customize sample app templates.
 author: msftsamperl
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: 
 ms.date: 12/14/2020
 ms.subservice: teams

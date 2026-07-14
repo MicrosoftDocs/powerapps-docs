@@ -14,7 +14,7 @@ contributors:
 ---
 # Xrm.App (Client API reference)
 
-Provides app-related methods. 
+[!INCLUDE [xrm-app-description](Xrm-App/includes/xrm-app-description.md)]
 
 |Method |Description |
 |---|---|

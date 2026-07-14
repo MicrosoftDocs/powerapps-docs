@@ -3,7 +3,7 @@ title: Context (Power Apps component framework API reference) | Microsoft Docs
 description: Provides all the properties and methods available in the Power Apps component framework
 author: anuitz
 ms.author: anuitz
-ms.date: 05/27/2022
+ms.date: 06/16/2025
 ms.reviewer: jdaly
 ms.topic: reference
 ms.subservice: pcf
@@ -27,6 +27,12 @@ Model-driven apps, canvas apps, & portals.
 
 [!INCLUDE [client-description](includes/client-description.md)]
 **Type**: [Client](client.md)
+
+### copilot
+
+[!INCLUDE [copilot-description](includes/copilot-description.md)]
+
+**Type**: [Copilot](copilot.md)
 
 ### device
 

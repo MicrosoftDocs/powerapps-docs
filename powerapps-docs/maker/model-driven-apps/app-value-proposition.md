@@ -4,25 +4,23 @@ description: "App Value Proposition"
 ms.collection: get-started
 ms.date: 09/27/2021
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "conceptual"
+ms.topic: article
 applies_to: 
     - "powerapps"
 author: "Mattp123"
 ms.assetid: 
 caps.latest.revision: 1
-ms.subservice: 
+ms.subservice: mda-maker
 ms.author: matp
 tags: 
 search.audienceType: 
   - maker
-
 ---
 # The benefits of the model-driven approach
 
-Model-driven apps are familiar to anyone who has worked with [Dynamics 365](model-driven-app-glossary.md#dynamics-365) apps. To others, they're a new business productivity tool.
+Model-driven apps are familiar to anyone who works with [Dynamics 365](model-driven-app-glossary.md#dynamics-365) apps. To others, they're a new business productivity tool.
 
 Dynamics 365 apps, such as Dynamics 365 Sales, Dynamics 365 Marketing, or Dynamics 365 Customer Service, are essentially a set of line-of-business apps, built on [Dataverse](model-driven-app-glossary.md#dataverse). The utility of the Dynamics 365 model was recognized as being powerful and by making Dataverse fully customizable, has enabled more bespoke solutions to be created.
 
@@ -30,8 +28,8 @@ Model-driven apps are worth considering in your organization for the following r
 
 ## Security
 
-- The platform is reliable. It is the same as is used by Dynamics 365 apps, to cover complex business processes and govern millions of transactions in the biggest businesses in the world.
-- Model-driven apps have tried and tested [application lifecycle management](model-driven-app-glossary.md#application-lifecycle-management) options.
+- The platform is reliable. It's the same as is used by Dynamics 365 apps, to cover complex business processes and govern millions of transactions in the biggest businesses in the world.
+- Model-driven apps include tried and tested [application lifecycle management](model-driven-app-glossary.md#application-lifecycle-management) options.
 - Dataverse supports a strong and flexible data security model affecting the degree to which users can interact with table records and columns.
 
 ## Extendability
@@ -42,12 +40,12 @@ Model-driven apps are worth considering in your organization for the following r
 - Dataverse is extendable through use of Azure services, such as [Azure Synapse Link for Dataverse](../data-platform/export-to-data-lake.md).
 - Canvas app integration possibilities are integral to the platform. More information: [Design a custom page for your model-driven app (preview)](design-page-for-model-app.md)
 - Extensible with code to allow for a user experience that fits the organization more tightly.
-- There is a pool of competence worldwide covering the platform through Dynamics consultants in addition to Power Platform practices.
+- There's a pool of competence worldwide covering the platform through Dynamics consultants in addition to Power Platform practices.
 
 ## Usability for all
 
 - Model-driven apps are responsive by design. This means they render better on a wide range of devices.
-- Model driven apps are accessible to users with disabilities including those that require screen readers.
+- Model driven apps are accessible to users with disabilities including people that require screen readers.
 - Offline capabilities are native to model-driven apps.
 - Multilingual label support to ensure that your apps can be used worldwide.
 

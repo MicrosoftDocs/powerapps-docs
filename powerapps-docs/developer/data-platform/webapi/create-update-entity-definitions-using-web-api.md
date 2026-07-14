@@ -2,8 +2,8 @@
 title: "Create and update table definitions using the Web API"
 description: "Learn about creating and updating Dataverse table definitions using the Web API."
 ms.date: 06/07/2023
-author: mkannapiran
-ms.author: kamanick
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType: 
   - developer

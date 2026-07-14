@@ -1,6 +1,6 @@
 ---
-title: "Sample: File operations with Attachments and Notes using the Dataverse SDK for .NET | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample showcases how to work with file data within attachment and note tables." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Sample: File operations with Attachments and Notes using the Dataverse SDK for .NET | Microsoft Docs"
+description: "This sample showcases how to work with file data within attachment and note tables." 
 ms.date: 12/04/2024
 author: JimDaly
 ms.author: jdaly

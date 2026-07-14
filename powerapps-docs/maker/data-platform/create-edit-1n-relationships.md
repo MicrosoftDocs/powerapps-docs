@@ -43,11 +43,11 @@ Information in this article helps you choose which designer you can use.
 
 ## Create a one-to-many or many-to-one relationship
 
-[Create and edit one-to-many or many-to-one table relationships in Power Apps](create-edit-1n-relationships-portal.md)<br />
+[Create and edit one-to-many or many-to-one table relationships in Power Apps](create-edit-1n-relationships-portal.md)
 
 ## Community tools
 
-**[table Relation Diagram Creator](https://www.xrmtoolbox.com/plugins/JourneyIntoCRM.XrmToolbox.ERDPlugin/)** is a tool that XrmToolbox community developed for Dataverse. Please see the [Developer tools for Dataverse](/dynamics365/customer-engagement/developer/developer-tools) topic for more community developed tools.
+**[table Relation Diagram Creator](https://www.xrmtoolbox.com/plugins/JourneyIntoCRM.XrmToolbox.ERDPlugin/)** is a tool that XrmToolbox community developed for Dataverse. Please see the [Developer tools and resources](../../developer/data-platform/developer-tools.md) topic for more community developed tools.
 
 > [!NOTE]
 > The community tools are not a product of Microsoft and does not extend support to the community tools. 
@@ -55,13 +55,9 @@ Information in this article helps you choose which designer you can use.
 
 ### See also
 
-[Create and edit relationships between tables](create-edit-entity-relationships.md)<br />
-
-[Create and edit 1:N (one-to-many) or N:1 (many-to-one) table relationships using solution explorer](create-edit-1n-relationships-solution-explorer.md)<br />
-[Developer documentation: Customize table relationship metadata](/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata)<br />
-[Developer documentation: table relationship eligibility](/dynamics365/customer-engagement/developer/entity-relationship-eligibility)
-
-
-
+[Create and edit relationships between tables](create-edit-entity-relationships.md)   
+[Create and edit 1:N (one-to-many) or N:1 (many-to-one) table relationships using solution explorer](create-edit-1n-relationships-solution-explorer.md)   
+[Developer documentation: Table relationship definitions](../../developer/data-platform/entity-relationship-metadata.md)   
+[Developer documentation: Table relationship eligibility](../../developer/data-platform/entity-relationship-eligibility.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

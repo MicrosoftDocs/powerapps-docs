@@ -1,7 +1,7 @@
 ---
 title: "Dataflow DatalakeFolder (msdyn_dataflow_datalakefolder) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Dataflow DatalakeFolder (msdyn_dataflow_datalakefolder) table/entity with Microsoft Dataverse."
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 

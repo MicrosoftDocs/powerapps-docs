@@ -7,7 +7,7 @@ ms.reviewer: "matp"
 author: sabinn-msft
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: how-to
 applies_to: 
   - "powerapps"
 ms.assetid: 

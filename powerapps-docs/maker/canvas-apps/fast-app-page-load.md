@@ -3,7 +3,7 @@ title: Speed up app or page load in Power Apps
 description: Optimizing app and page loading for peak performance in Power Apps.
 author: lancedMicrosoft
 ms.subservice: canvas-developer
-ms.topic: article
+ms.topic: how-to
 ms.date: 01/05/2024
 ms.author: lanced
 ms.reviewer: mkaur

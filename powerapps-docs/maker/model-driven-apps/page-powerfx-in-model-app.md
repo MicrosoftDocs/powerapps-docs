@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: 01/22/2025
 ms.reviewer: ""
 ms.subservice: mda-maker
-ms.topic: "article"
+ms.topic: how-to
 author: "aorth"
 ms.author: "matp"
 search.audienceType: 
@@ -42,7 +42,7 @@ This section provides examples of navigating from a model-driven app form to a c
 
 ### Navigating from a custom page
 
-The [Navigate function](../canvas-apps/functions/function-navigate.md) allows users to navigate either from model-driven app forms or custom pages. This function is only applicable when the custom page is running within a model-driven app. During custom page authoring or previewing in canvas designer, this function has no effect.
+The [Navigate function](../canvas-apps/functions/function-navigate.md) allows users to navigate either from model-driven app forms or custom pages. This function is only applicable when the custom page is running within a model-driven app. During custom page authoring or previewing in Power Apps Studio, this function has no effect.
 
 ### Navigate to another custom page
 

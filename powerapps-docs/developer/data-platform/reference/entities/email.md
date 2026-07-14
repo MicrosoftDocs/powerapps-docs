@@ -1,7 +1,7 @@
 ---
 title: "Email table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Email table/entity with Microsoft Dataverse."
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
@@ -25,6 +25,7 @@ Messages represent operations that can be performed on the table. They may also 
 | `CheckIncomingEmail`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CheckIncomingEmail?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.CheckIncomingEmailRequest>|
 | `CheckPromoteEmail`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CheckPromoteEmail?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.CheckPromoteEmailRequest>|
 | `Create`<br />Event: True |`POST` /emails<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `CreateAndSendNewEmail`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateAndSendNewEmail?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 | `Delete`<br />Event: True |`DELETE` /emails(*activityid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
 | `DeliverImmediatePromoteEmail`<br />Event: True |<xref:Microsoft.Dynamics.CRM.DeliverImmediatePromoteEmail?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.DeliverImmediatePromoteEmailRequest>|
 | `DeliverIncomingEmail`<br />Event: True |<xref:Microsoft.Dynamics.CRM.DeliverIncomingEmail?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.DeliverIncomingEmailRequest>|
@@ -115,6 +116,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [ParentActivityId](#BKMK_ParentActivityId)
 - [PriorityCode](#BKMK_PriorityCode)
 - [ProcessId](#BKMK_ProcessId)
+- [PurviewRights](#BKMK_PurviewRights)
 - [ReadReceiptRequested](#BKMK_ReadReceiptRequested)
 - [ReceivingMailboxId](#BKMK_ReceivingMailboxId)
 - [RegardingObjectId](#BKMK_RegardingObjectId)
@@ -125,6 +127,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [ScheduledEnd](#BKMK_ScheduledEnd)
 - [ScheduledStart](#BKMK_ScheduledStart)
 - [Sender](#BKMK_Sender)
+- [SensitivityLabelId](#BKMK_SensitivityLabelId)
+- [SensitivityLabelInfo](#BKMK_SensitivityLabelInfo)
 - [SLAId](#BKMK_SLAId)
 - [SortDate](#BKMK_SortDate)
 - [StageId](#BKMK_StageId)
@@ -853,6 +857,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Uniqueidentifier|
 
+### <a name="BKMK_PurviewRights"></a> PurviewRights
+
+|Property|Value|
+|---|---|
+|Description|**Purview Rights**|
+|DisplayName|**Purview Rights**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`purviewrights`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|500|
+
 ### <a name="BKMK_ReadReceiptRequested"></a> ReadReceiptRequested
 
 |Property|Value|
@@ -999,6 +1020,36 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|False|
 |MaxLength|250|
+
+### <a name="BKMK_SensitivityLabelId"></a> SensitivityLabelId
+
+|Property|Value|
+|---|---|
+|Description|**The sensitivity label assigned to the Email.**|
+|DisplayName|**Sensitivity Label**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`sensitivitylabelid`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|sensitivitylabel|
+
+### <a name="BKMK_SensitivityLabelInfo"></a> SensitivityLabelInfo
+
+|Property|Value|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Sensitivity Label Info**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`sensitivitylabelinfo`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1073741823|
 
 ### <a name="BKMK_SLAId"></a> SLAId
 
@@ -1294,6 +1345,7 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
+- [ParentSensitivityLabelId](#BKMK_ParentSensitivityLabelId)
 - [PostponeEmailProcessingUntil](#BKMK_PostponeEmailProcessingUntil)
 - [ReplyCount](#BKMK_ReplyCount)
 - [SafeDescription](#BKMK_SafeDescription)
@@ -1752,6 +1804,18 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |Type|Lookup|
 |Targets|systemuser|
 
+### <a name="BKMK_ParentSensitivityLabelId"></a> ParentSensitivityLabelId
+
+|Property|Value|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Parent Sensitivity Label Id**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`parentsensitivitylabelid`|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
+
 ### <a name="BKMK_PostponeEmailProcessingUntil"></a> PostponeEmailProcessingUntil
 
 |Property|Value|
@@ -1933,6 +1997,7 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [owner_emails](#BKMK_owner_emails)
 - [processstage_emails](#BKMK_processstage_emails)
 - [Queue_Email_EmailSender](#BKMK_Queue_Email_EmailSender)
+- [sensitivitylabel_email_SensitivityLabelId](#BKMK_sensitivitylabel_email_SensitivityLabelId)
 - [sla_email](#BKMK_sla_email)
 - [SystemUser_Email_EmailSender](#BKMK_SystemUser_Email_EmailSender)
 - [team_email](#BKMK_team_email)
@@ -2367,6 +2432,19 @@ One-To-Many Relationship: [queue Queue_Email_EmailSender](queue.md#BKMK_Queue_Em
 |ReferencingEntityNavigationPropertyName|`emailsender_queue`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_sensitivitylabel_email_SensitivityLabelId"></a> sensitivitylabel_email_SensitivityLabelId
+
+One-To-Many Relationship: [sensitivitylabel sensitivitylabel_email_SensitivityLabelId](sensitivitylabel.md#BKMK_sensitivitylabel_email_SensitivityLabelId)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`sensitivitylabel`|
+|ReferencedAttribute|`sensitivitylabelid`|
+|ReferencingAttribute|`sensitivitylabelid`|
+|ReferencingEntityNavigationPropertyName|`SensitivityLabelId_Email`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_sla_email"></a> sla_email
 

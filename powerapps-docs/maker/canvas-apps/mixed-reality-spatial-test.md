@@ -3,7 +3,7 @@ title: Test whether an object will fit in a space using mixed reality
 description: Use mixed-reality controls in a canvas app to test whether objects of a given size will fit in a measured space.
 author: anuitz
 ms.service: powerapps
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: anuitz
 ms.date: 03/04/2022

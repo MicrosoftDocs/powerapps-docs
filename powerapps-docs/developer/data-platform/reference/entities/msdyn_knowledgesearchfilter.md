@@ -1,7 +1,7 @@
 ---
 title: "Knowledge search filter (msdyn_knowledgesearchfilter) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Knowledge search filter (msdyn_knowledgesearchfilter) table/entity with Microsoft Dataverse."
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
@@ -600,7 +600,7 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`owningbusinessunit`|
-|RequiredLevel|SystemRequired|
+|RequiredLevel|None|
 |Type|Lookup|
 |Targets|businessunit|
 

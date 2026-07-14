@@ -1,13 +1,14 @@
 ---
 title: Work with Dataverse formula column data types
 description: Learn how to create and use decimal, whole number, float, and choice data types in formula columns.
-author: sanjeevgoyalmsft
+author: paulliew
 reviewer: mattp123
 ms.topic: how-to
 ms.custom: 
-ms.date: 01/06/2025
-ms.subservice: teams
-ms.author: dikamath
+ms.date: 01/09/2026
+ms.update-cycle: 180-days
+ms.subservice: dataverse-maker
+ms.author: paulliew
 ms.reviewer: matp
 ms.collection: bap-ai-copilot
 ai-usage: ai-assisted
@@ -134,6 +135,6 @@ Create a formula column that returns choice using a local choice of a simple cho
 
 [Microsoft Power Fx overview](/power-platform/power-fx/overview)
 
-[Formula, calculated, and rollup columns using code](../../developer/data-platform/calculated-rollup-attributes.md)
+[Specialized columns](../../developer/data-platform/specialized-columns.md)
 
 [Create formula columns with decimal (video)](https://youtu.be/NmpPG0_sPX0?feature=shared)

@@ -1,10 +1,11 @@
 ---
 title: FAQ for SharePoint List to table and app
 description: This FAQ provides information about the AI technology that's used in SharePoint List to table and app. This FAQ also includes key considerations and details about how AI is used, how it was tested and evaluated, and any specific limitations.
-ms.date: 03/21/2024
+ms.date: 05/28/2025
+ms.update-cycle: 180-days
 ms.custom: 
   - responsible-ai-faqs
-ms.topic: article
+ms.topic: faq
 author: Mattp123
 ms.author: yueshu
 ms.reviewer: matp

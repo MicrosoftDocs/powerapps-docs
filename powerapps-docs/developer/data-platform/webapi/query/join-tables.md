@@ -1,9 +1,10 @@
 ---
 title: Join tables using OData
 description: Learn how to use OData to join tables when you retrieve data from Microsoft Dataverse Web API.
-ms.date: 10/30/2024
-author: MicroSri
-ms.author: sriknair
+ms.date: 01/07/2026
+ms.topic: how-to
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 ms.subservice: dataverse-developer
 search.audienceType: 
@@ -99,11 +100,12 @@ Preference-Applied: odata.maxpagesize=1
 
 ## Navigation property type differences
 
-It's important to remember there are two types of navigation properties. [Learn more about Web API Navigation Properties](../web-api-navigation-properties.md)  
-  
-- *Single-valued* navigation properties correspond to lookup attributes that support many-to-one relationships and allow setting a reference to another record.  
-  
-- *Collection-valued* navigation properties correspond to one-to-many or many-to-many relationships.
+> [!IMPORTANT]
+> Remember there are two types of navigation properties. [Learn more about Web API Navigation Properties](../web-api-navigation-properties.md)  
+> 
+> - *Single-valued* navigation properties correspond to lookup attributes that support many-to-one relationships and allow setting a reference to another record.  
+>   
+> - *Collection-valued* navigation properties correspond to one-to-many or many-to-many relationships.
 
 Expanding a collection-valued navigation property can make the size of the response large in ways it's difficult to anticipate. It's important that you include limits to control how much data is returned. You can limit the number of records by using paging. [Learn more about paging results](page-results.md)
 
@@ -319,7 +321,7 @@ If you use only single-level `$expand`, no paging is applied to the expanded row
 
 Each expanded collection-valued navigation property returns a `<property>@odata.nextLink` URL that includes no paging information. It's a URL that represents the [filtered collection](overview.md#filtered-collections) for the relationship with your query options appended. You can use that URL to send a separate `GET` request and it returns the same rows that were returned in your original request. You can apply paging to that request.
 
-Because no paging is applied to the expanded records, up to 5,000 related records can be returned for each expanded collection-valued navigation property. Depending on your data and the query, it could be a lot of data. Returning that much data could affect performance and possibly cause your request to time out. Be cautious about the queries you compose. You can use `$top`, `$filter`, and `$orderby` options to control the total number of records returned.
+Because no paging is applied to the expanded records, up to 5,000 related table records can be returned for each expanded collection-valued navigation property. Depending on your data and the query, it could be a lot of data. Returning that much data could affect performance and possibly cause your request to time out. Be cautious about the queries you compose. You can use `$top`, `$filter`, and `$orderby` options to control the total number of records returned.
 
 The following example includes a single expand of the `Account_Tasks` and `contact_customer_accounts` while retrieving account records. The `Prefer: odata.maxpagesize=1` request header ensures that only one account record is returned in the first page.
 

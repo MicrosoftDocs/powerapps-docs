@@ -5,7 +5,7 @@ documentationcenter: ''
 author: Mattp123
 editor: ''
 tags: ''
-ms.topic: conceptual
+ms.topic: article
 ms.component: model
 ms.date: 03/12/2024
 ms.subservice: mda-maker

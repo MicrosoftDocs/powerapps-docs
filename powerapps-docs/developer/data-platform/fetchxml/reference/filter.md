@@ -1,8 +1,8 @@
 ---
 title: filter element
 description: Use this element to specify a set of conditions to be evaluated for each row of the containing entity or link-entity element that determines if the row is returned.
-author: pnghub
-ms.author: gned
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 ms.date: 02/29/2024
 ms.topic: reference

@@ -1,7 +1,7 @@
 ---
 title: "Asynchronous service (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn about the asynchronous service that manages system jobs."
-ms.date: 01/05/2024
+ms.date: 04/24/2026
 ms.reviewer: pehecke
 ms.topic: article
 author: swylezol
@@ -28,6 +28,32 @@ A system job can be dependent on another system job so that it will begin only a
 > [!NOTE]
 > This dependency system cannot be used by plug-ins registered to run asynchronously because the system jobs for them are created by the system.
 
+
+### Security considerations for system jobs
+
+The `AsyncOperation` (system job) table has a layered permission model as described below.
+
+- **Entity-level privileges**: Users with the Write privilege (prvWrite) on
+  `AsyncOperation` can update the supported lifecycle columns (`StateCode`,
+  `StatusCode`, `PostPoneUntil`) to manage system jobs. This is the intended
+  mechanism for canceling, pausing, resuming, or postponing jobs.
+
+- **Platform-level protection for internal columns**: Columns that contain
+  internal execution data, such as the serialized job payload, are protected
+  by additional server-side authorization checks that are enforced independently
+  of entity-level privileges. These protections prevent unauthorized modification
+  of job execution data even by users who have Write access to the
+  `AsyncOperation` table.
+
+- **Read access**: Users with the Read privilege (prvRead) on `AsyncOperation` can
+  retrieve system job records, including metadata such as job name, status,
+  and timestamps. This is by design to allow users to monitor job progress
+  and status.
+
+This layered model ensures that users can manage the lifecycle of their system
+jobs, an intended and supported operation, while internal execution data remains
+protected by the platform.
+
 ## Managing system jobs
 
 You can perform the following operations to manage system jobs using the [AsyncOperation Table](reference/entities/asyncoperation.md).
@@ -42,6 +68,15 @@ You can perform the following operations to manage system jobs using the [AsyncO
 > - [StateCode](reference/entities/asyncoperation.md#BKMK_StateCode)
 > - [StatusCode](reference/entities/asyncoperation.md#BKMK_StatusCode)
 > - [PostPoneUntil](reference/entities/asyncoperation.md#BKMK_PostponeUntil)
+> 
+> These columns allow users with the appropriate entity-level
+> Write privilege (prvWrite)  on `AsyncOperation` to manage the lifecycle of system jobs
+> (cancel, pause, resume, and postpone).
+> Other columns in the `AsyncOperation` table, including internal execution data,
+> are subject to additional platform-level authorization checks and cannot be
+> modified through standard update operations even if the table schema indicates
+> they are writable. The schema-level write attribute reflects internal platform
+> capabilities, not end-user permissions.
 
 ## Retrieve system jobs
 
@@ -900,7 +935,7 @@ Whether the requested operation occurs depends on the state of the system job. F
 |Option|Valid StateCode values|Change|
 |--|--|--|
 |**Delete**|any|System Job is deleted|
-|**Cancel**|`0` (**Ready**) <br /> `1` (**Suspended**) <br /> `2` (**Locked**)|`StateCode` changed to `3` (**Completed**) and `StatusCode` changed to `32` (**Cancelled**)|
+|**Cancel**|`0` (**Ready**) <br /> `1` (**Suspended**) <br /> `2` (**Locked**)|`StateCode` changed to `3` (**Completed**) and `StatusCode` changed to `32` (**Cancelled**), or `StateCode` changed to `3` (**Completed**) and `StatusCode` changed to `31` (**Failed**) |
 |**Resume**|`1` (**Suspended**)|StateCode changed to `0` (**Ready**)|
 |**Postpone**|`0` (**Ready**) <br />`2` (**Locked**)|Postpone Job dialog prompts user for datetime value to postpone the system job. [Learn to Postpone system jobs](#postpone-system-jobs)|
 |**Pause**|`2` (**Locked**)|StateCode changed to `1` (**Suspended**)|

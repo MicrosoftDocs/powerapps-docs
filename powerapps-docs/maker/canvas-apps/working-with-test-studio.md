@@ -3,7 +3,7 @@ title: Working with Test Studio
 description: Describes how to use Test Studio with example for testing canvas apps.
 author: aengusheaney
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 06/04/2020

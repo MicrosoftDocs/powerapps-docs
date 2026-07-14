@@ -1,7 +1,7 @@
 ---
 title: "makerfewshot table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the makerfewshot table/entity with Microsoft Dataverse."
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
@@ -25,7 +25,6 @@ Messages represent operations that can be performed on the table. They may also 
 | `Delete`<br />Event: True |`DELETE` /makerfewshots(*makerfewshotid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
 | `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
-| `Restore`<br />Event: True |<xref:Microsoft.Dynamics.CRM.Restore?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 | `Retrieve`<br />Event: True |`GET` /makerfewshots(*makerfewshotid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
 | `RetrieveMultiple`<br />Event: True |`GET` /makerfewshots<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 | `SetState`<br />Event: True |`PATCH` /makerfewshots(*makerfewshotid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `statecode` and `statuscode` properties. |<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
@@ -106,7 +105,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**EntityScope that can be used to extract results. Format: [entityscopeA], [entityscopeB]**|
+|Description|**EntityScope that can be used to extract results. Format: \[entityscopeA\], \[entityscopeB\]**|
 |DisplayName|**EntityScope**|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -123,7 +122,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**EntityScopeColumn within the EntityScope specified above.Format: [EntityScopeA].[EntityScopeColumnA1], [EntityScopeB].[EntityScopeColumnB2]**|
+|Description|**EntityScopeColumn within the EntityScope specified above.Format: \[EntityScopeA\].\[EntityScopeColumnA1\], \[EntityScopeB\].\[EntityScopeColumnB2\]**|
 |DisplayName|**EntityScopeColumn**|
 |IsValidForForm|True|
 |IsValidForRead|True|

@@ -1,12 +1,12 @@
 ---
-title: Create a canvas app from scratch using Microsoft Dataverse
-description: Learn about how to create a canvas app to add, update, and delete records in Microsoft Dataverse.
+title: Create a canvas app using Microsoft Dataverse
+description: Learn how to create a canvas app that displays, adds, updates, and deletes records in Microsoft Dataverse.
 author: mduelae
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 01/27/2022
+ms.date: 05/20/2026
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
@@ -15,144 +15,180 @@ contributors:
   - mduelae
   - lancedmicrosoft
 ---
-# Create a canvas app from scratch using Microsoft Dataverse
+# Create a canvas app using Microsoft Dataverse
 
-Build a canvas app to manage data that's stored in Dataverse, using standard tables (which are built in), custom tables (which your organization creates), or both.
+Microsoft Dataverse is a secure, cloud-based data platform for business data. In Power Apps, you can create canvas apps that connect directly to Dataverse to display, add, update, and manage records without setting up a separate database.
 
-When you build an app from Dataverse, you don't need to create a connection from Power Apps, as you do with data sources such as SharePoint, Dynamics 365, or Salesforce. You need only to specify the tables that you want to show or manage in the app.
+This article shows three ways to build a canvas app with Dataverse:
+
+- Start with an existing Dataverse table.
+- Create new Dataverse tables and generate an app.
+- Build a blank app and connect it to Dataverse yourself.
 
 ## Prerequisites
 
-- Before you create an app from scratch, familiarize yourself with Power Apps basics by [generating an app](data-platform-create-app.md) and then customizing that app's [gallery](customize-layout-sharepoint.md), [forms](customize-forms-sharepoint.md), and [cards](customize-card.md).
-- [Switch to an environment](intro-maker-portal.md#choose-an-environment) in which a database has been created with sample data. If you have an appropriate license, you can [create an environment](/power-platform/admin/create-environment) to meet this need.
-- To create an app, you must be assigned to the [Environment Maker](/power-platform/admin/database-security#predefined-security-roles) security role.
+Before you start:
 
-## Open a blank app
+- [Switch to an environment](intro-maker-portal.md#choose-an-environment) that already has a database with sample data. If you have the right license, you can also [create an environment](/power-platform/admin/create-environment).
+- Make sure that you have the [Environment Maker](/power-platform/admin/database-security#predefined-security-roles) security role, either directly or through a Dataverse team that uses the **Microsoft Entra ID security group** category. Custom security roles aren't currently supported for canvas app maker scenarios.
 
-To create an app from scratch that uses data from Dataverse, the first step is to [create a blank app](create-blank-app.md). For this exercise, when you create the blank app, ensure you choose **Phone** format.
+## Create an app
 
-## Specify a table
+1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. On the home page, choose one of the following options based on how you want to build your app with Dataverse.
 
-1. In the middle of the screen, select **connect to data**.
+   | Create options using Dataverse | Benefits | Navigation |
+   |---|---|---|
+   | A single-page gallery app | Use existing business data in Dataverse to create a lightweight responsive app quickly. | Select **Start with data** > **Dataverse**. Select a table, and then select **Create app**. |
+   | Create new data and build an app | Create structured tables in Dataverse so you can build secure and scalable apps around new business data. | Select **Start with data** > **Create new data**. Use the table designer or Copilot to create tables, and then select **Save and exit**. |
+   | Blank app that uses data from Dataverse | Start with a blank app when you want full control over the layout, screens, and controls. | In the left navigation pane, select **Create** > **Create from blank** > **Phone size**. |
 
-1. In the app authoring menu, select **Data**. If this is your first time, you're prompted to create a connection to Dataverse. Select **Create** this connection.
 
-1. Select **Add data** and in the search box enter, **Accounts** > **Connect**.
+1. Power Apps creates the app and opens [Power Apps Studio](power-apps-studio.md), where you can continue building.
 
-1. Close the **Data** pane by selecting the close icon in the upper-right corner.
+## Start with data using Dataverse
 
-## Add a list screen
+The **Start with data** experience helps you quickly connect to an existing Dataverse table or create a new table and generate an app.
 
-1. On the command bar, select **New screen** > **Templates** tab > **List**.
+### Connect to an existing Dataverse table
 
-1. In the left navigation bar, select **BrowseGallery1**, and then set the value of the **Items** property to this formula:
+1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. On the home page, select **Start with data**.
+1. On the **Create an app** page, select **Dataverse**.
+1. Select an existing Dataverse table, and then select **Create app**.
 
-    `SortByColumns(Search(Accounts, TextSearchBox1.Text, "name"), "name", If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))`
+Power Apps Studio opens with a gallery app that is already connected to the selected table.
 
-    This formula specifies that:
+### Create new data
 
-   - The gallery should show data from the **Accounts** table.
-   - The data should be sorted in ascending order until a user selects the sort button to toggle the sort order.
-   - If a user types or pastes one or more characters into the search bar (**TextSearchBox1**), the list will show only those accounts for which the **name** field contains the characters that the user specified.
+If you don't already have a table, create one directly from the **Start with data** experience.
 
-     You can use [these and many other functions](formula-reference.md) to specify how your app appears and behaves.
+1. On the home page, select **Start with data**.
+1. Select **Create new data**.
+1. In the **Create new tables** designer, choose one or more of these actions:
+   - Select **+ New table** to create a table.
+   - Select **+ Existing table** to add an existing table.
+   - Use **Copilot** to describe the tables, columns, rows, and relationships that you need.
+   - Select **Import data** in the Copilot pane to import data from Excel, .CSV files, or SharePoint lists.
+1. When you finish defining your tables, select **Save and exit** to generate the app.
 
-     ![Set the gallery's Items property.](./media/data-platform-create-app-scratch/gallery-items.png)
+## Add a Dataverse table in a blank app
 
-1. Set the gallery's layout to show only the name of each account, and configure the title bar to show the word **Browse**, as [Customize a gallery](customize-layout-sharepoint.md) describes.
+If you want to understand the building blocks of a Dataverse app, start with a blank app and add the data source yourself.
 
-    ![Browse screen.](./media/data-platform-create-app-scratch/final-browse.png)
+1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. In the left navigation pane, select **Create** > **Create from blank**.
+1. Select an app size.
+1. When Power Apps Studio opens, go to the [app authoring menu](power-apps-studio.md#5--app-authoring-menu) and select **Data**.
+
+   > [!NOTE]
+   > If this is your first time connecting to Dataverse, Power Apps prompts you to create a connection. Select **Create** to continue.
+
+1. Select **Add data**, enter **Accounts** in the search box, and then select it. And close the **Data** pane by selecting the close icon in the upper-right corner.
+
+   :::image type="content" source="./media/data-platform-create-app-scratch/add-and-close-data.png" alt-text="Screenshot of the close data pane.":::
+### Add a list screen
+
+1. On the command bar, select **New screen** > **List**.
+1. In the left navigation bar, select **BrowseGallery1**, and then set the **Items** property to this formula:
+
+   `SortByColumns(Search(CustomGallerySample, TextSearchBox1.Text, SampleText), "SampleText", If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))`
+
+   This formula does the following:
+
+    This expression filters the CustomGallerySample table for records whose SampleText column contains the text entered in TextSearchBox1. It then sorts the filtered results by the SampleText column in descending order when SortDescending1 is true; otherwise, it sorts them in ascending order.
+
+   You can use [these and many other functions](formula-reference.md) to control how your app looks and behaves.
+
+   :::image type="content" source="./media/data-platform-create-app-scratch/gallery-items.png" alt-text="Screenshot that shows the gallery's Items property set to the SortByColumns and Search formula." lightbox="./media/data-platform-create-app-scratch/gallery-items.png":::
+
+1. In the gallery's **Properties** pane, set **Layout** to **Title**.
+1. Edit the **Title** text property and rename it to **Browse**. For more information, see [Customize a gallery](customize-layout-sharepoint.md).
+
+   :::image type="content" source="./media/data-platform-create-app-scratch/rename-browse.png" alt-text="Screenshot of the Browse screen showing a list of accounts.":::
 
 1. In the left app authoring pane, hover over **Screen1**, select the ellipsis icon (...), and then select **Delete**.
-
 1. In the left app authoring pane, hover over **Screen2**, select the ellipsis icon (...), and then select **Rename**.
+1. Type or paste **BrowseScreen**, and then rename the gallery in that screen to **BrowseGallery**.
 
-1. Type or paste **BrowseScreen**, and then rename the gallery in that screen as **BrowseGallery**.
+   :::image type="content" source="./media/data-platform-create-app-scratch/rename-screens.png" alt-text="Screenshot of the renamed BrowseScreen and BrowseGallery in the tree view.":::
+### Add a form screen
 
-    ![Rename Browse screen, gallery.](./media/data-platform-create-app-scratch/rename-browse.png)
+1. Repeat the first step in the previous procedure, but add a **Form** screen instead of a **List** screen.
+1. Set the form's **DataSource** property to **Accounts** and its **Item** property to **BrowseGallery.Selected**, as shown on the **Advanced** tab of the right-hand pane.
+1. On the **Properties** tab of the right-hand pane, in the **Fields** row select the **"N selected"** link (or the **Edit** pencil) to open the **Fields** pane.
+1. Select **Add field**, choose these fields, and then select **Add**:
 
-## Add a form screen
+   - **Account Name**
+   - **Address 1: Street 1**
+   - **Address 1: City**
+   - **Address 1: ZIP/Postal code**
+   - **Number of Employees**
+   - **Annual Revenue**
 
-1. Repeat the first step of the previous procedure, except add a **Form** screen instead of a **List** screen.
+   > [!NOTE]
+   > Outside of this scenario, you can create a custom field by selecting **New field**, entering the required information, and then selecting **Done**. For more information, see [Create a column](../data-platform/create-edit-field-portal.md#create-a-column).
 
-1. Set the form's **DataSource** property to **Accounts** and its **Item** property to **BrowseGallery.Selected**, as the **Advanced** tab of the right-hand pane shows.
-
-1. On the **Properties** tab of the right-hand pane, select **Edit Fields** to open the **Fields** pane.
-
-1. Select **Add field**, and then select the check boxes for these fields:
-
-    - **Account Name**
-    - **Address 1: Street 1**
-    - **Address 1: City**
-    - **Address 1: ZIP/Postal code**
-    - **Number of Employees**
-    - **Annual Revenue**
-
-    > [!NOTE]
-    > Outside of this scenario, you can create a custom field by selecting **New field**, providing the required information, and then selecting **Done**. More information: [Create a column](../data-platform/create-edit-field-portal.md#create-a-column).<br><br>![Select and add a column.](media/data-platform-create-app-scratch/choose-or-add-fields.png "Select and add a column")
-
-1. Select **Add**.
+   :::image type="content" source="./media/data-platform-create-app-scratch/choose-or-add-fields.png" alt-text="Screenshot of the Choose a field pane with the New field option highlighted.":::
 
 1. Set the title bar's **Text** property to show **Create/Edit**.
 
-    The screen reflects your changes.
+   The screen reflects your changes.
 
-    ![Screen after the changes.](./media/data-platform-create-app-scratch/field-list.png)
+   :::image type="content" source="./media/data-platform-create-app-scratch/field-list.png" alt-text="Screenshot of the Create/Edit form screen showing the configured fields.":::
 
 1. Rename this screen **FormScreen**.
 
-## Configure icons
+### Configure icons
 
-1. On the **BrowseScreen**, set the **OnSelect** property of the circular icon near the top of the screen to this formula:
+1. On **BrowseScreen**, set the **OnSelect** property of the circular icon near the top of the screen to this formula:
 
-    `Refresh(Accounts)`
+   `Refresh(Accounts)`
 
-    ![Refresh icon.](./media/data-platform-create-app-scratch/refresh-icon.png)
+   :::image type="content" source="./media/data-platform-create-app-scratch/refresh-icon.png" alt-text="Screenshot of the refresh icon.":::
+
+
 
 1. Set the **OnSelect** property of the plus icon to this formula:
 
-    `NewForm(EditForm1); Navigate(FormScreen, ScreenTransition.None)`
+   `NewForm(EditForm1); Navigate(FormScreen, ScreenTransition.None)`
 
-    ![Add icon.](./media/data-platform-create-app-scratch/plus-icon.png)
+   :::image type="content" source="./media/data-platform-create-app-scratch/plus-icon.png" alt-text="Screenshot of the plus add icon.":::
 
-1. Set the **OnSelect** property of the first arrow pointing to the right to this formula:
+1. Set the **OnSelect** property of the first arrow that points to the right to this formula:
 
-    `EditForm(EditForm1); Navigate(FormScreen, ScreenTransition.None)`
+   `EditForm(EditForm1); Navigate(FormScreen, ScreenTransition.None)`
 
-    ![Next icon.](./media/data-platform-create-app-scratch/next-icon.png)
+   :::image type="content" source="./media/data-platform-create-app-scratch/next-icon.png" alt-text="Screenshot of the next arrow icon.":::
 
-1. On the **FormScreen**, set the **OnSelect** property of the cancel icon to this formula:
+1. On **FormScreen**, set the **OnSelect** property of the cancel icon to this formula:
 
-    `ResetForm(EditForm1);Navigate(BrowseScreen, ScreenTransition.None)`
+   `ResetForm(EditForm1);Navigate(BrowseScreen, ScreenTransition.None)`
 
-    ![Cancel icon.](./media/data-platform-create-app-scratch/cancel-icon.png)
+   :::image type="content" source="./media/data-platform-create-app-scratch/cancel-icon.png" alt-text="Screenshot of the cancel icon.":::
 
 1. Set the **OnSelect** property of the checkmark icon to this formula:
 
-    `SubmitForm(EditForm1); Navigate(BrowseScreen, ScreenTransition.None)`
+   `SubmitForm(EditForm1); Navigate(BrowseScreen, ScreenTransition.None)`
 
-    ![Checkmark icon.](./media/data-platform-create-app-scratch/checkmark-icon.png)
+   :::image type="content" source="./media/data-platform-create-app-scratch/checkmark-icon.png" alt-text="Screenshot of the checkmark icon.":::
 
 1. On the **Insert** tab, select **Icons**, and then select the **Trash** icon.
-
 1. Set the **Trash** icon's **Color** property to **White** and its **OnSelect** property to this formula:
 
-    `Remove(Accounts, BrowseGallery.Selected); Navigate(BrowseScreen, ScreenTransition.None)`
+   `Remove(Accounts, BrowseGallery.Selected); Navigate(BrowseScreen, ScreenTransition.None)`
 
-    ![Trash icon.](./media/data-platform-create-app-scratch/trash-icon.png)
+   :::image type="content" source="./media/data-platform-create-app-scratch/trash-icon.png" alt-text="Screenshot of the trash delete icon.":::
 
-## Test the app
+### Test the app
 
-1. On the actions menu, select ![Preview button.](media/studio/preview-button.png) **Preview the app**. More information: [ Preview an app](preview-app.md)
+1. On the actions menu, select the play button to **Preview the app**. For more information, see [Preview an app](preview-app.md).
+1. Toggle the list between ascending and descending sort orders. Filter the list by one or more characters in the account name.
+1. Add an account, edit the account that you added, start to update the account, cancel the changes, and then delete the account.
 
-1. Toggle the list between ascending and descending sort orders, and filter the list by one or more characters in the account name.
+## See also
 
-1. Add an account, edit the account that you added, start to update the account but cancel your changes, and then delete the account.
-
-## Next steps
-
-- [Link this app to a solution](add-app-solution.md) so that you can, for example, deploy it to a different environment or publish it on AppSource.
-- [Open one or more sample apps](open-and-run-a-sample-app.md), and explore different types of apps that you can create.
-
+- [Customize a gallery](customize-layout-sharepoint.md)
+- [Create a column](../data-platform/create-edit-field-portal.md#create-a-column)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

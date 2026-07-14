@@ -1,9 +1,9 @@
 ---
-title: "Use SQL to query data (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how to query Microsoft Dataverse table data using SQL." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 12/06/2024
+title: "Use SQL to query data (Microsoft Dataverse) | Microsoft Docs"
+description: "Learn how to query Microsoft Dataverse table data using SQL." 
+ms.date: 06/01/2026
 ms.reviewer: "pehecke"
-ms.topic: "article"
+ms.topic: how-to
 author: "pnghub" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "gned" # MSFT alias of Microsoft employees only
@@ -15,9 +15,6 @@ search.audienceType:
 
 The Microsoft Dataverse business layer provides a Tabular Data Stream (TDS) endpoint that emulates a SQL data connection. The SQL connection provides read-only access to the table data of the target Dataverse environment allowing you to execute SQL queries against the Dataverse data tables. No custom views of the data are provided. The Dataverse endpoint SQL connection uses the Dataverse security model for data access. Data can be obtained for all Dataverse tables to which a user has access.
 
-> [!NOTE]
-> Only the SQL data connection through SQL Server Management Studio and .NET libraries is in preview. Power BI is generally available.
-
 ## Prerequisites
 
 The **Enable TDS endpoint** setting must be enabled in your environment. That setting is enabled by default. More information: [Manage feature settings](/power-platform/admin/settings-features)
@@ -28,7 +25,7 @@ To prevent data exfiltration, turn on the [user level access control for TDS end
 
 TDS (SQL) endpoint applications support for Power BI and SQL Server Management Studio is described next.
 
-### SQL Server Management Studio (Preview)
+### SQL Server Management Studio
 
 You can also use [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) (SSMS) version 18.12.1 or later with the Dataverse endpoint SQL connection. Examples of using SSMS with the SQL data connection are shown in the figure.
 
@@ -97,7 +94,7 @@ Dataverse choice columns are represented as \<choice\>Name and \<choice\>Label i
 > After making changes to labels for a choice column, the table needs to have customizations published.
 
 > [!NOTE]
-> Including a large number of choice labels in your query will have significant impact on performance. It is best to use less than 10 labels if possible. Because choice labels are localized, the localized string is more expensive to return.
+> Including a large number of choice labels in your query have significant impact on performance. It's best to use less than 10 labels if possible. Because choice labels are localized, the localized string is more expensive to return.
 
 ### Reported SQL version
 
@@ -131,7 +128,7 @@ The Dataverse TDS endpoint no longer has a hard maximum size limit. Instead, the
 > To help keep the size of the returned data within acceptable limits, use as few multi-line text columns and choice columns as possible.
 
 > [!WARNING]
-> The five (5) minute timeout can be adjusted to two (2) minutes depending on the query complexity. For example, queries containing `SELECT *`, `NESTED FROMs and/or JOINs` will automatically adjust the timeout limit to two (2) minutes as those queries put too much pressure on the server when left running for a long time. It is advised to avoid using these patterns in SQL for maximum performance.
+> The five (5) minute timeout can be adjusted to two (2) minutes depending on the query complexity. For example, queries containing `SELECT *`, `NESTED FROMs and/or JOINs` automatically adjust the timeout limit to two (2) minutes as those queries put too much pressure on the server when left running for a long time. It's advised to avoid using these patterns in SQL for maximum performance.
 
 Dates returned in query results are formatted as Universal Time Coordinated (UTC). Previously, dates were returned in local time.
 
@@ -154,13 +151,13 @@ Only Microsoft Entra ID authentication is supported on the Dataverse endpoint SQ
 
 - Error returned when using **Microsoft Entra ID – Integrated** authentication.
 
-"Login failed: The HTTP request was forbidden with client authentication scheme 'Anonymous'.
+"Sign-in failed: The HTTP request was forbidden with client authentication scheme 'Anonymous'.
 RequestId: TDS;81d8a4f7-0d49-4d21-8f50-04364bddd370;2
 Time: 2020-12-17T01:10:59.8628578Z (.Net SqlClient Data Provider)"
 
 - Error returned when using **SQL Server** authentication.
 
-"Login failed: Request is not authenticated.
+"Sign-in failed: Request is not authenticated.
 RequestId: TDS;918aa372-ccc4-438a-813e-91b086355343;1
 Time: 2020-12-17T01:13:14.4986739Z (.Net SqlClient Data Provider)"
 
@@ -187,8 +184,8 @@ If the connection is successful a line "TcpTestSucceeded : True" is returned.
 
 In some cases, traffic can be blocked directly at the IP level. To validate the IP address is also working, take the IP address returned from the above domain test connection and replace the ComputerName parameter value with the IP address.
 
-3. Take the address returned from the above command as "RemoteAddress"
-4. Run the Test-NetConnection -ComputerName \<RemoteAddress> -port 1433
+1. Take the address returned from the above command as "RemoteAddress"
+2. Run the Test-NetConnection -ComputerName \<RemoteAddress> -port 1433
   
 This command should return "TcpTestSucceeded : True"
 
@@ -220,9 +217,10 @@ Allowlisting hostnames isn't sufficient when connecting to Dataverse TDS because
 
 ### See also
 
-[How Dataverse SQL differs from Transact-SQL](./how-dataverse-sql-differs-from-transact-sql.md)
-[Get started with virtual tables (entities)](./virtual-entities/get-started-ve.md)  
-[Query data using FetchXml](fetchxml/overview.md)
-[Service Protection API Limits](api-limits.md)
+- [How Dataverse SQL differs from Transact-SQL](./how-dataverse-sql-differs-from-transact-sql.md)
+- [Use SQL to query data by using the Dataverse Web API](./webapi/query/sql.md)
+- [Get started with virtual tables (entities)](./virtual-entities/get-started-ve.md)  
+- [Query data using FetchXml](fetchxml/overview.md)
+- [Service Protection API Limits](api-limits.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

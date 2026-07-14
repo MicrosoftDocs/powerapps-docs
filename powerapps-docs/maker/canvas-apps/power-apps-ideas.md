@@ -5,7 +5,7 @@ author: norliu
 
 ms.topic: article
 ms.custom: canvas
-ms.date: 10/04/2022
+ms.date: 3/20/2025
 ms.subservice: canvas-maker
 ms.author: norliu
 ms.reviewer: mkaur
@@ -36,25 +36,12 @@ When you select the name field in a gallery, you'll see an idea for a formula th
 
 There are two methods to benefit from Power Apps Ideas in your app.
 
-### Method 1: Transform natural language to Power Fx formulas
+Transform natural language to Power Fx formulas
 
 You can enter your requirements in plain natural language (currently limited to English (en-us)), and Power Apps will transform your requirement to a Power Fx formula.
 
 For details, go to [Transform natural language to Power Fx formulas](power-apps-ideas-transform.md).
 
-
-### Method 2: Transform examples to Power Fx formulas
-
-With method 1, you can transform natural language to formulas. However, we know that not all requirements are easy to describe even in our daily language. One of the typical use cases is data manipulation.
-
-Let’s say you want to change a date field’s display format from the default to another format, and you don’t know how to describe that format. With Power Apps Ideas, you can now simply select that field, then enter your desired format in the ideas pane, and press enter. One or a few formula suggestions will be popped out for you to select from.
-
-Make sure your selection is a label within a Gallery field or a column within a Data table.
-
-For details, go to [Transform examples to Power Fx formulas](power-apps-ideas-train-examples.md).
-
-> [!NOTE]
-> This method has support for specific capabilities. For more information, see [Supported and unsupported capabilities](power-apps-ideas-train-examples.md#supported-and-unsupported-capabilities).
 
 ## Dismiss an idea
 
@@ -66,7 +53,6 @@ If you want to see Ideas again, right-click on the control to see suggested Idea
 ## Next steps
 
 - [Transform natural language to Power Fx formulas](power-apps-ideas-transform.md)
-- [Transform examples to Power Fx formulas](power-apps-ideas-train-examples.md)
 
 ### See also
 

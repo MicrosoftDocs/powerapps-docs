@@ -1,6 +1,6 @@
 ---
-title: "Saved queries (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how saved queries enhance the search capabilities of Microsoft Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Saved queries (Microsoft Dataverse) | Microsoft Docs"
+description: "Learn how saved queries enhance the search capabilities of Microsoft Dataverse." 
 ms.date: 03/22/2022
 ms.reviewer: "pehecke"
 ms.topic: "article"

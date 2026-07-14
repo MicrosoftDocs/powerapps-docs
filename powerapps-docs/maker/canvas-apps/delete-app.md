@@ -3,10 +3,10 @@ title: Delete a canvas app
 description: Learn about how to delete an existing canvas app.
 author: mduelae
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 08/06/2020
+ms.date: 05/20/2026
 ms.subservice: canvas-maker
 ms.author: alaug
 search.audienceType: 
@@ -24,26 +24,26 @@ This article shows you how to delete a canvas app.
 
 1. Select **Apps** from the left pane.
 
-    ![Apps.](./media/delete-app/file-apps.png)
+    :::image type="content" source="./media/delete-app/file-apps.png" alt-text="Screenshot of the Apps option in the left pane.":::
 
 1. (optional) Near the upper-right corner, filter the list of apps to show only those apps that you own.
 
-    ![Apps filter.](./media/delete-app/filter-list.png)
+    :::image type="content" source="./media/delete-app/filter-list.png" alt-text="Screenshot of the Apps filter near the upper-right corner.":::
 
    > [!NOTE]
    > If the app that you want to delete doesn't appear, make sure that you're in the right environment.
 
 1. Select an app.
 
-    ![Select an app.](./media/delete-app/select-app.png)
+    :::image type="content" source="./media/delete-app/select-app.png" alt-text="Screenshot of selecting an app.":::
 
 1. Select **Delete** from the top menu. You can also select **More Commands** (**..**) and then select **Delete** instead.
 
-    ![Select delete.](./media/delete-app/select-delete.png)
+    :::image type="content" source="./media/delete-app/select-delete.png" alt-text="Screenshot of selecting Delete from the top menu.":::
 
 1. Select **Delete from cloud**.  
 
-    ![Delete from cloud.](./media/delete-app/delete-app.png)
+    :::image type="content" source="./media/delete-app/delete-app.png" alt-text="Screenshot of the Delete from cloud option.":::
 
     > [!IMPORTANT]
     > This action deletes the app not only from your account but also from the accounts of all users with whom this app was shared.

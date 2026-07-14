@@ -5,6 +5,7 @@ author: "JasonHQX"
 ms.author: jasonhuang
 ms.reviewer: matp
 ms.service: powerapps
+ms.subservice: dataverse-maker
 ms.topic: how-to
 ms.date: 03/20/2024
 ms.custom: template-how-to 

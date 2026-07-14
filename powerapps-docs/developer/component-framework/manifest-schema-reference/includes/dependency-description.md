@@ -1,0 +1,1 @@
+Refers to a library in another component that this component depends on.

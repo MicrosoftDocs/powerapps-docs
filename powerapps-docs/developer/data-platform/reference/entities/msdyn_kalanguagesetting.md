@@ -1,7 +1,7 @@
 ---
 title: "Knowledge article language setting (msdyn_kalanguagesetting) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Knowledge article language setting (msdyn_kalanguagesetting) table/entity with Microsoft Dataverse."
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
@@ -140,7 +140,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Property|Value|
 |---|---|
 |Description|**The name of the custom entity.**|
-|DisplayName|**msdyn_name**|
+|DisplayName|**msdyn\_name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`msdyn_name`|
@@ -427,7 +427,7 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`owningbusinessunit`|
-|RequiredLevel|SystemRequired|
+|RequiredLevel|None|
 |Type|Lookup|
 |Targets|businessunit|
 

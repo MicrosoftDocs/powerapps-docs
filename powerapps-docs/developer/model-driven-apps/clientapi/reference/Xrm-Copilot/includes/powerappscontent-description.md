@@ -1,0 +1,1 @@
+Describes the context data passed to the [updateContext](../updatecontext.md) method. All properties are optional.

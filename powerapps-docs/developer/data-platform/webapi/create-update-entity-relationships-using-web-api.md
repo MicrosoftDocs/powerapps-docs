@@ -2,8 +2,8 @@
 title: "Create and update table relationships using the Web API (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn about creating and updating table relationships using the Web API"
 ms.date: 04/06/2022
-author: mkannapiran
-ms.author: kamanick
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType: 
   - developer

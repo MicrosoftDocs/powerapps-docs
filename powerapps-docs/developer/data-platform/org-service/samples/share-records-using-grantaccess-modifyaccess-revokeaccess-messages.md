@@ -1,6 +1,6 @@
 ---
-title: "Sample: Share records using GrantAccess, ModifyAccess and RevokeAccess (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample shows how to share a record using grant, modify and revoke access message." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Sample: Share records using GrantAccess, ModifyAccess and RevokeAccess (Microsoft Dataverse) | Microsoft Docs"
+description: "This sample shows how to share a record using grant, modify and revoke access message." 
 ms.date: 04/03/2022
 author: paulliew
 ms.author: paulliew

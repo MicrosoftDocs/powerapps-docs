@@ -1,7 +1,7 @@
 ---
 title: "Virtual Connector Data Source (msdyn_connectordatasource) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Virtual Connector Data Source (msdyn_connectordatasource) table/entity with Microsoft Dataverse."
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 

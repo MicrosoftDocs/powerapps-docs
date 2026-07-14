@@ -2,8 +2,8 @@
 title: "Web API WebApiService Parallel Operations Sample (C#) (Microsoft Dataverse)| Microsoft Docs"
 description: "This sample demonstrates sending requests in parallel using the .NET Task Parallel Library (TPL)."
 ms.date: 09/02/2022
-author: MicroSri
-ms.author: sriknair
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
@@ -16,6 +16,9 @@ contributors:
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
 This .NET 6.0 sample demonstrates how to perform parallel data operations using the Dataverse Web API.
+
+> [!div class="nextstepaction"]
+> [View this sample on Github](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/CSharp-NETx/ParallelOperations)
 
 This sample uses the common helper code in the [WebAPIService class library (C#)](webapiservice.md).
 

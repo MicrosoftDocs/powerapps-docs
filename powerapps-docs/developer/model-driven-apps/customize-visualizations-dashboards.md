@@ -15,8 +15,6 @@ contributors:
 
 # Customize visualizations and dashboards
 
-<!-- https://learn.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/customize-visualizations-dashboards -->
-
 Data visualization and analytics in model-driven apps enable you to graphically view and analyze the data for your business, and help you to derive quick insights to make important business decisions. You can configure dashboards in such a way that enables you to view data from multiple areas such as sales, marketing, and service. You can even adjust the data displayed in visualizations and dashboards per your business requirements by applying filters.  
   
  The following elements constitute the visualization and analytics abilities:  

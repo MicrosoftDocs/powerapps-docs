@@ -4,7 +4,7 @@ description: A list of complex tables in Microsoft Dataverse that require a Powe
 author: mattp123
 
 ms.component: cds
-ms.topic: conceptual
+ms.topic: article
 ms.date: 08/28/2020
 ms.subservice: dataverse-maker
 ms.author: matp

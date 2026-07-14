@@ -1,6 +1,6 @@
 ---
-title: "Sample: Create a reciprocal connection role (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample shows how to create a reciprocal connection role" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Sample: Create a reciprocal connection role (Microsoft Dataverse) | Microsoft Docs"
+description: "This sample shows how to create a reciprocal connection role" 
 ms.date: 04/03/2022
 author: JimDaly #TODO: No Owner
 ms.author: jdaly
@@ -51,5 +51,14 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Clean up
 
 Display an option to delete the sample data that is created in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
+
+[Use connections to link records to each other](../../connection-entities.md)   
+[Describe a relationship between tables with connection roles](../../describe-relationship-entities-connection-roles.md)  
+[Sample: Create a connection](create-connection-early-bound.md)  
+[Sample: Create a connection role](create-connection-role-early-bound.md)  
+[Sample: Query connections by a record (early bound)](query-connections-record-early-bound.md)  
+[Sample: Query connection roles by entity type code (early bound)](query-connection-roles-entity-type-code-early-bound.md)  
+[Sample: Query connections by reciprocal roles (early bound)](query-connections-reciprocal-roles-early-bound.md)  
+[Sample: Update a connection role (early bound)](update-connection-role.md)  
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

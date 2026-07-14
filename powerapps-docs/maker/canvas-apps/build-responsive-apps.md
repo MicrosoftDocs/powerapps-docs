@@ -3,7 +3,7 @@ title: Building responsive canvas apps
 description: Learn about how to build responsive canvas apps.
 author: emcoope-msft
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 01/27/2022

@@ -1,9 +1,8 @@
 ---
-title: "Validate and publish a model-driven app using the app designer | MicrosoftDocs"
+title: "Validate and publish a model-driven app using the app designer"
 description: "Learn how to validate and publish a model-driven app"
 keywords: ""
-ms.date: 06/08/2018
-
+ms.date: 02/12/2026
 ms.custom: 
 ms.topic: how-to
 applies_to: 
@@ -25,9 +24,10 @@ search.audienceType:
 
 # Validate and publish a model-driven app using the app designer
 
+Model-driven apps can't be published when they don't include all the required components. Some components rely on others and this relationship between components is known as a [dependency](model-driven-app-glossary.md#dependency).
 
-
-Model-driven apps cannot be published if they do not include all the required components. Some components rely on others and this relationship between components is known as a [dependency](model-driven-app-glossary.md#dependency).
+> [!NOTE]
+> This article discusses a feature that's only available or needed when you use the classic app designer. The modern designer validates your app as part of the app building process.
 
 For example, the position table has been added to the site map, but is no longer showing in the app.
 
@@ -38,7 +38,7 @@ When the app is validated, the app designer canvas shows details about the asset
 ## How to validate an app and add in dependencies
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
-1.  Select the environment in which the unmanaged model-driven app is located.
+1. Select the environment in which the unmanaged model-driven app is located.
 1. Select the model-driven app, and then on the command bar select **Edit**.
    > [!NOTE]
    > Customizations to a model-driven app should take place within a [solution](../model-driven-apps/model-driven-app-glossary.md#solution). To update a model-driven app within a solution, open your solution from the **Solutions** area, select the **Model-Driven App** solution component, and then on the command bar select **Edit**.
@@ -63,17 +63,17 @@ When the app is validated, the app designer canvas shows details about the asset
   
      ![Required tab showing a list of missing components in the app.](media/app-designer-required-components-tab.png "Required tab showing a list of missing components in the app")  
   
-1.  Select the assets that are missing, and then select **Add Dependencies**. When the required asset has been added, the error count for the asset decreases.
+1.  Select the assets that are missing, and then select **Add Dependencies**. When the required asset is added, the error count for the asset decreases.
   
     > [!NOTE]
-    >  If a common asset is required across various app components, such as a form is required for a dashboard and a table, and you add that asset only once from the dashboard dependency tree, the dependency count will decrease only on the dashboard tile, but not on the table tile. However, the dependency will be resolved for both.  
+    >  If a common asset is required across various app components, such as a form is required for a dashboard and a table, and you add that asset only once from the dashboard dependency tree, the dependency count decreases only on the dashboard tile, but not on the table tile. However, the dependency is resolved for both.  
     >   
-    >  Select **Get Latest Dependencies** ![Get Latest Dependencies button in the app designer.](media/app-designer-get-latest-dependencies.png "Get Latest Dependencies button in the app designer") or select **Validate** again to get the latest set of dependencies. These buttons are only visible after the app has been saved.  
+    >  Select **Get Latest Dependencies** ![Get Latest Dependencies button in the app designer.](media/app-designer-get-latest-dependencies.png "Get Latest Dependencies button in the app designer") or select **Validate** again to get the latest set of dependencies. These buttons are only visible after the app is saved.  
   
-     Select **Hide Dependencies** if you don't want to add the suggested required components. Any unresolved warnings will appear again when the app is opened in the app designer and select **Validate** or **Get Latest Dependencies** ![Get Latest Dependencies button in the app designer.](media/app-designer-get-latest-dependencies.png "Get Latest Dependencies button in the app designer").  
+     Select **Hide Dependencies** if you don't want to add the suggested required components. Any unresolved warnings appear again when the app is opened in the app designer and select **Validate** or **Get Latest Dependencies** ![Get Latest Dependencies button in the app designer.](media/app-designer-get-latest-dependencies.png "Get Latest Dependencies button in the app designer").  
   
     > [!NOTE]
-    >  If the dependencies are hidden now and the app is exported later, all of these dependencies will appear again.  
+    >  If the dependencies are hidden now and the app is exported later, all of these dependencies appear again.  
   
 ## Publish an app using the app designer
 
@@ -84,8 +84,8 @@ Publish an app to make it available to users.
  The app status changes to **Published**. This is displayed in the top-right corner of the app designer. The app moves from the **Apps Being Edited** view to the **Published Apps** view, and the published date is shown on the app tile.  
   
 > [!NOTE]
-> - If your app has a validation error, this will be seen in the notification bar. It will not be possible to publish the app until the error is resolved.  
-> - The app cannot be published until it is saved.  
+> - If your app has a validation error, this is displayed in the notification bar. It isn't be possible to publish the app until the error is resolved.  
+> - The app can't be published until it is saved.  
 
 ## Next steps
 

@@ -5,7 +5,7 @@ ms.collection: get-started
 author: Mattp123
 
 ms.component: cds
-ms.topic: conceptual
+ms.topic: article
 ms.date: 08/02/2019
 ms.subservice: dataverse-maker
 ms.author: matp

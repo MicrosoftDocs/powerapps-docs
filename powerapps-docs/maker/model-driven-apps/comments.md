@@ -4,6 +4,7 @@ description: Comments help app makers collaborate better when working together.
 author: Mattp123
 ms.author: "emcoope"
 ms.service: powerapps
+ms.subservice: mda-maker
 ms.topic: how-to
 ms.date: 03/28/2023
 ms.custom: template-how-to

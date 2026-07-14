@@ -2,7 +2,7 @@
 title: "Quickstart: Blazor Server Web API sample (C#) (Microsoft Dataverse)| Microsoft Docs"
 description: "This sample demonstrates how to authenticate with a Microsoft Dataverse from a Blazor Server application and then call a basic WhoAmI Web API function."
 ms.date: 12/20/2022
-ms.topic: article
+ms.topic: quickstart
 author: JimDaly # GitHub ID
 ms.author: jdaly # MSFT alias of Microsoft employees only
 ms.reviewer: pehecke

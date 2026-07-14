@@ -1,7 +1,7 @@
 ---
 title: "Multistep Form Metadata (mspp_webformmetadata) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Multistep Form Metadata (mspp_webformmetadata) table/entity with Microsoft Dataverse."
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
@@ -1075,7 +1075,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |FormatName|Text|
 |ImeMode|Disabled|
 |IsLocalizable|False|
-|MaxLength|100000|
+|MaxLength|1048576|
 
 ### <a name="BKMK_mspp_tabname"></a> mspp_tabname
 

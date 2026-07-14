@@ -1,7 +1,7 @@
 ---
 title: "Governance Configuration (GovernanceConfiguration) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Governance Configuration (GovernanceConfiguration) table/entity with Microsoft Dataverse."
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
@@ -110,7 +110,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |FormatName|Text|
 |ImeMode|Auto|
 |IsLocalizable|False|
-|MaxLength|20000|
+|MaxLength|600000|
 
 ### <a name="BKMK_Enabled"></a> Enabled
 

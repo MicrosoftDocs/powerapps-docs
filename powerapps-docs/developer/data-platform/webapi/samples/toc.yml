@@ -49,17 +49,29 @@ items:
     href: ../web-api-samples-powershell.md
   - name: Basic Operations
     href: basic-operations-powershell.md
+  - name: Query Data
+    href: query-data-powershell.md
+  - name: Conditional Operations
+    href: conditional-operations-powershell.md
+  - name: Functions and Actions
+    href: functions-actions-powershell.md
   - name: Metadata Operations
     href: metadata-operations-powershell.md
+  - name: Multi-table lookup
+    href: multi-table-lookup-powershell.md
+  - name: Column-level security
+    href: column-level-security-powershell.md
 - name: (JavaScript) samples
   items:
   - name: About the client-side samples
     href: ../web-api-samples-client-side-javascript.md
+  - name: DataverseWebAPI sample library
+    href: ../dataversewebapi-sample-library.md
   - name: Basic Operations
     href: basic-operations-client-side-javascript.md
+  - name: Query Data
+    href: query-data-client-side-javascript.md    
   - name: Conditional Operations
     href: conditional-operations-client-side-javascript.md
   - name: Functions and Actions
     href: functions-actions-client-side-javascript.md
-  - name: Query Data
-    href: query-data-client-side-javascript.md

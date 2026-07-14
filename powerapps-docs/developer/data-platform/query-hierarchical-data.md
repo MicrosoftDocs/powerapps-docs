@@ -1,6 +1,6 @@
 ---
-title: "Query hierarchical data (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how you can use the query condition operators to query tables with explicit hierarchical relationships." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Query hierarchical data (Microsoft Dataverse) | Microsoft Docs"
+description: "Learn how you can use the query condition operators to query tables with explicit hierarchical relationships." 
 ms.date: 03/22/2022
 ms.reviewer: "pehecke"
 ms.topic: "article"
@@ -51,7 +51,7 @@ You can take advantage of new query condition operators to query tables with exp
  Use the `rowaggregate` column in a FetchXML based query to retrieve the number of hierarchically related child records. When this value is set to `CountChildren` a value that includes the total number of child records for the record is included in the <xref:Microsoft.Xrm.Sdk.EntityCollection>. For example, the following query will include an `AccountChildren` aggregate value representing the number of child account records in the hierarchical relationship where the `{0}` parameter represents the `AccountId` of the parent record.  
   
 ```xml  
-<fetch distinct='false' no-lock='false' mapping='logical'>  
+<fetch>  
   <entity name='account'>  
     <attribute name='name' />  
     <attribute name='accountid' />  

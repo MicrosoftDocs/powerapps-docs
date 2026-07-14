@@ -1,7 +1,7 @@
 ---
 title: "AI Event (msdyn_AIEvent) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the AI Event (msdyn_AIEvent) table/entity with Microsoft Dataverse."
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
@@ -62,6 +62,7 @@ The following table lists selected properties for the AI Event (msdyn_AIEvent) t
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
+- [msdyn_AIConfigurationId](#BKMK_msdyn_AIConfigurationId)
 - [msdyn_AIEventId](#BKMK_msdyn_AIEventId)
 - [msdyn_AIModelId](#BKMK_msdyn_AIModelId)
 - [msdyn_ApprovalId](#BKMK_msdyn_ApprovalId)
@@ -71,6 +72,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [msdyn_CreditConsumed](#BKMK_msdyn_CreditConsumed)
 - [msdyn_DataInfo](#BKMK_msdyn_DataInfo)
 - [msdyn_DataType](#BKMK_msdyn_DataType)
+- [msdyn_EventData](#BKMK_msdyn_EventData)
 - [msdyn_Name](#BKMK_msdyn_Name)
 - [msdyn_Output](#BKMK_msdyn_Output)
 - [msdyn_PartnerSource](#BKMK_msdyn_PartnerSource)
@@ -98,6 +100,19 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Integer|
 |MaxValue|2147483647|
 |MinValue|-2147483648|
+
+### <a name="BKMK_msdyn_AIConfigurationId"></a> msdyn_AIConfigurationId
+
+|Property|Value|
+|---|---|
+|Description||
+|DisplayName|**AI Configuration**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_aiconfigurationid`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|msdyn_aiconfiguration|
 
 ### <a name="BKMK_msdyn_AIEventId"></a> msdyn_AIEventId
 
@@ -196,6 +211,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |0|**PowerAutomation**|
 |1|**PowerApps**|
 |2|**API**|
+|3|**MCS**|
 
 ### <a name="BKMK_msdyn_CreditConsumed"></a> msdyn_CreditConsumed
 
@@ -244,6 +260,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|False|
 |MaxLength|100|
+
+### <a name="BKMK_msdyn_EventData"></a> msdyn_EventData
+
+|Property|Value|
+|---|---|
+|Description||
+|DisplayName|**Event Data**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_eventdata`|
+|RequiredLevel|None|
+|Type|Memo|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1048576|
 
 ### <a name="BKMK_msdyn_Name"></a> msdyn_Name
 
@@ -474,6 +507,10 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 - [ModifiedBy](#BKMK_ModifiedBy)
 - [ModifiedOn](#BKMK_ModifiedOn)
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
+- [msdyn_DataInfoFile](#BKMK_msdyn_DataInfoFile)
+- [msdyn_DataInfoFile_Name](#BKMK_msdyn_DataInfoFile_Name)
+- [msdyn_OutputFile](#BKMK_msdyn_OutputFile)
+- [msdyn_OutputFile_Name](#BKMK_msdyn_OutputFile_Name)
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
@@ -567,6 +604,66 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |Type|Lookup|
 |Targets|systemuser|
 
+### <a name="BKMK_msdyn_DataInfoFile"></a> msdyn_DataInfoFile
+
+|Property|Value|
+|---|---|
+|Description||
+|DisplayName|**Data Info File**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_datainfofile`|
+|RequiredLevel|None|
+|Type|File|
+|MaxSizeInKB|32768|
+
+### <a name="BKMK_msdyn_DataInfoFile_Name"></a> msdyn_DataInfoFile_Name
+
+|Property|Value|
+|---|---|
+|Description||
+|DisplayName||
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`msdyn_datainfofile_name`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Disabled|
+|IsLocalizable|False|
+|MaxLength|200|
+
+### <a name="BKMK_msdyn_OutputFile"></a> msdyn_OutputFile
+
+|Property|Value|
+|---|---|
+|Description||
+|DisplayName|**Output File**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_outputfile`|
+|RequiredLevel|None|
+|Type|File|
+|MaxSizeInKB|32768|
+
+### <a name="BKMK_msdyn_OutputFile_Name"></a> msdyn_OutputFile_Name
+
+|Property|Value|
+|---|---|
+|Description||
+|DisplayName||
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`msdyn_outputfile_name`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Disabled|
+|IsLocalizable|False|
+|MaxLength|200|
+
 ### <a name="BKMK_OwnerIdName"></a> OwnerIdName
 
 |Property|Value|
@@ -659,10 +756,13 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 These relationships are many-to-one. Listed by **SchemaName**.
 
 - [business_unit_msdyn_aievent](#BKMK_business_unit_msdyn_aievent)
+- [FileAttachment_msdyn_AIEvent_msdyn_DataInfoFile](#BKMK_FileAttachment_msdyn_AIEvent_msdyn_DataInfoFile)
+- [FileAttachment_msdyn_AIEvent_msdyn_OutputFile](#BKMK_FileAttachment_msdyn_AIEvent_msdyn_OutputFile)
 - [lk_msdyn_aievent_createdby](#BKMK_lk_msdyn_aievent_createdby)
 - [lk_msdyn_aievent_createdonbehalfby](#BKMK_lk_msdyn_aievent_createdonbehalfby)
 - [lk_msdyn_aievent_modifiedby](#BKMK_lk_msdyn_aievent_modifiedby)
 - [lk_msdyn_aievent_modifiedonbehalfby](#BKMK_lk_msdyn_aievent_modifiedonbehalfby)
+- [msdyn_aiconfiguration_msdyn_aievent](#BKMK_msdyn_aiconfiguration_msdyn_aievent)
 - [msdyn_aimodel_msdyn_aievent](#BKMK_msdyn_aimodel_msdyn_aievent)
 - [owner_msdyn_aievent](#BKMK_owner_msdyn_aievent)
 - [team_msdyn_aievent](#BKMK_team_msdyn_aievent)
@@ -680,6 +780,32 @@ One-To-Many Relationship: [businessunit business_unit_msdyn_aievent](businessuni
 |ReferencingEntityNavigationPropertyName|`owningbusinessunit`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `Restrict`<br />Assign: `NoCascade`<br />Delete: `Restrict`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_FileAttachment_msdyn_AIEvent_msdyn_DataInfoFile"></a> FileAttachment_msdyn_AIEvent_msdyn_DataInfoFile
+
+One-To-Many Relationship: [fileattachment FileAttachment_msdyn_AIEvent_msdyn_DataInfoFile](fileattachment.md#BKMK_FileAttachment_msdyn_AIEvent_msdyn_DataInfoFile)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`fileattachment`|
+|ReferencedAttribute|`fileattachmentid`|
+|ReferencingAttribute|`msdyn_datainfofile`|
+|ReferencingEntityNavigationPropertyName|`msdyn_datainfofile`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `Cascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `Cascade`<br />RollupView: `NoCascade`<br />Share: `Cascade`<br />Unshare: `Cascade`|
+
+### <a name="BKMK_FileAttachment_msdyn_AIEvent_msdyn_OutputFile"></a> FileAttachment_msdyn_AIEvent_msdyn_OutputFile
+
+One-To-Many Relationship: [fileattachment FileAttachment_msdyn_AIEvent_msdyn_OutputFile](fileattachment.md#BKMK_FileAttachment_msdyn_AIEvent_msdyn_OutputFile)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`fileattachment`|
+|ReferencedAttribute|`fileattachmentid`|
+|ReferencingAttribute|`msdyn_outputfile`|
+|ReferencingEntityNavigationPropertyName|`msdyn_outputfile`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `Cascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `Cascade`<br />RollupView: `NoCascade`<br />Share: `Cascade`<br />Unshare: `Cascade`|
 
 ### <a name="BKMK_lk_msdyn_aievent_createdby"></a> lk_msdyn_aievent_createdby
 
@@ -732,6 +858,19 @@ One-To-Many Relationship: [systemuser lk_msdyn_aievent_modifiedonbehalfby](syste
 |ReferencingEntityNavigationPropertyName|`modifiedonbehalfby`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msdyn_aiconfiguration_msdyn_aievent"></a> msdyn_aiconfiguration_msdyn_aievent
+
+One-To-Many Relationship: [msdyn_aiconfiguration msdyn_aiconfiguration_msdyn_aievent](msdyn_aiconfiguration.md#BKMK_msdyn_aiconfiguration_msdyn_aievent)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msdyn_aiconfiguration`|
+|ReferencedAttribute|`msdyn_aiconfigurationid`|
+|ReferencingAttribute|`msdyn_aiconfigurationid`|
+|ReferencingEntityNavigationPropertyName|`msdyn_AIConfigurationId`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_msdyn_aimodel_msdyn_aievent"></a> msdyn_aimodel_msdyn_aievent
 
@@ -794,6 +933,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [msdyn_aievent_BulkDeleteFailures](#BKMK_msdyn_aievent_BulkDeleteFailures)
 - [msdyn_aievent_DuplicateBaseRecord](#BKMK_msdyn_aievent_DuplicateBaseRecord)
 - [msdyn_aievent_DuplicateMatchingRecord](#BKMK_msdyn_aievent_DuplicateMatchingRecord)
+- [msdyn_aievent_FileAttachments](#BKMK_msdyn_aievent_FileAttachments)
 - [msdyn_aievent_MailboxTrackingFolders](#BKMK_msdyn_aievent_MailboxTrackingFolders)
 - [msdyn_aievent_PrincipalObjectAttributeAccesses](#BKMK_msdyn_aievent_PrincipalObjectAttributeAccesses)
 - [msdyn_aievent_ProcessSession](#BKMK_msdyn_aievent_ProcessSession)
@@ -844,6 +984,18 @@ Many-To-One Relationship: [duplicaterecord msdyn_aievent_DuplicateMatchingRecord
 |ReferencingEntity|`duplicaterecord`|
 |ReferencingAttribute|`duplicaterecordid`|
 |ReferencedEntityNavigationPropertyName|`msdyn_aievent_DuplicateMatchingRecord`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_msdyn_aievent_FileAttachments"></a> msdyn_aievent_FileAttachments
+
+Many-To-One Relationship: [fileattachment msdyn_aievent_FileAttachments](fileattachment.md#BKMK_msdyn_aievent_FileAttachments)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`fileattachment`|
+|ReferencingAttribute|`objectid`|
+|ReferencedEntityNavigationPropertyName|`msdyn_aievent_FileAttachments`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 

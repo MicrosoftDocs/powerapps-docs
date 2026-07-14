@@ -37,7 +37,7 @@ Registering a service endpoint for an event hub is similar to registering for an
 
 Dataverse needs to know the exact operation (table and message combination) that, when processed, would cause the Azure-aware plug-in to execute. Since you are creating an event hub, this operation would be related to the processing of Azure event data in particular. You must register a step for the Azure-aware plug-in in the Azure event execution pipeline.  For more information see  [Tutorial: Register an Azure-aware plug-in using the Plug-in Registration Tool](walkthrough-register-azure-aware-plug-in-using-plug-in-registration-tool.md).  
 
-If you are using an Azure-aware custom workflow activity instead of a plug-in, you would register the activity's assembly using the Plug-in Registration tool and incorporate that activity into a workflow. For more information, see [Sample: Azure aware custom workflow activity](/dynamics365/customer-engagement/developer/sample-azure-aware-custom-workflow-activity).
+If you are using an Azure-aware custom workflow activity instead of a plug-in, you would register the activity's assembly using the Plug-in Registration tool and incorporate that activity into a workflow. For more information, see [Sample: Azure aware custom workflow activity](org-service/samples/azure-aware-custom-workflow-activity.md).
   
 ## 4. Start listening
 

@@ -4,7 +4,7 @@ description: This explains how to find and open an app, and how to work with its
 author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: article
 ms.date: 01/16/2025
 ms.subservice: end-user
 ms.author: smurkute

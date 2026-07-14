@@ -4,7 +4,7 @@ description: Edit the default filter of a report
 author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 06/27/2019
 ms.subservice: end-user
 ms.author: smurkute

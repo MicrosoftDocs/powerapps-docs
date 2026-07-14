@@ -1,7 +1,7 @@
 ---
 title: "Plug-in (plugin) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Plug-in (plugin) table/entity with Microsoft Dataverse."
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
@@ -135,7 +135,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Value|Label|
 |---|---|
 |100000000|**PoweFx**|
-|100000001|**C#**|
+|100000001|**C\#**|
 
 ### <a name="BKMK_name"></a> name
 

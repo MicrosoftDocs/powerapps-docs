@@ -1,11 +1,11 @@
 ---
-title: "Link custom columns of the recurring appointment master and appointment tables (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Link the custom columns of the RecurringAppointmentMaster table with custom columns of the Appointment entity to automatically copy data." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Link custom columns of the recurring appointment master and appointment tables (Microsoft Dataverse) | Microsoft Docs"
+description: "Link the custom columns of the RecurringAppointmentMaster table with custom columns of the Appointment entity to automatically copy data." 
 ms.custom: ""
 ms.date: 07/19/2021
 ms.reviewer: "pehecke"
 
-ms.topic: "article"
+ms.topic: how-to
 author: "mayadumesh" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only

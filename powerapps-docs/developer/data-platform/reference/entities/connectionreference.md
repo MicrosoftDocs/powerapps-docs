@@ -1,7 +1,7 @@
 ---
 title: "Connection Reference (connectionreference) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Connection Reference (connectionreference) table/entity with Microsoft Dataverse."
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
@@ -63,6 +63,8 @@ The following table lists selected properties for the Connection Reference (conn
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [ConnectionId](#BKMK_ConnectionId)
+- [ConnectionParametersConfig](#BKMK_ConnectionParametersConfig)
+- [ConnectionParameterSetConfig](#BKMK_ConnectionParameterSetConfig)
 - [connectionreferencedisplayname](#BKMK_connectionreferencedisplayname)
 - [connectionreferenceId](#BKMK_connectionreferenceId)
 - [ConnectionReferenceLogicalName](#BKMK_ConnectionReferenceLogicalName)
@@ -96,6 +98,40 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|False|
 |MaxLength|1000|
+
+### <a name="BKMK_ConnectionParametersConfig"></a> ConnectionParametersConfig
+
+|Property|Value|
+|---|---|
+|Description|**Connection parameters that can be reused when creating connections in Microsoft Copilot Studio**|
+|DisplayName|**Connection Parameters Config**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`connectionparametersconfig`|
+|RequiredLevel|None|
+|Type|Memo|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1048576|
+
+### <a name="BKMK_ConnectionParameterSetConfig"></a> ConnectionParameterSetConfig
+
+|Property|Value|
+|---|---|
+|Description|**The connection parameters set that can be reused when creating connections in Microsoft Copilot Studio**|
+|DisplayName|**Connection Parameters Set Config**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`connectionparametersetconfig`|
+|RequiredLevel|None|
+|Type|Memo|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1048576|
 
 ### <a name="BKMK_connectionreferencedisplayname"></a> connectionreferencedisplayname
 
@@ -784,6 +820,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [connectionreference_PrincipalObjectAttributeAccesses](#BKMK_connectionreference_PrincipalObjectAttributeAccesses)
 - [connectionreference_ProcessSession](#BKMK_connectionreference_ProcessSession)
 - [connectionreference_SyncErrors](#BKMK_connectionreference_SyncErrors)
+- [credential_connectionreference](#BKMK_credential_connectionreference)
 - [msdyn_AIConfiguration_ConnectionReference](#BKMK_msdyn_AIConfiguration_ConnectionReference)
 - [msdyn_connreference_msdyn_connectordatasource](#BKMK_msdyn_connreference_msdyn_connectordatasource)
 - [msdyn_dfcr_cr_connect](#BKMK_msdyn_dfcr_cr_connect)
@@ -907,6 +944,18 @@ Many-To-One Relationship: [syncerror connectionreference_SyncErrors](syncerror.m
 |ReferencedEntityNavigationPropertyName|`connectionreference_SyncErrors`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_credential_connectionreference"></a> credential_connectionreference
+
+Many-To-One Relationship: [credential credential_connectionreference](credential.md#BKMK_credential_connectionreference)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`credential`|
+|ReferencingAttribute|`connectionreference`|
+|ReferencedEntityNavigationPropertyName|`credential_connectionreference`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_msdyn_AIConfiguration_ConnectionReference"></a> msdyn_AIConfiguration_ConnectionReference
 

@@ -4,7 +4,7 @@ description: How to export to an Excel static worksheet in a model-driven Power 
 author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 3/12/2021
 ms.subservice: end-user
 ms.author: smurkute

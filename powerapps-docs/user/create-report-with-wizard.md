@@ -4,7 +4,7 @@ description: Create a report using the Report Wizard in Power Apps
 author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 11/17/2023
 ms.subservice: end-user
 ms.author: smurkute

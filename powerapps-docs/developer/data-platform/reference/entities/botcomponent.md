@@ -1,7 +1,7 @@
 ---
 title: "Copilot component (botcomponent) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Copilot component (botcomponent) table/entity with Microsoft Dataverse."
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
@@ -68,6 +68,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [ComponentType](#BKMK_ComponentType)
 - [Content](#BKMK_Content)
 - [Data](#BKMK_Data)
+- [Dependencies](#BKMK_Dependencies)
 - [Description](#BKMK_Description)
 - [HelpLink](#BKMK_HelpLink)
 - [IconUrl](#BKMK_IconUrl)
@@ -187,6 +188,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |16|**Knowledge Source**|
 |17|**External Trigger**|
 |18|**Copilot Settings**|
+|19|**Test Case**|
 
 ### <a name="BKMK_Content"></a> Content
 
@@ -214,6 +216,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`data`|
+|RequiredLevel|None|
+|Type|Memo|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1048576|
+
+### <a name="BKMK_Dependencies"></a> Dependencies
+
+|Property|Value|
+|---|---|
+|Description|**Used to store dependencies between bots.**|
+|DisplayName|**Dependencies**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`dependencies`|
 |RequiredLevel|None|
 |Type|Memo|
 |Format|Text|
@@ -343,6 +362,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |1081|**Hindi**|
 |2052|**Chinese (Simplified)**|
 |2057|**English (United Kingdom)**|
+|2070|**Portuguese (Portugal)**|
 |3081|**English (Australia)**|
 |3084|**French (Canada)**|
 |21514|**Spanish (United States)**|

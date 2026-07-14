@@ -2,7 +2,7 @@
 title: Manage model-driven app settings in the Power Apps app designer
 description: Learn how to manage the settings for your app using the app designer
 keywords: ""
-ms.date: 01/27/2025
+ms.date: 04/02/2026
 ms.custom: 
 ms.topic: how-to
 applies_to:
@@ -13,14 +13,14 @@ author: "Mattp123"
 ms.assetid: e773e60f-0211-4c4b-a1af-663be4997629
 ms.author: matp
 ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 caps.latest.revision: 14
-topic-status: Drafting
+ms.subservice: mda-maker
 search.audienceType: 
   - maker
 contributors:
 - chmoncay
+- jasongre
+- clromano 
 ---
 # Manage model-driven app settings in the app designer
 
@@ -36,7 +36,7 @@ You must select **Publish** to activate an app settings change.
     |-------------|--------------|-----------------|
     | **General**  | **Solution**  | Read-only property that displays the solution name where the app is located.  |
     |**General** |**App name**| The friendly name for the app.|  
-    |**General** |**Description**| The description of the app (optional). If your app is in a [managed environment](/power-platform/admin/managed-environment-overview), you can select **Create description using AI** to have  Copilot generate one for you. More information: [Create an app description with Copilot (preview)](build-first-model-driven-app.md#create-an-app-description-with-copilot-preview) |  
+    |**General** |**Description**| The description of the app (optional). If your app is in a [managed environment](/power-platform/admin/managed-environment-overview), you can select **Create description using AI** to have  Copilot generate one for you. More information: [Create an app description with Copilot](build-first-model-driven-app.md#create-an-app-description-with-copilot) |  
     |**General** | **Icon** | Change the app icon by selecting **Select icon**, to browse and select an image web resource. This icon is displayed on the preview tile of the app. More information: [Create or edit model-driven app web resources to extend an app](create-edit-web-resources.md)|
     | **Advanced settings**   | **Unique name**  | Read-only property that displays the app unique name including the publisher prefix.  |
     | **Advanced settings**   | **Welcome page**   | This option allows a maker to select from the web resources available in your organization. The welcome pages created contain information that's useful to users, such as links to videos, upgrade instructions, or getting started information. The welcome page is displayed when an app is opened. Users can select **Do not show this Welcome Screen next time** on the welcome page to disable the page so it doesn't appear the next time the app starts. Notice that the **Do not show this Welcome Screen next time** option is a user-level setting and can't be controlled by administrators or app makers. More information: [Create or edit model-driven app web resources to extend an app](create-edit-web-resources.md)  |
@@ -56,11 +56,22 @@ Here are a few of the features available to app makers:
 - **In app notifications**. When enabled, the app polls for new in-app notifications and displays them. More information: [Send in-app notifications within model-driven apps](../../developer/model-driven-apps/clientapi/send-in-app-notifications.md)
 - **Lock tabs at the top of forms on mobile and tablets**. When enabled, tabs remain visible at the top of a form while users scroll through the data on the form. More information: [Lock tabs at the top of forms](../../mobile/use-custom-model-driven-app-on-mobile.md#lock-tabs-at-the-top-of-forms)
 - **Mobile commanding improvements**. When enabled, optimizes the command bar for phone and tablet providing easy access to contextual commands to users helping increase productivity and satisfaction. More information: [Mobile commanding improvements](../../mobile/use-custom-model-driven-app-on-mobile.md#mobile-commanding-improvements)
-- **Offline setup from the app designer**. [Enable your app for offline use](../../mobile/setup-mobile-offline.md#enable-your-app-for-offline-use)
+- **Enable offline classic**. [Enable mobile offline classoc](/power-apps/mobile/setup-mobile-offline#enable-mobile-offline-classic)
 - **Tablet optimization for command bar**. When enabled, replaces the native command bar at the bottom of the screen with the web command bar located at the top of the screen on tablets. More information: [Tablet optimization for command bar](../../mobile/use-custom-model-driven-app-on-mobile.md#tablet-optimization-for-command-bar)
-- **Try the new look**. Enabled by default, this feature shows end users a "Try the new look" switch to enable the new experience. End users can switch back at any time. More information: [Modern, refreshed look for model-driven apps](../../user/modern-fluent-design.md)
+- **New look for model-driven apps**. Enabled by default, this feature determines whether end users see the modern refresh app experience or the classic look. This setting is hidden and ignored with the **2026 Wave 1** release when the new look becomes mandatory. More information: [Modern, refreshed look for model-driven apps](../../user/modern-fluent-design.md)
+- **Form fill assist toolbar**. When enabled, the form fill assist toolbar is visible at the top of a form, providing easy access to Copilot form fill assistance capabilities like smart paste and files. For more information about AI form fill assistance environment settings, go to [AI form fill assistance](/power-platform/admin/settings-features#ai-form-fill-assistance). For more information about using this feature, go to [Use Copilot's form fill assistance feature in model-driven apps](../../user/form-filling-assistance.md).
 
-## Upcoming
+## Navigation
+
+Controls navigation features for the app.
+
+- **Home**. Displays a link to the home page for the model-driven app.
+- **Recent**. Displays the list of links for the model-driven app that were recently visited.
+- **Pinned**. Pin items from the **Recent** list to locate them easily.
+- **Enable collapsibile groups**. Disabled by default. Allows groups to be collapsed or expanded. More information: [Create a group](app-navigation.md#create-a-group)
+- **Enable Areas**. Disabled by default. Areas can contain multiple groups. For apps with multiple areas, a user must  select the area switch located at the bottom left in the app to change to a different area. [Add a new area](app-navigation.md#add-a-new-area)
+
+## Upcoming 
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
@@ -69,7 +80,7 @@ The **Upcoming** tab displays preview features currently available:
 > [!IMPORTANT]
 > [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
-- **Choose the offline mode to apply to your app**. When enabled, users can continue working in the model-driven app when offline. More information: [Mobile offline overview (preview)](../../mobile/mobile-offline-overview.md)
+- **Microsoft 365 Copilot in model-driven apps**. Microsoft 365 Copilot chat makes it easier for users to work with model-driven apps by offering AI-powered insights through natural language conversations. With this feature, users can quickly find information, navigate apps more easily, and get help to boost their productivity. More information: [Add Microsoft 365 Copilot chat for app users in model-driven apps (preview)](add-microsoft-365-copilot.md)
 
 ## Known limitations
 

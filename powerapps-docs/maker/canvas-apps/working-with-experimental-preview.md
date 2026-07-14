@@ -3,10 +3,10 @@ title: Understand New, Preview, Experimental, and Retired features in canvas app
 description: Learn about New, Preview, Experimental, and Retired features.
 author: gregli-msft
 
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 06/21/2024
+ms.date: 04/29/2025
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -90,7 +90,7 @@ When a feature moves from **New** to **Retired**, the meaning of its switch is o
 
 **Retired** features will eventually be removed from the product after enough time has passed and usage is low. Removals are well communicated ahead of time for breaking changes.
 
-**Retired** features are fully documented in the [Power Apps documentation](./getting-started.md).
+**Retired** features are fully documented in the [Important changes (deprecations) coming in Power Platform](/power-platform/important-changes-coming).
 
 ## Defaults
 

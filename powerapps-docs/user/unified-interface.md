@@ -3,7 +3,7 @@ title: "Enhanced user experience with Unified Interface for model-driven apps | 
 description: Overview of Unified Interface in Power Apps
 author: shwetamurkute
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: article
 ms.date: 06/19/2023
 ms.subservice: end-user
 ms.author: smurkute

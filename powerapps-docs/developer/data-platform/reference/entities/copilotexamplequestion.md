@@ -1,7 +1,7 @@
 ---
 title: "CopilotExampleQuestion table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the CopilotExampleQuestion table/entity with Microsoft Dataverse."
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
@@ -194,7 +194,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**EntityScope that can be used to extract results. Format: [entityscopeA], [entityscopeB]**|
+|Description|**EntityScope that can be used to extract results. Format: \[entityscopeA\], \[entityscopeB\]**|
 |DisplayName|**EntityScope**|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -211,7 +211,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**EntityScopeColumn within the EntityScope specified above.Format: [EntityScopeA].[EntityScopeColumnA1], [EntityScopeB].[EntityScopeColumnB2]**|
+|Description|**EntityScopeColumn within the EntityScope specified above.Format: \[EntityScopeA\].\[EntityScopeColumnA1\], \[EntityScopeB\].\[EntityScopeColumnB2\]**|
 |DisplayName|**EntityScopeColumn**|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -264,7 +264,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Format|Text|
 |FormatName|Text|
 |ImeMode|Auto|
-|IsLocalizable|False|
+|IsLocalizable|True|
 |MaxLength|20000|
 
 ### <a name="BKMK_knowledgetype"></a> knowledgetype

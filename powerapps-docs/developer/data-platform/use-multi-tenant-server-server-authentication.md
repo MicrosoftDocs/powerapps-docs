@@ -1,9 +1,9 @@
 ---
-title: "Use multi-tenant server-to-server authentication (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how to access Microsoft Dataverse data across multiple tenants from an application or service without explicit user authentication." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Use multi-tenant server-to-server authentication (Microsoft Dataverse) | Microsoft Docs"
+description: "Learn how to access Microsoft Dataverse data across multiple tenants from an application or service without explicit user authentication." 
 ms.date: 4/05/2019
 ms.reviewer: pehecke
-ms.topic: article
+ms.topic: how-to
 author: ritesp # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: ritesp # MSFT alias of Microsoft employees only
@@ -14,7 +14,7 @@ search.audienceType:
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
-Multi-tenancy is the most common app scenario and the one which is used for apps distributed using Microsoft AppSource, but you can also use multi-tenancy without listing your application with Microsoft AppSource.  
+Multi-tenancy is the most common app scenario and the one which is used for apps distributed using Microsoft Marketplace, but you can also use multi-tenancy without listing your application with Microsoft Marketplace.  
   
 Each Microsoft Dataverse organization is associated with an Microsoft Entra ID tenant. Your web application or service is registered with its own Microsoft Entra ID tenant.  
   
@@ -97,7 +97,7 @@ This is the reason why your Dataverse tenant must be associated with your Micros
 
 ## Create an application user associated with the registered application in Dataverse
 
-When your application accesses the Dataverse data of one of the subscribers of your application, it will require an application user in the subscriber’s Dataverse organization. Like any Dataverse user, this application user must be associated with at least one security role which defines the data the user is able to access.  
+When your application accesses the Dataverse data of one of the subscribers of your application, it will require an application user in the subscriber's Dataverse organization. Like any Dataverse user, this application user must be associated with at least one security role which defines the data the user is able to access.  
   
 The [SystemUser Table](reference/entities/systemuser.md) has three new columns to store this data.  
   
@@ -147,7 +147,7 @@ Before you test your application with a separate Dataverse tenant, an administra
   
 When they grant consent, your registered application will be added to the  Microsoft Entra ID Enterprise applications list and it is available to the users of the Microsoft Entra ID tenant.  
   
-Only after an administrator has granted consent, you must then create the application user in the subscriber’s Dataverse tenant. You can manually create the application user using the steps described in [Manually create a Dynamics 365 application user](#bkmk_ManuallyCreateUser).  
+Only after an administrator has granted consent, you must then create the application user in the subscriber's Dataverse tenant. You can manually create the application user using the steps described in [Manually create a Dynamics 365 application user](#bkmk_ManuallyCreateUser).  
   
 For initial tests you may want to manually perform these steps. When you are ready to make your application or service available to subscribers you will want to have a more efficient procedure. This is covered in the next section.  
   
@@ -161,14 +161,14 @@ You must include a custom security role which defines what privileges your appli
   
 For information about creating custom security roles, see  
   
-- [Create or edit a security role](/dynamics365/customer-engagement/admin/create-edit-security-role)  
-- [Copy a security role](/dynamics365/customer-engagement/admin/copy-security-role)  
-- [Add solution components](../../maker/data-platform/create-solution.md#add-solution-components)
+- [Create or edit a security role](/power-platform/admin/create-edit-security-role)  
+- [Copy a security role](/power-platform/admin/copy-security-role)  
+- [Add solution components](../../maker/data-platform/create-solution.md#add-or-remove-solution-objects)
   
   For information about creating a Dataverse solution, see the following topics:
   
 - [Use solutions for your customizations](/power-platform/alm/use-solutions-for-your-customizations)  
-- [Package and distribute extensions using solutions](/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions)  
+- [Solution concepts](/power-platform/alm/solution-concepts-alm)  
   
 However, the application user cannot be included with a solution so you will need to provide a way to create this application user and associate it with the custom security role.  
   

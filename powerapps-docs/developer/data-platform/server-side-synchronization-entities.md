@@ -36,7 +36,7 @@ In Power Apps, server-side synchronization provides an interface between Microso
   
 - Automatically track Microsoft Exchange emails in Power Apps for a user based on the folder-level tracking rules.  
   
-### Related topics  
+### Related articles  
  [Configure folder level tracking rules](configure-exchange-folder-level-tracking-rules.md) 
 
 

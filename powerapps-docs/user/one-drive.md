@@ -4,7 +4,7 @@ description: How to use OneDrive for Business
 author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 03/02/2020
 ms.subservice: end-user
 ms.author: smurkute

@@ -2,11 +2,11 @@
 title: "Query and visualize hierarchical data with Power Apps | MicrosoftDocs"
 description: "Describes how to query and visualize hierarchical related data."
 ms.custom: ""
-ms.date: 06/20/2018
+ms.date: 03/31/2026
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: how-to
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -20,6 +20,9 @@ search.audienceType:
   - maker
 ---
 # Query and visualize hierarchically related data
+
+> [!IMPORTANT]
+> This feature is deprecated. For more information, go to [Hierarchy control in model-driven apps is deprecated](/power-platform/important-changes-coming#hierarchy-control-in-model-driven-apps-is-deprecated).
 
 Get valuable business insights by visualizing hierarchically related data. The hierarchical modelling and visualization capabilities give you a number of benefits:  
   

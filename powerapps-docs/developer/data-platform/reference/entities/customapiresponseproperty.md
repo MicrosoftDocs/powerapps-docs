@@ -1,7 +1,7 @@
 ---
 title: "Custom API Response Property (CustomAPIResponseProperty) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Custom API Response Property (CustomAPIResponseProperty) table/entity with Microsoft Dataverse."
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 

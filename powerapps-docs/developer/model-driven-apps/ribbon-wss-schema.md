@@ -14,8 +14,6 @@ contributors:
 ---
 # Ribbon WSS schema
 
-<!-- https://learn.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/ribbon-wss-schema -->
-
 The following is the schema definition for the ribbon types WSS of an import/export customization file. Ribbon WSS is included from the [Ribbon Core Schema](ribbon-core-schema.md). You can find schema in the `Schemas\9.0.0.2090\RibbonWSS.xsd` folder when you download the Schemas zip file.
 
 Download the [Schemas](https://download.microsoft.com/download/B/9/7/B97655A4-4E46-4E51-BA0A-C669106D563F/Schemas.zip).

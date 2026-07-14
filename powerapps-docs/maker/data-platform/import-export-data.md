@@ -1,23 +1,23 @@
 ---
-title: "Importing and exporting data | MicrosoftDocs"
+title: "Importing and exporting data"
 description: Learn about importing and exporting data into Microsoft Dataverse.
 ms.custom: ""
-ms.date: 08/06/2024
+ms.date: 05/04/2026
 ms.reviewer: "Mattp123"
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: concept-article
 applies_to: 
   - "powerapps"
-author: "olegovanesyan"
+author: "crlsdietrich"
 ms.subservice: dataverse-maker
-ms.author: "olegov"
+ms.author: "cdietric"
 search.audienceType: 
   - maker
 ---
 # Importing and exporting data from Dataverse
 
-Microsoft Dataverse is a SaaS data platform that helps you easily create and manage your data, events, and logic and generate analytics** and insights to support interconnected apps built on the Dataverse platform. Apps include first-party apps such as Dynamics 365 Sales, Service, Marketing, Customer Insights, Customer Journey Orchestration, as well as custom third-party apps and processes, all of which operate in a secure and compliant manner. Dataverse, being a hyperscale polyglot storage, can store any type of data (relational, file, observational, and so on) for all your transactional and analytical applications. For this reason, it's the data platform for all Power Platform products and Dynamics 365 applications. Dataverse is a critical element of Microsoft Power Platform, supporting all the data, events, analytics, and related processing, in addition to generating insights for citizen app makers and professional developers to build, store, and manage data for their applications.
+Microsoft Dataverse is a software as a service (SaaS) data platform that helps you easily create and manage your data, events, and logic and generate analytics and insights to support interconnected apps built on the Dataverse platform. Apps include Microsoft apps such as Dynamics 365 Sales, Service, Marketing, Customer Insights, Customer Journey Orchestration, as well as customer apps and processes from other software providers, all of which operate in a secure and compliant manner. Dataverse, being a hyperscale polyglot storage, can store any type of data (relational, file, observational, and so on) for all your transactional and analytical applications. For this reason, it's the data platform for all Power Platform products and Dynamics 365 applications. Dataverse is a critical element of Microsoft Power Platform, supporting all the data, events, analytics, and related processing, in addition to generating insights for citizen app makers and professional developers to build, store, and manage data for their applications.
 
 ![Shape Description automatically generated](media/ppp-main.png)
 
@@ -29,9 +29,7 @@ There are multiple ways to import and export data into Microsoft Dataverse. You 
 
 The first consideration is to start with the external data, which already exists outside of Dataverse that is required for building an app, form, or other component. It isn't necessary to persist that data in Dataverse to start using it. Many times, it's best to continue to let the other system manage the data while using the data as needed in Dataverse. The virtual table feature in Dataverse provides this capability. More information: [Create virtual tables using virtual connectors](/power-apps/maker/data-platform/create-virtual-tables-using-connectors?source=recommendations&tabs=sql).
 
-With virtual tables, you can build an app that uses the external data as if it were a Dataverse table. To help you create virtual tables easier, use the [virtual tables creation wizard now in Public Preview \| Microsoft Power Apps](https://powerapps.microsoft.com/en-us/blog/virtual-tables-creation-wizard-now-in-public-preview/)
-
-![Graphical user interface, table Description automatically generated](media/extdata-virtual-table.png)
+With virtual tables, you can build an app that uses the external data as if it were a Dataverse table. To create virtual tables, use one of the provided virtual table connector providers when you [create a virtual table](create-edit-virtual-entities.md#create-a-virtual-table-1).
 
 ## Import external data to Dataverse
 
@@ -39,7 +37,7 @@ Your desired outcomes might drive the decision to persist data in Dataverse vers
 
 ## Dataflows, Power Query, and Excel files
 
-Dataflows enable you to connect with business data from various sources, clean the data, transform it, and then load it into Dataverse. Dataflows support dozens of popular on-premises, cloud, and software as a service (SaaS) data sources.
+Dataflows enable you to connect with business data from various sources, clean the data, transform it, and then load it into Dataverse. Dataflows support dozens of popular on-premises, cloud, and SaaS data sources.
 
 Power Query is a data connection technology you can use to discover, connect, combine, and refine data sources to meet your analysis needs. Features in Power Query are available in Excel and Power BI Desktop.
 
@@ -55,15 +53,15 @@ Note that loading data via dataflows is subject to the Dataverse service protect
 
 Power Query supports a multitude of available connectors as outlined here: [List of all Power Query connectors](/power-query/connectors/)
 
-If your data originates in Excel, like that of many Dataverse customers, then use the existing [Excel connector](/power-query/connectors/excel), for example, among multitude of other available connectors, to build a data pipeline into Dataverse. In addition to one-off data loads, [sync your Excel data source with Dataverse using a dataflow](/power-query/dataflows/sync-excel-cds-dataflow). Consider Excel file size limitations with this guidance [reduce the size of an Excel workbook to view it in Power BI](/power-bi/connect-data/reduce-the-size-of-an-excel-workbook)
+If your data originates in Excel, like that of many Dataverse customers, then use the existing [Excel connector](/power-query/connectors/excel), for example, among the multitude of other available connectors, to build a data pipeline into Dataverse. In addition to one-off data loads, [sync your Excel data source with Dataverse using a dataflow](/power-query/dataflows/sync-excel-cds-dataflow). Consider Excel file size limitations with this guidance [reduce the size of an Excel workbook to view it in Power BI](/power-bi/connect-data/reduce-the-size-of-an-excel-workbook)
 
 ![Connection information to access the Excel workbook.](media/excel-data.png)
 
-Moreover, if you have multiple Excel files in a folder that you’d like to load into Dataverse, you can use [Power Query folder connector](/power-query/connectors/folder) to combine, transform, and load data.
+Moreover, if you have multiple Excel files in a folder that you want to load into Dataverse, use [Power Query folder connector](/power-query/connectors/folder) to combine, transform, and load data.
 
 ![Combine files from folder.](media/excel-data-folder.png)
 
-IT professionals can also free up business users from the complexities of building data pipelines by creating Power Platform dataflow templates. Build a complex query combining data from multiple sources, save it, and share with business users. This file can be then used from the **New dataflow** > **Import template** feature in Dataverse. All the user needs to do is verify credentials for data access to start loading data into Dataverse tables. Learn more [Create Power Platform dataflows from queries in Microsoft Excel](/power-query/new-dataflow-from-template). 
+IT professionals can also free up business users from the complexities of building data pipelines by creating Power Platform dataflow templates. Build a complex query combining data from multiple sources, save it, and share with business users. This file can be then used from the **New dataflow** > **Import template** feature in Power Apps. All the user needs to do is verify credentials for data access to start loading data into Dataverse tables. Learn more [Create Power Platform dataflows from queries in Microsoft Excel](/power-query/new-dataflow-from-template). 
 
 ![A screenshot of a computer Description automatically generated with medium confidence](media/ppd-template-exc.gif)
 
@@ -75,7 +73,7 @@ Data Factory is a data integration service that provides a low-code or no-code a
 
 ![Data Factory.](media/azure-data-factory.png "Data Factory")
 
-Depending on your data needs, at some point you might require more involved data engineering to bring the data from external sources into Dataverse. It isn't just about the data volume, but also about the amount and complexity of data transformations required for the source data to meet your data requirements in Dataverse. An additional consideration is the IT resources are available to assist with the effort. These more complex data scenarios can be addressed with [Power Platform dataflows](/power-query/dataflows/create-use), [Azure Data Factory](/azure/data-factory/connector-dynamics-crm-office-365?tabs=data-factory), and [Web API](/power-apps/developer/data-platform/webapi/perform-operations-web-api). >Data Factory and Web API integration patterns shine at building pipelines that require involved workflow and algorithm rich transformations. Conversely, dataflows are faster to start with and easier to use.
+Depending on your data needs, at some point you might require more involved data engineering to bring the data from external sources into Dataverse. It isn't just about the data volume, but also about the amount and complexity of data transformations required for the source data to meet your data requirements in Dataverse. An additional consideration is the IT resources are available to assist with the effort. These more complex data scenarios can be addressed with [Power Platform dataflows](/power-query/dataflows/create-use), [Azure Data Factory](/azure/data-factory/connector-dynamics-crm-office-365?tabs=data-factory), and [Web API](/power-apps/developer/data-platform/webapi/perform-operations-web-api). Data Factory and Web API integration patterns shine at building pipelines that require involved workflow and algorithm rich transformations. Conversely, dataflows are faster to start with and easier to use.
 
 With Data Factory, you can visually integrate Dataverse and other data sources by using more than 90 natively built and maintenance-free connectors.
 

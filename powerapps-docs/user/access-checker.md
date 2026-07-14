@@ -3,8 +3,8 @@ title: Check user access to a row
 description: Learn how to view user access to a row.
 author: paulliew
 ms.component: pa-user
-ms.topic: conceptual
-ms.date: 09/09/2024
+ms.topic: how-to
+ms.date: 01/08/2026
 ms.subservice: end-user
 ms.author: paulliew
 ms.custom: ""

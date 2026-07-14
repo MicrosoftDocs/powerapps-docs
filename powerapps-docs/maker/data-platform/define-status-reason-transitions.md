@@ -7,7 +7,7 @@ ms.reviewer: ""
 
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "conceptual"
+ms.topic: article
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -80,7 +80,7 @@ The screenshot below provides an example that meets the following requirements:
 
 [Create and edit columns for Dataverse using Power Apps solution explorer](create-edit-field-solution-explorer.md)<br />
 [Table metadata > Table states](/powerapps/developer/data-platform/entity-metadata#table-states)<br />
-[Define custom state model transitions](/dynamics365/customer-engagement/developer/define-custom-state-model-transitions)
+[Define custom state model transitions](../../developer/data-platform/define-custom-state-model-transitions.md)  
 
 
 

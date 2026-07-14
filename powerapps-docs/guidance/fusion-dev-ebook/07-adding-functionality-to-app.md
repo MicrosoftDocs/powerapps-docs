@@ -3,7 +3,7 @@ title: "7: Adding functionality to the app  | Microsoft Docs"
 description: "Learn about adding functionality to the app."
 author: spboyer
 
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: ebook
 ms.date: 04/26/2021
 ms.subservice: guidance
@@ -68,7 +68,7 @@ Preeti creates the Blob Storage account from the Azure portal by following these
 
 Preeti gives the storage account name and key to Kiana, who uses this information to create a custom connector for the app by following these steps:
 
-1.  Sign in to [Power Apps](http://make.powerapps.com).
+1.  Sign in to [Power Apps](https://make.powerapps.com).
 
 2.  On the left pane, expand **Data**, and select **Connections**. The existing connections used by the app should be listed. Select **+ New connection**.
 

@@ -4,9 +4,9 @@ description: "Learn how about Dataverse quick find queries and their limitations
 ms.date: 01/30/2024
 ms.reviewer: jdaly
 ms.topic: article
-author: pnghub
+author: MsSQLGirl
 ms.subservice: dataverse-developer
-ms.author: gned
+ms.author: jukoesma
 search.audienceType: 
   - developer
 contributors:

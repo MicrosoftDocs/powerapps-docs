@@ -4,7 +4,7 @@ description: Timeline Overview for Users
 author: dsierman
 ms.component: pa-user
 ms.topic: overview
-ms.date: 04/16/2024
+ms.date: 05/29/2025
 ms.subservice: end-user
 ms.author: dsierman
 ms.custom: ""
@@ -465,13 +465,7 @@ The rich text editor is enabled by default. Your system administrator can enable
 
 ## Use timeline highlights powered by generative AI
 
-If timeline highlights are enabled on your app, Copilot creates an AI-generated, bulleted list that populates at the top of the timeline. You can use timeline highlights to quickly get caught up on a record's status. 
-
-The highlights include a record's main activities, such as details about who you or the previous user interacted with, the reported issue, and actions taken to try to resolve the issue. 
-
-You can copy the timeline highlights by selecting **Copy**.
-
-![Timeline highlights view.](media\view-timeline-highlights.png "Timeline highlights view")
+To learn about AI-generated timeline highlights, see [Use AI-generated timeline highlights](use-timeline-highlights-powered-by-generative-ai.md).
 
 ## View a conversation transcript
 

@@ -2,7 +2,7 @@
 title: View Dataverse for Teams table data in Power BI Desktop (preview) | Microsoft Docs
 description: Provides an overview of Dataverse for Teams.
 author: RichdiMSFT
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: 
 ms.date: 02/28/2023
 ms.subservice: teams

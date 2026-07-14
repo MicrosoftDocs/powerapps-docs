@@ -2,11 +2,11 @@
 title: Column definitions | Microsoft Docs
 description: Learn about column definitions use in Microsoft Dataverse.
 suite: powerapps
-author: mkannapiran
-ms.author: kamanick
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 ms.topic: article
-ms.date: 12/12/2023
+ms.date: 06/23/2026
 ms.subservice: dataverse-developer
 search.audienceType:
   - developer
@@ -118,15 +118,18 @@ Because `RequiredLevel` is a managed property, as a publisher of a managed solut
 
 More information: [Managed Properties](/power-platform/alm/managed-properties-alm)
 
-## Formula, rollup, and calculated columns
+## Specialized columns
 
 Formula, rollup, and calculated columns free the user from having to manually perform calculations and focus on their work. System administrators can define a column to contain the value of many common calculations without having to work with a developer. Developers can also use the platform capabilities to perform these calculations rather than within their own code.
+
+A prompt column is an AI-powered data type in Microsoft Dataverse that enables you to define natural language prompts tied to other columns in your table. 
 
 More information:
 
 - [Define rollup columns that aggregate values](../../maker/data-platform/define-rollup-fields.md)
 - [Define calculated columns to automate calculations](../../maker/data-platform/define-calculated-fields.md)
-- [Formula, rollup, and calculated columns](calculated-rollup-attributes.md)
+- [Prompt columns](../../maker/data-platform/prompt-column.md)
+- [Specialized columns using code](specialized-columns.md)
 
 ## Column format
 
@@ -218,7 +221,7 @@ The Web API provides a RESTful style for querying choice values. You can retriev
 
 With the Web API, you can also use the [RetrieveMetadataChanges Function](xref:Microsoft.Dynamics.CRM.RetrieveMetadataChanges).
 
-More information: [Query table definitions using the Web API > Retrieving attributes](webapi/query-metadata-web-api.md#retrieving-attributes)
+More information: [Query table definitions using the Web API > Retrieve attributes](webapi/query-metadata-web-api.md#retrieve-attributes)
 
 ## Column mapping
 

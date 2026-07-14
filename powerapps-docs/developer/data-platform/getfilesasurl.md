@@ -3,7 +3,7 @@ title: "Grant limited access to Dataverse files using shared access signatures"
 description: "Learn how to create a shared access signature URL that enables anyone to download the file or image from Dataverse" 
 ms.date: 09/11/2024
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: how-to
 author: JimDaly
 ms.subservice: dataverse-developer
 ms.author: jdaly
@@ -29,7 +29,7 @@ The `GetFileSasUrl` message has the following parameters:
 |---------|---------|---------|
 |`Target`|[EntityReference](/dotnet/api/microsoft.xrm.sdk.entityreference)/<br />[crmbaseentity ](/power-apps/developer/data-platform/webapi/reference/crmbaseentity)|Identifies the table row with the file or image data.|
 |`FileAttributeName`|string|Identifies the name of the file or image column with the data. For note and attribute records, this value must be an empty string.|
-|`DataSource`|string|A value of "`retained`" or "`bin`" when the record was flagged for [long-term data retention](long-term-retention.md) or deleted in a table with the [recycle bin feature enabled](restore-deleted-records.md).|
+|`DataSource`|string|A value of "`retained`" or "`bin`" when the record was flagged for [long-term data retention](long-term-retention.md) or deleted in a table with the [deleted record keeping enabled](restore-deleted-records.md).|
 
 ## Response
 

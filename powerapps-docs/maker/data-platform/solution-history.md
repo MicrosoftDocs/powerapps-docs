@@ -1,10 +1,10 @@
 ---
-title: "View the history of a solution | MicrosoftDocs"
-description: "Learn how to view the history of a solution"
+title: "View the history of a solution"
+description: "Learn how to view the history of a solution in Power Apps"
 keywords: 
-ms.date: 07/16/2024
+ms.date: 05/20/2026
 ms.custom: 
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 
 author: Mattp123
 ms.subservice: dataverse-maker
@@ -53,7 +53,7 @@ Select a solution operation to display the **Information page**. Each solution h
 
 > [!NOTE]
 > Recent changes have optimized the single step upgrade process to no longer use a temporary _Upgrade solution. As a result, you no longer experience an uninstall operation for single stage upgrades in the solution history.
-> 
+
 ### View solution operation error details
 
 Below the **Details** area is the **More details** area that has additional information about the solution and, when a solution operation has a failure, the information includes:

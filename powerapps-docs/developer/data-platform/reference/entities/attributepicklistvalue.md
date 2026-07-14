@@ -1,7 +1,7 @@
 ---
 title: "Option Set Value (AttributePicklistValue) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Option Set Value (AttributePicklistValue) table/entity with Microsoft Dataverse."
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
@@ -226,4 +226,4 @@ Many-To-One Relationship: [syncerror attributepicklistvalue_SyncErrors](syncerro
 
 [Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
-
+<xref:Microsoft.Dynamics.CRM.attributepicklistvalue?displayProperty=fullName>

@@ -3,7 +3,7 @@ title: Activity (ActivityPointer) table
 description: Learn how to work with the Activity (ActivityPointer) table in Microsoft Dataverse.
 ms.date: 07/03/2023
 ms.reviewer: pehecke
-ms.topic: conceptual
+ms.topic: article
 author: DanaMartens
 ms.author: dmartens 
 ms.subservice: dataverse-developer

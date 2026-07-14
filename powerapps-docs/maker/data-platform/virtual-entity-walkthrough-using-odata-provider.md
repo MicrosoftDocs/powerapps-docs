@@ -66,7 +66,7 @@ Create the data source for the OData v4 data provider that uses the OASIS Open D
 Leave the other columns as-is, and select **SAVE & CLOSE**.
 
 > [!TIP]
-> When using your own web service, verify that the URL is valid by pasting it in to your web browser. If you want to understand the columns and data types respective to the table you are interested in, you can append `/$metadata` to the end of your URL to see the definition of tables in you web service.
+> When using your own web service, verify that the URL is valid by pasting it in to your web browser. If you want to understand the columns and data types respective to the table you are interested in, you can append `/$metadata` to the end of your URL to see the definition of tables in your web service.
 
 ## Open solution explorer
 
@@ -93,7 +93,8 @@ Part of the name of any custom table you create is the customization prefix. Thi
    > [!NOTE]
    > The OData resource path semantics uses `EntitySet` to identify the resource. In the sample OData web service, the `EntitySet` is defined as **People**. This value is used as the **External Name** for the virtual table **Person**.
 
-1. Next to **Areas that display this entity**, select **Sales**, and then select **Save** (but don’t close the table form).
+3. Next to **Areas that display this entity**, select **Sales**, and then select **Save** (but don’t close the table form).
+   
     ![Person table definition.](media/ticket-entity.png)
 
 ## Create the columns for the virtual table

@@ -1,9 +1,9 @@
 ---
-title: "Sample: Create and update records with related records (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample showcases how to create and update records with related records." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Sample: Create and update records with related records (Microsoft Dataverse) | Microsoft Docs"
+description: "This sample showcases how to create and update records with related records." 
 ms.date: 04/03/2022
-author: MicroSri
-ms.author: sriknair
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: pehecke
 ms.topic: sample
 search.audienceType:

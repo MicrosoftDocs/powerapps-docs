@@ -1,7 +1,7 @@
 ---
 title: use-utility-dialogs Power Apps checker reference | Microsoft Docs
 description: Power Apps checker rule reference for use-utility-dialogs.
-author: ecarrleemsft
+author: tylerol
 ms.topic: reference
 ms.date: 02/14/2023
 ms.service: "powerapps"

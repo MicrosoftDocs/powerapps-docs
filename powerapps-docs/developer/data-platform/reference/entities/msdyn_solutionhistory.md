@@ -1,7 +1,7 @@
 ---
 title: "Solution History (msdyn_solutionhistory) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Solution History (msdyn_solutionhistory) table/entity with Microsoft Dataverse."
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
@@ -67,6 +67,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [msdyn_publishername](#BKMK_msdyn_publishername)
 - [msdyn_result](#BKMK_msdyn_result)
 - [msdyn_retrycount](#BKMK_msdyn_retrycount)
+- [msdyn_solutionhistorydescription](#BKMK_msdyn_solutionhistorydescription)
 - [msdyn_solutionhistoryId](#BKMK_msdyn_solutionhistoryId)
 - [msdyn_solutionid](#BKMK_msdyn_solutionid)
 - [msdyn_solutionversion](#BKMK_msdyn_solutionversion)
@@ -284,6 +285,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |7|**RibbonMetadataGeneration**|
 |8|**WorkflowSetState**|
 |9|**None**|
+|10|**ExportLite**|
+|11|**UpdatingMissingPackages**|
 
 ### <a name="BKMK_msdyn_packagename"></a> msdyn_packagename
 
@@ -383,6 +386,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxValue|2147483647|
 |MinValue|0|
 
+### <a name="BKMK_msdyn_solutionhistorydescription"></a> msdyn_solutionhistorydescription
+
+|Property|Value|
+|---|---|
+|Description|**Comments associated with solution installation**|
+|DisplayName|**Description**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_solutionhistorydescription`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1073741823|
+
 ### <a name="BKMK_msdyn_solutionhistoryId"></a> msdyn_solutionhistoryId
 
 |Property|Value|
@@ -466,6 +486,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |---|---|
 |0|**Started**|
 |1|**Completed**|
+|2|**Queued**|
 
 ### <a name="BKMK_msdyn_suboperation"></a> msdyn_suboperation
 
@@ -490,6 +511,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |2|**Upgrade**|
 |3|**Update**|
 |4|**Delete**|
+|5|**InlineUpgrade**|
+|6|**WaitingForMissingPackages**|
+|7|**InstalledMissingPackages**|
+|8|**FailedInstallingMissingPackages**|
 
 ### <a name="BKMK_msdyn_totaltime"></a> msdyn_totaltime
 

@@ -143,12 +143,4 @@ If your users might have neither touch screens nor mouse wheels, configure the g
 
 In this tutorial, you've customized the gallery and made other changes to the default screen for browsing records in a generated app. You can also customize the default screens for displaying details and creating or updating accounts. As the browse screen contains a gallery, the other two screens in the app contain forms. You can change, for example, which types of data the forms show and in which order.
 
-> [!div class="nextstepaction"]
-> [Customize forms](customize-forms-sharepoint.md)
-
-### See also
-
-- [SharePoint integration scenarios](sharepoint/scenarios-intro.md)
-
-
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

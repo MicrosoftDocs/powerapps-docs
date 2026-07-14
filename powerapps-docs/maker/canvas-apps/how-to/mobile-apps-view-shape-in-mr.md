@@ -6,7 +6,7 @@ author: joel-lindstrom
 ms.subservice: canvas-maker
 search.audienceType: 
   - maker
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.date: 11/22/2021
 ms.author: anuitz

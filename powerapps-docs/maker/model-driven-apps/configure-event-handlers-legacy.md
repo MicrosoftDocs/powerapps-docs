@@ -1,19 +1,16 @@
 ---
-title: Configure event handlers for model-driven app Main forms in Power Apps | MicrosoftDocs
-description: Understand how to configure event handlers
+title: Configure event handlers for model-driven app Main forms in Power Apps
+description: Understand how to configure event handlers for model-driven app forms.
 author: Mattp123
 ms.subservice: mda-maker
 ms.author: matp
-ms.date: 02/22/2021
-
+ms.date: 09/04/2025
 ms.topic: how-to
 ms.assetid: dc0ebb3f-0c00-413a-968f-9cfd107055c0
 search.audienceType: 
   - maker
 ---
 # Configure model-driven app form event handlers
-
-
 
 Form event handlers for Power Apps forms can be configured for the following areas in a form:  
   
@@ -25,21 +22,21 @@ Form event handlers for Power Apps forms can be configured for the following are
 |Column|`OnChange`|Occurs when data in the column changes and the control loses focus.|  
 |IFRAME|`OnReadyStateComplete`|Occurs when the content of an IFRAME loads.|  
   
- An event handler consists of a reference to a JavaScript web resource and a function defined within that web resource that will execute when the event occurs. Each element can have up to 50 separate event handlers configured.  
+ An event handler consists of a reference to a JavaScript web resource and a function defined within that web resource that executes when the event occurs. Each element can have up to 50 separate event handlers configured.  
   
 > [!IMPORTANT]
->  Configuring an event handler incorrectly can result in script errors that may cause the form to fail to load or function correctly. If you are not the developer of the script, make sure you understand exactly what configuration options the script requires.  
->   
->  Do not configure a script event handler using a library that does not come from a source you trust. Scripts can be used to perform any action a user might perform and a poorly written script can significantly damage the performance of a form.  
->   
->  After you configure an event handler always test it to verify it is working correctly.  
+> Configuring an event handler incorrectly can result in script errors that might cause the form to fail to load or function correctly. If you aren't the developer of the script, make sure you understand exactly what configuration options the script requires.  
+>
+> Don't configure a script event handler using a library that doesn't come from a source you trust. Scripts can be used to perform any action a user might perform and a poorly written script can significantly damage the performance of a form.  
+>
+> After you configure an event handler, always test it to verify it's working correctly.  
   
 ## Configure an event handler
 
 The following procedure describes how to configure an event handler for a form. Use similar steps to configure an event handler for a tab, column, or IFrame.
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), open the table that you want, and then open the form in the form designer where you want to configure an event handler.
-1. Depending on the library state, choose from the following :
+1. Depending on the library state, choose from the following options:
    - If the library containing the function you want to set as the event handler is already available, on the right properties pane under **Account Main form**, select the **Events** tab, and then go to step 3.
    - If the library containing the function you want isn't already available, select **Form libraries** on the left navigation pane, and then select **Add library**: 
      1. On the **Add JavaScript Library** page, select **New**.
@@ -60,29 +57,56 @@ The following procedure describes how to configure an event handler for a form. 
    - **Library**: The JavaScript web resource.
    - **Function**: The name of the function within the JavaScript web resource that should be executed for the event.
    - **Enabled**: By default, the event handler is enabled. Clear the **Enabled** checkbox if you don’t want to enable this event.
-   - **Pass execution context as the first parameter**: Some functions require an execution context to be passed to the function. Select **Pass execution context as the first parameter** if it is required.
-   - **Comma-separated list of parameters that will be passed to the function**: Some functions can accept a set of parameters to control the behavior of a function. If these are required, enter them in the **Comma separated list of parameters that will be passed to the function**.
+   - **Pass execution context as the first parameter**: Some functions require an execution context to be passed to the function. Select **Pass execution context as the first parameter** if it's required.
+   - **Comma-separated list of parameters that will be passed to the function**: Some functions can accept a set of parameters to control the behavior of a function. The list of parameters can include variables or another function as accepted by the function parameters allowed by the JavaScript scripting language. If passing in parameters is required, enter them in the **Comma separated list of parameters that will be passed to the function**.
    - **Table column dependencies**: For **On Save** events, select the columns where you want the event to be triggered after a record save.
 
       :::image type="content" source="media/configure-form-event.png" alt-text="Configure the event for the form.":::
 1. **Save**, and then **Publish** the form.
 
+## Example hello world for the onload event
+
+This simple example demonstrates how to configure an onload form event using parameter passing of a single defined variable in the event handler, which displays an alert when the form loads.
+
+1. Create the web resource using the [Hello world JavaScript sample](#hello-world-javascript-sample). More information: [Create or edit model-driven app web resources to extend an app](create-edit-web-resources.md)
+1. Open the table Main form for editing in the form designer. This example uses the *Student* custom table main form.
+1. On the left Information pane, select the **Events** tab.
+1. Select **Add library**, select the web resource you created (in this example the resource is named *javascript-hello-world*), and then select **Add**.
+   :::image type="content" source="media/configure-event-handlers-form/add-javascript-library.png" alt-text="Add a javascript file for the web resource":::
+1. Select **On Load** to expand it, and then select **Event Handler**.
+1. In the **Configure Event** pane, enter the **Function** name (in this example, *helloworld*), and then in the **Comma separated list of parameters that will be passed to the function** box enter a parameter such as `n = "Hello world!"`.
+   :::image type="content" source="media/configure-event-handlers-form/configure-event-form.png" alt-text="Configure the form event" lightbox="media/configure-event-handlers-form/configure-event-form.png":::
+1. Select **Done**.
+1. **Save and publish** the form.
+
+Test the event by playing a model-driven app that includes the form. When the main form loads, an alert displays the modal dialog message "Hello world!" For this example, the user must select **OK** to dismiss the alert to continue using the form.
+:::image type="content" source="media/configure-event-handlers-form/form-onload-helloworld.png" alt-text="Alert displayed for form onload event":::
+
+### Hello world JavaScript sample
+
+```javascript
+function helloworld(n) {
+alert(n);
+}
+```
+
+
 ## Configure an event handler using the classic experience
   
-1.  In the classic form editor, select the element with the event you want to configure a handler for.  
+1. In the classic form editor, select the element with the event you want to configure a handler for.  
   
 2. On the [Home tab](form-editor-user-interface-legacy.md#home-tab), in the **Edit** group, select **Change Properties** or simply double-click the element.  
   
 3. In the element properties dialog, select the **Events** tab.  
   
-4. Expand the **Form Libraries** area. If the library containing the function you want to set as the event handler is not already listed, add the library.  
+4. Expand the **Form Libraries** area. If the library containing the function you want to set as the event handler isn't already listed, add the library.  
   
 5. To add a form library to an event handler:  
     1.  In the **Form Libraries** section of the **Event List**, select **Add**.  
   
     2.  Locate the JavaScript web resource in the list of available web resources. Select it and then select **Add**.  
   
-         If the JavaScript web resource you need does not exist, select **New** to open a new web resource form and create one.  
+         If the JavaScript web resource you need doesn't exist, select **New** to open a new web resource form and create one.  
   
     3.  To create a JavaScript web resource, see [Create a JavaScript web resource](#create-a-javascript-web-resource).  
     
@@ -95,7 +119,7 @@ The following procedure describes how to configure an event handler for a form. 
   
 9. By default the event handler is enabled. Clear the **Enabled** checkbox if you do not want to enable this event.  
   
-     Some functions require an execution context to be passed to the function. Select **Pass execution context as the first parameter** if it is required.  
+     Some functions require an execution context to be passed to the function. Select **Pass execution context as the first parameter** if it's required.  
   
      Some functions can accept a set of parameters to control the behavior of a function. If these are required, enter them in the **Comma-separated list of parameters that will be passed to the function**.  
   
@@ -103,7 +127,7 @@ The following procedure describes how to configure an event handler for a form. 
   
 11. Select **OK** to close the **Handler Properties** dialog.  
   
-12. When the event handler is entered you may adjust the order in which the function will be executed relative to any other functions by using the green arrows to move it up or down.  
+12. When the event handler is entered, you can adjust the order in which the function is executed relative to any other functions by using the green arrows to move it up or down.  
   
 13. Select **OK** to close the element properties dialog.  
   
@@ -129,7 +153,7 @@ The following procedure describes how to configure an event handler for a form. 
   Alternatively, you can select the **Text Editor** button and paste or type the contents of the script in the **Edit Content** dialog.  
   
   > [!NOTE]
-  >  Because this simple text editor does not provide any features to check the correctness of the script, generally you should always try to use a separate application like Visual Studio to edit scripts and then upload them.  
+  >  Because this simple text editor doesn't provide any features to check the correctness of the script, generally you should always try to use a separate application like Visual Studio to edit scripts, and then upload them.  
   
 3. Select **Save** and close the web resource page.  
 

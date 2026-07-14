@@ -1,7 +1,7 @@
 ---
 title: "Interaction for Email (InteractionForEmail) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Interaction for Email (InteractionForEmail) table/entity with Microsoft Dataverse."
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 

@@ -3,7 +3,7 @@ title: What's new in Power Apps | Microsoft Docs
 description: Find information about the new features that have been recently released, features that will be releasing in the next few months, and known limitations.
 author: tapanm-msft
 ms.subservice: common
-ms.topic: conceptual
+ms.topic: whats-new
 ms.custom: 
 ms.reviewer: 
 ms.date: 08/14/2024

@@ -1,5 +1,5 @@
 ---
-title: "Visualization data description schema (model-driven apps)"
+title: Visualization data description schema
 description: "The following is the schema for the data description XML string for charts in visualization. This can be used to validate the contents of the data description XML string while creating a chart."
 author: jasongre
 ms.author: jasongre
@@ -13,8 +13,6 @@ contributors:
   - JimDaly
 ---
 # Visualization data description schema
-
-<!-- https://learn.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/visualization-data-description-schema -->
 
 The following is the schema for the data description XML string for charts in visualization. This can be used to validate the contents of the data description XML string while creating a chart. For more information, see [Understanding Charts: Underlying Data and Chart Representation](understand-charts-underlying-data-chart-representation.md). [!INCLUDE[schema_download](../../includes/schema-download.md)] and see the file `VisualizationDataDescription.xsd` in the folder.  
   

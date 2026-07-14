@@ -1,9 +1,9 @@
 ---
-title: "Verifying access in code (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how to use the security related APIs to verify user access to a record." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Verifying access in code (Microsoft Dataverse) | Microsoft Docs"
+description: "Learn how to use the security related APIs to verify user access to a record." 
 ms.date: 06/05/2023
 ms.reviewer: pehecke
-ms.topic: article
+ms.topic: concept-article
 author: paulliew # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: paulliew # MSFT alias of Microsoft employees only
@@ -231,7 +231,7 @@ You can retrieve a list of the privileges available in your environment by execu
 following FetchXML query.
 
 ```XML
-<fetch version='1.0' distinct='true' no-lock='true' >
+<fetch distinct='true' >
   <entity name='privilege' >
     <attribute name='name' />
   </entity>
@@ -250,21 +250,19 @@ special privileges that aren't associated with tables. You can use the
 following query to retrieve these privileges.
 
 ```XML
-<fetch version='1.0' distinct='true' no-lock='true' >
-
-<entity name='privilege' >
+<fetch distinct='true' >
+ <entity name='privilege' >
   <attribute name='name' />
-  <filter>
-    <condition attribute='name' operator='not-begin-with' value='prvAppend' />
-    <condition attribute='name' operator='not-begin-with' value='prvAssign' />
-    <condition attribute='name' operator='not-begin-with' value='prvCreate' />
-    <condition attribute='name' operator='not-begin-with' value='prvDelete' />
-    <condition attribute='name' operator='not-begin-with' value='prvRead' />
-    <condition attribute='name' operator='not-begin-with' value='prvShare' />
-    <condition attribute='name' operator='not-begin-with' value='prvWrite' />
+   <filter>
+   <condition attribute='name' operator='not-begin-with' value='prvAppend' />
+   <condition attribute='name' operator='not-begin-with' value='prvAssign' />
+   <condition attribute='name' operator='not-begin-with' value='prvCreate' />
+   <condition attribute='name' operator='not-begin-with' value='prvDelete' />
+   <condition attribute='name' operator='not-begin-with' value='prvRead' />
+   <condition attribute='name' operator='not-begin-with' value='prvShare' />
+   <condition attribute='name' operator='not-begin-with' value='prvWrite' />
   </filter>
-</entity>
-
+ </entity>
 </fetch>
 ```
 
@@ -276,6 +274,9 @@ Use these messages to retrieve privileges by privilege ID or name. They include 
 |`RetrieveUserPrivilegeByPrivilegeName`| [RetrieveUserPrivilegeByPrivilegeName Function](xref:Microsoft.Dynamics.CRM.RetrieveUserPrivilegeByPrivilegeName)<br/>[RetrieveUserPrivilegeByPrivilegeNameRequest Class](xref:Microsoft.Crm.Sdk.Messages.RetrieveUserPrivilegeByPrivilegeNameRequest)|
 |`RetrieveUserSetOfPrivilegesByIds`|[RetrieveUserSetOfPrivilegesByIds Function](xref:Microsoft.Dynamics.CRM.RetrieveUserSetOfPrivilegesByIds)<br/>[RetrieveUserSetOfPrivilegesByIdsRequest Class](xref:Microsoft.Crm.Sdk.Messages.RetrieveUserSetOfPrivilegesByIdsRequest)|
 |`RetrieveUserSetOfPrivilegesByNames`|[RetrieveUserSetOfPrivilegesByNames Function](xref:Microsoft.Dynamics.CRM.RetrieveUserSetOfPrivilegesByNames)<br/>[RetrieveUserSetOfPrivilegesByNamesRequest Class](xref:Microsoft.Crm.Sdk.Messages.RetrieveUserSetOfPrivilegesByNamesRequest)|
+
+> [!NOTE]
+> Prefer the messages in the preceding table when you need to know a user's effective privilege depth. The [RetrieveUserPrivileges Function](xref:Microsoft.Dynamics.CRM.RetrieveUserPrivileges) ([RetrieveUserPrivilegesRequest Class](xref:Microsoft.Crm.Sdk.Messages.RetrieveUserPrivilegesRequest)) only returns the **Basic** (user-level) depth for privileges that the user inherits through their team membership, regardless of the actual depth granted by the team's security roles.
 
 ### Example: Check whether a user has a privilege
 

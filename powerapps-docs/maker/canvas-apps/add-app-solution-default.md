@@ -7,9 +7,9 @@ contributors:
   - mduelae
 ms.author: cgarty
 ms.reviewer: angieandrews
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas, bap-template
-ms.date: 11/18/2024
+ms.date: 11/6/2025
 ms.subservice: canvas-maker
 search.audienceType: 
   - maker
@@ -48,7 +48,7 @@ The following table summarizes the methods that allow you to create canvas apps 
 | Create a canvas app from other data sources, such as [SharePoint](app-from-sharepoint.md), [Excel](get-started-create-from-data.md), [Azure Blob Storage](connections/connection-azure-blob-storage.md), and [others](connections-list.md#popular-connectors) | Yes |
 | [Create a blank canvas app](create-blank-app.md)</br> **NOTE**: [Power Apps](https://make.powerapps.com) > **Apps** > **New app** > **Canvas** also creates a blank canvas app. | Yes |
 | [Create a canvas app from a template](get-started-test-drive.md) | No |
-| Create a canvas app by [customizing SharePoint forms](customize-list-form.md) | No |
+| Create a canvas app by [customizing SharePoint forms](/sharepoint/dev/business-apps/power-apps/get-started/create-your-first-custom-form) | No |
 
 ### Cloud flows creation methods and entry points
 
@@ -72,13 +72,19 @@ The following table summarizes the methods that allow you to create cloud flows 
 > [!IMPORTANT]
 > Unsupported entry points will fail to create any cloud flow until that support is added to create a solution cloud flow with that entry point. You must first create a cloud flow in a solution using a supported method.
 
-## Enable the feature
+## Manage feature settings for Cloud flows and Canvas apps in Dataverse solutions
 
-This feature is disabled by default. You must enable it before you can use it.
+You can control whether makers can create new canvas apps and cloud flows directly in Dataverse solutions.
 
-1. Sign in to the Power Platform admin center and select an environment.
-1. Go to **Settings** > **Product** > **Features**.
-1. Under **Create new canvas apps and cloud flows in Dataverse solutions**, turn on **Canvas apps (Preview`)** or **Cloud flows** as desired.
+### Existing environments
+1. Sign in to the Power Platform admin center and select an environment.  
+2. Go to **Settings** > **Product** > **Features**.  
+3. Under **Create new canvas apps and cloud flows in Dataverse solutions**, turn on **Canvas apps (Preview)** or **Cloud flows** as desired.  
+
+### New environments
+- All new environments provisioned with a Dataverse database have the **Cloud flows** setting enabled by default.  
+- The **Canvas apps (Preview)** setting is also enabled by default, though it remains in preview.  
+- If you prefer not to use these features, you must manually disable them in the environment settings.  
 
 Learn more about managing feature settings in [Manage feature settings](/power-platform/admin/settings-features).
 
@@ -89,6 +95,10 @@ To view canvas app and cloud flow objects in a solution, use the [solution view]
 ## Export and import using solutions
 
 Once the feature is enabled, use solutions [export](../data-platform/export-solutions.md) and [import](../data-platform/import-update-export-solutions.md) instead of [exporting and importing legacy packages of canvas apps and flows](export-import-app.md). Legacy packages can be imported in environments with the environment setting turned off.
+
+## Move flows into a solution with PowerShell
+
+Use the [Add-AdminFlowsToSolution](/powershell/module/microsoft.powerapps.administration.powershell/add-adminflowstosolution) cmdlet to move non-solution Power Automate flows into a solution for better lifecycle management and deployment. This command lets you migrate multiple flows by specifying environment and solution IDs, and targeting flows by name or ID. For more information, see [Microsoft.PowerApps.Administration.PowerShell Module](/powershell/module/microsoft.powerapps.administration.powershell).
 
 ## Considerations
 

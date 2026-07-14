@@ -2,10 +2,10 @@
 title: "Known issues with custom pages in a model-driven app"
 description: "Find the known issue that might occur when you create a custom page." 
 ms.custom: ""
-ms.date: 02/03/2025
+ms.date: 04/16/2025
 ms.reviewer: ""
 ms.subservice: mda-maker
-ms.topic: "article"
+ms.topic: troubleshooting-known-issue
 author: "adrianorth"
 ms.author: "aorth"
 search.audienceType: 
@@ -25,6 +25,8 @@ The custom page is a new page type within model-driven apps. Custom pages bring 
 * When a custom page is modified, such as saved and published, the model-driven app isn't aware of the change. The model-driven app continues to use the last version of the custom page when the model-driven app was published. A model-driven app published through app designer, solution explorer, or **Publish all** updates all custom pages in the model-driven app.
 
 * Images, icons, and shapes aren't currently supported with Right-To-Left (RTL) languages.
+  
+* The [App.ConfirmExit](/power-platform/power-fx/reference/object-app#confirmexit) property isn't supported in custom pages. 
 
 * The ability to get the current data formats from users settings including date, time, numbers, and currency isn't supported.
 
@@ -33,7 +35,7 @@ The custom page is a new page type within model-driven apps. Custom pages bring 
   > [!div class="mx-imgBorder"]
   > ![Custom page session timeout app message bar error](media/model-app-page-overview/page-session-timeout-app-message-error.png "Custom page session timeout app message bar error")
 
-* When a custom page with code component is opened for editing, a security dialog is shown. Selecting **Go back** on the security dialog doesn't navigate back to the parent context. The user can close the browser tab to leave the canvas app designer.
+* When a custom page with code component is opened for editing, a security dialog is shown. Selecting **Go back** on the security dialog doesn't navigate back to the parent context. The user can close the browser tab to leave Power Apps Studio.
 
 * Not all canvas app controls are available with custom pages. However, custom pages support the most common canvas app controls and custom pro-dev components. For more information about what is available, see [Design a custom page for your model-driven app](design-page-for-model-app.md)
 

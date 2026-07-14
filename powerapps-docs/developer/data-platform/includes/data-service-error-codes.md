@@ -16,7 +16,7 @@
 |`0x8006041c`<br />`-2147089380`|Name: **ActionStepInvalidProcessAction**<br />Message: `ActionStep {0} references invalid Process Action {1}.`|
 |`0x8006040d`<br />`-2147089395`|Name: **ActionStepInvalidProcessid**<br />Message: `ActionStep references invalid Process Id.`|
 |`0x8006040c`<br />`-2147089396`|Name: **ActionStepInvalidStageid**<br />Message: `ActionStep references invalid Stage Id.`|
-|`0x80060382`<br />`-2147089534`|Name: **ActionSupportNotEnabled**<br />Message: ` Business Processes containing an Action Step cannot be exported because Action Step support is still a Public Preview feature and it is not currently enabled for this organization.`|
+|`0x80060382`<br />`-2147089534`|Name: **ActionSupportNotEnabled**<br />Message: `Business Processes containing an Action Step cannot be exported because Action Step support is still a Public Preview feature and it is not currently enabled for this organization.`|
 |`0x80061001`<br />`-2147086335`|Name: **ActivePropertyValidationFailed**<br />Message: `You can't create a property instance for an inactive property.`|
 |`0x80040526`<br />`-2147220186`|Name: **ActiveQueueItemAlreadyExists**<br />Message: `An active queue item already exists for the given object. Cannot create more than one active queue item for this object.`|
 |`0x8004F871`<br />`-2147157903`|Name: **ActiveSlaCannotEdit**<br />Message: `You can't edit an active SLA. Deactivate the SLA, and then try editing it.`|
@@ -42,9 +42,11 @@
 |`0x80098006`<br />`-2146861050`|Name: **AdoAadUserStateException**<br />Message: `User identity within the azure active directory has changed (might be deleted).`|
 |`0x80098013`<br />`-2146861037`|Name: **AdoBranchNameAlreadyExistsError**<br />Message: `Branch with the same name already exists.`|
 |`0x80098008`<br />`-2146861048`|Name: **AdoCircuitBreakerExceededConcurrencyException**<br />Message: `Git internal error occurred.`|
+|`0x80098018`<br />`-2146861032`|Name: **AdoFileTooBig**<br />Message: `{0} of {1}({2}) is too big to fit in source control.`|
 |`0x80098011`<br />`-2146861039`|Name: **AdoInvalidBranchName**<br />Message: `Invalid git branch name. Branch name cannot contain {0}.`|
 |`0x80098012`<br />`-2146861038`|Name: **AdoInvalidDirectoryName**<br />Message: `Invalid directory name {0}.`|
 |`0x80098000`<br />`-2146861056`|Name: **AdoItemNotFoundException**<br />Message: `Directory or Item was not found on provided path.`|
+|`0x80098017`<br />`-2146861033`|Name: **AdoItemNotFoundWithPathException**<br />Message: `Directory or Item was not found on provided path '{0}'.`|
 |`0x80098004`<br />`-2146861052`|Name: **AdoNeedsPermissionException**<br />Message: `Commit to requested branch is forbidden (rejected by policy).`|
 |`0x80098009`<br />`-2146861047`|Name: **AdoObjectRejectedException**<br />Message: `Commit was rejected because it contains one or more secrets.`|
 |`0x80098003`<br />`-2146861053`|Name: **AdoRefLockedException**<br />Message: `Commit to requested branch is forbidden (rejected by policy).`|
@@ -55,8 +57,9 @@
 |`0x80098007`<br />`-2146861049`|Name: **AdoVssServiceException**<br />Message: `Git resource does not exist or do not have permissions for the operation attempted.`|
 |`0x80041d68`<br />`-2147213976`|Name: **ADResourceNotFound**<br />Message: `The Azure AD Group was not found in your Azure Active Directory. Please validate the Group ID and try again.`|
 |`0x80061696`<br />`-2147084650`|Name: **AdvancedSimilarityAzureSearchUnexpectedError**<br />Message: `An unexpected error occurred executing the search. Try again later.`|
+|`0x80090207`<br />`-2146893305`|Name: **AetherServiceError**<br />Message: `Received unsuccessful response from Aether service.`|
 |`0x8004D2B1`<br />`-2147167567`|Name: **AggregateInnerQuery**<br />Message: `The Inner Query must not be an aggregate query.`|
-|`0x8004E023`<br />`-2147164125`|Name: **AggregateQueryRecordLimitExceeded**<br />Message: `The maximum record limit is exceeded. Reduce the number of records.`|
+|`0x8004E023`<br />`-2147164125`|Name: **AggregateQueryRecordLimitExceeded**<br />Message: `The maximum record limit of {0} is exceeded. Reduce the number of aggregated or grouped records. Please see this link for more details: https://go.microsoft.com/fwlink/?linkid=2301313.`|
 |`0x8009724C`<br />`-2146864564`|Name: **AggregationOnSecuredAttributeCallerCantReadNotSupportedForElasticTables**<br />Message: `Caller does not have read permission on secured attribute ('{0}'). Aggregation on this attribute without permission is not supported for Elastic Tables.`|
 |`0x80090489`<br />`-2146892663`|Name: **AICExportFailure**<br />Message: `Error occured when exporting AttributeImageConfig record. Reason: {0}`|
 |`0x8004F0FE`<br />`-2147159810`|Name: **AlreadyLinkedToAnotherAttribute**<br />Message: `Given linked attribute is alreadly linked to other attribute.`|
@@ -71,6 +74,7 @@
 |`0x80048547`<br />`-2147187385`|Name: **AppEntityLimitExceeded**<br />Message: `This operation failed since it exceeded the maximum entity limit of {0} total entities for the app {1} set by its owning publisher {2}.`|
 |`0x80048552`<br />`-2147187374`|Name: **AppEntityLimitExceededInSiteMap**<br />Message: `You cannot save or publish the sitemap. The publisher ({0}) of the app ({1}) allows only up to {2} additional entities to be added.`|
 |`0x80095FFC`<br />`-2146869252`|Name: **ApplicationBasedAccessControlError**<br />Message: `Access to Dataverse API is restricted for this application Id : '{0}'. Please contact your administrator for more information.`|
+|`0x80090922`<br />`-2146891486`|Name: **ApplicationBasedAccessControlUserDoesNotHaveMappedRolesError**<br />Message: `User with SystemUserId = {0} and AccessResultType = {1} has not been explictly or implictly assigned any roles that are mapped to ApplicationId = {2}. Please assign the appropriate roles to grant access and try again.`|
 |`0x8005F231`<br />`-2147093967`|Name: **ApplicationMetadataConverterFailed**<br />Message: `Sorry, something went wrong. Please try again, or restart the app.`|
 |`0x8005F233`<br />`-2147093965`|Name: **ApplicationMetadatadaCreateFailed**<br />Message: `Sorry, something went wrong. Please try again, or restart the app.`|
 |`0x8005F232`<br />`-2147093966`|Name: **ApplicationMetadatadaNullData**<br />Message: `Sorry, something went wrong. Please try again, or restart the app.`|
@@ -150,6 +154,7 @@
 |`0x80048956`<br />`-2147186346`|Name: **AsyncReparentDBOperationOngoing**<br />Message: `Async reparent db is currently executing for this entity. Please wait for the asynchronous job to complete before attempting to reparent this entity again. You may look up the status of this job by searching for the following AsyncJobName in the system jobs view. (EntityId: {0}, ParentId: {1}, EntityName: {2}, AsyncJobName: {3}, AsyncJobId: {4})`|
 |`0x80048955`<br />`-2147186347`|Name: **AsyncRestoreOperationOngoing**<br />Message: `This entity is currently being restored as part of an asynchronous restore job. You may look up the status of this job by searching for the following AsyncJobName in the system jobs view. (MasterId: {0}, SubordinateId: {1}, EntityName: {2}, AsyncJobName: {3}, AsyncJobId: {4})`|
 |`0x80048d23`<br />`-2147185373`|Name: **AsyncRetainOperationOngoing**<br />Message: `A retention policy is currently in progress for this table. Please wait for the policy run to complete before attempting to run the policy again.`|
+|`0x80097257`<br />`-2146864553`|Name: **AsyncRetainRetriableError**<br />Message: `This is an internal error that indicates to the async handler that this error occurred during marking is retriable.`|
 |`0x80090456`<br />`-2146892714`|Name: **AsyncSecondaryEntityKeyNotAllowed**<br />Message: `Entity key '{0}' marked as IsSecondaryKey must have property IsSynchronous set as true.`|
 |`0x80043e09`<br />`-2147205623`|Name: **AttachmentBlocked**<br />Message: `The attachment is either not a valid type or is too large. It cannot be uploaded or downloaded.`|
 |`0x80044a08`<br />`-2147202552`|Name: **AttachmentInvalidFileName**<br />Message: `Attachment file name contains invalid characters.`|
@@ -195,6 +200,7 @@
 |`0x80044369`<br />`-2147204247`|Name: **AttributeUsedForInternalUseOnly**<br />Message: `Attribute {0} on Entity {1} can only be set by the System.`|
 |`0x80090452`<br />`-2146892718`|Name: **AttributeWithValidForUpdateNotSupportedInSecondaryEntityKey**<br />Message: `Attribute '{0}' must not be valid for update. The secondary Entity Key '{1}' does not support key attribue with (IsValidForUpdate = true) property.`|
 |`0x8004D228`<br />`-2147167704`|Name: **AuthenticateToServerBeforeRequestingProxy**<br />Message: `Authenticate to serverType: {0} before requesting a proxy.`|
+|`0x800608B9`<br />`-2147088199`|Name: **AuthNetworkFailure**<br />Message: `Unable to authenticate. Select the Refresh button to try again.`|
 |`0x80091042`<br />`-2146889662`|Name: **AutoDataCaptureAuthorizationFailureException**<br />Message: `You don’t have the proper Office 365 license to get untracked emails. Please contact your system administrator.`|
 |`0x80091041`<br />`-2146889663`|Name: **AutoDataCaptureDisabledError**<br />Message: `Auto capture feature is not enabled.`|
 |`0x80091043`<br />`-2146889661`|Name: **AutoDataCaptureResponseRetrievalFailureException**<br />Message: `Error while fetching untracked emails from Exchange.`|
@@ -231,84 +237,84 @@
 |`0x80043b03`<br />`-2147206397`|Name: **BaseUnitNotDeletable**<br />Message: `The base unit of a schedule cannot be deleted.`|
 |`0x80043b17`<br />`-2147206377`|Name: **BaseUnitNotNull**<br />Message: `Do not use a base unit as the value for a primary unit. This value should always be null.`|
 |`0x80043810`<br />`-2147207152`|Name: **BaseUomNameNotSpecified**<br />Message: `baseuomname not specified`|
-|`0x8004B540`<br />`-2147175104`|Name: **BDK_E_ADDRESS_VALIDATION_FAILURE**<br />Message: `{0}  `|
-|`0x8004B541`<br />`-2147175103`|Name: **BDK_E_AGREEMENT_ALREADY_SIGNED**<br />Message: `{0}  `|
-|`0x8004B542`<br />`-2147175102`|Name: **BDK_E_AUTHORIZATION_FAILED**<br />Message: `{0}  `|
-|`0x8004B543`<br />`-2147175101`|Name: **BDK_E_AVS_FAILED**<br />Message: `{0}  `|
-|`0x8004B544`<br />`-2147175100`|Name: **BDK_E_BAD_CITYNAME_LENGTH**<br />Message: `{0}  `|
-|`0x8004B545`<br />`-2147175099`|Name: **BDK_E_BAD_STATECODE_LENGTH**<br />Message: `{0}  `|
-|`0x8004B546`<br />`-2147175098`|Name: **BDK_E_BAD_ZIPCODE_LENGTH**<br />Message: `{0}  `|
-|`0x8004B547`<br />`-2147175097`|Name: **BDK_E_BADXML**<br />Message: `{0}  `|
-|`0x8004B548`<br />`-2147175096`|Name: **BDK_E_BANNED_PAYMENT_INSTRUMENT**<br />Message: `{0}  `|
-|`0x8004B549`<br />`-2147175095`|Name: **BDK_E_BANNEDPERSON**<br />Message: `{0}  `|
-|`0x8004B54A`<br />`-2147175094`|Name: **BDK_E_CANNOT_EXCEED_MAX_OWNERSHIP**<br />Message: `{0}  `|
-|`0x8004B54B`<br />`-2147175093`|Name: **BDK_E_COUNTRY_CURRENCY_PI_MISMATCH**<br />Message: `{0}  `|
-|`0x8004B54C`<br />`-2147175092`|Name: **BDK_E_CREDIT_CARD_EXPIRED**<br />Message: `{0}  `|
-|`0x8004B54D`<br />`-2147175091`|Name: **BDK_E_DATE_EXPIRED**<br />Message: `{0}  `|
-|`0x8004B54E`<br />`-2147175090`|Name: **BDK_E_ERROR_COUNTRYCODE_MISMATCH**<br />Message: `{0}  `|
-|`0x8004B54F`<br />`-2147175089`|Name: **BDK_E_ERROR_COUNTRYCODE_REQUIRED**<br />Message: `{0}  `|
-|`0x8004B550`<br />`-2147175088`|Name: **BDK_E_EXTRA_REFERRAL_DATA**<br />Message: `{0}  `|
-|`0x8004B551`<br />`-2147175087`|Name: **BDK_E_GUID_EXISTS**<br />Message: `{0}  `|
-|`0x8004B552`<br />`-2147175086`|Name: **BDK_E_INVALID_ADDRESS_ID**<br />Message: `{0}  `|
+|`0x8004B540`<br />`-2147175104`|Name: **BDK_E_ADDRESS_VALIDATION_FAILURE**<br />Message: `{0}`|
+|`0x8004B541`<br />`-2147175103`|Name: **BDK_E_AGREEMENT_ALREADY_SIGNED**<br />Message: `{0}`|
+|`0x8004B542`<br />`-2147175102`|Name: **BDK_E_AUTHORIZATION_FAILED**<br />Message: `{0}`|
+|`0x8004B543`<br />`-2147175101`|Name: **BDK_E_AVS_FAILED**<br />Message: `{0}`|
+|`0x8004B544`<br />`-2147175100`|Name: **BDK_E_BAD_CITYNAME_LENGTH**<br />Message: `{0}`|
+|`0x8004B545`<br />`-2147175099`|Name: **BDK_E_BAD_STATECODE_LENGTH**<br />Message: `{0}`|
+|`0x8004B546`<br />`-2147175098`|Name: **BDK_E_BAD_ZIPCODE_LENGTH**<br />Message: `{0}`|
+|`0x8004B547`<br />`-2147175097`|Name: **BDK_E_BADXML**<br />Message: `{0}`|
+|`0x8004B548`<br />`-2147175096`|Name: **BDK_E_BANNED_PAYMENT_INSTRUMENT**<br />Message: `{0}`|
+|`0x8004B549`<br />`-2147175095`|Name: **BDK_E_BANNEDPERSON**<br />Message: `{0}`|
+|`0x8004B54A`<br />`-2147175094`|Name: **BDK_E_CANNOT_EXCEED_MAX_OWNERSHIP**<br />Message: `{0}`|
+|`0x8004B54B`<br />`-2147175093`|Name: **BDK_E_COUNTRY_CURRENCY_PI_MISMATCH**<br />Message: `{0}`|
+|`0x8004B54C`<br />`-2147175092`|Name: **BDK_E_CREDIT_CARD_EXPIRED**<br />Message: `{0}`|
+|`0x8004B54D`<br />`-2147175091`|Name: **BDK_E_DATE_EXPIRED**<br />Message: `{0}`|
+|`0x8004B54E`<br />`-2147175090`|Name: **BDK_E_ERROR_COUNTRYCODE_MISMATCH**<br />Message: `{0}`|
+|`0x8004B54F`<br />`-2147175089`|Name: **BDK_E_ERROR_COUNTRYCODE_REQUIRED**<br />Message: `{0}`|
+|`0x8004B550`<br />`-2147175088`|Name: **BDK_E_EXTRA_REFERRAL_DATA**<br />Message: `{0}`|
+|`0x8004B551`<br />`-2147175087`|Name: **BDK_E_GUID_EXISTS**<br />Message: `{0}`|
+|`0x8004B552`<br />`-2147175086`|Name: **BDK_E_INVALID_ADDRESS_ID**<br />Message: `{0}`|
 |`0x8004B553`<br />`-2147175085`|Name: **BDK_E_INVALID_BILLABLE_ACCOUNT_ID**<br />Message: `{0}  The specified Billing account is invalid.  Or, although the objectID is of the correct type, the account it identifies does not exist in the system.`|
-|`0x8004B554`<br />`-2147175084`|Name: **BDK_E_INVALID_BUF_SIZE**<br />Message: `{0}  `|
-|`0x8004B555`<br />`-2147175083`|Name: **BDK_E_INVALID_CATEGORY_NAME**<br />Message: `{0}  `|
-|`0x8004B556`<br />`-2147175082`|Name: **BDK_E_INVALID_COUNTRY_CODE**<br />Message: `{0}  `|
-|`0x8004B557`<br />`-2147175081`|Name: **BDK_E_INVALID_CURRENCY**<br />Message: `{0}  `|
-|`0x8004B558`<br />`-2147175080`|Name: **BDK_E_INVALID_CUSTOMER_TYPE**<br />Message: `{0}  `|
-|`0x8004B559`<br />`-2147175079`|Name: **BDK_E_INVALID_DATE**<br />Message: `{0}  `|
-|`0x8004B55A`<br />`-2147175078`|Name: **BDK_E_INVALID_EMAIL_ADDRESS**<br />Message: `{0}  `|
-|`0x8004B55B`<br />`-2147175077`|Name: **BDK_E_INVALID_FILTER**<br />Message: `{0}  `|
-|`0x8004B55C`<br />`-2147175076`|Name: **BDK_E_INVALID_GUID**<br />Message: `{0}  `|
-|`0x8004B55D`<br />`-2147175075`|Name: **BDK_E_INVALID_INPUT_TO_TAXWARE_OR_VERAZIP**<br />Message: `{0}  `|
-|`0x8004B55E`<br />`-2147175074`|Name: **BDK_E_INVALID_LOCALE**<br />Message: `{0}  `|
+|`0x8004B554`<br />`-2147175084`|Name: **BDK_E_INVALID_BUF_SIZE**<br />Message: `{0}`|
+|`0x8004B555`<br />`-2147175083`|Name: **BDK_E_INVALID_CATEGORY_NAME**<br />Message: `{0}`|
+|`0x8004B556`<br />`-2147175082`|Name: **BDK_E_INVALID_COUNTRY_CODE**<br />Message: `{0}`|
+|`0x8004B557`<br />`-2147175081`|Name: **BDK_E_INVALID_CURRENCY**<br />Message: `{0}`|
+|`0x8004B558`<br />`-2147175080`|Name: **BDK_E_INVALID_CUSTOMER_TYPE**<br />Message: `{0}`|
+|`0x8004B559`<br />`-2147175079`|Name: **BDK_E_INVALID_DATE**<br />Message: `{0}`|
+|`0x8004B55A`<br />`-2147175078`|Name: **BDK_E_INVALID_EMAIL_ADDRESS**<br />Message: `{0}`|
+|`0x8004B55B`<br />`-2147175077`|Name: **BDK_E_INVALID_FILTER**<br />Message: `{0}`|
+|`0x8004B55C`<br />`-2147175076`|Name: **BDK_E_INVALID_GUID**<br />Message: `{0}`|
+|`0x8004B55D`<br />`-2147175075`|Name: **BDK_E_INVALID_INPUT_TO_TAXWARE_OR_VERAZIP**<br />Message: `{0}`|
+|`0x8004B55E`<br />`-2147175074`|Name: **BDK_E_INVALID_LOCALE**<br />Message: `{0}`|
 |`0x8004B55F`<br />`-2147175073`|Name: **BDK_E_INVALID_OBJECT_ID**<br />Message: `{0}  The Billing system cannot find the object (e.g. account or subscription or offering).`|
-|`0x8004B560`<br />`-2147175072`|Name: **BDK_E_INVALID_OFFERING_GUID**<br />Message: `{0}  `|
-|`0x8004B561`<br />`-2147175071`|Name: **BDK_E_INVALID_PAYMENT_INSTRUMENT_STATUS**<br />Message: `{0}  `|
-|`0x8004B562`<br />`-2147175070`|Name: **BDK_E_INVALID_PAYMENT_METHOD_ID**<br />Message: `{0}  `|
-|`0x8004B563`<br />`-2147175069`|Name: **BDK_E_INVALID_PHONE_TYPE**<br />Message: `{0}  `|
-|`0x8004B564`<br />`-2147175068`|Name: **BDK_E_INVALID_POLICY_ID**<br />Message: `{0}  `|
-|`0x8004B565`<br />`-2147175067`|Name: **BDK_E_INVALID_REFERRALDATA_XML**<br />Message: `{0}  `|
-|`0x8004B566`<br />`-2147175066`|Name: **BDK_E_INVALID_STATE_FOR_COUNTRY**<br />Message: `{0}  `|
+|`0x8004B560`<br />`-2147175072`|Name: **BDK_E_INVALID_OFFERING_GUID**<br />Message: `{0}`|
+|`0x8004B561`<br />`-2147175071`|Name: **BDK_E_INVALID_PAYMENT_INSTRUMENT_STATUS**<br />Message: `{0}`|
+|`0x8004B562`<br />`-2147175070`|Name: **BDK_E_INVALID_PAYMENT_METHOD_ID**<br />Message: `{0}`|
+|`0x8004B563`<br />`-2147175069`|Name: **BDK_E_INVALID_PHONE_TYPE**<br />Message: `{0}`|
+|`0x8004B564`<br />`-2147175068`|Name: **BDK_E_INVALID_POLICY_ID**<br />Message: `{0}`|
+|`0x8004B565`<br />`-2147175067`|Name: **BDK_E_INVALID_REFERRALDATA_XML**<br />Message: `{0}`|
+|`0x8004B566`<br />`-2147175066`|Name: **BDK_E_INVALID_STATE_FOR_COUNTRY**<br />Message: `{0}`|
 |`0x8004B567`<br />`-2147175065`|Name: **BDK_E_INVALID_SUBSCRIPTION_ID**<br />Message: `{0}  The subscription id specified is invalid.  Or, although the objectID is of correct type and also points to a valid account in SCS, the subscription it identifies does not exist in SCS.`|
-|`0x8004B568`<br />`-2147175064`|Name: **BDK_E_INVALID_TAX_EXEMPT_TYPE**<br />Message: `{0}  `|
-|`0x8004B569`<br />`-2147175063`|Name: **BDK_E_MEG_CONFLICT**<br />Message: `{0}  `|
-|`0x8004B56A`<br />`-2147175062`|Name: **BDK_E_MULTIPLE_CITIES_FOUND**<br />Message: `{0}  `|
-|`0x8004B56B`<br />`-2147175061`|Name: **BDK_E_MULTIPLE_COUNTIES_FOUND**<br />Message: `{0}  `|
-|`0x8004B56C`<br />`-2147175060`|Name: **BDK_E_NON_ACTIVE_ACCOUNT**<br />Message: `{0}  `|
+|`0x8004B568`<br />`-2147175064`|Name: **BDK_E_INVALID_TAX_EXEMPT_TYPE**<br />Message: `{0}`|
+|`0x8004B569`<br />`-2147175063`|Name: **BDK_E_MEG_CONFLICT**<br />Message: `{0}`|
+|`0x8004B56A`<br />`-2147175062`|Name: **BDK_E_MULTIPLE_CITIES_FOUND**<br />Message: `{0}`|
+|`0x8004B56B`<br />`-2147175061`|Name: **BDK_E_MULTIPLE_COUNTIES_FOUND**<br />Message: `{0}`|
+|`0x8004B56C`<br />`-2147175060`|Name: **BDK_E_NON_ACTIVE_ACCOUNT**<br />Message: `{0}`|
 |`0x8004B56D`<br />`-2147175059`|Name: **BDK_E_NOPERMISSION**<br />Message: `{0}  The calling partner does not have access to this method or when the requester does not have permission to search against the supplied search PUID.`|
-|`0x8004B56E`<br />`-2147175058`|Name: **BDK_E_OBJECT_ROLE_LIMIT_EXCEEDED**<br />Message: `{0}  `|
-|`0x8004B56F`<br />`-2147175057`|Name: **BDK_E_OFFERING_ACCOUNT_CURRENCY_MISMATCH**<br />Message: `{0}  `|
-|`0x8004B570`<br />`-2147175056`|Name: **BDK_E_OFFERING_COUNTRY_ACCOUNT_MISMATCH**<br />Message: `{0}  `|
-|`0x8004B571`<br />`-2147175055`|Name: **BDK_E_OFFERING_NOT_PURCHASEABLE**<br />Message: `{0}  `|
-|`0x8004B572`<br />`-2147175054`|Name: **BDK_E_OFFERING_PAYMENT_INSTRUMENT_MISMATCH**<br />Message: `{0}  `|
-|`0x8004B573`<br />`-2147175053`|Name: **BDK_E_OFFERING_REQUIRES_PI**<br />Message: `{0}  `|
-|`0x8004B574`<br />`-2147175052`|Name: **BDK_E_PARTNERNOTINBILLING**<br />Message: `{0}  `|
-|`0x8004B575`<br />`-2147175051`|Name: **BDK_E_PAYMENT_PROVIDER_CONNECTION_FAILED**<br />Message: `{0}  `|
-|`0x8004B577`<br />`-2147175049`|Name: **BDK_E_POLICY_DEAL_COUNTRY_MISMATCH**<br />Message: `{0}  `|
-|`0x8004B576`<br />`-2147175050`|Name: **BDK_E_PRIMARY_PHONE_REQUIRED**<br />Message: `{0}  `|
-|`0x8004B578`<br />`-2147175048`|Name: **BDK_E_PUID_ROLE_LIMIT_EXCEEDED**<br />Message: `{0}  `|
-|`0x8004B579`<br />`-2147175047`|Name: **BDK_E_RATING_FAILURE**<br />Message: `{0}  `|
-|`0x8004B57A`<br />`-2147175046`|Name: **BDK_E_REQUIRED_FIELD_MISSING**<br />Message: `{0}  `|
-|`0x8004B57B`<br />`-2147175045`|Name: **BDK_E_STATE_CITY_INVALID**<br />Message: `{0}  `|
-|`0x8004B57C`<br />`-2147175044`|Name: **BDK_E_STATE_INVALID**<br />Message: `{0}  `|
-|`0x8004B57D`<br />`-2147175043`|Name: **BDK_E_STATE_ZIP_CITY_INVALID**<br />Message: `{0}  `|
-|`0x8004B57E`<br />`-2147175042`|Name: **BDK_E_STATE_ZIP_CITY_INVALID2**<br />Message: `{0}  `|
-|`0x8004B57F`<br />`-2147175041`|Name: **BDK_E_STATE_ZIP_CITY_INVALID3**<br />Message: `{0}  `|
-|`0x8004B580`<br />`-2147175040`|Name: **BDK_E_STATE_ZIP_CITY_INVALID4**<br />Message: `{0}  `|
-|`0x8004B581`<br />`-2147175039`|Name: **BDK_E_STATE_ZIP_COVERS_MULTIPLE_CITIES**<br />Message: `{0}  `|
-|`0x8004B582`<br />`-2147175038`|Name: **BDK_E_STATE_ZIP_INVALID**<br />Message: `{0}  `|
-|`0x8004B583`<br />`-2147175037`|Name: **BDK_E_TAXID_EXPDATE**<br />Message: `{0}  `|
-|`0x8004B584`<br />`-2147175036`|Name: **BDK_E_TOKEN_BLACKLISTED**<br />Message: `{0}  `|
-|`0x8004B585`<br />`-2147175035`|Name: **BDK_E_TOKEN_EXPIRED**<br />Message: `{0}  `|
-|`0x8004B586`<br />`-2147175034`|Name: **BDK_E_TOKEN_NOT_VALID_FOR_OFFERING**<br />Message: `{0}  `|
-|`0x8004B587`<br />`-2147175033`|Name: **BDK_E_TOKEN_RANGE_BLACKLISTED**<br />Message: `{0}  `|
-|`0x8004B588`<br />`-2147175032`|Name: **BDK_E_TRANS_BALANCE_TO_PI_INVALID**<br />Message: `{0}  `|
+|`0x8004B56E`<br />`-2147175058`|Name: **BDK_E_OBJECT_ROLE_LIMIT_EXCEEDED**<br />Message: `{0}`|
+|`0x8004B56F`<br />`-2147175057`|Name: **BDK_E_OFFERING_ACCOUNT_CURRENCY_MISMATCH**<br />Message: `{0}`|
+|`0x8004B570`<br />`-2147175056`|Name: **BDK_E_OFFERING_COUNTRY_ACCOUNT_MISMATCH**<br />Message: `{0}`|
+|`0x8004B571`<br />`-2147175055`|Name: **BDK_E_OFFERING_NOT_PURCHASEABLE**<br />Message: `{0}`|
+|`0x8004B572`<br />`-2147175054`|Name: **BDK_E_OFFERING_PAYMENT_INSTRUMENT_MISMATCH**<br />Message: `{0}`|
+|`0x8004B573`<br />`-2147175053`|Name: **BDK_E_OFFERING_REQUIRES_PI**<br />Message: `{0}`|
+|`0x8004B574`<br />`-2147175052`|Name: **BDK_E_PARTNERNOTINBILLING**<br />Message: `{0}`|
+|`0x8004B575`<br />`-2147175051`|Name: **BDK_E_PAYMENT_PROVIDER_CONNECTION_FAILED**<br />Message: `{0}`|
+|`0x8004B577`<br />`-2147175049`|Name: **BDK_E_POLICY_DEAL_COUNTRY_MISMATCH**<br />Message: `{0}`|
+|`0x8004B576`<br />`-2147175050`|Name: **BDK_E_PRIMARY_PHONE_REQUIRED**<br />Message: `{0}`|
+|`0x8004B578`<br />`-2147175048`|Name: **BDK_E_PUID_ROLE_LIMIT_EXCEEDED**<br />Message: `{0}`|
+|`0x8004B579`<br />`-2147175047`|Name: **BDK_E_RATING_FAILURE**<br />Message: `{0}`|
+|`0x8004B57A`<br />`-2147175046`|Name: **BDK_E_REQUIRED_FIELD_MISSING**<br />Message: `{0}`|
+|`0x8004B57B`<br />`-2147175045`|Name: **BDK_E_STATE_CITY_INVALID**<br />Message: `{0}`|
+|`0x8004B57C`<br />`-2147175044`|Name: **BDK_E_STATE_INVALID**<br />Message: `{0}`|
+|`0x8004B57D`<br />`-2147175043`|Name: **BDK_E_STATE_ZIP_CITY_INVALID**<br />Message: `{0}`|
+|`0x8004B57E`<br />`-2147175042`|Name: **BDK_E_STATE_ZIP_CITY_INVALID2**<br />Message: `{0}`|
+|`0x8004B57F`<br />`-2147175041`|Name: **BDK_E_STATE_ZIP_CITY_INVALID3**<br />Message: `{0}`|
+|`0x8004B580`<br />`-2147175040`|Name: **BDK_E_STATE_ZIP_CITY_INVALID4**<br />Message: `{0}`|
+|`0x8004B581`<br />`-2147175039`|Name: **BDK_E_STATE_ZIP_COVERS_MULTIPLE_CITIES**<br />Message: `{0}`|
+|`0x8004B582`<br />`-2147175038`|Name: **BDK_E_STATE_ZIP_INVALID**<br />Message: `{0}`|
+|`0x8004B583`<br />`-2147175037`|Name: **BDK_E_TAXID_EXPDATE**<br />Message: `{0}`|
+|`0x8004B584`<br />`-2147175036`|Name: **BDK_E_TOKEN_BLACKLISTED**<br />Message: `{0}`|
+|`0x8004B585`<br />`-2147175035`|Name: **BDK_E_TOKEN_EXPIRED**<br />Message: `{0}`|
+|`0x8004B586`<br />`-2147175034`|Name: **BDK_E_TOKEN_NOT_VALID_FOR_OFFERING**<br />Message: `{0}`|
+|`0x8004B587`<br />`-2147175033`|Name: **BDK_E_TOKEN_RANGE_BLACKLISTED**<br />Message: `{0}`|
+|`0x8004B588`<br />`-2147175032`|Name: **BDK_E_TRANS_BALANCE_TO_PI_INVALID**<br />Message: `{0}`|
 |`0x8004B589`<br />`-2147175031`|Name: **BDK_E_UNKNOWN_SERVER_FAILURE**<br />Message: `{0}  Unknown server failure.`|
-|`0x8004B58A`<br />`-2147175030`|Name: **BDK_E_UNSUPPORTED_CHAR_EXIST**<br />Message: `{0}  `|
+|`0x8004B58A`<br />`-2147175030`|Name: **BDK_E_UNSUPPORTED_CHAR_EXIST**<br />Message: `{0}`|
 |`0x8004B58F`<br />`-2147175025`|Name: **BDK_E_USAGE_COUNT_FOR_TOKEN_EXCEEDED**<br />Message: `{0}  Billing token is already spent.`|
-|`0x8004B58B`<br />`-2147175029`|Name: **BDK_E_VATID_DOESNOTHAVEEXPDATE**<br />Message: `{0}  `|
-|`0x8004B58C`<br />`-2147175028`|Name: **BDK_E_ZIP_CITY_MISSING**<br />Message: `{0}  `|
+|`0x8004B58B`<br />`-2147175029`|Name: **BDK_E_VATID_DOESNOTHAVEEXPDATE**<br />Message: `{0}`|
+|`0x8004B58C`<br />`-2147175028`|Name: **BDK_E_ZIP_CITY_MISSING**<br />Message: `{0}`|
 |`0x8004B58D`<br />`-2147175027`|Name: **BDK_E_ZIP_INVALID**<br />Message: `{0}  Billing zip code error.`|
 |`0x8004B58E`<br />`-2147175026`|Name: **BDK_E_ZIP_INVALID_FOR_ENTERED_STATE**<br />Message: `{0}  Billing zip code error.`|
 |`0x8005E003`<br />`-2147098621`|Name: **BidsAuthenticationError**<br />Message: `An error occured while authenticating with server {0}.`|
@@ -330,6 +336,7 @@
 |`0x80049946`<br />`-2147182266`|Name: **BinAttrbuteNotReady**<br />Message: `Attribute '{0}' on table '{1}' is not ready for recycle bin table queries. Please remove this attribute from your query. Please wait for recycle bin metadata sync operation to complete before using this attribute.`|
 |`0x80160043`<br />`-2146041789`|Name: **BindAttributeNotSpecifiedForLookup**<br />Message: `BindAttribute for lookup property {0} is not provided. More Details:{1}`|
 |`0x80160044`<br />`-2146041788`|Name: **BindAttributeValuesAreDifferentAcrossControlConfigurations**<br />Message: `Bind Attribute for lookup property {0} should be same for all form factor control configurations Please check the configuration: {1}. More Details:{2}`|
+|`0x80072523`<br />`-2147015389`|Name: **BlobDownloadRetryableError**<br />Message: `A retryable error occured while downloading a blob from file store.`|
 |`0x80090018`<br />`-2146893800`|Name: **BlobNotFound**<br />Message: `Blob not found.`|
 |`0x8004E10E`<br />`-2147163890`|Name: **BookFirstInstanceFailed**<br />Message: `Failed to book first instance.`|
 |`0x8004431C`<br />`-2147204324`|Name: **BooleanOptionOutOfRange**<br />Message: `Boolean attribute options must have a value of either 0 or 1.`|
@@ -345,7 +352,9 @@
 |`0x8004F096`<br />`-2147159914`|Name: **BulkACSPartialErrors**<br />Message: `Add Components To Solution: {0} out of {1} requests failed. \n{2}`|
 |`0x80048459`<br />`-2147187623`|Name: **BulkDeleteChildFailure**<br />Message: `One of the Bulk Delete Child Jobs Failed`|
 |`0x80005049`<br />`-2147463095`|Name: **BulkDeleteJobNotComplete**<br />Message: `The bulk delete operation '{0}' must be in the 'Succeeded', 'Failed', or 'Canceled' state to be restored.`|
+|`0x8004840B`<br />`-2147187701`|Name: **BulkDeleteNotSupportedInDaac**<br />Message: `Bulk Delete job is not supported for replicated entity from secondary parition in a dataverse as a cluster setup.`|
 |`0x80048435`<br />`-2147187659`|Name: **BulkDeleteRecordDeletionFailure**<br />Message: `The record cannot be deleted.`|
+|`0x8004840A`<br />`-2147187702`|Name: **BulkDetectDupsNotSupportedInSecondaryPartition**<br />Message: `Duplicate Detection job is not supported from secondary parition in a dataverse as a cluster setup.`|
 |`0x80048422`<br />`-2147187678`|Name: **BulkDetectInvalidEmailRecipient**<br />Message: `The e-mail recipient either does not exist or the e-mail address for the e-mail recipient is not valid.`|
 |`0x8009000F`<br />`-2146893809`|Name: **BulkDuplicateDetectionJobSendEmailFailed**<br />Message: `Bulk Duplicate Detection successfully completed. Please review the results and perform a manual merge. We were unable to send a notification to your specified email address. If this persists, please validate the email address you provided and review any active plugins.`|
 |`0x8004502D`<br />`-2147200979`|Name: **BulkMailOperationFailed**<br />Message: `The bulk e-mail job completed with {0} failures. The failures might be caused by missing e-mail addresses or because you do not have permission to send e-mail. To find records with missing e-mail addresses, use Advanced Find. If you need increased e-mail permissions, contact your system administrator.`|
@@ -375,6 +384,7 @@
 |`0x80097628`<br />`-2146863576`|Name: **BypassBusinessLogicExecutionStepIdsLimitExceeded**<br />Message: `The number of step ids: {0} in the BypassBusinessLogicExecutionStepIds parameter exceeds the orgdb settings limit: {1}`|
 |`0x80072330`<br />`-2147015888`|Name: **CacheLoadConcurrencyError**<br />Message: `Too many caches loaded concurrently. Please try again later.`|
 |`0x80048d3d`<br />`-2147185347`|Name: **CacheLockTimeout**<br />Message: `Timed out when waiting to acquire a specific cache lock due to another thread is already loading the cache and taking longer time than expected.`|
+|`0x80098019`<br />`-2146861031`|Name: **CachePreemptivelyFlushed**<br />Message: `The specified call is for an organization whose cache was preemptively flushed, retrying the operation may succeed or you can specify a request header "x-ms-select-stable-service" to be directed to the stable endpoint.`|
 |`0x80054817`<br />`-2147137513`|Name: **CalculatedFieldCannotUseVirtualEntities**<br />Message: `Virtual entities are not supported in Calculated Fields. Calculated Field {0} on Entity {1} is using Virtual Entity {2}.`|
 |`0x8006042b`<br />`-2147089365`|Name: **CalculatedFieldsAssignmentMismatch**<br />Message: `You can’t set the value {0}, which is of type {1}, to type {2}.`|
 |`0x80060431`<br />`-2147089359`|Name: **CalculatedFieldsCyclicReference**<br />Message: `Field {0} cannot be used in calculated field {1} because it would create a circular reference.`|
@@ -404,6 +414,7 @@
 |`0x8009732D`<br />`-2146864339`|Name: **CallbackUriSpecifiedTwice**<br />Message: `Callback Uri provided in both prefer as well as x-ms-dyn-callback-url header. Use only one of them.`|
 |`0x80097326`<br />`-2146864346`|Name: **CallbackWithoutRespondAsync**<br />Message: `The callback preference cannot be honored without respond-async preference.`|
 |`0x80044161`<br />`-2147204767`|Name: **CallerCannotChangeOwnDomainName**<br />Message: `The caller cannot change their own domain name`|
+|`0x8004853D`<br />`-2147187395`|Name: **CallerCannotReadComponentField**<br />Message: `Caller does not have read permission on component {0} column.`|
 |`0x8004025b`<br />`-2147220901`|Name: **CalloutException**<br />Message: `Callout Exception occurred.`|
 |`0x80040326`<br />`-2147220698`|Name: **CampaignActivityAlreadyPropagated**<br />Message: `This campaign activity has been distributed already. Campaign activities cannot be distributed more than one time.`|
 |`0x80040331`<br />`-2147220687`|Name: **CampaignActivityClosed**<br />Message: `This Campaign Activity is closed or canceled. Campaign activities cannot be distributed after they have been closed or canceled.`|
@@ -411,7 +422,7 @@
 |`0x8004030a`<br />`-2147220726`|Name: **CampaignNotSpecifiedForCampaignResponse**<br />Message: `RegardingObjectId is a required field.`|
 |`0x8006099E`<br />`-2147087970`|Name: **CanAssociateOnlyMobileOfflineEnabledEntityToProfileItem**<br />Message: `{0} needs to be enabled for mobile offline.`|
 |`0x8006099C`<br />`-2147087972`|Name: **CanAssociateOnlyMobileOfflineEnableEntityToProfileItem**<br />Message: `This entity needs to be enabled for mobile offline.`|
-|`0x8006099D`<br />`-2147087971`|Name: **CanAssociateOnlyOneEntityPerProfileItem**<br />Message: `You can only add one mobile offline profile item record per entity to a mobile offline profile record. `|
+|`0x8006099D`<br />`-2147087971`|Name: **CanAssociateOnlyOneEntityPerProfileItem**<br />Message: `You can only add one mobile offline profile item record per entity to a mobile offline profile record.`|
 |`0x8003F451`<br />`-2147224495`|Name: **CancelActiveChildCaseFirst**<br />Message: `Cancel active child case before canceling parent case.`|
 |`0x80044F03`<br />`-2147201277`|Name: **CancelAsyncOperationsRetriableError**<br />Message: `Failed to cancel targeted system jobs, will be retried later.`|
 |`0x80044F04`<br />`-2147201276`|Name: **CancelAsyncOperationsTerminalError**<br />Message: `Failed to cancel targeted system jobs.`|
@@ -451,6 +462,7 @@
 |`0x80061009`<br />`-2147086327`|Name: **CannotAddRetiredProductToPricelist**<br />Message: `Retired products can not be added to pricelists.`|
 |`0x8004051c`<br />`-2147220196`|Name: **CannotAddSingleQueueEnabledEntityToQueue**<br />Message: `The entity record cannot be added to the queue as it already exists in other queue.`|
 |`0x8004F018`<br />`-2147160040`|Name: **CannotAddSolutionComponentWithoutRoots**<br />Message: `This item is not a valid solution component. For more information about solution components, see the Microsoft Dynamics 365 SDK documentation.`|
+|`0x80090920`<br />`-2146891488`|Name: **CannotAddSyncGroupMembersToTeamJob**<br />Message: `SyncGroupMembersToTeam cannot be called, Job already in the queue.`|
 |`0x800609A6`<br />`-2147087962`|Name: **CannotAddUserToMobileOfflineProfile**<br />Message: `You can’t add this user to this mobile offline profile because the user’s role is either missing or doesn’t have the Dynamics 365 for mobile privilege.`|
 |`0x8004F00C`<br />`-2147160052`|Name: **CannotAddWorkflowActivationToSolution**<br />Message: `Cannot add Workflow Activation to solution.`|
 |`0x80048448`<br />`-2147187640`|Name: **CannotAssignAddressBookFilters**<br />Message: `Cannot assign address book filters`|
@@ -499,6 +511,7 @@
 |`0x8004026c`<br />`-2147220884`|Name: **CannotCompleteLockRequest**<br />Message: `Cannot complete Request due to timeout taking {0} lock.`|
 |`0x80048217`<br />`-2147188201`|Name: **CannotConnectToSelf**<br />Message: `Cannot connect a record to itself.`|
 |`0x80061030`<br />`-2147086288`|Name: **CannotConvertBundleToKit**<br />Message: `You can't convert a bundle to a kit.`|
+|`0x80090919`<br />`-2146891495`|Name: **CannotConvertDefaultTeamToAccess**<br />Message: `The default business unit team cannot be converted to an access team. Please create a new access team with all users from the business unit.`|
 |`0x80061018`<br />`-2147086312`|Name: **CannotConvertProductAssociatedWithBundleToKit**<br />Message: `You can't convert a product that is a part of a bundle to a kit.`|
 |`0x80061016`<br />`-2147086314`|Name: **CannotConvertProductAssociatedWithFamilyToKit**<br />Message: `You can't convert a product that belongs to a product family to a kit.`|
 |`0x80061029`<br />`-2147086295`|Name: **CannotConvertProductFamilyToKit**<br />Message: `You can't convert a product family to a kit.`|
@@ -525,7 +538,7 @@
 |`0x80055005`<br />`-2147135483`|Name: **CannotCreateSLAForEntity**<br />Message: `You can't create a service level agreement (SLA) for this entity because it’s not enabled for creating SLAs`|
 |`0x80041d4d`<br />`-2147214003`|Name: **CannotCreateSyncUserIsLicensedField**<br />Message: `The property IsLicensed cannot be set for Sync User Creation.`|
 |`0x80041d4b`<br />`-2147214005`|Name: **CannotCreateSyncUserObjectMissing**<br />Message: `This is not a valid Microsoft Online Services ID for this organization.`|
-|`0x80090481`<br />`-2146892671`|Name: **CannotCreateSystemFieldOnEntityUpdate**<br />Message: `Attribute {0} cannot be created on an existing entity {1} because it is not a custom field. `|
+|`0x80090481`<br />`-2146892671`|Name: **CannotCreateSystemFieldOnEntityUpdate**<br />Message: `Attribute {0} cannot be created on an existing entity {1} because it is not a custom field.`|
 |`0x800608D5`<br />`-2147088171`|Name: **CannotCreateSystemOrDefaultTheme**<br />Message: `You can’t create system or default themes. System or default theme can only be created out of box.`|
 |`0x80044804`<br />`-2147203068`|Name: **CannotCreateUpdateSourceAttribute**<br />Message: `Source Attribute Not Valid For Create/Update if Metric Type is Count.`|
 |`0x8004027a`<br />`-2147220870`|Name: **CannotDeactivateDefaultView**<br />Message: `Default views cannot be deactivated.`|
@@ -586,7 +599,7 @@
 |`0x80731118`<br />`-2139942632`|Name: **CannotDeleteQueueWithRouteRules**<br />Message: `You can't delete this queue because one or more routing rule sets use this queue. Remove the queue from the routing rule sets and try again.`|
 |`0x8004F859`<br />`-2147157927`|Name: **CannotDeleteRelatedSla**<br />Message: `The SLA record couldn't be deleted. Please try again or contact your system administrator`|
 |`0x8004F006`<br />`-2147160058`|Name: **CannotDeleteRestrictedPublisher**<br />Message: `Attempting to delete a restricted publisher.`|
-|`0x8004F005`<br />`-2147160059`|Name: **CannotDeleteRestrictedSolution**<br />Message: `Attempting to delete a restricted solution.`|
+|`0x8004F005`<br />`-2147160059`|Name: **CannotDeleteRestrictedSolution**<br />Message: `Attempting to delete a restricted solution {0}.`|
 |`0x80041d55`<br />`-2147213995`|Name: **CannotDeleteSpecialRole**<br />Message: `The role cannot be deleted.`|
 |`0x80041d42`<br />`-2147214014`|Name: **CannotDeleteSupportUser**<br />Message: `The Support User Role cannot be deleted.`|
 |`0x80041d2e`<br />`-2147214034`|Name: **CannotDeleteSysAdmin**<br />Message: `The System Administrator Role cannot be deleted.`|
@@ -615,6 +628,7 @@
 |`0x80060303`<br />`-2147089661`|Name: **CannotDisableRelevanceSearchManagedProperty**<br />Message: `The {0} entity is currently syncing to an external search index.  You must remove the entity from the external search index before you can set the "Can Enable Sync to External Search Index" property to False.`|
 |`0x80041d2f`<br />`-2147214033`|Name: **CannotDisableSysAdmin**<br />Message: `A user cannot be disabled if they are the only user that has the System Administrator Role.`|
 |`0x80041d65`<br />`-2147213979`|Name: **CannotDisableTenantAdmin**<br />Message: `Users who are granted the Microsoft Office 365 Global administrator or Service administrator role cannot be disabled in Microsoft Dynamics 365 Online. You must first remove the Microsoft Office 365 role, and then try again.`|
+|`0x80040d41`<br />`-2147218111`|Name: **CannotDisableUserWithSdkMessageProcessingStep**<br />Message: `The user with SystemUserId={0} cannot be disabled. User is ImpersonatingUserId for {1} SdkMessageProcessingSteps, which will fail after disabling. Delete or disable or change ImpersonatingUserId those SdkMessageProcessingStep: {2}.`|
 |`0x8004F851`<br />`-2147157935`|Name: **CannotEditActiveRule**<br />Message: `You can not edit an active routing rule. Deactivate the rule to delete it.`|
 |`0x8004F860`<br />`-2147157920`|Name: **CannotEditActiveSla**<br />Message: `You can't delete active SLA .Please deactivate the SLA to delete or Contact your system administrator.`|
 |`0x80048357`<br />`-2147187881`|Name: **CannotEnableDeletedUser**<br />Message: `User with SystemUserId={0} was deleted (DeletedState={1}) and can't be enabled.`|
@@ -624,12 +638,13 @@
 |`0x8004852C`<br />`-2147187412`|Name: **CannotExecuteRequestBecauseHttpsIsRequired**<br />Message: `HTTPS protocol is required for this type of request, please enable HTTPS protocol and try again.`|
 |`0x80090474`<br />`-2146892684`|Name: **CannotExportRoutingRuleForNonCaseEntity**<br />Message: `Exporting routing rules is only available for cases when using basic routing rulesets.`|
 |`0x8004F847`<br />`-2147157945`|Name: **CannotExportRuleOnAnyEntityRoutingRuleFCBOff**<br />Message: `Unable to export routing rule set record for entities (except case entity) as the feature control bit for entity records routing is disabled.`|
+|`0x80041155`<br />`-2147217067`|Name: **CannotFilterOnMaskedAttribute**<br />Message: `Filtering on masked attributes without the read unmasked column permission is not allowed.`|
 |`0x8004F083`<br />`-2147159933`|Name: **CannotFindBaseFromUpgrade**<br />Message: `Cannot find the data for the previous version of the holding solution: [{0}].`|
 |`0x80044342`<br />`-2147204286`|Name: **CannotFindDomainAccount**<br />Message: `Invalid domain account`|
 |`0x8004F060`<br />`-2147159968`|Name: **CannotFindLayerToMerge**<br />Message: `Cannot find a suitable layer to merge Component: [{0}] with Id: [{1}]. Cannot continue with the operation. Check the layers of the component.`|
 |`0x800404eb`<br />`-2147220245`|Name: **CannotFindObjectInQueue**<br />Message: `The object was not found in the given queue`|
 |`0x800404ec`<br />`-2147220244`|Name: **CannotFindUserQueue**<br />Message: `Cannot find user queue`|
-|`0x8004F6A3`<br />`-2147158365`|Name: **CannotFollowInactiveEntity**<br />Message: `Can't follow inactive record. `|
+|`0x8004F6A3`<br />`-2147158365`|Name: **CannotFollowInactiveEntity**<br />Message: `Can't follow inactive record.`|
 |`0x80090012`<br />`-2146893806`|Name: **CannotGenerateFileSasUrl**<br />Message: `Cannot generate SAS url for this file.`|
 |`0x80048446`<br />`-2147187642`|Name: **CannotGrantAccessToAddressBookFilters**<br />Message: `Cannot grant access to address book filters`|
 |`0x80040271`<br />`-2147220879`|Name: **CannotGrantAccessToOfflineFilters**<br />Message: `Cannot grant access to offline filters`|
@@ -748,7 +763,8 @@
 |`0x80061114`<br />`-2147086060`|Name: **CannotUpdateExternalPartyWithSameCorrelationKey**<br />Message: `An external party record already exists with the same correlation key value.`|
 |`0x80044901`<br />`-2147202815`|Name: **CannotUpdateGoalPeriodInfoChildGoal**<br />Message: `You cannot update goal period related attributes on a child goal.`|
 |`0x80044910`<br />`-2147202800`|Name: **CannotUpdateGoalPeriodInfoClosedGoal**<br />Message: `You cannot change the time period of this goal because there are one or more closed subordinate goals.`|
-|`0x80048461`<br />`-2147187615`|Name: **CannotUpdateLogicalAttribute**<br />Message: `Cannot update logical attribute {0} `|
+|`0x80048362`<br />`-2147187870`|Name: **CannotUpdateLicenseStateForUser**<br />Message: `User with SystemUserId={0} and SystemManagedUserType={1} cannot have their licensed state updated.`|
+|`0x80048461`<br />`-2147187615`|Name: **CannotUpdateLogicalAttribute**<br />Message: `Cannot update logical attribute {0}`|
 |`0x8004F024`<br />`-2147160028`|Name: **CannotUpdateManagedSolution**<br />Message: `Cannot update solution '{0}' because it is a managed solution.`|
 |`0x80044900`<br />`-2147202816`|Name: **CannotUpdateMetricOnChildGoal**<br />Message: `You cannot update metric on a child goal.`|
 |`0x80044902`<br />`-2147202814`|Name: **CannotUpdateMetricOnGoalWithChildren**<br />Message: `You cannot update metric on a goal which has associated child goals.`|
@@ -788,6 +804,7 @@
 |`0x8005F214`<br />`-2147093996`|Name: **CantSaveRecordInOffline**<br />Message: `You can't save this record while you're offline.`|
 |`0x8006111A`<br />`-2147086054`|Name: **CantSetIsGuestProfile**<br />Message: `You can’t set or change the value of the IsGuestProfile field because it’s for internal use only.`|
 |`0x8005F224`<br />`-2147093980`|Name: **CantUpdateOnlineRecord**<br />Message: `You can’t update this record because it doesn’t exist in the offline mode.`|
+|`0x80072360`<br />`-2147015840`|Name: **CanvasAppCouldNotBeDeletedDueToBeingARequiredDependency**<br />Message: `The {0} with name '{1}' cannot be deleted because it is a required dependency by one or more components (from managed or active layer) outside this solution.`|
 |`0x80050121`<br />`-2147155679`|Name: **CanvasAppNotPartOfAppModule**<br />Message: `The custom page being opened is not part of this app.`|
 |`0x80072356`<br />`-2147015850`|Name: **CanvasAppsExpectedFileMissing**<br />Message: `The solution specified an expected assets file but that file was missing or invalid.`|
 |`0x80072354`<br />`-2147015852`|Name: **CanvasAppsInvalidSolutionFileContent**<br />Message: `The request to import a canvas app should contain at least one asset file.`|
@@ -860,10 +877,12 @@
 |`0x80061771`<br />`-2147084431`|Name: **CloneSolutionPatchException**<br />Message: `Patch '{0}' has a matching or higher version ({1}) than that of the patch being installed.`|
 |`0x80071112`<br />`-2147020526`|Name: **CloneTitleTooLong**<br />Message: `A validation error occurred. The length of the Name attribute of the mobileofflineprofile entity exceeded the maximum allowed length of 200.`|
 |`0x8003F452`<br />`-2147224494`|Name: **CloseActiveChildCaseFirst**<br />Message: `Close active child case before closing parent case.`|
+|`0x80098020`<br />`-2146861024`|Name: **ClusteringFeatureNotAvailable**<br />Message: `This operation couldn't be completed because {0} feature is not enabled for your organization as {1}.`|
 |`0x80090019`<br />`-2146893799`|Name: **CmkStatusMismatch**<br />Message: `The CMK status does not match. Input: {0}, expected: {1}`|
 |`0x80061500`<br />`-2147085056`|Name: **ColorStripAttributesExceeded**<br />Message: `Color Strip section cannot have more than 1 attribute`|
 |`0x80061502`<br />`-2147085054`|Name: **ColorStripAttributesInvalid**<br />Message: `Color Strip section can only have attributes of type Two Options, Option Set and Status Reason`|
 |`0x80090101`<br />`-2146893567`|Name: **ColumnNameNotFound**<br />Message: `The column with name '{0}' cannot be found on the table with name '{1}'.`|
+|`0x80040c08`<br />`-2147218424`|Name: **ColumnSetAllColumnsUnsupportedForMultiPartitionDistinctQuery**<br />Message: `The query indicates that all columns for the specified entity {0} should be retrieved. For multi-partition distinct queries, retrieving all columns is not supported.`|
 |`0x8004F027`<br />`-2147160025`|Name: **CombinedManagedPropertyFailure**<br />Message: `The evaluation of the current component(name={0}, id={1}) in the current operation ({2}) failed during at least one managed property evaluations: {3}`|
 |`0x80154B52`<br />`-2146088110`|Name: **CommandNotSupported**<br />Message: `Command is not supported in offline mode.`|
 |`0x80072556`<br />`-2147015338`|Name: **CommitFileFailure**<br />Message: `Error occured when commiting file. (chunkList size: {0}, uploadToken: {1}, fileName:{2}, mimeType:{3})`|
@@ -978,7 +997,7 @@
 |`0x80050300`<br />`-2147155200`|Name: **CrmLicensingError**<br />Message: `A failure occurred during licensing check.`|
 |`0x80050307`<br />`-2147155193`|Name: **CrmLicensingNoAccessViaEntitlementBilling**<br />Message: `This user with userId={0} does not have an appropriate license to access this application uniqueName={1} with Id={2} from publisher={3}. An appropriate license is required or the user needs to have sufficient per app licenses allocated, for accessing custom applications. For more information, please refer https://go.microsoft.com/fwlink/p/?linkid=2122607 Error=CrmLicensingNoAccessViaEntitlementBilling.`|
 |`0x80050303`<br />`-2147155197`|Name: **CrmLicensingNoRestrictedServicePlan**<br />Message: `This application {0}({1}) requires an appropriate license. Technical Information: This user with user Id {2} does not have appropriate license(s) to access this application from publisher {3}. An appropriate license is required with one of these service plans : {4}. Error=CrmLicensingNoRestrictedServicePlan.`|
-|`0x80050301`<br />`-2147155199`|Name: **CrmLicensingNoServicePlan**<br />Message: `This user with userId={0} does not have appropriate license(s) to access this application uniqueName={1} with Id={2} from publisher={3}. An appropriate license is required with one of these service plans : {5}. For more information, please refer https://go.microsoft.com/fwlink/p/?linkid=2122607 Error=CrmLicensingNoServicePlan.`|
+|`0x80050301`<br />`-2147155199`|Name: **CrmLicensingNoServicePlan**<br />Message: `This user with userId={0} does not have appropriate license(s) to access this application uniqueName={1} with Id={2} from publisher={3}. An appropriate license is required with one of these service plans: {5}. For additional troubleshooting steps, please refer https://go.microsoft.com/fwlink/p/?linkid=2314633. For a mapping of all licenses to service plans, refer https://go.microsoft.com/fwlink/p/?linkid=2307706 Error=CrmLicensingNoServicePlan.`|
 |`0x80050302`<br />`-2147155198`|Name: **CrmLicensingNoUserPass**<br />Message: `This user with userId={0} does not have an appropriate license to access this application uniqueName={1} with Id={2} from publisher={3}. An appropriate license is required or the organization instance needs to have sufficient per app licenses assigned, for accessing custom applications. For more information, please refer https://go.microsoft.com/fwlink/p/?linkid=2122607 Error=CrmLicensingNoUserPass.`|
 |`0x8004B056`<br />`-2147176362`|Name: **CrmLiveAddOnAddLicenseLimitReached**<br />Message: `Your subscription has the maximum number of user licenses available.  For additional licenses, please contact our sales organization at 1-877-Dynamics 365-CHOICE (276-2464).`|
 |`0x8004B057`<br />`-2147176361`|Name: **CrmLiveAddOnAddStorageLimitReached**<br />Message: `Your storage consumption has reached the maximum storage limit allotted to this environment. Trial environments are allocated with limited resources. If you are not using a trial environment, please contact support.`|
@@ -1034,6 +1053,7 @@
 |`0x80073002`<br />`-2147012606`|Name: **CrmSQLUniqueIndexOrConstraintViolation**<br />Message: `The operation attempted to insert a duplicate value for an attribute with a unique constraint.`|
 |`0x80040354`<br />`-2147220652`|Name: **CRMUserDoesNotExist**<br />Message: `No Microsoft Dynamics 365 user exists with the specified domain name and user ID`|
 |`0x80092006`<br />`-2146885626`|Name: **CrossEntityRelationshipInvalidOperation**<br />Message: `Invalid cross-entity stage transition. Specified relationship cannot be modified.`|
+|`0x80097263`<br />`-2146864541`|Name: **CrossPartitionTransactionNotAllowed**<br />Message: `Cross-partition transaction is not allowed. The transaction boundary for '{0}' spans across multiple partitions: {1}.`|
 |`0x80050141`<br />`-2147155647`|Name: **CurrencyAttributeNotMoneyType**<br />Message: `The Currency attribute {0} value is not of Money type`|
 |`0x80048cfb`<br />`-2147185413`|Name: **CurrencyCannotBeNullDueToNonNullMoneyFields**<br />Message: `The currency cannot be null.`|
 |`0x8004E026`<br />`-2147164122`|Name: **CurrencyFieldMissing**<br />Message: `Record currency is required to calculate rollup field of type currency. Provide a currency and try again.`|
@@ -1045,6 +1065,7 @@
 |`0x8004501D`<br />`-2147200995`|Name: **CustomActivityInvalid**<br />Message: `Invalid custom activity.`|
 |`0x8004F122`<br />`-2147159774`|Name: **CustomActivityMustHaveOfflineAvailability**<br />Message: `A custom entity defined as an activity must have Offline Availability.`|
 |`0x80048841`<br />`-2147186623`|Name: **CustomApiNotFound**<br />Message: `CustomApi with unique name {0} not found.`|
+|`0x80048844`<br />`-2147186620`|Name: **CustomApiNotFoundForSdkMessage**<br />Message: `CustomApi not found for sdk message with guid {0}.`|
 |`0x80048843`<br />`-2147186621`|Name: **CustomApiNotFoundWithGuid**<br />Message: `CustomApi with guid {0} not found.`|
 |`0x80160019`<br />`-2146041831`|Name: **CustomControlDescriptionMissingForControl**<br />Message: `There needs to be a one-to-one mapping between the control and its description No matching ControlDescription found for the custom control {0}. More Details:{1}`|
 |`0x80160004`<br />`-2146041852`|Name: **CustomControlNotAllowedInFooter**<br />Message: `Custom controls are not allowed in footer. More Details:{0}`|
@@ -1077,18 +1098,21 @@
 |`0x80071156`<br />`-2147020458`|Name: **CyclicDependency**<br />Message: `Cyclic component dependency detected. Please check the exception for more details. Fix the invalid dependencies and try the operation one more time. Detaisl: {0}`|
 |`0x8004417F`<br />`-2147204737`|Name: **CyclicReferencesNotSupported**<br />Message: `The input contains a cyclic reference, which is not supported.`|
 |`0x80072401`<br />`-2147015679`|Name: **DatabaseCallsBlockedFailure**<br />Message: `This invocation may lead to calls to Database which is not allowed.`|
+|`0x80048564`<br />`-2147187356`|Name: **DatabaseUnavailable**<br />Message: `Database is currently unavailable. This operation should be retried later. Database connection exception message: {0}`|
 |`0x8004B065`<br />`-2147176347`|Name: **DatacenterNotAvailable**<br />Message: `This datacenter endpoint is not currently available for this organization.`|
 |`0x80040345`<br />`-2147220667`|Name: **DataColumnsNumberMismatch**<br />Message: `The number of fields differs from the number of column headings.`|
-|`0x80048744`<br />`-2147186876`|Name: **DataEngineComputedColumnQueryThrottling**<br />Message: `This query cannot be executed because it conflicts with Query Throttling; the query uses a computed column in a filter condition, which will cause the query to be throttled more aggressively. Please refer to this document: https://go.microsoft.com/fwlink/?linkid=2162952`|
+|`0x80048744`<br />`-2147186876`|Name: **DataEngineComputedColumnQueryThrottling**<br />Message: `This query is throttled as it negatively impacts the database health; the query uses a computed column in a filter condition, which will cause the query to be throttled more aggressively. Please refer to this document: https://go.microsoft.com/fwlink/?linkid=2162952`|
 |`0x80048589`<br />`-2147187319`|Name: **DataEngineCreateIndexCannotQueue**<br />Message: `The adhoc request already exists`|
 |`0x80048588`<br />`-2147187320`|Name: **DataEngineCreateIndexMetadataAlreadyExists**<br />Message: `The requested index already Exists in Index Metadata. The index will be created during the nightly job.`|
 |`0x80048590`<br />`-2147187312`|Name: **DataEngineCreateIndexSqlIndexAlreadyExists**<br />Message: `The Index or a super-set index already exists in sql.`|
 |`0x80048586`<br />`-2147187322`|Name: **DataEngineIndexMGMTApisForbidden**<br />Message: `Forbidden: Invalid User for endpoint`|
 |`0x80048587`<br />`-2147187321`|Name: **DataEngineIndexMGMTApisInvalidInput**<br />Message: `Input Invalid: {0}`|
-|`0x80048644`<br />`-2147187132`|Name: **DataEngineLeadingWildcardQueryThrottling**<br />Message: `This query cannot be executed because it conflicts with Query Throttling; the query uses a leading wildcard value in a filter condition, which will cause the query to be throttled more aggressively. Please refer to this document: https://go.microsoft.com/fwlink/?linkid=2162952`|
+|`0x80048644`<br />`-2147187132`|Name: **DataEngineLeadingWildcardQueryThrottling**<br />Message: `This query is throttled as it negatively impacts the database health; the query uses a leading wildcard value in a filter condition, which will cause the query to be throttled more aggressively. Please refer to this document: https://go.microsoft.com/fwlink/?linkid=2162952`|
+|`0x80048745`<br />`-2147186875`|Name: **DataEnginePerformanceValidationIssuesQueryThrottling**<br />Message: `This query is throttled as it negatively impacts the database health; the query has performance validation issues ({0}), which will cause the query to be throttled more aggressively. Please refer to this document: https://go.microsoft.com/fwlink/?linkid=2162952`|
 |`0x80049544`<br />`-2147183292`|Name: **DataEngineQueryBlocking**<br />Message: `This query cannot be executed because it was blocked by the platform. Please refer to this document: https://go.microsoft.com/fwlink/?linkid=2162952`|
-|`0x80048544`<br />`-2147187388`|Name: **DataEngineQueryThrottling**<br />Message: `This query cannot be executed because it conflicts with Query Throttling. Please refer to this document: https://go.microsoft.com/fwlink/?linkid=2162952`|
-|`0x80050544`<br />`-2147154620`|Name: **DataEngineSerializeQueryThrottling**<br />Message: `This query cannot be executed because it conflicts with Query Throttling. The query is restricted to limited parallel executions. Please refer to this document: https://go.microsoft.com/fwlink/?linkid=2162952`|
+|`0x80049545`<br />`-2147183291`|Name: **DataEngineQueryBlockingQDS**<br />Message: `This query cannot be executed because it was blocked by the platform. This was blocked due to query complexity leading to timeouts. Please refer to this document: https://go.microsoft.com/fwlink/?linkid=2162952`|
+|`0x80048544`<br />`-2147187388`|Name: **DataEngineQueryThrottling**<br />Message: `This query is throttled as it negatively impacts the database health. Please refer to this document: https://go.microsoft.com/fwlink/?linkid=2162952`|
+|`0x80050544`<br />`-2147154620`|Name: **DataEngineSerializeQueryThrottling**<br />Message: `This query is throttled as it negatively impacts the database health. The query is restricted to limited parallel executions. Please refer to this document: https://go.microsoft.com/fwlink/?linkid=2162952`|
 |`0x80160021`<br />`-2146041823`|Name: **DataFieldNameIsMissing**<br />Message: `Required attribute \datafieldname\ is missing for control. More Details:{0}`|
 |`0x8006041b`<br />`-2147089381`|Name: **DatafieldNameShouldBeNull**<br />Message: `ActionStep {0} references invalid DataFieldName {1}.`|
 |`0x80160022`<br />`-2146041822`|Name: **DataFieldSpecifiedIsNotALookup**<br />Message: `The datafieldname attribute {0} is not of type lookup. More Details:{1}`|
@@ -1116,6 +1140,8 @@
 |`0x8004025a`<br />`-2147220902`|Name: **DateTimeFormatFailed**<br />Message: `Failed to produce a formatted datetime value.`|
 |`0x80048559`<br />`-2147187367`|Name: **DBConnectionOpenCircuitBreakerThrottling**<br />Message: `The connection to the database could not be opened due to a high number of recent connection failures. Please try again later.`|
 |`0x80048551`<br />`-2147187375`|Name: **DBConnectionOrTransactionInitializationFailed**<br />Message: `Initialization of the database connection or transaction failed. This operation should be retried later. Initialization exception message: {0}`|
+|`0x80048562`<br />`-2147187358`|Name: **DBQueryFailedDueToClosedTransaction**<br />Message: `Cannot continue SQL query execution in a disposed transaction; the transaction may have been disposed after a Sandbox plug-in timeout. This operation should be retried later. Original exception: {0}`|
+|`0x80048563`<br />`-2147187357`|Name: **DBSessionKilledByEscort**<br />Message: `The database session was disconnected; this may be because a schema customization request is currently being ran in this environment. Please try again after the schema customization request is completed. Schema customization should be done outside of working hours if possible. Original exception: {0}`|
 |`0x80048561`<br />`-2147187359`|Name: **DBTransactionFailedToStart**<br />Message: `The database transaction failed to start due to an internal server error. Please retry the operation. If you continue to encounter this error, please contact Support.`|
 |`0x80048553`<br />`-2147187373`|Name: **DBUpgradeCauseTimeout**<br />Message: `The operation timed out because the database is currently being upgraded. Please try again after the database upgrade is complete.`|
 |`0x8009050B`<br />`-2146892533`|Name: **DeactivateEntityKeyOnlyForActiveIndexes**<br />Message: `Deactivate entity key is only supported for Active EntityKey.`|
@@ -1136,7 +1162,8 @@
 |`0x80090910`<br />`-2146891504`|Name: **DelegatedAuthorizationTeamNotFound**<br />Message: `Matching delegated authorization team not found for delegated authorization '{0}'.`|
 |`0x80097208`<br />`-2146864632`|Name: **DelegatedTeamMembershipNotAllowed**<br />Message: `Team '{0}' is associated to a delegated authorization and cannot have members.`|
 |`0x8004501A`<br />`-2147200998`|Name: **DeleteActiveWorkflowTemplateDependency**<br />Message: `Cannot delete workflow dependency from a published workflow template .`|
-|`0x80049950`<br />`-2147182256`|Name: **DeletedItemRefMarkedInvalid**<br />Message: `Deleted item ref '{0}' has been marked invalid for restore. This entity cannot be restored. `|
+|`0x80049950`<br />`-2147182256`|Name: **DeletedItemRefMarkedInvalid**<br />Message: `Deleted item ref '{0}' has been marked invalid for restore. This entity cannot be restored.`|
+|`0x80097262`<br />`-2146864542`|Name: **DeleteElasticTableDataError**<br />Message: `DeleteElasticTableData failed with Status code : '{0}'`|
 |`0x80045006`<br />`-2147201018`|Name: **DeletePublishedWorkflowDefinitionWorkflowDependency**<br />Message: `Cannot delete a workflow dependency for a published workflow definition.`|
 |`0x80045004`<br />`-2147201020`|Name: **DeleteWorkflowActivation**<br />Message: `Cannot delete a workflow activation.`|
 |`0x80045005`<br />`-2147201019`|Name: **DeleteWorkflowActivationWorkflowDependency**<br />Message: `Cannot delete a workflow dependency associated with a workflow activation.`|
@@ -1182,6 +1209,8 @@
 |`0x80043b02`<br />`-2147206398`|Name: **DiscountRangeOverlap**<br />Message: `The new quantities overlap the range covered by existing quantities.`|
 |`0x80048cf8`<br />`-2147185416`|Name: **DiscountTypeAndPriceLevelCurrencyNotEqual**<br />Message: `The currency of the discount needs to match the currency of the price list for discount type amount.`|
 |`0x80050124`<br />`-2147155676`|Name: **DiskSpaceNotEnough**<br />Message: `There is not enough space in the Temp Folder.`|
+|`0x80040c06`<br />`-2147218426`|Name: **DistinctClauseUnsupportedForMultiPartitionQuery**<br />Message: `Distinct clause is not supported for multi-partition query.`|
+|`0x80040c0c`<br />`-2147218420`|Name: **DistinctWithGroupByClauseUnsupportedForMultiPartitionQuery**<br />Message: `Distinct with group by clause is not supported for multi-partition query.`|
 |`0x80072531`<br />`-2147015375`|Name: **DistinctWithImageAttributeError**<br />Message: `Distinct is not allowed when image attributes are selected.`|
 |`0x80048453`<br />`-2147187629`|Name: **DistributeListAssociatedVary**<br />Message: `This campaign activity cannot be distributed. Mail merge activities can be done only on marketing lists that are all the same record type. For this campaign activity, remove marketing lists so that the remaining ones are the same record type, and then try again.`|
 |`0x80048454`<br />`-2147187628`|Name: **DistributeNoListAssociated**<br />Message: `This campaign activity cannot be distributed. No marketing lists are associated with it. Add at least one marketing list and try again.`|
@@ -1352,8 +1381,8 @@
 |`0x80060421`<br />`-2147089375`|Name: **EntityIsNotBusinessProcessFlowEnabled**<br />Message: `The IsBusinessProcessEnabled property of the {0} entity is false.`|
 |`0x80047008`<br />`-2147192824`|Name: **EntityIsNotCustomizable**<br />Message: `The specified entity is not customizable`|
 |`0x8006111B`<br />`-2147086053`|Name: **EntityIsNotEnabledForExternalParty**<br />Message: `You can't create/update an external party item associated to an entity that is not enabled for external party.`|
-|`0x8004F6A2`<br />`-2147158366`|Name: **EntityIsNotEnabledForFollow**<br />Message: `This entity is not enabled to be followed. `|
-|`0x8004F6A1`<br />`-2147158367`|Name: **EntityIsNotEnabledForFollowUser**<br />Message: `This entity is not enabled to be followed. `|
+|`0x8004F6A2`<br />`-2147158366`|Name: **EntityIsNotEnabledForFollow**<br />Message: `This entity is not enabled to be followed.`|
+|`0x8004F6A1`<br />`-2147158367`|Name: **EntityIsNotEnabledForFollowUser**<br />Message: `This entity is not enabled to be followed.`|
 |`0x80043b1e`<br />`-2147206370`|Name: **EntityIsUnlocked**<br />Message: `This entity is already unlocked.`|
 |`0x80090110`<br />`-2146893552`|Name: **EntityKeyAttributeNotValidForCreate**<br />Message: `Attribute of an entity key must be valid for create. Atribute Name = '{0}' Id = '{1}'`|
 |`0x80090112`<br />`-2146893550`|Name: **EntityKeyAttributeNotValidForCreateAndUpdate**<br />Message: `Attribute of an entity key must be valid for create and update. Atribute Name = '{0}' Id = '{1}'`|
@@ -1370,7 +1399,7 @@
 |`0x80040387`<br />`-2147220601`|Name: **EntityLoopBeingCreated**<br />Message: `Creating this parental association would create a loop in this entity hierarchy.`|
 |`0x80040386`<br />`-2147220602`|Name: **EntityLoopExists**<br />Message: `Loop exists in this entity hierarchy.`|
 |`0x8005F238`<br />`-2147093960`|Name: **EntityMetadataSyncFailed**<br />Message: `There were problems with the server configurations.  There was a problem with the server configuration changes.  We are unable to load the application, please contact your Dynamics 365 administrator.`|
-|`0x8005F239`<br />`-2147093959`|Name: **EntityMetadataSyncFailedWithContinue**<br />Message: `There were difficulties with the server configuration changes.  You can continue to use the app with the older configuration, however, you may experience problems including errors when saving.  Please contact your Dynamics 365 administrator. `|
+|`0x8005F239`<br />`-2147093959`|Name: **EntityMetadataSyncFailedWithContinue**<br />Message: `There were difficulties with the server configuration changes.  You can continue to use the app with the older configuration, however, you may experience problems including errors when saving.  Please contact your Dynamics 365 administrator.`|
 |`0x80048334`<br />`-2147187916`|Name: **EntityNotEnabledForAutoCreatedAccessTeams**<br />Message: `The entity with logicalname {0} and ObjectTypeCode {1} is not enabled for auto created access teams.`|
 |`0x8004E00C`<br />`-2147164148`|Name: **EntityNotEnabledForCharts**<br />Message: `Charts are not enabled on the specified primary entity type code: {0}.`|
 |`0x8005F200`<br />`-2147094016`|Name: **EntityNotEnabledForThisDevice**<br />Message: `Entity not enabled to be viewed in this device`|
@@ -1502,7 +1531,7 @@
 |`0x80072012`<br />`-2147016686`|Name: **ExportKeyAttributeInvalidReferencesNonSolutionAware**<br />Message: `Export key attribute {0} for component {1} is invalid. Attributes defined for export EntityKey must not have a lookup to non-solution aware components`|
 |`0x800608AB`<br />`-2147088213`|Name: **ExportKeyAttributeNotBeginWithLetterOrNonAlphaNumericCharacters**<br />Message: `Export key attribute {0} for component {1} must begin with a letter and only consist of alpha-numeric and _.{}! characters.`|
 |`0x800608AC`<br />`-2147088212`|Name: **ExportKeyAttributeValuesIncorrectNumber**<br />Message: `Incorrect number of export key attribute values for export key {0} for entity {1}.`|
-|`0x80072013`<br />`-2147016685`|Name: **ExportKeyInvalidCreate**<br />Message: `It is invalid to create component {0} with the same export key value(s) as an existing component. Please change the key. The current value(s) are {1}`|
+|`0x80072013`<br />`-2147016685`|Name: **ExportKeyInvalidCreate**<br />Message: `Cannot complete the creation of {0} because it violates a database constraint. The violation happens on the key {1}. Please delete the existing record or use update.`|
 |`0x800608A8`<br />`-2147088216`|Name: **ExportKeyNotSupported**<br />Message: `Export keys are not supported for entity {0} because export keys are unsupported`|
 |`0x800608AA`<br />`-2147088214`|Name: **ExportKeyNotSupportedForMaxAttributes**<br />Message: `Export key cannot be created for entity {0} because the key exceeds {1} attributes`|
 |`0x800608A7`<br />`-2147088217`|Name: **ExportKeyNotSupportedForNonCustomizableComponents**<br />Message: `Export keys are not supported for entity {0} because the entity is not customizable`|
@@ -1572,12 +1601,13 @@
 |`0x8009724D`<br />`-2146864563`|Name: **FilterOnSecuredAttributeCallerCantReadNotSupportedForElasticTables**<br />Message: `Caller does not have read permission on secured attribute ('{0}'). Filtering on this attribute without permission is not supported for Elastic Tables.`|
 |`0x80060443`<br />`-2147089341`|Name: **FinalMergedEntityIsNull**<br />Message: `Error creating or updating Business Process: final merged entity cannot be null.`|
 |`0x80090300`<br />`-2146893056`|Name: **FinanceAndOperationsVirtualEntityInvalidDataSource**<br />Message: `Unable to establish connection using data source: '{0}'. Failed to sync entity metadata. Ensure the data source is configured properly.`|
+|`0x80090318`<br />`-2146893032`|Name: **FinanceAndOperationsVirtualEntityInvalidDataSourceV2**<br />Message: `Unable to establish connection using data source: '{0}', Error: '{1}' Ensure the data source is configured properly.`|
 |`0x80090301`<br />`-2146893055`|Name: **FinanceAndOperationsVirtualEntityInvalidEntities**<br />Message: `Unable to sync metadata for entities: '{0}'. Ensure the entities are available in data source: '{1}'.`|
 |`0x80090302`<br />`-2146893054`|Name: **FinanceAndOperationsVirtualEntitySyncError**<br />Message: `Failed to sync entity metadata for entity '{0}'. Exception details: {1}.`|
-|`0x80097501`<br />`-2146863871`|Name: **FinOpsCallBackException**<br />Message: ` Finance and Operations returned an exception, Error Code "{0}".`|
-|`0x80097504`<br />`-2146863868`|Name: **FinOpsGrpcChannelGenericException**<br />Message: ` An error has occured when communicating with Finance And Operations.`|
-|`0x80097503`<br />`-2146863869`|Name: **FinOpsGrpcChannelRpcException**<br />Message: ` An error has occured when communicating with Finance And Operations. Error Detail- {0}.`|
-|`0x80097502`<br />`-2146863870`|Name: **FinOpsGrpcChannelTimeoutException**<br />Message: ` Timeout error has occured when communicating with Finance And Operations. Error Detail- {0}.`|
+|`0x80097501`<br />`-2146863871`|Name: **FinOpsCallBackException**<br />Message: `Finance and Operations returned an exception, Error Code "{0}".`|
+|`0x80097504`<br />`-2146863868`|Name: **FinOpsGrpcChannelGenericException**<br />Message: `An error has occured when communicating with Finance And Operations.`|
+|`0x80097503`<br />`-2146863869`|Name: **FinOpsGrpcChannelRpcException**<br />Message: `An error has occured when communicating with Finance And Operations. Error Detail- {0}.`|
+|`0x80097502`<br />`-2146863870`|Name: **FinOpsGrpcChannelTimeoutException**<br />Message: `Timeout error has occured when communicating with Finance And Operations. Error Detail- {0}.`|
 |`0x80060456`<br />`-2147089322`|Name: **FirstStageIdInTraversedPathDoesNotMatchFirstStageIdInBusinessProcess**<br />Message: `First Stage ID in traversed path ‘{0}’ does not match first Stage ID in Business Process ‘{1}’. Please contact your system administrator.`|
 |`0x80044903`<br />`-2147202813`|Name: **FiscalPeriodGoalMissingInfo**<br />Message: `For a goal of fiscal period type, the fiscal period attribute must be set.`|
 |`0x80043809`<br />`-2147207159`|Name: **FiscalSettingsAlreadyUpdated**<br />Message: `Fiscal settings have already been updated. They can be updated only once.`|
@@ -1667,6 +1697,7 @@
 |`0x8009000D`<br />`-2146893811`|Name: **ImageAttributeNotSupportedFullImage**<br />Message: `Image attribute {0} of entity {1} does not support storing full image.`|
 |`0x80090430`<br />`-2146892752`|Name: **ImageFormatNotSupported**<br />Message: `Image format '{0}' is not supported for image attribute '{1}' of entity '{2}'.`|
 |`0x8009000E`<br />`-2146893810`|Name: **ImageInvalidMaxSizeInKB**<br />Message: `Invalid MaxSizeInKB for image attribute {0} of entity {1}. Valid size should be between [{2} - {3}] KB`|
+|`0x80072045`<br />`-2147016635`|Name: **ImportAbortedDueToEcsChange**<br />Message: `SupportUpgradeIsolationLevel become false during solution import, abort import to prevent data corruption.`|
 |`0x8004800D`<br />`-2147188723`|Name: **ImportArticleTemplateError**<br />Message: `There was an error in parsing the article templates in Import Xml`|
 |`0x80048062`<br />`-2147188638`|Name: **ImportAttributeNameError**<br />Message: `Invalid name for attribute {0}.  Custom attribute names must start with a valid customization prefix. The prefix for a solution component should match the prefix that is specified for the publisher of the solution.`|
 |`0x800608F3`<br />`-2147088141`|Name: **ImportChannelPropertyGroupError**<br />Message: `An error occurred while importing Channel Property Group.`|
@@ -1677,7 +1708,7 @@
 |`0x80048060`<br />`-2147188640`|Name: **ImportCustomizationsBadZipFileError**<br />Message: `The solution file is invalid. The compressed file must contain the following files at its root: solution.xml, customizations.xml, and [Content_Types].xml. Customization files exported from previous versions of Microsoft Dynamics 365 are not supported.`|
 |`0x8004E308`<br />`-2147163384`|Name: **ImportDashboardDeletedError**<br />Message: `A dashboard with the same id is marked as deleted in the system. Please first publish the system form entity and import again.`|
 |`0x80048049`<br />`-2147188663`|Name: **ImportDefaultAsPackageError**<br />Message: `The package supplied for the default solution is trying to install it in managed mode. The default solution cannot be managed. In the XML for the default solution, set the Managed value back to "false" and try to import the solution again.`|
-|`0x80048034`<br />`-2147188684`|Name: **ImportDependencySolutionError**<br />Message: `{0} requires solutions that are not currently installed. Import the following solutions before Importing this one. {1} `|
+|`0x80048034`<br />`-2147188684`|Name: **ImportDependencySolutionError**<br />Message: `{0} requires solutions that are not currently installed. Import the following solutions before Importing this one. {1}`|
 |`0x8004810c`<br />`-2147188468`|Name: **ImportDuplicateEntity**<br />Message: `This import has failed because a different entity with the identical name, {0}, already exists in the target organization.`|
 |`0x8004800C`<br />`-2147188724`|Name: **ImportEmailTemplateError**<br />Message: `There was an error in parsing the email templates in Import Xml`|
 |`0x8004802B`<br />`-2147188693`|Name: **ImportEmailTemplateErrorMissingFile**<br />Message: `E-mail Template '{0}' import: The attachment '{1}' was not found in the import zip file.`|
@@ -1742,6 +1773,7 @@
 |`0x80048073`<br />`-2147188621`|Name: **ImportServiceEndpointError**<br />Message: `An error occurred while importing Service Endpoints.`|
 |`0x80048011`<br />`-2147188719`|Name: **ImportSiteMapError**<br />Message: `An error occurred while importing the Site Map.`|
 |`0x8004F868`<br />`-2147157912`|Name: **ImportSlaError**<br />Message: `An error occurred while importing SLAs.`|
+|`0x80072048`<br />`-2147016632`|Name: **ImportSolutionAfterAppUpdatesOperationFailed**<br />Message: `Solution import failed due to failure in installing required dependencies. Please see addition details in Solution history record of this solution import operation.`|
 |`0x8004804C`<br />`-2147188660`|Name: **ImportSolutionBlockedByRunSafeInternalErrors**<br />Message: `An error occurred while trying to run solution checker enforcement on the importing solution. Try importing the solution again. If this problem persists, contact your system administrator.`|
 |`0x8004803D`<br />`-2147188675`|Name: **ImportSolutionBlockedByRunSafeIssues**<br />Message: `Solution is blocked from importing due to critical violations. Fix these violations, then retry the import.`|
 |`0x80048033`<br />`-2147188685`|Name: **ImportSolutionError**<br />Message: `An error occurred while importing a Solution.`|
@@ -1808,10 +1840,12 @@
 |`0x80048502`<br />`-2147187454`|Name: **IncorrectSingleFileMultipleEntityMap**<br />Message: `There should be two or more Entity Mappings defined when EntitiesPerFile in ImportMap is set to Multiple`|
 |`0x80048360`<br />`-2147187872`|Name: **IncorrectUserAzureState**<br />Message: `User with SystemUserId={0} and AzureActiveDirectoryObjectId={1} is present in Azure Active Directory with state {2}. AzureState can't be set to incorrect value={3}.`|
 |`0x80060991`<br />`-2147087983`|Name: **IncreasingDaysWillResetMobileOfflineData**<br />Message: `Increasing the number of days will cause a reset of mobile offline data and a resynchronization with mobile devices.`|
+|`0x80048d40`<br />`-2147185344`|Name: **IndexExceedsMaxLength**<br />Message: `The index entry of length for the index exceeds the maximum length. Please try removing some columns or reduce the number of columns in the table.`|
 |`0x8005E008`<br />`-2147098616`|Name: **IndexOutOfRange**<br />Message: `The index {0} is out of range for {1}. Number of elements present are {2}.`|
 |`0x80060895`<br />`-2147088235`|Name: **IndexSizeConstraintViolated**<br />Message: `Index size exceeded the size limit of {0} bytes. The key is too large. Try removing some columns or making the strings in string columns shorter.`|
 |`0x8004F800`<br />`-2147158016`|Name: **InitializeErrorNoReadOnSource**<br />Message: `The operation could not be completed because you donot have read access on some of the fields in {0} record.`|
 |`0x80072555`<br />`-2147015339`|Name: **InitializeFileRequestFailure**<br />Message: `Error occured during initialize file request. (RecordId: {0}, EntityName: {1}) Details:{2}`|
+|`0x8004E028`<br />`-2147164120`|Name: **InMemoryPaginationRecordLimitExceeded**<br />Message: `In memory pagination limit of {0} exceeded. Cannot perform this operation.`|
 |`0x80050134`<br />`-2147155660`|Name: **InputAppModuleAssociatedWithDifferentProfile**<br />Message: `AppModule ids are not associated with same profile id.`|
 |`0x80050133`<br />`-2147155661`|Name: **InputAppModuleNotAssociatedWithValidProfile**<br />Message: `Input app is not associated with valid profile id.`|
 |`0x80060378`<br />`-2147089544`|Name: **InputParameterFieldIncorrect**<br />Message: `Input parameter “{0}” does not match the input parameter field configured. Contact your system administrator to check the configuration metadata if the error persists.`|
@@ -1879,6 +1913,7 @@
 |`0x80048dfd`<br />`-2147185155`|Name: **InvalidApproveFromDraftArticle**<br />Message: `You are trying to approve an article that has a status of draft. You can only approve an article with the status of unapproved.`|
 |`0x80048dfb`<br />`-2147185157`|Name: **InvalidApproveFromPublishedArticle**<br />Message: `You are trying to approve an article that has a status of published. You can only approve an article with the status of unapproved.`|
 |`0x80040203`<br />`-2147220989`|Name: **InvalidArgument**<br />Message: `Invalid argument.`|
+|`0x8004849B`<br />`-2147187557`|Name: **InvalidArgumentException**<br />Message: `Invalid Argument, Parameter Name: {0}, Message: {1}`|
 |`0x800404fb`<br />`-2147220229`|Name: **InvalidArticleState**<br />Message: `The article state is undefined`|
 |`0x800404fc`<br />`-2147220228`|Name: **InvalidArticleStateTransition**<br />Message: `This article state transition is invalid because of the current state of the article`|
 |`0x800404fd`<br />`-2147220227`|Name: **InvalidArticleTemplateState**<br />Message: `The article template state is undefined`|
@@ -1958,6 +1993,7 @@
 |`0x80060993`<br />`-2147087981`|Name: **InvalidDataFiltersForUnownedEntities**<br />Message: `You can’t set the All Record or Other Data filters for unowned entities.`|
 |`0x80040356`<br />`-2147220650`|Name: **InvalidDataFormat**<br />Message: `The source data is not in the required format`|
 |`0x80090206`<br />`-2146893306`|Name: **InvalidDataLakeEndpoint**<br />Message: `Datalake container endpoint is not a valid URL and cannot be returned.`|
+|`0x80096004`<br />`-2146869244`|Name: **InvalidDataProcessingModuleExecuteRequest**<br />Message: `The DataProcessingModuleExecuteRequest payload is invalid. Details: {0}.`|
 |`0x80044826`<br />`-2147203034`|Name: **InvalidDataSourceEndPoint**<br />Message: `Invalid URI: A fully qualified URI without a query string must be provided.`|
 |`0x80090411`<br />`-2146892783`|Name: **InvalidDataTypeForCustomAttribute**<br />Message: `"Cannot create custom attribute '{0}' of Entity '{1}' because the type '{2}' is not valid for custom attribute."`|
 |`0x80090105`<br />`-2146893563`|Name: **InvalidDataTypeMemberOperation**<br />Message: `Unable to perform operation {0} on data type member with Id = '{1}', MemberName = '{2}', DisplayName = '{3}', and ParentTypeId = '{4}'.`|
@@ -2028,6 +2064,7 @@
 |`0x80040396`<br />`-2147220586`|Name: **InvalidFileBadCharacters**<br />Message: `The file could not be uploaded because it contains invalid character(s)`|
 |`0x80090000`<br />`-2146893824`|Name: **InvalidFileRangeRequested**<br />Message: `Chunk range used in this call is either not valid or it is bigger than allowed {0} MB.`|
 |`0x80090015`<br />`-2146893803`|Name: **InvalidFileRangeRequestedSqlStorage**<br />Message: `{0} in multiple chunks is not supported for the files stored in the database.`|
+|`0x80072524`<br />`-2147015388`|Name: **InvalidFileRecordsFound**<br />Message: `Invalid file records found for requested {0}`|
 |`0x80090011`<br />`-2146893807`|Name: **InvalidFileSasUrl**<br />Message: `SAS url has either expired or is invalid.`|
 |`0x800608CC`<br />`-2147088180`|Name: **InvalidFileType**<br />Message: `Invalid File Type.`|
 |`0x8004E01E`<br />`-2147164130`|Name: **InvalidFilterCriteriaForVisualization**<br />Message: `The visualization cannot be rendered for the given filter criteria.`|
@@ -2299,7 +2336,7 @@
 |`0x80048511`<br />`-2147187439`|Name: **InvalidTransformationParameterEmptyCollection**<br />Message: `The transformation parameter: {0} has an invalid input value length: {1}. The parameter length cannot be an empty collection.`|
 |`0x80040382`<br />`-2147220606`|Name: **InvalidTransformationParameterMapping**<br />Message: `The transformation parameter mapping defined is invalid. Check that the target attribute name exists.`|
 |`0x8004037c`<br />`-2147220612`|Name: **InvalidTransformationParameterMappings**<br />Message: `One or more transformation parameter mappings are invalid or do not match the transformation parameter description.`|
-|`0x80048510`<br />`-2147187440`|Name: **InvalidTransformationParameterOutsideRange**<br />Message: `The transformation parameter: {0} has an invalid input value: {1}. The parameter is out of the permissible range: {2}. `|
+|`0x80048510`<br />`-2147187440`|Name: **InvalidTransformationParameterOutsideRange**<br />Message: `The transformation parameter: {0} has an invalid input value: {1}. The parameter is out of the permissible range: {2}.`|
 |`0x80048512`<br />`-2147187438`|Name: **InvalidTransformationParameterOutsideRangeGeneric**<br />Message: `One or more input transformation parameter values are outside the permissible range: {0}.`|
 |`0x80048507`<br />`-2147187449`|Name: **InvalidTransformationParametersGeneric**<br />Message: `The transformation parameter: {0} has an invalid input value: {1}. The parameter must be of type: {2}.`|
 |`0x80048508`<br />`-2147187448`|Name: **InvalidTransformationParameterString**<br />Message: `The transformation parameter: {0} has an invalid input value: {1}. The parameter must be a string that is not empty.`|
@@ -2312,6 +2349,7 @@
 |`0x80060386`<br />`-2147089530`|Name: **InvalidUniqueName**<br />Message: `Invalid unique name for action.`|
 |`0x80048dfc`<br />`-2147185156`|Name: **InvalidUnpublishFromDraftArticle**<br />Message: `You are trying to unpublish an article that has a status of draft. You can only unpublish an article with the status of published.`|
 |`0x80048dfe`<br />`-2147185154`|Name: **InvalidUnpublishFromUnapprovedArticle**<br />Message: `You are trying to unpublish an article that has a status of unapproved. You can only unpublish an article with the status of publish.`|
+|`0x8004846a`<br />`-2147187606`|Name: **InvalidUpdateFilterCondition**<br />Message: `Link filter in Update statement supports [Any] or [Not Any]. Additionally link condition attribute should not enable FLS. Invalid filter condition due to {0}.`|
 |`0x8004F012`<br />`-2147160046`|Name: **InvalidUpdateOnProtectedComponent**<br />Message: `You cannot update {0} {1}. Updates cannot be performed when {0} is managed.`|
 |`0x80048056`<br />`-2147188650`|Name: **InvalidUrlConsecutiveSlashes**<br />Message: `The Url contains consecutive slashes which is not allowed.`|
 |`0x80090800`<br />`-2146891776`|Name: **InvalidUrlForODataBindProperty**<br />Message: `Invalid url value '{0}' for lookup property '{1}'.`|
@@ -2403,6 +2441,7 @@
 |`0x8004A128`<br />`-2147180248`|Name: **KeyVaultForbiddenByConnection**<br />Message: `Access to Key Vault is blocked by network configuration. Please review your configuration to allow public access and configure firewall if needed. Refer https://learn.microsoft.com/en-us/power-platform/admin/online-requirements#ip-addresses-required`|
 |`0x8004A124`<br />`-2147180252`|Name: **KeyVaultForbiddenByFirewall**<br />Message: `Access to Key Vault is blocked by firewall restrictions. Please review your configuration to allow Power Platform access to the key vault. Refer https://learn.microsoft.com/en-us/power-platform/admin/online-requirements#ip-addresses-required.`|
 |`0x8004A125`<br />`-2147180251`|Name: **KeyVaultNameNotValid**<br />Message: `Key Vault name provided is not a valid name.`|
+|`0x8004A129`<br />`-2147180247`|Name: **KeyVaultPlexServiceUnavailable**<br />Message: `We're currently experiencing a delay in setting up the private connection. Please try again in a moment.`|
 |`0x8004A115`<br />`-2147180267`|Name: **KeyVaultPreAuthorizationValidationFailed**<br />Message: `Key Vault PreAuthorization Validation failed.`|
 |`0x8004A118`<br />`-2147180264`|Name: **KeyVaultReferencePublisherRestriction**<br />Message: `KeyVaultReference cannot be assigned to a component from different publisher.`|
 |`0x8004A127`<br />`-2147180249`|Name: **KeyVaultResourceGroupNotFound**<br />Message: `Key Vault resource group name is not found.`|
@@ -2421,7 +2460,7 @@
 |`0x8004F050`<br />`-2147159984`|Name: **LayerDesiredOrderInvalidXMLDetail**<br />Message: `The LayerDesiredOrder parameter contains an invalid XML schema. Check the property [{0}].`|
 |`0x8004F052`<br />`-2147159982`|Name: **LayerDesiredOrderNotAllowedOnPatch**<br />Message: `The LayerDesiredOrder parameter cannot be used when importing a Patch. The parameter can only be used while importing a solution.`|
 |`0x8004F048`<br />`-2147159992`|Name: **LayerDesiredOrderNotSamePublisher**<br />Message: `The solution [{0}] was used in the LayerDesiredOrder parameter, but its publisher [{1}] does not match the publisher of the solution being installed: [{2}]. This parameter can be used only by solutions from the same publisher.`|
-|`0x8004F065`<br />`-2147159963`|Name: **LayerDesiredOrderNotWhitelist**<br />Message: `The LayerDesiredOrder parameter is present in the import request of [{0}], but this solution is not allowed to use it. Solutions must be allow listed to use this feature.`|
+|`0x8004F065`<br />`-2147159963`|Name: **LayerDesiredOrderNotWhitelist**<br />Message: `The LayerDesiredOrder parameter is present in the import request of [{0}], but this solution is not allowed to use it. Solutions must be allow (white) listed to use this feature.`|
 |`0x8004F047`<br />`-2147159993`|Name: **LayerDesiredOrderPendingUpgrade**<br />Message: `The solution [{0}] used in LayerDesiredOrder parameter has a pending upgrade. Please complete its upgrade before retrying this operation.`|
 |`0x8004F056`<br />`-2147159978`|Name: **LayerDesiredOrderPublisherNotAllowed**<br />Message: `The publisher [{0}] is not allowed to use the LayerDesiredOrder parameter.`|
 |`0x8004F058`<br />`-2147159976`|Name: **LayerDesiredOrderRestrictedSolution**<br />Message: `The LayerDesiredOrder parameter cannot be used on [{0}].`|
@@ -2448,6 +2487,7 @@
 |`0x80090438`<br />`-2146892744`|Name: **LinkedAttributeOptionSetValueMismatch**<br />Message: `OptionSet value {2} is not found in linked attribute optionset for attribute {0} of entity {1}`|
 |`0x80071120`<br />`-2147020512`|Name: **LinkedEntitiesAreNotAllowed**<br />Message: `The filter contains a link-entity with an invalid link-type. The link-type must be "Any" or "Not Any".`|
 |`0x80071143`<br />`-2147020477`|Name: **LinkEntityCountExceeded**<br />Message: `The profile could not be published because one or more tables exceed the allowed number of relationships of {1}. Please reduce the number of relationships for the following table(s): {0}.`|
+|`0x80041d3a`<br />`-2147214022`|Name: **LinkEntityVirtualFilterNotPermitted**<br />Message: `RetrieveMultiple cannot accept LinkEntity which is virtual entity with filters defined outside of LinkEntity node. Move the filters inside.`|
 |`0x8004D239`<br />`-2147167687`|Name: **LiveAdminUnknownCommand**<br />Message: `Unknown administration command {0}`|
 |`0x8004D238`<br />`-2147167688`|Name: **LiveAdminUnknownObject**<br />Message: `Unknown administration target {0}`|
 |`0x8004B524`<br />`-2147175132`|Name: **LivePlatformEmailInvalidBody**<br />Message: `The "Body" parameter is blank or null`|
@@ -2462,6 +2502,7 @@
 |`0x80072454`<br />`-2147015596`|Name: **LocalDataSourceTimeOutError**<br />Message: `The operation timed out. Please try again.`|
 |`0x80072043`<br />`-2147016637`|Name: **LockdownOfUnmanagedSolutionImports**<br />Message: `This environment doesn't allow unmanaged customizations. This was a choice made by your admin, and certain actions won't be available or will be view only. Learn more: https://go.microsoft.com/fwlink/?linkid=2251006`|
 |`0x80072042`<br />`-2147016638`|Name: **LockdownOfUnmangedCustomization**<br />Message: `This environment doesn't allow unmanaged customizations. This was a choice made by your admin, and certain actions won't be available or will be view only. Learn more: https://go.microsoft.com/fwlink/?linkid=2251006`|
+|`0x80072046`<br />`-2147016634`|Name: **LockdownOfUnmangedCustomizationForClusteredEnvironments**<br />Message: `This clustered environment doesn't allow unmanaged customizations. This was a choice made by your admin, and certain actions won't be available or will be view only.`|
 |`0x8004F703`<br />`-2147158269`|Name: **LockStatusNotValidForDynamicList**<br />Message: `Lock Status cannot be specified for a dynamic list.`|
 |`0x800608D2`<br />`-2147088174`|Name: **LogoImageNodeDoesNotExist**<br />Message: `Logo Image node in organization cache theme data doesnot exist.`|
 |`0x80040372`<br />`-2147220622`|Name: **LongParseRow**<br />Message: `The row is too long to import`|
@@ -2532,7 +2573,8 @@
 |`0x8005E206`<br />`-2147098106`|Name: **MailboxHasOlderEmailProcessingDate**<br />Message: `The supplied Process Email From date is later than the current Process Email From date on one or more active mailboxes. This action is prevented because this would otherwise cause the system to stop processing the related mailboxes until the specified date threshold has been reached. You may create an additional Email Server Profile with the specified Process Email From date and associate the required mailboxes as needed.`|
 |`0x8006088C`<br />`-2147088244`|Name: **MailboxTrackingFolderMappingCannotBeUpdated**<br />Message: `The mailbox tracking folder mapping cannot be updated.`|
 |`0x8005E247`<br />`-2147098041`|Name: **MailboxUnsupportedEmailServerType**<br />Message: `Server-side synchronization for appointments, contacts, and tasks isn't supported for POP3 or SMTP server types. Select a supported email type or change the synchronization method for appointments, contacts, and tasks to None.`|
-|`0x80060383`<br />`-2147089533`|Name: **ManagedBpfDeletionInvalid**<br />Message: ` The business process flow is part of a managed solution and cannot be individually deleted. Uninstall the parent solution to remove the business process flow.`|
+|`0x80097303`<br />`-2146864381`|Name: **MalformODataAnnotationHeader**<br />Message: `Error identified on the 'odata.include-annotations' value inside the 'Prefer' header. Refer to the following link for more details: https://go.microsoft.com/fwlink/?linkid=2300109. See exception message for more details '{0}'.`|
+|`0x80060383`<br />`-2147089533`|Name: **ManagedBpfDeletionInvalid**<br />Message: `The business process flow is part of a managed solution and cannot be individually deleted. Uninstall the parent solution to remove the business process flow.`|
 |`0x8004A114`<br />`-2147180268`|Name: **ManagedIdentityCredentialSourceNotSupported**<br />Message: `The configured Credential Source for ManagedIdentity is not support`|
 |`0x8004A119`<br />`-2147180263`|Name: **ManagedIdentityPublisherRestriction**<br />Message: `ManagedIdentity cannot be assigned to a component from different publisher.`|
 |`0x80072457`<br />`-2147015593`|Name: **ManagedProcessDeletionError**<br />Message: `The process is part of a managed solution and cannot be individually deleted. Uninstall the parent solution to remove the process.`|
@@ -2549,6 +2591,7 @@
 |`0x8004F897`<br />`-2147157865`|Name: **MaxActiveSLAError**<br />Message: `You can’t activate this SLA because you’ve exceeded the maxiumum number of entities that can have active SLAs for your organization.`|
 |`0x8004F898`<br />`-2147157864`|Name: **MaxActiveSLAKPIError**<br />Message: `You can’t activate this SLA because you’ve exceeded the maxiumum number of SLA KPIs that are allowed per entity for your organization.`|
 |`0x8003F454`<br />`-2147224492`|Name: **MaxChildCasesLimitExceeded**<br />Message: `A Parent Case cannot have more than maximum child cases allowed. Contact your administrator for more details`|
+|`0x80040c09`<br />`-2147218423`|Name: **MaxColumnCountForMultiPartitionDistinctQueryExceededLimit**<br />Message: `The multi-partition query exceeds the maximum allowed column count for a distinct query. The maximum allowed column count is {0}, but the current query includes {1} columns.`|
 |`0x80071114`<br />`-2147020524`|Name: **MaxConditionsMobileOfflineFilters**<br />Message: `You can only define 3 Mobile offline Org  filter for each entity.`|
 |`0x80072608`<br />`-2147015160`|Name: **MaxCustomCodeFileSizeExceededForConnector**<br />Message: `Connector custom code file too large, size cannot exceed 1 MB.`|
 |`0x80072602`<br />`-2147015166`|Name: **MaxIconSizeExceededForConnector**<br />Message: `Connector icon file too large, size cannot exceed 1 MB.`|
@@ -2782,6 +2825,8 @@
 |`0x8004E123`<br />`-2147163869`|Name: **OccurrenceSkipsOverBackward**<br />Message: `Cannot reschedule an occurrence of the recurring appointment if it skips over an earlier occurrence of the same appointment.`|
 |`0x8004E122`<br />`-2147163870`|Name: **OccurrenceSkipsOverForward**<br />Message: `Cannot reschedule an occurrence of the recurring appointment if it skips over a later occurrence of the same appointment.`|
 |`0x8004E121`<br />`-2147163871`|Name: **OccurrenceTimeSpanTooBig**<br />Message: `Cannot perform the operation. An instance is outside of series effective expansion range.`|
+|`0x80040c0a`<br />`-2147218422`|Name: **ODataBatchChangeMultiplePartitionsNotSupported**<br />Message: `Request in OData $batch operations can't target more than one partition due to changeset transaction requirements. Requested partitions: '{0}'.`|
+|`0x80040c00`<br />`-2147218432`|Name: **ODataBatchChangeSetPartitionedRequestNotSupported**<br />Message: `Request '{0}' in OData $batch changesets is targeting a remote partition '{1}' instead of local. This is not supported. Please directly execute the $batch operation on targeted organization instead of routing through this one.`|
 |`0x80048d19`<br />`-2147185383`|Name: **ODataClientPayloadError**<br />Message: `Error identified in Payload provided by the user for Entity :'{0}', For more information on this error please follow this help link {2}  ---->  InnerException : {1}.`|
 |`0x8004B00C`<br />`-2147176436`|Name: **OfferingCategoryAndTokenNull**<br />Message: `Offer category and Billing Token are both missing, but at least one is required.`|
 |`0x8004B00D`<br />`-2147176435`|Name: **OfferingIdNotSupported**<br />Message: `This version does not support search for offering id.`|
@@ -2837,6 +2882,7 @@
 |`0x80094007`<br />`-2146877433`|Name: **OptionSetValuesNotFound**<br />Message: `Could not find OptionSet values for Table: '{0}', AttributeMetadataId: '{1}'.`|
 |`0x80048402`<br />`-2147187710`|Name: **OptionValuePrefixOutOfRange**<br />Message: `CustomizationOptionValuePrefix must be a number between {0} and {1}`|
 |`0x80048d16`<br />`-2147185386`|Name: **OrderByColumnsMustBeUnique**<br />Message: `A column has been specified more than once in the order by list. Columns in the order by list must be unique.`|
+|`0x80040c0d`<br />`-2147218419`|Name: **OrderByNotSubSequenceOfGroupByInMultiPartitionQuery**<br />Message: `Order by columns must be a subsequence of group by columns in multi-partition queries.`|
 |`0x8004804a`<br />`-2147188662`|Name: **OrganizationDataServiceDeprecatedError**<br />Message: `The Organization Data Service (OData v2.0 endpoint) has been removed. Please use the Dataverse Web API (OData v4.0) endpoint instead. See https://go.microsoft.com/fwlink/?linkid=2206384`|
 |`0x8004A104`<br />`-2147180284`|Name: **OrganizationDisabled**<br />Message: `The Dynamics 365 organization you are attempting to access is currently disabled.  Please contact your system administrator`|
 |`0x8004B044`<br />`-2147176380`|Name: **OrganizationMigrationUnderway**<br />Message: `Organization migration is already underway.`|
@@ -2845,6 +2891,7 @@
 |`0x8004B00F`<br />`-2147176433`|Name: **OrganizationTakenBySomeoneElse**<br />Message: `The organization {0} is already purchased by another customer.`|
 |`0x8004B00E`<br />`-2147176434`|Name: **OrganizationTakenByYou**<br />Message: `The organization {0} is already purchased by you.`|
 |`0x80044159`<br />`-2147204775`|Name: **OrganizationUIDeprecated**<br />Message: `The OrganizationUI entity is deprecated. It has been replaced by the SystemForm entity.`|
+|`0x80048517`<br />`-2147187433`|Name: **OrgDBOrgSettingOutOfRange**<br />Message: `Invalid Organization Setting passed in: {0}. Please make sure to input a value that falls within the acceptable range of '{1}' to '{2}'.`|
 |`0x8004B067`<br />`-2147176345`|Name: **OrgDoesNotExistInDiscoveryService**<br />Message: `Organization not found in customer's discovery service`|
 |`0x80090013`<br />`-2146893805`|Name: **OrgIdMismsatch**<br />Message: `Organization id does not match. Input: {0}, expected: {1}`|
 |`0x80044353`<br />`-2147204269`|Name: **OrgIdNotDetermined**<br />Message: `Error. The current organization ID couldn’t be determined`|
@@ -2870,7 +2917,8 @@
 |`0x80040361`<br />`-2147220639`|Name: **OwnerValueNotMapped**<br />Message: `The owner value is not mapped`|
 |`0x80097379`<br />`-2146864263`|Name: **PackageEntityNotFound**<br />Message: `Package entity is not found in org, failed to validate dynamics billing context of workflow.`|
 |`0x8005F21A`<br />`-2147093990`|Name: **PageNotFound**<br />Message: `Page not found. The record might not exist, or the link might be incorrect.`|
-|`0x80097505`<br />`-2146863867`|Name: **ParallelRequestsToFinOpsNotSupported**<br />Message: ` Concurrent sdk calls are not allowed. Please work with plugin owner to make sure multiple sdk calls in parallel are not made to avoid this error.`|
+|`0x80097505`<br />`-2146863867`|Name: **ParallelRequestsToFinOpsNotSupported**<br />Message: `Concurrent sdk calls are not allowed. Please work with plugin owner to make sure multiple sdk calls in parallel are not made to avoid this error.`|
+|`0x80048d41`<br />`-2147185343`|Name: **ParamNotValidDataType**<br />Message: `The supplied value is not a valid instance of data type. Check the source data for invalid values and update the correct data type.`|
 |`0x80041d23`<br />`-2147214045`|Name: **ParentBusinessDoesNotExist**<br />Message: `The parent business Id is invalid.`|
 |`0x8003F455`<br />`-2147224491`|Name: **ParentCaseNotAllowedAsAChildCase**<br />Message: `You can't add a parent case as a child case`|
 |`0x80044905`<br />`-2147202811`|Name: **ParentChildMetricIdDiffers**<br />Message: `The metricid of child goal should be same as the parent goal.`|
@@ -2892,6 +2940,7 @@
 |`0x80048540`<br />`-2147187392`|Name: **PatchMissingBase**<br />Message: `You can't import the patch ({0}) for the solution ({1}) because the solution isn't present. The operation has been canceled.`|
 |`0x8004F086`<br />`-2147159930`|Name: **PendingUpgradeExists**<br />Message: `This solution has a pending upgrade. Please complete the upgrade before proceeding`|
 |`0x80048cf1`<br />`-2147185423`|Name: **PercentageDiscountCannotHaveCurrency**<br />Message: `Currency cannot be set when discount type is percentage.`|
+|`0x80048575`<br />`-2147187339`|Name: **PerformanceValidationIssuesCauseTimeout**<br />Message: `The database operation timed out; this may be due to the query performance issues identified in a query executed on this request. Please optimize the query by addressing the following identified performance issues: {0}. Please reference this document for guidance: https://go.microsoft.com/fwlink/?linkid=2300520`|
 |`0x80050144`<br />`-2147155644`|Name: **PersistedCalcFieldNotValidForUpdate**<br />Message: `The Calculated Field {0} on entity {1} is persisted and not allowed to update.`|
 |`0x8004E309`<br />`-2147163383`|Name: **PersonalReportFound**<br />Message: `A system dashboard cannot contain personal reports.`|
 |`0x8004033f`<br />`-2147220673`|Name: **PickListMappingExistsForTargetValue**<br />Message: `This list value is mapped more than once. Remove any duplicate mappings, and then import this data map again.`|
@@ -2902,6 +2951,7 @@
 |`0x8004431A`<br />`-2147204326`|Name: **PicklistValueOutOfRange**<br />Message: `The picklist value is out of the range.`|
 |`0x80049949`<br />`-2147182263`|Name: **PicklistValueOutOfRangeRecycleBin**<br />Message: `Picklist value not valid, please add the invalid value back to the picklist before restoring record. See inner exception for details.`|
 |`0x8005F212`<br />`-2147093998`|Name: **PingFailureErrorCode**<br />Message: `The system couldn't reconnect with your {#Brand_CRM} server.`|
+|`0x8004419e`<br />`-2147204706`|Name: **PipelineCancellationRequested**<br />Message: `The request has been cancelled because it originated from a plugin that has already exceeded the 2 minute timeout limit.`|
 |`0x80097622`<br />`-2146863582`|Name: **PlatformNotSupported**<br />Message: `The specified call has encountered an PlatformNotSupportedException, Retrying the operation may succeed or you can specify a request header "x-ms-select-stable-service" to be directed to the stable endpoint.`|
 |`0x80072044`<br />`-2147016636`|Name: **PlatformSkuLockedForCustomization**<br />Message: `This is a platform environment and it only allows customizations from authorized Microsoft solutions.`|
 |`0x8004418f`<br />`-2147204721`|Name: **PluginAssemblyContentSizeExceeded**<br />Message: `"The assembly content size '{0} bytes' has exceeded the maximum value allowed for isolated plug-ins '{1} bytes'."`|
@@ -2924,7 +2974,7 @@
 |`0x80091007`<br />`-2146889721`|Name: **PluginSecureStoreTPSAssemblyNotRegistered**<br />Message: `Assembly is not registered in TPS`|
 |`0x80091009`<br />`-2146889719`|Name: **PluginSecureStoreTPSClient**<br />Message: `Unable to create TPS Client`|
 |`0x80091006`<br />`-2146889722`|Name: **PluginSecureStoreTPSKeyVaultUnconfigured**<br />Message: `KeyVaultURI was not configured for an Assembly in TPS`|
-|`0x80081118`<br />`-2146954984`|Name: **PluginTypeDisabled**<br />Message: `Plugin type {0} has been disabled. Please disable the steps registered on this plugin type. To re-enable plugin type, please contact Microsoft Dynamics 365 technical support.`|
+|`0x80081118`<br />`-2146954984`|Name: **PluginTypeDisabled**<br />Message: `Plugin type '{0}' has been disabled. Please disable the steps registered on this plugin type. To re-enable plugin type, please contact Microsoft Dynamics 365 technical support.`|
 |`0x8004417C`<br />`-2147204740`|Name: **PluginTypeMustBeUnique**<br />Message: `Multiple plug-in types from the same assembly and with the same typename are not allowed.`|
 |`0x80048116`<br />`-2147188458`|Name: **POAOperationConcurrentRequested**<br />Message: `More than one concurrent {0} requests detected for an Entity {1} and ObjectTypeCode {2}.`|
 |`0x80090428`<br />`-2146892760`|Name: **PolymorphicLookupNotSupportedInSolutionAwareEntity**<br />Message: `The entity '{0}' is solution aware and cannot include the polymorphic lookup.`|
@@ -2971,13 +3021,17 @@
 |`0x80060489`<br />`-2147089271`|Name: **PrimaryStageEntitynotSupplied**<br />Message: `Primary stage entity lookup value is null. Please provide value for attribute {0}.`|
 |`0x80097248`<br />`-2146864568`|Name: **PrincipalOwnsNonRelationalRecords**<br />Message: `Can't delete principal of type {0} and id {1} because they own a record of table {2} with id {3}. Reassign or delete the record and try again.`|
 |`0x80040231`<br />`-2147220943`|Name: **PrincipalPrivilegeDenied**<br />Message: `Target user or team does not hold required privileges.`|
+|`0x80041153`<br />`-2147217069`|Name: **PrivilegeChecker_CannotCreateRoleWithActiveRun**<br />Message: `Cannot create role using an active privilege checker run.`|
+|`0x80041152`<br />`-2147217070`|Name: **PrivilegeChecker_CannotStartAnotherPrivilegeChecker**<br />Message: `A Privilege Checker run is already active for the specified user {0}.`|
+|`0x80041151`<br />`-2147217071`|Name: **PrivilegeChecker_FeatureNotReady**<br />Message: `The Privilege Checker feature is not ready to be used yet.`|
+|`0x80041154`<br />`-2147217068`|Name: **PrivilegeChecker_OnlyUsersCanUse**<br />Message: `Only users can be traced for the privilege checker tool.`|
 |`0x80040276`<br />`-2147220874`|Name: **PrivilegeCreateIsDisabledForOrganization**<br />Message: `Privilege Create is disabled for organization.`|
-|`0x80040220`<br />`-2147220960`|Name: **PrivilegeDenied**<br />Message: `{5}{2}(Id = {3}) is missing {0} privilege on {1} entity(OTC={4}). Consider adding missing privilege to one of the principal (user/team) roles for the request to succeed.`|
+|`0x80040220`<br />`-2147220960`|Name: **PrivilegeDenied**<br />Message: `{5} {2}(Id = {3}) is missing {0} privilege on {1} entity(OTC={4}). Consider adding missing privilege to one of the principal (user/team) roles for the request to succeed.`|
 |`0x80045054`<br />`-2147200940`|Name: **ProcessActionDoesNotExist**<br />Message: `Process Action does not exist.`|
 |`0x80045053`<br />`-2147200941`|Name: **ProcessActionIsNotActive**<br />Message: `Process Action should be active to be used on Action Step.`|
 |`0x80060379`<br />`-2147089543`|Name: **ProcessActionNameIncorrect**<br />Message: `Process Action “{0}” does not match the name configured: “{1}”. Contact your system administrator to check the configuration metadata if the error persists.`|
 |`0x80045058`<br />`-2147200936`|Name: **ProcessActionWithInvalidInputOutputParam**<br />Message: `Process Action contains a parameter that is not supported. Name: {0}, type: {1}, direction: {2}.`|
-|`0x80045057`<br />`-2147200937`|Name: **ProcessActionWithInvalidInputParam**<br />Message: `Process Action contains a field in input parameter that is unsupported on Action Steps. Refer to {0} `|
+|`0x80045057`<br />`-2147200937`|Name: **ProcessActionWithInvalidInputParam**<br />Message: `Process Action contains a field in input parameter that is unsupported on Action Steps. Refer to {0}`|
 |`0x80045056`<br />`-2147200938`|Name: **ProcessActionWithInvalidOutputParam**<br />Message: `Process Action contains a field in output parameter that is unsupported on Action Steps. Refer to {0}.`|
 |`0x80060380`<br />`-2147089536`|Name: **ProcessActionWorkflowNotEnabledForOnDemand**<br />Message: `Process Action or Workflow must be enabled for on-demand execution to be available for action steps.`|
 |`0x80060372`<br />`-2147089550`|Name: **ProcessControlDoesNotExistOnForm**<br />Message: `Process Control does not exist on form`|
@@ -2988,7 +3042,7 @@
 |`0x80072553`<br />`-2147015341`|Name: **ProcessImageFailure**<br />Message: `Error occured when processing image. Reason: {0}`|
 |`0x80060370`<br />`-2147089552`|Name: **ProcessInstanceNotFound**<br />Message: `Supplied process instance {0} does not match any existing instance on this entity {1}`|
 |`0x80060398`<br />`-2147089512`|Name: **ProcessNameContainsInvalidCharacters**<br />Message: `The business process name contains invalid characters.`|
-|`0x80060418`<br />`-2147089384`|Name: **ProcessNameIsNullOrEmpty**<br />Message: `The business process flow name is NULL or empty. `|
+|`0x80060418`<br />`-2147089384`|Name: **ProcessNameIsNullOrEmpty**<br />Message: `The business process flow name is NULL or empty.`|
 |`0x80060461`<br />`-2147089311`|Name: **ProcessStageIdIsEmpty**<br />Message: `Validation error: Primary Stage ID cannot be empty.`|
 |`0x8004F995`<br />`-2147157611`|Name: **ProductCanOnlyBeUpdatedInDraft**<br />Message: `Product, product family and bundle can only be updated in draft state.`|
 |`0x80061006`<br />`-2147086330`|Name: **ProductCloneFailed**<br />Message: `You can't clone a child record of a retired product family.`|
@@ -3023,6 +3077,9 @@
 |`0x80061100`<br />`-2147086080`|Name: **ProfileRuleMissingRuleCriteria**<br />Message: `You can't activate this rule until you resolve any missing rule criteria information in the rule items.`|
 |`0x80061103`<br />`-2147086077`|Name: **ProfileRulePublishedByOwner**<br />Message: `Your rule can't be activated until the current active rule is deactivated. The active rule can only be deactivated by the rule owner.`|
 |`0x80061101`<br />`-2147086079`|Name: **ProfileRuleWorkflowAuthorGenericError**<br />Message: `An error occurred while authoring workflow. Please fix workflow definition and try again.`|
+|`0x80060569`<br />`-2147089047`|Name: **PromptFieldAdditionNotAllowed**<br />Message: `More than 5 columns of type Prompt filed are not allowed.`|
+|`0x80060567`<br />`-2147089049`|Name: **PromptFieldAIModelIDNotValid**<br />Message: `Provided AIModel Id as part of Formula defination {0} is not guid`|
+|`0x80060568`<br />`-2147089048`|Name: **PromptFieldDataTypeNotValid**<br />Message: `The {0} data type isn’t valid for the prompt field.`|
 |`0x80160045`<br />`-2146041787`|Name: **PropertyBoundToNonExistingAttribute**<br />Message: `Property {0} is bound to a non-existent attribute {1} in entity {2}. More Details:{3}`|
 |`0x80160051`<br />`-2146041775`|Name: **PropertyBoundToNonExistingAttributeInPrimaryAndRelatedEntitiesAndNotExistingAsFormParameter**<br />Message: `Property {0} is bound to a non-existent attribute {1} in current entity {2} or in related entity {3} and also not present as part of formParameters. More Details:{4}`|
 |`0x80160046`<br />`-2146041786`|Name: **PropertyBoundToNonExistingEntity**<br />Message: `Property {0} is bound to an attribute in non-existent entity. More Details:{1}`|
@@ -3053,6 +3110,7 @@
 |`0x80090490`<br />`-2146892656`|Name: **PSqlResultTypeNotSupported**<br />Message: `PSqlResultType {0} is not supported.`|
 |`0x80041217`<br />`-2147216873`|Name: **PSqlTableHintFormat**<br />Message: `Error in table hint format.`|
 |`0x80041203`<br />`-2147216893`|Name: **PSqlTableInvalidForReports**<br />Message: `Table is not available for reports.`|
+|`0x80041222`<br />`-2147216862`|Name: **PSqlTimeoutDueToComplexQuery**<br />Message: `The updated two minutes (2) timeout period elapsed prior to completion of the operation. Please avoid using "SELECT *", or NESTED FROMs and/or JOINs to execute the query with default five minutes (5) timeout.`|
 |`0x80041214`<br />`-2147216876`|Name: **PSqlUnsupportedColumnNameOrAliasInInputQuery**<br />Message: `Unsupported column name in the input query.`|
 |`0x80041207`<br />`-2147216889`|Name: **PSqlUnsupportedDataType**<br />Message: `Unsupported data type {0} for column {1}. Please remove the column from the query and retry.`|
 |`0x80041200`<br />`-2147216896`|Name: **PSqlUnsupportedStatement**<br />Message: `Unsupported SQL statement.`|
@@ -3084,6 +3142,7 @@
 |`0x8004111a`<br />`-2147217126`|Name: **QueryBuilderDeserializeInvalidAggregate**<br />Message: `An error occurred while processing Aggregates in Query`|
 |`0x80041119`<br />`-2147217127`|Name: **QueryBuilderDeserializeInvalidDescending**<br />Message: `The only valid values for descending attribute are 'true', 'false', '1', and '0'.`|
 |`0x80041115`<br />`-2147217131`|Name: **QueryBuilderDeserializeInvalidDistinct**<br />Message: `The only valid values for distinct attribute are 'true', 'false', '1', and '0'.`|
+|`0x80040c05`<br />`-2147218427`|Name: **QueryBuilderDeserializeInvalidEnableCrossPartition**<br />Message: `The only valid values for enable-crosspartition attribute are 'true', 'false', '1', and '0'.`|
 |`0x8004111b`<br />`-2147217125`|Name: **QueryBuilderDeserializeInvalidGetMinActiveRowVersion**<br />Message: `The only valid values for GetMinActiveRowVersion attribute are 'true', 'false', '1', and '0'.`|
 |`0x8004112E`<br />`-2147217106`|Name: **QueryBuilderDeserializeInvalidGroupBy**<br />Message: `The only valid values for groupby attribute are 'true', 'false', '1', and '0'.`|
 |`0x80041117`<br />`-2147217129`|Name: **QueryBuilderDeserializeInvalidLinkType**<br />Message: `The only valid values for link-type attribute are 'natural', 'inner','in','exists','matchfirstrowusingcrossapply' and 'outer'.`|
@@ -3182,9 +3241,12 @@
 |`0x8004E10B`<br />`-2147163893`|Name: **RecurringSeriesCompleted**<br />Message: `The series has invalid ExpansionStateCode.`|
 |`0x8004E113`<br />`-2147163885`|Name: **RecurringSeriesMasterIsLocked**<br />Message: `The recurring series master record is locked by some other process.`|
 |`0x80097578`<br />`-2146863752`|Name: **RecycleBinAlreadyEnabledForEntity**<br />Message: `RecycleBin is already enabled for entity.`|
+|`0x80099576`<br />`-2146855562`|Name: **RecycleBinCleanupDeletedRecordsDisabled**<br />Message: `RecycleBinCleanupDeletedRecords feature disabled by engineering team.`|
 |`0x80097579`<br />`-2146863751`|Name: **RecycleBinConfigChangeNeedsAdmin**<br />Message: `User with SystemUserId={0} is not an Administrator. Any configuration change in RecycleBin needs Administrator privileges for caller.`|
-|`0x80097576`<br />`-2146863754`|Name: **RecycleBinFeatureNotEnabled**<br />Message: `Recycle Bin feature is not available for this organization.`|
+|`0x80098576`<br />`-2146859658`|Name: **RecycleBinFeatureDisabledEngineering**<br />Message: `Recycle Bin feature is not available for this organization due to Recycle Bin feature disabled for the organization by engineering team.`|
+|`0x80097576`<br />`-2146863754`|Name: **RecycleBinFeatureNotEnabledLite**<br />Message: `Recycle Bin feature is not available for this organization due to it being a trial or default environment.`|
 |`0x80097577`<br />`-2146863753`|Name: **RecycleBinNotEnabledForOrg**<br />Message: `RecycleBin is not enabled on this organization.`|
+|`0x80097676`<br />`-2146863498`|Name: **RecycleBinSolutionNotAvailable**<br />Message: `Recycle Bin feature is not available for this organization due to Recycle Bin Solution not available please contact support.`|
 |`0x80049959`<br />`-2147182247`|Name: **RefCannotBeRestoredRecycleBinNotFound**<br />Message: `Entity with id '{0}' and logical name '{1}' does not exist. We cannot restore the reference '{2}' that must be restored as part of this Restore call. ValueToBeRestored: {3}, ReferencedEntityName: {4}, AttributeName: {5}`|
 |`0x80049969`<br />`-2147182231`|Name: **RefCannotBeRestoredRecycleBinNotNull**<br />Message: `Entity with id '{0}' and logical name '{1}' must have a null value for column '{2}' in order for Restore to be successful. ValueToBeRestored: {3}, ReferencedEntityName: {4}, AttributeName: {5}`|
 |`0x80048470`<br />`-2147187600`|Name: **RefEntityRelationshipRoleRequired**<br />Message: `The entity relationship role of the referencing entity is required when creating a new one-to-many entity relationship.`|
@@ -3227,7 +3289,7 @@
 |`0x80048469`<br />`-2147187607`|Name: **RelationshipRoleNodeNumberInvalid**<br />Message: `There must be two entity relationship role nodes when creating a new many-to-many entity relationship.`|
 |`0x80048835`<br />`-2147186635`|Name: **RelationshipSchemaNameConflictWithFieldNameOnReferencedEntity**<br />Message: `RelationshipName {0} conflict with attribute name on entity {1} (entityid={2}). Please use unique name for relationship.`|
 |`0x80090421`<br />`-2146892767`|Name: **RelationshipsMissingFromCreatePolymorphicLookupAttribute**<br />Message: `The OneToManyRelationships property must contain at least one relationship. Lookup attribute name '{0}', Relationships count '{1}'.`|
-|`0x8005F221`<br />`-2147093983`|Name: **RelatioshipAlreadyExists**<br />Message: `Selected Relationship {0} for entity already exists in profile under profile item association {1}. `|
+|`0x8005F221`<br />`-2147093983`|Name: **RelatioshipAlreadyExists**<br />Message: `Selected Relationship {0} for entity already exists in profile under profile item association {1}.`|
 |`0x800608B8`<br />`-2147088200`|Name: **ReloginRequiredForSharePoint**<br />Message: `Relogin required. To continue use SharePoint integration, you need to relogin.`|
 |`0x8004F075`<br />`-2147159947`|Name: **RemoveActiveCustomizationsFailedForEntity**<br />Message: `Entity '{0}' validation failed for property '{1}' which has value '{2}' on Active layer and value '{3}' on solution '{4}' layer. The values must match.`|
 |`0x8004F059`<br />`-2147159975`|Name: **RemoveActiveCustomizationsNotSupported**<br />Message: `RemoveActiveCustomizations is not supported for components of type {0}.`|
@@ -3270,6 +3332,7 @@
 |`0x80044302`<br />`-2147204350`|Name: **RequestIsNotAuthenticated**<br />Message: `Request is not authenticated.`|
 |`0x8009732B`<br />`-2146864341`|Name: **RequestIsNotValidCustomApi**<br />Message: `{0} is not a valid Custom API.`|
 |`0x8004418a`<br />`-2147204726`|Name: **RequestLengthTooLarge**<br />Message: `Request message length is too large.`|
+|`0x80040c0b`<br />`-2147218421`|Name: **RequestRequirePartitionId**<br />Message: `Entity {1} is a partitioned entity. {0} Request requires partition id to be provided.`|
 |`0x80081009`<br />`-2146955255`|Name: **RequiredBundleItemCannotBeUpdated**<br />Message: `You can't delete this bundle item because it's a required product in the bundle.`|
 |`0x80081008`<br />`-2146955256`|Name: **RequiredBundleProductCannotBeDeleted**<br />Message: `You can't delete this product record because it's a required product in a bundle.`|
 |`0x8004F029`<br />`-2147160023`|Name: **RequiredChildReportHasOtherParent**<br />Message: `A category option for the reports was not found.`|
@@ -3281,14 +3344,14 @@
 |`0x80160032`<br />`-2146041806`|Name: **RequiredPropertyDeclarationIsMissing**<br />Message: `Property {0} is required, but the declaration is missing. More Details:{1}`|
 |`0x8004F600`<br />`-2147158528`|Name: **RequireValidImportMapForUpdate**<br />Message: `The update operation cannot be completed because the import map used for the update is invalid.`|
 |`0x80005050`<br />`-2147463088`|Name: **RestoreJobInvalid**<br />Message: `Deleted item reference or bulk restore job not found for job id '{0}'`|
-|`0x80072533`<br />`-2147015373`|Name: **RestrictCustomPluginForVE**<br />Message: `Custom plugins are not allowed for Virtual Entity. `|
+|`0x80072533`<br />`-2147015373`|Name: **RestrictCustomPluginForVE**<br />Message: `Custom plugins are not allowed for Virtual Entity.`|
 |`0x8004F022`<br />`-2147160030`|Name: **RestrictedSolutionName**<br />Message: `The solution unique name '{0}' is restricted and can only be used by internal solutions.`|
 |`0x8004A121`<br />`-2147180255`|Name: **RestrictedToAccessCDSLiteNonOdataEndpoint**<br />Message: `The Application with Id:{appId} can only use Odata endpoint to access APIs of Dataverse for Teams organization.`|
 |`0x80044152`<br />`-2147204782`|Name: **RestrictInheritedRole**<br />Message: `Inherited roles cannot be modified.`|
 |`0x80097260`<br />`-2146864544`|Name: **RestrictNotSupportedDueToElasticTableInParentGraph**<br />Message: `Restrict configuration for delete is not supported as there is a cascade relationship between elastic table {0} and sql table {1}.`|
 |`0x80090303`<br />`-2146893053`|Name: **RestrictSynchronousCustomPluginForVECUDEvents**<br />Message: `Only Asynchronous plugin steps are allowed for virtual entity external events.`|
-|`0x80072535`<br />`-2147015371`|Name: **RestrictVEInBatch**<br />Message: `Write operation for Virtual Entity is not allowed in Batch request. `|
-|`0x80072534`<br />`-2147015372`|Name: **RestrictVEPluginOnNestedPipelineAtRunTime**<br />Message: `Custom plugin execution is not allowed in nested pipeline for Virtual Entity. `|
+|`0x80072535`<br />`-2147015371`|Name: **RestrictVEInBatch**<br />Message: `Write operation for Virtual Entity is not allowed in Batch request.`|
+|`0x80072534`<br />`-2147015372`|Name: **RestrictVEPluginOnNestedPipelineAtRunTime**<br />Message: `Custom plugin execution is not allowed in nested pipeline for Virtual Entity.`|
 |`0x80097250`<br />`-2146864560`|Name: **RetainNotSupportedForSQLAudits**<br />Message: `Retain is not supported for SQL Audits.`|
 |`0x80048d22`<br />`-2147185374`|Name: **RetentionDisabledOrg**<br />Message: `Your admin has disabled long term retention for this environment. Please contact your admin to enable an environment for long term retention.`|
 |`0x80048d28`<br />`-2147185368`|Name: **RetentionPolicyRescheduleError**<br />Message: `The parameter entered is invalid. Parameter name: {0}`|
@@ -3414,17 +3477,18 @@
 |`0x80043800`<br />`-2147207168`|Name: **SalesPeopleEmptySalesPerson**<br />Message: `Parent salesperson cannot be empty`|
 |`0x80043805`<br />`-2147207163`|Name: **SalesPeopleManagerNotAllowed**<br />Message: `Territory manager cannot belong to other territory`|
 |`0x80072007`<br />`-2147016697`|Name: **SameSolutionCircularDependenciesIdentified**<br />Message: `Circular dependencies were identified for this solution.`|
-|`0x80048840`<br />`-2147186624`|Name: **SampleDataIsNotUninstalled**<br />Message: `InitialSolutionSampleDataState is not Uninstalled. :{0} `|
+|`0x80048840`<br />`-2147186624`|Name: **SampleDataIsNotUninstalled**<br />Message: `InitialSolutionSampleDataState is not Uninstalled. :{0}`|
 |`0x80044171`<br />`-2147204751`|Name: **SandboxClientPluginTimeout**<br />Message: `The plug-in execution failed because the operation has timed-out at the Sandbox Client.`|
 |`0x8004418e`<br />`-2147204722`|Name: **SandboxHostNotAvailable**<br />Message: `The plug-in execution failed because no Sandbox Hosts are currently available. Please check that you have a Sandbox server configured and that it is running.`|
 |`0x80044172`<br />`-2147204750`|Name: **SandboxHostPluginTimeout**<br />Message: `The plug-in execution failed because the operation has timed-out at the Sandbox Host.`|
 |`0x80044194`<br />`-2147204716`|Name: **SandboxHostSubnetDelegationFailed**<br />Message: `The plug-in execution failed because your organization's subnet delegation configuration may be incorrect. To fix the configuration, contact your tenant administrator. Please refer to this document: https://go.microsoft.com/fwlink/?linkid=2195693`|
+|`0x8004029B`<br />`-2147220837`|Name: **SandboxMessageSizeExceeded**<br />Message: `"Message size exceeded when sending context to Sandbox. Message size: '{0}'Mb"`|
 |`0x80081115`<br />`-2146954987`|Name: **SandboxPluginDisabled**<br />Message: `Sandbox Plug-in execution is disabled.`|
 |`0x80044174`<br />`-2147204748`|Name: **SandboxSdkListenerStartFailed**<br />Message: `The plug-in execution failed because the Sandbox Client encountered an error during initialization.`|
 |`0x8004418d`<br />`-2147204723`|Name: **SandboxWorkerNotAvailable**<br />Message: `The plug-in execution failed because the Sandbox Worker process crashed. This is typically due to an error in the plug-in code. Please refer to this document: https://go.microsoft.com/fwlink/?linkid=2189390`|
 |`0x80081111`<br />`-2146954991`|Name: **SandboxWorkerPluginExecuteTimeout**<br />Message: `Didn’t receive a response from the {0} plug-in within the 2:20-minute limit.`|
 |`0x80044173`<br />`-2147204749`|Name: **SandboxWorkerPluginTimeout**<br />Message: `The plug-in execution failed because the operation has timed-out at the Sandbox Worker.`|
-|`0x80081116`<br />`-2146954986`|Name: **SandboxWorkerThrottleLimit**<br />Message: `Maximum processes allocated for plug-in business logic exceeded. Fatal errors in plug-ins for this environment have occurred {0} times in the last {1} minutes. Each error requires an additional process to recover. Processes for plug-ins are being recycled. All plug-ins for this environment will fail during this period. More information: https://go.microsoft.com/fwlink/?linkid=2038718 `|
+|`0x80081116`<br />`-2146954986`|Name: **SandboxWorkerThrottleLimit**<br />Message: `Maximum processes allocated for plug-in business logic exceeded. Fatal errors in plug-ins for this environment have occurred {0} times in the last {1} minutes. Each error requires an additional process to recover. Processes for plug-ins are being recycled. All plug-ins for this environment will fail during this period. More information: https://go.microsoft.com/fwlink/?linkid=2038718`|
 |`0x8004026b`<br />`-2147220885`|Name: **SaveAsDraftAppointmentNotAllowed**<br />Message: `AllowSaveAsDraftAppointment is turned off.`|
 |`0x8005F209`<br />`-2147094007`|Name: **SaveDataFileErrorOutOfSpace**<br />Message: `Try this action again. If the problem continues, check the {0} for solutions or contact your organization's {#Brand_CRM} Administrator. Finally, you can contact {1}.`|
 |`0x80047017`<br />`-2147192809`|Name: **SavedQueryIsNotCustomizable**<br />Message: `The specified view is not customizable`|
@@ -3515,7 +3579,7 @@
 |`0x8004F0F4`<br />`-2147159820`|Name: **SharePointUnableToRetrieveGroup**<br />Message: `Unable to retrieve the group {0} from SharePoint.`|
 |`0x8004F301`<br />`-2147159295`|Name: **SharePointUrlHostValidator**<br />Message: `The URL cannot be resolved into an IP.`|
 |`0x8004F306`<br />`-2147159290`|Name: **SharePointUrlIsRootWebValidator**<br />Message: `The URL is not valid. The URL must be a valid site collection and cannot include a subsite. The URL must be in a valid form, such as http://SharePointServer/sites/CrmSite.`|
-|`0x800608B6`<br />`-2147088202`|Name: **SharePointVersionUnsupported**<br />Message: `Microsoft Dynamics 365 cannot connect to Sharepoint as the Sharepoint Version is unsupported. Install the correct version, and then try again. `|
+|`0x800608B6`<br />`-2147088202`|Name: **SharePointVersionUnsupported**<br />Message: `Microsoft Dynamics 365 cannot connect to Sharepoint as the Sharepoint Version is unsupported. Install the correct version, and then try again.`|
 |`0x80071016`<br />`-2147020778`|Name: **SimilarityRuleDisabled**<br />Message: `No similarity rule active for this entity.`|
 |`0x80071018`<br />`-2147020776`|Name: **SimilarityRuleFCBOff**<br />Message: `Similarity rules not enabled.`|
 |`0x80160040`<br />`-2146041792`|Name: **SimplePropertyCannotHaveChildNodes**<br />Message: `Simple property {0} cannot have child nodes. More Details:{1}`|
@@ -3542,19 +3606,25 @@
 |`0x80071151`<br />`-2147020463`|Name: **SolutionConcurrencyFailure**<br />Message: `The solution installation or removal failed due to the installation or removal of another solution at the same time. Please try again later.`|
 |`0x8004701C`<br />`-2147192804`|Name: **SolutionConfigurationPageMustBeHtmlWebResource**<br />Message: `The solution configuration page must exist within the solution it represents.`|
 |`0x8004F080`<br />`-2147159936`|Name: **SolutionContextNotSupported**<br />Message: `This method doesn't only support SolutionContexts used to install managed solutions. Unsupported: [{0}]`|
+|`0x80040c04`<br />`-2147218428`|Name: **SolutionDeleteNotPermittedOnSecondary**<br />Message: `Solution '{0}' with version '{1}' in mode '{2}' exists on secondary organization(s) with id(s) '{3}'. Solution should be deleted on primary and on organizationss with higher secondary index before the current secondary organization.`|
 |`0x80048543`<br />`-2147187389`|Name: **SolutionImportCauseTimeout**<br />Message: `The operation timed out. This may be because a solution is currently being imported into this environment. Please try again after the solution import is completed. Solutions should be imported outside of working hours if possible.`|
+|`0x80040c01`<br />`-2147218431`|Name: **SolutionInstallNotPermitted**<br />Message: `Solution '{0}' with version '{1}' in mode '{2}' is missing on secondary organization(s) with id(s) '{3}'. Solution should be applied on floor secondary organization before install.`|
 |`0x80072003`<br />`-2147016701`|Name: **SolutionRestrictedAttributes**<br />Message: `Component cannot be created because it already has solution-aware columns. Entity: {0}, Existing Attribute: {1}`|
 |`0x80097603`<br />`-2146863613`|Name: **SolutionSignatureVerifiedRequired**<br />Message: `Digital Signature verification required for importing solution with name {0} and publisher name {1}.`|
 |`0x8004F023`<br />`-2147160029`|Name: **SolutionUniqueNameViolation**<br />Message: `The solution unique name '{0}' is already being used and cannot be used again.`|
+|`0x80040c02`<br />`-2147218430`|Name: **SolutionUpdateNotPermitted**<br />Message: `Solution '{0}' with version '{1}' in mode '{2}' is missing on secondary organization(s) with id(s) '{3}'. Solution should be applied on floor secondary organization before update.`|
 |`0x8004F046`<br />`-2147159994`|Name: **SolutionUpgradeFailed**<br />Message: `Solution Upgrade action failed after import as holding. InnerException is: {1}.`|
 |`0x8004853B`<br />`-2147187397`|Name: **SolutionUpgradeNotAvailable**<br />Message: `"The {0} solution doesn’t have an upgrade that is ready to be applied."`|
+|`0x80040c03`<br />`-2147218429`|Name: **SolutionUpgradeNotPermitted**<br />Message: `Solution '{0}' with version '{1}' in mode '{2}' is missing on secondary organization(s) with id(s) '{3}'. Solution should be applied on floor secondary organization before upgrade.`|
 |`0x8004803C`<br />`-2147188676`|Name: **SolutionUpgradeOfApiManagedSolutionError**<br />Message: `The import has failed because an ApiManaged solution cannot be updated.`|
 |`0x8004853C`<br />`-2147187396`|Name: **SolutionUpgradeWrongSolutionSelected**<br />Message: `"To use this action, you must first select the old solution and then try again."`|
 |`0x80044340`<br />`-2147204288`|Name: **SourceAttributeHeaderTooBig**<br />Message: `Column headers must be 160 or fewer characters. Fix the column headers, and then run Data Migration Manager again.`|
+|`0x80098014`<br />`-2146861036`|Name: **SourceControlComponentInConflictError**<br />Message: `One or more objects are updated in source control. Please resolve conflicts before committing the changes.`|
+|`0x80098015`<br />`-2146861035`|Name: **SourceControlComponentResolveConflictError**<br />Message: `Please resolve conflicts before committing the changes.`|
 |`0x8004033d`<br />`-2147220675`|Name: **SourceEntityMappedToMultipleTargets**<br />Message: `This source entity is mapped to more than one Microsoft Dynamics 365 entity. Remove any duplicate mappings, and then import this data map again.`|
 |`0x8006072A`<br />`-2147088598`|Name: **SPAccountNameFetchFailure**<br />Message: `Exception occured while fetching account name from Sharepoint.`|
 |`0x80060760`<br />`-2147088544`|Name: **SPAllFilesErrorScenario**<br />Message: `One or more sites in all files view of SharePointDocument failed.`|
-|`0x8006070A`<br />`-2147088630`|Name: **SPBadLockInFileCollectionErrorCode**<br />Message: `The file in the collection has bad lock `|
+|`0x8006070A`<br />`-2147088630`|Name: **SPBadLockInFileCollectionErrorCode**<br />Message: `The file in the collection has bad lock`|
 |`0x80060767`<br />`-2147088537`|Name: **SPCertificationError**<br />Message: `S2STokenIssuer certificate not found.`|
 |`0x80060761`<br />`-2147088543`|Name: **SPConnectionFailure**<br />Message: `Failed to connect to SharePointSite.`|
 |`0x80060720`<br />`-2147088608`|Name: **SPCurrentDocumentLocationDisabledErrorCode**<br />Message: `Current document location is disabled by administrator`|
@@ -3653,17 +3723,26 @@
 |`0x8004852D`<br />`-2147187411`|Name: **SqlEncryptionSymmetricKeySourceDoesNotExistInConfigDB**<br />Message: `Encryption Symmetric Key Source does not exist in Config DB.`|
 |`0x8004C001`<br />`-2147172351`|Name: **SqlErrorInStoredProcedure**<br />Message: `SQL error {0} occurred in stored procedure {1}`|
 |`0x80044157`<br />`-2147204777`|Name: **SqlMaxRecursionExceeded**<br />Message: `The maximum recursion has reached before statement completion.`|
+|`0x80048d43`<br />`-2147185341`|Name: **SqlRowTooBigForInsertUpdate**<br />Message: `The total size of the columns used in the database command exceeded the database limit. Please reduce the total size of columns inserted or updated. Database exception details: {0}`|
+|`0x80048d42`<br />`-2147185342`|Name: **SqlRowTooBigForSelect**<br />Message: `The total size of the columns used in the database command exceeded the database limit. Please reduce the number of columns selected. Database exception details: {0}`|
 |`0x80040492`<br />`-2147220334`|Name: **SrsDataConnectorNotInstalled**<br />Message: `MSCRM Data Connector Not Installed`|
 |`0x80048292`<br />`-2147188078`|Name: **SrsDataConnectorNotInstalledUpload**<br />Message: `This report can’t upload because Dynamics 365 Reporting Extensions, required components for reporting, are not installed on the server that is running Microsoft SQL Server Reporting Services.`|
 |`0x80072570`<br />`-2147015312`|Name: **SSM_MaxPCI_Exceeded**<br />Message: `Please re-login to refresh your session.`|
 |`0x80072571`<br />`-2147015311`|Name: **SSM_RefreshToken_Failed**<br />Message: `Failed to refresh login session.`|
+|`0x8005E280`<br />`-2147097984`|Name: **SSSACSEndpointUrlUpdateRequiresExchangeOrTenantAdmin**<br />Message: `The Azure Communication Service (ACS) Endpoint URL must be supplied by an Exchange Administrator or Office 365 Global Administrator. Please see https://go.microsoft.com/fwlink/?linkid=2306201 to learn more.`|
+|`0x8005E281`<br />`-2147097983`|Name: **SSSACSInvalidDeploymentType**<br />Message: `Azure Communication Service (ACS) integration is only available for Online deployments. Please see https://go.microsoft.com/fwlink/?linkid=2306201 to learn more.`|
+|`0x8005E279`<br />`-2147097991`|Name: **SSSACSInvalidEmailServerProfileType**<br />Message: `Azure Communication Service (ACS) integration can only be enabled for Exchange Online email server profiles. Please see https://go.microsoft.com/fwlink/?linkid=2306201 to learn more.`|
+|`0x8005E278`<br />`-2147097992`|Name: **SSSGmailSignInInvalidRedirectUri**<br />Message: `Sign-in failed due to an invalid or missing redirect uri specified in the associated Google web application client configuration. For more information on how to fix this error, see https://go.microsoft.com/fwlink/?linkid=2292432`|
 |`0x80060451`<br />`-2147089327`|Name: **StageEntityIsNull**<br />Message: `Validation error: stage entity cannot be null.`|
 |`0x80060454`<br />`-2147089324`|Name: **StageIdIsEmpty**<br />Message: `Validation error: Stage ID cannot be empty.`|
 |`0x80060450`<br />`-2147089328`|Name: **StageIdIsNotPresentInBusinessProcess**<br />Message: `Validation error: Stage ID ‘{0}’ is not present in Business Process. Please contact your system administrator.`|
 |`0x80060458`<br />`-2147089320`|Name: **StageIdIsNotValid**<br />Message: `Validation error: Stage ID {0} is not valid for Business Process. Valid stages are: {1}`|
+|`0x80097701`<br />`-2146863359`|Name: **StageSolutionOrgSchemaMismatchWarning**<br />Message: `The solution file was exported from a different schema type of Dynamics 365 than the target organization. Importing this solution may result in unexpected behavior. Source org schema type: {0}, Target org schema type: {1}`|
+|`0x80097702`<br />`-2146863358`|Name: **StageSolutionOrgVersionMismatchWarning**<br />Message: `The solution file was exported from a newer version of Dynamics 365 than the target organization. Importing this solution may result in unexpected behavior. Source org version: {0}, Target org version: {1}`|
+|`0x80097700`<br />`-2146863360`|Name: **StageSolutionUnmanagedRootsConversionWarning**<br />Message: `One or more components in the solution already exist in your system as unmanaged components. Importing this solution will convert the components into managed components for this solution. Warning: Any customizations that your organization has made to these components will be lost. After the import operation is complete, managed solutions from other solution publishers will be unable to update these components.`|
 |`0x80060470`<br />`-2147089296`|Name: **StandAloneBpfNotActivated**<br />Message: `Stand Alone BPF must be activated on Flows page.`|
 |`0x80055006`<br />`-2147135482`|Name: **StandardSlaTypeNotApplicable**<br />Message: `Standard SLA Type is only supported for incident entity. Current entity object type code is {0}. Please pass appropriate SLA Type or entity`|
-|`0x80048d21`<br />`-2147185375`|Name: **StatementConflictedWithAConstraint**<br />Message: `Statement conflicted with a constraint. `|
+|`0x80048d21`<br />`-2147185375`|Name: **StatementConflictedWithAConstraint**<br />Message: `Statement conflicted with a constraint.`|
 |`0x8004F857`<br />`-2147157929`|Name: **StateTransitionActivateNewStatus**<br />Message: `You can't activate this record because of the status transition rules.Contact your system administrator.`|
 |`0x8004F855`<br />`-2147157931`|Name: **StateTransitionActiveToCanceled**<br />Message: `Because of the status transition rules, you can't cancel the case in the current status.Change the case status, and then try canceling it, or contact your system administrator.`|
 |`0x8004F854`<br />`-2147157932`|Name: **StateTransitionActiveToResolve**<br />Message: `Because of the status transition rules, you can't resolve a case in the current status.Change the case status, and then try resolving it, or contact your system administrator.`|
@@ -3684,6 +3763,13 @@
 |`0x8004D292`<br />`-2147167598`|Name: **StringAttributeIndexError**<br />Message: `One of the attributes of the selected entity is a part of database index and so it cannot be greater than 900 bytes.`|
 |`0x80044331`<br />`-2147204303`|Name: **StringLengthTooLong**<br />Message: `A validation error occurred. A string value provided is too long.`|
 |`0x80090429`<br />`-2146892759`|Name: **StringOrBinaryTruncation**<br />Message: `String or binary data would be truncated in table '{0}', column '{1}'. Truncated value: {2}.`|
+|`0x80090929`<br />`-2146891479`|Name: **StubUserImpersonationCreationUnauthorized**<br />Message: `Impersonable Stub Users can only be created by authorized applications. Contact your system administrator for assistance.`|
+|`0x80090924`<br />`-2146891484`|Name: **StubUserImpersonationEnablementUnauthorized**<br />Message: `Impersonation for Stub Users can only be set by authorized applications. Contact your system administrator for assistance.`|
+|`0x80090927`<br />`-2146891481`|Name: **StubUserImpersonationFeatureNotEnabled**<br />Message: `This operation couldn't be completed because the Stub User Impersonation feature isn’t enabled for your organization.`|
+|`0x80090928`<br />`-2146891480`|Name: **StubUserImpersonationInvalidUserConfiguration**<br />Message: `Impersonable Stub Users can only be created in disabled state.`|
+|`0x80090926`<br />`-2146891482`|Name: **StubUserImpersonationInvalidUserType**<br />Message: `Updated value of SystemManagedUserType={0} is not permitted.`|
+|`0x80090923`<br />`-2146891485`|Name: **StubUserImpersonationMustToggleStandalone**<br />Message: `Toggling impersonation for a Stub User must be done in a standalone Update request. Modify other user attributes in another Update request.`|
+|`0x80090925`<br />`-2146891483`|Name: **StubUserImpersonationUnauthorized**<br />Message: `User with SystemUserId={0}, IsDisabled={1} and SystemManagedUserType={2} is not valid for toggling Stub User Impersonation.`|
 |`0x80048537`<br />`-2147187401`|Name: **SubcomponentDoesNotExist**<br />Message: `Subcomponent {0} of type {1} is not found in the organization, it can not be added to the SolutionComponents.`|
 |`0x80048536`<br />`-2147187402`|Name: **SubcomponentMissingARoot**<br />Message: `Subcomponent {0} cannot be added to the solution because the root component {1} is missing.`|
 |`0x80043e02`<br />`-2147205630`|Name: **SubjectDoesNotExist**<br />Message: `Subject does not exist.`|
@@ -3706,6 +3792,7 @@
 |`0x8004F657`<br />`-2147158441`|Name: **SystemFormCopyUnmatchedFormType**<br />Message: `The form type of the SourceId is not valid for the Target entity.`|
 |`0x8004F658`<br />`-2147158440`|Name: **SystemFormCreateWithExistingLabel**<br />Message: `The id '{0}' for label '{1}' in the form with id: '{2}' is already in use by another form. Replace the id with a different unique value.`|
 |`0x8004F655`<br />`-2147158443`|Name: **SystemFormImportMissingRoles**<br />Message: `The unmanaged solution you are importing has displaycondition XML attributes that refer to security roles that are missing from the target system. Any displaycondition attributes that refer to these security roles will be removed.`|
+|`0x80090921`<br />`-2146891487`|Name: **SystemUserAttributeUpdateNotAllowedFromCreate**<br />Message: `SystemUser updates from plugins registered on PostCreate of SystemUser are not allowed to change certain attributes ({1}), as their values could depend on components which are not yet created. Consider making the updates async.`|
 |`0x8004A112`<br />`-2147180270`|Name: **SystemUserDisabled**<br />Message: `The system user was disabled therefore the ticket expired.`|
 |`0x80044357`<br />`-2147204265`|Name: **SystemUserUpdateNotAllowedFromCreate**<br />Message: `SystemUser updates are not allowed from plugins registered on PostCreate of SystemUser as it could depend on components which are not yet created. Consider making them async.`|
 |`0x8009049E`<br />`-2146892642`|Name: **TableTypeMismatch**<br />Message: `There is a mismatch of values among TableType '{0}', DataProviderId '{1}' and DataSourceId '{2}'.`|
@@ -3716,7 +3803,7 @@
 |`0x80040395`<br />`-2147220587`|Name: **TargetEntityInvalidForMap**<br />Message: `The file specifies an entity that is not valid for data migration.`|
 |`0x80040391`<br />`-2147220591`|Name: **TargetEntityNotFound**<br />Message: `The file specifies an entity that does not exist in Microsoft Dynamics 365.`|
 |`0x80048460`<br />`-2147187616`|Name: **TargetEntityNotMapped**<br />Message: `Target Entity Name not defined for source:{0} file.`|
-|`0x80040299`<br />`-2147220839`|Name: **TargetPrincipalLacksReadPrivilege**<br />Message: `{5}{2}(Id = {3}) is missing {0} privilege on {1} entity(OTC={4}). Consider adding missing privilege to one of the {5}{2} roles for the request to succeed.`|
+|`0x80040299`<br />`-2147220839`|Name: **TargetPrincipalLacksReadPrivilege**<br />Message: `{5} {2}(Id = {3}) is missing {0} privilege on {1} entity(OTC={4}). Please read through the document: https://go.microsoft.com/fwlink/?linkid=2292731 and consider adding missing privilege to one of the {5} {2} roles for the request to succeed.`|
 |`0x80048342`<br />`-2147187902`|Name: **TargetUserInsufficientPrivileges**<br />Message: `The user can't be added to the team because the user doesn't have the "{0}" privilege.`|
 |`0x80061712`<br />`-2147084526`|Name: **TaskFlowEmptyName**<br />Message: `The name field cannot be empty. Please enter a name.`|
 |`0x80061717`<br />`-2147084521`|Name: **TaskFlowEntityAttributeIsNotValid**<br />Message: `Invalid attribute type: {0}.{1}.`|
@@ -3735,7 +3822,7 @@
 |`0x80041d0a`<br />`-2147214070`|Name: **TeamAdministratorMissedPrivilege**<br />Message: `The team administrator does not have privilege read team.`|
 |`0x8004140d`<br />`-2147216371`|Name: **TeamInWrongBusiness**<br />Message: `Cannot assign security role to the team because the security role's Business Unit does not match the team's Business Unit. To assign security role from different Business Unit, enable the "Record ownership across business Units" feature (https://go.microsoft.com/fwlink/?linkid=2250434) otherwise assign a security role from the team's Business Unit. Details: userid={0}, teamBU={1}, roleId={2}, roleBU={3}`|
 |`0x80048d3a`<br />`-2147185350`|Name: **TeamMembershipAttributeValidationFailure**<br />Message: `{0} user with Id {1} does not have permissions to a {2} secured field on entity {3}. Adding/Removing a user to/from a Team requires {0} user to have all the field permissions the team currently has from all it's profile association.`|
-|`0x80048305`<br />`-2147187963`|Name: **TeamNameTooLong**<br />Message: `The specified name for the team is too long.`|
+|`0x80048305`<br />`-2147187963`|Name: **TeamNameTooLong**<br />Message: `The length of team name is greater than maximum length defined in metadata. Please increase maximum length of the column or shorten the team name.`|
 |`0x80042f0a`<br />`-2147209462`|Name: **TeamNotAssignedRoles**<br />Message: `The team has not been assigned any roles.`|
 |`0x80097210`<br />`-2146864624`|Name: **TeamNotAssociatedToDelegatedAuthorization**<br />Message: `Team '{0}' is not associated to a delegated authorization.`|
 |`0x80048d39`<br />`-2147185351`|Name: **TeamProfileAttributeValidationFailure**<br />Message: `{0} user with Id {1} does not have permissions to a {2} secured field on entity {3}. Associating/Disassociating a Team to a Field Security Profile requires {0} user to have all the field permissions of the profile.`|
@@ -3838,6 +3925,7 @@
 |`0x8005E220`<br />`-2147098080`|Name: **UnapprovedMailbox**<br />Message: `The mailbox is not in approved state. Send/Receive mails are allowed only for approved mailboxes.`|
 |`0x80040277`<br />`-2147220873`|Name: **UnauthorizedAccess**<br />Message: `Attempted to perform an unauthorized operation.`|
 |`0x80041221`<br />`-2147216863`|Name: **UnauthorizedTDSAccess**<br />Message: `Attempted to perform an unauthorized operation. User is missing prvAllowTDSAccess privilege.`|
+|`0x80041223`<br />`-2147216861`|Name: **UnauthorizedTDSAccessForUserId**<br />Message: `Attempted to perform an unauthorized operation. User {0} is missing prvAllowTDSAccess privilege.`|
 |`0x80040216`<br />`-2147220970`|Name: **UnExpected**<br />Message: `An unexpected error occurred.`|
 |`0x80040330`<br />`-2147220688`|Name: **UnexpectedErrorInMailMerge**<br />Message: `There was an unexpected error during mail merge.`|
 |`0x8004F044`<br />`-2147159996`|Name: **UnexpectedNullReferenceError**<br />Message: `Unexpected null reference error: {0}.`|
@@ -3857,7 +3945,7 @@
 |`0x800404c4`<br />`-2147220284`|Name: **unManagederrorprocessingfilternodes**<br />Message: `An unexpected error occurred processing the filter nodes.`|
 |`0x800404ae`<br />`-2147220306`|Name: **unManagedfieldnotvalidatedbyplatform**<br />Message: `A field was not validated by the platform.`|
 |`0x800404ab`<br />`-2147220309`|Name: **unManagedfilterindexoutofrange**<br />Message: `The filter index is out of range.`|
-|`0x80048306`<br />`-2147187962`|Name: **unManagedIdsAccessDenied**<br />Message: `{0} with id {1} does not have {2} right(s) for record with id {3} of entity {4}. Consider assigning a role with the required access level to the user or team. For further troubleshooting, please work with a system administrator to use the Access Checker tool on this record: {5}. More details: {6}`|
+|`0x80048306`<br />`-2147187962`|Name: **unManagedIdsAccessDenied**<br />Message: `{0} with id {1} does not have {2} right(s) for record with id {3} of entity {4}. Consider assigning a role with the {7} level to the user or team. For further troubleshooting, please work with a system administrator to use the Access Checker tool on this record: {5}. More details: {6}`|
 |`0x80040511`<br />`-2147220207`|Name: **unManagedidsaccounthaschildopportunities**<br />Message: `The Account has child opportunities.`|
 |`0x8004350a`<br />`-2147207926`|Name: **unManagedidsactivitydurationdoesnotmatch**<br />Message: `Activity duration does not match start/end time`|
 |`0x80043509`<br />`-2147207927`|Name: **unManagedidsactivityinvalidduration**<br />Message: `Invalid activity duration`|
@@ -4237,6 +4325,7 @@
 |`0x80061019`<br />`-2147086311`|Name: **UnsupportedCudOperationForDynamicProperties**<br />Message: `You can't create a property for a kit.`|
 |`0x8004E30E`<br />`-2147163378`|Name: **UnsupportedDashboardInEditor**<br />Message: `The dashboard could not be opened.`|
 |`0x8005E242`<br />`-2147098046`|Name: **UnsupportedEmailServer**<br />Message: `The email server isn't supported.`|
+|`0x80040c07`<br />`-2147218425`|Name: **UnsupportedFieldTypeForMultiPartitionDistinctQuery**<br />Message: `Field {0} from entity {1} is not supported for multi-partition distinct query.`|
 |`0x80160011`<br />`-2146041839`|Name: **UnsupportedFormFactorsUsedInForm**<br />Message: `Unsupported Form factor {0} used for control with uniqueid {1}. More Details:{2}`|
 |`0x80160014`<br />`-2146041836`|Name: **UnsupportedFormFactorsUsedInNonFormContext**<br />Message: `Unsupported form factor(s) {0} used. More Details:{1}`|
 |`0x80061302`<br />`-2147085566`|Name: **UnsupportedImportComponent**<br />Message: `Sorry, your import failed because the {0} component isn’t supported for import and export.`|
@@ -4261,6 +4350,7 @@
 |`0x8004501B`<br />`-2147200997`|Name: **UpdatePublishedWorkflowTemplate**<br />Message: `Cannot update a published workflow template.`|
 |`0x8004E114`<br />`-2147163884`|Name: **UpdateRecurrenceRuleFailed**<br />Message: `Failed to update the recurrence rule. A corresponding recurrence rule cannot be found.`|
 |`0x80044273`<br />`-2147204493`|Name: **UpdateRIOrganizationDataAccessNotAllowed**<br />Message: `This feature configuration can only be updated by a system administrator.`|
+|`0x80098016`<br />`-2146861034`|Name: **UpdatesToGovernedSettingsNotAllowed**<br />Message: `You can't change these settings because this environment is part of a group. If you're a tenant admin, modify the settings in the environment group.`|
 |`0x80045003`<br />`-2147201021`|Name: **UpdateWorkflowActivation**<br />Message: `Cannot update a workflow activation.`|
 |`0x80045007`<br />`-2147201017`|Name: **UpdateWorkflowActivationWorkflowDependency**<br />Message: `Cannot update a workflow dependency associated with a workflow activation.`|
 |`0x80090017`<br />`-2146893801`|Name: **UploadingAndDownloadingInMultipleChunksNotSupported**<br />Message: `{0} in multiple chunks is not supported for the files stored in the database.`|
@@ -4271,6 +4361,7 @@
 |`0x8004D24C`<br />`-2147167668`|Name: **UserCannotEnableWithoutLicense**<br />Message: `Cannot enable an unlicensed user`|
 |`0x8004D211`<br />`-2147167727`|Name: **UserDataNotFound**<br />Message: `The user data could not be found.`|
 |`0x80041d28`<br />`-2147214040`|Name: **UserDirectoryObjectIdNotFoundInAAD**<br />Message: `The User Object Id ({0}) does not exist. Ensure User account exists in AAD or Microsoft Entra ID.`|
+|`0x8004D24D`<br />`-2147167667`|Name: **UserDisabledAndUnlicensed**<br />Message: `The user(Id = {0}, accessMode = {1}) has not been assigned any License and is disabled. Please contact your system administrator to assign license to this user for the action to succeed and consider enabling this user. Additional Details: {2}`|
 |`0x80044507`<br />`-2147203833`|Name: **UserDoesNotHaveAccessToTheTenant**<br />Message: `User does not have access to the tenant.`|
 |`0x8004A113`<br />`-2147180269`|Name: **UserDoesNotHaveAdminOnlyModePermissions**<br />Message: `User does not have required privileges (or role membership) to access the org when it is in Admin Only mode.`|
 |`0x80090432`<br />`-2146892750`|Name: **UserDoesNotHaveAdminOrCustomizerPrivileges**<br />Message: `You must be a system administrator or system customizer to execute this request.`|
@@ -4287,7 +4378,7 @@
 |`0x80041d24`<br />`-2147214044`|Name: **UserLoopExists**<br />Message: `A manager for this user cannot be set because an existing relationship in the management hierarchy is causing a circular relationship.  This is usually caused by a manual edit of the Microsoft Dynamics 365 database. To fix this, the hierarchy in the database must be changed to remove the circular relationship.`|
 |`0x8005E24D`<br />`-2147098035`|Name: **UserNameRequiredForImpersonation**<br />Message: `Type in a user name and save again`|
 |`0x8005F111`<br />`-2147094255`|Name: **UserNeverLoggedIntoYammer**<br />Message: `To follow other users, you must be logged in to Yammer. Log in to your Yammer account, and try again.`|
-|`0x8004D24B`<br />`-2147167669`|Name: **UserNotAssignedLicense**<br />Message: `The user(Id = {0}, accessMode = {1}) has not been assigned any License. Please contact your system administrator to assign license to this user for the action to succeed.`|
+|`0x8004D24B`<br />`-2147167669`|Name: **UserNotAssignedLicense**<br />Message: `The user(Id = {0}, accessMode = {1}) has not been assigned any License. Please contact your system administrator to assign license to this user for the action to succeed. Additional Details: {2}`|
 |`0x80042f09`<br />`-2147209463`|Name: **UserNotAssignedRoles**<br />Message: `The user (Id = {0}) has not been assigned any roles.`|
 |`0x80048d29`<br />`-2147185367`|Name: **UserNotAuthorized**<br />Message: `Not authorized to perform this operation.`|
 |`0x80041d07`<br />`-2147214073`|Name: **UserNotInParentHierarchy**<br />Message: `The user is not in parent user's business hierarchy.`|
@@ -4353,7 +4444,7 @@
 |`0x80060800`<br />`-2147088384`|Name: **WopiDiscoveryFailed**<br />Message: `Request for retrieving the WOPI discovery XML failed.`|
 |`0x80060803`<br />`-2147088381`|Name: **WopiMaxFileSizeExceeded**<br />Message: `{0} file exceeded size limit of {1}.`|
 |`0x800608DB`<br />`-2147088165`|Name: **WordTemplateFeatureNotEnabled**<br />Message: `Word document template feature is not enabled.`|
-|`0x80072031`<br />`-2147016655`|Name: **WorkerProcessCrashFailure**<br />Message: `The status for this operation is unavailable, please try again.`|
+|`0x80072031`<br />`-2147016655`|Name: **WorkerProcessCrashFailure**<br />Message: `This operation completed without reporting its status. The end time is unknown and has been set to the start time. You can safely retry the operation.`|
 |`0x80045045`<br />`-2147200955`|Name: **WorkflowActivityNotSupported**<br />Message: `This workflow cannot be created, updated or published because it's referring unsupported workflow step.`|
 |`0x80045042`<br />`-2147200958`|Name: **WorkflowAutomaticallyDeactivated**<br />Message: `The original workflow definition has been deactivated and replaced.`|
 |`0x80045001`<br />`-2147201023`|Name: **WorkflowCompileFailure**<br />Message: `An error has occurred during compilation of the workflow.`|

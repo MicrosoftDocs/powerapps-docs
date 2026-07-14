@@ -1,7 +1,7 @@
 ---
 title: use-client-context Power Apps checker reference | Microsoft Docs
 description: Power Apps checker rule reference for use-client-context.
-author: ecarrleemsft
+author: tylerol
 ms.topic: reference
 ms.date: 07/18/2022
 ms.service: "powerapps"

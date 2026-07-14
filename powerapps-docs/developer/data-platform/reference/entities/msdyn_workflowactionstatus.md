@@ -1,7 +1,7 @@
 ---
 title: "Workflow Action Status (msdyn_workflowactionstatus) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Workflow Action Status (msdyn_workflowactionstatus) table/entity with Microsoft Dataverse."
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
@@ -249,7 +249,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**Status of the msdyn_workflowactionstatus**|
+|Description|**Status of the msdyn\_workflowactionstatus**|
 |DisplayName|**Status**|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -270,7 +270,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**Reason for the status of the msdyn_workflowactionstatus**|
+|Description|**Reason for the status of the msdyn\_workflowactionstatus**|
 |DisplayName|**Status Reason**|
 |IsValidForForm|True|
 |IsValidForRead|True|
