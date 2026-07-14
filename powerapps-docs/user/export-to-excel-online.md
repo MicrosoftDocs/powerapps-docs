@@ -49,9 +49,12 @@ A few things to note:
  > [!NOTE]
  > By design, you can’t do a File > **Save As** in Excel Online. If you do, you’ll get a **Can’t Save Workbook** error message.
    
+## Known limitations
 
+1. Data Open is limited to 5k records
 
-  
+The amount of record that can be Open from a view in Model-Driven App to Excel Online is limited to 5k records. To open and export more records use for example [Export to an Excel static worksheet](/power-apps/user/export-excel-static-worksheet)
+ 
 
  
 
