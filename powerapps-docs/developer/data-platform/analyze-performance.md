@@ -18,7 +18,7 @@ When you add business logic to your plug-in you should be aware of the impact yo
 
 ## Time and resource constraints
 
-There's a hard **2-minute time limit** for a Dataverse message operation to complete. This limit includes executing the intended message operation and all registered synchronous plug-ins. There are also limitations on the amount of CPU and memory resources that extensions can use. If the limits are exceeded, Dataverse throws an exception and the entire message operation is canceled (rolled back).
+There's a hard **2-minute time limit** for a Dataverse message operation to complete. This limit includes executing the intended message operation and all registered synchronous and asynchronous plug-ins. There are also limitations on the amount of CPU and memory resources that extensions can use. If the limits are exceeded, Dataverse throws an exception and the entire message operation is cancelled (rolled back).
 
 If the time limit is exceeded, Dataverse throws a <xref:System.TimeoutException>. If any custom extension exceeds threshold CPU, memory, or handle limits or is otherwise unresponsive, Dataverse kills that process. At that point any current extension in that process fails with exceptions. However, the next time that the extension is executed it will run normally.
 
@@ -27,7 +27,7 @@ If the time limit is exceeded, Dataverse throws a <xref:System.TimeoutException>
 >
 > Our general recommendation is to limit the time your plug-in takes to execute to no more than 2 seconds.
 >
-> If your plug-in requires more time to execute, consider registering your plug-in for asynchronous rather than synchronous execution. In fact, asynchronous execution should always be considered first when possible as it results in better application responsiveness and system scalability.
+> If your plug-in requires more than 2 seconds to execute, consider registering your plug-in for asynchronous rather than synchronous execution. In fact, asynchronous execution should always be considered first when possible as it results in better application responsiveness and system scalability.
 
 More information: [Best practices and guidance regarding plug-in and workflow development](best-practices/business-logic/index.md)
 
