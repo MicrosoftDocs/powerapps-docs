@@ -1,7 +1,7 @@
 ---
 title: "Business skills overview" 
 description: Learn about business skills in Microsoft Dataverse to bring business data understanding to AI agents and Copilot.
-ms.date: 06/24/2026
+ms.date: 07/15/2026
 ms.reviewer: matp
 ms.topic: how-to
 author: prithvi-khosla
@@ -13,9 +13,15 @@ search.audienceType:
 ---
 # Business skills overview
 
+[!INCLUDE [preview-banner](../../../shared/preview-includes/preview-banner.md)]
+
 Business skills are natural-language instructions that capture how your organization gets work done. They represent your business processes, policies, and domain knowledge in a format that agents can understand and follow. Each skill describes how to complete a specific type of work—the steps involved, the information required, and the business rules that apply.
 
 Agents discover and use business skills as needed at runtime to complete tasks according to your organization's processes. When multiple agents use the same skill, they follow the same process, ensuring consistent behavior across your organization.
+
+[!INCLUDE [cc-preview-features-definition](../../../shared/preview-includes/preview-note-pp.md)]
+
+Business skills are available in environments where [Dataverse intelligence](data-platform-intelligence.md) is enabled.
 
 > [!IMPORTANT]
 > Business skills are not executable code. They contain natural-language instructions that guide agent behavior, similar to how you might document a process for a new employee.
@@ -36,8 +42,9 @@ Business skills use a layered structure for efficient discovery and retrieval.
 |---------|---------|---------|
 |Metadata      | Name and description   | Enables agents to quickly discover relevant skills         |
 |Instructions     | Full skill body   |  Contains the complete process definition     |
+|Resources     | Attached reference files   | Provides supporting documents, templates, policies, and other materials agents can use when following the skill     |
 
-Agents query metadata to find applicable skills, then retrieve full instructions only when needed.
+Agents query metadata to find applicable skills, then retrieve full instructions and resources only when needed.
 
 ## Security and governance 
 
