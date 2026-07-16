@@ -2486,7 +2486,7 @@
       href: ./data-platform/data-platform-intelligence.md
     - name: Dataverse data in Microsoft 365 Copilot
       href: ./data-platform/data-platform-data-copilot.md
-    - name: Business skills with Dataverse intelligence
+    - name: Business skills with Dataverse intelligence (preview)
       items:
       - name: Business skills overview
         href: ./data-platform/data-platform-business-skill-overview.md
