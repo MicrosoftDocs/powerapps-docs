@@ -2,7 +2,7 @@
 title: "Supported customizations for Microsoft Dataverse"
 description: "Learn how you can customize Microsoft Dataverse using available tools." 
 ms.collection: get-started
-ms.date: 07/02/2026
+ms.date: 07/16/2026
 ms.reviewer: pehecke
 ms.topic: article
 author: shmcarth # GitHub ID
@@ -82,12 +82,12 @@ The ability to create custom workflow activities (assemblies) to be called from 
 The following describes the support considerations for custom code targeting Microsoft's .NET Framework.
 
 - Any web service client created by using the Microsoft .NET Framework 4.6.2 or higher that calls the Dataverse web services is fully supported.
-- Any .NET assembly project that targets Microsoft .NET Framework 4.6.2 or later, for use in Dataverse as a plug-in assembly or as a custom workflow activity assembly, is supported.
+- Dataverse supports any .NET assembly project that targets Microsoft .NET Framework 4.6.2 through 4.8 for use as a plug-in assembly or as a custom workflow activity assembly.
 
 You can view the latest list of supported .NET Framework build targets in Dataverse's [Microsoft.PowerPlatform.Dataverse.Client](https://www.nuget.org/packages/Microsoft.PowerPlatform.Dataverse.Client#supportedframeworks-body-tab) or [Microsoft.CrmSdk.CoreAssemblies](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreAssemblies/#supportedframeworks-body-tab) NuGet packages.
 
 > [!TIP]
-> To take advantage of improved security and other enhancements, new code projects should target .NET Framework 4.8 or later.
+> To take advantage of improved security and other enhancements, new application code projects should target .NET Framework 4.8 or later, while plug-in or custom workflow activity projects should target .NET Framework 4.8.
 
 ## Support for .NET Core versions
 
