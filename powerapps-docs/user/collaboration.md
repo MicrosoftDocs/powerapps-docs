@@ -17,7 +17,7 @@ ms.contributors:
 ---
 # Collaborate with others in model-driven apps 
 
-Collaborate with colleagues and share links in model-driven Power Apps the same way do you as in Microsoft Office.
+Collaborate with colleagues and share links in model-driven Power Apps the same way you do in Microsoft Office.
 
 ### Multiplayer apps
 When you're working on a record, you can also see other users who are working on the same record.
@@ -31,16 +31,16 @@ This feature uses the Azure Fluid Relay service, which must be available in your
 
 ### View a user's status and picture
 
-App users, such as the record owner, as well as the users appearing in grids and lookups are displayed with their picture and online status.  This feature is now available on all model-driven apps and cannot be disabled.
+App users, such as the record owner, as well as the users appearing in grids and lookups are displayed with their picture and online status. This feature is now available on all model-driven apps and cannot be disabled.
 
 > [!div class="mx-imgBorder"]
-> ![VView a user's online status.](media/collob-2.png "View a user's online status.")
+> ![View a user's online status.](media/collob-2.png "View a user's online status.")
 
 > [!NOTE]
-> This feature will be extended to user lookups and grid user columns. 
+> This feature will be extended to user lookups and user columns in grids. 
 
 
-### Share 
+### Share records
 You can now easily share records with your colleagues using the new **Share** button.  Select **Copy link** or **Email link** in order to send a record link to your colleagues.
 
 > [!Note]

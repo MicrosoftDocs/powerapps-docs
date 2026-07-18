@@ -15,7 +15,7 @@ search.audienceType:
 ---
 # Add a report from outside Power Apps
 
-If you’ve created a custom report outside of the system, you can easily add it to Power Apps.
+If you have created a custom report outside of the system, you can easily add it to Power Apps.
 
 For information about how to create a custom report, see [Reporting and Analytics Guide](/dynamics365/customer-engagement/analytics/get-started-writing-reports).
 
