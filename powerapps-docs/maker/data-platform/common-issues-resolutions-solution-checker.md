@@ -138,6 +138,8 @@ The Power Apps Checker application user in the Dataverse organization containing
 
 ## Solution checker remains in a Running state for more than 30 minutes
 
+Solution Checker may remain in a running state indefinitely if Blocked Attachments for 'zip' file extensions are configured on the environment. Additionally, blocking the application/zip MIME type, or not explicity allowing it, will affect analysis execution and prevent attachment of results to the environment. More information on the **Blocked Attachments** settings can be found at [Manage privacy and security settings](https://learn.microsoft.com/power-platform/admin/settings-privacy-security).
+
 Solution checker may remain in a running state indefinitely if the analyzed solution contains plugin components developed using .NET Standard 2.0. Plugins using .NET Standard 2.0 aren't currently supported in solution checker and should be excluded from analysis. Exclude the plugin component by either removing it from the target solution, or by using the 'ExcludedFileNamePattern' parameter in the Power Apps Checker PowerShell module.
 
 ## Common plugin conditions that cause solution checker to fail
