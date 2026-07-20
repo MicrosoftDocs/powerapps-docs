@@ -41,7 +41,7 @@ Before implementing modern controls in your app, review the overview of modern c
 
 **[Copilot answer (preview)](modern-control-copilot-answer.md)** - A control that makers can use to add predefined questions that end users can use to get generated answers.
 
-**[Data Grid (preview)](modern-control-data-grid.md)** - A control that displays records from a data source in a scrollable, sortable, and searchable grid.
+**[Data Grid](modern-control-data-grid.md)** - A control that displays records from a data source in a scrollable, sortable, and searchable grid.
 
 **[Date picker](modern-controls-date-picker.md)** - A control that the user can select to specify a date.
 
