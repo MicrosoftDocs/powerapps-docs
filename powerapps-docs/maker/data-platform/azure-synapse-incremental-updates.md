@@ -2,17 +2,17 @@
 title: Query and analyze the incremental updates with Azure Synapse Link for Dataverse
 description: "Learn how to query and analyze the incremental updates made to Microsoft Dataverse data during a user-specified time interval with Power Apps and Azure Synapse Analytics"
 ms.custom: ""
-ms.date: 04/29/2025
+ms.date: 07/06/2026
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
 applies_to: 
   - "powerapps"
-author: "MilindaV2"
+author: "anibakore-msft"
 ms.assetid: 
 ms.subservice: dataverse-maker
-ms.author: "milindav"
+ms.author: "banirud"
 search.audienceType: 
   - maker
 ---
@@ -45,14 +45,14 @@ This guide assumes that you have already met the prerequisites to create an Azur
 ## Create a Synapse Link profile to export incremental data
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select your environment.
-2. On the left navigation pane,  select **Azure Synapse Link**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
-3. On the command bar, select **+ New link**.
-4. Select the **Subscription**, **Resource group**, and **Storage account**. Select **Next**.
-5. Don't select the option **Connect to your Azure Synapse workspace**. If you choose this option, the incremental update feature is disabled.
-6. Add the tables you want to export. If your Dataverse environment is linked to finance and operations apps, you can also select tables from finance and operations apps.
-7. Select **Advanced**.
-8. Turn on **Show advanced configuration settings** and **Enable Incremental Update Folder Structure**.
-9. Enter the time interval (in minutes) for how often the incremental updates should be captured, and then select **Save**.  
+1. On the left navigation pane, select **Link data**, and then select **Other Links**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. On the command bar, select **+ New link**, and then select **Azure Synapse**.
+1. Select the **Subscription**, **Resource group**, and **Storage account**. Select **Next**.
+1. Don't select the option **Connect to your Azure Synapse workspace**. If you choose this option, the incremental update feature is disabled.
+1. Add the tables you want to export. If your Dataverse environment is linked to finance and operations apps, you can also select tables from finance and operations apps.
+1. Select **Advanced**.
+1. Turn on **Show advanced configuration settings** and **Enable Incremental Update Folder Structure**.
+1. Enter the time interval (in minutes) for how often the incremental updates should be captured, and then select **Save**.  
 
    :::image type="content" source="media/azure-synapse-add-tables-settings.png" alt-text="Add tables settings":::
 
