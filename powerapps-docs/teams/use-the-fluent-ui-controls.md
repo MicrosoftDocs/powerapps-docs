@@ -5,7 +5,7 @@ author: clromano
 ms.author: clromano
 ms.topic: article
 ms.custom: 
-ms.date: 05/20/2021
+ms.date: 07/20/2026
 ms.subservice: teams
 ms.reviewer: mkaur
 contributors:
@@ -231,10 +231,16 @@ Properties of controls have been simplified for the ease of use. The following t
 |Text box|Color<br />Default<br />Fill<br />SpellCheck<br />TabIndex|ColorText<br />Value<br />ColorBackground<br />EnableSpellCheck<br />AcceptsFocus|
 |Toggle|Size<br />Default<br />TabIndex|FontSize<br />Checked<br />AcceptsFocus|
 
+## Upgrade to modern controls
+
+The Fluent UI (v8) controls in your canvas app in Microsoft Teams are deprecated. Modern controls replace them. Upgrade your apps to modern controls to keep getting the latest design, performance, and accessibility improvements. For more information, see [Upgrade Fluent UI controls to modern controls](../maker/canvas-apps/controls/modern-controls/upgrade-fluent-ui-controls-to-modern.md).
+
+
 ### See also
 
 [Create additional apps](create-additional-apps.md)  
-[Understand Power Apps Studio](understand-power-apps-studio.md)
+[Understand Power Apps Studio](understand-power-apps-studio.md)  
+[Upgrade Fluent UI controls to modern controls](../maker/canvas-apps/controls/modern-controls/upgrade-fluent-ui-controls-to-modern.md)
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

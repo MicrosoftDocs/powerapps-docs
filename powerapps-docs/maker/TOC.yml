@@ -519,6 +519,8 @@
               href: ./canvas-apps/controls/copilot-rename-controls.md
             - name: Recent updates
               href: ./canvas-apps/controls/modern-controls/modern-control-updates.md
+            - name: Upgrade Fluent UI controls
+              href: ./canvas-apps/controls/modern-controls/upgrade-fluent-ui-controls-to-modern.md
             - name: Badge
               href: ./canvas-apps/controls/modern-controls/modern-controls-badge.md
             - name: Button
@@ -2640,4 +2642,3 @@
     href: ./common/faq-generative-pages-model-driven.md
   - name: FAQ about Power Apps MCP Server invoke_data_entry tool
     href: ./common/faq-power-apps-mcp-server-invoke-data-entry.md
-
