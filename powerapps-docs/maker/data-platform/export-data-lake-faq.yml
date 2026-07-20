@@ -4,7 +4,7 @@ metadata:
   description: Get answers to frequently asked questions about Power Apps Azure Synapse Link for Dataverse.
   author: sabinn-msft
   ms.search.keywords: 
-  ms.date: 07/08/2026
+  ms.date: 07/20/2026
   ms.author: sabinn
   ms.reviewer: matp
   contributors: 
@@ -12,6 +12,7 @@ metadata:
   - anibakore-msft
   - VinayMancha02
   - NatuvaHiranmai
+  - gshrivastava24
   ms.topic: faq
   ms.subservice: dataverse-maker
 title: Azure Synapse Link for Dataverse FAQ
@@ -38,6 +39,15 @@ sections:
    - question: What happens when I add a column?
      answer: |
         When you add a new column to a table in the source, it's also added at the end of the file in the destination in the corresponding file partition. While the rows that existed before the addition of the column are't shown in the new column, new or updated rows show the newly added column.
+   - question: Why aren't newly added columns appearing in the data lake?
+     answer: |
+        When you add a new column to a table in the source, the new metadata (column) is synced to the data lake only as part of the next data change on that table. Azure Synapse Link syncs metadata changes together with data changes—it doesn't trigger an independent sync for a metadata-only change. As a result:
+        - If one or more rows are created or updated after the column is added, the next delta sync picks up the new column, and it becomes available in the data lake from that point onward.
+        - If no data change occurs after the column is added, the new column remains only at the source and isn't synced automatically.
+
+        To bring in the new column immediately when no data change is expected, resynchronize the affected tables. This behavior applies to all profile types.
+        > [!NOTE]
+        > This is expected behaviour. A metadata-only change, such as adding a column with no accompanying data change, doesn't, on its own, trigger a sync. The column is exported with the next data change or after a manual resync of the table.
    - question: What happens when I delete a column?
      answer: |
         When you delete a column from a table in the source, the column isn't dropped from the destination. Instead, the rows are no longer updated and are marked as null while preserving the previous rows.
