@@ -7,7 +7,7 @@ ms.reviewer: matp
 ms.service: powerapps
 ms.topic: how-to
 ms.subservice: dataverse-maker
-ms.date: 03/11/2026
+ms.date: 07/06/2026
 ms.custom: template-how-to
 ---
 # Export Dataverse data in Delta Lake format
@@ -84,8 +84,8 @@ This configuration can be considered a bootstrap step for average use cases.
 ## Connect Dataverse to Synapse workspace and export data in Delta Lake format
 
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select the environment you want.
-1. On the left navigation pane, select **Azure Synapse Link**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
-1. On the command bar, select **+ New link**
+1. On the left navigation pane, select **Link data**, and then select **Other Links**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. On the command bar, select **+ New link**, and then select **Azure Synapse**.
 1. Select **Connect to your Azure Synapse Analytics workspace**, and then select the **Subscription**, **Resource group**, and **Workspace name**.
 1. Select **Use Spark pool for processing**, and then select the precreated **Spark pool** and **Storage account**.
    :::image type="content" source="media/synapse-link-usesparkpool.png" alt-text="Azure Synapse Link for Dataverse configuration that includes spark pool.":::
@@ -143,18 +143,19 @@ To ensure that your existing Synapse Link profiles continue to process data, upg
 #### Upgrade steps
 
 1. Sign in to Power Apps and select your preferred environment.
-2. On the left navigation pane, select **Azure Synapse Link**. If the item isn't in the left navigation pane, select **…More** and then select the item you want.
-3. If you're using a retired Spark version, an error message indicating that support has ended appears. Select the upgrade button in the ribbon to begin the upgrade process.
+1. On the left navigation pane, select **Link data**, and then select **Other Links**. If the item isn't in the left navigation pane, select **…More** and then select the item you want.
+1. If you're using a retired Spark version, an error message indicating that support has ended appears. Select the upgrade button in the ribbon to begin the upgrade process.
 
    :::image type="content" source="media/synapse-link-spark-34-eol-message.png" alt-text="Error message showing Apache Spark end of support with upgrade button in ribbon.":::
 
-4. In the upgrade dialog, select the available Spark pool with the current version from the dropdown list.
+1. In the upgrade dialog, select the available Spark pool with the current version from the dropdown list.
 
    :::image type="content" source="media/synapse-link-spark-35-pool-selection.png" alt-text="Dropdown menu showing available Apache Spark pools for upgrade.":::
 
-5. Select **Update** to complete the upgrade.
+1. Select **Update** to complete the upgrade.
 
 > [!NOTE]
+>
 > - The Spark pool upgrade occurs only when a new Delta Lake conversion Spark job is triggered. Ensure you have at least one data change after selecting **Update**.
 > - After selecting **Update**, the upgrade process can take up to 48 hours to complete due to the cache. During this time, the old Spark pool continues to be used for Delta Lake conversion until the upgrade is fully applied in the backend. Don't delete the old Spark pool until you have confirmed that the new Spark pool is being used for Delta Lake conversion jobs. If the new Spark pool isn't used for Delta Lake conversion after two days, contact [Microsoft to get support](/power-platform/admin/get-help-support).
 

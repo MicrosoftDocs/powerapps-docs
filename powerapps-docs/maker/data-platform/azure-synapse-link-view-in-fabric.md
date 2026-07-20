@@ -7,7 +7,7 @@ ms.reviewer: matp
 ms.service: powerapps
 ms.subservice: dataverse-maker
 ms.topic: how-to
-ms.date: 01/09/2026
+ms.date: 07/06/2026
 ms.custom: template-how-to
 ---
 # Link your Dataverse environment to Microsoft Fabric and unlock deep insights
@@ -25,12 +25,9 @@ Dataverse also generates an enterprise-ready [Microsoft Fabric Lakehouse and SQL
 
 Low-code makers can build apps and automations to orchestrate business processes and react to insights found in Fabric. By adding those insights back to Dataverse as virtual tables connected to OneLake, makers build low-code apps with Power Apps, Power Pages, or Power Automate using the design tools already available. Using connectors to over 1,000 apps, makers create business processes that span Dynamics 365 as well as many other enterprise applications.
 
-Watch this video to learn about accessing Dataverse data in Fabric:
-> [!VIDEO https://learn-video.azurefd.net/vod/player?id=ddd288c6-e47a-4bc6-974b-4fe0f1a49362]
-
 ## Link to Fabric from Power Apps
 
-From the **Tables** area in Power Apps (make.powerapps.com), makers link to Fabric by selecting **Analyze** > **Link to Microsoft Fabric** on the command bar.
+The primary way to create a Fabric link is from the **Link data** page in Power Apps (make.powerapps.com): select **+ New link** > **Fabric link**. You can also link to Fabric in context from the **Tables** area by selecting **Analyze** > **Analyze in Fabric** on the command bar.
 
 When you select the command for the first time, a wizard driven experience links your Dataverse environment to a Fabric workspace. A Fabric Lakehouse, SQL endpoint, a Power BI dataset are created and Dataverse tables are linked to the lakehouse via shortcuts.
 
@@ -40,7 +37,10 @@ Once the link is set up, you can grant other users access to the Fabric workspac
 
 Link to Fabric creates a direct and secure Link between your data in Dataverse and a Fabric workspace. There's no need to provide a storage account or Synapse workspaces. When you link to Fabric from Power Apps, the system creates an optimized replica of your data in delta parquet format, the native format of Fabric and OneLake, using Dataverse storage such that your operational workloads aren't impacted. This replica is governed and secured by Dataverse and stays within the same region as your Dataverse environment while enabling Fabric workloads to operate on this data.
 
-Admins can manage tables linked to OneLake from the **Azure Synapse Link for Dataverse** page. By opening the **Microsoft OneLake** link, admins view tables added by makers, add more tables, and migrate the link to other environments. Tables added to OneLake consume Dataverse storage and admins can see storage consumption in the Power Platform admin center.
+Admins can manage tables linked to OneLake from the **Link data** page. By selecting the Fabric link and opening **Manage tables**, admins view tables added by makers, add more tables, and migrate the link to other environments. Tables added to OneLake consume Dataverse storage and admins can see storage consumption in the Power Platform admin center.
+
+> [!NOTE]
+> Microsoft continues to invest in Link to Fabric as the primary sync path, including the low-latency sync engine that's rolling out now. Today, a Dataverse environment links to a single Fabric workspace. Easier table selection for large environments and support for multiple Fabric links from a single environment to different Fabric workspaces are planned.
 
 > [!NOTE]
 >

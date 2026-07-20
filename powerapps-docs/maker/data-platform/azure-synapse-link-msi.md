@@ -6,9 +6,10 @@ ms.author: jasonhuang
 ms.reviewer: matp
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 02/25/2026
+ms.date: 07/06/2026
 ms.custom: template-how-to 
 ms.subservice: dataverse-maker
+contributors: anibakore-msft
 ---
 # Use managed identities for Azure with your Azure data lake storage
 
@@ -212,7 +213,7 @@ Only the Dynamics 365 and Power Platform admins who were granted the reader role
 When you create the link, Azure Synapse Link for Dataverse gets details about the currently linked enterprise policy under the Dataverse environment then caches the identity client secret URL to connect to Azure.
 
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select your environment.
-1. On the left navigation pane, select **Azure Synapse Link**, and then select **+ New link**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. On the left navigation pane, select **Link data**, and then select **Other Links**. Select **+ New link**, and then select **Azure Synapse**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Fill in the appropriate fields, according to the intended setup. Select the **Subscription**, **Resource group**, and **Storage account**. To connect Dataverse to Synapse workspace, select the **Connect to your Azure Synapse workspace** option. For Delta Lake data conversion select a Spark pool.
 1. Select **Select Enterprise Policy with Managed Service Identity**, and then select **Next**.
 1. Add the tables you want to export, and then select **Save**.
