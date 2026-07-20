@@ -55,6 +55,8 @@ items:
           href: how-to/retrieve-context.md
         - name: Add flows
           href: how-to/add-flows.md
+        - name: Push a code app into a solution (preview)
+          href: how-to/push-to-solution.md
       - name: Deploy & Monitor
         items:
         - name: Application lifecycle management (ALM)

@@ -2,7 +2,7 @@
 title: "Create an Azure Synapse Link for Dataverse with your Azure Synapse Workspace | MicrosoftDocs"
 description: "Learn how to export table data to Azure Synapse Analytics in Power Apps."
 ms.custom: ""
-ms.date: 02/18/2026
+ms.date: 07/06/2026
 ms.reviewer: "Mattp123"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -31,6 +31,10 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 
 > [!NOTE]
 > Azure Synapse Link for Microsoft Dataverse was formerly known as Export to data lake. The service was renamed effective May 2021 and will continue to export data to Azure Data Lake as well as Azure Synapse Analytics.
+>
+> In Power Apps, Azure Synapse Link is now part of the **Link data** page and appears under **Other Links**. Your existing links keep running with no migration or relink required.
+>
+> To create a new Azure Synapse Link, go to **Link data** and select **Other Links** > **+ New link**. You can no longer create an Azure Synapse Link from the **Tables** > **Analyze** menu.
 
 ## Prerequisites
 
@@ -75,8 +79,8 @@ Your storage account must have [permitted scope for copy operations](/azure/stor
 ## Connect Dataverse to Synapse workspace
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select your preferred environment.
-1. On the left navigation pane, select **Azure Synapse Link**. If **Azure Synapse Link** isn't visible in the side pane, select **…More** and choose **Discover all**. Select **Azure Synapse Link** in the **Data Management** section.
-1. On the command bar, select **+ New link**.
+1. On the left navigation pane, select **Link data**, and then select **Other Links**. Existing Azure Synapse Links appear in this section. If **Link data** isn't visible in the side pane, select **…More** and choose **Discover all**, then select **Link data** in the **Data Management** section.
+1. On the command bar, select **+ New link**, and then select **Azure Synapse**.
 1. Select the **Connect to your Azure Synapse workspace** option.
 1. Select the **Subscription**, **Resource group**, **Workspace name**, and **Storage account**. Ensure that the Synapse workspace and storage account meet the requirements specified in the [Prerequisites](#prerequisites) section. Select **Next**.
 
@@ -101,7 +105,7 @@ More information: [Configure Azure Storage firewalls and virtual networks]( /azu
 
 After you set up the Azure Synapse Link, you can manage the tables that are exported in one of two ways:
 
-- In the Power Apps (make.powerapps.com) **Azure Synapse Link** area, select **Manage tables** on the command bar to add or remove one or more linked tables.
+- In Power Apps (make.powerapps.com) go to **Link data** > **Other Links**, and then select **Manage tables** on the command bar to add or remove one or more linked tables.
 - On the Power Apps maker portal **Tables** area, select **…** next to a table, and then select the linked data lake where you want to export table data.
 
    ![Select a table for export.](media/select-entity-export.png "Select a table for export")
@@ -171,11 +175,6 @@ After creating an Azure Synapse Link, two versions of the table data will be syn
 All **Near Real-Time Data Tables** are listed and available for analysis with the naming convention *DataverseTableName*. All **Snapshot Data Tables** are listed and available for analysis with the naming convention *DataverseTableName*_partitioned.
 
 :::image type="content" source="media/near-realtime-snapshot-data.png" alt-text="Near real-time and snapshot tables":::
-
-### What's next?
-
-After successfully using the Azure Synapse Link for Dataverse service, discover how you can analyze and consume your data with **Discover Hub**. To access **Discover Hub**, go to **Power Apps** > **Azure Synapse Link**. Select your linked service and then select the **Discover Hub** tab. Here you can find recommended tools and curated documentation to help you get the most value out of your data.
-![Discover Hub.](media/discover-hub.png "Discover Hub")
 
 ### See also
 

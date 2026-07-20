@@ -1,7 +1,7 @@
 ---
 title: Choose finance and operations data in Azure Synapse Link for Dataverse
 description: Learn how to choose Dynamics 365 finance and operations apps data in Microsoft Azure Synapse Link for Dataverse and work with Azure Synapse Link and Power BI.
-ms.date: 01/09/2026
+ms.date: 07/06/2026
 ms.reviewer: matp 
 ms.topic: "how-to"
 applies_to: 
@@ -62,14 +62,14 @@ Azure Synapse Link for Dataverse offers the following features that you can use 
 You can enable both finance and operations tables and finance and operations entities in Azure Synapse Link for Dataverse. This section is focused on finance and operations tables.
 
 1. Sign in to Power Apps and select the environment you want.
-2. On the left navigation pane, select **Azure Synapse Link**.
-3. On the command bar of the **Synapse Link** page, select **+ New link to data lake**.
-4. Select **Connect to your Azure Synapse Analytics workspace**, and then select the **Subscription**, **Resource group**, and **Workspace name**.
-5. Select **Use Spark pool for processing**, and then select the precreated Spark pool and storage account.
-6. Select **Next**.
-7. Add the tables you want to export. You can choose finance and operations tables provided the [prerequisites](#prerequisites) are met.
-8. Select **Advanced**, select **Show advanced configuration settings** and enter the time interval, in minutes, for how often the incremental updates should be captured. The options **Append only** and **Partition** available at the table level are ignored for finance and operations tables because the system determines the partitioning strategy.
-9. Select **Save**. Tables selected are initialized and ready for reporting.
+1. On the left navigation pane, select **Link data**, and then select **Other Links**.
+1. On the command bar, select **+ New link to data lake**.
+1. Select **Connect to your Azure Synapse Analytics workspace**, and then select the **Subscription**, **Resource group**, and **Workspace name**.
+1. Select **Use Spark pool for processing**, and then select the precreated Spark pool and storage account.
+1. Select **Next**.
+1. Add the tables you want to export. You can choose finance and operations tables provided the [prerequisites](#prerequisites) are met.
+1. Select **Advanced**, select **Show advanced configuration settings**, and enter the time interval, in minutes, for how often the incremental updates should be captured. The options **Append only** and **Partition** available at the table level are ignored for finance and operations tables because the system determines the partitioning strategy.
+1. Select **Save**. The selected tables are initialized and ready for reporting.
 
 ![Adding finance and operations tables in Azure Synapse Link](media/synapse_link_delta_3_loops.gif)
 
@@ -179,14 +179,14 @@ To load incremental data changes from finance and operations into your own downs
 To create an Azure Synapse Link profile with incremental data:
 
 1. Sign in to Power Apps and select the environment you want.
-2. On the left navigation pane, select **Azure Synapse Link**.
-3. On the **Azure Synapse Link for Dataverse** page, select **+ New link** on the command bar.
-4. Select **Subscription**, **Resource group** and a **Storage account**. You don't need to provide a Synapse workspace or a Spark pool.
-4. Select **Next**. The option to choose tables appears.
-5. Select **Advanced**, select **Show advanced configuration settings**, and then enable the option **Enable incremental update folder structure**
-6. In the **Time interval** field, choose the desired frequency for reading incremental data. Using this frequency, the system partitions data into time stamped folders such that you can read the data without being impacted by ongoing write operations.  
-7. Select the Dataverse tables you want. You can also select finance and operations tables. The options **Append only** and **Partition** available at a table level are ignored. Data files are always appended and data is partitioned yearly.
-8. Select **Save**. Tables selected are initialized and you see incremental data in the storage account.
+1. On the left navigation pane, select **Link data**, and then select **Other Links**.
+1. In the **Other Links** section, select **+ New link** on the command bar.
+1. Select **Subscription**, **Resource group** and a **Storage account**. You don't need to provide a Synapse workspace or a Spark pool.
+1. Select **Next**. The option to choose tables appears.
+1. Select **Advanced**, select **Show advanced configuration settings**, and then enable the option **Enable incremental update folder structure**
+1. In the **Time interval** field, choose the desired frequency for reading incremental data. Using this frequency, the system partitions data into time stamped folders such that you can read the data without being impacted by ongoing write operations.  
+1. Select the Dataverse tables you want. You can also select finance and operations tables. The options **Append only** and **Partition** available at a table level are ignored. Data files are always appended and data is partitioned yearly.
+1. Select **Save**. Tables selected are initialized and you see incremental data in the storage account.
 
 ![Adding incremental data changes from finance and operations tables.](media/Synapse_link_Incremental_3_loops.gif)
 

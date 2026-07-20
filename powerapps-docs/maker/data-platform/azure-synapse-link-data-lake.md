@@ -1,7 +1,7 @@
 ---
 title: "Create an Azure Synapse Link for Dataverse with Azure Data Lake in Power Apps"
 description: "Learn how to export table data to Azure Data Lake Storage Gen2 in Power Apps."
-ms.date: 04/09/2026
+ms.date: 07/06/2026
 ms.reviewer: "Mattp123"
 ms.topic: "how-to"
 applies_to: 
@@ -13,6 +13,7 @@ search.audienceType:
   - maker
 contributors:
   - sama-zaki
+  - anibakore-msft
 ---
 # Create an Azure Synapse Link for Dataverse with Azure Data Lake
 
@@ -27,6 +28,10 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 
 > [!NOTE]
 > Azure Synapse Link for Dataverse was formerly known as Export to data lake. The service was renamed effective May 2021 and will continue to export data to Azure Data Lake as well as Azure Synapse Analytics.
+>
+> In Power Apps, Azure Synapse Link is now part of the **Link data** page and appears under **Other Links**. Your existing links keep running with no migration or relink required.
+>
+> To create a new Azure Synapse Link, go to **Link data** and select **Other Links** > **+ New link**. Azure Synapse Link creation is no longer available from the **Tables** > **Analyze** menu.
 
 ## Prerequisites
 
@@ -45,7 +50,7 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 ## Connect Dataverse to Azure Data Lake Storage Gen2
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select your preferred environment.
-1. On the left navigation pane, select **Azure Synapse Link**. If **Azure Synapse Link** isn't visible in the side panel, select **…More** and select **Discover all**. **Azure Synapse Link** is in the **Data Management** section.
+1. On the left navigation pane, select **Link data**, and then select **Other Links**. Existing Azure Synapse links appear in this section. If **Link data** isn't visible in the side panel, select **…More** and select **Discover all**. **Link data** is in the **Data Management** section.
 1. On the command bar, select **+ New link to data lake**.
 1. Select the **Subscription**, **Resource group**, and **Storage account**. Ensure that storage account meets the requirements specified in the [Prerequisites](#prerequisites) section. Select **Next**.
 
@@ -68,7 +73,7 @@ You can follow the steps in this article to create a link from one environment t
 
 After you set up the Azure Synapse Link, you can manage the tables that are exported in one of two ways:
 
-- On the Power Apps maker portal **Azure Synapse Link** area, select **Manage tables** on the command bar to add or remove one or more linked tables.
+- In the Power Apps (make.powerapps.com) **Link data** > **Other Links** area, and then select **Manage tables** on the command bar to add or remove one or more linked tables.
 - On the Power Apps maker portal **Tables** area, select **…** next to a table, and then select the linked data lake where you want to export table data.
 
    ![Select a table for export.](media/select-entity-export.png "Select a table for export")
@@ -146,11 +151,6 @@ Changes in Dataverse are continuously pushed to the corresponding CSV files by u
 Here's an example of the model.json file, which always points to the latest time-stamped account snapshot file.
 
 ![Sample snapshot model.json file.](media/sample-snapshot-json.png "Sample snapshot model.json file")
-
-### What's next?
-
-After successfully using the Azure Synapse Link for Dataverse service, discover how you can analyze and consume your data with **Discover Hub**. To access **Discover Hub**, go to **Power Apps** > **Azure Synapse Link**. Select your linked service and then select the **Discover Hub** tab. Here you can find recommended tools and curated documentation to help you get the most value out of your data.
-![Discover Hub.](media/discover-hub.png "Discover Hub")
 
 ### See also
 

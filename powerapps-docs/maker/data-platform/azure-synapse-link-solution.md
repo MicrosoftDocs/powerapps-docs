@@ -1,10 +1,9 @@
 ---
-title: "Transport Azure Synapse Link for Dataverse configuration | MicrosoftDocs"
+title: "Transport Azure Synapse Link for Dataverse configuration"
 description: "Learn to transport Azure Synapse Link for Dataverse configurations across environments."
 ms.custom: ""
-ms.date: 11/01/2021
+ms.date: 06/26/2026
 ms.reviewer: "Mattp123"
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: how-to
@@ -16,7 +15,9 @@ ms.subservice: dataverse-maker
 ms.author: "matp"
 search.audienceType: 
   - maker
-contributors: "sama-zaki"
+contributors: 
+- sama-zaki
+- anibakore-msft
 ---
 # Transport the Azure Synapse Link for Dataverse configuration across environments
 
@@ -74,7 +75,7 @@ This section describes the prerequisites necessary to transport the Azure Synaps
 
 1. In the destination environment, import the solution under the **Solutions** tab.
 
-2. In the destination environment, import the solution under the **Dataverse** > **Azure Synapse Link** tab.
+1. In the destination environment, import the solution under the **Dataverse** > **Link data** > **Other Links** tab.
 
     ![Import solution](media/import-solution.png "Import solution")
 
