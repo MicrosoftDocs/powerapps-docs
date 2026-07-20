@@ -6,7 +6,7 @@ author: yogeshgupta698
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: mkaur-msft
-ms.date: 04/28/2026
+ms.date: 07/20/2026
 ms.subservice: canvas-maker
 ms.author: yogupt
 search.audienceType:
@@ -46,6 +46,8 @@ Before implementing modern controls in your app, review the overview of modern c
 **[Date picker](modern-controls-date-picker.md)** - A control that the user can select to specify a date.
 
 **[Dropdown (preview)](modern-control-dropdown.md)** – Select a value from the list of items.
+
+**[Form](modern-control-form.md)** - Display, edit, and create records with a modern Edit or Display form.
 
 **[Header](modern-controls-header.md)** – A control that creates a modern app header.
 

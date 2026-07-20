@@ -31,6 +31,9 @@ Put each control on a different screen to make them easier to distinguish:
 
 As this article describes, combine these controls with formulas to create the overall user experience.
 
+> [!NOTE]
+> This article uses the classic Display form and Edit form controls. You can also build forms with the modern [Form control](controls/modern-controls/modern-control-form.md), which uses the Microsoft Fluent 2 design system. Both the classic and modern forms are supported and use the same form functions.
+
 ## Prerequisites
 
 * [Sign up](../signup-for-powerapps.md) for Power Apps, and then [sign in](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) by providing the same credentials that you used to sign up.

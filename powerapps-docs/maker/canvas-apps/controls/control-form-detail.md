@@ -19,6 +19,9 @@ contributors:
 # Edit form and Display form controls in Power Apps
 Display, edit, and create a record in a data source.
 
+> [!NOTE]
+> This article describes the classic Edit form and Display form controls. For the modern form built on the Microsoft Fluent 2 design system, see [Form modern control](modern-controls/modern-control-form.md). Both the classic and modern forms are supported.
+
 ## Description
 If you add a **Display form** control, the user can display all fields of a record or only the fields that you specify. If you add an **Edit form** control, the user can edit those fields, create a record, and save those changes to a data source.
 
