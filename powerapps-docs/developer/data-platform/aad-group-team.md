@@ -2,7 +2,7 @@
 title: "Work with Microsoft Entra ID group teams (Dataverse)| Microsoft Docs"
 description: "Learn about working with an Microsoft Entra ID group team using the Web API."
 ms.custom: ""
-ms.date: 09/21/2023
+ms.date: 07/21/2026
 
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -249,6 +249,12 @@ More information: [Impersonate another user](impersonate-another-user.md)
 ## Triggering an event when a team member is added or removed from the group team
 
 Group members are added or removed [just-in-time](#just-in-time-updates) into the Dataverse group team using the [associate and disassociate APIs](webapi/associate-disassociate-entities-using-web-api.md). You can register a [plug-in](plug-ins.md) on the event triggered by these team member additions or removals from the group team.
+
+## Auto-sync and refresh group team members
+
+Automatically synchronize Dataverse group team membership with its associated Microsoft Entra group by using a scheduled process, such as a Power Automate **Scheduled cloud flow**. Configure the flow to run at a desired interval (for example, every hour) and use a Dataverse [bound action](/power-automate/dataverse/bound-unbound) to invoke the [SyncGroupMembersToTeam](webapi/reference/syncgroupmemberstoteam?view=dataverse-latest) action against the target group team table row (record) in **Row ID** of the flow.
+
+Each synchronization refreshes the Dataverse group team membership to match the associated Entra group. New Entra group members are added to the team, and removed members are removed from the team.
 
 ### See also
 
