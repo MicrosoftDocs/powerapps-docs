@@ -6,7 +6,7 @@ author: yogeshgupta698
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: mkaur-msft
-ms.date: 04/28/2026
+ms.date: 07/20/2026
 ms.subservice: canvas-maker
 ms.author: yogupt
 search.audienceType:
@@ -41,11 +41,13 @@ Before implementing modern controls in your app, review the overview of modern c
 
 **[Copilot answer (preview)](modern-control-copilot-answer.md)** - A control that makers can use to add predefined questions that end users can use to get generated answers.
 
-**[Data Grid (preview)](modern-control-data-grid.md)** - A control that displays records from a data source in a scrollable, sortable, and searchable grid.
+**[Data Grid](modern-control-data-grid.md)** - A control that displays records from a data source in a scrollable, sortable, and searchable grid.
 
 **[Date picker](modern-controls-date-picker.md)** - A control that the user can select to specify a date.
 
 **[Dropdown (preview)](modern-control-dropdown.md)** – Select a value from the list of items.
+
+**[Form](modern-control-form.md)** - Display, edit, and create records with a modern Edit or Display form.
 
 **[Header](modern-controls-header.md)** – A control that creates a modern app header.
 

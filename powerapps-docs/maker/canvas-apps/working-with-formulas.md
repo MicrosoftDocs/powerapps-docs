@@ -7,7 +7,7 @@ ms.custom: canvas
 ms.collection: get-started
 ms.topic: get-started
 ms.reviewer: mkaur
-ms.date: 05/11/2025
+ms.date: 07/20/2026
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -39,7 +39,7 @@ This article provides an overview of working with formulas. Browse the [formula 
   
 ## Use Power Fx formula bar
 
-The Power Fx formula bar at the top of Power Apps Studio is where you write and edit formulas for your app. It provides IntelliSense—autocomplete suggestions, syntax highlighting, and inline error messages—to help you build formulas faster and with fewer mistakes.
+The Power Fx formula bar at the top of Power Apps Studio is where you write and edit formulas for your app. It provides IntelliSense - autocomplete suggestions, syntax highlighting, and inline error messages - to help you build formulas faster and with fewer mistakes.
 
 1. Open your app for editing in Power Apps Studio.
 1. Select any control or screen in the canvas.
@@ -52,7 +52,7 @@ The Power Fx formula bar at the top of Power Apps Studio is where you write and 
 
 ## Show a value
 
-In Excel, you can enter a specific piece of data, such as the number **42** or the phrase **Hello World**, by typing it into a cell. That cell shows the data exactly as you type it. In Power Apps, you can similarly specify a piece of data that doesn't change by setting the **[Text](controls/properties-core.md)** property of a label to the exact sequence of characters that you want, surrounded by double quotation marks.
+In Excel, you enter a specific piece of data, such as the number **42** or the phrase **Hello World**, by typing it into a cell. That cell shows the data exactly as you type it. In Power Apps, you can similarly specify a piece of data that doesn't change by setting the **[Text](controls/properties-core.md)** property of a label to the exact sequence of characters that you want, surrounded by double quotation marks.
 
 1. Create a [blank canvas app](create-blank-app.md).
 
@@ -115,7 +115,7 @@ You can configure your app with formulas so that users can change your app's app
 
 In this example, let users change the background color of the screen by adjusting sliders.
 
-1. Remove the controls from the previous procedures, or create a blank app as you did previously, and add three slider controls to it. Search for **Slider** in the search box of the **Insert** pane, then select **Slider** to add a slider to the canvas. Repeat to add three sliders.
+1. Remove the controls from the previous procedures, or create a blank app as you did previously, and add three slider controls to it. Search for **Slider** in the search box of the **Insert** pane, and then select **Slider** to add a slider to the canvas. Repeat to add three sliders.
 
     :::image type="content" source="media/working-with-formulas/insert-slider.png" alt-text="Insert a slider control." lightbox="media/working-with-formulas/insert-slider.png":::
 
@@ -133,15 +133,15 @@ In this example, let users change the background color of the screen by adjustin
 
     :::image type="content" source="media/working-with-formulas/three-sliders-partial-rgba.png" alt-text="Screenshot that shows the color of the screen when you adjust the sliders.":::
 
-    As each slider changes, the **[RGBA](functions/function-colors.md)** formula is recalculated and the screen color updates immediately.
+    As each slider changes, the **[RGBA](functions/function-colors.md)** formula recalculates and the screen color updates immediately.
 
 ## Manage app behavior
 
-You can use formulas not only to perform calculations and change appearance, but also to take action. For example, you can set the **[OnSelect](controls/properties-core.md)** property of a button to a formula that includes the **[Navigate](functions/function-navigate.md)** function. When a user selects that button, the screen that you specify in the formula appears.
+Use formulas not only to perform calculations and change appearance but also to take action. For example, set the **[OnSelect](controls/properties-core.md)** property of a button to a formula that includes the **[Navigate](functions/function-navigate.md)** function. When a user selects that button, the screen that you specify in the formula appears.
 
-You can use some functions, such as **[Navigate](functions/function-navigate.md)** and **[Collect](functions/function-clear-collect-clearcollect.md)**, only in behavior formulas. The formula reference calls out if a function can only be used in this context.
+Use some functions, such as **[Navigate](functions/function-navigate.md)** and **[Collect](functions/function-clear-collect-clearcollect.md)**, only in behavior formulas. The formula reference calls out if a function can only be used in this context.
 
-You can take more than one action in a behavior formula by separating functions with a semicolon (;). For example, you might update a context variable, push data to a data source, and then navigate to another screen&mdash;all in a single **OnSelect** formula.
+Take more than one action in a behavior formula by separating functions with a semicolon (;). For example, you might update a context variable, push data to a data source, and then navigate to another screen&mdash;all in a single **OnSelect** formula.
 
 > [!TIP]
 > If you're not sure which function to use for a behavior, try describing the action in plain language to [Copilot in the formula bar](ai-formulas-formulabar.md). For example, type "navigate to Screen2 and collect the form data" and Copilot suggests the appropriate formula.

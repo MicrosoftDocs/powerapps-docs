@@ -4,7 +4,7 @@ description: Learn about the details, properties, and examples of the Data Grid 
 author: yogeshgupta698
 ms.topic: reference
 ms.custom: canvas
-ms.date: 06/12/2026
+ms.date: 07/20/2026
 ms.subservice: canvas-maker
 ms.author: yogupt
 ms.reviewer: mkaur
@@ -12,25 +12,45 @@ search.audienceType:
   - maker
 ---
 
-# Data Grid modern control in canvas apps (preview)
-
-[This article is pre-release document and is subject to change.]
+# Data Grid modern control in canvas apps
 
 Display records from a data source in a scrollable, sortable, and searchable grid.
 
 ## Description
 
-The **Data Grid** modern control displays records in a column-and-row layout built on Fluent UI. It supports optional search filtering, sortable columns, and selectable rows. The control supports **row virtualization**, enabling smooth scrolling through large datasets with more than 2,000 records. Columns are configured as sub-controls and support multiple types including text, number, phone, email, URL, and button. Use it when you need a high-performance, data-dense view of tabular data with built-in interaction. Key properties for this control are **Items**, **Searchable**, **Sortable**, and **SelectMultiple**.
+The **Data Grid** modern control displays records in a column-and-row layout built on Fluent UI. It supports optional search filtering, sortable columns, and selectable rows. The control supports **row virtualization**, enabling smooth scrolling through large datasets with more than 2,000 records. You configure columns as subcontrols, and they support multiple types including text, number, phone, email, URL, and button. Use this control when you need a high-performance, data-dense view of tabular data with built-in interaction. Key properties for this control are **Items**, **Searchable**, **Sortable**, and **SelectMultiple**.
 
 > [!NOTE]
-> The **Data Grid** control is a new control separate from the existing **Table** control. It is not a replacement for the **Table** control.
+> The **Data Grid** control is the recommended control for displaying tabular data in canvas apps, instead of the [Table control](modern-control-table.md). It provides improved performance and usability for data-dense scenarios.
 
 > [!NOTE]
-> If text wrapping is enabled at the column level, row virtualization is disabled. To take advantage of virtualization for large datasets, keep text wrapping turned off on your columns.
+> If you enable text wrapping at the column level, row virtualization is disabled. To take advantage of virtualization for large datasets, keep text wrapping turned off on your columns.
+
+## Recent improvements
+
+The Data Grid control includes the following improvements for general availability:
+
+- **Automatic virtualization for large datasets**: Row virtualization turns on automatically so you can scroll smoothly through large datasets. Virtualization is disabled only when you enable text wrapping on a column. The app checker flags columns that have text wrapping enabled so you can keep virtualization on.
+- **Consistent row heights**: Rows render at a consistent height whether or not virtualization is active.
+- **Resettable control**: The **Reset** function now resets the control, including the current selection.
+- **Multiple-selection choice columns**: Columns bound to multiple-selection choice fields now display their values.
+- **More reliable search**: Fixed an issue that could cause the control to stop responding when you use the search bar, and improved the search bar's padding and alignment.
+- **Email columns**: Selecting a value in an email column no longer affects your browser session.
+- **Copy and paste**: Copying and pasting the control no longer changes its columns into custom variants.
+- **Column configuration**: You can configure column variants for data sources that aren't directly connected, and column property formulas can use `ThisItem`.
+- **Data source changes**: Switching the data source refreshes the columns, and the search filter clears when you turn off **Searchable**.
 
 ## Limitations
 
-- **Attachment column not supported**: Attachment-type columns from Dataverse are not currently supported and do not render in the grid.
+The Data Grid control has the following limitations:
+
+- **Attachment columns aren't supported**: The grid doesn't render attachment-type columns from Microsoft Dataverse.
+- **Per-column text styling isn't available**: You can't set the font size or font color for an individual column.
+- **Alternating row colors aren't available**: The grid doesn't support zebra striping.
+- **Variable row height isn't available**: All rows use the same height. You can't set a custom or per-row height.
+- **Search hint text isn't customizable**: You can't change the placeholder text in the search bar.
+- **Search delegation**: Search might not be delegable on all data sources, and a delegation warning might not appear. For large data sources, verify that search returns the results you expect.
+- **DefaultSelectedItems**: Changes to the default selected items aren't reflected after the grid first loads.
 
 ## General
 
@@ -40,7 +60,7 @@ The **Data Grid** modern control displays records in a column-and-row layout bui
 
 ## Behavior
 
-**Searchable** – Whether a search bar appears above the grid. When **true**, users can type to filter visible rows; the current search string is exposed via the **SearchText** output property. Default is **false**.
+**Searchable** – Whether a search bar appears above the grid. When **true**, users can type to filter visible rows. The current search string is exposed through the **SearchText** output property. The default value is **false**.
 
 **Sortable** – Whether users can sort by a column by selecting its header. Default is **false**.
 
@@ -66,7 +86,7 @@ The **Data Grid** modern control displays records in a column-and-row layout bui
 
 ## Style and theme
 
-**BasePaletteColor** – The base color used by the theme to generate the control's color palette.
+**BasePaletteColor** – The base color that the theme uses to generate the control's color palette.
 
 **Font** – The font family used for the grid text.
 
@@ -78,13 +98,13 @@ The **Data Grid** modern control displays records in a column-and-row layout bui
 
 **Selected** – The most recently selected row, returned as a record.
 
-**SelectedItems** – All currently selected rows, returned as a table. Use this when **SelectMultiple** is **true**.
+**SelectedItems** – All currently selected rows, returned as a table. Use this property when **SelectMultiple** is **true**.
 
-**SearchText** – The current value the user has typed in the search bar. Only available when **Searchable** is **true**.
+**SearchText** – The current value the user types in the search bar. This property is only available when **Searchable** is **true**.
 
 ## Configuring columns
 
-The Data Grid uses **Data Grid Column** sub-controls to define how each column appears and what data it shows. Columns are added when you connect a data source and configure fields in the authoring panel. Column properties are locked by default — select a column and choose **Unlock** to customize it.
+The Data Grid uses **Data Grid Column** sub-controls to define how each column appears and what data it shows. You add columns when you connect a data source and configure fields in the authoring panel. Column properties are locked by default. Select a column and choose **Unlock** to customize it.
 
 ### Column properties
 
