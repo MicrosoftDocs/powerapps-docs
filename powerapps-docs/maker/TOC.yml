@@ -519,6 +519,8 @@
               href: ./canvas-apps/controls/copilot-rename-controls.md
             - name: Recent updates
               href: ./canvas-apps/controls/modern-controls/modern-control-updates.md
+            - name: Upgrade Fluent UI controls
+              href: ./canvas-apps/controls/modern-controls/upgrade-fluent-ui-controls-to-modern.md
             - name: Badge
               href: ./canvas-apps/controls/modern-controls/modern-controls-badge.md
             - name: Button
@@ -533,6 +535,8 @@
               href: ./canvas-apps/controls/modern-controls/modern-control-date-picker.md
             - name: Dropdown
               href: ./canvas-apps/controls/modern-controls/modern-control-dropdown.md
+            - name: Form
+              href: ./canvas-apps/controls/modern-controls/modern-control-form.md
             - name: Header
               href: ./canvas-apps/controls/modern-controls/modern-controls-header.md
             - name: Icon
@@ -565,7 +569,7 @@
               href: ./canvas-apps/controls/modern-controls/modern-control-avatar.md
             - name: Copilot answer (preview)
               href: ./canvas-apps/controls/modern-controls/modern-control-copilot-answer.md
-            - name: Data Grid (preview)
+            - name: Data Grid
               href: ./canvas-apps/controls/modern-controls/modern-control-data-grid.md
             - name: Dropdown (preview)
               href: ./canvas-apps/controls/modern-controls/modern-control-dropdown.md
@@ -2640,4 +2644,3 @@
     href: ./common/faq-generative-pages-model-driven.md
   - name: FAQ about Power Apps MCP Server invoke_data_entry tool
     href: ./common/faq-power-apps-mcp-server-invoke-data-entry.md
-

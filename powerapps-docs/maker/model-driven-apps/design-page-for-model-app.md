@@ -2,7 +2,7 @@
 title: "Design a custom page for your model-driven app" 
 description: "Learn how to design a custom page for your model-driven app"
 ms.custom: ""
-ms.date: 01/28/2025
+ms.date: 07/20/2026
 ms.reviewer: ""
 ms.subservice: mda-maker
 ms.topic: how-to
@@ -46,6 +46,10 @@ Custom page authoring currently supports a subset of canvas app controls. The ta
   |Canvas components (preview) |Custom| [Add canvas components to a custom page](page-canvas-components.md)|
   
 <sup>1</sup> Control is a new modern control. The control was introduced for [canvas apps in Teams]( /power-platform-release-plan/2020wave1/microsoft-powerapps/build-apps-teams-modern-controls). The control is based on [Fluent UI library](https://developer.microsoft.com/fluentui#/controls/web) wrapped with  [Power Apps Component Framework](../../developer/component-framework/overview.md).
+
+> [!IMPORTANT]
+> The Fluent UI (v8) controls that you add to a custom page are deprecated. Modern controls replace them. Upgrade your apps to modern controls to keep getting the latest design, performance, and accessibility improvements. For more information, see [Upgrade Fluent UI controls to modern controls](../canvas-apps/controls/modern-controls/upgrade-fluent-ui-controls-to-modern.md).
+
 
 ## Custom components support for custom page
 
@@ -185,3 +189,5 @@ Here's an example navigation with the page containing controls, code, and canvas
 [Building responsive layout](../canvas-apps/build-responsive-apps.md)
 
 [Add a custom page to your model-driven app](add-page-to-model-app.md)
+
+[Upgrade Fluent UI controls to modern controls](../canvas-apps/controls/modern-controls/upgrade-fluent-ui-controls-to-modern.md)

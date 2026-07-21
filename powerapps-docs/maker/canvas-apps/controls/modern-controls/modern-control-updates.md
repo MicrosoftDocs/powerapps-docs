@@ -4,7 +4,7 @@ description: Learn about recent updates to modern controls in Power Apps canvas 
 author: yogeshgupta698
 ms.topic: overview
 ms.custom: canvas
-ms.date: 04/20/2026
+ms.date: 07/20/2026
 ms.subservice: canvas-maker
 ms.author: yogupt
 ms.reviewer: mkaur
@@ -63,6 +63,7 @@ The following table lists each control that has an updated version, with a link 
 | Dropdown | [Updates to Dropdown control](modern-control-dropdown.md#recent-updates) | Fluent-themed flyout on desktop, DefaultSelectedItems renamed to Default, FontSize renamed to Size, enum format changes |
 | Icon | [Updates to Icon control](modern-control-icon.md#recent-updates) | OnSelect support, TabIndex removed, Style renamed to IconStyle, new border and padding properties |
 | Slider | [Updates to Slider](modern-control-slider.md#recent-updates) | Value renamed to Default, Layout renamed to LayoutDirection, enum values for Size and LayoutDirection, new Tooltip property |
+| Form | [Updates to Form](modern-control-form.md#recent-improvements) | New screen templates, red required indicator, consistent typography, display names for people fields, reliable date fields; same form model and functions as classic |
 
 ## Property changes across modern controls
 
@@ -70,7 +71,7 @@ This section covers changes that affect multiple controls. If you only need to u
 
 ### Property renames
 
-Many properties were renamed for consistency across controls. If your formulas reference the old names, you need to update them to the new names:
+For consistency across controls, many properties have new names. If your formulas reference the old names, update them to use the new names:
 
 | Old name (Previous) | New name (New) | Affected controls |
 |---------------------|----------------|-------------------|
@@ -84,9 +85,9 @@ Many properties were renamed for consistency across controls. If your formulas r
 
 ### New enum patterns
 
-Properties that previously accepted plain text strings (like `"Bold"` or `"Start"`) now require typed enum values (like `FontWeight.Bold` or `Align.Left`). If your formulas hardcode the old string values, you need to update them.
+Properties that previously accepted plain text strings (like `"Bold"` or `"Start"`) now require typed enum values (like `FontWeight.Bold` or `Align.Left`). If your formulas hardcode the old string values, update them.
 
-Using enums gives you IntelliSense autocomplete, compile-time validation, and localization safety in your Power Fx formulas. Each control's update guide lists the specific enum changes for that control.
+By using enums, you get IntelliSense autocomplete, compile-time validation, and localization safety in your Power Fx formulas. Each control's update guide lists the specific enum changes for that control.
 
 #### Align
 
@@ -194,7 +195,7 @@ This change gives you more flexibility to create controls with different corner 
 
 ### OnChange behavior improvements
 
-Several controls changed *when* the **OnChange** event fires. This is one of the most impactful changes — if your app logic depends on OnChange, review this table:
+Several controls changed *when* the **OnChange** event fires. This change is one of the most impactful changes. If your app logic depends on OnChange, review this table:
 
 | Control | Previous OnChange | New OnChange | Impact |
 |---------|------------------|--------------|--------|
@@ -226,7 +227,7 @@ When you add an updated control to a mobile layout canvas, it automatically uses
 - Larger font sizes (typically 24 pt)
 - Appropriate padding and spacing
 
-You don't need to do anything extra — these defaults apply automatically for new controls on mobile layouts.
+You don't need to do anything extra - these defaults apply automatically for new controls on mobile layouts.
 
 ### Updated command bar and right-click menus
 
