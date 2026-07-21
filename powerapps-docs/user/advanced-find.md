@@ -123,7 +123,7 @@ Before you can share a personal view, it must be saved.
    > [!div class="mx-imgBorder"] 
    > ![Select user or team names.](media/saved_views_4.png "Select the user or team names")
     
-7. Select each user’s permission and then select **Share**.
+7. Select each user's permission and then select **Share**.
 
    > [!div class="mx-imgBorder"] 
    > ![Share the view.](media/saved_views_5.png "Select share to share the view")

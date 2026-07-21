@@ -27,7 +27,7 @@ For more information on how privileges and access works, see [How access to a ro
 1. From a list of rows, select the row that you want to assign to someone else. You can select multiple rows.
 
    > [!div class="mx-imgBorder"]
-   > ![Select row that you want to reassign.](media/reassign-1.png "Select row that you want o reassign")
+   > ![Select row that you want to reassign.](media/reassign-1.png "Select row that you want to reassign")
 
 1. On the command bar, select **Assign**. 
 
@@ -52,7 +52,7 @@ Use advanced find to search for rows and then reassign them to someone else. For
 1. On the command bar, select **Advanced Find**.
 
    > [!div class="mx-imgBorder"]
-   > ![Advanced find.](media/assign3.png "advacned find")
+   > ![Advanced Find.](media/assign3.png "Advanced Find")
    
 1. Use the [advanced find search](advanced-find.md) to find rows that you want to assign to someone else. For example, to look for active row types that are **Challenges**, in **Look for:** enter **Challenges** and status equals **Active**. Then select **Apply** to run the query.
 
@@ -78,7 +78,7 @@ Use advanced find to search for rows and then reassign them to someone else. For
  
  1. Under **Security (Preview)**, select **Users**.
  
- 1. The users list open in Power Platform admin center. From the list of users, select a user name to open the user's profile.
+ 1. The users list opens in Power Platform admin center. From the list of users, select a user name to open the user's profile.
 
  1. Under **Manager**, select **Reassign record**.
    
@@ -109,7 +109,7 @@ Use advanced find to search for rows and then reassign them to someone else. For
 1. On the command bar, select **Share**. 
 
    > [!div class="mx-imgBorder"]
-   > ![Select share to share row.](media/share-1.png "Select share to share to share a row")
+   > ![Select share a row.](media/share-1.png "Select 'share' to share a row")
    
  1. On the share dialog box, select search icon.  
 
@@ -133,7 +133,7 @@ Use advanced find to search for rows and then reassign them to someone else. For
  
  1. From a list of rows that you own, select the row that you want to remove someone from the shared row.
  1. On the command bar, select **Share**.
- 1. On the share dialog box, select the user or team who you want to remove sharing from.
+ 1. On the share dialog box, select the user or team whose permissions you want to remove.
  1. Select the **Share** button.
 
 
