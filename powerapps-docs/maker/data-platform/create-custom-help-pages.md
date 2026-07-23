@@ -2,7 +2,7 @@
 title: "Create custom help pages for model-driven apps"
 description: "Create custom help pages with model-driven apps in Power Apps"
 ms.custom: ""
-ms.date: 06/02/2025
+ms.date: 07/23/2025
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -11,7 +11,7 @@ applies_to:
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "powerapps"
-author: "matthewbolanos"
+author: "Mattp123"
 ms.subservice: dataverse-maker
 ms.author: "matp"
 search.audienceType: 
@@ -51,12 +51,13 @@ To use the custom help panes feature, your environment needs the [custom help pa
 ### Enable custom help panes for your environment
 
 1. Sign in to the Power Platform admin center at [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com).
-1. In **Settings** for the selected environment, select **Product** > **Features**.
+1. Select **Manage** on the left pane, and then open the environment you want.
+1. Select **Settings** on the command bar, and then select **Product** > **Features**.
 1. Under **Help features** turn **Enable Custom Help Panes** to **On**.
 
 > [!IMPORTANT]
 >
-> You can enable custom help panes or customizable help, but not both at the same time. Confirm that **Use help for customizable entities** is set to **No**.  
+> Make sure that **Custom help for customizable entities** is set to **No**, otherwise you can't turn on **Enable Custom Help Panes**. This is because you can't use both custom help panes and customizable help at the same time.
 
 ## Privileges required
 
