@@ -1,7 +1,7 @@
 ---
 title: Frequently asked questions when transitioning from legacy data integration services to Fabric link and Azure Synapse Link for Dataverse
 description: Learn how to transition from export to data lake, BYOD, and data export service to link to Microsoft Fabric and Azure Synapse Link for Microsoft Dataverse.
-ms.date: 02/20/2026
+ms.date: 07/23/2026
 ms.reviewer: matp 
 ms.topic: "how-to"
 applies_to: 
@@ -42,7 +42,7 @@ Both these services operate across PowerApps, Dynamics 365 customer engagement a
 
 Fabric Link provides a seamless, no-copy integration with Dataverse and Microsoft Fabric, eliminating the need to manage complex data export processes. With link to Microsoft Fabric, your data stays securely within your Dataverse environment, while authorized users in Microsoft Fabric can access the data, making it easier for your team to leverage data for insights without the hassle of managing separate storage and integration solutions. This streamlined approach can lead to cost savings and more efficient data utilization, especially if you’re already using Power BI. [Go to this article](/powerapps-docs/maker/data-platform/azure-synapse-link-transition-from-FnO.md#Simplification with Fabric link) for a comparison of total cost of ownership (TCO) between link to Microsoft Fabric and link to Azure Synapse. 
 
-Using the [Fabric Link transition tool provided by Dynamics 365 FastTrack team](https://github.com/microsoft/Dynamics-365-FastTrack-Implementation-Assets/tree/master/Analytics/DataverseLink/FabricLink_SQLAnalyticsEndpoint), you can create a Fabric data warehouse with the same data shapes as export to data lake feature and minimize the effort to transition your existing reports and data pipelines.
+Using the [Fabric Link transition tool provided by Dynamics 365 FastTrack team](https://github.com/microsoft/Dynamics-365-FastTrack-Implementation-Assets/tree/master/Administration/Analytics/DataverseLink/FabricLink_SQLAnalyticsEndpoint), you can create a Fabric data warehouse with the same data shapes as export to data lake feature and minimize the effort to transition your existing reports and data pipelines.
 
 ## What option should I consider if I want to keep the data export solution?
 
