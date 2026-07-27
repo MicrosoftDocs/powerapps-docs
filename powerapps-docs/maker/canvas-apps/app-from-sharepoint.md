@@ -7,7 +7,7 @@ ms.topic: how-to
 ms.custom: canvas
 ms.collection: get-started
 ms.reviewer: 
-ms.date: 02/18/2026
+ms.date: 07/27/2026
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
@@ -30,14 +30,11 @@ You can create an app by using a list in SharePoint or Lists in two ways:
 - Sign in to Power Apps and then [create an app by connecting to a list in SharePoint from Power Apps.](app-from-sharepoint.md#use-a-list-in-sharepoint-or-lists-to-create-an-app)
 - [Create an app directly from a list in SharePoint or Lists.](app-from-sharepoint.md#create-an-app-directly-from-a-list-in-sharepoint-or-lists)
 
-When you create the app, Power Apps Studio opens and shows an app with three screens:
+When you create the app, Power Apps Studio opens with a single-screen, responsive app that's ready to use. The app consolidates all the functionality—browse items, view details, and add, edit, or delete records—onto one screen. It's built with containers, so the layout adjusts to the size of the device or window where the app runs. By default, the app opens in tablet layout and automatically adapts to phones.
 
-- **Browse screen**: Scroll through all items in the list.
-- **Details screen**: Show all information about a single item in the list.
-- **Edit screen**: Create an item or update information about an existing item.
+> [!NOTE]
+> **What changed:** Newly generated apps now use a single responsive screen. Previously, Power Apps generated an app with three separate screens—**Browse**, **Details**, and **Edit**—designed for phones. The new template provides the same functionality in one screen that adapts to both tablet and phone layouts. Apps you generated earlier keep their original three-screen design and continue to work. Only apps you generate going forward use the single-screen template.
 
-Watch this video to learn how to create a canvas app from a list.
-> [!VIDEO https://learn-video.azurefd.net/vod/player?id=de3b0fbc-f5b6-4958-855e-109f9c3692ac]
 
 > [!NOTE]
 > When you create or view a list in SharePoint, you're automatically redirected to Microsoft Lists. The list is always available in both Microsoft Lists and SharePoint. Learn more in [What is a list in Microsoft 365?](https://support.microsoft.com/en-us/office/what-is-a-list-in-microsoft-365-93262a88-20ad-4edc-8410-b6909b2f59a5)
