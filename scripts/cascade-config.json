@@ -13,7 +13,8 @@
   { "repo": "MicrosoftDocs/dynamics-365-project-operations-pr", "reviewer": "johnmichalak" },
   { "repo": "MicrosoftDocs/customer-insights-pr", "reviewer": "alfergus" },
   { "repo": "MicrosoftDocs/Dynamics-365-Operations", "reviewer": "twheeloc" },
-  { "repo": "MicrosoftDocs/industry-solutions-pr", "reviewer": "lsuresh" }
+  { "repo": "MicrosoftDocs/industry-solutions-pr", "reviewer": "lsuresh" },
+  { "repo": "MicrosoftDocs/power-platform-pr", "reviewer": "lalexms" }
   ],
   "base_branch": "main",
   "date_field": "ms.date",
