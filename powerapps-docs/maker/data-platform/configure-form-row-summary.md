@@ -1,7 +1,7 @@
 ---
 title: "Configure a row summary for a model-driven app"
 description: "Learn how to configure a row summary for a model-driven app forms and views that uses AI to let your users view key information about a record."
-ms.date: 02/11/2026
+ms.date: 07/27/2026
 ms.update-cycle: 180-days
 ms.subservice: dataverse-maker
 ms.topic: how-to
@@ -119,6 +119,16 @@ Row summaries are solution-aware and can be added to a solution to facilitate mo
 
 > [!IMPORTANT]
 > Don't add AI Skill Config table rows with an owner of *System* to your solutions. These don't correspond to row summaries you have created and might cause solution import to fail.  
+
+## Known limitations
+
+Keep the following limitations in mind when you configure a row summary:
+
+- **Dates**. Row summary isn't intended for date-based operations, such as calculating durations, comparing dates, or determining status from a date. Use business logic or calculated columns for those scenarios.
+- **Related-record links**. Hyperlinks to related records might not render as expected in the summary.
+- **Formula and calculated columns**. Values from these columns might not be reflected accurately.
+- **Metadata**. Choice (option set) labels and related-table associations might not be interpreted as expected.
+- **Formatting**. Rich formatting, citations, and footnotes aren't supported.
 
 ## Related information
 
