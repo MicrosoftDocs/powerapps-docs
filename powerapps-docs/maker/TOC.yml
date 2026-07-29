@@ -159,6 +159,8 @@
           href: ../user/email-signature.md
       - name: Configure the enhanced insert email template
         href: ../user/customize-insert-email-template.md
+      - name: Use sensitivity labels in emails
+        href: ../user/use-sensitivity-labels.md
     - name: Work with grid and views
       items:
       - name: Explore data in a view on a grid page
@@ -1689,6 +1691,8 @@
           items:
           - name: List of controls available
             href: ./model-driven-apps/additional-controls-for-dynamics-365-for-phones-and-tablets.md
+          - name: Configure sensitivity labels for emails
+            href: ../user/configure-email-sensitivity.md
           - name: Set up the timeline control
             href: ./model-driven-apps/set-up-timeline-control.md
           - name: Use custom connectors with the timeline control
