@@ -2,7 +2,7 @@
 title: "Types of tables"
 description: "Learn about the different types of Microsoft Dataverse tables."
 ms.custom: ""
-ms.date: 05/20/2026
+ms.date: 07/30/2026
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -68,16 +68,16 @@ Enable activities to add activities to a table and use the Regarding lookup for 
    > Once enabled this setting can't be disabled.
 5. Select **Save**.
 
-### Enable users to associate email to multiple records
+### Enable users to associate activity table records to multiple business records
 
-Users sometimes need to associate an email to multiple records. For example, a customer sends an email that is related to multiple cases. The existing Regarding lookup only allows a user to relate an email to a single parent record. Email records can now be associated to multiple records such as accounts, contacts, leads, opportunities, and cases through a new [activity party type](../../developer/data-platform/activityparty-entity.md#activity-party-types) column named **related**. When an email is associated to multiple records, it appears in the [timeline](../../user/add-activities.md) for each of the associated records.
+Users sometimes need to associate an activity, like email to multiple records. For example, a customer sends an email that is related to multiple cases. The existing Regarding lookup only allows a user to relate an email to a single parent record. The email activity record can now be associated to multiple business records such as accounts, contacts, leads, opportunities, and cases through a new [activity party type](../../developer/data-platform/activityparty-entity.md#activity-party-types) column named **related**. When this email activity record is associated to multiple business records, it appears in the [timeline](../../user/add-activities.md) for each of the associated records.
 
 > [!NOTE]
-> This feature is currently only supported with email activities.
+> This feature is supported with the [activity tables](#activity-tables) listed earlier in this article. However, the **Task** activity isn't supported.
 
-The related column isn't added to email form by default. To enable users to use this new column, add the **related** column to the email form. For information about how to add a column to a form, go to [add columns to a form](../../maker/model-driven-apps/add-move-or-delete-fields-on-form.md#add-columns-to-a-form).
+The related column isn't added to the activity table form by default. To enable users to use this new column, add the **related** column to the activity main form. For information about how to add a column to a form, see [add columns to a form](../../maker/model-driven-apps/add-move-or-delete-fields-on-form.md#add-columns-to-a-form).
 
-After you add the related column to the form, users can associate an email record with other related party records (parties) like cases or opportunities.
+After you add the related column to the form, users can associate the activity record with other related party records (parties) like cases or opportunities.
 
 #### Differences between regarding and related columns
 
