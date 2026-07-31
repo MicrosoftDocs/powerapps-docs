@@ -2,9 +2,9 @@
 title: "Customize the editable grid control | Microsoft Docs"
 description: "Learn how you can customize the editable grid control."
 keywords: "Component Framework, code components, Power Apps controls"
-author: clromano
-ms.author: clromano
-ms.date: 07/25/2022
+author: Hillaryyaory-microsoft
+ms.author: hillaryyaory
+ms.date: 07/31/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 ms.subservice: pcf

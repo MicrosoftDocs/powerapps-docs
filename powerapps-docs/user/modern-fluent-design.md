@@ -3,7 +3,7 @@ title: Modern, refreshed look for model-driven apps
 description: Learn about the updated user interface that makes model-driven apps easier to use.
 author: sriharibs-msft
 ms.topic: overview
-ms.date: 07/07/2026
+ms.date: 07/31/2026
 ms.service: powerapps
 ms.subservice: end-user
 ms.author: srihas
@@ -104,7 +104,11 @@ If you customize the chart colors, the new look overrides your custom colors. To
 > - This is a preview feature.
 > - [!INCLUDE [cc-preview-features-definition](../includes/cc-preview-features-definition.md)]
 
-The refreshed header and navigation make apps easier to use with a modern app header, streamlined sitemap, and condensed page headers with compact commands. This experience enhances productivity by reducing time spent navigating pages, finding commands, and learning layouts.
+The header and navigation refresh feature makes apps easier to use and enhances productivity by reducing time spent navigating pages, finding commands, and learning layouts. This preview includes:
+
+- **Modern app header and streamlined sitemap.** Updated styling aligned to the Fluent design system with a simplified sitemap that reduces navigation complexity.
+- **Condensed page headers with compact commands.** Page headers take up less vertical space, giving more room for content.
+- **New command ordering.** Injected system commands like **Show As** and **Show Chart** now appear in the third position on the command bar, after **New** and **Delete**, giving the most common user actions priority placement.
 
 Here's how the new app header and the streamlined sitemap look:
 
