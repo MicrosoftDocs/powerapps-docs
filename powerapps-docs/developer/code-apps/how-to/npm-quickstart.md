@@ -51,6 +51,7 @@ Install the project dependencies and the Power Apps client library for code apps
 
 ```bash
 npm install -g @microsoft/power-apps-cli
+npm install -g @microsoft/power-apps
 npm install
 ```
 
