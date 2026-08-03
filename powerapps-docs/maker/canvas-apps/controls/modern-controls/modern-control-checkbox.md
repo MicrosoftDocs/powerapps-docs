@@ -5,7 +5,7 @@ author: yogeshgupta698
 
 ms.topic: reference
 ms.component: canvas
-ms.date: 3/23/2023
+ms.date: 08/03/2026
 ms.subservice: canvas-maker
 ms.author: yogupt
 
@@ -24,11 +24,11 @@ contributors:
 A control that the user can select or clear to set its value to **true** or **false**.
 
 ## Description
-The user can specify a Boolean value by using this familiar control that is used in Graphical User Interface (GUI) for decades. The key properties for this control are **Checked**, **Label**, **OnCheck**, and **OnUncheck**.
+The user can specify a Boolean value by using this familiar control that's been used in graphical user interfaces (GUIs) for decades. The key properties for this control are **Checked**, **Label**, **OnCheck**, and **OnUncheck**.
 
 ## General
 
-**Label** – The Checkbox's label.
+**Label** – The checkbox's label.
 
 **AccessibleLabel** – Label for screen readers.
 
@@ -52,13 +52,13 @@ The user can specify a Boolean value by using this familiar control that is used
 
 ## Style and theme
 
-**BasePaletteColor** - The color palette applied to a control. This impacts all surfaces of the control that render a theme color. 
+**BasePaletteColor** - The color palette applied to a control. This color impacts all surfaces of the control that render a theme color. 
 
 **Font** - The name of the family of fonts in which text appears. 
 
-**FontSize** - The font size of the text that appears on a control. If the value is null or zero, then the font size is driven by selected Fluent theme. 
+**Size** - The font size of the text that appears on a control. If the value is null or zero, the selected Fluent theme drives the font size. 
 
-**FontColor** - The color of text in a control. 
+**Color** - The color of text in a control. 
 
 **FontWeight** - The weight of the text in a control: Bold, Lighter, Normal, or Semibold. 
 
@@ -71,11 +71,36 @@ The user can specify a Boolean value by using this familiar control that is used
 
 ## Additional properties
 
+**Tooltip** - Explanatory text that appears when the user hovers over the control. 
+
 **OnCheck** - Actions to perform when the user checks the control. 
 
 **OnSelect** - Actions to perform when the user selects a control. 
 
 **OnUncheck** - Actions to perform when the user unchecks the control. 
+
+## Recent updates
+
+The updated version of the **Checkbox** modern control includes the following improvements and behavior changes.
+
+### Property renames
+
+| Previous property | New property | Notes |
+|---|---|---|
+| `FontColor` | `Color` | Renamed for consistency across modern controls. |
+| `FontSize` | `Size` | Renamed for consistency across modern controls. |
+
+### Improvements
+
+- **Tooltip support**: A new `Tooltip` property shows explanatory text when the user hovers over the checkbox.
+- **Read-only View mode**: When `DisplayMode` is `View`, the checkbox now renders as read-only rather than looking disabled, so users can clearly tell the difference between a value they can't change and a control that's unavailable.
+- **More reliable Checked behavior**: The control now honors a `Checked` default of **true** when the app loads, and the `OnCheck` and `OnUncheck` events fire consistently, including when the checkbox is used inside a gallery.
+
+## See also
+
+- [Modern controls overview](overview-modern-controls.md)
+- [Recent updates to modern controls](modern-control-updates.md)
+- [Toggle modern control](modern-control-toggle.md)
 
 
 
