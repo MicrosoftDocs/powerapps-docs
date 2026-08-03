@@ -2,7 +2,7 @@
 title: "Create or edit filters in model-driven app views | MicrosoftDocs"
 description: "Learn how to create and edit filters or views for your app"
 keywords: "expression builder"
-ms.date: 01/28/2025
+ms.date: 08/03/2026
 ms.custom: 
 ms.topic: how-to
 applies_to: 
@@ -55,9 +55,9 @@ In this article, you create or edit filters by performing the following tasks:
 
 1. Type or select the comparison value for the condition.
 
-1. Select **Apply**.
+1. Select **Apply** or to remove a condition, select **Close** and the condition is removed without confirmation.
 
-1. To remove a condition, select **Close**. The condition is removed without confirmation.
+1. To save the filter select **Save** or to save the filter and make available to users select **Save and publish**.
 
 ### Open the expression builder
 
