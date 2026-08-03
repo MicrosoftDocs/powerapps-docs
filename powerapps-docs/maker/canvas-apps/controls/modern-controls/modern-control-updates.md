@@ -4,7 +4,7 @@ description: Learn about recent updates to modern controls in Power Apps canvas 
 author: yogeshgupta698
 ms.topic: overview
 ms.custom: canvas
-ms.date: 07/20/2026
+ms.date: 08/03/2026
 ms.subservice: canvas-maker
 ms.author: yogupt
 ms.reviewer: mkaur
@@ -63,6 +63,8 @@ The following table lists each control that has an updated version, with a link 
 | Dropdown | [Updates to Dropdown control](modern-control-dropdown.md#recent-updates) | Fluent-themed flyout on desktop, DefaultSelectedItems renamed to Default, FontSize renamed to Size, enum format changes |
 | Icon | [Updates to Icon control](modern-control-icon.md#recent-updates) | OnSelect support, TabIndex removed, Style renamed to IconStyle, new border and padding properties |
 | Slider | [Updates to Slider](modern-control-slider.md#recent-updates) | Value renamed to Default, Layout renamed to LayoutDirection, enum values for Size and LayoutDirection, new Tooltip property |
+| Toggle | [Updates to Toggle](modern-control-toggle.md#recent-updates) | FontColor renamed to Color, FontSize renamed to Size, LabelPosition uses enum values, new Tooltip property, improved sizing, read-only View mode |
+| Checkbox | [Updates to Checkbox](modern-control-checkbox.md#recent-updates) | FontColor renamed to Color, FontSize renamed to Size, new Tooltip property, read-only View mode, more reliable Checked behavior |
 | Form | [Updates to Form](modern-control-form.md#recent-improvements) | New screen templates, red required indicator, consistent typography, display names for people fields, reliable date fields; same form model and functions as classic |
 
 ## Property changes across modern controls
@@ -75,8 +77,8 @@ For consistency across controls, many properties have new names. If your formula
 
 | Old name (Previous) | New name (New) | Affected controls |
 |---------------------|----------------|-------------------|
-| `FontColor` | `Color` | Text, Link, Info Button, Radio, Text Input, Tab List, Number Input, Date Picker, Combo Box, Button |
-| `FontSize` | `Size` | Text, Link, Info Button, Radio, Text Input, Tab List, Number Input, Date Picker, Combo Box, Button, Dropdown |
+| `FontColor` | `Color` | Text, Link, Info Button, Radio, Text Input, Tab List, Number Input, Date Picker, Combo Box, Button, Toggle, Checkbox |
+| `FontSize` | `Size` | Text, Link, Info Button, Radio, Text Input, Tab List, Number Input, Date Picker, Combo Box, Button, Dropdown, Toggle, Checkbox |
 | `FontItalic` | `Italic` | Text, Link, Info Button, Radio, Text Input, Tab List, Date Picker, Combo Box, Button |
 | `FontStrikethrough` | `Strikethrough` | Text, Link, Info Button, Radio, Text Input, Date Picker, Combo Box, Button |
 | `FontUnderline` | `Underline` | Text, Link, Info Button, Radio, Text Input, Date Picker, Combo Box, Button |

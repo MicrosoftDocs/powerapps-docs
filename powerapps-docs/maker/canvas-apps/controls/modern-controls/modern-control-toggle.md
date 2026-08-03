@@ -5,9 +5,9 @@ author: noazarur-microsoft
 
 ms.topic: reference
 ms.component: canvas
-ms.date: 3/15/2024
+ms.date: 08/03/2026
 ms.subservice: canvas-maker
-ms.author: noazarur
+ms.author: yogupt
 
 
 ms.reviewer: mkaur
@@ -16,6 +16,7 @@ search.audienceType:
 contributors:
   - mduelae
   - noazarur-microsoft
+  - yogeshgupta698
   
 ---
 # Toggle modern control in Power Apps
@@ -24,7 +25,7 @@ A control that the user can turn on or off by moving the handle.
 
 ## Description
 
-A toggle is a user interface element that has been created for modern graphical user interfaces (GUIs), but it functions in the same manner as a checkbox. The key properties for this control are **Checked**, **Label**, **OnCheck**, **OnSelect**, and **OnUncheck**.
+A toggle is a user interface element built for modern graphical user interfaces (GUIs) that functions in the same way as a checkbox. Use a toggle when you want an on/off switch metaphor - for example, to enable or disable a setting. The key properties for this control are **Checked**, **Label**, **OnCheck**, **OnSelect**, and **OnUncheck**.
  
 ## General
 
@@ -42,7 +43,7 @@ A toggle is a user interface element that has been created for modern graphical 
 
 ## Size and position 
 
-**LabelPostion** – The text shown next to the toggle can be placed before, after, or above the toggle. 
+**LabelPosition** – Where the label appears relative to the toggle. This property uses the typed enum values `LabelPosition.Before` and `LabelPosition.After`. The default is `LabelPosition.After`. 
 
 **[X](../properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
 
@@ -54,13 +55,13 @@ A toggle is a user interface element that has been created for modern graphical 
 
 ## Style and theme
 
-**BasePaletteColor** - The color palette applied to a control. This impacts all surfaces of the control that render a theme color. 
+**BasePaletteColor** - The color palette applied to a control. This color impacts all surfaces of the control that render a theme color. 
 
 **Font** - The name of the family of fonts in which text appears. 
 
-**FontSize** - The font size of the text that appears on a control. If the value is null or zero, then the font size is driven by selected Fluent theme. 
+**Size** - The font size of the text that appears on a control. If the value is null or zero, the selected Fluent theme drives the font size. 
 
-**FontColor** - The color of text in a control. 
+**Color** - The color of text in a control. 
 
 **FontWeight** - The weight of the text in a control: **Bold**, **Lighter**, **Normal**, or **Semibold**. 
 
@@ -72,8 +73,42 @@ A toggle is a user interface element that has been created for modern graphical 
 
 ## Additional properties
 
+**Tooltip** – Explanatory text that appears when the user hovers over the control. 
+
 **OnCheck** – Actions to perform when the value of the toggle changes to **true**. 
 
 **OnSelect** – Actions to perform when the user selects a control. 
 
 **OnUncheck** – Actions to perform when the value of the toggle changes to **false**. 
+
+## Recent updates
+
+The updated version of the **Toggle** modern control includes the following improvements and behavior changes.
+
+### Property renames
+
+| Previous property | New property | Notes |
+|---|---|---|
+| `FontColor` | `Color` | Renamed for consistency across modern controls. |
+| `FontSize` | `Size` | Renamed for consistency across modern controls. |
+
+### Enum format changes
+
+Properties that previously accepted plain text strings now use typed Power Fx enums. Typed enums give you IntelliSense autocomplete and compile-time validation, and they help avoid formula errors from misspelled values.
+
+| Property | Previous value | New value |
+|---|---|---|
+| `LabelPosition` | `"Before"` | `LabelPosition.Before` |
+| `LabelPosition` | `"After"` | `LabelPosition.After` |
+
+### Improvements
+
+- **Tooltip support**: A new `Tooltip` property shows explanatory text when the user hovers over the toggle.
+- **Improved sizing**: The toggle now fills the full width and height of the control's bounds, so it sizes predictably when you resize the control or place it in a responsive container.
+- **Read-only View mode**: When `DisplayMode` is `View`, the toggle now renders as read-only rather than looking disabled, so users can clearly tell the difference between a value they can't change and a control that's unavailable.
+
+## See also
+
+- [Modern controls overview](overview-modern-controls.md)
+- [Recent updates to modern controls](modern-control-updates.md)
+- [Checkbox modern control](modern-control-checkbox.md)
