@@ -8,7 +8,7 @@ contributors: saviegas
 ms.service: powerapps
 ms.subservice: dataverse-maker
 ms.topic: how-to
-ms.date: 07/06/2026
+ms.date: 08/04/2026
 ms.custom: template-how-to
 ---
 # Link to Microsoft Fabric
@@ -158,7 +158,7 @@ To confirm a profile is running on low-latency sync, select **Link data** from t
 Existing Fabric link profiles continue to use the previous sync engine. To move an existing profile to low-latency sync after it's available in your station, unlink the profile and relink it.
 
 > [!NOTE]
-> Unlinking and relinking triggers a full initial sync for all configured tables.
+> Unlinking and relinking triggers a full initial sync for all configured tables. Initial sync can copy large volumes of data, so schedule it during off-peak hours or on weekends when traffic in your environment is lower.
 
 > [!IMPORTANT]
 >

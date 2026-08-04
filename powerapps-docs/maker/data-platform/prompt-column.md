@@ -2,7 +2,7 @@
 title: "Prompt columns in Microsoft Dataverse"
 description: "Understand how to create, manage, and use prompt columns with Power Apps and Dataverse."
 keywords: ""
-ms.date: 06/29/2026
+ms.date: 07/30/2026
 ms.custom: 
 ms.topic: article
 applies_to: 
@@ -11,6 +11,7 @@ applies_to:
   - "powerapps"
 author: "ashiyad"
 ms.subservice: dataverse-maker
+ms.contributors: vmirapur
 ms.author: ashi
 ms.reviewer: Mattp123
 ms.collection: bap-ai-copilot
@@ -94,6 +95,14 @@ Test your AI prompt. Create a test record with appropriate values in all your in
 1. Return to the **Filter knowledge** pop-up and select **No filter** when your prompt changes are done.
 1. Select **Save** to update your prompt column.
 
+Testing a prompt doesn't consume credits.
+
+## How prompt columns execute
+
+A prompt executes when you create a record or update one or more of the columns that the prompt references. If none of the referenced columns change, the prompt doesn't run and no extra credits are consumed.
+
+Prompt columns consume both AI Builder credits and Copilot Credits. AI Builder credits are retiring soon. For more information, see [End of AI Builder credits](/ai-builder/endofaibcredits).
+
 ## View prompt column results
 
 Create a model-driven app to view and validate your prompt column results.
@@ -104,6 +113,19 @@ Create a model-driven app to view and validate your prompt column results.
 1. Select **Save and publish**. 
 1. Go to the **Tables** area in Power Apps and select **Views**.
 1. Observe the values in the records including new records that contain prompt column values.
+
+### View and monitor credit consumption
+
+Prompt columns consume credits every time a prompt is executed. Copilot Credits are a common currency for eligible Microsoft services with usage-based billing. AI Builder credits are similarly used for AI features with Microsoft Power Platform services, such as Power Automate, Power Apps, and Power Pages.
+
+To view credit consumption for your prompt column executions:
+
+1. Sign in to [Power Automate](https://make.powerautomate.com/).
+1. On the left navigation pane, select **Automation center**, and then select **AI Builder activity**.
+1. Use the time-range and tool filters at the top to narrow the view, or select **Download .csv** to export the data.
+1. Review the **Estimated consumption** column to see the credits consumed by each prompt execution. Prompt column executions appear alongside other AI Builder and Copilot Studio activity, and show whether the execution consumed AI Builder credits or Copilot Credits.
+
+   :::image type="content" source="media/prompt-columns/prompt-column-credit-usage.png" alt-text="AI Builder activity report in the Automation Center showing the Estimated consumption column for prompt executions.":::
 
 ## Prompt column feature enhancements
 
@@ -220,7 +242,7 @@ Prompt columns generate AI results when a new record is created, or when one or 
 
 Existing records aren't processed by default. However, updating a column defined in the prompt column definition triggers AI analysis.
 
-**Are prompt columns audited?** 
+**Are prompt columns audited?**
 
 Prompt columns aren't audited.
 

@@ -7,7 +7,7 @@ ms.reviewer: matp
 ms.service: powerapps
 ms.subservice: dataverse-maker
 ms.topic: how-to
-ms.date: 03/20/2024
+ms.date: 08/03/2026
 ms.custom: template-how-to 
 ---
 # Receive Azure Synapse Link for Dataverse notifications in Power Apps
@@ -35,23 +35,13 @@ Several options are available for using Power Automate to send notifications. He
 
 ## Dataverse tables and columns used to track state
 
-There are tables that store all Azure Synapse Link profile information. The two main tables listed below provide all sync state information for your Azure Synapse Link profile.
+Several tables store Azure Synapse Link profile information. For low latency sync enabled tables, use the **Azure Synapse Link profile entity state** table to monitor the sync state of all tables.
 
 |Table name  |Description  |Table reference  |
 |---------|---------|---------|
-|Azure Synapse Link external table state      |  This table has data only if you have Delta Lake profile. <br /><br /> This table represents external nonpartitioned tables state in connected Synapse workspace. <br /><br /> One record per synced entity including metadata table like option set.       |  [synapselinkexternaltablestate](/power-apps/developer/data-platform/reference/entities/synapselinkexternaltablestate)       |
-|Azure Synapse Link profile table state   |  This table represents the sync state of the Azure Synapse Link entity in Azure Data Lake storage. <br />One record per synced entity excluding metadata table such as option set.       | [synapselinkprofileentitystate](/power-apps/developer/data-platform/reference/entities/synapselinkprofileentitystate)        |
+|Azure Synapse Link profile entity state   |  This table represents the sync state of each Azure Synapse Link table in Azure Data Lake Storage. This table is updated for all low latency sync enabled tables.       | [synapselinkprofileentitystate](/power-apps/developer/data-platform/reference/entities/synapselinkprofileentitystate)        |
 
-Here are some useful columns for monitoring the health of your Azure Synapse Link in each table:
-
-- `EntityName` and `SynapseWorkspaceName` can be used as the primary identification of the selected table. Synapse workspace name is the same as Azure Synapse Link profile name shown in Power Apps.
-- `LastSynchronizedOn` returns the date and time when the latest round of the Delta Lake conversion was successfully completed for each table.
-- `RecordCount` returns the total number of records in the Delta Lake profile, minus soft-delete records for each table.
-- `TableState` is marked as **created** if the link to the data lake and Delta Lake conversion is active and error-free.
-
-A soft-delete in the Azure Synapse Link external table state table is performed: `LastSyncState` and `TableState` are marked as deleted for removed tables.
-
-Azure Synapse Link profile entity state tables:
+To monitor the health of your Azure Synapse Link, use the following columns in the Azure Synapse Link profile entity state table:
 
 - `EntityName` and profile can be used as the primary identification of the selected table. The profile is the same as the Azure Synapse Link profile name shown in Power Apps.
 - `InitialSyncProcessCompletedTime` and `InitialSyncState` return the initial sync completion status, which includes both metadata and raw data. The initial sync state marks as **Completed** once the initial sync completes.
@@ -64,6 +54,8 @@ Azure Synapse Link profile entity state tables:
 >
 > - Sync latency.
 > - Append-only mode captures transactions and appends one additional row for each CUD operation.
+> 
+> The **Azure Synapse Link external table state** (`synapselinkexternaltablestate`) table applies only to Delta Lake and bring your own data lake (BYOL) profiles. It isn't updated for low latency sync enabled tables. For low latency sync enabled tables, use `synapselinkprofileentitystate`.
 
 The remaining four tables provide additional details for Azure Synapse Link setup information:
 
