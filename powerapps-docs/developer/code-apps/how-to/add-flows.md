@@ -1,40 +1,42 @@
 ---
-title: Add Power Automate flows to a code app (preview)
-description: Learn how to discover, add, invoke, and remove Power Automate cloud flows from a Power Apps code app by using the npm CLI.
-#customer intent: As a Power Apps code apps developer, I want to add Power Automate cloud flows to my code app.
-author: eschavez
-ms.author: eschavez
-ms.reviewer: jdaly
-ms.date: 06/4/2026
+title: Add Power Automate flows to a code app
+description: Learn how to discover, add, call, update, and remove Power Automate flows in a Power Apps code app by using the Power Apps CLI.
+#customer intent: As a developer, I want to call Power Automate flows from my Power Apps code app.
 ms.topic: how-to
+ms.service: powerapps
+ms.subservice: code-apps
+ms.author: jordanchodak
+ms.reviewer: jdaly
+author: jordanchodakWork
+ms.date: 08/03/2026
 ---
-# Add Power Automate flows to a code app (preview)
 
-This article shows you how to discover, add, invoke, and remove Power Automate cloud flows from a Power Apps code app by using the npm CLI.
+# Add Power Automate flows to a code app
+
+This article shows you how to discover, add, call, update, and remove Power Automate cloud flows in a Power Apps code app by using the Power Apps CLI.
 
 > [!IMPORTANT]
-> Only flows that use the **Power Apps trigger** are supported. You can't add flows with other trigger types to a code app. These unsupported trigger types include scheduled, automated, or instant flows with non-Power Apps triggers.
+> Code apps support only solution-aware instant flows that use the Power Apps trigger. Scheduled flows, automated flows, and instant flows that use other triggers aren't supported.
 
 ## Prerequisites
 
-- An initialized Power Apps code app. See [Quickstart: Create a code app by using the npm CLI](./npm-quickstart.md).
-- A Power Automate flow that's **solution-aware** and is an instant flow with the **PowerApps** trigger type. If your flow isn't in a solution yet, see [Add an existing flow to a solution](/power-automate/create-flow-solution).
-- The [`@microsoft/power-apps`](https://www.npmjs.com/package/@microsoft/power-apps) npm package version **1.1.1** or later.
+- A Power Apps code app initialized with [`pa app init`](../reference/cli.md#pa-app-init)
+- A solution-aware instant cloud flow that uses the Power Apps trigger
+- `@microsoft/power-apps` version 1.1.1 or later
 
-> [!NOTE]
-> Flow commands are only available in the npm-based CLI (`power-apps`). They're **not** available in the Power Platform CLI (`pac code`) commands.
+If the flow isn't in a solution, see [Add an existing cloud flow to a solution](/power-automate/create-flow-solution).
 
 ## Step 1: List available flows
 
-Run the following command to list all solution-aware flows in your current environment:
+Use the [`pa app list-flows`](../reference/cli.md#pa-app-list-flows) command to list the solution-aware flows in the current environment:
 
 ```bash
-power-apps list-flows
+pa app list-flows
 ```
 
-The command outputs a table of available flows:
+This command returns the available flows:
 
-```
+```console
 Name                    Status   Modified On   Flow ID
 ──────────────────────────────────────────────────────────────────────────────
 Approval Workflow       Started  2026-01-15    a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1
@@ -43,83 +45,64 @@ Send Notification       Started  2026-02-01    b1b1b1b1-cccc-dddd-eeee-f2f2f2f2f
 Total flows: 2
 ```
 
+To filter the results by name, use the `--search` parameter:
+
+```bash
+pa app list-flows --search approval
+```
+
+Copy the **Flow ID** for the flow you want to add.
+
 > [!NOTE]
-> Only solution-aware flows are listed. If you are missing a flow, see: [Create a cloud flow in a solution](/power-automate/create-flow-solution)
+> The command lists only solution-aware flows. If a flow isn't listed, add it to a solution first.
 
-To filter results by name, use the `--search` option:
+## Step 2: Add the flow
 
-```bash
-power-apps list-flows --search approval
-```
-
-Copy the **Flow ID** value for the flow you want to add.
-
-## Step 2: Add a flow to your code app
-
-Run the following command, replacing `<flow-id>` with the value from the previous step:
+Use the [`pa app add flow`](../reference/cli.md#pa-app-add-flow) command to add the flow to the code app:
 
 ```bash
-power-apps add-flow --flow-id <flow-id>
+pa app add flow --flow-id <flow-id>
 ```
 
-**Example:**
+For example:
 
 ```bash
-power-apps add-flow --flow-id a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1
+pa app add flow --flow-id a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1
 ```
 
-When the command succeeds, the CLI confirms the flow was added:
+Running the command again with the same flow ID updates the generated files with the latest flow definition.
 
-```
-Flow added successfully.
-```
+### What the command does
 
-> [!TIP]
-> Re-running `add-flow` with the same flow ID is idempotent. Use it to pick up changes to the flow's definition (new parameters, updated connections, and so on) without manually cleaning up old files.
+The command:
 
-### What `add-flow` does
-
-The command downloads the flow's OpenAPI definition, generates strongly-typed TypeScript files in your project, and updates `power.config.json` with the flow's connection references.
+- Downloads the flow's OpenAPI definition.
+- Generates strongly typed TypeScript models and services.
+- Adds the flow and its connection references to `power.config.json`.
 
 > [!IMPORTANT]
-> The person running `add-flow` must have access to **read the flow** and to the flow's **underlying connections** (for example, an Office 365 Outlook connection). If access to a required connection is missing, the command fails with an authorization error.
+> The person who runs [`pa app add flow`](../reference/cli.md#pa-app-add-flow) must have access to the flow and its underlying connections. The command fails if the person doesn't have access to a required connection.
 
 ### Generated files
 
-After running `add-flow`, the CLI creates the following files in your project (file names are derived from the flow's display name):
+The CLI creates files similar to the following example:
 
-```
+```text
 src/
   services/
-    ApprovalWorkflowService.ts   ← generated service class with typed methods
+    ApprovalWorkflowService.ts
   models/
-    ApprovalWorkflowModel.ts     ← generated TypeScript types for inputs/outputs
+    ApprovalWorkflowModel.ts
 schemas/
   logicflows/
-    ApprovalWorkflow.Schema.json ← flow's OpenAPI schema (do not edit manually)
+    ApprovalWorkflow.Schema.json
 ```
 
-The following entry is also added to `power.config.json`:
+The CLI also adds the flow configuration to `power.config.json`.
 
-```json
-"<uuid>": {
-  "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
-  "displayName": "Logic flows",
-  "dataSources": ["ApprovalWorkflow"],
-  "workflowDetails": {
-    "workflowEntityId": "<dataverse-entity-guid>",
-    "workflowDisplayName": "Approval Workflow",
-    "workflowName": "<flow-id>",
-    "dependencies": {
-      "shared_office365": "<dependency-uuid>"
-    }
-  }
-}
-```
+## Step 3: Call the flow
 
-## Step 3: Call the flow from your app
-
-The generated service class exposes a `Run` static method. The exact signature depends on whether the flow's trigger defines input parameters.
+The generated service class provides a static `Run` method. The method signature is based on the input parameters in the flow's OpenAPI definition.
 
 ### Flow with input parameters
 
@@ -138,7 +121,7 @@ if (result.success) {
 }
 ```
 
-### Flow with no input parameters
+### Flow without input parameters
 
 ```typescript
 import { SendNotificationService } from './services/SendNotificationService';
@@ -150,74 +133,70 @@ if (result.success) {
 }
 ```
 
-The `result` object has the following shape:
+The result contains the following properties:
 
-| Property  | Type               | Description                                        |
-| --------- | ------------------ | -------------------------------------------------- |
-| `success` | `boolean`          | `true` if the flow was triggered successfully.     |
-| `data`    | (varies)           | Typed response payload from the flow, if any.      |
-| `error`   | `Error` (optional) | Error details when `success` is `false`.           |
+| Property | Type | Description |
+| --- | --- | --- |
+| `success` | `boolean` | Indicates whether the flow was triggered successfully. |
+| `data` | Varies | Contains the typed response from the flow, if available. |
+| `error` | `Error` | Contains error information when `success` is `false`. |
 
-> [!NOTE]
-> The exact input and output types are determined by the flow's OpenAPI definition. Open the generated service file to see the specific types for your flow. Parameters marked `x-ms-visibility: internal` with a default value are automatically inlined by the code generator and aren't exposed in the method signature.
+Open the generated service file to review the exact input and output types for the flow.
 
-## Updating a flow
+## Update a flow
 
-If the flow's definition changes - for example, its author adds a new parameter or updates connection references - re-run `add-flow` with the same flow ID to pick up the latest definition and regenerate the service files:
-
-```bash
-power-apps add-flow --flow-id a1b2c3d4-e5f6-7890-abcd-ef1234567890
-```
-
-The command matches the flow by its `workflowEntityId` and reuses the existing UUID in `power.config.json`, so no manual cleanup is required.
-
-## Removing a flow
-
-To remove a flow from your code app, use `remove-flow`. You can identify the flow either by its data source name (as it appears in `power.config.json`) or by its original flow ID:
-
-**By data source name:**
+If the flow definition changes, run [`pa app add flow`](../reference/cli.md#pa-app-add-flow) again with the same flow ID:
 
 ```bash
-power-apps remove-flow --flow-name ApprovalWorkflow
+pa app add flow --flow-id a1b2c3d4-e5f6-7890-abcd-ef1234567890
 ```
 
-**By flow ID:**
+The command updates the generated files and preserves the existing flow entry in `power.config.json`.
+
+## Remove a flow
+
+Use [`pa app remove flow`](../reference/cli.md#pa-app-remove-flow) to remove a flow by its data source name:
 
 ```bash
-power-apps remove-flow --flow-id a1b2c3d4-e5f6-7890-abcd-ef1234567890
+pa app remove flow --flow-name ApprovalWorkflow
 ```
 
-The command:
+Or remove it by its flow ID:
 
-- Removes the flow from `power.config.json`.
-- Regenerates all model services.
+```bash
+pa app remove flow --flow-id a1b2c3d4-e5f6-7890-abcd-ef1234567890
+```
 
-## Deploying your app
+The command removes the flow from `power.config.json` and regenerates the models and services.
 
-After adding flows and verifying the app locally with `npm run dev`, build and deploy as usual:
+## Run and publish the app
+
+Run the app locally:
+
+```bash
+npm run dev
+```
+
+Build and publish the app:
 
 ```bash
 npm run build
-power-apps push
+pa app push
 ```
 
 ## Limitations and considerations
 
-Keep the following limitations and considerations in mind when you add flows to a code app.
-
 | Limitation | Details |
 | --- | --- |
-| **Manual flows with PowerApps trigger only** | Only **Manual** flows that use the **PowerApps** trigger are supported. Flows with other trigger types (scheduled, automated, or instant flows with non-PowerApps triggers) aren't supported and don't function correctly in a code app. |
-| **Solution-aware flows only** | The `list-flows` command shows only flows that belong to a solution. To add a non-solution flow, [add it to a solution first](/power-automate/create-flow-solution). |
-| **Maker access required** | The maker running `add-flow` must have access to the flow **and** to the flow's underlying connections. If access to a required connection is missing, the command fails. |
-| **Dataverse permissions required at runtime** | End users must have sufficient Dataverse permissions to invoke flows. Assign the **App Opener** security role (or equivalent). See [Configure user security in an environment](/power-platform/admin/database-security). |
-| **Manual refresh required for flow changes** | If the flow's definition changes, re-run `add-flow` with the same flow ID. The app doesn't automatically detect flow changes. |
-| **npm CLI only** | These commands aren't available in `pac code`. |
+| Power Apps trigger required | Only instant flows that use the Power Apps trigger are supported. |
+| Solution-aware flows required | The flow must belong to a solution before you can add it. |
+| Maker access required | The person adding the flow must have access to the flow and its underlying connections. |
+| Dataverse permissions required | End users need sufficient Dataverse permissions to invoke the flow. Assign the App Opener security role or an equivalent role. |
+| Manual update required | Run [`pa app add flow`](../reference/cli.md#pa-app-add-flow) again after the flow definition changes. |
 
-## Related articles
+## Related information
 
-- [Quickstart: Create a code app by using the npm CLI](./npm-quickstart.md)
-- [Add a data source to a code app](../overview.md)
-- [Add an existing flow to a solution](/power-automate/create-flow-solution)
+- [Quickstart: Create a code app by using the Power Apps CLI](npm-quickstart.md)
+- [Power Apps CLI command reference](../reference/cli.md)
+- [Create a cloud flow in a solution](/power-automate/create-flow-solution)
 - [Configure user security in an environment](/power-platform/admin/database-security)
-
