@@ -1,7 +1,7 @@
 ---
-title: "Common issues and resolutions for solution checker | Microsoft Docs"
+title: "Common issues and resolutions for solution checker"
 description: "A list of common issues and resolutions within solution checker"
-ms.date: 06/12/2023
+ms.date: 08/04/2026
 ms.topic: article
 author: jowells1
 ms.subservice: dataverse-maker
@@ -136,9 +136,11 @@ The Power Apps Checker application user in the Dataverse organization containing
 3. On the command bar, select **Activate**
 4. In the **Confirm User Activation** message, select **Activate**.
 
-## Solution checker remains in a Running state for more than 30 minutes
+## Solution checker remains in a running state for more than 30 minutes
 
-Solution checker may remain in a running state indefinitely if the analyzed solution contains plugin components developed using .NET Standard 2.0. Plugins using .NET Standard 2.0 aren't currently supported in solution checker and should be excluded from analysis. Exclude the plugin component by either removing it from the target solution, or by using the 'ExcludedFileNamePattern' parameter in the Power Apps Checker PowerShell module.
+Solution Checker might remain in a running state indefinitely if the environment is configured to block attachments for `.zip` file extensions. Additionally, blocking the `application/zip` MIME type, or not explicitly allowing it, affects analysis execution and prevents attachment of results to the environment. For more information about the **Blocked Attachments** settings, see [Manage privacy and security settings](/power-platform/admin/settings-privacy-security).
+
+Solution checker might remain in a running state indefinitely if the analyzed solution contains plugin components developed using .NET Standard 2.0. These plugin components aren't currently supported in solution checker and should be excluded from analysis. Exclude the plugin component by either removing it from the target solution, or by using the 'ExcludedFileNamePattern' parameter in the Power Apps Checker PowerShell module.
 
 ## Common plugin conditions that cause solution checker to fail
 

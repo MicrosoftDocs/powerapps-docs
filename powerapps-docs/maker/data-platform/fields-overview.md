@@ -1,7 +1,7 @@
 ---
 title: Create new data columns in Dataverse
 description: Learn about Microsoft Dataverse columns and how to add new columns for enhanced data capture in your apps.
-ms.date: 04/27/2026
+ms.date: 07/23/2026
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -52,5 +52,6 @@ Go to these articles for more information about creating columns:
 - [Types of columns](types-of-fields.md)
 - [Create and edit columns in Dataverse using Power Apps](create-edit-field-portal.md)
 - [Create and edit choice columns overview](create-edit-global-option-sets.md)
+- [Custom column visualizations for grids](column-visualizations-grids.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
