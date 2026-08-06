@@ -320,7 +320,7 @@ One-to-many relationships are supported for elastic tables with the following li
 - Formatted values for lookup columns aren't returned when the following conditions are true:
 
     - The table that is retrieved is a standard table, and the lookup refers to an elastic table.
-    - You're using a custom elastic table `partitionid` value. In other words, the `partitionid` value is set to something other than the default value (null). [Learn how to choose a partitionid value](elastic-tables.md#choosing-a-partitionid-value).
+    - You're using a custom elastic table `partitionid` value. In other words, the `partitionid` value is set to something other than the default value (null). [Learn how to choose a partitionid value](elastic-tables.md#choose-a-partitionid-value).
 
 Elastic tables support one-to-many relationships, and related rows can be retrieved when a record is retrieved. Related records can't be included in a query. [Learn how to return related rows in a query](use-elastic-tables.md#return-related-rows-in-a-query).
 

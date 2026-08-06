@@ -282,7 +282,7 @@ More information:
 
 If you're updating or deleting elastic table data stored in partitions, specify the partition key when you access that data.
 
-More information: [Choosing a PartitionId value](../elastic-tables.md#choosing-a-partitionid-value)
+More information: [Choosing a PartitionId value](../elastic-tables.md#choose-a-partitionid-value)
 
 ### See also
 
