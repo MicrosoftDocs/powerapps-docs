@@ -2,7 +2,7 @@
 title: "Elastic Tables for Developers"
 description: Learn how to use Dataverse elastic tables for horizontal scaling and high throughput. Includes code examples and best practices for developers.
 ms.topic: article
-ms.date: 12/04/2023
+ms.date: 08/04/2026
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: jdaly
@@ -52,7 +52,7 @@ Azure Cosmos DB ensures that the rows in a table are divided into distinct subse
 > 
 > If you use a custom `partitionid` value, the primary key value doesn't have a unique constraint. In other words, you can create multiple records that have the same primary key but different `partitionid` values. It's important to understand that unique references for elastic tables are a combination of the primary key and the `partitionid` value.
 
-### Choosing a partitionid value
+### Choose a partitionid value
 
 The `partitionid` value that you use depends on the nature of your data. A logical partition in an elastic table consists of a set of rows that have the same `partitionid` value. For example, in a table that contains data about different products, you can use the product category as the `partitionid` value for the table. In this case, groups of items that have specific values for the product category, such as `Clothing`, `Books`, `Electronic Appliances`, and `Pet supplies`, form distinct logical partitions.
 
@@ -103,13 +103,13 @@ To learn more about multirecord transactions, see:
 - [SDK for .NET deep insert](org-service/entity-operations-create.md#create-related-entities-in-one-operation)
 - [Known issue: No error is returned when elastic table data operations are grouped in a transaction](#no-error-is-returned-when-elastic-table-data-operations-are-grouped-in-a-transaction)
 
-## Expire data by using Time to live
+## Expire data by using time to live (TTL)
 
 Dataverse automatically includes a **Time to live** integer column with elastic tables. This column has the schema name `TTLInSeconds` and the logical name `ttlinseconds`.
 
 When you set a value in this column, it defines the amount of time, in seconds, before the row expires and is automatically deleted from database. If you don't set a value, the record persists indefinitely, just like standard tables.
 
-## Scenario
+## IoT sensor data scenario
 
 The examples in related articles use this scenario.
 
@@ -138,15 +138,15 @@ Dataverse doesn't return the `x-ms-session-token` value for delete operations. [
 
 ### The partitionId optional parameter isn't available for all messages
 
-Whenever a record that uses a custom `partitionid` value must be identified, such as for `Retrieve`, `Update`, or `Upsert` operations, you need a way to reference the `partitionid` value. In this case, you can use the alternate key to reference the record. If you prefer, you should also be able to use the `partitionId` optional parameter style. Currently, only `Retrieve` and `Delete` operations support using the `partitionId` optional parameter. [Learn more about using the partitionId parameter](use-elastic-tables.md#using-the-partitionid-parameter).
+Whenever you need to identify a record that uses a custom `partitionid` value, such as for `Retrieve`, `Update`, or `Upsert` operations, you need a way to reference the `partitionid` value. In this case, use the alternate key to reference the record. If you prefer, you can also use the `partitionId` optional parameter style. Currently, only `Retrieve` and `Delete` operations support using the `partitionId` optional parameter. [Learn more about using the partitionId parameter](use-elastic-tables.md#using-the-partitionid-parameter).
 
-### Records synchronized with Synapse Link for Dataverse not deleted from data lake when TTL expires
+### Records synchronized with Synapse Link for Dataverse aren't deleted from data lake when TTL expires
 
-When [time to live (TTL)](#expire-data-by-using-time-to-live) is used on a row, the row will get deleted from the elastic table when TTL has expired. If it's synchronized to a data lake using [Synapse Link for Dataverse ](../../maker/data-platform/export-to-data-lake.md) before TTL expiry, it won't be deleted from the data lake.
+When you use [time to live (TTL)](#expire-data-by-using-time-to-live-ttl) on a row, the row is deleted from the elastic table when TTL expires. If the row is synchronized to a data lake by using [Synapse Link for Dataverse](../../maker/data-platform/export-to-data-lake.md) before TTL expiry, it isn't deleted from the data lake.
 
 ## Frequently asked questions
 
-This section will include any frequently asked questions (FAQ). If you have a question that isn't addressed in the documentation, select the **This Page** button in the **Feedback** section at the bottom of the page. You must have a GitHub account to submit questions in this way.
+This section includes frequently asked questions (FAQ). If you have a question that isn't addressed in the documentation, select the **This Page** button in the **Feedback** section at the bottom of the page. You must have a GitHub account to submit questions in this way.
 
 <!-- 
 

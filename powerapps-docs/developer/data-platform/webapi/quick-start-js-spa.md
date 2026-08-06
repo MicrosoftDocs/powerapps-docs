@@ -1,8 +1,8 @@
 ---
 title: "Quickstart: Web API with client-side JavaScript and Visual Studio Code"
-description: Describes how to interactively authenticate and use the Dataverse Web API with client-side JavaScript and Visual Studio Code with a Single Page Application.
+description: "Learn how to authenticate and call the Dataverse Web API from a JavaScript single-page application in Visual Studio Code. Build and run the app now."
 ms.topic: quickstart
-ms.date: 03/22/2025
+ms.date: 08/05/2026
 author: JimDaly
 ms.author: jdaly
 ms.reviewer: jdaly
@@ -11,7 +11,7 @@ search.audienceType:
 ---
 # Quickstart: Web API with client-side JavaScript and Visual Studio Code
 
-This quickstart demonstrates how you can connect to Dataverse and use the Web API with the following technologies:
+This quickstart shows you how to authenticate and connect a JavaScript single-page application (SPA) to the Dataverse Web API in Visual Studio Code by using the following technologies. You build an app that signs in a user, calls the WhoAmI function, and displays the user's ID.
 
 |Technology|Description|
 |---|---|
@@ -23,14 +23,14 @@ This quickstart demonstrates how you can connect to Dataverse and use the Web AP
 
 ## Goal
 
-This quickstart focuses on connecting to the Dataverse Web API with JavaScript using a SPA client application with a minimum of number of steps. When you complete this quickstart, you're able to:
+This quickstart focuses on connecting to the Dataverse Web API with JavaScript by using a SPA client application with a minimum number of steps. When you complete this quickstart, you can:
 
-- Sign in and connect to Dataverse
+- Sign in and connect to Dataverse.
 - Invoke the [WhoAmI function](/power-apps/developer/data-platform/webapi/reference/whoami) and display your `UserID` value.
 
-:::image type="content" source="media/quickstart-web-api-js-spa.png" alt-text="Completed running quickstart":::
+:::image type="content" source="media/quickstart-web-api-js-spa.png" alt-text="Screenshot of the completed Dataverse Web API quickstart showing the signed-in user's ID.":::
 
-Completing this quickstart enables you to try the [Web API Data operations Samples (Client-side JavaScript)](web-api-samples-client-side-javascript.md) which demonstrate more advanced capabilities.
+By completing this quickstart, you can try the [Web API Data operations Samples (Client-side JavaScript)](web-api-samples-client-side-javascript.md) which demonstrate more advanced capabilities.
 
 > [!NOTE]
 > This quickstart doesn't apply to the following client-side JavaScript scenarios:
@@ -49,15 +49,15 @@ The following table describes the prerequisites needed to complete this quicksta
 
 |Prerequisite|Description|
 |---|---|
-|**Privileges to create an Entra App registration**|You can't complete this quickstart without the ability create a Microsoft Entra app registration to enable it.<br /><br />If you aren't sure if you can, try the first step to [Register a SPA application](#register-a-spa-application) and find out. |
-|**Visual Studio Code**| If Visual Studio Code isn't installed on your computer, you must [Download and install Visual Studio Code](https://code.visualstudio.com/download) to run this quickstart. |
+|**Privileges to create an Entra App registration**|You need the ability to create a Microsoft Entra app registration to complete this quickstart.<br /><br />If you're not sure if you have this ability, try the first step to [Register a SPA application](#register-a-spa-application) and find out. |
+|**Visual Studio Code**| If Visual Studio Code isn't installed on your computer, [Download and install Visual Studio Code](https://code.visualstudio.com/download) to run this quickstart. |
 |**Node.js**|Node.js is a runtime environment that allows you to run JavaScript on the server side. This quickstart creates a SPA application that runs JavaScript on the client side in a browser rather than the Node.js runtime. But [Node Package Manager (npm)](https://www.npmjs.com/) is installed with Node.js, and you need npm to install Parcel and the MSAL.js library.|
-|**Parcel**|Modern web applications typically have many dependencies on open source libraries distributed using npm and scripts that need to be managed and optimized during the build process. These tools are called 'bundlers'. The most common one is [webpack](https://webpack.js.org/). This quick start uses [Parcel](https://parceljs.org/) because it offers a simplified experience.<br /><br />For quickstarts and samples that show SPA applications using different frameworks and bundlers, see [Microsoft Entra Single-page applications samples](/entra/identity-platform/sample-v2-code?tabs=apptype#single-page-applications). You can adapt these samples to use Dataverse Web API with the information shown in this quickstart.|
+|**Parcel**|Modern web applications typically have many dependencies on open source libraries distributed using npm and scripts that need to be managed and optimized during the build process. These tools are called bundlers. The most common one is [webpack](https://webpack.js.org/). [VITE](https://vite.dev/) is also popular. This quickstart uses [Parcel](https://parceljs.org/) because it offers a simplified experience.<br /><br />For quickstarts and samples that show SPA applications using different frameworks and bundlers, see [Microsoft Entra Single-page applications samples](/entra/identity-platform/sample-v2-code?tabs=apptype#single-page-applications). You can adapt these samples to use Dataverse Web API with the information shown in this quickstart.|
 |**Web Technologies**|Knowledge of HTML, JavaScript, and CSS are required to understand how this quickstart works. Understanding how to [make network requests with JavaScript](https://developer.mozilla.org/docs/Learn_web_development/Core/Scripting/Network_requests) is essential.|
 
 ## Register a SPA application
 
-This step is first because if you can't register an app, you can't complete this quick start.
+This step is first because if you can't register an app, you can't complete this quickstart.
 
 Any of the following [privileged Microsoft Entra roles](/entra/identity/role-based-access-control/privileged-roles-permissions) include the required permissions:
 
@@ -65,31 +65,33 @@ Any of the following [privileged Microsoft Entra roles](/entra/identity/role-bas
 - [Application Developer](/entra/identity/role-based-access-control/permissions-reference#application-developer)
 - [Cloud Application Administrator](/entra/identity/role-based-access-control/permissions-reference#cloud-application-administrator)
 
-When you configure the application, you need an application (client) ID, and the ID of your Microsoft Entra tenant. You should also choose a descriptive name for the application so people know what the application was created for.
+When you configure the application, you need an application (client) ID, and the ID of your Microsoft Entra tenant. Choose a descriptive name for the application so people know what the application was created for.
 
 ### Register your app
 
-You can register your application using either the:
+You can register your application by using either of the following options:
 
 - Microsoft Entra web application UI
-- Azure PowerShell [New-AzADApplication](/powershell/module/az.resources/new-azadapplication) cmdlet.
+- Azure PowerShell [New-AzADApplication](/powershell/module/az.resources/new-azadapplication) cmdlet
 
 ### [Microsoft Entra web application](#tab/web)
+
+Use the Microsoft Entra admin center to create a single-tenant SPA app registration, configure its redirect URI, copy the application and tenant IDs, and add the Dataverse `user_impersonation` permission.
 
 #### Create the application registration
 
 1. Sign in to the [Microsoft Entra admin center](https://entra.microsoft.com/).
-1. If you have access to multiple tenants, use the **Settings** :::image type="icon" source="media/settings-icon.png" border="false"::: icon in the top menu to switch to the tenant in which you want to register the application from the **Directories + subscriptions** menu.
-1. Browse to **Identity** > **Applications** > **App registrations** and select **New registration**.
+1. If you have access to multiple tenants, use the **Settings** :::image type="icon" source="media/settings-icon.png" border="false"::: icon in the top menu to switch to the tenant where you want to register the application from the **Directories + subscriptions** menu.
+1. Browse to **App registrations** and select **New registration**.
 1. Enter a **Name** for the application, such as `Dataverse Web API Quickstart SPA`.
-1. For **Supported account types**, under **Who can use this application or access this API**, select **Accounts in this organizational directory only (&lt;Your tenant name&gt; - Single tenant)**.
+1. For **Supported account types**, under **Choose the account types that can use this application or access this API**, select **Single tenant only - &lt;Your tenant name&gt;**.
 1. For  **Redirect URI (optional)**
 
    1. For **Select a platform**, choose **Single-page application (SPA)**.
-   1. Enter `http://localhost:1234` as the value.
+   1. Enter `http://localhost:1234/redirect.html` as the value.
 
 1. Select **Register** to save your changes.
-1. In the window for the app registration you created, in the **Overview** tab, below **Essentials**, you can find these values:
+1. In the window for the app registration you created, in the **Overview** tab, under **Essentials**, you can find these values:
 
    - Application (client) ID
    - Directory (tenant) ID
@@ -103,27 +105,27 @@ You can register your application using either the:
 1. In the **Request API permissions** flyout, select the **APIs my organization uses** tab.
 1. Type 'Dataverse' to find application (client) ID `00000007-0000-0000-c000-000000000000`.
 1. Select the Dataverse application.
-1. In **Select permissions**, `user_impersonation` is the only available delegated permission. Select it.
+1. In **Select permissions**, select `user_impersonation`.
 1. Select **Add permissions**.
 
-### [PowerShell Script](#tab/ps)
+### [PowerShell script](#tab/ps)
 
-Using these instructions for PowerShell with Visual Studio Code has the following requirements:
+To use these instructions for PowerShell with Visual Studio Code, you need the following requirements:
 
-- Install the PowerShell extension for Visual Studio Code. [Learn to install PowerShell for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell)
-- Install the Az PowerShell module.  [Learn how to install Azure PowerShell](/powershell/azure/install-azure-powershell)
+- Install the PowerShell extension for Visual Studio Code. [Learn how to install PowerShell for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell).
+- Install the Az PowerShell module. [Learn how to install Azure PowerShell](/powershell/azure/install-azure-powershell).
 
 You need your tenant ID to run this script.
 
 1. Sign in to the [Microsoft Entra admin center](https://entra.microsoft.com/).
-1. If you have access to multiple tenants, use the **Settings** :::image type="icon" source="media/settings-icon.png" border="false"::: icon in the top menu to switch to the tenant in which you want to register the application from the **Directories + subscriptions** menu.
+1. If you have access to multiple tenants, use the **Settings** :::image type="icon" source="media/settings-icon.png" border="false"::: icon in the top menu to switch to the tenant where you want to register the application from the **Directories + subscriptions** menu.
 1. Select **Overview** in the navigation pane.
-1. In the **Overview** tab, in the **Basic information** section you find **Tenant ID**.
+1. In the **Overview** tab, in the **Basic information** section, find **Tenant ID**.
 1. Select the **Copy to Clipboard** icon.
 
-When you have your tenant ID, you can create the app registration using the Azure PowerShell [New-AzADApplication](/powershell/module/az.resources/new-azadapplication) cmdlet.
+When you have your tenant ID, you can create the app registration by using the Azure PowerShell [New-AzADApplication](/powershell/module/az.resources/new-azadapplication) cmdlet.
 
-1. In Visual Studio Code, select **File** > **New Text File**, or <kbd>Ctrl</kbd>+<kbd>N</kbd> to open a new text file.
+1. In Visual Studio Code, select **File** > **New Text File**, or press <kbd>Ctrl</kbd>+<kbd>N</kbd> to open a new text file.
 
    You don't need to save the file.
 
@@ -133,7 +135,7 @@ When you have your tenant ID, you can create the app registration using the Azur
    # Values to pass to the New-AzADApplication command
    $tenantId = "<your-tenant-id>" # Replace with your tenant ID
    $appName = "Dataverse Web API SPA Quickstart"
-   $redirectUri = "http://localhost:1234"
+   $redirectUri = "http://localhost:1234/redirect.html"
 
 
    # Connect to Azure
@@ -186,7 +188,7 @@ When you have your tenant ID, you can create the app registration using the Azur
    }
    ```
 
-1. Edit this line to replace `<your-tenant-id>` with your tenant id value:
+1. Edit this line to replace `<your-tenant-id>` with your tenant ID value:
 
    `$tenantId = "<your-tenant-id>" # Replace with your tenant ID`
 
@@ -219,7 +221,7 @@ When you have your tenant ID, you can create the app registration using the Azur
    # The Entra tenant id
    TENANT_ID=aaaabbbb-0000-cccc-1111-dddd2222eeee
    # The SPA redirect URI included in the Entra application registration
-   REDIRECT_URI=http://localhost:1234
+   REDIRECT_URI=http://localhost:1234/redirect.html
    ```
 
 Copy this data. You use it when you [create the .env file](#create-the-env-file) to use environment variables.
@@ -227,37 +229,37 @@ Copy this data. You use it when you [create the .env file](#create-the-env-file)
 ---
 
 > [!NOTE]
-> If you don't have the privileges to create an app registration for your company, get a tenant of your own through via the [Power Apps Developer Plan](/power-platform/developer/plan).
+> If you don't have the privileges to create an app registration for your company, get a tenant of your own through the [Power Apps Developer Plan](/power-platform/developer/plan).
 
 ## Install Node.js
 
 1. Go to [Download Node.js](https://nodejs.org/en/download).
 1. Choose the appropriate installer for your operating system (Windows, macOS, or Linux) and download it.
 1. Run the installer. Make sure you accept the default option to: **Install npm, the recommended package manager for Node.js.**
-1. Verify the installation by opening a terminal or command prompt, typing these commands and pressing <kbd>Enter</kbd>.
+1. Verify the installation by opening a terminal or command prompt, typing these commands, and pressing <kbd>Enter</kbd>.
 
    - `node -v`
    - `npm -v`
 
-   You should see something like this:
+   You see output similar to this:
 
    ```powershell
    PS C:\Users\you> node -v
-   v22.14.0
+   v24.19.0
    PS C:\Users\you> npm -v
-   9.5.0
+   11.17.0
    PS C:\Users\you>
    ```
 
 ## Create a project
 
 > [!NOTE]
-> You can skip these steps by cloning or downloading the [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples) repository. The  completed application for these steps is available at [/dataverse/webapi/JS/quickspa](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/JS/quickspa). Follow the instructions in the README.
+> To skip these steps, clone or download the [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples) repository. The completed application for these steps is available at [/dataverse/webapi/JS/quickspa](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/JS/quickspa). Follow the instructions in the README.
 
-The instructions in this section guide you to install dependencies from npm, create the folder structure, open Visual Studio Code.
+This section guides you through installing dependencies from npm, creating the folder structure, and opening Visual Studio Code.
 
-1. Open a terminal window to a place where you want to create a project. For these instructions, we use `C:\projects`.
-1. Type the following commands and press <kbd>Enter</kbd> to achieve the following actions:
+1. Open a terminal window to a location where you want to create a project. For these instructions, use `C:\projects`.
+1. Type the following commands and press <kbd>Enter</kbd> to run each command:
 
    |Command  |Action  |
    |---------|---------|
@@ -271,21 +273,24 @@ The instructions in this section guide you to install dependencies from npm, cre
 
 Your project should look like this in Visual Studio Code Explorer:
 
-:::image type="content" source="media/quickspa-project.png" alt-text="Shows the newly created quickspa project before any files are added.":::
+:::image type="content" source="media/quickspa-project.png" alt-text="Screenshot of the new quickspa project in Visual Studio Code before files are added.":::
+
+> [!NOTE]
+> Visual Studio Code might display a prompt: **Restricted Mode is intended for safe code browsing. Trust this folder to enable all features.**  Select **Manage** and choose to trust the folder. [Learn more about Workspace Trust](https://aka.ms/vscode-workspace-trust)
 
 ### Create the .env file
 
 Storing configuration data in the environment separate from code is a security best practice.
 
 1. Create a new file named `.env` in the root of your `quickspa` folder.
-1. Paste in the values from [Register your app](#register-your-app) to replace the `CLIENT_ID` and `TENANT_ID` values below.
+1. Paste in the values from [Register your app](#register-your-app) to replace the `CLIENT_ID` and `TENANT_ID` values in the following code:
 
    :::code language="text" source="~/../PowerApps-Samples/dataverse/webapi/JS/quickspa/.env.example":::
 
 1. Set the `BASE_URL` value to the URL of the [Web API URL](compose-http-requests-handle-errors.md#web-api-url-and-versions) for the environment you want to connect to.
 
 > [!NOTE]
-> You won't check-in the `.env` file. In [Create `.gitignore` file](#create-gitignore-file), you will exclude it. But you might want to create a `.env.example` file using the placeholder values so that people know what data it should contain.
+> Don't check in the `.env` file. In [Create `.gitignore` file](#create-gitignore-file), you exclude it. But you might want to create a `.env.example` file using the placeholder values so that people know what data it should contain.
 
 ### Create an HTML page
 
@@ -301,20 +306,29 @@ This HTML provides the following elements:
 
 |Element ID|Element type|Description|
 |---------|---------|---------|
-|`loginButton`|[button](https://developer.mozilla.org/docs/Web/HTML/Element/button)|To open the login dialog.|
-|`logoutButton`|[button](https://developer.mozilla.org/docs/Web/HTML/Element/button)|To open the logout dialog. Hidden by default.|
-|`buttonContainer`|[nav](https://developer.mozilla.org/docs/Web/HTML/Element/nav)|Contains buttons that require user to be logged in to use. Disabled by default.|
+|`loginButton`|[button](https://developer.mozilla.org/docs/Web/HTML/Element/button)|To open the sign-in dialog.|
+|`logoutButton`|[button](https://developer.mozilla.org/docs/Web/HTML/Element/button)|To open the sign-out dialog. Hidden by default.|
+|`buttonContainer`|[nav](https://developer.mozilla.org/docs/Web/HTML/Element/nav)|Contains buttons that require user to be signed in to use. Disabled by default.|
 |`whoAmIButton`|[button](https://developer.mozilla.org/docs/Web/HTML/Element/button)|Executes the [WhoAmI function](/power-apps/developer/data-platform/webapi/reference/whoami) to display the user's ID.|
-|`container`|[main](https://developer.mozilla.org/docs/Web/HTML/Element/main)|Area where information can be displayed to the user.|
-||[script](https://developer.mozilla.org/docs/Web/HTML/Element/script)|Loads the `index.js` file after the rests of the elements of the page loads.|
+|`container`|[main](https://developer.mozilla.org/docs/Web/HTML/Element/main)|Area where you can display information to the user.|
+||[script](https://developer.mozilla.org/docs/Web/HTML/Element/script)|Loads the `index.js` file after the rest of the elements of the page loads.|
+
+### Create redirect HTML page
+
+MSAL Browser v5 introduced support for applications that are served with Cross-Origin-Opener-Policy (COOP) headers, and that change requires a redirect bridge page to safely pass the authentication response back to the main SPA window. [Learn how to set up the redirect bridge page in MSAL Browser](/entra/msal/javascript/browser/redirect-bridge)
+
+1. Create a new file in the `src` folder named `redirect.html`.
+1. Copy and paste this content to the `redirect.html` page:
+
+   :::code language="html" source="~/../PowerApps-Samples/dataverse/webapi/JS/quickspa/src/redirect.html":::
 
 ### Create a JavaScript script
 
 This file contains all the logic that makes the `index.html` page dynamic.
 
 1. Create a new folder in the `src` folder named `scripts`.
-1. Create a new file in `scripts` folder named `index.js`.
-1. Copy and paste this content into the `index.js` page:
+1. Create a new file in the `scripts` folder named `index.js`.
+1. Copy and paste this content into the `index.js` file:
 
    :::code language="javascript" source="~/../PowerApps-Samples/dataverse/webapi/JS/quickspa/src/scripts/index.js":::
 
@@ -328,14 +342,14 @@ The `index.js` script contains the following constants and functions:
 |`msalInstance`|The MSAL [PublicClientApplication](/javascript/api/%40azure/msal-browser/publicclientapplication) instance. |
 |`container`|The element where messages are displayed.|
 |`getToken`|Retrieves an access token using MSAL.|
-|`logIn`|Event listener function for the login button. Opens a choose account dialog.|
-|`logOut`|Event listener function for the logout button. Opens a choose account dialog.|
+|`logIn`|Event listener function for the sign-in button. Opens a choose account dialog.|
+|`logOut`|Event listener function for the sign-out button. Opens a choose account dialog.|
 |`whoAmI`|Asynchronous function that calls the [WhoAmI function](/power-apps/developer/data-platform/webapi/reference/whoami) to retrieve data from Dataverse. |
 | `whoAmIButton` event listener|The function that calls the `whoAmI` function and manages the UI changes to show the message.|
 
 ### Create a CSS page
 
-The Cascading Style Sheet (CSS) file makes the HTML page more attractive and has a role in controlling when controls are disabled or hidden.
+The Cascading Style Sheet (CSS) file makes the HTML page more attractive and controls when controls are disabled or hidden.
 
 1. Create a new folder named `styles` in the `src` folder.
 1. Create a new file named `style.css` in the `styles` folder.
@@ -346,7 +360,7 @@ The Cascading Style Sheet (CSS) file makes the HTML page more attractive and has
 
 ### Create `.gitignore` file
 
-When your app is checked in with source control, adding a `.gitignore` file prevents checking in files the specified files and folders.
+When you check your app in by using source control, adding a `.gitignore` file prevents you from checking in specified files and folders.
 
 1. Create a file named `.gitignore`.
 1. Add the following content:
@@ -364,11 +378,11 @@ Not checking in the `.env` file is a security best practice. You might want to c
 
 Your project should look like this in Visual Studio Code Explorer:
 
-:::image type="content" source="media/quickspa-project-with-files.png" alt-text="Shows the quickspa project after files are added.":::
+:::image type="content" source="media/quickspa-project-with-files.png" alt-text="Screenshot of the quickspa project in Visual Studio Code after files are added.":::
 
 ### Configure your package.json file
 
-Your `package.json` file should look something like this:
+Your `package.json` file should look similar to the following example:
 
 ```json
 {
@@ -376,38 +390,45 @@ Your `package.json` file should look something like this:
     "parcel": "^2.14.1",
   },
   "dependencies": {
-    "@azure/msal-browser": "^4.7.0",
-    "dotenv": "^16.4.7"
+    "@azure/msal-browser": "^5.17.3",
+    "dotenv": "^17.4.2"
   }
 }
 ```
 
-Add this `scripts` item underneath `dependencies`:
+Add the `scripts` and `@parcel/resolver-default` items after `dependencies`:
 
 ```json
   "dependencies": {
-    "@azure/msal-browser": "^4.7.0",
-    "dotenv": "^16.4.7"
+    "@azure/msal-browser": "^5.17.3",
+    "dotenv": "^17.4.2"
   },
   "scripts": {
-    "start": "parcel src/index.html"
+    "start": "parcel src/index.html src/redirect.html"
+  },
+  "@parcel/resolver-default": {
+    "packageExports": true
   }
 ```
 
-This configuration allows you to start the application using `npm start` in the next step.
+The `@parcel/resolver-default` configuration enables Parcel's package exports resolution behavior. This configuration is required to correctly resolve `@azure/msal-browser`, which uses the exports field in its package metadata. Depending on the Parcel version you use, this setting might not be necessary, but it was retained to ensure compatibility with the sample's MSAL dependency.
+
+
+
+This configuration enables you to start the application by using `npm start` in the next step.
 
 ## Try it
 
-1. In Visual Studio Code, open a terminal window
+1. In Visual Studio Code, open a terminal window.
 1. Type `npm start` and press <kbd>Enter</kbd>.
 
    > [!NOTE]
    > You might see some output written to the terminal while the project initializes for the first time.
-   > This is parcel installing some more node modules to mitigate issues when using [dotenv](https://www.npmjs.com/package/dotenv). 
-   > Look at the `package.json` and you should some new items added to the `devDependencies`.
+   > This output is Parcel installing some more Node modules to prevent problems when using [dotenv](https://www.npmjs.com/package/dotenv). 
+   > Look at the `package.json` and you see some new items added to the `devDependencies`.
 
 
-   You should expect output to the terminal that looks like this:
+   You see output to the terminal that looks like this:
 
    ```
    Server running at http://localhost:1234
@@ -421,21 +442,21 @@ This configuration allows you to start the application using `npm start` in the 
 
 1. In the **Sign in to your account** dialog, select the account that has access to Dataverse.
 
-   The first time you access using a new application (client) ID value, you see this **Permissions requested** dialog:
+   The first time you access Dataverse by using a new application (client) ID value, you see this **Permissions requested** dialog:
 
-   :::image type="content" source="media/dataverse-web-api-quickstart-spa-permissions-requested.png" alt-text="Permissions requested dialog":::
+   :::image type="content" source="media/dataverse-web-api-quickstart-spa-permissions-requested.png" alt-text="Screenshot of the Permissions requested dialog for the Dataverse Web API quickstart application.":::
 
 1. Select **Accept** on the **Permissions requested** dialog.
 1. Select the **WhoAmI** button.
 
-   The message **Congratulations! You connected to Dataverse using the Web API.** is displayed with your `UserId` value from the [WhoAmIResponse complex type](/power-apps/developer/data-platform/webapi/reference/whoamiresponse).
+   The message **Congratulations! You connected to Dataverse using the Web API.** is displayed with your `UserId` value from the [WhoAmIResponse complex type](xref:Microsoft.Dynamics.CRM.WhoAmIResponse).
 
-## Trouble shooting
+## Troubleshooting
 
 This section contains errors that you might encounter running this quick start.
 
 > [!NOTE]
-> If you experience issues completing the steps in this quick start, try cloning or downloading the [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples) repository. The completed application for these steps is available at [/dataverse/webapi/JS/quickspa](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/JS/quickspa). Follow the instructions in the README. If that doesn't work, create an GitHub issue referencing this `quickspa` sample application.
+> If you experience problems completing the steps in this quick start, try cloning or downloading the [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples) repository. The completed application for these steps is available at [/dataverse/webapi/JS/quickspa](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/JS/quickspa). Follow the instructions in the README. If that doesn't work, create a GitHub issue referencing this `quickspa` sample application.
 
 ### Selected user account doesn't exist in tenant
 
