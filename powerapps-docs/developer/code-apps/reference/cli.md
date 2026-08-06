@@ -245,6 +245,7 @@ pa app push [--solution-id <solution-id>]
 | Parameter | Description |
 | --- | --- |
 | `--solution-id` | The ID of the solution to add the code app to. |
+| `--non-interactive`| Publishes the app non-interactively. [Learn to publish apps with a service principal](../how-to/use-service-principal.md) |
 
 [Learn how to create a code app by using the Power Apps CLI](../how-to/npm-quickstart.md)
 
