@@ -1,11 +1,11 @@
 ---
 title: Use wildcard characters in conditions for string values
 description: Learn how to use wildcard characters in query conditions that use string values.
-ms.date: 06/04/2024
+ms.date: 08/05/2026
 ms.reviewer: jdaly
 ms.topic: article
-author: mayadumesh
-ms.author: mayadu
+author: abhia-msft
+ms.author: abhia
 ms.subservice: dataverse-developer
 search.audienceType: 
   - developer
@@ -15,18 +15,18 @@ ms.custom: bap-template
 ---
 # Use wildcard characters in conditions for string values
 
-You can use wildcard characters with the following operators when you build queries that include conditions on string values:
+Use wildcard characters with the following operators when you build queries that include conditions on string values:
 
 ## [FetchXml](#tab/fetchxml)
 
-`like`<br/>
-`not-like`<br/>
-`begins-with`<br/>
-`not-begin-with`<br/>
-`ends-with`<br/>
-`not-end-with`<br/>
+[`like`](fetchxml/reference/operators.md#like)<br/>
+[`not-like`](fetchxml/reference/operators.md#like)<br/>
+[`begins-with`](fetchxml/reference/operators.md#like)<br/>
+[`not-begin-with`](fetchxml/reference/operators.md#like)<br/>
+[`ends-with`](fetchxml/reference/operators.md#like)<br/>
+[`not-end-with`](fetchxml/reference/operators.md#like)<br/>
 
-More information: [Query data using FetchXml](fetchxml/overview.md)
+For more information, see [Query data using FetchXml](fetchxml/overview.md).
 
 
 ## [QueryExpression](#tab/queryexpression)
@@ -38,7 +38,7 @@ More information: [Query data using FetchXml](fetchxml/overview.md)
 <xref:Microsoft.Xrm.Sdk.Query.ConditionOperator>.`EndsWith`<br/>
 <xref:Microsoft.Xrm.Sdk.Query.ConditionOperator>.`DoesNotEndWith`<br/>
 
-More information: [Filter rows using QueryExpression](org-service/queryexpression/filter-rows.md)
+For more information, see [Filter rows using QueryExpression](org-service/queryexpression/filter-rows.md).
 
 ## [Web API](#tab/webapi)
 
@@ -49,7 +49,7 @@ More information: [Filter rows using QueryExpression](org-service/queryexpressio
 `endswith`<br/>
 `not endswith`<br/>
 
-More information: [Use OData query functions](webapi/query/filter-rows.md#use-odata-query-functions)
+For more information, see [Use OData query functions](webapi/query/filter-rows.md#use-odata-query-functions).
 
 ---
 
@@ -57,27 +57,27 @@ When you use these condition operators, you can use certain characters to repres
 
 |Characters  |Description  |T-SQL Documentation and examples  |
 |---------|---------|---------|
-|`%`|Matches any string of zero or more characters. This wildcard character can be used as either a prefix or a suffix.|[Percent character (Wildcard - Character(s) to Match) (Transact-SQL)](/sql/t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql)|
-|`_`|Matches any single character in a string comparison operation that involves pattern matching.|[_ (Wildcard - Match One Character) (Transact-SQL)](/sql/t-sql/language-elements/wildcard-match-one-character-transact-sql)|
-|`[]`|Matches any single character in the range or set that's specified between square brackets.|[[ ] (Wildcard - Character(s) to Match) (Transact-SQL)](/sql/t-sql/language-elements/wildcard-character-s-to-match-transact-sql)|
-|`[^]`|Matches any single character that isn't in the range or set that's specified between the square brackets.|[[^] (Wildcard - Character(s) Not to Match) (Transact-SQL)](/sql/t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql)|
+|`%`|Matches any string of zero or more characters. You can use this wildcard character as either a prefix or a suffix.|[`%` wildcard: character(s) to match](/sql/t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql)|
+|`_`|Matches any single character in a string comparison operation that involves pattern matching.|[`_` wildcard: match one character](/sql/t-sql/language-elements/wildcard-match-one-character-transact-sql)|
+|`[]`|Matches any single character in the range or set that you specify between square brackets.|[`[ ]` wildcard: characters to match](/sql/t-sql/language-elements/wildcard-character-s-to-match-transact-sql)|
+|`[^]`|Matches any single character that isn't in the range or set that you specify between the square brackets.|[`[^]` wildcard: characters not to match](/sql/t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql)|
 
 
 ### Search for strings that contain wildcard characters
 
-You can use the wildcard pattern matching characters as literal characters. To use a wildcard character as a literal character, enclose the wildcard character in brackets. More information: [Using Wildcard Characters As Literals](/sql/t-sql/language-elements/like-transact-sql#using-wildcard-characters-as-literals).
+You can use the wildcard pattern matching characters as literal characters. To use a wildcard character as a literal character, enclose the wildcard character in brackets. For more information, see [Use wildcard characters as literals](/sql/t-sql/language-elements/like-transact-sql#use-wildcard-characters-as-literals).
 
 ## Don't use leading wild cards
 
-Queries which use condition operators with implicit leading wild cards (like `ends-with`) or explicit leading wild cards will be less performant and can lead to poor performance across the organization in certain scenarios. More information: 
+Queries that use condition operators with implicit leading wild cards, such as `ends-with`, or explicit leading wild cards, perform less efficiently. In certain scenarios, these wild cards can cause poor performance across the organization. For more information, see: 
 - [Optimize performance using FetchXml](fetchxml/optimize-performance.md)
 - [Optimize performance using QueryExpression](org-service/queryexpression/optimize-performance.md)
 
-Queries that use these anti-patterns introduce performance problems because the queries can't be optimized.
+These anti-patterns introduce performance problems because the query optimizer can't optimize the query.
 
 ### [FetchXml](#tab/fetchxml)
 
-Don't use trailing wild cards in expressions using `like`, `begins-with`, `not-begin-with`, `ends-with`, or `not-end-with`. Here are some examples of trailing wildcards:
+Don't use trailing wild cards in expressions that use `like`, `begins-with`, `not-begin-with`, `ends-with`, or `not-end-with`. Here are some examples of trailing wild cards:
 
 |Bad Examples  |
 |---------|
@@ -89,7 +89,7 @@ Don't use trailing wild cards in expressions using `like`, `begins-with`, `not-b
 
 ### [QueryExpression](#tab/queryexpression)
 
-Don't use leading wild cards in expressions using `Like`, `BeginsWith`, `DoesNotBeginWith`, `EndsWith`, or `DoesNotEndWith`. Here are some examples of excess wildcards:
+Don't use leading wild cards in expressions that use `Like`, `BeginsWith`, `DoesNotBeginWith`, `EndsWith`, or `DoesNotEndWith`. Here are some examples of excess wildcards:
 
 |Bad Examples  |
 |---------|
@@ -101,7 +101,7 @@ Don't use leading wild cards in expressions using `Like`, `BeginsWith`, `DoesNot
 
 ### [Web API](#tab/webapi)
 
-Don't use leading wild cards in expressions using `like`, `startswith`, `not startswith`, `endswith`, or `not endswith`. Here are some examples of excess wildcards:
+Don't use leading wild cards in expressions that use `like`, `startswith`, `not startswith`, `endswith`, or `not endswith`. Here are some examples of excess wildcards:
 
 
 |Bad Examples  |
