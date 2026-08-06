@@ -21,12 +21,14 @@ items:
             href: how-to/npm-quickstart.md
           - name: Sign in and manage accounts
             href: how-to/sign-in-manage-accounts.md
-          - name: Add a Dataverse Action or Function
+          - name: Add a Dataverse action or function
             href: how-to/add-dataverse-action-function.md
           - name: Add flows
             href: how-to/add-flows.md
           - name: Create a connection from the CLI
             href: how-to/create-connection.md
+          - name: Publish apps using a service principal
+            href: how-to/use-service-principal.md
       - name: Connect to data
         items:
         - name: Connect to data
@@ -71,6 +73,8 @@ items:
             href: how-to/content-security-policy.md
           - name: Migrate your code to v1.0
             href: how-to/migrate-to-v1.md
+      - name: Power Apps CLI command reference
+        href: reference/cli.md
       - name: Troubleshoot
         items:
         - name: Analyze data requests and responses

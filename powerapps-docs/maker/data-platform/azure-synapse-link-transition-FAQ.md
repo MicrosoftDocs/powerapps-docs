@@ -1,12 +1,13 @@
 ---
 title: Frequently asked questions when transitioning from legacy data integration services to Fabric link and Azure Synapse Link for Dataverse
 description: Learn how to transition from export to data lake, BYOD, and data export service to link to Microsoft Fabric and Azure Synapse Link for Microsoft Dataverse.
-ms.date: 07/23/2026
+ms.date: 08/03/2026
 ms.reviewer: matp 
 ms.topic: "how-to"
 applies_to: 
   - "powerapps"
 author: anibakore-msft
+contributors: goupadhy
 ms.subservice: dataverse-maker
 ms.author: banirud
 search.audienceType: 
@@ -121,7 +122,11 @@ If you aren't using this feature in your environment, ask your finance and opera
 
 ## I received an email about transitioning Azure Synapse Analytics workspaces to private links before 1 August 2026. What do I need to do?
 
-As described in the email, the trusted services function that allows Azure Synapse Analytics to access Azure Storage accounts and Azure Key Vault using a managed identity and firewall exception will be retired on **1 August 2026**.
+The trusted services capability that allows Azure Synapse Analytics to access Azure Storage accounts and Azure Key Vault by using a managed identity with a firewall exception was previously scheduled for retirement on 1 August 2026.
+
+To give organizations more time to assess their environments, validate migration approaches, test affected workloads, and complete required changes, Microsoft extended the retirement date to 1 August 2027.
+
+Use this additional time to review your current configurations and plan a transition to supported networking options, such as private endpoints, managed virtual networks, or other recommended access patterns for your environment. Start evaluation and testing early to help ensure a smooth migration before the updated retirement date.
 
 If you decide to transition your Synapse workspace to private links as described in the email, complete the following steps to ensure Azure Synapse Link for Dataverse continues to work as expected:
 

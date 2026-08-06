@@ -1,129 +1,124 @@
 ---
-title: "How to: Create a connection from the CLI (preview)"
-description: "Use the power-apps create-connection command to create a connector connection from the command line. (preview)"
-ms.author: eschavez
-author: eschavez
-ms.date: 07/20/2026
-ms.reviewer: jdaly
+title: Create a connection from the Power Apps CLI
+description: Learn how to list connectors and create a connection for a Power Apps code app by using the Power Apps CLI.
+#customer intent: As a developer, I want to create Power Platform connections without leaving the command line.
 ms.topic: how-to
+ms.service: powerapps
+ms.subservice: code-apps
+ms.author: jordanchodak
+ms.reviewer: jdaly
+author: jordanchodakWork
+ms.date: 08/03/2026
 ---
-# Create a connection from the CLI (preview)
 
-Use the [Power Apps client library for code apps](https://www.npmjs.com/package/@microsoft/power-apps?activeTab=readme) `create-connection` command to create a connection for a connector directly from the command line, without leaving your terminal or opening [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) as described in [How to: Connect your code app to data](connect-to-data.md).
+# Create a connection from the Power Apps CLI
 
-Starting with version 1.2.7, use the `list-connectors` command to see connectors available in your environment.
+Use the Power Apps CLI to find connectors and create a connection without leaving your terminal or opening [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 ## Prerequisites
 
-An initialized Power Apps code app. See [Quickstart: Create a code app by using the npm CLI](./npm-quickstart.md).
+An initialized Power Apps code app. See [Quickstart: Create a code app by using the Power Apps CLI](npm-quickstart.md).
 
-## List available connectors
+## Step 1: List available connectors
 
-Before you create a connection, use the `list-connectors` command to see which connectors are available in your Power Platform environment and to find a connector's API identifier. This is the value you pass to `create-connection` command `api-id` option.
+Run the commands in this article from the root of your code app project.
 
-The `list-connectors` command lists connectors from the Power Platform environment that your code app is currently targeting. This is the environment set in `power.config.json` when you ran `power-apps init`.
-
-### Usage
-
-Run the command from the root of your code app project:
+Use [`pa connector list`](../reference/cli.md#pa-connector-list) to find the connectors available in the Power Platform environment configured for your code app:
 
 ```bash
-power-apps list-connectors [--search <term>] [--json]
+pa connector list [--search <term>] [--json]
 ```
+
+The environment is set in `power.config.json` when you run [`pa app init`](../reference/cli.md#pa-app-init).
 
 ### Options
 
-Use the following options with `list-connectors`.
-
 | Option | Alias | Required | Description |
-|--------|-------|----------|-------------|
-| `--search` | `-s` | No | Filter the results to connectors whose name or display name matches the search term. |
-| `--json` | — | No | Output the full connector list as JSON for scripting scenarios. |
+| --- | --- | --- | --- |
+| `--search` | `-s` | No | Filters connectors by name or display name. |
+| `--json` | - | No | Returns the connector list as JSON. |
 
 ### Output
 
-By default, the command prints a table with two columns:
+By default, the command returns a table with the following columns:
 
 | Column | Description |
-|---|---|
-| Display Name | The connector's friendly name, for example, *Office 365 Outlook*. |
-| Connector | The connector's unique name / API identifier, for example, `shared_office365`. This is the value you pass to `create-connection` command `--api-id` option. |
+| --- | --- |
+| Display Name | The connector's display name, such as *Office 365 Outlook*. |
+| Connector | The connector identifier, such as `shared_office365`. Use this value with the `--connector` option of [`pa connection create`](../reference/cli.md#pa-connection-create). |
 
-When you run the command in an interactive terminal, it returns results in pages of 20 rows. Press <kbd>Enter</kbd> to show the next page, or <kbd>Esc</kbd>/<kbd>q</kbd> to exit. When you redirect the output (non-interactive), or you pass `--json`, the command emits the full list at once.
+In an interactive terminal, results appear in pages of 20 rows. Press Enter to show the next page. Press Esc or Q to exit. When you redirect the output or include `--json`, the command returns the complete list.
 
-The `--json` output includes additional fields for each connector beyond the two table columns:
+The JSON output includes the following fields:
 
 | Field | Description |
-|-------|-------------|
-| `id` | The connector's ID. |
-| `name` | The connector's unique name (API identifier), for example `shared_office365`. |
-| `displayName` | The connector's friendly display name. |
-| `description` | The connector's description. |
-| `isTabular` | Indicates whether the connector supports tabular (table) data operations. |
+| --- | --- |
+| `id` | The connector ID. |
+| `name` | The connector identifier, such as `shared_office365`. |
+| `displayName` | The connector display name. |
+| `description` | The connector description. |
+| `isTabular` | Indicates whether the connector supports tabular data operations. |
 
 ### Examples
 
-List all connectors available in the current environment:
+List all available connectors:
 
 ```bash
-power-apps list-connectors
+pa connector list
 ```
 
-Search for connectors by name:
+Search for connectors:
 
 ```bash
-power-apps list-connectors --search teams
+pa connector list --search teams
 ```
 
-Emit the full connector list as JSON. This is useful in scripts and  continuous integration (CI):
+Return the connector list as JSON:
 
 ```bash
-power-apps list-connectors --json
+pa connector list --json
 ```
 
- ## Create the connection
+## Step 2: Create the connection
 
-Use the `create-connection` command to create a connection for a connector directly from the command line, without leaving your terminal or opening the Power Apps maker portal.
-
-The connection is created in the Power Platform environment that your code app is currently targeting. This environment is set in `power.config.json` when you run `power-apps init`.
-
-## Usage
-
-Run the command from the root of your code app project:
+Use [`pa connection create`](../reference/cli.md#pa-connection-create) to create a connection in the environment configured for the code app:
 
 ```bash
-power-apps create-connection --api-id <connectorId> [--display-name <name>] [--json]
+pa connection create --connector <connector-id> [--display-name <name>] [--json]
 ```
 
 ### Options
 
-Use the following options with `create-connection`.
-
-|Option|Alias|Required|Description|
-|---|---|---|---|
-|`--api-id`|`-a`|Yes|Connector API identifier (for example, `shared_office365`, `shared_teams`).|
-|`--display-name`|`-n`|No|Optional display name for the new connection. If not specified, a default is used.|
-|`--json`|—|No|Output the result as JSON for scripting scenarios.|
+| Option | Alias | Required | Description |
+| --- | --- | --- | --- |
+| `--connector` | - | Yes | The connector identifier, such as `shared_office365` or `shared_teams`. |
+| `--display-name` | `-n` | No | The display name for the connection. If you don't provide a name, the CLI uses a default name. |
+| `--json` | - | No | Returns the result as JSON. |
 
 ### Examples
 
-Create an Office 365 connection:
+Create an Office 365 Outlook connection:
 
 ```bash
-power-apps create-connection --api-id shared_office365
+pa connection create --connector shared_office365
 ```
 
-Create a Teams connection with a custom display name:
+Create a Microsoft Teams connection with a custom display name:
 
 ```bash
-power-apps create-connection --api-id shared_teams --display-name "My Teams"
+pa connection create --connector shared_teams --display-name "My Teams"
 ```
 
-Create a connection and emit JSON output.  This is useful in scripts and  continuous integration (CI):
+Create a connection and return the result as JSON:
 
 ```bash
-power-apps create-connection --api-id shared_office365 --json
+pa connection create --connector shared_office365 --json
 ```
 
-On success, the command prints the new connection's ID. You can then reference that connection ID when adding the connector as a data source to your code app.
+When the command succeeds, it returns the connection ID. Use the connection ID when you add the connector as a data source to the code app.
 
+## Related information
+
+- [Connect your code app to data](connect-to-data.md)
+- [Quickstart: Create a code app by using the Power Apps CLI](npm-quickstart.md)
+- [Power Apps CLI command reference](../reference/cli.md)

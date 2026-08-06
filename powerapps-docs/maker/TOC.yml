@@ -2165,6 +2165,8 @@
       href: ./data-platform/autonumber-fields.md
     - name: Prompt columns
       href: ./data-platform/prompt-column.md
+    - name: Use visualizations for columns in grids (preview)
+      href: ./data-platform/column-visualizations-grids.md  
     - name: Work with Power Fx formula columns
       items:
       - name: Power Fx formula columns
