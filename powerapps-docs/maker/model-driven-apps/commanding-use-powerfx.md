@@ -1,11 +1,11 @@
 ---
-title: "Use Power Fx with commands | MicrosoftDocs"
-description: "Use Power Fx to customize the command bar."
+title: "Use Power Fx with commands with Power Apps"
+description: "Use Power Fx to customize the command bar in model-driven apps with Power Apps."
 Keywords: command bar, command designer, commanding, modern, dialog, flow
 author: caburk
 ms.author: caburk
 ms.reviewer: matp
-ms.date: 07/17/2024
+ms.date: 08/06/2026
 ms.topic: how-to
 ms.subservice: mda-maker
 search.audienceType: 
