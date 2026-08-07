@@ -4,7 +4,7 @@ description: Custom API is a code-first way to define custom messages for Micros
 #customer intent: As a developer, I want to create custom APIs in Dataverse, so that I can consolidate one or more operations into a single message that I and other developers can call from code or Power Automate.
 author: kewear
 ms.author: kewear
-ms.date: 06/11/2026
+ms.date: 08/03/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 ms.subservice: dataverse-developer
@@ -49,7 +49,7 @@ You can create a custom API in several different ways:
 
 ## Custom API customization
 
-When you create a custom API and related request parameters and response properties, understand that these API definitions are customizable by default. If they're customizable, you can iterate and make changes to these items in your unmanaged solution.
+When you create a custom API along with request parameters and response properties, understand that these API definitions are customizable by default. If they're customizable, you can iterate and make changes to these items in your unmanaged solution.
 
 > [!IMPORTANT]
 > When you ship or deploy your solution, use a managed solution and always set the **Is Customizable** managed property to `false` for these components. This setting prevents people using your managed solution from modifying or deleting these components. Such changes could break code written for the original definition of the custom API.
@@ -85,7 +85,7 @@ The following table describes which custom API **Custom Processing Step Type** (
 
 ## Select a binding type
 
-Binding is an OData concept that associates an operation to a specific table. The following table describes the custom API **Binding Type** (`BindingType`) you should use.
+Binding is an OData concept that associates an operation with a specific table. The following table describes the custom API **Binding Type** (`BindingType`) you should use.
 
 |Option |When to use  |
 |---------|---------|
@@ -93,14 +93,14 @@ Binding is an OData concept that associates an operation to a specific table. Th
 |**Entity**|When the operation accepts a single record of a specific table as a parameter.|
 |**EntityCollection**|When the operation applies changes to, or returns a collection of a specific table.|
 
-Selecting **Entity** or **EntityCollection** requires that you use the fully qualified name of the Function or Action when you use the Web API. The fully qualified name is `Microsoft.Dynamics.CRM.<UniqueName of the custom API>`. 
+If you select **Entity** or **EntityCollection**, you must use the fully qualified name of the Function or Action when you use the Web API. The fully qualified name is `Microsoft.Dynamics.CRM.<UniqueName of the custom API>`. 
 
-When you select **Entity**, a request parameter named `Target` with the type <xref:Microsoft.Xrm.Sdk.EntityReference>  is created automatically. You don't need to create it. This value is passed to any plug-ins registered for this message.
+When you select **Entity**, the system automatically creates a request parameter named `Target` with the type <xref:Microsoft.Xrm.Sdk.EntityReference>. You don't need to create it. This value is passed to any plug-ins registered for this message.
 
-When you select **EntityCollection**, no parameter or response property representing the entity collection is included. Setting this binding simply adds the requirement that the operation be invoked appended to the entityset when using the Web API.
+When you select **EntityCollection**, the operation doesn't include any parameter or response property that represents the entity collection. Setting this binding simply adds the requirement that the operation be invoked appended to the entity set when using the Web API.
 
 > [!NOTE]
-> These binding types are available for you to use when composing your custom API, but it's not required that you bind to an entity or entity collection. You can compose all your custom API as **Global** and add whichever request parameters or response properties you need to achieve the same functionality as a bound Function or Action.
+> You can use these binding types when composing your custom API, but you don't need to bind to an entity or entity collection. You can compose all your custom API as **Global** and add whichever request parameters or response properties you need to achieve the same functionality as a bound Function or Action.
 
 More information:
  - [Actions bound to a table](webapi/use-web-api-actions.md#actions-bound-to-a-table)
@@ -346,7 +346,7 @@ The following example shows editing the Excel worksheet to add Japanese translat
 :::image type="content" source="media/solution-strings-for-translation.png" alt-text="Shows how labels are localized.":::
 
 > [!TIP]
-> If you're editing the solution files to create your custom APIs, you can provide the localized labels directly. [Learn about providing Localized Labels with the solution](create-custom-api-solution.md#providing-localized-labels-with-the-solution)
+> If you're editing the solution files to create your custom APIs, you can provide the localized labels directly. [Learn about providing Localized Labels with the solution](create-custom-api-solution.md#provide-localized-labels-with-the-solution)
 
 ### Setting localized values
 

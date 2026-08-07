@@ -1,12 +1,12 @@
 ---
 title: "Create a custom API with solution files"
-description: "You can write create custom APIs by editing solution files." 
-ms.date: 07/14/2023
+description: "Learn how to create a custom API by adding definition files to a Dataverse solution project and using Microsoft Power Platform CLI."
+ms.date: 08/03/2026
 ms.reviewer: jdaly
 ms.topic: how-to
-author: MsSQLGirl
+author: kewear
+ms.author: kewear
 ms.subservice: dataverse-developer
-ms.author: jukoesma
 search.audienceType: 
   - developer
 contributors:
@@ -20,69 +20,44 @@ contributors:
 > - [Create and use custom APIs](custom-api.md)
 > - [Create a custom API using the plug-in registration tool](create-custom-api-prt.md)
 
+This article demonstrates how to create a custom API by adding definition files to a Microsoft Dataverse solution project. This approach is useful for solution publishers who store [solution files in source control](/power-platform/alm/use-source-control-solution-files) and apply application lifecycle management (ALM) practices.
 
-While you can create custom APIs through a designer or with code, you can also define them by working with files within a solution. Using files within a solution may be the preferred option for solution publishers who apply the recommended best practices for Application Lifecycle Management (ALM).
+Use [Microsoft Power Platform CLI](/power-platform/developer/cli/introduction) to initialize the solution project, build the solution package, and import it into a Dataverse environment. You don't need to create or export an empty solution first.
 
-A solution file is a compressed (zip) file that has been exported from a Microsoft Dataverse instance. The contents of this file can be extracted and the components checked into a source repository. The contents can be edited and then compressed again. The changes applied to the solution are part of the solution and are created when the solution is imported.
+## Prerequisites
+
+- Install [Microsoft Power Platform CLI](/power-platform/developer/cli/introduction#install-microsoft-power-platform-cli).
+- Install a [.NET SDK](https://dotnet.microsoft.com/download) that includes the `dotnet` command.
+- Have access to a Dataverse environment where you have privileges to import solutions.
+
+## Step 1: Initialize a solution project
+
+From the folder where you want to create the project, run the following command:
+
+```powershell
+pac solution init --publisher-name Samples --publisher-prefix sample --outputDirectory CustomAPIExample
+```
+
+The [pac solution init](/power-platform/developer/cli/reference/solution#pac-solution-init) command creates a `CustomAPIExample` folder that contains:
+
+- `CustomAPIExample.cdsproj`: The Dataverse solution project file.
+- `src\Other\Solution.xml`: The solution and publisher definition.
+- `src\Other\Customizations.xml`: The solution customizations definition.
+- `src\Other\Relationships.xml`: The solution relationships definition.
+
+The output directory name becomes the solution unique name. Verify the generated values in `src\Other\Solution.xml` before you continue.
 
 > [!NOTE]
-> These processes are typically automated with tools and processes that are beyond the scope of this topic. This topic will focus on the simple scenario of creating a custom API by manually manipulating the extracted files in a solution to demonstrate how the data in the files can be used to create custom API. More information: [Source control with solution files](/power-platform/alm/use-source-control-solution-files)
+> The publisher name and customization prefix must meet the requirements described for [pac solution init](/power-platform/developer/cli/reference/solution#pac-solution-init). Use values for an existing publisher in the target environment or a new publisher that you want to create.
 
-## Step 1: Create an Unmanaged solution
+## Step 2: Add the definition of the custom API
 
-You shouldn't try to compose a solution file manually. Use the tools in [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to generate a solution file. Use the steps in the following articles to create and export a solution. The solution doesn't need to contain any solution components.
+All custom APIs in a solution are found within a folder named **customapis**. Within that folder, each custom API is in a folder named after the custom API `UniqueName` property. The data representing the custom API is in an XML file named `customapi.xml`.
 
-1. [Create a solution](../../maker/data-platform/create-solution.md)
-
-    For this example, the solution is defined simply like this:
-
-    :::image type="content" source="media/custom-api-solution.png" alt-text="An empty solution.":::
-
-1. [Export solutions](../../maker/data-platform/export-solutions.md)
-
-    For this example, make sure you export an unmanaged solution. Managed solution is the default.
-
-    :::image type="content" source="media/export-empty-unmanaged-solution.png" alt-text="Option to select to export an unmanaged solution.":::
-    
-You can find the exported file in your downloads folder. It has a name that depends on the name and version of the solution, in this case: `CustomAPIExample_1_0_0_2.zip`.
-
-## Step 2: Extract the contents of the solution and update the version
-
-The solution is a compressed (zip) file.
-
-1. Right-click on the file and choose **Extract All...** from the context menu.
-
-    You should see just the following three files in the folder:
-
-    - `[Content_Types].xml`
-    - `customizations.xml`
-    - `solution.xml`
-
-1. Open the solution.xml file and locate the `Version` element.
-
-    ```xml
-    <ImportExportXml version="9.1.0.23474" SolutionPackageVersion="9.1" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <SolutionManifest>
-        <UniqueName>CustomAPIExample</UniqueName>
-        <LocalizedNames>
-          <LocalizedName description="Custom API Example" languagecode="1033" />
-        </LocalizedNames>
-        <Descriptions />
-        <Version>1.0.0.1</Version>
-    ```
-
-1. Update the value by 1. In this example, it's `<Version>1.0.0.2</Version>`.
-1. Save the file.
-
-## Step 3: Add the definition of the custom API
-
-All custom APIs in a solution are found within a folder named **customapis**. Within that folder each custom API will be in a folder named after the custom API `UniqueName` property.
-Within the folder, the data representing the custom API is found within an XML file named `customapi.xml`
-
-1. In the folder with the extracted files, create a new folder named `customapis`.
+1. In the `CustomAPIExample\src` folder, create a new folder named `customapis`.
 1. In the **customapis** folder, create a folder with the `UniqueName` of the custom API you want to create. For this example, we use `sample_CustomAPIExample`.
 1. In the **sample_CustomAPIExample** folder you created, create a file named `customapi.xml`.
-1. Edit the `customapi.xml` to set the properties of the custom API you want to create. For this example, we use the following xml:
+1. Edit the `customapi.xml` to set the properties of the custom API you want to create. For this example, use the following XML:
    
     ```xml
     <customapi uniquename="sample_CustomAPIExample">
@@ -104,128 +79,167 @@ Within the folder, the data representing the custom API is found within an XML f
     </customapi>
     ```
 
-  See the information in [Custom API table columns](custom-api-tables.md#custom-api-table-columns) to set the values of the elements.
+    See the information in [Custom API table columns](custom-api-tables.md#custom-api-table-columns) to set the values of the elements.
 
 ### Set a relation to a plug-in type (optional)
 
-If you already have a Plug-in Type that you want to associate with this custom API, you can include a reference to it in this definition by adding the following element within the `<customapi>` element:
+If you already have a plug-in type that you want to associate with this custom API, include a reference to it in this definition by adding the following element within the `<customapi>` element:
 
 ```xml
 <plugintypeid>
-   <plugintypeexportkey>{Add the GUID value of the plug-in type export key}</plugintypeexportkey>
+  <plugintypeexportkey>{Add the GUID value of the plug-in type export key}</plugintypeexportkey>
 </plugintypeid>
-  ```
+```
 
-OR
+or
 
-  ```xml
+```xml
 <plugintypeid>
-   <plugintypeid>{Add the GUID value of the plug-in type id}</plugintypeid>
+  <plugintypeid>{Add the GUID value of the plug-in type ID}</plugintypeid>
 </plugintypeid>
-  ```
+```
 
 > [!NOTE]
 > Either value will work, but we recommend you use the `plugintypeexportkey`.
 
-You can retrieve the [PluginTypeExportKey](reference/entities/plugintype.md#BKMK_PluginTypeExportKey) and [PluginTypeId](reference/entities/plugintype.md#BKMK_PluginTypeId) values using a Web API query like this where you know the name of the plug-in type:
+To retrieve the [PluginTypeExportKey](reference/entities/plugintype.md#BKMK_PluginTypeExportKey) and [PluginTypeId](reference/entities/plugintype.md#BKMK_PluginTypeId) values, use a Web API query when you know the name of the plug-in type:
 
 ```http
 GET [Organization Uri]/api/data/v9.2/plugintypes?$select=name,plugintypeid,plugintypeexportkey&$filter=contains(name,'MyPlugin.TypeName')
 ```
 
-## Step 4: Add any custom API Request Parameters
+## Step 3: Add any custom API request parameters
 
-Any definitions of request parameters for the custom API are included in a folder called `customapirequestparameters`. Within that folder each custom API Request Parameter will be in a folder named after the custom API Request Parameter `UniqueName` property.
+Include definitions of request parameters for the custom API in a folder called `customapirequestparameters`. Within that folder, each custom API request parameter is in a folder named after its `UniqueName` property.
 
-1. If your custom API has any request parameters, within the folder for the custom API you created in the previous step, create a folder named `customapirequestparameters`.
+1. If your custom API has any request parameters, within the `CustomAPIExample\src\customapis\sample_CustomAPIExample` folder, create a folder named `customapirequestparameters`.
 1. For each custom API Request Parameter, create a new folder using the `UniqueName` property of the custom API Request Parameter. For this example, we use `StringParameter`.
-1. Within the folder, add an xml file named `customapirequestparameter.xml`.
+1. Within the folder, add an XML file named `customapirequestparameter.xml`.
 1. Edit the **customapirequestparameter.xml** file to set the properties of the custom API you want to create. For this example, we use the following:
 
-  ```xml
-  <customapirequestparameter uniquename="StringParameter">
-    <description default="The StringParameter request parameter for custom API Example">
-      <label description="The StringParameter request parameter for custom API Example" languagecode="1033" />
-    </description>
-    <displayname default="Custom API Example String Parameter">
-      <label description="Custom API Example String Parameter" languagecode="1033" />
-    </displayname>
-    <iscustomizable>0</iscustomizable>
-    <isoptional>0</isoptional>
-    <logicalentityname />
-    <name>sample_CustomAPIExample.StringParameter</name>
-    <type>10</type>
-  </customapirequestparameter>
-  ```
+    ```xml
+    <customapirequestparameter uniquename="StringParameter">
+      <description default="The StringParameter request parameter for custom API Example">
+        <label description="The StringParameter request parameter for custom API Example" languagecode="1033" />
+      </description>
+      <displayname default="Custom API Example String Parameter">
+        <label description="Custom API Example String Parameter" languagecode="1033" />
+      </displayname>
+      <iscustomizable>0</iscustomizable>
+      <isoptional>0</isoptional>
+      <logicalentityname />
+      <name>sample_CustomAPIExample.StringParameter</name>
+      <type>10</type>
+    </customapirequestparameter>
+    ```
 
-See the information in [CustomAPIRequestParameter Table Columns](custom-api-tables.md#customapirequestparameter-table-columns) to set the values of the elements.
+    See [Custom API request parameter table columns](custom-api-tables.md#customapirequestparameter-table-columns) to set the values of the elements.
 
-## Step 5: Add any custom API Response Properties
+## Step 4: Add any custom API response properties
 
-Any definitions of response properties for the custom API are included in a folder called `customapiresponseproperties`. Within that folder each custom API Response Property will be in a folder named after the custom API Response Property  `UniqueName` property.
+You define response properties for the custom API in a folder named `customapiresponseproperties`. Each custom API response property resides in its own folder, which is named after the property's `UniqueName` value.
 
-1. If your custom API has any response properties, within the folder for the custom API you created in [Step 3: Add the definition of the custom API](#step-3-add-the-definition-of-the-custom-api), create a folder named `customapiresponseproperties`.
+1. If your custom API includes response properties, create a `customapiresponseproperties` folder inside `CustomAPIExample\src\customapis\sample_CustomAPIExample`.
 1. For each custom API Response Property, create a new folder using the `UniqueName` property of the custom API Response Property. For this example, we use `StringProperty`.
-1. Within the folder, add an xml file named `customapiresponseproperty.xml`.
+1. Add an XML file named `customapiresponseproperty.xml` to the folder.
 1. Edit the **customapiresponseproperty.xml** file to set the properties of the custom API you want to create. For this example, we use the following:
 
-  ```xml
-  <customapiresponseproperty uniquename="StringProperty">
-    <description default="The StringProperty response property for custom API Example">
-      <label description="The StringProperty response property for custom API Example" languagecode="1033" />
-    </description>
-    <displayname default="Custom API Example String Property">
-      <label description="Custom API Example String Property" languagecode="1033" />
-    </displayname>
-    <iscustomizable>0</iscustomizable>
-    <logicalentityname />
-    <name>sample_CustomAPIExample.StringProperty</name>
-    <type>10</type>
-  </customapiresponseproperty>
-  ```
+    ```xml
+    <customapiresponseproperty uniquename="StringProperty">
+      <description default="The StringProperty response property for custom API Example">
+        <label description="The StringProperty response property for custom API Example" languagecode="1033" />
+      </description>
+      <displayname default="Custom API Example String Property">
+        <label description="Custom API Example String Property" languagecode="1033" />
+      </displayname>
+      <iscustomizable>0</iscustomizable>
+      <logicalentityname />
+      <name>sample_CustomAPIExample.StringProperty</name>
+      <type>10</type>
+    </customapiresponseproperty>
+    ```
 
-See the information in [CustomAPIResponseProperty Table Columns](customapiresponseproperty-table-columns.md) to set the values of the elements.
+    To set the values of the elements, see [Custom API response property table columns](customapiresponseproperty-table-columns.md).
 
 > [!NOTE]
 > While the schema for request parameters and response properties is very similar, note that `isoptional` is not valid for a response property and will cause an error when you try to import the solution.
 
-## Step 6: Compress the files to create a new solution file
+## Step 5: Review the solution project structure
 
-1. Return to the folder where you extracted the original solution file in [Step 2: Extract the contents of the solution and update the version](#step-2-extract-the-contents-of-the-solution-and-update-the-version)
-1. Select all the extracted files and the **customapis** folder you created.
+Your solution project should have this structure:
 
-    :::image type="content" source="media/selected-solution-files.png" alt-text="The selected solution files.":::
+```text
+CustomAPIExample
+|   CustomAPIExample.cdsproj
+|
+\---src
+    +---customapis
+    |   \---sample_CustomAPIExample
+    |       |   customapi.xml
+    |       |
+    |       +---customapirequestparameters
+    |       |   \---StringParameter
+    |       |           customapirequestparameter.xml
+    |       |
+    |       \---customapiresponseproperties
+    |           \---StringProperty
+    |                   customapiresponseproperty.xml
+    |
+    \---Other
+            Customizations.xml
+            Relationships.xml
+            Solution.xml
+```
 
-1. Right-click the selected files and choose **Send to** > **Compressed (zipped folder)**.
-1. You can rename the resulting file to be anything you want. For this example, rename it to match the original exported solution file: `CustomAPIExample_1_0_0_2.zip`.
+## Step 6: Build the solution
 
-## Step 7: Import the solution with the definition of your custom API
+From the `CustomAPIExample` project folder, run:
 
-1. Return to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select **Solutions**.
-1. Select **Import** and follow the instructions to select the solution file you created in the previous step.
+```powershell
+dotnet build
+```
 
-    :::image type="content" source="media/import-solution-with-customapi.png" alt-text="Import the solution file.":::
+The build process restores the required packages and creates the unmanaged solution package at `bin\Debug\CustomAPIExample.zip`.
 
-    > [!NOTE]
-    > If you see a warning saying **This version of the solution package is already installed**, you must not have updated the `Version` element of the solution.xml as described in [Step 2: Extract the contents of the solution and update the version](#step-2-extract-the-contents-of-the-solution-and-update-the-version).
+## Step 7: Import the solution
 
-1. You should see a warning saying **This solution package contains an update for a solution that is already installed**. Select **Import** to continue.
-1. Wait a few minutes while the solution import completes. 
+> [!IMPORTANT]
+> You need an authenticated PAC CLI session to the Dataverse environment. 
 
-  > [!NOTE]
-  > It is possible you will see an error if another solution is being installed at the same time. More information: [Concurrent solution operation failures](/troubleshoot/power-platform/dataverse/working-with-solutions/concurrent-solution-operation-failures)
+If you already have authentication profiles, use [pac auth list and pac auth select](/power-platform/developer/cli/reference/auth#switch-to-another-authentication-profile) to select the profile for the target environment. 
+
+If you don't have any authentication profiles, [learn to connect to your environment](/power-platform/developer/cli/introduction#connect-to-your-tenant).
+
+1. From the `CustomAPIExample` project folder, import and publish the solution:
+
+   ```powershell
+   pac solution import --path .\bin\Debug\CustomAPIExample.zip --publish-changes
+   ```
+
+Wait for the import to complete.
+
+> [!NOTE]
+> You might see an error if another solution is being installed at the same time. For more information, see [Concurrent solution operation failures](/troubleshoot/power-platform/dataverse/working-with-solutions/concurrent-solution-operation-failures).  The resolution is typically to try again later.
 
 ## Step 8: Verify that the custom API was added to your solution
 
-Open the solution you created and verify that the custom API and the associated request parameters and response properties are included.
+In [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), open the **CustomAPIExample** solution and verify that the custom API and the associated request parameters and response properties are included.
 
 :::image type="content" source="media/customapi-solution-installed-successfully.png" alt-text="Showing that the solution component installed successfully.":::
 
-At this point, you can test your API using the steps describe in [Test your custom API](create-custom-api-maker-portal.md#test-your-custom-api)
-
+At this point, you can test your API by using the steps described in [Test your custom API](create-custom-api-maker-portal.md#test-your-custom-api).
+At this point, you can test your API by using the steps described in [Test your custom API](create-custom-api-maker-portal.md#test-your-custom-api).
 ## Update a custom API in a solution
 
 After you ship a solution that contains a custom API, you may want to make some changes to the custom API in your unmanaged solution. You can add new parameters or response properties and make changes to those columns that support being updated, such as the `displayname` and `description`.
+
+Before you build and import an updated solution, set the revision to a value greater than the version that is already installed. For example, run these commands from the solution project folder:
+
+```powershell
+pac solution version --revisionversion 2 --solutionPath .\src
+dotnet build
+pac solution import --path .\bin\Debug\CustomAPIExample.zip --publish-changes
+```
 
 > [!IMPORTANT]
 > You cannot introduce a change to a custom API in a solution that modifies any of the properties that cannot be changed after they are saved. When you install a newer version of a solution that contains a definition of a custom API, it will attempt to update the custom API, custom API Request Parameters, and custom API Response properties. A solution update is the same as trying to update the custom API using any other method.
@@ -238,24 +252,21 @@ After you ship a solution that contains a custom API, you may want to make some 
 >    - `isfunction`
 >    - `uniquename`
 >    - `workflowsdkstepenabled`
-> - Custom API RequestParameter properties:
+> - Custom API request parameter properties:
 >    - `isoptional`
 >    - `logicalentityname`
 >    - `type`
 >    - `uniquename`
-> - Custom API Response Property properties:
+> - Custom API response property properties:
 >    - `logicalentityname`
 >    - `type`
 >    - `uniquename`
 >
->  More information: [CustomAPI tables](custom-api-tables.md)
+> For more information, see [CustomAPI tables](custom-api-tables.md).
+> For more information, see [CustomAPI tables](custom-api-tables.md).
+## Provide localized labels with the solution
 
-
-
-## Providing Localized Labels with the solution
-
-As an alternative to using the process described in [Localized Label values](custom-api.md#localized-label-values), if you're editing the solution files for custom API entities, you can provide translations directly in these files. For example if you want to provide Japanese localized labels for your custom API, you can provide them for the `description` and `displayname` properties as shown below:
-
+Instead of using the process described in [Localized Label values](custom-api.md#localized-label-values), you can provide translations directly in the solution files for custom API entities. For example, if you want to provide Japanese localized labels for your custom API, you can provide them for the `description` and `displayname` properties as shown in the following example:
 ```xml
 <customapi uniquename="sample_CustomAPIExample">
   <allowedcustomprocessingsteptype>0</allowedcustomprocessingsteptype>
@@ -276,12 +287,13 @@ As an alternative to using the process described in [Localized Label values](cus
 
 ### See also
 
-[Create and use custom APIs](custom-api.md)   
-[CustomAPI tables](custom-api-tables.md)   
-[Create a custom API using the plug-in registration tool](create-custom-api-prt.md)   
-[Create a custom API in Power Apps](create-custom-api-maker-portal.md)   
-[Create a custom API with code](create-custom-api-with-code.md)   
-[Create your own messages](custom-actions.md)   
+- [Create and use custom APIs](custom-api.md)
+- [CustomAPI tables](custom-api-tables.md)
+- [Create a custom API using the plug-in registration tool](create-custom-api-prt.md)
+- [Create a custom API in Power Apps](create-custom-api-maker-portal.md)
+- [Create a custom API with code](create-custom-api-with-code.md)
+- [Create your own messages](custom-actions.md)
+- [Microsoft Power Platform CLI solution command group](/power-platform/developer/cli/reference/solution)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
