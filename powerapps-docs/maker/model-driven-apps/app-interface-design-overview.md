@@ -1,5 +1,5 @@
 ---
-title: "Model-driven app interface design overview | MicrosoftDocs"
+title: "Model-driven app interface design overview in Power Apps"
 description: "An overview of the elements that influence the app design interface"
 ms.date: 04/22/2025
 ms.reviewer: ""
@@ -19,7 +19,7 @@ search.audienceType:
 ---
 # Model-driven app interface design overview
 
-Model-driven app interface design includes working with table [views](model-driven-app-glossary.md#view) and [forms](model-driven-app-glossary.md#form). To work with these components in your app, you create [pages](model-driven-app-glossary.md#page).
+Model-driven app interface design includes working with table views and forms. To work with these components in your app, you create pages.
 
 Creating pages in a model-driven app builds the app [site-map](model-driven-app-glossary.md#site-map) that describes the navigation experience within the app.
 

@@ -1,7 +1,7 @@
 ---
 title: "Add the calendar control to tables in model-driven apps with Power Apps"
 description: "Learn how to add the calendar control to tables in model-driven apps."
-ms.date: 5/15/2025
+ms.date: 08/06/2026
 ms.topic: how-to
 author: sriharibs-msft
 ms.subservice: mda-maker
@@ -28,12 +28,12 @@ When you add the calendar control to a table, you can specify the columns that a
 > [!NOTE]
 > When you add the control to a table view, it replaces the standard view for all views for that table.
 
-1. While working in the app designer on the **Pages** tab, hover over the table view and then select **Edit view** (pencil icon).  
+1. While working in the app designer on the **Pages** tab, hover over the table, and then select the pencil icon next to &lt;table name&gt; **view**.  
 1. Open the view where you want to replace the standard view with the calendar control.
    The view designer opens.
 1. On the command bar select **Components**, and then select **Add a component**.
 1. On the **Add a control** page, select **Calendar**.
-1. On the **Add a calendar** properties page, select the table columns and clients to display the control. For example, with appointment table, you specify these columns.
+1. On the **Add Calendar** properties page, select the table columns and clients to display the control. For example, with appointment table, specify these columns.
    - **Start date**. Select the column that is used for the start date on the calendar, such as **Start Time (Date and Time)**.
    - **Description**. Select the column that is used for the description, such as **Subject (Text)**.
    - **End date**. Select the column that is used for the end date on the calendar, such as **End Time (Date and Time)**.

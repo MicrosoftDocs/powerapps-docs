@@ -2,7 +2,7 @@
 title: "Power Apps read-only grid control"
 description: "A control for use with Power Apps that lets users view and open records from a view or subgrid"
 ms.custom: ""
-ms.date: 01/23/2025
+ms.date: 08/07/2026
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""

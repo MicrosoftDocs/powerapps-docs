@@ -2,7 +2,7 @@
 title: "Create or edit model-driven app quick create forms in Power Apps"
 description: "Learn how to create or edit a quick create form"
 ms.custom: ""
-ms.date: 01/22/2025
+ms.date: 08/06/2026
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -53,8 +53,8 @@ Although you can define multiple quick create forms, only one quick create form 
   
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. Select **Solutions** on the left navigation pane, and then open the solution you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
-1. Select **Tables**, select the table, and then select the **Forms** area.  
-1. On the toolbar, select **Add form** > **Quick create form**.  
+1. Select **Tables**, open the table, and then select the **Forms** area.  
+1. On the toolbar, select **New form** > **Quick create form** > Enter a **Form name** and **Form description** > **Create**.  
 1. In the form designer, drag any columns from the **Table columns** left pane into the sections on the form.  
 1. When you're finished, select **Save and publish** to display the new form in the application.  
   
@@ -91,7 +91,7 @@ If you add a composite column to a quick create form, it's displayed as separate
 
 The **Enable quick create forms** property can be enabled or disabled for all standard activities except recurring appointments. This property allows the form that is displayed by default for most activities to display. By default, the **Enable quick create forms** property is enabled and the quick create form is the form displayed in the app areas and activity tables that support it.
 
->  <img src = "media/allow-quick-create.png" alt = "Allow Quick Create property on appointment table" width = "413" height = "975">
+<img src = "media/allow-quick-create.png" alt = "Allow Quick Create property on appointment table" width = "413" height = "975">
 
 ### Unified Interface client form display behavior
 
