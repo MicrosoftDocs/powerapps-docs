@@ -4,7 +4,7 @@ description: Learn how to use plans, an AI-powered tool in Power Platform, to cr
 author: szlo
 contributors:
 ms.topic: how-to
-ms.date: 02/24/2026
+ms.date: 08/07/2026
 ms.update-cycle: 180-days
 ms.author: mkaur
 ms.reviewer: mkaur
@@ -24,9 +24,6 @@ Plans in Power Apps is a copilot-first development tool that lets you quickly cr
 :::image type="content" source="media/overview-plan-designer/pd-overview-landing-page.png" alt-text="Screenshot of plans in Power Apps.":::
 
 ## Prerequisites
-
-> [!IMPORTANT]
-> For Government Community Cloud users, plans is supported only in the Government Community Cloud (GCC). For more information, see [Plans in Sovereign Clouds](https://github.com/microsoft/SLG-Business-Applications/blob/main/white-papers/Plan-Designer-disclaimer.md)
 
 To use plans in Power Apps, follow these steps:
 
