@@ -2,7 +2,7 @@
 title: "Known issues with custom pages in a model-driven app"
 description: "Find the known issue that might occur when you create a custom page." 
 ms.custom: ""
-ms.date: 04/16/2025
+ms.date: 08/06/2026
 ms.reviewer: ""
 ms.subservice: mda-maker
 ms.topic: troubleshooting-known-issue
@@ -13,7 +13,7 @@ search.audienceType:
 ---
 # Known issues with custom pages in a model-driven app
 
-The custom page is a new page type within model-driven apps. Custom pages bring the power of canvas apps into model-driven apps. Below are the known issues to be aware of.
+Custom pages bring the power of canvas apps into model-driven apps. Below are the known issues to be aware of.
 
 > [!IMPORTANT]
 > Using custom pages with mobile devices is currently in public preview. Offline and device capability controls like barcode scanning, capturing photos from device, or attaching files isn't supported.

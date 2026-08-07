@@ -2,7 +2,7 @@
 title: "Create or edit a Power BI embedded system dashboard"
 description: Set up and use a system dashboard that references a Power BI report or dashboard in a model-driven app.
 ms.custom: ""
-ms.date: 01/18/2025
+ms.date: 08/06/2026
 ms.reviewer: "matp"
 ms.topic: "how-to"
 ms.subservice: mda-maker
@@ -30,7 +30,7 @@ This procedure shows you how to set up a Power BI embedded page for a single env
 
 1. Select **Solutions** on the left navigation pane in Power Apps (make.powerapps.com), and then create or open an existing solution. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 
-1. Select **New** > **Dashboards** > **Power BI embedded**.
+1. Select **New** > **Dashboard** > **Power BI embedded**.
 
 1. Enter or select the following properties in the **New Power BI embedded** dialog that appears:
    - Enter a **Display name** for the dashboard, which will be shown to the user in the selector on the **Dashboards** page.
