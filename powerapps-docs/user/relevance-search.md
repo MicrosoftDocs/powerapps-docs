@@ -6,7 +6,7 @@ contributors: mgreen
 
 ms.component: pa-user
 ms.topic: how-to
-ms.date: 06/26/2025
+ms.date: 07/15/2026
 ms.subservice: end-user
 ms.author: jasonhuang
 ms.custom: ""
@@ -131,6 +131,17 @@ Each table-specific tab displays more information than the **Top results** tab a
 
 - If the quick find view for the table has more than six **View Column**, then all columns are displayed on the table-specific tab, compared to the maximum of six columns shown on the **Top results** tab.
 - All matching rows for the table are accessible in the table-specific tab as an infinitely scrollable list.
+
+## Scope search to a specific table
+
+You can narrow Dataverse search to a single table so that results include only records from the table you choose, instead of searching across all tables. Scoping your search to a specific table is useful when you already know the type of record you're looking for and want to reduce noise from unrelated results.
+
+To scope your search to a specific table:
+
+1. Select the search box to begin a search.
+1. Choose the table you want to search from the table selector.
+1. Enter your search term. The results include only records from the selected table.
+
 
 ## Filter results by using facets
 
