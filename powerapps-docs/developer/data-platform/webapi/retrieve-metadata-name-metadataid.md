@@ -1,7 +1,7 @@
 ---
-title: "Retrieve table definitions by name or MetadataId (Microsoft Dataverse) | Microsoft Docs"
-description: "Microsoft Dataverse uses a metadata-driven architecture to provide the flexibility to create custom tables and more system table columns."
-ms.date: 08/15/2022
+title: "Reference Dataverse Schema Definitions by Name or MetadataId"
+description: "Learn how to reference Microsoft Dataverse schema definitions by name or MetadataId with the Web API to retrieve table, column, relationship, and choice metadata."
+ms.date: 08/07/2026
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: jdaly
@@ -10,20 +10,20 @@ search.audienceType:
 contributors: 
   - JimDaly
 ---
-# Retrieve table definitions by name or MetadataId
+# Reference Dataverse schema definitions by name or MetadataId
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-Your applications can adapt to configuration changes by querying the table and column definitions (metadata). When you know one of the key properties of a definition item, you can retrieve definitions using the Web API.
+Learn how to reference Microsoft Dataverse schema definitions by name or MetadataId through the Web API. These queries help applications retrieve metadata and adapt to table and column configuration changes.
 
 > [!NOTE]
-> This topic describes retrieving table definitions and other schema entities by name. But you can also use the names when performing other operations to create, update, and delete schema entities.
+> This article demonstrates retrieving schema definitions by name. You can also use the names when performing other operations to create, update, and delete schema entities.
 
 <a name="bkmk_byName"></a>
 
-## Retrieve definition items by name
+## Retrieve schema definitions by name
   
-All retrievable definition items have a `MetadataId` primary key that can be used to retrieve individual items. For definitions that have an alternate key, you can retrieve them by name.
+All retrievable definition items have a `MetadataId` primary key that you can use to retrieve individual items. For definitions that have an alternate key, you can retrieve them by name.
   
 Retrieving definition items by name is easier because you probably already have some reference to the item name in your code. The following table lists the alternate key properties for retrieving such items by name.
   
@@ -36,14 +36,12 @@ Retrieving definition items by name is easier because you probably already have 
   
 <a name="bkmk_exampleByName"></a>
 
-### Example: Retrieve definition items by name
+### Example: Retrieve schema definitions by name
 
-A common definition item that people want to retrieve are the options configured for a particular  attribute. The following example shows how to retrieve the `OptionSet` and `GlobalOptionSet` properties of a  <xref href="Microsoft.Dynamics.CRM.PicklistAttributeMetadata?text=PicklistAttributeMetadata EntityType" />.  
+A common definition item that people want to retrieve is the options configured for a particular attribute. The following example shows how to retrieve the `OptionSet` and `GlobalOptionSet` properties of a <xref href="Microsoft.Dynamics.CRM.PicklistAttributeMetadata?text=PicklistAttributeMetadata EntityType" />.  
   
 > [!NOTE]
->  Expanding both the `OptionSet` and `GlobalOptionSet` single-valued navigation properties of   <xref href="Microsoft.Dynamics.CRM.PicklistAttributeMetadata?text=PicklistAttributeMetadata EntityType" /> allows you to get the option definition whether the attribute is configured to use global option sets or the 'local' option set within the entity. If it is a 'local' option set, the  `GlobalOptionSet` property will be null as shown below.  
->   
->  If the attribute used a global option set, the `GlobalOptionSet` property would contain the defined options and the `OptionSet` property would be null.  
+>  You don't need to expand both the `OptionSet` and `GlobalOptionSet` single-valued navigation properties of <xref href="Microsoft.Dynamics.CRM.PicklistAttributeMetadata?text=PicklistAttributeMetadata EntityType" />. You can get the option definition from either property regardless of whether the attribute is configured to use global option sets or the local option set within the entity.
   
  **Request:**  
 
@@ -62,78 +60,158 @@ HTTP/1.1 200 OK
 Content-Type: application/json; odata.metadata=minimal  
 OData-Version: 4.0  
   
-{  
-    "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#EntityDefinitions('account')/Attributes/Microsoft.Dynamics.CRM.PicklistAttributeMetadata(LogicalName,OptionSet,GlobalOptionSet,OptionSet(Options),GlobalOptionSet(Options))/$entity",  
-    "LogicalName": "accountcategorycode",  
-    "MetadataId": "118771ca-6fb9-4f60-8fd4-99b6124b63ad",  
-    "OptionSet@odata.context": "[Organization URI]/api/data/v9.2/$metadata#EntityDefinitions('account')/Attributes(118771ca-6fb9-4f60-8fd4-99b6124b63ad)/Microsoft.Dynamics.CRM.PicklistAttributeMetadata/OptionSet(Options)/$entity",  
-    "OptionSet": {  
-        "Options": [{  
-            "Value": 1,  
-            "Label": {  
-                "LocalizedLabels": [{  
-                    "Label": "Preferred Customer",  
-                    "LanguageCode": 1033,  
-                    "IsManaged": true,  
-                    "MetadataId": "0bd8a218-2341-db11-898a-0007e9e17ebd",  
-                    "HasChanged": null  
-                }],  
-                "UserLocalizedLabel": {  
-                    "Label": "Preferred Customer",  
-                    "LanguageCode": 1033,  
-                    "IsManaged": true,  
-                    "MetadataId": "0bd8a218-2341-db11-898a-0007e9e17ebd",  
-                    "HasChanged": null  
-                }  
-            },  
-            "Description": {  
-                "LocalizedLabels": [  
-  
-                ],  
-                "UserLocalizedLabel": null  
-            },  
-            "Color": null,  
-            "IsManaged": true,  
-            "MetadataId": null,  
-            "HasChanged": null  
-        }, {  
-            "Value": 2,  
-            "Label": {  
-                "LocalizedLabels": [{  
-                    "Label": "Standard",  
-                    "LanguageCode": 1033,  
-                    "IsManaged": true,  
-                    "MetadataId": "0dd8a218-2341-db11-898a-0007e9e17ebd",  
-                    "HasChanged": null  
-                }],  
-                "UserLocalizedLabel": {  
-                    "Label": "Standard",  
-                    "LanguageCode": 1033,  
-                    "IsManaged": true,  
-                    "MetadataId": "0dd8a218-2341-db11-898a-0007e9e17ebd",  
-                    "HasChanged": null  
-                }  
-            },  
-            "Description": {  
-                "LocalizedLabels": [  
-  
-                ],  
-                "UserLocalizedLabel": null  
-            },  
-            "Color": null,  
-            "IsManaged": true,  
-            "MetadataId": null,  
-            "HasChanged": null  
-        }],  
-        "MetadataId": "b994cdd8-5ce9-4ab9-bdd3-8888ebdb0407"  
-    },  
-    "GlobalOptionSet": null  
-}  
+{
+  "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#EntityDefinitions('account')/Attributes/Microsoft.Dynamics.CRM.PicklistAttributeMetadata(LogicalName,OptionSet(Options),GlobalOptionSet(Options))/$entity",
+  "MetadataId": "118771ca-6fb9-4f60-8fd4-99b6124b63ad",
+  "LogicalName": "accountcategorycode",
+  "OptionSet": {
+    "MetadataId": "b994cdd8-5ce9-4ab9-bdd3-8888ebdb0407",
+    "Options": [
+      {
+        "Value": 1,
+        "Color": null,
+        "IsManaged": true,
+        "ExternalValue": null,
+        "ParentValues": [],
+        "Tag": null,
+        "IsHidden": false,
+        "MetadataId": null,
+        "HasChanged": null,
+        "Label": {
+          "LocalizedLabels": [
+            {
+              "Label": "Preferred Customer",
+              "LanguageCode": 1033,
+              "IsManaged": true,
+              "MetadataId": "0bd8a218-2341-db11-898a-0007e9e17ebd",
+              "HasChanged": null
+            }
+          ],
+          "UserLocalizedLabel": {
+            "Label": "Preferred Customer",
+            "LanguageCode": 1033,
+            "IsManaged": true,
+            "MetadataId": "0bd8a218-2341-db11-898a-0007e9e17ebd",
+            "HasChanged": null
+          }
+        },
+        "Description": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        }
+      },
+      {
+        "Value": 2,
+        "Color": null,
+        "IsManaged": true,
+        "ExternalValue": null,
+        "ParentValues": [],
+        "Tag": null,
+        "IsHidden": false,
+        "MetadataId": null,
+        "HasChanged": null,
+        "Label": {
+          "LocalizedLabels": [
+            {
+              "Label": "Standard",
+              "LanguageCode": 1033,
+              "IsManaged": true,
+              "MetadataId": "0dd8a218-2341-db11-898a-0007e9e17ebd",
+              "HasChanged": null
+            }
+          ],
+          "UserLocalizedLabel": {
+            "Label": "Standard",
+            "LanguageCode": 1033,
+            "IsManaged": true,
+            "MetadataId": "0dd8a218-2341-db11-898a-0007e9e17ebd",
+            "HasChanged": null
+          }
+        },
+        "Description": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        }
+      }
+    ]
+  },
+  "GlobalOptionSet": {
+    "MetadataId": "b994cdd8-5ce9-4ab9-bdd3-8888ebdb0407",
+    "Options": [
+      {
+        "Value": 1,
+        "Color": null,
+        "IsManaged": true,
+        "ExternalValue": null,
+        "ParentValues": [],
+        "Tag": null,
+        "IsHidden": false,
+        "MetadataId": null,
+        "HasChanged": null,
+        "Label": {
+          "LocalizedLabels": [
+            {
+              "Label": "Preferred Customer",
+              "LanguageCode": 1033,
+              "IsManaged": true,
+              "MetadataId": "0bd8a218-2341-db11-898a-0007e9e17ebd",
+              "HasChanged": null
+            }
+          ],
+          "UserLocalizedLabel": {
+            "Label": "Preferred Customer",
+            "LanguageCode": 1033,
+            "IsManaged": true,
+            "MetadataId": "0bd8a218-2341-db11-898a-0007e9e17ebd",
+            "HasChanged": null
+          }
+        },
+        "Description": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        }
+      },
+      {
+        "Value": 2,
+        "Color": null,
+        "IsManaged": true,
+        "ExternalValue": null,
+        "ParentValues": [],
+        "Tag": null,
+        "IsHidden": false,
+        "MetadataId": null,
+        "HasChanged": null,
+        "Label": {
+          "LocalizedLabels": [
+            {
+              "Label": "Standard",
+              "LanguageCode": 1033,
+              "IsManaged": true,
+              "MetadataId": "0dd8a218-2341-db11-898a-0007e9e17ebd",
+              "HasChanged": null
+            }
+          ],
+          "UserLocalizedLabel": {
+            "Label": "Standard",
+            "LanguageCode": 1033,
+            "IsManaged": true,
+            "MetadataId": "0dd8a218-2341-db11-898a-0007e9e17ebd",
+            "HasChanged": null
+          }
+        },
+        "Description": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        }
+      }
+    ]
+  }
+}
 ```  
   
 <a name="bkmk_byMetadataId"></a>
    
-## Retrieve definition items by MetadataId
+## Retrieve schema definitions by MetadataId
 
 Because the `MetadataId` is the primary key for definition items, retrieving individual items follows the same pattern used to retrieve business data tables.  
   
@@ -144,9 +222,9 @@ Because the `MetadataId` is the primary key for definition items, retrieving ind
 |Relationship|`GET /api/data/v9.2/RelationshipDefinitions(<Relationship MetadataId>)`|  
 |Global Option Set|`GET /api/data/v9.2/GlobalOptionSetDefinitions(<OptionSet MetadataId>)`|  
   
-### Example: Retrieve definition items by MetadataId  
+### Example: retrieve schema definitions by MetadataId  
 
-To achieve the same result as shown in [Example: Retrieve definition items by name](#bkmk_exampleByName), you need to perform a series of query operations to get the `MetadataId` by filtering by the entity `LogicalName` and then by the attribute `LogicalName`.  
+To get the same result as [Example: Retrieve definition items by name](#bkmk_exampleByName), perform a series of query operations to get the `MetadataId` by filtering by the entity `LogicalName` and then by the attribute `LogicalName`.  
   
  **Request:**
 
@@ -218,73 +296,153 @@ HTTP/1.1 200 OK
 Content-Type: application/json; odata.metadata=minimal  
 OData-Version: 4.0  
   
-{  
-    "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#EntityDefinitions(70816501-edb9-4740-a16c-6a5efbc05d84)/Attributes/Microsoft.Dynamics.CRM.PicklistAttributeMetadata(LogicalName,OptionSet,GlobalOptionSet,OptionSet(Options),GlobalOptionSet(Options))/$entity",  
-    "LogicalName": "accountcategorycode",  
-    "MetadataId": "118771ca-6fb9-4f60-8fd4-99b6124b63ad",  
-    "OptionSet@odata.context": "[Organization URI]/api/data/v9.2/$metadata#EntityDefinitions(70816501-edb9-4740-a16c-6a5efbc05d84)/Attributes(118771ca-6fb9-4f60-8fd4-99b6124b63ad)/Microsoft.Dynamics.CRM.PicklistAttributeMetadata/OptionSet(Options)/$entity",  
-    "OptionSet": {  
-        "Options": [{  
-            "Value": 1,  
-            "Label": {  
-                "LocalizedLabels": [{  
-                    "Label": "Preferred Customer",  
-                    "LanguageCode": 1033,  
-                    "IsManaged": true,  
-                    "MetadataId": "0bd8a218-2341-db11-898a-0007e9e17ebd",  
-                    "HasChanged": null  
-                }],  
-                "UserLocalizedLabel": {  
-                    "Label": "Preferred Customer",  
-                    "LanguageCode": 1033,  
-                    "IsManaged": true,  
-                    "MetadataId": "0bd8a218-2341-db11-898a-0007e9e17ebd",  
-                    "HasChanged": null  
-                }  
-            },  
-            "Description": {  
-                "LocalizedLabels": [  
-  
-                ],  
-                "UserLocalizedLabel": null  
-            },  
-            "Color": null,  
-            "IsManaged": true,  
-            "MetadataId": null,  
-            "HasChanged": null  
-        }, {  
-            "Value": 2,  
-            "Label": {  
-                "LocalizedLabels": [{  
-                    "Label": "Standard",  
-                    "LanguageCode": 1033,  
-                    "IsManaged": true,  
-                    "MetadataId": "0dd8a218-2341-db11-898a-0007e9e17ebd",  
-                    "HasChanged": null  
-                }],  
-                "UserLocalizedLabel": {  
-                    "Label": "Standard",  
-                    "LanguageCode": 1033,  
-                    "IsManaged": true,  
-                    "MetadataId": "0dd8a218-2341-db11-898a-0007e9e17ebd",  
-                    "HasChanged": null  
-                }  
-            },  
-            "Description": {  
-                "LocalizedLabels": [  
-  
-                ],  
-                "UserLocalizedLabel": null  
-            },  
-            "Color": null,  
-            "IsManaged": true,  
-            "MetadataId": null,  
-            "HasChanged": null  
-        }],  
-        "MetadataId": "b994cdd8-5ce9-4ab9-bdd3-8888ebdb0407"  
-    },  
-    "GlobalOptionSet": null  
-}  
+{
+  "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#EntityDefinitions('account')/Attributes/Microsoft.Dynamics.CRM.PicklistAttributeMetadata(LogicalName,OptionSet(Options),GlobalOptionSet(Options))/$entity",
+  "MetadataId": "118771ca-6fb9-4f60-8fd4-99b6124b63ad",
+  "LogicalName": "accountcategorycode",
+  "OptionSet": {
+    "MetadataId": "b994cdd8-5ce9-4ab9-bdd3-8888ebdb0407",
+    "Options": [
+      {
+        "Value": 1,
+        "Color": null,
+        "IsManaged": true,
+        "ExternalValue": null,
+        "ParentValues": [],
+        "Tag": null,
+        "IsHidden": false,
+        "MetadataId": null,
+        "HasChanged": null,
+        "Label": {
+          "LocalizedLabels": [
+            {
+              "Label": "Preferred Customer",
+              "LanguageCode": 1033,
+              "IsManaged": true,
+              "MetadataId": "0bd8a218-2341-db11-898a-0007e9e17ebd",
+              "HasChanged": null
+            }
+          ],
+          "UserLocalizedLabel": {
+            "Label": "Preferred Customer",
+            "LanguageCode": 1033,
+            "IsManaged": true,
+            "MetadataId": "0bd8a218-2341-db11-898a-0007e9e17ebd",
+            "HasChanged": null
+          }
+        },
+        "Description": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        }
+      },
+      {
+        "Value": 2,
+        "Color": null,
+        "IsManaged": true,
+        "ExternalValue": null,
+        "ParentValues": [],
+        "Tag": null,
+        "IsHidden": false,
+        "MetadataId": null,
+        "HasChanged": null,
+        "Label": {
+          "LocalizedLabels": [
+            {
+              "Label": "Standard",
+              "LanguageCode": 1033,
+              "IsManaged": true,
+              "MetadataId": "0dd8a218-2341-db11-898a-0007e9e17ebd",
+              "HasChanged": null
+            }
+          ],
+          "UserLocalizedLabel": {
+            "Label": "Standard",
+            "LanguageCode": 1033,
+            "IsManaged": true,
+            "MetadataId": "0dd8a218-2341-db11-898a-0007e9e17ebd",
+            "HasChanged": null
+          }
+        },
+        "Description": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        }
+      }
+    ]
+  },
+  "GlobalOptionSet": {
+    "MetadataId": "b994cdd8-5ce9-4ab9-bdd3-8888ebdb0407",
+    "Options": [
+      {
+        "Value": 1,
+        "Color": null,
+        "IsManaged": true,
+        "ExternalValue": null,
+        "ParentValues": [],
+        "Tag": null,
+        "IsHidden": false,
+        "MetadataId": null,
+        "HasChanged": null,
+        "Label": {
+          "LocalizedLabels": [
+            {
+              "Label": "Preferred Customer",
+              "LanguageCode": 1033,
+              "IsManaged": true,
+              "MetadataId": "0bd8a218-2341-db11-898a-0007e9e17ebd",
+              "HasChanged": null
+            }
+          ],
+          "UserLocalizedLabel": {
+            "Label": "Preferred Customer",
+            "LanguageCode": 1033,
+            "IsManaged": true,
+            "MetadataId": "0bd8a218-2341-db11-898a-0007e9e17ebd",
+            "HasChanged": null
+          }
+        },
+        "Description": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        }
+      },
+      {
+        "Value": 2,
+        "Color": null,
+        "IsManaged": true,
+        "ExternalValue": null,
+        "ParentValues": [],
+        "Tag": null,
+        "IsHidden": false,
+        "MetadataId": null,
+        "HasChanged": null,
+        "Label": {
+          "LocalizedLabels": [
+            {
+              "Label": "Standard",
+              "LanguageCode": 1033,
+              "IsManaged": true,
+              "MetadataId": "0dd8a218-2341-db11-898a-0007e9e17ebd",
+              "HasChanged": null
+            }
+          ],
+          "UserLocalizedLabel": {
+            "Label": "Standard",
+            "LanguageCode": 1033,
+            "IsManaged": true,
+            "MetadataId": "0dd8a218-2341-db11-898a-0007e9e17ebd",
+            "HasChanged": null
+          }
+        },
+        "Description": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        }
+      }
+    ]
+  }
+}
 ```  
   
 ### See also

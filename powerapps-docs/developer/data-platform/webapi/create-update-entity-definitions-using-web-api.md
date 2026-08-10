@@ -1,7 +1,7 @@
 ---
-title: "Create and update table definitions using the Web API"
-description: "Learn about creating and updating Dataverse table definitions using the Web API."
-ms.date: 06/07/2023
+title: "Create and Update Table Definitions Using the Web API"
+description: "Learn how to create and update Dataverse table definitions using the Web API, manage localized labels, and publish changes. Follow the examples to get started."
+ms.date: 08/07/2026
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: jdaly
@@ -10,62 +10,103 @@ search.audienceType:
 contributors: 
   - JimDaly
 ---
-# Create and update table definitions using the Web API
+# Create and update table definitions by using the Web API
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-You can perform all the same operations on table definitions using the Web API that you can with the SDK for .NET. This article focuses on working with table definitions (metadata) using the Web API. To find details about the table definition properties, see [Customize table definitions](../customize-entity-metadata.md) and [EntityMetadata EntityType](xref:Microsoft.Dynamics.CRM.EntityMetadata).
+Learn how to create and update Dataverse table definitions by using the Web API, including how to define a primary name column, preserve localized labels, and publish metadata changes. You can perform the same operations by using the [SDK for .NET](../org-service/work-with-metadata.md). The [Dataverse SDK for Python](../sdk-python/metadata.md) uses the Web API.
+
+For details about table definition properties, see [Customize table definitions](../customize-entity-metadata.md) and [EntityMetadata EntityType](xref:Microsoft.Dynamics.CRM.EntityMetadata).
 
 <a name="bkmk_createEntities"></a>
 
 > [!TIP]
-> Entities, attributes, and global option sets (also known as tables, columns, and choices) are all solution components. When you create them you can associate them with a solution by using the `MSCRM.SolutionUniqueName` request header and setting the value to the  unique name of the solution it should be part of.
+> Entities, attributes, and global option sets (also known as tables, columns, and choices) are all solution components. When you create them, you can associate them with a solution by using the `MSCRM.SolutionUniqueName` optional request header and setting the value to the unique name of the solution it should be part of. [Learn how to associate a solution component with a solution](../optional-parameters.md#associate-a-solution-component-with-a-solution)
 
 ## Create table definitions
 
-To create a table definition, `POST` the JSON representation of the entity definition data to the `EntityDefinitions` entity set path. The entity must include the definition for the primary name attribute. You don't need to set values for all the properties. The items on this list except for Description are required, although setting a description is a recommended best practice. Property values you don't specify are set to default values. To understand the default values, look at the example in the [Update table definitions](#bkmk_updateEntities) section. The example in this article uses the following entity properties.  
+To create a table definition, `POST` the JSON representation of the [EntityMetadata](xref:Microsoft.Dynamics.CRM.EntityMetadata) to the `EntityDefinitions` entity set path. The entity must include the definition for the primary name column in the `Attributes` collection-valued navigation property. You don't need to set values for all the properties. The items on this list, except for `Description`, are required. Setting a description is a recommended best practice. Property values you don't specify are set to default values. To understand the default values, see the example in the [Update table definitions](#bkmk_updateEntities) section. The example in this article uses the following entity properties.  
+
+### Required table properties
+
+This table lists the properties that must have values when creating a table definition. 
   
-|EntityMetadata property|Value|  
+|EntityMetadata property| Example value|  
 |---------------------|-----------|  
-|`SchemaName`|`new_BankAccount` **Note:**  You should include the customization prefix that matches the solution publisher. Here the default value "new_" is used, but you should choose the prefix that works for your solution.|  
-|`DisplayName`|Bank Account|  
-|`DisplayCollectionName`|Bank Accounts|  
-|`Description`|An entity to store information about customer bank accounts.|  
-|`OwnershipType`|`UserOwned` **Note:**  For the values you can set here, see [OwnershipTypes EnumType](xref:Microsoft.Dynamics.CRM.OwnershipTypes).|  
-|`IsActivity`|false|  
-|`HasActivities`|false|  
-|`HasNotes`|false|  
+|`SchemaName`|`new_BankAccount` <br />**Note:**  Include the customization prefix that matches the solution publisher. The default value is `new_`. Choose the prefix that works for your solution because you can't change it later.|
+|`DisplayName`|`Bank Account`|  
+|`DisplayCollectionName`|`Bank Accounts`|  
+|`Description`|`Contains data about customer bank accounts.|`  
+|`OwnershipType`|`UserOwned` \| `OrganizationOwned` <br />**Note:**  For the values you can set here, see [OwnershipTypes EnumType](xref:Microsoft.Dynamics.CRM.OwnershipTypes).|  
+|`IsActivity`|`false`|  
+|`HasActivities`|`false`|  
+|`HasNotes`|`false`|  
   
- In addition to the properties listed previously, the `EntityMetadataAttributes` property must contain an array that includes one 
- [StringAttributeMetadata EntityType](xref:Microsoft.Dynamics.CRM.StringAttributeMetadata) to represent the primary name attribute for the entity. The attribute `IsPrimaryName` property must be true. The following table describes the properties set in the example.  
+ In addition to the properties listed previously, the `EntityMetadata.Attributes` property must contain an array that includes one 
+ [StringAttributeMetadata EntityType](xref:Microsoft.Dynamics.CRM.StringAttributeMetadata) to represent the primary name attribute for the entity. The attribute `AttributeMetadata.IsPrimaryName` property must be true. The following table describes the properties set in the example.  
   
-|Primary Attribute property|Value|  
+|Primary Attribute property|Example value|  
 |--------------------------------|-----------|  
 |`SchemaName`|`new_AccountName`|  
-|`RequiredLevel`|None <br />**Note:**  For the values you can set here, see [AttributeRequiredLevelManagedProperty ComplexType](xref:Microsoft.Dynamics.CRM.AttributeRequiredLevelManagedProperty) and [AttributeRequiredLevel EnumType](xref:Microsoft.Dynamics.CRM.AttributeRequiredLevel).|  
-|`MaxLength`|100|  
+|`RequiredLevel`|`None` <br />**Note:** This is a complex type.  For the values you can set here, see [AttributeRequiredLevelManagedProperty complex type](xref:Microsoft.Dynamics.CRM.AttributeRequiredLevelManagedProperty) and [AttributeRequiredLevel EnumType](xref:Microsoft.Dynamics.CRM.AttributeRequiredLevel).|  
+|`MaxLength`|`100`|  
 |`FormatName`|`Text` <br />**Note:**  The primary name attribute must use Text format. For format options available for other string attributes, see [String formats](../entity-attribute-metadata.md#string-formats).|  
-|`DisplayName`|Account Name|  
-|`Description`|Type the name of the bank account.|  
-|`IsPrimaryName`|true|  
+|`DisplayName`|`Account Name`|  
+|`Description`|`Type the name of the bank account.`|  
+|`IsPrimaryName`|`true`|  
   
 > [!NOTE]
->  When you create or update labels using the [Label ComplexType](xref:Microsoft.Dynamics.CRM.Label), you only need to set the `LocalizedLabels` property. The `UserLocalizedLabel` value returned is based on the user's language preference and is read-only.  
+>  When you create or update labels by using the [Label complex type](xref:Microsoft.Dynamics.CRM.Label), set only the `LocalizedLabels` property. The `UserLocalizedLabel` value returned is based on the user's language preference and is read-only.  
   
-The following example shows the creation of a custom table with the properties set. The language is English using the locale ID (LCID) of 1033. [!INCLUDE [lcid](../../../includes/lcid.md)]  
+The following example shows the creation of a custom table with the properties set. The language is English using the locale ID (LCID) of `1033`. [!INCLUDE [lcid](../../../includes/lcid.md)]  
   
  **Request:**
 
 ```http 
 POST [Organization URI]/api/data/v9.2/EntityDefinitions HTTP/1.1
-MSCRM.SolutionUniqueName: examplesolution
 Accept: application/json  
 Content-Type: application/json; charset=utf-8  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
+MSCRM.SolutionUniqueName: examplesolution
   
 {  
   "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",  
+  "SchemaName": "new_BankAccount",  
+  "Description": {  
+   "@odata.type": "Microsoft.Dynamics.CRM.Label",  
+  "LocalizedLabels": [  
+   {  
+    "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",  
+    "Label": "An entity to store information about customer bank accounts",  
+    "LanguageCode": 1033  
+   }  
+  ]  
+ },  
+ "DisplayCollectionName": {  
+   "@odata.type": "Microsoft.Dynamics.CRM.Label",  
+  "LocalizedLabels": [  
+   {  
+     "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",  
+    "Label": "Bank Accounts",  
+    "LanguageCode": 1033  
+   }  
+  ]  
+ },  
+ "DisplayName": {  
+   "@odata.type": "Microsoft.Dynamics.CRM.Label",  
+  "LocalizedLabels": [  
+   {  
+     "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",  
+    "Label": "Bank Account",  
+    "LanguageCode": 1033  
+   }  
+  ]  
+ },  
+ "HasActivities": false,  
+ "HasNotes": false,  
+ "IsActivity": false,  
+ "OwnershipType": "UserOwned",  
  "Attributes": [  
   {  
    "AttributeType": "String",  
@@ -105,42 +146,7 @@ OData-Version: 4.0
    },  
    "MaxLength": 100  
   }  
- ],  
- "Description": {  
-   "@odata.type": "Microsoft.Dynamics.CRM.Label",  
-  "LocalizedLabels": [  
-   {  
-     "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",  
-    "Label": "An entity to store information about customer bank accounts",  
-    "LanguageCode": 1033  
-   }  
-  ]  
- },  
- "DisplayCollectionName": {  
-   "@odata.type": "Microsoft.Dynamics.CRM.Label",  
-  "LocalizedLabels": [  
-   {  
-     "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",  
-    "Label": "Bank Accounts",  
-    "LanguageCode": 1033  
-   }  
-  ]  
- },  
- "DisplayName": {  
-   "@odata.type": "Microsoft.Dynamics.CRM.Label",  
-  "LocalizedLabels": [  
-   {  
-     "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",  
-    "Label": "Bank Account",  
-    "LanguageCode": 1033  
-   }  
-  ]  
- },  
- "HasActivities": false,  
- "HasNotes": false,  
- "IsActivity": false,  
- "OwnershipType": "UserOwned",  
- "SchemaName": "new_BankAccount"  
+ ]
 }  
 ```  
   
@@ -162,29 +168,28 @@ OData-EntityId: [Organization URI]/api/data/v9.2/EntityDefinitions(00aa00aa-bb11
 >  Therefore, you must use the `PUT` method when updating data model entities and be careful to include all the existing properties that you don't intend to change.
 >  You can't update individual properties.  
   
- When you update table definitions with labels, you should include a custom `MSCRM.MergeLabels` request header to control how any labels in the update should be handled. If a label for an item already has labels for other languages and you update it with a label that contains only one label for a specific language, the `MSCRM.MergeLabels` header controls whether to overwrite the existing labels or merge your new label with any existing language labels. With `MSCRM.MergeLabels` set to `true`, any new labels defined will only overwrite existing labels when the language code matches. If you want to overwrite the existing labels to include only the labels you include, set `MSCRM.MergeLabels` to `false`.  
+When you update table definitions with labels, include a custom `MSCRM.MergeLabels` request header to control how any labels in the update are handled. If a label for an item already has labels for other languages and you update it with a label that contains only one label for a specific language, the `MSCRM.MergeLabels` header controls whether to overwrite the existing labels or merge your new label with any existing language labels. Set `MSCRM.MergeLabels` to `true` to ensure new labels only overwrite existing labels when the language code matches. If you want to overwrite the existing labels to include only the labels you include, set `MSCRM.MergeLabels` to `false`. [Learn more about supported request headers](compose-http-requests-handle-errors.md#other-headers) 
   
 > [!IMPORTANT]
->  If you don't include a `MSCRM.MergeLabels` header, the default behavior is as if the value were `false` and any localized labels not included in your update will be lost.  
+>  If you don't include a `MSCRM.MergeLabels` header, the default behavior is as if the value were `false` and your update removes any other localized labels.  
   
-When you update a table or column definition, you must use the  [PublishXml Action](xref:Microsoft.Dynamics.CRM.PublishXml) or 
-[PublishAllXml Action](xref:Microsoft.Dynamics.CRM.PublishAllXml) before the changes you make are applied to the application. More information: [Publish customizations](../../model-driven-apps/publish-customizations.md)  
+When you update a table or column definition, use the  [PublishXml Action](xref:Microsoft.Dynamics.CRM.PublishXml) before the changes you make are applied to the model-driven applications. For more information, see [Publish customizations](../../model-driven-apps/publish-customizations.md).  
   
-Typically, you'll retrieve the JSON definition of the entity attribute and modify the properties before you send it back. The following example contains all the definition properties of the table created in the [Create table definitions](#bkmk_createEntities) example, but with the `DisplayName` changed to "Bank Business Name." It may be useful to note that the JSON here provides the default values for properties not set in the [Create table definitions](#bkmk_createEntities) example.  
+Typically, you retrieve the JSON definition of the table or column definition and modify the properties before you send it back. The following example contains all the definition properties of the table created in the [Create table definitions](#bkmk_createEntities) example, but with the `DisplayName` changed to "Bank Business Name." Note how the JSON data includes the default values for properties not set in the [Create table definitions](#bkmk_createEntities) example.  
 
 > [!NOTE]
-> Some of the examples below use the `MetadataId` primary key value. But you can also use the `LogicalName` alternate key to reference schema entities. More information: [Retrieve table definitions by name or MetadataId](retrieve-metadata-name-metadataid.md)
+> This example uses the `LogicalName` key to uniquely identify the table definition being updated. You can also use the `MetadataId` primary key value. This option is often easier than looking up the `MetadataId` value. For more information, see [Retrieve table definitions by name or MetadataId](retrieve-metadata-name-metadataid.md).
   
  **Request:**
 
 ```http 
-PUT [Organization URI]/api/data/v9.2/EntityDefinitions(00aa00aa-bb11-cc22-dd33-44ee44ee44ee) HTTP/1.1
-MSCRM.SolutionUniqueName: examplesolution
+PUT [Organization URI]/api/data/v9.2/EntityDefinitions(LogicalName='new_bankaccount') HTTP/1.1
 Accept: application/json  
 Content-Type: application/json; charset=utf-8  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
 MSCRM.MergeLabels: true  
+MSCRM.SolutionUniqueName: examplesolution
   
 {  
  "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#EntityDefinitions/$entity",  
