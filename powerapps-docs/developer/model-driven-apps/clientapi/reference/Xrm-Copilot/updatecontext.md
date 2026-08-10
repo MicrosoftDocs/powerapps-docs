@@ -1,9 +1,9 @@
 ---
-title: "updateContext (Client API reference) in model-driven apps (preview)"
+title: "updateContext (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the updateContext method.
 author: devkeydet
 ms.author: marcsc
-ms.date: 06/02/2026
+ms.date: 08/10/2026
 ms.reviewer: jdaly
 ms.topic: reference
 applies_to: "Dynamics 365 (online)"
@@ -13,9 +13,7 @@ contributors:
   - JimDaly
 ---
 
-# updateContext (Client API reference) (preview)
-
-[!INCLUDE [preview-note-pp](~/../shared-content/shared/preview-includes/preview-note-pp.md)]
+# updateContext (Client API reference)
 
 [!INCLUDE[updatecontext-description](includes/updatecontext-description.md)]
 
