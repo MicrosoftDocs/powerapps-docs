@@ -41,14 +41,15 @@ The context data returned by the `getContext` function provides rich details abo
    const ctx = await getContext();
 
    // Now you can access these context properties
-   const appId = ctx.app.appId
-   const environmentId = ctx.app.environmentId
-   const queryParams = ctx.app.queryParams
-   const fullName = ctx.user.fullName
-   const objectId = ctx.user.objectId
-   const tenantId = ctx.user.tenantId
-   const userPrincipalName = ctx.user.userPrincipalName
-   const sessionId = ctx.host.sessionId
+   const appId = ctx.app.appId;
+   const environmentId = ctx.app.environmentId;
+   const queryParams = ctx.app.queryParams;
+   const dataverseOrgUrl = ctx.app.dataverseOrgUrl;
+   const fullName = ctx.user.fullName;
+   const objectId = ctx.user.objectId;
+   const tenantId = ctx.user.tenantId;
+   const userPrincipalName = ctx.user.userPrincipalName;
+   const sessionId = ctx.host.sessionId;
    ```
 
 ## API Response
@@ -74,6 +75,7 @@ The following table describes the properties available in the `IAppContext` inte
 | `appId`| string | The ID of the app being played |
 | `environmentId`| string | The ID of the environment where the app lives |
 | `queryParams` | Record<string, string> | The query parameters added to the URL |
+| `dataverseOrgUrl` | string | The dataverse URL of the environment where the app lives |
 
 ### IUserContext
 
