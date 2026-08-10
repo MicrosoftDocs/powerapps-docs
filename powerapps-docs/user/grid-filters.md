@@ -4,7 +4,7 @@ description: Explore tabular data on a grid page in model-driven apps.
 author: clromano 
 ms.component: pa-user
 ms.topic: how-to
-ms.date: 06/30/2025
+ms.date: 08/10/2026
 ms.subservice: end-user
 ms.author: clromano
 ms.reviewer: smurkute
@@ -131,13 +131,18 @@ To focus on records that meet particular criteria, you can filter a view by one 
 > [!NOTE]
 > Filtering isn't supported on virtual entities. The grid filter's look-up list is limited to 100 results.  
 
+#### Filter by multiple values
+
+Use multiselect filtering for more column types, including text-based columns such as *Name* and *Phone Number*. Lookup, multiselect choice, and party-list lookup columns already support selecting multiple values. In supported column filter dropdowns, select more than one value at a time. The grid returns all records that match any of the values you select, so you can narrow a view to several categories at once without applying multiple separate filters.
+
+:::image type="content" source="./media/multiselect-filter.png" alt-text="A screenshot showing filtering by selecting miltiple values.":::
+
 #### Filtering on a lookup column
 
 When you filter data on a lookup column, you can select from a list of values, rather than typing. For example, to filter a view by **Primary Contact**, you can select a name from the list that appears when you select the filter text box.
 
 If you start typing, the filter suggests matching results to help you complete the search. The results include all rows that aren't otherwise filtered out.
 
-:::image type="content" source="./media/lookup-filter.png" alt-text="A screenshot of the Primary Contact column filter that shows search completion.":::
 
 #### Filtering on a date column
 
