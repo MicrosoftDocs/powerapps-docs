@@ -1,6 +1,6 @@
 ---
 title: Create and edit generative pages with AI code generation tools
-description: Learn how to use AI code generation tools like Claude Code to create and edit generative pages for model-driven apps in Power Apps.
+description: Learn how to use AI code generation tools like GitHub Copilot CLI to create and edit generative pages for model-driven apps in Power Apps.
 author: jasongre
 ms.author: jasongre
 ms.reviewer: matp
@@ -19,9 +19,12 @@ applies_to:
 
 # Create and edit generative pages with AI code generation tools
 
-This article describes how to use AI code generation tools, such as GitHub Copilot CLI and Claude Code, to create and edit generative pages for model-driven apps in Power Apps. This approach allows you to integrate advanced code generation capabilities directly into your development workflow, allowing you to create new generative pages or iterate on existing ones using natural language instructions.
+This article describes how to use AI code generation tools, such as GitHub Copilot CLI, to create and edit generative pages for model-driven apps in Power Apps. By using this approach, you can integrate advanced code generation capabilities directly into your development workflow to create new generative pages or iterate on existing ones by using natural language instructions.
 
-Using AI code generation tools with generative pages provides an alternative development approach that complements the UI-based experience in Power Apps (make.powerapps.com). This code-first approach is designed for developers and technical makers who prefer working with local development tools and CLI-based workflows.
+> [!TIP]
+> This approach is the recommended path for building generative pages. It gives you access to the latest frontier AI models, works worldwide on public clouds, and lets you build multiple pages plus supporting Dataverse tables in a single run.
+
+Using AI code generation tools with generative pages complements the UI-based experience in Power Apps ([make.powerapps.com](https://make.powerapps.com)). This code-first approach fits any maker or developer who wants access to the newest AI models or prefers working with local development tools and CLI-based workflows.
 
 ## What you can do with code generation tools
 
@@ -76,7 +79,7 @@ curl -fsSL https://raw.githubusercontent.com/microsoft/power-platform-skills/mai
 
 The installer automatically:
 
-- Detects available tools (Claude Code, GitHub Copilot CLI)
+- Detects available tools (GitHub Copilot CLI, Claude Code)
 - Registers the plugin marketplace and installs all plugins  
 - Enables auto-update so plugins stay current
 
@@ -90,7 +93,7 @@ To install only the generative page plugin for GitHub Copilot CLI or Claude Code
 2. Install the Power Apps plugin: `/plugin install model-apps@power-platform-skills`
 
 > [!NOTE]
-> For Claude Code, you can install the plugin with different scopes, such as global, local, or user. Depending on the scope, you need to be in the correct directory for Claude Code to use the plugin. Go to [Extend Claude with skills](https://code.claude.com/docs/en/skills#share-skills)
+> For Claude Code, you can install the plugin with different scopes, such as global, local, or user. Depending on the scope, you need to be in the correct directory for Claude Code to use the plugin. Go to [Extend Claude with skills](https://code.claude.com/docs/en/skills#share-skills).
 
 Once installed, you can use the plugin by either:
 
@@ -174,7 +177,7 @@ To navigate to the page and pass these parameters, see [Navigate to and from a g
 
 ## Localization
 
-When you create a generative page using the Power Apps plugin for Claude Code or GitHub Copilot CLI, localization is handled automatically. The agent detects all languages enabled in your environment and generates code so that the page works with all of those languages. The page respects each user's preferred language and regional formatting preferences for dates, numbers, and currency.
+When you create a generative page by using the Power Apps skill, localization is handled automatically. The agent detects all languages enabled in your environment and generates code so that the page works with all of those languages. The page respects each user's preferred language and regional formatting preferences for dates, numbers, and currency.
 
 If you want to target a different set of languages than those enabled in your environment, you can ask the agent to adjust, for example:
 

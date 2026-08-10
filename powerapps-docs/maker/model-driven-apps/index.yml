@@ -60,6 +60,8 @@ landingContent:
             url: model-driven-app-glossary.md#form
           - text: Views
             url: model-driven-app-glossary.md#view
+          - text: Generative pages
+            url: generative-pages.md
           - text: Relationships
             url: model-driven-app-glossary.md#relationship
       
@@ -74,6 +76,8 @@ landingContent:
             url: /power-automate/business-process-flows-overview
           - text: Embedding canvas apps
             url: embed-canvas-app-in-form.md
+          - text: Extend your app with generative pages
+            url: generative-pages.md
           - text: Advanced app making and customization
             url: advanced-navigation.md
 
@@ -88,6 +92,8 @@ landingContent:
             url: create-edit-system-chart.md
           - text: Create or edit dashboards
             url: create-edit-dashboards.md
+          - text: Build a data visualization page with generative pages
+            url: generative-pages.md
           - text: Work with Power BI
             url: use-power-bi.md
 

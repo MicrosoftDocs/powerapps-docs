@@ -2,7 +2,7 @@
 title: Compose HTTP Requests and Handle Errors
 description: Learn how to compose HTTP requests with the correct methods and headers for the Dataverse Web API, and handle errors in the response.
 ms.topic: how-to
-ms.date: 03/09/2026
+ms.date: 08/07/2026
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: jdaly
@@ -47,9 +47,13 @@ The URL you use is made up of these parts:
 
 *Protocol* + *Environment Name* + *Region* + *Base URL* + *Web API path* + *Version* + *Resource*.
 
+### Retrieve the Web API URL from the discovery service
+
+Each tenant can have multiple environments. The [discovery service](../discovery-service.md) returns information about the environments that exist in the tenant. This service returns a list of `Instance` records. The `Instance.ApiUrl` property provides the *Protocol* + *Environment Name* + *Region* + *Base URL* for the environment. 
+
 ### Maximum URL length
 
-The maximum length of URL accepted by is 32 KB (32,768 characters). This length is adequate for most kinds of requests, except certain `GET` operations that require very long string query parameters, such as queries using FetchXml. If you send requests inside the body of a `$batch` request, you can send requests with URLs up to 64 KB (65,536 characters). [Learn more about sending FetchXml within a $batch request](../fetchxml/retrieve-data.md#use-fetchxml-within-a-batch-request).
+The maximum URL length that the service accepts is 32 KB (32,768 characters). This length is adequate for most kinds of requests, except certain `GET` operations that require very long string query parameters, such as queries that use FetchXml. If you send requests inside the body of a `$batch` request, you can send requests with URLs up to 64 KB (65,536 characters). [Learn more about sending FetchXml within a $batch request](../fetchxml/retrieve-data.md?tabs=webapi#use-fetchxml-within-a-batch-request).
 
 ### Maximum OData segment length
 
@@ -77,17 +81,17 @@ The following table lists the HTTP methods you can use with the Dataverse Web AP
   
 |Method|Usage|
 |------------|-----------|
-|`GET`|Use when retrieving data, including calling functions. The expected status code for a successful retrieve is `200 OK`.|
-|`POST`|Use when creating entities or calling actions.|
-|`PATCH`|Use when updating entities or performing upsert operations.|
 |`DELETE`|Use when deleting entities or individual properties of entities.|
-|`PUT`|Use in limited situations to update individual properties of entities. This method isn't recommended when updating most entities. Use `PUT` when updating table definitions. More information: [Use the Web API with table definitions](use-web-api-metadata.md)|
+|`GET`|Use when retrieving data, including calling functions. The expected status code for a successful retrieve is `200 OK`.|
+|`PATCH`|Use when updating entities or performing upsert operations.|
+|`POST`|Use when creating entities or calling actions.|
+|`PUT`|Use in limited situations to update individual properties of entities. This method isn't recommended when updating most entities. Use `PUT` when updating table definitions. For more information, see [Use the Web API with table definitions](use-web-api-metadata.md).|
   
 <a name="bkmk_headers"></a>
 
 ## HTTP headers
 
-All HTTP requests should include at least the following headers.  
+Include at least the following headers in all HTTP requests.  
   
 ```http
 Accept: application/json  
@@ -108,7 +112,7 @@ Every request that includes JSON data in the request body must include a `Conten
 Content-Type: application/json  
 ```  
   
-You can use other headers to enable specific capabilities.  
+Use other headers to enable specific capabilities.  
 
 ### Prefer headers
 
@@ -117,11 +121,11 @@ Use the [Prefer](https://www.rfc-editor.org/rfc/rfc7240) header with the followi
 
 |Prefer value |Description |
 |---------|---------|
-|`return=representation`|Use this preference to return data on create (`POST`) or update (`PATCH`) operations for entities. When you apply this preference to a `POST` request, a successful response has status `201 Created` . For a `PATCH` request, a successful response has a status `200 OK.` Without this preference, both operations return status `204 No Content` to reflect that the response body contains no data. More information: [Create with data returned](create-entity-web-api.md#create-with-data-returned) & [Update with data returned](update-delete-entities-using-web-api.md#update-with-data-returned)|
 |`odata.include-annotations`|See [Request annotations](#request-annotations)|
 |`odata.maxpagesize`|Use this preference to specify how many pages you want to return in a query. More information: [Page results](query/page-results.md) |
 |`odata.track-changes`|The change tracking feature keeps the data synchronized in an efficient manner by detecting what data changed since the data was initially extracted or last synchronized. More information: [Use change tracking to synchronize data with external systems](../use-change-tracking-synchronize-data-external-systems.md)|
 |`respond-async`|Specifies that the request should be processed asynchronously. More information: [Background operations (preview)](../background-operations.md)|
+|`return=representation`|Use this preference to return data on create (`POST`) or update (`PATCH`) operations for entities. When you apply this preference to a `POST` request, a successful response has status `201 Created` . For a `PATCH` request, a successful response has a status `200 OK.` Without this preference, both operations return status `204 No Content` to reflect that the response body contains no data. More information: [Create with data returned](create-entity-web-api.md#create-with-data-returned) & [Update with data returned](update-delete-entities-using-web-api.md#update-with-data-returned)|
 
 > [!NOTE]
 > You can specify multiple `Prefer` headers by using comma-separated values. For example:
@@ -135,11 +139,11 @@ You can request different OData annotation data to be returned with the results 
 
 |Annotation|Description|
 |---------|---------|
-|`OData.Community.Display.V1.FormattedValue`| Returns formatted string values you can use in your application. More information: [Formatted values](query/select-columns.md#formatted-values)|
 |`Microsoft.Dynamics.CRM.associatednavigationproperty`<br />`Microsoft.Dynamics.CRM.lookuplogicalname`|Returns information about related lookup columns. More information:  [Lookup property data](query/select-columns.md#lookup-property-data) and [Multi-table lookups](multitable-lookup.md)|
-|`Microsoft.Dynamics.CRM.totalrecordcount`<br />`Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded`|When you use the `$count` query option, the `@odata.count` annotation tells the number of records, but only 5,000 standard table records can be returned at a time. For elastic tables, the page size limit is 500. Request the `Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded` annotation to get a boolean value that indicates if the total number of records matching the query exceeds the maximum page size limit for the type of table you're using.  More information: [Count number of rows](query/count-rows.md) |
 |`Microsoft.Dynamics.CRM.globalmetadataversion`|You can cache this annotation in your application. The value changes when any schema change occurs, indicating that you might need to refresh any schema data that your application cached. More information: [Cache Schema data](../cache-schema-data.md)|
+|`Microsoft.Dynamics.CRM.totalrecordcount`<br />`Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded`|When you use the `$count` query option, the `@odata.count` annotation tells the number of records, but only 5,000 standard table records can be returned at a time. For elastic tables, the page size limit is 500. Request the `Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded` annotation to get a boolean value that indicates if the total number of records matching the query exceeds the maximum page size limit for the type of table you're using.  More information: [Count number of rows](query/count-rows.md) |
 |`Microsoft.PowerApps.CDS.ErrorDetails.OperationStatus`<br />`Microsoft.PowerApps.CDS.ErrorDetails.SubErrorCode`<br />`Microsoft.PowerApps.CDS.HelpLink`<br />`Microsoft.PowerApps.CDS.TraceText`<br />`Microsoft.PowerApps.CDS.InnerError.Message`|These annotations provide more details when errors are returned. More information: [Include more details with errors](#include-more-details-with-errors)|
+|`OData.Community.Display.V1.FormattedValue`| Returns formatted string values you can use in your application. More information: [Formatted values](query/select-columns.md#formatted-values)|
 
 To request specific annotations, include them as comma-separated values. You can also use the '`*`' character as a wildcard. For example, the following `Prefer` request header includes only the formatted values and any additional error detail annotations:
 
@@ -155,12 +159,18 @@ Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue,Mic
 |Header|Value|Description|
 |---------|---------|---------|
 | `CallerObjectId` | User Microsoft Entra ID Object ID | Use this header to impersonate another user when the caller has the privileges to do so. Set the value to the Microsoft Entra ID Object ID of the user to impersonate. This data is in the [User (SystemUser) table/entity](../reference/entities/systemuser.md) [AzureActiveDirectoryObjectId](../reference/entities/systemuser.md#BKMK_AzureActiveDirectoryObjectId) attribute (column). More information: [Impersonate another user using the Web API](impersonate-another-user-web-api.md). |
+| `Consistency` | `Strong` | Use this header when you must have the most recent version of a cached item. Cached items include metadata definitions, labels, user permissions, and team permissions. For example, if you apply a change to some metadata definition, label, or permission and you have code that must use the latest definition within 30 seconds of the change, use this header to ensure you get the latest version. Using this header incurs a small performance penalty, so don't use it all the time. |
 | `If-Match` | `Etag` value<br /> or `*` | Use this header to apply optimistic concurrency to ensure that you don't overwrite changes that someone else applied on the server since you retrieved a record. More information: [Apply optimistic concurrency](perform-conditional-operations-using-web-api.md#bkmk_Applyoptimisticconcurrency) and [If-Match](https://tools.ietf.org/html/rfc7232#section-3.1).<br /> You can also use this header with `*` to prevent a `PATCH` operation from creating a record. More information: [Prevent create in upsert](perform-conditional-operations-using-web-api.md#prevent-create-in-upsert). |
 | `If-None-Match` | `null`<br /> or `*` | This header should be used in all requests with a value of `null` as described in [HTTP headers](#http-headers), but it can also be used to prevent a `POST` operation from performing an update. More information: [Prevent update in upsert](perform-conditional-operations-using-web-api.md#prevent-update-in-upsert) and [If-None-Match](https://tools.ietf.org/html/rfc7232#section-3.2). |
-| `MSCRM.SolutionUniqueName` | solution unique name | Use this header when you want to create a solution component and have it associated with an unmanaged solution. More information: [Create and update table definitions using the Web API](create-update-entity-definitions-using-web-api.md). |
-| `MSCRM.SuppressDuplicateDetection` | `false` | Use this header with the value `false` to enable duplicate detection when creating or updating a record. More information: [Check for Duplicate records](create-entity-web-api.md#check-for-duplicate-records). |
+|`MSCRM.BypassBusinessLogicExecution`|`CustomSync,CustomAsync`|Synchronous logic must be applied during the transaction and can significantly impact performance of individual operations. With bulk operations, the extra time for these individual operations can increase the time required. Use this optional parameter when you want to improve performance while performing bulk data operations. For more information see [`BypassBusinessLogicExecution`](../bypass-custom-business-logic.md#bypassbusinesslogicexecution) and [Bypass custom Dataverse logic](../optional-parameters.md#bypass-custom-dataverse-logic) and [Use bulk operation messages](../bulk-operations.md)|
 | `MSCRM.BypassCustomPluginExecution` | `true` | Use this header when you want to bypass custom plug-in code and the caller has the `prvBypassCustomPlugins` privilege. More information: [Bypass Custom Business Logic](../bypass-custom-business-logic.md). |
-| `Consistency` | `Strong` | Use this header when you must have the most recent version of a cached item. Cached items include metadata definitions, labels, user permissions, and team permissions. For example, if you apply a change to some metadata definition, label, or permission and you have code that must use the latest definition within 30 seconds of the change, use this header to ensure you get the latest version. Using this header incurs a small performance penalty, so don't use it all the time. |
+|`MSCRM.MergeLabels`|`true`|When updating solution components that contain labels, this heading controls whether to overwrite the existing labels or merge your new label with any existing language labels. Set `MSCRM.MergeLabels` to `true` to ensure new labels only overwrite existing labels when the language code matches. If you want to overwrite the existing labels to include only the labels you include, set `MSCRM.MergeLabels` to `false`.|
+|`MSCRM.SessionToken`|Sesson token value| With elastic tables you can achieve session-level consistency by passing the current session token with your requests. If you don't include the session token, the data that you retrieve might not include data changes that you've just made. [Work with the session token](../use-elastic-tables.md#work-with-the-session-token)|
+| `MSCRM.SolutionUniqueName` | solution unique name | Use this header when you want to create a solution component and have it associated with an unmanaged solution. More information: [Create and update table definitions using the Web API](create-update-entity-definitions-using-web-api.md) and [Associate a solution component with a solution](../optional-parameters.md#associate-a-solution-component-with-a-solution). |
+|`MSCRM.SuppressCallbackRegistrationExpanderJob`|true|When bulk data operations occur that trigger flows, Dataverse creates system jobs to execute the flows. When the number of system jobs is large, it might cause performance issues for the system. If performance issues occur, you can choose to bypass triggering the flows by using this optional parameter. For more information see [Bypass Power Automate flows](../bypass-power-automate-flows.md) and [Bypass Power Automate Flows](../optional-parameters.md#bypass-power-automate-flows) |
+| `MSCRM.SuppressDuplicateDetection` | `false` | Use this header with the value `false` to enable duplicate detection when creating or updating a record. More information: [Check for Duplicate records](create-entity-web-api.md#check-for-duplicate-records) and [Suppress duplicate detection](../optional-parameters.md#suppress-duplicate-detection). |
+
+
 
 When you execute batch operations, you must apply many different headers in the request and with each part sent in the body. More information: [Execute batch operations using the Web API](execute-batch-operations-using-web-api.md).
   
@@ -173,17 +183,17 @@ When you execute batch operations, you must apply many different headers in the 
 |Code|Description|Type|  
 |----------|-----------------|----------|  
 |`200 OK`|Expect this status code when your operation returns data in the response body.|Success|  
-|`201 Created`|Expect this status code when your entity POST operation succeeds and you've specified the `return=representation` preference in your request.|Success|  
+|`201 Created`|Expect this status code when your entity POST operation succeeds and you specify the `return=representation` preference in your request.|Success|  
 |`204 No Content`|Expect this status code when your operation succeeds but doesn't return data in the response body.|Success|  
-|`304 Not Modified`|Expect this status code when testing whether an entity has been modified since it was last retrieved. More information: [Conditional retrievals](perform-conditional-operations-using-web-api.md#bkmk_DetectIfChanged)|Redirection|  
-|`403 Forbidden`|Expect this  status code for the following types of errors:<br /><br />- `AccessDenied`<br />- `AttributePermissionReadIsMissing`<br />- `AttributePermissionUpdateIsMissingDuringUpdate`<br />- `AttributePrivilegeCreateIsMissing`<br />-   `CannotActOnBehalfOfAnotherUser`<br />- `CannotAddOrActonBehalfAnotherUserPrivilege`<br />- `CrmSecurityError`<br />- `InvalidAccessRights`<br />- `PrincipalPrivilegeDenied`<br />- `PrivilegeCreateIsDisabledForOrganization`<br />- `PrivilegeDenied`<br />- `unManagedinvalidprincipal`<br />- `unManagedinvalidprivilegeedepth`|Client Error|  
-|`401 Unauthorized`|Expect this status code for the following types of errors:<br /><br />- `BadAuthTicket`<br />- `ExpiredAuthTicket`<br />-   `InsufficientAuthTicket`<br />- `InvalidAuthTicket`<br />- `InvalidUserAuth`<br />- `MissingCrmAuthenticationToken`<br />- `MissingCrmAuthenticationTokenOrganizationName`<br />- `RequestIsNotAuthenticated`<br />- `TamperedAuthTicket`<br />- `UnauthorizedAccess`<br />-   `UnManagedInvalidSecurityPrincipal`|Client Error|  
-|`413 Payload Too Large`|Expect this  status code when the request length is too large. [Learn about request and response payload size limitations](../work-with-data.md#request-and-response-payload-size-limitations)|Client Error|  
+|`304 Not Modified`|Expect this status code when testing whether an entity is modified since it was last retrieved. For more information, see [Conditional retrievals](perform-conditional-operations-using-web-api.md#bkmk_DetectIfChanged).|Redirection|  
 |`400 BadRequest`|Expect this  status code when an argument is invalid.|Client Error|  
+|`401 Unauthorized`|Expect this status code for the following types of errors:<br /><br />- `BadAuthTicket`<br />- `ExpiredAuthTicket`<br />-   `InsufficientAuthTicket`<br />- `InvalidAuthTicket`<br />- `InvalidUserAuth`<br />- `MissingCrmAuthenticationToken`<br />- `MissingCrmAuthenticationTokenOrganizationName`<br />- `RequestIsNotAuthenticated`<br />- `TamperedAuthTicket`<br />- `UnauthorizedAccess`<br />-   `UnManagedInvalidSecurityPrincipal`|Client Error|  
+|`403 Forbidden`|Expect this  status code for the following types of errors:<br /><br />- `AccessDenied`<br />- `AttributePermissionReadIsMissing`<br />- `AttributePermissionUpdateIsMissingDuringUpdate`<br />- `AttributePrivilegeCreateIsMissing`<br />-   `CannotActOnBehalfOfAnotherUser`<br />- `CannotAddOrActonBehalfAnotherUserPrivilege`<br />- `CrmSecurityError`<br />- `InvalidAccessRights`<br />- `PrincipalPrivilegeDenied`<br />- `PrivilegeCreateIsDisabledForOrganization`<br />- `PrivilegeDenied`<br />- `unManagedinvalidprincipal`<br />- `unManagedinvalidprivilegeedepth`|Client Error|  
 |`404 Not Found`|Expect this  status code when the resource doesn't exist.|Client Error|  
-|`405 Method Not Allowed`|This error occurs for incorrect method and resource combinations. For example, you can't use DELETE or PATCH on a collection of entities.<br /><br /> Expect this for the following types of errors:<br /><br />- `CannotDeleteDueToAssociation`<br />-   `InvalidOperation`<br />- `NotSupported`|Client Error|  
+|`405 Method Not Allowed`|This error occurs for incorrect method and resource combinations. For example, you can't use DELETE or PATCH on a collection of entities.<br /><br /> Expect this status code for the following types of errors:<br /><br />- `CannotDeleteDueToAssociation`<br />-   `InvalidOperation`<br />- `NotSupported`|Client Error|  
 |`412 Precondition Failed`|Expect this  status code for the following types of errors:<br /><br />- `ConcurrencyVersionMismatch`<br />-   `DuplicateRecord`|Client Error|
-|`429 Too Many Requests`|Expect this  status code when API limits are exceeded. More information: [Service Protection API Limits](../api-limits.md)|Client Error|  
+|`413 Payload Too Large`|Expect this  status code when the request length is too large. [Learn about request and response payload size limitations](../work-with-data.md#request-and-response-payload-size-limitations)|Client Error|  
+|`429 Too Many Requests`|Expect this  status code when API limits are exceeded. For more information, see [Service Protection API Limits](../api-limits.md).|Client Error|  
 |`501 Not Implemented`|Expect this  status code when some requested operation isn't implemented.|Server Error|  
 |`503 Service Unavailable`|Expect this  status code when the web API service isn't available.|Server Error|  
   
@@ -275,11 +285,11 @@ The following table describes the annotation in the response.
 
 |Annotation and description|Value|
 |---------|---------|
+|`@Microsoft.PowerApps.CDS.ErrorDetails.InnerError.Message`<br/>The error message found in the InnerError for the exception. This message should be the same as the error message except in certain special cases that are for internal use only.|`Example Error Message.`|
 |`@Microsoft.PowerApps.CDS.ErrorDetails.OperationStatus`<br/>The value of the <xref:Microsoft.Xrm.Sdk.OperationStatus> set by the [InvalidPluginExecutionException(OperationStatus, Int32, String)](/dotnet/api/microsoft.xrm.sdk.invalidpluginexecutionexception.-ctor#Microsoft_Xrm_Sdk_InvalidPluginExecutionException__ctor_Microsoft_Xrm_Sdk_OperationStatus_System_Int32_System_String_) constructor.|`1`|
 |`@Microsoft.PowerApps.CDS.ErrorDetails.SubErrorCode`<br/>The value of the `SubErrorCode` set by the [InvalidPluginExecutionException(OperationStatus, Int32, String)](/dotnet/api/microsoft.xrm.sdk.invalidpluginexecutionexception.-ctor#Microsoft_Xrm_Sdk_InvalidPluginExecutionException__ctor_Microsoft_Xrm_Sdk_OperationStatus_System_Int32_System_String_) constructor.|`12345`|
 |`@Microsoft.PowerApps.CDS.HelpLink`<br/>A URL that contains information about the error and *might* redirect you to guidance about how to address the error.|`http://go.microsoft.com/fwlink/?LinkID=398563&error=Microsoft.Crm.CrmException%3a80040265&client=platform`|
 |`@Microsoft.PowerApps.CDS.TraceText`<br/>Content written to the plug-in trace log by using the [ITracingService.Trace(String, Object[]) Method](/dotnet/api/microsoft.xrm.sdk.itracingservice.trace). This annotation includes the stack trace for the plug-in because the plug-in author logged it.|`[MyNamespace: MyNamespace.MyClass ]`<br/>`[52e2dbb9-85d3-ea11-a812-000d3a122b89: MyNamespace.MyClass :Create of account]`<br/><br/>`Entering MyClass plug-in.`<br/>`StackTrace:`<br/>`  at MyNamespace.MyClass.Execute(IServiceProvider serviceProvider)`|
-|`@Microsoft.PowerApps.CDS.InnerError.Message`<br/>The error message found in the InnerError for the exception. This message should be the same as the error message except in certain special cases that are for internal use only.|`Example Error Message.`|
 
 > [!NOTE]
 > The `@Microsoft.PowerApps.CDS.HelpLink` isn't guaranteed to provide guidance for every error. Guidance *might* be provided proactively but most commonly it's provided reactively based on how frequently the link is used. Use the link. If it doesn't provide guidance, your use of the link helps the product team track that people need more guidance about the error. The team can then prioritize including guidance to the errors that people need most. The resources that the link might direct you to might be documentation, links to community resources, or external sites.

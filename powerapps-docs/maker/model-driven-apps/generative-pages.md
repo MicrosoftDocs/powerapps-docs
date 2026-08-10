@@ -21,12 +21,26 @@ Use natural language to build a *generative page* that's created using AI. Gener
 
 After you describe the page, the system then processes your requirements and specifications and intelligently generates React code that covers both the front-end user experience by selecting the right components and determining the best layout, and the corresponding business logic. Through an interactive, conversational experience, you can refine the page design in real time, adjusting elements, layout, and functionality to perfectly match your vision.
 
-## Development approaches
+## Choose how to build your generative page
 
-You can create generative pages using two approaches:
+Generative pages support two authoring experiences. Both produce the same kind of page. The difference is where you author and which AI model powers the generation.
 
-- Power Apps (make.powerapps.com): As described in this article, makers can create and iterate on generative pages directly in the browser by using a conversational UI experience. Available in the United States, Great Britain, Australia, and Singapore.
-- AI code generation tools: Developers who prefer working with local development tools and direct access to TypeScript and React code can use external tools like Claude Code to develop generative pages locally with a code-first approach and CLI-based deployment. Available worldwide on public clouds. More information: [Create and edit generative pages with AI code generation tools](generative-page-external-tools.md)
+### Recommended: AI code generation tools
+
+Use AI code generation tools like GitHub Copilot CLI to create and edit generative pages from your local development environment. This approach is recommended because of the following benefits:
+
+- **Access to the latest AI models.** Because the AI is provided by the tool you install, you always have access to the newest and most capable frontier models.
+- **Available worldwide on public clouds** – not limited to specific regions.
+- **Code-first workflow.** Work with TypeScript and React directly in your preferred IDE, with `npm install` and IntelliSense support for the generated code.
+- **Build more in a single run.** One natural-language request can produce multiple pages, create the supporting Dataverse tables, and place everything in the right app and solution.
+
+More information: [Create and edit generative pages with AI code generation tools](generative-page-external-tools.md)
+
+### In-browser authoring in Power Apps
+
+Create generative pages directly in the browser at [make.powerapps.com](https://make.powerapps.com) using a conversational UI experience. This experience is best for makers who prefer to stay in the Power Apps designer and don't need a local development setup. It's available in the United States, Great Britain, Australia, and Singapore.
+
+The rest of this article describes the in-browser experience.
 
 ## Prerequisites
 
@@ -271,4 +285,3 @@ Confirm that your environment is in one of the supported regions for the Power A
 - [FAQ about generative pages in model-driven apps](../common/faq-generative-pages-model-driven.md)
 - [Intelligent Apps Catalog (prompt templates for generative pages)](https://github.com/microsoft/apps-agents-workshop/tree/main/Inteligent%20Apps%20Templates/Intelligent%20Apps%20Catalog)
 - [Legal terms](https://go.microsoft.com/fwlink/?linkid=2173149)
-
