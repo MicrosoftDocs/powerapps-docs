@@ -1,7 +1,7 @@
 ---
-title: "Create your own messages (Microsoft Dataverse) | Microsoft Docs"
-description: "Learn about creating your own custom Microsoft Dataverse messages to be executed from your applications, and how these custom messages differ from using the custom API feature."
-ms.date: 06/20/2025
+title: "Create Custom Messages in Microsoft Dataverse"
+description: "Learn how to create custom messages in Microsoft Dataverse, compare Custom Process Actions and custom APIs, and choose the right method for your scenario."
+ms.date: 08/06/2026
 ms.reviewer: jdaly
 ms.topic: article
 author: MsSQLGirl
@@ -11,20 +11,22 @@ search.audienceType:
   - developer
 ---
 
-# Create your own messages
+# Create custom messages in Microsoft Dataverse
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
-Microsoft Dataverse exposes APIs using *messages*. There are many out-of-box messages available for you to use. Custom messages are typically used to add new domain specific functionality to combine multiple message requests into a single request. For example, in a support call center, you might want to combine the `Create`, `Assign`, and `Update` messages into a single new `Escalate` message.
+Microsoft Dataverse exposes APIs through *messages*. You can use many out-of-the-box messages. Use custom messages to add new domain-specific functionality or to combine multiple message requests into a single request. For example, in a support call center, you might want to combine the `Create`, `Assign`, and `Update` messages into a single new `Escalate` message.
 
-There are now two ways to define custom messages:
+You can define custom messages in two ways:
 
 |Custom message method  |Description  |
 |---------|---------|
-|Custom Process Action|Also known as simply *Custom Actions*, these have been part of Dataverse for many years. Custom Process Actions provide a no-code way to define a custom message using the Workflow designer. The logic in these workflows can also be extended with code by using custom workflow activities. More information: [Use Custom Process Actions with code](workflow-custom-actions.md)|
-|Custom API| Extends the concept of custom actions to provide developers with capabilities not limited by the workflow designer. More information: [Create and use custom APIs](custom-api.md)|
+|**Custom Process Action**|Also known as *Custom Actions*, these messages have been part of Dataverse for many years. Custom Process Actions provide a no-code way to define a custom message by using the Workflow designer. You can also extend the logic in these workflows by using custom workflow activities. For more information, see [Use Custom Process Actions with code](workflow-custom-actions.md).|
+|**Custom API**| Extends the concept of custom actions to provide developers with capabilities that the workflow designer doesn't limit. For more information, see [Create and use custom APIs](custom-api.md).|
 
-Many developers have been creating Custom Process Actions simply to create new messages without implementing any logic in the workflow designer. Instead, they register plug-ins for the message created by the custom action to implement all of their logic. The custom API feature makes this pattern a first class capability for developers to extend Dataverse with no dependency on the workflow designer or the technology it depends on.
+## Why add custom APIs?
+
+For many years, some developers created Custom Process Actions simply to create new messages without implementing any logic in the workflow designer. Instead, they only registered plug-ins for the message created by the custom action to implement all of their logic. Custom APIs makes this pattern a first-class capability for developers to extend Dataverse with no dependency on the workflow designer or the technology it depends on.
 
 ## Compare Custom Process Action and custom API
 
@@ -46,7 +48,7 @@ The following table describes some of the different capabilities.
 |Compose or modify a custom API by editing a solution|No|Yes|ISVs who build and maintain products that work with the Power Platform apply ALM practices that involve solutions. The data within a solution is commonly checked into a source code repository and checked out by a developer applying changes.<br /><br />A XAML Windows Workflow Foundation document contains the data that defines the Custom Process Action transported as part of a solution. However, creating new or editing existing workflow definitions outside of the workflow designer isn't supported.<br /><br />Custom API definitions are solution aware components included in a solution through a set of folders and XML documents. These files and the file structure enable transport the API from one environment to another. Because these are plain text files, changes can be made to them, or new APIs can be defined by working with these files. This method of defining custom APIs is supported. More information: [Create a custom API with solution files](create-custom-api-solution.md).|
 |Subject to 2-minute time limit|No|Yes|A plug-in that implements the main operation for a custom API is subject to the 2-minute time limit to complete execution.<br /><br />A Custom Process Action isn't technically limited to two minutes. If a step in the Workflow logic contains a custom workflow activity, *that part* is limited to two minutes. But the entire workflow can't run indefinitely. There are other limitations that cause long-running Custom Process Actions to fail. More information: [Watch out for long running actions](workflow-custom-actions.md#watch-out-for-long-running-actions)|
 
-## Next Steps
+## Next steps
 
 [Use Custom Process Actions with code](workflow-custom-actions.md)<br />
 [Create and use custom APIs](custom-api.md)

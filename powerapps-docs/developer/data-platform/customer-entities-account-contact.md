@@ -1,7 +1,7 @@
 ---
-title: "Customer tables (account, contact, and customeraddress) (Microsoft Dataverse) | Microsoft Docs"
-description: "The account and contact tables are essential for identifying and managing customers, selling products and services, and providing superior service to the customers. A customer address table is used to store address and shipping information for a customer."
-ms.date: 05/17/2024
+title: "Manage Microsoft Dataverse Customer Tables"
+description: "Learn how Microsoft Dataverse customer tables—account, contact, and customeraddress—store customer relationships, contact details, addresses, and shipping data."
+ms.date: 08/06/2026
 ms.reviewer: jdaly
 ms.topic: article
 author: MsSQLGirl
@@ -16,7 +16,7 @@ contributors:
 
 # Customer tables (account, contact, and customeraddress)
 
-The [account](reference/entities/account.md) and [contact](reference/entities/contact.md) tables are essential for identifying and managing customers, selling products and services, and providing superior service to the customers. The [customeraddress](reference/entities/customeraddress.md) table stores address and shipping information for a customer.
+Microsoft Dataverse customer tables ([`account`](reference/entities/account.md), [`contact`](reference/entities/contact.md), and [`customeraddress`](reference/entities/customeraddress.md)) store customer relationships, contact details, and address and shipping information. This article explains how these tables relate and how to manage embedded and empty customer address records.
 
 ## Account table
 
@@ -37,7 +37,7 @@ Both accounts and contacts are part of managing customers and are related to one
 
 - A contact can be a parent to every other table except accounts and contacts.
 - A contact can have only one account as its parent.
-- A contact can be marked as the primary contact person for an account setting the [Account.PrimaryContactId](reference/entities/account.md#BKMK_PrimaryContactId) column.
+- A contact can be marked as the primary contact person for an account by setting the [`Account.PrimaryContactId`](reference/entities/account.md#BKMK_PrimaryContactId) column.
 
 The contact table stores information about a person such as an email address, street address, and telephone numbers. It also includes other related information, such as the person's birthday or anniversary date. Depending on the type of customers a business unit has, it needs either only contacts, or contacts and accounts, to give a full view of its customers.
 
@@ -45,9 +45,9 @@ Linking tables such as activities and notes to the `contact` table lets user see
 
 ## CustomerAddress table
 
-This table contains more address and shipping information for customer records (account and contact). By default, Dataverse creates at least two `customeraddress` records in this table when a new customer record is created, even when there's no data for these records. [Learn how you can change this behavior](#disable-empty-record-creation)
+This table contains more address and shipping information for customer records (account and contact). By default, Dataverse creates at least two `customeraddress` records in this table when you create a new customer record, even when there's no data for these records. [Learn how you can change this behavior](#disable-empty-record-creation).
 
-All `customeraddress` records related to account and contact records are available via the [Account_CustomerAddress](reference/entities/account.md#BKMK_Account_CustomerAddress) and [Contact_CustomerAddress](reference/entities/contact.md#BKMK_Contact_CustomerAddress) relationships respectively. These relationships both use the [parentid](reference/entities/customeraddress.md#BKMK_ParentId) lookup, and the [parentidtypecode](reference/entities/customeraddress.md#BKMK_ParentIdTypeCode) column tells you the type of customer record the address is related to.
+You can access all `customeraddress` records related to account and contact records through the [`Account_CustomerAddress`](reference/entities/account.md#BKMK_Account_CustomerAddress) and [`Contact_CustomerAddress`](reference/entities/contact.md#BKMK_Contact_CustomerAddress) relationships. Both relationships use the [parentid](reference/entities/customeraddress.md#BKMK_ParentId) lookup. The [`parentidtypecode`](reference/entities/customeraddress.md#BKMK_ParentIdTypeCode) column indicates the type of customer record the address is related to.
 
 ### Address data embedded with customer records
 
@@ -56,15 +56,15 @@ You can retrieve or modify the data for the two or three embedded `customeraddre
 - Account records have columns `address1_addressid` and `address2_addressid`.
 - Contact records have columns `address1_addressid`, `address2_addressid`, and `address3_addressid`.
 
-These columns store `customeraddressid` values, and there are other customer columns each prefixed with either `address1*`, `address2*`, or `address3*` that contain the corresponding address information from the `customeraddress` table.
+These columns store `customeraddressid` values. Other customer columns, each prefixed with `address1*`, `address2*`, or `address3*`, contain the corresponding address information from the `customeraddress` table.
 
-The `customeraddress` [addressnumber](reference/entities/customeraddress.md#BKMK_AddressNumber) column tells you which address applies to the parent customer record columns. You can't set the `addressnumber` column to a value used by another `customeraddress` record related to the same parent customer. You can set an existing `addressnumber` value to 0 or null, and then change the value of another record if you want to swap the relative position of the records for the customer records. While the `addressnumber` value increments for each record created for a customer, other than controlling the respective embedded address position in the customer record (either `1`, `2`, or `3`), the `addressnumber` column value isn't used for any other purpose.
+The `customeraddress` [`addressnumber`](reference/entities/customeraddress.md#BKMK_AddressNumber) column indicates which address applies to the parent customer record columns. You can't set the `addressnumber` column to a value used by another `customeraddress` record related to the same parent customer. You can set an existing `addressnumber` value to 0 or null, and then change the value of another record if you want to swap the relative position of the records for the customer records. While the `addressnumber` value increments for each record created for a customer, other than controlling the respective embedded address position in the customer record (either `1`, `2`, or `3`), the `addressnumber` column value isn't used for any other purpose.
 
 Dataverse only updates these `customeraddress` records through the corresponding customer record columns instead of updating the `customeraddress` rows directly. However, anyone can edit these records as `customeraddress` records, or add more `customeraddress` records associated with the `account` or `contact` record that aren't embedded with the account and contact records.
 
 #### Deletion of embedded customer address rows isn't allowed
 
-By default, if you attempt to delete one of the embedded `customeraddress` records that are referenced in the `address1_addressid`, `address2_addressid`, or `address3_addressid` for a customer record, you get an error like the following:
+By default, if you attempt to delete one of the embedded `customeraddress` records that the `address1_addressid`, `address2_addressid`, or `address3_addressid` references for a customer record, you get an error like the following error message:
 
 > Name: `CannotDeleteDueToAssociation`<br />
 > Code: `0x80040227`<br />
@@ -73,21 +73,44 @@ By default, if you attempt to delete one of the embedded `customeraddress` recor
 
 [Learn how you can change this behavior](#delete-embedded-address-records)
 
-### Disable empty record creation
+## Disable empty record creation
 
-Because each row in the `customeraddress` table counts against the Dataverse capacity you pay for, you might want to minimize this cost.
+Each row in the `customeraddress` table counts against the Dataverse capacity you pay for, so you might want to minimize this cost.
 
-You can tell Dataverse not to create empty `customeraddress` table rows for each customer record by changing the **Disable empty address record creation** setting in the [Power Platform admin center](https://admin.powerplatform.microsoft.com/). Before changing this behavior, you should consider whether you have existing customizations that depend on default behavior. [Learn more about this setting](/power-platform/admin/settings-features#disable-empty-address-record-creation)
+You can tell Dataverse not to create empty `customeraddress` table rows for each customer record by changing the **Disable empty address record creation** setting in the [Power Platform admin center](https://admin.powerplatform.microsoft.com/). Before changing this behavior, consider whether you have existing customizations that depend on default behavior. [Learn more about this setting](/power-platform/admin/disable-delete-address-records#prevent-creation-of-empty-address-records).
 
 While this setting is on, no new empty `customeraddress` table rows are created when new customer records are created. Records are only created if the incoming payload contains address data. Normally, the payload only includes columns that have data. If there's no data for the columns, the columns aren't included in the payload and the values are null when the record is saved. However, if the payload contains address columns with values set to null, the address is created with null values. If you continue to see empty records being created, check how they're created and whether that client application is sending column data with null values.
 
 If the **Disable empty address record creation**  setting is switched off, the default behavior resumes. Turning on this setting doesn't delete any existing `customeraddress` table rows. Switching this setting back on after it was switched off doesn't re-create records that weren't created.
 
-#### Detect whether empty address record creation is disabled
+### Detect whether empty address record creation is disabled
 
 These example functions show how to detect whether the **Disable empty address record creation** setting is enabled in the environment.
 
-##### [SDK for .NET](#tab/sdk)
+#### [PAC CLI](#tab/cli)
+
+This `Test-IsEmptyAddressRecordCreationDisabled` PowerShell function uses the [Microsoft Power Platform CLI](/power-platform/developer/cli/introduction) [`pac env list-settings` command](/power-platform/developer/cli/reference/env#pac-env-list-settings) to check a value in the [`Organization.OrgDbOrgSettings` column](reference/entities/organization.md#BKMK_OrgDbOrgSettings).
+
+```powershell
+function Test-IsEmptyAddressRecordCreationDisabled {
+
+   $orgdborgsettings = pac env list-settings `
+      --filter orgdborgsettings `
+   | Where-Object { $_ -match '^orgdborgsettings\s+' } `
+   | ForEach-Object { $_ -replace '^orgdborgsettings\s+', '' }
+
+   $xml = [xml]$orgdborgsettings
+
+   $element = $xml.SelectSingleNode("//CreateOnlyNonEmptyAddressRecordsForEligibleEntities")
+
+   # Return true only when the element exists and has the value of 'true'
+   return ($null -ne $element) -and ($element.InnerText -eq 'true')
+}
+```
+
+[Learn more about the Microsoft Power Platform CLI](/power-platform/developer/cli/introduction)
+
+#### [SDK for .NET](#tab/sdk)
 
 This static `IsEmptyAddressRecordCreationDisabled` method uses the [WhoAmIRequest class](/dotnet/api/microsoft.crm.sdk.messages.whoamirequest) and the [IOrganizationService.Retrieve method](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.retrieve) to check a value in the [Organization.OrgDbOrgSettings column](reference/entities/organization.md#BKMK_OrgDbOrgSettings).
 
@@ -117,9 +140,9 @@ static bool IsEmptyAddressRecordCreationDisabled(IOrganizationService service)
 - [Retrieve a table row using the SDK for .NET](org-service/entity-operations-retrieve.md)
 - [Organization.OrgDbOrgSettings column](reference/entities/organization.md#BKMK_OrgDbOrgSettings)
 
-##### [Web API](#tab/webapi)
+#### [Web API](#tab/webapi)
 
-This `Test-IsEmptyAddressRecordCreationDisabled` PowerShell function uses the example `Get-WhoAmI` and `Get-Record` functions described in [Create reusable functions](webapi/use-ps-and-vscode-web-api.md#create-reusable-functions) and depend on global variables set in the [Connect function](webapi/use-ps-and-vscode-web-api.md#create-a-connect-function)
+This `Test-IsEmptyAddressRecordCreationDisabled` PowerShell function uses the example `Get-WhoAmI` and `Get-Record` functions described in [Create reusable functions](webapi/use-ps-and-vscode-web-api.md#create-reusable-functions) and depend on global variables set in the [Connect function](webapi/use-ps-and-vscode-web-api.md#create-a-connect-function).
 
 ```powershell
 function Test-IsEmptyAddressRecordCreationDisabled {
@@ -149,19 +172,42 @@ function Test-IsEmptyAddressRecordCreationDisabled {
 
 ---
 
-### Delete embedded address records
+## Delete embedded address records
 
-By default, you can't delete embedded `customeraddress` table rows referenced by the `address1_addressid`, `address2_addressid`, or `address3_addressid` columns in customer tables. See [Deletion of embedded customer address rows isn't allowed](#deletion-of-embedded-customer-address-rows-isnt-allowed)
+By default, you can't delete embedded `customeraddress` table rows that the `address1_addressid`, `address2_addressid`, or `address3_addressid` columns in customer tables reference. For more information, see [Deletion of embedded customer address rows isn't allowed](#deletion-of-embedded-customer-address-rows-isnt-allowed).
 
-The **Enable Deletion of Address Records** setting in the [Power Platform admin center](https://admin.powerplatform.microsoft.com/) changes this behavior. [Learn more about this setting](/power-platform/admin/settings-features#enable-deletion-of-address-records)
+The **Enable Deletion of Address Records** setting in the [Power Platform admin center](https://admin.powerplatform.microsoft.com/) changes this behavior. [Learn more about this setting](/power-platform/admin/disable-delete-address-records#allow-users-to-delete-address-data).
 
-#### Detect whether deletion of address records is enabled
+### Detect whether deletion of address records is enabled
 
 These example functions show how to detect whether the **Enable Deletion of Address Records** setting is enabled in the environment.
 
-##### [SDK for .NET](#tab/sdk)
+#### [PAC CLI](#tab/cli)
 
-This static `IsDeleteAddressRecordsEnabled` method uses the [WhoAmIRequest class](/dotnet/api/microsoft.crm.sdk.messages.whoamirequest) and the [IOrganizationService.Retrieve method](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.retrieve) to check a value in the [Organization.OrgDbOrgSettings column](reference/entities/organization.md#BKMK_OrgDbOrgSettings)
+This `Test-IsDeleteAddressRecordsEnabled` PowerShell function uses the [Microsoft Power Platform CLI](/power-platform/developer/cli/introduction) [`pac env list-settings` command](/power-platform/developer/cli/reference/env#pac-env-list-settings) to check a `EnableDeleteAddressRecords` value in the [`Organization.OrgDbOrgSettings` column](reference/entities/organization.md#BKMK_OrgDbOrgSettings).
+
+```powershell
+function Test-IsDeleteAddressRecordsEnabled {
+
+   $orgdborgsettings = pac env list-settings `
+      --filter orgdborgsettings `
+   | Where-Object { $_ -match '^orgdborgsettings\s+' } `
+   | ForEach-Object { $_ -replace '^orgdborgsettings\s+', '' }
+
+   $xml = [xml]$orgdborgsettings
+
+   $element = $xml.SelectSingleNode("//EnableDeleteAddressRecords")
+
+   # Return true only when the element exists and has the value of 'true'
+   return ($null -ne $element) -and ($element.InnerText -eq 'true')
+}
+```
+
+[Learn more about the Microsoft Power Platform CLI](/power-platform/developer/cli/introduction)
+
+#### [SDK for .NET](#tab/sdk)
+
+This static `IsDeleteAddressRecordsEnabled` method uses the [WhoAmIRequest class](/dotnet/api/microsoft.crm.sdk.messages.whoamirequest) and the [`IOrganizationService.Retrieve` method](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.retrieve) to check a `EnableDeleteAddressRecords` value in the [`Organization.OrgDbOrgSettings` column](reference/entities/organization.md#BKMK_OrgDbOrgSettings).
 
 ```csharp
 static bool IsDeleteAddressRecordsEnabled(IOrganizationService service)
@@ -185,9 +231,14 @@ static bool IsDeleteAddressRecordsEnabled(IOrganizationService service)
 }
 ```
 
-##### [Web API](#tab/webapi)
+- [Use the SDK for .NET](org-service/overview.md)
+- [WhoAmIRequest Class](/dotnet/api/microsoft.crm.sdk.messages.whoamirequest)
+- [Retrieve a table row using the SDK for .NET](org-service/entity-operations-retrieve.md)
+- [Organization.OrgDbOrgSettings column](reference/entities/organization.md#BKMK_OrgDbOrgSettings)
 
-This `Test-IsDeleteAddressRecordsEnabled` PowerShell function uses the example `Get-WhoAmI` and `Get-Record` functions described in [Create reusable functions](webapi/use-ps-and-vscode-web-api.md#create-reusable-functions) and depend on global variables set in the [Connect function](webapi/use-ps-and-vscode-web-api.md#create-a-connect-function)
+#### [Web API](#tab/webapi)
+
+This `Test-IsDeleteAddressRecordsEnabled` PowerShell function uses the example `Get-WhoAmI` and `Get-Record` functions described in [Create reusable functions](webapi/use-ps-and-vscode-web-api.md#create-reusable-functions) and depends on global variables set in the [Connect function](webapi/use-ps-and-vscode-web-api.md#create-a-connect-function).
 
 ```powershell
 function Test-IsDeleteAddressRecordsEnabled {
@@ -217,15 +268,77 @@ function Test-IsDeleteAddressRecordsEnabled {
 
 ---
 
-### Bulk delete of empty customer address records
+## Bulk delete of empty customer address records
 
-After you disable empty address record creation and enable deletion of address records, you can use the following example functions to asynchronously delete empty `customeraddress` records using the `BulkDelete` message.
+After you disable empty address record creation and enable deletion of address records, use the following example functions to asynchronously delete empty `customeraddress` records by using the `BulkDelete` message.
+
+### Bulk delete code examples
 
 These functions are based on the [Address (CustomerAddress) Writable columns/attributes](reference/entities/customeraddress.md#writable-columnsattributes) and don't include any custom columns that might be in your environment. You might want to alter these queries if you need to include your custom columns.
 
-##### [SDK for .NET](#tab/sdk)
+#### [PAC CLI](#tab/cli)
 
-The static `BulkDeleteEmptyCustomerAddressRecords` method creates a system job to delete empty `customeradddress` records using the [BulkDeleteRequest class](/dotnet/api/microsoft.crm.sdk.messages.bulkdeleterequest).
+The `Start-BulkDeleteEmptyCustomerAddressRecords` PowerShell function creates a system job to delete empty `customeraddress` records by using the [Microsoft Power Platform CLI](/power-platform/developer/cli/introduction) [`pac data bulk-delete schedule` command](/power-platform/developer/cli/reference/data#pac-data-bulk-delete-schedule).
+
+This function depends on the example `Test-IsDeleteAddressRecordsEnabled` and `Test-IsEmptyAddressRecordCreationDisabled` functions described in [Detect whether deletion of address records is enabled](#detect-whether-deletion-of-address-records-is-enabled) and [Detect whether empty address record creation is disabled](#detect-whether-empty-address-record-creation-is-disabled), respectively. The function creates the job only when both settings allow all empty customer address records to be deleted and prevent new empty records from being created.
+
+```powershell
+function Start-BulkDeleteEmptyCustomerAddressRecords {
+
+   if (!(Test-IsDeleteAddressRecordsEnabled)) {
+      Write-Host 'Enable deletion of address records before running this function.'
+      return
+   }
+
+   if (!(Test-IsEmptyAddressRecordCreationDisabled)) {
+      Write-Host 'Disable empty address record creation before running this function.'
+      return
+   }
+
+   $fetchXml = @(
+      '<fetch>'
+      "<entity name='customeraddress'>"
+      "<attribute name='customeraddressid' />"
+      "<filter type='and'>"
+      "<condition attribute='city' operator='null' />"
+      "<condition attribute='country' operator='null' />"
+      "<condition attribute='county' operator='null' />"
+      "<condition attribute='fax' operator='null' />"
+      "<condition attribute='freighttermscode' operator='null' />"
+      "<condition attribute='latitude' operator='null' />"
+      "<condition attribute='line1' operator='null' />"
+      "<condition attribute='line2' operator='null' />"
+      "<condition attribute='line3' operator='null' />"
+      "<condition attribute='longitude' operator='null' />"
+      "<condition attribute='postalcode' operator='null' />"
+      "<condition attribute='postofficebox' operator='null' />"
+      "<condition attribute='primarycontactname' operator='null' />"
+      "<condition attribute='shippingmethodcode' operator='null' />"
+      "<condition attribute='stateorprovince' operator='null' />"
+      "<condition attribute='telephone1' operator='null' />"
+      "<condition attribute='telephone2' operator='null' />"
+      "<condition attribute='telephone3' operator='null' />"
+      "<condition attribute='upszone' operator='null' />"
+      "<condition attribute='utcoffset' operator='null' />"
+      '</filter>'
+      '</entity>'
+      '</fetch>'
+   ) -join ''
+
+   pac data bulk-delete schedule `
+      --entity customeraddress `
+      --fetchxml $fetchXml `
+      --job-name 'Delete Empty Customer Address Records'
+}
+```
+
+- [Learn more about the Microsoft Power Platform CLI](/power-platform/developer/cli/introduction)
+- [pac data bulk-delete schedule command](/power-platform/developer/cli/reference/data#pac-data-bulk-delete-schedule)
+- [Delete data in bulk](delete-data-bulk.md)
+
+#### [SDK for .NET](#tab/sdk)
+
+The static `BulkDeleteEmptyCustomerAddressRecords` method creates a system job to delete empty `customeradddress` records by using the [BulkDeleteRequest class](/dotnet/api/microsoft.crm.sdk.messages.bulkdeleterequest).
 
 This method uses the example `IsDeleteAddressRecordsEnabled` and `IsEmptyAddressRecordCreationDisabled` static methods described in [Detect whether deletion of address records is enabled](#detect-whether-deletion-of-address-records-is-enabled) and [Detect whether empty address record creation is disabled](#detect-whether-empty-address-record-creation-is-disabled) respectively to ensure these settings are configured to allow deletion of all the empty customer address records and ensure no new ones are created.
 
@@ -306,9 +419,9 @@ static Guid BulkDeleteEmptyCustomerAddressRecords(IOrganizationService service)
 - [BulkDeleteRequest class](/dotnet/api/microsoft.crm.sdk.messages.bulkdeleterequest)
 - [Delete data in bulk](delete-data-bulk.md)
 
-##### [Web API](#tab/webapi)
+#### [Web API](#tab/webapi)
 
-The `Start-BulkDeleteEmptyCustomerAddressRecords` PowerShell function creates a system job to delete empty `customeradddress` records using the [BulkDelete action](/power-apps/developer/data-platform/webapi/reference/bulkdelete).
+The `Start-BulkDeleteEmptyCustomerAddressRecords` PowerShell function creates a system job to delete empty `customeradddress` records by using the [BulkDelete action](/power-apps/developer/data-platform/webapi/reference/bulkdelete).
 
 This method uses the example `Test-IsDeleteAddressRecordsEnabled` and `Test-IsEmptyAddressRecordCreationDisabled` functions described in [Detect whether deletion of address records is enabled](#detect-whether-deletion-of-address-records-is-enabled) and [Detect whether empty address record creation is disabled](#detect-whether-empty-address-record-creation-is-disabled) respectively to ensure these settings are configured to allow deletion of all the empty customer address records and ensure no new ones are created.
 
