@@ -1,8 +1,8 @@
 ---
-title: "Add and configure a subgrid component on a form | MicrosoftDocs"
-description: Learn how to add a subgrid on a model-driven app form
+title: "Add and configure a subgrid component on a form with Power Apps"
+description: Learn how to add a subgrid on a model-driven app form.
 ms.custom: ""
-ms.date: 09/20/2024
+ms.date: 08/10/2026
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -31,7 +31,7 @@ This article explains how makers can add a subgrid component to a model-driven a
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and select the environment you want.  
 1. Select **Solutions** in the left navigation pane, and then open the solution that contains the table you want.
-1. Select **Tables**, and then open the table that you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Select **Objects** on the left pane, select **Tables**, and then open the table that you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Select the **Forms** area, and then open the form you want to edit.
 1. In the form designer, select **Component** on the command bar.
 1. Drag a **1-column section** on the left **Components** pane onto the form.

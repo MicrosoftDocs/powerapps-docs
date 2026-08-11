@@ -1,8 +1,8 @@
 ---
-title: "Edit table records directly from another table’s main form"
+title: "Edit table records directly from another table’s main form with Power Apps"
 description: Learn how to design a main form that can be used to edit a related table record with Power Apps.
 ms.custom: ""
-ms.date: 04/28/2025
+ms.date: 08/10/2026
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -25,13 +25,13 @@ For example, here's the form component on a separate tab on the main account for
 
 :::image type="content" source="media/form-component-tab.png" alt-text="Form component control added to a separate tab.":::
 
-For example, here's the form component on an **existing tab** on the main account form, which also lets the user edit a contact record without leaving the account form **Summary** tab.
+In another example, here's the form component on an **existing tab** on the main account form, which also lets the user edit a contact record without leaving the account form **Summary** tab.
 
 :::image type="content" source="media/form-component-section.png" alt-text="Form component control added to an existing tab.":::
 
 ## Add the form component to a table main form
 
-1. On the left navigation pane, select **Components**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. While editing a form in form designer, on the left navigation pane, select **Components**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Expand either **Input** or **Display**, and then select **Form**.
 On the form component control configuration page, select the properties for the control:  
    - Select the **Lookup column** for the form.

@@ -1,8 +1,8 @@
 ---
-title: "Design a custom page for your model-driven app" 
+title: "Design a custom page for your model-driven app with Power Apps" 
 description: "Learn how to design a custom page for your model-driven app"
 ms.custom: ""
-ms.date: 07/20/2026
+ms.date: 08/10/2026
 ms.reviewer: ""
 ms.subservice: mda-maker
 ms.topic: how-to
@@ -20,7 +20,7 @@ This article provides tips for designing a custom page for use in a model-driven
 
 ## Supported controls in a custom page
 
-Custom page authoring currently supports a subset of canvas app controls. The table here lists the currently supported controls.
+Custom page authoring supports a subset of canvas app controls. The following table lists the currently supported controls.
 
   | Control | Control Type | Notes |
   | --- | --- | --- |
@@ -49,7 +49,6 @@ Custom page authoring currently supports a subset of canvas app controls. The ta
 
 > [!IMPORTANT]
 > The Fluent UI (v8) controls that you add to a custom page are deprecated. Modern controls replace them. Upgrade your apps to modern controls to keep getting the latest design, performance, and accessibility improvements. For more information, see [Upgrade Fluent UI controls to modern controls](../canvas-apps/controls/modern-controls/upgrade-fluent-ui-controls-to-modern.md).
-
 
 ## Custom components support for custom page
 
