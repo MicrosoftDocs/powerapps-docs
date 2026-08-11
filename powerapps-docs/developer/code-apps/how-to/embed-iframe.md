@@ -13,7 +13,6 @@ This article explains how to embed a code app in an iframe within an external ho
 
 > [!NOTE]
 > - Only Power Apps users within the same tenant can access an embedded code app. You can't share the iframe URL with users outside your tenant.
-> - You can't embed code apps in any native desktop application, which includes Android and iOS. This limitation excludes first-party integrations such as Power Apps in Teams.
 
 ## Prerequisites
 

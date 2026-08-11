@@ -16,6 +16,7 @@ contributors:
   - amchern
   - hemantgaur
   - carrema
+  - jordanchodak
 ---
 # Known issues and limitations
 
@@ -27,6 +28,7 @@ The following components aren't supported:
 
 - Model-driven apps
 - AI Builder
+- Code apps
 
 > [!NOTE]
 > Custom connectors are supported only if both of these conditions are met:
