@@ -1,8 +1,8 @@
 ---
 title: SendPromptToM365CopilotOptions Interface (Client API reference)
 description: The interface that describes the optional parameters for the Xrm.Copilot.sendPromptToM365Copilot method.
-author: devkeydet
-ms.author: marcsc
+author: MitiJ
+ms.author: mijosh
 ms.date: 06/02/2026
 ms.reviewer: jdaly
 ms.topic: reference

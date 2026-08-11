@@ -1,8 +1,8 @@
 ---
 title: "openM365CopilotPanel (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the openM365CopilotPanel method.
-author: devkeydet
-ms.author: marcsc
+author: MitiJ
+ms.author: mijosh
 ms.date: 06/02/2026
 ms.reviewer: jdaly
 ms.topic: reference
