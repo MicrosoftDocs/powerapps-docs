@@ -1,1 +1,1 @@
-(preview) Sends updated app context to the Microsoft 365 Copilot side panel.
+Sends updated app context to the Microsoft 365 Copilot side panel.
