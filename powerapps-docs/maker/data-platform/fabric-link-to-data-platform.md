@@ -8,7 +8,7 @@ contributors: saviegas
 ms.service: powerapps
 ms.subservice: dataverse-maker
 ms.topic: how-to
-ms.date: 08/04/2026
+ms.date: 08/11/2026
 ms.custom: template-how-to
 ---
 # Link to Microsoft Fabric
@@ -174,9 +174,9 @@ If you're running finance and operations apps, your environment must be on a sup
 
 | Finance and operations version | Minimum platform build | Minimum application build |
 |---|---|---|
-| 10.0.46 | 7.0.7778.126 | 10.0.2428.196 |
-| 10.0.47 | 7.0.7858.115 | 10.0.2527.135 |
-| 10.0.48 | 7.0.7996.48 | 10.0.2645.55 |
+| 10.0.47 | 7.0.7858.157 | 10.0.2527.192 |
+| 10.0.48 | 7.0.7996.100 | 10.0.2645.108 |
+| 10.0.49 | 7.0.8199.19 | 10.0.2790.30 |
 
 To check your build, in your finance and operations environment, go to **Help & Support** > **About** to see your current platform and application build numbers.
 
