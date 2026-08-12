@@ -1,9 +1,9 @@
 ---
-title: "JavaScript web resources (model-driven apps)"
+title: "JavaScript Web Resources for Model-Driven Apps"
 description: "Learn about using JavaScript web resources to create a library of JavaScript functions that can be accessed from anywhere."
 author: anushikhas96
 ms.author: anushisharma
-ms.date: 04/01/2022
+ms.date: 08/10/2026
 ms.reviewer: jdaly
 ms.topic: article
 ms.subservice: mda-developer
@@ -13,15 +13,15 @@ contributors:
   - JimDaly
   - caburk
 ---
-# JavaScript web resources
+# JavaScript web resources for model-driven apps
 
-Use JavaScript web resources to create a library of JavaScript functions that can be accessed from anywhere.  
+Use JavaScript web resources to create a library of JavaScript functions that you can access from anywhere.  
   
 <a name="BKMK_capabilities"></a>
 
 ## Capabilities of JavaScript web resources
 
-With JavaScript web resources, you can more efficiently manage code used in form scripts, webpage (HTML) web resources, or ribbon commands by linking them to shared library of JavaScript functions.  
+By using JavaScript web resources, you can more efficiently manage code used in form scripts, webpage (HTML) web resources, or ribbon commands by linking them to a shared library of JavaScript functions.  
   
 <a name="BKMK_limitations"></a>
 
@@ -34,13 +34,13 @@ With JavaScript web resources, you can more efficiently manage code used in form
   
 <a name="BKMK_Using"></a>
 
-## Using JavaScript libraries
+## Use JavaScript libraries
 
 For information about developing and testing JavaScript libraries as well as how to associate them with ribbon commands and form events, see [Client scripting using JavaScript](client-scripting.md).  
   
 <a name="BKMK_Referencing"></a>
 
-## Referencing a script web resource from a webpage web resource
+## Reference a script web resource from a webpage web resource
 
 All web resources can use relative URLs to reference each other. In the following example, for the webpage web resource `new_/content/contentpage.htm` to reference the JavaScript web resource `new_/scripts/myScript.js`, add the following HTML code to the head element of `new_/content/contentpage.htm`.  
   
@@ -48,7 +48,7 @@ All web resources can use relative URLs to reference each other. In the followin
 <script type="text/jscript" src="../scripts/myScript.js"></script>  
 ```  
   
- To reference a JavaScript from a different publisher, the path must include the customization prefix for that publisher. For example, for the `new_/content/contentpage.htm` page to reference the `MyIsv_/scripts/customscripts.js` page, the `src` attribute value should be `../../MyIsv_/scripts/customscripts.js`.  
+ To reference a JavaScript file from a different publisher, include the customization prefix for that publisher in the path. For example, to reference the `MyIsv_/scripts/customscripts.js` file from the `new_/content/contentpage.htm` page, set the `src` attribute to `../../MyIsv_/scripts/customscripts.js`.  
   
 ### See also
 
