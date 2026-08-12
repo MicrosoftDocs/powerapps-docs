@@ -1,7 +1,7 @@
 ---
-title: Add the rich text editor control to a model-driven app
+title: Add the rich text editor control to a model-driven app with Power Apps
 description: Learn how to add and customize the rich text editor control in Power Apps model-driven apps to create and edit formatted text.
-ms.date: 04/07/2026
+ms.date: 08/10/2026
 ms.update-cycle: 180-days
 ms.topic: how-to
 ms.author: saperlmu
@@ -242,12 +242,9 @@ The following table describes more properties you can use to customize the rich 
 
 | Property | Description | Default value |
 | --- | --- | --- |
-| attachmentEntity | To enforce more security on [uploaded files](/power-apps/developer/data-platform/file-attributes) by using a table other than the default, set this property and specify a different table.<br/>Syntax: "name": "*tableName*", "fileAttributeName": "*attributeNameofBlobReference*" | See [defaultSupportedProps](#defaultsupportedprops) |
 | disableContentSanitization | Content sanitization removes some custom attributes or tags from rich text content. It's disabled by default to allow copying and pasting of rich text content from external sources. This property applies only to edit mode. When the editor control is read-only or disabled, content is always sanitized. | true |
 | disableDefaultImageProcessing | By default, images that are inserted in the editor are uploaded to the `attachmentEntity` defined in the configuration. External users might lack privileges to view the content in the table. Instead, set this property to true to store images as base64 strings directly in the column configured to use the rich text editor control. | false |
 | disableImages | Determines whether images can be inserted in the editor. This property has highest priority. When this property is set to true, images are disabled, regardless of the value of the `imageEntity` property. | false |
-| imageEntity | To enforce more security on [images](/power-apps/developer/data-platform/image-attributes) by using a table other than the default, set this property and specify a different table.<br>Syntax: "imageEntityName": "*tableName*", "imageFileAttributeName": "*attributeNameofBlobReference*" | See [defaultSupportedProps](#defaultsupportedprops) |
-| readOnlySettings | These properties determine the behavior of the column when viewed in a read-only or disabled state. You can specify any supported property. | None; see [defaultSupportedProps](#defaultsupportedprops) for an example |
 | sanitizerAllowlist | Lists other kinds of content that can be displayed in the editor. | See [defaultSupportedProps](#defaultsupportedprops) |
 | showAsTabControl | Allows you to display more commands above the content area. Must be set to true to use the following properties: `showFullScreenExpander`, `showHtml`, `showPreview`, `showPreviewHeaderWarning` | false |
 | showFullScreenExpander | Determines whether the editor can be used in full-screen mode. `showAsTabControl` must be set to true. | false |
@@ -459,6 +456,7 @@ Rich text editor limitations include the following:
 - You can't use rich text editor content from any external sources like Microsoft Word, Excel, and so forth.
 - The rich text editor supports the following file types for attachments: .aac, .avi, .csv, .doc, .docx, .gif, .html, .jpeg, .mid, .midi, .mp3, .mp4, .mpeg, .msg, .pdf, .png, .ppt, .pptx, .svg, .txt, .vsd, .wav, .xls, .xlsm, and .xlsx. You can configure the allowed extensions for your environment in your advanced settings by going to **Administration** > **General** > **Set blocked file extensions for attachments** and removing the extensions you want to allow.
 - The rich text editor doesn't support non-Microsoft plugins.
+- The custom-storage properties, `imageEntity` and `attachmentEntity` that allow you to use a different table with the classic rich version of the rich text editor don’t work with the modern rich text editor.
 
 Email templates and signatures:
 
@@ -508,7 +506,6 @@ The following HTML attributes are either no longer supported or are replaced by 
 | language | &lt;script&gt; | type="text/JavaScript" |
 | nowrap | &lt;td&gt; | CSS white-space: nowrap |
 | type (on &lt;li&gt;, &lt;ul&gt;) | Lists | CSS list-style-type |
-
 
 ## Frequently asked questions
 

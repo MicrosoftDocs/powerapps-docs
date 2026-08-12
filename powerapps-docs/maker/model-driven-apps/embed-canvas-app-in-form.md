@@ -1,8 +1,8 @@
 ---
-title: "Embed a canvas app on a model-driven form"
+title: "Embed a canvas app on a model-driven form with Power Apps"
 description: "With embedded canvas apps, app makers can bring the power of canvas apps to their Power Apps model-driven app forms." 
 ms.custom: "Steps to embedding a canvas app on a form"
-ms.date: 01/22/2025
+ms.date: 08/10/2026
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -24,8 +24,6 @@ search.audienceType:
 
 Canvas apps enable makers to easily design and create custom layouts using the low-code, WYSIWYG Power Apps Studio. Canvas apps also enable makers to connect and display data from over 400 data sources.
 
-## Embedded canvas apps can help you build better solutions
-
 With embedded canvas apps, makers can bring the power of canvas apps to their model-driven app forms. Using embedded canvas apps, it's possible to create rich visual areas on a form and display data from a variety of sources right next to data from Microsoft Dataverse.
 
 :::image type="content" source="media/embed-canvas-app-in-form.png" alt-text="Embedded canvas app in a model-driven app form.":::
@@ -37,8 +35,6 @@ Canvas apps are embedded in model-driven app forms in the same way other custom 
 With the modern app designer, canvas apps can be accessed through a model-driven app by using a custom page.
 
 The modern app designer introduced the concept of [pages](model-driven-app-glossary.md#page), which can contain either canvas apps or Dataverse components, such as tables, dashboards, and web resources.
-
-## Embed using the modern designer
 
 Select the **Canvas app** control to add a canvas app to a main form using the form designer. More information: [Add an embedded canvas app on a model-driven form](embedded-canvas-app-add-classic-designer.md)
 
