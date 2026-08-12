@@ -1,24 +1,25 @@
 ---
-title: "Send in-app notifications within model-driven apps"
-description: Learn how to configure notifications in model-driven apps by using a client API.
-ms.date: 01/09/2026
+title: "Send In-App Notifications Within Model-Driven Apps"
+description: "Learn how to send and configure in-app notifications in model-driven apps using the client API, Web API, and SDK for .NET. Explore examples to get started."
+ms.date: 08/12/2026
 ms.reviewer: jdaly
 ms.service: powerapps
 ms.subservice: mda-developer
 ms.topic: how-to
-author: sriharibs-msft
-ms.author: srihas
+author: jasongre
+ms.author: jasongre
 search.audienceType: 
   - maker
   - developer
 contributors: 
   - JimDaly
   - caburk
+  - sriharibs-msft
 ---
 
 # Send in-app notifications within model-driven apps
 
-Developers of model-driven apps can configure notifications to display to app users as a toast or within the notification center. Your model-driven app automatically polls the system for new notifications and displays them to the user. The notification sender or your system administrator can configure how the notification is shown and how it can be dismissed. Notifications appear in the notification center until the recipient dismisses them or they expire. By default, a notification expires after 14 days but your administrator can override this setting.
+Developers of model-driven apps can configure in-app notifications to display to app users as a toast or within the notification center. Your model-driven app automatically polls the system for new notifications and displays them to the user. The notification sender or your system administrator can configure how the notification is shown and how it can be dismissed. Notifications appear in the notification center until the recipient dismisses them or they expire. By default, a notification expires after 14 days but your administrator can override this setting.
 
 Notifications are user-specific. Each notification is intended for a single user, identified as the recipient when the notification is sent. Sending a notification to a team isn't supported. If you need to send notifications to multiple users, you must create notifications for each individual user.
 
@@ -38,15 +39,14 @@ To use the in-app notification feature, you need to enable the **In-app notifica
 
 1. Enable **In-app notifications**.
 
-    > [!div class="mx-imgBorder"]
-    > ![Custom page as main page](media/send-in-app-notifications/app-designer-settings-enable-in-app-notifications.png "Custom page as main page")
+    :::image type="content" source="media/send-in-app-notifications/app-designer-settings-enable-in-app-notifications.png" alt-text="Screenshot of the model-driven app setting used to enable in-app notifications.":::
 
 1. Select **Save** to save the settings change.
 
 1. Select **Publish** on the model-driven app.
 
 > [!NOTE]
-> In-app notifications trigger for @mentions in notes. @mentions in posts on the timeline don’t trigger notifications. Use @mentions in notes to receive notifications.
+> In-app notifications trigger for @mentions in notes. @mentions in posts on the timeline don't trigger notifications. Use @mentions in notes to receive notifications.
 
 ## Send basic in-app notifications
 
@@ -60,12 +60,11 @@ The `SendAppNotification` message uses open types, which enable dynamic properti
 
 The following basic examples show how to use the API to send in-app notifications.
 
-> [!div class="mx-imgBorder"]
-> ![Screenshot of a Welcome notification.](../media/welcome-notification.png "Welcome notification")
+:::image type="content" source="../media/welcome-notification.png" alt-text="Screenshot of a welcome in-app notification displayed as a toast.":::
 
 #### [Client API](#tab/clientapi)
 
-This example uses the custom `Example.SendAppNotificationRequest` function described in [Creating a function for your client script](#creating-a-function-for-your-client-script) section.
+This example uses the custom `Example.SendAppNotificationRequest` function described in [Create a function for your client script](#create-a-function-for-your-client-script) section.
 
 ```javascript
 var SendAppNotificationRequest = new Example.SendAppNotificationRequest(
@@ -175,11 +174,11 @@ The app stores notifications sent by using the `SendAppNotification` message in 
   > [!NOTE]
   > The table doesn't use the `appmoduleid` field.
 
-## Customizing the notification
+## Customize the notification
 
 In addition to the basic properties of the notification, you can customize the notification delivered to the user. Customizing the notification involves changing the styles in the `Title` and `Body` of the notification, customizing the notification icon, and changing the behavior of the notification.
 
-### Using markdown in title and body
+### Use Markdown in the title and body
 
 The `Title` and `Body` parameters of the `SendAppNotification` message don't support markdown defined within the properties. You can adjust the styles of these properties by using markdown in the `OverrideContent` property. This field supports overriding the `Title` and `Body` simple strings with a limited subset of markdown styles.
 
@@ -197,12 +196,11 @@ Include newlines in the body by using `\n\n\n\n`.
 
 This example shows how to create a notification by adding a custom body definition that includes an inline link.
 
-> [!div class="mx-imgBorder"]
-> ![Notification with a block of text that includes an inline link.](../media/app-notification-with-custom-body.png "Notification with an inline link")
+:::image type="content" source="../media/app-notification-with-custom-body.png" alt-text="Screenshot of an in-app notification containing text and an inline link.":::
 
 #### [Client API](#tab/clientapi)
 
-This example uses the custom `Example.SendAppNotificationRequest` function described in [Creating a function for your client script](#creating-a-function-for-your-client-script) section.
+This example uses the custom `Example.SendAppNotificationRequest` function described in [Create a function for your client script](#create-a-function-for-your-client-script) section.
 
 ```javascript
 var SendAppNotificationRequest = new Example.SendAppNotificationRequest(title = "SLA critical",
@@ -297,12 +295,11 @@ public static Guid SendAppNotificationWithOveriddenContent(IOrganizationService 
 
 This example adds a custom title and a body definition that allows multiple links, bold formatting, and italic formatting.
 
-> [!div class="mx-imgBorder"]
-> ![Notification that includes a custom title, multiple links, bold text, and italic formatting.](../media/app-notification-with-custom-title-body.png "Notification with a custom title and body")
+:::image type="content" source="../media/app-notification-with-custom-title-body.png" alt-text="Screenshot of an in-app notification with a custom title, multiple links, bold text, and italic text.":::
 
 #### [Client API](#tab/clientapi)
 
-This example uses the custom `Example.SendAppNotificationRequest` function described in [Creating a function for your client script](#creating-a-function-for-your-client-script) section.
+This example uses the custom `Example.SendAppNotificationRequest` function described in [Create a function for your client script](#create-a-function-for-your-client-script) section.
 
 ```javascript
 var SendAppNotificationRequest = new Example.SendAppNotificationRequest(title = "Complete overhaul required (sample)",
@@ -428,11 +425,11 @@ Change the in-app notification icon by setting `IconType` to one of the followin
 
 |Icon Type|Value|Image|
 |---|---|---|
-|Info|`100000000`|:::image type="content" source="media/send-in-app-notifications/app-notification-info-icon.png" alt-text="Info Icon":::|
-|Success|`100000001`|:::image type="content" source="media/send-in-app-notifications/app-notification-success-icon.png" alt-text="Success Icon":::|
-|Failure|`100000002`|:::image type="content" source="media/send-in-app-notifications/app-notification-failure-icon.png" alt-text="Failure Icon":::|
-|Warning|`100000003`|:::image type="content" source="media/send-in-app-notifications/app-notification-warning-icon.png" alt-text="Warning Icon":::|
-|Mention|`100000004`|:::image type="content" source="media/send-in-app-notifications/app-notification-mention-icon.png" alt-text="Mention Icon":::|
+|Info|`100000000`|:::image type="content" source="media/send-in-app-notifications/app-notification-info-icon.png" alt-text="Screenshot of the information icon for an in-app notification.":::|
+|Success|`100000001`|:::image type="content" source="media/send-in-app-notifications/app-notification-success-icon.png" alt-text="Screenshot of the success icon for an in-app notification.":::|
+|Failure|`100000002`|:::image type="content" source="media/send-in-app-notifications/app-notification-failure-icon.png" alt-text="Screenshot of the failure icon for an in-app notification.":::|
+|Warning|`100000003`|:::image type="content" source="media/send-in-app-notifications/app-notification-warning-icon.png" alt-text="Screenshot of the warning icon for an in-app notification.":::|
+|Mention|`100000004`|:::image type="content" source="media/send-in-app-notifications/app-notification-mention-icon.png" alt-text="Screenshot of the mention icon for an in-app notification.":::|
 |Custom|`100000005`| |
 
 The following example demonstrates using Web API to send a notification with a custom icon.
@@ -457,9 +454,9 @@ Accept: application/json
 }
 ```
 
-### Setting the notification priority
+### Set the notification priority
 
-You can change the order in which notifications display in the notification center by setting the `Priority`. The following values are available:
+Change the order of notifications in the notification center by setting the `Priority`. The following values are available:
 
 |Priority | Value |
 |---------|-------|
@@ -470,29 +467,62 @@ The default value is `Normal`. The notification center sorts notifications by **
 
 ## Notification actions
 
-In-app notifications support zero to many actions on the notification card. Three action types are supported:
+In-app notifications support zero to many actions on the notification card. The following three action types are supported:
 
 - **URL**: When you select this action, the web browser goes to the defined URL.
 - **Side Pane**: When you select this action, a side pane opens in the app and loads the defined context in the pane.
 - **Teams Chat**: When you select this action, a Teams chat starts with defined users in the context of a Dynamics 365 record.
 
-### Defining a URL action
+### Define a URL action
 
 The URL action type enables navigation from the action on the app notification to a defined URL. The following table lists the parameters for this action type:
 
 |Parameter | Required | Data type | Description |
 |-------------|-------------|-------------|-------------|
-|`url` | Yes | String | The URL of the web address to open when the action is selected. |
+|`url` | Yes | String | The URL to open when the action is selected. The URL must use one of the [supported formats](#supported-url-formats). |
 |`navigationTarget` | No | String | This parameter controls where a navigation link opens. The options are:<br><ul><li>`dialog`: Opens in the center dialog.</li><li>`inline`: Default. Opens in the current page.</li><li>`newWindow`: Opens in a new browser tab.</li></ul> |
+
+#### Supported URL formats
+
+For security, URL actions only open URLs that use one of the following formats:
+
+|Format|Example|
+|---|---|
+|HTTPS URL|`https://org.crm.dynamics.com/main.aspx?pagetype=entityrecord&etn=incident&id=<record-id>`|
+|HTTP URL|`http://internalserver/page`|
+|Email link|`mailto:support@contoso.com`|
+|Telephone link|`tel:+1-800-555-0100`|
+|Dynamics 365 mobile app deep link|`dynamicsxrm://deeplink/page`|
+|Same-origin path beginning with `/`|`/main.aspx?pagetype=entityrecord&etn=incident&id=<record-id>`|
+|Same-origin query string beginning with `?`|`?pagetype=entityrecord&etn=incident&id=<record-id>`|
+
+Use a same-origin URL beginning with `/` when possible. For example, `/main.aspx?...` works across environments without hardcoding the organization URL.
+
+URLs in other formats are blocked. This restriction helps protect users from cross-site scripting and open-redirect attacks. Examples of blocked URLs include:
+
+- Bare relative paths, such as `main.aspx?pagetype=entityrecord&etn=incident&id=<record-id>` or `pagetype/entityrecord/...`
+- URLs that use potentially dangerous schemes, such as `javascript:` or `data:`
+- Protocol-relative URLs, such as `//external.example/page`
+
+> [!IMPORTANT]
+> If an action uses a blocked URL, the notification still appears, but selecting the action doesn't open the URL. Existing notifications that contain blocked URLs are also affected. Update the notification record or the process that creates the notification to use a supported URL format.
+
+For same-origin navigation, add a leading `/` to the path:
+
+```text
+/main.aspx?pagetype=entityrecord&etn=incident&id=<record-id>
+```
+
+> [!CAUTION]
+> Don't omit the leading `/`. A bare relative path such as `main.aspx?...` is blocked.
 
 The following example shows how to create a notification with a single URL action.
 
-> [!div class="mx-imgBorder"] 
-> ![App notification with a single action.](../media/app-notification-with-single-action.png "App notification with a single action")
+:::image type="content" source="../media/app-notification-with-single-action.png" alt-text="Screenshot of an in-app notification containing a single action.":::
 
 #### [Client API](#tab/clientapi)
 
-This example uses the custom `Example.SendAppNotificationRequest` function described in [Creating a function for your client script](#creating-a-function-for-your-client-script) section.
+This example uses the custom `Example.SendAppNotificationRequest` function described in [Create a function for your client script](#create-a-function-for-your-client-script) section.
   
 ```javascript
 var SendAppNotificationRequest = new Example.SendAppNotificationRequest(title = "Congratulations",
@@ -625,9 +655,9 @@ public static Guid SendAppNotificationWithUrlAction(IOrganizationService service
 
 ---
   
-### Defining a side pane action
+### Define a side pane action
 
-A side pane action enables opening a side pane to load a defined page when you select the action from the app notification. For more information, see [Creating side panes by using a client API](./create-app-side-panes.md).
+A side pane action opens a side pane and loads a defined page when you select the action from the app notification. For more information, see [Creating side panes by using a client API](./create-app-side-panes.md).
 
 When you use the side pane action type, you control the options of the side pane itself, and the page that loads in the side pane.
 - See [createPane](./reference/xrm-app/xrm-app-sidepanes/createpane.md) for the optional parameters for the pane that is created.
@@ -637,7 +667,7 @@ The following example shows creating an app notification with two side pane acti
   
 #### [Client API](#tab/clientapi)
 
-This example uses the custom `Example.SendAppNotificationRequest` function described in [Creating a function for your client script](#creating-a-function-for-your-client-script) section.
+This example uses the custom `Example.SendAppNotificationRequest` function described in [Create a function for your client script](#create-a-function-for-your-client-script) section.
   
 ```javascript
 var SendAppNotificationRequest = new Example.SendAppNotificationRequest(title = "New task",
@@ -851,7 +881,7 @@ public static Guid SendAppNotificationWithSidePaneActions(IOrganizationService s
 
 ---
 
-### Defining a Teams chat action
+### Define a Teams chat action
 
 A Teams chat action enables scenarios where a Teams chat is initiated from the app notification. This action uses the embedded Teams feature for Dynamics 365 apps, which provides sellers and agents the ability to chat in Microsoft Teams from within the customer engagement apps, such as Sales Hub, Customer Service Hub, and custom apps. 
 
@@ -878,7 +908,7 @@ The following example shows creating an app notification with a single Teams cha
   
 #### [Client API](#tab/clientapi)
 
-This example uses the custom `Example.SendAppNotificationRequest` function described in [Creating a function for your client script](#creating-a-function-for-your-client-script) section.
+This example uses the custom `Example.SendAppNotificationRequest` function described in [Create a function for your client script](#create-a-function-for-your-client-script) section.
   
 ```javascript
 var SendAppNotificationRequest = new Example.SendAppNotificationRequest(title = "New order posted",
@@ -1035,8 +1065,8 @@ public static Guid SendAppNotificationWithTeamChatAction(
 
 ---
 
-## Creating a function for your client script
-The client API examples in this topic provide examples of client scripting to send in-app notifications. The examples call a `SendAppNotificationRequest` function. To complete the examples, you need to create the reusable function in your environment. The following code shows an example of the function.
+## Create a function for your client script
+The client API examples in this article provide examples of client scripting to send in-app notifications. The examples call a `SendAppNotificationRequest` function. To complete the examples, you need to create the reusable function in your environment. The following code shows an example of the function.
   
 ```javascript
 var Example = window.Example || {};
@@ -1112,7 +1142,7 @@ Example.SendAppNotificationRequest.prototype.getMetadata = function () {
 
 For more examples of client scripting by using client API, see [Walkthrough: Write your first client script](walkthrough-write-your-first-client-script.md).
 
-## Managing security for notifications
+## Manage security for notifications
 
 The in-app notification feature uses three tables. A user needs the correct security roles to receive notifications and to send notifications to themselves or other users.  
 
@@ -1128,8 +1158,7 @@ In addition to the appropriate table permissions, a user must be assigned the **
 
 Add the Send In-App Notification privilege to a role by using the Role Privilege Picker under the `Miscellaneous privileges` tab.
 
-> [!div class="mx-imgBorder"] 
-> ![Assigning Send In-App Notification privilege.](media/sendinappnotificationprivilegepicker.png "Assigning Send In-App Notification privilege")
+:::image type="content" source="media/sendinappnotificationprivilegepicker.png" alt-text="Screenshot of the privilege picker for assigning the Send In-App Notification privilege.":::
 
 ## Notification storage
 
