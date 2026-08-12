@@ -256,6 +256,11 @@ Automatically synchronize Dataverse group team membership with its associated Mi
 
 Each synchronization refreshes the Dataverse group team membership to match the associated Entra group. New Entra group members are added to the team, and removed members are removed from the team.
 
+> [!NOTE]
+>
+> Team member synchronization is limited to Entra group members that are already provisioned in Dataverse. Any new Entra group members must be created in Dataverse before they can be included in the synchronization process. 
+
+
 ### See also
 
 [Manage app and resource access using Azure Active Directory groups](/azure/active-directory/fundamentals/active-directory-manage-groups)

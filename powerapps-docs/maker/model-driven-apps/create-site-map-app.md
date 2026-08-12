@@ -2,7 +2,7 @@
 title: "Create a model-driven app site map in Power Apps"
 description: "Learn how to create a site map for your app"
 keywords: ""
-ms.date: 01/23/2025
+ms.date: 08/10/2026
 ms.custom: 
 ms.topic: tutorial
 applies_to: 
