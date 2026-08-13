@@ -2,7 +2,7 @@
 title: Compose HTTP Requests and Handle Errors
 description: Learn how to compose HTTP requests with the correct methods and headers for the Dataverse Web API, and handle errors in the response.
 ms.topic: how-to
-ms.date: 08/07/2026
+ms.date: 08/13/2026
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: jdaly
@@ -54,6 +54,12 @@ Each tenant can have multiple environments. The [discovery service](../discovery
 ### Maximum URL length
 
 The maximum URL length that the service accepts is 32 KB (32,768 characters). This length is adequate for most kinds of requests, except certain `GET` operations that require very long string query parameters, such as queries that use FetchXml. If you send requests inside the body of a `$batch` request, you can send requests with URLs up to 64 KB (65,536 characters). [Learn more about sending FetchXml within a $batch request](../fetchxml/retrieve-data.md?tabs=webapi#use-fetchxml-within-a-batch-request).
+
+If you send a request that exceeds this limit, the server responds with a `400 Bad Request` and an inner exception message with the following details:
+
+> Code: `0x80060888`<br />
+> Number: `-2147088248`<br />
+> Message: `Invalid URI: The Uri string is too long.`
 
 ### Maximum OData segment length
 
