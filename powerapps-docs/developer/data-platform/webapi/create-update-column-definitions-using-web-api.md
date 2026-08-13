@@ -735,7 +735,7 @@ The following example creates a local column using the properties and adds it to
 The URI for the attribute is returned in the response.
 
 > [!NOTE]
-> For an example showing how to create a choice column with a global option set, see [Create a choice column using a global option set](create-update-optionsets.md#create-a-choice-column-using-a-global-option-set)
+> For an example showing how to create a choice column with a global option set, see [Create a choice column by using a global option set](create-update-optionsets.md#create-a-choice-column-by-using-a-global-option-set).
 
 **Request:**
 

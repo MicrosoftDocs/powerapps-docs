@@ -1,9 +1,9 @@
 ---
-title: "Ribbons available in model-driven apps"
-description: "The article describes where ribbons are defined and modified"
+title: "Ribbons in Model-Driven Apps: Definitions and Types"
+description: "Learn where ribbons in model-driven apps are defined and modified, including table, grid, subgrid, form, global, and custom page ribbons."
 author: clromano
 ms.author: clromano
-ms.date: 05/24/2022
+ms.date: 08/10/2026
 ms.reviewer: jdaly
 ms.topic: "article"
 ms.subservice: mda-developer
@@ -14,11 +14,11 @@ contributors:
   - caburk
 ---
 
-# Ribbons available
+# Ribbons in model-driven apps: definitions and types
 
 [!INCLUDE [cc-modern-commanding](../data-platform/includes/cc-modern-commanding.md)]
 
-This article describes where ribbons are defined and modified in model-driven apps.
+This article explains where to define and modify ribbons in model-driven apps. Use it to identify the XML location for table, grid, subgrid, form, global, and custom page ribbon changes.
 
 <a name="ribbon_defs"></a>
 
@@ -98,7 +98,7 @@ The table subgrid ribbon is a contextual group with a collection of tabs that ha
 
 When a list of records for a table is displayed within a sub grid on the form of another table or in a chart, there will be only three controls available directly above or within the subgrid. The behaviors for these controls can be modified by changing the commands that they are associated with.
 
-- **Add**: The default behavior of the command with the ![Add button.](media/customization-subgrid-add.PNG "Add button") icon depends on whether the records in the subgrid are related to the current record.
+- **Add**: The default behavior of the command with the :::image type="icon" source="media/customization-subgrid-add.PNG"::: icon depends on whether the records in the subgrid are related to the current record.
 
   If the records are related to the current record, the default behavior is look for existing records. If an existing record cannot be found, or if the user simply wants to create a new record, they can select **Add New**.
 
@@ -109,13 +109,13 @@ When a list of records for a table is displayed within a sub grid on the form of
   > [!NOTE]
   > Offline mode in Dynamics 365 does not support many-to-many relationship on custom tables. Due to this, the **Add New** button on a sub grid in Dynamics 365 offline mode will not be displayed.
 
-- **Show List**: The command with the ![Open view button.](media/customization-open-view.PNG "Open view button") icon will open the full list where all available commands can be used.
+- **Show List**: The command with the :::image type="icon" source="media/customization-open-view.PNG" ::: icon opens the full list where you can use all available commands.
 
   If the subgrid is associated with the current record, the default behavior of this command is to open the associated view.
 
   If the subgrid is not associated with the current record, the default behavior of this command is to open the view in the main list view.
 
-- **Delete**: The ![Sublist delete icon.](media/customization-subgrid-delete.PNG "Sublist delete icon") icon is shown on the right side of the row when people hover over the records in the list.
+- **Delete**: The :::image type="icon" source="media/customization-subgrid-delete.PNG"::: icon appears on the right side of the row when you hover over the records in the list.
 
   For records with a 1:N relationship or no relationship, the default behavior is to delete the record. The delete may be blocked if it is not allowed due to relationship configurations. Open activities and invoices are common examples of records that may not be deleted due to relationship configurations.
 
@@ -143,7 +143,7 @@ The form ribbon is a collection of tabs that have an ID value beginning with `Ms
 
 The basic home tab is displayed on the main application ribbon whenever an alternative tab is not defined because of table context or a display rule that suppresses it for specific pages. For example, this tab is displayed when you view the model-driven apps **Help**. The ID of the basic home tab is `Mscrm.BasicHomeTab`.
 
-## Customizing global commandbar
+## Customize the global command bar
 
 You can customize the global commandbar (`Mscrm.GlobalTab`) by adding the buttons to `Mscrm.GlobalTab`. The out of the box buttons in the global commandbar currently cannot be modified, but new buttons can be added.
 
@@ -159,19 +159,19 @@ When the location of the `CustomAction` is set to `Location="Mscrm.GlobalTab.New
 Several other special purpose ribbon tabs and a contextual group are defined by model-driven apps.
 Each tab is associated with a specific `<TabDisplayRule>` that controls when they will display. The following table lists these tabs.
 
-| Tab                                  | Root Id                          | Description                                                                                                 |
-| ------------------------------------ | -------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| Web Resource Edit page tab.          | `Mscrm.WebResourceEditTab`       | Displays when editing Web resources within a solution.                                                      |
-| Form Editor tab                      | `Mscrm.FormEditorTab`            | Provides Save, Edit, Select, and View groups of actions for forms.                                          |
-| Form Editor Insert tab               | `Mscrm.FormEditorInsertTab`      | Provides buttons to insert Sections, Tabs, and Controls in forms.                                           |
-| Dashboard Homepage tab               | `Mscrm.DashboardTab`             | Displays in the Workplace area.                                                                             |
-| Visualization Tools Contextual Group | `Mscrm.VisualizationTools`       | Displays when the **New Chart** button is clicked on the **Charts** tab displayed in the table grid ribbon. |
-| AptbookTab Homepage tab              | `Mscrm.AptbookTab`               | Displays when viewing the Service Calendar in the Service area.                                             |
-| Advanced Find tab                    | `Mscrm.AdvancedFind`             | Displays in the **Advanced Find** window.                                                                   |
-| Dashboard Editor tab                 | `Mscrm.DashboardEditorTab`       | Displays when editing a dashboard.                                                                          |
-| Documents tab                        | `Mscrm.DocumentsTab`             | Displays if SharePoint integration has been enabled for the organization.                                   |
-| Chart Editor tab                     | `Mscrm.VisualizationDesignerTab` | Displays when editing a chart from the solutions window.                                                    |
-| Search Tools Contextual Group        | `Mscrm.ArticleSearch`            | Displays when viewing the `KBarticle` table.                                                                |
+| Tab | Root Id | Description |
+|---|---|---|
+| Web Resource Edit page tab. | `Mscrm.WebResourceEditTab` | Displays when editing web resources within a solution. |
+| Form Editor tab | `Mscrm.FormEditorTab` | Provides **Save**, **Edit**, **Select**, and **View** groups of actions for forms. |
+| Form Editor Insert tab | `Mscrm.FormEditorInsertTab` | Provides buttons to insert **Sections**, **Tabs**, and **Controls** in forms. |
+| Dashboard Homepage tab | `Mscrm.DashboardTab` | Displays in the **Workplace** area. |
+| Visualization Tools Contextual Group | `Mscrm.VisualizationTools` | Displays when the **New Chart** button is selected on the **Charts** tab displayed in the table grid ribbon. |
+| AptbookTab Homepage tab | `Mscrm.AptbookTab` | Displays when viewing the **Service Calendar** in the **Service** area. |
+| Advanced Find tab | `Mscrm.AdvancedFind` | Displays in the **Advanced Find** window. |
+| Dashboard Editor tab | `Mscrm.DashboardEditorTab` | Displays when editing a dashboard. |
+| Documents tab | `Mscrm.DocumentsTab` | Displays if SharePoint integration is enabled for the organization. |
+| Chart Editor tab | `Mscrm.VisualizationDesignerTab` | Displays when editing a chart from the solutions window. |
+| Search Tools Contextual Group | `Mscrm.ArticleSearch` | Displays when viewing the `KBarticle` table. |
 
 <a name="BKMK_RibbonsForCustomPages"></a>
 
