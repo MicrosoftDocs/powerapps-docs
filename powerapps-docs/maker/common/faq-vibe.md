@@ -6,7 +6,7 @@ contributors: mduelae
 ms.custom:
   - responsible-ai-faqs
 ms.topic: faq
-ms.date: 03/11/2026
+ms.date: 08/12/2026
 ms.update-cycle: 180-days
 ms.author: damialajogun
 ms.reviewer: mkaur
@@ -50,6 +50,7 @@ Known limitations include:
 - Editing existing Dataverse tables via chat isn't currently supported; you can make changes to these tables through the data editor manually. 
 - Direct code edits in Code view or Split view aren't supported; you can't modify code directly in these views. 
 - You can't directly create proposed technologies (apart from code apps) from the plan; you must add additional technologies manually.
+- External images and other external content are blocked in published and previewed apps. Apps built with Power Apps vibe enforce a fixed Content Security Policy (CSP) that restricts the origins an app can load content from, which protects app users from cross-site scripting and content injection attacks. This policy is set at the platform level and can't be customized per app, per environment, or per tenant — including through Content Security Policy settings in the Power Platform admin center.
 
 Makers can minimize the impact of these limitations by: 
 
@@ -64,10 +65,10 @@ Makers are ultimately responsible for validating that their apps meet their func
 
 Effective and responsible use of Power Apps vibe depends on how makers configure and interact with the system. Makers should: 
 
-- Clearly describe business scenarios, users, and tasks when prompting 
-- Review generated content before saving or sharing it 
-- Test apps in appropriate environments prior to broader use 
-- Follow organizational governance, data, and compliance policies 
+- Clearly describe business scenarios, users, and tasks when prompting. 
+- Review generated content before saving or sharing it. 
+- Test apps in appropriate environments prior to broader use. 
+- Follow organizational governance, data, and compliance policies. 
 
 ## How do I provide feedback for Power Apps vibe?
 
