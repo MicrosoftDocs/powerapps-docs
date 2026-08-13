@@ -1,9 +1,9 @@
 ---
-title: "Webpage (HTML) Web Resources (model-driven apps)"
-description: "This article covers how to implement HTML web resources and its capabilities and limitations"
+title: "HTML Web Resources for Model-Driven App Extensions"
+description: "Learn how to use HTML web resources to build client extensions for model-driven apps, reference related files, pass parameters, and avoid limitations."
 author: anushikhas96
 ms.author: anushisharma
-ms.date: 04/01/2022
+ms.date: 08/10/2026
 ms.reviewer: jdaly
 ms.topic: "article"
 ms.subservice: mda-developer
@@ -21,21 +21,21 @@ Use webpage (HTML) web resources to create user interface elements for client ex
 
 ## Capabilities of HTML web resources
 
-Because an HTML web resource is streamed to the user's browser, it can include any content that is rendered on the user's browser.  
+Because an HTML web resource streams to the user's browser, it can include any content that the browser renders.  
 
 <a name="BKMK_Limitations"></a>
 
 ## Limitations of HTML web resources  
 
-- An HTML web resource can't contain any code that must be executed on the server. ASP.NET pages can't be uploaded as HTML web resources.
-- HTML web resources can only accept a limited number of query string parameters. [Pass parameters to HTML web resources](webpage-html-web-resources.md#BKMK_PassingParametersToWebResources)  
-- HTML web resources embedded as controls in a form might be reloaded by the form runtime for performance reasons. For example, the form runtime might destroy and reinitialize the control during tab navigation.
+- An HTML web resource can't contain any code that must run on the server. You can't upload ASP.NET pages as HTML web resources.
+- HTML web resources can accept only a limited number of query string parameters. [Pass parameters to HTML web resources](webpage-html-web-resources.md#BKMK_PassingParametersToWebResources)  
+- The form runtime might reload HTML web resources embedded as controls in a form to improve performance. For example, the form runtime might destroy and reinitialize the control during tab navigation.
 
 <a name="BKMK_UsingTextEditor"></a>
 
 ## Use the text editor for HTML web resources
 
-The text editor provided in the web resource form is intended for use with simple HTML editing. For more sophisticated HTML documents, you should edit the code in an external editor and use the **Browse** button to upload the contents of your file.
+The text editor in the web resource form is designed for simple HTML editing. For more complex HTML documents, edit the code in an external editor and use the **Browse** button to upload your file.
 
 For example, a more complex HTML page that requires script to render the contents of the page begins like the following sample.
 
@@ -53,7 +53,7 @@ For example, a more complex HTML page that requires script to render the content
 </html>
 ```
 
- After the document is opened in the text editor and saved, the HTML will be changed to the following sample:
+ For example, a more complex HTML page that requires script to render the contents of the page begins like the previous sample. After you open the document in the text editor and save it, the HTML changes to the following sample:
 
 ```html
 <HTML><HEAD><TITLE></TITLE>
@@ -68,32 +68,32 @@ For example, a more complex HTML page that requires script to render the content
 
 ## Prevent editing of web resources for managed solutions
 
-Because of the capability for the HTML in web resources to be changed by using the text editor, use managed properties to set complex HTML web resources as not customizable for managed solutions. When viewing web resources in the solutions window, open the **Managed Properties** dialog box to set the **Customizable** property to `false`.  
+Because anyone can change the HTML in web resources by using the text editor, use managed properties to set complex HTML web resources as not customizable for managed solutions. When you view web resources in the solutions window, open the **Managed Properties** dialog box to set the **Customizable** property to `false`.    
 
 <a name="BKMK_ReferencingOtherWebResources"></a>
 
 ## Reference other web resources from an HTML web resource
 
-You can create a set of related files outside of Model Driven Apps that use any of the web resource file types. If you're careful to always use relative paths and import each web resource with a consistent naming convention that reflects the folder structure of your website, the HTML web resource maintains links to related CSS, XML, JScript, image, and Silverlight files that are imported as web resources.  
+You can create a set of related files outside of model-driven apps that use any of the web resource file types. If you're careful to always use relative paths and import each web resource with a consistent naming convention that reflects the folder structure of your website, the HTML web resource maintains links to related CSS, XML, JScript, and image files that you import as web resources.    
 
-For example, if you create a web application project that uses the following [folder]/file structure:  
+For example, if you create a web application project that uses the following folder and file structure:  
 
--   page.htm
--   [Styles]
+-   `page.htm`
+-   `[Styles]`
 
-    -   style.css
+    -   `style.css`
   
--   [Scripts] 
+-   `[Scripts]` 
   
-    -   script.js
+    -   `script.js`
   
- When you import these files as web resources, you can name where your solution publisher customization prefix is "new" in the following manner:  
+ When you import these files as web resources, you can name where your solution publisher customization prefix is `new` in the following manner:  
   
 -   `new_/page.htm`  
 -   `new_/Styles/style.css`  
 -   `new_/Scripts/script.js`  
   
- When you follow this pattern, your `new_/page.htm` HTML web resource can reference the other files the most common way using relative paths as shown in the following example.  
+ When you follow this pattern, your `new_/page.htm` HTML web resource can reference the other files the most common way by using relative paths as shown in the following example.  
 
 ```html
 <script src="Scripts/script.js" type="text/javascript"></script>
@@ -103,10 +103,10 @@ For example, if you create a web application project that uses the following [fo
 The solution publisher customization prefix becomes a virtual root folder for all the web resources in your solution. If you change your customization prefix, the relative paths within your HTML web resources don't change.  
   
 > [!NOTE]
->  - An HTML web resource added to a form can't use global objects defined by the JavaScript library loaded in the form. An HTML web resource may interact with the `Xrm.Page` or `Xrm.Utility` objects within the form by using `parent.Xrm.Page` or `parent.Xrm.Utility`, but global objects defined by form scripts won't be accessible using the parent. You should load any libraries that an HTML web resource needs within the HTML web resource so they're not dependent on scripts loaded in the form.  
+>  - An HTML web resource added to a form can't use global objects defined by the JavaScript library loaded in the form. An HTML web resource can interact with the `Xrm.Page` or `Xrm.Utility` objects within the form by using `parent.Xrm.Page` or `parent.Xrm.Utility`, but global objects defined by form scripts aren't accessible by using the parent. You should load any libraries that an HTML web resource needs within the HTML web resource so they're not dependent on scripts loaded in the form.  
 > - References included in code between web resources aren't tracked as solution dependencies.  
 
-Because web resources are also downloaded for users of Dynamics 365 for Microsoft Office Outlook with Offline Access, users have access to web resource content while they're working offline.  
+Client applications that support working offline can download web resources.
 
 <a name="BKMK_PassingParametersToWebResources"></a>
 
@@ -131,10 +131,10 @@ Because web resources are also downloaded for users of Dynamics 365 for Microsof
 
 [!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
-If multiple values are passed in the data parameter, they're automatically encoded. Logic must also be included to decode the multiple parameters using script in your HTML web resource. The [Sample: Passing multiple values to a web resource through the data parameter](sample-pass-multiple-values-web-resource-through-data-parameter.md) article demonstrates one approach to address passing multiple parameter values.  
+If you pass multiple values in the data parameter, they're automatically encoded. You must include logic to decode the multiple parameters by using script in your HTML web resource. The [Sample: Passing multiple values to a web resource through the data parameter](sample-pass-multiple-values-web-resource-through-data-parameter.md) article demonstrates one approach to address passing multiple parameter values.  
  
 > [!NOTE]
-> All characters included in the query string go through validation to ensure the validity of the parameters passed. If there are any parameters found to be not valid, the request will fail. For example, passing text values enclosed in angular brackets is considered an invalid parameter type.
+> All characters included in the query string go through validation to ensure the validity of the parameters passed. If the validation process finds any parameters that aren't valid, the request fails. For example, passing text values enclosed in angular brackets is an invalid parameter type.
 
 ### See also
 
