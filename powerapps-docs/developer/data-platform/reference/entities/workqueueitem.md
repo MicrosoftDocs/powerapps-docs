@@ -69,6 +69,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [input](#BKMK_input)
 - [IsCustomizable](#BKMK_IsCustomizable)
+- [latestflowrunid](#BKMK_latestflowrunid)
 - [machineuser](#BKMK_machineuser)
 - [name](#BKMK_name)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
@@ -203,6 +204,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`iscustomizable`|
 |RequiredLevel|SystemRequired|
 |Type|ManagedProperty|
+
+### <a name="BKMK_latestflowrunid"></a> latestflowrunid
+
+|Property|Value|
+|---|---|
+|Description|**Unique identifier of the flow run that processed the item.**|
+|DisplayName|**Flow Run Id**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`latestflowrunid`|
+|RequiredLevel|None|
+|Type|Memo|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_machineuser"></a> machineuser
 
