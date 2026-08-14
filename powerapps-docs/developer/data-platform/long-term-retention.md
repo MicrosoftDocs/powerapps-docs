@@ -357,6 +357,9 @@ public EntityCollection GetActivePolicies(IOrganizationService orgService)
 
 ---
 
+## Handle Purge Failures due to Custom Plugin
+ [Purge Failures due to Custom Plugin](./Purge-Failures-Caused-by-Custom-Plugin.md)
+
 ### More examples of FetchXML query strings
 
 This code sample illustrates using a FetchXML statement to retrieve all paused retention policies for an email.  
