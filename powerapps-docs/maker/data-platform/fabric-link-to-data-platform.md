@@ -193,7 +193,7 @@ Link to Fabric with low-latency sync introduces CDF as a product capability. Whe
 
 To enable CDF for an environment, go to the [Power Platform admin center](https://admin.powerplatform.microsoft.com), select the environment, and then select **Settings** > **Product** > **Features**. Under **Microsoft Fabric**, select **Enable Change Data Feed for low-latency sync mode**.
 
-:::image type="content" source="media/fabric/change-data-feed.png" alt-text="Microsoft Fabric feature settings showing the option to enable Change Data Feed for low-latency sync mode." lightbox="media/Fabric/CDF.png":::
+:::image type="content" source="media/fabric/change-data-feed.png" alt-text="Microsoft Fabric feature settings showing the option to enable Change Data Feed for low-latency sync mode." lightbox="media/fabric/change-data-feed.png":::
 
 > [!NOTE]
 > After you enable CDF, it takes effect for a table when data in that table changes. The next delta sync includes the change log for changes made from that point forward. Changes made before CDF was enabled aren't captured.
