@@ -5,7 +5,7 @@ author: noazarur-microsoft
 
 ms.topic: reference
 ms.component: canvas
-ms.date: 08/03/2026
+ms.date: 08/17/2026
 ms.subservice: canvas-maker
 ms.author: yogupt
 
@@ -80,6 +80,24 @@ A toggle is a user interface element built for modern graphical user interfaces 
 **OnSelect** – Actions to perform when the user selects a control. 
 
 **OnUncheck** – Actions to perform when the value of the toggle changes to **false**. 
+
+## Example
+
+The following YAML example shows a toggle that turns a setting on or off and responds to both states:
+
+```yaml
+- NotificationsToggle:
+    Control: ModernToggle@1.0.0
+    Properties:
+      Label: ="Enable notifications"
+      Checked: =true
+      LabelPosition: =LabelPosition.Before
+      OnCheck: =Notify("Notifications enabled", NotificationType.Success)
+      OnUncheck: =Notify("Notifications turned off", NotificationType.Information)
+      Tooltip: ="Turn notifications on or off"
+```
+
+When the user turns the toggle on, its **Checked** property becomes **true** and the **OnCheck** formula runs. Turning it off runs **OnUncheck**.
 
 ## Recent updates
 

@@ -5,7 +5,7 @@ author: yogeshgupta698
 
 ms.topic: reference
 ms.component: canvas
-ms.date: 08/03/2026
+ms.date: 08/17/2026
 ms.subservice: canvas-maker
 ms.author: yogupt
 
@@ -78,6 +78,23 @@ The user can specify a Boolean value by using this familiar control that's been 
 **OnSelect** - Actions to perform when the user selects a control. 
 
 **OnUncheck** - Actions to perform when the user unchecks the control. 
+
+## Example
+
+The following YAML example shows a checkbox that the user must select to accept terms before continuing:
+
+```yaml
+- TermsCheckbox:
+    Control: ModernCheckbox@1.0.0
+    Properties:
+      Label: ="I accept the terms and conditions"
+      Checked: =false
+      OnCheck: =Set(varTermsAccepted, true)
+      OnUncheck: =Set(varTermsAccepted, false)
+      Tooltip: ="You must accept the terms to continue"
+```
+
+You can reference the checkbox's **Checked** property elsewhere in your app. For example, set a submit button's **DisplayMode** to `=If(TermsCheckbox.Checked, DisplayMode.Edit, DisplayMode.Disabled)` so users can continue only after they select the checkbox.
 
 ## Recent updates
 
