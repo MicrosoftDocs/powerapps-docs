@@ -8,7 +8,7 @@ contributors: saviegas
 ms.service: powerapps
 ms.subservice: dataverse-maker
 ms.topic: how-to
-ms.date: 08/11/2026
+ms.date: 08/17/2026
 ms.custom: template-how-to
 ---
 # Link to Microsoft Fabric
@@ -184,6 +184,21 @@ If your build is below the minimum listed for your app version, apply the latest
 
 > [!NOTE]
 > If you're not sure which app version you're on, contact your system administrator or Microsoft support team.
+
+### Change Data Feed
+
+[Change Data Feed (CDF)](https://docs.delta.io/delta-change-data-feed/) is a Delta Lake feature that tracks row-level changes between versions of a Delta table. It records insert, update, and delete events together with metadata that identifies each type of change. You can read the events in batch queries or streaming queries, including Spark Structured Streaming.
+
+Link to Fabric with low-latency sync introduces CDF as a product capability. When enabled, Link to Fabric preserves changes to Dataverse records for approximately 24 hours. You can use these changes for scenarios such as time travel and funnel analytics.
+
+To enable CDF for an environment, go to the [Power Platform admin center](https://admin.powerplatform.microsoft.com), select the environment, and then select **Settings** > **Product** > **Features**. Under **Microsoft Fabric**, select **Enable Change Data Feed for low-latency sync mode**.
+
+:::image type="content" source="media/fabric/change-data-feed.png" alt-text="Microsoft Fabric feature settings showing the option to enable Change Data Feed for low-latency sync mode." lightbox="media/fabric/change-data-feed.png":::
+
+> [!NOTE]
+> After you enable CDF, it takes effect for a table when data in that table changes. The next delta sync includes the change log for changes made from that point forward. Changes made before CDF was enabled aren't captured.
+>
+> CDF is memory- and compute-intensive and can increase overall sync latency. When CDF is enabled, you might experience higher latencies even with low-latency sync. Consider this performance tradeoff before enabling CDF.
 
 ## Manage link to Fabric
 
