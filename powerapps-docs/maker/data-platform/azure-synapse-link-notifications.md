@@ -1,8 +1,8 @@
 ---
 title: Receive Azure Synapse Link for Dataverse notifications in Power Apps
 description: This article explains how to receive status notifications for Azure Synapse Link for Dataverse.
-author: "JasonHQX"
-ms.author: jasonhuang
+author: "anibakore-msft"
+ms.author: banirud
 ms.reviewer: matp
 ms.service: powerapps
 ms.subservice: dataverse-maker
@@ -35,17 +35,17 @@ Several options are available for using Power Automate to send notifications. He
 
 ## Dataverse tables and columns used to track state
 
-Several tables store Azure Synapse Link profile information. For low latency sync enabled tables, use the **Azure Synapse Link profile entity state** table to monitor the sync state of all tables.
+Several tables store Azure Synapse Link profile information. For low latency sync enabled tables, use the **Azure Synapse Link profile entity state** table to monitor the sync state of all entities.
 
 |Table name  |Description  |Table reference  |
 |---------|---------|---------|
-|Azure Synapse Link profile entity state   |  This table represents the sync state of each Azure Synapse Link table in Azure Data Lake Storage. This table is updated for all low latency sync enabled tables.       | [synapselinkprofileentitystate](/power-apps/developer/data-platform/reference/entities/synapselinkprofileentitystate)        |
+|Azure Synapse Link profile entity state   |  This table represents the sync state of each Azure Synapse Link entity in Azure Data Lake Storage. This table is updated for all low latency sync enabled tables.       | [synapselinkprofileentitystate](/power-apps/developer/data-platform/reference/entities/synapselinkprofileentitystate)        |
 
-To monitor the health of your Azure Synapse Link, use the following columns in the Azure Synapse Link profile entity state table:
+Here are some useful columns in the Azure Synapse Link profile entity state table for monitoring the health of your Azure Synapse Link:
 
 - `EntityName` and profile can be used as the primary identification of the selected table. The profile is the same as the Azure Synapse Link profile name shown in Power Apps.
 - `InitialSyncProcessCompletedTime` and `InitialSyncState` return the initial sync completion status, which includes both metadata and raw data. The initial sync state marks as **Completed** once the initial sync completes.
-- `LakeRecordCount` returns the total records exported to Data Lake in CSV format.
+- `LakeRecordCount` returns the total rows exported to Data Lake in CSV format.
 - `LastSyncedDataTime` returns the date and time when the latest round of the data lake file updated or created successfully for each table.
 - `SyncState` shows as **InProgress** if the link to data lake is active and error-free.
 
@@ -57,14 +57,17 @@ To monitor the health of your Azure Synapse Link, use the following columns in t
 > 
 > The **Azure Synapse Link external table state** (`synapselinkexternaltablestate`) table applies only to Delta Lake and bring your own data lake (BYOL) profiles. It isn't updated for low latency sync enabled tables. For low latency sync enabled tables, use `synapselinkprofileentitystate`.
 
+> [!NOTE]
+> The **Azure Synapse Link external table state** (`synapselinkexternaltablestate`) table applies only to Delta Lake and bring your own data lake (BYOL) profiles. It isn't updated for low latency sync enabled tables. For low latency sync enabled tables, use `synapselinkprofileentitystate`.
+
 The remaining four tables provide additional details for Azure Synapse Link setup information:
 
 |Table name  |Description  |Table reference  |
 |---------|---------|---------|
-|Azure Synapse database  | This table captures linked Azure Data Lake storage and Synapse workspace and setup metadata information (one record per Azure Synapse Link profile).        | [synapsedatabase](/power-apps/developer/data-platform/reference/entities/synapsedatabase)       |
-|Azure Synapse Link profile  | This table captures Azure Synapse Link profile information (one record per Azure Synapse Link profile). A soft-delete in this table is performed: `ProfileState` is marked as **deleted** for deleted profile.       | [synapselinkprofile](/power-apps/developer/data-platform/reference/entities/synapselinkprofile)        |
-|Azure Synapse Link profile entity |  This table captures entity metadata within the connected Azure Synapse Link profile (one record per synced table).       | [synapselinkprofileentity](/power-apps/developer/data-platform/reference/entities/synapselinkprofileentity)       |
-|Azure Synapse Link schedule | This table captures Azure Synapse Link profile information for incremental folder update or delta lake conversion time interval (one record per Azure Synapse Link profile).        | [RecurrenceInterval](/power-apps/developer/data-platform/reference/entities/synapselinkschedule#BKMK_RecurrenceInterval)   |
+|Azure Synapse database  | This table captures linked Azure Data Lake storage and Synapse workspace and setup metadata information (one row per Azure Synapse Link profile).        | [synapsedatabase](/power-apps/developer/data-platform/reference/entities/synapsedatabase)       |
+|Azure Synapse Link profile  | This table captures Azure Synapse Link profile information (one row per Azure Synapse Link profile). A soft-delete in this table is performed: `ProfileState` is marked as **deleted** for deleted profile.       | [synapselinkprofile](/power-apps/developer/data-platform/reference/entities/synapselinkprofile)        |
+|Azure Synapse Link profile entity |  This table captures entity metadata within the connected Azure Synapse Link profile (one row per synced table).       | [synapselinkprofileentity](/power-apps/developer/data-platform/reference/entities/synapselinkprofileentity)       |
+|Azure Synapse Link schedule | This table captures Azure Synapse Link profile information for incremental folder update or delta lake conversion time interval (one row per Azure Synapse Link profile).        | [RecurrenceInterval](/power-apps/developer/data-platform/reference/entities/synapselinkschedule#BKMK_RecurrenceInterval)   |
 
 ## See also
 

@@ -2402,6 +2402,8 @@
         href: ./data-platform/azure-synapse-link-view-in-fabric.md
       - name:  Create a link to Fabric
         href: ./data-platform/fabric-link-to-data-platform.md
+      - name: Plan your latency for link to Fabric
+        href: ./data-platform/fabric-link-plan-latency.md
       - name: Work with Fabric data and Power BI
         href: ./data-platform/fabric-work-data-and-power-bi.md      
       - name: Build apps using Fabric data
