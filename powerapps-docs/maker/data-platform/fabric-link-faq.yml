@@ -4,7 +4,7 @@ metadata:
   description: Get answers to frequently asked questions about Microsoft Fabric Link for Dataverse.
   author: anibakore-msft
   ms.search.keywords: 
-  ms.date: 04/24/2026
+  ms.date: 08/18/2026
   ms.author: banirud
   ms.reviewer: matp
   ms.topic: faq
@@ -70,9 +70,30 @@ sections:
         The tables that you can't unselect depends on which add-on products you enabled. When you enable an add-in (for example, Customer Insights - Journeys), the specific tables required by that add-in are added to the entityanalyticsconfig table in Dataverse.
 
         Any table that has **isenabledforadls** set to **true** in the entityanalyticsconfig table can't be selected from the Fabric link.
+- name: Schema and metadata changes
+  questions:
    - question: What happens when I add a new column to a linked table?
      answer: |
-        If a new column is added to a table that's already part of the profile (metadata change), you can use the **Refresh Fabric tables** option from the command bar to update the change in Fabric. The update occurs after the next table data change is triggered.
+        Adding a new column is supported. Because the metadata sync isn't instantaneous and takes up to *one hour* to propagate to Fabric. During that time:
+        - Delta sync operations might fail intermittently.
+        - Newly changed data might be delayed in Fabric.
+
+        These failures are expected while the metadata sync completes. After it completes, the pipeline catches up automatically and *no action is required*.
+
+        If you don't want to wait for the metadata sync and can't accept delayed changes, remove and re-add the affected tables from the sync after you change the schema. The tables then sync freshly without any issues.
+   - question: What happens when I delete a column from a linked table?
+     answer: |
+        Deleting a column is supported. When you delete a column in Dataverse, link to Fabric *doesn't* physically drop the column from the downstream store. Instead, its values are sent as **null** going forward. Historical values might still exist for records that haven't been updated through delta sync since the deletion. This is expected behavior.
+   - question: Can I change the data type or precision of an existing column?
+     answer: |
+        No. Changing the data type or precision of a column that's already synced isn't supported. Some examples:
+        - `Int` to `Decimal`
+        - Decimal precision or scale changes (for example, `Decimal(10,3)` to `Decimal(20,10)`)
+
+        These changes cause *permanent delta sync failures*. To workaround this behavior, remove and re-add the table again from link to Fabric.
+
+        > [!IMPORTANT]
+        > Deleting the column and re-creating it with the same name and a different type *doesn't* work. The original column still exists in the downstream metadata model, so the re-created column isn't treated as new and sync continues to fail.
 - name: Data Synchronization
   questions:
    - question: How long does initial data synchronization take?
