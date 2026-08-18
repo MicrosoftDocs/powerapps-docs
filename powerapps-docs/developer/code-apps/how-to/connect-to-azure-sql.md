@@ -3,7 +3,7 @@ title: "How to: Connect your code app to Azure SQL"
 description: "Learn how to connect your code app to Azure SQL"
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 03/05/2026
+ms.date: 08/13/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
@@ -238,41 +238,32 @@ This guide covers:
 
 If you have not yet, create and/or initialize your code app using the instructions here: [Create an app from scratch](/power-apps/developer/code-apps/how-to/create-an-app-from-scratch).
 
-### Create a SQL Server Connection in Power Platform
+### Create a SQL Server connection
 
-1. Open [Power Apps](https://make.powerapps.com)
-1. Select your **Environment**
-1. Navigate to **Connections**. It might be in the **... More menu**.
-1. Select **+ New Connection**
-
-   :::image type="content" source="media/sql-createconnection.png" alt-text="+ New Connection in Power Apps":::
-
-1. Select **SQL Server**
-1. Select Authentication type: **Microsoft Entra ID Integrated**
-1. Select **Create** and sign in in the popup authentication prompt
+To create a connection by using the `shared_sql` connector identifier, follow the steps in [Create and manage connections with the Power Apps CLI](create-connection.md). Save the connection ID that the command returns.
 
 ## Add SQL table connections to your app
 
-1. List the available connections in your environment. You should see the connection you created:
+1. If you didn't save the connection ID, use [`pa connection list`](../reference/cli.md#pa-connection-list) to list the available connections in your environment:
 
    ```powershell
-   pac connection list
+   pa connection list
    ```
 
    You should see a list similar to:
 
    :::image type="content" source="media/sql-connectionlist.png" alt-text="Power Platform connections list showing SQL connection":::
 
-1. To add the projects table to the project, copy the connection ID (the first column) and use the following command:
+1. To add the projects table to the project, copy the connection ID (the first column) and use [`pa app add data-source`](../reference/cli.md#pa-app-add-data-source):
 
    ```powershell
-   pac code add-data-source -a "shared_sql" -c "[CONNECTION ID]"  -d "[SQL SERVER NAME].database.windows.net,[DATA BASE NAME]" -sp "dbo.GetAllProjects"
+   pa app add data-source --connector "shared_sql" --connection-id "[CONNECTION ID]"  --dataset "[SQL SERVER NAME].database.windows.net,[DATA BASE NAME]" --procedure "dbo.GetAllProjects"
    ```
 
    For example:
 
    ```powershell
-   pac code add-data-source -a "shared_sql" -c "aaaa0000bb11222233cc444444dddddd"  -d "sql-codeapps-dev.database.windows.net,sqldb-codeapps-dev" -sp "dbo.GetAllProjects"
+   pa app add data-source --connector "shared_sql" --connection-id "aaaa0000bb11222233cc444444dddddd"  --dataset "sql-codeapps-dev.database.windows.net,sqldb-codeapps-dev" --procedure "dbo.GetAllProjects"
    ```
 
 1. Open the `Services` and `Models` folder, and observe the newly generated code.
@@ -694,11 +685,11 @@ If you have not yet, create and/or initialize your code app using the instructio
 
 ### Publishing the App to Power Apps
 
-1. Once your app is ready for publishing and sharing, make sure the Vite server is stopped using <kbd>Ctrl + C</kbd>, then use the following PowerShell:
+1. Once your app is ready for publishing and sharing, make sure the Vite server is stopped using <kbd>Ctrl + C</kbd>. Build the app, and then use [`pa app push`](../reference/cli.md#pa-app-push) to publish it:
 
    ```powershell
    npm run build
-   pac code push
+   pa app push
    ```
 
 1. Open the app using the link provided to test it out!

@@ -8,7 +8,7 @@ ms.subservice: code-apps
 ms.author: jordanchodak
 ms.reviewer: jdaly
 author: jordanchodakWork
-ms.date: 08/03/2026
+ms.date: 08/13/2026
 ---
 
 # Add Power Automate flows to a code app
@@ -177,7 +177,7 @@ Run the app locally:
 npm run dev
 ```
 
-Build and publish the app:
+Build the app, and then use [`pa app push`](../reference/cli.md#pa-app-push) to publish it:
 
 ```bash
 npm run build
@@ -196,7 +196,7 @@ pa app push
 
 ## Related information
 
-- [Quickstart: Create a code app by using the Power Apps CLI](npm-quickstart.md)
+- [Quickstart: Create a code app using the Power Apps CLI](create-an-app-from-scratch.md)
 - [Power Apps CLI command reference](../reference/cli.md)
 - [Create a cloud flow in a solution](/power-automate/create-flow-solution)
 - [Configure user security in an environment](/power-platform/admin/database-security)

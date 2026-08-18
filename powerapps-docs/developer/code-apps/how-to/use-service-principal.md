@@ -8,7 +8,7 @@ ms.subservice: code-apps
 ms.author: jordanchodak
 ms.reviewer: jdaly
 author: jordanchodakWork
-ms.date: 08/05/2026
+ms.date: 08/12/2026
 ---
 
 # Publish Power Apps code apps with a service principal
@@ -139,3 +139,5 @@ When the command finishes, an exit code of `0` indicates that the update was pub
 - [Power Apps CLI command reference](../reference/cli.md)
 - [Application lifecycle management (ALM) for code apps](alm.md)
 - [Sign in and manage accounts with the Power Apps CLI](sign-in-manage-accounts.md)
+
+
