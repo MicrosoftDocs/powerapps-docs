@@ -1,32 +1,31 @@
 ---
-title: "How to: Connect your code app to Dataverse"
-description: "Learn how to connect your code app to Dataverse"
+title: "How to: Connect Your Code App to Dataverse"
+description: "Connect your code app to Dataverse, add tables as data sources, and use generated services for CRUD operations. Follow this guide to get started."
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 04/07/2026
+ms.date: 08/14/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
  - JimDaly
 ---
-# How to: Connect your code app to Dataverse
+# How to: connect your code app to Dataverse
 
-This guide helps developers use the [Power Apps client library for code apps](https://www.npmjs.com/package/@microsoft/power-apps) to connect their code app to Microsoft Dataverse.
+This guide shows developers how to connect their code app to Microsoft Dataverse by using the [Power Apps client library for code apps](https://www.npmjs.com/package/@microsoft/power-apps). Learn how to add a Dataverse table as a data source and use generated services for CRUD operations.
 
 ## Prerequisites
 
 - Power Apps client library for code apps
-- Power Apps CLI (PAC CLI) version 1.46 or later
+- [Power Apps CLI](../reference/cli.md)
 - An environment with Dataverse enabled
-- [You must be connected to the environment using PAC CLI](/power-platform/developer/cli/introduction#manage-auth-profiles)
+- A code app initialized for the environment
 
 ## Steps
 
-1. Ensure you're connected to your environment using PAC CLI.
-1. Use the [pac code add-data-source](/power-platform/developer/cli/reference/code#pac-code-add-data-source) command to add Dataverse as a data source to your code app.
+1. From the root of your code app project, use [`pa app add data-source`](../reference/cli.md#pa-app-add-data-source) to add the Dataverse table as a data source:
 
    ```powershell
-   pac code add-data-source -a dataverse -t <table-logical-name>
+   pa app add data-source --connector dataverse --table <table-logical-name>
    ```
 
    Replace `<table-logical-name>` with the logical name of the Dataverse table you want to connect to.
@@ -39,7 +38,7 @@ The [Power Apps client library for code apps](https://www.npmjs.com/package/@mic
 - Retrieve formatted values (labels) for option sets option values.
 - [Get metadata for Dataverse tables](get-table-metadata.md).
 - Work with lookups. Currently, you need to use the guidance to [associate with a single-valued navigation property](../../data-platform/webapi/associate-disassociate-entities-using-web-api.md#associate-with-a-single-valued-navigation-property) or [associate records on create](../../data-platform/webapi/create-entity-web-api.md#associate-table-rows-on-create) when working with lookups. A dedicated how-to guide is coming soon. The Power Apps team is actively working to make lookups easier to use in code apps.
-- Image and file upload and download (preview). When you add Dataverse as a data source by using the [npm-based cli](/power-apps/developer/code-apps/how-to/npm-quickstart), the generated functions are part of `src/generated/services`.
+- Image and file upload and download (preview). When you add Dataverse as a data source by using the Power Apps CLI, the generated functions are part of `src/generated/services`.
 - Perform CRUD operations:
 
   - Create
@@ -61,10 +60,10 @@ The [Power Apps client library for code apps](https://www.npmjs.com/package/@mic
 
 ## Set up your code app
 
-Before performing create, read, update, and delete (CRUD) operations in your code app, import the required types and services.
+Before you perform create, read, update, and delete (CRUD) operations in your code app, import the required types and services.
 
 When you add a data source, the system automatically generates model and service files and places them in the `/generated/services/` folder.
-For example, if you add the built-in [Accounts](../../data-platform/reference/entities/account.md) table as a data source, the following files are created:
+For example, if you add the built-in [Accounts](../../data-platform/reference/entities/account.md) table as a data source, the system creates the following files:
 
 - `AccountsModel.ts` – Defines the data model for the Accounts table.
 - `AccountsService.ts` – Provides service methods for interacting with the Accounts data.
@@ -247,12 +246,11 @@ try {
 The following features aren't yet supported:
 
 - Polymorphic lookups
-- Deleting Dataverse datasources through PAC CLI
 - Schema definition (entity metadata) CRUD
 - FetchXML support
 - Alternate key support
 
 ### Related information
 
-- [How to: Connect your code app to data](connect-to-data.md)  
+- [Add data sources to your code app with PAC CLI](connect-to-data.md)
 - [Power Apps CLI](/power-platform/developer/cli/introduction)

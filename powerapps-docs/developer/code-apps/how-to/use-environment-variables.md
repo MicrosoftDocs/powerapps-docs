@@ -1,9 +1,9 @@
 ---
-title: "How to: Use environment variables in code app data sources"
-description: "Learn how to reference Power Platform environment variables when adding data sources to a code app"
+title: "How to: Use Environment Variables in Code App Data Sources"
+description: "Learn how to use Power Platform environment variables in code app data sources to avoid hardcoded values and support ALM across environments."
 ms.author: pakempar
 author: pavankm
-ms.date: 03/31/2026
+ms.date: 08/13/2026
 ms.topic: how-to
 ms.reviewer: jdaly
 ---
@@ -13,13 +13,13 @@ Use environment variables in your data source configuration so your code app can
 
 ## Why use environment variables?
 
-When you reference environment variables in `pac code add-data-source`, your app configuration stores the variable reference. The app then resolves actual values from the target environment.
+When you reference environment variables in [`pa app add data-source`](../reference/cli.md#pa-app-add-data-source), your app configuration stores the variable reference. The app then resolves actual values from the target environment.
 
 This approach helps with application lifecycle management (ALM) across Dev, Test, and Prod.
 
 ## Prerequisites
 
-- A code app initialized by using [pac code init](/power-platform/developer/cli/reference/code#pac-code-init)
+- A code app initialized by using [`pa app init`](../reference/cli.md#pa-app-init)
 - A connection already created in Power Apps
 - Environment variables created in your solution
 
@@ -30,7 +30,7 @@ For guidance on creating environment variables, see [Use environment variables i
 Use the environment variable schema names prefixed with `@envvar:` for tabular arguments such as dataset and table.
 
 ```powershell
-pac code add-data-source --apiid shared_sharepointonline --connectionId <your_connection_id> --dataset "@envvar:crd1b_SharepointSiteVar" --table "@envvar:crd1b_sharepointList"
+pa app add data-source --connector shared_sharepointonline --connection-id <connection-id> --dataset "@envvar:crd1b_SharepointSiteVar" --table "@envvar:crd1b_sharepointList"
 ```
 
 In this example:

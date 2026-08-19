@@ -1,95 +1,110 @@
 ---
-title: "Quickstart: Create a code app from scratch"
-description: "Learn how to create a code app from scratch"
-ms.author: jordanchodak
-author: jordanchodakWork
-ms.date: 03/05/2026
-ms.reviewer: jdaly
+title: "Quickstart: Create a Code App Using the Power Apps CLI"
+description: "Learn how to use the Power Apps CLI to create, run, build, and publish a code app from the command line. Follow this quickstart to get started."
+#customer intent: As a developer, I want to create and publish a Power Apps code app from the command line.
 ms.topic: quickstart
-contributors:
- - JimDaly
+ms.author: jordanchodak
+ms.reviewer: jdaly
+author: jordanchodakWork
+ms.date: 08/13/2026
 ---
-# Quickstart: Create a code app from scratch
 
-This article shows how to set up a blank app from [Vite](https://vite.dev/) and turn it into a Power Apps code app. It covers configuring a TypeScript app by using the Power Apps client library for code apps.
+# Quickstart: Create a code app using the Power Apps CLI
+
+This article shows you how to install the Power Apps CLI, create a blank app from a Vite template, run the app locally, and publish it to Power Apps.
+
+For a complete list of commands, see [Power Apps CLI command reference](../reference/cli.md).
 
 ## Prerequisites
 
-- [Power Platform environment with code apps enabled](../overview.md#enable-code-apps-on-a-power-platform-environment)
-- [Node.js](https://nodejs.org/) Long term support (LTS) version
-- [Power Platform CLI](/power-platform/developer/cli/introduction?tabs=windows)
+- A Power Platform environment with code apps enabled
+- [Node.js](https://nodejs.org/) Long Term Support (LTS) version
 - [Git](https://git-scm.com/)
 
-> [!NOTE]
-> Starting with [Power Apps client library for code apps](https://www.npmjs.com/package/@microsoft/power-apps?activeTab=readme) v1.0.4 and higher, the client library for code apps includes an npm-based CLI for code apps. This new CLI reduces prerequisites for building code apps and will replace the Power Platform CLI's [`pac code`](/power-platform/developer/cli/reference/code) commands, which will be deprecated in a future release. To learn more about the new commands and get started, see [Quickstart with new npm CLI](npm-quickstart.md).
+## Step 1: Create the project
 
-## Steps
+Open a terminal and run the following commands:
 
-1. Open a new terminal and enter:
-
-   ```bash
-   npx degit github:microsoft/PowerAppsCodeApps/templates/vite my-app
-   cd my-app 
-   ```
-
-1. Authenticate the Power Platform CLI against your Power Platform tenant and select your environment:
-
-   ```bash
-   pac auth create
-   pac env select --environment < Your environment ID >
-   ```
-
-   Sign in by using your Power Platform account when prompted. All Power Platform apps, flows, and agents publish to an environment. The PAC CLI's [auth command](/power-platform/developer/cli/reference/auth) prompts you to authenticate by using your Microsoft Entra identity and ensures the code app you add connections to and publish to Power Platform go in the specified environment.
-
-1. Install the Power Apps client library for code apps and initialize your code app by using:
-   
-
-   ```bash
-   npm install
-   pac code init --displayname "App From Scratch"
-   ```
-   
-1. Enter the following command to test your code app locally:
-
-   ```bash
-   npm run dev 
-   ```
-
-  Then, open the URL labelled **Local Play**.
-
-   > [!IMPORTANT]
-   > Open the URL in the same browser profile as your Power Platform tenant.
-
-   > [!NOTE]
-   > **Local Network Access Restrictions**
-   > 
-   > Since December 2025, Chrome and Microsoft Edge browsers block requests from public origins to local endpoints by default.
-   > - Because your code app connects to localhost during development, you might need to grant browser permission or configure enterprise policies.
-   > - For embedded scenarios, include `allow="local-network-access"` in iframe tags.
-   > - Learn to [Control a website's access to the local network in Microsoft Edge](https://support.microsoft.com/topic/control-a-website-s-access-to-the-local-network-in-microsoft-edge-ef7eff4c-676d-4105-935c-2acbcd841d51) and about the [new permission prompt for Local Network Access using Chrome](https://developer.chrome.com/blog/local-network-access) for details.
-
-You should see the app open similar to:
-
-:::image type="content" source="media/npm-run-dev-result.png" alt-text="See the test app playing locally in the browser":::
-
-## Build and deploy to Power Apps
-
-In the terminal window, run these commands:
-
-```powershell
-npm run build | pac code push
+```bash
+npx degit github:microsoft/PowerAppsCodeApps/templates/vite my-app
+cd my-app
 ```
 
-- [npm run build](https://docs.npmjs.com/cli/v9/commands/npm-run-script) Runs the scripts configured in the `package.json` file with the key value of `build`. In this case, the script is `"tsc -b && vite build"`.
-- [pac code push](/power-platform/developer/cli/reference/code#pac-code-push) Publishes a new version of a code app.
+For more information, see the [degit npm package](https://www.npmjs.com/package/degit).
 
-If successful, this command returns a Power Apps URL to run the app.
+## Step 2: Install dependencies and initialize the code app
 
-Optionally, you can open  [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to see the app. You can play, share, or see details from there.
+Install the Power Apps CLI and the project dependencies:
 
-Congratulations! You successfully pushed your first code app!
+```bash
+npm install --global @microsoft/power-apps-cli
+npm install --global @microsoft/power-apps
+npm install
+```
 
-### Related information
+Use [`pa app init`](../reference/cli.md#pa-app-init) to initialize the code app. You can use interactive prompts or provide the required options in the command.
 
-- [How to: Connect your code app to data](connect-to-data.md)  
-- [Power Apps CLI](/power-platform/developer/cli/introduction)
+**Use interactive prompts:**
+
+```bash
+pa app init
+```
+
+**Provide options in the command:**
+
+```bash
+pa app init --display-name "App From Scratch" --environment-id <environment-id>
+```
+
+When you run [`pa app init`](../reference/cli.md#pa-app-init), the CLI prompts you to sign in if you're not already authenticated. Sign in by using your Power Platform account.
+
+## Step 3: Run the app locally
+
+Use [`pa app run`](../reference/cli.md#pa-app-run) to run the code app:
+
+```bash
+pa app run
+```
+
+Open the URL labeled **Local Play**.
+
+> [!IMPORTANT]
+> Open the URL in the same browser profile that you use for your Power Platform tenant.
+
+> [!NOTE]
+> **Local network access restrictions**
+>
+> Chrome and Microsoft Edge block requests from public origins to local endpoints by default.
+>
+> - Because your code app connects to localhost during development, you might need to grant browser permission or configure enterprise policies.
+> - For embedded scenarios, include `allow="local-network-access"` in iframe tags.
+> - For more information, see [Control a website's access to the local network in Microsoft Edge](https://support.microsoft.com/topic/control-a-website-s-access-to-the-local-network-in-microsoft-edge-ef7eff4c-676d-4105-935c-2acbcd841d51) and [New permission prompt for Local Network Access in Chrome](https://developer.chrome.com/blog/local-network-access).
+
+The app opens in your browser.
+
+:::image type="content" source="media/npm-run-dev-result.png" alt-text="A code app running locally in a browser":::
+
+## Step 4: Build and publish the app
+
+Build the app:
+
+```bash
+npm run build
+```
+
+Use [`pa app push`](../reference/cli.md#pa-app-push) to publish the compiled app to Power Apps:
+
+```bash
+pa app push
+```
+
+When the command finishes successfully, it returns a Power Apps URL where you can run the app.
+
+You can also go to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to play, share, or view details for the app.
+
+## Related information
+
+- [Add data sources to your code app with PAC CLI](connect-to-data.md)
+- [Add a Dataverse action or function](add-dataverse-action-function.md)
+- [Add Power Automate flows](add-flows.md)
+- [Power Apps CLI command reference](../reference/cli.md)

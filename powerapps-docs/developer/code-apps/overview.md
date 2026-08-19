@@ -1,9 +1,9 @@
 ---
 title: "Power Apps code apps overview"
-description: "Learn to use Power Apps code apps"
+description: "Explore Power Apps code apps, including key features, developer prerequisites, licensing, managed platform support, and limitations. Get started."
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 06/22/2026
+ms.date: 08/12/2026
 ms.reviewer: jdaly
 ms.topic: overview
 contributors:
@@ -11,7 +11,7 @@ contributors:
 ---
 # Power Apps code apps overview
 
-Power Apps empowers developers of all skill sets, including those building web apps in integrated developer environments (IDEs) like Visual Studio Code, to efficiently build and run business apps on a managed platform.
+Power Apps code apps help developers build and run custom business web apps from code-first IDEs such as Visual Studio Code on a managed platform. This overview explains key features, prerequisites, support, and limitations so you can evaluate code apps and get started.
 
 **Code apps** let developers bring Power Apps capabilities into custom web apps built in a code‑first IDE. You can develop locally and run the same app in Power Platform. Build with popular frameworks (React, Vue, and others) while keeping full control over your UI and logic.
 
@@ -27,7 +27,7 @@ The managed platform accelerates safe, rapid innovation, and when ready, apps ca
 
 ## Prerequisites
 
-Code apps require several developer tools like Visual Studio Code, git, dotnet, node.js, and npm to be available on the command line.  
+Code apps require an IDE, Node.js, npm, Git, and the Power Apps CLI.
 
 ### Install the following developer tools
 
@@ -35,24 +35,22 @@ Use these tools while creating code apps:
 
 - Your IDE of choice. For example, [Visual Studio Code](https://code.visualstudio.com/)
 - [Node.js](https://nodejs.org/) (LTS version)
-- [Power Apps CLI](/power-platform/developer/cli/introduction)
-
-> [!NOTE]
-> Starting with [Power Apps client library for code apps](https://www.npmjs.com/package/@microsoft/power-apps?activeTab=readme) v1.0.4 and higher, the client library includes an npm-based CLI for code apps. This new CLI reduces prerequisites for building code apps and will replace the Power Platform CLI's [`pac code`](/power-platform/developer/cli/reference/code) commands, which will be deprecated in a future release. To learn more about the new commands and get started, see [Quickstart with new npm CLI](how-to/npm-quickstart.md).
+- [Git](https://git-scm.com/)
+- [Power Apps CLI](reference/cli.md)
 
 ### Enable code apps on a Power Platform environment
 
 Admins can enable code apps by setting an environment option. Power Platform admins and environment admins can set this option. The environment setting respects groups and rules set by Power Platform admins.
 
-1. As an admin, go to [Power Platform admin center](https://admin.powerplatform.microsoft.com)
-1. Go to **Manage** > **Environments** > select the environment where you use code apps
-1. Go to **Settings** >  Expand the **Product** subsection > Select **Features**
+1. As an admin, go to [Power Platform admin center](https://admin.powerplatform.microsoft.com).
+1. Go to **Manage** > **Environments** > select the environment where you use code apps.
+1. Go to **Settings** >  Expand the **Product** subsection > Select **Features**.
 
-   :::image type="content" source="media/enable-settings-products-features.png" alt-text="Enable features":::
+   :::image type="content" source="media/enable-settings-products-features.png" alt-text="Screenshot of the Product features settings in the Power Platform admin center.":::
 
 1. Go to the feature **Power Apps code apps** and use the **Enable code apps** toggle to turn it on.
 
-   :::image type="content" source="media/enable-code-apps.png" alt-text="Enable code apps":::
+   :::image type="content" source="media/enable-code-apps.png" alt-text="Screenshot of the Power Apps code apps feature and Enable code apps toggle.":::
 
 1. Select **Save** in the settings experience.
 
@@ -113,3 +111,4 @@ This table lists Power Platform management capabilities that work for code apps.
 - [Code apps architecture](architecture.md)
 - [System limits and configuration](system-limits-configuration.md)
 - [Feedback and support](feedback-support.md)
+

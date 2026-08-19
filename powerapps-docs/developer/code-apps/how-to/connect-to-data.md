@@ -1,18 +1,18 @@
 ---
-title: "How to: Connect your code app to data"
-description: "Learn how to connect your code app to data"
+title: "How to: Add Data Sources to Your Code App with PAC CLI"
+description: "Learn how to add data sources to your code app with PAC CLI, generate typed TypeScript services, and test connections locally. Get started."
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 06/03/2026
+ms.date: 08/14/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
  - JimDaly
  - alaug
 ---
-# How to: Connect your code app to data
+# How to: Add data sources to your code app with PAC CLI
 
-Code apps can connect to Power Platform connectors.
+Learn how to add data sources to your code app with PAC CLI through Power Platform connectors. Use generated TypeScript services and verify the app locally.
 
 Use the following steps:
 
@@ -21,7 +21,7 @@ Use the following steps:
 1. [Update the app to call connections](#update-the-app-to-call-connections)
 
 > [!NOTE]
-> Use these steps after you initialize the app by using [pac code init](/power-platform/developer/cli/reference/code#pac-code-init). This step is the third step in [how to create a code app from scratch](create-an-app-from-scratch.md).
+> Use these steps after you initialize the app by using [pac code init](/power-platform/developer/cli/reference/code#pac-code-init). This step is the third step in [Quickstart: Create a code app using the Power Apps CLI](create-an-app-from-scratch.md).
 
 
 ## Create and set up connections in Power Apps
@@ -36,13 +36,13 @@ All connectors are officially supported except the ones listed in the following 
 - [Excel Online (OneDrive)](/connectors/excelonline/)
 
 > [!IMPORTANT]
-> You can now create connections directly from the CLI rather than through the Power Apps maker portal. See [Create a connection from the CLI (preview)](create-connection.md).
+> You can now create connections directly from the CLI rather than through the Power Apps maker portal. See [Create and manage connections with the Power Apps CLI](create-connection.md).
 
 ### Launch the Power Apps Connections page
 
    Go to [Power Apps](https://make.powerapps.com) and navigate to the **Connections** page from the left-hand navigation.
 
-   :::image type="content" source="media/powerapps-create-connection.png" alt-text="Power Apps Connections page showing New connection button":::
+   :::image type="content" source="media/powerapps-create-connection.png" alt-text="Screenshot of the Power Apps Connections page with the New connection button.":::
 
 #### Example: Create an Office 365 Users connection
 
@@ -51,7 +51,7 @@ Select **+ New connection** and select **Office 365 Users**. Select **Create**.
 > [!NOTE]
 > If you already have an Office 365 Users connection, use that connection instead of creating a new one.
 
-:::image type="content" source="media/powerapps-create-office-connection.png" alt-text="Create Office 365 Users connection in Power Apps":::
+:::image type="content" source="media/powerapps-create-office-connection.png" alt-text="Screenshot of the Office 365 Users connection creation page in Power Apps.":::
 
 #### (Optional) Create a SQL connection (or a connection for another tabular data source)
 
@@ -71,17 +71,17 @@ Use the Power Apps CLI to list your available connections and get their IDs by u
 
 `pac connection list` shows a table of all your connections, including the **Connection ID** and **API Name**. The API name acts as the `appId` when you add a data source.
 
-:::image type="content" source="media/pac-cli-connection-list.png" alt-text="PAC CLI list output showing Connection ID and API Name":::
+:::image type="content" source="media/pac-cli-connection-list.png" alt-text="Screenshot of PAC CLI connection list output with Connection ID and API Name columns.":::
 
 #### Use Power Apps URL
 
 You can also get this information by using Power Apps. When you view the details of a connection, you can see the URL.
 
-:::image type="content" source="media/powerapps-select-connection.png" alt-text="Select a connection in Power Apps to view its details":::
+:::image type="content" source="media/powerapps-select-connection.png" alt-text="Screenshot of a connection selected in Power Apps to display its details.":::
 
 The API name and connection ID show up in the URL:
 
-:::image type="content" source="media/powerapps-connection-apiname-connectionid.png" alt-text="Connection details showing API name and Connection ID values":::
+:::image type="content" source="media/powerapps-connection-apiname-connectionid.png" alt-text="Screenshot of Power Apps connection details with the API name and connection ID values.":::
 
 Copy the API name and the connection ID from PAC CLI to the URL for each connection.
 
@@ -91,9 +91,9 @@ After you create or identify existing connections to use, and copy the connectio
 
 When you add the data sources to the app, the process automatically generates a typed TypeScript model and service file in the repo. For example, the Office 365 Users data source produces `Office365UsersModel` and `Office365UsersService` files.
 
-### Add a nontabular data source
+### Add a non-tabular data source
 
-Add a nontabular data source (such as Office 365 Users) to the app by using the PAC CLI [pac code add-data-source](/power-platform/developer/cli/reference/code#pac-code-add-data-source) command.
+Add a non-tabular data source (such as Office 365 Users) to the app by using the PAC CLI [pac code add-data-source](/power-platform/developer/cli/reference/code#pac-code-add-data-source) command.
 
 From a command line, run the following command. Use the API name and connection ID that you collected from previous steps.
 
@@ -230,7 +230,7 @@ pac code delete-data-source `
 Starting in version 1.51.1 of the Power Apps CLI released in December 2025, you can use connection references to add data sources to your code app. A connection reference is a solution component that points to a specific connection for a connector. Instead of binding your app directly to a user-specific connection, bind it to a reference. This approach makes the solution environment-aware and portable across Dev, Test, and Prod environments for smooth application lifecycle management.
 
 > [!NOTE]
-> This section assumes you have a basic knowledge of solutions in Power Apps and connection references. You should have a solution created already and a connection reference in that solution for your data source. If you don't, follow the steps outlined in the links below to create one.
+> This section assumes you have a basic knowledge of solutions in Power Apps and connection references. You should have a solution created already and a connection reference in that solution for your data source. If you don't, follow the steps outlined in the links in the next section to create one.
 >
 > - [Learn about solutions in Power Apps](../../../maker/data-platform/solutions-overview.md).
 > - [Learn about connection references and what makes them useful to your Power Apps](../../../maker/data-platform/create-connection-reference.md).
@@ -321,7 +321,7 @@ After you add connections, update the app to use the generated model and service
    import type { User } from './generated/models/Office365UsersModel';
    ```
 
-1. **Update the app to use the nontabular data source (for example, Office 365 Users)**
+1. **Update the app to use the non-tabular data source (for example, Office 365 Users)**
 
    For the typed connection API, view the generated files under the `src/generated/models` and `src/generated/services` folders.
 

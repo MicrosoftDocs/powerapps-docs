@@ -23,7 +23,7 @@ Browser developer tools (DevTools) are built-in tools in modern web browsers tha
 
 You have a code app that connects to data as described in these articles:
 
-- [How to connect to data](connect-to-data.md)
+- [Add data sources to your code app with PAC CLI](connect-to-data.md)
 - [How to connect to Azure SQL](connect-to-azure-sql.md)
 
 ## View data requests in browser dev tools
