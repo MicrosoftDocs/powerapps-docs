@@ -1,9 +1,9 @@
 ---
-title: "Use IFRAME and web resource controls on a form (model-driven apps)"
-description: "Learn how to work with IFRAME and web resources in model-driven apps using JavaScript.  "
+title: "Use IFRAME and Web Resource Controls in Model-Driven Apps"
+description: "Learn how to use IFRAME and web resource controls on model-driven app forms to embed content, pass record context, and change URLs with JavaScript."
 author: anushikhas96
 ms.author: anushisharma
-ms.date: 06/10/2022
+ms.date: 08/18/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 ms.subservice: mda-developer
@@ -14,21 +14,20 @@ contributors:
 ---
 # Use IFRAME and web resource controls on a form
 
-IFRAME and web resource controls embed content from another location in pages by using an HTML IFRAME element.  
+Learn how to use IFRAME and web resource controls to embed content in model-driven app forms, pass record context and form data, and change target URLs.  
 
 > [!NOTE]
->  The designs you choose for the form are also used for the Dynamics 365 for Outlook reading pane and forms used by Dynamics 365 tablets. Web resources and IFRAMEs aren't displayed using the Dynamics 365 for Outlook reading pane, however, they are supported in Dynamics 365 for tablets. If your IFRAME depends on access to the `Xrm` object of the page or any form event handlers, you should configure the IFRAME so that it's not visible by default.  
+>  The designs you choose for the form are also used for the Dynamics 365 for Outlook reading pane and forms used by Dynamics 365 tablets. Dynamics 365 for Outlook reading pane doesn't display web resources and IFRAMEs, but Dynamics 365 for tablets supports them. If your IFRAME depends on access to the `Xrm` object of the page or any form event handlers, configure the IFRAME so that it's not visible by default.  
 
-You can use an IFRAME to display the contents from another website in a form, for example, in an ASP.NET page. 
+You can use an IFRAME to display the contents from another website in a form, such as an ASP.NET page. 
 
-It is recommended to use [Power Apps component framework components](../component-framework/custom-controls-overview.md) if you're considering to use a web resource to show content that users will interact with.
+Use [Power Apps component framework components](../component-framework/custom-controls-overview.md) if you want to use a web resource to show content that users interact with.
  
-Displaying a form within an IFrame embedded in another form is not supported.  
+You can't display a form within an IFrame embedded in another form.  
 
- You can use one of the following web resources to display the contents of web resources in a form:  
+ Use one of the following web resources to display the contents of web resources in a form:  
 
 - [Web Page (HTML) web resources](webpage-html-web-resources.md)  
-
 - [Image (JPG, PNG, GIF, ICO) web resources](image-web-resources.md)  
 
 
@@ -40,48 +39,46 @@ Displaying a form within an IFrame embedded in another form is not supported.
 
 ## Select whether to restrict cross-frame scripting  
 
- Use the **Restrict cross-frame scripting, where supported** option when you don't fully trust the content displayed in an IFRAME. When this option is selected, the IFRAME has the parameters set that are listed in the following table.  
+Use the **Restrict cross-frame scripting, where supported** option when you don't fully trust the content displayed in an IFRAME. When you select this option, the [iframe sandbox parameter](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe#sandbox) is passed with an empty value: `sandbox=""`. This setting applies all restrictions.
 
 
-|        Parameter        |        Description      |
-|-------------------------|--------------------------|
-| `security="restricted"` | This parameter is no longer supported. |
-|      `sandbox=""`       | For browsers that support this parameter, the content in the IFRAME is essentially limited to only displaying information. The following restrictions could be applied:<br /><br /> -   Browser plug-ins are disabled.<br />-   Forms and scripts are disabled.<br />-   Links to other browsing contexts are disabled.<br />-   Content is treated as from a different domain even if the domain is the same.<br /><br /> This parameter is defined by W3C and is supported by the following browsers:<br /><br /> - Microsoft Edge <br />- Google Chrome<br />- Apple Safari<br />- Mozilla Firefox<br /><br /> For more information about the sandbox parameter see:<br /><br /> -   [How to safeguard your site with HTML5 sandbox](/previous-versions/msdn10/hh563496(v=msdn.10))<br />-   [Sandbox](/previous-versions/windows/internet-explorer/ie-developer/dev-guides/hh673561(v=vs.85)) |
+<a name="BKMK_EnableIFrameCommunicationAcrossDomains"></a>
 
-<a name="BKMK_EnableIFrameCommunicationAcrossDomains"></a>   
+### Communicate with a cross-origin IFRAME
 
-### Enabling IFrame communication across domains  
+Use the standard [Window.postMessage](https://developer.mozilla.org/docs/Web/API/Window/postMessage) method to exchange messages between a model-driven app form and an IFRAME whose content has a different origin. Both the form and the page in the IFRAME must implement the messaging behavior. This method doesn't give the cross-origin page direct access to the form's document object model (DOM), `Xrm` object, form context, or other JavaScript objects.
 
- There are times when you want to enable communication for an IFRAME that contains content on a different domain. `Window.postMessage` is a browser method that provides this capability for Google Chrome, Mozilla Firefox, and Apple Safari. For more information about using `postMessage`, see the following blog posts:  
+The website that serves the IFRAME content must allow the model-driven app to embed it. The website can control which origins can embed the page by using the [`Content-Security-Policy: frame-ancestors`](https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors) directive. The `X-Frame-Options` response header can also prevent the page from being embedded.
 
--   [Cross domain calls to the parent form](https://blogs.msdn.com/b/devkeydet/archive/2012/02/14/cross-domain-calls-to-the-parent-crm-2011-form.aspx)  
 
--   [Cross-Document messaging and RPC](/previous-versions/msdn10/ff800814(v=msdn.10))  
+When you send a message, specify the exact expected origin in the `targetOrigin` parameter instead of `*`. When you receive a message, verify the `origin` and, when possible, the `source` properties of the message event. Validate the structure and content of the message data before you use it.
+
+If you select **Restrict cross-frame scripting, where supported**, the resulting IFRAME sandbox restrictions can prevent scripts in the embedded page from running and using `postMessage`.
 
 <a name="BKMK_PassContextualInformation"></a>   
 
 ## Pass contextual information about the record  
 
- You can provide contextual information by passing parameters to the URL defined in the control. The page that is displayed in the frame must be able to process parameters passed to it. All the parameters in the following table are passed if the IFRAME or web resource is configured by using the **Pass record object-type code and unique identifier as parameters** option.  
+ You can provide contextual information by passing parameters to the URL defined in the control. The page that displays in the frame must be able to process parameters passed to it. If you configure the IFRAME or web resource by using the **Pass record object-type code and unique identifier as parameters** option, it passes all the parameters in the following table.  
 
- You can specify whether all the parameters in the following table will be passed.  
+ You can specify whether to pass all the parameters in the following table.  
 
 
 | Parameter  |        Name        |                                 Description                                 |
 |------------|--------------------|-----------------------------------------------------------------------------|
-| `typename` |    Table Name     |                           The name of the table.                           |
+| `typename` |    Table Name     |                           The logical name of the table.                           |
 |   `type`   |  Table Type Code  | The integer that uniquely identifies the table in a specific organization. |
 |    `id`    |    Object GUID     |                      A GUID that represents a record.                       |
 | `orgname`  | Organization Name  |                    The unique name of the organization.                     |
-| `userlcid` | User Language Code |    The language code identifier that is being used by the current user.     |
+| `userlcid` | User Language Code |    The language code identifier that the current user is using.     |
 
  [!INCLUDE[languagecode](../../includes/languagecode.md)]  
 
 > [!NOTE]
->  We suggest that you use the table name instead of the type code because the table type code for custom tables may be different between Microsoft Dataverse organizations.  
+>  Use the table logical name instead of the type code because the table type code for custom tables is usually different between Microsoft Dataverse organizations.
 
-### Example  
- The following sample shows the URL without parameters.  
+### Example URLs with contextual record parameters  
+ The following sample shows the URL without parameters.    
 
 ```  
 https://myserver/mypage.aspx  
@@ -95,30 +92,30 @@ https://myserver/mypage.aspx?id=%7bB2232821-A775-DF11-8DD1-00155DBA3809%7d&orglc
 
 ### Read passed parameters  
 
- Passed parameters are typically read in the target .aspx page by using the **HttpRequest.QueryString** property. In an HTML page, the parameters can be accessed by using the **window.location.search** property in JavaScript. For more information, see [HttpRequest.QueryString Property](/dotnet/api/system.web.httprequest.querystring) and [search Property](https://msdn2.microsoft.com/library/ms534620.aspx).  
+Typically, read passed parameters in the target .aspx page by using the [`HttpRequest.QueryString` property](/dotnet/api/system.web.httprequest.querystring) . In an HTML page, access the parameters by using the [`window.location.search` property](https://developer.mozilla.org/en-US/docs/Web/API/Location/search) in JavaScript.
 
 <a name="BKMK_PassFormData"></a>  
 
 ## Pass form data  
 
- Use the [getValue](clientapi/reference/controls/getValue.md) method on the columns that contain the data that you want to pass to the other website, and compose a string of the query string arguments the other page will be able to use. Then use a [Column OnChange event](clientapi/reference/events/attribute-onchange.md), [IFRAME OnReadyStateComplete event](clientapi/reference/events/onreadystatecomplete.md), or [Tab TabStateChange event](clientapi/reference/events/tabstatechange.md) and the [setSrc](clientapi/reference/controls/setSrc.md) method to append your parameters to the `src` property of the IFRAME or web resource.  
+Use the [getValue](clientapi/reference/controls/getValue.md) method on the columns that contain the data you want to pass to the other website, and compose a string of the query string arguments the other page can use. Then use a [Column OnChange event](clientapi/reference/events/attribute-onchange.md), [IFRAME OnReadyStateComplete event](clientapi/reference/events/onreadystatecomplete.md), or [Tab TabStateChange event](clientapi/reference/events/tabstatechange.md) and the [setSrc](clientapi/reference/controls/setSrc.md) method to append your parameters to the `src` property of the IFRAME or web resource.  
 
- If you're using the data parameter to pass data to a Silverlight web resource, you can use the [getData](clientapi/reference/controls/getData.md) and [setData](clientapi/reference/controls/setData.md) methods to manipulate the value passed via the data parameter. For webpage (HTML) web resources, use the [setSrc](clientapi/reference/controls/setSrc.md) method to manipulate the `querystring` parameter directly.  
+If you're using the data parameter to pass data to webpage (HTML) web resources, use the [setSrc](clientapi/reference/controls/setSrc.md) method to manipulate the `querystring` parameter directly.  
 
- Avoid using the [OnLoad event](clientapi/reference/events/form-onload.md). IFRAMES and web resources load asynchronously and the frame may not have finished loading before the `Onload` event script finishes. This can cause the `src` property of the IFRAME or web resource you have changed to be overwritten by the default value of the IFRAME or web resource URL property.  
+Avoid using the [OnLoad event](clientapi/reference/events/form-onload.md). IFRAMES and web resources load asynchronously and the frame might not finish loading before the `Onload` event script finishes. This condition can cause the `src` property of the IFRAME or web resource you changed to be overwritten by the default value of the IFRAME or web resource URL property.  
 
 <a name="BKMK_ChangeThePage"></a>   
 
 ## Change the URL  
 
- You may want to change the target of the IFRAME based on such considerations as the data in the form or whether the user is working offline. You can set the target of the IFRAME dynamically.  
+ You might want to change the target of the IFRAME based on such considerations as the data in the form or whether the user is working offline. You can set the target of the IFRAME dynamically.  
 
 > [!NOTE]
 >  When you change the target page for the IFRAME, parameters aren't passed to the new URL automatically. You must append the query string parameters to the URL before you use the `setSrc` method.  
 
-### Example
+### Example to change an IFRAME URL
 
- The following sample shows you how to set the `src` property for the IFRAME and any parameters by using the `onChange` event of a choice column.  
+ The following sample shows how to set the `src` property for the IFRAME and any parameters by using the `onChange` event of a choice column.    
 
 ```javascript  
 //Get the value of an option set attribute
@@ -147,11 +144,9 @@ newTarget = newTarget + params;
 IFrame.setSrc(newTarget);
 ```  
 
-## See Also  
+## See also  
 
- [Client scripting using JavaScript](client-scripting.md)   
+[Client scripting using JavaScript](client-scripting.md)   
  
-
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

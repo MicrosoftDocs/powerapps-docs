@@ -104,8 +104,8 @@ Key properties for this control are **Value**, **Min**, **Max**, **Step**, and *
 
 | Value | Description |
 |-------|-------------|
-| `Appearance.Filled` | Filled background style |
-| `Appearance.FilledDarker` | Darker filled background (default) |
+| `Appearance.FilledDarker` | Filled with darker background (default) |
+| `Appearance.FilledLighter` | Filled background style |
 | `Appearance.Outline` | Outlined border with transparent background |
 
 **BasePaletteColor** – The base color that the theme uses to generate the control's color palette. Change this property to apply a different theme color to the control.

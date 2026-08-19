@@ -135,9 +135,9 @@ Use custom format strings when you need a specific date representation not avail
 
 | Value | Description |
 |-------|-------------|
-| `Appearance.Filled` | Filled background style |
 | `Appearance.FilledDarker` | Filled with darker background (default) |
-| `Appearance.Outline` | Outline style with border |
+| `Appearance.FilledLighter` | Filled background style |
+| `Appearance.Outline` | Outlined border with transparent background |
 
 **BasePaletteColor** – The base color used by the theme to generate the control's color palette. Change this property to apply a different theme color to the control.
 

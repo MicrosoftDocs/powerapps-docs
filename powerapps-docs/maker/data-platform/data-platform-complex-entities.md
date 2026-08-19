@@ -2,10 +2,9 @@
 title: Complex tables requiring Power Apps licenses | Microsoft Docs
 description: A list of complex tables in Microsoft Dataverse that require a Power Apps Plan 2 license.
 author: mattp123
-
 ms.component: cds
 ms.topic: article
-ms.date: 08/28/2020
+ms.date: 08/13/2026
 ms.subservice: dataverse-maker
 ms.author: matp
 search.audienceType: 
@@ -13,8 +12,6 @@ search.audienceType:
 ---
 
 # Complex tables and licensing
-
-
 
 > [!IMPORTANT]
 > *This topic is applicable only for older Power Apps Plan 1 and Plan 2 licenses.*
@@ -34,7 +31,7 @@ Tables that include the following complex server-side logic require users of an 
 To know whether or not you've added complex business logic to your tables, review the list of plug-in assemblies and workflows configured in your environment.
 
 ## Complex tables installed with Dynamics 365 apps
-The following table lists tables that contain complex server-side logic out-of-the-box as part of the installation of customer engagement apps in Dynamics 365 (Dynamics 365 Sales, Customer Service, Field Service, Marketing, and Project Service Automation). This list is intended as a guide. Depending on the Dynamics 365 apps and versions installed in your environment, the list of complex tables may vary.
+The following table lists tables that contain complex server-side logic as part of the installation of customer engagement apps in Dynamics 365 (Dynamics 365 Sales, Customer Service, Field Service, Customer Insights, and Project Operations). This list is intended as a guide. Depending on the Dynamics 365 apps and versions installed in your environment, the list of complex tables might vary.
 
 > [!NOTE]
 >  If you are using the Microsoft Dataverse and have not installed a Dynamics 365 app or third-party solution, your environment won't have tables containing complex server-side logic.
