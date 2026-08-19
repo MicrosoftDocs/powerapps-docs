@@ -150,8 +150,8 @@ The previous Text control property was named `Weight` with string values (`"Regu
 
 | Enum value | Description |
 |------------|-------------|
-| `Appearance.Filled` | Filled background style |
-| `Appearance.FilledDarker` | Darker filled background (default for most controls) |
+| `Appearance.FilledDarker` | Filled with darker background (default for most controls) |
+| `Appearance.FilledLighter` | Filled background style |
 | `Appearance.Outline` | Outlined border with transparent background |
 
 
