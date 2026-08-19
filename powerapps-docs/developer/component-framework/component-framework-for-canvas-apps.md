@@ -21,7 +21,7 @@ App makers can use Power Apps component framework to create, import, and add cod
 ## Security considerations
 
 > [!WARNING]
-> Code components contain code that Microsoft didn't generate and can potentially access security tokens and data when rendered in Power Apps Studio. When adding code components to a canvas app, make sure that you get the code component solutions from a trusted source. This vulnerability doesn't exist when playing the canvas app.  
+> Code components contain code that Microsoft didn't generate and can potentially access security tokens and data when rendered in Power Apps Studio. When adding code components to a canvas app, make sure that you get the code component solutions from a trusted source.
 
 When you open a canvas app that contains code components in Power Apps Studio, a warning message about potentially unsafe code appears. Code components in the Power Apps Studio environment have access to security tokens, so only open components from trusted sources. Administrators and system customizers should review and validate all code components before importing those components in an environment and making them available for makers to use in their apps. The `Default` publisher appears when you import code components by using an unmanaged solution or when you use [pac pcf push](/power-platform/developer/cli/reference/pcf#pac-pcf-push) to install your code component.
 
