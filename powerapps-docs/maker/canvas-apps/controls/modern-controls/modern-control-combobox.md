@@ -100,11 +100,9 @@ Key properties for this control are **Items**, **DefaultSelectedItems**, and **S
 
 | Value | Description |
 |-------|-------------|
-| `Appearance.Filled` | Filled background style |
-| `Appearance.FilledDarker` | Filled with darker background |
-| `Appearance.Outline` | Outline style with border |
-
-Default is `Appearance.FilledDarker`.
+| `Appearance.FilledDarker` | Filled with darker background (default) |
+| `Appearance.FilledLighter` | Filled background style |
+| `Appearance.Outline` | Outlined border with transparent background |
 
 **BasePaletteColor** – The base color used by the theme to generate the control's color palette. Changes this property to apply a different theme color to the control.
 

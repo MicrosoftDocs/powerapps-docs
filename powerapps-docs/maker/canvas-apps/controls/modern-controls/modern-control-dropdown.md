@@ -78,9 +78,9 @@ On desktop, the updated control opens a **Fluent-themed flyout** that matches th
 
 | Value | Description |
 |-------|-------------|
-| `Appearance.FilledDarker` | Filled with a slightly darker background. Default. |
-| `Appearance.Filled` | Filled with a standard background. |
-| `Appearance.Outline` | Outlined border with a transparent background. |
+| `Appearance.FilledDarker` | Filled with darker background (default) |
+| `Appearance.FilledLighter` | Filled background style |
+| `Appearance.Outline` | Outlined border with transparent background |
 
 **BasePaletteColor** – The base color used by the theme to generate the control's color palette. Use this value to apply a different theme color to the control.
 
