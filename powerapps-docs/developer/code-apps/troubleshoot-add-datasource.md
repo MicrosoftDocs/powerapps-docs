@@ -1,68 +1,64 @@
 ---
-title: "Troubleshoot adding a data source"
-description: "Learn how to troubleshoot issues when errors occur while adding a datasource using the PAC CLI pac code add-data-source command."
+title: Troubleshoot Adding a Data Source
+description: Troubleshoot adding a data source with the pa app add data-source command by identifying configuration, authentication, and network errors. Follow these steps.
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 02/02/2026
+ms.date: 08/13/2026
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: troubleshooting
 contributors:
  - JimDaly
 ---
+
 # Troubleshoot adding a data source
 
-This article provides troubleshooting steps for when the PAC CLI (Power Apps Command Line Interface)  [pac code add-data-source](/power-platform/developer/cli/reference/code#pac-code-add-data-source) command fails.
+Troubleshoot adding a data source when the Power Apps CLI [`pa app add data-source`](reference/cli.md#pa-app-add-data-source) command fails. Follow these steps to identify configuration, authentication, or network issues and add the data source successfully.
 
 
 ## Symptoms
 
 Failures usually happen because something on your computer or network is blocking the connection or disrupting authentication.
 
-| Symptom                  | Example Message                           |
-| ------------------------ | ----------------------------------------- |
-| Fetch Failed             | `Fetch Failed` (no additional stack)      |
-| Timeout / network errors | `ETIMEDOUT`, `ENOTFOUND`, `ECONNRESET`    |
-| Environment mismatch     | Data source not found / unexpected schema |
+| Symptom | Example message |
+| --- | --- |
+| Fetch failed | `Fetch Failed` (no additional stack) |
+| Timeout or network errors | `ETIMEDOUT`, `ENOTFOUND`, or `ECONNRESET` |
+| Environment mismatch | Data source not found or unexpected schema |
 
 ## Prerequisites
 
-1. Verify you have the [latest Power Platform CLI installed](/power-platform/developer/cli/introduction#install-microsoft-power-platform-cli). Update it if you aren't sure.
-1. Verify you are authenticated to the correct environment. Use [`pac auth create`](/power-platform/developer/cli/reference/auth#pac-auth-create) and [`pac auth list`](/power-platform/developer/cli/reference/auth#pac-auth-list) commands.
-1. Verify your network allows outbound HTTPS calls to Power Platform endpoints.
+1. Verify that you have the latest Power Apps CLI installed. Update it if you're not sure.
+1. Use [`pa auth login`](reference/cli.md#pa-auth-login) to sign in and [`pa auth status`](reference/cli.md#pa-auth-status) to verify the active account:
 
-## Troubleshooting steps
+   ```bash
+   pa auth login
+   pa auth status
+   ```
 
-To diagnose the root cause, follow these steps:
+1. Verify that your network allows outbound HTTPS calls to Power Platform endpoints.
+
+## Steps to troubleshoot data source errors
+
+To diagnose the root cause, follow these steps.
 
 ### Step 1: Validate configuration
 
-Open `power.config.json` file and confirm:
+Open the `power.config.json` file and confirm:
 
-- `environmentId` matches the environment you intend to target.
-- `region` is set to `prod`,  unless you are intentionally targeting another region. Add it if missing.
+- `environmentId` matches the environment you want to target.
+- `region` is set to `prod`, unless you want to target another region. Add it if it's missing.
 
 ### Step 2: Cross-check environment context
 
-Run the [`pac env who`](/power-platform/developer/cli/reference/env#pac-env-who) command.
+Use [`pa auth status`](reference/cli.md#pa-auth-status) to confirm that the correct account is active:
 
-
-Compare the `Environment ID` in the output with the `environmentId` value in `power.config.json`.
-
-Example output (annotated):
-
-```powershell
-Connected as user@domain.com
-Organization Information
-  Org ID:                     00aa00aa-bb11-cc22-dd33-44ee44ee44ee
-  Unique Name:                unq2889ab2be728ef118406000d3a33f
-  Friendly Name:              User Name
-  Org URL:                    https://myorg.crm.dynamics.com/
-  User Email:                 user@domain.com
-  User ID:                    aaaaaaaa-bbbb-cccc-1111-222222222222
-  Environment ID:             aaaabbbb-0000-cccc-1111-dddd2222eeee  <-- Ensure this matches
+```bash
+pa auth status
 ```
 
-Corresponding `power.config.json` example snippet:
+Compare the `environmentId` in `power.config.json` with the environment ID shown in the Power Apps environment URL.
+
+Example `power.config.json` snippet:
 
 ```json
 {
@@ -73,69 +69,72 @@ Corresponding `power.config.json` example snippet:
 
 ### Step 3: Re-run command
 
-Run the [`pac code add-data-source`](/power-platform/developer/cli/reference/code#pac-code-add-data-source) command again. For example:
+Run [`pa app add data-source`](reference/cli.md#pa-app-add-data-source) again. For example:
 
-```cmd
-pac code add-data-source -a dataverse -t account
+```bash
+pa app add data-source --connector dataverse --table account
 ```
 
 Look for HTTP status codes or error messages in the output.
 
-### Step 4: Network & security validation
+### Step 4: Network and security validation
 
-If still failing:
+If the command still fails:
 
-- Confirm no corporate proxy/firewall blocks CLI processes (non-browser traffic).
-- Approve required Power Platform endpoints. [Review Power Platform connectivity requirements](/power-platform/admin/online-requirements)
+- Confirm that no corporate proxy or firewall blocks CLI processes or other nonbrowser traffic.
+- Approve the required Power Platform endpoints. See [Power Platform connectivity requirements](/power-platform/admin/online-requirements).
 
 #### Verify browser connectivity
 
 This step helps confirm that your user account has the correct permissions and that the data source is reachable from your computer.
 
-1. Open a web browser on the same computer where you're using the PAC CLI.
-1. Navigate directly to the data source you're trying to add. For example, the SharePoint site or the Dataverse environment URL.
-1. Sign in with the **same credentials** you used to authenticate with the PAC CLI [pac auth create](/power-platform/developer/cli/reference/auth#pac-auth-create) command
+1. Open a web browser on the same computer where you're using the Power Apps CLI.
+1. Go directly to the data source you're trying to add, such as the SharePoint site or Dataverse environment URL.
+1. Sign in with the same account shown by [`pa auth status`](reference/cli.md#pa-auth-status).
 1. If you can't access the resource, a permissions issue with your user account is the likely root cause.
-1. If you can access it, move to [Analyze network traffic](#analyze-network-traffic).
+1. If you can access it, continue to [Analyze network traffic](#analyze-network-traffic).
 
 #### Analyze network traffic
 
-This is the most effective way to see the raw network communication data between the PAC CLI and the data source endpoint.
+Use a network-monitoring tool to inspect communication between the Power Apps CLI and the data source endpoint.
 
-1. Download and install [Fiddler Classic](https://www.telerik.com/fiddler/fiddler-classic). Fiddler is tool to monitor network traffic.
-1. Start Fiddler and ensure it's capturing traffic. Go to **File** > **Capture Traffic**.
-1. In a command prompt, run the failing `pac code add-data-source` command.
-1. In the Fiddler session list, look for requests made to your data source endpoint. For example: `yourorg.crm.dynamics.com` or `yourtenant.sharepoint.com`.
-1. Analyze the response information:
+1. Download and install [Fiddler Classic](https://www.telerik.com/fiddler/fiddler-classic).
+1. Start Fiddler and ensure that it's capturing traffic. Go to **File** > **Capture Traffic**.
+1. In a command prompt, run the failing [`pa app add data-source`](reference/cli.md#pa-app-add-data-source) command.
+1. In the Fiddler session list, look for requests made to your data source endpoint, such as `yourorg.crm.dynamics.com` or `yourtenant.sharepoint.com`.
+1. Analyze the response:
 
-    - A `200` status code indicates success.
-    - A `401` (Unauthorized) or `403` (Forbidden) status code points to an authentication or permission issue.
-    - Other error codes or a complete lack of response can indicate that a firewall or proxy is blocking the request.
+   - A `200` status code indicates success.
+   - A `401` (Unauthorized) or `403` (Forbidden) status code points to an authentication or permission issue.
+   - Other error codes or a complete lack of response can indicate that a firewall or proxy is blocking the request.
 
-### Step 5: Clear/Reset auth context
+### Step 5: Clear or reset the auth context
 
-If a mismatch is detected, you should clear or reset the auth context using the following PAC CLI commands.
+If the wrong account is active, use [`pa auth switch`](reference/cli.md#pa-auth-switch):
 
-```cmd
-pac auth list
-pac auth select --index <n>
-pac env who
+```bash
+pa auth switch
 ```
 
-If incorrect, re-authenticate:
+If the account isn't listed, use [`pa auth login`](reference/cli.md#pa-auth-login):
 
-```cmd
-pac auth create --environment <yourEnvironmentId>
+```bash
+pa auth login
+```
+
+To clear all saved authentication information and sign in again, use [`pa auth logout`](reference/cli.md#pa-auth-logout), and then use [`pa auth login`](reference/cli.md#pa-auth-login):
+
+```bash
+pa auth logout
+pa auth login
 ```
 
 ### Escalation data
 
-Before you contact technical support to file an issue, collect the following data.
+Before you contact technical support to file an issue, provide:
 
-Provide:
-
-- CLI version. Use the `pac --version` command
-- OS and shell (Windows cmd / PowerShell / WSL)
+- CLI version from [`pa --version`](reference/cli.md#global-options)
+- Operating system and shell, such as Windows Command Prompt, PowerShell, or WSL
 - The full command used
-- Sanitized debug output excerpt
-- `power.config.json` after you redact secrets
+- Sanitized debug output
+- `power.config.json` after you redact sensitive values

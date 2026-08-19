@@ -3,7 +3,7 @@ title: "How to: SharePoint operations"
 description: "Learn how to do SharePoint operations in code apps"
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 03/05/2026
+ms.date: 08/12/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
@@ -16,14 +16,14 @@ Use the [Power Apps client library for code apps](https://www.npmjs.com/package/
 ## Prerequisites
 
 - [Power Apps client library for code apps](https://www.npmjs.com/package/@microsoft/power-apps)
-- [Power Apps CLI (PAC CLI)](/power-platform/developer/cli/introduction) version 1.50 or later
-- [You must be connected to the environment using PAC CLI](/power-platform/developer/cli/introduction#manage-auth-profiles)
+- [Power Apps CLI](../reference/cli.md)
+- A code app initialized for your Power Platform environment
 
 ## Supported scenarios
 
 The following scenarios are supported when connecting to SharePoint using the Power Apps client library for code apps:
 
-- Add SharePoint lists as data sources by using the PAC CLI
+- Add SharePoint lists as data sources by using the Power Apps CLI
 - Perform CRUD operations on a SharePoint list
 - Get possible values for choice, lookup, or person/group columns
 
@@ -33,7 +33,7 @@ Before performing create, read, update, and delete (CRUD) operations in your cod
 
 ### Add your SharePoint data source
 
-Add your SharePoint data source by following the instructions in [Connect to data](connect-to-data.md).
+Add your SharePoint data source by following the instructions in [Add data sources to your code app with PAC CLI](connect-to-data.md).
 
 ### Import required types and services
 
@@ -172,4 +172,6 @@ const selectOpts = options.map(o => ({ id: o.Id, label: o.Value }));
 
 ## Unsupported scenarios
 
-The Power Apps client library for code apps and the PAC CLI allow CRUD operations on SharePoint lists, but don't support Document Processing APIs or actions like item synchronization or permission changes. You can add these features by creating a custom service file for your code app.
+The Power Apps client library for code apps and the Power Apps CLI support CRUD operations on SharePoint lists, but they don't support Document Processing APIs or actions like item synchronization or permission changes. You can add these features by creating a custom service file for your code app.
+
+

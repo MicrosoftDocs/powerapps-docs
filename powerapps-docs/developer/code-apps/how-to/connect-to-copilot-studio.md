@@ -3,7 +3,7 @@ title: "How to: Connect to Copilot Studio"
 description: "Learn how to connect your code app Copilot Studio and invoke an agent."
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 02/18/2026
+ms.date: 08/13/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
@@ -17,7 +17,7 @@ Microsoft Copilot Studio agents bring AI-powered capabilities to your code apps.
 
 - An initialized code app project
 - A published Microsoft Copilot Studio agent in your environment
-- Basic understanding of [how to connect code apps to data](connect-to-data.md)
+- Basic understanding of how to [add data sources to your code app with PAC CLI](connect-to-data.md)
 
 ## Ensure you have a Microsoft Copilot Studio connection
 
@@ -25,24 +25,24 @@ To connect your code app to a Copilot Studio agent, you need a Microsoft Copilot
 
 ### Check for existing connections
 
-To see if you already have a Microsoft Copilot Studio connection using the [`pac connection list`](/power-platform/developer/cli/reference/connection#pac-connection-list) command :
+To see if you already have a Microsoft Copilot Studio connection, use [`pa connection list`](../reference/cli.md#pa-connection-list):
 
 ```bash
-pac connection list
+pa connection list
 ```
 
 Look for a connection with the API ID `/providers/Microsoft.PowerApps/apis/shared_microsoftcopilotstudio`, and copy the `connectionId` value.
 
 ### Create a new connection
 
-If you don't have an existing connection, you must create one through the Power Apps maker portal UI. Follow the instructions in [how to connect code apps to data](connect-to-data.md) and ensure that you copy the `connectionId`.
+If you don't have an existing connection, follow [Create and manage connections with the Power Apps CLI](create-connection.md) and use `shared_microsoftcopilotstudio` as the connector identifier. Save the connection ID returned by the command.
 
 ## Add the Microsoft Copilot Studio connector
 
-After creating a Microsoft Copilot Studio connection, use the PAC CLI [`pac code add-data-source`](/power-platform/developer/cli/reference/code#pac-code-add-data-source) command to add it to your code app:
+After creating a Microsoft Copilot Studio connection, use [`pa app add data-source`](../reference/cli.md#pa-app-add-data-source) to add it to your code app:
 
 ```bash
-pac code add-data-source -a "shared_microsoftcopilotstudio" -c <connectionId>
+pa app add data-source --connector "shared_microsoftcopilotstudio" --connection-id <connectionId>
 ```
 
 This command automatically:
@@ -202,6 +202,6 @@ const convId = response.data.conversationId ??
 
 ## See also
 
-- [Connect your code app to data](connect-to-data.md)
+- [Add data sources to your code app with PAC CLI](connect-to-data.md)
 - [Microsoft Copilot Studio documentation](/microsoft-copilot-studio/)
 - [Power Platform connectors reference](/connectors/connector-reference/)

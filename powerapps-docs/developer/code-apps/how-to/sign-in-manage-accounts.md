@@ -2,10 +2,12 @@
 layout: Conceptual
 title: "How to Sign in and manage accounts with the Power Apps CLI - Power Apps | Microsoft Learn"
 ms.topic: how-to
+ms.service: powerapps
+ms.subservice: code-apps
 description: Learn how to sign in, check your status, switch between accounts, and sign out when you build Power Apps code apps with the Power Apps CLI.
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 08/03/2026
+ms.date: 08/13/2026
 ms.reviewer: jdaly
 ---
 
@@ -98,4 +100,4 @@ If you're not signed in, the command still completes without an error.
 ## Related information
 
 - [Power Apps CLI command reference](../reference/cli.md)
-- [Quickstart: Create a code app by using the Power Apps CLI](npm-quickstart.md)
+- [Quickstart: Create a code app using the Power Apps CLI](create-an-app-from-scratch.md)

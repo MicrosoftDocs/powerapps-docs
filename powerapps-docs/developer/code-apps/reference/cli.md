@@ -1,21 +1,17 @@
 ---
-title: Power Apps CLI command reference
-description: Reference for Power Apps CLI commands used to create, develop, connect, and publish Power Apps code apps.
+title: Power Apps CLI Command Reference
+description: Explore the Power Apps CLI command reference to create, develop, connect, and publish Power Apps code apps. Review commands and parameters.
 #customer intent: As a developer, I want a complete reference for the Power Apps CLI commands available for Power Apps code apps.
 ms.topic: reference
 ms.author: jordanchodak
 ms.reviewer: jdaly
 author: jordanchodakWork
-ms.date: 08/03/2026
+ms.date: 08/14/2026
 ---
 
 # Power Apps CLI command reference
 
-> These are the commands for the latest versions: 
-> - [@microsoft/power-apps version 1.2.12](https://www.npmjs.com/package/@microsoft/power-apps/v/1.2.12) 
-> - [@microsoft/power-apps-cli version 0.15.1](https://www.npmjs.com/package/@microsoft/power-apps-cli/v/0.15.1)
-
-The Power Apps CLI provides commands to create, develop, connect, and publish Power Apps code apps. The CLI uses grouped commands in the following format:
+Use this Power Apps CLI command reference to quickly find commands for creating, developing, connecting, and publishing Power Apps code apps. The CLI uses grouped commands in the following format:
 
 ```console
 pa <command-group> <command>
@@ -31,7 +27,9 @@ These are the command groups:
 | `pa connection` | Create and manage connections and discover their resources. |
 | `pa telemetry`| Manage CLI telemetry settings.|
 
-To display help in the terminal, use `--help` at any level:
+## Global options
+
+Use `--help` at any level to display help in the terminal:
 
 ```console
 pa --help
@@ -39,9 +37,15 @@ pa app --help
 pa app init --help
 ```
 
-## Commands
+Use `--version` to display the installed Power Apps CLI version:
 
-These are the available commands:
+```console
+pa --version
+```
+
+## Power Apps CLI commands
+
+These commands are available:
 
 | Command | Description |
 | --- | --- |
@@ -183,8 +187,8 @@ Learn more about scenarios where you can use this command:
 
 - [Review prerequisites for adding a Dataverse action or function](../how-to/add-dataverse-action-function.md#prerequisites)
 - [Review prerequisites for adding Power Automate flows](../how-to/add-flows.md#prerequisites)
-- [Learn how to list available connectors](../how-to/create-connection.md#step-1-list-available-connectors)
-- [Learn how to initialize a code app](../how-to/npm-quickstart.md#step-2-install-dependencies-and-initialize-the-code-app)
+- [Learn how to list available connectors](../how-to/create-connection.md#get-connection-metadata)
+- [Learn how to initialize a code app](../how-to/create-an-app-from-scratch.md#step-2-install-dependencies-and-initialize-the-code-app)
 - [Learn how sign-in works when you initialize a code app](../how-to/sign-in-manage-accounts.md#how-to-sign-in-and-manage-accounts-with-the-power-apps-cli)
 
 ## `pa app list`
@@ -245,9 +249,9 @@ pa app push [--solution-id <solution-id>]
 | Parameter | Description |
 | --- | --- |
 | `--solution-id` | The ID of the solution to add the code app to. |
-| `--non-interactive`| Publishes the app non-interactively. [Learn to publish apps with a service principal](../how-to/use-service-principal.md) |
+| `--non-interactive`| Publishes the app non-interactively. [Learn to publish apps with a service principal](../how-to/use-service-principal.md). |
 
-[Learn how to create a code app by using the Power Apps CLI](../how-to/npm-quickstart.md)
+[Learn how to create a code app by using the Power Apps CLI](../how-to/create-an-app-from-scratch.md).
 
 ## `pa app refresh data-source`
 
@@ -424,8 +428,8 @@ pa connection create --connector <connector-id> [--display-name <name>] [--json]
 | `--display-name` | The display name for the connection. |
 | `--json` | Return the result as JSON. |
 
-- [Learn how to find the connector identifier for a connection](../how-to/create-connection.md#output)
-- [Learn how to create a connection](../how-to/create-connection.md#step-2-create-the-connection)
+- [Learn how to find the connector identifier for a connection](../how-to/create-connection.md#get-connection-metadata)
+- [Learn how to create a connection](../how-to/create-connection.md#create-and-set-up-connections-with-the-power-apps-cli)
 
 ## `pa connection list`
 
@@ -517,7 +521,7 @@ pa connector list [--search <term>] [--json]
 | `--search` | Filter connectors by name or display name. |
 | `--json` | Return the complete connector list as JSON. |
 
-[Learn how to create a connection](../how-to/create-connection.md#step-1-list-available-connectors)
+[Learn how to create a connection](../how-to/create-connection.md#create-and-set-up-connections-with-the-power-apps-cli)
 
 ## `pa telemetry disable`
 
@@ -545,6 +549,6 @@ pa telemetry status
 
 ## Related information
 
-- [Quickstart: Create a code app by using the Power Apps CLI](../how-to/npm-quickstart.md)
+- [Quickstart: Create a code app using the Power Apps CLI](../how-to/create-an-app-from-scratch.md)
 - [Sign in and manage accounts with the Power Apps CLI](../how-to/sign-in-manage-accounts.md)
-- [Connect your code app to data](../how-to/connect-to-data.md)
+- [Add data sources to your code app with PAC CLI](../how-to/connect-to-data.md)

@@ -6,8 +6,8 @@ ms.topic: how-to
 ms.author: jordanchodak
 ms.reviewer: jdaly
 author: jordanchodakWork
-ms.date: 08/03/2026
-contributors: 
+ms.date: 08/13/2026
+contributors:
  - pavankm
 ---
 
@@ -50,7 +50,6 @@ This function and the return type are documented here:
 
 - [WhoAmI function](xref:Microsoft.Dynamics.CRM.WhoAmI)
 - [WhoAmIResponse complex type](xref:Microsoft.Dynamics.CRM.WhoAmIResponse)
-
 
 You can also search for actions. For example:
 
@@ -107,8 +106,7 @@ The command:
 1. Regenerates `dataSourcesInfo.ts`.
 1. Generates TypeScript models and a service class under `<codeGenPath>/generated/`.
 
-When you add the operation, the CLI returns a confirmation:  
-
+When you add the operation, the CLI returns a confirmation:
 
 ```console
 Dataverse API 'WhoAmI' added successfully.
@@ -183,6 +181,6 @@ Run [`pa app add dataverse-api`](../reference/cli.md#pa-app-add-dataverse-api) a
 
 ## Related information
 
-- [Quickstart: Create a code app by using the Power Apps CLI](npm-quickstart.md)
+- [Quickstart: Create a code app using the Power Apps CLI](create-an-app-from-scratch.md)
 - [Power Apps CLI command reference](../reference/cli.md)
 - [Connect your code app to Dataverse](connect-to-dataverse.md)

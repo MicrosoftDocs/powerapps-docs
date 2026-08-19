@@ -10179,6 +10179,16 @@
       "source_path": "powerapps-docs/maker/common/performance-insights-categories.md",
       "redirect_url": "/power-apps/maker/common/monitor-app-performance",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/code-apps/how-to/npm-quickstart.md",
+      "redirect_url": "/power-apps/developer/code-apps/how-to/create-an-app-from-scratch",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/code-apps/how-to/push-to-solution.md",
+      "redirect_url": "/power-apps/developer/code-apps/how-to/alm#publish-to-a-solution",
+      "redirect_document_id": false
     }
   ]
 }
