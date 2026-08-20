@@ -187,7 +187,6 @@ Learn more about scenarios where you can use this command:
 
 - [Review prerequisites for adding a Dataverse action or function](../how-to/add-dataverse-action-function.md#prerequisites)
 - [Review prerequisites for adding Power Automate flows](../how-to/add-flows.md#prerequisites)
-- [Learn how to list available connectors](../how-to/create-connection.md#get-connection-metadata)
 - [Learn how to initialize a code app](../how-to/create-an-app-from-scratch.md#step-2-install-dependencies-and-initialize-the-code-app)
 - [Learn how sign-in works when you initialize a code app](../how-to/sign-in-manage-accounts.md#how-to-sign-in-and-manage-accounts-with-the-power-apps-cli)
 
@@ -422,14 +421,37 @@ pa connection create --connector <connector-id> [--display-name <name>] [--json]
 
 ### `pa connection create` parameters
 
-| Parameter | Description |
-| --- | --- |
-| `--connector` | The connector identifier, such as `shared_office365`. |
-| `--display-name` | The display name for the connection. |
-| `--json` | Return the result as JSON. |
+| Parameter | Alias | Required | Description |
+| --- | --- | --- | --- |
+| `--connector` | - | Yes | The connector identifier, such as `shared_office365` or `shared_teams`. |
+| `--display-name` | `-n` | No | The display name for the connection. If you don't provide a name, the CLI uses a default name. |
+| `--json` | - | No | Returns the result as JSON. |
 
-- [Learn how to find the connector identifier for a connection](../how-to/create-connection.md#get-connection-metadata)
-- [Learn how to create a connection](../how-to/create-connection.md#create-and-set-up-connections-with-the-power-apps-cli)
+### `pa connection create` examples
+
+Create an Office 365 Outlook connection:
+
+```bash
+pa connection create --connector shared_office365
+```
+
+Create a Microsoft Teams connection with a custom display name:
+
+```bash
+pa connection create --connector shared_teams --display-name "My Teams"
+```
+
+Create a connection and return the result as JSON:
+
+```bash
+pa connection create --connector shared_office365 --json
+```
+
+### `pa connection create` output
+
+When the command succeeds, it returns the connection ID. Use the connection ID when you add the connector as a data source to the code app.
+
+[Learn how to create a connection from the Power Apps CLI](../how-to/create-connection.md)
 
 ## `pa connection list`
 
@@ -521,7 +543,50 @@ pa connector list [--search <term>] [--json]
 | `--search` | Filter connectors by name or display name. |
 | `--json` | Return the complete connector list as JSON. |
 
-[Learn how to create a connection](../how-to/create-connection.md#create-and-set-up-connections-with-the-power-apps-cli)
+
+### `pa connector list` output
+
+In an interactive terminal, results appear in pages of 20 rows. Press <kbd>Enter</kbd> to show the next page. Press <kbd>Esc</kbd> or <kbd>Q</kbd> to exit. When you redirect the output or include `--json`, the command returns the complete list.
+
+By default, the command returns a table with the following columns:
+
+| Column | Description |
+| --- | --- |
+| Display Name | The connector's display name, such as *Office 365 Outlook*. |
+| Connector | The connector identifier, such as `shared_office365`. Use this value with the `--connector` option of [`pa connection create`](#pa-connection-create). |
+
+When you use the `--json` parameter, the JSON output includes the following fields:
+
+| Field | Description |
+| --- | --- |
+| `id` | The connector ID. |
+| `name` | The connector identifier, such as `shared_office365`. |
+| `displayName` | The connector display name. |
+| `description` | The connector description. |
+| `isTabular` | Indicates whether the connector supports tabular data operations. |
+
+
+### `pa connector list` examples
+
+List all available connectors:
+
+```bash
+pa connector list
+```
+
+Search for connectors:
+
+```bash
+pa connector list --search teams
+```
+
+Return the connector list as JSON:
+
+```bash
+pa connector list --json
+```
+
+[Learn how to list available connectors](../how-to/create-connection.md#step-1-list-available-connectors)
 
 ## `pa telemetry disable`
 
@@ -551,4 +616,4 @@ pa telemetry status
 
 - [Quickstart: Create a code app using the Power Apps CLI](../how-to/create-an-app-from-scratch.md)
 - [Sign in and manage accounts with the Power Apps CLI](../how-to/sign-in-manage-accounts.md)
-- [Add data sources to your code app with PAC CLI](../how-to/connect-to-data.md)
+- [Add data sources to your code app](../how-to/connect-to-data.md)

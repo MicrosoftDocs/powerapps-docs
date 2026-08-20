@@ -1,32 +1,32 @@
 ---
-title: "How to: Add Data Sources to Your Code App with PAC CLI"
-description: "Learn how to add data sources to your code app with PAC CLI, generate typed TypeScript services, and test connections locally. Get started."
+title: "How to: Connect Your Code App to Data"
+description: "Learn how to connect your code app to data with Power Platform connectors, add tabular or nontabular sources, and call generated services."
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 08/14/2026
+ms.date: 08/19/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
  - JimDaly
  - alaug
 ---
-# How to: Add data sources to your code app with PAC CLI
+# How to: Connect your code app to data
 
-Learn how to add data sources to your code app with PAC CLI through Power Platform connectors. Use generated TypeScript services and verify the app locally.
+Learn how to connect your code app to data by using Power Platform connectors, so you can add data sources and call generated services from your app.
 
 Use the following steps:
 
-1. [Create and set up connections in Power Apps](#create-and-set-up-connections-in-power-apps)
+1. [Create and set up connections with the Power Apps CLI](#create-and-set-up-connections-with-the-power-apps-cli)
 1. [Add a connection to a code app](#add-a-connection-to-a-code-app)
 1. [Update the app to call connections](#update-the-app-to-call-connections)
 
 > [!NOTE]
-> Use these steps after you initialize the app by using [pac code init](/power-platform/developer/cli/reference/code#pac-code-init). This step is the third step in [Quickstart: Create a code app using the Power Apps CLI](create-an-app-from-scratch.md).
+> Use these steps after you initialize the app by using [`pa app init`](../reference/cli.md#pa-app-init).
 
 
-## Create and set up connections in Power Apps
+## Create and set up connections with the Power Apps CLI
 
-Start by creating and configuring connections at [Power Apps](https://make.powerapps.com). Copy connection metadata from there for use in later steps.
+Use the Power Apps CLI to find a connector and create its connection. Follow [Create a connection from the Power Apps CLI](create-connection.md), and save the connection ID returned by the command.
 
 All connectors are officially supported except the ones listed in the following section.
 
@@ -35,55 +35,20 @@ All connectors are officially supported except the ones listed in the following 
 - [Excel Online (Business)](/connectors/excelonlinebusiness/)
 - [Excel Online (OneDrive)](/connectors/excelonline/)
 
-> [!IMPORTANT]
-> You can now create connections directly from the CLI rather than through the Power Apps maker portal. See [Create and manage connections with the Power Apps CLI](create-connection.md).
-
-### Launch the Power Apps Connections page
-
-   Go to [Power Apps](https://make.powerapps.com) and navigate to the **Connections** page from the left-hand navigation.
-
-   :::image type="content" source="media/powerapps-create-connection.png" alt-text="Screenshot of the Power Apps Connections page with the New connection button.":::
-
-#### Example: Create an Office 365 Users connection
-
-Select **+ New connection** and select **Office 365 Users**. Select **Create**.
-
-> [!NOTE]
-> If you already have an Office 365 Users connection, use that connection instead of creating a new one.
-
-:::image type="content" source="media/powerapps-create-office-connection.png" alt-text="Screenshot of the Office 365 Users connection creation page in Power Apps.":::
-
-#### (Optional) Create a SQL connection (or a connection for another tabular data source)
-
 > [!TIP]
 > For a step-by-step guide to connecting your code app to Azure SQL, see [How to: Connect your code app to Azure SQL](connect-to-azure-sql.md).
 
-### Get connection metadata for all created connections
+### Get connection metadata
 
-Use one of the following methods:
+Use [`pa connection list`](../reference/cli.md#pa-connection-list) to list your available connections and get their IDs if you didn't save the ID returned by [`pa connection create`](../reference/cli.md#pa-connection-create):
 
-- [Use PAC CLI](#use-pac-cli)
-- [Use Power Apps URL](#use-power-apps-url)
+```bash
+pa connection list
+```
 
-#### Use PAC CLI
+The command shows a table of connections, including the **Connection ID** and connector identifier. Use these values when you add a data source.
 
-Use the Power Apps CLI to list your available connections and get their IDs by using the [pac connection list](/power-platform/developer/cli/reference/connection#pac-connection-list) command.
-
-`pac connection list` shows a table of all your connections, including the **Connection ID** and **API Name**. The API name acts as the `appId` when you add a data source.
-
-:::image type="content" source="media/pac-cli-connection-list.png" alt-text="Screenshot of PAC CLI connection list output with Connection ID and API Name columns.":::
-
-#### Use Power Apps URL
-
-You can also get this information by using Power Apps. When you view the details of a connection, you can see the URL.
-
-:::image type="content" source="media/powerapps-select-connection.png" alt-text="Screenshot of a connection selected in Power Apps to display its details.":::
-
-The API name and connection ID show up in the URL:
-
-:::image type="content" source="media/powerapps-connection-apiname-connectionid.png" alt-text="Screenshot of Power Apps connection details with the API name and connection ID values.":::
-
-Copy the API name and the connection ID from PAC CLI to the URL for each connection.
+:::image type="content" source="media/pac-cli-connection-list.png" alt-text="Screenshot of Power Apps CLI output with connection IDs and connector identifiers.":::
 
 ## Add a connection to a code app
 
@@ -93,141 +58,154 @@ When you add the data sources to the app, the process automatically generates a 
 
 ### Add a non-tabular data source
 
-Add a non-tabular data source (such as Office 365 Users) to the app by using the PAC CLI [pac code add-data-source](/power-platform/developer/cli/reference/code#pac-code-add-data-source) command.
+Add a non-tabular data source, such as Office 365 Users, by using [`pa app add data-source`](../reference/cli.md#pa-app-add-data-source).
 
-From a command line, run the following command. Use the API name and connection ID that you collected from previous steps.
+From a command line, run the following command. Use the connector identifier and connection ID that you collected from previous steps.
 
 ```powershell
-pac code add-data-source -a <apiName> -c <connectionId>
+pa app add data-source --connector <connector-id> --connection-id <connection-id>
 ```
 
 For example:
 
 ```powershell
-pac code add-data-source -a "shared_office365users" -c "aaaaaaaa000011112222bbbbbbbbbbbb"
+pa app add data-source --connector "shared_office365users" --connection-id "aaaaaaaa000011112222bbbbbbbbbbbb"
    ```
 
 ### Add a tabular data source
 
 SQL or SharePoint are examples of tabular data sources.
 
-Use the same PAC CLI [pac code add-data-source](/power-platform/developer/cli/reference/code#pac-code-add-data-source) command, but include a table ID and dataset name. The schema of your tabular data source specifies these values. If you don't already have these values, see [Discover available datasets and tables](#discover-available-datasets-and-tables).
+Use the same [`pa app add data-source`](../reference/cli.md#pa-app-add-data-source) command, but include the table and dataset. The schema of your tabular data source specifies these values. If you don't already have these values, see [Discover available datasets and tables](#discover-available-datasets-and-tables).
 
 ```powershell
-pac code add-data-source -a <apiName> -c <connectionId> -t <tableId> -d <datasetName> 
+pa app add data-source `
+--connector <connector-id> `
+--connection-id <connection-id> `
+--table <table-id> `
+--dataset <dataset-name>
 ```
 
 #### SQL example
 
 ```powershell
-pac code add-data-source `
--a "shared_sql" `
--c "aaaaaaaa000011112222bbbbbbbbbbbb" `
--t "[dbo].[MobileDeviceInventory]" `
--d "paconnectivitysql0425.database.windows.net,paruntimedb"
+pa app add data-source `
+--connector "shared_sql" `
+--connection-id "aaaaaaaa000011112222bbbbbbbbbbbb" `
+--table "[dbo].[MobileDeviceInventory]" `
+--dataset "paconnectivitysql0425.database.windows.net,paruntimedb"
 
-pac code add-data-source `
--a "shared_sql" `
--c "aaaaaaaa000011112222bbbbbbbbbbbb" `
--t "[dbo].[EmployeeInformation]" `
--d "paconnectivitysql0425.database.windows.net,paruntimedb" 
+pa app add data-source `
+--connector "shared_sql" `
+--connection-id "aaaaaaaa000011112222bbbbbbbbbbbb" `
+--table "[dbo].[EmployeeInformation]" `
+--dataset "paconnectivitysql0425.database.windows.net,paruntimedb" 
 ```
 
 #### SharePoint example
 
-For SharePoint, `-t` is the **List** name and `-d` is the SharePoint site:
+For SharePoint, `--table` is the list name and `--dataset` is the SharePoint site:
 
 ```powershell
-pac code add-data-source `
--a "shared_sharepointonline" `
--c "aaaaaaaa000011112222bbbbbbbbbbbb" `
--t "Travel%20Request" `
--d "https://contoso.sharepoint.com/sites/TravelPolicies"
+pa app add data-source `
+--connector "shared_sharepointonline" `
+--connection-id "aaaaaaaa000011112222bbbbbbbbbbbb" `
+--table "Travel%20Request" `
+--dataset "https://contoso.sharepoint.com/sites/TravelPolicies"
 ```
 
 #### Discover available datasets and tables
 
-Use PAC CLI [`pac code list`](/power-platform/developer/cli/reference/code#pac-code-list) commands to discover available datasets, tables, and stored procedures for your connections. This method is easier than manually retrieving metadata through browser developer tools.
+Use the [`pa connection`](../reference/cli.md) commands to discover available datasets, tables, and stored procedures for your connections.
 
-**List datasets:**
+**[List datasets](../reference/cli.md#pa-connection-list-datasets):**
 
 ```powershell
-pac code list-datasets -a <apiId> -c <connectionId>
+pa connection list-datasets --connector <connector-id> --connection-id <connection-id>
 ```
 
-**List tables:**
+**[List tables](../reference/cli.md#pa-connection-list-tables):**
 
 ```powershell
-pac code list-tables -a <apiId> -c <connectionId> -d <datasetName>
+pa connection list-tables --connector <connector-id> --connection-id <connection-id> --dataset <dataset-name>
 ```
 
-**List SQL stored procedures:**
+**[List SQL stored procedures](../reference/cli.md#pa-connection-list-procedures):**
 
 ```powershell
-pac code list-sql-stored-procedures -c <connectionId> -d <datasetName>
+pa connection list-procedures --connection-id <connection-id> --dataset <dataset-name>
 ```
 
 **Example workflow for SQL Server:**
 
 ```powershell
 # Step 1: List available datasets
-pac code list-datasets -a "shared_sql" -c "aaaaaaaa000011112222bbbbbbbbbbbb"
+pa connection list-datasets --connector "shared_sql" --connection-id "aaaaaaaa000011112222bbbbbbbbbbbb"
 
 # Step 2: List tables in the dataset
-pac code list-tables -a "shared_sql" -c "aaaaaaaa000011112222bbbbbbbbbbbb" `
-  -d "paconnectivitysql0425.database.windows.net,paruntimedb"
+pa connection list-tables --connector "shared_sql" --connection-id "aaaaaaaa000011112222bbbbbbbbbbbb" `
+  --dataset "paconnectivitysql0425.database.windows.net,paruntimedb"
 
 # Step 3: Add the table to your code app
-pac code add-data-source -a "shared_sql" -c "aaaaaaaa000011112222bbbbbbbbbbbb" `
-  -t "[dbo].[MobileDeviceInventory]" `
-  -d "paconnectivitysql0425.database.windows.net,paruntimedb"
+pa app add data-source --connector "shared_sql" --connection-id "aaaaaaaa000011112222bbbbbbbbbbbb" `
+  --table "[dbo].[MobileDeviceInventory]" `
+  --dataset "paconnectivitysql0425.database.windows.net,paruntimedb"
 ```
 
 > [!TIP]
-> Copy the exact **Name** values from the command output when using them with `add-data-source`. Names are case-sensitive and might contain special characters.
+> Copy the exact **Name** values from the command output when you use them with [`pa app add data-source`](../reference/cli.md#pa-app-add-data-source). Names are case-sensitive and might contain special characters.
 
 ### Add a SQL stored procedure as a data source
 
-Run the following command from a command line. Use the API name and connection ID that you collected previously.
+Run the following command from a command line. Use the connector identifier and connection ID that you collected previously.
 
 ```powershell
-pac code add-data-source -a <apiId> -c <connectionId> -d <dataSourceName> -sp <storedProcedureName> 
+pa app add data-source `
+--connector <connector-id> `
+--connection-id <connection-id> `
+--dataset <dataset-name> `
+--procedure <stored-procedure-name>
 ```
 
 For example:
 
 ```powershell
-pac code add-data-source `
-–a "shared_sql" `
--c "33dd33ddee44ff55aa6677bb77bb77bb" `
--d "paconnectivitysql0425.database.windows.net,paruntimedb" `
--sp "[dbo].[GetRecordById]" 
+pa app add data-source `
+--connector "shared_sql" `
+--connection-id "33dd33ddee44ff55aa6677bb77bb77bb" `
+--dataset "paconnectivitysql0425.database.windows.net,paruntimedb" `
+--procedure "[dbo].[GetRecordById]" 
 ```
 
-### Delete data sources
+### Remove a data source
 
 If needed, you can delete data sources after adding them.
 
-Run the following command from a command line. Use the API name and connection ID that you collected previously.
+Use [`pa app remove data-source`](../reference/cli.md#pa-app-remove-data-source) with the connector identifier and data source name.
 
 ```powershell
-pac code delete-data-source -a <apiName> -ds <dataSourceName> 
+pa app remove data-source --connector <connector-id> --name <data-source-name>
 ```
 
 For example:
 
 ```powershell
-pac code delete-data-source `
--a "shared_sql" `
--ds "MobileDeviceInventory" 
+pa app remove data-source `
+--connector "shared_sql" `
+--name "MobileDeviceInventory" 
 ```
 
-> [!IMPORTANT]
-> If the schema on a connection changes, no command exists to refresh the typed model and service files. Instead, delete the data source and readd it.
+### Refresh a data source
+
+If the schema changes, use [`pa app refresh data-source`](../reference/cli.md#pa-app-refresh-data-source) to refresh the generated model and service files:
+
+```bash
+pa app refresh data-source --name <data-source-name>
+```
 
 ### Use connection references to add a data source
 
-Starting in version 1.51.1 of the Power Apps CLI released in December 2025, you can use connection references to add data sources to your code app. A connection reference is a solution component that points to a specific connection for a connector. Instead of binding your app directly to a user-specific connection, bind it to a reference. This approach makes the solution environment-aware and portable across Dev, Test, and Prod environments for smooth application lifecycle management.
+Use connection references to add data sources to your code app. A connection reference is a solution component that points to a specific connection for a connector. Instead of binding your app directly to a user-specific connection, bind it to a reference. This approach makes the solution environment-aware and portable across Dev, Test, and Prod environments for smooth application lifecycle management.
 
 > [!NOTE]
 > This section assumes you have a basic knowledge of solutions in Power Apps and connection references. You should have a solution created already and a connection reference in that solution for your data source. If you don't, follow the steps outlined in the links in the next section to create one.
@@ -238,63 +216,41 @@ Starting in version 1.51.1 of the Power Apps CLI released in December 2025, you 
 
 #### Get the solution ID
 
-Use one of the following methods to get the ID of your solution:
-
-**Use the PAC CLI solution list command:**
+Use the solution list command to get the ID of your solution.
 
 1. Open a command prompt or terminal window.
 1. Run the following command to get a list of solutions in [the environment you're connected to](/power-platform/developer/cli/introduction#manage-auth-profiles):
 
    ```powershell
-   pac solution list --json | ConvertFrom-Json | Format-Table
+   pa solution list
    ```
 
-   This command outputs a table to the console with the `Id`, `SolutionUniqueName`, and `FriendlyName` solution properties.
+   This command outputs a table to the console with the `Id`, `SolutionUniqueName`, `Version` and `FriendlyName` solution properties.
 
 1. Copy the solution `Id` and save it for later use.
 
-**Use the Power Apps solution explorer:**
-
-1. Sign in to [Power Apps](https://make.powerapps.com).
-1. On the left pane, select **Solutions**. If the item isn't in the side panel pane, select **More** and then select the item you want.
-1. Find the solution that contains the connection reference for your data source.
-1. Select the solution to open it.
-1. In the URL of the browser, find the solution ID at the end of the URL. Your URL is of the form:
-
-   ```
-   https://make.powerapps.com/environments/environmentId/solutions/solutionId
-   ```
-  
-1. Copy the solution ID from the URL and save it for later use.
-
 #### Get the name of the connection reference to your data source
 
-Use one of the following methods to get the connection reference to your data source:
-
-**Use the PAC CLI code command to list the connection references in a solution:**
+Use the Power Apps CLI to list the connection references in a solution:
  
 1. Open a command prompt or terminal window.
-1. Run the following command to get the solution ID and name of the connection reference to your data source:
+1. Use [`pa connection list-references`](../reference/cli.md#pa-connection-list-references) to get the solution ID and name of the connection reference to your data source:
      
    ```shell
-    pac code list-connection-references -env <environmentURL> -s <solutionID>
+   pa connection list-references --solution-id <solution-id>
    ```
 
 1. The output includes the display name, logical name, and description of the connection references in the solution.
-
-**Use the Power Apps solution explorer to examine the connection references in a solution:**
-
-1. Sign in to [Power Apps](https://make.powerapps.com).
-1. On the left pane, select **Solutions**. If the item isn't in the side panel pane, select **More** and then select the item you want.
-1. Find the solution that contains the connection reference for your data source.
-1. Select **Connection References** from the list of **Objects** in the left pane.
 
 #### Add the data source to your code app by using the connection reference
 
 From a command line, run the following command. Use the solution ID and connection reference logical name collected from previous steps.
 
 ```shell
-pac code add-data-source -a <apiName> -cr <connectionReferenceLogicalName> -s <solutionID>
+pa app add data-source `
+--connector <connector-id> `
+--connection-ref <connection-reference-logical-name> `
+--solution-id <solution-id>
 ```
 
 The app now uses the connection associated with the connection reference in your Power Apps solution.
@@ -308,7 +264,7 @@ After you add connections, update the app to use the generated model and service
    
 1. **Import required types and services**
 
-   When you add a data source, the portal automatically generates model and service files. It places these files in the `/generated/services/` folder.
+   When you add a data source, the CLI automatically generates model and service files. It places these files in the `/generated/services/` folder.
    For example, if you add `Office365Users` as a data source, the portal creates the following files:
 
    - `Office365UsersModel.ts` – Defines the data model for request and response objects in the `Office365Users` connector.
@@ -377,10 +333,9 @@ After you add connections, update the app to use the generated model and service
 
 1. **Push the app to run on Power Apps**
 
-   Use this command in the terminal:
+   Build the app, and then use [`pa app push`](../reference/cli.md#pa-app-push) to publish it:
 
    ```powershell
-   npm run build | pac code push
+   npm run build
+   pa app push
    ```
-
-
