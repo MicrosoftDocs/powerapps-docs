@@ -11,6 +11,7 @@ search.audienceType:
 contributors:
  - JimDaly
  - arorashivam96
+ai-usage: ai-assisted
 ---
 # Work with data by using the Dataverse CLI (preview)
 
