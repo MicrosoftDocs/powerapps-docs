@@ -17,7 +17,7 @@ Microsoft Copilot Studio agents bring AI-powered capabilities to your code apps.
 
 - An initialized code app project
 - A published Microsoft Copilot Studio agent in your environment
-- Basic understanding of how to [add data sources to your code app with PAC CLI](connect-to-data.md)
+- Basic understanding of how to [add data sources to your code app](connect-to-data.md)
 
 ## Ensure you have a Microsoft Copilot Studio connection
 
@@ -202,6 +202,6 @@ const convId = response.data.conversationId ??
 
 ## See also
 
-- [Add data sources to your code app with PAC CLI](connect-to-data.md)
+- [Add data sources to your code app](connect-to-data.md)
 - [Microsoft Copilot Studio documentation](/microsoft-copilot-studio/)
 - [Power Platform connectors reference](/connectors/connector-reference/)

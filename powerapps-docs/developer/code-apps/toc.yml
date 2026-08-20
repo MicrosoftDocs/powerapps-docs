@@ -23,10 +23,10 @@ items:
             href: how-to/use-service-principal.md
       - name: Connect to data
         items:
-        - name: Connect to data
-          href: how-to/connect-to-data.md
         - name: Create a connection from the CLI
           href: how-to/create-connection.md
+        - name: Connect to data
+          href: how-to/connect-to-data.md
         - name: Connect to Dataverse
           href: how-to/connect-to-dataverse.md
         - name: Add a Dataverse action or function

@@ -33,7 +33,7 @@ Before performing create, read, update, and delete (CRUD) operations in your cod
 
 ### Add your SharePoint data source
 
-Add your SharePoint data source by following the instructions in [Add data sources to your code app with PAC CLI](connect-to-data.md).
+Add your SharePoint data source by following the instructions in [Add data sources to your code app](connect-to-data.md).
 
 ### Import required types and services
 
