@@ -252,5 +252,5 @@ The following features aren't yet supported:
 
 ### Related information
 
-- [Add data sources to your code app with PAC CLI](connect-to-data.md)
+- [Add data sources to your code app](connect-to-data.md)
 - [Power Apps CLI](/power-platform/developer/cli/introduction)

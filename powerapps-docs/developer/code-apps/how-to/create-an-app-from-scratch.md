@@ -104,7 +104,7 @@ You can also go to [Power Apps](https://make.powerapps.com/?utm_source=padocs&ut
 
 ## Related information
 
-- [Add data sources to your code app with PAC CLI](connect-to-data.md)
+- [Add data sources to your code app](connect-to-data.md)
 - [Add a Dataverse action or function](add-dataverse-action-function.md)
 - [Add Power Automate flows](add-flows.md)
 - [Power Apps CLI command reference](../reference/cli.md)
