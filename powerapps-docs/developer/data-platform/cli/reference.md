@@ -12,6 +12,7 @@ search.audienceType:
 contributors:
  - JimDaly
  - arorashivam96
+ai-usage: ai-assisted
 ---
 # Dataverse CLI reference (preview)
 
