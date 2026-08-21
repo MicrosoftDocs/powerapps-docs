@@ -135,7 +135,7 @@ The modern, refreshed look for model-driven apps has some limitations:
 
 The mail app supports the modern, refreshed look. It's on by default for environments on the [monthly channel](../maker/model-driven-apps/channel-overview.md) as part of the February 2026 release, and will be enabled on the semi-annual channel with the October 2026 update.
 
-The mobile app also supports the modern, refreshed look. Admins can enable it by adding the **Mobile modern experience** setting to a solution and updating the value for the environment or for individual apps (2 = on). To learn more about app settings, see [Manage model-driven app settings in the app designer](../maker/model-driven-apps/app-properties.md).
+The mobile app also supports the modern, refreshed look. Admins can enable it by adding the **Mobile modern experience** setting to a solution and updating the value for the environment or for individual apps (2 = on). For step-by-step guidance, see [Enable the modern, refreshed look for model-driven apps on mobile (preview)](../mobile/mobile-new-look.md). To learn more about app settings, see [Manage model-driven app settings in the app designer](../maker/model-driven-apps/app-properties.md).
 
 ### Switching themes or enabling dark mode
 
