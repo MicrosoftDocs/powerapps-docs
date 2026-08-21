@@ -115,7 +115,7 @@ ETag: W/"506868"
 ### See also
 
 [Impersonate another user](../impersonate-another-user.md)   
-[Impersonate another user using the SDK for .NET](../impersonate-another-user.md#impersonate-another-user-using-the-sdk-for-net)   
+[Impersonate another user by using the SDK for .NET](../impersonate-another-user.md#impersonate-another-user-by-using-the-sdk-for-net)   
 [Perform operations using the Web API](perform-operations-web-api.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
