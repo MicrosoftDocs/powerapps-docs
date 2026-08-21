@@ -1,7 +1,7 @@
 ---
 title: "Discover user organizations (Microsoft Dataverse) | Microsoft Docs"
 description: "Your client application may connect to multiple Dataverse environments. Use the Global Discovery Service to find which environments the user of your application can access."
-ms.date: 03/14/2024
+ms.date: 08/20/2026
 ms.reviewer: pehecke
 ms.topic: how-to
 author: ImadYanni # GitHub ID
@@ -16,11 +16,11 @@ contributors:
 
 # Discover user organizations
 
-Your client application may connect to multiple Dataverse environments. Use the Global Discovery Service to find which environments the user of your application can access.
+Your client application can connect to multiple Dataverse environments. Use the Global Discovery Service to find which environments the user of your application can access.
 
-In [Power Apps](https://make.powerapps.com) you can select from a list of environments available to you. The Global Discovery Service is the source of that data. Within your own app, you can provide a select control to allow users to choose which environment they want to use. Their choice will determine which environment your app must connect to.
+In [Power Apps](https://make.powerapps.com), you can select from a list of environments available to you. The Global Discovery Service is the source of that data. Within your own app, you can provide a select control to allow users to choose which environment they want to use. Their choice determines which environment your app must connect to.
 
-With Dataverse, server and organization allocation may change as part of datacenter management and load balancing. Therefore, the Global Discovery Service provides a way to discover which server is serving an instance at a given time.
+With Dataverse, server and organization allocation can change as part of datacenter management and load balancing. Therefore, the Global Discovery Service provides a way to discover which server is serving an instance at a given time.
 
 More information:
 
@@ -29,21 +29,21 @@ More information:
 
 
 
-## Global Discovery Service
+## Global Discovery service
 
-The Global Discovery service, sometimes called GDS, is a set of OData v4.0 endpoints that are available for 5 different clouds.
+The Global Discovery service, sometimes called GDS, is a set of OData v4.0 endpoints that are available for five different clouds.
 
 > [!NOTE]
-> While both the Dataverse Web API and the Global Discovery Service are OData v4.0 endpoints, they are separate endpoints with different behaviors.
+> While both the Dataverse Web API and the Global Discovery service are OData v4.0 endpoints, they're separate endpoints with different behaviors.
 
 The following table provides the GDS location for each cloud.
 
 |Cloud|URL and Description|
 |---------|---------|
-|Commercial|`https://globaldisco.crm.dynamics.com`<br />Used by private sector companies. This is the most commonly used cloud.|
+|Commercial|`https://globaldisco.crm.dynamics.com`<br />Used by private sector companies. This cloud is the most commonly used cloud.|
 |GCC|`https://globaldisco.crm9.dynamics.com`<br />Government Community Cloud. Used by public sector employees and contractors in the United States. |
 |USG|`https://globaldisco.crm.microsoftdynamics.us`<br />Used by United States Federal government employees and contractors. Also known as GCC High.|
-|DOD|`https://globaldisco.crm.appsplatform.us`<br />Used by Unites States Department of Defense employees and contractors.|
+|DOD|`https://globaldisco.crm.appsplatform.us`<br />Used by United States Department of Defense employees and contractors.|
 |China|`https://globaldisco.crm.dynamics.cn`<br />Used by companies in China to comply with regulatory requirements.|
 
 More information:
@@ -53,25 +53,25 @@ More information:
 
 ### Limitations
 
-The Global Discovery Service does not return information where:
+The Global Discovery Service doesn't return information when:
 
 - The user's account is disabled.
-- Users have been filtered out based on an instance security group.
-- The user has access as a result of being a delegated administrator.
+- An instance security group filters out the user.
+- The user gains access by being a delegated administrator.
 
-If the calling user has access to no instances, the response simply returns an empty list.
+If the calling user can't access any instances, the response returns an empty list.
 
 ## Authentication
 
-The calling user must acquire an OAuth 2.0 token from Microsoft Entra ID, and then add that token in the Authorization header of the API calls. More information: [Use OAuth authentication with Microsoft Dataverse](authenticate-oauth.md).
+The calling user must get an OAuth 2.0 token from Microsoft Entra ID and add that token in the Authorization header of the API calls. For more information, see [Use OAuth authentication with Microsoft Dataverse](authenticate-oauth.md).
 
 ### CORS support
 
-The Discovery Service supports the CORS standard for cross-origin access. For more information about CORS support see [Use OAuth with Cross-Origin Resource Sharing to connect a Single-Page Application](oauth-cross-origin-resource-sharing-connect-single-page-application.md).
+The Discovery Service supports the CORS standard for cross-origin access. For more information about CORS support, see [Use OAuth with Cross-Origin Resource Sharing to connect a Single-Page Application](oauth-cross-origin-resource-sharing-connect-single-page-application.md).
 
 ### Use Insomnia to connect to the Global Discovery Service
 
-You can use the same approach described for the Dataverse Web API here: [Use Insomnia with Dataverse Web API](webapi/insomnia.md), but instead of the environment variables described in that topic, use the following to access the commercial cloud.
+Use the same approach described for the Dataverse Web API in [Use Insomnia with Dataverse Web API](webapi/insomnia.md). Instead of the environment variables described in that article, use the following variables to access the commercial cloud.
 
 ```json
 {
@@ -84,7 +84,7 @@ You can use the same approach described for the Dataverse Web API here: [Use Ins
 ```
 
 
-Then, in the **Authorization** tab, choose **OAuth 2** and set or verify the following values:
+In the **Authorization** tab, choose **OAuth 2** and set or verify the following values:
 
 |Field  |Value  |
 |---------|---------|
@@ -95,11 +95,11 @@ Then, in the **Authorization** tab, choose **OAuth 2** and set or verify the fol
 
 Use `GET _.globalDiscoUrl` as the **Request URL** and select **Send**.
 
-You should now be able to query the Global Discovery Service using Insomnia.
+You can now query the Global Discovery Service by using Insomnia.
 
-## Service Documents
+## Service documents
 
-To access the Global Discovery service for each cloud, append `/api/discovery/v2.0/` to the URL. Perform a `GET` request on this url to view the service document, which contains only a single EntitySet: `Instances`.
+To access the Global Discovery Service for each cloud, append `/api/discovery/v2.0/` to the URL. Perform a `GET` request on this URL to view the service document, which contains only a single EntitySet: `Instances`.
 
 Append `$metadata` to the cloud URL and send a `GET` request to view the CSDL (Common Schema Definition Language) service document. This XML document provides details on the `Instance` entity and the alternate keys defined for it.
 
@@ -164,19 +164,19 @@ The rest of the properties are primarily for filtering.
 
 ## Filtering
 
-There are two ways you can filter the instances returned:
+You can filter the returned instances in two ways:
 
-- Using key values
+- Use key values
 - Use OData `$filter` query options
 
-### Use one of the key values
+### Use key values
 
-You can use the `Id` or `UniqueName` value to filter the list to return a only the specified instance.
+Use the `Id` or `UniqueName` value to filter the list and return only the specified instance.
 
 > [!NOTE]
-> Unlike the Dataverse Web API, the Global Discovery Service doesn't provide for retrieving a specific `Instance` using the `Id` or any of the alternate keys defined for it. GDS always returns an array of values.
+> Unlike the Dataverse Web API, the Global Discovery Service doesn't support retrieving a specific `Instance` by using the `Id` or any of the alternate keys defined for it. GDS always returns an array of values.
 
-Both of these queries will an array with a single item:
+Both of the following queries return an array with a single item:
 
 ```http
 GET https://globaldisco.crm.dynamics.com/Instances(6bcbf6bf-1f2a-4ab9-9901-2605b314d72d)?$select=ApiUrl,FriendlyName,Id,UniqueName
@@ -186,7 +186,7 @@ GET https://globaldisco.crm.dynamics.com/Instances(6bcbf6bf-1f2a-4ab9-9901-2605b
 GET https://globaldisco.crm.dynamics.com/Instances(UniqueName='unq6bcbf6bf1f2a4ab999012605b314d')?$select=ApiUrl,FriendlyName,Id,UniqueName
 ```
 
-You can also use any of the following alternate key values: `Region`, `State`, `Version` to filter on specific values. For example, use the query below to return only those instances where the Region is `NA` representing North America.
+You can also use any of the following alternate key values to filter on specific values: `Region`, `State`, `Version`. For example, use the following query to return only those instances where the Region is `NA` representing North America.
 
 ```http
 GET https://globaldisco.crm.dynamics.com/Instances(Region='NA')?$select=FriendlyName,Region,State,Version,ApiUrl
@@ -194,11 +194,11 @@ GET https://globaldisco.crm.dynamics.com/Instances(Region='NA')?$select=Friendly
 
 ### Use OData $filter query options
 
-You can use OData `$filter` query options as well with any of the properties that apply, including the alternate key properties.
+You can use OData `$filter` query options with any of the properties that apply, including the alternate key properties.
 
-You can use the following comparison, logical and grouping operators:
+You can use the following comparison, logical, and grouping operators:
 
-|Operator|Description|Example|  
+| Operator | Description | Example |  
 |--------------|-----------------|-------------|  
 |**Comparison Operators**|||  
 |`eq`|Equal|`$filter=IsUserSysAdmin eq true`|  
@@ -217,7 +217,7 @@ You can use the following comparison, logical and grouping operators:
 
 You can use the following string query functions:
  
-|Function|Example|  
+| Function | Example |  
 |--------------|-------------|  
 |`contains`|`$filter=contains(Purpose,'test')`|  
 |`endswith`|`$filter=endswith(FriendlyName,'Inc.')`|  
@@ -228,7 +228,7 @@ You can use the following string query functions:
 
 ## Use Dataverse ServiceClient
 
-For .NET applications you can use <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient?text=Dataverse.Client.ServiceClient>.<xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.DiscoverOnlineOrganizationsAsync%2A?text=DiscoverOnlineOrganizationsAsync Method> to call the Global Discovery Services.
+For .NET applications, use <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient?text=Dataverse.Client.ServiceClient>.<xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.DiscoverOnlineOrganizationsAsync%2A?text=DiscoverOnlineOrganizationsAsync Method> to call the Global Discovery Services.
 
 ```csharp
  // Set up user credentials
@@ -249,14 +249,14 @@ DiscoverOrganizationsResult organizationsResult = await ServiceClient.DiscoverOn
 return organizationsResult;
 ```
 
-While the `DiscoverOnlineOrganizationsAsync` method uses the same OData endpoint and enables that it be passed in the `discoveryServiceUri` parameter, it does not return data in the shape of an *Instance*. Data is returned as an <xref:Microsoft.PowerPlatform.Dataverse.Client.Model.DiscoverOrganizationsResult?text=DiscoverOrganizationsResult Class> that includes a <xref:Microsoft.PowerPlatform.Dataverse.Client.Model.DiscoverOrganizationsResult.OrganizationDetailCollection?text=OrganizationDetailCollection Property> which contains a collection of <xref:Microsoft.Xrm.Sdk.Discovery.OrganizationDetail?text=OrganizationDetail Class> instances. This class contains the same information as the `Instance` types returned by the OData service.
+While the `DiscoverOnlineOrganizationsAsync` method uses the same OData endpoint and enables that it be passed in the `discoveryServiceUri` parameter, it doesn't return data in the shape of an *Instance*. It returns data as a <xref:Microsoft.PowerPlatform.Dataverse.Client.Model.DiscoverOrganizationsResult?text=DiscoverOrganizationsResult Class> that includes a <xref:Microsoft.PowerPlatform.Dataverse.Client.Model.DiscoverOrganizationsResult.OrganizationDetailCollection?text=OrganizationDetailCollection Property> which contains a collection of <xref:Microsoft.Xrm.Sdk.Discovery.OrganizationDetail?text=OrganizationDetail Class> instances. This class contains the same information as the `Instance` types returned by the OData service.
 
 > [!NOTE]
-> While the `DiscoverOnlineOrganizationsAsync.discoveryServiceUri` parameter accepts a URL to the Global Discovery Service, any `$select` or `$filter` query options used will be ignored. The `DiscoverOnlineOrganizationsAsync.discoveryServiceUri` parameter is optional and if not provided will default to the Commercial cloud.
+> While the `DiscoverOnlineOrganizationsAsync.discoveryServiceUri` parameter accepts a URL to the Global Discovery Service, the method ignores any `$select` or `$filter` query options. The `DiscoverOnlineOrganizationsAsync.discoveryServiceUri` parameter is optional. If you don't provide it, the method defaults to the Commercial cloud.
 
 ## Use CrmServiceClient
 
-For .NET Framework applications you can continue to use the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.DiscoverGlobalOrganizations%2A?text=CrmServiceClient.DiscoverGlobalOrganizations Method> to call the Global Discovery Service.
+For .NET Framework applications, continue to use the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.DiscoverGlobalOrganizations%2A?text=CrmServiceClient.DiscoverGlobalOrganizations Method> to call the Global Discovery Service.
 
 ```csharp
   // Set up user credentials
@@ -279,7 +279,7 @@ For .NET Framework applications you can continue to use the <xref:Microsoft.Xrm.
   return organizations.ToList();
 ```
 
-Like the `ServiceClient.DiscoverOnlineOrganizationsAsync` method, the `CrmServiceClient.DiscoverGlobalOrganizations` method also does not return data as an *Instance*. It returns a <xref:Microsoft.Xrm.Sdk.Discovery.OrganizationDetailCollection?text=OrganizationDetailCollection> which contains a collection of <xref:Microsoft.Xrm.Sdk.Discovery.OrganizationDetail?text=OrganizationDetail Class> instances that contains the same information as the `Instance` types returned by the OData service.
+Like the `ServiceClient.DiscoverOnlineOrganizationsAsync` method, the `CrmServiceClient.DiscoverGlobalOrganizations` method also doesn't return data as an *Instance*. It returns a <xref:Microsoft.Xrm.Sdk.Discovery.OrganizationDetailCollection?text=OrganizationDetailCollection> which contains a collection of <xref:Microsoft.Xrm.Sdk.Discovery.OrganizationDetail?text=OrganizationDetail Class> instances. This collection contains the same information as the `Instance` types returned by the OData service.
 
 ### See Also
 

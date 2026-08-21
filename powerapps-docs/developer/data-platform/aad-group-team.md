@@ -2,7 +2,7 @@
 title: "Work with Microsoft Entra ID group teams (Dataverse)| Microsoft Docs"
 description: "Learn about working with an Microsoft Entra ID group team using the Web API."
 ms.custom: ""
-ms.date: 07/21/2026
+ms.date: 08/21/2026
 
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -34,7 +34,7 @@ Just-in-time updates mean that the actions are taken at run-time to eliminate th
 The following sections describe how to work with Microsoft Entra ID group teams using the Web API. 
 
 ## Impersonate another user
-Your service can make calls on behalf of another system user by [impersonating the user](impersonate-another-user.md#impersonate-another-user-using-the-web-api). If the system user belongs to an Microsoft Entra ID Security group and the Microsoft Entra ID security group is a Dataverse group team, that user is added into Dataverse automatically (if the user doesn't already exist in Dataverse). The user is also automatically added into the Dataverse group team after being added to Dataverse or if the user already exists in Dataverse.
+Your service can make calls on behalf of another system user by [impersonating the user](impersonate-another-user.md#impersonate-another-user-by-using-the-web-api). If the system user belongs to an Microsoft Entra ID Security group and the Microsoft Entra ID security group is a Dataverse group team, that user is added into Dataverse automatically (if the user doesn't already exist in Dataverse). The user is also automatically added into the Dataverse group team after being added to Dataverse or if the user already exists in Dataverse.
 
 ## Create an Microsoft Entra ID group team
 An Microsoft Entra ID group team can be created in Dataverse by making an API call (programmatically) or by just-in-time when a security role is assigned to the Microsoft Entra ID group, or when a record is assigned to the Microsoft Entra ID group. 

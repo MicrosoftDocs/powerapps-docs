@@ -1,9 +1,9 @@
 ---
 title: "Generate early-bound classes for the SDK for .NET"
 description: "Learn how to use the Power Platform CLI pac modelbuilder build command to generate early-bound classes for use with the Microsoft Dataverse SDK for .NET. This tool generates early-bound .NET classes that represent the Entity Data Model used by Dataverse."
-ms.date: 04/22/2025
-author: olegovanesyan
-ms.author: olegov
+ms.date: 08/21/2026
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: pehecke
 ms.topic: how-to
 search.audienceType: 
