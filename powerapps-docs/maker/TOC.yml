@@ -1940,6 +1940,8 @@
     href: ../mobile/display-mode.md
   - name: Use model-driven apps in the Power Apps mobile app
     href: ../mobile/use-custom-model-driven-app-on-mobile.md
+  - name: Enable the modern, refreshed look for model-driven apps on mobile (preview)
+    href: ../mobile/mobile-new-look.md
   - name: Use Dataverse search for model-driven apps in the Power Apps mobile app
     href: ../mobile/relevance-search-mobile.md
   - name: In-app notifications in the Power Apps mobile app
