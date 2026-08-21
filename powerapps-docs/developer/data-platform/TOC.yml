@@ -28,9 +28,16 @@
       href: column-level-security.md
     - name: Microsoft Entra ID group teams
       href: aad-group-team.md
-- name: Use the Dataverse CLI
-  href: cli/index.md
+- name: Dataverse plugin for AI coding agents
   items:
+  - name: Overview
+    href: agents-plugin/index.md
+  - name: Skills reference
+    href: agents-plugin/reference.md
+- name: Use the Dataverse CLI
+  items:
+    - name: Overview
+      href: cli/index.md
     - name: Dataverse CLI reference
       href: cli/reference.md
 - name: Work with data using code
