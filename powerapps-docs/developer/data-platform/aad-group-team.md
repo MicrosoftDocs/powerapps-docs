@@ -252,7 +252,7 @@ Group members are added or removed [just-in-time](#just-in-time-updates) into th
 
 ## Auto-sync and refresh group team members
 
-Automatically synchronize Dataverse group team membership with its associated Microsoft Entra group by using a scheduled process, such as a Power Automate **Scheduled cloud flow**. Configure the flow to run at a desired interval (for example, every hour) and use a Dataverse [bound action](/power-automate/dataverse/bound-unbound) to invoke the [SyncGroupMembersToTeam](webapi/reference/syncgroupmemberstoteam?view=dataverse-latest) action against the target group team table row (record) in **Row ID** of the flow.
+Automatically synchronize Dataverse group team membership with its associated Microsoft Entra group by using a scheduled process, such as a Power Automate **Scheduled cloud flow**. Configure the flow to run at a desired interval (for example, every hour) and use a Dataverse [bound action](/power-automate/dataverse/bound-unbound) to invoke the [SyncGroupMembersToTeam action](xref:Microsoft.Dynamics.CRM.SyncGroupMembersToTeam) against the target group team table row (record) in **Row ID** of the flow.
 
 Each synchronization refreshes the Dataverse group team membership to match the associated Entra group. New Entra group members are added to the team, and removed members are removed from the team.
 
