@@ -4,9 +4,9 @@ description: "Your client application may connect to multiple Dataverse environm
 ms.date: 08/20/2026
 ms.reviewer: pehecke
 ms.topic: how-to
-author: ImadYanni # GitHub ID
+author: matthewmerlino
 ms.subservice: dataverse-developer
-ms.author: iyanni # MSFT alias of Microsoft employees only
+ms.author: mamer
 search.audienceType: 
   - developer
 contributors:
