@@ -10189,6 +10189,16 @@
       "source_path": "powerapps-docs/developer/code-apps/how-to/push-to-solution.md",
       "redirect_url": "/power-apps/developer/code-apps/how-to/alm#publish-to-a-solution",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/data-platform/visualize-hierarchical-data.md",
+      "redirect_url": "/power-apps/maker/data-platform/define-query-hierarchical-data",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/data-platform/query-visualize-hierarchical-data.md",
+      "redirect_url": "/power-apps/maker/data-platform/define-query-hierarchical-data",
+      "redirect_document_id": false
     }
   ]
 }

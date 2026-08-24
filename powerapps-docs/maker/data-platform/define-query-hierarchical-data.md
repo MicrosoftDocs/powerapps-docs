@@ -2,7 +2,7 @@
 title: "Define and query hierarchical data with Microsoft Dataverse | MicrosoftDocs"
 description: "Learn how to define and query hierarchically related data"
 ms.custom: ""
-ms.date: 08/02/2024
+ms.date: 08/21/2026
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -20,9 +20,6 @@ search.audienceType:
   - maker
 ---
 # Define and query hierarchically related data
-
-> [!IMPORTANT]
-> This feature is deprecated. For more information, go to [Hierarchy control in model-driven apps is deprecated](/power-platform/important-changes-coming#hierarchy-control-in-model-driven-apps-is-deprecated).
 
 You can get valuable business insights by defining and querying hierarchically related data. The hierarchical modeling and visualization capabilities give you a number of benefits:  
   
@@ -89,7 +86,6 @@ The following examples illustrate scenarios for querying hierarchies:
 
 [Create and edit 1:N (one-to-many) or N:1 (many-to-one) table relationships](create-edit-1n-relationships.md)<br />
 [Create and edit 1:N (one-to-many) or N:1 (many-to-one) table relationships using solution explorer](create-edit-1n-relationships-solution-explorer.md)<br />
-[Visualize hierarchical data with model-driven apps](visualize-hierarchical-data.md)<br />
-
-
+[Hierarchy control - a solution designed to seamlessly display hierarchical data](https://pcf.gallery/hierarchy-control)
+[Hierarchy PCF control - users can visualize and interact with hierarchical data](https://pcf.gallery/hierarchy-pcf-control)
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
