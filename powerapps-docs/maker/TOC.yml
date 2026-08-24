@@ -2148,8 +2148,6 @@
         href: ./data-platform/create-edit-nn-relationships-solution-explorer.md
       - name: How to set managed properties for relationships
         href: ./data-platform/set-managed-properties-relationships.md
-      - name: How to query and visualize hierarchically related data
-        href: ./data-platform/query-visualize-hierarchical-data.md
       - name: How to define and query hierarchically related data
         href: ./data-platform/define-query-hierarchical-data.md
       - name: How to configure connection roles
