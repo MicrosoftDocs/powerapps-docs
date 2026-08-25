@@ -2,7 +2,7 @@
 title: Configure structured content in the rich text editor (preview)
 description: Configure Copilot-powered templates to generate consistent, formatted content in the rich text editor in model-driven apps.
 ms.topic: how-to
-ms.date: 07/10/2026
+ms.date: 08/24/2026
 ms.author: laalexan
 author: lalexms
 ms.reviewer: mpeart
@@ -16,16 +16,16 @@ ms.preview: true
 > [!NOTE]
 > This feature is currently in public preview and might change before it becomes generally available.
 
-Structured content in the rich text editor (RTE) enables users to generate consistent, formatted responses by using Copilot-powered templates directly within supported experiences in model-driven apps. This capability helps standardize communications and improve productivity by reducing manual content creation.
+Structured content in the rich text editor (RTE) helps users create consistent, formatted responses by using Copilot-powered templates directly within supported experiences in model-driven apps. This capability helps standardize communications and improve productivity by reducing manual content creation.
 
 After administrators configure structured content templates, users can apply templates to free-form content in records that use the rich text editor control. At runtime, Copilot generates structured output.
 
 ## Prerequisites
 
-To use structured content in the rich text editor, the administrator must make sure the following prerequisites are met:
+To use structured content in the rich text editor, the administrator must ensure the following prerequisites are met:
 
 - The Copilot control is added to the rich text editor. Learn more in [Add the Copilot control to the rich text editor](/power-apps/maker/model-driven-apps/copilot-control).
-- Pay-as-you-go billing is set up. Learn more in [Manage consumption-based billing and capacity](/dynamics365/customer-service/administer/setup-pay-as-you-go).
+- Pay-as-you-go billing is set up. Learn more in [Set up Microsoft Copilot pay-as-you-go services](/microsoft-365/copilot/pay-as-you-go/setup).
 - Cross-geo settings are enabled. Learn more in [Move data across regions for Copilots, AI agents, and generative AI features](/power-platform/admin/geographical-availability-copilot).
 
 ## Turn on the structured content feature
@@ -75,7 +75,7 @@ To generate structured content by using Copilot:
 
 Structured content generation is a utilization-based feature.
 
-During public preview, a grace period is available for evaluation and development purposes. After general availability, usage might be billed based on Copilot consumption.
+Structured content in the rich text editor is a paid preview feature. To use this capability, you must configure pay-as-you-go billing in your environment. Learn more in [Set up Microsoft Copilot pay-as-you-go services](/microsoft-365/copilot/pay-as-you-go/setup).
 
 ## Error messages
 
