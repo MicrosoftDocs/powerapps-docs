@@ -4,10 +4,10 @@ description: Learn about recent updates to modern controls in Power Apps canvas 
 author: yogeshgupta698
 ms.topic: overview
 ms.custom: canvas
-ms.date: 08/03/2026
+ms.date: 08/24/2026
 ms.subservice: canvas-maker
 ms.author: yogupt
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 search.audienceType:
   - maker
 ---
@@ -21,16 +21,15 @@ Starting February 2026, modern controls in canvas apps have updated versions wit
 
 ## Why update?
 
-- **Better performance** — Events like OnChange fire less often, reducing unnecessary recalculations.
+- **Better performance** — Events like `OnChange` fire less often, reducing unnecessary recalculations.
 - **Better mobile experience** — Controls use touch-friendly sizes and font defaults on mobile layouts.
 - **More styling options** — Separate corner radius properties and new border styles give you more design control.
 - **IntelliSense and validation** — Enum-based values replace plain strings, so you get autocomplete and compile-time checks in your formulas.
 
-
 ## Find and update controls in your app
 
 When you open an app that uses an older version of a modern control, you see a notification on the control. The notification tells you that an update is available, and includes a **Learn more** link and an **Update** button.
- 
+
 :::image type="content" source="media/modern-controls-updates-1.png" alt-text="Screenshot of a modern control showing an update notification with Learn more and Update options.":::
 
 ### Steps to update a control
@@ -65,6 +64,8 @@ The following table lists each control that has an updated version, with a link 
 | Slider | [Updates to Slider](modern-control-slider.md#recent-updates) | Value renamed to Default, Layout renamed to LayoutDirection, enum values for Size and LayoutDirection, new Tooltip property |
 | Toggle | [Updates to Toggle](modern-control-toggle.md#recent-updates) | FontColor renamed to Color, FontSize renamed to Size, LabelPosition uses enum values, new Tooltip property, improved sizing, read-only View mode |
 | Checkbox | [Updates to Checkbox](modern-control-checkbox.md#recent-updates) | FontColor renamed to Color, FontSize renamed to Size, new Tooltip property, read-only View mode, more reliable Checked behavior |
+| Avatar | [Updates to Avatar](modern-control-avatar.md#recent-updates) | Font property renames, Badge and Shape use enum values, FontWeight uses enum, new OnSelect and Tooltip properties, Out of office merged into Badge |
+| Spinner | [Updates to Spinner](modern-control-spinner.md#recent-updates) | Font property renames, LabelPosition uses the SpinnerLabelPosition enum, new Tooltip property |
 | Form | [Updates to Form](modern-control-form.md#recent-improvements) | New screen templates, red required indicator, consistent typography, display names for people fields, reliable date fields; same form model and functions as classic |
 
 ## Property changes across modern controls
@@ -77,11 +78,11 @@ For consistency across controls, many properties have new names. If your formula
 
 | Old name (Previous) | New name (New) | Affected controls |
 |---------------------|----------------|-------------------|
-| `FontColor` | `Color` | Text, Link, Info Button, Radio, Text Input, Tab List, Number Input, Date Picker, Combo Box, Button, Toggle, Checkbox |
-| `FontSize` | `Size` | Text, Link, Info Button, Radio, Text Input, Tab List, Number Input, Date Picker, Combo Box, Button, Dropdown, Toggle, Checkbox |
-| `FontItalic` | `Italic` | Text, Link, Info Button, Radio, Text Input, Tab List, Date Picker, Combo Box, Button |
-| `FontStrikethrough` | `Strikethrough` | Text, Link, Info Button, Radio, Text Input, Date Picker, Combo Box, Button |
-| `FontUnderline` | `Underline` | Text, Link, Info Button, Radio, Text Input, Date Picker, Combo Box, Button |
+| `FontColor` | `Color` | Text, Link, Info Button, Radio, Text Input, Tab List, Number Input, Date Picker, Combo Box, Button, Toggle, Checkbox, Avatar, Spinner |
+| `FontSize` | `Size` | Text, Link, Info Button, Radio, Text Input, Tab List, Number Input, Date Picker, Combo Box, Button, Dropdown, Toggle, Checkbox, Avatar, Spinner |
+| `FontItalic` | `Italic` | Text, Link, Info Button, Radio, Text Input, Tab List, Date Picker, Combo Box, Button, Avatar, Spinner |
+| `FontStrikethrough` | `Strikethrough` | Text, Link, Info Button, Radio, Text Input, Date Picker, Combo Box, Button, Avatar, Spinner |
+| `FontUnderline` | `Underline` | Text, Link, Info Button, Radio, Text Input, Date Picker, Combo Box, Button, Avatar, Spinner |
 | `Weight` | `FontWeight` | Text only |
 | `BorderRadius` | `RadiusTopLeft`, `RadiusTopRight`, `RadiusBottomLeft`, `RadiusBottomRight` | All controls with borders |
 
@@ -219,7 +220,6 @@ The **TriggerOutput** property controls when a control pushes its value to depen
 | Number Input | **TriggerOutput** property removed entirely | No longer available |
 | Combo Box | No longer fires OnChange | TriggerOutput and OnChange are now independent |
 | Text Input | No longer fires OnChange | TriggerOutput and OnChange are now independent |
-
 
 ### Improved mobile defaults
 
