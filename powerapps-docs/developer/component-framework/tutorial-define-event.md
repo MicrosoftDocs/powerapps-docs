@@ -193,7 +193,7 @@ As usual, you need to complete these steps to use this control:
 
 1. [Create and build the code component](create-custom-controls-using-pcf.md)
 1. [Package the code component](import-custom-controls.md)
-1. [Deploy the code component](import-custom-controls.md#deploying-code-components)
+1. [Deploy the code component](import-custom-controls.md#deploy-code-components).
 
 ## Use in a canvas app
 
