@@ -2,9 +2,8 @@
 title: "Productive main form design in model-driven apps | MicrosoftDocs"
 description: Learn how to design productive main forms for your model-driven apps.
 ms.custom: ""
-ms.date: 04/07/2022
+ms.date: 08/24/2026
 ms.reviewer: "Mattp123"
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: article
@@ -12,7 +11,7 @@ applies_to:
   - "PowerApps"
 author: "mspilde"
 ms.subservice: mda-maker
-ms.author: "mspilde"
+ms.author: "jasongre"
 search.audienceType: 
   - maker
 ---
@@ -46,7 +45,7 @@ A form allows an app maker to build around the table data, and often requires th
 
 ### Use of related data
 
-One of the strengths of model-driven forms is the ease of use with standard (out-of-the-box) controls like lookups, subgrids, and reference panels to quickly view or edit **related** records. Forms also support custom [Power Apps component framework controls](../../developer/component-framework/overview.md) to extend functionality beyond the standard controls. Forms primarily support child or secondary data relationships for a record; they don't easily support tertiary or higher-order relationships. For example, if there is an account record that has a one-to-one or one-to-many relationship with contacts, interactions with both the parent and child data can be quickly added with a form by using lookups that interact with other forms, including a main form dialog or embedded forms like a quick view or form component control. Each of these form types will be covered in more detail later in this article.
+One of the strengths of model-driven forms is the ease of use with standard (out-of-the-box) controls like lookups, subgrids, and reference panels to quickly view or edit **related** records. To extend a form beyond the standard controls, [embed a generative page](generative-pages.md#embed-a-generative-page-in-a-form) to rapidly create and refine a feature-rich, record-aware experience using natural language while retaining the ability to edit the generated code. Forms also support custom [Power Apps component framework controls](../../developer/component-framework/overview.md) for field- and dataset-bound code components. Forms primarily support child or secondary data relationships for a record; they don't easily support tertiary or higher-order relationships. For example, if there is an account record that has a one-to-one or one-to-many relationship with contacts, interactions with both the parent and child data can be quickly added with a form by using lookups that interact with other forms, including a main form dialog or embedded forms like a quick view or form component control. Each of these form types is covered in more detail later in this article.
 
 Working with related data requires configuration, including using a main form dialog to work with related records of the main form dialog or using a custom canvas page. Multiple-entity forms can be created by using main form dialogs or form component controls. However, a main form doesn't directly support tertiary-related records on the main form.
 

@@ -1,11 +1,11 @@
 ---
-title: "View your user profile in model-driven apps| MicrosoftDocs"
+title: View your user profile 
 description: View your user profile in Power Apps
 author: shwetamurkute
 
 ms.component: pa-user
 ms.topic: how-to
-ms.date: 10/22/2024
+ms.date: 08/25/2026
 ms.subservice: end-user
 ms.author: smurkute
 ms.custom: ""
@@ -17,7 +17,7 @@ search.audienceType:
 
 # View your user information  
 
-The user information page displays useful information about you and your organization. On the page you can view your contact information, your security role, and information about your organization. Depending on your security role, you might be able to make changes to your user profile.  
+The user information page displays useful information about you and your organization. On the page, you can view your contact information, your security role, and information about your organization. Depending on your security role, you might be able to make changes to your user profile.  
   
 1. Open an app and in the upper-right corner of the screen, select **Settings** ![user profile settings button.](media/user-profile-settings-button.png) > **Personalization Settings**.  
 

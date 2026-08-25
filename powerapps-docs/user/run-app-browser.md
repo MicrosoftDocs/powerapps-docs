@@ -4,7 +4,7 @@ description: In this topic, you learn how to run apps in a web browser
 author: shwetamurkute
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 06/05/2024
+ms.date: 08/25/2026
 ms.subservice: end-user
 ms.author: smurkute
 ms.custom: ""
@@ -38,8 +38,6 @@ Sign in to the [Microsoft 365 apps page](https://www.office.com/apps?auth=2).
 ## Find an app on the Home page
 The Home page may show several types of business apps. 
 
-![Busines Apps.](media/bussinessapps.png)
-
 The list of Office apps is a limited, curated list based on the following criteria:
 
 - Apps that you launched in the last week.
@@ -61,7 +59,7 @@ The list of Office apps is a limited, curated list based on the following criter
 
 Apps that haven't been used in the last week won't appear in the list of **Office** apps. If you can't find an app, then you need to use the web link to open the app directly in your browser.
 
-1. To find the web link for an app, sign in to [Power Platform admin center](https://admin.powerplatform.microsoft.com) or [Power Apps](https://make.powerapps.com).
+1. To find the web link for an app, sign in to [Power Apps](https://make.powerapps.com).
 2. Find the app that you're looking for.
 3. Across the app name, select (...) **More Commands** > **Details**.
 4. From the **Details** tab copy the **Web link**.
@@ -82,18 +80,17 @@ The Microsoft 365 apps page has a different URL per cloud.
 ## Run an app from a URL
 You can save an app's URL as a bookmark in your browser and run it by selecting the bookmark, or you can send a URL as a link through email. If someone else created an app and shared it with you in an email, you can run the app by selecting the link in the email. When running an app using a URL, you may be prompted to sign in using your Azure Active Directory credentials.
 
-![Run an app from URL.](./media/run-app-browser/web-login.png)
+:::image type="content" source="media/run-app-browser/web-login.png" alt-text="Screenshot showing dialog box prompted to sign in using your Azure Active Directory credentials.":::
 
 ## Connect to data
 If an app requires a connection to a data source or permission to use the device's capabilities (such as the camera or location services), you must give consent before you can use the app. Typically, you're prompted only the first time.
 
-![Connection.](./media/run-app-browser/app-connection.png)
+:::image type="content" source="media/run-app-browser/app-connection.png" alt-text="Screenshot showing dialog box prompted for permission to use camera and location":::
 
 ## Sign out
 To sign out of the Microsoft 365 apps page, select your profile image and then select **Sign out**.
 
-
-![Sign out.](media/bussinessapps-2.png)
+:::image type="content" source="media/powerapps-sign-out.png" alt-text="Screenshot showing sign out option.":::
 
 ## Next steps
 In this topic, you learned how to run a canvas or model-driven app in a web browser. To learn how to:

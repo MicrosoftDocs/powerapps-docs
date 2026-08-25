@@ -2,7 +2,7 @@
 title: "Add, configure, move, or delete components on a form | MicrosoftDocs"
 description: Learn how to use the form designer to work with form components.
 ms.custom: ""
-ms.date: 06/27/2022
+ms.date: 08/24/2026
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -22,7 +22,7 @@ search.audienceType:
 
 # Add, configure, move, or delete components on a form
 
-By using the form designer, makers can easily add and configure popular components such as [subgrid](form-designer-add-configure-subgrid.md), [quick view](form-designer-add-configure-quickview.md), [web resources](web-resource-properties-legacy.md), [pen input](additional-controls-for-dynamics-365-for-phones-and-tablets.md#pen-input), and more.
+By using the form designer, makers can easily add and configure popular components such as [subgrid](form-designer-add-configure-subgrid.md), [quick view](form-designer-add-configure-quickview.md), [generative pages](generative-pages.md#embed-a-generative-page-in-a-form), [web resources](web-resource-properties-legacy.md), [pen input](additional-controls-for-dynamics-365-for-phones-and-tablets.md#pen-input), and more. Use a generative page when you want to add a custom, record-aware visualization to a form.
 
 ## Add components to a form
 

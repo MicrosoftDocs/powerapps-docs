@@ -1,12 +1,11 @@
 ---
-title: "Export, prepare to edit, and import the ribbon(model-driven apps)"
-description: "Learn about exporting the ribbon by including it in a solution and then exporting the solution. You can export all the customizations, but that can represent a large amount of data. We recommend that you use an existing unmanaged solution or create a new solution."
+title: Export, Edit, and Import the Ribbon in Model-Driven Apps
+description: Export the ribbon in model-driven apps by adding it to a solution, edit the customizations.xml file, then import and publish. Follow the step-by-step guide.
 author: clromano
 ms.author: clromano
-ms.date: 05/24/2022
+ms.date: 08/24/2026
 ms.reviewer: jdaly
-ms.topic: "article"
-ms.subservice: mda-developer
+ms.topic: article
 search.audienceType: 
   - developer
 contributors: 
@@ -17,7 +16,7 @@ contributors:
 
 [!INCLUDE [cc-modern-commanding](../data-platform/includes/cc-modern-commanding.md)]
 
-To edit the ribbon, you must perform the following steps:  
+This article explains how to edit the ribbon in model-driven apps by exporting a solution, preparing and modifying its XML, and then importing and publishing the customizations. Follow this process to apply ribbon changes successfully:  
   
 1. [Export the ribbon](export-prepare-edit-import-ribbon.md#BKMK_ExportTheRibbon)  
 1. [Prepare to edit the XML](export-prepare-edit-import-ribbon.md#BKMK_PrepareToEditTheXML)  
@@ -28,102 +27,70 @@ To edit the ribbon, you must perform the following steps:
 
 ## Export the ribbon  
 
-You export the ribbon by including it in a solution and then exporting the solution. You can export all the customizations, but that can represent a large amount of data. We recommend that you use an existing unmanaged solution or create a new solution.  
+You export the ribbon by including it in a solution and then exporting the solution. You can export all the customizations, but that option can represent a large amount of data. Use an existing unmanaged solution or create a new solution.  
 
-[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
-#### Create a new solution  
+### Create a new solution or edit an existing solution
+
+Follow the instructions in [Create a solution](../../maker/data-platform/create-solution.md), or sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select **Solutions** from the left navigation. Select the unmanaged solution you want to edit.
+
+If you want to edit the ribbon for specific tables, add those tables to the solution. For the purpose of editing table ribbons, you don't need to include required components. If you intend to export this solution and apply it to another system, include required components.
+
+If you want to edit global ribbons or add a custom group to all tables, select **Add Existing** and then select **Application Ribbons**.
   
-1. Go to **Settings > Customizations**.
-1. Go to **Settings > Solutions**.
-1. Select **New**.  
-1. Type a meaningful **Display Name**, **Name** and enter a **Publisher** and type a **Version** number.  
-  
-   > [!NOTE]
-   >  You can usually use the default publisher for the organization.  
-  
-1. Select the **Save** icon.  
-1. If you want to edit the ribbon for specific tables:  
-  
-   1. Select **Add Existing** and then select **Entity**.  
-  
-   2. Select the tables you want to include in the solution and then select **OK**.  
-  
-       > [!NOTE]
-       > For the purpose of editing table ribbons, you do not have to include required components. If you intend to export this solution and apply it to another system, you should include required components.  
-  
-1. If you want to edit global ribbons or add a custom group to all tables, select **Add Existing** and then select **Application Ribbons**.  
-1. Select **Save and Close**.  
-  
-#### Use an existing solution  
-  
-1. Go to **Settings > Customizations**.
-1. Go to **Settings > Solutions**. 
-1. Double-click a solution to open it.
-1. If you want to edit the ribbon for specific tables:  
-  
-   1. Select **Add Existing** and then click **Entity**.  
-  
-   2. Select the tables you want to include in the solution and then select **OK**.  
-  
-       > [!NOTE]
-       > For the purpose of editing table ribbons, you do not have to include required components. If you intend to export this solution and apply it to another system, you should include required components.  
-  
-1. If you want to edit global ribbons, such as to add custom button to all tables: select **Add Existing** and then select **Application Ribbons**.  
-1. Select **Save and Close**.  
-  
-#### Export the ribbon  
-  
-1. Go to **Settings > Customizations**.
-1. Go to **Settings > Solutions**.
-1. Select the solution you want and then select **Export**.  
-1. If you have made recent changes that have not yet been published, select **Publish All Customizations**. Otherwise, select **Next**.  
-1. With the **Unmanaged** option selected, select **Export**.  
-1. Select **Save** in the **File Download** dialog box and then select **Open Folder** in the **Download complete** dialog box.  
+
+### Export the ribbon  
+
+1. Follow the instructions in [Export a solution](../../maker/data-platform/export-solutions.md#export-from-power-apps) to download an unmanaged solution.
 1. Right-click the compressed .zip file that you downloaded and select **Extract All...** .  
 1. Select a location to extract the files and then select **Extract**.  
-1. The customizations.xml file is the file that you will edit.  
+1. Edit the `customizations.xml` file.  
   
 <a name="BKMK_PrepareToEditTheXML"></a>   
 
 ## Prepare to edit the XML
 
-For a better experience, edit the customizations.xml file with an application that can use schema validation to provide IntelliSense support. For more information, see [Edit the customizations file with schema validation](edit-customizations-xml-file-schema-validation.md).  
+For a better experience, edit the customizations.xml file with an application that uses schema validation to provide IntelliSense support. For more information, see [Edit the customizations file with schema validation](edit-customizations-xml-file-schema-validation.md).  
   
 <a name="BKMK_ImportTheRibbon"></a>
 
 ## Import the ribbon  
   
-1. After you have edited the customization.xml file, from Visual Studio or Visual Web Developer 2010 Express, right-click the customization.xml tab and select **Open Containing Folder**.  
-1. Select all of the files or folders that were included when you extracted the solution. Right-click the selected files, select **Send to**, and then select **Compressed (zipped) folder**.  
+1. After you edit the `customization.xml` file, select the folder that contains the file. 
+1. Select all of the files or folders that were included when you extracted the solution. Right-click the selected files, select **Compress to...**, and then select **ZIP File**.  
   
    > [!NOTE]
-   >  This creates a compressed .zip file in the same folder. The name of the file may vary, but it will be the same as one of the other files in the folder - except with a .zip file name extension.  
-  
-1. Go to **Settings > Customizations**.
-1. Go to **Settings > Solutions**. 
-1. Select **Import**.  
-1. Select **Browse** and locate the compressed .zip file that you created in step 2 of this procedure.  
-1. Select **Next** and then select **Import**.  
-1. After the import has finished, you will see the message indicating that the import completed successfully. Select **Close**.  
-1. After you have successfully imported your solution, you must publish customizations before you can see the changes. In the solutions list, select **Publish All Customizations**.  
+   >  This step creates a compressed .zip file in the same folder. The name of the file might vary, but it's the same as one of the other files in the folder - except it has a .zip file name extension.  
+
+1. Follow the instructions in [Import a solution](../../maker/data-platform/import-update-export-solutions.md).
+1. After you successfully import your solution, you must publish customizations before you can see the changes. In the solutions list menu, select **Publish all customizations**.  
   
 <a name="BKMK_DealWithErrorsOnImport"></a>   
 
-### Dealing with errors on import  
+### Resolve ribbon import errors  
   
-1. If you receive a notification that there were errors that caused the import to fail, select **Export Log**.  
-1. Save the export log file. Select the file and right-click it. Click **Open With** and then select **Microsoft Office Excel**.  
+1. If you receive a notification that errors caused the import to fail, select **Export Log**.  
+1. Save the export log file. Select the file and right-click it. Select **Open With** and then choose **Microsoft Office Excel**.  
 1. Select the **Components** worksheet and note any messages in the **ErrorText** column.  
   
     > [!TIP]
-    > The most common type of failure is an error when referencing a dependent element in the RibbonDiffXml. Perhaps you forgot to include a LocLabel that was referenced somewhere. Perhaps there is an extra blank character included at the end of an XML parameter referencing another element. All references must match exactly.  
+    > The most common type of failure is an error when referencing a dependent element in the RibbonDiffXml. You might have forgotten to include a `LocLabel` that was referenced somewhere. There might be an extra blank character at the end of an XML parameter referencing another element. All references must match exactly.  
   
-1. After you have corrected the error, complete the steps to import the ribbon again.  
+1. After you correct the error, complete the steps to import the ribbon again.  
 
 ## Troubleshoot ribbon issues
 
-If you are experiencing an issue with a ribbon command bar button, use this [troubleshooting guide](/troubleshoot/power-platform/power-apps/ribbon-issues-button-hidden?tabs=delete) to find and solve the problem.
+If you're experiencing an issue with a ribbon command bar button, use the following articles in the troubleshooting guide to find and solve the problem.
+
+- [Troubleshooting ribbon issues in Power Apps](/troubleshoot/power-platform/power-apps/create-and-use-apps/ribbon-issues)
+- [A button on the command bar is hidden when it should be visible in Power Apps](/troubleshoot/power-platform/power-apps/create-and-use-apps/ribbon-issues-button-hidden?tabs=delete)
+- [A button on the command bar is visible when it should be hidden](/troubleshoot/power-platform/power-apps/create-and-use-apps/ribbon-issues-button-visible?tabs=delete)
+- [A button on the command bar isn't working correctly in Power Apps](/troubleshoot/power-platform/power-apps/create-and-use-apps/ribbon-issues-button-not-working-correctly?tabs=nothing)
+- [A button on the command bar has wrong labels or translations](/troubleshoot/power-platform/power-apps/create-and-use-apps/ribbon-issues-button-wrong-label)
+- [Noncustomizable buttons in ribbon](/troubleshoot/power-platform/power-apps/create-and-use-apps/ribbon-non-customizable-buttons)
+- [Remove an active unmanaged layer of the ribbon in Power Apps](/troubleshoot/power-platform/power-apps/create-and-use-apps/remove-an-unmanaged-layer-for-ribbon)
+- [How to regenerate ribbon metadata](/troubleshoot/power-platform/power-apps/create-and-use-apps/regenerate-ribbon-metadata)
+
 
 ### See also  
 

@@ -1,7 +1,7 @@
 ---
 title: "Example: Create and customize a model-driven app form | MicrosoftDocs"
 description: "Learn how to create and customize forms in model-driven Power Apps."
-ms.date: 07/05/2021
+ms.date: 08/24/2026
 ms.subservice: mda-maker
 ms.topic: tutorial
 author: joel-lindstrom
@@ -49,7 +49,7 @@ Using the left side panel in the form designer, you can add different items to t
 
 #### Components
 
-From this tab you can add new form tabs, sections, or visual controls. More information: [Add, configure, move, or delete components on a form](add-move-configure-or-delete-components-on-form.md)
+From this tab you can add new form tabs, sections, or visual controls. To create a custom visualization that uses the context of the current record, you can [embed a generative page in the form](generative-pages.md#embed-a-generative-page-in-a-form). For more information, see [Add, configure, move, or delete components on a form](add-move-configure-or-delete-components-on-form.md).
 
 ![Components](media/create-and-edit-a-model-driven-form/add-items-to-the-form-1.png "")
 

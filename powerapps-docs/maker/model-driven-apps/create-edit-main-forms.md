@@ -2,7 +2,7 @@
 title: "Create or edit model-driven app main forms in Power Apps"
 description: "Learn how to create or edit a main form"
 ms.custom: ""
-ms.date: 02/12/2026
+ms.date: 08/24/2026
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -43,6 +43,7 @@ Each main form is composed of one or more tabs. Each tab can have one or more se
     - [Add a section to or remove a section from a form](add-move-or-delete-sections-on-form.md)
     - [Add a tab to or remove a tab from a form](add-move-or-delete-tabs-on-form.md)
     - [Add or edit a subgrid on a form](form-designer-add-configure-subgrid.md)
+    - [Embed a generative page in a form](generative-pages.md#embed-a-generative-page-in-a-form)
     - [Edit form headers](form-designer-header-properties.md)
     - Edit form footers
     
