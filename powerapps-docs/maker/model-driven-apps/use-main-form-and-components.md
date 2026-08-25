@@ -5,7 +5,7 @@ keywords: Main forms; Customer service; Customer Service Hub; Dynamics 365
 author: Mattp123
 ms.subservice: mda-maker
 ms.author: matp
-ms.date: 02/27/2025
+ms.date: 08/24/2026
 ms.topic: how-to
 applies_to: 
   - "Dynamics 365 (online)"
@@ -118,9 +118,11 @@ You can configure a subgrid on a form to display a list of rows or a chart. To k
 
 A quick view control on a form displays data from a row that is selected in a lookup on the form. To explore the quick view control properties, go to [Add and configure a quick view component on a form](form-designer-add-configure-quickview.md).
   
-## Web resource properties
+## Custom visualizations
 
-You can add or edit web resources on a form to make it more appealing or useful to app users. Form enabled web resources are images or HTML files. These items are under found on the **Components** tab under **Display** in the form designer.
+Use a generative page to add a custom, record-aware visualization to a form. Create generative pages by using natural language. A generative page can use the current record ID to retrieve and display contextual data. In the form designer, find generative pages in the **Components** pane under **Display**. For more information, see [Embed a generative page in a form](generative-pages.md#embed-a-generative-page-in-a-form).
+
+As an alternative, use a web resource when you have an existing HTML or image asset, or when you want to build and maintain the visualization directly with HTML and JavaScript. Find web resources in the **Components** pane under **Display**. For more information, see [Create or edit model-driven app web resources to extend an app](create-edit-web-resources.md).
 
 ## External website
 
