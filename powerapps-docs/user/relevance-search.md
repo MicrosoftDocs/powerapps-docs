@@ -1,12 +1,12 @@
 ---
-title: "Search for records by using Dataverse search| MicrosoftDocs"
+title: Search for records by using Dataverse search
 description: How to use Dataverse search
 author: jasonHQX
 contributors: mgreen
 
 ms.component: pa-user
 ms.topic: how-to
-ms.date: 07/15/2026
+ms.date: 08/25/2026
 ms.subservice: end-user
 ms.author: jasonhuang
 ms.custom: ""
@@ -19,7 +19,7 @@ search.audienceType:
 
 # Search for records by using Dataverse search
 
-When Dataverse search is "**On**", the search box appears at the top of every page in your app and is the default global search experience for all model-driven apps. Dataverse search also lets you use [certain generative AI experiences](relevance-search-benefits.md). You can't switch to [quick find search, also known as categorized search](quick-find.md). Start a new search to quickly find the information you need.
+When you turn Dataverse search **On**, the search box appears at the top of every page in your app. It becomes the default global search experience for all model-driven apps. Dataverse search also lets you use [certain generative AI experiences](relevance-search-benefits.md). You can't switch to [quick find search, also known as categorized search](quick-find.md). Start a new search to quickly find the information you need.
 
 Turn on Dataverse search to give users a better search experience in model-driven apps. Environment admins can manage their environments by selecting **Off** to opt out of this feature.
 
@@ -31,7 +31,7 @@ If Dataverse search is set to "**Default**", the search box isn't visible for se
 
 ## See recent rows and searches
 
-See your recent searches and recently accessed rows when you select the search box. Before you start typing in the search box, you'll see information pop-up that helps you complete your search.
+See your recent searches and recently accessed rows when you select the search box. Before you start typing in the search box, you'll see an information pop-up that helps you complete your search.
 
 Up to three recent search terms appear at the top, based on the last three search queries that you viewed the results for. These recent search terms are personalized and based on your device and browser.
 
@@ -48,15 +48,15 @@ Legend
 ## Inline suggestions
 
 > [!NOTE]
-> If you're using custom analyzers for searching records, the records don't show in the inline suggestions.
+> If you use custom analyzers for searching records, the records don't show in the inline suggestions.
 
-As you start entering text, you'll see suggested results that help minimize keystrokes and simplify page navigation. Suggested results are based on a search performed on all searchable columns of a table, which is enabled for Dataverse search and included in your model-driven app. For more information, see [Add or edit model-driven app components in the Power Apps app designer](../maker/model-driven-apps/add-edit-app-components.md#add-a-component).
+As you start entering text, you see suggested results that help minimize keystrokes and simplify page navigation. Suggested results are based on a search performed on all searchable columns of a table, which is enabled for Dataverse search and included in your model-driven app. For more information, see [Add or edit model-driven app components in the Power Apps app designer](../maker/model-driven-apps/add-edit-app-components.md#add-a-component).
 
-Suggestions are shown when three or more characters are entered in the search box, and are based on two types of matching:
+Suggestions appear when you enter three or more characters in the search box. They are based on two types of matching:
 
-- **Word completion**: Rows where the primary field contains a word that begins with the search term. For example, entering **work** will show the account **AdventureWorks** and the contact **John Worker**, among other results.
+- **Word completion**: Rows where the primary field contains a word that begins with the search term. For example, entering **work** shows the account **AdventureWorks** and the contact **John Worker**, among other results.
 
-- **Fuzzy search**: Terms that are misspelled by one character are matched. For example, entering **winry** will show the account **Coho Winery**, among other results. 
+- **Fuzzy search**: Terms that are misspelled by one character are matched. For example, entering **winry** shows the account **Coho Winery**, among other results. 
 
 Suggested rows display a secondary field alongside the primary field to help differentiate rows with the same primary field value. The secondary field is selected based on the table’s quick find view:
 
@@ -66,20 +66,20 @@ Suggested rows display a secondary field alongside the primary field to help dif
 
 ![Suggested results that appear when you enter a search query.](media/relevance-search-suggested-results.gif "Suggested results that appear when you enter a search query")
 
-With suggestions, you can access your information quickly by using minimal keystrokes even when the search term is misspelled by a character. Text that's highlighted in bold in the suggestions shows the term that was matched.
+By using suggestions, you can access your information quickly by using minimal keystrokes, even when the search term is misspelled by a character. Text that's highlighted in bold in the suggestions shows the term that was matched.
 
 ## Search results page
 
-View the full results for a search by pressing **Enter** on your keyboard or selecting **Show more results**. Dataverse search will append "\*" to the search if two or less characters are entered.
+View the full results for a search by pressing **Enter** on your keyboard or selecting **Show more results**. Dataverse search appends "\*" to the search if you enter two or fewer characters.
 
-Search results are ranked based on relevance and grouped by tables. The list of tables that include rows that match the search term are displayed horizontally as tabs along the top of the screen.
+Search results are ranked based on relevance and grouped by tables. The list of tables that include rows that match the search term appear as tabs along the top of the screen.
 
-When a search query contains multiple words, it's automatically split into individual search terms. Additionally, our fuzzy search feature expands results by including related words such as synonyms, acronyms, and abbreviations. For example, searching for "Robert Clark" might return results for "Bob Clark" due to fuzzy matching and "John Clark" because one of the search terms matches. To ensure an exact match, enclose the entire query in double quotes (for example, "Robert Clark").
+When a search query contains multiple words, Dataverse search automatically splits the query into individual search terms. The fuzzy search feature expands results by including related words such as synonyms, acronyms, and abbreviations. For example, searching for "Robert Clark" might return results for "Bob Clark" due to fuzzy matching and "John Clark" because one of the search terms matches. To ensure an exact match, enclose the entire query in double quotes (for example, "Robert Clark").
 
 To understand why a row appears in your search results, hover over the icon at the beginning of each row to see the text that matched your search.
 
 > [!NOTE]
-> Rows returned in the search grid can't be sorted.
+> You can't sort rows returned in the search grid.
 
 ![See the text that matched your search query.](media/relevance-search-matched-results.png "See the text that matched your search query")
 
@@ -90,7 +90,7 @@ The **Top results** tab displays the top 20 results for the search term, with re
 > [!NOTE]
 > - The primary column of a table is always used as the first column in the results on the **Top results** tab.
 > - For notes and attachment tables, two additional columns show information about the related row for that note or attachment.
-> - Party list columns on activity tables&mdash;such as **To**, **CC**, and attendees&mdash;can't be searched on or shown, and will be blank.
+> - You can't search on or show party list columns on activity tables&mdash;such as **To**, **CC**, and attendees&mdash;and they appear blank.
 
 In the following image, the top search results from three tables are displayed.
 
@@ -104,9 +104,9 @@ Legend:
 
 ### Table-specific tabs
 
-Tabs for the specific tables that contain search results are displayed horizontally. The exact order of the tables from left to right (in a left-to-right environment) is based on the relevance of the results. You can collapse the filter panel or hover over the list of tabs to scroll horizontally.
+You see tabs for the specific tables that contain search results. The order of the tables from left to right (in a left-to-right environment) is based on the relevance of the results. You can collapse the filter panel or hover over the list of tabs to scroll horizontally.
 
-The tables that include the rows in the top 20 results are shown in the first three tabs from left to right, from most to least relevant. The tables that include the results outside of the top 20 are displayed in descending order.
+The first three tabs from left to right show the tables that include the rows in the top 20 results, from most to least relevant. The remaining tabs show tables that include results outside of the top 20, in descending order.
 
 ![Tabs on the search results page, numbered left to right.](media/diagram-top-results.png "Tabs on the search results page, numbered left to right")
 
@@ -129,8 +129,8 @@ Legend:
 
 Each table-specific tab displays more information than the **Top results** tab along two different dimensions:
 
-- If the quick find view for the table has more than six **View Column**, then all columns are displayed on the table-specific tab, compared to the maximum of six columns shown on the **Top results** tab.
-- All matching rows for the table are accessible in the table-specific tab as an infinitely scrollable list.
+- If the quick find view for the table has more than six **View Column**, the table-specific tab displays all columns. The **Top results** tab shows a maximum of six columns.
+- The table-specific tab provides access to all matching rows for the table as an infinitely scrollable list.
 
 ## Scope search to a specific table
 
@@ -159,7 +159,7 @@ On a table-specific tab, facets that apply to that table type are displayed abov
 |---------|---------|
 | ![Global facets](media/filterpane-1.png "Global facets")     |     ![Activity Status, Priority, and Due facets for the Phone Calls table](media/filterpane-2.png "Activity Status, Priority, and Due facets for the Phone Calls table")  |
 
-You can personalize facets for a table by using the **Set Personal Options** dialog box. More information: [Configure facets and filters](facets-and-filters.md)
+You can personalize facets for a table by using the **Set Personal Options** dialog box. Learn more in [Configure facets and filters](facets-and-filters.md).
 
 ### Text-based facets with discrete values
 
@@ -167,7 +167,7 @@ All **Lookup** and **Choice** data types are text-based facets. For example, the
 
 ![The Priority facet has values of High, Normal, and Low.](media/text-based-facets.png "The Priority facet has values of High, Normal, and Low") 
 
-Filters in these facets are sorted in descending order by count. By default, the top four-facet values are displayed. When there are more than four-facet values, you can select **Show more** to expand the list and see up to 15 results. 
+Filters in these facets are sorted in descending order by count. By default, the top four facet values are displayed. When there are more than four facet values, you can select **Show more** to expand the list and see up to 15 results. 
 
 When you select a facet value, you filter search results to show only rows where the column includes the value that you selected.
 
@@ -179,7 +179,7 @@ The date and time facets let you filter and see search results for a specific pe
 
 ## Feedback link
 
-On the search results page, the answer to **Did you find what you were looking for?** is collected in our product telemetry as a binary feedback. Search parameters&mdash;like the query text that you entered in the search box&mdash;isn't collected, irrespective of your response to the question. We only use **Yes** or **No** response statistics to help us understand the usefulness of the search experience. 
+On the search results page, the answer to **Did you find what you were looking for?** is collected in our product telemetry as a binary feedback. Search parameters&mdash;like the query text that you entered in the search box&mdash;aren't collected, irrespective of your response to the question. We only use **Yes** or **No** response statistics to help us understand the usefulness of the search experience. 
 
 Currently there's no option to disable the feedback question prompt.
 
@@ -192,47 +192,47 @@ Dataverse search has a powerful set of capabilities to help you put Microsoft Da
 
 > [!NOTE]
 > - Dataverse search is text-based, and can search only on columns of type **Single line of text**, **Multiple lines of text**, **Choice**, or **Lookup**. Columns of type **Numeric** and **Date** aren't searched on.
-> - Dataverse search enables you to search for rows that are shared with you and rows that you own. Hierarchical security models aren't supported. This means that even if you see a row in Dataverse because you have access to it through hierarchical security, you won't see that row matched by Dataverse search unless you own it or it was shared with you.
+> - Dataverse search enables you to search for rows that are shared with you and rows that you own. Hierarchical security models aren't supported. This limitation means that even if you see a row in Dataverse because you have access to it through hierarchical security, you won't see that row matched by Dataverse search unless you own it or it was shared with you.
 > - Dataverse search supports column level security. This means that a user with access to a restricted column can search for the column and will see it in the search results. A user that doesn't have permission to the restricted column won't be able to search or see results for the column.
 
 > [!TIP]
 > The order of tables in the **Top results** tab and in the horizontal list of tabs is based on the ranking and relevance of search results for that search term. You can make results from a particular table appear at the top by including the table name in the search term. For example, searching for **account fabrikam** would, in most cases, rank result records that have the term **fabrikam** of type **account** higher than result records that have the term **fabrikam** of type other than **account**.
 
 - **Boosted search results**  
-  Use important attributes as keywords to "boost" your search for information. Entering a table type to boost search results is an easy way to indicate which results you prefer. For example, searching for **Susan Adatum** indicates that you're looking for a contact **Susan** related to the account **Adatum**.
+  Use important attributes as keywords to boost your search for information. Entering a table type to boost search results is an easy way to indicate which results you prefer. For example, searching for **Susan Adatum** indicates that you're looking for a contact **Susan** related to the account **Adatum**.
 
 - **Natural language understanding**   
   Search<!--note from editor: Should this be "Dataverse search" or "intelligent search"?--> has a better understanding of terms that are used to indicated intent. Some examples include:
-  - Searching for **open phone calls** will show phone call activity records that have the status **open**.
-  - Searching for **contact missing email** will show contacts who have an empty email address field, rather than treating **missing** as a keyword.
+  - Searching for **open phone calls** shows phone call activity records that have the status **open**.
+  - Searching for **contact missing email** shows contacts who have an empty email address field, rather than treating **missing** as a keyword.
 
 - **Spelling correction**  
-   Search forgives common spelling mistakes. For example, when you search for **william conatc**, search results will include the contact record with the name **William**, even though the word **contact** was misspelled.
+   Search forgives common spelling mistakes. For example, when you search for **william conatc**, search results include the contact record with the name **William**, even though the word **contact** was misspelled.
 
 - **Synonyms, acronyms, and abbreviations**  
   With support for common abbreviations and synonyms, you can search for your information the way you remember it, not necessarily the way it's stored. Some examples include:
   - Common name variations like **Bob/Robert** are matched with either search term.
-  - A search term that uses an abbreviation like **active accts** will be interpreted semantically as "active accounts."
+  - A search term that uses an abbreviation like **active accts** is interpreted semantically as "active accounts."
 
 - **The power of common knowledge**  
-  Search can understand popular locations, date, time, holidays, and numbers. For example, a search for **account in WA** will generate results for accounts located in Washington state.
+  Search can understand popular locations, date, time, holidays, and numbers. For example, a search for **account in WA** generates results for accounts located in Washington state.
 
 <!--
 ### Boosted search results
 
-Use important attributes as keywords to "boost" your search for information. Entering a table type to boost search results is an easy way to indicate which results you prefer. For example, searching for **Susan Adatum** indicates that you're looking for a contact **Susan** related to the account **Adatum**.
+Use important attributes as keywords to boost your search for information. Entering a table type to boost search results is an easy way to indicate which results you prefer. For example, searching for **Susan Adatum** indicates that you're looking for a contact **Susan** related to the account **Adatum**.
 
 ### Natural language understanding
 
-Search has a better understanding of terms that are used to indicated intent. Some examples include:
+Search has a better understanding of terms that are used to indicate intent. Some examples include:
 
-- Searching for **open phone calls** will show phone call activity records that have the status **open**.
+- Searching for **open phone calls** shows phone call activity records that have the status **open**.
 
-- Searching for **contact missing email** will show contacts who have an empty email address field, rather than treating **missing** as a keyword.
+- Searching for **contact missing email** shows contacts who have an empty email address field, rather than treating **missing** as a keyword.
 
 ### Spelling correction
 
-Search forgives common spelling mistakes. For example, when you search for **william conatc**, search results will include the contact record with the name **William**, even though the word **contact** was misspelled.
+Search forgives common spelling mistakes. For example, when you search for **william conatc**, search results include the contact record with the name **William**, even though the word **contact** was misspelled.
 
 ### Synonyms, acronyms, and abbreviations
 
@@ -240,11 +240,11 @@ With support for common abbreviations and synonyms, you can search for your info
 
 - Common name variations like **Bob/Robert** are matched with either search term.
 
-- A search term that uses an abbreviation like **active accts** will be interpreted semantically as "active accounts."
+- A search term that uses an abbreviation like **active accts** is interpreted semantically as "active accounts."
 
 ### The power of common knowledge
 
-Search can understand popular locations, date, time, holidays, and numbers. For example, a search for **account in WA** will generate results for accounts located in Washington state.
+Search can understand popular locations, date, time, holidays, and numbers. For example, a search for **account in WA** generates results for accounts located in Washington state.
 -->
 > [!NOTE]
 > - All the preceding capabilities are part of intelligent search, which is only available for public cloud environments that have English as the base language.
@@ -256,40 +256,40 @@ Operators help you craft precise search queries that can tailor your results acc
 
 ### Boolean operators
 
-Search on a combination of terms using the **+** operator, which performs an **AND** search and shows results containing all the individual terms separated by **+**.
+Search on a combination of terms by using the **+** operator. This operator performs an **AND** search and shows results containing all the individual terms separated by **+**.
 For example, **alpine + paul** returns the contact record **Paul Cannon** related to the account record **Alpine Ski House**.
 
 ![Example with the AND operator.](media/bollean.png "Example with the AND operator")  
 
-Similarly, the **OR** operator can be indicated by separating terms with a vertical bar (**|**). For example, searching for **alpine | paul** returns records with reference to either term.
+Similarly, indicate the **OR** operator by separating terms with a vertical bar (**|**). For example, searching for **alpine | paul** returns records with reference to either term.
 
 ![Example with the OR operator.](media/bollean-1.png "Example with the OR operator")  
 
-Use the **NOT** operator with a hyphen (**-**) before a keyword to indicate that it should be excluded from results.<!--note from editor: I suggest using this term, otherwise, people might try to find a hyphen on the keyboard.-->
+Use the **NOT** operator with a hyphen (**-**) before a keyword to exclude it from results.<!--note from editor: I suggest using this term, otherwise, people might try to find a hyphen on the keyboard.-->
 
-For example, when you search for **evaluation**, all rows matching the term **evaluation** will appear in results.
+For example, when you search for **evaluation**, all rows matching the term **evaluation** appear in results.
 
 ![Example of searching for the term "evaluation."](media/eval-1.png "Example of searching for the term 'evaluation'")  
 
-However, searching for **evaluation + -agreed** will match all rows that contain the term **evaluation** but not the term **agreed**.
+However, searching for **evaluation + -agreed** matches all rows that contain the term **evaluation** but not the term **agreed**.
 
 ![Example of searching for the term "evaluation" but excluding the term "agreed."](media/eval-2.png "Example of searching for the term 'evaluation' but excluding the term 'agreed'")  
 
 ### Wildcards
 
-Use wildcards for operators such as **begins-with** and **ends-with**. Using an asterisk (\*) at the beginning or end of a keyword makes the asterisk a placeholder for zero or more characters. For example, searching on **\*win** will show results for all records associated with a keyword that ends with **win**.
+Use wildcards for operators such as **begins-with** and **ends-with**. Using an asterisk (\*) at the beginning or end of a keyword makes the asterisk a placeholder for zero or more characters. For example, searching on **\*win** shows results for all records associated with a keyword that ends with **win**.
 
 ![Example of results for a search that uses a wildcard.](media/wild-card.png "Example of results for a search that uses a wildcard")  
 
 ### Exact matches
 
-Use double quotation marks around a keyword to perform an exact match. Search ignores common used words such as **the**, **an**, and **a**. To improve matching, use double quotation marks and force an exact match for your search. For example, searching on **"Call back for resolution (sample)"** will match the exact keywords. 
+Use double quotation marks around a keyword to perform an exact match. Search ignores commonly used words such as **the**, **an**, and **a**. To improve matching, use double quotation marks and force an exact match for your search. For example, searching on **"Call back for resolution (sample)"** matches the exact keywords. 
 
 ![Example of results for a search that uses an exact match.](media/exact-match.png "Example of results for a search that uses an exact match")  
 
 ## Quick actions
 
-The Dataverse search experience brings some of the most frequently used actions closer to search results, to help you complete your task without having to navigate to the record page in model-driven apps.
+The Dataverse search experience brings some of the most frequently used actions closer to search results. This experience helps you complete your task without having to navigate to the record page in model-driven apps.
 
 Quick actions are a small set of commands specific to a table. You can see quick actions when you're interacting with search in model-driven apps running on a web browser. Some of the commonly used tables are configured to show a set of commands to help you complete your task without losing context.
 
@@ -302,11 +302,11 @@ Quick actions are a small set of commands specific to a table. You can see quick
 | Phone Call     |     Mark complete, Cancel, Set Regarding, Assign, Email a link |
 | Email     |     Cancel, Set Regarding, Email a link  |
 
-For more information on how to configure quick actions, see [Configure Dataverse search to improve search results and performance](/power-platform/admin/configure-relevance-search-organization#configure-quick-actions).
+For more information about how to configure quick actions, see [Configure Dataverse search to improve search results and performance](/power-platform/admin/configure-relevance-search-organization#configure-quick-actions).
 
 ### Quick actions and suggested results
 
-As you interact with search, you'll find quick actions next to the most recently accessed records and the suggested results that appear as you type.
+As you interact with search, you find quick actions next to the most recently accessed records and the suggested results that appear as you type.
 
 | Quick actions for recently accessed rows  | Quick actions for suggested results as you type |
 |---------|---------|
@@ -314,7 +314,7 @@ As you interact with search, you'll find quick actions next to the most recently
 
 ### Quick actions in results pages
 
-As you type, quick actions will appear for suggested results.
+As you type, quick actions appear for suggested results.
 
 ![This diagram shows the quick actions menu that appears when you hover over a suggested result.](media/quick-actions-diagram.gif "This diagram shows the quick actions menu that appears when you hover over a suggested result")
 

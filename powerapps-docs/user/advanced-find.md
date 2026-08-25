@@ -5,7 +5,7 @@ author: shwetamurkute
 
 ms.component: pa-user
 ms.topic: article
-ms.date: 01/16/2024
+ms.date: 08/25/2026
 ms.subservice: end-user
 ms.author: smurkute
 ms.custom: ""
@@ -23,7 +23,7 @@ The topic covers the various different ways to use the advanced find experience.
 
 ## Search for rows and create personal views with modern advanced find
 
-When your administrator enables the [modern advanced find experience](/power-platform/admin/settings-features), it lets you search for rows and create personal views in your app. Depending on how search is setup for your app, the search experience might look a little different. Your administrator can turn on Dataverse search or disable it.
+When your administrator enables the [modern advanced find experience](/power-platform/admin/settings-features#advanced-find-options), you can search for rows and create personal views in your app. Depending on how search is set up for your app, the search experience might look a little different. Your administrator can turn on [Dataverse search](/power-platform/admin/settings-features#search) or disable it.
 
 
 1. To start a search, choose one of the following:
@@ -50,7 +50,7 @@ When your administrator enables the [modern advanced find experience](/power-pla
      - Valid for advanced find
 
 
-3. You will be navigated to the table's grid page, with the default view for the table selected and the rows displayed in a read-only grid. The  [**Edit filters**](grid-filters-advanced.md) panel will be opened, so you can filter the data on that table. For more information, see [create and manage personal views for that table.](grid-filters-advanced.md)
+3. You're navigated to the table's grid page, with the default view for the table selected and the rows displayed in a read-only grid. The  [**Edit filters**](grid-filters-advanced.md) panel opens, so you can filter the data on that table. Learn more in [create and manage personal views for that table.](grid-filters-advanced.md)
 
 For more information on creating and managing system views, see [Create and edit public or system views.](../maker/model-driven-apps/create-or-edit-model-driven-app-view.md)
 
