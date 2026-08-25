@@ -4,7 +4,7 @@ description: Create and manage personal views on a grid page in model-driven Pow
 author: jasongre
 ms.component: pa-user
 ms.topic: how-to
-ms.date: 03/08/2024
+ms.date: 08/25/2026
 ms.subservice: end-user
 ms.author: jasongre
 ms.reviewer: smurkute
@@ -40,8 +40,9 @@ For more information, see [Understand model-driven app views](../maker/model-dri
 ## Select columns in the column editor
 
 1. Select **Edit columns** to remove, reorder, or add columns to get a clearer view of your data.
+    :::image type="content" source="./media/column-editor-option.png" alt-text="A screenshot showing column editor option on a grid page.":::
+column-editor-option
 1. Select **Apply** to see your changes on the grid page.
-
     :::image type="content" source="./media/column-editor.png" alt-text="A screenshot of the view column editor on a grid page.":::
 
   The following actions are available in the column editor:
@@ -50,15 +51,13 @@ For more information, see [Understand model-driven app views](../maker/model-dri
 - To change the order of the columns, select **…**, and then select **Move up** or **Move down**. Or, drag the column to the desired position in the list.
 - To add columns to the view, select **Add columns**, and then do one or more of the following:
 
-  - Select a column from the default set of system columns in the table.
-  - Select **Default**, then select **All** or **Custom**, and then select from the set of columns in the table.
+  - Select a column from the standard set of system columns in the table.
+  - Select **Standard**, select **All** or **Custom**, and then select from the set of columns in the table.
   - Type a column name in the **Search** box to find a specific column, and then select it.
 
     :::image type="content" source="./media/column-editor-add-column.png" alt-text="A screenshot of the list of default columns that are available to add to a view.":::
 
   - To add columns from other tables, select the **Related** tab. Expand the table that contains the column you want to add, and then select the column. When you're done adding columns, select **Close**.
-
-    :::image type="content" source="./media/column-editor-add-column-related.png" alt-text="A screenshot of the list of columns in related tables that are available to add to a view.":::
 
 To undo changes to the view's columns at any time, select **Reset to default**.
 
@@ -91,9 +90,9 @@ The following options are available when you add conditions in the filter editor
     
     If you're adding a condition to a column with lookups, you can look up the record in the **Value** field. In the lookup drop-down menu, you can choose **Advanced lookup** to see more fields and search for records within a specific view.
     
-    ![Advanced lookup option.](media/AdvLookupInEditFilters.png)
-    
-    ![You can search for records withina specific view.](media/AdvLookupInEditFilters2.png)
+    :::image type="content" source="./media/advanced-lookup-option.png" alt-text="A screenshot showing advanced lookup option.":::
+
+    :::image type="content" source="./media/lookup-filter-option-selected.png" alt-text="A screenshot showing advanced lookup option selected for filter.":::
     
 - To add a group of conditions, select **Add group**. You can create multiple subconditions and group them using AND and OR operators to create an expression.
 
@@ -122,7 +121,7 @@ Sorting options depend on the type of data. Alphanumeric columns can be sorted i
 
 ## Edit column width
 
-If your administrator has turned on [modern advanced find](/power-platform/admin/settings-features), you can drag the vertical column separator bar to change the **minimum** width of a column. When you change the width of a column, as asterisk appears beside the view name to indicate that you edited the view and haven't saved it. See [Save your edits to as a new view](/power-apps/user/grid-filters-advanced#save-your-edits-as-a-new-view) to learn more about different options to save a view.
+If your administrator turns on [modern advanced find](/power-platform/admin/settings-features#advanced-find-options), you can drag the vertical column separator bar to change the **minimum** width of a column. When you change the width of a column, an asterisk appears beside the view name to indicate that you edited the view and didn't save it. See [Save your edits to as a new view](/power-apps/user/grid-filters-advanced#save-your-edits-as-a-new-view) to learn more about different options to save a view.
 
 > [!TIP]
 > Since the column width edits change the **minimum** width of the column, you might see column widths getting adjusted after the view is saved, to fill the available horizontal screen space.
@@ -135,9 +134,10 @@ An asterisk beside the view name indicates you edited the view and haven't saved
 
 To keep the original view, save your edited version as a new view with a different name. If you made changes to a view you don't have *Write* permission to, whether it's a system view or a personal view, then you can only save it as a new view.
 
-1. On the command bar, select **More commands** (**⁝**) > **Create view** > **Save as new view**.
+1. Select the current view drop-down menu.
+1. Select **Save as new view**.
 
-    :::image type="content" source="./media/save-as-new-view.png" alt-text="A screenshot of a grid page, showing the Create view option on the More commands menu.":::
+    :::image type="content" source="./media/save-as-new-view.png" alt-text="A screenshot of a grid page, showing the Save as new view option.":::
 
 1. Enter a new name for the view, and a description if you like, and then select **Save**.
 
@@ -156,7 +156,7 @@ On the command bar, select **More commands** (**⁝**) > **Create view** > **Sav
 
 ### Save changes to views in modern advanced find
 
-If your administrator has turned on [modern advanced find](/power-platform/admin/settings-features), you can create and manage views directly from the view selector.
+If your administrator turns on [modern advanced find](/power-platform/admin/settings-features#advanced-find-options), you can create and manage views directly from the view selector.
 
 :::image type="content" source="./media/save-as-new-view-modern.png" alt-text="A screenshot of a grid page, showing the view management options in modern advanced find.":::
 
@@ -180,13 +180,13 @@ To change your personal default view back to the view that was set by your admin
 
 ### Change the default view in modern advanced find  
 
-If your administrator has turned on [modern advanced find](/power-platform/admin/settings-features), you can change and reset the default view directly from the view selector.
+If your administrator turned on [modern advanced find](/power-platform/admin/settings-features#advanced-find-options), you can change and reset the default view directly from the view selector.
 
 :::image type="content" source="./media/set-default-view-modern.png" alt-text="A screenshot of a grid page, showing the default view management options in modern advanced find.":::
 
 ## Manage and share personal views
 
-If your administrator has turned on [modern advanced find](/power-platform/admin/settings-features), you can share, hide, rename, and delete views.
+If your administrator turns on [modern advanced find](/power-platform/admin/settings-features#advanced-find-options), you can share, hide, rename, and delete views.
 
 1. In the view selector, select **Manage and share views**.
 
@@ -215,7 +215,7 @@ The following sorting options are available:
 - **A to Z**: The grouping is removed. All views (system and personal) are presented in alphabetical order.
 
   > [!NOTE]
-  > If your administrator has turned on the [modern advanced find experience](/power-platform/admin/settings-features), the list of views isn't divided. To easily tell which kind of view you're looking at, personal views have a user icon ![Personal view icon.](./media/user-icon.png "Personal view icon."). You can also hover over the information icon ![Information icon.](./media/info-icon.png "Information icon") to see the view type.
+  > If your administrator turns on the [modern advanced find experience](/power-platform/admin/settings-features#advanced-find-options), the list of views isn't divided. To easily tell which kind of view you're looking at, personal views have a user icon ![Personal view icon.](./media/user-icon.png "Personal view icon."). You can also hover over the information icon ![Information icon.](./media/info-icon.png "Information icon") to see the view type.
 
 ### Hide views
 

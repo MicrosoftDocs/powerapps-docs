@@ -5,7 +5,7 @@ author: jasongre
 ms.subservice: mda-maker
 ms.author: jasongre
 ms.reviewer: matp
-ms.date: 06/25/2026
+ms.date: 08/24/2026
 ms.topic: how-to
 applies_to:
   - PowerApps
@@ -140,6 +140,21 @@ Set up the page to accept an account recordId. When the page loads, use these to
 ```
 Configure this page to accept a data parameter containing a custom filter object. Use it to filter the displayed records when the page loads.
 ```
+
+### Embed a generative page in a form
+
+You can add a generative page to a model-driven app form so that it appears within a section or tab. First, create and publish a generative page designed for the form and [set it up to accept the `recordId` input parameter](#set-up-a-page-to-accept-input-parameters).
+
+To add the page to a form:
+
+1. Open the form in the form designer.
+1. In the left pane, select **Components**, and then expand **Display**.
+1. Select **Generative page**.
+1. Select the generative page that you want to embed.
+1. Optionally, provide values for any additional static inputs that the page accepts.
+1. Save and publish the form.
+
+When a user opens a record, the form automatically passes the current record ID to the generative page as the `recordId` input. You don't need to configure a static value for `recordId`.
 
 ### Go to a generative page
 

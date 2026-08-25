@@ -29,9 +29,9 @@ Within this section you learn about identified issues, their impact, and underst
 
 The documentation targets the following customization types:
 
+- [Client scripting](business-logic/index.md)
 - Model-driven app design
 - Form design
-- Client scripting
 - Web resources
 
 ## Sections
