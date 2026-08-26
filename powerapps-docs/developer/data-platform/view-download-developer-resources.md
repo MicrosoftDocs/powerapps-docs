@@ -2,7 +2,7 @@
 title: "View developer resources page for your Power Apps and Microsoft Dataverse environment | MicrosoftDocs"
 description: "Discover developer resources and services for Power Apps and Microsoft Dataverse."
 keywords: ""
-ms.date: 09/07/2021
+ms.date: 08/25/2026
 
 ms.custom: 
 ms.topic: how-to
@@ -18,7 +18,7 @@ search.audienceType:
 
 This article provides resources for developers and information about the specific environment you're working with.
 
-1. Sign into [Power Apps](https://make.powerapps.com), and select your environment in the top-right corner.
+1. Sign in to [Power Apps](https://make.powerapps.com), and select your environment in the top-right corner.
 
 1. Select the **Settings** button in the top-right corner, and select **Developer resources**.
 
@@ -30,19 +30,19 @@ The following sections explain the information available on the developer resour
 
 The first three pieces of information (**Environment unique name**, **Environment ID**, and **Organization ID**) are the unique identifiers that describe your environment and specific Microsoft Dataverse instance (organization).
 
-This information is needed when you connect through developer tooling or use Azure extensions with your instance. More information: [Azure integration](./azure-integration.md)
+You need this information when you connect through developer tooling or use Azure extensions with your instance. For more information, see [Azure integration](./azure-integration.md).
 
 ## Connect your apps to Microsoft Dataverse instance
 
-This next two pieces of information provide you with the APIs you need to connect to your Dataverse environment.
+The next two pieces of information provide you with the APIs you need to connect to your Dataverse environment.
 
 ### Web API endpoint
 
-This is the URL for the Web API for your instance. The Web API is an OData v4 RESTful API. More information: [Use the Dataverse Web API](/powerapps/developer/data-platform/webapi/overview)
+This is the URL for the Web API for your instance. The Web API is an OData v4 RESTful API. For more information, see [Use the Dataverse Web API](/powerapps/developer/data-platform/webapi/overview).
 
 ### Discovery endpoint
 
-HTTP REST API providing connection information for the set of instances to which the caller has access. More information: [Discover the URL for your organization](/powerapps/developer/data-platform/webapi/discover-url-organization-web-api)
+This HTTP REST API provides connection information for the set of instances to which you have access. For more information, see [Discover the URL for your organization](/powerapps/developer/data-platform/webapi/discover-url-organization-web-api).
 
 ## Documentation
 
