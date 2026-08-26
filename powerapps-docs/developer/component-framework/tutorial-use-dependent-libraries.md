@@ -255,7 +255,7 @@ To finish the library component, complete the following steps as usual:
 
 1. [Create and build the code component](create-custom-controls-using-pcf.md)
 1. [Package the code component](import-custom-controls.md)
-1. [Deploy the code component](import-custom-controls.md#deploying-code-components)
+1. [Deploy the code component](import-custom-controls.md#deploy-code-components).
 
 ## 2. Build the dependent control
 
@@ -394,7 +394,7 @@ To finish the dependent component, complete the following steps as usual:
 
 1. [Create and build the code component](create-custom-controls-using-pcf.md)
 1. [Package the code component](import-custom-controls.md)
-1. [Deploy the code component](import-custom-controls.md#deploying-code-components)
+1. [Deploy the code component](import-custom-controls.md#deploy-code-components).
 
 ### Add the component to a form
 
