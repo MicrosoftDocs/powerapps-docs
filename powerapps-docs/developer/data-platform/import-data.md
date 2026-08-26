@@ -2,7 +2,7 @@
 title: "Import Data (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn how to import external data into Microsoft Dataverse. Data import lets you upload data from various customer relationship management systems and data sources into Dataverse." 
 ms.custom: ""
-ms.date: 06/10/2021
+ms.date: 08/25/2026
 ms.reviewer: "pehecke"
 
 ms.topic: "article"
@@ -17,9 +17,9 @@ search.audienceType:
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
-If you want to import data from external sources into Microsoft Dataverse, you can use the *data import* feature. Data import lets you upload data from various customer relationship management systems and data sources into Dataverse. You can import data into standard and customized columns of most business and custom tables. You can also include related data, such as notes and attachments.  
+To import data from external sources into Microsoft Dataverse, use the *data import* feature. Data import lets you upload data from various customer relationship management systems and data sources into Dataverse. You can import data into standard and customized columns of most business and custom tables. You can also include related data, such as notes and attachments.  
   
-Dataverse includes a web application tool called Import Data Wizard. You use this tool to import data rows from one or more comma-separated values (.csv), XML Spreadsheet 2003 (.xml), or text files.  
+Dataverse includes a web application tool called Import Data Wizard. Use this tool to import data rows from one or more comma-separated values (.csv), XML Spreadsheet 2003 (.xml), or text files.  
   
  For more information about the Import Data Wizard, see Dataverse Help.  
   
@@ -35,7 +35,7 @@ Dataverse includes a web application tool called Import Data Wizard. You use thi
   
 - Run data import by using command-line scripts.  
   
-- Add `LookupMap`XML tags in the data map to indicate that the data lookup will be initiated and performed on a source file that is used in the import.  
+- Add `LookupMap`XML tags in the data map to indicate the data lookup initiates and is performed on a source file that is used in the import.    
   
 - Add custom `OwnerMetadata`XML tags in the data map to match the user rows in the source file with the rows of the user (system user) in Dataverse.  
   
@@ -44,7 +44,7 @@ Dataverse includes a web application tool called Import Data Wizard. You use thi
   > [!NOTE]
   >  Validation isn’t optional in the Import Data Wizard.  
   
-  To implement data import, you typically do the following:  
+  To implement data import, typically do the following:  
   
 - Create a comma-separated values (CSV), XML Spreadsheet 2003 (XMLSS), or text source file.  
   
@@ -62,10 +62,10 @@ Dataverse includes a web application tool called Import Data Wizard. You use thi
   
   You can import data from one source file or several source files. A source file can contain data for one table type or multiple table types.  
   
-  Parsing, transforming, and uploading of data is done by the asynchronous jobs that run in the background.  
+  Asynchronous jobs that run in the background handle parsing, transforming, and uploading of data.  
   
 > [!NOTE]
->  By default, all custom tables are enabled for import. To determine if a business table is enabled for import, see the metadata for the specific table. If the table is enabled for import, the definition property `IsImportable` is set to `true`. The value of this property can’t be changed for the out-of-the-box business tables. <!--[!INCLUDE[metadata_browser](../includes/metadata-browser.md)]-->  
+>  By default, import is enabled for all custom tables. To determine if import is enabled for a business table, check the metadata for the specific table. If the table is enabled for import, the definition property `IsImportable` is set to `true`. You can't change the value of this property for the out-of-the-box business tables. <!--[!INCLUDE[metadata_browser](../includes/metadata-browser.md)]-->  
 
 
 ### See Also

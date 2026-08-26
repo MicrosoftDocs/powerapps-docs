@@ -1,7 +1,7 @@
 ---
 title: "Handle exceptions in a plug-in (Microsoft Dataverse) | Microsoft Docs" 
 description: "Understand system behavior when a plug-in passes an exception back to the caller."
-ms.date: 02/05/2024
+ms.date: 08/25/2026
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: pehecke
@@ -17,33 +17,33 @@ contributors:
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
-The way exceptions are managed in plug-ins depends on the type of plug-in step registration.
+The way Dataverse manages plug-in exceptions depends on the type of plug-in step registration.
 
-- Exceptions for synchronous plug-in steps cancel and roll back the operation. You have the ability to control the message returned to the user.
+- Exceptions for synchronous plug-in steps cancel and roll back the operation. You can control the message returned to the user.
 - Exceptions for asynchronous plug-in steps are logged and added to the **System Job** table, also known as the [AsyncOperation Table](reference/entities/asyncoperation.md).
 
 <a name='cancelling-an-operation'></a>
 
-## Cancelling the current operation
+## Cancel the current operation
 
-Within a synchronous plug-in, one of the options you have is to reject the request. If the operation doesn't follow the rules enforced by your plug-in, you can throw an <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException> exception and provide the reasons why the operation was rejected in the message.
+Within a synchronous plug-in, you can reject the message request. If the operation doesn't follow the rules enforced by your plug-in, throw an <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException> exception and include the reasons in the message.
 
-Ideally, you should only cancel operations using synchronous plug-ins registered in the **PreValidation** stage. This stage *usually* occurs outside the main database transaction. Cancelling an operation before it reaches the transaction is highly desirable because the canceled operation has to be rolled back. Rolling back the operation requires significant resources and has a performance impact on the system. Operations in the **PreOperation** and **PostOperation** stages are always within the database transaction.
+Ideally, cancel operations by using synchronous plug-ins registered in the **PreValidation** stage. This stage *usually* occurs outside the main database transaction. Cancel the operation before it reaches the transaction to avoid rolling back the operation. Rolling back the operation requires significant resources and affects system performance. Operations in the **PreOperation** and **PostOperation** stages always occur within the database transaction.
 
-Sometimes **PreValidation** stages are within a transaction when they're initiated by logic in another operation. For example, if you create a task record in the **PostOperation** stage of the creation of an account, the task creation passes through the event execution pipeline and occurs within the **PreValidation** stage, yet it's part of the transaction that is creating the account table record. You can tell whether an operation is within a transaction by the value of the <xref:Microsoft.Xrm.Sdk.IExecutionContext>.<xref:Microsoft.Xrm.Sdk.IExecutionContext.IsInTransaction> property.
+Sometimes **PreValidation** stages are within a transaction when another operation initiates them. For example, if you create a task record in the **PostOperation** stage of the creation of an account, the task creation passes through the event execution pipeline and occurs within the **PreValidation** stage, yet it's part of the transaction that creates the account table record. Check the value of the <xref:Microsoft.Xrm.Sdk.IExecutionContext>.<xref:Microsoft.Xrm.Sdk.IExecutionContext.IsInTransaction> property to see whether an operation is within a transaction.
 
 ### How Model-driven apps handle synchronous plug-in exceptions
 
-When you throw an <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException> exception within a synchronous plug-in, an error dialog with your message is displayed to the user. If you don't provide a message, a generic error dialog is shown to the user. If any other type of exception is thrown, the user sees an error dialog with a generic message and the exception message and stack trace are written to the [PluginTraceLog Table](reference/entities/plugintracelog.md).
+When you throw an <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException> exception within a synchronous plug-in, an error dialog with your message is displayed to the user. If you don't provide a message, a generic error dialog is shown to the user. If you throw any other type of exception, the user sees an error dialog with a generic message. The exception message and stack trace are written to the [PluginTraceLog Table](reference/entities/plugintracelog.md).
 
 > [!NOTE]
-> In Unified Interface, the error dialog does not support HTML encoded content in the message. Text only please.
+> In Unified Interface, the error dialog doesn't support HTML encoded content in the message. Use text only.
 
 ## Unexpected errors
 
-However, when any exception occurs in the plug-in code for a synchronous step, the pipeline operation being processed in the database transaction is canceled and rolled back whether you throw an `InvalidPluginExecutionException` or not. `InvalidPluginExecutionException` is the only exception that provides you with the ability to control what exception message is displayed to the user. This is true if model-driven apps used by Dynamics 365 solutions.
+If an exception occurs in the plug-in code for a synchronous step, the pipeline operation being processed in the database transaction is canceled and rolled back, whether you throw an `InvalidPluginExecutionException` or not. `InvalidPluginExecutionException` is the only exception that provides you with the ability to control what exception message is displayed to the user. This behavior applies to model-driven apps used by Dynamics 365 solutions.
 
-Take a look at the available <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException.%23ctor%2A> constructors to see what kind of error related data your plug-in can pass back to the platform.
+To see what kind of error-related data your plug-in can pass back to the platform, review the available <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException.%23ctor%2A> constructors.
 
 > [!TIP]
 > We recommend that you catch any error and throw an `InvalidPluginExecutionException` exception so you can control what is displayed to the user. This error may simply be "`An unexpected error occurred`", but you could also add some information that will help the administrator troubleshoot the issue. This way, you have some control. If you allow other types of exceptions to bubble up, the error will be presented as an `IsvUnExpected` error with the message `An unexpected error occurred from ISV code.`, which is not very helpful.

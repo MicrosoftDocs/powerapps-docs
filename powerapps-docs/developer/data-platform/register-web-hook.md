@@ -1,7 +1,7 @@
 ---
 title: Register a WebHook
 description: Learn how to register a WebHook using the Plug-in Registration tool.
-ms.date: 03/22/2022
+ms.date: 08/25/2026
 ms.reviewer: pehecke
 ms.topic: how-to
 author: swylezol
@@ -13,41 +13,41 @@ contributors:
   - PHecke
   - JimDaly
 ---
-# Register a WebHook
+# Register a webhook
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
-Use the Plug-in Registration tool to register a WebHook. To get the Plug-in Registration tool, see [Dataverse development tools](download-tools-nuget.md).
+Use the Plug-in Registration tool to register a webhook. To get the Plug-in Registration tool, see [Dataverse development tools](download-tools-nuget.md).
 
 In the Plug-in Registration tool, select the **Register New WebHook** option.
 
 ![Shows the menu option to register a new web hook. The keyboard shortcut is Ctrl+W.](media/register-new-web-hook.PNG)
 
-When you register a WebHook, you must provide three items of information:
+When you register a webhook, you must provide three items of information:
 
 
 |Item  |Description  |
 |---------|---------|
-|**Name**|A unique name describing the WebHook.|
+|**Name**|A unique name describing the webhook.|
 |**Endpoint URL**|The URL to post execution context information to.|
-|**Authentication**|One of three authentication options. For any type of authentication, you must provide the keys that identifies the request as legitimate.|
+|**Authentication**|One of three authentication options. For any type of authentication, you must provide the keys that identify the request as legitimate.|
 
-Registered WebHooks support only port 80 for HTTP and port 443 for HTTPS. 
+Registered webhooks support only port 80 for HTTP and port 443 for HTTPS. 
 
 ## Authentication options
 
-The correct WebHook registration authentication option and values to use depends on what the endpoint expects. The owner of the endpoint must tell you what to use. To use Webhooks with Microsoft Dataverse, the endpoint must allow one of the following authentication options:
+The correct WebHook registration authentication option and values to use depend on what the endpoint expects. The owner of the endpoint must tell you what to use. To use Webhooks with Microsoft Dataverse, the endpoint must allow one of the following authentication options:
 
 |Type  |Description  |
 |---------|---------|
-|**HttpHeader**|Includes one or more key values pairs in the header of the http request.<br />Example: <br />`Key1: Value1`<br />`Key2: Value2`|
-|**WebhookKey**|Includes a query string using `code` as the key and a value required by the endpoint. When registering the WebHook using the Plug-in Registration tool, only enter the value.<br />Example: <br />`?code=00000000-0000-0000-0000-000000000001`|
+|**HttpHeader**|Includes one or more key value pairs in the header of the HTTP request.<br />Example: <br />`Key1: Value1`<br />`Key2: Value2`|
+|**WebhookKey**|Includes a query string using `code` as the key and a value required by the endpoint. When registering the WebHook using the Plug-in Registration tool, enter only the value.<br />Example: <br />`?code=00000000-0000-0000-0000-000000000001`|
 |**HttpQueryString**|Includes one or more key value pairs as query string parameters.<br />Example: <br />`?Key1=Value1&Key2=Value2`|
 
 > [!NOTE]
-> The **WebhookKey** option is useful with [Azure Functions](https://azure.microsoft.com/services/functions/) because the authentication query string is expected to have a key name of `code`.
+> The **WebhookKey** option is useful with [Azure Functions](https://azure.microsoft.com/services/functions/) because the authentication query string expects a key name of `code`.
 
-Any request to the endpoint configured should fail when the authentication options passed in the request don't match. The endpoint is responsible for this.
+Any request to the configured endpoint should fail when the authentication options passed in the request don't match. The endpoint is responsible for this condition.
 
 <a name="query-WebHook-registrations"></a>
 
@@ -99,9 +99,9 @@ Your choice in registering the WebHook changes the experience you have when debu
 
 #### Asynchronous mode
 
-When you use asynchronous execution mode a System Job (asyncoperation) is created to capture the success or failure of the operation. Choosing to delete the System Job when it succeeds saves database space.
+When you use asynchronous execution mode, the system creates a System Job (asyncoperation) to capture the success or failure of the operation. Choosing to delete the System Job when it succeeds saves database space.
 
-Any errors that occur are recorded in System Jobs. In the web application you can go to **Settings > System > System Jobs** to review the status of any Webhooks. There's a **Status Reason** value of **Failed**. Open the failed System Job to find details that describe why the job failed.
+The system records any errors that occur in System Jobs. In the web application, you can go to **Settings** > **System** > **System Jobs** to review the status of any Webhooks. There's a **Status Reason** value of **Failed**. Open the failed System Job to find details that describe why the job failed.
 
 <a name="query-failed-asynchronous-jobs-for-a-given-step"></a>
 
@@ -143,23 +143,23 @@ More information: [Use FetchXml to retrieve data](fetchxml/retrieve-data.md)
 [!INCLUDE [synchronous-webhook-error](includes/synchronous-webhook-error.md)]
 
 > [!NOTE]
-> You should use synchronous mode when it is important that the operation triggered by the WebHook occur immediately or if you want the entire transaction to fail unless the WebHook payload is received by the service. A simple WebHook step registration provides limited options to manage failure, but you can also invoke Webhooks using plug-ins and workflow activities if you require more control. More information: [Invoke a WebHook from a plug-in or workflow activity](use-webhooks.md#invoke-a-webhook-from-a-plug-in-or-workflow-activity).
+> Use synchronous mode when it's important that the operation triggered by the WebHook occur immediately or if you want the entire transaction to fail unless the WebHook payload is received by the service. A simple WebHook step registration provides limited options to manage failure, but you can also invoke Webhooks by using plug-ins and workflow activities if you require more control. For more information, see [Invoke a WebHook from a plug-in or workflow activity](use-webhooks.md#invoke-a-webhook-from-a-plug-in-or-workflow-activity).
 
-## Query steps registered for a WebHook
+## Query steps registered for a webhook
 
-Data for registered Webhooks is in the [SdkMessageProcessingStep Table](reference/entities/sdkmessageprocessingstep.md).
+Data for registered webhooks is in the [SdkMessageProcessingStep Table](reference/entities/sdkmessageprocessingstep.md).
 
-You can query the steps registered for a specific WebHook when you know the `serviceendpointid` for the WebHook. See [Query WebHook registrations](#query-WebHook-registrations) for a query to get the ID for a registered WebHook.
+You can query the steps registered for a specific webhook when you know the `serviceendpointid` for the webhook. See [Query WebHook registrations](#query-WebHook-registrations) for a query to get the ID for a registered webhook.
 
 **Web API:**
 
-You can use this Web API Query where *&lt;id&gt;* is the [ServiceEndpointId](reference/entities/serviceendpoint.md#BKMK_ServiceEndpointId) of the WebHook:
+Use this Web API query where *&lt;id&gt;* is the [ServiceEndpointId](reference/entities/serviceendpoint.md#BKMK_ServiceEndpointId) of the webhook:
 
 ```http
 GET [organization URI]/api/data/v9.0/serviceendpoints(@id)/serviceendpoint_sdkmessageprocessingstep?$select=sdkmessageprocessingstepid,name,description,asyncautodelete,filteringattributes,mode,stage?@id=<id>
 ```
 
-For more information about the registered step, you can use this Web API query where *&lt;stepid&gt;* is the [SdkMessageProcessingStepId](reference/entities/sdkmessageprocessingstep.md#BKMK_SdkMessageProcessingStepId) for the step:
+For more information about the registered step, use this Web API query where *&lt;stepid&gt;* is the [SdkMessageProcessingStepId](reference/entities/sdkmessageprocessingstep.md#BKMK_SdkMessageProcessingStepId) for the step:
 
 ```http
 GET [organization URI]/api/data/v9.0/sdkmessageprocessingsteps(@id)?$select=name,description,filteringattributes,asyncautodelete,mode,stage&$expand=plugintypeid($select=friendlyname),eventhandler_serviceendpoint($select=name),sdkmessagefilterid($select=primaryobjecttypecode),sdkmessageid($select=name)?@id=<stepid>
@@ -167,7 +167,7 @@ GET [organization URI]/api/data/v9.0/sdkmessageprocessingsteps(@id)?$select=name
 
 **FetchXML:**
 
-You can use this FetchXML to get the same information in one query where *&lt;serviceendpointid&gt;* is the ID of the WebHook:
+Use this FetchXML to get the same information in one query where *&lt;serviceendpointid&gt;* is the ID of the webhook:
 
 ```xml
 <fetch>
@@ -196,7 +196,7 @@ You can use this FetchXML to get the same information in one query where *&lt;se
 
 ## Next steps
 
-[Test WebHook registration with request logging site](test-WebHook-registration.md)<br />
+[Test Webhook registration with request logging site](test-WebHook-registration.md)<br />
 [Use Webhooks to create external handlers for server events](use-webhooks.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
