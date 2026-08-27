@@ -2,7 +2,7 @@
 title: "Overview of the model-driven app designer"
 description: Learn about the app designer for model-driven apps in Power Apps.
 ms.custom: ""
-ms.date: 01/27/2025
+ms.date: 08/27/2026
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: overview
@@ -22,6 +22,9 @@ search.audienceType:
 The model-driven app designer provides a modern WYSIWYG authoring experience when you work with model-driven apps.
 
 Changes to the app are instantly reflected in the preview, enabling you to see exactly how the app will appear to users when published.
+
+> [!TIP]
+> You can also use the preview model app builder skill with an AI code generation tool to plan, build, and edit a model-driven app from natural-language requirements. After the skill creates or updates the app, you can continue working with its standard Power Apps artifacts in the app designer and other Power Apps designers. More information: [Build and edit model-driven apps with AI code generation tools (preview)](model-driven-app-external-tools.md)
 
 The app designer interface has the following areas:
 
@@ -73,6 +76,8 @@ The following options are available:
 - The app’s URL can’t be specified.
 
 ## Next steps
+
+[Build and edit model-driven apps with AI code generation tools (preview)](model-driven-app-external-tools.md)
 
 [Create a model-driven app using the app designer](create-model-driven-app.md)
 

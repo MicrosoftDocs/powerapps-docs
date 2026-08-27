@@ -38,6 +38,8 @@ landingContent:
     linkLists:
        - linkListType: quickstart
          links:
+          - text: Build an app with AI code generation tools (preview)
+            url: model-driven-app-external-tools.md
           - text: Create a simple app
             url: build-first-model-driven-app.md
           - text: Steps to building a model-driven app
