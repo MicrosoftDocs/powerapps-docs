@@ -1,9 +1,9 @@
 ---
-title: Code components for model-driven apps  | Microsoft Docs
-description: Learn how to create code components using Power Apps component framework for model-driven apps
+title: Code Components for Model-Driven Apps
+description: Learn how to create, add, and update code components for model-driven apps with Power Apps component framework. Get started with the development process.
 author: anuitz
 ms.author: anuitz
-ms.date: 05/27/2022
+ms.date: 08/26/2026
 ms.reviewer: jdaly
 ms.topic: article
 ms.subservice: pcf
@@ -13,12 +13,12 @@ contributors:
 
 # Code components for model-driven apps
 
-Power Apps component framework gives developers the ability to extend the visualizations in model-driven apps. Professional developers can create, debug, import, and add code components to model-driven apps using [Microsoft Power Platform CLI](get-powerapps-cli.md). You can add code components to columns, grids, and sub grids in model-driven apps. 
+This article explains how professional developers can create, debug, import, and add code components for model-driven apps by using Power Apps component framework and [Microsoft Power Platform CLI](get-powerapps-cli.md). These components help extend visualizations in model-driven apps. You can add code components to columns, grids, and sub grids in model-driven apps. 
 
 > [!IMPORTANT]
 > Power Apps component framework is enabled for model-driven apps by default. See [Code components for canvas apps](component-framework-for-canvas-apps.md) to learn how to enable Power Apps component framework for canvas apps.
 
-## Implementing code components
+## Implement code components
 
 Before you start creating code components, make sure that you have installed all the [prerequisites](create-custom-controls-using-pcf.md#prerequisites) that are required to develop components using Power Apps component framework.
 
@@ -28,11 +28,9 @@ The [create your first code component](implementing-controls-using-typescript.md
 
 To add code components to a column or a table in model-driven apps, see [Add code components to model-driven apps](add-custom-controls-to-a-field-or-entity.md).
 
-> [!div class="mx-imgBorder"] 
-> ![Add linear slider control.](../../maker/model-driven-apps/media/add-slider.PNG "Add linear slider control")
+:::image type="content" source="../../maker/model-driven-apps/media/add-slider.PNG" alt-text="Screenshot of the Add Control dialog for a linear slider code component.":::
 
-> [!div class="mx-imgBorder"]
-> ![Data Set Grid component.](media/add-dataset-component.png "Data Set Grid component")
+:::image type="content" source="media/add-dataset-component.png" alt-text="Screenshot of the Data Set Grid code component configuration.":::
 
 ## Update existing code components
 
