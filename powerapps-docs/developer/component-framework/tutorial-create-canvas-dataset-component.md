@@ -79,7 +79,7 @@ One of the advantages of Microsoft Fluent UI is that it provides a consistent an
 
 ### Configuring `eslint`
 
-The template used by [pac pcf init](/power-platform/developer/cli/reference/pcf#pac-pcf-init) installs the `eslint` module to your project and configures it by adding an `.eslintrc.json` file. `Eslint` now requires configuring for TypeScript and React coding styles. More information: [Linting - Best practices and guidance for code components](code-components-best-practices.md#linting).
+The template used by [pac pcf init](/power-platform/developer/cli/reference/pcf#pac-pcf-init) installs the `eslint` module to your project and configures it by adding an `.eslintrc.json` file. You need to configure `eslint` for TypeScript and React coding styles. For more information, see [Configure ESLint for code components](code-components-best-practices.md#configure-eslint-for-code-components).
 
 ## Define the dataset properties
 
@@ -2808,7 +2808,7 @@ Now that you've implemented all the features, you must deploy the code component
 
 1. Inside your Dataverse environment, ensure there's a publisher created with a prefix of `samples`:
 
-   :::image type="content" source="media/field-component-4.png" alt-text="Add new publisher":::
+  :::image type="content" source="media/tutorial-create-model-driven-field-component/create-solution-publisher.png" alt-text="Add new publisher":::
 
    This could also be your own publisher, provided you update the publisher prefix parameter in the call to [pac pcf push](/power-platform/developer/cli/reference/pcf#pac-pcf-push) below.
    More information: [Create a solution publisher](/powerapps/maker/data-platform/create-solution#solution-publisher).
@@ -2901,7 +2901,7 @@ C:\repos\CanvasGrid\out\controls\CanvasGrid\${folder}\${fname}
 
 :::image type="content" source="media/canvas-datagrid-8.png" alt-text="AutoResponder rule":::
 
-You'll also need to enable the filters to add the `Access-Control-Allow-Origin` header. More information: [Debugging after deploying into Microsoft Dataverse](debugging-custom-controls.md#debugging-after-deploying-into-microsoft-dataverse).
+You also need to enable the filters to add the `Access-Control-Allow-Origin` header. For more information, see [Debug code components after deployment to Microsoft Dataverse](debugging-custom-controls.md#debug-code-components-after-deployment-to-microsoft-dataverse).
 
 You'll need to **Empty cache and hard refresh** on your browser session for the **AutoResponder** file to be picked up. Once loaded, you can simply refresh the browser since Fiddler will add a cache control header to the file to prevent it from being cached.
 

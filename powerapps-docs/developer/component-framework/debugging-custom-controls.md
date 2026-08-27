@@ -1,9 +1,9 @@
 ---
-title: "Debug code components | MicrosoftDocs"
-description: "How to debug a code component using Fiddler and Native debugging"
+title: "Debug Code Components During Development"
+description: "Learn how to debug code components with the browser test harness, developer tools, Fiddler, and Requestly before and after deployment to Dataverse."
 author: anuitz
 ms.author: anuitz
-ms.date: 05/27/2022
+ms.date: 08/26/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 ms.subservice: pcf
@@ -14,26 +14,26 @@ contributors:
 
 # Debug code components
 
-This article provides information on how to debug your code component logic while it's being developed. Writing unit tests for your code is considered good practice so that the logic can be tested independently from the Power Apps component framework runtime.
+This article explains how to debug code components during development and after deployment to Microsoft Dataverse. Use unit tests to validate component logic independently of the Power Apps component framework runtime.
 
 This article shows how to debug your code components using the test harness and after deploying to Microsoft Dataverse:
 
 - [Debug code components](#debug-code-components)
-  - [Debugging using the browser test harness](#debugging-using-the-browser-test-harness)
+   - [Debug code components with the browser test harness](#debug-code-components-with-the-browser-test-harness)
     - [Test code components with mock data](#test-code-components-with-mock-data)
     - [Common limitations when using the test harness](#common-limitations-when-using-the-test-harness)
-  - [Using browser developer tools to debug your code component](#using-browser-developer-tools-to-debug-your-code-component)
-    - [Bundling using web pack](#bundling-using-webpack)
-    - [Using developer tools with code components](#using-developer-tools-with-code-components)
+   - [Use browser developer tools to debug code components](#use-browser-developer-tools-to-debug-code-components)
+      - [Bundle code components with webpack](#bundle-code-components-with-webpack)
+      - [Use developer tools to debug code components](#use-developer-tools-to-debug-code-components)
     - [ES5 vs ES6](#es5-vs-es6)
-  - [Debugging after deploying into Microsoft Dataverse](#debugging-after-deploying-into-microsoft-dataverse)
-    - [Using Fiddler](#using-fiddler)
-    - [Using Requestly](#using-requestly)
+   - [Debug code components after deployment to Microsoft Dataverse](#debug-code-components-after-deployment-to-microsoft-dataverse)
+      - [Use Fiddler to debug code components](#use-fiddler-to-debug-code-components)
+      - [Use Requestly to debug code components](#use-requestly-to-debug-code-components)
 
 
 [!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
-## Debugging using the browser test harness
+## Debug code components with the browser test harness
 
 While you're implementing the code component logic, using `npm start` or `npm start watch` builds the code component and open the local test harness in a new browser window. This test harness is part of Microsoft Power Platform CLI and hence is the same irrespective of if you plan to use your code component in model-driven apps, canvas apps, or portals. More information: [Create your first component](implementing-controls-using-typescript.md).
 
@@ -42,8 +42,7 @@ While you're implementing the code component logic, using `npm start` or `npm st
 
 The following image shows what Visual Studio Code looks like when you use the `npm start watch` for the `DataSetGrid` sample:
 
-> [!div class="mx-imgBorder"] 
-> ![Debugging Visual Studio Code.](media/debugging-1.png "Debugging Visual Studio Code")
+:::image type="content" source="media/debugging-custom-controls/debug-code-components-vscode-watch.png" alt-text="Screenshot of Visual Studio Code running the DataSetGrid component in watch mode.":::
 
 Launching the test harness in `watch` mode enables you to quickly see the changes in action. Changes made to any of the following component assets are automatically reflected in the test harness without having to restart it:
 
@@ -53,13 +52,11 @@ Launching the test harness in `watch` mode enables you to quickly see the change
 
 If you make changes to any of these files, you'll see a `Change detected` message and the browser reloads with the updated code.
 
-> [!div class="mx-imgBorder"] 
-> ![Changes detected.](media/changes-detected.png "Changes detected")
+:::image type="content" source="media/debugging-custom-controls/code-component-change-detected.png" alt-text="Screenshot of the test harness reloading after detecting code component changes.":::
 
 The following image shows the test harness once it's opened in a new browser window:
 
-> [!div class="mx-imgBorder"] 
-> ![Test harness 1.](media/test-harness-1.png "Test harness 1")
+:::image type="content" source="media/debugging-custom-controls/code-component-test-harness-layout.png" alt-text="Screenshot of the browser test harness with the code component and input panels.":::
 
 As the image above shows, the browser window opens to display four areas. The code component is rendered in the left pane while the right pane has three sections that depend on the type of component being debugged:
 
@@ -86,18 +83,15 @@ As the image above shows, the browser window opens to display four areas. The co
 
 - For components with [`property`](reference\property.md) elements in the `ControlManifest.Input.xml`, the **Data Inputs** section shows an input box for each value.
 
-  > [!div class="mx-imgBorder"] 
-  > ![Data Inputs.](media/data-inputs.png "Data Inputs")
+   :::image type="content" source="media/debugging-custom-controls/code-component-test-harness-data-inputs.png" alt-text="Screenshot of test harness Data Inputs fields for code component properties.":::
 
 - For _dataset_ type components, you can load a CSV file with test data for each [data-set](manifest-schema-reference\data-set.md) element. You manually create or export in .csv format directly from your environment. After loading a CSV file, you can bind each [property-set](manifest-schema-reference\property-set.md) defined in the `ControlManifest.Input.xml` to a column in the CSV file. The following screenshot shows how this binding is done by picking the column for each property:
 
-  > [!div class="mx-imgBorder"] 
-  > ![test harness 3.](media/test-harness-3.png "test harness 3")
+   :::image type="content" source="media/debugging-custom-controls/dataset-test-harness-map-csv-columns.png" alt-text="Screenshot of CSV columns mapped to dataset properties in the test harness.":::
 
 - If you don't have any properties defined in the `ControlManifest.Input.xml` file, then all the columns get automatically loaded into the test harness. The following screenshot shows how you can assign the data type to the code component for each column in the source CSV:
 
-  > [!div class="mx-imgBorder"] 
-  > ![Test harness 5.](media/test-harness-5.png "Test harness 5")
+   :::image type="content" source="media/debugging-custom-controls/dataset-test-harness-assign-column-data-types.png" alt-text="Screenshot of data types assigned to CSV columns in the test harness.":::
 
 > [!NOTE]
 > When loading a CSV sample dataset you must select **Apply** before the data is loaded. If the dataset has property-set elements defined, then each must be mapped to a column in the CSV before you can select **Apply**. These settings are not remembered and must be set every time a code change is made, after the test harness re-loads.
@@ -113,13 +107,13 @@ While the test harness is suitable for testing simple code components, the follo
 1. Model-driven apps specifics such as field level security, read-only behavior, dataset selection API, and integration with the model-driven apps command bar.
 1. Other context APIs such as [Navigation](reference/navigation.md) and [Utility](reference/utility.md) methods.
 
-To test these scenarios, you'll need to first deploy your code component and test using the technique described in [Debugging after deploying to Dataverse using Fiddler](#debugging-after-deploying-into-microsoft-dataverse)
+To test these scenarios, you need to first deploy your code component and test it by using the technique described in [Debug code components after deployment to Microsoft Dataverse](#debug-code-components-after-deployment-to-microsoft-dataverse)
 
-## Using browser developer tools to debug your code component
+## Use browser developer tools to debug code components
 
 Modern browsers have a built-in set of developer tools that allow you to inspect the HTML, CSS, and JavaScript loaded on the current page. You can access these developer tools using the keyboard shortcut `Ctrl`+`Shift`+`I`. Using the `F12` key is also a common keyboard shortcut to open the developer tools however this shortcut doesn't work inside Power Apps Studio due to it being already used for the **Download App** keyboard shortcut.
 
-### Bundling using webpack
+### Bundle code components with webpack
 
 When you write code components using TypeScript, your code probably looks different from the JavaScript that is emitted into the bundled code component output. When you run `npm start` or `npm start watch`, the `pcf-scripts` module (added to the `packages.json` by running [pac pcf init](/power-platform/developer/cli/reference/pcf#pac-pcf-init)) uses web pack to build multiple TypeScript files into a single `bundle.js` inside the `out` folder. This folder also contains any other resources (for example, `html`/`css`) referenced by your `ControlManifest.Input.xml` including the manifest itself, but named instead as just `ControlManifest.xml`.
 
@@ -130,14 +124,14 @@ Another feature of bundling is that when you use `npm install` to include an ext
 > [!NOTE]
 > The source maps will only be output when you run the build-in development mode and will result in a much larger file than your production build. For this reason, it is not recommended to deploy your code component after building for development purposes. More information: [Application Lifecycle Management (ALM)](code-components-alm.md).
 
-### Using developer tools with code components
+### Use developer tools to debug code components
 
 This section describes how to debug your code component inside the Microsoft Edge developer tools:
 
 1. Load your code component into a browser session using either:
 
    1. The test harness using `npm start watch`.
-   1. A local development build of your code component loaded into a model-driven, canvas app, or portal browser session. You don't need to deploy a development build of your code component to Dataverse server, but instead, you can use Fiddler Auto Responders as described in [Debugging after deployment into Microsoft Dataverse using Fiddler](#debugging-after-deploying-into-microsoft-dataverse).
+   1. A local development build of your code component loaded into a model-driven, canvas app, or portal browser session. You don't need to deploy a development build of your code component to Dataverse server. Instead, you can use Fiddler Auto Responders as described in [Debug code components after deployment to Microsoft Dataverse](#debug-code-components-after-deployment-to-microsoft-dataverse).
 
 1. Select `Ctrl` + `Shift` + `I` to open the developer tools.
 1. Select the **Sources** tab inside the developer tools panel.
@@ -146,20 +140,17 @@ This section describes how to debug your code component inside the Microsoft Edg
 1. Select the file in the matches listed that is similar to:
    `webpack://pcf_tools_652ac3f36e1e4bca82eb3c1dc44e6fad/./DataSetGrid/index.ts`
 
-   > [!div class="mx-imgBorder"] 
-   > ![Developer Tools 1.](media/developer-tools-1.png "Developer Tools 1")
+   :::image type="content" source="media/debugging-custom-controls/edge-devtools-open-component-source.png" alt-text="Screenshot of Microsoft Edge DevTools showing a code component TypeScript source file.":::
 
 1. Locate the `updateView` function and place a breakpoint on the first line.
 1. Make a change to the properties that are bound to your code component. In the test harness, changing properties can be done using the properties panel, or inside Power Apps, you can make a change to a bound property or dataset. Changing properties triggers a call to `updateView`.
 1. You'll now see your breakpoint hit, and you can inspect the code.
 
-   > [!div class="mx-imgBorder"] 
-   > ![Developer Tools 2.](media/developer-tools-2.png "Developer Tools 2")
+   :::image type="content" source="media/debugging-custom-controls/edge-devtools-updateview-breakpoint.png" alt-text="Screenshot of Microsoft Edge DevTools paused at an updateView breakpoint.":::
 
 1. You can also inspect the HTML elements and CSS created by the component using the **Elements** tab. If you have a specific set of interactions that you're interested in (root container element), you can place a breakpoint on the HTML Dom element using the **Context Menu** (while the root element is selected) > **Break on** > **subtree modifications**
 
-    > [!div class="mx-imgBorder"] 
-    > ![Developer Tools 3.](media/developer-tools-3.png "Developer Tools 3")
+   :::image type="content" source="media/debugging-custom-controls/edge-devtools-break-on-subtree-modifications.png" alt-text="Screenshot of Microsoft Edge DevTools menu for breaking on subtree modifications.":::
 
 ### ES5 vs ES6
 
@@ -178,7 +169,7 @@ Currently, by default, code components are configured to transpile into ES5 Java
 > [!NOTE]
 > At this time source maps are generated from TypeScript transpiled output for each TypeScript file rather than from the source. If ES5 is targeted, then your source maps will be harder to read due to the ES6 language features (such as classes) being removed. Until support for ES6 is added, even if you need to output ES5, you can update your `tsconfig.json` to target ES6 while developing so that the source maps are closer to the original TypeScript. If you need to output ES5, remember to set it back before building your code component for production deployment.
 
-## Debugging after deploying into Microsoft Dataverse
+## Debug code components after deployment to Microsoft Dataverse
 
 To fully test the logic inside the context of a model-driven app, canvas app, or portal you can first deploy and configure your code component to Microsoft Dataverse and then use either [Fiddler](https://www.telerik.com/download/fiddler)'s Auto Responder feature or use [requestly](https://requestly.io/). In both cases, you'll load a development build of your code component (built locally) into the browser without having to continuously deploy changes as you debug your code. Debugging this way allows you to debug against a nondevelopment downstream environment without having to first deploy a development build.
 
@@ -193,7 +184,7 @@ First ensure your component is deployed and configured in Microsoft Dataverse. I
 </PropertyGroup>
 ```
 
-### Using Fiddler
+### Use Fiddler to debug code components
 
 To debug your code component using Fiddler:
 
@@ -201,8 +192,7 @@ To debug your code component using Fiddler:
 1. Open Fiddler and from the menu bar, go to **Tools**, and then select **Options**.
 1. Select the **HTTPS** tab in the dialog box and check the **Capture HTTPS CONNECTS** and **Decrypt HTTPS traffic** checkboxes so that the HTTPS traffic is captured and then decrypted.
 
-   > [!div class="mx-imgBorder"] 
-   > ![Select the marked checkboxes in the HTTP tab.](media/fiddler-https-options.png "Select the marked checkboxes in the HTTP tab")
+   :::image type="content" source="media/debugging-custom-controls/fiddler-capture-decrypt-https-settings.png" alt-text="Screenshot of Fiddler HTTPS options for capturing and decrypting HTTPS traffic.":::
 
 1. Select **OK** to close the dialog box.
 
@@ -228,8 +218,7 @@ To debug your code component using Fiddler:
 
    An example of this rule looks like the following:
 
-   > [!div class="mx-imgBorder"] 
-   > ![AutoResponder rule.](media/fiddler-rule-example.png "AutoResponder rule")
+   :::image type="content" source="media/debugging-custom-controls/fiddler-autoresponder-code-component-rule.png" alt-text="Screenshot of a Fiddler AutoResponder rule for local code component resources.":::
 
    If you want a simpler **AutoResponder** rule approach, see [Script web resource development using Fiddler Auto Responder](../model-driven-apps/streamline-javascript-development-fiddler-autoresponder.md).
 
@@ -252,20 +241,18 @@ To debug your code component using Fiddler:
 
    Value: `*`
 
-   > [!div class="mx-imgBorder"] 
-   > ![Fiddler Filter.](media/fiddler-filter.png "Fiddler Filter")
+   :::image type="content" source="media/debugging-custom-controls/fiddler-access-control-response-header-filter.png" alt-text="Screenshot of a Fiddler response-header filter for cross-origin access.":::
 
    > [!IMPORTANT]
    > This step is only necessary when debugging code components after they are deployed to canvas apps because the resources are stored in blob storage rather than underneath the `powerapp.com` domain. As such, any requests to these resources will require cross-domain access when loaded by the browser. Only enable this `Access-Control-Allow-Origin` filter rule when you are debugging since it will modify headers of other sites that you visit.
 
 1. Now that you have the **AutoResponder** rules running you'll need to first clear the cache in the browser and reload the page containing the code component. This can easily be done by opening developer tools (`Ctrl + Shift + I`), right-clicking the **Refresh** > **Empty cache and hard refresh**.
 
-   > [!div class="mx-imgBorder"] 
-   > ![Empty cache and hard refresh.](media/refresh-reload.png "Empty cache and hard refresh")
+   :::image type="content" source="media/debugging-custom-controls/edge-empty-cache-hard-refresh.png" alt-text="Screenshot of the Microsoft Edge Empty cache and hard refresh command.":::
 
 1. Once you have your code component loaded from your local machine, you can make changes to the code (while `npm start watch` is running) and refresh the browser to load the newly built versions. Fiddler's Auto Responder will automatically add a cache-control header so that it will not be cached by the browser so a simple refresh will reload the resources without having to clear the cache each time.
 
-### Using requestly
+### Use Requestly to debug code components
 
 To debug your code component using Requestly:
 
@@ -286,15 +273,11 @@ To debug your code component using Requestly:
    1. Set **Port** (any number, for instance,  **7777**).
    1. Select **OK**. Selected folder is now hosted on `http://localhost:<SELECTED_PORT>`
 
-   > [!div class="mx-imgBorder"] 
-   > ![IIS website.](media/iis-website.png "IIS website")
+   :::image type="content" source="media/debugging-custom-controls/iis-add-code-component-website.png" alt-text="Screenshot of IIS settings for hosting code component files on a local website.":::
 
 1. Download and install [Requestly](https://requestly.io)
-
 1. Follow onboarding to the tool.
-
 1. Open rules (navigate to https://app.requestly.io/rules).
-
 1. Add "Replace Host" rule:
 
    1. Set name of the rule.
@@ -303,13 +286,11 @@ To debug your code component using Requestly:
    1. Set "If request" with "URL" "Contains" `[YOUR_NAMESPACE].[YOUR_CONTROL_NAME]`
    1. Save the rule and enable it.
 
-   > [!div class="mx-imgBorder"] 
-   > ![Requestly rule.](media/requestly-rule.png "Requestly rule")
+   :::image type="content" source="media/debugging-custom-controls/requestly-replace-code-component-host-rule.png" alt-text="Screenshot of a Requestly Replace Host rule for local code component files.":::
 
 1. Now you need to clear the cache in the browser and reload the page containing the code component. You can clear the cache in the browser and reload the page by opening developer tools (`Ctrl + Shift + I`), right-clicking the **Refresh** > **Empty cache and hard refresh**.
 
-   > [!div class="mx-imgBorder"] 
-   > ![Empty cache and hard refresh.](media/refresh-reload.png "Empty cache and hard refresh")
+   :::image type="content" source="media/debugging-custom-controls/edge-empty-cache-hard-refresh.png" alt-text="Empty cache and hard refresh":::
 
 1. Once you have your code component loaded from your local machine, you can make changes to the code (while `npm start watch` is running) and refresh the browser to load the newly built versions. Requestly automatically adds a cache-control header so that it isn't cached by the browser so a simple refresh will reload the resources without having to clear the cache each time.
 

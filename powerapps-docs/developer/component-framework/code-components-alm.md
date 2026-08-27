@@ -19,12 +19,9 @@ ALM is a term used to describe the lifecycle management of software applications
 This article describes considerations and strategies for working with specific aspects of lifecycle management from the perspective of code components in Microsoft Dataverse:
 
 1. [Development and debugging ALM considerations](#development-and-debugging-alm-considerations)
-
-2. [Code component solution strategies](#code-component-solution-strategies)
-
-3. [Versioning and deploying updates](#versioning-and-deploying-updates)
-
-4. [Canvas apps ALM considerations](#canvas-apps-alm-considerations)
+1. [Code component solution strategies](#code-component-solution-strategies)
+1. [Versioning and deploying updates](#versioning-and-deploying-updates)
+1. [Canvas apps ALM considerations](#canvas-apps-alm-considerations)
 
 ## Development and debugging ALM considerations
 
@@ -53,7 +50,7 @@ More information: [Package a code component](import-custom-controls.md#package-a
 
 When building `pcfproj` projects, the generated JavaScript depends on the command used to build and the `PcfBuildMode` in the `pcfproj` file.
 
-You don't normally deploy a code component into Microsoft Dataverse that has been built in development mode since it's often too large to import and may result in slower runtime performance. More information: [Debugging after deploying into Microsoft Dataverse](debugging-custom-controls.md#debugging-after-deploying-into-microsoft-dataverse).
+Don't normally deploy a code component into Microsoft Dataverse that you built in development mode. The component is often too large to import and might result in slower runtime performance. For more information, see [Debug code components after deployment to Microsoft Dataverse](debugging-custom-controls.md#debug-code-components-after-deployment-to-microsoft-dataverse).
 
 For [pac pcf push](/power-platform/developer/cli/reference/pcf#pac-pcf-push) to result in a release build, the `PcfBuildMode` is set inside the `pcfproj` by adding a new element under the `OutputPath` element as follows:
 
@@ -68,11 +65,11 @@ For [pac pcf push](/power-platform/developer/cli/reference/pcf#pac-pcf-push) to 
 
 The following table shows which commands result in development vs. release builds:
 
-| Build command used on `pcfproj` | Development Build<br />(debug purposes only)                                            | Release Build                                                 |
-| ------------------------------- | --------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| `npm start watch`               | Always                                                                                  |                                                               |
-| [pac pcf push](/power-platform/developer/cli/reference/pcf#pac-pcf-push)                  | Default behavior or when `PcfBuildMode` is set to **development** in the `pcfproj` file | `PcfBuildMode` is set to **production** in the `pcfproj` file |
-| `npm run build`                 | Default behavior                                                                        | `npm run build -- --buildMode production`                     |
+| Build command used on `pcfproj` | Development Build<br />(debug purposes only) | Release Build |
+| --- | --- | --- |
+| `npm start watch` | Always | |
+| [pac pcf push](/power-platform/developer/cli/reference/pcf#pac-pcf-push) | Default behavior or when `PcfBuildMode` is set to **development** in the `pcfproj` file | `PcfBuildMode` is set to **production** in the `pcfproj` file |
+| `npm run build` | Default behavior | `npm run build -- --buildMode production` |
 
 More information: [Package a code component](import-custom-controls.md#package-a-code-component).
 
