@@ -8,7 +8,7 @@ ms.subservice: code-apps
 ms.author: jordanchodak
 ms.reviewer: jdaly
 author: jordanchodakWork
-ms.date: 08/12/2026
+ms.date: 08/26/2026
 ---
 
 # Publish Power Apps code apps with a service principal
@@ -38,8 +38,8 @@ Microsoft Entra ID provides several identifiers for an app registration and its 
 
 | Identifier | Where to find it | How it's used |
 | --- | --- | --- |
-| Application (client) ID | **App registrations** | Set the `SP_CLIENT_ID` environment variable. |
-| Directory (tenant) ID | **App registrations** | Set the `SP_TENANT_ID` environment variable. |
+| Application (client) ID | **App registrations** | Set the `PA_CLI_SP_CLIENT_ID` environment variable. |
+| Directory (tenant) ID | **App registrations** | Set the `PA_CLI_SP_TENANT_ID` environment variable. |
 | Enterprise Application object ID | **Enterprise applications** | Pass to [`pa app share --principal`](../reference/cli.md#pa-app-share). |
 
 ## Prerequisite: Share the app with the service principal
@@ -98,18 +98,18 @@ Set the service principal authentication environment variables in the CI/CD job 
 
 ```powershell
 $env:PA_CLI_USE_SP_AUTH = "true"
-$env:SP_CLIENT_ID = "<application-client-id>"
-$env:SP_CLIENT_SECRET = "<client-secret>"
-$env:SP_TENANT_ID = "<tenant-id>"
+$env:PA_CLI_SP_CLIENT_ID = "<application-client-id>"
+$env:PA_CLI_SP_CLIENT_SECRET = "<client-secret>"
+$env:PA_CLI_SP_TENANT_ID = "<tenant-id>"
 ```
 
 #### [Bash](#tab/bash)
 
 ```bash
 export PA_CLI_USE_SP_AUTH=true
-export SP_CLIENT_ID="<application-client-id>"
-export SP_CLIENT_SECRET="<client-secret>"
-export SP_TENANT_ID="<tenant-id>"
+export PA_CLI_SP_CLIENT_ID="<application-client-id>"
+export PA_CLI_SP_CLIENT_SECRET="<client-secret>"
+export PA_CLI_SP_TENANT_ID="<tenant-id>"
 ```
 
 ---
@@ -139,5 +139,4 @@ When the command finishes, an exit code of `0` indicates that the update was pub
 - [Power Apps CLI command reference](../reference/cli.md)
 - [Application lifecycle management (ALM) for code apps](alm.md)
 - [Sign in and manage accounts with the Power Apps CLI](sign-in-manage-accounts.md)
-
 
