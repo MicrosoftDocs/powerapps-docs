@@ -70,6 +70,8 @@ additionalContent:
               url: vibe/overview.md    
             - text: Build apps through conversation
               url: maker/canvas-apps/ai-conversations-create-app.md
+            - text: Build model-driven apps with AI code generation tools (preview)
+              url: maker/model-driven-apps/model-driven-app-external-tools.md
             - text: Build pages with generative pages
               url: maker/model-driven-apps/generative-pages.md
             - text: Add a Copilot control to a canvas app (preview)

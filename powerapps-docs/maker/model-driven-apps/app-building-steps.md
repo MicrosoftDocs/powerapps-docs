@@ -5,7 +5,7 @@ keywords: App designer; site map designer; my apps
 author: Mattp123
 ms.subservice: mda-maker
 ms.author: matp
-ms.date: 04/06/2026
+ms.date: 08/27/2026
 ms.topic: how-to
 applies_to: 
   - PowerApps
@@ -17,6 +17,9 @@ search.audienceType:
 # Steps to building a model-driven app
 
 This article describes the steps for building a model-driven app in Power Apps.
+
+> [!TIP]
+> You can use the preview model app builder skill with an AI code generation tool to plan, build, and edit a model-driven app from natural-language requirements. More information: [Build and edit model-driven apps with AI code generation tools (preview)](model-driven-app-external-tools.md)
 
 At a fundamental level, model-driven app making consists of the following stages.
 
