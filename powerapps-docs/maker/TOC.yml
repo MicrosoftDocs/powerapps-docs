@@ -1478,6 +1478,8 @@
       href: ./model-driven-apps/model-driven-designers.md
   - name: Design and build an app
     items:
+    - name: Build apps with AI code generation tools (preview)
+      href: ./model-driven-apps/model-driven-app-external-tools.md
     - name: Steps to building a model-driven app
       href: ./model-driven-apps/app-building-steps.md
     - name: Create your first app
