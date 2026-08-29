@@ -4,7 +4,7 @@ description: Learn how to customize Dataverse tables and columns definitions usi
 author: kewear
 ms.author: kewear
 ms.reviewer: pehecke
-ms.date: 05/28/2026
+ms.date: 08/28/2026
 ms.topic: concept-article
 ---
 
@@ -65,6 +65,78 @@ columns = client.tables.list_columns(
 # Clean up
 client.tables.delete("new_Product")
 ```
+
+## Supported column types
+
+The following type strings are accepted by `create()` and `add_columns()`.
+
+| Type | Accepted aliases |
+|------|-----------------|
+| `string` | `text` |
+| `memo` | `multiline` |
+| `int` | `integer` |
+| `decimal` | `money` |
+| `float` | `double` |
+| `bool` | `boolean` |
+| `datetime` | `date` |
+| `file` | — |
+
+For optionset (choice) columns, pass an `IntEnum` subclass (or an `Enum` whose members have integer values) directly as the column type value instead of a string. The SDK uses the class members to define the optionset values.
+
+```python
+from enum import IntEnum
+
+class Priority(IntEnum):
+    LOW = 1
+    MEDIUM = 2
+    HIGH = 3
+
+table_info = client.tables.create("new_Task", {
+    "new_Title": "string",
+    "new_Priority": Priority,   # optionset column
+})
+```
+
+## TableInfo return object
+
+The `client.tables.create()` method returns a `TableInfo` object. Access its properties directly, or use legacy dict-key notation for backward compatibility.
+
+```python
+table_info = client.tables.create("new_Product", {"new_Code": "string"})
+
+print(table_info.schema_name)       # new_Product
+print(table_info.logical_name)      # new_product
+print(table_info.entity_set_name)   # new_products
+print(table_info.columns_created)   # ['new_Code', ...]
+
+# Legacy dict-key access still works
+print(table_info["table_schema_name"])
+```
+
+The `add_columns()` and `remove_columns()` methods return the list of column schema names that they create or remove. The `get()` method returns table metadata, or `None` if the table doesn't exist, which makes it useful for existence checks.
+
+## Alternate keys
+
+An alternate key identifies a record by one or more business columns instead of a Dataverse-generated GUID. Alternate keys are required for [upsert](work-data.md#upsert-create-and-update) operations. Define them in the Power Apps maker portal under **Table** > **Keys**, or programmatically by using `client.tables.create_alternate_key`.
+
+```python
+# Create an alternate key on the accountnumber column
+key = client.tables.create_alternate_key(
+    "account",
+    "account_accountnumber_ak",
+    ["accountnumber"],
+    display_name="Account Number",
+)
+print(f"Created key {key.schema_name} ({key.metadata_id}), status={key.status}")
+
+# The key status transitions from Pending to Active asynchronously - poll before upserting
+for k in client.tables.get_alternate_keys("account"):
+    if k.schema_name == "account_accountnumber_ak":
+        print(f"{k.schema_name}: {k.status}")
+```
+
+> [!IMPORTANT]
+> The transition from `Pending` to `Active` isn't immediate. Check the key status right after creation and wait until it's `Active` before issuing upsert requests. Without an active alternate key, Dataverse rejects upsert requests with a 400 error.
 
 > [!IMPORTANT]
 > All custom column names must include the customization prefix value (for example, "new_"). This requirement ensures explicit, predictable naming and aligns with Dataverse metadata requirements.

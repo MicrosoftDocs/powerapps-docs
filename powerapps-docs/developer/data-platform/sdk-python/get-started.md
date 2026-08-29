@@ -107,6 +107,7 @@ For examples of using these operations, see the [Querying data](query.md) and [W
 
 - [Working with data](work-data.md)
 - [Quick guide to Dataverse](quick-guide-dataverse.md)
+- [Handle errors and enable HTTP diagnostics](error-handling.md)
 
 ## Related information
 

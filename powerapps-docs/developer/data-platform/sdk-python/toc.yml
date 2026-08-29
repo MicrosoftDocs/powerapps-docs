@@ -19,5 +19,7 @@ items:
         href: relationships.md
       - name: Asynchronous client operations
         href: async-client.md
+      - name: Handle errors and enable HTTP diagnostics
+        href: error-handling.md
       - name: Python Package Reference
         href: /python/api/dataverse-sdk-docs-python/dataverse-overview?view=dataverse-sdk-python-latest&preserve-view=true

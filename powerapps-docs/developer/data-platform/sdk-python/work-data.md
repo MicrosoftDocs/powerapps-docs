@@ -242,6 +242,39 @@ client.files.upload(
 > [!TIP]
 > If the file column doesn't exist, the SDK creates it automatically.
 
+The `upload` method accepts optional parameters to control the content type and transfer strategy.
+
+```python
+# Specify a MIME type (defaults to application/octet-stream)
+client.files.upload(
+    "account", account_id, "new_Contract", "/path/to/contract.pdf",
+    mime_type="application/pdf",
+)
+
+# Force chunked transfer regardless of size
+client.files.upload(
+    "email", email_id, "new_Attachment", "/path/to/large_file.zip",
+    mode="chunk",
+)
+
+# Overwrite an existing file (uploads fail by default when the column already holds a file)
+client.files.upload(
+    "account", account_id, "new_Document", "/path/to/updated_contract.pdf",
+    if_none_match=False,
+)
+```
+
+The `mode` parameter controls how the SDK transfers the file.
+
+| Mode | Behavior |
+|------|----------|
+| `"auto"` (default) | Selects `"small"` for files under 128 MB, or `"chunk"` for files 128 MB and larger. |
+| `"small"` | Sends the entire file in a single request. Raises a `ValueError` if the file exceeds 128 MB. |
+| `"chunk"` | Streams the file in segments. Use for large files or to force chunked transfer regardless of size. |
+
+> [!NOTE]
+> Dataverse file size restrictions apply to file uploads (128 MB per file by default). Uploading a larger file with `mode="small"` raises a `ValueError`. Use `mode="chunk"` or the default `mode="auto"`. The async client exposes the same `files.upload` method. Call it with `await`.
+
 ## Batch operations
 
 Use `client.batch` to send multiple operations in one HTTP request. The batch namespace mirrors `client.records`, `client.tables`, and `client.query`.
@@ -287,6 +320,8 @@ with batch.changeset() as cs:
 result = batch.execute()
 print(f"Created {len(result.entity_ids)} records atomically")
 ```
+
+Inside a changeset, `cs.records.create()` returns a content-ID reference string such as `"$1"`. Use it in the same changeset, without waiting for a server response, either as the value of an `@odata.bind` field (as shown earlier) or as the `record_id` argument to a later `cs.records.update()` or `cs.records.delete()` call. Read operations (`retrieve`, `list`) aren't allowed inside a changeset.
 
 ### Table metadata and SQL queries in a batch
 
@@ -337,12 +372,26 @@ batch.dataframe.delete("account", pd.Series([id1, id2]))
 result = batch.execute()
 ```
 
+### Handle batch responses and limits
+
+`batch.execute()` returns a `BatchResult`. Its `responses` list contains one entry per HTTP operation in submission order. The `succeeded` and `failed` lists are subsets of `responses`. The `has_errors` property is `True` when any operation failed. The `entity_ids` list collects GUIDs from the `OData-EntityId` header of successful single-record creates and updates.
+
+Each response entry exposes `status_code`, `is_success`, `entity_id`, `data` (parsed body for retrieve, list, and query operations), `error_message`, and `error_code`. Different operations return different shapes:
+
+- **Single-record create** — status 204, `entity_id` populated.
+- **Bulk create or upsert** — status 200, IDs in `item.data["Ids"]` (no `OData-EntityId` header).
+- **SQL query or list** — status 200, rows in `item.data["value"]`.
+- **Delete or metadata write** — status 204, no body data.
+
+The maximum number of HTTP operations per batch is **1,000**. If you exceed this limit, the client raises a `ValidationError` before sending the request. Some operations expand to more than one request: `batch.tables.add_columns()` and `batch.tables.remove_columns()` each resolve to one request per column, so each column produces its own response entry.
+
 For a complete batch example, see [examples/advanced/batch.py](https://github.com/microsoft/PowerPlatform-DataverseClient-Python/blob/main/examples/advanced/batch.py).
 
 ## Related information
 
 - [Customize tables and columns](metadata.md)
 - [Query data](query.md)
+- [Handle errors and enable HTTP diagnostics](error-handling.md)
 - [SDK for Python code examples](https://github.com/microsoft/PowerPlatform-DataverseClient-Python/tree/main/examples)
 - [SDK for Python README](https://github.com/microsoft/PowerPlatform-DataverseClient-Python/blob/main/README.md)
 

@@ -12,7 +12,7 @@ contributors:
 
 # Asynchronous client operations
 
-The Dataverse SDK for Python includes a full asynchronous client named `AsyncDataverseClient`. It mirrors every operation of the synchronous client `DataverseClient` - the same namespaces (`records`, `query`, `tables`, `files`, `batch`), the same method signatures, and the same return types.
+The Dataverse SDK for Python includes a full asynchronous client named `AsyncDataverseClient`. It mirrors every operation of the synchronous client `DataverseClient` - the same namespaces (`records`, `query`, `tables`, `files`, `dataframe`, `batch`), the same method signatures, and the same return types.
 
 ## Installation
 
@@ -120,6 +120,31 @@ result = await batch.execute()
 ```
 
 For async equivalents of all `DataverseClient` sync examples, see [examples/aio/](https://github.com/microsoft/PowerPlatform-DataverseClient-Python/tree/main/examples/aio).
+
+## Close the client without a context manager
+
+If you can't use `async with`, call `await client.aclose()` explicitly, for example in a `finally` block as shown in [Alternate syntax](#alternate-syntax). Calling `aclose()` more than once is safe. After the client is closed, any further operation raises `RuntimeError`. Using `async with` is recommended because it establishes the HTTP session upfront and enables connection pooling across all operations in the block.
+
+## Handle async errors
+
+The async client raises the same structured exceptions as the sync client (`DataverseError` and its subclasses). Low-level network failures differ, though: they surface as `aiohttp.ClientError`, and timeouts surface as `asyncio.TimeoutError` rather than the `requests` exceptions used by the sync client. Catch these exceptions alongside `DataverseError` subclasses to cover the full range of errors.
+
+```python
+import asyncio
+import aiohttp
+from PowerPlatform.Dataverse.core.errors import DataverseError
+
+try:
+    await client.records.retrieve("account", record_id)
+except asyncio.TimeoutError:
+    print("Request timed out.")
+except aiohttp.ClientError as e:
+    print(f"Network error: {e}")
+except DataverseError as e:
+    print(f"SDK error: {e.message}")
+```
+
+For the full exception hierarchy, retry guidance, and diagnostics logging, see [Handle errors and enable HTTP diagnostics](error-handling.md).
 
 ## Related information
 
