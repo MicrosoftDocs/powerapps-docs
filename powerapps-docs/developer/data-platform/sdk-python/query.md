@@ -3,7 +3,7 @@ title: Query data
 description: Learn how to query Dataverse data using the SDK for Python.
 ms.author: kewear
 author: kewear
-ms.date: 06/01/2026
+ms.date: 08/28/2026
 ms.reviewer: phecke
 ms.topic: concept-article
 contributors:
@@ -12,7 +12,7 @@ contributors:
 
 # Query data
 
-This article describes available methods for querying Dataverse data by using the SDK for Python. You can query data by using Structured Query Language (SQL) and OData-based APIs.
+This article describes methods for querying Dataverse data by using the SDK for Python. You can query data by using Structured Query Language (SQL) and OData-based APIs.
 
 Python developers should first learn about the SDK for Python by reading [Getting started](get-started.md) before continuing with this article.
 
@@ -60,6 +60,54 @@ query = (client.query.builder("contact")
          )
 ```
 
+### String filters
+
+Use `.contains()`, `.startswith()`, and `.endswith()` for substring matching. Or use `.like()` with a `%` wildcard pattern. The SDK compiles that pattern to the closest equivalent filter.
+
+```python
+query = (client.query.builder("contact")
+         .where(col("email").contains("outlook.com"))    # contains(email, 'outlook.com')
+         .where(col("lastname").startswith("Smith"))      # startswith(lastname, 'Smith')
+         .where(col("firstname").endswith("son")))        # endswith(firstname, 'son')
+```
+
+| Pattern form | Example | Equivalent filter |
+|---|---|---|
+| `val%` | `like("Contoso%")` | startswith |
+| `%val` | `like("%Ltd")` | endswith |
+| `%val%` | `like("%Corp%")` | contains |
+| No wildcard | `like("Contoso")` | exact equality |
+
+```python
+query = client.query.builder("account").where(col("name").like("Contoso%"))
+```
+
+> [!NOTE]
+> Patterns with interior wildcards such as `"Con%oso"` raise a `ValueError`. Use `client.query.fetchxml()` or `client.query.sql()` for those patterns.
+
+### Negation and set membership
+
+Each positive operator has a negated counterpart: `.is_not_null()`, `.not_in()`, and `.not_between()`.
+
+```python
+query = (client.query.builder("contact")
+         .where(col("telephone1").is_not_null())          # telephone1 ne null
+         .where(col("statecode").not_in([2, 3]))          # not in set
+         .where(col("creditlimit").not_between(0, 100)))  # outside range
+```
+
+### Raw OData escape hatch
+
+When you need an OData function or syntax that `col()` doesn't cover, use `raw()`. It's the intended fallback for OData expressions that have no typed equivalent.
+
+```python
+from PowerPlatform.Dataverse.models.filters import col, raw
+
+query = (client.query.builder("account")
+         .where(col("statecode") == 0)
+         .where(raw("Microsoft.Dynamics.CRM.Today(PropertyName='createdon')")))
+```
+
 For complex logic (OR, NOT, grouping), compose expressions with `&`, `|`, `~`:
 
 ```python
@@ -83,7 +131,7 @@ for record in (client.query.builder("account")
 
 ### Formatted values and annotations
 
-This example demonstrates how to request localized labels, currency symbols, and display names.
+This example shows how to request localized labels, currency symbols, and display names.
 
 ```python
 # Get formatted values (choice labels, currency, lookup names) — via query builder
@@ -111,6 +159,14 @@ record = client.records.retrieve(
 )
 if record:
     print(record.get("statuscode@OData.Community.Display.V1.FormattedValue"))
+```
+
+To request all available annotations, call `.include_annotations()` on the builder (it defaults to `"*"`), or pass `include_annotations="*"` to `records.list()` and `records.retrieve()`.
+
+```python
+builder = (client.query.builder("account")
+           .select("name", "_ownerid_value")
+           .include_annotations())   # defaults to "*"
 ```
 
 ### Expand navigation properties
@@ -195,7 +251,7 @@ results = client.records.list("account", filter="statecode eq 0", count=True)
 
 ### FetchXML queries
 
-Calling `client.query.fetchxml()` returns an inert `FetchXmlQuery` object. No HTTP request is made until you call `.execute()` or `.execute_pages()`.
+Calling `client.query.fetchxml()` returns an inert `FetchXmlQuery` object. The method doesn't make an HTTP request until you call `.execute()` or `.execute_pages()`.
 
 ```python
 xml = """
@@ -220,9 +276,12 @@ for page_num, page in enumerate(client.query.fetchxml(xml).execute_pages()):
         print(record["name"])
 ```
 
+> [!IMPORTANT]
+> The FetchXML string, once URL-encoded, must not exceed 32,768 characters. Queries with many attributes or conditions commonly reach this limit. If you reach it, simplify the query by reducing the number of attributes and conditions. Control the page size by setting the `count` attribute on the `<fetch>` element, for example `<fetch count="200">`.
+
 ### Simple list shortcut
 
- The `records.list()` call accepts a raw OData filter string for basic queries. For anything beyond simple filter+select, prefer using `client.query.builder()` that provides composable filters, formatted values, and nested expand.
+ The `records.list()` call accepts a raw OData filter string for basic queries. For anything beyond a simple filter and select, use `client.query.builder()`, which provides composable filters, formatted values, and nested expand.
 
 ```python
 # records.list() shortcut — raw OData filter string, all records loaded into memory
@@ -255,16 +314,30 @@ client.records.create("contact", {"firstname": "Jane", **bind})
 
 ## Query data using SQL
 
-Dataverse provides a read-only interface to a limited set of SQL `SELECT` commands. Support for SQL JOINs, aggregates, GROUP BY, DISTINCT, and OFFSET FETCH pagination is provided.
+Dataverse provides a read-only interface to a limited set of SQL `SELECT` commands. It supports SQL JOINs, aggregates, GROUP BY, DISTINCT, and OFFSET FETCH pagination.
 
-You can also access the SQL query capability using the Dataverse Web API's `?sql=` parameter so code written in languages other than Python can access Dataverse data. For more information see [Use SQL to Query Data With the Dataverse Web API](../webapi/query/sql.md).
+You can also access the SQL query capability by using the Dataverse Web API's `?sql=` parameter. This approach lets code written in languages other than Python access Dataverse data. For more information, see [Use SQL to Query Data With the Dataverse Web API](../webapi/query/sql.md).
 
 > [!IMPORTANT]
-> The SQL support is limited to read-only queries. Complex joins, subqueries, and certain SQL functions may not be supported. The SQL query must follow the supported subset:
+> The SQL support is limited to read-only queries. Complex joins, subqueries, and certain SQL functions might not be supported. The SQL query must follow the supported subset:
 >
-> - WHERE can only be a boolean expression tree where leaves are binary operators ( =, >, like, etc.) with one of the arguments being a direct column reference and another is a constant
-> - TOP only allows an integer literal
-> - ORDERBY can only reference columns and does not allow any complex expressions
+> - WHERE can only be a boolean expression tree where leaves are binary operators (`=`, `>`, `like`, etc.) with one of the arguments being a direct column reference and another being a constant.
+> - TOP only allows an integer literal.
+> - ORDERBY can only reference columns and doesn't allow any complex expressions.
+
+### Supported SQL syntax
+
+The SQL interface supports the following T-SQL subset.
+
+| Feature | Supported syntax |
+|---|---|
+| Select | `SELECT`, `SELECT DISTINCT`, `SELECT TOP N` (0–5000) |
+| Joins | `INNER JOIN`, `LEFT JOIN` (multi-table) |
+| Filtering | `WHERE` with `=`, `!=`, `>`, `<`, `>=`, `<=`, `LIKE`, `IN`, `NOT IN`, `IS NULL`, `IS NOT NULL`, `BETWEEN`, `AND`, `OR`, nested parentheses |
+| Grouping and aggregation | `GROUP BY`, `COUNT(*)`, `SUM()`, `AVG()`, `MIN()`, `MAX()` |
+| Sorting and paging | `ORDER BY [ASC\|DESC]`, `OFFSET n ROWS FETCH NEXT m ROWS ONLY` |
+
+The following statements or features aren't supported: `SELECT *`, subqueries, CTEs, `HAVING`, `UNION`, `RIGHT JOIN`, `FULL JOIN`, `CROSS JOIN`, `CASE`, `COALESCE`, window functions, string/date/math functions, and any write statement (`INSERT`, `UPDATE`, `DELETE`). Unsupported or write queries raise `ValidationError` before the request is sent. Queries the client can't validate, but the server rejects, raise `HttpError`.
 
 The following example code demonstrates a SQL query in Python.
 
@@ -304,5 +377,6 @@ df = client.dataframe.sql(sql)
 ## See also
 
 - [Getting started](get-started.md)
+- [Handle errors and enable HTTP diagnostics](error-handling.md)
 - [Use the Microsoft Dataverse Web API](../webapi/overview.md)
 - [Use SQL to query data](../dataverse-sql-query.md)
