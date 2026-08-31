@@ -8,7 +8,7 @@ ms.custom: ebook
 ms.date: 05/07/2021
 ms.subservice: guidance
 ms.author: shboyer
-ms.reviewer: tapanm
+ms.reviewer: edoyle
 
 ---
 
