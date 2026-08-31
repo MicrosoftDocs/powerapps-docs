@@ -1,7 +1,7 @@
 ### YamlMime:Landing
 
 title: Power Apps guidance documentation
-summary: Power Apps guidance documentation provides best practice information from the team that works with our enterprise customers. We'll regularly add and update the guidance content. 
+summary: Explore Power Apps guidance and best practice from the team that works with enterprise customers.
 
 metadata:
   title: Power Apps guidance documentation
@@ -10,8 +10,8 @@ metadata:
   ms.subservice: guidance
   ms.topic: landing-page 
   ms.collection: collection
-  author: tapanm-msft
-  ms.author: tapanm
+  author: erikadoyle
+  ms.author: edoyle
   ms.date: 02/26/2026
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new

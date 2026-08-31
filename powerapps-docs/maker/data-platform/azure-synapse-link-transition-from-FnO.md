@@ -31,8 +31,8 @@ If you're a customer using legacy services BYOD, data export service, or Export 
 
 There are two data integration patterns enabled in Power Apps:
 
--	Azure Synapse Link enables continuous export of data similar to BYOD, Export to Data Lake, or data export service. This option is enabled for IT admins and data integration specialists.
-- Link to Fabric feature provides a no-copy, no-extract, transform, and load (ETL), fully managed software as a service (SaaS) integration.
+- [Link to Microsoft Fabric](fabric-link-to-data-platform.md) provides a no-copy, no-extract, transform, and load (ETL), fully managed software as a service (SaaS) integration. Link to Fabric with low-latency sync is the recommended option for customers transitioning from legacy data integration services.
+- Azure Synapse Link enables continuous export of data similar to BYOD, Export to Data Lake, or data export service. Use this option when you must continue exporting data to your own storage account.
 
 These options are complementary. Here's a detailed comparison of the data integration services.
 
@@ -63,7 +63,7 @@ If you're a Dynamics 365 customer engagement customer using data export service 
 
 ## Which option should I use?
 
-If your organization is already using Fabric or planning to transition in the coming months, we recommend using the Fabric link feature. You can continue to use the Azure Synapse Link service if your immediate focus is to upgrade from your current services.
+For most organizations transitioning from legacy data integration services, we recommend [Link to Microsoft Fabric](fabric-link-to-data-platform.md) with low-latency sync. Use Azure Synapse Link if you must continue exporting data to your own storage account.
 
 ### Simplification with Fabric link
 
