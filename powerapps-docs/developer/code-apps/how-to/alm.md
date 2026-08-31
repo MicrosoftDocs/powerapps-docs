@@ -3,7 +3,7 @@ title: "How to: Application Lifecycle Management (ALM) for code apps"
 description: "Learn how to use application lifecycle management (ALM) for Power Apps code apps to target solutions and deploy reliably across environments."
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 08/14/2026
+ms.date: 08/27/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
@@ -60,7 +60,7 @@ pa app push --solution-id <solution-id>
 
 | Option | Alias | Required | Description |
 | --- | --- | --- | --- |
-| `--solution-id` | `-s` | No | The ID (GUID) of the solution to add the app to. You can also set it with the `SOLUTION_ID` environment variable. If you omit this option, the CLI selects a solution automatically. |
+| `--solution-id` | `-s` | No | The ID (GUID) of the solution to add the app to. Set it with the `PA_CLI_SOLUTION_ID` environment variable. If you omit this option, the CLI selects a solution automatically. |
 
 To find a solution ID:
 
@@ -121,10 +121,10 @@ If you already published your code app to an environment with [`pa app push`](..
 
 ## Use solution targeting in CI/CD
 
-To target a solution from a build pipeline, set the `SOLUTION_ID` environment variable:
+To target a solution from a build pipeline, set the `PA_CLI_SOLUTION_ID` environment variable:
 
 ```bash
-SOLUTION_ID=<solution-id> pa app push
+PA_CLI_SOLUTION_ID=<solution-id> pa app push
 ```
 
 This behavior is deterministic, noninteractive, and identical to local publishing.
