@@ -6,8 +6,8 @@ author: gregli-msft
 ms.custom: canvas
 ms.collection: get-started
 ms.topic: get-started
-ms.reviewer: mkaur
-ms.date: 07/20/2026
+ms.reviewer: joshuapa
+ms.date: 08/26/2026
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -139,7 +139,7 @@ In this example, let users change the background color of the screen by adjustin
 
 Use formulas not only to perform calculations and change appearance but also to take action. For example, set the **[OnSelect](controls/properties-core.md)** property of a button to a formula that includes the **[Navigate](functions/function-navigate.md)** function. When a user selects that button, the screen that you specify in the formula appears.
 
-Use some functions, such as **[Navigate](functions/function-navigate.md)** and **[Collect](functions/function-clear-collect-clearcollect.md)**, only in behavior formulas. The formula reference calls out if a function can only be used in this context.
+Use some functions, such as **[Navigate](functions/function-navigate.md)** and **[Collect](functions/function-clear-collect-clearcollect.md)**, only in behavior formulas. Behavior formulas are the formulas on **On...** properties, such as **OnSelect**, **OnVisible**, **OnHidden**, and **OnStart**. If you put one of these functions in a property that expects a value&mdash;such as **Text**, **Visible**, or **Fill**&mdash;the formula is flagged as an error, because that property expects a value (for example, a Boolean for **Visible**) rather than an action. The [formula reference](formula-reference.md) calls out if a function can only be used in this context. For the full rules and the list of state-changing functions, see [Working with formulas in depth](working-with-formulas-in-depth.md).
 
 Take more than one action in a behavior formula by separating functions with a semicolon (;). For example, you might update a context variable, push data to a data source, and then navigate to another screen&mdash;all in a single **OnSelect** formula.
 
