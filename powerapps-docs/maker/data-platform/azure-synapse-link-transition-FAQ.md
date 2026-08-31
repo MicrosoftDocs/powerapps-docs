@@ -1,7 +1,7 @@
 ---
 title: Frequently asked questions when transitioning from legacy data integration services to Fabric link and Azure Synapse Link for Dataverse
 description: Learn how to transition from export to data lake, BYOD, and data export service to link to Microsoft Fabric and Azure Synapse Link for Microsoft Dataverse.
-ms.date: 08/03/2026
+ms.date: 08/21/2026
 ms.reviewer: matp 
 ms.topic: "how-to"
 applies_to: 
@@ -104,21 +104,21 @@ As part of the platform unification project, we have consolidated several servic
 
 While many customers are excited to adopt Fabric, we also understand some customers want to continue to export data and build their own integration pipelines. As such, we want to enable you to export data well into the future.
 
-## Will export to data lake service stop since it's deprecated after November 1, 2024?
+## I see a banner that Export to Data Lake service will stop on November 30, 2026. What does this mean?
 
-Export to data lake service is deprecated as of November 1, 2024 and support will be limited. You can reduce the risk by beginning the transition process now. We plan to decommission export to data lake service beginning March 25, 2025 as customers transition to Synapse Link and Fabric link services. We plan to start the decommissioning process with customers who have completed the transition as well as customers who aren't actively using the service. You'll be notified before the decommission process begins and have the option to ask for a past due extension via the link [aka.ms/SynapseLinkPastDue](https://aka.ms/SynapseLinkPastDue).
+The banner applies only to the legacy **Export to Data lake** environment add-in that you install through Microsoft Dynamics Lifecycle Services (LCS). This add-in uses change data capture (CDC) to export CSV files to a customer-managed data lake. Microsoft retired Export to Data Lake service on November 1, 2024, and will permanently stop it on November 30, 2026. After the service stops, it no longer exports new and changed data. Files that were already exported to your data lake remain in place.
 
-## My transition might run beyond deprecation date, is there a process to get an extension?
+The notice doesn't apply to Link to Fabric or Azure Synapse Link for Dataverse. Both services remain supported. Existing Link to Fabric profiles, including profiles that don't yet use low-latency sync, aren't being turned off by this notice. If you still depend on Export to Data Lake for near-real-time updates, transition to [Link to Microsoft Fabric](fabric-link-to-data-platform.md) with low-latency sync by November 30, 2026. For migration guidance, see [Transition from legacy data integration services](azure-synapse-link-transition-from-FnO.md). No further extensions will be provided.
 
-Export to data lake service is deprecated as of November 1, 2024, but will continue to operate under limited support until March 25, 2025. If you haven't done so already, you should begin the transition process now.
+## Can I get an extension beyond November 30, 2026?
 
-To help customers who might need more time to complete their transition, we introduced an in-product “past due extend” option. You can apply for a one-time “past due extension” by taking the survey the Azure Synapse Link area in Power Apps (make.powerapps.com) or the link [aka.ms/SynapseLinkPastDue](https://aka.ms/SynapseLinkPastDue). This option is available only to customers who are currently validating either Synapse Link or Fabric Link services.
-
-If a past due extension is approved, you receive a confirmation e-mail and the extended date is shown within the product. You can join the community and stay in touch via the forum or weekly office hours at [aka.ms/SynapseLinkforDynamics](https://aka.ms/SynapseLinkforDynamics).
+No. Microsoft won't grant extensions after November 30, 2026. Complete your transition by this date.
 
 ## I have completed the transition, how can I uninstall export to data lake feature?
 
-If you aren't using this feature in your environment, ask your finance and operations apps administrator to uninstall this feature. To uninstall, visit the environment page in life cycle services (LCS), navigate to the **Environment Add-ins** section, and then select the **Uninstall** option in the **Export to Data lake** environment add-in.
+If you aren't using this feature in a production or sandbox environment, ask your finance and operations apps administrator to uninstall it. To uninstall, visit the environment page in Lifecycle Services (LCS), go to the **Environment Add-ins** section, and then select **Uninstall** in the **Export to Data lake** environment add-in.
+
+Uninstalling the add-in doesn't cause downtime or require an environment restart. Existing files in your data lake remain in place. Uninstalling starts the process of disabling CDC for the tables that the add-in added. This process can take some time, and CDC is eventually disabled completely after it is no longer required.
 
 ## I received an email about transitioning Azure Synapse Analytics workspaces to private links before 1 August 2026. What do I need to do?
 
