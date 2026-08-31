@@ -6,7 +6,7 @@ ms.date: 02/26/2026
 ms.topic: best-practice
 author: robstand
 ms.author: rstand
-ms.reviewer: jhaskett-msft
+ms.reviewer: edoyle
 ms.custom:
   - ai-gen-docs-bap
   - ai-gen-description
