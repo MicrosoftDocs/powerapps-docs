@@ -29,10 +29,13 @@ With Dataverse virtual tables sourced with Fabric, your low-code app builders co
 
 - An existing Dataverse environment or you can create a new developer environment. More information: [Create a developer environment](/power-platform/developer/create-developer-environment)
 - Contributor or administrator access to a Fabric workspace with data.
+- Capacity admin permissions.
 
 If you don’t have Power BI premium license or Fabric capacity, you can sign up for a free [Fabric trial capacity](/fabric/get-started/fabric-trial).
 
 If you don't have a workspace with data, create a workspace with sample data using the [lakehouse tutorial](/fabric/data-engineering/tutorial-build-lakehouse).
+
+If you don't have capacity admin permissions, work with a user with capacity admin to [add an admin](/fabric/admin/capacity-settings?tabs=power-bi-premium#add-and-remove-admins).
 
 ## Create a virtual table with Fabric data
 
