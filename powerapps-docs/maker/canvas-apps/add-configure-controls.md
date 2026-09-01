@@ -4,8 +4,8 @@ description: Step-by-step instructions for adding and configuring canvas-app con
 author: mduelae
 
 ms.topic: how-to
-ms.reviewer: 
-ms.date: 10/29/2024
+ms.reviewer: joshuapa
+ms.date: 08/26/2026
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
@@ -15,6 +15,7 @@ contributors:
   - chmoncay
 ms.custom: canvas
 ms.collection: get-started
+ai-usage: ai-assisted
 ---
 # Add and configure controls in canvas apps
 
@@ -25,14 +26,12 @@ Add a variety of UI elements to your canvas app, and configure aspects of their 
 1. If you don't already have a Power Apps license, [sign up](../signup-for-powerapps.md), and then [sign in](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. Create a [blank canvas app](create-blank-app.md).
 
-    You can always take the tour later by selecting the question-mark icon near the upper-right corner of your screen and then selecting **Take the intro tour**.
-
 ## Add and select a control
 
-Let's add a new screen and a button control. However, you can add any type of control.
+Start by adding a new screen, as well as a button or other control.
 
-1. Select **Insert** from the [authoring menu](power-apps-studio.md#5--app-authoring-menu), then select **New screen**.
-1. Choose **Blank** to add a blank screen to your app. (Screens are a type of control that can contain other types of controls.)
+1. Select **Insert** from the [authoring menu](power-apps-studio.md#5--app-authoring-menu), and then select **New screen**.
+1. Choose **Blank** to add a blank screen to your app. Screens are a type of control that can contain other types of controls.
 
    :::image type="content" source="./media/add-configure-controls/add-screen.png" alt-text="Screenshot that shows how to add a new screen from the Insert menu option.":::
 
@@ -45,7 +44,7 @@ Let's add a new screen and a button control. However, you can add any type of co
 
    :::image type="content" source="./media/add-configure-controls/add-button.png" alt-text="Screenshot that shows the new button on the canvas and the button control name in the list under Screen2.":::
 
-   In the screen, a box with six handles surrounds the button by default. These handles surround any control selected and are used to size the control.
+   In the screen, a box with manipulable handles surrounds the button by default. These handles surround any control selected and are used to size the control.
 
 1. Select the screen (outside the button) and the box handles disappear. To select the control again, select it directly on the canvas or from the **Tree view** list.
 
@@ -62,7 +61,7 @@ Let's add a new screen and a button control. However, you can add any type of co
 
 ## Delete a control
 
-You can delete a control either through control in the **Tree view** list or directly from the canvas.
+You can delete a control either through **Tree view** or directly from the canvas.
 
 ### Delete a control from Tree view
 
@@ -77,7 +76,7 @@ Select the control on the canvas, then press the `Delete` key.
 ## Reorder screens
 
 1. In **Tree view**, hover over a screen that you want to move up or down to reveal the overflow menu (ellipses).
-1. Select the ellipsis, then choose **Move up** or **Move down**. If you don't see a **Move down** option, your screen is at the lowest point in the list already.
+1. Select the ellipsis, and then choose **Move up** or **Move down**. If you don't see a **Move down** option, your screen is at the lowest point in the list. Similarly, if you don't see a **Move up** option, your screen is at the highest point in the list.
 
    :::image type="content" source="./media/add-configure-controls/reorder-screen.png" alt-text="Screenshot that shows you how to reorder your screens in the Tree view through the overflow menu of a screen.":::
 
@@ -95,7 +94,7 @@ To resize a control, select it, hover over any handle in the selection box so th
 ![Drag control.](./media/add-configure-controls/resize-control.png)
 
 > [!NOTE]
-> As this topic describes later, you can also move and resize a control by modifying any combination of its **[X](controls/properties-size-location.md)**, **[Y](controls/properties-size-location.md)**, **[Height](controls/properties-size-location.md)**, and **[Width](controls/properties-size-location.md)** properties in the formula bar.
+> As this article describes later, you can also move and resize a control by modifying any combination of its **[X](controls/properties-size-location.md)**, **[Y](controls/properties-size-location.md)**, **[Height](controls/properties-size-location.md)**, and **[Width](controls/properties-size-location.md)** properties in the formula bar.
 
 ## Configure a control in the Properties pane
 
@@ -106,15 +105,15 @@ For example, if you select a button control, you can replace the value of the te
 :::image type="content" source="./media/add-configure-controls/change-text.png" alt-text="Screenshot that shows how to change the display text on a button control through the Properties pane.":::
 
 > [!NOTE]
-> You can alternatively change display text by modifying its [Text](controls/properties-core.md) property in the formula bar.
+> You can also change display text by modifying its [Text](controls/properties-core.md) property in the formula bar.
 
 ## Configure a control in the formula bar
 
-You can configure a control by selecting a property in the property list and then specifying a value in the formula bar. Autocomplete can be helpful in the formula bar to see values you can use for a control.
+Configure a control by selecting a property in the property list and then specifying a value in the formula bar. Autocomplete in the formula bar helps you see values you can use for a control.
 
 ### Change the font color of a control
 
-For example, if you want to change the font color for your control's text. You see many color options.
+For example, if you want to change the font color for your control's text, you see many color options.
 
 :::image type="content" source="./media/add-configure-controls/formula-bar-options.png" alt-text="Screenshot that shows the control options you can set in the formula bar for a control.":::
 
@@ -128,7 +127,7 @@ For example, if you select **X** or **Y** in the properties list and specify a n
 
 ### Change the control's size
 
-You can resize a control by selecting **Height** or **Width** in the properties list and then specifying a different number in the formula bar.
+You can resize a control by selecting **Height** or **Width** in the properties list and then entering a different number in the formula bar.
 
 :::image type="content" source="./media/add-configure-controls/change-height.png" alt-text="Screenshot that shows how to change the height of a control through the formula bar.":::
 
@@ -143,15 +142,15 @@ A literal string is surrounded by quotation marks and appears exactly as you typ
 :::image type="content" source="./media/add-configure-controls/literal-string.png" alt-text="Screenshot that shows where to add a literal string in the formula bar for a control's display text.":::
 
 > [!NOTE]
-> When you add text that is longer than the width of your control, the control doesn't change its width to accomodate the text. You must manually change the control's size to fit the text.
+> When you add text that's longer than the width of your control, the control doesn't change its width to accommodate the text. You must manually change the control's size to fit the text.
 
 #### Expression
 
-An expression is often based on a property of another control. **Screen2.Height** is an expression that shows the height of **Screen2** where the display text is shown for a button control.
+An expression is often based on a property of another control. **Screen2.Height** is an expression that shows the height of **Screen2** where the display text appears for a button control.
 
 :::image type="content" source="./media/add-configure-controls/expression.png" alt-text="Screenshot showing how to add a control property as display text for another control.":::
 
-Using an expression, for example, you can set a background image or icon as the fill for your button.
+By using an expression, you can set a background image or icon as the fill for your button.
 
 #### Formula
 

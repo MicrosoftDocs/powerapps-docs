@@ -71,6 +71,8 @@ items:
         items:
           - name: Power Apps CLI command reference
             href: reference/cli.md
+          - name: Power Apps CLI environment variables
+            href: reference/environment-variables.md
       - name: Troubleshoot
         items:
         - name: Analyze data requests and responses
