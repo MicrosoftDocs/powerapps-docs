@@ -2,7 +2,7 @@
 title: "Queue tables (Microsoft Dataverse) | Microsoft Docs"
 description: "Queues in Power Apps are instrumental in organizing, prioritizing, and monitoring the progress of your work." 
 ms.custom: ""
-ms.date: 05/04/2021
+ms.date: 08/28/2026
 ms.reviewer: "pehecke"
 
 ms.topic: "article"

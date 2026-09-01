@@ -1,7 +1,7 @@
 ---
 title: "Update and delete table rows using the SDK for .NET (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn how to update and delete table rows using the SDK for .NET."
-ms.date: 06/20/2025
+ms.date: 08/31/2026
 ms.reviewer: pehecke
 ms.topic: how-to
 author: MsSQLGirl

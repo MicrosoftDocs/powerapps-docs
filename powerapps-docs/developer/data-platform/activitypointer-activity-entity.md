@@ -1,7 +1,7 @@
 ---
 title: Activity (ActivityPointer) table
 description: Learn how to work with the Activity (ActivityPointer) table in Microsoft Dataverse.
-ms.date: 07/03/2023
+ms.date: 08/28/2026
 ms.reviewer: pehecke
 ms.topic: article
 author: DanaMartens
@@ -14,7 +14,7 @@ ms.custom: bap-template
 
 # Activity (ActivityPointer) table
 
-The [Activity (ActivityPointer) table](reference/entities/activitypointer.md) stores data about activities or tasks a user performs. An activity is any action that can be entered on a calendar and has time dimensions (start time, stop time, due date, and duration).
+The [Activity (ActivityPointer) table](reference/entities/activitypointer.md) stores data about activities or tasks a user performs. An activity is any action that you can enter on a calendar and has time dimensions, such as start time, stop time, due date, and duration.
 
 When you create an activity record in Dataverse, it creates a corresponding activity pointer record. The activity record and its associated activity pointer record have the same value for the `ActivityId` column.
 
@@ -22,11 +22,11 @@ The [`ActivityPointer.ActivityTypeCode`](/power-apps/developer/data-platform/ref
 
 ## Inherited statecode and statuscode options
 
-When you write code that sets or modifies activity columns, it's important to keep in mind that the `statecode` and `statuscode` columns of`ActivityPointer` derived types can have a somewhat different purpose from the base `ActivityPointer` `statecode` and `statuscode` column definitions. The following sections describe these differences.
+When you write code that sets or modifies activity columns, keep in mind that the `statecode` and `statuscode` columns of `ActivityPointer` derived types can have a different purpose from the base `ActivityPointer` `statecode` and `statuscode` column definitions. The following sections describe these differences.
 
 ### StateCode option differences
 
-In this section, let's review state code option differences between `ActivityPointer` and derived types.
+This section reviews state code option differences between `ActivityPointer` and derived types.
 
 [ActivityPointer.StateCode](/power-apps/developer/data-platform/reference/entities/activitypointer#statecode-choicesoptions) defines four options:
 
@@ -42,13 +42,13 @@ In this section, let's review state code option differences between `ActivityPoi
 
 ### StatusCode label differences
 
-The `statuscode` options provide reasons for the `statecode` of the record. You can add new `statuscode` options so that each table has a different set. Some of the options have the same value as the [ActivityPointer](reference/entities/activitypointer.md) `statuscode`, but the labels can be different.
+The `statuscode` options explain the `statecode` of the record. You can add new `statuscode` options, so each table has a different set. Some options share the same value as the [ActivityPointer](reference/entities/activitypointer.md) `statuscode`, but the labels can differ.
 
 Labels for `statuscode` options vary based on whether you're retrieving rows as an [ActivityPointer](reference/entities/activitypointer.md) or as a specific activity type such as an [Appointment](reference/entities/appointment.md), [Email](reference/entities/email.md), or [Task](reference/entities/task.md).
 
 For example, if you retrieve an `ActivityPointer` row that represents an `Appointment`, the label for `statuscode` value `1` is **Open** rather than **Free**.
 
-Labels are listed in the definition of the default `statuscode` options for each table:
+You can find the labels in the definition of the default `statuscode` options for each table:
 
 - [ActivityPointer.StatusCode Options](/power-apps/developer/data-platform/reference/entities/activitypointer#statuscode-choicesoptions)
 - [Appointment.StatusCode Options](/power-apps/developer/data-platform/reference/entities/appointment#statuscode-choicesoptions)
@@ -65,11 +65,11 @@ Labels are listed in the definition of the default `statuscode` options for each
 
 ## Control how activities are sorted by date
 
- When you display a list of activity entities in date order, you can only sort on the common date columns defined in the [ActivityPointer](reference/entities/activitypointer.md) table. However, sometimes you want different sorting behaviors depending on the type of activity. For example, you might want to sort email activities by the "sent on" date rather than the "modified on" date. Use the `sortdate` column to control how activities are sorted by date.
+ When you display a list of activity entities in date order, you can only sort on the common date columns defined in the [ActivityPointer](reference/entities/activitypointer.md) table. However, sometimes you want different sorting behaviors depending on the type of activity. For example, you might want to sort email activities by the **sent on** date rather than the **modified on** date. Use the `sortdate` column to control how activities are sorted by date.
 
 By default, the value of the `sortdate` column is null. Include logic to set a value for the column and then use the `sortdate` column in the query you define for the view.
 
-You can set the `sortdate` column value using a workflow or a plugin. For consistent results, you should set this value for every type of activity and any existing activity data in the system.
+You can set the `sortdate` column value using a workflow or a plugin. For consistent results, set this value for every type of activity and any existing activity data in the system.
 
 ### See also
 

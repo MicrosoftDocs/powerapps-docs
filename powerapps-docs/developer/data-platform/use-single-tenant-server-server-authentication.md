@@ -2,7 +2,7 @@
 title: "Use single-tenant server-to-server authentication (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn how to access Microsoft Dataverse data in a single tenant from an application or service without explicit user authentication." 
 ms.custom: ""
-ms.date: 04/06/2023
+ms.date: 08/31/2026
 ms.reviewer: "pehecke"
 ms.topic: how-to
 author: "paulliew" # GitHub ID

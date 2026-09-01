@@ -1,7 +1,7 @@
 ---
 title: "Generate early-bound classes for the SDK for .NET"
 description: "Learn how to use the Power Platform CLI pac modelbuilder build command to generate early-bound classes for use with the Microsoft Dataverse SDK for .NET. This tool generates early-bound .NET classes that represent the Entity Data Model used by Dataverse."
-ms.date: 08/21/2026
+ms.date: 08/28/2026
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: pehecke
@@ -22,8 +22,8 @@ Creating early-bound classes for your .NET projects:
 
 - Improves code readability and maintainability.
 - Decreases the risk of errors because they provide compile time type checking.
-- Improves developer productivity because developers can discover tables, columns, and choice options using IntelliSense.
-- Provides the [OrganizationServiceContext](xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext) class so you can write Dataverse queries using LINQ and other capabilities work with data.
+- Improves developer productivity because developers can discover tables, columns, and choice options by using IntelliSense.
+- Provides the [OrganizationServiceContext](xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext) class so you can write Dataverse queries by using LINQ and other capabilities work with data.
 
 Learn more:
 
@@ -32,16 +32,16 @@ Learn more:
 
 Use the [Power Platform CLI pac modelbuilder build command](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build) to generate early-bound code classes. You can also use the `CrmSvcUtil.exe` code generation tool, but for Dataverse we recommend using the `pac modelbuilder build` command. [Learn how to use the CrmSvcUtil.exe to generate early-bound classes for the SDK for .NET](/dynamics365/customerengagement/on-premises/developer/org-service/create-early-bound-entity-classes-code-generation-tool)
 
-Like many Power Platform CLI commands, `pac modelbuilder build` has many parameters you can use to control the outcome. In this article, we recommend that you start by using the  `--settingsTemplateFile` parameter for most use cases. Use this parameter to refer to a JSON file where all the other available settings can be controlled. This way, you don't need to compose a long list of parameters, and the configuration appropriate for your project can be updated to allow regeneration of the classes when you need them.
+Like many Power Platform CLI commands, `pac modelbuilder build` has many parameters you can use to control the outcome. In this article, we recommend that you start by using the  `--settingsTemplateFile` parameter for most use cases. Use this parameter to refer to a JSON file where you can control all the other available settings. This way, you don't need to compose a long list of parameters, and you can update the configuration appropriate for your project to allow regeneration of the classes when you need them.
 
-Of course, you can still use the build command with parameters if you prefer. See [Using parameters](#using-parameters).
+You can still use the build command with parameters if you prefer. See [Using parameters](#using-parameters).
 
 ## Get started
 
 Before you begin:
 
 1. [Install Power Platform CLI](/power-platform/developer/cli/introduction#install-microsoft-power-platform-cli).
-1. Connect to your environment using [Power Platform CLI pac auth commands](/power-platform/developer/cli/reference/auth).
+1. Connect to your environment by using [Power Platform CLI pac auth commands](/power-platform/developer/cli/reference/auth).
 
 Use the following steps to get started:
 
@@ -98,9 +98,9 @@ Use the following steps to get started:
    ```
 
    > [!NOTE]
-   > This file is a modified version of the file you can generate using `pac modelbuilder build` with the [`--writesettingsTemplateFile` parameter](/power-platform/developer/cli/reference/modelbuilder#--writesettingstemplatefile--wstf). Learn how to generate the file without comments in [Using parameters](#using-parameters).
+   > This file is a modified version of the file you can generate by using `pac modelbuilder build` with the [`--writesettingsTemplateFile` parameter](/power-platform/developer/cli/reference/modelbuilder#--writesettingstemplatefile--wstf). Learn how to generate the file without comments in [Using parameters](#using-parameters).
 
-1. Use the following command to generate early bound classes for the connected environment using the settings defined in `builderSettings.json` where `C:\projects\exampleproject\` represents the path to your project and `model` is the folder you created.
+1. Use the following command to generate early bound classes for the connected environment by using the settings defined in `builderSettings.json`. The `C:\projects\exampleproject\` path represents the path to your project and `model` is the folder you created.
 
    ```powershell
    PS C:\projects\exampleproject\model> pac modelbuilder build -o . -stf .\builderSettings.json
@@ -111,7 +111,7 @@ Use the following steps to get started:
    - `-o` shortcut for the required [`--outdirectory` parameter](/power-platform/developer/cli/reference/modelbuilder#--outdirectory--o) with a value of `.`, to indicate the current directory.
    - `-stf` shortcut for the [`--settingsTemplateFile` parameter](/power-platform/developer/cli/reference/modelbuilder#--settingstemplatefile--stf) with a value of `.\builderSettings.json`, to indicate the `builderSettings.json` current directory.
 
-   You could also use this command from the `exampleproject` directory:
+   You can also use this command from the `exampleproject` directory:
 
    ```powershell
    PS C:\projects\exampleproject>pac modelbuilder build -o model -stf model\builderSettings.json
@@ -119,7 +119,7 @@ Use the following steps to get started:
 
 ### Understand what files are written
 
-With either command, the following output is what you should expect:
+With either command, you receive the following output:
 
 ```powershell
 Connected to... Your Organization
@@ -149,19 +149,19 @@ Generation Complete - 00:00:01.815
 PS C:\projects\exampleproject\model>
 ```
 
-When you inspect the output, notice that it only generates classes for the tables specified by `entityNamesFilter` and only the messages specified in the `messageNamesFilter`. You should specify which tables (entities) and messages you use in your project. Otherwise, classes for all tables and messages are generated.
+When you inspect the output, you see that it only generates classes for the tables specified by `entityNamesFilter` and only the messages specified in the `messageNamesFilter`. Specify which tables (entities) and messages you use in your project. Otherwise, the command generates classes for all tables and messages.
 
-For `messageNamesFilter`, you can use `*` as a wildcard character in these values. This filter is useful when messages in your solution share a common customization prefix.
+For `messageNamesFilter`, use `*` as a wildcard character in these values. This filter is useful when messages in your solution share a common customization prefix.
 
-`pac modelbuilder build` writes the files into folders with names you can control in the settings file:
+`pac modelbuilder build` writes the files into folders with names you control in the settings file:
 
-- Entity classes are written to the folder specified by the `entityTypesFolder` setting.
-- Message classes are written to the folder specified by the `messagesTypesFolder` setting.
-- The [OrganizationServiceContext](xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext) class is written to a file with the name specified by the `serviceContextName` setting.
+- Entity classes go to the folder specified by the `entityTypesFolder` setting.
+- Message classes go to the folder specified by the `messagesTypesFolder` setting.
+- The [OrganizationServiceContext](xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext) class goes to a file with the name specified by the `serviceContextName` setting.
 - All the classes are part of the namespace you set in the `namespace` setting.
 
 > [!NOTE]
-> If you're generating message classes, you should always include a name for the `serviceContextName` setting. See [Include `serviceContextName` when generating message classes](#include-servicecontextname-when-generating-message-classes)
+> If you're generating message classes, always include a name for the `serviceContextName` setting. See [Include `serviceContextName` when generating message classes](#include-servicecontextname-when-generating-message-classes).
 
 This is how the files and folders appear in Visual Studio:
 
@@ -173,11 +173,11 @@ If you want to change them, delete the files in the `model` folder other than `b
 
 ## Using parameters
 
-It isn't required to use the `builderSettings.json` settings file and the `--settingsTemplateFile` parameter with `pac modelbuilder build`. You can invoke the command using parameters directly. You can find reference documentation and examples in the [pac modelbuilder build reference documentation](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build).
+You don't need to use the `builderSettings.json` settings file or the `--settingsTemplateFile` parameter with `pac modelbuilder build`. You can invoke the command by using parameters directly. For reference documentation and examples, see the [pac modelbuilder build reference documentation](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build).
 
-If you're using the `builderSettings.json` settings file and the `--settingsTemplateFile` parameter, you can use the parameters in the command line to override the settings.
+If you use the `builderSettings.json` settings file and the `--settingsTemplateFile` parameter, you can use command-line parameters to override those settings.
 
-Here's an example showing how to generate files with the same settings as the example in the [Get started section](#get-started) using parameters:
+Here's an example that shows how to generate files by using the same settings as the example in the [Get started section](#get-started) by using parameters:
 
 ```powershell
 PS C:\>pac modelbuilder build `
@@ -192,7 +192,7 @@ PS C:\>pac modelbuilder build `
    --writesettingsTemplateFile
 ```
 
-This example doesn't include all the settings because it uses the default options. If you use the [`--writesettingsTemplateFile` parameter](/power-platform/developer/cli/reference/modelbuilder#--writesettingstemplatefile--wstf) to generate a `builderSettings.json` file, it doesn't include the comments in the example in the [Get started section](#get-started) of this article. The example using parameters writes the following `builderSettings.json` file in the `model` folder:
+This example doesn't include all the settings because it uses the default options. If you use the [`--writesettingsTemplateFile` parameter](/power-platform/developer/cli/reference/modelbuilder#--writesettingstemplatefile--wstf) to generate a `builderSettings.json` file, it doesn't include the comments in the example in the [Get started section](#get-started) of this article. The example that uses parameters writes the following `builderSettings.json` file in the `model` folder:
 
 ```json
 {
@@ -223,8 +223,8 @@ This example doesn't include all the settings because it uses the default option
 
 ## Include `serviceContextName` when generating message classes
 
-If you're generating message classes, you should always include a name for the `serviceContextName` parameter so that an [OrganizationServiceContext](xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext) class is generated with your code.
-This class includes an important property to enable use of generated message classes. If you don't include an `OrganizationServiceContext`, you'll get the following error when you try to use the generated message classes.
+If you're generating message classes, always include a name for the `serviceContextName` parameter so that an [OrganizationServiceContext](xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext) class is generated with your code.
+This class includes an important property to enable use of generated message classes. If you don't include an `OrganizationServiceContext`, you get the following error when you try to use the generated message classes.
 
 ```
 The formatter threw an exception while trying to deserialize the message: 
@@ -237,11 +237,11 @@ Please see InnerException for more details.
 
 ## Community tools
 
-The [Early Bound Generator V2](https://www.xrmtoolbox.com/plugins/DLaB.Xrm.EarlyBoundGeneratorV2/) is an XrmToolBox plug-in created by the community to provide a user interface that generates the correct `builderSettings.json` file, and calls `pac modelbuilder build` command for the user. Since the UI is only used to generate the `builderSettings.json` and call the `pac modelbuilder build` command, it can still be ran via the command line in a pipeline without a dependency on the XrmToolBox. It also provides configuration options that the `pac modelbuilder` doesn't. For example, the ability to explicitly control class/properties casing and language specific transliteration of characters. Early Bound Generator V2 can do this using the extensibility features of the `pac modelbuilder`.
+The [Early Bound Generator V2](https://www.xrmtoolbox.com/plugins/DLaB.Xrm.EarlyBoundGeneratorV2/) is an XrmToolBox plug-in created by the community to provide a user interface that generates the correct `builderSettings.json` file, and calls the `pac modelbuilder build` command for the user. Since the UI only generates the `builderSettings.json` file and calls the `pac modelbuilder build` command, you can still run the command in a pipeline without a dependency on the XrmToolBox. The plug-in also provides configuration options that the `pac modelbuilder` doesn't. For example, it provides the ability to explicitly control class and property casing and language-specific transliteration of characters. Early Bound Generator V2 can do this by using the extensibility features of the `pac modelbuilder`.
 
 > [!NOTE]
-> Microsoft doesn't extend support to community developed tools.
-> If you have questions pertaining to the tool, contact the publisher. More Information: [XrmToolBox](https://www.xrmtoolbox.com).
+> Microsoft doesn't extend support to community-developed tools.
+> If you have questions about the tool, contact the publisher. For more information, see [XrmToolBox](https://www.xrmtoolbox.com).
 
 ## For Dynamics 365 Customer Engagement on-premises
 

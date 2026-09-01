@@ -1,7 +1,7 @@
 ---
 title: Long-term data retention
 description: Learn how to use retention policies to transfer data from your Microsoft Dataverse transactional database to a managed data lake for cost-efficient long-term storage.
-ms.date: 12/12/2024
+ms.date: 08/31/2026
 ms.topic: how-to
 author: MsSQLGirl
 ms.author: jukoesma
@@ -17,14 +17,14 @@ ms.custom: bap-template
 [Long-term data retention](../../maker/data-platform/data-retention-overview.md) automates the transfer of data from your Microsoft Dataverse transactional database to a managed data lake for cost-efficient archival storage. Start by [configuring tables for long-term retention](../../maker/data-platform/data-retention-set.md#enable-a-table-for-long-term-retention). Then, create retention policies that define the data to archive. Scheduled retention runs transfer rows that match the criteria.
 
 > [!IMPORTANT]
-> To use all long term data retention features you must meet both of the requirements described here: [Dataverse long term data retention overview](../../maker/data-platform/data-retention-overview.md#dataverse-long-term-data-retention-overview).
+> To use all long-term data retention features, you must meet both of the requirements described in [Dataverse long term data retention overview](../../maker/data-platform/data-retention-overview.md#dataverse-long-term-data-retention-overview).
 
 
 ## Retrieve retained data
 
-You can retrieve data that has been retained using FetchXml and [QueryExpression ](/dotnet/api/microsoft.xrm.sdk.query.queryexpression).
+You can retrieve data that has been retained by using FetchXml and [QueryExpression ](/dotnet/api/microsoft.xrm.sdk.query.queryexpression).
 
-With FetchXml, set the [fetch element](fetchxml/reference/fetch.md) `datasource` attribute value to `"retained"`.
+By using FetchXml, set the [fetch element](fetchxml/reference/fetch.md) `datasource` attribute value to `"retained"`.
 
 ```xml
 <fetch datasource="retained">
@@ -34,10 +34,10 @@ With FetchXml, set the [fetch element](fetchxml/reference/fetch.md) `datasource`
 </fetch>
 ```
 
-With [QueryExpression ](/dotnet/api/microsoft.xrm.sdk.query.queryexpression), set the [QueryExpression.DataSource property](/dotnet/api/microsoft.xrm.sdk.query.queryexpression.datasource) to `retained`.
+By using [QueryExpression ](/dotnet/api/microsoft.xrm.sdk.query.queryexpression), set the [QueryExpression.DataSource property](/dotnet/api/microsoft.xrm.sdk.query.queryexpression.datasource) to `retained`.
 
 > [!NOTE]
-> There is currently no way to retrieve retained data using [Dataverse Web API](webapi/query/overview.md) using an OData style query. [You can use FetchXml with the Dataverse Web API](fetchxml/retrieve-data.md)
+> There's currently no way to retrieve retained data by using [Dataverse Web API](webapi/query/overview.md) with an OData-style query. [You can use FetchXml with the Dataverse Web API](fetchxml/retrieve-data.md).
   
 ## Set up a retention policy
 
@@ -167,7 +167,7 @@ The Web API doesn't support the development of plug-ins
 
 ## Custom logic while retention executes
 
-Long-term retention is an asynchronous process that executes whenever a retention policy is set up. It performs the following operations:
+Long-term retention is an asynchronous process that runs whenever you set up a retention policy. It performs the following operations:
 
 1. Mark rows (records) ready for retention.
 1. Copy marked rows to the data lake.
@@ -178,7 +178,7 @@ You can optionally register custom plug-ins to execute when rows are being marke
 
 ### Custom logic when row is marked for retention
 
-As part of marking rows for retention, Dataverse invokes the `BulkRetain` and `Retain` messages. You can add custom logic by registering a plug-in on execution of those messages. Examples of custom logic include marking more rows for retention or performing validation before rows are marked for retention
+As part of marking rows for retention, Dataverse invokes the `BulkRetain` and `Retain` messages. You can add custom logic by registering a plug-in on execution of those messages. Examples of custom logic include marking more rows for retention or performing validation before rows are marked for retention.
 
 This code sample shows a custom plug-in that's executed during retention of a single table row.
 
@@ -204,11 +204,11 @@ class SampleRetainPlugin : IPlugin
 }
 ```
 
-For a rollback retain operation, write your plug-in similar to the above example, except register it on the `RollbackRetain` message.
+For a rollback retain operation, write your plug-in similar to the preceding example, except register it on the `RollbackRetain` message.
 
 ### Custom logic on bulk retain
 
-This code sample demonstrates custom logic on the last page execution of a `BulkRetain` message operation
+This code sample demonstrates custom logic on the last page execution of a `BulkRetain` message operation.
 
 ```csharp
 class SampleBulkRetainPlugin : IPlugin
@@ -233,11 +233,11 @@ class SampleBulkRetainPlugin : IPlugin
 
 ### Custom logic when row is deleted due to retention
 
-Dataverse executes the `PurgeRetainedContent` message to delete the transactional data rows that were successfully moved to the data lake. The `PurgeRetainedContent` message internally executes a `Delete` message operation to delete the table rows that were successfully moved
+Dataverse executes the `PurgeRetainedContent` message to delete the transactional data rows that it successfully moved to the data lake. The `PurgeRetainedContent` message internally executes a `Delete` message operation to delete the table rows that it successfully moved.
 
-You can register a custom plug-in on the `PurgeRetainedContent` message if you need custom logic during the purge operation at the table level. Optionally, you can register a custom plug-in on the `Delete` message if you need to invoke code when a row is deleted due to retention. You can determine whether the deletion happened due to retention or not by checking the plug-in's [ParentContext](xref:Microsoft.Xrm.Sdk.IPluginExecutionContext.ParentContext) property. The `ParentContext` property value for the `Delete` message operation due to retention is "PurgeRetainedContent."
+You can register a custom plug-in on the `PurgeRetainedContent` message if you need custom logic during the purge operation at the table level. Optionally, you can register a custom plug-in on the `Delete` message if you need to invoke code when a row is deleted due to retention. You can determine whether the deletion happened due to retention by checking the plug-in's [ParentContext](xref:Microsoft.Xrm.Sdk.IPluginExecutionContext.ParentContext) property. The `ParentContext` property value for the `Delete` message operation due to retention is "PurgeRetainedContent."
 
-This code sample blocks the purge on a table when rows aren't ready for purging
+This code sample blocks the purge on a table when rows aren't ready for purging.
 
 ```csharp
 class SamplePurgeRetainedContentPlugin : IPlugin
@@ -271,7 +271,7 @@ class SamplePurgeRetainedContentPlugin : IPlugin
 }
 ```
 
-This code sample applies to the delete operation due to retention
+This code sample applies to the delete operation due to retention.
 
 ```csharp
 class SampleDeletePlugin : IPlugin
@@ -309,9 +309,9 @@ class SampleDeletePlugin : IPlugin
 
 ## Query retention policy and execution details
 
-Retention policy details are stored in the `RetentionConfig` table. Retention execution details are stored in the `RetentionOperation` and `RetentionOperationDetail` tables. You can query these tables to get the retention policy and execution details.
+The system stores retention policy details in the `RetentionConfig` table. It stores retention execution details in the `RetentionOperation` and `RetentionOperationDetail` tables. You can query these tables to get the retention policy and execution details.
 
-The following code provides a few examples of FetchXML that can be used to query the date retention detail table rows. FetchXML is a proprietary XML-based query language. It can be used with SDK-based queries using <xref:Microsoft.Xrm.Sdk.Query.FetchExpression> and by the Web API using the `fetchXml` query string
+The following code provides a few examples of FetchXML that you can use to query the date retention detail table rows. FetchXML is a proprietary XML-based query language. You can use it with SDK-based queries by using <xref:Microsoft.Xrm.Sdk.Query.FetchExpression> and by the Web API by using the `fetchXml` query string.
 
 This code sample shows a simple query to return all active retention policies for an email order by name.
 
