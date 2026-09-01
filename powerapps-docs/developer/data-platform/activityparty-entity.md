@@ -1,7 +1,7 @@
 ---
 title: "ActivityParty table (Microsoft Dataverse) | Microsoft Docs"
 description: "An activity party represents a person or group associated with an activity. An activity can have multiple activity parties"
-ms.date: 01/30/2023
+ms.date: 08/27/2026
 ms.reviewer: pehecke
 ms.topic: article
 author: DanaMartens # GitHub ID
@@ -18,7 +18,7 @@ An activity party represents a person or group associated with an activity. An a
   
 <a name="ActivityPartyTypes"></a>   
 
-## Activity Party Types  
+## Activity party types  
 
  There are 12 activity party types in Microsoft Dataverse. The activity party type is stored as an integer value in the `ActivityParty.ParticipationTypeMask` column. The following table lists the different activity party types, the corresponding integer value for the `ActivityParty.ParticipationTypeMask` column, and the description.  
   
@@ -40,7 +40,7 @@ An activity party represents a person or group associated with an activity. An a
   
 <a name="SupportedActivityPartyTypes"></a>   
 
-## Activity Party types available for each activity  
+## Activity party types available for each activity  
  
 Not all activity party types are available for each activity in Dataverse, except for a custom activity. A custom activity supports all activity party types. You can associate an activity party type for an activity by using the respective column of an activity. For example, to associate an `Organizer` activity party type with an appointment activity, you must specify a value or an array of values of the `ActivityParty` type in the `Appointment.Organizer` column.  
   

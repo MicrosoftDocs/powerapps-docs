@@ -3,7 +3,7 @@ title: "Late-bound and early-bound programming using the SDK for .NET (Microsoft
 description: "Describes the different programming styles available when using the .NET SDK assemblies with the SDK for .NET." 
 ms.collection: get-started
 ms.topic: "article"
-ms.date: 04/03/2022
+ms.date: 08/31/2026
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: pehecke
