@@ -23,6 +23,13 @@ sections:
    - question: What happens when I unlink from Fabric?
      answer: |
         When you unlink, the Fabric lakehouse is removed along with all shortcuts to your Dataverse tables.
+   - question: Why does unlinking from Fabric fail, if there are dependent artifacts?
+     answer: |
+        When you unlink, Dataverse deletes the Fabric lakehouse that was created for the link before it clears the link metadata. Microsoft Fabric doesn't allow a lakehouse to be deleted while other Fabric items still reference it, such as a pipeline, a copy job, or a semantic model. The unlink operation can't complete until those references are removed. More information: [Delete a lakehouse](/fabric/data-engineering/create-lakehouse#delete-a-lakehouse)
+
+        To resolve this issue, open the workspace that contains the lakehouse created by the Fabric link and use lineage view to identify the items that depend on the lakehouse or its SQL analytics endpoint. More information: [Lineage in Fabric](/fabric/governance/lineage)
+
+        Delete the dependent items, or update them so that they no longer reference the lakehouse, and then try to unlink again. If unlinking still fails after you remove all dependent items, contact [Microsoft customer support](/power-platform/admin/get-help-support).
 - name: Table support and limitations  
   questions:
    - question: Which Dataverse tables are selected by default when linking to Fabric?
