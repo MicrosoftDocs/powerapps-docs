@@ -6,7 +6,7 @@ ms.topic: reference
 ms.author: jordanchodak
 ms.reviewer: jdaly
 author: jordanchodakWork
-ms.date: 08/14/2026
+ms.date: 08/31/2026
 ---
 
 # Power Apps CLI command reference
@@ -25,6 +25,7 @@ These are the command groups:
 | `pa auth` | Sign in and manage accounts. |
 | `pa connector` | Find connectors available in a Power Platform environment. |
 | `pa connection` | Create and manage connections and discover their resources. |
+| `pa solution` | Find solutions available in a Power Platform environment. |
 | `pa telemetry`| Manage CLI telemetry settings.|
 
 ## Global options
@@ -74,6 +75,7 @@ These commands are available:
 | [`pa connection list-references`](#pa-connection-list-references) | List connection references in a solution. |
 | [`pa connection list-tables`](#pa-connection-list-tables) | List tables available in a dataset. |
 | [`pa connector list`](#pa-connector-list) | List connectors available in the current Power Platform environment. |
+| [`pa solution list`](#pa-solution-list) | List solutions in the current environment. |
 | [`pa telemetry disable`](#pa-telemetry-disable) | Disable telemetry collection. |
 | [`pa telemetry enable`](#pa-telemetry-enable) | Enable telemetry collection. |
 | [`pa telemetry status`](#pa-telemetry-status) | Display the current telemetry settings. |
@@ -96,7 +98,10 @@ pa app add data-source --connector <connector-id> [options]
 | `--solution-id` | The solution that contains the connection reference. |
 | `--dataset` | The dataset for a tabular data source. |
 | `--table` | The table to add. |
+| `--org-url` | The Dataverse organization URL to use when retrieving table metadata. |
 | `--procedure` | The SQL stored procedure to add. |
+
+These parameters have corresponding [Solutions, connectors, and data sources](environment-variables.md#solutions-connectors-and-data-sources) environmental variables.
 
 ## `pa app add dataverse-api`
 
@@ -111,6 +116,8 @@ pa app add dataverse-api --api-name <operation-name>
 | Parameter | Description |
 | --- | --- |
 | `--api-name` | The name of the Dataverse action or function to add. |
+
+[`PA_CLI_DATAVERSE_API_NAME`](environment-variables.md#dataverse-apis-and-power-automate-flows) is the corresponding environmental variable for the `--api-name` parameter.
 
 Learn more:
 
@@ -130,6 +137,8 @@ pa app add flow --flow-id <flow-id>
 | Parameter | Description |
 | --- | --- |
 | `--flow-id` | The ID of the Power Automate flow to add. |
+
+[`PA_CLI_FLOW_ID`](environment-variables.md#dataverse-apis-and-power-automate-flows) is the corresponding environmental variable for the `--flow-id` parameter.
 
 The command:
 
@@ -164,6 +173,8 @@ pa app find-dataverse-api --search <operation-name> [--json]
 | `--search` | The operation name to search for. |
 | `--json` | Return the results as JSON. |
 
+These parameters have corresponding [Dataverse APIs and Power Automate flows](environment-variables.md#dataverse-apis-and-power-automate-flows) environmental variables.
+
 [Learn how to find available Dataverse operations](../how-to/add-dataverse-action-function.md#step-1-find-available-operations)
 
 ## `pa app init`
@@ -180,8 +191,14 @@ pa app init [--display-name <name>] [--environment-id <environment-id>]
 | --- | --- |
 | `--display-name` | The display name of the code app. |
 | `--environment-id` | The Power Platform environment for the code app. |
+| `--description` | The description of the code app. |
 | `--build-path` | The directory that contains the compiled app assets. |
+| `--file-entry-point` | The HTML entry point in the build output. |
+| `--app-type` | The app type. Valid values are `CodeApp` and `MobileApp`. |
+| `--app-url` | The URL of the locally running code app. |
 | `--cloud` | The Power Platform cloud instance. |
+
+These parameters have corresponding [App initialization](environment-variables.md#app-initialization) environmental variables.
 
 Learn more about scenarios where you can use this command: 
 
@@ -235,6 +252,8 @@ Total flows: 2
 | --- | --- |
 | `--search` | Filter flows by name. |
 
+[`PA_CLI_FLOW_SEARCH` ](environment-variables.md#dataverse-apis-and-power-automate-flows) is the corresponding environmental variable for the `--search` parameter.
+
 ## `pa app push`
 
 Publishes a new version of the code app to Power Apps.
@@ -249,6 +268,8 @@ pa app push [--solution-id <solution-id>]
 | --- | --- |
 | `--solution-id` | The ID of the solution to add the code app to. |
 | `--non-interactive`| Publishes the app non-interactively. [Learn to publish apps with a service principal](../how-to/use-service-principal.md). |
+
+[`PA_CLI_SOLUTION_ID`](environment-variables.md#solutions-connectors-and-data-sources) is the environmental variable to use with the `--solution-id` parameter.
 
 [Learn how to create a code app by using the Power Apps CLI](../how-to/create-an-app-from-scratch.md).
 
@@ -298,6 +319,8 @@ pa app remove flow [--flow-name <name> | --flow-id <flow-id>] [--force]
 | `--flow-id` | The ID of the Power Automate flow to remove. |
 | `--force` | Remove the flow without prompting for confirmation. |
 
+[`PA_CLI_FLOW_DATA_SOURCE_NAME` and `PA_CLI_REMOVE_FLOW_ID`](environment-variables.md#dataverse-apis-and-power-automate-flows) are corresponding environmental variables to use whith these parameters.
+
 [Learn how to remove a flow](../how-to/add-flows.md#remove-a-flow)
 
 ## `pa app run`
@@ -315,6 +338,8 @@ pa app run [--port <port>] [--local-app-url <url>]
 | `--port` | The port for the local host. |
 | `--local-app-url` | The URL of the locally running code app. |
 
+These parameters have corresponding [Run apps](environment-variables.md#run-apps) environmental variables.
+
 ## `pa app share`
 
 Shares the code app with users or service principals.
@@ -329,6 +354,8 @@ pa app share --principal <principal> [--access play|edit]
 | --- | --- |
 | `--principal` | Comma-separated email addresses or Microsoft Entra object IDs for the users or service principals to share with. |
 | `--access` | The access level to grant: `play` (default) or `edit`. |
+
+These parameters have corresponding [Share apps](environment-variables.md#share-apps) environmental variables.
 
 
 ### `pa app share` remarks
@@ -356,6 +383,8 @@ pa auth login --account user@contoso.com
 | Parameter | Description |
 | --- | --- |
 | `--account` | The account to prepopulate on the sign-in page. |
+
+[`PA_CLI_ACCOUNT`](environment-variables.md#authentication) is the corresponding environmental variable for the `--account` parameter.
 
 - [Learn how to sign in](../how-to/sign-in-manage-accounts.md#sign-in)
 - [Learn how to switch the active account](../how-to/sign-in-manage-accounts.md#switch-the-active-account)
@@ -404,6 +433,8 @@ pa auth switch --account user@contoso.com
 | Parameter | Description |
 | --- | --- |
 | `--account` | The account to make active. |
+
+[`PA_CLI_ACCOUNT`](environment-variables.md#authentication) is the corresponding environmental variable for the `--account` parameter.
 
 Learn more about when you can use this command:
 
@@ -468,6 +499,8 @@ pa connection list [--search <term>] [--json]
 | `--search` | Filter connections by name. |
 | `--json` | Return the results as JSON. |
 
+These parameters have corresponding [Solutions, connectors, and data sources](environment-variables.md#solutions-connectors-and-data-sources) environmental variables.
+
 ## `pa connection list-datasets`
 
 Lists datasets available through a connection.
@@ -512,6 +545,8 @@ pa connection list-references --solution-id <solution-id>
 | --- | --- |
 | `--solution-id` | The ID of the solution that contains the connection references. |
 
+[`PA_CLI_SOLUTION_ID`](environment-variables.md#solutions-connectors-and-data-sources) is the corresponding environmental variable to use with the `--solution-id`  parameter.
+
 ## `pa connection list-tables`
 
 Lists tables available in a dataset.
@@ -542,6 +577,8 @@ pa connector list [--search <term>] [--json]
 | --- | --- |
 | `--search` | Filter connectors by name or display name. |
 | `--json` | Return the complete connector list as JSON. |
+
+[`PA_CLI_CONNECTOR_SEARCH`](environment-variables.md#solutions-connectors-and-data-sources) is the corresponding environmental variable to use with the `--search` parameter.
 
 
 ### `pa connector list` output
@@ -588,6 +625,25 @@ pa connector list --json
 
 [Learn how to list available connectors](../how-to/create-connection.md#step-1-list-available-connectors)
 
+## `pa solution list`
+
+Lists solutions in the current environment, including their friendly name, unique name, and solution ID.
+
+```console
+pa solution list [--search <term>] [--json]
+```
+
+### `pa solution list` parameters
+
+| Parameter | Description |
+| --- | --- |
+| `--search` | Filter solutions by friendly name or unique name. The filter is a case-insensitive substring match. |
+| `--json` | Return the complete solution list as JSON. |
+
+[`PA_CLI_SOLUTION_SEARCH`](environment-variables.md#solutions-connectors-and-data-sources) is the corresponding environmental variable for the `--search` parameter.
+
+In an interactive terminal, results appear in pages of 20 rows. Press <kbd>Enter</kbd> to show the next page. Press <kbd>Esc</kbd> or <kbd>Q</kbd> to exit. When you redirect the output or include `--json`, the command returns the complete list.
+
 ## `pa telemetry disable`
 
 Disables telemetry collection.
@@ -614,6 +670,7 @@ pa telemetry status
 
 ## Related information
 
+- [Power Apps CLI environment variables](environment-variables.md)
 - [Quickstart: Create a code app using the Power Apps CLI](../how-to/create-an-app-from-scratch.md)
 - [Sign in and manage accounts with the Power Apps CLI](../how-to/sign-in-manage-accounts.md)
 - [Add data sources to your code app](../how-to/connect-to-data.md)

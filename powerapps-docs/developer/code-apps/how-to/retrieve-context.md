@@ -3,7 +3,7 @@ title: "How to: Get context data"
 description: "Use the getContext function to get context information about the app and signed-in user. This information enables apps to deliver personalized experiences and make informed decisions at runtime based on metadata."
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 02/02/2026
+ms.date: 08/31/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
@@ -45,6 +45,7 @@ The context data returned by the `getContext` function provides rich details abo
    const environmentId = ctx.app.environmentId;
    const queryParams = ctx.app.queryParams;
    const dataverseOrgUrl = ctx.app.dataverseOrgUrl;
+   const appUrl = ctx.app.appUrl;
    const fullName = ctx.user.fullName;
    const objectId = ctx.user.objectId;
    const tenantId = ctx.user.tenantId;
@@ -76,6 +77,7 @@ The following table describes the properties available in the `IAppContext` inte
 | `environmentId`| string | The ID of the environment where the app lives |
 | `queryParams` | Record<string, string> | The query parameters added to the URL |
 | `dataverseOrgUrl` | string | The dataverse URL of the environment where the app lives |
+| `appUrl` | string | The URL of the app. |
 
 ### IUserContext
 
