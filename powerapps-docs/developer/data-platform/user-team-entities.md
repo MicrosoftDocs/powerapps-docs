@@ -1,7 +1,7 @@
 ---
 title: "User and team tables (Microsoft Dataverse)"
 description: "Learn about user and team management using which you can create and maintain user accounts and profiles."
-ms.date: 01/13/2023
+ms.date: 08/27/2026
 ms.reviewer: pehecke
 ms.topic: article
 author: paulliew
@@ -41,7 +41,7 @@ User and team management is the area of Microsoft Dataverse where you can create
 | IsSyncWithDirectory |                                                                                                                                 Specifies whether the user is synchronized with the Microsoft 365 directory. This applies to customers who access Dataverse through the Microsoft Online Services Environment. This attribute can only be set on create and is otherwise read-only.                                                                                                                                 |
 |       QueueId       |                                                                                                                                                                                                                                                                                                               Specifies the default queue for the user.                                                                                                                                                                                                                                                                                                               |
 
- Access checks are additive. You can access tables based on the roles assigned to the user plus the roles assigned to the team that a user is a member of. This allows a user to have privileges outside their business unit.  
+  Access checks are additive. You can access tables based on the roles assigned to the user plus the roles assigned to the team that a user is a member of. This capability allows a user to have privileges outside their business unit.    
 
 > [!NOTE]
 > A user's set of privileges is a union of privileges from the user's roles and privileges from all teams' roles in which the user is a member.  
@@ -52,34 +52,34 @@ To find the user who is currently logged on or who is impersonated, call the <xr
 
 ### Delete a user
 
- In Dataverse, users can be disabled and deleted. You can delete a user from Power Platform (Dataverse) assuming you have the required access permission to the [SystemUser table](reference/entities/systemuser.md) row. There's a sequence of tasks to follow. You can't simply delete the row in a single call. You must first delete the user registered in Microsoft Entra ID and then delete the user in Dataverse. The procedure to follow is outlined below.
+ In Dataverse, you can disable and delete users. You can delete a user from Power Platform (Dataverse) if you have the required access permission to the [SystemUser table](reference/entities/systemuser.md) row. You need to follow a sequence of tasks. You can't simply delete the row in a single call. You must first delete the user registered in Microsoft Entra ID and then delete the user in Dataverse. The following procedure outlines the steps to take.
 
-Log into Microsoft Azure [portal](https://portal.azure.com), and then follow these steps:
+Sign in to the Microsoft Azure [portal](https://portal.azure.com), and then follow these steps:
 
-1. Select **Microsoft Entra ID**, and then under **Manage** select **Users**
-1. Delete the user - this is called a 'soft delete' as the user record remains until permanently deleted
-1. Permanently delete the user either manually or wait 30 days until Azure permanently deletes the user through automation
+1. Select **Microsoft Entra ID**, and then under **Manage** select **Users**.
+1. Delete the user - this action is called a soft delete because the user record remains until permanently deleted.
+1. Permanently delete the user either manually or wait 30 days until Azure permanently deletes the user through automation.
 
-After the system user is soft or permanently deleted in Azure, the user status will be shown as disabled in Dataverse. You can find this user row in the SystemUser table.
+After the system user is soft or permanently deleted in Azure, the user status appears as disabled in Dataverse. You can find this user row in the SystemUser table.
 
 In Dataverse:
 
-1. Reassign any existing table rows the user is assigned to - there should be no table rows assigned to the user before to deleting the user
-1. Delete the user by using an SDK or Web API call - this is a soft delete
-1. Permanently delete the system user by an API call a second time
+1. Reassign any existing table rows the user is assigned to - there should be no table rows assigned to the user before deleting the user.
+1. Delete the user by using an SDK or Web API call - this action is a soft delete.
+1. Permanently delete the system user by an API call a second time.
 
 > [!TIP]
-> There is an over-ride where the user row in Dataverse can be deleted without permanently deleting the user's Microsoft Entra ID record. This can be done by setting the [OrgDbOrgSetting](reference/entities/organization.md#BKMK_OrgDbOrgSettings) `AuthorizationSkipAadUserStateValidation=true`. This removes the need to do step #2 in the above Azure procedure. See [Environment database settings](/power-platform/admin/environment-database-settings) to update this value.
+> There's an override where you can delete the user row in Dataverse without permanently deleting the user's Microsoft Entra ID record. Set the [OrgDbOrgSetting](reference/entities/organization.md#BKMK_OrgDbOrgSettings) `AuthorizationSkipAadUserStateValidation=true`. This setting removes the need to do step 2 in the preceding Azure procedure. To update this value, see [Environment database settings](/power-platform/admin/environment-database-settings).
 
 More information: [Delete users from environment](/power-platform/admin/delete-users), [Update and delete table rows using the Web API](webapi/update-delete-entities-using-web-api.md), [Update and delete table rows using the SDK for .NET](org-service/entity-operations-update-delete.md)
 
 ## Community tools
 
-**User Settings Utility** is a tool that XrmToolbox community developed for Dataverse. See the [Developer tools](developer-tools.md) article for community-developed tools.
+The XrmToolbox community developed **User Settings Utility** for Dataverse. See the [Developer tools](developer-tools.md) article for community-developed tools.
 
 > [!NOTE]
-> The community tools are not a product of Dataverse and does not extend support to the community tools.
-> If you have questions pertaining to the tool, please contact the publisher. More Information: [XrmToolBox](https://www.xrmtoolbox.com).
+> The community tools aren't a product of Dataverse, and Microsoft doesn't support the community tools.
+> If you have questions about the tool, contact the publisher. For more information, see [XrmToolBox](https://www.xrmtoolbox.com).
 
 ### See also  
    

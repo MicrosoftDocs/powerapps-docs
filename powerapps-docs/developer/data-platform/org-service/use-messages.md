@@ -2,7 +2,7 @@
 title: "Use messages with the SDK for .NET (Microsoft Dataverse) | Microsoft Docs"
 description: "Understand how messages are used to invoke operations using the SDK for .NET."
 ms.collection: get-started
-ms.date: 03/26/2024
+ms.date: 08/31/2026
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: pehecke

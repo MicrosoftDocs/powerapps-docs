@@ -1,7 +1,7 @@
 ---
 title: "Execute multiple requests using the SDK for .NET (Microsoft Dataverse) | Microsoft Docs"
 description: "ExecuteMultipleRequest message supports higher throughput bulk message passing scenarios in Microsoft Dataverse."
-ms.date: 06/20/2025
+ms.date: 08/27/2026
 ms.reviewer: pehecke
 ms.topic: how-to
 author: MsSQLGirl
@@ -13,17 +13,17 @@ contributors:
   - JimDaly
 ---
 
-# Execute multiple requests using the SDK for .NET
+# Execute multiple requests by using the SDK for .NET
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-The primary purpose of executing multiple requests it so improve performance in high-latency environments by reducing the total volume of data that is transmitted over the network.
+The primary purpose of executing multiple requests is to improve performance in high-latency environments by reducing the total volume of data transmitted over the network.
 
-You can use the <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest> message to support higher throughput bulk message passing scenarios in Microsoft Dataverse. <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest> accepts an input collection of message <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest.Requests>, executes each of the message requests in the order they appear in the input collection, and optionally returns a collection of <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleResponse.Responses> containing each message's response or the error that occurred. Each message request in the input collection is processed in a separate database transaction. <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest> is executed by using the [IOrganizationService.Execute](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2a) method.
+You can use the <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest> message to support higher throughput bulk message passing scenarios in Microsoft Dataverse. <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest> accepts an input collection of message <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest.Requests>, executes each of the message requests in the order they appear in the input collection, and optionally returns a collection of <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleResponse.Responses> containing each message's response or the error that occurred. Each message request in the input collection is processed in a separate database transaction. Use the [IOrganizationService.Execute](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2a) method to execute <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest>.
   
-In general, <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest> behaves the same as if you executed each message request in the input request collection separately, except with better performance. Use of the <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy.CallerId> parameter of the service proxy is honored and applies to the execution of every message in the input request collection. Plug-ins and workflow activities are executed as you would expect for each message processed.
+In general, <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest> behaves the same as if you executed each message request in the input request collection separately, except with better performance. The service proxy honors the use of the <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy.CallerId> parameter and applies it to the execution of every message in the input request collection. Plug-ins and workflow activities run as expected for each message processed.
   
-Plug-ins and custom workflow activities aren't blocked from using <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest>. However, this isn't recommended. Any failures in the synchronous step must roll back all data operations to maintain data integrity. Each operation performed within `ExecuteMultiple` must be rolled back. `ExecuteMultiple` also causes issues when the operations exceed the maximum plug-in timeout duration.
+Plug-ins and custom workflow activities can use <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest>. However, this approach isn't recommended. Any failures in the synchronous step must roll back all data operations to maintain data integrity. Each operation performed within `ExecuteMultiple` must be rolled back. `ExecuteMultiple` also causes issues when the operations exceed the maximum plug-in timeout duration.
 
 More information: [Don't use batch request types in plug-ins and workflow activities](../best-practices/business-logic/avoid-batch-requests-plugin.md)
   
@@ -31,7 +31,7 @@ More information: [Don't use batch request types in plug-ins and workflow activi
 
 ## Example
 
- The following sample code demonstrates a single <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest> that performs multiple create operations. Run-time execution options called *Settings* are used to control the request processing and returned results. These run-time options are discussed in the next section.  
+ The following sample code demonstrates a single <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest> that performs multiple create operations. Run-time execution options called *Settings* control the request processing and returned results. The next section discusses these run-time options.  
   
 ```csharp
 
@@ -80,9 +80,9 @@ More information:  [Sample: Execute multiple requests](samples/execute-multiple-
   
 <a name="options"></a>
 
-## Specify run-time execution options  
+## Specify runtime execution options  
 
-The <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest.Settings> parameter of <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest> applies to all of the requests in the request collection controlling execution behavior and results returned. Let's take a look at these options in more detail.  
+The <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest.Settings> parameter of <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest> applies to all of the requests in the request collection and controls execution behavior and the results returned.  
   
 |ExecuteMultipleSettings Member|Description|  
 |------------------------------------|-----------------|  
@@ -104,22 +104,22 @@ The <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest.Settings> parameter 
 
 ## Run-time limitations
 
-There are several constraints related to the use of the <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest> as described in the following list.  
+The following list describes constraints related to the use of the <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest>.  
   
-- **No recursion is allowed** <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest> can't invoke <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest>. An <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest> found in the request collection generates a fault for that request item.  
-- **Maximum batch size** There's a limit to how many requests can be added to a request collection. If that limit is exceeded, a fault is thrown before the first request is ever executed. A limit of 1,000 requests is typical though this maximum amount can be set for the Dataverse deployment.
+- **No recursion** An <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest> can't invoke another <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest>. If the request collection contains an <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest>, it generates a fault for that request item.  
+- **Maximum batch size** You can add only a limited number of requests to a request collection. If you exceed that limit, the system throws a fault before executing the first request. A limit of 1,000 requests is typical, but you can set this maximum amount for your Dataverse deployment.
 
 > [!NOTE]
-> There was once a limit on the number of concurrent ExecuteMultiple requests. The limit was 2. This limit was removed because service protection limits made it unnecessary. For more information: [Service Protection API Limits](../api-limits.md).
+> There was once a limit on the number of concurrent ExecuteMultiple requests. The limit was 2. Microsoft removed this limit because service protection limits made it unnecessary. For more information, see [Service Protection API Limits](../api-limits.md).
 
   
 <a name="fault"></a>
 
 ## Handle a batch size fault
 
-What should you do when your input request collection exceeds the maximum batch size? Your code can't directly query the maximum batch size through the deployment web service unless it's run under an account that has the deployment administrator role.  
+What should you do if your input request collection exceeds the maximum batch size? Your code can't directly query the maximum batch size through the deployment web service unless it runs under an account that has the deployment administrator role.  
   
-Fortunately, there's another method that you can use. When the number of requests in the input <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest.Requests> collection exceeds the maximum batch size allowed for an organization, a fault is returned from the <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest> call. The maximum batch size is returned in the fault. Your code can check for that value, resize the input request collection to be within the indicated limit, and resubmit the <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest>. The following code snippet demonstrates some of this logic.  
+Fortunately, there's another method that you can use. When the number of requests in the input <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest.Requests> collection exceeds the maximum batch size allowed for an organization, the <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest> call returns a fault. The fault includes the maximum batch size. Your code can check for that value, resize the input request collection to be within the indicated limit, and resubmit the <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest>. The following code snippet demonstrates some of this logic.  
   
 ```csharp
 catch (FaultException<OrganizationServiceFault> fault)
