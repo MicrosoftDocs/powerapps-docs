@@ -15,6 +15,7 @@ contributors:
   - chmoncay
 ms.custom: canvas
 ms.collection: get-started
+ai-usage: ai-assisted
 ---
 # Add and configure controls in canvas apps
 

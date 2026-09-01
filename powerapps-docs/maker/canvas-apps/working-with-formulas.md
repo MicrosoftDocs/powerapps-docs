@@ -15,6 +15,7 @@ search.audienceType:
 contributors:
   - mduelae
   - gregli-msft
+ai-usage: ai-assisted
 ---
 
 # Get started with formulas in canvas apps

@@ -12,7 +12,7 @@ search.audienceType:
 contributors:
   - lancedMicrosoft
   - mduelae
-  
+ai-usage: ai-assisted 
 ---
 
 # Overview of creating performant apps
