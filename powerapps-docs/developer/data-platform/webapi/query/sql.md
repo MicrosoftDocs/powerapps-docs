@@ -18,8 +18,7 @@ contributors:
 
 You can use Structured Query Language (SQL) to query data from Microsoft Dataverse by using the Web API. Pass SQL `SELECT` commands through the `sql` query option, using the entity set name of the table you want to query.
 
-> [!NOTE]
-> Each command must contain a single `SELECT` statement. Other T-SQL statements like `DECLARE`, `INSERT`, `DELETE`, or `ALTER TABLE` aren't supported. Commands with multiple result sets like `SELECT name FROM account; SELECT fullname FROM contact` aren't supported.
+
 
 To use a SQL query like this:
 
@@ -68,6 +67,10 @@ Preference-Applied: odata.include-annotations="*"
    ]
 }
 ```
+
+## Supported SQL
+
+[!INCLUDE [cc-web-api-sql-limitations](../../includes/cc-web-api-sql-limitations.md)]
 
 ## Select columns
 
