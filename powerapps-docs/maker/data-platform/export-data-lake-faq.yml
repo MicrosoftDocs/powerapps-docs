@@ -4,7 +4,7 @@ metadata:
   description: Get answers to frequently asked questions about Power Apps Azure Synapse Link for Dataverse.
   author: sabinn-msft
   ms.search.keywords: 
-  ms.date: 07/20/2026
+  ms.date: 09/01/2026
   ms.author: sabinn
   ms.reviewer: matp
   contributors: 
@@ -139,6 +139,15 @@ sections:
    - question: Does Azure Synapse Link support calculated columns?
      answer: |
           In Dataverse, calculated columns store only the formula definition, and the actual value is derived from the underlying columns. Therefore, calculated columns are supported only when all referenced columns are located within the same exported table. Azure Synapse Link synchronizes data based on Dataverse change tracking. During incremental synchronization, a record is re-exported only when its version changes. If a calculated column value changes without a corresponding version change to the record, the updated value isn't synchronized to the data lake until the record is updated and its version changes. For example, if a calculated column evaluates to `NULL` during the initial synchronization, `NULL` is written to the data lake. If the inputs used by the calculation change later but the record version doesn't change, Azure Synapse Link won't detect the recalculated value and the data lake continues to show `NULL`. Once the record is updated and its version changes, Azure Synapse Link re-exports the record with the latest calculated column value.
+   - question: Why are values in some columns exported as null even though the sync is successful?
+     answer: |
+        If a table syncs successfully but specific columns contain null values for every row, check whether column-level security is enabled on those columns. Column-level security restricts access to individual columns, and it applies to currency columns and other column types. More information: [Column-level security](/power-platform/admin/field-level-security)
+
+        Azure Synapse Link reads Dataverse data as an application user. When a column is secured, the application user must be granted read access to that column through a column security profile. If the application user isn't added to the profile that secures the column, the sync completes successfully and all other columns export as expected, but the secured column is exported as null.
+
+        To resolve this issue, add the Azure Synapse Link application user, **Dynamics365Athena2**, to the column security profile that secures the affected columns, and grant it the **Read** permission. More information: [Add teams or users to a column security profile to control access](/power-platform/admin/field-level-security#add-teams-or-users-to-a-column-security-profile-to-control-access)
+        > [!NOTE]
+        > After you grant read access, the values are exported with the next data change on the affected rows. Rows that aren't updated continue to show null until the record changes or you resynchronize the table.
    - question: Which Dataverse tables use append only mode by default?
      answer: |
         All tables that don't have a createdOn field is synced using append only mode by default. This includes relationship tables and the ActivityParty table.
