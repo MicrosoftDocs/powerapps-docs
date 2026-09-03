@@ -314,30 +314,15 @@ client.records.create("contact", {"firstname": "Jane", **bind})
 
 ## Query data using SQL
 
-Dataverse provides a read-only interface to a limited set of SQL `SELECT` commands. It supports SQL JOINs, aggregates, GROUP BY, DISTINCT, and OFFSET FETCH pagination.
+Use the Python SDK [client.query.sql method](/python/api/powerplatform-dataverse-client/powerplatform.dataverse.operations.query.queryoperations#powerplatform-dataverse-operations-query-queryoperations-sql) method to send a SQL query to the Dataverse Web API's `?sql=` parameter. For more information, see [Use SQL to Query Data With the Dataverse Web API](../webapi/query/sql.md).
 
-You can also access the SQL query capability by using the Dataverse Web API's `?sql=` parameter. This approach lets code written in languages other than Python access Dataverse data. For more information, see [Use SQL to Query Data With the Dataverse Web API](../webapi/query/sql.md).
+### Supported SQL
 
-> [!IMPORTANT]
-> The SQL support is limited to read-only queries. Complex joins, subqueries, and certain SQL functions might not be supported. The SQL query must follow the supported subset:
->
-> - WHERE can only be a boolean expression tree where leaves are binary operators (`=`, `>`, `like`, etc.) with one of the arguments being a direct column reference and another being a constant.
-> - TOP only allows an integer literal.
-> - ORDERBY can only reference columns and doesn't allow any complex expressions.
+[!INCLUDE [cc-web-api-sql-limitations](../includes/cc-web-api-sql-limitations.md)]
 
-### Supported SQL syntax
+Unsupported queries raise [`ValidationError`](/python/api/powerplatform-dataverse-client/powerplatform.dataverse.core.errors.validationerror) before the request is sent. Queries the client can't validate, but the server rejects, raise [`HttpError`](/python/api/powerplatform-dataverse-client/powerplatform.dataverse.core.errors.httperror).
 
-The SQL interface supports the following T-SQL subset.
-
-| Feature | Supported syntax |
-|---|---|
-| Select | `SELECT`, `SELECT DISTINCT`, `SELECT TOP N` (0–5000) |
-| Joins | `INNER JOIN`, `LEFT JOIN` (multi-table) |
-| Filtering | `WHERE` with `=`, `!=`, `>`, `<`, `>=`, `<=`, `LIKE`, `IN`, `NOT IN`, `IS NULL`, `IS NOT NULL`, `BETWEEN`, `AND`, `OR`, nested parentheses |
-| Grouping and aggregation | `GROUP BY`, `COUNT(*)`, `SUM()`, `AVG()`, `MIN()`, `MAX()` |
-| Sorting and paging | `ORDER BY [ASC\|DESC]`, `OFFSET n ROWS FETCH NEXT m ROWS ONLY` |
-
-The following statements or features aren't supported: `SELECT *`, subqueries, CTEs, `HAVING`, `UNION`, `RIGHT JOIN`, `FULL JOIN`, `CROSS JOIN`, `CASE`, `COALESCE`, window functions, string/date/math functions, and any write statement (`INSERT`, `UPDATE`, `DELETE`). Unsupported or write queries raise `ValidationError` before the request is sent. Queries the client can't validate, but the server rejects, raise `HttpError`.
+### SQL examples
 
 The following example code demonstrates a SQL query in Python.
 
