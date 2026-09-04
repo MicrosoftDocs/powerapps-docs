@@ -21,10 +21,6 @@ You can [create a canvas app in a solution](add-app-solution.md) in Power Apps o
 
 Because canvas apps and cloud flows in a solution are defined in Microsoft Dataverse, you can use Dataverse capabilities to manage them, including [connection references](/power-apps/maker/data-platform/create-connection-reference), [environment variables](/power-apps/maker/data-platform/environmentvariables), the [Dataverse API](/power-apps/developer/data-platform/webapi/overview), [role-based security](/power-platform/admin/database-security#environments-with-a-dataverse-database), and solution-based [application lifecycle management (ALM)](/power-platform/alm).
 
-> [!IMPORTANT]
-> - The canvas apps setting is a preview feature.
-> - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://www.microsoft.com/en-us/business-applications/legal/supp-powerplatform-preview/), and are available before an official release so that customers can get early access and provide feedback.
-
 ## Prerequisites
 
 - Solutions are stored in Dataverse, so the environment must have a Dataverse database to use this feature. If yours doesn't, [add a Dataverse database](/power-platform/admin/create-database).
