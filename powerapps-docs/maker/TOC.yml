@@ -255,6 +255,8 @@
   items:
   - name: Overview
     href:   ../vibe/overview.md
+  - name:  Convert a vibe app to a code app
+    href: ../vibe/convert-vibe-to-code.md 
   - name: Create apps, data, and plans using vibe 
     href: ../vibe/create-app-data-plan.md
   - name: Add a SharePoint list in Power Apps vibe
