@@ -29,12 +29,13 @@ The option to attach files to an email is a useful feature when you need to shar
 
 You can attach an unlimited number of files to an email; however, there are file size limitations that are managed by your system administrator. 
 
-**Enhanced email** is the default email form, however you can switch forms by doing the following:
+**Enhanced email** is the default email form. However you can switch forms by doing the following:
 
    ![Switch forms.](media\email-work-with-attachments-1a.png "Switch forms")
    
    1. Under the email subject name, select on the caret (v) next to **Email**
-   2.	A dropdown appears with a list of email form options you can choose from.<BR><BR>
+   2. A drop-down list appears with the available email forms.
+
 
 File attachments display differently, depending on the email form you're working in. You can switch email forms without losing information.
 
@@ -75,10 +76,10 @@ Select commands allow you to select individual files or multiple files at once.
       > [!Note] 
       > **Select All** only selects files that are visible. If you have multiple pages of file attachments, you will need to go to that page and select those files independently.
 
-   2. **Tile Color Transparency**. The background color of selected file attachments changes to light grey to identify which files have been selected.
+   2. **Tile Color Transparency**. The background color of selected file attachments changes to light gray to identify which files have been selected.
    3. **Check box** You can also verify which files have been selected by viewing whether the checkbox in the top-right corner of the file attachment is selected. 
 
-Formatting of file attachments in email can be realigned based on the device being used and format it's being worked in.
+File attachments can be displayed differently depending on the device and email form you're using.
 
   ![Format file attachments.](media\email-working-with-the-attachment-command-bar-12a.png "Format file attachments")
 
@@ -104,7 +105,7 @@ These are two of the most important commands when working with images.
 ### Supported email file attachments
 The following is a list of file image types that are supported:
 
-|image type	 |supports preview	|supported inline (in editor)|
+|Image type	 |Supports preview	|Supported inline (editor)|
 |------------|-------------------|----------------------------|
 |BMP.bmp     | Yes               | Yes                        |
 |GIF.gif     | Yes               | Yes                        |
@@ -113,6 +114,7 @@ The following is a list of file image types that are supported:
 |PNG.png     | Yes               | Yes                        |
 |SVG.svg     | Yes               | Yes                        |
 |PDF.pdf     | Yes (preview not supported on IE) | No         |
+
 
 ## View and insert images in email
 
