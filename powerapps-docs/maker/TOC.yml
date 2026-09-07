@@ -1935,6 +1935,7 @@
   - name: Glossary of terms
     href: ./model-driven-apps/model-driven-app-glossary.md
 - name: Power Apps mobile app
+  href: ../mobile/overview.md
   items:
   - name: Install the Power Apps mobile app
     href: ../mobile/run-powerapps-on-mobile.md
@@ -2024,6 +2025,14 @@
       href: ../mobile/windows-app-install.md
     - name: Use Power Apps for Windows
       href: ../mobile/windows-app-use.md
+  - name: Power Apps Native mobile apps (preview)
+    items:
+    - name: Overview 
+      href: ../mobile/native-apps/overview.md
+    - name: "Quickstart: Build your first native mobile app"
+      href: ../mobile/native-apps/quickstart-native-apps.md 
+    - name: Troubleshoot issues in the native mobile app
+      href: ../mobile/native-apps/troubleshoot-native-apps.md
 - name: Dataverse
   items:
   - name: Dataverse
