@@ -1,7 +1,7 @@
 ---
 title: "Create and use business skills" 
 description: Learn how to enable Microsoft Dataverse intelligence to bring business data understanding to AI agents and Copilot.
-ms.date: 07/15/2026
+ms.date: 09/08/2026
 ms.reviewer: matp
 ms.topic: how-to
 author: prithvi-khosla
@@ -41,9 +41,10 @@ The **Business skills** page is the central hub for managing all business proces
 1. Select **New business skill** on the command bar, or select the **Create a business skill** card.
 1. Enter a name for your skill. A unique name is generated automatically with the preferred solution's prefix.
 1. In the **Description** field, describe the skill's purpose and when it should be followed. Agents use this description to understand when to perform the skill.
+1. Optional: Select **Edit metadata** to add key-value metadata that provides more information about the skill, such as its organization.
 1. In the **Instructions** section, write the step-by-step process in markdown format. Use the **Edit markdown** and **Preview** options to switch between editing and previewing your instructions.
 1. Select **Save**.
-1. After saving, you can add resource files in the **Resources** section. Select **Add Files** to attach reference materials such as policy documents, SOPs, templates, forms, or calculations (20 MB limit).
+1. Optional: After saving, you can add resource files in the **Resources** section. Select **Add Files** to attach reference materials such as policy documents, SOPs, templates, forms, or calculations (20 MB limit).
 
 > [!NOTE]
 > All skills are active by default. [Deactivate a skill](#deactivate-a-skill)
@@ -63,7 +64,7 @@ You can quickly create a business skill by uploading existing skills.
 ### Edit a business skill
 
 1. Open a skill in the **Business skills** page by selecting its name in the list, or select a skill and then select **Edit** from the command bar or the three-dot menu (**&#8942;**).
-1. Update the **Name**, **Description**, **Instructions**, or **Resources** as needed.
+1. Update the **Name**, **Description**, **Metadata**, **Instructions**, or **Resources** as needed.
 1. Select **Save**. 
 
 ### Create or update skills using the Dataverse MCP server
@@ -86,26 +87,25 @@ The following Dataverse MCP server tools support business skill management:
 
 ### Share a business skill
 
-Skills are user-owned by default. You can share skills with specific users or teams and control their level of access.
+Skills are user-owned by default. You can provide access to a business skill in three ways:
+
+- **General access**—Makes the skill available to everyone in the environment. Use this option for skills that apply broadly across your organization.
+- **Security role access**—Provides access based on Dataverse security roles. You can share a skill with roles assigned to you. Admins can share with any role.
+- **Direct access**—Shares the skill with specific users or groups and lets you choose whether they can view or edit the skill.
 
 1. Select a skill, and then select **Share** from the command bar or the three-dot menu (**&#8942;**).
-1. Search for and add the users or teams you want to share with.
-1. For each user or team, choose a permission level:
-   - **Viewer** - Can view the skill only.
-   - **Co-owner** - Can view and edit the skill.
+1. Choose how to provide access:
+   - For general access, choose **Anyone can view** to allow everyone in the organization to use this skill. This option provides view-only access.
+   - For security role access, under **Security roles**, select one or more security roles and then choose whether they can view or edit the skill.
+   - For direct access, under **Direct Access**, add a name, group, or email address, and then choose whether they can view or edit the skill.
 1. Select **Share**.
 
-Select **Manage access** to review who has access, change permission levels, or remove access. Pending invitations that haven't been shared yet are shown on the **Pending invites** tab.
+> [!IMPORTANT]
+> Security role access requires users to have two roles. An administrator must assign users the **Skill Sharing Role**, either directly or through a team. Users must also have the security role that the skill is shared with. For more information, see [Assign security roles](/power-platform/admin/assign-security-roles).
 
-### Change skill visibility
+For example, if a skill is shared with the **Customer Service Representative** role, only users who have both **Customer Service Representative** and **Skill Sharing Role** can access it. Having either role by itself isn't enough.
 
-You can make a business skill visible to everyone in the organization or restrict it to just the owner and shared users.
-
-1. Select a skill, and then select **Viewable by** from the command bar or the three-dot menu (**&#8942;**).
-1. In the **Viewable by** dialog, select one of the following:
-   - **Individual** - Only the owner and users the skill is shared with can see the skill. This is the default.
-   - **Organization** - All users in the environment with at least basic user privileges can see the skill.
-1. Select **Save**.
+Select **Manage access** to review who has access, change access levels, or remove access.
 
 ### Deactivate a skill
 
@@ -129,7 +129,7 @@ To permanently remove a business skill:
 After you create business skills in your environment, AI agents can use them to understand and run business processes. Access skills through the Dataverse MCP server.
 
 - To start using business skills, connect to the Dataverse MCP server in Microsoft Copilot Studio or from agent mode in Visual Studio Code or non-Microsoft clients.
-- Try asking your agent, "Show me all business skills in this environment." The agent retrieves a list of all the skills in your connected environment by using the Dataverse MCP server.
+- Try asking your agent, "Show me all business skills in this environment." The agent retrieves a list of the skills you have access to in your connected environment by using the Dataverse MCP server.
 - Start testing by asking your agent a relevant scenario that matches your skill's intended use case. For example, if you created a skill for logging call transcripts into Dataverse, provide a sample transcript to your agent and ask it to log the transcript information in Dataverse.
   > [!TIP]
   > If your agent doesn't automatically fetch skill details, try adding "Using business skills" before your actual prompt. For example, "Using business skills log this transcript in Dataverse."
@@ -153,7 +153,7 @@ To add a skill to a solution:
 - Write clear, specific instructions. Vague instructions lead to inconsistent agent behavior.
 - Use descriptive names and descriptions. Help agents discover the right skill for the task.
 - Keep skills focused. One skill, one process. Create separate skills for distinct workflows.
-- Test with real scenarios. Validate behavior before sharing broadly.
+- Test with real scenarios. Validate behavior before sharing with users, groups, or security roles.
 - A well-structured business skill should include:
    - Description:
       - What the skill does and when to use it.
