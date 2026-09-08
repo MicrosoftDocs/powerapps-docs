@@ -7,10 +7,17 @@ ms.reviewer: matp
 ms.service: powerapps
 ms.topic: how-to
 ms.subservice: dataverse-maker
-ms.date: 07/06/2026
+ms.date: 09/07/2026
 ms.custom: template-how-to
 ---
 # Export Dataverse data in Delta Lake format
+
+> [!IMPORTANT]
+> The Delta Lake (Parquet) export option in Azure Synapse Link is deprecated:
+>
+> - Beginning October 15, 2026, the option won't be available to new customers.
+> - For Delta Lake or Parquet output with significantly lower synchronization latency, use [Link to Microsoft Fabric](fabric-link-to-data-platform.md).
+> - Existing customers must transition to either CSV output in Azure Synapse Link or Link to Microsoft Fabric by December 2027, when the Delta Lake (Parquet) export option will no longer be available.
 
 Use Azure Synapse Link for Dataverse to export your Microsoft Dataverse data in Delta Lake format. Delta Lake is the native format for Microsoft Fabric as well as many other tools like Azure Databricks. Exporting data in Delta lake format directly from Dataverse eliminates the need to have a separate Delta Lake conversion processes on your own and accelerates time to insight. This article provides information about this feature and shows you how to perform the following tasks:
 

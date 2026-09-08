@@ -8,7 +8,7 @@ contributors: saviegas
 ms.service: powerapps
 ms.subservice: dataverse-maker
 ms.topic: how-to
-ms.date: 08/17/2026
+ms.date: 09/08/2026
 ms.custom: template-how-to
 ---
 # Link to Microsoft Fabric
@@ -158,7 +158,7 @@ To confirm a profile is running on low-latency sync, select **Link data** from t
 Existing Fabric link profiles continue to use the previous sync engine. To move an existing profile to low-latency sync after it's available in your station, unlink the profile and relink it.
 
 > [!NOTE]
-> Unlinking and relinking triggers a full initial sync for all configured tables. Initial sync can copy large volumes of data, so schedule it during off-peak hours or on weekends when traffic in your environment is lower.
+> Unlinking and relinking triggers a full initial sync for all configured tables. Initial sync can copy large volumes of data, so schedule it during off-peak hours or on weekends when traffic in your environment is lower. Before you unlink, remove or update any dependent Fabric items that reference the lakehouse or its SQL analytics endpoint. For more information, see [Why does unlinking from Fabric fail, if there are dependent artifacts?](fabric-link-faq.yml#why-does-unlinking-from-fabric-fail--if-there-are-dependent-artifacts)
 
 > [!IMPORTANT]
 >
@@ -199,6 +199,24 @@ To enable CDF for an environment, go to the [Power Platform admin center](https:
 > After you enable CDF, it takes effect for a table when data in that table changes. The next delta sync includes the change log for changes made from that point forward. Changes made before CDF was enabled aren't captured.
 >
 > CDF is memory- and compute-intensive and can increase overall sync latency. When CDF is enabled, you might experience higher latencies even with low-latency sync. Consider this performance tradeoff before enabling CDF.
+
+## New metadata sync for SQL analytics endpoint (preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
+Low-latency sync helps data land faster in Fabric through shortcuts. The SQL analytics endpoint retrieves the data from the shortcuts for further processing. To reduce end-to-end latency, use the new SQL analytics endpoint metadata sync, which is available in preview. For more information, see [New metadata sync and more in SQL Analytics Endpoint (Preview)](https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/new-metadata-sync-and-more-in-sql-analytics-endpoint-preview/5183137).
+
+> [!IMPORTANT]
+>
+> - This is a preview feature.
+> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+
+During preview, SQL endpoint v2 can be used only with a new workspace connection. When you create a Link to Fabric, select a workspace where **New metadata sync (preview)** is already enabled. If the feature wasn't enabled before you linked your current workspace, unlink the environment, enable the feature under **Workspace settings** > **Warehouse settings**, and then select that workspace when you relink. Alternatively, select another workspace where the preview feature is already enabled.
+
+> [!NOTE]
+>
+> - Unlinking removes the Fabric lakehouse. Relinking triggers a full initial sync for all configured tables and creates a new SQL analytics endpoint. Schedule the operation during off-peak hours or on weekends when traffic in your environment is lower.
+> - This guidance applies while the new metadata sync is in preview. After the feature becomes generally available, this guidance will be updated to reflect the latest SQL analytics endpoint used by Link to Fabric.
 
 ## Manage link to Fabric
 
