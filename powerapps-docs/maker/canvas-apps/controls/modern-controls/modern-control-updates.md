@@ -4,7 +4,7 @@ description: Learn about recent updates to modern controls in Power Apps canvas 
 author: yogeshgupta698
 ms.topic: overview
 ms.custom: canvas
-ms.date: 08/24/2026
+ms.date: 09/08/2026
 ms.subservice: canvas-maker
 ms.author: yogupt
 ms.reviewer: joshuapa
@@ -66,6 +66,7 @@ The following table lists each control that has an updated version, with a link 
 | Checkbox | [Updates to Checkbox](modern-control-checkbox.md#recent-updates) | FontColor renamed to Color, FontSize renamed to Size, new Tooltip property, read-only View mode, more reliable Checked behavior |
 | Avatar | [Updates to Avatar](modern-control-avatar.md#recent-updates) | Font property renames, Badge and Shape use enum values, FontWeight uses enum, new OnSelect and Tooltip properties, Out of office merged into Badge |
 | Spinner | [Updates to Spinner](modern-control-spinner.md#recent-updates) | Font property renames, LabelPosition uses the SpinnerLabelPosition enum, new Tooltip property |
+| Progress Bar | [Updates to Progress Bar](modern-control-progress-bar.md#recent-updates) | ProgressColor, Thickness, and Shape use enum values, new Tooltip property, OnChange isn't available in the updated control |
 | Form | [Updates to Form](modern-control-form.md#recent-improvements) | New screen templates, red required indicator, consistent typography, display names for people fields, reliable date fields; same form model and functions as classic |
 
 ## Property changes across modern controls

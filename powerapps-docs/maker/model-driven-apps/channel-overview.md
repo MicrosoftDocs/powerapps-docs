@@ -2,7 +2,7 @@
 title: "Release channel for your model-driven app" 
 description: "This article outlines how release channels enable features within a Power Apps model-driven app."
 ms.custom: ""
-ms.date: 07/12/2026
+ms.date: 09/08/2026
 ms.reviewer: "matp"
 ms.service: powerapps
 ms.subservice: mda-maker
@@ -16,10 +16,7 @@ search.audienceType:
 
 Microsoft regularly provides new and updated features for your model-driven apps. You can control how often the users in your organization get these new features by specifying the release channel. The concept of multiple release channels originated from [Microsoft 365 channels](/deployoffice/updates/overview-update-channels) and provides Power Platform admins with a choice of how often end user impacting features are released.
 
-The twice-yearly release waves are delivered through the *semi-annual channel*, which is currently the default for all apps and environments. The *monthly channel* option enables generally available (GA) ready features to be turned on each month, with a one-week advance notification period so admins can validate new features against their customizations before they're enabled. Both channels deliver the same GA features - neither channel is a preview or early access program.
-
-> [!NOTE]
-> A release *channel* isn't the same as a release *wave*. A release wave (for example, 2025 wave 1) is the six-month period used to plan, document, and deliver a set of features, published in the [Dynamics 365](/dynamics365/release-plan/) and [Power Platform](/power-platform/release-plan/) release plans. A release channel is the cadence that turns GA features on in your environment: the semi-annual channel enables features twice a year (early April and early October), aligned with the release waves, while the monthly channel enables those same GA features each month.
+The *semi-annual channel* turns on generally available (GA) ready features twice a year, in April and October. The *monthly channel* option turns on GA-ready features each month, with a one-week advance notification period so admins can validate new features against their customizations before they're enabled. Both channels deliver the same GA features - neither channel is a preview or early access program.
 
 This table provides a comparison of monthly channel and semi-annual channel.
 
@@ -30,9 +27,9 @@ This table provides a comparison of monthly channel and semi-annual channel.
 
 Security and non-end user impacting changes continue to be delivered with the weekly releases and changes outlined in [Microsoft Unified Interface versions](/power-platform/released-versions/powerapps#all--microsoft-unified-interface-versions).
 
-The key idea is that GA-ready end user impacting features release monthly instead of waiting for the twice-yearly release cadence. The same number of features are delivered in 12 smaller releases instead of two larger releases.
+The key idea is that GA-ready end user impacting features can be released monthly instead of waiting for the semi-annual channel updates in April and October. The same number of features are delivered in 12 smaller releases instead of two larger releases.
 
-Microsoft 365 products experience consistently higher user satisfaction for monthly channel compared to the semi-annual channel. Currently, we observe a user satisfaction drop with the twice-yearly releases, and we're looking to improve this experience by following the Microsoft 365 channel approach.
+Microsoft 365 products experience consistently higher user satisfaction for monthly channel compared to the semi-annual channel. We observe a user satisfaction drop with larger semi-annual releases, and we're looking to improve this experience by following the Microsoft 365 channel approach.
 
 ## How monthly and semi-annual channels relate
 
@@ -51,9 +48,9 @@ Release channel can be configured on the environment, app, or user level. The re
 
 Environment admins use the Power Platform admin center to select the channel for the environment. Makers use app designer or the solutions area to select the channel for one or more apps.
 
-To allow gradually switching the default from semi-annual channel to monthly channel, the default value for both environment release channel and app release channel were renamed to **Auto**. There's an explicit choice for **Semi-annual** and **Monthly**. More information: [Changing release channels](channel-change.md).
+The environment and app release channel settings provide **Auto**, **Semi-annual**, and **Monthly** choices. For more information, see [Changing release channels](channel-change.md).
 
-With 2024 release wave 1, the Power Platform environments were changed to treat **Auto** app release channel as **Monthly** and newly created model-driven apps default to **Monthly**. With 2024 release wave 2, the Dynamics 365 environments changed to treat **Auto** app release channel as **Monthly**. Admins and makers can select **Semi-annual** if they need the slower cadence. More information: [Keeping semi-annual release channel](channel-change.md#keep-semi-annual-release-channel).
+When **Auto** is selected, Power Platform and Dynamics 365 environments use the **Monthly** channel. Newly created model-driven apps also default to **Monthly**. Admins and makers can select **Semi-annual** if they need the slower cadence. More information: [Keeping semi-annual release channel](channel-change.md#keep-semi-annual-release-channel).
 
 ## Monthly release schedule
 
@@ -72,14 +69,14 @@ Because each region group updates on the following weekend, the release reaches 
 
 ## Semi-annual release schedule
 
-Through the semi-annual channel, the generally available features planned in each Dynamics 365 and Power Platform release wave are turned on twice a year, in early April and early October:
+Through the semi-annual channel, generally available features are turned on twice a year, in early April and early October:
 
-| Release wave | Rollout begins | Production build |
+| Semi-annual release | Rollout begins | Production build |
 | --- | --- | --- |
-| Wave 1 | Early April | `YY03.3` (for example, `2603.3`) |
-| Wave 2 | Early October | `YY09.3` (for example, `2609.3`) |
+| April release | Early April | `YY03.3` (for example, `2603.3`) |
+| October release | Early October | `YY09.3` (for example, `2609.3`) |
 
-Like the monthly channel, each semi-annual release follows the gradual weekly rollout across the same [region groups](#monthly-release-schedule), starting with the first release region and reaching each subsequent region group on the following weekend. The features included in a wave are planned and documented in the [Dynamics 365](/dynamics365/release-plan/) and [Power Platform](/power-platform/release-plan/) release plans.
+Like the monthly channel, each semi-annual release follows the gradual weekly rollout across the same [region groups](#monthly-release-schedule), starting with the first release region and reaching each subsequent region group on the following weekend. Feature availability is documented in the [Dynamics 365](/dynamics365/release-plan/) and [Power Platform](/power-platform/release-plan/) release plans.
 
 ## When features become available
 

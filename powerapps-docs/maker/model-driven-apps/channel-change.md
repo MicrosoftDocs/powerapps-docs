@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.subservice: mda-maker
 ms.author: aorth
 ms.reviewer: matp
-ms.date: 03/30/2026
+ms.date: 09/08/2026
 ms.topic: how-to
 applies_to: 
   - "powerapps"
@@ -42,29 +42,24 @@ The order of checks to determine which setting controls the channel is:
 1. User channel override.
 1. App release channel value other than Auto (for example, Monthly, Semi-annual).
 1. Environment release channel value other than Auto (for example, Monthly, Semi-annual).
-1. App release channel and environment release channel are both Auto.
-   1. With 2024 release wave 1, Power Apps environments use monthly channel.
-   1. Starting with 2024 release wave 2, Dynamics 365 environments use monthly channel.
+1. App release channel and environment release channel are both Auto. In this case, Power Apps and Dynamics 365 environments use the monthly channel.
   
 ### Dynamics 365 app release channel settings
 
-With 2024 release wave 1, the following Dynamics 365 apps changed their app release channel to **Monthly**:
+The following Dynamics 365 apps use the **Monthly** app release channel:
 
-- Customer Service workspace
-- Customer Service Hub
+- Business performance analytics
+- Customer Insights - Journeys
 - Customer Service admin center
-- Field Service
+- Customer Service Hub
+- Customer Service workspace
 - Field Resource Hub
+- Field Service
 - Field Service Mobile
+- Power Platform environment settings
+- Project Operations Team Member
 - Resource Scheduling
 - Resource Scheduling Optimization
-- Customer Insights - Journeys
-- Business performance analytics
-- Project Operations Team Member
-- Power Platform environment settings
-
-With 2024 release wave 2, this app is changing the app release channel to **Monthly**:
-
 - Sales Hub
 
 ### Keep semi-annual release channel
@@ -96,7 +91,7 @@ The environment channel can be set using the Power Platform admin center or with
 
 | Environment release channel | Environment setting value | Behavior |
 |--|--|--|
-| Auto | 0 | Environment default value is currently **Semi-annual**, but changes to **Monthly** with 2024 release wave 2. |
+| Auto | 0 | Environment default value is **Monthly**. |
 | Monthly | 1 | Environment explicitly set to **Monthly Channel**. |
 | Semi-annual | 3 | Environment explicitly set to **Semi-Annual Channel**. |
 
@@ -114,7 +109,7 @@ Use the app channel to override the release channel for a model-driven app by us
 
 | App release channel | App setting value | Behavior |
 |--|--|--|
-| Auto | 0 | App default value is **Semi-annual** for Dynamics 365 environments and **Monthly** for Power Apps environments. With 2024 release wave 2, the default changes to **Monthly**. |
+| Auto | 0 | App default value is **Monthly**. |
 | Monthly | 1 | App explicitly set to **Monthly Channel**. |
 | Semi-annual | 3 | App explicitly set to **Semi-Annual Channel**. |
 
