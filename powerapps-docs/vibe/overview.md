@@ -4,7 +4,7 @@ description: Discover the new AI-native Power Apps vibe code experience. Build a
 author: mduelae
 ms.author: mkaur
 ms.reviewer: mkaur
-ms.date: 04/16/2026
+ms.date: 09/8/2026
 ms.topic: concept-article
 ms.custom: 
  - CXT
@@ -13,6 +13,11 @@ ms.custom:
 ---
 
 #  Overview of the new Power Apps vibe experience (preview)
+
+> [!IMPORTANT]
+>
+> App building is now available in [Copilot Cowork](/microsoft-365/copilot/cowork/use-cowork#build-apps-with-the-app-skill-frontier) and will soon roll out to Microsoft Copilot Studio. We recommend using these experiences moving forward. For more information, see the  announcement [blogs post](https://aka.ms/AppsInCopilotStudioBlog).
+
 
 [This article is prerelease documentation and is subject to change.]
 
