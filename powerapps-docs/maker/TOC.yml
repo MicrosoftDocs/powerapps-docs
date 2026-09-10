@@ -2031,7 +2031,7 @@
       href: ../mobile/native-apps/overview.md
     - name: "Quickstart: Build your first native mobile app"
       href: ../mobile/native-apps/quickstart-native-apps.md 
-    - name: Troubleshoot issues in the native mobile app
+    - name: Troubleshoot common issues in the native mobile app
       href: ../mobile/native-apps/troubleshoot-native-apps.md
 - name: Dataverse
   items:

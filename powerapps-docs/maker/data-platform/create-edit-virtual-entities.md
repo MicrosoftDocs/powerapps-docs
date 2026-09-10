@@ -2,7 +2,7 @@
 title: "Create and edit virtual tables with Microsoft Dataverse"
 description: "Learn how to create virtual tables in Dataverse"
 ms.custom: ""
-ms.date: 04/17/2026
+ms.date: 09/09/2026
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -27,7 +27,7 @@ In the past, to integrate the disparate data sources you would need to create a 
 
 Virtual tables are made up of three main components, a *data provider*, a *data source* row, and a *virtual table*. The data provider consists of plug-ins and a data source table. The data source is a table row in Dataverse, which includes metadata that represents the schema of the connection parameters. Each virtual table references a data source in the table definition.  
   
-Dataverse includes an OData Data and several other virtual connector providers, such as SQL Server, SharePoint, Fabric , and so on, that you can use to connect a common external data source. More information: [OData v4 Data Provider configuration, requirements, and best practices](virtual-entity-odata-provider-requirements.md) and [Create virtual tables using the virtual connector provider](create-virtual-tables-using-connectors.md) 
+Dataverse includes several virtual connector providers, such as SQL Server, SharePoint, Fabric, and so on, that you can use to connect a common external data source. Dataverse also has an OData v4 Data provider that can be used to connect to an OData data source. For more information, see [Create virtual tables using the virtual connector provider](create-virtual-tables-using-connectors.md) and [OData v4 Data Provider configuration, requirements, and best practices](virtual-entity-odata-provider-requirements.md)
   
 Alternatively, developers can build their own data providers. Data providers are installed in an environment as a solution. More Information: [Developer Documentation: Get started with virtual tables](../../developer/data-platform/virtual-entities/get-started-ve.md)
   
@@ -37,19 +37,33 @@ Alternatively, developers can build their own data providers. Data providers are
 - System customizers user Power Apps (make.powerapps.com) to create virtual tables that are used to access external data without writing any code.  
 - End users work with the rows created by the virtual table to view the data in columns, grids, search results, and Fetch XML-based reports and dashboards.  
   
-## Add a data source to use for virtual tables 
- 
-Developers create a custom plug-in to use as the data provider for a virtual table. Alternatively, you can use one of the available providers. More information: [Create virtual tables using the virtual connector provider](create-virtual-tables-using-connectors.md) and [OData v4 Data Provider configuration, requirements, and best practices](virtual-entity-odata-provider-requirements.md)  
+## Create a virtual table
   
-1. Sign in to Power Apps, and then select **Settings** > **Advanced settings**. 
-1. Select **Administration** > **Virtual Entity Data Sources**.  
-1. On the command bar, select **New**.  
-1. On the **Select  Data Provider** dialog box, select from the following data sources, and then select **OK**.
+You create a virtual table just like any other table in Dataverse with the addition of a few extra attributes described here.
+
+1. In Power Apps (make.powerapps.com), go to **Solutions**, and then open the unmanaged solution you want or create a new one.
+1. From the solution, select the **Objects** tab on the left pane, and then select **New** > **Table** > **Virtual table**.  
+1. Select the connector you want, and then select **Next**. Several connectors types are available for popular data sources such as Azure Databricks, SharePoint, SQL Server, Snowflake, Microsoft Fabric, Salesforce, Oracle Database, and PostgreSQL.
+1. Follow the instructions on your screen to create the virtual table. More information: [Create virtual tables using the virtual connector provider](create-virtual-tables-using-connectors.md)  
+
+> [!IMPORTANT]
+> Several options, such as Access Teams, Queues, and Quick Create, aren't available with virtual tables. More Information: [Considerations when you use virtual tables](#considerations-when-you-use-virtual-tables)  
+
+## Add a data source to use for virtual tables
+
+Developers can create a custom plug-in to use as the data provider for a virtual table. Alternatively, you can use one of the available providers. For more information, see [Create virtual tables using the virtual connector provider](create-virtual-tables-using-connectors.md) and [OData v4 Data Provider configuration, requirements, and best practices](virtual-entity-odata-provider-requirements.md)  
+  
+1. Sign in to Power Apps (make.powerapps.com), and then select **Settings** (gear) > **Advanced settings**. 
+1. Select **Administration** > **Virtual entity data sources**.  
+1. On the command bar, select **New**.
+1. On the **Select  Data Provider** dialog box, select a data provider, and then select **Ok**.
  
     |Data Provider|Description|
     |--|--|
-    |*Custom data provider*|If you've imported a data  provider plug-in, the data provider will appear here. More Information [Developer Documentation: Get started with virtual tables](/powerapps/developer/data-platform/virtual-entities/get-started-ve)|
+    |*Custom data provider*|If you imported a data provider plug-in, the data provider appears here. For more information, see [Developer Documentation: Get started with virtual tables](/powerapps/developer/data-platform/virtual-entities/get-started-ve)|
     |**OData v4 Data Provider**|Dataverse includes an OData Data Provider that can be used with OData v4 web services. More Information [OData v4 Data Provider configuration, requirements, and best practices](virtual-entity-odata-provider-requirements.md)|
+
+1. Depending on the data provider, enter a **Name**, **URL**, and **Timeout**, and then select **Save**.
 
 ### Add a secured column to a data source
 
@@ -60,24 +74,6 @@ You create columns for a data source in the same way as any other table. For dat
 
 > [!div class="mx-imgBorder"] 
 > ![Data source secret attribute.](media/datasourcesecret.png)
-  
-## Create a virtual table
-  
-You create a virtual table just like any other table in Dataverse with the addition of a few extra attributes described here.
-
-### Open a solution
-
-Part of the name of any virtual table you create is the customization prefix. This is set based on the solution publisher for the solution you’re working in. If you care about the customization prefix, make sure that you are working in an unmanaged solution where the customization prefix is the one you want for this virtual table. More information: [Change the solution publisher prefix](create-solution.md#solution-publisher) 
-
-[!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../includes/cc_navigate-solution-from-powerapps-portal.md)]
-
-### Create a virtual table
-  
-1. In Power Apps (make.powerapps.com), create a new table. To do this, select **Tables** in the left navigation pane, and then select **New** > **Table** > **Virtual table**.  
-1. Select a connector, and then follow the instructions on your screen to create the virtual table. More information: [Create virtual tables using the virtual connector provider](create-virtual-tables-using-connectors.md) and [OData v4 Data Provider configuration, requirements, and best practices](virtual-entity-odata-provider-requirements.md)  
-    
-> [!IMPORTANT]
-> Several options, such as Access Teams, Queues, and Quick Create, aren't available with virtual tables. More Information: [Considerations when you use virtual tables](#considerations-when-you-use-virtual-tables)  
 
 ## Considerations when you use virtual tables  
 

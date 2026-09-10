@@ -21,7 +21,7 @@ This article walks you through going from an empty folder to a working app runni
 
 ## Step 1: Create the project from the template
 
-Create the project folder and install the following dependencies:
+Open Command Prompt and run these commands to create the project folder and install the dependencies:
 
 ```bash
 npx degit microsoft/power-platform-skills/plugins/mobile-apps/template#main field-inspector
@@ -147,7 +147,7 @@ The time required depends on the complexity of the app. Apps that include Datave
 
 ## Step 8: Run the app on a device
 
-1. Run:
+1. Open Command Prompt and run the following command to start the development server:
     ```bash
     npm run dev
     ```

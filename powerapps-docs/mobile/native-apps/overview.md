@@ -25,7 +25,7 @@ Native mobile apps are standalone iOS and Android applications built with the he
 > - This is a preview feature.
 > - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2216214), and are available before an official release so that customers can get early access and provide feedback.
 
-The planning experience helps you review the app's:
+The planning experience lets you review key aspects of your app, including:
 
 - Data model
 - Native capabilities
@@ -42,11 +42,12 @@ After you approve the plan, the plugin generates the application project.
 | Technology stack | React Native, Expo, and TypeScript. |
 | Identity | Microsoft Entra app registration. |
 | Data | Dataverse tables and Power Platform connectors. |
+| Offline | Dataverse mobile offline profiles for field workflows with limited connectivity. |
 | Distribution | App Store, Google Play, and Mobile Device Management (MDM). |
 
 ## Benefits
 
-Native mobile apps provide several benefits for organizations that require advanced mobile experiences. Choose native mobile apps when:
+Choose native mobile apps when:
 
 - Performance is critical. You need lower latency and near real-time processing.
 - You need deep hardware or OS integration, such as advanced camera controls, sensors, Bluetooth/NFC, complex background tasks, widgets, or tight OS-level integrations.
