@@ -10199,6 +10199,11 @@
       "source_path": "powerapps-docs/maker/data-platform/query-visualize-hierarchical-data.md",
       "redirect_url": "/power-apps/maker/data-platform/define-query-hierarchical-data",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/add-microsoft-365-copilot.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/microsoft-365-copilot-canvas-app",
+      "redirect_document_id": false
     }
   ]
 }
