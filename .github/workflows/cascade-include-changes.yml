@@ -1,7 +1,7 @@
 name: Cascade Include Changes
 
 on:
-  # Automatic: fires when a PR that touches the includes folder is merged into main.
+  # Automatic: fires when a PR that touches the includes folder is merged into live.
   pull_request:
     types: [closed]
     branches:
@@ -19,61 +19,162 @@ on:
         required: true
         type: string
       pr_number:
-        description: "Source PR number or URL (e.g. 11830 or https://github.com/.../pull/11830)"
+        description: "Source PR number or URL"
         required: true
         type: string
 
+permissions:
+  contents: read
+  pull-requests: write
+
 jobs:
   cascade:
-    # For pull_request events: only run when the PR was actually merged.
-    # For workflow_dispatch: always run.
-    if: github.event_name == 'workflow_dispatch' || github.event.pull_request.merged == true
+    # Manual runs are restricted to the trusted live branch. This prevents a
+    # modified workflow or Python script on another branch from accessing the PAT.
+    if: >-
+      (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/live') ||
+      (github.event_name == 'pull_request' && github.event.pull_request.merged == true)
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout source repo
+      - name: Checkout trusted source
         uses: actions/checkout@v6
+        with:
+          ref: live
+          persist-credentials: false
 
-      # For automatic runs: fetch the file list from the merged PR.
-      # For manual runs: use the value typed into the dispatch form.
-      - name: Resolve changed include files
+      - name: Resolve and validate changed include files
         id: changed
-        run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            FILES="${{ inputs.changed_files }}"
-            echo "Manual run — using provided file list: $FILES"
-          else
-            FILES=$(gh pr view "${{ github.event.pull_request.number }}" \
-              --json files \
-              --jq '[.files[].path] | join(" ")')
-            echo "PR merge — fetched file list: $FILES"
-          fi
-          echo "files=$FILES" >> "$GITHUB_OUTPUT"
         env:
-          GH_TOKEN: ${{ secrets.CASCADE_PAT }}
+          EVENT_NAME: ${{ github.event_name }}
+          EVENT_PR_NUMBER: ${{ github.event.pull_request.number }}
+          MANUAL_CHANGED_FILES: ${{ inputs.changed_files }}
+          MANUAL_PR_NUMBER: ${{ inputs.pr_number }}
+          REPOSITORY: ${{ github.repository }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          import re
+          import shlex
+          import subprocess
+
+          include_prefix = "shared/dynamics365-core/"
+          path_pattern = re.compile(
+              r"shared/dynamics365-core/[A-Za-z0-9._/-]+"
+          )
+
+          def validate_path(path):
+              if not path_pattern.fullmatch(path):
+                  raise ValueError(f"Invalid include path: {path!r}")
+
+              parts = path.split("/")
+              if any(part in ("", ".", "..") for part in parts):
+                  raise ValueError(f"Unsafe include path: {path!r}")
+
+              return path
+
+          def normalize_pr_number(value, repository):
+              value = value.strip()
+
+              if value.isdecimal():
+                  return value
+
+              pattern = re.compile(
+                  rf"https://github\.com/{re.escape(repository)}/pull/(\d+)/?"
+              )
+              match = pattern.fullmatch(value)
+              if not match:
+                  raise ValueError(
+                      "PR must be a number or a pull request URL for "
+                      f"https://github.com/{repository}"
+                  )
+
+              return match.group(1)
+
+          event_name = os.environ["EVENT_NAME"]
+          repository = os.environ["REPOSITORY"]
+
+          if event_name == "workflow_dispatch":
+              raw_files = os.environ["MANUAL_CHANGED_FILES"]
+
+              if len(raw_files) > 20_000:
+                  raise ValueError("The changed-files input is too long")
+
+              files = shlex.split(raw_files, posix=True)
+              pr_number = normalize_pr_number(
+                  os.environ["MANUAL_PR_NUMBER"],
+                  repository,
+              )
+          else:
+              pr_number = os.environ["EVENT_PR_NUMBER"]
+              result = subprocess.run(
+                  [
+                      "gh",
+                      "pr",
+                      "view",
+                      pr_number,
+                      "--repo",
+                      repository,
+                      "--json",
+                      "files",
+                  ],
+                  check=True,
+                  capture_output=True,
+                  text=True,
+              )
+              response = json.loads(result.stdout)
+              files = [
+                  entry["path"]
+                  for entry in response["files"]
+                  if entry["path"].startswith(include_prefix)
+              ]
+
+          files = list(dict.fromkeys(validate_path(path) for path in files))
+
+          if not files:
+              raise ValueError("No valid dynamics365-core include files were provided")
+
+          if len(files) > 500:
+              raise ValueError("Too many changed files were provided")
+
+          pr_url = f"https://github.com/{repository}/pull/{pr_number}"
+
+          # JSON is compact and single-line, preventing GITHUB_OUTPUT injection.
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as output:
+              output.write(
+                  "files_json="
+                  + json.dumps(files, separators=(",", ":"))
+                  + "\n"
+              )
+              output.write(f"pr_number={pr_number}\n")
+              output.write(f"pr_url={pr_url}\n")
+
+          print(f"Resolved {len(files)} validated include file(s).")
+          PY
 
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
           python-version: "3.11"
 
-      # No third-party deps needed — script uses stdlib only.
-
       - name: Cascade include changes to downstream repos
         env:
-          # CASCADE_PAT must be a classic PAT with repo scope, stored as a
-          # repository secret in the source (includes) repo.
+          # Keep the cross-repository PAT scoped only to the step that needs it.
           GITHUB_TOKEN: ${{ secrets.CASCADE_PAT }}
-          CHANGED_FILES: ${{ steps.changed.outputs.files }}
-          PR_NUMBER: ${{ github.event_name == 'workflow_dispatch' && inputs.pr_number || github.event.pull_request.number }}
-          PR_URL: ${{ github.event_name == 'workflow_dispatch' && '' || github.event.pull_request.html_url }}
+          CHANGED_FILES: ${{ join(fromJSON(steps.changed.outputs.files_json), ' ') }}
+          PR_NUMBER: ${{ steps.changed.outputs.pr_number }}
+          PR_URL: ${{ steps.changed.outputs.pr_url }}
         run: python scripts/cascade_dates.py
 
       - name: Post summary comment on source PR
         if: github.event_name == 'pull_request' && success()
-        run: |
-          gh pr comment "${{ github.event.pull_request.number }}" \
-            --repo "${{ github.repository }}" \
-            --body-file cascade-summary.md
         env:
-          GH_TOKEN: ${{ secrets.CASCADE_PAT }}
+          GH_TOKEN: ${{ github.token }}
+          SOURCE_PR_NUMBER: ${{ steps.changed.outputs.pr_number }}
+          SOURCE_REPOSITORY: ${{ github.repository }}
+        run: |
+          gh pr comment "$SOURCE_PR_NUMBER" \
+            --repo "$SOURCE_REPOSITORY" \
+            --body-file cascade-summary.md
