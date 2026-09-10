@@ -14,6 +14,9 @@ ms.custom:
 
 #  Overview of the new Power Apps vibe experience (preview)
 
+> [!IMPORTANT]
+>
+> App building is now available in [Copilot Cowork](/microsoft-365/copilot/cowork/use-cowork#build-apps-with-the-app-skill-frontier) and will soon roll out to Microsoft Copilot Studio. We recommend using these experiences moving forward. For more information, see the [blog post](https://aka.ms/AppsInCopilotStudioBlog).
 
 [This article is prerelease documentation and is subject to change.]
 
