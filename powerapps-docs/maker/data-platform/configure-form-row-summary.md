@@ -1,7 +1,7 @@
 ---
 title: "Configure a row summary for a model-driven app"
 description: "Learn how to configure a row summary for a model-driven app forms and views that uses AI to let your users view key information about a record."
-ms.date: 07/27/2026
+ms.date: 09/08/2026
 ms.update-cycle: 180-days
 ms.subservice: dataverse-maker
 ms.topic: how-to
@@ -18,8 +18,6 @@ ms.service: powerapps
 Write a custom prompt to specify which columns should be included in a Copilot‑generated row summary. These summaries appear in a consistent, dedicated experience, either surfaced in a collapsible summary bar at the top of a main form or accessed directly for individual rows from views, giving users quick access to the most important information for a record.
 
 Records are often comprised of dozens of fields spread across multiple tables, views, forms, tabs, and sections, making it time‑consuming for users to locate and understand the information that matters most. By highlighting key fields and insights in an at‑a‑glance summary, makers can help users quickly orient themselves, regardless of where they encounter the record.
-
-<!-- PM verifying this functionality: The customizable record summary can also include hyperlinks to related information, making it easy to navigate deeper or share concise, meaningful summaries with colleagues using collaboration tools like Microsoft Teams. -->
 
 :::image type="content" source="media/ai-row-summary-runtime.png" alt-text="Row summary on a main form":::
 
@@ -124,6 +122,7 @@ Row summaries are solution-aware and can be added to a solution to facilitate mo
 
 Keep the following limitations in mind when you configure a row summary:
 
+- **Calculations**. Row summary doesn't support calculations on column values, such as performing arithmetic on numeric values.
 - **Dates**. Row summary isn't intended for date-based operations, such as calculating durations, comparing dates, or determining status from a date. Use business logic or calculated columns for those scenarios.
 - **Related-record links**. Hyperlinks to related records might not render as expected in the summary.
 - **Formula and calculated columns**. Values from these columns might not be reflected accurately.
