@@ -5,7 +5,7 @@ author: jasongre
 ms.subservice: mda-maker
 ms.author: jasongre
 ms.reviewer: matp
-ms.date: 08/24/2026
+ms.date: 09/09/2026
 ms.topic: how-to
 applies_to:
   - PowerApps
@@ -17,7 +17,7 @@ ms.collection:
 
 # Generate a page using natural language
 
-Use natural language to build a *generative page* that's created using AI. Generative pages are an AI-driven experience designed to simplify, accelerate, and improve your app design process in model-driven apps. By interacting with the app agent, you create fully functional pages in your model-driven apps by describing what you need in natural language and specifying which Microsoft Dataverse tables to reference. You can even attach an image of what you'd like the page to look like.
+Use natural language to build a *generative page* that's created using AI. Generative pages are an AI-driven experience designed to simplify, accelerate, and improve your app design process in model-driven apps. By interacting with the app agent, you create fully functional pages in your model-driven apps by describing what you need in natural language and specifying which Microsoft Dataverse tables or Power Platform connectors to reference. You can even attach an image of what you'd like the page to look like.
 
 After you describe the page, the system then processes your requirements and specifications and intelligently generates React code that covers both the front-end user experience by selecting the right components and determining the best layout, and the corresponding business logic. Through an interactive, conversational experience, you can refine the page design in real time, adjusting elements, layout, and functionality to perfectly match your vision.
 
@@ -46,6 +46,19 @@ The rest of this article describes the in-browser experience.
 
 - The Power Platform environment must be located in one of the following regions: United States, Great Britain, Australia, or Singapore.
 
+### Prepare a connector data source (preview)
+
+> [!IMPORTANT]
+> Connector support is a preview feature. Preview features aren't meant for production use and might have restricted functionality.
+
+Connector support lets a generative page use data outside of Dataverse through the Power Platform connector ecosystem. The feature supports all Power Platform connectors.
+
+Before you add a connector-backed data source to a generative page:
+
+1. [Create a connection](../canvas-apps/add-manage-connections.md) for the connector and authenticate it.
+1. Open **Solutions** and then open **Default Solution**.
+1. [Create a connection reference](../data-platform/create-connection-reference.md) that uses the connection. The connection reference automatically becomes available under **Add data** > **Connectors** in the generative page authoring experience.
+
 ## Create a generative page in model-driven apps
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
@@ -60,7 +73,9 @@ The rest of this article describes the in-browser experience.
 
    > [!TIP]
    > Not sure where to start? The [Intelligent Apps Catalog](https://github.com/microsoft/apps-agents-workshop/tree/main/Inteligent%20Apps%20Templates/Intelligent%20Apps%20Catalog) includes a Prompt Catalog with pre-built prompt templates and reference images for common page patterns (galleries, Kanban boards, dashboards, and more) that you can use as a starting point.
-1. Add tables and images as appropriate by selecting **Add data** > **Add table**. You can link up to six Dataverse tables. In the screenshot, the account table is added.
+1. Add data sources and images as appropriate:
+   - To use Dataverse data, select **Add data** > **Add table**. You can link up to six Dataverse tables. In the following screenshot, the account table is added.
+   - To use data from a Power Platform connector (preview), first [prepare the connector data source](#prepare-a-connector-data-source-preview). Then select **Add data** > **Connectors**, select the connection reference, and choose the connector data that the page should use. In your prompt, describe how you want the page to use the selected data.
    :::image type="content" source="media/generative-page/add-table-generative-page.png" alt-text="Add a table to the generative page" lightbox="media/generative-page/add-table-generative-page.png":::
 
 1. Optionally upload one or more images to guide the UI of your generated page by selecting **Add data** > **Attach image**. This can be a rough napkin sketch or a higher resolution image. The image can represent the structure or layout of the entire page you want to create or it can be visuals for a certain section or component you want to mimic.
@@ -234,7 +249,8 @@ For detailed implementation guidance and code patterns, go to the [localization 
 
 These are the current limitations of generative pages:
 
-- Your page can connect to only Dataverse tables (up to 6 for a single page). No other data sources can be used.
+- You can link up to six Dataverse tables to a single page.
+- Supported data sources are Dataverse tables and (preview) Power Platform connectors.
 - Your prompt can have a maximum of 50,000 characters.
 - When you create generative pages through in Power Apps (make.powerapps.com), only US English is a supported prompting language.
 - Collaboration isn't supported. Ensure only one maker is working on a generative page at a time to avoid unintended conflicts.
