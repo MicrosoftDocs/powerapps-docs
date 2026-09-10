@@ -29,7 +29,7 @@ There are multiple ways to import and export data into Microsoft Dataverse. You 
 
 The first consideration is to start with the external data, which already exists outside of Dataverse that is required for building an app, form, or other component. It isn't necessary to persist that data in Dataverse to start using it. Many times, it's best to continue to let the other system manage the data while using the data as needed in Dataverse. The virtual table feature in Dataverse provides this capability. More information: [Create virtual tables using virtual connectors](/power-apps/maker/data-platform/create-virtual-tables-using-connectors?source=recommendations&tabs=sql).
 
-With virtual tables, you can build an app that uses the external data as if it were a Dataverse table. To create virtual tables, use one of the provided virtual table connector providers when you [create a virtual table](create-edit-virtual-entities.md#create-a-virtual-table-1).
+By using virtual tables, you can build an app that uses the external data as if it were a Dataverse table. To create virtual tables, use one of the provided virtual table connector providers when you [create a virtual table](create-edit-virtual-entities.md#create-a-virtual-table).
 
 ## Import external data to Dataverse
 

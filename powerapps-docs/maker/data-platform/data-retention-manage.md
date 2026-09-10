@@ -41,7 +41,7 @@ Use the retention policies dashboard to view and manage retention policies. From
 
 ### View details on failed records
 
-Query the Dataverse table `Retentionfailuredetails` for error details.
+Query the Dataverse table `RetentionFailureDetail` for error details.
 
 |Column name  |Description  |
 |---------|---------|
