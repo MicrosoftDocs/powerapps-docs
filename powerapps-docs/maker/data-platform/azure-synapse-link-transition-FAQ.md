@@ -1,7 +1,7 @@
 ---
 title: Frequently asked questions when transitioning from legacy data integration services to Fabric link and Azure Synapse Link for Dataverse
 description: Learn how to transition from export to data lake, BYOD, and data export service to link to Microsoft Fabric and Azure Synapse Link for Microsoft Dataverse.
-ms.date: 08/21/2026
+ms.date: 09/11/2026
 ms.reviewer: matp 
 ms.topic: "how-to"
 applies_to: 
@@ -10,6 +10,7 @@ author: anibakore-msft
 contributors: goupadhy
 ms.subservice: dataverse-maker
 ms.author: banirud
+ai-usage: ai-assisted
 search.audienceType: 
   - maker
 ms.custom: bap-template
@@ -122,25 +123,28 @@ Uninstalling the add-in doesn't cause downtime or require an environment restart
 
 ## I received an email about transitioning Azure Synapse Analytics workspaces to private links before 1 August 2026. What do I need to do?
 
-The trusted services capability that allows Azure Synapse Analytics to access Azure Storage accounts and Azure Key Vault by using a managed identity with a firewall exception was previously scheduled for retirement on 1 August 2026.
+The trusted services capability that allows Azure Synapse Analytics to access Azure Storage accounts and Azure Key Vault by using a managed identity with a firewall exception was previously scheduled for retirement on **1 August 2026**.
 
-To give organizations more time to assess their environments, validate migration approaches, test affected workloads, and complete required changes, Microsoft extended the retirement date to 1 August 2027.
+To give organizations more time to assess their environments, validate migration approaches, test affected workloads, and complete required changes, Microsoft extended the change date to **1 June 2027**.
 
-Use this additional time to review your current configurations and plan a transition to supported networking options, such as private endpoints, managed virtual networks, or other recommended access patterns for your environment. Start evaluation and testing early to help ensure a smooth migration before the updated retirement date.
+A new workspace-level setting allows administrators to choose how Azure Synapse Analytics workspaces access Azure Storage and Azure Key Vault when firewalls are enabled. This setting provides more flexibility to select the access behavior that best fits your organization's security and architecture requirements.
 
-If you decide to transition your Synapse workspace to private links as described in the email, complete the following steps to ensure Azure Synapse Link for Dataverse continues to work as expected:
+With the new setting:
 
-1. Create a Synapse workspace with a managed virtual network. A managed virtual network isolates your Synapse workspace and is required to use managed private endpoints. Follow the steps in [Azure Synapse Analytics managed virtual network](/azure/synapse-analytics/security/synapse-workspace-managed-vnet).
+- **Opt-in enabled:** Your workspace continues using the current token behavior to access Azure Storage and Azure Key Vault.
+- **Opt-in disabled:** Your workspace uses network-scoped access. Access to Azure Storage and Azure Key Vault in this configuration requires a managed workspace virtual network and managed private endpoints.
 
-2. Create a managed private endpoint for your storage account (ADLS Gen 2). This replaces the trusted services firewall exception with a private, secure connection. Follow the steps in [Create a managed private endpoint to your data source](/azure/synapse-analytics/security/how-to-create-managed-private-endpoints).
+If you disable the opt-in setting, complete the following steps to ensure Azure Synapse Link for Dataverse continues to work as expected:
 
-3. Enable these network settings:
+1. **Create a Synapse workspace with a managed virtual network.** A managed virtual network isolates your Synapse workspace and is required to use managed private endpoints. Follow the steps in [Azure Synapse Analytics managed virtual network](/azure/synapse-analytics/security/synapse-workspace-managed-vnet).
+
+2. **Create a managed private endpoint for your storage account (ADLS Gen2).** This creates a private link between the Synapse workspace and the storage account. Follow the steps in [Create a managed private endpoint to your data source](/azure/synapse-analytics/security/how-to-create-managed-private-endpoints).
+
+3. **Enable these network settings:**
    - On the **storage account**: enable **Allow Azure services and resources to access this storage account** (under **Networking** > **Firewalls and virtual networks**).
    - On the **Synapse workspace**: enable **Allow Azure services and resources to access this workspace** (under **Networking**).
 
-   Both settings must be enabled for Azure Synapse Link to connect successfully.
-
-After completing these steps, your Synapse workspace connects to the storage account through a private endpoint instead of the trusted services firewall exception.
+After completing these steps, your Synapse workspace can connect to the storage account through the private endpoint.
 
 ## Related articles
 
