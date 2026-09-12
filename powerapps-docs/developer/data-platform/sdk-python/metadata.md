@@ -53,7 +53,7 @@ client.tables.remove_columns("new_Product", ["new_Category"])
 # List all columns (attributes) for a table to discover schema
 columns = client.tables.list_columns("account")
 for col in columns:
-    print(f"{col['name']} ({col.get('AttributeType')})")
+    print(f"{col['LogicalName']} ({col.get('AttributeType')})")
 
 # List only specific properties
 columns = client.tables.list_columns(
@@ -143,11 +143,12 @@ for k in client.tables.get_alternate_keys("account"):
 
 For more information about working with custom table metadata:
 
-- `create` always returns a list of GUIDs (length=1 for single input).
-- `update` and `delete` return `None` for both single and multiple interfaces.
-- Passing a list of payloads to `create` triggers a bulk create and returns `list[str]` of IDs.
-- `get` supports single record retrieval with record ID or paging through result sets (prefer select to limit columns).
-- For CRUD methods that take a record ID, pass the GUID string (36-character hyphenated). Parentheses around the GUID are accepted but not required.
+- `tables.create` returns a `TableInfo` object that describes the new table. It doesn't return record IDs.
+- `tables.get` returns `None` when the table doesn't exist, which makes schema setup idempotent.
+- `tables.add_columns` and `tables.remove_columns` return the list of column names that changed.
+- `tables.list_columns` returns raw attribute metadata dictionaries that use the Web API PascalCase property names, such as `LogicalName` and `AttributeType`.
+
+To create, read, update, and delete *records* in a table, see [Work with data](work-data.md).
 
 ## Related information
 

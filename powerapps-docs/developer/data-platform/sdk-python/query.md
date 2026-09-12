@@ -22,7 +22,7 @@ QueryBuilder is the recommended way to query records. It provides a fluent, type
 
 ```python
 # Fluent query builder (recommended)
-from PowerPlatform.Dataverse.models.filters import col
+from PowerPlatform.Dataverse.models import col
 
 for record in (client.query.builder("account")
                .select("name", "revenue")
@@ -101,7 +101,7 @@ query = (client.query.builder("contact")
 When you need an OData function or syntax that `col()` doesn't cover, use `raw()`. It's the intended fallback for OData expressions that have no typed equivalent.
 
 ```python
-from PowerPlatform.Dataverse.models.filters import col, raw
+from PowerPlatform.Dataverse.models import col, raw
 
 query = (client.query.builder("account")
          .where(col("statecode") == 0)
@@ -111,7 +111,7 @@ query = (client.query.builder("account")
 For complex logic (OR, NOT, grouping), compose expressions with `&`, `|`, `~`:
 
 ```python
-from PowerPlatform.Dataverse.models.filters import col
+from PowerPlatform.Dataverse.models import col
 
 # OR conditions: (statecode = 0 OR statecode = 1) AND revenue > 100k
 for record in (client.query.builder("account")
@@ -174,7 +174,7 @@ builder = (client.query.builder("account")
 Use nested expand with options to expand navigation properties by using `$select`, `$filter`, `$orderby`, and `$top`.
 
 ```python
-from PowerPlatform.Dataverse.models.query_builder import ExpandOption
+from PowerPlatform.Dataverse.models import ExpandOption
 
 # Expand related tasks with filtering and sorting
 for record in (client.query.builder("account")
@@ -298,7 +298,7 @@ for record in client.records.list(
 nav_props = client.query.odata_expands("account")  # → list of navigation property metadata
 
 # Expand navigation properties using the query builder
-from PowerPlatform.Dataverse.models.query_builder import ExpandOption
+from PowerPlatform.Dataverse.models import ExpandOption
 for record in (client.query.builder("contact")
                .select("fullname")
                .expand(ExpandOption("parentcustomerid_account").select("name"))
