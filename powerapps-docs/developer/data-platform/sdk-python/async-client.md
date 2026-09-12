@@ -28,14 +28,12 @@ Here's some example code that uses the async client to connect to Dataverse, cre
 
 ```python
 import asyncio
-from azure.identity import InteractiveBrowserCredential
+from azure.identity.aio import DefaultAzureCredential
 from PowerPlatform.Dataverse.aio import AsyncDataverseClient
 
 async def main():
 
     # Connect to Dataverse
-    credential = InteractiveBrowserCredential()
-
     async with DefaultAzureCredential() as credential:
         async with AsyncDataverseClient("https://myorg.crm.dynamics.com", credential) as client:
 
@@ -75,7 +73,7 @@ The async query builder API is identical to the sync (`DataverseClient`) API.
 
 ```python
 # The credential creation and Dataverse connection code is not shown
-from PowerPlatform.Dataverse.models.filters import col
+from PowerPlatform.Dataverse.models import col
 
 # Execute and collect all results
 result = await (

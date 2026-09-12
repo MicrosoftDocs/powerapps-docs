@@ -26,14 +26,14 @@ This article describes how to set up your Python environment to access Dataverse
 
 From a terminal window, run the following command. This command installs the latest stable release of the SDK from a [pypi.org](https://pypi.org/) package.
 
-```python
+```bash
 pip install PowerPlatform-Dataverse-Client
 ```
 
 Run the following command to install the SDK from the project's GitHub source instead of from the package. Install the client from the PyPi package or from the source, but not both.
 
-```python
-git clone <https://github.com/microsoft/PowerPlatform-DataverseClient-Python.git>
+```bash
+git clone https://github.com/microsoft/PowerPlatform-DataverseClient-Python.git
 cd PowerPlatform-DataverseClient-Python
 pip install -e .
 ```
@@ -42,7 +42,7 @@ pip install -e .
 
 To improve the Python development experience, you can optionally install two Claude Skills when installing the SDK from a package.
 
-```python
+```bash
 pip install PowerPlatform-Dataverse-Client && dataverse-install-claude-skill
 ```
 
@@ -54,11 +54,11 @@ The two skills are described in the following list:
 - `dataverse-sdk-use`: Apply best practices for using the SDK in your applications.
 - `dataverse-sdk-dev`: Provide guidance for developing and contributing to the SDK itself.
 
-The skills work with both the Claude Code CLI and the Visual Studio Code extension. Once installed, Claude automatically uses the appropriate skill when working with Dataverse operations. For more information on Claude Skill, see [Agent Skills](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview). Once installed, you can find skill definitions in the `.claude/skills/dataverse-sdk-use/SKILL.md` and `.claude/skills/dataverse-sdk-dev/SKILL.md`files on your development computer.
+The skills work with both the Claude Code CLI and the Visual Studio Code extension. Once installed, Claude automatically uses the appropriate skill when working with Dataverse operations. For more information on Claude Skill, see [Agent Skills](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview). Once installed, you can find skill definitions in the `.claude/skills/dataverse-sdk-use/SKILL.md` and `.claude/skills/dataverse-sdk-dev/SKILL.md` files on your development computer.
 
 ## Connect to Dataverse
 
-The SDK [client](/python/api/powerplatform-dataverse-client/powerplatform.dataverse.client.dataverseclient) requires any Azure Identity [TokenCredential](/dotnet/api/azure.core.tokencredential) implementation for OAuth authentication with Dataverse.
+The SDK [client](/python/api/powerplatform-dataverse-client/powerplatform.dataverse.client.dataverseclient) requires any Azure Identity [TokenCredential](/python/api/azure-core/azure.core.credentials.tokencredential) implementation for OAuth authentication with Dataverse.
 
 This code example imports the Dataverse client and Azure Identity types and establishes a connection to a Dataverse environment. Be sure to change `myorg` in the URL to the correct name of your environment.
 

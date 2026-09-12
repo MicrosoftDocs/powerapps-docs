@@ -67,7 +67,7 @@ Other ways to customize and extend Dataverse exist, but the complete list is bey
 
 ## Web API
 
-The SDK provides a Python programming interface that internally calls the Dataverse [Web API](../../data-platform/webapi/overview.md). The `DataverseClient` class provides a simplified interface to OData 2.0 authorization as required by the Web API.
+The SDK provides a Python programming interface that internally calls the Dataverse [Web API](../../data-platform/webapi/overview.md). The `DataverseClient` class handles the OAuth 2.0 authorization that the Web API requires, and provides a simplified interface to its OData v4 endpoints.
 
 You can invoke Web API functions and actions directly from within your Python program. However, the SDK for Python provides a more natural programming syntax to access Dataverse data as expected by Python developers and data scientists.
 

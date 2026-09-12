@@ -117,12 +117,12 @@ print({"created_ids": ids})
 
 For more information about bulk operations:
 
-- Returns `None` (same as single update) to keep semantics consistent.
+- `update` returns `None` for both single-record and bulk calls, to keep semantics consistent.
 - Broadcast versus per-record is determined by whether the `changes` parameter is a dictionary or list.
 - The primary key attribute is injected automatically when constructing [UpdateMultiple action](xref:Microsoft.Dynamics.CRM.UpdateMultiple) targets.
 - If any payload omits @odata.type, the SDK stamps it automatically (cached logical name lookup).
 - The response includes only IDs - the SDK returns those GUID strings.
-- Single-record create returns a one-element list of GUIDs.
+- `create` returns the new record's GUID as a `str` when you pass a single dictionary, and a `list[str]` when you pass a list of payloads.
 - Metadata lookup for `@odata.type` is performed once per entity set (cached in-memory).
 
 ## Upsert (create and update)
@@ -137,7 +137,7 @@ For more information, see [Use Upsert to Create or Update a record](../use-upser
 Use `client.records.upsert()` to create or update records identified by alternate keys. When the key matches an existing record, the method updates the record. Otherwise, it creates the record. A single item uses a PATCH request while multiple items use the `UpsertMultiple` bulk action.
 
 ```python
-from PowerPlatform.Dataverse.models.upsert import UpsertItem
+from PowerPlatform.Dataverse.models import UpsertItem
 
 # Upsert a single record
 client.records.upsert("account", [
@@ -185,7 +185,7 @@ The SDK provides pandas wrappers for all CRUD operations through the `client.dat
 
 ```python
 import pandas as pd
-from PowerPlatform.Dataverse.models.filters import col
+from PowerPlatform.Dataverse.models import col
 
 # Query records as a single DataFrame (GA builder pattern)
 df = (client.query.builder("account")
@@ -239,8 +239,8 @@ client.files.upload(
 )
 ```
 
-> [!TIP]
-> If the file column doesn't exist, the SDK creates it automatically.
+> [!IMPORTANT]
+> If the file column doesn't exist, the SDK creates it automatically. Creating a column is a metadata change: you need privileges to customize the table, and the new column becomes a permanent part of your environment's schema. In production environments, create file columns in advance rather than relying on automatic creation.
 
 The `upload` method accepts optional parameters to control the content type and transfer strategy.
 
