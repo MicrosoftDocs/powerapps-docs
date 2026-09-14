@@ -7,7 +7,7 @@ ms.topic: "article"
 author: "NHelgren" 
 ms.service: powerapps
 ms.subservice: dataverse-developer
-ms.author: "nhelgren"
+ms.author: kvivek
 search.audienceType: 
   - developer
 ---
