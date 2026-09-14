@@ -1,7 +1,7 @@
 ---
 title: Feedback and support
 description: Power Apps code apps guidance on when to engage Microsoft support or use code app GitHub repostitory issues to share feedback.
-ms.author: alaug
+ms.author: kvivek
 author: alaug
 ms.date: 03/06/2026
 ms.reviewer: jdaly
