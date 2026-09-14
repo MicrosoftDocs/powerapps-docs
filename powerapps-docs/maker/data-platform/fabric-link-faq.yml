@@ -4,9 +4,10 @@ metadata:
   description: Get answers to frequently asked questions about Microsoft Fabric Link for Dataverse.
   author: anibakore-msft
   ms.search.keywords: 
-  ms.date: 08/18/2026
+  ms.date: 09/14/2026
   ms.author: banirud
   ms.reviewer: matp
+  contributors: gshrivastava24
   ms.topic: faq
   ms.subservice: dataverse-maker
 title: Microsoft Fabric Link for Dataverse FAQ
@@ -30,6 +31,32 @@ sections:
         To resolve this issue, open the workspace that contains the lakehouse created by the Fabric link and use lineage view to identify the items that depend on the lakehouse or its SQL analytics endpoint. More information: [Lineage in Fabric](/fabric/governance/lineage)
 
         Delete the dependent items, or update them so that they no longer reference the lakehouse, and then try to unlink again. If unlinking still fails after you remove all dependent items, contact [Microsoft customer support](/power-platform/admin/get-help-support).
+- name: Differences between Fast Fabric and earlier Fabric links
+  questions:
+   - question: What differences should I review before I set up or relink a Fabric link?
+     answer: |
+        Fabric links that use low-latency sync, also known as **Fast Fabric**, write data to Microsoft Fabric differently than a Fabric link created before low-latency sync was available. Review the following differences before you set up a link, or before you relink an environment that has an existing downstream solution.
+
+        | Area | Earlier Fabric links | Fast Fabric |
+        | --- | --- | --- |
+        | `OptionsetMetadata` and `GlobalOptionsetMetadata` schema | The `createdonpartition` column is present. | The `createdonpartition` column isn't present. The current table definition is the supported schema going forward. |
+        | Delta Lake format | Tables can be queried by serverless SQL pools in Azure Synapse Analytics. | Tables are written by using newer Delta Lake capabilities, including deletion vectors. Serverless SQL pools don't support these capabilities in all scenarios. |
+
+        To check which sync engine a profile uses, select **Link data** in the left navigation, and then look for the **Low-latency mode** flag on your Fabric link under **Fabric Links**. More information: [Low-latency sync](fabric-link-to-data-platform.md#low-latency-sync)
+
+        > [!NOTE]
+        > These differences affect solutions that read the data downstream. They don't indicate a synchronization failure in Dataverse.
+   - question: How do I update an existing solution for these differences?
+     answer: |
+        Use the following guidance for each difference:
+
+        - **Schema of the choice metadata tables**. Update your queries so that they don't depend on the `createdonpartition` column, or detect the available columns at runtime instead of assuming a fixed schema. More information: [Access Dataverse choice labels directly from Azure Synapse Link for Dataverse](azure-synapse-link-choice-labels.md)
+        - **Azure Synapse Analytics serverless SQL solutions**. Move the downstream workload to the Fabric SQL analytics endpoint, which supports the Delta capabilities that low-latency sync produces. More information: [What is the SQL analytics endpoint for a lakehouse?](/fabric/data-engineering/lakehouse-sql-analytics-endpoint)
+
+        To keep an existing serverless SQL workload, use a Fabric notebook to read the tables and write them to a separate lakehouse by using a Delta writer that doesn't produce deletion vectors. The serverless SQL workload can then query the rewritten tables. More information: [Query Delta Lake v1 format using serverless SQL pool](/azure/synapse-analytics/sql/query-delta-lake-format)
+
+        > [!NOTE]
+        > The notebook approach adds processing time, scheduling overhead, and data latency. Evaluate this requirement before you transition an existing solution to low-latency sync.
 - name: Table support and limitations  
   questions:
    - question: Which Dataverse tables are selected by default when linking to Fabric?
@@ -135,6 +162,14 @@ sections:
         You can link your existing Azure Synapse Link for Dataverse profiles with Fabric if you select the **Enable Parquet/Delta lake** option. However:
         - Existing profiles where the data is saved as CSV files can't be linked to Fabric.
         - Azure Synapse Link profiles secured with managed identities currently can't be linked to Fabric.
+   - question: What network settings are required in Microsoft Fabric to create a link to Fabric?
+     answer: |
+        Link to Fabric connects to your Fabric workspace to create the lakehouse and the shortcuts to your Dataverse tables. If network security is configured on the Fabric workspace, ask your Fabric administrator to configure the following settings in **Workspace settings** so that the link can be created:
+        - **Inbound access**. Allow connections from all networks. A workspace that's configured to allow connections only from selected networks and workspace-level private links can't be used with Link to Fabric. More information: [Set up and use workspace-level private links](/fabric/security/security-workspace-level-private-links-set-up)
+        - **Outbound access**. Outbound public access can remain blocked. Add a data connection rule that allows the URL of your Dataverse environment as the endpoint. More information: [Create an allow list using data connection rules](/fabric/security/workspace-outbound-access-protection-allow-list-connector)
+
+        > [!NOTE]
+        > Link to Fabric is currently supported only with these settings. Workspaces that are configured to use private endpoints for all traffic aren't supported.
 
 additionalContent: |
 
