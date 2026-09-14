@@ -1,7 +1,7 @@
 ---
 title: "Power Apps Code Apps Architecture for Development and Runtime"
 description: "Explore Power Apps code apps architecture for development and runtime to understand how connectors, configuration, publishing, and the host work together."
-ms.author: jordanchodak
+ms.author: kvivek
 author: jordanchodakWork
 ms.date: 08/12/2026
 ms.reviewer: jdaly
