@@ -2,7 +2,7 @@
 title: "About table relationships for Microsoft Dataverse | MicrosoftDocs"
 description: Learn about table relationships in Microsoft Dataverse
 ms.collection: get-started
-ms.date: 01/09/2026
+ms.date: 09/14/2026
 ms.topic: "overview"
 applies_to: 
   - "Dynamics 365 (online)"
@@ -36,6 +36,8 @@ For example, in the same school scenario mentioned earlier, a single student can
 ## How relationships work in Dataverse
 
 Table relationships define how table rows can be related to each other in Dataverse. At the simplest level, adding a lookup column to a table creates a new 1:N (one-to-many) relationship between the two tables and lets you put that lookup column on a form. With the lookup column, users can associate multiple *child* rows of that table to a single *parent* table row.  
+
+[!INCLUDE [lookup-column-security](../../includes/lookup-column-security.md)]
   
 Beyond simply defining how rows can be related to other rows, 1:N table relationships also provide data to address the following questions:  
   

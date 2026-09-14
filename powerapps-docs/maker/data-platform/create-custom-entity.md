@@ -1,11 +1,12 @@
 ---
+ai-usage: ai-assisted
 title: Create a custom table that has components with Power Apps | Microsoft Docs
 description: Topic with step-by-step instructions for creating and configuring a table to use with a Power Apps app.
 author: Mattp123
 
 ms.component: cds
 ms.topic: tutorial
-ms.date: 01/26/2021
+ms.date: 09/14/2026
 ms.subservice: dataverse-maker
 ms.author: matp
 search.audienceType: 
@@ -102,6 +103,8 @@ Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium
 1. Select **Save table**.
 
   Notice that when you add a many-to-one relationship, an **Account** column with the data type **Lookup** is automatically added to your list of columns in the **Columns** area.
+
+[!INCLUDE [lookup-column-security](../../includes/lookup-column-security.md)]
 
 ## Customize a view
 
