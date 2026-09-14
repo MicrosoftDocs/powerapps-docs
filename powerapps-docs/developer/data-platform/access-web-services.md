@@ -7,7 +7,7 @@ ms.reviewer: pehecke
 ms.topic: article
 author: MsSQLGirl
 ms.subservice: dataverse-developer
-ms.author: jukoesma
+ms.author: kvivek
 search.audienceType: 
   - developer
 contributors:
