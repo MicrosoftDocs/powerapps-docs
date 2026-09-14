@@ -4,7 +4,7 @@ metadata:
   description: Get answers to frequently asked questions about Power Apps Azure Synapse Link for Dataverse.
   author: sabinn-msft
   ms.search.keywords: 
-  ms.date: 09/01/2026
+  ms.date: 09/14/2026
   ms.author: sabinn
   ms.reviewer: matp
   contributors: 
@@ -100,6 +100,19 @@ sections:
    - question: Why do I see duplicated version numbers when I export data using append only mode?   
      answer: |
          For append only mode, if Azure Synapse Link for Dataverse doesn't get an acknowledgment from the Azure data lake that the data has been committed due to any reason such as network delays, Azure Synapse Link retries in those scenarios and commit the data again. The downstream consumption should be made resilient to this scenario by filtering data using `SinkModifiedOn`.     
+   - question: Why does synchronization fail for a table that contains a column with the same name as a reserved system column?
+     answer: |
+        Azure Synapse Link adds a set of reserved system columns to every table it writes to the data lake. `versionnumber` is one of these columns and is used to track row versions. More information: [Working with data and metadata](/power-apps/maker/data-platform/azure-synapse-link-select-fno-data#working-with-data-and-metadata)
+
+        A reserved column is added only when a column of that name doesn't already exist in the source table. If the source table already contains a column with the same name, the existing column and its values are kept. Because those values aren't in the format the reserved column expects, synchronization can fail, most often during initial synchronization.
+
+        This is expected behavior and isn't resolved automatically. A single column can't hold both the source value and the system value, so whichever one is kept, the other is permanently lost, which would leave inconsistent data in the lake.
+
+        To resolve this issue, do one of the following:
+        - Exclude the affected table from the Azure Synapse Link profile if synchronization of that table isn't required.
+        - Rename the conflicting column in the source so that it no longer matches a reserved column name.
+        > [!NOTE]
+        > This conflict is most commonly seen with finance and operations apps tables that define their own version-tracking column. The `WHSWorkUserSession` table is a common example.
    - question: Why am I seeing differences in `SinkModifiedOn` and `ModifiedOn` columns?
      answer: |
          This is expected behavior. `ModifiedOn` is the date and time a record was last changed in Dataverse, while `SinkModifiedOn` is the date and time the record was written to the data lake. `SinkModifiedOn` is typically later than `ModifiedOn`, and the difference depends on factors such as batch size, system load, and the number of records being processed.

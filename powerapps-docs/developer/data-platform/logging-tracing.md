@@ -1,7 +1,7 @@
 ---
 title: "Logging and tracing (Microsoft Dataverse) | Microsoft Docs"
 description: "Use the plugin trace log to store plug-in execution information to aid in plug-in debugging."
-ms.date: 08/20/2026
+ms.date: 09/13/2026
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: pehecke
@@ -87,6 +87,19 @@ Each `Trace` call is logged as a new line in the [PluginTraceLog](reference/enti
 
 > [!CAUTION]
 > While you can disable this job or adjust the frequency at which it occurs, failing to set it back to the original setting can cause performance problems.
+
+## Access to sensitive columns
+
+Certain [PluginTraceLog](reference/entities/plugintracelog.md) columns can contain sensitive information such as connection strings, secrets, or business data written by custom code. To reduce accidental credential exposure, Dataverse restricts read access to the following columns to users assigned the **System Administrator** security role:
+
+- [MessageBlock](reference/entities/plugintracelog.md#BKMK_MessageBlock) &mdash; the trace lines written by your code through the <xref:Microsoft.Xrm.Sdk.ITracingService.Trace(System.String,System.Object[])> method.
+- [Configuration](reference/entities/plugintracelog.md#BKMK_Configuration) &mdash; the unsecure configuration passed to the plug-in step.
+- [SecureConfiguration](reference/entities/plugintracelog.md#BKMK_SecureConfiguration) &mdash; the secure configuration passed to the plug-in step.
+
+When a user without the **System Administrator** role reads plug-in trace log records &mdash; for example, through the **Plug-in Trace Log** tile in a model-driven app, the Web API, or a community tool &mdash; Dataverse returns `null` for these three columns. All other columns (such as `TypeName`, `MessageName`, `PrimaryEntity`, and `ExceptionDetails`) remain visible per the caller's existing table privileges.
+
+> [!NOTE]
+> The **System Administrator** role satisfies this check whether it's assigned to the user directly or inherited through team membership.
 
 ## Community tools
 
