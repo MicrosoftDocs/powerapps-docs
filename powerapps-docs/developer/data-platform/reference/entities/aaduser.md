@@ -3,9 +3,10 @@ title: "Microsoft Entra ID (aaduser) table/entity reference (Microsoft Dataverse
 description: "Includes schema information and supported messages for the Microsoft Entra ID (aaduser) table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
 author: phecke
-ms.author: pehecke
+ms.author: kvivek
 search.audienceType: 
   - developer
+ms.reviewer: kvivek
 ---
 
 # Microsoft Entra ID (aaduser) table/entity reference (Microsoft Dataverse)
