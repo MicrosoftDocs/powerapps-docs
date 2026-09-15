@@ -1,8 +1,9 @@
 ---
+ai-usage: ai-assisted
 title: "Create and edit One-to-many or Many-to-one table relationships using Power Apps portal | MicrosoftDocs"
 description: "Learn how to create one-to-many or many-to-one table relationships using Power Apps portal"
 ms.custom: ""
-ms.date: 09/18/2024
+ms.date: 09/14/2026
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -49,6 +50,8 @@ Choose the **Related** table for the relationship you want to create between the
 
 > [!NOTE]
 > With either choice, a lookup column is created on the **Current** table. For more information about look columns, go to [Use the lookup column on a row](../../user/lookup-field.md).
+
+[!INCLUDE [lookup-column-security](../../includes/lookup-column-security.md)]
 
 Once you select the related table, you can edit the details of the relationship. In this example, multiple contact table rows can be associated with a single account.
 

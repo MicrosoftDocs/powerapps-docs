@@ -2,7 +2,7 @@
 title: "Create and edit 1:N (one-to-many) or N:1 (many-to-one) table relationships using solution explorer | MicrosoftDocs"
 description: "Learn how to create one-to-many or many-to-one table relationships using Power Apps solution explorer"
 ms.custom: ""
-ms.date: 10/28/2018
+ms.date: 09/14/2026
 ms.reviewer: ""
 
 ms.suite: ""
@@ -64,6 +64,8 @@ The following columns must be set in order to save the table relationship:
 |**Name**|The name of the relationship. A value will be generated based on the primary and related table values. This column will be prefixed by the customization prefix of the solution publisher.|
 |**Lookup Column Display Name**|The localizable text for the lookup column that will be created for the related table. This is usually the same as the display name for the primary table. <br /> This can be changed later.|
 |**Lookup Column Name**|The name of the lookup column that will be created on the related table. A value will be generated based on the **Lookup Column Display Name**. This column will be prefixed by the customization prefix of the solution publisher.|
+
+[!INCLUDE [lookup-column-security](../../includes/lookup-column-security.md)]
 
 You can click ![Save table relationship button.](media/save-entity-icon-solution-explorer.png) to save the table and continue editing. More information: [Edit relationships](#edit-relationships)
 

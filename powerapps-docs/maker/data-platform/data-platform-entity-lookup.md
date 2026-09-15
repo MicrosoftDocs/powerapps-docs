@@ -1,10 +1,11 @@
 ---
+ai-usage: ai-assisted
 title: Create a relationship between tables by using a lookup column
 description: Step-by-step instructions for how to create a relationship between tables in Power Apps by using a lookup column.
 author: lancedMicrosoft
 ms.component: cds
 ms.topic: how-to
-ms.date: 04/21/2026
+ms.date: 09/14/2026
 ms.subservice: dataverse-maker
 ms.author: matp
 search.audienceType: 
@@ -13,6 +14,8 @@ search.audienceType:
 # Create a relationship between tables
 
 Data in one table often relates to data in another table. For example, you might have a **Teachers** table and a **Class** table, and the **Class** table might have a lookup relation to the **Teachers** table to show which teacher instructs the class. You can use a lookup column to show data from the **Teachers** table. This is commonly referred to as a lookup column.
+
+[!INCLUDE [lookup-column-security](../../includes/lookup-column-security.md)]
 
 ## Define a relationship
 

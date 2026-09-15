@@ -1,7 +1,8 @@
 ---
+ai-usage: ai-assisted
 title: "Column data types in Microsoft Dataverse | MicrosoftDocs"
 description: "Understand the different column data types available for your app"
-ms.date: 06/24/2026
+ms.date: 09/14/2026
 ms.topic: article
 author: "Mattp123"
 ms.subservice: dataverse-maker
@@ -162,7 +163,9 @@ When you configure a currency column, you can choose the precision value. Choose
 ## Different types of lookups  
 
 When you create a new lookup column, you create a new many-to-one (N:1) table relationship between the table you're working with and the **Target Row Type** defined for the lookup. For more information about these relationships, see [Create and edit relationships between tables](create-edit-entity-relationships.md).
-  
+
+[!INCLUDE [lookup-column-security](../../includes/lookup-column-security.md)]
+
 Several different types of lookups exist, as shown in the following table.
   
 |Lookup type|Description|  
