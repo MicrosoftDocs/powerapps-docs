@@ -6,9 +6,10 @@ author: jowells
 ms.topic: how-to
 ms.date: 12/12/2018
 ms.subservice: dataverse-developer
-ms.author: jowells
+ms.author: kvivek
 search.audienceType: 
   - developer
+ms.reviewer: kvivek
 --- 
 # Do not retrieve Entity all columns via query APIs
 
