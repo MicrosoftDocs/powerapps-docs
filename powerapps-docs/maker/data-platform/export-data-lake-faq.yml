@@ -4,7 +4,7 @@ metadata:
   description: Get answers to frequently asked questions about Power Apps Azure Synapse Link for Dataverse.
   author: sabinn-msft
   ms.search.keywords: 
-  ms.date: 09/14/2026
+  ms.date: 09/15/2026
   ms.author: sabinn
   ms.reviewer: matp
   contributors: 
@@ -58,8 +58,10 @@ sections:
      answer: |
         Deleting a row is handled differently based on which data write options you choose:
         - In-place update with CSV format: This is the default mode. When you delete a table row in this mode, the row is also deleted from the corresponding data partition in the Azure Data Lake. In other words, data is hard deleted from the destination. 
-        - Append-only with CSV format and incremental folder update: In this mode, when a Dataverse table row is deleted, it isn't hard deleted from the destination. Instead, a row is added and set as `isDeleted=True` to the file in the corresponding data partition in Azure Data Lake.
+        - Append-only with CSV format and incremental folder update: In this mode, when a Dataverse table row is deleted, it isn't immediately hard deleted from the destination. Instead, a row is added and set as `isDeleted=True` in the corresponding data partition in Azure Data Lake. Azure Synapse Link hard-deletes the deleted record after 30 days.
         - Export to Delta lake format: Azure Synapse Link performs a soft delete on data during the next delta synchronization cycle, followed by a hard delete after 30 days.
+
+        To preserve deleted records for longer than 30 days, [enable long-term retention for the table](data-retention-set.md#enable-a-table-for-long-term-retention).
    - question: Why am I not seeing a column header in the exported file?
      answer: |
         Azure Synapse Link follows the Common Data Model to make it possible for data and its meaning to be shared across applications and business processes such as Microsoft Power Apps, Power BI, Dynamics 365, and Azure. In each CDM folder, metadata like a column header is stored in the model.json file. More information: [Common Data Model and Azure Data Lake Storage Gen2 | Microsoft Learn](/common-data-model/data-lake)   

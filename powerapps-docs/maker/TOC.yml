@@ -57,6 +57,8 @@
       href: ../user/modern-fluent-design.md
     - name: Unified Interface
       href: ../user/unified-interface.md
+    - name: Configure appearance settings (preview)
+      href: ../user/appearance-settings.md
     - name: AI features
       items:
       - name: AI in apps overview

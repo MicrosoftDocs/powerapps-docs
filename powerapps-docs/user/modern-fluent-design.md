@@ -24,14 +24,14 @@ contributors:
 Model-driven apps are modernized in waves. Each wave updates styling, layout, and behavior to align with the latest [Microsoft Fluent design system](https://react.fluentui.dev/?path=/docs/concepts-introduction--page) — making apps easier to use so people can accomplish their goals more quickly. The Fluent design system provides consistency, quality, and Microsoft-wide platform coherence. It also provides a solid foundation for extensibility and future capabilities like dark mode.
 
 > [!IMPORTANT]
-> With the **2026 Wave 1** release, all users must use the **New Look** (Wave 1 of the modernization arc). Makers can't switch a model-driven app back to the classic look. This requirement doesn't include the **Header and navigation refresh (preview)** (Wave 2).
+> With the **2026 Wave 1** release, all users must use the **New Look** (wave 1 of the modernization arc). Makers can't switch a model-driven app back to the classic look. This requirement doesn't include the **header and navigation refresh (wave 2)**.
 
 ## Modernization waves at a glance
 
 | Wave | What it includes | Availability |
 |------|------------------|--------------|
 | **Wave 1 — The New Look** | Updated styling in forms, views, dashboards, dialogs, and controls; the floating command bar; the Power Apps grid; new field control styling | Generally available. Mandatory as of 2026 Wave 1. |
-| **Wave 2 — Header and navigation refresh** | Modern app header, streamlined sitemap, condensed page headers, and updated command bar behavior | Public preview |
+| **Wave 2 - Header and navigation refresh** | Modern app header, streamlined sitemap, more working space on forms with a sticky condensed header, tightened spacing, updated command bar behavior | Generally available. Opt-in today. |
 
 Future waves continue to build on this foundation.
 
@@ -80,7 +80,7 @@ The following example shows a set of fields with the modern, refreshed look.
 
 ### Dashboard page
 
-The system dashboard page, with independent subgrids and charts, uses the new [command bar](#command-bar) and has styling similar to the sections in form and view pages. When you turn on the modern experience, or when you use the [monthly channel](../maker/model-driven-apps/channel-overview.md), the system dashboard grids use the new [Power Apps grid control](../maker/model-driven-apps/the-power-apps-grid-control.md). The new grid isn't turned on by default.
+The system dashboard page, with independent subgrids and charts, uses the new command bar and has styling similar to the sections in form and view pages. When you turn on the modern experience, or when you use the [monthly channel](../maker/model-driven-apps/channel-overview.md), the system dashboard grids use the new [Power Apps grid control](../maker/model-driven-apps/the-power-apps-grid-control.md). The new grid isn't turned on by default.
 
 :::image type="content" source="media/modern-system-dashboard.png" alt-text="System dashboard page with the modern, refreshed look.":::
 
@@ -94,38 +94,41 @@ If you customize the chart colors, the new look overrides your custom colors. To
 <Chart CustomColorOverride="true">
 ```
 
-## Wave 2: Header and navigation refresh (preview)
+## Wave 2: Header and navigation refresh
 
+The header and navigation refresh (wave 2) builds on the New Look (wave 1) with a redesigned app header, streamlined sitemap, and reworked form layout that gives users more space to focus on their work.
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
-
-> [!IMPORTANT]
->
-> - This is a preview feature.
-> - [!INCLUDE [cc-preview-features-definition](../includes/cc-preview-features-definition.md)]
-
-The header and navigation refresh feature makes apps easier to use and enhances productivity by reducing time spent navigating pages, finding commands, and learning layouts. This preview includes:
-
-- **Modern app header and streamlined sitemap.** Updated styling aligned to the Fluent design system with a simplified sitemap that reduces navigation complexity.
-- **Condensed page headers with compact commands.** Page headers take up less vertical space, giving more room for content.
-- **New command ordering.** Injected system commands like **Show As** and **Show Chart** now appear in the third position on the command bar, after **New** and **Delete**, giving the most common user actions priority placement.
-
-Here's how the new app header and the streamlined sitemap look:
+The following image shows the app header and sitemap with the header and navigation refresh enabled.
 
 :::image type="content" source="media/new-header-nav-look-highlight.png" alt-text="Screenshot that shows new look with header and navigation refresh." lightbox="media/new-header-nav-look-highlight.png":::
 
-Here's how the new form header looks with more focus on row details:
+The following image shows the form header with the header and navigation refresh enabled.
 
 :::image type="content" source="media/modern-fluent-design/form-header.png" alt-text="Screenshot that shows the new form header with the header and navigation refresh." lightbox="media/modern-fluent-design/form-header.png":::
 
-This update automatically applies to all apps generated by the [Plan designer](/power-apps/maker/plan-designer/plan-designer). For other existing apps, you can opt in by following these steps:
+### What's new in the header and navigation refresh
+
+- **Full-width command bar**: The command bar returns to a full-width container at the top of both view and form pages, giving users enough room to surface the most important commands without pushing them into the overflow menu. This behavior replaces the "compact commands" behavior that appeared in earlier previews of this feature.
+- **New command ordering**: System commands like **Show As** and **Show Chart** now appear in the third position, after **New** and **Delete**.
+- **More working space on forms**: The command bar is now the only element fixed at the top of the page. The summary area and form header scroll off with the rest of the form, giving users more room to work. When the form header scrolls out of view, a **condensed sticky header** attaches below the command bar so the record is always identifiable.
+- **More responsive form header**: The form header adapts to different window sizes and content densities.
+- **Tighter spacing and margins**: Targeted adjustments across the app improve consistency, readability, and overall page density.
+
+> [!NOTE]
+> If you used the preview version of this feature, **compact commands** are no longer available. The command bar is now full-width across both views and forms.
+
+### Enable the header and navigation refresh for an existing app
+
+The header and navigation refresh automatically applies to all apps generated by the [Plan designer](/power-apps/maker/plan-designer/plan-designer). For other existing apps, opt in by following these steps:
 
 1. In the app designer, select **Settings** on the command bar.
-1. Select **Features**, and then enable **Header and navigation refresh**.
+2. Select **Features**, and then enable **Header and navigation refresh**.
 
-  :::image type="content" source="media/header-refresh-maker.png" alt-text="Screenshot that shows how to enable header and navigation refresh in app designer." lightbox="media/header-refresh-maker.png":::
+:::image type="content" source="media/header-refresh-maker.png" alt-text="Screenshot that shows how to enable header and navigation refresh in app designer." lightbox="media/header-refresh-maker.png":::
 
-Learn more in [FAQ for header and navigation refresh (preview)](#4-faq-for-header-and-navigation-refresh-preview).
+### Building on the header and navigation refresh (wave 2)
+
+The header and navigation refresh introduces appearance settings that help users customize their experience. For example, users can control the [display density (preview)](appearance-settings.md#display-density) to make the app more compact or more spacious for their workflow. Additional appearance capabilities are planned and documented in [Appearance settings for model-driven apps (preview)](appearance-settings.md).
 
 ## Known limitations
 
@@ -143,7 +146,7 @@ Switching themes or enabling dark mode isn't supported at this time.
 
 ### Honoring classic theming
 
-With the modern, refreshed look, Power Apps no longer honors [classic theme customizations](../maker/model-driven-apps/create-themes-organization-branding.md). You can, however, override the colors for the app header to match your organization branding with the modern, refreshed look. Learn more in [Change the color of the app header](#3-can-i-change-the-color-of-the-app-header). Other theme customization options for the modern, refreshed look aren't available yet.  
+With the modern, refreshed look, Power Apps no longer honors [classic theme customizations](../maker/model-driven-apps/create-themes-organization-branding.md). You can, however, override the colors for the app header to match your organization branding with the modern, refreshed look. Learn more in [Change the color of the app header](#3-can-i-change-the-color-of-the-app-header). Other theme customization options for the modern, refreshed look aren't available yet.
 
 ### Custom icons
 
@@ -163,23 +166,23 @@ You can use modern controls with custom pages and the modern, refreshed look. Cu
 
 You can change the color of the app header to match your organization while using the modern, refreshed look. To learn more, see [Use modern themes](../maker/model-driven-apps/modern-theme-overrides.md). Other theme customization options for the modern, refreshed look aren't available yet.
 
-### 4. FAQ for header and navigation refresh (preview)
+### 4. FAQ for the header and navigation refresh (wave 2)
 
-#### Can I turn on Header and navigation refresh without turning on the New look?
- 
-No, you need to turn on [New look](#wave-1-the-new-look) in addition to turning on Header and navigation refresh to see the refreshed header and navigation experience in the app.
+#### Can I turn on the header and navigation refresh without turning on the New Look?
 
-#### How do I enable the Header and navigation refresh for existing apps? 
+No. The header and navigation refresh (wave 2) builds on the New Look (Wave 1), so you must enable the New Look to see the header and navigation refresh experience.
 
-The feature is available as an opt-in capability for existing apps. You can enable it through the [app setting](#wave-2-header-and-navigation-refresh-preview).
+#### How do I enable the header and navigation refresh for existing apps?
 
-#### Why don't I see the Help icon in the global command bar in the app header? 
+The header and navigation refresh is an opt-in capability for existing apps. Enable it through the app settings. See [Enable the header and navigation refresh for an existing app](#enable-the-header-and-navigation-refresh-for-an-existing-app).
 
-Help link to documentation is available in the **Settings** pane. 
+#### Why don't I see the Help icon in the global command bar in the app header?
 
-#### Where is the side pane rail next to the Copilot chat pane? 
+The **Settings** pane includes the Help link to documentation.
 
-The side pane switcher becomes available only when there are two or more side panes in the app. When Copilot chat is the only side pane, the switcher is hidden. 
+#### Where is the side pane rail next to the Copilot chat pane?
+
+The side pane switcher becomes available only when there are two or more side panes in the app. When Copilot chat is the only side pane, the switcher is hidden.
 
 #### Why does the sitemap of an app generated by the [Plan designer](/power-apps/maker/plan-designer/plan-designer) look different from existing apps' sitemap?
 
@@ -190,7 +193,7 @@ Apps generated by the [Plan designer](/power-apps/maker/plan-designer/plan-desig
 > [!NOTE]
 > Starting with the **2026 Wave 1** release, the **New Look** is mandatory for all users. Makers can no longer switch a model-driven app to the classic look.
 
-Admins can turn off the New Look for all users by updating the **New look for model driven apps** app setting. 
+Admins can turn off the New Look for all users by updating the **New look for model driven apps** app setting.
 
 1. Open <https://make.powerapps.com/>.
 1. Under **Solutions**, open an existing solution with one or more model-driven apps.
