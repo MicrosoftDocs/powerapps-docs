@@ -1,10 +1,11 @@
 ---
 title: Manage Telemetry Settings for the Power Apps CLI
 description: Learn how to manage Power Apps CLI telemetry settings, view the current status, control data collection, and configure console output for debugging.
-ms.author: pakempar
+ms.author: kvivek
 author: pavankm
 ms.date: 08/13/2026
 ms.topic: how-to
+ms.reviewer: kvivek
 ---
 
 # Manage telemetry settings for the Power Apps CLI
