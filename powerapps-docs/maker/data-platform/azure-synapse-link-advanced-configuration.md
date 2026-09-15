@@ -2,11 +2,12 @@
 title: "Azure Synapse Link Advance Configuration"
 description: "Learn about the advance configuration options and concepts in Azure Synapse Link for Dataverse."
 ms.custom: ""
-ms.date: 08/10/2026
+ms.date: 09/15/2026
 ms.reviewer: "Mattp123"
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: how-to
+ai-usage: ai-assisted
 applies_to: 
   - "powerapps"
 author: "sabinn-msft"
@@ -31,10 +32,6 @@ Azure Synapse Link offers multiple ways to write and read your data to fit vario
 | Operational reporting | Dataverse tables only. |  Synapse Link with "In place update" configuration option provides CSV files in your data lake that are updated near-real time.  <br><br> This is a legacy option available for Dataverse tables. This option isn't supported for tables from finance and operations apps. |
 | Data integration | Dataverse tables and finance and operations tables and entities. | **"Append only** option provides CSV files that contain incremental data. You can build pipelines that consume incremental data and populate downstream systems <br><br> **User-specified data partition** feature enables choosing a custom data partitioning strategy specifically for Dataverse tables. Finance and operations table data are partitioned by the system based on appropriate partition strategy. This option isn't available for finance and operations apps. |
 
-> [!NOTE]
-> Azure Synapse Link for Dataverse was formerly known as export to data lake. Microsoft renamed the service in May 2021. The service continues to export data to Azure Data Lake Storage as well as Azure Synapse Analytics.
-> Starting Sept-2023, Azure Synapse Link also enables you to choose data from Dynamics 365 finance and operations applications. Not all integration patterns are supported with finance and operations apps. For guidance on transitioning from export to data lake feature in finance and operations apps to Synapse Link, go to the [Transition guide](/power-apps/maker/data-platform/azure-synapse-link-transition-from-fno).
-
 This article covers advanced configuration settings available for Dataverse tables. These options aren't available for finance and operations apps.
 
 1. In-place updates vs. append-only writes.
@@ -57,7 +54,7 @@ This table describes how rows are handled in the lake against CUD events for eac
 |Delete     |  If the row exists in the partition file, it's removed from the file.    | The row is added to the end of the partition file with `IsDelete column = True`.    |
 
 > [!NOTE]
-> For Dataverse tables where **Append only** is enabled, deleting a row in the source doesn't delete or remove the row in the lake. Instead, the deleted row is appended as a new row in the lake and the `isDeleted` column is set to **True**.
+> For Dataverse tables where **Append only** is enabled, deleting a row in the source doesn't immediately delete or remove the row in the lake. Instead, the deleted row is appended as a new row in the lake and the `isDeleted` column is set to **True**. Azure Synapse Link hard-deletes deleted records from the lake after 30 days. To preserve deleted records for longer than 30 days, [enable long-term retention for the table](data-retention-set.md#enable-a-table-for-long-term-retention).
 >
 > Dirty read (**ALLOW_INCONSISTENT_READS**) for serverless is enabled for append only mode. **ALLOW_INCONSISTENT_READS** means that user is able to read the files that can be constantly modified while the `SELECT` query is running. Results are consistent and equivalent to reading a snapshot of the file. (It isn't equivalent to database snapshot isolation because of the different snapshot generation time.)
 >
