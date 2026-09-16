@@ -2,7 +2,7 @@
 title: Use the Learn hub
 description: Use the Learn hub in Microsoft Power Apps to find training and documentation, view announcements, and connect with the Power Apps community. 
 ms.date: 04/07/2023
-author: mkaur
+author: mduelae
 ms.author: mkaur
 ms.reviewer: mkaur
 ms.topic: overview
