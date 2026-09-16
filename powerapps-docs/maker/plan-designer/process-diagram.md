@@ -1,7 +1,7 @@
 ---
 title: Use plans to simplify process diagrams
 description: Discover how to use plans to generate process diagrams that enhance clarity and efficiency in complex workflows.
-author: szlo
+author: mduelae
 contributors: mduelae
 ms.topic: how-to
 ms.date: 01/12/2026
