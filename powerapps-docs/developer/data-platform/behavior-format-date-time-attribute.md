@@ -170,8 +170,6 @@ If you choose to include the offset calculation, don't include the `Z`, a UTC in
     |`closedon`|Quote|  
     |`expireson`|Quote|  
   
-   The behavior of these columns is set to `UserLocal` and the `DateTimeAttributeMetadata.CanChangeDateTimeBehavior` managed property to `True`, and you can change the behavior of these columns to `DateOnly` only. No other behavior transitions are allowed.  
-  
  After updating the behavior of a column, you must publish the customizations for the change to take effect. Updating the behavior of a date and time column ensures that all the values entered or updated *after* the column behavior was changed are stored in the system as per the new behavior. This change doesn't impact the values that are already stored in the database, and they continue to be stored as UTC values. However, when you retrieve the existing values by using SDK or view it in the UI, the existing values are displayed as per the new behavior of the column. For example, if you change the behavior of a custom column on an account from `UserLocal` to `DateOnly` and retrieve an existing account record by using SDK, the date and time are displayed as \<Date> followed by time as 12 AM (00:00:00). Similarly, for the behavior change from `UserLocal` to `TimeZoneIndependent`, the actual value in the database is displayed as is without any time zone conversions.  
   
  The following sample code demonstrates how to update the behavior of a date and time column:

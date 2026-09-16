@@ -40,7 +40,7 @@ jobs:
         id: changed
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            FILES="${{ inputs.changed_files }}"
+            FILES="$CHANGED_FILES_INPUT"
             echo "Manual run — using provided file list: $FILES"
           else
             FILES=$(gh pr view "${{ github.event.pull_request.number }}" \
@@ -50,7 +50,8 @@ jobs:
           fi
           echo "files=$FILES" >> "$GITHUB_OUTPUT"
         env:
-          GH_TOKEN: ${{ secrets.CASCADE_PAT }}
+          CHANGED_FILES_INPUT: ${{ inputs.changed_files }}
+          GH_TOKEN: ${{ github.token }}
 
       - name: Set up Python
         uses: actions/setup-python@v6
