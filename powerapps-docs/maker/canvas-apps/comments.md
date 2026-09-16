@@ -1,7 +1,7 @@
 ---
 title: Add comments when you're building a canvas app
 description: Learn how to add comments while you’re building a canvas app in Power Apps Studio.
-author: mkaur
+author: mduelae
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
