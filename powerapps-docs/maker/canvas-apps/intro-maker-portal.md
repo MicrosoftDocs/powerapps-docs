@@ -6,7 +6,7 @@ ms.date: 02/19/2026
 ms.update-cycle: 180-days
 ms.reviewer: mkaur
 ms.topic: overview
-author: "mduelae"
+author: mduelae
 ms.subservice: common
 ms.author: mkaur
 search.audienceType: 
