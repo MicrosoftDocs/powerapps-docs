@@ -6,7 +6,7 @@ ms.update-cycle: 180-days
 ms.custom: 
   - transparency-note
 ms.topic: faq
-author: mduelae 
+author: mduelae
 ms.author: mkaur
 ms.collection: 
     - bap-ai-copilot
