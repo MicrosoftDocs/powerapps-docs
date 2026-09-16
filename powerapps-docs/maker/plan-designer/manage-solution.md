@@ -1,7 +1,7 @@
 ---
 title: Plans Solutions and ALM practices  
 description: Learn how plans promotes healthy application lifecycle management (ALM) practices by packaging plan components into solutions for advanced ALM capabilities.  
-author: szlo  
+author: mduelae
 contributors:  
 ms.topic: how-to  
 ms.date: 10/1/2025
