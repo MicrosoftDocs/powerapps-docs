@@ -1,7 +1,7 @@
 ---  
 title: Create a plan for your solution
 description: Use plans to create a detailed plan for your existing solution, including business problems, user requirements, data models, and technology stacks.  
-author: szlo  
+author: mduelae
 contributors:  
 ms.topic: how-to  
 ms.date: 11/4/2025  
