@@ -1,7 +1,7 @@
 ---
 title: "Understand Power Apps Studio: Components and Features"
 description: "Discover the key components and features of Power Apps Studio. Learn how to use the command bar, formula bar, canvas, and authoring tools to build canvas apps effectively."
-author: lancedMicrosoft
+author: mduelae
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
