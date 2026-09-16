@@ -6,7 +6,7 @@ ms.topic: reference
 ms.author: jordanchodak
 ms.reviewer: jdaly
 author: jordanchodakWork
-ms.date: 08/31/2026
+ms.date: 09/15/2026
 ---
 
 # Power Apps CLI command reference
@@ -23,8 +23,8 @@ These are the command groups:
 | --- | --- |
 | `pa app` | Create, run, connect, and publish code apps. |
 | `pa auth` | Sign in and manage accounts. |
-| `pa connector` | Find connectors available in a Power Platform environment. |
 | `pa connection` | Create and manage connections and discover their resources. |
+| `pa connector` | Find connectors available in a Power Platform environment. |
 | `pa solution` | Find solutions available in a Power Platform environment. |
 | `pa telemetry`| Manage CLI telemetry settings.|
 
@@ -54,6 +54,7 @@ These commands are available:
 | [`pa app add dataverse-api`](#pa-app-add-dataverse-api) | Add a Dataverse action or function to the code app. |
 | [`pa app add flow`](#pa-app-add-flow) | Add a Power Automate flow to the code app. |
 | [`pa app find-dataverse-api`](#pa-app-find-dataverse-api) | Find Dataverse actions and functions in the current environment. |
+| [`pa app get-settings`](#pa-app-get-settings) | Display the current app settings. |
 | [`pa app init`](#pa-app-init) | Initialize a code app in the current directory. |
 | [`pa app list`](#pa-app-list) | List code apps in the current environment. |
 | [`pa app list-environment-variables`](#pa-app-list-environment-variables) | List environment variables available to the code app. |
@@ -63,6 +64,7 @@ These commands are available:
 | [`pa app remove data-source`](#pa-app-remove-data-source) | Remove a data source from the code app. |
 | [`pa app remove flow`](#pa-app-remove-flow) | Remove a Power Automate flow from the code app. |
 | [`pa app run`](#pa-app-run) | Start the Power Apps local host for the code app. |
+| [`pa app set-setting`](#pa-app-set-setting) | Update app settings. |
 | [`pa app share`](#pa-app-share) | Share the code app with users or service principals. |
 | [`pa auth login`](#pa-auth-login) | Sign in through the system browser. |
 | [`pa auth logout`](#pa-auth-logout) | Sign out and remove saved authentication information. |
@@ -176,6 +178,22 @@ pa app find-dataverse-api --search <operation-name> [--json]
 These parameters have corresponding [Dataverse APIs and Power Automate flows](environment-variables.md#dataverse-apis-and-power-automate-flows) environmental variables.
 
 [Learn how to find available Dataverse operations](../how-to/add-dataverse-action-function.md#step-1-find-available-operations)
+
+## `pa app get-settings`
+
+Displays the current settings for the code app.
+
+```console
+pa app get-settings [--json]
+```
+
+### `pa app get-settings` parameters
+
+| Parameter | Description |
+| --- | --- |
+| `--json` | Return the app settings as JSON. |
+
+Run this command from an initialized code app project that contains a `power.config.json` file.
 
 ## `pa app init`
 
@@ -339,6 +357,23 @@ pa app run [--port <port>] [--local-app-url <url>]
 | `--local-app-url` | The URL of the locally running code app. |
 
 These parameters have corresponding [Run apps](environment-variables.md#run-apps) environmental variables.
+
+## `pa app set-setting`
+
+Updates one or more settings for the code app.
+
+```console
+pa app set-setting --show-header <true|false> [--json]
+```
+
+### `pa app set-setting` parameters
+
+| Parameter | Description |
+| --- | --- |
+| `--show-header` | Show or hide the app header. Valid values are `true` and `false`. |
+| `--json` | Return the updated app settings as JSON. |
+
+Run this command from an initialized code app project that contains a `power.config.json` file. The command writes the setting to `appSettings` in `power.config.json`. Run [`pa app push`](#pa-app-push) to publish the setting so that the player applies it at runtime.
 
 ## `pa app share`
 
