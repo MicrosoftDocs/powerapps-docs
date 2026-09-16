@@ -1,7 +1,7 @@
 ---
 title: Understand SharePoint forms integration
 description: Learn about integration of SharePoint forms with Power Apps, and how to customize those forms.
-author: NickWaggoner
+author: mduelae
 
 ms.topic: concept-article
 ms.custom: canvas
