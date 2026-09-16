@@ -1,7 +1,7 @@
 ---
 title: Use plans to create AI-Powered business solutions with Copilot
 description: Learn how to use plans, an AI-powered tool in Power Platform, to create comprehensive business solutions.
-author: szlo
+author: mduelae
 contributors:
 ms.topic: how-to
 ms.date: 08/07/2026
