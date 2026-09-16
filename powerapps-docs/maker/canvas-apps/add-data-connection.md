@@ -1,7 +1,7 @@
 ---
 title: Add data connections to canvas apps
 description: Learn how to add a data connection to an existing canvas app or to an app that you're building from scratch.
-author: lancedMicrosoft
+author: mduelae
 
 ms.topic: how-to
 ms.custom: canvas
