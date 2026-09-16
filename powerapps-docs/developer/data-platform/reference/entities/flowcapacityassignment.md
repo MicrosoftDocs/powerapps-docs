@@ -2,8 +2,9 @@
 title: "Flow Capacity Assignment (flowcapacityassignment) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Flow Capacity Assignment (flowcapacityassignment) table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -28,6 +29,7 @@ Messages represent operations that can be performed on the table. They may also 
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 | `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
+| `Restore`<br />Event: True |<xref:Microsoft.Dynamics.CRM.Restore?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 | `Retrieve`<br />Event: True |`GET` /flowcapacityassignments(*flowcapacityassignmentid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
 | `RetrieveMultiple`<br />Event: True |`GET` /flowcapacityassignments<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 | `RetrievePrincipalAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
@@ -286,7 +288,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`regarding`|
 |RequiredLevel|SystemRequired|
 |Type|Lookup|
-|Targets|flowmachine, flowmachinegroup, msdyn_pminferredtask, workflow|
+|Targets|flowgroup, flowmachine, flowmachinegroup, msdyn_pminferredtask, workflow|
 
 ### <a name="BKMK_regardingIdType"></a> regardingIdType
 
@@ -566,6 +568,7 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 These relationships are many-to-one. Listed by **SchemaName**.
 
 - [business_unit_flowcapacityassignment](#BKMK_business_unit_flowcapacityassignment)
+- [flowcapacityassignment_flowgroup](#BKMK_flowcapacityassignment_flowgroup)
 - [flowcapacityassignment_flowmachine](#BKMK_flowcapacityassignment_flowmachine)
 - [flowcapacityassignment_flowmachinegroup](#BKMK_flowcapacityassignment_flowmachinegroup)
 - [flowcapacityassignment_msdyn_pminferredtask](#BKMK_flowcapacityassignment_msdyn_pminferredtask)
@@ -590,6 +593,19 @@ One-To-Many Relationship: [businessunit business_unit_flowcapacityassignment](bu
 |ReferencingEntityNavigationPropertyName|`owningbusinessunit`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `Restrict`<br />Assign: `NoCascade`<br />Delete: `Restrict`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_flowcapacityassignment_flowgroup"></a> flowcapacityassignment_flowgroup
+
+One-To-Many Relationship: [flowgroup flowcapacityassignment_flowgroup](flowgroup.md#BKMK_flowcapacityassignment_flowgroup)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`flowgroup`|
+|ReferencedAttribute|`flowgroupid`|
+|ReferencingAttribute|`regarding`|
+|ReferencingEntityNavigationPropertyName|`regarding_flowgroup`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `Cascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `Cascade`<br />RollupView: `NoCascade`<br />Share: `Cascade`<br />Unshare: `Cascade`|
 
 ### <a name="BKMK_flowcapacityassignment_flowmachine"></a> flowcapacityassignment_flowmachine
 
@@ -741,6 +757,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 
 - [flowcapacityassignment_AsyncOperations](#BKMK_flowcapacityassignment_AsyncOperations)
 - [flowcapacityassignment_BulkDeleteFailures](#BKMK_flowcapacityassignment_BulkDeleteFailures)
+- [flowcapacityassignment_DeletedItemReferences](#BKMK_flowcapacityassignment_DeletedItemReferences)
 - [flowcapacityassignment_MailboxTrackingFolders](#BKMK_flowcapacityassignment_MailboxTrackingFolders)
 - [flowcapacityassignment_PrincipalObjectAttributeAccesses](#BKMK_flowcapacityassignment_PrincipalObjectAttributeAccesses)
 - [flowcapacityassignment_ProcessSession](#BKMK_flowcapacityassignment_ProcessSession)
@@ -767,6 +784,18 @@ Many-To-One Relationship: [bulkdeletefailure flowcapacityassignment_BulkDeleteFa
 |ReferencingEntity|`bulkdeletefailure`|
 |ReferencingAttribute|`regardingobjectid`|
 |ReferencedEntityNavigationPropertyName|`flowcapacityassignment_BulkDeleteFailures`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_flowcapacityassignment_DeletedItemReferences"></a> flowcapacityassignment_DeletedItemReferences
+
+Many-To-One Relationship: [deleteditemreference flowcapacityassignment_DeletedItemReferences](deleteditemreference.md#BKMK_flowcapacityassignment_DeletedItemReferences)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`deleteditemreference`|
+|ReferencingAttribute|`deletedobject`|
+|ReferencedEntityNavigationPropertyName|`flowcapacityassignment_DeletedItemReferences`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 

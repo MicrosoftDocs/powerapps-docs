@@ -2,15 +2,16 @@
 title: "Sensitivity Label (sensitivitylabel) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Sensitivity Label (sensitivitylabel) table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
 
 # Sensitivity Label (sensitivitylabel) table/entity reference (Microsoft Dataverse)
 
-Virtual entity that represents Sensitivity Labels
+Virtual entity that represents Sensitivity Labels.
 
 ## Messages
 

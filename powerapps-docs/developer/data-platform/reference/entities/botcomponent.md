@@ -1,20 +1,21 @@
 ---
-title: "Copilot component (botcomponent) table/entity reference (Microsoft Dataverse)"
-description: "Includes schema information and supported messages for the Copilot component (botcomponent) table/entity with Microsoft Dataverse."
+title: "Agent component (botcomponent) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the Agent component (botcomponent) table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
 
-# Copilot component (botcomponent) table/entity reference (Microsoft Dataverse)
+# Agent component (botcomponent) table/entity reference (Microsoft Dataverse)
 
-Holds key authoring components of a Copilot such a topics, entities, variables, etc.
+Holds key authoring components of an agent such a topics, entities, variables, etc.
 
 ## Messages
 
-The following table lists the messages for the Copilot component (botcomponent) table.
+The following table lists the messages for the Agent component (botcomponent) table.
 Messages represent operations that can be performed on the table. They may also be events.
 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
@@ -41,12 +42,12 @@ Messages represent operations that can be performed on the table. They may also 
 
 ## Properties
 
-The following table lists selected properties for the Copilot component (botcomponent) table.
+The following table lists selected properties for the Agent component (botcomponent) table.
 
 |Property|Value|
 | --- | --- |
-| **DisplayName** | **Copilot component** |
-| **DisplayCollectionName** | **Copilot components** |
+| **DisplayName** | **Agent component** |
+| **DisplayCollectionName** | **Agent components** |
 | **SchemaName** | `botcomponent` |
 | **CollectionSchemaName** | `botcomponents` |
 | **EntitySetName** | `botcomponents`|
@@ -138,7 +139,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**The category of Copilot component.**|
+|Description|**The category of agent component.**|
 |DisplayName|**Category**|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -155,7 +156,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**The sub type of Copilot component.**|
+|Description|**The sub type of agent component.**|
 |DisplayName|**ComponentType**|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -189,6 +190,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |17|**External Trigger**|
 |18|**Copilot Settings**|
 |19|**Test Case**|
+|20|**Custom Metric Definition**|
 
 ### <a name="BKMK_Content"></a> Content
 
@@ -322,7 +324,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**Language of the copilot component**|
+|Description|**Language of the agent component**|
 |DisplayName|**Language**|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -337,6 +339,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Value|Label|
 |---|---|
 |1025|**Arabic**|
+|1026|**Bulgarian**|
+|1027|**Catalan**|
 |1028|**Chinese (Traditional)**|
 |1029|**Czech**|
 |1030|**Danish**|
@@ -347,6 +351,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |1035|**Finnish**|
 |1036|**French**|
 |1037|**Hebrew**|
+|1038|**Hungarian**|
 |1040|**Italian**|
 |1041|**Japanese**|
 |1042|**Korean**|
@@ -354,17 +359,41 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |1044|**Norwegian**|
 |1045|**Polish**|
 |1046|**Portuguese (Brazilian)**|
+|1048|**Romanian**|
 |1049|**Russian**|
+|1050|**Croatian**|
+|1051|**Slovak**|
 |1053|**Swedish**|
 |1054|**Thai**|
 |1055|**Turkish**|
 |1057|**Indonesian**|
+|1058|**Ukrainian**|
+|1060|**Slovenian**|
+|1061|**Estonian**|
+|1062|**Latvian**|
+|1063|**Lithuanian**|
+|1066|**Vietnamese**|
+|1069|**Basque**|
 |1081|**Hindi**|
+|1086|**Malaysian**|
+|1087|**Kazakh**|
+|1110|**Galician**|
 |2052|**Chinese (Simplified)**|
+|2055|**German (Switzerland)**|
 |2057|**English (United Kingdom)**|
+|2058|**Spanish (Mexico)**|
+|2067|**Dutch (Belgium)**|
 |2070|**Portuguese (Portugal)**|
+|2074|**Serbian (Latin)**|
+|3076|**Chinese (Hong Kong SAR)**|
+|3079|**German (Austria)**|
 |3081|**English (Australia)**|
 |3084|**French (Canada)**|
+|3098|**Serbian (Cyrillic)**|
+|4108|**French (Switzerland)**|
+|5129|**English (New Zealand)**|
+|16393|**English (India)**|
+|20490|**Spanish (Puerto Rico)**|
 |21514|**Spanish (United States)**|
 
 ### <a name="BKMK_name"></a> name
@@ -430,7 +459,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**Unique identifier for Copilot component collection associated with Copilot component.**|
+|Description|**Unique identifier for agent component collection associated with agent component.**|
 |DisplayName|**ParentBotComponentCollection**|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -443,8 +472,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**Unique identifier for Copilot component associated with Copilot component.**|
-|DisplayName|**Parent copilot component**|
+|Description|**Unique identifier for agent component associated with agent component.**|
+|DisplayName|**Parent agent component**|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`parentbotcomponentid`|
@@ -469,7 +498,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**Reuse Policy for the copilot component**|
+|Description|**Reuse Policy for the agent component**|
 |DisplayName|**Reuse Policy**|
 |IsValidForForm|True|
 |IsValidForRead|True|

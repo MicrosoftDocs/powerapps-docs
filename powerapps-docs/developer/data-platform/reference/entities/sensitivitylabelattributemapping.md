@@ -2,8 +2,9 @@
 title: "Sensitivity Label Attribute Mapping (sensitivitylabelattributemapping) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Sensitivity Label Attribute Mapping (sensitivitylabelattributemapping) table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -707,4 +708,4 @@ Many-To-One Relationship: [syncerror sensitivitylabelattributemapping_SyncErrors
 
 [Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
-
+<xref:Microsoft.Dynamics.CRM.sensitivitylabelattributemapping?displayProperty=fullName>

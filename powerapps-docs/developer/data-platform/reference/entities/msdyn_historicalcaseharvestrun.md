@@ -2,8 +2,9 @@
 title: "msdyn_historicalcaseharvestrun table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the msdyn_historicalcaseharvestrun table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -28,6 +29,7 @@ Messages represent operations that can be performed on the table. They may also 
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 | `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
+| `Restore`<br />Event: True |<xref:Microsoft.Dynamics.CRM.Restore?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 | `Retrieve`<br />Event: True |`GET` /msdyn_historicalcaseharvestruns(*msdyn_historicalcaseharvestrunid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
 | `RetrieveMultiple`<br />Event: True |`GET` /msdyn_historicalcaseharvestruns<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 | `RetrievePrincipalAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
@@ -66,9 +68,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [msdyn_caseidentificationcompletedon](#BKMK_msdyn_caseidentificationcompletedon)
 - [msdyn_conditions](#BKMK_msdyn_conditions)
 - [msdyn_fieldmapping](#BKMK_msdyn_fieldmapping)
+- [msdyn_frequencytype](#BKMK_msdyn_frequencytype)
 - [msdyn_harvestingdatatype](#BKMK_msdyn_harvestingdatatype)
 - [msdyn_harvestsourceentity](#BKMK_msdyn_harvestsourceentity)
 - [msdyn_historicalcaseharvestrunId](#BKMK_msdyn_historicalcaseharvestrunId)
+- [msdyn_knowledgeharvestplanid](#BKMK_msdyn_knowledgeharvestplanid)
 - [msdyn_pageIndex](#BKMK_msdyn_pageIndex)
 - [msdyn_paginationmarker](#BKMK_msdyn_paginationmarker)
 - [msdyn_totalarticlescreated](#BKMK_msdyn_totalarticlescreated)
@@ -165,6 +169,28 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsLocalizable|False|
 |MaxLength|1048576|
 
+### <a name="BKMK_msdyn_frequencytype"></a> msdyn_frequencytype
+
+|Property|Value|
+|---|---|
+|Description|**Defines the schedule type for harvesting: Realtime, Once, or Recurring.**|
+|DisplayName|**Frequency Type**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_frequencytype`|
+|RequiredLevel|ApplicationRequired|
+|Type|Picklist|
+|DefaultFormValue||
+|GlobalChoiceName|`msdyn_historicalcaseharvestrun_msdyn_frequencytype`|
+
+#### msdyn_frequencytype Choices/Options
+
+|Value|Label|
+|---|---|
+|0|**Realtime**|
+|1|**Once**|
+|2|**Recurring**|
+
 ### <a name="BKMK_msdyn_harvestingdatatype"></a> msdyn_harvestingdatatype
 
 |Property|Value|
@@ -215,6 +241,19 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`msdyn_historicalcaseharvestrunid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
+
+### <a name="BKMK_msdyn_knowledgeharvestplanid"></a> msdyn_knowledgeharvestplanid
+
+|Property|Value|
+|---|---|
+|Description|**Reference to the knowledge harvest plan associated with this historical case harvest run.**|
+|DisplayName|**Knowledge Harvest Plan**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_knowledgeharvestplanid`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|msdyn_knowledgeharvestplan|
 
 ### <a name="BKMK_msdyn_pageIndex"></a> msdyn_pageIndex
 
@@ -400,6 +439,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |8|Label: **CaseIndentificationInProgress**<br />State:3<br />TransitionData: None|
 |9|Label: **CaseIdentificationCompleted**<br />State:3<br />TransitionData: None|
 |10|Label: **Stopped**<br />State:4<br />TransitionData: None|
+|11|Label: **CaseIdentificationFailedFilterCriteriaExceedsRecordLimit**<br />State:2<br />TransitionData: None|
 
 ### <a name="BKMK_TimeZoneRuleVersionNumber"></a> TimeZoneRuleVersionNumber
 
@@ -629,6 +669,7 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [lk_msdyn_historicalcaseharvestrun_createdonbehalfby](#BKMK_lk_msdyn_historicalcaseharvestrun_createdonbehalfby)
 - [lk_msdyn_historicalcaseharvestrun_modifiedby](#BKMK_lk_msdyn_historicalcaseharvestrun_modifiedby)
 - [lk_msdyn_historicalcaseharvestrun_modifiedonbehalfby](#BKMK_lk_msdyn_historicalcaseharvestrun_modifiedonbehalfby)
+- [msdyn_knowledgeharvestplan_historicalcaseharvestrun](#BKMK_msdyn_knowledgeharvestplan_historicalcaseharvestrun)
 - [owner_msdyn_historicalcaseharvestrun](#BKMK_owner_msdyn_historicalcaseharvestrun)
 - [team_msdyn_historicalcaseharvestrun](#BKMK_team_msdyn_historicalcaseharvestrun)
 - [user_msdyn_historicalcaseharvestrun](#BKMK_user_msdyn_historicalcaseharvestrun)
@@ -698,6 +739,19 @@ One-To-Many Relationship: [systemuser lk_msdyn_historicalcaseharvestrun_modified
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
+### <a name="BKMK_msdyn_knowledgeharvestplan_historicalcaseharvestrun"></a> msdyn_knowledgeharvestplan_historicalcaseharvestrun
+
+One-To-Many Relationship: [msdyn_knowledgeharvestplan msdyn_knowledgeharvestplan_historicalcaseharvestrun](msdyn_knowledgeharvestplan.md#BKMK_msdyn_knowledgeharvestplan_historicalcaseharvestrun)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msdyn_knowledgeharvestplan`|
+|ReferencedAttribute|`msdyn_knowledgeharvestplanid`|
+|ReferencingAttribute|`msdyn_knowledgeharvestplanid`|
+|ReferencingEntityNavigationPropertyName|`msdyn_knowledgeharvestplanid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
 ### <a name="BKMK_owner_msdyn_historicalcaseharvestrun"></a> owner_msdyn_historicalcaseharvestrun
 
 One-To-Many Relationship: [owner owner_msdyn_historicalcaseharvestrun](owner.md#BKMK_owner_msdyn_historicalcaseharvestrun)
@@ -745,10 +799,12 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [msdyn_historicalcaseharvestbatch_historicalcaseharvestrun](#BKMK_msdyn_historicalcaseharvestbatch_historicalcaseharvestrun)
 - [msdyn_historicalcaseharvestrun_AsyncOperations](#BKMK_msdyn_historicalcaseharvestrun_AsyncOperations)
 - [msdyn_historicalcaseharvestrun_BulkDeleteFailures](#BKMK_msdyn_historicalcaseharvestrun_BulkDeleteFailures)
+- [msdyn_historicalcaseharvestrun_DeletedItemReferences](#BKMK_msdyn_historicalcaseharvestrun_DeletedItemReferences)
 - [msdyn_historicalcaseharvestrun_MailboxTrackingFolders](#BKMK_msdyn_historicalcaseharvestrun_MailboxTrackingFolders)
 - [msdyn_historicalcaseharvestrun_PrincipalObjectAttributeAccesses](#BKMK_msdyn_historicalcaseharvestrun_PrincipalObjectAttributeAccesses)
 - [msdyn_historicalcaseharvestrun_ProcessSession](#BKMK_msdyn_historicalcaseharvestrun_ProcessSession)
 - [msdyn_historicalcaseharvestrun_SyncErrors](#BKMK_msdyn_historicalcaseharvestrun_SyncErrors)
+- [msdyn_historicalcaseharvestrunlog_msdyn_historicalcaseharvestrun](#BKMK_msdyn_historicalcaseharvestrunlog_msdyn_historicalcaseharvestrun)
 
 ### <a name="BKMK_msdyn_historicalcaseharvestbatch_historicalcaseharvestrun"></a> msdyn_historicalcaseharvestbatch_historicalcaseharvestrun
 
@@ -783,6 +839,18 @@ Many-To-One Relationship: [bulkdeletefailure msdyn_historicalcaseharvestrun_Bulk
 |ReferencingEntity|`bulkdeletefailure`|
 |ReferencingAttribute|`regardingobjectid`|
 |ReferencedEntityNavigationPropertyName|`msdyn_historicalcaseharvestrun_BulkDeleteFailures`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_msdyn_historicalcaseharvestrun_DeletedItemReferences"></a> msdyn_historicalcaseharvestrun_DeletedItemReferences
+
+Many-To-One Relationship: [deleteditemreference msdyn_historicalcaseharvestrun_DeletedItemReferences](deleteditemreference.md#BKMK_msdyn_historicalcaseharvestrun_DeletedItemReferences)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`deleteditemreference`|
+|ReferencingAttribute|`deletedobject`|
+|ReferencedEntityNavigationPropertyName|`msdyn_historicalcaseharvestrun_DeletedItemReferences`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
@@ -833,6 +901,18 @@ Many-To-One Relationship: [syncerror msdyn_historicalcaseharvestrun_SyncErrors](
 |ReferencedEntityNavigationPropertyName|`msdyn_historicalcaseharvestrun_SyncErrors`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_msdyn_historicalcaseharvestrunlog_msdyn_historicalcaseharvestrun"></a> msdyn_historicalcaseharvestrunlog_msdyn_historicalcaseharvestrun
+
+Many-To-One Relationship: [msdyn_historicalcaseharvestrunlog msdyn_historicalcaseharvestrunlog_msdyn_historicalcaseharvestrun](msdyn_historicalcaseharvestrunlog.md#BKMK_msdyn_historicalcaseharvestrunlog_msdyn_historicalcaseharvestrun)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_historicalcaseharvestrunlog`|
+|ReferencingAttribute|`msdyn_historicalcaseharvestrunid`|
+|ReferencedEntityNavigationPropertyName|`msdyn_historicalcaseharvestrunlog_msdyn_historicalcaseharvestrun`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 
 

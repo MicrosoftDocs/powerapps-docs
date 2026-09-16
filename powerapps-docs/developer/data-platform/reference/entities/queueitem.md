@@ -2,8 +2,9 @@
 title: "Queue Item (QueueItem) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Queue Item (QueueItem) table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -27,6 +28,7 @@ Messages represent operations that can be performed on the table. They may also 
 | `PickFromQueue`<br />Event: True |<xref:Microsoft.Dynamics.CRM.PickFromQueue?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.PickFromQueueRequest>|
 | `ReleaseToQueue`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ReleaseToQueue?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ReleaseToQueueRequest>|
 | `RemoveFromQueue`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RemoveFromQueue?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RemoveFromQueueRequest>|
+| `Restore`<br />Event: True |<xref:Microsoft.Dynamics.CRM.Restore?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 | `Retrieve`<br />Event: True |`GET` /queueitems(*queueitemid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
 | `RetrieveMultiple`<br />Event: True |`GET` /queueitems<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 | `RouteTo`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RouteTo?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RouteToRequest>|
@@ -528,10 +530,10 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |4216|**Social Activity**|
 |4251|**Recurring Appointment**|
 |9953|**Knowledge Article**|
-|10254|**Teams chat**|
-|10270|**Knowledge Article Template**|
-|10421|**Invite Redemption**|
-|10422|**Portal Comment**|
+|10260|**Teams chat**|
+|10276|**Knowledge Article Template**|
+|10430|**Invite Redemption**|
+|10431|**Portal Comment**|
 
 ### <a name="BKMK_OrganizationId"></a> OrganizationId
 
@@ -962,6 +964,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 
 - [QueueItem_AsyncOperations](#BKMK_QueueItem_AsyncOperations)
 - [QueueItem_BulkDeleteFailures](#BKMK_QueueItem_BulkDeleteFailures)
+- [queueitem_DeletedItemReferences](#BKMK_queueitem_DeletedItemReferences)
 - [queueitem_principalobjectattributeaccess](#BKMK_queueitem_principalobjectattributeaccess)
 - [QueueItem_ProcessSessions](#BKMK_QueueItem_ProcessSessions)
 - [QueueItem_SyncErrors](#BKMK_QueueItem_SyncErrors)
@@ -988,6 +991,18 @@ Many-To-One Relationship: [bulkdeletefailure QueueItem_BulkDeleteFailures](bulkd
 |ReferencingAttribute|`regardingobjectid`|
 |ReferencedEntityNavigationPropertyName|`QueueItem_BulkDeleteFailures`|
 |IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_queueitem_DeletedItemReferences"></a> queueitem_DeletedItemReferences
+
+Many-To-One Relationship: [deleteditemreference queueitem_DeletedItemReferences](deleteditemreference.md#BKMK_queueitem_DeletedItemReferences)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`deleteditemreference`|
+|ReferencingAttribute|`deletedobject`|
+|ReferencedEntityNavigationPropertyName|`queueitem_DeletedItemReferences`|
+|IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_queueitem_principalobjectattributeaccess"></a> queueitem_principalobjectattributeaccess

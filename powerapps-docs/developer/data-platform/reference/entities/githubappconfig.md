@@ -1,72 +1,60 @@
 ---
-title: "powerbireportapdx table/entity reference (Microsoft Dataverse)"
-description: "Includes schema information and supported messages for the powerbireportapdx table/entity with Microsoft Dataverse."
+title: "githubappconfig table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the githubappconfig table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
 
-# powerbireportapdx table/entity reference (Microsoft Dataverse)
+# githubappconfig table/entity reference (Microsoft Dataverse)
 
-PowerBI Report appendix entity for unmanaged technical attributes
+GitHub App Configuration Entity.
 
 ## Messages
 
-The following table lists the messages for the powerbireportapdx table.
+The following table lists the messages for the githubappconfig table.
 Messages represent operations that can be performed on the table. They may also be events.
 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
-| `Assign`<br />Event: True |`PATCH` /powerbireportapdxes(*powerbireportapdxid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+| `Assign`<br />Event: True |`PATCH` /githubappconfigs(*githubappconfigid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
 | `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
-| `Create`<br />Event: True |`POST` /powerbireportapdxes<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `Create`<br />Event: True |`POST` /githubappconfigs<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
-| `Delete`<br />Event: True |`DELETE` /powerbireportapdxes(*powerbireportapdxid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Delete`<br />Event: True |`DELETE` /githubappconfigs(*githubappconfigid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
 | `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 | `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-| `Retrieve`<br />Event: True |`GET` /powerbireportapdxes(*powerbireportapdxid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
-| `RetrieveMultiple`<br />Event: True |`GET` /powerbireportapdxes<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
+| `Restore`<br />Event: True |<xref:Microsoft.Dynamics.CRM.Restore?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
+| `Retrieve`<br />Event: True |`GET` /githubappconfigs(*githubappconfigid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveMultiple`<br />Event: True |`GET` /githubappconfigs<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 | `RetrievePrincipalAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 | `RetrieveSharedPrincipalsAndAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
 | `RevokeAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-| `SetState`<br />Event: True |`PATCH` /powerbireportapdxes(*powerbireportapdxid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `statecode` and `statuscode` properties. |<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-| `Update`<br />Event: True |`PATCH` /powerbireportapdxes(*powerbireportapdxid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
+| `SetState`<br />Event: True |`PATCH` /githubappconfigs(*githubappconfigid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `statecode` and `statuscode` properties. |<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+| `Update`<br />Event: True |`PATCH` /githubappconfigs(*githubappconfigid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
 | `UpdateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
-| `Upsert`<br />Event: False |`PATCH` /powerbireportapdxes(*powerbireportapdxid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
+| `Upsert`<br />Event: False |`PATCH` /githubappconfigs(*githubappconfigid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
 | `UpsertMultiple`<br />Event: False |<xref:Microsoft.Dynamics.CRM.UpsertMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpsertMultipleRequest>|
-
-
-## Events
-
-The following table lists the events for the powerbireportapdx table.
-Events are messages that exist so that you can subscribe to them. Unless you added the event, you shouldn't invoke the message, only subscribe to it.
-
-|Name|Web API Operation |SDK for .NET |
-| ---- | ----- |----- |
-| `BulkRetain`|<xref:Microsoft.Dynamics.CRM.BulkRetain?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
-| `PurgeRetainedContent`|<xref:Microsoft.Dynamics.CRM.PurgeRetainedContent?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
-| `Retain`|<xref:Microsoft.Dynamics.CRM.Retain?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
-| `RollbackRetain`|<xref:Microsoft.Dynamics.CRM.RollbackRetain?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
-| `ValidateRetentionConfig`|<xref:Microsoft.Dynamics.CRM.ValidateRetentionConfig?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 
 ## Properties
 
-The following table lists selected properties for the powerbireportapdx table.
+The following table lists selected properties for the githubappconfig table.
 
 |Property|Value|
 | --- | --- |
-| **DisplayName** | **powerbireportapdx** |
-| **DisplayCollectionName** | **powerbireportapdxes** |
-| **SchemaName** | `powerbireportapdx` |
-| **CollectionSchemaName** | `powerbireportapdxes` |
-| **EntitySetName** | `powerbireportapdxes`|
-| **LogicalName** | `powerbireportapdx` |
-| **LogicalCollectionName** | `powerbireportapdxes` |
-| **PrimaryIdAttribute** | `powerbireportapdxid` |
+| **DisplayName** | **GitHubAppConfig** |
+| **DisplayCollectionName** | **GitHubAppConfigs** |
+| **SchemaName** | `githubappconfig` |
+| **CollectionSchemaName** | `githubappconfigs` |
+| **EntitySetName** | `githubappconfigs`|
+| **LogicalName** | `githubappconfig` |
+| **LogicalCollectionName** | `githubappconfigs` |
+| **PrimaryIdAttribute** | `githubappconfigid` |
 | **PrimaryNameAttribute** |`name` |
 | **TableType** | `Standard` |
 | **OwnershipType** | `UserOwned` |
@@ -75,47 +63,60 @@ The following table lists selected properties for the powerbireportapdx table.
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
-- [ArtifactObjectId](#BKMK_ArtifactObjectId)
-- [ETag](#BKMK_ETag)
+- [githubappconfigId](#BKMK_githubappconfigId)
+- [GitHubAppId](#BKMK_GitHubAppId)
+- [GitHubClientId](#BKMK_GitHubClientId)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
-- [Name](#BKMK_Name)
+- [KeyName](#BKMK_KeyName)
+- [KeyVaultUri](#BKMK_KeyVaultUri)
+- [ManagedIdentityId](#BKMK_ManagedIdentityId)
+- [name](#BKMK_name)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
-- [ParentId](#BKMK_ParentId)
-- [powerbireportapdxId](#BKMK_powerbireportapdxId)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
-- [WorkspaceObjectId](#BKMK_WorkspaceObjectId)
 
-### <a name="BKMK_ArtifactObjectId"></a> ArtifactObjectId
+### <a name="BKMK_githubappconfigId"></a> githubappconfigId
 
 |Property|Value|
 |---|---|
-|Description|**The objectId of the Power BI report**|
-|DisplayName|**Report objectId**|
+|Description|**Unique identifier for entity instances**|
+|DisplayName|**GitHubAppConfig**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`githubappconfigid`|
+|RequiredLevel|SystemRequired|
+|Type|Uniqueidentifier|
+
+### <a name="BKMK_GitHubAppId"></a> GitHubAppId
+
+|Property|Value|
+|---|---|
+|Description|**The GitHub App Id**|
+|DisplayName|**GitHubAppId**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|`artifactobjectid`|
+|LogicalName|`githubappid`|
 |RequiredLevel|ApplicationRequired|
 |Type|String|
 |Format|Text|
 |FormatName|Text|
 |ImeMode|Auto|
 |IsLocalizable|False|
-|MaxLength|36|
+|MaxLength|100|
 
-### <a name="BKMK_ETag"></a> ETag
+### <a name="BKMK_GitHubClientId"></a> GitHubClientId
 
 |Property|Value|
 |---|---|
-|Description||
-|DisplayName|**Etag**|
+|Description|**The GitHub Client Id**|
+|DisplayName|**GitHubClientId**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|`etag`|
+|LogicalName|`githubclientid`|
 |RequiredLevel|None|
 |Type|String|
 |Format|Text|
@@ -138,11 +139,58 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxValue|2147483647|
 |MinValue|-2147483648|
 
-### <a name="BKMK_Name"></a> Name
+### <a name="BKMK_KeyName"></a> KeyName
 
 |Property|Value|
 |---|---|
-|Description||
+|Description|**The name of the key containing the private key of the GitHub App.**|
+|DisplayName|**KeyName**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`keyname`|
+|RequiredLevel|ApplicationRequired|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|150|
+
+### <a name="BKMK_KeyVaultUri"></a> KeyVaultUri
+
+|Property|Value|
+|---|---|
+|Description|**The uri of the keyvault that contains the private key of the GitHub App.**|
+|DisplayName|**KeyVaultUri**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`keyvaulturi`|
+|RequiredLevel|ApplicationRequired|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|300|
+
+### <a name="BKMK_ManagedIdentityId"></a> ManagedIdentityId
+
+|Property|Value|
+|---|---|
+|Description|**Look up to the managed identity corresponding to this GitHub App configuration.**|
+|DisplayName|**ManagedIdentityId**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`managedidentityid`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|managedidentity|
+
+### <a name="BKMK_name"></a> name
+
+|Property|Value|
+|---|---|
+|Description|**The name of the custom entity.**|
 |DisplayName|**Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -197,40 +245,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|SystemRequired|
 |Type|EntityName|
 
-### <a name="BKMK_ParentId"></a> ParentId
-
-|Property|Value|
-|---|---|
-|Description||
-|DisplayName|**ParentId**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`parentid`|
-|RequiredLevel|ApplicationRequired|
-|Type|String|
-|Format|Text|
-|FormatName|Text|
-|ImeMode|Auto|
-|IsLocalizable|False|
-|MaxLength|36|
-
-### <a name="BKMK_powerbireportapdxId"></a> powerbireportapdxId
-
-|Property|Value|
-|---|---|
-|Description|**Unique identifier for entity instances**|
-|DisplayName|**powerbireportapdx**|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|`powerbireportapdxid`|
-|RequiredLevel|SystemRequired|
-|Type|Uniqueidentifier|
-
 ### <a name="BKMK_statecode"></a> statecode
 
 |Property|Value|
 |---|---|
-|Description|**Status of the powerbireportapdx**|
+|Description|**Status of the GitHubAppConfig**|
 |DisplayName|**Status**|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -238,7 +257,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|SystemRequired|
 |Type|State|
 |DefaultFormValue||
-|GlobalChoiceName|`powerbireportapdx_statecode`|
+|GlobalChoiceName|`githubappconfig_statecode`|
 
 #### statecode Choices/Options
 
@@ -251,7 +270,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**Reason for the status of the powerbireportapdx**|
+|Description|**Reason for the status of the GitHubAppConfig**|
 |DisplayName|**Status Reason**|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -259,7 +278,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Status|
 |DefaultFormValue||
-|GlobalChoiceName|`powerbireportapdx_statuscode`|
+|GlobalChoiceName|`githubappconfig_statuscode`|
 
 #### statuscode Choices/Options
 
@@ -295,23 +314,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Integer|
 |MaxValue|2147483647|
 |MinValue|-1|
-
-### <a name="BKMK_WorkspaceObjectId"></a> WorkspaceObjectId
-
-|Property|Value|
-|---|---|
-|Description||
-|DisplayName|**WorkspaceObjectId**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`workspaceobjectid`|
-|RequiredLevel|None|
-|Type|String|
-|Format|Text|
-|FormatName|Text|
-|ImeMode|Auto|
-|IsLocalizable|False|
-|MaxLength|100|
 
 
 ## Read-only columns/attributes
@@ -508,18 +510,19 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 
 These relationships are many-to-one. Listed by **SchemaName**.
 
-- [business_unit_powerbireportapdx](#BKMK_business_unit_powerbireportapdx)
-- [lk_powerbireportapdx_createdby](#BKMK_lk_powerbireportapdx_createdby)
-- [lk_powerbireportapdx_createdonbehalfby](#BKMK_lk_powerbireportapdx_createdonbehalfby)
-- [lk_powerbireportapdx_modifiedby](#BKMK_lk_powerbireportapdx_modifiedby)
-- [lk_powerbireportapdx_modifiedonbehalfby](#BKMK_lk_powerbireportapdx_modifiedonbehalfby)
-- [owner_powerbireportapdx](#BKMK_owner_powerbireportapdx)
-- [team_powerbireportapdx](#BKMK_team_powerbireportapdx)
-- [user_powerbireportapdx](#BKMK_user_powerbireportapdx)
+- [business_unit_githubappconfig](#BKMK_business_unit_githubappconfig)
+- [lk_githubappconfig_createdby](#BKMK_lk_githubappconfig_createdby)
+- [lk_githubappconfig_createdonbehalfby](#BKMK_lk_githubappconfig_createdonbehalfby)
+- [lk_githubappconfig_modifiedby](#BKMK_lk_githubappconfig_modifiedby)
+- [lk_githubappconfig_modifiedonbehalfby](#BKMK_lk_githubappconfig_modifiedonbehalfby)
+- [managedidentity_githubappconfig_ManagedIdentityId](#BKMK_managedidentity_githubappconfig_ManagedIdentityId)
+- [owner_githubappconfig](#BKMK_owner_githubappconfig)
+- [team_githubappconfig](#BKMK_team_githubappconfig)
+- [user_githubappconfig](#BKMK_user_githubappconfig)
 
-### <a name="BKMK_business_unit_powerbireportapdx"></a> business_unit_powerbireportapdx
+### <a name="BKMK_business_unit_githubappconfig"></a> business_unit_githubappconfig
 
-One-To-Many Relationship: [businessunit business_unit_powerbireportapdx](businessunit.md#BKMK_business_unit_powerbireportapdx)
+One-To-Many Relationship: [businessunit business_unit_githubappconfig](businessunit.md#BKMK_business_unit_githubappconfig)
 
 |Property|Value|
 |---|---|
@@ -530,9 +533,9 @@ One-To-Many Relationship: [businessunit business_unit_powerbireportapdx](busines
 |IsHierarchical||
 |CascadeConfiguration|Archive: `Restrict`<br />Assign: `NoCascade`<br />Delete: `Restrict`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_lk_powerbireportapdx_createdby"></a> lk_powerbireportapdx_createdby
+### <a name="BKMK_lk_githubappconfig_createdby"></a> lk_githubappconfig_createdby
 
-One-To-Many Relationship: [systemuser lk_powerbireportapdx_createdby](systemuser.md#BKMK_lk_powerbireportapdx_createdby)
+One-To-Many Relationship: [systemuser lk_githubappconfig_createdby](systemuser.md#BKMK_lk_githubappconfig_createdby)
 
 |Property|Value|
 |---|---|
@@ -543,9 +546,9 @@ One-To-Many Relationship: [systemuser lk_powerbireportapdx_createdby](systemuser
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_lk_powerbireportapdx_createdonbehalfby"></a> lk_powerbireportapdx_createdonbehalfby
+### <a name="BKMK_lk_githubappconfig_createdonbehalfby"></a> lk_githubappconfig_createdonbehalfby
 
-One-To-Many Relationship: [systemuser lk_powerbireportapdx_createdonbehalfby](systemuser.md#BKMK_lk_powerbireportapdx_createdonbehalfby)
+One-To-Many Relationship: [systemuser lk_githubappconfig_createdonbehalfby](systemuser.md#BKMK_lk_githubappconfig_createdonbehalfby)
 
 |Property|Value|
 |---|---|
@@ -556,9 +559,9 @@ One-To-Many Relationship: [systemuser lk_powerbireportapdx_createdonbehalfby](sy
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_lk_powerbireportapdx_modifiedby"></a> lk_powerbireportapdx_modifiedby
+### <a name="BKMK_lk_githubappconfig_modifiedby"></a> lk_githubappconfig_modifiedby
 
-One-To-Many Relationship: [systemuser lk_powerbireportapdx_modifiedby](systemuser.md#BKMK_lk_powerbireportapdx_modifiedby)
+One-To-Many Relationship: [systemuser lk_githubappconfig_modifiedby](systemuser.md#BKMK_lk_githubappconfig_modifiedby)
 
 |Property|Value|
 |---|---|
@@ -569,9 +572,9 @@ One-To-Many Relationship: [systemuser lk_powerbireportapdx_modifiedby](systemuse
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_lk_powerbireportapdx_modifiedonbehalfby"></a> lk_powerbireportapdx_modifiedonbehalfby
+### <a name="BKMK_lk_githubappconfig_modifiedonbehalfby"></a> lk_githubappconfig_modifiedonbehalfby
 
-One-To-Many Relationship: [systemuser lk_powerbireportapdx_modifiedonbehalfby](systemuser.md#BKMK_lk_powerbireportapdx_modifiedonbehalfby)
+One-To-Many Relationship: [systemuser lk_githubappconfig_modifiedonbehalfby](systemuser.md#BKMK_lk_githubappconfig_modifiedonbehalfby)
 
 |Property|Value|
 |---|---|
@@ -582,9 +585,22 @@ One-To-Many Relationship: [systemuser lk_powerbireportapdx_modifiedonbehalfby](s
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_owner_powerbireportapdx"></a> owner_powerbireportapdx
+### <a name="BKMK_managedidentity_githubappconfig_ManagedIdentityId"></a> managedidentity_githubappconfig_ManagedIdentityId
 
-One-To-Many Relationship: [owner owner_powerbireportapdx](owner.md#BKMK_owner_powerbireportapdx)
+One-To-Many Relationship: [managedidentity managedidentity_githubappconfig_ManagedIdentityId](managedidentity.md#BKMK_managedidentity_githubappconfig_ManagedIdentityId)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`managedidentity`|
+|ReferencedAttribute|`managedidentityid`|
+|ReferencingAttribute|`managedidentityid`|
+|ReferencingEntityNavigationPropertyName|`ManagedIdentityId`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_owner_githubappconfig"></a> owner_githubappconfig
+
+One-To-Many Relationship: [owner owner_githubappconfig](owner.md#BKMK_owner_githubappconfig)
 
 |Property|Value|
 |---|---|
@@ -595,9 +611,9 @@ One-To-Many Relationship: [owner owner_powerbireportapdx](owner.md#BKMK_owner_po
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_team_powerbireportapdx"></a> team_powerbireportapdx
+### <a name="BKMK_team_githubappconfig"></a> team_githubappconfig
 
-One-To-Many Relationship: [team team_powerbireportapdx](team.md#BKMK_team_powerbireportapdx)
+One-To-Many Relationship: [team team_githubappconfig](team.md#BKMK_team_githubappconfig)
 
 |Property|Value|
 |---|---|
@@ -608,9 +624,9 @@ One-To-Many Relationship: [team team_powerbireportapdx](team.md#BKMK_team_powerb
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_user_powerbireportapdx"></a> user_powerbireportapdx
+### <a name="BKMK_user_githubappconfig"></a> user_githubappconfig
 
-One-To-Many Relationship: [systemuser user_powerbireportapdx](systemuser.md#BKMK_user_powerbireportapdx)
+One-To-Many Relationship: [systemuser user_githubappconfig](systemuser.md#BKMK_user_githubappconfig)
 
 |Property|Value|
 |---|---|
@@ -626,108 +642,134 @@ One-To-Many Relationship: [systemuser user_powerbireportapdx](systemuser.md#BKMK
 
 These relationships are one-to-many. Listed by **SchemaName**.
 
-- [powerbireportapdx_AsyncOperations](#BKMK_powerbireportapdx_AsyncOperations)
-- [powerbireportapdx_BulkDeleteFailures](#BKMK_powerbireportapdx_BulkDeleteFailures)
-- [powerbireportapdx_DuplicateBaseRecord](#BKMK_powerbireportapdx_DuplicateBaseRecord)
-- [powerbireportapdx_DuplicateMatchingRecord](#BKMK_powerbireportapdx_DuplicateMatchingRecord)
-- [powerbireportapdx_MailboxTrackingFolders](#BKMK_powerbireportapdx_MailboxTrackingFolders)
-- [powerbireportapdx_PrincipalObjectAttributeAccesses](#BKMK_powerbireportapdx_PrincipalObjectAttributeAccesses)
-- [powerbireportapdx_ProcessSession](#BKMK_powerbireportapdx_ProcessSession)
-- [powerbireportapdx_SyncErrors](#BKMK_powerbireportapdx_SyncErrors)
+- [githubappconfig_AsyncOperations](#BKMK_githubappconfig_AsyncOperations)
+- [githubappconfig_BulkDeleteFailures](#BKMK_githubappconfig_BulkDeleteFailures)
+- [githubappconfig_DeletedItemReferences](#BKMK_githubappconfig_DeletedItemReferences)
+- [githubappconfig_DuplicateBaseRecord](#BKMK_githubappconfig_DuplicateBaseRecord)
+- [githubappconfig_DuplicateMatchingRecord](#BKMK_githubappconfig_DuplicateMatchingRecord)
+- [githubappconfig_MailboxTrackingFolders](#BKMK_githubappconfig_MailboxTrackingFolders)
+- [githubappconfig_PrincipalObjectAttributeAccesses](#BKMK_githubappconfig_PrincipalObjectAttributeAccesses)
+- [githubappconfig_ProcessSession](#BKMK_githubappconfig_ProcessSession)
+- [githubappconfig_sourcecontrolconfiguration_GitHubAppConfigId](#BKMK_githubappconfig_sourcecontrolconfiguration_GitHubAppConfigId)
+- [githubappconfig_SyncErrors](#BKMK_githubappconfig_SyncErrors)
 
-### <a name="BKMK_powerbireportapdx_AsyncOperations"></a> powerbireportapdx_AsyncOperations
+### <a name="BKMK_githubappconfig_AsyncOperations"></a> githubappconfig_AsyncOperations
 
-Many-To-One Relationship: [asyncoperation powerbireportapdx_AsyncOperations](asyncoperation.md#BKMK_powerbireportapdx_AsyncOperations)
+Many-To-One Relationship: [asyncoperation githubappconfig_AsyncOperations](asyncoperation.md#BKMK_githubappconfig_AsyncOperations)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`asyncoperation`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`powerbireportapdx_AsyncOperations`|
+|ReferencedEntityNavigationPropertyName|`githubappconfig_AsyncOperations`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_powerbireportapdx_BulkDeleteFailures"></a> powerbireportapdx_BulkDeleteFailures
+### <a name="BKMK_githubappconfig_BulkDeleteFailures"></a> githubappconfig_BulkDeleteFailures
 
-Many-To-One Relationship: [bulkdeletefailure powerbireportapdx_BulkDeleteFailures](bulkdeletefailure.md#BKMK_powerbireportapdx_BulkDeleteFailures)
+Many-To-One Relationship: [bulkdeletefailure githubappconfig_BulkDeleteFailures](bulkdeletefailure.md#BKMK_githubappconfig_BulkDeleteFailures)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`bulkdeletefailure`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`powerbireportapdx_BulkDeleteFailures`|
+|ReferencedEntityNavigationPropertyName|`githubappconfig_BulkDeleteFailures`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_powerbireportapdx_DuplicateBaseRecord"></a> powerbireportapdx_DuplicateBaseRecord
+### <a name="BKMK_githubappconfig_DeletedItemReferences"></a> githubappconfig_DeletedItemReferences
 
-Many-To-One Relationship: [duplicaterecord powerbireportapdx_DuplicateBaseRecord](duplicaterecord.md#BKMK_powerbireportapdx_DuplicateBaseRecord)
+Many-To-One Relationship: [deleteditemreference githubappconfig_DeletedItemReferences](deleteditemreference.md#BKMK_githubappconfig_DeletedItemReferences)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`deleteditemreference`|
+|ReferencingAttribute|`deletedobject`|
+|ReferencedEntityNavigationPropertyName|`githubappconfig_DeletedItemReferences`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_githubappconfig_DuplicateBaseRecord"></a> githubappconfig_DuplicateBaseRecord
+
+Many-To-One Relationship: [duplicaterecord githubappconfig_DuplicateBaseRecord](duplicaterecord.md#BKMK_githubappconfig_DuplicateBaseRecord)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`duplicaterecord`|
 |ReferencingAttribute|`baserecordid`|
-|ReferencedEntityNavigationPropertyName|`powerbireportapdx_DuplicateBaseRecord`|
+|ReferencedEntityNavigationPropertyName|`githubappconfig_DuplicateBaseRecord`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_powerbireportapdx_DuplicateMatchingRecord"></a> powerbireportapdx_DuplicateMatchingRecord
+### <a name="BKMK_githubappconfig_DuplicateMatchingRecord"></a> githubappconfig_DuplicateMatchingRecord
 
-Many-To-One Relationship: [duplicaterecord powerbireportapdx_DuplicateMatchingRecord](duplicaterecord.md#BKMK_powerbireportapdx_DuplicateMatchingRecord)
+Many-To-One Relationship: [duplicaterecord githubappconfig_DuplicateMatchingRecord](duplicaterecord.md#BKMK_githubappconfig_DuplicateMatchingRecord)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`duplicaterecord`|
 |ReferencingAttribute|`duplicaterecordid`|
-|ReferencedEntityNavigationPropertyName|`powerbireportapdx_DuplicateMatchingRecord`|
+|ReferencedEntityNavigationPropertyName|`githubappconfig_DuplicateMatchingRecord`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_powerbireportapdx_MailboxTrackingFolders"></a> powerbireportapdx_MailboxTrackingFolders
+### <a name="BKMK_githubappconfig_MailboxTrackingFolders"></a> githubappconfig_MailboxTrackingFolders
 
-Many-To-One Relationship: [mailboxtrackingfolder powerbireportapdx_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_powerbireportapdx_MailboxTrackingFolders)
+Many-To-One Relationship: [mailboxtrackingfolder githubappconfig_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_githubappconfig_MailboxTrackingFolders)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`mailboxtrackingfolder`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`powerbireportapdx_MailboxTrackingFolders`|
+|ReferencedEntityNavigationPropertyName|`githubappconfig_MailboxTrackingFolders`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_powerbireportapdx_PrincipalObjectAttributeAccesses"></a> powerbireportapdx_PrincipalObjectAttributeAccesses
+### <a name="BKMK_githubappconfig_PrincipalObjectAttributeAccesses"></a> githubappconfig_PrincipalObjectAttributeAccesses
 
-Many-To-One Relationship: [principalobjectattributeaccess powerbireportapdx_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_powerbireportapdx_PrincipalObjectAttributeAccesses)
+Many-To-One Relationship: [principalobjectattributeaccess githubappconfig_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_githubappconfig_PrincipalObjectAttributeAccesses)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`principalobjectattributeaccess`|
 |ReferencingAttribute|`objectid`|
-|ReferencedEntityNavigationPropertyName|`powerbireportapdx_PrincipalObjectAttributeAccesses`|
+|ReferencedEntityNavigationPropertyName|`githubappconfig_PrincipalObjectAttributeAccesses`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_powerbireportapdx_ProcessSession"></a> powerbireportapdx_ProcessSession
+### <a name="BKMK_githubappconfig_ProcessSession"></a> githubappconfig_ProcessSession
 
-Many-To-One Relationship: [processsession powerbireportapdx_ProcessSession](processsession.md#BKMK_powerbireportapdx_ProcessSession)
+Many-To-One Relationship: [processsession githubappconfig_ProcessSession](processsession.md#BKMK_githubappconfig_ProcessSession)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`processsession`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`powerbireportapdx_ProcessSession`|
+|ReferencedEntityNavigationPropertyName|`githubappconfig_ProcessSession`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_powerbireportapdx_SyncErrors"></a> powerbireportapdx_SyncErrors
+### <a name="BKMK_githubappconfig_sourcecontrolconfiguration_GitHubAppConfigId"></a> githubappconfig_sourcecontrolconfiguration_GitHubAppConfigId
 
-Many-To-One Relationship: [syncerror powerbireportapdx_SyncErrors](syncerror.md#BKMK_powerbireportapdx_SyncErrors)
+Many-To-One Relationship: [sourcecontrolconfiguration githubappconfig_sourcecontrolconfiguration_GitHubAppConfigId](sourcecontrolconfiguration.md#BKMK_githubappconfig_sourcecontrolconfiguration_GitHubAppConfigId)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`sourcecontrolconfiguration`|
+|ReferencingAttribute|`githubappconfigid`|
+|ReferencedEntityNavigationPropertyName|`githubappconfig_sourcecontrolconfiguration_GitHubAppConfigId`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_githubappconfig_SyncErrors"></a> githubappconfig_SyncErrors
+
+Many-To-One Relationship: [syncerror githubappconfig_SyncErrors](syncerror.md#BKMK_githubappconfig_SyncErrors)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`syncerror`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`powerbireportapdx_SyncErrors`|
+|ReferencedEntityNavigationPropertyName|`githubappconfig_SyncErrors`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
@@ -737,4 +779,4 @@ Many-To-One Relationship: [syncerror powerbireportapdx_SyncErrors](syncerror.md#
 
 [Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
-<xref:Microsoft.Dynamics.CRM.powerbireportapdx?displayProperty=fullName>
+<xref:Microsoft.Dynamics.CRM.githubappconfig?displayProperty=fullName>

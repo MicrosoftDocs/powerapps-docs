@@ -2,8 +2,9 @@
 title: "Knowledge Harvest Job Record (msdyn_knowledgeharvestjobrecord) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Knowledge Harvest Job Record (msdyn_knowledgeharvestjobrecord) table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -28,6 +29,7 @@ Messages represent operations that can be performed on the table. They may also 
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 | `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
+| `Restore`<br />Event: True |<xref:Microsoft.Dynamics.CRM.Restore?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 | `Retrieve`<br />Event: True |`GET` /msdyn_knowledgeharvestjobrecords(*msdyn_knowledgeharvestjobrecordid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
 | `RetrieveMultiple`<br />Event: True |`GET` /msdyn_knowledgeharvestjobrecords<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 | `RetrievePrincipalAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
@@ -65,7 +67,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [msdyn_additionalinformation](#BKMK_msdyn_additionalinformation)
 - [msdyn_entityids](#BKMK_msdyn_entityids)
 - [msdyn_entityname](#BKMK_msdyn_entityname)
+- [msdyn_harvesttype](#BKMK_msdyn_harvesttype)
+- [msdyn_historicalharvestbatchid](#BKMK_msdyn_historicalharvestbatchid)
+- [msdyn_historicalharvestrunid](#BKMK_msdyn_historicalharvestrunid)
 - [msdyn_knowledgeharvestjobrecordId](#BKMK_msdyn_knowledgeharvestjobrecordId)
+- [msdyn_knowledgeharvestplanid](#BKMK_msdyn_knowledgeharvestplanid)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
@@ -142,6 +148,53 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |---|---|
 |0|**Incident**|
 |1|**Conversation**|
+|2|**CustomEntity**|
+
+### <a name="BKMK_msdyn_harvesttype"></a> msdyn_harvesttype
+
+|Property|Value|
+|---|---|
+|Description|**The harvest type used during processing**|
+|DisplayName|**Harvest Type**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_harvesttype`|
+|RequiredLevel|None|
+|Type|Picklist|
+|DefaultFormValue|0|
+|GlobalChoiceName|`msdyn_knowledgeharvestjobrecord_msdyn_harvesttype`|
+
+#### msdyn_harvesttype Choices/Options
+
+|Value|Label|
+|---|---|
+|0|**Real-time**|
+|1|**Bulk**|
+|100|**Agentic**|
+
+### <a name="BKMK_msdyn_historicalharvestbatchid"></a> msdyn_historicalharvestbatchid
+
+|Property|Value|
+|---|---|
+|Description|**The unique identitifier for the historical harvest batch that is the source for this record**|
+|DisplayName|**Historical Harvest Batch Id**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_historicalharvestbatchid`|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
+
+### <a name="BKMK_msdyn_historicalharvestrunid"></a> msdyn_historicalharvestrunid
+
+|Property|Value|
+|---|---|
+|Description|**The unique identitifier for the historical harvest run that is the source for this record**|
+|DisplayName|**Historical Harvest Run Id**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_historicalharvestrunid`|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
 
 ### <a name="BKMK_msdyn_knowledgeharvestjobrecordId"></a> msdyn_knowledgeharvestjobrecordId
 
@@ -153,6 +206,18 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForRead|True|
 |LogicalName|`msdyn_knowledgeharvestjobrecordid`|
 |RequiredLevel|SystemRequired|
+|Type|Uniqueidentifier|
+
+### <a name="BKMK_msdyn_knowledgeharvestplanid"></a> msdyn_knowledgeharvestplanid
+
+|Property|Value|
+|---|---|
+|Description|**The unique identitifier for the knowledge harvest plan that is the source for this record**|
+|DisplayName|**Knowledge Harvest Plan Id**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_knowledgeharvestplanid`|
+|RequiredLevel|None|
 |Type|Uniqueidentifier|
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
@@ -219,6 +284,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |1|Label: **MavenInvoked**<br />DefaultStatus: 2<br />InvariantName: `MavenInvoked`|
 |2|Label: **Completed**<br />DefaultStatus: 4<br />InvariantName: `Completed`|
 |3|Label: **Failed**<br />DefaultStatus: 5<br />InvariantName: `Failed`|
+|4|Label: **Stopped**<br />DefaultStatus: 6<br />InvariantName: `Stopped`|
 
 ### <a name="BKMK_statuscode"></a> statuscode
 
@@ -243,6 +309,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |3|Label: **ArticleCreated**<br />State:2<br />TransitionData: None|
 |4|Label: **ArticleNOTCreated**<br />State:2<br />TransitionData: None|
 |5|Label: **KBCreateFailed**<br />State:3<br />TransitionData: None|
+|6|Label: **Stopped**<br />State:4<br />TransitionData: None|
 
 ### <a name="BKMK_TimeZoneRuleVersionNumber"></a> TimeZoneRuleVersionNumber
 
@@ -587,6 +654,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 
 - [msdyn_knowledgeharvestjobrecord_AsyncOperations](#BKMK_msdyn_knowledgeharvestjobrecord_AsyncOperations)
 - [msdyn_knowledgeharvestjobrecord_BulkDeleteFailures](#BKMK_msdyn_knowledgeharvestjobrecord_BulkDeleteFailures)
+- [msdyn_knowledgeharvestjobrecord_DeletedItemReferences](#BKMK_msdyn_knowledgeharvestjobrecord_DeletedItemReferences)
 - [msdyn_knowledgeharvestjobrecord_MailboxTrackingFolders](#BKMK_msdyn_knowledgeharvestjobrecord_MailboxTrackingFolders)
 - [msdyn_knowledgeharvestjobrecord_PrincipalObjectAttributeAccesses](#BKMK_msdyn_knowledgeharvestjobrecord_PrincipalObjectAttributeAccesses)
 - [msdyn_knowledgeharvestjobrecord_ProcessSession](#BKMK_msdyn_knowledgeharvestjobrecord_ProcessSession)
@@ -613,6 +681,18 @@ Many-To-One Relationship: [bulkdeletefailure msdyn_knowledgeharvestjobrecord_Bul
 |ReferencingEntity|`bulkdeletefailure`|
 |ReferencingAttribute|`regardingobjectid`|
 |ReferencedEntityNavigationPropertyName|`msdyn_knowledgeharvestjobrecord_BulkDeleteFailures`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_msdyn_knowledgeharvestjobrecord_DeletedItemReferences"></a> msdyn_knowledgeharvestjobrecord_DeletedItemReferences
+
+Many-To-One Relationship: [deleteditemreference msdyn_knowledgeharvestjobrecord_DeletedItemReferences](deleteditemreference.md#BKMK_msdyn_knowledgeharvestjobrecord_DeletedItemReferences)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`deleteditemreference`|
+|ReferencingAttribute|`deletedobject`|
+|ReferencedEntityNavigationPropertyName|`msdyn_knowledgeharvestjobrecord_DeletedItemReferences`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 

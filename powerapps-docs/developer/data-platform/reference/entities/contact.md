@@ -2,8 +2,9 @@
 title: "Contact table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Contact table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -29,6 +30,7 @@ Messages represent operations that can be performed on the table. They may also 
 | `IsValidStateTransition`<br />Event: True |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 | `Merge`<br />Event: True |<xref:Microsoft.Dynamics.CRM.Merge?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.MergeRequest>|
 | `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
+| `Restore`<br />Event: True |<xref:Microsoft.Dynamics.CRM.Restore?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 | `Retrieve`<br />Event: True |`GET` /contacts(*contactid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
 | `RetrieveMultiple`<br />Event: True |`GET` /contacts<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 | `RetrievePrincipalAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
@@ -4498,6 +4500,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [contact_connections2](#BKMK_contact_connections2)
 - [contact_customer_contacts](#BKMK_contact_customer_contacts-one-to-many)
 - [Contact_CustomerAddress](#BKMK_Contact_CustomerAddress)
+- [contact_DeletedItemReferences](#BKMK_contact_DeletedItemReferences)
 - [Contact_DuplicateBaseRecord](#BKMK_Contact_DuplicateBaseRecord)
 - [Contact_DuplicateMatchingRecord](#BKMK_Contact_DuplicateMatchingRecord)
 - [Contact_Email_EmailSender](#BKMK_Contact_Email_EmailSender)
@@ -4519,6 +4522,8 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [lk_contact_feedback_createdby](#BKMK_lk_contact_feedback_createdby)
 - [lk_contact_feedback_createdonbehalfby](#BKMK_lk_contact_feedback_createdonbehalfby)
 - [PowerPagesSiteAIFeedback_Contact_Contact](#BKMK_PowerPagesSiteAIFeedback_Contact_Contact)
+- [powerpagesusermapping_Contact_contact](#BKMK_powerpagesusermapping_Contact_contact)
+- [powerpagesusermapping_customer_contacts](#BKMK_powerpagesusermapping_customer_contacts)
 - [slakpiinstance_contact](#BKMK_slakpiinstance_contact)
 - [socialactivity_postauthor_contacts](#BKMK_socialactivity_postauthor_contacts)
 - [socialactivity_postauthoraccount_contacts](#BKMK_socialactivity_postauthoraccount_contacts)
@@ -4763,6 +4768,18 @@ Many-To-One Relationship: [customeraddress Contact_CustomerAddress](customeraddr
 |ReferencedEntityNavigationPropertyName|`Contact_CustomerAddress`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10<br />QueryApi: null<br />ViewId: `03315b35-4585-4447-a4d2-059cf79ca0fd`|
+
+### <a name="BKMK_contact_DeletedItemReferences"></a> contact_DeletedItemReferences
+
+Many-To-One Relationship: [deleteditemreference contact_DeletedItemReferences](deleteditemreference.md#BKMK_contact_DeletedItemReferences)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`deleteditemreference`|
+|ReferencingAttribute|`deletedobject`|
+|ReferencedEntityNavigationPropertyName|`contact_DeletedItemReferences`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_Contact_DuplicateBaseRecord"></a> Contact_DuplicateBaseRecord
 
@@ -5013,6 +5030,30 @@ Many-To-One Relationship: [powerpagessiteaifeedback PowerPagesSiteAIFeedback_Con
 |ReferencingEntity|`powerpagessiteaifeedback`|
 |ReferencingAttribute|`contact`|
 |ReferencedEntityNavigationPropertyName|`PowerPagesSiteAIFeedback_Contact_Contact`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_powerpagesusermapping_Contact_contact"></a> powerpagesusermapping_Contact_contact
+
+Many-To-One Relationship: [powerpagesusermapping powerpagesusermapping_Contact_contact](powerpagesusermapping.md#BKMK_powerpagesusermapping_Contact_contact)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`powerpagesusermapping`|
+|ReferencingAttribute|`contact`|
+|ReferencedEntityNavigationPropertyName|`powerpagesusermapping_Contact_contact`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_powerpagesusermapping_customer_contacts"></a> powerpagesusermapping_customer_contacts
+
+Many-To-One Relationship: [powerpagesusermapping powerpagesusermapping_customer_contacts](powerpagesusermapping.md#BKMK_powerpagesusermapping_customer_contacts)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`powerpagesusermapping`|
+|ReferencingAttribute|`parentcustomerid`|
+|ReferencedEntityNavigationPropertyName|`powerpagesusermapping_customer_contacts`|
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 

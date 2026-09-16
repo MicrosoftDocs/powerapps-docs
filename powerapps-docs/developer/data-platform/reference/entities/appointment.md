@@ -2,8 +2,9 @@
 title: "Appointment table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Appointment table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -82,6 +83,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [IsWorkflowCreated](#BKMK_IsWorkflowCreated)
 - [LastOnHoldTime](#BKMK_LastOnHoldTime)
 - [Location](#BKMK_Location)
+- [msdyn_associatedagentname](#BKMK_msdyn_associatedagentname)
 - [OnlineMeetingChatId](#BKMK_OnlineMeetingChatId)
 - [OnlineMeetingId](#BKMK_OnlineMeetingId)
 - [OnlineMeetingJoinUrl](#BKMK_OnlineMeetingJoinUrl)
@@ -96,6 +98,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [ProcessId](#BKMK_ProcessId)
 - [RegardingObjectId](#BKMK_RegardingObjectId)
 - [RegardingObjectTypeCode](#BKMK_RegardingObjectTypeCode)
+- [related](#BKMK_related)
 - [requiredattendees](#BKMK_requiredattendees)
 - [ScheduledDurationMinutes](#BKMK_ScheduledDurationMinutes)
 - [ScheduledEnd](#BKMK_ScheduledEnd)
@@ -406,6 +409,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsLocalizable|False|
 |MaxLength|200|
 
+### <a name="BKMK_msdyn_associatedagentname"></a> msdyn_associatedagentname
+
+|Property|Value|
+|---|---|
+|Description|**Name of the agent which associated the activity.**|
+|DisplayName|**Associated Agent Name**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_associatedagentname`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
+
 ### <a name="BKMK_OnlineMeetingChatId"></a> OnlineMeetingChatId
 
 |Property|Value|
@@ -617,6 +637,19 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`regardingobjecttypecode`|
 |RequiredLevel|None|
 |Type|EntityName|
+
+### <a name="BKMK_related"></a> related
+
+|Property|Value|
+|---|---|
+|Description|**Enter the related records for the appointment.**|
+|DisplayName|**Related**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`related`|
+|RequiredLevel|None|
+|Type|PartyList|
+|Targets|account, contact, queue, systemuser|
 
 ### <a name="BKMK_requiredattendees"></a> requiredattendees
 

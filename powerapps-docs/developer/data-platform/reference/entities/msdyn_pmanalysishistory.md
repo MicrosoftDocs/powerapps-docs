@@ -2,8 +2,9 @@
 title: "PM Analysis History (msdyn_pmanalysishistory) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the PM Analysis History (msdyn_pmanalysishistory) table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -164,7 +165,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`msdyn_analysisresult`|
-|RequiredLevel|SystemRequired|
+|RequiredLevel|None|
 |Type|Picklist|
 |DefaultFormValue|0|
 |GlobalChoiceName|`msdyn_pmanalysishistory_msdyn_analysisresult`|
@@ -175,6 +176,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |---|---|
 |0|**Analyzed**|
 |1|**AnalyzeFailed**|
+|2|**Skipped**|
 
 ### <a name="BKMK_msdyn_analysistype"></a> msdyn_analysistype
 

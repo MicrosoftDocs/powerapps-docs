@@ -2,8 +2,9 @@
 title: "Letter table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Letter table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -26,6 +27,7 @@ Messages represent operations that can be performed on the table. They may also 
 | `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
+| `Restore`<br />Event: True |<xref:Microsoft.Dynamics.CRM.Restore?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 | `Retrieve`<br />Event: True |`GET` /letters(*activityid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
 | `RetrieveMultiple`<br />Event: True |`GET` /letters<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 | `RetrievePrincipalAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
@@ -79,6 +81,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [ProcessId](#BKMK_ProcessId)
 - [RegardingObjectId](#BKMK_RegardingObjectId)
 - [RegardingObjectTypeCode](#BKMK_RegardingObjectTypeCode)
+- [related](#BKMK_related)
 - [ScheduledEnd](#BKMK_ScheduledEnd)
 - [ScheduledStart](#BKMK_ScheduledStart)
 - [SLAId](#BKMK_SLAId)
@@ -424,6 +427,19 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`regardingobjecttypecode`|
 |RequiredLevel|None|
 |Type|EntityName|
+
+### <a name="BKMK_related"></a> related
+
+|Property|Value|
+|---|---|
+|Description|**Enter the related records for the letter.**|
+|DisplayName|**Related**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`related`|
+|RequiredLevel|None|
+|Type|PartyList|
+|Targets|account, contact, queue, systemuser|
 
 ### <a name="BKMK_ScheduledEnd"></a> ScheduledEnd
 
@@ -1300,6 +1316,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [Letter_BulkDeleteFailures](#BKMK_Letter_BulkDeleteFailures)
 - [letter_connections1](#BKMK_letter_connections1)
 - [letter_connections2](#BKMK_letter_connections2)
+- [letter_DeletedItemReferences](#BKMK_letter_DeletedItemReferences)
 - [Letter_DuplicateBaseRecord](#BKMK_Letter_DuplicateBaseRecord)
 - [Letter_DuplicateMatchingRecord](#BKMK_Letter_DuplicateMatchingRecord)
 - [letter_principalobjectattributeaccess](#BKMK_letter_principalobjectattributeaccess)
@@ -1391,6 +1408,18 @@ Many-To-One Relationship: [connection letter_connections2](connection.md#BKMK_le
 |ReferencedEntityNavigationPropertyName|`letter_connections2`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 100<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_letter_DeletedItemReferences"></a> letter_DeletedItemReferences
+
+Many-To-One Relationship: [deleteditemreference letter_DeletedItemReferences](deleteditemreference.md#BKMK_letter_DeletedItemReferences)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`deleteditemreference`|
+|ReferencingAttribute|`deletedobject`|
+|ReferencedEntityNavigationPropertyName|`letter_DeletedItemReferences`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_Letter_DuplicateBaseRecord"></a> Letter_DuplicateBaseRecord
 

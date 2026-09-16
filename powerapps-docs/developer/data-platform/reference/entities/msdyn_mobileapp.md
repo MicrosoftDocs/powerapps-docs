@@ -2,8 +2,9 @@
 title: "Mobile App (msdyn_mobileapp) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Mobile App (msdyn_mobileapp) table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -2139,6 +2140,8 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [msdyn_mobileapp_DuplicateMatchingRecord](#BKMK_msdyn_mobileapp_DuplicateMatchingRecord)
 - [msdyn_mobileapp_FileAttachments](#BKMK_msdyn_mobileapp_FileAttachments)
 - [msdyn_mobileapp_MailboxTrackingFolders](#BKMK_msdyn_mobileapp_MailboxTrackingFolders)
+- [msdyn_mobileapp_msdyn_nativeextension_msdyn_mobileappid](#BKMK_msdyn_mobileapp_msdyn_nativeextension_msdyn_mobileappid)
+- [msdyn_mobileapp_msdyn_powerappswrapbuild_msdyn_mobileappid](#BKMK_msdyn_mobileapp_msdyn_powerappswrapbuild_msdyn_mobileappid)
 - [msdyn_mobileapp_PrincipalObjectAttributeAccesses](#BKMK_msdyn_mobileapp_PrincipalObjectAttributeAccesses)
 - [msdyn_mobileapp_ProcessSession](#BKMK_msdyn_mobileapp_ProcessSession)
 - [msdyn_mobileapp_SyncErrors](#BKMK_msdyn_mobileapp_SyncErrors)
@@ -2214,6 +2217,30 @@ Many-To-One Relationship: [mailboxtrackingfolder msdyn_mobileapp_MailboxTracking
 |ReferencedEntityNavigationPropertyName|`msdyn_mobileapp_MailboxTrackingFolders`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_msdyn_mobileapp_msdyn_nativeextension_msdyn_mobileappid"></a> msdyn_mobileapp_msdyn_nativeextension_msdyn_mobileappid
+
+Many-To-One Relationship: [msdyn_nativeextension msdyn_mobileapp_msdyn_nativeextension_msdyn_mobileappid](msdyn_nativeextension.md#BKMK_msdyn_mobileapp_msdyn_nativeextension_msdyn_mobileappid)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_nativeextension`|
+|ReferencingAttribute|`msdyn_mobileappid`|
+|ReferencedEntityNavigationPropertyName|`msdyn_mobileappid_msdyn_mobileapp_msdyn_nativeextension`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_msdyn_mobileapp_msdyn_powerappswrapbuild_msdyn_mobileappid"></a> msdyn_mobileapp_msdyn_powerappswrapbuild_msdyn_mobileappid
+
+Many-To-One Relationship: [msdyn_powerappswrapbuild msdyn_mobileapp_msdyn_powerappswrapbuild_msdyn_mobileappid](msdyn_powerappswrapbuild.md#BKMK_msdyn_mobileapp_msdyn_powerappswrapbuild_msdyn_mobileappid)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_powerappswrapbuild`|
+|ReferencingAttribute|`msdyn_mobileappid`|
+|ReferencedEntityNavigationPropertyName|`msdyn_mobileappid_msdyn_mobileapp`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_msdyn_mobileapp_PrincipalObjectAttributeAccesses"></a> msdyn_mobileapp_PrincipalObjectAttributeAccesses
 

@@ -2,8 +2,9 @@
 title: "Allowed MCP Client (allowedmcpclient) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Allowed MCP Client (allowedmcpclient) table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -650,4 +651,4 @@ Many-To-One Relationship: [syncerror allowedmcpclient_SyncErrors](syncerror.md#B
 
 [Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
-
+<xref:Microsoft.Dynamics.CRM.allowedmcpclient?displayProperty=fullName>

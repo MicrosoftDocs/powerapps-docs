@@ -31,6 +31,21 @@ items:
 - name: "Address"
   displayName: "CustomerAddress entity"
   href: customeraddress.md
+- name: "Agent"
+  displayName: "bot entity"
+  href: bot.md
+- name: "Agent component"
+  displayName: "botcomponent entity"
+  href: botcomponent.md
+- name: "Agent component collection"
+  displayName: "botcomponentcollection entity"
+  href: botcomponentcollection.md
+- name: "Agent Prompt"
+  displayName: "agentprompt entity"
+  href: agentprompt.md
+- name: "Agent Rule"
+  displayName: "AgentRule entity"
+  href: agentrule.md
 - name: "AI Builder Dataset"
   displayName: "msdyn_AIBDataset entity"
   href: msdyn_aibdataset.md
@@ -175,6 +190,9 @@ items:
 - name: "Annual Fiscal Calendar"
   displayName: "AnnualFiscalCalendar entity"
   href: annualfiscalcalendar.md
+- name: "Any Privilege Entity"
+  displayName: "AnyPrivilegeEntity entity"
+  href: anyprivilegeentity.md
 - name: "App Action"
   displayName: "appaction entity"
   href: appaction.md
@@ -202,6 +220,9 @@ items:
 - name: "App Module Roles"
   displayName: "AppModuleRoles entity"
   href: appmoduleroles.md
+- name: "App Notification Signal"
+  displayName: "appnotificationsignal entity"
+  href: appnotificationsignal.md
 - name: "appaction_appactionrule_classicrules"
   displayName: "appaction_appactionrule_classicrules entity"
   href: appaction_appactionrule_classicrules.md
@@ -262,6 +283,9 @@ items:
 - name: "Article Template"
   displayName: "KbArticleTemplate entity"
   href: kbarticletemplate.md
+- name: "AthenaReconciliationInfo"
+  displayName: "athenareconciliationinfo entity"
+  href: athenareconciliationinfo.md
 - name: "Attachment"
   displayName: "Attachment entity"
   href: attachment.md
@@ -334,9 +358,27 @@ items:
 - name: "Bulk Delete Operation"
   displayName: "BulkDeleteOperation entity"
   href: bulkdeleteoperation.md
+- name: "Bulk Harvest Run Log"
+  displayName: "msdyn_bulkharvestrunlog entity"
+  href: msdyn_bulkharvestrunlog.md
 - name: "Business Process"
   displayName: "businessprocess entity"
   href: businessprocess.md
+- name: "Business Process Linked Artifact"
+  displayName: "BusinessProcessLinkedArtifact entity"
+  href: businessprocesslinkedartifact.md
+- name: "Business Skill"
+  displayName: "Skill entity"
+  href: skill.md
+- name: "Business Skill Metadata"
+  displayName: "SkillMetadata entity"
+  href: skillmetadata.md
+- name: "Business Skill Resource"
+  displayName: "SkillResource entity"
+  href: skillresource.md
+- name: "Business Skill Role Mapping"
+  displayName: "SkillRoleMapping entity"
+  href: skillrolemapping.md
 - name: "Business Unit"
   displayName: "BusinessUnit entity"
   href: businessunit.md
@@ -403,6 +445,9 @@ items:
 - name: "Component Version Data Source"
   displayName: "componentversiondatasource entity"
   href: componentversiondatasource.md
+- name: "ComputerUseAgent"
+  displayName: "computeruseagent entity"
+  href: computeruseagent.md
 - name: "Connection"
   displayName: "Connection entity"
   href: connection.md
@@ -427,18 +472,12 @@ items:
 - name: "Content Snippet"
   displayName: "mspp_contentsnippet entity"
   href: mspp_contentsnippet.md
+- name: "ControlConfiguration"
+  displayName: "ControlConfiguration entity"
+  href: controlconfiguration.md
 - name: "ConversationTranscript"
   displayName: "conversationtranscript entity"
   href: conversationtranscript.md
-- name: "Copilot"
-  displayName: "bot entity"
-  href: bot.md
-- name: "Copilot component"
-  displayName: "botcomponent entity"
-  href: botcomponent.md
-- name: "Copilot component collection"
-  displayName: "botcomponentcollection entity"
-  href: botcomponentcollection.md
 - name: "Copilot Interactions"
   displayName: "msdyn_CopilotInteractions entity"
   href: msdyn_copilotinteractions.md
@@ -493,6 +532,9 @@ items:
 - name: "Data Lake Workspace Permission"
   displayName: "datalakeworkspacepermission entity"
   href: datalakeworkspacepermission.md
+- name: "Data Life Cycle Config"
+  displayName: "retentionconfig entity"
+  href: retentionconfig.md
 - name: "Data Map"
   displayName: "ImportMap entity"
   href: importmap.md
@@ -529,6 +571,9 @@ items:
 - name: "DelegatedAuthorization"
   displayName: "DelegatedAuthorization entity"
   href: delegatedauthorization.md
+- name: "Deleted Record Reference"
+  displayName: "DeletedItemReference entity"
+  href: deleteditemreference.md
 - name: "Dependency"
   displayName: "Dependency entity"
   href: dependency.md
@@ -634,6 +679,21 @@ items:
 - name: "Environment Variable Value"
   displayName: "EnvironmentVariableValue entity"
   href: environmentvariablevalue.md
+- name: "Eval Assertion"
+  displayName: "msdyn_evalassertion entity"
+  href: msdyn_evalassertion.md
+- name: "Eval Dataset"
+  displayName: "msdyn_evaldataset entity"
+  href: msdyn_evaldataset.md
+- name: "Eval Prompt"
+  displayName: "msdyn_evalprompt entity"
+  href: msdyn_evalprompt.md
+- name: "Eval Result"
+  displayName: "msdyn_evalresult entity"
+  href: msdyn_evalresult.md
+- name: "Eval Run"
+  displayName: "msdyn_evalrun entity"
+  href: msdyn_evalrun.md
 - name: "Event Expander Breadcrumb"
   displayName: "EventExpanderBreadcrumb entity"
   href: eventexpanderbreadcrumb.md
@@ -706,6 +766,9 @@ items:
 - name: "Flow Event"
   displayName: "flowevent entity"
   href: flowevent.md
+- name: "Flow Group"
+  displayName: "flowgroup entity"
+  href: flowgroup.md
 - name: "Flow Log"
   displayName: "flowlog entity"
   href: flowlog.md
@@ -733,6 +796,15 @@ items:
 - name: "Flow Session Binary"
   displayName: "flowsessionbinary entity"
   href: flowsessionbinary.md
+- name: "Flow Test Session"
+  displayName: "flowtestsession entity"
+  href: flowtestsession.md
+- name: "Flow Trigger"
+  displayName: "flowtrigger entity"
+  href: flowtrigger.md
+- name: "Flow Trigger Instance"
+  displayName: "flowtriggerinstance entity"
+  href: flowtriggerinstance.md
 - name: "Follow"
   displayName: "PostFollow entity"
   href: postfollow.md
@@ -763,6 +835,9 @@ items:
 - name: "Git Repository"
   displayName: "GitRepository entity"
   href: gitrepository.md
+- name: "GitHubAppConfig"
+  displayName: "githubappconfig entity"
+  href: githubappconfig.md
 - name: "Goal"
   displayName: "Goal entity"
   href: goal.md
@@ -772,9 +847,18 @@ items:
 - name: "Governance Configuration"
   displayName: "GovernanceConfiguration entity"
   href: governanceconfiguration.md
+- name: "Harvest Eligibility Condition"
+  displayName: "msdyn_harvesteligibilitycondition entity"
+  href: msdyn_harvesteligibilitycondition.md
+- name: "Harvest Work Item"
+  displayName: "msdyn_harvestworkitem entity"
+  href: msdyn_harvestworkitem.md
 - name: "Help Page"
   displayName: "msdyn_helppage entity"
   href: msdyn_helppage.md
+- name: "Historical Case Harvest Run Log"
+  displayName: "msdyn_historicalcaseharvestrunlog entity"
+  href: msdyn_historicalcaseharvestrunlog.md
 - name: "Image Attribute Configuration"
   displayName: "AttributeImageConfig entity"
   href: attributeimageconfig.md
@@ -862,6 +946,9 @@ items:
 - name: "Knowledge Harvest Job Record"
   displayName: "msdyn_knowledgeharvestjobrecord entity"
   href: msdyn_knowledgeharvestjobrecord.md
+- name: "Knowledge Harvest Plan"
+  displayName: "msdyn_knowledgeharvestplan entity"
+  href: msdyn_knowledgeharvestplan.md
 - name: "Knowledge Interaction Insight"
   displayName: "msdyn_knowledgeinteractioninsight entity"
   href: msdyn_knowledgeinteractioninsight.md
@@ -898,6 +985,9 @@ items:
 - name: "List Value Mapping"
   displayName: "PickListMapping entity"
   href: picklistmapping.md
+- name: "Location Record"
+  displayName: "msdyn_locationrecord entity"
+  href: msdyn_locationrecord.md
 - name: "Lookup Mapping"
   displayName: "LookUpMapping entity"
   href: lookupmapping.md
@@ -922,6 +1012,15 @@ items:
 - name: "Managed Property"
   displayName: "ManagedProperty entity"
   href: managedproperty.md
+- name: "MCPPrompt"
+  displayName: "MCPPrompt entity"
+  href: mcpprompt.md
+- name: "MCPResource"
+  displayName: "MCPResource entity"
+  href: mcpresource.md
+- name: "MCPResourceContent"
+  displayName: "MCPResourceContent entity"
+  href: mcpresourcecontent.md
 - name: "MCPServer"
   displayName: "MCPServer entity"
   href: mcpserver.md
@@ -961,6 +1060,9 @@ items:
 - name: "Monthly Fiscal Calendar"
   displayName: "MonthlyFiscalCalendar entity"
   href: monthlyfiscalcalendar.md
+- name: "MOS3 Management"
+  displayName: "MOS3Management entity"
+  href: mos3management.md
 - name: "Ms Graph Resource To Subscription"
   displayName: "MsGraphResourceToSubscription entity"
   href: msgraphresourcetosubscription.md
@@ -982,6 +1084,9 @@ items:
 - name: "Multistep Form Session"
   displayName: "adx_webformsession entity"
   href: adx_webformsession.md
+- name: "Native Extension"
+  displayName: "msdyn_nativeextension entity"
+  href: msdyn_nativeextension.md
 - name: "Navigation Setting"
   displayName: "NavigationSetting entity"
   href: navigationsetting.md
@@ -1135,15 +1240,9 @@ items:
 - name: "Post Regarding"
   displayName: "PostRegarding entity"
   href: postregarding.md
-- name: "Power BI Dataset"
-  displayName: "powerbidataset entity"
-  href: powerbidataset.md
-- name: "Power BI Mashup Parameter"
-  displayName: "powerbimashupparameter entity"
-  href: powerbimashupparameter.md
-- name: "Power BI Report"
-  displayName: "powerbireport entity"
-  href: powerbireport.md
+- name: "Power Apps Wrap Build"
+  displayName: "msdyn_powerappswrapbuild entity"
+  href: msdyn_powerappswrapbuild.md
 - name: "Power Pages Core Entity DS"
   displayName: "mspp_powerpagescoreentityds entity"
   href: mspp_powerpagescoreentityds.md
@@ -1159,12 +1258,6 @@ items:
 - name: "Power Pages Site Published"
   displayName: "powerpagesitepublished entity"
   href: powerpagesitepublished.md
-- name: "powerbidatasetapdx"
-  displayName: "powerbidatasetapdx entity"
-  href: powerbidatasetapdx.md
-- name: "powerbireportapdx"
-  displayName: "powerbireportapdx entity"
-  href: powerbireportapdx.md
 - name: "PowerfxRule"
   displayName: "powerfxrule entity"
   href: powerfxrule.md
@@ -1183,6 +1276,9 @@ items:
 - name: "PowerPagesManagedIdentity"
   displayName: "PowerPagesManagedIdentity entity"
   href: powerpagesmanagedidentity.md
+- name: "PowerPagesUserMapping"
+  displayName: "PowerPagesUserMapping entity"
+  href: powerpagesusermapping.md
 - name: "PrincipalObjectAccess"
   displayName: "PrincipalObjectAccess entity"
   href: principalobjectaccess.md
@@ -1285,9 +1381,6 @@ items:
 - name: "RetainedData Excel"
   displayName: "retaineddataexcel entity"
   href: retaineddataexcel.md
-- name: "RetentionConfig"
-  displayName: "retentionconfig entity"
-  href: retentionconfig.md
 - name: "RetentionFailureDetail"
   displayName: "retentionfailuredetail entity"
   href: retentionfailuredetail.md
@@ -1324,6 +1417,12 @@ items:
 - name: "Rollup Query"
   displayName: "GoalRollupQuery entity"
   href: goalrollupquery.md
+- name: "RTE Structured Template Config"
+  displayName: "msdyn_rtestructuredtemplateconfig entity"
+  href: msdyn_rtestructuredtemplateconfig.md
+- name: "RTE Template Mapping"
+  displayName: "msdyn_rtetemplatemapping entity"
+  href: msdyn_rtetemplatemapping.md
 - name: "RuntimeDependency"
   displayName: "RuntimeDependency entity"
   href: runtimedependency.md
@@ -1465,6 +1564,9 @@ items:
 - name: "Site Source File"
   displayName: "powerpagessourcefile entity"
   href: powerpagessourcefile.md
+- name: "skilldvtablesearch"
+  displayName: "skilldvtablesearch entity"
+  href: skilldvtablesearch.md
 - name: "SLA"
   displayName: "SLA entity"
   href: sla.md
@@ -1531,6 +1633,12 @@ items:
 - name: "Source Control Configuration"
   displayName: "SourceControlConfiguration entity"
   href: sourcecontrolconfiguration.md
+- name: "Source Control Operation Status"
+  displayName: "SourceControlOperationStatus entity"
+  href: sourcecontroloperationstatus.md
+- name: "Source Control Operation Tracking"
+  displayName: "SourceControlOperationTracking entity"
+  href: sourcecontroloperationtracking.md
 - name: "Staged Entity"
   displayName: "StagedEntity entity"
   href: stagedentity.md
@@ -1546,6 +1654,9 @@ items:
 - name: "StageSolutionUpload"
   displayName: "StageSolutionUpload entity"
   href: stagesolutionupload.md
+- name: "Structured Template"
+  displayName: "msdyn_rtestructuredtemplate entity"
+  href: msdyn_rtestructuredtemplate.md
 - name: "Subject"
   displayName: "Subject entity"
   href: subject.md

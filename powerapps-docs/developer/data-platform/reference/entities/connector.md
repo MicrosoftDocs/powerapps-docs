@@ -2,8 +2,9 @@
 title: "connector table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the connector table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -100,7 +101,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`capabilities`|
 |RequiredLevel|None|
 |Type|MultiSelectPicklist|
-|DefaultFormValue||
+|DefaultFormValue|-1|
 |GlobalChoiceName|`capability`|
 
 #### Capabilities Choices/Options
@@ -188,7 +189,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`connectortype`|
 |RequiredLevel|ApplicationRequired|
 |Type|Picklist|
-|DefaultFormValue||
+|DefaultFormValue|-1|
 |GlobalChoiceName|`connectortype`|
 
 #### ConnectorType Choices/Options

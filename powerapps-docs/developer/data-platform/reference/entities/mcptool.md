@@ -2,8 +2,9 @@
 title: "MCPTool table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the MCPTool table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -63,21 +64,29 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 - [Annotations](#BKMK_Annotations)
 - [BackendToolType](#BKMK_BackendToolType)
+- [BaseToolId](#BKMK_BaseToolId)
+- [BillingConfiguration](#BKMK_BillingConfiguration)
 - [ConnectorId](#BKMK_ConnectorId)
 - [CustomAPIId](#BKMK_CustomAPIId)
 - [Description](#BKMK_Description)
+- [Flags](#BKMK_Flags)
+- [HostName](#BKMK_HostName)
 - [HTTPMethod](#BKMK_HTTPMethod)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [InputSchema](#BKMK_InputSchema)
+- [IsCustom](#BKMK_IsCustom)
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [MCPServerId](#BKMK_MCPServerId)
 - [MCPToolId](#BKMK_MCPToolId)
+- [Meta](#BKMK_Meta)
 - [Name](#BKMK_Name)
 - [OperationId](#BKMK_OperationId)
+- [OutputSchema](#BKMK_OutputSchema)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
 - [RelativePath](#BKMK_RelativePath)
+- [ResourceAndScope](#BKMK_ResourceAndScope)
 - [SdkMessagePairId](#BKMK_SdkMessagePairId)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
@@ -126,6 +135,41 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |3|**RemoteMCP**|
 |4|**RemoteAPI**|
 |5|**SdkMessagePair**|
+|6|**BaseServerReference**|
+
+### <a name="BKMK_BaseToolId"></a> BaseToolId
+
+|Property|Value|
+|---|---|
+|Description|**ID of the Base MCP Tool (for custom tools)**|
+|DisplayName|**Base Tool Id**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`basetoolid`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
+
+### <a name="BKMK_BillingConfiguration"></a> BillingConfiguration
+
+|Property|Value|
+|---|---|
+|Description|**Billing Configurations for the MCP Server**|
+|DisplayName|**Billing Configuration**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`billingconfiguration`|
+|RequiredLevel|None|
+|Type|Memo|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|10000|
 
 ### <a name="BKMK_ConnectorId"></a> ConnectorId
 
@@ -173,6 +217,37 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|False|
 |MaxLength|4000|
+
+### <a name="BKMK_Flags"></a> Flags
+
+|Property|Value|
+|---|---|
+|Description|**Flags associated with this entity (bitmask).**|
+|DisplayName|**Flags**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`flags`|
+|RequiredLevel|None|
+|Type|Integer|
+|MaxValue|2147483647|
+|MinValue|-2147483648|
+
+### <a name="BKMK_HostName"></a> HostName
+
+|Property|Value|
+|---|---|
+|Description|**Host Name**|
+|DisplayName|**HostName**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`hostname`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|500|
 
 ### <a name="BKMK_HTTPMethod"></a> HTTPMethod
 
@@ -229,6 +304,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsLocalizable|False|
 |MaxLength|50000|
 
+### <a name="BKMK_IsCustom"></a> IsCustom
+
+|Property|Value|
+|---|---|
+|Description|**Denotes if this MCP tool is a custom tool**|
+|DisplayName|**Is Custom**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`iscustom`|
+|RequiredLevel|ApplicationRequired|
+|Type|Boolean|
+|GlobalChoiceName|`mcptool_iscustom`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
+
 ### <a name="BKMK_IsCustomizable"></a> IsCustomizable
 
 |Property|Value|
@@ -266,6 +357,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
 
+### <a name="BKMK_Meta"></a> Meta
+
+|Property|Value|
+|---|---|
+|Description|**MCP metadata for this resource**|
+|DisplayName|**Meta**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`Meta`|
+|RequiredLevel|None|
+|Type|Memo|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1000000|
+
 ### <a name="BKMK_Name"></a> Name
 
 |Property|Value|
@@ -299,6 +407,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|False|
 |MaxLength|100|
+
+### <a name="BKMK_OutputSchema"></a> OutputSchema
+
+|Property|Value|
+|---|---|
+|Description|**Output Schema of the MCP Tool**|
+|DisplayName|**OutputSchema**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`outputschema`|
+|RequiredLevel|None|
+|Type|Memo|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|50000|
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
@@ -358,6 +483,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|False|
 |MaxLength|500|
+
+### <a name="BKMK_ResourceAndScope"></a> ResourceAndScope
+
+|Property|Value|
+|---|---|
+|Description|**Resource And Scope of the MCP tool**|
+|DisplayName|**ResourceAndScope**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`resourceandscope`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|2000|
 
 ### <a name="BKMK_SdkMessagePairId"></a> SdkMessagePairId
 
@@ -983,4 +1125,4 @@ Many-To-One Relationship: [syncerror mcptool_SyncErrors](syncerror.md#BKMK_mcpto
 
 [Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
-
+<xref:Microsoft.Dynamics.CRM.mcptool?displayProperty=fullName>

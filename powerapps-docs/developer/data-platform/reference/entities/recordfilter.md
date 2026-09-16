@@ -2,8 +2,9 @@
 title: "Record Filter (RecordFilter) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Record Filter (RecordFilter) table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -100,7 +101,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |FormatName|Text|
 |ImeMode|Auto|
 |IsLocalizable|False|
-|MaxLength|4000|
+|MaxLength|6000|
 
 ### <a name="BKMK_FilterLinkedRecords"></a> FilterLinkedRecords
 
@@ -111,7 +112,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`filterlinkedrecords`|
-|RequiredLevel|SystemRequired|
+|RequiredLevel|None|
 |Type|Boolean|
 |GlobalChoiceName|`recordfilter_filterlinkedrecords`|
 |DefaultValue|True|

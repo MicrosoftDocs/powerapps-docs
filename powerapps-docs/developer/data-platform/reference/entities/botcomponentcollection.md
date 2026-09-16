@@ -1,20 +1,21 @@
 ---
-title: "Copilot component collection (botcomponentcollection) table/entity reference (Microsoft Dataverse)"
-description: "Includes schema information and supported messages for the Copilot component collection (botcomponentcollection) table/entity with Microsoft Dataverse."
+title: "Agent component collection (botcomponentcollection) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the Agent component collection (botcomponentcollection) table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
 
-# Copilot component collection (botcomponentcollection) table/entity reference (Microsoft Dataverse)
+# Agent component collection (botcomponentcollection) table/entity reference (Microsoft Dataverse)
 
 
 
 ## Messages
 
-The following table lists the messages for the Copilot component collection (botcomponentcollection) table.
+The following table lists the messages for the Agent component collection (botcomponentcollection) table.
 Messages represent operations that can be performed on the table. They may also be events.
 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
@@ -43,12 +44,12 @@ Messages represent operations that can be performed on the table. They may also 
 
 ## Properties
 
-The following table lists selected properties for the Copilot component collection (botcomponentcollection) table.
+The following table lists selected properties for the Agent component collection (botcomponentcollection) table.
 
 |Property|Value|
 | --- | --- |
-| **DisplayName** | **Copilot component collection** |
-| **DisplayCollectionName** | **Copilot component collections** |
+| **DisplayName** | **Agent component collection** |
+| **DisplayCollectionName** | **Agent component collections** |
 | **SchemaName** | `botcomponentcollection` |
 | **CollectionSchemaName** | `botcomponentcollections` |
 | **EntitySetName** | `botcomponentcollections`|
@@ -83,7 +84,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Property|Value|
 |---|---|
 |Description|**Unique identifier for entity instances**|
-|DisplayName|**Copilot component collection**|
+|DisplayName|**Agent component collection**|
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|`botcomponentcollectionid`|
@@ -230,7 +231,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**Status of the Copilot component collection**|
+|Description|**Status of the agent component collection**|
 |DisplayName|**Status**|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -251,7 +252,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**Reason for the status of the Copilot component collection**|
+|Description|**Reason for the status of the agent component collection**|
 |DisplayName|**Status Reason**|
 |IsValidForForm|True|
 |IsValidForRead|True|

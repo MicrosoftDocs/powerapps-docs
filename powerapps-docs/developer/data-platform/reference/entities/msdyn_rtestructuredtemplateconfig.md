@@ -1,48 +1,53 @@
 ---
-title: "Power BI Mashup Parameter (powerbimashupparameter) table/entity reference (Microsoft Dataverse)"
-description: "Includes schema information and supported messages for the Power BI Mashup Parameter (powerbimashupparameter) table/entity with Microsoft Dataverse."
+title: "RTE Structured Template Config (msdyn_rtestructuredtemplateconfig) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the RTE Structured Template Config (msdyn_rtestructuredtemplateconfig) table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
 
-# Power BI Mashup Parameter (powerbimashupparameter) table/entity reference (Microsoft Dataverse)
+# RTE Structured Template Config (msdyn_rtestructuredtemplateconfig) table/entity reference (Microsoft Dataverse)
 
-
+RTE Structured Template Config
 
 ## Messages
 
-The following table lists the messages for the Power BI Mashup Parameter (powerbimashupparameter) table.
+The following table lists the messages for the RTE Structured Template Config (msdyn_rtestructuredtemplateconfig) table.
 Messages represent operations that can be performed on the table. They may also be events.
 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
-| `Assign`<br />Event: True |`PATCH` /powerbimashupparameters(*powerbimashupparameterid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+| `Assign`<br />Event: True |`PATCH` /msdyn_rtestructuredtemplateconfigs(*msdyn_rtestructuredtemplateconfigid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
 | `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
-| `Create`<br />Event: True |`POST` /powerbimashupparameters<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `Create`<br />Event: True |`POST` /msdyn_rtestructuredtemplateconfigs<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
-| `Delete`<br />Event: True |`DELETE` /powerbimashupparameters(*powerbimashupparameterid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Delete`<br />Event: True |`DELETE` /msdyn_rtestructuredtemplateconfigs(*msdyn_rtestructuredtemplateconfigid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
 | `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 | `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-| `Retrieve`<br />Event: True |`GET` /powerbimashupparameters(*powerbimashupparameterid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
-| `RetrieveMultiple`<br />Event: True |`GET` /powerbimashupparameters<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
+| `ReplicateAssign`<br />Event: True | |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
+| `ReplicateGrantAccess`<br />Event: True | |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
+| `ReplicateModifyAccess`<br />Event: True | |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
+| `ReplicateRevokeAccess`<br />Event: True | |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
+| `Retrieve`<br />Event: True |`GET` /msdyn_rtestructuredtemplateconfigs(*msdyn_rtestructuredtemplateconfigid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveMultiple`<br />Event: True |`GET` /msdyn_rtestructuredtemplateconfigs<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 | `RetrievePrincipalAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 | `RetrieveSharedPrincipalsAndAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
 | `RevokeAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-| `SetState`<br />Event: True |`PATCH` /powerbimashupparameters(*powerbimashupparameterid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `statecode` and `statuscode` properties. |<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-| `Update`<br />Event: True |`PATCH` /powerbimashupparameters(*powerbimashupparameterid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
+| `SetState`<br />Event: True |`PATCH` /msdyn_rtestructuredtemplateconfigs(*msdyn_rtestructuredtemplateconfigid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `statecode` and `statuscode` properties. |<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+| `Update`<br />Event: True |`PATCH` /msdyn_rtestructuredtemplateconfigs(*msdyn_rtestructuredtemplateconfigid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
 | `UpdateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
-| `Upsert`<br />Event: False |`PATCH` /powerbimashupparameters(*powerbimashupparameterid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
+| `Upsert`<br />Event: False |`PATCH` /msdyn_rtestructuredtemplateconfigs(*msdyn_rtestructuredtemplateconfigid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
 | `UpsertMultiple`<br />Event: False |<xref:Microsoft.Dynamics.CRM.UpsertMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpsertMultipleRequest>|
 
 
 ## Events
 
-The following table lists the events for the Power BI Mashup Parameter (powerbimashupparameter) table.
+The following table lists the events for the RTE Structured Template Config (msdyn_rtestructuredtemplateconfig) table.
 Events are messages that exist so that you can subscribe to them. Unless you added the event, you shouldn't invoke the message, only subscribe to it.
 
 |Name|Web API Operation |SDK for .NET |
@@ -55,19 +60,19 @@ Events are messages that exist so that you can subscribe to them. Unless you add
 
 ## Properties
 
-The following table lists selected properties for the Power BI Mashup Parameter (powerbimashupparameter) table.
+The following table lists selected properties for the RTE Structured Template Config (msdyn_rtestructuredtemplateconfig) table.
 
 |Property|Value|
 | --- | --- |
-| **DisplayName** | **Power BI Mashup Parameter** |
-| **DisplayCollectionName** | **Power BI Mashup Parameters** |
-| **SchemaName** | `powerbimashupparameter` |
-| **CollectionSchemaName** | `powerbimashupparameters` |
-| **EntitySetName** | `powerbimashupparameters`|
-| **LogicalName** | `powerbimashupparameter` |
-| **LogicalCollectionName** | `powerbimashupparameters` |
-| **PrimaryIdAttribute** | `powerbimashupparameterid` |
-| **PrimaryNameAttribute** |`name` |
+| **DisplayName** | **RTE Structured Template Config** |
+| **DisplayCollectionName** | **RTE Structured Template Configs** |
+| **SchemaName** | `msdyn_rtestructuredtemplateconfig` |
+| **CollectionSchemaName** | `msdyn_rtestructuredtemplateconfigs` |
+| **EntitySetName** | `msdyn_rtestructuredtemplateconfigs`|
+| **LogicalName** | `msdyn_rtestructuredtemplateconfig` |
+| **LogicalCollectionName** | `msdyn_rtestructuredtemplateconfigs` |
+| **PrimaryIdAttribute** | `msdyn_rtestructuredtemplateconfigid` |
+| **PrimaryNameAttribute** |`msdyn_name` |
 | **TableType** | `Standard` |
 | **OwnershipType** | `UserOwned` |
 
@@ -75,50 +80,18 @@ The following table lists selected properties for the Power BI Mashup Parameter 
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
-- [DatasetId](#BKMK_DatasetId)
-- [EnvironmentVariableId](#BKMK_EnvironmentVariableId)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsCustomizable](#BKMK_IsCustomizable)
-- [IsNotRequired](#BKMK_IsNotRequired)
-- [name](#BKMK_name)
+- [msdyn_enablestructuredtemplates](#BKMK_msdyn_enablestructuredtemplates)
+- [msdyn_name](#BKMK_msdyn_name)
+- [msdyn_rtestructuredtemplateconfigId](#BKMK_msdyn_rtestructuredtemplateconfigId)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
-- [ParameterLiteralValue](#BKMK_ParameterLiteralValue)
-- [ParameterName](#BKMK_ParameterName)
-- [ParameterValueSource](#BKMK_ParameterValueSource)
-- [powerbimashupparameterId](#BKMK_powerbimashupparameterId)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
-- [UniqueName](#BKMK_UniqueName)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
-
-### <a name="BKMK_DatasetId"></a> DatasetId
-
-|Property|Value|
-|---|---|
-|Description|**The Id of the Power BI Dataset component this mashup parameter belongs to**|
-|DisplayName|**Dataset**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`datasetid`|
-|RequiredLevel|SystemRequired|
-|Type|Lookup|
-|Targets|powerbidataset|
-
-### <a name="BKMK_EnvironmentVariableId"></a> EnvironmentVariableId
-
-|Property|Value|
-|---|---|
-|Description|**The environment variable this mashup parameter is bound to**|
-|DisplayName|**Environment Variable**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`environmentvariableid`|
-|RequiredLevel|None|
-|Type|Lookup|
-|Targets|environmentvariabledefinition|
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
@@ -146,38 +119,50 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|SystemRequired|
 |Type|ManagedProperty|
 
-### <a name="BKMK_IsNotRequired"></a> IsNotRequired
+### <a name="BKMK_msdyn_enablestructuredtemplates"></a> msdyn_enablestructuredtemplates
 
 |Property|Value|
 |---|---|
-|Description|**Is the parameter not required.**|
-|DisplayName|**IsNotRequired**|
+|Description|**Is Structured Prompt Templates Enabled**|
+|DisplayName|**Is Structured Prompt Templates Enabled**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|`isnotrequired`|
-|RequiredLevel|ApplicationRequired|
+|LogicalName|`msdyn_enablestructuredtemplates`|
+|RequiredLevel|None|
 |Type|Boolean|
-|GlobalChoiceName|`powerbimashupparameter_isnotrequired`|
+|GlobalChoiceName|`msdyn_rtestructuredtemplateconfig_msdyn_enablestructuredtemplates`|
 |DefaultValue|False|
 |True Label|Yes|
 |False Label|No|
 
-### <a name="BKMK_name"></a> name
+### <a name="BKMK_msdyn_name"></a> msdyn_name
 
 |Property|Value|
 |---|---|
-|Description|**The name of the custom entity.**|
+|Description||
 |DisplayName|**Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|`name`|
+|LogicalName|`msdyn_name`|
 |RequiredLevel|ApplicationRequired|
 |Type|String|
 |Format|Text|
 |FormatName|Text|
 |ImeMode|Auto|
 |IsLocalizable|False|
-|MaxLength|100|
+|MaxLength|850|
+
+### <a name="BKMK_msdyn_rtestructuredtemplateconfigId"></a> msdyn_rtestructuredtemplateconfigId
+
+|Property|Value|
+|---|---|
+|Description|**Unique identifier for entity instances**|
+|DisplayName|**RTE Structured Template Config**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`msdyn_rtestructuredtemplateconfigid`|
+|RequiredLevel|SystemRequired|
+|Type|Uniqueidentifier|
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
@@ -221,79 +206,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|SystemRequired|
 |Type|EntityName|
 
-### <a name="BKMK_ParameterLiteralValue"></a> ParameterLiteralValue
-
-|Property|Value|
-|---|---|
-|Description|**The value for the mashup parameter**|
-|DisplayName|**Parameter Literal Value**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`parameterliteralvalue`|
-|RequiredLevel|None|
-|Type|String|
-|Format|Text|
-|FormatName|Text|
-|ImeMode|Auto|
-|IsLocalizable|False|
-|MaxLength|4000|
-
-### <a name="BKMK_ParameterName"></a> ParameterName
-
-|Property|Value|
-|---|---|
-|Description|**The name of the mashup parameter**|
-|DisplayName|**Parameter Name**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`parametername`|
-|RequiredLevel|ApplicationRequired|
-|Type|String|
-|Format|Text|
-|FormatName|Text|
-|ImeMode|Auto|
-|IsLocalizable|False|
-|MaxLength|100|
-
-### <a name="BKMK_ParameterValueSource"></a> ParameterValueSource
-
-|Property|Value|
-|---|---|
-|Description|**Specifies how the parameter value should be set**|
-|DisplayName|**Parameter Value Source**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`parametervaluesource`|
-|RequiredLevel|ApplicationRequired|
-|Type|Picklist|
-|DefaultFormValue|200000000|
-|GlobalChoiceName|`powerbimashupparametervaluesource`|
-
-#### ParameterValueSource Choices/Options
-
-|Value|Label|
-|---|---|
-|200000000|**Literal**|
-|200000001|**Environment Variable**|
-|200000002|**Environment Domain**|
-
-### <a name="BKMK_powerbimashupparameterId"></a> powerbimashupparameterId
-
-|Property|Value|
-|---|---|
-|Description|**Unique identifier for entity instances**|
-|DisplayName|**Power BI Mashup Parameter**|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|`powerbimashupparameterid`|
-|RequiredLevel|SystemRequired|
-|Type|Uniqueidentifier|
-
 ### <a name="BKMK_statecode"></a> statecode
 
 |Property|Value|
 |---|---|
-|Description|**Status of the Power BI Mashup Parameter**|
+|Description|**Status of the RTE Structured Template Config**|
 |DisplayName|**Status**|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -301,7 +218,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|SystemRequired|
 |Type|State|
 |DefaultFormValue||
-|GlobalChoiceName|`powerbimashupparameter_statecode`|
+|GlobalChoiceName|`msdyn_rtestructuredtemplateconfig_statecode`|
 
 #### statecode Choices/Options
 
@@ -314,7 +231,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**Reason for the status of the Power BI Mashup Parameter**|
+|Description|**Reason for the status of the RTE Structured Template Config**|
 |DisplayName|**Status Reason**|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -322,7 +239,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Status|
 |DefaultFormValue||
-|GlobalChoiceName|`powerbimashupparameter_statuscode`|
+|GlobalChoiceName|`msdyn_rtestructuredtemplateconfig_statuscode`|
 
 #### statuscode Choices/Options
 
@@ -344,23 +261,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Integer|
 |MaxValue|2147483647|
 |MinValue|-1|
-
-### <a name="BKMK_UniqueName"></a> UniqueName
-
-|Property|Value|
-|---|---|
-|Description|**Unique Name for the entity.**|
-|DisplayName|**Unique Name**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`uniquename`|
-|RequiredLevel|SystemRequired|
-|Type|String|
-|Format|Text|
-|FormatName|Text|
-|ImeMode|Auto|
-|IsLocalizable|False|
-|MaxLength|128|
 
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
 
@@ -669,20 +569,18 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 
 These relationships are many-to-one. Listed by **SchemaName**.
 
-- [business_unit_powerbimashupparameter](#BKMK_business_unit_powerbimashupparameter)
-- [envvardefinition_powerbimashupparameter](#BKMK_envvardefinition_powerbimashupparameter)
-- [lk_powerbimashupparameter_createdby](#BKMK_lk_powerbimashupparameter_createdby)
-- [lk_powerbimashupparameter_createdonbehalfby](#BKMK_lk_powerbimashupparameter_createdonbehalfby)
-- [lk_powerbimashupparameter_modifiedby](#BKMK_lk_powerbimashupparameter_modifiedby)
-- [lk_powerbimashupparameter_modifiedonbehalfby](#BKMK_lk_powerbimashupparameter_modifiedonbehalfby)
-- [owner_powerbimashupparameter](#BKMK_owner_powerbimashupparameter)
-- [powerbidataset_powerbimashupparameter](#BKMK_powerbidataset_powerbimashupparameter)
-- [team_powerbimashupparameter](#BKMK_team_powerbimashupparameter)
-- [user_powerbimashupparameter](#BKMK_user_powerbimashupparameter)
+- [business_unit_msdyn_rtestructuredtemplateconfig](#BKMK_business_unit_msdyn_rtestructuredtemplateconfig)
+- [lk_msdyn_rtestructuredtemplateconfig_createdby](#BKMK_lk_msdyn_rtestructuredtemplateconfig_createdby)
+- [lk_msdyn_rtestructuredtemplateconfig_createdonbehalfby](#BKMK_lk_msdyn_rtestructuredtemplateconfig_createdonbehalfby)
+- [lk_msdyn_rtestructuredtemplateconfig_modifiedby](#BKMK_lk_msdyn_rtestructuredtemplateconfig_modifiedby)
+- [lk_msdyn_rtestructuredtemplateconfig_modifiedonbehalfby](#BKMK_lk_msdyn_rtestructuredtemplateconfig_modifiedonbehalfby)
+- [owner_msdyn_rtestructuredtemplateconfig](#BKMK_owner_msdyn_rtestructuredtemplateconfig)
+- [team_msdyn_rtestructuredtemplateconfig](#BKMK_team_msdyn_rtestructuredtemplateconfig)
+- [user_msdyn_rtestructuredtemplateconfig](#BKMK_user_msdyn_rtestructuredtemplateconfig)
 
-### <a name="BKMK_business_unit_powerbimashupparameter"></a> business_unit_powerbimashupparameter
+### <a name="BKMK_business_unit_msdyn_rtestructuredtemplateconfig"></a> business_unit_msdyn_rtestructuredtemplateconfig
 
-One-To-Many Relationship: [businessunit business_unit_powerbimashupparameter](businessunit.md#BKMK_business_unit_powerbimashupparameter)
+One-To-Many Relationship: [businessunit business_unit_msdyn_rtestructuredtemplateconfig](businessunit.md#BKMK_business_unit_msdyn_rtestructuredtemplateconfig)
 
 |Property|Value|
 |---|---|
@@ -693,22 +591,9 @@ One-To-Many Relationship: [businessunit business_unit_powerbimashupparameter](bu
 |IsHierarchical||
 |CascadeConfiguration|Archive: `Restrict`<br />Assign: `NoCascade`<br />Delete: `Restrict`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_envvardefinition_powerbimashupparameter"></a> envvardefinition_powerbimashupparameter
+### <a name="BKMK_lk_msdyn_rtestructuredtemplateconfig_createdby"></a> lk_msdyn_rtestructuredtemplateconfig_createdby
 
-One-To-Many Relationship: [environmentvariabledefinition envvardefinition_powerbimashupparameter](environmentvariabledefinition.md#BKMK_envvardefinition_powerbimashupparameter)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`environmentvariabledefinition`|
-|ReferencedAttribute|`environmentvariabledefinitionid`|
-|ReferencingAttribute|`environmentvariableid`|
-|ReferencingEntityNavigationPropertyName|`EnvironmentVariableId`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Restrict`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_lk_powerbimashupparameter_createdby"></a> lk_powerbimashupparameter_createdby
-
-One-To-Many Relationship: [systemuser lk_powerbimashupparameter_createdby](systemuser.md#BKMK_lk_powerbimashupparameter_createdby)
+One-To-Many Relationship: [systemuser lk_msdyn_rtestructuredtemplateconfig_createdby](systemuser.md#BKMK_lk_msdyn_rtestructuredtemplateconfig_createdby)
 
 |Property|Value|
 |---|---|
@@ -719,9 +604,9 @@ One-To-Many Relationship: [systemuser lk_powerbimashupparameter_createdby](syste
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_lk_powerbimashupparameter_createdonbehalfby"></a> lk_powerbimashupparameter_createdonbehalfby
+### <a name="BKMK_lk_msdyn_rtestructuredtemplateconfig_createdonbehalfby"></a> lk_msdyn_rtestructuredtemplateconfig_createdonbehalfby
 
-One-To-Many Relationship: [systemuser lk_powerbimashupparameter_createdonbehalfby](systemuser.md#BKMK_lk_powerbimashupparameter_createdonbehalfby)
+One-To-Many Relationship: [systemuser lk_msdyn_rtestructuredtemplateconfig_createdonbehalfby](systemuser.md#BKMK_lk_msdyn_rtestructuredtemplateconfig_createdonbehalfby)
 
 |Property|Value|
 |---|---|
@@ -732,9 +617,9 @@ One-To-Many Relationship: [systemuser lk_powerbimashupparameter_createdonbehalfb
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_lk_powerbimashupparameter_modifiedby"></a> lk_powerbimashupparameter_modifiedby
+### <a name="BKMK_lk_msdyn_rtestructuredtemplateconfig_modifiedby"></a> lk_msdyn_rtestructuredtemplateconfig_modifiedby
 
-One-To-Many Relationship: [systemuser lk_powerbimashupparameter_modifiedby](systemuser.md#BKMK_lk_powerbimashupparameter_modifiedby)
+One-To-Many Relationship: [systemuser lk_msdyn_rtestructuredtemplateconfig_modifiedby](systemuser.md#BKMK_lk_msdyn_rtestructuredtemplateconfig_modifiedby)
 
 |Property|Value|
 |---|---|
@@ -745,9 +630,9 @@ One-To-Many Relationship: [systemuser lk_powerbimashupparameter_modifiedby](syst
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_lk_powerbimashupparameter_modifiedonbehalfby"></a> lk_powerbimashupparameter_modifiedonbehalfby
+### <a name="BKMK_lk_msdyn_rtestructuredtemplateconfig_modifiedonbehalfby"></a> lk_msdyn_rtestructuredtemplateconfig_modifiedonbehalfby
 
-One-To-Many Relationship: [systemuser lk_powerbimashupparameter_modifiedonbehalfby](systemuser.md#BKMK_lk_powerbimashupparameter_modifiedonbehalfby)
+One-To-Many Relationship: [systemuser lk_msdyn_rtestructuredtemplateconfig_modifiedonbehalfby](systemuser.md#BKMK_lk_msdyn_rtestructuredtemplateconfig_modifiedonbehalfby)
 
 |Property|Value|
 |---|---|
@@ -758,9 +643,9 @@ One-To-Many Relationship: [systemuser lk_powerbimashupparameter_modifiedonbehalf
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_owner_powerbimashupparameter"></a> owner_powerbimashupparameter
+### <a name="BKMK_owner_msdyn_rtestructuredtemplateconfig"></a> owner_msdyn_rtestructuredtemplateconfig
 
-One-To-Many Relationship: [owner owner_powerbimashupparameter](owner.md#BKMK_owner_powerbimashupparameter)
+One-To-Many Relationship: [owner owner_msdyn_rtestructuredtemplateconfig](owner.md#BKMK_owner_msdyn_rtestructuredtemplateconfig)
 
 |Property|Value|
 |---|---|
@@ -771,22 +656,9 @@ One-To-Many Relationship: [owner owner_powerbimashupparameter](owner.md#BKMK_own
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_powerbidataset_powerbimashupparameter"></a> powerbidataset_powerbimashupparameter
+### <a name="BKMK_team_msdyn_rtestructuredtemplateconfig"></a> team_msdyn_rtestructuredtemplateconfig
 
-One-To-Many Relationship: [powerbidataset powerbidataset_powerbimashupparameter](powerbidataset.md#BKMK_powerbidataset_powerbimashupparameter)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`powerbidataset`|
-|ReferencedAttribute|`powerbidatasetid`|
-|ReferencingAttribute|`datasetid`|
-|ReferencingEntityNavigationPropertyName|`DatasetId`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `Cascade`<br />RollupView: `NoCascade`<br />Share: `Cascade`<br />Unshare: `Cascade`|
-
-### <a name="BKMK_team_powerbimashupparameter"></a> team_powerbimashupparameter
-
-One-To-Many Relationship: [team team_powerbimashupparameter](team.md#BKMK_team_powerbimashupparameter)
+One-To-Many Relationship: [team team_msdyn_rtestructuredtemplateconfig](team.md#BKMK_team_msdyn_rtestructuredtemplateconfig)
 
 |Property|Value|
 |---|---|
@@ -797,9 +669,9 @@ One-To-Many Relationship: [team team_powerbimashupparameter](team.md#BKMK_team_p
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_user_powerbimashupparameter"></a> user_powerbimashupparameter
+### <a name="BKMK_user_msdyn_rtestructuredtemplateconfig"></a> user_msdyn_rtestructuredtemplateconfig
 
-One-To-Many Relationship: [systemuser user_powerbimashupparameter](systemuser.md#BKMK_user_powerbimashupparameter)
+One-To-Many Relationship: [systemuser user_msdyn_rtestructuredtemplateconfig](systemuser.md#BKMK_user_msdyn_rtestructuredtemplateconfig)
 
 |Property|Value|
 |---|---|
@@ -815,108 +687,108 @@ One-To-Many Relationship: [systemuser user_powerbimashupparameter](systemuser.md
 
 These relationships are one-to-many. Listed by **SchemaName**.
 
-- [powerbimashupparameter_AsyncOperations](#BKMK_powerbimashupparameter_AsyncOperations)
-- [powerbimashupparameter_BulkDeleteFailures](#BKMK_powerbimashupparameter_BulkDeleteFailures)
-- [powerbimashupparameter_DuplicateBaseRecord](#BKMK_powerbimashupparameter_DuplicateBaseRecord)
-- [powerbimashupparameter_DuplicateMatchingRecord](#BKMK_powerbimashupparameter_DuplicateMatchingRecord)
-- [powerbimashupparameter_MailboxTrackingFolders](#BKMK_powerbimashupparameter_MailboxTrackingFolders)
-- [powerbimashupparameter_PrincipalObjectAttributeAccesses](#BKMK_powerbimashupparameter_PrincipalObjectAttributeAccesses)
-- [powerbimashupparameter_ProcessSession](#BKMK_powerbimashupparameter_ProcessSession)
-- [powerbimashupparameter_SyncErrors](#BKMK_powerbimashupparameter_SyncErrors)
+- [msdyn_rtestructuredtemplateconfig_AsyncOperations](#BKMK_msdyn_rtestructuredtemplateconfig_AsyncOperations)
+- [msdyn_rtestructuredtemplateconfig_BulkDeleteFailures](#BKMK_msdyn_rtestructuredtemplateconfig_BulkDeleteFailures)
+- [msdyn_rtestructuredtemplateconfig_DuplicateBaseRecord](#BKMK_msdyn_rtestructuredtemplateconfig_DuplicateBaseRecord)
+- [msdyn_rtestructuredtemplateconfig_DuplicateMatchingRecord](#BKMK_msdyn_rtestructuredtemplateconfig_DuplicateMatchingRecord)
+- [msdyn_rtestructuredtemplateconfig_MailboxTrackingFolders](#BKMK_msdyn_rtestructuredtemplateconfig_MailboxTrackingFolders)
+- [msdyn_rtestructuredtemplateconfig_PrincipalObjectAttributeAccesses](#BKMK_msdyn_rtestructuredtemplateconfig_PrincipalObjectAttributeAccesses)
+- [msdyn_rtestructuredtemplateconfig_ProcessSession](#BKMK_msdyn_rtestructuredtemplateconfig_ProcessSession)
+- [msdyn_rtestructuredtemplateconfig_SyncErrors](#BKMK_msdyn_rtestructuredtemplateconfig_SyncErrors)
 
-### <a name="BKMK_powerbimashupparameter_AsyncOperations"></a> powerbimashupparameter_AsyncOperations
+### <a name="BKMK_msdyn_rtestructuredtemplateconfig_AsyncOperations"></a> msdyn_rtestructuredtemplateconfig_AsyncOperations
 
-Many-To-One Relationship: [asyncoperation powerbimashupparameter_AsyncOperations](asyncoperation.md#BKMK_powerbimashupparameter_AsyncOperations)
+Many-To-One Relationship: [asyncoperation msdyn_rtestructuredtemplateconfig_AsyncOperations](asyncoperation.md#BKMK_msdyn_rtestructuredtemplateconfig_AsyncOperations)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`asyncoperation`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`powerbimashupparameter_AsyncOperations`|
+|ReferencedEntityNavigationPropertyName|`msdyn_rtestructuredtemplateconfig_AsyncOperations`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_powerbimashupparameter_BulkDeleteFailures"></a> powerbimashupparameter_BulkDeleteFailures
+### <a name="BKMK_msdyn_rtestructuredtemplateconfig_BulkDeleteFailures"></a> msdyn_rtestructuredtemplateconfig_BulkDeleteFailures
 
-Many-To-One Relationship: [bulkdeletefailure powerbimashupparameter_BulkDeleteFailures](bulkdeletefailure.md#BKMK_powerbimashupparameter_BulkDeleteFailures)
+Many-To-One Relationship: [bulkdeletefailure msdyn_rtestructuredtemplateconfig_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msdyn_rtestructuredtemplateconfig_BulkDeleteFailures)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`bulkdeletefailure`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`powerbimashupparameter_BulkDeleteFailures`|
+|ReferencedEntityNavigationPropertyName|`msdyn_rtestructuredtemplateconfig_BulkDeleteFailures`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_powerbimashupparameter_DuplicateBaseRecord"></a> powerbimashupparameter_DuplicateBaseRecord
+### <a name="BKMK_msdyn_rtestructuredtemplateconfig_DuplicateBaseRecord"></a> msdyn_rtestructuredtemplateconfig_DuplicateBaseRecord
 
-Many-To-One Relationship: [duplicaterecord powerbimashupparameter_DuplicateBaseRecord](duplicaterecord.md#BKMK_powerbimashupparameter_DuplicateBaseRecord)
+Many-To-One Relationship: [duplicaterecord msdyn_rtestructuredtemplateconfig_DuplicateBaseRecord](duplicaterecord.md#BKMK_msdyn_rtestructuredtemplateconfig_DuplicateBaseRecord)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`duplicaterecord`|
 |ReferencingAttribute|`baserecordid`|
-|ReferencedEntityNavigationPropertyName|`powerbimashupparameter_DuplicateBaseRecord`|
+|ReferencedEntityNavigationPropertyName|`msdyn_rtestructuredtemplateconfig_DuplicateBaseRecord`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_powerbimashupparameter_DuplicateMatchingRecord"></a> powerbimashupparameter_DuplicateMatchingRecord
+### <a name="BKMK_msdyn_rtestructuredtemplateconfig_DuplicateMatchingRecord"></a> msdyn_rtestructuredtemplateconfig_DuplicateMatchingRecord
 
-Many-To-One Relationship: [duplicaterecord powerbimashupparameter_DuplicateMatchingRecord](duplicaterecord.md#BKMK_powerbimashupparameter_DuplicateMatchingRecord)
+Many-To-One Relationship: [duplicaterecord msdyn_rtestructuredtemplateconfig_DuplicateMatchingRecord](duplicaterecord.md#BKMK_msdyn_rtestructuredtemplateconfig_DuplicateMatchingRecord)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`duplicaterecord`|
 |ReferencingAttribute|`duplicaterecordid`|
-|ReferencedEntityNavigationPropertyName|`powerbimashupparameter_DuplicateMatchingRecord`|
+|ReferencedEntityNavigationPropertyName|`msdyn_rtestructuredtemplateconfig_DuplicateMatchingRecord`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_powerbimashupparameter_MailboxTrackingFolders"></a> powerbimashupparameter_MailboxTrackingFolders
+### <a name="BKMK_msdyn_rtestructuredtemplateconfig_MailboxTrackingFolders"></a> msdyn_rtestructuredtemplateconfig_MailboxTrackingFolders
 
-Many-To-One Relationship: [mailboxtrackingfolder powerbimashupparameter_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_powerbimashupparameter_MailboxTrackingFolders)
+Many-To-One Relationship: [mailboxtrackingfolder msdyn_rtestructuredtemplateconfig_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_msdyn_rtestructuredtemplateconfig_MailboxTrackingFolders)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`mailboxtrackingfolder`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`powerbimashupparameter_MailboxTrackingFolders`|
+|ReferencedEntityNavigationPropertyName|`msdyn_rtestructuredtemplateconfig_MailboxTrackingFolders`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_powerbimashupparameter_PrincipalObjectAttributeAccesses"></a> powerbimashupparameter_PrincipalObjectAttributeAccesses
+### <a name="BKMK_msdyn_rtestructuredtemplateconfig_PrincipalObjectAttributeAccesses"></a> msdyn_rtestructuredtemplateconfig_PrincipalObjectAttributeAccesses
 
-Many-To-One Relationship: [principalobjectattributeaccess powerbimashupparameter_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_powerbimashupparameter_PrincipalObjectAttributeAccesses)
+Many-To-One Relationship: [principalobjectattributeaccess msdyn_rtestructuredtemplateconfig_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_msdyn_rtestructuredtemplateconfig_PrincipalObjectAttributeAccesses)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`principalobjectattributeaccess`|
 |ReferencingAttribute|`objectid`|
-|ReferencedEntityNavigationPropertyName|`powerbimashupparameter_PrincipalObjectAttributeAccesses`|
+|ReferencedEntityNavigationPropertyName|`msdyn_rtestructuredtemplateconfig_PrincipalObjectAttributeAccesses`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_powerbimashupparameter_ProcessSession"></a> powerbimashupparameter_ProcessSession
+### <a name="BKMK_msdyn_rtestructuredtemplateconfig_ProcessSession"></a> msdyn_rtestructuredtemplateconfig_ProcessSession
 
-Many-To-One Relationship: [processsession powerbimashupparameter_ProcessSession](processsession.md#BKMK_powerbimashupparameter_ProcessSession)
+Many-To-One Relationship: [processsession msdyn_rtestructuredtemplateconfig_ProcessSession](processsession.md#BKMK_msdyn_rtestructuredtemplateconfig_ProcessSession)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`processsession`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`powerbimashupparameter_ProcessSession`|
+|ReferencedEntityNavigationPropertyName|`msdyn_rtestructuredtemplateconfig_ProcessSession`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_powerbimashupparameter_SyncErrors"></a> powerbimashupparameter_SyncErrors
+### <a name="BKMK_msdyn_rtestructuredtemplateconfig_SyncErrors"></a> msdyn_rtestructuredtemplateconfig_SyncErrors
 
-Many-To-One Relationship: [syncerror powerbimashupparameter_SyncErrors](syncerror.md#BKMK_powerbimashupparameter_SyncErrors)
+Many-To-One Relationship: [syncerror msdyn_rtestructuredtemplateconfig_SyncErrors](syncerror.md#BKMK_msdyn_rtestructuredtemplateconfig_SyncErrors)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`syncerror`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`powerbimashupparameter_SyncErrors`|
+|ReferencedEntityNavigationPropertyName|`msdyn_rtestructuredtemplateconfig_SyncErrors`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
@@ -926,4 +798,4 @@ Many-To-One Relationship: [syncerror powerbimashupparameter_SyncErrors](syncerro
 
 [Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
-<xref:Microsoft.Dynamics.CRM.powerbimashupparameter?displayProperty=fullName>
+<xref:Microsoft.Dynamics.CRM.msdyn_rtestructuredtemplateconfig?displayProperty=fullName>

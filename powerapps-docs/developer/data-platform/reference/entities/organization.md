@@ -2,8 +2,9 @@
 title: "Organization table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Organization table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -56,6 +57,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [AdvancedFilteringEnabled](#BKMK_AdvancedFilteringEnabled)
 - [AdvancedLookupEnabled](#BKMK_AdvancedLookupEnabled)
 - [AdvancedLookupInEditFilter](#BKMK_AdvancedLookupInEditFilter)
+- [AiBuilderCreditsOnlyEnabled](#BKMK_AiBuilderCreditsOnlyEnabled)
 - [AiPromptsAzureAIFoundryModelTypesEnabled](#BKMK_AiPromptsAzureAIFoundryModelTypesEnabled)
 - [AiPromptsBasicModelTypesEnabled](#BKMK_AiPromptsBasicModelTypesEnabled)
 - [AiPromptsEnabled](#BKMK_AiPromptsEnabled)
@@ -282,6 +284,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [IsDesktopFlowVanillaImageSharingEnabled](#BKMK_IsDesktopFlowVanillaImageSharingEnabled)
 - [IsDesktopFlowVersionControlEnabled](#BKMK_IsDesktopFlowVersionControlEnabled)
 - [IsDesktopFlowVersionControlEnabledByDefault](#BKMK_IsDesktopFlowVersionControlEnabledByDefault)
+- [IsDesktopFlowVersionControlEnabledOverride](#BKMK_IsDesktopFlowVersionControlEnabledOverride)
 - [IsDuplicateDetectionEnabled](#BKMK_IsDuplicateDetectionEnabled)
 - [IsDuplicateDetectionEnabledForImport](#BKMK_IsDuplicateDetectionEnabledForImport)
 - [IsDuplicateDetectionEnabledForOfflineSync](#BKMK_IsDuplicateDetectionEnabledForOfflineSync)
@@ -412,9 +415,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [PMDesignator](#BKMK_PMDesignator)
 - [PostMessageWhitelistDomains](#BKMK_PostMessageWhitelistDomains)
 - [PowerAppsMakerBotEnabled](#BKMK_PowerAppsMakerBotEnabled)
-- [PowerBIAllowCrossRegionOperations](#BKMK_PowerBIAllowCrossRegionOperations)
-- [PowerBIAutomaticPermissionsAssignment](#BKMK_PowerBIAutomaticPermissionsAssignment)
-- [PowerBIComponentsCreate](#BKMK_PowerBIComponentsCreate)
 - [PowerBiFeatureEnabled](#BKMK_PowerBiFeatureEnabled)
 - [PricingDecimalPrecision](#BKMK_PricingDecimalPrecision)
 - [PrivacyStatementUrl](#BKMK_PrivacyStatementUrl)
@@ -658,6 +658,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Integer|
 |MaxValue|100|
 |MinValue|0|
+
+### <a name="BKMK_AiBuilderCreditsOnlyEnabled"></a> AiBuilderCreditsOnlyEnabled
+
+|Property|Value|
+|---|---|
+|Description|**Indicates whether AI Builder features are blocked from using Copilot Credits.**|
+|DisplayName|**AI Builder features and AI Prompts in Power Automate and Power Apps only consume AI Builder credits.**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`aibuildercreditsonlyenabled`|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+|GlobalChoiceName|`organization_featureenabled`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_AiPromptsAzureAIFoundryModelTypesEnabled"></a> AiPromptsAzureAIFoundryModelTypesEnabled
 
@@ -3285,8 +3301,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**Default time to live in minutes for new records in the Flow Logs entity.**|
-|DisplayName|**The TTL for records in the Flow Logs Entity.**|
+|Description|**Defines how long desktop flow logs are retained in Dataverse (V2 only). The default is 40,320 minutes (28 days). Set to 0 to retain logs indefinitely.**|
+|DisplayName|**Desktop flow log retention period in minutes (V2 only)**|
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|`flowlogsttlinminutes`|
@@ -4334,6 +4350,28 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |True Label|Yes|
 |False Label|No|
 
+### <a name="BKMK_IsDesktopFlowVersionControlEnabledOverride"></a> IsDesktopFlowVersionControlEnabledOverride
+
+|Property|Value|
+|---|---|
+|Description|**Overrides whether version control for Desktop Flows is enabled in this organization.**|
+|DisplayName|**Override whether version control for Desktop Flows is enabled in this organization.**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`isdesktopflowversioncontrolenabledoverride`|
+|RequiredLevel|SystemRequired|
+|Type|Picklist|
+|DefaultFormValue|0|
+|GlobalChoiceName|`organization_isdesktopflowversioncontrolenabledoverride`|
+
+#### IsDesktopFlowVersionControlEnabledOverride Choices/Options
+
+|Value|Label|
+|---|---|
+|0|**Unset**|
+|1|**Enabled**|
+|2|**Disabled**|
+
 ### <a name="BKMK_IsDuplicateDetectionEnabled"></a> IsDuplicateDetectionEnabled
 
 |Property|Value|
@@ -5139,8 +5177,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**Indicates whether AAD Join for RPA Autoscale is enabled in this organization..**|
-|DisplayName|**Enable AAD Join for RPA Autoscale feature for this organization.**|
+|Description|**Indicates whether Entra Join for RPA Autoscale is enabled in this organization..**|
+|DisplayName|**Enable Entra Join for RPA Autoscale feature for this organization.**|
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|`isrpaautoscaleaadjoinenabled`|
@@ -6386,54 +6424,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForRead|True|
 |LogicalName|`powerappsmakerbotenabled`|
 |RequiredLevel|None|
-|Type|Boolean|
-|GlobalChoiceName|`organization_featureenabled`|
-|DefaultValue|False|
-|True Label|Yes|
-|False Label|No|
-
-### <a name="BKMK_PowerBIAllowCrossRegionOperations"></a> PowerBIAllowCrossRegionOperations
-
-|Property|Value|
-|---|---|
-|Description|**Indicates whether cross region operations are allowed for the organization**|
-|DisplayName|**Power BI allow cross region operations**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`powerbiallowcrossregionoperations`|
-|RequiredLevel|SystemRequired|
-|Type|Boolean|
-|GlobalChoiceName|`organization_featureenabled`|
-|DefaultValue|False|
-|True Label|Yes|
-|False Label|No|
-
-### <a name="BKMK_PowerBIAutomaticPermissionsAssignment"></a> PowerBIAutomaticPermissionsAssignment
-
-|Property|Value|
-|---|---|
-|Description|**Indicates whether automatic permissions assignment to Power BI has been enabled for the organization**|
-|DisplayName|**Power BI automatic permissions assignment**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`powerbiautomaticpermissionsassignment`|
-|RequiredLevel|SystemRequired|
-|Type|Boolean|
-|GlobalChoiceName|`organization_featureenabled`|
-|DefaultValue|False|
-|True Label|Yes|
-|False Label|No|
-
-### <a name="BKMK_PowerBIComponentsCreate"></a> PowerBIComponentsCreate
-
-|Property|Value|
-|---|---|
-|Description|**Indicates whether creation of Power BI components has been enabled for the organization**|
-|DisplayName|**Power BI components creation**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`powerbicomponentscreate`|
-|RequiredLevel|SystemRequired|
 |Type|Boolean|
 |GlobalChoiceName|`organization_featureenabled`|
 |DefaultValue|False|
@@ -8786,6 +8776,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [organization_aicopilot](#BKMK_organization_aicopilot)
 - [organization_aiplugintitle](#BKMK_organization_aiplugintitle)
 - [organization_allowedmcpclient](#BKMK_organization_allowedmcpclient)
+- [organization_anyprivilegeentity](#BKMK_organization_anyprivilegeentity)
 - [organization_appaction](#BKMK_organization_appaction)
 - [organization_appactionmigration](#BKMK_organization_appactionmigration)
 - [organization_appactionrule](#BKMK_organization_appactionrule)
@@ -8795,6 +8786,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [organization_application](#BKMK_organization_application)
 - [organization_appmodule](#BKMK_organization_appmodule)
 - [Organization_AsyncOperations](#BKMK_Organization_AsyncOperations)
+- [organization_athenareconciliationinfo](#BKMK_organization_athenareconciliationinfo)
 - [organization_attributeclusterconfig](#BKMK_organization_attributeclusterconfig)
 - [Organization_BulkDeleteFailures](#BKMK_Organization_BulkDeleteFailures)
 - [organization_business_unit_news_articles](#BKMK_organization_business_unit_news_articles)
@@ -8804,12 +8796,14 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [organization_catalogassignment](#BKMK_organization_catalogassignment)
 - [organization_complexcontrols](#BKMK_organization_complexcontrols)
 - [organization_connection_roles](#BKMK_organization_connection_roles)
+- [organization_controlconfiguration](#BKMK_organization_controlconfiguration)
 - [organization_copilotexamplequestion](#BKMK_organization_copilotexamplequestion)
 - [organization_custom_displaystrings](#BKMK_organization_custom_displaystrings)
 - [organization_datalakeworkspace](#BKMK_organization_datalakeworkspace)
 - [organization_datalakeworkspacepermission](#BKMK_organization_datalakeworkspacepermission)
 - [organization_dataprocessingconfiguration](#BKMK_organization_dataprocessingconfiguration)
 - [organization_delegatedauthorization](#BKMK_organization_delegatedauthorization)
+- [organization_deleteditemreference](#BKMK_organization_deleteditemreference)
 - [organization_emailaddressconfiguration](#BKMK_organization_emailaddressconfiguration)
 - [organization_emailserverprofile](#BKMK_organization_emailserverprofile)
 - [organization_entityanalyticsconfig](#BKMK_organization_entityanalyticsconfig)
@@ -8829,13 +8823,21 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [organization_metadataforarchival](#BKMK_organization_metadataforarchival)
 - [organization_metric](#BKMK_organization_metric)
 - [organization_mobileofflineprofileextension](#BKMK_organization_mobileofflineprofileextension)
+- [organization_mos3management](#BKMK_organization_mos3management)
 - [organization_msdyn_appinsightsmetadata](#BKMK_organization_msdyn_appinsightsmetadata)
+- [organization_msdyn_evalassertion](#BKMK_organization_msdyn_evalassertion)
+- [organization_msdyn_evaldataset](#BKMK_organization_msdyn_evaldataset)
+- [organization_msdyn_evalprompt](#BKMK_organization_msdyn_evalprompt)
+- [organization_msdyn_evalresult](#BKMK_organization_msdyn_evalresult)
+- [organization_msdyn_evalrun](#BKMK_organization_msdyn_evalrun)
 - [organization_msdyn_federatedarticleincident](#BKMK_organization_msdyn_federatedarticleincident)
 - [organization_msdyn_helppage](#BKMK_organization_msdyn_helppage)
 - [organization_msdyn_insightsstorevirtualentity](#BKMK_organization_msdyn_insightsstorevirtualentity)
 - [organization_msdyn_kmpersonalizationsetting](#BKMK_organization_msdyn_kmpersonalizationsetting)
 - [organization_msdyn_knowledgeconfiguration](#BKMK_organization_msdyn_knowledgeconfiguration)
 - [organization_msdyn_modulerundetail](#BKMK_organization_msdyn_modulerundetail)
+- [organization_msdyn_rtestructuredtemplate](#BKMK_organization_msdyn_rtestructuredtemplate)
+- [organization_msdyn_rtetemplatemapping](#BKMK_organization_msdyn_rtetemplatemapping)
 - [organization_msdyn_solutionhealthruleset](#BKMK_organization_msdyn_solutionhealthruleset)
 - [organization_msdyn_tour](#BKMK_organization_msdyn_tour)
 - [organization_msdyn_workflowactionstatus](#BKMK_organization_msdyn_workflowactionstatus)
@@ -8887,10 +8889,12 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [organization_sharepointmanagedidentity](#BKMK_organization_sharepointmanagedidentity)
 - [organization_similarityrule](#BKMK_organization_similarityrule)
 - [organization_sitemap](#BKMK_organization_sitemap)
+- [organization_skillrolemapping](#BKMK_organization_skillrolemapping)
 - [organization_solution](#BKMK_organization_solution)
 - [organization_solutioncomponentattributeconfiguration](#BKMK_organization_solutioncomponentattributeconfiguration)
 - [organization_solutioncomponentconfiguration](#BKMK_organization_solutioncomponentconfiguration)
 - [organization_solutioncomponentrelationshipconfiguration](#BKMK_organization_solutioncomponentrelationshipconfiguration)
+- [organization_sourcecontroloperationtracking](#BKMK_organization_sourcecontroloperationtracking)
 - [organization_subjects](#BKMK_organization_subjects)
 - [organization_supportusertable](#BKMK_organization_supportusertable)
 - [organization_synapselinkexternaltablestate](#BKMK_organization_synapselinkexternaltablestate)
@@ -9121,6 +9125,18 @@ Many-To-One Relationship: [allowedmcpclient organization_allowedmcpclient](allow
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_organization_anyprivilegeentity"></a> organization_anyprivilegeentity
+
+Many-To-One Relationship: [anyprivilegeentity organization_anyprivilegeentity](anyprivilegeentity.md#BKMK_organization_anyprivilegeentity)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`anyprivilegeentity`|
+|ReferencingAttribute|`organizationid`|
+|ReferencedEntityNavigationPropertyName|`organization_anyprivilegeentity`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 ### <a name="BKMK_organization_appaction"></a> organization_appaction
 
 Many-To-One Relationship: [appaction organization_appaction](appaction.md#BKMK_organization_appaction)
@@ -9226,6 +9242,18 @@ Many-To-One Relationship: [asyncoperation Organization_AsyncOperations](asyncope
 |ReferencingEntity|`asyncoperation`|
 |ReferencingAttribute|`regardingobjectid`|
 |ReferencedEntityNavigationPropertyName|`Organization_AsyncOperations`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_organization_athenareconciliationinfo"></a> organization_athenareconciliationinfo
+
+Many-To-One Relationship: [athenareconciliationinfo organization_athenareconciliationinfo](athenareconciliationinfo.md#BKMK_organization_athenareconciliationinfo)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`athenareconciliationinfo`|
+|ReferencingAttribute|`organizationid`|
+|ReferencedEntityNavigationPropertyName|`organization_athenareconciliationinfo`|
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
@@ -9337,6 +9365,18 @@ Many-To-One Relationship: [connectionrole organization_connection_roles](connect
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_organization_controlconfiguration"></a> organization_controlconfiguration
+
+Many-To-One Relationship: [controlconfiguration organization_controlconfiguration](controlconfiguration.md#BKMK_organization_controlconfiguration)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`controlconfiguration`|
+|ReferencingAttribute|`organizationid`|
+|ReferencedEntityNavigationPropertyName|`organization_controlconfiguration`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 ### <a name="BKMK_organization_copilotexamplequestion"></a> organization_copilotexamplequestion
 
 Many-To-One Relationship: [copilotexamplequestion organization_copilotexamplequestion](copilotexamplequestion.md#BKMK_organization_copilotexamplequestion)
@@ -9406,6 +9446,18 @@ Many-To-One Relationship: [delegatedauthorization organization_delegatedauthoriz
 |ReferencingEntity|`delegatedauthorization`|
 |ReferencingAttribute|`organizationid`|
 |ReferencedEntityNavigationPropertyName|`organization_delegatedauthorization`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_organization_deleteditemreference"></a> organization_deleteditemreference
+
+Many-To-One Relationship: [deleteditemreference organization_deleteditemreference](deleteditemreference.md#BKMK_organization_deleteditemreference)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`deleteditemreference`|
+|ReferencingAttribute|`organizationid`|
+|ReferencedEntityNavigationPropertyName|`organization_deleteditemreference`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
@@ -9637,6 +9689,18 @@ Many-To-One Relationship: [mobileofflineprofileextension organization_mobileoffl
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_organization_mos3management"></a> organization_mos3management
+
+Many-To-One Relationship: [mos3management organization_mos3management](mos3management.md#BKMK_organization_mos3management)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`mos3management`|
+|ReferencingAttribute|`organizationid`|
+|ReferencedEntityNavigationPropertyName|`organization_mos3management`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 ### <a name="BKMK_organization_msdyn_appinsightsmetadata"></a> organization_msdyn_appinsightsmetadata
 
 Many-To-One Relationship: [msdyn_appinsightsmetadata organization_msdyn_appinsightsmetadata](msdyn_appinsightsmetadata.md#BKMK_organization_msdyn_appinsightsmetadata)
@@ -9646,6 +9710,66 @@ Many-To-One Relationship: [msdyn_appinsightsmetadata organization_msdyn_appinsig
 |ReferencingEntity|`msdyn_appinsightsmetadata`|
 |ReferencingAttribute|`organizationid`|
 |ReferencedEntityNavigationPropertyName|`organization_msdyn_appinsightsmetadata`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_organization_msdyn_evalassertion"></a> organization_msdyn_evalassertion
+
+Many-To-One Relationship: [msdyn_evalassertion organization_msdyn_evalassertion](msdyn_evalassertion.md#BKMK_organization_msdyn_evalassertion)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_evalassertion`|
+|ReferencingAttribute|`organizationid`|
+|ReferencedEntityNavigationPropertyName|`organization_msdyn_evalassertion`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_organization_msdyn_evaldataset"></a> organization_msdyn_evaldataset
+
+Many-To-One Relationship: [msdyn_evaldataset organization_msdyn_evaldataset](msdyn_evaldataset.md#BKMK_organization_msdyn_evaldataset)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_evaldataset`|
+|ReferencingAttribute|`organizationid`|
+|ReferencedEntityNavigationPropertyName|`organization_msdyn_evaldataset`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_organization_msdyn_evalprompt"></a> organization_msdyn_evalprompt
+
+Many-To-One Relationship: [msdyn_evalprompt organization_msdyn_evalprompt](msdyn_evalprompt.md#BKMK_organization_msdyn_evalprompt)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_evalprompt`|
+|ReferencingAttribute|`organizationid`|
+|ReferencedEntityNavigationPropertyName|`organization_msdyn_evalprompt`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_organization_msdyn_evalresult"></a> organization_msdyn_evalresult
+
+Many-To-One Relationship: [msdyn_evalresult organization_msdyn_evalresult](msdyn_evalresult.md#BKMK_organization_msdyn_evalresult)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_evalresult`|
+|ReferencingAttribute|`organizationid`|
+|ReferencedEntityNavigationPropertyName|`organization_msdyn_evalresult`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_organization_msdyn_evalrun"></a> organization_msdyn_evalrun
+
+Many-To-One Relationship: [msdyn_evalrun organization_msdyn_evalrun](msdyn_evalrun.md#BKMK_organization_msdyn_evalrun)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_evalrun`|
+|ReferencingAttribute|`organizationid`|
+|ReferencedEntityNavigationPropertyName|`organization_msdyn_evalrun`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
@@ -9718,6 +9842,30 @@ Many-To-One Relationship: [msdyn_modulerundetail organization_msdyn_modulerundet
 |ReferencingEntity|`msdyn_modulerundetail`|
 |ReferencingAttribute|`organizationid`|
 |ReferencedEntityNavigationPropertyName|`organization_msdyn_modulerundetail`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_organization_msdyn_rtestructuredtemplate"></a> organization_msdyn_rtestructuredtemplate
+
+Many-To-One Relationship: [msdyn_rtestructuredtemplate organization_msdyn_rtestructuredtemplate](msdyn_rtestructuredtemplate.md#BKMK_organization_msdyn_rtestructuredtemplate)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_rtestructuredtemplate`|
+|ReferencingAttribute|`organizationid`|
+|ReferencedEntityNavigationPropertyName|`organization_msdyn_rtestructuredtemplate`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_organization_msdyn_rtetemplatemapping"></a> organization_msdyn_rtetemplatemapping
+
+Many-To-One Relationship: [msdyn_rtetemplatemapping organization_msdyn_rtetemplatemapping](msdyn_rtetemplatemapping.md#BKMK_organization_msdyn_rtetemplatemapping)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_rtetemplatemapping`|
+|ReferencingAttribute|`organizationid`|
+|ReferencedEntityNavigationPropertyName|`organization_msdyn_rtetemplatemapping`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
@@ -10333,6 +10481,18 @@ Many-To-One Relationship: [sitemap organization_sitemap](sitemap.md#BKMK_organiz
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_organization_skillrolemapping"></a> organization_skillrolemapping
+
+Many-To-One Relationship: [skillrolemapping organization_skillrolemapping](skillrolemapping.md#BKMK_organization_skillrolemapping)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`skillrolemapping`|
+|ReferencingAttribute|`organizationid`|
+|ReferencedEntityNavigationPropertyName|`organization_skillrolemapping`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 ### <a name="BKMK_organization_solution"></a> organization_solution
 
 Many-To-One Relationship: [solution organization_solution](solution.md#BKMK_organization_solution)
@@ -10379,6 +10539,18 @@ Many-To-One Relationship: [solutioncomponentrelationshipconfiguration organizati
 |ReferencingAttribute|`organizationid`|
 |ReferencedEntityNavigationPropertyName|`organization_solutioncomponentrelationshipconfiguration`|
 |IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_organization_sourcecontroloperationtracking"></a> organization_sourcecontroloperationtracking
+
+Many-To-One Relationship: [sourcecontroloperationtracking organization_sourcecontroloperationtracking](sourcecontroloperationtracking.md#BKMK_organization_sourcecontroloperationtracking)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`sourcecontroloperationtracking`|
+|ReferencingAttribute|`organizationid`|
+|ReferencedEntityNavigationPropertyName|`organization_sourcecontroloperationtracking`|
+|IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_organization_subjects"></a> organization_subjects

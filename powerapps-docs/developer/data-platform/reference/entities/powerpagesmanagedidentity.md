@@ -2,8 +2,9 @@
 title: "PowerPagesManagedIdentity table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the PowerPagesManagedIdentity table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -28,6 +29,7 @@ Messages represent operations that can be performed on the table. They may also 
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 | `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
+| `Restore`<br />Event: True |<xref:Microsoft.Dynamics.CRM.Restore?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 | `Retrieve`<br />Event: True |`GET` /powerpagesmanagedidentities(*powerpagesmanagedidentityid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
 | `RetrieveMultiple`<br />Event: True |`GET` /powerpagesmanagedidentities<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 | `RetrievePrincipalAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
@@ -603,6 +605,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [ComponentId_CertificateCredential_PowerPagesManagedIdentity](#BKMK_ComponentId_CertificateCredential_PowerPagesManagedIdentity)
 - [powerpagesmanagedidentity_AsyncOperations](#BKMK_powerpagesmanagedidentity_AsyncOperations)
 - [powerpagesmanagedidentity_BulkDeleteFailures](#BKMK_powerpagesmanagedidentity_BulkDeleteFailures)
+- [powerpagesmanagedidentity_DeletedItemReferences](#BKMK_powerpagesmanagedidentity_DeletedItemReferences)
 - [powerpagesmanagedidentity_DuplicateBaseRecord](#BKMK_powerpagesmanagedidentity_DuplicateBaseRecord)
 - [powerpagesmanagedidentity_DuplicateMatchingRecord](#BKMK_powerpagesmanagedidentity_DuplicateMatchingRecord)
 - [powerpagesmanagedidentity_MailboxTrackingFolders](#BKMK_powerpagesmanagedidentity_MailboxTrackingFolders)
@@ -643,6 +646,18 @@ Many-To-One Relationship: [bulkdeletefailure powerpagesmanagedidentity_BulkDelet
 |ReferencingEntity|`bulkdeletefailure`|
 |ReferencingAttribute|`regardingobjectid`|
 |ReferencedEntityNavigationPropertyName|`powerpagesmanagedidentity_BulkDeleteFailures`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_powerpagesmanagedidentity_DeletedItemReferences"></a> powerpagesmanagedidentity_DeletedItemReferences
+
+Many-To-One Relationship: [deleteditemreference powerpagesmanagedidentity_DeletedItemReferences](deleteditemreference.md#BKMK_powerpagesmanagedidentity_DeletedItemReferences)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`deleteditemreference`|
+|ReferencingAttribute|`deletedobject`|
+|ReferencedEntityNavigationPropertyName|`powerpagesmanagedidentity_DeletedItemReferences`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 

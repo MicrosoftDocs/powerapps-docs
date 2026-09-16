@@ -2,8 +2,9 @@
 title: "Environment Variable Definition (EnvironmentVariableDefinition) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Environment Variable Definition (EnvironmentVariableDefinition) table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -961,7 +962,6 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [environmentvariabledefinition_ProcessSession](#BKMK_environmentvariabledefinition_ProcessSession)
 - [EnvironmentVariableDefinition_ReportParameter_EvironmentVariableDefinitionId](#BKMK_EnvironmentVariableDefinition_ReportParameter_EvironmentVariableDefinitionId)
 - [environmentvariabledefinition_SyncErrors](#BKMK_environmentvariabledefinition_SyncErrors)
-- [envvardefinition_powerbimashupparameter](#BKMK_envvardefinition_powerbimashupparameter)
 - [mspp_environmentvariabledefinition_mspp_sitesetting_environmentvariable](#BKMK_mspp_environmentvariabledefinition_mspp_sitesetting_environmentvariable)
 
 ### <a name="BKMK_envdefinition_envdefinition-one-to-many"></a> envdefinition_envdefinition
@@ -1191,18 +1191,6 @@ Many-To-One Relationship: [syncerror environmentvariabledefinition_SyncErrors](s
 |ReferencedEntityNavigationPropertyName|`environmentvariabledefinition_SyncErrors`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
-### <a name="BKMK_envvardefinition_powerbimashupparameter"></a> envvardefinition_powerbimashupparameter
-
-Many-To-One Relationship: [powerbimashupparameter envvardefinition_powerbimashupparameter](powerbimashupparameter.md#BKMK_envvardefinition_powerbimashupparameter)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`powerbimashupparameter`|
-|ReferencingAttribute|`environmentvariableid`|
-|ReferencedEntityNavigationPropertyName|`envvardefinition_powerbimashupparameter`|
-|IsCustomizable|`False`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_mspp_environmentvariabledefinition_mspp_sitesetting_environmentvariable"></a> mspp_environmentvariabledefinition_mspp_sitesetting_environmentvariable
 

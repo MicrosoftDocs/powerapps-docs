@@ -2,8 +2,9 @@
 title: "Knowledge Article Views (KnowledgeArticleViews) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Knowledge Article Views (KnowledgeArticleViews) table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -24,6 +25,7 @@ Messages represent operations that can be performed on the table. They may also 
 | `Delete`<br />Event: True |`DELETE` /knowledgearticleviews(*knowledgearticleviewsid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
 | `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `IncrementKnowledgeArticleViewCount`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IncrementKnowledgeArticleViewCount?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IncrementKnowledgeArticleViewCountRequest>|
+| `Restore`<br />Event: True |<xref:Microsoft.Dynamics.CRM.Restore?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 | `Retrieve`<br />Event: True |`GET` /knowledgearticleviews(*knowledgearticleviewsid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
 | `RetrieveMultiple`<br />Event: True |`GET` /knowledgearticleviews<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 | `Update`<br />Event: True |`PATCH` /knowledgearticleviews(*knowledgearticleviewsid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
@@ -534,6 +536,7 @@ One-To-Many Relationship: [transactioncurrency transactioncurrency_knowledgearti
 These relationships are one-to-many. Listed by **SchemaName**.
 
 - [knowledgearticleview_principalobjectattributeaccess](#BKMK_knowledgearticleview_principalobjectattributeaccess)
+- [knowledgearticleviews_DeletedItemReferences](#BKMK_knowledgearticleviews_DeletedItemReferences)
 - [KnowledgeArticleViews_SyncErrors](#BKMK_KnowledgeArticleViews_SyncErrors)
 
 ### <a name="BKMK_knowledgearticleview_principalobjectattributeaccess"></a> knowledgearticleview_principalobjectattributeaccess
@@ -546,6 +549,18 @@ Many-To-One Relationship: [principalobjectattributeaccess knowledgearticleview_p
 |ReferencingAttribute|`objectid`|
 |ReferencedEntityNavigationPropertyName|`knowledgearticleviews_principalobjectattributeaccess`|
 |IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_knowledgearticleviews_DeletedItemReferences"></a> knowledgearticleviews_DeletedItemReferences
+
+Many-To-One Relationship: [deleteditemreference knowledgearticleviews_DeletedItemReferences](deleteditemreference.md#BKMK_knowledgearticleviews_DeletedItemReferences)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`deleteditemreference`|
+|ReferencingAttribute|`deletedobject`|
+|ReferencedEntityNavigationPropertyName|`knowledgearticleviews_DeletedItemReferences`|
+|IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_KnowledgeArticleViews_SyncErrors"></a> KnowledgeArticleViews_SyncErrors

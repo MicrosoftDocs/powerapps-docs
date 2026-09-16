@@ -2,8 +2,9 @@
 title: "Restore Deleted Records Configuration (RecycleBinConfig) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Restore Deleted Records Configuration (RecycleBinConfig) table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -606,6 +607,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 
 - [recyclebinconfig_AsyncOperations](#BKMK_recyclebinconfig_AsyncOperations)
 - [recyclebinconfig_BulkDeleteFailures](#BKMK_recyclebinconfig_BulkDeleteFailures)
+- [RecycleBinConfig_DeletedItemReference_DeletedObject](#BKMK_RecycleBinConfig_DeletedItemReference_DeletedObject)
 - [recyclebinconfig_MailboxTrackingFolders](#BKMK_recyclebinconfig_MailboxTrackingFolders)
 - [recyclebinconfig_PrincipalObjectAttributeAccesses](#BKMK_recyclebinconfig_PrincipalObjectAttributeAccesses)
 - [recyclebinconfig_ProcessSession](#BKMK_recyclebinconfig_ProcessSession)
@@ -634,6 +636,18 @@ Many-To-One Relationship: [bulkdeletefailure recyclebinconfig_BulkDeleteFailures
 |ReferencedEntityNavigationPropertyName|`recyclebinconfig_BulkDeleteFailures`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_RecycleBinConfig_DeletedItemReference_DeletedObject"></a> RecycleBinConfig_DeletedItemReference_DeletedObject
+
+Many-To-One Relationship: [deleteditemreference RecycleBinConfig_DeletedItemReference_DeletedObject](deleteditemreference.md#BKMK_RecycleBinConfig_DeletedItemReference_DeletedObject)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`deleteditemreference`|
+|ReferencingAttribute|`deletedobject`|
+|ReferencedEntityNavigationPropertyName|`RecycleBinConfig_DeletedItemReference_DeletedObject`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_recyclebinconfig_MailboxTrackingFolders"></a> recyclebinconfig_MailboxTrackingFolders
 

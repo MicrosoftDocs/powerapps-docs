@@ -2,8 +2,9 @@
 title: "MCPServer table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the MCPServer table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -62,25 +63,35 @@ The following table lists selected properties for the MCPServer table.
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [Audience](#BKMK_Audience)
+- [BaseServerId](#BKMK_BaseServerId)
+- [BlockedTools](#BKMK_BlockedTools)
 - [Configuration](#BKMK_Configuration)
 - [Description](#BKMK_Description)
 - [DisplayName](#BKMK_DisplayName)
+- [Flags](#BKMK_Flags)
+- [HostName](#BKMK_HostName)
 - [Icon](#BKMK_Icon)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [Instructions](#BKMK_Instructions)
+- [IsCustom](#BKMK_IsCustom)
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [IsRemote](#BKMK_IsRemote)
+- [ManagedIdentityId](#BKMK_ManagedIdentityId)
 - [MCPServerId](#BKMK_MCPServerId)
+- [Meta](#BKMK_Meta)
 - [Name](#BKMK_Name)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
 - [RelativePath](#BKMK_RelativePath)
+- [ResourceAndScope](#BKMK_ResourceAndScope)
 - [Scope](#BKMK_Scope)
+- [SecurityGroupAccessList](#BKMK_SecurityGroupAccessList)
 - [ServerType](#BKMK_ServerType)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
+- [UserAccessList](#BKMK_UserAccessList)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 
 ### <a name="BKMK_Audience"></a> Audience
@@ -100,6 +111,40 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsLocalizable|False|
 |MaxLength|300|
 
+### <a name="BKMK_BaseServerId"></a> BaseServerId
+
+|Property|Value|
+|---|---|
+|Description|**Base Server Id of the parent MCP Server (for custom servers)**|
+|DisplayName|**Base Server Id**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`baseserverid`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
+
+### <a name="BKMK_BlockedTools"></a> BlockedTools
+
+|Property|Value|
+|---|---|
+|Description|**JSON array of tool names that are blocked for this MCP Server (e.g. \[ "toolA", "toolC" \]). Tools not listed are allowed; empty or null means no tools are blocked.**|
+|DisplayName|**Blocked Tools**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`blockedtools`|
+|RequiredLevel|None|
+|Type|Memo|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|50000|
+
 ### <a name="BKMK_Configuration"></a> Configuration
 
 |Property|Value|
@@ -115,7 +160,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |FormatName|Text|
 |ImeMode|Auto|
 |IsLocalizable|False|
-|MaxLength|10000|
+|MaxLength|50000|
 
 ### <a name="BKMK_Description"></a> Description
 
@@ -150,6 +195,37 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|False|
 |MaxLength|100|
+
+### <a name="BKMK_Flags"></a> Flags
+
+|Property|Value|
+|---|---|
+|Description|**Flags associated with this entity (bitmask).**|
+|DisplayName|**Flags**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`flags`|
+|RequiredLevel|None|
+|Type|Integer|
+|MaxValue|2147483647|
+|MinValue|-2147483648|
+
+### <a name="BKMK_HostName"></a> HostName
+
+|Property|Value|
+|---|---|
+|Description|**Host Name**|
+|DisplayName|**HostName**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`hostname`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|500|
 
 ### <a name="BKMK_Icon"></a> Icon
 
@@ -199,6 +275,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsLocalizable|False|
 |MaxLength|8000|
 
+### <a name="BKMK_IsCustom"></a> IsCustom
+
+|Property|Value|
+|---|---|
+|Description|**Denotes if this MCP server is a custom server extending a base server**|
+|DisplayName|**Is Custom**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`iscustom`|
+|RequiredLevel|ApplicationRequired|
+|Type|Boolean|
+|GlobalChoiceName|`mcpserver_iscustom`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
+
 ### <a name="BKMK_IsCustomizable"></a> IsCustomizable
 
 |Property|Value|
@@ -227,6 +319,19 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |True Label|Yes|
 |False Label|No|
 
+### <a name="BKMK_ManagedIdentityId"></a> ManagedIdentityId
+
+|Property|Value|
+|---|---|
+|Description|**Look up to the managed identity corresponding to this MCP Server.**|
+|DisplayName|**ManagedIdentityId**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`managedidentityid`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|managedidentity|
+
 ### <a name="BKMK_MCPServerId"></a> MCPServerId
 
 |Property|Value|
@@ -238,6 +343,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`mcpserverid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
+
+### <a name="BKMK_Meta"></a> Meta
+
+|Property|Value|
+|---|---|
+|Description|**MCP metadata for this resource**|
+|DisplayName|**Meta**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`Meta`|
+|RequiredLevel|None|
+|Type|Memo|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1000000|
 
 ### <a name="BKMK_Name"></a> Name
 
@@ -315,6 +437,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsLocalizable|False|
 |MaxLength|500|
 
+### <a name="BKMK_ResourceAndScope"></a> ResourceAndScope
+
+|Property|Value|
+|---|---|
+|Description|**Resource And Scope of the MCP server**|
+|DisplayName|**ResourceAndScope**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`resourceandscope`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|2000|
+
 ### <a name="BKMK_Scope"></a> Scope
 
 |Property|Value|
@@ -331,6 +470,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|False|
 |MaxLength|300|
+
+### <a name="BKMK_SecurityGroupAccessList"></a> SecurityGroupAccessList
+
+|Property|Value|
+|---|---|
+|Description|**Azure AD security group object IDs that are granted access to this MCP Server. Empty or null means no security-group-level access restriction.**|
+|DisplayName|**Security Group Access List**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`securitygroupaccesslist`|
+|RequiredLevel|None|
+|Type|Memo|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|50000|
 
 ### <a name="BKMK_ServerType"></a> ServerType
 
@@ -408,6 +564,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxValue|2147483647|
 |MinValue|-1|
 
+### <a name="BKMK_UserAccessList"></a> UserAccessList
+
+|Property|Value|
+|---|---|
+|Description|**Azure AD user object IDs that are granted access to this MCP Server. Empty or null means no user-level access restriction.**|
+|DisplayName|**User Access List**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`useraccesslist`|
+|RequiredLevel|None|
+|Type|Memo|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|50000|
+
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
 
 |Property|Value|
@@ -445,6 +618,7 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
+- [ServerUrl](#BKMK_ServerUrl)
 - [SolutionId](#BKMK_SolutionId)
 - [SupportingSolutionId](#BKMK_SupportingSolutionId)
 - [VersionNumber](#BKMK_VersionNumber)
@@ -719,6 +893,23 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |Type|Lookup|
 |Targets|systemuser|
 
+### <a name="BKMK_ServerUrl"></a> ServerUrl
+
+|Property|Value|
+|---|---|
+|Description|**The computed URL for the MCP Server endpoint based on environment type and server name**|
+|DisplayName|**Server URL**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`serverurl`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Url|
+|FormatName|Url|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|500|
+
 ### <a name="BKMK_SolutionId"></a> SolutionId
 
 |Property|Value|
@@ -766,6 +957,7 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [lk_mcpserver_createdonbehalfby](#BKMK_lk_mcpserver_createdonbehalfby)
 - [lk_mcpserver_modifiedby](#BKMK_lk_mcpserver_modifiedby)
 - [lk_mcpserver_modifiedonbehalfby](#BKMK_lk_mcpserver_modifiedonbehalfby)
+- [ManagedIdentity_MCPServer_ManagedIdentityId](#BKMK_ManagedIdentity_MCPServer_ManagedIdentityId)
 - [owner_mcpserver](#BKMK_owner_mcpserver)
 - [team_mcpserver](#BKMK_team_mcpserver)
 - [user_mcpserver](#BKMK_user_mcpserver)
@@ -835,6 +1027,19 @@ One-To-Many Relationship: [systemuser lk_mcpserver_modifiedonbehalfby](systemuse
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
+### <a name="BKMK_ManagedIdentity_MCPServer_ManagedIdentityId"></a> ManagedIdentity_MCPServer_ManagedIdentityId
+
+One-To-Many Relationship: [managedidentity ManagedIdentity_MCPServer_ManagedIdentityId](managedidentity.md#BKMK_ManagedIdentity_MCPServer_ManagedIdentityId)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`managedidentity`|
+|ReferencedAttribute|`managedidentityid`|
+|ReferencingAttribute|`managedidentityid`|
+|ReferencingEntityNavigationPropertyName|`ManagedIdentityId`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
 ### <a name="BKMK_owner_mcpserver"></a> owner_mcpserver
 
 One-To-Many Relationship: [owner owner_mcpserver](owner.md#BKMK_owner_mcpserver)
@@ -879,6 +1084,8 @@ One-To-Many Relationship: [systemuser user_mcpserver](systemuser.md#BKMK_user_mc
 
 These relationships are one-to-many. Listed by **SchemaName**.
 
+- [MCPPrompt_MCPServer_MCPServer](#BKMK_MCPPrompt_MCPServer_MCPServer)
+- [MCPResource_MCPServer_MCPServer](#BKMK_MCPResource_MCPServer_MCPServer)
 - [mcpserver_AsyncOperations](#BKMK_mcpserver_AsyncOperations)
 - [mcpserver_BulkDeleteFailures](#BKMK_mcpserver_BulkDeleteFailures)
 - [mcpserver_MailboxTrackingFolders](#BKMK_mcpserver_MailboxTrackingFolders)
@@ -886,6 +1093,30 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [mcpserver_ProcessSession](#BKMK_mcpserver_ProcessSession)
 - [mcpserver_SyncErrors](#BKMK_mcpserver_SyncErrors)
 - [MCPTool_MCPServer_MCPServer](#BKMK_MCPTool_MCPServer_MCPServer)
+
+### <a name="BKMK_MCPPrompt_MCPServer_MCPServer"></a> MCPPrompt_MCPServer_MCPServer
+
+Many-To-One Relationship: [mcpprompt MCPPrompt_MCPServer_MCPServer](mcpprompt.md#BKMK_MCPPrompt_MCPServer_MCPServer)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`mcpprompt`|
+|ReferencingAttribute|`mcpserverid`|
+|ReferencedEntityNavigationPropertyName|`MCPPrompt_MCPServer_MCPServer`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_MCPResource_MCPServer_MCPServer"></a> MCPResource_MCPServer_MCPServer
+
+Many-To-One Relationship: [mcpresource MCPResource_MCPServer_MCPServer](mcpresource.md#BKMK_MCPResource_MCPServer_MCPServer)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`mcpresource`|
+|ReferencingAttribute|`mcpserverid`|
+|ReferencedEntityNavigationPropertyName|`MCPResource_MCPServer_MCPServer`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_mcpserver_AsyncOperations"></a> mcpserver_AsyncOperations
 
@@ -977,4 +1208,4 @@ Many-To-One Relationship: [mcptool MCPTool_MCPServer_MCPServer](mcptool.md#BKMK_
 
 [Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
-
+<xref:Microsoft.Dynamics.CRM.mcpserver?displayProperty=fullName>

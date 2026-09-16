@@ -2,8 +2,9 @@
 title: "Invitation (adx_invitation) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Invitation (adx_invitation) table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -28,6 +29,7 @@ Messages represent operations that can be performed on the table. They may also 
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 | `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
+| `Restore`<br />Event: True |<xref:Microsoft.Dynamics.CRM.Restore?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 | `Retrieve`<br />Event: True |`GET` /adx_invitations(*adx_invitationid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
 | `RetrieveMultiple`<br />Event: True |`GET` /adx_invitations<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 | `RetrievePrincipalAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
@@ -822,6 +824,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [adx_invitation_chats](#BKMK_adx_invitation_chats)
 - [adx_invitation_connections1](#BKMK_adx_invitation_connections1)
 - [adx_invitation_connections2](#BKMK_adx_invitation_connections2)
+- [adx_invitation_DeletedItemReferences](#BKMK_adx_invitation_DeletedItemReferences)
 - [adx_invitation_DuplicateBaseRecord](#BKMK_adx_invitation_DuplicateBaseRecord)
 - [adx_invitation_DuplicateMatchingRecord](#BKMK_adx_invitation_DuplicateMatchingRecord)
 - [adx_invitation_Emails](#BKMK_adx_invitation_Emails)
@@ -953,6 +956,18 @@ Many-To-One Relationship: [connection adx_invitation_connections2](connection.md
 |ReferencingEntity|`connection`|
 |ReferencingAttribute|`record2id`|
 |ReferencedEntityNavigationPropertyName|`adx_invitation_connections2`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_adx_invitation_DeletedItemReferences"></a> adx_invitation_DeletedItemReferences
+
+Many-To-One Relationship: [deleteditemreference adx_invitation_DeletedItemReferences](deleteditemreference.md#BKMK_adx_invitation_DeletedItemReferences)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`deleteditemreference`|
+|ReferencingAttribute|`deletedobject`|
+|ReferencedEntityNavigationPropertyName|`adx_invitation_DeletedItemReferences`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
