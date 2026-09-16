@@ -1,7 +1,7 @@
 ---
 title: Working with expired tokens 
 description: Learn how to manage tokens in Power Apps, Logic Apps, and Power Automate to ensure seamless connections even after credential changes or token revocations.
-author: lancedMicrosoft
+author: mduelae
 
 ms.topic: concept-article
 ms.custom: canvas
