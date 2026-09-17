@@ -6,7 +6,8 @@ ms.author: jasonhuang
 ms.reviewer: matp
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 08/03/2026
+ms.date: 09/17/2026
+ai-usage: ai-assisted
 ms.custom: template-how-to 
 ms.subservice: dataverse-maker
 contributors: anibakore-msft
@@ -148,6 +149,18 @@ Only the Dynamics 365 and Power Platform admins who were granted the reader role
 1. Add a new **IP firewall rule** based on the client IP address.
 1. Select **Save** when done. More information: [Azure Synapse Analytics IP firewall rules](/azure/synapse-analytics/security/synapse-workspace-ip-firewall#ip-firewall-rules)
 
+## Grant additional service application permissions
+
+For profiles connected to a Synapse workspace, Azure Synapse Link still uses its service application to manage databases, tables, and partitions. Enabling managed identity for storage doesn't replace this application's workspace permissions.
+
+1. **Find the service application.** In the Microsoft Entra admin center, open **Enterprise applications** in the tenant that contains your Azure resources. Find application ID `7f15f9d9-cad0-44f1-bbba-d36650e07765`, displayed as **Export to data lake** or **Azure Synapse Link for Dataverse**. If it's missing, follow the application provisioning steps in the [troubleshooting guide](azure-synapse-link-troubleshooting-guide.md).
+2. **Grant workspace access.** Open the connected workspace in Synapse Studio. Select **Manage** > **Access control** > **Add**. Select **Workspace** scope and the **Synapse Administrator** role, select the service application, and select **Apply**.
+3. **Grant storage access.** In the Azure portal, open the storage account. Select **Access control (IAM)** > **Add** > **Add role assignment**. Assign **Storage Blob Data Contributor** to the service application.
+
+> [!IMPORTANT]
+> Assign these roles to the service application, not your user account or only the managed identity. Keep the managed identity's existing permissions and network configuration.
+
+
 ## Create a new Azure Synapse Link for Dataverse with managed identity
 
 > [!IMPORTANT]
@@ -170,6 +183,8 @@ When you create the link, Azure Synapse Link for Dataverse gets details about th
 
 > [!NOTE]
 > To make the **Use managed identity** command available in Power Apps, you need to finish the above setup to connect the enterprise policy to your Dataverse environment. More information: [Connect enterprise policy to Dataverse environment](#connect-enterprise-policy-to-dataverse-environment)
+
+For profiles connected to a Synapse workspace, also verify the [additional service application permissions](#grant-additional-service-application-permissions).
 
 1. Go to an existing Synapse Link profile from Power Apps (make.powerapps.com).
 1. Select **Use managed identity**, and then confirm.
