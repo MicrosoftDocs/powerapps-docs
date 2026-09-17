@@ -3,12 +3,12 @@ title: "Use of Office365 authentication with Microsoft Dataverse (Microsoft Data
 description: "Describes deprecation of the WS-Trust security protocol and the code changes required in applications that use Office365 authentication."
 ms.custom: ""
 ms.date: 12/04/2024
-ms.reviewer: "pehecke"
+ms.reviewer: kvivek
 
 ms.topic: how-to
 author: "phecke" # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: "pehecke" # MSFT alias of Microsoft employees only
+ms.author: kvivek
 search.audienceType:
   - developer
 ---

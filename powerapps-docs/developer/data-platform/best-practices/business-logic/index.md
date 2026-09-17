@@ -3,8 +3,8 @@ title: "Developers: Best practices and guidance regarding plug-in and workflow d
 description: Best practices and guidance regarding plug-in and workflow development for developers of Microsoft Dataverse in Power Apps.
 suite: powerapps
 author: phecke
-ms.author: pehecke
-ms.reviewer: pehecke
+ms.author: kvivek
+ms.reviewer: kvivek
 ms.topic: best-practice
 ms.date: 08/20/2026
 ms.subservice: dataverse-developer
