@@ -2,8 +2,9 @@
 title: "DVTableSearch table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the DVTableSearch table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -66,17 +67,21 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [AppModuleUniqueName](#BKMK_AppModuleUniqueName)
 - [AppType](#BKMK_AppType)
 - [ConnectionReference](#BKMK_ConnectionReference)
+- [Description](#BKMK_Description)
 - [DVTableSearchId](#BKMK_DVTableSearchId)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [KnowledgeConfig](#BKMK_KnowledgeConfig)
 - [knowledgesourceconsumerid](#BKMK_knowledgesourceconsumerid)
 - [knowledgesourceprofileid](#BKMK_knowledgesourceprofileid)
+- [M365AppModuleId](#BKMK_M365AppModuleId)
+- [M365AppModuleIdSecondary](#BKMK_M365AppModuleIdSecondary)
 - [Name](#BKMK_Name)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
 - [SearchType](#BKMK_SearchType)
+- [Source](#BKMK_Source)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
@@ -152,6 +157,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Lookup|
 |Targets|connectionreference|
+
+### <a name="BKMK_Description"></a> Description
+
+|Property|Value|
+|---|---|
+|Description||
+|DisplayName|**Description**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`description`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1000|
 
 ### <a name="BKMK_DVTableSearchId"></a> DVTableSearchId
 
@@ -234,6 +256,31 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Lookup|
 |Targets|knowledgesourceprofile|
 
+### <a name="BKMK_M365AppModuleId"></a> M365AppModuleId
+
+|Property|Value|
+|---|---|
+|Description|**Lookup to AppModule for M365 integration.**|
+|DisplayName|**M365AppModule**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`m365appmoduleid`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|appmodule|
+
+### <a name="BKMK_M365AppModuleIdSecondary"></a> M365AppModuleIdSecondary
+
+|Property|Value|
+|---|---|
+|Description|**Unique identifier of an AppModule for M365 integration.**|
+|DisplayName|**M365AppModuleIdSecondary**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`m365appmoduleidsecondary`|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
+
 ### <a name="BKMK_Name"></a> Name
 
 |Property|Value|
@@ -313,6 +360,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |---|---|
 |0|**DataverseSearch**|
 |1|**FederatedSearch**|
+
+### <a name="BKMK_Source"></a> Source
+
+|Property|Value|
+|---|---|
+|Description||
+|DisplayName|**Source**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`source`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_statecode"></a> statecode
 
@@ -677,6 +741,7 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 
 These relationships are many-to-one. Listed by **SchemaName**.
 
+- [AppModule_DVTableSearch_M365AppModuleId](#BKMK_AppModule_DVTableSearch_M365AppModuleId)
 - [business_unit_dvtablesearch](#BKMK_business_unit_dvtablesearch)
 - [ConnectionReference_DVTableSearch](#BKMK_ConnectionReference_DVTableSearch)
 - [lk_dvtablesearch_createdby](#BKMK_lk_dvtablesearch_createdby)
@@ -686,6 +751,19 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [owner_dvtablesearch](#BKMK_owner_dvtablesearch)
 - [team_dvtablesearch](#BKMK_team_dvtablesearch)
 - [user_dvtablesearch](#BKMK_user_dvtablesearch)
+
+### <a name="BKMK_AppModule_DVTableSearch_M365AppModuleId"></a> AppModule_DVTableSearch_M365AppModuleId
+
+One-To-Many Relationship: [appmodule AppModule_DVTableSearch_M365AppModuleId](appmodule.md#BKMK_AppModule_DVTableSearch_M365AppModuleId)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`appmodule`|
+|ReferencedAttribute|`appmoduleid`|
+|ReferencingAttribute|`m365appmoduleid`|
+|ReferencingEntityNavigationPropertyName|`m365appmoduleid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `Cascade`<br />RollupView: `NoCascade`<br />Share: `Cascade`<br />Unshare: `Cascade`|
 
 ### <a name="BKMK_business_unit_dvtablesearch"></a> business_unit_dvtablesearch
 
@@ -960,6 +1038,7 @@ These relationships are many-to-many. Listed by **SchemaName**.
 
 - [botcomponent_dvtablesearch](#BKMK_botcomponent_dvtablesearch)
 - [powerpagesite_dvtablesearch](#BKMK_powerpagesite_dvtablesearch)
+- [skill_dvtablesearch_association](#BKMK_skill_dvtablesearch_association)
 
 ### <a name="BKMK_botcomponent_dvtablesearch"></a> botcomponent_dvtablesearch
 
@@ -985,6 +1064,19 @@ See [powerpagesite powerpagesite_dvtablesearch Many-To-Many Relationship](powerp
 |SchemaName|`powerpagesite_dvtablesearch`|
 |IntersectAttribute|`dvtablesearchid`|
 |NavigationPropertyName|`powerpagesite_dvtablesearch`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_skill_dvtablesearch_association"></a> skill_dvtablesearch_association
+
+See [skill skill_dvtablesearch_association Many-To-Many Relationship](skill.md#BKMK_skill_dvtablesearch_association)
+
+|Property|Value|
+|---|---|
+|IntersectEntityName|`skilldvtablesearch`|
+|IsCustomizable|True|
+|SchemaName|`skill_dvtablesearch_association`|
+|IntersectAttribute|`dvtablesearchid`|
+|NavigationPropertyName|`skill_dvtablesearch_association`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 

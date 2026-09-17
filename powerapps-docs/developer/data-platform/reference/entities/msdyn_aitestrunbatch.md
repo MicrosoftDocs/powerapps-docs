@@ -2,8 +2,9 @@
 title: "AI Test Run Batch (msdyn_AITestRunBatch) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the AI Test Run Batch (msdyn_AITestRunBatch) table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -28,6 +29,7 @@ Messages represent operations that can be performed on the table. They may also 
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 | `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
+| `Restore`<br />Event: True |<xref:Microsoft.Dynamics.CRM.Restore?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 | `Retrieve`<br />Event: True |`GET` /msdyn_aitestrunbatches(*msdyn_aitestrunbatchid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
 | `RetrieveMultiple`<br />Event: True |`GET` /msdyn_aitestrunbatches<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 | `RetrievePrincipalAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
@@ -722,6 +724,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 
 - [msdyn_aitestrunbatch_AsyncOperations](#BKMK_msdyn_aitestrunbatch_AsyncOperations)
 - [msdyn_aitestrunbatch_BulkDeleteFailures](#BKMK_msdyn_aitestrunbatch_BulkDeleteFailures)
+- [msdyn_aitestrunbatch_DeletedItemReferences](#BKMK_msdyn_aitestrunbatch_DeletedItemReferences)
 - [msdyn_aitestrunbatch_DuplicateBaseRecord](#BKMK_msdyn_aitestrunbatch_DuplicateBaseRecord)
 - [msdyn_aitestrunbatch_DuplicateMatchingRecord](#BKMK_msdyn_aitestrunbatch_DuplicateMatchingRecord)
 - [msdyn_aitestrunbatch_MailboxTrackingFolders](#BKMK_msdyn_aitestrunbatch_MailboxTrackingFolders)
@@ -751,6 +754,18 @@ Many-To-One Relationship: [bulkdeletefailure msdyn_aitestrunbatch_BulkDeleteFail
 |ReferencingEntity|`bulkdeletefailure`|
 |ReferencingAttribute|`regardingobjectid`|
 |ReferencedEntityNavigationPropertyName|`msdyn_aitestrunbatch_BulkDeleteFailures`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_msdyn_aitestrunbatch_DeletedItemReferences"></a> msdyn_aitestrunbatch_DeletedItemReferences
+
+Many-To-One Relationship: [deleteditemreference msdyn_aitestrunbatch_DeletedItemReferences](deleteditemreference.md#BKMK_msdyn_aitestrunbatch_DeletedItemReferences)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`deleteditemreference`|
+|ReferencingAttribute|`deletedobject`|
+|ReferencedEntityNavigationPropertyName|`msdyn_aitestrunbatch_DeletedItemReferences`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 

@@ -2,8 +2,9 @@
 title: "User Settings (UserSettings) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the User Settings (UserSettings) table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -19,10 +20,17 @@ Messages represent operations that can be performed on the table. They may also 
 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
+| `Assign`<br />Event: True |`PATCH` /usersettingscollection(*systemuserid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
 | `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
+| `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
+| `Restore`<br />Event: True |<xref:Microsoft.Dynamics.CRM.Restore?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 | `Retrieve`<br />Event: False |`GET` /usersettingscollection(*systemuserid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
 | `RetrieveMultiple`<br />Event: True |`GET` /usersettingscollection<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
+| `RetrievePrincipalAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
+| `RetrieveSharedPrincipalsAndAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
+| `RevokeAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
 | `Update`<br />Event: True |`PATCH` /usersettingscollection(*systemuserid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
 
 ## Properties
@@ -40,7 +48,7 @@ The following table lists selected properties for the User Settings (UserSetting
 | **LogicalCollectionName** | `usersettingses` |
 | **PrimaryIdAttribute** | `systemuserid` |
 | **TableType** | `Standard` |
-| **OwnershipType** | `BusinessOwned` |
+| **OwnershipType** | `UserOwned` |
 
 ## Writable columns/attributes
 
@@ -94,6 +102,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [NumberSeparator](#BKMK_NumberSeparator)
 - [OfflineSyncInterval](#BKMK_OfflineSyncInterval)
 - [OutlookSyncInterval](#BKMK_OutlookSyncInterval)
+- [OwnerId](#BKMK_OwnerId)
+- [OwnerIdType](#BKMK_OwnerIdType)
 - [PagingLimit](#BKMK_PagingLimit)
 - [PersonalizationSettings](#BKMK_PersonalizationSettings)
 - [PMDesignator](#BKMK_PMDesignator)
@@ -919,6 +929,31 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxValue|2147483647|
 |MinValue|-2147483648|
 
+### <a name="BKMK_OwnerId"></a> OwnerId
+
+|Property|Value|
+|---|---|
+|Description|**Owner Id**|
+|DisplayName|**Owner**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`ownerid`|
+|RequiredLevel|None|
+|Type|Owner|
+|Targets|systemuser, team|
+
+### <a name="BKMK_OwnerIdType"></a> OwnerIdType
+
+|Property|Value|
+|---|---|
+|Description|**Owner Id Type**|
+|DisplayName||
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`owneridtype`|
+|RequiredLevel|SystemRequired|
+|Type|EntityName|
+
 ### <a name="BKMK_PagingLimit"></a> PagingLimit
 
 |Property|Value|
@@ -1694,6 +1729,11 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 - [ModifiedBy](#BKMK_ModifiedBy)
 - [ModifiedOn](#BKMK_ModifiedOn)
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
+- [OwnerIdName](#BKMK_OwnerIdName)
+- [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
+- [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningTeam](#BKMK_OwningTeam)
+- [OwningUser](#BKMK_OwningUser)
 - [VersionNumber](#BKMK_VersionNumber)
 
 ### <a name="BKMK_AllowEmailCredentials"></a> AllowEmailCredentials
@@ -1849,6 +1889,79 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |Type|Lookup|
 |Targets|systemuser|
 
+### <a name="BKMK_OwnerIdName"></a> OwnerIdName
+
+|Property|Value|
+|---|---|
+|Description|**Name of the owner**|
+|DisplayName||
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`owneridname`|
+|RequiredLevel|SystemRequired|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
+
+### <a name="BKMK_OwnerIdYomiName"></a> OwnerIdYomiName
+
+|Property|Value|
+|---|---|
+|Description|**Yomi name of the owner**|
+|DisplayName||
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`owneridyominame`|
+|RequiredLevel|SystemRequired|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
+
+### <a name="BKMK_OwningBusinessUnit"></a> OwningBusinessUnit
+
+|Property|Value|
+|---|---|
+|Description|**Unique identifier for the business unit that owns the record**|
+|DisplayName|**Owning Business Unit**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`owningbusinessunit`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|businessunit|
+
+### <a name="BKMK_OwningTeam"></a> OwningTeam
+
+|Property|Value|
+|---|---|
+|Description|**Unique identifier for the team that owns the record.**|
+|DisplayName|**Owning Team**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`owningteam`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|team|
+
+### <a name="BKMK_OwningUser"></a> OwningUser
+
+|Property|Value|
+|---|---|
+|Description|**Unique identifier for the user that owns the record.**|
+|DisplayName|**Owning User**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`owninguser`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|systemuser|
+
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
 |Property|Value|
@@ -1868,13 +1981,17 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 These relationships are many-to-one. Listed by **SchemaName**.
 
 - [business_unit_user_settings](#BKMK_business_unit_user_settings)
+- [business_unit_usersettings](#BKMK_business_unit_usersettings)
 - [lk_usersettings_createdonbehalfby](#BKMK_lk_usersettings_createdonbehalfby)
 - [lk_usersettings_modifiedonbehalfby](#BKMK_lk_usersettings_modifiedonbehalfby)
 - [lk_usersettingsbase_createdby](#BKMK_lk_usersettingsbase_createdby)
 - [lk_usersettingsbase_modifiedby](#BKMK_lk_usersettingsbase_modifiedby)
+- [owner_usersettings](#BKMK_owner_usersettings)
+- [team_usersettings](#BKMK_team_usersettings)
 - [transactioncurrency_usersettings](#BKMK_transactioncurrency_usersettings)
 - [user_settings](#BKMK_user_settings)
 - [user_settings_preferred_solution](#BKMK_user_settings_preferred_solution)
+- [user_usersettings](#BKMK_user_usersettings)
 
 ### <a name="BKMK_business_unit_user_settings"></a> business_unit_user_settings
 
@@ -1888,6 +2005,19 @@ One-To-Many Relationship: [businessunit business_unit_user_settings](businessuni
 |ReferencingEntityNavigationPropertyName|`businessunitid_businessunit`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Restrict`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_business_unit_usersettings"></a> business_unit_usersettings
+
+One-To-Many Relationship: [businessunit business_unit_usersettings](businessunit.md#BKMK_business_unit_usersettings)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`businessunit`|
+|ReferencedAttribute|`businessunitid`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencingEntityNavigationPropertyName|`owningbusinessunit`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `Restrict`<br />Assign: `NoCascade`<br />Delete: `Restrict`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_lk_usersettings_createdonbehalfby"></a> lk_usersettings_createdonbehalfby
 
@@ -1941,6 +2071,32 @@ One-To-Many Relationship: [systemuser lk_usersettingsbase_modifiedby](systemuser
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
+### <a name="BKMK_owner_usersettings"></a> owner_usersettings
+
+One-To-Many Relationship: [owner owner_usersettings](owner.md#BKMK_owner_usersettings)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`owner`|
+|ReferencedAttribute|`ownerid`|
+|ReferencingAttribute|`ownerid`|
+|ReferencingEntityNavigationPropertyName|`ownerid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_team_usersettings"></a> team_usersettings
+
+One-To-Many Relationship: [team team_usersettings](team.md#BKMK_team_usersettings)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`team`|
+|ReferencedAttribute|`teamid`|
+|ReferencingAttribute|`owningteam`|
+|ReferencingEntityNavigationPropertyName|`owningteam`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
 ### <a name="BKMK_transactioncurrency_usersettings"></a> transactioncurrency_usersettings
 
 One-To-Many Relationship: [transactioncurrency transactioncurrency_usersettings](transactioncurrency.md#BKMK_transactioncurrency_usersettings)
@@ -1979,6 +2135,36 @@ One-To-Many Relationship: [solution user_settings_preferred_solution](solution.m
 |ReferencingEntityNavigationPropertyName|`preferredsolution`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_user_usersettings"></a> user_usersettings
+
+One-To-Many Relationship: [systemuser user_usersettings](systemuser.md#BKMK_user_usersettings)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`owninguser`|
+|ReferencingEntityNavigationPropertyName|`owninguser`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+
+## One-to-Many relationships
+
+These relationships are one-to-many. Listed by **SchemaName**.
+
+### <a name="BKMK_usersettings_DeletedItemReferences"></a> usersettings_DeletedItemReferences
+
+Many-To-One Relationship: [deleteditemreference usersettings_DeletedItemReferences](deleteditemreference.md#BKMK_usersettings_DeletedItemReferences)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`deleteditemreference`|
+|ReferencingAttribute|`deletedobject`|
+|ReferencedEntityNavigationPropertyName|`usersettings_DeletedItemReferences`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 
 

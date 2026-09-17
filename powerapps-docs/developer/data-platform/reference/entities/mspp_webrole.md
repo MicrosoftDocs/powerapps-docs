@@ -2,8 +2,9 @@
 title: "Web Role (mspp_webrole) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Web Role (mspp_webrole) table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---

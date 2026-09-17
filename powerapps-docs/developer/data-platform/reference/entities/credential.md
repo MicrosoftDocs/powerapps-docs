@@ -2,8 +2,9 @@
 title: "credential table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the credential table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -141,6 +142,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |5|**CertificateBasedAuthentication**|
 |6|**MachineMapping**|
 |7|**ConnectionReference**|
+|8|**UserMapping**|
 
 ### <a name="BKMK_credentialId"></a> credentialId
 

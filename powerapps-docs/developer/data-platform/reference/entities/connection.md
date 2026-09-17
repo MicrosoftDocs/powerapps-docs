@@ -2,8 +2,9 @@
 title: "Connection table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Connection table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -26,6 +27,7 @@ Messages represent operations that can be performed on the table. They may also 
 | `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
+| `Restore`<br />Event: True |<xref:Microsoft.Dynamics.CRM.Restore?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 | `Retrieve`<br />Event: True |`GET` /connections(*connectionid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
 | `RetrieveMultiple`<br />Event: True |`GET` /connections<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 | `RetrievePrincipalAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
@@ -661,11 +663,11 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |9600|**Goal**|
 |9930|**Knowledge Base Record**|
 |9953|**Knowledge Article**|
-|10420|**Invitation**|
-|10421|**Invite Redemption**|
-|10440|**Publishing State Transition Rule**|
-|10442|**Shortcut**|
-|10454|**Website**|
+|10429|**Invitation**|
+|10430|**Invite Redemption**|
+|10449|**Publishing State Transition Rule**|
+|10451|**Shortcut**|
+|10463|**Website**|
 
 ### <a name="BKMK_Record2ObjectTypeCode"></a> Record2ObjectTypeCode
 
@@ -706,11 +708,11 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |9600|**Goal**|
 |9930|**Knowledge Base Record**|
 |9953|**Knowledge Article**|
-|10420|**Invitation**|
-|10421|**Invite Redemption**|
-|10440|**Publishing State Transition Rule**|
-|10442|**Shortcut**|
-|10454|**Website**|
+|10429|**Invitation**|
+|10430|**Invite Redemption**|
+|10449|**Publishing State Transition Rule**|
+|10451|**Shortcut**|
+|10463|**Website**|
 
 ### <a name="BKMK_RelatedConnectionId"></a> RelatedConnectionId
 
@@ -1590,6 +1592,7 @@ One-To-Many Relationship: [transactioncurrency TransactionCurrency_Connection](t
 These relationships are one-to-many. Listed by **SchemaName**.
 
 - [Connection_AsyncOperations](#BKMK_Connection_AsyncOperations)
+- [connection_DeletedItemReferences](#BKMK_connection_DeletedItemReferences)
 - [connection_principalobjectattributeaccess](#BKMK_connection_principalobjectattributeaccess)
 - [Connection_ProcessSessions](#BKMK_Connection_ProcessSessions)
 - [connection_related_connection](#BKMK_connection_related_connection-one-to-many)
@@ -1605,6 +1608,18 @@ Many-To-One Relationship: [asyncoperation Connection_AsyncOperations](asyncopera
 |ReferencingAttribute|`regardingobjectid`|
 |ReferencedEntityNavigationPropertyName|`Connection_AsyncOperations`|
 |IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_connection_DeletedItemReferences"></a> connection_DeletedItemReferences
+
+Many-To-One Relationship: [deleteditemreference connection_DeletedItemReferences](deleteditemreference.md#BKMK_connection_DeletedItemReferences)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`deleteditemreference`|
+|ReferencingAttribute|`deletedobject`|
+|ReferencedEntityNavigationPropertyName|`connection_DeletedItemReferences`|
+|IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_connection_principalobjectattributeaccess"></a> connection_principalobjectattributeaccess

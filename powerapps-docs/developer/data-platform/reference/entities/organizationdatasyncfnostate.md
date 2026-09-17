@@ -2,8 +2,9 @@
 title: "organizationdatasyncfnostate table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the organizationdatasyncfnostate table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -25,6 +26,7 @@ Messages represent operations that can be performed on the table. They may also 
 | `Delete`<br />Event: True |`DELETE` /organizationdatasyncfnostates(*organizationdatasyncfnostateid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
 | `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
+| `Restore`<br />Event: True |<xref:Microsoft.Dynamics.CRM.Restore?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 | `Retrieve`<br />Event: True |`GET` /organizationdatasyncfnostates(*organizationdatasyncfnostateid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
 | `RetrieveMultiple`<br />Event: True |`GET` /organizationdatasyncfnostates<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 | `SetState`<br />Event: True |`PATCH` /organizationdatasyncfnostates(*organizationdatasyncfnostateid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `statecode` and `statuscode` properties. |<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
@@ -768,6 +770,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 
 - [organizationdatasyncfnostate_AsyncOperations](#BKMK_organizationdatasyncfnostate_AsyncOperations)
 - [organizationdatasyncfnostate_BulkDeleteFailures](#BKMK_organizationdatasyncfnostate_BulkDeleteFailures)
+- [organizationdatasyncfnostate_DeletedItemReferences](#BKMK_organizationdatasyncfnostate_DeletedItemReferences)
 - [organizationdatasyncfnostate_DuplicateBaseRecord](#BKMK_organizationdatasyncfnostate_DuplicateBaseRecord)
 - [organizationdatasyncfnostate_DuplicateMatchingRecord](#BKMK_organizationdatasyncfnostate_DuplicateMatchingRecord)
 - [organizationdatasyncfnostate_MailboxTrackingFolders](#BKMK_organizationdatasyncfnostate_MailboxTrackingFolders)
@@ -796,6 +799,18 @@ Many-To-One Relationship: [bulkdeletefailure organizationdatasyncfnostate_BulkDe
 |ReferencingEntity|`bulkdeletefailure`|
 |ReferencingAttribute|`regardingobjectid`|
 |ReferencedEntityNavigationPropertyName|`organizationdatasyncfnostate_BulkDeleteFailures`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_organizationdatasyncfnostate_DeletedItemReferences"></a> organizationdatasyncfnostate_DeletedItemReferences
+
+Many-To-One Relationship: [deleteditemreference organizationdatasyncfnostate_DeletedItemReferences](deleteditemreference.md#BKMK_organizationdatasyncfnostate_DeletedItemReferences)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`deleteditemreference`|
+|ReferencingAttribute|`deletedobject`|
+|ReferencedEntityNavigationPropertyName|`organizationdatasyncfnostate_DeletedItemReferences`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 

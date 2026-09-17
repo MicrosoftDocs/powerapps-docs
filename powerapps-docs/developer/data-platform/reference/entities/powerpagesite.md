@@ -2,8 +2,9 @@
 title: "Site (powerpagesite) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Site (powerpagesite) table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -77,6 +78,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 - [content](#BKMK_content)
 - [datamodelversion](#BKMK_datamodelversion)
+- [enhancedauthorization](#BKMK_enhancedauthorization)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [name](#BKMK_name)
@@ -125,6 +127,29 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsLocalizable|False|
 |MaxLength|10|
 
+### <a name="BKMK_enhancedauthorization"></a> enhancedauthorization
+
+|Property|Value|
+|---|---|
+|Description|**Enhanced Authorization**|
+|DisplayName|**Enhanced Authorization**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`enhancedauthorization`|
+|RequiredLevel|None|
+|Type|Picklist|
+|DefaultFormValue|0|
+|GlobalChoiceName|`powerpagesite_enhancedauthorization`|
+
+#### enhancedauthorization Choices/Options
+
+|Value|Label|
+|---|---|
+|0|**Disabled**|
+|1|**Migration in progress**|
+|2|**Migration Failed**|
+|3|**Enabled**|
+
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
 |Property|Value|
@@ -166,7 +191,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |FormatName|Text|
 |ImeMode|Auto|
 |IsLocalizable|False|
-|MaxLength|100|
+|MaxLength|300|
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
@@ -749,6 +774,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [powerpagesite_powerpagesitelanguage_powerpagesiteid](#BKMK_powerpagesite_powerpagesitelanguage_powerpagesiteid)
 - [powerpagesite_powerpagesitepublished_powerpagesiteid](#BKMK_powerpagesite_powerpagesitepublished_powerpagesiteid)
 - [powerpagesite_powerpagessourcefile_powerpagesiteid](#BKMK_powerpagesite_powerpagessourcefile_powerpagesiteid)
+- [powerpagesite_powerpagesusermapping](#BKMK_powerpagesite_powerpagesusermapping)
 - [powerpagesite_PrincipalObjectAttributeAccesses](#BKMK_powerpagesite_PrincipalObjectAttributeAccesses)
 - [powerpagesite_ProcessSession](#BKMK_powerpagesite_ProcessSession)
 - [powerpagesite_SyncErrors](#BKMK_powerpagesite_SyncErrors)
@@ -846,6 +872,18 @@ Many-To-One Relationship: [powerpagessourcefile powerpagesite_powerpagessourcefi
 |ReferencingEntity|`powerpagessourcefile`|
 |ReferencingAttribute|`powerpagesiteid`|
 |ReferencedEntityNavigationPropertyName|`powerpagesite_powerpagessourcefile_powerpagesiteid`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_powerpagesite_powerpagesusermapping"></a> powerpagesite_powerpagesusermapping
+
+Many-To-One Relationship: [powerpagesusermapping powerpagesite_powerpagesusermapping](powerpagesusermapping.md#BKMK_powerpagesite_powerpagesusermapping)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`powerpagesusermapping`|
+|ReferencingAttribute|`siteid`|
+|ReferencedEntityNavigationPropertyName|`powerpagesite_powerpagesusermapping`|
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 

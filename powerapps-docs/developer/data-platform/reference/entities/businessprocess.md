@@ -2,8 +2,9 @@
 title: "Business Process (businessprocess) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Business Process (businessprocess) table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -799,6 +800,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [businessprocess_PrincipalObjectAttributeAccesses](#BKMK_businessprocess_PrincipalObjectAttributeAccesses)
 - [businessprocess_ProcessSession](#BKMK_businessprocess_ProcessSession)
 - [businessprocess_SyncErrors](#BKMK_businessprocess_SyncErrors)
+- [businessprocesslinkedartifact_businessprocess_businessprocess](#BKMK_businessprocesslinkedartifact_businessprocess_businessprocess)
 - [msdyn_businessprocess_msdyn_pminferredtask_msdyn_businessprocessid](#BKMK_msdyn_businessprocess_msdyn_pminferredtask_msdyn_businessprocessid)
 
 ### <a name="BKMK_businessprocess_AsyncOperations"></a> businessprocess_AsyncOperations
@@ -896,6 +898,18 @@ Many-To-One Relationship: [syncerror businessprocess_SyncErrors](syncerror.md#BK
 |ReferencedEntityNavigationPropertyName|`businessprocess_SyncErrors`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_businessprocesslinkedartifact_businessprocess_businessprocess"></a> businessprocesslinkedartifact_businessprocess_businessprocess
+
+Many-To-One Relationship: [businessprocesslinkedartifact businessprocesslinkedartifact_businessprocess_businessprocess](businessprocesslinkedartifact.md#BKMK_businessprocesslinkedartifact_businessprocess_businessprocess)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`businessprocesslinkedartifact`|
+|ReferencingAttribute|`businessprocess`|
+|ReferencedEntityNavigationPropertyName|`businessprocesslinkedartifact_businessprocess_businessprocess`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_msdyn_businessprocess_msdyn_pminferredtask_msdyn_businessprocessid"></a> msdyn_businessprocess_msdyn_pminferredtask_msdyn_businessprocessid
 

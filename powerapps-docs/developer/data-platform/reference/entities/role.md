@@ -2,8 +2,9 @@
 title: "Security Role (Role) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Security Role (Role) table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -60,6 +61,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [BusinessUnitId](#BKMK_BusinessUnitId)
 - [CanBeDeleted](#BKMK_CanBeDeleted)
 - [Description](#BKMK_Description)
+- [FnOAotName](#BKMK_FnOAotName)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsAutoAssigned](#BKMK_IsAutoAssigned)
 - [IsCustomizable](#BKMK_IsCustomizable)
@@ -140,6 +142,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|False|
 |MaxLength|2000|
+
+### <a name="BKMK_FnOAotName"></a> FnOAotName
+
+|Property|Value|
+|---|---|
+|Description|**The Id, Aot Name, of an FnORole.**|
+|DisplayName|**FnOAotName**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`FnOAotName`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|256|
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
@@ -727,6 +746,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [role_parent_role](#BKMK_role_parent_role-one-to-many)
 - [role_parent_root_role](#BKMK_role_parent_root_role-one-to-many)
 - [Role_SyncErrors](#BKMK_Role_SyncErrors)
+- [skillrolemapping_RoleId_role](#BKMK_skillrolemapping_RoleId_role)
 
 ### <a name="BKMK_Role_AsyncOperations"></a> Role_AsyncOperations
 
@@ -787,6 +807,18 @@ Many-To-One Relationship: [syncerror Role_SyncErrors](syncerror.md#BKMK_Role_Syn
 |ReferencedEntityNavigationPropertyName|`Role_SyncErrors`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_skillrolemapping_RoleId_role"></a> skillrolemapping_RoleId_role
+
+Many-To-One Relationship: [skillrolemapping skillrolemapping_RoleId_role](skillrolemapping.md#BKMK_skillrolemapping_RoleId_role)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`skillrolemapping`|
+|ReferencingAttribute|`roleid`|
+|ReferencedEntityNavigationPropertyName|`_skillrolemapping_RoleId_role`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 
 ## Many-to-Many relationships

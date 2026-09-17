@@ -2,8 +2,9 @@
 title: "botcomponent_botcomponent table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the botcomponent_botcomponent table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---

@@ -2,8 +2,9 @@
 title: "Table Permission (mspp_entitypermission) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Table Permission (mspp_entitypermission) table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -83,6 +84,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [mspp_modifiedon](#BKMK_mspp_modifiedon)
 - [mspp_parententitypermission](#BKMK_mspp_parententitypermission)
 - [mspp_parentrelationship](#BKMK_mspp_parentrelationship)
+- [mspp_permissionfetchxml](#BKMK_mspp_permissionfetchxml)
 - [mspp_read](#BKMK_mspp_read)
 - [mspp_scope](#BKMK_mspp_scope)
 - [mspp_websiteid](#BKMK_mspp_websiteid)
@@ -324,6 +326,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsLocalizable|False|
 |MaxLength|200|
 
+### <a name="BKMK_mspp_permissionfetchxml"></a> mspp_permissionfetchxml
+
+|Property|Value|
+|---|---|
+|Description|**Type the permission FetchXml with the filter.**|
+|DisplayName|**Permission Fetchxml**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`mspp_permissionfetchxml`|
+|RequiredLevel|None|
+|Type|Memo|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1073741823|
+
 ### <a name="BKMK_mspp_read"></a> mspp_read
 
 |Property|Value|
@@ -363,6 +382,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |756150002|**Account**|
 |756150003|**Parent**|
 |756150004|**Self**|
+|756150005|**Custom**|
 
 ### <a name="BKMK_mspp_websiteid"></a> mspp_websiteid
 

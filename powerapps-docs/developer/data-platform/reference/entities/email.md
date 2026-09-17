@@ -2,8 +2,9 @@
 title: "Email table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Email table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -35,6 +36,7 @@ Messages represent operations that can be performed on the table. They may also 
 | `GetTrackingTokenEmail`<br />Event: False |<xref:Microsoft.Dynamics.CRM.GetTrackingTokenEmail?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GetTrackingTokenEmailRequest>|
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
+| `Restore`<br />Event: True |<xref:Microsoft.Dynamics.CRM.Restore?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 | `Retrieve`<br />Event: True |`GET` /emails(*activityid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
 | `RetrieveMultiple`<br />Event: True |`GET` /emails<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 | `RetrievePrincipalAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
@@ -101,6 +103,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [InternetMessageHeaders](#BKMK_InternetMessageHeaders)
 - [IsBilled](#BKMK_IsBilled)
 - [IsDuplicateSenderUnresolved](#BKMK_IsDuplicateSenderUnresolved)
+- [IsProtected](#BKMK_IsProtected)
 - [IsWorkflowCreated](#BKMK_IsWorkflowCreated)
 - [LastOnHoldTime](#BKMK_LastOnHoldTime)
 - [LastOpenedTime](#BKMK_LastOpenedTime)
@@ -108,6 +111,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [MessageId](#BKMK_MessageId)
 - [MessageIdDupCheck](#BKMK_MessageIdDupCheck)
 - [MimeType](#BKMK_MimeType)
+- [msdyn_associatedagentname](#BKMK_msdyn_associatedagentname)
 - [Notifications](#BKMK_Notifications)
 - [OpenCount](#BKMK_OpenCount)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
@@ -622,6 +626,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |True Label|Yes|
 |False Label|No|
 
+### <a name="BKMK_IsProtected"></a> IsProtected
+
+|Property|Value|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Is Protected**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`isprotected`|
+|RequiredLevel|None|
+|Type|Boolean|
+|GlobalChoiceName|`email_isprotected`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
+
 ### <a name="BKMK_IsWorkflowCreated"></a> IsWorkflowCreated
 
 |Property|Value|
@@ -731,6 +751,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|False|
 |MaxLength|256|
+
+### <a name="BKMK_msdyn_associatedagentname"></a> msdyn_associatedagentname
+
+|Property|Value|
+|---|---|
+|Description|**Name of the agent which associated the activity.**|
+|DisplayName|**Associated Agent Name**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_associatedagentname`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_Notifications"></a> Notifications
 
@@ -2524,6 +2561,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [Email_BulkDeleteFailures](#BKMK_Email_BulkDeleteFailures)
 - [email_connections1](#BKMK_email_connections1)
 - [email_connections2](#BKMK_email_connections2)
+- [email_DeletedItemReferences](#BKMK_email_DeletedItemReferences)
 - [Email_DuplicateBaseRecord](#BKMK_Email_DuplicateBaseRecord)
 - [Email_DuplicateMatchingRecord](#BKMK_Email_DuplicateMatchingRecord)
 - [email_email_CorrelatedActivityId](#BKMK_email_email_CorrelatedActivityId-one-to-many)
@@ -2630,6 +2668,18 @@ Many-To-One Relationship: [connection email_connections2](connection.md#BKMK_ema
 |ReferencedEntityNavigationPropertyName|`email_connections2`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 100<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_email_DeletedItemReferences"></a> email_DeletedItemReferences
+
+Many-To-One Relationship: [deleteditemreference email_DeletedItemReferences](deleteditemreference.md#BKMK_email_DeletedItemReferences)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`deleteditemreference`|
+|ReferencingAttribute|`deletedobject`|
+|ReferencedEntityNavigationPropertyName|`email_DeletedItemReferences`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_Email_DuplicateBaseRecord"></a> Email_DuplicateBaseRecord
 

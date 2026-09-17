@@ -1,20 +1,21 @@
 ---
-title: "retentionconfig table/entity reference (Microsoft Dataverse)"
-description: "Includes schema information and supported messages for the retentionconfig table/entity with Microsoft Dataverse."
+title: "Data Life Cycle Config (retentionconfig) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the Data Life Cycle Config (retentionconfig) table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
 
-# retentionconfig table/entity reference (Microsoft Dataverse)
+# Data Life Cycle Config (retentionconfig) table/entity reference (Microsoft Dataverse)
 
 Holds retention policies for a table.
 
 ## Messages
 
-The following table lists the messages for the retentionconfig table.
+The following table lists the messages for the Data Life Cycle Config (retentionconfig) table.
 Messages represent operations that can be performed on the table. They may also be events.
 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
@@ -41,12 +42,12 @@ Messages represent operations that can be performed on the table. They may also 
 
 ## Properties
 
-The following table lists selected properties for the retentionconfig table.
+The following table lists selected properties for the Data Life Cycle Config (retentionconfig) table.
 
 |Property|Value|
 | --- | --- |
-| **DisplayName** | **RetentionConfig** |
-| **DisplayCollectionName** | **RetentionConfig** |
+| **DisplayName** | **Data Life Cycle Config** |
+| **DisplayCollectionName** | **Data Life Cycle Configs** |
 | **SchemaName** | `retentionconfig` |
 | **CollectionSchemaName** | `retentionconfigs` |
 | **EntitySetName** | `retentionconfigs`|
@@ -66,6 +67,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [EntityLogicalName](#BKMK_EntityLogicalName)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsCustomizable](#BKMK_IsCustomizable)
+- [JobCriteriaKey](#BKMK_JobCriteriaKey)
 - [Name](#BKMK_Name)
 - [NextRun](#BKMK_NextRun)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
@@ -78,6 +80,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
+- [Type](#BKMK_Type)
 - [UniqueName](#BKMK_UniqueName)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 - [ViewId](#BKMK_ViewId)
@@ -158,6 +161,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`iscustomizable`|
 |RequiredLevel|SystemRequired|
 |Type|ManagedProperty|
+
+### <a name="BKMK_JobCriteriaKey"></a> JobCriteriaKey
+
+|Property|Value|
+|---|---|
+|Description|**Differentiating criteria for same entity's job criterias.**|
+|DisplayName|**Job Criteria Key**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`jobcriteriakey`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|50|
 
 ### <a name="BKMK_Name"></a> Name
 
@@ -356,6 +376,27 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Integer|
 |MaxValue|2147483647|
 |MinValue|-1|
+
+### <a name="BKMK_Type"></a> Type
+
+|Property|Value|
+|---|---|
+|Description|**Type of retention config**|
+|DisplayName|**Type**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`type`|
+|RequiredLevel|None|
+|Type|Picklist|
+|DefaultFormValue|0|
+|GlobalChoiceName|`retentionconfig_type`|
+
+#### Type Choices/Options
+
+|Value|Label|
+|---|---|
+|0|**Archival**|
+|1|**Deletion**|
 
 ### <a name="BKMK_UniqueName"></a> UniqueName
 

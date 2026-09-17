@@ -2,8 +2,9 @@
 title: "Data Lake Workspace (datalakeworkspace) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Data Lake Workspace (datalakeworkspace) table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -263,7 +264,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**Application Id that is allowed in AAD Tenant ID to access the Graph API.**|
+|Description|**Application Id that is approved in Entra Tenant ID to access the Graph API.**|
 |DisplayName|**Whitelisted App Id**|
 |IsValidForForm|True|
 |IsValidForRead|True|

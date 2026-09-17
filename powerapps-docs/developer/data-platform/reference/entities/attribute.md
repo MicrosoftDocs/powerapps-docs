@@ -2,8 +2,9 @@
 title: "Attribute table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Attribute table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -313,6 +314,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [attribute_sensitivitylabelattributemapping_AttributeId](#BKMK_attribute_sensitivitylabelattributemapping_AttributeId)
 - [attribute_solutioncomponentattrconfig](#BKMK_attribute_solutioncomponentattrconfig)
 - [attributeclusterconfig_extensionofrecordid_attribute](#BKMK_attributeclusterconfig_extensionofrecordid_attribute)
+- [controlconfiguration_attribute_attribute](#BKMK_controlconfiguration_attribute_attribute)
 - [emailaddressconfiguration_attribute_AttributeId](#BKMK_emailaddressconfiguration_attribute_AttributeId)
 - [referencedattribute_relationshipattribute](#BKMK_referencedattribute_relationshipattribute)
 - [referencingattribute_relationshipattribute](#BKMK_referencingattribute_relationshipattribute)
@@ -375,6 +377,18 @@ Many-To-One Relationship: [attributeclusterconfig attributeclusterconfig_extensi
 |ReferencingAttribute|`extensionofrecordid`|
 |ReferencedEntityNavigationPropertyName|`attributeclusterconfig_extensionofrecordid_attribute`|
 |IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_controlconfiguration_attribute_attribute"></a> controlconfiguration_attribute_attribute
+
+Many-To-One Relationship: [controlconfiguration controlconfiguration_attribute_attribute](controlconfiguration.md#BKMK_controlconfiguration_attribute_attribute)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`controlconfiguration`|
+|ReferencingAttribute|`attribute`|
+|ReferencedEntityNavigationPropertyName|`controlconfiguration_attribute_attribute`|
+|IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_emailaddressconfiguration_attribute_AttributeId"></a> emailaddressconfiguration_attribute_AttributeId

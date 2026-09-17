@@ -2,8 +2,9 @@
 title: "Sync Error (SyncError) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Sync Error (SyncError) table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -266,7 +267,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`regardingobjectid`|
 |RequiredLevel|None|
 |Type|Lookup|
-|Targets|account, activityfileattachment, activitymimeattachment, activityparty, adx_externalidentity, adx_invitation, adx_inviteredemption, adx_portalcomment, adx_setting, adx_webformsession, agentconversationmessage, agentconversationmessagefile, agentfeeditem, agenthubgoal, agenthubinsight, agenthubmetric, aicopilot, aiinsightcard, aiplugin, aipluginauth, aipluginconversationstarter, aipluginconversationstartermapping, aipluginexternalschema, aipluginexternalschemaproperty, aiplugingovernance, aiplugingovernanceext, aiplugininstance, aipluginoperation, aipluginoperationparameter, aipluginoperationresponsetemplate, aiplugintitle, aipluginusersetting, aiskillconfig, allowedmcpclient, annotation, appaction, appactionmigration, appactionrule, appelement, appentitysearchview, application, applicationuser, appmodulecomponentedge, appmodulecomponentnode, appointment, approvalprocess, approvalstageapproval, approvalstagecondition, approvalstageintelligent, approvalstageorder, appsetting, appusersetting, archivecleanupinfo, archivecleanupoperation, attachment, attributeclusterconfig, attributeimageconfig, attributemaskingrule, attributepicklistvalue, bot, botcomponent, botcomponentcollection, bulkarchiveconfig, bulkarchivefailuredetail, bulkarchiveoperation, bulkarchiveoperationdetail, businessdatalocalizedlabel, businessprocess, businessunit, canvasappextendedmetadata, card, cascadegrantrevokeaccessrecordstracker, cascadegrantrevokeaccessversiontracker, catalog, catalogassignment, category, certificatecredential, channelaccessprofile, channelaccessprofilerule, channelaccessprofileruleitem, chat, comment, connection, connectioninstance, connectionreference, connectionrole, connector, contact, conversationtranscript, copilotexamplequestion, copilotglossaryterm, copilotsynonyms, credential, customapi, customapirequestparameter, customapiresponseproperty, customeraddress, datalakefolder, datalakefolderpermission, datalakeworkspace, datalakeworkspacepermission, dataprocessingconfiguration, delegatedauthorization, deleteditemreference, desktopflowbinary, desktopflowmodule, duplicaterule, duplicaterulecondition, dvfilesearch, dvfilesearchattribute, dvfilesearchentity, dvtablesearch, dvtablesearchattribute, dvtablesearchentity, email, emailaddressconfiguration, emailserverprofile, enablearchivalrequest, entityanalyticsconfig, entityclusterconfig, entityimageconfig, entityindex, entityrecordfilter, environmentvariabledefinition, environmentvariablevalue, expiredprocess, exportedexcel, exportsolutionupload, externalparty, externalpartyitem, fabricaiskill, fax, featurecontrolsetting, federatedknowledgecitation, federatedknowledgeconfiguration, federatedknowledgeentityconfiguration, federatedknowledgemetadatarefresh, feedback, fieldpermission, fieldsecurityprofile, fileattachment, flowcapacityassignment, flowcredentialapplication, flowevent, flowmachine, flowmachinegroup, flowmachineimage, flowmachineimageversion, flowmachinenetwork, flowsession, flowsessionbinary, fxexpression, goal, goalrollupquery, governanceconfiguration, holidaywrapper, importmap, indexattributes, internaladdress, internalcatalogassignment, kbarticle, kbarticletemplate, keyvaultreference, knowledgearticle, knowledgearticleviews, knowledgebaserecord, knowledgefaq, knowledgesourceconsumer, knowledgesourceprofile, letter, mailbox, mailmergetemplate, mainfewshot, makerfewshot, managedidentity, maskingrule, mcpserver, mcptool, metadataforarchival, metric, mobileofflineprofileextension, msdynce_botcontent, msdyn_aibdataset, msdyn_aibdatasetfile, msdyn_aibdatasetrecord, msdyn_aibdatasetscontainer, msdyn_aibfeedbackloop, msdyn_aibfile, msdyn_aibfileattacheddata, msdyn_aiconfiguration, msdyn_aiconfigurationsearch, msdyn_aidataprocessingevent, msdyn_aidocumenttemplate, msdyn_aievaluationconfiguration, msdyn_aievaluationrun, msdyn_aievent, msdyn_aifptrainingdocument, msdyn_aimodel, msdyn_aimodelcatalog, msdyn_aiodimage, msdyn_aiodlabel, msdyn_aiodtrainingboundingbox, msdyn_aiodtrainingimage, msdyn_aioptimization, msdyn_aioptimizationprivatedata, msdyn_aitemplate, msdyn_aitestcase, msdyn_aitestcasedocument, msdyn_aitestcaseinput, msdyn_aitestrun, msdyn_aitestrunbatch, msdyn_analysiscomponent, msdyn_analysisjob, msdyn_analysisoverride, msdyn_analysisresult, msdyn_analysisresultdetail, msdyn_appinsightsmetadata, msdyn_copilotinteractions, msdyn_customcontrolextendedsettings, msdyn_dataflow, msdyn_dataflowconnectionreference, msdyn_dataflowrefreshhistory, msdyn_dataflowtemplate, msdyn_dataflow_datalakefolder, msdyn_dataworkspace, msdyn_dmsrequest, msdyn_dmsrequeststatus, msdyn_dmssyncrequest, msdyn_dmssyncstatus, msdyn_entitylinkchatconfiguration, msdyn_entityrefreshhistory, msdyn_favoriteknowledgearticle, msdyn_federatedarticle, msdyn_federatedarticleincident, msdyn_fileupload, msdyn_flow_actionapprovalmodel, msdyn_flow_approval, msdyn_flow_approvalrequest, msdyn_flow_approvalresponse, msdyn_flow_approvalstep, msdyn_flow_awaitallactionapprovalmodel, msdyn_flow_awaitallapprovalmodel, msdyn_flow_basicapprovalmodel, msdyn_flow_flowapproval, msdyn_formmapping, msdyn_function, msdyn_helppage, msdyn_historicalcaseharvestbatch, msdyn_historicalcaseharvestrun, msdyn_insightsstorevirtualentity, msdyn_integratedsearchprovider, msdyn_interimupdateknowledgearticle, msdyn_kalanguagesetting, msdyn_kbattachment, msdyn_kmfederatedsearchconfig, msdyn_kmpersonalizationsetting, msdyn_knowledgearticlecustomentity, msdyn_knowledgearticleimage, msdyn_knowledgearticletemplate, msdyn_knowledgeassetconfiguration, msdyn_knowledgeconfiguration, msdyn_knowledgeharvestjobrecord, msdyn_knowledgeinteractioninsight, msdyn_knowledgemanagementsetting, msdyn_knowledgepersonalfilter, msdyn_knowledgesearchfilter, msdyn_knowledgesearchinsight, msdyn_mobileapp, msdyn_modulerundetail, msdyn_plan, msdyn_planartifact, msdyn_planattachment, msdyn_pmanalysishistory, msdyn_pmbusinessruleautomationconfig, msdyn_pmcalendar, msdyn_pmcalendarversion, msdyn_pminferredtask, msdyn_pmprocessextendedmetadataversion, msdyn_pmprocesstemplate, msdyn_pmprocessusersettings, msdyn_pmprocessversion, msdyn_pmrecording, msdyn_pmsimulation, msdyn_pmtab, msdyn_pmtemplate, msdyn_pmview, msdyn_qna, msdyn_richtextfile, msdyn_salesforcestructuredobject, msdyn_salesforcestructuredqnaconfig, msdyn_schedule, msdyn_serviceconfiguration, msdyn_slakpi, msdyn_solutionhealthrule, msdyn_solutionhealthruleargument, msdyn_solutionhealthruleset, msdyn_tour, msdyn_virtualtablecolumncandidate, msdyn_workflowactionstatus, msgraphresourcetosubscription, mspcat_catalogsubmissionfiles, mspcat_packagestore, newprocess, offlinecommanddefinition, organization, organizationdatasyncfnostate, organizationdatasyncstate, organizationdatasyncsubscription, organizationdatasyncsubscriptionentity, organizationdatasyncsubscriptionfnotable, organizationsetting, package, packagehistory, pdfsetting, phonecall, plannerbusinessscenario, plannersyncaction, plugin, pluginpackage, position, postfollow, powerbidataset, powerbidatasetapdx, powerbimashupparameter, powerbireport, powerbireportapdx, powerfxrule, powerpagecomponent, powerpagesddosalert, powerpagesite, powerpagesitelanguage, powerpagesitepublished, powerpagesmanagedidentity, powerpagesscanreport, powerpagessourcefile, privilegecheckerlog, privilegecheckerrun, privilegesremovalsetting, processorregistration, processsession, processstage, processstageparameter, processtrigger, provisionlanguageforuser, publisher, purviewlabelinfo, purviewlabelsynccache, queue, queueitem, reconciliationentityinfo, reconciliationentitystepinfo, reconciliationinfo, recordfilter, recurringappointmentmaster, recyclebinconfig, relationshipattribute, report, reportcategory, reportparameter, retaineddataexcel, retentioncleanupinfo, retentioncleanupoperation, retentionconfig, retentionfailuredetail, retentionoperation, retentionoperationdetail, retentionsuccessdetail, revokeinheritedaccessrecordstracker, role, roleeditorlayout, rollupfield, savedquery, savedqueryvisualization, savingrule, sa_suggestedaction, sa_suggestedactioncriteria, searchattributesettings, searchcustomanalyzer, searchrelationshipsettings, sensitivitylabelattributemapping, serviceplan, serviceplanmapping, settingdefinition, sharedlinksetting, sharedobject, sharedworkspace, sharedworkspacepool, sharepointdocumentlocation, sharepointmanagedidentity, sharepointsite, sideloadedaiplugin, signalregistration, sla, slaitem, slakpiinstance, socialactivity, socialprofile, solution, solutioncomponentattributeconfiguration, solutioncomponentbatchconfiguration, solutioncomponentconfiguration, solutioncomponentrelationshipconfiguration, stagedattributelookupvalue, stagedattributepicklistvalue, stagedentity, stagedentityattribute, stagedentityrelationship, stagedentityrelationshiprelationships, stagedentityrelationshiprole, stagedmetadataasyncoperation, stagedoptionset, stagedrelationship, stagedrelationshipextracondition, stagedviewattribute, stagesolutionupload, subject, supportusertable, synapsedatabase, synapselinkexternaltablestate, synapselinkprofile, synapselinkprofileentity, synapselinkprofileentitystate, synapselinkschedule, syncerror, systemuser, systemuserauthorizationchangetracker, tag, taggedflowsession, taggedprocess, task, tdsmetadata, team, teammobileofflineprofilemembership, teamtemplate, template, territory, toolinggateway, toolinggatewaymcpserver, traitregistration, transactioncurrency, translationprocess, unstructuredfilesearchentity, unstructuredfilesearchrecord, unstructuredfilesearchrecordstatus, usermobileofflineprofilemembership, userquery, userqueryvisualization, userrating, uxagentcomponent, uxagentcomponentrevision, uxagentproject, uxagentprojectfile, viewasexamplequestion, virtualentitymetadata, workflow, workflowbinary, workflowmetadata, workqueue, workqueueitem|
+|Targets|account, activityfileattachment, activitymimeattachment, activityparty, adx_externalidentity, adx_invitation, adx_inviteredemption, adx_portalcomment, adx_setting, adx_webformsession, agentconversationmessage, agentconversationmessagefile, agentfeeditem, agenthubgoal, agenthubinsight, agenthubmetric, agentrule, aicopilot, aiinsightcard, aiplugin, aipluginauth, aipluginconversationstarter, aipluginconversationstartermapping, aipluginexternalschema, aipluginexternalschemaproperty, aiplugingovernance, aiplugingovernanceext, aiplugininstance, aipluginoperation, aipluginoperationparameter, aipluginoperationresponsetemplate, aiplugintitle, aipluginusersetting, aiskillconfig, allowedmcpclient, annotation, anyprivilegeentity, appaction, appactionmigration, appactionrule, appelement, appentitysearchview, application, applicationuser, appmodulecomponentedge, appmodulecomponentnode, appointment, approvalprocess, approvalstageapproval, approvalstagecondition, approvalstageintelligent, approvalstageorder, appsetting, appusersetting, archivecleanupinfo, archivecleanupoperation, athenareconciliationinfo, attachment, attributeclusterconfig, attributeimageconfig, attributemaskingrule, attributepicklistvalue, bot, botcomponent, botcomponentcollection, bulkarchiveconfig, bulkarchivefailuredetail, bulkarchiveoperation, bulkarchiveoperationdetail, businessdatalocalizedlabel, businessprocess, businessprocesslinkedartifact, businessunit, canvasappextendedmetadata, card, cascadegrantrevokeaccessrecordstracker, cascadegrantrevokeaccessversiontracker, catalog, catalogassignment, category, certificatecredential, channelaccessprofile, channelaccessprofilerule, channelaccessprofileruleitem, chat, comment, computeruseagent, connection, connectioninstance, connectionreference, connectionrole, connector, contact, controlconfiguration, conversationtranscript, copilotexamplequestion, copilotglossaryterm, copilotsynonyms, credential, customapi, customapirequestparameter, customapiresponseproperty, customeraddress, datalakefolder, datalakefolderpermission, datalakeworkspace, datalakeworkspacepermission, dataprocessingconfiguration, delegatedauthorization, deleteditemreference, desktopflowbinary, desktopflowmodule, duplicaterule, duplicaterulecondition, dvfilesearch, dvfilesearchattribute, dvfilesearchentity, dvtablesearch, dvtablesearchattribute, dvtablesearchentity, email, emailaddressconfiguration, emailserverprofile, enablearchivalrequest, entityanalyticsconfig, entityclusterconfig, entityimageconfig, entityindex, entityrecordfilter, environmentvariabledefinition, environmentvariablevalue, expiredprocess, exportedexcel, exportsolutionupload, externalparty, externalpartyitem, fabricaiskill, fax, featurecontrolsetting, federatedknowledgecitation, federatedknowledgeconfiguration, federatedknowledgeentityconfiguration, federatedknowledgemetadatarefresh, feedback, fieldpermission, fieldsecurityprofile, fileattachment, flowcapacityassignment, flowcredentialapplication, flowevent, flowgroup, flowmachine, flowmachinegroup, flowmachineimage, flowmachineimageversion, flowmachinenetwork, flowsession, flowsessionbinary, flowtestsession, flowtrigger, flowtriggerinstance, fxexpression, githubappconfig, goal, goalrollupquery, governanceconfiguration, holidaywrapper, importmap, indexattributes, internaladdress, internalcatalogassignment, kbarticle, kbarticletemplate, keyvaultreference, knowledgearticle, knowledgearticleviews, knowledgebaserecord, knowledgefaq, knowledgesourceconsumer, knowledgesourceprofile, letter, mailbox, mailmergetemplate, mainfewshot, makerfewshot, managedidentity, maskingrule, mcpprompt, mcpresource, mcpresourcecontent, mcpserver, mcptool, metadataforarchival, metric, mobileofflineprofileextension, mos3management, msdynce_botcontent, msdyn_aibdataset, msdyn_aibdatasetfile, msdyn_aibdatasetrecord, msdyn_aibdatasetscontainer, msdyn_aibfeedbackloop, msdyn_aibfile, msdyn_aibfileattacheddata, msdyn_aiconfiguration, msdyn_aiconfigurationsearch, msdyn_aidataprocessingevent, msdyn_aidocumenttemplate, msdyn_aievaluationconfiguration, msdyn_aievaluationrun, msdyn_aievent, msdyn_aifptrainingdocument, msdyn_aimodel, msdyn_aimodelcatalog, msdyn_aiodimage, msdyn_aiodlabel, msdyn_aiodtrainingboundingbox, msdyn_aiodtrainingimage, msdyn_aioptimization, msdyn_aioptimizationprivatedata, msdyn_aitemplate, msdyn_aitestcase, msdyn_aitestcasedocument, msdyn_aitestcaseinput, msdyn_aitestrun, msdyn_aitestrunbatch, msdyn_analysiscomponent, msdyn_analysisjob, msdyn_analysisoverride, msdyn_analysisresult, msdyn_analysisresultdetail, msdyn_appinsightsmetadata, msdyn_bulkharvestrunlog, msdyn_copilotinteractions, msdyn_customcontrolextendedsettings, msdyn_dataflow, msdyn_dataflowconnectionreference, msdyn_dataflowrefreshhistory, msdyn_dataflowtemplate, msdyn_dataflow_datalakefolder, msdyn_dataworkspace, msdyn_dmsrequest, msdyn_dmsrequeststatus, msdyn_dmssyncrequest, msdyn_dmssyncstatus, msdyn_entitylinkchatconfiguration, msdyn_entityrefreshhistory, msdyn_evalassertion, msdyn_evaldataset, msdyn_evalprompt, msdyn_evalresult, msdyn_evalrun, msdyn_favoriteknowledgearticle, msdyn_federatedarticle, msdyn_federatedarticleincident, msdyn_fileupload, msdyn_flow_actionapprovalmodel, msdyn_flow_approval, msdyn_flow_approvalrequest, msdyn_flow_approvalresponse, msdyn_flow_approvalstep, msdyn_flow_awaitallactionapprovalmodel, msdyn_flow_awaitallapprovalmodel, msdyn_flow_basicapprovalmodel, msdyn_flow_flowapproval, msdyn_formmapping, msdyn_function, msdyn_harvesteligibilitycondition, msdyn_harvestworkitem, msdyn_helppage, msdyn_historicalcaseharvestbatch, msdyn_historicalcaseharvestrun, msdyn_historicalcaseharvestrunlog, msdyn_insightsstorevirtualentity, msdyn_integratedsearchprovider, msdyn_interimupdateknowledgearticle, msdyn_kalanguagesetting, msdyn_kbattachment, msdyn_kmfederatedsearchconfig, msdyn_kmpersonalizationsetting, msdyn_knowledgearticlecustomentity, msdyn_knowledgearticleimage, msdyn_knowledgearticletemplate, msdyn_knowledgeassetconfiguration, msdyn_knowledgeconfiguration, msdyn_knowledgeharvestjobrecord, msdyn_knowledgeharvestplan, msdyn_knowledgeinteractioninsight, msdyn_knowledgemanagementsetting, msdyn_knowledgepersonalfilter, msdyn_knowledgesearchfilter, msdyn_knowledgesearchinsight, msdyn_locationrecord, msdyn_mobileapp, msdyn_modulerundetail, msdyn_nativeextension, msdyn_plan, msdyn_planartifact, msdyn_planattachment, msdyn_pmanalysishistory, msdyn_pmbusinessruleautomationconfig, msdyn_pmcalendar, msdyn_pmcalendarversion, msdyn_pminferredtask, msdyn_pmprocessextendedmetadataversion, msdyn_pmprocesstemplate, msdyn_pmprocessusersettings, msdyn_pmprocessversion, msdyn_pmrecording, msdyn_pmsimulation, msdyn_pmtab, msdyn_pmtemplate, msdyn_pmview, msdyn_powerappswrapbuild, msdyn_qna, msdyn_richtextfile, msdyn_rtestructuredtemplate, msdyn_rtestructuredtemplateconfig, msdyn_rtetemplatemapping, msdyn_salesforcestructuredobject, msdyn_salesforcestructuredqnaconfig, msdyn_schedule, msdyn_serviceconfiguration, msdyn_slakpi, msdyn_solutionhealthrule, msdyn_solutionhealthruleargument, msdyn_solutionhealthruleset, msdyn_tour, msdyn_virtualtablecolumncandidate, msdyn_workflowactionstatus, msgraphresourcetosubscription, mspcat_catalogsubmissionfiles, mspcat_packagestore, newprocess, offlinecommanddefinition, organization, organizationdatasyncfnostate, organizationdatasyncstate, organizationdatasyncsubscription, organizationdatasyncsubscriptionentity, organizationdatasyncsubscriptionfnotable, organizationsetting, package, packagehistory, pdfsetting, phonecall, plannerbusinessscenario, plannersyncaction, plugin, pluginpackage, position, postfollow, powerfxrule, powerpagecomponent, powerpagesddosalert, powerpagesite, powerpagesitelanguage, powerpagesitepublished, powerpagesmanagedidentity, powerpagesscanreport, powerpagessourcefile, powerpagesusermapping, privilegecheckerlog, privilegecheckerrun, privilegesremovalsetting, processorregistration, processsession, processstage, processstageparameter, processtrigger, provisionlanguageforuser, publisher, purviewlabelinfo, purviewlabelsynccache, queue, queueitem, reconciliationentityinfo, reconciliationentitystepinfo, reconciliationinfo, recordfilter, recurringappointmentmaster, recyclebinconfig, relationshipattribute, report, reportcategory, reportparameter, retaineddataexcel, retentioncleanupinfo, retentioncleanupoperation, retentionconfig, retentionfailuredetail, retentionoperation, retentionoperationdetail, retentionsuccessdetail, revokeinheritedaccessrecordstracker, role, roleeditorlayout, rollupfield, savedquery, savedqueryvisualization, savingrule, sa_suggestedaction, sa_suggestedactioncriteria, searchattributesettings, searchcustomanalyzer, searchrelationshipsettings, sensitivitylabelattributemapping, serviceplan, serviceplanmapping, settingdefinition, sharedlinksetting, sharedobject, sharedworkspace, sharedworkspacepool, sharepointdocumentlocation, sharepointmanagedidentity, sharepointsite, sideloadedaiplugin, signalregistration, skill, skillmetadata, skillresource, skillrolemapping, sla, slaitem, slakpiinstance, socialactivity, socialprofile, solution, solutioncomponentattributeconfiguration, solutioncomponentbatchconfiguration, solutioncomponentconfiguration, solutioncomponentrelationshipconfiguration, sourcecontroloperationtracking, stagedattributelookupvalue, stagedattributepicklistvalue, stagedentity, stagedentityattribute, stagedentityrelationship, stagedentityrelationshiprelationships, stagedentityrelationshiprole, stagedmetadataasyncoperation, stagedoptionset, stagedrelationship, stagedrelationshipextracondition, stagedviewattribute, stagesolutionupload, subject, supportusertable, synapsedatabase, synapselinkexternaltablestate, synapselinkprofile, synapselinkprofileentity, synapselinkprofileentitystate, synapselinkschedule, syncerror, systemuser, systemuserauthorizationchangetracker, tag, taggedflowsession, taggedprocess, task, tdsmetadata, team, teammobileofflineprofilemembership, teamtemplate, template, territory, toolinggateway, toolinggatewaymcpserver, traitregistration, transactioncurrency, translationprocess, unstructuredfilesearchentity, unstructuredfilesearchrecord, unstructuredfilesearchrecordstatus, usermobileofflineprofilemembership, userquery, userqueryvisualization, userrating, uxagentcomponent, uxagentcomponentrevision, uxagentproject, uxagentprojectfile, viewasexamplequestion, virtualentitymetadata, workflow, workflowbinary, workflowmetadata, workqueue, workqueueitem|
 
 ### <a name="BKMK_RegardingObjectTypeCode"></a> RegardingObjectTypeCode
 
@@ -556,6 +557,7 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [adx_portalcomment_SyncErrors](#BKMK_adx_portalcomment_SyncErrors)
 - [adx_setting_SyncErrors](#BKMK_adx_setting_SyncErrors)
 - [adx_webformsession_SyncErrors](#BKMK_adx_webformsession_SyncErrors)
+- [agentrule_SyncErrors](#BKMK_agentrule_SyncErrors)
 - [aicopilot_SyncErrors](#BKMK_aicopilot_SyncErrors)
 - [aiplugin_SyncErrors](#BKMK_aiplugin_SyncErrors)
 - [aipluginauth_SyncErrors](#BKMK_aipluginauth_SyncErrors)
@@ -573,6 +575,7 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [aipluginusersetting_SyncErrors](#BKMK_aipluginusersetting_SyncErrors)
 - [allowedmcpclient_SyncErrors](#BKMK_allowedmcpclient_SyncErrors)
 - [Annotation_SyncErrors](#BKMK_Annotation_SyncErrors)
+- [anyprivilegeentity_SyncErrors](#BKMK_anyprivilegeentity_SyncErrors)
 - [appaction_SyncErrors](#BKMK_appaction_SyncErrors)
 - [appactionmigration_SyncErrors](#BKMK_appactionmigration_SyncErrors)
 - [appactionrule_SyncErrors](#BKMK_appactionrule_SyncErrors)
@@ -584,6 +587,7 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [approvalstagecondition_SyncErrors](#BKMK_approvalstagecondition_SyncErrors)
 - [approvalstageintelligent_SyncErrors](#BKMK_approvalstageintelligent_SyncErrors)
 - [approvalstageorder_SyncErrors](#BKMK_approvalstageorder_SyncErrors)
+- [athenareconciliationinfo_SyncErrors](#BKMK_athenareconciliationinfo_SyncErrors)
 - [Attachment_SyncErrors](#BKMK_Attachment_SyncErrors)
 - [attributeclusterconfig_SyncErrors](#BKMK_attributeclusterconfig_SyncErrors)
 - [attributeimageconfig_SyncErrors](#BKMK_attributeimageconfig_SyncErrors)
@@ -593,6 +597,7 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [botcomponent_SyncErrors](#BKMK_botcomponent_SyncErrors)
 - [botcomponentcollection_SyncErrors](#BKMK_botcomponentcollection_SyncErrors)
 - [businessprocess_SyncErrors](#BKMK_businessprocess_SyncErrors)
+- [businessprocesslinkedartifact_SyncErrors](#BKMK_businessprocesslinkedartifact_SyncErrors)
 - [BusinessUnit_SyncError](#BKMK_BusinessUnit_SyncError)
 - [BusinessUnit_SyncErrors](#BKMK_BusinessUnit_SyncErrors)
 - [card_SyncErrors](#BKMK_card_SyncErrors)
@@ -601,12 +606,14 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [Category_SyncErrors](#BKMK_Category_SyncErrors)
 - [certificatecredential_SyncErrors](#BKMK_certificatecredential_SyncErrors)
 - [chat_SyncErrors](#BKMK_chat_SyncErrors)
+- [computeruseagent_SyncErrors](#BKMK_computeruseagent_SyncErrors)
 - [Connection_SyncErrors](#BKMK_Connection_SyncErrors)
 - [connectioninstance_SyncErrors](#BKMK_connectioninstance_SyncErrors)
 - [connectionreference_SyncErrors](#BKMK_connectionreference_SyncErrors)
 - [ConnectionRole_SyncErrors](#BKMK_ConnectionRole_SyncErrors)
 - [connector_SyncErrors](#BKMK_connector_SyncErrors)
 - [Contact_SyncErrors](#BKMK_Contact_SyncErrors)
+- [controlconfiguration_SyncErrors](#BKMK_controlconfiguration_SyncErrors)
 - [conversationtranscript_SyncErrors](#BKMK_conversationtranscript_SyncErrors)
 - [copilotexamplequestion_SyncErrors](#BKMK_copilotexamplequestion_SyncErrors)
 - [copilotglossaryterm_SyncErrors](#BKMK_copilotglossaryterm_SyncErrors)
@@ -622,6 +629,7 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [datalakeworkspacepermission_SyncErrors](#BKMK_datalakeworkspacepermission_SyncErrors)
 - [dataprocessingconfiguration_SyncErrors](#BKMK_dataprocessingconfiguration_SyncErrors)
 - [delegatedauthorization_SyncErrors](#BKMK_delegatedauthorization_SyncErrors)
+- [deleteditemreference_SyncErrors](#BKMK_deleteditemreference_SyncErrors)
 - [desktopflowbinary_SyncErrors](#BKMK_desktopflowbinary_SyncErrors)
 - [desktopflowmodule_SyncErrors](#BKMK_desktopflowmodule_SyncErrors)
 - [DuplicateRule_SyncErrors](#BKMK_DuplicateRule_SyncErrors)
@@ -657,6 +665,7 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [flowcapacityassignment_SyncErrors](#BKMK_flowcapacityassignment_SyncErrors)
 - [flowcredentialapplication_SyncErrors](#BKMK_flowcredentialapplication_SyncErrors)
 - [flowevent_SyncErrors](#BKMK_flowevent_SyncErrors)
+- [flowgroup_SyncErrors](#BKMK_flowgroup_SyncErrors)
 - [flowmachine_SyncErrors](#BKMK_flowmachine_SyncErrors)
 - [flowmachinegroup_SyncErrors](#BKMK_flowmachinegroup_SyncErrors)
 - [flowmachineimage_SyncErrors](#BKMK_flowmachineimage_SyncErrors)
@@ -664,7 +673,11 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [flowmachinenetwork_SyncErrors](#BKMK_flowmachinenetwork_SyncErrors)
 - [flowsession_SyncErrors](#BKMK_flowsession_SyncErrors)
 - [flowsessionbinary_SyncErrors](#BKMK_flowsessionbinary_SyncErrors)
+- [flowtestsession_SyncErrors](#BKMK_flowtestsession_SyncErrors)
+- [flowtrigger_SyncErrors](#BKMK_flowtrigger_SyncErrors)
+- [flowtriggerinstance_SyncErrors](#BKMK_flowtriggerinstance_SyncErrors)
 - [fxexpression_SyncErrors](#BKMK_fxexpression_SyncErrors)
+- [githubappconfig_SyncErrors](#BKMK_githubappconfig_SyncErrors)
 - [Goal_SyncErrors](#BKMK_Goal_SyncErrors)
 - [GoalRollupQuery_SyncErrors](#BKMK_GoalRollupQuery_SyncErrors)
 - [governanceconfiguration_SyncErrors](#BKMK_governanceconfiguration_SyncErrors)
@@ -688,11 +701,15 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [makerfewshot_SyncErrors](#BKMK_makerfewshot_SyncErrors)
 - [managedidentity_SyncErrors](#BKMK_managedidentity_SyncErrors)
 - [maskingrule_SyncErrors](#BKMK_maskingrule_SyncErrors)
+- [mcpprompt_SyncErrors](#BKMK_mcpprompt_SyncErrors)
+- [mcpresource_SyncErrors](#BKMK_mcpresource_SyncErrors)
+- [mcpresourcecontent_SyncErrors](#BKMK_mcpresourcecontent_SyncErrors)
 - [mcpserver_SyncErrors](#BKMK_mcpserver_SyncErrors)
 - [mcptool_SyncErrors](#BKMK_mcptool_SyncErrors)
 - [metadataforarchival_SyncErrors](#BKMK_metadataforarchival_SyncErrors)
 - [Metric_SyncErrors](#BKMK_Metric_SyncErrors)
 - [mobileofflineprofileextension_SyncErrors](#BKMK_mobileofflineprofileextension_SyncErrors)
+- [mos3management_SyncErrors](#BKMK_mos3management_SyncErrors)
 - [msdyn_aibdataset_SyncErrors](#BKMK_msdyn_aibdataset_SyncErrors)
 - [msdyn_aibdatasetfile_SyncErrors](#BKMK_msdyn_aibdatasetfile_SyncErrors)
 - [msdyn_aibdatasetrecord_SyncErrors](#BKMK_msdyn_aibdatasetrecord_SyncErrors)
@@ -724,6 +741,7 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [msdyn_analysisresult_SyncErrors](#BKMK_msdyn_analysisresult_SyncErrors)
 - [msdyn_analysisresultdetail_SyncErrors](#BKMK_msdyn_analysisresultdetail_SyncErrors)
 - [msdyn_appinsightsmetadata_SyncErrors](#BKMK_msdyn_appinsightsmetadata_SyncErrors)
+- [msdyn_bulkharvestrunlog_SyncErrors](#BKMK_msdyn_bulkharvestrunlog_SyncErrors)
 - [msdyn_copilotinteractions_SyncErrors](#BKMK_msdyn_copilotinteractions_SyncErrors)
 - [msdyn_customcontrolextendedsettings_SyncErrors](#BKMK_msdyn_customcontrolextendedsettings_SyncErrors)
 - [msdyn_dataflow_datalakefolder_SyncErrors](#BKMK_msdyn_dataflow_datalakefolder_SyncErrors)
@@ -737,6 +755,11 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [msdyn_dmssyncstatus_SyncErrors](#BKMK_msdyn_dmssyncstatus_SyncErrors)
 - [msdyn_entitylinkchatconfiguration_SyncErrors](#BKMK_msdyn_entitylinkchatconfiguration_SyncErrors)
 - [msdyn_entityrefreshhistory_SyncErrors](#BKMK_msdyn_entityrefreshhistory_SyncErrors)
+- [msdyn_evalassertion_SyncErrors](#BKMK_msdyn_evalassertion_SyncErrors)
+- [msdyn_evaldataset_SyncErrors](#BKMK_msdyn_evaldataset_SyncErrors)
+- [msdyn_evalprompt_SyncErrors](#BKMK_msdyn_evalprompt_SyncErrors)
+- [msdyn_evalresult_SyncErrors](#BKMK_msdyn_evalresult_SyncErrors)
+- [msdyn_evalrun_SyncErrors](#BKMK_msdyn_evalrun_SyncErrors)
 - [msdyn_favoriteknowledgearticle_SyncErrors](#BKMK_msdyn_favoriteknowledgearticle_SyncErrors)
 - [msdyn_federatedarticle_SyncErrors](#BKMK_msdyn_federatedarticle_SyncErrors)
 - [msdyn_federatedarticleincident_SyncErrors](#BKMK_msdyn_federatedarticleincident_SyncErrors)
@@ -752,9 +775,12 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [msdyn_flow_flowapproval_SyncErrors](#BKMK_msdyn_flow_flowapproval_SyncErrors)
 - [msdyn_formmapping_SyncErrors](#BKMK_msdyn_formmapping_SyncErrors)
 - [msdyn_function_SyncErrors](#BKMK_msdyn_function_SyncErrors)
+- [msdyn_harvesteligibilitycondition_SyncErrors](#BKMK_msdyn_harvesteligibilitycondition_SyncErrors)
+- [msdyn_harvestworkitem_SyncErrors](#BKMK_msdyn_harvestworkitem_SyncErrors)
 - [msdyn_helppage_SyncErrors](#BKMK_msdyn_helppage_SyncErrors)
 - [msdyn_historicalcaseharvestbatch_SyncErrors](#BKMK_msdyn_historicalcaseharvestbatch_SyncErrors)
 - [msdyn_historicalcaseharvestrun_SyncErrors](#BKMK_msdyn_historicalcaseharvestrun_SyncErrors)
+- [msdyn_historicalcaseharvestrunlog_SyncErrors](#BKMK_msdyn_historicalcaseharvestrunlog_SyncErrors)
 - [msdyn_insightsstorevirtualentity_SyncErrors](#BKMK_msdyn_insightsstorevirtualentity_SyncErrors)
 - [msdyn_integratedsearchprovider_SyncErrors](#BKMK_msdyn_integratedsearchprovider_SyncErrors)
 - [msdyn_kalanguagesetting_SyncErrors](#BKMK_msdyn_kalanguagesetting_SyncErrors)
@@ -766,13 +792,16 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [msdyn_knowledgeassetconfiguration_SyncErrors](#BKMK_msdyn_knowledgeassetconfiguration_SyncErrors)
 - [msdyn_knowledgeconfiguration_SyncErrors](#BKMK_msdyn_knowledgeconfiguration_SyncErrors)
 - [msdyn_knowledgeharvestjobrecord_SyncErrors](#BKMK_msdyn_knowledgeharvestjobrecord_SyncErrors)
+- [msdyn_knowledgeharvestplan_SyncErrors](#BKMK_msdyn_knowledgeharvestplan_SyncErrors)
 - [msdyn_knowledgeinteractioninsight_SyncErrors](#BKMK_msdyn_knowledgeinteractioninsight_SyncErrors)
 - [msdyn_knowledgemanagementsetting_SyncErrors](#BKMK_msdyn_knowledgemanagementsetting_SyncErrors)
 - [msdyn_knowledgepersonalfilter_SyncErrors](#BKMK_msdyn_knowledgepersonalfilter_SyncErrors)
 - [msdyn_knowledgesearchfilter_SyncErrors](#BKMK_msdyn_knowledgesearchfilter_SyncErrors)
 - [msdyn_knowledgesearchinsight_SyncErrors](#BKMK_msdyn_knowledgesearchinsight_SyncErrors)
+- [msdyn_locationrecord_SyncErrors](#BKMK_msdyn_locationrecord_SyncErrors)
 - [msdyn_mobileapp_SyncErrors](#BKMK_msdyn_mobileapp_SyncErrors)
 - [msdyn_modulerundetail_SyncErrors](#BKMK_msdyn_modulerundetail_SyncErrors)
+- [msdyn_nativeextension_SyncErrors](#BKMK_msdyn_nativeextension_SyncErrors)
 - [msdyn_pmanalysishistory_SyncErrors](#BKMK_msdyn_pmanalysishistory_SyncErrors)
 - [msdyn_pmbusinessruleautomationconfig_SyncErrors](#BKMK_msdyn_pmbusinessruleautomationconfig_SyncErrors)
 - [msdyn_pmcalendar_SyncErrors](#BKMK_msdyn_pmcalendar_SyncErrors)
@@ -787,8 +816,12 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [msdyn_pmtab_SyncErrors](#BKMK_msdyn_pmtab_SyncErrors)
 - [msdyn_pmtemplate_SyncErrors](#BKMK_msdyn_pmtemplate_SyncErrors)
 - [msdyn_pmview_SyncErrors](#BKMK_msdyn_pmview_SyncErrors)
+- [msdyn_powerappswrapbuild_SyncErrors](#BKMK_msdyn_powerappswrapbuild_SyncErrors)
 - [msdyn_qna_SyncErrors](#BKMK_msdyn_qna_SyncErrors)
 - [msdyn_richtextfile_SyncErrors](#BKMK_msdyn_richtextfile_SyncErrors)
+- [msdyn_rtestructuredtemplate_SyncErrors](#BKMK_msdyn_rtestructuredtemplate_SyncErrors)
+- [msdyn_rtestructuredtemplateconfig_SyncErrors](#BKMK_msdyn_rtestructuredtemplateconfig_SyncErrors)
+- [msdyn_rtetemplatemapping_SyncErrors](#BKMK_msdyn_rtetemplatemapping_SyncErrors)
 - [msdyn_salesforcestructuredobject_SyncErrors](#BKMK_msdyn_salesforcestructuredobject_SyncErrors)
 - [msdyn_salesforcestructuredqnaconfig_SyncErrors](#BKMK_msdyn_salesforcestructuredqnaconfig_SyncErrors)
 - [msdyn_schedule_SyncErrors](#BKMK_msdyn_schedule_SyncErrors)
@@ -821,11 +854,6 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [pluginpackage_SyncErrors](#BKMK_pluginpackage_SyncErrors)
 - [Position_SyncErrors](#BKMK_Position_SyncErrors)
 - [PostFollow_SyncErrors](#BKMK_PostFollow_SyncErrors)
-- [powerbidataset_SyncErrors](#BKMK_powerbidataset_SyncErrors)
-- [powerbidatasetapdx_SyncErrors](#BKMK_powerbidatasetapdx_SyncErrors)
-- [powerbimashupparameter_SyncErrors](#BKMK_powerbimashupparameter_SyncErrors)
-- [powerbireport_SyncErrors](#BKMK_powerbireport_SyncErrors)
-- [powerbireportapdx_SyncErrors](#BKMK_powerbireportapdx_SyncErrors)
 - [powerfxrule_SyncErrors](#BKMK_powerfxrule_SyncErrors)
 - [powerpagecomponent_SyncErrors](#BKMK_powerpagecomponent_SyncErrors)
 - [powerpagesddosalert_SyncErrors](#BKMK_powerpagesddosalert_SyncErrors)
@@ -835,6 +863,7 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [powerpagesmanagedidentity_SyncErrors](#BKMK_powerpagesmanagedidentity_SyncErrors)
 - [powerpagesscanreport_SyncErrors](#BKMK_powerpagesscanreport_SyncErrors)
 - [powerpagessourcefile_SyncErrors](#BKMK_powerpagessourcefile_SyncErrors)
+- [powerpagesusermapping_SyncErrors](#BKMK_powerpagesusermapping_SyncErrors)
 - [privilegecheckerlog_SyncErrors](#BKMK_privilegecheckerlog_SyncErrors)
 - [privilegecheckerrun_SyncErrors](#BKMK_privilegecheckerrun_SyncErrors)
 - [privilegesremovalsetting_SyncErrors](#BKMK_privilegesremovalsetting_SyncErrors)
@@ -882,6 +911,10 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [sharepointmanagedidentity_SyncErrors](#BKMK_sharepointmanagedidentity_SyncErrors)
 - [SharePointSite_SyncErrors](#BKMK_SharePointSite_SyncErrors)
 - [sideloadedaiplugin_SyncErrors](#BKMK_sideloadedaiplugin_SyncErrors)
+- [skill_SyncErrors](#BKMK_skill_SyncErrors)
+- [skillmetadata_SyncErrors](#BKMK_skillmetadata_SyncErrors)
+- [skillresource_SyncErrors](#BKMK_skillresource_SyncErrors)
+- [skillrolemapping_SyncErrors](#BKMK_skillrolemapping_SyncErrors)
 - [SLA_SyncErrors](#BKMK_SLA_SyncErrors)
 - [SLAItem_SyncErrors](#BKMK_SLAItem_SyncErrors)
 - [SLAKPIInstance_SyncErrors](#BKMK_SLAKPIInstance_SyncErrors)
@@ -892,6 +925,7 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [solutioncomponentbatchconfiguration_SyncErrors](#BKMK_solutioncomponentbatchconfiguration_SyncErrors)
 - [solutioncomponentconfiguration_SyncErrors](#BKMK_solutioncomponentconfiguration_SyncErrors)
 - [solutioncomponentrelationshipconfiguration_SyncErrors](#BKMK_solutioncomponentrelationshipconfiguration_SyncErrors)
+- [sourcecontroloperationtracking_SyncErrors](#BKMK_sourcecontroloperationtracking_SyncErrors)
 - [stagedentity_SyncErrors](#BKMK_stagedentity_SyncErrors)
 - [stagedentityattribute_SyncErrors](#BKMK_stagedentityattribute_SyncErrors)
 - [stagedmetadataasyncoperation_SyncErrors](#BKMK_stagedmetadataasyncoperation_SyncErrors)
@@ -1061,6 +1095,19 @@ One-To-Many Relationship: [adx_webformsession adx_webformsession_SyncErrors](adx
 |ReferencedAttribute|`adx_webformsessionid`|
 |ReferencingAttribute|`regardingobjectid`|
 |ReferencingEntityNavigationPropertyName|`regardingobjectid_adx_webformsession`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_agentrule_SyncErrors"></a> agentrule_SyncErrors
+
+One-To-Many Relationship: [agentrule agentrule_SyncErrors](agentrule.md#BKMK_agentrule_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`agentrule`|
+|ReferencedAttribute|`agentruleid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_agentrule`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
@@ -1285,6 +1332,19 @@ One-To-Many Relationship: [annotation Annotation_SyncErrors](annotation.md#BKMK_
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `Cascade`<br />Reparent: `Cascade`<br />RollupView: `NoCascade`<br />Share: `Cascade`<br />Unshare: `Cascade`|
 
+### <a name="BKMK_anyprivilegeentity_SyncErrors"></a> anyprivilegeentity_SyncErrors
+
+One-To-Many Relationship: [anyprivilegeentity anyprivilegeentity_SyncErrors](anyprivilegeentity.md#BKMK_anyprivilegeentity_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`anyprivilegeentity`|
+|ReferencedAttribute|`anyprivilegeentityid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_anyprivilegeentity`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
 ### <a name="BKMK_appaction_SyncErrors"></a> appaction_SyncErrors
 
 One-To-Many Relationship: [appaction appaction_SyncErrors](appaction.md#BKMK_appaction_SyncErrors)
@@ -1428,6 +1488,19 @@ One-To-Many Relationship: [approvalstageorder approvalstageorder_SyncErrors](app
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
+### <a name="BKMK_athenareconciliationinfo_SyncErrors"></a> athenareconciliationinfo_SyncErrors
+
+One-To-Many Relationship: [athenareconciliationinfo athenareconciliationinfo_SyncErrors](athenareconciliationinfo.md#BKMK_athenareconciliationinfo_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`athenareconciliationinfo`|
+|ReferencedAttribute|`athenareconciliationinfoid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_athenareconciliationinfo`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
 ### <a name="BKMK_Attachment_SyncErrors"></a> Attachment_SyncErrors
 
 One-To-Many Relationship: [attachment Attachment_SyncErrors](attachment.md#BKMK_Attachment_SyncErrors)
@@ -1545,6 +1618,19 @@ One-To-Many Relationship: [businessprocess businessprocess_SyncErrors](businessp
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
+### <a name="BKMK_businessprocesslinkedartifact_SyncErrors"></a> businessprocesslinkedartifact_SyncErrors
+
+One-To-Many Relationship: [businessprocesslinkedartifact businessprocesslinkedartifact_SyncErrors](businessprocesslinkedartifact.md#BKMK_businessprocesslinkedartifact_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`businessprocesslinkedartifact`|
+|ReferencedAttribute|`businessprocesslinkedartifactid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_businessprocesslinkedartifact`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
 ### <a name="BKMK_BusinessUnit_SyncError"></a> BusinessUnit_SyncError
 
 One-To-Many Relationship: [businessunit BusinessUnit_SyncError](businessunit.md#BKMK_BusinessUnit_SyncError)
@@ -1649,6 +1735,19 @@ One-To-Many Relationship: [chat chat_SyncErrors](chat.md#BKMK_chat_SyncErrors)
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
+### <a name="BKMK_computeruseagent_SyncErrors"></a> computeruseagent_SyncErrors
+
+One-To-Many Relationship: [computeruseagent computeruseagent_SyncErrors](computeruseagent.md#BKMK_computeruseagent_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`computeruseagent`|
+|ReferencedAttribute|`computeruseagentid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_computeruseagent`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
 ### <a name="BKMK_Connection_SyncErrors"></a> Connection_SyncErrors
 
 One-To-Many Relationship: [connection Connection_SyncErrors](connection.md#BKMK_Connection_SyncErrors)
@@ -1726,6 +1825,19 @@ One-To-Many Relationship: [contact Contact_SyncErrors](contact.md#BKMK_Contact_S
 |ReferencingEntityNavigationPropertyName|`regardingobjectid_contact_syncerror`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `Cascade`<br />Reparent: `Cascade`<br />RollupView: `NoCascade`<br />Share: `Cascade`<br />Unshare: `Cascade`|
+
+### <a name="BKMK_controlconfiguration_SyncErrors"></a> controlconfiguration_SyncErrors
+
+One-To-Many Relationship: [controlconfiguration controlconfiguration_SyncErrors](controlconfiguration.md#BKMK_controlconfiguration_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`controlconfiguration`|
+|ReferencedAttribute|`controlconfigurationid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_controlconfiguration`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_conversationtranscript_SyncErrors"></a> conversationtranscript_SyncErrors
 
@@ -1919,6 +2031,19 @@ One-To-Many Relationship: [delegatedauthorization delegatedauthorization_SyncErr
 |ReferencedAttribute|`delegatedauthorizationid`|
 |ReferencingAttribute|`regardingobjectid`|
 |ReferencingEntityNavigationPropertyName|`regardingobjectid_delegatedauthorization`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_deleteditemreference_SyncErrors"></a> deleteditemreference_SyncErrors
+
+One-To-Many Relationship: [deleteditemreference deleteditemreference_SyncErrors](deleteditemreference.md#BKMK_deleteditemreference_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`deleteditemreference`|
+|ReferencedAttribute|`deleteditemreferenceid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_deleteditemreference`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
@@ -2377,6 +2502,19 @@ One-To-Many Relationship: [flowevent flowevent_SyncErrors](flowevent.md#BKMK_flo
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
+### <a name="BKMK_flowgroup_SyncErrors"></a> flowgroup_SyncErrors
+
+One-To-Many Relationship: [flowgroup flowgroup_SyncErrors](flowgroup.md#BKMK_flowgroup_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`flowgroup`|
+|ReferencedAttribute|`flowgroupid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_flowgroup`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
 ### <a name="BKMK_flowmachine_SyncErrors"></a> flowmachine_SyncErrors
 
 One-To-Many Relationship: [flowmachine flowmachine_SyncErrors](flowmachine.md#BKMK_flowmachine_SyncErrors)
@@ -2468,6 +2606,45 @@ One-To-Many Relationship: [flowsessionbinary flowsessionbinary_SyncErrors](flows
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
+### <a name="BKMK_flowtestsession_SyncErrors"></a> flowtestsession_SyncErrors
+
+One-To-Many Relationship: [flowtestsession flowtestsession_SyncErrors](flowtestsession.md#BKMK_flowtestsession_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`flowtestsession`|
+|ReferencedAttribute|`flowtestsessionid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_flowtestsession`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_flowtrigger_SyncErrors"></a> flowtrigger_SyncErrors
+
+One-To-Many Relationship: [flowtrigger flowtrigger_SyncErrors](flowtrigger.md#BKMK_flowtrigger_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`flowtrigger`|
+|ReferencedAttribute|`flowtriggerid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_flowtrigger`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_flowtriggerinstance_SyncErrors"></a> flowtriggerinstance_SyncErrors
+
+One-To-Many Relationship: [flowtriggerinstance flowtriggerinstance_SyncErrors](flowtriggerinstance.md#BKMK_flowtriggerinstance_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`flowtriggerinstance`|
+|ReferencedAttribute|`flowtriggerinstanceid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_flowtriggerinstance`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
 ### <a name="BKMK_fxexpression_SyncErrors"></a> fxexpression_SyncErrors
 
 One-To-Many Relationship: [fxexpression fxexpression_SyncErrors](fxexpression.md#BKMK_fxexpression_SyncErrors)
@@ -2478,6 +2655,19 @@ One-To-Many Relationship: [fxexpression fxexpression_SyncErrors](fxexpression.md
 |ReferencedAttribute|`fxexpressionid`|
 |ReferencingAttribute|`regardingobjectid`|
 |ReferencingEntityNavigationPropertyName|`regardingobjectid_fxexpression`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_githubappconfig_SyncErrors"></a> githubappconfig_SyncErrors
+
+One-To-Many Relationship: [githubappconfig githubappconfig_SyncErrors](githubappconfig.md#BKMK_githubappconfig_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`githubappconfig`|
+|ReferencedAttribute|`githubappconfigid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_githubappconfig`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
@@ -2780,6 +2970,45 @@ One-To-Many Relationship: [maskingrule maskingrule_SyncErrors](maskingrule.md#BK
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
+### <a name="BKMK_mcpprompt_SyncErrors"></a> mcpprompt_SyncErrors
+
+One-To-Many Relationship: [mcpprompt mcpprompt_SyncErrors](mcpprompt.md#BKMK_mcpprompt_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`mcpprompt`|
+|ReferencedAttribute|`mcppromptid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_mcpprompt`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_mcpresource_SyncErrors"></a> mcpresource_SyncErrors
+
+One-To-Many Relationship: [mcpresource mcpresource_SyncErrors](mcpresource.md#BKMK_mcpresource_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`mcpresource`|
+|ReferencedAttribute|`mcpresourceid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_mcpresource`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_mcpresourcecontent_SyncErrors"></a> mcpresourcecontent_SyncErrors
+
+One-To-Many Relationship: [mcpresourcecontent mcpresourcecontent_SyncErrors](mcpresourcecontent.md#BKMK_mcpresourcecontent_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`mcpresourcecontent`|
+|ReferencedAttribute|`mcpresourcecontentid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_mcpresourcecontent`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
 ### <a name="BKMK_mcpserver_SyncErrors"></a> mcpserver_SyncErrors
 
 One-To-Many Relationship: [mcpserver mcpserver_SyncErrors](mcpserver.md#BKMK_mcpserver_SyncErrors)
@@ -2842,6 +3071,19 @@ One-To-Many Relationship: [mobileofflineprofileextension mobileofflineprofileext
 |ReferencedAttribute|`mobileofflineprofileextensionid`|
 |ReferencingAttribute|`regardingobjectid`|
 |ReferencingEntityNavigationPropertyName|`regardingobjectid_mobileofflineprofileextension`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_mos3management_SyncErrors"></a> mos3management_SyncErrors
+
+One-To-Many Relationship: [mos3management mos3management_SyncErrors](mos3management.md#BKMK_mos3management_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`mos3management`|
+|ReferencedAttribute|`mos3managementid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_mos3management`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
@@ -3248,6 +3490,19 @@ One-To-Many Relationship: [msdyn_appinsightsmetadata msdyn_appinsightsmetadata_S
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
+### <a name="BKMK_msdyn_bulkharvestrunlog_SyncErrors"></a> msdyn_bulkharvestrunlog_SyncErrors
+
+One-To-Many Relationship: [msdyn_bulkharvestrunlog msdyn_bulkharvestrunlog_SyncErrors](msdyn_bulkharvestrunlog.md#BKMK_msdyn_bulkharvestrunlog_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msdyn_bulkharvestrunlog`|
+|ReferencedAttribute|`msdyn_bulkharvestrunlogid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_msdyn_bulkharvestrunlog`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
 ### <a name="BKMK_msdyn_copilotinteractions_SyncErrors"></a> msdyn_copilotinteractions_SyncErrors
 
 One-To-Many Relationship: [msdyn_copilotinteractions msdyn_copilotinteractions_SyncErrors](msdyn_copilotinteractions.md#BKMK_msdyn_copilotinteractions_SyncErrors)
@@ -3414,6 +3669,71 @@ One-To-Many Relationship: [msdyn_entityrefreshhistory msdyn_entityrefreshhistory
 |ReferencedAttribute|`msdyn_entityrefreshhistoryid`|
 |ReferencingAttribute|`regardingobjectid`|
 |ReferencingEntityNavigationPropertyName|`regardingobjectid_msdyn_entityrefreshhistory`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msdyn_evalassertion_SyncErrors"></a> msdyn_evalassertion_SyncErrors
+
+One-To-Many Relationship: [msdyn_evalassertion msdyn_evalassertion_SyncErrors](msdyn_evalassertion.md#BKMK_msdyn_evalassertion_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msdyn_evalassertion`|
+|ReferencedAttribute|`msdyn_evalassertionid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_msdyn_evalassertion`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msdyn_evaldataset_SyncErrors"></a> msdyn_evaldataset_SyncErrors
+
+One-To-Many Relationship: [msdyn_evaldataset msdyn_evaldataset_SyncErrors](msdyn_evaldataset.md#BKMK_msdyn_evaldataset_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msdyn_evaldataset`|
+|ReferencedAttribute|`msdyn_evaldatasetid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_msdyn_evaldataset`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msdyn_evalprompt_SyncErrors"></a> msdyn_evalprompt_SyncErrors
+
+One-To-Many Relationship: [msdyn_evalprompt msdyn_evalprompt_SyncErrors](msdyn_evalprompt.md#BKMK_msdyn_evalprompt_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msdyn_evalprompt`|
+|ReferencedAttribute|`msdyn_evalpromptid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_msdyn_evalprompt`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msdyn_evalresult_SyncErrors"></a> msdyn_evalresult_SyncErrors
+
+One-To-Many Relationship: [msdyn_evalresult msdyn_evalresult_SyncErrors](msdyn_evalresult.md#BKMK_msdyn_evalresult_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msdyn_evalresult`|
+|ReferencedAttribute|`msdyn_evalresultid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_msdyn_evalresult`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msdyn_evalrun_SyncErrors"></a> msdyn_evalrun_SyncErrors
+
+One-To-Many Relationship: [msdyn_evalrun msdyn_evalrun_SyncErrors](msdyn_evalrun.md#BKMK_msdyn_evalrun_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msdyn_evalrun`|
+|ReferencedAttribute|`msdyn_evalrunid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_msdyn_evalrun`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
@@ -3612,6 +3932,32 @@ One-To-Many Relationship: [msdyn_function msdyn_function_SyncErrors](msdyn_funct
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
+### <a name="BKMK_msdyn_harvesteligibilitycondition_SyncErrors"></a> msdyn_harvesteligibilitycondition_SyncErrors
+
+One-To-Many Relationship: [msdyn_harvesteligibilitycondition msdyn_harvesteligibilitycondition_SyncErrors](msdyn_harvesteligibilitycondition.md#BKMK_msdyn_harvesteligibilitycondition_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msdyn_harvesteligibilitycondition`|
+|ReferencedAttribute|`msdyn_harvesteligibilityconditionid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_msdyn_harvesteligibilitycondition`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msdyn_harvestworkitem_SyncErrors"></a> msdyn_harvestworkitem_SyncErrors
+
+One-To-Many Relationship: [msdyn_harvestworkitem msdyn_harvestworkitem_SyncErrors](msdyn_harvestworkitem.md#BKMK_msdyn_harvestworkitem_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msdyn_harvestworkitem`|
+|ReferencedAttribute|`msdyn_harvestworkitemid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_msdyn_harvestworkitem`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
 ### <a name="BKMK_msdyn_helppage_SyncErrors"></a> msdyn_helppage_SyncErrors
 
 One-To-Many Relationship: [msdyn_helppage msdyn_helppage_SyncErrors](msdyn_helppage.md#BKMK_msdyn_helppage_SyncErrors)
@@ -3648,6 +3994,19 @@ One-To-Many Relationship: [msdyn_historicalcaseharvestrun msdyn_historicalcaseha
 |ReferencedAttribute|`msdyn_historicalcaseharvestrunid`|
 |ReferencingAttribute|`regardingobjectid`|
 |ReferencingEntityNavigationPropertyName|`regardingobjectid_msdyn_historicalcaseharvestrun`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msdyn_historicalcaseharvestrunlog_SyncErrors"></a> msdyn_historicalcaseharvestrunlog_SyncErrors
+
+One-To-Many Relationship: [msdyn_historicalcaseharvestrunlog msdyn_historicalcaseharvestrunlog_SyncErrors](msdyn_historicalcaseharvestrunlog.md#BKMK_msdyn_historicalcaseharvestrunlog_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msdyn_historicalcaseharvestrunlog`|
+|ReferencedAttribute|`msdyn_historicalcaseharvestrunlogid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_msdyn_historicalcaseharvestrunlog`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
@@ -3794,6 +4153,19 @@ One-To-Many Relationship: [msdyn_knowledgeharvestjobrecord msdyn_knowledgeharves
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
+### <a name="BKMK_msdyn_knowledgeharvestplan_SyncErrors"></a> msdyn_knowledgeharvestplan_SyncErrors
+
+One-To-Many Relationship: [msdyn_knowledgeharvestplan msdyn_knowledgeharvestplan_SyncErrors](msdyn_knowledgeharvestplan.md#BKMK_msdyn_knowledgeharvestplan_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msdyn_knowledgeharvestplan`|
+|ReferencedAttribute|`msdyn_knowledgeharvestplanid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_msdyn_knowledgeharvestplan`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
 ### <a name="BKMK_msdyn_knowledgeinteractioninsight_SyncErrors"></a> msdyn_knowledgeinteractioninsight_SyncErrors
 
 One-To-Many Relationship: [msdyn_knowledgeinteractioninsight msdyn_knowledgeinteractioninsight_SyncErrors](msdyn_knowledgeinteractioninsight.md#BKMK_msdyn_knowledgeinteractioninsight_SyncErrors)
@@ -3859,6 +4231,19 @@ One-To-Many Relationship: [msdyn_knowledgesearchinsight msdyn_knowledgesearchins
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
+### <a name="BKMK_msdyn_locationrecord_SyncErrors"></a> msdyn_locationrecord_SyncErrors
+
+One-To-Many Relationship: [msdyn_locationrecord msdyn_locationrecord_SyncErrors](msdyn_locationrecord.md#BKMK_msdyn_locationrecord_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msdyn_locationrecord`|
+|ReferencedAttribute|`msdyn_locationrecordid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_msdyn_locationrecord`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
 ### <a name="BKMK_msdyn_mobileapp_SyncErrors"></a> msdyn_mobileapp_SyncErrors
 
 One-To-Many Relationship: [msdyn_mobileapp msdyn_mobileapp_SyncErrors](msdyn_mobileapp.md#BKMK_msdyn_mobileapp_SyncErrors)
@@ -3882,6 +4267,19 @@ One-To-Many Relationship: [msdyn_modulerundetail msdyn_modulerundetail_SyncError
 |ReferencedAttribute|`msdyn_modulerundetailid`|
 |ReferencingAttribute|`regardingobjectid`|
 |ReferencingEntityNavigationPropertyName|`regardingobjectid_msdyn_modulerundetail`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msdyn_nativeextension_SyncErrors"></a> msdyn_nativeextension_SyncErrors
+
+One-To-Many Relationship: [msdyn_nativeextension msdyn_nativeextension_SyncErrors](msdyn_nativeextension.md#BKMK_msdyn_nativeextension_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msdyn_nativeextension`|
+|ReferencedAttribute|`msdyn_nativeextensionid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_msdyn_nativeextension`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
@@ -4067,6 +4465,19 @@ One-To-Many Relationship: [msdyn_pmview msdyn_pmview_SyncErrors](msdyn_pmview.md
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
+### <a name="BKMK_msdyn_powerappswrapbuild_SyncErrors"></a> msdyn_powerappswrapbuild_SyncErrors
+
+One-To-Many Relationship: [msdyn_powerappswrapbuild msdyn_powerappswrapbuild_SyncErrors](msdyn_powerappswrapbuild.md#BKMK_msdyn_powerappswrapbuild_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msdyn_powerappswrapbuild`|
+|ReferencedAttribute|`msdyn_powerappswrapbuildid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_msdyn_powerappswrapbuild`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
 ### <a name="BKMK_msdyn_qna_SyncErrors"></a> msdyn_qna_SyncErrors
 
 One-To-Many Relationship: [msdyn_qna msdyn_qna_SyncErrors](msdyn_qna.md#BKMK_msdyn_qna_SyncErrors)
@@ -4090,6 +4501,45 @@ One-To-Many Relationship: [msdyn_richtextfile msdyn_richtextfile_SyncErrors](msd
 |ReferencedAttribute|`msdyn_richtextfileid`|
 |ReferencingAttribute|`regardingobjectid`|
 |ReferencingEntityNavigationPropertyName|`regardingobjectid_msdyn_richtextfile`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msdyn_rtestructuredtemplate_SyncErrors"></a> msdyn_rtestructuredtemplate_SyncErrors
+
+One-To-Many Relationship: [msdyn_rtestructuredtemplate msdyn_rtestructuredtemplate_SyncErrors](msdyn_rtestructuredtemplate.md#BKMK_msdyn_rtestructuredtemplate_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msdyn_rtestructuredtemplate`|
+|ReferencedAttribute|`msdyn_rtestructuredtemplateid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_msdyn_rtestructuredtemplate`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msdyn_rtestructuredtemplateconfig_SyncErrors"></a> msdyn_rtestructuredtemplateconfig_SyncErrors
+
+One-To-Many Relationship: [msdyn_rtestructuredtemplateconfig msdyn_rtestructuredtemplateconfig_SyncErrors](msdyn_rtestructuredtemplateconfig.md#BKMK_msdyn_rtestructuredtemplateconfig_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msdyn_rtestructuredtemplateconfig`|
+|ReferencedAttribute|`msdyn_rtestructuredtemplateconfigid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_msdyn_rtestructuredtemplateconfig`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msdyn_rtetemplatemapping_SyncErrors"></a> msdyn_rtetemplatemapping_SyncErrors
+
+One-To-Many Relationship: [msdyn_rtetemplatemapping msdyn_rtetemplatemapping_SyncErrors](msdyn_rtetemplatemapping.md#BKMK_msdyn_rtetemplatemapping_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msdyn_rtetemplatemapping`|
+|ReferencedAttribute|`msdyn_rtetemplatemappingid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_msdyn_rtetemplatemapping`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
@@ -4509,71 +4959,6 @@ One-To-Many Relationship: [postfollow PostFollow_SyncErrors](postfollow.md#BKMK_
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `Cascade`<br />Reparent: `Cascade`<br />RollupView: `NoCascade`<br />Share: `Cascade`<br />Unshare: `Cascade`|
 
-### <a name="BKMK_powerbidataset_SyncErrors"></a> powerbidataset_SyncErrors
-
-One-To-Many Relationship: [powerbidataset powerbidataset_SyncErrors](powerbidataset.md#BKMK_powerbidataset_SyncErrors)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`powerbidataset`|
-|ReferencedAttribute|`powerbidatasetid`|
-|ReferencingAttribute|`regardingobjectid`|
-|ReferencingEntityNavigationPropertyName|`regardingobjectid_powerbidataset`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_powerbidatasetapdx_SyncErrors"></a> powerbidatasetapdx_SyncErrors
-
-One-To-Many Relationship: [powerbidatasetapdx powerbidatasetapdx_SyncErrors](powerbidatasetapdx.md#BKMK_powerbidatasetapdx_SyncErrors)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`powerbidatasetapdx`|
-|ReferencedAttribute|`powerbidatasetapdxid`|
-|ReferencingAttribute|`regardingobjectid`|
-|ReferencingEntityNavigationPropertyName|`regardingobjectid_powerbidatasetapdx`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_powerbimashupparameter_SyncErrors"></a> powerbimashupparameter_SyncErrors
-
-One-To-Many Relationship: [powerbimashupparameter powerbimashupparameter_SyncErrors](powerbimashupparameter.md#BKMK_powerbimashupparameter_SyncErrors)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`powerbimashupparameter`|
-|ReferencedAttribute|`powerbimashupparameterid`|
-|ReferencingAttribute|`regardingobjectid`|
-|ReferencingEntityNavigationPropertyName|`regardingobjectid_powerbimashupparameter`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_powerbireport_SyncErrors"></a> powerbireport_SyncErrors
-
-One-To-Many Relationship: [powerbireport powerbireport_SyncErrors](powerbireport.md#BKMK_powerbireport_SyncErrors)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`powerbireport`|
-|ReferencedAttribute|`powerbireportid`|
-|ReferencingAttribute|`regardingobjectid`|
-|ReferencingEntityNavigationPropertyName|`regardingobjectid_powerbireport`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_powerbireportapdx_SyncErrors"></a> powerbireportapdx_SyncErrors
-
-One-To-Many Relationship: [powerbireportapdx powerbireportapdx_SyncErrors](powerbireportapdx.md#BKMK_powerbireportapdx_SyncErrors)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`powerbireportapdx`|
-|ReferencedAttribute|`powerbireportapdxid`|
-|ReferencingAttribute|`regardingobjectid`|
-|ReferencingEntityNavigationPropertyName|`regardingobjectid_powerbireportapdx`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
 ### <a name="BKMK_powerfxrule_SyncErrors"></a> powerfxrule_SyncErrors
 
 One-To-Many Relationship: [powerfxrule powerfxrule_SyncErrors](powerfxrule.md#BKMK_powerfxrule_SyncErrors)
@@ -4688,6 +5073,19 @@ One-To-Many Relationship: [powerpagessourcefile powerpagessourcefile_SyncErrors]
 |ReferencedAttribute|`powerpagessourcefileid`|
 |ReferencingAttribute|`regardingobjectid`|
 |ReferencingEntityNavigationPropertyName|`regardingobjectid_powerpagessourcefile`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_powerpagesusermapping_SyncErrors"></a> powerpagesusermapping_SyncErrors
+
+One-To-Many Relationship: [powerpagesusermapping powerpagesusermapping_SyncErrors](powerpagesusermapping.md#BKMK_powerpagesusermapping_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`powerpagesusermapping`|
+|ReferencedAttribute|`powerpagesusermappingid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_powerpagesusermapping`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
@@ -5302,6 +5700,58 @@ One-To-Many Relationship: [sideloadedaiplugin sideloadedaiplugin_SyncErrors](sid
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
+### <a name="BKMK_skill_SyncErrors"></a> skill_SyncErrors
+
+One-To-Many Relationship: [skill skill_SyncErrors](skill.md#BKMK_skill_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`skill`|
+|ReferencedAttribute|`skillid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_skill`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_skillmetadata_SyncErrors"></a> skillmetadata_SyncErrors
+
+One-To-Many Relationship: [skillmetadata skillmetadata_SyncErrors](skillmetadata.md#BKMK_skillmetadata_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`skillmetadata`|
+|ReferencedAttribute|`skillmetadataid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_skillmetadata`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_skillresource_SyncErrors"></a> skillresource_SyncErrors
+
+One-To-Many Relationship: [skillresource skillresource_SyncErrors](skillresource.md#BKMK_skillresource_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`skillresource`|
+|ReferencedAttribute|`skillresourceid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_skillresource`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_skillrolemapping_SyncErrors"></a> skillrolemapping_SyncErrors
+
+One-To-Many Relationship: [skillrolemapping skillrolemapping_SyncErrors](skillrolemapping.md#BKMK_skillrolemapping_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`skillrolemapping`|
+|ReferencedAttribute|`skillrolemappingid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_skillrolemapping`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
 ### <a name="BKMK_SLA_SyncErrors"></a> SLA_SyncErrors
 
 One-To-Many Relationship: [sla SLA_SyncErrors](sla.md#BKMK_SLA_SyncErrors)
@@ -5429,6 +5879,19 @@ One-To-Many Relationship: [solutioncomponentrelationshipconfiguration solutionco
 |ReferencedAttribute|`solutioncomponentrelationshipconfigurationid`|
 |ReferencingAttribute|`regardingobjectid`|
 |ReferencingEntityNavigationPropertyName|`regardingobjectid_solutioncomponentrelationshipconfiguration`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_sourcecontroloperationtracking_SyncErrors"></a> sourcecontroloperationtracking_SyncErrors
+
+One-To-Many Relationship: [sourcecontroloperationtracking sourcecontroloperationtracking_SyncErrors](sourcecontroloperationtracking.md#BKMK_sourcecontroloperationtracking_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`sourcecontroloperationtracking`|
+|ReferencedAttribute|`sourcecontroloperationtrackingid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_sourcecontroloperationtracking`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 

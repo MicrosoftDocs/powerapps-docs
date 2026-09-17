@@ -2,8 +2,9 @@
 title: "Recurring Appointment (RecurringAppointmentMaster) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Recurring Appointment (RecurringAppointmentMaster) table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -106,6 +107,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [RecurrencePatternType](#BKMK_RecurrencePatternType)
 - [RegardingObjectId](#BKMK_RegardingObjectId)
 - [RegardingObjectTypeCode](#BKMK_RegardingObjectTypeCode)
+- [related](#BKMK_related)
 - [RequiredAttendees](#BKMK_RequiredAttendees)
 - [SeriesStatus](#BKMK_SeriesStatus)
 - [SortDate](#BKMK_SortDate)
@@ -840,6 +842,19 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`regardingobjecttypecode`|
 |RequiredLevel|None|
 |Type|EntityName|
+
+### <a name="BKMK_related"></a> related
+
+|Property|Value|
+|---|---|
+|Description|**Enter the related records for the recurring appointment.**|
+|DisplayName|**Related**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`related`|
+|RequiredLevel|None|
+|Type|PartyList|
+|Targets|account, contact, queue, systemuser|
 
 ### <a name="BKMK_RequiredAttendees"></a> RequiredAttendees
 

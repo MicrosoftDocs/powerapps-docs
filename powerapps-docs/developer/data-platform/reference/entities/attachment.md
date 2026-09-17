@@ -2,8 +2,9 @@
 title: "Attachment table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Attachment table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -21,6 +22,7 @@ Messages represent operations that can be performed on the table. They may also 
 | ---- | ----- |----- |
 | `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `Restore`<br />Event: True |<xref:Microsoft.Dynamics.CRM.Restore?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 
 ## Properties
 
@@ -137,6 +139,7 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 
 - [FilePointer](#BKMK_FilePointer)
 - [FileSize](#BKMK_FileSize)
+- [IsCompressed](#BKMK_IsCompressed)
 - [Prefix](#BKMK_Prefix)
 - [StoragePointer](#BKMK_StoragePointer)
 - [VersionNumber](#BKMK_VersionNumber)
@@ -171,6 +174,22 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |Type|Integer|
 |MaxValue|1000000000|
 |MinValue|0|
+
+### <a name="BKMK_IsCompressed"></a> IsCompressed
+
+|Property|Value|
+|---|---|
+|Description|**Indicates if file is compressed in the storage**|
+|DisplayName|**Is Compressed**|
+|IsValidForForm|False|
+|IsValidForRead|False|
+|LogicalName|`iscompressed`|
+|RequiredLevel|None|
+|Type|Boolean|
+|GlobalChoiceName|`attachment_iscompressed`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_Prefix"></a> Prefix
 
@@ -225,6 +244,7 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 These relationships are one-to-many. Listed by **SchemaName**.
 
 - [attachment_activity_mime_attachments](#BKMK_attachment_activity_mime_attachments)
+- [attachment_DeletedItemReferences](#BKMK_attachment_DeletedItemReferences)
 - [Attachment_SyncErrors](#BKMK_Attachment_SyncErrors)
 
 ### <a name="BKMK_attachment_activity_mime_attachments"></a> attachment_activity_mime_attachments
@@ -237,6 +257,18 @@ Many-To-One Relationship: [activitymimeattachment attachment_activity_mime_attac
 |ReferencingAttribute|`attachmentid`|
 |ReferencedEntityNavigationPropertyName|`attachment_activity_mime_attachments`|
 |IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_attachment_DeletedItemReferences"></a> attachment_DeletedItemReferences
+
+Many-To-One Relationship: [deleteditemreference attachment_DeletedItemReferences](deleteditemreference.md#BKMK_attachment_DeletedItemReferences)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`deleteditemreference`|
+|ReferencingAttribute|`deletedobject`|
+|ReferencedEntityNavigationPropertyName|`attachment_DeletedItemReferences`|
+|IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_Attachment_SyncErrors"></a> Attachment_SyncErrors

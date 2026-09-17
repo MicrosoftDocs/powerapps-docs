@@ -1,20 +1,21 @@
 ---
-title: "Copilot (bot) table/entity reference (Microsoft Dataverse)"
-description: "Includes schema information and supported messages for the Copilot (bot) table/entity with Microsoft Dataverse."
+title: "Agent (bot) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the Agent (bot) table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
 
-# Copilot (bot) table/entity reference (Microsoft Dataverse)
+# Agent (bot) table/entity reference (Microsoft Dataverse)
 
-Represents a copilot created in Copilot Studio. https://copilotstudio.microsoft.com/
+Represents an agent created in Copilot Studio. https://copilotstudio.microsoft.com/
 
 ## Messages
 
-The following table lists the messages for the Copilot (bot) table.
+The following table lists the messages for the Agent (bot) table.
 Messages represent operations that can be performed on the table. They may also be events.
 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
@@ -49,12 +50,12 @@ Messages represent operations that can be performed on the table. They may also 
 
 ## Properties
 
-The following table lists selected properties for the Copilot (bot) table.
+The following table lists selected properties for the Agent (bot) table.
 
 |Property|Value|
 | --- | --- |
-| **DisplayName** | **Copilot** |
-| **DisplayCollectionName** | **Copilots** |
+| **DisplayName** | **Agent** |
+| **DisplayCollectionName** | **Agents** |
 | **SchemaName** | `bot` |
 | **CollectionSchemaName** | `bots` |
 | **EntitySetName** | `bots`|
@@ -103,7 +104,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**Defines which users may interact with the bot.**|
+|Description|**Defines which users may interact with the agent.**|
 |DisplayName|**Access Control Policy**|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -118,7 +119,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Value|Label|
 |---|---|
 |0|**Any**|
-|1|**Copilot readers**|
+|1|**Agent readers**|
 |2|**Group membership**|
 |3|**Any (multi-tenant)**|
 
@@ -160,7 +161,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**Defines how the bot should be authenticated to the user.**|
+|Description|**Defines how the agent should be authenticated to the user.**|
 |DisplayName|**Authentication Mode**|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -177,14 +178,14 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |0|**Unspecified**|
 |1|**None**|
 |2|**Integrated**|
-|3|**Custom Azure Active Directory**|
+|3|**Custom Entra ID**|
 |4|**Generic OAuth2**|
 
 ### <a name="BKMK_authenticationtrigger"></a> authenticationtrigger
 
 |Property|Value|
 |---|---|
-|Description|**Defines at which point authentication for the bot should be triggered. Security can be enforced at the bot entry point, removing the need for explicit authentication nodes in the dialog flow.**|
+|Description|**Defines at which point authentication for the agent should be triggered. Security can be enforced at the agent entry point, removing the need for explicit authentication nodes in the dialog flow.**|
 |DisplayName|**Authentication trigger**|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -205,7 +206,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**Contains a comma-delimited list of up to 20 Azure Active Directory Group IDs that are allowed to interact with the bot. This field is ignored if Access Control Policy is not set to Group membership.**|
+|Description|**Contains a comma-delimited list of up to 20 Entra ID Group IDs that are allowed to interact with the agent. This field is ignored if Access Control Policy is not set to Group membership.**|
 |DisplayName|**Authorized Security Groups**|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -222,7 +223,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**Unique identifier of the Copilot.**|
+|Description|**Unique identifier of the agent.**|
 |DisplayName|**Bot**|
 |IsValidForForm|False|
 |IsValidForRead|True|
@@ -262,7 +263,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |FormatName|Text|
 |ImeMode|Auto|
 |IsLocalizable|False|
-|MaxLength|102400|
+|MaxLength|136533|
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
@@ -294,7 +295,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**The language identifier (LCID) of this Copilot.**|
+|Description|**The language identifier (LCID) of this Agent.**|
 |DisplayName|**Language**|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -309,6 +310,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Value|Label|
 |---|---|
 |1025|**Arabic**|
+|1026|**Bulgarian**|
+|1027|**Catalan**|
 |1028|**Chinese (Traditional)**|
 |1029|**Czech**|
 |1030|**Danish**|
@@ -319,6 +322,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |1035|**Finnish**|
 |1036|**French**|
 |1037|**Hebrew**|
+|1038|**Hungarian**|
 |1040|**Italian**|
 |1041|**Japanese**|
 |1042|**Korean**|
@@ -326,24 +330,48 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |1044|**Norwegian**|
 |1045|**Polish**|
 |1046|**Portuguese (Brazilian)**|
+|1048|**Romanian**|
 |1049|**Russian**|
+|1050|**Croatian**|
+|1051|**Slovak**|
 |1053|**Swedish**|
 |1054|**Thai**|
 |1055|**Turkish**|
 |1057|**Indonesian**|
+|1058|**Ukrainian**|
+|1060|**Slovenian**|
+|1061|**Estonian**|
+|1062|**Latvian**|
+|1063|**Lithuanian**|
+|1066|**Vietnamese**|
+|1069|**Basque**|
 |1081|**Hindi**|
+|1086|**Malaysian**|
+|1087|**Kazakh**|
+|1110|**Galician**|
 |2052|**Chinese (Simplified)**|
+|2055|**German (Switzerland)**|
 |2057|**English (United Kingdom)**|
+|2058|**Spanish (Mexico)**|
+|2067|**Dutch (Belgium)**|
 |2070|**Portuguese (Portugal)**|
+|2074|**Serbian (Latin)**|
+|3076|**Chinese (Hong Kong SAR)**|
+|3079|**German (Austria)**|
 |3081|**English (Australia)**|
 |3084|**French (Canada)**|
+|3098|**Serbian (Cyrillic)**|
+|4108|**French (Switzerland)**|
+|5129|**English (New Zealand)**|
+|16393|**English (India)**|
+|20490|**Spanish (Puerto Rico)**|
 |21514|**Spanish (United States)**|
 
 ### <a name="BKMK_name"></a> name
 
 |Property|Value|
 |---|---|
-|Description|**The display name of the Copilot.**|
+|Description|**The display name of the agent.**|
 |DisplayName|**Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -419,7 +447,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**Unique identifier for Connection Reference associated with Copilot.**|
+|Description|**Unique identifier for Connection Reference associated with Agent.**|
 |DisplayName|**Provider connection reference**|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -445,7 +473,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**Date and time when the Copilot was last published**|
+|Description|**Date and time when the agent was last published**|
 |DisplayName|**Published On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -483,7 +511,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**Unique name identifying the Copilot.**|
+|Description|**Unique name identifying the agent.**|
 |DisplayName|**SchemaName**|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -500,7 +528,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**Status of the Copilot**|
+|Description|**Status of the agent**|
 |DisplayName|**Status**|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -521,7 +549,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**Reason for the status of the Copilot**|
+|Description|**Reason for the status of the agent**|
 |DisplayName|**Status Reason**|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -560,6 +588,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Value|Label|
 |---|---|
 |1025|**Arabic**|
+|1026|**Bulgarian**|
+|1027|**Catalan**|
 |1028|**Chinese (Traditional)**|
 |1029|**Czech**|
 |1030|**Danish**|
@@ -570,6 +600,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |1035|**Finnish**|
 |1036|**French**|
 |1037|**Hebrew**|
+|1038|**Hungarian**|
 |1040|**Italian**|
 |1041|**Japanese**|
 |1042|**Korean**|
@@ -577,17 +608,41 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |1044|**Norwegian**|
 |1045|**Polish**|
 |1046|**Portuguese (Brazilian)**|
+|1048|**Romanian**|
 |1049|**Russian**|
+|1050|**Croatian**|
+|1051|**Slovak**|
 |1053|**Swedish**|
 |1054|**Thai**|
 |1055|**Turkish**|
 |1057|**Indonesian**|
+|1058|**Ukrainian**|
+|1060|**Slovenian**|
+|1061|**Estonian**|
+|1062|**Latvian**|
+|1063|**Lithuanian**|
+|1066|**Vietnamese**|
+|1069|**Basque**|
 |1081|**Hindi**|
+|1086|**Malaysian**|
+|1087|**Kazakh**|
+|1110|**Galician**|
 |2052|**Chinese (Simplified)**|
+|2055|**German (Switzerland)**|
 |2057|**English (United Kingdom)**|
+|2058|**Spanish (Mexico)**|
+|2067|**Dutch (Belgium)**|
 |2070|**Portuguese (Portugal)**|
+|2074|**Serbian (Latin)**|
+|3076|**Chinese (Hong Kong SAR)**|
+|3079|**German (Austria)**|
 |3081|**English (Australia)**|
 |3084|**French (Canada)**|
+|3098|**Serbian (Cyrillic)**|
+|4108|**French (Switzerland)**|
+|5129|**English (New Zealand)**|
+|16393|**English (India)**|
+|20490|**Spanish (Puerto Rico)**|
 |21514|**Spanish (United States)**|
 
 ### <a name="BKMK_SynchronizationStatus"></a> SynchronizationStatus

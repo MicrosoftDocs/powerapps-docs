@@ -2,8 +2,9 @@
 title: "DVTableSearchEntity table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the DVTableSearchEntity table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -277,8 +278,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**Contains reference from DVTableSearch to UnstructuredFileSearchEntity**|
-|DisplayName||
+|Description|**Lookup to UnstructuredFileSearchEntity**|
+|DisplayName|**unstructuredfilesearchentityId**|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`unstructuredfilesearchentityid`|

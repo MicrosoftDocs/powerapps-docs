@@ -2,8 +2,9 @@
 title: "Article (KbArticle) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Article (KbArticle) table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -23,6 +24,7 @@ Messages represent operations that can be performed on the table. They may also 
 | `Create`<br />Event: True |`POST` /kbarticles<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `Delete`<br />Event: True |`DELETE` /kbarticles(*kbarticleid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
 | `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `Restore`<br />Event: True |<xref:Microsoft.Dynamics.CRM.Restore?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 | `Retrieve`<br />Event: True |`GET` /kbarticles(*kbarticleid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
 | `RetrieveByTopIncidentProductKbArticle`<br />Event: False | |<xref:Microsoft.Crm.Sdk.Messages.RetrieveByTopIncidentProductKbArticleRequest>|
 | `RetrieveByTopIncidentSubjectKbArticle`<br />Event: False |<xref:Microsoft.Dynamics.CRM.RetrieveByTopIncidentSubjectKbArticle?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrieveByTopIncidentSubjectKbArticleRequest>|
@@ -794,6 +796,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [KbArticle_AsyncOperations](#BKMK_KbArticle_AsyncOperations)
 - [KbArticle_BulkDeleteFailures](#BKMK_KbArticle_BulkDeleteFailures)
 - [kbarticle_comments](#BKMK_kbarticle_comments)
+- [kbarticle_DeletedItemReferences](#BKMK_kbarticle_DeletedItemReferences)
 - [KbArticle_DuplicateBaseRecord](#BKMK_KbArticle_DuplicateBaseRecord)
 - [KbArticle_DuplicateMatchingRecord](#BKMK_KbArticle_DuplicateMatchingRecord)
 - [kbarticle_principalobjectattributeaccess](#BKMK_kbarticle_principalobjectattributeaccess)
@@ -847,6 +850,18 @@ Many-To-One Relationship: [kbarticlecomment kbarticle_comments](kbarticlecomment
 |ReferencingAttribute|`kbarticleid`|
 |ReferencedEntityNavigationPropertyName|`kbarticle_comments`|
 |IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_kbarticle_DeletedItemReferences"></a> kbarticle_DeletedItemReferences
+
+Many-To-One Relationship: [deleteditemreference kbarticle_DeletedItemReferences](deleteditemreference.md#BKMK_kbarticle_DeletedItemReferences)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`deleteditemreference`|
+|ReferencingAttribute|`deletedobject`|
+|ReferencedEntityNavigationPropertyName|`kbarticle_DeletedItemReferences`|
+|IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_KbArticle_DuplicateBaseRecord"></a> KbArticle_DuplicateBaseRecord
