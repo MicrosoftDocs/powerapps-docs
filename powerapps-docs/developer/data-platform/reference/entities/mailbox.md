@@ -2,8 +2,9 @@
 title: "Mailbox table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Mailbox table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -26,6 +27,7 @@ Messages represent operations that can be performed on the table. They may also 
 | `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `GrantAccess`<br />Event: False |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `ModifyAccess`<br />Event: False |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
+| `Restore`<br />Event: True |<xref:Microsoft.Dynamics.CRM.Restore?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 | `Retrieve`<br />Event: False |`GET` /mailboxes(*mailboxid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
 | `RetrieveMultiple`<br />Event: False |`GET` /mailboxes<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 | `RetrievePrincipalAccess`<br />Event: False |<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
@@ -2291,6 +2293,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [email_sendermailboxid_mailbox](#BKMK_email_sendermailboxid_mailbox)
 - [Mailbox_Annotation](#BKMK_Mailbox_Annotation)
 - [mailbox_asyncoperations](#BKMK_mailbox_asyncoperations)
+- [mailbox_DeletedItemReferences](#BKMK_mailbox_DeletedItemReferences)
 - [mailbox_email_ReceivingMailboxId](#BKMK_mailbox_email_ReceivingMailboxId)
 - [mailbox_FileAttachments](#BKMK_mailbox_FileAttachments)
 - [Mailbox_MailboxTrackingFolder](#BKMK_Mailbox_MailboxTrackingFolder)
@@ -2382,6 +2385,18 @@ Many-To-One Relationship: [asyncoperation mailbox_asyncoperations](asyncoperatio
 |ReferencingAttribute|`regardingobjectid`|
 |ReferencedEntityNavigationPropertyName|`mailbox_asyncoperations`|
 |IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_mailbox_DeletedItemReferences"></a> mailbox_DeletedItemReferences
+
+Many-To-One Relationship: [deleteditemreference mailbox_DeletedItemReferences](deleteditemreference.md#BKMK_mailbox_DeletedItemReferences)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`deleteditemreference`|
+|ReferencingAttribute|`deletedobject`|
+|ReferencedEntityNavigationPropertyName|`mailbox_DeletedItemReferences`|
+|IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_mailbox_email_ReceivingMailboxId"></a> mailbox_email_ReceivingMailboxId

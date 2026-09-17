@@ -2,8 +2,9 @@
 title: "Phone Call (PhoneCall) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Phone Call (PhoneCall) table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -26,6 +27,7 @@ Messages represent operations that can be performed on the table. They may also 
 | `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
+| `Restore`<br />Event: True |<xref:Microsoft.Dynamics.CRM.Restore?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 | `Retrieve`<br />Event: True |`GET` /phonecalls(*activityid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
 | `RetrieveMultiple`<br />Event: True |`GET` /phonecalls<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 | `RetrievePrincipalAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
@@ -79,6 +81,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [ProcessId](#BKMK_ProcessId)
 - [RegardingObjectId](#BKMK_RegardingObjectId)
 - [RegardingObjectTypeCode](#BKMK_RegardingObjectTypeCode)
+- [related](#BKMK_related)
 - [ScheduledEnd](#BKMK_ScheduledEnd)
 - [ScheduledStart](#BKMK_ScheduledStart)
 - [SLAId](#BKMK_SLAId)
@@ -431,6 +434,19 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`regardingobjecttypecode`|
 |RequiredLevel|None|
 |Type|EntityName|
+
+### <a name="BKMK_related"></a> related
+
+|Property|Value|
+|---|---|
+|Description|**Enter the related records for the phone call.**|
+|DisplayName|**Related**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`related`|
+|RequiredLevel|None|
+|Type|PartyList|
+|Targets|account, contact, queue, systemuser|
 
 ### <a name="BKMK_ScheduledEnd"></a> ScheduledEnd
 
@@ -1306,6 +1322,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [PhoneCall_BulkDeleteFailures](#BKMK_PhoneCall_BulkDeleteFailures)
 - [phonecall_connections1](#BKMK_phonecall_connections1)
 - [phonecall_connections2](#BKMK_phonecall_connections2)
+- [phonecall_DeletedItemReferences](#BKMK_phonecall_DeletedItemReferences)
 - [PhoneCall_DuplicateBaseRecord](#BKMK_PhoneCall_DuplicateBaseRecord)
 - [PhoneCall_DuplicateMatchingRecord](#BKMK_PhoneCall_DuplicateMatchingRecord)
 - [phonecall_PostFollows](#BKMK_phonecall_PostFollows)
@@ -1399,6 +1416,18 @@ Many-To-One Relationship: [connection phonecall_connections2](connection.md#BKMK
 |ReferencedEntityNavigationPropertyName|`phonecall_connections2`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 100<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_phonecall_DeletedItemReferences"></a> phonecall_DeletedItemReferences
+
+Many-To-One Relationship: [deleteditemreference phonecall_DeletedItemReferences](deleteditemreference.md#BKMK_phonecall_DeletedItemReferences)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`deleteditemreference`|
+|ReferencingAttribute|`deletedobject`|
+|ReferencedEntityNavigationPropertyName|`phonecall_DeletedItemReferences`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_PhoneCall_DuplicateBaseRecord"></a> PhoneCall_DuplicateBaseRecord
 

@@ -5,7 +5,7 @@ description: Step-by-step instructions for how to create a relationship between 
 author: lancedMicrosoft
 ms.component: cds
 ms.topic: how-to
-ms.date: 09/14/2026
+ms.date: 09/16/2026
 ms.subservice: dataverse-maker
 ms.author: matp
 search.audienceType: 
@@ -19,11 +19,13 @@ Data in one table often relates to data in another table. For example, you might
 
 ## Define a relationship
 
-You can create several types of relationships from one table to another (or between a table and itself). Each table can have a relationship with more than one table, and each table can have more than one relationship to another table. Some common relationship types are:
+You can create several types of relationships from one table to another (or between a table and itself). Each table can have a relationship with more than one table, and each table can have more than one relationship to another table. 
 
-* **Many-to-one** - In this type of relationship, each row in table A can match more than one row in table B, but each row in table B can match only one row in table A. For example, a class has a single classroom. This is the most common type of relationship and is shown in the column list as a **Lookup column**
-* **One-to-many** - In this type of relationship, each row in table B can match more than one row in table A, but each row in table A can match only one row in table B. For example, a single teacher, teaches many classes.
-* **Many-to-many** - In this type of relationship, each row in table A can match more than one row in table B, and vice versa. For example, students attend many classes, and each class can have multiple students.
+Imagine you have class, classroom, and student tables. The following common relationship types you use could be the following:
+
+* **Many-to-one** - Each row in the **Class** table can match only one row in the **Classroom** table, but each classroom can match multiple classes. For example, each class has one classroom, while a classroom can host many classes. The **Class table** contains the lookup column.
+* **One-to-many** - Each row in the **Classroom** table can match multiple rows in the **Class** table, but each class can match only one classroom. For example, one classroom can host many classes.
+* **Many-to-many** - Each row in the **Student** table can match multiple rows in the **Class** table, and each row in the **Class** table can match multiple rows in the **Student table**. For example, each student can attend many classes, and each class can have multiple students.
 
 Additionally, you can set advanced cascading behaviors on many-to-one and one-to-many relationships whenever an action is taken on the parent table.
 

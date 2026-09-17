@@ -2,8 +2,9 @@
 title: "Work Queue (workqueue) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Work Queue (workqueue) table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -28,6 +29,7 @@ Messages represent operations that can be performed on the table. They may also 
 | `Delete`<br />Event: True |`DELETE` /workqueues(*workqueueid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
 | `Dequeue`<br />Event: False |<xref:Microsoft.Dynamics.CRM.Dequeue?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 | `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `EnqueueWorkQueueItem`<br />Event: False |<xref:Microsoft.Dynamics.CRM.EnqueueWorkQueueItem?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 | `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|

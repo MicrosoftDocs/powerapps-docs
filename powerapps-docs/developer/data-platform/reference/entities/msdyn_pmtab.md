@@ -2,8 +2,9 @@
 title: "PM Tab (msdyn_pmtab) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the PM Tab (msdyn_pmtab) table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -854,4 +855,4 @@ Many-To-One Relationship: [syncerror msdyn_pmtab_SyncErrors](syncerror.md#BKMK_m
 
 [Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
-
+<xref:Microsoft.Dynamics.CRM.msdyn_pmtab?displayProperty=fullName>

@@ -2,8 +2,9 @@
 title: "Website (mspp_website) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Website (mspp_website) table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -199,7 +200,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |FormatName|Text|
 |ImeMode|Auto|
 |IsLocalizable|False|
-|MaxLength|100|
+|MaxLength|300|
 
 ### <a name="BKMK_mspp_parentwebsiteid"></a> mspp_parentwebsiteid
 

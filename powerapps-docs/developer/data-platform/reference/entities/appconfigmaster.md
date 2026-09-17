@@ -2,8 +2,9 @@
 title: "App Config Master (AppConfigMaster) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the App Config Master (AppConfigMaster) table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -21,6 +22,7 @@ Messages represent operations that can be performed on the table. They may also 
 | ---- | ----- |----- |
 | `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `Restore`<br />Event: True |<xref:Microsoft.Dynamics.CRM.Restore?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 | `Retrieve`<br />Event: True |`GET` /appconfigmasters(*appconfigmasterid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
 | `RetrieveMultiple`<br />Event: True |`GET` /appconfigmasters<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 
@@ -403,6 +405,9 @@ One-To-Many Relationship: [organization organization_appconfigmaster](organizati
 
 These relationships are one-to-many. Listed by **SchemaName**.
 
+- [appconfigmaster_appconfiginstance](#BKMK_appconfigmaster_appconfiginstance)
+- [appconfigmaster_DeletedItemReferences](#BKMK_appconfigmaster_DeletedItemReferences)
+
 ### <a name="BKMK_appconfigmaster_appconfiginstance"></a> appconfigmaster_appconfiginstance
 
 Many-To-One Relationship: [appconfiginstance appconfigmaster_appconfiginstance](appconfiginstance.md#BKMK_appconfigmaster_appconfiginstance)
@@ -413,6 +418,18 @@ Many-To-One Relationship: [appconfiginstance appconfigmaster_appconfiginstance](
 |ReferencingAttribute|`appconfigmasterid`|
 |ReferencedEntityNavigationPropertyName|`appconfigmaster_appconfiginstance`|
 |IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_appconfigmaster_DeletedItemReferences"></a> appconfigmaster_DeletedItemReferences
+
+Many-To-One Relationship: [deleteditemreference appconfigmaster_DeletedItemReferences](deleteditemreference.md#BKMK_appconfigmaster_DeletedItemReferences)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`deleteditemreference`|
+|ReferencingAttribute|`deletedobject`|
+|ReferencedEntityNavigationPropertyName|`appconfigmaster_DeletedItemReferences`|
+|IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 

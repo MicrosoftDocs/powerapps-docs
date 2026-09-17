@@ -2,8 +2,9 @@
 title: "Governance Configuration (GovernanceConfiguration) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Governance Configuration (GovernanceConfiguration) table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -28,6 +29,7 @@ Messages represent operations that can be performed on the table. They may also 
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 | `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
+| `Restore`<br />Event: True |<xref:Microsoft.Dynamics.CRM.Restore?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 | `Retrieve`<br />Event: True |`GET` /governanceconfigurations(*governanceconfigurationid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
 | `RetrieveMultiple`<br />Event: True |`GET` /governanceconfigurations<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 | `RetrievePrincipalAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
@@ -649,6 +651,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 
 - [governanceconfiguration_AsyncOperations](#BKMK_governanceconfiguration_AsyncOperations)
 - [governanceconfiguration_BulkDeleteFailures](#BKMK_governanceconfiguration_BulkDeleteFailures)
+- [governanceconfiguration_DeletedItemReferences](#BKMK_governanceconfiguration_DeletedItemReferences)
 - [governanceconfiguration_DuplicateBaseRecord](#BKMK_governanceconfiguration_DuplicateBaseRecord)
 - [governanceconfiguration_DuplicateMatchingRecord](#BKMK_governanceconfiguration_DuplicateMatchingRecord)
 - [governanceconfiguration_MailboxTrackingFolders](#BKMK_governanceconfiguration_MailboxTrackingFolders)
@@ -677,6 +680,18 @@ Many-To-One Relationship: [bulkdeletefailure governanceconfiguration_BulkDeleteF
 |ReferencingEntity|`bulkdeletefailure`|
 |ReferencingAttribute|`regardingobjectid`|
 |ReferencedEntityNavigationPropertyName|`governanceconfiguration_BulkDeleteFailures`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_governanceconfiguration_DeletedItemReferences"></a> governanceconfiguration_DeletedItemReferences
+
+Many-To-One Relationship: [deleteditemreference governanceconfiguration_DeletedItemReferences](deleteditemreference.md#BKMK_governanceconfiguration_DeletedItemReferences)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`deleteditemreference`|
+|ReferencingAttribute|`deletedobject`|
+|ReferencedEntityNavigationPropertyName|`governanceconfiguration_DeletedItemReferences`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 

@@ -2,8 +2,9 @@
 title: "Social Profile (SocialProfile) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Social Profile (SocialProfile) table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -27,6 +28,7 @@ Messages represent operations that can be performed on the table. They may also 
 | `GenerateSocialProfile`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GenerateSocialProfile?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GenerateSocialProfileRequest>|
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
+| `Restore`<br />Event: True |<xref:Microsoft.Dynamics.CRM.Restore?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 | `Retrieve`<br />Event: True |`GET` /socialprofiles(*socialprofileid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
 | `RetrieveMultiple`<br />Event: True |`GET` /socialprofiles<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 | `RetrievePrincipalAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
@@ -746,6 +748,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [SocialProfile_AsyncOperations](#BKMK_SocialProfile_AsyncOperations)
 - [socialprofile_connections1](#BKMK_socialprofile_connections1)
 - [socialprofile_connections2](#BKMK_socialprofile_connections2)
+- [socialprofile_DeletedItemReferences](#BKMK_socialprofile_DeletedItemReferences)
 - [SocialProfile_DuplicateBaseRecord](#BKMK_SocialProfile_DuplicateBaseRecord)
 - [SocialProfile_DuplicateMatchingRecord](#BKMK_SocialProfile_DuplicateMatchingRecord)
 - [socialprofile_principalobjectattributeaccess](#BKMK_socialprofile_principalobjectattributeaccess)
@@ -788,6 +791,18 @@ Many-To-One Relationship: [connection socialprofile_connections2](connection.md#
 |ReferencedEntityNavigationPropertyName|`socialprofile_connections2`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 100<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_socialprofile_DeletedItemReferences"></a> socialprofile_DeletedItemReferences
+
+Many-To-One Relationship: [deleteditemreference socialprofile_DeletedItemReferences](deleteditemreference.md#BKMK_socialprofile_DeletedItemReferences)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`deleteditemreference`|
+|ReferencingAttribute|`deletedobject`|
+|ReferencedEntityNavigationPropertyName|`socialprofile_DeletedItemReferences`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_SocialProfile_DuplicateBaseRecord"></a> SocialProfile_DuplicateBaseRecord
 

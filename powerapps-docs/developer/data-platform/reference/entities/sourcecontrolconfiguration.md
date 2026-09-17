@@ -2,8 +2,9 @@
 title: "Source Control Configuration (SourceControlConfiguration) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Source Control Configuration (SourceControlConfiguration) table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -55,6 +56,7 @@ The following table lists selected properties for the Source Control Configurati
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
+- [GitHubAppConfigId](#BKMK_GitHubAppConfigId)
 - [GitProvider](#BKMK_GitProvider)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [Name](#BKMK_Name)
@@ -66,6 +68,19 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [SourceControlConfigurationId](#BKMK_SourceControlConfigurationId)
 - [TTLInSeconds](#BKMK_TTLInSeconds)
 
+### <a name="BKMK_GitHubAppConfigId"></a> GitHubAppConfigId
+
+|Property|Value|
+|---|---|
+|Description|**Lookup referencing the GitHub App configuration**|
+|DisplayName|**GitHubAppConfigId**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`githubappconfigid`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|githubappconfig|
+
 ### <a name="BKMK_GitProvider"></a> GitProvider
 
 |Property|Value|
@@ -75,7 +90,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`gitprovider`|
-|RequiredLevel|SystemRequired|
+|RequiredLevel|ApplicationRequired|
 |Type|Picklist|
 |DefaultFormValue|0|
 |GlobalChoiceName|`sourcecontrolconfiguration_gitprovider`|
@@ -346,10 +361,24 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 
 These relationships are many-to-one. Listed by **SchemaName**.
 
+- [githubappconfig_sourcecontrolconfiguration_GitHubAppConfigId](#BKMK_githubappconfig_sourcecontrolconfiguration_GitHubAppConfigId)
 - [lk_sourcecontrolconfiguration_createdby](#BKMK_lk_sourcecontrolconfiguration_createdby)
 - [lk_sourcecontrolconfiguration_createdonbehalfby](#BKMK_lk_sourcecontrolconfiguration_createdonbehalfby)
 - [lk_sourcecontrolconfiguration_modifiedby](#BKMK_lk_sourcecontrolconfiguration_modifiedby)
 - [lk_sourcecontrolconfiguration_modifiedonbehalfby](#BKMK_lk_sourcecontrolconfiguration_modifiedonbehalfby)
+
+### <a name="BKMK_githubappconfig_sourcecontrolconfiguration_GitHubAppConfigId"></a> githubappconfig_sourcecontrolconfiguration_GitHubAppConfigId
+
+One-To-Many Relationship: [githubappconfig githubappconfig_sourcecontrolconfiguration_GitHubAppConfigId](githubappconfig.md#BKMK_githubappconfig_sourcecontrolconfiguration_GitHubAppConfigId)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`githubappconfig`|
+|ReferencedAttribute|`githubappconfigid`|
+|ReferencingAttribute|`githubappconfigid`|
+|ReferencingEntityNavigationPropertyName|`GitHubAppConfigId`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_lk_sourcecontrolconfiguration_createdby"></a> lk_sourcecontrolconfiguration_createdby
 

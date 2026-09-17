@@ -2,8 +2,9 @@
 title: "Source Control Component Payload (SourceControlComponentPayload) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Source Control Component Payload (SourceControlComponentPayload) table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -56,6 +57,7 @@ The following table lists selected properties for the Source Control Component P
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [ComponentId](#BKMK_ComponentId)
+- [EnvHashId](#BKMK_EnvHashId)
 - [GitHashId](#BKMK_GitHashId)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [LastSyncHashId](#BKMK_LastSyncHashId)
@@ -77,6 +79,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`componentid`|
 |RequiredLevel|Recommended|
 |Type|Uniqueidentifier|
+
+### <a name="BKMK_EnvHashId"></a> EnvHashId
+
+|Property|Value|
+|---|---|
+|Description|**This stores environment hash id.**|
+|DisplayName|**EnvHash Id**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`envhashid`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|2000|
 
 ### <a name="BKMK_GitHashId"></a> GitHashId
 

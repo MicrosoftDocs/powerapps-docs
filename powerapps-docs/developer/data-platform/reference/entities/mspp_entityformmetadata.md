@@ -2,8 +2,9 @@
 title: "Basic Form Metadata (mspp_entityformmetadata) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Basic Form Metadata (mspp_entityformmetadata) table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---

@@ -2,8 +2,9 @@
 title: "Managed Identity (ManagedIdentity) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Managed Identity (ManagedIdentity) table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -22,6 +23,7 @@ Messages represent operations that can be performed on the table. They may also 
 | `Assign`<br />Event: True |`PATCH` /managedidentities(*managedidentityid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
 | `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `Create`<br />Event: False |`POST` /managedidentities<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 | `Delete`<br />Event: True |`DELETE` /managedidentities(*managedidentityid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
 | `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
@@ -34,7 +36,9 @@ Messages represent operations that can be performed on the table. They may also 
 | `RevokeAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
 | `SetState`<br />Event: True |`PATCH` /managedidentities(*managedidentityid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `statecode` and `statuscode` properties. |<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 | `Update`<br />Event: False |`PATCH` /managedidentities(*managedidentityid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
+| `UpdateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 | `Upsert`<br />Event: False |`PATCH` /managedidentities(*managedidentityid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
+| `UpsertMultiple`<br />Event: False |<xref:Microsoft.Dynamics.CRM.UpsertMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpsertMultipleRequest>|
 
 ## Properties
 
@@ -70,6 +74,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
+- [ParentAgentBlueprintId](#BKMK_ParentAgentBlueprintId)
+- [ParentAgentIdentityId](#BKMK_ParentAgentIdentityId)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
 - [SubjectScope](#BKMK_SubjectScope)
@@ -262,6 +268,30 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`owneridtype`|
 |RequiredLevel|SystemRequired|
 |Type|EntityName|
+
+### <a name="BKMK_ParentAgentBlueprintId"></a> ParentAgentBlueprintId
+
+|Property|Value|
+|---|---|
+|Description|**ParentAgentBlueprintId**|
+|DisplayName|**ParentAgentBlueprintId**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`parentagentblueprintid`|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
+
+### <a name="BKMK_ParentAgentIdentityId"></a> ParentAgentIdentityId
+
+|Property|Value|
+|---|---|
+|Description|**ParentAgentIdentityId**|
+|DisplayName|**ParentAgentIdentityId**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`parentagentidentityid`|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
 
 ### <a name="BKMK_statecode"></a> statecode
 
@@ -826,9 +856,12 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [managedidentity_DuplicateMatchingRecord](#BKMK_managedidentity_DuplicateMatchingRecord)
 - [managedidentity_emailserverprofile_acsmanagedidentityid](#BKMK_managedidentity_emailserverprofile_acsmanagedidentityid)
 - [managedidentity_emailserverprofile_managedidentityid](#BKMK_managedidentity_emailserverprofile_managedidentityid)
+- [managedidentity_emailserverprofile_powerplatformmanagedidentityid](#BKMK_managedidentity_emailserverprofile_powerplatformmanagedidentityid)
 - [managedidentity_emailserverprofile_purviewmanagedidentityid](#BKMK_managedidentity_emailserverprofile_purviewmanagedidentityid)
+- [managedidentity_githubappconfig_ManagedIdentityId](#BKMK_managedidentity_githubappconfig_ManagedIdentityId)
 - [managedidentity_KeyVaultReference](#BKMK_managedidentity_KeyVaultReference)
 - [managedidentity_MailboxTrackingFolders](#BKMK_managedidentity_MailboxTrackingFolders)
+- [ManagedIdentity_MCPServer_ManagedIdentityId](#BKMK_ManagedIdentity_MCPServer_ManagedIdentityId)
 - [managedidentity_PluginAssembly](#BKMK_managedidentity_PluginAssembly)
 - [managedidentity_pluginpackage](#BKMK_managedidentity_pluginpackage)
 - [managedidentity_PrincipalObjectAttributeAccesses](#BKMK_managedidentity_PrincipalObjectAttributeAccesses)
@@ -922,6 +955,18 @@ Many-To-One Relationship: [emailserverprofile managedidentity_emailserverprofile
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_managedidentity_emailserverprofile_powerplatformmanagedidentityid"></a> managedidentity_emailserverprofile_powerplatformmanagedidentityid
+
+Many-To-One Relationship: [emailserverprofile managedidentity_emailserverprofile_powerplatformmanagedidentityid](emailserverprofile.md#BKMK_managedidentity_emailserverprofile_powerplatformmanagedidentityid)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`emailserverprofile`|
+|ReferencingAttribute|`powerplatformmanagedidentityid`|
+|ReferencedEntityNavigationPropertyName|`managedidentity_emailserverprofile_powerplatformmanagedidentityid`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 ### <a name="BKMK_managedidentity_emailserverprofile_purviewmanagedidentityid"></a> managedidentity_emailserverprofile_purviewmanagedidentityid
 
 Many-To-One Relationship: [emailserverprofile managedidentity_emailserverprofile_purviewmanagedidentityid](emailserverprofile.md#BKMK_managedidentity_emailserverprofile_purviewmanagedidentityid)
@@ -931,6 +976,18 @@ Many-To-One Relationship: [emailserverprofile managedidentity_emailserverprofile
 |ReferencingEntity|`emailserverprofile`|
 |ReferencingAttribute|`purviewmanagedidentityid`|
 |ReferencedEntityNavigationPropertyName|`managedidentity_emailserverprofile_purviewmanagedidentityid`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_managedidentity_githubappconfig_ManagedIdentityId"></a> managedidentity_githubappconfig_ManagedIdentityId
+
+Many-To-One Relationship: [githubappconfig managedidentity_githubappconfig_ManagedIdentityId](githubappconfig.md#BKMK_managedidentity_githubappconfig_ManagedIdentityId)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`githubappconfig`|
+|ReferencingAttribute|`managedidentityid`|
+|ReferencedEntityNavigationPropertyName|`managedidentity_githubappconfig_ManagedIdentityId`|
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
@@ -957,6 +1014,18 @@ Many-To-One Relationship: [mailboxtrackingfolder managedidentity_MailboxTracking
 |ReferencedEntityNavigationPropertyName|`managedidentity_MailboxTrackingFolders`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_ManagedIdentity_MCPServer_ManagedIdentityId"></a> ManagedIdentity_MCPServer_ManagedIdentityId
+
+Many-To-One Relationship: [mcpserver ManagedIdentity_MCPServer_ManagedIdentityId](mcpserver.md#BKMK_ManagedIdentity_MCPServer_ManagedIdentityId)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`mcpserver`|
+|ReferencingAttribute|`managedidentityid`|
+|ReferencedEntityNavigationPropertyName|`ManagedIdentity_MCPServer_ManagedIdentityId`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_managedidentity_PluginAssembly"></a> managedidentity_PluginAssembly
 

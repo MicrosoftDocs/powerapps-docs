@@ -2,8 +2,9 @@
 title: "Subject table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Subject table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -23,6 +24,7 @@ Messages represent operations that can be performed on the table. They may also 
 | `Create`<br />Event: True |`POST` /subjects<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `Delete`<br />Event: True |`DELETE` /subjects(*subjectid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
 | `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `Restore`<br />Event: True |<xref:Microsoft.Dynamics.CRM.Restore?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 | `Retrieve`<br />Event: True |`GET` /subjects(*subjectid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
 | `RetrieveMultiple`<br />Event: True |`GET` /subjects<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 | `Update`<br />Event: True |`PATCH` /subjects(*subjectid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
@@ -414,6 +416,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [msdyn_subject_knowledgearticletemplate_subjectid](#BKMK_msdyn_subject_knowledgearticletemplate_subjectid)
 - [Subject_AsyncOperations](#BKMK_Subject_AsyncOperations)
 - [Subject_BulkDeleteFailures](#BKMK_Subject_BulkDeleteFailures)
+- [subject_DeletedItemReferences](#BKMK_subject_DeletedItemReferences)
 - [subject_kb_articles](#BKMK_subject_kb_articles)
 - [subject_knowledgearticles](#BKMK_subject_knowledgearticles)
 - [subject_parent_subject](#BKMK_subject_parent_subject-one-to-many)
@@ -454,6 +457,18 @@ Many-To-One Relationship: [bulkdeletefailure Subject_BulkDeleteFailures](bulkdel
 |ReferencingAttribute|`regardingobjectid`|
 |ReferencedEntityNavigationPropertyName|`Subject_BulkDeleteFailures`|
 |IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_subject_DeletedItemReferences"></a> subject_DeletedItemReferences
+
+Many-To-One Relationship: [deleteditemreference subject_DeletedItemReferences](deleteditemreference.md#BKMK_subject_DeletedItemReferences)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`deleteditemreference`|
+|ReferencingAttribute|`deletedobject`|
+|ReferencedEntityNavigationPropertyName|`subject_DeletedItemReferences`|
+|IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_subject_kb_articles"></a> subject_kb_articles

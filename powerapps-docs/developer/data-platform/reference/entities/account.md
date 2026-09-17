@@ -2,8 +2,9 @@
 title: "Account table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Account table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -29,6 +30,7 @@ Messages represent operations that can be performed on the table. They may also 
 | `IsValidStateTransition`<br />Event: True |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 | `Merge`<br />Event: True |<xref:Microsoft.Dynamics.CRM.Merge?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.MergeRequest>|
 | `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
+| `Restore`<br />Event: True |<xref:Microsoft.Dynamics.CRM.Restore?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 | `Retrieve`<br />Event: True |`GET` /accounts(*accountid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
 | `RetrieveMultiple`<br />Event: True |`GET` /accounts<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 | `RetrievePrincipalAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
@@ -3114,6 +3116,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [account_connections1](#BKMK_account_connections1)
 - [account_connections2](#BKMK_account_connections2)
 - [Account_CustomerAddress](#BKMK_Account_CustomerAddress)
+- [account_DeletedItemReferences](#BKMK_account_DeletedItemReferences)
 - [Account_DuplicateBaseRecord](#BKMK_Account_DuplicateBaseRecord)
 - [Account_DuplicateMatchingRecord](#BKMK_Account_DuplicateMatchingRecord)
 - [Account_Email_EmailSender](#BKMK_Account_Email_EmailSender)
@@ -3138,6 +3141,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [contact_customer_accounts](#BKMK_contact_customer_accounts)
 - [msa_account_managingpartner](#BKMK_msa_account_managingpartner-one-to-many)
 - [msa_contact_managingpartner](#BKMK_msa_contact_managingpartner)
+- [powerpagesusermapping_customer_accounts](#BKMK_powerpagesusermapping_customer_accounts)
 - [slakpiinstance_account](#BKMK_slakpiinstance_account)
 - [SocialActivity_PostAuthor_accounts](#BKMK_SocialActivity_PostAuthor_accounts)
 - [SocialActivity_PostAuthorAccount_accounts](#BKMK_SocialActivity_PostAuthorAccount_accounts)
@@ -3298,6 +3302,18 @@ Many-To-One Relationship: [customeraddress Account_CustomerAddress](customeraddr
 |ReferencedEntityNavigationPropertyName|`Account_CustomerAddress`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10<br />QueryApi: null<br />ViewId: `03315b35-4585-4447-a4d2-059cf79ca0fd`|
+
+### <a name="BKMK_account_DeletedItemReferences"></a> account_DeletedItemReferences
+
+Many-To-One Relationship: [deleteditemreference account_DeletedItemReferences](deleteditemreference.md#BKMK_account_DeletedItemReferences)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`deleteditemreference`|
+|ReferencingAttribute|`deletedobject`|
+|ReferencedEntityNavigationPropertyName|`account_DeletedItemReferences`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_Account_DuplicateBaseRecord"></a> Account_DuplicateBaseRecord
 
@@ -3586,6 +3602,18 @@ Many-To-One Relationship: [contact msa_contact_managingpartner](contact.md#BKMK_
 |ReferencedEntityNavigationPropertyName|`msa_contact_managingpartner`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseLabel`<br />Group: `Details`<br />Label: Managed Contacts<br />MenuId: null<br />Order: 100500<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_powerpagesusermapping_customer_accounts"></a> powerpagesusermapping_customer_accounts
+
+Many-To-One Relationship: [powerpagesusermapping powerpagesusermapping_customer_accounts](powerpagesusermapping.md#BKMK_powerpagesusermapping_customer_accounts)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`powerpagesusermapping`|
+|ReferencingAttribute|`parentcustomerid`|
+|ReferencedEntityNavigationPropertyName|`powerpagesusermapping_customer_accounts`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_slakpiinstance_account"></a> slakpiinstance_account
 

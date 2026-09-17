@@ -2,8 +2,9 @@
 title: "mobileofflineprofileitemfilter table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the mobileofflineprofileitemfilter table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -243,6 +244,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |5|**FULL\_SYNC**|
 |6|**RELATED\_ENTITIES**|
 |7|**RELATED\_INTERSECT\_ENTITIES**|
+|8|**RELATIONSHIP\_CUD\_IN**|
+|9|**RELATIONSHIP\_SHARED\_IN**|
+|10|**RELATIONSHIP\_DELTA\_IN**|
+|11|**RELATIONSHIP\_FULL\_SYNC**|
+|12|**RELATEDROWS\_SELECTED\_ENTITIES**|
 
 ### <a name="BKMK_type"></a> type
 

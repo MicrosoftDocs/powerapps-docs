@@ -2,8 +2,9 @@
 title: "Canvas App (CanvasApp) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Canvas App (CanvasApp) table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -61,6 +62,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [AdminControlBypassConsent](#BKMK_AdminControlBypassConsent)
 - [AppComponentDependencies](#BKMK_AppComponentDependencies)
 - [AppComponents](#BKMK_AppComponents)
+- [AppCopilotReference](#BKMK_AppCopilotReference)
 - [AppOpenUri](#BKMK_AppOpenUri)
 - [AppVersion](#BKMK_AppVersion)
 - [AuthorizationReferences](#BKMK_AuthorizationReferences)
@@ -68,6 +70,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [BypassConsent](#BKMK_BypassConsent)
 - [CanConsumeAppPass](#BKMK_CanConsumeAppPass)
 - [CanvasAppId](#BKMK_CanvasAppId)
+- [CanvasAppSubtype](#BKMK_CanvasAppSubtype)
 - [CanvasAppType](#BKMK_CanvasAppType)
 - [CdsDependencies](#BKMK_CdsDependencies)
 - [CommitMessage](#BKMK_CommitMessage)
@@ -79,6 +82,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [DisplayName](#BKMK_DisplayName)
 - [EmbeddedApp](#BKMK_EmbeddedApp)
 - [GalleryItemId](#BKMK_GalleryItemId)
+- [HasCustomMiddleTier](#BKMK_HasCustomMiddleTier)
 - [IntroducedVersion](#BKMK_IntroducedVersion)
 - [IsCdsUpgraded](#BKMK_IsCdsUpgraded)
 - [IsCustomizable](#BKMK_IsCustomizable)
@@ -189,6 +193,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|`appcomponents`|
+|RequiredLevel|None|
+|Type|Memo|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|768000|
+
+### <a name="BKMK_AppCopilotReference"></a> AppCopilotReference
+
+|Property|Value|
+|---|---|
+|Description|**The reference to agents referenced in the app.**|
+|DisplayName|**App Copilot Reference**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`appcopilotreference`|
 |RequiredLevel|None|
 |Type|Memo|
 |Format|Text|
@@ -308,6 +329,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`canvasappid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
+
+### <a name="BKMK_CanvasAppSubtype"></a> CanvasAppSubtype
+
+|Property|Value|
+|---|---|
+|Description|**The subtype of Canvas apps, especially, that of Code Apps**|
+|DisplayName|**Canvas App Subtype**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`canvasappsubtype`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_CanvasAppType"></a> CanvasAppType
 
@@ -503,6 +541,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|False|
 |MaxLength|2000|
+
+### <a name="BKMK_HasCustomMiddleTier"></a> HasCustomMiddleTier
+
+|Property|Value|
+|---|---|
+|Description|**Indicates whether the canvas app has a custom middle tier**|
+|DisplayName|**Has Custom Middle Tier**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`hascustommiddletier`|
+|RequiredLevel|None|
+|Type|Boolean|
+|GlobalChoiceName|`_canvasapp_hascustommiddletier`|
+|DefaultValue|False|
+|True Label||
+|False Label||
 
 ### <a name="BKMK_IntroducedVersion"></a> IntroducedVersion
 

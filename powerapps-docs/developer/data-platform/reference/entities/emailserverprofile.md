@@ -2,8 +2,9 @@
 title: "Email Server Profile (EmailServerProfile) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Email Server Profile (EmailServerProfile) table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -26,6 +27,7 @@ Messages represent operations that can be performed on the table. They may also 
 | `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `GrantAccess`<br />Event: False |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `ModifyAccess`<br />Event: False |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
+| `Restore`<br />Event: True |<xref:Microsoft.Dynamics.CRM.Restore?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 | `Retrieve`<br />Event: False |`GET` /emailserverprofiles(*emailserverprofileid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
 | `RetrieveMultiple`<br />Event: False |`GET` /emailserverprofiles<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 | `RetrievePrincipalAccess`<br />Event: False |<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
@@ -107,6 +109,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [OwnerEmailAddress](#BKMK_OwnerEmailAddress)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
+- [PowerPlatformManagedIdentityId](#BKMK_PowerPlatformManagedIdentityId)
 - [ProcessEmailsReceivedAfter](#BKMK_ProcessEmailsReceivedAfter)
 - [PurviewManagedIdentityId](#BKMK_PurviewManagedIdentityId)
 - [SendEmailAlert](#BKMK_SendEmailAlert)
@@ -403,6 +406,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |5|**Gmail OAuth**|
 |6|**Exchange Hybrid Modern Auth (HMA)**|
 |7|**OAuth with Microsoft Entra ID**|
+|8|**Power Platform Managed Identity Auth (PPMI)**|
 
 ### <a name="BKMK_IncomingPassword"></a> IncomingPassword
 
@@ -834,6 +838,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |5|**Gmail OAuth**|
 |6|**Exchange Hybrid Modern Auth (HMA)**|
 |7|**OAuth with Microsoft Entra ID**|
+|8|**Power Platform Managed Identity Auth (PPMI)**|
 
 ### <a name="BKMK_OutgoingPassword"></a> OutgoingPassword
 
@@ -973,6 +978,19 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`owneridtype`|
 |RequiredLevel|SystemRequired|
 |Type|EntityName|
+
+### <a name="BKMK_PowerPlatformManagedIdentityId"></a> PowerPlatformManagedIdentityId
+
+|Property|Value|
+|---|---|
+|Description|**Unique identifier for managed identity associated with emailserverprofile for Exchange integration.**|
+|DisplayName|**Power Platform Managed Identity**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`powerplatformmanagedidentityid`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|managedidentity|
 
 ### <a name="BKMK_ProcessEmailsReceivedAfter"></a> ProcessEmailsReceivedAfter
 
@@ -1575,6 +1593,7 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [lk_emailserverprofile_modifiedonbehalfby](#BKMK_lk_emailserverprofile_modifiedonbehalfby)
 - [managedidentity_emailserverprofile_acsmanagedidentityid](#BKMK_managedidentity_emailserverprofile_acsmanagedidentityid)
 - [managedidentity_emailserverprofile_managedidentityid](#BKMK_managedidentity_emailserverprofile_managedidentityid)
+- [managedidentity_emailserverprofile_powerplatformmanagedidentityid](#BKMK_managedidentity_emailserverprofile_powerplatformmanagedidentityid)
 - [managedidentity_emailserverprofile_purviewmanagedidentityid](#BKMK_managedidentity_emailserverprofile_purviewmanagedidentityid)
 - [organization_emailserverprofile](#BKMK_organization_emailserverprofile)
 - [owner_emailserverprofile](#BKMK_owner_emailserverprofile)
@@ -1684,6 +1703,19 @@ One-To-Many Relationship: [managedidentity managedidentity_emailserverprofile_ma
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
+### <a name="BKMK_managedidentity_emailserverprofile_powerplatformmanagedidentityid"></a> managedidentity_emailserverprofile_powerplatformmanagedidentityid
+
+One-To-Many Relationship: [managedidentity managedidentity_emailserverprofile_powerplatformmanagedidentityid](managedidentity.md#BKMK_managedidentity_emailserverprofile_powerplatformmanagedidentityid)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`managedidentity`|
+|ReferencedAttribute|`managedidentityid`|
+|ReferencingAttribute|`powerplatformmanagedidentityid`|
+|ReferencingEntityNavigationPropertyName|`powerplatformmanagedidentityid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
 ### <a name="BKMK_managedidentity_emailserverprofile_purviewmanagedidentityid"></a> managedidentity_emailserverprofile_purviewmanagedidentityid
 
 One-To-Many Relationship: [managedidentity managedidentity_emailserverprofile_purviewmanagedidentityid](managedidentity.md#BKMK_managedidentity_emailserverprofile_purviewmanagedidentityid)
@@ -1744,6 +1776,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [EmailServerProfile_Annotation](#BKMK_EmailServerProfile_Annotation)
 - [emailserverprofile_asyncoperations](#BKMK_emailserverprofile_asyncoperations)
 - [emailserverprofile_bulkdeletefailures](#BKMK_emailserverprofile_bulkdeletefailures)
+- [emailserverprofile_DeletedItemReferences](#BKMK_emailserverprofile_DeletedItemReferences)
 - [emailserverprofile_duplicatebaserecord](#BKMK_emailserverprofile_duplicatebaserecord)
 - [emailserverprofile_duplicatematchingrecord](#BKMK_emailserverprofile_duplicatematchingrecord)
 - [emailserverprofile_mailbox](#BKMK_emailserverprofile_mailbox)
@@ -1785,6 +1818,18 @@ Many-To-One Relationship: [bulkdeletefailure emailserverprofile_bulkdeletefailur
 |ReferencingAttribute|`regardingobjectid`|
 |ReferencedEntityNavigationPropertyName|`emailserverprofile_bulkdeletefailures`|
 |IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_emailserverprofile_DeletedItemReferences"></a> emailserverprofile_DeletedItemReferences
+
+Many-To-One Relationship: [deleteditemreference emailserverprofile_DeletedItemReferences](deleteditemreference.md#BKMK_emailserverprofile_DeletedItemReferences)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`deleteditemreference`|
+|ReferencingAttribute|`deletedobject`|
+|ReferencedEntityNavigationPropertyName|`emailserverprofile_DeletedItemReferences`|
+|IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_emailserverprofile_duplicatebaserecord"></a> emailserverprofile_duplicatebaserecord

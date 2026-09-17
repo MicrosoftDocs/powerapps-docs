@@ -2,8 +2,9 @@
 title: "Virtual Entity  Metadata (VirtualEntityMetadata) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Virtual Entity  Metadata (VirtualEntityMetadata) table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---

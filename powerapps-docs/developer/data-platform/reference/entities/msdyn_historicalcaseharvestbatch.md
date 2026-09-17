@@ -2,8 +2,9 @@
 title: "msdyn_historicalcaseharvestbatch table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the msdyn_historicalcaseharvestbatch table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -28,6 +29,7 @@ Messages represent operations that can be performed on the table. They may also 
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 | `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
+| `Restore`<br />Event: True |<xref:Microsoft.Dynamics.CRM.Restore?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 | `Retrieve`<br />Event: True |`GET` /msdyn_historicalcaseharvestbatches(*msdyn_historicalcaseharvestbatchid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
 | `RetrieveMultiple`<br />Event: True |`GET` /msdyn_historicalcaseharvestbatches<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 | `RetrievePrincipalAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
@@ -71,6 +73,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [msdyn_historicalcaseharvestrunid](#BKMK_msdyn_historicalcaseharvestrunid)
 - [msdyn_incidentids](#BKMK_msdyn_incidentids)
 - [msdyn_name](#BKMK_msdyn_name)
+- [msdyn_updatescheduledon](#BKMK_msdyn_updatescheduledon)
+- [msdyn_updatescheduledonsentinel](#BKMK_msdyn_updatescheduledonsentinel)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
@@ -222,6 +226,35 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|False|
 |MaxLength|850|
+
+### <a name="BKMK_msdyn_updatescheduledon"></a> msdyn_updatescheduledon
+
+|Property|Value|
+|---|---|
+|Description|**Timestamp when the last update was scheduled on.**|
+|DisplayName|**Update Scheduled On**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_updatescheduledon`|
+|RequiredLevel|None|
+|Type|DateTime|
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
+
+### <a name="BKMK_msdyn_updatescheduledonsentinel"></a> msdyn_updatescheduledonsentinel
+
+|Property|Value|
+|---|---|
+|Description|**Unique identifier for ensuring update scheduling consistency.**|
+|DisplayName|**Update Scheduled On Sentinel**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_updatescheduledonsentinel`|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
@@ -667,6 +700,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 
 - [msdyn_historicalcaseharvestbatch_AsyncOperations](#BKMK_msdyn_historicalcaseharvestbatch_AsyncOperations)
 - [msdyn_historicalcaseharvestbatch_BulkDeleteFailures](#BKMK_msdyn_historicalcaseharvestbatch_BulkDeleteFailures)
+- [msdyn_historicalcaseharvestbatch_DeletedItemReferences](#BKMK_msdyn_historicalcaseharvestbatch_DeletedItemReferences)
 - [msdyn_historicalcaseharvestbatch_MailboxTrackingFolders](#BKMK_msdyn_historicalcaseharvestbatch_MailboxTrackingFolders)
 - [msdyn_historicalcaseharvestbatch_PrincipalObjectAttributeAccesses](#BKMK_msdyn_historicalcaseharvestbatch_PrincipalObjectAttributeAccesses)
 - [msdyn_historicalcaseharvestbatch_ProcessSession](#BKMK_msdyn_historicalcaseharvestbatch_ProcessSession)
@@ -693,6 +727,18 @@ Many-To-One Relationship: [bulkdeletefailure msdyn_historicalcaseharvestbatch_Bu
 |ReferencingEntity|`bulkdeletefailure`|
 |ReferencingAttribute|`regardingobjectid`|
 |ReferencedEntityNavigationPropertyName|`msdyn_historicalcaseharvestbatch_BulkDeleteFailures`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_msdyn_historicalcaseharvestbatch_DeletedItemReferences"></a> msdyn_historicalcaseharvestbatch_DeletedItemReferences
+
+Many-To-One Relationship: [deleteditemreference msdyn_historicalcaseharvestbatch_DeletedItemReferences](deleteditemreference.md#BKMK_msdyn_historicalcaseharvestbatch_DeletedItemReferences)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`deleteditemreference`|
+|ReferencingAttribute|`deletedobject`|
+|ReferencedEntityNavigationPropertyName|`msdyn_historicalcaseharvestbatch_DeletedItemReferences`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 

@@ -2,8 +2,9 @@
 title: "PrincipalObjectAccess table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the PrincipalObjectAccess table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -21,6 +22,7 @@ Messages represent operations that can be performed on the table. They may also 
 | ---- | ----- |----- |
 | `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `Restore`<br />Event: True |<xref:Microsoft.Dynamics.CRM.Restore?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 
 ## Properties
 
@@ -203,6 +205,22 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |Type|BigInt|
 |MaxValue|9223372036854775807|
 |MinValue|-9223372036854775808|
+
+## One-to-Many relationships
+
+These relationships are one-to-many. Listed by **SchemaName**.
+
+### <a name="BKMK_principalobjectaccess_DeletedItemReferences"></a> principalobjectaccess_DeletedItemReferences
+
+Many-To-One Relationship: [deleteditemreference principalobjectaccess_DeletedItemReferences](deleteditemreference.md#BKMK_principalobjectaccess_DeletedItemReferences)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`deleteditemreference`|
+|ReferencingAttribute|`deletedobject`|
+|ReferencedEntityNavigationPropertyName|`principalobjectaccess_DeletedItemReferences`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 
 

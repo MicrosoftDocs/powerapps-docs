@@ -1,48 +1,50 @@
 ---
-title: "Power BI Dataset (powerbidataset) table/entity reference (Microsoft Dataverse)"
-description: "Includes schema information and supported messages for the Power BI Dataset (powerbidataset) table/entity with Microsoft Dataverse."
+title: "Power Apps Wrap Build (msdyn_powerappswrapbuild) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the Power Apps Wrap Build (msdyn_powerappswrapbuild) table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
 
-# Power BI Dataset (powerbidataset) table/entity reference (Microsoft Dataverse)
+# Power Apps Wrap Build (msdyn_powerappswrapbuild) table/entity reference (Microsoft Dataverse)
 
-
+Stores build artifacts from the Power Apps Wrap build pipeline
 
 ## Messages
 
-The following table lists the messages for the Power BI Dataset (powerbidataset) table.
+The following table lists the messages for the Power Apps Wrap Build (msdyn_powerappswrapbuild) table.
 Messages represent operations that can be performed on the table. They may also be events.
 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
-| `Assign`<br />Event: True |`PATCH` /powerbidatasets(*powerbidatasetid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+| `Assign`<br />Event: True |`PATCH` /msdyn_powerappswrapbuilds(*msdyn_powerappswrapbuildid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
 | `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
-| `Create`<br />Event: True |`POST` /powerbidatasets<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `Create`<br />Event: True |`POST` /msdyn_powerappswrapbuilds<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
-| `Delete`<br />Event: True |`DELETE` /powerbidatasets(*powerbidatasetid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Delete`<br />Event: True |`DELETE` /msdyn_powerappswrapbuilds(*msdyn_powerappswrapbuildid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
 | `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 | `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-| `Retrieve`<br />Event: True |`GET` /powerbidatasets(*powerbidatasetid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
-| `RetrieveMultiple`<br />Event: True |`GET` /powerbidatasets<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
+| `Restore`<br />Event: True |<xref:Microsoft.Dynamics.CRM.Restore?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
+| `Retrieve`<br />Event: True |`GET` /msdyn_powerappswrapbuilds(*msdyn_powerappswrapbuildid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveMultiple`<br />Event: True |`GET` /msdyn_powerappswrapbuilds<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 | `RetrievePrincipalAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 | `RetrieveSharedPrincipalsAndAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
 | `RevokeAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-| `SetState`<br />Event: True |`PATCH` /powerbidatasets(*powerbidatasetid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `statecode` and `statuscode` properties. |<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-| `Update`<br />Event: True |`PATCH` /powerbidatasets(*powerbidatasetid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
+| `SetState`<br />Event: True |`PATCH` /msdyn_powerappswrapbuilds(*msdyn_powerappswrapbuildid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `statecode` and `statuscode` properties. |<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+| `Update`<br />Event: True |`PATCH` /msdyn_powerappswrapbuilds(*msdyn_powerappswrapbuildid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
 | `UpdateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
-| `Upsert`<br />Event: False |`PATCH` /powerbidatasets(*powerbidatasetid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
+| `Upsert`<br />Event: False |`PATCH` /msdyn_powerappswrapbuilds(*msdyn_powerappswrapbuildid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
 | `UpsertMultiple`<br />Event: False |<xref:Microsoft.Dynamics.CRM.UpsertMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpsertMultipleRequest>|
 
 
 ## Events
 
-The following table lists the events for the Power BI Dataset (powerbidataset) table.
+The following table lists the events for the Power Apps Wrap Build (msdyn_powerappswrapbuild) table.
 Events are messages that exist so that you can subscribe to them. Unless you added the event, you shouldn't invoke the message, only subscribe to it.
 
 |Name|Web API Operation |SDK for .NET |
@@ -55,18 +57,18 @@ Events are messages that exist so that you can subscribe to them. Unless you add
 
 ## Properties
 
-The following table lists selected properties for the Power BI Dataset (powerbidataset) table.
+The following table lists selected properties for the Power Apps Wrap Build (msdyn_powerappswrapbuild) table.
 
 |Property|Value|
 | --- | --- |
-| **DisplayName** | **Power BI Dataset** |
-| **DisplayCollectionName** | **Power BI Datasets** |
-| **SchemaName** | `powerbidataset` |
-| **CollectionSchemaName** | `powerbidatasets` |
-| **EntitySetName** | `powerbidatasets`|
-| **LogicalName** | `powerbidataset` |
-| **LogicalCollectionName** | `powerbidatasets` |
-| **PrimaryIdAttribute** | `powerbidatasetid` |
+| **DisplayName** | **Power Apps Wrap Build** |
+| **DisplayCollectionName** | **Power Apps Wrap Builds** |
+| **SchemaName** | `msdyn_powerappswrapbuild` |
+| **CollectionSchemaName** | `msdyn_powerappswrapbuilds` |
+| **EntitySetName** | `msdyn_powerappswrapbuilds`|
+| **LogicalName** | `msdyn_powerappswrapbuild` |
+| **LogicalCollectionName** | `msdyn_powerappswrapbuilds` |
+| **PrimaryIdAttribute** | `msdyn_powerappswrapbuildid` |
 | **PrimaryNameAttribute** |`name` |
 | **TableType** | `Standard` |
 | **OwnershipType** | `UserOwned` |
@@ -75,108 +77,20 @@ The following table lists selected properties for the Power BI Dataset (powerbid
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
-- [DatasetObjectId](#BKMK_DatasetObjectId)
-- [DatasetOriginalObjectId](#BKMK_DatasetOriginalObjectId)
-- [DataverseConnectionUpdateEnabled](#BKMK_DataverseConnectionUpdateEnabled)
-- [Etag](#BKMK_Etag)
-- [ImportPowerBIComponentSequenceNumber](#BKMK_ImportPowerBIComponentSequenceNumber)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
-- [IsCustomizable](#BKMK_IsCustomizable)
+- [msdyn_apptype](#BKMK_msdyn_apptype)
+- [msdyn_buildid](#BKMK_msdyn_buildid)
+- [msdyn_mobileappid](#BKMK_msdyn_mobileappid)
+- [msdyn_platformtype](#BKMK_msdyn_platformtype)
+- [msdyn_powerappswrapbuildId](#BKMK_msdyn_powerappswrapbuildId)
 - [name](#BKMK_name)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
-- [powerbidatasetId](#BKMK_powerbidatasetId)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
-- [UniqueName](#BKMK_UniqueName)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
-- [WorkspaceObjectId](#BKMK_WorkspaceObjectId)
-
-### <a name="BKMK_DatasetObjectId"></a> DatasetObjectId
-
-|Property|Value|
-|---|---|
-|Description|**The objectId of the Power BI dataset**|
-|DisplayName|**Dataset objectId**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`datasetobjectid`|
-|RequiredLevel|ApplicationRequired|
-|Type|String|
-|Format|Text|
-|FormatName|Text|
-|ImeMode|Auto|
-|IsLocalizable|False|
-|MaxLength|36|
-
-### <a name="BKMK_DatasetOriginalObjectId"></a> DatasetOriginalObjectId
-
-|Property|Value|
-|---|---|
-|Description|**The original objectId of the Power BI dataset**|
-|DisplayName|**Dataset original objectId**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`datasetoriginalobjectid`|
-|RequiredLevel|None|
-|Type|String|
-|Format|Text|
-|FormatName|Text|
-|ImeMode|Auto|
-|IsLocalizable|False|
-|MaxLength|36|
-
-### <a name="BKMK_DataverseConnectionUpdateEnabled"></a> DataverseConnectionUpdateEnabled
-
-|Property|Value|
-|---|---|
-|Description|**Specifies whether the Dataverse connection in this dataset should be updated on solution import to match the target Dataverse environment. Applies only if the dataset has exactly one such connection.**|
-|DisplayName|**DataverseConnectionUpdateEnabled**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`dataverseconnectionupdateenabled`|
-|RequiredLevel|None|
-|Type|Boolean|
-|GlobalChoiceName|`powerbidataset_dataverseconnectionupdateenabled`|
-|DefaultValue|False|
-|True Label|Yes|
-|False Label|No|
-
-### <a name="BKMK_Etag"></a> Etag
-
-|Property|Value|
-|---|---|
-|Description|**The Etag of the Power BI dataset at the moment of creating the package**|
-|DisplayName|**Etag**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`etag`|
-|RequiredLevel|None|
-|Type|String|
-|Format|Text|
-|FormatName|Text|
-|ImeMode|Auto|
-|IsLocalizable|False|
-|MaxLength|100|
-
-### <a name="BKMK_ImportPowerBIComponentSequenceNumber"></a> ImportPowerBIComponentSequenceNumber
-
-|Property|Value|
-|---|---|
-|Description|**Sequence number of the import component event that created this Power BI record.**|
-|DisplayName|**Import Power BI Component Sequence Number**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`importpowerbicomponentsequencenumber`|
-|RequiredLevel|None|
-|Type|String|
-|Format|Text|
-|FormatName|Text|
-|ImeMode|Auto|
-|IsLocalizable|False|
-|MaxLength|100|
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
@@ -192,23 +106,87 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxValue|2147483647|
 |MinValue|-2147483648|
 
-### <a name="BKMK_IsCustomizable"></a> IsCustomizable
+### <a name="BKMK_msdyn_apptype"></a> msdyn_apptype
 
 |Property|Value|
 |---|---|
-|Description|**For internal use only.**|
-|DisplayName|**Is Customizable**|
+|Description|**App type: ZIP, AAB, or IPA**|
+|DisplayName|**App Type**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_apptype`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|50|
+
+### <a name="BKMK_msdyn_buildid"></a> msdyn_buildid
+
+|Property|Value|
+|---|---|
+|Description|**Pipeline build ID**|
+|DisplayName|**Build ID**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_buildid`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|50|
+
+### <a name="BKMK_msdyn_mobileappid"></a> msdyn_mobileappid
+
+|Property|Value|
+|---|---|
+|Description|**Reference to the parent mobile app**|
+|DisplayName|**Mobile App**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_mobileappid`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|msdyn_mobileapp|
+
+### <a name="BKMK_msdyn_platformtype"></a> msdyn_platformtype
+
+|Property|Value|
+|---|---|
+|Description|**Platform type: Android or iOS**|
+|DisplayName|**Platform Type**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_platformtype`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
+
+### <a name="BKMK_msdyn_powerappswrapbuildId"></a> msdyn_powerappswrapbuildId
+
+|Property|Value|
+|---|---|
+|Description|**Unique identifier for Power Apps Wrap Build entity instances**|
+|DisplayName|**Power Apps Wrap Build**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|`iscustomizable`|
+|LogicalName|`msdyn_powerappswrapbuildid`|
 |RequiredLevel|SystemRequired|
-|Type|ManagedProperty|
+|Type|Uniqueidentifier|
 
 ### <a name="BKMK_name"></a> name
 
 |Property|Value|
 |---|---|
-|Description|**The name of the custom entity.**|
+|Description|**Build name in format: Platform-AppType-BuildId**|
 |DisplayName|**Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -263,23 +241,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|SystemRequired|
 |Type|EntityName|
 
-### <a name="BKMK_powerbidatasetId"></a> powerbidatasetId
-
-|Property|Value|
-|---|---|
-|Description|**Unique identifier for entity instances**|
-|DisplayName|**Power BI Dataset**|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|`powerbidatasetid`|
-|RequiredLevel|SystemRequired|
-|Type|Uniqueidentifier|
-
 ### <a name="BKMK_statecode"></a> statecode
 
 |Property|Value|
 |---|---|
-|Description|**Status of the Power BI Dataset**|
+|Description|**Status of the Power Apps Wrap Build**|
 |DisplayName|**Status**|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -287,7 +253,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|SystemRequired|
 |Type|State|
 |DefaultFormValue||
-|GlobalChoiceName|`powerbidataset_statecode`|
+|GlobalChoiceName|`msdyn_powerappswrapbuild_statecode`|
 
 #### statecode Choices/Options
 
@@ -300,7 +266,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**Reason for the status of the Power BI Dataset**|
+|Description|**Reason for the status of the Power Apps Wrap Build**|
 |DisplayName|**Status Reason**|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -308,7 +274,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Status|
 |DefaultFormValue||
-|GlobalChoiceName|`powerbidataset_statuscode`|
+|GlobalChoiceName|`msdyn_powerappswrapbuild_statuscode`|
 
 #### statuscode Choices/Options
 
@@ -331,23 +297,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxValue|2147483647|
 |MinValue|-1|
 
-### <a name="BKMK_UniqueName"></a> UniqueName
-
-|Property|Value|
-|---|---|
-|Description|**Unique Name for the entity.**|
-|DisplayName|**Unique Name**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`uniquename`|
-|RequiredLevel|SystemRequired|
-|Type|String|
-|Format|Text|
-|FormatName|Text|
-|ImeMode|Auto|
-|IsLocalizable|False|
-|MaxLength|128|
-
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
 
 |Property|Value|
@@ -362,83 +311,25 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxValue|2147483647|
 |MinValue|-1|
 
-### <a name="BKMK_WorkspaceObjectId"></a> WorkspaceObjectId
-
-|Property|Value|
-|---|---|
-|Description|**The objectId of the Power BI workspace where the dataset resides**|
-|DisplayName|**Workspace objectId**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`workspaceobjectid`|
-|RequiredLevel|ApplicationRequired|
-|Type|String|
-|Format|Text|
-|FormatName|Text|
-|ImeMode|Auto|
-|IsLocalizable|False|
-|MaxLength|36|
-
 
 ## Read-only columns/attributes
 
 These columns/attributes return false for both **IsValidForCreate** and **IsValidForUpdate**. Listed by **SchemaName**.
 
-- [ComponentIdUnique](#BKMK_ComponentIdUnique)
-- [ComponentState](#BKMK_ComponentState)
 - [CreatedBy](#BKMK_CreatedBy)
 - [CreatedOn](#BKMK_CreatedOn)
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
-- [IsManaged](#BKMK_IsManaged)
 - [ModifiedBy](#BKMK_ModifiedBy)
 - [ModifiedOn](#BKMK_ModifiedOn)
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
-- [OverwriteTime](#BKMK_OverwriteTime)
+- [msdyn_artifact](#BKMK_msdyn_artifact)
+- [msdyn_artifact_Name](#BKMK_msdyn_artifact_Name)
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
-- [Package](#BKMK_Package)
-- [Package_Name](#BKMK_Package_Name)
-- [SolutionId](#BKMK_SolutionId)
-- [SupportingSolutionId](#BKMK_SupportingSolutionId)
 - [VersionNumber](#BKMK_VersionNumber)
-
-### <a name="BKMK_ComponentIdUnique"></a> ComponentIdUnique
-
-|Property|Value|
-|---|---|
-|Description|**For internal use only.**|
-|DisplayName|**Row id unique**|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|`componentidunique`|
-|RequiredLevel|SystemRequired|
-|Type|Uniqueidentifier|
-
-### <a name="BKMK_ComponentState"></a> ComponentState
-
-|Property|Value|
-|---|---|
-|Description|**For internal use only.**|
-|DisplayName|**Component State**|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|`componentstate`|
-|RequiredLevel|SystemRequired|
-|Type|Picklist|
-|DefaultFormValue||
-|GlobalChoiceName|`componentstate`|
-
-#### ComponentState Choices/Options
-
-|Value|Label|
-|---|---|
-|0|**Published**|
-|1|**Unpublished**|
-|2|**Deleted**|
-|3|**Deleted Unpublished**|
 
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
@@ -483,22 +374,6 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |Type|Lookup|
 |Targets|systemuser|
 
-### <a name="BKMK_IsManaged"></a> IsManaged
-
-|Property|Value|
-|---|---|
-|Description|**Indicates whether the solution component is part of a managed solution.**|
-|DisplayName|**Is Managed**|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|`ismanaged`|
-|RequiredLevel|SystemRequired|
-|Type|Boolean|
-|GlobalChoiceName|`ismanaged`|
-|DefaultValue|False|
-|True Label|Managed|
-|False Label|Unmanaged|
-
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
 |Property|Value|
@@ -542,22 +417,35 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |Type|Lookup|
 |Targets|systemuser|
 
-### <a name="BKMK_OverwriteTime"></a> OverwriteTime
+### <a name="BKMK_msdyn_artifact"></a> msdyn_artifact
 
 |Property|Value|
 |---|---|
-|Description|**For internal use only.**|
-|DisplayName|**Record Overwrite Time**|
+|Description|**Build artifact file (APK, AAB, or IPA)**|
+|DisplayName|**Artifact**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_artifact`|
+|RequiredLevel|None|
+|Type|File|
+|MaxSizeInKB|524288|
+
+### <a name="BKMK_msdyn_artifact_Name"></a> msdyn_artifact_Name
+
+|Property|Value|
+|---|---|
+|Description||
+|DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|`overwritetime`|
-|RequiredLevel|SystemRequired|
-|Type|DateTime|
-|CanChangeDateTimeBehavior|False|
-|DateTimeBehavior|UserLocal|
-|Format|DateAndTime|
-|ImeMode|Inactive|
-|SourceTypeMask|0|
+|LogicalName|`msdyn_artifact_name`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Disabled|
+|IsLocalizable|False|
+|MaxLength|200|
 
 ### <a name="BKMK_OwnerIdName"></a> OwnerIdName
 
@@ -632,60 +520,6 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |Type|Lookup|
 |Targets|systemuser|
 
-### <a name="BKMK_Package"></a> Package
-
-|Property|Value|
-|---|---|
-|Description|**The Power BI package (ZIP) for re-creating the dataset on solution import**|
-|DisplayName|**Package**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`package`|
-|RequiredLevel|None|
-|Type|File|
-|MaxSizeInKB|32768|
-
-### <a name="BKMK_Package_Name"></a> Package_Name
-
-|Property|Value|
-|---|---|
-|Description||
-|DisplayName||
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|`package_name`|
-|RequiredLevel|None|
-|Type|String|
-|Format|Text|
-|FormatName|Text|
-|ImeMode|Disabled|
-|IsLocalizable|False|
-|MaxLength|200|
-
-### <a name="BKMK_SolutionId"></a> SolutionId
-
-|Property|Value|
-|---|---|
-|Description|**Unique identifier of the associated solution.**|
-|DisplayName|**Solution**|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|`solutionid`|
-|RequiredLevel|SystemRequired|
-|Type|Uniqueidentifier|
-
-### <a name="BKMK_SupportingSolutionId"></a> SupportingSolutionId
-
-|Property|Value|
-|---|---|
-|Description|**For internal use only.**|
-|DisplayName|**Solution**|
-|IsValidForForm|False|
-|IsValidForRead|False|
-|LogicalName|`supportingsolutionid`|
-|RequiredLevel|None|
-|Type|Uniqueidentifier|
-
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
 |Property|Value|
@@ -704,19 +538,20 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 
 These relationships are many-to-one. Listed by **SchemaName**.
 
-- [business_unit_powerbidataset](#BKMK_business_unit_powerbidataset)
-- [FileAttachment_powerbidataset_Package](#BKMK_FileAttachment_powerbidataset_Package)
-- [lk_powerbidataset_createdby](#BKMK_lk_powerbidataset_createdby)
-- [lk_powerbidataset_createdonbehalfby](#BKMK_lk_powerbidataset_createdonbehalfby)
-- [lk_powerbidataset_modifiedby](#BKMK_lk_powerbidataset_modifiedby)
-- [lk_powerbidataset_modifiedonbehalfby](#BKMK_lk_powerbidataset_modifiedonbehalfby)
-- [owner_powerbidataset](#BKMK_owner_powerbidataset)
-- [team_powerbidataset](#BKMK_team_powerbidataset)
-- [user_powerbidataset](#BKMK_user_powerbidataset)
+- [business_unit_msdyn_powerappswrapbuild](#BKMK_business_unit_msdyn_powerappswrapbuild)
+- [FileAttachment_msdyn_powerappswrapbuild_msdyn_artifact](#BKMK_FileAttachment_msdyn_powerappswrapbuild_msdyn_artifact)
+- [lk_msdyn_powerappswrapbuild_createdby](#BKMK_lk_msdyn_powerappswrapbuild_createdby)
+- [lk_msdyn_powerappswrapbuild_createdonbehalfby](#BKMK_lk_msdyn_powerappswrapbuild_createdonbehalfby)
+- [lk_msdyn_powerappswrapbuild_modifiedby](#BKMK_lk_msdyn_powerappswrapbuild_modifiedby)
+- [lk_msdyn_powerappswrapbuild_modifiedonbehalfby](#BKMK_lk_msdyn_powerappswrapbuild_modifiedonbehalfby)
+- [msdyn_mobileapp_msdyn_powerappswrapbuild_msdyn_mobileappid](#BKMK_msdyn_mobileapp_msdyn_powerappswrapbuild_msdyn_mobileappid)
+- [owner_msdyn_powerappswrapbuild](#BKMK_owner_msdyn_powerappswrapbuild)
+- [team_msdyn_powerappswrapbuild](#BKMK_team_msdyn_powerappswrapbuild)
+- [user_msdyn_powerappswrapbuild](#BKMK_user_msdyn_powerappswrapbuild)
 
-### <a name="BKMK_business_unit_powerbidataset"></a> business_unit_powerbidataset
+### <a name="BKMK_business_unit_msdyn_powerappswrapbuild"></a> business_unit_msdyn_powerappswrapbuild
 
-One-To-Many Relationship: [businessunit business_unit_powerbidataset](businessunit.md#BKMK_business_unit_powerbidataset)
+One-To-Many Relationship: [businessunit business_unit_msdyn_powerappswrapbuild](businessunit.md#BKMK_business_unit_msdyn_powerappswrapbuild)
 
 |Property|Value|
 |---|---|
@@ -727,22 +562,22 @@ One-To-Many Relationship: [businessunit business_unit_powerbidataset](businessun
 |IsHierarchical||
 |CascadeConfiguration|Archive: `Restrict`<br />Assign: `NoCascade`<br />Delete: `Restrict`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_FileAttachment_powerbidataset_Package"></a> FileAttachment_powerbidataset_Package
+### <a name="BKMK_FileAttachment_msdyn_powerappswrapbuild_msdyn_artifact"></a> FileAttachment_msdyn_powerappswrapbuild_msdyn_artifact
 
-One-To-Many Relationship: [fileattachment FileAttachment_powerbidataset_Package](fileattachment.md#BKMK_FileAttachment_powerbidataset_Package)
+One-To-Many Relationship: [fileattachment FileAttachment_msdyn_powerappswrapbuild_msdyn_artifact](fileattachment.md#BKMK_FileAttachment_msdyn_powerappswrapbuild_msdyn_artifact)
 
 |Property|Value|
 |---|---|
 |ReferencedEntity|`fileattachment`|
 |ReferencedAttribute|`fileattachmentid`|
-|ReferencingAttribute|`package`|
-|ReferencingEntityNavigationPropertyName|`package`|
+|ReferencingAttribute|`msdyn_artifact`|
+|ReferencingEntityNavigationPropertyName|`msdyn_artifact`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_lk_powerbidataset_createdby"></a> lk_powerbidataset_createdby
+### <a name="BKMK_lk_msdyn_powerappswrapbuild_createdby"></a> lk_msdyn_powerappswrapbuild_createdby
 
-One-To-Many Relationship: [systemuser lk_powerbidataset_createdby](systemuser.md#BKMK_lk_powerbidataset_createdby)
+One-To-Many Relationship: [systemuser lk_msdyn_powerappswrapbuild_createdby](systemuser.md#BKMK_lk_msdyn_powerappswrapbuild_createdby)
 
 |Property|Value|
 |---|---|
@@ -753,9 +588,9 @@ One-To-Many Relationship: [systemuser lk_powerbidataset_createdby](systemuser.md
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_lk_powerbidataset_createdonbehalfby"></a> lk_powerbidataset_createdonbehalfby
+### <a name="BKMK_lk_msdyn_powerappswrapbuild_createdonbehalfby"></a> lk_msdyn_powerappswrapbuild_createdonbehalfby
 
-One-To-Many Relationship: [systemuser lk_powerbidataset_createdonbehalfby](systemuser.md#BKMK_lk_powerbidataset_createdonbehalfby)
+One-To-Many Relationship: [systemuser lk_msdyn_powerappswrapbuild_createdonbehalfby](systemuser.md#BKMK_lk_msdyn_powerappswrapbuild_createdonbehalfby)
 
 |Property|Value|
 |---|---|
@@ -766,9 +601,9 @@ One-To-Many Relationship: [systemuser lk_powerbidataset_createdonbehalfby](syste
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_lk_powerbidataset_modifiedby"></a> lk_powerbidataset_modifiedby
+### <a name="BKMK_lk_msdyn_powerappswrapbuild_modifiedby"></a> lk_msdyn_powerappswrapbuild_modifiedby
 
-One-To-Many Relationship: [systemuser lk_powerbidataset_modifiedby](systemuser.md#BKMK_lk_powerbidataset_modifiedby)
+One-To-Many Relationship: [systemuser lk_msdyn_powerappswrapbuild_modifiedby](systemuser.md#BKMK_lk_msdyn_powerappswrapbuild_modifiedby)
 
 |Property|Value|
 |---|---|
@@ -779,9 +614,9 @@ One-To-Many Relationship: [systemuser lk_powerbidataset_modifiedby](systemuser.m
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_lk_powerbidataset_modifiedonbehalfby"></a> lk_powerbidataset_modifiedonbehalfby
+### <a name="BKMK_lk_msdyn_powerappswrapbuild_modifiedonbehalfby"></a> lk_msdyn_powerappswrapbuild_modifiedonbehalfby
 
-One-To-Many Relationship: [systemuser lk_powerbidataset_modifiedonbehalfby](systemuser.md#BKMK_lk_powerbidataset_modifiedonbehalfby)
+One-To-Many Relationship: [systemuser lk_msdyn_powerappswrapbuild_modifiedonbehalfby](systemuser.md#BKMK_lk_msdyn_powerappswrapbuild_modifiedonbehalfby)
 
 |Property|Value|
 |---|---|
@@ -792,9 +627,22 @@ One-To-Many Relationship: [systemuser lk_powerbidataset_modifiedonbehalfby](syst
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_owner_powerbidataset"></a> owner_powerbidataset
+### <a name="BKMK_msdyn_mobileapp_msdyn_powerappswrapbuild_msdyn_mobileappid"></a> msdyn_mobileapp_msdyn_powerappswrapbuild_msdyn_mobileappid
 
-One-To-Many Relationship: [owner owner_powerbidataset](owner.md#BKMK_owner_powerbidataset)
+One-To-Many Relationship: [msdyn_mobileapp msdyn_mobileapp_msdyn_powerappswrapbuild_msdyn_mobileappid](msdyn_mobileapp.md#BKMK_msdyn_mobileapp_msdyn_powerappswrapbuild_msdyn_mobileappid)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msdyn_mobileapp`|
+|ReferencedAttribute|`msdyn_mobileappid`|
+|ReferencingAttribute|`msdyn_mobileappid`|
+|ReferencingEntityNavigationPropertyName|`msdyn_mobileapp_msdyn_powerappswrapbuild_msdyn_mobileappid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_owner_msdyn_powerappswrapbuild"></a> owner_msdyn_powerappswrapbuild
+
+One-To-Many Relationship: [owner owner_msdyn_powerappswrapbuild](owner.md#BKMK_owner_msdyn_powerappswrapbuild)
 
 |Property|Value|
 |---|---|
@@ -805,9 +653,9 @@ One-To-Many Relationship: [owner owner_powerbidataset](owner.md#BKMK_owner_power
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_team_powerbidataset"></a> team_powerbidataset
+### <a name="BKMK_team_msdyn_powerappswrapbuild"></a> team_msdyn_powerappswrapbuild
 
-One-To-Many Relationship: [team team_powerbidataset](team.md#BKMK_team_powerbidataset)
+One-To-Many Relationship: [team team_msdyn_powerappswrapbuild](team.md#BKMK_team_msdyn_powerappswrapbuild)
 
 |Property|Value|
 |---|---|
@@ -818,9 +666,9 @@ One-To-Many Relationship: [team team_powerbidataset](team.md#BKMK_team_powerbida
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_user_powerbidataset"></a> user_powerbidataset
+### <a name="BKMK_user_msdyn_powerappswrapbuild"></a> user_msdyn_powerappswrapbuild
 
-One-To-Many Relationship: [systemuser user_powerbidataset](systemuser.md#BKMK_user_powerbidataset)
+One-To-Many Relationship: [systemuser user_msdyn_powerappswrapbuild](systemuser.md#BKMK_user_msdyn_powerappswrapbuild)
 
 |Property|Value|
 |---|---|
@@ -836,147 +684,108 @@ One-To-Many Relationship: [systemuser user_powerbidataset](systemuser.md#BKMK_us
 
 These relationships are one-to-many. Listed by **SchemaName**.
 
-- [powerbidataset_AsyncOperations](#BKMK_powerbidataset_AsyncOperations)
-- [powerbidataset_BulkDeleteFailures](#BKMK_powerbidataset_BulkDeleteFailures)
-- [powerbidataset_DuplicateBaseRecord](#BKMK_powerbidataset_DuplicateBaseRecord)
-- [powerbidataset_DuplicateMatchingRecord](#BKMK_powerbidataset_DuplicateMatchingRecord)
-- [powerbidataset_FileAttachments](#BKMK_powerbidataset_FileAttachments)
-- [powerbidataset_MailboxTrackingFolders](#BKMK_powerbidataset_MailboxTrackingFolders)
-- [powerbidataset_powerbimashupparameter](#BKMK_powerbidataset_powerbimashupparameter)
-- [powerbidataset_powerbireport](#BKMK_powerbidataset_powerbireport)
-- [powerbidataset_PrincipalObjectAttributeAccesses](#BKMK_powerbidataset_PrincipalObjectAttributeAccesses)
-- [powerbidataset_ProcessSession](#BKMK_powerbidataset_ProcessSession)
-- [powerbidataset_SyncErrors](#BKMK_powerbidataset_SyncErrors)
+- [msdyn_powerappswrapbuild_AsyncOperations](#BKMK_msdyn_powerappswrapbuild_AsyncOperations)
+- [msdyn_powerappswrapbuild_BulkDeleteFailures](#BKMK_msdyn_powerappswrapbuild_BulkDeleteFailures)
+- [msdyn_powerappswrapbuild_DeletedItemReferences](#BKMK_msdyn_powerappswrapbuild_DeletedItemReferences)
+- [msdyn_powerappswrapbuild_FileAttachments](#BKMK_msdyn_powerappswrapbuild_FileAttachments)
+- [msdyn_powerappswrapbuild_MailboxTrackingFolders](#BKMK_msdyn_powerappswrapbuild_MailboxTrackingFolders)
+- [msdyn_powerappswrapbuild_PrincipalObjectAttributeAccesses](#BKMK_msdyn_powerappswrapbuild_PrincipalObjectAttributeAccesses)
+- [msdyn_powerappswrapbuild_ProcessSession](#BKMK_msdyn_powerappswrapbuild_ProcessSession)
+- [msdyn_powerappswrapbuild_SyncErrors](#BKMK_msdyn_powerappswrapbuild_SyncErrors)
 
-### <a name="BKMK_powerbidataset_AsyncOperations"></a> powerbidataset_AsyncOperations
+### <a name="BKMK_msdyn_powerappswrapbuild_AsyncOperations"></a> msdyn_powerappswrapbuild_AsyncOperations
 
-Many-To-One Relationship: [asyncoperation powerbidataset_AsyncOperations](asyncoperation.md#BKMK_powerbidataset_AsyncOperations)
+Many-To-One Relationship: [asyncoperation msdyn_powerappswrapbuild_AsyncOperations](asyncoperation.md#BKMK_msdyn_powerappswrapbuild_AsyncOperations)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`asyncoperation`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`powerbidataset_AsyncOperations`|
+|ReferencedEntityNavigationPropertyName|`msdyn_powerappswrapbuild_AsyncOperations`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_powerbidataset_BulkDeleteFailures"></a> powerbidataset_BulkDeleteFailures
+### <a name="BKMK_msdyn_powerappswrapbuild_BulkDeleteFailures"></a> msdyn_powerappswrapbuild_BulkDeleteFailures
 
-Many-To-One Relationship: [bulkdeletefailure powerbidataset_BulkDeleteFailures](bulkdeletefailure.md#BKMK_powerbidataset_BulkDeleteFailures)
+Many-To-One Relationship: [bulkdeletefailure msdyn_powerappswrapbuild_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msdyn_powerappswrapbuild_BulkDeleteFailures)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`bulkdeletefailure`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`powerbidataset_BulkDeleteFailures`|
+|ReferencedEntityNavigationPropertyName|`msdyn_powerappswrapbuild_BulkDeleteFailures`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_powerbidataset_DuplicateBaseRecord"></a> powerbidataset_DuplicateBaseRecord
+### <a name="BKMK_msdyn_powerappswrapbuild_DeletedItemReferences"></a> msdyn_powerappswrapbuild_DeletedItemReferences
 
-Many-To-One Relationship: [duplicaterecord powerbidataset_DuplicateBaseRecord](duplicaterecord.md#BKMK_powerbidataset_DuplicateBaseRecord)
+Many-To-One Relationship: [deleteditemreference msdyn_powerappswrapbuild_DeletedItemReferences](deleteditemreference.md#BKMK_msdyn_powerappswrapbuild_DeletedItemReferences)
 
 |Property|Value|
 |---|---|
-|ReferencingEntity|`duplicaterecord`|
-|ReferencingAttribute|`baserecordid`|
-|ReferencedEntityNavigationPropertyName|`powerbidataset_DuplicateBaseRecord`|
+|ReferencingEntity|`deleteditemreference`|
+|ReferencingAttribute|`deletedobject`|
+|ReferencedEntityNavigationPropertyName|`msdyn_powerappswrapbuild_DeletedItemReferences`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_powerbidataset_DuplicateMatchingRecord"></a> powerbidataset_DuplicateMatchingRecord
+### <a name="BKMK_msdyn_powerappswrapbuild_FileAttachments"></a> msdyn_powerappswrapbuild_FileAttachments
 
-Many-To-One Relationship: [duplicaterecord powerbidataset_DuplicateMatchingRecord](duplicaterecord.md#BKMK_powerbidataset_DuplicateMatchingRecord)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`duplicaterecord`|
-|ReferencingAttribute|`duplicaterecordid`|
-|ReferencedEntityNavigationPropertyName|`powerbidataset_DuplicateMatchingRecord`|
-|IsCustomizable|`True`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
-### <a name="BKMK_powerbidataset_FileAttachments"></a> powerbidataset_FileAttachments
-
-Many-To-One Relationship: [fileattachment powerbidataset_FileAttachments](fileattachment.md#BKMK_powerbidataset_FileAttachments)
+Many-To-One Relationship: [fileattachment msdyn_powerappswrapbuild_FileAttachments](fileattachment.md#BKMK_msdyn_powerappswrapbuild_FileAttachments)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`fileattachment`|
 |ReferencingAttribute|`objectid`|
-|ReferencedEntityNavigationPropertyName|`powerbidataset_FileAttachments`|
+|ReferencedEntityNavigationPropertyName|`msdyn_powerappswrapbuild_FileAttachments`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_powerbidataset_MailboxTrackingFolders"></a> powerbidataset_MailboxTrackingFolders
+### <a name="BKMK_msdyn_powerappswrapbuild_MailboxTrackingFolders"></a> msdyn_powerappswrapbuild_MailboxTrackingFolders
 
-Many-To-One Relationship: [mailboxtrackingfolder powerbidataset_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_powerbidataset_MailboxTrackingFolders)
+Many-To-One Relationship: [mailboxtrackingfolder msdyn_powerappswrapbuild_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_msdyn_powerappswrapbuild_MailboxTrackingFolders)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`mailboxtrackingfolder`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`powerbidataset_MailboxTrackingFolders`|
+|ReferencedEntityNavigationPropertyName|`msdyn_powerappswrapbuild_MailboxTrackingFolders`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_powerbidataset_powerbimashupparameter"></a> powerbidataset_powerbimashupparameter
+### <a name="BKMK_msdyn_powerappswrapbuild_PrincipalObjectAttributeAccesses"></a> msdyn_powerappswrapbuild_PrincipalObjectAttributeAccesses
 
-Many-To-One Relationship: [powerbimashupparameter powerbidataset_powerbimashupparameter](powerbimashupparameter.md#BKMK_powerbidataset_powerbimashupparameter)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`powerbimashupparameter`|
-|ReferencingAttribute|`datasetid`|
-|ReferencedEntityNavigationPropertyName|`powerbidataset_powerbimashupparameter`|
-|IsCustomizable|`False`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
-### <a name="BKMK_powerbidataset_powerbireport"></a> powerbidataset_powerbireport
-
-Many-To-One Relationship: [powerbireport powerbidataset_powerbireport](powerbireport.md#BKMK_powerbidataset_powerbireport)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`powerbireport`|
-|ReferencingAttribute|`datasetid`|
-|ReferencedEntityNavigationPropertyName|`powerbidataset_powerbireport`|
-|IsCustomizable|`False`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
-### <a name="BKMK_powerbidataset_PrincipalObjectAttributeAccesses"></a> powerbidataset_PrincipalObjectAttributeAccesses
-
-Many-To-One Relationship: [principalobjectattributeaccess powerbidataset_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_powerbidataset_PrincipalObjectAttributeAccesses)
+Many-To-One Relationship: [principalobjectattributeaccess msdyn_powerappswrapbuild_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_msdyn_powerappswrapbuild_PrincipalObjectAttributeAccesses)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`principalobjectattributeaccess`|
 |ReferencingAttribute|`objectid`|
-|ReferencedEntityNavigationPropertyName|`powerbidataset_PrincipalObjectAttributeAccesses`|
+|ReferencedEntityNavigationPropertyName|`msdyn_powerappswrapbuild_PrincipalObjectAttributeAccesses`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_powerbidataset_ProcessSession"></a> powerbidataset_ProcessSession
+### <a name="BKMK_msdyn_powerappswrapbuild_ProcessSession"></a> msdyn_powerappswrapbuild_ProcessSession
 
-Many-To-One Relationship: [processsession powerbidataset_ProcessSession](processsession.md#BKMK_powerbidataset_ProcessSession)
+Many-To-One Relationship: [processsession msdyn_powerappswrapbuild_ProcessSession](processsession.md#BKMK_msdyn_powerappswrapbuild_ProcessSession)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`processsession`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`powerbidataset_ProcessSession`|
+|ReferencedEntityNavigationPropertyName|`msdyn_powerappswrapbuild_ProcessSession`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_powerbidataset_SyncErrors"></a> powerbidataset_SyncErrors
+### <a name="BKMK_msdyn_powerappswrapbuild_SyncErrors"></a> msdyn_powerappswrapbuild_SyncErrors
 
-Many-To-One Relationship: [syncerror powerbidataset_SyncErrors](syncerror.md#BKMK_powerbidataset_SyncErrors)
+Many-To-One Relationship: [syncerror msdyn_powerappswrapbuild_SyncErrors](syncerror.md#BKMK_msdyn_powerappswrapbuild_SyncErrors)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`syncerror`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`powerbidataset_SyncErrors`|
+|ReferencedEntityNavigationPropertyName|`msdyn_powerappswrapbuild_SyncErrors`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
@@ -986,4 +795,4 @@ Many-To-One Relationship: [syncerror powerbidataset_SyncErrors](syncerror.md#BKM
 
 [Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
-<xref:Microsoft.Dynamics.CRM.powerbidataset?displayProperty=fullName>
+<xref:Microsoft.Dynamics.CRM.msdyn_powerappswrapbuild?displayProperty=fullName>

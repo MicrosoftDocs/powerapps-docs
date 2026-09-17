@@ -2,8 +2,9 @@
 title: "Entity table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Entity table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -442,6 +443,7 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 These relationships are one-to-many. Listed by **SchemaName**.
 
 - [AIPluginOperation_Entity_Entity](#BKMK_AIPluginOperation_Entity_Entity)
+- [anyprivilegeentity_extensionofrecordid](#BKMK_anyprivilegeentity_extensionofrecordid)
 - [catalogassignment_entity](#BKMK_catalogassignment_entity)
 - [DVFileSearchEntity_Entity_Entity](#BKMK_DVFileSearchEntity_Entity_Entity)
 - [DVTableSearchEntity_Entity_Entity](#BKMK_DVTableSearchEntity_Entity_Entity)
@@ -457,6 +459,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [entityclusterconfig_extensionofrecordid](#BKMK_entityclusterconfig_extensionofrecordid)
 - [metadataforarchival_extensionofrecordid](#BKMK_metadataforarchival_extensionofrecordid)
 - [msdyn_entity_msdyn_entitylinkchatconfiguration](#BKMK_msdyn_entity_msdyn_entitylinkchatconfiguration)
+- [msdyn_entity_msdyn_rtetemplatemapping_entity](#BKMK_msdyn_entity_msdyn_rtetemplatemapping_entity)
 - [msdyn_insightsstorevirtualentity_extensionofrecordid](#BKMK_msdyn_insightsstorevirtualentity_extensionofrecordid)
 - [privilegesremovalsetting_extensionofrecordid](#BKMK_privilegesremovalsetting_extensionofrecordid)
 - [recyclebinconfig_extensionofrecordid](#BKMK_recyclebinconfig_extensionofrecordid)
@@ -474,6 +477,18 @@ Many-To-One Relationship: [aipluginoperation AIPluginOperation_Entity_Entity](ai
 |ReferencedEntityNavigationPropertyName|`AIPluginOperation_Entity_Entity`|
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_anyprivilegeentity_extensionofrecordid"></a> anyprivilegeentity_extensionofrecordid
+
+Many-To-One Relationship: [anyprivilegeentity anyprivilegeentity_extensionofrecordid](anyprivilegeentity.md#BKMK_anyprivilegeentity_extensionofrecordid)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`anyprivilegeentity`|
+|ReferencingAttribute|`extensionofrecordid`|
+|ReferencedEntityNavigationPropertyName|`anyprivilegeentity_extensionofrecordid`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_catalogassignment_entity"></a> catalogassignment_entity
 
@@ -653,6 +668,18 @@ Many-To-One Relationship: [msdyn_entitylinkchatconfiguration msdyn_entity_msdyn_
 |ReferencingAttribute|`msdyn_entitytype`|
 |ReferencedEntityNavigationPropertyName|`msdyn_entity_msdyn_entitylinkchatconfiguration_entitytype`|
 |IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_msdyn_entity_msdyn_rtetemplatemapping_entity"></a> msdyn_entity_msdyn_rtetemplatemapping_entity
+
+Many-To-One Relationship: [msdyn_rtetemplatemapping msdyn_entity_msdyn_rtetemplatemapping_entity](msdyn_rtetemplatemapping.md#BKMK_msdyn_entity_msdyn_rtetemplatemapping_entity)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_rtetemplatemapping`|
+|ReferencingAttribute|`msdyn_entity`|
+|ReferencedEntityNavigationPropertyName|`msdyn_entity_msdyn_rtetemplatemapping_entity`|
+|IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_msdyn_insightsstorevirtualentity_extensionofrecordid"></a> msdyn_insightsstorevirtualentity_extensionofrecordid

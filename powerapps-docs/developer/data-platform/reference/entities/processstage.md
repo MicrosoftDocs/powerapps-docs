@@ -2,8 +2,9 @@
 title: "Process Stage (ProcessStage) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Process Stage (ProcessStage) table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -159,6 +160,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |473330025|**Skills**|
 |473330026|**PowerPages**|
 |473330027|**TeamsWebhook**|
+|473330028|**TeamsWebhookV2**|
 
 ### <a name="BKMK_OperationType"></a> OperationType
 

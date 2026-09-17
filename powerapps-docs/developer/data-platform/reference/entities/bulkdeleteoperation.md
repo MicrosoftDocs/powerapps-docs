@@ -2,8 +2,9 @@
 title: "Bulk Delete Operation (BulkDeleteOperation) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Bulk Delete Operation (BulkDeleteOperation) table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -47,8 +48,60 @@ The following table lists selected properties for the Bulk Delete Operation (Bul
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
+- [ChildRecordsDeletedBreakdown](#BKMK_ChildRecordsDeletedBreakdown)
+- [ChildRecordsDeletedCount](#BKMK_ChildRecordsDeletedCount)
+- [ParentBulkDeletePolicyId](#BKMK_ParentBulkDeletePolicyId)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
+- [TotalSizeCleanedUpInBytes](#BKMK_TotalSizeCleanedUpInBytes)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
+
+### <a name="BKMK_ChildRecordsDeletedBreakdown"></a> ChildRecordsDeletedBreakdown
+
+|Property|Value|
+|---|---|
+|Description|**Per-entity breakdown (JSON) of the child records deleted through cascade as part of the bulk delete operation.**|
+|DisplayName|**Cascade Deleted Child Records Breakdown**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`childrecordsdeletedbreakdown`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1048576|
+
+### <a name="BKMK_ChildRecordsDeletedCount"></a> ChildRecordsDeletedCount
+
+|Property|Value|
+|---|---|
+|Description|**Total number of child records deleted through cascade as part of the bulk delete operation.**|
+|DisplayName|**No. of Cascade Deleted Child Records**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`childrecordsdeletedcount`|
+|RequiredLevel|None|
+|Type|Integer|
+|MaxValue|2147483647|
+|MinValue|0|
+
+### <a name="BKMK_ParentBulkDeletePolicyId"></a> ParentBulkDeletePolicyId
+
+|Property|Value|
+|---|---|
+|Description|**BulkDeleteOperationId of the parent (recurring) bulk delete policy that this run instance belongs to. Null for one-shot jobs and recurring policies.**|
+|DisplayName|**Parent Bulk Delete Policy**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`parentbulkdeletepolicyid`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_TimeZoneRuleVersionNumber"></a> TimeZoneRuleVersionNumber
 
@@ -63,6 +116,20 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Integer|
 |MaxValue|2147483647|
 |MinValue|-1|
+
+### <a name="BKMK_TotalSizeCleanedUpInBytes"></a> TotalSizeCleanedUpInBytes
+
+|Property|Value|
+|---|---|
+|Description|**Total size in bytes reclaimed by deleting the records and their cascaded child records as part of the bulk delete operation. Backed by SQL bigint to hold byte counts well beyond 5 TB (int caps at ~2 GB).**|
+|DisplayName|**Total Size Cleaned Up (Bytes)**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`totalsizecleanedupinbytes`|
+|RequiredLevel|None|
+|Type|BigInt|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
 
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
 
@@ -148,7 +215,7 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |Property|Value|
 |---|---|
 |Description|**Date and time when the bulk deletion job was created.**|
-|DisplayName||
+|DisplayName|**Created On**|
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|`createdon`|

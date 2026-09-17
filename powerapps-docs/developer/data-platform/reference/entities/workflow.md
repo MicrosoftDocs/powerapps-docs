@@ -2,8 +2,9 @@
 title: "Process (Workflow) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Process (Workflow) table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -86,6 +87,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [DesktopFlowModules](#BKMK_DesktopFlowModules)
 - [DynamicsSolutionContext](#BKMK_DynamicsSolutionContext)
 - [EntityImage](#BKMK_EntityImage)
+- [FlowGroup](#BKMK_FlowGroup)
 - [FormId](#BKMK_FormId)
 - [InputParameters](#BKMK_InputParameters)
 - [Inputs](#BKMK_Inputs)
@@ -443,6 +445,19 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxHeight|144|
 |MaxSizeInKB|10240|
 |MaxWidth|144|
+
+### <a name="BKMK_FlowGroup"></a> FlowGroup
+
+|Property|Value|
+|---|---|
+|Description|**Flow group the flow is associated with.**|
+|DisplayName|**Flow Group**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`flowgroup`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|flowgroup|
 
 ### <a name="BKMK_FormId"></a> FormId
 
@@ -1155,6 +1170,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |1|**Selenium IDE**|
 |2|**Power Automate Desktop**|
 |3|**Test**|
+|4|**Template**|
 |101|**Recording**|
 
 ### <a name="BKMK_UniqueName"></a> UniqueName
@@ -1695,6 +1711,7 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [workflow_active_workflow](#BKMK_workflow_active_workflow-many-to-one)
 - [workflow_createdby](#BKMK_workflow_createdby)
 - [workflow_createdonbehalfby](#BKMK_workflow_createdonbehalfby)
+- [Workflow_flowgroup](#BKMK_Workflow_flowgroup)
 - [Workflow_licensee](#BKMK_Workflow_licensee)
 - [Workflow_licenseentitledby](#BKMK_Workflow_licenseentitledby-many-to-one)
 - [workflow_modifiedby](#BKMK_workflow_modifiedby)
@@ -1792,6 +1809,19 @@ One-To-Many Relationship: [systemuser workflow_createdonbehalfby](systemuser.md#
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
+### <a name="BKMK_Workflow_flowgroup"></a> Workflow_flowgroup
+
+One-To-Many Relationship: [flowgroup Workflow_flowgroup](flowgroup.md#BKMK_Workflow_flowgroup)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`flowgroup`|
+|ReferencedAttribute|`flowgroupid`|
+|ReferencingAttribute|`flowgroup`|
+|ReferencingEntityNavigationPropertyName|`flowgroup_flowgroupid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
 ### <a name="BKMK_Workflow_licensee"></a> Workflow_licensee
 
 One-To-Many Relationship: [systemuser Workflow_licensee](systemuser.md#BKMK_Workflow_licensee)
@@ -1867,6 +1897,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [catalogassignment_workflow](#BKMK_catalogassignment_workflow)
 - [flowcapacityassignment_workflow](#BKMK_flowcapacityassignment_workflow)
 - [flowevent_workflow](#BKMK_flowevent_workflow)
+- [flowtriggerinstance_workflowid_workflow](#BKMK_flowtriggerinstance_workflowid_workflow)
 - [lk_asyncoperation_workflowactivationid](#BKMK_lk_asyncoperation_workflowactivationid)
 - [lk_expiredprocess_processid](#BKMK_lk_expiredprocess_processid)
 - [lk_newprocess_processid](#BKMK_lk_newprocess_processid)
@@ -1959,6 +1990,18 @@ Many-To-One Relationship: [flowevent flowevent_workflow](flowevent.md#BKMK_flowe
 |ReferencingAttribute|`parentobjectid`|
 |ReferencedEntityNavigationPropertyName|`flowevent_workflow`|
 |IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_flowtriggerinstance_workflowid_workflow"></a> flowtriggerinstance_workflowid_workflow
+
+Many-To-One Relationship: [flowtriggerinstance flowtriggerinstance_workflowid_workflow](flowtriggerinstance.md#BKMK_flowtriggerinstance_workflowid_workflow)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`flowtriggerinstance`|
+|ReferencingAttribute|`workflowid`|
+|ReferencedEntityNavigationPropertyName|`flowtriggerinstance_workflowid_workflow`|
+|IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_lk_asyncoperation_workflowactivationid"></a> lk_asyncoperation_workflowactivationid

@@ -2,8 +2,9 @@
 title: "Invite Redemption (adx_inviteredemption) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Invite Redemption (adx_inviteredemption) table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -28,6 +29,7 @@ Messages represent operations that can be performed on the table. They may also 
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 | `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
+| `Restore`<br />Event: True |<xref:Microsoft.Dynamics.CRM.Restore?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 | `Retrieve`<br />Event: True |`GET` /adx_inviteredemptions(*activityid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
 | `RetrieveMultiple`<br />Event: True |`GET` /adx_inviteredemptions<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 | `RetrievePrincipalAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
@@ -1590,6 +1592,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [adx_inviteredemption_BulkDeleteFailures](#BKMK_adx_inviteredemption_BulkDeleteFailures)
 - [adx_inviteredemption_connections1](#BKMK_adx_inviteredemption_connections1)
 - [adx_inviteredemption_connections2](#BKMK_adx_inviteredemption_connections2)
+- [adx_inviteredemption_DeletedItemReferences](#BKMK_adx_inviteredemption_DeletedItemReferences)
 - [adx_inviteredemption_DuplicateBaseRecord](#BKMK_adx_inviteredemption_DuplicateBaseRecord)
 - [adx_inviteredemption_DuplicateMatchingRecord](#BKMK_adx_inviteredemption_DuplicateMatchingRecord)
 - [adx_inviteredemption_MailboxTrackingFolders](#BKMK_adx_inviteredemption_MailboxTrackingFolders)
@@ -1679,6 +1682,18 @@ Many-To-One Relationship: [connection adx_inviteredemption_connections2](connect
 |ReferencingEntity|`connection`|
 |ReferencingAttribute|`record2id`|
 |ReferencedEntityNavigationPropertyName|`adx_inviteredemption_connections2`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_adx_inviteredemption_DeletedItemReferences"></a> adx_inviteredemption_DeletedItemReferences
+
+Many-To-One Relationship: [deleteditemreference adx_inviteredemption_DeletedItemReferences](deleteditemreference.md#BKMK_adx_inviteredemption_DeletedItemReferences)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`deleteditemreference`|
+|ReferencingAttribute|`deletedobject`|
+|ReferencedEntityNavigationPropertyName|`adx_inviteredemption_DeletedItemReferences`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 

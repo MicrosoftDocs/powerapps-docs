@@ -2,8 +2,9 @@
 title: "Model-driven App (AppModule) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Model-driven App (AppModule) table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -867,7 +868,9 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [appmodule_appconfig](#BKMK_appmodule_appconfig)
 - [appmodule_appmodulecomponent](#BKMK_appmodule_appmodulecomponent)
 - [appmodule_appnotification_app](#BKMK_appmodule_appnotification_app)
+- [AppModule_DVTableSearch_M365AppModuleId](#BKMK_AppModule_DVTableSearch_M365AppModuleId)
 - [appmodule_userrating_app](#BKMK_appmodule_userrating_app)
+- [mos3management_appmodule_appid](#BKMK_mos3management_appmodule_appid)
 
 ### <a name="BKMK_appmodule_appaction_appmoduleid"></a> appmodule_appaction_appmoduleid
 
@@ -917,6 +920,18 @@ Many-To-One Relationship: [appnotification appmodule_appnotification_app](appnot
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_AppModule_DVTableSearch_M365AppModuleId"></a> AppModule_DVTableSearch_M365AppModuleId
+
+Many-To-One Relationship: [dvtablesearch AppModule_DVTableSearch_M365AppModuleId](dvtablesearch.md#BKMK_AppModule_DVTableSearch_M365AppModuleId)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`dvtablesearch`|
+|ReferencingAttribute|`m365appmoduleid`|
+|ReferencedEntityNavigationPropertyName|`AppModule_DVTableSearch_M365AppModuleId`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 ### <a name="BKMK_appmodule_userrating_app"></a> appmodule_userrating_app
 
 Many-To-One Relationship: [userrating appmodule_userrating_app](userrating.md#BKMK_appmodule_userrating_app)
@@ -926,6 +941,18 @@ Many-To-One Relationship: [userrating appmodule_userrating_app](userrating.md#BK
 |ReferencingEntity|`userrating`|
 |ReferencingAttribute|`appmoduleid`|
 |ReferencedEntityNavigationPropertyName|`appmodule_userrating_app`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_mos3management_appmodule_appid"></a> mos3management_appmodule_appid
+
+Many-To-One Relationship: [mos3management mos3management_appmodule_appid](mos3management.md#BKMK_mos3management_appmodule_appid)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`mos3management`|
+|ReferencingAttribute|`appid`|
+|ReferencedEntityNavigationPropertyName|`mos3management_appmodule_appid`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 

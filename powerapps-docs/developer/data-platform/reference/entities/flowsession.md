@@ -2,8 +2,9 @@
 title: "Flow Session (flowsession) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Flow Session (flowsession) table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
-author: phecke
-ms.author: pehecke
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 ---
@@ -29,6 +30,7 @@ Messages represent operations that can be performed on the table. They may also 
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 | `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
+| `Restore`<br />Event: True |<xref:Microsoft.Dynamics.CRM.Restore?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 | `Retrieve`<br />Event: True |`GET` /flowsessions(*flowsessionid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
 | `RetrieveMultiple`<br />Event: True |`GET` /flowsessions<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 | `RetrievePrincipalAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
@@ -66,6 +68,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [CallbackUrl](#BKMK_CallbackUrl)
 - [ClientTrackingId](#BKMK_ClientTrackingId)
 - [CompletedOn](#BKMK_CompletedOn)
+- [ComputerUseAgentId](#BKMK_ComputerUseAgentId)
 - [ConnectionId](#BKMK_ConnectionId)
 - [Context](#BKMK_Context)
 - [CorrelationId](#BKMK_CorrelationId)
@@ -75,6 +78,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [ErrorInnerError](#BKMK_ErrorInnerError)
 - [ErrorMessage](#BKMK_ErrorMessage)
 - [flowsessionId](#BKMK_flowsessionId)
+- [flowtestsessionid](#BKMK_flowtestsessionid)
+- [flowtriggerid](#BKMK_flowtriggerid)
 - [Gateway](#BKMK_Gateway)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [MachineGroupId](#BKMK_MachineGroupId)
@@ -159,6 +164,19 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Format|DateAndTime|
 |ImeMode|Auto|
 |SourceTypeMask|0|
+
+### <a name="BKMK_ComputerUseAgentId"></a> ComputerUseAgentId
+
+|Property|Value|
+|---|---|
+|Description||
+|DisplayName|**Computer Use Agent**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`computeruseagentid`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|computeruseagent|
 
 ### <a name="BKMK_ConnectionId"></a> ConnectionId
 
@@ -307,6 +325,32 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`flowsessionid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
+
+### <a name="BKMK_flowtestsessionid"></a> flowtestsessionid
+
+|Property|Value|
+|---|---|
+|Description|**Unique identifier of the flow test session with which the flow session is associated.**|
+|DisplayName|**Flow Test Session**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`flowtestsessionid`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|flowtestsession|
+
+### <a name="BKMK_flowtriggerid"></a> flowtriggerid
+
+|Property|Value|
+|---|---|
+|Description||
+|DisplayName|**Flow Trigger Id**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`flowtriggerid`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|flowtrigger|
 
 ### <a name="BKMK_Gateway"></a> Gateway
 
@@ -826,7 +870,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`triggertype`|
 |RequiredLevel|None|
 |Type|Picklist|
-|DefaultFormValue||
+|DefaultFormValue|-1|
 |GlobalChoiceName|`flowsession_triggertype`|
 
 #### TriggerType Choices/Options
@@ -838,6 +882,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |2|**Local**|
 |3|**RunDesktopFlowDataverseApi**|
 |4|**Cua**|
+|5|**Trigger**|
 
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
 
@@ -1145,12 +1190,15 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 These relationships are many-to-one. Listed by **SchemaName**.
 
 - [business_unit_flowsession](#BKMK_business_unit_flowsession)
+- [computeruseagent_flowsession_ComputerUseAgentId](#BKMK_computeruseagent_flowsession_ComputerUseAgentId)
 - [FileAttachment_FlowSession_AdditionalContext](#BKMK_FileAttachment_FlowSession_AdditionalContext)
 - [FileAttachment_FlowSession_Inputs](#BKMK_FileAttachment_FlowSession_Inputs)
 - [FileAttachment_FlowSession_Outputs](#BKMK_FileAttachment_FlowSession_Outputs)
 - [flowmachine_flowsession_MachineId](#BKMK_flowmachine_flowsession_MachineId)
 - [flowmachinegroup_flowsession_MachineGroupId](#BKMK_flowmachinegroup_flowsession_MachineGroupId)
 - [flowsession_flowsession_parentdesktopflowrunid](#BKMK_flowsession_flowsession_parentdesktopflowrunid-many-to-one)
+- [flowtestsession_flowsession](#BKMK_flowtestsession_flowsession)
+- [flowtrigger_flowsession_flowtriggerid](#BKMK_flowtrigger_flowsession_flowtriggerid)
 - [lk_flowsession_createdby](#BKMK_lk_flowsession_createdby)
 - [lk_flowsession_createdonbehalfby](#BKMK_lk_flowsession_createdonbehalfby)
 - [lk_flowsession_modifiedby](#BKMK_lk_flowsession_modifiedby)
@@ -1172,6 +1220,19 @@ One-To-Many Relationship: [businessunit business_unit_flowsession](businessunit.
 |ReferencingEntityNavigationPropertyName|`owningbusinessunit`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `Restrict`<br />Assign: `NoCascade`<br />Delete: `Restrict`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_computeruseagent_flowsession_ComputerUseAgentId"></a> computeruseagent_flowsession_ComputerUseAgentId
+
+One-To-Many Relationship: [computeruseagent computeruseagent_flowsession_ComputerUseAgentId](computeruseagent.md#BKMK_computeruseagent_flowsession_ComputerUseAgentId)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`computeruseagent`|
+|ReferencedAttribute|`computeruseagentid`|
+|ReferencingAttribute|`computeruseagentid`|
+|ReferencingEntityNavigationPropertyName|`ComputerUseAgentId`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `Cascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_FileAttachment_FlowSession_AdditionalContext"></a> FileAttachment_FlowSession_AdditionalContext
 
@@ -1249,7 +1310,33 @@ One-To-Many Relationship: [flowsession flowsession_flowsession_parentdesktopflow
 |ReferencingAttribute|`parentdesktopflowrunid`|
 |ReferencingEntityNavigationPropertyName|`parentdesktopflowrunid`|
 |IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_flowtestsession_flowsession"></a> flowtestsession_flowsession
+
+One-To-Many Relationship: [flowtestsession flowtestsession_flowsession](flowtestsession.md#BKMK_flowtestsession_flowsession)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`flowtestsession`|
+|ReferencedAttribute|`flowtestsessionid`|
+|ReferencingAttribute|`flowtestsessionid`|
+|ReferencingEntityNavigationPropertyName|`flowtestsessionid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_flowtrigger_flowsession_flowtriggerid"></a> flowtrigger_flowsession_flowtriggerid
+
+One-To-Many Relationship: [flowtrigger flowtrigger_flowsession_flowtriggerid](flowtrigger.md#BKMK_flowtrigger_flowsession_flowtriggerid)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`flowtrigger`|
+|ReferencedAttribute|`flowtriggerid`|
+|ReferencingAttribute|`flowtriggerid`|
+|ReferencingEntityNavigationPropertyName|`flowtriggerid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_lk_flowsession_createdby"></a> lk_flowsession_createdby
 
@@ -1363,6 +1450,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [flowevent_flowsession](#BKMK_flowevent_flowsession)
 - [flowsession_AsyncOperations](#BKMK_flowsession_AsyncOperations)
 - [flowsession_BulkDeleteFailures](#BKMK_flowsession_BulkDeleteFailures)
+- [flowsession_DeletedItemReferences](#BKMK_flowsession_DeletedItemReferences)
 - [flowsession_FileAttachments](#BKMK_flowsession_FileAttachments)
 - [flowsession_flowlog_flowsessionid](#BKMK_flowsession_flowlog_flowsessionid)
 - [flowsession_flowlog_parentobjectid](#BKMK_flowsession_flowlog_parentobjectid)
@@ -1407,6 +1495,18 @@ Many-To-One Relationship: [bulkdeletefailure flowsession_BulkDeleteFailures](bul
 |ReferencingEntity|`bulkdeletefailure`|
 |ReferencingAttribute|`regardingobjectid`|
 |ReferencedEntityNavigationPropertyName|`flowsession_BulkDeleteFailures`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_flowsession_DeletedItemReferences"></a> flowsession_DeletedItemReferences
+
+Many-To-One Relationship: [deleteditemreference flowsession_DeletedItemReferences](deleteditemreference.md#BKMK_flowsession_DeletedItemReferences)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`deleteditemreference`|
+|ReferencingAttribute|`deletedobject`|
+|ReferencedEntityNavigationPropertyName|`flowsession_DeletedItemReferences`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
