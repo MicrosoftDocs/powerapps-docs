@@ -4,7 +4,7 @@ description: Learn how to use AI code generation tools like GitHub Copilot CLI t
 author: jasongre
 ms.author: jasongre
 ms.reviewer: matp
-ms.date: 09/09/2026
+ms.date: 09/18/2026
 ms.topic: how-to
 ms.service: powerapps
 ms.subservice: mda-maker
@@ -16,7 +16,6 @@ ms.collection:
 applies_to:
 - PowerApps
 ---
-
 # Create and edit generative pages with AI code generation tools
 
 This article describes how to use AI code generation tools, such as GitHub Copilot CLI, to create and edit generative pages for model-driven apps in Power Apps. By using this approach, you can integrate advanced code generation capabilities directly into your development workflow to create new generative pages or iterate on existing ones by using natural language instructions.
@@ -27,7 +26,7 @@ This article describes how to use AI code generation tools, such as GitHub Copil
 Using AI code generation tools with generative pages complements the UI-based experience in Power Apps ([make.powerapps.com](https://make.powerapps.com)). This code-first approach fits any maker or developer who wants access to the newest AI models or prefers working with local development tools and CLI-based workflows.
 
 > [!NOTE]
-> To plan, build, or edit an entire model-driven app instead of individual generative pages, use the preview model app builder skill. More information: [Build and edit model-driven apps with AI code generation tools (preview)](model-driven-app-external-tools.md)
+> To plan, build, or edit an entire model-driven app instead of individual generative pages, use the model app-builder skill. For more information, see [Build and edit model-driven apps with AI code generation tools](model-driven-app-external-tools.md).
 
 ## What you can do with code generation tools
 

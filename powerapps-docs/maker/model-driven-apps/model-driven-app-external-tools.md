@@ -1,10 +1,10 @@
 ---
-title: Build and edit model-driven apps with AI code generation tools (preview)
+title: Build and edit model-driven apps with AI code generation tools
 description: Learn how to use AI code generation tools to build and edit model-driven apps in Power Apps from natural-language requirements.
 author: jasongre
 ms.author: jasongre
 ms.reviewer: matp
-ms.date: 08/27/2026
+ms.date: 09/17/2026
 ms.topic: how-to
 ms.service: powerapps
 ms.subservice: mda-maker
@@ -17,35 +17,33 @@ applies_to:
 - PowerApps
 ---
 
-# Build and edit model-driven apps with AI code generation tools (preview)
+# Build and edit model-driven apps with AI code generation tools
 
-[!INCLUDE [preview-banner](../../../shared/preview-includes/preview-banner.md)]
-
-Use the model app builder skill with an AI code generation tool, such as GitHub Copilot CLI or Claude Code, to build and edit model-driven apps from natural-language requirements. Start by describing the business process or app you need instead of creating each table, form, view, and other component individually.
+Use the model app-builder skill with an AI code generation tool, such as GitHub Copilot CLI or Claude Code, to build and edit model-driven apps from natural-language requirements. Start by describing the business process or app you need instead of creating each table, form, view, and other component individually.
 
 The skill turns your requirements into an application plan that you can review before it makes changes. The skill then creates the model-driven app and its supporting Microsoft Dataverse artifacts in your Power Platform environment. You can continue to refine the app with natural-language instructions or use the standard designers in [Power Apps](https://make.powerapps.com).
 
-> [!IMPORTANT]
-> The model app builder skill is a preview capability under active development. Its app spec schema and command-line options might change between releases. Review the proposed plan before approving and validate the generated app before using in production.
+> [!NOTE]
+> The model app-builder skill is updated regularly. For the latest supported capabilities, prerequisites, and usage instructions, see the [model apps plugins README](https://github.com/microsoft/power-platform-skills/blob/main/plugins/model-apps/README.md#app-builder).
 
-## What you can do with the model app builder skill
+## Core capabilities
 
-Use the skill to:
+Core capabilities include:
 
 - Create a model-driven app from a description of a business scenario.
 - Plan the app around user personas and the jobs they need to accomplish.
 - Review the app spec and build plan before the skill writes artifacts to your environment.
-- Create supporting tables, columns, relationships, forms, views, charts, and sample data.
-- Create generative pages for experiences that go beyond standard forms and views.
+- Create supporting tables, columns, relationships, forms with subgrids, quick-create forms, quick-view forms, views, charts, business rules, business process flows, and sample data.
+- Create generative pages for dashboards, overviews, guided workflows, and other tailored experiences beyond standard forms and views.
 - Create a sitemap with custom icons for each table.
 - Add JavaScript validation rules to forms.
 - Add security roles based on the planned personas and data access needs.
 - Edit an existing model-driven app by describing the changes you want.
 - Verify the deployed app against the approved specification.
 
-The skill chooses standard model-driven app artifacts where they fit the scenario. The skill can use generative pages for experiences that require a more tailored user interface beyond forms and views, like dashboards, guided workflows, and data exploration. Sitemap icons and JavaScript validation logic are created as web resources and connected to the appropriate app components during implementation.
+The skill chooses standard model-driven app artifacts where they fit the scenario and recommends generative pages for experiences that require a more tailored UI like dashboards and guided workflows. Sitemap icons and JavaScript validation logic are created as web resources and connected to the appropriate app components during implementation.
 
-## How the model app builder skill works
+## How the model app-builder skill works
 
 The skill uses an interactive, multistep authoring process:
 
@@ -66,7 +64,7 @@ Install and configure the following software before you use the skill.
 | Component | Minimum version | More information |
 |-----------|-----------------|------------------|
 | Node.js | Current long-term support (LTS) version | [Download Node.js](https://nodejs.org/) |
-| Power Platform CLI (PAC CLI) | 2.7.0 or later | [Install Power Platform CLI](/power-platform/developer/cli/introduction) |
+| Power Platform CLI (PAC CLI) | Latest | [Install Power Platform CLI](/power-platform/developer/cli/introduction) |
 | Azure CLI | Latest | [Install Azure CLI](/cli/azure/install-azure-cli) |
 | GitHub Copilot CLI, Claude Code, or another supported AI code generation tool | Latest | [GitHub Copilot CLI](https://github.com/features/copilot/cli/) or [Claude Code](https://claude.ai/code) |
 
@@ -102,7 +100,7 @@ To install only the Power Apps plugin for GitHub Copilot CLI or Claude Code:
 > For Claude Code, you can install the plugin with different scopes, such as global, local, or user. Depending on the scope, you need to be in the correct directory for Claude Code to use the plugin. More information: [Extend Claude with skills](https://code.claude.com/docs/en/skills#share-skills)
 
 > [!TIP]
-> Turn on automatic updates for the marketplace and skills. The model app builder skill is updated frequently during preview.
+> Turn on automatic updates for the marketplace and skills to receive the latest capabilities, improvements, and fixes.
 
 > [!NOTE]
 > If you only need to create or edit generative pages in an existing model-driven app, use the separate generative pages skill. More information: [Create and edit generative pages with AI code generation tools](generative-page-external-tools.md)
@@ -140,7 +138,7 @@ Use the same skill to make targeted changes to an existing app.
 
 ## Continue customizing and extending in Power Apps
 
-Artifacts created by the model app builder skill are standard Power Apps and Dataverse artifacts. After initial generation, you can continue to iterate and refine the app using the skill, or you can use [Power Apps](https://make.powerapps.com) and its designers to modify generated artifacts or create new artifacts manually. For example, you can:
+Artifacts created by the model app-builder skill are standard Power Apps and Dataverse artifacts. After initial generation, you can continue to iterate and refine the app by using the skill, or you can use [Power Apps](https://make.powerapps.com) and its designers to modify generated artifacts or create new artifacts manually. For example, you can:
 
 - Refine forms, views, charts, and navigation.
 - Update tables, columns, and relationships.
@@ -150,7 +148,7 @@ Artifacts created by the model app builder skill are standard Power Apps and Dat
 - Extend the app with other Power Platform customization tools.
 
 > [!NOTE]
-> The model app builder skill doesn't currently support every model-driven app artifact or concept. Use Power Apps designers and other Power Platform tools to add or modify unsupported components.
+> The model app-builder skill doesn't currently support every model-driven app artifact or concept. Use Power Apps designers and other Power Platform tools to add or modify unsupported components.
 
 Changes made outside the skill can affect later AI-assisted edits. Before approving another build, review the app spec and build plan to ensure they preserve your manual customizations.
 
@@ -167,4 +165,4 @@ Changes made outside the skill can affect later AI-assisted edits. Before approv
 - [Overview of the model-driven app designer](app-designer-overview.md)
 - [Create and edit generative pages with AI code generation tools](generative-page-external-tools.md)
 - [Power Platform CLI reference](/power-platform/developer/cli/reference/index)
-- [Model app builder skill on GitHub](https://github.com/microsoft/power-platform-skills/blob/main/plugins/model-apps/README.md#app-builder)
+- [Model app-builder skill on GitHub](https://github.com/microsoft/power-platform-skills/blob/main/plugins/model-apps/README.md#app-builder)
