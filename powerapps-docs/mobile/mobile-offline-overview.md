@@ -46,6 +46,6 @@ When offline mode is configured and enabled for your model-driven app, anyone wh
 
 With the offline-first experience, it's important to understand the key benefits of the _offline-first experience_ versus the _classic offline experience_.
 
-| **Offline-first** | **Classic offline** |
+| **Offline-first** (Recommended) | **Classic offline** |
 |-------------------------|-------------------------|
 | <ul><li>Your data is always the same, regardless of your network connection.</li><li>There's no toggle for users to switch from offline to online mode. A user never forgets to sync their changes back to the server because the app does it automatically.</li></ul>| <ul><li>Users have the option to skip the initial offline sync and stay online, which means that users in your organization might not have the same experience.</li><li>Users have to remember to disable the **Work in offline mode** toggle before they can sync changes with the server.</li><li>To save your changes in offline mode, you need to set the **Work in offline mode** toggle to **On**. Otherwise, when you're working on a row and suddenly lose your internet connection, your changes are lost.</li><li>The rows you see in offline mode are listed from the local database. This means that the rows you see in offline mode vs. online mode can be different.</li></ul> |
