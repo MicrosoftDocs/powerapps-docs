@@ -15,7 +15,7 @@ An elastic table is a table managed by Microsoft Dataverse. Elastic tables come 
 
 Elastic tables are included with your Dataverse log capacity use.
 
-Watch this video that to learn about elastic tables.
+To learn about elastic tables, watch this video.
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=6f859c28-12b1-4042-9502-b8a441020768 ]
 
 ## When to consider Dataverse elastic tables?
