@@ -2,7 +2,7 @@
 title: "Prompt columns in Microsoft Dataverse"
 description: "Understand how to create, manage, and use prompt columns with Power Apps and Dataverse."
 keywords: ""
-ms.date: 07/30/2026
+ms.date: 09/11/2026
 ms.custom: 
 ms.topic: article
 applies_to: 
@@ -45,19 +45,13 @@ Example use cases:
 1. Under the **Data type** dropdown list, select **Prompt**.
 1. Clear the **Allow form fill assistance** checkbox.
 1. Select **+Add new prompt**. You can create up to five prompt columns per table.
-1. On the prompt column page, create a prompt. More information: [How to write an AI prompt for a prompt column](#how-to-write-an-ai-prompt-for-a-prompt-column)
+1. On the prompt column page, create a prompt. More information: [Write effective prompts](#write-effective-prompts)
 1. Select **Save** on the prompt page.
 1. Select **Save** on the column properties page to save your column.
 
-## How to write an AI prompt for a prompt column
+## Write effective prompts
 
 Crafting effective AI prompts is crucial for getting accurate and relevant responses from the AI model. You can use the prefilled prompt or write your own custom prompt.
-
-To clear the prefilled prompt, highlight and delete it, or select the three dots to the left of **Model**, then select **Clear prompt**.
-
-:::image type="content" source="media/prompt-columns/prompt-column-clear-prompt.png" alt-text="Clear prompt UI":::
-
-## Write effective prompts
 
 Here are some best practices for writing prompts:
 
@@ -79,23 +73,14 @@ Here are some best practices for writing prompts:
 
 ## Test and refine prompts
 
-Test your AI prompt. Create a test record with appropriate values in all your input columns for testing. For example, create a *Name* column in the table and enter some value that is used to identify the test record, such as *testing prompts*.
+When you create a prompt column, you can test the prompt against real data in your table before you save it.
 
-1. Create or select a prompt column.
-1. While editing the prompt in a prompt column, select the input column to open the **Filter knowledge** pop-up screen.
-1. Select the **Filter attribute** option. 
-   :::image type="content" source="media/prompt-columns/prompt-column-filter-attribute.png" alt-text="Filter attribute option":::
-1. Select the **Filter attribute** dropdown list and select a filter, such as *Name*. 
-1. Enter the value of your testing record **Name**, such as *testing prompt*.
-1. Select **Close**.
-1. Select **Test** and review the **Model response**.
-1. Select the **Knowledge used** tab to confirm that the input came from your test record.
-   :::image type="content" source="media/prompt-columns/prompt-column-knowledge.png" alt-text="Knowledge used in prompt column" lightbox="media/prompt-columns/prompt-column-knowledge.png":::
-1. Modify your prompt until you get the desired results.  
-1. Return to the **Filter knowledge** pop-up and select **No filter** when your prompt changes are done.
-1. Select **Save** to update your prompt column.
+1. Run the default test. When you create a new column, select **Test**. A record from your table is selected automatically, and the prompt's response for that record appears in the output. Open the **Knowledge used** tab to confirm the prompt referenced the input you expected.
+1. Test a different record. Open the text input variable (`PromptColumnRecordId` by default) and enter the record ID of the record you want to test as the sample value. You find the record ID in your table's primary column (the unique identifier). To learn more about text input variable, see [Text input variable](#text-input-variable).  
 
-Testing a prompt doesn't consume credits.
+:::image type="content" source="media/prompt-columns/prompt-column-testing.png" alt-text="Message displays: Prompt Column testing" lightbox="media/prompt-columns/prompt-column-testing.png":::
+
+Testing a prompt is free. The credits on lower right show what one run consumes.
 
 ## How prompt columns execute
 
