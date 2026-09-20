@@ -6,7 +6,7 @@ author: lancedMicrosoft
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 05/21/2025
+ms.date: 06/10/2025
 ms.subservice: canvas-maker
 ms.author: mkaur
 search.audienceType: 
@@ -14,6 +14,7 @@ search.audienceType:
 contributors:
   - mduelae
   - lancedMicrosoft
+  - jelopezf
 ---
 
 # Use Microsoft SQL Server securely with Power Apps
@@ -43,7 +44,12 @@ The following four connection authentication types can be used with SQL Server f
 | Microsoft Entra Integrated                 | Explicit                     |
 | SQL Server Authentication | Implicit / Secure Implicit                     |
 | Windows Authentication              | Implicit / Secure Implicit                    |
-| Windows Authentication (nonshared) | Explicit                     |
+| Windows Authentication (Non Shared) | Explicit                     |
+| Service Principal (Microsoft Entra ID application) | Implicit / Secure Implicit |
+| Client Certificate Auth | Implicit / Secure Implicit |
+
+> [!IMPORTANT]
+> Prior to **May 2025**, **Service principal** connections were considered explicit and non-shareable. For any connections added to apps before **May 2025**, it is necessary to remove and re-add the **Service principal** connections to enable sharing.
 
 ## Implicit connection sharing risks
 
