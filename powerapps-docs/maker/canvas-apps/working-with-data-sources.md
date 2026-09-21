@@ -6,7 +6,7 @@ author: gregli-msft
 ms.topic: concept-article
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 05/4/2026
+ms.date: 09/21/2026
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -134,7 +134,7 @@ You don't want to bring those millions of customers into your app, and then choo
 Many, but not all, functions that you can use to choose records can be *delegated*, which means that they're run inside the cloud service. Learn more in [Delegation](delegation-overview.md).
 
 > [!IMPORTANT]
-> By default, Power Apps retrieves only the first **500 records** from a data source. You can raise this limit to a maximum of **2,000 records** in app settings. If your data source contains more records and your formula isn't fully delegable, a yellow delegation warning triangle appears in Power Apps Studio. When you see this warning, your app may not return all matching records at runtime. To avoid data loss in large data sets, use delegable functions such as **[Filter](functions/function-filter-lookup.md)** and **[Sort](functions/function-sort.md)** with supported data sources, or consider using Microsoft Dataverse, which has broader delegation support.
+> By default, Power Apps retrieves only the first **500 records** from a data source. You can raise this limit to a maximum of **10,000 records** in app settings. If your data source contains more records and your formula isn't fully delegable, a yellow delegation warning triangle appears in Power Apps Studio. When you see this warning, your app may not return all matching records at runtime. To avoid data loss in large data sets, use delegable functions such as **[Filter](functions/function-filter-lookup.md)** and **[Sort](functions/function-sort.md)** with supported data sources, or consider using Microsoft Dataverse, which has broader delegation support.
 
 #### Identify and resolve delegation warnings
 

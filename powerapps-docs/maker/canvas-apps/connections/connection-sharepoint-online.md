@@ -5,7 +5,7 @@ author: NickWaggoner
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 3/14/2025
+ms.date: 09/21/2026
 ms.subservice: canvas-maker
 ms.author: mkaur
 search.audienceType:
@@ -141,7 +141,7 @@ The following Power Apps operations, for a given data type, may be delegated to 
 3. SharePoint ID fields are shown as a number field in Power Apps. However, the underlying type is actually Text. SharePoint only supports the equal ('=') operation for delegation on an ID field. Relational operations such as `<, <=,<>, >, >=` won't work on a SharePoint ID field.
 4. A formula such as Filter(..., IsBlank(CustomerId)) won't delegate to SharePoint. However, that formula is semantically close to Filter(..., CustomerId = Blank()), will delegate to SharePoint. These formulas aren't equivalent because the second formula won't treat the empty string ("") as empty. However, the second formula might work for your purposes. On SharePoint, this approach works for the 'equals' operator ("=") but not the operator for 'not equals' ("<>").
 5. SharePoint does not support delegation of StartsWith on subfields of Choice or Lookup complex types.
-6. UpdateIf and RemoveIf work locally but simulate delegation to a limit of 500/2000 records. They successively bring down records beyond the non-delegation 500/2000 record limit. Records that meet the If condition are collected. Generally, a maximum of 500/2000 records are collected separately and then changed per execution. However, more records may be updated if the existing local data cache is large as the function may have access to more records for evaluation.
+6. UpdateIf and RemoveIf work locally but simulate delegation up to the app's configured **Data row limit**, which is 500 by default and can be increased to 10,000. They progressively retrieve records beyond the nondelegation limit. Records that meet the condition are collected. Generally, the number of records specified by the **Data row limit** is collected separately and then changed per execution. However, more records might be updated if the existing local data cache is large because the functions can access more records for evaluation.
 
   
 

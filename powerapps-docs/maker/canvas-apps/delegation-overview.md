@@ -6,7 +6,7 @@ author: lancedMicrosoft
 ms.topic: overview
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 01/13/2026
+ms.date: 09/21/2026
 ms.subservice: canvas-maker
 ms.author: mkaur
 search.audienceType: 
@@ -23,9 +23,9 @@ Power Apps works best with a back-end data source when a Power Fx query fully tr
 
 But Power Fx queries can't always translate into equivalent queries on every data source. For example, Dataverse supports more query features than Excel. Dataverse supports the 'in' (membership) query operator, but Excel doesn't. A query is **nondelegable** if it uses a feature the data source doesn't support. If any part of a query expression is nondelegable, Power Apps doesn't delegate any part of the query.
 
-When a query is nondelegable, Power Apps gets the first 500 records from the data source and then runs the actions in the query. You can increase this limit to 2,000 records. [Changing the limit](#changing-the-limit) **Power Apps limits the result size to 500 records to keep your app performing well.** Larger result sets can cause performance problems for your app and Power Apps.
+When a query is nondelegable, Power Apps gets the first 500 records from the data source and then runs the actions in the query. You can [change this limit](#changing-the-limit) to a maximum of 10,000 records. Power Apps uses a default limit of 500 records to help keep your app performing well. Larger result sets can cause performance problems for your app and Power Apps.
 
-But this limitation can be a problem because the query might return incorrect results if the data source has more than 500 or 2,000 records. For example, if your data source has 10 million records and your query needs to work on the last part of the data, like family names that start with 'Z', and your query uses a nondelegable operator like distinct, you only get the first 500 or 2,000 records. So, you get incorrect results.
+But this limitation can be a problem because the query might return incorrect results if the data source has more records than the configured limit. For example, if your data source has 10 million records and your query needs to work on the last part of the data, like family names that start with 'Z', and your query uses a nondelegable operator like distinct, you only get the first records up to the app's **Data row limit** setting, which is 500 by default and can be increased to 10,000. So, you get incorrect results.
 
 **Create your Power Fx queries by using the delegable tables for your data source.** Only use query functions that can be delegated. It's the only way to keep your app performing well and to make sure users get all the information they need.
 
@@ -148,9 +148,9 @@ Aggregate functions can also be confusing. For example, if you use **Average** o
 The default number of records is 500, but you can change this number for your app:
 
 1. Select **Settings**.
-1. Under **General**, change the **Data row limit** setting from 1 to 2,000.
+1. Under **General**, change the **Data row limit** setting from 1 to 10,000.
 
-In some cases, 2,000, 1,000, or 1,500 records is enough for your scenario. You can increase this number to fit your needs, but as you do, your app's performance can degrade, especially for wide tables with many columns. It's still best to delegate as much as possible.
+You can increase this number to fit your needs, but as you do, your app's performance can degrade, especially for wide tables with many columns. It's still best to delegate as much as possible.
 
 To make sure your app scales to large data sets, set this value to 1. Anything that can't be delegated returns a single record, which is easy to detect when testing your app. This helps you avoid surprises when moving a proof-of-concept app to production.
 

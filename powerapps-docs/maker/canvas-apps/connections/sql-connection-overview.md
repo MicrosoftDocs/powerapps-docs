@@ -4,7 +4,7 @@ description: Learn how to connect to a SQL server to access and view data from M
 author: lancedMicrosoft
 ms.topic: reference
 ms.custom: canvas
-ms.date: 3/14/2025
+ms.date: 09/21/2026
 ms.subservice: canvas-maker
 ms.author: lanced
 ms.reviewer: mkaur
@@ -109,7 +109,7 @@ This table shows which operations are delegable to SQL Server by data type. Expr
 
 6. Supported for `(StartsWith(\<column>, "string value"))`, but not for `(StartsWith("string value", \<column>))`
 
-7. UpdateIf and RemoveIf work locally but simulate delegation to a limit of 500/2000 records. They successively bring down records beyond the non-delegation 500/2000 record limit. Records that meet the If condition are collected. Generally, a maximum of 500/2000 records are collected separately and then changed per execution. However, more records may be updated if the existing local data cache is large as the function may have access to more records for evaluation.
+7. UpdateIf and RemoveIf work locally but simulate delegation up to the app's configured **Data row limit**, which is 500 by default and can be increased to 10,000. They progressively retrieve records beyond the nondelegation limit. Records that meet the condition are collected. Generally, the number of records specified by the **Data row limit** is collected separately and then changed per execution. However, more records might be updated if the existing local data cache is large because the functions can access more records for evaluation.
 
 
 ## Related information

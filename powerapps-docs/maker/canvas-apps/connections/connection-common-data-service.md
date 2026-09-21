@@ -5,7 +5,7 @@ author: mduelae
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 06/19/2025
+ms.date: 09/21/2026
 ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
@@ -89,7 +89,7 @@ Dataverse for processing instead of processing locally within Power Apps.
 7.  The FirstN function isn't supported.
 8.  The `In` operator is subject to the 15-table query limit of Dataverse.
 9.  Supports comparisons. For example, `Filter(TableName, MyCol = Blank())`.
-10. UpdateIf and RemoveIf work locally but simulate delegation to a limit of 500 or 2,000 records. They successively bring down records beyond the nondelegation 500 or 2,000 record limit. Records that meet the If condition are collected. Generally, a maximum of 500 or 2,000 records are collected separately and then changed per execution. However, more records can be updated if the existing local data cache is large because the function can access more records for evaluation.
+10. UpdateIf and RemoveIf work locally but simulate delegation up to the app's configured **Data row limit**, which is 500 by default and can be increased to 10,000. They progressively retrieve records beyond the nondelegation limit. Records that meet the condition are collected. Generally, the number of records specified by the **Data row limit** is collected separately and then changed per execution. However, more records might be updated if the existing local data cache is large because the functions can access more records for evaluation.
 
 ## Call Dataverse actions directly in Power Fx
 
