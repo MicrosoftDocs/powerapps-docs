@@ -61,7 +61,7 @@ Here are some best practices for writing prompts:
 
 ## Add input columns
 
-1. Replace default input text by selecting it and then select **Delete**.
+1. Replace the default input by selecting it and then selecting **Delete**.
 1. Select **+Add content**, and then select the table.
 1. The column dropdown list appears. Select the input column from the list of columns from your table, and then select **Add**. In this example, the *Customer feedback* column is selected.
    :::image type="content" source="media/prompt-columns/prompt-column-add-columns.png" alt-text="Add an input column":::
@@ -75,12 +75,12 @@ Here are some best practices for writing prompts:
 
 When you create a prompt column, you can test the prompt against real data in your table before you save it.
 
-1. Run the default test. When you create a new column, select **Test**. A record from your table is selected automatically, and the prompt's response for that record appears in the output. Open the **Knowledge used** tab to confirm the prompt referenced the input you expected.
+1. Run the default test. In the prompt designer, select **Test**. A record from your table is selected automatically, and the prompt's response for that record appears in the output. Open the **Knowledge used** tab to confirm the prompt referenced the input you expected. If you can't run the default test, try testing a specific record as noted in the next step.  
 1. Test a different record. Open the text input variable (`PromptColumnRecordId` by default) and enter the record ID of the record you want to test as the sample value. You find the record ID in your table's primary column (the unique identifier). To learn more about text input variable, see [Text input variable](#text-input-variable).  
 
 :::image type="content" source="media/prompt-columns/prompt-column-testing.png" alt-text="Message displays: Prompt Column testing" lightbox="media/prompt-columns/prompt-column-testing.png":::
 
-Testing a prompt is free. The credits on lower right show what one run consumes.
+Testing a prompt is free. The credits on lower right are estimates for one run. 
 
 ## How prompt columns execute
 
