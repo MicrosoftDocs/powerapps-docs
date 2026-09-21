@@ -2,7 +2,8 @@
 title: "RDL sandboxing"
 description: Learn about RDL sandboxing that may affect SSRS reports in Power Apps.
 ms.custom: 
-ms.date: 02/12/2026
+ms.date: 09/21/2026
+ai-usage: ai-assisted
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -23,7 +24,7 @@ search.audienceType:
 
 In Microsoft Dataverse, classic reports run in the sandbox mode. This is done by enabling Report Definition Language (RDL) Sandboxing in SQL Server Reporting Services. The RDL Sandboxing lets you detect and restrict the usage of specific types of resources. As a result, certain features in Power Apps model-driven apps might not be available.  
   
-The current RDL Sandboxing configuration settings in Dataverse are described in the following sections in this article.  
+The following sections describe the RDL sandboxing settings and external image requirements for reports hosted in Dataverse.
 
 ## Limits of the array result length and string result length
 
@@ -31,6 +32,14 @@ The maximum number of items allowed in an array return value for an RDL expressi
   
  The `MaxResourceSize` is set to 2,000. This lets you include external images in a report up to 1,500 KB in size. More information: [TechNet: Add an External Image (Report Builder and SSRS)](/sql/reporting-services/report-design/add-an-external-image-report-builder-and-ssrs)  
   
+## External image requirements
+
+For SSRS reports hosted in Microsoft Dataverse, including Dynamics 365 Online, images with their source set to **External** must use URLs that support anonymous access. This is a requirement of the Dataverse-hosted report service, not a general requirement for all SSRS deployments.
+
+URLs that require authentication aren't supported as external images. The report renderer doesn't inherit your browser's authenticated session, so an image that opens in your browser might not render in a report or its exported output.
+
+For images that must remain access-controlled, consider [embedded images](/sql/reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs) or [data-bound images](/sql/reporting-services/report-design/add-a-data-bound-image-report-builder-and-ssrs) instead of making private images publicly accessible. Data-bound images retrieve image data through the report dataset; storing only an image URL in a Dataverse column doesn't make the image data-bound.
+
 ## Allowed types and denied members
 
  The RDL Sandboxing feature enables you to create a list of approved types and a list of denied members. The list of approved types is called an allowlist. The list of denied members that aren't permitted in the RDL expressions is called a blocklist.  

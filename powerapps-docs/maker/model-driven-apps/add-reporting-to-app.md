@@ -2,7 +2,8 @@
 title: "Add reporting features to your model-driven app" 
 description: Learn how to add reporting to your model-driven app in Power Apps.
 ms.custom: ""
-ms.date: 09/17/2024
+ms.date: 09/21/2026
+ai-usage: ai-assisted
 ms.reviewer: ""
 ms.topic: "how-to"
 author: "Mattp123"
@@ -14,7 +15,7 @@ search.audienceType:
 ---
 # Add reporting features to your model-driven app
 
-Power Apps apps can include paginated style reports that provide useful business information to the user. These reports are based on SQL Server Reporting Services and provide the same set of features that are available for typical SQL Server Reporting Services reports.
+Power Apps apps can include paginated style reports that provide useful business information to the user. These reports are based on SQL Server Reporting Services (SSRS), with [Dataverse-specific restrictions](rdl-sandboxing.md).
 
 :::image type="content" source="media/progress-against-goals-report.png" alt-text="Progress against goals standard report" lightbox="media/progress-against-goals-report.png":::
 
@@ -42,6 +43,9 @@ You can create a new report in one of two ways:
 
 - Use the Report Wizard. Open a model-driven app that is enabled for reporting, select the **Reports** page, and then select **New** to open the Report Wizard to create a new report. The Report Wizard can create table and chart reports, including drill-through reports and top N reports. More information: [Create a report using the Report Wizard](../../user/create-report-with-wizard.md) 
 - Use the Report Authoring Extension. You can write new or customize existing fetch-based Reporting Services reports with Visual Studio, SQL Server Data Tools, and the Report Authoring Extension. More information: [Create a new report using SQL Server Data Tools](/dynamics365/customer-engagement/analytics/create-a-new-report-using-sql-server-data-tools)
+
+> [!IMPORTANT]
+> External image URLs used in Dataverse-hosted reports must support anonymous access. URLs that require authentication aren't supported as external images, even if you can open them in your browser. Review [External image requirements](rdl-sandboxing.md#external-image-requirements) before designing or migrating a report.
 
 ## Report visibility
 
