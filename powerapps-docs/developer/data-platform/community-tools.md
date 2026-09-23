@@ -51,6 +51,12 @@ The following list of selected community tools is distributed via the XrmToolBox
 |[SQL 4 CDS](https://www.xrmtoolbox.com/plugins/MarkMpn.SQL4CDS/)|SQL 4 CDS allows you to use standard SQL syntax to query and manipulate your data and metadata in Dataverse.|
 |[Dataverse Custom API Manager](https://www.xrmtoolbox.com/plugins/XTB.CustomApiManager/)|Create, update, and get 360° View of Dataverse custom APIs.|
 
+## Pillaro Dataverse Plugin Framework
+
+[Pillaro Dataverse Plugin Framework](https://github.com/Pillaro-Standard/Dataverse-Plugin-Framework) is an open-source (Apache-2.0) C# framework for building Dataverse and Dynamics 365 plug-ins.
+
+It provides a task-based execution model with separate validation and execution phases, code-defined plug-in registration and deployment, integration testing against Dataverse, and diagnostic logging through a companion model-driven app.
+
 ## Browser extensions
 
 These browser extensions enhance your experience when working with Dataverse and Power Apps by providing additional functionality directly in your web browser.
