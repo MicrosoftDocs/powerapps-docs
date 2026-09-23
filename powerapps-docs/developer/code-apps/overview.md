@@ -3,7 +3,7 @@ title: "Power Apps Code Apps: Features and Requirements"
 description: "Explore Power Apps code apps, including key features, developer prerequisites, licensing, managed platform support, and limitations. Get started."
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 09/04/2026
+ms.date: 09/23/2026
 ms.reviewer: jdaly
 ms.topic: overview
 contributors:
@@ -59,7 +59,12 @@ Admins can enable code apps by setting an environment option. Power Platform adm
 
 ### License end users with Power Apps Premium
 
-End users that run code apps need a [Power Apps Premium license](https://www.microsoft.com/power-platform/products/power-apps/pricing).
+End users that run code apps need one of the following: 
+
+- [Power Apps Premium license](https://www.microsoft.com/power-platform/products/power-apps/pricing)
+- Pay-as-you-go enabled
+- An App Pass
+- Auto-claim enabled. This option automatically assigns a premium license to the user if one is available in the tenant.
 
 ## Explore samples and report issues
 
