@@ -2,7 +2,7 @@
 title: "Types of tables"
 description: "Learn about the different types of Microsoft Dataverse tables."
 ms.custom: ""
-ms.date: 07/30/2026
+ms.date: 08/31/2026
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -97,12 +97,13 @@ Some features such as Dynamics 365 App for Outlook and Copilot for Sales include
 
 ## Table ownership
 
-There are two different types of standard and custom table ownership. When you create a custom table the ownership options are **User or team** or **Organization** owned. Once a table is created, the ownership type can't be changed.
+There are three different types of standard and custom table ownership. When you create a custom table the ownership options are **User or team**, **Organization**, or **Filtered** owned. Once a table is created, the ownership type can't be changed.
   
 |Ownership|Description|  
 |---------------|-----------------|  
 |**Organization**|Data belongs to the organization. Access to the data is controlled at the organization level.|  
-|**User or team**|Data belongs to a user or a team. Actions that can be performed on these rows can be controlled on a user level.|  
+|**User or team**|Data belongs to a user or a team. Actions that can be performed on these rows can be controlled on a user level.|
+|**Filtered**|Data access is granted based on filter privileges, allowing users to create or read records based on the value of a column. For more information, see [Filtered record ownership](filtered-view-record-ownership.md).|
 
 Notice that there are a few Dataverse  system tables that are similar to standard tables but have a different type of ownership from organization and user or team ownership:
 
