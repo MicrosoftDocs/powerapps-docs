@@ -2063,6 +2063,8 @@
       href: ./data-platform/create-edit-entities-portal.md
     - name: "Create a custom table that has components"
       href: ./data-platform/create-custom-entity.md
+    - name: Assign filtered record ownership (preview)
+      href: ./data-platform/filtered-view-record-ownership.md
     - name: Configure a row summary
       href: ./data-platform/configure-form-row-summary.md  
     - name: Import and export table data
