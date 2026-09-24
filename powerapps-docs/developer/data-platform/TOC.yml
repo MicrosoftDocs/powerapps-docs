@@ -28,6 +28,8 @@
       href: column-level-security.md
     - name: Microsoft Entra ID group teams
       href: aad-group-team.md
+    - name: Filtered-ownership
+      href: filtered-record-ownership.md
 - name: Dataverse plugin for AI coding agents
   items:
   - name: Overview
