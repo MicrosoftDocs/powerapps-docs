@@ -107,6 +107,8 @@ landingContent:
             url: maker/model-driven-apps/add-microsoft-365-copilot.md
           - text: Use Microsoft 365 Copilot in model-driven apps (preview)
             url: user/use-microsoft-365-copilot-model-driven-apps.md
+          - text: Use business apps in Work IQ (preview)
+            url: user/use-business-apps-work-iq.md
           - text: Customize Microsoft 365 Copilot with an agent (preview)
             url: maker/model-driven-apps/customize-microsoft-365-copilot-chat.md
 

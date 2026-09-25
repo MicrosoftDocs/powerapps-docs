@@ -1,0 +1,9 @@
+items:
+  - name: Overview
+    href: index.md
+  - name: Get started
+    href: get-started.md
+  - name: Manage semantic models
+    href: manage-semantic-models.md
+  - name: Ask using a semantic model
+    href: ask-semantic-model.md
