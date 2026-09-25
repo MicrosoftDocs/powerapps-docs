@@ -66,6 +66,8 @@
           href: ./search/legacy.md
         - name: Configure Azure AI built-in analyzers
           href: ./search/custom-search-analyzer.md
+    - name: Dataverse Ask APIs
+      href: ./ask/toc.yml
     - name: Query data using FetchXml
       items:
         - name: Overview
