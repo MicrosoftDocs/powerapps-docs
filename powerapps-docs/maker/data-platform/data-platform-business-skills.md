@@ -1,7 +1,7 @@
 ---
 title: "Create and use business skills" 
-description: Learn how to enable Microsoft Dataverse intelligence to bring business data understanding to AI agents and Copilot.
-ms.date: 09/08/2026
+description: Create and manage business skills in Power Apps, and use them in agents through Work IQ MCP or Dataverse MCP.
+ms.date: 09/25/2026
 ms.reviewer: matp
 ms.topic: how-to
 author: prithvi-khosla
@@ -10,19 +10,23 @@ ms.author: pkhosla
 ms.service: powerapps
 search.audienceType: 
   - maker
+ms.collection: 
+    - bap-ai-copilot
 ---
 # Create and use business skills (preview)
 
 [!INCLUDE [preview-banner](../../../shared/preview-includes/preview-banner.md)]
 
-This article explains how to create and manage business skills that ground agents in your organization's processes. You'll learn how to enable the required features, author skill content, test skills with agents, and manage skills across environments.
+This article explains how to create and manage business skills that ground agents in your organization's processes. You learn how to enable the required features, author skill content in Power Apps, use skills with agents through Work IQ MCP or Dataverse MCP, and manage skills across environments.
 
 [!INCLUDE [cc-preview-features-definition](../../../shared/preview-includes/preview-note-pp.md)]
 
 ## Prerequisites
 
-- The environment must be enabled and configured for Dataverse MCP server. More information: [Configure the Dataverse MCP server for an environment](data-platform-mcp-disable.md)
-- The environment must be enabled for [Dataverse intelligence](data-platform-intelligence.md).
+- A Dataverse environment with **Work IQ** enabled by a Power Platform administrator. For more information, see [Manage participation in Business Applications in Work IQ](/power-platform/admin/business-applications-work-iq/manage-participation#environment-features-for-work-iq).
+- Permissions to create or use business skills in the environment. For more information, see [Security and governance](data-platform-business-skill-overview.md#security-and-governance).
+- To use skills through Work IQ MCP, access to the Work IQ MCP server and an agent that supports connecting to it. Administrators manage MCP server and application access as described in [Manage AI experience access to Business Applications in Work IQ](/power-platform/admin/business-applications-work-iq/manage-ai-experience-access). For Work IQ licensing requirements, see [Licensing requirements](/microsoft-365/copilot/extensibility/work-iq/api-overview#licensing-requirements).
+- Only if you connect directly through Dataverse MCP, an environment enabled and configured for the Dataverse MCP server. This configuration isn't required for Work IQ MCP connections. For more information, see [Configure the Dataverse MCP server for an environment](data-platform-mcp-disable.md).
 
 ## Open the business skills page
 
@@ -126,16 +130,16 @@ To permanently remove a business skill:
 
 ## Use business skills
 
-After you create business skills in your environment, AI agents can use them to understand and run business processes. Access skills through the Dataverse MCP server.
+After you create business skills in your environment, agents can discover and use them through the Work IQ MCP server to follow your organization's processes. Direct connections through the Dataverse MCP server remain supported.
 
-- To start using business skills, connect to the Dataverse MCP server in Microsoft Copilot Studio or from agent mode in Visual Studio Code or non-Microsoft clients.
-- Try asking your agent, "Show me all business skills in this environment." The agent retrieves a list of the skills you have access to in your connected environment by using the Dataverse MCP server.
-- Start testing by asking your agent a relevant scenario that matches your skill's intended use case. For example, if you created a skill for logging call transcripts into Dataverse, provide a sample transcript to your agent and ask it to log the transcript information in Dataverse.
-  > [!TIP]
-  > If your agent doesn't automatically fetch skill details, try adding "Using business skills" before your actual prompt. For example, "Using business skills log this transcript in Dataverse."
-  > If you are building agents in Microsoft Copilot Studio, remember to add instructions in your agent to use business skills. For example, "First look for any relevant business skills using Dataverse MCP Server, and follow process instructions accordingly."
-- Remember to add any other relevant tools, including MCP servers and connectors, that the agent needs access to for successfully executing your business processes defined in skills.
-- Confirm your intended actions were successful and continue to iterate on the skill instructions based on results.
+1. Connect your agent to the [Work IQ MCP server](/microsoft-365/copilot/extensibility/work-iq/mcp/overview). For a setup example, see [Connect GitHub Copilot CLI to the Work IQ MCP server](/microsoft-365/copilot/extensibility/work-iq/mcp/quickstart/github-copilot-cli). Alternatively, connect directly to Dataverse MCP from [Microsoft Copilot Studio](data-platform-mcp-copilot-studio.md), [Visual Studio Code](data-platform-mcp-vscode.md), or [other clients](data-platform-mcp-other-clients.md).
+1. Add any other tools, including MCP servers and connectors, that the agent needs to carry out the processes defined in your skills.
+1. Ask your agent to find business skills you have access to. For example, "Show me the business skills in the Contoso Sales environment." Use the name of the environment that contains your skills.
+1. Test a scenario that matches your skill's intended use case. For example, if you created a skill for logging call transcripts into Dataverse, provide a sample transcript and ask your agent to use the skill to log the transcript information.
+1. Confirm that the intended actions were successful and refine the skill instructions based on the results.
+
+> [!TIP]
+> If your agent doesn't automatically retrieve skill instructions, ask it explicitly to use business skills. When building an agent, you can include an instruction such as "First look for relevant business skills in the specified environment through the connected MCP server, retrieve their instructions, and follow the process they describe."
 
 ## Add business skills to a solution
 

@@ -63,6 +63,8 @@
       items:
       - name: AI in apps overview
         href: ../user/ai-in-apps.md
+      - name: Use Business Applications in Work IQ (preview)
+        href: ../user/use-business-apps-work-iq.md
       - name: Use Microsoft 365 Copilot
         href: ../user/use-microsoft-365-copilot-model-driven-apps.md
       - name: Supervise agents using agent feed (preview)
@@ -2509,19 +2511,19 @@
       href: ./data-platform/data-platform-mcp-preview-tools.md
     - name: Connect to Dataverse with MCP FAQ
       href: ./data-platform/data-platform-mcp-faq.md
-  - name: Dataverse intelligence (preview)
+  - name: Business Applications in Work IQ (preview)
     items:
-    - name: Overview of Dataverse intelligence
-      href: ./data-platform/data-platform-intelligence.md
+    - name: Business Applications in Work IQ overview
+      href: ./data-platform/business-applications-work-iq.md
     - name: Dataverse data in Microsoft 365 Copilot
       href: ./data-platform/data-platform-data-copilot.md
-    - name: Business skills with Dataverse intelligence (preview)
+    - name: Business skills
       items:
       - name: Business skills overview
         href: ./data-platform/data-platform-business-skill-overview.md
       - name: Create and use business skills
         href: ./data-platform/data-platform-business-skills.md
-    - name: Dataverse semantic model (preview)
+    - name: Dataverse semantic model
       items:   
       - name: Overview 
         href: ./data-platform/semantic-model-overview.md
@@ -2535,6 +2537,8 @@
           href: ./data-platform/regenerate-semantic-model.md
       - name: Dataverse semantic model FAQ
         href: ./data-platform/semantic-model-faq.md  
+  - name: Overview of Dataverse intelligence (preview)
+    href: ./data-platform/data-platform-intelligence.md
   - name: License requirements for tables
     href: ./data-platform/semantic-model-faq.md
     items:
