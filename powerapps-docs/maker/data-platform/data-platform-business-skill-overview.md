@@ -1,7 +1,7 @@
 ---
 title: "Business skills overview" 
-description: Learn about business skills in Microsoft Dataverse to bring business data understanding to AI agents and Copilot.
-ms.date: 09/08/2026
+description: Learn how business skills in Business Applications in Work IQ provide reusable business-process instructions to agents through Work IQ MCP and Dataverse MCP.
+ms.date: 09/25/2026
 ms.reviewer: matp
 ms.topic: how-to
 author: prithvi-khosla
@@ -10,6 +10,8 @@ ms.author: pkhosla
 ms.service: powerapps
 search.audienceType: 
   - maker
+ms.collection: 
+    - bap-ai-copilot
 ---
 # Business skills overview (preview)
 
@@ -17,11 +19,11 @@ search.audienceType:
 
 Business skills are natural-language instructions that capture how your organization gets work done. They represent your business processes, policies, and domain knowledge in a format that agents can understand and follow. Each skill describes how to complete a specific type of work—the steps involved, the information required, and the business rules that apply.
 
-Agents discover and use the business skills they have access to as needed at runtime to complete tasks according to your organization's processes. When multiple agents use the same skill, they follow the same process, ensuring consistent behavior across your organization.
+Agents can discover and use the business skills they have access to as needed at runtime to complete tasks according to your organization's processes. When multiple agents use the same skill, they follow the same process, ensuring consistent behavior across your organization.
 
 [!INCLUDE [cc-preview-features-definition](../../../shared/preview-includes/preview-note-pp.md)]
 
-Business skills are available in environments where [Dataverse intelligence](data-platform-intelligence.md) is enabled.
+To enable business skills in a Dataverse environment, a Power Platform administrator turns on **Work IQ**. For more information, see [Manage participation in Business Applications in Work IQ](/power-platform/admin/business-applications-work-iq/manage-participation#environment-features-for-work-iq).
 
 > [!IMPORTANT]
 > Business skills are not executable code. They contain natural-language instructions that guide agent behavior, similar to how you might document a process for a new employee.
@@ -48,7 +50,7 @@ Agents query metadata to find applicable skills, then retrieve full instructions
 
 ## Security and governance 
 
-Business skills follow Dataverse security patterns. Each skill has an owner who controls access. Owners can provide general access to everyone in the environment, share with selected Dataverse security roles, or provide direct access to specific users or groups.
+Store business skills in Dataverse. They follow Dataverse security patterns whether agents access them through Work IQ MCP or directly through Dataverse MCP. Each skill has an owner who controls access. Owners can provide general access to everyone in the environment, share with selected Dataverse security roles, or provide direct access to specific users or groups.
 
 Users who access a skill through a Dataverse security role must have both the selected role and the **Skill Sharing Role** security role. Security role access and direct access can provide view or edit permissions.
 
@@ -61,5 +63,7 @@ Users who access a skill through a Dataverse security role must have both the se
 ## Next steps
 
 [Create and use business skills](data-platform-business-skills.md)
+
+[Work IQ MCP overview](/microsoft-365/copilot/extensibility/work-iq/mcp/overview)
 
 [Configure the Dataverse MCP server for an environment](data-platform-mcp-disable.md)
