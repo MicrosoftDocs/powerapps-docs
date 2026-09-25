@@ -179,6 +179,9 @@ In a **Regarding** lookup, you can switch between tables and their views
    > [!div class="mx-imgBorder"]
    > ![Advanced lookup grid for Regarding column.](media/regarding-advanced-lookup-2.png "Advanced lookup grid for Regarding column")  
 
+>[!NOTE] 
+> When you turn on the Environment settings feature **Activities for users without licenses**, the **Users** table changes to the **Microsoft Entra ID** table. When you select an Entra ID user who doesn't have a Dynamics 365 or Power Apps license, you create a non-licensed user in the environment.
+
 
 ### Party list advanced lookup
 
@@ -199,5 +202,9 @@ For lookup columns that is a party list, you can select multiple rows from diffe
 
    > [!div class="mx-imgBorder"]
    > ![Selected choices appear in the lookup.](media/choices-lookup-3.png "Selected choices appear in the lookup")  
+
+>[!NOTE] 
+> When you turn on the Environment settings feature **Activities for users without licenses**, the **Users** table changes to the **Microsoft Entra ID** table. When you select an Entra ID user who doesn't have a Dynamics 365 or Power Apps license, you create a non-licensed user in the environment.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
