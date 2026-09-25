@@ -1,7 +1,7 @@
 ---
 title: AI features overview
 description: Learn how to incorporate AI into your model-driven apps
-ms.date: 04/06/2026
+ms.date: 09/25/2026
 ms.reviewer: smurkute
 ms.topic: "how-to"
 author: aorth
@@ -11,6 +11,7 @@ contributors:
 ms.service: powerapps
 search.audienceType: 
   - enduser
+ ms.collection: bap-ai-copilot
 ---
 
 # AI features overview
@@ -52,6 +53,7 @@ Built-in skills help you enter, explore, and summarize data faster and better.
 
 **Copilot in apps**
 
+- [Use business apps in Work IQ (preview)](use-business-apps-work-iq.md)
 - [Microsoft 365 Copilot in model-driven apps](use-microsoft-365-copilot-model-driven-apps.md)
 - [Customize Microsoft 365 Copilot in model-driven apps](../maker/model-driven-apps/customize-microsoft-365-copilot-chat.md)
 - [Chat with Copilot](use-copilot-model-driven-apps.md)

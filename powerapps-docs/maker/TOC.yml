@@ -63,6 +63,8 @@
       items:
       - name: AI in apps overview
         href: ../user/ai-in-apps.md
+      - name: Use Business Applications in Work IQ (preview)
+        href: ../user/use-business-apps-work-iq.md
       - name: Use Microsoft 365 Copilot
         href: ../user/use-microsoft-365-copilot-model-driven-apps.md
       - name: Supervise agents using agent feed (preview)
