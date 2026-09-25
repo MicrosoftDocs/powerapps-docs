@@ -2066,7 +2066,11 @@
     - name: "Create a custom table that has components"
       href: ./data-platform/create-custom-entity.md
     - name: Assign filtered record ownership (preview)
-      href: ./data-platform/filtered-view-record-ownership.md
+      items:
+      - name: Overview of filtered record ownership
+        href: ./data-platform/filtered-view-record-ownership.md
+      - name: Add filtered view security to record ownership tables
+        href: ./data-platform/add-filtered-view-security-ownership-tables.md
     - name: Configure a row summary
       href: ./data-platform/configure-form-row-summary.md  
     - name: Import and export table data
