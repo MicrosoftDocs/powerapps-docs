@@ -5,7 +5,7 @@ author: jasongre
 ms.subservice: mda-maker
 ms.author: jasongre
 ms.reviewer: matp
-ms.date: 09/09/2026
+ms.date: 09/25/2026
 ms.topic: how-to
 applies_to:
   - PowerApps
@@ -17,7 +17,7 @@ ms.collection:
 
 # Generate a page using natural language
 
-Use natural language to build a *generative page* that's created using AI. Generative pages are an AI-driven experience designed to simplify, accelerate, and improve your app design process in model-driven apps. By interacting with the app agent, you create fully functional pages in your model-driven apps by describing what you need in natural language and specifying which Microsoft Dataverse tables or Power Platform connectors to reference. You can even attach an image of what you'd like the page to look like.
+Use natural language to build a *generative page* that's created by using AI. Generative pages are an AI-driven experience designed to simplify, accelerate, and improve your app design process in model-driven apps. By interacting with the app agent, you create fully functional pages in your model-driven apps by describing what you need in natural language and specifying which Microsoft Dataverse tables, Power Platform connectors (preview), or Dataverse custom APIs (preview) to reference. You can even attach an image of what you'd like the page to look like.
 
 After you describe the page, the system then processes your requirements and specifications and intelligently generates React code that covers both the front-end user experience by selecting the right components and determining the best layout, and the corresponding business logic. Through an interactive, conversational experience, you can refine the page design in real time, adjusting elements, layout, and functionality to perfectly match your vision.
 
@@ -45,19 +45,11 @@ The rest of this article describes the in-browser experience.
 ## Prerequisites
 
 - The Power Platform environment must be located in one of the following regions: United States, Great Britain, Australia, or Singapore.
-
-### Prepare a connector data source (preview)
+- If your page uses a Power Platform connector (preview), [create and authenticate a connection](../canvas-apps/add-manage-connections.md). Then open **Solutions** > **Default Solution** and [create a connection reference](../data-platform/create-connection-reference.md) that uses the connection.
+- If your page uses a Dataverse custom API (preview), [create a Dataverse plug-in](../../developer/data-platform/tutorial-write-plug-in.md). Then [create a custom API using the Plug-in Registration Tool](../../developer/data-platform/create-custom-api-prt.md) and associate it with the plug-in type. For configuration details, see [Create and use custom APIs](../../developer/data-platform/custom-api.md).
 
 > [!IMPORTANT]
-> Connector support is a preview feature. Preview features aren't meant for production use and might have restricted functionality.
-
-Connector support lets a generative page use data outside of Dataverse through the Power Platform connector ecosystem. The feature supports all Power Platform connectors.
-
-Before you add a connector-backed data source to a generative page:
-
-1. [Create a connection](../canvas-apps/add-manage-connections.md) for the connector and authenticate it.
-1. Open **Solutions** and then open **Default Solution**.
-1. [Create a connection reference](../data-platform/create-connection-reference.md) that uses the connection. The connection reference automatically becomes available under **Add data** > **Connectors** in the generative page authoring experience.
+> Connector and Custom API support are preview features. Preview features aren't meant for production use and might have restricted functionality. Custom APIs run in the context of the signed-in user and are subject to Dataverse security.
 
 ## Create a generative page in model-driven apps
 
@@ -73,9 +65,10 @@ Before you add a connector-backed data source to a generative page:
 
    > [!TIP]
    > Not sure where to start? The [Intelligent Apps Catalog](https://github.com/microsoft/apps-agents-workshop/tree/main/Inteligent%20Apps%20Templates/Intelligent%20Apps%20Catalog) includes a Prompt Catalog with pre-built prompt templates and reference images for common page patterns (galleries, Kanban boards, dashboards, and more) that you can use as a starting point.
-1. Add data sources and images as appropriate:
+1. Add data sources, custom APIs, and images as appropriate:
    - To use Dataverse data, select **Add data** > **Add table**. You can link up to six Dataverse tables. In the following screenshot, the account table is added.
-   - To use data from a Power Platform connector (preview), first [prepare the connector data source](#prepare-a-connector-data-source-preview). Then select **Add data** > **Connectors**, select the connection reference, and choose the connector data that the page should use. In your prompt, describe how you want the page to use the selected data.
+   - To use data from a Power Platform connector (preview), select **Add data** > **Connectors**, select the prepared connection reference, and choose the connector data that the page should use. In your prompt, describe how you want the page to use the selected data.
+   - To run server-side business logic implemented with a Dataverse plug-in, select **Add** > **Custom API** (preview), and then select the prepared custom API that you want the page to call. In your prompt, describe when the page should call the custom API, which values it should provide, and how it should use the response. For example, *Add an Approve button. When selected, call the ApproveOrder custom API for the current order and pass the reviewer's comment. Then show the returned status.*
    :::image type="content" source="media/generative-page/add-table-generative-page.png" alt-text="Add a table to the generative page" lightbox="media/generative-page/add-table-generative-page.png":::
 
 1. Optionally upload one or more images to guide the UI of your generated page by selecting **Add data** > **Attach image**. This can be a rough napkin sketch or a higher resolution image. The image can represent the structure or layout of the entire page you want to create or it can be visuals for a certain section or component you want to mimic.
@@ -143,6 +136,26 @@ After generating your page, you have several options to refine and finalize it:
 ## Common tasks with generative pages
 
 This section covers common scenarios and tasks when working with generative pages in your model-driven apps.
+
+### Run server-side business logic with a custom API (preview)
+
+Use a Dataverse custom API when your page needs to explicitly run server-side business logic, such as approving an order, recalculating a price, or validating a transaction. A custom API commonly uses a Dataverse plug-in to implement the operation.
+
+This capability is different from a plug-in that runs automatically when a Dataverse row is created, updated, or deleted. Those plug-ins already run when a generative page performs the corresponding data operation and don't need to be added to the page. Add a custom API when the page needs to invoke a named operation at a specific time.
+
+To use a custom API:
+
+1. In the generative page designer, select **Add** > **Custom API**.
+1. Select a custom API from the current environment. Generative pages support global and table-bound actions and functions.
+1. In your prompt, describe what should trigger the operation, which input values to pass, and how the page should use the response. For example:
+
+   ```
+   Add an Approve button to the order details. When the user selects it, call `ApproveOrder` for the current order, pass the text from the reviewer comment field, and display the returned order status.
+   ```
+
+When a generative page is embedded on a model-driven app form, you can ask the agent to use the current record as the input for a table-bound custom API.
+
+For information about creating custom APIs and implementing their logic with plug-ins, go to [Create and use custom APIs](../../developer/data-platform/custom-api.md).
 
 ### Set up a page to accept input parameters
 
@@ -251,6 +264,7 @@ These are the current limitations of generative pages:
 
 - You can link up to six Dataverse tables to a single page.
 - Supported data sources are Dataverse tables and (preview) Power Platform connectors.
+- Custom API actions and functions are supported in preview. Custom APIs that use the **EntityCollection** binding type or **Entity** parameters aren't supported.
 - Your prompt can have a maximum of 50,000 characters.
 - When you create generative pages through in Power Apps (make.powerapps.com), only US English is a supported prompting language.
 - Collaboration isn't supported. Ensure only one maker is working on a generative page at a time to avoid unintended conflicts.
