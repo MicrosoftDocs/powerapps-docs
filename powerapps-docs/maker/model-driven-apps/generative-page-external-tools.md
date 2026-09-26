@@ -4,7 +4,7 @@ description: Learn how to use AI code generation tools like GitHub Copilot CLI t
 author: jasongre
 ms.author: jasongre
 ms.reviewer: matp
-ms.date: 09/18/2026
+ms.date: 09/25/2026
 ms.topic: how-to
 ms.service: powerapps
 ms.subservice: mda-maker
@@ -18,10 +18,10 @@ applies_to:
 ---
 # Create and edit generative pages with AI code generation tools
 
-This article describes how to use AI code generation tools, such as GitHub Copilot CLI, to create and edit generative pages for model-driven apps in Power Apps. By using this approach, you can integrate advanced code generation capabilities directly into your development workflow to create new generative pages or iterate on existing ones by using natural language instructions.
+This article describes how to use AI code generation tools, such as GitHub Copilot CLI, to create and edit generative pages for model-driven apps in Power Apps. By using this approach, you can integrate advanced code generation capabilities directly into your development workflow to create new generative pages or iterate on existing ones by using natural language instructions. Pages can use Microsoft Dataverse tables, Power Platform connectors (preview), and Dataverse custom APIs (preview).
 
 > [!TIP]
-> This approach is the recommended path for building generative pages. It gives you access to the latest frontier AI models, works worldwide on public clouds, and lets you build multiple pages with supporting Dataverse tables or Power Platform connector data sources in a single run.
+> This approach is the recommended path for building generative pages. It gives you access to the latest frontier AI models, works worldwide on public clouds, and lets you build multiple pages with supporting Dataverse tables, Power Platform connector data sources (preview), or Dataverse custom APIs (preview) in a single run.
 
 Using AI code generation tools with generative pages complements the UI-based experience in Power Apps ([make.powerapps.com](https://make.powerapps.com)). This code-first approach fits any maker or developer who wants access to the newest AI models or prefers working with local development tools and CLI-based workflows.
 
@@ -33,6 +33,7 @@ Using AI code generation tools with generative pages complements the UI-based ex
 - *Create one or more generative pages* in a single run from plain-language requirements
 - *Create the supporting Microsoft Dataverse tables* your pages need, or reuse existing ones, including sample data for new tables
 - (Preview) *Connect to data outside of Dataverse* by using Power Platform connectors
+- (Preview) *Call server-side business logic* by using Dataverse custom APIs
 - *Place artifacts into a new or existing app and solution*, including creating an app or solution on the fly
 - *Update existing generative pages* by requesting changes or enhancements through your AI tool
 - *Deploy directly* to your Power Apps environment using PAC CLI commands
@@ -41,7 +42,7 @@ Using AI code generation tools with generative pages complements the UI-based ex
 ### How it works
 
 1. You describe what you want to build in natural language, for example, "Create a generative page dashboard showing top accounts by revenue."
-2. A planner agent analyzes your request and proposes a plan. The plan might include one or more pages, the Dataverse tables or connector-backed data sources the pages need, and the app and solution where the artifacts live. The planner then delegates to specialized agents to build what the plan describes. For example, a table builder and a page builder.
+2. A planner agent analyzes your request and proposes a plan. The plan might include one or more pages, the Dataverse tables, connector-backed data sources, or custom APIs the pages need, and the app and solution where the artifacts live. The planner then delegates to specialized agents to build what the plan describes. For example, a table builder and a page builder.
 3. You review and adjust the plan before building. You can change the number of pages, swap or add data sources, target a different app, or place the artifacts in a different solution.
 4. The agents generate production-ready TypeScript and React code for your page or pages, along with supporting files for local development.
 5. The tool deploys the artifacts to your environment using [generative page PAC CLI commands](/power-platform/developer/cli/reference/model), and optionally runs a verify-in-browser step that exercises the page with generated tests.
@@ -63,8 +64,12 @@ Before you start, ensure you have the required software and permissions describe
 
 - A Power Platform environment with a model-driven app to deploy pages.
 - An *authenticated PAC CLI session* connected to your target environment.
-- For connector-backed pages, an existing [Power Platform connection](../canvas-apps/add-manage-connections.md) for each connector you want to use.
    - Go to [Authenticate Power Platform CLI](/power-platform/developer/cli/reference/auth) for more details on getting connected.
+- For connector-backed pages (preview), an existing authenticated [Power Platform connection](../canvas-apps/add-manage-connections.md) for each connector you want to use. The agent can create a connection reference if needed.
+- For pages that call a Dataverse custom API (preview), an existing supported custom API in the target environment. To implement server-side logic and expose it to a generative page, [create a Dataverse plug-in](../../developer/data-platform/tutorial-write-plug-in.md), and then [create a custom API using the Plug-in Registration Tool](../../developer/data-platform/create-custom-api-prt.md) and associate it with the plug-in type. For configuration details, see [Create and use custom APIs](../../developer/data-platform/custom-api.md).
+
+> [!IMPORTANT]
+> Connector and Custom API support are preview features. Preview features aren't meant for production use and might have restricted functionality. Custom APIs run in the context of the signed-in user and are subject to Dataverse security.
 
 > [!NOTE]
 > This capability is available worldwide in public clouds.
@@ -130,14 +135,15 @@ Follow this workflow when building a new page or set of pages from scratch.
    - "Build two pages for managing my volunteer signups — one to browse open shifts and one to confirm a signup — using sample data"
    - "Make a generative page for displaying incident reports on a map using the Incident table"
    - "Create a page that shows documents from the Project files SharePoint list."
+   - "Create an order review page with an Approve button that calls the `ApproveOrder` custom API."
 
 1. **Choose create or edit if asked.** If the planner agent isn't sure whether you want a new page or to update an existing one, it asks. To follow this workflow, choose to create a new page. For editing, go to [Edit an existing generative page](#edit-an-existing-generative-page).
 
-1. *Answer questions about what to build.* The planner might ask what kind of page you want, offer a few examples, and accept a custom description, such as what data to use, layout, what information to display, interactions, and so on. Be specific about business needs and data requirements, identify mobile requirements early, and mention any UI components or layout preferences. The planner might also ask clarifying questions such as whether to use Dataverse tables, Power Platform connectors, or hard-coded sample data, and whether to add the page to an existing app or create a new app.
+1. *Answer questions about what to build.* The planner might ask what kind of page you want, offer a few examples, and accept a custom description, such as what data to use, layout, what information to display, interactions, and so on. Be specific about business needs and data requirements, identify mobile requirements early, and mention any UI components or layout preferences. The planner might also ask clarifying questions such as whether to use Dataverse tables, Power Platform connectors, custom APIs, or hard-coded sample data, and whether to add the page to an existing app or create a new app.
 
-1. *Review and adjust the plan.* The planner presents a plan that includes the page or pages it intends to build, the Dataverse tables or connector-backed data sources to use, the app to host the page (new or existing), and the solution where the artifacts live. Iterate with the agent to adjust anything you want changed &mdash; for example, the number of pages, which tables are used or created, the target app, or the target solution. Confirm the plan when it matches your intent.
+1. *Review and adjust the plan.* The planner presents a plan that includes the page or pages it intends to build, the Dataverse tables, connector-backed data sources, or custom APIs to use, the app to host the page (new or existing), and the solution where the artifacts live. Iterate with the agent to adjust anything you want changed - for example, the number of pages, which tables or custom APIs are used, the target app, or the target solution. Confirm the plan when it matches your intent.
 
-1. *Let the agents build and deploy.* The specialized agents generate the page or pages, supporting tables or connector bindings, and code, then deploy to your environment.
+1. *Let the agents build and deploy.* The specialized agents generate the page or pages, supporting tables, connector or custom API bindings, and code, then deploy to your environment.
 
 1. *Optionally verify in browser.* After the build, the agent might offer to run a verify-in-browser step that runs automatically generated Playwright tests against the page to confirm it loads and functions correctly. Use this to catch obvious issues before testing manually.
 
@@ -147,9 +153,6 @@ Follow this workflow when building a new page or set of pages from scratch.
 > You can change the name or position of the generative page in the sitemap at any time from the model-driven app designer.
 
 ### Use connector data (preview)
-
-> [!IMPORTANT]
-> Connector support is a preview feature. Preview features aren't meant for production use and may have restricted functionality.
 
 Connector support lets a generative page use data outside of Dataverse through the Power Platform connector ecosystem. All Power Platform connectors are supported.
 
@@ -161,6 +164,19 @@ To use connector data, describe the service and data that you want the page to u
 1. Adds the connector binding to the page and includes it when the page is deployed.
 
 Review the connector data source in the plan before you approve the build. Test the generated page with the identities and permissions that your users will use.
+
+### Use a custom API (preview)
+
+Use a Dataverse custom API action or function when your page needs to explicitly run server-side business logic, such as approving an order, recalculating a price, or validating a transaction.
+
+To use a custom API, describe the operation and when the page should call it in your prompt. For example, ask the agent to add an Approve button that calls the `ApproveOrder` custom API for the current order. During planning, the agent:
+
+1. Lists the supported custom APIs available in the selected environment.
+1. Asks you to select the custom API that the page should call.
+1. Uses the custom API's request and response properties when it generates the page.
+1. Adds the custom API binding to the page and includes it when the page is deployed.
+
+Review the custom API and its inputs in the plan before you approve the build. Test the generated page with the identities and permissions that your users use.
 
 ## Edit an existing generative page
 
@@ -253,6 +269,7 @@ The AI tool then:
 The limitations for generative pages created with AI code generation tools are the same as those for generative pages created in the Power Apps maker portal:
 
 - Supported data sources are Dataverse tables and (preview) Power Platform connectors.
+- Custom API actions and functions are supported in preview. Custom APIs that use the **EntityCollection** binding type or **Entity** parameters aren't supported.
 - Collaboration isn't supported—ensure only one maker is working on a generative page at a time.
 - Only these data types are supported: Choice, Currency, Customer, Date and Time, Date Only, Decimal Number, Floating Point Number, Image, Lookup, Multiline Text, Status, Status Reason, Text, Whole Number, Yes/No, Unique Identifier.
 
