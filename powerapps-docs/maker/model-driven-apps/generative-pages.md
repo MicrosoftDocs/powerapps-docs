@@ -47,9 +47,10 @@ The rest of this article describes the in-browser experience.
 - The Power Platform environment must be located in one of the following regions: United States, Great Britain, Australia, or Singapore.
 - If your page uses a Power Platform connector (preview), [create and authenticate a connection](../canvas-apps/add-manage-connections.md). Then open **Solutions** > **Default Solution** and [create a connection reference](../data-platform/create-connection-reference.md) that uses the connection.
 - If your page uses a Dataverse custom API (preview), [create a Dataverse plug-in](../../developer/data-platform/tutorial-write-plug-in.md). Then [create a custom API using the Plug-in Registration Tool](../../developer/data-platform/create-custom-api-prt.md) and associate it with the plug-in type. For configuration details, see [Create and use custom APIs](../../developer/data-platform/custom-api.md).
+- To export generative page telemetry to Azure Application Insights (preview), an administrator must [set up Application Insights data export for the environment](/power-platform/admin/set-up-export-application-insights) in the Power Platform admin center. The environment must meet the requirements for Application Insights data export.
 
 > [!IMPORTANT]
-> Connector and Custom API support are preview features. Preview features aren't meant for production use and might have restricted functionality. Custom APIs run in the context of the signed-in user and are subject to Dataverse security.
+> Connector support, Custom API support, and Application Insights telemetry for generative pages are preview features. Preview features aren't meant for production use and might have restricted functionality. Custom APIs run in the context of the signed-in user and are subject to Dataverse security.
 
 ## Create a generative page in model-driven apps
 
@@ -156,6 +157,23 @@ To use a custom API:
 When a generative page is embedded on a model-driven app form, you can ask the agent to use the current record as the input for a table-bound custom API.
 
 For information about creating custom APIs and implementing their logic with plug-ins, go to [Create and use custom APIs](../../developer/data-platform/custom-api.md).
+
+### Monitor a generative page with Application Insights (preview)
+
+When you configure Application Insights data export for the environment in the Power Platform admin center, Power Apps automatically exports telemetry for published generative pages. You don't need to add telemetry code, install the Application Insights JavaScript SDK, or provide a connection string to the page.
+
+The following telemetry is available:
+
+| Activity | Application Insights table | Details |
+|---|---|---|
+| Page load | `pageViews` | Records completed generative page loads with the page ID, page name, app, host type, load duration, and navigation origin. |
+| Unhandled error | `exceptions` | Records unhandled page-rendering errors and unhandled promise rejections attributed to the generative page. |
+| Data API operation | `dependencies` | Records the duration and result of supported `dataApi` operations, including create, update, delete, retrieve, and query operations. |
+| Navigation | `pageViews` | Records navigation initiated from a generative page, including the source and target page information. |
+
+Application Insights telemetry for generative pages is a preview feature. Availability might vary by environment while the feature is rolling out.
+
+For information about configuring the export, see [Export data to Application Insights](/power-platform/admin/set-up-export-application-insights). To learn how model-driven app telemetry is represented and queried, see [Telemetry events for model-driven apps](/power-platform/admin/telemetry-events-model-driven-apps).
 
 ### Set up a page to accept input parameters
 
