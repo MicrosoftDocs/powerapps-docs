@@ -4,7 +4,7 @@ description: Learn about recent updates to modern controls in Power Apps canvas 
 author: yogeshgupta698
 ms.topic: overview
 ms.custom: canvas
-ms.date: 09/08/2026
+ms.date: 09/24/2026
 ms.subservice: canvas-maker
 ms.author: yogupt
 ms.reviewer: joshuapa
@@ -65,6 +65,7 @@ The following table lists each control that has an updated version, with a link 
 | Toggle | [Updates to Toggle](modern-control-toggle.md#recent-updates) | FontColor renamed to Color, FontSize renamed to Size, LabelPosition uses enum values, new Tooltip property, improved sizing, read-only View mode |
 | Checkbox | [Updates to Checkbox](modern-control-checkbox.md#recent-updates) | FontColor renamed to Color, FontSize renamed to Size, new Tooltip property, read-only View mode, more reliable Checked behavior |
 | Avatar | [Updates to Avatar](modern-control-avatar.md#recent-updates) | Font property renames, Badge and Shape use enum values, FontWeight uses enum, new OnSelect and Tooltip properties, Out of office merged into Badge |
+| Badge | [Updates to Badge](modern-controls-badge.md#recent-updates) | Font property renames, ThemeColor renamed to Intent, typed enums, optional icon, and new OnSelect and Tooltip properties |
 | Spinner | [Updates to Spinner](modern-control-spinner.md#recent-updates) | Font property renames, LabelPosition uses the SpinnerLabelPosition enum, new Tooltip property |
 | Progress Bar | [Updates to Progress Bar](modern-control-progress-bar.md#recent-updates) | ProgressColor, Thickness, and Shape use enum values, new Tooltip property, OnChange isn't available in the updated control |
 | Form | [Updates to Form](modern-control-form.md#recent-improvements) | New screen templates, red required indicator, consistent typography, display names for people fields, reliable date fields; same form model and functions as classic |
@@ -79,11 +80,11 @@ For consistency across controls, many properties have new names. If your formula
 
 | Old name (Previous) | New name (New) | Affected controls |
 |---------------------|----------------|-------------------|
-| `FontColor` | `Color` | Text, Link, Info Button, Radio, Text Input, Tab List, Number Input, Date Picker, Combo Box, Button, Toggle, Checkbox, Avatar, Spinner |
-| `FontSize` | `Size` | Text, Link, Info Button, Radio, Text Input, Tab List, Number Input, Date Picker, Combo Box, Button, Dropdown, Toggle, Checkbox, Avatar, Spinner |
-| `FontItalic` | `Italic` | Text, Link, Info Button, Radio, Text Input, Tab List, Date Picker, Combo Box, Button, Avatar, Spinner |
-| `FontStrikethrough` | `Strikethrough` | Text, Link, Info Button, Radio, Text Input, Date Picker, Combo Box, Button, Avatar, Spinner |
-| `FontUnderline` | `Underline` | Text, Link, Info Button, Radio, Text Input, Date Picker, Combo Box, Button, Avatar, Spinner |
+| `FontColor` | `Color` | Text, Link, Info Button, Radio, Text Input, Tab List, Number Input, Date Picker, Combo Box, Button, Toggle, Checkbox, Avatar, Badge, Spinner |
+| `FontSize` | `Size` | Text, Link, Info Button, Radio, Text Input, Tab List, Number Input, Date Picker, Combo Box, Button, Dropdown, Toggle, Checkbox, Avatar, Badge, Spinner |
+| `FontItalic` | `Italic` | Text, Link, Info Button, Radio, Text Input, Tab List, Date Picker, Combo Box, Button, Avatar, Badge, Spinner |
+| `FontStrikethrough` | `Strikethrough` | Text, Link, Info Button, Radio, Text Input, Date Picker, Combo Box, Button, Avatar, Badge, Spinner |
+| `FontUnderline` | `Underline` | Text, Link, Info Button, Radio, Text Input, Date Picker, Combo Box, Button, Avatar, Badge, Spinner |
 | `Weight` | `FontWeight` | Text only |
 | `BorderRadius` | `RadiusTopLeft`, `RadiusTopRight`, `RadiusBottomLeft`, `RadiusBottomRight` | All controls with borders |
 
@@ -95,7 +96,7 @@ By using enums, you get IntelliSense autocomplete, compile-time validation, and 
 
 #### Align
 
-**Used by:** Text, Text Input, Number Input, Link, Tab List, Date Picker, Combo Box
+**Used by:** Text, Text Input, Number Input, Link, Tab List, Date Picker, Combo Box, Badge
 
 | Enum value | Description |
 |------------|-------------|
@@ -108,7 +109,7 @@ The previous string values `"Start"` or `""` (empty string) map to `Align.Left`.
 
 #### VerticalAlign
 
-**Used by:** Text, Link
+**Used by:** Text, Link, Badge
 
 | Enum value | Description |
 |------------|-------------|
@@ -120,7 +121,7 @@ The previous Text control defaulted to `""` (empty/undefined). The new default i
 
 #### FontWeight
 
-**Used by:** Text, Text Input, Number Input, Link, Tab List, Radio, Combo Box, Date Picker, Info Button
+**Used by:** Text, Text Input, Number Input, Link, Tab List, Radio, Combo Box, Date Picker, Info Button, Badge
 
 | Enum value | Description |
 |------------|-------------|
