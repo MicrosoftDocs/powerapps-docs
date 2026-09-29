@@ -4,12 +4,13 @@ metadata:
   description: Get answers to frequently asked questions about Microsoft Fabric Link for Dataverse.
   author: anibakore-msft
   ms.search.keywords: 
-  ms.date: 09/14/2026
+  ms.date: 09/28/2026
   ms.author: banirud
   ms.reviewer: matp
   contributors: gshrivastava24
   ms.topic: faq
   ms.subservice: dataverse-maker
+  ai-usage: ai-assisted
 title: Microsoft Fabric Link for Dataverse FAQ
 summary: This article provides information about frequently asked questions when you link Microsoft Dataverse to Microsoft Fabric.
 sections:
@@ -31,13 +32,13 @@ sections:
         To resolve this issue, open the workspace that contains the lakehouse created by the Fabric link and use lineage view to identify the items that depend on the lakehouse or its SQL analytics endpoint. More information: [Lineage in Fabric](/fabric/governance/lineage)
 
         Delete the dependent items, or update them so that they no longer reference the lakehouse, and then try to unlink again. If unlinking still fails after you remove all dependent items, contact [Microsoft customer support](/power-platform/admin/get-help-support).
-- name: Differences between Fast Fabric and earlier Fabric links
+- name: Differences between low-latency sync and earlier Fabric links
   questions:
    - question: What differences should I review before I set up or relink a Fabric link?
      answer: |
         Fabric links that use low-latency sync, also known as **Fast Fabric**, write data to Microsoft Fabric differently than a Fabric link created before low-latency sync was available. Review the following differences before you set up a link, or before you relink an environment that has an existing downstream solution.
 
-        | Area | Earlier Fabric links | Fast Fabric |
+        | Area | Earlier Fabric links | Low-latency sync |
         | --- | --- | --- |
         | `OptionsetMetadata` and `GlobalOptionsetMetadata` schema | The `createdonpartition` column is present. | The `createdonpartition` column isn't present. The current table definition is the supported schema going forward. |
         | Delta Lake format | Tables can be queried by serverless SQL pools in Azure Synapse Analytics. | Tables are written by using newer Delta Lake capabilities, including deletion vectors. Serverless SQL pools don't support these capabilities in all scenarios. |
@@ -57,6 +58,13 @@ sections:
 
         > [!NOTE]
         > The notebook approach adds processing time, scheduling overhead, and data latency. Evaluate this requirement before you transition an existing solution to low-latency sync.
+   - question: What changes can I expect when moving from an earlier Fabric link to low-latency sync?
+     answer: |
+        Earlier Fabric links converted empty strings in SQL to `NULL` values in Fabric. Low-latency sync preserves empty strings instead of converting them to `NULL`.
+
+        For example, an empty value in the `textvalue` column of the `ecorestextvalue` table appears as an empty string with low-latency sync. Earlier Fabric links surfaced the same value as `NULL`.
+
+        Update downstream queries, pipelines, semantic models, and other dependencies to handle empty strings instead of relying on `NULL` values. This approach avoids adding transformations that might not be compatible with future data platform changes.
 - name: Table support and limitations  
   questions:
    - question: Which Dataverse tables are selected by default when linking to Fabric?
