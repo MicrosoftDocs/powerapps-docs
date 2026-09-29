@@ -67,9 +67,10 @@ Before you start, ensure you have the required software and permissions describe
    - Go to [Authenticate Power Platform CLI](/power-platform/developer/cli/reference/auth) for more details on getting connected.
 - For connector-backed pages (preview), an existing authenticated [Power Platform connection](../canvas-apps/add-manage-connections.md) for each connector you want to use. The agent can create a connection reference if needed.
 - For pages that call a Dataverse custom API (preview), an existing supported custom API in the target environment. To implement server-side logic and expose it to a generative page, [create a Dataverse plug-in](../../developer/data-platform/tutorial-write-plug-in.md), and then [create a custom API using the Plug-in Registration Tool](../../developer/data-platform/create-custom-api-prt.md) and associate it with the plug-in type. For configuration details, see [Create and use custom APIs](../../developer/data-platform/custom-api.md).
+- To export generative page telemetry to Azure Application Insights (preview), an administrator must [set up Application Insights data export for the environment](/power-platform/admin/set-up-export-application-insights) in the Power Platform admin center. The environment must meet the requirements for Application Insights data export.
 
 > [!IMPORTANT]
-> Connector and Custom API support are preview features. Preview features aren't meant for production use and might have restricted functionality. Custom APIs run in the context of the signed-in user and are subject to Dataverse security.
+> Connector support, Custom API support, and Application Insights telemetry for generative pages are preview features. Preview features aren't meant for production use and might have restricted functionality. Custom APIs run in the context of the signed-in user and are subject to Dataverse security.
 
 > [!NOTE]
 > This capability is available worldwide in public clouds.
@@ -177,6 +178,23 @@ To use a custom API, describe the operation and when the page should call it in 
 1. Adds the custom API binding to the page and includes it when the page is deployed.
 
 Review the custom API and its inputs in the plan before you approve the build. Test the generated page with the identities and permissions that your users use.
+
+### Monitor a generative page with Application Insights (preview)
+
+Power Apps can automatically export operational telemetry for generative pages to Azure Application Insights. This capability works the same way for pages created with AI code generation tools and pages created in Power Apps (make.powerapps.com).
+
+An administrator must first configure Application Insights data export for the environment in the Power Platform admin center. After the export is configured, Power Apps automatically reports supported telemetry from published generative pages. Your prompt and generated page code don't need to initialize the Application Insights JavaScript SDK, include a connection string, or add telemetry calls.
+
+Automatically exported telemetry includes:
+
+- Completed page loads in the `pageViews` table.
+- Unhandled page-rendering errors and promise rejections in the `exceptions` table.
+- Supported `dataApi` operations in the `dependencies` table.
+- Navigation initiated from a generative page in the `pageViews` table.
+
+Application Insights telemetry for generative pages is a preview feature. Availability might vary by environment while the feature is rolling out.
+
+For setup instructions, go to [Export data to Application Insights](/power-platform/admin/set-up-export-application-insights). For the model-driven app telemetry schema and query guidance, go to [Telemetry events for model-driven apps](/power-platform/admin/telemetry-events-model-driven-apps).
 
 ## Edit an existing generative page
 
