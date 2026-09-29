@@ -142,6 +142,30 @@ sections:
 
         > [!IMPORTANT]
         > In the case of long-running transactions in finance and operations apps, a record might be synchronized multiple times to ensure no data loss. In this scenario, `SinkModifiedOn` reflects the last synchronization time, not the first. For example, if a record is synced 10 times within an hour, `SinkModifiedOn` shows the time of the 10th sync even though the data was available from the first sync itself. Use caution when building latency reports based on the difference between `SinkModifiedOn` and `ModifiedOn`, as it can give a misleading impression of actual data availability.
+- name: Storage and Capacity
+  questions:
+    - question: Why do I see tables ending in `-Analytics` when my environment isn't linked to Microsoft Fabric?
+      answer: |
+        Tables ending in `-Analytics` can be created and used by installed Microsoft first-party applications and analytics capabilities. Therefore, the presence of an `-Analytics` table doesn't necessarily mean that your Dataverse environment is linked to Microsoft Fabric.
+    - question: How is storage for `-Analytics` tables calculated when Microsoft Fabric isn't linked?
+      answer: |
+        When an installed first-party application uses the legacy CSV-based synchronization path, the associated storage counts toward your organization's **Dataverse File capacity** entitlement.
+
+        The reported usage includes the service-managed files required to synchronize and maintain the analytics data. It isn't limited to the current size of the corresponding business table in Dataverse.
+    - question: Why might an `-Analytics` table consume more storage than expected?
+      answer: |
+        The reported File capacity can be larger than the current business data because the legacy synchronization path uses in-place updates to maintain CSV files. The reported usage can include:
+
+        - CSV files containing synchronized table data.
+        - Service-managed snapshot copies used to provide consistent data to analytics workloads.
+        - Supporting files and metadata used to index, coordinate, and safely update the CSV files.
+
+        These files are required for data synchronization and consistency and are included in the reported File capacity consumption.    
+    - question: How is storage reported when Microsoft Fabric is linked?
+      answer: |
+        When Microsoft Fabric is linked, Dataverse creates an optimized replica of the selected data in Delta Parquet format. Storage used by this replica counts toward your organization's **Dataverse Database capacity** and appears under Database usage in the Power Platform admin center.
+
+        The presence of an `-Analytics` table alone doesn't identify which synchronization option is being used. Administrators should verify whether the environment has an active Fabric link and review both File and Database usage in the environment's capacity details.
 - name: Limitations and Errors
   questions:
    - question: What are the limits for Fabric Link?
