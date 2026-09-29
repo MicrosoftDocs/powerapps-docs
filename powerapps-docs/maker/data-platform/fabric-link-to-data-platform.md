@@ -8,7 +8,7 @@ contributors: saviegas
 ms.service: powerapps
 ms.subservice: dataverse-maker
 ms.topic: how-to
-ms.date: 09/08/2026
+ms.date: 09/28/2026
 ms.custom: template-how-to
 ---
 # Link to Microsoft Fabric
@@ -142,6 +142,8 @@ When the link is created, it appears under **Fabric Links** on the **Link data**
 ## Low-latency sync
 
 Low-latency sync is a faster sync engine for Link to Fabric. It writes data directly from the Dataverse database to Delta Parquet, removing the intermediate CSV step used by the previous pipeline.
+
+For migration considerations, see [What changes can I expect when moving from an earlier Fabric link to low-latency sync?](fabric-link-faq.yml#what-changes-can-i-expect-when-moving-from-an-earlier-fabric-link-to-low-latency-sync)
 
 Benefits:
 
