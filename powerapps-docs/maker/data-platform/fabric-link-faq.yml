@@ -93,6 +93,8 @@ sections:
    - question: Are Finance and Operations apps tables supported?
      answer: |
         If your environment is linked to a Dynamics 365 finance and operations environment, the add tables option enables you to include tables from finance and operations apps. Finance and operations apps tables aren't autoselected when creating the initial Fabric link.
+
+        Kernel tables are a subset of finance and operations apps tables. Kernel tables support initial synchronization only. Therefore, the user interface displays `InitialSyncInProgress` as the synchronization status for these tables.
    - question: Are there system tables that are automatically synchronized and can't be unlinked?
      answer: |
         Yes, certain system tables are automatically synchronized in Link to Fabric and can't be unlinked by users. Examples of these system tables include:
