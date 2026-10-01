@@ -40,7 +40,7 @@ When enabled, users can open Microsoft 365 Copilot in their canvas app by select
 
 ## Prerequisites
 
-To use Microsoft 365 Copilot in canvas apps, make sure the following prerequisites are met:
+To use Microsoft 365 Copilot in canvas apps, ensure you meet the following prerequisites:
 
 - You must enable the feature using [https://make.preview.powerapps.com/](https://make.preview.powerapps.com/).
 - Your tenant must be set to allow **Dataverse data available in Microsoft 365 Copilot**. For more information, see [Enable Microsoft 365 admin center Copilot Dataverse settings](../data-platform/data-platform-intelligence.md#enable-microsoft-365-admin-center-copilot-dataverse-settings).

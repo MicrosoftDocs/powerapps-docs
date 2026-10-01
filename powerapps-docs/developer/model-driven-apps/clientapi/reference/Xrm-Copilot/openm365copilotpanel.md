@@ -34,7 +34,7 @@ Type: `Promise<void>`
 
 ## Remarks
 
-If the panel is already open, this method ensures it's initialized. The method does nothing if Microsoft 365 Copilot isn't enabled.
+If the panel is already open, this method ensures it's initialized. The method does nothing if Microsoft Copilot isn't enabled.
 
 ## Example
 

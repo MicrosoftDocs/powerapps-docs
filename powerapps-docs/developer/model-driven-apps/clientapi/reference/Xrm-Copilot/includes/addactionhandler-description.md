@@ -1,1 +1,1 @@
-Registers a custom handler function for a Microsoft 365 Copilot action.
+Registers a custom handler function for a Microsoft Copilot action.

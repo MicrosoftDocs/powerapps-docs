@@ -19,7 +19,7 @@ This article explains how to open, configure, and fine-tune the Dataverse semant
 
 ## Prerequisites
 
-- Dataverse Intelligence is enabled for your environment. For setup information, see [Dataverse data in Microsoft 365 Copilot prerequisites](data-platform-intelligence.md#dataverse-data-in-microsoft-365-copilot-prerequisites).
+- Dataverse Intelligence is enabled for your environment. For setup information, see [Dataverse data in Microsoft Copilot prerequisites](data-platform-intelligence.md#dataverse-data-in-microsoft-365-copilot-prerequisites).
 - The semantic model has completed its initial generation. More information: [How the semantic model works](semantic-model-overview.md#how-the-semantic-model-works)
 - Dataverse version with Dynamics 365 apps enabled must be 9.2.26054.00125 or later version.
 - You need either of the following security roles to manage the semantic model:
@@ -31,7 +31,7 @@ This article explains how to open, configure, and fine-tune the Dataverse semant
 
 ## Select a semantic model
 
-The **Semantic model** page is the central hub for managing all semantic models in your environment. From the page, you can view, manage, and edit a semantic model that powers agent experiences across Microsoft, including Dataverse MCP, Copilot in Power Apps, Microsoft 365 Copilot, Sales Agent, and any agent built with Microsoft Copilot Studio over Dataverse data.
+The **Semantic model** page is the central hub for managing all semantic models in your environment. From the page, you can view, manage, and edit a semantic model that powers agent experiences across Microsoft, including Dataverse MCP, Copilot in Power Apps, Microsoft Copilot, Sales Agent, and any agent built with Microsoft Copilot Studio over Dataverse data.
 
 1. Sign in to [Power Apps](https://make.powerapps.com), and open the environment where Dataverse Intelligence is enabled.
 1. In the left navigation pane, select **More**, and if not in the **More** list, select **Discover all**, and then select **Semantic model**.
@@ -54,8 +54,8 @@ Semantic models are named based on the source that provisioned them. Use the nam
 | Source | Name format | Associated apps or agents |
 | --- | --- | --- |
 | [Add Dataverse tables as a knowledge source](/microsoft-copilot-studio/knowledge-add-dataverse) | User-configured Dataverse knowledge name | custom agent name (user configurable) |
-| [Add Microsoft 365 Copilot for app users in model-driven apps](/power-apps/maker/model-driven-apps/add-microsoft-365-copilot) -or-<br /> [Dataverse data in Microsoft 365 Copilot](data-platform-data-copilot.md) | `M365_Secondary_model_<App_name>` | Connected app display name (user configurable) |
-| [Set up Sales agent in Microsoft 365 Copilot](/microsoft-sales-copilot/set-up-sales-chat) -or-<br /> [Copilot in Dynamics 365 Sales overview](/dynamics365/sales/copilot-overview#chat-in-natural-language-or-use-predefined-prompts) | `SalesSpecificQnA` | Copilot in Dynamics 365 Sales |
+| [Add Microsoft Copilot for app users in model-driven apps](/power-apps/maker/model-driven-apps/add-microsoft-365-copilot) -or-<br /> [Dataverse data in Microsoft Copilot](data-platform-data-copilot.md) | `M365_Secondary_model_<App_name>` | Connected app display name (user configurable) |
+| [Set up Sales agent in Microsoft Copilot](/microsoft-sales-copilot/set-up-sales-chat) -or-<br /> [Copilot in Dynamics 365 Sales overview](/dynamics365/sales/copilot-overview#chat-in-natural-language-or-use-predefined-prompts) | `SalesSpecificQnA` | Copilot in Dynamics 365 Sales |
 
 > [!NOTE]
 > Changes you make to a semantic model, including signal settings, table-level controls, and glossary entries, only apply to that specific semantic model. They don't affect other semantic models in your environment. If multiple apps or agents share the same semantic model (for example, Sales Agent and Copilot in Dynamics 365 Sales both use `SalesSpecificQnA`), changes to that model apply to all experiences associated with it.

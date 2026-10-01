@@ -23,7 +23,7 @@ Dataverse search is the foundation that enables Copilot and in-app search experi
 
 :::image type="content" source="media/dataverse-types.png" alt-text="Screenshot of Dataverse types and clients." lightbox="media/dataverse-types.png":::
 
-Dataverse search powers global search experiences, API calls, and agents built with Copilot Studio, including those running on Microsoft 365 Copilot and MCP tools. Beyond helping users of model-driven apps quickly, find what they need, Dataverse search enables rich search and AI-driven experiences across products that use Dataverse as a data source.
+Dataverse search powers global search experiences, API calls, and agents built with Copilot Studio, including those running on Microsoft Copilot and MCP tools. Beyond helping users of model-driven apps quickly, find what they need, Dataverse search enables rich search and AI-driven experiences across products that use Dataverse as a data source.
 
 
 ## What type of data does Dataverse search index?

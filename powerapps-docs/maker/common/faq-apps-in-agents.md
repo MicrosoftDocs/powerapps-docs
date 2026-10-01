@@ -20,7 +20,7 @@ These frequently asked questions (FAQs) describe the AI impact of Power Apps in 
 
 ## What is Power Apps in agents?
 
-Power Apps in agents enables users to interact with data from Power Apps model-driven apps directly in Microsoft 365 Copilot through natural language. When makers deploy a declarative agent for a model-driven app, users can query records, view data in grids, create and edit records, and receive AI-generated summaries, all through a Copilot conversation, without switching to the app.
+Power Apps in agents enables users to interact with data from Power Apps model-driven apps directly in Microsoft Copilot through natural language. When makers deploy a declarative agent for a model-driven app, users can query records, view data in grids, create and edit records, and receive AI-generated summaries, all through a Copilot conversation, without switching to the app.
 
 The agent connects to the model-driven app's underlying Dataverse tables and uses the same data exploration capabilities that power the Grid view experience in model-driven apps.
 
@@ -39,16 +39,16 @@ The system can:
 
 Power Apps in agents serves two audiences:
 
-- **For makers**: Extend the reach of an existing Power Apps model-driven app by making its data accessible to users directly in Microsoft 365 Copilot. Deploy a declarative agent for your app. No additional app development is required beyond the initial setup.
+- **For makers**: Extend the reach of an existing Power Apps model-driven app by making its data accessible to users directly in Microsoft Copilot. Deploy a declarative agent for your app. No additional app development is required beyond the initial setup.
 
-- **For end users**: Help business users access and act on their organization's data without leaving Microsoft 365 Copilot, reducing context-switching and enabling faster decisions in the flow of work. It's not intended to replace the full model-driven app experience, but to make common data tasks – querying, reviewing, and updating records – accessible through Microsoft 365 Copilot. When more complex actions are needed, it also serves as a handoff point directly to the model-driven app.
+- **For end users**: Help business users access and act on their organization's data without leaving Microsoft Copilot, reducing context-switching and enabling faster decisions in the flow of work. It's not intended to replace the full model-driven app experience, but to make common data tasks – querying, reviewing, and updating records – accessible through Microsoft Copilot. When more complex actions are needed, it also serves as a handoff point directly to the model-driven app.
 
 
 ## How was Power Apps in agents evaluated? What metrics are used to measure performance?
 
 The system was evaluated across a range of query types, table configurations, record volumes, and user scenarios. Evaluation focused on query accuracy, widget render fidelity, and the correctness of information presented in them.
 
-If you encounter problems, submit feedback through Microsoft 365 Copilot. Microsoft uses your feedback to improve products and services. For more information, see [Data, privacy, and security for Azure OpenAI Service](/legal/cognitive-services/openai/data-privacy).
+If you encounter problems, submit feedback through Microsoft Copilot. Microsoft uses your feedback to improve products and services. For more information, see [Data, privacy, and security for Azure OpenAI Service](/legal/cognitive-services/openai/data-privacy).
 
 
 ## What are the limitations of Power Apps in agents? How can users minimize the impact of these limitations?
@@ -67,7 +67,7 @@ Form filling is powered by [form fill assistance](/power-apps/user/form-filling-
 
 ## How do I provide feedback?
 
-Use the thumbs up or thumbs down controls in Microsoft 365 Copilot to provide feedback on individual responses. Microsoft uses this feedback to improve products and services.
+Use the thumbs up or thumbs down controls in Microsoft Copilot to provide feedback on individual responses. Microsoft uses this feedback to improve products and services.
 
 ## Related information
 

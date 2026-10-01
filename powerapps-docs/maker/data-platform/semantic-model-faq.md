@@ -42,7 +42,7 @@ Wait for the job to complete. The overview page refreshes and displays the updat
 The semantic model is automatically consumed by the following experiences:
 
 - Copilot in Power Apps
-- Microsoft 365 Copilot with Dataverse
+- Microsoft Copilot with Dataverse
 - Sales Agent in Microsoft 365
 - Microsoft Copilot Studio agents over Dataverse data
 
@@ -50,7 +50,7 @@ Agents reference the semantic model associated with their app or knowledge sourc
 
 ## Why is the semantic model not appearing for my agent or Copilot experience?
 
-Semantic models are available only when the Copilot experience is consuming Dataverse data with semantic indexing enabled. For Microsoft 365 Copilot experiences specifically, you must enable Microsoft 365 Copilot in model-driven apps in the app settings.
+Semantic models are available only when the Copilot experience is consuming Dataverse data with semantic indexing enabled. For Microsoft Copilot experiences specifically, you must enable Microsoft Copilot in model-driven apps in the app settings.
 :::image type="content" source="media/semantic-model-faq/copilot-model-driven-app-setting.png" alt-text="Copilot enabled for model-driven app setting":::
 
 For an overview of which experiences automatically use the semantic model, see [Dataverse semantic model overview](semantic-model-overview.md).

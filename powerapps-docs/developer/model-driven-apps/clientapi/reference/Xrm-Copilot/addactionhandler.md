@@ -36,7 +36,7 @@ Type: `Promise<void>`
 
 ## Remarks
 
-You can register multiple handlers for the same `actionId`. They run sequentially. The API silently ignores registering the same function reference twice for the same `actionId`. The API does nothing if Microsoft 365 Copilot isn't enabled.
+You can register multiple handlers for the same `actionId`. They run sequentially. The API silently ignores registering the same function reference twice for the same `actionId`. The API does nothing if Microsoft Copilot isn't enabled.
 
 ### Built-in action IDs
 
