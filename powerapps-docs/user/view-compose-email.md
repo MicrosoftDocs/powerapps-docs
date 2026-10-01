@@ -1,12 +1,12 @@
 ---
 title: "View, compose and respond to email | MicrosoftDocs"
 description: How to view, compose and respond to email.
-author: shwetamurkute
+author: jasongre
 ms.component: pa-user
 ms.topic: article
-ms.date: 05/01/2026
+ms.date: 10/01/2026
 ms.subservice: end-user
-ms.author: smurkute
+ms.author: jasongre
 ms.custom: ""
 ms.reviewer: smurkute
 ms.assetid: 
@@ -146,5 +146,5 @@ You can use the following command options when working with emails in the timeli
 
 ## Download email
 
-Select **Download** to download emails as an .eml file. 
+Select **Download** to download an email as an .eml file. The **Download** action is available only when the email status is **Sent** or **Received**.
 
