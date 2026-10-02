@@ -8,7 +8,7 @@ ms.subservice: code-apps
 ms.author: ergonza
 ms.reviewer: jdaly
 author: ergonza93
-ms.date: 08/31/2026
+ms.date: 10/02/2026
 ---
 
 # Power Apps CLI environment variables
@@ -113,11 +113,12 @@ These variables supply options to [`pa app share`](cli.md#pa-app-share).
 
 | Environment variable | Corresponding option | Description |
 | --- | --- | --- |
+| `PA_CLI_AS` | `--as` | Specifies whether [`pa app add data-source`](cli.md#pa-app-add-data-source) adds a connector that supports both tables and actions as a table or as actions. Valid values are:<br />- `table`<br />- `action`<br />Values are case-insensitive. |
 | `PA_CLI_CONNECTION_DISPLAY_NAME` | `--display-name` | Specifies the display name when creating a connection. |
 | `PA_CLI_CONNECTION_ID` | `--connection-id` | Specifies a connector connection instance ID. |
 | `PA_CLI_CONNECTION_REF` | `--connection-ref` | Specifies a connection reference logical name. |
 | `PA_CLI_CONNECTION_SEARCH` | `--search` | Filters results from [`pa connection list`](cli.md#pa-connection-list). |
-| `PA_CLI_CONNECTOR` | `--connector` | Specifies a connector ID, such as `shared_office365users`. |
+| `PA_CLI_CONNECTOR` | `--connector` | Specifies a connector ID, such as `shared_office365users`, or a connector display name, such as `Office 365 Users`. |
 | `PA_CLI_CONNECTOR_SEARCH` | `--search` | Filters results from [`pa connector list`](cli.md#pa-connector-list). |
 | `PA_CLI_DATASET` | `--dataset` | Specifies a dataset, such as a SharePoint site or SQL database. |
 | `PA_CLI_DATA_SOURCE_NAME` | `--name` | Specifies the data source to refresh or remove. |
@@ -125,7 +126,7 @@ These variables supply options to [`pa app share`](cli.md#pa-app-share).
 | `PA_CLI_PROCEDURE` | `--procedure` | Specifies a SQL stored procedure. |
 | `PA_CLI_SOLUTION_ID` | `--solution-id` | Specifies the solution for [`pa app push`](cli.md#pa-app-push), [`pa app add data-source`](cli.md#pa-app-add-data-source), or [`pa connection list-references`](cli.md#pa-connection-list-references). |
 | `PA_CLI_SOLUTION_SEARCH` | `--search` | Filters results from [`pa solution list`](cli.md#pa-solution-list). |
-| `PA_CLI_TABLE` | `--table` | Specifies a table or connector resource name. |
+| `PA_CLI_TABLE` | `--table` | Specifies one table or connector resource name. To add multiple connector tables, repeat the `--table` command-line parameter. For details, see [`pa app add data-source` remarks](cli.md#pa-app-add-data-source-remarks). |
 
 For the commands that accept each option, see the [Power Apps CLI command reference](cli.md).
 

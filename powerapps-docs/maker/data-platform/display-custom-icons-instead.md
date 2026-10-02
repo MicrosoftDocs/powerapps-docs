@@ -24,7 +24,9 @@ search.audienceType:
 Power Apps environment administrators and customizers can add graphics to a view and establish the logic used to select a graphic based on the column value using JavaScript. The capability lets you customize list views that display icons alongside text or numerical values. 
 
 > [!IMPORTANT]
-> There's a better way to add visualizations for a column in grids and views. More information: [Custom column visualizations for grids](column-visualizations-grids.md)
+>
+> - The method described in this article doesn't support the display of images in *personal views*, and images don't appear in those personal views.
+> - There's a better way to add visualizations for a column in grids and views. For more information, see [Custom column visualizations for grids](column-visualizations-grids.md).
 
 This example displays custom icons in a view for the opportunity table, which is available with certain apps, such as Dynamics 365 Sales. You can display custom icons in views with other standard tables, such as the account or contact table, as well as custom tables. 
 

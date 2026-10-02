@@ -6,7 +6,7 @@ ms.topic: reference
 ms.author: jordanchodak
 ms.reviewer: jdaly
 author: jordanchodakWork
-ms.date: 09/15/2026
+ms.date: 10/02/2026
 ---
 
 # Power Apps CLI command reference
@@ -94,16 +94,119 @@ pa app add data-source --connector <connector-id> [options]
 
 | Parameter | Description |
 | --- | --- |
-| `--connector` | The connector identifier, such as `shared_office365users`. |
+| `--connector` | The connector identifier, such as `shared_office365users`, or the connector display name, such as `"Office 365 Users"`. If a display name matches more than one connector, the command lists the matching connector identifiers so that you can specify one. |
+| `--as` | Whether to add the connector as a `table` or an `action` data source. Use this parameter with connectors that support both tables and actions, such as SharePoint and SQL Server. For more information, see [`pa app add data-source` remarks](#pa-app-add-data-source-remarks). |
 | `--connection-id` | The connection ID to use for the data source. |
-| `--connection-ref` | The logical name of a connection reference. |
+| `--connection-ref` | The logical name of a connection reference, such as `cr123_sharedsharepointonline_1a2b3`. |
 | `--solution-id` | The solution that contains the connection reference. |
 | `--dataset` | The dataset for a tabular data source. |
-| `--table` | The table to add. |
-| `--org-url` | The Dataverse organization URL to use when retrieving table metadata. |
+| `--table` | The table to add. Repeat this parameter to add multiple tables from the same connector, connection, and dataset. Native Dataverse supports one table per command. |
+| `--org-url` | The Dataverse organization URL used to retrieve native Dataverse table metadata. In interactive mode, the command prompts for this value if you don't provide it as a command option or environment variable. |
 | `--procedure` | The SQL stored procedure to add. |
 
 These parameters have corresponding [Solutions, connectors, and data sources](environment-variables.md#solutions-connectors-and-data-sources) environmental variables.
+
+### `pa app add data-source` remarks
+
+To add multiple connector tables in one command, repeat `--table` for each table. The tables must use the same connector, connection, and dataset. The command adds duplicate table identifiers only once. You can include only one native Dataverse table or SQL stored procedure per command.
+
+If a table-specific metadata, validation, or schema-write operation fails, the command still adds the valid tables. It reports ordered `succeeded` and `failed` results and returns a nonzero exit code if any table fails. Review the results before retrying.
+
+Some connectors, such as SharePoint and SQL Server, support both tables and actions. For these connectors, specify what to add:
+
+- To add tables or a SQL stored procedure, use `--as table`, or include `--table` or `--procedure`.
+- To add the connector's actions, use `--as action`. You can't use `--as action` with `--dataset`, `--table`, or `--procedure`.
+
+If you don't specify what to add, the command asks **Add a table?** in an interactive terminal. In non-interactive mode, the command fails until you specify `--as`. Connectors that support only actions, such as Office 365 Users, don't need `--as` and don't support `--as table`. To add Dataverse actions or functions, use [`pa app add dataverse-api`](#pa-app-add-dataverse-api) instead of `--as action`.
+
+In an interactive terminal, the command prompts for required values that you don't provide as command options or environment variables. The prompts depend on the type of data source.
+
+#### For native Dataverse:
+
+1. If you don't specify `--connector`, the command asks for the connector ID.
+1. The command asks for the table logical name.
+1. The command asks for the Dataverse organization URL when it isn't provided.
+
+Native Dataverse doesn't use a connection ID, connection reference, or dataset.
+
+#### For connector-backed data sources:
+
+**Choose the connector and data source type**
+
+1. If you don't specify `--connector`, the command asks for the connector ID.
+1. If the connector supports both tables and actions and nothing else determines what to add, the command asks **Add a table?**
+
+**Choose the connection**
+
+The command asks **Are you using a connection reference instead of a connection ID?** It skips this question when you provide a connection ID or connection reference.
+
+   - If you select **Yes**, the command asks for the connection reference logical name.
+   - If you select **No**, the command lists your connections for the connector. Select **(Enter manually...)** to enter a connection ID that isn't in the list.
+
+**Choose the data**
+
+- If you're adding actions, the command skips the stored procedure, dataset, and table prompts.
+- If you're adding tables or a stored procedure:
+
+  1. For SQL Server, the command asks whether you're adding a stored procedure. If you are, it asks for the stored procedure name.
+  1. The command lists the datasets available through the connection. Select **(Enter manually...)** to enter a dataset that isn't in the list.
+  1. Unless you're adding a stored procedure, the command opens a searchable list of tables in the dataset. You can select more than one table.
+
+When you use a connection reference, the dataset and table lists come from the connection that the reference points to.
+
+### `pa app add data-source` examples
+
+Add a data source by answering prompts:
+
+```bash
+pa app add data-source
+```
+
+Add a native Dataverse table:
+
+```bash
+pa app add data-source --connector dataverse --table account
+```
+
+Add the actions of a connector that also supports tables:
+
+```bash
+pa app add data-source \
+  --connector shared_sharepointonline \
+  --connection-id <connection-id> \
+  --as action
+```
+
+Add a SharePoint list by using the connector display name:
+
+```bash
+pa app add data-source \
+  --connector "SharePoint" \
+  --connection-id <connection-id> \
+  --dataset <site-url> \
+  --table <list-name>
+```
+
+Add multiple SQL tables from the same dataset:
+
+```bash
+pa app add data-source \
+  --connector shared_sql \
+  --connection-id <connection-id> \
+  --dataset <server-name,database-name> \
+  --table "[dbo].[Customers]" \
+  --table "[dbo].[Orders]"
+```
+
+Add a table through a connection reference, and select the dataset and table when the command prompts:
+
+```bash
+pa app add data-source \
+  --connector shared_sharepointonline \
+  --connection-ref <connection-reference-logical-name> \
+  --solution-id <solution-id> \
+  --as table
+```
 
 ## `pa app add dataverse-api`
 
@@ -119,7 +222,7 @@ pa app add dataverse-api --api-name <operation-name>
 | --- | --- |
 | `--api-name` | The name of the Dataverse action or function to add. |
 
-[`PA_CLI_DATAVERSE_API_NAME`](environment-variables.md#dataverse-apis-and-power-automate-flows) is the corresponding environmental variable for the `--api-name` parameter.
+[`PA_CLI_DATAVERSE_API_NAME`](environment-variables.md#dataverse-apis-and-power-automate-flows) is the corresponding environment variable for the `--api-name` parameter.
 
 Learn more:
 
@@ -140,7 +243,7 @@ pa app add flow --flow-id <flow-id>
 | --- | --- |
 | `--flow-id` | The ID of the Power Automate flow to add. |
 
-[`PA_CLI_FLOW_ID`](environment-variables.md#dataverse-apis-and-power-automate-flows) is the corresponding environmental variable for the `--flow-id` parameter.
+[`PA_CLI_FLOW_ID`](environment-variables.md#dataverse-apis-and-power-automate-flows) is the corresponding environment variable for the `--flow-id` parameter.
 
 The command:
 
@@ -175,9 +278,9 @@ pa app find-dataverse-api --search <operation-name> [--json]
 | `--search` | The operation name to search for. |
 | `--json` | Return the results as JSON. |
 
-These parameters have corresponding [Dataverse APIs and Power Automate flows](environment-variables.md#dataverse-apis-and-power-automate-flows) environmental variables.
+These parameters correspond to [Dataverse APIs and Power Automate flows](environment-variables.md#dataverse-apis-and-power-automate-flows) environmental variables.
 
-[Learn how to find available Dataverse operations](../how-to/add-dataverse-action-function.md#step-1-find-available-operations)
+[Learn how to find available Dataverse operations](../how-to/add-dataverse-action-function.md#step-1-find-available-operations).
 
 ## `pa app get-settings`
 
@@ -270,7 +373,7 @@ Total flows: 2
 | --- | --- |
 | `--search` | Filter flows by name. |
 
-[`PA_CLI_FLOW_SEARCH` ](environment-variables.md#dataverse-apis-and-power-automate-flows) is the corresponding environmental variable for the `--search` parameter.
+[`PA_CLI_FLOW_SEARCH`](environment-variables.md#dataverse-apis-and-power-automate-flows) is the corresponding environment variable for the `--search` parameter.
 
 ## `pa app push`
 
@@ -287,7 +390,7 @@ pa app push [--solution-id <solution-id>]
 | `--solution-id` | The ID of the solution to add the code app to. |
 | `--non-interactive`| Publishes the app non-interactively. [Learn to publish apps with a service principal](../how-to/use-service-principal.md). |
 
-[`PA_CLI_SOLUTION_ID`](environment-variables.md#solutions-connectors-and-data-sources) is the environmental variable to use with the `--solution-id` parameter.
+Use [`PA_CLI_SOLUTION_ID`](environment-variables.md#solutions-connectors-and-data-sources) as the environment variable with the `--solution-id` parameter.
 
 [Learn how to create a code app by using the Power Apps CLI](../how-to/create-an-app-from-scratch.md).
 
@@ -337,9 +440,9 @@ pa app remove flow [--flow-name <name> | --flow-id <flow-id>] [--force]
 | `--flow-id` | The ID of the Power Automate flow to remove. |
 | `--force` | Remove the flow without prompting for confirmation. |
 
-[`PA_CLI_FLOW_DATA_SOURCE_NAME` and `PA_CLI_REMOVE_FLOW_ID`](environment-variables.md#dataverse-apis-and-power-automate-flows) are corresponding environmental variables to use whith these parameters.
+[`PA_CLI_FLOW_DATA_SOURCE_NAME` and `PA_CLI_REMOVE_FLOW_ID`](environment-variables.md#dataverse-apis-and-power-automate-flows) are corresponding environment variables to use with these parameters.
 
-[Learn how to remove a flow](../how-to/add-flows.md#remove-a-flow)
+[Learn how to remove a flow](../how-to/add-flows.md#remove-a-flow).
 
 ## `pa app run`
 
@@ -419,7 +522,7 @@ pa auth login --account user@contoso.com
 | --- | --- |
 | `--account` | The account to prepopulate on the sign-in page. |
 
-[`PA_CLI_ACCOUNT`](environment-variables.md#authentication) is the corresponding environmental variable for the `--account` parameter.
+[`PA_CLI_ACCOUNT`](environment-variables.md#authentication) is the corresponding environment variable for the `--account` parameter.
 
 - [Learn how to sign in](../how-to/sign-in-manage-accounts.md#sign-in)
 - [Learn how to switch the active account](../how-to/sign-in-manage-accounts.md#switch-the-active-account)
@@ -469,7 +572,7 @@ pa auth switch --account user@contoso.com
 | --- | --- |
 | `--account` | The account to make active. |
 
-[`PA_CLI_ACCOUNT`](environment-variables.md#authentication) is the corresponding environmental variable for the `--account` parameter.
+[`PA_CLI_ACCOUNT`](environment-variables.md#authentication) is the corresponding environment variable for the `--account` parameter.
 
 Learn more about when you can use this command:
 
@@ -580,7 +683,7 @@ pa connection list-references --solution-id <solution-id>
 | --- | --- |
 | `--solution-id` | The ID of the solution that contains the connection references. |
 
-[`PA_CLI_SOLUTION_ID`](environment-variables.md#solutions-connectors-and-data-sources) is the corresponding environmental variable to use with the `--solution-id`  parameter.
+Use [`PA_CLI_SOLUTION_ID`](environment-variables.md#solutions-connectors-and-data-sources) with the `--solution-id` parameter.
 
 ## `pa connection list-tables`
 
@@ -613,12 +716,12 @@ pa connector list [--search <term>] [--json]
 | `--search` | Filter connectors by name or display name. |
 | `--json` | Return the complete connector list as JSON. |
 
-[`PA_CLI_CONNECTOR_SEARCH`](environment-variables.md#solutions-connectors-and-data-sources) is the corresponding environmental variable to use with the `--search` parameter.
+[`PA_CLI_CONNECTOR_SEARCH`](environment-variables.md#solutions-connectors-and-data-sources) is the corresponding environment variable to use with the `--search` parameter.
 
 
 ### `pa connector list` output
 
-In an interactive terminal, results appear in pages of 20 rows. Press <kbd>Enter</kbd> to show the next page. Press <kbd>Esc</kbd> or <kbd>Q</kbd> to exit. When you redirect the output or include `--json`, the command returns the complete list.
+In an interactive terminal, you see results in pages of 20 rows. Press <kbd>Enter</kbd> to show the next page. Press <kbd>Esc</kbd> or <kbd>Q</kbd> to exit. When you redirect the output or include `--json`, the command returns the complete list.
 
 By default, the command returns a table with the following columns:
 
@@ -675,9 +778,9 @@ pa solution list [--search <term>] [--json]
 | `--search` | Filter solutions by friendly name or unique name. The filter is a case-insensitive substring match. |
 | `--json` | Return the complete solution list as JSON. |
 
-[`PA_CLI_SOLUTION_SEARCH`](environment-variables.md#solutions-connectors-and-data-sources) is the corresponding environmental variable for the `--search` parameter.
+[`PA_CLI_SOLUTION_SEARCH`](environment-variables.md#solutions-connectors-and-data-sources) is the corresponding environment variable for the `--search` parameter.
 
-In an interactive terminal, results appear in pages of 20 rows. Press <kbd>Enter</kbd> to show the next page. Press <kbd>Esc</kbd> or <kbd>Q</kbd> to exit. When you redirect the output or include `--json`, the command returns the complete list.
+In an interactive terminal, you see results in pages of 20 rows. Press <kbd>Enter</kbd> to show the next page. Press <kbd>Esc</kbd> or <kbd>Q</kbd> to exit. When you redirect the output or include `--json`, the command returns the complete list.
 
 ## `pa telemetry disable`
 

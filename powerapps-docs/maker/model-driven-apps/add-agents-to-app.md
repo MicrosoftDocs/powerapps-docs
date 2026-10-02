@@ -1,13 +1,16 @@
 ---
 title: "Add agents to your model-driven app" 
 description: Learn how to add agents to your model-driven app in Power Apps.
-ms.date: 04/02/2026
+ms.date: 10/02/2026
 ms.reviewer: matp
 ms.topic: how-to
 author: HemantGaur
 ms.subservice: mda-maker
 ms.author: hemantg
-contributors: Jacob-Wilkinson, HemantGaur
+contributors: 
+- Jacob-Wilkinson
+- HemantGaur
+- jasongre
 ms.service: powerapps
 search.audienceType: 
   - maker
@@ -103,6 +106,7 @@ When a new booking record is created, it triggers the agent, which adds the revi
 ## Current limitations
 
 - Only model-driven Power Apps support agent supervision. This feature isn't available for canvas or vibe apps.
+- Model-driven apps that use another left pane, such as the Customer Service workspace app, don't currently support the agent feed.
 - Power Apps MCP server is supported only via Microsoft Copilot Studio.
 
 ## Add an autonomous agent to an app
