@@ -80,7 +80,7 @@ The **Upcoming** tab displays preview features currently available:
 > [!IMPORTANT]
 > [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
-- **Microsoft 365 Copilot in model-driven apps**. Microsoft 365 Copilot chat makes it easier for users to work with model-driven apps by offering AI-powered insights through natural language conversations. With this feature, users can quickly find information, navigate apps more easily, and get help to boost their productivity. More information: [Add Microsoft 365 Copilot chat for app users in model-driven apps (preview)](add-microsoft-365-copilot.md)
+- **Microsoft Copilot in model-driven apps**. Microsoft Copilot Chat makes it easier for users to work with model-driven apps by offering AI-powered insights through natural language conversations. With this feature, users can quickly find information, navigate apps more easily, and get help to boost their productivity. More information: [Add Microsoft Copilot Chat for app users in model-driven apps (preview)](add-microsoft-365-copilot.md)
 
 ## Known limitations
 

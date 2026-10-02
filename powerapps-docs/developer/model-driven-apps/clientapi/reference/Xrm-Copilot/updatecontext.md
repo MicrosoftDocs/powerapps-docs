@@ -25,7 +25,7 @@ contributors:
 
 | Parameter Name| Type| Required | Description|
 | --- | --- | --- | --- |
-| `context` | [PowerAppsContent](powerappscontent.md) | Yes | An object describing the current app context to send to the Microsoft 365 Copilot side panel.|
+| `context` | [PowerAppsContent](powerappscontent.md) | Yes | An object describing the current app context to send to the Microsoft Copilot side panel.|
 | `successCallback` | Function | Yes | A function to call when the operation succeeds.|
 | `errorCallback`   | Function | Yes | A function to call when the operation fails.|
 
@@ -35,7 +35,7 @@ Type: `Promise<void>`
 
 ## Remarks
 
-The API automatically merges base context fields (`appId`, `appType`, `orgId`, `geo`, `schemaVersion`). You don't need to provide these fields. The API does nothing if Microsoft 365 Copilot isn't enabled. Agents you author can't yet use context to optimize their responses.
+The API automatically merges base context fields (`appId`, `appType`, `orgId`, `geo`, `schemaVersion`). You don't need to provide these fields. The API does nothing if Microsoft Copilot isn't enabled. Agents you author can't yet use context to optimize their responses.
 
 ## Example
 

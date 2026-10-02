@@ -37,7 +37,7 @@ You can work with Business Applications by using an agent, or through a chat exp
 
 - You need access to the Work IQ experience where you want to use Business Applications.
 - A Power Platform administrator must enable Work IQ for the environment in the Power Platform admin center.
-- For the model-driven app, the **Enable M365 Copilot in model-driven apps** setting (`m365copilotmodelappenabled`) must be set to **Default** or **On**. For configuration instructions, see [Enable Microsoft 365 Copilot in a single model-driven app](../maker/model-driven-apps/add-microsoft-365-copilot.md#enable-microsoft-365-copilot-in-a-single-model-driven-app).
+- For the model-driven app, the **Enable M365 Copilot in model-driven apps** setting (`m365copilotmodelappenabled`) must be set to **Default** or **On**. For configuration instructions, see [Enable Microsoft Copilot in a single model-driven app](../maker/model-driven-apps/add-microsoft-365-copilot.md#enable-microsoft-365-copilot-in-a-single-model-driven-app).
 - You need permission to access the Power Platform environment, model-driven app, and business data involved in your request.
 
 Work IQ respects your existing Power Platform security permissions. You can only select environments and applications, view data, and perform actions that your permissions allow.

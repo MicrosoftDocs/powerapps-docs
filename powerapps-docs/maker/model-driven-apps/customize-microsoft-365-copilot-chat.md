@@ -48,7 +48,7 @@ A default agent is especially useful for scenario-focused agents that extend the
 
 The `Xrm.Copilot.*` client APIs let developers integrate Microsoft 365 Copilot directly into model-driven app experiences. With these APIs, your app can interact directly with the Microsoft 365 Copilot side pane and respond to Microsoft 365 Copilot-driven actions, so you can create richer, end-to-end agentic scenarios.
 
-Used together with a default agent, these APIs complete the agent mode pattern: your agent is the starting point, your app can send prompts and context into Microsoft 365 Copilot, and Microsoft 365 Copilot can invoke actions back inside your app.
+When you use these APIs with a default agent, they complete the agent mode pattern: your agent is the starting point, your app can send prompts and context to Microsoft 365 Copilot, and Microsoft 365 Copilot can invoke actions back inside your app.
 
 For the full API surface, see [Xrm.Copilot (Client API reference) in model-driven apps](../../developer/model-driven-apps/clientapi/reference/xrm-copilot.md).
 

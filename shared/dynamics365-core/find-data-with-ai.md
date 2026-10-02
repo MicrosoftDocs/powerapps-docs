@@ -23,11 +23,11 @@ The primary admin control for **Natural Language Grid and View Search** is movin
  
 **Natural language grid and view search** app setting (`NLGridSearchSetting`) previously available in [Power Platform admin center](/power-platform/admin/settings-features#natural-language-grid-and-view-search) **Environment** > **Settings** > **Product** > **Features** page is moving and you can configure this setting at the app level either by using [Manage model-driven app settings in the app designer](/power-apps/maker/model-driven-apps/app-properties) or [Updating a setting definition](/power-apps/maker/data-platform/create-edit-configure-settings#updating-a-setting-definition).
 
-## Explore data with agents in Microsoft 365 Copilot (preview)
+## Explore data with agents in Microsoft Copilot (preview)
 
 [!INCLUDE [preview-banner-section](~/../shared-content/shared/preview-includes/preview-banner-section.md)]
 
-With Microsoft 365 Copilot you have the ability to bring app-based experiences to agents, the app experience can also use the AI assisted search in the grid view. 
+With Microsoft Copilot you have the ability to bring app-based experiences to agents, the app experience can also use the AI assisted search in the grid view. 
 
 > [!IMPORTANT]
 >
@@ -36,13 +36,13 @@ With Microsoft 365 Copilot you have the ability to bring app-based experiences t
 > - This feature is being gradually rolled out across regions and might not be available yet in your region.
 
 > [!NOTE]
-> To use this capability, you need to [set up an apps agent in Microsoft 365 Copilot](/power-apps/maker/model-driven-apps/app-properties#upcoming).
+> To use this capability, you need to [set up an apps agent in Microsoft Copilot](/power-apps/maker/model-driven-apps/app-properties#upcoming).
 
-When users interact with agents in M365 Copilot, the agents can search and retrieve data from apps view directly within the conversation. By using natural language, users can find, filter, and review app data without switching to the app experience.
+When users interact with agents in Microsoft Copilot, the agents can search and retrieve data from apps view directly within the conversation. By using natural language, users can find, filter, and review app data without switching to the app experience.
 Natural language search interprets the user's request and applies the appropriate filters, sorting, and text search against the underlying view data. The agent returns the results in Copilot chat, presented in a structured, tabular format that reflects the view data.
 Users can continue to work with the returned results in the conversation, iterating with natural language to refine the output until it reflects the exact results they’re looking for.
 
-:::image type="content" source="/power-apps/user/media/find-data-grid-in-copilot.png" alt-text="A screenshot showing how data can be fetched using agent in Microsoft 365 Copilot":::
+:::image type="content" source="/power-apps/user/media/find-data-grid-in-copilot.png" alt-text="A screenshot showing how data can be fetched using agent in Microsoft Copilot":::
 
 
 ## Supported features

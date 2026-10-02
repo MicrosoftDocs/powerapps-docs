@@ -29,7 +29,7 @@ With Dataverse intelligence, you can define reusable business context that agent
 
 Microsoft 365 Copilot can use Dataverse data to help users find information and take action with natural language across Microsoft 365 experiences.
 
-Dataverse table data from Power Apps (model-driven) can be searched and reasoned over in Microsoft 365 Copilot. Copilot can find relevant rows and related records, interpret table relationships, and summarize or answer questions based on your data. More information: [Dataverse data in Microsoft 365 Copilot](data-platform-data-copilot.md)
+Microsoft 365 Copilot can search and reason over Dataverse table data from Power Apps (model-driven). Copilot can find relevant rows and related records, interpret table relationships, and summarize or answer questions based on your data. For more information, see [Dataverse data in Microsoft 365 Copilot](data-platform-data-copilot.md).
 
 ### Dataverse data in Microsoft 365 Copilot prerequisites
 
@@ -40,11 +40,11 @@ Dataverse table data from Power Apps (model-driven) can be searched and reasoned
 - Enable Dataverse search to provide index for Microsoft 365 Copilot responses.
   > Power Platform administrator role to access Dataverse Search environment settings. More information: [Enable Dataverse search:Turn on search indexing to support Dataverse intelligence (Work IQ) in AI and agent experiences](/power-platform/admin/settings-features#search).
 - Enable the **Allow data availability in M365 Copilot**
-  > Power Platform administrator role to access Dataverse intelligence environment settings. More information: [Enable Dataverse intelligence: Allow data availability in Microsoft 365 Copilot](/power-platform/admin/settings-features#dataverse-intelligence-preview).
+  > Power Platform administrator role to access Dataverse intelligence environment settings. For more information, see [Enable Dataverse intelligence: Allow data availability in Microsoft 365 Copilot](/power-platform/admin/settings-features#dataverse-intelligence-preview).
 - Enable **Search for records in Microsoft 365 apps**
    > Power Platform administrator role to access Search for records in Microsoft 365 apps environment settings. More information: [Enable Search for records in Microsoft 365 apps](/power-platform/admin/settings-features#search).
 - Enable the Power Apps application settings to allow searching for tables related to the application.
-  > Power Platform administrator role to access the Power Apps application settings. More information: [Enable Microsoft 365 Copilot in a model-driven app](/power-apps/maker/model-driven-apps/add-microsoft-365-copilot#enable-microsoft-365-copilot-in-a-model-driven-app).
+  > Power Platform administrator role to access the Power Apps application settings. For more information, see [Enable Microsoft 365 Copilot in a model-driven app](/power-apps/maker/model-driven-apps/add-microsoft-365-copilot#enable-microsoft-365-copilot-in-a-model-driven-app).
 
 #### Enable Microsoft 365 admin center Copilot Dataverse settings
 

@@ -34,11 +34,11 @@ Type: `Promise<M365CopilotAgent | undefined>` — Resolves to an [M365CopilotAge
 
 ## Remarks
 
-Does nothing if Microsoft 365 Copilot isn't enabled.
+Does nothing if Microsoft Copilot isn't enabled.
 
 The returned object's `agentId` and `mode` properties are paired:
 - `agentId` is a non-null string and `mode` is `"agentPage"` or `"mentioned"`: an agent is active.
-- `agentId` is `null` and `mode` is `null`: the user is on mainline Microsoft 365 Copilot (no agent active).
+- `agentId` is `null` and `mode` is `null`: the user is on mainline Microsoft Copilot (no agent active).
 
 ## Example
 

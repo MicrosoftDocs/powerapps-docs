@@ -14,7 +14,7 @@ ms.subservice: mda-maker
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-This article explains how to use AI code generation tools like GitHub Copilot CLI or Claude Code to generate interactive model context protocol (MCP) apps for your model-driven Power Apps MCP tools. MCP apps are self-contained HTML files that render a tool's JSON output visually as cards, charts, dashboards, or maps inside any MCP Apps compatible host, including Microsoft 365 Copilot, Claude, and Visual Studio Code.
+This article explains how to use AI code generation tools like GitHub Copilot CLI or Claude Code to generate interactive model context protocol (MCP) apps for your model-driven Power Apps MCP tools. MCP apps are self-contained HTML files that render a tool's JSON output visually as cards, charts, dashboards, or maps inside any MCP Apps compatible host, including Microsoft Copilot, Claude, and Visual Studio Code.
 
 If you have an MCP tool that returns JSON data, the `generate-mcp-app-ui` skill can produce a polished, theme-aware widget that displays that data in a compact visual format directly inside a chat conversation.
 
@@ -22,7 +22,7 @@ If you have an MCP tool that returns JSON data, the `generate-mcp-app-ui` skill 
 >
 > - This is a preview feature.
 > - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
-> - MCP apps support in Microsoft 365 Copilot Chat is generally available as of March 2026. Power Apps support for MCP apps in declarative agents is currently in public preview. For the full announcement, see [MCP Apps now available in Copilot Chat](https://devblogs.microsoft.com/microsoft365dev/mcp-apps-now-available-in-copilot-chat/).
+> - MCP apps support in Microsoft Copilot Chat is generally available as of March 2026. Power Apps support for MCP apps in declarative agents is currently in public preview. For the full announcement, see [MCP Apps now available in Copilot Chat](https://devblogs.microsoft.com/microsoft365dev/mcp-apps-now-available-in-copilot-chat/).
 
 ## What you can do with the generate-mcp-app-ui skill
 
@@ -107,7 +107,7 @@ If you also provide your tool's name when invoking the skill, the generated widg
 The skill wires up `app.callServerTool` in the widget so that when users select **Refresh**, the widget fetches updated data directly from your tool.
 If you don't provide a tool name, the widget is read-only and renders only the data delivered through the `ontoolresult` callback.
 
-- **Microsoft 365 Copilot chat**: See [MCP apps in Copilot Chat](https://devblogs.microsoft.com/microsoft365dev/mcp-apps-now-available-in-copilot-chat/) for deployment paths including sideloading for testing, deploying through the Microsoft 365 admin center for organizational use, and publishing to the Microsoft 365 agent store.
+- **Microsoft Copilot Chat**: See [MCP apps in Copilot Chat](https://devblogs.microsoft.com/microsoft365dev/mcp-apps-now-available-in-copilot-chat/) for deployment paths including sideloading for testing, deploying through the Microsoft 365 admin center for organizational use, and publishing to the Microsoft 365 agent store.
 - **Power Apps declarative agents**: See [Power Apps MCP declarative agent documentation](/power-apps/maker/model-driven-apps/generative-page-external-tools) for how to connect MCP tools with model-driven apps.
 - **Other MCP hosts**: Consult your host's documentation for the MCP apps widget registration process.
 

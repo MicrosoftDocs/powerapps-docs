@@ -1,5 +1,5 @@
 ---
-title: Dataverse data in Microsoft 365 Copilot
+title: Dataverse data in Microsoft Copilot
 description: Understand how Microsoft Copilot searches and reasons over Microsoft Dataverse table data used by model-driven and canvas apps in Power Apps.
 #customer intent: Learn about how Microsoft Copilot searches and reasons over Microsoft Dataverse table data.
 author: paulliew
@@ -10,15 +10,15 @@ ms.topic: concept-article
 ms.service: power-platform
 ms.subservice: dataverse
 ---
-# Dataverse data in Microsoft 365 Copilot
+# Dataverse data in Microsoft Copilot
 
-Microsoft Dataverse is the data platform for Power Apps. Microsoft 365 Copilot can search and reason over Dataverse table data used by model-driven and canvas apps.
+Microsoft Dataverse is the data platform for Power Apps. Microsoft Copilot can search and reason over Dataverse table data used by model-driven and canvas apps.
 
-When you store your business data in Dataverse tables, Microsoft 365 Copilot can retrieve relevant rows and related records to answer questions or summarize information in natural language.
+When you store your business data in Dataverse tables, Microsoft Copilot can retrieve relevant rows and related records to answer questions or summarize information in natural language.
 
-These are the supported experiences with Microsoft 365 Copilot and Dataverse:
+These are the supported experiences with Microsoft Copilot and Dataverse:
 
-- Microsoft 365 Copilot Chat: Ask questions across Dataverse data, summarize records, and identify trends using natural language.
+- Microsoft Copilot Chat: Ask questions across Dataverse data, summarize records, and identify trends using natural language.
 - Power Apps (sidecar): Get help while working in model-driven or canvas apps. For example, find records, understand related data, and summarize what matters.
 - Outlook: Draft and review customer emails with relevant Dataverse context, such as account details and open items.
    > [!NOTE]
@@ -30,7 +30,7 @@ These are the supported experiences with Microsoft 365 Copilot and Dataverse:
 
 ## How it works
 
-At a high level, here's how Dataverse data in Microsoft 365 Copilot works:
+At a high level, here's how Dataverse data in Microsoft Copilot works:
 
 1. You ask Copilot a question in a supported Microsoft 365 experience.
 1. Copilot searches the Dataverse tables you have access to.
