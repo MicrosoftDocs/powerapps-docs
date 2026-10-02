@@ -3,7 +3,7 @@ title: "How to: Get context data"
 description: "Use the getContext function to get context information about the app and signed-in user. This information enables apps to deliver personalized experiences and make informed decisions at runtime based on metadata."
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 08/31/2026
+ms.date: 10/02/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
@@ -17,23 +17,23 @@ The `getContext` function retrieves contextual information about the app and the
 
 The context data returned by the `getContext` function provides rich details about the app and the user, enabling scenarios that go beyond basic app functionality. Here's why these properties matter:
 
-- **Enhanced Telemetry and Debugging**: Parameters like `sessionId` allow you to correlate app sessions with platform telemetry, making it easier to troubleshoot issues. Access to identifiers such as [IAppContext.appId](#iappcontext) and [IUserContext.userPrincipalName](#iusercontext) helps track usage patterns and diagnose problems quickly.
+- **Enhanced telemetry and debugging**: Parameters like `sessionId` allow you to correlate app sessions with platform telemetry, making it easier to troubleshoot issues. Access to identifiers such as [IAppContext.appId](#iappcontext) and [IUserContext.userPrincipalName](#iusercontext) helps track usage patterns and diagnose problems quickly.
 
-- **Personalized Experiences**: User context properties simplify personalization without requiring more data calls. You can tailor app behavior based on user identity, delivering dynamic experiences for different roles or individuals.
+- **Personalized experiences**: User context properties simplify personalization without requiring more data calls. You can tailor app behavior based on user identity, delivering dynamic experiences for different roles or individuals.
 
-- **Feature Control and Conditional Logic**: Parameters can act as feature gates or flags, enabling you to turn features on or off for specific users or environments. They can also be used to show different UI elements or workflows depending on the context.
+- **Feature control and conditional logic**: Parameters can act as feature gates or flags, enabling you to turn features on or off for specific users or environments. They can also be used to show different UI elements or workflows depending on the context.
 
-- **Consistency with Canvas Apps**: These parameters align with session details available in canvas apps, but now you can use them directly in code, unlocking more flexibility.
+- **Consistency with canvas apps**: These parameters align with session details available in canvas apps, but now you can use them directly in code, unlocking more flexibility.
 
 ## Steps
 
-1. Import the `getContext` function
+1. Import the `getContext` function.
 
    ```typescript
    import { getContext } from '@microsoft/power-apps/app'; 
    ```
 
-1. Retrieve context
+1. Retrieve context.
 
    Call `getContext` as an asynchronous function to get the context object.
 
@@ -48,14 +48,19 @@ The context data returned by the `getContext` function provides rich details abo
    const appUrl = ctx.app.appUrl;
    const fullName = ctx.user.fullName;
    const objectId = ctx.user.objectId;
+   const systemUserId = ctx.user.systemUserId;
    const tenantId = ctx.user.tenantId;
    const userPrincipalName = ctx.user.userPrincipalName;
    const sessionId = ctx.host.sessionId;
    ```
 
-## API Response
+## Get the current user's Dataverse ID
 
-The context returned implements the [`IContext`](#icontext) interface.
+Use `ctx.user.systemUserId` to get the ID of the current user's `systemuser` row in the app's linked Dataverse environment without a separate query. This value differs from `ctx.user.objectId`, which identifies the user in Microsoft Entra ID. Use `systemUserId` when you need to reference the user's Dataverse row.
+
+## API response
+
+The context you get back implements the [`IContext`](#icontext) interface.
 
 ### `IContext`
 
@@ -67,14 +72,14 @@ The following table describes the properties available in the `IContext` interfa
 | `user` | [IUserContext](#iusercontext) | The user's context |
 | `host` | [IHostContext](#ihostcontext) | The host's context |
 
-### IAppContext
+### `IAppContext`
 
 The following table describes the properties available in the `IAppContext` interface:
 
 |Property|Type|Description|
 |---|---|---|
-| `appId`| string | The ID of the app being played |
-| `environmentId`| string | The ID of the environment where the app lives |
+| `appId` | string | The ID of the app being played |
+| `environmentId` | string | The ID of the environment where the app lives |
 | `queryParams` | Record<string, string> | The query parameters added to the URL |
 | `dataverseOrgUrl` | string | The dataverse URL of the environment where the app lives |
 | `appUrl` | string | The URL of the app. |
@@ -86,7 +91,8 @@ The following table describes the properties available in the `IUserContext` int
 |Property|Type|Description|
 |---|---|---|
 | `fullName` | string | The full name of the user playing the app |
-| `objectId` | string | The ID of the user playing the app |
+| `objectId` | string | The Microsoft Entra object ID of the user playing the app. |
+| `systemUserId` | string (optional) | The ID of the current user's `systemuser` row in the linked Dataverse environment. The property can be omitted or empty when unavailable. |
 | `tenantId` | string | The ID of the tenant where the app lives |
 | `userPrincipalName` | string | The user principal name (UPN) of the user playing the app |
 

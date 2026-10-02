@@ -3,7 +3,7 @@ title: "How to: Connect Your Code App to Data"
 description: "Learn how to connect your code app to data with Power Platform connectors, add tabular or nontabular sources, and call generated services."
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 08/19/2026
+ms.date: 10/02/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
@@ -56,11 +56,14 @@ After you create or identify existing connections to use, and copy the connectio
 
 When you add the data sources to the app, the process automatically generates a typed TypeScript model and service file in the repo. For example, the Office 365 Users data source produces `Office365UsersModel` and `Office365UsersService` files.
 
+> [!TIP]
+> In an interactive terminal, run [`pa app add data-source`](../reference/cli.md#pa-app-add-data-source) without parameters to answer prompts. For connector-backed tabular data sources, the CLI lists available connections, datasets, and tables. For native Dataverse, enter the table logical name and Dataverse organization URL. [Learn more about using `pa app add data-source`](../reference/cli.md#pa-app-add-data-source-remarks).
+
 ### Add a non-tabular data source
 
 Add a non-tabular data source, such as Office 365 Users, by using [`pa app add data-source`](../reference/cli.md#pa-app-add-data-source).
 
-From a command line, run the following command. Use the connector identifier and connection ID that you collected from previous steps.
+From a command line, run the following command. Use the connector identifier and connection ID that you collected from previous steps. For `--connector`, you can also use the connector display name, such as `"Office 365 Users"`.
 
 ```powershell
 pa app add data-source --connector <connector-id> --connection-id <connection-id>
@@ -88,19 +91,18 @@ pa app add data-source `
 
 #### SQL example
 
+To add multiple tables from the same connector, connection, and dataset, repeat `--table` in one command:
+
 ```powershell
 pa app add data-source `
 --connector "shared_sql" `
 --connection-id "aaaaaaaa000011112222bbbbbbbbbbbb" `
 --table "[dbo].[MobileDeviceInventory]" `
---dataset "paconnectivitysql0425.database.windows.net,paruntimedb"
-
-pa app add data-source `
---connector "shared_sql" `
---connection-id "aaaaaaaa000011112222bbbbbbbbbbbb" `
 --table "[dbo].[EmployeeInformation]" `
 --dataset "paconnectivitysql0425.database.windows.net,paruntimedb" 
 ```
+
+If an individual table fails, the command still adds the other valid tables. It reports which tables succeeded and failed, and returns a nonzero exit code if any table fails. [Learn more about `pa app add data-source`](../reference/cli.md#pa-app-add-data-source-remarks). You can include only one native Dataverse table or SQL stored procedure per command.
 
 #### SharePoint example
 
@@ -116,7 +118,7 @@ pa app add data-source `
 
 #### Discover available datasets and tables
 
-Use the [`pa connection`](../reference/cli.md) commands to discover available datasets, tables, and stored procedures for your connections.
+Use the [`pa connection`](../reference/cli.md) commands to discover available datasets, tables, and stored procedures for your connections. In an interactive terminal, you can also omit `--connection-id`, `--dataset`, and `--table` when you run [`pa app add data-source`](../reference/cli.md#pa-app-add-data-source). The command lists the available connections and datasets, then opens a searchable table list where you can select one or more tables.
 
 **[List datasets](../reference/cli.md#pa-connection-list-datasets):**
 
@@ -176,6 +178,21 @@ pa app add data-source `
 --dataset "paconnectivitysql0425.database.windows.net,paruntimedb" `
 --procedure "[dbo].[GetRecordById]" 
 ```
+
+### Add actions from a connector that also supports tables
+
+Some connectors, such as SharePoint and SQL Server, support both tables and actions. When you include `--table` or `--procedure`, [`pa app add data-source`](../reference/cli.md#pa-app-add-data-source) adds a table or a stored procedure. To add the connector's actions instead, include `--as action`, and don't include `--dataset`, `--table`, or `--procedure`:
+
+```powershell
+pa app add data-source `
+--connector "shared_sharepointonline" `
+--connection-id "aaaaaaaa000011112222bbbbbbbbbbbb" `
+--as action
+```
+
+You can use tables and actions from the same connector in your app. When you add actions for a connection that you already added as a table, the CLI creates a separate data source in your app for the actions and preserves the existing table binding.
+
+If you don't include `--as`, `--table`, or `--procedure` for one of these connectors, the command asks **Add a table?** in an interactive terminal. In non-interactive mode, such as in a CI/CD pipeline, the command fails until you include `--as table` or `--as action`.
 
 ### Remove a data source
 
@@ -254,6 +271,12 @@ pa app add data-source `
 ```
 
 The app now uses the connection associated with the connection reference in your Power Apps solution.
+
+Use the connection reference logical name, not its display name. The output from `pa connection list-references` includes the logical name. A logical name starts with a letter and contains only letters, digits, and underscores, such as `cr123_sharedsharepointonline_1a2b3`.
+
+For a connector that also supports tables, such as SharePoint, include `--dataset` and `--table` to add a table, or `--as action` to add the connector's actions. In an interactive terminal, you can omit `--dataset` and `--table`, and then select them from the datasets and tables that are available through the connection that the reference points to.
+
+If you run `pa app add data-source` in an interactive terminal without `--connection-id` or `--connection-ref`, the command asks **Are you using a connection reference instead of a connection ID?** before it lists your connections. Select **Yes**, and then enter the connection reference logical name.
 
 ## Update the app to call connections
 
