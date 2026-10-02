@@ -35,7 +35,7 @@ Type: `Promise<void>`
 
 ## Remarks
 
-Does nothing if Microsoft 365 Copilot isn't enabled.
+Does nothing if Microsoft Copilot isn't enabled.
 
 ## Example
 

@@ -23,7 +23,7 @@ ai-usage: ai-assisted
 
 # Improve copilot responses from Microsoft Dataverse
 
-Copilot experiences in Dynamics 365 apps, apps in Power Apps, or Microsoft 365 Copilot allow users to ask natural language questions about data that's stored in Dataverse. Copilots help your users get insights and information from your enterprise data, which improves their productivity and decision-making. However, sometimes they might not get the answers they expect or need from copilots. This article shows you how to improve the accuracy and relevance of copilot answers by using Microsoft Copilot Studio and the record picker.
+Copilot experiences in Dynamics 365 apps, apps in Power Apps, or Microsoft Copilot allow users to ask natural language questions about data that's stored in Dataverse. Copilots help your users get insights and information from your enterprise data, which improves their productivity and decision-making. However, sometimes they might not get the answers they expect or need from copilots. This article shows you how to improve the accuracy and relevance of copilot answers by using Microsoft Copilot Studio and the record picker.
 
 ## Prerequisites for using copilots with Dataverse
 

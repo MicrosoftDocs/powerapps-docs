@@ -1,6 +1,6 @@
 ---
-title: Customize Microsoft 365 Copilot in Power Apps (preview)
-description: Learn how to customize Microsoft 365 Copilot custom engine agents and Copilot Studio agents in Power Apps.
+title: Customize Microsoft Copilot in Power Apps (preview)
+description: Learn how to customize Microsoft Copilot custom engine agents and Copilot Studio agents in Power Apps.
 author: mkaur
 ms.service: powerapps
 ms.subservice: mda-maker
@@ -22,11 +22,11 @@ contributors:
 ms.collection: bap-ai-copilot
 ai-usage: ai-assisted
 ---
-# Customize Microsoft 365 Copilot with an agent (preview)
+# Customize Microsoft Copilot with an agent (preview)
 
 [!INCLUDE [customize-microsoft-365-copilot](~/../shared/customize-microsoft-365-copilot.md)] 
 
 ## Related information
 
-- [Add Microsoft 365 Copilot for app users in canvas apps (preview)](microsoft-365-copilot-canvas-app.md)
-- [Use Microsoft 365 Copilot in canvas apps (preview)](../../user/use-microsoft-365-copilot-canvas-apps.md)
+- [Add Microsoft Copilot for app users in canvas apps (preview)](microsoft-365-copilot-canvas-app.md)
+- [Use Microsoft Copilot in canvas apps (preview)](../../user/use-microsoft-365-copilot-canvas-apps.md)

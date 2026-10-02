@@ -35,7 +35,7 @@ Type: `Promise<void>`
 
 ## Remarks
 
-This method doesn't affect custom handlers registered through [addActionHandler](addactionhandler.md). To restore the default handlers, use [addDefaultActionHandlers](adddefaultactionhandlers.md). If Microsoft 365 Copilot isn't enabled, this method does nothing.
+This method doesn't affect custom handlers registered through [addActionHandler](addactionhandler.md). To restore the default handlers, use [addDefaultActionHandlers](adddefaultactionhandlers.md). If Microsoft Copilot isn't enabled, this method does nothing.
 
 ## Example
 

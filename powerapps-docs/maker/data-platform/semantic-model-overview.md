@@ -67,9 +67,9 @@ The semantic model regenerates automatically every 12 hours to reflect schema ch
 
 The semantic model is automatically provisioned and consumed by the following Copilot and agent experiences when they are set up over Dataverse data:
 
-- *Copilot in Power Apps* — Available in model-driven apps. For setup information, see [Add Microsoft 365 Copilot for app users in model-driven apps](../model-driven-apps/add-microsoft-365-copilot.md).
-- *Microsoft 365 Copilot with Dataverse* — Connects Microsoft 365 Copilot to your Dataverse data. For setup information, see [Dataverse data in Microsoft 365 Copilot](./data-platform-data-copilot.md).
-- *Sales Agent in Microsoft 365* — Uses Dataverse data to power sales scenarios. For setup information, see [Set up Sales agent in Microsoft 365 Copilot](/microsoft-sales-copilot/set-up-sales-chat).
+- *Copilot in Power Apps* — Available in model-driven apps. For setup information, see [Add Microsoft Copilot for app users in model-driven apps](../model-driven-apps/add-microsoft-365-copilot.md).
+- *Microsoft Copilot with Dataverse* — Connects Microsoft Copilot to your Dataverse data. For setup information, see [Dataverse data in Microsoft Copilot](./data-platform-data-copilot.md).
+- *Sales Agent in Microsoft 365* — Uses Dataverse data to power sales scenarios. For setup information, see [Set up Sales agent in Microsoft Copilot](/microsoft-sales-copilot/set-up-sales-chat).
 - *Microsoft Copilot Studio agents over Dataverse data* — Agents built in Copilot Studio that use Dataverse tables as a knowledge source. For setup information, see [Add Dataverse tables as a knowledge source](/microsoft-copilot-studio/knowledge-add-dataverse).
 
 ## Known limitations

@@ -1,1 +1,1 @@
-Restores the platform-default handlers for a Microsoft 365 Copilot action.
+Restores the platform-default handlers for a Microsoft Copilot action.

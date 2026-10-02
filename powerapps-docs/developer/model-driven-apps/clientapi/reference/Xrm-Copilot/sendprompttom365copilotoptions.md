@@ -19,7 +19,7 @@ contributors:
 
 | Name| Type| Description|
 |---|---|---|
-| `gptId`| `string`| ID of a specific M365 Copilot agent to target. If omitted, the prompt is sent to the default Copilot experience.|
+| `gptId`| `string`| ID of a specific Microsoft Copilot agent to target. If omitted, the prompt is sent to the default Copilot experience.|
 | `autoSubmit`| `boolean`| When `false`, the prompt text is placed in the Copilot input box but not submitted, so the user can review or edit it first. Defaults to `true`.|
 
 ### Related articles

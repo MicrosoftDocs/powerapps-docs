@@ -85,7 +85,7 @@ Makers can enable Microsoft 365 Copilot as the default for all model-driven apps
 1. Open the solution named **Default Solution** in the **Solutions** list.
 1. On the left pane, select **Objects**
 1. In the left **Objects** pane, expand **Settings**, and then select **Setting environment values**.
-1. Select **Enable M365 Copilot in model-driven apps**
+1. Select **Enable M365 Copilot in model-driven apps**.
 1. Under **Setting environment values**, select **Add existing value**, if a value doesn't already exist, and then set the value to *2*.
     :::image type="content" source="media/microsoft-365-chat-model-driven-apps/microsoft-365-copilot-setting-environment-value.png" alt-text="Screenshot that shows how to turn Microsoft 365 Copilot on in all model-driven apps in an environment." lightbox="media/microsoft-365-chat-model-driven-apps/microsoft-365-copilot-setting-environment-value.png":::
 1. Select **Save**.
@@ -97,7 +97,7 @@ Makers can enable Microsoft 365 Copilot as the default for all model-driven apps
 
 During the transition period, makers can enable either one or both chat experiences. When both options are available, the **Copilot** dropdown menu shows the following options:
 
-- **Chat** button opens [Microsoft 365 Copilot](../../user/use-microsoft-365-copilot-model-driven-apps.md)
+- **Chat** button opens [Microsoft 365 Copilot](../../user/use-microsoft-365-copilot-model-driven-apps.md).
 - **App Skills** button opens [Copilot chat in model-driven apps](../../user/use-copilot-model-driven-apps.md).
 
     :::image type="content" source="media/microsoft-365-chat-model-driven-apps/both-chat-experiences.png" alt-text="Screenshot show both chat experiences in a model-driven app":::

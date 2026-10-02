@@ -36,7 +36,7 @@ Type: `Promise<void>`
 
 ## Remarks
 
-The method removes only the specific function reference you pass. It doesn't affect other handlers for the same `actionId`. If Microsoft 365 Copilot isn't enabled, the method does nothing.
+The method removes only the specific function reference you pass. It doesn't affect other handlers for the same `actionId`. If Microsoft Copilot isn't enabled, the method does nothing.
 
 ## Example
 

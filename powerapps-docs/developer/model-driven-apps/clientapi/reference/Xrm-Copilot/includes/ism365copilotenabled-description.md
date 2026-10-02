@@ -1,1 +1,1 @@
-Returns whether Microsoft 365 Copilot is enabled in the current environment.
+Returns whether Microsoft Copilot is enabled in the current environment.

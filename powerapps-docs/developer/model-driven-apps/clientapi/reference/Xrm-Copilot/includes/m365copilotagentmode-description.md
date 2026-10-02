@@ -1,1 +1,1 @@
-Describes how a Microsoft 365 Copilot agent is being referenced.
+Describes how a Microsoft Copilot agent is being referenced.

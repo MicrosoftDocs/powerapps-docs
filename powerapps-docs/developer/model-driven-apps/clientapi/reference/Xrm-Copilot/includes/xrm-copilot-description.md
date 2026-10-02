@@ -1,1 +1,1 @@
-Provides methods for interacting with M365 Copilot in model-driven Power Apps, including preview APIs for executing registered Microsoft Copilot Studio topics.
+Provides methods for interacting with Microsoft Copilot in model-driven Power Apps, including preview APIs for executing registered Microsoft Copilot Studio topics.
