@@ -3,11 +3,11 @@ title: "Azure Service Bus Integration for Dataverse"
 description: "Learn how to configure Azure Service Bus integration for Dataverse to send runtime data to Azure and connect external apps."
 ms.collection: get-started
 ms.date: 03/31/2026
-ms.reviewer: "pehecke"
+ms.reviewer: kvivek
 ms.topic: how-to
 author: "jaredha"
 ms.subservice: dataverse-developer
-ms.author: "pehecke" 
+ms.author: kvivek
 search.audienceType: 
   - developer
 contributors:
