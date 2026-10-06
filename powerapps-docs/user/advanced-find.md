@@ -5,7 +5,7 @@ author: shwetamurkute
 
 ms.component: pa-user
 ms.topic: article
-ms.date: 08/25/2026
+ms.date: 10/05/2026
 ms.subservice: end-user
 ms.author: smurkute
 ms.custom: ""
@@ -55,6 +55,9 @@ When your administrator enables the [modern advanced find experience](/power-pla
 For more information on creating and managing system views, see [Create and edit public or system views.](../maker/model-driven-apps/create-or-edit-model-driven-app-view.md)
 
 ## Create, edit, or save a view using legacy advanced find
+
+> [!IMPORTANT]
+> Legacy advanced find is deprecated. Use [modern advanced find](/power-apps/user/advanced-find) instead. Learn more in [Deprecation of legacy advanced find](/power-platform/important-changes-coming#deprecation-of-legacy-advanced-find).
 
 If your administrator has not enabled the modern advanced find experience, you can find the rows you want by using the legacy Advanced Find search option. You can also use Advanced Find to prepare data for export to Office Excel so that you analyze, summarize, or aggregate data, or create PivotTables to view your data from different perspectives. 
 
