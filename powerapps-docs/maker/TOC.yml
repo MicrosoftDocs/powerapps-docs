@@ -555,6 +555,8 @@
               href: ./canvas-apps/controls/modern-controls/modern-control-link.md
             - name: Number input
               href: ./canvas-apps/controls/modern-controls/modern-control-number-input.md
+            - name: Persona (preview)
+              href: ./canvas-apps/controls/modern-controls/modern-control-persona.md
             - name: Progress bar
               href: ./canvas-apps/controls/modern-controls/modern-control-progress-bar.md
             - name: Radio group

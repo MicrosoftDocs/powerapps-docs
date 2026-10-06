@@ -6,7 +6,7 @@ author: yogeshgupta698
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: mkaur-msft
-ms.date: 07/20/2026
+ms.date: 09/24/2026
 ms.subservice: canvas-maker
 ms.author: yogupt
 search.audienceType:
@@ -57,6 +57,8 @@ Before implementing modern controls in your app, review the overview of modern c
 
 **[Number input](modern-control-number-input.md)** - A number input control the user can modify.
 
+**[Persona (preview)](modern-control-persona.md)** – A control that displays one person's avatar, identity details, and optional presence.
+
 **[Progress bar](modern-control-progress-bar.md)** – Displays the progress, can be configured as determinate showcasing exact progress or indeterminate for ongoing progress.
 
 **[Radio group](modern-controls-radio-group.md)** – An input control that shows multiple options, of which users can select only one at a time.
@@ -80,7 +82,6 @@ Before implementing modern controls in your app, review the overview of modern c
 
 ### See also
 [Overview of modern controls in canvas apps](overview-modern-controls.md)
-
 
 
 
