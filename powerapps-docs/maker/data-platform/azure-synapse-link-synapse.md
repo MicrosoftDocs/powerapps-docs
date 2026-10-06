@@ -2,11 +2,12 @@
 title: "Create an Azure Synapse Link for Dataverse with your Azure Synapse Workspace | MicrosoftDocs"
 description: "Learn how to export table data to Azure Synapse Analytics in Power Apps."
 ms.custom: ""
-ms.date: 07/06/2026
+ms.date: 09/29/2026
 ms.reviewer: "Mattp123"
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
+ai-usage: ai-assisted
 applies_to: 
   - "powerapps"
 author: "anibakore-msft"
@@ -44,14 +45,7 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 
 ### Azure Data Lake Storage Gen2 requirements
 
-You must have an Azure Data Lake Storage Gen2 account and the following roles:
-
-- **Owner**
-- **Storage Blob Data Contributor**
-- **Storage Blob Data Owner**
-
-**Owner role requirement:**
-The Owner role is required because adding the managed identity of the Azure Synapse Link service to the storage account is a privileged operation. This managed identity enables the service to perform synchronization from Dataverse to Synapse. Currently, the Owner role is required and custom roles with similar privileges aren't supported for this step.
+You must have an Azure Data Lake Storage Gen2 account and **Owner** or the [custom-role permissions](#custom-role-permissions) to create a link.
 
 **Privileges for managed identity:**
 
@@ -65,7 +59,7 @@ Your storage account must enable **Hierarchical namespace** for both initial set
 
 Your storage account must have [permitted scope for copy operations](/azure/storage/common/security-restrict-copy-operations?tabs=portal#configure-the-permitted-scope-for-copy-operations-preview) set to **From any storage account**.
 
-- Synapse workspace: You must have a Synapse workspace and the **Synapse Administrator** role access within the Synapse Studio. The Synapse workspace must be in the same region as your Azure Data Lake Storage Gen2 account. The storage account must be added as a linked service within the Synapse Studio. To create a Synapse workspace, go to [Creating a Synapse workspace](/azure/synapse-analytics/get-started-create-workspace).
+- Synapse workspace: You must have a Synapse workspace and **Owner** or the [custom-role permissions](#custom-role-permissions), plus the **Synapse Administrator** role access within the Synapse Studio. The Synapse workspace must be in the same region as your Azure Data Lake Storage Gen2 account. The storage account must be added as a linked service within the Synapse Studio. To create a Synapse workspace, go to [Creating a Synapse workspace](/azure/synapse-analytics/get-started-create-workspace).
 
 > [!NOTE]
 >
@@ -75,6 +69,26 @@ Your storage account must have [permitted scope for copy operations](/azure/stor
 > - You must have **Reader** role access to the resource group with the storage account and Synapse workspace.  
 > - When you add multiple users to the synapse workspace, they must have the **Synapse Administrator** role access within the Synapse Studio and the **Storage Blob Data Contributor** role on the Azure Data Lake Storage Gen2 account.
 > - The creation of Synapse Link profiles under a single DV environment is limited to a maximum of 10.
+
+### Custom-role permissions
+
+You can use custom Azure roles instead of **Owner** to create a link with existing, configured Azure resources. Include the following permissions in the roles' `Actions` and assign the roles to the user who creates the link at the listed scopes.
+
+| Required action | Scope | Purpose |
+| --- | --- | --- |
+| `Microsoft.Storage/storageAccounts/read` | Storage account | Read the storage account configuration. |
+| `Microsoft.Storage/storageAccounts/blobServices/containers/read` | Storage account | Read container information. |
+| `Microsoft.Authorization/roleAssignments/read` | Storage account and connected Synapse workspace | Read existing Azure role assignments. |
+| `Microsoft.Authorization/roleAssignments/write` | Storage account and connected Synapse workspace | Assign required Azure roles to the service identities during link creation. |
+
+The link creator also needs **Reader** access to the subscription and resource groups to select the resources during setup. Inherited access is sufficient. For workspace links, **Synapse Administrator** at workspace scope in Synapse Studio is still required; custom Azure roles don't replace this Synapse RBAC role.
+
+For a data-lake-only link, only the storage-account permissions apply.
+
+These custom roles apply to link creation, not resource provisioning or access to exported data. Storage `DataActions` aren't required in the creator's custom role.
+
+> [!IMPORTANT]
+> `Microsoft.Authorization/roleAssignments/write` can grant other roles at its scope. Limit assignments to the required resources. Have an administrator [create and assign the custom roles](/azure/role-based-access-control/custom-roles).
 
 ## Connect Dataverse to Synapse workspace
 
@@ -87,7 +101,7 @@ Your storage account must have [permitted scope for copy operations](/azure/stor
     ![Connect to your workspace.](media/connect-to-workspace.png "Connect to your workspace")
 
     > [!NOTE]
-    > As part of linking the environment to a data lake, you grant the Azure Synapse Link service access to your storage account. Ensure that you followed the [prerequisites](#prerequisites) of creating and configuring the Azure data lake storage account, and granting yourself an owner role on the storage account. Additionally, you grant the Power Platform Dataflows service access to your storage account. More information: [Self-service data prep with dataflows](self-service-data-prep-with-dataflows.md).  
+    > As part of linking the environment to a data lake, you grant the Azure Synapse Link service access to your storage account. Ensure that you followed the [prerequisites](#prerequisites) of creating and configuring the Azure data lake storage account, and granting yourself an owner role or a [custom role with the required permissions](#custom-role-permissions). Additionally, you grant the Power Platform Dataflows service access to your storage account. More information: [Self-service data prep with dataflows](self-service-data-prep-with-dataflows.md).  
 
 1. Choose the tables you want to export either by selecting them one by one or by entering a comma separated list of tables in the search box, and then select **Save**. Only tables with the Track changes property enabled can be exported. More information: [Advanced options](/power-apps/maker/data-platform/create-edit-entities-portal?tabs=excel#advanced-options).
 

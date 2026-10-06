@@ -7,7 +7,7 @@ ms.reviewer: matp
 ms.service: powerapps
 ms.topic: how-to
 ms.subservice: dataverse-maker
-ms.date: 09/07/2026
+ms.date: 09/29/2026
 ms.custom: template-how-to
 ---
 # Export Dataverse data in Delta Lake format
@@ -63,8 +63,8 @@ When setting up an Azure Synapse Link for Dataverse, you can enable the **export
 ## Prerequisites
 
 - Dataverse: You must have the Dataverse **system administrator** security role. Additionally, tables you want to export via Azure Synapse Link must have the **Track changes** property enabled. More information: [Advanced options](create-edit-entities-portal.md#advanced-options)
-- Azure Data Lake Storage Gen2: You must have an Azure Data Lake Storage Gen2 account and **Owner** and **Storage Blob Data Contributor** role access. Your storage account must enable **Hierarchical namespace** and **public network access** for both initial setup and delta sync. **Allow storage account key access** is required only for the initial setup.  
-- Synapse workspace: You must have a Synapse workspace and **Owner** role in access control(IAM) and the **Synapse Administrator** role access within the Synapse Studio. The Synapse workspace must be in the same region as your Azure Data Lake Storage Gen2 account. The storage account must be added as a linked service within the Synapse Studio. To create a Synapse workspace, go to [Creating a Synapse workspace](/azure/synapse-analytics/get-started-create-workspace).
+- Azure Data Lake Storage Gen2: You must have an Azure Data Lake Storage Gen2 account and **Owner** or the [custom-role permissions](azure-synapse-link-synapse.md#custom-role-permissions). Your storage account must enable **Hierarchical namespace** and **public network access** for both initial setup and delta sync. **Allow storage account key access** is required only for the initial setup.  
+- Synapse workspace: You must have a Synapse workspace and **Owner** or the [custom-role permissions](azure-synapse-link-synapse.md#custom-role-permissions), plus the **Synapse Administrator** role access within the Synapse Studio. The Synapse workspace must be in the same region as your Azure Data Lake Storage Gen2 account. The storage account must be added as a linked service within the Synapse Studio. To create a Synapse workspace, go to [Creating a Synapse workspace](/azure/synapse-analytics/get-started-create-workspace).
 - An Apache Spark pool in the connected Azure Synapse workspace with the current Apache Spark version (go to [version requirements](#current-versions-and-requirements)) using this [recommended Spark Pool configuration](#recommended-spark-pool-configuration). For information about how to create a Spark Pool, go to [Create new Apache Spark pool](/azure/synapse-analytics/quickstart-create-apache-spark-pool-portal#create-new-apache-spark-pool).
 - The Microsoft Dynamics 365 minimum version requirement to use this feature is 9.2.22082. More information: [Opt in to early access updates](/power-platform/admin/opt-in-early-access-updates#how-to-enableearly-access-updates)
 
