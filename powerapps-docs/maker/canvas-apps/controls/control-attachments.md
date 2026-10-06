@@ -7,7 +7,7 @@ ms.custom: canvas
 ms.date: 03/10/2026
 ms.subservice: canvas-maker
 ms.author: yogupt
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 search.audienceType:
   - maker
 contributors:
@@ -22,6 +22,9 @@ A control that users can use to download files to their device, and upload and d
 ## Description
 
 By using an **Attachments** control, you can open, add, and delete files from a list or a Dataverse table.
+
+> [!NOTE]
+> This article describes the classic Attachments control. For the modern control, which also supports use outside a form, see [Attachments modern control (preview)](modern-controls/modern-control-attachments.md).
 
 ## Limitations
 

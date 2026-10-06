@@ -5,7 +5,7 @@ author: yogeshgupta698
 
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: mkaur-msft
+ms.reviewer: joshuapa
 ms.date: 09/24/2026
 ms.subservice: canvas-maker
 ms.author: yogupt
@@ -26,6 +26,8 @@ Before implementing modern controls in your app, review the overview of modern c
 
 
 ## Modern controls
+
+**[Attachments (preview)](modern-control-attachments.md)** - Add, download, and remove record attachments inside a form or save them directly with Power Fx.
 
 **[Avatar](modern-control-avatar.md)** – A control that shows a graphic representation of a user, team, or entity.
 
@@ -82,6 +84,3 @@ Before implementing modern controls in your app, review the overview of modern c
 
 ### See also
 [Overview of modern controls in canvas apps](overview-modern-controls.md)
-
-
-

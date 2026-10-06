@@ -529,6 +529,8 @@
               href: ./canvas-apps/controls/modern-controls/modern-control-updates.md
             - name: Upgrade Fluent UI controls
               href: ./canvas-apps/controls/modern-controls/upgrade-fluent-ui-controls-to-modern.md
+            - name: Attachments (preview)
+              href: ./canvas-apps/controls/modern-controls/modern-control-attachments.md
             - name: Badge
               href: ./canvas-apps/controls/modern-controls/modern-controls-badge.md
             - name: Button
