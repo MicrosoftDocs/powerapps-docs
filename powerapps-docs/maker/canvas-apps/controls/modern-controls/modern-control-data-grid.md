@@ -4,10 +4,11 @@ description: Learn about the details, properties, and examples of the Data Grid 
 author: yogeshgupta698
 ms.topic: reference
 ms.custom: canvas
-ms.date: 07/20/2026
+ms.date: 10/01/2026
+ai-usage: ai-assisted
 ms.subservice: canvas-maker
 ms.author: yogupt
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 search.audienceType:
   - maker
 ---
@@ -23,44 +24,20 @@ The **Data Grid** modern control displays records in a column-and-row layout bui
 > [!NOTE]
 > The **Data Grid** control is the recommended control for displaying tabular data in canvas apps, instead of the [Table control](modern-control-table.md). It provides improved performance and usability for data-dense scenarios.
 
+Row virtualization turns on automatically for large datasets. Rows have a consistent height whether or not virtualization is active.
+
 > [!NOTE]
-> If you enable text wrapping at the column level, row virtualization is disabled. To take advantage of virtualization for large datasets, keep text wrapping turned off on your columns.
-
-## Recent improvements
-
-The Data Grid control includes the following improvements for general availability:
-
-- **Automatic virtualization for large datasets**: Row virtualization turns on automatically so you can scroll smoothly through large datasets. Virtualization is disabled only when you enable text wrapping on a column. The app checker flags columns that have text wrapping enabled so you can keep virtualization on.
-- **Consistent row heights**: Rows render at a consistent height whether or not virtualization is active.
-- **Resettable control**: The **Reset** function now resets the control, including the current selection.
-- **Multiple-selection choice columns**: Columns bound to multiple-selection choice fields now display their values.
-- **More reliable search**: Fixed an issue that could cause the control to stop responding when you use the search bar, and improved the search bar's padding and alignment.
-- **Email columns**: Selecting a value in an email column no longer affects your browser session.
-- **Copy and paste**: Copying and pasting the control no longer changes its columns into custom variants.
-- **Column configuration**: You can configure column variants for data sources that aren't directly connected, and column property formulas can use `ThisItem`.
-- **Data source changes**: Switching the data source refreshes the columns, and the search filter clears when you turn off **Searchable**.
-
-## Limitations
-
-The Data Grid control has the following limitations:
-
-- **Attachment columns aren't supported**: The grid doesn't render attachment-type columns from Microsoft Dataverse.
-- **Per-column text styling isn't available**: You can't set the font size or font color for an individual column.
-- **Alternating row colors aren't available**: The grid doesn't support zebra striping.
-- **Variable row height isn't available**: All rows use the same height. You can't set a custom or per-row height.
-- **Search hint text isn't customizable**: You can't change the placeholder text in the search bar.
-- **Search delegation**: Search might not be delegable on all data sources, and a delegation warning might not appear. For large data sources, verify that search returns the results you expect.
-- **DefaultSelectedItems**: Changes to the default selected items aren't reflected after the grid first loads.
+> If you enable text wrapping on a column, row virtualization is disabled. The app checker flags columns with text wrapping enabled. Keep text wrapping turned off to use virtualization for large datasets.
 
 ## General
 
-**Items** – The data source for the grid. Accepts a Dataverse table, collection, or inline table expression.
+**Items** – The data source for the grid. Accepts a Dataverse table, collection, or inline table expression. Switching the data source refreshes the columns.
 
 **Visible** – Whether the control appears or is hidden.
 
 ## Behavior
 
-**Searchable** – Whether a search bar appears above the grid. When **true**, users can type to filter visible rows. The current search string is exposed through the **SearchText** output property. The default value is **false**.
+**Searchable** – Whether a search bar appears above the grid. When **true**, users can type to filter visible rows. The **SearchText** output property exposes the current search string. The default value is **false**. Turning off **Searchable** clears the search filter.
 
 **Sortable** – Whether users can sort by a column by selecting its header. Default is **false**.
 
@@ -70,9 +47,13 @@ The Data Grid control has the following limitations:
 
 **ShowSelector** – Whether a checkbox appears at the start of each row for row selection. Default is **false**.
 
+**ShowAIRowSummary** - Whether eligible Dataverse rows offer an AI-generated summary. Default is **false**. Setting this property to **true** doesn't configure a summary for the table or override administrator settings. See [AI row summaries](#ai-row-summaries).
+
 **Required** – Whether the user must select at least one row.
 
 **DisplayMode** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
+
+To reset the control, including its current selection, use the [Reset function](/power-platform/power-fx/reference/function-reset). For example, set a button's **OnSelect** property to `Reset(DataGrid1)`, where `DataGrid1` is the name of your grid.
 
 ## Size and position
 
@@ -102,9 +83,11 @@ The Data Grid control has the following limitations:
 
 **SearchText** – The current value the user types in the search bar. This property is only available when **Searchable** is **true**.
 
-## Configuring columns
+## Configure columns
 
 The Data Grid uses **Data Grid Column** sub-controls to define how each column appears and what data it shows. You add columns when you connect a data source and configure fields in the authoring panel. Column properties are locked by default. Select a column and choose **Unlock** to customize it.
+
+You can also configure column variants for data sources that aren't directly connected, such as collections. Column formulas can use `ThisItem` to access the current row. Columns bound to multiple-selection choice fields display the selected values. Copying and pasting the grid preserves its column variants.
 
 ### Column properties
 
@@ -163,8 +146,70 @@ The following YAML example shows a searchable grid with two text columns:
             Text: =ThisItem.Name
 ```
 
+## AI row summaries
+
+AI row summaries help users understand a Dataverse record without opening a separate form. For example, a user reviewing accounts can read a short summary of the account information selected by the maker's prompt.
+
+### Prerequisites
+
+The grid needs both a configured Dataverse summary and permission to show it:
+
+- Connect **Items** to a Dataverse table that has a row summary configured. The grid's support for collections and inline tables doesn't extend to AI row summaries.
+- Ask your Power Platform administrator to allow **Summary in canvas data grid** for the environment. See [Administrator settings](#administrator-settings).
+- [Create and test a row summary](../../../data-platform/configure-form-row-summary.md#create-a-row-summary) for the table. The canvas grid uses the same table-level summary configuration described in the model-driven app article; you don't author a separate prompt on each grid. For column selection, formatting, and language instructions, see [Write a good prompt for the row summary](../../../data-platform/configure-form-row-summary.md#write-a-good-prompt-for-the-row-summary).
+
+### Administrator settings
+
+The **Summary in canvas data grid** feature control governs access to summaries in canvas grids. It is separate from **ShowAIRowSummary**, which a maker sets on each grid.
+
+To review the feature's configuration, sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/) and select **Copilot** > **Settings**. Under **Power Apps**, locate **Summary in canvas data grid**, select the environment, and select **Edit setting**. Allow the feature for that environment and save your changes. For details about this settings experience, see [Copilot settings](/power-platform/admin/copilot/copilot-hub#settings).
+
+The canvas grid also checks the shared **AI insight cards** (`EnableFormInsights`) setting and whether AI prompts are enabled. Allowing the canvas-specific feature doesn't override these settings or license and capacity eligibility checks. The shared row-summary controls are moving from the environment's **Settings** > **Product** > **Features** page to the Copilot settings experience. See [AI insight cards](/power-platform/admin/settings-features#ai-insight-cards) for that transition.
+
+### Enable and use summaries
+
+Follow these steps after the table's summary is configured:
+
+1. Open your canvas app in Power Apps Studio and select the **Data Grid** control.
+2. Set **Items** to the configured Dataverse table. For example, use `Accounts` if you configured a summary for that table. Don't use the inline sample table in this article to test AI summaries.
+3. Set **ShowAIRowSummary** to `true`.
+4. Preview the app. Point to a row and select the summary icon in its first cell to open the AI-generated summary.
+5. Compare the summary with the record's data. Test more than one record, including records with missing values, before sharing the app.
+
+To hide summaries on a particular grid, set **ShowAIRowSummary** to `false`. This action doesn't delete the table's summary configuration.
+
+> [!NOTE]
+> AI-generated summaries can be incomplete or incorrect. Review important details in the source record before acting on them.
+
+### Troubleshoot missing summaries
+
+If the summary icon doesn't appear, check the following:
+
+| Check | Action |
+| --- | --- |
+| Control setting. | Confirm that [ShowAIRowSummary](#behavior) is `true` on this grid. |
+| Data source. | Bind [Items](#general) directly to the configured Dataverse table to isolate data-source issues. A collection or inline table isn't a substitute. |
+| Table configuration. | Confirm that the table contains records and has a [tested, applied row summary](../../../data-platform/configure-form-row-summary.md#create-a-row-summary). Review the table exclusions in that article. |
+| Administrator settings. | Ask your administrator to check [Summary in canvas data grid and the shared settings](#administrator-settings) for the environment. The control property doesn't bypass administrator policies or eligibility checks. |
+
+If a summary fails to load, don't interpret the failure as a statement about the record. Review the underlying record and retry when the service is available.
+
+## Limitations
+
+The Data Grid control has the following limitations:
+
+- **Attachment columns aren't supported**: The grid doesn't render attachment-type columns from Microsoft Dataverse.
+- **Per-column text styling isn't available**: You can't set the font size or font color for an individual column.
+- **Alternating row colors aren't available**: The grid doesn't support zebra striping.
+- **Variable row height isn't available**: All rows use the same height. You can't set a custom or per-row height.
+- **Search hint text isn't customizable**: You can't change the placeholder text in the search bar.
+- **Search delegation**: Search might not be delegable on all data sources, and a delegation warning might not appear. For large data sources, verify that search returns the results you expect.
+- **DefaultSelectedItems**: Changes to the default selected items aren't reflected after the grid first loads.
+- **AI row summaries**: Summaries require a configured Dataverse table and are subject to the table summary's [known limitations](../../../data-platform/configure-form-row-summary.md#known-limitations).
+
 ## See also
 
 - [Modern controls overview](overview-modern-controls.md)
 - [Table modern control](modern-control-table.md)
 - [Size and location properties](../properties-size-location.md)
+- [Configure a row summary](../../../data-platform/configure-form-row-summary.md)
