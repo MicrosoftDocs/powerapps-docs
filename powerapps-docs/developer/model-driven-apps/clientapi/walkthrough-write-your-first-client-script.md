@@ -29,6 +29,9 @@ After completing this walkthrough, you know how to use JavaScript code in model-
 - Configure form and field events
 - Test your code
 
+> [!NOTE]
+> To review and verify the completed walkthrough, download the [JavaScriptWebResourceExampleSolution_1_0_managed.zip](https://go.microsoft.com/fwlink/?LinkId=2378308&clcid=0x9). Install this managed solution and review the Account Management app it contains.
+
 ## Step 1: Locate or create a solution
 
 Use solutions to transport customizations from one environment to another. Write and test your JavaScript code in a development environment as part of an unmanaged solution. When you finish testing, export the solution as a managed solution and import or install it in your production environment.
@@ -84,49 +87,50 @@ Model-driven apps don't provide a JavaScript editor. Use an external authoring t
 This walkthrough uses the following JavaScript code:
 
 ```javascript
-// A namespace defined for the sample code
-// As a best practice, you should always define 
-// a unique namespace for your libraries
-var Example = window.Example || {};
-(function () {
-    // Define some global variables
-    var myUniqueId = "_myUniqueId"; // Define an ID for the notification
-    var currentUserName = Xrm.Utility.getGlobalContext().userSettings.userName; // get current user name
-    var message = currentUserName + ": Your JavaScript code in action!";
+// Define a unique namespace for the sample library.
+window.Example ??= {};
+
+(() => {
+    const notificationId = "_myUniqueId";
+    const currentUserName = Xrm.Utility.getGlobalContext().userSettings.userName;
+    const message = `${currentUserName}: Your JavaScript code in action!`;
 
     // Code to run in the form OnLoad event
-    this.formOnLoad = function (executionContext) {
-        var formContext = executionContext.getFormContext();
+    window.Example.formOnLoad = (executionContext) => {
+        const formContext = executionContext.getFormContext();
 
         // Display the form level notification as an INFO
-        formContext.ui.setFormNotification(message, "INFO", myUniqueId);
+        formContext.ui.setFormNotification(message, "INFO", notificationId);
 
         // Wait for 5 seconds before clearing the notification
-        window.setTimeout(function () { formContext.ui.clearFormNotification(myUniqueId); }, 5000);
-    }
+        window.setTimeout(
+            () => formContext.ui.clearFormNotification(notificationId),
+            5000
+        );
+    };
 
-    // Code to run in the column OnChange event 
-    this.attributeOnChange = function (executionContext) {
-        var formContext = executionContext.getFormContext();
+    // Code to run in the column OnChange event
+    window.Example.attributeOnChange = (executionContext) => {
+        const formContext = executionContext.getFormContext();
 
         // Automatically set some column values if the account name contains "Contoso"
-        var accountName = formContext.getAttribute("name").getValue();
-        if (accountName.toLowerCase().search("contoso") != -1) {
+        const accountName = formContext.getAttribute("name").getValue();
+        if (accountName?.toLowerCase().includes("contoso")) {
             formContext.getAttribute("websiteurl").setValue("https://www.contoso.com");
             formContext.getAttribute("telephone1").setValue("425-555-0100");
             formContext.getAttribute("description").setValue("Website URL, Phone and Description set using custom script.");
         }
-    }
+    };
 
-    // Code to run in the form OnSave event 
-    this.formOnSave = function () {
+    // Code to run in the form OnSave event
+    window.Example.formOnSave = () => {
         // Display an alert dialog
         Xrm.Navigation.openAlertDialog({ text: "Record saved." });
-    }
-}).call(Example);
+    };
+})();
 ```
 
-Copy this code into a text file and save it as `Example-form-script.js`.
+Copy this code into a text file and save it as `form-script.js`.
 
 
 ### Detailed code explanation
@@ -136,18 +140,17 @@ Let's look at the code in detail:
 - **Define namespace**: The code starts by defining a namespace for your custom script. As a best practice, always create namespaced JavaScript libraries to avoid having your functions overridden by functions in another library.
 
     ```JavaScript
-    var Example = window.Example || {};
+   window.Example ??= {};
     ``` 
 
    In this case, you can use all the functions defined in this library as `Example.[functionName]`. Choose a namespace that matches your solution publisher name.
 
-- **Define global variables**: The following section defines some global variables to use in the script. You can access context information globally by using the [Xrm.Utility.getGlobalContext](reference/xrm-utility/getGlobalContext.md) method.
+- **Define constants**: The following section defines some constants to use in the script. You can access context information globally by using the [Xrm.Utility.getGlobalContext](reference/xrm-utility/getGlobalContext.md) method.
 
     ```JavaScript
-    // Define some global variables
-    var myUniqueId = "_myUniqueId"; // Define an ID for the notification
-    var currentUserName = Xrm.Utility.getGlobalContext().userSettings.userName; // get current user name
-    var message = currentUserName + ": Your JavaScript code in action!";
+    const notificationId = "_myUniqueId";
+    const currentUserName = Xrm.Utility.getGlobalContext().userSettings.userName;
+    const message = `${currentUserName}: Your JavaScript code in action!`;
     ```
 
 - **Function to execute on the OnLoad event**: This section contains the function that executes when the account form loads. For example, when you create a new account record or when you open an existing account record.
@@ -160,15 +163,18 @@ Let's look at the code in detail:
 
     ```JavaScript
     // Code to run in the form OnLoad event
-    this.formOnLoad = function (executionContext) {
-        var formContext = executionContext.getFormContext();
+    window.Example.formOnLoad = (executionContext) => {
+        const formContext = executionContext.getFormContext();
 
         // Display the form level notification as an INFO
-        formContext.ui.setFormNotification(message, "INFO", myUniqueId);
-        
+        formContext.ui.setFormNotification(message, "INFO", notificationId);
+
         // Wait for 5 seconds before clearing the notification
-        window.setTimeout(function () { formContext.ui.clearFormNotification(myUniqueId); }, 5000);        
-    }
+        window.setTimeout(
+            () => formContext.ui.clearFormNotification(notificationId),
+            5000
+        );
+    };
     ```
 
 - **Function to execute on the OnChange event**: Associate the `Example.attributeOnChange` function with the **Account Name** column in the account form so that it gets executed **only** when you change the account name value.
@@ -176,18 +182,18 @@ Let's look at the code in detail:
     This function performs a case-insensitive search for `Contoso` in the account `name`, and if present, sets values for the `websiteurl`, `telephone1`, and `description` columns in the account form.
 
     ```JavaScript
-    // Code to run in the column OnChange event 
-    this.attributeOnChange = function (executionContext) {
-        var formContext = executionContext.getFormContext();
+    // Code to run in the column OnChange event
+    window.Example.attributeOnChange = (executionContext) => {
+        const formContext = executionContext.getFormContext();
 
         // Automatically set some column values if the account name contains "Contoso"
-        var accountName = formContext.getAttribute("name").getValue();
-        if (accountName.toLowerCase().search("contoso") != -1) {
+        const accountName = formContext.getAttribute("name").getValue();
+        if (accountName?.toLowerCase().includes("contoso")) {
             formContext.getAttribute("websiteurl").setValue("https://www.contoso.com");
             formContext.getAttribute("telephone1").setValue("425-555-0100");
             formContext.getAttribute("description").setValue("Website URL, Phone and Description set using custom script.");
         }
-    }
+    };
     ```
 
 - **Function to execute on the OnSave event**: The `Example.formOnSave` function displays an alert dialog box by using the [Xrm.Navigation.openAlertDialog](reference/xrm-navigation/openalertdialog.md) method. This dialog box displays a message with an **OK** button. The user can close the alert by selecting **OK**.
@@ -196,11 +202,11 @@ Let's look at the code in detail:
     > This function doesn't use the execution context because the **Xrm.Navigation.** methods don't require it.
 
     ```JavaScript
-    // Code to run in the form OnSave event 
-    this.formOnSave = function () {
+    // Code to run in the form OnSave event
+    window.Example.formOnSave = () => {
         // Display an alert dialog
         Xrm.Navigation.openAlertDialog({ text: "Record saved." });
-    }
+    };
     ```
 
 ## Step 3: Upload your code as a web resource
@@ -211,14 +217,14 @@ Now that your code is ready, upload it into your solution.
 
    :::image type="content" source="media/add-new-web-resource-to-solution.png" alt-text="Add a new web resource to your solution":::
 
-1. In the **New web resource** dialog, select **Choose file** and select the `Example-form-script.js` file you saved earlier.
+1. In the **New web resource** dialog, select **Choose file** and select the `form-script.js` file you saved earlier.
 1. Enter the **Display name**, **Name**, and optionally a **Description**. Make sure the **Type** is **JavaScript (JS)**.
 
    :::image type="content" source="media/create-example-form-script-web-resource.png" alt-text="New web resource dialog to create example form script":::
 
    > [!NOTE]
    > - The **Name** has a prefix that matches the solution publisher customization prefix. There are other ways to create web resources, but creating a web resource this way ensures that the web resource is part of your solution.
-   > - The name of the web resource is `example_example-form-script`.
+   > - The name of the web resource is `example_form-script.js`.
 
 ## Step 4: Associate your web resource to a form
 
@@ -337,6 +343,13 @@ To test your code:
 
 1. Select **OK** to close the alert.
 
+
+## Next steps
+
+Learn how to debug your client-side scripts by using browser developer tools.
+
+> [!div class="nextstepaction"]
+> [Debug JavaScript web resources using Local Overrides](../debug-javascript-webresources.md)
 
 ### Related articles
 
