@@ -36,7 +36,6 @@ Both these services operate across PowerApps, Dynamics 365 customer engagement a
 |-------------------------------|------------------------------------|
 | No copy, no extract, transform, load (ETL) direct integration with Fabric. | Export data to your own storage account and integrate with Azure Synapse, Fabric, and other tools. |
 | Data stays in Dataverse. Users get secure access in Microsoft Fabric. | Data stays in your own storage. You manage access to users.|
-| All tables chosen by default.| System administrators can choose required tables. |
 | Consumes additional Dataverse storage.| Consumes your own storage and other compute and integration tools.|
 
 ## What option should I consider if I want to use Microsoft Fabric?
