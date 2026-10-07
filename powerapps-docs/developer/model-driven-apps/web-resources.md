@@ -221,7 +221,7 @@ See the [Developer tools](developer-tools.md) article for community developed to
  [Web resource table reference](../data-platform/reference/entities/webresource.md)   
  [Sample: Passing multiple values to a web resource through the data parameter](sample-pass-multiple-values-web-resource-through-data-parameter.md)   
  [Sample: Importing files as web resources](sample-import-files-web-resources.md)   
- [Streamline web resource development using Fiddler Auto-Responder](streamline-javascript-development-fiddler-autoresponder.md)
+ [Develop and debug JavaScript web resources by using browser DevTools and Power Platform CLI](debug-javascript-webresources.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -67,8 +67,8 @@ landingContent:
         links:
           - text: Web resources
             url: web-resources.md 
-          - text: Script web resource development using Fiddler AutoResponder
-            url: ./streamline-javascript-development-fiddler-autoresponder.md
+          - text: Debug JavaScript web resources
+            url: ./debug-javascript-webresources.md
           - text: Web resource dependencies
             url: web-resource-dependencies.md
       - linkListType: sample

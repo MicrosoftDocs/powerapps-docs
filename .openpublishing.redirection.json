@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/developer/model-driven-apps/streamline-javascript-development-fiddler-autoresponder.md",
+      "redirect_url": "debug-javascript-webresources",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "powerapps-docs/developer/data-platform/org-service/samples/convert-fax-task.md",
       "redirect_url": "../../activity-entities",
       "redirect_document_id": "false"

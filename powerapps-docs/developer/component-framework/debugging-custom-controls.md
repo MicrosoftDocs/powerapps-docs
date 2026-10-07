@@ -220,7 +220,7 @@ To debug your code component using Fiddler:
 
    :::image type="content" source="media/debugging-custom-controls/fiddler-autoresponder-code-component-rule.png" alt-text="Screenshot of a Fiddler AutoResponder rule for local code component resources.":::
 
-   If you want a simpler **AutoResponder** rule approach, see [Script web resource development using Fiddler Auto Responder](../model-driven-apps/streamline-javascript-development-fiddler-autoresponder.md).
+   For a browser-based local development workflow that doesn't require a proxy, see [Develop and debug JavaScript web resources by using browser DevTools and Power Platform CLI](../model-driven-apps/debug-javascript-webresources.md).
 
 1. Enter a string like this for the path to respond with:
 

@@ -59,7 +59,7 @@ All web resources can use relative URLs to reference each other. In the followin
 [Using Data (XML) web resources](data-xml-web-resources.md)<br />
 [Using Image (JPG, PNG, GIF) web resources](image-web-resources.md)<br />
 [Using Stylesheet (XSL) web resources](stylesheet-xsl-web-resources.md)<br />
-[Streamline web resource development using Fiddler AutoResponder](streamline-javascript-development-fiddler-autoresponder.md)<br />
+[Develop and debug JavaScript web resources by using browser DevTools and Power Platform CLI](debug-javascript-webresources.md)<br />
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
