@@ -4,7 +4,7 @@ description: Learn how to customize Dataverse tables and columns definitions usi
 author: kewear
 ms.author: kewear
 ms.reviewer: pehecke
-ms.date: 08/28/2026
+ms.date: 10/06/2026
 ms.topic: concept-article
 ---
 
@@ -96,6 +96,62 @@ table_info = client.tables.create("new_Task", {
     "new_Priority": Priority,   # optionset column
 })
 ```
+
+## Set column constraints
+
+To set constraints such as length, numeric range, precision, format, required level, or display name, pass a dictionary instead of a bare type string. The `type` key holds the column type, and the remaining keys set the constraints.
+
+| Key | Applies to | Description |
+| --- | --- | --- |
+| `max_length` | `string`, `memo` | Maximum number of characters. |
+| `min_value`, `max_value` | `int`, `decimal`, `money`, `float` | Allowed numeric range. |
+| `precision` | `decimal`, `money`, `float` | Number of decimal places. |
+| `format` | `string`, `int`, `datetime` | Format name for text columns (for example, `Email`, `Url`, or `Phone`), or the format for integer and date/time columns. |
+| `required` | all | Required level: `None`, `Recommended`, or `ApplicationRequired`. |
+| `display_name` | all | Display label shown in the maker portal and apps. |
+
+```python
+# Pass a dict spec to set constraints; a bare type string still works for simple columns.
+client.tables.create("new_Feedback", {
+    "new_Rating":  {"type": "int",  "min_value": 1, "max_value": 5},
+    "new_Comment": {"type": "memo", "max_length": 2000, "display_name": "Comment"},
+})
+```
+
+You can use dict specs anywhere a column type is accepted, including `add_columns()` and batch column creation.
+
+## Update column definitions
+
+Use `update_column` to change one column's constraints, or `update_columns` to change several in a single call. Both accept the same override keys as `create`. The SDK validates every specification before it sends any request, so an invalid entry fails the whole call without leaving earlier columns changed.
+
+```python
+# Widen one column
+client.tables.update_column("new_Feedback", "new_Comment", {"max_length": 4000})
+
+# Update several columns at once
+client.tables.update_columns("new_Feedback", {
+    "new_Rating":  {"max_value": 10},
+    "new_Comment": {"display_name": "Customer Comment"},
+})
+```
+
+An update retrieves the complete column definition, applies your changes, and sends the full definition back to Dataverse with the `MSCRM.MergeLabels` header. Labels in other languages are preserved, so changing one property (for example, `max_length`) leaves the rest of the column unchanged.
+
+## Read typed column metadata
+
+By default, `list_columns` and `get_column` return the base attribute metadata. Pass `typed=True` to retrieve the type-specific definition in a single request, which includes properties such as `MaxLength` for text columns or `MinValue` and `MaxValue` for numeric columns.
+
+```python
+# One column, with its type-specific fields
+col = client.tables.get_column("new_Feedback", "new_Comment", typed=True)
+print(col["MaxLength"])   # 4000
+
+# All columns, each with type-specific fields
+cols = client.tables.list_columns("new_Feedback", typed=True)
+```
+
+> [!NOTE]
+> The `filter` parameter applies only to the default (`typed=False`) listing. Combining `filter` with `typed=True` raises a `ValueError`.
 
 ## TableInfo return object
 
