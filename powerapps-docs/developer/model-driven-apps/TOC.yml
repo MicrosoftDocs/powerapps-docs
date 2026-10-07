@@ -964,8 +964,8 @@
   - name: JavaScript web resources
     href: script-jscript-web-resources.md
     items:
-    - name: Script web resource development using Fiddler AutoResponder
-      href: streamline-javascript-development-fiddler-autoresponder.md
+    - name: Debug JavaScript web resources
+      href: debug-javascript-webresources.md
   - name: CSS web resources
     href: css-web-resources.md
   - name: Image web resources
