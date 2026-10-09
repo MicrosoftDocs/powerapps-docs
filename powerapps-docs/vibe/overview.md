@@ -16,7 +16,7 @@ ms.custom:
 
 > [!IMPORTANT]
 >
-> App building is now available in [Copilot Cowork](/microsoft-365/copilot/cowork/use-cowork#build-apps-with-the-app-skill-frontier) and will soon roll out to Microsoft Copilot Studio. We recommend using these experiences moving forward. For more information, see the [blog post](https://aka.ms/AppsInCopilotStudioBlog).
+> App building is now available in [Copilot Cowork](/microsoft-365/copilot/cowork/use-cowork#build-apps-with-the-app-skill-frontier) and [Apps in Copilot Studio](/microsoft-copilot-studio/apps-experience/apps-overview). We recommend using these experiences moving forward. For more information, see the [blog post](https://aka.ms/AppsInCopilotStudioBlog).
 
 [This article is prerelease documentation and is subject to change.]
 
