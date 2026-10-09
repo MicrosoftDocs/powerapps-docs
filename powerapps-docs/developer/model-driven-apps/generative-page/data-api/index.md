@@ -1,7 +1,7 @@
 ---
 title: "dataApi reference for generative pages"
 description: "The article provides dataApi reference for generative pages."
-ms.date: 01/28/2026
+ms.date: 10/09/2026
 author: jasongre
 ms.author: jasongre
 ms.reviewer: jdaly
@@ -21,11 +21,12 @@ You can [view and edit the generated code to refine the output](../../../../make
 |Method|Description|
 |---|---|
 |[`createRow`](#createrow-method)|Creates a new row in the specified table.|
-|[`updateRow`](#updaterow-method)|Updates an existing row in the specified table.|
 |[`deleteRow`](#deleterow-method)|Deletes a row from the specified table.|
-|[`retrieveRow`](#retrieverow-method)|Retrieves a row from the specified table with the specified options.|
-|[`queryTable`](#querytable-method)|Queries a table with the specified options.|
 |[`getChoices`](#getchoices-method)|Retrieves the choices for the specified choice column name.|
+|[`queryTable`](#querytable-method)|Queries a table with the specified options.|
+|[`retrieveRow`](#retrieverow-method)|Retrieves a row from the specified table with the specified options.|
+|[`setPageOutput`](#setpageoutput-method)|Sets the value returned to the calling script when a generative page dialog closes.|
+|[`updateRow`](#updaterow-method)|Updates an existing row in the specified table.|
 
 
 ## `createRow` method
@@ -78,50 +79,6 @@ catch (error) {
 ```
 
 
-## `updateRow` method
-
-Updates an existing row in the specified table.
-
-### Parameters
-
-Set values for these required parameters.
-
-|Name|Type|Description|
-|---|---|---|
-|`tableName`|string|The logical name of the table to update the row in.|
-|`rowId`|string|The ID of the row to update.|
-|`row`|Object|The row data to update.|
-
-### Returns
-
-A [promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) containing the result of the operation. When the operation succeeds, it returns no value.
-
-### Example
-
-```typescript
-let rowId = "5531d753-95af-e711-a94e-000d3a11e605"
-
-// Define the row to update a record
-var row =
-    {
-        "name": "Updated Sample Account ",
-        "creditonhold": true,
-        "address1_latitude": 47.639583,
-        "description": "This is the updated description of the sample account",
-        "revenue": 6000000,
-        "accountcategorycode": 2
-    }
-
-// update the record
-
-try {
-   await dataApi.updateRow("account", rowId, row);
-}
-catch (error){
-  console.log(error.message);
-}
-```
-
 ## `deleteRow` method
 
 Deletes a row from the specified table.
@@ -151,45 +108,37 @@ catch (error) {
 }
 ```
 
-## `retrieveRow` method
+## `getChoices` method
 
-Retrieves a row from the specified table by using the specified options.
+Retrieves the choices for the specified choice column name.
 
 ### Parameters
 
-Set values for these required parameters.
+This parameter is required.
 
 | Name | Type | Description |
 |------|------|-------------|
-| `tableName` | `string` | The logical name of the table to retrieve from |
-| `options` | [RetrieveRowOptions](#retrieverowoptions) | Options for retrieving the row |
-
-#### RetrieveRowOptions
-
-| Name | Type | Description |
-|------|------|-------------|
-| `id` | `string` | The ID (Guid) of the row to retrieve |
-| `select` | `string[]` | (Recommended) Array of column names to retrieve. If omitted, all columns are returned.  |
+| `enumName` | `string` | The name of the choice column in the format `tablename-columnname` |
 
 ### Returns
 
-A [promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) containing the result of the operation. When the operation succeeds, an object containing the data of the record is returned, including all selected columns.
+A [promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) containing the result of the operation. When the operation succeeds, it returns an array of the choice options. Each option has these properties:
+
+|Name|Type|Description|
+|---|---|---|
+|`label`|string|The localized label value of the option.|
+|`value`|number|The numeric value of the option.|
 
 ### Example
 
 ```typescript
-// Retrieve an account with all columns
-const account = await dataApi.retrieveRow('account', {
-  id: '30dc51e9-947d-47d8-ad48-4fc48fba4a95',
-});
-
-// Retrieve specific columns only
-const contact = await dataApi.retrieveRow('contact', {
-  id: 'a1b2c3d4-e5f6-7890-abcd-ef1234567890',
-  select: ['firstname', 'lastname', '_parentcustomerid_value'],
-});
+// Returns the accountcategorycode column options from the account table
+const categoryChoices = await dataApi.getChoices("account-accountcategorycode");
+// Returns the statecode column options from the contact table
+const stateChoices = await dataApi.getChoices('contact-statecode');
+// Returns the statuscode column options from the account table
+const statusChoices = await dataApi.getChoices('account-statuscode');
 ```
-
 ## `queryTable` method
 
 Queries a table by using the specified options.
@@ -252,34 +201,115 @@ if (pagedAccounts.hasMoreRows && pagedAccounts.loadMoreRows) {
 > [!NOTE]
 > For best performance, always limit the number of columns returned by using the [QueryTableOptions](#querytableoptions) `select` property.
 
-## `getChoices` method
+## `retrieveRow` method
 
-Retrieves the choices for the specified choice column name.
+Retrieves a row from the specified table by using the specified options.
 
 ### Parameters
 
-This parameter is required.
+Set values for these required parameters.
 
 | Name | Type | Description |
 |------|------|-------------|
-| `enumName` | `string` | The name of the choice column in the format `tablename-columnname` |
+| `tableName` | `string` | The logical name of the table to retrieve from |
+| `options` | [RetrieveRowOptions](#retrieverowoptions) | Options for retrieving the row |
+
+#### RetrieveRowOptions
+
+| Name | Type | Description |
+|------|------|-------------|
+| `id` | `string` | The ID (Guid) of the row to retrieve |
+| `select` | `string[]` | (Recommended) Array of column names to retrieve. If omitted, all columns are returned.  |
 
 ### Returns
 
-A [promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) containing the result of the operation. When the operation succeeds, it returns an array of the choice options. Each option has these properties:
-
-|Name|Type|Description|
-|---|---|---|
-|`label`|string|The localized label value of the option.|
-|`value`|number|The numeric value of the option.|
+A [promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) containing the result of the operation. When the operation succeeds, an object containing the data of the record is returned, including all selected columns.
 
 ### Example
 
 ```typescript
-// Returns the accountcategorycode column options from the account table
-const categoryChoices = await dataApi.getChoices("account-accountcategorycode");
-// Returns the statecode column options from the contact table
-const stateChoices = await dataApi.getChoices('contact-statecode');
-// Returns the statuscode column options from the account table
-const statusChoices = await dataApi.getChoices('account-statuscode');
+// Retrieve an account with all columns
+const account = await dataApi.retrieveRow('account', {
+  id: '30dc51e9-947d-47d8-ad48-4fc48fba4a95',
+});
+
+// Retrieve specific columns only
+const contact = await dataApi.retrieveRow('contact', {
+  id: 'a1b2c3d4-e5f6-7890-abcd-ef1234567890',
+  select: ['firstname', 'lastname', '_parentcustomerid_value'],
+});
+```
+
+## `setPageOutput` method
+
+Sets the value returned to the calling script when a generative page opened as a dialog closes.
+
+### Parameters
+
+|Name|Type|Description|
+|---|---|---|
+|`value`|unknown|The value to return to the script that opened the dialog. The value can be a primitive, object, or array.|
+
+### Returns
+
+No value.
+
+### Example
+
+```typescript
+dataApi.setPageOutput({
+    action: "selected",
+    recordId: selectedRecordId
+});
+
+const xrm = (window as any).Xrm;
+await xrm.Navigation.navigateBack();
+```
+
+Calling `setPageOutput` doesn't close the dialog or update the calling page. Close the dialog with `Xrm.Navigation.navigateBack()`. The promise returned by `Xrm.Navigation.navigateTo` then resolves with an object whose `returnValue` property contains the most recently stored value. The calling script must explicitly apply the returned value to its form, grid, or other state.
+
+This method applies to generative pages opened as dialogs. Generative pages opened inline or in an app side pane don't return a value to the calling script.
+
+## `updateRow` method
+
+Updates an existing row in the specified table.
+
+### Parameters
+
+Set values for these required parameters.
+
+|Name|Type|Description|
+|---|---|---|
+|`tableName`|string|The logical name of the table to update the row in.|
+|`rowId`|string|The ID of the row to update.|
+|`row`|Object|The row data to update.|
+
+### Returns
+
+A [promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) containing the result of the operation. When the operation succeeds, it returns no value.
+
+### Example
+
+```typescript
+let rowId = "5531d753-95af-e711-a94e-000d3a11e605"
+
+// Define the row to update a record
+var row =
+    {
+        "name": "Updated Sample Account ",
+        "creditonhold": true,
+        "address1_latitude": 47.639583,
+        "description": "This is the updated description of the sample account",
+        "revenue": 6000000,
+        "accountcategorycode": 2
+    }
+
+// update the record
+
+try {
+   await dataApi.updateRow("account", rowId, row);
+}
+catch (error){
+  console.log(error.message);
+}
 ```
