@@ -4,7 +4,7 @@ metadata:
   description: Get answers to frequently asked questions about Power Apps Azure Synapse Link for Dataverse.
   author: sabinn-msft
   ms.search.keywords: 
-  ms.date: 09/15/2026
+  ms.date: 10/08/2026
   ms.author: sabinn
   ms.reviewer: matp
   contributors: 
@@ -15,8 +15,16 @@ metadata:
   - gshrivastava24
   ms.topic: faq
   ms.subservice: dataverse-maker
+  ai-usage: ai-assisted
 title: Azure Synapse Link for Dataverse FAQ
-summary: This article provides information on frequently asked questions about exporting Microsoft Dataverse table data to Azure Synapse Analytics and Azure Data Lake.
+summary: |
+  This article provides information on frequently asked questions about exporting Microsoft Dataverse table data to Azure Synapse Analytics and Azure Data Lake.
+
+  > [!NOTE]
+  > Azure Synapse Link branding will be retired soon. In Power Apps, open **Link data** to access this experience. The UX uses **Link to Data lake**, while this article continues to use Azure Synapse Link so existing customers can recognize the feature.
+
+  > [!IMPORTANT]
+  > The Delta Lake (Parquet), Synapse Parquet, or bring your own Synapse (BYOS) Parquet option is being retired. Beginning October 15, 2026, it won't be available to new customers. Eligibility is evaluated for each Dataverse organization ID, not at the tenant level. Eligible existing organizations can unlink and recreate the link for the same organization ID, but a new environment with a new organization ID isn't eligible. Existing customers must transition to CSV output or [Link to Microsoft Fabric](fabric-link-to-data-platform.md) by December 2027. More information: [Export Dataverse data in Delta Lake format](azure-synapse-link-delta-lake.md).
 sections:
 - name: General
   questions:
@@ -64,7 +72,7 @@ sections:
         To preserve deleted records for longer than 30 days, [enable long-term retention for the table](data-retention-set.md#enable-a-table-for-long-term-retention).
    - question: Why am I not seeing a column header in the exported file?
      answer: |
-        Azure Synapse Link follows the Common Data Model to make it possible for data and its meaning to be shared across applications and business processes such as Microsoft Power Apps, Power BI, Dynamics 365, and Azure. In each CDM folder, metadata like a column header is stored in the model.json file. More information: [Common Data Model and Azure Data Lake Storage Gen2 | Microsoft Learn](/common-data-model/data-lake)   
+        Azure Synapse Link follows the Common Data Model to make it possible for data and its meaning to be shared across applications and business processes such as Microsoft Power Apps, Power BI, Dynamics 365, and Azure. In each CDM folder, metadata like a column header is stored in the model.json file. More information: [Common Data Model and Azure Data Lake Storage Gen2 | Microsoft Learn](/common-data-model/data-lake)
    - question:  Why does the Model.json file increase or change in length for the data types and doesn't keep what is defined in Dataverse?
      answer: |
         Model.json keeps the database length for the column's size. Dataverse has a concept of database length for each column. If you create a column with a size of 200 and later reduce it to 100, Dataverse still allows your existing data to be present in Dataverse. It does that by keeping `DBLength` to 200 and `MaxLength` to 100. What you see in Model.json is `DBLength` and if you use that for downstream processes you'll never provision lesser space for your Dataverse columns. 
@@ -101,7 +109,7 @@ sections:
         In append only mode, you should identify the latest version of record with the same ID using `VersionNumber` and `SinkModifiedOn` then apply `isDeleted=0` on the latest version.
    - question: Why do I see duplicated version numbers when I export data using append only mode?   
      answer: |
-         For append only mode, if Azure Synapse Link for Dataverse doesn't get an acknowledgment from the Azure data lake that the data has been committed due to any reason such as network delays, Azure Synapse Link retries in those scenarios and commit the data again. The downstream consumption should be made resilient to this scenario by filtering data using `SinkModifiedOn`.     
+         For append only mode, if Azure Synapse Link for Dataverse doesn't get an acknowledgment from the Azure data lake that the data has been committed due to a network delay or another issue, Azure Synapse Link retries and might commit the data again. Make downstream consumption resilient to this scenario by filtering data using `SinkModifiedOn`.
    - question: Why does synchronization fail for a table that contains a column with the same name as a reserved system column?
      answer: |
         Azure Synapse Link adds a set of reserved system columns to every table it writes to the data lake. `versionnumber` is one of these columns and is used to track row versions. More information: [Working with data and metadata](/power-apps/maker/data-platform/azure-synapse-link-select-fno-data#working-with-data-and-metadata)
@@ -148,6 +156,17 @@ sections:
    - question: I'm using export to delta lake feature, can I stop the Apache Spark job or change the execution time?
      answer: |
         The Delta Lake conversion job is triggered when there was a data change in the configured time interval. There's no option to stop or pause the Apache Spark pool. However, you can modify the time interval after the link creation under Manage tables > Advanced Time interval.
+   - question: Can I still create a bring your own Synapse Parquet link?
+     answer: |
+        The Delta Lake (Parquet) export option in Azure Synapse Link is deprecated. Bring your own Synapse (BYOS) means that you provide the Azure Synapse workspace, storage account, and Spark pool that Azure Synapse Link uses to deliver Dataverse data in Delta Lake (Parquet) format.
+
+        Beginning October 15, 2026, the option won't be available to new customers. Eligibility is evaluated at the Dataverse organization ID level, not at the tenant level. You can't use the option with a new environment that has a new organization ID, even if another organization in the same tenant is eligible. If you unlink an eligible existing organization, you can create the link again for that same organization ID.
+
+        Eligible existing organizations can use the `enableSynapseParquet=true` opt-in parameter on the **Link data** URL and then select **Get Parquet format in a Synapse workspace anyway** when they create a data lake link. The URL doesn't override eligibility or extend the deprecation deadlines. More information: [Export Dataverse data in Delta Lake format](azure-synapse-link-delta-lake.md#create-a-byos-parquet-link-as-an-eligible-existing-customer)
+
+        Existing customers must transition to CSV output in Azure Synapse Link or [Link to Microsoft Fabric](fabric-link-to-data-platform.md) by December 2027, when the Delta Lake (Parquet) export option will no longer be available.
+
+        Review any downstream solution that depends on Parquet output, including [accessing audit data with Azure Synapse Link and Power BI](/power-platform/admin/audit-data-azure-synapse-link) and [Microsoft Dynamics 365 ingestion with Azure Databricks](/azure/databricks/ingestion/lakeflow-connect/d365-parquet-source-setup), as part of your transition plan.
    - question: Does Azure Synapse Link support lookup columns?
      answer: |  
         Lookup columns are made up of an ID and a value. Lookup values only change on the root table. To better reflect the value of a lookup column, we recommend joining with the original root table to get the latest value.
@@ -185,7 +204,7 @@ sections:
         This is a Dataverse platform limit and can't be raised on request. The service doesn't truncate or modify customer data. To resolve, reduce the oversized record in Dataverse by deleting it, clearing the large field, or moving the content out of Dataverse.
    - question: How can I use Azure Synapse Link to archive critical data?
      answer: |
-        Azure Synapse Link for Dataverse is designed for analytics purposes. We recommend customers use long-term-retention for archive purposes. More information: [Dataverse long term data retention overview](/power-apps/maker/data-platform/data-retention-overview)
+        Azure Synapse Link for Dataverse is designed for analytics purposes. Use long-term retention for archive purposes. More information: [Dataverse long term data retention overview](/power-apps/maker/data-platform/data-retention-overview)
    - question: Why don't I see any data changes in the data lake when records have been deleted in Dataverse?
      answer: |
         For any direct SQL call to remove a record, the Azure Synapse Link for Dataverse service doesn't trigger because BPO.Delete isn't being called. For a sample feature, go to [How to clean up inherited access](/troubleshoot/power-platform/dataverse/user-permissions/cleanup-inherited-access).
