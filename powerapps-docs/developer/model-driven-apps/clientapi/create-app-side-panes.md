@@ -3,7 +3,7 @@ title: "Creating side panes by using a client API in model-driven apps"
 description: "Learn how to create and manage side panes in model-driven apps using client APIs. Discover how to display views, records, and web resources with examples."
 author: sriharibs-msft
 ms.author: srihas
-ms.date: 03/27/2026
+ms.date: 10/09/2026
 ms.reviewer: jdaly
 ms.subservice: mda-developer
 ms.topic: concept-article
@@ -30,6 +30,26 @@ App side panes are only supported in web browsers and are prevented within nativ
 [!INCLUDE [online-only-api-note](includes/online-only-api-note.md)]
 
 ## Examples
+
+### Display a generative page in a side pane
+
+Use the pane's `navigate` method with `pageType: "generative"` and the generative page ID:
+
+```javascript
+const pane = await Xrm.App.sidePanes.createPane({
+    title: "My Generative Page",
+    paneId: "GenPage",
+    canClose: true,
+    width: 400
+});
+
+await pane.navigate({
+    pageType: "generative",
+    pageId: "<genPageID>"
+});
+```
+
+For information about passing record context and custom parameters, see [Navigate to and from a generative page](navigate-to-generative-page-examples.md).
 
 ### Showing a default view in the side pane
 

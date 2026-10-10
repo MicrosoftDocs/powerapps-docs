@@ -19,7 +19,7 @@ This article explains how to open, configure, and fine-tune the Dataverse semant
 
 ## Prerequisites
 
-- Dataverse Intelligence is enabled for your environment. For setup information, see [Dataverse data in Microsoft Copilot prerequisites](data-platform-intelligence.md#dataverse-data-in-microsoft-365-copilot-prerequisites).
+- Dataverse Intelligence is enabled for your environment. For setup information, see [Dataverse data in Microsoft Copilot prerequisites](data-platform-intelligence.md#dataverse-data-in-microsoft-copilot-prerequisites).
 - The semantic model has completed its initial generation. More information: [How the semantic model works](semantic-model-overview.md#how-the-semantic-model-works)
 - Dataverse version with Dynamics 365 apps enabled must be 9.2.26054.00125 or later version.
 - You need either of the following security roles to manage the semantic model:
