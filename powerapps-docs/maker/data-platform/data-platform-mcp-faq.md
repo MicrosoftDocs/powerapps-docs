@@ -32,7 +32,7 @@ Yes. The Dataverse MCP server respects Dataverse security roles and row-level se
 
 ## Are there costs associated with using the Dataverse MCP server?
 
-Starting December 15, 2025, Dataverse MCP tools are charged when accessed by AI agents created outside of Microsoft Copilot Studio. If you have qualifying Dynamics 365 Premium licenses or a Microsoft 365 Copilot User Subscription License (USL), you aren’t charged for accessing Dynamics 365 data. For information about billing rates, go to [Connect to Dataverse with Model Context Protocol](data-platform-mcp.md#list-of-tools).
+Starting December 15, 2025, Dataverse MCP tools are charged when accessed by AI agents created outside of Microsoft Copilot Studio. If you have qualifying Dynamics 365 Premium licenses or a Microsoft 365 Copilot User Subscription License (USL), you aren't charged for accessing Dynamics 365 data. For information about billing rates, see [Connect to Dataverse with Model Context Protocol](data-platform-mcp.md#list-of-tools).
 
 ## Can I use the Dataverse MCP server with multiple environments?
 

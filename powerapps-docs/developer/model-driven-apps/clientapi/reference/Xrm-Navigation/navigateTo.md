@@ -3,7 +3,7 @@ title: "navigateTo (Client API reference) in model-driven apps"
 description: "Learn how to use Xrm.Navigation.navigateTo to open entity records, lists, dashboards, and custom pages in model-driven apps. See syntax, parameters, and examples."
 author: sriharibs-msft
 ms.author: srihas
-ms.date: 04/09/2026
+ms.date: 10/09/2026
 ms.reviewer: jdaly
 ms.topic: reference
 search.audienceType: 
@@ -32,7 +32,7 @@ The method accepts the following parameters.
 | --- | --- | --- | --- |
 | [pageInput](#pageinput-parameter) | Object | Yes | Input about the page to navigate to. See [pageInput parameter](#pageinput-parameter) |
 | [navigationOptions](#navigationoptions-parameter) | Object | No | Options for navigating to a page: whether to open inline or in a dialog. If you don't specify this parameter, the method opens the page inline by default. |
-| `successCallback` | function | No | A function to execute on successful navigation to the page when navigating inline and on closing the dialog when navigating to a dialog. |
+| `successCallback` | function | No | A function to execute after successful inline navigation or when a dialog closes. For page types that support returning a value, the function receives that value as its argument. |
 | `errorCallback` | Function | No | A function to execute when the operation fails. |
 
 ### `pageInput` parameter
@@ -150,14 +150,19 @@ The `navigationOptions` object contains the following values.
 
 ## Return value
 
-Returns a promise. The value passed when the promise resolves depends on the target:
+Returns a promise. The value passed when the promise resolves depends on the target and page type:
 
-- *inline*: Promise resolves right away, and doesn't return any value.
-- *dialog*: Promise resolves when the dialog closes. An object is passed only if the `pageType` = `entityRecord` and you opened the form in create mode. The object has a `savedEntityReference` array with the following properties to identify the table record created:
+- *Inline*: The promise resolves when navigation completes and doesn't return a value.
+- *Dialog*: The promise resolves when the dialog closes.
+  - For an entity record opened in create mode, the promise resolves with an object containing a `savedEntityReference` array.
+  - For a generative page, the promise resolves with an object whose `returnValue` property contains the value most recently passed to `dataApi.setPageOutput(value)`. If the generative page doesn't set an output value, closing the dialog by selecting **Cancel** or the close button results in an undefined `returnValue`.
+  - Other page types don't return a value when the dialog closes.
 
-   - **entityType**: The logical name of the table.
-   - **id**: A string representation of a GUID value for the record.
-   - **name**: The primary column value of the record displayed or created.
+The `savedEntityReference` array returned for an entity record contains these properties:
+
+- **entityType**: The logical name of the table.
+- **id**: A string representation of the record GUID.
+- **name**: The primary column value of the record.
 
 ## Example
 
@@ -279,11 +284,14 @@ var navigationOptions = {
     position: 1
 };
 Xrm.Navigation.navigateTo(pageInput, navigationOptions).then(
-    function success() {
-            // Run code on success
+    function success(result) {
+        const output = result?.returnValue;
+        if (output) {
+            console.log("Value returned by generative page:", output);
+        }
     },
-    function error() {
-            // Handle errors
+    function error(error) {
+        console.log(error.message);
     }
 );
 ```
