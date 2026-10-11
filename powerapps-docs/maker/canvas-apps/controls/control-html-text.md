@@ -44,6 +44,9 @@ An **HTML text** control not only shows plain text and numbers but also converts
 
 **HtmlText** – Text that appears in an HTML text control and that may contain HTML tags.
 
+> [!NOTE]
+> The **HtmlText** property only accepts single text, meaning that double quotes within the HTML code haveto be replaced with single quotes or escaped. For example, `<div style="font-weight: bold;">This text is bold.</div>` has to be entered as `"<div style='font-weight: bold;'>This text is bold.</div>"` or `"<div style=""font-weight: bold;"">This text is bold.</div>"`
+
 ## Additional properties
 **[AutoHeight](properties-core.md)** – Set to true to allow the control to auto-grow its height to show all text. Set to false to truncate the text to the height assigned.
 
