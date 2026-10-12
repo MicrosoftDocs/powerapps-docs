@@ -4,7 +4,7 @@ description: You can style your components based on the modern theme used in the
 keywords: "Component Framework, code components, Power Apps controls"
 author: jasongre
 ms.author: jasongre
-ms.date: 12/04/2024
+ms.date: 09/28/2026
 ms.reviewer: jdaly
 ms.custom:
   - "dyn365-a11y"
@@ -18,9 +18,11 @@ contributors:
 
 # Style components with modern theming
 
-Developers need to be able to style their components so they look like the rest of the application they're included in. They can do this when modern theming is in effect for either a canvas app (via the [Modern controls and themes](../../maker/canvas-apps/controls/modern-controls/overview-modern-controls.md) feature) or model-driven app (through the [new refreshed look](../../user/modern-fluent-design.md)). Use modern theming, which is based on [Fluent UI React v9](https://react.fluentui.dev/), to style your component. This approach is recommended to get the best performance and theming experience for your component.
+Code components should look and feel consistent with the apps that host them. Power Apps uses Fluent theme tokens to provide component authors with the current app colors, typography, spacing, and other styling values. In model-driven apps, Power Apps adjusts supported Fluent spacing tokens to reflect the current display density. By consuming these tokens instead of using fixed styling values, components can respond to both the current app theme and, where available, display density.
 
-There are four different ways to apply modern theming to your component.
+Modern theming is available in canvas apps through the [Modern controls and themes](../../maker/canvas-apps/controls/modern-controls/overview-modern-controls.md) feature and in model-driven apps through the [modern, refreshed look](../../user/modern-fluent-design.md). [Display density](#make-spacing-respond-to-display-density) is available only in model-driven apps with the [header and navigation refresh](../../user/modern-fluent-design.md#wave-2-header-and-navigation-refresh) enabled.
+
+The platform theme uses Fluent UI v9 tokens. Components can inherit these tokens through the platform's Fluent provider or consume them through the theming API in the following ways:
 
 - [Fluent UI v9 controls](#fluent-ui-v9-controls)
 - [Fluent UI v8 controls](#fluent-ui-v8-controls)
@@ -29,7 +31,7 @@ There are four different ways to apply modern theming to your component.
 
 ## Fluent UI v9 controls
 
-Wrapping Fluent UI v9 controls as a component is the easiest way to utilize modern theming because the modern theme is automatically applied to these controls. The only prerequisite is to ensure your component adds a dependency on the [React controls & platform libraries](react-controls-platform-libraries.md) as shown below. This approach allows your component to use the same React and Fluent libraries as the platform, and therefore share the same React context that passes the theme tokens down to the component.
+Wrapping Fluent UI v9 controls as a component is the easiest way to utilize modern theming because the modern theme is automatically applied to these controls. The only prerequisite is to ensure your component adds a dependency on the [React controls & platform libraries](react-controls-platform-libraries.md) as shown in the following section. This approach allows your component to use the same React and Fluent libraries as the platform, and therefore share the same React context that passes the theme tokens down to the component. Using the platform React and Fluent libraries is the recommended approach for the best performance and theming experience.
 
 ```xml
 <resources>
@@ -72,9 +74,62 @@ When your component requires styling that is different from the current theme of
 </FluentProvider>
 ```
 
+## Make spacing respond to display density
+
+In model-driven apps, display density adjusts spacing to show more or less information on screen. Code components participate through the existing modern theming API. When display density is available, the platform supplies the resolved spacing values in the Fluent theme. Your component doesn't need to read the app setting or the user's personal preference.
+
+Use the following tokens for custom layout spacing that responds to display density:
+
+| Token | Example uses |
+| --- | --- |
+| `spacingVerticalS` | Vertical padding around a field, detail row, or similarly compact element |
+| `spacingVerticalM` | Separation around a section title or a medium vertical gap |
+| `spacingVerticalL` | Padding around a card or another large vertical gap |
+| `spacingHorizontalL` | Inline padding around a card or another large horizontal gap |
+
+Only these spacing tokens currently receive display-density adjustments. Other spacing tokens, typography, control dimensions, icons, and interactive target sizes don't change automatically.
+
+If your component uses Fluent UI v9 and inherits the platform Fluent provider, reference the tokens in your styles:
+
+```tsx
+import { makeStyles, tokens } from "@fluentui/react-components";
+
+const useStyles = makeStyles({
+  card: {
+    paddingBlock: tokens.spacingVerticalL,
+    paddingInline: tokens.spacingHorizontalL,
+  },
+  row: {
+    paddingBlock: tokens.spacingVerticalS,
+    rowGap: tokens.spacingVerticalM,
+  },
+});
+```
+
+If your component owns its styles or uses non-Fluent elements, use the corresponding values from the current token theme:
+
+```tsx
+const tokenTheme = context.fluentDesignLanguage.tokenTheme;
+
+const rowStyle = {
+  paddingBlock: tokenTheme.spacingVerticalS,
+  paddingInline: tokenTheme.spacingHorizontalL,
+  rowGap: tokenTheme.spacingVerticalM,
+};
+```
+
+Don't copy the pixel values for a density level or infer the selected density from token values. The platform resolves app settings, personal preferences, and density availability before supplying the theme.
+
+Choose tokens according to their layout role and compare their normal values with your current layout. Replacing a fixed value with a token that has a different normal value can unintentionally change the component at the default **Comfortable** density.
+
+Process the current theme whenever the component's `updateView` method runs. Don't retain the initial theme or spacing values for the lifetime of the component. Validate the component at **Comfortable**, **Cozy**, and **Compact** density, including after the theme or density changes.
+
+> [!NOTE]
+> Display density adjusts supported spacing values; it doesn't provide **Comfortable**, **Cozy**, or **Compact** as a public value to code components. Use the supplied token values directly rather than inferring a density level and conditionally applying styles. Components with fixed row heights, virtualized layouts, or other component-specific sizing might require extra design work beyond consuming spacing tokens.
+
 ## Sample controls
 
-Examples for each of these use cases are available at [Modern Theming API control](./sample-controls/modern-theming-api-control.md).
+For examples of the modern theming approaches, see [Modern Theming API control](./sample-controls/modern-theming-api-control.md).
 
 ## FAQ
 
