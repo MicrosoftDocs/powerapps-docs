@@ -3,7 +3,7 @@ title: Theming (Power Apps component framework API reference) | Microsoft Docs
 description: Provides the API for platform-provided modern theming.
 author: jasongre
 ms.author: jasongre
-ms.date: 11/15/2023
+ms.date: 09/28/2026
 ms.reviewer: jdaly
 ms.topic: reference
 ms.subservice: pcf
@@ -27,7 +27,9 @@ Model-driven and canvas apps
 
 ### tokenTheme
 
-Fluent v9 theme tokens provided by the platform.
+Fluent v9 theme tokens resolved and provided by the platform. The token values reflect the current app theme. In model-driven apps, supported spacing token values also reflect the current display density.
+
+For implementation guidance, see [Style components with modern theming](../fluent-modern-theming.md).
 
 **Type**: [Theme](https://github.com/microsoft/fluentui/blob/master/packages/tokens/src/types.ts)
 
