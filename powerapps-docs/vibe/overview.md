@@ -53,7 +53,14 @@ After watching the video, explore the detailed walkthrough in [Create apps, data
   1. In the navigation pane, go to **Settings** to open the **Tenant settings**  page. 
   1. Set the toggle for **Copilot in Power Apps (preview)** to **On**.
   1. Select **Save** to apply the changes.
+ 
+- **Enabling Power Apps Code Apps on environment level**
+  1. Go to the environment where you would like to enable vibe apps for the users inside the [Power Platform admin center](https://admin.powerplatform.microsoft.com)
+  2. Go to Settings > Features and switch **Power Apps Code Apps** to **On**
   
+  <img width="1069" height="137" alt="image" src="https://github.com/user-attachments/assets/9a09c093-f5ad-4e54-a864-388b9613e0b9" />
+
+
 - **Optional but recommended**: For higher quality apps, enable **Anthropic models** by going to [Power Platform Admin Center](https://admin.powerplatform.microsoft.com) > **Environments** > **[Name of Environment]** > **Settings** > **Features** > **Enable External Models**.
   
   For more information, see [Tenant settings](/power-platform/admin/tenant-settings).
