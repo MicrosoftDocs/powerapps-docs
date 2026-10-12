@@ -3,7 +3,7 @@ title: Modern, refreshed look for model-driven apps
 description: Learn about the updated user interface that makes model-driven apps easier to use.
 author: sriharibs-msft
 ms.topic: overview
-ms.date: 07/31/2026
+ms.date: 09/28/2026
 ms.service: powerapps
 ms.subservice: end-user
 ms.author: srihas
@@ -154,9 +154,11 @@ Only SVG icons are supported. If you use other formats such as PNG, the navigati
 
 ## Frequently asked questions (FAQs)
 
-### 1. Can I use the modern, refreshed look in the Power Apps component framework or in custom code components?
+### 1. Can I use the modern, refreshed look and display density in the Power Apps component framework or in custom code components?
 
-The modern theme in use is passed to [Power Apps component framework](../developer/component-framework/overview.md) components, so you can [style your components with modern theming](../developer/component-framework/fluent-modern-theming.md).
+The modern theme is passed to [Power Apps component framework](../developer/component-framework/overview.md) components. When display density is enabled in a model-driven app, supported spacing token values reflect the current density.
+
+To learn how to apply the theme and make custom layout spacing respond to density, see [Style components with modern theming](../developer/component-framework/fluent-modern-theming.md#make-spacing-respond-to-display-density). For the properties available on `context.fluentDesignLanguage`, see the [Theming API reference](../developer/component-framework/reference/theming.md).
 
 ### 2. Can I use the modern, refreshed look in custom pages?
 
