@@ -7,10 +7,11 @@ ms.topic: overview
 ms.date: 05/20/2026
 ms.subservice: teams
 ai-usage: ai-assisted
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 contributors:
-  - mduelae
+  - joshuapartlow
   - chmoncay
+reviewer: joshuapartlow
 ---
 
 # Overview of the Power Apps app

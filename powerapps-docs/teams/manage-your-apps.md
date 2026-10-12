@@ -8,10 +8,11 @@ ms.custom:
 ai-usage: ai-assisted
 ms.date: 05/20/2026
 ms.subservice: teams
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 contributors:
-  - mduelae
+  - joshuapartlow
   - chmoncay
+reviewer: joshuapartlow
 ---
 
 # Manage your apps in Teams

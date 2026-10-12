@@ -5,14 +5,15 @@ author: anuitz
 ms.topic: how-to
 ms.custom: canvas
 ms.date: 4/26/2022
-ms.reviewer: mduelae
+ms.reviewer: joshuapa
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - anuitz
+reviewer: joshuapartlow
 ---
 
 # Use the Markup in MR control in Power Apps (preview)

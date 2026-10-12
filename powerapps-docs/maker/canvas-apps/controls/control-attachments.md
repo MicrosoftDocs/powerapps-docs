@@ -11,8 +11,9 @@ ms.reviewer: joshuapa
 search.audienceType:
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - yogupt
+reviewer: joshuapartlow
 ---
 
 # Attachments control in Power Apps

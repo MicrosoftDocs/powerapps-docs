@@ -1,13 +1,13 @@
 ---
 title: Overview of Copilot answer control for canvas apps
 description: Use the Copilot answer control for canvas app.
-author: mduelae
+author: joshuapartlow
 ms.topic: how-to
 ms.custom: canvas
 ms.collection: 
     - bap-ai-copilot
     - get started
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 2/23/2026
 ms.update-cycle: 180-days
 ms.subservice: canvas-maker
@@ -15,7 +15,8 @@ ms.author: arijitba
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
+reviewer: joshuapartlow
 ---
 
 #  Use Copilot answer control for canvas apps (preview)

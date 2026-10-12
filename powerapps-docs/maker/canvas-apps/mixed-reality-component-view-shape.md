@@ -5,14 +5,15 @@ author: anuitz
 ms.topic: how-to
 ms.custom: canvas
 ms.date: 3/7/2022
-ms.reviewer: mduelae
+ms.reviewer: joshuapa
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - anuitz
+reviewer: joshuapartlow
 ---
 
 # View predefined 3D shapes in mixed reality

@@ -1,12 +1,12 @@
 ---
 title: Create a canvas app with data from a list
 description: Create a Power Apps canvas app to manage data in Microsoft Lists or SharePoint Online.
-author: mduelae
+author: joshuapartlow
 
 ms.topic: how-to
 ms.custom: canvas
 ms.collection: get-started
-ms.reviewer: 
+ms.reviewer: joshuapa
 ms.date: 07/27/2026
 ms.subservice: canvas-maker
 ms.author: tapanm
@@ -14,9 +14,10 @@ search.audienceType:
   - maker
 contributors:
   - Steven-Jia
-  - mduelae
+  - joshuapartlow
   - navjotm
   - emcoope-msft
+reviewer: joshuapartlow
 ---
 
 # Create a canvas app with data from a list

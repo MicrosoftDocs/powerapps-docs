@@ -1,20 +1,21 @@
 ---
 title: Canvas apps for enterprise developers, partners, and ISVs
 description: Learn about developing solutions with canvas apps for enterprise developers, partners, and ISVs.
-author: mduelae
+author: joshuapartlow
 
 ms.subservice: canvas-developer
 ms.topic: article
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 08/17/2022
 ms.author: tapanm
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
-  - mduelae
+  - joshuapartlow
+  - joshuapartlow
   - evlew
+reviewer: joshuapartlow
 ---
 
 # Canvas apps for enterprise developers, partners, and ISVs

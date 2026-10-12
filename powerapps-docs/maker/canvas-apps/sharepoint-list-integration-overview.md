@@ -4,18 +4,19 @@ description: An overview of how to integrate lists from SharePoint Online or Mic
 author: NickWaggoner
 
 ms.topic: concept-article
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 01/13/2026
 ms.subservice: canvas-maker
-ms.author: mkaur
+ms.author: joshuapa
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - navjotm
   - wimcoor
 ms.custom: canvas
 ms.collection: get-started
+reviewer: joshuapartlow
 ---
 
 # Integrate SharePoint Online into Power Apps overview

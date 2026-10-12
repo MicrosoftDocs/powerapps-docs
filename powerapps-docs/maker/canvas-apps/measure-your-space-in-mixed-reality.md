@@ -4,15 +4,16 @@ description: Use the Measure in MR control to take measurements using your devic
 author: anuitz
 ms.topic: overview
 ms.custom: canvas
-ms.reviewer: mduelae
+ms.reviewer: joshuapa
 ms.date: 04/26/2022
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - anuitz
+reviewer: joshuapartlow
 ---
 
 # Use the Measure in MR control to take measurements

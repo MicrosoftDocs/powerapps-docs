@@ -10,13 +10,14 @@ ms.subservice: canvas-maker
 ms.author: yogupt
 
 
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - noazarur-microsoft
   - yogeshgupta698
+reviewer: joshuapartlow
   
 ---
 # Toggle modern control in Power Apps

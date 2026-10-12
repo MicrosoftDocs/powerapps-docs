@@ -5,16 +5,17 @@ author: emcoope-msft
 
 ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: 
+ms.reviewer: joshuapa
 ms.date: 3/1/2025
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - navjotm
   - wimcoor
+reviewer: joshuapartlow
 ---
 
 # Link lists using a lookup column in Power Apps

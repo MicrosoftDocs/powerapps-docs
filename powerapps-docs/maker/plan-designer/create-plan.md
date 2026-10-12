@@ -1,13 +1,13 @@
 ---
 title: Use plans to create a business solution with Copilot
 description: Use plans to create business solutions with AI-powered experiences.
-author: mduelae
+author: joshuapartlow
 contributors:
 ms.topic: how-to
 ms.date: 02/18/2026
 ms.update-cycle: 180-days
 ms.author: szlo
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.collection:
   - bap-ai-copilot
 ms.custom:
@@ -15,6 +15,7 @@ ms.custom:
   - ai-gen-title
   - ai-gen-desc
   - copilot-scenario-highlight
+reviewer: joshuapartlow
 ---
 
 # Create a plan 

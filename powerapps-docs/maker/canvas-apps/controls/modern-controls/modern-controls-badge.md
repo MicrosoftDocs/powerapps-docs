@@ -11,9 +11,10 @@ ms.reviewer: joshuapa
 search.audienceType:
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - yogeshgupta698
   - noazarur-microsoft
+reviewer: joshuapartlow
 ---
 
 # Badge modern control in canvas apps

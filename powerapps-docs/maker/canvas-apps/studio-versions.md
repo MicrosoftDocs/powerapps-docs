@@ -5,15 +5,16 @@ author: emcoope-msft
 
 ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 3/26/2025
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - emcoope-msft
+reviewer: joshuapartlow
 ---
 
 # Change authoring version for Power Apps Studio

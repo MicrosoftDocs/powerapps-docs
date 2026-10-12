@@ -1,17 +1,18 @@
 ---
 title: Important upcoming changes (deprecations) in canvas apps
 description: Learn about the important changes including deprecation coming soon to canvas apps.
-author: mduelae
+author: joshuapartlow
 
 ms.topic: article
 ms.custom: 
 ms.date: 01/09/2026
 ms.subservice: canvas-maker
 ms.author: tapanm
-ms.reviewer: mkaur-msft
+ms.reviewer: joshuapa
 contributors:
-    - mduelae
+    - joshuapartlow
     - shwetamurkute
+reviewer: joshuapartlow
 ---
 
 # Important upcoming changes (deprecations) in canvas apps

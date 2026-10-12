@@ -8,9 +8,10 @@ ms.custom:
 ms.date: 06/16/2022
 ms.subservice: teams
 ms.author: wimcoor
-ms.reviewer: matp
+ms.reviewer: joshuapa
 contributors:
   - mattp123
+reviewer: joshuapartlow
 ---
 # Move customizations between environments
 

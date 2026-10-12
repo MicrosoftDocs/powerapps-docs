@@ -1,17 +1,18 @@
 ---
 title: Create apps in Microsoft Teams by using Power Apps | Microsoft Docs
 description: Provides an overview of creating apps in Microsoft Teams.
-author: mduelae
+author: joshuapartlow
 
 ms.topic: overview
 
 ms.date: 12/18/2020
 ms.subservice: teams
-ms.author: mkaur
-ms.reviewer: mkaur
+ms.author: joshuapa
+ms.reviewer: joshuapa
 contributors:
-  - mkaur
-  - mduelae
+  - joshuapa
+  - joshuapartlow
+reviewer: joshuapartlow
 ---
 # Create apps in Microsoft Teams by using Power Apps
 

@@ -5,16 +5,17 @@ author: emcoope-msft
 
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 11/14/2024
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - yogeshgupta698
   - emcoope-msft
+reviewer: joshuapartlow
 ---
 # Screen control in Power Apps
 

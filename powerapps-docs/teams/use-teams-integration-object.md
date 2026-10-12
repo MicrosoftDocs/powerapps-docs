@@ -8,10 +8,11 @@ ms.custom:
 ms.date: 09/25/2020
 ms.subservice: teams
 ms.author: saperlmu
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 contributors:
-  - mduelae
+  - joshuapartlow
   - msftsamperl
+reviewer: joshuapartlow
 ---
 
 # Microsoft Teams integration object

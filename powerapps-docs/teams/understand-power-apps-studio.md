@@ -8,10 +8,11 @@ ai-usage: ai-assisted
 ms.date: 05/20/2026
 ms.subservice: teams
 ms.author: szlo
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 contributors:
-  - mduelae
+  - joshuapartlow
   - jessicaszelo
+reviewer: joshuapartlow
 ---
 
 # Understand Power Apps Studio in Dataverse in a Teams environment

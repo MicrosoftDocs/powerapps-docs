@@ -5,7 +5,7 @@ author: lancedMicrosoft
 ms.topic: overview
 ms.custom: canvas
 ms.collection: get-started
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 06/19/2025
 ms.subservice: canvas-maker
 ms.author: lanced
@@ -13,7 +13,8 @@ search.audienceType:
   - maker
 contributors:
   - lancedMicrosoft
-  - mduelae
+  - joshuapartlow
+reviewer: joshuapartlow
 ---
 # Working with dynamic values 
 

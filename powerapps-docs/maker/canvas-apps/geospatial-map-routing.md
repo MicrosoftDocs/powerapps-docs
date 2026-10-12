@@ -4,15 +4,16 @@ description: Add waypoint pins to a map and calculate routes between them in Pow
 author: anuitz
 ms.topic: how-to
 ms.custom: canvas, ce06122020
-ms.reviewer: mduelae
+ms.reviewer: joshuapa
 ms.date: 3/3/2022
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - anuitz
+reviewer: joshuapartlow
 ---
 
 # Calculate routes between waypoint pins on a map (preview)

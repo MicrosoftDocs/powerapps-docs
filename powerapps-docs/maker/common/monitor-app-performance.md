@@ -4,14 +4,14 @@ description: Get valuable insights and recommendations for your app using Monito
 author: dalajogun
 ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 3/4/2026
 ms.subservice: canvas-maker
 ms.author: damialajogun
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - damialajogun
 ---
 #  Use Monitor to get insights and recommendations for your app

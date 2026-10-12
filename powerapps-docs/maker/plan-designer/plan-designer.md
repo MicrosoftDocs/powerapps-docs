@@ -6,8 +6,8 @@ contributors:
 ms.topic: how-to
 ms.date: 08/07/2026
 ms.update-cycle: 180-days
-ms.author: mkaur
-ms.reviewer: mkaur
+ms.author: joshuapa
+ms.reviewer: joshuapa
 ms.collection:
   - bap-ai-copilot
 ms.custom:
@@ -15,6 +15,7 @@ ms.custom:
   - ai-gen-title
   - ai-gen-desc
   - copilot-scenario
+reviewer: joshuapartlow
 ---
 
 # Overview of plans

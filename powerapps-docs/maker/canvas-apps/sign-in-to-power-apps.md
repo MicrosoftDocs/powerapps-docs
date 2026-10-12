@@ -4,7 +4,7 @@ description: Sign in to Power Apps and learn how to access environments, create 
 author: alaug
 ms.topic: how-to
 ms.collection: get-started
-ms.reviewer: 
+ms.reviewer: joshuapa
 ms.date: 01/21/2026
 ms.subservice: canvas-maker
 ms.author: alaug
@@ -14,6 +14,7 @@ contributors:
   - tapanm-msft
   - alaug
   - Mattp123
+reviewer: joshuapartlow
 ---
 # Sign in to Power Apps
 

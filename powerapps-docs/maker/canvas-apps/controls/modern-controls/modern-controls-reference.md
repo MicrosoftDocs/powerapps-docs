@@ -12,8 +12,9 @@ ms.author: yogupt
 search.audienceType:
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - yogeshgupta698
+reviewer: joshuapartlow
 ---
 
 # Modern controls and properties in canvas apps

@@ -4,15 +4,16 @@ description: Learn about the details, properties, and examples of the HTML text 
 author: yogeshgupta698
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.subservice: canvas-maker
 ms.date: 07/19/2022
 ms.author: yogupt
 search.audienceType:
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - yogeshgupta698
+reviewer: joshuapartlow
 ---
 # HTML text control in Power Apps
 A box that shows text and converts HTML tags to formatting.

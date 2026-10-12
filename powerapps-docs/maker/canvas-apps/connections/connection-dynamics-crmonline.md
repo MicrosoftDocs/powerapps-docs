@@ -7,12 +7,13 @@ ms.custom: canvas
 ms.date: 04/03/2022
 ms.subservice: canvas-maker
 ms.author: matp
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - lancedmicrosoft
+reviewer: joshuapartlow
 ---
 # Connect to Dynamics 365 from Power Apps
 

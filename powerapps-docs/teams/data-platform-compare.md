@@ -7,11 +7,12 @@ ms.collection: get-started
 ms.date: 05/28/2025
 ms.subservice: teams
 ms.author: olegov
-ms.reviewer: matp
+ms.reviewer: joshuapa
 contributors:
   - mattp123
   - hemantgaur
-  - mduelae
+  - joshuapartlow
+reviewer: joshuapartlow
 ---
 # How are Dataverse for Teams and Dataverse different?
 

@@ -7,12 +7,13 @@ ms.custom: canvas
 ms.date: 10/18/2022
 ms.subservice: canvas-maker
 ms.author: yogupt
-ms.reviewer: mduelae
+ms.reviewer: joshuapa
 search.audienceType:
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - yogeshgupta698
+reviewer: joshuapartlow
 ---
 # Barcode scanner control (retired) in Power Apps
 

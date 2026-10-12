@@ -5,15 +5,16 @@ author: emcoope-msft
 
 ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 06/16/2020
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - emcoope-msft
+reviewer: joshuapartlow
 ---
 # Edit a canvas app
 

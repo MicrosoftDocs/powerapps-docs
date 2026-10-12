@@ -8,12 +8,13 @@ ms.custom:
 ms.date: 08/26/2021
 ms.subservice: teams
 ms.author: saperlmu
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 contributors:
   - joel-lindstrom
   - msftsamperl
-  - mduelae
+  - joshuapartlow
   - sbahl10
+reviewer: joshuapartlow
 ---
 
 # Enable users to discuss ideas

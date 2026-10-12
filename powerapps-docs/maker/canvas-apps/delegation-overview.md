@@ -5,16 +5,17 @@ author: lancedMicrosoft
 
 ms.topic: overview
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 01/13/2026
 ms.subservice: canvas-maker
-ms.author: mkaur
+ms.author: joshuapa
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - lanced-microsoft
   - gregli-msft
+reviewer: joshuapartlow
   
 ---
 # Query limitations: Delegation and query limits

@@ -6,12 +6,13 @@ ms.subservice: canvas-developer
 ms.topic: article
 ms.date: 12/10/2024
 ms.author: lanced
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 search.audienceType:
   - maker
 contributors:
   - lancedMicrosoft
-  - mduelae
+  - joshuapartlow
+reviewer: joshuapartlow
   
 ---
 # Other performance considerations

@@ -5,15 +5,16 @@ author: yogeshgupta698
 
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 12/08/2021
 ms.subservice: canvas-maker
 ms.author: yogupt
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - yogeshgupta698
+reviewer: joshuapartlow
 ---
 # Label control in Power Apps
 

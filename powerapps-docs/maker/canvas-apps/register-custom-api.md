@@ -6,14 +6,15 @@ author: lancedMicrosoft
 ms.subservice: canvas-developer
 ms.topic: article
 ms.custom: canvas
-ms.reviewer: 
+ms.reviewer: joshuapa
 ms.date: 05/05/2017
 ms.author: lanced
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - lancedmicrosoft
+reviewer: joshuapartlow
 ---
 
 # Custom connectors for canvas apps

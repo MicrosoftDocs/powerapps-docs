@@ -4,14 +4,15 @@ description: "Discover the key components and features of Power Apps Studio. Lea
 author: lancedMicrosoft
 ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 03/25/2026
 ms.subservice: canvas-maker
-ms.author: mkaur
+ms.author: joshuapa
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
+reviewer: joshuapartlow
   
 ---
 

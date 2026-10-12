@@ -7,9 +7,10 @@ ms.custom: canvas
 ms.date: 04/15/2026
 ms.subservice: canvas-maker
 ms.author: yogupt
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 search.audienceType:
   - maker
+reviewer: joshuapartlow
 ---
 
 # Combo box modern control in canvas apps

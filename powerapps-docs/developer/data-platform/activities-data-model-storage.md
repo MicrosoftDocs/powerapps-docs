@@ -4,7 +4,7 @@ description: "This article will help you understand the activities data model an
 ms.date: 07/18/2022
 author: DanaMartens
 ms.author: dmartens
-ms.reviewer: mduelae
+ms.reviewer: joshuapartlow
 ms.topic: article
 ms.subservice: dataverse-developer
 search.audienceType: 

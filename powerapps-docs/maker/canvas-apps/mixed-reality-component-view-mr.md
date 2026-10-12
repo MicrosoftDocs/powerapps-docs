@@ -4,15 +4,16 @@ description: View 3D models and 2D images in the real world with augmented reali
 author: anuitz
 ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: mduelae
+ms.reviewer: joshuapa
 ms.date: 07/05/2022
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - anuitz
+reviewer: joshuapartlow
 ---
 
 # View 3D content or images in mixed reality

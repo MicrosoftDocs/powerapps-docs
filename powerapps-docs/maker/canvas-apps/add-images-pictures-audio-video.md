@@ -5,16 +5,17 @@ author: emcoope-msft
 ms. service: maker-canvas
 ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 2/26/2026
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - emcoope-msft
   - TashasEv
+reviewer: joshuapartlow
 ---
 
 # Using multimedia files in canvas apps

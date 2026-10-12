@@ -5,15 +5,16 @@ author: gregli-msft
 
 ms.topic: concept-article
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 05/4/2026
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - gregli-msft
+reviewer: joshuapartlow
 ---
 
 # Understand data sources for canvas apps

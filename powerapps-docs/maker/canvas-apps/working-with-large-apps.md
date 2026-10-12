@@ -4,7 +4,7 @@ description: Learn how to work efficiently with large and complex canvas apps in
 ms.date: 04/07/2023
 author: gregli-MSFT
 ms.author: gregli
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.topic: how-to
 ms.subservice: canvas-maker
 search.audienceType: 
@@ -12,6 +12,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ms.custom: canvas, bap-template
+reviewer: joshuapartlow
 ---
 
 # Build large and complex canvas apps

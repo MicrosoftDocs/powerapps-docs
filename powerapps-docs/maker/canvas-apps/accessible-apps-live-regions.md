@@ -13,7 +13,9 @@ search.audienceType:
 contributors:
   - tahoon-ms
   - chmoncay
-  - mduelae
+  - joshuapartlow
+ms.reviewer: joshuapa
+reviewer: joshuapartlow
 ---
 
 # Announce dynamic changes with live regions for canvas apps

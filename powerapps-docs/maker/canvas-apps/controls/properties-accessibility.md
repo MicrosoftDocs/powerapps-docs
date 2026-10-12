@@ -5,7 +5,7 @@ author: yogeshgupta698
 
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 09/06/2022
 ms.subservice: canvas-maker
 ms.author: yogupt
@@ -14,7 +14,8 @@ search.audienceType:
 contributors:
   - yogeshgupta698
   - tahoon-ms
-  - mduelae
+  - joshuapartlow
+reviewer: joshuapartlow
 ---
 # Accessibility properties for Power Apps
 

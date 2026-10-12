@@ -10,10 +10,11 @@ ms.topic: how-to
 ms.custom: canvas
 ms.date: 11/22/2021
 ms.author: anuitz
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 contributors:
-  - mduelae
+  - joshuapartlow
   - anuitz
+reviewer: joshuapartlow
 ---
 
 # Create an app to view a shape in mixed reality

@@ -8,9 +8,9 @@ ms.custom: canvas
 ms.collection: get-started
 ms.date: 01/13/2026
 ms.author: alaug
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 contributors:
-  - mduelae
+  - joshuapartlow
   - alaug
 ---
 # Explore Power Apps for free for 30 days

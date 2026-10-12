@@ -5,15 +5,16 @@ author: gregli-msft
 
 ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 01/13/2026
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - gregli-msft
+reviewer: joshuapartlow
 ---
 # Understand tables and records in canvas apps
 

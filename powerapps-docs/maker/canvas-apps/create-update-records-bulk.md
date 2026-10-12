@@ -5,7 +5,7 @@ author: denise-msft
 
 ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 6/18/2021
 ms.subservice: canvas-maker
 ms.author: denisem
@@ -13,8 +13,9 @@ search.audienceType:
   - maker
 contributors:
   - denise-msft
-  - mduelae
+  - joshuapartlow
   - gregli-msft
+reviewer: joshuapartlow
 ---
 
 # Create or update bulk records in Power Apps

@@ -8,10 +8,11 @@ ms.custom:
 ms.subservice: canvas-maker
 ms.date: 06/17/2022
 ms.author: tapanm
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 contributors:
     - sbahl10
-    - mduelae
+    - joshuapartlow
+reviewer: joshuapartlow
 ---
 
 # How to create a canvas app connected to Microsoft Dataverse from scratch

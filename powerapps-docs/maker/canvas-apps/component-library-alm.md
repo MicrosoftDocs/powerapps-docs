@@ -6,12 +6,13 @@ ms.subservice: canvas-developer
 ms.topic: article
 ms.date: 06/10/2022
 ms.author: jorisde
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 search.audienceType:
   - maker
 contributors:
   - jorisdg
-  - mduelae
+  - joshuapartlow
+reviewer: joshuapartlow
 ---
 
 # Component library application lifecycle management (ALM)

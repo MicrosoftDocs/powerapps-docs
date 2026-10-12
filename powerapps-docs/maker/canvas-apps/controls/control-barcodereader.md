@@ -7,11 +7,12 @@ ms.custom: canvas
 ms.date: 10/18/2022
 ms.subservice: canvas-maker
 ms.author: anuitz
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 search.audienceType:
   - maker
 contributors:
   - anuitz
+reviewer: joshuapartlow
 ---
 # Barcode reader control in Power Apps
 

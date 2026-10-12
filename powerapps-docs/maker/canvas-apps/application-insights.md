@@ -4,16 +4,17 @@ description: Learn how to analyze and use system-generated logs from your canvas
 author: mattgon
 ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 04/8/2025
 ms.subservice: canvas-maker
 ms.author: austinj
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - maustinjones 
   - mattgon
+reviewer: joshuapartlow
 ---
 
 # Analyze system-generated logs using Application Insights

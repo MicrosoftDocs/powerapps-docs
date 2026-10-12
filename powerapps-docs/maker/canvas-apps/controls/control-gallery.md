@@ -4,15 +4,16 @@ description: Learn about the details, properties and examples of the gallery con
 author: yogeshgupta698
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 03/25/2024
 ms.subservice: canvas-maker
 ms.author: yogupt
 search.audienceType:
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - yogeshgupta698
+reviewer: joshuapartlow
 ---
 # Gallery control in Power Apps
 

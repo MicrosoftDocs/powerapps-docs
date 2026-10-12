@@ -5,15 +5,16 @@ author: lancedMicrosoft
 
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - lancedmicrosoft
+reviewer: joshuapartlow
 ---
 # Connect to Twitter from Power Apps
 

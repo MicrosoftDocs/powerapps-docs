@@ -6,8 +6,8 @@ ms.update-cycle: 180-days
 ms.custom: 
   - transparency-note
 ms.topic: faq
-author: mduelae 
-ms.author: mkaur
+author: joshuapartlow
+ms.author: joshuapa
 ms.collection: 
     - bap-ai-copilot
 ms.reviewer:

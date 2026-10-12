@@ -8,12 +8,13 @@ ms.custom: canvas
 ms.date: 10/04/2022
 ms.subservice: canvas-maker
 ms.author: norliu
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 search.audienceType: 
   - maker
 contributors:
   - norliu
-  - mduelae
+  - joshuapartlow
+reviewer: joshuapartlow
 ---
 
 # Transform natural language to Power Fx formulas 

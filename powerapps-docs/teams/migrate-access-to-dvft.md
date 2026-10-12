@@ -5,13 +5,14 @@ author: NHelgren
 ms.topic: overview
 ms.custom: model
 ms.collection: get-started
-ms.reviewer: matp
+ms.reviewer: joshuapa
 ms.date: 10/18/2021
 ms.subservice: teams
 ms.author: NHelgren
 search.audienceType: 
   - maker
 contributors:
+reviewer: joshuapartlow
 ---
 # Migrate Microsoft Access data to Microsoft Dataverse for Teams (preview)
 

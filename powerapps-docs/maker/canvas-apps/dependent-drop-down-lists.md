@@ -5,15 +5,16 @@ author: emcoope-msft
 
 ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 04/26/2021
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - emcoope-msft
+reviewer: joshuapartlow
 ---
 # Create dependent drop-down lists in a canvas app
 

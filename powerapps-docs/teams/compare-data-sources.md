@@ -6,10 +6,11 @@ ms.topic: concept-article
 ms.collection: get-started
 ms.date: 05/06/2021
 ms.subservice: teams
-ms.author: mkaur
-ms.reviewer: matp
+ms.author: joshuapa
+ms.reviewer: joshuapa
 contributors:
   - mattp123
+reviewer: joshuapartlow
 ---
 # Comparing Microsoft Lists, Dataverse for Teams, and Dataverse
 

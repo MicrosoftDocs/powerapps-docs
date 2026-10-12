@@ -5,7 +5,7 @@ author: yogeshgupta698
 
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: mkaur-msft
+ms.reviewer: joshuapa
 ms.date: 02/23/2026
 ms.subservice: canvas-maker
 ms.author: yogupt
@@ -14,8 +14,9 @@ ms.author: yogupt
 search.audienceType:
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - yogeshgupta698
+reviewer: joshuapartlow
 ---
 
 # Overview of modern controls and themes in canvas apps

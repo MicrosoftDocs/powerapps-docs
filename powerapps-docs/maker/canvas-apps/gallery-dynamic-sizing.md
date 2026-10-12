@@ -4,15 +4,16 @@ description: Add and configure a Flexible height gallery to automatically fit th
 author: yogeshgupta698
 ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 05/11/2025
 ms.subservice: canvas-maker
 ms.author: yogupt
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - yogeshgupta698
+reviewer: joshuapartlow
 ---
 # Show items of different heights in a canvas app gallery
 

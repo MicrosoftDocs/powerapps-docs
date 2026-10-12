@@ -5,7 +5,7 @@ author: lancedMicrosoft
 
 ms.topic: article
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 06/29/2021
 ms.subservice: canvas-maker
 ms.author: lanced
@@ -13,7 +13,8 @@ search.audienceType:
   - maker
 contributors:
   - lancedMicrosoft
-  - mduelae
+  - joshuapartlow
+reviewer: joshuapartlow
 ---
 
 # Rename Power Apps action-based data sources

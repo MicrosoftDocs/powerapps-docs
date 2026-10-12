@@ -4,15 +4,16 @@ description: Connect to SharePoint from a canvas app in Microsoft Power Apps.
 author: NickWaggoner
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 3/14/2025
 ms.subservice: canvas-maker
-ms.author: mkaur
+ms.author: joshuapa
 search.audienceType:
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - lancedmicrosoft
+reviewer: joshuapartlow
 ---
 
 # Connect to SharePoint from a canvas app

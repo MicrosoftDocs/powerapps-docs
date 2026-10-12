@@ -5,7 +5,7 @@ author: jasongre
 
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: mkaur-msft
+ms.reviewer: joshuapa
 ms.date: 01/21/2026
 ms.subservice: canvas-maker
 ms.author: jasongre
@@ -13,7 +13,8 @@ ms.author: jasongre
 search.audienceType:
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
+reviewer: joshuapartlow
 ---
 
 # Use modern themes in canvas apps

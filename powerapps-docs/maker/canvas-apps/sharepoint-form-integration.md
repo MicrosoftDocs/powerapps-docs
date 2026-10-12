@@ -5,16 +5,17 @@ author: NickWaggoner
 
 ms.topic: concept-article
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 11/14/2025
 ms.subservice: canvas-maker
-ms.author: mkaur
+ms.author: joshuapa
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - amchern
   - lancedMicrosoft
+reviewer: joshuapartlow
 ---
 
 # Understand SharePoint forms integration

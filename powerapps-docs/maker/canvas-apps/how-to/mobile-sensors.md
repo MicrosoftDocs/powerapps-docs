@@ -5,7 +5,7 @@ author: joel-lindstrom
 
 ms.topic: sample
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.subservice: canvas-maker
 ms.date: 10/06/2021
 ms.author: anuitz
@@ -13,7 +13,8 @@ search.audienceType:
   - maker
 contributors:
     - joel-lindstrom
-    - mduelae
+    - joshuapartlow
+reviewer: joshuapartlow
 ---
 
 # Create an app that uses mobile sensors

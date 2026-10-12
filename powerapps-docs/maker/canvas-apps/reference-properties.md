@@ -5,14 +5,15 @@ author: chmoncay
 ms.author: chmoncay
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: mkaur-msft
+ms.reviewer: joshuapa
 ms.date: 01/06/2021
 ms.subservice: canvas-maker
 search.audienceType:
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - chmoncay
+reviewer: joshuapartlow
 ---
 
 # Controls and properties in canvas apps

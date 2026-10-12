@@ -7,11 +7,12 @@ ms.custom:
 ms.date: 03/23/2022
 ms.subservice: teams
 ms.author: jiawen
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 contributors:
-  - mduelae
+  - joshuapartlow
   - msftsamperl
   - Steven-Jia
+reviewer: joshuapartlow
 ---
 
 # Create an app from a list in Microsoft Teams

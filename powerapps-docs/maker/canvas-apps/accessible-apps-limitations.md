@@ -8,13 +8,14 @@ ms.custom: canvas
 ms.date: 02/26/2021
 ms.subservice: canvas-maker
 ms.author: tahoon
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 search.audienceType: 
   - maker
 contributors:
   - chmoncay
   - tahoon-ms
-  - mduelae
+  - joshuapartlow
+reviewer: joshuapartlow
 ---
 
 # Accessibility limitations in canvas apps

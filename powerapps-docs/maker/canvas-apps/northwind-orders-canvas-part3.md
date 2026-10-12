@@ -5,15 +5,16 @@ author: gregli-msft
 
 ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 05/13/2021
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - gregli-msft
+reviewer: joshuapartlow
 ---
 # Create a detail gallery in a canvas app
 

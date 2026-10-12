@@ -4,7 +4,7 @@ description: Step-by-step instructions for saving and publishing canvas apps.
 author: amchern
 ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 05/27/2026
 ms.update-cycle: 180-days
 ms.subservice: canvas-maker
@@ -12,11 +12,12 @@ ms.author: emcoope
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - emcoope-msft
   - amchern
 ms.collection: 
     - bap-ai-copilot
+reviewer: joshuapartlow
 ---
 
 # Save and publish canvas apps

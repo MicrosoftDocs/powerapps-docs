@@ -4,7 +4,7 @@ description: Learn about the execution phases of canvas apps while starting-up, 
 author: JinManAhn-MSFT
 
 ms.topic: how-to
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 01/22/2021
 ms.subservice: canvas-maker
 ms.author: jiahn
@@ -16,6 +16,7 @@ contributors:
   - yingchin
 ms.custom: canvas
 ms.collection: get-started
+reviewer: joshuapartlow
 ---
 
 # Understand canvas app execution phases, data call flow, and performance monitoring

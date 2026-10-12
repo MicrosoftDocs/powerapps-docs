@@ -12,8 +12,10 @@ search.audienceType:
   - maker
 contributors:
   - tahoon-ms
-  - mduelae
+  - joshuapartlow
   - chmoncay
+ms.reviewer: joshuapa
+reviewer: joshuapartlow
 ---
 
 # Show or hide content from assistive technologies for canvas apps

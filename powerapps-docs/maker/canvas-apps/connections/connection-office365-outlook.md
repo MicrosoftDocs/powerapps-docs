@@ -8,12 +8,13 @@ ms.custom: canvas
 ms.date: 08/07/2020
 ms.subservice: canvas-maker
 ms.author: lanced
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - lancedmicrosoft
+reviewer: joshuapartlow
 ---
 # Connect to Office 365 Outlook from Power Apps
 
