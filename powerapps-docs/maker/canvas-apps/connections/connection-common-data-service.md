@@ -42,6 +42,8 @@ When you select **Change environment**, you see a list of environments. Even if 
 > Connections listed in the app details pane outside of the app designer show connections that need user consent. Because native Dataverse connections used in the app don't need additional consent, a native connection isn't in that list.
 
 
+To request the unmasked value of a secured column for one record, subject to the current user's permissions, see [Reveal a masked Dataverse column value](../dataverse-unmask.md).
+
 ## Power Apps data type mappings
 
 The Microsoft Dataverse connector is more robust than the Dynamics 365 connector and is approaching feature parity. The following table lists the data types in Power Apps and how they map to data types in Dataverse.
