@@ -17,7 +17,7 @@ contributors:
   - makolomi
   - Jacob-Wilkinson
   - devkeydet
-  - mduelae
+  - joshuapartlow
   - shwetamurkute
 ms.collection: bap-ai-copilot
 ai-usage: ai-assisted

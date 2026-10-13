@@ -1,19 +1,20 @@
 ---
 title: Create a canvas app using Microsoft Dataverse
 description: Learn how to create a canvas app that displays, adds, updates, and deletes records in Microsoft Dataverse.
-author: mduelae
+author: joshuapartlow
 
 ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: 
+ms.reviewer: joshuapa
 ms.date: 05/20/2026
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - lancedmicrosoft
+reviewer: joshuapartlow
 ---
 # Create a canvas app using Microsoft Dataverse
 

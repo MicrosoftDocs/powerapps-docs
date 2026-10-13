@@ -5,15 +5,16 @@ author: yogeshgupta698
 
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 3/25/2024
 ms.subservice: canvas-maker
 ms.author: yogupt
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - yogeshgupta698
+reviewer: joshuapartlow
 ---
 # Pen input control in Power Apps
 A control in which the user can draw, erase, and highlight areas of an image.

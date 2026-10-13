@@ -5,15 +5,16 @@ author: arthiriyer
 
 ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 10/16/2020
 ms.subservice: canvas-maker
 ms.author: arthii
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - arthiriyer
+reviewer: joshuapartlow
 ---
 
 # Manage an on-premises data gateway in Power Apps

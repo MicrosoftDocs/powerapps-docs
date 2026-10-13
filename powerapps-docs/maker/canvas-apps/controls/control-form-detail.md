@@ -5,16 +5,17 @@ author: yogeshgupta698
 
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 03/26/2024
 ms.subservice: canvas-maker
 ms.author: yogupt
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - yogeshgupta698
   - aneesmsft
+reviewer: joshuapartlow
 ---
 # Edit form and Display form controls in Power Apps
 Display, edit, and create a record in a data source.

@@ -5,7 +5,7 @@ author: marcelbf
 ms.author: marcelbf
 ms.date: 3/18/2025
 ms.topic: how-to
-ms.reviewer: 
+ms.reviewer: joshuapa
 ms.subservice: canvas-maker
 ms.collection: get-started
 search.audienceType: 
@@ -13,6 +13,7 @@ search.audienceType:
   - developer
 ms.custom:
   - canvas  
+reviewer: joshuapartlow
 ---
 
 # View source code files for canvas apps

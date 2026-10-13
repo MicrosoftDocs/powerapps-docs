@@ -5,16 +5,17 @@ author: gregli-msft
 
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 10/25/2016
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - yogeshgupta698
   - gregli-msft
+reviewer: joshuapartlow
 ---
 # Size and location properties in Power Apps
 ## Overview

@@ -7,11 +7,12 @@ ms.topic: how-to
 ms.custom: 
 ms.date: 08/17/2021
 ms.author: saperlmu
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 contributors:
   - joel-lindstrom
   - msftsamperl
-  - mduelae
+  - joshuapartlow
+reviewer: joshuapartlow
 ---
 
 # Add notifications to make your apps collaborative

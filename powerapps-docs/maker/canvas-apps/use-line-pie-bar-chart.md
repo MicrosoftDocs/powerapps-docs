@@ -5,15 +5,16 @@ author: fikaradz
 
 ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 5/21/2025
 ms.subservice: canvas-maker
-ms.author: mkaur
+ms.author: joshuapa
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - fikaradz
+reviewer: joshuapartlow
 ---
 # Show data in a line, pie, or bar chart in canvas apps
 

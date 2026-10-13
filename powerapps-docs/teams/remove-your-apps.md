@@ -8,9 +8,10 @@ ms.custom:
 ms.date: 09/22/2020
 ms.subservice: teams
 ms.author: simatthe
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 contributors:
-  - mduelae
+  - joshuapartlow
+reviewer: joshuapartlow
 ---
 
 # Remove an app from your team

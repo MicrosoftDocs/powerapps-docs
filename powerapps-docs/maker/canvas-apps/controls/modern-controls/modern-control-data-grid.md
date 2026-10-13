@@ -11,6 +11,7 @@ ms.author: yogupt
 ms.reviewer: joshuapa
 search.audienceType:
   - maker
+reviewer: joshuapartlow
 ---
 
 # Data Grid modern control in canvas apps

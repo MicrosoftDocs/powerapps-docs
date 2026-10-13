@@ -13,9 +13,10 @@ ms.author: gregli
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - gregli-msft
 ai-usage: ai-assisted
+reviewer: joshuapartlow
 ---
 
 # Get started with formulas in canvas apps

@@ -7,9 +7,10 @@ ms.custom: canvas
 ms.date: 06/12/2026
 ms.subservice: canvas-maker
 ms.author: yogupt
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 search.audienceType:
   - maker
+reviewer: joshuapartlow
 ---
 
 # Rating modern control in canvas apps

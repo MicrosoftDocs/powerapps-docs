@@ -1,12 +1,13 @@
 ---
 title: "Create Apps, Data, and Plans With Power Apps Vibe"
 description: Learn how Power Apps vibe simplifies app creation by generating plans, data models, and apps in parallel. Build modern web apps faster with AI assistance.
-author: mduelae
-ms.author: mkaur
-ms.reviewer: mkaur
+author: joshuapartlow
+ms.author: joshuapa
+ms.reviewer: joshuapa
 ms.date: 07/13/2026
 ms.topic: concept-article
 ms.custom: vibe
+reviewer: joshuapartlow
 ---
 
 # Create apps, data, and plans together using vibe (preview)

@@ -4,15 +4,16 @@ description: Use the address input control in Power Apps to quickly and easily e
 author: anuitz
 ms.topic: how-to
 ms.custom: canvas, ce06122020
-ms.reviewer: mduelae
+ms.reviewer: joshuapa
 ms.date: 3/3/2022
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - anuitz
+reviewer: joshuapartlow
 ---
 
 # Use the address input control to easily enter addresses

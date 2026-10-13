@@ -7,9 +7,10 @@ ai-usage: ai-assisted
 ms.date: 05/20/2026
 ms.subservice: teams
 ms.author: nhelgren
-ms.reviewer: matp
+ms.reviewer: joshuapa
 contributors:
   - mattp123
+reviewer: joshuapartlow
 ---
 # Overview of Microsoft Dataverse for Teams
 

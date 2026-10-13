@@ -5,16 +5,17 @@ author: maustinjones
 
 ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 01/31/2022
 ms.subservice: canvas-maker
 ms.author: austinj
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - mattgon
   - maustinjones
+reviewer: joshuapartlow
 ---
 
 # Automate tests with Azure Pipelines using YAML

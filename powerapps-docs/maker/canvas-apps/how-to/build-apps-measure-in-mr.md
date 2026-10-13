@@ -10,10 +10,11 @@ ms.topic: how-to
 ms.custom: canvas
 ms.date: 12/15/2021
 ms.author: anuitz
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 contributors:
-  - mduelae
+  - joshuapartlow
   - anuitz
+reviewer: joshuapartlow
 ---
 
 # Create an app using the Measuring Camera control

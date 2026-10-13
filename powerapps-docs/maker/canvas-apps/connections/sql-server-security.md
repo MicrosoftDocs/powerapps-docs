@@ -5,15 +5,16 @@ author: lancedMicrosoft
 
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 05/21/2025
 ms.subservice: canvas-maker
-ms.author: mkaur
+ms.author: joshuapa
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - lancedMicrosoft
+reviewer: joshuapartlow
 ---
 
 # Use Microsoft SQL Server securely with Power Apps

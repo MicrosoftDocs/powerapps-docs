@@ -8,12 +8,13 @@ ms.custom: canvas
 ms.date: 10/25/2016
 ms.subservice: canvas-maker
 ms.author: yogupt
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - yogeshgupta698
+reviewer: joshuapartlow
 ---
 # Check box control in Power Apps
 A control that the user can select or clear to set its value to **true** or **false**.

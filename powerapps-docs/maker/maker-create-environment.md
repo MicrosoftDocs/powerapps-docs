@@ -10,7 +10,7 @@ ms.author: marcelbf
 ms.reviewer: matp
 contributors:
   - marcelbf
-  - mduelae
+  - joshuapartlow
   - Mattp123
 ---
 # Get your developer environment (preview)

@@ -5,15 +5,16 @@ author: gregli-msft
 
 ms.topic: install-set-up-deploy
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 06/06/2019
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - gregli-msft
+reviewer: joshuapartlow
 ---
 
 # Install Northwind Traders database and apps

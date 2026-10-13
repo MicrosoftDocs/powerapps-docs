@@ -4,15 +4,16 @@ description: Learn about the details, properties, and examples of the PDF viewer
 author: yogeshgupta698
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 8/22/2022
 ms.subservice: canvas-maker
 ms.author: yogupt
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - yogeshgupta698
+reviewer: joshuapartlow
 ---
 
 # PDF viewer control (experimental) in Power Apps

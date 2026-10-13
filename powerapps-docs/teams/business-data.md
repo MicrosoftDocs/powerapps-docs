@@ -7,11 +7,12 @@ ms.topic: how-to
 ms.custom: 
 ms.date: 10/06/2021
 ms.author: saperlmu
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 contributors:
-    - mduelae
+    - joshuapartlow
     - msftsamperl
     - joel-lindstrom
+reviewer: joshuapartlow
 ---
 
 # Have a conversation about your business data in a Teams app

@@ -8,9 +8,10 @@ ms.custom:
 ms.date: 11/16/2020
 ms.subservice: teams
 ms.author: nhelgren
-ms.reviewer: matp
+ms.reviewer: joshuapa
 contributors:
   - mattp123
+reviewer: joshuapartlow
 ---
 
 # Work with table relationships

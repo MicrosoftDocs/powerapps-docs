@@ -4,15 +4,16 @@ description: Learn how to configure an environment to add new canvas apps and cl
 author: ChrisGarty
 contributors:
   - ChrisGarty
-  - mduelae
+  - joshuapartlow
 ms.author: cgarty
-ms.reviewer: angieandrews
+ms.reviewer: joshuapa
 ms.topic: how-to
 ms.custom: canvas, bap-template
 ms.date: 11/6/2025
 ms.subservice: canvas-maker
 search.audienceType: 
   - maker
+reviewer: joshuapartlow
 ---
 
 # Add canvas apps and cloud flows to a solution by default

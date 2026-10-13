@@ -4,7 +4,7 @@ description: Add 3D models from CGTrader into mixed reality controls in your can
 author: anuitz
 ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: mduelae
+ms.reviewer: joshuapa
 ms.date: 3/3/2022
 ms.subservice: canvas-maker
 ms.author: anuitz
@@ -12,8 +12,9 @@ search.audienceType:
   - maker
 contributors:
   - olidum
-  - mduelae
+  - joshuapartlow
   - anuitz
+reviewer: joshuapartlow
 ---
 
 # Load 3D models from CGTrader into mixed reality controls (preview)

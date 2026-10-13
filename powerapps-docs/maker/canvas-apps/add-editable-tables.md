@@ -5,14 +5,15 @@ author: yogeshgupta698
 
 ms.topic: tutorial
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 05/11/2025
 ms.subservice: canvas-maker
 ms.author: yogupt
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
+reviewer: joshuapartlow
 ---
 
 # Create an app to edit tables in canvas apps

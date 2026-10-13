@@ -10,12 +10,13 @@ ms.subservice: canvas-maker
 ms.author: jasongre
 
 
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 search.audienceType: 
   - maker
 contributors:
   - jasongre
   - noazarur-microsoft
+reviewer: joshuapartlow
   
 ---
 # Table modern control in Power Apps (preview)

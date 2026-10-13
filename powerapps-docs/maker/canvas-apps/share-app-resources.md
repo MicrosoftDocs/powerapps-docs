@@ -5,16 +5,17 @@ author: lancedMicrosoft
 
 ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 7/8/2025
 ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - alaug
   - lancedmicrosoft
+reviewer: joshuapartlow
 ---
 # Share resources used by canvas apps
 

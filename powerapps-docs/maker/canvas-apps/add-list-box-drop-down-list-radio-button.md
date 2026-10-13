@@ -5,14 +5,15 @@ author: chmoncay
 ms.author: chmoncay
 ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 01/24/2022
 ms.subservice: canvas-maker
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - chmoncay
+reviewer: joshuapartlow
 ---
 # Add a list box, a drop-down list, a combo box, or radio buttons to a canvas app
 

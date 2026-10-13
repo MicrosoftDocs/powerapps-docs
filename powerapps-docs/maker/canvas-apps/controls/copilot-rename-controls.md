@@ -6,7 +6,7 @@ ms.topic: how-to
 ms.collection:
   - bap-ai-copilot
   - get started
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 5/29/2025
 ms.update-cycle: 180-days
 ms.subservice: canvas-maker
@@ -14,11 +14,12 @@ ms.author: mamali
 search.audienceType:
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
 ms.custom:
   - canvas
   - ignite-2024
 ai-usage: ai-assisted
+reviewer: joshuapartlow
 ---
 
 # Rename controls in canvas apps with Copilot (preview)

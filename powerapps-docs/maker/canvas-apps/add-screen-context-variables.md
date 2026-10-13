@@ -9,11 +9,13 @@ ms.subservice: canvas-maker
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
 ai-usage: ai-assisted
 ms.custom:
   - canvas
   - ai-gen-diyeditor
+ms.reviewer: joshuapa
+reviewer: joshuapartlow
 ---
 
 # Add and navigate screens in canvas apps

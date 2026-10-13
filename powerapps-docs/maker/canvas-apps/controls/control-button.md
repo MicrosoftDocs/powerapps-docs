@@ -8,12 +8,13 @@ ms.custom: canvas
 ms.date: 05/23/2025
 ms.subservice: canvas-maker
 ms.author: yogupt
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - yogeshgupta698
+reviewer: joshuapartlow
 ---
 # Button control in Power Apps
 A control that the user can click or tap to interact with the app.

@@ -8,9 +8,10 @@ ms.custom:
 ms.date: 11/16/2020
 ms.subservice: teams
 ms.author: tapanm
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 contributors:
-  - mduelae
+  - joshuapartlow
+reviewer: joshuapartlow
 ---
 
 # Build an app to retrieve Power Platform videos for readiness

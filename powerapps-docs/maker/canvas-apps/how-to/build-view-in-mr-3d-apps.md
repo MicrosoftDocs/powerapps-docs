@@ -5,15 +5,16 @@ author: Joel-lindstrom
 
 ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 12/09/2021
 ms.author: anuitz
 search.audienceType:
   - maker
 contributors:
     - joel-lindstrom
-    - mduelae
+    - joshuapartlow
     - anuitz
+reviewer: joshuapartlow
 ---
 
 # Create an app with 3D and mixed reality controls

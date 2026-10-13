@@ -4,12 +4,13 @@ description: Learn best practices and recommendations for configuring gallery co
 author: tahoon-ms
 ms.topic: best-practice
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 05/13/2025
 ms.subservice: canvas-maker
 ms.author: tahoon
 search.audienceType: 
   - maker
+reviewer: joshuapartlow
 ---
 # Best practices for using the Gallery control in canvas apps
 

@@ -1,21 +1,22 @@
 ---
 title: Test Studio
 description: Describes Test Studio with overview, terminology, best practices, and limitations.
-author: mduelae
+author: joshuapartlow
 
 ms.topic: concept-article
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 05/21/2025
 ms.subservice: canvas-maker
-ms.author: mkaur
+ms.author: joshuapa
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - ChrisBal-MSFT
   - maustinjones
 ms.custom: canvas
 ms.collection: get-started
+reviewer: joshuapartlow
 ---
 
 # Test Studio

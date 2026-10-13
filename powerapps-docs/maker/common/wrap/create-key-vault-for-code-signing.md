@@ -11,7 +11,7 @@ ms.author: murugeshs
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
 ---
 
 # Set up Azure Key Vault for wrap wizard code signing

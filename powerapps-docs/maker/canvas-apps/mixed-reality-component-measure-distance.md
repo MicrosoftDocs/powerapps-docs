@@ -5,15 +5,16 @@ author: anuitz
 ms.topic: how-to
 ms.custom: canvas
 ms.date: 3/4/2022
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - anuitz
   - Alex-MSFT
+reviewer: joshuapartlow
 ---
 # Take measurements in mixed reality
 

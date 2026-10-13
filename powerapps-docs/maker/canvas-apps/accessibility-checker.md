@@ -10,7 +10,9 @@ ms.author: emcoope
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
+ms.reviewer: joshuapa
+reviewer: joshuapartlow
 ---
 
 # Review a canvas app for accessibility in Power Apps

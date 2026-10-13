@@ -5,16 +5,17 @@ author: anuitz
 ms.service: powerapps
 ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: anuitz
+ms.reviewer: joshuapa
 ms.date: 03/04/2022
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - anuitz
   - alex-msft
+reviewer: joshuapartlow
 ---
 
 # Test whether an object will fit in a space using mixed reality

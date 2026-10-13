@@ -5,15 +5,16 @@ author: gregli-msft
 
 ms.topic: article
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 10/25/2016
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - gregli-msft
+reviewer: joshuapartlow
 ---
 # Build global support into canvas apps
 Power Apps is a global product. You can build and use canvas apps in many different languages and regions.

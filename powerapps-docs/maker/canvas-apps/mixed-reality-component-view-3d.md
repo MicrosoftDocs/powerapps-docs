@@ -4,15 +4,16 @@ description: View 3D models in Power Apps.
 author: anuitz
 ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: mduelae
+ms.reviewer: joshuapa
 ms.date: 02/15/2022
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - anuitz
+reviewer: joshuapartlow
 ---
 
 # View 3D content in Power Apps

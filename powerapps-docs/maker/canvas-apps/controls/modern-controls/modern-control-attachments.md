@@ -11,6 +11,7 @@ ms.reviewer: joshuapa
 ai-usage: ai-generated
 search.audienceType:
   - maker
+reviewer: joshuapartlow
 ---
 
 # Attachments modern control in canvas apps (preview)

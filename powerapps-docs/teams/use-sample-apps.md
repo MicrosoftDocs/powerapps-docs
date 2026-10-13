@@ -9,9 +9,10 @@ ai-usage: ai-assisted
 ms.date: 05/20/2026
 ms.subservice: teams
 ms.author: saperlmu
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 contributors:
-  - mduelae
+  - joshuapartlow
+reviewer: joshuapartlow
 ---
 
 # Use sample app templates in Microsoft Teams

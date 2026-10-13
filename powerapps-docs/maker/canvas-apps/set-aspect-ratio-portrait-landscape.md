@@ -5,15 +5,16 @@ author: emcoope-MSFT
 
 ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 5/21/2025
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - emcoope-msft
+reviewer: joshuapartlow
 ---
 # Change screen size and orientation of canvas apps
 

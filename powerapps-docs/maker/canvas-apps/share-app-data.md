@@ -5,15 +5,16 @@ author: jamesol-msft
 
 ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 10/16/2016
 ms.subservice: canvas-maker
 ms.author: jamesol
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - lancedmicrosoft
+reviewer: joshuapartlow
 ---
 # Share Excel data used by your app
 

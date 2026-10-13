@@ -2,14 +2,14 @@
 title: FAQ for plans in Power Apps
 description: FAQ that discusses plans in Power Apps and the key considerations for making use of this technology responsibly.
 author: norliu
-contributors: mduelae 
+contributors: joshuapartlow
 ms.custom:
   - responsible-ai-faqs
 ms.topic: faq
 ms.date: 03/04/2026
 ms.update-cycle: 180-days
 ms.author: norliu
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.collection: 
     - bap-ai-copilot
 ---

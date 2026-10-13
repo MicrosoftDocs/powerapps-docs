@@ -2,12 +2,12 @@
 title: Use plans to simplify process diagrams
 description: Discover how to use plans to generate process diagrams that enhance clarity and efficiency in complex workflows.
 author: szlo
-contributors: mduelae
+contributors: joshuapartlow
 ms.topic: how-to
 ms.date: 01/12/2026
 ms.update-cycle: 180-days
-ms.author: mkaur
-ms.reviewer: mkaur
+ms.author: joshuapa
+ms.reviewer: joshuapa
 ms.collection:
   - bap-ai-copilot
 ms.custom:
@@ -17,6 +17,7 @@ ms.custom:
   - copilot-scenario-highlight
   - ai-seo-date:05/05/2025
   - ai-gen-description
+reviewer: joshuapartlow
 ---
 
 # Generate process diagrams

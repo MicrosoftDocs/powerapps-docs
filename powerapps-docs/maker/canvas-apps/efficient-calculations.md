@@ -6,12 +6,13 @@ ms.subservice: canvas-developer
 ms.topic: how-to
 ms.date: 12/01/2023
 ms.author: lanced
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 search.audienceType:
   - maker
 contributors:
   - lancedMicrosoft
-  - mduelae
+  - joshuapartlow
+reviewer: joshuapartlow
   
 ---
 # Fast calculations

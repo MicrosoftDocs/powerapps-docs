@@ -4,15 +4,16 @@ description: Add pins to 3D objects in canvas apps using Power Apps Studio.
 author: anuitz
 ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: mduelae
+ms.reviewer: joshuapa
 ms.date: 3/3/2022
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - anuitz
+reviewer: joshuapartlow
 ---
 
 # Add pins to 3D models in Power Apps

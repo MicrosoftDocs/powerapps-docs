@@ -6,11 +6,12 @@ ms.topic: how-to
 ms.date: 8/14/2025
 ms.subservice: canvas-maker
 ms.author: hillaryyaory
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 search.audienceType: 
   - maker
 contributors:
   - noazarur-microsoft
+reviewer: joshuapartlow
 ---
 
 # Build an AI agent to automate your business process

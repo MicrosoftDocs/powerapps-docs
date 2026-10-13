@@ -4,15 +4,16 @@ description: Add customized pins to your map control in Power Apps by using a da
 author: anuitz
 ms.topic: how-to
 ms.custom: canvas, ce06122020
-ms.reviewer: mduelae
+ms.reviewer: joshuapa
 ms.date: 3/2/2021
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - anuitz
+reviewer: joshuapartlow
 ---
 
 

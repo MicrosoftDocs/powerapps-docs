@@ -7,12 +7,13 @@ ms.topic: how-to
 ms.date: 10/1/2024
 ms.subservice: canvas-maker
 ms.author: caburk
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - caburk
+reviewer: joshuapartlow
 ---
 
 # Export and import canvas apps as a package

@@ -9,14 +9,15 @@ ms.date: 1/16/2024
 ms.subservice: canvas-maker
 ms.author: yogupt
 
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 search.audienceType: 
   - maker
 contributors:
   - clromano
-  - mduelae
+  - joshuapartlow
   - yogeshgupta698
   - noazarur-microsoft
+reviewer: joshuapartlow
   
 ---
 # Date picker control in Power Apps

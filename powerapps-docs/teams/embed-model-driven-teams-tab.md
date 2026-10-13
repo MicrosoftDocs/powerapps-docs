@@ -8,10 +8,11 @@ ms.date: 03/31/2026
 ms.subservice: teams
 ms.author: matp
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: joshuapa
 ms.assetid: 
 contributors: sriharibs-msft
   - mattp123
+reviewer: joshuapartlow
 ---
 
 # Embed a model-driven app as tab app in Teams (preview)

@@ -8,13 +8,14 @@ ms.custom: canvas
 ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: vabhavir
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 search.audienceType: 
   - maker
 contributors:
   - vasavib
-  - mduelae
+  - joshuapartlow
   - lancedMicrosoft
+reviewer: joshuapartlow
 ---
 
 # Connect to Azure Blob Storage from Power Apps

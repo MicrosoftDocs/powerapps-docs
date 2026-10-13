@@ -4,15 +4,16 @@ description: Learn about connecting to Power BI from Power Apps.
 author: lancedMicrosoft
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 10/12/2016
 ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - lancedmicrosoft
+reviewer: joshuapartlow
 ---
 # Connect to Power BI from Power Apps
 

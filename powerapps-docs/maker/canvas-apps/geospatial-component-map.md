@@ -5,14 +5,15 @@ author: anuitz
 ms.topic: how-to
 ms.custom: canvas, ce06122020
 ms.date: 3/3/2022
-ms.reviewer: mduelae
+ms.reviewer: joshuapa
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - anuitz
+reviewer: joshuapartlow
 ---
 
 # Interactive map control

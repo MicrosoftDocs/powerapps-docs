@@ -4,15 +4,16 @@ description: Learn how to use inline actions while you’re building a canvas ap
 author: tashaev
 ms.topic: article
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 10/29/2024
 ms.subservice: canvas-maker
 ms.author: tashas
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - tashas
+reviewer: joshuapartlow
   
 ---
 

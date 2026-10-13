@@ -8,7 +8,7 @@ ms.custom:
 ms.topic: faq
 author: norliu
 ms.author: norliu
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 contributors:
 - Mattp123
 ms.collection: 

@@ -8,12 +8,13 @@ ms.custom: canvas
 ms.date: 03/25/2024
 ms.subservice: canvas-maker
 ms.author: yogupt
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - yogeshgupta698
+reviewer: joshuapartlow
 ---
 # Add picture control in canvas apps
 

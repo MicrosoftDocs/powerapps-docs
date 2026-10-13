@@ -5,15 +5,16 @@ author: gregli-msft
 
 ms.topic: overview
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 05/17/2019
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - gregli-msft
+reviewer: joshuapartlow
 ---
 # Overview of the canvas app for Northwind Traders
 

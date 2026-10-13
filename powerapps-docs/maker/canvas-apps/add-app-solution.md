@@ -5,15 +5,16 @@ author: caburk
 
 ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 10/21/2021
 ms.subservice: canvas-maker
 ms.author: caburk
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - caburk
+reviewer: joshuapartlow
 ---
 
 # Create a canvas app from within a solution

@@ -8,12 +8,13 @@ ms.custom: canvas
 ms.date: 10/25/2016
 ms.subservice: canvas-maker
 ms.author: yogupt
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - yogeshgupta698
+reviewer: joshuapartlow
 ---
 # Column chart and Line chart controls in Power Apps
 Controls that show data as graphs with x- and y-axes.

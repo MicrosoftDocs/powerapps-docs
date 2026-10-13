@@ -5,15 +5,16 @@ author: anuitz
 ms.topic: how-to
 ms.custom: canvas
 ms.date: 03/4/2022
-ms.reviewer: mduelae
+ms.reviewer: joshuapa
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - anuitz
   - CoPrez
+reviewer: joshuapartlow
 ---
 
 # Take and upload mixed-reality photos

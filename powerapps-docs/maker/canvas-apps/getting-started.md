@@ -1,12 +1,12 @@
 ---
 title: Complete guide to building canvas applications
 description: Learn to build custom canvas apps in Power Apps without coding. Create business applications that connect to data sources, work across devices, and streamline workflows. Start building today.
-author: mduelae
+author: joshuapartlow
 
 ms.topic: concept-article
 ms.custom: canvas
 ms.collection: get-started
-ms.reviewer: 
+ms.reviewer: joshuapa
 ms.date: 04/15/2026
 ms.subservice: canvas-maker
 ms.author: tapanm
@@ -15,7 +15,8 @@ search.audienceType:
 searchScope:
   - "Power Apps"
 contributors:
-  - mduelae
+  - joshuapartlow
+reviewer: joshuapartlow
 ---
 # What are canvas apps?
 

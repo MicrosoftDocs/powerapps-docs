@@ -1,12 +1,12 @@
 ---
 title: Build apps through conversation with Copilot 
 description: Build apps easily with AI in Microsoft Power Apps. Describe the information you want to collect, track, or show in your app, and Copilot creates Dataverse tables and guides you through the process.
-author: mduelae
+author: joshuapartlow
 ms.topic: how-to
 ms.collection:
   - bap-ai-copilot
   - get started
-ms.reviewer:
+ms.reviewer: joshuapa
 ms.date: 04/10/2026
 ms.update-cycle: 180-days
 ms.subservice: canvas-maker
@@ -14,7 +14,7 @@ ms.author: tapanm
 search.audienceType:
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
 ms.custom:
   - canvas
   - ai-gen-docs-bap
@@ -23,6 +23,7 @@ ms.custom:
   - ai-seo-date:08/28/2024
   - copilot-scenario-highlight
 ai-usage: ai-assisted
+reviewer: joshuapartlow
 ---
 
 # Build apps through conversation with Copilot

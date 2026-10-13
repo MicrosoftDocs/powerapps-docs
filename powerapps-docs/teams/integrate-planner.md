@@ -6,11 +6,12 @@ ms.topic: how-to
 ms.subservice: teams
 ms.date: 08/25/2021
 ms.author: saperlmu
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 contributors:
   - joel-lindstrom
   - msftsamperl
-  - mduelae
+  - joshuapartlow
+reviewer: joshuapartlow
 ---
 
 # Integrate with Microsoft Planner

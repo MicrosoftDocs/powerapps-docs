@@ -3,7 +3,7 @@ title: Create accessible canvas apps
 description: How to make canvas apps accessible for people with disabilities
 author: chmoncay
 ms.topic: article
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 09/06/2022
 ms.subservice: canvas-maker
 ms.author: fikaradz
@@ -12,9 +12,10 @@ search.audienceType:
 contributors:
   - chmoncay
   - tahoon-ms
-  - mduelae
+  - joshuapartlow
 ms.custom: canvas
 ms.collection: get-started
+reviewer: joshuapartlow
 ---
 # Create accessible canvas apps
 

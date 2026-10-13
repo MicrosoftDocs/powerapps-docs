@@ -4,16 +4,17 @@ description: Learn how to use the Search pane inside Power Apps Studio to find t
 author: TashasEv
 ms.topic: article
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 06/29/2022
 ms.subservice: canvas-maker
 ms.author: tashas
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - TashasEv
-  - mduelae
+  - joshuapartlow
+reviewer: joshuapartlow
 ---
 
 

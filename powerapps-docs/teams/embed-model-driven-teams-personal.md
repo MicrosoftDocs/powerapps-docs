@@ -5,13 +5,14 @@ author: aorth
 ms.topic: how-to
 ms.custom: model
 ms.collection: get-started
-ms.reviewer: matp
+ms.reviewer: joshuapa
 ms.date: 03/31/2026
 ms.subservice: teams
 ms.author: aorth
 search.audienceType: 
   - maker
 contributors:
+reviewer: joshuapartlow
 ---
 # Embed a model-driven app as personal app in Teams (preview)
 
