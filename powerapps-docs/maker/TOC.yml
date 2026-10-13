@@ -257,15 +257,19 @@
     href: ../user/use-outlook-app.md
 - name: New vibe experience (preview)
   items:
+  - name: Vibe app migration
+    items:
+    - name: Migrate apps from Power Apps vibe
+      href: ../vibe/migrate-apps.md
+    - name: Convert a vibe app to a code app
+      href: ../vibe/convert-vibe-to-code.md
   - name: Overview
-    href:   ../vibe/overview.md
-  - name:  Convert a vibe app to a code app
-    href: ../vibe/convert-vibe-to-code.md 
-  - name: Create apps, data, and plans using vibe 
+    href: ../vibe/overview.md
+  - name: Create app, data, and plans using vibe
     href: ../vibe/create-app-data-plan.md
-  - name: Add a SharePoint list in Power Apps vibe
+  - name: Add a SharePoint list
     href: ../vibe/add-data-source-sharepoint-lists.md
-  - name: Released versions 
+  - name: Released versions
     href: /power-platform/released-versions/new-powerapps
 - name: Plans  
   items:
