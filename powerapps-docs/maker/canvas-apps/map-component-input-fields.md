@@ -6,13 +6,14 @@ ms.subservice: canvas-developer
 ms.topic: how-to
 ms.date: 06/01/2022
 ms.author: jorisde
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 search.audienceType:
   - maker
 contributors:
   - jorisdg
-  - mduelae
+  - joshuapartlow
   - gregli-msft
+reviewer: joshuapartlow
 ---
 
 # Map input fields of a component

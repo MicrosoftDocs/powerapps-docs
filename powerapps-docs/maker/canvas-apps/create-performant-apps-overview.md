@@ -11,8 +11,9 @@ search.audienceType:
   - maker
 contributors:
   - lancedMicrosoft
-  - mduelae
+  - joshuapartlow
 ai-usage: ai-assisted 
+reviewer: joshuapartlow
 ---
 
 # Overview of creating performant apps

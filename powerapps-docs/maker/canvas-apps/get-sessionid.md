@@ -1,18 +1,19 @@
 ---
 title: Get the session or app ID
 description: Learn about how to get a session ID or a canvas-app ID for troubleshooting.
-author: mduelae
+author: joshuapartlow
 ms.subservice: troubleshoot
 ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: 
+ms.reviewer: joshuapa
 ms.date: 06/02/2025
 ms.author: tapanm
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - vamseedillimsft
+reviewer: joshuapartlow
 ---
 # Get session and app ID details
 

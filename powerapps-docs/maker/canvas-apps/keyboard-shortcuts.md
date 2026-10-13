@@ -5,14 +5,15 @@ author: TashasEv
 
 ms.topic: article
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 01/22/2026
 ms.subservice: canvas-maker
 ms.author: tashas
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
+reviewer: joshuapartlow
 ---
 # Keyboard shortcuts for canvas apps
 

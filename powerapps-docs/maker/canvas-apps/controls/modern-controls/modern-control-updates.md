@@ -10,6 +10,7 @@ ms.author: yogupt
 ms.reviewer: joshuapa
 search.audienceType:
   - maker
+reviewer: joshuapartlow
 ---
 
 # Recent updates to modern controls in canvas apps

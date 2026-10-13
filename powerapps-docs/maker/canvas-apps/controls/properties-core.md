@@ -5,16 +5,17 @@ author: gregli-msft
 
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 7/25/2025
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - yogeshgupta698
   - gregli-msft
+reviewer: joshuapartlow
 ---
 # Core properties in Power Apps
 Configure whether the user can see and interact with a control.

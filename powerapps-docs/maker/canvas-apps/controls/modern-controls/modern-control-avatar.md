@@ -13,6 +13,7 @@ search.audienceType:
 contributors:
   - jasongre
   - yogeshgupta698
+reviewer: joshuapartlow
 ---
 
 # Avatar modern control in canvas apps

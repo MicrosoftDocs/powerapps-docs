@@ -5,12 +5,13 @@ author: tapanm-msft
 ms.subservice: common
 ms.topic: whats-new
 ms.custom: 
-ms.reviewer: 
+ms.reviewer: joshuapa
 ms.date: 08/14/2024
 ms.author: tapanm
 contributors:
   - tapanm-msft
-  - mduelae
+  - joshuapartlow
+reviewer: joshuapartlow
 ---
 
 # What's new in Power Apps?

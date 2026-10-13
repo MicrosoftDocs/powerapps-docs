@@ -5,15 +5,16 @@ author: joel-lindstrom
 
 ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: mduelae
+ms.reviewer: joshuapa
 ms.date: 03/3/2022
 ms.author: anuitz
 search.audienceType:
   - maker
 contributors:
     - joel-lindstrom
-    - mduelae
+    - joshuapartlow
     - anuitz
+reviewer: joshuapartlow
 ---
 
 # Create an app with address input and map controls

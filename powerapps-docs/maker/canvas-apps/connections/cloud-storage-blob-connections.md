@@ -8,12 +8,13 @@ ms.custom: canvas
 ms.date: 03/15/2021
 ms.subservice: canvas-maker
 ms.author: lanced
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - lancedmicrosoft
+reviewer: joshuapartlow
 ---
 # Connect to cloud-storage from Power Apps
 

@@ -5,15 +5,16 @@ author: TashasEv
 
 ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 12/11/2023
 ms.subservice: canvas-maker
 ms.author: tashas
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - TashasEv
+reviewer: joshuapartlow
 ---
 
 # Use Find and Replace in the formula bar

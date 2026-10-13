@@ -12,14 +12,15 @@ author: "Mattp123"
 ms.assetid: 
 ms.subservice: canvas-maker
 ms.author: matp
-ms.reviewer: 
+ms.reviewer: joshuapa
 ms.suite: 
 ms.tgt_pltfrm: 
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - mattp123
+reviewer: joshuapartlow
 ---
 # Display a full-sized image on a canvas app form
 By default,	when an app user adds an image to display to a form in a canvas app, the image displayed is the thumbnail image. To display a full image for a canvas app, follow these steps: 

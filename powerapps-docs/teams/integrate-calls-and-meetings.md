@@ -6,11 +6,12 @@ ms.topic: how-to
 ms.subservice: teams 
 ms.date: 08/25/2021
 ms.author: saperlmu
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 contributors:
-    - mduelae
+    - joshuapartlow
     - msftsamperl
     - joel-lindstrom
+reviewer: joshuapartlow
 ---
 # Integrate with calls and meetings
 

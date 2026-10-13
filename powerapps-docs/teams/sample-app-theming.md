@@ -6,11 +6,12 @@ ms.topic: how-to
 ms.subservice: teams 
 ms.date: 08/05/2021
 ms.author: saperlmu
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 contributors:
-  - mduelae
+  - joshuapartlow
   - msftsamperl
   - joel-lindstrom
+reviewer: joshuapartlow
 ---
 
 # Theming in sample app templates

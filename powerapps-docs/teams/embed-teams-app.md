@@ -6,7 +6,7 @@ ms.topic: how-to
 ms.custom: canvas
 ms.collection: get-started
 ai-usage: ai-assisted
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 05/20/2026
 ms.subservice: teams
 ms.author: mabolan
@@ -15,7 +15,8 @@ search.audienceType:
 contributors:
   - alaug
   - msftsamperl
-  - mduelae
+  - joshuapartlow
+reviewer: joshuapartlow
 ---
 # Embed a canvas app as personal app in Teams
 

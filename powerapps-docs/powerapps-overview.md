@@ -6,14 +6,15 @@ ms.subservice: common
 ms.topic: overview
 ms.date: 11/17/2025
 ms.author: tapanm
-ms.reviewer: tapanm
+ms.reviewer: joshuapa
 searchScope:
   - "Power Apps"
 contributors:
-  - mduelae
+  - joshuapartlow
   - tapanm-msft
   - evlew
   - Mattp123
+reviewer: joshuapartlow
 ---
 # What is Power Apps?
 

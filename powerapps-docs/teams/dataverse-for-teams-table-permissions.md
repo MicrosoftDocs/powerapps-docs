@@ -6,11 +6,12 @@ ms.topic: how-to
 ms.subservice: teams 
 ms.date: 08/19/2021
 ms.author: saperlmu
-ms.reviewer: mkaur-msft
+ms.reviewer: joshuapa
 contributors:
-  - mduelae
+  - joshuapartlow
   - msftsamperl
   - joel-lindstrom
+reviewer: joshuapartlow
 ---
 
 # Granting permission to tables in Dataverse for Microsoft Teams

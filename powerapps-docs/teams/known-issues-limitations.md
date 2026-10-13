@@ -8,15 +8,16 @@ ms.custom:
 ms.date: 02/02/2022
 ms.subservice: teams
 ms.author: mabolan
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 contributors:
-  - mduelae
+  - joshuapartlow
   - matthewbolanos
   - msftman
   - amchern
   - hemantgaur
   - carrema
   - jordanchodak
+reviewer: joshuapartlow
 ---
 # Known issues and limitations
 

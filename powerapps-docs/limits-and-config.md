@@ -4,7 +4,7 @@ description: Learn about device platform and web browser requirements, limits, a
 author: lancedMicrosoft
 ms.topic: article
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 01/12/2026
 ms.update-cycle: 180-days
 ms.subservice: canvas-maker
@@ -12,7 +12,7 @@ ms.author: gregli
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - lancedmicrosoft
   - alaug
   - amchern
@@ -21,6 +21,7 @@ ms.contributors:
 - norliu
 ms.collection: 
     - bap-ai-copilot
+reviewer: joshuapartlow
 ---
 # System requirements, limits, and configuration values for Power Apps
 

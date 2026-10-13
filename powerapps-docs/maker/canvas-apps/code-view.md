@@ -5,7 +5,7 @@ author: marcelbf
 ms.author: marcelbf
 ms.date: 5/20/2025
 ms.topic: how-to
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.subservice: canvas-maker
 ms.collection: get-started
 search.audienceType: 
@@ -15,6 +15,7 @@ ai-usage: ai-assisted
 ms.custom:
   - canvas
   - ai-gen-diyeditor
+reviewer: joshuapartlow
 ---
 
 # Use code view for canvas app controls 

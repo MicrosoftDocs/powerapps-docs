@@ -8,12 +8,13 @@ ms.custom: canvas
 ms.date: 09/13/2016
 ms.subservice: canvas-maker
 ms.author: lanced
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - lancedmicrosoft
+reviewer: joshuapartlow
 ---
 # Connect to Dynamics AX from Power Apps
 ![Dynamics AX Online.](./media/connection-dynamicsax/dynamics-ax.png)

@@ -8,7 +8,8 @@ ms.custom:
 ms.date: 12/14/2020
 ms.subservice: teams
 ms.author: saperlmu
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
+reviewer: joshuapartlow
 ---
 
 # Customize sample app templates 

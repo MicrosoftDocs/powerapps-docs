@@ -6,12 +6,13 @@ ms.subservice: canvas-developer
 ms.topic: how-to
 ms.date: 01/05/2024
 ms.author: lanced
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 search.audienceType:
   - maker
 contributors:
   - lancedMicrosoft
-  - mduelae
+  - joshuapartlow
+reviewer: joshuapartlow
   
 ---
 # Optimize app or page load for peak performance

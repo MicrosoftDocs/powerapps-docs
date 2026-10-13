@@ -5,7 +5,7 @@ author: anuitz
 ms.service: powerapps
 ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: anuitz
+ms.reviewer: joshuapa
 ms.date: 06/08/2022
 ms.subservice: canvas-maker
 ms.author: altran
@@ -14,6 +14,7 @@ search.audienceType:
 contributors:
   - altran
   - anuitz
+reviewer: joshuapartlow
 ---
 
 # Use marker detection with mixed-reality controls (preview)

@@ -8,9 +8,10 @@ ms.custom:
 ms.date: 05/13/2021
 ms.subservice: teams
 ms.author: lanced
-ms.reviewer: matp
+ms.reviewer: joshuapa
 contributors:
   - mattp123
+reviewer: joshuapartlow
 ---
 
 # Edit table data in Excel and publish it back to Dataverse for Teams

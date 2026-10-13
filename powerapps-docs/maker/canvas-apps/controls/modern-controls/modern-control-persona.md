@@ -13,6 +13,7 @@ search.audienceType:
   - maker
 contributors:
   - yogeshgupta698
+reviewer: joshuapartlow
 ---
 
 # Persona modern control in canvas apps (Preview)

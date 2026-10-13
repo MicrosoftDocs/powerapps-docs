@@ -6,14 +6,15 @@ ms.service: powerapps
 ms.topic: overview
 ms.custom: canvas, ce06122020
 ms.date: 03/3/2022
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - anuitz
+reviewer: joshuapartlow
 ---
 
 # Add geospatial controls to your canvas apps

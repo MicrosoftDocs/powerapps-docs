@@ -8,12 +8,13 @@ ms.custom: canvas
 ms.date: 3/20/2025
 ms.subservice: canvas-maker
 ms.author: norliu
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 search.audienceType: 
   - maker
 contributors:
   - norliu
-  - mduelae
+  - joshuapartlow
+reviewer: joshuapartlow
 ---
 
 # Power Apps Ideas

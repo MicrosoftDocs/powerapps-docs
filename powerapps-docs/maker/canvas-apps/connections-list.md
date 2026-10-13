@@ -5,16 +5,17 @@ author: lancedMicrosoft
 ms.topic: overview
 ms.custom: canvas
 ms.collection: get-started
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 01/13/2026
 ms.subservice: canvas-maker
-ms.author: mkaur
+ms.author: joshuapa
 search.audienceType: 
   - maker
 contributors:
   - lancedMicrosoft
-  - mduelae
+  - joshuapartlow
   - alaug
+reviewer: joshuapartlow
 ---
 
 # Overview of connectors for canvas apps

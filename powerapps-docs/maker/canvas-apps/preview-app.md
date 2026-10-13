@@ -5,15 +5,16 @@ author: tashaev
 
 ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 05/18/2023
 ms.subservice: canvas-maker
 ms.author: tashas
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - tashas
+reviewer: joshuapartlow
 ---
 # Preview an app
 

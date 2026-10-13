@@ -1,7 +1,7 @@
 ---
 title: Copilot in Power Apps overview
 description: Copilot in Power Apps helps you build apps easily using natural language. Discover how to create apps faster and boost productivity. Try Copilot today!
-author: mduelae
+author: joshuapartlow
 ms.author: tapanm
 ms.topic: article
 ms.custom: 
@@ -11,7 +11,7 @@ ms.custom:
   - ai-gen-desc
   - ai-seo-date: 5/25/2025
 ai-usage: ai-assisted
-ms.reviewer: 
+ms.reviewer: joshuapa
 ms.date: 01/21/2026
 ms.update-cycle: 180-days
 ms.subservice: canvas-maker
@@ -21,8 +21,9 @@ ms.collection:
     - bap-ai-copilot
     - get started
 contributors:
-  - mduelae
+  - joshuapartlow
   - Mattp123
+reviewer: joshuapartlow
 ---
 
 # Copilot in Power Apps overview 

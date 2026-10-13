@@ -9,11 +9,13 @@ metadata:
   ms.subservice: canvas-maker
   ms.topic: landing-page
   ms.collection: collection
-  author: mduelae
+  author: joshuapartlow
   ms.author: tapanm
   ms.date: 11/11/2025
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+  ms.reviewer: joshuapa
+  reviewer: joshuapartlow
 
 landingContent:
 

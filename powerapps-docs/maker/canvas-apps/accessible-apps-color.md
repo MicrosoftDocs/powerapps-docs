@@ -5,7 +5,7 @@ author: tahoon-ms
 
 ms.topic: article
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 05/19/2021
 ms.subservice: canvas-maker
 ms.author: tahoon
@@ -13,8 +13,9 @@ search.audienceType:
   - maker
 contributors:
   - tahoon-ms
-  - mduelae
+  - joshuapartlow
   - chmoncay
+reviewer: joshuapartlow
 ---
 # Accessible colors for canvas apps
 

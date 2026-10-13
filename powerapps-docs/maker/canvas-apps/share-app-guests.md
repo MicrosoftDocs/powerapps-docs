@@ -4,15 +4,16 @@ description: Learn about how to share canvas app with guest users.
 author: alaug
 ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 6/27/2025
 ms.subservice: canvas-maker
 ms.author: alaug
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - alaug
+reviewer: joshuapartlow
 ---
 
 # Share a canvas app with guest users

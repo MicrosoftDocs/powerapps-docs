@@ -5,15 +5,16 @@ author: lancedMicrosoft
 
 ms.topic: article
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 01/24/2024
 ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - lancedmicrosoft
+reviewer: joshuapartlow
 ---
 # Microsoft Dataverse and the improve data source experience
 

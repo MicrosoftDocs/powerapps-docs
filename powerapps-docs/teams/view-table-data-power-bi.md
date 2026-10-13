@@ -7,9 +7,10 @@ ms.custom:
 ms.date: 02/28/2023
 ms.subservice: teams
 ms.author: richdi
-ms.reviewer: matp
+ms.reviewer: joshuapa
 contributors:
   - mattp123
+reviewer: joshuapartlow
 ---
 # View Dataverse for Teams table data in Power BI Desktop
 

@@ -7,9 +7,10 @@ ms.topic: article
 ms.custom: 
 ms.date: 07/20/2026
 ms.subservice: teams
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 contributors:
-  - mduelae
+  - joshuapartlow
+reviewer: joshuapartlow
 ---
 
 # Use Fluent UI controls

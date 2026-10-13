@@ -11,9 +11,10 @@ ms.reviewer: joshuapa
 search.audienceType:
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - yogeshgupta698
   - noazarur-microsoft
+reviewer: joshuapartlow
 ---
 
 # Progress bar modern control in canvas apps

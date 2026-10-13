@@ -8,10 +8,11 @@ ms.custom:
 ms.date: 10/05/2020
 ms.subservice: teams
 ms.author: saperlmu
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 contributors:
   - msftsamperl
-  - mduelae
+  - joshuapartlow
+reviewer: joshuapartlow
 ---
 
 # Frequently Asked Questions (FAQs) for sample app templates

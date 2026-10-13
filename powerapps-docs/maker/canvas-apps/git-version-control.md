@@ -4,18 +4,19 @@ description: Learn how to disconnect Git version control to edit canvas app
 author: angela21k
 ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 5/14/2025
 ms.subservice: canvas-maker
 ms.author: angelakim
 search.audienceType:
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - angela21k
   - gregli-msft
-  - mkaur-msft
+  - joshuapa
   - gesnaaggarwal
+reviewer: joshuapartlow
 ---
 
 # Disconnect Git version control to edit canvas apps 

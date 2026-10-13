@@ -4,14 +4,15 @@ description: Learn to use the PDF function in Microsoft Power Apps to generate a
 ms.date: 04/07/2023
 ms.author: tashas
 author: tashaev
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.topic: how-to
 ms.custom: canvas, bap-template
 search.audienceType:
   - maker
 contributors:
     - tashaev
-    - mduelae  
+    - joshuapartlow
+reviewer: joshuapartlow
 ---
 
 # Work with the PDF function (experimental)

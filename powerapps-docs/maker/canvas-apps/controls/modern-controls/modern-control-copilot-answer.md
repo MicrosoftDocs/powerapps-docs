@@ -8,12 +8,13 @@ ms.component: canvas
 ms.date: 2/23/2026
 ms.subservice: canvas-maker
 ms.author: yogupt
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - yogeshgupta698
+reviewer: joshuapartlow
   
 ---
 # Copilot answer modern control in Power Apps (preview)

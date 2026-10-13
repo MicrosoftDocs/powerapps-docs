@@ -4,15 +4,16 @@ description: Learn about the details, properties and examples of the combo box c
 author: yogeshgupta698
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 05/23/2025
 ms.subservice: canvas-maker
 ms.author: yogupt
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - yogeshgupta698
+reviewer: joshuapartlow
 ---
 
 # Combo box control in Power Apps

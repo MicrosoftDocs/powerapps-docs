@@ -5,8 +5,9 @@ author: szlo
 contributors:  
 ms.topic: how-to  
 ms.date: 11/4/2025  
-ms.author: mkaur  
-ms.reviewer: mkaur  
+ms.author: joshuapa
+ms.reviewer: joshuapa
+reviewer: joshuapartlow
 ---  
 
 # Create a plan from a solution

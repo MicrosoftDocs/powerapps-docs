@@ -6,11 +6,12 @@ ms.subservice: teams
 ms.date: 08/05/2021
 author: joel-lindstrom
 ms.author: saperlmu
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 contributors:
   - joel-lindstrom
   - msftsamperl
-  - mduelae
+  - joshuapartlow
+reviewer: joshuapartlow
 ---
 
 # Localize sample app templates

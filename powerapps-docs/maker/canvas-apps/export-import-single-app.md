@@ -6,12 +6,13 @@ ms.topic: how-to
 ms.date: 5/16/2025
 ms.subservice: canvas-maker
 ms.author: caburk
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - caburk
+reviewer: joshuapartlow
 ---
 
 # Export and import a canvas app as a single app file

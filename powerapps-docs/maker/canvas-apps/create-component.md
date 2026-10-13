@@ -6,14 +6,15 @@ ms.subservice: canvas-developer
 ms.topic: how-to
 ms.date: 01/13/2026
 ms.author: jorisde
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 search.audienceType:
   - maker
 contributors:
   - jorisdg
-  - mduelae
+  - joshuapartlow
   - gregli-msft
 ms.collection: get-started
+reviewer: joshuapartlow
 ---
 
 # Canvas component overview

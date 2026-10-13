@@ -6,14 +6,15 @@ author: gregli-msft
 ms.subservice: canvas-developer
 ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: 
+ms.reviewer: joshuapa
 ms.date: 03/11/2025
 ms.author: gregli
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - gregli-msft
+reviewer: joshuapartlow
 ---
 # Integrate canvas apps into websites and other services
 The apps that you build are often most useful when they're available right where people do their work. By embedding canvas apps in an iframe, you can integrate those apps into websites and other services, such as Power BI or SharePoint.

@@ -4,16 +4,17 @@ description: Learn about the details, properties, and examples of the Rich text 
 author: yogeshgupta698
 ms.topic: article
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 02/9/2026
 ms.subservice: canvas-maker
 ms.author: yogupt
 search.audienceType:
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - yogeshgupta698
   - tahoon-ms
+reviewer: joshuapartlow
 ---
 # Rich text editor control in Power Apps
 Let users format text in a WYSIWYG editing area. The output format is HTML.

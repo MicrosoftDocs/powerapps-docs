@@ -5,14 +5,15 @@ author: lancedMicrosoft
 
 ms.topic: concept-article
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 04/02/2025
 ms.subservice: canvas-maker
-ms.author: mkaur
+ms.author: joshuapa
 search.audienceType: 
   - maker
 contributors:
   - lancedMicrosoft
+reviewer: joshuapartlow
 
 ---
 

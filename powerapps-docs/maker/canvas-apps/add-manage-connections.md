@@ -5,16 +5,17 @@ author: lancedMicrosoft
 
 ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 08/27/2025
 ms.subservice: canvas-maker
 ms.author: alaug
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - lancedmicrosoft
   - alaug
+reviewer: joshuapartlow
 ---
 # Manage connections in canvas apps
 

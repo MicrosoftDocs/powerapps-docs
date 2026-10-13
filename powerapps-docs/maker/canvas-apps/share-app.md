@@ -11,9 +11,10 @@ ms.author: szlo
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - alaug
   - szlo
+reviewer: joshuapartlow
 ---
 # Share a canvas app with your organization
 

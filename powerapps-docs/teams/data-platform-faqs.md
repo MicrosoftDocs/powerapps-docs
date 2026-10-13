@@ -7,11 +7,12 @@ ms.topic: faq
 ms.custom: 
 ms.date: 09/22/2020
 ms.subservice: teams
-ms.author: mkaur
-ms.reviewer: mkaur
+ms.author: joshuapa
+ms.reviewer: joshuapa
 contributors:
-  - mkaur
-  - mduelae
+  - joshuapa
+  - joshuapartlow
+reviewer: joshuapartlow
 ---
 # FAQs for Dataverse for Teams 
 

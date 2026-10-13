@@ -6,7 +6,7 @@ ms.author: norliu
 ms.date: 01/21/2026
 ms.update-cycle: 180-days
 ms.topic: article
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.subservice: canvas-maker
 ms.collection:
   - bap-ai-copilot
@@ -20,6 +20,7 @@ ai-usage: ai-assisted
 ms.custom: 
   - ai-gen-diyeditor
   - canvas
+reviewer: joshuapartlow
 ---
 
 # Use field suggestions by Copilot

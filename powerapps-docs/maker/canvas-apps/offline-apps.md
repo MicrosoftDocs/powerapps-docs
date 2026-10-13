@@ -5,14 +5,15 @@ author: mustlaz
 ms.subservice: canvas-developer
 ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 03/18/2024
 ms.author: mustlaz
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - mustlaz
+reviewer: joshuapartlow
 ---
 
 # Develop offline-capable canvas apps

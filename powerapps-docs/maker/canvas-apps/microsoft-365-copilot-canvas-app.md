@@ -1,11 +1,11 @@
 ---
 title: Add Microsoft Copilot Chat for app users in canvas apps (preview)
 description: Learn how to enable Microsoft Copilot Chat in canvas apps to provide AI-powered insights and enhance productivity for your app users.
-author: mduelae
+author: joshuapartlow
 ms.service: powerapps
 ms.subservice: canvas-maker
 ms.author: marcsc
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 06/09/2026
 ms.update-cycle: 180-days
 ms.topic: how-to
@@ -15,8 +15,9 @@ search.audienceType:
   - maker
 contributors:
   - marcsc
-  - mkaur
+  - joshuapa
 ms.collection: bap-ai-copilot
+reviewer: joshuapartlow
 ---
 
 # Add Microsoft Copilot for app users in canvas apps (preview)

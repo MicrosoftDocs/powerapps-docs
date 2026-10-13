@@ -10,13 +10,14 @@ ms.subservice: canvas-maker
 ms.author: yogupt
 
 
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - yogeshgupta698
   - noazarur-microsoft
+reviewer: joshuapartlow
   
 ---
 # Checkbox modern control in Power Apps

@@ -11,7 +11,7 @@ ms.author: murugeshs
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
 ---
 
 # Code sign for Android

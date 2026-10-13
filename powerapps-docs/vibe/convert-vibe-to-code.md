@@ -4,10 +4,11 @@ description: Learn how to download a Power Apps vibe app and convert it to a cod
 ms.topic: how-to
 ms.service: powerapps
 ms.author: jordanchodak
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 author: jordanchodakWork
 ms.date: 09/03/2026
 ms.custom: vibe
+reviewer: joshuapartlow
 ---
 
 # Convert a vibe app to a code app

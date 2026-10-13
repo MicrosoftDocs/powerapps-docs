@@ -4,7 +4,7 @@ description: Learn how to deep link to a specific screen within canvas apps.
 author: vasavib
 ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 07/27/2022
 ms.subservice: canvas-maker
 ms.author: vabhavir
@@ -13,8 +13,9 @@ search.audienceType:
 contributors:
     - TashasEv
     - slaouist
-    - mduelae
+    - joshuapartlow
     - vasavib
+reviewer: joshuapartlow
 ---
 
 # Create a canvas app with deep link to a specific screen

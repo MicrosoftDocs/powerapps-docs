@@ -8,7 +8,7 @@ ms.custom:
 ms.topic: faq
 author: franklanmsft
 ms.author: franklan
-ms.reviewer: mduelae
+ms.reviewer: joshuapartlow
 ms.collection: 
     - bap-ai-copilot
 ---

@@ -10,9 +10,9 @@ ms.custom:
   - ai-seo-date:5/28/2025
   - bap-template
 ms.topic: overview
-author: mduelae
-ms.author: mkaur
-ms.reviewer: mduelae
+author: joshuapartlow
+ms.author: joshuapa
+ms.reviewer: joshuapartlow
 ms.collection: 
     - bap-ai-copilot
 ---

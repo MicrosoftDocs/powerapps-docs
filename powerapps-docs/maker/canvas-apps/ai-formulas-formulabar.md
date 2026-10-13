@@ -6,7 +6,7 @@ ms.author: warrenbryant
 ms.date: 01/12/2026
 ms.update-cycle: 180-days
 ms.topic: how-to
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.subservice: canvas-maker
 ms.collection:
   - bap-ai-copilot
@@ -15,11 +15,12 @@ search.audienceType:
   - maker
 contributors:
   - warrenbryant-msft
-  - mduelae
+  - joshuapartlow
 ai-usage: ai-assisted
 ms.custom: 
   - ai-gen-diyeditor
   - canvas
+reviewer: joshuapartlow
 ---
 
 # Use Copilot to create and edit Power Fx formulas

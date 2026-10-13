@@ -6,7 +6,7 @@ ms.subservice: canvas-developer
 ms.topic: how-to
 ms.date: 06/6/2025
 ms.author: mamali
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 search.audienceType:
   - maker
 search.app:
@@ -14,6 +14,7 @@ search.app:
 contributors:
   - jorisdg
   - mamali
+reviewer: joshuapartlow
 ---
 # Canvas component properties
 

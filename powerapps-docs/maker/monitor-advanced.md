@@ -5,13 +5,13 @@ author: mattgon
 ms.subservice: troubleshoot
 ms.topic: concept-article
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 11/14/2022
 ms.author: austinj
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - mattgon
   - maustinjones
 ---

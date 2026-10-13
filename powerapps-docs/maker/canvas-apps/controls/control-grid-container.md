@@ -4,15 +4,16 @@ description: Learn about the details, properties and examples of the grid contai
 author: shivanichander
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 04/27/2026
 ms.subservice: canvas-maker
 ms.author: shivchan
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - shivchan
+reviewer: joshuapartlow
 
 ---
 # Grid container control in Power Apps

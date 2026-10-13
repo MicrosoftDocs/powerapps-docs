@@ -5,17 +5,18 @@ author: maustinjones
 
 ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 08/22/2022
 ms.subservice: canvas-maker
 ms.author: austinj
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - mattgon
   - TYLEROL
   - maustinjones
+reviewer: joshuapartlow
 ---
 
 # Automate tests with Azure Pipelines using classic editor

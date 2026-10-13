@@ -7,11 +7,12 @@ ms.topic: how-to
 ms.custom: 
 ms.date: 08/18/2021
 ms.author: saperlmu
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 contributors:
   - joel-lindstrom
   - msftsamperl
-  - mduelae
+  - joshuapartlow
+reviewer: joshuapartlow
 ---
 
 # Enable consistent experience across sessions using LoadData and SaveData functions

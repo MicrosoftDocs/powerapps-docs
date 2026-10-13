@@ -5,13 +5,14 @@ author: tahoon
 ms.subservice: troubleshoot
 ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: 
+ms.reviewer: joshuapa
 ms.date: 7/2/2024
 ms.author: tahoon
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
+reviewer: joshuapartlow
 ---
 
 # Create an effective support request

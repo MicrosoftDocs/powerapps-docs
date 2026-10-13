@@ -4,15 +4,16 @@ description: See how to connect to Office 365 Users, step through some examples,
 author: lancedMicrosoft
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 03/17/2022
 ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - lancedmicrosoft
+reviewer: joshuapartlow
 ---
 # Connect to Office 365 Users connection from Power Apps
 

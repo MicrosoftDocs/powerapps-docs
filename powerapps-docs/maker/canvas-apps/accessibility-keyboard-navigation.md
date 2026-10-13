@@ -12,8 +12,10 @@ search.audienceType:
   - maker
 contributors:
   - MSYuey
-  - mduelae
+  - joshuapartlow
   - hemantgaur
+ms.reviewer: joshuapa
+reviewer: joshuapartlow
 ---
 
 # Improved canvas keyboard navigation in canvas apps (experimental)

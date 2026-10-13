@@ -8,9 +8,10 @@ ms.custom:
 ms.date: 06/01/2021
 ms.subservice: teams
 ms.author: nhelgren
-ms.reviewer: matp
+ms.reviewer: joshuapa
 contributors:
   - mattp123
+reviewer: joshuapartlow
 ---
 
 # Work with table columns

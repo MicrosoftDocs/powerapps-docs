@@ -1,18 +1,19 @@
 ---
 title: Build a multi-language app
 description: Use Power Apps to build apps that that can support multiple languages.
-author: mduelae
+author: joshuapartlow
 
 ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 01/27/2021
 ms.subservice: canvas-maker
 ms.author: lunune
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
+reviewer: joshuapartlow
 ---
 
 # Build a multi-language app

@@ -11,8 +11,9 @@ search.audienceType:
   - maker
 contributors:
   - jorisdg
-  - mduelae
+  - joshuapartlow
 ai-usage: ai-assisted
+reviewer: joshuapartlow
 ---
 
 # Component library

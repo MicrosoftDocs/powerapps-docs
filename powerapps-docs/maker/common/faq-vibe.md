@@ -2,14 +2,14 @@
 title: FAQ for Power Apps vibe experience (preview)
 description: FAQ that discusses Power Apps vibe experience and the key considerations for making use of this technology responsibly.
 author: damialajogun
-contributors: mduelae 
+contributors: joshuapartlow
 ms.custom:
   - responsible-ai-faqs
 ms.topic: faq
 ms.date: 08/12/2026
 ms.update-cycle: 180-days
 ms.author: damialajogun
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.collection: 
     - bap-ai-copilot
 ---

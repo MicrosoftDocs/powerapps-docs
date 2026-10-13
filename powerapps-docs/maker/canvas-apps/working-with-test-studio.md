@@ -5,15 +5,16 @@ author: aengusheaney
 
 ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 06/04/2020
 ms.subservice: canvas-maker
-ms.author: mkaur
+ms.author: joshuapa
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - aengusheaney
+reviewer: joshuapartlow
 ---
 
 # Working with Test Studio

@@ -4,18 +4,19 @@ description: Learn how to navigate the Power Apps home page, create apps, manage
 ms.custom: 
 ms.date: 02/19/2026
 ms.update-cycle: 180-days
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.topic: overview
-author: "mduelae"
+author: "joshuapartlow"
 ms.subservice: common
-ms.author: mkaur
+ms.author: joshuapa
 search.audienceType: 
   - maker, admin
 contributors:
-  - mduelae
+  - joshuapartlow
   - alaug
 ms.collection: 
     - bap-ai-copilot
+reviewer: joshuapartlow
 ---
 
 # Get started with Power Apps

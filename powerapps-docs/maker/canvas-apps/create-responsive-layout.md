@@ -5,16 +5,17 @@ author: emcoope-msft
 
 ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: mkaur-msft
+ms.reviewer: joshuapa
 ms.date: 01/13/2026
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType:
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - emcoope-msft
   - dtw
+reviewer: joshuapartlow
 ---
 # Create responsive layouts in canvas apps
 

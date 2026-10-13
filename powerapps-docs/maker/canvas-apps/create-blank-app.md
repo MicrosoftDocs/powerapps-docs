@@ -6,15 +6,16 @@ author: shivanichander
 ms.topic: quickstart
 ms.custom: canvas
 ms.collection: get-started
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 05/19/2026
 ms.subservice: canvas-maker
 ms.author: shivchan
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - shivchan
+reviewer: joshuapartlow
 ---
 
 # Create a blank canvas app from scratch

@@ -7,12 +7,13 @@ ms.custom: canvas
 ms.date: 3/14/2025
 ms.subservice: canvas-maker
 ms.author: lanced
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - lancedmicrosoft
+reviewer: joshuapartlow
 ---
 
 # Connect to SQL Server from Power Apps overview

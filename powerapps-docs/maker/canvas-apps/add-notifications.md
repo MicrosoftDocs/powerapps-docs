@@ -5,15 +5,16 @@ author: kavishi
 
 ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 10/23/2020
 ms.subservice: canvas-maker
 ms.author: kaagar
 search.audienceType: 
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - kavishi
+reviewer: joshuapartlow
 ---
 # Send notification from an app
 

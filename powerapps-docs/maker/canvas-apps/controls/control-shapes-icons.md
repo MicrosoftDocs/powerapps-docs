@@ -5,16 +5,17 @@ author: yogeshgupta698
 
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: mkaur
+ms.reviewer: joshuapa
 ms.date: 09/22/2021
 ms.subservice: canvas-maker
 ms.author: yogupt
 search.audienceType:
   - maker
 contributors:
-  - mduelae
+  - joshuapartlow
   - yogeshgupta698
   - tahoon-ms
+reviewer: joshuapartlow
 ---
 # Shape and Icon controls in Power Apps
 Graphics for which you can configure appearance and behavior properties.
