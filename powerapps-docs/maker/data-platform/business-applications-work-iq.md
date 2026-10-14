@@ -80,6 +80,7 @@ Information workers can query and reason over business data in natural language 
 | Copilot experience | Description |
 |---|---|
 | Copilot Chat | Users can query, synthesize, and analyze line-of-business data in natural language conversation with Copilot and installed agents, once enabled by an administrator. <br>Learn more: [Set Up Business Applications in Work IQ](/power-platform/admin/business-applications-work-iq/quickstart?toc=/power-platform/business-applications-work-iq/toc.json&bc=/power-platform/breadcrumb/TOC.json) |
+| Copilot Cowork | Users can collaborate with Cowork in real-time within their workflow, leveraging Business Applications in Work IQ to access and reason over business data. <br>Learn more: [Use the Business Applications in Work IQ plugin in Cowork](/microsoft-365/copilot/cowork/cowork-work-iq) |
 | MCP tools  | Business applications MCP tools provide a standardized tool surface that enables AI clients such as Cowork, Copilot Studio, and coding agents to consistently discover, reason over, and execute work across business applications. <br> Learn more: [Work IQ MCP Tool reference](/microsoft-365/copilot/extensibility/work-iq/mcp/tool-reference) |
 
 ## Build agents that integrate with Business Applications in Work IQ
