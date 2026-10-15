@@ -5,7 +5,7 @@ author: lalexms
 ms.reviewer: matp
 ms.topic: faq
 ms.component: model
-ms.date: 06/30/2026
+ms.date: 10/14/2026
 ms.subservice: mda-maker
 ms.author: laalexan
 search.audienceType: 
@@ -23,6 +23,16 @@ Copilot is a feature that uses AI to generate highlights based on timeline activ
 ## How does Copilot work? 
 
 Copilot uses advanced language models to generate content suggestions that refer to the activities in the timeline and generate highlights. Timeline highlights show details from activities such as notes, emails, tasks, appointments, phone calls, and conversations. 
+
+## What data does Copilot use to generate highlights?
+
+Copilot generates highlights from the activities in the timeline, such as notes, emails, tasks, appointments, phone calls, and conversations. There's no fixed time period for highlights. Instead:
+
+- **Timeline filters apply.** Copilot uses only the activities that match your current timeline filters, including time period, activity type, and status. Timeline highlights don't have separate filters.
+
+- **The amount of content is limited.** Copilot can process a limited amount of text for each set of highlights, and it uses the most recent activities first. The number of activities it includes depends on their size. For example, a few long emails can reach the limit, while many short notes might not.
+
+To focus highlights on specific activities or a specific time period, filter the timeline before you generate them.
 
 ## What can I use Copilot for? 
 
@@ -96,7 +106,7 @@ Copilot is a powerful and helpful feature, but it isn't perfect. It has some lim
 
 ## Are there any settings I should change for effective and responsible use of Copilot in the timeline? 
 
-Copilot in the timeline doesn't provide a way to change its behavior. Timeline highlights are generated based on the activities in timeline such as notes, emails, tasks, phone calls, appointments, and conversations. 
+Copilot in the timeline doesn't have its own settings. However, timeline filters affect which activities Copilot uses to generate highlights. Timeline highlights are generated based on the activities in timeline such as notes, emails, tasks, phone calls, appointments, and conversations. 
 
 Always review and edit Copilot's suggestions before sending them to your collaborators. 
 
