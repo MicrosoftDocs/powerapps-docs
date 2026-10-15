@@ -10,11 +10,11 @@ reviewer: Mattp123
 ---
 # Manage semantic model glossary entries (preview)
 
-[!INCLUDE [preview-banner](../../../shared/preview-includes/preview-banner.md)]
+[!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
 The glossary lets you add business vocabulary that system signals can't infer automatically. Use glossary definitions to clarify the terminology used in your Dataverse tables, so agents better understand user questions and respond more accurately.
 
-[!INCLUDE [cc-preview-features-definition](../../../shared/preview-includes/preview-note-pp.md)]
+[!INCLUDE [cc-preview-features-definition](~/../shared-content/shared/preview-includes/preview-note-pp.md)]
 
 ## Add a glossary entry
 

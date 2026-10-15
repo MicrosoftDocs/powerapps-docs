@@ -16,11 +16,11 @@ ai-usage: ai-assisted
 ---
 # Microsoft Dataverse plugin for AI coding agents (preview)
 
-> [!NOTE]
-> - This feature is in preview.
-> - [!INCLUDE [cc-preview-features-definition](../../../includes/cc-preview-features-definition.md)]
+[!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
 Microsoft Dataverse plugin for AI coding agents are an open-source set of instructions that help supported coding agents perform Dataverse development and administration tasks. You describe the outcome you want in natural language, and the agent selects the appropriate skill and tool.
+
+[!INCLUDE [preview-note-pp](~/../shared-content/shared/preview-includes/preview-note-pp.md)]
 
 The plugin doesn't replace the Dataverse development tools. It gives the agent task-specific guidance for using the [Dataverse CLI](../cli/index.md), [Dataverse MCP server](../../../maker/data-platform/data-platform-mcp.md), [Dataverse SDK for Python](../sdk-python/overview.md), [Microsoft Power Platform CLI](/power-platform/developer/cli/introduction), and [Dataverse Web API](../webapi/overview.md).
 
