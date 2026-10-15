@@ -15,15 +15,14 @@ ms.collection:
 ---
 # Business Applications in Work IQ (preview)
 
-[!INCLUDE [preview-banner](../../../shared/preview-includes/preview-banner.md)]
+[!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
 Work IQ provides a workplace intelligence layer of how work gets done; who works with whom; and what content is critical to success. Now, Work IQ extends beyond work patterns to understand how the organization runs, bringing the data, processes, and operational context from your business applications directly into Copilot and agents. This is Business Applications in Work IQ.
 
+[!INCLUDE [preview-note-pp](~/../shared-content/shared/preview-includes/preview-note-pp.md)]
+
 > [!IMPORTANT]
->
-> - This is a preview feature.
-> - Preview features aren’t meant for production use and might have restricted functionality. These features are subject to supplemental terms of use, and are available before an official release so that customers can get early access and provide feedback.
-> - Work IQ is the intelligence layer for Microsoft data and *Dataverse intelligence* is now part of Business Applications in Work IQ. Power Platform administrators can enable this intelligence layer in the Power Platform admin center. We recommend that you start using Work IQ instead of Dataverse intelligence because Dataverse intelligence as a separate service will no longer be available soon.
+> Work IQ is the intelligence layer for Microsoft data and *Dataverse intelligence* is now part of Business Applications in Work IQ. Power Platform administrators can enable this intelligence layer in the Power Platform admin center. We recommend that you start using Work IQ instead of Dataverse intelligence because Dataverse intelligence as a separate service will no longer be available soon.
 
 The benefits of Business Applications in Work IQ are:  
 

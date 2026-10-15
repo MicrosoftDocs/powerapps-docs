@@ -15,9 +15,11 @@ ai-usage: ai-assisted
 
 # Manage Dataverse semantic models (preview)
 
-[!INCLUDE [preview-banner](../../../../shared/preview-includes/preview-banner.md)]
+[!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
 Dataverse semantic models define the Dataverse tables available for answering natural-language questions. This article explains how to list, create, and delete these models by using the Dataverse Ask APIs, helping you manage which tables your application can query.
+
+[!INCLUDE [preview-note-pp](~/../shared-content/shared/preview-includes/preview-note-pp.md)]
 
 Before using these APIs, complete the steps in [Get started with the Dataverse Ask APIs](get-started.md).
 

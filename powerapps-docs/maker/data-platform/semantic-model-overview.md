@@ -11,13 +11,13 @@ reviewer: Mattp123
 
 # Overview of Dataverse semantic model (preview)
 
-[!INCLUDE [preview-banner](../../../shared/preview-includes/preview-banner.md)]
+[!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
 The Dataverse semantic model gives AI agents and Copilot experiences a shared, business-aware understanding of your Dataverse data. Rather than reasoning from raw column and table names alone, agents that consume the semantic model understand what your data *means*.
 
-The semantic model is automatically provisioned when Copilot experiences over Dataverse data are enabled, so there is no manual setup required to start. Makers and administrators can then fine-tune which signals feed into the model and add domain-specific glossary terms to cover business-specific language that automatic extraction can't infer.
+[!INCLUDE [cc-preview-features-definition](~/../shared-content/shared/preview-includes/preview-note-pp.md)]
 
-[!INCLUDE [cc-preview-features-definition](../../../shared/preview-includes/preview-note-pp.md)]
+The platform automatically provisions the semantic model when you enable Copilot experiences over Dataverse data, so you don't need to set up anything manually to start. Makers and administrators can then fine-tune which signals feed into the model and add domain-specific glossary terms to cover business-specific language that automatic extraction can't infer.
 
 ## Building blocks of the semantic model
 

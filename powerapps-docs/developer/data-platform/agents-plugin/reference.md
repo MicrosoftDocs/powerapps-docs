@@ -16,11 +16,11 @@ ai-usage: ai-assisted
 ---
 # Microsoft Dataverse plugin for AI coding agents reference (preview)
 
-> [!NOTE]
-> - This is a preview feature.
-> - [!INCLUDE [cc-preview-features-definition](../../../includes/cc-preview-features-definition.md)]
+[!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
 Microsoft Dataverse plugin for AI coding agents provide task-specific instructions that a supported coding agent loads based on your request. You normally describe the outcome rather than naming a skill. The plugin will route the request, to the best skill so the agent can combine multiple skills for a task.
+
+[!INCLUDE [preview-note-pp](~/../shared-content/shared/preview-includes/preview-note-pp.md)]
 
 The plugin and skills use the [Dataverse CLI](../cli/index.md), [Dataverse MCP server](../../../maker/data-platform/data-platform-mcp.md), [Dataverse SDK for Python](../sdk-python/overview.md), [Microsoft Power Platform CLI](/power-platform/developer/cli/introduction), and Dataverse Web API. For installation and safety information, see [Microsoft Dataverse plugin for AI coding agents](index.md).
 
