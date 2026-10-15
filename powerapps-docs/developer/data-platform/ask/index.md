@@ -15,9 +15,11 @@ ai-usage: ai-assisted
 
 # Use the Dataverse Ask APIs (preview)
 
-[!INCLUDE [preview-banner](../../../../shared/preview-includes/preview-banner.md)]
+[!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
 The Dataverse Ask APIs let your application ask natural-language questions about business data stored in Microsoft Dataverse. You define a *semantic model* that identifies the Dataverse tables relevant to a business scenario, and then submit questions against that model.
+
+[!INCLUDE [preview-note-pp](~/../shared-content/shared/preview-includes/preview-note-pp.md)]
 
 For example, an application can create a semantic model that includes the `account` and `opportunity` tables and then ask:
 

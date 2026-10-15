@@ -15,9 +15,11 @@ ai-usage: ai-assisted
 
 # Get started with the Dataverse Ask APIs (preview)
 
-[!INCLUDE [preview-banner](../../../../shared/preview-includes/preview-banner.md)]
+[!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
 Before calling the Dataverse Ask APIs, configure the environment and an identity, and understand the HTTP and retry requirements described in this article.
+
+[!INCLUDE [preview-note-pp](~/../shared-content/shared/preview-includes/preview-note-pp.md)]
 
 ## Prerequisites
 

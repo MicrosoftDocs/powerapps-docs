@@ -15,11 +15,11 @@ ms.collection:
 ---
 # Create and use business skills (preview)
 
-[!INCLUDE [preview-banner](../../../shared/preview-includes/preview-banner.md)]
+[!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
 This article explains how to create and manage business skills that ground agents in your organization's processes. You learn how to enable the required features, author skill content in Power Apps, use skills with agents through Work IQ MCP or Dataverse MCP, and manage skills across environments.
 
-[!INCLUDE [cc-preview-features-definition](../../../shared/preview-includes/preview-note-pp.md)]
+[!INCLUDE [cc-preview-features-definition](~/../shared-content/shared/preview-includes/preview-note-pp.md)]
 
 ## Prerequisites
 

@@ -16,9 +16,11 @@ ai-usage: ai-assisted
 
 # Ask questions by using a Dataverse Semantic model (preview)
 
-[!INCLUDE [preview-banner](../../../../shared/preview-includes/preview-banner.md)]
+[!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
 Use the **Ask** operation with a Dataverse Semantic model to submit natural-language questions. The operation returns structured rows, a natural-language summary, and source links when available.
+
+[!INCLUDE [preview-note-pp](~/../shared-content/shared/preview-includes/preview-note-pp.md)]
 
 Before using this API:
 
