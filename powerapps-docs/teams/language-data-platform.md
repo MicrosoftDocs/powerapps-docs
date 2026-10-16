@@ -5,7 +5,7 @@ author: NHelgren
 
 ms.topic: article
 ms.custom: 
-ms.date: 11/16/2020
+ms.date: 10/08/2026
 ms.subservice: teams
 ms.author: nhelgren
 ms.reviewer: joshuapa
@@ -14,6 +14,8 @@ contributors:
 reviewer: joshuapartlow
 ---
 # Dataverse for Teams environment language
+
+[!INCLUDE [dataverse-for-teams-environments-deprecation](../includes/dataverse-for-teams-environments-deprecation.md)]
 
 A Dataverse for Teams environment is automatically created when a Teams user *either* [creates an app](create-first-app.md) in a team using the Power Apps app for the first time *or* installs an app (created using Power Apps app) in a team for the first time from the Teams app catalog. During the environment creation, the environment’s language is set to the tenant default language.
 

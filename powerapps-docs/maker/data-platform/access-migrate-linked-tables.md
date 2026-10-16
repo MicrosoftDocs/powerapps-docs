@@ -7,7 +7,7 @@ ms.topic: article
 ms.custom: 
   - model
 ms.reviewer: matp
-ms.date: 10/18/2021
+ms.date: 10/08/2026
 ms.subservice: dataverse-maker
 ms.author: NHelgren
 search.audienceType: 
@@ -16,6 +16,7 @@ contributors:
 ---
 # System tables and columns in Dataverse and Dataverse for Teams
 
+[!INCLUDE [dataverse-for-teams-environments-deprecation](../../includes/dataverse-for-teams-environments-deprecation.md)]
 
 Both Dataverse and Dataverse for Teams have several tables and columns that need to be present for data types and features to work properly. These are part of the default organizations and cannot be removed. When migrating from Access to Dataverse, you'll see columns added to tables after the migration and additional linked tables added in Access to support the columns. This document provides an overview of the tables and columns that will be added.
 

@@ -4,7 +4,7 @@ description: Learn about managing table permissions in Dataverse for Teams while
 author: joel-lindstrom
 ms.topic: how-to
 ms.subservice: teams 
-ms.date: 08/19/2021
+ms.date: 10/08/2026
 ms.author: saperlmu
 ms.reviewer: joshuapa
 contributors:
@@ -15,6 +15,8 @@ reviewer: joshuapartlow
 ---
 
 # Granting permission to tables in Dataverse for Microsoft Teams
+
+[!INCLUDE [dataverse-for-teams-environments-deprecation](../includes/dataverse-for-teams-environments-deprecation.md)]
 
 When building Power Apps, one important consideration is data security. Your apps drive important business processes, and if users can see sensitive data or delete records that they shouldn't have access to, it can disrupt your business.
 

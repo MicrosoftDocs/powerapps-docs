@@ -1,0 +1,2 @@
+> [!IMPORTANT]
+> Microsoft Dataverse for Teams environments are deprecated. Learn more about timeline and required actions in [Deprecation of Microsoft Dataverse for Teams environments](/power-platform/important-changes-coming#deprecation-of-microsoft-dataverse-for-teams-environments).

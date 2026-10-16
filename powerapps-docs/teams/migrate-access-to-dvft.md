@@ -6,7 +6,7 @@ ms.topic: overview
 ms.custom: model
 ms.collection: get-started
 ms.reviewer: joshuapa
-ms.date: 10/18/2021
+ms.date: 10/08/2026
 ms.subservice: teams
 ms.author: NHelgren
 search.audienceType: 
@@ -15,6 +15,8 @@ contributors:
 reviewer: joshuapartlow
 ---
 # Migrate Microsoft Access data to Microsoft Dataverse for Teams (preview)
+
+[!INCLUDE [dataverse-for-teams-environments-deprecation](../includes/dataverse-for-teams-environments-deprecation.md)]
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 

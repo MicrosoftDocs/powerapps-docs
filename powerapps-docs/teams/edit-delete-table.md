@@ -4,7 +4,7 @@ description: Explains how to delete or edit a table in Dataverse for Teams.
 author: NHelgren
 ms.topic: how-to
 ms.custom: 
-ms.date: 09/22/2020
+ms.date: 10/08/2026
 ms.subservice: teams
 ms.author: nhelgren
 ms.reviewer: joshuapa
@@ -14,6 +14,8 @@ reviewer: joshuapartlow
 ---
 
 # Edit or delete a table
+
+[!INCLUDE [dataverse-for-teams-environments-deprecation](../includes/dataverse-for-teams-environments-deprecation.md)]
 
 With Dataverse for Teams, you can perform the following types of operations on a table:
 

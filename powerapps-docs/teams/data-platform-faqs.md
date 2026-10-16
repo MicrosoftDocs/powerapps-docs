@@ -5,7 +5,7 @@ author: mmercuri
 
 ms.topic: faq
 ms.custom: 
-ms.date: 09/22/2020
+ms.date: 10/08/2026
 ms.subservice: teams
 ms.author: joshuapa
 ms.reviewer: joshuapa
@@ -15,6 +15,8 @@ contributors:
 reviewer: joshuapartlow
 ---
 # FAQs for Dataverse for Teams 
+
+[!INCLUDE [dataverse-for-teams-environments-deprecation](../includes/dataverse-for-teams-environments-deprecation.md)]
 
 Here is a list of frequently asked (FAQs) for Dataverse for Teams; also see [Dataverse for Teams licensing FAQs](/power-platform/admin/powerapps-flow-licensing-faq#dataverse-for-teams) in the Power Platform admin guide.
 
