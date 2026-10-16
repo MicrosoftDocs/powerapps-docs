@@ -1,13 +1,15 @@
 ---
 title: "What is Dataverse intelligence?" 
 description: Learn how to use Microsoft Dataverse intelligence to bring business data understanding to AI agents and Copilot.
-ms.date: 09/25/2026
+ms.date: 10/16/2026
 ms.reviewer: matp
 ms.topic: how-to
 author: prithvi-khosla
 ms.subservice: dataverse-maker
 ms.author: pkhosla
-ms.contributors: paulliew
+ms.contributors: 
+- paulliew
+- nhelgren
 ms.service: powerapps
 search.audienceType: 
   - maker
@@ -49,7 +51,7 @@ Microsoft Copilot can search and reason over Dataverse table data from Power App
 #### Enable Microsoft 365 admin center Copilot Dataverse settings
 
 1. Go to [Microsoft 365 admin center](https://admin.cloud.microsoft/?#/homepage). Select **Copilot** >**Settings**.
-1. Locate and select **Dataverse data available in Microsoft Copilot**.
+1. Locate and select **Business Applications data in Work IQ available to Copilot**.
 1. Select **All users**, or
 1. Select **Specific groups** and enter the list of Entra security groups. 
 1. Select **Save** to save the setting changes.
