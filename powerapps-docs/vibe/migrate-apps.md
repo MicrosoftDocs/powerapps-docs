@@ -73,7 +73,7 @@ If your prompt doesn't name your data, the agent might create sample data instea
 - **Table logical names**: The logical name of each table that your app uses, such as `cr8a1_inspection`. In [Power Apps](https://make.powerapps.com), select **Tables**, open the table, and then select **Tools** > **Copy logical name**.
 
 > [!NOTE]
-> If your environment ID starts with `Default-`, your tables are in your organization's default environment. Rebuilt apps can't connect to Dataverse tables in the default environment yet. [TODO: Confirm with engineering, and add guidance for makers whose tables are in the default environment.]
+> If your environment ID starts with `Default-`, your tables are in your organization's default environment. Rebuilt apps can't connect to Dataverse tables in the default environment yet.
 
 **If your app uses SharePoint lists:**
 
@@ -167,7 +167,7 @@ Use the App skill in Copilot Cowork to rebuild your app in Microsoft 365 Copilot
 ### Prerequisites
 
 - A Microsoft 365 Copilot license, with Copilot Cowork turned on for your organization.
-- Membership in the [Frontier program](https://www.microsoft.com/copilot/resources/frontier-program). The App skill in Cowork is available only to Frontier program members.
+- Your organization must be participating in the [Frontier program](https://www.microsoft.com/copilot/resources/frontier-program). The App skill in Cowork is available only to Frontier program members.
 - Copilot Credits. Cowork uses usage-based billing, and building apps consumes Copilot Credits. For more information, see [Usage-based billing and cost management for Copilot Credits](/microsoft-365/copilot/usage-based-billing-overview-copilot-credits).
 - Your app's .zip file and your migration prompt.
 
@@ -194,15 +194,13 @@ Your app saves automatically as you work. Publishing makes your app, and your la
 
 ## Migrate your app to Copilot Studio
 
-Use Apps in Copilot Studio to rebuild your app in Microsoft Copilot Studio.
-
 > [!IMPORTANT]
 > Apps in Copilot Studio is in public preview. Preview features aren't meant for production use and might have restricted functionality.
 
 ### Prerequisites
 
 - Access to Copilot Studio, with app creation turned on. The **App (Preview)** tile is on by default, but your admin can turn it off.
-- Copilot Credits. App creation is powered by the GitHub Copilot harness. Usage-based billing applies to using, building, previewing, and testing apps. These actions might consume Copilot Credits.
+- Copilot Credits. App creation is powered by the GitHub Copilot harness. Usage-based billing applies to using, building, previewing, and testing apps. This consumes Copilot Credits.
 - Your app's .zip file, 10 MB or smaller, and your migration prompt.
 
 ### Rebuild your app in Copilot Studio
@@ -222,12 +220,9 @@ Use Apps in Copilot Studio to rebuild your app in Microsoft Copilot Studio.
 1. Select **Publish**.
 1. Select **Share**, and then share the app with people or groups in your organization.
 
-> [!NOTE]
-> Sharing an app and sharing its underlying data are separate actions. Apps access connected data on behalf of the signed-in user, so the people you share the app with also need permission to use its tables or lists. The first time they open the app, they might need to create or consent to a connection.
-
 ## Verify your data connections
 
-Your new app doesn't inherit your original app's data connections. Your data stays in your Dataverse tables or SharePoint lists, and the agent connects your new app to it based on the data instruction in your prompt.
+Your new app doesn't inherit your original app's data connections. Your data stays in your Dataverse tables or SharePoint lists, and the agent reconnects your new app to it based on the data instruction in your prompt.
 
 After the agent builds your app, confirm that the app uses your data:
 
@@ -259,10 +254,8 @@ If the agent can't find your source code, attach the .zip file again.
 
 1. Migration creates a new app. Your original app's link, sharing, and data connections aren't migrated.
 1. Your new app might not look identical to the original. The agent uses tested color themes, so it picks the closest match to your colors. Custom web fonts are replaced with a supported font.
-1. Apps with several screens are built in stages, one screen at a time.
-1. If an app with the same name already exists, a number might be added to your new app's name, such as "(2)".
 1. Draft tables aren't migrated. Publish them to Dataverse before you migrate.
-1. Rebuilt apps can't connect to Dataverse tables in the default environment yet.
+1. Rebuilt apps can't connect to Dataverse tables in the default environment.
 1. In Copilot Studio, attachments must be 10 MB or smaller, with up to 10 files per message.
 
 ## Troubleshooting
@@ -272,7 +265,7 @@ If the agent can't find your source code, attach the .zip file again.
 | The app shows sample data instead of your data. | Send the prompt in [Verify your data connections](#verify-your-data-connections) with your environment ID and table logical names. |
 | The agent can't find your table. | Check the environment ID and logical name in your prompt. Make sure the table is published, isn't in the default environment, and that you have permission to use it. |
 | The agent says your environment is being set up. | Setting up an environment for the first time takes about two minutes. Wait, and then ask the agent to continue. |
-| The agent says there's no usable Dataverse connection in your environment. | In [Power Apps](https://make.powerapps.com), select your environment, go to **Connections** > **New connection**, and create a **Microsoft Dataverse** connection. Then ask the agent to continue. [TODO: Confirm this workaround.] |
+| The agent says there's no usable Dataverse connection in your environment. | In [Power Apps](https://make.powerapps.com), select your environment, go to **Connections** > **New connection**, and create a **Microsoft Dataverse** connection. Then ask the agent to continue.|
 | Copilot Studio doesn't accept your .zip file. | Attach the .zip file instead of individual code files. If the file is larger than 10 MB, remove generated folders such as `node_modules` and `dist`, and then compress the remaining files again. |
 | Parts of your app are missing. | Reply **Continue with the deferred items**, or use the prompts in [Refine your rebuilt app](#refine-your-rebuilt-app). |
 | You don't see the App skill in Cowork. | The App skill is available only to Frontier program members. Contact your admin. |
@@ -280,6 +273,7 @@ If the agent can't find your source code, attach the .zip file again.
 
 ## Related content
 
+- [What is Microsoft Copilot Managed Runtime (preview) | Microsoft Learn](https://learn.microsoft.com/en-us/microsoft-365/managed-apps/?view=o365-worldwide "https://learn.microsoft.com/en-us/microsoft-365/managed-apps/?view=o365-worldwide")
 - [Quickstart: Create an app with natural language in Microsoft Copilot Studio (preview)](/microsoft-copilot-studio/apps-experience/get-started)
 - [Manage data in your app (preview)](/microsoft-copilot-studio/apps-experience/data-and-connections)
 - [Get started with Copilot Cowork](/microsoft-365/copilot/cowork/get-started)
