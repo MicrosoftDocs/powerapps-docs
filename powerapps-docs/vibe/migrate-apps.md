@@ -273,7 +273,7 @@ If the agent can't find your source code, attach the .zip file again.
 
 ## Related content
 
-- [What is Microsoft Copilot Managed Runtime (preview) | Microsoft Learn](https://learn.microsoft.com/en-us/microsoft-365/managed-apps/?view=o365-worldwide "https://learn.microsoft.com/en-us/microsoft-365/managed-apps/?view=o365-worldwide")
+- [What is Microsoft Copilot Managed Runtime (preview) | Microsoft Learn](/microsoft-365/managed-apps/index)
 - [Quickstart: Create an app with natural language in Microsoft Copilot Studio (preview)](/microsoft-copilot-studio/apps-experience/get-started)
 - [Manage data in your app (preview)](/microsoft-copilot-studio/apps-experience/data-and-connections)
 - [Get started with Copilot Cowork](/microsoft-365/copilot/cowork/get-started)
