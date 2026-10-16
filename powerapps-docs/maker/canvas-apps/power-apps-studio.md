@@ -5,7 +5,7 @@ author: lancedMicrosoft
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: joshuapa
-ms.date: 03/25/2026
+ms.date: 10/08/2026
 ms.subservice: canvas-maker
 ms.author: joshuapa
 search.audienceType: 
@@ -30,7 +30,7 @@ Power Apps Studio is the integrated development environment where you design, bu
 
 1. [Properties list](#3--properties-list): List of properties for the selected object, such as *fill* or *height*.
 
-1. [Formula bar](#4--formula-bar): Compose or edit a formula for the selected property with one or more functions.
+1. [Formula bar](#4--formula-bar): Compose or edit a formula for the selected property, or open the formula editor in a separate window.
 
 1. [App authoring menu](#5--app-authoring-menu): Selection pane to switch between data sources and allows you to insert options.
 
@@ -289,6 +289,14 @@ If a formula returns an error, you can view the error details in **App checker**
 :::image type="content" source="media/studio/pa-studio-formula-bar-3.png" alt-text="Screenshot that shows formula errors viewed, using the App checker." lightbox="media/studio/pa-studio-formula-bar-3.png":::
 
 Similarly, you find help when working with complex functions, nested functions, or when correcting a formula syntax.
+
+#### Open the formula editor in a separate window
+
+You can open the Power Fx formula editor in a separate browser window. The pop-out formula bar gives you more space for longer formulas and can be moved to another monitor while you keep the app canvas visible.
+
+Select the **Open formula bar in new window** icon button on the right side of the formula bar. Continue to select controls in Power Apps Studio. The separate Formula editor follows the current control and lets you select and edit its properties.
+
+For steps, editing tools, synchronization behavior, and troubleshooting, see [Use the pop-out formula bar](pop-out-formula-bar.md).
 
 For a complete list of all canvas app functions, see [Formula reference - Power Apps](/power-platform/power-fx/formula-reference).
 

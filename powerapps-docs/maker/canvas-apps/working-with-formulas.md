@@ -7,7 +7,7 @@ ms.custom: canvas
 ms.collection: get-started
 ms.topic: get-started
 ms.reviewer: joshuapa
-ms.date: 08/26/2026
+ms.date: 10/08/2026
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -51,6 +51,12 @@ The Power Fx formula bar at the top of Power Apps Studio is where you write and 
 
 > [!TIP]
 > Use [Copilot formula suggestions](ai-formulas-formulabar.md) to generate or explain formulas using natural language. In the formula bar, select the Copilot icon (when available) and describe what you want the formula to do.
+
+### Use a separate formula editor window
+
+For more editing space, select the **Open formula bar in new window** icon button on the right side of the formula bar. The separate Formula editor follows the control selected in Power Apps Studio and includes the property list, IntelliSense, formatting tools, find and replace, errors, and line numbers.
+
+You can move the window to another monitor while keeping the canvas visible. For more information, see [Use the pop-out formula bar](pop-out-formula-bar.md).
 
 ## Show a value
 

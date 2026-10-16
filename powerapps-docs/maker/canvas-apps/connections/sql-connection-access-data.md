@@ -5,7 +5,7 @@ author: lancedMicrosoft
 
 ms.topic: reference
 ms.custom: canvas
-ms.date: 06/19/2025
+ms.date: 10/07/2026
 ms.subservice: canvas-maker
 ms.author: lanced
 ms.reviewer: joshuapa
@@ -94,7 +94,7 @@ A stored procedure is *safe* if it doesn't perform any action that might be unwa
 
    Action calls, like stored procedures, don't have a limit on the number of rows retrieved. They aren't automatically paged in 100-record increments like tabular data sources such as tables or views.
   
-   If the stored procedure returns too much data (many thousands of records), your app might slow down or crash. For performance reasons, bring in fewer than 2,000 records.
+   If the stored procedure returns too much data (many thousands of records), your app might slow down or crash. For performance reasons, bring in fewer than 10,000 records.
 
 If you check a stored procedure as safe, you can assign it as an **Items** property in galleries or tables in your app.
 
