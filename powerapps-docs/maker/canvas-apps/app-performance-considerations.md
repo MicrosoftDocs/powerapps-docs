@@ -4,7 +4,7 @@ description: Other performance considerations for Power Apps
 author: lancedMicrosoft
 ms.subservice: canvas-developer
 ms.topic: article
-ms.date: 12/10/2024
+ms.date: 10/07/2026
 ms.author: lanced
 ms.reviewer: joshuapa
 search.audienceType:
@@ -62,7 +62,7 @@ When you use Microsoft Dataverse as the data source, data requests go directly t
 
 ### Excel
 
-The Excel connector allows a canvas app to connect to a table in an Excel file. However, this connector has limitations compared to other data sources. For example, it restricts the canvas app to loading data from the table only up to 2,000 records due to limited delegable functions. To load more than 2,000 records, partition your data in different data tables as other data sources.
+The Excel connector allows a canvas app to connect to a table in an Excel file. However, this connector has limitations compared to other data sources. For example, it restricts the canvas app to loading data from the table only up to the app's configured **Data row limit**, which is 500 by default and can be increased to 10,000, due to limited delegable functions. To load more than the configured limit, partition your data in different data tables as other data sources. For more information about delegation, see [Delegation overview](delegation-overview.md).
 
 **Use the new Excel connector**: Be sure to use the new Excel connector - Excel business online. It allows for multi-user access and handles contention issues better. 
 
