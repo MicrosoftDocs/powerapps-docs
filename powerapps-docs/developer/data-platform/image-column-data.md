@@ -1,12 +1,13 @@
 ---
 title: "Use image column data in Microsoft Dataverse"
 description: "Learn how to upload, download, and delete image data in Microsoft Dataverse image columns with code examples and API guidance." 
-ms.date: 03/26/2026
+ms.date: 10/14/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 author: MsSQLGirl
 ms.author: jukoesma
 ms.subservice: dataverse-developer
+ai-usage: ai-assisted
 search.audienceType: 
   - developer
 contributors:
@@ -153,34 +154,56 @@ If you configure the image column to store a full-sized image, you can save and 
 
 ### Detect which image columns support full-sized images
 
-You can query the [Image Attribute Configuration (AttributeImageConfig) table](reference/entities/attributeimageconfig.md) to retrieve a list of image columns that support full-sized images by using the `parententitylogicalname`, `attributelogicalname`, and `canstorefullimage` column values.
+Use the `RetrieveMetadataChanges` message to query schema definitions and retrieve all image columns. Then inspect the [ImageAttributeMetadata.CanStoreFullImage property](xref:Microsoft.Xrm.Sdk.Metadata.ImageAttributeMetadata.CanStoreFullImage) to identify the columns that support full-sized images. For more information, see [Query schema definitions](query-schema-definitions.md).
+
+> [!NOTE]
+> The `RetrieveMetadataChanges` message doesn't support filtering on the `ImageAttributeMetadata.CanStoreFullImage` property. Filter on `AttributeMetadata.AttributeTypeName` to return all image columns, and then test the `CanStoreFullImage` property in the results.
 
 # [SDK for .NET](#tab/sdk)
 
-The static `PrintFullSizedImageColumns` method writes the names of the table and image columns that can store full-sized images.
+The static `PrintFullSizedImageColumns` method uses the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesRequest> class to write the logical names of tables and image columns that can store full-sized images.
 
 ```csharp
 static void PrintFullSizedImageColumns(IOrganizationService service)
 {
-    QueryExpression query = new QueryExpression("attributeimageconfig")
+    EntityQueryExpression query = new()
     {
-        ColumnSet = new ColumnSet("parententitylogicalname", "attributelogicalname"),
-        Criteria = new FilterExpression(LogicalOperator.And)
+        Properties = new MetadataPropertiesExpression("LogicalName", "Attributes"),
+        AttributeQuery = new AttributeQueryExpression
         {
-            Conditions =
+            Properties = new MetadataPropertiesExpression(
+                "LogicalName",
+                "CanStoreFullImage"),
+            Criteria = new MetadataFilterExpression(LogicalOperator.And)
             {
-                new ConditionExpression(
-                    attributeName: "canstorefullimage",
-                    conditionOperator: ConditionOperator.Equal,
-                    value: true)
+                Conditions =
+                {
+                    new MetadataConditionExpression(
+                        propertyName: "AttributeTypeName",
+                        conditionOperator: MetadataConditionOperator.Equals,
+                        value: AttributeTypeDisplayName.ImageType)
+                }
             }
         }
     };
 
-    EntityCollection response = service.RetrieveMultiple(query);
-    foreach (Entity record in response.Entities)
+    RetrieveMetadataChangesRequest request = new()
     {
-        Console.WriteLine($"{record["parententitylogicalname"]}.{record["attributelogicalname"]}");
+        Query = query
+    };
+
+    RetrieveMetadataChangesResponse response =
+        (RetrieveMetadataChangesResponse)service.Execute(request);
+
+    foreach (EntityMetadata table in response.EntityMetadata)
+    {
+        foreach (ImageAttributeMetadata imageColumn in table.Attributes)
+        {
+            if (imageColumn.CanStoreFullImage == true)
+            {
+                Console.WriteLine($"{table.LogicalName}.{imageColumn.LogicalName}");
+            }
+        }
     }
 }
 ```
@@ -193,12 +216,40 @@ account.sample_sampleimage
 
 # [Web API](#tab/webapi)
 
-This request returns the names of the table and image columns that can store full-sized images.
+The [RetrieveMetadataChanges function](xref:Microsoft.Dynamics.CRM.RetrieveMetadataChanges) accepts an encoded JSON `Query` parameter. The following JSON defines a query that returns the logical names of tables and all image columns. The query also returns the `CanStoreFullImage` property for each image column.
+
+```json
+{
+  "Properties": {
+    "AllProperties": false,
+    "PropertyNames": ["LogicalName", "Attributes"]
+  },
+  "AttributeQuery": {
+    "Properties": {
+      "AllProperties": false,
+      "PropertyNames": ["LogicalName", "CanStoreFullImage"]
+    },
+    "Criteria": {
+      "FilterOperator": "And",
+      "Conditions": [
+        {
+          "ConditionOperator": "Equals",
+          "PropertyName": "AttributeTypeName",
+          "Value": {
+            "Type": "Microsoft.Xrm.Sdk.Metadata.AttributeTypeDisplayName",
+            "Value": "ImageType"
+          }
+        }
+      ]
+    }
+  }
+}
+```
 
 **Request:**
 
 ```http
-GET [Organization URI]/api/data/v9.2/attributeimageconfigs?$select=parententitylogicalname,attributelogicalname&$filter=canstorefullimage eq true HTTP/1.1
+GET [Organization URI]/api/data/v9.2/RetrieveMetadataChanges(Query=@p1)?@p1=%7B%22Properties%22%3A%7B%22AllProperties%22%3Afalse%2C%22PropertyNames%22%3A%5B%22LogicalName%22%2C%22Attributes%22%5D%7D%2C%22AttributeQuery%22%3A%7B%22Properties%22%3A%7B%22AllProperties%22%3Afalse%2C%22PropertyNames%22%3A%5B%22LogicalName%22%2C%22CanStoreFullImage%22%5D%7D%2C%22Criteria%22%3A%7B%22FilterOperator%22%3A%22And%22%2C%22Conditions%22%3A%5B%7B%22ConditionOperator%22%3A%22Equals%22%2C%22PropertyName%22%3A%22AttributeTypeName%22%2C%22Value%22%3A%7B%22Type%22%3A%22Microsoft.Xrm.Sdk.Metadata.AttributeTypeDisplayName%22%2C%22Value%22%3A%22ImageType%22%7D%7D%5D%7D%7D%7D HTTP/1.1
 OData-MaxVersion: 4.0
 OData-Version: 4.0
 If-None-Match: null
@@ -215,21 +266,48 @@ Content-Type: application/json; odata.metadata=minimal; odata.streaming=true
 OData-Version: 4.0
 
 {
-  "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#attributeimageconfigs(parententitylogicalname,attributelogicalname)",
-  "value": [
+  "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.RetrieveMetadataChangesResponse",
+  "ServerVersionStamp": "123456789",
+  "DeletedMetadata": {
+    "Count": 0,
+    "IsReadOnly": false,
+    "Keys": [],
+    "Values": []
+  },
+  "EntityMetadata": [
     {
-      "@odata.etag": "W/\"76501240\"",
-      "parententitylogicalname": "account",
-      "attributelogicalname": "sample_sampleimage",
-      "attributeimageconfigid": "b8c1750f-c24f-ea11-a813-000d3a5391c8"
+      "LogicalName": "account",
+      "MetadataId": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee",
+      "HasChanged": null,
+      "Attributes": [
+        {
+          "@odata.type": "#Microsoft.Dynamics.CRM.ImageAttributeMetadata",
+          "LogicalName": "sample_sampleimage",
+          "CanStoreFullImage": true,
+          "MetadataId": "11bb11bb-cc22-dd33-ee44-55ff55ff55ff",
+          "HasChanged": null
+           <null properties removed for brevity>
+        },
+        {
+          "@odata.type": "#Microsoft.Dynamics.CRM.ImageAttributeMetadata",
+          "LogicalName": "entityimage",
+          "CanStoreFullImage": false,
+          "MetadataId": "22cc22cc-dd33-ee44-ff55-66aa66aa66aa",
+          "HasChanged": null
+          <null properties removed for brevity>
+        }
+      ]
     }
   ]
 }
 ```
 
----
+> [!NOTE]
+> The response includes all image columns. To create a list of columns that support full-sized images, loop through the `Attributes` collections in `EntityMetadata` and select the attributes where `CanStoreFullImage` is `true`.
+> 
+> The `RetrieveMetadataChangesResponse` returns all properties. Null properties are removed from the example above for brevity.
 
-You can also query schema definitions to return columns where the [ImageAttributeMetadata.CanStoreFullImage property](xref:Microsoft.Xrm.Sdk.Metadata.ImageAttributeMetadata.CanStoreFullImage) is true. For more information, see [Query schema definitions](query-schema-definitions.md).
+---
 
 ### Resize rules for thumbnail-sized images
 
