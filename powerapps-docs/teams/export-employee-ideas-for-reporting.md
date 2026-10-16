@@ -5,7 +5,7 @@ author: sbahl10
 
 ms.topic: how-to
 ms.custom: 
-ms.date: 08/25/2021
+ms.date: 10/08/2026
 ms.subservice: teams
 ms.author: saperlmu
 ms.reviewer: joshuapa
@@ -19,6 +19,8 @@ reviewer: joshuapartlow
 
 # Export Ideas data for reporting
 
+[!INCLUDE [dataverse-for-teams-environments-deprecation](../includes/dataverse-for-teams-environments-deprecation.md)]
+
 This article covers how to export your ideas data from your Microsoft Teams database to another location so you can archive and report on it.
 
 Watch this video to learn how to export ideas for reporting:
@@ -30,7 +32,7 @@ To complete this lesson, you must first perform the following prerequisites:
 
 1. Install the Employee Ideas template app from [https://aka.ms/teamsemployeeideas](https://aka.ms/teamsemployeeideas).
    
-2. Delete the sample idea data. The reason is because our data extract captures the user who created the idea, and sample data is created by a system account, which may cause an error in the flow (since the user won't exist in your Active Directory). To delete ideas, see [Employee ideas sample app](/teams/employee-ideas.md).
+2. Delete the sample idea data. The reason is because our data extract captures the user who created the idea, and sample data is created by a system account, which may cause an error in the flow (since the user won't exist in your Active Directory). 
    
 3. Create some ideas, and have colleagues vote for them. Adding ideas will ensure that the data extract returns data.
 

@@ -5,7 +5,7 @@ author: matp
 
 ms.topic: how-to
 ms.custom: 
-ms.date: 05/13/2021
+ms.date: 10/08/2026
 ms.subservice: teams
 ms.author: lanced
 ms.reviewer: joshuapa
@@ -15,6 +15,8 @@ reviewer: joshuapartlow
 ---
 
 # Edit table data in Excel and publish it back to Dataverse for Teams
+
+[!INCLUDE [dataverse-for-teams-environments-deprecation](../includes/dataverse-for-teams-environments-deprecation.md)]
 
 By opening Dataverse for Teams table data in Microsoft Excel, you can quickly and easily view and edit the data by using the Microsoft Power Apps Office Add-in.
 :::image type="content" source="../maker/data-platform/media/data-platform-cds-excel-addin/ExcelAddin.png" alt-text="Dataverse for Teams table data in Excel.":::

@@ -6,7 +6,7 @@ author: emcoope-msft
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: joshuapa
-ms.date: 04/26/2021
+ms.date: 10/08/2026
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
@@ -26,6 +26,8 @@ For the scenario in this topic, store employees submit issues to an **Incidents*
 
 > [!NOTE]
 > This article uses a list created using Microsoft Lists as the data source. However, all tabular data sources work the same way. Within [Dataverse for Teams](../../teams/create-apps-overview.md), you'll need to enable [classic controls](../../teams/understand-power-apps-studio.md#classic-controls) to get the classic drop-down to work for this scenario.
+
+[!INCLUDE [dataverse-for-teams-environments-deprecation](../../includes/dataverse-for-teams-environments-deprecation.md)]
 
 ## Create data sources
 

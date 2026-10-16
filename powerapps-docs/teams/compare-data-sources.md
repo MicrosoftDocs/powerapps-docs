@@ -4,7 +4,7 @@ description: Quickly understand and apply the key considerations that will help 
 author: Mattp123
 ms.topic: concept-article
 ms.collection: get-started
-ms.date: 05/06/2021
+ms.date: 10/08/2026
 ms.subservice: teams
 ms.author: joshuapa
 ms.reviewer: joshuapa
@@ -13,6 +13,8 @@ contributors:
 reviewer: joshuapartlow
 ---
 # Comparing Microsoft Lists, Dataverse for Teams, and Dataverse
+
+[!INCLUDE [dataverse-for-teams-environments-deprecation](../includes/dataverse-for-teams-environments-deprecation.md)]
 
 Whether you’re using Power Apps to build a small app for your team or a mission critical app for your business, there are many great options for data. 
 

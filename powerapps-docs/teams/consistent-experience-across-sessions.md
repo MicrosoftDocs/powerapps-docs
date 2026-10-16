@@ -5,7 +5,7 @@ author: joel-lindstrom
 ms.subservice: teams
 ms.topic: how-to
 ms.custom: 
-ms.date: 08/18/2021
+ms.date: 10/08/2026
 ms.author: saperlmu
 ms.reviewer: joshuapa
 contributors:
@@ -16,6 +16,8 @@ reviewer: joshuapartlow
 ---
 
 # Enable consistent experience across sessions using LoadData and SaveData functions
+
+[!INCLUDE [dataverse-for-teams-environments-deprecation](../includes/dataverse-for-teams-environments-deprecation.md)]
 
 Microsoft Dataverse for Microsoft Teams delivers a built-in, low-code data platform for Teams. It provides relational data storage, rich data types, enterprise-grade governance, and one-click solution deployment. Dataverse for Teams enables everyone to easily build and deploy apps.
 

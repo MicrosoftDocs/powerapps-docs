@@ -6,7 +6,7 @@ ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: joshuapa
 ms.subservice: canvas-maker
-ms.date: 02/23/2022
+ms.date: 10/08/2026
 ms.author: alaug
 search.audienceType: 
   - maker
@@ -37,6 +37,8 @@ The following table outlines the designations and which license an end user must
 > Power Apps built in Microsoft Teams environments that connect to Dataverse for Teams, or use custom connectors have **Premium** license designation.
 > - End-users with a [Microsoft 365 subscription including Dataverse for Teams use rights](/power-platform/admin/powerapps-flow-licensing-faq#which-microsoft-365-subscriptions-include-dataverse-for-teams-and-power-virtual-agents-capabilities-with-teams) will be able to run these apps in Microsoft Teams. 
 > - End-users that attempt to run these apps outside of Microsoft Teams are required to have a per app plan or per user plan.
+
+[!INCLUDE [dataverse-for-teams-environments-deprecation](../../includes/dataverse-for-teams-environments-deprecation.md)]
 
 ## Check app license designation from app settings
 

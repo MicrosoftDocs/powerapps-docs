@@ -6,7 +6,7 @@ author: joshuapartlow
 ms.topic: overview
 ai-usage: ai-assisted
 
-ms.date: 05/20/2026
+ms.date: 10/08/2026
 ms.subservice: teams
 ms.author: joshuapa
 ms.reviewer: joshuapa
@@ -18,6 +18,8 @@ contributors:
 reviewer: joshuapartlow
 ---
 # Power Apps and Microsoft Teams integration
+
+[!INCLUDE [dataverse-for-teams-environments-deprecation](../includes/dataverse-for-teams-environments-deprecation.md)]
 
 Microsoft Teams provides a collaboration surface where makers can build, share, and use Power Apps experiences for teams, chats, and personal use.
 

@@ -5,7 +5,7 @@ author: matthewbolanos
 
 ms.topic: troubleshooting-known-issue
 ms.custom: 
-ms.date: 02/02/2022
+ms.date: 10/08/2026
 ms.subservice: teams
 ms.author: mabolan
 ms.reviewer: joshuapa
@@ -20,6 +20,8 @@ contributors:
 reviewer: joshuapartlow
 ---
 # Known issues and limitations
+
+[!INCLUDE [dataverse-for-teams-environments-deprecation](../includes/dataverse-for-teams-environments-deprecation.md)]
 
 This article provides details about the known issues and limitations when using [**Dataverse for Teams environments**](/power-platform/admin/about-teams-environment).
 

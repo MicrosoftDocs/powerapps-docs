@@ -5,7 +5,7 @@ author: navjotm
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: joshuapa
-ms.date: 06/01/2022
+ms.date: 10/08/2026
 ms.subservice: canvas-maker
 ms.author: namarwah
 search.audienceType: 
@@ -51,6 +51,8 @@ This section lists limitations of canvas apps controls for apps within Microsoft
 ### General limitations
 
 Apps made with Power Apps in a Dataverse for Teams environment can't be opened outside of Teams. To use controls like *Camera*, upgrade your Power Apps license so that the app can be opened outside of Teams&mdash;for example&mdash;in the Power Apps mobile app.
+
+[!INCLUDE [dataverse-for-teams-environments-deprecation](../../includes/dataverse-for-teams-environments-deprecation.md)]
 
 ### Limitations of specific controls
 

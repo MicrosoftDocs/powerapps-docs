@@ -58,7 +58,7 @@ You can improve app generation by attaching **work content** to your prompt. Thi
 1. Enter a prompt that describes the app you want to build.
 2. Select **+ Add work content**.
 3. Choose the content you want to attach:
-    - Files (Word or Excel)
+    - Work files
     - Emails
     - Chats
 4. Attach one or more relevant items.

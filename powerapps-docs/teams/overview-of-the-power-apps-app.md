@@ -4,7 +4,7 @@ description: Learn about the Power Apps app in Microsoft Teams.
 author: chmoncay
 ms.author: chmoncay
 ms.topic: overview
-ms.date: 05/20/2026
+ms.date: 10/08/2026
 ms.subservice: teams
 ai-usage: ai-assisted
 ms.reviewer: joshuapa
@@ -115,6 +115,8 @@ products, email, and phone. You can then surface that data by creating an app th
 ![Solution explorer - Tables.](media/power-apps-overview-12.png "Solution explorer - Tables")
 
 ### Other - Connection references
+
+[!INCLUDE [dataverse-for-teams-environments-deprecation](../includes/dataverse-for-teams-environments-deprecation.md)]
 
 Lists connections available to the environment. Data is stored in a data source, and you bring that data into your app by creating a connection. A Power Apps connection connects your app to such a data source. You can use several other types of connections to connect to the Dataverse for Teams environment within the team. More information: [Overview of canvas-app connectors](../maker/canvas-apps/connections-list.md)
 

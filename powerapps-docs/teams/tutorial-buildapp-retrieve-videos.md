@@ -5,7 +5,7 @@ author: msftsamperl
 
 ms.topic: how-to
 ms.custom: 
-ms.date: 11/16/2020
+ms.date: 10/08/2026
 ms.subservice: teams
 ms.author: tapanm
 ms.reviewer: joshuapa
@@ -15,6 +15,8 @@ reviewer: joshuapartlow
 ---
 
 # Build an app to retrieve Power Platform videos for readiness
+
+[!INCLUDE [dataverse-for-teams-environments-deprecation](../includes/dataverse-for-teams-environments-deprecation.md)]
 
 In this tutorial, you’ll build a solution that retrieves, lists, and displays content that can be used for readiness.
 

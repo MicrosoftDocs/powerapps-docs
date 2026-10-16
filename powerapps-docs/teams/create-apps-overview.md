@@ -5,7 +5,7 @@ author: joshuapartlow
 
 ms.topic: overview
 
-ms.date: 12/18/2020
+ms.date: 10/08/2026
 ms.subservice: teams
 ms.author: joshuapa
 ms.reviewer: joshuapa
@@ -15,6 +15,8 @@ contributors:
 reviewer: joshuapartlow
 ---
 # Create apps in Microsoft Teams by using Power Apps
+
+[!INCLUDE [dataverse-for-teams-environments-deprecation](../includes/dataverse-for-teams-environments-deprecation.md)]
 
 With the significant number of enterprise employees working remotely, and millions of them meeting and collaborating through Microsoft Teams, there's significant interest in building low-code and no-code applications that can make remote work easier and more productive.
 
