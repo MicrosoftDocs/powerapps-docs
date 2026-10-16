@@ -731,6 +731,8 @@
         items:
         - name: Get started with formulas
           href: ./canvas-apps/working-with-formulas.md
+        - name: Use the pop-out formula bar
+          href: ./canvas-apps/pop-out-formula-bar.md
         - name: Build an agent to automate your business process
           href: ./canvas-apps/agent-builder.md  
         - name: Use Copilot to create and edit Power Fx formulas

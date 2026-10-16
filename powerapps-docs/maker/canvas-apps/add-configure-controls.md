@@ -5,7 +5,7 @@ author: joshuapartlow
 
 ms.topic: how-to
 ms.reviewer: joshuapa
-ms.date: 08/26/2026
+ms.date: 10/08/2026
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
@@ -111,6 +111,8 @@ For example, if you select a button control, you can replace the value of the te
 ## Configure a control in the formula bar
 
 Configure a control by selecting a property in the property list and then specifying a value in the formula bar. Autocomplete in the formula bar helps you see values you can use for a control.
+
+For more editing space, select the **Open formula bar in new window** icon button to edit the selected property's formula in a separate Formula editor window. For more information, see [Use the pop-out formula bar](pop-out-formula-bar.md).
 
 ### Change the font color of a control
 
