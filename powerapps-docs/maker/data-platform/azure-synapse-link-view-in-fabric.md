@@ -62,7 +62,6 @@ This table provides a comparison between the options.
 |:-----------------------------------|:------------------------------|
 | No copy, no ETL direct integration with Microsoft Fabric.  |  Export data to your own storage account and integrate with Synapse, Microsoft Fabric, and other tools. |
 | Data stays in Dataverse - users get secure access in Microsoft Fabric. | Data stays in your own storage. You manage access to users. |
-| All tables chosen by default.  | System administrators can choose required tables. |
 | Consumes additional Dataverse storage. | Consumes your own storage as well as other compute and integration tools. | 
 
 You can connect existing Azure Synapse Links with Microsoft Fabric and benefit from Fabric innovations like Power BI DirectLake mode reports and integrated Spark and data pipelines. You must create an Azure Synapse Link for Dataverse profile and enable the **Delta parquet conversion for Fabric link** option. This option isn't available for Azure Synapse Link for Dataverse profiles that use the CSV output format.
