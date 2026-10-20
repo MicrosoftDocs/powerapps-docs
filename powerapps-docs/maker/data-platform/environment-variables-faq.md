@@ -6,8 +6,9 @@ author: caburk
 ms.subservice: dataverse-maker
 ms.author: caburk
 ms.reviewer: matp
-ms.date: 10/24/2024
+ms.date: 10/09/2026
 ms.topic: overview
+ai-usage: ai-assisted
 search.audienceType: 
   - maker
 contributors:
@@ -54,7 +55,9 @@ No. While ALM requires Dataverse (or Dynamics 365 for Customer Engagement), use 
 
 ## Is there a limit to the number of environment variables I can have?
 
-No, there is no hard limit to the number of environment variables allowed in an environment, but user experience will become difficult when there are too many environment variables to select from.
+There's no hard limit on the number of environment variables you can store in an environment. However, the Canvas Studio data source picker retrieves only the first page of matching variables. This limitation affects data source environment variable selection for supported connectors, including SharePoint and SQL Server. When a matching set spans multiple pages, existing variables might not appear in the **Advanced** tab or its search results.
+
+This picker limitation isn't an environment capacity limit. For details and mitigation options, see [Canvas Studio picker limitations](EnvironmentVariables-data-source-canvas-apps.md#canvas-studio-picker-limitations).
 
 ## Can environment variable display names and descriptions be localized?
 

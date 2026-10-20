@@ -6,8 +6,9 @@ author: caburk
 ms.subservice: dataverse-maker
 ms.author: caburk
 ms.reviewer: matp
-ms.date: 01/09/2026
+ms.date: 10/09/2026
 ms.topic: overview
+ai-usage: ai-assisted
 search.audienceType: 
   - maker
 contributors:
@@ -136,9 +137,12 @@ If an environment variable is used in a flow and the display name of the environ
 ## Current limitations
 
 - Validation of environment variable values happens within the user interfaces and within the components that use them, but not within Dataverse. Therefore ensure proper values are set if they're being modified through code. 
-- [Power Platform Build Tools tasks](/power-platform/alm/devops-build-tool-tasks) aren't yet available for managing data source environment variables. However, this doesn't block their usage within Microsoft provided tooling and within source control systems.
 - Interacting with environment variables via custom code requires an API call to fetch the values; there isn't a cache exposed for non-Microsoft code to use.
-- Environment variables are limited to a maximum of 2,000 characters.
+- Environment variable current values and default values are limited to a maximum of 2,000 characters.
+- Environment variable display names and schema names are limited to a maximum of 100 characters. For more information, see [Environment Variable Definition table reference](../../developer/data-platform/reference/entities/environmentvariabledefinition.md).
+- The Canvas Studio data source picker doesn't retrieve additional pages of environment variables. This limitation affects data source environment variable selection for supported connectors, including SharePoint and SQL Server. When a matching set of definitions or values spans multiple pages, some variables might not appear in the **Advanced** tab or its search results. This limitation is separate from the number of variables you can store in an environment. For more information, see [Canvas Studio picker limitations](EnvironmentVariables-data-source-canvas-apps.md#canvas-studio-picker-limitations).
+
+For automated solution imports, Power Platform Build Tools can supply environment variable values through a deployment settings file. For more information, see [Pre-populate connection references and environment variables for automated deployments](/power-platform/alm/conn-ref-env-variables-build-tools).
 
 ## Frequently asked questions
 
@@ -180,7 +184,9 @@ No. While ALM requires Dataverse (or Dynamics 365 apps), use of premium connecto
 
 ### Is there a limit to the number of environment variables I can have?
 
-No. However, the max size of a solution is 95 MB. More information: [Create a solution](/power-apps/maker/data-platform/create-solution)
+There's no hard limit on the number of environment variables you can store in an environment. However, the Canvas Studio data source picker has a paging limitation that can prevent you from selecting existing variables when a matching set spans multiple pages. This limitation affects supported connectors, including SharePoint and SQL Server. For more information, see [Canvas Studio picker limitations](EnvironmentVariables-data-source-canvas-apps.md#canvas-studio-picker-limitations).
+
+The maximum size of a solution is 95 MB. This limit applies to the solution package, not to the count of environment variables. For more information, see [Create a solution](/power-apps/maker/data-platform/create-solution).
 
 ### Can environment variable display names and descriptions be localized?
 
