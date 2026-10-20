@@ -1,7 +1,7 @@
 ---
 title: "Configure a row summary for a model-driven app"
-description: "Learn how to configure a row summary for a model-driven app forms and views that uses AI to let your users view key information about a record."
-ms.date: 09/08/2026
+description: "Learn how to configure an AI-generated row summary for model-driven app forms and views."
+ms.date: 10/19/2026
 ms.update-cycle: 180-days
 ms.subservice: dataverse-maker
 ms.topic: how-to
@@ -23,9 +23,10 @@ Records are often comprised of dozens of fields spread across multiple tables, v
 
 ## Prerequisite for configuring a row summary
 
-To enable and use this feature, the following criterion is required:
+To enable and use this feature, a Power Platform administrator must enable **Row summaries** for the environment in **Copilot** > **Settings** > **Power Apps** > **Summary** in the Power Platform admin center. This setting controls summaries on both main forms and view pages. For more information, see [Admin control](/power-apps/user/record-summaries#admin-control).
 
-- A Power Platform administrator has enabled the AI insight cards environment setting. More information: [Manage feature settings](/power-platform/admin/settings-features)
+> [!NOTE]
+> The same control is currently also available as **AI insight cards** in the environment feature settings. Use the Copilot settings experience as the preferred location. The **AI insight cards** location will be removed in a future release.
 
 ## Create a row summary
 
@@ -44,16 +45,10 @@ Row summaries can be configured for most tables and appear on main forms and vie
 1. Select **Test prompt** to display a preview of the summary.
    The most recently edited row in the table is used to generate a test response.
 1. Once you're satisfied with the columns and response from the test, select **Apply to main forms**.
+   Although the button is labeled **Apply to main forms**, the row summary is applied to all main forms and views for the table.
 
 > [!IMPORTANT]
 > Any user who needs to view summaries configured through the Dynamics 365 Customer Service app must be assigned the `prvReadLanguageLocale` privilege through a security role.
-
-## Determine which main forms include a row summary
-
-After you apply a row summary, the summary displays on all main forms for the table. To view the forms that include a row summary, in Power Apps, select **Tables** on the left navigation pane, and then under **Data experiences** select **Forms**.
-
-All forms with the row summary applied have a form AI icon next to the form name. Hovering over the icon displays "The row summary is applied to all main from for the *table name* table, and appears in every model-driven app that uses this form."
-:::image type="content" source="media/ai-row-summary-indicator2.png" alt-text="Main form AI icon indicating that the form includes a row summary" lightbox="media/ai-row-summary-indicator2.png":::
 
 ## Write a good prompt for the row summary
 
@@ -94,14 +89,17 @@ Here are examples to use when building a row summary prompt.
 
 To edit a row summary, open the table, and then under **Customizations** select **Row summary (applied)**. Follow the steps similar in [Create a row summary](#create-a-row-summary) to make and apply changes.
 
-## Hide a row summary 
+## Show or hide a row summary 
 
-1. In Power Apps, select **Tables** on the left navigation pane, and open the table where you want to edit a row summary.
+1. In Power Apps, select **Tables** on the left navigation pane, and open the table with the configured row summary.
 1. Under **Customizations**, select **Row summary**.
-1. Unselect the **Show row summary** option at the top right of the modal. 
-   :::image type="content" source="media/hide-form-row-summary.png" alt-text="Hide all main form row summaries":::
+1. In the prompt configuration screen, use the **Show row summary** toggle in the upper-right corner to show or hide the summary.
+
+Turning off **Show row summary** hides the configured summary from all main forms and view pages for the table. The prompt configuration is retained so the summary can be shown again later.
 
 > [!NOTE]
+> The **Show row summary** toggle affects only custom row summaries configured from this row summary experience. It doesn't hide summaries provided by Microsoft or summaries configured through another application or experience, such as Customer Service summaries for custom tables.
+>
 > If you're trying to hide the default summary for case, lead, and opportunity, which are provided via the Dynamics 365 Customer Service and Dynamics 365 Sales applications, go to these articles to learn more about options for configuring and/or disabling these summaries:
 >
 > - Case: [Customer Service summary](/dynamics365/customer-service/administer/copilot-map-custom-fields)
