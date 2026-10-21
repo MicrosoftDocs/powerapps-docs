@@ -20,7 +20,7 @@ ai-usage: ai-assisted
 
 Use the **Ask** operation with a Dataverse Semantic model to submit natural-language questions. The operation returns structured rows, a natural-language summary, and source links when available.
 
-[!INCLUDE [preview-note-pp](~/../shared-content/shared/preview-includes/preview-note-pp.md)]
+[!INCLUDE [preview-note-business-applications-work-iq](~/../shared-content/shared/preview-includes/preview-note-business-applications-work-iq.md)]
 
 Before using this API:
 
