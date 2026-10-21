@@ -2,7 +2,7 @@
 title: "Release channel for your model-driven app" 
 description: "This article outlines how release channels enable features within a Power Apps model-driven app."
 ms.custom: ""
-ms.date: 09/08/2026
+ms.date: 10/20/2026
 ms.reviewer: "matp"
 ms.service: powerapps
 ms.subservice: mda-maker
@@ -16,7 +16,9 @@ search.audienceType:
 
 Microsoft regularly provides new and updated features for your model-driven apps. You can control how often the users in your organization get these new features by specifying the release channel. The concept of multiple release channels originated from [Microsoft 365 channels](/deployoffice/updates/overview-update-channels) and provides Power Platform admins with a choice of how often end user impacting features are released.
 
-The *semi-annual channel* turns on generally available (GA) ready features twice a year, in April and October. The *monthly channel* option turns on GA-ready features each month, with a one-week advance notification period so admins can validate new features against their customizations before they're enabled. Both channels deliver the same GA features - neither channel is a preview or early access program.
+The release channel settings described in this article apply to model-driven apps. Dynamics 365 Contact Center and Microsoft Copilot Studio have separate release and update processes.
+
+The *semi-annual channel* turns on generally available (GA) ready features twice a year, in April and October. The *monthly channel* option turns on GA-ready features each month, with a one-week advance notification period so admins can validate new features against their customizations before they're enabled. Both channels deliver GA features; neither channel is a preview or early access program. When available, early access provides a longer validation period for features before they're enabled through the configured release channel.
 
 This table provides a comparison of monthly channel and semi-annual channel.
 
@@ -42,9 +44,19 @@ Most features appear in the monthly channel first and are later included in a se
 
 As a result, the monthly channel isn't a preview of everything in the next semi-annual release, and not every semi-annual feature was in a monthly release first.
 
+If you change an app or environment from the monthly channel to the semi-annual channel, features that are available only through the monthly channel might no longer be visible. Those features become available again when they're included in the semi-annual channel or when the app or environment returns to the monthly channel.
+
+Early access updates provide a longer advance-validation period for features before they're enabled through the configured release channel. Early access is an overlay on the configured release channel; it doesn't require changing an environment from **Semi-annual** to **Monthly**. Keep development, test, and production environments on the same release channel so that validation follows the same feature cadence as production. For more information, see [Opt in to early access updates](/power-platform/admin/opt-in-early-access-updates).
+
+### Preview features and release channels
+
+Preview features aren't enabled automatically as part of a semi-annual channel release. However, customers using the semi-annual channel might still be able to opt in to or try available preview features. Preview availability is separate from early access and from the release channel cadence for generally available features.
+
 ## Configuring release channel
 
 Release channel can be configured on the environment, app, or user level. The release channel is primarily managed on the environment or app. The user level is an override, which can be used for gradual rollout or to revert specific users.
+
+The release channel controls feature availability. It doesn't change the environment's database version or the platform and application versions deployed to the environment.
 
 Environment admins use the Power Platform admin center to select the channel for the environment. Makers use app designer or the solutions area to select the channel for one or more apps.
 
@@ -56,13 +68,13 @@ When **Auto** is selected, Power Platform and Dynamics 365 environments use the 
 
 Model-driven apps release updates every week. Each update is gradually rolled out to regions over several weeks, starting with the **first release** region for early validation and then reaching production regions in groups on successive weekends. To see the list of regions, their rollout order, and the weekend each region group updates, see [General availability deployment](/power-platform/admin/general-availability-deployment).
 
-The monthly release is the first weekly release of each month. The release typically matches `YYMM.1`, where `YY` is the release year and `MM` is the release month. Notifications of upcoming monthly and semi-annual channel changes are published in the release plans for [Dynamics 365](/dynamics365/release-plan/) and [Power Platform](/power-platform/release-plan/) approximately one week before the release reaches the first production regions.
+The monthly release is the first weekly release of each month. The release typically matches `YYMM.1`, where `YY` is the release year and `MM` is the release month. Planned feature availability is published in the [AI at Work Roadmap](https://aka.ms/roadmap). Admins receive advance notification of upcoming monthly and semi-annual channel changes approximately one week before the release reaches the first production regions.
 
 Because each region group updates on the following weekend, the release reaches all regions over roughly five weeks. The exact calendar dates change each month, but the relative sequence stays the same:
 
 | Stage | Approximate timing |
 | --- | --- |
-| Release planner notification | ~1 week before production rollout |
+| Advance notification | ~1 week before production rollout |
 | Early validation (first release region) | First weekend |
 | Production rollout begins | +1 weekend |
 | Remaining region groups | +2 to +4 weekends |
@@ -76,7 +88,7 @@ Through the semi-annual channel, generally available features are turned on twic
 | April release | Early April | `YY03.3` (for example, `2603.3`) |
 | October release | Early October | `YY09.3` (for example, `2609.3`) |
 
-Like the monthly channel, each semi-annual release follows the gradual weekly rollout across the same [region groups](#monthly-release-schedule), starting with the first release region and reaching each subsequent region group on the following weekend. Feature availability is documented in the [Dynamics 365](/dynamics365/release-plan/) and [Power Platform](/power-platform/release-plan/) release plans.
+Like the monthly channel, each semi-annual release follows the gradual weekly rollout across the same [region groups](#monthly-release-schedule), starting with the first release region and reaching each subsequent region group on the following weekend. Planned feature availability is published in the [AI at Work Roadmap](https://aka.ms/roadmap).
 
 ## When features become available
 
