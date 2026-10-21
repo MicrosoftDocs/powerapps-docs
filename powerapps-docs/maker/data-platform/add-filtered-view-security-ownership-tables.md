@@ -17,7 +17,7 @@ search.audienceType:
 
 Filtered view security supports tables with non-[filtered record ownership](/power-apps/maker/data-platform/filtered-view-record-ownership) types. It provides filter-based access control in addition to the table's ownership model.
 
-For existing user or team, and organization record ownership tables, you can supplement the standard row-level data access that security roles, ownership, business units, teams, and record sharing provide with filtered view permissions. Filtered view permissions add access to records that match configured filter conditions without replacing the underlying Dataverse security model or changing the table's ownership type.
+For existing user or team, and organization record ownership tables, filtered view security works **alongside** the existing Dataverse security model, including security roles, record ownership, the modernized business unit model (across business units), teams, and record sharing. Filtered view permissions **supplement** these existing access mechanisms by granting additional access to records that match configured filter conditions, including records across business unit boundaries, without changing the table's ownership type.
 
 > [!IMPORTANT]
 >
