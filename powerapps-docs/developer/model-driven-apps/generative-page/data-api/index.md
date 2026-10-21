@@ -1,7 +1,7 @@
 ---
 title: "dataApi reference for generative pages"
 description: "The article provides dataApi reference for generative pages."
-ms.date: 10/09/2026
+ms.date: 10/19/2026
 author: jasongre
 ms.author: jasongre
 ms.reviewer: jdaly
@@ -11,305 +11,68 @@ search.audienceType:
 contributors:
   - JimDaly
   - ruxyrezidenttm
+ai-usage: ai-assisted
 ---
 # dataApi reference for generative pages
 
 When you [generate a page using natural language](../../../../maker/model-driven-apps/generative-pages.md), the AI creates a React page in TypeScript. The generated page covers both the front-end user experience by selecting the right components and determining the best layout, and the corresponding business logic.
 
-You can [view and edit the generated code to refine the output](../../../../maker/model-driven-apps/generative-pages.md#view-the-generated-code-iterate-and-publish). Data operations use a `dataApi` object that exposes the following public methods:
+You can [view and edit the generated code to refine the output](../../../../maker/model-driven-apps/generative-pages.md#view-the-generated-code-iterate-and-publish). Data operations use a `dataApi` object that exposes public methods grouped into these categories:
+
+|Category|Description|
+|---|---|
+|[Dataverse table methods](dataverse-table-methods.md)|Create, retrieve, update, and delete Dataverse table rows, and query choice columns.|
+|[Connector methods](connector-methods.md)|Work with data exposed by a Power Platform connector bound to the page.|
+|[Dataverse operation methods](dataverse-operation-methods.md)|Invoke Dataverse custom APIs bound to the page as actions or functions.|
+|[Page methods](page-methods.md)|Control the generative page itself, such as returning a value when the page is used as a dialog.|
+
+Connector methods and action and function methods are optional members of the `dataApi` contract. Some hosts don't implement them, so always check that a method exists (for example, `if (dataApi.executeAction) { ... }`) before calling it. A method being present doesn't mean the page has a connector or Dataverse custom API bound to it, or that the custom API is enabled or permitted for the current user. Handle unavailable functionality and custom API failures explicitly rather than assuming success.
+
+## Dataverse table methods
+
+Use the Dataverse table methods of the `dataApi` object to create, retrieve, update, and delete Dataverse table rows, and query choice columns.
 
 |Method|Description|
 |---|---|
-|[`createRow`](#createrow-method)|Creates a new row in the specified table.|
-|[`deleteRow`](#deleterow-method)|Deletes a row from the specified table.|
-|[`getChoices`](#getchoices-method)|Retrieves the choices for the specified choice column name.|
-|[`queryTable`](#querytable-method)|Queries a table with the specified options.|
-|[`retrieveRow`](#retrieverow-method)|Retrieves a row from the specified table with the specified options.|
-|[`setPageOutput`](#setpageoutput-method)|Sets the value returned to the calling script when a generative page dialog closes.|
-|[`updateRow`](#updaterow-method)|Updates an existing row in the specified table.|
-
-
-## `createRow` method
-
-Creates a new row in the specified table.
-
-### Parameters
-
-Set values for these required parameters.
-
-|Name|Type|Description|
-|---|---|---|
-|`tableName`|string|The logical name of the table to create the row in.|
-|`row`|object|The row data to create.|
-
-### Returns
-
-A [promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) containing the result of the operation. When the operation succeeds, the result is the ID (Guid) value of the created row.
-
-### Example
-
-```typescript
-// Define the row data to create new account
-var row =
-    {
-        "name": "Sample Account",
-        "creditonhold": false,
-        "address1_latitude": 47.639583,
-        "description": "This is the description of the sample account",
-        "revenue": 5000000,
-        "accountcategorycode": 1,
-    }
-
-try {
-  // Create a new account record
-  const newAccountId = await dataApi.createRow("account", row);
-  console.log("Account created with ID: " + newAccountId);
-
-  // Create a contact with a lookup to an account
-  const newContactId = await dataApi.createRow('contact', {
-    firstname: 'John',
-    lastname: 'Doe',
-    emailaddress1: 'john.doe@contoso.com',
-    "parentcustomerid@odata.bind": `/account(${newAccountId})`, // Lookup format
-  });
-}
-catch (error) {
-  console.log(error.message);
-}
-```
-
-
-## `deleteRow` method
-
-Deletes a row from the specified table.
-
-### Parameters
-
-Set values for these required parameters.
-
-|Name|Type|Description|
-|---|---|---|
-|`tableName`|string|The logical name of the table to delete the row in.|
-|`rowId`|string|The ID of the row to delete.|
-
-### Returns
-
-A [promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) containing the result of the operation. When the operation succeeds, it returns no value.
-
-### Example
-
-```typescript
-let rowId = "5531d753-95af-e711-a94e-000d3a11e605";
-try {
-  await dataApi.deleteRow("account", rowId);
-}
-catch (error) {
-  console.log(error.message);
-}
-```
-
-## `getChoices` method
-
-Retrieves the choices for the specified choice column name.
-
-### Parameters
-
-This parameter is required.
-
-| Name | Type | Description |
-|------|------|-------------|
-| `enumName` | `string` | The name of the choice column in the format `tablename-columnname` |
-
-### Returns
-
-A [promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) containing the result of the operation. When the operation succeeds, it returns an array of the choice options. Each option has these properties:
-
-|Name|Type|Description|
-|---|---|---|
-|`label`|string|The localized label value of the option.|
-|`value`|number|The numeric value of the option.|
-
-### Example
-
-```typescript
-// Returns the accountcategorycode column options from the account table
-const categoryChoices = await dataApi.getChoices("account-accountcategorycode");
-// Returns the statecode column options from the contact table
-const stateChoices = await dataApi.getChoices('contact-statecode');
-// Returns the statuscode column options from the account table
-const statusChoices = await dataApi.getChoices('account-statuscode');
-```
-## `queryTable` method
-
-Queries a table by using the specified options.
-
-### Parameters
-
-Set values for these required parameters.
-
-| Name | Type | Description |
-|------|------|-------------|
-| `tableName` | `string` | The logical name of the table to query |
-| `query` | [QueryTableOptions](#querytableoptions) | Options for querying the table |
-
-#### QueryTableOptions
-
-| Name | Type | Description |
-|------|------|-------------|
-| `select` | `string[]` |(Recommended) Array of column names to retrieve.  |
-| `filter` | `string` | (Optional) OData filter expression (for example, `statecode eq 0`).  |
-| `orderBy` | `string` | (Optional) OData orderby expression (for example, `name asc`, `createdon desc`).  |
-| `pageSize` | `number` | (Optional) Maximum number of rows to return per page.  |
-
-### Returns
-
-A [promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) containing the result of the operation. When the operation succeeds, the promise returns an object containing a data table with the results with these properties:
-
-| Name | Type | Description |
-|------|------|-------------|
-| `rows` | `Object[]` | Array of row data |
-| `hasMoreRows` | `boolean` | Indicates if there are more rows available |
-| `loadMoreRows` | `function` | Function to load the next page of results. (Optional) |
-
-### Example
-
-```typescript
-// Query tasks with options
-const result = await dataApi.queryTable("task", {
-    select: ["activityid", "subject", "scheduledend", "prioritycode", "statecode"],
-    orderBy: "scheduledend asc",
-    pageSize: 50,
-    filter: "statecode eq 0"
-});
-
-// Query accounts with pagination
-const pagedAccounts = await dataApi.queryTable('account', {
-  select: ['name'],
-  pageSize: 50,
-});
-
-console.log(`Page 1: ${pagedAccounts.rows.length} accounts`);
-
-if (pagedAccounts.hasMoreRows && pagedAccounts.loadMoreRows) {
-  const nextPage = await pagedAccounts.loadMoreRows();
-  console.log(`Page 2: ${nextPage.rows.length} accounts`);
-}
-```
-
-### Remarks
-
-> [!NOTE]
-> For best performance, always limit the number of columns returned by using the [QueryTableOptions](#querytableoptions) `select` property.
-
-## `retrieveRow` method
-
-Retrieves a row from the specified table by using the specified options.
-
-### Parameters
-
-Set values for these required parameters.
-
-| Name | Type | Description |
-|------|------|-------------|
-| `tableName` | `string` | The logical name of the table to retrieve from |
-| `options` | [RetrieveRowOptions](#retrieverowoptions) | Options for retrieving the row |
-
-#### RetrieveRowOptions
-
-| Name | Type | Description |
-|------|------|-------------|
-| `id` | `string` | The ID (Guid) of the row to retrieve |
-| `select` | `string[]` | (Recommended) Array of column names to retrieve. If omitted, all columns are returned.  |
-
-### Returns
-
-A [promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) containing the result of the operation. When the operation succeeds, an object containing the data of the record is returned, including all selected columns.
-
-### Example
-
-```typescript
-// Retrieve an account with all columns
-const account = await dataApi.retrieveRow('account', {
-  id: '30dc51e9-947d-47d8-ad48-4fc48fba4a95',
-});
-
-// Retrieve specific columns only
-const contact = await dataApi.retrieveRow('contact', {
-  id: 'a1b2c3d4-e5f6-7890-abcd-ef1234567890',
-  select: ['firstname', 'lastname', '_parentcustomerid_value'],
-});
-```
-
-## `setPageOutput` method
-
-Sets the value returned to the calling script when a generative page opened as a dialog closes.
-
-### Parameters
-
-|Name|Type|Description|
-|---|---|---|
-|`value`|unknown|The value to return to the script that opened the dialog. The value can be a primitive, object, or array.|
-
-### Returns
-
-No value.
-
-### Example
-
-```typescript
-dataApi.setPageOutput({
-    action: "selected",
-    recordId: selectedRecordId
-});
-
-const xrm = (window as any).Xrm;
-await xrm.Navigation.navigateBack();
-```
-
-Calling `setPageOutput` doesn't close the dialog or update the calling page. Close the dialog with `Xrm.Navigation.navigateBack()`. The promise returned by `Xrm.Navigation.navigateTo` then resolves with an object whose `returnValue` property contains the most recently stored value. The calling script must explicitly apply the returned value to its form, grid, or other state.
-
-This method applies to generative pages opened as dialogs. Generative pages opened inline or in an app side pane don't return a value to the calling script.
-
-## `updateRow` method
-
-Updates an existing row in the specified table.
-
-### Parameters
-
-Set values for these required parameters.
-
-|Name|Type|Description|
-|---|---|---|
-|`tableName`|string|The logical name of the table to update the row in.|
-|`rowId`|string|The ID of the row to update.|
-|`row`|Object|The row data to update.|
-
-### Returns
-
-A [promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) containing the result of the operation. When the operation succeeds, it returns no value.
-
-### Example
-
-```typescript
-let rowId = "5531d753-95af-e711-a94e-000d3a11e605"
-
-// Define the row to update a record
-var row =
-    {
-        "name": "Updated Sample Account ",
-        "creditonhold": true,
-        "address1_latitude": 47.639583,
-        "description": "This is the updated description of the sample account",
-        "revenue": 6000000,
-        "accountcategorycode": 2
-    }
-
-// update the record
-
-try {
-   await dataApi.updateRow("account", rowId, row);
-}
-catch (error){
-  console.log(error.message);
-}
-```
+|[`createRow`](dataverse-table-methods.md#createrow-method)|Creates a new row in the specified table.|
+|[`deleteRow`](dataverse-table-methods.md#deleterow-method)|Deletes a row from the specified table.|
+|[`getChoices`](dataverse-table-methods.md#getchoices-method)|Retrieves the choices for the specified choice column name.|
+|[`queryTable`](dataverse-table-methods.md#querytable-method)|Queries a table with the specified options.|
+|[`retrieveRow`](dataverse-table-methods.md#retrieverow-method)|Retrieves a row from the specified table with the specified options.|
+|[`updateRow`](dataverse-table-methods.md#updaterow-method)|Updates an existing row in the specified table.|
+
+## Connector methods
+
+Use the connector methods of the `dataApi` object to work with data exposed by a Power Platform connector bound to the page.
+
+|Method|Description|
+|---|---|
+|[`createConnectorRow`](connector-methods.md#createconnectorrow-method)|Creates a new row in the specified connector table.|
+|[`deleteConnectorRow`](connector-methods.md#deleteconnectorrow-method)|Deletes a row from the specified connector table.|
+|[`executeConnectorOperation`](connector-methods.md#executeconnectoroperation-method)|Invokes a named operation exposed by a REST (operation-keyed) connector, such as Office 365 Users.|
+|[`getConnectorSwagger`](connector-methods.md#getconnectorswagger-method)|Retrieves the Swagger (OpenAPI) definition for the connector.|
+|[`getConnectorTableSchema`](connector-methods.md#getconnectortableschema-method)|Retrieves the schema for a table (also called an entity or list) exposed by the connector.|
+|[`listConnectorDatasets`](connector-methods.md#listconnectordatasets-method)|Lists the datasets available for the connector.|
+|[`listConnectorOperations`](connector-methods.md#listconnectoroperations-method)|Lists the operations exposed by a REST (operation-keyed) connector.|
+|[`listConnectorTables`](connector-methods.md#listconnectortables-method)|Lists the tables available in the specified connector dataset.|
+|[`queryConnectorTable`](connector-methods.md#queryconnectortable-method)|Queries a table exposed by the connector with the specified options.|
+|[`retrieveConnectorRow`](connector-methods.md#retrieveconnectorrow-method)|Retrieves a single row from the specified connector table.|
+|[`updateConnectorRow`](connector-methods.md#updateconnectorrow-method)|Updates an existing row in the specified connector table.|
+
+## Dataverse action and function  methods
+
+Use the action and function methods of the `dataApi` object to invoke [Dataverse custom APIs](../../../data-platform/custom-api.md) bound to the page.
+
+|Method|Description|
+|---|---|
+|[`executeAction`](dataverse-operation-methods.md#executeaction-method)|Invokes a Dataverse custom API bound to the page as an action.|
+|[`executeFunction`](dataverse-operation-methods.md#executefunction-method)|Invokes a Dataverse custom API bound to the page as a function.|
+|[`listBoundActions`](dataverse-operation-methods.md#listboundactions-method)|Lists the Dataverse custom APIs (actions and functions) bound to the page.|
+
+## Page methods
+
+Use the page methods of the `dataApi` object to control the generative page itself, such as returning a value when the page is used as a dialog.
+
+|Method|Description|
+|---|---|
+|[`setPageOutput`](page-methods.md#setpageoutput-method)|Sets the value returned to the calling script when a generative page dialog closes.|

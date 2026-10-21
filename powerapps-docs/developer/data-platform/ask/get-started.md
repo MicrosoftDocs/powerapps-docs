@@ -19,7 +19,7 @@ ai-usage: ai-assisted
 
 Before calling the Dataverse Ask APIs, configure the environment and an identity, and understand the HTTP and retry requirements described in this article.
 
-[!INCLUDE [preview-note-pp](~/../shared-content/shared/preview-includes/preview-note-pp.md)]
+[!INCLUDE [preview-note-business-applications-work-iq](~/../shared-content/shared/preview-includes/preview-note-business-applications-work-iq.md)]
 
 ## Prerequisites
 

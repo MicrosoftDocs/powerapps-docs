@@ -15,7 +15,7 @@ reviewer: Mattp123
 
 This article explains how to open, configure, and fine-tune the Dataverse semantic model to improve agent accuracy and Copilot experiences over your Dataverse data.
 
-[!INCLUDE [cc-preview-features-definition](~/../shared-content/shared/preview-includes/preview-note-pp.md)]
+[!INCLUDE [preview-note-business-applications-work-iq](~/../shared-content/shared/preview-includes/preview-note-business-applications-work-iq.md)]
 
 ## Prerequisites
 

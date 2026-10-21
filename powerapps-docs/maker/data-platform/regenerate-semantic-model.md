@@ -15,7 +15,7 @@ reviewer: Mattp123
 
 The Microsoft Dataverse semantic model automatically regenerates every 12 hours. If you want changes to take effect immediately - such as updates to signal settings, or Dataverse metadata changes like adding or updating views and column descriptions - trigger a manual regeneration instead of waiting for the next scheduled run.
 
-[!INCLUDE [cc-preview-features-definition](~/../shared-content/shared/preview-includes/preview-note-pp.md)]
+[!INCLUDE [preview-note-business-applications-work-iq](~/../shared-content/shared/preview-includes/preview-note-business-applications-work-iq.md)]
 
 ## Trigger a manual regeneration
 

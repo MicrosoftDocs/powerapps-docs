@@ -1008,7 +1008,17 @@
   - name: Client Scripting
     href: clientapi/reference.md
   - name: Generative pages API
-    href: generative-page/data-api/index.md
+    items:
+    - name: Overview
+      href: generative-page/data-api/index.md
+    - name: Dataverse table methods
+      href: generative-page/data-api/dataverse-table-methods.md
+    - name: Connector methods
+      href: generative-page/data-api/connector-methods.md
+    - name: Dataverse operation methods
+      href: generative-page/data-api/dataverse-operation-methods.md
+    - name: Page methods
+      href: generative-page/data-api/page-methods.md
   - name: Customization XML
     href: customization-xml-reference.md
   - name: Ribbon Schemas

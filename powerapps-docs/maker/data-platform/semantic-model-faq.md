@@ -15,7 +15,7 @@ reviewer: Mattp123
 
 This article answers common questions about the Microsoft Dataverse semantic model that gives AI agents and Copilot experiences a shared, business-aware understanding of your Dataverse data.
 
-[!INCLUDE [cc-preview-features-definition](~/../shared-content/shared/preview-includes/preview-note-pp.md)]
+[!INCLUDE [preview-note-business-applications-work-iq](~/../shared-content/shared/preview-includes/preview-note-business-applications-work-iq.md)]
 
 ## Why are some views from a table not visible in the semantic model?
 
