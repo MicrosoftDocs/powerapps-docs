@@ -28,7 +28,7 @@ Model-driven and canvas [experimental](../../../../maker/canvas-apps/working-wit
 |Parameter Name |Type| Required | Description|
 |----|----|----|----|
 | `columnName`|`string`| Yes| The logical name of the column.|
-| `value`|`string`<br />`Date`<br />`number`<br />`number[]`<br />`boolean`<br />[EntityReference](./../entityreference.md)<br />`EntityReference[]`<br />[FileObject](./../fileobject.md)<br />[ImageObject](./../imageobject.md)| Yes      | New value for the record. |
+| `value`|`string`<br />`Date`<br />`number`<br />`number[]`<br />`boolean`<br />`{ entityName: string, id: string, name: string }`<br />`{ entityName: string, id: string, name: string }[]`<br />[FileObject](./../fileobject.md)<br />[ImageObject](./../imageobject.md)| Yes      | New value for the record. |
 
 ## Return Value
 
