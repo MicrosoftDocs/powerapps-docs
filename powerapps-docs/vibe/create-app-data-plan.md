@@ -71,7 +71,6 @@ Keep these limitations in mind when you use work content:
 1. You need a Copilot license to use this feature.
 2. Encrypted or protected files aren't supported. Your organization's policies might automatically encrypt some files.
 3. Large or complex content can affect the quality of results.
-4. Supported content types are limited to Word (.docx), Excel (.xlsx), emails, and chats.
 5. Attached content is analyzed only when you generate the app. Real-time updates aren't supported.
 
 
