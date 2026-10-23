@@ -5,7 +5,7 @@ author: joel-lindstrom
 
 ms.topic: how-to
 ms.custom: 
-ms.date: 08/26/2021
+ms.date: 10/08/2026
 ms.subservice: teams
 ms.author: saperlmu
 ms.reviewer: joshuapa
@@ -18,6 +18,8 @@ reviewer: joshuapartlow
 ---
 
 # Enable users to discuss ideas
+
+[!INCLUDE [dataverse-for-teams-environments-deprecation](../includes/dataverse-for-teams-environments-deprecation.md)]
 
 The Employee Ideas sample app template for Microsoft Teams makes it easy to capture ideas and suggestions from your colleagues and have colleagues vote for their favorite ideas. But you might want to make this more interactive by facilitating discussions around ideas.
 

@@ -4,7 +4,7 @@ description: Dataverse search for model-driven apps helps you quickly find what 
 author: shwetamurkute
 ms.component: pa-user
 ms.topic: article
-ms.date: 01/13/2026
+ms.date: 10/08/2026
 ms.subservice: end-user
 ms.author: smurkute
 ms.custom: 
@@ -134,6 +134,8 @@ Some generative AI experiences use Dataverse search data, such as Copilot chat i
 
 > [!NOTE]
 > An enabled generative AI feature's availability isn't managed by Dataverse search itself and is enabled through its own feature setting.
+
+[!INCLUDE [dataverse-for-teams-environments-deprecation](../includes/dataverse-for-teams-environments-deprecation.md)]
 
 | Dataverse search set to **On**	|  Dataverse search set to Default	|   Dataverse search set to **Off**  |
 |-----------------------------|-----------------------------------|--------------------------------|

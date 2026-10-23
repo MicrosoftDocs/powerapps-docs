@@ -6,7 +6,7 @@ author: joshuapartlow
 ms.topic: how-to
 ms.custom: 
 ai-usage: ai-assisted
-ms.date: 05/20/2026
+ms.date: 10/08/2026
 ms.subservice: teams
 ms.author: joshuapa
 ms.reviewer: joshuapa
@@ -42,6 +42,8 @@ colleagues](/microsoftteams/manage-power-platform-apps) section within the Teams
 permissions. If you are not an owner, the **Manage permission** and **Share with colleagues** options won't appear.
 
 ## Assign table permissions
+
+[!INCLUDE [dataverse-for-teams-environments-deprecation](../includes/dataverse-for-teams-environments-deprecation.md)]
 
 By default, the **Colleagues with access** role has no access to the data inside any of the custom tables you built using Dataverse for Teams. If you would like users outside of your team to access this data, you'll need to change the default access to one of these four permission sets:
 

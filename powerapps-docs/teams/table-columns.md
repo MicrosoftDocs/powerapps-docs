@@ -5,7 +5,7 @@ author: NHelgren
 
 ms.topic: how-to
 ms.custom: 
-ms.date: 06/01/2021
+ms.date: 10/08/2026
 ms.subservice: teams
 ms.author: nhelgren
 ms.reviewer: joshuapa
@@ -15,6 +15,8 @@ reviewer: joshuapartlow
 ---
 
 # Work with table columns
+
+[!INCLUDE [dataverse-for-teams-environments-deprecation](../includes/dataverse-for-teams-environments-deprecation.md)]
 
 With the exception of the Customer column, all column types in Dataverse are available in Dataverse for Teams as *columns*. This article covers the content you'll need for working with table columns in Dataverse for Teams.
 

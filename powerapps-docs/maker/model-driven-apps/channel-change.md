@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.subservice: mda-maker
 ms.author: aorth
 ms.reviewer: matp
-ms.date: 09/08/2026
+ms.date: 10/20/2026
 ms.topic: how-to
 applies_to: 
   - "powerapps"
@@ -153,6 +153,8 @@ As an alternative, a maker can use the **Solutions** area to explicitly set the 
 
 > [!NOTE]
 > When the setting definition is used to change one or more apps as part of a single solution, you must republish the apps for the change to take effect. Also, making this change causes the apps to have dependencies on the solution with the customization.
+
+Different release channel settings don't prevent a solution from being imported. However, a solution can include app channel settings that change the effective release channel for apps in the destination environment. Review the imported settings and republish the affected apps after import.
 
 ### Set the default for new apps to monthly channel
 

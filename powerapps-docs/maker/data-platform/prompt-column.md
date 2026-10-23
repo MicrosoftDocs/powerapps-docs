@@ -2,7 +2,7 @@
 title: "Prompt columns in Microsoft Dataverse"
 description: "Understand how to create, manage, and use prompt columns with Power Apps and Dataverse."
 keywords: ""
-ms.date: 09/11/2026
+ms.date: 09/30/2026
 ms.custom: 
 ms.topic: article
 applies_to: 
@@ -194,6 +194,39 @@ This example demonstrates a prompt column named *testSummary* and its correspond
 | 2001 | Completed | Prompt column completed but didn't execute because none of the input columns referenced by the prompt were updated. |
 | 3 | Failed | The prompt AI generation failed. Detail column shows error details in the last execution.|
 
+### Apply prompt to existing records in bulk
+
+Use this option to run the prompt for existing records in bulk (backfill). When you select this option, the system generates the values as an asynchronous background job managed in **System jobs**.
+
+<!-- Image placeholder -->
+
+> [!NOTE]
+> This capability is in process of rolling out, and might not be available in your region yet.
+
+Two environment settings in the [Power Platform admin center](https://admin.powerplatform.microsoft.com/) control this option. Select your environment and go to **Settings** > **Features**.  
+
+- **Allow bulk processing of existing records**: This setting is off by default. Turn it on to run the prompt on existing records in bulk in an environment. Ensure sufficient AI credit capacity is available in the environment before enabling it.
+- **Require review before processing imported prompt columns**: This setting is on by default. It controls the job’s behavior on solution import in an environment. When enabled, an imported job pauses for review in **System jobs** and can be manually started after review. Turn this setting off if jobs should start automatically after import.
+
+To generate values for existing records in bulk, follow these steps:  
+
+> [!TIP]
+> Apply filters so the prompt runs only on the records you need, and [test](#test-and-refine-prompts) a few records initially to understand credit consumption for your data. Also, confirm your environment's available credits before you start.
+
+1. Go to [Power Apps](https://make.powerapps.com/), select **Tables** on the left navigation pane, and open your prompt column. 
+1. On the column panel, check **Also generate values for Existing records in bulk**. 
+1. Review the number of records to process and the estimated credit consumption for the job, and save the column configuration.  
+1. Select **Run prompt** when you're ready to queue the job.  
+
+The system updates the prompt column, along with its **Status** and **Details** columns, as each record completes. 
+
+As noted earlier, you can monitor and manage jobs, and view credits consumed in [System jobs](/power-platform/admin/monitor-system-jobs). A banner on top of the column's panel in Power Apps also shows the status of the most recent job for that column.  
+
+>[!IMPORTANT]
+>
+> - A successful prompt column job is available to view in **System jobs** for 30 days. A failed or canceled job is available for 60 days.
+> - The job expires after seven days and is automatically canceled, regardless of the status. Upon solution import, review and start the job promptly to avoid interruption.
+
 ### Disable AI generation for a prompt column
 
 1. Go to [Power Apps](https://make.powerapps.com/). Select **Tables** on the left navigation pane.
@@ -206,7 +239,7 @@ By default, the **Allow prompt column execution** setting is enabled. When disab
 > [!NOTE]
 > For prompts to be executed, both tenant level and column level settings need to be enabled.
 
-### When Prompt column fails to generate AI Analysis
+### When Prompt column fails to generate AI analysis
 
 When AI analysis failed to generate, users see an AI field generation failed message.
 
@@ -223,9 +256,7 @@ Check **Details** and **Status** columns in the table. More information: [View t
 
 **Are backfills supported?** 
 
-Prompt columns generate AI results when a new record is created, or when one or more columns specified in the prompt column definition are updated.
-
-Existing records aren't processed by default. However, updating a column defined in the prompt column definition triggers AI analysis.
+Yes, backfills are supported. See [Apply prompt to existing records in bulk](#apply-prompt-to-existing-records-in-bulk). 
 
 **Are prompt columns audited?**
 
@@ -255,3 +286,5 @@ If this setting is enabled, users might encounter the following error when attem
 ## Related articles
 
 For information about how the AI is used with this feature, go to [FAQ for prompts and text generation capabilities](/ai-builder/faqs-text-generation)
+
+[Monitor system jobs](/power-platform/admin/monitor-system-jobs)

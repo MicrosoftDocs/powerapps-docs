@@ -4,7 +4,7 @@ description: Provides the benefits of Dataverse for Teams.
 author: NHelgren
 ms.topic: overview
 ai-usage: ai-assisted
-ms.date: 05/20/2026
+ms.date: 10/08/2026
 ms.subservice: teams
 ms.author: nhelgren
 ms.reviewer: joshuapa
@@ -13,6 +13,8 @@ contributors:
 reviewer: joshuapartlow
 ---
 # Overview of Microsoft Dataverse for Teams
+
+[!INCLUDE [dataverse-for-teams-environments-deprecation](../includes/dataverse-for-teams-environments-deprecation.md)]
 
 Microsoft Dataverse for Teams delivers a built-in, low-code data platform for Microsoft Teams. It provides relational data storage, rich data types, enterprise-grade governance, and one-click solution deployment. Dataverse for Teams enables everyone to easily build and deploy apps.
 

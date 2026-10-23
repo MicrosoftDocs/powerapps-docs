@@ -8,8 +8,9 @@ contributors: saviegas
 ms.service: powerapps
 ms.subservice: dataverse-maker
 ms.topic: how-to
-ms.date: 09/28/2026
+ms.date: 10/23/2026
 ms.custom: template-how-to
+ai-usage: ai-assisted
 ---
 # Link to Microsoft Fabric
 
@@ -21,14 +22,17 @@ You can use an existing Dataverse environment or create a new developer environm
 
 - You must have the System Administrator security role in the Power Platform environment to enable **Link to Fabric** or **Synapse Link**. This role is also required to add application users in your environment who need access to work with this feature by using the Power Platform admin center.
 - You must be an administrator of the Power BI workspace. 
-- If you want the system to create a Power BI workspace, you need to have Power BI Capacity Administrator access to a capacity within the same region as the Dataverse environment.
-- A Power BI premium license or Fabric capacity within the same Azure geographical region as your Dataverse environment is required. If you don’t have Power BI premium license or Fabric capacity within the same geographical region, you can buy a capacity or sign up for a free Fabric trial capacity. More information: [Fabric (preview) trial](/fabric/get-started/fabric-trial)
+- If you want the system to create a Power BI workspace, you need to have Power BI Capacity Administrator access to a capacity.
+- A Power BI premium license or Fabric capacity is required. If you don't have a Power BI premium license or Fabric capacity, you can buy a capacity or sign up for a free Fabric trial capacity. For more information, see [Fabric (preview) trial](/fabric/get-started/fabric-trial).
 - Your administrator needs to grant you access to create Fabric lakehouses and artifacts. You can find these settings in the Fabric admin portal. Go to **Tenant Settings** > **Microsoft Fabric** > **Users can create Fabric items**, **Tenant settings** > **Workspace settings** > **Create workspaces** as well as **Tenant settings** > **oneLake settings** > **Users can access data stored in OneLake with apps external to Fabric**.
 - If you plan to use workspace identity authentication, you must be a workspace admin to create and manage a workspace identity. The workspace you're creating the identity for can't be a My Workspace. More information: [Workspace identity in Fabric](/fabric/security/workspace-identity)
 - If you plan to use workspace identity authentication, the workspace identity must be onboarded as an application user in the Dataverse environment and granted the appropriate role (commonly System Administrator) so it can access Dataverse data on behalf of Fabric.
 - You must have permissions in Fabric to manage connections via **Settings** > **Manage connections and gateways**.
 - To confirm whether you have access to the required premium capacity, go to [Power BI](https://app.powerbi.com), open the workspace, and select **Workspace settings** > **Premium**. Make sure that **Trial** or **Premium capacity** is selected.
    :::image type="content" source="media/fabric/fabric-trial-capacity.png" alt-text="You need either Trial or Premium capacity for your Power BI workspace." lightbox="media/fabric/fabric-trial-capacity.png":::
+
+> [!NOTE]
+> Link to Fabric now supports cross-geography and cross-region links from Dataverse to Microsoft Fabric. Your Fabric capacity and workspace don't need to be in the same Azure geography or region as your Dataverse environment.
 
 ## Create a link to Fabric
 
@@ -50,7 +54,7 @@ The Fabric link wizard guides you through four steps: **Getting started**, **Set
 
 ### Step 1: Getting started
 
-The wizard opens on a **Getting started** page that summarizes what the link does and checks your prerequisites and Fabric capacity. If you don't have a Fabric capacity in the same geography or region as your Dataverse environment, the wizard notifies you to get a capacity in the required geography. Select **Next** to continue.
+The wizard opens on a **Getting started** page that summarizes what the link does and checks your prerequisites and Fabric capacity. Your Fabric capacity can be in a different Azure geography or region from your Dataverse environment. Select **Next** to continue.
 
 :::image type="content" source="media/fabric/link-data-wizard-01.png" alt-text="Screenshot of the Getting started step in the Fabric link wizard." lightbox="media/fabric/link-data-wizard-01.png":::
 
@@ -349,7 +353,7 @@ To enable an existing link, follow these steps:
 1. Sign in to [Power Apps](https://make.powerapps.com).
 1. Select **Link data** from the left navigation, and then select **Other Links**.
 1. Select an existing Azure Synapse Link for Dataverse profile, and then select **Link to Microsoft Fabric**.
-1. You're prompted to choose a Power BI premium workspace to continue. A list of workspaces in the same region as your environment are displayed. If you don’t see a workspace in the drop-down list, you might need to create one, and then return to this task. More information [Link to Microsoft Fabric](#link-to-microsoft-fabric)
+1. You're prompted to choose a Power BI premium workspace to continue. If you don't see a workspace in the drop-down list, you might need to create one, and then return to this task. More information: [Link to Microsoft Fabric](#link-to-microsoft-fabric).
 1. Select **OK**. Validations are performed and the required artifacts are created in Fabric.  
 1. Select **View in Microsoft Fabric** open Fabric lakehouse.
 1. You can add or remove tables by selecting **Manage tables**. When you add a table, an initial sync is performed. When the initial sync is completed, select **Refresh Fabric tables** to refresh the Dataverse shortcut added to your Fabric lakehouse.

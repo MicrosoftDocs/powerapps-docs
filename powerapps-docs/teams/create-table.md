@@ -5,7 +5,7 @@ author: joshuapartlow
 ms.topic: how-to
 ms.custom: 
 ai-usage: ai-assisted
-ms.date: 05/20/2026
+ms.date: 10/08/2026
 ms.subservice: teams
 ms.author: joshuapa
 ms.reviewer: joshuapa
@@ -14,6 +14,8 @@ contributors:
 reviewer: joshuapartlow
 ---
 # Create tables in Microsoft Teams
+
+[!INCLUDE [dataverse-for-teams-environments-deprecation](../includes/dataverse-for-teams-environments-deprecation.md)]
 
 In Teams, data is defined by *tables*. To create a table, you must be a member of a team.
 

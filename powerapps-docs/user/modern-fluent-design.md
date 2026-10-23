@@ -3,10 +3,10 @@ title: Modern, refreshed look for model-driven apps
 description: Learn about the updated user interface that makes model-driven apps easier to use.
 author: sriharibs-msft
 ms.topic: overview
-ms.date: 09/28/2026
+ms.date: 10/21/2026
 ms.service: powerapps
 ms.subservice: end-user
-ms.author: srihas
+ms.author: jasongre
 ms.custom: bap-template
 ms.reviewer: smurkute
 ms.assetid: 
@@ -101,10 +101,6 @@ The header and navigation refresh (wave 2) builds on the New Look (wave 1) with 
 The following image shows the app header and sitemap with the header and navigation refresh enabled.
 
 :::image type="content" source="media/new-header-nav-look-highlight.png" alt-text="Screenshot that shows new look with header and navigation refresh." lightbox="media/new-header-nav-look-highlight.png":::
-
-The following image shows the form header with the header and navigation refresh enabled.
-
-:::image type="content" source="media/modern-fluent-design/form-header.png" alt-text="Screenshot that shows the new form header with the header and navigation refresh." lightbox="media/modern-fluent-design/form-header.png":::
 
 ### What's new in the header and navigation refresh
 

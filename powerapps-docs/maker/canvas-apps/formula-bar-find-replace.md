@@ -1,12 +1,12 @@
 ---
 title: Use Find and Replace in the formula bar
-description: Learn how to use the find and Replace to search for strings and make changes to one or more matches.
+description: Learn how to use Find and Replace to search for strings and change one or more matches in a formula.
 author: TashasEv
 
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: joshuapa
-ms.date: 12/11/2023
+ms.date: 10/08/2026
 ms.subservice: canvas-maker
 ms.author: tashas
 search.audienceType: 
@@ -14,14 +14,15 @@ search.audienceType:
 contributors:
   - joshuapartlow
   - TashasEv
+ai-usage: ai-assisted
 reviewer: joshuapartlow
 ---
 
 # Use Find and Replace in the formula bar
 
-In complex Power Apps, formulas can get lengthy. Locating and replacing portions of large formulas can become difficult. You can now use the **Find and Replace** capability for the selected control or property to easily find and replace the specified word or sequence of characters.
+In complex Power Apps, formulas can get lengthy. Use **Find and Replace** to search and replace text in the formula that's currently open in the formula bar or Formula editor window.
 
-With **Find and Replace** capability, you can search for combinations of letters, numbers, words, and phrases within a formula in the formula bar. This capability also allows you to use text casing, whole words, and regular expressions to find and replace text inside formulas.
+With **Find and Replace**, you can search for combinations of letters, numbers, words, and phrases within a formula. You can also use text casing, whole words, and regular expressions to find and replace text.
 
 ## Prerequisites
 
@@ -31,7 +32,7 @@ With **Find and Replace** capability, you can search for combinations of letters
 
 ## Launch Find and Replace
 
-You can launch the **Find and Replace** control in the formula bar using the **Find and replace** button, or shortcut keys. You can also pre-populate text in the search input.
+You can launch the **Find and Replace** control in the formula bar or the separate Formula editor window by using the **Find and replace** button or keyboard shortcuts. You can also prepopulate text in the search input.
 
 To get started, [create a new app](get-started-test-drive.md), or [edit an existing app](edit-app.md) in Power Apps Studio. Once open, use any of the following methods to launch the **Find and Replace** control.
 
@@ -54,7 +55,19 @@ To get started, [create a new app](get-started-test-drive.md), or [edit an exist
 
     :::image type="content" source="media/formula-bar-find-replace/find-replace-formula-bar.png" alt-text="The Find and Replace control appears inside the formula bar":::
 
-### Method 2: Use shortcut keys
+### Method 2: Use the pop-out formula bar
+
+1. Select the control and property that you want to edit.
+
+1. Select the **Open formula bar in new window** icon on the right side of the formula bar.
+
+1. In the Formula editor window, select **Find and replace**.
+
+Find and replace searches only the formula currently open in the Formula editor. It doesn't search formulas in other controls or properties.
+
+For more information about the separate editor window, see [Use the pop-out formula bar](pop-out-formula-bar.md).
+
+### Method 3: Use shortcut keys
 
 1. Select the control or property that you want to edit.
 
@@ -62,7 +75,7 @@ To get started, [create a new app](get-started-test-drive.md), or [edit an exist
 
     :::image type="content" source="media/formula-bar-find-replace/shortcut-keys.gif" alt-text="An animation showing the Find and Replace control launching by pressing Ctrl + F to launch Find and pressing Ctrl + H to launch Find and Replace":::
 
-### Method 3: Launch Find and Replace with text already selected
+### Method 4: Launch Find and Replace with text already selected
 
 You can also launch the control pre-populated with text from your formula that you wish to search for.
 

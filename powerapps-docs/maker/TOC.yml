@@ -731,6 +731,8 @@
         items:
         - name: Get started with formulas
           href: ./canvas-apps/working-with-formulas.md
+        - name: Use the pop-out formula bar
+          href: ./canvas-apps/pop-out-formula-bar.md
         - name: Build an agent to automate your business process
           href: ./canvas-apps/agent-builder.md  
         - name: Use Copilot to create and edit Power Fx formulas
@@ -2689,3 +2691,7 @@
     href: ./common/faq-generative-pages-model-driven.md
   - name: FAQ about Power Apps MCP Server invoke_data_entry tool
     href: ./common/faq-power-apps-mcp-server-invoke-data-entry.md
+  - name: FAQ about finding data in a view with AI
+    href: ./common/faq-find-data-with-ai.md
+  - name: FAQ about row summaries in model-driven apps
+    href: ./common/faq-record-summaries.md

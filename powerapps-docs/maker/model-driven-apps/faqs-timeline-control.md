@@ -1,7 +1,7 @@
 ---
-title: FAQs for timeline control in Power Apps
+title: FAQ for the timeline control in Power Apps
 description: Learn about frequently asked questions about the timeline control in Power Apps.
-ms.date: 06/30/2026
+ms.date: 10/21/2026
 ms.topic: faq
 author: "lalexms"
 ms.subservice: mda-maker
@@ -11,11 +11,11 @@ contributors:
 search.audienceType: 
   - maker
 ---
-# FAQs for the timeline control
+# FAQ for the timeline control
 
 ## A command isn't working. How do I use the command checker tool for timeline?
 
-For instructions about how to enable and use the command checker, go to  [Troubleshooting ribbon issues in Power Apps](/troubleshoot/power-platform/power-apps/create-and-use-apps/ribbon-issues)
+Learn how to enable and use the command checker in [Troubleshooting ribbon issues in Power Apps](/troubleshoot/power-platform/power-apps/create-and-use-apps/ribbon-issues).
 
 If you try to use the command action for activities on a timeline but the command action is hidden by custom rules, you might get the following error message:
 
@@ -25,11 +25,11 @@ You can check whether the action is hidden by navigating to **Related** > **Acti
 
 :::image type="content" source="media/related-activities.png" alt-text="Go to related activities in the timeline":::
 
-From the **Activities** tab, select the same activity that you want to perform the action on, and then check if you can perform the same command action from there.
+On the **Activities** tab, select the same activity that you want to perform the action on, and then check if you can perform the same command action from there.
 
 :::image type="content" source="media/select-related-activity.png" alt-text="Select the related activity that you want":::
 
-If the command action works here but not from the timeline, contact [Microsoft Support](/power-platform/admin/get-help-support).
+If the command action works there but not from the timeline, contact [Microsoft Support](/power-platform/admin/get-help-support).
 
 If you can't find the command action from the related activity grid, you can further troubleshoot the issue with [command checker](https://powerapps.microsoft.com/en-us/blog/introducing-command-checker-for-model-app-ribbons/) to find out which custom rule hides the command.
 
@@ -39,11 +39,13 @@ If you can't find the command action from the related activity grid, you can fur
 
    :::image type="content" source="media/command-checker-url-param.png" alt-text="Append URL parameter to add command checker":::
 
-1. Select the **Command checker** command, which now appears on the app command bar. It might be listed on the **More** overflow flyout menu.
+1. Select the **Command checker** command that appears on the app command bar. It might be listed on the **More** overflow flyout menu.
 
    :::image type="content" source="media/start-command-checker.png" alt-text="Start command  checker":::
 
-1. From the command checker page that is displayed, select **Group Id: Mscrm.SubGrid.activitypointer.MainTab.Actions**, select a hidden command such as **Mark Complete (hidden)**, and then select the **Command properties** tab to find out what custom rules are used to hide the command action.
+1. On the command checker page that displays, select **Group Id: Mscrm.SubGrid.activitypointer.MainTab.Actions**.
+
+1. Select a hidden command such as **Mark Complete (hidden)**, and then select the **Command properties** tab to find out what custom rules are used to hide the command action.
 
    :::image type="content" source="media/find-group-id.png" alt-text="Find group ID":::
 
@@ -52,9 +54,9 @@ If you can't find the command action from the related activity grid, you can fur
 
 ## Why aren't posts appearing in timeline and why can't I create a new post?
 
-Posts in the timeline are only available for Dynamics 365 app enabled Dataverse environments and posts are disabled with timelines by default for new environments. To enable, follow these steps:
+Posts in the timeline are only available for Dynamics 365 app-enabled Dataverse environments. New environments have posts turned off in the timeline by default. To enable posts, follow these steps:
 
-1. Go to the Dynamics 365 Customer Service admin center > **Miscellaneous** > **New and upcoming features**, and then select **Timeline User Posts**.
+1. In the Dynamics 365 Customer Service admin center, go to **Miscellaneous** > **New and upcoming features**, and then select **Timeline User Posts**.
 
    :::image type="content" source="media/faqs-timeline-control/enable-posts-csac.png" alt-text="Enable post from Customer Service admin center":::
 
@@ -64,9 +66,9 @@ Posts in the timeline are only available for Dynamics 365 app enabled Dataverse 
 
    If the table isn't listed, look for it in the **Inactive Post Configurations** view. If the table you want isn't listed, select **Refresh** on the command bar. Select the table, and then select **Activate**.
 
-1. Make sure posts are enabled from timeline configuration on the current form. More information: [Record types to show](set-up-timeline-control.md#record-types-to-show)
+1. Ensure that posts are enabled from timeline configuration on the current form. Learn more in [Record types to show](set-up-timeline-control.md#record-types-to-show).
 
-1. Verify the **Enable user posts** setting is enabled on the current form. If the checkbox is selected, clear it and select it again. Save and publish the changes from the form designer.
+1. Ensure that the **Enable user posts** setting is enabled on the current form. If the checkbox is selected, clear it and select it again. Save and publish the changes from the form designer.
 
    :::image type="content" source="media/faqs-timeline-control/enable-user-posts-property.png" alt-text="Enable user post property":::
 
@@ -74,22 +76,22 @@ Posts in the timeline are only available for Dynamics 365 app enabled Dataverse 
 
 No. The timeline doesn’t automatically refresh records. You must manually refresh the timeline to see updates made to a record. For example, if you update a record when you reply to an email, you must manually refresh the timeline to see the updated record. 
 
-## Why do the "Modified On" columns of my records get changed when no changes are made to them?
+## Why do the "Modified On" columns of my records change when no changes are made to them?
 
-The cascading behavior with the parent record can cause this scenario. For example, it can occur when a case is assigned to another user. Go to [Table Relationships](../data-platform/create-edit-entity-relationships.md) for information about how to configure this behavior.
+The cascading behavior with the parent record can cause this scenario. For example, it can occur when a case is assigned to another user. The same cascading behavior can update the **Modified By** value for timeline records when the parent record is reassigned. Learn how to configure this behavior in [Table Relationships](../data-platform/create-edit-entity-relationships.md).
 
-Alternatively, you can configure timeline to sort notes by their **Created on** date. More information: [Notes on timeline](set-up-timeline-control.md#notes-on-timeline)
+Alternatively, you can configure timeline to sort notes by their **Created on** date. Learn more in [Notes on timeline](set-up-timeline-control.md#notes-on-timeline).
 
 ## What privileges do I need to use timeline?
 
 * To open attachments, you need read privilege for the **Activity file attachment** table.
 * For personal settings and bookmarks, you need read, write, and create privileges on the **Custom Control Extended Setting** table.
 
-Power Platform admins can assign users these privileges. More information [Security roles and privileges](/power-platform/admin/security-roles-privileges)
+Power Platform admins can assign users these privileges. Learn more in [Security roles and privileges](/power-platform/admin/security-roles-privileges).
 
 ## How do I configure timeline for mobile offline?
 
-For general guidance on enabling mobile offline for your app, go to [Set up mobile offline](../../mobile/setup-mobile-offline.md).
+Learn about general guidance on enabling mobile offline for your app in [Set up mobile offline](../../mobile/setup-mobile-offline.md).
 
 > [!NOTE]
 >
@@ -100,10 +102,9 @@ For general guidance on enabling mobile offline for your app, go to [Set up mobi
 
 Go to [Auto Capture in Dynamics 365 sales](/dynamics365/sales/free-auto-capture#what-is-auto-capture) for general information or go to the [auto capture FAQ](/dynamics365/sales/faqs-sales-insights#auto-capture).
 
-## See also
+## Related information
 
-[Set up timeline control](set-up-timeline-control.md)
-
+[Set up timeline control](set-up-timeline-control.md)  
 [Use the timeline control](../../user/add-activities.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

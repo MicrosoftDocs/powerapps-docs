@@ -1,7 +1,7 @@
 ---
 title: Use row summaries in model-driven apps 
-description: Learn how to access and utilize AI-generated row summaries in main forms and grids.
-ms.date: 04/21/2026
+description: Learn how to access and utilize AI-generated row summaries on main forms and view pages.
+ms.date: 10/19/2026
 ms.update-cycle: 180-days
 ms.topic: article
 ms.component: pa-user
@@ -22,5 +22,5 @@ contributors:
 
 ### Related information
 
-[Manage feature settings](/power-platform/admin/settings-features)  
+[Manage Copilot settings in the Power Platform admin center](/power-platform/admin/copilot/copilot-hub#settings)  
 [Configuring summaries for tables](/power-apps/maker/data-platform/configure-form-row-summary#create-a-row-summary)  

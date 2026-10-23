@@ -1,7 +1,7 @@
 ---
 title: "Azure Active Directory user (AADUser) table (Microsoft Dataverse) | Microsoft Docs"
 description: "An Azure Active Directory user virtual table in Microsoft Dataverse."
-ms.date: 04/20/2022
+ms.date: 10/08/2026
 ms.reviewer: "pehecke"
 ms.topic: "article"
 author: "NHelgren" 
@@ -19,7 +19,7 @@ search.audienceType:
 Microsoft Dataverse includes a virtual table named AAD user (aaduser). This virtual table provides a connection to Azure Active Directory (AAD) and returns data about users within your AAD organization. No virtual table configuration is required to use the functionality. This is an online only feature.
 
 > [!NOTE]
-> Your results with AAD User may differ depending on where it is being used. AAD User in Dataverse will provide the full list of users on the Azure AD for the organization. AAD User in Dataverse for Teams is limited to providing all AAD Users who are also a member of the Team.
+> Your results with AAD User may differ depending on where it is being used. AAD User in Dataverse will provide the full list of users on the Azure AD for the organization. AAD User in [Dataverse for Teams](../../teams/overview-data-platform.md) is limited to providing all AAD Users who are also a member of the Team.
 > 
 > AAD User does not return groups or distribution lists.
 

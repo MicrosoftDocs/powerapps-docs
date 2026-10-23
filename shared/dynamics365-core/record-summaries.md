@@ -5,13 +5,11 @@ Summaries can be accessed in two ways:
 - From the **Insights** bar at the top of main forms. 
 - From view pages by selecting the inline **Summary** action in the grid, which opens the summary for a record in a modal popup.
 
-The feature enhances user efficiency by delivering context-rich insights directly within the form. Users can interact with summaries to copy content, regenerate updated information, and provide feedback on their relevance, improving both usability and accuracy.
+The feature enhances user efficiency by delivering context-rich insights on main forms and view pages. Users can interact with summaries to copy content, regenerate updated information, and provide feedback on their relevance, improving both usability and accuracy.
 
 ## Prerequisite
 
-Each of the following settings must be turned on to see the row summaries for apps.
-
-- The [AI insight cards](/power-platform/admin/settings-features#ai-insight-cards-preview) toggle is turned on for the Power Platform environment. 
+A Power Platform administrator must enable **Row summaries** for the environment in the Power Platform admin center under **Copilot** > **Settings** > **Power Apps** > **Summary**. This setting controls row summaries on both main forms and view pages. For more information, see [Admin control](#admin-control).
 
 ## Feature details
 
@@ -49,6 +47,15 @@ Usage might be subject to service limits or throttling. Microsoft reserves the r
 
 ## Admin control
 
-The primary admin control for row summary is moving to the Power Platform admin center under **Copilot** > **Settings** > **Power Apps** > **Summary** > **Row summaries**. Learn more about the Copilot hub [here](/power-platform/admin/copilot/copilot-hub). 
+Use the Copilot settings experience in the Power Platform admin center as the primary environment-level control for row summaries:
 
-The **AI insight cards** app setting (EnableFormInsights) for main forms, previously available in Power Platform admin center **Settings** > **Product** > **Features** is being moved and you can configure this setting at the app level either by using the [Model App Designer Setting](/power-apps/maker/model-driven-apps/app-properties) or [Solution Explorer App Settings](/power-apps/maker/data-platform/create-edit-configure-settings#updating-a-setting-definition).
+1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
+1. In the navigation pane, select **Copilot**, and then select **Settings**.
+1. Under **Power Apps**, locate **Row summaries** in the **Summary** section.
+1. Select the environment, and then select **Edit setting**.
+1. Configure the setting, and then select **Save**.
+
+This setting controls row summaries on both model-driven app main forms and view pages. For more information about this settings experience, see [Copilot settings](/power-platform/admin/copilot/copilot-hub#settings).
+
+> [!NOTE]
+> The same control is currently also available as **AI insight cards** in the environment feature settings. Use the Copilot settings experience as the preferred location. The **AI insight cards** location will be removed in a future release.

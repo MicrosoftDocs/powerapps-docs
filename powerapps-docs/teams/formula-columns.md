@@ -5,7 +5,7 @@ author: MicroSri
 reviewer: joshuapartlow
 ms.topic: how-to
 ms.custom: 
-ms.date: 01/24/2022
+ms.date: 10/08/2026
 ms.subservice: teams
 ms.author: matp
 ms.reviewer: joshuapa
@@ -14,6 +14,8 @@ contributors:
 ---
 
 # Work with formula table columns (preview)
+
+[!INCLUDE [dataverse-for-teams-environments-deprecation](../includes/dataverse-for-teams-environments-deprecation.md)]
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)] More information: [Power Apps preview program](/power-platform/admin/preview-environments)
 

@@ -6,7 +6,7 @@ ms.topic: overview
 ms.custom: model
 ms.collection: get-started
 ms.reviewer: matp
-ms.date: 01/09/2023
+ms.date: 10/08/2026
 ms.subservice: dataverse-maker
 ms.author: nhelgren
 search.audienceType: 
@@ -14,6 +14,8 @@ search.audienceType:
 contributors:
 ---
 # Migrate Microsoft Access data to Microsoft Dataverse
+
+[!INCLUDE [dataverse-for-teams-environments-deprecation](../../includes/dataverse-for-teams-environments-deprecation.md)]
 
 Microsoft Access users can now choose to migrate their data into Dataverse or Dataverse for Teams to make use of Azure cloud security and Microsoft Power Platform functionality. Migrating Access data to Dataverse provides many new opportunities for interaction and management of data.  
 
