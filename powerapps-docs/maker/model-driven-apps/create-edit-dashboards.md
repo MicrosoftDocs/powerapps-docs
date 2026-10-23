@@ -2,7 +2,7 @@
 title: "Create or edit model-driven app dashboards"
 description: Learn how to create and edit dashboards for model-driven apps in Power Apps
 ms.custom: ""
-ms.date: 04/03/2026
+ms.date: 10/23/2026
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -15,7 +15,9 @@ ms.assetid: 641885d2-4a08-41b8-b914-d9a244e4d5b1
 caps.latest.revision: 10
 ms.subservice: mda-maker
 ms.author: "matp"
-contributors: jasongre
+contributors: 
+- jasongre
+- Hillaryyaory-microsoft
 author: "Mattp123"
 search.audienceType: 
   - maker
@@ -83,7 +85,16 @@ Dashboards can be standard or interactive.
 
 > [!NOTE]
 > Lists in the dashboard designer don't display a data preview.
-  
+
+## Dashboard limitations
+
+### View is missing from legacy Advanced Find or dashboard configuration
+
+A view appears under **Table** > **Views** in customizations but doesn’t appear in the view selector in legacy Advanced Find, the dashboard configuration, or subgrid configuration. This behavior can occur because the view’s FetchXML combines an outer join (link-type="outer") with a filter condition that references the related table using `entityname`. Legacy Advanced Find doesn't support this query pattern. By default, dashboard and subgrid view selection exclude this query pattern. To work around this behavior, use either of the following approaches:
+
+- Modify the view’s FetchXML to avoid this combination while preserving the intended filtering.
+- Set the affected view as the table’s default public view. This view becomes available in dashboard and subgrid configuration, but it changes the table’s default view. The default public view workaround doesn't make the view available in legacy Advanced Find.
+
 ## Next steps
 
 [Configure interactive experience dashboards](configure-interactive-experience-dashboards.md)
