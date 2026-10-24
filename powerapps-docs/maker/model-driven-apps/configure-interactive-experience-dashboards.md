@@ -264,7 +264,16 @@ When the **Modify List Value** dialog box opens, enter the hexadecimal color cod
 Similarly, if the **Priority** column is used to modify the colors of the case priority options, choose the color in the **Options** subarea of the **General** tab, as shown here:
 
 ![Modify the dashboard color.](media/priority-color-modify.png "Change dashboard color for case priority")  
-  
+
+## Dashboard limitations
+
+### View is missing from legacy Advanced Find or dashboard configuration
+
+A view appears under **Table** > **Views** in customizations but doesn’t appear in the view selector in legacy Advanced Find, the dashboard configuration, or subgrid configuration. This behavior can occur because the view’s FetchXML combines an outer join (link-type="outer") with a filter condition that references the related table using `entityname`. Legacy Advanced Find doesn't support this query pattern. By default, dashboard and subgrid view selection exclude this query pattern. To work around this behavior, use either of the following approaches:
+
+- Modify the view’s FetchXML to avoid this combination while preserving the intended filtering.
+- Set the affected view as the table’s default public view. This view becomes available in dashboard and subgrid configuration, but it changes the table’s default view. The default public view workaround doesn't make the view available in legacy Advanced Find.
+
 ## Next steps  
 
 [Set properties for a chart or list](set-properties-chart-list-included-dashboard.md)
