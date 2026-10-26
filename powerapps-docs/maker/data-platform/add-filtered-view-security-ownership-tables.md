@@ -2,7 +2,7 @@
 title: Add filtered view security to record ownership tables
 description: Learn how to add filtered view security to record ownership tables.
 ms.component: pa-admin
-ms.date: 09/24/2026
+ms.date: 10/26/2026
 ms.topic: how-to
 author: paulliew
 ms.subservice: dataverse-maker
