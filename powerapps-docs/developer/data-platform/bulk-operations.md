@@ -1,7 +1,7 @@
 ---
 title: Use bulk operation messages
 description: Learn how to use special APIs to perform operations on multiple rows of data in a Microsoft Dataverse table. 
-ms.date: 02/11/2026
+ms.date: 10/26/2026
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: jdaly
@@ -18,21 +18,25 @@ ms.custom: bap-template
 
 To get the best performance when running operations on multiple rows of a Microsoft Dataverse table, use one of the following bulk operation messages:
 
-- [`CreateMultiple`](#createmultiple): Creates multiple records of the same type in a single request.
-- [`UpdateMultiple`](#updatemultiple): Updates multiple records of the same type in a single request.
-- [`UpsertMultiple`](#upsertmultiple): Creates or updates multiple records of the same type in a single request.
-- [`DeleteMultiple`](#deletemultiple): For elastic tables only. Deletes multiple records of the same type in a single request.
+| Message | Description |
+| --- | --- |
+| [`CreateMultiple`](#createmultiple) | Creates multiple records of the same type in a single request. |
+| [`UpdateMultiple`](#updatemultiple) | Updates multiple records of the same type in a single request. |
+| [`UpsertMultiple`](#upsertmultiple) | Creates or updates multiple records of the same type in a single request. |
+| [`DeleteMultiple`](#deletemultiple) | For elastic tables only. Deletes multiple records of the same type in a single request. |
 
 > [!NOTE]
 > For guidance about options when performing bulk operations, such as when to use these APIs compared to batch APIs like `ExecuteMultiple`, see [Optimize performance for bulk operations](optimize-performance-create-update.md).
 
 ## Examples
 
-The following code samples show how to use bulk operation messages. You can download the samples from [github.com/microsoft/PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples):
+The following code samples show how to use bulk operation messages. You can view the samples in the [github.com/microsoft/PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples) repository:
 
-- [Sample: SDK for .NET Use bulk operations](org-service/samples/create-update-multiple.md)
-- [Sample: Web API Use bulk operations](webapi/samples/create-update-multiple.md)
-- [Elastic table sample code](elastic-table-samples.md)
+| Sample | Description |
+| --- | --- |
+| [Sample: SDK for .NET Use bulk operations](org-service/samples/create-update-multiple.md) | Compare the performance of bulk create and update approaches with the SDK for .NET, and explore an `UpsertMultiple` example. |
+| [Sample: Web API Use bulk operations](webapi/samples/create-update-multiple.md) | Compare the performance of bulk create and update approaches with the Web API, and explore an `UpsertMultiple` example. |
+| [Elastic table sample code](elastic-table-samples.md) | Create and manage elastic tables, and perform bulk create, update, and delete operations with the SDK for .NET and Web API. |
 
 ### CreateMultiple
 
@@ -135,7 +139,7 @@ OData-Version: 4.0
 
 Updates multiple records of the same type in a single request.
 
-Just like when you update individual records, the data you send by using `UpdateMultiple` must contain only the values you're changing. For more information, see [update records with SDK for .NET](org-service/entity-operations-update-delete.md) and [update records with the Web API](webapi/update-delete-entities-using-web-api.md#basic-update).
+Just like when you update individual records, the data you send by using `UpdateMultiple` must contain only the values you're changing. For more information, see [update records with SDK for .NET](org-service/entity-operations-update-delete.md) and [update records with the Web API](webapi/update-delete-table-rows.md#basic-update).
 
 
 ##### [SDK for .NET](#tab/sdk)
@@ -500,7 +504,7 @@ The number of records that you should include with each request depends on wheth
 
 Bulk operations on standard tables are optimized to perform on multiple rows in a single transaction. Operations become more efficient, and performance increases overall, as the number of operations per request increases. This optimization also makes any plug-in steps that are registered for the bulk operation more efficient. Each time a plug-in is invoked for a single operation, the process requires some milliseconds to invoke the plug-in class containing the logic. When you register a plug-in for a bulk operation message, the class is invoked once and can process all the operations more efficiently. [Learn how to write plug-ins for CreateMultiple and UpdateMultiple](write-plugin-multiple-operation.md).
 
-This performance benefit encourages you to send the largest number of records you can in each request. However, as the number of records increases, the size of the request increases, too, and the request takes longer to process. Eventually, you encounter [message size and time limits](#message-size-and-time-limits). If you hit these limits, the entire operation fails. There's no set limit on the number of records you can send. You might need to experiment to find the best number. Generally, 100 to 1,000 records per request is a reasonable place to start if the size of the record data is small and there are no plug-ins. The kinds of errors you might encounter can usually be addressed by sending fewer records with each request. Include the ability to configure the number of entities sent so that you can adapt by sending fewer.
+This performance benefit encourages you to send the largest number of records you can in each request. However, as the number of records increases, the size of the request increases too, and the request takes longer to process. Eventually, you encounter [message size and time limits](#message-size-and-time-limits). If you hit these limits, the entire operation fails. There's no set limit on the number of records you can send. You might need to experiment to find the best number. Generally, 100 to 1,000 records per request is a reasonable place to start if the size of the record data is small and there are no plug-ins. The kinds of errors you might encounter can usually be addressed by sending fewer records with each request. Include the ability to configure the number of entities sent so that you can adapt by sending fewer.
 
 #### Number of records with elastic tables
 

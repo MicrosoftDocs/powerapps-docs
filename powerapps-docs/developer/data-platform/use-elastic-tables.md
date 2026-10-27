@@ -272,7 +272,7 @@ OData-EntityId: [Organization URI]/api/data/v9.2/sensordata(00aa00aa-bb11-cc22-d
 Use the `x-ms-session-token` value that is returned with the `MSCRM.SessionToken` request header to retrieve the latest version of a record. [Learn more about sending the session token](#sending-the-session-token).
 
 > [!NOTE]
-> *Deep insert* is not supported with elastic tables. Each related record needs to be created independently. [Only standard tables support deep insert](webapi/create-entity-web-api.md#create-related-table-rows-in-one-operation).
+> *Deep insert* is not supported with elastic tables. Each related record needs to be created independently. [Only standard tables support deep insert](webapi/create-table-row.md#create-related-table-rows-in-one-operation).
 
 ---
 

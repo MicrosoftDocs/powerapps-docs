@@ -83,9 +83,9 @@ GET [Organization URI]/api/data/v9.2/accounts(8f390c24-9c72-e511-80d4-00155d2a68
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
 [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)<br />
 [Query Data using the Web API](query/overview.md)<br />
-[Create a table row using the Web API](create-entity-web-api.md)<br />
+[Create a table row using the Web API](create-table-row.md)<br />
 [Retrieve a table row using the Web API](retrieve-entity-using-web-api.md)<br />
-[Update and delete table rows using the Web API](update-delete-entities-using-web-api.md)<br />
+[Update and delete table rows using the Web API](update-delete-table-rows.md)<br />
 [Associate and disassociate table rows using the Web API](associate-disassociate-entities-using-web-api.md)<br />
 [Use Web API functions](use-web-api-functions.md)<br />
 [Use Web API actions](use-web-api-actions.md)<br />

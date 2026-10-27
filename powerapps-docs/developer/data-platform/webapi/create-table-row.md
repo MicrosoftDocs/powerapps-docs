@@ -381,7 +381,7 @@ If you create large numbers of records for elastic tables, create the entities i
 [Compose HTTP requests and handle errors](compose-http-requests-handle-errors.md)   
 [Query data using the Web API](query/overview.md)   
 [Retrieve a table row using the Web API](retrieve-entity-using-web-api.md)   
-[Update and delete table rows using the Web API](update-delete-entities-using-web-api.md)   
+[Update and delete table rows using the Web API](update-delete-table-rows.md)   
 [Associate and disassociate table rows using the Web API](associate-disassociate-entities-using-web-api.md)   
 [Use Web API functions](use-web-api-functions.md)   
 [Use Web API actions](use-web-api-actions.md)   

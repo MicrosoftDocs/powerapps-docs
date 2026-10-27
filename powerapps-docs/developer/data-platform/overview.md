@@ -4,7 +4,7 @@ description: Learn how to extend Microsoft Dataverse with code, including plug-i
 author: MsSQLGirl
 ms.author: jukoesma
 ms.topic: overview
-ms.date: 03/09/2026
+ms.date: 10/26/2026
 ms.subservice: dataverse-developer
 ms.reviewer: jdaly
 search.audienceType: 
@@ -13,7 +13,7 @@ search.audienceType:
 
 # Microsoft Dataverse Developer Guide
 
-Microsoft Dataverse is the underlying data platform for Power Apps, providing core functionality such as server-side logic (plug-ins and workflows), business process flows, a sophisticated security model, and an extensible platform for developers. This guide helps developers understand how to extend Dataverse with code to build custom line-of-business apps for users, businesses, independent software vendors (ISVs), and systems integrators (SIs).
+Microsoft Dataverse is the underlying data platform for Power Apps. It provides core functionality such as server-side logic (plug-ins and workflows), business process flows, a sophisticated security model, and an extensible platform for developers. This guide helps developers understand how to extend Dataverse with code to build custom line-of-business apps for users, businesses, independent software vendors (ISVs), and systems integrators (SIs).
 
 There are many ways developers can contribute to creating apps that use Dataverse. While you can build an application with code using Dataverse as your data source, most projects use either [model-driven apps](../../maker/model-driven-apps/model-driven-app-overview.md) or [canvas apps](../../maker/canvas-apps/getting-started.md) to generate the experience that people use. 
 

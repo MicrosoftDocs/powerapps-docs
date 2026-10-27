@@ -70,8 +70,8 @@ By default this sample deletes all the records created in it. If you want to vie
 
 [Use the Dataverse Web API](../overview.md)<br />
 [WebAPIService class library (C#)](webapiservice.md)<br />
-[Create a table row using the Web API](../create-entity-web-api.md)<br />
-[Update and delete table rows using the Web API](../update-delete-entities-using-web-api.md)<br />
+[Create a table row using the Web API](../create-table-row.md)<br />
+[Update and delete table rows using the Web API](../update-delete-table-rows.md)<br />
 [Service protection API limits](../../api-limits.md)<br />
 [Web API Samples](../web-api-samples.md)<br />
 [Web API Basic Operations Sample (C#)](webapiservice-basic-operations.md)<br />

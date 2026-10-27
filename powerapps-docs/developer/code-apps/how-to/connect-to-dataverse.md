@@ -37,7 +37,7 @@ The [Power Apps client library for code apps](https://www.npmjs.com/package/@mic
 - Add Dataverse entities to code apps.
 - Retrieve formatted values (labels) for option sets option values.
 - [Get metadata for Dataverse tables](get-table-metadata.md).
-- Work with lookups. Currently, you need to use the guidance to [associate with a single-valued navigation property](../../data-platform/webapi/associate-disassociate-entities-using-web-api.md#associate-with-a-single-valued-navigation-property) or [associate records on create](../../data-platform/webapi/create-entity-web-api.md#associate-table-rows-on-create) when working with lookups. A dedicated how-to guide is coming soon. The Power Apps team is actively working to make lookups easier to use in code apps.
+- Work with lookups. Currently, you need to use the guidance to [associate with a single-valued navigation property](../../data-platform/webapi/associate-disassociate-entities-using-web-api.md#associate-with-a-single-valued-navigation-property) or [associate records on create](../../data-platform/webapi/create-table-row.md#associate-table-rows-on-create) when working with lookups. A dedicated how-to guide is coming soon. The Power Apps team is actively working to make lookups easier to use in code apps.
 - Image and file upload and download (preview). When you add Dataverse as a data source by using the Power Apps CLI, the generated functions are part of `src/generated/services`.
 - Perform CRUD operations:
 

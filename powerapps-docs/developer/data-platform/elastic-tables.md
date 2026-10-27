@@ -99,7 +99,7 @@ To learn more about multirecord transactions, see:
 
 - [Execute messages in a single database transaction](org-service/use-executetransaction.md)
 - [Change sets](webapi/execute-batch-operations-using-web-api.md#change-sets)
-- [Web API deep insert](webapi/create-entity-web-api.md#create-related-table-rows-in-one-operation)
+- [Web API deep insert](webapi/create-table-row.md#create-related-table-rows-in-one-operation)
 - [SDK for .NET deep insert](org-service/entity-operations-create.md#create-related-entities-in-one-operation)
 - [Known issue: No error is returned when elastic table data operations are grouped in a transaction](#no-error-is-returned-when-elastic-table-data-operations-are-grouped-in-a-transaction)
 

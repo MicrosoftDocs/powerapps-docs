@@ -1,10 +1,10 @@
 ---
 title: "Dataverse table/entity reference | Microsoft Docs"
 description: "Use this reference to understand the available operations that can be performed for specific tables, the default columns/attributes of each table/entity and the relationships between tables in Microsoft Dataverse"
-author: phecke
+author: JimDaly
 ms.topic: reference
-ms.date: 08/11/2025
-ms.author: pehecke
+ms.date: 10/26/2026
+ms.author: jdaly
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
@@ -13,23 +13,25 @@ search.audienceType:
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-Use this reference to understand the available operations that can be performed for specific tables, the default columns of each table and the relationships between tables.
+Use this reference to understand the available operations for specific tables, the default columns of each table, and the relationships between tables. Table definitions use the [EntityMetadata class](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata).
 
 This reference includes only those tables where:
 
-- **IsPrivate** equals `false`
-  - This excludes tables where no external use cases exist.
+- **[`EntityMetadata.IsPrivate`](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsPrivate)** equals `false`
 
-- **IsIntersect** equals `false` or **IsIntersect** equals `true` and the table contains more than 4 columns.
-  - Most intersect tables contain just the 4 columns necessary to support the Many-to-Many relationship. They are not useful. Intersect tables with more than four columns are more interesting.
+   This condition excludes tables with no external use cases.
+
+- **[`EntityMetadata.IsIntersect`](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsIntersect)** equals `false` or **IsIntersect** equals `true` and the table contains more than four columns.
+
+   Most intersect tables contain just the four columns necessary to support the many-to-many relationship. They're not useful. Intersect tables with more than four columns are not common and more interesting.
 
 To view information about all tables in your environment, see [Browse tables definitions in your environment](../browse-your-metadata.md).
 
 ## Dynamics 365 products table reference
 
-Dynamics 365 products use Dataverse. When you create an environment for Dynamics 365 products, the environment has a common set of tables for all Dynamics 365 products. These tables are included in the [Dynamics 365 Enabled apps table/entity reference](/dynamics365/developer/reference/about-entity-reference).
+Dynamics 365 products use Dataverse. When you create an environment for Dynamics 365 products, the environment has a common set of tables for all Dynamics 365 products. See the [Dynamics 365 Enabled apps table/entity reference](/dynamics365/developer/reference/about-entity-reference).
 
-Each of the specific Dynamics 365 products may add additional tables. The following table shows the table reference for specific Dynamics 365 products:
+Each specific Dynamics 365 product can add more tables. The following table shows the table reference for specific Dynamics 365 products:
 
 |Product Documentation |Product Table reference|
 |---------|---------|
@@ -40,84 +42,88 @@ Each of the specific Dynamics 365 products may add additional tables. The follow
 
 ## Properties
 
-This section includes selected entity properties rather than all of them. Only those properties expected to be most useful for developers are included. Some entity property values can be changed.
+This section includes selected entity properties rather than all of them. It includes only those properties that are most useful for developers. You can change some entity property values.
 
 ## Columns
 
-Columns are listed in two separate sections: **Writable columns/attributes** and **Read-only columns/attributes**. The purpose of this separation is to focus on the columns a developer can set when creating or updating rows in a table. Understanding these columns helps a developer understand what they can do with the table beyond just retrieving the values.
+Columns are listed in two separate sections:
 
-The columns in the **Writable columns/attributes** section return true for *either*  the **IsValidForCreate** or **IsValidForUpdate** properties, (usually both). If either of these properties return false, this is indicated.
+| Section | Description |
+| --- | --- |
+| **Writable columns/attributes** | Columns you can set when creating or updating rows in a table. These columns return `true` for either the **[`AttributeMetadata.IsValidForCreate`](xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.IsValidForCreate)** or **[`AttributeMetadata.IsValidForUpdate`](xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.IsValidForUpdate)** properties, usually both. If either property returns `false`, this condition is indicated. |
+| **Read-only columns/attributes** | Columns you can retrieve but can't set when creating or updating rows in a table. These columns always return `false` for both the **[`AttributeMetadata.IsValidForCreate`](xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.IsValidForCreate)** and **[`AttributeMetadata.IsValidForUpdate`](xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.IsValidForUpdate)** properties. |
 
-**Read-only columns/attributes** always return false for the **IsValidForCreate** *and* **IsValidForUpdate** properties.
 
-Choice column options in this reference documentation come from a deployment where English is the base language. Some choice options can vary depending on the base language selected when the environment is created. These differences more closely align to options that best suite the language or culture. You are free to customize these options by changing the labels or adding and removing options as needed.
+### Choice column options
+
+Choice column options in this reference documentation come from a deployment where English is the base language. Some choice options can vary depending on the base language selected when the environment is created. These differences more closely align to options that best suit the language or culture. You can customize these options by changing the labels or adding and removing options as needed.
 
 ## Relationships
 
-The [EntityMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata) class includes three properties to represent relationships:
+The [EntityMetadata class](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata) includes three properties to represent relationships:
 
-|Property| Type  |Description  |
+| Property | Type | Description |
 |---------|---------|---------|
-|[OneToManyRelationships](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata.onetomanyrelationships#Microsoft_Xrm_Sdk_Metadata_EntityMetadata_OneToManyRelationships)|[OneToManyRelationshipMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.onetomanyrelationshipmetadata)[]|Gets the array of one-to-many relationships for the entity.|
-|[ManyToOneRelationships](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata.manytoonerelationships#Microsoft_Xrm_Sdk_Metadata_EntityMetadata_ManyToOneRelationships)|[OneToManyRelationshipMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.onetomanyrelationshipmetadata)[]|Gets the array of many-to-one relationships for the entity.|
-|[ManyToManyRelationships](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata.manytomanyrelationships#Microsoft_Xrm_Sdk_Metadata_EntityMetadata_ManyToManyRelationships)|[ManyToManyRelationshipMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.manytomanyrelationshipmetadata)[]|Gets the array of many-to-many relationships for the entity.|
+|[OneToManyRelationships](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.OneToManyRelationships)|[OneToManyRelationshipMetadata](xref:Microsoft.Xrm.Sdk.Metadata.OneToManyRelationshipMetadata)[]|Gets the array of one-to-many relationships for the entity.|
+|[ManyToOneRelationships](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.ManyToOneRelationships)|[OneToManyRelationshipMetadata](xref:Microsoft.Xrm.Sdk.Metadata.OneToManyRelationshipMetadata)[]|Gets the array of many-to-one relationships for the entity.|
+|[ManyToManyRelationships](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.ManyToManyRelationships)|[ManyToManyRelationshipMetadata](xref:Microsoft.Xrm.Sdk.Metadata.ManyToManyRelationshipMetadata)[]|Gets the array of many-to-many relationships for the entity.|
 
 > [!NOTE]
-> It is important to keep in mind that while each table lists those relationships that apply to it, each relationship is shared by both tables. The relationships exist *between* the tables. While One-To-Many relationships exist, *Many-to-One* relationships are simply a view of a One-To-Many relationship from the referencing table.
+> While each table lists the relationships that apply to it, each relationship is shared by both tables. The relationships exist *between* the tables. While one-to-many relationships exist, *many-to-one* relationships are simply a view of a one-to-many relationship from the referencing table.
 
-### Many-to-One relationships
+### Many-to-one relationships
 
-Includes these `OneToManyRelationship` properties:
+Includes these [`OneToManyRelationshipMetadata` class](xref:Microsoft.Xrm.Sdk.Metadata.OneToManyRelationshipMetadata) properties:
 
-|Property|Description|
+| Property | Description |
 |---------|---------|
-|`ReferencedEntity`|The logical name of the related table.|
-|`ReferencedAttribute`|The logical name of primary key of the related table.|
-|`ReferencingEntity`|The logical name of the related table that has the lookup column.|
-|`ReferencingAttribute`|The logical name of the lookup column in the related table that contains a reference to primary key of the primary table.|
-|`IsHierarchical`|Whether the relationship represents a self-referential hierarchical relationship|
-|`CascadeConfiguration`|Data that describes which operations performed on the parent entity will cascade down to related entities.<br />More information: [Cascade configuration](../entity-relationship-metadata.md#cascade-configuration)|
+|[`ReferencedEntity`](xref:Microsoft.Xrm.Sdk.Metadata.OneToManyRelationshipMetadata.ReferencedEntity)|The logical name of the related table.|
+|[`ReferencedAttribute`](xref:Microsoft.Xrm.Sdk.Metadata.OneToManyRelationshipMetadata.ReferencedAttribute)|The logical name of primary key of the related table.|
+|[`ReferencingEntity`](xref:Microsoft.Xrm.Sdk.Metadata.OneToManyRelationshipMetadata.ReferencingEntity)|The logical name of the related table that has the lookup column.|
+|[`ReferencingAttribute`](xref:Microsoft.Xrm.Sdk.Metadata.OneToManyRelationshipMetadata.ReferencingAttribute)|The logical name of the lookup column in the related table that contains a reference to primary key of the primary table.|
+|[`IsHierarchical`](xref:Microsoft.Xrm.Sdk.Metadata.OneToManyRelationshipMetadata.IsHierarchical)|Whether the relationship represents a self-referential hierarchical relationship|
+|[`CascadeConfiguration`](xref:Microsoft.Xrm.Sdk.Metadata.OneToManyRelationshipMetadata.CascadeConfiguration)|Data that describes which operations performed on the parent entity cascade down to related entities.<br />For more information, see [Cascade configuration](../entity-relationship-metadata.md#cascade-configuration).|
 
 
 
 ### One-to-many relationships
 
-Includes these `OneToManyRelationship` properties:
+Includes these [`OneToManyRelationshipMetadata` class](xref:Microsoft.Xrm.Sdk.Metadata.OneToManyRelationshipMetadata) properties:
 
-|Property|Description|
+| Property | Description |
 |---------|---------|
-|`ReferencingEntity`|The logical name of the related table.|
-|`ReferencingAttribute`|The logical name of the column in the related table that contains a reference to primary key of the primary table.|
-|`IsCustomizable`|Whether the properties of the relationship can be changed.|
-|`ReferencedEntityNavigationPropertyName`|The name of the Web API collection-valued navigation property for this relationship.<br />More information: [Web API Navigation Properties](../webapi/web-api-navigation-properties.md)|
-|`AssociatedMenuConfiguration`|Data used by model-driven apps to control whether and how the related entity data can be accessed in the UI from the primary entity.|
+|[`ReferencingEntity`](xref:Microsoft.Xrm.Sdk.Metadata.OneToManyRelationshipMetadata.ReferencingEntity)|The logical name of the related table.|
+|[`ReferencingAttribute`](xref:Microsoft.Xrm.Sdk.Metadata.OneToManyRelationshipMetadata.ReferencingAttribute)|The logical name of the column in the related table that contains a reference to primary key of the primary table.|
+|[`IsCustomizable`](xref:Microsoft.Xrm.Sdk.Metadata.RelationshipMetadataBase.IsCustomizable)|Whether you can change the properties of the relationship.|
+|[`ReferencedEntityNavigationPropertyName`](xref:Microsoft.Xrm.Sdk.Metadata.OneToManyRelationshipMetadata.ReferencedEntityNavigationPropertyName)|The name of the Web API collection-valued navigation property for this relationship.<br />For more information, see [Web API Navigation Properties](../webapi/web-api-navigation-properties.md).|
+|[`AssociatedMenuConfiguration`](xref:Microsoft.Xrm.Sdk.Metadata.OneToManyRelationshipMetadata.AssociatedMenuConfiguration)|Data used by model-driven apps to control whether and how the related entity data can be accessed in the UI from the primary entity.|
 
 
 ### Many-to-many relationships
 
-Each many-to-many relationship includes [Entity1LogicalName](/dotnet/api/microsoft.xrm.sdk.metadata.manytomanyrelationshipmetadata.entity1logicalname) and [Entity2LogicalName](/dotnet/api/microsoft.xrm.sdk.metadata.manytomanyrelationshipmetadata.entity2logicalname). For this documentation, relationship details are provided in the context of the current table. Whether it is `Entity1` or `Entity2` isn't really important.
+Each many-to-many relationship includes [Entity1LogicalName](xref:Microsoft.Xrm.Sdk.Metadata.ManyToManyRelationshipMetadata.Entity1LogicalName) and [Entity2LogicalName](xref:Microsoft.Xrm.Sdk.Metadata.ManyToManyRelationshipMetadata.Entity2LogicalName). For this documentation, relationship details are provided in the context of the current table. Whether it is `Entity1` or `Entity2` isn't really important.
 
-For each many-to-many relationship the following properties are included:
+For each many-to-many relationship, the following [`ManyToManyRelationshipMetadata` class](xref:Microsoft.Xrm.Sdk.Metadata.ManyToManyRelationshipMetadata) properties are included:
 
-|Property|Description|
+| Property | Description |
 |---------|---------|
-|`IntersectEntityName`|The logical name of the intersect table that supports this many-to-many relationship|
-|`IsCustomizable`|Whether the properties of the relationship can be changed.|
-|`SchemaName`|The schema name of the relationship.|
-|`IntersectAttribute`|The name of the column in the intersect table that is the primary key for records of this type.|
-|`NavigationPropertyName`|The name of the Web API collection-valued navigation property for this relationship.<br />More information: [Web API Navigation Properties](../webapi/web-api-navigation-properties.md)|
-|`AssociatedMenuConfiguration`|Data used by model-driven apps to control whether and how the second table data can be accessed in the UI from this table.|
+|[`IntersectEntityName`](xref:Microsoft.Xrm.Sdk.Metadata.ManyToManyRelationshipMetadata.IntersectEntityName)|The logical name of the intersect table that supports this many-to-many relationship.|
+|[`IsCustomizable`](xref:Microsoft.Xrm.Sdk.Metadata.RelationshipMetadataBase.IsCustomizable)|Whether you can change the properties of the relationship.|
+|[`SchemaName`](xref:Microsoft.Xrm.Sdk.Metadata.RelationshipMetadataBase.SchemaName)|The schema name of the relationship.|
+|`IntersectAttribute` ([`Entity1IntersectAttribute`](xref:Microsoft.Xrm.Sdk.Metadata.ManyToManyRelationshipMetadata.Entity1IntersectAttribute) or [`Entity2IntersectAttribute`](xref:Microsoft.Xrm.Sdk.Metadata.ManyToManyRelationshipMetadata.Entity2IntersectAttribute))|The name of the column in the intersect table that is the primary key for records of this type.|
+|`NavigationPropertyName` ([`Entity1NavigationPropertyName`](xref:Microsoft.Xrm.Sdk.Metadata.ManyToManyRelationshipMetadata.Entity1NavigationPropertyName) or [`Entity2NavigationPropertyName`](xref:Microsoft.Xrm.Sdk.Metadata.ManyToManyRelationshipMetadata.Entity2NavigationPropertyName))|The name of the Web API collection-valued navigation property for this relationship.<br />More information: [Web API Navigation Properties](../webapi/web-api-navigation-properties.md)|
+|`AssociatedMenuConfiguration` ([`Entity1AssociatedMenuConfiguration`](xref:Microsoft.Xrm.Sdk.Metadata.ManyToManyRelationshipMetadata.Entity1AssociatedMenuConfiguration) or [`Entity2AssociatedMenuConfiguration`](xref:Microsoft.Xrm.Sdk.Metadata.ManyToManyRelationshipMetadata.Entity2AssociatedMenuConfiguration))|Data used by model-driven apps to control whether and how the second table data can be accessed in the UI from this table.|
 
 
 In the rare case where a many-to-many relationship is self-referencing, such as for [Connection Role (ConnectionRole) connectionroleassociation_association](entities/connectionrole.md#BKMK_connectionroleassociation_association), `Entity1` or `Entity2` is prepended to the property.
 
 |Property|Value|
 |---|---|
-|`Entity1IntersectAttribute`|The name of the column in the intersect table that is the primary key for records of this type as the first table.|
-|`Entity2IntersectAttribute`|The name of the column in the intersect table that is the primary key for records of this type as the second table.|
-|`Entity1NavigationPropertyName`|The name of the Web API collection-valued navigation property for this relationship as the first table.|
-|`Entity2NavigationPropertyName`|The name of the Web API collection-valued navigation property for this relationship as the second table.|
-|`Entity1AssociatedMenuConfiguration`|Data used by model-driven apps to control whether and how the second table data can be accessed in the UI from this table as the first table.|
-|`Entity2AssociatedMenuConfiguration`|Data used by model-driven apps to control whether and how the second table data can be accessed in the UI from this table as the second table|
+|[`Entity1IntersectAttribute`](xref:Microsoft.Xrm.Sdk.Metadata.ManyToManyRelationshipMetadata.Entity1IntersectAttribute)|The name of the column in the intersect table that is the primary key for records of this type as the first table.|
+|[`Entity2IntersectAttribute`](xref:Microsoft.Xrm.Sdk.Metadata.ManyToManyRelationshipMetadata.Entity2IntersectAttribute)|The name of the column in the intersect table that is the primary key for records of this type as the second table.|
+|[`Entity1NavigationPropertyName`](xref:Microsoft.Xrm.Sdk.Metadata.ManyToManyRelationshipMetadata.Entity1NavigationPropertyName)|The name of the Web API collection-valued navigation property for this relationship as the first table.|
+|[`Entity2NavigationPropertyName`](xref:Microsoft.Xrm.Sdk.Metadata.ManyToManyRelationshipMetadata.Entity2NavigationPropertyName)|The name of the Web API collection-valued navigation property for this relationship as the second table.|
+|[`Entity1AssociatedMenuConfiguration`](xref:Microsoft.Xrm.Sdk.Metadata.ManyToManyRelationshipMetadata.Entity1AssociatedMenuConfiguration)|Data used by model-driven apps to control whether and how the second table data can be accessed in the UI from this table as the first table.|
+|[`Entity2AssociatedMenuConfiguration`](xref:Microsoft.Xrm.Sdk.Metadata.ManyToManyRelationshipMetadata.Entity2AssociatedMenuConfiguration)|Data used by model-driven apps to control whether and how the second table data can be accessed in the UI from this table as the second table.|
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

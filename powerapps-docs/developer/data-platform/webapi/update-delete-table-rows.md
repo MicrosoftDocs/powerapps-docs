@@ -218,7 +218,7 @@ OData-EntityId: [Organization URI]/api/data/v9.2/sample_things(sample_key1=1,sam
 
 Because the response is the same, you can't know whether the operation represented a `Create` or `Update` operation.
 
-If you need to know, you can use the `Prefer: return=representation` request header. By using this header, you get a `201 Created` response when a record is created and a `200 OK` response when the record is updated. This option adds a `Retrieve` operation, which has an impact on performance. If you use the `Prefer: return=representation` request header, make sure that your `$select` includes the minimal amount of data, preferably only the primary key column. More information: [Update with data returned](#update-with-data-returned) and [Create with data returned](create-entity-web-api.md#create-with-data-returned).
+If you need to know, you can use the `Prefer: return=representation` request header. By using this header, you get a `201 Created` response when a record is created and a `200 OK` response when the record is updated. This option adds a `Retrieve` operation, which has an impact on performance. If you use the `Prefer: return=representation` request header, make sure that your `$select` includes the minimal amount of data, preferably only the primary key column. More information: [Update with data returned](#update-with-data-returned) and [Create with data returned](create-table-row.md#create-with-data-returned).
 
 When using alternate keys, don't include the alternate key values in the body of the request.
 
@@ -291,7 +291,7 @@ More information: [Choosing a PartitionId value](../elastic-tables.md#choose-a-p
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
 [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)<br />
 [Query Data using the Web API](query/overview.md)<br />
-[Create a table row using the Web API](create-entity-web-api.md)<br />
+[Create a table row using the Web API](create-table-row.md)<br />
 [Retrieve a table row using the Web API](retrieve-entity-using-web-api.md)<br />
 [Associate and disassociate table rows using the Web API](associate-disassociate-entities-using-web-api.md)<br />
 [Use Web API functions](use-web-api-functions.md)<br />

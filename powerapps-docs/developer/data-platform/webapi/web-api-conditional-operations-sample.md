@@ -32,10 +32,10 @@ This sample is divided into three principal sections, listed in the following ta
   
 |Code section|Associated conceptual articles|  
 |------------------|----------------------------------|  
-|[Section 0: Create sample records](#section-0-create-sample-records)|[Create a table row using the Web API](create-entity-web-api.md)|
+|[Section 0: Create sample records](#section-0-create-sample-records)|[Create a table row using the Web API](create-table-row.md)|
 |[Section 1: Conditional GET](#section-1-conditional-get)|[Conditional retrievals](perform-conditional-operations-using-web-api.md#conditional-retrievals)|
 |[Section 2: Optimistic concurrency on delete and update](#section-2-optimistic-concurrency-on-delete-and-update)|[Apply optimistic concurrency](perform-conditional-operations-using-web-api.md#bkmk_Applyoptimisticconcurrency)<br />[Limit upsert operations](perform-conditional-operations-using-web-api.md#bkmk_limitUpsertOperations)|
-|[Section 3: Delete sample records](#section-3-delete-sample-records)|[Basic delete](update-delete-entities-using-web-api.md#basic-delete)<br />[Execute batch operations using the Web API](execute-batch-operations-using-web-api.md)|
+|[Section 3: Delete sample records](#section-3-delete-sample-records)|[Basic delete](update-delete-table-rows.md#basic-delete)<br />[Execute batch operations using the Web API](execute-batch-operations-using-web-api.md)|
   
 The following sections contain a brief discussion of the Dataverse Web API operations performed, the corresponding HTTP messages, and associated console output, which is the same for each language implementation. For brevity, less pertinent HTTP headers are omitted. The URIs of the table rows vary with the base organization address and the ID of the row assigned by your Dataverse server.  
   

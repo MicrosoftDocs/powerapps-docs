@@ -286,9 +286,9 @@ Put functions that perform common table operations in a file named `TableOperati
 
    - [Compose HTTP requests and handle errors](compose-http-requests-handle-errors.md)
    - [Query data using the Web API](query/overview.md)
-   - [Create a table row using the Web API](create-entity-web-api.md)
+   - [Create a table row using the Web API](create-table-row.md)
    - [Retrieve a table row using the Web API](retrieve-entity-using-web-api.md)
-   - [Update and delete table rows using the Web API](update-delete-entities-using-web-api.md)
+   - [Update and delete table rows using the Web API](update-delete-table-rows.md)
 
 1. Save the `TableOperations.ps1` file.
 1. Copy the following code and paste it into the `test.ps1` file.

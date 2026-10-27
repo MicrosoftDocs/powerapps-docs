@@ -1,7 +1,7 @@
 ---
 title: Query Data Using FetchXML in Dataverse
 description: Learn how to compose and refine queries using FetchXML in Microsoft Dataverse to retrieve data. Explore filtering, joining, paging, and performance tips.
-ms.date: 03/09/2026
+ms.date: 10/26/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 author: MsSQLGirl
@@ -16,7 +16,7 @@ contributors:
  - apahwa-lab
  - DonaldlaGithub
 ---
-# Query Data Using FetchXML in Dataverse
+# Query data by using FetchXML in Dataverse
 
 FetchXML is a proprietary XML-based query language used to retrieve data from Dataverse. See [FetchXml reference](reference/index.md) for the elements used to retrieve data.
 
@@ -41,9 +41,9 @@ This query returns the [Name column](../reference/entities/account.md#BKMK_Name)
 
 To limit the number of rows returned, use the [fetch element](reference/fetch.md) `top` attribute. Without the `top` attribute, Dataverse returns up to 5,000 standard tables rows and 500 elastic tables rows.
 
-Alternatively, specify a number of records to return using *paging*. Don't use the `top` attribute when you request pages of data. [Learn how to request paged results](page-results.md)
+Alternatively, specify a number of records to return by using *paging*. Don't use the `top` attribute when you request pages of data. [Learn how to request paged results](page-results.md)
 
-You can't use `top` when you request a count of rows using the `returntotalrecordcount` attribute. [Learn to count rows](count-rows.md)
+You can't use `top` when you request a count of rows by using the `returntotalrecordcount` attribute. [Learn to count rows](count-rows.md)
 
 ## Return distinct results
 
@@ -76,7 +76,7 @@ After you select the table to start your query with, refine the query to get the
 
 ## Community tools
 
-There are free tools to compose and test FetchXML requests:
+Free tools are available to compose and test FetchXML requests:
 
 - [XrmToolbox](../community-tools.md#xrmtoolbox) [FetchXmlBuilder](https://fetchxmlbuilder.com/)
 - [Power Platform Toolbox](https://www.powerplatformtoolbox.com/) [FetchXML Studio](https://www.powerplatformtoolbox.com/tools/e64db554-5dc9-4cc5-a712-832307d00777)

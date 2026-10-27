@@ -1,7 +1,7 @@
 ---
 title: "Service protection API limits (Microsoft Dataverse) | Microsoft Docs"
 description: "Understand what a developer needs to do to manage service protection limits for API requests."
-ms.date: 01/09/2026
+ms.date: 10/26/2026
 ms.reviewer: jdaly
 ms.topic: article
 author: MsSQLGirl
@@ -15,7 +15,7 @@ contributors:
 
 # Service protection API limits
 
-To ensure consistent availability and performance for everyone, the system applies limits to how APIs are used. These limits detect when client applications make extraordinary demands on server resources.
+To ensure consistent availability and performance for everyone, Dataverse applies limits to how APIs are used. These limits detect when client applications make extraordinary demands on server resources.
 
 These limits don't affect normal users of interactive clients. They affect only client applications that perform an extraordinary volume of API requests. These limits protect the Microsoft Dataverse platform from random and unexpected surges in request volumes that threaten its availability and performance.
 
@@ -49,7 +49,7 @@ Portal applications typically send requests from anonymous users through a servi
 
 Plug-ins and custom workflow activities apply business logic triggered by incoming requests. Service protection limits don't apply to data operations that originate from plug-ins and custom workflow activities. Plug-ins and custom workflow activities run within the isolated sandbox service. Dataverse operations invoked on the sandbox service don't use the public API endpoints.
 
-If your application performs operations that trigger custom logic, the number of requests sent by plug-ins or custom workflow activities doesn't count towards service protection API limits. However, the extra computation time that these operations contribute is added to the initial request that triggered them. This computation time is part of the service protection API limits. [Learn how the system enforces Service Protection API Limits](#how-the-system-enforces-service-protection-api-limits).
+If your application performs operations that trigger custom logic, the number of requests sent by plug-ins or custom workflow activities doesn't count towards service protection API limits. However, the extra computation time that these operations contribute is added to the initial request that triggered them. This computation time is part of the service protection API limits. [Learn how Dataverse enforces Service Protection API Limits](#how-dataverse-enforces-service-protection-api-limits).
 
 ## Retry operations
 
@@ -145,23 +145,23 @@ If you're using HTTP requests with the Web API, you can track the remaining limi
 |`x-ms-ratelimit-burst-remaining-xrm-requests`|The remaining number of requests for this connection|
 |`x-ms-ratelimit-time-remaining-xrm-requests`|The remaining combined duration for all connections using the same user account|
 
-Don't depend on these values to control how many requests you send. They're intended for debugging purposes. If you're removing the affinity cookie, these values are reset when you connect to a different server.
+Don't depend on these values to control how many requests you send. They're intended for debugging purposes. If you're removing the affinity cookie, these values reset when you connect to a different server.
 
 ---
 
-## How the system enforces Service Protection API Limits
+## How Dataverse enforces service protection API limits
 
-Two of the service protection API limits use a five-minute (300 second) sliding window. If either limit exceeds the preceding 300 seconds, the system returns a service protection API limit error on subsequent requests. This error protects the service until the Retry-After duration ends.
+Two of the service protection API limits use a five-minute (300 second) sliding window. If either limit exceeds the preceding 300 seconds, Dataverse returns a service protection API limit error on subsequent requests. This error protects the service until the Retry-After duration ends.
 
-The system evaluates service protection API limits for each user. Each authenticated user has an independent limit. The system limits only those user accounts that make extraordinary demands. Other users don't experience any impact.
+Dataverse evaluates service protection API limits for each user. Each authenticated user has an independent limit. Dataverse limits only those user accounts that make extraordinary demands. Other users don't experience any impact.
 
-The system enforces service protection API limits based on three facets:
+Dataverse enforces service protection API limits based on three facets:
 
 - The number of requests that a user sends.
-- The combined execution time that the system requires to process requests that a user sends.
+- The combined execution time that Dataverse requires to process requests that a user sends.
 - The number of concurrent requests that a user sends.
 
-If the system enforced the limit only on the number of requests that a user sends, it would be possible to bypass it. The system adds the other facets to counter these attempts. For example:
+If Dataverse enforced the limit only on the number of requests that a user sends, it would be possible to bypass it. Dataverse adds the other facets to counter these attempts. For example:
 
 - You could send fewer requests by bundling them in batch operations.
   - The combined execution time limit counters this limit.
@@ -170,7 +170,7 @@ If the system enforced the limit only on the number of requests that a user send
 
 Each web server that your environment makes available enforces these limits independently. Most environments have more than one web server. Trial environments allocate only a single web server. Multiple factors determine the actual number of web servers that your environment makes available. Dataverse provides these factors as part of the managed service. One of the factors is how many user licenses you purchase.
 
-The following table describes the default service protection API limits that the system enforces *per web server*:
+The following table describes the default service protection API limits that Dataverse enforces *per web server*:
 
 |Measure|Description|Limit per web server|
 |--|--|--|
@@ -185,7 +185,7 @@ The following table describes the default service protection API limits that the
 
 ## Service protection API limit errors
 
-This section describes the three types of service protection API limit errors that the system can return. It also describes factors that cause these errors and possible mitigation strategies.
+This section describes the three types of service protection API limit errors that Dataverse can return. It also describes factors that cause these errors and possible mitigation strategies.
 
 - The **Error code** is the numerical error value that the SDK for .NET <xref:Microsoft.Xrm.Sdk.OrganizationServiceFault>.<xref:Microsoft.Xrm.Sdk.BaseServiceFault.ErrorDetails> returns.
 - The **Hex code** is the hexadecimal error value that the Web API returns.
@@ -204,7 +204,7 @@ For example, if a list view enables selection of 250 records at a time and allow
 
 If your application provides this capability, consider some of the following strategies:
 
-- Decrease the total number of records that users can select in a list. If the number of items displayed in a list is reduced to 50, the user needs to perform this operation 120 times within 300 seconds. The user must complete the operation on each list within 2.5 seconds.
+- Decrease the total number of records that users can select in a list. If you reduce the number of items displayed in a list to 50, the user needs to perform this operation 120 times within 300 seconds. The user must complete the operation on each list within 2.5 seconds.
 - Combine the selected operations into a batch. A batch can contain up to 1,000 operations and avoids the number of requests limit. However, you need to be prepared for the execution time limit.
 
 ### Execution time
@@ -266,7 +266,7 @@ This section describes ways that you can design your clients and systems to avoi
 
 ### Update your client application
 
-Dataverse has enforced Service Protection API limits since 2018. However, many client applications were written before these limits existed. These clients don't expect these errors and can't handle the errors correctly. Update these applications and apply the patterns to [Retry operations](#retry-operations) described previously.
+Dataverse enforces Service Protection API limits. However, many client applications were written before these limits existed. These clients don't expect these errors and can't handle the errors correctly. Update these applications and apply the patterns to [Retry operations](#retry-operations) described previously.
 
 ### Move towards real-time integration
 
@@ -293,7 +293,7 @@ These limits aren't related to entitlement limits. [Learn about entitlement limi
 
 ### Are limits applied differently for application users?
 
-No. The system applies the same limits to all users.
+No. Dataverse applies the same limits to all users.
 
 ### See also
 
